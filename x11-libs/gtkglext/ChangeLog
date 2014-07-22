@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.86 2014/06/24 22:19:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.87 2014/07/22 10:54:11 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gtkglext-1.2.0-r2.ebuild:
+  Stable for amd64, wrt bug #512912
 
   24 Jun 2014; Michał Górny <mgorny@gentoo.org> gtkglext-1.2.0-r2.ebuild:
   Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for

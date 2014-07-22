@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/advancemame
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.51 2014/07/21 19:13:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.52 2014/07/22 09:30:18 nimiux Exp $
+
+  22 Jul 2014; Chema Alonso <nimiux@gentoo.org> advancemame-1.2.ebuild:
+  Stable for amd64 wrt bug #516072
 
   21 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> advancemame-1.2.ebuild:
   drop static support

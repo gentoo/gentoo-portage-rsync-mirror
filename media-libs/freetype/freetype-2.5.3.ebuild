@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.3.ebuild,v 1.4 2014/06/18 19:29:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.3.ebuild,v 1.5 2014/07/22 07:40:38 polynomial-c Exp $
 
 EAPI=5
 
@@ -19,13 +19,15 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~s
 IUSE="X +adobe-cff auto-hinter bindist bzip2 debug doc fontforge infinality png
 	static-libs utils"
 
-DEPEND=">=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
+CDEPEND=">=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	bzip2? ( >=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}] )
 	png? ( >=media-libs/libpng-1.2.51[${MULTILIB_USEDEP}] )
 	X?	( >=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 		  >=x11-libs/libXau-1.0.7-r1[${MULTILIB_USEDEP}]
 		  >=x11-libs/libXdmcp-1.1.1-r1[${MULTILIB_USEDEP}] )"
-RDEPEND="${DEPEND}
+DEPEND="${CDEPEND}
+	virtual/pkgconfig"
+RDEPEND="${CDEPEND}
 	infinality? ( media-libs/fontconfig-infinality )
 	abi_x86_32? ( !app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] )"
 

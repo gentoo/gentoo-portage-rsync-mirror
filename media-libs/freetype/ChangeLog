@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.401 2014/07/15 21:24:56 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.402 2014/07/22 07:40:38 polynomial-c Exp $
+
+  22 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> freetype-2.5.3.ebuild,
+  freetype-2.5.3-r1.ebuild:
+  Added virtual/pkgconfig to DEPEND (bug #517750).
 
   15 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> freetype-2.5.3-r1.ebuild:
   amd64 stable wrt bug #504088

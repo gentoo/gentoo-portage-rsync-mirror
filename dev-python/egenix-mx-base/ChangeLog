@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.88 2014/04/05 22:43:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.89 2014/07/22 03:17:08 idella4 Exp $
+
+*egenix-mx-base-3.2.8 (22 Jul 2014)
+
+  22 Jul 2014; Ian Delaney <idella4@gentoo.org> +egenix-mx-base-3.2.8.ebuild:
+  bump; drop py2.6
 
   05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> egenix-mx-base-3.2.5.ebuild:
   Stable for ppc, wrt bug #499872

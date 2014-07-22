@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.80 2014/05/17 14:44:03 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.81 2014/07/22 01:33:40 ottxor Exp $
+
+  22 Jul 2014; Christoph Junghans <ottxor@gentoo.org>
+  64bit-native/package.mask:
+  masked games-fps/enemy-territory-omnibot on no-multilib
 
   17 May 2014; Sven Vermeulen <swift@gentoo.org> selinux/make.defaults:
   Remove USE=-acl default setting for SELinux profile, we do not really care

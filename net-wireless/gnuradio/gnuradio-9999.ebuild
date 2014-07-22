@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.12 2014/03/05 16:18:40 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.13 2014/07/22 15:28:39 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -21,7 +21,7 @@ else
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
-IUSE="alsa +analog +digital doc examples fcd +filter grc jack oss pager performance-counters portaudio qt4 sdl uhd +utils wavelet wxwidgets"
+IUSE="alsa +analog +digital channels +ctrlport doc examples fcd +filter grc jack log oss pager performance-counters portaudio +qt4 sdl uhd +utils wavelet wxwidgets"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 		analog? ( filter )
@@ -34,44 +34,48 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 		wxwidgets? ( filter analog )"
 
 # bug #348206
-# comedi? ( >=sci-electronics/comedilib-0.7 )
+# comedi? ( >=sci-electronics/comedilib-0.8 )
 # boost-1.52.0 is blacklisted, bug #461578, upstream #513, boost #7669
-# gr-ctrlport needs "ice 3.5"
 RDEPEND="${PYTHON_DEPS}
 	>=dev-lang/orc-0.4.12
 	dev-libs/boost:0=[${PYTHON_USEDEP}]
 	!<=dev-libs/boost-1.52.0-r6:0/1.52
-	dev-python/cheetah
-	dev-util/cppunit
+	dev-python/numpy[${PYTHON_USEDEP}]
+	>=dev-util/cppunit-1.9.14
 	sci-libs/fftw:3.0=
-	fcd? ( virtual/libusb:1 )
 	alsa? (
 		media-libs/alsa-lib[${PYTHON_USEDEP}]
 	)
+	fcd? ( virtual/libusb:1 )
+	filter? ( sci-libs/scipy )
 	grc? (
+		dev-python/cheetah
 		dev-python/lxml[${PYTHON_USEDEP}]
-		dev-python/numpy[${PYTHON_USEDEP}]
-		dev-python/pygtk:2[${PYTHON_USEDEP}]
+		>=dev-python/pygtk-2.10:2[${PYTHON_USEDEP}]
 	)
 	jack? (
 		media-sound/jack-audio-connection-kit
 	)
+	log? ( dev-libs/log4cpp )
 	portaudio? (
 		>=media-libs/portaudio-19_pre
 	)
 	qt4? (
-		dev-python/PyQt4[X,opengl,${PYTHON_USEDEP}]
-		dev-python/pyqwt:5
-		dev-qt/qtgui:4
+		>=dev-python/PyQt4-4.4[X,opengl,${PYTHON_USEDEP}]
+		>=dev-python/pyqwt-5.2:5
+		>=dev-qt/qtcore-4.4
+		>=dev-qt/qtgui-4.4:4
+		>=x11-libs/qwt-5.2
 	)
-	sdl? ( media-libs/libsdl )
+	sdl? ( >=media-libs/libsdl-1.2.0 )
 	uhd? ( >=net-wireless/uhd-3.4.3-r1:=[${PYTHON_USEDEP}] )
 	wavelet? (
-		sci-libs/gsl
+		>=sci-libs/gsl-1.10
 	)
 	wxwidgets? (
-		dev-python/wxpython:2.8[${PYTHON_USEDEP}]
+		dev-python/lxml[${PYTHON_USEDEP}]
 		dev-python/numpy[${PYTHON_USEDEP}]
+		dev-python/wxpython:2.8[${PYTHON_USEDEP}]
 	)
 "
 DEPEND="${RDEPEND}
@@ -101,6 +105,8 @@ src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_enable alsa GR_AUDIO_ALSA) \
 		$(cmake-utils_use_enable analog GR_ANALOG) \
+		$(cmake-utils_use_enable channels GR_CHANNELS) \
+		$(cmake-utils_use_enable ctrlport GR_CTRLPORT) \
 		$(cmake-utils_use_enable digital GR_DIGITAL) \
 		$(cmake-utils_use_enable doc DOXYGEN) \
 		$(cmake-utils_use_enable doc SPHINX) \
@@ -108,6 +114,7 @@ src_configure() {
 		$(cmake-utils_use_enable filter GR_FILTER) \
 		$(cmake-utils_use_enable grc GRC) \
 		$(cmake-utils_use_enable jack GR_AUDIO_JACK) \
+		$(cmake-utils_use_enable log GR_LOG) \
 		$(cmake-utils_use_enable oss GR_AUDIO_OSS) \
 		$(cmake-utils_use_enable pager GR_PAGER) \
 		$(cmake-utils_use_enable performance-counters ENABLE_PERFORMANCE_COUNTERS) \

@@ -11,7 +11,8 @@
 	<email>mrueg@gentoo.org</email>
 	<name>Manuel Rüger</name>
 	<description>CC him on bugs.</description>
-</maintainer>	<use>
+</maintainer>
+	<use>
 		<flag name="trashquota">include deleted messages, and the Trash folder, in the estimated quota usage for maildirs</flag>
 	</use>
 </pkgmetadata>

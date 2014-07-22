@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.194 2014/06/18 20:49:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.195 2014/07/22 10:53:35 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cracklib-2.9.1-r1.ebuild:
+  Stable for amd64, wrt bug #512912
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> cracklib-2.9.1-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

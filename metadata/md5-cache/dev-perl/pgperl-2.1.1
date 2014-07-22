@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install postinst postrm preinst prerm setup test unpack
-DEPEND=dev-db/postgresql-base dev-lang/perl
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=dev-db/postgresql-base dev-lang/perl dev-lang/perl:=[-build(-)]
 DESCRIPTION=native Perl interface to PostgreSQL
+EAPI=5
 HOMEPAGE=http://gborg.postgresql.org/project/pgperl/projdisplay.php
 KEYWORDS=~amd64 ~ia64 ~sparc ~x86
 LICENSE=BSD
-RDEPEND=dev-db/postgresql-base dev-lang/perl
+RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://postgresql/projects/gborg/pgperl/stable/Pg-2.1.1.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=ac466b886f269121f1ed88aa73833eb2
+_md5_=0e12cee6013624fa21ca4234d92787dc

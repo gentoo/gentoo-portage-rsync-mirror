@@ -4,7 +4,7 @@ DESCRIPTION=library and tools for managing linux kernel modules
 EAPI=5
 HOMEPAGE=http://git.kernel.org/?p=utils/kernel/kmod/kmod.git
 IUSE=debug doc lzma python static-libs +tools zlib python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86
+KEYWORDS=alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86
 LICENSE=LGPL-2
 RDEPEND=!sys-apps/module-init-tools !sys-apps/modutils !<sys-apps/openrc-0.12 lzma? ( >=app-arch/xz-utils-5.0.4-r1 ) python? ( python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] ) zlib? ( >=sys-libs/zlib-1.2.6 )
 REQUIRED_USE=python? ( || ( python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4 ) )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/kernel/kmod/kmod-18.tar.xz
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=8cc5c07f5371bc1c7f0a3b8c751ae6bd
+_md5_=f310a23b4c188d8d9147b5bc4ab2ebfd

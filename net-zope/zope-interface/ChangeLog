@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-interface
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.58 2014/06/23 14:26:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.59 2014/07/22 10:53:19 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> zope-interface-4.1.1.ebuild:
+  Stable for amd64, wrt bug #512912
 
   23 Jun 2014; Mike Gilbert <floppym@gentoo.org> zope-interface-4.0.5.ebuild,
   zope-interface-4.1.0.ebuild, zope-interface-4.1.1.ebuild:

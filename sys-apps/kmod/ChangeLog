@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.163 2014/07/21 22:18:27 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.165 2014/07/22 09:24:44 klausman Exp $
+
+  22 Jul 2014; Tobias Klausmann <klausman@gentoo.org> kmod-18-r1.ebuild:
+  Stable on alpha, bug #517106
+
+  22 Jul 2014; Jeroen Roovers <jer@gentoo.org> kmod-18-r1.ebuild:
+  Stable for HPPA (bug #517106).
 
   21 Jul 2014;  <tgall@gentoo.org> kmod-18-r1.ebuild:
   arm64 stable, bug #517106

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.108 2014/06/14 21:44:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.109 2014/07/22 15:02:41 amynka Exp $
+
+  22 Jul 2014; Amy Winston <amynka@gentoo.org> metadata.xml:
+  add myself to maintainers
 
 *opencv-2.4.9 (14 Jun 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.338 2014/06/19 07:20:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.339 2014/07/22 10:53:42 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> pam-1.1.8-r2.ebuild:
+  Stable for amd64, wrt bug #512912
 
   19 Jun 2014; Michał Górny <mgorny@gentoo.org> pam-1.1.8-r2.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

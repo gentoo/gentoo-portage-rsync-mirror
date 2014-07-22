@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gnome-sudoku
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.18 2014/07/02 08:17:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.19 2014/07/22 10:45:11 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-sudoku-3.12.3.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *gnome-sudoku-3.12.3 (02 Jul 2014)
 

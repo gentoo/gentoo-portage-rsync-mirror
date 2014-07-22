@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-4.4.0.ebuild,v 1.1 2014/07/07 21:57:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-4.4.0.ebuild,v 1.2 2014/07/22 15:28:06 blueness Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 
 # TODO: knc (needs i2c-tools header)
-IUSE="adl antminer avalon bfx bifury bitforce bfsb bigpic bitfury cpumining drillbit dualminer examples gridseed hardened hashbuster hashbuster2 hashfast icarus jingtian klondike +libusb littlefury lm_sensors metabank modminer nanofury ncurses opencl proxy proxy_getwork proxy_stratum rockminer scrypt twinfury +udev unicode x6500 zeusminer ztex"
+IUSE="adl antminer avalon bfx bifury bitforce bfsb bigpic bitfury cpumining drillbit dualminer examples gridseed hardened hashbuster hashbuster2 hashfast icarus jingtian klondike +libusb littlefury lm_sensors metabank modminer nanofury ncurses opencl proxy proxy_getwork proxy_stratum rockminer screen scrypt twinfury +udev unicode x6500 zeusminer ztex"
 REQUIRED_USE='
 	|| ( antminer avalon bfsb bfx bifury bigpic bitforce bitfury cpumining drillbit dualminer gridseed hashbuster hashbuster2 hashfast icarus klondike littlefury metabank modminer nanofury opencl proxy twinfury x6500 ztex )
 	adl? ( opencl )
@@ -32,7 +32,7 @@ REQUIRED_USE='
 	lm_sensors? ( opencl )
 	metabank? ( bitfury )
 	nanofury? ( bitfury )
-	scrypt? ( || ( cpumining opencl ) )
+	scrypt? ( || ( cpumining dualminer gridseed opencl zeusminer ) )
 	twinfury? ( bitfury )
 	unicode? ( ncurses )
 	proxy? ( || ( proxy_getwork proxy_stratum ) )
@@ -70,6 +70,14 @@ DEPEND='
 	)
 	proxy_stratum? (
 		dev-libs/libevent
+	)
+	screen? (
+		app-misc/screen
+		|| (
+			>=sys-apps/coreutils-8.15
+			sys-freebsd/freebsd-bin
+			app-misc/realpath
+		)
 	)
 '
 RDEPEND="${DEPEND}
@@ -161,5 +169,8 @@ src_install() {
 	emake install DESTDIR="$D"
 	if ! use examples; then
 		rm -r "${D}/usr/share/doc/${PF}/rpc-examples"
+	fi
+	if ! use screen; then
+		rm "${D}/usr/bin/start-bfgminer.sh"
 	fi
 }

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.117 2014/05/30 14:25:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.118 2014/07/22 10:53:33 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> flex-2.5.39-r1.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *flex-2.5.39-r1 (30 May 2014)
 

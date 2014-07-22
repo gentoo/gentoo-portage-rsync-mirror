@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.337 2014/06/01 08:03:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.338 2014/07/22 10:45:47 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-session-3.12.1.ebuild:
+  Stable for amd64, wrt bug #512912
 
   01 Jun 2014; Pacho Ramos <pacho@gentoo.org> gnome-session-2.32.1-r3.ebuild,
   gnome-session-3.10.1.ebuild:

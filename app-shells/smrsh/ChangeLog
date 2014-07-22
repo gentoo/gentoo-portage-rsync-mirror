@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/smrsh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/ChangeLog,v 1.15 2014/06/09 05:57:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/ChangeLog,v 1.16 2014/07/22 04:08:39 patrick Exp $
+
+*smrsh-8.14.9 (22 Jul 2014)
+
+  22 Jul 2014; Patrick Lauer <patrick@gentoo.org> +smrsh-8.14.9.ebuild:
+  Bump
 
 *smrsh-8.14.8 (09 Jun 2014)
 

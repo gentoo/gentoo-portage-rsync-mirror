@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-keyring-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-keyring-python/ChangeLog,v 1.51 2014/05/26 18:01:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-keyring-python/ChangeLog,v 1.52 2014/07/22 10:43:37 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
+  gnome-keyring-python-2.32.0-r1.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *gnome-keyring-python-2.32.0-r1 (26 May 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/elogviewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.49 2014/07/13 10:54:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.50 2014/07/21 23:27:36 fuzzyray Exp $
+
+  21 Jul 2014; Paul Varner <fuzzyray@gentoo.org> +elogviewer-0.6.2-r2.ebuild:
+  Restore elogviewer-0.6.2-r2 due to user request. Bug #515654
 
   13 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> elogviewer-2.1-r1.ebuild:
   sparc stable wrt bug #510560

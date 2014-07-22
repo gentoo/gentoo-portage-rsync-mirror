@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme-extras
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-extras/ChangeLog,v 1.25 2014/04/27 22:00:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-extras/ChangeLog,v 1.26 2014/07/22 10:54:36 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
+  gnome-icon-theme-extras-3.12.0.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *gnome-icon-theme-extras-3.12.0 (27 Apr 2014)
 

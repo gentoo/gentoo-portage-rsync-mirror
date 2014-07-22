@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.66 2014/06/10 00:05:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.67 2014/07/22 10:43:10 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libev-4.15-r1.ebuild:
+  Stable for amd64, wrt bug #512912
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> libev-4.15.ebuild:
   Mark arm64/m68k/s390/sh stable.

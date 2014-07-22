@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_test/multi_test-0.1.1.ebuild,v 1.1 2014/03/31 05:59:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_test/multi_test-0.1.1.ebuild,v 1.2 2014/07/22 15:57:17 klausman Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ DESCRIPTION="A uniform interface for Ruby testing libraries"
 HOMEPAGE="http://cukes.info/"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 IUSE=""
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.213 2014/07/21 17:39:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.214 2014/07/21 23:02:45 jer Exp $
+
+  21 Jul 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Whitespace.
 
   21 Jul 2014; Manuel Rüger <mrueg@gentoo.org> courier-imap-4.15-r1.ebuild:
   Update elog messages. Thanks to David Heidelberger.

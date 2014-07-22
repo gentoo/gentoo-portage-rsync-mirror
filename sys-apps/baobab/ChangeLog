@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/baobab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/ChangeLog,v 1.22 2014/04/27 21:36:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/ChangeLog,v 1.23 2014/07/22 10:53:25 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> baobab-3.12.1.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *baobab-3.12.1 (27 Apr 2014)
 

@@ -1,6 +1,28 @@
 # ChangeLog for sys-power/phc-intel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.16 2014/04/14 00:27:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.17 2014/07/22 00:13:05 xmw Exp $
+
+*phc-intel-0.3.2.12.14-r1 (22 Jul 2014)
+*phc-intel-0.3.2.12.15.1 (22 Jul 2014)
+
+  22 Jul 2014; Michael Weber <xmw@gentoo.org>
+  +files/phc-intel-0.3.2-rev12-trailing-space-3.5.patch,
+  +files/phc-intel-0.3.2-rev12-trailing-space-misc.patch,
+  +files/phc-intel-0.3.2-rev14-trailing-space-3.13.patch,
+  +files/phc-intel-0.3.2-rev14-trailing-space-3.14.patch,
+  +files/phc-intel-0.3.2-rev15-trailing-space-3.15.patch,
+  +files/phc-intel-0.3.2-rev15-trailing-space-3.5.patch,
+  +phc-intel-0.3.2.12.14-r1.ebuild, +phc-intel-0.3.2.12.15.1.ebuild,
+  -files/phc-intel-0.3.2.12.1-r5-2.6.35.patch,
+  -files/phc-intel-0.3.2.12.1-r5-2.6.36.patch,
+  -files/phc-intel-0.3.2.12.1-r5-2.6.37.patch,
+  -files/phc-intel-0.3.2.12.1-r5-3.7.patch,
+  -files/phc-intel-pack-rev12-trailing-space-r1.patch,
+  -files/phc-intel-pack-rev14-trailing-space-3.13.patch,
+  -files/phc-intel-pack-rev14-trailing-space-3.14.patch,
+  -phc-intel-0.3.199.11_pre.ebuild, -phc-intel-0.3.2.12.1-r5.ebuild,
+  -phc-intel-0.3.2.12.12.ebuild, -phc-intel-0.3.2.12.14.ebuild:
+  Version bump (bug 513692), remove old ebuilds, patch correct patch.
 
 *phc-intel-0.3.2.12.14 (14 Apr 2014)
 

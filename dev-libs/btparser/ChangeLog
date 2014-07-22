@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/btparser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparser/ChangeLog,v 1.17 2014/07/15 10:17:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparser/ChangeLog,v 1.18 2014/07/22 10:42:50 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> btparser-0.25.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *btparser-0.25 (15 Jul 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.205 2014/07/01 14:13:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.206 2014/07/22 00:14:23 ottxor Exp $
+
+  22 Jul 2014; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
+  mask libcerf useflag (bug 517726)
 
   01 Jul 2014; Michał Górny <mgorny@gentoo.org> make.defaults:
   Add missing LIBDIR_${ABI} and CHOST_${ABI} on non-multilib arches to avoid

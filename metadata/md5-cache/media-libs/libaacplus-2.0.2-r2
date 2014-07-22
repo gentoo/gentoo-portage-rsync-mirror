@@ -4,7 +4,7 @@ DESCRIPTION=HE-AAC+ v2 library, based on the reference implementation
 EAPI=5
 HOMEPAGE=http://tipok.org.ua/node/17
 IUSE=bindist fftw static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
-KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd
+KEYWORDS=amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=LGPL-2.1
 RDEPEND=!media-sound/aacplusenc fftw? ( >=sci-libs/fftw-3.3.3-r2:3.0[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] )
 REQUIRED_USE=!bindist
@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~aballier/libaacplus-2.0.2.tar.gz http://tipok.ath.cx/downloads/media/aac+/libaacplus/libaacplus-2.0.2.tar.gz http://217.20.164.161/~tipok/aacplus/libaacplus-2.0.2.tar.gz http://www.3gpp.org/ftp/Specs/archive/26_series/26.410/26410-800.zip
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	fbb9baa0b4039304643e36e9820fdecf	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=809467ee37d1dcf69a5eb80df3e8825e
+_md5_=8fc96b06acfea09081ea6835839094f2

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rrdtool-bindings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/ChangeLog,v 1.5 2014/07/19 00:41:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/ChangeLog,v 1.6 2014/07/22 13:07:48 klausman Exp $
+
+  22 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  rrdtool-bindings-1.4.8.ebuild:
+  Stable on alpha, bug #517234
 
 *rrdtool-bindings-1.4.8-r1 (19 Jul 2014)
 

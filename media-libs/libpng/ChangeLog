@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.456 2014/07/04 13:54:04 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.459 2014/07/22 12:47:01 ssuominen Exp $
+
+  22 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -libpng-1.5.18.ebuild:
+  old
+
+  22 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> libpng-1.5.18-r1.ebuild:
+  amd64/x86 stable
+
+  22 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> libpng-1.6.12.ebuild:
+  amd64/x86 stable wrt #517788
 
   04 Jul 2014; Michael Haubenwallner <haubi@gentoo.org> libpng-1.6.12.ebuild:
   add ~ppc-aix keyword

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.271 2014/06/16 14:56:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.272 2014/07/22 10:42:26 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> evince-3.12.1.ebuild:
+  Stable for amd64, wrt bug #512912
 
   16 Jun 2014; Anthony G. Basile <blueness@gentoo.org> evince-3.10.3.ebuild,
   evince-3.12.1.ebuild:

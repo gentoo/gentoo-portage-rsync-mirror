@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/phodav/phodav-0.4.ebuild,v 1.2 2014/06/24 19:24:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/phodav/phodav-0.4.ebuild,v 1.3 2014/07/22 10:52:42 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="https://wiki.gnome.org/phodav"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm"
+KEYWORDS="amd64 ~arm"
 IUSE="avahi spice systemd"
 
 RDEPEND="dev-libs/glib

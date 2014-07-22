@@ -1,0 +1,28 @@
+Prefix' Darwin systems are single arch, hijack Darwin7 case which assumes this setup
+Check for bluetooth/mgmt.h before use
+
+
+--- a/configure.in
++++ b/configure.in
+@@ -1117,7 +1117,7 @@
+ 	if test "$enable_universal" != "no"; then
+ 		case "$host_os" in
+ 
+-		darwin[0-7].*)
++		darwin**)
+ 			#
+ 			# Pre-Tiger.  Build only for 32-bit PowerPC; no
+ 			# need for any special compiler or linker flags.
+@@ -1508,7 +1508,11 @@
+ 		      if test $ac_cv_lbl_hci_channel_monitor_is_defined = yes ; then
+ 			AC_DEFINE(PCAP_SUPPORT_BT_MONITOR,,
+ 			  [target host supports Bluetooth Monitor])
+-			BT_MONITOR_SRC=pcap-bt-monitor-linux.c
++			AC_CHECK_HEADER([bluetooth/mgmt.h],
++				BT_MONITOR_SRC=pcap-bt-monitor-linux.c,
++				AC_MSG_WARN([no support for pcap bt monitor]),
++				[#include <bluetooth/bluetooth.h>
++				 #include <bluetooth/hci.h>])
+ 		      fi
+ 		    fi
+ 		    ac_lbl_bluetooth_available=yes

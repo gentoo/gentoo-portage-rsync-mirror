@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/soundconverter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.34 2014/05/20 19:29:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.35 2014/07/22 10:51:55 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> soundconverter-2.1.3.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *soundconverter-2.1.3 (20 May 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-calculator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-calculator/ChangeLog,v 1.18 2014/06/26 11:06:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-calculator/ChangeLog,v 1.19 2014/07/22 10:46:45 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-calculator-3.12.3.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *gnome-calculator-3.12.3 (26 Jun 2014)
 

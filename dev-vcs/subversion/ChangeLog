@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.171 2014/07/20 10:53:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.172 2014/07/22 10:44:49 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> subversion-1.8.9.ebuild:
+  Stable for amd64, wrt bug #512912
 
   20 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
   Added myself as maintainer.

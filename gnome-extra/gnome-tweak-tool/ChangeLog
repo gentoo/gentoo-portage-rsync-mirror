@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-tweak-tool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/ChangeLog,v 1.35 2014/05/01 02:15:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/ChangeLog,v 1.36 2014/07/22 10:47:05 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-tweak-tool-3.12.0.ebuild:
+  Stable for amd64, wrt bug #512912
 
   01 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-tweak-tool-3.10.1.ebuild, gnome-tweak-tool-3.12.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.67 2014/07/21 14:19:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.68 2014/07/22 15:57:38 klausman Exp $
+
+  22 Jul 2014; Tobias Klausmann <klausman@gentoo.org> gherkin-2.12.0-r2.ebuild:
+  Keyworded on alpha, bug #465948
 
   21 Jul 2014; Tobias Klausmann <klausman@gentoo.org> Manifest:
   Fix manifest

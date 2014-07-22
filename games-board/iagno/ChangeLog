@@ -1,6 +1,9 @@
 # ChangeLog for games-board/iagno
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/iagno/ChangeLog,v 1.15 2014/05/31 10:07:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/iagno/ChangeLog,v 1.16 2014/07/22 10:45:03 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> iagno-3.12.2.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *iagno-3.12.2 (31 May 2014)
 

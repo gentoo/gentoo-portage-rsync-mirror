@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.12.0.ebuild,v 1.1 2014/04/28 07:02:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.12.0.ebuild,v 1.2 2014/07/22 10:45:33 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ IUSE="+bluetooth +cdr cups"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # Note to developers:
 # This is a wrapper for the core apps tightly integrated with GNOME 3

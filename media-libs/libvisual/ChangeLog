@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvisual
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.51 2014/01/15 12:46:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.52 2014/07/22 10:48:53 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libvisual-0.4.0-r3.ebuild:
+  Stable for amd64, wrt bug #512912
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libvisual-0.4.0-r2.ebuild:
   Stable for sparc, wrt bug #497180

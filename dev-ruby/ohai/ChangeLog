@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ohai
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.21 2014/05/06 06:05:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.22 2014/07/22 06:20:58 graaff Exp $
+
+*ohai-7.0.4 (22 Jul 2014)
+
+  22 Jul 2014; Hans de Graaff <graaff@gentoo.org> +ohai-7.0.4.ebuild:
+  Version bump. Use SLOTs as defined by chef usage.
 
 *ohai-6.22.0 (06 May 2014)
 

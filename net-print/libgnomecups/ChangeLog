@@ -1,6 +1,9 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.100 2014/07/20 19:42:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.101 2014/07/22 10:53:08 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libgnomecups-0.2.3-r5.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *libgnomecups-0.2.3-r5 (20 Jul 2014)
 

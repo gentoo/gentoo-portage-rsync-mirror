@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.2.0-r1.ebuild,v 1.3 2014/07/20 18:21:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.2.0-r1.ebuild,v 1.4 2014/07/22 10:48:41 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/libs/ieee1394/${P}.tar.xz"
 
 LICENSE="|| ( LGPL-2.1 GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples static-libs"
 
 RDEPEND=">=sys-libs/libraw1394-2.1.0-r1[${MULTILIB_USEDEP}]

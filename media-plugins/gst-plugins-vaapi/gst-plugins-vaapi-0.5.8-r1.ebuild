@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vaapi/gst-plugins-vaapi-0.5.8-r1.ebuild,v 1.3 2014/06/24 22:12:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vaapi/gst-plugins-vaapi-0.5.8-r1.ebuild,v 1.4 2014/07/22 10:51:19 ago Exp $
 
 EAPI="5"
 inherit eutils multilib-minimal
@@ -12,7 +12,7 @@ SRC_URI="http://www.freedesktop.org/software/vaapi/releases/${MY_PN}/${MY_PN}-${
 
 LICENSE="LGPL-2.1"
 SLOT="1.0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="+X opengl wayland"
 
 RDEPEND="

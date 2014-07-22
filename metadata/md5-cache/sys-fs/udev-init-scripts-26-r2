@@ -3,11 +3,11 @@ DEPEND=>=virtual/udev-180 !<sys-fs/udev-186 virtual/pkgconfig virtual/pkgconfig
 DESCRIPTION=udev startup scripts for openrc
 EAPI=5
 HOMEPAGE=http://www.gentoo.org
-KEYWORDS=alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86
+KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86
 LICENSE=GPL-2
 RDEPEND=>=virtual/udev-180 !<sys-fs/udev-186
 RESTRICT=test
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~williamh/dist/udev-init-scripts-26.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	8cd692457c1524c7be9af69831698a78
-_md5_=5723ef5c370c7e25371040646f439d8a
+_md5_=503dac8c9636a954abdedf618d1b524d

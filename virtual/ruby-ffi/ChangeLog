@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.34 2014/06/16 15:40:19 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.35 2014/07/22 15:57:48 klausman Exp $
+
+  22 Jul 2014; Tobias Klausmann <klausman@gentoo.org> ruby-ffi-3.ebuild:
+  Keyworded on alpha, bug #465948
 
   16 Jun 2014; Tobias Klausmann <klausman@gentoo.org> ruby-ffi-2.ebuild:
   Keyworded on alpha, bug #465948

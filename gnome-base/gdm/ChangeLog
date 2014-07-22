@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.405 2014/05/30 19:38:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.406 2014/07/22 10:45:25 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gdm-3.12.2.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *gdm-3.12.2 (30 May 2014)
 

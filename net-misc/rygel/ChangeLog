@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.55 2014/05/31 11:40:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.56 2014/07/22 10:52:55 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> rygel-0.22.2.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *rygel-0.22.2 (31 May 2014)
 

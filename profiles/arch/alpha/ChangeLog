@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.190 2014/07/01 14:18:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.191 2014/07/22 00:13:15 ottxor Exp $
+
+  22 Jul 2014; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
+  mask libcerf useflag (bug 517726)
 
   01 Jul 2014; Michał Górny <mgorny@gentoo.org> make.defaults:
   Set ABI, DEFAULT_ABI and friends consistently with other profiles.

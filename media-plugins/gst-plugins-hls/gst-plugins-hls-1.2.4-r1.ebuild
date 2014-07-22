@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-hls/gst-plugins-hls-1.2.4-r1.ebuild,v 1.2 2014/06/18 20:07:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-hls/gst-plugins-hls-1.2.4-r1.ebuild,v 1.3 2014/07/22 10:49:59 ago Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ GST_ORG_MODULE=gst-plugins-bad
 inherit gstreamer
 
 DESCRIPTION="HTTP live streaming plugin"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}]"

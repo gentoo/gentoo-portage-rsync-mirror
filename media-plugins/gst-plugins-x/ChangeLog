@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-x
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.143 2014/06/18 20:24:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.144 2014/07/22 10:51:33 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-x-0.10.36-r1.ebuild:
+  Stable for amd64, wrt bug #512912
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> gst-plugins-x-0.10.36-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

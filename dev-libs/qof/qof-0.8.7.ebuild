@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.8.7.ebuild,v 1.1 2014/06/24 10:32:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.8.7.ebuild,v 1.2 2014/07/22 10:43:29 ago Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="mirror://debian//pool/main/q/${PN}/${PN}_${PV}.orig.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc nls sqlite"
 
 RDEPEND="

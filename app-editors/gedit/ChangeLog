@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.369 2014/05/30 20:17:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.370 2014/07/22 10:41:58 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gedit-3.12.2.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *gedit-3.12.2 (30 May 2014)
 

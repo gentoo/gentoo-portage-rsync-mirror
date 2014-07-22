@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.217 2014/06/03 02:54:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.218 2014/07/22 10:44:39 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> glade-3.18.3.ebuild,
+  glade-3.8.5.ebuild:
+  Stable for amd64, wrt bug #512912
 
   03 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   files/glade-3.16.1-underlinking.patch:

@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpydoc/numpydoc-0.4-r1.ebuild,v 1.4 2014/02/16 20:36:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpydoc/numpydoc-0.4-r1.ebuild,v 1.5 2014/07/22 14:04:24 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1 vcs-snapshot
 
@@ -27,5 +27,8 @@ python_prepare_all() {
 }
 
 python_test() {
-	nosetests || die "Testing failed with ${EPYTHON}"
+	# Tests are written only for py2m pypy
+	if ! python_is_python3; then
+		nosetests || die "Testing failed with ${EPYTHON}"
+	fi
 }

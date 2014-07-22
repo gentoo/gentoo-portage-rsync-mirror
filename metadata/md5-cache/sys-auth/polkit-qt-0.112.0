@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=dev-libs/glib:2 >=sys-auth/polkit-0.103 qt4? ( dev-qt/qtcore:4[glib] dev-qt/qtdbus:4 dev-qt/qtgui:4[glib] ) qt5? ( dev-qt/qtcore:5[glib] dev-qt/qtdbus:5 dev-qt/qtgui:5[glib] dev-qt/qtwidgets:5 examples? ( dev-qt/qtxml:5 ) ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=PolicyKit Qt4 API wrapper library.
+EAPI=5
+HOMEPAGE=http://www.kde.org/
+IUSE=debug examples +qt4 qt5
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd
+LICENSE=LGPL-2
+RDEPEND=dev-libs/glib:2 >=sys-auth/polkit-0.103 qt4? ( dev-qt/qtcore:4[glib] dev-qt/qtdbus:4 dev-qt/qtgui:4[glib] ) qt5? ( dev-qt/qtcore:5[glib] dev-qt/qtdbus:5 dev-qt/qtgui:5[glib] dev-qt/qtwidgets:5 examples? ( dev-qt/qtxml:5 ) )
+REQUIRED_USE=|| ( qt4 qt5 )
+SLOT=0
+SRC_URI=mirror://kde/stable/apps/KDE4.x/admin/polkit-qt-1-0.112.0.tar.bz2
+_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=ef7bb532affe7bf2bc48397807e90b7d

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.54 2014/07/05 14:02:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.55 2014/07/22 10:44:07 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> soappy-0.12.5-r2.ebuild:
+  Stable for amd64, wrt bug #512912
 
   05 Jul 2014; Jeroen Roovers <jer@gentoo.org> soappy-0.12.22.ebuild:
   Marked ~hppa (bug #516442).

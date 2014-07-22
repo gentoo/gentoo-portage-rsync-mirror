@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.177 2014/05/31 09:49:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.178 2014/07/22 10:47:51 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gthumb-3.2.8.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *gthumb-3.2.8 (31 May 2014)
 

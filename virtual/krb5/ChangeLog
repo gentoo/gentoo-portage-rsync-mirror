@@ -1,6 +1,9 @@
 # ChangeLog for virtual/krb5
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/krb5/ChangeLog,v 1.3 2014/05/15 18:37:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/krb5/ChangeLog,v 1.4 2014/07/22 10:53:54 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> krb5-0-r1.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *krb5-0-r1 (15 May 2014)
 

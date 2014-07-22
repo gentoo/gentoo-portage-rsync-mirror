@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-core-apps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/ChangeLog,v 1.26 2014/04/28 07:02:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/ChangeLog,v 1.27 2014/07/22 10:45:33 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-core-apps-3.12.0.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *gnome-core-apps-3.12.0 (28 Apr 2014)
 

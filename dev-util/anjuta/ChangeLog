@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.179 2014/04/27 16:29:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.180 2014/07/22 10:44:31 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> anjuta-3.12.0.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *anjuta-3.12.0 (27 Apr 2014)
 

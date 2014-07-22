@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/childprocess
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.47 2014/07/21 13:56:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.48 2014/07/22 15:57:59 klausman Exp $
+
+  22 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  childprocess-0.5.3.ebuild:
+  Keyworded on alpha, bug #465948
 
   21 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   childprocess-0.3.9.ebuild:

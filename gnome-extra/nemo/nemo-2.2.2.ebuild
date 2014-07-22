@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/nemo-2.2.2.ebuild,v 1.1 2014/07/15 10:55:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/nemo-2.2.2.ebuild,v 1.2 2014/07/22 10:47:19 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/linuxmint/nemo/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2+ LGPL-2+ FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="exif +introspection +l10n packagekit tracker xmp"
 
 COMMON_DEPEND="

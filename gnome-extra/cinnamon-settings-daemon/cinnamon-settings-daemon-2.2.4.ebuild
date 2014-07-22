@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.2.4.ebuild,v 1.1 2014/07/15 10:41:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.2.4.ebuild,v 1.2 2014/07/22 10:46:31 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/linuxmint/cinnamon-settings-daemon/archive/${PV}.tar
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+colord cups input_devices_wacom smartcard systemd"
 
 # udev is non-optional since lots of plugins, not just gudev, pull it in

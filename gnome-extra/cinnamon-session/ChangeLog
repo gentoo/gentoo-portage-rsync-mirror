@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/cinnamon-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-session/ChangeLog,v 1.7 2014/07/15 10:37:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-session/ChangeLog,v 1.8 2014/07/22 10:46:29 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cinnamon-session-2.2.2.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *cinnamon-session-2.2.2 (15 Jul 2014)
 

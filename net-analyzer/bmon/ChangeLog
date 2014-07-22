@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.55 2014/07/12 12:52:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.56 2014/07/22 09:09:54 nimiux Exp $
+
+  22 Jul 2014; Chema Alonso <nimiux@gentoo.org> bmon-3.2.ebuild:
+  Stable for amd64 wrt bug #516862
 
   12 Jul 2014; Jeroen Roovers <jer@gentoo.org> bmon-3.2.ebuild:
   Stable for HPPA (bug #516862).

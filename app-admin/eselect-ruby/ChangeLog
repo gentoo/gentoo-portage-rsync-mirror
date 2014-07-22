@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.49 2014/01/04 14:34:38 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.50 2014/07/22 12:23:58 klausman Exp $
+
+  22 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  eselect-ruby-20131227.ebuild:
+  Stable on alpha, bug #517382
 
 *eselect-ruby-20131227 (04 Jan 2014)
 

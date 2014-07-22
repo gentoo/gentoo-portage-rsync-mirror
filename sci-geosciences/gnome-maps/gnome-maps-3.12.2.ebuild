@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gnome-maps/gnome-maps-3.12.2.ebuild,v 1.1 2014/05/31 07:22:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gnome-maps/gnome-maps-3.12.2.ebuild,v 1.2 2014/07/22 10:53:23 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Maps"
 LICENSE="GPL-2+ LGPL-2+ MIT CC-BY-3.0 CC-BY-SA-3.0"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 RDEPEND="
 	>=app-misc/geoclue-1.99.3:2.0

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/geoipupdate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/ChangeLog,v 1.16 2014/06/26 20:21:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/ChangeLog,v 1.17 2014/07/22 12:06:12 nimiux Exp $
+
+  22 Jul 2014; Chema Alonso <nimiux@gentoo.org> geoipupdate-2.0.1.ebuild:
+  Stable for amd64 wrt bug #513120
 
   26 Jun 2014; Jeroen Roovers <jer@gentoo.org> geoipupdate-2.0.1.ebuild:
   Add keepdir /usr/share/GeoIP.

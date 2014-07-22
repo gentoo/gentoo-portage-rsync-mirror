@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.60 2014/07/17 21:22:55 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.61 2014/07/22 01:32:35 ottxor Exp $
+
+  22 Jul 2014; Christoph Junghans <ottxor@gentoo.org>
+  linux/amd64/no-multilib/package.mask:
+  masked games-fps/enemy-territory-omnibot on no-multilib
 
   17 Jul 2014; Magnus Granberg <zorry@gentoo.org>
   linux/amd64/no-multilib/make.defaults,

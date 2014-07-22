@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.84 2014/07/13 17:51:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.85 2014/07/22 12:43:14 ssuominen Exp $
+
+  22 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/pkgconf-0.8-fix-build-fbsd.patch, -pkgconf-0.8.9.ebuild,
+  -pkgconf-0.9.2.ebuild, -pkgconf-0.9.3.ebuild:
+  old
 
   13 Jul 2014; Mike Frysinger <vapier@gentoo.org> pkgconf-0.9.3-r1.ebuild:
   Stabilize for all since newer virtual wants this.

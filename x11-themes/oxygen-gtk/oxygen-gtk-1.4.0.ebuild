@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.4.0.ebuild,v 1.5 2014/07/06 16:13:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.4.0.ebuild,v 1.6 2014/07/22 09:45:05 kensington Exp $
 
 EAPI=5
 
@@ -24,7 +24,6 @@ RDEPEND="
 	dev-libs/glib:2
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
-	x11-libs/gtk+:3
 	>=x11-libs/gtk+-3.10:3
 	x11-libs/libX11
 	x11-libs/pango

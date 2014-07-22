@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/cjs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cjs/ChangeLog,v 1.2 2014/07/15 10:47:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cjs/ChangeLog,v 1.3 2014/07/22 10:46:35 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cjs-2.2.1.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *cjs-2.2.1 (15 Jul 2014)
 

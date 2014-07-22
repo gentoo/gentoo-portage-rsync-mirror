@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-getting-started-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-getting-started-docs/ChangeLog,v 1.9 2014/05/31 06:59:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-getting-started-docs/ChangeLog,v 1.10 2014/07/22 10:46:55 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
+  gnome-getting-started-docs-3.12.1.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *gnome-getting-started-docs-3.12.1 (31 May 2014)
 

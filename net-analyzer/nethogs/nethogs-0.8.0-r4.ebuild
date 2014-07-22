@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.8.0-r4.ebuild,v 1.1 2014/07/21 19:01:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.8.0-r4.ebuild,v 1.2 2014/07/22 08:50:43 nimiux Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~x86"
+KEYWORDS="amd64 ~arm ~ia64 ~x86"
 
 RDEPEND="
 	net-libs/libpcap

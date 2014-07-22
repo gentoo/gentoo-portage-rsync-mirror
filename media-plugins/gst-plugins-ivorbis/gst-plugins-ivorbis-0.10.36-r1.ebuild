@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ivorbis/gst-plugins-ivorbis-0.10.36-r1.ebuild,v 1.2 2014/06/18 20:08:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ivorbis/gst-plugins-ivorbis-0.10.36-r1.ebuild,v 1.3 2014/07/22 10:50:01 ago Exp $
 
 EAPI="5"
 
 GST_ORG_MODULE=gst-plugins-base
 inherit gstreamer
 
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x64-macos"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x64-macos"
 IUSE=""
 
 RDEPEND=">=media-libs/tremor-0_pre20130223[${MULTILIB_USEDEP}]"

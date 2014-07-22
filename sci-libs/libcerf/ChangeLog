@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/libcerf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcerf/ChangeLog,v 1.2 2014/07/21 22:51:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcerf/ChangeLog,v 1.3 2014/07/21 23:23:37 ottxor Exp $
+
+  21 Jul 2014; Christoph Junghans <ottxor@gentoo.org>
+  files/libcerf-1.3-autotools.patch, libcerf-1.3.ebuild:
+  don't inject -Werror and keyworded  ~x86-macos ~amd64-linux ~arm (tested by
+  me)
 
   21 Jul 2014; Jeroen Roovers <jer@gentoo.org> libcerf-1.3.ebuild:
   Marked ~hppa (bug #517726).

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.185 2014/07/20 15:08:19 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.186 2014/07/22 09:28:25 jer Exp $
+
+*tcpdump-4.6.1 (22 Jul 2014)
+
+  22 Jul 2014; Jeroen Roovers <jer@gentoo.org> +tcpdump-4.6.1.ebuild:
+  Version bump.
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> tcpdump-4.5.1-r1.ebuild:
   Stable on alpha, bug #511502

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1323 2014/07/19 10:18:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1324 2014/07/22 06:38:56 haubi Exp $
+
+  22 Jul 2014; Michael Haubenwallner <haubi@gentoo.org> java-vm-2.eclass:
+  Respect EPREFIX in pkg_postinst, bug#517236.
 
   19 Jul 2014; Fabian Groffen <grobian@gentoo.org> mysql.eclass,
   mysql-autotools.eclass, mysql-cmake.eclass, mysql-v2.eclass:

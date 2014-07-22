@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/cogl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.50 2014/07/05 14:31:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.51 2014/07/22 10:48:03 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cogl-1.18.2.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *cogl-1.18.2 (05 Jul 2014)
 

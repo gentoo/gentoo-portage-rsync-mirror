@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.20 2014/04/15 06:04:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.21 2014/07/22 06:45:37 dev-zero Exp $
 
 # This file contains descriptions of NGINX_MODULES_HTTP USE_EXPAND flags.
 
@@ -38,6 +38,7 @@ lua - Embed the power of Lua into nginx
 map - This module allows you to classify, or map a set of values into a different set of values and store the result in a variable.
 memcached - You can use this module to perform simple caching.
 metrics - Module to export various metrics in easy-parseable JSON.
+mogilefs - Enable support for MogileFS.
 mp4 - This module adds pseudo-streaming
 naxsi - An open source, high performance, low rules maintenance, Web Application Firewall module for Nginx.
 passenger - Passenger makes deployment of Ruby web applications a breeze.

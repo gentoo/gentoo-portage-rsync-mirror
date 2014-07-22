@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.98 2014/07/20 18:19:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.99 2014/07/22 10:48:51 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libv4l-1.0.0.ebuild:
+  Stable for amd64, wrt bug #512912
 
   20 Jul 2014; Markus Meier <maekke@gentoo.org> libv4l-1.0.0.ebuild:
   arm stable, bug #512012

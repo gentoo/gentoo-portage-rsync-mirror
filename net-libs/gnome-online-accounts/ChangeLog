@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnome-online-accounts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/ChangeLog,v 1.42 2014/07/17 08:17:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/ChangeLog,v 1.43 2014/07/22 10:52:26 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
+  gnome-online-accounts-3.12.4.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *gnome-online-accounts-3.12.4 (17 Jul 2014)
 

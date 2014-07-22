@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.410 2014/06/26 10:00:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.411 2014/07/22 10:54:19 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> pango-1.36.5.ebuild:
+  Stable for amd64, wrt bug #512912
 
   26 Jun 2014; Pacho Ramos <pacho@gentoo.org> pango-1.36.5.ebuild:
   Raise gtk-doc dependency (#503510 by headcrabextra), handle ROOT in

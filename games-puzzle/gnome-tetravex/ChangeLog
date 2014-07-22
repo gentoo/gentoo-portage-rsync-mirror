@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gnome-tetravex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-tetravex/ChangeLog,v 1.13 2014/05/31 09:30:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-tetravex/ChangeLog,v 1.14 2014/07/22 10:45:13 ago Exp $
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-tetravex-3.12.3.ebuild:
+  Stable for amd64, wrt bug #512912
 
 *gnome-tetravex-3.12.3 (31 May 2014)
 
