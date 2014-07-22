@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.41 2014/02/02 16:49:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.42 2014/07/22 17:47:04 zerochaos Exp $
+
+  22 Jul 2014; Rick Farina <zerochaos@gentoo.org> gmpy-1.16.ebuild,
+  gmpy-1.17.ebuild, gmpy-2.0.0.ebuild, gmpy-2.0.3.ebuild:
+  adding ~arm keyword
 
   02 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> gmpy-2.0.3.ebuild,
   metadata.xml:

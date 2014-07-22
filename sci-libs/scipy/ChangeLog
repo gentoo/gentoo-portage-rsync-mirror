@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.116 2014/05/05 20:21:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.117 2014/07/22 17:47:47 zerochaos Exp $
+
+  22 Jul 2014; Rick Farina <zerochaos@gentoo.org> scipy-0.12.1.ebuild,
+  scipy-0.13.2.ebuild, scipy-0.13.3.ebuild, scipy-0.14.0.ebuild:
+  adding ~arm keyword
 
 *scipy-0.14.0 (05 May 2014)
 

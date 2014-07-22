@@ -4,11 +4,11 @@ DESCRIPTION=Python library for arbitrary-precision floating-point arithmetic
 EAPI=5
 HOMEPAGE=http://mpmath.org/
 IUSE=doc examples gmp matplotlib test python_targets_python2_7 python_targets_python3_2 python_targets_python3_3
-KEYWORDS=~amd64 ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-linux ~x86-macos
+KEYWORDS=~amd64 ~arm ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-linux ~x86-macos
 LICENSE=BSD
 RDEPEND=gmp? ( dev-python/gmpy ) matplotlib? ( dev-python/matplotlib ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 )
 SLOT=0
 SRC_URI=http://mpmath.org/files/mpmath-all-0.19.tar.gz
 _eclasses_=distutils-r1	d48d51c220f1678179fc4ab13b534ec1	eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=dcd9a2f0fcf7a9dae67f4bb6c33b78ff
+_md5_=3b9787ab48be8716821674018479731b
