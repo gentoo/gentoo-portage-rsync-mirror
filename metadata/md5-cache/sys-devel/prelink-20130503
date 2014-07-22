@@ -4,10 +4,10 @@ DESCRIPTION=Modifies ELFs to avoid runtime symbol resolutions resulting in faste
 EAPI=4
 HOMEPAGE=http://people.redhat.com/jakub/prelink
 IUSE=selinux
-KEYWORDS=~amd64 -arm ~ppc ~ppc64 ~x86
+KEYWORDS=amd64 -arm ~ppc ~ppc64 x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/elfutils-0.100[static-libs(+)] selinux? ( sys-libs/libselinux[static-libs(+)] ) !dev-libs/libelf >=sys-libs/glibc-2.8 >=sys-devel/binutils-2.18
 SLOT=0
 SRC_URI=mirror://gentoo/prelink-20130503.tar.bz2
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=0b948fc4f94912caea663cbaaf4fb06d
+_md5_=98051b1de835ca6cab2be582402f6caa

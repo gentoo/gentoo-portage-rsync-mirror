@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tomahawk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/ChangeLog,v 1.39 2014/07/19 11:40:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/ChangeLog,v 1.40 2014/07/22 18:37:57 johu Exp $
+
+  22 Jul 2014; Johannes Huber <johu@gentoo.org> tomahawk-9999.ebuild:
+  Update dependencies, bug #517616.
 
   19 Jul 2014; Johannes Huber <johu@gentoo.org> tomahawk-0.6.1.ebuild,
   tomahawk-0.7.0.ebuild, tomahawk-9999.ebuild:

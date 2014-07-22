@@ -1,6 +1,16 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.192 2014/07/22 18:15:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.194 2014/07/22 18:48:35 ssuominen Exp $
+
+  22 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Unmask USE="acl" for sys-auth/consolekit because alpha has recent enough
+  sys-fs/udev in stable now.
+
+  22 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remove USE="consolekit" mask for sys-auth/pambase and USE="pam" mask for
+  sys-auth/consolekit because /usr/src/linux-3.15/arch/alpha/Kconfig has
+  "select HAVE_ARCH_AUDITSYSCALL" which means CONFIG_AUDITSYSCALL=y is a
+  possibility now.
 
   22 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Remove USE="pam" mask for sys-apps/systemd wrt #506418#c3
