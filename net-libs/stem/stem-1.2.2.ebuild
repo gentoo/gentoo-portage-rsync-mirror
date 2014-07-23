@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/stem/stem-1.2.2.ebuild,v 1.1 2014/07/22 20:56:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/stem/stem-1.2.2.ebuild,v 1.2 2014/07/23 12:40:45 blueness Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE="test"
 
 DEPEND="test? ( dev-python/mock[${PYTHON_USEDEP}] )

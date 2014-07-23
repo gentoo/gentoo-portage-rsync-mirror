@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/arm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.28 2014/07/23 02:59:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.29 2014/07/23 12:42:15 blueness Exp $
+
+  23 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
+  arm-1.4.5.0_p20140714-r2.ebuild:
+  Keyword ~ppc and ~ppc64, bug #517838
 
 *arm-1.4.5.0_p20140714-r2 (23 Jul 2014)
 
