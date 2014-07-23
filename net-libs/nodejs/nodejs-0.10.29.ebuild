@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.10.29.ebuild,v 1.1 2014/06/12 09:36:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.10.29.ebuild,v 1.2 2014/07/23 03:28:49 patrick Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ KEYWORDS="~amd64 ~arm ~x86 ~x64-macos"
 IUSE="+npm +snapshot"
 
 RDEPEND="dev-libs/openssl"
-DEPEND="${RDEPEND}"
+DEPEND="${PYTHON_DEPS}
+	${RDEPEND}"
 
 S=${WORKDIR}/node-v${PV}
 
