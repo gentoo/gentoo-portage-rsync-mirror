@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.149 2014/06/15 08:33:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.150 2014/07/23 18:35:29 axs Exp $
+
+*thunderbird-bin-31.0 (23 Jul 2014)
+*thunderbird-bin-24.7.0 (23 Jul 2014)
+
+  23 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +thunderbird-bin-24.7.0.ebuild, +thunderbird-bin-31.0.ebuild,
+  -thunderbird-bin-24.5.0.ebuild:
+  version bumps, removed old; partly for security bug 517876
 
   15 Jun 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-bin-24.6.0.ebuild:
   Stable for x86, wrt bug #512896
