@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libverto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.29 2014/07/22 10:43:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.30 2014/07/23 15:14:37 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libverto-0.2.5-r1.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libverto-0.2.5-r1.ebuild:
   Stable for amd64, wrt bug #512912

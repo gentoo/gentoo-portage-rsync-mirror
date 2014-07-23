@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-desktop/cinnamon-desktop-2.2.3.ebuild,v 1.2 2014/07/22 10:46:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-desktop/cinnamon-desktop-2.2.3.ebuild,v 1.3 2014/07/23 15:17:39 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/linuxmint/cinnamon-desktop/archive/${PV}.tar.gz -> $
 
 LICENSE="GPL-2+ FDL-1.1+ LGPL-2+"
 SLOT="0/4" # subslot = libcinnamon-desktop soname version
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+introspection"
 
 RDEPEND="

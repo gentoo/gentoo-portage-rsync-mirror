@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.48 2014/07/22 10:42:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.49 2014/07/23 15:13:13 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gedit-plugins-3.12.1.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gedit-plugins-3.12.1.ebuild:
   Stable for amd64, wrt bug #512912

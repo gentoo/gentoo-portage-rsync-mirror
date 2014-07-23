@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.12.0.ebuild,v 1.2 2014/07/22 10:45:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.12.0.ebuild,v 1.3 2014/07/23 15:16:43 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SLOT="2.0" # Cannot be installed at the same time as gnome-2
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 IUSE="accessibility +bluetooth +classic +cdr cups +extras"
 

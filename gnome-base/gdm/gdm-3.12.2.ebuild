@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.12.2.ebuild,v 1.2 2014/07/22 10:45:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.12.2.ebuild,v 1.3 2014/07/23 15:16:41 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -23,7 +23,7 @@ LICENSE="
 SLOT="0"
 IUSE="accessibility audit branding fprint +introspection ipv6 plymouth selinux smartcard +systemd tcpd test wayland xinerama"
 REQUIRED_USE="wayland? ( systemd )"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
 
 # NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug #295686
 # nspr used by smartcard extension

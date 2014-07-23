@@ -4,11 +4,11 @@ DESCRIPTION=A compositor for X, and a fork of xcompmgr-dana
 EAPI=5
 HOMEPAGE=http://github.com/chjj/compton
 IUSE=dbus +drm opengl +pcre xinerama python_targets_python3_2 python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=MIT
 RDEPEND=python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-libs/libconfig x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender dbus? ( sys-apps/dbus ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre:3 ) xinerama? ( x11-libs/libXinerama ) x11-apps/xprop x11-apps/xwininfo
 REQUIRED_USE=|| ( python_targets_python3_2 python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=https://github.com/chjj/compton/archive/v0.1_beta2.tar.gz -> compton-0.1_beta2.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e896a0ad698e68bdb95ae8a4eacc0be5
+_md5_=006431694e98705d44057213614d5386

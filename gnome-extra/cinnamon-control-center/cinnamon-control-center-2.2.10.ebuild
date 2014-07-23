@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.10.ebuild,v 1.2 2014/07/22 10:46:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.10.ebuild,v 1.3 2014/07/23 15:17:37 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/linuxmint/cinnamon-control-center/archive/${PV}.tar.
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="+colord +cups input_devices_wacom socialweb"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 # False positives caused by nested configure scripts
 QA_CONFIGURE_OPTIONS=".*"

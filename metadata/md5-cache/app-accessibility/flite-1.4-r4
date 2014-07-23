@@ -4,10 +4,10 @@ DESCRIPTION=Flite text to speech engine
 EAPI=5
 HOMEPAGE=http://www.speech.cs.cmu.edu/flite/index.html
 IUSE=alsa oss static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
-KEYWORDS=~alpha amd64 ~arm ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha amd64 ~arm ~ppc ~ppc64 ~sparc x86
 LICENSE=BSD freetts public-domain regexp-UofT BSD-2
 RDEPEND=alsa? ( >=media-libs/alsa-lib-1.0.27.2[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] )
 SLOT=0
 SRC_URI=http://www.speech.cs.cmu.edu/flite/packed/flite-1.4/flite-1.4-release.tar.bz2
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	fbb9baa0b4039304643e36e9820fdecf	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e0c309cdd665ce0dd29a74ebc71d2afe
+_md5_=a67d40901f54d86eed6c1181bfd867e5

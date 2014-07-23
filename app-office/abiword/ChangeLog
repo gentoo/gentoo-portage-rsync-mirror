@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.278 2014/07/22 10:42:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.279 2014/07/23 15:13:33 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> abiword-3.0.0-r2.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> abiword-3.0.0-r2.ebuild:
   Stable for amd64, wrt bug #512912

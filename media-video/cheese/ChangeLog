@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.84 2014/07/22 10:52:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.85 2014/07/23 15:23:15 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cheese-3.12.2.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cheese-3.12.2.ebuild:
   Stable for amd64, wrt bug #512912

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/polib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polib/ChangeLog,v 1.4 2014/07/22 10:43:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polib/ChangeLog,v 1.5 2014/07/23 15:15:14 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> polib-1.0.4.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> polib-1.0.4.ebuild:
   Stable for amd64, wrt bug #512912

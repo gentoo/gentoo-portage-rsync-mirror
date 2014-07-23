@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnome-mahjongg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mahjongg/ChangeLog,v 1.15 2014/07/22 10:44:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mahjongg/ChangeLog,v 1.16 2014/07/23 15:16:15 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-mahjongg-3.12.2.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-mahjongg-3.12.2.ebuild:
   Stable for amd64, wrt bug #512912

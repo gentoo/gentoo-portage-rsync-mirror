@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glew
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.98 2014/07/22 10:48:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.99 2014/07/23 15:19:21 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> glew-1.10.0-r2.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> glew-1.10.0-r2.ebuild:
   Stable for amd64, wrt bug #512912

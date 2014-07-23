@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.132 2014/07/22 10:43:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.133 2014/07/23 15:15:00 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gst-python-1.2.1.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gst-python-1.2.1.ebuild:
   Stable for amd64, wrt bug #512912

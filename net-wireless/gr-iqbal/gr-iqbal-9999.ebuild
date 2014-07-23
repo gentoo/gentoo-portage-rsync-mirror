@@ -1,17 +1,17 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/gr-iqbal-9999.ebuild,v 1.3 2013/06/25 13:33:34 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/gr-iqbal-9999.ebuild,v 1.4 2014/07/23 15:10:51 zerochaos Exp $
 
 EAPI=5
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python2_7 )
 
-inherit cmake-utils python
+inherit cmake-utils python-single-r1
 
 DESCRIPTION="gnuradio I/Q balancing"
 HOMEPAGE="http://git.osmocom.org/gr-iqbal/"
 
 if [[ ${PV} == 9999* ]]; then
-	inherit git-2
+	inherit git-r3
 	SRC_URI=""
 	EGIT_REPO_URI="git://git.osmocom.org/${PN}.git"
 	KEYWORDS=""
@@ -24,15 +24,8 @@ LICENSE="GPL-3"
 SLOT="0/${PV}"
 IUSE=""
 
-RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=
-	net-libs/libosmo-dsp:="
+RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[${PYTHON_USEDEP}]
+	net-libs/libosmo-dsp:=
+	${PYTHON_DEPS}"
 DEPEND="${RDEPEND}"
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_prepare() {
-	python_convert_shebangs -q -r 2 "${S}"
-}
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"

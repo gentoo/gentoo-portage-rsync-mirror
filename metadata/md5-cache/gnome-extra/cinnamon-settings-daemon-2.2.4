@@ -4,10 +4,10 @@ DESCRIPTION=Cinnamon's settings daemon
 EAPI=5
 HOMEPAGE=http://cinnamon.linuxmint.com/
 IUSE=+colord cups input_devices_wacom smartcard systemd debug
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2+
 RDEPEND=>=dev-libs/glib-2.38:2 >=gnome-base/libgnomekbd-2.91.1 >=gnome-base/librsvg-2.36.2 >=gnome-extra/cinnamon-desktop-1.0:0= media-libs/fontconfig >=media-libs/lcms-2.2:2 media-libs/libcanberra:0=[gtk3] >=media-sound/pulseaudio-0.9.16:0= sys-apps/dbus >=sys-auth/polkit-0.97 || ( >=sys-power/upower-0.9.11 sys-power/upower-pm-utils ) x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.7.8:3 >=x11-libs/libnotify-0.7.3:0= x11-libs/libX11 x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libxklavier virtual/udev[gudev] colord? ( >=x11-misc/colord-0.1.9:= ) cups? ( >=net-print/cups-1.4[dbus] ) input_devices_wacom? ( >=dev-libs/libwacom-0.7 x11-drivers/xf86-input-wacom x11-libs/libXtst ) smartcard? ( >=dev-libs/nss-3.11.2 ) systemd? ( sys-apps/systemd:0= ) !systemd? ( sys-auth/consolekit:0= )
 SLOT=0
 SRC_URI=https://github.com/linuxmint/cinnamon-settings-daemon/archive/2.2.4.tar.gz -> cinnamon-settings-daemon-2.2.4.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=1b228b43a74d3e78f34eb1adb5b39632
+_md5_=c1469cf93af054c6b60eb2be246f4313

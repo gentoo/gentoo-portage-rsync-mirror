@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/postr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/ChangeLog,v 1.11 2014/07/22 10:47:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/ChangeLog,v 1.12 2014/07/23 15:19:03 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> postr-0.13.1.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> postr-0.13.1.ebuild:
   Stable for amd64, wrt bug #512912

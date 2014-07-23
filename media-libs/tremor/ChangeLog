@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tremor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/ChangeLog,v 1.21 2014/07/22 10:49:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/ChangeLog,v 1.22 2014/07/23 15:20:19 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> tremor-0_pre20130223-r1.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> tremor-0_pre20130223-r1.ebuild:
   Stable for amd64, wrt bug #512912

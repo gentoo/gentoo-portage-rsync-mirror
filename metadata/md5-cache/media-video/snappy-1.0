@@ -3,10 +3,10 @@ DEPEND=>=dev-libs/glib-2.32:2 >=media-libs/clutter-1.12.0:1.0 >=media-libs/clutt
 DESCRIPTION=A simple media player written using GStreamer and Clutter
 EAPI=5
 HOMEPAGE=https://wiki.gnome.org/Apps/Snappy
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2 LGPL-2
 RDEPEND=>=dev-libs/glib-2.32:2 >=media-libs/clutter-1.12.0:1.0 >=media-libs/clutter-gst-2.0.0:2.0 >=media-libs/clutter-gtk-1.0.2:1.0 >=x11-libs/gtk+-3.5.0:3 x11-libs/libXtst >=media-libs/gstreamer-1.0.0:1.0 >=media-libs/gst-plugins-base-1.0.0:1.0 media-plugins/gst-plugins-meta:1.0 !!net-misc/spice-gtk
 SLOT=0
 SRC_URI=mirror://gnome/sources/snappy/1.0/snappy-1.0.tar.xz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=5454d336214ef88b0f60b67f01bcc1c4
+_md5_=3c37c151eabbe7313eeaeca303de9ba2

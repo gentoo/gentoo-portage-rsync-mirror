@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vo-aacenc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.37 2014/07/22 10:49:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.38 2014/07/23 15:20:21 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> vo-aacenc-0.1.3.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> vo-aacenc-0.1.3.ebuild:
   Stable for amd64, wrt bug #512912

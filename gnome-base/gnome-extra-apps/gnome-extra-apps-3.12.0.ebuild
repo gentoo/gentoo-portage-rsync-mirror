@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.12.0.ebuild,v 1.3 2014/07/22 10:45:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.12.0.ebuild,v 1.4 2014/07/23 15:16:55 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ IUSE="+games +shotwell +tracker"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 # Note to developers:
 # This is a wrapper for the extra apps integrated with GNOME 3

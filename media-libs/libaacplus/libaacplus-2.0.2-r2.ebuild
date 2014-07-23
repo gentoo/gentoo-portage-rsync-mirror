@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/libaacplus-2.0.2-r2.ebuild,v 1.4 2014/07/22 10:48:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/libaacplus-2.0.2-r2.ebuild,v 1.5 2014/07/23 15:19:35 ago Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_URI="
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="bindist fftw static-libs"
 
 RESTRICT="mirror"

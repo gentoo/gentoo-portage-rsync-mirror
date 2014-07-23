@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bijiben/bijiben-3.12.2.ebuild,v 1.2 2014/07/22 10:42:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bijiben/bijiben-3.12.2.ebuild,v 1.3 2014/07/23 15:13:21 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Bijiben"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # zeitgeist is optional but automagic

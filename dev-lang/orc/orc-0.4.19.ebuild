@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.19.ebuild,v 1.2 2014/07/22 10:42:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.19.ebuild,v 1.3 2014/07/23 15:13:55 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.gz"
 
 LICENSE="BSD BSD-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm ~hppa x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="examples static-libs"
 
 RDEPEND=""

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.154 2014/07/22 10:49:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.155 2014/07/23 15:20:17 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> taglib-1.9.1-r2.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> taglib-1.9.1-r2.ebuild:
   Stable for amd64, wrt bug #512912

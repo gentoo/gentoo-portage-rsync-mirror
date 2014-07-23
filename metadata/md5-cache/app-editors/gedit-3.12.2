@@ -4,11 +4,11 @@ DESCRIPTION=A text editor for the GNOME desktop
 EAPI=5
 HOMEPAGE=https://wiki.gnome.org/Apps/Gedit
 IUSE=+introspection +python spell zeitgeist python_targets_python3_2 python_targets_python3_3 test
-KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux
 LICENSE=GPL-2+ CC-BY-SA-3.0
 RDEPEND=>=dev-libs/libxml2-2.5.0:2 >=dev-libs/glib-2.39.5:2 >=x11-libs/gtk+-3.11.6:3[introspection?] >=x11-libs/gtksourceview-3.11.2:3.0[introspection?] >=dev-libs/libpeas-1.7.0[gtk] gnome-base/gsettings-desktop-schemas gnome-base/gvfs x11-libs/libX11 net-libs/libsoup:2.4 introspection? ( >=dev-libs/gobject-introspection-0.9.3 ) python? ( python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] >=dev-libs/gobject-introspection-0.9.3 >=x11-libs/gtk+-3:3[introspection] >=x11-libs/gtksourceview-3.6:3.0[introspection] dev-python/pycairo[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] >=dev-python/pygobject-3:3[cairo,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] ) spell? ( >=app-text/enchant-1.2:= >=app-text/iso-codes-0.35 ) zeitgeist? ( >=gnome-extra/zeitgeist-0.9.12 ) x11-themes/gnome-icon-theme-symbolic
 REQUIRED_USE=python? ( || ( python_targets_python3_2 python_targets_python3_3 ) )
 SLOT=0
 SRC_URI=mirror://gnome/sources/gedit/3.12/gedit-3.12.2.tar.xz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=37bd6fb463c5557dde5517c591ce1eb2
+_md5_=1569b875a08fbcf7e761ef72e745cd90

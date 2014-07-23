@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nemo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/ChangeLog,v 1.15 2014/07/22 10:47:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/ChangeLog,v 1.16 2014/07/23 15:18:31 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> nemo-2.2.2.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> nemo-2.2.2.ebuild:
   Stable for amd64, wrt bug #512912

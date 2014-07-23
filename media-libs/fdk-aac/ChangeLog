@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fdk-aac
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fdk-aac/ChangeLog,v 1.14 2014/07/22 10:48:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fdk-aac/ChangeLog,v 1.15 2014/07/23 15:19:17 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> fdk-aac-0.1.3.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> fdk-aac-0.1.3.ebuild:
   Stable for amd64, wrt bug #512912

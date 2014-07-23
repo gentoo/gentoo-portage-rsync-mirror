@@ -4,11 +4,11 @@ DESCRIPTION=A simple audiofile converter application for the GNOME environment
 EAPI=5
 HOMEPAGE=http://soundconverter.org/
 IUSE=aac flac mp3 opus vorbis python_targets_python2_7 python_single_target_python2_7
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-3
 RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/gconf-python dev-python/gnome-vfs-python =dev-python/gst-python-0.10*[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/pygobject:2[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=dev-python/pygtk-2.12[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/libgnome-python gnome-base/libglade aac? ( =media-plugins/gst-plugins-faac-0.10* =media-plugins/gst-plugins-faad-0.10* ) flac? ( =media-plugins/gst-plugins-flac-0.10* ) mp3? ( =media-plugins/gst-plugins-lame-0.10* =media-plugins/gst-plugins-mad-0.10* =media-plugins/gst-plugins-taglib-0.10* ) vorbis? ( =media-plugins/gst-plugins-ogg-0.10* =media-plugins/gst-plugins-vorbis-0.10* ) opus? ( =media-plugins/gst-plugins-opus-0.10* )
 REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=http://launchpad.net/soundconverter/trunk/2.1.3/+download/soundconverter-2.1.3.tar.xz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=17abd0ce30a9202c02ced93c9e7d4152
+_md5_=587a831252013678517b867600922499

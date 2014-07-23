@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dash/gst-plugins-dash-1.2.4-r1.ebuild,v 1.3 2014/07/22 10:49:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dash/gst-plugins-dash-1.2.4-r1.ebuild,v 1.4 2014/07/23 15:20:45 ago Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit gstreamer
 
 DESCRIPTION="MPEG-DASH plugin"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}]"
