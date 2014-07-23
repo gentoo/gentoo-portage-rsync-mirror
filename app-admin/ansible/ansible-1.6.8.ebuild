@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.6.8.ebuild,v 1.1 2014/07/23 08:40:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.6.8.ebuild,v 1.2 2014/07/23 12:06:48 pinkbyte Exp $
 
 EAPI="5"
 
@@ -28,6 +28,15 @@ RDEPEND="
 	net-misc/sshpass
 	virtual/ssh
 "
+
+DOC_CONTENTS="You can define parameters through shell variables OR use config files
+Examples of config files installed in /usr/share/doc/${PF}/examples\n\n
+You have to create ansible hosts file!\n
+More info on http://docs.ansible.com/intro_getting_started.html
+
+Some optional dependencies, you might want to install:
+dev-python/keyczar - needed to support accelerated mode
+dev-python/paramiko - alternative SSH backend"
 
 python_test() {
 	make tests || die "tests failed"
