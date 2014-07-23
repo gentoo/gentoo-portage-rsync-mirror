@@ -55,7 +55,7 @@ index 7863225..b6c75ce 100755
 -elif [ $ostype = "HP-UX" ]; then
 -  xdpy=/usr/contrib/bin/X11/xdpyinfo
 -else
--  xdpy=/usr/bin/xdpyinfo
+-  xdpy=/usr/bin/X11/xdpyinfo
 -fi
 -
 +localdev=Motif/OpenGL

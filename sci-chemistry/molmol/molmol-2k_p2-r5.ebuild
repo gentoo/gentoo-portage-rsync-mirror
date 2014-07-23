@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r5.ebuild,v 1.1 2014/07/22 16:49:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r5.ebuild,v 1.2 2014/07/23 09:03:00 jlec Exp $
 
 EAPI=5
 
@@ -47,9 +47,6 @@ src_prepare() {
 	rm -rf tiff*
 	# Patch from http://pjf.net/science/molmol.html, where src.rpm is provided
 	epatch "${FILESDIR}"/pjf_RH9_molmol2k2.diff
-
-	epatch "${FILESDIR}"/prefix.patch
-	eprefixify molmol
 
 	epatch "${FILESDIR}"/ldflags.patch
 	epatch "${FILESDIR}"/opengl.patch

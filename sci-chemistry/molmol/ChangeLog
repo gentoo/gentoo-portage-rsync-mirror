@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/molmol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.35 2014/07/22 16:49:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.36 2014/07/23 09:03:00 jlec Exp $
+
+  23 Jul 2014; Justin Lecher <jlec@gentoo.org> molmol-2k_p2-r5.ebuild,
+  files/opengl.patch:
+  Fix for prefix
 
 *molmol-2k_p2-r5 (22 Jul 2014)
 

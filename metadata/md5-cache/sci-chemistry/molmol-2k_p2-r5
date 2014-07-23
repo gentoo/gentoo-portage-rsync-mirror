@@ -9,4 +9,4 @@ RDEPEND=|| ( ( media-libs/mesa x11-libs/libGLw ) media-libs/mesa[motif] ) media-
 SLOT=0
 SRC_URI=ftp://ftp.mol.biol.ethz.ch/software/MOLMOL/unix-gzip/molmol-2k.2.0-src.tar.gz ftp://ftp.mol.biol.ethz.ch/software/MOLMOL/unix-gzip/molmol-2k.2.0-doc.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f29dfca55142e18ca79f336f843ff8f6
+_md5_=803d86e36fe8795d7c36c119dfab0740

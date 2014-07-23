@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.3.1.ebuild,v 1.1 2014/07/22 13:24:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.3.1.ebuild,v 1.2 2014/07/23 09:01:56 xarthisius Exp $
 
 EAPI=5
 
@@ -26,9 +26,6 @@ DEPEND="${RDEPEND}
 	mpi? ( dev-python/mpi4py[${PYTHON_USEDEP}] )"
 DISTUTILS_NO_PARALLEL_BUILD=1
 
-# Testsuite is written for a non mpi build
-REQUIRED_USE="test? ( !mpi )"
-
 python_prepare_all() {
 	append-cflags -fno-strict-aliasing
 	distutils-r1_python_prepare_all
@@ -36,6 +33,7 @@ python_prepare_all() {
 
 python_compile() {
 	if use mpi;then
+	    export CC=mpicc
 		distutils-r1_python_compile --mpi=yes
 	else
 		distutils-r1_python_compile
@@ -43,7 +41,12 @@ python_compile() {
 }
 
 python_test() {
-	esetup.py test
+	if use mpi ; then
+		export CC=mpicc
+		esetup.py test --mpi
+	else
+		esetup.py test
+	fi
 }
 
 python_install_all() {
