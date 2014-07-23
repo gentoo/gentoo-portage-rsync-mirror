@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libbson
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbson/ChangeLog,v 1.1 2014/07/23 15:58:23 ultrabug Exp $
+
+*libbson-0.98.0 (23 Jul 2014)
+
+  23 Jul 2014; Ultrabug <ultrabug@gentoo.org> +libbson-0.98.0.ebuild,
+  +metadata.xml:
+  initial ebuild thx to Johan Bergström in #505280
+

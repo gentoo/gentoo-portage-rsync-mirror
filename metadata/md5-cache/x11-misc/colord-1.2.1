@@ -4,7 +4,7 @@ DESCRIPTION=System service to accurately color manage input and output devices
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/software/colord/
 IUSE=examples extra-print-profiles +gusb +introspection +policykit scanner systemd +udev vala
-KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd
 LICENSE=GPL-2+
 RDEPEND=dev-db/sqlite:3= >=dev-libs/glib-2.36:2 >=media-libs/lcms-2.5:2= gusb? ( >=dev-libs/libgusb-0.1.1[introspection?] ) introspection? ( >=dev-libs/gobject-introspection-0.9.8 ) policykit? ( >=sys-auth/polkit-0.103 ) scanner? ( media-gfx/sane-backends ) systemd? ( >=sys-apps/systemd-44:0= ) udev? ( virtual/udev:=[gudev] ) !media-gfx/shared-color-profiles
 REQUIRED_USE=gusb? ( udev ) scanner? ( udev ) vala? ( introspection )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0/2
 SRC_URI=http://www.freedesktop.org/software/colord/releases/colord-1.2.1.tar.xz
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	8cd692457c1524c7be9af69831698a78	user	f54e098dd38ba1c0847a13e685b87747	vala	d8f392783fdc2395fc64af046f2ca961	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=7e6c006a38cdd3702195b59cd1b86d37
+_md5_=dc342b9e9be139297df3a4dd8175c3da

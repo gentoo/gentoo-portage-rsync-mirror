@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tevent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.62 2014/07/22 10:53:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.63 2014/07/23 15:38:13 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> tevent-0.9.21-r1.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> tevent-0.9.21-r1.ebuild:
   Stable for amd64, wrt bug #512912

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libosinfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/ChangeLog,v 1.33 2014/07/22 10:53:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/ChangeLog,v 1.34 2014/07/23 15:38:04 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libosinfo-0.2.10.ebuild:
+  Stable for x86, wrt bug #512012
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libosinfo-0.2.10.ebuild:
   Stable for amd64, wrt bug #512912
