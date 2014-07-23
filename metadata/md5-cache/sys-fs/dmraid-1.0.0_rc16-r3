@@ -4,11 +4,11 @@ DESCRIPTION=Device-mapper RAID tool and library
 EAPI=5
 HOMEPAGE=http://people.redhat.com/~heinzm/sw/dmraid/
 IUSE=dietlibc intel_led klibc led mini static
-KEYWORDS=~alpha amd64 ~arm ia64 ppc ppc64 ~sparc x86
+KEYWORDS=alpha amd64 ~arm ia64 ppc ppc64 ~sparc x86
 LICENSE=GPL-2
 RDEPEND=>=sys-fs/lvm2-2.02.45 klibc? ( dev-libs/klibc ) dietlibc? ( dev-libs/dietlibc )
 REQUIRED_USE=klibc? ( !dietlibc )
 SLOT=0
 SRC_URI=http://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-1.0.0.rc16-3.tar.bz2
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=75038bdfbd85acb1624e7cc33ec6adb6
+_md5_=e6931731735622a96662f021bf3168b8

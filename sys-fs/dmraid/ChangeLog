@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/dmraid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.40 2014/01/27 22:05:32 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.41 2014/07/23 10:32:00 klausman Exp $
+
+  23 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  dmraid-1.0.0_rc16-r3.ebuild:
+  Stable on alpha, bug #487672
 
   27 Jan 2014; Ian Stakenvicius <axs@gentoo.org> dmraid-1.0.0_rc16-r3.ebuild:
   fix dependency for static build

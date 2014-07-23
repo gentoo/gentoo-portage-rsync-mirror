@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-auth-ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/ChangeLog,v 1.13 2014/07/06 13:17:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/ChangeLog,v 1.14 2014/07/23 10:37:27 idella4 Exp $
+
+  23 Jul 2014; Ian Delaney <idella4@gentoo.org> django-auth-ldap-1.2.0.ebuild:
+  typo
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org>
   django-auth-ldap-1.1.4-r1.ebuild, django-auth-ldap-1.2.0.ebuild:
