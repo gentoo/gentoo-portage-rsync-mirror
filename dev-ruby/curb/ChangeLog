@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/curb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/curb/ChangeLog,v 1.6 2013/10/04 05:47:21 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/curb/ChangeLog,v 1.7 2014/07/23 05:24:26 graaff Exp $
+
+*curb-0.8.6 (23 Jul 2014)
+
+  23 Jul 2014; Hans de Graaff <graaff@gentoo.org> +curb-0.8.6.ebuild:
+  Version bump. Add ruby21. Avoid network tests, fixing bug 454830.
 
 *curb-0.8.5 (04 Oct 2013)
 

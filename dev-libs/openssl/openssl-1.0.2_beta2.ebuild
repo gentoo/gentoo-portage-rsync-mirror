@@ -1,17 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2_beta1-r2.ebuild,v 1.1 2014/04/25 08:19:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2_beta2.ebuild,v 1.1 2014/07/23 05:26:08 polynomial-c Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic toolchain-funcs multilib
+inherit eutils flag-o-matic toolchain-funcs multilib multilib-minimal
 
 REV="1.7"
 MY_P=${P/_/-}
 DESCRIPTION="full-strength general purpose cryptography library (including SSL and TLS)"
 HOMEPAGE="http://www.openssl.org/"
 SRC_URI="mirror://openssl/source/${MY_P}.tar.gz
-	http://dev.gentoo.org/~polynomial-c/${P}-patches-02.tar.xz
 	http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/${PN}/${PN}-c_rehash.sh?rev=${REV} -> ${PN}-c_rehash.sh.${REV}"
 
 LICENSE="openssl"
@@ -19,16 +18,16 @@ SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="bindist gmp kerberos rfc3779 sse2 static-libs test +tls-heartbeat vanilla zlib"
 
-# Have the sub-libs in RDEPEND with [static-libs] since, logically,
-# our libssl.a depends on libz.a/etc... at runtime.
-LIB_DEPEND="gmp? ( dev-libs/gmp[static-libs(+)] )
-	zlib? ( sys-libs/zlib[static-libs(+)] )
-	kerberos? ( app-crypt/mit-krb5 )"
 # The blocks are temporary just to make sure people upgrade to a
 # version that lack runtime version checking.  We'll drop them in
 # the future.
-RDEPEND="static-libs? ( ${LIB_DEPEND} )
-	!static-libs? ( ${LIB_DEPEND//\[static-libs(+)]} )
+RDEPEND="gmp? ( >=dev-libs/gmp-5.1.3-r1[static-libs(+)?,${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[static-libs(+)?,${MULTILIB_USEDEP}] )
+	kerberos? ( >=app-crypt/mit-krb5-1.11.4[${MULTILIB_USEDEP}] )
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20140508
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)
 	!<net-misc/openssh-5.9_p1-r4
 	!<net-libs/neon-0.29.6-r1"
 DEPEND="${RDEPEND}
@@ -38,6 +37,10 @@ DEPEND="${RDEPEND}
 PDEPEND="app-misc/ca-certificates"
 
 S="${WORKDIR}/${MY_P}"
+
+MULTILIB_WRAPPED_HEADERS=(
+	usr/include/openssl/opensslconf.h
+)
 
 src_prepare() {
 	SSL_CNF_DIR="/etc/ssl"
@@ -54,17 +57,10 @@ src_prepare() {
 	if ! use vanilla ; then
 		epatch "${FILESDIR}"/${PN}-1.0.0a-ldflags.patch #327421
 		epatch "${FILESDIR}"/${PN}-1.0.0d-windres.patch #373743
-		epatch "${FILESDIR}"/${PN}-1.0.0h-pkg-config.patch
 		epatch "${FILESDIR}"/${PN}-1.0.2-parallel-build.patch
-		epatch "${FILESDIR}"/${PN}-1.0.2-ipv6.patch
-		epatch "${FILESDIR}"/${PN}-1.0.2_beta1-perl-5.18.patch #497286
+		epatch "${FILESDIR}"/${PN}-1.0.2_beta2-ipv6.patch
 		epatch "${FILESDIR}"/${PN}-1.0.1e-s_client-verify.patch #472584
-		epatch "${FILESDIR}"/${PN}-1.0.1f-revert-alpha-perl-generation.patch #499086
-
-		# upstream fixes taken from 1.0.2_stable branch at openssl.git
-		# repository.
-		EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
-		epatch "${WORKDIR}/patches"
+		epatch "${FILESDIR}"/${PN}-1.0.2_beta2-revert-alpha-perl-generation.patch #499086
 
 		epatch_user #332661
 	fi
@@ -96,9 +92,11 @@ src_prepare() {
 	# The config script does stupid stuff to prompt the user.  Kill it.
 	sed -i '/stty -icanon min 0 time 50; read waste/d' config || die
 	./config --test-sanity || die "I AM NOT SANE"
+
+	multilib_copy_sources
 }
 
-src_configure() {
+multilib_src_configure() {
 	unset APPS #197996
 	unset SCRIPTS #312551
 	unset CROSS_COMPILE #311473
@@ -132,6 +130,7 @@ src_configure() {
 	einfo "Use configuration ${sslout:-(openssl knows best)}"
 	local config="Configure"
 	[[ -z ${sslout} ]] && config="config"
+
 	echoit \
 	./${config} \
 		${sslout} \
@@ -169,7 +168,7 @@ src_configure() {
 		Makefile || die
 }
 
-src_compile() {
+multilib_src_compile() {
 	# depend is needed to use $confopts; it also doesn't matter
 	# that it's -j1 as the code itself serializes subdirs
 	emake -j1 depend
@@ -179,12 +178,15 @@ src_compile() {
 	emake rehash
 }
 
-src_test() {
+multilib_src_test() {
 	emake -j1 test
 }
 
-src_install() {
+multilib_src_install() {
 	emake INSTALL_PREFIX="${D}" install
+}
+
+multilib_src_install_all() {
 	dobin "${WORKDIR}"/c_rehash #333117
 	dodoc CHANGES* FAQ NEWS README doc/*.txt doc/c-indentation.el
 	dohtml -r doc/*
