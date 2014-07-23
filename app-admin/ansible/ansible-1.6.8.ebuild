@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.6.7.ebuild,v 1.1 2014/07/23 07:50:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.6.8.ebuild,v 1.1 2014/07/23 08:40:19 jlec Exp $
 
 EAPI="5"
 
