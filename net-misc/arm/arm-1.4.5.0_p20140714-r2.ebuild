@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.5.0_p20140714-r1.ebuild,v 1.1 2014/07/23 01:32:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.5.0_p20140714-r2.ebuild,v 1.1 2014/07/23 02:59:16 mrueg Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -32,6 +32,7 @@ python_prepare_all() {
 		-e "/install-purelib/d"\
 		-e "/eggPath/d" setup.py || die
 	sed -i -e "s/1.4.6_dev/${PV}/" arm/__init__.py || die
+	sed -i -e "s/line.replace(/line.replace(u/" arm/util/ui_tools.py || die
 	distutils-r1_python_prepare_all
 }
 
