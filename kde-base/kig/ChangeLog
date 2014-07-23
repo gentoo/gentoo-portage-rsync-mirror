@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.337 2014/07/16 17:40:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.338 2014/07/23 16:53:18 johu Exp $
+
+  23 Jul 2014; Johannes Huber <johu@gentoo.org> -kig-4.13.2.ebuild:
+  Remove KDE SC 4.13.2
 
 *kig-4.13.3 (16 Jul 2014)
 

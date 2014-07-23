@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.78 2014/02/20 00:40:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.80 2014/07/23 16:38:25 floppym Exp $
+
+*m2crypto-0.22.3-r1 (23 Jul 2014)
+*m2crypto-0.21.1-r2 (23 Jul 2014)
+
+  23 Jul 2014; Mike Gilbert <floppym@gentoo.org> +m2crypto-0.21.1-r2.ebuild,
+  +m2crypto-0.22.3-r1.ebuild, -m2crypto-0.21.1-r1.ebuild,
+  -m2crypto-0.22.3.ebuild:
+  Revbump for last change.
+
+  23 Jul 2014; Mike Gilbert <floppym@gentoo.org> m2crypto-0.21.1-r1.ebuild,
+  m2crypto-0.22.3.ebuild:
+  Depend on threads support for python, bug 517446 by Artem Leshchev.
 
   20 Feb 2014; Mike Gilbert <floppym@gentoo.org> m2crypto-0.22.3.ebuild:
   Drop doc and examples use flags; files are not present in tarball. Bug 500712

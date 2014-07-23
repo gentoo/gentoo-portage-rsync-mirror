@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smokegen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokegen/ChangeLog,v 1.133 2014/07/16 17:40:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokegen/ChangeLog,v 1.134 2014/07/23 16:52:36 johu Exp $
+
+  23 Jul 2014; Johannes Huber <johu@gentoo.org> -smokegen-4.13.2.ebuild:
+  Remove KDE SC 4.13.2
 
 *smokegen-4.13.3 (16 Jul 2014)
 

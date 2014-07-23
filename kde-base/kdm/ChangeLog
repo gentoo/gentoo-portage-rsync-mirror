@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.404 2014/07/16 17:40:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.405 2014/07/23 16:53:12 johu Exp $
+
+  23 Jul 2014; Johannes Huber <johu@gentoo.org> -kdm-4.11.10.ebuild:
+  Remove KDE Workspace 4.11.10
 
 *kdm-4.11.11 (16 Jul 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.296 2014/07/17 11:40:55 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.297 2014/07/23 16:52:54 johu Exp $
+
+  23 Jul 2014; Johannes Huber <johu@gentoo.org> -pykde4-4.13.2.ebuild:
+  Remove KDE SC 4.13.2
 
   17 Jul 2014; Michael Palimaka <kensington@gentoo.org> pykde4-4.13.3.ebuild:
   Remove obsolete USE default dependency by Arfrever.

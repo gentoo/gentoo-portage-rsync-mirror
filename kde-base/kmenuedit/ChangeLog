@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmenuedit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.305 2014/07/16 17:41:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.306 2014/07/23 16:53:07 johu Exp $
+
+  23 Jul 2014; Johannes Huber <johu@gentoo.org> -kmenuedit-4.11.10.ebuild:
+  Remove KDE Workspace 4.11.10
 
 *kmenuedit-4.11.11 (16 Jul 2014)
 
