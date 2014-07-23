@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.159 2014/07/21 15:44:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.160 2014/07/23 20:31:45 zerochaos Exp $
 
 EAPI=5
 
@@ -94,7 +94,7 @@ RDEPEND+="
 	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/openjpeg:0 )
 	ladspa? ( media-libs/ladspa-sdk )
-	libass? ( >=media-libs/libass-0.9.10[enca?] )
+	libass? ( >=media-libs/libass-0.9.10:=[enca?] )
 	libcaca? ( media-libs/libcaca )
 	libmpeg2? ( media-libs/libmpeg2 )
 	lirc? ( app-misc/lirc )
