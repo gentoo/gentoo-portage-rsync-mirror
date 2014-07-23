@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.5.1.ebuild,v 1.1 2014/07/18 12:18:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.5.1.ebuild,v 1.2 2014/07/23 07:00:48 jlec Exp $
 
 EAPI=5
 
@@ -120,12 +120,13 @@ src_install() {
 		extras/migrate-unify-to-distribute.sh
 
 	# correct permissions on installed scripts
-	fperms 0755 /usr/share/glusterfs/scripts/*.sh
+	# fperms 0755 /usr/share/glusterfs/scripts/*.sh
+	chmod 0755 "${ED}"/usr/share/glusterfs/scripts/*.sh || die
 
 	if use georeplication ; then
 		# move the gsync-sync-gfid tool to a binary path
 		# and set a symlink to be compliant with all other distros
-		mv "${D}"/usr/{share/glusterfs/scripts/gsync-sync-gfid,libexec/glusterfs/} || die
+		mv "${ED}"/usr/{share/glusterfs/scripts/gsync-sync-gfid,libexec/glusterfs/} || die
 		dosym ../../../libexec/glusterfs/gsync-sync-gfid /usr/share/glusterfs/scripts/gsync-sync-gfid
 	fi
 
@@ -137,7 +138,7 @@ src_install() {
 	keepdir /var/lib/glusterd
 
 	# QA
-	rm -rf "${ED}/var/run/"
+	rm -rf "${ED}/var/run/" || die
 
 	use georeplication && python_fix_shebang "${ED}"
 }
@@ -146,17 +147,17 @@ pkg_postinst() {
 	elog "Starting with ${PN}-3.1.0, you can use the glusterd daemon to configure your"
 	elog "volumes dynamically. To do so, simply use the gluster CLI after running:"
 	elog "  /etc/init.d/glusterd start"
-	elog
+	echo
 	elog "For static configurations, the glusterfsd startup script can be multiplexed."
 	elog "The default startup script uses /etc/conf.d/glusterfsd to configure the"
 	elog "separate service.  To create additional instances of the glusterfsd service"
 	elog "simply create a symlink to the glusterfsd startup script."
-	elog
+	echo
 	elog "Example:"
 	elog "    # ln -s glusterfsd /etc/init.d/glusterfsd2"
 	elog "    # ${EDITOR} /etc/glusterfs/glusterfsd2.vol"
 	elog "You can now treat glusterfsd2 like any other service"
-	elog
+	echo
 	ewarn "You need to use a ntp client to keep the clocks synchronized across all"
 	ewarn "of your servers. Setup a NTP synchronizing service before attempting to"
 	ewarn "run GlusterFS."
