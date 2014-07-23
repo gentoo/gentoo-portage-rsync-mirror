@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.43 2014/05/08 07:55:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.44 2014/07/23 07:50:28 jlec Exp $
+
+*ansible-1.6.7 (23 Jul 2014)
+
+  23 Jul 2014; Justin Lecher <jlec@gentoo.org> -ansible-1.6.1.ebuild,
+  +ansible-1.6.7.ebuild, +files/README.gentoo:
+  Version Bump
 
   08 May 2014; Sergey Popov <pinkbyte@gentoo.org> ansible-9999.ebuild:
   Migrate to git-r3 eclass
