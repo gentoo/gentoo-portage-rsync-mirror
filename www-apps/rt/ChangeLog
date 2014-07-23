@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.85 2014/07/22 19:42:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.86 2014/07/23 00:07:38 dilfridge Exp $
+
+  23 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> rt-4.2.4.ebuild:
+  locale-maketext becomes Locale-Maketext
 
   22 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> rt-4.2.4.ebuild:
   digest-base is now Digest

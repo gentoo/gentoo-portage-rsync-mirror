@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/net-ping/net-ping-2.36.ebuild,v 1.8 2010/01/05 19:31:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Net-Ping/Net-Ping-2.36.ebuild,v 1.1 2014/07/23 00:14:06 dilfridge Exp $
 
 EAPI=2
 

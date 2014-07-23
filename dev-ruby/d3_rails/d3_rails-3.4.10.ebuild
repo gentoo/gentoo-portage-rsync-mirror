@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/d3_rails/d3_rails-3.3.13.ebuild,v 1.1 2013/12/21 02:26:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/d3_rails/d3_rails-3.4.10.ebuild,v 1.1 2014/07/23 00:22:01 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_TEST="none"
 RUBY_FAKEGEM_RECIPE_DOC="none"

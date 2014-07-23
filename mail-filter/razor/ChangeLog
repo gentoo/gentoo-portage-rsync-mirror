@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/razor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.107 2014/07/13 09:49:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.108 2014/07/23 00:26:01 dilfridge Exp $
+
+  23 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> razor-2.85-r2.ebuild:
+  net-ping becomes Net-Ping
 
   13 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -razor-2.85-r1.ebuild:
   Drop old.

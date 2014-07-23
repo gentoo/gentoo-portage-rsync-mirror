@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/perl-net-ping-2.41-r1.ebuild,v 1.1 2014/07/16 18:41:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Net-Ping/perl-Net-Ping-2.41-r1.ebuild,v 1.1 2014/07/23 00:25:07 dilfridge Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
-	|| ( =dev-lang/perl-5.18* ~perl-core/${PN#perl-}-${PV} )
-	!<perl-core/${PN#perl-}-${PV}
-	!>perl-core/${PN#perl-}-${PV}-r999
+	|| ( =dev-lang/perl-5.18* ~perl-core/Net-Ping-${PV} )
+	!<perl-core/Net-Ping-${PV}
+	!>perl-core/Net-Ping-${PV}-r999
 "
