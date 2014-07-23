@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.174 2014/07/23 15:25:38 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.175 2014/07/23 19:14:08 tgall Exp $
+
+  23 Jul 2014;  <tgall@gentoo.org> subversion-1.7.17.ebuild:
+  arm64 stable, bug #500482
 
   23 Jul 2014; Tobias Klausmann <klausman@gentoo.org> subversion-1.7.17.ebuild:
   Stable on alpha, bug #500482
