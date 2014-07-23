@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.11-r2.ebuild,v 1.11 2014/07/18 03:27:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.11-r2.ebuild,v 1.12 2014/07/23 01:03:46 mrueg Exp $
 
 EAPI=5
 inherit toolchain-funcs user
@@ -27,7 +27,7 @@ src_compile() {
 	sed -i 's:vnstat[.]log:vnstatd.log:' cfg/vnstat.conf || die
 	sed -i 's:vnstat[.]pid:vnstatd/vnstatd.pid:' cfg/vnstat.conf || die
 
-	emake all CC="$(tc-getCC)" CFLAGS="${CFLAGS}" $(usex gd all '')
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" $(usex gd all '')
 }
 
 src_install() {
