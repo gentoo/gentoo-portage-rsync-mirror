@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.3.1.ebuild,v 1.2 2014/07/23 09:01:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.3.1.ebuild,v 1.3 2014/07/23 09:31:18 xarthisius Exp $
 
 EAPI=5
 
@@ -26,27 +26,27 @@ DEPEND="${RDEPEND}
 	mpi? ( dev-python/mpi4py[${PYTHON_USEDEP}] )"
 DISTUTILS_NO_PARALLEL_BUILD=1
 
+pkg_setup() {
+	if use mpi ; then
+		export CC=mpicc
+	fi
+}
+
 python_prepare_all() {
 	append-cflags -fno-strict-aliasing
 	distutils-r1_python_prepare_all
 }
 
 python_compile() {
-	if use mpi;then
-	    export CC=mpicc
-		distutils-r1_python_compile --mpi=yes
-	else
-		distutils-r1_python_compile
-	fi
+	distutils-r1_python_compile --mpi=$(usex mpi yes no)
 }
 
 python_test() {
-	if use mpi ; then
-		export CC=mpicc
-		esetup.py test --mpi
-	else
-		esetup.py test
-	fi
+	esetup.py test --mpi=$(usex mpi yes no)
+}
+
+python_install() {
+	distutils-r1_python_install --mpi=$(usex mpi yes no)
 }
 
 python_install_all() {

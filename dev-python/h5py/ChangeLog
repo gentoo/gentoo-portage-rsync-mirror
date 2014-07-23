@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/h5py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.28 2014/07/23 09:01:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.29 2014/07/23 09:31:18 xarthisius Exp $
+
+  23 Jul 2014; Kacper Kowalik <xarthisius@gentoo.org> h5py-2.3.1.ebuild:
+  Make sure that --mpi is passed to setup.py during each stage
 
   23 Jul 2014; Kacper Kowalik <xarthisius@gentoo.org> h5py-2.3.1.ebuild:
   Use mpi wrapper when compiling with parallel hdf5. Tests with USE=mpi are
