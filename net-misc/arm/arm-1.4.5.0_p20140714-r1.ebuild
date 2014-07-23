@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.5.0_p20140714.ebuild,v 1.1 2014/07/23 00:15:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.5.0_p20140714-r1.ebuild,v 1.1 2014/07/23 01:32:12 mrueg Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -26,7 +26,7 @@ python_prepare_all() {
 	sed -i -e "s/.version import VERSION/ import __version__ as VERSION/"\
 		-e "s/, 'arm.cli'//"\
 		-e "s/arm.cli/arm/g"\
-		-e "s/arm.stem//"\
+		-e "s/'arm.stem'//"\
 		-e "/gui/d"\
 		-e "s/\"arm\/settings.cfg\",//"\
 		-e "/install-purelib/d"\
@@ -37,6 +37,10 @@ python_prepare_all() {
 
 python_install() {
 	distutils-r1_python_install --docPath "${EPREFIX}"/usr/share/doc/${PF}
+	# Workaround until setup.py is fixed upstream
+	python_moduleinto arm
+	python_domodule arm/config
+	python_replicate_script "${ED}"/usr/bin/run_arm
 }
 python_install_all() {
 	distutils-r1_python_install_all --docPath "${EPREFIX}"/usr/share/doc/${PF}
