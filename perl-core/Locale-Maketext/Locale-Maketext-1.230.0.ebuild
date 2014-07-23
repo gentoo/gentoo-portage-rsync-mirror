@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/locale-maketext/locale-maketext-1.230.0.ebuild,v 1.11 2014/07/22 22:42:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Locale-Maketext/Locale-Maketext-1.230.0.ebuild,v 1.1 2014/07/22 23:56:00 dilfridge Exp $
 
 EAPI=4
 

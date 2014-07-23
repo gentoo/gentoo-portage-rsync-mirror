@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9241 2014/07/22 22:44:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9242 2014/07/23 00:00:17 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> updates/3Q-2014:
+  Rename perl-core/locale-maketext to perl-core/Locale-Maketext to follow
+  upstream
 
   22 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> updates/3Q-2014:
   Rename virtual/perl-i18n-langtags to virtual/perl-I18N-LangTags to follow
