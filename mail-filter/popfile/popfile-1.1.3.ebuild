@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.1.3.ebuild,v 1.6 2014/07/21 19:45:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.1.3.ebuild,v 1.7 2014/07/23 02:29:13 patrick Exp $
 
 EAPI=5
 inherit eutils
@@ -21,7 +21,7 @@ RDEPEND="virtual/perl-Digest-MD5
 	dev-perl/HTML-Template
 	dev-perl/TimeDate
 	dev-perl/DBI
-	virtual/perl-digest-base
+	virtual/perl-Digest
 	cjk? ( dev-perl/Encode-compat
 		dev-perl/Text-Kakasi )
 	mysql? ( dev-perl/DBD-mysql	)

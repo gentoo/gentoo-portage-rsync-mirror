@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinxcontrib-programoutput
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-programoutput/ChangeLog,v 1.3 2014/03/31 20:53:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-programoutput/ChangeLog,v 1.4 2014/07/23 02:26:49 patrick Exp $
+
+  23 Jul 2014; Patrick Lauer <patrick@gentoo.org>
+  sphinxcontrib-programoutput-0.8.ebuild:
+  Add py3.4 support
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org>
   sphinxcontrib-programoutput-0.8.ebuild:

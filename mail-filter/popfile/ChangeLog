@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/popfile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.31 2014/07/21 19:45:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.32 2014/07/23 02:29:13 patrick Exp $
+
+  23 Jul 2014; Patrick Lauer <patrick@gentoo.org> popfile-1.1.3.ebuild:
+  Fix perl-digest virtual as it was packagemoved
 
   21 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> popfile-1.1.3.ebuild:
   Never depend on perl-core directly
