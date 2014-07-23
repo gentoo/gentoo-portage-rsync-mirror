@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-Map8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.33 2014/07/12 09:52:14 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.34 2014/07/23 14:09:03 jer Exp $
+
+  23 Jul 2014; Jeroen Roovers <jer@gentoo.org> Unicode-Map8-0.130.0.ebuild:
+  Stable for HPPA (bug #517040).
 
   12 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> Unicode-Map8-0.130.0.ebuild:
   Disable tests (not a regression)
