@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-mozldap/perl-mozldap-1.5.2.ebuild,v 1.1 2010/07/07 13:59:42 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-mozldap/perl-mozldap-1.5.2.ebuild,v 1.2 2014/07/23 22:10:56 zlogene Exp $
 
-EAPI=2
+EAPI=5
 
 inherit perl-module
 

@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/batctl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batctl/ChangeLog,v 1.14 2013/11/24 22:41:47 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batctl/ChangeLog,v 1.15 2014/07/23 22:14:32 xmw Exp $
+
+*batctl-2014.2.0 (23 Jul 2014)
+
+  23 Jul 2014; Michael Weber <xmw@gentoo.org> +batctl-2014.2.0.ebuild,
+  -batctl-2013.0.0.ebuild, -batctl-2013.1.0.ebuild, -batctl-2013.2.0.ebuild,
+  -batctl-2013.3.0.ebuild:
+  Version bump (thanks Antonio Quartulli, bug 502230), drop old versions.
 
 *batctl-2013.4.0 (24 Nov 2013)
 

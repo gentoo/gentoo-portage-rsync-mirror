@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.100 2014/07/06 07:55:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.101 2014/07/23 22:06:27 dilfridge Exp $
+
+  23 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-cleaner-2.14.ebuild:
+  Remove old
 
   06 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> perl-cleaner-2.15.ebuild:
   Drop hppa from live KEYWORDS

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batctl/batctl-2013.3.0.ebuild,v 1.1 2013/08/05 05:39:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batctl/batctl-2014.2.0.ebuild,v 1.1 2014/07/23 22:14:32 xmw Exp $
 
 EAPI=4
 
@@ -15,8 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+RDEPEND="dev-libs/libnl:3"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 pkg_setup() {
 	if ( linux_config_exists && linux_chkconfig_present BATMAN_ADV ) \
