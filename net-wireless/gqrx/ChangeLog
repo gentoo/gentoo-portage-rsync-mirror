@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/gqrx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gqrx/ChangeLog,v 1.2 2014/07/07 13:06:58 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gqrx/ChangeLog,v 1.3 2014/07/23 21:22:14 zerochaos Exp $
+
+  23 Jul 2014; Rick Farina <zerochaos@gentoo.org> -gqrx-2.1_p20130708.ebuild:
+  removing old version, but leaving last version that works on gr3.6
 
   07 Jul 2014; Rick Farina <zerochaos@gentoo.org> gqrx-2.1_p20130705.ebuild,
   gqrx-2.1_p20130708.ebuild, gqrx-2.2.0_p20140706.ebuild, gqrx-9999.ebuild:
