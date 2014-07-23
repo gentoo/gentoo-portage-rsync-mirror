@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9247 2014/07/23 09:24:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9248 2014/07/23 18:07:52 haubi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jul 2014; Michael Haubenwallner <haubi@gentoo.org> thirdpartymirrors:
+  remove apache.archive.org from apache mirrors, bug#516372
 
   23 Jul 2014; Pacho Ramos <pacho@gentoo.org>
   arch/amd64/package.use.stable.mask:
