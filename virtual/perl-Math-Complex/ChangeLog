@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-Complex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-Complex/ChangeLog,v 1.10 2014/07/09 19:32:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-Complex/ChangeLog,v 1.11 2014/07/24 09:32:19 klausman Exp $
+
+  24 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  perl-Math-Complex-1.590.0-r3.ebuild:
+  Stable on alpha, bug #381424
 
 *perl-Math-Complex-1.590.0-r3 (09 Jul 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/couchdb-python-0.10.ebuild,v 1.1 2014/07/22 02:36:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/couchdb-python-0.10.ebuild,v 1.2 2014/07/24 09:57:18 djc Exp $
 
 EAPI=5
 
@@ -28,6 +28,10 @@ S=${WORKDIR}/${MY_P}
 # Re-enable when the ebuild is capable of starting a local couchdb
 # instance.
 RESTRICT=test
+
+src_prepare() {
+	epatch "${FILESDIR}/${PV}-exec-compat.patch"
+}
 
 python_compile_all() {
 	esetup.py build_sphinx

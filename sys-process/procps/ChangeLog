@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.120 2014/07/18 02:30:10 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.121 2014/07/24 09:55:50 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> procps-3.3.9-r1.ebuild:
+  Look for libsystemd.pc instead of libsystemd.pc and raise dependency from 206
+  to 209 accordingly wrt #501306
 
   18 Jul 2014; Matt Turner <mattst88@gentoo.org> procps-3.3.9.ebuild:
   alpha stable, bug 510316.

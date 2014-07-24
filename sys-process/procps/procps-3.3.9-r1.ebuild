@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.9-r1.ebuild,v 1.2 2014/02/03 06:24:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.9-r1.ebuild,v 1.3 2014/07/24 09:55:50 ssuominen Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ IUSE="+ncurses nls selinux static-libs systemd test unicode"
 RDEPEND="!<sys-apps/sysvinit-2.88-r6
 	ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?] )
 	selinux? ( sys-libs/libselinux )
-	systemd? ( >=sys-apps/systemd-206 )"
+	systemd? ( >=sys-apps/systemd-209 )"
 DEPEND="${RDEPEND}
 	ncurses? ( virtual/pkgconfig )
 	systemd? ( virtual/pkgconfig )
@@ -31,6 +31,7 @@ S=${WORKDIR}/${PN}-ng-${PV}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.3.8-kill-neg-pid.patch
+	sed -i -e 's:systemd-login:systemd:' configure || die #501306
 }
 
 src_configure() {

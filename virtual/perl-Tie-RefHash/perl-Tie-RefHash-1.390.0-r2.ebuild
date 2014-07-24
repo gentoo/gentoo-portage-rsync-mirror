@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Tie-RefHash/perl-Tie-RefHash-1.390.0-r2.ebuild,v 1.1 2014/07/15 18:04:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Tie-RefHash/perl-Tie-RefHash-1.390.0-r2.ebuild,v 1.2 2014/07/24 09:34:13 klausman Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="alpha amd64 x86"
 IUSE=""
 
 RDEPEND="
