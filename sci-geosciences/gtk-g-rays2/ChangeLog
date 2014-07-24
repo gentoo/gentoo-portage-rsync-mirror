@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/gtk-g-rays2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/ChangeLog,v 1.10 2012/12/11 17:55:07 axs Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/ChangeLog,v 1.11 2014/07/24 17:59:07 axs Exp $
+
+  24 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  gtk-g-rays2-2.01.ebuild:
+  Swap virtual/udev[gudev] for virtual/libgudev, package does not seem to
+  require libudev or udevd; bug 506034
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> gtk-g-rays2-2.01.ebuild:
   virtualize udev dependency
@@ -46,4 +51,3 @@
   27 Jul 2008; Hanno Boeck <hanno@gentoo.org>
   +files/gtk-g-rays2-1.11-makecheck.diff, +gtk-g-rays2-1.11.ebuild:
   Initial commit, tool to access Wintec G-Rays 2 / WBT 201 GPS device.
-

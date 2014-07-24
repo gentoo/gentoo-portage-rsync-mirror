@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-2.0.0.ebuild,v 1.1 2014/06/08 15:04:21 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-2.0.0.ebuild,v 1.2 2014/07/24 17:46:58 axs Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ RDEPEND="
 	media-libs/libcanberra
 	virtual/libusb:1
 	dev-libs/dbus-glib
-	virtual/udev[gudev]
+	virtual/libgudev:=
 "
 
 DEPEND="${RDEPEND}"
@@ -49,7 +49,7 @@ pkg_setup() {
 }
 
 src_configure() {
-	local UDEVDIR="$(udev_get_udevdir)"/rules.d
+	local UDEVDIR="$(get_udevdir)"/rules.d
 	local MODELS=${INPUT_DEVICES//roccat_/}
 	mycmakeargs=( -DDEVICES=${MODELS// /;} \
 	-DUDEVDIR="${UDEVDIR/"//"//}" )

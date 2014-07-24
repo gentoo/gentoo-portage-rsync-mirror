@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.12.2.ebuild,v 1.3 2014/07/23 15:17:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.12.2.ebuild,v 1.4 2014/07/24 17:48:47 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -56,10 +56,10 @@ COMMON_DEPEND="
 		>=dev-libs/libwacom-0.7
 		>=x11-libs/pango-1.20
 		x11-drivers/xf86-input-wacom
-		virtual/udev[gudev] )
+		virtual/libgudev:= )
 	packagekit? ( >=app-admin/packagekit-base-0.8.1 )
 	smartcard? ( >=dev-libs/nss-3.11.2 )
-	udev? ( virtual/udev[gudev] )
+	udev? ( virtual/libgudev:= )
 "
 # Themes needed by g-s-d, gnome-shell, gtk+:3 apps to work properly
 # <gnome-color-manager-3.1.1 has file collisions with g-s-d-3.1.x

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.2.4.ebuild,v 1.3 2014/07/23 15:17:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.2.4.ebuild,v 1.4 2014/07/24 17:49:26 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -38,7 +38,7 @@ RDEPEND="
 	x11-libs/libXfixes
 	x11-libs/libXi
 	x11-libs/libxklavier
-	virtual/udev[gudev]
+	virtual/libgudev:=
 
 	colord? ( >=x11-misc/colord-0.1.9:= )
 	cups? ( >=net-print/cups-1.4[dbus] )

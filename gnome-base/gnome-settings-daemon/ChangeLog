@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.143 2014/07/23 15:17:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.144 2014/07/24 17:48:47 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-settings-daemon-3.10.2.ebuild, gnome-settings-daemon-3.12.2.ebuild:
+  Use virtual/libgudev with := for automatic rebuild instead of virtual/udev.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-settings-daemon-3.12.2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.8.15-r1.ebuild,v 1.1 2013/12/19 10:17:44 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.8.15-r1.ebuild,v 1.2 2014/07/24 17:42:36 ssuominen Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ SRC_URI="http://www.packagekit.org/releases/${MY_P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
-IUSE="bash-completion connman cron command-not-found doc +introspection networkmanager nsplugin entropy static-libs systemd udev"
+IUSE="bash-completion connman cron command-not-found doc +introspection networkmanager nsplugin entropy static-libs systemd"
 
 CDEPEND="bash-completion? ( >=app-shells/bash-completion-2.0 )
 	connman? ( net-misc/connman )
@@ -32,7 +32,6 @@ CDEPEND="bash-completion? ( >=app-shells/bash-completion-2.0 )
 		>=x11-libs/gtk+-2.14.0:2
 		x11-libs/pango
 	)
-	udev? ( virtual/udev[gudev] )
 	dev-db/sqlite:3
 	>=dev-libs/dbus-glib-0.74
 	>=dev-libs/glib-2.32.0:2[${PYTHON_USEDEP}]

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgaminggear/libgaminggear-0.3.0.ebuild,v 1.1 2014/06/08 15:02:49 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgaminggear/libgaminggear-0.3.0.ebuild,v 1.2 2014/07/24 17:44:45 ssuominen Exp $
 
 EAPI=5
 
@@ -20,7 +20,6 @@ RDEPEND="
 	media-libs/libcanberra
 	virtual/libusb:1
 	dev-libs/dbus-glib
-	virtual/udev[gudev]
 "
 
 DEPEND="${RDEPEND}
