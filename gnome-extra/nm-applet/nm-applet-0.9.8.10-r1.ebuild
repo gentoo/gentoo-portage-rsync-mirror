@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.10-r1.ebuild,v 1.3 2014/07/23 15:18:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.10-r1.ebuild,v 1.4 2014/07/24 18:10:28 ssuominen Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -38,7 +38,7 @@ RDEPEND="
 	modemmanager? ( >=net-misc/modemmanager-0.7.990 )
 	virtual/freedesktop-icon-theme
 	virtual/notification-daemon
-	virtual/udev[gudev]
+	virtual/libgudev:=
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

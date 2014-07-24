@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.434 2014/05/17 13:57:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.435 2014/07/24 18:05:29 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> gimp-2.8.10-r1.ebuild,
+  gimp-2.8.10.ebuild, gimp-2.8.6.ebuild, gimp-2.8.8-r1.ebuild, gimp-9999.ebuild:
+  Use virtual/libgudev instead of virtual/udev. Use := for 2.8.10-r1 because
+  it's EAPI=5 but without := for 9999 because it's still EAPI=3 for some reason.
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> gimp-2.8.10-r1.ebuild:
   Stable for alpha, wrt bug #504212

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.21.ebuild,v 1.11 2014/01/15 12:54:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.21.ebuild,v 1.12 2014/07/24 18:15:33 axs Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -54,7 +54,7 @@ RDEPEND="${PYTHON_DEPS}
 		sys-apps/hwids
 		>=sys-apps/usbredir-0.4.2
 		virtual/libusb:1
-		virtual/udev[gudev]
+		virtual/libgudev:=
 		policykit? (
 			sys-apps/acl
 			>=sys-auth/polkit-0.110-r1

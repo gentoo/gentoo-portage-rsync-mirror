@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.67 2014/05/04 12:12:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.68 2014/07/24 18:18:56 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  modemmanager-0.6.0.0.ebuild, modemmanager-1.0.0-r2.ebuild,
+  modemmanager-1.2.0-r1.ebuild, modemmanager-1.2.0.ebuild:
+  Use get_udevdir instead of the deprecated udev_get_udevdir. Use
+  virtual/libgudev with := instead of virtual/udev for automatic rebuild.
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org> modemmanager-1.2.0-r1.ebuild:
   x86 stable, bug 508862

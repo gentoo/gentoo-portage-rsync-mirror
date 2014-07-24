@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.52 2014/03/15 15:28:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.53 2014/07/24 18:05:29 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -56,7 +56,7 @@ RDEPEND=">=dev-libs/glib-2.36.0:2
 	>=app-arch/xz-utils-5.0.0
 	bzip2? ( app-arch/bzip2 )
 	postscript? ( app-text/ghostscript-gpl )
-	udev? ( virtual/udev[gudev] )"
+	udev? ( virtual/libgudev )"
 DEPEND="${RDEPEND}
 	sys-apps/findutils
 	virtual/pkgconfig

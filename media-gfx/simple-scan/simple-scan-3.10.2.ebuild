@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.10.2.ebuild,v 1.5 2014/03/09 12:01:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.10.2.ebuild,v 1.6 2014/07/24 18:09:17 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ COMMON_DEPEND="
 	>=media-gfx/sane-backends-1.0.20:=
 	>=sys-libs/zlib-1.2.3.1:=
 	virtual/jpeg:0=
-	virtual/udev:=[gudev]
+	virtual/libgudev:=
 	x11-libs/cairo:=
 	>=x11-libs/gtk+-3:3
 	|| (

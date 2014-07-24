@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.18.3.ebuild,v 1.12 2014/04/21 10:29:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.18.3.ebuild,v 1.13 2014/07/24 18:14:19 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -55,7 +55,8 @@ RDEPEND="
 	systemd? ( sys-apps/systemd:0= )
 	udev? (
 		cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
-		virtual/udev[gudev] )
+		virtual/libgudev:=
+		virtual/libudev:= )
 	udisks? ( >=sys-fs/udisks-1.97:2 )
 "
 DEPEND="${RDEPEND}

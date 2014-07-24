@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/simple-scan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.41 2014/07/23 15:19:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.42 2014/07/24 18:09:17 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> simple-scan-3.10.2.ebuild,
+  simple-scan-3.12.0.ebuild, simple-scan-3.12.1.ebuild:
+  Use virtual/libgudev instead of virtual/udev. Use := for automatic rebuild.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> simple-scan-3.12.1.ebuild:
   Stable for x86, wrt bug #512012

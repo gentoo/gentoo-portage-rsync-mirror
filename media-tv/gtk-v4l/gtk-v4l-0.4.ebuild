@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gtk-v4l/gtk-v4l-0.4.ebuild,v 1.2 2012/12/11 11:10:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gtk-v4l/gtk-v4l-0.4.ebuild,v 1.3 2014/07/24 18:06:28 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils
 
 DESCRIPTION="A control application for Video 4 Linux (based on C and GTK+)"
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
 	>=media-libs/libv4l-0.6
-	>=virtual/udev-171[gudev]
+	virtual/libgudev:=
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -34,5 +34,5 @@ src_configure() {
 
 src_install() {
 	default
-	rm -f "${ED}"/usr/lib*/lib*.la
+	prune_libtool_files --all
 }

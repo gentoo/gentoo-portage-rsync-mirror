@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-1.2.0-r1.ebuild,v 1.3 2014/05/04 12:12:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-1.2.0-r1.ebuild,v 1.4 2014/07/24 18:18:56 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ REQUIRED_USE="
 
 RDEPEND="
 	>=dev-libs/glib-2.32:2
-	>=virtual/udev-147[gudev]
+	virtual/libgudev:=
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 	mbim? ( >=net-libs/libmbim-1.4 )
 	policykit? ( >=sys-auth/polkit-0.106[introspection] )
@@ -58,7 +58,7 @@ src_prepare() {
 src_configure() {
 	gnome2_src_configure \
 		--disable-more-warnings \
-		--with-udev-base-dir="$(udev_get_udevdir)" \
+		--with-udev-base-dir="$(get_udevdir)" \
 		--disable-static \
 		--with-dist-version=${PVR} \
 		$(use_enable introspection) \

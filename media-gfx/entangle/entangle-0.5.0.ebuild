@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/entangle/entangle-0.5.0.ebuild,v 1.3 2013/09/29 11:31:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/entangle/entangle-0.5.0.ebuild,v 1.4 2014/07/24 18:25:46 ssuominen Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=">=dev-libs/glib-2.26:2
 	>=x11-libs/gdk-pixbuf-2.12.0:2
 	>=x11-libs/gtk+-3.3.18:3
-	>=virtual/udev-171[gudev]
+	virtual/libgudev:=
 	>=dev-libs/dbus-glib-0.60
 	>=dev-libs/gobject-introspection-0.9.3
 	>=media-libs/libgphoto2-2.4.11:=

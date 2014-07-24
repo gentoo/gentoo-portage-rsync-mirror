@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.70 2014/07/21 06:33:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.71 2014/07/24 18:29:22 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> shotwell-0.15.1.ebuild,
+  shotwell-0.18.0.ebuild, shotwell-0.18.1.ebuild:
+  Pull in virtual/libgudev with := for automatic rebuild and with
+  USE="introspection" for src/camera/CameraTable.vala
 
 *shotwell-0.18.1 (21 Jul 2014)
 

@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.326 2014/07/23 16:53:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.327 2014/07/24 18:20:33 johu Exp $
+
+*kdepasswd-4.13.3-r1 (24 Jul 2014)
+
+  24 Jul 2014; Johannes Huber <johu@gentoo.org>
+  +files/kdepasswd-4.13.3-use-accountsservice.patch,
+  +kdepasswd-4.13.3-r1.ebuild, -kdepasswd-4.13.3.ebuild:
+  Revision bump adds backported Plasma 5 upstream patch by Michael Palimaka
+  <kensington@gentoo.org>, which uses sys-apps/accountsservice at runtime, fixes
+  bug #380899.
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org> -kdepasswd-4.13.2.ebuild:
   Remove KDE SC 4.13.2

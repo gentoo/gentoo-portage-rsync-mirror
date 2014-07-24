@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-boxes/gnome-boxes-3.12.3.ebuild,v 1.2 2014/07/22 10:46:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-boxes/gnome-boxes-3.12.3.ebuild,v 1.3 2014/07/24 18:20:19 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -41,7 +41,7 @@ RDEPEND="
 	sys-fs/fuse
 	sys-fs/fuseiso
 	sys-fs/mtools
-	>=virtual/udev-165[gudev]
+	virtual/libgudev:=
 "
 #	!bindist? ( gnome-extra/gnome-boxes-nonfree )
 

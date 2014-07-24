@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-1.0.0-r2.ebuild,v 1.6 2014/03/08 11:23:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-1.0.0-r2.ebuild,v 1.7 2014/07/24 18:18:56 ssuominen Exp $
 
 EAPI="5"
 inherit autotools eutils user multilib readme.gentoo toolchain-funcs udev virtualx
@@ -17,7 +17,7 @@ REQUIRED_USE="qmi-newest? ( qmi )"
 
 RDEPEND="
 	>=dev-libs/glib-2.32:2
-	>=virtual/udev-147[gudev]
+	virtual/libgudev:=
 	policykit? ( >=sys-auth/polkit-0.106[introspection] )
 	qmi? ( >=net-libs/libqmi-1.4.0:= )
 "
@@ -54,7 +54,7 @@ src_configure() {
 	# We don't have mbim in the tree
 	econf \
 		--disable-more-warnings \
-		--with-udev-base-dir="$(udev_get_udevdir)" \
+		--with-udev-base-dir="$(get_udevdir)" \
 		--disable-static \
 		--with-dist-version=${PVR} \
 		$(use_with policykit polkit) \
