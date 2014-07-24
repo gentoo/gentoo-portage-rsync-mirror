@@ -1,6 +1,13 @@
 # ChangeLog for media-video/x264-encoder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.77 2014/07/24 12:26:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.78 2014/07/24 13:07:09 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/x264-encoder-nolib-20110425.patch, -files/x264-encoder-nostrip.patch,
+  -x264-encoder-0.0.20111220.ebuild, -x264-encoder-0.0.20120327.ebuild,
+  -x264-encoder-0.0.20120707.ebuild, -x264-encoder-0.0.20130506.ebuild,
+  -x264-encoder-0.0.20130731.ebuild, -x264-encoder-0.0.20130912.ebuild:
+  old
 
   24 Jul 2014; Pacho Ramos <pacho@gentoo.org> x264-encoder-0.0.20140308.ebuild:
   amd64/x86 stable, bug #517924

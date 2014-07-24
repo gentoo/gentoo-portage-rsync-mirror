@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.10.11.ebuild,v 1.2 2014/05/15 12:05:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.10.11.ebuild,v 1.3 2014/07/24 13:07:23 pacho Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ RDEPEND=">=net-libs/ptlib-2.10.10:=[stun,debug=,dtmf,http,ipv6?,ldap?,sound?,ssl
 		media-sound/gsm
 		capi? ( net-dialup/capi4k-utils )
 		celt? ( media-libs/celt )
-		ffmpeg? ( virtual/ffmpeg[encode] !!>=media-libs/libav-9 )
+		ffmpeg? ( virtual/ffmpeg[encode] )
 		ixj? ( sys-kernel/linux-headers )
 		ilbc? ( dev-libs/ilbc-rfc3951 )
 		sbc? ( media-libs/libsamplerate )

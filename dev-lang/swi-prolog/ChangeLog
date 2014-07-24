@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.443 2014/07/13 10:02:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.444 2014/07/24 13:30:52 keri Exp $
+
+  24 Jul 2014; <keri@gentoo.org> -swi-prolog-6.5.3.ebuild,
+  -swi-prolog-6.6.2.ebuild, -swi-prolog-6.6.3.ebuild,
+  -swi-prolog-7.1.13.ebuild, -swi-prolog-7.1.14.ebuild,
+  -swi-prolog-7.1.15.ebuild:
+  Remove old versions
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> swi-prolog-6.6.4.ebuild:
   Stable for ppc, wrt bug #509252
