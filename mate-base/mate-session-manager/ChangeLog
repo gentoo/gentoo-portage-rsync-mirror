@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/mate-session-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/ChangeLog,v 1.12 2014/07/02 09:46:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/ChangeLog,v 1.13 2014/07/24 11:29:32 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Punt description for USE="upower" which is a global USE flag now.
 
   02 Jul 2014; Pacho Ramos <pacho@gentoo.org>
   mate-session-manager-1.8.1-r1.ebuild:

@@ -632,7 +632,6 @@ app-emulation/wine:prelink - Run prelink on DLLs during build -- do not disable 
 app-emulation/wine:realtime - Pull in sys-auth/rtkit for low-latency pulseaudio support
 app-emulation/wine:run-exes - Use Wine to open and run .EXE and .MSI files
 app-emulation/wine:samba - Add support for NTLM auth. see http://wiki.winehq.org/NtlmAuthSetupGuide and http://wiki.winehq.org/NtlmSigningAndSealing
-app-emulation/wine:udisks - Support dynamic storage devices using sys-fs/udisks
 app-emulation/wine:win32 - Build a 32bit version of Wine (won't run Win64 binaries)
 app-emulation/wine:win64 - Build a 64bit version of Wine (won't run Win32 binaries)
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
@@ -1056,7 +1055,6 @@ app-text/atril:dvi - Enable build-in DVI viewer
 app-text/atril:ps - Enable build-in postscript viewer
 app-text/atril:t1lib - Enable the Type-1 fonts for the build-in DVI viewer (media-libs/t1lib)
 app-text/atril:xps - Enable XPS viewer using app-text/libxps
-app-text/calibre:udisks - Add run-time dependency on sys-fs/udisks in order to mount and unmount reading devices.
 app-text/crm114:mew - Add support for using the mewdecode mime decoder (app-emacs/mew)
 app-text/crm114:mimencode - Add support for using the mimencode mime (net-mail/metamail)
 app-text/crm114:normalizemime - Add support for using the normalizemime (mail-filter/normalizemime)
@@ -2758,12 +2756,11 @@ gnome-base/gvfs:afp - Enables support for accessing AFP (Apple Filing Protocol) 
 gnome-base/gvfs:archive - Enables support for accessing files in archives transparently via app-arch/libarchive
 gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
 gnome-base/gvfs:fuse - Enables fuse mount points in $HOME/.gvfs for legacy application access
-gnome-base/gvfs:gdu - Enable sys-apps/gnome-disk-utility integration
+gnome-base/gvfs:gdu - Enable sys-apps/gnome-disk-utility integration (DEPRECATED, use USE flag "udisks" instead)
 gnome-base/gvfs:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
 gnome-base/gvfs:http - Enable the HTTP/DAV backend using net-libs/libsoup-gnome
 gnome-base/gvfs:libsecret - Enable app-crypt/libsecret support to store login credentials.
 gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
-gnome-base/gvfs:udisks - Enable volume monitoring using sys-fs/udisks
 gnome-base/libglade:tools - Install libglade-convert Python script.
 gnome-base/libgnome-keyring:vala - Enable bindings for dev-lang/vala
 gnome-base/libgnomecanvas:glade - Enable glade support
@@ -2895,8 +2892,6 @@ kde-base/kdebase-startkde:wallpapers - Install the KDE wallpapers
 kde-base/kdebindings-meta:csharp - Enable C# language bindings for KDE and Qt
 kde-base/kdelibs:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
-kde-base/kdelibs:udisks - Use udisks for block device access (e.g., automounting)
-kde-base/kdelibs:upower - Use upower for power management
 kde-base/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
 kde-base/kdepim-meta:akonadi - Enables support for kde-base/akonadi
 kde-base/kdepim-runtime:facebook - Facebook service integration via net-libs/libkfbapi
@@ -3031,11 +3026,9 @@ kde-misc/krusader:bookmarks - Add dependency on bookmark package.
 kde-misc/networkmanagement:openconnect - Build support for the OpenConnect VPN client
 kde-misc/plasma-nm:modemmanager - Enable support for mobile broadband devices
 kde-misc/plasma-nm:openconnect - Build support for the OpenConnect VPN client
-kde-misc/synaptiks:upower - Handle mouse devices correctly across suspend and resume with upower
 kde-misc/tellico:addressbook - Add support for kdepim addressbook (kabc)
 lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
-lxde-base/lxsession:upower - Pull in sys-power/upower for hibernate/suspend support
 lxqt-base/lxqt-meta:icons - Install lxde-base/lxde-icon-theme icon theme
 lxqt-base/lxqt-meta:lightdm - Install x11-misc/lightdm display manager
 lxqt-base/lxqt-meta:lximage - Install media-gfx/lximage-qt image viewer
@@ -3220,7 +3213,6 @@ mate-base/mate-file-manager:mate - Install x11-themes/mate-icon-theme which is n
 mate-base/mate-file-manager:unique - Enable single instance support using dev-libs/libunique.
 mate-base/mate-keyring:gpg-agent - Include GPG agent in mate-keyring.
 mate-base/mate-keyring:ssh-agent - Include SSH agent in mate-keyring.
-mate-base/mate-session-manager:upower - Suspend and hibernate using sys-power/upower.
 mate-extra/caja-extensions:gajim - Add an extension to support net-im/gajim.
 mate-extra/caja-extensions:image-converter - Add image conversion support.
 mate-extra/caja-extensions:mail - Add an extension to support e-mail functionality.
@@ -4953,8 +4945,7 @@ net-im/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calli
 net-im/telepathy-connection-managers:sipe - Enable Sip Exchange Protocol.
 net-im/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
 net-im/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.
-net-im/telepathy-mission-control:systemd - Rely on systemd's logind (instead of using sys-power/upower) to detect suspend and resume
-net-im/telepathy-mission-control:upower - Use sys-power/upower to detect suspend and resume
+net-im/telepathy-mission-control:systemd - Rely on systemd's logind to detect suspend and resume
 net-im/tkabber:plugins - Enables installation the extra plugins
 net-im/vacuum:adiummessagestyle - Use UI styles created for Adium
 net-im/vacuum:annotations - Enable adding comments to the contacts in the roster
@@ -7376,8 +7367,7 @@ x11-misc/redshift:geoclue - Control dependency on app-misc/geoclue
 x11-misc/revelation:applet - Enable applet for gnome-base/gnome-panel
 x11-misc/rodent:experimental - Build experimental plugins (obexfs, curlftpfs, ecryptfs, cifs and samba)
 x11-misc/rss-glx:quesoglc - Enable support for OpenGL Character Renderer
-x11-misc/sddm:consolekit - Enable ConsoleKit support
-x11-misc/sddm:upower - Use sys-power/upower for power management
+x11-misc/sddm:consolekit - Use ck-launch-session from sys-auth/consolekit by default in Xsession (no native support)
 x11-misc/shutter:drawing - Enables drawing tool
 x11-misc/shutter:webphoto - Enables screenshots of websites
 x11-misc/slim:consolekit - Enable native consolekit support

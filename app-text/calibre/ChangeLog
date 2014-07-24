@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.326 2014/07/08 14:29:24 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.327 2014/07/24 11:05:51 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Remove description for USE="udisks" which is a global USE flag now.
 
 *calibre-1.43 (08 Jul 2014)
 

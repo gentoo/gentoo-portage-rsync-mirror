@@ -10,8 +10,4 @@
   <maintainer>
     <email>yngwin@gentoo.org</email>
   </maintainer>
-  <use>
-    <flag name="udisks">Add run-time dependency on <pkg>sys-fs/udisks</pkg>
-      in order to mount and unmount reading devices.</flag>
-  </use>
 </pkgmetadata>

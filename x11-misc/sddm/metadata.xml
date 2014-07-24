@@ -7,9 +7,7 @@
     <name>Jauhien Piatlicki</name>
   </maintainer>
   <use>
-    <flag name="upower">Use <pkg>sys-power/upower</pkg> for power
-    management</flag>
-    <flag name="consolekit">Enable ConsoleKit support</flag>
+    <flag name="consolekit">Use ck-launch-session from sys-auth/consolekit by default in Xsession (no native support)</flag>
   </use>
   <longdescription lang="en">
     SDDM is a modern display manager for X11 aiming to be fast, simple

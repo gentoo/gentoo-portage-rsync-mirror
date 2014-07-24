@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1018 2014/07/23 16:52:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1019 2014/07/24 11:14:51 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Remove descriptions for USE flags "udisks" and "upower" because their global
+  descriptions are identical.
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org> -kdelibs-4.13.2-r1.ebuild:
   Remove KDE SC 4.13.2

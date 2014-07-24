@@ -5,8 +5,4 @@
 		<email>TomWij@gentoo.org</email>
 		<name>Tom Wijsman</name>
 	</maintainer>
-	<use>
-		<flag name="upower">Suspend and hibernate using 
-			<pkg>sys-power/upower</pkg>.</flag>
-	</use>
 </pkgmetadata>
