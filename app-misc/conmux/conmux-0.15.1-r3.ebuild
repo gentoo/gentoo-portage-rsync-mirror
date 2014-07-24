@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/conmux/conmux-0.15.1-r3.ebuild,v 1.1 2013/11/05 19:11:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/conmux/conmux-0.15.1-r3.ebuild,v 1.2 2014/07/24 19:42:39 hwoarang Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~x86"
+KEYWORDS="amd64 ~mips x86"
 IUSE=""
 
 RDEPEND="dev-perl/IO-Multiplex

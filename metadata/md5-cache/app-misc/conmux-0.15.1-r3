@@ -3,10 +3,10 @@ DEPEND=dev-lang/perl:=[-build(-)]
 DESCRIPTION=A console multiplexor
 EAPI=5
 HOMEPAGE=https://github.com/autotest/autotest
-KEYWORDS=~amd64 ~mips ~x86
+KEYWORDS=amd64 ~mips x86
 LICENSE=GPL-2
 RDEPEND=dev-perl/IO-Multiplex dev-perl/URI dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~hwoarang/distfiles/conmux-0.15.1.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=9f24a5ae43589942e41a5fdaede97176
+_md5_=c6e51a165918a1915b2512a863e5065c

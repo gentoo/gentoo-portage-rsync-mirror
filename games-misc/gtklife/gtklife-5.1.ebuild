@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/gtklife-5.1.ebuild,v 1.7 2012/05/03 03:29:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/gtklife-5.1.ebuild,v 1.8 2014/07/24 19:34:17 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="A Conway's Life simulator for Unix"
@@ -14,9 +14,15 @@ SLOT="0"
 KEYWORDS="amd64 hppa ~ppc x86"
 IUSE=""
 
-RDEPEND="x11-libs/gtk+:2"
+RDEPEND="x11-libs/gtk+:2
+	dev-libs/glib:2
+	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-link.patch
+}
 
 src_configure() {
 	egamesconf \
@@ -25,10 +31,10 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r graphics patterns || die "doins failed"
+	doins -r graphics patterns
 
 	newicon icon_48x48.png ${PN}.png
 	make_desktop_entry ${PN} GtkLife
