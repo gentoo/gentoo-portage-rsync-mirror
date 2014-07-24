@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.514 2014/05/08 01:14:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.515 2014/07/24 10:49:10 ssuominen Exp $
 
 # Keep them sorted
 
@@ -360,9 +360,11 @@ tokenizer - Add support for the PHP file parser
 truetype - Add support for FreeType and/or FreeType2 fonts
 uclibc - Enable uclibc specific patches and build or link uclibc
 udev - Enable virtual/udev integration (device discovery, power and storage device support, etc)
+udisks - Enable storage management support
 unicode - Add support for Unicode
 upnp - Enable UPnP port mapping support
 upnp-av - Enable UPnP audio/video streaming support
+upower - Enable power management support
 usb - Add USB support to applications that have optional USB support (e.g. cups)
 v4l - Enable support for video4linux (using linux-headers or userspace libv4l libraries)
 vala - Enable bindings for dev-lang/vala

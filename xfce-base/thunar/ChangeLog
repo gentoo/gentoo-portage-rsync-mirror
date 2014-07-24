@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.174 2014/06/02 17:35:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.175 2014/07/24 10:58:32 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> thunar-1.6.3.ebuild:
+  Rename USE="udev" to USE="udisks" wrt #516380
 
   02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> thunar-1.6.3.ebuild:
   Pull in virtual/libgudev.
