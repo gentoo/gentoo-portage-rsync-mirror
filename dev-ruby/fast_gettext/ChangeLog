@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fast_gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_gettext/ChangeLog,v 1.27 2014/06/26 09:00:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_gettext/ChangeLog,v 1.28 2014/07/24 06:30:13 graaff Exp $
+
+*fast_gettext-0.9.0 (24 Jul 2014)
+
+  24 Jul 2014; Hans de Graaff <graaff@gentoo.org> +fast_gettext-0.9.0.ebuild:
+  Version bump.
 
   26 Jun 2014; Hans de Graaff <graaff@gentoo.org> fast_gettext-0.8.1.ebuild:
   Add ruby20, ruby21.

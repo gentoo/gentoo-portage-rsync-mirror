@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.ebuild,v 1.10 2013/06/04 20:41:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.ebuild,v 1.11 2014/07/24 06:30:34 tupone Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs games
@@ -54,6 +54,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xf86vidmodeproto
 	x11-proto/xextproto
+	media-libs/fontconfig
 	dga? ( x11-proto/xf86dgaproto )
 	xv? ( x11-proto/videoproto )
 	nls? ( sys-devel/gettext )"
