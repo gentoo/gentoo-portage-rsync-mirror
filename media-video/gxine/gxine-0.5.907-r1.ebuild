@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.907-r1.ebuild,v 1.2 2014/06/23 14:58:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.907-r1.ebuild,v 1.3 2014/07/24 18:53:58 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils multilib nsplugins
@@ -26,7 +26,7 @@ COMMON_DEPEND=">=media-libs/xine-lib-1.1.20
 	nsplugin? ( dev-libs/nspr
 		x11-libs/libXaw
 		x11-libs/libXt )
-	udev? ( virtual/udev[gudev] )
+	udev? ( virtual/libgudev:= )
 	xcb? ( x11-libs/libxcb )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${COMMON_DEPEND}

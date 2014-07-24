@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnomad
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/ChangeLog,v 1.50 2013/03/03 15:46:35 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/ChangeLog,v 1.51 2014/07/24 18:43:39 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> gnomad-2.9.6.ebuild:
+  Update to EAPI=5. Use virtual/libgudev with := instead of virtual/udev.
 
   03 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop to herd as talked with him

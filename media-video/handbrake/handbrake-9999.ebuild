@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.17 2014/03/26 15:39:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.18 2014/07/24 18:45:30 axs Exp $
 
 EAPI="5"
 
@@ -70,7 +70,7 @@ RDEPEND="
 		x11-libs/gdk-pixbuf:2
 		x11-libs/libnotify
 		x11-libs/pango
-		>=virtual/udev-171[gudev]
+		virtual/libgudev:=
 	)
 	fdk? ( media-libs/fdk-aac )
 	"

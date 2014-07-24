@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.10.ebuild,v 1.5 2013/03/25 15:49:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.10.ebuild,v 1.6 2014/07/24 18:38:15 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2.32.0:2
 	>=dev-python/pygobject-3.2.1:3
 	>=dev-libs/gobject-introspection-0.10.8
 	x11-libs/gtk+:3[introspection]
-	virtual/udev[gudev]
+	virtual/libgudev
 	vala? ( $(vala_depend) )
 	totem? ( media-video/totem )"
 DEPEND="${RDEPEND}

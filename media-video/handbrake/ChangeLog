@@ -1,6 +1,11 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.20 2014/03/26 15:39:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.21 2014/07/24 18:45:30 axs Exp $
+
+  24 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  handbrake-0.9.9-r1.ebuild, handbrake-0.9.9.ebuild, handbrake-9999.ebuild:
+  Swap virtual/udev[gudev] for virtual/libgudev, package does not seem to
+  require libudev or udevd; bug 506034
 
 *handbrake-0.9.9-r1 (26 Mar 2014)
 

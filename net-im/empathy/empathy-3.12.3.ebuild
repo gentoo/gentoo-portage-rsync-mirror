@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.3.ebuild,v 1.2 2014/06/21 20:02:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.3.ebuild,v 1.3 2014/07/24 18:32:39 axs Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -69,7 +69,7 @@ COMMON_DEPEND="
 	v4l? (
 		media-plugins/gst-plugins-v4l2:1.0
 		>=media-video/cheese-3.4:=
-		virtual/udev[gudev] )
+		virtual/libgudev:= )
 "
 
 # >=empathy-3.4 is incompatible with telepathy-rakia-0.6, bug #403861

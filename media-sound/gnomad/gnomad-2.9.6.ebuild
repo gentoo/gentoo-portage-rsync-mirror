@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.9.6.ebuild,v 1.6 2012/12/11 16:34:33 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.9.6.ebuild,v 1.7 2014/07/24 18:43:39 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 MY_PN=${PN}2
 MY_P=${MY_PN}-${PV}
@@ -21,7 +21,7 @@ RDEPEND="media-libs/libid3tag
 	media-libs/libnjb
 	media-libs/taglib
 	>=x11-libs/gtk+-2.24:2
-	virtual/udev[gudev]"
+	virtual/libgudev:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( dev-util/intltool sys-devel/gettext )"

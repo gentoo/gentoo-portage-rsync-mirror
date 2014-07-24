@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0.3.ebuild,v 1.3 2014/07/23 15:23:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0.3.ebuild,v 1.4 2014/07/24 18:47:47 ssuominen Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -63,7 +63,7 @@ COMMON_DEPEND="
 	lirc? ( app-misc/lirc )
 	python? ( >=dev-python/pygobject-3.0:3[${PYTHON_USEDEP}] )
 	udev? (
-		virtual/udev[gudev]
+		virtual/libgudev:=
 		ipod? ( >=media-libs/libgpod-0.7.92[udev] )
 		mtp? ( >=media-libs/libmtp-0.3 ) )
 	zeitgeist? ( gnome-extra/zeitgeist )

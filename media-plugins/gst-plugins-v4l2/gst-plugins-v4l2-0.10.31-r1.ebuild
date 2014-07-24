@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/gst-plugins-v4l2-0.10.31-r1.ebuild,v 1.4 2014/07/23 15:22:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/gst-plugins-v4l2-0.10.31-r1.ebuild,v 1.5 2014/07/24 18:50:51 ssuominen Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ IUSE="udev"
 RDEPEND="
 	>=media-libs/libv4l-0.9.5[${MULTILIB_USEDEP}]
 	>=media-plugins/gst-plugins-xvideo-${PV}:${SLOT}[${MULTILIB_USEDEP}]
-	udev? ( >=virtual/udev-208-r2[gudev,${MULTILIB_USEDEP}] )
+	udev? ( >=virtual/libgudev-208:=[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	virtual/os-headers"

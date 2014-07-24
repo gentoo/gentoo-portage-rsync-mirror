@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
-DEPEND=>=dev-libs/glib-2.14:2 >=dev-libs/dbus-glib-0.73 >=dev-libs/libunique-1:1 >=gnome-base/gconf-2 >=gnome-base/gnome-desktop-2.14:2 media-gfx/sane-backends media-libs/lcms:0 media-libs/libcanberra[gtk] media-libs/tiff net-print/cups virtual/udev[gudev] x11-libs/libX11 x11-libs/libXxf86vm x11-libs/libXrandr >=x11-libs/gtk+-2.14:2 x11-libs/libnotify >=x11-libs/vte-0.22:0 app-text/gnome-doc-utils app-text/scrollkeeper >=dev-util/intltool-0.35 doc? ( >=dev-util/gtk-doc-1.9 ) >=sys-apps/sed-4
+DEPEND=>=dev-libs/glib-2.14:2 >=dev-libs/dbus-glib-0.73 >=dev-libs/libunique-1:1 >=gnome-base/gconf-2 >=gnome-base/gnome-desktop-2.14:2 media-gfx/sane-backends media-libs/lcms:0 media-libs/libcanberra[gtk] media-libs/tiff net-print/cups virtual/libgudev x11-libs/libX11 x11-libs/libXxf86vm x11-libs/libXrandr >=x11-libs/gtk+-2.14:2 x11-libs/libnotify >=x11-libs/vte-0.22:0 app-text/gnome-doc-utils app-text/scrollkeeper >=dev-util/intltool-0.35 doc? ( >=dev-util/gtk-doc-1.9 ) >=sys-apps/sed-4
 DESCRIPTION=Color profile manager for the GNOME desktop
 EAPI=3
 HOMEPAGE=http://projects.gnome.org/gnome-color-manager/
 IUSE=doc
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/glib-2.14:2 >=dev-libs/dbus-glib-0.73 >=dev-libs/libunique-1:1 >=gnome-base/gconf-2 >=gnome-base/gnome-desktop-2.14:2 media-gfx/sane-backends media-libs/lcms:0 media-libs/libcanberra[gtk] media-libs/tiff net-print/cups virtual/udev[gudev] x11-libs/libX11 x11-libs/libXxf86vm x11-libs/libXrandr >=x11-libs/gtk+-2.14:2 x11-libs/libnotify >=x11-libs/vte-0.22:0
+RDEPEND=>=dev-libs/glib-2.14:2 >=dev-libs/dbus-glib-0.73 >=dev-libs/libunique-1:1 >=gnome-base/gconf-2 >=gnome-base/gnome-desktop-2.14:2 media-gfx/sane-backends media-libs/lcms:0 media-libs/libcanberra[gtk] media-libs/tiff net-print/cups virtual/libgudev x11-libs/libX11 x11-libs/libXxf86vm x11-libs/libXrandr >=x11-libs/gtk+-2.14:2 x11-libs/libnotify >=x11-libs/vte-0.22:0
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gnome/sources/gnome-color-manager/2.32/gnome-color-manager-2.32.0.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=0e6981aaeb07f0cf82612daf5f5cac8e
+_md5_=29e81b15eec04b1e72806991c4363740

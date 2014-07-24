@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.7.0.ebuild,v 1.1 2014/07/23 06:00:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.7.0.ebuild,v 1.2 2014/07/24 18:39:36 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils toolchain-funcs games
@@ -47,6 +47,11 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf
+
+	# bug #137547
+	use fluidsynth || myconf="${myconf} --disable-fluidsynth"
+
 	use x86 && append-ldflags -Wl,-z,noexecstack
 
 	# NOT AN AUTOCONF SCRIPT SO DONT CALL ECONF
@@ -70,10 +75,10 @@ src_configure() {
 		$(use_enable flac) \
 		$(use_enable opengl) \
 		$(use_enable vorbis) \
-		$(use_enable fluidsynth) \
 		$(use_enable theora theoradec) \
 		$(use_enable truetype freetype2) \
-		$(use_enable x86 nasm) || die
+		$(use_enable x86 nasm) \
+		${myconf} || die
 }
 
 src_compile() {

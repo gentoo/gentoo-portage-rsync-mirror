@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.85 2014/07/23 15:23:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.86 2014/07/24 18:53:20 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> cheese-2.32.0.ebuild,
+  cheese-3.10.2.ebuild, cheese-3.12.1.ebuild, cheese-3.12.2.ebuild:
+  Use virtual/libgudev with := instead of virtual/udev.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cheese-3.12.2.ebuild:
   Stable for x86, wrt bug #512012

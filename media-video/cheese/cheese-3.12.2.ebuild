@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.12.2.ebuild,v 1.3 2014/07/23 15:23:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.12.2.ebuild,v 1.4 2014/07/24 18:53:20 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -38,7 +38,7 @@ COMMON_DEPEND="
 	media-libs/gstreamer:1.0[introspection?]
 	media-libs/gst-plugins-base:1.0[introspection?,ogg,pango,theora,vorbis,X]
 
-	>=virtual/udev-171:=[gudev]
+	virtual/libgudev:=
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )
 "
 RDEPEND="${COMMON_DEPEND}
