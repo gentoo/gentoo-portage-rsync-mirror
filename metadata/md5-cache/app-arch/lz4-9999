@@ -1,9 +1,10 @@
-DEFINED_PHASES=compile configure install preinst prepare test unpack
-DEPEND=sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=test? ( dev-util/valgrind ) >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Extremely Fast Compression algorithm
 EAPI=5
 HOMEPAGE=https://code.google.com/p/lz4/
-LICENSE=BSD-2
+IUSE=test abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
+LICENSE=BSD-2 GPL-2
 SLOT=0
-_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=5517cadca5814cfad144d79b2da20e5e
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	git-r3	49fc3d60d7bcd6f8913ad6ec0cb4c67b	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	fbb9baa0b4039304643e36e9820fdecf	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=eab0ecc9a74206b0886789db606a5722

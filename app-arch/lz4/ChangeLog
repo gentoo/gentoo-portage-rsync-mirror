@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.22 2014/07/11 22:12:12 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.23 2014/07/24 21:19:18 mgorny Exp $
+
+  24 Jul 2014; Michał Górny <mgorny@gentoo.org> lz4-9999.ebuild:
+  Use the development branch. Switch back to plain Makefile which is better
+  supported upstream. Enable tests. Enable multilib support.
 
   11 Jul 2014;  <tgall@gentoo.org> lz4-0_p106-r1.ebuild:
   Keyworded on arm64, bug #499468
