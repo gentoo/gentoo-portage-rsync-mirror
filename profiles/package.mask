@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15924 2014/07/23 00:24:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15925 2014/07/24 12:32:09 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (24 Jul 2014)
+# It's a development version that was included without
+# notifying gnome team.
+=dev-python/pygobject-3.13.3
 
 # Lars Wendler <polynomial-c@gentoo.org> (20 Jul 2014)
 # e2fsprogs-1.42.11 fails to build (no parallel build problem):
