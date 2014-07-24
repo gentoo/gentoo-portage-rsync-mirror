@@ -1,6 +1,17 @@
 # ChangeLog for mail-filter/spambayes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/ChangeLog,v 1.22 2012/09/07 12:45:24 lordvan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/ChangeLog,v 1.24 2014/07/24 14:54:34 jlec Exp $
+
+*spambayes-1.1_beta1 (24 Jul 2014)
+
+  24 Jul 2014; Justin Lecher <jlec@gentoo.org> +spambayes-1.1_beta1.ebuild:
+  Version BUmp
+
+*spambayes-1.1_alpha6-r2 (24 Jul 2014)
+
+  24 Jul 2014; Justin Lecher <jlec@gentoo.org> +spambayes-1.1_alpha6-r2.ebuild,
+  metadata.xml:
+  Bump to EAPI=5 and new python infrastructure
 
   07 Sep 2012; <lordvan@gentoo.org> spambayes-1.1_alpha6-r1.ebuild:
   add GPL-2 license as this is used for init-script. fixes bug #425966
