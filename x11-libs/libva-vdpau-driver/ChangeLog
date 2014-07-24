@@ -1,6 +1,18 @@
 # ChangeLog for x11-libs/libva-vdpau-driver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/ChangeLog,v 1.8 2014/07/15 15:47:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/ChangeLog,v 1.10 2014/07/24 15:30:56 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  libva-vdpau-driver-0.7.3.ebuild, libva-vdpau-driver-0.7.4-r1.ebuild,
+  libva-vdpau-driver-0.7.4.ebuild:
+  Restrict to working libvdpau version(s)
+
+*libva-vdpau-driver-0.7.4-r2 (24 Jul 2014)
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/libva-vdpau-driver-0.7.4-libvdpau-0.8.patch,
+  +libva-vdpau-driver-0.7.4-r2.ebuild:
+  Fix compability with x11-libs/libvdpau >= 0.8 wrt #517778 by Justin Lecher
 
   15 Jul 2014; Pacho Ramos <pacho@gentoo.org>
   libva-vdpau-driver-0.7.4-r1.ebuild:

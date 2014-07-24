@@ -3785,7 +3785,6 @@ media-sound/beets:lastgenre - Enable support for importing music genres from las
 media-sound/beets:mpdstats - Enable support for collecting statistic about listening habits from media-sound/mpd
 media-sound/beets:replaygain - Enable support for Replay Gain metadata calculation during import
 media-sound/beets:web - Enable embedded webserver support through dev-python/flask
-media-sound/cantata:devices - Enable suport for external devices
 media-sound/cantata:dynamic - Enable support for dynamic playlists
 media-sound/cantata:http-server - Enable internal HTTP server to play non-MPD files
 media-sound/cantata:online-services - Enable support for online services (Jamendo, Magnatune, SoundCloud, and Podcasts)

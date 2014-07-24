@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/libva-vdpau-driver-0.7.4.ebuild,v 1.2 2013/05/03 22:18:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/libva-vdpau-driver-0.7.4.ebuild,v 1.3 2014/07/24 15:30:56 ssuominen Exp $
 
 EAPI="2"
 inherit autotools eutils
@@ -16,7 +16,7 @@ IUSE="debug opengl"
 
 RDEPEND=">=x11-libs/libva-1.1.0[X,opengl?]
 	opengl? ( virtual/opengl )
-	x11-libs/libvdpau
+	<x11-libs/libvdpau-0.8
 	!x11-libs/vdpau-video"
 
 DEPEND="${DEPEND}

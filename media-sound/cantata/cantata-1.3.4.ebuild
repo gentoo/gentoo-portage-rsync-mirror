@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/cantata-1.3.4.ebuild,v 1.1 2014/04/09 22:29:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/cantata-1.3.4.ebuild,v 1.2 2014/07/24 15:13:24 johu Exp $
 
 EAPI=5
 
@@ -15,12 +15,12 @@ SRC_URI="https://drive.google.com/uc?export=download&id=0Bzghs6gQWi60WTYtaXk3c1I
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="cddb cdda devices dynamic http-server kde lame mtp musicbrainz online-services qt5 replaygain streams taglib"
+IUSE="cddb cdda dynamic http-server kde lame mtp musicbrainz online-services qt5 replaygain streams taglib udisks"
 REQUIRED_USE="
 	cddb? ( cdda taglib )
-	cdda? ( devices || ( cddb musicbrainz )  )
+	cdda? ( udisks || ( cddb musicbrainz )  )
 	lame? ( cdda taglib )
-	mtp? ( devices taglib )
+	mtp? ( taglib udisks )
 	musicbrainz? ( cdda taglib )
 	online-services? ( taglib )
 	qt5? ( !kde )
@@ -59,7 +59,7 @@ RDEPEND="
 	taglib? (
 		media-libs/taglib[asf,mp4]
 		media-libs/taglib-extras
-		!kde? ( devices? ( sys-fs/udisks:2 ) )
+		!kde? ( udisks? ( sys-fs/udisks:2 ) )
 	)
 "
 DEPEND="${RDEPEND}
@@ -87,7 +87,6 @@ src_configure() {
 		-DCANTATA_TRANSLATIONS="${langs// /;}"
 		$(cmake-utils_use_enable cdda CDPARANOIA)
 		$(cmake-utils_use_enable cddb)
-		$(cmake-utils_use_enable devices DEVICES_SUPPORT)
 		$(cmake-utils_use_enable dynamic)
 		$(cmake-utils_use_enable http-server HTTP_SERVER)
 		$(cmake-utils_use_enable kde)
@@ -103,6 +102,7 @@ src_configure() {
 		$(cmake-utils_use_enable replaygain SPEEXDSP)
 		$(cmake-utils_use_enable taglib)
 		$(cmake-utils_use_enable taglib TAGLIB_EXTRAS)
+		$(cmake-utils_use_enable udisks DEVICES_SUPPORT)
 		-DENABLE_HTTPS_SUPPORT=ON
 		-DENABLE_HTTP_STREAM_PLAYBACK=OFF
 		-DENABLE_REMOTE_DEVICES=OFF

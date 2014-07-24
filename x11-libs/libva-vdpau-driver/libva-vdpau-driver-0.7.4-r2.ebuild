@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/libva-vdpau-driver-0.7.4-r1.ebuild,v 1.5 2014/07/24 15:30:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/libva-vdpau-driver-0.7.4-r2.ebuild,v 1.1 2014/07/24 15:28:12 ssuominen Exp $
 
 EAPI=5
 
@@ -13,12 +13,12 @@ SRC_URI="http://www.freedesktop.org/software/vaapi/releases/libva-vdpau-driver/$
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug opengl"
 
 RDEPEND=">=x11-libs/libva-1.2.1-r1[X,opengl?,${MULTILIB_USEDEP}]
 	opengl? ( >=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}] )
-	=x11-libs/libvdpau-0.7*[${MULTILIB_USEDEP}]
+	>=x11-libs/libvdpau-0.8[${MULTILIB_USEDEP}]
 	!x11-libs/vdpau-video"
 
 DEPEND="${DEPEND}
@@ -27,9 +27,11 @@ DEPEND="${DEPEND}
 DOCS=( NEWS README AUTHORS )
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-glext-missing-definition.patch"
-	epatch "${FILESDIR}/${P}-VAEncH264VUIBufferType.patch"
-	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
+	epatch \
+		"${FILESDIR}"/${P}-glext-missing-definition.patch \
+		"${FILESDIR}"/${P}-VAEncH264VUIBufferType.patch \
+		"${FILESDIR}"/${P}-libvdpau-0.8.patch
+	sed -i 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die
 	autotools-multilib_src_prepare
 }
 

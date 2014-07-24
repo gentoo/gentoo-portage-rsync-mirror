@@ -3,7 +3,6 @@
 <pkgmetadata>
 	<herd>kde</herd>
 	<use>
-		<flag name="devices">Enable suport for external devices</flag>
 		<flag name="dynamic">Enable support for dynamic playlists</flag>
 		<flag name="http-server">Enable internal HTTP server to play non-MPD files</flag>
 		<flag name="online-services">Enable support for online services (Jamendo, Magnatune, SoundCloud, and Podcasts)</flag>
