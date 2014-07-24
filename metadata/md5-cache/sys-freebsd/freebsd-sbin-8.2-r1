@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install prepare setup unpack
-DEPEND==sys-freebsd/freebsd-lib-8.2*[ipv6?,atm?,netware?] =sys-freebsd/freebsd-libexec-8.2* >=dev-libs/expat-2.0.1 ssl? ( dev-libs/openssl ) dev-libs/libedit sys-libs/readline sys-process/vixie-cron atm? ( net-analyzer/bsnmp ) !build? ( =sys-freebsd/freebsd-sources-8.2* ) =sys-freebsd/freebsd-mk-defs-8.2* virtual/pmake virtual/pmake
+DEPEND==sys-freebsd/freebsd-lib-8.2*[ipv6?,atm?,netware?] =sys-freebsd/freebsd-libexec-8.2* >=dev-libs/expat-2.0.1 ssl? ( dev-libs/openssl ) dev-libs/libedit sys-libs/readline || ( sys-process/cronie sys-process/vixie-cron ) atm? ( net-analyzer/bsnmp ) !build? ( =sys-freebsd/freebsd-sources-8.2* ) =sys-freebsd/freebsd-mk-defs-8.2* virtual/pmake virtual/pmake
 DESCRIPTION=FreeBSD sbin utils
 EAPI=2
 HOMEPAGE=http://www.freebsd.org/
 IUSE=atm ipfilter +pf ipv6 build ssl +cxx netware profile
 KEYWORDS=~sparc-fbsd ~x86-fbsd
 LICENSE=BSD
-RDEPEND==sys-freebsd/freebsd-lib-8.2*[ipv6?,atm?,netware?] =sys-freebsd/freebsd-libexec-8.2* >=dev-libs/expat-2.0.1 ssl? ( dev-libs/openssl ) dev-libs/libedit sys-libs/readline sys-process/vixie-cron atm? ( net-analyzer/bsnmp )
+RDEPEND==sys-freebsd/freebsd-lib-8.2*[ipv6?,atm?,netware?] =sys-freebsd/freebsd-libexec-8.2* >=dev-libs/expat-2.0.1 ssl? ( dev-libs/openssl ) dev-libs/libedit sys-libs/readline || ( sys-process/cronie sys-process/vixie-cron ) atm? ( net-analyzer/bsnmp )
 SLOT=0
 SRC_URI=mirror://gentoo/freebsd-sbin-8.2.tar.bz2 mirror://gentoo/freebsd-contrib-8.2.tar.bz2 mirror://gentoo/freebsd-lib-8.2.tar.bz2 mirror://gentoo/freebsd-libexec-8.2.tar.bz2 mirror://gentoo/freebsd-usbin-8.2.tar.bz2 mirror://gentoo/freebsd-etc-8.2.tar.bz2 build? ( mirror://gentoo/freebsd-sys-8.2.tar.bz2 )
 _eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	freebsd	9df2a927373191607071d802c1058c96	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=f7bb973b5cd3760abbcf7e1e0044e9c6
+_md5_=b374c98400e1eb4effe87faed2f38fd3
