@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.0.ebuild,v 1.1 2014/04/25 23:21:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.0.ebuild,v 1.2 2014/07/24 16:58:23 ssuominen Exp $
 
 EAPI="5"
 VALA_USE_DEPEND="vapigen"
@@ -30,7 +30,11 @@ COMMON_DEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
 	scanner? ( media-gfx/sane-backends )
 	systemd? ( >=sys-apps/systemd-44:0= )
-	udev? ( virtual/udev:=[gudev] )"
+	udev? (
+		virtual/udev
+		virtual/libgudev:=
+		virtual/libudev:=
+		)"
 RDEPEND="${COMMON_DEPEND}
 	!media-gfx/shared-color-profiles"
 DEPEND="${COMMON_DEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.1.ebuild,v 1.3 2014/07/23 15:38:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.1.ebuild,v 1.4 2014/07/24 16:58:23 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -35,7 +35,11 @@ COMMON_DEPEND="
 	policykit? ( >=sys-auth/polkit-0.103 )
 	scanner? ( media-gfx/sane-backends )
 	systemd? ( >=sys-apps/systemd-44:0= )
-	udev? ( virtual/udev:=[gudev] )
+	udev? (
+		virtual/udev
+		virtual/libgudev:=
+		virtual/libudev:=
+		)
 "
 RDEPEND="${COMMON_DEPEND}
 	!media-gfx/shared-color-profiles

@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.77 2014/07/23 15:38:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.78 2014/07/24 16:58:23 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> colord-1.0.3.ebuild,
+  colord-1.2.0.ebuild, colord-1.2.1.ebuild:
+  Pull in virtual/udev (udev.pc for udevdir value), virtual/libudev and
+  virtual/libgudev with := for automatic rebuilding.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> colord-1.2.1.ebuild:
   Stable for x86, wrt bug #512012
