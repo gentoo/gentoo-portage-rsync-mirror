@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-gudev
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gudev/ChangeLog,v 1.10 2013/08/08 09:29:14 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gudev/ChangeLog,v 1.11 2014/07/24 17:23:28 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  python-gudev-147.2-r1.ebuild, python-gudev-147.2.ebuild:
+  Use virtual/libgudev instead of virtual/udev.
 
 *python-gudev-147.2-r1 (08 Aug 2013)
 

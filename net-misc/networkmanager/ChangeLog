@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.199 2014/07/23 15:24:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.200 2014/07/24 17:07:05 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  networkmanager-0.9.6.4.ebuild, networkmanager-0.9.8.10-r1.ebuild,
+  networkmanager-0.9.8.8.ebuild:
+  Pull in virtual/libgudev with := for automatic rebuild. Pull in virtual/udev
+  as a RDEPEND. Use get_udevdir instead of the deprecated udev_get_udevdir.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
   networkmanager-0.9.8.10-r1.ebuild:

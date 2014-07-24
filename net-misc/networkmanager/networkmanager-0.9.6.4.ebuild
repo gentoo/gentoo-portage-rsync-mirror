@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.19 2014/03/01 22:16:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.20 2014/07/24 17:07:05 ssuominen Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -31,7 +31,7 @@ REQUIRED_USE="
 # TODO: Qt support?
 COMMON_DEPEND=">=sys-apps/dbus-1.2
 	>=dev-libs/dbus-glib-0.94
-	virtual/udev[gudev]
+	virtual/libgudev:=
 	>=dev-libs/glib-2.26
 	>=sys-auth/polkit-0.97
 	>=net-libs/libsoup-2.26:2.4=
@@ -56,6 +56,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.2
 	!wimax? ( dev-libs/libnl:3= )
 "
 RDEPEND="${COMMON_DEPEND}
+	virtual/udev
 	modemmanager? ( >=net-misc/modemmanager-0.4 )
 	consolekit? ( sys-auth/consolekit )
 "
@@ -127,7 +128,7 @@ src_configure() {
 		--localstatedir=/var \
 		--with-distro=gentoo \
 		--with-dbus-sys-dir=/etc/dbus-1/system.d \
-		--with-udev-dir="$(udev_get_udevdir)" \
+		--with-udev-dir="$(get_udevdir)" \
 		--with-iptables=/sbin/iptables \
 		--enable-concheck \
 		--with-crypto=$(usex nss nss gnutls) \

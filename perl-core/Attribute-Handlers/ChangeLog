@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Attribute-Handlers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.41 2014/07/04 23:11:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.42 2014/07/24 17:12:46 dilfridge Exp $
+
+*Attribute-Handlers-0.930.0-r1 (24 Jul 2014)
+
+  24 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Attribute-Handlers-0.930.0-r1.ebuild, -Attribute-Handlers-0.930.0.ebuild:
+  EAPI bump
 
   04 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -Attribute-Handlers-0.88.ebuild, -Attribute-Handlers-0.910.0.ebuild:

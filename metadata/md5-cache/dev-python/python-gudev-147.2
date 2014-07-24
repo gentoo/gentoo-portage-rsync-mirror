@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-python/pygobject:2 virtual/udev[gudev] !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+DEPEND=dev-python/pygobject:2 virtual/libgudev !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 DESCRIPTION=Python binding to the GUDev udev helper library
 EAPI=3
 HOMEPAGE=http://github.com/nzjrs/python-gudev
 KEYWORDS=amd64 x86
 LICENSE=LGPL-3
-RDEPEND=dev-python/pygobject:2 virtual/udev[gudev] || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+RDEPEND=dev-python/pygobject:2 virtual/libgudev || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
 SRC_URI=https://github.com/nzjrs/python-gudev/tarball/147.2 -> python-gudev-147.2.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=640b25f97239fddc444cff4738c31ff0
+_md5_=6b9b42b7103b9da52136e498dd0e6740

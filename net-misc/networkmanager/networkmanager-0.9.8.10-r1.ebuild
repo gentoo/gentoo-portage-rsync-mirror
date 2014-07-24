@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.10-r1.ebuild,v 1.3 2014/07/23 15:24:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.10-r1.ebuild,v 1.4 2014/07/24 17:07:05 ssuominen Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -34,7 +34,7 @@ COMMON_DEPEND="
 	>=dev-libs/libnl-3.2.7:3=
 	>=sys-auth/polkit-0.106
 	>=net-libs/libsoup-2.26:2.4=
-	>=virtual/udev-165[gudev]
+	virtual/libgudev:=
 	bluetooth? ( >=net-wireless/bluez-4.82 )
 	avahi? ( net-dns/avahi:=[autoipd] )
 	connection-sharing? (
@@ -54,6 +54,7 @@ COMMON_DEPEND="
 	|| ( sys-power/upower sys-power/upower-pm-utils >=sys-apps/systemd-183 )
 "
 RDEPEND="${COMMON_DEPEND}
+	virtual/udev
 	consolekit? ( sys-auth/consolekit )
 	wifi? ( >=net-wireless/wpa_supplicant-0.7.3-r3[dbus] )
 "
@@ -137,7 +138,7 @@ src_configure() {
 		$(usex systemd '--disable-ifnet' '--enable-ifnet') \
 		--without-netconfig \
 		--with-dbus-sys-dir=/etc/dbus-1/system.d \
-		--with-udev-dir="$(udev_get_udevdir)" \
+		--with-udev-dir="$(get_udevdir)" \
 		--with-iptables=/sbin/iptables \
 		--enable-concheck \
 		--with-crypto=$(usex nss nss gnutls) \

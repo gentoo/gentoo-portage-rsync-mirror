@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/umockdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/umockdev/ChangeLog,v 1.20 2014/06/18 23:59:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/umockdev/ChangeLog,v 1.22 2014/07/24 17:26:20 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> umockdev-0.8.2.ebuild:
+  Use virtual/libudev and virtual/libgudev since both libraries are used, and
+  with := to gain automatic rebuild(s)
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -umockdev-0.4.7.ebuild,
+  -umockdev-0.5.1.ebuild, -umockdev-0.6.ebuild, -umockdev-0.7.ebuild,
+  -umockdev-0.8.1.ebuild:
+  old
 
 *umockdev-0.8.2 (18 Jun 2014)
 

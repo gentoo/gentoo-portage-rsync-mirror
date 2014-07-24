@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libwacom
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.21 2013/09/26 17:31:25 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.22 2014/07/24 17:21:34 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> libwacom-0.5.ebuild,
+  libwacom-0.6.ebuild, libwacom-0.7.1.ebuild, libwacom-0.7.ebuild:
+  Use get_udevdir instead of the deprecated udev_get_udevdir. Use
+  virtual/libgudev with := instead of virtual/udev.
 
   26 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libwacom-0.7.1.ebuild:
   Stable for arm, wrt bug #481906

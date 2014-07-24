@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.7.1.ebuild,v 1.9 2013/09/26 17:31:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.7.1.ebuild,v 1.10 2014/07/24 17:21:34 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils udev
 
@@ -16,14 +16,14 @@ KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
 IUSE="doc static-libs"
 
 RDEPEND="dev-libs/glib:2
-	virtual/udev[gudev]"
+	virtual/libgudev:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
 	if ! use doc; then
-		sed -e 's:^\(SUBDIRS = .* \)doc:\1:' -i Makefile.in || die "sed failed"
+		sed -e 's:^\(SUBDIRS = .* \)doc:\1:' -i Makefile.in || die
 	fi
 }
 
@@ -33,7 +33,7 @@ src_configure() {
 
 src_install() {
 	default
-	local udevdir="$(udev_get_udevdir)"
+	local udevdir="$(get_udevdir)"
 	dodir "${udevdir}/rules.d"
 	# generate-udev-rules must be run from inside tools directory
 	pushd tools > /dev/null

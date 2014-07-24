@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/Attribute-Handlers-0.930.0.ebuild,v 1.15 2014/02/02 00:05:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/Attribute-Handlers-0.930.0-r1.ebuild,v 1.1 2014/07/24 17:12:46 dilfridge Exp $
 
 EAPI=4
 
