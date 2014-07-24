@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.5.0_p20140714-r2.ebuild,v 1.3 2014/07/23 15:42:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.5.0_p20140714-r2.ebuild,v 1.4 2014/07/24 02:23:35 naota Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -14,7 +14,7 @@ SRC_URI="https://gitweb.torproject.org/arm.git/snapshot/${COMMIT_ID}.tar.gz -> $
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86-fbsd"
 IUSE="test"
 
 DEPEND="test? ( dev-python/mock[${PYTHON_USEDEP}] )
