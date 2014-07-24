@@ -1,6 +1,14 @@
 # ChangeLog for perl-core/Net-Ping
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Net-Ping/ChangeLog,v 1.1 2014/07/23 00:14:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Net-Ping/ChangeLog,v 1.2 2014/07/24 22:29:18 dilfridge Exp $
+
+*Net-Ping-2.41-r1 (24 Jul 2014)
+*Net-Ping-2.36-r1 (24 Jul 2014)
+
+  24 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Net-Ping-2.36-r1.ebuild, +Net-Ping-2.41-r1.ebuild, -Net-Ping-2.36.ebuild,
+  -Net-Ping-2.41.ebuild:
+  EAPI bump
 
 *Net-Ping-2.41 (23 Jul 2014)
 *Net-Ping-2.36 (23 Jul 2014)
