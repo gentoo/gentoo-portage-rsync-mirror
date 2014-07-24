@@ -6219,6 +6219,7 @@ sci-libs/shogun:nlopt - Enable support non linear optimization from sci-libs/nlo
 sci-libs/shogun:octave - Enable support for sci-mathematics/octave
 sci-libs/shogun:snappy - Enable support for snappy compression
 sci-libs/shogun:superlu - Enable support for sci-libs/superlu
+sci-libs/silo:silex - Build silex data browser
 sci-libs/spqr:metis - Use sci-libs/metis or sci-libs/parmetis for partitioning
 sci-libs/spqr:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/spr:root - Add sci-physics/root graphics and i/o support
