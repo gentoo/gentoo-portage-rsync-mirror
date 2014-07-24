@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.62 2014/07/20 17:45:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.63 2014/07/23 23:59:15 hasufell Exp $
+
+  23 Jul 2014; Julian Ospald <hasufell@gentoo.org> warsow-1.5.1-r1.ebuild,
+  +files/warsow-1.5.1-openal.patch:
+  fix build without openal wrt #515662, patch by Ari Malinen
 
 *warsow-1.5.1-r1 (20 Jul 2014)
 
