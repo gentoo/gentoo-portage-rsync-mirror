@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.6.8.ebuild,v 1.5 2014/07/14 15:24:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.6.8.ebuild,v 1.6 2014/07/24 11:48:33 ssuominen Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ SLOT="0"
 # KEYWORDS further up
 IUSE="aac +alsa +dbus bs2b cdda cover crossfade enca ffmpeg flac jack game kde ladspa
 libsamplerate lyrics +mad midi mms modplug mplayer mpris musepack notifier oss
-projectm pulseaudio scrobbler sndfile stereo tray udev +vorbis wavpack"
+projectm pulseaudio scrobbler sndfile stereo tray udisks +vorbis wavpack"
 
 RDEPEND="dev-qt/qt3support:4
 	media-libs/taglib
@@ -56,7 +56,7 @@ RDEPEND="dev-qt/qt3support:4
 	wavpack? ( media-sound/wavpack )
 	scrobbler? ( net-misc/curl )
 	sndfile? ( media-libs/libsndfile )
-	udev? ( sys-fs/udisks:0 )"
+	udisks? ( sys-fs/udisks:0 )"
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog README"
@@ -108,7 +108,7 @@ src_configure() {
 		$(cmake-utils_use_use sndfile)
 		$(cmake-utils_use_use stereo)
 		$(cmake-utils_use_use tray STATICON)
-		$(cmake-utils_use_use udev UDISKS)
+		$(cmake-utils_use_use udisks UDISKS)
 		$(cmake-utils_use_use libsamplerate SRC)
 		$(cmake-utils_use_use vorbis)
 		$(cmake-utils_use_use wavpack)

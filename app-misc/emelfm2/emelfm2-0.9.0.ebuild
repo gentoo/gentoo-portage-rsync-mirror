@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.9.0.ebuild,v 1.2 2013/09/23 09:47:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.9.0.ebuild,v 1.3 2014/07/24 11:55:53 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://emelfm2.net/rel/${P}.tar.bz2"
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acl ansi gimp gtk3 kernel_linux nls policykit spell udev"
+IUSE="acl ansi gimp gtk3 kernel_linux nls policykit spell udisks"
 
 EMELFM2_LINGUAS=( de fr ja pl ru zh_CN )
 IUSE+=" ${EMELFM2_LINGUAS[@]/#/linguas_}"
@@ -28,7 +28,7 @@ COMMON_DEPEND="
 "
 RDEPEND="
 	${COMMON_DEPEND}
-	udev? ( sys-fs/udisks:0 )
+	udisks? ( sys-fs/udisks:0 )
 "
 DEPEND="
 	${COMMON_DEPEND}
@@ -61,7 +61,7 @@ src_configure() {
 		$(usex nls I18N=1 I18N=0)
 		$(usex policykit WITH_POLKIT=1 WITH_POLKIT=0)
 		$(usex spell EDITOR_SPELLCHECK=1 EDITOR_SPELLCHECK=0)
-		$(usex udev WITH_DEVKIT=1 WITH_DEVKIT=0)
+		$(usex udisks WITH_DEVKIT=1 WITH_DEVKIT=0)
 		DOCS_VERSION=1
 		STRIP=0
 		WITH_TRANSPARENCY=1

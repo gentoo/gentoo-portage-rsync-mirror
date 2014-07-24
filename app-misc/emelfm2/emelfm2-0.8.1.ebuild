@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.8.1.ebuild,v 1.4 2013/09/23 09:47:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.8.1.ebuild,v 1.5 2014/07/24 11:55:53 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://emelfm2.net/rel/${P}.tar.bz2"
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
-IUSE="acl gimp kernel_linux nls policykit spell udev"
+IUSE="acl gimp kernel_linux nls policykit spell udisks"
 
 COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	>=x11-libs/gtk+-2.12:2
@@ -21,7 +21,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	policykit? ( sys-auth/polkit )
 	spell? ( >=app-text/gtkspell-2.0.14:2 )"
 RDEPEND="${COMMON_DEPEND}
-	udev? ( sys-fs/udisks:0 )"
+	udisks? ( sys-fs/udisks:0 )"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
@@ -41,7 +41,7 @@ pkg_setup() {
 		WITH_TRANSPARENCY=1
 		$(emel_use kernel_linux WITH_KERNELFAM)
 		$(emel_use spell EDITOR_SPELLCHECK)
-		$(emel_use udev WITH_DEVKIT)
+		$(emel_use udisks WITH_DEVKIT)
 		$(emel_use gimp WITH_THUMBS)
 		$(emel_use acl WITH_ACL)
 		$(emel_use policykit WITH_POLKIT)

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.1.1.ebuild,v 1.13 2014/05/30 11:48:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.1.1.ebuild,v 1.14 2014/07/24 11:52:54 ssuominen Exp $
 
 EAPI=5
 
@@ -15,12 +15,12 @@ SRC_URI="http://clementine-player.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="ayatana cdda +dbus debug googledrive ios ipod lastfm mms moodbar mtp projectm test +udev wiimote"
+IUSE="ayatana cdda +dbus debug googledrive ios ipod lastfm mms moodbar mtp projectm test +udisks wiimote"
 IUSE+="${LANGS// / linguas_}"
 
 REQUIRED_USE="
 	ios? ( ipod )
-	udev? ( dbus )
+	udisks? ( dbus )
 	wiimote? ( dbus )
 "
 
@@ -61,7 +61,7 @@ COMMON_DEPEND="
 # http://code.google.com/p/clementine-player/source/browse/#svn/trunk/3rdparty/libprojectm/patches
 # r1966 "Compile with a static sqlite by default, since Qt 4.7 doesn't seem to expose the symbols we need to use FTS"
 RDEPEND="${COMMON_DEPEND}
-	dbus? ( udev? ( sys-fs/udisks:0 ) )
+	dbus? ( udisks? ( sys-fs/udisks:0 ) )
 	mms? ( media-plugins/gst-plugins-libmms:0.10 )
 	mtp? ( gnome-base/gvfs )
 	projectm? ( >=media-libs/libprojectm-1.2.0 )
@@ -101,7 +101,7 @@ src_configure() {
 		-DBUNDLE_PROJECTM_PRESETS=OFF
 		$(cmake-utils_use cdda ENABLE_AUDIOCD)
 		$(cmake-utils_use dbus ENABLE_DBUS)
-		$(cmake-utils_use udev ENABLE_DEVICEKIT)
+		$(cmake-utils_use udisks ENABLE_DEVICEKIT)
 		$(cmake-utils_use ipod ENABLE_LIBGPOD)
 		$(cmake-utils_use ios ENABLE_IMOBILEDEVICE)
 		$(cmake-utils_use lastfm ENABLE_LIBLASTFM)

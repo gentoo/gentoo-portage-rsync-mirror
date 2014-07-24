@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/sensors-applet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.67 2014/02/22 22:05:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.68 2014/07/24 11:50:29 ssuominen Exp $
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  sensors-applet-3.0.0.ebuild:
+  Rename USE="udev" to USE="udisks"
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> sensors-applet-3.0.0.ebuild:
   Fix wrong commit, bug 502160

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbson/libbson-0.98.0.ebuild,v 1.1 2014/07/23 15:58:23 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbson/libbson-0.98.0.ebuild,v 1.2 2014/07/24 11:54:11 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/mongodb/${PN}/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="debug examples static-libs"
 
 RDEPEND=""

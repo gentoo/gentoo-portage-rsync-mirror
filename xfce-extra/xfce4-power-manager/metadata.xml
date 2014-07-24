@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>xfce</herd>
   <use>
-    <flag name='udisks'>Pull in <pkg>sys-fs/udisks</pkg> for spindown support</flag>
+    <flag name='udisks'>Pull in <pkg>sys-fs/udisks:0</pkg> for spindown support (DEPRECATED)</flag>
   </use>
 </pkgmetadata>
