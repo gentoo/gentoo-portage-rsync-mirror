@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.38 2014/05/31 16:19:28 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.39 2014/07/24 19:09:10 ssuominen Exp $
 
 # Rick Farina <zerochaos@gentoo.org> (31 May 2014)
 # wireshark 1.10.x has a mostly non-functional qt4 interface so keep
@@ -47,7 +47,6 @@ sys-apps/systemd gudev introspection
 sys-fs/eudev gudev introspection
 sys-fs/udev gudev introspection
 virtual/libgudev introspection
-virtual/udev gudev introspection
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
 # Support for desktop file icons

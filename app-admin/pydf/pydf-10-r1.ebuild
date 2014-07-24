@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-10-r1.ebuild,v 1.5 2014/03/06 10:27:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-10-r1.ebuild,v 1.6 2014/07/24 19:27:38 maekke Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://kassiopeia.juls.savba.sk/~garabik/software/pydf/${PN}_${PV}.tar.
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
