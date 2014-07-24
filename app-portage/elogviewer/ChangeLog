@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/elogviewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.50 2014/07/21 23:27:36 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.51 2014/07/24 16:00:50 fuzzyray Exp $
+
+*elogviewer-0.6.2-r3 (24 Jul 2014)
+
+  24 Jul 2014; Paul Varner <fuzzyray@gentoo.org> +elogviewer-0.6.2-r3.ebuild:
+  Bump EAPI from 3 to 5 and update to use python-r1 eclass.
 
   21 Jul 2014; Paul Varner <fuzzyray@gentoo.org> +elogviewer-0.6.2-r2.ebuild:
   Restore elogviewer-0.6.2-r2 due to user request. Bug #515654
