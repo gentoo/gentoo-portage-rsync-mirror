@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.276 2014/05/22 15:56:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.277 2014/07/24 02:30:58 patrick Exp $
+
+*apache-2.4.10 (24 Jul 2014)
+
+  24 Jul 2014; Patrick Lauer <patrick@gentoo.org> +apache-2.4.10.ebuild:
+  Bump for #517298
 
   22 May 2014; Lars Wendler <polynomial-c@gentoo.org> Manifest:
   Fixed regression in 00_apache_manual.conf
