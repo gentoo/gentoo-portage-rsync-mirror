@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-IO
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.40 2014/07/07 19:40:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.41 2014/07/24 09:31:30 klausman Exp $
+
+  24 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  perl-IO-1.280.0-r1.ebuild:
+  Stable on alpha, bug #381424
 
 *perl-IO-1.310.0 (07 Jul 2014)
 *perl-IO-1.280.0-r1 (07 Jul 2014)

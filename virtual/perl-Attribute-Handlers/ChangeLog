@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Attribute-Handlers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Attribute-Handlers/ChangeLog,v 1.49 2014/07/17 16:27:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Attribute-Handlers/ChangeLog,v 1.50 2014/07/24 09:28:41 klausman Exp $
+
+  24 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  perl-Attribute-Handlers-0.940.0-r1.ebuild:
+  Stable on alpha, bug #381424
 
 *perl-Attribute-Handlers-0.940.0-r1 (17 Jul 2014)
 *perl-Attribute-Handlers-0.930.0-r2 (17 Jul 2014)

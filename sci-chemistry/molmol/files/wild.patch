@@ -565,7 +565,7 @@ diff --git a/src/cmddial/ExDialRes.c b/src/cmddial/ExDialRes.c
 new file mode 100644
 index 0000000..06925ff
 --- /dev/null
-+++ src/cmddial/ExDialRes.c
++++ b/src/cmddial/ExDialRes.c
 @@ -0,0 +1,340 @@
 +/*
 +************************************************************************

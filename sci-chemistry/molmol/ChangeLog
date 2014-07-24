@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/molmol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.36 2014/07/23 09:03:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.37 2014/07/24 09:06:56 jlec Exp $
+
+  24 Jul 2014; Justin Lecher <jlec@gentoo.org> files/wild.patch:
+  Fix patch to work with current stable version of patch as well, #517940
 
   23 Jul 2014; Justin Lecher <jlec@gentoo.org> molmol-2k_p2-r5.ebuild,
   files/opengl.patch:

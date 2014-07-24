@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-I18N-LangTags
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-I18N-LangTags/ChangeLog,v 1.1 2014/07/22 22:40:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-I18N-LangTags/ChangeLog,v 1.2 2014/07/24 09:31:20 klausman Exp $
+
+  24 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  perl-I18N-LangTags-0.390.0.ebuild:
+  Stable on alpha, bug #381424
 
 *perl-I18N-LangTags-0.400.0 (22 Jul 2014)
 *perl-I18N-LangTags-0.390.0 (22 Jul 2014)
