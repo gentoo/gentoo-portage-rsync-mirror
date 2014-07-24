@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.4.ebuild,v 1.4 2014/06/01 07:55:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.4.ebuild,v 1.5 2014/07/24 12:01:06 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="http://projects.gnome.org/tracker/"
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/16"
-IUSE="cue eds elibc_glibc exif firefox-bookmarks flac gif gsf gstreamer gtk iptc +iso +jpeg laptop libsecret +miner-fs mp3 nautilus networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
+IUSE="cue eds elibc_glibc exif firefox-bookmarks flac gif gsf gstreamer gtk iptc +iso +jpeg upower libsecret +miner-fs mp3 nautilus networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
 KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 REQUIRED_USE="
@@ -64,7 +64,7 @@ RDEPEND="
 	iptc? ( media-libs/libiptcdata )
 	iso? ( >=sys-libs/libosinfo-0.0.2:= )
 	jpeg? ( virtual/jpeg:0 )
-	laptop? ( || ( <sys-power/upower-0.99 sys-power/upower-pm-utils ) )
+	upower? ( || ( <sys-power/upower-0.99 sys-power/upower-pm-utils ) )
 	libsecret? ( >=app-crypt/libsecret-0.5 )
 	mp3? (
 		>=media-libs/taglib-1.6
@@ -218,7 +218,7 @@ src_configure() {
 		$(use_enable iptc libiptcdata) \
 		$(use_enable iso libosinfo) \
 		$(use_enable jpeg libjpeg) \
-		$(use_enable laptop upower) \
+		$(use_enable upower upower) \
 		$(use_enable libsecret) \
 		$(use_enable miner-fs) \
 		$(use_enable mp3 taglib) \

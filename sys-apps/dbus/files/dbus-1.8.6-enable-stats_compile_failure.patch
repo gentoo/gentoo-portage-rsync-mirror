@@ -1,0 +1,38 @@
+http://bugs.freedesktop.org/show_bug.cgi?id=81043#c3
+http://bugs.freedesktop.org/show_bug.cgi?id=81043#c4
+
+From e8cf569f51e4d1ebaf190d8d8d16f84dd1364bae Mon Sep 17 00:00:00 2001
+From: Alban Crequy <alban.crequy@collabora.co.uk>
+Date: Thu, 24 Jul 2014 08:04:48 +0100
+Subject: [PATCH] Stats: fix compilation issue
+
+http://bugs.gentoo.org/show_bug.cgi?id=507232
+---
+ bus/stats.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/bus/stats.c b/bus/stats.c
+index 2bf86d6..24308eb 100644
+--- a/bus/stats.c
++++ b/bus/stats.c
+@@ -40,6 +40,7 @@ bus_stats_handle_get_stats (DBusConnection *connection,
+                             DBusMessage    *message,
+                             DBusError      *error)
+ {
++  BusContext *context;
+   BusConnections *connections;
+   DBusMessage *reply = NULL;
+   DBusMessageIter iter, arr_iter;
+@@ -48,7 +49,8 @@ bus_stats_handle_get_stats (DBusConnection *connection,
+ 
+   _DBUS_ASSERT_ERROR_IS_CLEAR (error);
+ 
+-  connections = bus_context_get_connections (transaction->context);
++  context = bus_transaction_get_context (transaction);
++  connections = bus_context_get_connections (context);
+ 
+   reply = _dbus_asv_new_method_return (message, &iter, &arr_iter);
+ 
+-- 
+1.8.5.3
+

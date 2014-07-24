@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.6.ebuild,v 1.11 2014/07/05 17:46:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.6.ebuild,v 1.12 2014/07/24 12:15:40 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -60,6 +60,8 @@ src_prepare() {
 		-e 's/.*bus_dispatch_test.*/printf ("Disabled due to excess noise\\n");/' \
 		-e '/"dispatch"/d' \
 		bus/test-main.c || die
+
+	epatch "${FILESDIR}"/${P}-enable-stats_compile_failure.patch
 
 	epatch_user
 
