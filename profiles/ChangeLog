@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9252 2014/07/24 19:09:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9253 2014/07/24 20:18:52 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  targets/desktop/package.use:
+  Disable USE="bluetooth" for net-libs/libpcap by default because BlueZ 5.x
+  support is missing.
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
   targets/desktop/package.use:

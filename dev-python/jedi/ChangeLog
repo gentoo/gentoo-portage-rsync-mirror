@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/jedi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jedi/ChangeLog,v 1.7 2014/05/10 22:40:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jedi/ChangeLog,v 1.8 2014/07/24 20:19:41 hasufell Exp $
+
+*jedi-0.8.1 (24 Jul 2014)
+
+  24 Jul 2014; Julian Ospald <hasufell@gentoo.org> +jedi-0.8.1.ebuild:
+  version bump
 
 *jedi-0.8.0 (10 May 2014)
 

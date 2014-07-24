@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/crash
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crash/ChangeLog,v 1.9 2013/12/06 16:34:19 cardoe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crash/ChangeLog,v 1.10 2014/07/24 20:06:05 hanno Exp $
+
+*crash-7.0.7 (24 Jul 2014)
+
+  24 Jul 2014; Hanno Boeck <hanno@gentoo.org> +crash-7.0.7.ebuild:
+  Bump.
 
 *crash-7.0.3 (06 Dec 2013)
 
