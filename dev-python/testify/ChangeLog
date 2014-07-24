@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/testify
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/ChangeLog,v 1.14 2014/06/17 06:35:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/ChangeLog,v 1.15 2014/07/24 10:12:30 idella4 Exp $
+
+*testify-0.3.5 (24 Jul 2014)
+
+  24 Jul 2014; Ian Delaney <idella4@gentoo.org> +testify-0.3.5.ebuild:
+  bump; add pypy support
 
 *testify-0.3.4 (17 Jun 2014)
 
