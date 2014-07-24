@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.114 2014/06/29 08:28:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.115 2014/07/24 04:42:46 prometheanfire Exp $
+
+*nut-2.7.2 (24 Jul 2014)
+
+  24 Jul 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/nut-2.7.2/nut-2.7.2-no-libdummy.patch, +nut-2.7.2.ebuild:
+  bumping for bug 517060
 
   29 Jun 2014; Sven Vermeulen <swift@gentoo.org> nut-2.6.0-r1.ebuild,
   nut-2.6.2.ebuild, nut-2.6.3.ebuild, nut-2.6.5-r1.ebuild, nut-2.6.5.ebuild,
