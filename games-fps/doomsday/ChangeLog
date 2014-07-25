@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.60 2014/05/15 16:44:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.61 2014/07/24 23:48:37 mr_bones_ Exp $
+
+  24 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -doomsday-1.9.8-r1.ebuild:
+  old
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> doomsday-1.9.8.ebuild,
   doomsday-1.9.8-r1.ebuild, doomsday-1.10.2.ebuild:

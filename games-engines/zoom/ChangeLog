@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/zoom
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/ChangeLog,v 1.23 2013/02/25 12:17:28 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/ChangeLog,v 1.24 2014/07/24 23:46:35 mr_bones_ Exp $
+
+  24 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> -zoom-1.1.4.ebuild:
+  old
 
   25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> zoom-1.1.5.ebuild:
   Stable for x86, wrt bug #458242

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/advancescan
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancescan/ChangeLog,v 1.9 2013/02/25 11:40:49 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancescan/ChangeLog,v 1.10 2014/07/24 23:44:57 mr_bones_ Exp $
+
+  24 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> -advancescan-1.14.ebuild,
+  -files/advancescan-1.14-sys-expat.patch:
+  old
 
   25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> advancescan-1.16.ebuild:
   Stable for x86, wrt bug #458652
