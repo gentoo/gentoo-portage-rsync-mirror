@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/iodine-0.7.0.ebuild,v 1.1 2014/07/18 15:53:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/iodine-0.7.0.ebuild,v 1.2 2014/07/25 02:50:08 zx2c4 Exp $
 
 EAPI=5
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 
 src_prepare(){
 	epatch "${FILESDIR}"/${P}-TestMessage.patch
+	epatch "${FILESDIR}"/${P}-new-systemd.patch
 
 	sed -e '/^\s@echo \(CC\|LD\)/d' \
 		-e 's:^\(\s\)@:\1:' \

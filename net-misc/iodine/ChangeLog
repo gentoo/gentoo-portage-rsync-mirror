@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/iodine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/ChangeLog,v 1.10 2014/07/18 15:53:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/ChangeLog,v 1.11 2014/07/25 02:50:08 zx2c4 Exp $
+
+  25 Jul 2014; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +files/iodine-0.7.0-new-systemd.patch, iodine-0.7.0.ebuild:
+  Build on newer systemd by using pkg-config to grab right library.
 
 *iodine-0.7.0 (18 Jul 2014)
 
