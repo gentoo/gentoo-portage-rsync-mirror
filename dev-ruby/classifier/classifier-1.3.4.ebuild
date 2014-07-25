@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier/classifier-1.3.4.ebuild,v 1.1 2014/01/13 03:25:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier/classifier-1.3.4.ebuild,v 1.2 2014/07/25 13:23:08 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.markdown"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/dbf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/ChangeLog,v 1.5 2014/03/16 00:27:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/ChangeLog,v 1.6 2014/07/25 13:12:46 mrueg Exp $
+
+*dbf-2.0.7-r2 (25 Jul 2014)
+
+  25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +dbf-2.0.7-r2.ebuild:
+  Add ruby21 target. Drop jruby target.
 
   16 Mar 2014; Manuel Rüger <mrueg@gentoo.org> dbf-2.0.7-r1.ebuild,
   dbf-2.0.7.ebuild:
