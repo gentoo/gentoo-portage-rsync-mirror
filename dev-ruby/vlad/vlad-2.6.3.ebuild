@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vlad/vlad-2.6.3.ebuild,v 1.2 2014/04/19 03:11:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vlad/vlad-2.6.3.ebuild,v 1.3 2014/07/25 12:46:58 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -24,5 +24,5 @@ ruby_add_rdepend ">=dev-ruby/rake-remote_task-2.1"
 
 all_ruby_prepare() {
 	# Keep Isolate from managing the dependencies.
-	sed -i -e '/isolate/ s:^:#:' Rakefile || die
+	sed -i -e '/isolate/ s:^:#:' -e '/rubyforge/ s:^:#:' Rakefile || die
 }
