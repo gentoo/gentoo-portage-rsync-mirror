@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.467 2014/07/23 15:24:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.468 2014/07/25 18:29:12 robbat2 Exp $
+
+  25 Jul 2014; Robin H. Johnson <robbat2@gentoo.org> openldap-2.4.19-r1.ebuild,
+  openldap-2.4.23.ebuild, openldap-2.4.24.ebuild, openldap-2.4.28-r1.ebuild,
+  openldap-2.4.30.ebuild, openldap-2.4.35-r1.ebuild, openldap-2.4.35.ebuild,
+  openldap-2.4.38-r1.ebuild, openldap-2.4.38-r2.ebuild:
+  Relax the datadir sanity check slightly for ease of infra use.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> openldap-2.4.38-r2.ebuild:
   Stable for x86, wrt bug #512012

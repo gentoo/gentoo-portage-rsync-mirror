@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.30.ebuild,v 1.12 2014/03/01 22:30:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.30.ebuild,v 1.13 2014/07/25 18:29:12 robbat2 Exp $
 
 EAPI="3"
 
@@ -58,7 +58,7 @@ OPENLDAP_DEFAULTDIR_VERSIONTAG="/var/lib/openldap-data"
 
 openldap_filecount() {
 	local dir="$1"
-	find "${dir}" -type f ! -name '.*' ! -name 'DB_CONFIG.example' | wc -l
+	find "${dir}" -type f ! -name '.*' ! -name 'DB_CONFIG*' | wc -l
 }
 
 openldap_find_versiontags() {

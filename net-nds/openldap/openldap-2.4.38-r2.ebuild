@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.38-r2.ebuild,v 1.7 2014/07/23 15:24:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.38-r2.ebuild,v 1.8 2014/07/25 18:29:12 robbat2 Exp $
 
 EAPI="5"
 
@@ -103,7 +103,7 @@ MULTILIB_WRAPPED_HEADERS=(
 
 openldap_filecount() {
 	local dir="$1"
-	find "${dir}" -type f ! -name '.*' ! -name 'DB_CONFIG.example' | wc -l
+	find "${dir}" -type f ! -name '.*' ! -name 'DB_CONFIG*' | wc -l
 }
 
 openldap_find_versiontags() {
