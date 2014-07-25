@@ -5865,6 +5865,7 @@ net-wireless/aircrack-ng:airdrop-ng - Build airdrop-ng
 net-wireless/aircrack-ng:airgraph-ng - Build airgraph-ng
 net-wireless/aircrack-ng:netlink - Use netlink for channel control instead of WEXT
 net-wireless/aircrack-ng:unstable - Build the "unstable" tools which may randomly fail to run properly
+net-wireless/bladerf:tecla - use libtecla for command line editing, tab completion, and history
 net-wireless/bladerf-fpga:x115 - bitstream for the x115KLE Cyclone IV FPGA bladerf model"
 net-wireless/bladerf-fpga:x40 - bitstream for the x40KLE Cyclone IV FPGA bladerf model"
 net-wireless/blueman:gconf - Enable the GConf configuration backend
@@ -5887,8 +5888,9 @@ net-wireless/gnuradio:performance-counters - enable block performance counters
 net-wireless/gnuradio:uhd - install UHD source and sink blocks
 net-wireless/gnuradio:utils - install scripts to enable viewing and analysis of files produced by flow graphs
 net-wireless/gnuradio:wavelet - enable wavelet signal processing blocks
+net-wireless/gr-osmosdr:bladerf - Build with Nuand BladeRF support
 net-wireless/gr-osmosdr:fcd - Build with Funcube Dongle support
-net-wireless/gr-osmosdr:hackrf - Build with Great Scott Gadgets "HackRF" support
+net-wireless/gr-osmosdr:hackrf - Build with Great Scott Gadgets HackRF support
 net-wireless/gr-osmosdr:iqbalance - Enable support for I/Q balancing using gr-iqbal
 net-wireless/gr-osmosdr:mirisdr - Build with Mirics MSi2500 + MSi001 SDR support
 net-wireless/gr-osmosdr:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support

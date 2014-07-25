@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=>=net-wireless/gnuradio-3.7_rc:0=[fcd?] hackrf? ( net-libs/libhackrf:= ) iqbalance? ( net-wireless/gr-iqbal:= ) mirisdr? ( net-libs/libmirisdr:= ) rtlsdr? ( >=net-wireless/rtl-sdr-0.5.3:= ) uhd? ( net-wireless/uhd:= ) dev-python/cheetah sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) python? ( =dev-lang/python-2* ) >=dev-vcs/git-1.8.2.1
+DEPEND=>=net-wireless/gnuradio-3.7_rc:0=[fcd?] bladerf? ( net-wireless/bladerf:= ) hackrf? ( net-libs/libhackrf:= ) iqbalance? ( net-wireless/gr-iqbal:= ) mirisdr? ( net-libs/libmirisdr:= ) rtlsdr? ( >=net-wireless/rtl-sdr-0.5.3:= ) uhd? ( net-wireless/uhd:= ) dev-python/cheetah sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) python? ( =dev-lang/python-2* ) >=dev-vcs/git-1.8.2.1
 DESCRIPTION=GNU Radio source block for OsmoSDR and rtlsdr and hackrf
 EAPI=5
 HOMEPAGE=http://sdr.osmocom.org/trac/wiki/GrOsmoSDR
-IUSE=fcd hackrf iqbalance mirisdr python rtlsdr uhd
+IUSE=bladerf fcd hackrf iqbalance mirisdr python rtlsdr uhd
 LICENSE=GPL-3
-RDEPEND=>=net-wireless/gnuradio-3.7_rc:0=[fcd?] hackrf? ( net-libs/libhackrf:= ) iqbalance? ( net-wireless/gr-iqbal:= ) mirisdr? ( net-libs/libmirisdr:= ) rtlsdr? ( >=net-wireless/rtl-sdr-0.5.3:= ) uhd? ( net-wireless/uhd:= ) python? ( =dev-lang/python-2* )
+RDEPEND=>=net-wireless/gnuradio-3.7_rc:0=[fcd?] bladerf? ( net-wireless/bladerf:= ) hackrf? ( net-libs/libhackrf:= ) iqbalance? ( net-wireless/gr-iqbal:= ) mirisdr? ( net-libs/libmirisdr:= ) rtlsdr? ( >=net-wireless/rtl-sdr-0.5.3:= ) uhd? ( net-wireless/uhd:= ) python? ( =dev-lang/python-2* )
 SLOT=0/9999
 _eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	git-r3	49fc3d60d7bcd6f8913ad6ec0cb4c67b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=56d453542437508d89bdbfa1dd8a7fc8
+_md5_=77b5a92fceb8d0282686f7f3054f0191

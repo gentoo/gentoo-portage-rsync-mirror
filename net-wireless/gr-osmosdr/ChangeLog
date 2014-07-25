@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gr-osmosdr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/ChangeLog,v 1.21 2014/07/23 17:21:12 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/ChangeLog,v 1.22 2014/07/25 05:00:25 zerochaos Exp $
+
+  25 Jul 2014; Rick Farina <zerochaos@gentoo.org> gr-osmosdr-0.1.1.ebuild,
+  gr-osmosdr-9999.ebuild, metadata.xml:
+  adding bladerf support
 
   23 Jul 2014; Rick Farina <zerochaos@gentoo.org> -gr-osmosdr-0.1.0-r2.ebuild:
   removed outdated version

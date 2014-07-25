@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-0.1.1.ebuild,v 1.1 2014/07/06 21:25:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-0.1.1.ebuild,v 1.2 2014/07/25 05:00:25 zerochaos Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -22,8 +22,8 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0/${PV}"
-IUSE="fcd hackrf iqbalance python rtlsdr uhd"
-#IUSE="fcd hackrf iqbalance mirisdr osmosdr python rtlsdr uhd"
+IUSE="bladerf fcd hackrf iqbalance python rtlsdr uhd"
+#IUSE="bladerf fcd hackrf iqbalance mirisdr osmosdr python rtlsdr uhd"
 
 #	osmosdr? ( net-libs/libosmosdr:= )
 
@@ -40,6 +40,7 @@ IUSE="fcd hackrf iqbalance python rtlsdr uhd"
 #gr-fcdproplus 1edbe523
 
 RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[fcd?]
+	bladerf? ( net-wireless/bladerf:= )
 	hackrf? ( net-libs/libhackrf:= )
 	iqbalance? ( net-wireless/gr-iqbal:= )
 	rtlsdr? ( >=net-wireless/rtl-sdr-0.5.3:= )
@@ -59,6 +60,7 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		-DENABLE_DEFAULT=OFF
+		$(cmake-utils_use_enable bladerf)
 		$(cmake-utils_use_enable fcd)
 		$(cmake-utils_use_enable hackrf)
 		$(cmake-utils_use_enable iqbalance)
