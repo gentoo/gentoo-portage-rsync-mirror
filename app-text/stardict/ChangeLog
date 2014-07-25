@@ -1,6 +1,9 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.36 2014/06/14 10:49:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.37 2014/07/25 15:36:07 nimiux Exp $
+
+  25 Jul 2014; Chema Alonso <nimiux@gentoo.org> stardict-3.0.4.ebuild:
+  Stable for amd64 wrt bug #510900
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> stardict-3.0.4.ebuild:
   x86 stable wrt bug #510900
