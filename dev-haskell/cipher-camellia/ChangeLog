@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cipher-camellia
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cipher-camellia/ChangeLog,v 1.2 2013/12/11 05:22:33 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cipher-camellia/ChangeLog,v 1.3 2014/07/25 08:58:53 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
 *cipher-camellia-0.0.2 (11 Dec 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/crypto-random-api
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-random-api/ChangeLog,v 1.1 2013/08/26 04:02:15 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-random-api/ChangeLog,v 1.2 2014/07/25 08:58:18 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
 *crypto-random-api-0.2.0 (26 Aug 2013)
 

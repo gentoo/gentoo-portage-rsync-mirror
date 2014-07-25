@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xss-sanitize
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xss-sanitize/ChangeLog,v 1.4 2014/07/03 05:54:57 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xss-sanitize/ChangeLog,v 1.5 2014/07/25 08:59:32 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
 *xss-sanitize-0.3.5.2 (03 Jul 2014)
 

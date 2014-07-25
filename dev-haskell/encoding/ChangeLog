@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/encoding
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/encoding/ChangeLog,v 1.4 2014/07/02 15:30:06 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/encoding/ChangeLog,v 1.5 2014/07/25 08:59:17 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
 *encoding-0.7.0.1 (02 Jul 2014)
 

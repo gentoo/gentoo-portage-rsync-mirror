@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/shellish
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/shellish/ChangeLog,v 1.9 2012/12/10 21:53:14 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/shellish/ChangeLog,v 1.10 2014/07/25 08:58:51 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
   10 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> shellish-0.1.4.ebuild:
   stable on alpha/ia64/sparc (bug #421351)

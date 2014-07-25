@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/tensor
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tensor/ChangeLog,v 1.5 2013/09/23 19:16:11 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tensor/ChangeLog,v 1.6 2014/07/25 08:59:23 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> tensor-1.0.0.1.ebuild:
   Stable for sparc, wrt bug #484756

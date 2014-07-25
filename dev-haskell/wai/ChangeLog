@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/wai
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai/ChangeLog,v 1.9 2014/07/02 14:20:15 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai/ChangeLog,v 1.10 2014/07/25 08:58:11 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
 *wai-3.0.0.2 (02 Jul 2014)
 

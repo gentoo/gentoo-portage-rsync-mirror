@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/vault
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vault/ChangeLog,v 1.8 2014/03/12 08:23:39 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vault/ChangeLog,v 1.9 2014/07/25 08:59:10 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
   12 Mar 2014; Alexander Vershilov <qnikst@gentoo.org> -vault-0.2.0.4.ebuild,
   -vault-0.3.0.0.ebuild:

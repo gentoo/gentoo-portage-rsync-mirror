@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/regex-posix
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.46 2013/06/29 16:33:17 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.47 2014/07/25 08:58:19 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> regex-posix-0.95.2.ebuild:
   Stable for sparc, wrt bug #473338

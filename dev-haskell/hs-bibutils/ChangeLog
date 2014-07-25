@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hs-bibutils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-bibutils/ChangeLog,v 1.7 2013/08/06 09:22:02 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-bibutils/ChangeLog,v 1.8 2014/07/25 08:58:17 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
 *hs-bibutils-5.0 (06 Aug 2013)
 

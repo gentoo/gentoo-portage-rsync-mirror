@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>haskell</herd>
-	<maintainer>
-		<email>haskell@gentoo.org</email>
-	</maintainer>
 	<longdescription>
 		Testpack provides utilities for both HUnit and QuickCheck.  These include
 		tools for running QuickCheck properties as HUnit test cases, allowing you to

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/monad-par-extras
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monad-par-extras/ChangeLog,v 1.1 2013/08/25 06:05:08 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monad-par-extras/ChangeLog,v 1.2 2014/07/25 08:59:08 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
 *monad-par-extras-0.3.3 (25 Aug 2013)
 

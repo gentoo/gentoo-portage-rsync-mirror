@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/setenv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/setenv/ChangeLog,v 1.5 2014/02/21 21:57:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/setenv/ChangeLog,v 1.6 2014/07/25 08:59:26 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
 *setenv-0.1.1.1 (21 Feb 2014)
 

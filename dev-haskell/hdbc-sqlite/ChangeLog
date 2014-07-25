@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hdbc-sqlite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/ChangeLog,v 1.18 2014/02/21 21:05:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/ChangeLog,v 1.19 2014/07/25 08:59:36 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
   21 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org>
   -hdbc-sqlite-2.3.0.0.ebuild:

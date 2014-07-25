@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/process-conduit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/process-conduit/ChangeLog,v 1.2 2014/07/02 12:23:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/process-conduit/ChangeLog,v 1.3 2014/07/25 08:58:38 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
 *process-conduit-1.1.0.0-r1 (02 Jul 2014)
 

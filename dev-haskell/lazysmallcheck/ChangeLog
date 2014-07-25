@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/lazysmallcheck
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lazysmallcheck/ChangeLog,v 1.4 2012/09/12 15:12:06 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lazysmallcheck/ChangeLog,v 1.5 2014/07/25 08:58:39 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
   lazysmallcheck-0.6.ebuild:

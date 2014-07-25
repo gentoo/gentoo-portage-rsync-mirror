@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cereal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/ChangeLog,v 1.18 2014/07/18 11:17:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/ChangeLog,v 1.19 2014/07/25 08:58:14 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
 
   18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> cereal-0.4.0.1.ebuild:
   Stable on alpha, bug #502656
