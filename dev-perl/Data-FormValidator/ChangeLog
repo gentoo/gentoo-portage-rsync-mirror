@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Data-FormValidator
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-FormValidator/ChangeLog,v 1.12 2013/08/15 06:14:09 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-FormValidator/ChangeLog,v 1.14 2014/07/25 17:21:41 zlogene Exp $
+
+  25 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Data-FormValidator-4.810.0.ebuild:
+  Mark stable for all
+
+  25 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -Data-FormValidator-4.800.0.ebuild, Data-FormValidator-4.810.0.ebuild:
+  Bump to EAPI=5; Drop old.
 
 *Data-FormValidator-4.810.0 (15 Aug 2013)
 

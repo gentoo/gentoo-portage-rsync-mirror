@@ -6,4 +6,8 @@
 		<email>dolsen@gentoo.org</email>
 		<name>Brian Dolbec</name>
 	</maintainer>
+	<maintainer>
+		<email>dastergon@gentoo.org</email>
+		<name>Pavlos Ratis</name>
+	</maintainer>
 </pkgmetadata>

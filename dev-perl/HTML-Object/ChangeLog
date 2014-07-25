@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Object
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/ChangeLog,v 1.26 2014/07/23 22:56:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/ChangeLog,v 1.27 2014/07/25 17:23:34 zlogene Exp $
+
+  25 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -HTML-Object-2.15-r1.ebuild,
+  HTML-Object-2.29-r2.ebuild:
+  Mark stable for all; Drop old.
 
   23 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -HTML-Object-2.29-r1.ebuild:
   Drop old.
