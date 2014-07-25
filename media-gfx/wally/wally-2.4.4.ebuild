@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.4.ebuild,v 1.5 2013/03/02 21:41:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.4.ebuild,v 1.6 2014/07/25 22:00:36 johu Exp $
 
-EAPI=4
+EAPI=5
 KDE_REQUIRED="optional"
 
 inherit eutils kde4-base readme.gentoo

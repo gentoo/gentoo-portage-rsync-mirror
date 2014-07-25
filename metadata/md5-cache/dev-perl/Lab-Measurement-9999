@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install postinst prepare test unpack
-DEPEND=dev-perl/Class-ISA dev-perl/Clone dev-perl/Exception-Class dev-perl/Hook-LexWrap dev-perl/List-MoreUtils dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings dev-perl/yaml perl-core/Switch sci-visualization/gnuplot virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools debug? ( dev-lang/perl[ithreads] dev-perl/wxperl ) xpression? ( dev-perl/wxperl ) virtual/perl-Module-Build dev-lang/perl:=[-build(-)] dev-vcs/git
+DEPEND=dev-perl/Class-ISA dev-perl/Clone dev-perl/Exception-Class dev-perl/Hook-LexWrap dev-perl/List-MoreUtils dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings dev-perl/yaml dev-perl/Switch sci-visualization/gnuplot virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools debug? ( dev-lang/perl[ithreads] dev-perl/wxperl ) xpression? ( dev-perl/wxperl ) virtual/perl-Module-Build dev-lang/perl:=[-build(-)] dev-vcs/git
 DESCRIPTION=Measurement control and automation with Perl
 EAPI=5
 HOMEPAGE=http://www.labmeasurement.de/
 IUSE=debug +xpression
 LICENSE=|| ( Artistic GPL-2 )
-RDEPEND=dev-perl/Class-ISA dev-perl/Clone dev-perl/Exception-Class dev-perl/Hook-LexWrap dev-perl/List-MoreUtils dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings dev-perl/yaml perl-core/Switch sci-visualization/gnuplot virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools debug? ( dev-lang/perl[ithreads] dev-perl/wxperl ) xpression? ( dev-perl/wxperl ) dev-lang/perl:=[-build(-)]
+RDEPEND=dev-perl/Class-ISA dev-perl/Clone dev-perl/Exception-Class dev-perl/Hook-LexWrap dev-perl/List-MoreUtils dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings dev-perl/yaml dev-perl/Switch sci-visualization/gnuplot virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools debug? ( dev-lang/perl[ithreads] dev-perl/wxperl ) xpression? ( dev-perl/wxperl ) dev-lang/perl:=[-build(-)]
 SLOT=0
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	git-2	2027b81a576527fa16bece425941e094	git-r3	49fc3d60d7bcd6f8913ad6ec0cb4c67b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=cd5ac4cc1ec9ec39c71af58e2294cc40
+_md5_=3fb41bfa79464dee05785cb233b7a7cb

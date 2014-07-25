@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.14 2014/07/05 12:37:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.15 2014/07/25 21:42:58 dilfridge Exp $
 
 EAPI=5
 
@@ -40,7 +40,7 @@ RDEPEND="
 	dev-perl/XML-Twig
 	dev-perl/encoding-warnings
 	dev-perl/yaml
-	perl-core/Switch
+	dev-perl/Switch
 	sci-visualization/gnuplot
 	virtual/perl-Data-Dumper
 	virtual/perl-Encode

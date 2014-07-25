@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/opendmarc-1.1.3.ebuild,v 1.7 2014/06/29 15:21:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/opendmarc-1.1.3.ebuild,v 1.8 2014/07/25 21:43:31 dilfridge Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="dev-perl/DBI
 	|| ( mail-filter/libmilter mail-mta/sendmail )"
 RDEPEND="${DEPEND}
-	perl-core/Switch"
+	dev-perl/Switch"
 
 src_configure() {
 	econf \

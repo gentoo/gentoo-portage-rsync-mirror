@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.6.2.ebuild,v 1.5 2013/02/16 09:01:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.6.2.ebuild,v 1.6 2014/07/25 21:49:50 johu Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_LINGUAS="ar ca de el es et fi fr gl hu it ja nl pt_BR ru sk tr zh_CN zh_TW"
 inherit kde4-base readme.gentoo
