@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.291 2014/07/24 07:37:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.292 2014/07/25 10:26:48 pacho Exp $
+
+*systemd-215-r3 (25 Jul 2014)
+
+  25 Jul 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/215-0003-udev-exclude-MD-from-block-device-ownership-event-lo.patch,
+  +systemd-215-r3.ebuild, -systemd-215-r1.ebuild, -systemd-215-r2.ebuild:
+  Fix creation of inactive MD devices (#517986), drop old.
 
 *systemd-215-r2 (24 Jul 2014)
 

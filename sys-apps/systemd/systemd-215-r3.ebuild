@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-215-r1.ebuild,v 1.7 2014/07/24 07:37:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-215-r3.ebuild,v 1.1 2014/07/25 10:26:48 pacho Exp $
 
 EAPI=5
 
@@ -83,6 +83,7 @@ src_prepare() {
 	local PATCHES=(
 		"${FILESDIR}/${PV}-0001-always-check-for-__BYTE_ORDER-__BIG_ENDIAN-when-chec.patch"
 		"${FILESDIR}/${PV}-0002-endian-explicitly-include-endian.h-wherever-we-want-.patch"
+		"${FILESDIR}/${PV}-0003-udev-exclude-MD-from-block-device-ownership-event-lo.patch"
 	)
 
 	# Bug 463376
