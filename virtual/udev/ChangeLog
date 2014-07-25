@@ -1,6 +1,16 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.83 2014/06/18 20:58:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.86 2014/07/25 19:59:56 ssuominen Exp $
+
+  25 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> udev-208-r2.ebuild:
+  Remove compability USE flag "static-libs" in favour of virtual/libudev.
+
+  25 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Remove unused USE description and add systemd@g.o to maintainers.
+
+  25 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> udev-208-r2.ebuild:
+  Punt compability flags USE="gudev introspection" because gentoo-x86 has been
+  converted to use virtual/libgudev.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> udev-208-r2.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

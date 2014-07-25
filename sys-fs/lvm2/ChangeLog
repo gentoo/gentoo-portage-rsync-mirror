@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.355 2014/07/16 00:28:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.356 2014/07/25 19:50:59 ssuominen Exp $
+
+  25 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.103.ebuild,
+  lvm2-2.02.105-r2.ebuild, lvm2-2.02.106.ebuild, lvm2-2.02.107.ebuild:
+  Use virtual/libudev (prereq. for dropping compability USE flag "static-libs"
+  from virtual/udev)
 
 *lvm2-2.02.107 (16 Jul 2014)
 
