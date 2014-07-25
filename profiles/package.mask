@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15925 2014/07/24 12:32:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15926 2014/07/25 08:31:00 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (25 Jul 2014)
+# Upstream has declared it EOL, please migrate to
+# newer versions
+=dev-db/postgresql-base-8.4*
+=dev-db/postgresql-server-8.4*
+=dev-db/postgresql-docs-8.4*
+
 
 # Pacho Ramos <pacho@gentoo.org> (24 Jul 2014)
 # It's a development version that was included without
