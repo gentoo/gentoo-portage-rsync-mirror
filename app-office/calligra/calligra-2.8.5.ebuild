@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.8.2.ebuild,v 1.2 2014/05/24 11:28:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.8.5.ebuild,v 1.1 2014/07/25 19:29:06 johu Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -8,11 +8,11 @@
 
 EAPI=5
 
-OPENGL_REQUIRED=optional
-KDE_HANDBOOK=optional
-KDE_LINGUAS_LIVE_OVERRIDE=true
 CHECKREQS_DISK_BUILD="4G"
+KDE_HANDBOOK="optional"
+KDE_LINGUAS_LIVE_OVERRIDE="true"
 KDE_MINIMAL="4.13.1"
+OPENGL_REQUIRED="optional"
 inherit check-reqs kde4-base versionator
 
 DESCRIPTION="KDE Office Suite"
@@ -36,17 +36,17 @@ esac
 LICENSE="GPL-2"
 SLOT="4"
 
-# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
-[[ ${PV} == *9999 ]] || \
-KEYWORDS="~amd64 ~arm ~x86"
+if [[ ${KDE_BUILD_TYPE} == release ]] ; then
+	KEYWORDS="~amd64 ~arm ~x86"
+fi
 
-IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif +glew +glib +gsf
-gsl import-filter +jpeg jpeg2k +kdcraw kde +kdepim +lcms marble mysql nepomuk
-+okular opengtl openexr +pdf postgres spacenav +ssl sybase test tiff +threads
-+truetype vc xbase +xml +xslt"
+IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +glew +glib +gsf gsl
+import-filter +jpeg jpeg2k +kdcraw kde +kdepim +lcms marble mysql nepomuk
++okular openexr +pdf postgres spacenav sybase test tiff +threads +truetype vc
+xbase +xml"
 
 # please do not sort here, order is same as in CMakeLists.txt
-CAL_FTS="author kexi words flow plan stage sheets krita karbon braindump"
+CAL_FTS="words stage sheets author karbon krita kexi flow plan braindump"
 for cal_ft in ${CAL_FTS}; do
 	IUSE+=" calligra_features_${cal_ft}"
 done
@@ -54,9 +54,7 @@ unset cal_ft
 
 REQUIRED_USE="
 	calligra_features_author? ( calligra_features_words )
-	calligra_features_kexi? ( calligra_features_sheets )
-	calligra_features_words? ( calligra_features_sheets )
-	calligra_features_krita? ( eigen exif glew lcms )
+	calligra_features_krita? ( eigen exif lcms )
 	calligra_features_plan? ( kdepim )
 	calligra_features_sheets? ( eigen )
 	vc? ( calligra_features_krita )
@@ -78,7 +76,6 @@ RDEPEND="
 	$(add_kdebase_dep kdelibs 'nepomuk?')
 	dev-lang/perl
 	dev-libs/boost
-	dev-libs/libxml2
 	$(add_kdebase_dep knewstuff)
 	media-libs/libpng
 	sys-libs/zlib
@@ -91,7 +88,6 @@ RDEPEND="
 	fftw? ( sci-libs/fftw:3.0 )
 	fontconfig? ( media-libs/fontconfig )
 	freetds? ( dev-db/freetds )
-	gif? ( media-libs/giflib )
 	glew? ( media-libs/glew )
 	glib? ( dev-libs/glib:2 )
 	gsf? ( gnome-extra/libgsf )
@@ -109,13 +105,15 @@ RDEPEND="
 	kdcraw? ( $(add_kdebase_dep libkdcraw) )
 	kde? ( $(add_kdebase_dep kactivities) )
 	kdepim? ( $(add_kdebase_dep kdepimlibs) )
-	lcms? ( media-libs/lcms:2 )
+	lcms? (
+		media-libs/lcms:2
+		x11-libs/libX11
+	)
 	marble? ( $(add_kdebase_dep marble) )
 	mysql? ( virtual/mysql )
 	nepomuk? ( dev-libs/soprano )
 	okular? ( $(add_kdebase_dep okular) )
 	opengl? ( virtual/glu )
-	opengtl? ( >=media-libs/opengtl-0.9.15 )
 	openexr? ( media-libs/openexr )
 	pdf? (
 		app-text/poppler:=
@@ -126,17 +124,21 @@ RDEPEND="
 		dev-libs/libpqxx
 	)
 	spacenav? ( dev-libs/libspnav  )
-	ssl? ( dev-libs/openssl )
 	sybase? ( dev-db/freetds )
 	tiff? ( media-libs/tiff )
 	truetype? ( media-libs/freetype:2 )
 	vc? ( dev-libs/vc )
 	xbase? ( dev-db/xbase )
-	xslt? ( dev-libs/libxslt )
 	calligra_features_kexi? (
 		>=dev-db/sqlite-3.7.9:3[extensions(+)]
 		dev-libs/icu:=
 	)
+	calligra_features_krita? (
+		dev-qt/qtdeclarative:4
+		x11-libs/libX11
+		x11-libs/libXi
+	)
+	calligra_features_words? ( dev-libs/libxslt )
 "
 DEPEND="${RDEPEND}"
 
@@ -160,29 +162,17 @@ src_configure() {
 
 	# first write out things we want to hard-enable
 	local mycmakeargs=(
-		"-DIHAVEPATCHEDQT=ON"
-		"-DWITH_Boost=ON"
-		"-DWITH_LibXml2=ON"
 		"-DWITH_PNG=ON"
 		"-DWITH_ZLIB=ON"
 		"-DGHNS=ON"
-		"-DWITH_X11=ON"
-		"-DWITH_Qt4=ON"
-		"-DBUILD_libmsooxml=ON"      # only internal code, no deps
 		"-DWITH_Iconv=ON"            # available on all supported arches and many more
 	)
 
 	# default disablers
 	mycmakeargs+=(
-		"-DBUILD_mobile=OFF"         # we dont support mobile gui, maybe arm could
 		"-DBUILD_active=OFF"         # we dont support active gui, maybe arm could
-		"-DWITH_LCMS=OFF"            # we use lcms:2
 		"-DCREATIVEONLY=OFF"
 		"-DPACKAGERS_BUILD=OFF"
-		"-DWITH_TINY=OFF"
-		"-DWITH_CreateResources=OFF" # NOT PACKAGED: http://create.freedesktop.org/
-		"-DWITH_DCMTK=OFF"           # NOT PACKAGED: http://www.dcmtk.org/dcmtk.php.en
-		"-DQT3SUPPORT=OFF"			 # Qt5 is on the way!
 	)
 
 	# regular options
@@ -194,11 +184,8 @@ src_configure() {
 		$(cmake-utils_use_with fftw FFTW3)
 		$(cmake-utils_use_with fontconfig Fontconfig)
 		$(cmake-utils_use_with freetds FreeTDS)
-		$(cmake-utils_use_with gif GIF2)
 		$(cmake-utils_use_with glew GLEW)
 		$(cmake-utils_use_with glib GLIB2)
-		$(cmake-utils_use_with glib GObject)
-		$(cmake-utils_use_with gsf LIBGSF)
 		$(cmake-utils_use_with gsl GSL)
 		$(cmake-utils_use_with import-filter LibEtonyek)
 		$(cmake-utils_use_with import-filter LibOdfGen)
@@ -214,10 +201,8 @@ src_configure() {
 		$(cmake-utils_use_with lcms LCMS2)
 		$(cmake-utils_use_with marble Marble)
 		$(cmake-utils_use_with mysql MySQL)
-		$(cmake-utils_use_build mysql mySQL)
 		$(cmake-utils_use_with nepomuk Soprano)
 		$(cmake-utils_use_with okular Okular)
-		$(cmake-utils_use_with opengtl OpenCTL)
 		$(cmake-utils_use_with openexr OpenEXR)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with pdf Poppler)
@@ -225,16 +210,12 @@ src_configure() {
 		$(cmake-utils_use_with postgres PostgreSQL)
 		$(cmake-utils_use_build postgres pqxx)
 		$(cmake-utils_use_with spacenav Spnav)
-		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with sybase FreeTDS)
-		$(cmake-utils_use_build sybase sybase)
 		$(cmake-utils_use_with tiff TIFF)
 		$(cmake-utils_use_with threads Threads)
 		$(cmake-utils_use_with truetype Freetype)
 		$(cmake-utils_use_with vc Vc)
 		$(cmake-utils_use_with xbase XBase)
-		$(cmake-utils_use_build xbase xbase)
-		$(cmake-utils_use_with xslt LibXslt)
 	)
 
 	# applications
