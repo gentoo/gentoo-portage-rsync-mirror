@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.221 2014/06/30 20:30:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.222 2014/07/25 06:34:53 tupone Exp $
+
+*libsdl-1.2.15-r8 (25 Jul 2014)
+
+  25 Jul 2014; Alfredo Tupone <tupone@gentoo.org> +libsdl-1.2.15-r8.ebuild:
+  Removing a dependency on x11-libs/libXt Fix bug #514378
 
   30 Jun 2014; Julian Ospald <hasufell@gentoo.org> -libsdl-1.2.15-r5.ebuild,
   -libsdl-1.2.15-r6.ebuild:
