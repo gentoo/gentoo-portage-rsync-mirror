@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/letter_opener/letter_opener-1.2.0.ebuild,v 1.1 2013/12/13 15:34:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/letter_opener/letter_opener-1.2.0.ebuild,v 1.2 2014/07/25 13:42:34 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.rdoc"
 RUBY_FAKEGEM_TASK_DOC=""
@@ -22,3 +22,7 @@ IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/mail:2.5 )"
 ruby_add_rdepend "dev-ruby/launchy"
+
+all_ruby_prepare() {
+	sed -i -e "/[Bb]undler/d" Rakefile || die
+}
