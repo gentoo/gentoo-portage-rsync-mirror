@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/tpm-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/ChangeLog,v 1.22 2014/06/10 00:20:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/ChangeLog,v 1.23 2014/07/25 11:14:54 nimiux Exp $
+
+  25 Jul 2014; Chema Alonso <nimiux@gentoo.org> tpm-tools-1.3.8.ebuild:
+  Stable for amd64 wrt bug #510204
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> tpm-tools-1.3.8.ebuild:
   Add arm64/m68k/s390/sh love.

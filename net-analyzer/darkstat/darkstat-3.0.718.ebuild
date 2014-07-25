@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.718.ebuild,v 1.2 2014/06/24 12:59:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.718.ebuild,v 1.3 2014/07/25 11:06:11 nimiux Exp $
 
 EAPI=5
 inherit autotools eutils user
@@ -11,7 +11,7 @@ SRC_URI="http://unix4lyfe.org/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 DEPEND="net-libs/libpcap"
 RDEPEND="${DEPEND}"

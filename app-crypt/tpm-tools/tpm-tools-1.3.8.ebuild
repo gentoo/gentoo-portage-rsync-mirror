@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.8.ebuild,v 1.2 2014/06/10 00:20:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.8.ebuild,v 1.3 2014/07/25 11:14:54 nimiux Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/trousers/${P}.tar.gz"
 
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~m68k ~s390 ~sh ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~m68k ~s390 ~sh ~x86"
 IUSE="nls pkcs11 debug"
 
 COMMON_DEPEND="
