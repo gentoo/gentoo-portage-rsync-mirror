@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/gtk-0.12.5.7.2.ebuild,v 1.1 2014/05/20 13:51:57 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/gtk-0.12.5.7.2.ebuild,v 1.2 2014/07/25 09:16:29 slyfox Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ MY_P="${PN}-${MY_PV}"
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Binding to the Gtk+ graphical user interface library."
+DESCRIPTION="Binding to the Gtk+ graphical user interface library"
 HOMEPAGE="http://projects.haskell.org/gtk2hs/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${MY_PV}/${MY_P}.tar.gz"
 

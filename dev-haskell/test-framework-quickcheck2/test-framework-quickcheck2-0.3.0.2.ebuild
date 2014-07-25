@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-quickcheck2/test-framework-quickcheck2-0.3.0.2.ebuild,v 1.8 2014/07/05 13:01:16 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-quickcheck2/test-framework-quickcheck2-0.3.0.2.ebuild,v 1.9 2014/07/25 09:16:23 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="QuickCheck2 support for the test-framework package."
+DESCRIPTION="QuickCheck2 support for the test-framework package"
 HOMEPAGE="https://batterseapower.github.io/test-framework/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

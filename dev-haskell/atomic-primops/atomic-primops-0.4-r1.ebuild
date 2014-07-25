@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/atomic-primops/atomic-primops-0.4-r1.ebuild,v 1.1 2013/10/19 11:56:54 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/atomic-primops/atomic-primops-0.4-r1.ebuild,v 1.2 2014/07/25 09:16:30 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib haddock hoogle hscolour profile"
 inherit haskell-cabal
 
-DESCRIPTION="A safe approach to CAS and other atomic ops in Haskell."
+DESCRIPTION="A safe approach to CAS and other atomic ops in Haskell"
 HOMEPAGE="https://github.com/rrnewton/haskell-lockfree-queue/wiki"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/stream-0.2.6-r1.ebuild,v 1.9 2012/09/12 15:55:17 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/stream-0.2.6-r1.ebuild,v 1.10 2014/07/25 09:16:14 slyfox Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit haskell-cabal
 MY_PN="Stream"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A library for manipulating infinite lists."
+DESCRIPTION="A library for manipulating infinite lists"
 HOMEPAGE="http://www.cs.nott.ac.uk/~wss/repos/Stream/dist/doc/html/"
 SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 

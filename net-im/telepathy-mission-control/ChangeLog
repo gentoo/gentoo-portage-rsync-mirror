@@ -1,6 +1,10 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.107 2014/07/24 11:23:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.108 2014/07/25 09:24:07 ssuominen Exp $
+
+  25 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  telepathy-mission-control-5.16.2.ebuild:
+  Make the power management USE flags more user friendly.
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Punt description for USE="upower" and correct description for USE="systemd"

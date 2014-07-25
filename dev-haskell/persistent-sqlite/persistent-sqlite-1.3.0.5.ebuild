@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/persistent-sqlite/persistent-sqlite-1.3.0.5.ebuild,v 1.1 2014/07/02 12:10:13 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/persistent-sqlite/persistent-sqlite-1.3.0.5.ebuild,v 1.2 2014/07/25 09:16:19 slyfox Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ EAPI=5
 CABAL_FEATURES="bin lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Backend for the persistent library using sqlite3."
+DESCRIPTION="Backend for the persistent library using sqlite3"
 HOMEPAGE="http://www.yesodweb.com/book/persistent"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

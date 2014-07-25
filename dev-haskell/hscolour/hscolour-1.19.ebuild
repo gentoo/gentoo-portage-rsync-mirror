@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/hscolour-1.19.ebuild,v 1.7 2012/11/18 13:40:00 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/hscolour-1.19.ebuild,v 1.8 2014/07/25 09:16:41 slyfox Exp $
 
 EAPI=4
 
 CABAL_FEATURES="bin lib profile haddock"
 inherit base haskell-cabal
 
-DESCRIPTION="Colourise Haskell code."
+DESCRIPTION="Colourise Haskell code"
 HOMEPAGE="http://code.haskell.org/~malcolm/hscolour/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

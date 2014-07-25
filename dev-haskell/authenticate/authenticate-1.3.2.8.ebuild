@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/authenticate/authenticate-1.3.2.8.ebuild,v 1.1 2014/07/02 00:42:28 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/authenticate/authenticate-1.3.2.8.ebuild,v 1.2 2014/07/25 09:16:15 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Authentication methods for Haskell web applications."
+DESCRIPTION="Authentication methods for Haskell web applications"
 HOMEPAGE="http://github.com/yesodweb/authenticate"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

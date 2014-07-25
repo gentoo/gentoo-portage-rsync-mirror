@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.16.2.ebuild,v 1.3 2014/07/23 15:23:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.16.2.ebuild,v 1.4 2014/07/25 09:24:07 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="debug networkmanager systemd" # test
+IUSE="debug networkmanager systemd upower" # test
 
 RDEPEND="
 	>=dev-libs/dbus-glib-0.82
@@ -25,10 +25,7 @@ RDEPEND="
 	>=sys-apps/dbus-0.95
 	>=net-libs/telepathy-glib-0.20
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
-	!systemd? ( || (
-		( >=sys-power/upower-0.9.11 <sys-power/upower-0.99 )
-		sys-power/upower-pm-utils
-		) )
+	!systemd? ( upower? ( || ( <sys-power/upower-0.99 sys-power/upower-pm-utils ) ) )
 "
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
@@ -48,5 +45,6 @@ src_configure() {
 		 --disable-static \
 		$(use_enable debug) \
 		$(use_with networkmanager connectivity nm) \
-		$(usex systemd --disable-upower --enable-upower)
+		$(use_enable upower) \
+		$(use systemd && echo "--disable-upower")
 }

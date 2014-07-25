@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/classy-prelude/classy-prelude-0.9.2.ebuild,v 1.1 2014/07/02 14:56:45 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/classy-prelude/classy-prelude-0.9.2.ebuild,v 1.2 2014/07/25 09:16:21 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour test-suite"
 inherit haskell-cabal
 
-DESCRIPTION="A typeclass-based Prelude."
+DESCRIPTION="A typeclass-based Prelude"
 HOMEPAGE="https://github.com/snoyberg/classy-prelude"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

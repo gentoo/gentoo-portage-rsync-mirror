@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpu/cpu-0.1.1.ebuild,v 1.1 2013/08/26 12:16:09 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpu/cpu-0.1.1.ebuild,v 1.2 2014/07/25 09:16:27 slyfox Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ EAPI=4
 CABAL_FEATURES="bin lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Cpu information and properties helpers."
+DESCRIPTION="Cpu information and properties helpers"
 HOMEPAGE="http://github.com/vincenthz/hs-cpu"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/zip-archive-0.2.2.1.ebuild,v 1.1 2014/05/10 11:59:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/zip-archive-0.2.2.1.ebuild,v 1.2 2014/07/25 09:16:15 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="bin lib profile haddock hoogle hscolour test-suite"
 inherit haskell-cabal
 
-DESCRIPTION="Library for creating and modifying zip archives."
+DESCRIPTION="Library for creating and modifying zip archives"
 HOMEPAGE="http://github.com/jgm/zip-archive"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

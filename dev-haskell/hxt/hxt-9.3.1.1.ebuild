@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-9.3.1.1.ebuild,v 1.3 2013/06/25 15:02:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-9.3.1.1.ebuild,v 1.4 2014/07/25 09:16:45 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="A collection of tools for processing XML with Haskell."
+DESCRIPTION="A collection of tools for processing XML with Haskell"
 HOMEPAGE="http://www.fh-wedel.de/~si/HXmlToolbox/index.html"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-hunit/test-framework-hunit-0.2.4.ebuild,v 1.10 2012/09/12 15:33:38 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-hunit/test-framework-hunit-0.2.4.ebuild,v 1.11 2014/07/25 09:16:24 slyfox Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
 
-DESCRIPTION="HUnit support for the test-framework package."
+DESCRIPTION="HUnit support for the test-framework package"
 HOMEPAGE="http://batterseapower.github.com/test-framework/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

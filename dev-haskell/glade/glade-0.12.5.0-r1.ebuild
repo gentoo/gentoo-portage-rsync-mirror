@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glade/glade-0.12.5.0-r1.ebuild,v 1.1 2013/12/12 06:07:28 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glade/glade-0.12.5.0-r1.ebuild,v 1.2 2014/07/25 09:16:23 slyfox Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ GTK_MAJ_VER="2"
 CABAL_FEATURES="lib profile haddock hoogle hscolour nocabaldep"
 inherit haskell-cabal
 
-DESCRIPTION="Binding to the glade library."
+DESCRIPTION="Binding to the glade library"
 HOMEPAGE="http://projects.haskell.org/gtk2hs/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

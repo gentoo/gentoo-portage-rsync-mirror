@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-test/wai-test-2.0.0.2.ebuild,v 1.1 2014/03/09 13:11:27 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-test/wai-test-2.0.0.2.ebuild,v 1.2 2014/07/25 09:16:29 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour test-suite"
 inherit haskell-cabal
 
-DESCRIPTION="Unit test framework (built on HUnit) for WAI applications."
+DESCRIPTION="Unit test framework (built on HUnit) for WAI applications"
 HOMEPAGE="http://www.yesodweb.com/book/web-application-interface"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

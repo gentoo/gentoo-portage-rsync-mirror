@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prepare prerm setup test
 DEPEND=>=dev-haskell/mtl-2.0:=[profile?] <dev-haskell/mtl-2.2:=[profile?] >=dev-haskell/network-2.1:=[profile?] <dev-haskell/network-2.5:=[profile?] =dev-haskell/text-0.11*:=[profile?] >=dev-haskell/utf8-string-0.3.1:=[profile?] <dev-haskell/utf8-string-0.4:=[profile?] >=dev-lang/ghc-6.12.1:= >=dev-haskell/cabal-1.10 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
-DESCRIPTION=An MPD client library.
+DESCRIPTION=An MPD client library
 EAPI=5
 HOMEPAGE=http://github.com/joachifm/libmpd-haskell
 IUSE=doc hscolour profile
@@ -10,4 +10,4 @@ RDEPEND=>=dev-haskell/mtl-2.0:=[profile?] <dev-haskell/mtl-2.2:=[profile?] >=dev
 SLOT=0
 SRC_URI=mirror://hackage/packages/archive/libmpd/0.8.0.1/libmpd-0.8.0.1.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=69496f008b73b51726a7925c0eb80472
+_md5_=0f08dcf3b13a6933ff2bd50c32cd7759

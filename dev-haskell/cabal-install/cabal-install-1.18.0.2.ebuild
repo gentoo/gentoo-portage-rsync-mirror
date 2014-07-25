@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/cabal-install-1.18.0.2.ebuild,v 1.1 2013/11/14 18:20:15 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/cabal-install-1.18.0.2.ebuild,v 1.2 2014/07/25 09:16:27 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="bin test-suite"
 inherit bash-completion-r1 eutils haskell-cabal
 
-DESCRIPTION="The command-line interface for Cabal and Hackage."
+DESCRIPTION="The command-line interface for Cabal and Hackage"
 HOMEPAGE="http://www.haskell.org/cabal/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

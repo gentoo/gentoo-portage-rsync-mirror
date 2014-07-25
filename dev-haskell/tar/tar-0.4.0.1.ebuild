@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tar/tar-0.4.0.1.ebuild,v 1.9 2013/03/31 10:26:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tar/tar-0.4.0.1.ebuild,v 1.10 2014/07/25 09:16:33 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Reading, writing and manipulating ".tar" archive files."
+DESCRIPTION="Reading, writing and manipulating ".tar" archive files"
 HOMEPAGE="http://hackage.haskell.org/package/tar"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

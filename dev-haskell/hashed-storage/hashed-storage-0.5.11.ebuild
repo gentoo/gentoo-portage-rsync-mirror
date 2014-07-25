@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/hashed-storage-0.5.11.ebuild,v 1.2 2014/07/09 03:00:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/hashed-storage-0.5.11.ebuild,v 1.3 2014/07/25 09:16:25 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="bin lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Hashed file storage support code."
+DESCRIPTION="Hashed file storage support code"
 HOMEPAGE="http://hackage.haskell.org/package/hashed-storage"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

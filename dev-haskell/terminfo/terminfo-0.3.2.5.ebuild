@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/terminfo-0.3.2.5.ebuild,v 1.9 2013/03/31 10:27:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/terminfo-0.3.2.5.ebuild,v 1.10 2014/07/25 09:16:18 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit autotools eutils haskell-cabal
 
-DESCRIPTION="Haskell bindings to the terminfo library."
+DESCRIPTION="Haskell bindings to the terminfo library"
 HOMEPAGE="http://code.haskell.org/terminfo"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network-protocol-xmpp/network-protocol-xmpp-0.4.4.ebuild,v 1.1 2013/08/26 11:36:10 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network-protocol-xmpp/network-protocol-xmpp-0.4.4.ebuild,v 1.2 2014/07/25 09:16:41 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Client library for the XMPP protocol."
+DESCRIPTION="Client library for the XMPP protocol"
 HOMEPAGE="https://john-millikin.com/software/haskell-xmpp/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

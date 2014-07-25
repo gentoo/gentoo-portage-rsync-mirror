@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/file-embed/file-embed-0.0.7.ebuild,v 1.1 2014/07/02 08:04:59 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/file-embed/file-embed-0.0.7.ebuild,v 1.2 2014/07/25 09:16:28 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour test-suite"
 inherit haskell-cabal
 
-DESCRIPTION="Use Template Haskell to embed file contents directly."
+DESCRIPTION="Use Template Haskell to embed file contents directly"
 HOMEPAGE="https://github.com/snoyberg/file-embed"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/stream
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/ChangeLog,v 1.14 2014/07/02 13:47:31 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/ChangeLog,v 1.15 2014/07/25 09:16:14 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> stream-0.2.6-r1.ebuild,
+  stream-0.4.6.1.ebuild, stream-0.4.6.ebuild, stream-0.4.7.1-r1.ebuild:
+  Drop trailing '.' from description.
 
 *stream-0.4.7.1-r1 (02 Jul 2014)
 

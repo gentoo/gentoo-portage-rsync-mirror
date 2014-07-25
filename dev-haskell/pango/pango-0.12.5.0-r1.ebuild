@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/pango-0.12.5.0-r1.ebuild,v 1.1 2013/12/12 06:06:19 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/pango-0.12.5.0-r1.ebuild,v 1.2 2014/07/25 09:16:18 slyfox Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour nocabaldep"
 inherit haskell-cabal
 
-DESCRIPTION="Binding to the Pango text rendering engine."
+DESCRIPTION="Binding to the Pango text rendering engine"
 HOMEPAGE="http://projects.haskell.org/gtk2hs/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

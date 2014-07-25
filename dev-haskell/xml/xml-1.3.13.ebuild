@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml/xml-1.3.13.ebuild,v 1.8 2013/08/07 13:33:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml/xml-1.3.13.ebuild,v 1.9 2014/07/25 09:16:25 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="A simple XML library."
+DESCRIPTION="A simple XML library"
 HOMEPAGE="http://code.galois.com"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

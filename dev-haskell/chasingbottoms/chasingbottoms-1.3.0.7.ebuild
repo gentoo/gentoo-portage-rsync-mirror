@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/chasingbottoms/chasingbottoms-1.3.0.7.ebuild,v 1.3 2014/01/14 13:57:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/chasingbottoms/chasingbottoms-1.3.0.7.ebuild,v 1.4 2014/07/25 09:16:42 slyfox Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit haskell-cabal
 MY_PN="ChasingBottoms"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="For testing partial and infinite values."
+DESCRIPTION="For testing partial and infinite values"
 HOMEPAGE="http://hackage.haskell.org/package/ChasingBottoms"
 SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 

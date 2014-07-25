@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prepare prerm setup test unpack
 DEPEND=>=dev-haskell/mtl-1.1:=[profile?] <dev-haskell/mtl-2.3:=[profile?] >=dev-haskell/quickcheck-2.1:2=[profile?] <dev-haskell/quickcheck-2.8:2=[profile?] >=dev-haskell/random-1.0:=[profile?] <dev-haskell/random-1.1:=[profile?] >=dev-haskell/syb-0.1.0.2:=[profile?] <dev-haskell/syb-0.5:=[profile?] >=dev-lang/ghc-6.12.1:= >=dev-haskell/cabal-1.8.0.2 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
-DESCRIPTION=For testing partial and infinite values.
+DESCRIPTION=For testing partial and infinite values
 EAPI=5
 HOMEPAGE=http://hackage.haskell.org/package/ChasingBottoms
 IUSE=test doc hscolour profile
@@ -10,4 +10,4 @@ RDEPEND=>=dev-haskell/mtl-1.1:=[profile?] <dev-haskell/mtl-2.3:=[profile?] >=dev
 SLOT=0/1.3.0.7
 SRC_URI=mirror://hackage/packages/archive/ChasingBottoms/1.3.0.7/ChasingBottoms-1.3.0.7.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=7f58d5610ab8fd4ff9f6ee1312c43feb
+_md5_=0dd6cdcd02a5aa653dda04575e0bf2e0

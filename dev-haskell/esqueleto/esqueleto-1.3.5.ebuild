@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/esqueleto/esqueleto-1.3.5.ebuild,v 1.1 2014/03/09 12:41:24 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/esqueleto/esqueleto-1.3.5.ebuild,v 1.2 2014/07/25 09:16:40 slyfox Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour test-suite"
 inherit eutils haskell-cabal
 
-DESCRIPTION="Bare bones, type-safe EDSL for SQL queries on persistent backends."
+DESCRIPTION="Bare bones, type-safe EDSL for SQL queries on persistent backends"
 HOMEPAGE="https://github.com/meteficha/esqueleto"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

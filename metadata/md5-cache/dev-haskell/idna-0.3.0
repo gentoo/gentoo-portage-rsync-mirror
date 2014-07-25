@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prerm setup test
 DEPEND=>=dev-haskell/punycode-2.0:=[profile?] >=dev-haskell/stringprep-1:=[profile?] <dev-haskell/stringprep-2:=[profile?] >=dev-haskell/text-0.1:=[profile?] >=dev-lang/ghc-7.0.1:= >=dev-haskell/cabal-1.10.0.0 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
-DESCRIPTION=Implements IDNA (RFC 3490).
+DESCRIPTION=Implements IDNA (RFC 3490)
 EAPI=5
 HOMEPAGE=http://hackage.haskell.org/package/idna
 IUSE=doc hscolour profile
@@ -10,4 +10,4 @@ RDEPEND=>=dev-haskell/punycode-2.0:=[profile?] >=dev-haskell/stringprep-1:=[prof
 SLOT=0/0.3.0
 SRC_URI=mirror://hackage/packages/archive/idna/0.3.0/idna-0.3.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=a010c4940342003c26fade510a917c61
+_md5_=1eb7d0943aca7aec710afd1fdd6e3af1

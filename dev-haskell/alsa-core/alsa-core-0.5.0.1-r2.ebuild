@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alsa-core/alsa-core-0.5.0.1-r2.ebuild,v 1.1 2012/12/22 20:49:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alsa-core/alsa-core-0.5.0.1-r2.ebuild,v 1.2 2014/07/25 09:16:30 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Binding to the ALSA Library API (Exceptions)."
+DESCRIPTION="Binding to the ALSA Library API (Exceptions)"
 HOMEPAGE="http://www.haskell.org/haskellwiki/ALSA"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

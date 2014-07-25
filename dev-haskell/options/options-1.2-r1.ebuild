@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/options/options-1.2-r1.ebuild,v 1.1 2014/07/02 11:57:55 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/options/options-1.2-r1.ebuild,v 1.2 2014/07/25 09:16:29 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour test-suite"
 inherit haskell-cabal
 
-DESCRIPTION="A powerful and easy-to-use command-line option parser."
+DESCRIPTION="A powerful and easy-to-use command-line option parser"
 HOMEPAGE="https://john-millikin.com/software/haskell-options/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

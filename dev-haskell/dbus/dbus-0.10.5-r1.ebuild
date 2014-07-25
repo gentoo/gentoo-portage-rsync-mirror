@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus/dbus-0.10.5-r1.ebuild,v 1.7 2014/07/18 12:31:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus/dbus-0.10.5-r1.ebuild,v 1.8 2014/07/25 09:16:41 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="A client library for the D-Bus IPC system."
+DESCRIPTION="A client library for the D-Bus IPC system"
 HOMEPAGE="https://john-millikin.com/software/haskell-dbus/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

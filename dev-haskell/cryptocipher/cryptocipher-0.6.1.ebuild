@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cryptocipher/cryptocipher-0.6.1.ebuild,v 1.1 2013/09/13 06:07:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cryptocipher/cryptocipher-0.6.1.ebuild,v 1.2 2014/07/25 09:16:38 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Symmetrical block and stream ciphers."
+DESCRIPTION="Symmetrical block and stream ciphers"
 HOMEPAGE="http://github.com/vincenthz/hs-crypto-cipher"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

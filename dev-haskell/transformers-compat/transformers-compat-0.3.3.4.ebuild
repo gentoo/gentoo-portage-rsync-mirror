@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers-compat/transformers-compat-0.3.3.4.ebuild,v 1.1 2014/07/02 14:12:31 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers-compat/transformers-compat-0.3.3.4.ebuild,v 1.2 2014/07/25 09:16:17 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="A small compatibility shim for dev-haskell/transformers."
+DESCRIPTION="A small compatibility shim for dev-haskell/transformers"
 HOMEPAGE="http://github.com/ekmett/transformers-compat/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

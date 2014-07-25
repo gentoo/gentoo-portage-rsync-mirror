@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/editline
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/editline/ChangeLog,v 1.3 2012/12/22 21:30:17 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/editline/ChangeLog,v 1.4 2014/07/25 09:16:37 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> editline-0.2.1.0.ebuild,
+  editline-0.2.1.1.ebuild:
+  Drop trailing '.' from description.
 
 *editline-0.2.1.1 (22 Dec 2012)
 

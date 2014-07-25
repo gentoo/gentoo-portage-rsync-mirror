@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-sqlite3/hsql-sqlite3-1.8.2-r1.ebuild,v 1.1 2012/12/24 22:22:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-sqlite3/hsql-sqlite3-1.8.2-r1.ebuild,v 1.2 2014/07/25 09:16:37 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="SQLite3 driver for HSQL."
+DESCRIPTION="SQLite3 driver for HSQL"
 HOMEPAGE="http://hackage.haskell.org/package/hsql-sqlite3"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

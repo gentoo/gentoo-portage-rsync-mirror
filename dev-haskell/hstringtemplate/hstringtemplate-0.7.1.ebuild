@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hstringtemplate/hstringtemplate-0.7.1.ebuild,v 1.1 2013/06/20 06:14:27 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hstringtemplate/hstringtemplate-0.7.1.ebuild,v 1.2 2014/07/25 09:16:39 slyfox Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit haskell-cabal
 MY_PN="HStringTemplate"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="StringTemplate implementation in Haskell."
+DESCRIPTION="StringTemplate implementation in Haskell"
 HOMEPAGE="http://hackage.haskell.org/package/HStringTemplate"
 SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 

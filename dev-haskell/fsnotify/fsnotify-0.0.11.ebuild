@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fsnotify/fsnotify-0.0.11.ebuild,v 1.1 2013/08/26 12:44:06 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fsnotify/fsnotify-0.0.11.ebuild,v 1.2 2014/07/25 09:16:38 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour test-suite"
 inherit haskell-cabal
 
-DESCRIPTION="Cross platform library for file change notification."
+DESCRIPTION="Cross platform library for file change notification"
 HOMEPAGE="http://hackage.haskell.org/package/fsnotify"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai/wai-2.0.0.ebuild,v 1.3 2014/03/23 10:01:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai/wai-2.0.0.ebuild,v 1.4 2014/07/25 09:16:39 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Web Application Interface."
+DESCRIPTION="Web Application Interface"
 HOMEPAGE="https://github.com/yesodweb/wai"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

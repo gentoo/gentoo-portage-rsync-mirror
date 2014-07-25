@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hscolour
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.20 2012/11/18 13:40:00 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.21 2014/07/25 09:16:41 slyfox Exp $
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> hscolour-1.17.ebuild,
+  hscolour-1.19.ebuild:
+  Drop trailing '.' from description.
 
   18 Nov 2012; Mark Wright <gienah@gentoo.org>
   +files/hscolour-1.19-ghc-7.5.patch, +hscolour-1.19-ghc-7.5.patch,

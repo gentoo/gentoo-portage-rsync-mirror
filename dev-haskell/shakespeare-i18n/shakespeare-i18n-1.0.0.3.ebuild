@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/shakespeare-i18n/shakespeare-i18n-1.0.0.3.ebuild,v 1.1 2013/08/26 11:44:54 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/shakespeare-i18n/shakespeare-i18n-1.0.0.3.ebuild,v 1.2 2014/07/25 09:16:21 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour test-suite"
 inherit haskell-cabal
 
-DESCRIPTION="A type-based approach to internationalization."
+DESCRIPTION="A type-based approach to internationalization"
 HOMEPAGE="http://www.yesodweb.com/book/shakespearean-templates"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

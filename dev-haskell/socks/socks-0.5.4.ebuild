@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/socks/socks-0.5.4.ebuild,v 1.3 2014/03/12 05:08:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/socks/socks-0.5.4.ebuild,v 1.4 2014/07/25 09:16:14 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Socks proxy (version 5) implementation."
+DESCRIPTION="Socks proxy (version 5) implementation"
 HOMEPAGE="http://github.com/vincenthz/hs-socks"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

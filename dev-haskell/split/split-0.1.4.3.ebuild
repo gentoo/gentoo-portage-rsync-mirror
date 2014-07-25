@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/split/split-0.1.4.3.ebuild,v 1.8 2012/12/29 14:20:06 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/split/split-0.1.4.3.ebuild,v 1.9 2014/07/25 09:16:28 slyfox Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ EAPI=4
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Combinator library for splitting lists."
+DESCRIPTION="Combinator library for splitting lists"
 HOMEPAGE="http://code.haskell.org/~byorgey/code/split"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

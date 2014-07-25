@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prerm setup test
 DEPEND=dev-haskell/hashable:=[profile?] dev-haskell/lifted-base:=[profile?] >=dev-haskell/readargs-1.2:=[profile?] <dev-haskell/readargs-1.3:=[profile?] dev-haskell/safe:=[profile?] >=dev-haskell/system-filepath-0.4:=[profile?] <dev-haskell/system-filepath-0.5:=[profile?] dev-haskell/text:=[profile?] dev-haskell/transformers:=[profile?] dev-haskell/unordered-containers:=[profile?] dev-haskell/vector:=[profile?] >=dev-lang/ghc-6.10.4:= >=dev-haskell/cabal-1.8 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
-DESCRIPTION=An enhanced core prelude; a common foundation for alternate preludes.
+DESCRIPTION=An enhanced core prelude; a common foundation for alternate preludes
 EAPI=5
 HOMEPAGE=https://github.com/snoyberg/basic-prelude
 IUSE=doc hscolour profile
@@ -10,4 +10,4 @@ RDEPEND=dev-haskell/hashable:=[profile?] dev-haskell/lifted-base:=[profile?] >=d
 SLOT=0/0.3.6.0
 SRC_URI=mirror://hackage/packages/archive/basic-prelude/0.3.6.0/basic-prelude-0.3.6.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=820c3f660ed5796ccb84fce0600deaef
+_md5_=21cd10e6db21cde4eccc3dde5038ebaf
