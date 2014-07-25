@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/holotz-castle
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/holotz-castle/ChangeLog,v 1.14 2011/06/22 04:15:58 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/holotz-castle/ChangeLog,v 1.15 2014/07/25 14:19:05 tupone Exp $
+
+  25 Jul 2014; Alfredo Tupone <tupone@gentoo.org> holotz-castle-1.3.14.ebuild:
+  Fix dependency. Bug #514206 by Patric Lauer
+  EAPI 4
 
   22 Jun 2011; Tupone Alfredo <tupone@gentoo.org> holotz-castle-1.3.14.ebuild,
   +files/holotz-castle-1.3.14-underlink.patch:

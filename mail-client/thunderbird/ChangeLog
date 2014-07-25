@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.288 2014/07/24 20:32:45 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.289 2014/07/25 14:22:58 axs Exp $
+
+  25 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  thunderbird-24.7.0.ebuild:
+  fixed nss dependency, bug 518044
 
 *thunderbird-24.7.0 (24 Jul 2014)
 

@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/enca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.101 2014/07/23 15:13:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.102 2014/07/25 14:17:48 mrueg Exp $
+
+*enca-1.14-r2 (25 Jul 2014)
+
+  25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +enca-1.14-r2.ebuild,
+  -enca-1.12.ebuild, -enca-1.13-r2.ebuild, -enca-1.14.ebuild:
+  Cleanup old. Bump EAPI. Fix gettext dependency. Thanks to Nikoli. Fixes bug
+  #516804.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> enca-1.14-r1.ebuild:
   Stable for x86, wrt bug #512012

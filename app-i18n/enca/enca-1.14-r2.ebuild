@@ -1,10 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.14.ebuild,v 1.2 2013/04/26 20:29:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.14-r2.ebuild,v 1.1 2014/07/25 14:17:48 mrueg Exp $
 
-EAPI="4"
+EAPI=5
 
-inherit eutils toolchain-funcs autotools-utils
+AUTOTOOLS_AUTORECONF=2.52
+
+inherit eutils toolchain-funcs autotools-multilib
 
 DESCRIPTION="ENCA detects the character coding of a file and converts it if desired"
 HOMEPAGE="http://gitorious.org/enca"
@@ -15,20 +17,19 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc +recode"
 
-DEPEND="recode? ( >=app-text/recode-3.6_p15 )"
-RDEPEND="${DEPEND}"
-
-AUTOTOOLS_AUTORECONF=2.52
+RDEPEND="recode? ( >=app-text/recode-3.6_p15 )"
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-remove-dirty-path-hack.patch
-	epatch "${FILESDIR}"/${P}-automake-1.13.patch
+	epatch "${FILESDIR}"/${PN}-remove-dirty-path-hack.patch\
+		"${FILESDIR}"/${P}-automake-1.13.patch
 	rm missing # too old, automake will update it
 	# fix crosscompilation, bug #424473
 	if tc-is-cross-compiler; then
 		sed -e "s#./make_hash#./native_make_hash#" -i tools/Makefile.am || die
 	fi
-	autotools-utils_src_prepare
+	autotools-multilib_src_prepare
 }
 
 src_configure() {
@@ -38,18 +39,20 @@ src_configure() {
 		$(use_with recode librecode "${EPREFIX}"/usr)
 		$(use_enable doc gtk-doc)
 	)
-	autotools-utils_src_configure
+	autotools-multilib_src_configure
 }
 
-src_compile() {
+multilib_src_compile() {
 	if tc-is-cross-compiler; then
-		pushd "${AUTOTOOLS_BUILD_DIR}"/tools > /dev/null
+		pushd "${BUILD_DIR}"/tools > /dev/null
 		$(tc-getBUILD_CC) -o native_make_hash "${S}"/tools/make_hash.c || die "native make_hash failed"
 		popd > /dev/null
 	fi
+	# It will fail if we run these twice...
+	if ! multilib_is_native_abi ; then
+		sed -i -e 's/ src / /'\
+			-e '/SUBDIRS/s/ test//' Makefile\
+			-e 's/install-data-hook:/install-data-hook:\n\ndisabled:/' Makefile || die
+	fi
 	autotools-utils_src_compile
-}
-
-src_install() {
-	autotools-utils_src_install
 }
