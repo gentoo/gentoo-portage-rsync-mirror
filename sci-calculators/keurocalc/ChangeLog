@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/keurocalc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/ChangeLog,v 1.11 2014/04/30 22:20:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/ChangeLog,v 1.12 2014/07/25 18:00:54 kensington Exp $
+
+  25 Jul 2014; Michael Palimaka <kensington@gentoo.org> keurocalc-1.2.2.ebuild:
+  Fix build when multiple LINGUAS targets are enabled wrt bug #518070.
 
 *keurocalc-1.2.2 (30 Apr 2014)
 

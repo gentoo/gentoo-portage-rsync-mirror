@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/keurocalc-1.2.2.ebuild,v 1.1 2014/04/30 22:20:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/keurocalc-1.2.2.ebuild,v 1.2 2014/07/25 18:00:54 kensington Exp $
 
 EAPI=5
 
@@ -22,7 +22,11 @@ DOCS=( AUTHORS TODO )
 
 src_prepare() {
 	# bug 500560
-	sed -e "s/PO_FILES //" -i po/*/CMakeLists.txt
+	sed -e "s/PO_FILES //" -i po/*/CMakeLists.txt || die
+
+	# bug 518070
+	sed -e "/cmake_minimum_required/a cmake_policy(SET CMP0002 OLD)" \
+		-i CMakeLists.txt || die
 
 	kde4-base_src_prepare
 }
