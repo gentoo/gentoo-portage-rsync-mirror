@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/lumberjack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/lumberjack/ChangeLog,v 1.4 2014/06/22 04:55:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/lumberjack/ChangeLog,v 1.5 2014/07/25 14:59:35 mrueg Exp $
+
+  25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> -lumberjack-1.0.4.ebuild,
+  -lumberjack-1.0.5.ebuild:
+  Cleanup old.
 
 *lumberjack-1.0.7 (22 Jun 2014)
 

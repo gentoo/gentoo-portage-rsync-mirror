@@ -1,0 +1,167 @@
+From 0c439a94a2e67136f43a16fba34695120997b49e Mon Sep 17 00:00:00 2001
+From: Shaun Mangelsdorf <s.mangelsdorf@gmail.com>
+Date: Fri, 4 Apr 2014 16:56:40 +1000
+Subject: [PATCH] Add raw_string helper in tests, to repair encoding issues
+
+Strings with raw byte sequences misbehave in Ruby 2.0+ because the
+default encoding for string literals is now UTF-8. The String#b method
+resolves this, and was not previously available.
+---
+ spec/spec_helper.rb                   |  5 +++++
+ spec/unit/ber/ber_spec.rb             | 42 +++++++++++++++++------------------
+ spec/unit/ber/core_ext/string_spec.rb |  4 ++--
+ spec/unit/ldap/filter_spec.rb         |  4 ++--
+ test/test_snmp.rb                     | 11 ++++++---
+ 5 files changed, 38 insertions(+), 28 deletions(-)
+
+diff --git a/spec/spec_helper.rb b/spec/spec_helper.rb
+index 5079537..a585398 100644
+--- a/spec/spec_helper.rb
++++ b/spec/spec_helper.rb
+@@ -2,4 +2,9 @@
+ 
+ RSpec.configure do |config|
+   config.mock_with :flexmock
++
++  def raw_string(s)
++    # Conveniently, String#b only needs to be called when it exists
++    s.respond_to?(:b) ? s.b : s
++  end
+ end
+diff --git a/spec/unit/ber/ber_spec.rb b/spec/unit/ber/ber_spec.rb
+index 48e161a..9806cc8 100644
+--- a/spec/unit/ber/ber_spec.rb
++++ b/spec/unit/ber/ber_spec.rb
+@@ -33,28 +33,28 @@
+   context "numbers" do
+     # Sample based
+     {
+-      0           => "\x02\x01\x00", 
+-      1           => "\x02\x01\x01", 
+-      127         => "\x02\x01\x7F", 
+-      128         => "\x02\x01\x80", 
+-      255         => "\x02\x01\xFF", 
+-      256         => "\x02\x02\x01\x00", 
+-      65535       => "\x02\x02\xFF\xFF", 
+-      65536       => "\x02\x03\x01\x00\x00", 
+-      16_777_215  => "\x02\x03\xFF\xFF\xFF", 
+-      0x01000000  => "\x02\x04\x01\x00\x00\x00", 
+-      0x3FFFFFFF  => "\x02\x04\x3F\xFF\xFF\xFF", 
+-      0x4FFFFFFF  => "\x02\x04\x4F\xFF\xFF\xFF", 
+-      
++      0           => raw_string("\x02\x01\x00"),
++      1           => raw_string("\x02\x01\x01"),
++      127         => raw_string("\x02\x01\x7F"),
++      128         => raw_string("\x02\x01\x80"),
++      255         => raw_string("\x02\x01\xFF"),
++      256         => raw_string("\x02\x02\x01\x00"),
++      65535       => raw_string("\x02\x02\xFF\xFF"),
++      65536       => raw_string("\x02\x03\x01\x00\x00"),
++      16_777_215  => raw_string("\x02\x03\xFF\xFF\xFF"),
++      0x01000000  => raw_string("\x02\x04\x01\x00\x00\x00"),
++      0x3FFFFFFF  => raw_string("\x02\x04\x3F\xFF\xFF\xFF"),
++      0x4FFFFFFF  => raw_string("\x02\x04\x4F\xFF\xFF\xFF"),
++
+       # Some odd samples...
+-      5           => "\002\001\005", 
+-      500         => "\002\002\001\364", 
+-      50_000      => "\x02\x02\xC3P", 
+-      5_000_000_000  => "\002\005\001*\005\362\000"
+-    }.each do |number, expected_encoding| 
++      5           => raw_string("\002\001\005"),
++      500         => raw_string("\002\002\001\364"),
++      50_000      => raw_string("\x02\x02\xC3P"),
++      5_000_000_000  => raw_string("\002\005\001*\005\362\000")
++    }.each do |number, expected_encoding|
+       it "should encode #{number} as #{expected_encoding.inspect}" do
+         number.to_ber.should == expected_encoding
+-      end 
++      end
+     end
+ 
+     # Round-trip encoding: This is mostly to be sure to cover Bignums well.
+@@ -79,7 +79,7 @@
+     context "strings" do
+       it "should properly encode UTF-8 strings" do
+         "\u00e5".force_encoding("UTF-8").to_ber.should ==
+-          "\x04\x02\xC3\xA5"
++          raw_string("\x04\x02\xC3\xA5")
+       end
+       it "should properly encode strings encodable as UTF-8" do
+         "teststring".encode("US-ASCII").to_ber.should == "\x04\nteststring"
+@@ -87,7 +87,7 @@
+ 			it "should properly encode binary data strings using to_ber_bin" do
+ 				# This is used for searching for GUIDs in Active Directory
+ 				["6a31b4a12aa27a41aca9603f27dd5116"].pack("H*").to_ber_bin.should == 
+-					"\x04\x10" + "j1\xB4\xA1*\xA2zA\xAC\xA9`?'\xDDQ\x16"
++					raw_string("\x04\x10" + "j1\xB4\xA1*\xA2zA\xAC\xA9`?'\xDDQ\x16")
+ 			end
+       it "should not fail on strings that can not be converted to UTF-8" do
+         error = Encoding::UndefinedConversionError
+diff --git a/spec/unit/ber/core_ext/string_spec.rb b/spec/unit/ber/core_ext/string_spec.rb
+index 6eebe05..ef2c498 100644
+--- a/spec/unit/ber/core_ext/string_spec.rb
++++ b/spec/unit/ber/core_ext/string_spec.rb
+@@ -6,7 +6,7 @@
+     context "when passed an ldap bind request and some extra data" do
+       attr_reader :str, :result
+       before(:each) do
+-        @str = "0$\002\001\001`\037\002\001\003\004\rAdministrator\200\vad_is_bogus UNCONSUMED" 
++        @str = raw_string("0$\002\001\001`\037\002\001\003\004\rAdministrator\200\vad_is_bogus UNCONSUMED")
+         @result = str.read_ber!(Net::LDAP::AsnSyntax)
+       end
+       
+@@ -22,7 +22,7 @@
+         before(:each) do
+           stub_exception_class = Class.new(StandardError)
+           
+-          @initial_value = "0$\002\001\001`\037\002\001\003\004\rAdministrator\200\vad_is_bogus" 
++          @initial_value = raw_string("0$\002\001\001`\037\002\001\003\004\rAdministrator\200\vad_is_bogus")
+           @str = initial_value.dup 
+ 
+           # Defines a string
+diff --git a/spec/unit/ldap/filter_spec.rb b/spec/unit/ldap/filter_spec.rb
+index 5e4cb8a..06fd3b8 100644
+--- a/spec/unit/ldap/filter_spec.rb
++++ b/spec/unit/ldap/filter_spec.rb
+@@ -83,12 +83,12 @@ def eq(attribute, value)
+   end
+ 
+   context 'with a well-known BER string' do
+-    ber = "\xa4\x2d" \
++    ber = raw_string("\xa4\x2d" \
+       "\x04\x0b" "objectclass" \
+       "\x30\x1e" \
+       "\x80\x08" "foo" "*\\" "bar" \
+       "\x81\x08" "foo" "*\\" "bar" \
+-      "\x82\x08" "foo" "*\\" "bar"
++      "\x82\x08" "foo" "*\\" "bar")
+ 
+     describe "<- .to_ber" do
+       [
+diff --git a/test/test_snmp.rb b/test/test_snmp.rb
+index 88a619d..065025e 100644
+--- a/test/test_snmp.rb
++++ b/test/test_snmp.rb
+@@ -4,10 +4,15 @@
+ require 'net/snmp'
+ 
+ class TestSnmp < Test::Unit::TestCase
+-  SnmpGetRequest = "0'\002\001\000\004\006public\240\032\002\002?*\002\001\000\002\001\0000\0160\f\006\b+\006\001\002\001\001\001\000\005\000"
+-  SnmpGetResponse = "0+\002\001\000\004\006public\242\036\002\002'\017\002\001\000\002\001\0000\0220\020\006\b+\006\001\002\001\001\001\000\004\004test"
++  def self.raw_string(s)
++    # Conveniently, String#b only needs to be called when it exists
++    s.respond_to?(:b) ? s.b : s
++  end
++
++  SnmpGetRequest = raw_string("0'\002\001\000\004\006public\240\032\002\002?*\002\001\000\002\001\0000\0160\f\006\b+\006\001\002\001\001\001\000\005\000")
++  SnmpGetResponse = raw_string("0+\002\001\000\004\006public\242\036\002\002'\017\002\001\000\002\001\0000\0220\020\006\b+\006\001\002\001\001\001\000\004\004test")
+ 
+-  SnmpGetRequestXXX = "0'\002\001\000\004\006xxxxxx\240\032\002\002?*\002\001\000\002\001\0000\0160\f\006\b+\006\001\002\001\001\001\000\005\000"
++  SnmpGetRequestXXX = raw_string("0'\002\001\000\004\006xxxxxx\240\032\002\002?*\002\001\000\002\001\0000\0160\f\006\b+\006\001\002\001\001\001\000\005\000")
+ 
+   def test_invalid_packet
+     data = "xxxx"
+-- 
+1.9.3
+

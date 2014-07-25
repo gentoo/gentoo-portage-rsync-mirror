@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/metaid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaid/ChangeLog,v 1.18 2014/06/17 09:54:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaid/ChangeLog,v 1.19 2014/07/25 14:52:41 mrueg Exp $
+
+  25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> metaid-1.0-r3.ebuild:
+  Add ruby21 support.
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> metaid-1.0-r3.ebuild:
   Update HOMEPAGE to rubygems.org as rubyforge is down.
