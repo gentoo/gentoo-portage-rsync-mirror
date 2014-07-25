@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.84-r2.ebuild,v 1.1 2013/04/15 23:19:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.84-r2.ebuild,v 1.2 2014/07/25 00:23:41 zlogene Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils perl-app user
 
@@ -62,15 +62,15 @@ src_install() {
 		#logging/file loglevel LOGINFO /var/log/qpsmtpd/%Y-%m-%d
 	EOF
 	if use syslog; then
-		sed -i -e '/^#logging\/syslog/s,^#,,g' "${D}"/etc/qpsmtpd/logging
+		sed -i -e '/^#logging\/syslog/s,^#,,g' "${D}"/etc/qpsmtpd/logging || die
 	else
-		sed -i -e '/^#logging\/file/s,^#,,g' "${D}"/etc/qpsmtpd/logging
+		sed -i -e '/^#logging\/file/s,^#,,g' "${D}"/etc/qpsmtpd/logging || die
 	fi
 
 	newenvd "${FILESDIR}"/qpsmtpd.envd 99qpsmtpd
 
-	newconfd "${FILESDIR}"/qpsmtpd.confd qpsmtpd || die "Installing conf.d file"
-	newinitd "${FILESDIR}"/qpsmtpd.initd-r1 qpsmtpd || die "Installing init.d file"
+	newconfd "${FILESDIR}"/qpsmtpd.confd qpsmtpd
+	newinitd "${FILESDIR}"/qpsmtpd.initd-r1 qpsmtpd
 
 	dodoc CREDITS Changes README README.plugins STATUS
 

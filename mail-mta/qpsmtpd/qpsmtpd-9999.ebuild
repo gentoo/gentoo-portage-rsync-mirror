@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-9999.ebuild,v 1.7 2013/08/15 03:39:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-9999.ebuild,v 1.9 2014/07/25 00:23:41 zlogene Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils perl-app user git-2
 
@@ -69,8 +69,8 @@ src_install() {
 
 	newenvd "${FILESDIR}"/qpsmtpd.envd 99qpsmtpd
 
-	newconfd "${FILESDIR}"/qpsmtpd.confd qpsmtpd || die "Installing conf.d file"
-	newinitd "${FILESDIR}"/qpsmtpd.initd-r1 qpsmtpd || die "Installing init.d file"
+	newconfd "${FILESDIR}"/qpsmtpd.confd qpsmtpd
+	newinitd "${FILESDIR}"/qpsmtpd.initd-r1 qpsmtpd
 
 	dodoc CREDITS Changes README README.plugins STATUS
 }
