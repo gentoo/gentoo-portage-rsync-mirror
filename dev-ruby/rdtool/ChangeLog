@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.61 2014/04/05 23:00:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.62 2014/07/25 03:08:55 mrueg Exp $
+
+*rdtool-0.6.38-r1 (25 Jul 2014)
+
+  25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +rdtool-0.6.38-r1.ebuild:
+  Add ruby20, ruby21 targets.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> rdtool-0.6.38.ebuild:
   Remove ree18 and ruby18 target.
