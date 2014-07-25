@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.76 2014/07/12 10:24:23 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.77 2014/07/25 10:52:42 pacho Exp $
+
+*znc-1.4-r1 (25 Jul 2014)
+
+  25 Jul 2014; Pacho Ramos <pacho@gentoo.org> +znc-1.4-r1.ebuild:
+  Toggle configure option to install unit file (#517728 by Konstantin)
 
   12 Jul 2014; Alex Alexander <wired@gentoo.org> znc-1.2-r1.ebuild,
   znc-1.4.ebuild, znc-9999.ebuild:
