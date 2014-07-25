@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/bladerf-2014.09_rc2.ebuild,v 1.2 2014/07/25 04:56:39 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/bladerf-2014.09_rc2.ebuild,v 1.3 2014/07/25 05:01:29 zerochaos Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://nuand.com/"
 #lib is LGPL and cli tools are GPL
 LICENSE="GPL-2+ LGPL-2.1+"
 
-SLOT="0"
+SLOT="0/${PV}"
 
 #maintainer notes:
 #fix tecla, right now -tecla doesn't actually disable anything

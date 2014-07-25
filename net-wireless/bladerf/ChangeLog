@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bladerf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/ChangeLog,v 1.3 2014/07/25 04:56:39 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/ChangeLog,v 1.4 2014/07/25 05:01:29 zerochaos Exp $
+
+  25 Jul 2014; Rick Farina <zerochaos@gentoo.org> bladerf-2014.09_rc2.ebuild,
+  bladerf-9999.ebuild:
+  adding appropriate subslot
 
   25 Jul 2014; Rick Farina <zerochaos@gentoo.org> bladerf-2014.09_rc2.ebuild,
   bladerf-9999.ebuild:
