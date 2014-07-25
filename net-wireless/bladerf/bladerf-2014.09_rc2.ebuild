@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/bladerf-2014.09_rc2.ebuild,v 1.3 2014/07/25 05:01:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/bladerf-2014.09_rc2.ebuild,v 1.4 2014/07/25 18:54:46 zerochaos Exp $
 
 EAPI=5
 
@@ -15,10 +15,10 @@ LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/${PV}"
 
 #maintainer notes:
-#fix tecla, right now -tecla doesn't actually disable anything
-#add doc use flag, looks like it can't be disabled right now and will
+#doc use flag, looks like it can't be disabled right now and will
 #	always build if pandoc and help2man are installed
-IUSE="+tecla"
+#	also ignores when deps are missing and just disabled docs
+IUSE="doc +tecla"
 
 MY_PN="bladeRF"
 
@@ -43,7 +43,9 @@ PDEPEND=">=net-wireless/bladerf-firmware-1.7.1
 
 src_configure() {
 	mycmakeargs=(
-		$(cmake-utils_use_enable tecla TECLA)
+		-DVERSION_INFO_OVERRIDE:STRING="${PV}"
+		$(cmake-utils_use_enable doc BUILD_DOCUMENTATION)
+		$(cmake-utils_use_enable tecla LIBTECLA)
 		-DTREAT_WARNINGS_AS_ERRORS=OFF
 		-DUDEV_RULES_PATH="$(get_udevdir)"/rules.d
 	)
