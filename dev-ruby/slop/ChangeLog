@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/slop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/ChangeLog,v 1.26 2014/04/19 03:17:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/ChangeLog,v 1.27 2014/07/25 01:14:36 mrueg Exp $
+
+*slop-3.5.0-r1 (25 Jul 2014)
+
+  25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +slop-3.5.0-r1.ebuild:
+  Add ruby21 target. Thanks to longlene.
 
   19 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -slop-3.4.6-r1.ebuild,
   -slop-3.4.7.ebuild, slop-2.4.4-r1.ebuild:
