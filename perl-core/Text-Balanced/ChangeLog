@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Text-Balanced
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.41 2012/08/06 13:23:12 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.42 2014/07/25 21:07:23 dilfridge Exp $
+
+*Text-Balanced-2.20.0-r1 (25 Jul 2014)
+
+  25 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Text-Balanced-2.20.0-r1.ebuild, -Text-Balanced-2.20.0.ebuild:
+  EAPI bump
 
   06 Aug 2012; Alexis Ballier <aballier@gentoo.org>
   Text-Balanced-2.20.0.ebuild:

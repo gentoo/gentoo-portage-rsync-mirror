@@ -1,6 +1,14 @@
 # ChangeLog for perl-core/CPAN-Meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.49 2014/07/18 18:00:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.50 2014/07/25 21:18:59 dilfridge Exp $
+
+*CPAN-Meta-2.120.921-r1 (25 Jul 2014)
+*CPAN-Meta-2.132.510-r1 (25 Jul 2014)
+
+  25 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +CPAN-Meta-2.120.921-r1.ebuild, +CPAN-Meta-2.132.510-r1.ebuild,
+  -CPAN-Meta-2.120.921.ebuild, -CPAN-Meta-2.132.510.ebuild:
+  EAPI bump
 
   18 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -CPAN-Meta-2.120.630.ebuild:

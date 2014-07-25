@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/CGI
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.119 2014/01/20 23:33:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.120 2014/07/25 21:15:57 dilfridge Exp $
+
+*CGI-3.630.0-r1 (25 Jul 2014)
+
+  25 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> +CGI-3.630.0-r1.ebuild,
+  -CGI-3.630.0.ebuild:
+  EAPI bump
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> CGI-3.630.0.ebuild:
   Add arm64 love.
