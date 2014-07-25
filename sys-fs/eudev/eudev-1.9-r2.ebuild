@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.8.ebuild,v 1.3 2014/06/27 20:39:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.9-r2.ebuild,v 1.1 2014/07/25 12:12:15 blueness Exp $
 
 EAPI="5"
 
 KV_min=2.6.39
 
-inherit autotools eutils multilib linux-info multilib-minimal
+inherit autotools eutils linux-info multilib multilib-minimal user
 
 if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
@@ -104,6 +104,9 @@ src_prepare() {
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' -i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
 
+	# Exclude MD from block device ownership event locking, bug #517986
+	epatch "${FILESDIR}"/${PN}-exclude-MD.patch
+
 	epatch_user
 
 	if [[ ! -e configure ]]; then
@@ -133,6 +136,7 @@ multilib_src_configure() {
 		--with-rootprefix=
 		--docdir=/usr/share/doc/${PF}
 		--libdir=/usr/$(get_libdir)
+		--with-rootlibexecdir=/lib/udev
 		--with-firmware-path="${EPREFIX}usr/lib/firmware/updates:${EPREFIX}usr/lib/firmware:${EPREFIX}lib/firmware/updates:${EPREFIX}lib/firmware"
 		--with-html-dir="/usr/share/doc/${PF}/html"
 		--enable-split-usr
@@ -213,6 +217,12 @@ multilib_src_install_all() {
 
 	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/40-gentoo.rules
+
+	insinto /usr/share/doc/${PF}/html/gudev
+	doins "${S}"/docs/gudev/html/*
+
+	insinto /usr/share/doc/${PF}/html/libudev
+	doins "${S}"/docs/libudev/html/*
 }
 
 pkg_preinst() {
@@ -270,4 +280,22 @@ pkg_postinst() {
 	elog "fixing known issues visit:"
 	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
 	elog
+
+	# http://cgit.freedesktop.org/systemd/systemd/commit/rules/50-udev-default.rules?id=3dff3e00e044e2d53c76fa842b9a4759d4a50e69
+	# http://bugs.gentoo.org/246847
+	# http://bugs.gentoo.org/514174
+	enewgroup input
+
+	# Update hwdb database in case the format is changed by udev version.
+	if has_version 'sys-apps/hwids[udev]'; then
+		udevadm hwdb --update --root="${ROOT%/}"
+		# Only reload when we are not upgrading to avoid potential race w/ incompatible hwdb.bin and the running udevd
+		if [[ -z ${REPLACING_VERSIONS} ]]; then
+			# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+			if [[ ${ROOT} != "" ]] && [[ ${ROOT} != "/" ]]; then
+				return 0
+			fi
+			udevadm control --reload
+		fi
+	fi
 }

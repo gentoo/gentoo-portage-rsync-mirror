@@ -1,0 +1,12 @@
+# ChangeLog for sci-visualization/visit
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/visit/ChangeLog,v 1.1 2014/07/25 12:24:12 slis Exp $
+
+*visit-2.7.3 (25 Jul 2014)
+
+  25 Jul 2014; Sławek Lis <slis@gentoo.org>
+  +files/visit-2.7.3-dont_symlink_visit_dir.patch,
+  +files/visit-2.7.3-findpython.patch, +files/visit-2.7.3-findsilo.patch,
+  +files/visit-2.7.3-findvtk.patch, +files/visit-2.7.3-vtklibs.patch,
+  +metadata.xml, +visit-2.7.3.ebuild:
+  added visit package

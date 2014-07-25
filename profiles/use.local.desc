@@ -6368,6 +6368,8 @@ sci-visualization/paraview:plugins - Build and install additional plugins
 sci-visualization/veusz:emf - Add FITS format via dev-python/pyemf
 sci-visualization/veusz:fits - Add FITS format via dev-python/astropy
 sci-visualization/veusz:vo - Add Virtual Observatory tools via dev-python/astropy
+sci-visualization/visit:cgns - Builds the reader for the CFD General Notation System file format.
+sci-visualization/visit:silo - Adds support for reading .silo files.
 sec-policy/selinux-base:open_perms - Enable the open permissions for file object classes (SELinux policy capability).
 sec-policy/selinux-base:peer_perms - Enable the labeled networking peer permissions (SELinux policy capability).
 sec-policy/selinux-base:ubac - Enable User Based Access Control (UBAC) in the SELinux policy

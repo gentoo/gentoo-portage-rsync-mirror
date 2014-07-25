@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/IO-Zlib-1.100.0.ebuild,v 1.4 2014/01/20 20:44:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/IO-Zlib-1.100.0.ebuild,v 1.5 2014/07/25 12:11:07 zlogene Exp $
 
-EAPI=2
+EAPI=5
 
 MODULE_AUTHOR=TOMHUGHES
 MODULE_VERSION=1.10

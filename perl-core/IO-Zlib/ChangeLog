@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IO-Zlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/ChangeLog,v 1.22 2014/01/20 20:44:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/ChangeLog,v 1.23 2014/07/25 12:11:07 zlogene Exp $
+
+  25 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> IO-Zlib-1.100.0.ebuild:
+  Bump to EAPI=5
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> IO-Zlib-1.100.0.ebuild:
   Add arm64 love.
