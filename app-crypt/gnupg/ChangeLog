@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.534 2014/07/16 13:57:16 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.536 2014/07/25 03:53:22 zx2c4 Exp $
+
+  25 Jul 2014; Jason A. Donenfeld <zx2c4@gentoo.org> gnupg-2.1.0_beta751.ebuild:
+  It's not in the mirrors yet.
+
+*gnupg-2.1.0_beta751 (25 Jul 2014)
+
+  25 Jul 2014; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +gnupg-2.1.0_beta751.ebuild:
+  The fifth beta of gnupg 2.1 is finally shaping up.
 
   16 Jul 2014; Alon Bar-Lev <alonbl@gentoo.org> -gnupg-1.4.16.ebuild,
   -gnupg-2.0.22.ebuild, -gnupg-2.0.23.ebuild:
