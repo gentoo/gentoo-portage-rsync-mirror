@@ -1,6 +1,12 @@
 # ChangeLog for net-voip/yate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.29 2014/07/25 20:12:38 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.30 2014/07/25 20:38:40 zerochaos Exp $
+
+*yate-5.4.0 (25 Jul 2014)
+
+  25 Jul 2014; Rick Farina <zerochaos@gentoo.org> +yate-5.4.0.ebuild,
+  -yate-5.3.0.ebuild:
+  version bump
 
 *yate-5.3.0 (25 Jul 2014)
 

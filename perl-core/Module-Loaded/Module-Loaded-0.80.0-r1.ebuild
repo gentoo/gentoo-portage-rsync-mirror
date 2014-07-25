@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Loaded/Module-Loaded-0.80.0.ebuild,v 1.1 2011/12/19 19:09:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Loaded/Module-Loaded-0.80.0-r1.ebuild,v 1.1 2014/07/25 20:58:45 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=BINGOS
 MODULE_VERSION=0.08
