@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.23 2014/04/13 17:51:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.24 2014/07/26 21:01:26 sping Exp $
+
+*redshift-1.9.1 (26 Jul 2014)
+
+  26 Jul 2014; Sebastian Pipping <sping@gentoo.org> +redshift-1.9.1.ebuild:
+  Bump to 1.9.1 (bug #518058)
 
 *redshift-1.9-r1 (13 Apr 2014)
 
