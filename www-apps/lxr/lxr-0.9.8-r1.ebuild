@@ -1,6 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.8.ebuild,v 1.1 2013/09/12 21:44:22 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.8-r1.ebuild,v 1.2 2014/07/26 18:07:29 zlogene Exp $
+
+EAPI=5
 
 inherit perl-module webapp multilib eutils depend.apache
 
@@ -29,9 +31,8 @@ pkg_setup() {
 	webapp_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+
 	epatch "${FILESDIR}/${PN}-0.9.8-initdb-mysql.patch"
 
 	sed -i \
@@ -39,15 +40,15 @@ src_unpack() {
 		-e 's|/usr/bin/ctags|/usr/bin/exuberant-ctags|' \
 		-e "s|'glimpse|#'glimpse|g" \
 		-e "s:/path/to/lib:${VENDOR_LIB}:" \
-		templates/lxr.conf
+		templates/lxr.conf || die "sed failed"
 	sed -i \
 		-e 's|Apache::Registry|ModPerl::PerlRun|' \
-		.htaccess-apache1
+		.htaccess-apache1 || die "sed failed"
 	sed -i \
 		-e 's|require Local;|require LXR::Local;|' \
 		-e 's|use Local;|use LXR::Local;|' \
 		-e 's|package Local;|package LXR::Local;|' \
-		Local.pm lib/LXR/Common.pm diff find ident search source
+		Local.pm lib/LXR/Common.pm diff find ident search source || die "sed failed"
 }
 
 # prevent eclasses from overriding this
@@ -58,16 +59,16 @@ src_install() {
 	webapp_src_preinst
 
 	insinto "${VENDOR_LIB}"
-	doins -r lib/LXR || die
+	doins -r lib/LXR
 	insinto "${VENDOR_LIB}"/LXR
 	doins Local.pm
 
 	dodoc BUGS CREDITS.txt ChangeLog HACKING INSTALL notes .htaccess* swish-e.conf
 
 	exeinto "${MY_HTDOCSDIR}"
-	doexe diff find genxref ident search source || die
+	doexe diff find genxref ident search source
 	insinto "${MY_HTDOCSDIR}"
-	doins .htaccess* templates/* || die
+	doins .htaccess* templates/*
 
 	webapp_configfile "${MY_HTDOCSDIR}"/lxr.conf "${MY_HTDOCSDIR}"/.htaccess-apache1
 	webapp_sqlscript mysql initdb-mysql
