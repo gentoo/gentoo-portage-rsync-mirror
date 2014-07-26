@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.102 2014/07/26 18:00:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.104 2014/07/26 20:15:27 dilfridge Exp $
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  perl-cleaner-2.16.ebuild, perl-cleaner-9999.ebuild:
+  ... and fix it. :(
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  perl-cleaner-2.16.ebuild, perl-cleaner-9999.ebuild:
+  Add secondary URL
 
 *perl-cleaner-2.16 (26 Jul 2014)
 
