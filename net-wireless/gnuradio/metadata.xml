@@ -16,6 +16,7 @@
 		<flag name='uhd'>install UHD source and sink blocks</flag>
 		<flag name='utils'>install scripts to enable viewing and analysis of files produced by flow graphs</flag>
 		<flag name='wavelet'>enable wavelet signal processing blocks</flag>
+		<flag name='zeromq'>enable zeromq message passing blocks</flag>
 	</use>
 </pkgmetadata>
 

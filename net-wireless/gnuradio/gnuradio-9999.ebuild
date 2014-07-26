@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.15 2014/07/26 05:59:21 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.16 2014/07/26 21:48:24 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
+CMAKE_BUILD_TYPE="None"
 inherit cmake-utils fdo-mime python-single-r1
 
 DESCRIPTION="Toolkit that provides signal processing blocks to implement software radios"
@@ -21,7 +22,7 @@ else
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
-IUSE="alsa +analog +digital channels +ctrlport doc examples fcd +filter grc jack log oss pager performance-counters portaudio +qt4 sdl uhd +utils wavelet wxwidgets"
+IUSE="alsa +analog +digital channels +ctrlport doc examples fcd +filter grc jack log oss pager performance-counters portaudio +qt4 sdl uhd +utils wavelet wxwidgets zeromq"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 		analog? ( filter )
@@ -78,6 +79,8 @@ RDEPEND="${PYTHON_DEPS}
 		dev-python/numpy[${PYTHON_USEDEP}]
 		dev-python/wxpython:2.8[${PYTHON_USEDEP}]
 	)
+	zeromq? ( >=net-libs/zeromq-2.1.11
+		net-libs/cppzmq )
 "
 DEPEND="${RDEPEND}
 	dev-lang/swig
@@ -98,7 +101,7 @@ src_prepare() {
 	# Useless UI element would require qt3support, bug #365019
 	sed -i '/qPixmapFromMimeSource/d' "${S}"/gr-qtgui/lib/spectrumdisplayform.ui || die
 	epatch "${FILESDIR}"/${PN}-3.6.1-automagic-audio.patch
-	epatch "${FILESDIR}/${P}-build-type-nonfatal.patch"
+	#epatch "${FILESDIR}/${P}-build-type-nonfatal.patch"
 }
 
 src_configure() {

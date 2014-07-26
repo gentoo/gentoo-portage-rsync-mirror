@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mp3splt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.60 2014/07/14 15:18:47 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.61 2014/07/26 21:32:54 sping Exp $
+
+*mp3splt-2.6.1a (26 Jul 2014)
+
+  26 Jul 2014; Sebastian Pipping <sping@gentoo.org> +mp3splt-2.6.1a.ebuild:
+  Bump to 2.6.1a (bug #517786)
 
   14 Jul 2014; Sebastian Pipping <sping@gentoo.org> -mp3splt-2.5.1.ebuild,
   -mp3splt-2.5.2.ebuild:
