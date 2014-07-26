@@ -1,6 +1,16 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.94 2014/05/26 05:22:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.96 2014/07/26 18:39:08 mrueg Exp $
+
+  26 Jul 2014; Manuel Rüger <mrueg@gentoo.org> haml-3.1.8-r2.ebuild,
+  haml-4.0.3.ebuild:
+  Revert accidentally committed changes
+
+*haml-4.0.5 (26 Jul 2014)
+
+  26 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +haml-4.0.5.ebuild,
+  haml-3.1.8-r2.ebuild, haml-4.0.3.ebuild:
+  Version bump. Fix USE="doc". Fix tests. Drop ~x86 keyword.
 
   26 May 2014; Manuel Rüger <mrueg@gentoo.org> haml-4.0.3.ebuild:
   Remove ruby18 target.

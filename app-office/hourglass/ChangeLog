@@ -1,6 +1,11 @@
 # ChangeLog for app-office/hourglass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/ChangeLog,v 1.8 2014/05/14 16:06:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/ChangeLog,v 1.9 2014/07/26 18:51:36 mrueg Exp $
+
+  26 Jul 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/hourglass-0.7.1-build.xml.patch, -hourglass-0.7.1.ebuild,
+  hourglass-0.7.2.ebuild:
+  Apply EAPI=5 fixes from 0.7.1. Cleanup old.
 
   14 May 2014; Tom Wijsman <TomWij@gentoo.org> hourglass-0.7.1.ebuild:
   [QA] EAPI 1 -> 5. Make use of java_prepare.
