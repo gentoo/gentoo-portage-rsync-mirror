@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare test unpack
-DEPEND=dev-libs/libparserutils dev-libs/libwapcaplet dev-libs/libxml2 net-libs/hubbub virtual/pkgconfig test? ( dev-perl/XML-XPath dev-perl/libxml-perl perl-core/Switch )
+DEPEND=dev-libs/libparserutils dev-libs/libwapcaplet dev-libs/libxml2 net-libs/hubbub virtual/pkgconfig test? ( dev-perl/XML-XPath dev-perl/libxml-perl dev-perl/Switch )
 DESCRIPTION=implementation of the W3C DOM, written in C
 EAPI=4
 HOMEPAGE=http://www.netsurf-browser.org/projects/libdom/
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/libparserutils dev-libs/libwapcaplet dev-libs/libxml2 net-libs/
 SLOT=0
 SRC_URI=mirror://gentoo/netsurf-buildsystem-0_p20120717.tar.gz mirror://gentoo/libdom-0.0.1_pre20120705.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=0033a5e98bc08f609531ddcbb12e7ebb
+_md5_=e08ab416634d5582a597073e8901d143

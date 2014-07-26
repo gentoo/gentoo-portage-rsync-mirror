@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libdom
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/ChangeLog,v 1.7 2014/06/18 20:36:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/ChangeLog,v 1.8 2014/07/26 11:46:40 dilfridge Exp $
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  libdom-0.0.1_pre20120705.ebuild, libdom-0.0.1.ebuild:
+  Switch has been moved to dev-perl
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libdom-0.0.1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

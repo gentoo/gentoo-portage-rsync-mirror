@@ -1,17 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/Math-BigInt-1.997.0.ebuild,v 1.14 2014/07/10 22:08:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/Math-BigInt-1.999.300.ebuild,v 1.1 2014/07/26 11:58:41 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=PJACKLAM
-MODULE_VERSION=1.997
+MODULE_VERSION=1.9993
 inherit perl-module eutils
 
 DESCRIPTION="Arbitrary size floating point math package"
 
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc s390 sh sparc x86 ~ppc-aix ~ppc-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86 ~ppc-aix ~ppc-macos ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=virtual/perl-Scalar-List-Utils-1.140.0"
@@ -20,7 +20,5 @@ DEPEND="${RDEPEND}"
 PDEPEND=">=virtual/perl-Math-BigInt-FastCalc-0.270.0
 	>=perl-core/bignum-0.220.0
 	>=virtual/perl-Math-BigRat-0.260.200"
-
-PATCHES=( "${FILESDIR}/${P}-overload.patch" )
 
 SRC_TEST="do"

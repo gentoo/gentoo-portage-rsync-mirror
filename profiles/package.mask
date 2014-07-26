@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15928 2014/07/25 23:13:35 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15929 2014/07/26 12:00:45 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -282,7 +282,6 @@ dev-java/ibm-jdk-bin:1.5
 =virtual/perl-IO-Compress-2.64.0
 =virtual/perl-IPC-Cmd-0.920.0
 =virtual/perl-JSON-PP-2.272.30
-=virtual/perl-Math-BigInt-1.999.300
 =virtual/perl-Math-BigInt-FastCalc-0.310.0
 =virtual/perl-Math-BigRat-0.260.600
 =virtual/perl-Module-Build-0.420.500

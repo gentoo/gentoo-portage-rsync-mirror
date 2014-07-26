@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/libdom-0.0.1_pre20120705.ebuild,v 1.3 2012/07/18 14:23:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/libdom-0.0.1_pre20120705.ebuild,v 1.4 2014/07/26 11:46:40 dilfridge Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( dev-perl/XML-XPath
 		dev-perl/libxml-perl
-		perl-core/Switch )"
+		dev-perl/Switch )"
 
 src_unpack() {
 	default

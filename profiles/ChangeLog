@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9258 2014/07/25 23:13:35 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9259 2014/07/26 12:00:45 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  perl-core/Math-BigInt-1.999.300 separate package now available, bug 518064
 
   25 Jul 2014; Christoph Junghans <ottxor@gentoo.org> package.mask:
   masked dev-lang/libcilkrts (bug #514644)
