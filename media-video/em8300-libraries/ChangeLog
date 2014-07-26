@@ -1,6 +1,10 @@
 # ChangeLog for media-video/em8300-libraries
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.49 2012/05/21 09:49:46 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.50 2014/07/26 13:01:08 ssuominen Exp $
+
+  26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -em8300-libraries-0.17.4.ebuild, -em8300-libraries-0.18.0.ebuild:
+  old
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   em8300-libraries-0.18.0_p20120124.ebuild:

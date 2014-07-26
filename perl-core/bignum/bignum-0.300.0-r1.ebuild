@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/bignum-0.300.0.ebuild,v 1.13 2014/07/10 22:11:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/bignum-0.300.0-r1.ebuild,v 1.1 2014/07/26 12:41:47 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=FLORA
 MODULE_VERSION=0.30

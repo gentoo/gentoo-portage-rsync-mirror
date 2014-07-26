@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-9999.ebuild,v 1.6 2014/02/14 11:23:18 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-9999.ebuild,v 1.7 2014/07/26 12:44:42 zlogene Exp $
 
-EAPI=2
+EAPI=5
 
 inherit git-2 perl-module
 

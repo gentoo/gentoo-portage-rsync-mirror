@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Safe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Safe/ChangeLog,v 1.39 2014/07/12 17:01:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Safe/ChangeLog,v 1.40 2014/07/26 12:36:40 dilfridge Exp $
+
+*Safe-2.330.0-r1 (26 Jul 2014)
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Safe-2.330.0-r1.ebuild, -Safe-2.330.0.ebuild:
+  EAPI bump
 
   12 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> -Safe-2.27.ebuild,
   -Safe-2.290.0.ebuild, -Safe-2.300.0.ebuild, -Safe-2.320.0.ebuild:

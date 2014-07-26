@@ -1,6 +1,14 @@
 # ChangeLog for perl-core/Time-HiRes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.94 2014/01/20 20:47:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.95 2014/07/26 12:58:17 dilfridge Exp $
+
+*Time-HiRes-1.972.500-r1 (26 Jul 2014)
+*Time-HiRes-1.972.600-r1 (26 Jul 2014)
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Time-HiRes-1.972.500-r1.ebuild, +Time-HiRes-1.972.600-r1.ebuild,
+  -Time-HiRes-1.972.500.ebuild, -Time-HiRes-1.972.600.ebuild:
+  EAPI bump
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Time-HiRes-1.972.500.ebuild,
   Time-HiRes-1.972.600.ebuild:

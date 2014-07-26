@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Tabs+Wrap/Text-Tabs+Wrap-2013.52.300.ebuild,v 1.1 2013/08/14 07:05:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Tabs+Wrap/Text-Tabs+Wrap-2013.52.300-r1.ebuild,v 1.1 2014/07/26 13:00:41 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=MUIR
 MODULE_SECTION=modules
