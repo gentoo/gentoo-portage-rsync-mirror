@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-Stash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.68 2014/03/09 11:13:18 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.69 2014/07/26 14:39:00 dilfridge Exp $
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Package-Stash-0.330.0.ebuild, -Package-Stash-0.350.0.ebuild:
+  Remove old
 
   09 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> Package-Stash-0.360.0.ebuild:
   alpha stable wrt bug #495446

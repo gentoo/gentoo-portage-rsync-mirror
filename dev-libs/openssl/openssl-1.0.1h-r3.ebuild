@@ -1,8 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1h-r3.ebuild,v 1.1 2014/07/25 07:24:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1h-r3.ebuild,v 1.2 2014/07/26 14:35:40 mgorny Exp $
 
 EAPI="4"
+
+# NOTE: please do not stabilize this revision. It was added purely to force
+# rebuild following eclass changes for ~arch users. Since -r2 was stabilized
+# after the eclass changes, stable users are safe already.
 
 inherit eutils flag-o-matic toolchain-funcs multilib multilib-minimal
 

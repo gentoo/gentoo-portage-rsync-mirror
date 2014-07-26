@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.149 2014/03/04 20:13:55 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.150 2014/07/26 14:38:05 dilfridge Exp $
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -gtk2-perl-1.242.0.ebuild, -gtk2-perl-1.244.0.ebuild:
+  Remove old
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   gtk2-perl-1.247.0.ebuild:
