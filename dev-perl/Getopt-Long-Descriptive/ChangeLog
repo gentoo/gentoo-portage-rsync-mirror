@@ -1,6 +1,20 @@
 # ChangeLog for dev-perl/Getopt-Long-Descriptive
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Long-Descriptive/ChangeLog,v 1.30 2013/01/13 13:37:07 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Long-Descriptive/ChangeLog,v 1.33 2014/07/26 14:10:30 zlogene Exp $
+
+*Getopt-Long-Descriptive-0.97.0 (26 Jul 2014)
+
+  26 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  +Getopt-Long-Descriptive-0.97.0.ebuild:
+  Version bump
+
+  26 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Getopt-Long-Descriptive-0.93.0.ebuild:
+  Stable for all
+
+  26 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Getopt-Long-Descriptive-0.93.0.ebuild:
+  Bump to EAPI=5
 
   13 Jan 2013; Markus Meier <maekke@gentoo.org>
   Getopt-Long-Descriptive-0.93.0.ebuild:

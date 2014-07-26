@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.5.2.ebuild,v 1.2 2014/07/23 15:48:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.5.2.ebuild,v 1.3 2014/07/26 14:12:51 blueness Exp $
 
 EAPI="5"
 
@@ -45,7 +45,7 @@ pkg_setup() {
 src_prepare() {
 	# Unconditionally get rid of the bundled jemalloc
 	rm -rf "${S}"/deps
-	epatch "${FILESDIR}"/${PN}-1.5.0-use-system-jemalloc.patch
+	epatch "${FILESDIR}"/${PN}-1.5.2-use-system-jemalloc.patch
 	epatch "${FILESDIR}"/${PN}-1.5.0-fix-CPPFLAGS.patch
 
 	# Don't install the banana script, we use ${FILESDIR}/monkeyd.initd instead

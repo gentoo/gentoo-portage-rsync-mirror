@@ -1,6 +1,6 @@
-diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
---- monkey-1.4.0.orig/configure	2014-02-04 09:04:22.000000000 -0500
-+++ monkey-1.4.0/configure	2014-02-06 11:07:21.094086218 -0500
+diff -Naur monkey-1.5.2.orig/configure monkey-1.5.2/configure
+--- monkey-1.5.2.orig/configure	2014-07-19 23:27:13.000000000 -0400
++++ monkey-1.5.2/configure	2014-07-26 10:07:08.808171546 -0400
 @@ -193,7 +193,7 @@
  
  	echo "+ Creating src/Makefile"
@@ -8,9 +8,9 @@ diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
 -                         malloc_libc malloc_jemalloc
 +                         malloc_libc
  
- 	echo "+ Creating src/include/mk_info.h"
- 	create_info sysconfdir \
-@@ -205,33 +205,12 @@
+ 	echo "+ Creating plugins/Make.common"
+ 	create_plugins_make_common bindir
+@@ -210,33 +210,12 @@
  
  	echo -e "+ Creating Makefile"
  	if [ "$dir" = 0 ]; then
@@ -46,7 +46,7 @@ diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
  	echo
  	echo -e "\033[1m=== Monkey Configuration ===\033[0m"
  	echo -e "Platform\t= $platform"
-@@ -308,12 +287,6 @@
+@@ -316,12 +295,6 @@
  # Create Makefile
  create_makefile1()
  {
@@ -59,7 +59,7 @@ diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
  	cat > Makefile << EOF
  # Monkey HTTP Daemon: Makefile
  # ============================
-@@ -451,13 +424,6 @@
+@@ -459,13 +432,6 @@
  
  create_makefile1_install()
  {
@@ -73,7 +73,7 @@ diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
  	# remove old data
  	rm -rf plugins.conf plugins.list
          touch plugins.conf
-@@ -508,10 +474,6 @@
+@@ -523,10 +489,6 @@
  	@\$(MAKE) -s -C plugins all
  	@echo "  DONE"
  
@@ -84,26 +84,74 @@ diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
  clean:
  	@(cd src; \$(MAKE) clean)
  	@(cd plugins; \$(MAKE) clean)
-@@ -589,8 +551,7 @@
+@@ -605,9 +567,7 @@
  	fi
  
          if [ $malloc_jemalloc -eq 1 ]; then
 -                extra="../deps/jemalloc/lib/libjemalloc.a"
+-                extraso="-Wl,--whole-archive ../deps/jemalloc/lib/libjemalloc_pic.a -Wl,--no-whole-archive"
 -                libs="$libs -lm"
 +                libs="$libs -ljemalloc"
          fi
  
  	cat > src/Makefile<<EOF
-diff -Naur monkey-1.4.0.orig/src/include/mk_memory.h monkey-1.4.0/src/include/mk_memory.h
---- monkey-1.4.0.orig/src/include/mk_memory.h	2014-02-04 09:04:22.000000000 -0500
-+++ monkey-1.4.0/src/include/mk_memory.h	2014-02-06 11:06:52.298088521 -0500
-@@ -25,7 +25,8 @@
+diff -Naur monkey-1.5.2.orig/src/include/mk_memory.h monkey-1.5.2/src/include/mk_memory.h
+--- monkey-1.5.2.orig/src/include/mk_memory.h	2014-07-19 23:27:13.000000000 -0400
++++ monkey-1.5.2/src/include/mk_memory.h	2014-07-26 10:08:06.427168785 -0400
+@@ -23,7 +23,7 @@
  #include <stdio.h>
  
  #ifdef MALLOC_JEMALLOC
 -#include "../../deps/jemalloc/include/jemalloc/jemalloc.h"
 +#include <jemalloc/jemalloc.h>
-+#include <jemalloc/jemalloc_defs.h>
  #endif
  
  #include "mk_macros.h"
+@@ -43,11 +43,7 @@
+ static inline ALLOCSZ_ATTR(1)
+ void *mk_mem_malloc(const size_t size)
+ {
+-#ifdef MALLOC_JEMALLOC
+-    void *aux = je_malloc(size);
+-#else
+     void *aux = malloc(size);
+-#endif
+ 
+     if (mk_unlikely(!aux && size)) {
+         perror("malloc");
+@@ -60,11 +56,7 @@
+ static inline ALLOCSZ_ATTR(1)
+ void *mk_mem_malloc_z(const size_t size)
+ {
+-#ifdef MALLOC_JEMALLOC
+-    void *buf = je_calloc(1, size);
+-#else
+     void *buf = calloc(1, size);
+-#endif
+ 
+     if (mk_unlikely(!buf)) {
+         return NULL;
+@@ -76,11 +68,7 @@
+ static inline ALLOCSZ_ATTR(2)
+ void *mk_mem_realloc(void *ptr, const size_t size)
+ {
+-#ifdef MALLOC_JEMALLOC
+-    void *aux = je_realloc(ptr, size);
+-#else
+     void *aux = realloc(ptr, size);
+-#endif
+ 
+     if (mk_unlikely(!aux && size)) {
+         perror("realloc");
+@@ -92,11 +80,7 @@
+ 
+ static inline void mk_mem_free(void *ptr)
+ {
+-#ifdef MALLOC_JEMALLOC
+-    je_free(ptr);
+-#else
+     free(ptr);
+-#endif
+ }
+ 
+ void mk_mem_free(void *ptr);

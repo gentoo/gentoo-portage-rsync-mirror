@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Parse-CPAN-Meta/Parse-CPAN-Meta-1.440.400.ebuild,v 1.16 2014/02/02 00:02:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Parse-CPAN-Meta/Parse-CPAN-Meta-1.440.400-r1.ebuild,v 1.1 2014/07/26 14:10:16 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=DAGOLDEN
 MODULE_VERSION=1.4404

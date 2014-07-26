@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Math-BigInt-FastCalc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt-FastCalc/ChangeLog,v 1.35 2013/08/25 12:43:28 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt-FastCalc/ChangeLog,v 1.36 2014/07/26 14:02:04 dilfridge Exp $
+
+*Math-BigInt-FastCalc-0.300.0-r1 (26 Jul 2014)
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Math-BigInt-FastCalc-0.300.0-r1.ebuild, -Math-BigInt-FastCalc-0.300.0.ebuild:
+  EAPI bump
 
   25 Aug 2013; Mikle Kolyada <zlogene@gentoo.org>
   -Math-BigInt-FastCalc-0.19.ebuild, -Math-BigInt-FastCalc-0.24.ebuild,
