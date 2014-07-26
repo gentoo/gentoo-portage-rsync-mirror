@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.44 2014/07/26 05:21:50 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.45 2014/07/26 05:59:21 zerochaos Exp $
+
+  26 Jul 2014; Rick Farina <zerochaos@gentoo.org>
+  +files/gnuradio-9999-build-type-nonfatal.patch, gnuradio-9999.ebuild:
+  hack for fatal build type of gentoo, upstream should have a longer term fix
+  soon
 
   26 Jul 2014; Rick Farina <zerochaos@gentoo.org> gnuradio-3.7.4.ebuild,
   gnuradio-9999.ebuild:

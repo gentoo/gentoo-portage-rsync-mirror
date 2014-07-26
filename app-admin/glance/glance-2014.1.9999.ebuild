@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.1.9999.ebuild,v 1.2 2014/07/06 12:30:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.1.9999.ebuild,v 1.3 2014/07/26 05:37:35 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -75,8 +75,9 @@ RDEPEND=">=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		>=dev-python/python-cinderclient-1.0.6[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.7.0[${PYTHON_USEDEP}]
 		>=dev-python/pyopenssl-0.11[${PYTHON_USEDEP}]
-		>=dev-python/six-1.5.2[${PYTHON_USEDEP}]
-		>=dev-python/oslo-messaging-1.3.0[${PYTHON_USEDEP}]"
+		>=dev-python/six-1.6.0[${PYTHON_USEDEP}]
+		>=dev-python/oslo-messaging-1.3.0[${PYTHON_USEDEP}]
+		>=dev-python/oslo-vmware-0.2[${PYTHON_USEDEP}]"
 
 PATCHES=( "${FILESDIR}"/${PN}-2013.2-sphinx_mapping.patch )
 
