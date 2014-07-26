@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-CIDR-Lite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/ChangeLog,v 1.38 2012/06/24 12:59:46 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/ChangeLog,v 1.39 2014/07/26 17:26:30 zlogene Exp $
+
+  26 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> Net-CIDR-Lite-0.210.0.ebuild:
+  Bump to EAPI=5
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
