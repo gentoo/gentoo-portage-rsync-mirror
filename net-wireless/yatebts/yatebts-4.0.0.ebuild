@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/yatebts-9999.ebuild,v 1.2 2014/07/25 23:38:33 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/yatebts-4.0.0.ebuild,v 1.1 2014/07/25 23:38:33 zerochaos Exp $
 
 EAPI=5
 
@@ -31,10 +31,7 @@ else
 fi
 
 src_prepare() {
-	#we need more patches or configure flags because things install in really wrong places per FHS
-
-	#this prevents build failure, but does not actually pass QA checks
-	epatch "${FILESDIR}"/${PN}-4.0.0-dont-mess-with-cflags.patch
+	epatch "${FILESDIR}"/${P}-dont-mess-with-cflags.patch
 	eautoreconf
 }
 
