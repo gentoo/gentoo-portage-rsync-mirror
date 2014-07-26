@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.95 2014/04/06 17:00:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.96 2014/07/26 09:48:43 mgorny Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
-	pypy pypy2_0
+	pypy
 	python3_2 python3_3 python3_4
-	python2_6 python2_7
+	python2_7
 )
 inherit git-r3 eutils multilib
 
@@ -22,22 +22,18 @@ for _pyimpl in ${PYTHON_COMPAT[@]} ; do
 done
 unset _pyimpl
 
-# Import of the io module in python-2.6 raises ImportError for the
-# thread module if threading is disabled.
 python_dep_ssl="python3? ( =dev-lang/python-3*[ssl] )
 	!pypy? ( !python2? ( !python3? (
-		|| ( >=dev-lang/python-2.7[ssl] dev-lang/python:2.6[threads,ssl] )
+		>=dev-lang/python-2.7[ssl]
 	) ) )
 	pypy? ( !python2? ( !python3? ( virtual/pypy:0[bzip2] ) ) )
-	python2? ( !python3? ( || ( dev-lang/python:2.7[ssl] dev-lang/python:2.6[ssl,threads] ) ) )"
+	python2? ( !python3? ( dev-lang/python:2.7[ssl] ) )"
 python_dep="${python_dep_ssl//\[ssl\]}"
 python_dep="${python_dep//,ssl}"
 python_dep="${python_dep//ssl,}"
 
 python_dep="${python_dep}
 	python_targets_pypy? ( virtual/pypy:0 )
-	python_targets_pypy2_0? ( virtual/pypy:2.0 )
-	python_targets_python2_6? ( dev-lang/python:2.6 )
 	python_targets_python2_7? ( dev-lang/python:2.7 )
 	python_targets_python3_2? ( dev-lang/python:3.2 )
 	python_targets_python3_3? ( dev-lang/python:3.3 )
@@ -69,7 +65,7 @@ RDEPEND="${python_dep}
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( || ( >=sys-libs/libselinux-2.0.94[python] <sys-libs/libselinux-2.0.94 ) )
 	xattr? ( kernel_linux? (
-		$(for python_impl in python{2_6,2_7,3_2} pypy pypy2_0; do
+		$(for python_impl in python{2_7,3_2} pypy; do
 			echo "python_targets_${python_impl}? ( dev-python/pyxattr[python_targets_${python_impl}] )"
 		done) ) )
 	!<app-shells/bash-3.2_p17
@@ -122,10 +118,6 @@ get_python_interpreter() {
 			;;
 		pypy)
 			python=${impl}
-			;;
-		pypy*)
-			python=${impl/_/.}
-			python=${python/pypy/pypy-c}
 			;;
 		*)
 			die "Unrecognized python target: ${impl}"
