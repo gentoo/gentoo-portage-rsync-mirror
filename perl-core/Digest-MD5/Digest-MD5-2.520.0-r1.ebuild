@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/Digest-MD5-2.520.0.ebuild,v 1.16 2014/07/22 19:41:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/Digest-MD5-2.520.0-r1.ebuild,v 1.1 2014/07/26 13:20:48 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=GAAS
 MODULE_VERSION=2.52

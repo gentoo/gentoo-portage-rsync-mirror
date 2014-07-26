@@ -1,6 +1,14 @@
 # ChangeLog for perl-core/Storable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Storable/ChangeLog,v 1.67 2014/02/01 23:58:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Storable/ChangeLog,v 1.68 2014/07/26 13:16:59 dilfridge Exp $
+
+*Storable-2.390.0-r1 (26 Jul 2014)
+*Storable-2.450.0-r1 (26 Jul 2014)
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Storable-2.390.0-r1.ebuild, +Storable-2.450.0-r1.ebuild,
+  -Storable-2.390.0.ebuild, -Storable-2.450.0.ebuild:
+  EAPI bump
 
   01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Storable-2.390.0.ebuild,
   Storable-2.450.0.ebuild:

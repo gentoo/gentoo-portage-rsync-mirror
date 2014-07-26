@@ -1,6 +1,14 @@
 # ChangeLog for perl-core/Sys-Syslog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.68 2014/01/20 23:09:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.69 2014/07/26 13:13:58 dilfridge Exp $
+
+*Sys-Syslog-0.330.0-r1 (26 Jul 2014)
+*Sys-Syslog-0.320.0-r1 (26 Jul 2014)
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Sys-Syslog-0.320.0-r1.ebuild, +Sys-Syslog-0.330.0-r1.ebuild,
+  -Sys-Syslog-0.320.0.ebuild, -Sys-Syslog-0.330.0.ebuild:
+  EAPI bump
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Sys-Syslog-0.320.0.ebuild,
   Sys-Syslog-0.330.0.ebuild:
