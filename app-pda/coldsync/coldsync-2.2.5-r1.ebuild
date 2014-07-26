@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.13 2011/03/31 05:50:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.14 2014/07/26 12:09:00 ssuominen Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic perl-module toolchain-funcs
 
 DESCRIPTION="A command-line tool to synchronize PalmOS PDAs with Unix workstations"
@@ -11,7 +11,7 @@ SRC_URI="http://www.coldsync.org/download/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="nls perl"
 
 RDEPEND="perl? ( dev-lang/perl )"
@@ -64,7 +64,7 @@ src_install() {
 		INSTALLMAN3DIR="${D}"/usr/share/man/man3 \
 		INSTALLSITEMAN3DIR="${D}"/usr/share/man/man3 \
 		INSTALLVENDORMAN3DIR="${D}"/usr/share/man/man3 \
-		install || die
+		install
 
 	if use perl; then
 		pushd perl/ColdSync

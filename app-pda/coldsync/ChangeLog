@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/coldsync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/ChangeLog,v 1.14 2014/06/24 13:20:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/ChangeLog,v 1.15 2014/07/26 12:09:00 ssuominen Exp $
+
+  26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> coldsync-2.2.5-r1.ebuild,
+  coldsync-3.0_pre4.ebuild:
+  Sanitize keywording: amd64 stable, sparc back to ~arch. Use EAPI=5.
 
   24 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
   +files/coldsync-3.0_pre4-texinfo-5.patch, coldsync-3.0_pre4.ebuild:

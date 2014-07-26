@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/MIME-Base64-3.140.0.ebuild,v 1.1 2013/08/14 07:02:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/MIME-Base64-3.140.0-r1.ebuild,v 1.1 2014/07/26 12:11:20 dilfridge Exp $
 
-EAPI=3
+EAPI=5
 
 MODULE_AUTHOR=GAAS
 MODULE_VERSION=3.14

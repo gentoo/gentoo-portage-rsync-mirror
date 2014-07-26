@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Thread-Semaphore
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Thread-Semaphore/ChangeLog,v 1.3 2012/06/24 15:38:59 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Thread-Semaphore/ChangeLog,v 1.4 2014/07/26 12:13:49 dilfridge Exp $
+
+*Thread-Semaphore-2.120.0-r1 (26 Jul 2014)
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Thread-Semaphore-2.120.0-r1.ebuild, -Thread-Semaphore-2.120.0.ebuild:
+  EAPI bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

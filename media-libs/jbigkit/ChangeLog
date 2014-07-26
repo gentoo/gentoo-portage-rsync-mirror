@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.81 2014/06/22 16:45:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.82 2014/07/26 12:29:15 ssuominen Exp $
+
+  26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> jbigkit-2.1.ebuild:
+  Move tc-export from multilib_src_compile() to src_prepare() so it gets passed
+  from phase to phase wrt #518150
 
   22 Jun 2014; Fabian Groffen <grobian@gentoo.org>
   files/jbigkit-2.1-build.patch:

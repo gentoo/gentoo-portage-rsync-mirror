@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt-GMP/Math-BigInt-GMP-1.380.0.ebuild,v 1.1 2014/05/01 17:50:23 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt-GMP/Math-BigInt-GMP-1.380.0.ebuild,v 1.2 2014/07/26 12:02:49 dilfridge Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=virtual/perl-Math-BigInt-1.997.0
+RDEPEND=">=virtual/perl-Math-BigInt-1.999.300
 	 >=dev-libs/gmp-4.0.0"
 DEPEND="${RDEPEND}"
 

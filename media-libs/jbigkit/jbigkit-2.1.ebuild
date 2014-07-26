@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-2.1.ebuild,v 1.13 2014/06/09 23:28:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-2.1.ebuild,v 1.14 2014/07/26 12:29:15 ssuominen Exp $
 
 EAPI=5
 
@@ -20,10 +20,10 @@ DOCS="ANNOUNCE CHANGES TODO libjbig/*.txt pbmtools/*.txt"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch
 	multilib_copy_sources
+	tc-export AR CC RANLIB
 }
 
 multilib_src_compile() {
-	tc-export AR CC RANLIB
 	emake \
 		LIBDIR="${EPREFIX}/usr/$(get_libdir)" \
 		$(multilib_is_native_abi || echo lib)
