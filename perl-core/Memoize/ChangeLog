@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Memoize
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Memoize/ChangeLog,v 1.21 2013/08/27 12:44:44 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Memoize/ChangeLog,v 1.22 2014/07/26 13:49:16 dilfridge Exp $
+
+*Memoize-1.30.0-r1 (26 Jul 2014)
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Memoize-1.30.0-r1.ebuild, -Memoize-1.30.0.ebuild:
+  EAPI bump
 
   27 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> -Memoize-1.01.ebuild,
   -Memoize-1.20.0.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/Pod-Simple-3.230.0.ebuild,v 1.13 2014/01/20 20:35:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/Pod-Simple-3.230.0-r1.ebuild,v 1.1 2014/07/26 13:50:54 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=DWHEELER
 MODULE_VERSION=3.23

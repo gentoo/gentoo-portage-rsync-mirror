@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Memoize/Memoize-1.30.0.ebuild,v 1.8 2013/02/23 08:38:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Memoize/Memoize-1.30.0-r1.ebuild,v 1.1 2014/07/26 13:49:16 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=MJD
 MODULE_VERSION=1.03

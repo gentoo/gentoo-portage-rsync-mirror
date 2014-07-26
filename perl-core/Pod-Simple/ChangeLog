@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Pod-Simple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.59 2014/07/20 13:12:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.60 2014/07/26 13:50:54 dilfridge Exp $
+
+*Pod-Simple-3.230.0-r1 (26 Jul 2014)
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Pod-Simple-3.230.0-r1.ebuild, -Pod-Simple-3.230.0.ebuild:
+  EAPI bump
 
   20 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -Pod-Simple-3.260.0.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/IPC-Cmd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IPC-Cmd/ChangeLog,v 1.46 2014/07/08 22:12:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IPC-Cmd/ChangeLog,v 1.47 2014/07/26 13:32:38 dilfridge Exp $
+
+*IPC-Cmd-0.780.0-r1 (26 Jul 2014)
+
+  26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +IPC-Cmd-0.780.0-r1.ebuild, -IPC-Cmd-0.780.0.ebuild:
+  EAPI bump
 
   08 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> -IPC-Cmd-0.680.ebuild,
   -IPC-Cmd-0.700.0.ebuild, -IPC-Cmd-0.720.0.ebuild, -IPC-Cmd-0.760.0.ebuild:
