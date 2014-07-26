@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.268 2014/07/22 01:30:15 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.269 2014/07/26 09:13:20 ssuominen Exp $
+
+  26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.stable.mask:
+  Remove useless entry for virtual/udev.
 
   22 Jul 2014; Christoph Junghans <ottxor@gentoo.org> no-multilib/package.mask:
   masked games-fps/enemy-territory-omnibot on no-multilib

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.19 2014/06/18 19:47:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.20 2014/07/26 09:06:49 ssuominen Exp $
+
+  26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> libsdl2-2.0.1-r1.ebuild,
+  libsdl2-2.0.2-r1.ebuild, libsdl2-2.0.2.ebuild, libsdl2-2.0.3.ebuild:
+  Use virtual/libudev instead of virtual/udev.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libsdl2-2.0.2-r1.ebuild,
   libsdl2-2.0.3.ebuild:

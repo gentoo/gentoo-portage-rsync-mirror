@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/miniupnpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.34 2014/05/10 09:25:26 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.35 2014/07/26 09:03:37 gurligebis Exp $
+
+*miniupnpd-1.9_pre20140523 (26 Jul 2014)
+
+  26 Jul 2014; <gurligebis@gentoo.org> -miniupnpd-1.9_pre20140422.ebuild,
+  +miniupnpd-1.9_pre20140523.ebuild, -files/miniupnpd-1.9-cleanup.patch:
+  Bumping to 1.9_pre20140523 and adding configure option to enable changing
+  name in config file.
 
 *miniupnpd-1.9_pre20140422 (10 May 2014)
 

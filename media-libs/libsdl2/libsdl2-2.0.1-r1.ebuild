@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.1-r1.ebuild,v 1.5 2014/05/15 12:34:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.1-r1.ebuild,v 1.6 2014/07/26 09:06:49 ssuominen Exp $
 
 EAPI=5
 inherit autotools flag-o-matic toolchain-funcs eutils
@@ -34,7 +34,7 @@ RDEPEND="
 	opengl? ( virtual/opengl virtual/glu )
 	pulseaudio? ( media-sound/pulseaudio )
 	tslib? ( x11-libs/tslib )
-	udev? ( virtual/udev )
+	udev? ( >=virtual/libudev-208:= )
 	X? (
 		x11-libs/libX11
 		x11-libs/libXcursor

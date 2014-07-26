@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.3.ebuild,v 1.3 2014/06/18 19:55:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.3.ebuild,v 1.4 2014/07/26 09:04:22 ssuominen Exp $
 
 EAPI=5
 
@@ -94,8 +94,8 @@ RDEPEND="
 	gallium? ( app-admin/eselect-mesa )
 	>=app-admin/eselect-opengl-1.2.7
 	>=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]
-	gbm? ( >=virtual/udev-208-r2[${MULTILIB_USEDEP}] )
-	dri3? ( >=virtual/udev-208-r2[${MULTILIB_USEDEP}] )
+	gbm? ( >=virtual/libudev-208:=[${MULTILIB_USEDEP}] )
+	dri3? ( >=virtual/libudev-208:=[${MULTILIB_USEDEP}] )
 	>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 	>=x11-libs/libxshmfence-1.1[${MULTILIB_USEDEP}]
 	>=x11-libs/libXdamage-1.1.4-r1[${MULTILIB_USEDEP}]

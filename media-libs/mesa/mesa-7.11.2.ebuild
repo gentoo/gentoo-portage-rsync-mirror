@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.2.ebuild,v 1.20 2014/01/26 20:28:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.2.ebuild,v 1.21 2014/07/26 09:04:22 ssuominen Exp $
 
 EAPI=3
 
@@ -62,7 +62,7 @@ RDEPEND="${EXTERNAL_DEPEND}
 	gallium? ( app-admin/eselect-mesa )
 	app-admin/eselect-opengl
 	dev-libs/expat
-	gbm? ( virtual/udev )
+	gbm? ( >=virtual/libudev-208 )
 	x11-libs/libICE
 	>=x11-libs/libX11-1.3.99.901
 	x11-libs/libXdamage

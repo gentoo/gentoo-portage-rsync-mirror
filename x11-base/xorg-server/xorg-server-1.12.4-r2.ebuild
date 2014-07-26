@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.4-r2.ebuild,v 1.10 2013/10/22 07:36:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.4-r2.ebuild,v 1.11 2014/07/26 09:31:38 ssuominen Exp $
 
 EAPI=5
 
@@ -211,11 +211,6 @@ pkg_postinst() {
 		ewarn "	emerge portage-utils; qlist -I -C x11-drivers/"
 		ewarn "or using sets from portage-2.2:"
 		ewarn "	emerge @x11-module-rebuild"
-	fi
-
-	if use udev && has_version virtual/udev[-keymap]; then
-		ewarn "virtual/udev was built without keymap support. This may cause input device"
-		ewarn "autoconfiguration to fail."
 	fi
 }
 

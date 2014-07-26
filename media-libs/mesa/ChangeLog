@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.568 2014/07/19 00:06:41 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.569 2014/07/26 09:04:22 ssuominen Exp $
+
+  26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> mesa-10.0.4.ebuild,
+  mesa-10.1.0.ebuild, mesa-10.1.1.ebuild, mesa-10.1.3.ebuild,
+  mesa-10.1.4.ebuild, mesa-10.1.6.ebuild, mesa-10.2.1.ebuild,
+  mesa-10.2.2.ebuild, mesa-10.2.4.ebuild, mesa-7.10.3.ebuild,
+  mesa-7.11.2.ebuild, mesa-8.0.4-r1.ebuild, mesa-9.0.3.ebuild,
+  mesa-9.1.6.ebuild, mesa-9.2.5-r1.ebuild:
+  Use virtual/libudev instead of virtual/udev.
 
   08 Jul 2014; Magnus Granberg <zorry@gentoo.org> mesa-9.2.5-r1.ebuild,
   mesa-10.1.6.ebuild, mesa-10.2.1.ebuild, mesa-10.2.2.ebuild:

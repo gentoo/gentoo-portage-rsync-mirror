@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.14.5.ebuild,v 1.11 2014/06/08 09:15:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.14.5.ebuild,v 1.12 2014/07/26 09:31:38 ssuominen Exp $
 
 EAPI=5
 
@@ -212,11 +212,6 @@ pkg_postinst() {
 		ewarn "You can rebuild all installed packages in the x11-drivers"
 		ewarn "category using this command:"
 		ewarn "	emerge @x11-module-rebuild"
-	fi
-
-	if use udev && has_version virtual/udev[-keymap]; then
-		ewarn "virtual/udev was built without keymap support. This may cause input device"
-		ewarn "autoconfiguration to fail."
 	fi
 }
 

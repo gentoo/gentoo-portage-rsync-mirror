@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/waffle/waffle-1.3.0.ebuild,v 1.2 2013/12/28 11:29:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/waffle/waffle-1.3.0.ebuild,v 1.3 2014/07/26 09:08:29 ssuominen Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	media-libs/mesa[egl?,gbm?]
 	virtual/opengl
 	wayland? ( >=dev-libs/wayland-1.0 )
-	gbm? ( virtual/udev )
+	gbm? ( >=virtual/libudev-208:= )
 	x11-libs/libX11
 	x11-libs/libxcb"
 DEPEND="${RDEPEND}
