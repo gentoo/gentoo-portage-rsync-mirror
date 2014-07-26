@@ -5,5 +5,5 @@ EAPI=5
 HOMEPAGE=http://www.golang.org
 LICENSE=BSD
 SLOT=0
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	mercurial	6bb94b704fb44f17b02994ca3fa756a9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	mercurial	2fbda5894dda6392b71334ee9a92de0b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=9a5003e836c36f2619c273bb6236e354

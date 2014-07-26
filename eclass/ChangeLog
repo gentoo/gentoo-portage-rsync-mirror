@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1324 2014/07/22 06:38:56 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1325 2014/07/25 23:18:34 ottxor Exp $
+
+  25 Jul 2014; Christoph Junghans <ottxor@gentoo.org> mercurial.eclass:
+  Added EHG_CHECKOUT_DIR to override checkout destination
 
   22 Jul 2014; Michael Haubenwallner <haubi@gentoo.org> java-vm-2.eclass:
   Respect EPREFIX in pkg_postinst, bug#517236.

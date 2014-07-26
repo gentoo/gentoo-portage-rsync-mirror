@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9257 2014/07/25 21:47:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9258 2014/07/25 23:13:35 ottxor Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jul 2014; Christoph Junghans <ottxor@gentoo.org> package.mask:
+  masked dev-lang/libcilkrts (bug #514644)
 
   25 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Remove obsolete mask of Perl 5.12 and virtual/perl-Switch
