@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.12.ebuild,v 1.4 2014/06/27 09:22:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.12.ebuild,v 1.5 2014/07/26 21:21:47 zlogene Exp $
 
 EAPI=5
 
@@ -28,10 +28,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PV}/${P}-prefix.patch
 
 	eprefixify \
+		lib/PortageXS/examples/getParamFromFile.pl \
 		lib/PortageXS/Core.pm \
 		lib/PortageXS.pm \
 		usr/bin/portagexs_client \
-		usr/sbin/portagexsd
+		usr/sbin/portagexsd \
+		t/01_Core.t
 
 	if use minimal ; then
 		rm -r "${S}"/usr || die
