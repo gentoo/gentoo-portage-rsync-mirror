@@ -4,8 +4,6 @@
   <herd>postgresql</herd>
   <herd>sci-geosciences</herd>
   <use>
-	<flag name='geos'>Add the <pkg>sci-libs/geos</pkg> library for exact topological tests</flag>
-	<flag name='proj'>Add the <pkg>sci-libs/proj</pkg> library for reprojection features</flag>
 	<flag name="gtk">Build shp2pgsql-gui a graphical interface to shp2pgsql</flag>
   </use>
 </pkgmetadata>

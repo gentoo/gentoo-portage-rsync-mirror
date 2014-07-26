@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.382 2014/06/24 22:19:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.383 2014/07/26 08:57:55 ssuominen Exp $
+
+  26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> cairo-1.10.2-r3.ebuild,
+  cairo-1.12.14-r4.ebuild, cairo-1.12.16-r2.ebuild, cairo-1.12.16-r3.ebuild,
+  cairo-9999.ebuild:
+  Use virtual/libudev instead of virtual/udev.
 
   24 Jun 2014; Michał Górny <mgorny@gentoo.org> cairo-1.12.16-r2.ebuild,
   cairo-1.12.16-r3.ebuild, cairo-9999.ebuild:

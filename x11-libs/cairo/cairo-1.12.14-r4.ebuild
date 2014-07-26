@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.14-r4.ebuild,v 1.13 2014/01/20 12:55:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.14-r4.ebuild,v 1.14 2014/07/26 08:57:55 ssuominen Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ RDEPEND="dev-libs/lzo
 		x11-libs/libXext
 		x11-libs/libX11
 		drm? (
-			>=virtual/udev-136
+			virtual/libudev
 			gallium? ( media-libs/mesa[gallium] )
 		)
 	)

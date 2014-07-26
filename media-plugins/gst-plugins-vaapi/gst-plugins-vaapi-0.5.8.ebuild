@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vaapi/gst-plugins-vaapi-0.5.8.ebuild,v 1.1 2014/03/01 10:09:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vaapi/gst-plugins-vaapi-0.5.8.ebuild,v 1.2 2014/07/26 09:00:41 ssuominen Exp $
 
 EAPI="5"
 inherit eutils
@@ -25,7 +25,7 @@ RDEPEND="
 	x11-libs/libXrandr
 	>=x11-libs/libva-1.1.0[X?,opengl?,wayland?]
 	virtual/opengl
-	virtual/udev
+	>=virtual/libudev-208:=
 	wayland? ( >=dev-libs/wayland-1 )
 "
 DEPEND="${RDEPEND}

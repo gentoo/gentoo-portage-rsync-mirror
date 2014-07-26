@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-vaapi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vaapi/ChangeLog,v 1.5 2014/07/22 10:51:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vaapi/ChangeLog,v 1.6 2014/07/26 09:00:41 ssuominen Exp $
+
+  26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  gst-plugins-vaapi-0.5.8-r1.ebuild, gst-plugins-vaapi-0.5.8.ebuild:
+  Use virtual/libudev instead of virtual/udev.
 
   22 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-vaapi-0.5.8-r1.ebuild:
