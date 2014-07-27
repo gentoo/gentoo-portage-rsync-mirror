@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-mount-plugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount-plugin/ChangeLog,v 1.26 2014/07/18 20:00:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount-plugin/ChangeLog,v 1.27 2014/07/27 18:02:35 ssuominen Exp $
+
+  27 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  files/xfce4-mount-plugin-0.6.7-LINGUAS.patch:
+  Fix building with LINGUAS="ug" wrt #518336
 
   18 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
   -xfce4-mount-plugin-0.6.4.ebuild:
