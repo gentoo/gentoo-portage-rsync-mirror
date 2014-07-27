@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/x265
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.8 2014/06/14 02:40:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.9 2014/07/27 13:06:12 ssuominen Exp $
+
+*x265-1.2 (27 Jul 2014)
+
+  27 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +x265-1.2.ebuild,
+  x265-9999.ebuild:
+  Version bump; update SLOT to 0/25 based on new SONAME
 
   14 Jun 2014; Mike Gilbert <floppym@gentoo.org> x265-1.0.ebuild,
   x265-9999.ebuild:
