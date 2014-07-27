@@ -1,5 +1,7 @@
---- AcidRip/acidrip.pm.orig	2008-06-10 07:33:00.000000000 -0600
-+++ AcidRip/acidrip.pm	2008-06-10 07:34:40.000000000 -0600
+http://bugs.gentoo.org/168012
+
+--- AcidRip/acidrip.pm
++++ AcidRip/acidrip.pm
 @@ -680,7 +680,7 @@
      message( "Running " . get_command("cropdetect") );
      open( CROP, get_command("cropdetect") . " 2>&1 |" );

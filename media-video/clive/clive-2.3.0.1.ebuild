@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-2.3.0.1.ebuild,v 1.1 2012/09/28 01:29:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-2.3.0.1.ebuild,v 1.3 2014/07/27 17:00:13 ssuominen Exp $
 
-EAPI=4
-
+EAPI=5
 inherit perl-app
 
 DESCRIPTION="Command line tool for extracting videos from various websites"
@@ -12,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV:0:3}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="clipboard pager password test"
 
 RDEPEND=">=dev-perl/BerkeleyDB-0.34
