@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.10.ebuild,v 1.1 2014/07/24 02:30:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.10.ebuild,v 1.2 2014/07/27 21:07:07 ottxor Exp $
 
 EAPI=5
 
@@ -122,7 +122,7 @@ HOMEPAGE="http://httpd.apache.org/"
 # some helper scripts are Apache-1.1, thus both are here
 LICENSE="Apache-2.0 Apache-1.1"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x64-macos ~x86-macos ~m68k-mint ~sparc64-solaris ~x64-solaris"
 IUSE=""
 
 pkg_setup() {
@@ -157,25 +157,25 @@ src_compile() {
 src_install() {
 	apache-2_src_install
 	for i in /usr/bin/{htdigest,logresolve,htpasswd,htdbm,ab,httxt2dbm}; do
-		rm "${D}"/$i || die "Failed to prune apache-tools bits"
+		rm "${ED}"/$i || die "Failed to prune apache-tools bits"
 	done
 	for i in /usr/share/man/man8/{rotatelogs.8,htcacheclean.8}; do
-		rm "${D}"/$i || die "Failed to prune apache-tools bits"
+		rm "${ED}"/$i || die "Failed to prune apache-tools bits"
 	done
 	for i in /usr/share/man/man1/{logresolve.1,htdbm.1,htdigest.1,htpasswd.1,dbmmanage.1,ab.1}; do
-		rm "${D}"/$i || die "Failed to prune apache-tools bits"
+		rm "${ED}"/$i || die "Failed to prune apache-tools bits"
 	done
 	for i in /usr/sbin/{checkgid,fcgistarter,htcacheclean,rotatelogs}; do
-		rm "${D}/"$i || die "Failed to prune apache-tools bits"
+		rm "${ED}/"$i || die "Failed to prune apache-tools bits"
 	done
 
 	# install apxs in /usr/bin (bug #502384) and put a symlink into the 
 	# old location until all ebuilds and eclasses have been modified to
 	# use the new location.
 	local apxs="/usr/bin/apxs"
-	cp "${S}"/support/apxs "${D}"${apxs} || die "Failed to install apxs"
-	ln -s ../bin/apxs "${D}"/usr/sbin/apxs || die
-	chmod 0755 "${D}"${apxs} || die
+	cp "${S}"/support/apxs "${ED}"${apxs} || die "Failed to install apxs"
+	ln -s ../bin/apxs "${ED}"/usr/sbin/apxs || die
+	chmod 0755 "${ED}"${apxs} || die
 
 	# Note: wait for mod_systemd to be included in the next release,
 	# then apache2.4.service can be used and systemd support controlled
