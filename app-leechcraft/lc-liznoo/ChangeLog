@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-liznoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-liznoo/ChangeLog,v 1.14 2014/06/01 10:36:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-liznoo/ChangeLog,v 1.15 2014/07/27 18:00:13 ssuominen Exp $
+
+  27 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> lc-liznoo-0.6.60.ebuild,
+  lc-liznoo-0.6.65.ebuild, lc-liznoo-9999.ebuild:
+  Sort out UPower hibernate and suspend status.
 
   01 Jun 2014; Pacho Ramos <pacho@gentoo.org> lc-liznoo-0.6.60.ebuild:
   0.6.60 looks to also be compatible
