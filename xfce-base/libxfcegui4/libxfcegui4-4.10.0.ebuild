@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.10.0.ebuild,v 1.11 2014/06/24 13:37:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.10.0.ebuild,v 1.12 2014/07/27 16:14:17 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
 
-DESCRIPTION="A compability library for unported Xfce 4.6 plugins"
-HOMEPAGE="http://www.xfce.org/"
+DESCRIPTION="A compability library for unported Xfce 4.6 plugins (DEPRECATED)"
+HOMEPAGE="http://wiki.gentoo.org/wiki/No_homepage http://git.xfce.org/archive/libxfcegui4/"
 SRC_URI="mirror://xfce/src/xfce/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"

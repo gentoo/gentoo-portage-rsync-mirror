@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/h323plus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/h323plus/ChangeLog,v 1.6 2014/05/15 11:18:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/h323plus/ChangeLog,v 1.7 2014/07/27 16:04:33 zerochaos Exp $
+
+  27 Jul 2014; Rick Farina <zerochaos@gentoo.org> h323plus-1.25.0-r1.ebuild:
+  adding ~arm
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> h323plus-1.25.0-r1.ebuild,
   metadata.xml:

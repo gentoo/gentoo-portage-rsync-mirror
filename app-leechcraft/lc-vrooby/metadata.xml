@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>leechcraft</herd>
-	<use>
-		<flag name="udisks">Use <pkg>sys-fs/udisks:0</pkg> for block device access (e.g., automounting)</flag>
-		<flag name="udisks2">Use <pkg>sys-fs/udisks:2</pkg> for block device access (e.g., automounting)</flag>
-	</use>
 </pkgmetadata>

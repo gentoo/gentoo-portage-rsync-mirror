@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-vrooby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-vrooby/ChangeLog,v 1.12 2014/04/10 18:04:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-vrooby/ChangeLog,v 1.13 2014/07/27 16:25:30 ssuominen Exp $
+
+  27 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> lc-vrooby-0.6.60.ebuild,
+  lc-vrooby-0.6.65.ebuild, lc-vrooby-9999.ebuild, metadata.xml:
+  Punt USE="udisks udisks2" and always select sys-fs/udisks:2 wrt #517956. Ack
+  from maksbotan.
 
 *lc-vrooby-0.6.65 (10 Apr 2014)
 

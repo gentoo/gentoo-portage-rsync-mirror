@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.53 2014/06/04 17:28:46 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.54 2014/07/27 16:03:22 zerochaos Exp $
+
+  27 Jul 2014; Rick Farina <zerochaos@gentoo.org> ptlib-2.10.10.ebuild,
+  ptlib-2.10.11.ebuild, ptlib-2.12.4.ebuild, ptlib-2.12.9.ebuild:
+  adding ~arm
 
   04 Jun 2014; <neurogeek@gentoo.org> metadata.xml:
   Dropped myself from maintainer.
