@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-9999.ebuild,v 1.4 2014/07/25 20:12:38 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-9999.ebuild,v 1.5 2014/07/27 21:41:21 zerochaos Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ if [[ ${PV} == 9999 ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://voip.null.ro/tarballs/${PN}5/${P}-1.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~x86"
 	S="${WORKDIR}/${PN}"
 fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/yatebts-4.0.0.ebuild,v 1.1 2014/07/25 23:38:33 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/yatebts-4.0.0.ebuild,v 1.2 2014/07/27 21:44:56 zerochaos Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit subversion
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~x86"
 	SRC_URI="http://yate.null.ro/tarballs/${PN}4/yate-bts-${PV}-1.tar.gz"
 	S="${WORKDIR}/yate-bts"
 fi
