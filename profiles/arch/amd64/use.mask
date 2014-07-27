@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.62 2014/06/25 14:22:28 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.63 2014/07/27 09:22:08 aballier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
@@ -154,6 +154,7 @@
 -3dnowext
 -fma3
 -fma4
+-xop
 
 # George Shapovalov <george@gentoo.org> (8 Apr 2007)
 # supported on amd64

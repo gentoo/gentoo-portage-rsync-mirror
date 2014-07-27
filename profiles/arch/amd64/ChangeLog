@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.269 2014/07/26 09:13:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.270 2014/07/27 09:22:08 aballier Exp $
+
+  27 Jul 2014; Alexis Ballier <aballier@gentoo.org> use.mask:
+  unmask xop useflag on amd64
 
   26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.stable.mask:
   Remove useless entry for virtual/udev.

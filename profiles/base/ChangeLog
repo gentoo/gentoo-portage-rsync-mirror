@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.702 2014/07/21 22:34:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.703 2014/07/27 09:22:08 aballier Exp $
+
+  27 Jul 2014; Alexis Ballier <aballier@gentoo.org> use.mask:
+  mask xop useflag (amd cpu optimizations)
 
   21 Jul 2014; Anthony G. Basile <blueness@gentoo.org> package.mask:
   It is safe to unmask sys-lib/musl now
