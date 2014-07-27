@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.763 2014/07/27 07:59:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.765 2014/07/27 08:26:52 aballier Exp $
+
+  27 Jul 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add bs2b useflag
+
+  27 Jul 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  handle existing release notes, bug #515118
 
   27 Jul 2014; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.10.12.ebuild,
   -ffmpeg-0.10.13.ebuild, -ffmpeg-2.2.2.ebuild, -ffmpeg-2.2.3.ebuild,

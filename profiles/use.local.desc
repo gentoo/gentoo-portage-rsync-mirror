@@ -4146,6 +4146,7 @@ media-video/ffmpeg:avx - Adds support for Advanced Vector Extensions instruction
 media-video/ffmpeg:avx2 - Adds support for Advanced Vector Extensions 2 instructions (Intel Haswell and later chips)
 media-video/ffmpeg:bindist - Enforces license compatibility constraints via REQUIRED_USE.
 media-video/ffmpeg:bluray - Enable playback of Blu-ray filesystems
+media-video/ffmpeg:bs2b - Enables media-libs/libbs2b based Bauer stereo-to-binaural filter.
 media-video/ffmpeg:cdio - Enables audio CD grabbing with dev-libs/libcdio.
 media-video/ffmpeg:celt - Adds Xiph CELT audio decoding support via media-libs/celt
 media-video/ffmpeg:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
