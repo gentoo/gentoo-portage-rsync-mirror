@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/b43-fwcutter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.32 2014/01/19 10:26:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.33 2014/07/27 02:54:59 zerochaos Exp $
+
+*b43-fwcutter-019 (27 Jul 2014)
+
+  27 Jul 2014; Rick Farina <zerochaos@gentoo.org> +b43-fwcutter-019.ebuild,
+  -b43-fwcutter-011.ebuild, -b43-fwcutter-015.ebuild, -b43-fwcutter-016.ebuild,
+  -b43-fwcutter-017.ebuild:
+  version bump
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> b43-fwcutter-018.ebuild:
   Stable for ppc64, wrt bug #495906
