@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.1.0.ebuild,v 1.1 2014/07/24 19:01:48 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.1.0-r1.ebuild,v 1.1 2014/07/27 03:17:20 twitch153 Exp $
 
 EAPI="5"
 
@@ -40,6 +40,7 @@ RDEPEND="
 
 python_prepare_all()  {
 	distutils-r1_python_prepare_all
+	epatch "${FILESDIR}"/${P}-local_overlay.patch
 	eprefixify etc/layman.cfg layman/config.py
 }
 

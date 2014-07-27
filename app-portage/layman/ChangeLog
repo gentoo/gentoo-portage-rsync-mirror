@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.199 2014/07/24 19:01:48 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.200 2014/07/27 03:17:20 twitch153 Exp $
+
+*layman-2.1.0-r1 (27 Jul 2014)
+
+  27 Jul 2014; Devan Franchini <twitch153@gentoo.org>
+  +files/layman-2.1.0-local_overlay.patch, +layman-2.1.0-r1.ebuild,
+  -layman-2.1.0.ebuild:
+  Rev bump to add patch for local overlay listings
 
 *layman-2.1.0 (24 Jul 2014)
 
