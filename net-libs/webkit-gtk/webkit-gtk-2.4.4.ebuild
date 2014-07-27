@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.4.ebuild,v 1.4 2014/07/23 16:41:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.4.ebuild,v 1.5 2014/07/27 12:31:02 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -180,6 +180,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.2.5-{hppa,ia64}-platform.patch
 	# https://bugs.webkit.org/show_bug.cgi?id=129542
 	epatch "${FILESDIR}"/${PN}-2.4.1-ia64-malloc.patch
+
+	# Fix building on ppc (from OpenBSD, only needed on slot 3)
+	# https://bugs.webkit.org/show_bug.cgi?id=130837
+	epatch "${FILESDIR}"/${PN}-2.4.4-atomic-ppc.patch
 
 	AT_M4DIR=Source/autotools eautoreconf
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.271 2014/07/23 16:41:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.272 2014/07/27 12:31:02 pacho Exp $
+
+  27 Jul 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/webkit-gtk-2.4.4-atomic-ppc.patch, webkit-gtk-2.4.4.ebuild:
+  Fix building on ppc (from OpenBSD, only needed on slot 3), bug #518288 by ago
 
   23 Jul 2014; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-2.4.3-r200.ebuild,
   -webkit-gtk-2.4.3.ebuild, webkit-gtk-2.4.4-r200.ebuild,

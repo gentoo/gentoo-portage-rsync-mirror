@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.66 2014/07/23 16:54:24 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.67 2014/07/27 12:12:59 blueness Exp $
+
+*bfgminer-3.10.6 (27 Jul 2014)
+*bfgminer-4.5.0 (27 Jul 2014)
+
+  27 Jul 2014; Anthony G. Basile <blueness@gentoo.org> +bfgminer-3.10.6.ebuild,
+  +bfgminer-4.5.0.ebuild, metadata.xml:
+  Version bump
 
   23 Jul 2014; Chema Alonso <nimiux@gentoo.org> bfgminer-3.10.5.ebuild:
   Stable for amd64 wrt bug #516646
