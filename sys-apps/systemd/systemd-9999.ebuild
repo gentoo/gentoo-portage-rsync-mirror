@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.128 2014/07/21 17:52:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.129 2014/07/27 15:00:52 floppym Exp $
 
 EAPI=5
 
@@ -324,11 +324,6 @@ multilib_src_install() {
 
 	if multilib_is_native_abi; then
 		emake "${mymakeopts[@]}" install
-		# Even with --enable-networkd, it's not right to have this running by default
-		# when it's unconfigured.
-		rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service
-		rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-resolved.service
-		rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-timesyncd.service
 	else
 		mymakeopts+=(
 			install-libLTLIBRARIES
@@ -366,6 +361,13 @@ multilib_src_install_all() {
 
 	# Symlink /etc/sysctl.conf for easy migration.
 	dosym ../sysctl.conf /etc/sysctl.d/99-sysctl.conf
+
+	# If we install these symlinks, there is no way for the sysadmin to remove them
+	# permanently.
+	rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service
+	rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-resolved.service
+	rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-timesyncd.service
+	rm -rf "${D}"/etc/systemd/system/network-online.target.wants
 }
 
 migrate_locale() {

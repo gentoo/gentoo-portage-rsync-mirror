@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.292 2014/07/25 10:26:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.293 2014/07/27 15:00:52 floppym Exp $
+
+  27 Jul 2014; Mike Gilbert <floppym@gentoo.org> systemd-215-r3.ebuild,
+  systemd-9999.ebuild:
+  Don't install /etc/systemd/system/network-online.target.wants, bug 518318 by
+  poncho.
 
 *systemd-215-r3 (25 Jul 2014)
 
