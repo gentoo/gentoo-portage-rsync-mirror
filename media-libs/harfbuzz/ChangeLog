@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.81 2014/07/23 15:19:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.82 2014/07/27 10:29:02 mgorny Exp $
+
+  27 Jul 2014; Michał Górny <mgorny@gentoo.org> harfbuzz-0.9.28.ebuild,
+  harfbuzz-9999.ebuild:
+  Add missing einstalldocs call, bug #518316.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.28.ebuild:
   Stable for x86, wrt bug #512012

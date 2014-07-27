@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.28.ebuild,v 1.6 2014/07/23 15:19:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.28.ebuild,v 1.7 2014/07/27 10:29:02 mgorny Exp $
 
 EAPI=5
 
@@ -82,5 +82,6 @@ multilib_src_configure() {
 }
 
 multilib_src_install_all() {
+	einstalldocs
 	prune_libtool_files --modules
 }
