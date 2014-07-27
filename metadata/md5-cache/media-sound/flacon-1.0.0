@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-libs/uchardet media-sound/shntool[mac?] flac? ( media-libs/flac ) mac? ( media-sound/mac ) mp3? ( media-sound/lame ) mp4? ( media-libs/faac ) ogg? ( media-sound/vorbis-tools ) tta? ( media-sound/ttaenc ) wavpack? ( media-sound/wavpack ) replaygain? ( mp3? ( media-sound/mp3gain ) ogg? ( media-sound/vorbisgain ) ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=sys-apps/sed-4
+DESCRIPTION=Extracts audio tracks from audio CD image to separate tracks
+EAPI=5
+HOMEPAGE=https://flacon.github.io/
+IUSE=flac mac mp3 mp4 ogg replaygain tta wavpack linguas_cs_CZ linguas_cs linguas_de linguas_es_MX linguas_es linguas_fr linguas_gl linguas_hu linguas_it linguas_pl_PL linguas_pl linguas_pt_BR linguas_pt_PT linguas_ro_RO linguas_ru linguas_si_LK linguas_uk linguas_zh_CN linguas_zh_TW
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-libs/uchardet media-sound/shntool[mac?] flac? ( media-libs/flac ) mac? ( media-sound/mac ) mp3? ( media-sound/lame ) mp4? ( media-libs/faac ) ogg? ( media-sound/vorbis-tools ) tta? ( media-sound/ttaenc ) wavpack? ( media-sound/wavpack ) replaygain? ( mp3? ( media-sound/mp3gain ) ogg? ( media-sound/vorbisgain ) )
+SLOT=0
+SRC_URI=https://github.com/flacon/flacon/archive/v1.0.0.tar.gz -> flacon-1.0.0.tar.gz
+_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=f037bcb02474cb298803acb11dc68a15

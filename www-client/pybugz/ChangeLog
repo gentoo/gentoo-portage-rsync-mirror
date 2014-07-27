@@ -1,6 +1,12 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.118 2014/06/22 18:07:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.120 2014/07/27 13:36:18 pacho Exp $
+
+  27 Jul 2014; Pacho Ramos <pacho@gentoo.org> pybugz-0.10.1-r2.ebuild:
+  x86 stable, bug #517550
+
+  27 Jul 2014; William Hubbs <williamh@gentoo.org> pybugz-0.10.1-r2.ebuild:
+  amd64 stable for bug #517550.
 
   22 Jun 2014; William Hubbs <william@gentoo.org>
   -files/pybugz-9999-bugzilla-4.4.1.patch, pybugz-9999.ebuild:
