@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.75 2014/07/06 12:56:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.76 2014/07/26 23:13:04 prometheanfire Exp $
+
+  26 Jul 2014; Matthew Thode <prometheanfire@gentoo.org>
+  keystone-2014.1.1-r2.ebuild, keystone-2014.1.9999.ebuild,
+  keystone-9999.ebuild:
+  better sqlalchemy deps
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> keystone-9999.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-

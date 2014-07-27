@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-9999.ebuild,v 1.10 2014/07/08 15:55:55 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-9999.ebuild,v 1.11 2014/07/26 23:15:35 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -45,12 +45,23 @@ RDEPEND="${DEPEND}
 	swift? (
 		>=dev-python/python-swiftclient-1.2[${PYTHON_USEDEP}]
 	)
-	sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
-	          <dev-python/sqlalchemy-0.7.10[sqlite,${PYTHON_USEDEP}] )
-	mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
-	         <dev-python/sqlalchemy-0.7.10[mysql,${PYTHON_USEDEP}] )
-	postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
-	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
+	sqlite? (
+		>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
+		!~dev-python/sqlalchemy-0.9.5[sqlite,${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+	)
+	mysql? (
+		dev-python/mysql-python
+		>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+		!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+	)
+	postgres? (
+		dev-python/psycopg:2
+		>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+		!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+	)
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )"
 
 python_install() {

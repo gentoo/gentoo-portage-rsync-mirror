@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.1.ebuild,v 1.4 2014/07/17 09:17:53 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.1.ebuild,v 1.5 2014/07/26 23:01:46 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -53,12 +53,23 @@ RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/netaddr-0.7.6[${PYTHON_USEDEP}]
 		>=dev-python/python-neutronclient-2.3.4[${PYTHON_USEDEP}]
 		<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-0.7.8[${PYTHON_USEDEP}]
-		!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
-		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
-		mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
-		postgres? ( >=dev-python/psycopg-2[${PYTHON_USEDEP}] )
-		sqlite? ( dev-db/sqlite )
+		sqlite? (
+			>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[sqlite,${PYTHON_USEDEP}]
+	        <=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+		)
+		mysql? (
+			dev-python/mysql-python
+			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		)
+		postgres? (
+			dev-python/psycopg:2
+			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		)
 		>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.7.0[${PYTHON_USEDEP}]
 		>=dev-python/alembic-0.4.1[${PYTHON_USEDEP}]

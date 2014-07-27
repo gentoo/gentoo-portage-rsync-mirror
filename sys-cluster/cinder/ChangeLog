@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/cinder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/ChangeLog,v 1.37 2014/07/06 12:56:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/ChangeLog,v 1.38 2014/07/26 23:09:50 prometheanfire Exp $
+
+  26 Jul 2014; Matthew Thode <prometheanfire@gentoo.org> cinder-2014.1.1.ebuild,
+  cinder-2014.1.9999.ebuild, cinder-9999.ebuild:
+  better sqlalchemy deps
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> cinder-2014.1.1.ebuild,
   cinder-2014.1.9999.ebuild, cinder-9999.ebuild:

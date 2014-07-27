@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-9999.ebuild,v 1.7 2014/07/06 12:56:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-9999.ebuild,v 1.8 2014/07/26 23:09:50 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -38,13 +38,24 @@ RDEPEND=">=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
-		sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
-	          <dev-python/sqlalchemy-0.7.10[sqlite,${PYTHON_USEDEP}] )
-		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
-	         <dev-python/sqlalchemy-0.7.10[mysql,${PYTHON_USEDEP}] )
-		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
-	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
-		>=dev-python/sqlalchemy-migrate-0.7.2[${PYTHON_USEDEP}]
+		sqlite? (
+			>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[sqlite,${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+		)
+		mysql? (
+			dev-python/mysql-python
+			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		)
+		postgres? (
+			dev-python/psycopg:2
+			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		)
+		>=dev-python/sqlalchemy-migrate-0.9[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.10[${PYTHON_USEDEP}]
 		>=dev-python/suds-0.4[${PYTHON_USEDEP}]
 		>=dev-python/paramiko-1.8.0[${PYTHON_USEDEP}]
