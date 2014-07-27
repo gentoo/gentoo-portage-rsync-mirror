@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.3.ebuild,v 1.5 2014/07/26 09:06:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.3-r100.ebuild,v 1.1 2014/07/27 12:52:45 hasufell Exp $
 
 # TODO: convert FusionSound #484250
 
 EAPI=5
-inherit autotools flag-o-matic toolchain-funcs eutils multilib-minimal
+inherit autotools flag-o-matic toolchain-funcs eutils
 
 MY_P=SDL2-${PV}
 DESCRIPTION="Simple Direct Media Layer"
@@ -28,38 +28,38 @@ REQUIRED_USE="
 	xscreensaver? ( X )"
 
 RDEPEND="
-	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
-	dbus? ( >=sys-apps/dbus-1.6.18-r1[${MULTILIB_USEDEP}] )
+	alsa? ( >=media-libs/alsa-lib-1.0.27.2 )
+	dbus? ( >=sys-apps/dbus-1.6.18-r1 )
 	fusionsound? ( || ( >=media-libs/FusionSound-1.1.1 >=dev-libs/DirectFB-1.7.1[fusionsound] ) )
-	gles? ( >=media-libs/mesa-9.1.6[${MULTILIB_USEDEP},gles2] )
-	nas? ( >=media-libs/nas-1.9.4[${MULTILIB_USEDEP}] )
+	gles? ( >=media-libs/mesa-9.1.6[gles2] )
+	nas? ( >=media-libs/nas-1.9.4 )
 	opengl? (
-		>=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}]
-		>=virtual/glu-9.0-r1[${MULTILIB_USEDEP}]
+		>=virtual/opengl-7.0-r1
+		>=virtual/glu-9.0-r1
 	)
-	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1[${MULTILIB_USEDEP}] )
-	tslib? ( >=x11-libs/tslib-1.0-r3[${MULTILIB_USEDEP}] )
-	udev? ( >=virtual/libudev-208:=[${MULTILIB_USEDEP}] )
+	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1 )
+	tslib? ( >=x11-libs/tslib-1.0-r2 )
+	udev? ( >=virtual/libudev-208:= )
 	wayland? (
-		>=dev-libs/wayland-1.0.6[${MULTILIB_USEDEP}]
-		>=media-libs/mesa-9.1.6[${MULTILIB_USEDEP},wayland]
-		>=x11-libs/libxkbcommon-0.2.0[${MULTILIB_USEDEP}]
+		>=dev-libs/wayland-1.0.6
+		>=media-libs/mesa-9.1.6[wayland]
+		>=x11-libs/libxkbcommon-0.2.0
 	)
 	X? (
-		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
-		>=x11-libs/libXcursor-1.1.14[${MULTILIB_USEDEP}]
-		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
-		>=x11-libs/libXi-1.7.2[${MULTILIB_USEDEP}]
-		>=x11-libs/libXrandr-1.4.2[${MULTILIB_USEDEP}]
-		>=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}]
-		>=x11-libs/libXxf86vm-1.1.3[${MULTILIB_USEDEP}]
-		xinerama? ( >=x11-libs/libXinerama-1.1.3[${MULTILIB_USEDEP}] )
-		xscreensaver? ( >=x11-libs/libXScrnSaver-1.2.2-r1[${MULTILIB_USEDEP}] )
+		>=x11-libs/libX11-1.6.2
+		>=x11-libs/libXcursor-1.1.14
+		>=x11-libs/libXext-1.3.2
+		>=x11-libs/libXi-1.7.2
+		>=x11-libs/libXrandr-1.4.2
+		>=x11-libs/libXt-1.1.4
+		>=x11-libs/libXxf86vm-1.1.3
+		xinerama? ( >=x11-libs/libXinerama-1.1.3 )
+		xscreensaver? ( >=x11-libs/libXScrnSaver-1.2.2-r1 )
 	)"
 DEPEND="${RDEPEND}
 	X? (
-		>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
-		>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
+		>=x11-proto/xextproto-7.2.1-r1
+		>=x11-proto/xproto-7.0.24
 	)
 	virtual/pkgconfig"
 
@@ -72,11 +72,11 @@ src_prepare() {
 	AT_M4DIR="/usr/share/aclocal acinclude" eautoreconf
 }
 
-multilib_src_configure() {
+src_configure() {
 	use custom-cflags || strip-flags
 
 	# sorted by `./configure --help`
-	ECONF_SOURCE="${S}" econf \
+	econf \
 		$(use_enable static-libs static) \
 		$(use_enable sound audio) \
 		$(use_enable video) \
@@ -124,7 +124,7 @@ multilib_src_configure() {
 		$(use_enable X video-x11-vm) \
 		--disable-video-cocoa \
 		--disable-video-directfb \
-		$(multilib_native_use_enable fusionsound) \
+		$(use_enable fusionsound) \
 		--disable-fusionsound-shared \
 		$(use_enable video video-dummy) \
 		$(use_enable opengl video-opengl) \
@@ -138,11 +138,8 @@ multilib_src_configure() {
 		$(use_with X x)
 }
 
-multilib_src_install() {
+src_install() {
 	emake DESTDIR="${D}" install
-}
-
-multilib_src_install_all() {
 	use static-libs || prune_libtool_files
 	dodoc {BUGS,CREDITS,README,README-SDL,README-hg,TODO,WhatsNew}.txt
 }
