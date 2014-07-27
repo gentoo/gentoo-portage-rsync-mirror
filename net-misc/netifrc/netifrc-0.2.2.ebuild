@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-0.2.2.ebuild,v 1.10 2014/07/24 17:51:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-0.2.2.ebuild,v 1.11 2014/07/27 11:13:00 ssuominen Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ LICENSE="BSD-2"
 SLOT="0"
 IUSE=""
 
-COMMON_DEPEND="!<sys-fs/udev-init-scripts-26-r1"
+COMMON_DEPEND="!<sys-fs/udev-init-scripts-26-r1
+	!<sys-fs/udev-172"
 DEPEND="${COMMON_DEPEND}
 	kernel_linux? ( virtual/pkgconfig )"
 RDEPEND="${COMMON_DEPEND}

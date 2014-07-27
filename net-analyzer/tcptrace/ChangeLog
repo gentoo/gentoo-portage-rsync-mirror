@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcptrace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/ChangeLog,v 1.27 2014/07/17 16:59:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/ChangeLog,v 1.28 2014/07/27 11:10:21 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  tcptrace-6.6.7-r2.ebuild:
+  x86 stable wrt bug #516556
 
   17 Jul 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove short <longdescription>.

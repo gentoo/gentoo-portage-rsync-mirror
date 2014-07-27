@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.10.ebuild,v 1.5 2014/07/04 14:03:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.10.ebuild,v 1.6 2014/07/27 11:16:26 phajdan.jr Exp $
 
 EAPI=5
 GCONF_DEBUG=no
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 RDEPEND=">=dev-cpp/glibmm-2.28
 	dev-cpp/gtkmm:3.0

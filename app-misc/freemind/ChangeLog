@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/freemind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.65 2014/03/31 16:48:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.66 2014/07/27 11:26:41 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  freemind-1.0.0-r1.ebuild:
+  x86 stable wrt bug #501728
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> freemind-0.9.0-r1.ebuild:
   Move the java-ant_remove-taskdefs function from the ebuild since this ebuild

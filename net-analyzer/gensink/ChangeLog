@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gensink
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.14 2014/07/12 13:28:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.15 2014/07/27 11:29:56 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> gensink-4.1-r2.ebuild:
+  x86 stable wrt bug #516950
 
   12 Jul 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove short longdescription.

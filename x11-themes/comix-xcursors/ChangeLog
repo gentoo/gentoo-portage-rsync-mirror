@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/comix-xcursors
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix-xcursors/ChangeLog,v 1.10 2014/07/22 09:13:26 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix-xcursors/ChangeLog,v 1.11 2014/07/27 11:29:22 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  comix-xcursors-0.8.2.ebuild:
+  x86 stable wrt bug #516946
 
   22 Jul 2014; Chema Alonso <nimiux@gentoo.org> comix-xcursors-0.8.2.ebuild:
   Stable for amd64 wrt bug #516946

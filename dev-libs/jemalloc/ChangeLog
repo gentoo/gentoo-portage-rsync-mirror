@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.44 2014/07/26 14:18:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.45 2014/07/27 11:27:59 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> jemalloc-3.6.0.ebuild:
+  x86 stable wrt bug #512330
 
   26 Jul 2014; Anthony G. Basile <blueness@gentoo.org> jemalloc-3.6.0.ebuild:
   Stable on ppc and ppc64, bug #512330

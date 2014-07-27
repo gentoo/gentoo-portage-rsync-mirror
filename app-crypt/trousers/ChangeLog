@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.48 2014/07/15 11:40:40 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.49 2014/07/27 11:13:12 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  trousers-0.3.10-r1.ebuild:
+  x86 stable wrt bug #516844
 
   15 Jul 2014; Alon Bar-Lev <alonbl@gentoo.org> -trousers-0.3.6-r1.ebuild,
   -trousers-0.3.6.ebuild:

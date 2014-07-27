@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/magit-1.2.0-r1.ebuild,v 1.1 2014/05/23 19:23:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/magit-1.2.0-r1.ebuild,v 1.2 2014/07/27 11:19:18 phajdan.jr Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://github.com/downloads/magit/magit/${P}.tar.gz"
 
 LICENSE="GPL-3+ FDL-1.2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="contrib"
 
 ELISP_PATCHES="${P}-delete-directory.patch"

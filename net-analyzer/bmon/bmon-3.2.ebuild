@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-3.2.ebuild,v 1.5 2014/07/22 09:09:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-3.2.ebuild,v 1.6 2014/07/27 11:14:23 phajdan.jr Exp $
 
 EAPI=5
 inherit autotools eutils linux-info toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 hppa ~ppc ~sparc x86"
 
 RDEPEND="
 	>=sys-libs/ncurses-5.3-r2

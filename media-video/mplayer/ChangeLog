@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.918 2014/07/23 20:31:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.919 2014/07/27 11:12:49 pacho Exp $
+
+  27 Jul 2014; Pacho Ramos <pacho@gentoo.org> mplayer-9999.ebuild:
+  Drop dxr3 due bug #414903
 
   23 Jul 2014; Rick Farina <zerochaos@gentoo.org>
   mplayer-1.2_pre20130729.ebuild, mplayer-9999.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netifrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.35 2014/07/24 17:51:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.36 2014/07/27 11:13:00 ssuominen Exp $
+
+  27 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> netifrc-0.2.2.ebuild,
+  netifrc-0.2.3.ebuild, netifrc-0.2.4.ebuild, netifrc-9999.ebuild:
+  Block old version of sys-fs/udev to prevent file collision wrt first post of
+  http://forums.gentoo.org/viewtopic.php?p=7589958
 
   24 Jul 2014; Mike Frysinger <vapier@gentoo.org> netifrc-0.2.2.ebuild:
   Mark stable for arm64/m68k/s390/sh.

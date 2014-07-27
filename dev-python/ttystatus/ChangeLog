@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ttystatus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ttystatus/ChangeLog,v 1.10 2013/08/09 15:16:27 mschiff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ttystatus/ChangeLog,v 1.11 2014/07/27 11:10:54 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> ttystatus-0.23.ebuild:
+  x86 stable wrt bug #516728
 
 *ttystatus-0.23 (09 Aug 2013)
 

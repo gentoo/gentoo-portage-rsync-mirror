@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jortho/jortho-1.0.ebuild,v 1.2 2014/03/22 16:21:55 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jortho/jortho-1.0.ebuild,v 1.3 2014/07/27 11:26:15 phajdan.jr Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/project/jortho/JOrtho%20Library/${PV}/JOrtho_${PV}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="

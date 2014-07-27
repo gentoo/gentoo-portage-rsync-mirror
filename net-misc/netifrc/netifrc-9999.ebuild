@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-9999.ebuild,v 1.7 2014/03/05 18:46:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-9999.ebuild,v 1.8 2014/07/27 11:13:00 ssuominen Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ LICENSE="BSD-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="kernel_linux? ( virtual/pkgconfig )"
+DEPEND="kernel_linux? ( virtual/pkgconfig )
+	!<sys-fs/udev-172"
 RDEPEND=">=sys-apps/openrc-0.12
 	!<sys-apps/openrc-0.12"
 

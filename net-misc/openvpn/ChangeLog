@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.294 2014/07/21 16:04:06 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.295 2014/07/27 11:06:45 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> openvpn-2.3.3.ebuild:
+  x86 stable wrt bug #511668
 
   21 Jul 2014; Chema Alonso <nimiux@gentoo.org> openvpn-2.3.3.ebuild:
   Stable for amd64 wrt bug #511668

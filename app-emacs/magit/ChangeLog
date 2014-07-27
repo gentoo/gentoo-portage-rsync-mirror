@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/magit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.13 2014/05/30 17:24:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.14 2014/07/27 11:19:18 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> magit-1.2.0-r1.ebuild:
+  x86 stable wrt bug #509736
 
   30 May 2014; Ulrich Müller <ulm@gentoo.org> -magit-1.2.0.ebuild:
   Remove old.
