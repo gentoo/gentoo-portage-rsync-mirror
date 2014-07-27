@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-1.0.0.ebuild,v 1.1 2013/08/06 14:46:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-1.0.0.ebuild,v 1.2 2014/07/27 11:42:16 pacho Exp $
 
 EAPI=5
 inherit eutils udev
@@ -11,7 +11,7 @@ SRC_URI="http://linuxtv.org/downloads/v4l-utils/${P}.tar.bz2"
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="qt4"
 
 RDEPEND=">=media-libs/libv4l-${PV}

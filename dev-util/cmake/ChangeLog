@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.289 2014/07/14 00:00:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.291 2014/07/27 11:55:54 johu Exp $
+
+*cmake-3.0.0 (27 Jul 2014)
+
+  27 Jul 2014; Johannes Huber <johu@gentoo.org> +cmake-3.0.0.ebuild,
+  +files/cmake-3.0.0-FindBLAS.patch, +files/cmake-3.0.0-FindBoost-python.patch,
+  +files/cmake-3.0.0-FindLAPACK.patch, +files/cmake-3.0.0-prefix-dirs.patch:
+  Version bump by Michael Palimaka <kensington@gentoo.org>, bug #513682.
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  cmake-2.8.12.2-r1.ebuild:
+  x86 stable wrt bug #517016
 
   14 Jul 2014; Jeroen Roovers <jer@gentoo.org> cmake-2.8.12.2-r1.ebuild:
   Stable for HPPA (bug #517016).

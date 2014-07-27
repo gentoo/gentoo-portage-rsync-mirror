@@ -1,22 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.12.2-r1.ebuild,v 1.7 2014/07/27 11:38:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-3.0.0.ebuild,v 1.1 2014/07/27 11:55:54 johu Exp $
 
 EAPI=5
 
 CMAKE_REMOVE_MODULES="no"
 inherit bash-completion-r1 elisp-common toolchain-funcs eutils versionator cmake-utils virtualx
 
-MY_PV=${PV/_/-}
-MY_P=${PN}-${MY_PV}
-
 DESCRIPTION="Cross platform Make"
 HOMEPAGE="http://www.cmake.org/"
-SRC_URI="http://www.cmake.org/files/v$(get_version_component_range 1-2)/${MY_P}.tar.gz"
+SRC_URI="http://www.cmake.org/files/v$(get_version_component_range 1-2)/${P}.tar.gz"
 
 LICENSE="CMake"
-KEYWORDS="~alpha amd64 ~arm arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="emacs ncurses qt4 qt5"
 
 REQUIRED_USE="?? ( qt4 qt5 )"
@@ -27,6 +24,7 @@ DEPEND="
 	>=net-misc/curl-7.20.0-r1[ssl]
 	sys-libs/zlib
 	virtual/pkgconfig
+	emacs? ( virtual/emacs )
 	ncurses? ( sys-libs/ncurses )
 	qt4? (
 		dev-qt/qtcore:4
@@ -38,34 +36,25 @@ DEPEND="
 		dev-qt/qtwidgets:5
 	)
 "
-RDEPEND="${DEPEND}
-	emacs? ( virtual/emacs )
-"
-
-S="${WORKDIR}/${MY_P}"
+RDEPEND="${DEPEND}"
 
 SITEFILE="50${PN}-gentoo.el"
 
 CMAKE_BINARY="${S}/Bootstrap.cmk/cmake"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-2.6.3-fix_broken_lfs_on_aix.patch
 	"${FILESDIR}"/${PN}-2.6.3-no-duplicates-in-rpath.patch
-	"${FILESDIR}"/${PN}-2.8.7-FindLAPACK.patch
 	"${FILESDIR}"/${PN}-2.8.8-FindPkgConfig.patch
 	"${FILESDIR}"/${PN}-2.8.10-darwin-bundle.patch
 	"${FILESDIR}"/${PN}-2.8.10-darwin-isysroot.patch
-	"${FILESDIR}"/${PN}-2.8.10-desktop.patch
 	"${FILESDIR}"/${PN}-2.8.10-libform.patch
 	"${FILESDIR}"/${PN}-2.8.10.2-FindPythonInterp.patch
 	"${FILESDIR}"/${PN}-2.8.10.2-FindPythonLibs.patch
-	"${FILESDIR}"/${PN}-2.8.11-FindBLAS.patch
-	"${FILESDIR}"/${PN}-2.8.11-more-no_host_paths.patch
 	"${FILESDIR}"/${PN}-2.8.12.1-FindImageMagick.patch
-	"${FILESDIR}"/${PN}-2.8.12.1-FindFreetype.patch
-	"${FILESDIR}"/${PN}-2.8.12.2-hppa-bootstrap.patch
-	"${FILESDIR}"/${PN}-2.8.12.2-FindBoost-python.patch
-	"${FILESDIR}"/${PN}-2.8.12.2-FindCurses.patch
+	"${FILESDIR}"/${PN}-3.0.0-FindBLAS.patch
+	"${FILESDIR}"/${PN}-3.0.0-FindLAPACK.patch
+	"${FILESDIR}"/${PN}-3.0.0-FindBoost-python.patch
+	"${FILESDIR}"/${PN}-3.0.0-prefix-dirs.patch
 )
 
 cmake_src_bootstrap() {
@@ -117,11 +106,6 @@ cmake_src_test() {
 	popd > /dev/null
 }
 
-pkg_setup() {
-	# bug 387227
-	addpredict /proc/self/coredump_filter
-}
-
 src_prepare() {
 	cmake-utils_src_prepare
 
@@ -140,11 +124,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# make things work with gentoo java setup
-	# in case java-config cannot be run, the variable just becomes unset
-	# per bug #315229
-	export JAVA_HOME=$(java-config -g JAVA_HOME 2> /dev/null)
-
 	local mycmakeargs=(
 		-DCMAKE_USE_SYSTEM_LIBRARIES=ON
 		-DCMAKE_INSTALL_PREFIX="${EPREFIX}"/usr
@@ -160,12 +139,13 @@ src_configure() {
 			$(cmake-utils_use_find_package qt5 Qt5Widgets)
 		)
 	fi
+
 	cmake-utils_src_configure
 }
 
 src_compile() {
 	cmake-utils_src_compile
-	use emacs && elisp-compile Docs/cmake-mode.el
+	use emacs && elisp-compile Auxiliary/cmake-mode.el
 }
 
 src_test() {
@@ -174,22 +154,24 @@ src_test() {
 
 src_install() {
 	cmake-utils_src_install
+
 	if use emacs; then
-		elisp-install ${PN} Docs/cmake-mode.el Docs/cmake-mode.elc
+		elisp-install ${PN} Auxiliary/cmake-mode.el Auxiliary/cmake-mode.elc
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 
 	insinto /usr/share/vim/vimfiles/syntax
-	doins Docs/cmake-syntax.vim
+	doins Auxiliary/cmake-syntax.vim
 
 	insinto /usr/share/vim/vimfiles/indent
-	doins Docs/cmake-indent.vim
+	doins Auxiliary/cmake-indent.vim
 
 	insinto /usr/share/vim/vimfiles/ftdetect
 	doins "${FILESDIR}/${PN}.vim"
 
-	dobashcomp Docs/bash-completion/{${PN},ctest,cpack}
-	rm -rf "${D}/usr/share/cmake/completions" || die
+	dobashcomp Auxiliary/bash-completion/{${PN},ctest,cpack}
+
+	rm -rf "${D}/usr/share/cmake/{completions,editors}" || die
 }
 
 pkg_postinst() {

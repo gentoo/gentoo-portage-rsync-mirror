@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ndsad-1.33-r1.ebuild,v 1.1 2014/07/14 16:15:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ndsad-1.33-r1.ebuild,v 1.2 2014/07/27 11:41:33 phajdan.jr Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/ndsad/ndsad-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=net-libs/libpcap-0.8"
 RDEPEND="${DEPEND}"

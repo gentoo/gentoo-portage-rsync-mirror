@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nsat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.26 2014/07/06 02:14:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.27 2014/07/27 11:31:38 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> nsat-1.5-r3.ebuild:
+  x86 stable wrt bug #516450
 
   06 Jul 2014; Jeroen Roovers <jer@gentoo.org> files/nsat-1.5-va_list.patch:
   Improve efficiency somewhat.

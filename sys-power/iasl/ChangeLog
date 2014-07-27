@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/iasl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.45 2014/06/08 14:23:34 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.46 2014/07/27 11:43:49 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> iasl-20130117-r1.ebuild:
+  x86 stable wrt bug #505846
 
   08 Jun 2014; Chema Alonso <nimiux@gentoo.org> iasl-20130117-r1.ebuild:
   Stable for amd64 wrt bug #505846

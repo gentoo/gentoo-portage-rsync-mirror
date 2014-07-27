@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-1.4.ebuild,v 1.2 2014/06/20 13:52:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-1.4.ebuild,v 1.3 2014/07/27 11:44:32 phajdan.jr Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="A packet filter and firewall log analyzer"
 HOMEPAGE="http://fwlogwatch.inside-security.de/"
 SRC_URI="${HOMEPAGE}sw/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 LICENSE="GPL-1"
 SLOT="0"
 IUSE="nls zlib"

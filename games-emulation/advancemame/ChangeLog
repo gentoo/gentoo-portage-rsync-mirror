@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/advancemame
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.52 2014/07/22 09:30:18 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.53 2014/07/27 11:48:44 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> advancemame-1.2.ebuild:
+  x86 stable wrt bug #516072
 
   22 Jul 2014; Chema Alonso <nimiux@gentoo.org> advancemame-1.2.ebuild:
   Stable for amd64 wrt bug #516072

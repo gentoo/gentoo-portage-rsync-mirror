@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/cavezofphear
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/ChangeLog,v 1.13 2014/07/22 11:27:29 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/ChangeLog,v 1.14 2014/07/27 11:47:31 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  cavezofphear-0.5.1.ebuild:
+  x86 stable wrt bug #517198
 
   22 Jul 2014; Chema Alonso <nimiux@gentoo.org> cavezofphear-0.5.1.ebuild:
   Stable for amd64 wrt bug #517198

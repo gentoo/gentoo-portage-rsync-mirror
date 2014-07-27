@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.243 2014/07/08 15:40:42 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.244 2014/07/27 11:34:32 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> liferea-1.10.8.ebuild:
+  x86 stable wrt bug #513396
 
   08 Jul 2014; Chema Alonso <nimiux@gentoo.org> liferea-1.10.8.ebuild:
   Stable for amd64 wrt bug #513396

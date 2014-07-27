@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fwlogwatch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.31 2014/07/12 13:17:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.32 2014/07/27 11:44:32 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> fwlogwatch-1.4.ebuild:
+  x86 stable wrt bug #513992
 
   12 Jul 2014; Jeroen Roovers <jer@gentoo.org>
   -files/fwlogwatch-1.1-make.patch, -files/fwlogwatch-1.2-overflow.patch:

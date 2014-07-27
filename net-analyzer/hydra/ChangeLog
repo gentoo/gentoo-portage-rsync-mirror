@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.83 2014/05/18 03:32:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.84 2014/07/27 11:32:24 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> hydra-8.0.ebuild:
+  x86 stable wrt bug #516966
 
 *hydra-8.0 (18 May 2014)
 
