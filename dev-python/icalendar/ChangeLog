@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/icalendar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.40 2014/07/22 04:01:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.41 2014/07/27 02:05:14 idella4 Exp $
+
+*icalendar-3.8.2 (27 Jul 2014)
+
+  27 Jul 2014; Ian Delaney <idella4@gentoo.org> +icalendar-3.8.2.ebuild,
+  -icalendar-3.8.1.ebuild:
+  bump, rm prior -3.8.1
 
 *icalendar-3.8.1 (22 Jul 2014)
 
