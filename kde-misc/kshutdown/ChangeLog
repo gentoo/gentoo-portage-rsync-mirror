@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kshutdown
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.46 2014/06/14 13:31:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.47 2014/07/27 10:53:30 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> kshutdown-3.2.ebuild:
+  x86 stable wrt bug #513176
 
   14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -kshutdown-3.0.ebuild,
   -kshutdown-3.1_beta.ebuild:

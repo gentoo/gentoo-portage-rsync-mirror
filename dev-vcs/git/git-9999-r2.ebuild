@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999-r2.ebuild,v 1.3 2014/06/24 01:44:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999-r2.ebuild,v 1.4 2014/07/27 10:38:48 grobian Exp $
 
 EAPI=5
 
@@ -325,7 +325,12 @@ src_compile() {
 
 	if use subversion ; then
 		cd "${S}"/contrib/svn-fe
-		git_emake EXTLIBS="${EXTLIBS}" || die "emake svn-fe failed"
+		# by defining EXTLIBS we override the detection for libintl and
+		# libiconv, bug #516168
+		local nlsiconv=
+		use nls && use !elibc_glibc && nlsiconv+=" -lintl"
+		use iconv && use !elibc_glibc && nlsiconv+=" -liconv"
+		git_emake EXTLIBS="${EXTLIBS} ${nlsiconv}" || die "emake svn-fe failed"
 		if use doc ; then
 			git_emake svn-fe.{1,html} || die "emake svn-fe.1 svn-fe.html failed"
 		fi

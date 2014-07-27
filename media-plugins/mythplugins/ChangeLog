@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythplugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.29 2014/07/15 16:45:00 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.30 2014/07/27 10:41:32 pacho Exp $
+
+  27 Jul 2014; Pacho Ramos <pacho@gentoo.org>
+  -mythplugins-0.25.3_p20130101.ebuild, -mythplugins-0.25.3_p20130131.ebuild,
+  -mythplugins-0.25.3_p20130322.ebuild, -mythplugins-0.25.3_p20130422.ebuild:
+  Remove masked for removal package
 
 *mythplugins-0.27.1_p20140713 (15 Jul 2014)
 

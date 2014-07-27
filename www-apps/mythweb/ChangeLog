@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.102 2014/06/01 12:10:41 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.103 2014/07/27 10:42:07 pacho Exp $
+
+  27 Jul 2014; Pacho Ramos <pacho@gentoo.org> -mythweb-0.25.2.ebuild,
+  -mythweb-0.25.3.ebuild:
+  Remove masked for removal package
 
 *mythweb-0.27.1 (01 Jun 2014)
 

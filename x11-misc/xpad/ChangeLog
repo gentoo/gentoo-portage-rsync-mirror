@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.80 2014/07/21 08:47:35 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.81 2014/07/27 10:55:53 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> xpad-4.2.ebuild:
+  x86 stable wrt bug #512158
 
   21 Jul 2014; Chema Alonso <nimiux@gentoo.org> xpad-4.2.ebuild:
   Stable for amd64 wrt bug #512158

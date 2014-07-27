@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.417 2014/07/15 16:44:35 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.418 2014/07/27 10:41:01 pacho Exp $
+
+  27 Jul 2014; Pacho Ramos <pacho@gentoo.org> -mythtv-0.25.3_p20130101.ebuild,
+  -mythtv-0.25.3_p20130131.ebuild, -mythtv-0.25.3_p20130322.ebuild,
+  -mythtv-0.25.3_p20130422.ebuild:
+  Remove masked for removal package
 
 *mythtv-0.27.1_p20140713 (15 Jul 2014)
 

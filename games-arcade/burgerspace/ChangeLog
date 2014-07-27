@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/burgerspace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.38 2014/07/22 11:30:26 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.39 2014/07/27 10:38:37 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  burgerspace-1.9.2.ebuild:
+  x86 stable wrt bug #517200
 
   22 Jul 2014; Chema Alonso <nimiux@gentoo.org> burgerspace-1.9.2.ebuild:
   Stable for amd64 wrt bug #517200

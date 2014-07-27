@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.196 2014/07/23 15:37:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.197 2014/07/27 10:36:03 mgorny Exp $
+
+  27 Jul 2014; Michał Górny <mgorny@gentoo.org> cracklib-2.9.1-r1.ebuild:
+  Add missing einstalldocs call, bug #518258.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cracklib-2.9.1-r1.ebuild:
   Stable for x86, wrt bug #512012

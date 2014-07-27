@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rain/rain-1.2.9_beta1.ebuild,v 1.3 2014/07/16 22:14:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rain/rain-1.2.9_beta1.ebuild,v 1.4 2014/07/27 10:52:45 phajdan.jr Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -11,7 +11,7 @@ DESCRIPTION="powerful tool for testing stability of hardware and software utiliz
 HOMEPAGE="http://www.mirrors.wiretapped.net/security/packet-construction/rain/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 SRC_URI="
 	mirror://ubuntu/pool/universe/r/${PN}/${MY_P}.orig.tar.gz
 	mirror://ubuntu/pool/universe/r/${PN}/${MY_P}-1.diff.gz

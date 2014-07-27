@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15929 2014/07/26 12:00:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15930 2014/07/27 10:45:44 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -42,7 +42,6 @@ dev-lang/libcilkrts
 =dev-db/postgresql-base-8.4*
 =dev-db/postgresql-server-8.4*
 =dev-db/postgresql-docs-8.4*
-
 
 # Pacho Ramos <pacho@gentoo.org> (24 Jul 2014)
 # It's a development version that was included without
@@ -175,12 +174,6 @@ dev-ruby/mail:2.4
 # Development has halted (see <http://www.perihel.at/sec/mz/index.html>)
 # See net-analyzer/netsniff-ng for a replacement (bug #515210)
 net-analyzer/mausezahn
-
-# Pacho Ramos <pacho@gentoo.org> (22 Jun 2014)
-# Underlinking issues, upstream dead for ages, still relies
-# on gnome2 stuff, bug #371839. Removal in a month.
-x11-misc/keytouch
-x11-misc/keytouch-editor
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (22 Jun 2014)
 # Breaks gitg-0.3.2 (most recent released version), bug #514468
@@ -340,18 +333,9 @@ dev-java/ibm-jdk-bin:1.5
 >=x11-drivers/xf86-input-evdev-2.8.99
 >=x11-drivers/xf86-input-synaptics-1.7.99
 
-# Pacho Ramos <pacho@gentoo.org> (11 May 2014)
-# Dead for ages, now in mjpegtools, bug #492886
-# Removal in a month.
-media-video/y4mscaler
-
 # Justin Lecher <jlec@gentoo.org> (07 May 2014)
 # Still doesn't work as expected
 =sci-chemistry/ccpn-2.4.0_p140425-r1
-
-# Brian Evans <grknight@gentoo.org> (05 May 2014)
-# Mask erroenous slot for removal in 30 days
-dev-db/mysql++:3
 
 # Tom Wijsman <TomWij@gentoo.org> (03 May 2014)
 # Needs to be further tested and revised by both Java and Ruby herds.
@@ -368,19 +352,9 @@ dev-db/mysql++:3
 # http://mate-desktop.org/blog/2014-03-11-mate-desktop-singing-the-bluez
 net-wireless/mate-bluetooth
 
-# Mike Frysinger <vapier@gentoo.org> (28 Apr 2014)
-# Use app-emulation/qemu instead.  It has USE=static-user to support building
-# static user helpers.  See #508098 for more info. Removal in a month
-app-emulation/qemu-user
-
 # Tim Harder <radhermit@gentoo.org> (25 Apr 2014)
 # Mask development releases
 =dev-libs/protobuf-c-1.0.0*
-
-# Mike Gilbert <floppym@gentoo.org> (23 Apr 2014)
-# Unused python library. Should have been removed with the moz* packages.
-# Removal in 30 days.
-dev-python/manifestdestiny
 
 # Matti Bickel <mabi@gentoo.org> (22 Apr 2014)
 # Masked slotted lua for testing
@@ -389,11 +363,6 @@ app-admin/eselect-lua
 =dev-lang/lua-5.1.5-r100
 =dev-lang/lua-5.2.3
 =dev-lang/lua-5.2.3-r1
-
-# Samuli Suominen <ssuominen@gentoo.org> (12 Apr 2014)
-# Dead upstream, unused in gentoo-x86.
-# Removal in 30 days wrt bug #380193
-dev-cpp/libsexymm
 
 # Patrick Lauer <patrick@gentoo.org> (09 Apr 2014)
 # Dead upstream, has known dataloss bugs.
@@ -474,13 +443,6 @@ www-plugins/chrome-binary-plugins:unstable
 # until rest of the year.
 lxde-base/lxpolkit
 
-# Tom Wijsman <TomWij@gentoo.org> (19 Feb 2014)
-# Masked for removal in 30 days, as this is an old revision that stuck behind;
-# however we are not sure if it is kept for a reason, if it is then please let
-# me know such that we can continue to keep it around. Guess nobody even still
-# uses this package either, but that's for another day...
-=dev-java/jikes-1.22-r1
-
 # Tim Harder <radhermit@gentoo.org> (04 Feb 2014)
 # Mask development releases
 =media-sound/lilypond-2.19*
@@ -557,12 +519,6 @@ games-emulation/mupen64plus-ui-console
 games-emulation/mupen64plus-video-glide64mk2
 games-emulation/mupen64plus-video-rice
 games-emulation/m64py
-
-# Doug Goldstein <cardoe@gentoo.org> (30 Nov 2013)
-# Masked for removal in 30 days. please upgrade to >=0.26
-<media-tv/mythtv-0.26
-<media-plugins/mythplugins-0.26
-<www-apps/mythweb-0.26
 
 # Ben de Groot <yngwin@gentoo.org> (11 Nov 2013)
 # Mask older roboto versions to give users a regular upgrade path
@@ -737,17 +693,6 @@ app-text/cuneiform
 # 2.5.* has known security and other issues due to an affected
 # bundled ffmpeg, see bugs #446468 and #444262.
 <media-video/avidemux-2.6.2
-
-# Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
-# Unsupported and full of bundled libs. Only left
-# for people who don't have python-3.3 yet.
-# Will be removed once python-3.3 and >=blender-2.66 enter ~arch.
-=media-gfx/blender-2.64a
-media-gfx/yablex
-
-# Davide Pesavento <pesa@gentoo.org> (02 Mar 2013)
-# Depends on blender, which is masked.
-media-gfx/yafaray
 
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development

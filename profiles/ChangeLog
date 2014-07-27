@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9260 2014/07/27 09:22:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9261 2014/07/27 10:45:44 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jul 2014; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Drop obsolete entries
 
   27 Jul 2014; Alexis Ballier <aballier@gentoo.org> arch/amd64/ChangeLog,
   arch/amd64/use.mask, arch/x86/ChangeLog, arch/x86/use.mask, base/ChangeLog,

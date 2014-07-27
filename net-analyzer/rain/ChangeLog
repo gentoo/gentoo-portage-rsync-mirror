@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rain
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rain/ChangeLog,v 1.10 2014/07/16 22:14:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rain/ChangeLog,v 1.11 2014/07/27 10:52:45 phajdan.jr Exp $
+
+  26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> rain-1.2.9_beta1.ebuild:
+  x86 stable wrt bug #517268
 
   16 Jul 2014; Jeroen Roovers <jer@gentoo.org> rain-1.2.9_beta1.ebuild,
   +files/rain-1.2.9_beta1-gentoo.patch, metadata.xml:
