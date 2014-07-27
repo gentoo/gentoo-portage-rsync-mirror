@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/evoluspencil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/evoluspencil/ChangeLog,v 1.8 2014/07/22 19:16:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/evoluspencil/ChangeLog,v 1.9 2014/07/27 19:44:14 kensington Exp $
+
+  27 Jul 2014; Michael Palimaka <kensington@gentoo.org>
+  -evoluspencil-2.0.4.ebuild, -files/evoluspencil-2.0.4-exportpng.patch:
+  Remove old.
 
   22 Jul 2014; Pacho Ramos <pacho@gentoo.org> evoluspencil-2.0.5.ebuild:
   amd64/x86 stable, bug #507314
