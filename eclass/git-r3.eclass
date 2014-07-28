@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.45 2014/07/07 14:41:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.47 2014/07/28 14:13:50 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -114,7 +114,8 @@ fi
 # @DESCRIPTION:
 # URIs to the repository, e.g. git://foo, https://foo. If multiple URIs
 # are provided, the eclass will consider them as fallback URIs to try
-# if the first URI does not work.
+# if the first URI does not work. For supported URI syntaxes, read up
+# the manpage for git-clone(1).
 #
 # It can be overriden via env using ${PN}_LIVE_REPO variable.
 #
@@ -513,7 +514,7 @@ git-r3_fetch() {
 		local fetch_command=( git fetch "${r}" )
 		local clone_type=${EGIT_CLONE_TYPE}
 
-		if [[ ${r} == https://* ]] && ! has_version 'dev-vcs/git[curl]'; then
+		if [[ ${r} == https://* ]] && ! ROOT=/ has_version 'dev-vcs/git[curl]'; then
 			eerror "git-r3: fetching from https:// requested. In order to support https,"
 			eerror "dev-vcs/git needs to be built with USE=curl. Example solution:"
 			eerror
