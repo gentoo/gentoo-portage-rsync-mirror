@@ -5,4 +5,7 @@
 <upstream>
   <remote-id type="cpe">cpe:/a:gnu:coreutils</remote-id>
 </upstream>
+<use>
+  <flag name='multicall'>Build all tools into a single `coreutils` program akin to busybox to save space</flag>
+</use>
 </pkgmetadata>
