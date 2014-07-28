@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.293 2014/07/27 15:00:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.294 2014/07/28 02:43:04 rich0 Exp $
+
+  28 Jul 2014; Richard Freeman <rich0@gentoo.org> systemd-215-r3.ebuild:
+  amd64 stable - 517120
 
   27 Jul 2014; Mike Gilbert <floppym@gentoo.org> systemd-215-r3.ebuild,
   systemd-9999.ebuild:
