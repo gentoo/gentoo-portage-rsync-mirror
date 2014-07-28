@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.2 2014/07/11 08:21:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.3 2014/07/28 21:19:52 pesa Exp $
 
 # @ECLASS: qmake-utils.eclass
 # @MAINTAINER:
@@ -215,9 +215,11 @@ eqmake5() {
 		-makefile \
 		QMAKE_AR="$(tc-getAR) cqs" \
 		QMAKE_CC="$(tc-getCC)" \
+		QMAKE_LINK_C="$(tc-getCC)" \
+		QMAKE_LINK_C_SHLIB="$(tc-getCC)" \
 		QMAKE_CXX="$(tc-getCXX)" \
 		QMAKE_LINK="$(tc-getCXX)" \
-		QMAKE_LINK_C="$(tc-getCC)" \
+		QMAKE_LINK_SHLIB="$(tc-getCXX)" \
 		QMAKE_OBJCOPY="$(tc-getOBJCOPY)" \
 		QMAKE_RANLIB= \
 		QMAKE_STRIP= \
