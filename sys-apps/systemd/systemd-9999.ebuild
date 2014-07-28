@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.129 2014/07/27 15:00:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.130 2014/07/28 03:36:10 floppym Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ inherit git-r3
 #endif
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
-PYTHON_COMPAT=( python{2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 inherit autotools-utils bash-completion-r1 fcaps linux-info multilib \
 	multilib-minimal pam python-single-r1 systemd toolchain-funcs udev \
 	user
@@ -25,9 +25,9 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acl audit cryptsetup doc elfutils +firmware-loader gcrypt gudev http
-	introspection kdbus +kmod lzma pam policykit python qrcode +seccomp selinux
-	ssl test vanilla"
+IUSE="acl audit cryptsetup curl doc elfutils +firmware-loader gcrypt gudev http
+	introspection kdbus +kmod lz4 lzma pam policykit python qrcode +seccomp
+	selinux ssl test vanilla"
 
 MINKV="3.8"
 
@@ -36,6 +36,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	acl? ( sys-apps/acl:0= )
 	audit? ( >=sys-process/audit-2:0= )
 	cryptsetup? ( >=sys-fs/cryptsetup-1.6:0= )
+	curl? ( net-misc/curl:0= )
 	elfutils? ( >=dev-libs/elfutils-0.158:0= )
 	gcrypt? ( >=dev-libs/libgcrypt-1.4.5:0=[${MULTILIB_USEDEP}] )
 	gudev? ( >=dev-libs/glib-2.34.3:2=[${MULTILIB_USEDEP}] )
@@ -45,6 +46,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	)
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1:0= )
 	kmod? ( >=sys-apps/kmod-15:0= )
+	lz4? ( >=app-arch/lz4-0_p119:0=[${MULTILIB_USEDEP}] )
 	lzma? ( >=app-arch/xz-utils-5.0.5-r1:0=[${MULTILIB_USEDEP}] )
 	pam? ( virtual/pam:= )
 	python? ( ${PYTHON_DEPS} )
@@ -210,6 +212,7 @@ multilib_src_configure() {
 		$(multilib_native_use_enable acl)
 		$(multilib_native_use_enable audit)
 		$(multilib_native_use_enable cryptsetup libcryptsetup)
+		$(multilib_native_use_enable curl libcurl)
 		$(multilib_native_use_enable doc gtk-doc)
 		$(multilib_native_use_enable elfutils)
 		$(use_enable gcrypt)
@@ -219,6 +222,7 @@ multilib_src_configure() {
 		$(multilib_native_use_enable introspection)
 		$(use_enable kdbus)
 		$(multilib_native_use_enable kmod)
+		$(use_enable lz4)
 		$(use_enable lzma xz)
 		$(multilib_native_use_enable pam)
 		$(multilib_native_use_enable policykit polkit)
@@ -235,6 +239,7 @@ multilib_src_configure() {
 		$(multilib_native_enable binfmt)
 		$(multilib_native_enable bootchart)
 		$(multilib_native_enable coredump)
+		$(multilib_native_enable firstboot)
 		$(multilib_native_enable hostnamed)
 		$(multilib_native_enable localed)
 		$(multilib_native_enable logind)
