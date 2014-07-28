@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.1.13.ebuild,v 1.2 2014/06/14 10:57:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.1.13.ebuild,v 1.3 2014/07/28 13:06:53 zlogene Exp $
 
 EAPI="4"
 inherit eutils multilib versionator user
@@ -11,7 +11,7 @@ SRC_URI="http://www.dbmail.org/download/$(get_version_component_range 1-2)/${P}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="ldap sieve +sqlite ssl static"
 
 DEPEND="dev-db/libzdb
