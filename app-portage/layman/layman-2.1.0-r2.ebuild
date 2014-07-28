@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.1.0-r1.ebuild,v 1.1 2014/07/27 03:17:20 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.1.0-r2.ebuild,v 1.1 2014/07/28 19:51:26 twitch153 Exp $
 
 EAPI="5"
 
@@ -18,8 +18,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~s390 ~sh ~x86 ~ppc-aix ~x86-fbsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="bazaar cvs darcs +git mercurial subversion test"
 
-DEPEND="test? ( dev-vcs/subversion )
-	app-text/asciidoc"
+DEPEND="test? ( dev-vcs/subversion )"
 
 RDEPEND="
 	bazaar? ( dev-vcs/bzr )
