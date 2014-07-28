@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/freecad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.19 2014/04/24 13:33:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.20 2014/07/28 15:40:47 xmw Exp $
+
+  28 Jul 2014; Michael Weber <xmw@gentoo.org> freecad-0.13.1830-r1.ebuild:
+  Add dev-qt/designer:4 dependency (thanks Rafael Lorandi, bug 513148).
 
   24 Apr 2014; Michael Weber <xmw@gentoo.org> -freecad-0.12.5284-r2.ebuild,
   -freecad-0.12.5284-r3.ebuild, -freecad-0.13.1830.ebuild,
