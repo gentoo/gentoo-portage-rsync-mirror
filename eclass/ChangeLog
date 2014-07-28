@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1327 2014/07/28 14:13:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1328 2014/07/28 20:59:07 axs Exp $
+
+  28 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +mozconfig-v4.eclass:
+  committed new mozconfig eclass for mozilla31 and later
 
   28 Jul 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Mention git-clone man page for URI syntax, bug #511636.
