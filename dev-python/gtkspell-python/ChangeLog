@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gtkspell-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/ChangeLog,v 1.25 2014/07/23 15:15:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/ChangeLog,v 1.26 2014/07/28 13:43:32 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
+  gtkspell-python-2.25.3-r1.ebuild:
+  Stable for ppc, wrt bug #512012
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
   gtkspell-python-2.25.3-r1.ebuild:

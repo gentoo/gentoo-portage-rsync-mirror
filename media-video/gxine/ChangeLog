@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gxine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.131 2014/07/24 18:53:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.132 2014/07/28 13:48:36 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gxine-0.5.907-r1.ebuild:
+  Stable for ppc, wrt bug #512012
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> gxine-0.5.907-r1.ebuild,
   gxine-0.5.907.ebuild:

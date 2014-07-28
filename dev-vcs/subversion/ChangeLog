@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.176 2014/07/24 19:23:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.177 2014/07/28 13:44:20 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> subversion-1.8.9.ebuild:
+  Stable for ppc, wrt bug #512012
 
   24 Jul 2014; Markus Meier <maekke@gentoo.org> subversion-1.7.17.ebuild:
   arm stable, bug #500482

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomeprintui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/ChangeLog,v 1.181 2014/07/23 15:17:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/ChangeLog,v 1.182 2014/07/28 13:44:48 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
+  libgnomeprintui-2.18.6-r1.ebuild:
+  Stable for ppc, wrt bug #512012
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
   libgnomeprintui-2.18.6-r1.ebuild:

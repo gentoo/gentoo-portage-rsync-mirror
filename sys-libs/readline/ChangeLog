@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.211 2014/07/18 10:56:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.212 2014/07/28 13:49:34 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> readline-6.2_p5-r1.ebuild:
+  Stable for ppc, wrt bug #512012
 
   18 Jul 2014; Pacho Ramos <pacho@gentoo.org> readline-6.2_p5-r1.ebuild:
   x86 stable, bug #513802

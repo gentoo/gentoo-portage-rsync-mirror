@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fdk-aac/fdk-aac-0.1.3.ebuild,v 1.3 2014/07/23 15:19:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fdk-aac/fdk-aac-0.1.3.ebuild,v 1.4 2014/07/28 13:45:09 ago Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ LICENSE="FraunhoferFDK"
 SLOT="0"
 
 [[ ${PV} == *9999 ]] || \
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x64-macos"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x64-macos"
 IUSE="static-libs examples"
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all

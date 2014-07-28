@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.78 2014/07/23 15:15:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.79 2014/07/28 13:43:54 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> twisted-lore-13.0.0-r1.ebuild:
+  Stable for ppc, wrt bug #512012
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> twisted-lore-13.0.0-r1.ebuild:
   Stable for x86, wrt bug #512012

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/oniguruma
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.65 2014/07/18 10:52:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.66 2014/07/28 13:43:09 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> oniguruma-5.9.5.ebuild:
+  Stable for ppc, wrt bug #512012
 
   18 Jul 2014; Pacho Ramos <pacho@gentoo.org> oniguruma-5.9.5.ebuild:
   amd64/x86 stable, bug #516312

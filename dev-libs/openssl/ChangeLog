@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.569 2014/07/26 14:35:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.570 2014/07/28 13:43:11 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8z_p1-r2.ebuild,
+  openssl-1.0.1h-r2.ebuild:
+  Stable for ppc, wrt bug #512012
 
   26 Jul 2014; Michał Górny <mgorny@gentoo.org> openssl-1.0.1h-r3.ebuild:
   Add a note not to stabilize -r3.

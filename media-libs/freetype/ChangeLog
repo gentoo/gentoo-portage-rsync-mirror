@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.402 2014/07/22 07:40:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.403 2014/07/28 13:45:11 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> freetype-2.5.3-r1.ebuild:
+  Stable for ppc, wrt bug #512012
 
   22 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> freetype-2.5.3.ebuild,
   freetype-2.5.3-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.25.3-r1.ebuild,v 1.4 2014/07/23 15:14:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.25.3-r1.ebuild,v 1.5 2014/07/28 13:43:26 ago Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	gnome-base/gnome-common"
 # eautoreconf needs gnome-base/gnome-common
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 

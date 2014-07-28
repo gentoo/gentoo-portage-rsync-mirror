@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.97 2014/07/14 15:05:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.98 2014/07/28 13:44:10 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cppunit-1.13.2-r2.ebuild:
+  Stable for ppc, wrt bug #512012
 
   14 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> cppunit-1.13.2-r2.ebuild:
   Stable on arm, wrt bug #516344

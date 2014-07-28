@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.118 2014/07/18 11:10:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.119 2014/07/28 13:45:37 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libcaca-0.99_beta18-r2.ebuild:
+  Stable for ppc, wrt bug #512012
 
   18 Jul 2014; Pacho Ramos <pacho@gentoo.org> libcaca-0.99_beta18-r2.ebuild:
   amd64/x86 stable, bug #516222

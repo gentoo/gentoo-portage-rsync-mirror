@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.94 2014/07/23 15:19:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.95 2014/07/28 13:45:13 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gd-2.0.35-r4.ebuild:
+  Stable for ppc, wrt bug #512012
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gd-2.0.35-r4.ebuild:
   Stable for x86, wrt bug #512012

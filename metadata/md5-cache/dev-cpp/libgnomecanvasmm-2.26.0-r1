@@ -4,10 +4,10 @@ DESCRIPTION=C++ bindings for libgnomecanvas
 EAPI=5
 HOMEPAGE=http://www.gtkmm.org
 IUSE=doc examples
-KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd
+KEYWORDS=~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd
 LICENSE=LGPL-2.1
 RDEPEND=>=gnome-base/libgnomecanvas-2.6 >=dev-cpp/gtkmm-2.4:2.4
 SLOT=2.6
 SRC_URI=mirror://gnome/sources/libgnomecanvasmm/2.26/libgnomecanvasmm-2.26.0.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=5cf8e4fd0cc1d4409aa945e0f5bc3035
+_md5_=bbe66fe050bea4ea1d42652f659bebfa

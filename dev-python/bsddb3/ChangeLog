@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.106 2014/07/27 00:37:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.107 2014/07/28 13:43:16 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> bsddb3-6.0.1.ebuild:
+  Stable for ppc, wrt bug #512012
 
 *bsddb3-6.1.0 (27 Jul 2014)
 

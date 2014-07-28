@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.727 2014/07/23 15:38:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.728 2014/07/28 13:50:00 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gtk+-2.24.24.ebuild,
+  gtk+-3.12.2.ebuild:
+  Stable for ppc, wrt bug #512012
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gtk+-2.24.24.ebuild,
   gtk+-3.12.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.337 2014/02/22 22:56:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.338 2014/07/28 13:48:44 ago Exp $
+
+  28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> pidgin-2.10.9-r1.ebuild:
+  Stable for ppc, wrt bug #512012
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> pidgin-2.10.9-r1.ebuild:
   Fix wrong commit, bug 502160
