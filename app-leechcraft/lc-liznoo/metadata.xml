@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>leechcraft</herd>
+	<use>
+		<flag name="systemd">Pull in correct UPower dependencies for systemd and non-systemd users.</flag>
+	</use>
 </pkgmetadata>

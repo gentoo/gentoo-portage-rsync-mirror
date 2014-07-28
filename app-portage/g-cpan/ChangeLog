@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.79 2014/07/24 09:46:59 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.80 2014/07/28 16:05:41 zlogene Exp $
+
+  28 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> g-cpan-0.16.5.ebuild:
+  amd64 stable wrt bug #517894
 
   24 Jul 2014; Tobias Klausmann <klausman@gentoo.org> g-cpan-0.16.5.ebuild:
   Stable on alpha, bug #517894

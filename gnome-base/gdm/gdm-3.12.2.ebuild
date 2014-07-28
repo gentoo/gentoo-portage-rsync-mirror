@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.12.2.ebuild,v 1.3 2014/07/23 15:16:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.12.2.ebuild,v 1.4 2014/07/28 16:25:33 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -223,10 +223,4 @@ pkg_postinst() {
 	eend ${ret}
 
 	readme.gentoo_print_elog
-
-	if [[ -f "/etc/X11/gdm/gdm.conf" ]]; then
-		elog "You had /etc/X11/gdm/gdm.conf which is the old configuration"
-		elog "file.  It has been moved to /etc/X11/gdm/gdm-pre-gnome-2.16"
-		mv /etc/X11/gdm/gdm.conf /etc/X11/gdm/gdm-pre-gnome-2.16
-	fi
 }

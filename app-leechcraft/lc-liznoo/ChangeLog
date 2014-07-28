@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-liznoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-liznoo/ChangeLog,v 1.15 2014/07/27 18:00:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-liznoo/ChangeLog,v 1.16 2014/07/28 16:19:56 ssuominen Exp $
+
+  28 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> lc-liznoo-0.6.60.ebuild,
+  lc-liznoo-0.6.65.ebuild, lc-liznoo-9999.ebuild, metadata.xml:
+  Fix handling of UPower dependencies to be exact.
 
   27 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> lc-liznoo-0.6.60.ebuild,
   lc-liznoo-0.6.65.ebuild, lc-liznoo-9999.ebuild:
