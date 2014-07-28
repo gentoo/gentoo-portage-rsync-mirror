@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.10 2014/02/11 20:34:02 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.11 2014/07/28 18:40:02 maksbotan Exp $
 
 EAPI="5"
 
@@ -14,6 +14,7 @@ IUSE="de"
 
 RDEPEND="
 		~app-leechcraft/lc-blogique-${PV}
+		~app-leechcraft/lc-eleeminator-${PV}
 		~app-leechcraft/lc-popishu-${PV}
 		~app-leechcraft/lc-monocle-${PV}
 		~app-leechcraft/lc-hotstreams-${PV}
