@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.236 2014/04/16 16:01:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.237 2014/07/28 17:33:53 calchan Exp $
+
+*R-3.1.1 (28 Jul 2014)
+
+  28 Jul 2014; Denis Dupeyron <calchan@gentoo.org> +R-3.1.1.ebuild:
+  Version bump, bug #517098.
 
   16 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> R-3.0.1.ebuild,
   R-3.0.3.ebuild, R-3.1.0.ebuild:
