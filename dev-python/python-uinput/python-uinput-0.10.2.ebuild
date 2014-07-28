@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-uinput/python-uinput-0.10.1.ebuild,v 1.2 2014/07/28 07:05:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-uinput/python-uinput-0.10.2.ebuild,v 1.1 2014/07/28 07:05:21 jlec Exp $
 
 EAPI=5
 
@@ -21,9 +21,6 @@ DEPEND="virtual/udev"
 RDEPEND="${DEPEND}"
 
 python_prepare_all() {
-	sed \
-		-e "s:libudev.so.0:libudev.so:g" \
-		-i setup.py || die
 	rm libsuinput/src/libudev.h || die
 	distutils-r1_python_prepare_all
 }
