@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.13.3.ebuild,v 1.1 2014/07/16 17:40:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.13.3.ebuild,v 1.2 2014/07/28 08:02:48 kensington Exp $
 
 EAPI=5
 
@@ -32,6 +32,11 @@ DEPEND="${RDEPEND}
 "
 
 RESTRICT="test"
+
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
+	kde4-base_pkg_setup
+}
 
 src_configure() {
 	local mycmakeargs=(

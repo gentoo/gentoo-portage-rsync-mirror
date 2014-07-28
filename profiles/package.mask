@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15933 2014/07/27 13:26:11 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15934 2014/07/28 08:04:30 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -50,6 +50,7 @@ net-dialup/gnome-ppp
 media-plugins/vdr-dxr3
 media-video/dxr3config
 media-video/em8300-libraries
+media-video/em8300-modules
 
 # Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
 # Not building since 2012 (#423799). Removal in a
