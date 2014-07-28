@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/mp3splt-gtk-0.9.1a.ebuild,v 1.1 2014/07/26 21:39:27 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/mp3splt-gtk-0.9.1a.ebuild,v 1.2 2014/07/28 14:33:14 sping Exp $
 
 EAPI=4
 inherit eutils versionator autotools multilib
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="audacious doc gtk3 gnome gstreamer nls"
 
-RDEPEND="~media-libs/libmp3splt-0.9.1
+RDEPEND="~media-libs/libmp3splt-0.9.1a
 	gtk3? ( x11-libs/gtk+:3
 		audacious? ( >=media-sound/audacious-3.0 ) )
 	!gtk3? ( >=x11-libs/gtk+-2.18:2
