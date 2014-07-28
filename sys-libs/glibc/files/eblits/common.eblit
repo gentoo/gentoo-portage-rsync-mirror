@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.35 2014/06/14 08:07:10 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.36 2014/07/28 05:46:16 vapier Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -206,15 +206,8 @@ want_nptl() {
 	want_tls || return 1
 	use nptl || return 1
 
-	# Only list the arches that cannot do NPTL
-	case $(tc-arch) in
-		m68k) return 1;;
-		sparc)
-			# >= v9 is needed for nptl.
-			[[ ${PROFILE_ARCH} == "sparc" ]] && return 1
-		;;
-	esac
-
+	# Older versions of glibc had incomplete arch support for nptl.
+	# But if you're building those now, you can handle USE=nptl yourself.
 	return 0
 }
 
