@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.206 2014/06/16 16:48:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.207 2014/07/28 19:13:31 polynomial-c Exp $
+
+*tar-1.28 (28 Jul 2014)
+
+  28 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> -tar-1.27-r2.ebuild,
+  -tar-1.27.1.ebuild, +tar-1.28.ebuild,
+  -files/tar-1.27-acl_configure_fix.patch:
+  Version bump. Removed old.
 
   16 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> tar-1.27.1-r2.ebuild:
   ppc/ppc64 stable wrt bug #496212

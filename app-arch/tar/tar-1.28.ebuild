@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.27-r2.ebuild,v 1.2 2014/01/18 01:55:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.28.ebuild,v 1.1 2014/07/28 19:13:31 polynomial-c Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit flag-o-matic eutils
 
@@ -23,9 +23,6 @@ DEPEND="${RDEPEND}
 	xattr? ( sys-apps/attr )"
 
 src_prepare() {
-	EPATCH_OPTS="-Z" \
-	epatch "${FILESDIR}"/${P}-acl_configure_fix.patch
-
 	if ! use userland_GNU ; then
 		sed -i \
 			-e 's:/backup\.sh:/gbackup.sh:' \
@@ -49,13 +46,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	local p=$(usex userland_GNU "" "g")
 	if [[ -z ${p} ]] ; then
 		# a nasty yet required piece of baggage
 		exeinto /etc
-		doexe "${FILESDIR}"/rmt || die
+		doexe "${FILESDIR}"/rmt
 	fi
 
 	# autoconf looks for gtar before tar (in configure scripts), hence
@@ -67,13 +64,13 @@ src_install() {
 	fi
 
 	dodoc AUTHORS ChangeLog* NEWS README* THANKS
-	newman "${FILESDIR}"/tar.1-${PV} ${p}tar.1
-	mv "${ED}"/usr/sbin/${p}backup{,-tar}
-	mv "${ED}"/usr/sbin/${p}restore{,-tar}
+	newman "${FILESDIR}"/tar.1-1.27 ${p}tar.1
+	mv "${ED}"/usr/sbin/${p}backup{,-tar} || die
+	mv "${ED}"/usr/sbin/${p}restore{,-tar} || die
 
 	if use minimal ; then
 		find "${ED}"/etc "${ED}"/*bin/ "${ED}"/usr/*bin/ \
 			-type f -a '!' '(' -name tar -o -name ${p}tar ')' \
-			-delete
+			-delete || die
 	fi
 }
