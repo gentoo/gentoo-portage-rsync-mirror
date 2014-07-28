@@ -1,6 +1,9 @@
 # ChangeLog for www-client/phantomjs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/ChangeLog,v 1.13 2014/03/04 21:39:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/ChangeLog,v 1.14 2014/07/28 05:19:15 vapier Exp $
+
+  28 Jul 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Drop myself as maintainer.
 
   04 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   phantomjs-1.9.7.ebuild:
