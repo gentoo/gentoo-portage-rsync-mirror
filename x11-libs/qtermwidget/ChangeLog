@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qtermwidget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtermwidget/ChangeLog,v 1.6 2014/06/08 12:41:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtermwidget/ChangeLog,v 1.7 2014/07/28 18:29:16 maksbotan Exp $
+
+*qtermwidget-9999 (28 Jul 2014)
+
+  28 Jul 2014; Maxim Koltsov <maksbotan@gentoo.org> +qtermwidget-9999.ebuild:
+  Add live ebuild, acked by Qt team
 
   08 Jun 2014; Manuel Rüger <mrueg@gentoo.org> qtermwidget-0.4.0.ebuild:
   Add ~arm keyword. Tested with radxa rock (armv7).

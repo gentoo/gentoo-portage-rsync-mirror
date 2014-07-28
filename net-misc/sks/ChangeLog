@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/ChangeLog,v 1.10 2014/05/05 22:02:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/ChangeLog,v 1.11 2014/07/28 18:04:07 k_f Exp $
+
+  28 Jul 2014;  <kristianf@gentoo.org> metadata.xml:
+  Taking over full maintainership instead of through proxy-maint
 
 *sks-1.1.5 (05 May 2014)
 

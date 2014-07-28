@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.56 2014/03/29 14:19:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.57 2014/07/28 18:06:33 graaff Exp $
+
+*ruby-mode-2.1.2 (28 Jul 2014)
+
+  28 Jul 2014; Hans de Graaff <graaff@gentoo.org> +ruby-mode-2.1.2.ebuild,
+  +files/50ruby-mode-gentoo-2.1.2.el:
+  Version bump. Add support for Rakefiles to the sitefile, fixing bug 445368.
 
 *ruby-mode-2.1.1 (29 Mar 2014)
 
