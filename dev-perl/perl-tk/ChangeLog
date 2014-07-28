@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.92 2014/06/18 06:50:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.93 2014/07/28 15:21:47 klausman Exp $
+
+  28 Jul 2014; Tobias Klausmann <klausman@gentoo.org> perl-tk-804.32.0.ebuild:
+  Stable on alpha, bug #518032
 
 *perl-tk-804.32.0 (18 Jun 2014)
 
