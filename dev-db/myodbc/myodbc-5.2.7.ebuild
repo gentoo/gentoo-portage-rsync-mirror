@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-5.2.6.ebuild,v 1.1 2014/05/04 19:37:13 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-5.2.7.ebuild,v 1.1 2014/07/29 03:35:31 grknight Exp $
 
 EAPI=5
 inherit cmake-utils eutils flag-o-matic versionator
@@ -21,7 +21,7 @@ IUSE=""
 
 RDEPEND="
 	dev-db/unixODBC
-	>=virtual/mysql-4.1
+	>=virtual/mysql-5.5
 "
 DEPEND="${DEPEND} ${RDEPEND}"
 S=${WORKDIR}/${MY_P}
@@ -48,7 +48,7 @@ src_configure() {
 		-DMYSQL_CXX_LINKAGE=0
 		-DWITH_UNIXODBC=1
 		-DRPM_BUILD=1
-		-DMYSQL_LIB="$(mysql_config --variable=pkglibdir)/libmysqlclient_r.so"
+		-DMYSQLCLIENT_LIB_NAME="libmysqlclient_r.so"
 	)
 
 	cmake-utils_src_configure
@@ -62,12 +62,14 @@ src_install() {
 		einfo "Building $i"
 			sed \
 			-e "s,__PN__,${DRIVER_NAME},g" \
-			-e "s,__PF__,${PF},g" \
-			-e "s,libmyodbc3.so,libmyodbc${SLOT:0:1}.so,g" \
+			-e "s,__PF__,${MAJOR},g" \
+			-e "s,libmyodbc3.so,libmyodbc${SLOT:0:1}a.so,g" \
 			>"${D}"/usr/share/${PN}-${SLOT}/${i} \
 			<"${FILESDIR}"/${i}.m4 \
 			|| die "Failed to build $i"
 	done;
+	mv "${D}/usr/bin/myodbc-installer" \
+		"${D}/usr/bin/myodbc-installer-${MAJOR}" || die "failed to move slotted binary"
 }
 
 pkg_config() {
@@ -107,4 +109,5 @@ pkg_postinst() {
 	elog "to configure the MySQL ODBC drivers and sources:"
 	elog "emerge --config =${CATEGORY}/${PF}"
 	elog "Please note that the driver name used to form the DSN now includes the SLOT."
+	elog "The myodbc-install utility is installed as myodbc-install-${MAJOR}"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Version-Requirements
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.22 2014/07/16 18:31:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.23 2014/07/29 03:46:35 patrick Exp $
+
+  29 Jul 2014; Patrick Lauer <patrick@gentoo.org>
+  Version-Requirements-0.101.22-r1.ebuild:
+  Stable for amd64 x86 to make dependency resolution more working
 
 *Version-Requirements-0.101.22-r1 (16 Jul 2014)
 

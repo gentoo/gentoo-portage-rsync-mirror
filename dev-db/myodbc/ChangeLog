@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/myodbc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.35 2014/05/05 03:03:50 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.36 2014/07/29 03:35:31 grknight Exp $
+
+*myodbc-5.2.7 (29 Jul 2014)
+
+  29 Jul 2014; Brian Evans <grknight@gentoo.org> +myodbc-5.2.7.ebuild,
+  -myodbc-5.2.6.ebuild:
+  Version bump, fix slotting of installer utility, and bump required mysql
+  version. Remove old
 
 *myodbc-5.2.6 (04 May 2014)
 
