@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/xxv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.20 2013/05/05 12:37:25 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.21 2014/07/29 15:56:49 dilfridge Exp $
+
+  29 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> xxv-1.6.1.ebuild:
+  Use perl virtual
 
   05 May 2013; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-1.6.1.ebuild:
   moved dev-db/mysql -> virtual/mysql, thx to negril@IRC.gentoo-vdr
@@ -169,4 +172,3 @@
   +files/xxv-1.0-logerror.patch, +files/xxvd-1.0.cfg, +files/xxv,
   +files/xxvd-logrotate, +metadata.xml, +xxv-1.0.ebuild:
   initial ebuild; find older versions on overlay vdr-testing
-

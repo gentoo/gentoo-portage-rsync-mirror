@@ -6,8 +6,8 @@ HOMEPAGE=http://www.jetmore.org/john/code/swaks
 IUSE=ssl
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
-RDEPEND=>=dev-lang/perl-5.8.8 >=dev-perl/Net-DNS-0.65 ssl? ( >=dev-perl/Net-SSLeay-1.35 ) >=virtual/perl-MIME-Base64-3.07 >=virtual/perl-Digest-MD5-2.39 >=virtual/perl-Time-HiRes-1.97 >=virtual/perl-Time-Local-1.19 >=dev-perl/Authen-NTLM-1.02 >=dev-perl/Authen-DigestMD5-0.04 perl-core/Digest-SHA
+RDEPEND=>=dev-lang/perl-5.8.8 >=dev-perl/Net-DNS-0.65 ssl? ( >=dev-perl/Net-SSLeay-1.35 ) >=virtual/perl-MIME-Base64-3.07 >=virtual/perl-Digest-MD5-2.39 >=virtual/perl-Time-HiRes-1.97 >=virtual/perl-Time-Local-1.19 >=dev-perl/Authen-NTLM-1.02 >=dev-perl/Authen-DigestMD5-0.04 virtual/perl-Digest-SHA
 SLOT=0
 SRC_URI=http://www.jetmore.org/john/code/swaks/swaks-20130209.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=cf9bea2757f419e8e40e033fc8f769b1
+_md5_=a1f8c61e949ceb1907816179c48b18b0

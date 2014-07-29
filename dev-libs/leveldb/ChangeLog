@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/leveldb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.20 2014/06/30 01:13:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.21 2014/07/29 15:52:40 blueness Exp $
+
+*leveldb-1.15.0-r1 (29 Jul 2014)
+
+  29 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/leveldb-1.9.0-memenv-so.patch, +leveldb-1.15.0-r1.ebuild:
+  Add patch for libmemenv.a with PIC, bug #505320
 
   30 Jun 2014; Anthony G. Basile <blueness@gentoo.org> -leveldb-1.10.0.ebuild,
   -leveldb-1.11.0.ebuild, -leveldb-1.12.0.ebuild, -leveldb-1.13.0.ebuild:

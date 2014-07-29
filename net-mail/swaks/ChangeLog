@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/swaks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.26 2014/04/19 10:06:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.27 2014/07/29 16:00:21 dilfridge Exp $
+
+  29 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  swaks-20130209.0-r1.ebuild, swaks-20130209.0.ebuild:
+  Use perl virtual
 
   19 Apr 2014; Eray Aslan <eras@gentoo.org> +files/swaks-perl-5.18.patch:
   Add missing patch

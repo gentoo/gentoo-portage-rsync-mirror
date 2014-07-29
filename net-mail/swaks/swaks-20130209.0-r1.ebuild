@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20130209.0-r1.ebuild,v 1.1 2014/04/19 09:34:36 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20130209.0-r1.ebuild,v 1.2 2014/07/29 16:00:20 dilfridge Exp $
 
 EAPI=5
 inherit eutils
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 		>=virtual/perl-Time-Local-1.19
 		>=dev-perl/Authen-NTLM-1.02
 		>=dev-perl/Authen-DigestMD5-0.04
-		perl-core/Digest-SHA"
+		virtual/perl-Digest-SHA"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-perl-5.18.patch

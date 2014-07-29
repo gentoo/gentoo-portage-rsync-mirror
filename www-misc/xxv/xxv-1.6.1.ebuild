@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.6.1.ebuild,v 1.7 2013/05/05 12:37:25 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.6.1.ebuild,v 1.8 2014/07/29 15:56:49 dilfridge Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ RDEPEND=">=media-video/vdr-1.2.6
 	virtual/perl-Getopt-Long
 	virtual/perl-MIME-Base64
 	virtual/perl-Time-HiRes
-	perl-core/IO-Compress
+	virtual/perl-IO-Compress
 	dev-perl/Config-Tiny
 	dev-perl/DateManip
 	dev-perl/DBD-mysql
