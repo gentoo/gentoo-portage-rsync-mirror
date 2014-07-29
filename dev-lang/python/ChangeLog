@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.766 2014/07/29 07:53:03 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.767 2014/07/29 22:51:43 chutzpah Exp $
+
+*python-2.7.8 (29 Jul 2014)
+
+  29 Jul 2014; Patrick McLean <chutzpah@gentoo.org> +python-2.7.8.ebuild:
+  Version bump.
 
 *python-3.2.5-r6 (29 Jul 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.32 2014/04/25 01:32:39 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.33 2014/07/29 22:49:09 robbat2 Exp $
+
+*mysql-5.6 (29 Jul 2014)
+
+  29 Jul 2014; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.6.ebuild:
+  Introduce MySQL 5.6 to the tree.
 
   25 Apr 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   mysql-5.5.ebuild:
