@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.128 2014/05/17 15:15:31 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.129 2014/07/29 11:01:27 jer Exp $
+
+  29 Jul 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix e-mail address.
 
   17 May 2014; Sven Vermeulen <swift@gentoo.org> vpnc-0.5.3_p527-r1.ebuild:
   Fix bug #509740 - Add USE=selinux dependency to sec-policy/selinux-vpn
