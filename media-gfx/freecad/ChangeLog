@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/freecad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.20 2014/07/28 15:40:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.21 2014/07/29 20:36:46 xmw Exp $
+
+*freecad-9999 (29 Jul 2014)
+*freecad-0.14.3702 (29 Jul 2014)
+
+  29 Jul 2014; Michael Weber <xmw@gentoo.org>
+  +files/freecad-0.14.3702-install-paths.patch, +freecad-0.14.3702.ebuild,
+  +freecad-9999.ebuild:
+  Add live ebuild (bug 501138) and version bump (bug 517790) w/o keywords for
+  testing reasons.
 
   28 Jul 2014; Michael Weber <xmw@gentoo.org> freecad-0.13.1830-r1.ebuild:
   Add dev-qt/designer:4 dependency (thanks Rafael Lorandi, bug 513148).
