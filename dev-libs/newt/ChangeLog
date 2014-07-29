@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.89 2014/07/14 16:48:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.90 2014/07/29 20:03:06 maekke Exp $
+
+  29 Jul 2014; Markus Meier <maekke@gentoo.org> newt-0.52.15.ebuild:
+  arm stable, bug #517822
 
   14 Jul 2014; Markos Chandras <hwoarang@gentoo.org> newt-0.52.15.ebuild:
   Add ~mips per #517046

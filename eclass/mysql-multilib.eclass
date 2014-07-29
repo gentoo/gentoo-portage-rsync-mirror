@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.1 2014/07/29 17:59:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.2 2014/07/29 20:24:00 robbat2 Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -24,7 +24,7 @@ MYSQL_EXTRAS=""
 # @DESCRIPTION:
 # The version of the MYSQL_EXTRAS repo to use to build mysql
 # Use "none" to disable it's use
-[[ ${MY_EXTRAS_VER} == "live" ]] && MYSQL_EXTRAS="git-2"
+[[ ${MY_EXTRAS_VER} == "live" ]] && MYSQL_EXTRAS="git-r3"
 
 inherit eutils flag-o-matic ${MYSQL_EXTRAS} mysql-cmake mysql_fx versionator \
 	toolchain-funcs user cmake-utils multilib-minimal
@@ -50,9 +50,9 @@ S="${WORKDIR}/mysql"
 
 [[ ${MY_EXTRAS_VER} == "latest" ]] && MY_EXTRAS_VER="20090228-0714Z"
 if [[ ${MY_EXTRAS_VER} == "live" ]]; then
-	EGIT_PROJECT=mysql-extras
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/mysql-extras.git"
-	RESTRICT="userpriv"
+	EGIT_CHECKOUT_DIR=${WORKDIR}/mysql-extras
+	EGIT_CLONE_TYPE=shallow
 fi
 
 # @ECLASS-VARIABLE: MYSQL_PV_MAJOR
@@ -385,7 +385,7 @@ mysql-multilib_src_unpack() {
 
 	unpack ${A}
 	# Grab the patches
-	[[ "${MY_EXTRAS_VER}" == "live" ]] && S="${WORKDIR}/mysql-extras" git-2_src_unpack
+	[[ "${MY_EXTRAS_VER}" == "live" ]] && S="${WORKDIR}/mysql-extras" git-r3_src_unpack
 
 	mv -f "${WORKDIR}/${MY_SOURCEDIR}" "${S}"
 }

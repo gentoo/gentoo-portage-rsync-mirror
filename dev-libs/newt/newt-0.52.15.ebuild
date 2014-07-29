@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.15.ebuild,v 1.8 2014/07/14 16:48:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.15.ebuild,v 1.9 2014/07/29 20:03:06 maekke Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="https://fedorahosted.org/releases/n/e/newt/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gpm tcl nls"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

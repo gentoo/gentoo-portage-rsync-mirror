@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.999 2014/07/29 14:07:50 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1000 2014/07/29 20:31:36 blueness Exp $
+
+  29 Jul 2014; Anthony G. Basile <blueness@gentoo.org> glibc-2.19-r1.ebuild:
+  Stable on ppc and ppc64, bug #518364
 
   29 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> glibc-2.19-r1.ebuild:
   amd64 stable wrt bug #518364

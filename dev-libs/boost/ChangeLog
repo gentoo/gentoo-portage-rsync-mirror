@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.319 2014/07/29 13:32:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.320 2014/07/29 20:06:14 zlogene Exp $
+
+  29 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> boost-1.52.0-r7.ebuild:
+  amd64 stable wrt bug #518488
 
 *boost-1.52.0-r7 (29 Jul 2014)
 
