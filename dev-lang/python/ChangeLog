@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.764 2014/07/18 13:48:30 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.765 2014/07/29 07:19:13 pinkbyte Exp $
+
+*python-3.3.5-r1 (29 Jul 2014)
+*python-3.2.5-r5 (29 Jul 2014)
+
+  29 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> -python-3.2.5-r4.ebuild,
+  +python-3.2.5-r5.ebuild, -python-3.3.5.ebuild, +python-3.3.5-r1.ebuild,
+  +files/python-3.2-CVE-2014-4616.patch, +files/python-3.3-CVE-2014-4616.patch:
+  Revision bump: add patch for CVE-2014-4616, bug #514686. Drop old revisions.
+  Acked by Python team
 
   18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> python-2.7.6.ebuild:
   Stable on alpha, bug #504742

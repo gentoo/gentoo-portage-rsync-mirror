@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/adonthell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.29 2014/05/15 16:57:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.30 2014/07/29 07:19:16 mr_bones_ Exp $
+
+  29 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> -adonthell-0.3.5.ebuild:
+  old
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> adonthell-0.3.5.ebuild,
   adonthell-0.3.5-r1.ebuild:

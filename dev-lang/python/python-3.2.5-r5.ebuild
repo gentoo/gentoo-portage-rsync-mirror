@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.5.ebuild,v 1.2 2014/05/10 01:44:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.5-r5.ebuild,v 1.1 2014/07/29 07:19:13 pinkbyte Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -9,18 +9,17 @@ WANT_LIBTOOL="none"
 inherit autotools eutils flag-o-matic multilib pax-utils python-utils-r1 toolchain-funcs multiprocessing
 
 MY_P="Python-${PV}"
-PATCHSET_VERSION="${PV}-0"
+PATCHSET_REVISION="1"
 
 DESCRIPTION="An interpreted, interactive, object-oriented programming language"
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.xz
-	http://dev.gentoo.org/~floppym/python/python-gentoo-patches-${PATCHSET_VERSION}.tar.xz
-	mirror://gentoo/python-gentoo-patches-${PATCHSET_VERSION}.tar.xz"
+	http://dev.gentoo.org/~floppym/python/python-gentoo-patches-${PV}-${PATCHSET_REVISION}.tar.xz"
 
 LICENSE="PSF-2"
-SLOT="3.3"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE="build doc elibc_uclibc examples gdbm hardened ipv6 +ncurses +readline sqlite +ssl +threads tk wininst +xml"
+SLOT="3.2"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+IUSE="build doc elibc_uclibc examples gdbm hardened ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
 
 # Do not add a dependency on dev-lang/python to this ebuild.
 # If you need to apply a patch which requires python for bootstrapping, please
@@ -28,7 +27,6 @@ IUSE="build doc elibc_uclibc examples gdbm hardened ipv6 +ncurses +readline sqli
 # patchset. See bug 447752.
 
 RDEPEND="app-arch/bzip2
-	app-arch/xz-utils
 	>=sys-libs/zlib-1.1.3
 	virtual/libffi
 	virtual/libintl
@@ -46,8 +44,7 @@ RDEPEND="app-arch/bzip2
 			dev-tcltk/tix
 		)
 		xml? ( >=dev-libs/expat-2.1 )
-	)
-	!!<sys-apps/sandbox-2.6-r1"
+	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=sys-devel/autoconf-2.65
@@ -59,18 +56,31 @@ PDEPEND="app-admin/eselect-python
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+	if [[ "${PV}" =~ ^3\.2(\.[1234])?(_pre)? ]]; then
+		rm -f "${EROOT}usr/$(get_libdir)/llibpython3.so"
+	else
+		die "Deprecated code not deleted"
+	fi
+}
+
 src_prepare() {
 	# Ensure that internal copies of expat, libffi and zlib are not used.
-	rm -fr Modules/expat
-	rm -fr Modules/_ctypes/libffi*
-	rm -fr Modules/zlib
+	rm -r Modules/expat
+	rm -r Modules/_ctypes/libffi*
+	rm -r Modules/zlib
 
-	if tc-is-cross-compiler; then
-		# Invokes BUILDPYTHON, which is built for the host arch
-		local EPATCH_EXCLUDE="*_regenerate_platform-specific_modules.patch"
+	local excluded_patches
+	if ! tc-is-cross-compiler; then
+		excluded_patches="*_all_crosscompile.patch"
 	fi
 
-	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
+	EPATCH_EXCLUDE="${excluded_patches}" EPATCH_SUFFIX="patch" \
+		epatch "${WORKDIR}/patches"
+
+	epatch "${FILESDIR}/python-3.2-CVE-2013-2099.patch"
+	epatch "${FILESDIR}/CVE-2013-4238_py33.patch"
+	epatch "${FILESDIR}/python-3.2-issue16248.patch"
 
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
 		Lib/distutils/command/install.py \
@@ -85,6 +95,9 @@ src_prepare() {
 
 	# Disable ABI flags.
 	sed -e "s/ABIFLAGS=\"\${ABIFLAGS}.*\"/:/" -i configure.ac || die "sed failed"
+
+	# bug #514686
+	epatch "${FILESDIR}/${PN}-3.2-CVE-2014-4616.patch"
 
 	epatch_user
 
@@ -133,6 +146,27 @@ src_configure() {
 		use hardened && replace-flags -O3 -O2
 	fi
 
+	# Run the configure scripts in parallel.
+	multijob_init
+
+	mkdir -p "${WORKDIR}"/{${CBUILD},${CHOST}}
+
+	if tc-is-cross-compiler; then
+		(
+		multijob_child_init
+		cd "${WORKDIR}"/${CBUILD} >/dev/null
+		OPT="-O1" CFLAGS="" CPPFLAGS="" LDFLAGS="" CC="" \
+		"${S}"/configure \
+			--{build,host}=${CBUILD} \
+			|| die "cross-configure failed"
+		) &
+		multijob_post_fork
+
+		# The configure script assumes it's buggy when cross-compiling.
+		export ac_cv_buggy_getaddrinfo=no
+		export ac_cv_have_long_long_format=yes
+	fi
+
 	# Export CXX so it ends up in /usr/lib/python3.X/config/Makefile.
 	tc-export CXX
 	# The configure script fails to use pkg-config correctly.
@@ -149,16 +183,14 @@ src_configure() {
 		dbmliborder+="${dbmliborder:+:}gdbm"
 	fi
 
-	BUILD_DIR="${WORKDIR}/${CHOST}"
-	mkdir -p "${BUILD_DIR}" || die
-	cd "${BUILD_DIR}" || die
-
-	ECONF_SOURCE="${S}" OPT="" \
+	cd "${WORKDIR}"/${CHOST}
+	ECONF_SOURCE=${S} OPT="" \
 	econf \
 		--with-fpectl \
 		--enable-shared \
 		$(use_enable ipv6) \
 		$(use_with threads) \
+		$(use_with wide-unicode) \
 		--infodir='${prefix}/share/info' \
 		--mandir='${prefix}/share/man' \
 		--with-computed-gotos \
@@ -173,13 +205,41 @@ src_configure() {
 		eerror "Please ensure that /dev/shm is mounted as a tmpfs with mode 1777."
 		die "Broken sem_open function (bug 496328)"
 	fi
+
+	if tc-is-cross-compiler; then
+		# Modify the Makefile.pre so we don't regen for the host/ one.
+		# We need to link the host python programs into $PWD and run
+		# them from here because the distutils sysconfig module will
+		# parse Makefile/etc... from argv[0], and we need it to pick
+		# up the target settings, not the host ones.
+		sed -i \
+			-e '1iHOSTPYTHONPATH = ./hostpythonpath:' \
+			-e '/^HOSTPYTHON/s:=.*:= ./hostpython:' \
+			-e '/^HOSTPGEN/s:=.*:= ./Parser/hostpgen:' \
+			Makefile{.pre,} || die "sed failed"
+	fi
+
+	multijob_finish
 }
 
 src_compile() {
-	# Avoid invoking pgen for cross-compiles.
-	touch Include/graminit.h Python/graminit.c || die
+	if tc-is-cross-compiler; then
+		cd "${WORKDIR}"/${CBUILD}
+		# Disable as many modules as possible -- but we need a few to install.
+		PYTHON_DISABLE_MODULES=$(
+			sed -n "/Extension('/{s:^.*Extension('::;s:'.*::;p}" "${S}"/setup.py | \
+				egrep -v '(unicodedata|time|cStringIO|_struct|binascii)'
+		) \
+		PTHON_DISABLE_SSL="1" \
+		SYSROOT= \
+		emake
+		# See comment in src_configure about these.
+		ln python ../${CHOST}/hostpython || die
+		ln Parser/pgen ../${CHOST}/Parser/hostpgen || die
+		ln -s ../${CBUILD}/build/lib.*/ ../${CHOST}/hostpythonpath || die
+	fi
 
-	cd "${BUILD_DIR}" || die
+	cd "${WORKDIR}"/${CHOST}
 	emake CPPFLAGS="" CFLAGS="" LDFLAGS=""
 
 	# Work around bug 329499. See also bug 413751 and 457194.
@@ -197,7 +257,7 @@ src_test() {
 		return
 	fi
 
-	cd "${BUILD_DIR}" || die
+	cd "${WORKDIR}"/${CHOST}
 
 	# Skip failing tests.
 	local skipped_tests="gdb"
@@ -206,7 +266,8 @@ src_test() {
 		mv "${S}"/Lib/test/test_${test}.py "${T}"
 	done
 
-	PYTHONDONTWRITEBYTECODE="" emake test EXTRATESTOPTS="-u -network" FLAGS="" CFLAGS="" LDFLAGS="" < /dev/tty
+	# Rerun failed tests in verbose mode (regrtest -w).
+	PYTHONDONTWRITEBYTECODE="" emake test EXTRATESTOPTS="-w" CPPFLAGS="" CFLAGS="" LDFLAGS="" < /dev/tty
 	local result="$?"
 
 	for test in ${skipped_tests}; do
@@ -230,8 +291,7 @@ src_test() {
 src_install() {
 	local libdir=${ED}/usr/$(get_libdir)/python${SLOT}
 
-	cd "${BUILD_DIR}" || die
-
+	cd "${WORKDIR}"/${CHOST}
 	emake DESTDIR="${D}" altinstall
 
 	sed \
@@ -243,7 +303,7 @@ src_install() {
 	dosym python${SLOT}-config /usr/bin/python-config-${SLOT}
 
 	# Fix collisions between different slots of Python.
-	rm -f "${ED}usr/$(get_libdir)/libpython3.so"
+	rm "${ED}usr/$(get_libdir)/libpython3.so" || die
 
 	if use build; then
 		rm -fr "${ED}usr/bin/idle${SLOT}" "${libdir}/"{idlelib,sqlite3,test,tkinter}
@@ -280,8 +340,9 @@ src_install() {
 
 	# if not using a cross-compiler, use the fresh binary
 	if ! tc-is-cross-compiler; then
-		local PYTHON=./python
-		local -x LD_LIBRARY_PATH=${LD_LIBRARY_PATH+${LD_LIBRARY_PATH}:}.
+		local PYTHON=./python \
+			LD_LIBRARY_PATH=${LD_LIBRARY_PATH+${LD_LIBRARY_PATH}:}.
+		export LD_LIBRARY_PATH
 	fi
 
 	echo "EPYTHON='${EPYTHON}'" > epython.py
@@ -309,10 +370,8 @@ pkg_postinst() {
 
 	if [[ "${python_updater_warning}" == "1" ]]; then
 		ewarn "You have just upgraded from an older version of Python."
-		ewarn
-		ewarn "Please adjust PYTHON_TARGETS (if so desired), and run emerge with the --newuse or --changed-use option to rebuild packages installing python modules."
-		ewarn
-		ewarn "For legacy packages, you should switch active version of Python and run 'python-updater [options]' to rebuild Python modules."
+		ewarn "You should switch active version of Python ${PV%%.*} and run"
+		ewarn "'python-updater [options]' to rebuild Python modules."
 	fi
 }
 
