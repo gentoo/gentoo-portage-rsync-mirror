@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.9.3-r1.ebuild,v 1.2 2014/06/18 21:05:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.9.3-r1.ebuild,v 1.3 2014/07/29 14:27:27 mgorny Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 		">=x11-proto/xcb-proto-1.9-r1[${MULTILIB_USEDEP},\${PYTHON_USEDEP}]")"
 
 python_check_deps() {
-	has_version ">=x11-proto/xcb-proto-1.9-r1[${MULTILIB_USEDEP},${PYTHON_USEDEP}]"
+	has_version --host-root ">=x11-proto/xcb-proto-1.9-r1[${MULTILIB_USEDEP},${PYTHON_USEDEP}]"
 }
 
 pkg_setup() {
