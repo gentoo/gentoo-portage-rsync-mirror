@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15935 2014/07/29 05:24:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15936 2014/07/29 08:44:46 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -451,10 +451,6 @@ sys-fs/rdiff-backup-fs
 # Markos Chandras <hwoarang@gentoo.org> (08 Apr 2014)
 # Masked for futher testing with various pam setups
 =x11-misc/lightdm-1.11*
-
-# Sergey Popov <pinkbyte@gentoo.org> (08 Apr 2014)
-# Security mask of vulnerable versions, wrt bug #505278
-<dev-libs/openssl-1.0.0l:0
 
 # Markos Chandras <hwoarang@gentoo.org> (07 Apr 2014)
 # Mask 0.8.0 release for testing
