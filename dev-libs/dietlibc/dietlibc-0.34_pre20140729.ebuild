@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.34_pre20140729.ebuild,v 1.1 2014/07/29 04:37:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.34_pre20140729.ebuild,v 1.2 2014/07/29 09:15:25 patrick Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
@@ -41,14 +41,14 @@ src_prepare() {
 }
 
 src_compile() {
-	emake prefix="${EPREFIX}"${DIETHOME} \
+	emake -j1 prefix="${EPREFIX}"${DIETHOME} \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		STRIP=":"
 }
 
 src_install() {
-	emake prefix="${EPREFIX}"${DIETHOME} \
+	emake -j1 prefix="${EPREFIX}"${DIETHOME} \
 		DESTDIR="${D}" \
 		install-bin \
 		install-headers \
