@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shflags/shflags-1.0.3.ebuild,v 1.3 2014/06/10 00:28:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shflags/shflags-1.0.3.ebuild,v 1.4 2014/07/29 09:35:19 vapier Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://shflags.googlecode.com/files/${P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="examples"
 
 src_test() {

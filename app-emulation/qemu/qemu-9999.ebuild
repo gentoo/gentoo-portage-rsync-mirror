@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.75 2014/06/06 01:42:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.76 2014/07/29 09:50:22 vapier Exp $
 
 EAPI=5
 
@@ -429,6 +429,7 @@ src_compile() {
 src_test() {
 	if [[ -n ${softmmu_targets} ]]; then
 		cd "${S}/softmmu-build"
+		pax-mark m */qemu-system-* #515550
 		emake -j1 check
 		emake -j1 check-report.html
 	fi

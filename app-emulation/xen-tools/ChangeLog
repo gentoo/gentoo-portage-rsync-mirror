@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.252 2014/07/12 14:13:38 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.253 2014/07/29 09:40:45 dlan Exp $
+
+*xen-tools-4.4.0-r8 (29 Jul 2014)
+
+  29 Jul 2014; Yixun Lan <dlan@gentoo.org> -xen-tools-4.4.0-r7.ebuild,
+  +xen-tools-4.4.0-r8.ebuild:
+  bug 518136, disable build x86_emulator under nomultilib profile
 
   12 Jul 2014; Yixun Lan <dlan@gentoo.org> -xen-tools-4.2.4-r2.ebuild,
   -xen-tools-4.2.4-r4.ebuild, -xen-tools-4.2.4-r5.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r7.ebuild,v 1.1 2014/07/09 06:35:44 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r8.ebuild,v 1.1 2014/07/29 09:40:45 dlan Exp $
 
 EAPI=5
 
@@ -254,6 +254,16 @@ src_prepare() {
 	sed -e "/^libdir=/s/\/lib/\/$(get_libdir)/" \
 		-i tools/qemu-xen/configure || die
 
+	#bug 518136, don't build 32bit exactuable for nomultilib profile
+	if [[ "${ARCH}" == 'amd64' ]] && ! has_multilib_profile; then
+		sed -i -e "/x86_emulator/d" tools/tests/Makefile || die
+	fi
+
+	# Bug 477884, 518136
+	if [[ "${ARCH}" == 'amd64' ]]; then
+		sed -i -e "/LIBEXEC =/s|/lib/xen/bin|/$(get_libdir)/xen/bin|" config/StdGNU.mk || die
+	fi
+
 	# fix QA warning, create /var/run/, /var/lock dynamically
 	sed -i -e "/\$(INSTALL_DIR) \$(DESTDIR)\$(XEN_RUN_DIR)/d" \
 		tools/libxl/Makefile || die
@@ -358,12 +368,6 @@ src_install() {
 		cat "${FILESDIR}"/xendomains-screen.confd >> "${D}"/etc/conf.d/xendomains || die
 		cp "${FILESDIR}"/xen-consoles.logrotate "${D}"/etc/xen/ || die
 		keepdir /var/log/xen-consoles
-	fi
-
-	# Move files built with use qemu, Bug #477884
-	if [[ "${ARCH}" == 'amd64' ]] && use qemu; then
-		mkdir -p "${D}"usr/$(get_libdir)/xen/bin || die
-		mv "${D}"usr/lib/xen/bin/* "${D}"usr/$(get_libdir)/xen/bin/ || die
 	fi
 
 	# For -static-libs wrt Bug 384355
