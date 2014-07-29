@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.5_alpha.ebuild,v 1.2 2014/06/20 12:57:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.23.ebuild,v 1.1 2014/07/29 15:29:39 blueness Exp $
 
 EAPI="5"
 
-inherit autotools eutils flag-o-matic readme.gentoo systemd toolchain-funcs versionator user
+inherit eutils flag-o-matic readme.gentoo versionator toolchain-funcs user
 
 MY_PV="$(replace_version_separator 4 -)"
 MY_PF="${PN}-${MY_PV}"
@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_PF}"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="-bufferevents +ecc nat-pmp selinux stats tor-hardening transparent-proxy threads test upnp web"
+IUSE="-bufferevents +ecc nat-pmp selinux stats tor-hardening transparent-proxy threads upnp web"
 
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
@@ -35,8 +35,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.2.3.14_alpha-torrc.sample.patch
-	epatch "${FILESDIR}"/${P}-fix-bufferevent-build.patch
-	eautoreconf
 }
 
 src_configure() {
@@ -57,13 +55,7 @@ src_configure() {
 		$(use_enable transparent-proxy transparent) \
 		$(use_enable threads) \
 		$(use_enable upnp) \
-		$(use_enable web tor2web-mode) \
-		$(use_enable test unittests) \
-		$(use_enable test coverage)
-}
-
-src_test() {
-	emake check
+		$(use_enable web tor2web-mode)
 }
 
 src_install() {
@@ -71,8 +63,6 @@ src_install() {
 
 	newconfd "${FILESDIR}"/tor.confd tor
 	newinitd "${FILESDIR}"/tor.initd-r6 tor
-	systemd_dounit "${FILESDIR}/${PN}.service"
-	systemd_dotmpfilesd "${FILESDIR}/${PN}.conf"
 
 	emake DESTDIR="${D}" install
 
