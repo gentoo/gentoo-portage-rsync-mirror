@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.3.ebuild,v 1.2 2014/07/18 17:04:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.3.ebuild,v 1.3 2014/07/29 19:26:39 maekke Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [[ ${PV} = 9999 ]]; then
 else
 	SRC_URI="https://storage.googleapis.com/golang/go${PV}.src.tar.gz"
 	# Upstream only supports go on amd64, arm and x86 architectures.
-	KEYWORDS="-* amd64 ~arm ~x86 ~amd64-fbsd ~x86-fbsd ~x64-macos"
+	KEYWORDS="-* amd64 arm ~x86 ~amd64-fbsd ~x86-fbsd ~x64-macos"
 fi
 
 DESCRIPTION="A concurrent garbage collected and typesafe programming language"

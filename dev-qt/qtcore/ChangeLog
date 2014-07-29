@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.47 2014/07/14 19:25:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.48 2014/07/29 19:24:02 maekke Exp $
+
+  29 Jul 2014; Markus Meier <maekke@gentoo.org> qtcore-4.8.5-r2.ebuild:
+  arm stable, bug #517090
 
   14 Jul 2014; Agostino Sarubbo <ago@gentoo.org> qtcore-4.8.5-r2.ebuild:
   Stable for x86, wrt bug #517090

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/get_flash_videos
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.18 2014/07/29 16:09:08 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.19 2014/07/29 19:20:29 dilfridge Exp $
+
+  29 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  get_flash_videos-1.24-r1.ebuild, get_flash_videos-9999.ebuild:
+  perl-core/x -> virtual/perl-x
 
   29 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   -get_flash_videos-1.23-r1.ebuild, -get_flash_videos-1.24.ebuild,

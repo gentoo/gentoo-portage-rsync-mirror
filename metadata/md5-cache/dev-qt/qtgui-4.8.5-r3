@@ -4,7 +4,7 @@ DESCRIPTION=The GUI module for the Qt toolkit
 EAPI=5
 HOMEPAGE=http://qt-project.org/ http://qt.digia.com/
 IUSE=+accessibility cups egl +glib gtkstyle mng nas nis qt3support tiff trace xinerama +xv aqua debug pch +exceptions
-KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris
+KEYWORDS=~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris
 LICENSE=|| ( LGPL-2.1 GPL-3 )
 PDEPEND=qt3support? ( ~dev-qt/qt3support-4.8.5[aqua=,debug=] )
 RDEPEND=app-admin/eselect-qtgraphicssystem ~dev-qt/qtcore-4.8.5[aqua=,debug=,glib=,qt3support=] ~dev-qt/qtscript-4.8.5[aqua=,debug=] media-libs/fontconfig media-libs/freetype:2 media-libs/libpng:0= sys-libs/zlib virtual/jpeg:0 !aqua? ( x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXcursor x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libXrandr x11-libs/libXrender xinerama? ( x11-libs/libXinerama ) xv? ( x11-libs/libXv ) ) cups? ( net-print/cups ) egl? ( media-libs/mesa[egl] ) glib? ( dev-libs/glib:2 ) gtkstyle? ( x11-libs/cairo[-qt4] x11-libs/gtk+:2[aqua=] ) mng? ( >=media-libs/libmng-1.0.9:= ) nas? ( >=media-libs/nas-1.5 ) tiff? ( media-libs/tiff:0 ) !<dev-qt/qthelp-4.8.5:4
@@ -12,4 +12,4 @@ REQUIRED_USE=gtkstyle? ( glib )
 SLOT=4
 SRC_URI=http://download.qt-project.org/official_releases/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.tar.gz http://dev.gentoo.org/~pesa/patches/qtgui-systemtrayicon-plugin-system.patch
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qt4-build	df8f37ad99366cf3f89fa8d5b49ceb75	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=c40f7446b3477060aadfdd6615c49e0e
+_md5_=17514527b1541ae92a95b9637f123a90
