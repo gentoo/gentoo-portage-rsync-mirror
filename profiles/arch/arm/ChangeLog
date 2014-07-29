@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.311 2014/07/27 21:40:59 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.312 2014/07/29 18:57:28 maekke Exp $
+
+  29 Jul 2014; Markus Meier <maekke@gentoo.org> +armv5te/use.mask,
+  +armv6j/use.mask, armv7a/use.mask:
+  unmask arm cpu flags for media-video/ffmpeg, bug #498086
 
   27 Jul 2014; Rick Farina <zerochaos@gentoo.org> package.use.mask:
   Mask net-voip/yate[dahdi] since net-misc/dahdi doesn't build
