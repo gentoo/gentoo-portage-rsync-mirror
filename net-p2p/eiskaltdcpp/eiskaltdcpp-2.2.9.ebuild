@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.9.ebuild,v 1.5 2014/04/26 19:19:07 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.9.ebuild,v 1.6 2014/07/29 17:26:29 zlogene Exp $
 
 EAPI="5"
 
@@ -51,7 +51,7 @@ RDEPEND="
 	upnp? ( >=net-libs/miniupnpc-1.6 )
 	cli? (
 		>=dev-lang/perl-5.10
-		perl-core/Getopt-Long
+		virtual/perl-Getopt-Long
 		dev-perl/Data-Dump
 		dev-perl/Term-ShellUI
 		json? ( dev-perl/JSON-RPC )

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.207 2014/06/18 19:14:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.208 2014/07/29 17:24:32 k_f Exp $
+
+*libgcrypt-1.6.1-r2 (29 Jul 2014)
+
+  29 Jul 2014; Kristian Fiskerstrand <k_f@gentoo.org>
+  +files/libgcrypt-1.6.1-x32-compat.patch, +libgcrypt-1.6.1-r2.ebuild:
+  Revbump to add patch to fix segfaults for x32 ABIs. Fixes bug #512762
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libgcrypt-1.5.3-r100.ebuild,
   libgcrypt-1.6.1-r1.ebuild:

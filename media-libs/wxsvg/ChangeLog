@@ -1,13 +1,17 @@
 # ChangeLog for media-libs/wxsvg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.47 2014/07/29 16:38:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.48 2014/07/29 17:21:30 ssuominen Exp $
+
+  29 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -wxsvg-1.1.15.ebuild,
+  -wxsvg-1.2.1.ebuild:
+  old
 
 *wxsvg-1.4.2 (29 Jul 2014)
 
   29 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +wxsvg-1.4.2.ebuild:
   Version bump. SONAME changed from .so.1 to .so.2, utilize subslot for that.
-  Keep using wxGTK 2.8 for now, 3.0 is untested for both, wxsvg and it's
-  consumer, media-video/dvdstyler.
+  Keep using wxGTK 2.8 instead of 3.0 for both, media-libs/wxsvg and
+  media-video/dvdstyler for now.
 
 *wxsvg-1.2.1 (23 Jan 2014)
 

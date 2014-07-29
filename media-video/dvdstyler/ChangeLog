@@ -1,6 +1,17 @@
 # ChangeLog for media-video/dvdstyler
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.59 2013/08/12 16:30:13 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.61 2014/07/29 17:19:38 ssuominen Exp $
+
+  29 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -dvdstyler-2.4.1.ebuild,
+  -dvdstyler-2.5.1.ebuild, metadata.xml:
+  old
+
+*dvdstyler-2.7.2 (29 Jul 2014)
+
+  29 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +dvdstyler-2.7.2.ebuild:
+  Version bump wrt #498904 by Paolo Pedroni. Pull in recent enough
+  virtual/ffmpeg wrt #495088 by Cecil Curry. Punt USE="deprecated" and
+  obsolete GNOME 2.x libgnomeui-2 library dependency with it wrt #508854.
 
 *dvdstyler-2.5.1 (12 Aug 2013)
 
