@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/Alien-SDL-1.440.0.ebuild,v 1.2 2014/07/29 14:32:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/Alien-SDL-1.444.0.ebuild,v 1.1 2014/07/29 14:32:51 zlogene Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=FROGGS
-MODULE_VERSION=1.440
+MODULE_VERSION=1.444
 inherit perl-module
 
 DESCRIPTION="building, finding and using SDL binaries"
