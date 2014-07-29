@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/subexec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/ChangeLog,v 1.13 2014/04/24 16:44:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/ChangeLog,v 1.14 2014/07/29 06:30:24 graaff Exp $
+
+  29 Jul 2014; Hans de Graaff <graaff@gentoo.org> subexec-0.2.3-r1.ebuild:
+  Add ruby21.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> subexec-0.2.3-r1.ebuild:
   Remove ruby18 support.
