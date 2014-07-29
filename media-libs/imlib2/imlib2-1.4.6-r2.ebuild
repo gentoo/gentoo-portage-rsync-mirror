@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.6-r2.ebuild,v 1.11 2014/07/28 13:45:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.6-r2.ebuild,v 1.12 2014/07/29 03:29:37 vapier Exp $
 
 # NOTE!!!: to avoid masking of -9999 the
 # package.mask entry for multilib version
@@ -49,6 +49,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4.5-no-my-libs.patch #497894
 	epatch "${FILESDIR}"/${PN}-1.4.5-giflib-5.patch #457634
 	epatch "${FILESDIR}"/${P}-out-of-source-build.patch #510522
+	epatch "${FILESDIR}"/${P}-no-x.patch
 
 	eautomake
 }
