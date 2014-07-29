@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.13.1.ebuild,v 1.2 2014/07/25 13:41:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.13.1.ebuild,v 1.3 2014/07/29 13:31:20 graaff Exp $
 
 EAPI=5
 
 # jruby → testsuite fails (seems like a testuite bug)
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 # We have a custom test function, but don't null this out so that the
 # deps are still added

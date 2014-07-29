@@ -1,24 +1,23 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.55.0-r1.ebuild,v 1.7 2014/07/29 13:32:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.52.0-r7.ebuild,v 1.1 2014/07/29 13:32:16 hasufell Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 inherit eutils flag-o-matic multilib multiprocessing python-r1 toolchain-funcs versionator
 
-MY_P="${PN}_$(replace_all_version_separators _)"
-MAJOR_V="$(get_version_component_range 1-2)"
+MY_P=${PN}_$(replace_all_version_separators _)
 
 DESCRIPTION="Boost Libraries for C++"
 HOMEPAGE="http://www.boost.org/"
 SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2"
 
 LICENSE="Boost-1.0"
-SLOT="0/${PV}" # ${PV} instead ${MAJOR_V} due to bug 486122
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-fbsd ~x86-linux"
-
-IUSE="context debug doc icu +nls mpi python static-libs +threads tools"
+MAJOR_V="$(get_version_component_range 1-2)"
+SLOT="0/${MAJOR_V}"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+IUSE="debug doc icu +nls mpi python static-libs +threads tools"
 
 RDEPEND="icu? ( >=dev-libs/icu-3.6:= )
 	!icu? ( virtual/libiconv )
@@ -28,17 +27,9 @@ RDEPEND="icu? ( >=dev-libs/icu-3.6:= )
 	sys-libs/zlib
 	!app-admin/eselect-boost"
 DEPEND="${RDEPEND}
-	=dev-util/boost-build-${MAJOR_V}*"
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+	=dev-util/boost-build-1.52.0-r1"
 
-S="${WORKDIR}/${MY_P}"
-
-# the tests will never fail because these are not intended as sanity
-# tests at all. They are more a way for upstream to check their own code
-# on new compilers. Since they would either be completely unreliable
-# (failing for no good reason) or completely useless (never failing)
-# there is no point in having them in the ebuild to begin with.
-RESTRICT="test"
+S=${WORKDIR}/${MY_P}
 
 create_user-config.jam() {
 	local compiler compiler_version compiler_executable
@@ -84,15 +75,27 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
+		"${FILESDIR}/${PN}-1.48.0-mpi_python3.patch" \
 		"${FILESDIR}/${PN}-1.51.0-respect_python-buildid.patch" \
 		"${FILESDIR}/${PN}-1.51.0-support_dots_in_python-buildid.patch" \
 		"${FILESDIR}/${PN}-1.48.0-no_strict_aliasing_python2.patch" \
 		"${FILESDIR}/${PN}-1.48.0-disable_libboost_python3.patch" \
 		"${FILESDIR}/${PN}-1.48.0-python_linking.patch" \
 		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch" \
-		"${FILESDIR}/${PN}-1.55.0-context-x32.patch" \
-		"${FILESDIR}/${PN}-1.55.0-tools-c98-compat.patch" \
+		"${FILESDIR}/remove-toolset-1.48.0.patch" \
+		"${FILESDIR}/${PN}-1.52.0-tuple.patch" \
+		"${FILESDIR}/${P}-locale-utf.patch" \
 		"${FILESDIR}/${PN}-1.52.0-threads.patch"
+
+	# Avoid a patch for now
+	for file in libs/context/src/asm/*.S; do
+		cat - >> $file <<EOF
+
+#if defined(__linux__) && defined(__ELF__)
+.section .note.GNU-stack,"",%progbits
+#endif
+EOF
+	done
 
 	epatch_user
 }
@@ -103,24 +106,12 @@ ejam() {
 }
 
 src_configure() {
-	# Workaround for too many parallel processes requested, bug #506064
-	[ "$(makeopts_jobs)" -gt 64 ] && MAKEOPTS="${MAKEOPTS} -j64"
-
 	OPTIONS="$(usex debug gentoodebug gentoorelease) -j$(makeopts_jobs) -q -d+2 --user-config=${S}/user-config.jam"
 
 	if [[ ${CHOST} == *-darwin* ]]; then
 		# We need to add the prefix, and in two cases this exceeds, so prepare
 		# for the largest possible space allocation.
 		append-ldflags -Wl,-headerpad_max_install_names
-	elif [[ ${CHOST} == *-winnt* ]]; then
-		compiler=parity
-		if [[ $($(tc-getCXX) -v) == *trunk* ]]; then
-			compilerVersion=trunk
-		else
-			compilerVersion=$($(tc-getCXX) -v | sed '1q' \
-				| sed -e 's,\([a-z]*\) \([0-9]\.[0-9]\.[0-9][^ \t]*\) .*,\2,')
-		fi
-		compilerExecutable=$(tc-getCXX)
 	fi
 
 	# bug 298489
@@ -131,19 +122,13 @@ src_configure() {
 	# Do _not_ use C++11 yet, make sure to force GNU C++ 98 standard.
 	append-cxxflags -std=gnu++98
 
-	use icu && OPTIONS+=" -sICU_PATH=${EPREFIX}/usr"
+	use icu && OPTIONS+=" -sICU_PATH=/usr"
 	use icu || OPTIONS+=" --disable-icu boost.locale.icu=off"
 	use mpi || OPTIONS+=" --without-mpi"
 	use python || OPTIONS+=" --without-python"
 	use nls || OPTIONS+=" --without-locale"
-	use context || OPTIONS+=" --without-context --without-coroutine"
 
-	OPTIONS+=" pch=off"
-	OPTIONS+=" --boost-build=${EPREFIX}/usr/share/boost-build --prefix=\"${ED}usr\""
-	OPTIONS+=" --layout=system"
-	OPTIONS+=" threading=$(usex threads multi single) link=$(usex static-libs shared,static shared)"
-
-	[[ ${CHOST} == *-winnt* ]] && OPTIONS+=" -sNO_BZIP2=1"
+	OPTIONS+=" pch=off --boost-build=/usr/share/boost-build --prefix=\"${D}usr\" --layout=system threading=$(usex threads multi single) link=$(usex static-libs shared,static shared) --without-context"
 }
 
 src_compile() {
@@ -225,8 +210,8 @@ src_install () {
 		fi
 
 		ejam ${OPTIONS} \
-			--includedir="${ED}usr/include" \
-			--libdir="${ED}usr/$(get_libdir)" \
+			--includedir="${D}usr/include" \
+			--libdir="${D}usr/$(get_libdir)" \
 			$(use python && echo --python-buildid=${EPYTHON#python}) \
 			install || die "Installation of Boost libraries failed"
 
@@ -237,9 +222,8 @@ src_install () {
 			# https://svn.boost.org/trac/boost/ticket/2838
 			if use mpi; then
 				local moddir=$(python_get_sitedir)/boost
-				# moddir already includes eprefix
-				mkdir -p "${D}${moddir}" || die
-				mv "${ED}usr/$(get_libdir)/mpi.so" "${D}${moddir}" || die
+				dodir "${moddir}"
+				mv "${D}usr/$(get_libdir)/mpi.so" "${D}${moddir}" || die
 				cat << EOF > "${D}${moddir}/__init__.py" || die
 import sys
 if sys.platform.startswith('linux'):
@@ -265,17 +249,14 @@ EOF
 	fi
 
 	if ! use python; then
-		rm -r "${ED}"/usr/include/boost/python* || die
+		rm -r "${D}"/usr/include/boost/python* || die
 	fi
 
 	if ! use nls; then
-		rm -r "${ED}"/usr/include/boost/locale || die
+		rm -r "${D}"/usr/include/boost/locale || die
 	fi
 
-	if ! use context; then
-		rm -r "${ED}"/usr/include/boost/context || die
-		rm -r "${ED}"/usr/include/boost/coroutine || die
-	fi
+	rm -r "${D}"/usr/include/boost/context || die
 
 	if use doc; then
 		find libs/*/* -iname "test" -or -iname "src" | xargs rm -rf
@@ -295,7 +276,7 @@ EOF
 		dosym /usr/include/boost /usr/share/doc/${PF}/html/boost
 	fi
 
-	pushd "${ED}usr/$(get_libdir)" > /dev/null || die
+	pushd "${D}usr/$(get_libdir)" > /dev/null || die
 
 	local ext=$(get_libname)
 	if use threads; then
@@ -356,3 +337,10 @@ pkg_preinst() {
 		[[ -L ${symlink} ]] && rm -f "${symlink}"
 	done
 }
+
+# the tests will never fail because these are not intended as sanity
+# tests at all. They are more a way for upstream to check their own code
+# on new compilers. Since they would either be completely unreliable
+# (failing for no good reason) or completely useless (never failing)
+# there is no point in having them in the ebuild to begin with.
+src_test() { :; }
