@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.157 2014/07/29 07:58:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.158 2014/07/29 08:06:38 ssuominen Exp $
 
 *pkgconfig-0.28-r2 (29 Jul 2014)
 
@@ -8,6 +8,7 @@
   +files/pkgconfig-0.28-strip_system_library_dirs_reliably.patch,
   +pkgconfig-0.28-r2.ebuild, pkgconfig-9999.ebuild:
   Strip system library directories reliably wrt #512336 by Mike Frysinger
+  Support epatch_user from eutils.eclass
 
   22 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -pkgconfig-0.28.ebuild:
   old

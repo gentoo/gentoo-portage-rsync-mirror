@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/passlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/passlib/ChangeLog,v 1.11 2014/07/06 12:45:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/passlib/ChangeLog,v 1.12 2014/07/29 08:12:11 pinkbyte Exp $
+
+  29 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> passlib-1.6.2.ebuild:
+  Stable on amd64 and x86, wrt bug #517870
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> passlib-1.6.2.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-

@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.209 2014/07/29 08:00:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.211 2014/07/29 08:13:30 vapier Exp $
+
+  29 Jul 2014; Mike Frysinger <vapier@gentoo.org> xbmc-12.3.ebuild,
+  xbmc-13.0_p2.ebuild, xbmc-9999.ebuild:
+  Require mesa[gles2] when USE=gles is enabled #515104 by A. Person.
+
+  29 Jul 2014; Mike Frysinger <vapier@gentoo.org> xbmc-12.1-r1.ebuild,
+  xbmc-12.2-r1.ebuild, xbmc-12.3.ebuild, xbmc-13.0_p2.ebuild, xbmc-9999.ebuild:
+  Drop redundant --enable-gl as there is a `use_enable opengl gl` call later on
+  #513708 by Gerhard Bräunlich.
 
   29 Jul 2014; Mike Frysinger <vapier@gentoo.org> xbmc-12.3.ebuild,
   xbmc-13.0_p2.ebuild, xbmc-9999.ebuild:
