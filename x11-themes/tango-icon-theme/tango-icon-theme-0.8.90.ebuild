@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.90.ebuild,v 1.16 2013/09/19 20:27:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.90.ebuild,v 1.17 2014/07/29 21:32:16 ssuominen Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -12,9 +12,10 @@ SRC_URI="http://tango.freedesktop.org/releases/${P}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="png"
+IUSE="minimal png"
 
-RDEPEND=">=x11-themes/hicolor-icon-theme-0.12"
+RDEPEND="!hppa? ( !minimal? ( x11-themes/gnome-icon-theme ) )
+	>=x11-themes/hicolor-icon-theme-0.12"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig

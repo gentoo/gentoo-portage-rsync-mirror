@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/tango-icon-theme
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.58 2013/09/19 20:27:09 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.59 2014/07/29 21:32:16 ssuominen Exp $
+
+  29 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  tango-icon-theme-0.8.90.ebuild:
+  Since index.theme has Inherits=gnome and tango-icon-theme is a dead package
+  thesedays, pull in x11-themes/gnome-icon-theme for the missing icons by
+  USE="-minimal" wrt #518294
 
   19 Sep 2013; Samuli Suominen <ssuominen@gentoo.org>
   tango-icon-theme-0.8.90.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Daemon-Generic/Daemon-Generic-0.840.0.ebuild,v 1.1 2014/05/04 15:49:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Daemon-Generic/Daemon-Generic-0.840.0.ebuild,v 1.2 2014/07/29 21:37:14 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="Framework to provide start/stop/reload for a daemon"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="test"
 
 RDEPEND="
