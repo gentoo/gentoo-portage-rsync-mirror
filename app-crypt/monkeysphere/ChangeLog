@@ -1,6 +1,19 @@
 # ChangeLog for app-crypt/monkeysphere
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysphere/ChangeLog,v 1.5 2014/07/28 19:03:09 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysphere/ChangeLog,v 1.7 2014/07/29 12:42:28 k_f Exp $
+
+  29 Jul 2014; Kristian Fiskerstrand <k_f@gentoo.org>
+  monkeysphere-0.36-r2.ebuild:
+  Fix order of KEYWORDS
+
+*monkeysphere-0.36-r2 (29 Jul 2014)
+
+  29 Jul 2014; Kristian Fiskerstrand <k_f@gentoo.org>
+  +files/monkeysphere-0.36_hd_od.patch,
+  +files/monkeysphere-0.36_openpgp2ssh_sanity_check.patch,
+  +files/monkeysphere-0.36_tests_gnupg2.patch, +monkeysphere-0.36-r2.ebuild:
+  Revision bump to include serveral additional patches from my development
+  overlay
 
   28 Jul 2014; Kristian Fiskerstrand <k_f@gentoo.org> metadata.xml:
   Taking over full maintainership instead of through proxy-maint

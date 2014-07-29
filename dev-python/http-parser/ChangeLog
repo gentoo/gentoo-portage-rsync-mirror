@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/http-parser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.21 2014/06/19 13:01:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.22 2014/07/29 12:35:48 pinkbyte Exp $
+
+  29 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> http-parser-0.8.3.ebuild:
+  Add ~s390 keyword, wrt bug #463344
 
   19 Jun 2014; Tobias Klausmann <klausman@gentoo.org> http-parser-0.8.3.ebuild:
   Keyworded on alpha, bug #463344
