@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.22 2014/07/19 10:18:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.23 2014/07/29 17:59:21 robbat2 Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -76,9 +76,9 @@ mysql-cmake_disable_test() {
 mysql-cmake_use_plugin() {
 	[[ -z $2 ]] && die "mysql-cmake_use_plugin <USE flag> <flag name>"
 	if use_if_iuse $1 ; then
-		echo "-DWITH_$2=1"
+		echo "-DWITH_$2=1 -DPLUGIN_$2=YES"
 	else
-		echo "-DWITHOUT_$2=1 -DWITH_$2=0"
+		echo "-DWITHOUT_$2=1 -DWITH_$2=0 -DPLUGIN_$2=NO"
 	fi
 }
 
@@ -129,7 +129,15 @@ configure_cmake_minimal() {
 		-DWITHOUT_MYISAMMRG_STORAGE_ENGINE=1
 		-DWITHOUT_MYISAM_STORAGE_ENGINE=1
 		-DWITHOUT_PARTITION_STORAGE_ENGINE=1
-		-DWITHOUT_INNOBASE_STORAGE_ENGINE=1
+		-DPLUGIN_ARCHIVE=NO
+		-DPLUGIN_BLACKHOLE=NO
+		-DPLUGIN_CSV=NO
+		-DPLUGIN_FEDERATED=NO
+		-DPLUGIN_HEAP=NO
+		-DPLUGIN_INNOBASE=NO
+		-DPLUGIN_MYISAMMRG=NO
+		-DPLUGIN_MYISAM=NO
+		-DPLUGIN_PARTITION=NO
 	)
 }
 
@@ -191,10 +199,12 @@ configure_cmake_standard() {
 			# CassandraSE needs Apache Thrift which is not in portage
 			mycmakeargs+=(
 				-DWITHOUT_CASSANDRA=1 -DWITH_CASSANDRA=0
+				-DPLUGIN_CASSANDRA=NO
 				$(mysql-cmake_use_plugin extraengine SEQUENCE)
 				$(mysql-cmake_use_plugin extraengine SPIDER)
 				$(mysql-cmake_use_plugin extraengine CONNECT)
 				-DCONNECT_WITH_MYSQL=1
+				-DPLUGIN_CONNECT_WITH_MYSQL=YES
 				$(cmake-utils_use xml CONNECT_WITH_LIBXML2)
 				$(cmake-utils_use odbc CONNECT_WITH_ODBC)
 			)
@@ -309,15 +319,15 @@ mysql-cmake_src_configure() {
 		-DWITH_SSL=$(usex ssl system bundled)
 	)
 
-	if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && mysql_version_is_at_least "5.6.12" ; then
-		mycmakeargs+=( -DWITH_EDITLINE=system )
-	else
+	if in_iuse bindist ; then
 		mycmakeargs+=(
 			-DWITH_READLINE=$(usex bindist 1 0)
 			-DNOT_FOR_DISTRIBUTION=$(usex bindist 0 1)
 			$(usex bindist -DHAVE_BFD_H=0 '')
 		)
 	fi
+
+	mycmakeargs+=( -DWITH_EDITLINE=system )
 
 	if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 		mycmakeargs+=(
@@ -411,7 +421,7 @@ mysql-cmake_src_install() {
 	sed -e "s!@DATADIR@!${MY_DATADIR}!g" \
 		"${FILESDIR}/${mycnf_src}" \
 		> "${TMPDIR}/my.cnf.ok" || die
-	use prefix && sed -i -e '/^user[ 	]*= mysql$/d' "${TMPDIR}/my.cnf.ok"
+	use prefix && sed -i -r -e '/^user[[:space:]]*=[[:space:]]*mysql$/d' "${TMPDIR}/my.cnf.ok"
 	if use latin1 ; then
 		sed -i \
 			-e "/character-set/s|utf8|latin1|g" \
