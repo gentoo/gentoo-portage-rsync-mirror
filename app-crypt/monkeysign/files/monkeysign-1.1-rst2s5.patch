@@ -1,0 +1,12 @@
+diff -r a9a4b4fb16bb monkeysign-1.1/monkeysign/documentation.py
+--- a/monkeysign-1.1/monkeysign/documentation.py	Sun Feb 02 23:56:57 2014 +0100
++++ b/monkeysign-1.1/monkeysign/documentation.py	Sun Feb 02 23:57:49 2014 +0100
+@@ -161,7 +161,7 @@
+     def run(self):
+         html = os.path.dirname(self.file) + os.path.splitext(os.path.basename(self.file))[0] + '.html'
+         self.announce('processing slides from %s to %s' % (self.file, html), 2)
+-        os.system('rst2s5 --theme default "%s" "%s"' % (self.file, html))
++        os.system('rst2s5.py --theme default "%s" "%s"' % (self.file, html))
+ 
+ build.sub_commands.append(('build_manpage', None))
+ build.sub_commands.append(('build_slides', None))

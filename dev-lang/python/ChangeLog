@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.765 2014/07/29 07:19:13 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.766 2014/07/29 07:53:03 pinkbyte Exp $
+
+*python-3.2.5-r6 (29 Jul 2014)
+
+  29 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> -python-3.2.5-r5.ebuild,
+  +python-3.2.5-r6.ebuild, +files/python-3.2-CVE-2014-1912.patch:
+  Revision bump: backport patch for CVE-2014-1912, bug #500518. Drop old
+  revision. Acked by Python team
 
 *python-3.3.5-r1 (29 Jul 2014)
 *python-3.2.5-r5 (29 Jul 2014)

@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/monkeysign
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/ChangeLog,v 1.1 2014/07/29 07:54:13 k_f Exp $
+
+*monkeysign-1.1 (29 Jul 2014)
+
+  29 Jul 2014; Kristian Fiskerstrand <k_f@gentoo.org>
+  +files/monkeysign-1.1-basename.patch, +files/monkeysign-1.1-rst2s5.patch,
+  +files/monkeysign.desktop, +metadata.xml, +monkeysign-1.1.ebuild:
+  New package written by me

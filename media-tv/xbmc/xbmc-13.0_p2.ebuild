@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-13.0_p2.ebuild,v 1.4 2014/07/24 11:43:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-13.0_p2.ebuild,v 1.5 2014/07/29 08:00:38 vapier Exp $
 
 EAPI="5"
 
@@ -107,7 +107,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	webserver? ( net-libs/libmicrohttpd[messages] )
 	sftp? ( net-libs/libssh[sftp] )
 	net-misc/curl
-	samba? ( >=net-fs/samba-3.4.6[smbclient] )
+	samba? ( >=net-fs/samba-3.4.6[smbclient(+)] )
 	bluetooth? ( net-wireless/bluez )
 	sys-apps/dbus
 	caps? ( sys-libs/libcap )

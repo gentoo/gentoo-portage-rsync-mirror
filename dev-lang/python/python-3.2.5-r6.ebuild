@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.5-r5.ebuild,v 1.1 2014/07/29 07:19:13 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.5-r6.ebuild,v 1.1 2014/07/29 07:53:03 pinkbyte Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -98,6 +98,8 @@ src_prepare() {
 
 	# bug #514686
 	epatch "${FILESDIR}/${PN}-3.2-CVE-2014-4616.patch"
+	# bug #500518
+	epatch "${FILESDIR}/${PN}-3.2-CVE-2014-1912.patch"
 
 	epatch_user
 
