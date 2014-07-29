@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/replicant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/replicant/ChangeLog,v 1.11 2014/07/11 02:37:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/replicant/ChangeLog,v 1.12 2014/07/29 06:32:00 patrick Exp $
+
+*replicant-0.6.2 (29 Jul 2014)
+
+  29 Jul 2014; Patrick Lauer <patrick@gentoo.org> +replicant-0.6.2.ebuild:
+  Bump
 
 *replicant-0.6.1 (11 Jul 2014)
 
