@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.98 2014/01/26 12:23:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.99 2014/07/29 04:37:03 patrick Exp $
+
+*dietlibc-0.34_pre20140729 (29 Jul 2014)
+
+  29 Jul 2014; Patrick Lauer <patrick@gentoo.org>
+  +dietlibc-0.34_pre20140729.ebuild:
+  Add new snapshot ebuild
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   dietlibc-0.33_pre20110403.ebuild:
