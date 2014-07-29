@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mongo-c-driver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/ChangeLog,v 1.11 2014/07/23 16:15:27 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/ChangeLog,v 1.12 2014/07/29 10:20:45 jer Exp $
+
+  29 Jul 2014; Jeroen Roovers <jer@gentoo.org> mongo-c-driver-0.98.0.ebuild:
+  Marked ~hppa (bug #517880).
 
 *mongo-c-driver-0.98.0 (23 Jul 2014)
 

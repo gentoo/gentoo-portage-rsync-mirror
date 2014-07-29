@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.76 2014/07/29 09:50:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.79 2014/07/29 10:23:00 vapier Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="accessibility +aio alsa bluetooth +caps +curl debug +fdt glusterfs \
 gtk iscsi +jpeg \
-kernel_linux kernel_FreeBSD ncurses opengl +png pulseaudio python \
+kernel_linux kernel_FreeBSD ncurses nls opengl +png pulseaudio python \
 rbd sasl +seccomp sdl selinux smartcard spice ssh static static-softmmu \
 static-user systemtap tci test +threads tls usb usbredir +uuid vde +vhost-net \
 virtfs +vnc xattr xen xfs"
@@ -125,6 +125,7 @@ DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	virtual/pkgconfig
 	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )
+	gtk? ( nls? ( sys-devel/gettext ) )
 	static-softmmu? ( ${SOFTMMU_LIB_DEPEND} )
 	static-user? ( ${USER_LIB_DEPEND} )
 	test? (
@@ -235,6 +236,9 @@ src_prepare() {
 	sed -i -r \
 		-e 's/^(C|OP_C|HELPER_C)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target || die
+
+	# Cheap hack to disable gettext .mo generation.
+	use nls || rm -f po/*.po
 
 	epatch "${FILESDIR}"/qemu-1.7.0-cflags.patch
 	[[ -n ${BACKPORTS} ]] && \
@@ -493,42 +497,42 @@ src_install() {
 	fi
 
 	# Remove vgabios since we're using the vgabios packaged one
-	rm "${ED}/usr/share/qemu/vgabios.bin"
-	rm "${ED}/usr/share/qemu/vgabios-cirrus.bin"
-	rm "${ED}/usr/share/qemu/vgabios-qxl.bin"
-	rm "${ED}/usr/share/qemu/vgabios-stdvga.bin"
-	rm "${ED}/usr/share/qemu/vgabios-vmware.bin"
-	if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
-		dosym ../vgabios/vgabios.bin /usr/share/qemu/vgabios.bin
-		dosym ../vgabios/vgabios-cirrus.bin /usr/share/qemu/vgabios-cirrus.bin
-		dosym ../vgabios/vgabios-qxl.bin /usr/share/qemu/vgabios-qxl.bin
-		dosym ../vgabios/vgabios-stdvga.bin /usr/share/qemu/vgabios-stdvga.bin
-		dosym ../vgabios/vgabios-vmware.bin /usr/share/qemu/vgabios-vmware.bin
-	fi
+	if [[ -n ${softmmu_targets} ]]; then
+		rm "${ED}/usr/share/qemu/vgabios.bin"
+		rm "${ED}/usr/share/qemu/vgabios-cirrus.bin"
+		rm "${ED}/usr/share/qemu/vgabios-qxl.bin"
+		rm "${ED}/usr/share/qemu/vgabios-stdvga.bin"
+		rm "${ED}/usr/share/qemu/vgabios-vmware.bin"
+		if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
+			dosym ../vgabios/vgabios.bin /usr/share/qemu/vgabios.bin
+			dosym ../vgabios/vgabios-cirrus.bin /usr/share/qemu/vgabios-cirrus.bin
+			dosym ../vgabios/vgabios-qxl.bin /usr/share/qemu/vgabios-qxl.bin
+			dosym ../vgabios/vgabios-stdvga.bin /usr/share/qemu/vgabios-stdvga.bin
+			dosym ../vgabios/vgabios-vmware.bin /usr/share/qemu/vgabios-vmware.bin
+		fi
 
-	# Remove sgabios since we're using the sgabios packaged one
-	rm "${ED}/usr/share/qemu/sgabios.bin"
-	if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
-		dosym ../sgabios/sgabios.bin /usr/share/qemu/sgabios.bin
-	fi
+		# Remove sgabios since we're using the sgabios packaged one
+		rm "${ED}/usr/share/qemu/sgabios.bin"
+		if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
+			dosym ../sgabios/sgabios.bin /usr/share/qemu/sgabios.bin
+		fi
 
-	# Remove iPXE since we're using the iPXE packaged one
-	rm "${ED}"/usr/share/qemu/pxe-*.rom
-	if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
-		dosym ../ipxe/8086100e.rom /usr/share/qemu/pxe-e1000.rom
-		dosym ../ipxe/80861209.rom /usr/share/qemu/pxe-eepro100.rom
-		dosym ../ipxe/10500940.rom /usr/share/qemu/pxe-ne2k_pci.rom
-		dosym ../ipxe/10222000.rom /usr/share/qemu/pxe-pcnet.rom
-		dosym ../ipxe/10ec8139.rom /usr/share/qemu/pxe-rtl8139.rom
-		dosym ../ipxe/1af41000.rom /usr/share/qemu/pxe-virtio.rom
+		# Remove iPXE since we're using the iPXE packaged one
+		rm "${ED}"/usr/share/qemu/pxe-*.rom
+		if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
+			dosym ../ipxe/8086100e.rom /usr/share/qemu/pxe-e1000.rom
+			dosym ../ipxe/80861209.rom /usr/share/qemu/pxe-eepro100.rom
+			dosym ../ipxe/10500940.rom /usr/share/qemu/pxe-ne2k_pci.rom
+			dosym ../ipxe/10222000.rom /usr/share/qemu/pxe-pcnet.rom
+			dosym ../ipxe/10ec8139.rom /usr/share/qemu/pxe-rtl8139.rom
+			dosym ../ipxe/1af41000.rom /usr/share/qemu/pxe-virtio.rom
+		fi
 	fi
 
 	qemu_support_kvm && readme.gentoo_create_doc
 }
 
 pkg_postinst() {
-	local virtfs_caps=
-
 	if qemu_support_kvm; then
 		readme.gentoo_print_elog
 		ewarn "Migration from qemu-kvm instances and loading qemu-kvm created"
@@ -548,11 +552,11 @@ pkg_postinst() {
 		fi
 	fi
 
-	virtfs_caps+="cap_chown,cap_dac_override,cap_fowner,cap_fsetid,"
-	virtfs_caps+="cap_setgid,cap_mknod,cap_setuid"
-
 	fcaps cap_net_admin /usr/libexec/qemu-bridge-helper
-	use virtfs && fcaps ${virtfs_caps} /usr/bin/virtfs-proxy-helper
+	if use virtfs && [ -n "${softmmu_targets}" ]; then
+		local virtfs_caps="cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_setgid,cap_mknod,cap_setuid"
+		fcaps ${virtfs_caps} /usr/bin/virtfs-proxy-helper
+	fi
 }
 
 pkg_info() {
