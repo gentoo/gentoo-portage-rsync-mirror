@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/retroshare-0.5.5c.ebuild,v 1.1 2014/02/17 22:52:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/retroshare-0.5.5c.ebuild,v 1.2 2014/07/29 16:40:18 nimiux Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/retroshare/retroshare_0.5.5-0.7068.tar.gz"
 # pegmarkdown can also be used with MIT
 LICENSE="GPL-2 GPL-3 Apache-2.0 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="cli feedreader links-cloud qt4 voip"
 REQUIRED_USE="|| ( cli qt4 )
 	feedreader? ( qt4 )

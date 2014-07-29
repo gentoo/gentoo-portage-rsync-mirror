@@ -1,6 +1,6 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1329 2014/07/28 21:19:52 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1330 2014/07/29 16:42:59 robbat2 Exp $
 
   28 Jul 2014; Davide Pesavento <pesa@gentoo.org> qmake-utils.eclass:
   Set also QMAKE_LINK_{C_,}SHLIB
@@ -109,6 +109,11 @@
   28 Jun 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Enable multilib flags for ppc. Since ppc profiles are not multilib at the
   moment, this should not create any new issues.
+
+  28 Jun 2014; Robin H. Johnson <robbat2@gentoo.org> linux-info.eclass:
+  linux-info: Bug #469210: during pkg_info|pkg_nofetch|pkg_pretend phases, $S
+  does not exist yet. This triggers sandbox violations in some cases, use $T
+  instead.
 
   27 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
   Disable QA warning on '--with-compiler' passed by 'dev-haskell/cabal' (bug

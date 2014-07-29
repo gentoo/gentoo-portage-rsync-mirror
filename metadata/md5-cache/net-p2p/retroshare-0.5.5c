@@ -4,11 +4,11 @@ DESCRIPTION=P2P private sharing application
 EAPI=5
 HOMEPAGE=http://retroshare.sourceforge.net
 IUSE=cli feedreader links-cloud qt4 voip
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=GPL-2 GPL-3 Apache-2.0 LGPL-2.1
 RDEPEND=app-arch/bzip2 dev-libs/openssl:0 gnome-base/libgnome-keyring net-libs/libupnp sys-libs/zlib cli? ( dev-libs/protobuf net-libs/libssh[server] ) feedreader? ( dev-libs/libxml2 dev-libs/libxslt net-misc/curl dev-qt/qtcore:4 dev-qt/qtgui:4 ) qt4? ( x11-libs/libX11 x11-libs/libXScrnSaver dev-qt/qtcore:4 || ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 ) ) voip? ( media-libs/speex dev-qt/qt-mobility[multimedia] dev-qt/qtmultimedia:4 )
 REQUIRED_USE=|| ( cli qt4 ) feedreader? ( qt4 ) links-cloud? ( qt4 ) voip? ( qt4 )
 SLOT=0
 SRC_URI=mirror://sourceforge/retroshare/retroshare_0.5.5-0.7068.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	40136c5fe0002a0d3937e869ae4ee0e2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=7a4ab99182e43bb29421c8c4fc4e7d31
+_md5_=b6b38184e295a9b12c1ccee29cc10896

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/webdavcgi/webdavcgi-0.8.3.ebuild,v 1.2 2013/01/14 08:22:33 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/webdavcgi/webdavcgi-0.8.3.ebuild,v 1.3 2014/07/29 16:40:56 zlogene Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ RDEPEND="dev-perl/Archive-Zip
 	dev-perl/XML-Simple
 	media-gfx/graphicsmagick[perl]
 	mysql? ( dev-perl/DBD-mysql )
-	perl-core/Module-Load
+	virtual/perl-Module-Load
 	postgres? ( dev-perl/DBD-Pg )
 	rcs? ( dev-perl/Rcs )
 	samba? ( dev-perl/Filesys-SmbClient )

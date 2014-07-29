@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.9.8.13030.ebuild,v 1.1 2013/01/31 05:15:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.9.8.13030.ebuild,v 1.2 2014/07/29 16:36:33 zlogene Exp $
 
 inherit eutils user
 
@@ -35,7 +35,7 @@ RDEPEND="dev-lang/perl
 	spf? ( dev-perl/Mail-SPF )
 	srs? ( dev-perl/Mail-SRS )
 	ssl? ( dev-perl/IO-Socket-SSL )
-	syslog? ( perl-core/Sys-Syslog )
+	syslog? ( virtual/perl-Sys-Syslog )
 	ldap? ( dev-perl/perl-ldap )"
 
 S=${WORKDIR}/${MY_PN}/ASSP

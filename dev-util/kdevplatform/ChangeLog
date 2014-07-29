@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.89 2014/03/12 12:11:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.90 2014/07/29 16:53:23 johu Exp $
+
+*kdevplatform-1.6.0-r1 (29 Jul 2014)
+
+  29 Jul 2014; Johannes Huber <johu@gentoo.org>
+  +files/kdevplatform-1.6.0-appwizard.patch, +kdevplatform-1.6.0-r1.ebuild,
+  -kdevplatform-1.6.0.ebuild:
+  Revision bump adds upstream patch to fix new project creation with wizard
+  spotted by Nanzikambe <janus.nanzikambe+gentoobugs@gmail.com>, bug #518486.
 
 *kdevplatform-1.6.0 (12 Mar 2014)
 
