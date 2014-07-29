@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/leptonica
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.15 2014/07/20 13:27:06 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.16 2014/07/29 13:07:48 tomka Exp $
+
+*leptonica-1.71 (29 Jul 2014)
+
+  29 Jul 2014; Thomas Kahle <tomka@gentoo.org> +leptonica-1.71.ebuild:
+  Bump to 1.71
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> leptonica-1.70.ebuild:
   Keyworded on alpha, bug #510240
