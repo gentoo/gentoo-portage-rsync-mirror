@@ -1,6 +1,21 @@
 # ChangeLog for x11-plugins/wmbattery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.30 2014/06/19 19:18:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.33 2014/07/29 18:12:08 ssuominen Exp $
+
+  29 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/wmbattery-2.43-upower-0.99.patch, -wmbattery-2.40.ebuild,
+  -wmbattery-2.43.ebuild:
+  old
+
+  29 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> wmbattery-2.44.ebuild:
+  amd64/x86 stable (since there is no chance 2.40 or 2.43 works at all on modern
+  systems)
+
+*wmbattery-2.44 (29 Jul 2014)
+
+  29 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +wmbattery-2.44.ebuild:
+  Version bump. Improved support for current Linux /sys interface(s).
+  Optionalize sys-power/upower dependency using USE="upower".
 
   19 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> wmbattery-2.40.ebuild:
   Update from EAPI 3 to 5.

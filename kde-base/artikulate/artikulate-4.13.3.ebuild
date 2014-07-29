@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artikulate/artikulate-4.13.3.ebuild,v 1.1 2014/07/16 17:40:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artikulate/artikulate-4.13.3.ebuild,v 1.2 2014/07/29 18:22:51 johu Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ IUSE="debug gstreamer"
 DEPEND="
 	dev-qt/qtxmlpatterns:4
 	media-libs/phonon
-	gstreamer? ( media-libs/qt-gstreamer )
+	gstreamer? ( <media-libs/qt-gstreamer-1.0.0 )
 	!gstreamer? ( dev-qt/qt-mobility[multimedia] )
 "
 RDEPEND="${DEPEND}

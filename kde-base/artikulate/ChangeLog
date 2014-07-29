@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artikulate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artikulate/ChangeLog,v 1.8 2014/07/23 16:52:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artikulate/ChangeLog,v 1.9 2014/07/29 18:22:51 johu Exp $
+
+  29 Jul 2014; Johannes Huber <johu@gentoo.org> artikulate-4.13.3.ebuild:
+  Restrict DEPEND to <media-libs/qt-gstreamer-1.0.0, bug #518482. Support for
+  new api fixed in upstream, which will hit 4.14.0 release.
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org> -artikulate-4.13.2.ebuild:
   Remove KDE SC 4.13.2

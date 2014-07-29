@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-3.2.ebuild,v 1.1 2014/07/29 17:14:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-3.2.ebuild,v 1.2 2014/07/29 18:16:15 jer Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit autotools eutils
 
@@ -36,15 +36,19 @@ DEPEND="
 
 src_prepare() {
 	# Remove tests known to FAIL instead of SKIP without OS/userland support
-	sed -i libparted/tests/Makefile.am \
-		-e 's|t3000-symlink.sh||g' || die "sed failed"
-	sed -i tests/Makefile.am \
-		-e '/t4100-msdos-partition-limits.sh/d' \
+	sed -i \
+		-e 's|t3000-symlink.sh||g' \
+		libparted/tests/Makefile.am || die
+
+	sed -i \
 		-e '/t4100-dvh-partition-limits.sh/d' \
-		-e '/t6000-dm.sh/d' || die "sed failed"
-	# there is no configure flag for controlling the dev-libs/check test
-	sed -i configure.ac \
-		-e "s:have_check=[a-z]*:have_check=$(usex test):g" || die
+		-e '/t4100-msdos-partition-limits.sh/d' \
+		-e '/t6000-dm.sh/d' \
+		tests/Makefile.am || die
+	# There is no configure flag for controlling the dev-libs/check test
+	sed -i \
+		-e "s:have_check=[a-z]*:have_check=$(usex test):g" \
+		configure.ac || die
 
 	epatch "${FILESDIR}"/${PN}-3.2-devmapper.patch
 
@@ -65,17 +69,14 @@ src_configure() {
 
 src_test() {
 	if use debug; then
-		# Do not die when tests fail - some requirements are not
-		# properly checked and should not lead to the ebuild failing.
 		emake check
 	else
-		ewarn "Skipping tests because USE=-debug is set."
+		ewarn "Skipping tests because USE=-debug is set"
 	fi
 }
+DOCS=( AUTHORS BUGS ChangeLog NEWS README THANKS TODO doc/{API,FAT,USER.jp} )
 
 src_install() {
-	emake install DESTDIR="${D}"
-	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
-	dodoc doc/{API,FAT,USER.jp}
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	default
+	prune_libtool_files
 }
