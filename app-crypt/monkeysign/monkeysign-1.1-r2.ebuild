@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/monkeysign-1.1-r1.ebuild,v 1.1 2014/07/29 10:50:19 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/monkeysign-1.1-r2.ebuild,v 1.1 2014/07/29 11:07:53 k_f Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -20,13 +20,13 @@ IUSE=""
 CDEPEND="dev-python/pygtk:2[${PYTHON_USEDEP}]
 	media-gfx/zbar:0=[python,gtk,imagemagick]
 	media-gfx/qrencode-python[${PYTHON_USEDEP}]
-	virtual/python-imaging:0="
+	virtual/python-imaging[${PYTHON_USEDEP}]"
 
 DEPEND="dev-python/docutils[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	${CDEPEND}"
 
-RDEPEND="app-crypt/gnupg:0=
+RDEPEND="app-crypt/gnupg
 	virtual/mta
 	${CDEPEND}"
 
@@ -34,7 +34,7 @@ PATCHES=("${FILESDIR}/${P}-basename.patch"
 	 "${FILESDIR}/${P}-rst2s5.patch"
 	)
 
-python_instal_all()
+python_install_all()
 {
 	distutils-r1_python_install_all
 	domenu "${FILESDIR}/monkeysign.desktop"
