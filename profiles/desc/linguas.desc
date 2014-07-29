@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.81 2014/06/14 20:03:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.82 2014/07/29 19:35:04 blueness Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
 # Keep it sorted.
 
+ach - Acoli locale
 af - Afrikaans locale
 af_ZA - Afrikaans locale for South Africa
 ak - Akan locale
@@ -37,6 +38,7 @@ ca - Catalan locale
 ca_ES - Catalan locale for Spain
 ca_XV - Asturian and Catalan locale (Valencia)
 ca@valencia - Catalan locale (Valencia)
+cmn - Chinese (Mandarin) locale
 crh - Crimean Tatar (Crimean Turkish) locale
 cs - Czech locale
 cs_CZ - Czech locale for Czech Republic
@@ -66,10 +68,12 @@ es_AR - Spanish locale for Argentina
 es_CL - Spanish locale for Chile
 es_CO - Spanish locale for Columbia
 es_CR - Spanish locale for Costa Rica
+es_DO - Spanish locale for Dominican Republic
 es_ES - Spanish locale for Spain
 es_LA - Spanish locale for Latin America
 es_MX - Spanish locale for Mexico
 es_VE - Spanish locale for Venezuela
+es_UY - Spanish locale for Uruguay
 et - Estonian locale
 et_EE - Estonian locale
 eu - Basque locale
@@ -118,6 +122,7 @@ jv - Javanese locale
 ka - Georgian locale
 ka_GE - Georgian locale
 kk - Kazakh locale
+kk_KZ - Kazakh (Kazakhstan) locale
 km - Khmer locale
 kn - Kannada locale
 kn_IN - Kannada locale for India
@@ -175,7 +180,8 @@ or - Oriya locale
 or_IN - Oriya locale for India
 pa - Punjabi locale for India
 pa_IN - Punjabi locale for India
-pap - Paiamento local
+pam - Kapampangan locale
+pap - Paiamento locale
 pl - Polish locale
 pl_PL - Polish locale
 ps - Pushto locale
@@ -190,6 +196,7 @@ ru_RU - Russian locale for Russia
 rue - Rusyn locale
 rw - Kinyarwanda locale
 sa_IN - Sanskrit locale
+sah - Sakha (Yakut)
 sat - Santali locale
 sco - Scots locale
 sd - Sindhi locale
@@ -254,6 +261,7 @@ ur_PK - Urdu language locale for Pakistan
 uz - Uzbek locale
 uz_UZ - Uzbek locale for Uzbekistan
 uz@cyrillic - Uzbek (cyrillic) locale
+uz@Cyrl - Uzbek (Cyrillic) locale
 uz@Latn - Uzbek (latin) locale
 ve - Venda locale
 vi - Vietnamese locale
