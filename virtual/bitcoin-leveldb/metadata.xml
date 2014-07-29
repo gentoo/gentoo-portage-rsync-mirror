@@ -7,12 +7,7 @@
 		<name>Anthony G. Basile</name>
 	</maintainer>
 	<maintainer>
-		<email>luke-jr+gentoobugs@utopios.org</email>
+		<email>luke_gentoo_bitcoin@dashjr.org</email>
 		<name>Luke Dashjr</name>
 	</maintainer>
-	<use>
-		<flag name='logrotate'>Use app-admin/logrotate for rotating logs</flag>
-		<flag name='upnp'>Enable Universal Plug and Play</flag>
-		<flag name='wallet'>Enable wallet support</flag>
-	</use>
 </pkgmetadata>

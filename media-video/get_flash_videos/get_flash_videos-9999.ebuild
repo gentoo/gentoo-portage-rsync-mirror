@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-9999.ebuild,v 1.2 2013/05/04 09:06:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-9999.ebuild,v 1.3 2014/07/29 16:09:08 zlogene Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils perl-module git-2
 
 MY_PN="App-${PN}"
@@ -18,7 +18,7 @@ KEYWORDS=""
 IUSE="test"
 
 RDEPEND="dev-perl/WWW-Mechanize
-	perl-core/Module-CoreList
+	virtual/perl-Module-CoreList
 	dev-perl/HTML-TokeParser-Simple
 	dev-perl/Module-Find"
 DEPEND="${RDEPEND}
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 		dev-perl/XML-Simple
 		dev-perl/Crypt-Rijndael
 		dev-perl/Data-AMF
-		perl-core/IO-Compress )"
+		virtual/perl-IO-Compress )"
 
 SRC_TEST="do"
 
