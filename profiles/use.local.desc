@@ -4877,6 +4877,7 @@ net-im/centerim:irc - Enable support for the IRC protocol
 net-im/centerim:lj - Enable support for the LiveJournal weblog system
 net-im/centerim:otr - Enable encrypted conversations
 net-im/climm:otr - Enable encrypted conversations
+net-im/corebird:glade - Install glade catalogs for corebird
 net-im/ejabberd:captcha - Support for CAPTCHA Forms (XEP-158)
 net-im/ejabberd:mod_irc - Build irc gateway
 net-im/ejabberd:mod_muc - Build Multi User Chat module

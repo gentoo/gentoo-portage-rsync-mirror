@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/symon-2.86-r1.ebuild,v 1.1 2014/06/24 01:31:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/symon-2.86-r1.ebuild,v 1.2 2014/07/30 14:49:12 jer Exp $
 
 EAPI=5
 
-inherit perl-module toolchain-funcs
+inherit eutils perl-module toolchain-funcs
 
 DESCRIPTION="Performance and information monitoring tool"
 HOMEPAGE="http://www.xs4all.nl/~wpd/symon/"
@@ -25,7 +25,7 @@ S=${WORKDIR}/${PN}
 # Deletes the directory passed as an argument from the internal pmake
 # variable SUBDIR.
 zap_subdir() {
-	sed -i "/^SUBDIR/s/$1//" Makefile || die
+	sed -i "/^SUBDIR/s|$1||" Makefile || die
 }
 
 pkg_setup() {
@@ -44,6 +44,10 @@ src_prepare() {
 		-e '/^[ \t]*${CC}.*\${LIBS}/s:\${CC}:$(CC) $(LDFLAGS):' \
 		sym*/Makefile || die
 
+	epatch "${FILESDIR}"/${P}-perl-5.18.patch
+}
+
+src_configure() {
 	# Do some sed magic in accordance with the USE flags.
 	use perl && [[ -z ${USE_SYMON} ]] && ! use symux && zap_subdir lib
 	! use perl && zap_subdir client

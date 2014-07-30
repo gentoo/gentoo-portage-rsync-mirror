@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/symon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.15 2014/06/24 01:31:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.16 2014/07/30 14:49:12 jer Exp $
+
+  30 Jul 2014; Jeroen Roovers <jer@gentoo.org> symon-2.86-r1.ebuild,
+  +files/symon-2.86-perl-5.18.patch:
+  Fix building against dev-lang/perl-5.18. Move configuration logic to
+  src_configure().
 
 *symon-2.86-r1 (24 Jun 2014)
 
