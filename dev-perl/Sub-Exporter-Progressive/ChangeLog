@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Sub-Exporter-Progressive
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter-Progressive/ChangeLog,v 1.12 2013/12/24 10:05:42 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter-Progressive/ChangeLog,v 1.13 2014/07/30 16:57:11 zlogene Exp $
+
+  30 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -Sub-Exporter-Progressive-0.1.6.ebuild,
+  -Sub-Exporter-Progressive-0.1.9.ebuild,
+  Sub-Exporter-Progressive-0.1.11.ebuild:
+  Stable for all; Drop old.
 
 *Sub-Exporter-Progressive-0.1.11 (24 Dec 2013)
 

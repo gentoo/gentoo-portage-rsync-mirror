@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/OpenGL
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenGL/ChangeLog,v 1.9 2014/04/30 19:35:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenGL/ChangeLog,v 1.10 2014/07/30 16:50:20 zlogene Exp $
+
+  30 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -OpenGL-0.660.0.ebuild,
+  -OpenGL-0.670.0.ebuild, OpenGL-0.670.3.ebuild:
+  Stable for all; Drop old.
 
 *OpenGL-0.670.3 (30 Apr 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenGL/OpenGL-0.670.3.ebuild,v 1.1 2014/04/30 19:35:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenGL/OpenGL-0.670.3.ebuild,v 1.2 2014/07/30 16:50:20 zlogene Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="Perl interface providing graphics display using OpenGL"
 
 LICENSE="|| ( Artistic GPL-1 GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
