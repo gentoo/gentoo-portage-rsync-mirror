@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.71.ebuild,v 1.2 2014/07/30 06:36:54 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.71.ebuild,v 1.3 2014/07/30 07:13:09 tomka Exp $
 
 EAPI=4
 
@@ -27,6 +27,8 @@ RDEPEND="${DEPEND}"
 DOCS=( README version-notes )
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-openjpeg-2.0.patch"
+
 	# unhtmlize docs
 	local X
 	for X in ${DOCS[@]}; do
