@@ -1,13 +1,13 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.8.5.ebuild,v 1.6 2014/07/29 21:31:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.8.5.ebuild,v 1.7 2014/07/30 14:27:41 blueness Exp $
 
 EAPI=4
 
 DB_VER="4.8"
 
 LANGS="af_ZA ar bg bs ca ca_ES cs cy da de el_GR en eo es es_CL et eu_ES fa fa_IR fi fr fr_CA gu_IN he hi_IN hr hu it ja la lt lv_LV nb nl pl pt_BR pt_PT ro_RO ru sk sr sv th_TH tr uk zh_CN zh_TW"
-inherit db-use eutils fdo-mime gnome2-utils qt4-r2 versionator
+inherit db-use eutils fdo-mime gnome2-utils kde4-functions qt4-r2 versionator
 
 MyPV="${PV/_/}"
 MyPN="bitcoin"
