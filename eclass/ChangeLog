@@ -1,6 +1,15 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1331 2014/07/29 17:59:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1332 2014/07/30 19:01:02 robbat2 Exp $
+
+  30 Jul 2014; Robin H. Johnson <robbat2@gentoo.org> apache-2.eclass:
+  Handle grsec TPE to ensure apache can compile. $T is group-writable, owned by
+  portage, and TPE blocks that.
+
+  29 Jul 2014; Robin H. Johnson <robbat2@gentoo.org> mysql.eclass,
+  mysql-multilib.eclass, mysql-v2.eclass:
+  Convert mysql eclasses to git-r3 eclass, so we can remove RESTRICT=userpriv
+  for live copies of the patches.
 
   29 Jul 2014; Robin H. Johnson <robbat2@gentoo.org> +mysql-multilib.eclass,
   mysql.eclass, mysql-autotools.eclass, mysql-cmake.eclass, mysql-v2.eclass,

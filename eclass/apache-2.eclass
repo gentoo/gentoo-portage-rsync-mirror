@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.36 2014/05/22 13:58:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.37 2014/07/30 19:01:02 robbat2 Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -447,6 +447,9 @@ apache-2_src_prepare() {
 	# patched-in MPMs need the build environment rebuilt
 	sed -i -e '/sinclude/d' configure.in
 	AT_M4DIR=build eautoreconf
+
+	# ${T} must be not group-writable, else grsec TPE will block it
+	chmod g-w "${T}"
 
 	# This package really should upgrade to using pcre's .pc file.
 	cat <<-\EOF >"${T}"/pcre-config
