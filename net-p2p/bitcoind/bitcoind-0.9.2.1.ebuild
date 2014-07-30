@@ -1,6 +1,6 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.9.2.1.ebuild,v 1.1 2014/07/29 16:30:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.9.2.1.ebuild,v 1.2 2014/07/30 05:21:30 patrick Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="bash-completion examples logrotate test upnp +wallet"
 
 RDEPEND="
-	>=dev-libs/boost-1.41.0[threads(+)]
+	>=dev-libs/boost-1.53.0[threads(+)]
 	dev-libs/openssl:0[-bindist]
 	logrotate? (
 		app-admin/logrotate
