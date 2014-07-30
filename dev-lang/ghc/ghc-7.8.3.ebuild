@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.3.ebuild,v 1.3 2014/07/30 11:47:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.3.ebuild,v 1.4 2014/07/30 13:20:16 slyfox Exp $
 
 EAPI=5
 
@@ -528,7 +528,7 @@ src_install() {
 		# ghci uses mmap with rwx protection at it implements dynamic
 		# linking on it's own (bug #299709)
 		# so mark resulting binary
-		pax-mark -m "${ED}/usr/$(get_libdir)/${GHC_P}/ghc"
+		pax-mark -m "${ED}/usr/$(get_libdir)/${GHC_P}/bin/ghc"
 
 		if [[ ! -f "${S}/VERSION" ]]; then
 			echo "${GHC_PV}" > "${S}/VERSION" \

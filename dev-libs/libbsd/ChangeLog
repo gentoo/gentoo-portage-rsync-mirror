@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libbsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.27 2014/07/20 13:36:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.28 2014/07/30 13:19:42 ssuominen Exp $
+
+*libbsd-0.7.0 (30 Jul 2014)
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +libbsd-0.7.0.ebuild:
+  Version bump; removing hard requirement for GNU .init_array section support,
+  thus, making the package even more portable.
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> libbsd-0.6.0.ebuild:
   Stable on alpha, bug #510330
