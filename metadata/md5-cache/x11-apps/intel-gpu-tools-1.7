@@ -7,8 +7,9 @@ IUSE=python video_cards_nouveau python_targets_python3_3 python_targets_python3_
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 RDEPEND=dev-libs/glib:2 >=x11-libs/cairo-1.12.0 >=x11-libs/libdrm-2.4.47[video_cards_intel,video_cards_nouveau?] >=x11-libs/libpciaccess-0.10 python? ( python_single_target_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_single_target_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_single_target_python3_3(+)?,python_single_target_python3_4(+)?] )
+REQUIRED_USE=python? ( python_single_target_python3_3? ( python_targets_python3_3 ) python_single_target_python3_4? ( python_targets_python3_4 ) ^^ ( python_single_target_python3_3 python_single_target_python3_4 ) )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://xorg.freedesktop.org/releases/individual/app/intel-gpu-tools-1.7.tar.bz2
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402	xorg-2	69479ff7a35a30e863a475568d29b9be
-_md5_=c117c5a7ad80b73d7433b7be0ec3a9ee
+_md5_=c26808d1bf71185075de61536efb095d
