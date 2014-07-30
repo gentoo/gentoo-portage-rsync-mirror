@@ -1,6 +1,14 @@
 # ChangeLog for app-backup/backuppc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/ChangeLog,v 1.19 2014/07/29 16:29:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/ChangeLog,v 1.20 2014/07/30 08:26:27 patrick Exp $
+
+*backuppc-3.3.0 (30 Jul 2014)
+
+  30 Jul 2014; Patrick Lauer <patrick@gentoo.org> +backuppc-3.3.0.ebuild,
+  +files/3.3.0/01-fix-configure.pl.patch,
+  +files/3.3.0/02-fix-config.pl-formatting.patch,
+  +files/3.3.0/03-reasonable-config.pl-defaults.patch:
+  Bump, ebuild modifications and patches thanks to Lenno Nagel. Fixes #468360
 
   29 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> backuppc-3.2.1-r2.ebuild,
   backuppc-3.2.1-r3.ebuild:
