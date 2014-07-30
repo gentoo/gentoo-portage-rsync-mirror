@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.121 2014/03/24 15:10:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.123 2014/07/30 22:12:53 xmw Exp $
+
+*radvd-2.3 (30 Jul 2014)
+
+  30 Jul 2014; Michael Weber <xmw@gentoo.org> +radvd-2.3.ebuild:
+  Version bump
+
+*radvd-1.15 (30 Jul 2014)
+
+  30 Jul 2014; Michael Weber <xmw@gentoo.org> +radvd-1.15.ebuild,
+  -files/radvd-1.9.2-sysctl.patch, -radvd-1.9.1-r1.ebuild,
+  -radvd-1.9.2-r1.ebuild, -radvd-1.9.3.ebuild, -radvd-1.9.5.ebuild,
+  -radvd-1.9.7.ebuild:
+  Version bump, drop old.
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> radvd-1.9.8.ebuild:
   Stable for ppc, wrt bug #502906

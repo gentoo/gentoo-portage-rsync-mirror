@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.9.3.ebuild,v 1.1 2013/04/08 05:55:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.15.ebuild,v 1.1 2014/07/30 22:07:44 xmw Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	virtual/pkgconfig"
 
-DOCS=( CHANGES README TODO radvd.conf.example )
+DOCS=( CHANGES-1 README TODO radvd.conf.example )
 
 pkg_setup() {
 	enewgroup radvd
@@ -33,7 +33,8 @@ pkg_setup() {
 }
 
 src_configure() {
-	econf --with-pidfile=/var/run/radvd/radvd.pid
+	econf --with-pidfile=/var/run/radvd/radvd.pid \
+		--disable-silent-rules
 }
 
 src_install() {

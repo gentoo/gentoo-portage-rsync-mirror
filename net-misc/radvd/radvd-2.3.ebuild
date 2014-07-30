@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.9.5.ebuild,v 1.1 2013/10/02 15:40:02 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-2.3.ebuild,v 1.1 2014/07/30 22:12:53 xmw Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ IUSE="kernel_FreeBSD selinux"
 RDEPEND="dev-libs/libdaemon
 	selinux? ( sec-policy/selinux-radvd )"
 DEPEND="${RDEPEND}
+	dev-libs/check
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig"
@@ -33,7 +34,8 @@ pkg_setup() {
 }
 
 src_configure() {
-	econf --with-pidfile=/var/run/radvd/radvd.pid
+	econf --with-pidfile=/var/run/radvd/radvd.pid \
+		--disable-silent-rules
 }
 
 src_install() {
