@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/mysql-5.6.ebuild,v 1.1 2014/07/29 22:49:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/mysql-5.6.ebuild,v 1.2 2014/07/30 06:30:25 robbat2 Exp $
 
 EAPI="5"
 
@@ -16,10 +16,9 @@ IUSE="embedded minimal static static-libs"
 DEPEND=""
 RDEPEND="|| (
 	=dev-db/mariadb-10.0*[embedded=,minimal=,static=,static-libs=]
+	=dev-db/mariadb-10.1*[embedded=,minimal=,static=,static-libs=]
 	=dev-db/mysql-${PV}*[embedded=,minimal=,static=,static-libs=]
 	=dev-db/percona-server-${PV}*[embedded=,minimal=,static=,static-libs=]
+	=dev-db/mariadb-galera-10.0*[embedded=,minimal=,static=,static-libs=]
+	=dev-db/mysql-cluster-7.3*[embedded=,minimal=,static=,static-libs=]
 )"
-# Not quite yet
-#=dev-db/mariadb-10.1*[embedded=,minimal=,static=,static-libs=]
-#=dev-db/mariadb-galera-10.0*[embedded=,minimal=,static=,static-libs=]
-#=dev-db/mysql-cluster-7.3*[embedded=,minimal=,static=,static-libs=]

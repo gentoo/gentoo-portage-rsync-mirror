@@ -1,0 +1,11 @@
+# ChangeLog for sys-cluster/galera
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/ChangeLog,v 1.1 2014/07/30 06:26:05 robbat2 Exp $
+
+*galera-25.3.5 (30 Jul 2014)
+
+  30 Jul 2014; Robin H. Johnson <robbat2@gentoo.org> +files/disable-tests.patch,
+  +files/garb.cnf, +files/garb.sh, +files/respect-flags.patch,
+  +galera-25.3.5.ebuild, +metadata.xml:
+  Bring MariaDB-Galera from the overlay into the tree. Thanks to the great work
+  of Brian Evans <grknight@gentoo.org>.
