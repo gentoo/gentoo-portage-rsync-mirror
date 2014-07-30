@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.1.ebuild,v 1.4 2014/07/24 16:58:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.1-r1.ebuild,v 1.1 2014/07/30 04:03:43 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
