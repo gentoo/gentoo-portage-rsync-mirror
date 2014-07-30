@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.313 2014/07/25 04:03:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.314 2014/07/30 18:11:23 ssuominen Exp $
 
 EAPI=5
 
-inherit autotools bash-completion-r1 eutils linux-info multilib multilib-minimal toolchain-funcs user versionator
+inherit autotools bash-completion-r1 eutils linux-info multilib multilib-minimal toolchain-funcs udev user versionator
 
 if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd"
@@ -497,12 +497,7 @@ pkg_postinst() {
 	if has_version 'sys-apps/hwids[udev]'; then
 		udevadm hwdb --update --root="${ROOT%/}"
 		# Only reload when we are not upgrading to avoid potential race w/ incompatible hwdb.bin and the running udevd
-		if [[ -z ${REPLACING_VERSIONS} ]]; then
-			# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
-			if [[ ${ROOT} != "" ]] && [[ ${ROOT} != "/" ]]; then
-				return 0
-			fi
-			udevadm control --reload
-		fi
+		# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+		[[ -z ${REPLACING_VERSIONS} ]] && udev_reload
 	fi
 }

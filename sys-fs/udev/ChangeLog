@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1073 2014/07/29 19:23:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1074 2014/07/30 18:11:23 ssuominen Exp $
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Use udev_reload() function from udev.eclass to avoid duplicating code.
 
   29 Jul 2014; Markus Meier <maekke@gentoo.org> udev-215-r1.ebuild:
   arm stable, bug #517106
