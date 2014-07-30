@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.46 2014/07/23 12:06:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.47 2014/07/30 11:57:13 jlec Exp $
+
+  30 Jul 2014; Justin Lecher <jlec@gentoo.org> ansible-1.5.5.ebuild,
+  ansible-1.6.8.ebuild, ansible-9999.ebuild:
+  Fix maintainer introduced ugly line breakings
 
   23 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> ansible-1.6.8.ebuild,
   -files/README.gentoo:

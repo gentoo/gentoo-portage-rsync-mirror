@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.5.5.ebuild,v 1.2 2014/05/03 21:02:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.5.5.ebuild,v 1.3 2014/07/30 11:57:13 jlec Exp $
 
 EAPI="5"
 
@@ -33,9 +33,9 @@ Examples of config files installed in /usr/share/doc/${PF}/examples\n\n
 You have to create ansible hosts file!\n
 More info on http://docs.ansible.com/intro_getting_started.html
 
-Some optional dependencies, you might want to install:
-dev-python/keyczar - needed to support accelerated mode
-dev-python/paramiko - alternative SSH backend"
+Some optional dependencies, you might want to install:\n
+dev-python/keyczar - needed to support accelerated mode\n
+dev-python/paramiko - alternative SSH backend"\
 
 python_test() {
 	make tests || die "tests failed"
