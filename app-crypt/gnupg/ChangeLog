@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.536 2014/07/25 03:53:22 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.537 2014/07/30 15:54:34 k_f Exp $
+
+  30 Jul 2014; Kristian Fiskerstrand <k_f@gentoo.org> metadata.xml:
+  Update metadata longdesc to reflect IDEA is now also part of GnuPG and the
+  OpenPGP specs have been amended in RFC4880
 
   25 Jul 2014; Jason A. Donenfeld <zx2c4@gentoo.org> gnupg-2.1.0_beta751.ebuild:
   It's not in the mirrors yet.
