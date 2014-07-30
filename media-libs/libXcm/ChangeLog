@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libXcm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.18 2014/07/30 22:29:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.19 2014/07/30 22:33:09 xmw Exp $
+
+*libXcm-9999 (30 Jul 2014)
+
+  30 Jul 2014; Michael Weber <xmw@gentoo.org> +libXcm-9999.ebuild:
+  Add live ebuild (bug 503798)
 
 *libXcm-0.5.3 (30 Jul 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/linux-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.23 2014/07/30 15:59:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.24 2014/07/30 22:33:01 blueness Exp $
+
+  30 Jul 2014; Anthony G. Basile <blueness@gentoo.org> linux-sources-1.ebuild:
+  Stable for arm, bug #512846
 
   30 Jul 2014; Anthony G. Basile <blueness@gentoo.org> linux-sources-1.ebuild:
   Stable ppc and ppc64, bug #512846
