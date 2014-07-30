@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.211 2014/07/29 08:13:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.212 2014/07/30 08:34:55 vapier Exp $
+
+*xbmc-13.1 (30 Jul 2014)
+
+  30 Jul 2014; Mike Frysinger <vapier@gentoo.org> +xbmc-13.1.ebuild:
+  Version bump #512700 by Michael Cook.
 
   29 Jul 2014; Mike Frysinger <vapier@gentoo.org> xbmc-12.3.ebuild,
   xbmc-13.0_p2.ebuild, xbmc-9999.ebuild:
