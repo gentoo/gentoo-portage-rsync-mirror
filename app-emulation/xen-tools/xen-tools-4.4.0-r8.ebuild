@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r8.ebuild,v 1.1 2014/07/29 09:40:45 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r8.ebuild,v 1.2 2014/07/30 19:20:10 ssuominen Exp $
 
 EAPI=5
 
@@ -382,8 +382,8 @@ src_install() {
 	keepdir /etc/xen/auto
 
 	# Temp QA workaround
-	dodir "$(udev_get_udevdir)"
-	mv "${D}"/etc/udev/* "${D}/$(udev_get_udevdir)"
+	dodir "$(get_udevdir)"
+	mv "${D}"/etc/udev/* "${D}/$(get_udevdir)"
 	rm -rf "${D}"/etc/udev
 
 	# Remove files failing QA AFTER emake installs them, avoiding seeking absent files

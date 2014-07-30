@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.12.ebuild,v 1.12 2013/04/09 16:40:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.12.ebuild,v 1.13 2014/07/30 19:17:42 ssuominen Exp $
 
 EAPI=4
 
@@ -72,8 +72,8 @@ src_compile() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		udevhelperdir="$(udev_get_udevdir)" \
-		udevrulesdir="$(udev_get_udevdir)/rules.d" \
+		udevhelperdir="$(get_udevdir)" \
+		udevrulesdir="$(get_udevdir)/rules.d" \
 		install
 
 	dodoc AUTHORS ChangeLog README

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.12.ebuild,v 1.2 2014/05/21 05:58:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.12.ebuild,v 1.3 2014/07/30 19:25:45 ssuominen Exp $
 
 EAPI=5
 
@@ -336,7 +336,7 @@ src_install() {
 	popd &>/dev/null || die
 
 	# New way of handling USB device nodes for VBox (bug #356215)
-	local udevdir="$(udev_get_udevdir)"
+	local udevdir="$(get_udevdir)"
 	insinto ${udevdir}
 	doins VBoxCreateUSBNode.sh
 	fowners root:vboxusers ${udevdir}/VBoxCreateUSBNode.sh

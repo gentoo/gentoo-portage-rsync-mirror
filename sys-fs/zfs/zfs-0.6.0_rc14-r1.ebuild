@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc14-r1.ebuild,v 1.1 2013/02/06 01:48:50 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc14-r1.ebuild,v 1.2 2014/07/30 19:21:10 ssuominen Exp $
 
 EAPI="4"
 
@@ -86,7 +86,7 @@ src_configure() {
 		--with-config=user
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
-		--with-udevdir="$(udev_get_udevdir)"
+		--with-udevdir="$(get_udevdir)"
 	)
 	autotools-utils_src_configure
 }

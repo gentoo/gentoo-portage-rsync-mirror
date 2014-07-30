@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.0.ebuild,v 1.10 2014/01/15 10:03:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.0.ebuild,v 1.11 2014/07/30 19:29:26 ssuominen Exp $
 
 EAPI="5"
 
@@ -144,7 +144,7 @@ src_configure() {
 		--disable-adrian-aec \
 		--disable-esound \
 		--localstatedir="${EPREFIX}"/var \
-		--with-udev-rules-dir="${EPREFIX}/$(udev_get_udevdir)"/rules.d \
+		--with-udev-rules-dir="${EPREFIX}/$(get_udevdir)"/rules.d \
 		${myconf}
 
 	if use doc; then

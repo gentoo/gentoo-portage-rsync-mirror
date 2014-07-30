@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.3-r1.ebuild,v 1.1 2014/02/12 21:01:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.3-r1.ebuild,v 1.2 2014/07/30 19:19:34 ssuominen Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ _emake() {
 	emake \
 		PREFIX="${EPREFIX}/usr" \
 		SBINDIR='$(PREFIX)/sbin/' \
-		UDEV_RULE_DIR="$(udev_get_udevdir)/rules.d" \
+		UDEV_RULE_DIR="$(get_udevdir)/rules.d" \
 		REG_BIN=/usr/lib/crda/regulatory.bin \
 		USE_OPENSSL=1 \
 		CC="$(tc-getCC)" \

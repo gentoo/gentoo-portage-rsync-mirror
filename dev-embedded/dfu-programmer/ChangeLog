@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/dfu-programmer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dfu-programmer/ChangeLog,v 1.5 2013/11/27 12:32:52 chainsaw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dfu-programmer/ChangeLog,v 1.6 2014/07/30 19:18:42 ssuominen Exp $
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  dfu-programmer-0.5.4-r1.ebuild, dfu-programmer-0.6.1.ebuild,
+  dfu-programmer-0.6.2.ebuild:
+  Use shorter get_udevdir() instead of the longer deprecated udev_get_udevdir()
+  version.
 
 *dfu-programmer-0.6.2 (27 Nov 2013)
 

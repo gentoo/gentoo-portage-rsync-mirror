@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.24.ebuild,v 1.3 2014/06/08 09:44:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.24.ebuild,v 1.4 2014/07/30 19:26:50 ssuominen Exp $
 
 EAPI=5
 
@@ -303,7 +303,7 @@ src_install() {
 	echo -n "VBOX_APP_HOME=/opt/VirtualBox" > "${T}/90virtualbox"
 	doenvd "${T}/90virtualbox"
 
-	local udevdir="$(udev_get_udevdir)"
+	local udevdir="$(get_udevdir)"
 	insinto ${udevdir}/rules.d
 	doins "${FILESDIR}"/10-virtualbox.rules
 	sed "s@%UDEVDIR%@${udevdir}@" \

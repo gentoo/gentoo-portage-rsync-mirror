@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.4.ebuild,v 1.3 2014/07/10 13:30:28 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.4.ebuild,v 1.4 2014/07/30 19:30:00 ssuominen Exp $
 
 EAPI=5
 
@@ -125,7 +125,7 @@ src_prepare() {
 	# Fix for Gentoo bug https://bugs.gentoo.org/show_bug.cgi?id=345725
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/880847,
 	# https://bugs.launchpad.net/hplip/+bug/500086
-	local udevdir=$(udev_get_udevdir)
+	local udevdir=$(get_udevdir)
 	sed -i -e "s|/etc/udev|${udevdir}|g" \
 		$(find . -type f -exec grep -l /etc/udev {} +) || die
 

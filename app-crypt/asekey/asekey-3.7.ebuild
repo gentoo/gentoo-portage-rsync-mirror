@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/asekey-3.7.ebuild,v 1.1 2013/01/05 21:11:29 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/asekey-3.7.ebuild,v 1.2 2014/07/30 19:28:45 ssuominen Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --with-udev-rules-dir="$(udev_get_udevdir)/rules.d"
+	econf --with-udev-rules-dir="$(get_udevdir)/rules.d"
 }
 
 src_install() {

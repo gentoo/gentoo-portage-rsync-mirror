@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r1.ebuild,v 1.11 2014/06/20 14:45:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r1.ebuild,v 1.12 2014/07/30 19:29:26 ssuominen Exp $
 
 EAPI="5"
 inherit autotools eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -188,7 +188,7 @@ multilib_src_configure() {
 		--disable-adrian-aec
 		--disable-esound
 		--localstatedir="${EPREFIX}"/var
-		--with-udev-rules-dir="${EPREFIX}/$(udev_get_udevdir)"/rules.d
+		--with-udev-rules-dir="${EPREFIX}/$(get_udevdir)"/rules.d
 	)
 
 	if ! multilib_is_native_abi; then

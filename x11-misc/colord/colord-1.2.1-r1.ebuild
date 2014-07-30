@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.1-r1.ebuild,v 1.1 2014/07/30 04:03:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.1-r1.ebuild,v 1.2 2014/07/30 19:22:57 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -95,7 +95,7 @@ src_configure() {
 		$(use_enable scanner sane) \
 		$(use_enable systemd systemd-login) \
 		$(use_enable udev) \
-		--with-udevrulesdir="$(udev_get_udevdir)"/rules.d \
+		--with-udevrulesdir="$(get_udevdir)"/rules.d \
 		$(use_enable vala) \
 		"$(systemd_with_unitdir)"
 }

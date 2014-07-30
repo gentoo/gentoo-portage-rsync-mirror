@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.53 2014/07/09 01:31:30 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.54 2014/07/30 19:21:10 ssuominen Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
@@ -93,7 +93,7 @@ src_configure() {
 		--with-config=user
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
-		--with-udevdir="$(udev_get_udevdir)"
+		--with-udevdir="$(get_udevdir)"
 		--with-blkid
 		$(use_enable debug)
 	)

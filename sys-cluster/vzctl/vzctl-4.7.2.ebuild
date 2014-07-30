@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.7.2.ebuild,v 1.2 2014/05/08 07:55:12 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.7.2.ebuild,v 1.3 2014/07/30 19:27:43 ssuominen Exp $
 
 EAPI="5"
 
@@ -40,7 +40,7 @@ src_prepare() {
 	# Set default OSTEMPLATE on gentoo
 	sed -i -e 's:=redhat-:=gentoo-:' etc/dists/default || die 'sed on etc/dists/default failed'
 	# Set proper udev directory
-	sed -i -e "s:/lib/udev:$(udev_get_udevdir):" src/lib/dev.c || die 'sed on src/lib/dev.c failed'
+	sed -i -e "s:/lib/udev:$(get_udevdir):" src/lib/dev.c || die 'sed on src/lib/dev.c failed'
 }
 
 src_configure() {
@@ -55,7 +55,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" udevdir="$(udev_get_udevdir)"/rules.d install install-gentoo
+	emake DESTDIR="${D}" udevdir="$(get_udevdir)"/rules.d install install-gentoo
 
 	# install the bash-completion script into the right location
 	rm -rf "${ED}"/etc/bash_completion.d

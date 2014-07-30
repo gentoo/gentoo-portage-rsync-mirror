@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.80 2014/07/30 04:04:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.81 2014/07/30 19:22:57 ssuominen Exp $
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> colord-1.0.3.ebuild,
+  colord-1.2.1-r1.ebuild:
+  Use shorter get_udevdir() instead of the longer deprecated udev_get_udevdir()
+  version.
 
   30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -colord-1.2.0.ebuild,
   -colord-1.2.1.ebuild, -files/colord-0.1.26-fix-automagic-systemd.patch:

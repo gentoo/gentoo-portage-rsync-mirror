@@ -9,4 +9,4 @@ RDEPEND=dev-libs/openssl:0 dev-libs/libnl:3 net-wireless/wireless-regdb >=virtua
 SLOT=0
 SRC_URI=http://linuxwireless.org/download/crda/crda-1.1.2.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=25160f8312c9f85b230c8a4cdf27410c
+_md5_=de9823ede843cc9143f6af88beb5d670

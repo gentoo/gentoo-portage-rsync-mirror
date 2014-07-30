@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openct
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.110 2013/01/01 18:48:27 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.111 2014/07/30 19:23:59 ssuominen Exp $
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> openct-0.6.20-r3.ebuild,
+  openct-0.6.20.ebuild:
+  Use shorter get_udevdir() instead of the longer deprecated udev_get_udevdir()
+  version.
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> openct-0.6.20-r3.ebuild:
   m68k/s390/sh stable wrt #418765

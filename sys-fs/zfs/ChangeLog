@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.84 2014/07/09 01:31:30 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.85 2014/07/30 19:21:10 ssuominen Exp $
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> zfs-0.6.0_rc13-r2.ebuild,
+  zfs-0.6.0_rc14-r1.ebuild, zfs-0.6.1-r4.ebuild, zfs-0.6.2-r1.ebuild,
+  zfs-0.6.2-r2.ebuild, zfs-0.6.2-r3.ebuild, zfs-0.6.2-r4.ebuild,
+  zfs-0.6.2-r5.ebuild, zfs-0.6.2.ebuild, zfs-0.6.3.ebuild, zfs-9999.ebuild:
+  Use shorter get_udevdir() instead of the longer deprecated udev_get_udevdir()
+  version.
 
   09 Jul 2014; Matthew Thode <prometheanfire@gentoo.org> zfs-9999.ebuild:
   swiching to https for git ebuild

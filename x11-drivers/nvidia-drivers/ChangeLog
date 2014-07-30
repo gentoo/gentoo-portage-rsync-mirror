@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.563 2014/07/19 20:23:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.564 2014/07/30 19:22:29 ssuominen Exp $
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  nvidia-drivers-173.14.39.ebuild, nvidia-drivers-304.123.ebuild,
+  nvidia-drivers-331.89.ebuild, nvidia-drivers-334.21-r3.ebuild,
+  nvidia-drivers-337.25.ebuild, nvidia-drivers-340.24.ebuild,
+  nvidia-drivers-96.43.23.ebuild:
+  Use shorter get_udevdir() instead of the longer deprecated udev_get_udevdir()
+  version.
 
   19 Jul 2014; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-304.121.ebuild,
   nvidia-drivers-304.123.ebuild, -nvidia-drivers-331.79.ebuild,

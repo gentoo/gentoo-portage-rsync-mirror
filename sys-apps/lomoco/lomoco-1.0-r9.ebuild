@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r9.ebuild,v 1.5 2012/12/11 16:23:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r9.ebuild,v 1.6 2014/07/30 19:23:24 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils multilib toolchain-funcs udev
@@ -22,7 +22,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 src_prepare() {
 	cp -f "${FILESDIR}"/lomoco-pm-utils-r1 "${T}" || die
-	sed -i -e "s|@UDEVDIR@|$(udev_get_udevdir)|" "${T}"/lomoco-pm-utils-r1 || die
+	sed -i -e "s|@UDEVDIR@|$(get_udevdir)|" "${T}"/lomoco-pm-utils-r1 || die
 
 	epatch \
 		"${FILESDIR}"/${P}-gentoo-hardware-support.patch \
@@ -39,10 +39,10 @@ src_compile() {
 src_install() {
 	default
 
-	insinto "$(udev_get_udevdir)"/rules.d
+	insinto "$(get_udevdir)"/rules.d
 	newins udev/lomoco.rules 40-lomoco.rules
 
-	exeinto "$(udev_get_udevdir)"
+	exeinto "$(get_udevdir)"
 	newexe udev/udev.lomoco lomoco
 
 	insinto /etc

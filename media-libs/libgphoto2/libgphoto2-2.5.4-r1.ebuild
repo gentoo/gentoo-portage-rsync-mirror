@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.4-r1.ebuild,v 1.5 2014/07/28 13:45:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.4-r1.ebuild,v 1.6 2014/07/30 19:24:55 ssuominen Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -161,7 +161,7 @@ multilib_src_configure() {
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		--with-hotplug-doc-dir="${EPREFIX}"/usr/share/doc/${PF}/hotplug \
 		--with-rpmbuild=$(type -P true) \
-		udevscriptdir="$(udev_get_udevdir)" \
+		udevscriptdir="$(get_udevdir)" \
 		"${myconf[@]}"
 }
 
@@ -197,7 +197,7 @@ multilib_src_install_all() {
 	# end fixup
 
 	local udev_rules cam_list
-	udev_rules="$(udev_get_udevdir)/rules.d/70-libgphoto2.rules"
+	udev_rules="$(get_udevdir)/rules.d/70-libgphoto2.rules"
 	cam_list="/usr/$(get_libdir)/libgphoto2/print-camera-list"
 
 	if [ -x "${ED}"${cam_list} ]; then

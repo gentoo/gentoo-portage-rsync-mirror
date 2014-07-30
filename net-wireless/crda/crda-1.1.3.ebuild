@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.3.ebuild,v 1.3 2013/01/28 07:35:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.3.ebuild,v 1.4 2014/07/30 19:19:34 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs python udev
@@ -33,7 +33,7 @@ src_prepare() {
 
 src_compile() {
 	emake \
-		UDEV_RULE_DIR="$(udev_get_udevdir)/rules.d" \
+		UDEV_RULE_DIR="$(get_udevdir)/rules.d" \
 		REG_BIN=/usr/$(get_libdir)/crda/regulatory.bin \
 		USE_OPENSSL=1 \
 		CC="$(tc-getCC)" \
@@ -46,7 +46,7 @@ src_test() {
 
 src_install() {
 	emake \
-		UDEV_RULE_DIR="$(udev_get_udevdir)/rules.d" \
+		UDEV_RULE_DIR="$(get_udevdir)/rules.d" \
 		REG_BIN=/usr/$(get_libdir)/crda/regulatory.bin \
 		USE_OPENSSL=1 \
 		DESTDIR="${D}" \

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.2.0.ebuild,v 1.6 2012/12/11 16:08:45 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.2.0.ebuild,v 1.7 2014/07/30 19:25:11 ssuominen Exp $
 
 EAPI="4"
 
@@ -34,7 +34,7 @@ pkg_pretend() {
 
 src_install() {
 	# Install udev rules in the proper place
-	export MAKEOPTS="${MAKEOPTS} udevdir=$(udev_get_udevdir)"
+	export MAKEOPTS="${MAKEOPTS} udevdir=$(get_udevdir)"
 	default
 
 	# Symlink icons for use in application launchers

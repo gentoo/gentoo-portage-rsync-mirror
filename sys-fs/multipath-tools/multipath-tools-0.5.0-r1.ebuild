@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.5.0-r1.ebuild,v 1.8 2014/05/29 01:44:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.5.0-r1.ebuild,v 1.9 2014/07/30 19:27:36 ssuominen Exp $
 
 EAPI=4
 inherit eutils systemd toolchain-funcs udev
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	local udevdir="$(udev_get_udevdir)"
+	local udevdir="$(get_udevdir)"
 
 	dodir /sbin /usr/share/man/man8
 	emake \
