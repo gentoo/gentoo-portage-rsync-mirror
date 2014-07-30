@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.9.ebuild,v 1.6 2013/08/26 16:53:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.9.ebuild,v 1.7 2014/07/30 19:41:46 ssuominen Exp $
 
 EAPI="4"
 
@@ -110,7 +110,7 @@ src_configure() {
 	myesconsargs=(
 		prefix="${EPREFIX}/usr"
 		libdir="\$prefix/$(get_libdir)"
-		udevdir="$(udev_get_udevdir)"
+		udevdir="$(get_udevdir)"
 		chrpath=False
 		gpsd_user=gpsd
 		gpsd_group=uucp

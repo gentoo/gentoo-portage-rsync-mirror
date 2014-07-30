@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-apps/pcsc-lite-1.8.3 usb? ( virtual/libusb:1 )
 SLOT=0
 SRC_URI=http://alioth.debian.org/frs/download.php/file/4091/ccid-1.4.17.tar.bz2
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	8cd692457c1524c7be9af69831698a78
+_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=b4254eb4fd10d03607f965e20266f498

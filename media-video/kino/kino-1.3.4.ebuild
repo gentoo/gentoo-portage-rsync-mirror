@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.10 2014/01/27 20:14:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.11 2014/07/30 19:34:25 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils udev
@@ -96,13 +96,13 @@ src_configure() {
 		--disable-local-ffmpeg \
 		$(use_enable quicktime) \
 		$(use_with sparc dv1394) \
-		--with-udev-rules-dir="$(udev_get_udevdir)"/rules.d \
+		--with-udev-rules-dir="$(get_udevdir)"/rules.d \
 		CPPFLAGS="-I${ROOT}usr/include/libavcodec -I${ROOT}usr/include/libavformat -I${ROOT}usr/include/libswscale"
 }
 
 src_install() {
 	default
-	mv "${ED}/$(udev_get_udevdir)"/rules.d/{,99-}kino.rules
+	mv "${ED}/$(get_udevdir)"/rules.d/{,99-}kino.rules
 	fowners root:root -R /usr/share/kino/help #177378
 	prune_libtool_files --all #385361
 }

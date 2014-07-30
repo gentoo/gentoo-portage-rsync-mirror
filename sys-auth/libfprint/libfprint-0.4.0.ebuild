@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.4.0.ebuild,v 1.21 2014/01/15 12:57:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.4.0.ebuild,v 1.22 2014/07/30 19:40:24 ssuominen Exp $
 
 EAPI=4
 
@@ -44,7 +44,7 @@ src_configure() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		udev_rulesdir="$(udev_get_udevdir)/rules.d" \
+		udev_rulesdir="$(get_udevdir)/rules.d" \
 		install
 
 	prune_libtool_files

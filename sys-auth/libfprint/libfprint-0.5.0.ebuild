@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.5.0.ebuild,v 1.4 2013/05/07 10:59:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.5.0.ebuild,v 1.5 2014/07/30 19:40:24 ssuominen Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ src_configure() {
 		$(use_enable debug debug-log) \
 		$(use_enable static-libs static) \
 		-enable-udev-rules \
-		--with-udev-rules-dir=$(udev_get_udevdir)/rules.d
+		--with-udev-rules-dir=$(get_udevdir)/rules.d
 	# --disable-udev-rules fails https://bugs.freedesktop.org/show_bug.cgi?id=59076
 	# $(use_enable udev udev-rules) \
 }

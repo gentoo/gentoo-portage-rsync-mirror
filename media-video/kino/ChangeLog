@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kino
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.133 2014/01/27 20:14:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.134 2014/07/30 19:34:25 ssuominen Exp $
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> kino-1.3.4.ebuild:
+  Use shorter get_udevdir() instead of the longer deprecated udev_get_udevdir()
+  version.
 
   27 Jan 2014; Ian Stakenvicius <axs@gentoo.org>
   +files/kino-1.3.4-libavcodec-pkg-config.patch, kino-1.3.4.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.4.0.ebuild,v 1.2 2012/03/12 20:47:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.4.0.ebuild,v 1.3 2014/07/30 19:34:00 ssuominen Exp $
 
 EAPI=4
 

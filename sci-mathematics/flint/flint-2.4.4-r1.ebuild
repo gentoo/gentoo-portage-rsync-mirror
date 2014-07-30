@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.4.4.ebuild,v 1.2 2014/07/02 11:10:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.4.4-r1.ebuild,v 1.1 2014/07/30 19:40:12 hasufell Exp $
 
 EAPI="5"
 
@@ -21,7 +21,11 @@ RDEPEND="dev-libs/gmp
 	gc? ( dev-libs/boehm-gc )
 	ntl? ( dev-libs/ntl )"
 DEPEND="${RDEPEND}
-	doc? ( app-text/texlive-core )"
+	doc? (
+		app-text/texlive-core
+		dev-texlive/texlive-latex
+		dev-texlive/texlive-latexextra
+	)"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.4.3-libdir.patch \

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.9.3.ebuild,v 1.11 2014/01/18 19:54:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.9.3.ebuild,v 1.12 2014/07/30 19:33:39 ssuominen Exp $
 
 EAPI=5
 inherit eutils libtool linux-info udev toolchain-funcs
@@ -42,7 +42,7 @@ src_configure() {
 	econf \
 		INIT_D_PATH="${EPREFIX}/etc/init.d" \
 		MOUNT_FUSE_PATH="${EPREFIX}/sbin" \
-		UDEV_RULES_PATH="${EPREFIX}/$(udev_get_udevdir)/rules.d" \
+		UDEV_RULES_PATH="${EPREFIX}/$(get_udevdir)/rules.d" \
 		$(use_enable static-libs static) \
 		--disable-example
 }

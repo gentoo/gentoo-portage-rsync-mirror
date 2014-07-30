@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1375 2014/07/28 22:22:39 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1377 2014/07/30 19:48:43 zlogene Exp $
+
+  30 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> gentoo-sources-3.14.14.ebuild:
+  amd64 stable wrt bug #518600
+
+  30 Jul 2014; Mike Pagano <mpagano@gentoo.org> -gentoo-sources-3.4.96.ebuild,
+  -gentoo-sources-3.4.97.ebuild, -gentoo-sources-3.4.98.ebuild,
+  -gentoo-sources-3.10.45.ebuild, -gentoo-sources-3.10.46.ebuild,
+  -gentoo-sources-3.10.47.ebuild, -gentoo-sources-3.10.48.ebuild,
+  -gentoo-sources-3.12.23.ebuild, -gentoo-sources-3.12.24.ebuild,
+  -gentoo-sources-3.14.9.ebuild, -gentoo-sources-3.14.10.ebuild,
+  -gentoo-sources-3.14.11.ebuild, -gentoo-sources-3.14.12.ebuild,
+  -gentoo-sources-3.15.2.ebuild, -gentoo-sources-3.15.3.ebuild,
+  -gentoo-sources-3.15.4.ebuild, -gentoo-sources-3.15.5.ebuild:
+  Removing old versions.
 
 *gentoo-sources-3.15.7 (28 Jul 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.13.ebuild,v 1.4 2013/02/27 13:46:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.13.ebuild,v 1.5 2014/07/30 19:34:00 ssuominen Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ src_prepare() {
 		-i user/Makefile.in || die
 	# correct install paths
 	sed -e "s:\$(sysconfdir)/bash_completion.d:/usr/share/bash-completion:" \
-		-e "s:\$(sysconfdir)/udev:$(udev_get_udevdir):g" \
+		-e "s:\$(sysconfdir)/udev:$(get_udevdir):g" \
 		-i scripts/Makefile.in || die
 	# don't participate in user survey bug 360483
 	sed -i -e '/usage-count/ s/yes/no/' scripts/drbd.conf.example || die

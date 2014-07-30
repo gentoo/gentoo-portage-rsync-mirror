@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.108.ebuild,v 1.2 2014/07/30 17:23:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.108.ebuild,v 1.3 2014/07/30 19:38:03 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -78,7 +78,7 @@ src_prepare() {
 
 	sed -i -e '/FLAG/s:-O2::' configure{.in,} || die #480212
 
-	if use systemd && use lvmetad && ! use device-mapper-only; then
+	if use systemd && ! use device-mapper-only; then
 		sed -i -e '/use_lvmetad =/s:0:1:' conf/example.conf.in || die #514196
 	fi
 

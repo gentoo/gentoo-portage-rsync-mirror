@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.2.ebuild,v 1.13 2014/02/17 21:06:35 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.2.ebuild,v 1.14 2014/07/30 19:32:21 ssuominen Exp $
 
 EAPI="4"
 
@@ -59,7 +59,7 @@ src_install() {
 	newinitd "${FILESDIR}"/pcscd-init.5 pcscd
 
 	if use udev; then
-		insinto "$(udev_get_udevdir)"/rules.d
+		insinto "$(get_udevdir)"/rules.d
 		doins "${FILESDIR}"/99-pcscd-hotplug.rules
 	fi
 }

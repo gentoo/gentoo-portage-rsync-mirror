@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-018_p8.ebuild,v 1.7 2013/01/05 12:33:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-018_p8.ebuild,v 1.8 2014/07/30 19:41:09 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info toolchain-funcs udev
@@ -38,7 +38,7 @@ pkg_setup() {
 		DEBUG=false
 		STATIC=false
 		V=true
-		udevdir="$(udev_get_udevdir)"
+		udevdir="$(get_udevdir)"
 		CC="$(tc-getCC)"
 		LD="$(tc-getCC)"
 		AR="$(tc-getAR)"

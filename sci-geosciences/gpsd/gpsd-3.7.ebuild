@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.7.ebuild,v 1.11 2013/04/05 18:18:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.7.ebuild,v 1.12 2014/07/30 19:41:46 ssuominen Exp $
 
 EAPI="4"
 
@@ -93,7 +93,7 @@ src_prepare() {
 		distutils_src_prepare
 	fi
 
-	sed -i -e "s:/lib/udev:$(udev_get_udevdir):" gpsd.rules SConstruct || die
+	sed -i -e "s:/lib/udev:$(get_udevdir):" gpsd.rules SConstruct || die
 }
 
 src_configure() {
