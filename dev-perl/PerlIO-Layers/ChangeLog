@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PerlIO-Layers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-Layers/ChangeLog,v 1.7 2014/07/30 17:00:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-Layers/ChangeLog,v 1.8 2014/07/30 17:02:44 zlogene Exp $
+
+*PerlIO-Layers-0.11.0 (30 Jul 2014)
+
+  30 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> +PerlIO-Layers-0.11.0.ebuild:
+  Version bump
 
   30 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> PerlIO-Layers-0.10.0.ebuild:
   Stable for all

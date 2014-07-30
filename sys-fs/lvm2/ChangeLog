@@ -1,6 +1,21 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.356 2014/07/25 19:50:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.358 2014/07/30 17:23:37 ssuominen Exp $
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.108.ebuild:
+  Use /bin/true instead of /usr/bin/true in
+  scripts/blk_availability_systemd_red_hat.service.in because Gentoo doesn't
+  have the so called usr -merge wrt #517514 by Markos Chandras. Enable
+  "use_lvmetad = 1" by default in lvm.conf with USE="systemd lvmetad -device-
+  mapper-only" wrt #514196 by Pacho Ramos.
+
+*lvm2-2.02.108 (30 Jul 2014)
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/lvm2-2.02.108-example.conf.in.patch,
+  +files/lvm2-2.02.108-static-pkgconfig-libs.patch, +lvm2-2.02.108.ebuild:
+  Version bump. Fix configure logic for cache since it's tied to thin-
+  provisioning-tools.
 
   25 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.103.ebuild,
   lvm2-2.02.105-r2.ebuild, lvm2-2.02.106.ebuild, lvm2-2.02.107.ebuild:

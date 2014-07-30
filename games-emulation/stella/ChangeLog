@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/stella
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.80 2014/06/26 22:01:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.81 2014/07/30 17:16:38 mr_bones_ Exp $
+
+*stella-4.0 (30 Jul 2014)
+
+  30 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> +stella-4.0.ebuild,
+  stella-3.9.ebuild:
+  version bump
 
   26 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org> stella-3.9.ebuild:
   make sure libsdl has X support (bug #514388)

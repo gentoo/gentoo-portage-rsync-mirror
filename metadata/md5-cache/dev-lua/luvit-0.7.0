@@ -4,11 +4,11 @@ DESCRIPTION=Takes node.js' architecture and dependencies and fits it in the Lua 
 EAPI=5
 HOMEPAGE=http://luvit.io/
 IUSE=bundled-libs examples
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=Apache-2.0 bundled-libs? ( BSD MIT )
 RDEPEND=dev-libs/openssl:0 sys-libs/zlib !bundled-libs? ( dev-lang/luajit:2[lua52compat] >=dev-libs/yajl-2.0.2 net-libs/http-parser )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://luvit.io/dist/latest/luvit-0.7.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=6fd0a3614452fcf7d3588c2377cd75e2
+_md5_=a27317e6f4ac40561743f89f847ee3f1

@@ -1,23 +1,23 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Map/File-Map-0.520.0.ebuild,v 1.1 2012/07/27 19:24:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Map/File-Map-0.610.0.ebuild,v 1.1 2014/07/30 17:05:58 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=LEONT
-MODULE_VERSION=0.52
+MODULE_VERSION=0.61
 inherit perl-module
 
 DESCRIPTION="Memory mapping made simple and safe."
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
 	dev-perl/Const-Fast
 	dev-perl/PerlIO-Layers
-	dev-perl/Sub-Exporter
+	>=dev-perl/Sub-Exporter-Progressive-0.1.5
 "
 DEPEND="${RDEPEND}
 	virtual/perl-Module-Build

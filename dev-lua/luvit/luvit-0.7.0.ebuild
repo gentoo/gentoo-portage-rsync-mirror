@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luvit/luvit-0.7.0.ebuild,v 1.1 2013/12/14 14:13:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luvit/luvit-0.7.0.ebuild,v 1.2 2014/07/30 17:13:01 nimiux Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Takes node.js' architecture and dependencies and fits it in the Lua
 HOMEPAGE="http://luvit.io/"
 SRC_URI="http://luvit.io/dist/latest/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 IUSE="bundled-libs examples"
 # luvit Apache-2.0
