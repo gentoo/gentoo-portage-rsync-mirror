@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/radlib/radlib-2.12.0-r1.ebuild,v 1.1 2013/02/20 18:19:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/radlib/radlib-2.12.0-r1.ebuild,v 1.2 2014/07/30 00:55:14 grknight Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ LICENSE="BSD-2"
 SLOT="0"
 IUSE="mysql postgres sqlite static-libs"
 
-RDEPEND="mysql? ( dev-db/mysql )
+RDEPEND="mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	sqlite? ( dev-db/sqlite:3 )"
 DEPEND="${RDEPEND}"
