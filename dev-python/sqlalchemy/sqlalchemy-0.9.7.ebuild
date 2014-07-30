@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.9.7.ebuild,v 1.1 2014/07/29 07:03:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.9.7.ebuild,v 1.2 2014/07/30 02:08:48 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
 PYTHON_REQ_USE="sqlite?"
 
-inherit distutils-r1 eutils flag-o-matic
+inherit distutils-r1 flag-o-matic
 
 MY_PN="SQLAlchemy"
 MY_P="${MY_PN}-${PV/_}"
@@ -25,12 +25,13 @@ RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		sqlite? ( >=dev-db/sqlite-3.3.13 )"
 
 DEPEND="${RDEPEND}
-	test? (
+	test? (	( || ( dev-python/pytest[${PYTHON_USEDEP}] >=dev-python/nose-0.10.4[${PYTHON_USEDEP}] ) )
 		>=dev-db/sqlite-3.3.13
-		>=dev-python/nose-0.10.4[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
 	)"
 S="${WORKDIR}/${MY_P}"
+
+PATCHES=( "${FILESDIR}"/${PV}-test-fix.patch )
 
 python_prepare_all() {
 	# Disable tests hardcoding function call counts specific to Python versions.
@@ -54,8 +55,9 @@ python_test() {
 	if [[ "${EPYTHON}" == "python3.2" ]]; then
 		2to3 --no-diffs -w test
 	fi
-	"${PYTHON}" sqla_nose.py || die "Testsuite failed under ${EPYTHON}"
-
+	# Recently upstream elected to make the testsuite also pytest capable
+	# "${PYTHON}" sqla_nose.py || die "Testsuite failed under ${EPYTHON}"
+	py.test test || die "Testsuite failed under ${EPYTHON}"
 	popd > /dev/null
 }
 
