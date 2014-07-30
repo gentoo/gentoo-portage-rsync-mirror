@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.40 2014/07/29 03:28:26 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.41 2014/07/29 23:10:04 robbat2 Exp $
+
+*mariadb-10.0.12 (29 Jul 2014)
+
+  29 Jul 2014; Robin H. Johnson <robbat2@gentoo.org> +mariadb-10.0.12.ebuild:
+  Bring MySQL 5.6/MariaDB 10.0 from the overlay into the tree. Thanks to the
+  great work of Brian Evans <grknight@gentoo.org>. ~arm temporarily dropped
+  pending bug #518506.
 
 *mariadb-5.5.38-r1 (29 Jul 2014)
 

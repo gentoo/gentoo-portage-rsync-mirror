@@ -1221,6 +1221,17 @@ dev-db/mysql:test - Install upstream testsuites for end use.
 dev-db/mysql:xtradb - Add experimental support for Percona's InnoDB replacement: XtraDB
 dev-db/mysql-connector-c++:gcov - Build coverage support
 dev-db/opendbx:bindist - Disable support for dev-db/firebird database which is not GPL compatible.
+dev-db/percona-server:cluster - Add support for NDB clustering (deprecated)
+dev-db/percona-server:community - Enables the community features from upstream.
+dev-db/percona-server:embedded - Build embedded server (libmysqld)
+dev-db/percona-server:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
+dev-db/percona-server:jemalloc - Use dev-libs/jemalloc for allocations.
+dev-db/percona-server:latin1 - Use LATIN1 encoding instead of UTF8
+dev-db/percona-server:max-idx-128 - Raise the max index per table limit from 64 to 128
+dev-db/percona-server:minimal - Install client programs only, no server
+dev-db/percona-server:profiling - Add support for statement profiling (requires USE=community).
+dev-db/percona-server:systemtap - Build support for profiling and tracing using dev-util/systemtap
+dev-db/percona-server:test - Install upstream testsuites for end use.
 dev-db/pgadmin3:databasedesigner - Enable the Database Designer component
 dev-db/pgbouncer:libevent - Use libevent 2.0+ and evdns as the DNS backend
 dev-db/pgbouncer:udns - Use udns as the DNS backend. Supports IPv4 only.
