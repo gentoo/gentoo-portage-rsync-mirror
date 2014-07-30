@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/backuppc-3.3.0.ebuild,v 1.1 2014/07/30 08:26:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/backuppc-3.3.0.ebuild,v 1.2 2014/07/30 09:50:43 zlogene Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ DEPEND="dev-lang/perl
 	app-admin/apache-tools
 	app-admin/makepasswd"
 RDEPEND="${DEPEND}
-	perl-core/IO-Compress
+	virtual/perl-IO-Compress
 	dev-perl/Archive-Zip
 	dev-perl/libwww-perl
 	>=app-arch/tar-1.13.20
