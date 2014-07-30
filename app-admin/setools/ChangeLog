@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/setools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.91 2014/05/28 18:51:57 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.92 2014/07/30 12:04:04 swift Exp $
+
+  30 Jul 2014; Sven Vermeulen <swift@gentoo.org> setools-3.3.8-r5.ebuild:
+  Fix bug #509532 - Fix failure of unresolved overloaded function type
 
   28 May 2014; Sven Vermeulen <swift@gentoo.org> -setools-3.3.7-r1.ebuild,
   -setools-3.3.7-r3.ebuild, -setools-3.3.7-r5.ebuild, -setools-3.3.7-r6.ebuild,
