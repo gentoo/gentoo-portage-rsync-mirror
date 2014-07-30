@@ -1,10 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.5-r2.ebuild,v 1.5 2012/06/13 12:32:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.7.ebuild,v 1.1 2014/07/30 21:54:50 xmw Exp $
 
 EAPI=4
-
-inherit eutils
 
 DESCRIPTION="A simple port-knocking daemon"
 HOMEPAGE="http://www.zeroflux.org/projects/knock"
@@ -12,7 +10,7 @@ SRC_URI="http://www.zeroflux.org/proj/knock/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="+server"
 
 DEPEND="server? ( net-libs/libpcap )"
@@ -20,26 +18,19 @@ RDEPEND="${DEPEND}
 	server? ( sys-apps/openrc )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
-
-	sed -i -e "s:/usr/sbin/iptables:/sbin/iptables:g" knockd.conf || die
-
-	if ! use server ; then
-		sed -i -e '/^all:/s:knockd::' \
-			-e '/$(INSTALL).*knockd/d' Makefile.in || die
-	fi
+	sed -e "/^AM_CFLAGS/s: -g : :" \
+		-e "/dist_doc_DATA/s:COPYING::" \
+		-i Makefile.in || die
+	sed -e "s:/usr/sbin/iptables:/sbin/iptables:g" \
+		-i knockd.conf || die
 }
 
-src_compile() {
-	# package does stupid stuff with CXXFLAGS, and is actually pure C.
-	export CXXFLAGS="${CFLAGS}"
-	default_src_compile
+src_configure() {
+	econf $(use_enable server knockd)
 }
-
-DOCS=( ChangeLog README TODO )
 
 src_install() {
-	default_src_install
+	emake DESTDIR="${D}" docdir="${EROOT}/usr/share/doc/${PF}" install
 
 	if use server ; then
 		newinitd "${FILESDIR}"/knockd.initd.2 knock

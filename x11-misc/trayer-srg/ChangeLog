@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/trayer-srg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/ChangeLog,v 1.11 2012/12/11 23:29:00 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/ChangeLog,v 1.12 2014/07/30 21:49:08 xmw Exp $
+
+*trayer-srg-1.1.6 (30 Jul 2014)
+
+  30 Jul 2014; Michael Weber <xmw@gentoo.org> +trayer-srg-1.1.6.ebuild:
+  Version bump (euscan).
 
   11 Dec 2012; Michael Weber <xmw@gentoo.org> -trayer-srg-1.1.4.ebuild:
   Drop old
@@ -41,4 +46,3 @@
   29 Jan 2012; Michael Weber <xmw@gentoo.org> +trayer-srg-1.1.4.ebuild,
   +metadata.xml:
   Initial import (from xmw overlay)
-
