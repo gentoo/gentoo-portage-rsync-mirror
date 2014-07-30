@@ -1,6 +1,16 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.86 2014/07/24 18:53:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.88 2014/07/30 05:40:03 ssuominen Exp $
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -cheese-3.12.1.ebuild,
+  -cheese-3.12.2.ebuild:
+  old
+
+*cheese-3.12.2-r1 (30 Jul 2014)
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +cheese-3.12.2-r1.ebuild:
+  Revision bump media-video/cheese because dynamic deps doesn't catch
+  virtual/udev[gudev] -> virtual/libgudev upgrade for this package.
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> cheese-2.32.0.ebuild,
   cheese-3.10.2.ebuild, cheese-3.12.1.ebuild, cheese-3.12.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.7.2.ebuild,v 1.1 2014/07/24 04:42:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.7.2-r1.ebuild,v 1.1 2014/07/30 05:35:17 prometheanfire Exp $
 
 EAPI=5
 inherit autotools bash-completion-r1 eutils fixheadtails multilib user systemd flag-o-matic toolchain-funcs
@@ -165,9 +165,7 @@ src_install() {
 	find "${D}" -name '*.la' -exec rm -f {} +
 
 	dodir /sbin
-	dosym /$(get_libdir)/nut/upsdrvctl /sbin/upsdrvctl
-	# This needs to exist for the scripts
-	dosym /$(get_libdir)/nut/upsdrvctl /usr/sbin/upsdrvctl
+	dosym /usr/sbin/upsdrvctl /sbin/upsdrvctl
 
 	if use cgi; then
 		elog "CGI monitoring scripts are installed in /usr/share/nut/cgi."
