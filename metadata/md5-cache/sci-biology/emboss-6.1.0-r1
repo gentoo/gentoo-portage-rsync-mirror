@@ -11,4 +11,4 @@ RDEPEND=X? ( x11-libs/libXt ) png? ( sys-libs/zlib media-libs/libpng media-libs/
 SLOT=0
 SRC_URI=ftp://emboss.open-bio.org/pub/EMBOSS/old/6.1.0/EMBOSS-6.1.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=9a66324921df47d6fe5d7e5ff255c127
+_md5_=48b2c5e3fcbc5fe03d72879ebbdf1958

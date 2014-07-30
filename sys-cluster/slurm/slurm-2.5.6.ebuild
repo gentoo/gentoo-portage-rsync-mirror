@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.5.6.ebuild,v 1.1 2013/06/02 19:46:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.5.6.ebuild,v 1.2 2014/07/30 01:03:13 grknight Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ DEPEND="
 	!sys-cluster/torque
 	!net-analyzer/slurm
 	!net-analyzer/sinfo
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	munge? ( sys-auth/munge )
 	ypbind? ( net-nds/ypbind )
 	pam? ( virtual/pam )

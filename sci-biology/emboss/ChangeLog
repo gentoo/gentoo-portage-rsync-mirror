@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/emboss
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.68 2012/11/19 10:36:45 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.69 2014/07/30 01:12:51 grknight Exp $
+
+  30 Jul 2014; Brian Evans <grknight@gentoo.org> emboss-6.0.1.ebuild,
+  emboss-6.1.0-r1.ebuild, emboss-6.3.1_p4-r1.ebuild, emboss-6.3.1_p4.ebuild:
+  Non-maintainer commit. Update to use virtual/mysql wrt bug 508802
 
 *emboss-6.3.1_p4-r1 (19 Nov 2012)
 
@@ -327,4 +331,3 @@
 
   03 Sep 2003; <sediener@gentoo.org> emboss-2.7.1.ebuild:
   Initial ebuild
-
