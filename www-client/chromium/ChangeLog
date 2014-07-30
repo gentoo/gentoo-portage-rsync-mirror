@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1111 2014/07/30 01:01:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1112 2014/07/30 17:46:54 phajdan.jr Exp $
+
+*chromium-38.0.2107.2 (30 Jul 2014)
+
+  30 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-37.0.2062.44.ebuild, -chromium-38.0.2096.0.ebuild,
+  +chromium-38.0.2107.2.ebuild, +files/chromium-ffmpeg-r3.patch:
+  Dev channel bump. Fix bug #513048 by mgorny. Remove old.
 
 *chromium-37.0.2062.44 (30 Jul 2014)
 

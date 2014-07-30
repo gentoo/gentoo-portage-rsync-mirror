@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libudev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libudev/ChangeLog,v 1.7 2014/07/29 07:40:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libudev/ChangeLog,v 1.8 2014/07/30 18:01:06 ssuominen Exp $
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -libudev-208.ebuild:
+  old
 
 *libudev-215 (29 Jul 2014)
 

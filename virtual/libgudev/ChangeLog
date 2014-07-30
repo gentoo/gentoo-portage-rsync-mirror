@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libgudev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/ChangeLog,v 1.10 2014/07/29 07:41:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/ChangeLog,v 1.11 2014/07/30 18:01:20 ssuominen Exp $
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -libgudev-208.ebuild:
+  old
 
 *libgudev-215 (29 Jul 2014)
 
