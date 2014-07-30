@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.4.1.ebuild,v 1.2 2014/07/18 11:52:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.5.0.ebuild,v 1.1 2014/07/30 10:39:26 blueness Exp $
 
 EAPI=5
 
@@ -8,20 +8,20 @@ inherit autotools eutils flag-o-matic
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA/ASIC miner in C"
 HOMEPAGE="http://bitcointalk.org/?topic=28402.msg357369 http://github.com/ckolivas/cgminer"
-#SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
-SRC_URI="http://ck.kolivas.org/apps/cgminer/4.4/${P}.tar.bz2"
+SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
+#SRC_URI="http://ck.kolivas.org/apps/cgminer/4.5/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 
-HARDWARE="ants1 ants2 avalon avalon2 bab bitmine_A1 bflsc bitforce bitfury cointerra drillbit hashfast icarus klondike knc minion modminer spondoolies"
+HARDWARE="ants1 ants2 avalon avalon2 bab bitmine_A1 bflsc bitforce bitfury cointerra drillbit hashfast hashratio icarus klondike knc minion modminer spondoolies"
 IUSE="doc examples udev hardened ncurses ${HARDWARE}"
 
 REQUIRED_USE="|| ( ${HARDWARE} )"
 
 RDEPEND="net-misc/curl
-	>=dev-libs/jansson-2.5
+	>=dev-libs/jansson-2.6
 	ncurses? ( sys-libs/ncurses )
 	avalon? ( virtual/libusb:1 )
 	bflsc? ( virtual/libusb:1 )
@@ -30,6 +30,7 @@ RDEPEND="net-misc/curl
 	cointerra? ( virtual/libusb:1 )
 	drillbit? ( virtual/libusb:1 )
 	hashfast? ( virtual/libusb:1 )
+	hashratio? ( virtual/libusb:1 )
 	icarus? ( virtual/libusb:1 )
 	klondike? ( virtual/libusb:1 )
 	modminer? ( virtual/libusb:1 )
@@ -38,7 +39,7 @@ DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-4.3.5-system-jansson.patch
+	epatch "${FILESDIR}"/${PN}-4.4.2-system-jansson.patch
 	eautoreconf
 }
 
@@ -58,6 +59,7 @@ src_configure() {
 		$(use_enable cointerra) \
 		$(use_enable drillbit) \
 		$(use_enable hashfast) \
+		$(use_enable hashratio) \
 		$(use_enable icarus) \
 		$(use_enable klondike) \
 		$(use_enable knc) \

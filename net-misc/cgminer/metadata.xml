@@ -24,6 +24,7 @@
 		<flag name="cointerra">Enable support for mining with Cointerra ASICs</flag>
 		<flag name="drillbit">Enable support for mining with Drillbit BitFury ASICs</flag>
 		<flag name="hashfast">Enable support for mining with Hashfast</flag>
+		<flag name="hashratio">Enable support for mining with Hashratio</flag>
 		<flag name="icarus">Enable support for mining with Icarus FPGAs</flag>
 		<flag name="klondike">Enable support for mining with Klondik ASICs</flag>
 		<flag name="knc">Enable support for mining with KnC miners</flag>
