@@ -6671,6 +6671,10 @@ sys-cluster/glusterfs:infiniband - Add support for Infiniband ibverbs transport.
 sys-cluster/glusterfs:qemu-block - Transparently create files as QCow2/QED images in the backend, including the possibility to snapshot.
 sys-cluster/glusterfs:rsyslog - Install configuration snippet for app-admin/rsyslog
 sys-cluster/glusterfs:systemtap - Enable support for dev-util/systemtap
+sys-cluster/hpx:jemalloc - Use dev-libs/jemalloc for memory allocation
+sys-cluster/hpx:papi - Use dev-libs/papi for NaCl
+sys-cluster/hpx:perftools - Use dev-util/google-perftools for memory allocation
+sys-cluster/hpx:tbb - Use dev-cpp/tbb for memory allocation
 sys-cluster/maui:pbs - Enable pbs integration
 sys-cluster/maui:slurm - Enable slurm integration
 sys-cluster/moosefs:cgi - Install CGI server and scripts.
