@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.6-r3.ebuild,v 1.8 2014/07/18 14:25:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.6-r3.ebuild,v 1.9 2014/07/31 04:04:28 vapier Exp $
 
 EAPI=5
 
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gif2rle.patch
 	epatch "${FILESDIR}"/${P}-giffix-null-Extension-fix.patch
+	sed -i '/X_PRE_LIBS/s:-lSM -lICE::' configure || die #483258
 	elibtoolize
 	epunt_cxx
 }

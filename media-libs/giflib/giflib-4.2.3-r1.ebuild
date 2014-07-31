@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.2.3-r1.ebuild,v 1.4 2014/06/18 19:30:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.2.3-r1.ebuild,v 1.5 2014/07/31 04:08:56 vapier Exp $
 
 EAPI=5
 
@@ -32,6 +32,8 @@ src_prepare() {
 		-e 's:${X_PRE_LIBS}::' \
 		configure.ac || die #486542,#483258
 	eautoreconf
+
+	sed -i '/X_PRE_LIBS/s:-lSM -lICE::' configure || die #483258
 }
 
 src_configure() {

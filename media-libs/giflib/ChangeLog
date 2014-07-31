@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/giflib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.85 2014/07/18 14:25:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.87 2014/07/31 04:08:56 vapier Exp $
+
+  31 Jul 2014; Mike Frysinger <vapier@gentoo.org> giflib-4.1.6-r3.ebuild,
+  giflib-4.2.3-r1.ebuild:
+  Delete unused ICE/SM linkage #483258 by Rafał Mużyło.
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> giflib-4.1.6-r3.ebuild:
   Stable for HPPA (bug #516304).
