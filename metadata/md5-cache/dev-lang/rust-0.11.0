@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup
+DEPEND=vim-syntax? ( || ( app-editors/vim app-editors/gvim ) ) zsh-completion? ( app-shells/zsh ) || ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/perl-5.0 clang? ( sys-devel/clang ) emacs? ( virtual/emacs ) libcxx? ( sys-libs/libcxx )
+DESCRIPTION=Systems programming language from Mozilla
+EAPI=5
+HOMEPAGE=http://www.rust-lang.org/
+IUSE=clang debug emacs libcxx vim-syntax zsh-completion
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA
+RDEPEND=vim-syntax? ( || ( app-editors/vim app-editors/gvim ) ) zsh-completion? ( app-shells/zsh )
+REQUIRED_USE=libcxx? ( clang )
+SLOT=0
+SRC_URI=http://static.rust-lang.org/dist/rust-0.11.0.tar.gz amd64? ( http://static.rust-lang.org/dist/rust-0.11.0-x86_64-unknown-linux-gnu.tar.gz ) x86? ( http://static.rust-lang.org/dist/rust-0.11.0-i686-unknown-linux-gnu.tar.gz )
+_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=5dd5542006888a05bc9056a95db8e948

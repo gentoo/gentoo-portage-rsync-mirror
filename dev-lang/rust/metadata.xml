@@ -6,7 +6,9 @@
     <name>Jauhien Piatlicki</name>
   </maintainer>
   <use>
-    <flag name="clang">Use sys-devel/clang for building</flag>
     <flag name="binary-bootstrap">Download precompiled rust for compilator bootstrap</flag>
+    <flag name="clang">Use <pkg>sys-devel/clang</pkg> for building</flag>
+    <flag name="libcxx">Use <pkg>sys-libs/libcxx</pkg> as standard
+    library when building with <pkg>sys-devel/clang</pkg></flag>
   </use>
 </pkgmetadata>
