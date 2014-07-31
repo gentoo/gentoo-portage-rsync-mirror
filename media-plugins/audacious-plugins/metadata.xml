@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>sound</herd>
 <maintainer>
-  <email>jdhore@gentoo.org</email>
-  <name>Jeff Horelick</name>
+  <email>chainsaw@gentoo.org</email>
+  <name>Tony Vroon</name>
 </maintainer>
 <use>
 	<flag name='adplug'>Build with AdPlug (Adlib sound card emulation)

@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.296 2014/01/28 14:09:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.297 2014/07/31 21:32:03 chainsaw Exp $
+
+*audacious-3.5.1 (31 Jul 2014)
+
+  31 Jul 2014; Tony Vroon <chainsaw@gentoo.org> +audacious-3.5.1.ebuild,
+  metadata.xml:
+  Version bump, as requested by Rafał Mużyło in bug #490292.
 
   28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> audacious-3.4.1.ebuild:
   Stable for alpha, wrt bug #490463

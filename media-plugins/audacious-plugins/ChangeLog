@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.276 2014/07/14 15:25:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.278 2014/07/31 21:44:25 chainsaw Exp $
+
+  31 Jul 2014; Tony Vroon <chainsaw@gentoo.org> audacious-plugins-3.5.1.ebuild:
+  Our depend on glib or gdbus-codegen failed to require USE=utils for the glib
+  possibility. As pointed out by Amadeusz Sławiński in bug #485142.
+
+*audacious-plugins-3.5.1 (31 Jul 2014)
+
+  31 Jul 2014; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-plugins-3.5.1.ebuild, metadata.xml:
+  Version bump, as requested by Rafał Mużyło in bug #490292.
 
   14 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
   audacious-plugins-3.3.3.ebuild, audacious-plugins-3.3.4.ebuild,
