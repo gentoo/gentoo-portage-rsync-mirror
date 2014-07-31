@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1011 2014/07/28 13:49:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1012 2014/07/31 06:32:24 vapier Exp $
+
+  31 Jul 2014; Mike Frysinger <vapier@gentoo.org> gcc-4.7.4.ebuild:
+  Update x32 patch #513686 by Bertrand Jacquin.
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gcc-4.6.4.ebuild:
   Stable for ppc, wrt bug #512012

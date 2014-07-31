@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/icc_examin/icc_examin-0.54.ebuild,v 1.2 2014/07/31 06:39:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/icc_examin/icc_examin-0.55.ebuild,v 1.1 2014/07/31 06:39:45 xmw Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="app-admin/elektra
 	media-libs/ftgl
 	media-libs/libXcm
-	<media-libs/oyranos-0.9.5
+	>=media-libs/oyranos-0.9.5
 	media-libs/tiff
 	x11-libs/fltk
 	x11-libs/libX11
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.54-fix-xcm-test.patch
+	epatch "${FILESDIR}"/${PN}-0.55-fix-xrandr-test.patch
 
 	sed -e '/xdg-icon-resource\|xdg-desktop-menu/d' \
 		-i makefile.in

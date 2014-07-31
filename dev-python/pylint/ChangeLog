@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.108 2014/05/09 05:21:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.109 2014/07/31 06:56:44 idella4 Exp $
+
+*pylint-1.3.0 (31 Jul 2014)
+
+  31 Jul 2014; Ian Delaney <idella4@gentoo.org> +pylint-1.3.0.ebuild:
+  bump; adjust SRC_URI, update deps, fixes Bug #518272
 
   09 May 2014; Patrick Lauer <patrick@gentoo.org> pylint-1.2.1.ebuild:
   Whitespace
