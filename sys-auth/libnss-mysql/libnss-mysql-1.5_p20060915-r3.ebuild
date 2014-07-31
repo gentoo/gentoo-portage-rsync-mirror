@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/libnss-mysql-1.5_p20060915-r1.ebuild,v 1.4 2011/05/28 12:05:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/libnss-mysql-1.5_p20060915-r3.ebuild,v 1.1 2014/07/31 02:57:55 grknight Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils multilib autotools
 
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DESCRIPTION="NSS MySQL Library."
 HOMEPAGE="http://libnss-mysql.sourceforge.net/"
@@ -16,7 +16,12 @@ SLOT="0"
 IUSE="debug"
 
 DEPEND="virtual/mysql"
+RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}"
+
+DOCS=( AUTHORS DEBUGGING FAQ INSTALL NEWS README THANKS
+	TODO UPGRADING ChangeLog
+)
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-no-automagic-debug.diff
@@ -24,20 +29,21 @@ src_prepare() {
 }
 
 src_configure() {
-	# authentication libraries don't belong into usr,
-	# please don't change this
-	econf --libdir="/$(get_libdir)" \
+	# Usually, authentication libraries don't belong into usr.
+	# But here, it's required that the lib is in the same dir
+	# as libmysql, because else failures may occur on boot if
+	# udev tries to access a user / group that doesn't exist
+	# on the system before /usr is mounted.
+	econf --libdir="/usr/$(get_libdir)" \
 		$(use_enable debug)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
 	find "${D}" -name '*.la' -delete
 
 	newdoc sample/README README.sample
-	dodoc AUTHORS DEBUGGING FAQ INSTALL NEWS README THANKS \
-		TODO UPGRADING ChangeLog
 
 	for subdir in sample/{linux,freebsd,complex,minimal} ; do
 		docinto "${subdir}"

@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/libnss-mysql
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/ChangeLog,v 1.23 2012/01/09 19:45:13 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/ChangeLog,v 1.24 2014/07/31 02:57:55 grknight Exp $
+
+*libnss-mysql-1.5_p20060915-r3 (31 Jul 2014)
+
+  31 Jul 2014; Brian Evans <grknight@gentoo.org>
+  +libnss-mysql-1.5_p20060915-r3.ebuild, -libnss-mysql-1.5_p20060915-r1.ebuild:
+  Revbump for EAPI5. Drop oldest revision
 
   09 Jan 2012; Brent Baude <ranger@gentoo.org>
   libnss-mysql-1.5_p20060915-r2.ebuild:
@@ -164,4 +170,3 @@
 
   03 Jun 2003; Max Kalika <max@gentoo.org> LSIT_libnss-mysql-0.8.ebuild:
   Initial version.
-
