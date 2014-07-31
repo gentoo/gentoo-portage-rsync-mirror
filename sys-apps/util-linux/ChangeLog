@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.473 2014/07/09 18:56:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.474 2014/07/31 20:56:53 ottxor Exp $
+
+  31 Jul 2014; Christoph Junghans <ottxor@gentoo.org> util-linux-2.24.2.ebuild:
+  fixed prefix install
 
   09 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> util-linux-2.24.1-r3.ebuild:
   ppc stable wrt bug #513378

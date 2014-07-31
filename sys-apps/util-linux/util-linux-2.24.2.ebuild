@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.2.ebuild,v 1.4 2014/06/18 20:46:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.2.ebuild,v 1.5 2014/07/31 20:56:53 ottxor Exp $
 
 EAPI="4"
 
@@ -90,7 +90,7 @@ multilib_src_configure() {
 	export ac_cv_header_security_pam_misc_h=$(multilib_native_usex pam) #485486
 	ECONF_SOURCE=${S} \
 	econf \
-		--docdir="/usr/share/doc/${PF}" \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--enable-fs-paths-extra=/usr/sbin:/bin:/usr/bin \
 		$(multilib_native_use_enable nls) \
 		--enable-agetty \
