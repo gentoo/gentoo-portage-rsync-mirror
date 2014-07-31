@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.3.ebuild,v 1.5 2014/05/15 02:06:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.3.ebuild,v 1.6 2014/07/31 17:06:11 mgorny Exp $
 
 EAPI=5
 
@@ -318,6 +318,7 @@ src_configure() {
 
 	## stuff we don't yet support
 	myconf="${myconf} --without-netcf"
+	myconf="${myconf} --without-wireshark-dissector"
 
 	# we use udev over hal
 	myconf="${myconf} --without-hal"
