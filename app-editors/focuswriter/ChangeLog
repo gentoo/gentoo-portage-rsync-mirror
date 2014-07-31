@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/focuswriter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/ChangeLog,v 1.18 2014/02/04 13:43:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/ChangeLog,v 1.19 2014/07/31 10:49:52 kensington Exp $
+
+*focuswriter-1.5.2 (31 Jul 2014)
+
+  31 Jul 2014; Michael Palimaka <kensington@gentoo.org>
+  +focuswriter-1.5.2.ebuild, -focuswriter-1.4.1.ebuild:
+  Version bump wrt bug #508578. Remove old.
 
 *focuswriter-1.4.4 (04 Feb 2014)
 
