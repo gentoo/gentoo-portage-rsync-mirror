@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.108.ebuild,v 1.3 2014/07/30 19:38:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.108.ebuild,v 1.4 2014/07/31 18:44:17 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -82,7 +82,7 @@ src_prepare() {
 		sed -i -e '/use_lvmetad =/s:0:1:' conf/example.conf.in || die #514196
 	fi
 
-	sed -i -e 's:/usr/bin/true:/bin/true:' scripts/blk_availability_systemd_red_hat.service.in || die #517514
+	sed -i -e "s:/usr/bin/true:$(type -P true):" scripts/blk_availability_systemd_red_hat.service.in || die #517514
 
 	# For upstream -- review and forward:
 	epatch "${FILESDIR}"/${PN}-2.02.63-always-make-static-libdm.patch
