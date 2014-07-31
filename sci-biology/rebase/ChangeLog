@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.124 2014/07/27 10:46:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.125 2014/07/31 08:44:34 jlec Exp $
+
+*rebase-1408 (31 Jul 2014)
+
+  31 Jul 2014; Justin Lecher <jlec@gentoo.org> +rebase-1408.ebuild:
+  Version Bump
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> rebase-1403.ebuild:
   x86 stable wrt bug #512118

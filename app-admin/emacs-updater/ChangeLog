@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/emacs-updater
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.85 2014/07/29 21:42:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.86 2014/07/31 08:42:12 jer Exp $
+
+  31 Jul 2014; Jeroen Roovers <jer@gentoo.org> emacs-updater-1.14.ebuild:
+  Stable for HPPA (bug #517504).
 
   29 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> emacs-updater-1.14.ebuild:
   x86 stable wrt bug #517504

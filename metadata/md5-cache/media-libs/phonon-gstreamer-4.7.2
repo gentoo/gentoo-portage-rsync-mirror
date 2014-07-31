@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=dev-libs/glib:2 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.7.0[qt4?,qt5?] qt4? ( dev-qt/qtcore:4[glib] dev-qt/qtgui:4[glib] dev-qt/qtopengl:4 ) qt5? ( dev-qt/qtcore:5[glib] dev-qt/qtgui:5[glib] dev-qt/qtopengl:5 dev-qt/qtwidgets:5 ) virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 ) qt4? ( >=dev-util/automoc-0.9.87 ) virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-libs/glib:2 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.7.0[qt4?,qt5?] qt4? ( dev-qt/qtcore:4[glib] dev-qt/qtgui:4[glib] dev-qt/qtopengl:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 ) virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 ) qt4? ( >=dev-util/automoc-0.9.87 ) virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Phonon GStreamer backend
 EAPI=5
 HOMEPAGE=https://projects.kde.org/projects/kdesupport/phonon/phonon-gstreamer
 IUSE=alsa debug +network +qt4 qt5
 KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~x64-macos
 LICENSE=LGPL-2.1
-RDEPEND=dev-libs/glib:2 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.7.0[qt4?,qt5?] qt4? ( dev-qt/qtcore:4[glib] dev-qt/qtgui:4[glib] dev-qt/qtopengl:4 ) qt5? ( dev-qt/qtcore:5[glib] dev-qt/qtgui:5[glib] dev-qt/qtopengl:5 dev-qt/qtwidgets:5 ) virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 )
+RDEPEND=dev-libs/glib:2 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.7.0[qt4?,qt5?] qt4? ( dev-qt/qtcore:4[glib] dev-qt/qtgui:4[glib] dev-qt/qtopengl:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 ) virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 )
 REQUIRED_USE=|| ( qt4 qt5 )
 SLOT=0
 SRC_URI=mirror://kde/stable/phonon/phonon-backend-gstreamer/4.7.2/src/phonon-backend-gstreamer-4.7.2.tar.xz
 _eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=0e550e874b33b96e18af660f28864a71
+_md5_=70ac3523204c4ceb585229b1469c9cf3

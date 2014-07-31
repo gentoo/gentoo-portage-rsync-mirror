@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-4.7.2.ebuild,v 1.1 2014/06/21 16:20:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-4.7.2.ebuild,v 1.2 2014/07/31 08:37:04 kensington Exp $
 
 EAPI=5
 
@@ -38,8 +38,8 @@ RDEPEND="
 		dev-qt/qtopengl:4
 	)
 	qt5? (
-		dev-qt/qtcore:5[glib]
-		dev-qt/qtgui:5[glib]
+		dev-qt/qtcore:5
+		dev-qt/qtgui:5
 		dev-qt/qtopengl:5
 		dev-qt/qtwidgets:5
 	)
