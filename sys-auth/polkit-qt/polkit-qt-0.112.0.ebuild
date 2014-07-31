@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/polkit-qt-0.112.0.ebuild,v 1.1 2014/07/22 13:37:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/polkit-qt-0.112.0.ebuild,v 1.2 2014/07/30 23:47:48 johu Exp $
 
 EAPI=5
 
@@ -28,9 +28,9 @@ RDEPEND="
 		dev-qt/qtgui:4[glib]
 	)
 	qt5? (
-		dev-qt/qtcore:5[glib]
+		dev-qt/qtcore:5
 		dev-qt/qtdbus:5
-		dev-qt/qtgui:5[glib]
+		dev-qt/qtgui:5
 		dev-qt/qtwidgets:5
 		examples? ( dev-qt/qtxml:5 )
 	)

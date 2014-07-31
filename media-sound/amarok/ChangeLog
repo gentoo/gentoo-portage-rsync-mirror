@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.470 2014/07/17 13:22:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.471 2014/07/30 23:58:57 grknight Exp $
+
+*amarok-2.8.0-r3 (30 Jul 2014)
+
+  30 Jul 2014; Brian Evans <grknight@gentoo.org> +amarok-2.8.0-r3.ebuild,
+  +files/amarok-2.8.0-mysqld-rpath.patch:
+  Revision bump to fix libmysqld rpath.  Patch by Gabriel Marcano
+  <gabemarcano@yahoo.com> from bug 508824. Ack by  jmbsvicetto
 
   17 Jul 2014; Michael Palimaka <kensington@gentoo.org> amarok-2.8.0-r2.ebuild:
   Remove workaround now handled in the eclass.

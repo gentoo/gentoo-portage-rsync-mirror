@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-BigInt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt/ChangeLog,v 1.68 2014/07/28 16:55:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt/ChangeLog,v 1.69 2014/07/30 23:41:01 jer Exp $
+
+  30 Jul 2014; Jeroen Roovers <jer@gentoo.org>
+  perl-Math-BigInt-1.999.300.ebuild:
+  Stable for HPPA (bug #513192).
 
   28 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   perl-Math-BigInt-1.999.100.ebuild:

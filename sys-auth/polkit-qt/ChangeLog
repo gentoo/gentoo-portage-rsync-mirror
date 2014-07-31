@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.31 2014/07/22 13:37:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.32 2014/07/30 23:47:48 johu Exp $
+
+  30 Jul 2014; Johannes Huber <johu@gentoo.org> polkit-qt-0.112.0.ebuild:
+  Drop USE dep glib on dev-qt/*:5, bug #518588.
 
 *polkit-qt-0.112.0 (22 Jul 2014)
 
