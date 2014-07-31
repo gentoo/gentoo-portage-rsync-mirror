@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.101 2014/07/28 13:46:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.102 2014/07/31 09:28:04 jer Exp $
+
+  31 Jul 2014; Jeroen Roovers <jer@gentoo.org> libv4l-1.0.0.ebuild:
+  Stable for HPPA (bug #516314).
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libv4l-1.0.0.ebuild:
   Stable for ppc, wrt bug #512012
