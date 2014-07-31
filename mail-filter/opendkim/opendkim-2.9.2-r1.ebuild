@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.9.2-r1.ebuild,v 1.2 2014/05/04 16:11:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.9.2-r1.ebuild,v 1.3 2014/07/31 06:24:14 eras Exp $
 
 EAPI=5
 inherit autotools db-use eutils systemd user
@@ -193,6 +193,4 @@ pkg_config() {
 	cat "${ROOT}"etc/opendkim/${selector}.txt
 	einfo "t=y signifies you only test the DKIM on your domain. See following page for the complete list of tags:"
 	einfo "  http://www.dkim.org/specs/rfc4871-dkimbase.html#key-text"
-	einfo
-	einfo "Also look at the ADSP http://tools.ietf.org/html/rfc5617"
 }

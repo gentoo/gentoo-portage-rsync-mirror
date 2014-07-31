@@ -11,4 +11,4 @@ REQUIRED_USE=sasl? ( ldap )
 SLOT=0
 SRC_URI=mirror://sourceforge/opendkim/opendkim-2.9.2.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	db-use	1c719875d6599536f956fafea9e1f404	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=8f40bd64fe7b88bf313a64d69bd081a2
+_md5_=78bbdeaa0368bb9ecffd882ad1b564ec

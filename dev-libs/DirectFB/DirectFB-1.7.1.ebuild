@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.7.1.ebuild,v 1.1 2014/01/04 14:49:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.7.1.ebuild,v 1.2 2014/07/31 06:02:26 pinkbyte Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -32,7 +32,7 @@ SRC_URI="http://directfb.org/downloads/Core/${PN}-${PV:0:3}/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc64 ~sh -sparc ~x86"
-IUSE="alsa bmp cddb debug divine drmkms dynload doc egl fbcon fusiondale fusionsound gif gles2 gstreamer imlib2 input_hub jpeg jpeg2k mad mmx mng mpeg2 mpeg3 multicore opengl oss png pnm sawman sdl sse static-libs svg swfdec tiff timidity tremor truetype v4l vdpau vorbis webp X xine zlib ${IUV} ${IUD}"
+IUSE="alsa bmp cddb debug divine drmkms +dynload doc egl fbcon fusiondale fusionsound gif gles2 gstreamer imlib2 input_hub jpeg jpeg2k mad mmx mng mpeg2 mpeg3 multicore opengl oss png pnm sawman sdl sse static-libs svg swfdec tiff timidity tremor truetype v4l vdpau vorbis webp X xine zlib ${IUV} ${IUD}"
 REQUIRED_USE="gles2? ( opengl )"
 
 # ffmpeg useflag broken
