@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.278 2014/07/27 21:07:07 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.279 2014/07/31 11:37:07 polynomial-c Exp $
+
+*apache-2.4.10-r1 (31 Jul 2014)
+*apache-2.2.27-r4 (31 Jul 2014)
+
+  31 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> -apache-2.2.27-r3.ebuild,
+  +apache-2.2.27-r4.ebuild, -apache-2.4.10.ebuild, +apache-2.4.10-r1.ebuild:
+  Revbumps to fix security bugs (see #517298). Removed old.
 
   27 Jul 2014; Christoph Junghans <ottxor@gentoo.org> apache-2.4.10.ebuild:
   Added prefix support (bug #433736)

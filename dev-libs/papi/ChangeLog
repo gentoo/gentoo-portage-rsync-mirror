@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/papi
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/papi/ChangeLog,v 1.1 2014/07/31 11:34:16 slis Exp $
+
+*papi-5.3.0 (31 Jul 2014)
+
+  31 Jul 2014; Sławek Lis <slis@gentoo.org> +metadata.xml, +papi-5.3.0.ebuild:
+  Added papi package

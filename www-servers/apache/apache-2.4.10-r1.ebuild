@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.10.ebuild,v 1.2 2014/07/27 21:07:07 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.10-r1.ebuild,v 1.1 2014/07/31 11:37:07 polynomial-c Exp $
 
 EAPI=5
 
 # latest gentoo apache files
-GENTOO_PATCHSTAMP="20140522"
+GENTOO_PATCHSTAMP="20140731"
 GENTOO_DEVELOPER="polynomial-c"
-GENTOO_PATCHNAME="gentoo-apache-2.4.9-r3"
+GENTOO_PATCHNAME="gentoo-apache-2.4.10-r1"
 
 # IUSE/USE_EXPAND magic
 IUSE_MPMS_FORK="peruser prefork"
