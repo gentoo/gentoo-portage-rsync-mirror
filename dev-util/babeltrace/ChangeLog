@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/babeltrace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/babeltrace/ChangeLog,v 1.1 2014/03/04 06:57:08 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/babeltrace/ChangeLog,v 1.2 2014/07/31 15:03:05 dlan Exp $
+
+*babeltrace-1.2.2 (31 Jul 2014)
+
+  31 Jul 2014; Yixun Lan <dlan@gentoo.org> +babeltrace-1.2.2.ebuild:
+  version bump
 
 *babeltrace-1.2.0 (04 Mar 2014)
 
