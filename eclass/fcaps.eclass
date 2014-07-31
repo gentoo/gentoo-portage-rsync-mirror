@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.9 2014/07/11 08:21:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.10 2014/07/31 10:21:05 vapier Exp $
 
 # @ECLASS: fcaps.eclass
 # @MAINTAINER:
@@ -73,14 +73,14 @@ DEPEND="filecaps? ( sys-libs/libcap )"
 #
 # If the system is unable to set capabilities, it will use the specified user,
 # group, and mode (presumably to make the binary set*id).  The defaults there
-# are root:root and 4711.  Otherwise, the ownership and permissions will be
+# are root:0 and 4711.  Otherwise, the ownership and permissions will be
 # unchanged.
 fcaps() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	# Process the user options first.
 	local owner='root'
-	local group='root'
+	local group='0'
 	local mode='4711'
 	local caps_mode='711'
 

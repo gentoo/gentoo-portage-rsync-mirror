@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=x11-libs/libX11 x11-libs/libXext
 SLOT=0
 SRC_URI=http://dl.suckless.org/tools/slock-1.1.tar.gz
-_eclasses_=fcaps	05f6960b564e59207815cb297af5357a	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=fcaps	c247b6885e1ff14f794a0eb65fb1e8ec	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=bf3cc582f2cf58bea6eaa1d6347191e0

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-dsa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/ChangeLog,v 1.34 2014/06/13 08:55:31 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/ChangeLog,v 1.35 2014/07/31 10:05:11 jer Exp $
+
+  31 Jul 2014; Jeroen Roovers <jer@gentoo.org> crypt-dsa-1.170.0.ebuild:
+  Stable for HPPA (bug #518050).
 
   13 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> crypt-dsa-1.170.0.ebuild:
   Bump to EAPI=5
