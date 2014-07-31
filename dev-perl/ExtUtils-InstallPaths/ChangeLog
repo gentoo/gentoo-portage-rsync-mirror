@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/ExtUtils-InstallPaths
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-InstallPaths/ChangeLog,v 1.1 2014/07/31 12:48:29 civil Exp $
+
+*ExtUtils-InstallPaths-0.10.0 (31 Jul 2014)
+
+  31 Jul 2014; Vladimir Smirnov +ExtUtils-InstallPaths-0.10.0.ebuild,
+  +metadata.xml:
+  Initial bump. Based on Kent's ebuild from perl-experimental.
