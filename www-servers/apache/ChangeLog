@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.279 2014/07/31 11:37:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.280 2014/07/31 14:58:27 klausman Exp $
+
+  31 Jul 2014; Tobias Klausmann <klausman@gentoo.org> apache-2.2.27-r4.ebuild:
+  Stable on alpha, bug #517298
 
 *apache-2.4.10-r1 (31 Jul 2014)
 *apache-2.2.27-r4 (31 Jul 2014)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.572 2014/07/31 10:25:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.573 2014/07/31 14:35:38 klausman Exp $
+
+  31 Jul 2014; Tobias Klausmann <klausman@gentoo.org> openssl-1.0.1h-r2.ebuild:
+  Stable on alpha, bug #515234
 
   31 Jul 2014; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8z_p1-r1.ebuild,
   openssl-0.9.8z_p1-r2.ebuild:
