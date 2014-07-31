@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4-r1.ebuild,v 1.5 2013/05/26 15:57:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4-r1.ebuild,v 1.6 2014/07/31 11:02:41 pinkbyte Exp $
 
 EAPI="5"
 
@@ -17,9 +17,7 @@ LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 
-DEPEND="sys-libs/glibc
-	sys-libs/ncurses"
-
+DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

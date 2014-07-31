@@ -1,0 +1,8 @@
+# ChangeLog for dev-perl/ExtUtils-Config
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-Config/ChangeLog,v 1.1 2014/07/31 11:16:14 civil Exp $
+
+*ExtUtils-Config-0.7.0 (31 Jul 2014)
+
+  31 Jul 2014; Vladimir Smirnov +ExtUtils-Config-0.7.0.ebuild, +metadata.xml:
+  Initial Release. Based on kent's ebuild from perl-experimental.
