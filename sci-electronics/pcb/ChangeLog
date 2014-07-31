@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.75 2014/05/12 06:13:24 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.76 2014/07/31 16:50:33 tomjbe Exp $
+
+  31 Jul 2014; Thomas Beierlein <tomjbe@gentoo.org> pcb-20110918.ebuild,
+  pcb-20140316.ebuild:
+  Add missing depend (bug #514844). Thanks Patrick
 
 *pcb-20140316 (12 May 2014)
 

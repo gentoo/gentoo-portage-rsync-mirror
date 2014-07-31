@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20140316.ebuild,v 1.1 2014/05/12 06:13:24 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20140316.ebuild,v 1.2 2014/07/31 16:50:33 tomjbe Exp $
 
 EAPI="5"
 
@@ -17,7 +17,8 @@ IUSE="dbus debug doc gcode gif gtk jpeg m4lib-png motif nelma opengl png
 test tk toporouter xrender"
 # toporouter-output USE flag removed, there seems to be no result
 
-CDEPEND="gif? ( >=media-libs/gd-2.0.23 )
+CDEPEND="dev-libs/glib:2
+	gif? ( >=media-libs/gd-2.0.23 )
 	gtk? ( x11-libs/gtk+:2 x11-libs/pango
 		x11-libs/gtkglext
 		dbus? ( sys-apps/dbus ) )
