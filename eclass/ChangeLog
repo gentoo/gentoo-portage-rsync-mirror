@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1334 2014/07/31 02:31:09 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1335 2014/07/31 22:26:07 grknight Exp $
+
+  31 Jul 2014; Brian Evans <grknight@gentoo.org> mysql-cmake.eclass,
+  mysql-multilib.eclass:
+  Update CMake variables to prevent MySQL from setting default CFLAGS
+  and features
 
   31 Jul 2014; Brian Evans <grknight@gentoo.org> mysql-multilib.eclass:
   Update the multilib eclass to match the work done by grobian for mysql-v2

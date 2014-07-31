@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.23 2014/07/29 17:59:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.24 2014/07/31 22:26:07 grknight Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -317,6 +317,8 @@ mysql-cmake_src_configure() {
 		-DENABLED_LOCAL_INFILE=1
 		$(cmake-utils_use_enable static-libs STATIC_LIBS)
 		-DWITH_SSL=$(usex ssl system bundled)
+		-DWITH_DEFAULT_COMPILER_OPTIONS=0
+		-DWITH_DEFAULT_FEATURE_SET=0
 	)
 
 	if in_iuse bindist ; then
