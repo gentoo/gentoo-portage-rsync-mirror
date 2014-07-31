@@ -1,0 +1,8 @@
+# ChangeLog for dev-perl/Module-Build-Tiny
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Build-Tiny/ChangeLog,v 1.1 2014/07/31 13:23:00 civil Exp $
+
+*Module-Build-Tiny-0.37.0 (31 Jul 2014)
+
+  31 Jul 2014; Vladimir Smirnov +Module-Build-Tiny-0.37.0.ebuild, +metadata.xml:
+  Initial bump. Based on Kent's ebuild from perl-experimental

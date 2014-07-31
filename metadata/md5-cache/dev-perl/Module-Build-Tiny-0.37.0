@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=virtual/perl-CPAN-Meta >=virtual/perl-Exporter-5.570.0 virtual/perl-ExtUtils-CBuilder >=dev-perl/ExtUtils-Config-0.3.0 >=dev-perl/ExtUtils-Helpers-0.20.0 virtual/perl-ExtUtils-Install >=dev-perl/ExtUtils-InstallPaths-0.2.0 virtual/perl-ExtUtils-ParseXS virtual/perl-File-Path virtual/perl-File-Spec >=virtual/perl-Getopt-Long-2.360.0 >=virtual/perl-JSON-PP-2.0.0 virtual/perl-podlators virtual/perl-Test-Harness test? ( virtual/perl-Data-Dumper virtual/perl-File-Temp virtual/perl-IO >=virtual/perl-Test-Simple-0.88 virtual/perl-XSLoader ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=A tiny replacement for Module::Build
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Module-Build-Tiny/
+IUSE=test
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=|| ( Artistic GPL-2 )
+RDEPEND=virtual/perl-CPAN-Meta >=virtual/perl-Exporter-5.570.0 virtual/perl-ExtUtils-CBuilder >=dev-perl/ExtUtils-Config-0.3.0 >=dev-perl/ExtUtils-Helpers-0.20.0 virtual/perl-ExtUtils-Install >=dev-perl/ExtUtils-InstallPaths-0.2.0 virtual/perl-ExtUtils-ParseXS virtual/perl-File-Path virtual/perl-File-Spec >=virtual/perl-Getopt-Long-2.360.0 >=virtual/perl-JSON-PP-2.0.0 virtual/perl-podlators virtual/perl-Test-Harness dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/L/LE/LEONT/Module-Build-Tiny-0.037.tar.gz
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=b92780c70075e57be7799956294c5ded

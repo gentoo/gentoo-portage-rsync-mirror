@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/podlators
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/ChangeLog,v 1.13 2014/07/16 19:10:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/ChangeLog,v 1.14 2014/07/31 13:12:30 civil Exp $
+
+  31 Jul 2014; Vladimir Smirnov podlators-2.5.3.ebuild:
+  Keyword for ~arm
 
 *podlators-2.5.3 (16 Jul 2014)
 
