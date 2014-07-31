@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/focuswriter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/ChangeLog,v 1.19 2014/07/31 10:49:52 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/ChangeLog,v 1.20 2014/07/31 14:07:24 pinkbyte Exp $
+
+*focuswriter-1.5.2-r1 (31 Jul 2014)
+
+  31 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> -focuswriter-1.5.2.ebuild,
+  +focuswriter-1.5.2-r1.ebuild,
+  +files/focuswriter-1.5.2-unbundle-qtsingleapplication.patch:
+  Revision bump: unbundle QtSingleApplication, wrt bug #489148. Drop old
+  revision
 
 *focuswriter-1.5.2 (31 Jul 2014)
 

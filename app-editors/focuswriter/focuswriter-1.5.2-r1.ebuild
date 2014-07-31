@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/focuswriter-1.5.2.ebuild,v 1.1 2014/07/31 10:49:52 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/focuswriter-1.5.2-r1.ebuild,v 1.1 2014/07/31 14:07:24 pinkbyte Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE="debug"
 RDEPEND="app-text/hunspell
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
+	dev-qt/qtsingleapplication[X]
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -29,8 +30,16 @@ DOCS=( ChangeLog CREDITS NEWS README )
 DOC_CONTENTS="Focuswriter has optional sound support if media-libs/sdl-mixer is
 installed with wav useflag enabled."
 
+PATCHES=( "${FILESDIR}/${P}-unbundle-qtsingleapplication.patch" )
+
+rm_loc() {
+	sed -e "s|translations/${PN}_${1}.ts||"	-i ${PN}.pro || die 'sed failed'
+	rm translations/${PN}_${1}.{ts,qm} || die "removing ${1} locale failed"
+}
+
 src_prepare() {
 	l10n_for_each_disabled_locale_do rm_loc
+	qt4-r2_src_prepare
 }
 
 src_configure() {
@@ -55,9 +64,4 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
-}
-
-rm_loc() {
-	sed -e "s|translations/${PN}_${1}.ts||"	-i ${PN}.pro || die 'sed failed'
-	rm translations/${PN}_${1}.{ts,qm} || die "removing ${1} locale failed"
 }
