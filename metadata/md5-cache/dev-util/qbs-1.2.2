@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare test
+DEPEND=qt4? ( >=dev-qt/qtcore-4.8:4 >=dev-qt/qtgui-4.8:4 >=dev-qt/qtscript-4.8:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtscript:5 dev-qt/qtwidgets:5 dev-qt/qtxml:5 ) doc? ( qt4? ( >=dev-qt/qthelp-4.8:4 ) qt5? ( dev-qt/qthelp:5 ) ) test? ( qt4? ( >=dev-qt/qttest-4.8:4 ) qt5? ( dev-qt/qttest:5 ) )
+DESCRIPTION=Qt Build Suite
+EAPI=5
+HOMEPAGE=http://qt-project.org/wiki/qbs
+IUSE=doc +qt4 qt5 test
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=qt4? ( >=dev-qt/qtcore-4.8:4 >=dev-qt/qtgui-4.8:4 >=dev-qt/qtscript-4.8:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtscript:5 dev-qt/qtwidgets:5 dev-qt/qtxml:5 )
+REQUIRED_USE=^^ ( qt4 qt5 )
+SLOT=0
+SRC_URI=http://download.qt-project.org/official_releases/qbs/1.2.2/qbs-1.2.2.src.tar.gz
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	40136c5fe0002a0d3937e869ae4ee0e2	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=4cf71f21f7457a8a450e9aa6f742731e

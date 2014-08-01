@@ -2408,7 +2408,6 @@ dev-util/pkgconf:pkg-config - Install as a replacement for dev-util/pkgconfig
 dev-util/pkgconf:strict - Adhere to POSIX pkg-config specification. Useful for finding uses of non-standard pkg-config invocations.
 dev-util/pkgconfig:internal-glib - Use internal copy of dev-libs/glib
 dev-util/pkgconfig-openbsd:pkg-config - Install as a replacement for dev-util/pkgconfig
-dev-util/qbs:gui - Build QBS graphical configuration tool
 dev-util/qdevelop:plugins - Build and install additional plugins
 dev-util/reviewboard:codebase - Enables a build of the docs/codebase folder
 dev-util/reviewboard:manual - Enables a build of the docs/manual folder

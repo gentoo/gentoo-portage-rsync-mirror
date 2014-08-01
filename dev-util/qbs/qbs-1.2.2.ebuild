@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.1.1.ebuild,v 1.1 2013/12/29 19:49:45 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.2.2.ebuild,v 1.1 2014/07/31 23:36:22 pesa Exp $
 
 EAPI=5
 
@@ -13,19 +13,20 @@ SRC_URI="http://download.qt-project.org/official_releases/${PN}/${PV}/${P}.src.t
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc gui +qt4 qt5 test"
+IUSE="doc +qt4 qt5 test"
 
 RDEPEND="
 	qt4? (
 		>=dev-qt/qtcore-4.8:4
+		>=dev-qt/qtgui-4.8:4
 		>=dev-qt/qtscript-4.8:4
-		gui? ( >=dev-qt/qtgui-4.8:4 )
 	)
 	qt5? (
 		dev-qt/qtcore:5
+		dev-qt/qtgui:5
 		dev-qt/qtscript:5
+		dev-qt/qtwidgets:5
 		dev-qt/qtxml:5
-		gui? ( dev-qt/qtwidgets:5 )
 	)
 "
 DEPEND="${RDEPEND}
@@ -41,19 +42,9 @@ DEPEND="${RDEPEND}
 
 REQUIRED_USE="^^ ( qt4 qt5 )"
 
-S=${WORKDIR}/${P}.src
-
 src_prepare() {
-	# fix hardcoded libdir
-	sed -i -e "s:/lib/qbs:/$(get_libdir)/qbs:" \
-		src/lib/tools/preferences.cpp || die
-	sed -i -e "/target\.path/ s:lib/:$(get_libdir)/:" \
+	sed -i -e "/destdirPrefix/ s:/lib:/$(get_libdir):" \
 		src/plugins/plugins.pri || die
-
-	if ! use gui; then
-		sed -i -e '/SUBDIRS += config-ui/d' \
-			src/app/app.pro || die
-	fi
 
 	if ! use test; then
 		sed -i -e '/SUBDIRS = auto/d' \
@@ -66,7 +57,7 @@ src_configure() {
 		-recursive
 		CONFIG+=disable_rpath
 		QBS_INSTALL_PREFIX="${EPREFIX}/usr"
-		QBS_LIB_INSTALL_DIR="${EPREFIX}/usr/$(get_libdir)"
+		QBS_LIBRARY_DIRNAME="$(get_libdir)"
 	)
 
 	if use qt4; then
@@ -78,11 +69,15 @@ src_configure() {
 
 src_test() {
 	export HOME=${T}
-	export LD_LIBRARY_PATH=${S}/lib
+	export LD_LIBRARY_PATH=${S}/$(get_libdir)
+
+	local qmakepath=${EROOT}usr/$(get_libdir)/$(usev qt4 || usev qt5)/bin/qmake
+	[[ -x ${qmakepath} ]] || qmakepath=${EROOT}usr/bin/qmake
 
 	einfo "Setting up test environment in ${T}"
-	"${S}"/bin/qbs detect-toolchains || die
-	"${S}"/bin/qbs setup-qt "${EROOT}"usr/bin/qmake qbs_autotests || die
+
+	"${S}"/bin/qbs-setup-toolchains --detect || die
+	"${S}"/bin/qbs-setup-qt "${qmakepath}" qbs_autotests || die
 
 	default
 }
