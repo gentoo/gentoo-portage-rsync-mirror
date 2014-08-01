@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.138 2014/07/06 12:44:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.139 2014/08/01 03:25:26 idella4 Exp $
+
+*ipython-2.1.0 (01 Aug 2014)
+
+  01 Aug 2014; Ian Delaney <idella4@gentoo.org>
+  +files/2.1.0-disable-tests.patch, +ipython-2.1.0.ebuild:
+  major version bump: extensive re-write; add py3.4 support, drop keywords arm
+  ia64 ppc ppc64 (which will be requested for re-addition), re-write of doc
+  build, test phase, patch by cel1, thanks to cel1 for cross testing, fixes Bug
+  507410
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> ipython-0.12-r1.ebuild,
   ipython-0.13.2.ebuild, ipython-1.0.0.ebuild, ipython-1.1.0-r1.ebuild,
