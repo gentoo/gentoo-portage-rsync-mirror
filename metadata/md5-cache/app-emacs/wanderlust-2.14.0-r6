@@ -4,10 +4,10 @@ DESCRIPTION=Yet Another Message Interface on Emacsen
 EAPI=3
 HOMEPAGE=http://www.gohome.org/wl/
 IUSE=bbdb ssl linguas_ja
-KEYWORDS=alpha amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=alpha amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=GPL-2+
 RDEPEND=!app-emacs/wanderlust-cvs >=app-emacs/apel-10.6 virtual/emacs-flim app-emacs/semi bbdb? ( app-emacs/bbdb ) >=virtual/emacs-23
 SLOT=0
 SRC_URI=ftp://ftp.gohome.org/wl/stable/wl-2.14.0.tar.gz ftp://ftp.gohome.org/wl/beta/wl-2.14.0.tar.gz mirror://gentoo/wanderlust-2.14.0-20050405.patch.gz
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=8c30108d0ea4933ba187e752af933865
+_md5_=274fdd153b72f383975fbbf01287718e

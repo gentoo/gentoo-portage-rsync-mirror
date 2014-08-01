@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.238 2014/07/17 23:28:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.239 2014/08/01 10:44:20 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> zsh-5.0.5.ebuild:
+  sparc stable wrt #505590
 
   17 Jul 2014; Matt Turner <mattst88@gentoo.org> zsh-5.0.5.ebuild:
   alpha stable, bug 505590.

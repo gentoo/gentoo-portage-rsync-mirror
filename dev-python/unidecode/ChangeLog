@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/unidecode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.19 2014/07/20 12:20:19 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.20 2014/08/01 10:56:59 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> unidecode-0.04.14.ebuild,
+  unidecode-0.04.16.ebuild:
+  Add ~sparc wrt #505998
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> unidecode-0.04.14.ebuild:
   Stable on alpha, bug #509790

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/genext2fs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/ChangeLog,v 1.15 2014/07/19 18:50:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/ChangeLog,v 1.16 2014/08/01 10:49:11 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> genext2fs-1.4.1.ebuild:
+  sparc stable wrt #397225
 
   19 Jul 2014; Tobias Klausmann <klausman@gentoo.org> genext2fs-1.4.1.ebuild:
   Stable on alpha, bug #397225

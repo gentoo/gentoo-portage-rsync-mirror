@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.129 2014/04/23 16:53:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.130 2014/08/01 10:35:43 vapier Exp $
+
+*kbd-2.0.2 (01 Aug 2014)
+
+  01 Aug 2014; Mike Frysinger <vapier@gentoo.org> +kbd-2.0.2.ebuild:
+  Version bump.
 
   23 Apr 2014; Lars Wendler <polynomial-c@gentoo.org>
   +files/kbd-2.0.1-big_endian.patch:

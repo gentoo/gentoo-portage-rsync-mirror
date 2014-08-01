@@ -4,11 +4,11 @@ DESCRIPTION=Module providing ASCII transliterations of Unicode text
 EAPI=5
 HOMEPAGE=http://pypi.python.org/pypi/Unidecode
 IUSE=python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4 python_targets_pypy
-KEYWORDS=alpha ~amd64 ~arm hppa ~x86
+KEYWORDS=alpha ~amd64 ~arm hppa ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_pypy? ( virtual/pypy:0= ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4 python_targets_pypy )
 SLOT=0
 SRC_URI=mirror://pypi/U/Unidecode/Unidecode-0.04.14.tar.gz
 _eclasses_=distutils-r1	d48d51c220f1678179fc4ab13b534ec1	eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c2560428a5a2cc34ec09f2356c08f565
+_md5_=9e55554d597ce466859ba3760f5c097c

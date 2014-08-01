@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.94 2014/07/13 10:00:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.95 2014/08/01 10:33:12 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> linux-logo-5.11-r3.ebuild:
+  sparc stable wrt #507732
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> linux-logo-5.11-r3.ebuild:
   Stable for ppc, wrt bug #507732

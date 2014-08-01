@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/fastjar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/ChangeLog,v 1.27 2012/12/16 13:53:42 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/ChangeLog,v 1.28 2014/08/01 10:48:57 sera Exp $
+
+  01 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -fastjar-0.98-r1.ebuild:
+  Remove old
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> fastjar-0.98-r2.ebuild:
   Stable for x86, wrt bug #441050

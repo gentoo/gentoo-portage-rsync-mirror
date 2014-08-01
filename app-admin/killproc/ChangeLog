@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/killproc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.30 2014/07/04 12:59:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.31 2014/08/01 10:44:59 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> killproc-2.13.ebuild,
+  killproc-2.13-r1.ebuild:
+  Add ~sparc wrt #467210
 
   04 Jul 2014; Tobias Klausmann <klausman@gentoo.org> killproc-2.13-r1.ebuild:
   Keyworded on alpha, bug #494254

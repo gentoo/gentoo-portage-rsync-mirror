@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tleds
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.21 2014/07/17 21:07:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.22 2014/08/01 10:42:53 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> tleds-1.05_beta11-r1.ebuild,
+  tleds-1.05_beta11-r2.ebuild:
+  Drop sparc keyword
 
   17 Jul 2014; Jeroen Roovers <jer@gentoo.org> tleds-1.05_beta11-r2.ebuild,
   files/tleds-1.05_beta11-gentoo.patch, metadata.xml:

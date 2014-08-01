@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/xdaliclock-2.41.ebuild,v 1.3 2014/07/16 14:22:58 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/xdaliclock-2.41.ebuild,v 1.4 2014/08/01 10:38:39 armin76 Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.jwz.org/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS=" amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="
