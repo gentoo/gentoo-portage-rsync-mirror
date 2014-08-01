@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst postrm preinst prepare setup
+DEPEND=dev-libs/glib:2 x11-libs/gtk+:3 x11-libs/startup-notification dev-python/pygobject:2 >=net-wireless/bluez-4.61 x11-libs/libnotify nls? ( dev-util/intltool sys-devel/gettext ) virtual/pkgconfig >=dev-python/pyrex-0.9.8 =dev-lang/python-2.7* >=sys-apps/sed-4 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks.
+EAPI=5
+HOMEPAGE=http://blueman-project.org/
+IUSE=gconf sendto network nls policykit pulseaudio
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-3
+RDEPEND=dev-libs/glib:2 x11-libs/gtk+:3 x11-libs/startup-notification dev-python/pygobject:2 >=net-wireless/bluez-4.61 x11-libs/libnotify >=app-mobilephone/obex-data-server-0.4.4 sys-apps/dbus dev-python/pygtk dev-python/notify-python dev-python/dbus-python x11-themes/hicolor-icon-theme gconf? ( dev-python/gconf-python ) sendto? ( gnome-base/nautilus ) network? ( || ( net-dns/dnsmasq =net-misc/dhcp-3* >=net-misc/networkmanager-0.8 ) ) policykit? ( sys-auth/polkit ) pulseaudio? ( media-sound/pulseaudio ) =dev-lang/python-2.7*
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~zerochaos/distfiles/blueman-1.23_p20140717.tar.xz
+_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=851d1966135e5388d18e3dd5fca1e85c
