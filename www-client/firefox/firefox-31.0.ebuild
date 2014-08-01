@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.0.ebuild,v 1.2 2014/07/31 15:14:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.0.ebuild,v 1.4 2014/08/01 16:37:44 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -31,6 +31,8 @@ PATCH="${PN}-31.0-patches-0.2"
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
 MOZ_HTTP_URI="http://ftp.mozilla.org/pub/${PN}/releases/"
 
+MOZCONFIG_OPTIONAL_WIFI=1
+
 inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-v4 multilib pax-utils fdo-mime autotools virtualx mozlinguas
 
 DESCRIPTION="Firefox Web Browser"
@@ -39,7 +41,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist gstreamer hardened +jit +minimal pgo pulseaudio selinux system-cairo system-icu system-jpeg system-sqlite test wifi"
+IUSE="bindist gstreamer hardened +jit +minimal pgo pulseaudio selinux system-cairo system-icu system-jpeg system-sqlite test"
 
 # More URIs appended below...
 SRC_URI="${SRC_URI}
