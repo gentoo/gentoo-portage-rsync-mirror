@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/oslo-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/ChangeLog,v 1.7 2014/07/06 12:44:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/ChangeLog,v 1.8 2014/08/01 05:23:26 prometheanfire Exp $
+
+*oslo-config-1.3.0 (01 Aug 2014)
+
+  01 Aug 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +oslo-config-1.3.0.ebuild, -oslo-config-1.1.0.ebuild,
+  -oslo-config-1.1.1.ebuild, -oslo-config-1.2.0.ebuild,
+  -oslo-config-1.2.1.ebuild:
+  bup
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> oslo-config-1.1.0.ebuild,
   oslo-config-1.1.1.ebuild, oslo-config-1.2.0.ebuild, oslo-config-1.2.1.ebuild:

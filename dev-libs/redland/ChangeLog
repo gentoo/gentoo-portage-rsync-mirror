@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.120 2014/01/15 12:37:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.121 2014/08/01 05:16:41 ssuominen Exp $
+
+  01 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> redland-1.0.16.ebuild:
+  Punt unused USE="ssl" and dev-libs/openssl dependency wrt #518706 by
+  "Marathon"
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> redland-1.0.16.ebuild:
   Stable for sparc, wrt bug #483186

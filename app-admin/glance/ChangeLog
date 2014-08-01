@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.46 2014/07/26 23:15:35 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.47 2014/08/01 05:12:09 prometheanfire Exp $
+
+  01 Aug 2014; Matthew Thode <prometheanfire@gentoo.org> glance-9999.ebuild:
+  updating git master glance
 
   26 Jul 2014; Matthew Thode <prometheanfire@gentoo.org> glance-2014.1.1.ebuild,
   glance-2014.1.9999.ebuild, glance-9999.ebuild:

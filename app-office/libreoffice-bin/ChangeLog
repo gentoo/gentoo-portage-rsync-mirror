@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.146 2014/06/29 18:23:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.147 2014/08/01 05:21:15 ssuominen Exp $
+
+  01 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  libreoffice-bin-4.2.5.2.ebuild:
+  Punt USE="ssl" requirement for dev-libs/redland which is a no-op wrt #518706
 
   29 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -libreoffice-bin-4.1.4.2.ebuild:

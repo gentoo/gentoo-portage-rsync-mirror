@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.2.5.2.ebuild,v 1.4 2014/06/29 16:43:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.2.5.2.ebuild,v 1.5 2014/08/01 05:21:15 ssuominen Exp $
 
 EAPI=5
 
@@ -108,7 +108,7 @@ COMMON_DEPEND="
 	>=dev-libs/nss-3.12.9
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0d
-	>=dev-libs/redland-1.0.16[ssl]
+	>=dev-libs/redland-1.0.16
 	media-gfx/graphite2
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2

@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.474 2014/07/31 20:56:53 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.475 2014/08/01 05:30:31 polynomial-c Exp $
+
+*util-linux-2.25 (01 Aug 2014)
+
+  01 Aug 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -util-linux-2.23.2-r2.ebuild, +util-linux-2.25.ebuild:
+  Version bump (bug #518702). Removed old.
 
   31 Jul 2014; Christoph Junghans <ottxor@gentoo.org> util-linux-2.24.2.ebuild:
   fixed prefix install
