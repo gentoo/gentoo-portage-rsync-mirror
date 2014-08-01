@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=net-misc/curl-7.18.2 !<media-libs/quvi-0.4.0 >=media-libs/libquvi-scripts-0.4.0:0.4 >=dev-lang/lua-5.1[deprecated] !=media-libs/libquvi-0.4*:0
 SLOT=0.4
 SRC_URI=mirror://sourceforge/quvi/0.4/libquvi-0.4.1.tar.xz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	autotools-utils	3727db64c7b960903d5033280f108080	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=39365b5983bc9e29b701733981ec4d69

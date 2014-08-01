@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xkaapi/xkaapi-2.1.ebuild,v 1.1 2014/01/28 12:47:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xkaapi/xkaapi-2.1.ebuild,v 1.2 2014/07/31 23:29:18 reavertm Exp $
 
 EAPI=5
 
@@ -55,9 +55,4 @@ src_configure() {
 #		$(use_with plasma "${EPREFIX}"/usr)
 	)
 	autotools-utils_src_configure
-}
-
-src_test() {
-	cd "${BUILD_DIR}" || die
-	emake check
 }

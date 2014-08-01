@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.73 2014/03/11 23:55:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.74 2014/07/31 23:24:56 reavertm Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -468,9 +468,9 @@ autotools-utils_src_test() {
 	_check_build_dir
 	pushd "${BUILD_DIR}" > /dev/null || die
 
-	if make -n check "${@}" &>/dev/null; then
+	if make -ni check "${@}" &>/dev/null; then
 		emake check "${@}" || die 'emake check failed.'
-	elif make -n test "${@}" &>/dev/null; then
+	elif make -ni test "${@}" &>/dev/null; then
 		emake test "${@}" || die 'emake test failed.'
 	fi
 
