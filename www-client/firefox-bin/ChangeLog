@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.198 2014/07/23 14:20:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.199 2014/08/01 18:44:08 zlogene Exp $
+
+  01 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> firefox-bin-24.7.0.ebuild:
+  amd64 stable wrt bug #517876
 
 *firefox-bin-31.0 (23 Jul 2014)
 *firefox-bin-24.7.0 (23 Jul 2014)
