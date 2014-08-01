@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-9999.ebuild,v 1.2 2014/05/12 14:22:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-9999.ebuild,v 1.3 2014/08/01 08:03:45 mgorny Exp $
 
 EAPI="5"
 
-PYTHON_DEPEND="2:2.7"
-
-inherit eutils python gnome2-utils autotools
+PYTHON_COMPAT=( python2_7 )
+inherit eutils python-single-r1 gnome2-utils autotools
 
 DESCRIPTION="GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks."
 HOMEPAGE="http://blueman-project.org/"
@@ -24,24 +23,25 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="gconf sendto network nls policykit pulseaudio"
 
-CDEPEND="dev-libs/glib:2
-	x11-libs/gtk+:3
-	x11-libs/startup-notification
-	dev-python/pygobject:2
-	>=net-wireless/bluez-4.61
-	x11-libs/libnotify"
+CDEPEND="dev-libs/glib:2=
+	x11-libs/gtk+:3=
+	x11-libs/startup-notification:=
+	dev-python/dbus-python[${PYTHON_USEDEP}]
+	|| (
+		dev-python/pygobject:2
+		dev-python/pygobject:3
+	)
+	>=net-wireless/bluez-4.61:=
+	${PYTHON_DEPS}"
 DEPEND="${CDEPEND}
 	nls? ( dev-util/intltool sys-devel/gettext )
 	virtual/pkgconfig
-	>=dev-python/pyrex-0.9.8"
+	dev-python/cython[${PYTHON_USEDEP}]"
 RDEPEND="${CDEPEND}
 	>=app-mobilephone/obex-data-server-0.4.4
 	sys-apps/dbus
-	dev-python/pygtk
-	dev-python/notify-python
-	dev-python/dbus-python
 	x11-themes/hicolor-icon-theme
-	gconf? ( dev-python/gconf-python )
+	gconf? ( dev-python/gconf-python[${PYTHON_USEDEP}] )
 	sendto? ( gnome-base/nautilus )
 	network? ( || ( net-dns/dnsmasq
 		=net-misc/dhcp-3*
@@ -49,15 +49,9 @@ RDEPEND="${CDEPEND}
 	policykit? ( sys-auth/polkit )
 	pulseaudio? ( media-sound/pulseaudio )"
 
-pkg_setup() {
-	python_set_active_version 2.7
-	python_pkg_setup
-}
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
-	# disable pyc compiling
-	ln -sf $(type -P true) py-compile
-
 	sed -i \
 		-e '/^Encoding/d' \
 		data/blueman-manager.desktop.in || die "sed failed"
@@ -80,16 +74,15 @@ src_configure() {
 src_install() {
 	default
 
-	python_convert_shebangs 2.7 "${D}"/usr/bin/blueman-* "${D}/usr/libexec/blueman-mechanism"
+	python_fix_shebang "${D}"
 
-	rm "${D}"/$(python_get_sitedir)/*.la
-	use sendto && rm "${D}"/usr/lib*/nautilus-sendto/plugins/*.la
+	rm "${D}"/$(python_get_sitedir)/*.la || die
+	use sendto && { rm "${D}"/usr/lib*/nautilus-sendto/plugins/*.la || die; }
 
-	use gconf || rm "${D}"/$(python_get_sitedir)/${PN}/plugins/config/Gconf.py
-	use policykit || rm -rf "${D}"/usr/share/polkit-1
-	use pulseaudio || rm "${D}"/$(python_get_sitedir)/${PN}/{main/Pulse*.py,plugins/applet/Pulse*.py}
-
-	python_need_rebuild
+	# Note: Python 3 support would need __pycache__ file removal too
+	use gconf || { rm "${D}"/$(python_get_sitedir)/${PN}/plugins/config/Gconf.py* || die; }
+	use policykit || { rm -rf "${D}"/usr/share/polkit-1 || die; }
+	use pulseaudio || { rm "${D}"/$(python_get_sitedir)/${PN}/{main/Pulse*.py*,plugins/manager/Pulse*.py*} || die; }
 }
 
 pkg_preinst() {
@@ -97,11 +90,9 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	python_mod_optimize ${PN}
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	python_mod_cleanup ${PN}
 	gnome2_icon_cache_update
 }

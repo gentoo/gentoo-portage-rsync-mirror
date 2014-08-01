@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/judy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.35 2013/04/30 13:35:15 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.36 2014/08/01 08:24:07 maekke Exp $
+
+  01 Aug 2014; Markus Meier <maekke@gentoo.org> judy-1.0.5.ebuild:
+  add ~arm, bug #518506
 
   30 Apr 2013;  <qnikst@gentoo.org> judy-1.0.4.ebuild, judy-1.0.5.ebuild,
   metadata.xml:

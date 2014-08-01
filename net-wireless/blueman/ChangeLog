@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.20 2014/08/01 02:52:09 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.21 2014/08/01 08:03:45 mgorny Exp $
+
+*blueman-1.23_p20140717-r1 (01 Aug 2014)
+
+  01 Aug 2014; Michał Górny <mgorny@gentoo.org>
+  +blueman-1.23_p20140717-r1.ebuild, -blueman-1.23_p20140717.ebuild,
+  blueman-9999.ebuild:
+  Update deps from configure.ac. Switch to python-single-r1. Add missing ||die.
 
 *blueman-1.23_p20140717 (01 Aug 2014)
 
