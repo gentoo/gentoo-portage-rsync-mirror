@@ -2,10 +2,10 @@ DEFINED_PHASES=compile install prepare
 DESCRIPTION=A graphical front-end for GCC's coverage testing tool gcov
 EAPI=4
 HOMEPAGE=http://ltp.sourceforge.net/coverage/lcov.php
-KEYWORDS=amd64 ~arm ppc x86 ~x64-macos ~x86-linux
+KEYWORDS=amd64 ~arm arm64 ppc x86 ~x86-linux ~x64-macos
 LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5 dev-perl/GD[png]
 SLOT=0
 SRC_URI=mirror://sourceforge/ltp/lcov-1.9.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=67bd773e313ad5eb1e26a14fb6a7ffdc
+_md5_=f3ebb6060e850abd18b35e04cb8c6958
