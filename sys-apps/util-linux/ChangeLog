@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.478 2014/08/01 06:55:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.479 2014/08/01 10:22:46 vapier Exp $
+
+  01 Aug 2014; Mike Frysinger <vapier@gentoo.org> util-linux-2.24.1-r3.ebuild:
+  Mark arm64/hppa/m68k/s390/sh stable.
 
   01 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> util-linux-9999.ebuild:
   Fixed live ebuild as well.

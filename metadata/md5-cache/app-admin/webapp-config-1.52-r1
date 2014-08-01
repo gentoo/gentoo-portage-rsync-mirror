@@ -4,11 +4,11 @@ DESCRIPTION=Gentoo's installer for web-based applications
 EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/webapp-config/
 IUSE=+portage python_targets_python2_7 python_targets_python3_2 python_targets_python3_3
-KEYWORDS=alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd
+KEYWORDS=alpha amd64 arm hppa ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd
 LICENSE=GPL-2
 RDEPEND=portage? ( sys-apps/portage[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~twitch153/webapp-config/webapp-config-1.52.tar.bz2
 _eclasses_=distutils-r1	d48d51c220f1678179fc4ab13b534ec1	eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c20bf9df14c3d3fda5e4e035dd67ac16
+_md5_=462e6ea6184842ee2d1f3f73687d67c5

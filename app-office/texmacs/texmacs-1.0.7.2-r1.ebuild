@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.2-r1.ebuild,v 1.10 2012/05/21 18:38:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.2-r1.ebuild,v 1.11 2014/08/01 10:24:23 armin76 Exp $
 EAPI=2
 inherit autotools eutils
 MY_P=${P/tex/TeX}-src
@@ -14,7 +14,7 @@ SRC_URI="
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="imlib jpeg netpbm svg spell"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="alpha amd64 ppc x86"
 
 RDEPEND="
 	dev-scheme/guile[deprecated]

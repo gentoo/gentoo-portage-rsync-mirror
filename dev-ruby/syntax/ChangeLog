@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/syntax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.56 2014/06/17 09:33:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.57 2014/08/01 10:07:47 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> syntax-1.0.0-r4.ebuild:
+  sparc stable wrt #503794
 
   17 Jun 2014; Tobias Klausmann <klausman@gentoo.org> syntax-1.0.0-r4.ebuild:
   Stable on alpha, bug #503794
