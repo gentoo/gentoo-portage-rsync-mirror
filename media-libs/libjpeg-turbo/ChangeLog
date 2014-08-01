@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.98 2014/08/01 11:19:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.99 2014/08/01 16:31:13 tgall Exp $
+
+  01 Aug 2014;  <tgall@gentoo.org> libjpeg-turbo-1.3.1.ebuild:
+  initial arm64 support
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> libjpeg-turbo-1.3.1.ebuild:
   sparc stable wrt #506904
