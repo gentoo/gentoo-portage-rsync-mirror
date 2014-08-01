@@ -1,6 +1,15 @@
 # ChangeLog for sys-block/thin-provisioning-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.45 2014/07/31 22:21:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.47 2014/08/01 09:18:33 ssuominen Exp $
+
+*thin-provisioning-tools-0.3.2-r1 (01 Aug 2014)
+
+  01 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> +files/thin-provisioning-t
+  ools-0.3.2-Remove-ambiguity-between-boost-uint64_t-and-uint64_t.patch,
+  +thin-provisioning-tools-0.3.2-r1.ebuild:
+  Fix portability with, for example, sys-libs/uclibc using upstream patch
+  http://github.com/jthornber/thin-provisioning-
+  tools/commit/e77e8715b0a91a60cf2c4b85933b1063385da122
 
   31 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
   -files/thin-provisioning-tools-0.1.5-LDFLAGS.patch,
