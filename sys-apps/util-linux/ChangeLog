@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.475 2014/08/01 05:30:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.476 2014/08/01 06:26:19 polynomial-c Exp $
+
+  01 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> util-linux-2.25.ebuild:
+  Removed cytune support.
 
 *util-linux-2.25 (01 Aug 2014)
 

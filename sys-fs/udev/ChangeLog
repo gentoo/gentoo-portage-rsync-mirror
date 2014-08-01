@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1076 2014/07/31 18:49:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1077 2014/08/01 06:14:35 ssuominen Exp $
+
+  01 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> udev-215-r1.ebuild:
+  Raise linux-headers dependency to >= 3.5 for IFLA_MACVLAN_FLAGS because it's
+  missing from src/share/missing.h
 
   31 Jul 2014; Anthony G. Basile <blueness@gentoo.org> udev-215-r1.ebuild:
   Stable on ppc/ppc64, bug #517106

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.10.28.ebuild,v 1.1 2014/05/09 03:42:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.10.30.ebuild,v 1.1 2014/08/01 06:02:08 patrick Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ RESTRICT="test"
 
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit python-any-r1 pax-utils
+inherit python-any-r1 pax-utils toolchain-funcs
 
 DESCRIPTION="Evented IO for V8 Javascript"
 HOMEPAGE="http://nodejs.org/"
@@ -21,7 +21,8 @@ KEYWORDS="~amd64 ~arm ~x86 ~x64-macos"
 IUSE="+npm +snapshot"
 
 RDEPEND="dev-libs/openssl"
-DEPEND="${RDEPEND}"
+DEPEND="${PYTHON_DEPS}
+	${RDEPEND}"
 
 S=${WORKDIR}/node-v${PV}
 
@@ -35,6 +36,8 @@ src_prepare() {
 
 	# less verbose install output (stating the same as portage, basically)
 	sed -i -e "/print/d" tools/install.py || die
+
+	tc-export CC CXX
 }
 
 src_configure() {
@@ -43,10 +46,12 @@ src_configure() {
 	! use snapshot && myconf="${myconf} --without-snapshot"
 
 	"${PYTHON}" configure --prefix="${EPREFIX}"/usr \
-		--openssl-use-sys --shared-zlib --without-dtrace ${myconf} || die
+		--shared-openssl --shared-zlib --without-dtrace ${myconf} || die
 }
 
 src_compile() {
+	local V=1
+	export V
 	emake out/Makefile
 	emake -C out mksnapshot
 	pax-mark m out/Release/mksnapshot
