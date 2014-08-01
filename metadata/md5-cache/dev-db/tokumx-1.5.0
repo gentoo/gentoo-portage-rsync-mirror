@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=!dev-libs/jemalloc >=dev-libs/boost-1.50[threads(+)] >=dev-libs/libpcre-8.30[cxx] net-libs/libpcap sys-libs/ncurses sys-libs/readline sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=An open source, high-performance distribution of MongoDB
+EAPI=5
+HOMEPAGE=http://www.tokutek.com/products/tokumx-for-mongodb/
+KEYWORDS=~amd64
+LICENSE=AGPL-3 Apache-2.0
+RDEPEND=!dev-libs/jemalloc >=dev-libs/boost-1.50[threads(+)] >=dev-libs/libpcre-8.30[cxx] net-libs/libpcap
+SLOT=0
+SRC_URI=mirror://gentoo/tokumx-git-tag-1.5.0.tar.bz2
+_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=4d57f2e6a8ef05ee27d22cc0210168ae
