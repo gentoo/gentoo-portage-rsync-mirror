@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/missingh-1.2.0.2.ebuild,v 1.3 2014/01/26 11:01:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/missingh-1.2.0.2.ebuild,v 1.4 2014/08/01 09:47:02 armin76 Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~sparc x86 ~amd64-linux"
+KEYWORDS=" amd64 x86 ~amd64-linux"
 IUSE=""
 
 RDEPEND="dev-haskell/hslogger:=[profile?]

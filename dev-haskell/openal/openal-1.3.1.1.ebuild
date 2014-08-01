@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/openal/openal-1.3.1.1.ebuild,v 1.5 2012/09/12 15:52:08 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/openal/openal-1.3.1.1.ebuild,v 1.6 2014/08/01 09:50:23 armin76 Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -14,7 +14,7 @@ SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 sparc x86"
+KEYWORDS=" amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.4

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycountry
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/ChangeLog,v 1.29 2014/07/13 07:56:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/ChangeLog,v 1.30 2014/08/01 09:43:03 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> pycountry-1.3.ebuild,
+  pycountry-1.4.ebuild, pycountry-1.5.ebuild, pycountry-1.6.ebuild,
+  pycountry-1.8.ebuild:
+  Add ~sparc wrt #473154
 
 *pycountry-1.8 (13 Jul 2014)
 

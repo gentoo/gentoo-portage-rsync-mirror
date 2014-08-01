@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/bbmail-0.9.3.ebuild,v 1.6 2012/06/04 18:54:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/bbmail-0.9.3.ebuild,v 1.7 2014/08/01 09:51:36 armin76 Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/bbtools/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS=" amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-wm/blackbox

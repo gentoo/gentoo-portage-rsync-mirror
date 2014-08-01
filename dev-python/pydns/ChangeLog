@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pydns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.26 2014/05/15 15:55:50 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.27 2014/08/01 09:44:19 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> pydns-2.3.4.ebuild,
+  pydns-2.3.6-r1.ebuild, pydns-3.0.1.ebuild, pydns-3.0.2-r1.ebuild,
+  pydns-3.1.0.ebuild:
+  Add ~sparc wrt #473154
 
 *pydns-3.1.0 (15 May 2014)
 

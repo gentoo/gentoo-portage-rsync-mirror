@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.105 2014/07/21 19:07:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.106 2014/08/01 09:56:40 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> ratpoison-1.4.6.ebuild,
+  ratpoison-1.4.6-r1.ebuild, ratpoison-1.4.7.ebuild:
+  Drop sparc keyword
 
   21 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   ratpoison-1.4.6.ebuild, ratpoison-1.4.6-r1.ebuild, ratpoison-1.4.7.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ogdi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.41 2014/07/09 03:18:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.42 2014/08/01 09:59:09 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> ogdi-3.2.0_beta2.ebuild:
+  Drop sparc keyword
 
   09 Jul 2014; Patrick Lauer <patrick@gentoo.org> ogdi-3.1.5-r1.ebuild:
   Drop keywords for unsatisfiable dependencies on proj
