@@ -1,12 +1,12 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
-DEPEND=x11-libs/libXext virtual/opengl amd64? ( app-emulation/emul-linux-x86-xlibs )
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DESCRIPTION=An x86 binary-only emulator for the Sony ZN-1, ZN-2, and Namco System 11 arcade systems
-HOMEPAGE=http://www.emuhype.com/
+EAPI=5
+HOMEPAGE=http://caesar.logiqx.com/php/emulator.php?id=zinc_linux
 KEYWORDS=-* ~amd64 x86
 LICENSE=freedist
 RDEPEND=x11-libs/libXext virtual/opengl amd64? ( app-emulation/emul-linux-x86-xlibs ) games-misc/games-envd
 RESTRICT=strip
 SLOT=0
-SRC_URI=http://www.emuhype.com/files/zinc11-lnx.tar.bz2
+SRC_URI=http://caesar.logiqx.com/zips/emus/linux/zinc_linux/zinc11-lnx.tar.bz2
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=e77857995f09d532e7bcfc7a6e59f17c
+_md5_=2293c63b6f0ed2eb4abfd0eaddd42007

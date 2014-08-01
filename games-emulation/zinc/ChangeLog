@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/zinc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/ChangeLog,v 1.11 2013/04/14 07:03:39 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/ChangeLog,v 1.12 2014/08/01 22:10:50 mr_bones_ Exp $
+
+  01 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> zinc-1.1.ebuild:
+  EAPI=5; update HOMEPAGE/SRC_URI
 
   14 Apr 2013; Ulrich Müller <ulm@gentoo.org> zinc-1.1.ebuild:
   Fix LICENSE, see readme.txt file: "This emulator may be freely distributed

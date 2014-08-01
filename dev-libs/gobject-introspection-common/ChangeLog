@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/ChangeLog,v 1.43 2014/07/28 13:42:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/ChangeLog,v 1.44 2014/08/01 22:13:24 tgall Exp $
+
+  01 Aug 2014;  <tgall@gentoo.org> gobject-introspection-common-1.38.0.ebuild,
+  gobject-introspection-common-1.40.0.ebuild:
+  arm64, initial support
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
   gobject-introspection-common-1.40.0.ebuild:

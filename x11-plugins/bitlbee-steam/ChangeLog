@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/bitlbee-steam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bitlbee-steam/ChangeLog,v 1.9 2014/05/10 22:24:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bitlbee-steam/ChangeLog,v 1.10 2014/08/01 22:13:42 hasufell Exp $
+
+*bitlbee-steam-1.1.0 (01 Aug 2014)
+
+  01 Aug 2014; Julian Ospald <hasufell@gentoo.org> +bitlbee-steam-1.1.0.ebuild:
+  version bump
 
 *bitlbee-steam-1.0.1 (10 May 2014)
 

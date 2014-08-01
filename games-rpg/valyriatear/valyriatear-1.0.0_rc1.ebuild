@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/valyriatear-0.5.1.ebuild,v 1.6 2013/09/09 00:29:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/valyriatear-1.0.0_rc1.ebuild,v 1.1 2014/08/01 22:25:36 hasufell Exp $
 
 EAPI=5
 
-inherit eutils cmake-utils games
+inherit cmake-utils games
 
-MY_P=ValyriaTear-${PV}
+MY_P=ValyriaTear-${PV/_rc/-rc}
 
 DESCRIPTION="A free 2D J-RPG based on the Hero of Allacrost engine"
 HOMEPAGE="http://valyriatear.blogspot.de/"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/valyriatear/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 GPL-2+ GPL-3 CC-BY-SA-3.0 CC-BY-3.0 CC0-1.0 OFL-1.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug editor nls"
 
 RDEPEND="
@@ -27,7 +27,6 @@ RDEPEND="
 	media-libs/sdl-image[png]
 	media-libs/sdl-ttf
 	virtual/glu
-	virtual/jpeg
 	virtual/opengl
 	x11-libs/libX11
 	editor? (
@@ -42,10 +41,6 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-{paths,libpng-1.6}.patch
-}
-
 src_configure() {
 	local mycmakeargs=(
 		-DUSE_SYSTEM_LUABIND=ON
@@ -54,6 +49,7 @@ src_configure() {
 		$(cmake-utils_use editor EDITOR_SUPPORT)
 		$(cmake-utils_use !nls DISABLE_TRANSLATIONS)
 		$(cmake-utils_use debug DEBUG_FEATURES)
+		-DUSE_PCH_COMPILATION=OFF
 	)
 
 	cmake-utils_src_configure
