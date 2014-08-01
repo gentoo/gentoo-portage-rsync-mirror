@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.476 2014/07/31 08:31:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.477 2014/08/01 08:34:29 maekke Exp $
+
+  01 Aug 2014; Markus Meier <maekke@gentoo.org> lftp-4.5.3.ebuild:
+  arm stable, bug #518476
 
   31 Jul 2014; Jeroen Roovers <jer@gentoo.org> -lftp-4.4.16.ebuild,
   -lftp-4.5.2.ebuild, lftp-4.5.3.ebuild:
