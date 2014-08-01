@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.119 2014/07/20 09:06:12 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.120 2014/08/01 11:27:43 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> openntpd-20080406-r8.ebuild:
+  sparc stable wrt #507846
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   openntpd-20080406-r8.ebuild:

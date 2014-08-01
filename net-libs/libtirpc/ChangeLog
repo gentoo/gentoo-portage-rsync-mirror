@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.38 2014/07/18 13:26:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.39 2014/08/01 11:24:53 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> libtirpc-0.2.4-r1.ebuild:
+  ia64/sparc stable wrt #514912
 
   18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> libtirpc-0.2.4-r1.ebuild:
   Stable on alpha, bug #514912

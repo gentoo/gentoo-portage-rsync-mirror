@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r2.ebuild,v 1.5 2014/07/20 09:15:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r2.ebuild,v 1.6 2014/08/01 11:29:13 armin76 Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2
 	java? ( mirror://sourceforge/vnc-tight/${P}_javasrc.tar.gz )"
 HOMEPAGE="http://www.tightvnc.com/"
 
-KEYWORDS="alpha amd64 arm ~mips ~ppc ~sh ~sparc x86 ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm ~mips ~ppc ~sh sparc x86 ~x86-fbsd ~arm-linux ~x86-linux"
 LICENSE="GPL-2"
 SLOT="0"
 

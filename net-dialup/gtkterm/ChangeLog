@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/gtkterm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.25 2014/07/20 09:16:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.26 2014/08/01 11:29:40 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> gtkterm-0.99.5-r1.ebuild,
+  gtkterm-0.99.7_rc1.ebuild:
+  Drop sparc keyword
 
   20 Jul 2014; Pacho Ramos <pacho@gentoo.org> gtkterm-0.99.7_rc1.ebuild:
   amd64/x86 stable, bug #452824
