@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/metaclass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.32 2014/08/01 10:14:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.33 2014/08/01 12:56:46 mrueg Exp $
+
+  01 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -metaclass-0.0.1.ebuild:
+  Cleanup old.
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> metaclass-0.0.1-r1.ebuild:
   sparc stable wrt #497488
