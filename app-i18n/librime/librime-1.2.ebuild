@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-1.1.ebuild,v 1.1 2014/01/03 21:44:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-1.2.ebuild,v 1.1 2014/08/01 06:47:06 dlan Exp $
 
 EAPI=5
 
@@ -27,12 +27,11 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}"
 
-pkg_pretend() {
-	if [ ${MERGE_TYPE} != binary ]; then
-		version_is_at_least 4.8.0 "$(gcc-fullversion)" \
-			|| die "Sorry, but gcc-4.8.0 and earlier wont work for librime (see bug 496080)."
-	fi
-}
+#bug 496080, backport patch for <gcc-4.8
+PATCHES=(
+	"${FILESDIR}/${PN}-1.2-BOOST_NO_SCOPED_ENUMS.patch"
+	"${FILESDIR}/${PN}-1.1-gcc53613.patch"
+)
 
 src_configure() {
 	local mycmakeargs=(

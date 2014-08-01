@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-rime/ibus-rime-0.9.8.ebuild,v 1.1 2013/02/05 11:11:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-rime/ibus-rime-1.2.ebuild,v 1.1 2014/08/01 06:53:07 dlan Exp $
 
 EAPI=5
 
 DESCRIPTION="Rime Input Method Engine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/rimeime/"
-SRC_URI="http://rimeime.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://dl.bintray.com/lotem/rime/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

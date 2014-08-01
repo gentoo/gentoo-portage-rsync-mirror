@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.25.ebuild,v 1.2 2014/08/01 06:26:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.25.ebuild,v 1.3 2014/08/01 06:49:25 polynomial-c Exp $
 
 EAPI="4"
 
@@ -65,7 +65,6 @@ src_prepare() {
 		po/update-potfiles
 		eautoreconf
 	fi
-	find tests/ -name bigyear -delete #489794
 	elibtoolize
 }
 
@@ -87,13 +86,13 @@ multilib_src_configure() {
 	export ac_cv_header_security_pam_misc_h=$(multilib_native_usex pam) #485486
 	ECONF_SOURCE=${S} \
 	econf \
-		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--enable-fs-paths-extra=/usr/sbin:/bin:/usr/bin \
 		$(multilib_native_use_enable nls) \
 		--enable-agetty \
 		--with-bashcompletiondir="$(get_bashcompdir)" \
 		$(multilib_native_use_enable bash-completion) \
 		$(multilib_native_use_enable caps setpriv) \
+		--disable-chfn-chsh \
 		$(multilib_native_use_enable cramfs) \
 		$(multilib_native_use_enable fdformat) \
 		--with-ncurses=$(multilib_native_usex ncurses $(usex unicode auto yes) no) \
@@ -139,12 +138,13 @@ multilib_src_install() {
 	else
 		emake DESTDIR="${D}" install-usrlib_execLTLIBRARIES \
 			install-pkgconfigDATA install-uuidincHEADERS \
-			install-nodist_blkidincHEADERS install-nodist_mountincHEADERS
+			install-nodist_blkidincHEADERS install-nodist_mountincHEADERS \
+			install-nodist_smartcolsincHEADERS
 	fi
 
 	if multilib_is_native_abi; then
 		# need the libs in /
-		gen_usr_ldscript -a blkid mount uuid
+		gen_usr_ldscript -a blkid mount smartcols uuid
 
 		use python && python_optimize
 	fi

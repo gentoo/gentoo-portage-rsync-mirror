@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.56 2014/06/18 20:46:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.57 2014/08/01 06:55:12 polynomial-c Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
 LICENSE="GPL-2 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
-IUSE="bash-completion caps +cramfs cytune fdformat ncurses nls pam python selinux slang static-libs +suid test tty-helpers udev unicode"
+IUSE="bash-completion caps +cramfs fdformat ncurses nls pam python selinux slang static-libs +suid test tty-helpers udev unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -92,8 +92,8 @@ multilib_src_configure() {
 		--with-bashcompletiondir="$(get_bashcompdir)" \
 		$(multilib_native_use_enable bash-completion) \
 		$(multilib_native_use_enable caps setpriv) \
+		--disable-chfn-chsh \
 		$(multilib_native_use_enable cramfs) \
-		$(multilib_native_use_enable cytune) \
 		$(multilib_native_use_enable fdformat) \
 		--with-ncurses=$(multilib_native_usex ncurses $(usex unicode auto yes) no) \
 		--disable-kill \

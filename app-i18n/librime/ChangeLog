@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/librime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.15 2014/04/08 23:27:37 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.16 2014/08/01 06:47:06 dlan Exp $
+
+*librime-1.2 (01 Aug 2014)
+
+  01 Aug 2014; Yixun Lan <dlan@gentoo.org> -librime-0.9.8.ebuild,
+  -librime-1.1.ebuild, +librime-1.2.ebuild,
+  +files/librime-1.2-BOOST_NO_SCOPED_ENUMS.patch:
+  bump & drop old
 
 *librime-1.1-r1 (08 Apr 2014)
 
