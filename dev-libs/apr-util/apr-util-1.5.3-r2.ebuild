@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.3-r1.ebuild,v 1.11 2014/05/17 13:55:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.3-r2.ebuild,v 1.1 2014/08/01 04:47:40 polynomial-c Exp $
 
 EAPI="4"
 
@@ -64,6 +64,10 @@ src_configure() {
 		)
 	else
 		myconf+=( --without-berkeley-db )
+	fi
+
+	if use nss || use openssl ; then
+		myconf+=( --with-crypto ) # 518708
 	fi
 
 	econf \

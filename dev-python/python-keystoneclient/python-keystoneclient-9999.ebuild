@@ -1,11 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-9999.ebuild,v 1.9 2014/07/06 12:48:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-9999.ebuild,v 1.10 2014/08/01 04:50:26 prometheanfire Exp $
 
 EAPI=5
-#restricted due to packages missing and bad depends in the test ==webob-1.0.8
-RESTRICT="test"
-#PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 git-2
@@ -16,41 +13,63 @@ EGIT_REPO_URI="https://github.com/openstack/python-keystoneclient.git"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
-IUSE="test"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="doc examples test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-		test? ( dev-python/Babel[${PYTHON_USEDEP}]
-			dev-python/coverage[${PYTHON_USEDEP}]
-			dev-python/fixtures[${PYTHON_USEDEP}]
-			dev-python/keyring[${PYTHON_USEDEP}]
-			dev-python/mock[${PYTHON_USEDEP}]
-			dev-python/mox[${PYTHON_USEDEP}]
-			dev-python/nose[${PYTHON_USEDEP}]
-			dev-python/nose-exclude[${PYTHON_USEDEP}]
-			dev-python/nosehtmloutput[${PYTHON_USEDEP}]
-			dev-python/openstack-nose-plugin[${PYTHON_USEDEP}]
-			=dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
+		>=dev-python/pbr-0.6[${PYTHON_USEDEP}]
+		!~dev-python/pbr-0.7[${PYTHON_USEDEP}]
+		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
+		test? (
+			>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
+			>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
+			>=dev-python/hacking-0.8[${PYTHON_USEDEP}]
+			<dev-python/hacking-0.9[${PYTHON_USEDEP}]
+			>=dev-python/httpretty-0.8.0[${PYTHON_USEDEP}]
+			!~dev-python/httpretty-0.8.1[${PYTHON_USEDEP}]
+			!~dev-python/httpretty-0.8.2[${PYTHON_USEDEP}]
+			>=dev-python/keyring-2.1[${PYTHON_USEDEP}]
+			>=dev-python/mock-1.0[${PYTHON_USEDEP}]
+			>=dev-python/mox3-0.7.0[${PYTHON_USEDEP}]
+			>=dev-python/oauthlib-0.6[${PYTHON_USEDEP}]
+			>=dev-python/pycrypto-2.6[${PYTHON_USEDEP}]
 			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-			>=dev-python/testtools-0.9.22[${PYTHON_USEDEP}]
-			dev-python/unittest2[${PYTHON_USEDEP}]
-			>=dev-python/webob-1.0.8[${PYTHON_USEDEP}] )"
-RDEPEND=">=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
-		<dev-python/d2to1-0.3[${PYTHON_USEDEP}]
-		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
-		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
-		>=dev-python/pbr-0.5[${PYTHON_USEDEP}]
-		<dev-python/pbr-0.6[${PYTHON_USEDEP}]
-		>=dev-python/prettytable-0.6[${PYTHON_USEDEP}]
+			!~dev-python/sphinx-1.2.0[${PYTHON_USEDEP}]
+			<dev-python/sphinx-1.3[${PYTHON_USEDEP}]
+			>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
+			>=dev-python/testresources-0.2.4[${PYTHON_USEDEP}]
+			>=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
+			>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
+		)"
+
+RDEPEND=">=dev-python/Babel-1.3[${PYTHON_USEDEP}]
+		>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
+		>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
+		>=dev-python/netaddr-0.7.6[${PYTHON_USEDEP}]
+		>=dev-python/oslo-config-1.2.1[${PYTHON_USEDEP}]
+		>=dev-python/prettytable-0.7[${PYTHON_USEDEP}]
 		<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
-		>=dev-python/requests-0.8.8[${PYTHON_USEDEP}]
-		dev-python/simplejson[${PYTHON_USEDEP}]
-		dev-python/six[${PYTHON_USEDEP}]"
+		>=dev-python/requests-1.1[${PYTHON_USEDEP}]
+		>=dev-python/six-1.7.0[${PYTHON_USEDEP}]
+		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]"
 
 PATCHES=(
+	"${FILESDIR}"/sphinx_mapping.patch
 )
-#	"${FILESDIR}/0.2.3-CVE-2013-2104.patch"
+
+python_compile_all() {
+	use doc && emake -C doc html
+}
 
 python_test() {
-	nosetests || die "testsuite failed"
+	# https://bugs.launchpad.net/python-keystoneclient/+bug/1243528
+	testr init
+	testr run || die "testsuite failed under python2.7"
+	flake8 ${PN/python-/}/tests || die "run over tests folder by flake8 drew error"
+}
+
+python_install_all() {
+	use doc && local HTML_DOCS=( doc/build/html/. )
+	use examples && local EXAMPLES=( examples/.)
+	distutils-r1_python_install_all
 }

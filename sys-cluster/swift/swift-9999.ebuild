@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-9999.ebuild,v 1.7 2014/01/08 05:59:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-9999.ebuild,v 1.8 2014/08/01 04:53:23 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -10,7 +10,6 @@ inherit distutils-r1 eutils git-2 linux-info user
 DESCRIPTION="A highly available, distributed, eventually consistent object/blob store"
 HOMEPAGE="https://launchpad.net/swift"
 EGIT_REPO_URI="https://github.com/openstack/swift.git"
-EGIT_BRANCH="master"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -19,31 +18,35 @@ IUSE="proxy account container object test +memcache"
 REQUIRED_USE="|| ( proxy account container object )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-		test? ( dev-python/nose[${PYTHON_USEDEP}]
+		>=dev-python/pbr-0.6.0[${PYTHON_USEDEP}]
+		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
+		test? ( >=dev-python/hacking-0.8.0[${PYTHON_USEDEP}]
+				<dev-python/hacking-0.9[${PYTHON_USEDEP}]
 				dev-python/coverage[${PYTHON_USEDEP}]
+				dev-python/nose[${PYTHON_USEDEP}]
 				dev-python/nosexcover[${PYTHON_USEDEP}]
 				dev-python/openstack-nose-plugin[${PYTHON_USEDEP}]
 				dev-python/nosehtmloutput[${PYTHON_USEDEP}]
-				~dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
-				>=dev-python/pyflakes-0.7.2[${PYTHON_USEDEP}]
-				>=dev-python/flake8-2.0[${PYTHON_USEDEP}]
+				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
+				<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
 				>=dev-python/mock-0.8.0[${PYTHON_USEDEP}]
-				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}] )"
+				dev-python/python-swiftclient[${PYTHON_USEDEP}] )"
 
-RDEPEND=">=dev-python/eventlet-0.9.15[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/dnspython-1.9.4[${PYTHON_USEDEP}]
+		>=dev-python/eventlet-0.9.15[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.1[${PYTHON_USEDEP}]
 		>=dev-python/netifaces-0.5[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.3.3[${PYTHON_USEDEP}]
 		>=dev-python/simplejson-2.0.9[${PYTHON_USEDEP}]
 		dev-python/pyxattr[${PYTHON_USEDEP}]
-		>=dev-python/dnspython-1.10.0-r1[${PYTHON_USEDEP}]
-		dev-python/python-swiftclient[${PYTHON_USEDEP}]
 		memcache? ( net-misc/memcached )
 		net-misc/rsync[xattr]"
 
 CONFIG_CHECK="~EXT3_FS_XATTR ~SQUASHFS_XATTR ~CIFS_XATTR ~JFFS2_FS_XATTR
 ~TMPFS_XATTR ~UBIFS_FS_XATTR ~EXT2_FS_XATTR ~REISERFS_FS_XATTR ~EXT4_FS_XATTR
 ~ZFS"
+
+#PATCHES=( "${FILESDIR}/CVE-2014-0006-master.diff" )
 
 pkg_setup() {
 	enewuser swift
@@ -52,13 +55,14 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i 's/xattr/pyxattr/g' "${S}/swift.egg-info/requires.txt"
-	sed -i 's/xattr/pyxattr/g' "${S}/tools/pip-requires"
+	sed -i 's/xattr/pyxattr/g' "${S}/requirements.txt"
+	distutils-r1_python_prepare_all
 }
 
 src_test () {
 	# https://bugs.launchpad.net/swift/+bug/1249727
-	find . -name test_wsgi.py -delete || die
-	sh .unittests || die
+	find . \( -name test_wsgi.py -o -name test_locale.py -o -name test_utils.py \) -delete || die
+	SKIP_PIP_INSTALL=1 PBR_VERSION=0.6.0 sh .unittests || die
 }
 
 python_install() {
@@ -67,7 +71,7 @@ python_install() {
 	insinto /etc/swift
 
 	newins "etc/swift.conf-sample" "swift.conf"
-	newins "etc/swift-bench.conf-sample" "swift-bench.conf-sample"
+#	newins "etc/swift-bench.conf-sample" "swift-bench.conf-sample"
 	newins "etc/rsyncd.conf-sample" "rsyncd.conf"
 	newins "etc/mime.types-sample" "mime.types-sample"
 	newins "etc/memcache.conf-sample" "memcache.conf-sample"
@@ -106,19 +110,3 @@ pkg_postinst() {
 	elog "  * cd /etc/swift"
 	elog "  * openssl req -new -x509 -nodes -out cert.crt -keyout cert.key"
 }
-
-#src_install()
-#{
-#	distutils_src_install
-#
-#	dodir "/var/run/swift"
-#
-#	if use proxy-server; then
-#		newinitd "${FILESDIR}/swift-proxy-server.initd" swift-proxy-server
-#	fi
-#
-#	if use storage-server; then
-#		newinitd "${FILESDIR}/swift-storage-server.initd" swift-storage-server
-#		newconfd "${FILESDIR}/swift-storage-server.confd" swift-storage-server
-#	fi
-#}

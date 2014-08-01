@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.209 2014/05/17 13:55:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.210 2014/08/01 04:47:40 polynomial-c Exp $
+
+*apr-util-1.5.3-r2 (01 Aug 2014)
+
+  01 Aug 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -apr-util-1.5.3-r1.ebuild, +apr-util-1.5.3-r2.ebuild:
+  Fixed compilation with nss/openssl USE flag (bug #518708). Committed straight
+  to stable.
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> apr-util-1.5.3-r1.ebuild:
   Stable for alpha, wrt bug #504300
