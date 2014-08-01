@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.237 2014/07/20 11:10:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.238 2014/08/01 11:31:47 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> setuptools-2.2.ebuild:
+  sparc stable wrt #508416
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> setuptools-2.2.ebuild:
   Stable on alpha, bug #508416

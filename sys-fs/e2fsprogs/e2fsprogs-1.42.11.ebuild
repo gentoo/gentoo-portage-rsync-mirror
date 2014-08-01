@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.11.ebuild,v 1.1 2014/07/20 10:44:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.11.ebuild,v 1.2 2014/08/01 11:31:58 vapier Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ inherit autotools eutils flag-o-matic multilib toolchain-funcs
 DESCRIPTION="Standard EXT2/EXT3/EXT4 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/e2fsprogs/${PN}-${UP_PV}.tar.gz
-	elibc_mintlib? ( https://498412.bugs.gentoo.org/attachment.cgi?id=368058 -> ${PN}-1.42.9-mint-r1.patch )"
+	elibc_mintlib? ( mirror://gentoo/${PN}-1.42.9-mint-r1.patch.xz )"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
@@ -43,7 +43,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.41.8-makefile.patch
 	epatch "${FILESDIR}"/${PN}-1.40-fbsd.patch
 	if [[ ${CHOST} == *-mint* ]] ; then
-		epatch "${DISTDIR}"/${PN}-1.42.9-mint-r1.patch
+		epatch "${WORKDIR}"/${PN}-1.42.9-mint-r1.patch
 	fi
 	epatch "${FILESDIR}"/${PN}-1.42.10-fix-build-cflags.patch
 	# blargh ... trick e2fsprogs into using e2fsprogs-libs

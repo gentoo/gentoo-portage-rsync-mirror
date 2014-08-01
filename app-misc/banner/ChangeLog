@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/banner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/ChangeLog,v 1.37 2014/07/25 15:07:15 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/ChangeLog,v 1.38 2014/08/01 11:39:50 armin76 Exp $
+
+  01 Aug 2014; Raúl Porcel <armin76@gentoo.org> banner-1.3.3.ebuild:
+  alpha/sparc/x86 stable wrt #517472
 
   25 Jul 2014; Chema Alonso <nimiux@gentoo.org> banner-1.3.3.ebuild:
   Stable for amd64 wrt bug #517472
