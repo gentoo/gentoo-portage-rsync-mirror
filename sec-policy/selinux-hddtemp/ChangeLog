@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-hddtemp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-hddtemp/ChangeLog,v 1.39 2014/05/29 20:23:33 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-hddtemp/ChangeLog,v 1.40 2014/08/01 21:04:41 swift Exp $
+
+*selinux-hddtemp-2.20140311-r4 (01 Aug 2014)
+
+  01 Aug 2014; Sven Vermeulen <swift@gentoo.org>
+  +selinux-hddtemp-2.20140311-r4.ebuild, selinux-hddtemp-2.20140311-r3.ebuild:
+  Stabilization of r3, and make r4 available for testing
 
   29 May 2014; Sven Vermeulen <swift@gentoo.org>
   selinux-hddtemp-2.20140311-r2.ebuild:

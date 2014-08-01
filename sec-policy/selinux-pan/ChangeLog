@@ -1,4 +1,10 @@
 
+*selinux-pan-2.20140311-r4 (01 Aug 2014)
+
+  01 Aug 2014; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20140311-r4.ebuild, selinux-pan-2.20140311-r3.ebuild:
+  Stabilization of r3, and make r4 available for testing
+
   29 May 2014; Sven Vermeulen <swift@gentoo.org>
   selinux-pan-2.20140311-r2.ebuild:
   Stabilize 2.20140311-r2
