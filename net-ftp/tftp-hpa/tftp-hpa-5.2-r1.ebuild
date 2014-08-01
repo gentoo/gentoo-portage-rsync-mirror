@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.2-r1.ebuild,v 1.10 2014/06/24 02:26:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.2-r1.ebuild,v 1.11 2014/08/01 17:43:33 tgall Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/software/network/tftp/${PN}/${P}.tar.xz"
 
 LICENSE="BSD-4"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~ppc-macos"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~ppc-macos"
 IUSE="ipv6 readline selinux tcpd"
 
 RDEPEND="selinux? ( sec-policy/selinux-tftp )
