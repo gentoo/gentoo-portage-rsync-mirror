@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.3.ebuild,v 1.5 2014/08/01 09:12:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.3.ebuild,v 1.6 2014/08/01 20:33:54 slyfox Exp $
 
 EAPI=5
 
@@ -400,6 +400,8 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-7.8.2-ia64-no-shared.patch
 		epatch "${FILESDIR}"/${PN}-7.8.2-cgen-constify.patch
 		epatch "${FILESDIR}"/${PN}-7.8.3-prim-lm.patch
+		# bug 518734
+		epatch "${FILESDIR}"/${PN}-7.6.3-preserve-inplace-xattr.patch
 
 		if use prefix; then
 			# Make configure find docbook-xsl-stylesheets from Prefix

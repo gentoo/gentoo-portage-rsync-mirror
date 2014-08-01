@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/jemalloc >=dev-libs/boost-1.50[threads(+)] >=dev-libs/libpcre-8.30[cxx] net-libs/libpcap sys-libs/ncurses sys-libs/readline sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=An open source, high-performance distribution of MongoDB
+EAPI=5
+HOMEPAGE=http://www.tokutek.com/products/tokumx-for-mongodb/
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64
+LICENSE=AGPL-3 Apache-2.0
+RDEPEND=dev-libs/jemalloc >=dev-libs/boost-1.50[threads(+)] >=dev-libs/libpcre-8.30[cxx] net-libs/libpcap
+SLOT=0
+SRC_URI=mirror://gentoo/tokumx-git-tag-1.5.0.tar.bz2
+_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=f2482f0112466d3b75cf584b49b7efd7

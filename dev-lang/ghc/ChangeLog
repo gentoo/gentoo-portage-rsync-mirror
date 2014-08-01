@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.262 2014/08/01 09:12:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.263 2014/08/01 20:33:54 slyfox Exp $
+
+  01 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/ghc-7.6.3-preserve-inplace-xattr.patch, ghc-7.6.3-r1.ebuild,
+  ghc-7.8.3.ebuild:
+  Fix hardened installation in PAX_MARKINGS=XT mode (bug #518734).
 
   01 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.6.3-r1.ebuild,
   ghc-7.8.3.ebuild:

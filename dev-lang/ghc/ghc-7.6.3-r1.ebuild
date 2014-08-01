@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.6.3-r1.ebuild,v 1.13 2014/08/01 09:12:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.6.3-r1.ebuild,v 1.14 2014/08/01 20:33:54 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -443,6 +443,8 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-7.6.2-integer-simple-div-mod.patch
 		# ghc-7.8 changed linker code and likely fixed it
 		epatch "${FILESDIR}"/${PN}-7.6.3-trac-3333-weak-syms.patch
+		# bug 518734
+		epatch "${FILESDIR}"/${PN}-7.6.3-preserve-inplace-xattr.patch
 
 		if use prefix; then
 			# Make configure find docbook-xsl-stylesheets from Prefix
