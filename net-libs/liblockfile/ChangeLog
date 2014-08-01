@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.76 2014/01/08 06:42:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.77 2014/08/01 18:27:25 tgall Exp $
+
+  01 Aug 2014;  <tgall@gentoo.org> liblockfile-1.09.ebuild:
+  arm64, initial support
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> liblockfile-1.08.ebuild,
   liblockfile-1.09.ebuild:
