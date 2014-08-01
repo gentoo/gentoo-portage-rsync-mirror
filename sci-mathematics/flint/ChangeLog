@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/flint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/ChangeLog,v 1.7 2014/07/30 19:40:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/ChangeLog,v 1.8 2014/08/01 15:06:14 nimiux Exp $
+
+  01 Aug 2014; Chema Alonso <nimiux@gentoo.org> flint-2.4.4-r1.ebuild:
+  Stable for amd64 wrt bug #518208
 
 *flint-2.4.4-r1 (30 Jul 2014)
 
