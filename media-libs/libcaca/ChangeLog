@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.119 2014/07/28 13:45:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.121 2014/08/01 19:54:20 ssuominen Exp $
+
+  01 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  libcaca-0.99_beta18-r2.ebuild:
+  Use -latex_hacks.patch also with =dev-texlive/texlive-latex-2012* wrt #517474
+  by Torsten Kaiser
+  Punt support for python2_6 in favour of using python2_7 only.
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libcaca-0.99_beta18-r2.ebuild:
   Stable for ppc, wrt bug #512012

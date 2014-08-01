@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18-r2.ebuild,v 1.8 2014/07/28 13:45:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18-r2.ebuild,v 1.9 2014/08/01 19:42:47 ssuominen Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 inherit autotools eutils flag-o-matic mono multilib java-pkg-opt-2 python-single-r1 multilib-minimal
 
 MY_P=${P/_/.}
@@ -73,10 +73,12 @@ src_prepare() {
 		append-cflags -DX_DISPLAY_MISSING
 	fi
 
-	has_version '>=dev-texlive/texlive-latex-2013' && epatch "${FILESDIR}/${P}-latex_hacks.patch"
+	# Removed 'has_version '>=dev-texlive/texlive-latex-2013' &&' that prefixed this
+	# patch before wrt #517474
+	epatch "${FILESDIR}"/${P}-latex_hacks.patch
 
 	# fix out of source tests
-	epatch "${FILESDIR}/${P}-fix-tests.patch"
+	epatch "${FILESDIR}"/${P}-fix-tests.patch
 
 	eautoreconf
 

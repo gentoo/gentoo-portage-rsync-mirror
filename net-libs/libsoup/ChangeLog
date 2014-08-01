@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.337 2014/07/28 13:48:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.338 2014/08/01 19:35:04 tgall Exp $
+
+  01 Aug 2014;  <tgall@gentoo.org> libsoup-2.44.2.ebuild,
+  libsoup-2.46.0-r1.ebuild:
+  arm64, initial support
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libsoup-2.46.0-r1.ebuild:
   Stable for ppc, wrt bug #512012
