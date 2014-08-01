@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/haskell-updater-1.2.0.11.ebuild,v 1.1 2013/11/14 09:55:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/haskell-updater-1.2.3.ebuild,v 1.1 2014/08/01 13:46:54 slyfox Exp $
 
 EAPI=5
 
@@ -9,8 +9,7 @@ inherit eutils haskell-cabal
 
 DESCRIPTION="Rebuild Haskell dependencies in Gentoo"
 HOMEPAGE="http://haskell.org/haskellwiki/Gentoo#haskell-updater"
-#SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
-SRC_URI="http://code.haskell.org/~slyfox/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,8 +20,8 @@ DEPEND=">=dev-lang/ghc-6.12.1"
 
 # Need a lower version for portage to get --keep-going
 RDEPEND="|| ( >=sys-apps/portage-2.1.6
-			  sys-apps/pkgcore
-			  sys-apps/paludis )"
+		sys-apps/pkgcore
+		sys-apps/paludis )"
 
 src_prepare() {
 	if use prefix; then
@@ -32,11 +31,6 @@ src_prepare() {
 		sed -i -e 's,"/","'"${EPREFIX}"'/",g' \
 			"${S}/Distribution/Gentoo/GHC.hs" || die
 	fi
-
-	# for ghc snapshots (usually come with unstable Cabal API)
-	cabal_chdeps \
-		'Cabal >= 1.8 && < 1.19' 'Cabal >= 1.8 && < 1.20' \
-		'process    < 1.2' 'process    < 1.3'
 }
 
 src_configure() {
