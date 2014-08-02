@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/awesome_print
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/awesome_print/ChangeLog,v 1.20 2014/05/21 01:49:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/awesome_print/ChangeLog,v 1.21 2014/08/02 02:38:54 mrueg Exp $
+
+*awesome_print-1.2.0-r2 (02 Aug 2014)
+
+  02 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +awesome_print-1.2.0-r2.ebuild:
+  Add ruby21 target. Drop sparc keyword. Rekeywording in bug #465948
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> awesome_print-1.2.0-r1.ebuild:
   Remove ruby18 target.
