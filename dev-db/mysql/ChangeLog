@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.674 2014/07/29 23:06:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.675 2014/08/02 00:23:41 grknight Exp $
+
+*mysql-5.5.39 (02 Aug 2014)
+*mysql-5.6.20 (02 Aug 2014)
+
+  02 Aug 2014; Brian Evans <grknight@gentoo.org> +mysql-5.5.39.ebuild,
+  +mysql-5.6.20.ebuild, -mysql-5.5.38-r1.ebuild, -mysql-5.6.19.ebuild:
+  Version bump for security bug 518718. Drop old
 
 *mysql-5.6.19 (29 Jul 2014)
 

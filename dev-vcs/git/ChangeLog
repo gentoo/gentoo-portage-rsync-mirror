@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.273 2014/08/01 10:41:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.274 2014/08/02 00:20:15 polynomial-c Exp $
+
+*git-2.0.4 (02 Aug 2014)
+
+  02 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> -git-2.0.0-r2.ebuild,
+  +git-2.0.4.ebuild:
+  Version bump. Removed old.
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> git-1.8.5.5.ebuild:
   ia64/sparc stable wrt #501662
