@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nagios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nagios/ChangeLog,v 1.7 2014/05/07 19:16:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nagios/ChangeLog,v 1.8 2014/08/02 01:43:33 mrueg Exp $
+
+  02 Aug 2014; Manuel Rüger <mrueg@gentoo.org> nagios-0.0.4-r1.ebuild:
+  Add ruby21 support.
 
   07 May 2014; Manuel Rüger <mrueg@gentoo.org> -nagios-0.0.4.ebuild,
   nagios-0.0.4-r1.ebuild:

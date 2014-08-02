@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.1.0.ebuild,v 1.1 2014/08/01 05:35:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.1.0.ebuild,v 1.2 2014/08/02 01:38:30 idella4 Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 # xml.etree.ElementTree module required.
 PYTHON_REQ_USE="xml"
 
@@ -26,12 +26,7 @@ RDEPEND=">=dev-python/meld3-0.6.10-r1[${PYTHON_USEDEP}]
 DEPEND="${RDEPEND}
 	test? ( dev-python/mock[${PYTHON_USEDEP}] )"
 
-# package uses namespaces which makes tests use installed packages
-RESTRICT="test"
-
 S="${WORKDIR}/${PN}-${MY_PV}"
-
-DOCS=( CHANGES.txt TODO.txt )
 
 python_prepare_all() {
 	# write missing MANIFEST.in file, otherwise required files get lost due to
@@ -42,6 +37,7 @@ recursive-include supervisor/skel *.conf
 recursive-include supervisor/ui *.html *.css *.gif *.png
 recursive-include supervisor/tests *.conf *.txt
 EOF
+	distutils-r1_python_prepare_all
 }
 
 python_test() {
@@ -51,4 +47,5 @@ python_test() {
 python_install_all() {
 	newinitd "${FILESDIR}/init.d-r1" supervisord
 	newconfd "${FILESDIR}/conf.d" supervisord
+	distutils-r1_python_install_all
 }

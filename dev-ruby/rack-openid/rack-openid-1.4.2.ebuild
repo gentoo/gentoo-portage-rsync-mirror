@@ -1,17 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-openid/rack-openid-1.4.2.ebuild,v 1.1 2014/02/16 15:52:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-openid/rack-openid-1.4.2.ebuild,v 1.2 2014/08/02 02:00:56 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="Readme.md"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Provides a more HTTPish API around the ruby-openid library."
+DESCRIPTION="Provides a more HTTPish API around the ruby-openid library"
 SRC_URI="https://github.com/grosser/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 HOMEPAGE="http://github.com/grosser/rack-openid"
 LICENSE="MIT"
