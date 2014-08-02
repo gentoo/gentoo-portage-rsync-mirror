@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.109 2014/07/13 09:51:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.110 2014/08/02 18:19:26 ago Exp $
+
+  02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> tmux-1.9a.ebuild:
+  Stable for ppc64, wrt bug #512640
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> tmux-1.9a.ebuild:
   Stable for ppc, wrt bug #512640

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.114 2014/07/16 22:03:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.115 2014/08/02 18:07:39 ago Exp $
+
+  02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> synergy-1.4.16_p1969.ebuild:
+  Stable for ppc64, wrt bug #509656
 
 *synergy-1.5.0_p2278 (16 Jul 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdaliclock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/ChangeLog,v 1.46 2014/08/01 10:38:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/ChangeLog,v 1.47 2014/08/02 18:07:54 ago Exp $
+
+  02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> xdaliclock-2.41.ebuild:
+  Stable for ppc64, wrt bug #510612
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> xdaliclock-2.38.ebuild,
   xdaliclock-2.41.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.60 2014/07/19 20:48:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.61 2014/08/02 18:30:54 armin76 Exp $
+
+  02 Aug 2014; Raúl Porcel <armin76@gentoo.org> wavemon-0.7.6.ebuild:
+  sparc stable wrt #516690
 
   19 Jul 2014; Jeroen Roovers <jer@gentoo.org> wavemon-0.7.6.ebuild,
   files/wavemon-0.6.7-dont-override-CFLAGS.patch,

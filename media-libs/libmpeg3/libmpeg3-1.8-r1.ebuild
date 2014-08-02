@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.8-r1.ebuild,v 1.8 2014/08/01 11:22:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.8-r1.ebuild,v 1.9 2014/08/02 18:12:52 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ppc64 ~sh sparc x86"
 IUSE="mmx"
 
 RDEPEND="sys-libs/zlib

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.89 2014/08/01 11:22:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.90 2014/08/02 18:12:52 ago Exp $
+
+  02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libmpeg3-1.8-r1.ebuild:
+  Stable for ppc64, wrt bug #502840
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> libmpeg3-1.8-r1.ebuild:
   sparc stable wrt #502840

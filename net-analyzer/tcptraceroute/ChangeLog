@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcptraceroute
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.57 2014/07/25 18:49:31 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.58 2014/08/02 18:14:36 ago Exp $
+
+  02 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
+  tcptraceroute-1.5_beta7-r2.ebuild:
+  Stable for ppc64, wrt bug #517356
 
   25 Jul 2014; Chema Alonso <nimiux@gentoo.org>
   tcptraceroute-1.5_beta7-r2.ebuild:

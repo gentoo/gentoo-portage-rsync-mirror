@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.49 2014/07/31 07:57:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.50 2014/08/02 18:15:51 ago Exp $
+
+  02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> qtcore-4.8.5-r2.ebuild:
+  Stable for ppc64, wrt bug #517090
 
   31 Jul 2014; Jeroen Roovers <jer@gentoo.org> qtcore-4.8.5-r2.ebuild:
   Stable for HPPA (bug #517090).

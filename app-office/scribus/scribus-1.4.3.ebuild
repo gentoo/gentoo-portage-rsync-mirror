@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.3.ebuild,v 1.6 2014/07/13 09:50:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.3.ebuild,v 1.7 2014/08/02 18:10:29 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 hppa ppc ppc64 ~sparc x86"
 IUSE="cairo debug examples hunspell +minimal +pdf scripts templates tk"
 
 # a=$(ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'); echo ${a}

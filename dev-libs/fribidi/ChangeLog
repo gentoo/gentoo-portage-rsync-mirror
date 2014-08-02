@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.87 2014/07/31 08:20:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.88 2014/08/02 18:12:23 ago Exp $
+
+  02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> fribidi-0.19.6.ebuild:
+  Stable for ppc64, wrt bug #517606
 
   31 Jul 2014; Jeroen Roovers <jer@gentoo.org> fribidi-0.19.6.ebuild:
   Stable for HPPA (bug #517606).

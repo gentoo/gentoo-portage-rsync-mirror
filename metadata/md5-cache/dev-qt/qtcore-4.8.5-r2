@@ -4,11 +4,11 @@ DESCRIPTION=Cross-platform application development framework
 EAPI=5
 HOMEPAGE=http://qt-project.org/ http://qt.digia.com/
 IUSE=+glib iconv icu qt3support ssl aqua debug pch +exceptions
-KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris
+KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ~ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris
 LICENSE=|| ( LGPL-2.1 GPL-3 )
 PDEPEND=qt3support? ( ~dev-qt/qtgui-4.8.5[aqua=,debug=,glib=,qt3support] )
 RDEPEND=sys-libs/zlib glib? ( dev-libs/glib:2 ) icu? ( >=dev-libs/icu-49:= ) ssl? ( dev-libs/openssl ) !<x11-libs/cairo-1.10.2-r2
 SLOT=4
 SRC_URI=http://download.qt-project.org/official_releases/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qt4-build	df8f37ad99366cf3f89fa8d5b49ceb75	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=3d120509ca88e1ae1f3826daa25c716d
+_md5_=12771ee5e6326934bf4ca3875cb19e14

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.141 2014/07/20 12:15:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.142 2014/08/02 18:18:22 armin76 Exp $
+
+  02 Aug 2014; Raúl Porcel <armin76@gentoo.org> mirrorselect-2.2.2.ebuild:
+  alpha/ia64/sparc stable wrt #513278
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   mirrorselect-2.2.2.ebuild:

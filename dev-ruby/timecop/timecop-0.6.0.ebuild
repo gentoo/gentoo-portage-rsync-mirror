@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/timecop/timecop-0.6.0.ebuild,v 1.7 2014/04/24 16:49:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/timecop/timecop-0.6.0.ebuild,v 1.8 2014/08/02 18:17:10 ago Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://github.com/jtrupiano/timecop"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm hppa ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/mocha )"
