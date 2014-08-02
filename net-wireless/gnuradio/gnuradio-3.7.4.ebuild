@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.4.ebuild,v 1.4 2014/08/01 18:57:01 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.4.ebuild,v 1.5 2014/08/01 23:44:28 chithanh Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -46,7 +46,7 @@ RDEPEND="${PYTHON_DEPS}
 	alsa? (
 		media-libs/alsa-lib[${PYTHON_USEDEP}]
 	)
-	ctrlport? ( dev-libs/Ice[${PYTHON_USEDEP}] )
+	ctrlport? ( dev-libs/Ice[python,${PYTHON_USEDEP}] )
 	fcd? ( virtual/libusb:1 )
 	filter? ( sci-libs/scipy )
 	grc? (
