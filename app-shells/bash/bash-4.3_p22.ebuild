@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p18-r3.ebuild,v 1.1 2014/07/08 08:54:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p22.ebuild,v 1.1 2014/08/02 02:21:26 polynomial-c Exp $
 
 EAPI="4"
 
@@ -83,10 +83,9 @@ src_prepare() {
 	sed -i -r '/^(HS|RL)USER/s:=.*:=:' doc/Makefile.in || die
 	touch -r . doc/*
 
-	epatch "${FILESDIR}"/${PN}-4.3-here-doc-ps2-comsub.patch
 	epatch "${FILESDIR}"/${PN}-4.3-compat-lvl.patch
 	epatch "${FILESDIR}"/${PN}-4.3-parse-time-keyword.patch
-	epatch "${FILESDIR}"/${PN}-4.3-lastpipe-nested-pipe-segfault.patch
+	epatch "${FILESDIR}"/${PN}-4.3-indirect-array-element.patch
 
 	epatch_user
 }

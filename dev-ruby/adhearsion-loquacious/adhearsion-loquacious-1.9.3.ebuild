@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion-loquacious/adhearsion-loquacious-1.9.3.ebuild,v 1.1 2013/12/13 09:02:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion-loquacious/adhearsion-loquacious-1.9.3.ebuild,v 1.2 2014/08/02 02:33:48 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_EXTRADOC="History.txt README.rdoc"
 RUBY_FAKEGEM_RECIPE_DOC="yard"
@@ -25,4 +25,5 @@ all_ruby_prepare() {
 		-e "s/, \[\"~> 2.7.0\"\]//"\
 		-e "/gntp/d"\
 		loquacious.gemspec || die
+	sed -i -e "/[Bb]undler/d" spec/spec_helper.rb || die 
 }

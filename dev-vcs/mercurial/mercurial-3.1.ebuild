@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-3.0.1.ebuild,v 1.2 2014/06/02 21:54:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-3.1.ebuild,v 1.1 2014/08/02 02:04:48 polynomial-c Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://mercurial.selenic.com/release/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="bugzilla emacs gpg test tk"
 
 RDEPEND="bugzilla? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
@@ -28,7 +28,7 @@ DEPEND="emacs? ( virtual/emacs )
 
 SITEFILE="70${PN}-gentoo.el"
 
-PATCHES=( "${FILESDIR}/${P}-po_fixes.patch" )
+PATCHES=( "${FILESDIR}/${PN}-3.0.1-po_fixes.patch" )
 
 python_prepare_all() {
 	# fix up logic that won't work in Gentoo Prefix (also won't outside in
