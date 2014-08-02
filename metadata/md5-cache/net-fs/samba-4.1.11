@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test unpack
+DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=app-crypt/heimdal-1.5[-ssl] dev-libs/iniparser dev-libs/popt sys-libs/readline virtual/libiconv dev-python/subunit sys-apps/attr sys-libs/libcap >=sys-libs/ntdb-1.0[python] >=sys-libs/ldb-1.1.16 >=sys-libs/tdb-1.2.11[python] >=sys-libs/talloc-2.0.8[python] >=sys-libs/tevent-0.9.18 sys-libs/zlib virtual/pam acl? ( virtual/acl ) addns? ( net-dns/bind-tools[gssapi] ) aio? ( dev-libs/libaio ) cluster? ( >=dev-db/ctdb-1.0.114_p1 ) cups? ( net-print/cups ) dmapi? ( sys-apps/dmapi ) fam? ( virtual/fam ) gnutls? ( dev-libs/libgcrypt:0 >=net-libs/gnutls-1.4.0 ) ldap? ( net-nds/openldap ) selinux? ( sec-policy/selinux-samba ) virtual/pkgconfig dev-lang/python !dev-lang/python[-threads] virtual/pkgconfig
+DESCRIPTION=Samba Suite Version 4
+EAPI=5
+HOMEPAGE=http://www.samba.org/
+IUSE=acl addns ads aio avahi client cluster cups dmapi fam gnutls iprint ldap quota selinux syslog test winbind python_targets_python2_7
+KEYWORDS=~amd64 ~hppa ~x86
+LICENSE=GPL-3
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=app-crypt/heimdal-1.5[-ssl] dev-libs/iniparser dev-libs/popt sys-libs/readline virtual/libiconv dev-python/subunit sys-apps/attr sys-libs/libcap >=sys-libs/ntdb-1.0[python] >=sys-libs/ldb-1.1.16 >=sys-libs/tdb-1.2.11[python] >=sys-libs/talloc-2.0.8[python] >=sys-libs/tevent-0.9.18 sys-libs/zlib virtual/pam acl? ( virtual/acl ) addns? ( net-dns/bind-tools[gssapi] ) aio? ( dev-libs/libaio ) cluster? ( >=dev-db/ctdb-1.0.114_p1 ) cups? ( net-print/cups ) dmapi? ( sys-apps/dmapi ) fam? ( virtual/fam ) gnutls? ( dev-libs/libgcrypt:0 >=net-libs/gnutls-1.4.0 ) ldap? ( net-nds/openldap ) selinux? ( sec-policy/selinux-samba ) client? ( net-fs/cifs-utils[ads?] )
+REQUIRED_USE=ads? ( acl ldap )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=mirror://samba/stable/samba-4.1.11.tar.gz
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	linux-info	2b8c53f6065bdee2d757472215a3088f	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
+_md5_=668d1456aa27538208a73ad76379fe36

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.8.ebuild,v 1.1 2014/06/04 06:51:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.11.ebuild,v 1.1 2014/08/01 23:30:20 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -28,7 +28,6 @@ ldap quota selinux syslog test winbind"
 CDEPEND="${PYTHON_DEPS}
 	>=app-crypt/heimdal-1.5[-ssl]
 	dev-libs/iniparser
-	dev-libs/libaio
 	dev-libs/popt
 	sys-libs/readline
 	virtual/libiconv
@@ -44,6 +43,7 @@ CDEPEND="${PYTHON_DEPS}
 	virtual/pam
 	acl? ( virtual/acl )
 	addns? ( net-dns/bind-tools[gssapi] )
+	aio? ( dev-libs/libaio )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
 	cups? ( net-print/cups )
 	dmapi? ( sys-apps/dmapi )
@@ -69,6 +69,7 @@ CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 PATCHES=(
 	"${FILESDIR}/${PN}-4.1.0-remove-dmapi-automagic.patch"
 	"${FILESDIR}/named.conf.dlz.patch"
+	"${FILESDIR}/${PN}-4.0.19-automagic_aio_fix.patch"
 )
 
 WAF_BINARY="${S}/buildtools/bin/waf"
