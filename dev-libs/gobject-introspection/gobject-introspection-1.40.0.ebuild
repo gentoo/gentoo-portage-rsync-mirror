@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.40.0.ebuild,v 1.4 2014/07/28 13:42:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.40.0.ebuild,v 1.5 2014/08/02 09:17:09 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 
-inherit gnome2 python-single-r1 toolchain-funcs
+inherit gnome2 python-single-r1 toolchain-funcs versionator
 
 DESCRIPTION="Introspection infrastructure for generating gobject library bindings for various languages"
-HOMEPAGE="http://live.gnome.org/GObjectIntrospection/"
+HOMEPAGE="https://wiki.gnome.org/Projects/GObjectIntrospection"
 
 LICENSE="LGPL-2+ GPL-2+"
 SLOT="0"
@@ -22,9 +22,10 @@ REQUIRED_USE="
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 # virtual/pkgconfig needed at runtime, bug #505408
+# We force glib and goi to be in sync by this way as explained in bug #518424
 RDEPEND="
 	>=dev-libs/gobject-introspection-common-${PV}
-	>=dev-libs/glib-2.36:2
+	>=dev-libs/glib-2.$(get_version_component_range 2):2
 	doctool? ( dev-python/mako )
 	virtual/libffi:=
 	virtual/pkgconfig
