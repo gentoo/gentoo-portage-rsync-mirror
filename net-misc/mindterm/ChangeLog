@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mindterm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.28 2012/02/03 22:51:55 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.29 2014/08/02 20:02:26 sera Exp $
+
+  02 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -mindterm-3.1.2.ebuild,
+  -mindterm-3.2.ebuild, -mindterm-3.2-r1.ebuild:
+  Remove old
 
   03 Feb 2012; Brent Baude <ranger@gentoo.org> mindterm-3.4.ebuild:
   Marking mindterm-3.4 ppc for bug 397173

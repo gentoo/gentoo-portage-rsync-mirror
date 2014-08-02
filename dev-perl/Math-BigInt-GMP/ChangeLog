@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Math-BigInt-GMP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt-GMP/ChangeLog,v 1.24 2014/07/30 23:41:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt-GMP/ChangeLog,v 1.25 2014/08/02 20:06:25 zlogene Exp $
+
+  02 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> -Math-BigInt-GMP-1.24.ebuild,
+  -Math-BigInt-GMP-1.370.0.ebuild, Math-BigInt-GMP-1.380.0.ebuild:
+  Stable for all; Drop old.
 
   30 Jul 2014; Jeroen Roovers <jer@gentoo.org> Math-BigInt-GMP-1.380.0.ebuild:
   Stable for HPPA (bug #513192).
