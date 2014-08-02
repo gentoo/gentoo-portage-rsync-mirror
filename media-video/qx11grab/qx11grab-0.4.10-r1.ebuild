@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.9.ebuild,v 1.2 2013/10/01 21:28:11 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.10-r1.ebuild,v 1.1 2014/08/02 22:58:46 pesa Exp $
 
 EAPI=5
 
@@ -12,13 +12,13 @@ SRC_URI="http://qx11grab.hjcms.de/downloads/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="kde opengl pulseaudio"
 
 RDEPEND="
 	>=dev-qt/qtcore-4.7.4:4
 	>=dev-qt/qtdbus-4.7.4:4
-	>=dev-qt/qtgui-4.7.4:4
+	>=dev-qt/qtgui-4.7.4:4[accessibility]
 	>=media-libs/alsa-lib-1.0.26
 	>=media-libs/fontconfig-2.4
 	>=media-libs/freetype-2.4:2
