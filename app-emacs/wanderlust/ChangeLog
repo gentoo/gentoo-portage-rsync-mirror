@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/wanderlust
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.94 2014/08/01 10:47:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.95 2014/08/02 17:36:05 armin76 Exp $
+
+  02 Aug 2014; Raúl Porcel <armin76@gentoo.org> wanderlust-2.14.0-r6.ebuild,
+  wanderlust-2.15.9_pre20120923.ebuild, wanderlust-2.15.9_p20130619.ebuild:
+  Drop alpha keywords
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> wanderlust-2.14.0-r6.ebuild,
   wanderlust-2.15.9_pre20120923.ebuild, wanderlust-2.15.9_p20130619.ebuild:

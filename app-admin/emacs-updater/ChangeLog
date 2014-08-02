@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/emacs-updater
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.87 2014/07/31 09:52:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.88 2014/08/02 17:44:26 armin76 Exp $
+
+  02 Aug 2014; Raúl Porcel <armin76@gentoo.org> emacs-updater-1.14.ebuild:
+  ia64/sparc stable wrt #517504
 
   31 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> emacs-updater-1.14.ebuild:
   alpha stable wrt bug #517504

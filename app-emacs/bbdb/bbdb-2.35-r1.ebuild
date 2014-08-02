@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.35-r1.ebuild,v 1.8 2014/08/02 15:42:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.35-r1.ebuild,v 1.9 2014/08/02 17:38:12 armin76 Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://bbdb.sourceforge.net/${P}.tar.gz
 
 LICENSE="GPL-2+ Texinfo-manual"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE="tex"
 
 RDEPEND="tex? ( virtual/tex-base )"

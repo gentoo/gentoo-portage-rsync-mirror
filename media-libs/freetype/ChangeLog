@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.403 2014/07/28 13:45:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.405 2014/08/02 17:52:37 zlogene Exp $
+
+  02 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> freetype-2.5.3-r1.ebuild:
+  ppc64 stable wrt bug #504088
+
+  02 Aug 2014; Raúl Porcel <armin76@gentoo.org> freetype-2.5.3-r1.ebuild:
+  arm/sparc stable wrt #504088
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> freetype-2.5.3-r1.ebuild:
   Stable for ppc, wrt bug #512012

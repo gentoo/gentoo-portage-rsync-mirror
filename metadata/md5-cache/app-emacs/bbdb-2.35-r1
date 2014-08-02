@@ -4,10 +4,10 @@ DESCRIPTION=The Insidious Big Brother Database
 EAPI=4
 HOMEPAGE=http://bbdb.sourceforge.net/
 IUSE=tex
-KEYWORDS=alpha amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris
+KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris
 LICENSE=GPL-2+ Texinfo-manual
 RDEPEND=tex? ( virtual/tex-base ) >=virtual/emacs-23
 SLOT=0
 SRC_URI=http://bbdb.sourceforge.net/bbdb-2.35.tar.gz http://www.mit.edu/afs/athena/contrib/emacs-contrib/Fin/point-at.el http://www.mit.edu/afs/athena/contrib/emacs-contrib/Fin/dates.el
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ca39e221024f65e36a17c9cb52820d59
+_md5_=00c490c751320bdeb00ef66da81d14d3

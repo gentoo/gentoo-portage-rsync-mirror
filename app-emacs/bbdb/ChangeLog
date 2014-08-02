@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/bbdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.44 2014/08/02 15:42:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.45 2014/08/02 17:38:12 armin76 Exp $
+
+  02 Aug 2014; Raúl Porcel <armin76@gentoo.org> bbdb-2.35-r1.ebuild:
+  Drop alpha keywords
 
   02 Aug 2014; Raúl Porcel <armin76@gentoo.org> bbdb-2.35-r1.ebuild:
   Drop sparc keywords
