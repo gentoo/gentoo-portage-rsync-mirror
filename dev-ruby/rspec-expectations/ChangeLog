@@ -1,6 +1,16 @@
 # ChangeLog for dev-ruby/rspec-expectations
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.73 2014/07/22 15:58:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.75 2014/08/02 06:07:30 graaff Exp $
+
+  02 Aug 2014; Hans de Graaff <graaff@gentoo.org>
+  rspec-expectations-2.99.1.ebuild, rspec-expectations-2.99.2.ebuild:
+  Also add alpha keyword to latest versions.
+
+*rspec-expectations-2.99.2 (02 Aug 2014)
+
+  02 Aug 2014; Hans de Graaff <graaff@gentoo.org>
+  +rspec-expectations-2.99.2.ebuild:
+  Version bump.
 
   22 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   rspec-expectations-2.99.0.ebuild:
