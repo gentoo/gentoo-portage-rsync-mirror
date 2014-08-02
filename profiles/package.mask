@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15937 2014/07/30 13:26:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15939 2014/08/02 19:59:37 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -197,12 +197,6 @@ app-emacs/sawfish
 # If you use ffmpeg instead of libav, sorry!
 =media-video/mpv-0.4*
 
-# Andreas K. Huettel <dilfridge@gentoo.org> (7 Jul 2014)
-# Filter never was part of core Perl, no idea why we have a virtual.
-# It was moved from perl-core to dev-perl and the virtual will be
-# removed. Please depend on dev-perl/Filter directly.
-virtual/perl-Filter
-
 # Michał Górny <mgorny@gentoo.org> (6 Jul 2014)
 # (on behalf of python@gentoo.org)
 # The modules provided by those virtuals are built-in in all currently
@@ -215,12 +209,6 @@ virtual/python-unittest2
 # Mask old slot for removal in 30 days since there are no longer
 # dependencies on it.
 dev-ruby/builder:0
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (05 Jul 2014)
-# Class::ISA is long gone from core Perl, thus the package
-# was moved from perl-core to dev-perl and the virtual will be
-# removed. Please depend on dev-perl/Class-ISA directly.
-virtual/perl-Class-ISA
 
 # Michael Sterrett <mr_bones_@gentoo.org> (02 Jul 2014)
 # No longer maintained upstream.

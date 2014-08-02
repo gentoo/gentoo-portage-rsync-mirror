@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Report the search path thru an ISA tree
-KEYWORDS=alpha amd64 ia64 ppc ppc64 sparc x86
-RDEPEND=~dev-perl/Class-ISA-0.36
-SLOT=0
-_md5_=a3e8c45d76d1f1a43b5fd862cf0e39b9
