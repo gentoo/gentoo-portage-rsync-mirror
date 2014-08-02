@@ -1,47 +1,45 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.998-r1.ebuild,v 1.12 2013/08/06 18:07:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.999-r1.ebuild,v 1.1 2014/08/02 08:45:44 pacho Exp $
 
-EAPI="4"
-
-inherit eutils toolchain-funcs
+EAPI=5
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="graphical scanning frontend"
 HOMEPAGE="http://www.xsane.org/"
-SRC_URI="http://www.xsane.org/download/${P}.tar.gz
-	http://dev.gentoo.org/~dilfridge/distfiles/${P}-patches-2.tar.xz"
+SRC_URI="
+	http://www.xsane.org/download/${P}.tar.gz
+	http://dev.gentoo.org/~dilfridge/distfiles/${PN}-0.998-patches-2.tar.xz
+"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="nls jpeg png tiff gimp lcms ocr"
 
-RDEPEND="media-gfx/sane-backends
+RDEPEND="
+	media-gfx/sane-backends
 	x11-libs/gtk+:2
 	x11-misc/xdg-utils
 	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
 	gimp? ( media-gfx/gimp )
-	lcms? ( =media-libs/lcms-1* )"
+	lcms? ( media-libs/lcms:2 )
+"
 
 PDEPEND="ocr? ( app-text/gocr )"
 
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
-
-pkg_setup() {
-	export OLDXSANE
-	if has_version '<=media-gfx/xsane-0.93'; then
-		OLDXSANE="yes"
-	else
-		OLDXSANE="no"
-	fi
-}
+	app-arch/xz-utils
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	# Apply multiple fixes from different distributions
-	epatch "${WORKDIR}/${P}-patches-2"/*.patch
+	# Drop included patch and reuse patchset from prior version
+	rm "${WORKDIR}/${PN}-0.998-patches-2"/005-update-param-crash.patch || die
+	epatch "${WORKDIR}/${PN}-0.998-patches-2"/*.patch
 
 	# Fix compability with libpng15 wrt #377363
 	sed -i -e 's:png_ptr->jmpbuf:png_jmpbuf(png_ptr):' src/xsane-save.c || die
@@ -49,14 +47,15 @@ src_prepare() {
 	# Fix AR calling directly (bug #442606)
 	sed -i -e 's:ar r:$(AR) r:' lib/Makefile.in || die
 	tc-export AR
+
+	# Add support for lcms-2 (from Fedora)
+	epatch "${FILESDIR}/${PN}-0.999-lcms2.patch"
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_configure() {
-	local extraCPPflags
-	if use lcms; then
-		extraCPPflags="-I ${EPREFIX}/usr/include/lcms"
-	fi
-	CPPFLAGS="${CPPFLAGS} ${extraCPPflags}" econf --enable-gtk2 \
+	econf \
+		--enable-gtk2 \
 		$(use_enable nls) \
 		$(use_enable jpeg) \
 		$(use_enable png) \
@@ -66,7 +65,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
+
 	dodoc xsane.*
 
 	# link xsane so it is seen as a plugin in gimp
@@ -84,12 +84,4 @@ src_install() {
 	fi
 
 	newicon src/xsane-48x48.png ${PN}.png
-}
-
-pkg_postinst() {
-	if [ x${OLDXSANE} = 'xyes' ]; then
-		ewarn "If you are upgrading from <=xsane-0.93, please make sure to"
-		ewarn "remove ~/.sane/xsane/xsane.rc _before_ you start xsane for"
-		ewarn "the first time."
-	fi
 }
