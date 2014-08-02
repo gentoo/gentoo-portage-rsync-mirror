@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-4.0.ebuild,v 1.1 2014/07/30 17:16:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-4.0.ebuild,v 1.2 2014/08/02 14:48:13 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -37,7 +37,6 @@ src_configure() {
 		--bindir="${GAMES_BINDIR}" \
 		--docdir="/usr/share/doc/${PF}" \
 		--datadir="${GAMES_DATADIR}" \
-		$(use_enable opengl gl) \
 		$(use_enable joystick) \
 		|| die
 }
