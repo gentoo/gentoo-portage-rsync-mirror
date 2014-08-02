@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/pipelight
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/pipelight/ChangeLog,v 1.3 2014/07/31 21:24:35 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/pipelight/ChangeLog,v 1.4 2014/08/02 03:35:35 ryao Exp $
+
+  02 Aug 2014; Richard Yao <ryao@gentoo.org> pipelight-9999.ebuild:
+  Change sed command in response to build failure report from HyperJapan on the
+  foonetic IRC network
 
   31 Jul 2014; Richard Yao <ryao@gentoo.org> pipelight-9999.ebuild:
   Provide link to upstream user agent tutorial
