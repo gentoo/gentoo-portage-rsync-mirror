@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.111 2014/07/23 15:14:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.112 2014/08/02 09:58:54 pacho Exp $
+
+  02 Aug 2014; Pacho Ramos <pacho@gentoo.org> -libgweather-3.12.1.ebuild,
+  libgweather-3.10.2.ebuild, libgweather-3.12.2.ebuild:
+  Newer gtk+ version is needed (#517406 by Michael Haubenwallner), drop old.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libgweather-3.12.2.ebuild:
   Stable for x86, wrt bug #512012
