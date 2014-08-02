@@ -1,6 +1,13 @@
 # ChangeLog for java-virtuals/jmx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jmx/ChangeLog,v 1.18 2012/10/04 17:37:57 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jmx/ChangeLog,v 1.19 2014/08/02 19:05:57 sera Exp $
+
+*jmx-1.0-r4 (02 Aug 2014)
+
+  02 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -jmx-1.0-r1.ebuild,
+  +jmx-1.0-r4.ebuild:
+  Bump to add jre8
+  Remove old
 
   04 Oct 2012; Ralph Sennhauser <sera@gentoo.org> jmx-1.0-r1.ebuild,
   jmx-1.0-r3.ebuild:
