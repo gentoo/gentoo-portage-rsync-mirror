@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-1.ebuild,v 1.10 2014/07/31 14:15:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-1.ebuild,v 1.11 2014/08/02 15:48:03 armin76 Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="firmware"
 
 DEPEND="firmware? ( sys-kernel/linux-firmware )"

@@ -1,6 +1,10 @@
 # ChangeLog for virtual/linux-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.26 2014/07/31 14:15:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.27 2014/08/02 15:48:03 armin76 Exp $
+
+  02 Aug 2014; Raúl Porcel <armin76@gentoo.org> linux-sources-0.ebuild,
+  linux-sources-1.ebuild:
+  alpha/ia64/sparc stable wrt #512846
 
   31 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> linux-sources-1.ebuild:
   x86 stable wrt bug #512846

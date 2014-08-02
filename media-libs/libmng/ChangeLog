@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.95 2014/07/20 15:18:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.96 2014/08/02 15:36:48 armin76 Exp $
+
+  02 Aug 2014; Raúl Porcel <armin76@gentoo.org> libmng-2.0.2-r1.ebuild:
+  sparc stable wrt #511654
 
   20 Jul 2014; Pacho Ramos <pacho@gentoo.org> libmng-2.0.2-r1.ebuild:
   amd64/x86 stable, bug #511654
