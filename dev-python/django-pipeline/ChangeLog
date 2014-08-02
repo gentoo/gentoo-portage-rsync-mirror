@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django-pipeline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/ChangeLog,v 1.25 2014/07/22 02:51:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/ChangeLog,v 1.26 2014/08/02 03:13:35 idella4 Exp $
+
+*django-pipeline-1.3.25 (02 Aug 2014)
+
+  02 Aug 2014; Ian Delaney <idella4@gentoo.org> +django-pipeline-1.3.25.ebuild:
+  bump
 
 *django-pipeline-1.3.24 (22 Jul 2014)
 
