@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.188 2014/06/18 19:10:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.189 2014/08/02 16:31:39 vapier Exp $
+
+*elfutils-0.159 (02 Aug 2014)
+
+  02 Aug 2014; Mike Frysinger <vapier@gentoo.org> +elfutils-0.159.ebuild:
+  Version bump.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> elfutils-0.155-r1.ebuild,
   elfutils-0.156.ebuild, elfutils-0.157.ebuild, elfutils-0.158.ebuild:
