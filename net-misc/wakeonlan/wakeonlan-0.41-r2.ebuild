@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/wakeonlan-0.41-r2.ebuild,v 1.3 2014/07/27 10:36:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/wakeonlan-0.41-r2.ebuild,v 1.4 2014/08/02 11:32:31 armin76 Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://gsd.di.uminho.pt/jpo/software/wakeonlan/downloads/${P}.tar.gz"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ~ppc ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~amd64 arm ~ppc sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE=""
 
 DEPEND="virtual/perl-ExtUtils-MakeMaker"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.513 2014/07/27 10:34:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.514 2014/08/02 11:32:04 armin76 Exp $
+
+  02 Aug 2014; Raúl Porcel <armin76@gentoo.org> phpmyadmin-4.1.14.ebuild:
+  sparc stable wrt #511520
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   phpmyadmin-4.1.14.ebuild:

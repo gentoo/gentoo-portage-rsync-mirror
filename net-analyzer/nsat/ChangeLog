@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nsat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.27 2014/07/27 11:31:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.28 2014/08/02 11:45:08 armin76 Exp $
+
+  02 Aug 2014; Raúl Porcel <armin76@gentoo.org> nsat-1.5.ebuild,
+  nsat-1.5-r3.ebuild:
+  Drop sparc keywords
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> nsat-1.5-r3.ebuild:
   x86 stable wrt bug #516450

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.68 2014/07/27 11:12:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.69 2014/08/02 11:43:49 armin76 Exp $
+
+  02 Aug 2014; Raúl Porcel <armin76@gentoo.org> iftop-1.0_pre4.ebuild:
+  sparc stable wrt #511716
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> iftop-1.0_pre4.ebuild:
   x86 stable wrt bug #511716
