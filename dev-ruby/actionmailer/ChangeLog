@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.267 2014/07/12 07:01:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.268 2014/08/02 07:04:20 graaff Exp $
+
+  02 Aug 2014; Hans de Graaff <graaff@gentoo.org> actionmailer-3.2.19.ebuild:
+  Avoid a implicit dependency on dev-ruby/mysql with FEATURES=test, fixing bug
+  518758.
 
   12 Jul 2014; Hans de Graaff <graaff@gentoo.org> -actionmailer-3.2.18.ebuild,
   -actionmailer-4.0.5.ebuild, -actionmailer-4.0.6.ebuild,

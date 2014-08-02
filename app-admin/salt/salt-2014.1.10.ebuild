@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-2014.1.9.ebuild,v 1.1 2014/08/01 01:07:07 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-2014.1.10.ebuild,v 1.1 2014/08/02 07:17:04 chutzpah Exp $
 
 EAPI=5
 

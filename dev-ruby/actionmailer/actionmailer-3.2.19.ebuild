@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/actionmailer-3.2.19.ebuild,v 1.1 2014/07/03 05:38:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/actionmailer-3.2.19.ebuild,v 1.2 2014/08/02 07:04:20 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -33,6 +33,6 @@ ruby_add_bdepend "test? (
 all_ruby_prepare() {
 	# Remove items from the common Gemfile that we don't need for this
 	# test run. This also requires handling some gemspecs.
-	sed -i -e "/\(system_timer\|sdoc\|w3c_validators\|pg\|jquery-rails\|'mysql'\|journey\|ruby-prof\|benchmark-ips\|nokogiri\|bcrypt-ruby\|rdoc\)/d" ../Gemfile || die
+	sed -i -e "/\(system_timer\|sdoc\|w3c_validators\|pg\|mysql\|jquery-rails\|'mysql'\|journey\|ruby-prof\|benchmark-ips\|nokogiri\|bcrypt-ruby\|rdoc\)/d" ../Gemfile || die
 	sed -i -e '/rack-ssl/d' -e 's/~> 3.4/>= 3.4/' ../railties/railties.gemspec || die
 }
