@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/henplus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.24 2010/01/07 21:33:16 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.25 2014/08/03 07:54:23 sera Exp $
+
+  03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -henplus-0.9.7-r1.ebuild:
+  Remove old
 
   07 Jan 2010; Brent Baude <ranger@gentoo.org> henplus-0.9.8.ebuild:
   stable ppc, bug 284300
