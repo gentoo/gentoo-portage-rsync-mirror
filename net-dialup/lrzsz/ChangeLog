@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/lrzsz
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.32 2013/04/26 15:37:10 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.33 2014/08/03 05:59:41 tgall Exp $
+
+  03 Aug 2014;  <tgall@gentoo.org> lrzsz-0.12.20-r3.ebuild:
+  arm64, initial support
 
   26 Apr 2013; Jeroen Roovers <jer@gentoo.org> lrzsz-0.12.20-r3.ebuild,
   +files/lrzsz-0.12.20-automake-1.12.patch,

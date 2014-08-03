@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.69 2014/03/10 00:33:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.70 2014/08/03 05:52:34 tgall Exp $
+
+  03 Aug 2014;  <tgall@gentoo.org> mailutils-2.99.98.ebuild:
+  arm64, initial support
 
   10 Mar 2014; Mike Frysinger <vapier@gentoo.org>
   +files/mailutils-2.99.98-readline-6.3.patch, mailutils-2.99.98.ebuild:
