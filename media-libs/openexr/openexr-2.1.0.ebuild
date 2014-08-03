@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-2.1.0.ebuild,v 1.2 2014/06/18 19:52:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-2.1.0.ebuild,v 1.3 2014/08/03 18:29:48 ottxor Exp $
 
 EAPI=5
 inherit autotools-multilib
@@ -11,7 +11,7 @@ SRC_URI="http://download.savannah.gnu.org/releases/openexr/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/21" # 21 from SONAME
-KEYWORDS="~alpha ~amd64 -arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 -arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="examples static-libs"
 
 RDEPEND=">=sys-libs/zlib-1.2.8-r1:=[${MULTILIB_USEDEP}]
@@ -36,8 +36,8 @@ src_configure() {
 
 src_install() {
 	autotools-multilib_src_install \
-		docdir=/usr/share/doc/${PF}/pdf \
-		examplesdir=/usr/share/doc/${PF}/examples
+		docdir="${EPREFIX}"/usr/share/doc/${PF}/pdf \
+		examplesdir="${EPREFIX}"/usr/share/doc/${PF}/examples
 
 	docompress -x /usr/share/doc/${PF}/examples
 

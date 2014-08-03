@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.24 2014/07/31 17:41:30 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.25 2014/08/03 18:19:02 maekke Exp $
+
+  03 Aug 2014; Markus Meier <maekke@gentoo.org> lz4-0_p106-r1.ebuild:
+  arm stable, bug #509954
 
 *lz4-0_p120 (31 Jul 2014)
 

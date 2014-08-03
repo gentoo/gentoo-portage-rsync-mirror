@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.12.22.ebuild,v 1.2 2014/07/05 14:02:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.12.22.ebuild,v 1.3 2014/08/03 18:27:21 maekke Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
 
 IUSE="examples ssl"
 

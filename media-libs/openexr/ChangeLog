@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.95 2014/06/18 19:52:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.96 2014/08/03 18:29:48 ottxor Exp $
+
+  03 Aug 2014; Christoph Junghans <ottxor@gentoo.org> openexr-2.1.0.ebuild:
+  added prefix support (bug #515454)
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> openexr-2.0.1-r1.ebuild,
   openexr-2.1.0.ebuild:
