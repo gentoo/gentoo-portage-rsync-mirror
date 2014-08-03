@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.675 2014/08/02 00:23:41 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.677 2014/08/03 21:01:05 robbat2 Exp $
+
+  03 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> mysql-5.6.20.ebuild:
+  Missed merging a test.
+
+  03 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> mysql-5.6.20.ebuild:
+  Update testcases.
 
 *mysql-5.5.39 (02 Aug 2014)
 *mysql-5.6.20 (02 Aug 2014)

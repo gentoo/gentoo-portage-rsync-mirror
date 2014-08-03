@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.6.20.ebuild,v 1.1 2014/08/02 00:23:41 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.6.20.ebuild,v 1.3 2014/08/03 21:01:05 robbat2 Exp $
 
 EAPI="5"
 
@@ -77,22 +77,34 @@ src_test() {
 		# main.mysqld--help-notwin, funcs_1.is_triggers funcs_1.is_tables_mysql,
 		# funcs_1.is_columns_mysql, binlog.binlog_mysqlbinlog_filter,
 		# perfschema.binlog_edge_mix, perfschema.binlog_edge_stmt,
-		# mysqld--help-notwin, funcs_1.is_triggers
+		# mysqld--help-notwin, funcs_1.is_triggers, funcs_1.is_tables_mysql, funcs_1.is_columns_mysql
+		# perfschema.binlog_edge_stmt, perfschema.binlog_edge_mix, binlog.binlog_mysqlbinlog_filter
 		# fails due to USE=-latin1 / utf8 default
 		#
 		# main.mysql_client_test:
 		# segfaults at random under Portage only, suspect resource limits.
 		#
+		# main.mysql_tzinfo_to_sql_symlink
+		# fails due to missing mysql_test/std_data/zoneinfo/GMT file from archive
+		#
 		# rpl.rpl_plugin_load
 		# fails due to included file not listed in expected result
 		# appears to be poor planning
-		for t in main.mysql_client_test \
-			binlog.binlog_statement_insert_delayed main.information_schema \
-			main.mysqld--help-notwinfuncs_1.is_triggers funcs_1.is_tables_mysql \
-			funcs_1.is_columns_mysql binlog.binlog_mysqlbinlog_filter \
-			perfschema.binlog_edge_mix perfschema.binlog_edge_stmt \
-			mysqld--help-notwin rpl.rpl_plugin_load \
-			funcs_1.is_triggers ; do
+		for t in \
+			binlog.binlog_mysqlbinlog_filter \
+			binlog.binlog_statement_insert_delayed \
+			funcs_1.is_columns_mysql \
+			funcs_1.is_tables_mysql \
+			funcs_1.is_triggers \
+			main.information_schema \
+			main.mysql_client_test \
+			main.mysqld--help-notwinfuncs_1.is_triggers \
+			main.mysql_tzinfo_to_sql_symlink \
+			mysqld--help-notwin \
+			perfschema.binlog_edge_mix \
+			perfschema.binlog_edge_stmt \
+			rpl.rpl_plugin_load \
+		; do
 				mysql-v2_disable_test  "$t" "False positives in Gentoo"
 		done
 
