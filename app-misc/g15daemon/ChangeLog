@@ -1,6 +1,18 @@
 # ChangeLog for app-misc/g15daemon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.51 2013/11/03 12:07:21 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.52 2014/08/03 11:23:31 polynomial-c Exp $
+
+*g15daemon-1.9.5.3-r10 (03 Aug 2014)
+*g15daemon-1.9.5.3-r9 (03 Aug 2014)
+
+  03 Aug 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -g15daemon-1.9.5.3-r5.ebuild, -g15daemon-1.9.5.3-r7.ebuild,
+  -g15daemon-1.9.5.3-r8.ebuild, +g15daemon-1.9.5.3-r9.ebuild,
+  +g15daemon-1.9.5.3-r10.ebuild, -files/g15daemon-1.2.7-r2.initd,
+  files/g15daemon-1.9.5.3.initd:
+  Fixed logic error in init script so that CLIENT_SWITCH_L1=no doesn't prevent
+  the deamon from starting. Added a better way to handle restart situations.
+  Removed old. Moved -r8 ebuild to -r10. Committed -r9 straight to stable.
 
   03 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
   Added myself as maintainer.

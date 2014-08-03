@@ -1,14 +1,14 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/files/g15daemon-1.9.5.3.initd,v 1.2 2013/03/18 17:49:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/files/g15daemon-1.9.5.3.initd,v 1.3 2014/08/03 11:23:31 polynomial-c Exp $
 
 # Init script for g15daemon
 
 pidfile="/var/run/g15daemon.pid"
 command="/usr/sbin/g15daemon"
+start_stop_daemon_args="--wait 30"
 command_args=""
-start_stop_daemon_args="--background --pidfile ${pidfile}"
 
 depend() {
 	after hotplug
@@ -22,12 +22,14 @@ start_pre() {
 		if [ ! -e "/dev/input/uinput" ] && [ ! -e "/dev/uinput" ] ; then
 			# We can load modules, but uinput device does not exist
 			einfo "Loading uinput module"
-			/sbin/modprobe uinput > /dev/null 2> /dev/null
+			/sbin/modprobe uinput > /dev/null 2> /dev/null \
+				|| return 1
 		fi
 	fi
 
-	local SWITCHKEY=""
-	[ "${CLIENT_SWITCH_L1}" = "yes" ] && command_args="--switch"
+	if [ "${CLIENT_SWITCH_L1}" = "yes" ] ; then
+		command_args="--switch"
+	fi
 }
 
 stop() {
@@ -36,6 +38,9 @@ stop() {
 	if [ $BACKLIGHT_OFF = "yes" ]; then
 		KILLOPT="-K"
 	fi
-	start-stop-daemon -R 5 --exec ${command} -- ${KILLOPT}
+	while [ -f "${pidfile}" ] && kill -0 $(cat ${pidfile}) ; do
+		${command} ${KILLOPT}
+		sleep 1
+	done
 	eend $?
 }

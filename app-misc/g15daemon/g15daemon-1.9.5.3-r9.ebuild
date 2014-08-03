@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r5.ebuild,v 1.4 2012/03/08 15:17:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r9.ebuild,v 1.1 2014/08/03 11:23:31 polynomial-c Exp $
 
 EAPI=4
 GENTOO_DEPEND_ON_PERL="no"
@@ -115,7 +115,7 @@ src_install() {
 	fi
 
 	newconfd "${FILESDIR}/${PN}-1.2.7.confd" ${PN}
-	newinitd "${FILESDIR}/${PN}-1.2.7-r2.initd" ${PN}
+	newinitd "${FILESDIR}/${PN}-1.9.5.3.initd" ${PN}
 	dobin "${FILESDIR}/g15daemon-hotplug"
 	insinto /lib/udev/rules.d
 	doins "${FILESDIR}/99-g15daemon.rules"
