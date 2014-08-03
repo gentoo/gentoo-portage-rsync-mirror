@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gjdoc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.49 2012/05/11 02:52:38 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.50 2014/08/03 13:42:59 sera Exp $
+
+  03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -gjdoc-0.7.9-r1.ebuild:
+  Remove old
 
   11 May 2012; Alexis Ballier <aballier@gentoo.org> gjdoc-0.7.9-r2.ebuild:
   keyword ~amd64-fbsd
