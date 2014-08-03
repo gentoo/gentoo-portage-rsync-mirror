@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/freemind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.66 2014/07/27 11:26:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.67 2014/08/03 09:49:07 sera Exp $
+
+*freemind-1.0.1 (03 Aug 2014)
+
+  03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> +freemind-1.0.1.ebuild:
+  Version bump #511684
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   freemind-1.0.0-r1.ebuild:
