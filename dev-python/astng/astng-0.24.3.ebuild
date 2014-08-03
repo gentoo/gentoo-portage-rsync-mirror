@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.24.3.ebuild,v 1.6 2014/03/31 20:58:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.24.3.ebuild,v 1.7 2014/08/03 10:20:37 mgorny Exp $
 
 EAPI=5
 
@@ -30,6 +30,8 @@ PATCHES=( "${FILESDIR}"/pypy-test.patch )
 
 python_test() {
 	distutils_install_for_testing
+	# test target needs unpacked test directories, doesn't like binary egg
+	esetup.py install_lib --install-dir="${TEST_DIR}"/lib
 	#https://bitbucket.org/logilab/astroid/issue/1/test-suite-fails-in-0243-under-py32-pypy
 	# Make sure that the tests use correct modules.
 	cd "${TEST_DIR}"/lib || die

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcpkix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/ChangeLog,v 1.5 2014/02/06 13:59:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/ChangeLog,v 1.6 2014/08/03 10:02:20 sera Exp $
+
+  03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -bcpkix-1.49-r2.ebuild:
+  Remove old
 
 *bcpkix-1.49-r2 (06 Feb 2014)
 *bcpkix-1.50 (06 Feb 2014)
