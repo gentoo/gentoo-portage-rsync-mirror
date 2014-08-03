@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1336 2014/08/01 16:32:16 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1337 2014/08/03 17:08:27 maksbotan Exp $
+
+  03 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org> leechcraft.eclass:
+  Remove sourceforge SRC_URI for leechcraft packages, only leechcraft.org is
+  used now
 
   01 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> mozconfig-v4.eclass:
   Updated mozconfig-v4.eclass to properly support optional IUSE=wifi
