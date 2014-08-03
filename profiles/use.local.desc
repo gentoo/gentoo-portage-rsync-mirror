@@ -5382,7 +5382,8 @@ net-misc/batman-adv:mcast - B.A.T.M.A.N. multicast optimizations
 net-misc/batman-adv:nc - B.A.T.M.A.N. network coding
 net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
 net-misc/bfgminer:antminer - Enable support for mining with AntMiner U1 sticks
-net-misc/bfgminer:avalon - Enable support for mining with Avalon ASIC modules
+net-misc/bfgminer:avalon - Enable support for mining with Avalon 1 ASIC modules
+net-misc/bfgminer:avalonmm - Enable support for mining with Avalon 2/3 ASIC modules
 net-misc/bfgminer:bfsb - Enable support for mining on BFSB host Raspberry Pi
 net-misc/bfgminer:bfx - Enable support for mining with BFx2 USB sticks
 net-misc/bfgminer:bifury - Enable support for mining with Bi*fury USB sticks
