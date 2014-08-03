@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix-xcursors/comix-xcursors-0.8.2.ebuild,v 1.3 2014/07/27 11:29:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix-xcursors/comix-xcursors-0.8.2.ebuild,v 1.4 2014/08/03 18:39:25 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.limitland.de/comixcursors/${MY_PN}-${PV}.tar.bz2
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="lefthanded opaque"
 
 RDEPEND="x11-libs/libX11

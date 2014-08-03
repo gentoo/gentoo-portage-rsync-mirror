@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.135 2014/08/01 16:48:02 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.136 2014/08/03 18:42:40 ago Exp $
+
+  03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> chrony-1.30.ebuild:
+  Stable for ppc, wrt bug #518572
 
   01 Aug 2014; Chema Alonso <nimiux@gentoo.org> chrony-1.30.ebuild:
   Stable for amd64 wrt bug #518572

@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.125 2014/07/31 08:44:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.126 2014/08/03 18:37:36 ago Exp $
+
+  03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> rebase-1403.ebuild:
+  Stable for ppc, wrt bug #512118
 
 *rebase-1408 (31 Jul 2014)
 
@@ -542,4 +545,3 @@
   rebase-406.ebuild, metadata.xml :
   Initial import.  Ebuild submitted by Olivier Fisette <ribosome@gentoo.org>.
   Reference: Gentoo Bugzilla, bug #45945
-

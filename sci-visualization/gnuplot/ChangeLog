@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.254 2014/08/02 18:19:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.255 2014/08/03 18:41:26 ago Exp $
+
+  03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gnuplot-4.6.5.ebuild:
+  Stable for ppc, wrt bug #517502
 
   02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gnuplot-4.6.5.ebuild:
   Stable for ppc64, wrt bug #517502

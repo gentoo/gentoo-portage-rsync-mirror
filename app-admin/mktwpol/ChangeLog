@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mktwpol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/ChangeLog,v 1.12 2014/07/16 10:31:48 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/ChangeLog,v 1.13 2014/08/03 18:34:50 ago Exp $
+
+  03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mktwpol-0.2.4.ebuild:
+  Stable for ppc, wrt bug #509764
 
   16 Jul 2014; Chema Alonso <nimiux@gentoo.org> mktwpol-0.2.4.ebuild:
   Stable for amd64 wrt bug #509764
@@ -51,4 +54,3 @@
   10 Sep 2013; Chema Alonso <nimiux@gentoo.org> +mktwpol-0.1.4.ebuild,
   +metadata.xml:
   New ebuild thanks to Chuck Seyboldt <seyboldt@gmail.com>
-

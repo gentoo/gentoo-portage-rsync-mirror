@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.55 2014/07/16 10:31:15 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.56 2014/08/03 18:34:45 ago Exp $
+
+  03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> tripwire-2.4.2.2-r2.ebuild:
+  Stable for ppc, wrt bug #509764
 
   16 Jul 2014; Chema Alonso <nimiux@gentoo.org> tripwire-2.4.2.2-r2.ebuild:
   Stable for amd64 wrt bug #509764
@@ -242,4 +245,3 @@
   files/tripwire.txt, files/twcfg.txt, files/twinstall.sh, files/twpol.txt:
   initial import, marked ~x86 (soon to be ~alpha, as soon as portability patches
   apply)
-

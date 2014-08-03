@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.158 2014/07/20 09:32:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.159 2014/08/03 18:32:34 ago Exp $
+
+  03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> munin-2.0.19-r1.ebuild:
+  Stable for ppc, wrt bug #501392
 
   20 Jul 2014; Pacho Ramos <pacho@gentoo.org> munin-2.0.19-r1.ebuild:
   x86 stable, bug #501392

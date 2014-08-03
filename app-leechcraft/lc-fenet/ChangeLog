@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-fenet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-fenet/ChangeLog,v 1.6 2014/07/14 05:44:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-fenet/ChangeLog,v 1.7 2014/08/03 18:50:22 maksbotan Exp $
+
+*lc-fenet-0.6.70 (03 Aug 2014)
+
+  03 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org> +lc-fenet-0.6.70.ebuild:
+  Bump LeechCraft to 0.6.70, thanks to 0xd34df00d.
 
   14 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> lc-fenet-0.6.60.ebuild,
   lc-fenet-0.6.65.ebuild, lc-fenet-9999.ebuild:

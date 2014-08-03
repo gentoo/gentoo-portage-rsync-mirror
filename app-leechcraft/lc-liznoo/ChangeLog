@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-liznoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-liznoo/ChangeLog,v 1.16 2014/07/28 16:19:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-liznoo/ChangeLog,v 1.17 2014/08/03 18:56:35 maksbotan Exp $
+
+*lc-liznoo-0.6.70 (03 Aug 2014)
+
+  03 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org> +lc-liznoo-0.6.70.ebuild:
+  Bump LeechCraft to 0.6.70, thanks to 0xd34df00d.
 
   28 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> lc-liznoo-0.6.60.ebuild,
   lc-liznoo-0.6.65.ebuild, lc-liznoo-9999.ebuild, metadata.xml:
