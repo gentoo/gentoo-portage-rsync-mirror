@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-swing
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-swing/ChangeLog,v 1.41 2013/10/20 16:32:17 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-swing/ChangeLog,v 1.42 2014/08/03 19:21:40 sera Exp $
+
+  03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -ant-swing-1.7.1.ebuild,
+  -ant-swing-1.8.0.ebuild, -ant-swing-1.8.1.ebuild:
+  Drop old for which the meta package is already gone
 
   20 Oct 2013; Agostino Sarubbo <ago@gentoo.org> ant-swing-1.9.2.ebuild:
   Stable for ppc64, wrt bug #476958

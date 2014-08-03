@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.108 2014/08/03 17:40:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.110 2014/08/03 19:20:30 floppym Exp $
+
+  03 Aug 2014; Mike Gilbert <floppym@gentoo.org> bsddb3-6.1.0.ebuild:
+  Drop bindist from IUSE too.
+
+  03 Aug 2014; Mike Gilbert <floppym@gentoo.org> bsddb3-6.1.0.ebuild:
+  Drop bindist use flag; BSD and AGPLv3 are compatible.
 
   03 Aug 2014; Mike Gilbert <floppym@gentoo.org> bsddb3-6.1.0.ebuild:
   Introduce bindist use flag to control dependency on db-6.x. Bug 494490.

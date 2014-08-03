@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.1.0.ebuild,v 1.2 2014/08/03 17:40:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.1.0.ebuild,v 1.4 2014/08/03 19:20:30 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -14,28 +14,17 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="bindist doc"
+IUSE="doc"
 
 RDEPEND="
-	bindist? (
-		|| (
-			sys-libs/db:5.3=
-			sys-libs/db:5.2=
-			sys-libs/db:5.1=
-			sys-libs/db:5.0=
-			sys-libs/db:4.8=
-		)
-	)
-	!bindist? (
-		|| (
-			sys-libs/db:6.1=
-			sys-libs/db:6.0=
-			sys-libs/db:5.3=
-			sys-libs/db:5.2=
-			sys-libs/db:5.1=
-			sys-libs/db:5.0=
-			sys-libs/db:4.8=
-		)
+	|| (
+		sys-libs/db:6.1=
+		sys-libs/db:6.0=
+		sys-libs/db:5.3=
+		sys-libs/db:5.2=
+		sys-libs/db:5.1=
+		sys-libs/db:5.0=
+		sys-libs/db:4.8=
 	)
 "
 DEPEND="${RDEPEND}
@@ -45,9 +34,7 @@ DISTUTILS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	# This list should be kept in sync with setup.py.
-	local db_bindist
-	use bindist || db_bindist="6.1 6.0"
-	for DB_VER in ${db_bindist} 5.3 5.2 5.1 5.0 4.8; do
+	for DB_VER in 6.1 6.0 5.3 5.2 5.1 5.0 4.8; do
 		has_version "sys-libs/db:${DB_VER}" && break
 	done
 

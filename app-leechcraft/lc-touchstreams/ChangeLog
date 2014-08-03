@@ -1,6 +1,12 @@
 # ChangeLog for app-leechcraft/lc-touchstreams
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-touchstreams/ChangeLog,v 1.12 2014/04/10 18:04:08 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-touchstreams/ChangeLog,v 1.13 2014/08/03 19:04:59 maksbotan Exp $
+
+*lc-touchstreams-0.6.70 (03 Aug 2014)
+
+  03 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +lc-touchstreams-0.6.70.ebuild:
+  Bump LeechCraft to 0.6.70, thanks to 0xd34df00d.
 
 *lc-touchstreams-0.6.65 (10 Apr 2014)
 
