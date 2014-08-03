@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jarbundler
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.15 2010/01/03 20:44:22 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.16 2014/08/03 15:13:40 sera Exp $
+
+*jarbundler-1.8.1-r2 (03 Aug 2014)
+
+  03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> +jarbundler-1.8.1-r2.ebuild:
+  EAPI bump, add slot deps, use java_prepare and cleanup
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   jarbundler-1.8.1-r1.ebuild:

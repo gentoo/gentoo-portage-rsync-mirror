@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.52 2014/07/28 04:37:22 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.53 2014/08/03 15:17:49 tgall Exp $
+
+  03 Aug 2014;  <tgall@gentoo.org> trousers-0.3.10-r1.ebuild:
+  arm64, stable
 
   28 Jul 2014; Alon Bar-Lev <alonbl@gentoo.org> -trousers-0.3.10.ebuild:
   Cleanup
