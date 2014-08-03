@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.109 2014/07/18 22:15:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.110 2014/08/03 15:49:24 mgorny Exp $
+
+  03 Aug 2014; Michał Górny <mgorny@gentoo.org> qscintilla-python-2.8.3.ebuild:
+  Enable Python 3.4.
 
 *qscintilla-python-2.8.3 (18 Jul 2014)
 
