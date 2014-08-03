@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.3.28.ebuild,v 1.3 2014/05/20 13:19:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-6.0.30-r1.ebuild,v 1.1 2014/08/03 22:03:03 robbat2 Exp $
 
-EAPI=4
-inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib
+EAPI=5
+inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib multilib-minimal versionator
 
 #Number of official patches
 #PATCHNO=`echo ${PV}|sed -e "s,\(.*_p\)\([0-9]*\),\2,"`
@@ -26,22 +26,24 @@ for (( i=1 ; i<=${PATCHNO} ; i++ )) ; do
 	export SRC_URI="${SRC_URI} http://www.oracle.com/technology/products/berkeley-db/db/update/${MY_PV}/patch.${MY_PV}.${i}"
 done
 
-LICENSE="Sleepycat"
-SLOT="5.3"
+LICENSE="AGPL-3"
+SLOT="$(get_version_component_range 1-2)"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="doc java cxx tcl test"
 
+REQUIRED_USE="test? ( tcl )"
+
 # the entire testsuite needs the TCL functionality
-DEPEND="tcl? ( >=dev-lang/tcl-8.4 )
-	test? ( >=dev-lang/tcl-8.4 )
+DEPEND="tcl? ( >=dev-lang/tcl-8.5.15-r1[${MULTILIB_USEDEP}] )
+	test? ( >=dev-lang/tcl-8.5.15-r1[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jdk-1.5 )
 	>=sys-devel/binutils-2.16.1"
-RDEPEND="tcl? ( dev-lang/tcl )
+RDEPEND="tcl? ( >=dev-lang/tcl-8.5.15-r1[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jre-1.5 )"
 
-src_unpack() {
-	unpack "${MY_P}".tar.gz
-}
+MULTILIB_WRAPPED_HEADERS=(
+	/usr/include/db$(get_version_component_range 1-2)/db.h
+)
 
 src_prepare() {
 	cd "${WORKDIR}"/"${MY_P}"
@@ -58,8 +60,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.3-listen-to-java-options.patch
 
 	# sqlite configure call has an extra leading ..
-	# upstreamed:5.2.36, missing in 5.3.x
-	epatch "${FILESDIR}"/${PN}-5.2.28-sqlite-configure-path.patch
+	# upstreamed:5.2.36, missing in 5.3.x/6.x
+	# still needs to be patched in 6.0.20
+	epatch "${FILESDIR}"/${PN}-6.0.19-sqlite-configure-path.patch
 
 	# The upstream testsuite copies .lib and the binaries for each parallel test
 	# core, ~300MB each. This patch uses links instead, saves a lot of space.
@@ -102,34 +105,41 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=''
-
-	# compilation with -O0 fails on amd64, see bug #171231
-	if use amd64; then
-		replace-flags -O0 -O2
-		is-flagq -O[s123] || append-flags -O2
-	fi
-
-	# use `set` here since the java opts will contain whitespace
-	set --
-	if use java ; then
-		set -- "$@" \
-			--with-java-prefix="${JAVA_HOME}" \
-			--with-javac-flags="$(java-pkg_javac-args)"
-	fi
-
 	# Add linker versions to the symbols. Easier to do, and safer than header file
 	# mumbo jumbo.
 	if use userland_GNU ; then
 		append-ldflags -Wl,--default-symver
 	fi
 
+	multilib-minimal_src_configure
+}
+
+multilib_src_configure() {
+	local myconf=()
+
+	# compilation with -O0 fails on amd64, see bug #171231
+	if [[ ${ABI} == amd64 ]]; then
+		local CFLAGS=${CFLAGS} CXXFLAGS=${CXXFLAGS}
+		replace-flags -O0 -O2
+		is-flagq -O[s123] || append-flags -O2
+	fi
+
+	# use `set` here since the java opts will contain whitespace
+	if multilib_is_native_abi && use java ; then
+		myconf+=(
+			--with-java-prefix="${JAVA_HOME}"
+			--with-javac-flags="$(java-pkg_javac-args)"
+		)
+	fi
+
 	# Bug #270851: test needs TCL support
 	if use tcl || use test ; then
-		myconf="${myconf} --enable-tcl"
-		myconf="${myconf} --with-tcl=/usr/$(get_libdir)"
+		myconf+=(
+			--enable-tcl
+			--with-tcl=/usr/$(get_libdir)
+		)
 	else
-		myconf="${myconf} --disable-tcl"
+		myconf+=(--disable-tcl )
 	fi
 
 	# sql_compat will cause a collision with sqlite3
@@ -144,26 +154,33 @@ src_configure() {
 		--enable-sql \
 		--enable-sql_codegen \
 		--disable-sql_compat \
-		$(use arm && echo --with-mutex=ARM/gcc-assembly) \
-		$(use amd64 && echo --with-mutex=x86/gcc-assembly) \
+		$([[ ${ABI} == arm ]] && echo --with-mutex=ARM/gcc-assembly) \
+		$([[ ${ABI} == amd64 ]] && echo --with-mutex=x86/gcc-assembly) \
 		$(use_enable cxx) \
 		$(use_enable cxx stl) \
-		$(use_enable java) \
-		${myconf} \
-		$(use_enable test) \
-		"$@"
+		$(multilib_native_use_enable java) \
+		"${myconf[@]}" \
+		$(use_enable test)
 }
 
-src_install() {
+multilib_src_install() {
 	emake install DESTDIR="${D}"
-
-	db_src_install_usrbinslot
 
 	db_src_install_headerslot
 
-	db_src_install_doc
-
 	db_src_install_usrlibcleanup
+
+	if multilib_is_native_abi && use java; then
+		java-pkg_regso "${D}"/usr/"$(get_libdir)"/libdb_java*.so
+		java-pkg_dojar "${D}"/usr/"$(get_libdir)"/*.jar
+		rm -f "${D}"/usr/"$(get_libdir)"/*.jar
+	fi
+}
+
+multilib_src_install_all() {
+	db_src_install_usrbinslot
+
+	db_src_install_doc
 
 	dodir /usr/sbin
 	# This file is not always built, and no longer exists as of db-4.8
@@ -171,20 +188,14 @@ src_install() {
 		mv "${D}"/usr/bin/berkeley_db_svc \
 			"${D}"/usr/sbin/berkeley_db"${SLOT/./}"_svc || die
 	fi
-
-	if use java; then
-		java-pkg_regso "${D}"/usr/"$(get_libdir)"/libdb_java*.so
-		java-pkg_dojar "${D}"/usr/"$(get_libdir)"/*.jar
-		rm -f "${D}"/usr/"$(get_libdir)"/*.jar
-	fi
 }
 
 pkg_postinst() {
-	db_fix_so
+	multilib_foreach_abi db_fix_so
 }
 
 pkg_postrm() {
-	db_fix_so
+	multilib_foreach_abi db_fix_so
 }
 
 src_test() {
@@ -212,5 +223,11 @@ src_test() {
 		-e 's/repmgr018//g' \
 		"${S_BASE}/test/tcl/test.tcl" || die
 
-	db_src_test
+	multilib-minimal_src_test
+}
+
+multilib_src_test() {
+	multilib_is_native_abi || return
+
+	S=${BUILD_DIR} db_src_test
 }

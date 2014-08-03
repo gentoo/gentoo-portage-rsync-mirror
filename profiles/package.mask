@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15939 2014/08/02 19:59:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15940 2014/08/03 22:07:23 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -817,8 +817,7 @@ dev-ml/ocamlduce
 
 # Robin H. Johnson <robbat2@gentoo.org> (08 Oct 2012)
 # Masked for testing
-=sys-libs/db-6.0*
-=sys-libs/db-5.3*
+# 2014/08/03: Cleanup in progress, as they pass testsuite, they are being unmasked
 =sys-libs/db-5.2*
 =sys-libs/db-5.1*
 =sys-libs/db-5.0*
