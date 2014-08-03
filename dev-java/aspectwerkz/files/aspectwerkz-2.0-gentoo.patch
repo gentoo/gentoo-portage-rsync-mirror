@@ -97,7 +97,7 @@
                  <include name="*.jar"/>
              <!-- add qdox manually to remove its META-INF/LICENSE.txt that is not the one of AW -->
 -            <zipfileset src="${lib.dir}/qdox-1.4.jar" excludes="META-INF/*"/>
-+            <zipfileset src="${lib.dir}/qdox.jar" excludes="META-INF/*"/>
++            <!-- <zipfileset src="${lib.dir}/qdox.jar" excludes="META-INF/*"/> -->
          </jar>
          <!-- nodeps -->
 -        <jar destfile="${build.dir}/aspectwerkz-nodeps-jdk14-${version}.jar">
