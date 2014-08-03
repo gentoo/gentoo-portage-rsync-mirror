@@ -1,8 +1,0 @@
---- vbam-1.8.0.1197/src/wx/wxvbam.desktop
-+++ vbam-1.8.0.1197/src/wx/wxvbam.desktop
-@@ -7,4 +7,4 @@
- Comment=Nindendo GameBoy Advance Emulator
- Exec=wxvbam
- Icon=vbam
--Categories=Application;Game;Emulator
-+Categories=Game;Emulator;

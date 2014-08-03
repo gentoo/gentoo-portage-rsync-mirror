@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pysfml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysfml/ChangeLog,v 1.3 2012/12/01 00:05:10 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysfml/ChangeLog,v 1.5 2014/08/03 04:20:55 radhermit Exp $
+
+  03 Aug 2014; Tim Harder <radhermit@gentoo.org> -pysfml-1.6.ebuild:
+  Remove old.
+
+*pysfml-1.6-r1 (03 Aug 2014)
+
+  03 Aug 2014; Tim Harder <radhermit@gentoo.org> +pysfml-1.6-r1.ebuild:
+  Migrate to distutils-r1 and use specific libsfml version dep.
 
   01 Dec 2012; Tim Harder <radhermit@gentoo.org> pysfml-1.6.ebuild:
   Fix LICENSE (bug #445426 by ulm).

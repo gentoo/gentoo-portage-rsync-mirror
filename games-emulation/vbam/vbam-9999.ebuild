@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.6 2014/02/05 09:57:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.7 2014/08/03 04:25:13 radhermit Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
@@ -20,7 +20,7 @@ REQUIRED_USE="|| ( sdl gtk wxwidgets )"
 
 RDEPEND=">=media-libs/libpng-1.4
 	media-libs/libsdl[joystick]
-	link? ( media-libs/libsfml )
+	link? ( <media-libs/libsfml-2.0 )
 	sys-libs/zlib
 	virtual/glu
 	virtual/opengl
