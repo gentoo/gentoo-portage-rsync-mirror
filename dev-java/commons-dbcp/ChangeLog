@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-dbcp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.63 2012/06/07 21:24:10 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.64 2014/08/03 10:34:29 sera Exp $
+
+  03 Aug 2014; Ralph Sennhauser <sera@gentoo.org>
+  -commons-dbcp-1.2.2-r1.ebuild, -commons-dbcp-1.4-r1.ebuild:
+  Remove old
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> commons-dbcp-1.4-r2.ebuild:
   Marking commons-dbcp-1.4-r2 ppc for bug 348594

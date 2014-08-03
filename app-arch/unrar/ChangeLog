@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.227 2014/06/10 00:08:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.228 2014/08/03 10:44:24 ssuominen Exp $
+
+*unrar-5.1.6 (03 Aug 2014)
+
+  03 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> +unrar-5.1.6.ebuild:
+  Version bump.
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> unrar-5.0.14.ebuild,
   unrar-5.1.5.ebuild:
