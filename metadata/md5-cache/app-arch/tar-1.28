@@ -10,4 +10,4 @@ RDEPEND=acl? ( virtual/acl ) selinux? ( sys-libs/libselinux )
 SLOT=0
 SRC_URI=mirror://gnu/tar/tar-1.28.tar.bz2 mirror://gnu-alpha/tar/tar-1.28.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f1fcbcc870ff62457bf5aa2b4890a189
+_md5_=8d73ea21e1f03b1dc81f9b60c1b9e662

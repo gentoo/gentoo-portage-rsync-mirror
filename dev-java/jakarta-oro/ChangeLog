@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jakarta-oro
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/ChangeLog,v 1.23 2012/08/20 02:25:36 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/ChangeLog,v 1.24 2014/08/03 14:23:01 sera Exp $
+
+  03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -jakarta-oro-2.0.8-r2.ebuild:
+  Remove old
 
   20 Aug 2012; Christoph Junghans <ottxor@gentoo.org>
   jakarta-oro-2.0.8-r3.ebuild:

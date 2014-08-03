@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qt-creator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.29 2014/03/03 04:02:15 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.30 2014/08/03 14:09:49 zx2c4 Exp $
+
+*qt-creator-3.2.0_rc1 (03 Aug 2014)
+
+  03 Aug 2014; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +qt-creator-3.2.0_rc1.ebuild, metadata.xml:
+  Bump version. Note that this is still masked, as it's related to Qt5.
 
 *qt-creator-3.0.1 (03 Mar 2014)
 

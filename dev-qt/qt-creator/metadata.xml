@@ -21,5 +21,6 @@
 	<flag name="python">Enable Python source code editor</flag>
 	<flag name="qnx">Build plugin for QNX/Blackberry devices</flag>
 	<flag name="valgrind">Add support for memory debugging using <pkg>dev-util/valgrind</pkg></flag>
+	<flag name="clang">Build clang plugin</flag>
 </use>
 </pkgmetadata>

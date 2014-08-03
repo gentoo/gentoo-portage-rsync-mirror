@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.28.ebuild,v 1.1 2014/07/28 19:13:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.28.ebuild,v 1.2 2014/08/03 14:22:07 polynomial-c Exp $
 
 EAPI=4
 
@@ -64,7 +64,6 @@ src_install() {
 	fi
 
 	dodoc AUTHORS ChangeLog* NEWS README* THANKS
-	newman "${FILESDIR}"/tar.1-1.27 ${p}tar.1
 	mv "${ED}"/usr/sbin/${p}backup{,-tar} || die
 	mv "${ED}"/usr/sbin/${p}restore{,-tar} || die
 
