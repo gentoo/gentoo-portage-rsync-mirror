@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jing
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.27 2012/10/17 03:03:05 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.28 2014/08/03 07:23:12 sera Exp $
+
+  03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -jing-20030619-r3.ebuild:
+  Remove old
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> jing-20091111-r1.ebuild:
   x86 stable wrt bug #433199
