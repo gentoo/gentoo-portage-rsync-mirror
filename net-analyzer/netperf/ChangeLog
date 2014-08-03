@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.62 2014/07/31 08:05:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.63 2014/08/03 16:08:43 tgall Exp $
+
+  03 Aug 2014;  <tgall@gentoo.org> netperf-2.6.0-r1.ebuild:
+  arm64, initial support
 
   31 Jul 2014; Jeroen Roovers <jer@gentoo.org> netperf-2.6.0-r1.ebuild:
   Stable for HPPA (bug #517128).
