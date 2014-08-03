@@ -1234,6 +1234,17 @@ dev-db/mysql:raid - Deprecated option, removed in the 5.0 series
 dev-db/mysql:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mysql:test - Install upstream testsuites for end use.
 dev-db/mysql:xtradb - Add experimental support for Percona's InnoDB replacement: XtraDB
+dev-db/mysql-cluster:cluster - Add support for NDB clustering
+dev-db/mysql-cluster:community - Enables the community features from upstream.
+dev-db/mysql-cluster:embedded - Build embedded server (libmysqld)
+dev-db/mysql-cluster:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
+dev-db/mysql-cluster:jemalloc - Use dev-libs/jemalloc for allocations.
+dev-db/mysql-cluster:latin1 - Use LATIN1 encoding instead of UTF8
+dev-db/mysql-cluster:max-idx-128 - Raise the max index per table limit from 64 to 128
+dev-db/mysql-cluster:minimal - Install client programs only, no server
+dev-db/mysql-cluster:profiling - Add support for statement profiling (requires USE=community).
+dev-db/mysql-cluster:systemtap - Build support for profiling and tracing using dev-util/systemtap
+dev-db/mysql-cluster:test - Install upstream testsuites for end use.
 dev-db/mysql-connector-c++:gcov - Build coverage support
 dev-db/opendbx:bindist - Disable support for dev-db/firebird database which is not GPL compatible.
 dev-db/percona-server:cluster - Add support for NDB clustering (deprecated)
