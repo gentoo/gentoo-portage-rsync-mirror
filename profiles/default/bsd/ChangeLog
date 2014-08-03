@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.166 2014/07/26 09:17:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.167 2014/08/03 00:54:15 jmbsvicetto Exp $
+
+  03 Aug 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  fbsd/packages.build:
+  Drop sys-apps/which from fbsd/packages.build - fixes bug 517152.
 
   26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Since virtual/udev is masked here, mask virtual/libudev and virtual/libgudev
