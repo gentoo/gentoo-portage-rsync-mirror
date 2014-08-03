@@ -11,7 +11,6 @@
 		<name>Anthony G. Basile</name>
 	</maintainer>
 	<use>
-		<flag name='adl'>Enable support for controlling fans and overclocking on AMD cards with AMD Display Library</flag>
 		<flag name="ants1">Enable support for Antminer S1 Bitmain</flag>
 		<flag name="ants2">Enable support for Antminer S2 Bitmain</flag>
 		<flag name="avalon">Enable support for Avalon ASICs</flag>
@@ -30,8 +29,6 @@
 		<flag name="knc">Enable support for mining with KnC miners</flag>
 		<flag name="minion">Enable support for mining with BlackArrow Bitfury </flag>
 		<flag name="modminer">Enable support for mining with ModMiner FPGAs</flag>
-		<flag name='opencl'>Enable support for mining with OpenCL-capable devices (GPUs)</flag>
-		<flag name='scrypt'>Enable support for scrypt mining algorithm</flag>
 		<flag name='spondoolies'>Enable support for Spondoolies</flag>
 	</use>
 </pkgmetadata>
