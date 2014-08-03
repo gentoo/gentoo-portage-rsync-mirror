@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.33.0.ebuild,v 1.1 2014/04/06 11:11:41 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.33.0.ebuild,v 1.2 2014/08/03 08:18:14 grozin Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
-# Supported lisps (the first one is the default)
+# Supported lisps
 LISPS=(     sbcl cmucl gcl             ecls clozurecl clisp )
 # <lisp> supports readline: . - no, y - yes
 SUPP_RL=(   .    .     y               .    .         y     )
@@ -62,7 +62,14 @@ for ((n--; n >= 0; n--)); do
 	fi
 done
 
-DEF_DEP="${DEF_DEP} `depends 0`"
+# default lisp
+if use arm; then
+	DEF_LISP=2 # gcl
+else
+	DEF_LISP=0 # sbcl
+fi
+
+DEF_DEP="${DEF_DEP} `depends ${DEF_LISP}`"
 
 n=${#LISPS[*]}
 for ((n--; n > 0; n--)); do
@@ -87,8 +94,8 @@ pkg_setup() {
 	done
 
 	if [ -z "${NLISPS}" ]; then
-		ewarn "No lisp specified in USE flags, choosing ${LISPS[0]} as default"
-		NLISPS=0
+		ewarn "No lisp specified in USE flags, choosing ${LISPS[${DEF_LISP}]} as default"
+		NLISPS=${DEF_LISP}
 	fi
 }
 
