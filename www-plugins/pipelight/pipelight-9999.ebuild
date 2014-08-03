@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/pipelight/pipelight-9999.ebuild,v 1.4 2014/08/02 03:35:35 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/pipelight/pipelight-9999.ebuild,v 1.5 2014/08/03 22:41:19 ryao Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ src_install() {
 	# properly duplicate the plugins.
 	# XXX: Patch the script to support DESTDIR and send the patch upstream.
 	sed -e "s:^\(PIPELIGHT_LIBRARY_PATH=\"\)\\(.*\):\1${ED}usr/$(get_libdir)/${PN}\":" \
-		"${DESTDIR}/usr/bin/pipelight-plugin" > "${T}/pipelight-plugin" \
+		"${ED}/usr/bin/pipelight-plugin" > "${T}/pipelight-plugin" \
 		|| die "Generating temporary pipelight-plugin failed"
 	chmod u+x "${T}/pipelight-plugin" \
 		|| die "Setting permissions on temporary pipelight-plugin failed"

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libkscreen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/ChangeLog,v 1.11 2014/05/12 00:35:27 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/ChangeLog,v 1.12 2014/08/03 22:49:12 mrueg Exp $
+
+*libkscreen-1.0.5 (03 Aug 2014)
+
+  03 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +libkscreen-1.0.5.ebuild:
+  Version bump
 
   12 May 2014; Johannes Huber <johu@gentoo.org> libkscreen-1.0.4.ebuild:
   Unrestrict tests.
