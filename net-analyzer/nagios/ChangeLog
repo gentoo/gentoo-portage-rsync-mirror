@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.112 2014/05/26 12:03:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.113 2014/08/03 16:45:03 tgall Exp $
+
+  03 Aug 2014;  <tgall@gentoo.org> nagios-3.3.1.ebuild:
+  arm64, initial support
 
   26 May 2014; Jeroen Roovers <jer@gentoo.org> nagios-3.3.1.ebuild:
   Stable for HPPA too.
