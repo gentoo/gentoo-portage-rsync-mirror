@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/usbmuxd-1.0.8_p20140530.ebuild,v 1.1 2014/05/30 11:44:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/usbmuxd-1.0.8_p20140530.ebuild,v 1.2 2014/08/03 12:09:08 ssuominen Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
 # src/utils.h is LGPL-2.1+, rest is found in COPYING*
 LICENSE="GPL-2 GPL-3 LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND=">=app-pda/libimobiledevice-1.1.6
