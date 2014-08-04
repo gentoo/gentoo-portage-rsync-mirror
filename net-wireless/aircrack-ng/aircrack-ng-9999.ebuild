@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-9999.ebuild,v 1.10 2014/07/18 03:41:02 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-9999.ebuild,v 1.11 2014/08/03 23:13:27 zerochaos Exp $
 
 EAPI="5"
 
@@ -58,7 +58,6 @@ src_compile() {
 		liveflags=REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
 	fi
 
-	replace-flags -Os -O2
 	emake \
 	CC="$(tc-getCC)" \
 	AR="$(tc-getAR)" \

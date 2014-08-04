@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_beta3-r2.ebuild,v 1.1 2014/07/18 03:41:02 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_beta3-r3.ebuild,v 1.1 2014/08/03 23:13:27 zerochaos Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_OPTIONAL=1
 
-inherit toolchain-funcs versionator distutils-r1 flag-o-matic
+inherit toolchain-funcs distutils-r1 flag-o-matic
 
 DESCRIPTION="WLAN tools for breaking 802.11 WEP/WPA keys"
 HOMEPAGE="http://www.aircrack-ng.org"
@@ -18,11 +18,8 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 	S="${WORKDIR}/${PN}"
 else
-	MY_P=${P/\_/-}
-	MY_PV="$(replace_version_separator 2 '-')"
-	SRC_URI="http://download.aircrack-ng.org/${PN}-${MY_PV}.tar.gz"
+	SRC_URI="http://dev.gentoo.org/~zerochaos/distfiles/${PN}-${PV}_p20140803.tar.xz"
 	KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-	S="${WORKDIR}/${MY_P}"
 fi
 
 LICENSE="GPL-2"
@@ -58,7 +55,6 @@ src_compile() {
 		liveflags=REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
 	fi
 
-	replace-flags -Os -O2
 	emake \
 	CC="$(tc-getCC)" \
 	AR="$(tc-getAR)" \
