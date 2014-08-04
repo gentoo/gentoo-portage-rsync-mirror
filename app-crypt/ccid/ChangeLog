@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.109 2014/06/26 19:57:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.110 2014/08/04 22:09:43 flameeyes Exp $
+
+*ccid-1.4.17-r1 (04 Aug 2014)
+
+  04 Aug 2014; Diego E. Pettenò <flameeyes@gentoo.org> +ccid-1.4.17-r1.ebuild,
+  +files/92_pcscd_ccid-2.rules:
+  Update udev rules so that they try power/control if it's present. This avoids
+  throwing deprecation warnings into the kernel log.
 
 *ccid-1.4.17 (26 Jun 2014)
 
