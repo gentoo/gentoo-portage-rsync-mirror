@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/git/ChangeLog,v 1.3 2014/06/10 06:07:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/git/ChangeLog,v 1.4 2014/08/04 05:49:07 graaff Exp $
+
+*git-1.2.8 (04 Aug 2014)
+
+  04 Aug 2014; Hans de Graaff <graaff@gentoo.org> +git-1.2.8.ebuild:
+  Version bump.
 
 *git-1.2.7 (10 Jun 2014)
 
