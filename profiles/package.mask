@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15947 2014/08/04 20:17:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15949 2014/08/04 20:43:24 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Robin H. Johnson <robbat2@gentoo.org> (04 Aug 2014)
+# Masked for testing, presently fails upstream testsuite:
+# FAIL:07:02:35 (00:00:00) db_dump/db_load(./TESTDIR.3/recd001.db:child killed: kill signal): expected 0, got 1
+# FAIL:07:02:35 (00:00:00) Dump/load of ./TESTDIR.3/recd001.db failed.
+# FAIL:07:02:35 (00:00:00) db_verify_preop: expected 0, got 1
+=sys-libs/db-6.1*
 
 # Alexis Ballier <aballier@gentoo.org> (4 Aug 2014)
 # <vlc-2.2 will not work with this ffmpeg version; others to be investigated.
@@ -804,11 +811,6 @@ dev-ml/ocamlduce
 # Masked until each package can update its dependencies.
 >=net-libs/libotr-4.0.0
 >=x11-plugins/pidgin-otr-4.0.0
-
-# Robin H. Johnson <robbat2@gentoo.org> (08 Oct 2012)
-# Masked for testing
-# 2014/08/03: Cleanup in progress, as they pass testsuite, they are being unmasked
-=sys-libs/db-5.2*
 
 # Ralph Sennhauser <sera@gentoo.org> (18 Jul 2012)
 # Unmaintained, multiple vulnarabilities. #351626

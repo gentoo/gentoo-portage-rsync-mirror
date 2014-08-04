@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.16.ebuild,v 1.13 2014/08/01 05:16:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.16.ebuild,v 1.14 2014/08/04 20:50:38 mgorny Exp $
 
 EAPI=4
-inherit libtool
+inherit db-use libtool
 
 DESCRIPTION="High-level interface for the Resource Description Framework"
 HOMEPAGE="http://librdf.org/"
@@ -37,11 +37,19 @@ src_configure() {
 	local parser=expat
 	use xml && parser=libxml
 
-	local myconf="--without-virtuoso"
+	local myconf=( --without-virtuoso )
 	if use iodbc; then
-		myconf="--with-virtuoso --with-iodbc --without-unixodbc"
+		myconf=( --with-virtuoso --with-iodbc --without-unixodbc )
 	elif use odbc; then
-		myconf="--with-virtuoso --with-unixodbc --without-iodbc"
+		myconf=( --with-virtuoso --with-unixodbc --without-iodbc )
+	fi
+
+	if use berkdb; then
+		myconf+=(
+			--with-bdb-include="$(db_includedir)"
+			--with-bdb-lib="${EPREFIX}"/usr/$(get_libdir)
+			--with-bdb-dbname="$(db_libname)"
+		)
 	fi
 
 	# FIXME: upstream doesn't test with --with-threads and testsuite fails
@@ -54,7 +62,7 @@ src_configure() {
 		$(use_with postgres postgresql) \
 		--without-threads \
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
-		${myconf}
+		"${myconf[@]}"
 }
 
 src_compile() {

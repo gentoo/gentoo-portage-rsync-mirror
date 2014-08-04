@@ -1,10 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9279 2014/08/04 20:17:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9282 2014/08/04 20:43:24 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  New mask for upcoming db-6.1, that is not ready at upstream yet, still fails
+  some tests.
+
+  04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  db-5.2 fails testsuites and there are no more releases from upstream, punt
+  it.
 
   04 Aug 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask ffmpeg-2.3+
@@ -16,6 +24,9 @@
 
   04 Aug 2014; Tim Harder <radhermit@gentoo.org> package.mask:
   Unmask =media-libs/libsfml-2*.
+
+  04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Remove dev-vcs/gitosis and dev-vcs/gitosis-gentoo from the tree.
 
   04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   old mysql ebuilds now live in the overlay only. if you need them for

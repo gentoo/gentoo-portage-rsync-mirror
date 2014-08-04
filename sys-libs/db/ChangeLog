@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.356 2014/08/04 19:28:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.357 2014/08/04 20:45:13 robbat2 Exp $
+
+*db-6.1.19 (04 Aug 2014)
+
+  04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> +db-6.1.19.ebuild,
+  +files/db-6.1.19-sqlite-configure-path.patch:
+  Add 6.1.19 into the tree, in p.mask as upstream testsuite still has failures,
+  maybe a later 6.1 will be better.
 
   04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> -db-5.2.42-r1.ebuild,
   -db-5.2.42.ebuild:
