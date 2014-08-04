@@ -1,6 +1,10 @@
 # ChangeLog for virtual/libudev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libudev/ChangeLog,v 1.9 2014/08/03 13:07:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libudev/ChangeLog,v 1.10 2014/08/04 06:58:41 mgorny Exp $
+
+  04 Aug 2014; Michał Górny <mgorny@gentoo.org> libudev-215.ebuild:
+  Fix not installing anything with USE=systemd,static-libs. That combination
+  should be forbidden via REQUIRED_USE.
 
   03 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> libudev-215.ebuild:
   Help Portage make the right decision by introducing USE="systemd" wrt #515230.

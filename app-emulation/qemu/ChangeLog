@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.272 2014/07/29 10:23:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.274 2014/08/04 06:47:22 vapier Exp $
+
+  04 Aug 2014; Mike Frysinger <vapier@gentoo.org> files/qemu-binfmt.initd-r1:
+  actually use the new $QEMU_BINFMT_FLAGS
+
+*qemu-2.1.0 (04 Aug 2014)
+
+  04 Aug 2014; Mike Frysinger <vapier@gentoo.org> +qemu-2.1.0.ebuild,
+  files/qemu-binfmt.initd-r1:
+  Version bump #518806 by José Romildo Malaquias.  Add aarch64 to the init
+  script, and switch flags from P to OC until qemu itself can understand the
+  extra argv[0] #512780 by Bertrand Jacquin.
 
   29 Jul 2014; Mike Frysinger <vapier@gentoo.org> qemu-2.0.0-r1.ebuild,
   qemu-9999.ebuild:
