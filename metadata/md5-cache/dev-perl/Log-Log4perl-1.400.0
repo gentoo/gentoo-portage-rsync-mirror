@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=virtual/perl-Time-HiRes test? ( virtual/perl-Test-Simple ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
-DESCRIPTION=Log::Log4perl is a Perl port of the widely popular log4j logging package.
+DESCRIPTION=Log::Log4perl is a Perl port of the widely popular log4j logging package
 EAPI=4
 HOMEPAGE=http://log4perl.sourceforge.net/
 IUSE=test
@@ -10,4 +10,4 @@ RDEPEND=virtual/perl-Time-HiRes || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-b
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MS/MSCHILLI/Log-Log4perl-1.40.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=f034b81010bc5e609c7cd45f517e33fb
+_md5_=d2bec54a22ea950044b1631719184434

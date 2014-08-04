@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Log-Log4perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.91 2014/03/05 15:24:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.92 2014/08/04 17:34:05 zlogene Exp $
+
+  04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> Log-Log4perl-1.360.0.ebuild,
+  Log-Log4perl-1.400.0.ebuild, Log-Log4perl-1.420.0.ebuild:
+  Fix DESCRIPTION
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> Log-Log4perl-1.420.0.ebuild:
   Stable for ppc, wrt bug #495426

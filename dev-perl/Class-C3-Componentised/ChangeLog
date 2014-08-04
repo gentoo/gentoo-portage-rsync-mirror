@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-C3-Componentised
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3-Componentised/ChangeLog,v 1.15 2012/11/18 11:10:02 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3-Componentised/ChangeLog,v 1.16 2014/08/04 17:37:08 zlogene Exp $
+
+  04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Class-C3-Componentised-1.1.0.ebuild:
+  Fix DESCRIPTION
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

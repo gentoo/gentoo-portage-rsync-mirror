@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3-Componentised/Class-C3-Componentised-1.1.0.ebuild,v 1.2 2012/09/01 11:17:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3-Componentised/Class-C3-Componentised-1.1.0.ebuild,v 1.3 2014/08/04 17:37:08 zlogene Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ MODULE_AUTHOR=FREW
 MODULE_VERSION=1.001000
 inherit perl-module
 
-DESCRIPTION="Load mix-ins or components to your C3-based class."
+DESCRIPTION="Load mix-ins or components to your C3-based class"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc-aix ~x86-solaris"

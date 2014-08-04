@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-SpamAssassin-Plugin-GoogleSafeBrowsing
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin-Plugin-GoogleSafeBrowsing/ChangeLog,v 1.7 2012/06/24 13:00:00 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin-Plugin-GoogleSafeBrowsing/ChangeLog,v 1.8 2014/08/04 17:42:38 zlogene Exp $
+
+  04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Mail-SpamAssassin-Plugin-GoogleSafeBrowsing-1.30.0.ebuild:
+  Fix DESCRIPTION
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=dev-perl/MRO-Compat dev-perl/Class-Inspector >=dev-perl/Class-C3-0.20 test? ( dev-perl/Test-Pod dev-perl/Test-Pod-Coverage dev-perl/Test-Exception ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
-DESCRIPTION=Load mix-ins or components to your C3-based class.
+DESCRIPTION=Load mix-ins or components to your C3-based class
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/Class-C3-Componentised/
 IUSE=test
@@ -10,4 +10,4 @@ RDEPEND=dev-perl/MRO-Compat dev-perl/Class-Inspector >=dev-perl/Class-C3-0.20 ||
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/F/FR/FREW/Class-C3-Componentised-1.001000.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=5fcdbba6738d65115686546ebfb87e6e
+_md5_=db0bdad6d3a4093442914750da33de21
