@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=~dev-libs/xapian-1.2.16 !dev-libs/xapian-bindings[perl] virtual/perl-Module-Build dev-lang/perl:=[-build(-)]
-DESCRIPTION=Perl XS frontend to the Xapian C++ search library.
+DESCRIPTION=Perl XS frontend to the Xapian C++ search library
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Search-Xapian/
 IUSE=examples
@@ -10,4 +10,4 @@ RDEPEND=~dev-libs/xapian-1.2.16 !dev-libs/xapian-bindings[perl] dev-lang/perl:=[
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/O/OL/OLLY/Search-Xapian-1.2.16.0.tar.gz http://oligarchy.co.uk/xapian/1.2.16/Search-Xapian-1.2.16.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=9ce9c10420a2cc063ba1ce129ca24825
+_md5_=59cc7a3cf6010fdd8bf7e3c420e3d2be

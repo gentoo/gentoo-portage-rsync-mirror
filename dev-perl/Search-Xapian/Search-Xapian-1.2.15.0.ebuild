@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/Search-Xapian-1.2.15.0.ebuild,v 1.1 2013/08/27 04:26:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/Search-Xapian-1.2.15.0.ebuild,v 1.2 2014/08/04 09:35:56 zlogene Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ inherit perl-module toolchain-funcs versionator
 VERSION=$(get_version_component_range 1-3)
 
 SRC_URI+=" http://oligarchy.co.uk/xapian/${VERSION}/${P}.tar.gz"
-DESCRIPTION="Perl XS frontend to the Xapian C++ search library."
+DESCRIPTION="Perl XS frontend to the Xapian C++ search library"
 
 LICENSE="|| ( Artistic GPL-1 GPL-2 GPL-3 )"
 SLOT="0"

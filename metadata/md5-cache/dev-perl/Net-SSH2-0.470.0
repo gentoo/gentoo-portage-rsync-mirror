@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=sys-libs/zlib net-libs/libssh2 !gcrypt? ( dev-libs/openssl ) gcrypt? ( dev-libs/libgcrypt:0 ) >=virtual/perl-ExtUtils-MakeMaker-6.50 dev-lang/perl:=[-build(-)]
-DESCRIPTION=Net::SSH2 - Support for the SSH 2 protocol via libssh2.
+DESCRIPTION=Net::SSH2 - Support for the SSH 2 protocol via libssh2
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Net-SSH2/
 IUSE=gcrypt
@@ -10,4 +10,4 @@ RDEPEND=sys-libs/zlib net-libs/libssh2 !gcrypt? ( dev-libs/openssl ) gcrypt? ( d
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RK/RKITOVER/Net-SSH2-0.47.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=0fd5733476214be3f0928c2d3f18b8b2
+_md5_=4543da965edebef708c0f3c9be767f94
