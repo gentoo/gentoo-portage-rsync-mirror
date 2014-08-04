@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.10.11.ebuild,v 1.3 2014/07/27 16:03:22 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.10.11.ebuild,v 1.4 2014/08/04 18:46:43 armin76 Exp $
 
 EAPI="5"
 
@@ -60,7 +60,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.10.9-svn_revision_override.patch" \
 		"${FILESDIR}/${PN}-2.10.9-pkgconfig_ldflags.patch" \
 		"${FILESDIR}/${PN}-2.10.9-respect_cxxflags.patch" \
-		"${FILESDIR}/${PN}-2.10.10-mga-bison-parameter.patch"
+		"${FILESDIR}/${PN}-2.10.10-mga-bison-parameter.patch" \
+		"${FILESDIR}/${PN}-2.10.10-respect_cflags_cxxflags.patch"
 
 	if ! use telnet; then
 		epatch "${FILESDIR}/${PN}-2.10.9-disable-telnet-symbols.patch"
@@ -166,7 +167,7 @@ src_compile() {
 
 	use debug && makeopts="debug"
 
-	emake ${makeopts} || die "emake failed"
+	emake ${makeopts} V=1 || die "emake failed"
 }
 
 src_install() {

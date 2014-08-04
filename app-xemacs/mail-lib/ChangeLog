@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mail-lib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/ChangeLog,v 1.32 2014/08/02 13:47:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/ChangeLog,v 1.33 2014/08/04 18:36:02 armin76 Exp $
+
+  04 Aug 2014; Raúl Porcel <armin76@gentoo.org> mail-lib-1.83.ebuild:
+  sparc stable wrt #509830
 
   02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mail-lib-1.83.ebuild:
   Stable for x86, wrt bug #509830

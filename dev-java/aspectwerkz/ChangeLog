@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/aspectwerkz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.35 2014/08/03 09:27:57 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.36 2014/08/04 18:43:49 sera Exp $
+
+  04 Aug 2014; Ralph Sennhauser <sera@gentoo.org> aspectwerkz-2.0-r1.ebuild:
+  Avoid default doc target as the ebuild uses precompiled documentation.
+  #519004
 
 *aspectwerkz-2.0-r1 (03 Aug 2014)
 

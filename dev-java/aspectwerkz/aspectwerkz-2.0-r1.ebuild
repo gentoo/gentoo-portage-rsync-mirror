@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0-r1.ebuild,v 1.1 2014/08/03 09:27:57 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0-r1.ebuild,v 1.2 2014/08/04 18:43:49 sera Exp $
 
 EAPI=5
 
@@ -46,6 +46,7 @@ java_prepare() {
 JAVA_ANT_REWRITE_CLASSPATH="yes"
 
 EANT_BUILD_TARGET="dist"
+EANT_DOC_TARGET=""
 EANT_GENTOO_CLASSPATH="asm-1.5,dom4j-1,jrexx,junit,trove,qdox-1.6"
 
 src_install() {
