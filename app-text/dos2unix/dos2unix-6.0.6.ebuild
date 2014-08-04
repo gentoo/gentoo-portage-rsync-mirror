@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-6.0.4.ebuild,v 1.2 2014/01/08 18:40:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-6.0.6.ebuild,v 1.1 2014/08/04 19:28:43 polynomial-c Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -27,8 +27,6 @@ DEPEND="
 	dev-lang/perl"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-pod-encoding.patch
-
 	sed \
 		-e '/^LDFLAGS/s|=|+=|' \
 		-e '/CFLAGS_OS \+=/d' \
@@ -52,10 +50,10 @@ lintl() {
 
 src_compile() {
 	emake prefix="${EPREFIX}/usr" \
-		$(use nls && echo "LDFLAGS_EXTRA=$(lintl)" || echo "ENABLE_NLS=")
+		$(usex nls "LDFLAGS_EXTRA=$(lintl)" "ENABLE_NLS=")
 }
 
 src_install() {
 	emake DESTDIR="${D}" prefix="${EPREFIX}/usr" \
-		$(use nls || echo "ENABLE_NLS=") install
+		$(usex nls "" "ENABLE_NLS=") install
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.276 2014/08/01 18:34:06 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.277 2014/08/04 19:22:18 ago Exp $
+
+  04 Aug 2014; Agostino Sarubbo <ago@gentoo.org> nspr-4.10.6-r1.ebuild:
+  Stable for x86, wrt bug #517876
 
   01 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> nspr-4.10.6-r1.ebuild:
   amd64 stable wrt bug #517876

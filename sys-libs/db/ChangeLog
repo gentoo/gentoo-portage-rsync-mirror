@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.355 2014/08/04 03:34:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.356 2014/08/04 19:28:47 robbat2 Exp $
+
+  04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> -db-5.2.42-r1.ebuild,
+  -db-5.2.42.ebuild:
+  db-5.2 fails tests, so removing forever: condition {[stat_field $env rep_stat
+  "Startup complete"]} not achieved in 40 seconds; perm_failed_stat returned
+  error value 0;  db_location returned error value 0; files_archivable_closed:
+  expected 0, got 1
 
 *db-5.1.29-r1 (04 Aug 2014)
 *db-5.2.42-r1 (04 Aug 2014)
