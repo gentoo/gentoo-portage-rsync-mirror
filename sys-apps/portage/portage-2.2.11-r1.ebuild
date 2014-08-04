@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.11.ebuild,v 1.2 2014/08/04 16:10:11 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.11-r1.ebuild,v 1.1 2014/08/04 16:58:23 dolsen Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -8,7 +8,7 @@ EAPI=2
 PYTHON_COMPAT=(
 	pypy
 	python3_2 python3_3 python3_4
-	python2_6 python2_7
+	python2_7
 )
 inherit eutils multilib
 
@@ -24,21 +24,18 @@ for _pyimpl in ${PYTHON_COMPAT[@]} ; do
 done
 unset _pyimpl
 
-# Import of the io module in python-2.6 raises ImportError for the
-# thread module if threading is disabled.
 python_dep_ssl="python3? ( =dev-lang/python-3*[ssl] )
 	!pypy? ( !python2? ( !python3? (
-		|| ( >=dev-lang/python-2.7[ssl] dev-lang/python:2.6[threads,ssl] )
+		>=dev-lang/python-2.7[ssl]
 	) ) )
 	pypy? ( !python2? ( !python3? ( virtual/pypy:0[bzip2] ) ) )
-	python2? ( !python3? ( || ( dev-lang/python:2.7[ssl] dev-lang/python:2.6[ssl,threads] ) ) )"
+	python2? ( !python3? ( dev-lang/python:2.7[ssl] ) )"
 python_dep="${python_dep_ssl//\[ssl\]}"
 python_dep="${python_dep//,ssl}"
 python_dep="${python_dep//ssl,}"
 
 python_dep="${python_dep}
 	python_targets_pypy? ( virtual/pypy:0 )
-	python_targets_python2_6? ( dev-lang/python:2.6 )
 	python_targets_python2_7? ( dev-lang/python:2.7 )
 	python_targets_python3_2? ( dev-lang/python:3.2 )
 	python_targets_python3_3? ( dev-lang/python:3.3 )
@@ -71,10 +68,10 @@ RDEPEND="${python_dep}
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( || ( >=sys-libs/libselinux-2.0.94[python] <sys-libs/libselinux-2.0.94 ) )
 	xattr? ( kernel_linux? (
-		>=sys-apps/install-xattr-0.3
-		$(for python_impl in python{2_6,2_7,3_2} pypy; do
-			echo "python_targets_${python_impl}? ( dev-python/pyxattr[python_targets_${python_impl}] )"
-		done) ) )
+		|| ( >=sys-apps/install-xattr-0.3
+			$(for python_impl in python{2_7,3_2} pypy; do
+				echo "python_targets_${python_impl}? ( dev-python/pyxattr[python_targets_${python_impl}] )"
+			done) ) ) )
 	!<app-shells/bash-3.2_p17
 	!<app-admin/logrotate-3.8.0"
 PDEPEND="

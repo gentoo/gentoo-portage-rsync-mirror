@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1400 2014/08/04 16:10:11 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1401 2014/08/04 16:58:23 dolsen Exp $
+
+*portage-2.2.11-r1 (04 Aug 2014)
+
+  04 Aug 2014; Brian Dolbec <dolsen@gentoo.org> -portage-2.2.11.ebuild,
+  +portage-2.2.11-r1.ebuild, portage-9999.ebuild:
+  Fix the missed new sys-apps/install-xattr dep, remove python-2.6 dep in
+  2.2.11.
 
   04 Aug 2014; Rick Farina <zerochaos@gentoo.org> portage-2.2.11.ebuild,
   portage-9999.ebuild:

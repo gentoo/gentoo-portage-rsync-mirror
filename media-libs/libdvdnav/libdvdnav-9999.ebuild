@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-9999.ebuild,v 1.9 2014/06/18 19:41:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-9999.ebuild,v 1.10 2014/08/04 16:56:27 polynomial-c Exp $
 
 EAPI=5
 
@@ -10,12 +10,11 @@ AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 SCM=""
 
 if [ "${PV#9999}" != "${PV}" ] ; then
-	SCM="subversion"
-	ESVN_REPO_URI="svn://svn.mplayerhq.hu/dvdnav/trunk/libdvdnav"
-	ESVN_PROJECT="libdvdnav"
+	SCM="git-r3"
+	EGIT_REPO_URI="git://git.videolan.org/libdvdnav.git"
 	SRC_URI=""
 else
-	SRC_URI="http://dvdnav.mplayerhq.hu/releases/${P}.tar.bz2"
+	SRC_URI="http://downloads.videolan.org/pub/videolan/libdvdnav/${PV}/${P}.tar.bz2"
 fi
 
 inherit autotools-multilib ${SCM}
@@ -37,11 +36,4 @@ RDEPEND=">=media-libs/libdvdread-4.2.0-r1[${MULTILIB_USEDEP}]
 DEPEND="${RDEPEND}
 	virtual/pkgconfig" # To get pkg.m4 for eautoreconf #414391
 
-DOCS=( AUTHORS ChangeLog DEVELOPMENT-POLICY.txt doc/dvd_structures NEWS README TODO )
-
-PATCHES=( "${FILESDIR}"/${PN}-4.2.0-pkgconfig.patch )
-
-src_prepare() {
-	[ "${PV#9999}" != "${PV}" ] && subversion_src_prepare
-	autotools-multilib_src_prepare
-}
+DOCS=( AUTHORS ChangeLog doc/dvd_structures doc/library_layout README TODO )

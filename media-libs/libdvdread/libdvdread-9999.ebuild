@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-9999.ebuild,v 1.6 2014/06/18 19:41:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-9999.ebuild,v 1.7 2014/08/04 16:52:01 polynomial-c Exp $
 
 EAPI=5
 
@@ -10,12 +10,11 @@ AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 SCM=""
 
 if [ "${PV#9999}" != "${PV}" ] ; then
-	SCM="subversion"
-	ESVN_REPO_URI="svn://svn.mplayerhq.hu/dvdnav/trunk/libdvdread"
-	ESVN_PROJECT="libdvdread"
+	SCM="git-r3"
+	EGIT_REPO_URI="git://git.videolan.org/libdvdread.git"
 	SRC_URI=""
 else
-	SRC_URI="http://dvdnav.mplayerhq.hu/releases/${P}.tar.bz2"
+	SRC_URI="http://downloads.videolan.org/pub/videolan/libdvdread/${PV}/${P}.tar.bz2"
 fi
 
 inherit autotools-multilib ${SCM}
@@ -39,9 +38,4 @@ RDEPEND="!<media-libs/libdvdnav-4.2.0
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}"
 
-DOCS=( AUTHORS ChangeLog DEVELOPMENT-POLICY.txt NEWS TODO README )
-
-src_prepare() {
-	[ "${PV#9999}" != "${PV}" ] && subversion_src_prepare
-	autotools-multilib_src_prepare
-}
+DOCS=( AUTHORS NEWS TODO README )

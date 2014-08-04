@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libdvdnav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.82 2014/06/18 19:41:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.83 2014/08/04 16:56:27 polynomial-c Exp $
+
+*libdvdnav-5.0.0 (04 Aug 2014)
+
+  04 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> -libdvdnav-4.2.0.ebuild,
+  -libdvdnav-4.2.0-r1.ebuild, +libdvdnav-5.0.0.ebuild, libdvdnav-9999.ebuild:
+  Version bump. Removed old. Thanks to Uwe L. Korn for reporting this in bug
+  #519038 and providing an ebuild patch.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libdvdnav-4.2.0-r1.ebuild,
   libdvdnav-4.2.1.ebuild, libdvdnav-9999.ebuild:

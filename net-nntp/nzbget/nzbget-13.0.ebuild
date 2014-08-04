@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-13.0_pre1042.ebuild,v 1.2 2014/06/29 18:37:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-13.0.ebuild,v 1.1 2014/08/04 16:51:50 radhermit Exp $
 
 EAPI=5
 
@@ -49,7 +49,7 @@ src_prepare() {
 
 	sed -i "/^dist_doc_DATA/d" Makefile.am || die
 
-	epatch "${FILESDIR}"/${P}-gzip-endif.patch
+	epatch "${FILESDIR}"/${PN}-13.0_pre1042-gzip-endif.patch
 
 	eautoreconf
 }
