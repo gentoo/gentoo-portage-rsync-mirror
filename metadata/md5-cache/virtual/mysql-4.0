@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for MySQL client or database
-KEYWORDS=amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86
-RDEPEND=|| ( =dev-db/mysql-4.0* )
-SLOT=0
-_md5_=f91a5dbbae0a339deef0d37652e66ea7
