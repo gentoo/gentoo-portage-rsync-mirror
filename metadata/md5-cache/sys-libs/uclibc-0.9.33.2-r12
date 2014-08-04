@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install postinst setup test unpack
+DESCRIPTION=C library for developing embedded Linux systems
+HOMEPAGE=http://www.uclibc.org/
+IUSE=debug hardened iconv ipv6 nptl rpc ssp uclibc-compat wordexp crosscompile_opts_headers-only savedconfig
+KEYWORDS=-* ~amd64 ~arm ~m68k ~mips ~ppc ~sh ~sparc ~x86
+LICENSE=LGPL-2
+RESTRICT=strip
+SLOT=0
+SRC_URI=http://uclibc.org/downloads/uClibc-0.9.33.2.tar.bz2 mirror://gentoo/uClibc-0.9.33.2-patches-14.tar.bz2
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=e99ce28ed4c9d1442d0682e631c636bc
