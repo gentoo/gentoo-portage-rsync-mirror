@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libmodplug
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.81 2014/07/31 14:34:27 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.82 2014/08/04 21:35:28 chainsaw Exp $
+
+*libmodplug-0.8.8.5 (04 Aug 2014)
+
+  04 Aug 2014; Tony Vroon <chainsaw@gentoo.org> +libmodplug-0.8.8.5.ebuild,
+  +files/libmodplug-0.8.8.5-no-fast-math.patch,
+  +files/libmodplug-0.8.8.5-psm-omf2097-fixes.patch, metadata.xml:
+  Version bump, as requested by Tom Wijsman in bug #516926. Handle OMF2097 PSM
+  files correctly, filed upstream on Github as pull request 19.
 
   31 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   libmodplug-0.8.8.4-r1.ebuild:
