@@ -1,0 +1,9 @@
+# ChangeLog for net-libs/txtorcon
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/txtorcon/ChangeLog,v 1.1 2014/08/04 22:34:45 mrueg Exp $
+
+*txtorcon-0.10.1 (04 Aug 2014)
+
+  04 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +txtorcon-0.10.1.ebuild:
+  Initial ebuild.
