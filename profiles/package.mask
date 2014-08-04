@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15943 2014/08/04 04:02:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15944 2014/08/04 04:36:26 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -783,11 +783,6 @@ net-wireless/madwifi-ng
 # Masked for testing, all revdeps currently in the tree
 # don't work with it.
 =media-libs/libsfml-2*
-
-# Robin H. Johnson <robbat2@gentoo.org> (18 Nov 2012)
-# Dead upstream, replaced by gitolite
-dev-vcs/gitosis
-dev-vcs/gitosis-gentoo
 
 # Markos Chandras <hwoarang@gentoo.org> (03 Nov 2012)
 # Masked for testing

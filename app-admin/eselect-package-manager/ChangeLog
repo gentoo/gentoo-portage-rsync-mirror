@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-package-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/ChangeLog,v 1.16 2014/07/13 18:49:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/ChangeLog,v 1.17 2014/08/04 04:38:48 vapier Exp $
+
+  04 Aug 2014; Mike Frysinger <vapier@gentoo.org>
+  eselect-package-manager-20110108.ebuild:
+  Add arm64 love.
 
   13 Jul 2014; Ulrich Müller <ulm@gentoo.org> metadata.xml:
   Add package to eselect herd.
@@ -68,4 +72,3 @@
   06 Jun 2009; Ulrich Mueller <ulm@gentoo.org>
   +eselect-package-manager-20090604.ebuild, +metadata.xml:
   Initial import. Ebuild contributed by me.
-
