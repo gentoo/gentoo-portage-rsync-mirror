@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1385 2014/08/02 16:43:11 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1386 2014/08/04 00:00:13 mpagano Exp $
+
+*gentoo-sources-3.16.0 (03 Aug 2014)
+
+  03 Aug 2014; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.16.0.ebuild:
+  Zero copy for infiniband psm userspace driver. ACPI: Disable Windows 8
+  compatibility for some Lenovo ThinkPads. Ensure that /dev/root doesn't appear
+  in /proc/mounts when bootint without an initramfs. Patch to not lock when UMH
+  is waiting on current thread spawned by linuxrc. (bug #481344). Bootsplash
+  ported by Uladzimir Bely (bug #513334). Support for Pogoplug e02 (bug
+  #460350), adjusted to be opt-in by TomWij. Patch to add Gentoo Linux support
+  config settings and defaults. Kernel patch enables gcc optimizations for
+  additional CPUs. 
 
 *gentoo-sources-3.15.8 (02 Aug 2014)
 
