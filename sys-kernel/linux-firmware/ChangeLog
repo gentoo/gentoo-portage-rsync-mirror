@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.101 2014/07/30 15:47:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.102 2014/08/04 18:24:29 armin76 Exp $
+
+  04 Aug 2014; Raúl Porcel <armin76@gentoo.org>
+  linux-firmware-20131230.ebuild:
+  alpha/arm64/ia64/sparc stable wrt #508982
 
   30 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
   linux-firmware-20131230.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.151 2014/08/03 18:37:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.152 2014/08/04 18:30:46 armin76 Exp $
+
+  04 Aug 2014; Raúl Porcel <armin76@gentoo.org> djbdns-1.05-r29.ebuild:
+  sparc stable wrt #511900
 
   03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> djbdns-1.05-r29.ebuild:
   Stable for ppc, wrt bug #511900
