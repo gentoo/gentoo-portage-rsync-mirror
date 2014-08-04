@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AppConfig
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.71 2012/09/01 11:12:19 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.72 2014/08/04 09:25:44 zlogene Exp $
+
+  04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> AppConfig-1.660.0.ebuild:
+  Fix DESCRIPTION
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> AppConfig-1.660.0.ebuild:
   Marked ~ppc-aix, bug #432288

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=dev-perl/Convert-ASN1 dev-perl/URI sasl? ( virtual/perl-Digest-MD5 dev-perl/Authen-SASL ) xml? ( dev-perl/XML-Parser dev-perl/XML-SAX dev-perl/XML-SAX-Writer ) ssl? ( >=dev-perl/IO-Socket-SSL-1.26 ) dev-lang/perl:=[-build(-)]
-DESCRIPTION=A collection of perl modules which provide an object-oriented interface to LDAP servers.
+DESCRIPTION=A collection of perl modules which provide an object-oriented interface to LDAP servers
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/perl-ldap/
 IUSE=sasl xml ssl
@@ -10,4 +10,4 @@ RDEPEND=dev-perl/Convert-ASN1 dev-perl/URI sasl? ( virtual/perl-Digest-MD5 dev-p
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MA/MARSCHAP/perl-ldap-0.63.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=1dd9c6564813b24a60d876bf097575a4
+_md5_=e0fffff8fd1b11fd3f5a79633e2d97c1

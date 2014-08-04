@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/Apache-AuthTicket-0.930.0.ebuild,v 1.1 2012/11/12 23:14:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/Apache-AuthTicket-0.930.0.ebuild,v 1.2 2014/08/04 09:24:35 zlogene Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ MODULE_AUTHOR=MSCHOUT
 MODULE_VERSION=0.93
 inherit perl-module
 
-DESCRIPTION="Cookie based access module."
+DESCRIPTION="Cookie based access module"
 
 LICENSE="|| ( Artistic-2 GPL-1 GPL-2 GPL-3 )" # GPL-1+
 SLOT="0"

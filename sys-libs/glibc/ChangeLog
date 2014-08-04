@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1003 2014/08/04 05:16:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1004 2014/08/04 09:27:00 klausman Exp $
+
+  04 Aug 2014; Tobias Klausmann <klausman@gentoo.org> glibc-2.19-r1.ebuild:
+  Stable on alpha, bug 518364
 
   04 Aug 2014; Mike Frysinger <vapier@gentoo.org> glibc-9999.ebuild:
   Update required kernel version to 2.6.32 to reflect upstream.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-AuthTicket
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/ChangeLog,v 1.21 2012/11/12 23:14:34 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/ChangeLog,v 1.22 2014/08/04 09:24:35 zlogene Exp $
+
+  04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Apache-AuthTicket-0.900.0.ebuild, Apache-AuthTicket-0.930.0.ebuild:
+  Fix DESCRIPTION
 
 *Apache-AuthTicket-0.930.0 (12 Nov 2012)
 
