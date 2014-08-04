@@ -1,0 +1,90 @@
+Upstream changes
+
+--- phc-intel-pack-rev15.1/inc/3.16/acpi-cpufreq.c
++++ phc-intel-pack-rev15.1/inc/3.16/acpi-cpufreq.c
+@@ -213,7 +213,7 @@
+ 
+ static unsigned extract_msr(u32 msr, struct acpi_cpufreq_data *data)
+ {
+-	int i;
++	struct cpufreq_frequency_table *pos;
+ 	struct acpi_processor_performance *perf;
+ 
+ 	if (boot_cpu_data.x86_vendor == X86_VENDOR_AMD)
+@@ -223,10 +223,9 @@
+ 
+ 	perf = data->acpi_data;
+ 
+-	for (i = 0; data->freq_table[i].frequency != CPUFREQ_TABLE_END; i++) {
+-		if (msr == perf->states[data->freq_table[i].driver_data].status)
+-			return data->freq_table[i].frequency;
+-	}
++	cpufreq_for_each_entry(pos, data->freq_table)
++		if (msr == perf->states[pos->driver_data].status)
++			return pos->frequency;
+ 	return data->freq_table[0].frequency;
+ }
+ 
+Use of cpufreq_for_each_entry macro
+
+--- phc-intel-pack-rev15.1/inc/3.16/linux-phc-0.3.2.patch
++++ phc-intel-pack-rev15.1/inc/3.16/linux-phc-0.3.2.patch
+@@ -31,39 +31,37 @@
+  
+  static DEFINE_PER_CPU(struct acpi_cpufreq_data *, acfreq_data);
+ @@ -216,16 +225,25 @@
+- 	int i;
++ 	struct cpufreq_frequency_table *pos;
+  	struct acpi_processor_performance *perf;
+  
+ -	if (boot_cpu_data.x86_vendor == X86_VENDOR_AMD)
+ +	if (boot_cpu_data.x86_vendor == X86_VENDOR_AMD) {
+  		msr &= AMD_MSR_RANGE;
+ -	else
+--		msr &= INTEL_MSR_RANGE;
+--
+--	perf = data->acpi_data;
+ +		perf = data->acpi_data;
+- 
+--	for (i = 0; data->freq_table[i].frequency != CPUFREQ_TABLE_END; i++) {
+--		if (msr == perf->states[data->freq_table[i].driver_data].status)
+--			return data->freq_table[i].frequency;
+-+		for (i = 0; data->freq_table[i].frequency != CPUFREQ_TABLE_END; i++) {
+-+			if (msr == perf->states[data->freq_table[i].driver_data].status)
+-+				return data->freq_table[i].frequency;
+++
+++		cpufreq_for_each_entry(pos, data->freq_table)
+++			if (msr == perf->states[pos->driver_data].status)
+++				return pos->frequency;
+-+		}
+-+	}
+-+	else {
+-+		msr &= INTEL_MSR_RANGE;
+++
+++	} else {
+ +		u32 fid;
++ 		msr &= INTEL_MSR_RANGE;
+ +		fid = msr & INTEL_MSR_FID_MASK;
+ +		perf = data->acpi_data;
+-+
+-+		for (i = 0; data->freq_table[i].frequency != CPUFREQ_TABLE_END; i++) {
+-+			if (fid == (perf->states[data->freq_table[i].driver_data].status & INTEL_MSR_FID_MASK))
+-+				return data->freq_table[i].frequency;
+-+		}
+- 	}
++ 
++-	perf = data->acpi_data;
+++		cpufreq_for_each_entry(pos, data->freq_table)
+++			if (fid == (perf->states[pos->driver_data].status & INTEL_MSR_FID_MASK))
+++				return pos->frequency;
+++	}
++ 
++-	cpufreq_for_each_entry(pos, data->freq_table)
++-		if (msr == perf->states[pos->driver_data].status)
++-			return pos->frequency;
+  	return data->freq_table[0].frequency;
+  }
++ 
+ @@ -406,6 +424,99 @@
+  	return 0;
+  }

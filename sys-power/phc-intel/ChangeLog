@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/phc-intel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.17 2014/07/22 00:13:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.18 2014/08/04 10:21:26 xmw Exp $
+
+*phc-intel-0.3.2.12.15.1-r1 (04 Aug 2014)
+
+  04 Aug 2014; Michael Weber <xmw@gentoo.org>
+  +files/phc-intel-0.3.2-rev15-3.16.patch, +phc-intel-0.3.2.12.15.1-r1.ebuild:
+  Revbump for kernel 3.16 support.
 
 *phc-intel-0.3.2.12.14-r1 (22 Jul 2014)
 *phc-intel-0.3.2.12.15.1 (22 Jul 2014)
