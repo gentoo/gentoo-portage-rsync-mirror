@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.587 2014/07/30 00:17:27 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.588 2014/08/04 02:13:16 vapier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Mike Frysinger <vapier@gentoo.org> (04 Aug 2014)
+# Mask flashrom drivers that only work on x86 due to in/out asm insns #454024
+sys-apps/flashrom atahpt nic3com nicnatsemi nicrealtek rayer_spi satamv
 
 # Brian Evans <grknight@gentoo.org> (30 Jul 2014)
 # Mask embedded due to upstream not supporting

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsigrok/libsigrok-9999.ebuild,v 1.2 2014/06/14 06:08:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsigrok/libsigrok-9999.ebuild,v 1.3 2014/08/04 02:36:55 vapier Exp $
 
 EAPI="5"
 
@@ -35,14 +35,6 @@ DEPEND="${LIB_DEPEND//\[static-libs(+)]}
 
 src_prepare() {
 	[[ ${PV} == "9999" ]] && eautoreconf
-
-	# Deal with libftdi-0.x & libftdi-1.x changes.
-	if has_version '>=dev-embedded/libftdi-1' ; then
-		sed -i 's:libftdi >= 0.16:libftdi1 >= 0.16:g' configure || die
-	fi
-
-	# Fix implicit decl w/usleep.
-	sed -i '1i#include <unistd.h>' hardware/asix-sigma/asix-sigma.c || die
 }
 
 src_configure() {
