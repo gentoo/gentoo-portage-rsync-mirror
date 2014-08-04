@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.8.ebuild,v 1.1 2014/08/01 07:14:27 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.8.ebuild,v 1.2 2014/08/04 07:22:49 dlan Exp $
 
 EAPI=5
 
@@ -62,6 +62,7 @@ RDEPEND="${COMMON_DEPEND}
 	)"
 DEPEND="${COMMON_DEPEND}
 	>=dev-lang/perl-5.8.1
+	dev-util/gtk-doc
 	dev-util/gtk-doc-am
 	dev-util/intltool
 	virtual/pkgconfig
