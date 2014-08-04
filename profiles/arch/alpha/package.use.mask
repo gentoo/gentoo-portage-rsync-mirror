@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.160 2014/07/29 23:15:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.161 2014/08/04 15:52:03 klausman Exp $
+
+# Tobias Klausmann <klausman@gentoo.org>
+# media-libs/x265 doesn't work on alpha (bug 519046)
+media-video/ffmpeg x265
 
 # Christoph Junghans <ottxor@gentoo.org> (21 Jul 2014)
 # Missing keywords on sci-libs/libcerf (bug 517726)
