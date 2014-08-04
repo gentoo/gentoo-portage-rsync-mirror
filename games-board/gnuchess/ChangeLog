@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnuchess
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.43 2014/06/14 10:37:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.44 2014/08/04 21:12:46 sping Exp $
+
+*gnuchess-6.1.2 (04 Aug 2014)
+
+  04 Aug 2014; Sebastian Pipping <sping@gentoo.org> +gnuchess-6.1.2.ebuild:
+  Bump to 6.1.2
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> gnuchess-6.1.1.ebuild:
   x86 stable wrt bug #505210
