@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.18.ebuild,v 1.2 2014/07/11 08:51:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.18.ebuild,v 1.3 2014/08/04 13:51:11 gienah Exp $
 
 EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
@@ -12,7 +12,7 @@ BV_PPC=1.0.28
 BV_SPARC=1.0.28
 BV_ALPHA=1.0.28
 
-DESCRIPTION="Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp."
+DESCRIPTION="Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp"
 HOMEPAGE="http://sbcl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	x86? ( mirror://sourceforge/sbcl/${PN}-${BV_X86}-x86-linux-binary.tar.bz2 )
@@ -121,11 +121,10 @@ src_compile() {
 
 	if host-is-pax ; then
 		# To disable PaX on hardened systems
-		pax-mark -C "${bindir}"/src/runtime/sbcl
 		pax-mark -mr "${bindir}"/src/runtime/sbcl
 
 		# Hack to disable PaX on second GENESIS stage
-		sed -i -e '/load/!s/^echo \/\/doing warm.*$/&\npaxctl -C \.\/src\/runtime\/sbcl\npaxctl -mprexs \.\/src\/runtime\/sbcl/' \
+		sed -i -e '/^echo \/\/doing warm init - compilation phase$/a\paxmark.sh -mr \.\/src\/runtime\/sbcl' \
 			"${S}"/make-target-2.sh || die "Cannot disable PaX on second GENESIS runtime"
 	fi
 

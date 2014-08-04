@@ -1,6 +1,14 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.207 2014/08/03 04:29:08 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.208 2014/08/04 13:51:11 gienah Exp $
+
+  04 Aug 2014; Mark Wright <gienah@gentoo.org> sbcl-1.0.55-r1.ebuild,
+  sbcl-1.0.55-r2.ebuild, sbcl-1.1.15.ebuild, sbcl-1.1.16.ebuild,
+  sbcl-1.1.17.ebuild, sbcl-1.1.18.ebuild, sbcl-1.2.2.ebuild:
+  Thanks to Luis Ressel for fixing and reporting Bug 517000 - dev-lisp/sbcl
+  should not invoke paxctl directly. sed to disable PaX on second GENESIS stage
+  needs tweak to match whitespace at start of line in sbcl-1.2.2.ebuild. Some
+  trivial edits for some repoman QA reports.
 
 *sbcl-1.2.2 (03 Aug 2014)
 
