@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/hiredis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.10 2014/06/16 02:35:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.11 2014/08/04 15:18:36 klausman Exp $
+
+  04 Aug 2014; Tobias Klausmann <klausman@gentoo.org> hiredis-0.11.0-r1.ebuild:
+  Keyworded on alpha, bug 489676
 
 *hiredis-0.11.0-r1 (16 Jun 2014)
 

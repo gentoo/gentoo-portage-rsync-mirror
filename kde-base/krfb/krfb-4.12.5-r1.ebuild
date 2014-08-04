@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/krfb-4.12.5-r1.ebuild,v 1.1 2014/07/31 20:46:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/krfb-4.12.5-r1.ebuild,v 1.2 2014/08/04 15:25:47 johu Exp $
 
 EAPI=5
 
@@ -26,7 +26,12 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${P}-CVE-2014-4607-unbundle-libvncserver.patch" )
+src_prepare() {
+	# bug 518824, patch before eclass magic
+	epatch "${FILESDIR}/${P}-CVE-2014-4607-unbundle-libvncserver.patch"
+
+	kde4-base_src_prepare
+}
 
 src_configure() {
 	mycmakeargs=(
