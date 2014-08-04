@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=test? ( dev-perl/Test-use-ok ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
-DESCRIPTION=Tie to an existing object.
+DESCRIPTION=Tie to an existing object
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/Tie-ToObject/
 IUSE=test
@@ -10,4 +10,4 @@ RDEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/N/NU/NUFFIN/Tie-ToObject-0.03.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=ca6c7ccf35f1f013efe9846faa91118c
+_md5_=cdd322cb3d1a798b9850a32d935819a4

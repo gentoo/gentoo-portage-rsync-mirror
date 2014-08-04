@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9278 2014/08/04 16:53:36 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9279 2014/08/04 20:17:03 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Aug 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask ffmpeg-2.3+
 
   04 Aug 2014; William Hubbs <williamh@gentoo.org> package.mask:
   The removal of live ebuilds from package.mask has begun.
