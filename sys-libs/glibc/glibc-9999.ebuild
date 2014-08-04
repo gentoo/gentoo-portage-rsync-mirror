@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.24 2014/04/05 16:05:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.25 2014/08/04 05:16:53 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
@@ -26,7 +26,7 @@ case ${PV} in
 esac
 GCC_BOOTSTRAP_VER="4.7.3-r1"
 PATCH_VER=""                                   # Gentoo patchset
-NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.16"}       # min kernel version nptl requires
+: ${NPTL_KERN_VER:="2.6.32"}                   # min kernel version nptl requires
 
 IUSE="debug gd hardened multilib nscd selinux systemtap profile suid vanilla crosscompile_opts_headers-only"
 
@@ -51,8 +51,6 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 		export CTARGET=${CATEGORY#cross-}
 	fi
 fi
-
-[[ ${CTARGET} == hppa* ]] && NPTL_KERN_VER=${NPTL_KERN_VER/2.6.16/2.6.20}
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
