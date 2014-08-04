@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.6.1_p1.ebuild,v 1.1 2014/04/25 07:11:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.6.1_p1-r2.ebuild,v 1.1 2014/08/04 19:57:18 polynomial-c Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -90,6 +90,8 @@ save_version() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}.patch #508604
+
 	sed -i \
 		-e "/_PATH_XAUTH/s:/usr/X11R6/bin/xauth:${EPREFIX}/usr/bin/xauth:" \
 		pathnames.h || die
@@ -99,8 +101,6 @@ src_prepare() {
 
 	# don't break .ssh/authorized_keys2 for fun
 	sed -i '/^AuthorizedKeysFile/s:^:#:' sshd_config || die
-
-	epatch "${FILESDIR}"/${P}.patch #508604
 
 	epatch "${FILESDIR}"/${PN}-5.9_p1-sshd-gssapi-multihomed.patch #378361
 	if use X509 ; then

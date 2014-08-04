@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/self/self-0.340.0.ebuild,v 1.1 2011/08/27 16:47:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/self/self-0.340.0.ebuild,v 1.2 2014/08/04 20:00:18 zlogene Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ MODULE_AUTHOR=GUGOD
 MODULE_VERSION=0.34
 inherit perl-module
 
-DESCRIPTION="provides '\$self' in OO code."
+DESCRIPTION="provides '\$self' in OO code"
 
 LICENSE="MIT"
 SLOT="0"
