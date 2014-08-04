@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.677 2014/08/03 21:01:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.678 2014/08/04 04:01:01 robbat2 Exp $
+
+  04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> -files/my.cnf,
+  -files/my.cnf-4.0, -files/my.cnf-4.1, -files/mysql.init,
+  -mysql-4.0.27-r1.ebuild, -mysql-4.1.22-r1.ebuild, -mysql-5.0.96.ebuild,
+  metadata.xml:
+  Cleanup finally, will live on in the overlay.
 
   03 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> mysql-5.6.20.ebuild:
   Missed merging a test.

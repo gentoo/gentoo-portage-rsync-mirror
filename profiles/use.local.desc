@@ -345,6 +345,7 @@ app-crypt/hashcat-gui:opencl - Install oclhashcat-{plus,lite}-bin to take advant
 app-crypt/heimdal:hdb-ldap - Adds support for LDAP as a database backend
 app-crypt/heimdal:otp - Adds support for one-time passwords
 app-crypt/heimdal:pkinit - Adds support for PKINIT for the initial ticket
+app-crypt/hmaccalc:fips - Enable NSS FIPS mode and support only the FIPS-compliant functions
 app-crypt/johntheripper:cuda - Use nvidia cuda toolkit for speeding up cracking on capable devices
 app-crypt/johntheripper:mozilla - Support mozilla password cracking
 app-crypt/johntheripper:opencl - Enable opencl support for speeding up cracking on capable devices
@@ -1230,7 +1231,6 @@ dev-db/mysql:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/mysql:minimal - Install client programs only, no server
 dev-db/mysql:pbxt - Add experimental support for PBXT storage engine
 dev-db/mysql:profiling - Add support for statement profiling (requires USE=community).
-dev-db/mysql:raid - Deprecated option, removed in the 5.0 series
 dev-db/mysql:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mysql:test - Install upstream testsuites for end use.
 dev-db/mysql:xtradb - Add experimental support for Percona's InnoDB replacement: XtraDB
