@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.11.ebuild,v 1.1 2014/08/03 16:55:08 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.11.ebuild,v 1.2 2014/08/04 16:10:11 zerochaos Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -71,6 +71,7 @@ RDEPEND="${python_dep}
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( || ( >=sys-libs/libselinux-2.0.94[python] <sys-libs/libselinux-2.0.94 ) )
 	xattr? ( kernel_linux? (
+		>=sys-apps/install-xattr-0.3
 		$(for python_impl in python{2_6,2_7,3_2} pypy; do
 			echo "python_targets_${python_impl}? ( dev-python/pyxattr[python_targets_${python_impl}] )"
 		done) ) )

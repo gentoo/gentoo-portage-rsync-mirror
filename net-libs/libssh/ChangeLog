@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.111 2014/07/18 15:35:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.112 2014/08/04 16:06:04 klausman Exp $
+
+  04 Aug 2014; Tobias Klausmann <klausman@gentoo.org> libssh-0.6.3-r1.ebuild:
+  Keyworded on alpha, bug 510340
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> files/libssh-0.5.0-tests.patch,
   libssh-0.6.3-r1.ebuild, metadata.xml:

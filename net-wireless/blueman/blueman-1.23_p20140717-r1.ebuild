@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23_p20140717-r1.ebuild,v 1.1 2014/08/01 08:03:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23_p20140717-r1.ebuild,v 1.2 2014/08/04 16:23:27 zerochaos Exp $
 
 EAPI="5"
 
@@ -48,7 +48,8 @@ RDEPEND="${CDEPEND}
 		=net-misc/dhcp-3*
 		>=net-misc/networkmanager-0.8 ) )
 	policykit? ( sys-auth/polkit )
-	pulseaudio? ( media-sound/pulseaudio )"
+	pulseaudio? ( media-sound/pulseaudio )
+	!net-wireless/gnome-bluetooth"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/at-spi2-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.66 2014/07/28 13:42:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.67 2014/08/04 16:26:35 ottxor Exp $
+
+  04 Aug 2014; Christoph Junghans <ottxor@gentoo.org>
+  at-spi2-core-2.12.0.ebuild:
+  added ~x86-macos (tested by me)
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> at-spi2-core-2.12.0.ebuild:
   Stable for ppc, wrt bug #512012
