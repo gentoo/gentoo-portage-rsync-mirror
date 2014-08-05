@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1340 2014/08/05 01:41:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1341 2014/08/05 14:19:19 ottxor Exp $
+
+  05 Aug 2014; Christoph Junghans <ottxor@gentoo.org> apache-2.eclass:
+  added prefix support (bug #433736)
 
   05 Aug 2014; Mike Gilbert <floppym@gentoo.org> toolchain.eclass:
   Another typo.

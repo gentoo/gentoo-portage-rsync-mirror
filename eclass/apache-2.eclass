@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.37 2014/07/30 19:01:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.38 2014/08/05 14:19:19 ottxor Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -259,7 +259,7 @@ setup_modules() {
 	fi
 
 	if use ssl ; then
-		MY_CONF+=" --with-ssl=/usr --enable-ssl=${mod_type}"
+		MY_CONF+=" --with-ssl="${EPREFIX}"/usr --enable-ssl=${mod_type}"
 		MY_MODS+=" ssl"
 	else
 		MY_CONF+=" --without-ssl --disable-ssl"
@@ -269,22 +269,22 @@ setup_modules() {
 		elog "You can manipulate several configure options of suexec"
 		elog "through the following environment variables:"
 		elog
-		elog " SUEXEC_SAFEPATH: Default PATH for suexec (default: /usr/local/bin:/usr/bin:/bin)"
-		elog "  SUEXEC_LOGFILE: Path to the suexec logfile (default: /var/log/apache2/suexec_log)"
+		elog " SUEXEC_SAFEPATH: Default PATH for suexec (default: "${EPREFIX}"/usr/local/bin:"${EPREFIX}"/usr/bin:"${EPREFIX}"/bin)"
+		elog "  SUEXEC_LOGFILE: Path to the suexec logfile (default: "${EPREFIX}"/var/log/apache2/suexec_log)"
 		elog "   SUEXEC_CALLER: Name of the user Apache is running as (default: apache)"
-		elog "  SUEXEC_DOCROOT: Directory in which suexec will run scripts (default: /var/www)"
+		elog "  SUEXEC_DOCROOT: Directory in which suexec will run scripts (default: "${EPREFIX}"/var/www)"
 		elog "   SUEXEC_MINUID: Minimum UID, which is allowed to run scripts via suexec (default: 1000)"
 		elog "   SUEXEC_MINGID: Minimum GID, which is allowed to run scripts via suexec (default: 100)"
 		elog "  SUEXEC_USERDIR: User subdirectories (like /home/user/html) (default: public_html)"
 		elog "    SUEXEC_UMASK: Umask for the suexec process (default: 077)"
 		elog
 
-		MY_CONF+=" --with-suexec-safepath=${SUEXEC_SAFEPATH:-/usr/local/bin:/usr/bin:/bin}"
-		MY_CONF+=" --with-suexec-logfile=${SUEXEC_LOGFILE:-/var/log/apache2/suexec_log}"
-		MY_CONF+=" --with-suexec-bin=/usr/sbin/suexec"
+		MY_CONF+=" --with-suexec-safepath=${SUEXEC_SAFEPATH:-"${EPREFIX}"/usr/local/bin:"${EPREFIX}"/usr/bin:"${EPREFIX}"/bin}"
+		MY_CONF+=" --with-suexec-logfile=${SUEXEC_LOGFILE:-"${EPREFIX}"/var/log/apache2/suexec_log}"
+		MY_CONF+=" --with-suexec-bin="${EPREFIX}"/usr/sbin/suexec"
 		MY_CONF+=" --with-suexec-userdir=${SUEXEC_USERDIR:-public_html}"
 		MY_CONF+=" --with-suexec-caller=${SUEXEC_CALLER:-apache}"
-		MY_CONF+=" --with-suexec-docroot=${SUEXEC_DOCROOT:-/var/www}"
+		MY_CONF+=" --with-suexec-docroot=${SUEXEC_DOCROOT:-"${EPREFIX}"/var/www}"
 		MY_CONF+=" --with-suexec-uidmin=${SUEXEC_MINUID:-1000}"
 		MY_CONF+=" --with-suexec-gidmin=${SUEXEC_MINGID:-100}"
 		MY_CONF+=" --with-suexec-umask=${SUEXEC_UMASK:-077}"
@@ -321,7 +321,7 @@ setup_modules() {
 # This internal function generates the LoadModule lines for httpd.conf based on
 # the current module selection and MODULE_DEFINES
 generate_load_module() {
-	local endit=0 mod_lines= mod_dir="${D}/usr/$(get_libdir)/apache2/modules"
+	local endit=0 mod_lines= mod_dir="${ED}/usr/$(get_libdir)/apache2/modules"
 
 	if use static; then
 		sed -i -e "/%%LOAD_MODULE%%/d" \
@@ -358,9 +358,9 @@ generate_load_module() {
 # to convert this file to the new APACHE2_MODULES USE_EXPAND variable and remove
 # it afterwards.
 check_upgrade() {
-	if [[ -e "${ROOT}"etc/apache2/apache2-builtin-mods ]]; then
+	if [[ -e "${EROOT}"etc/apache2/apache2-builtin-mods ]]; then
 		eerror "The previous configuration file for built-in modules"
-		eerror "(${ROOT}etc/apache2/apache2-builtin-mods) exists on your"
+		eerror "(${EROOT}etc/apache2/apache2-builtin-mods) exists on your"
 		eerror "system."
 		eerror
 		eerror "Please read http://www.gentoo.org/doc/en/apache-upgrading.xml"
@@ -410,6 +410,13 @@ apache-2_pkg_setup() {
 # This function applies patches, configures a custom file-system layout and
 # rebuilds the configure scripts.
 apache-2_src_prepare() {
+	#fix prefix in conf files etc (bug #433736)
+	use !prefix || sed -e "s@/\(usr\|var\|etc\|run\)/@${EPREFIX}&@g" \
+		-i "${GENTOO_PATCHDIR}"/conf/httpd.conf "${GENTOO_PATCHDIR}"/scripts/* \
+		"${GENTOO_PATCHDIR}"/docs/*.example "${GENTOO_PATCHDIR}"/patches/*.layout \
+		"${GENTOO_PATCHDIR}"/init/* "${GENTOO_PATCHDIR}"/conf/vhosts.d/* \
+		"${GENTOO_PATCHDIR}"/conf/modules.d/* || die
+
 	# 03_all_gentoo-apache-tools.patch injects -Wl,-z,now, which is not a good
 	# idea for everyone
 	case ${CHOST} in
@@ -487,16 +494,16 @@ apache-2_src_configure() {
 	# our myconf line too
 	ac_cv_path_PKGCONFIG=${PKG_CONFIG} \
 	econf \
-		--includedir=/usr/include/apache2 \
-		--libexecdir=/usr/$(get_libdir)/apache2/modules \
-		--datadir=/var/www/localhost \
-		--sysconfdir=/etc/apache2 \
-		--localstatedir=/var \
+		--includedir="${EPREFIX}"/usr/include/apache2 \
+		--libexecdir="${EPREFIX}"/usr/$(get_libdir)/apache2/modules \
+		--datadir="${EPREFIX}"/var/www/localhost \
+		--sysconfdir="${EPREFIX}"/etc/apache2 \
+		--localstatedir="${EPREFIX}"/var \
 		--with-mpm=${MY_MPM} \
-		--with-apr="${SYSROOT}"/usr \
-		--with-apr-util="${SYSROOT}"/usr \
+		--with-apr="${SYSROOT}${EPREFIX}"/usr \
+		--with-apr-util="${SYSROOT}${EPREFIX}"/usr \
 		--with-pcre="${T}"/pcre-config \
-		--with-z=/usr \
+		--with-z="${EPREFIX}"/usr \
 		--with-port=80 \
 		--with-program-name=apache2 \
 		--enable-layout=Gentoo \
@@ -556,19 +563,19 @@ apache-2_src_install() {
 
 	# drop in a convenient link to the manual
 	if use doc ; then
-		sed -i -e "s:VERSION:${PVR}:" "${D}/etc/apache2/modules.d/00_apache_manual.conf"
+		sed -i -e "s:VERSION:${PVR}:" "${ED}/etc/apache2/modules.d/00_apache_manual.conf"
 		docompress -x /usr/share/doc/${PF}/manual # 503640
 	else
-		rm -f "${D}/etc/apache2/modules.d/00_apache_manual.conf"
-		rm -Rf "${D}/usr/share/doc/${PF}/manual"
+		rm -f "${ED}/etc/apache2/modules.d/00_apache_manual.conf"
+		rm -Rf "${ED}/usr/share/doc/${PF}/manual"
 	fi
 
 	# the default icons and error pages get stored in
 	# /usr/share/apache2/{error,icons}
 	dodir /usr/share/apache2
-	mv -f "${D}/var/www/localhost/error" "${D}/usr/share/apache2/error"
-	mv -f "${D}/var/www/localhost/icons" "${D}/usr/share/apache2/icons"
-	rm -rf "${D}/var/www/localhost/"
+	mv -f "${ED}/var/www/localhost/error" "${ED}/usr/share/apache2/error"
+	mv -f "${ED}/var/www/localhost/icons" "${ED}/usr/share/apache2/icons"
+	rm -rf "${ED}/var/www/localhost/"
 	eend $?
 
 	# set some sane permissions for suexec
@@ -594,7 +601,7 @@ apache-2_src_install() {
 # because the default webroot is a copy of the files that exist elsewhere and we
 # don't want them to be managed/removed by portage when apache is upgraded.
 apache-2_pkg_postinst() {
-	if use ssl && [[ ! -e "${ROOT}/etc/ssl/apache2/server.pem" ]]; then
+	if use ssl && [[ ! -e "${EROOT}/etc/ssl/apache2/server.pem" ]]; then
 		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Apache HTTP Server}"
 		install_cert /etc/ssl/apache2/server
 		ewarn
@@ -606,9 +613,9 @@ apache-2_pkg_postinst() {
 		ewarn
 	fi
 
-	if [[ ! -e "${ROOT}/var/www/localhost" ]] ; then
-		mkdir -p "${ROOT}/var/www/localhost/htdocs"
-		echo "<html><body><h1>It works!</h1></body></html>" > "${ROOT}/var/www/localhost/htdocs/index.html"
+	if [[ ! -e "${EROOT}/var/www/localhost" ]] ; then
+		mkdir -p "${EROOT}/var/www/localhost/htdocs"
+		echo "<html><body><h1>It works!</h1></body></html>" > "${EROOT}/var/www/localhost/htdocs/index.html"
 	fi
 
 	echo
