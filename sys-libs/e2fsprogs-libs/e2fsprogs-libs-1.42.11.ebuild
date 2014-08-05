@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.11.ebuild,v 1.2 2014/08/05 07:57:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.11.ebuild,v 1.3 2014/08/05 10:40:46 vapier Exp $
 
 EAPI="4"
 
@@ -41,20 +41,23 @@ src_prepare() {
 }
 
 multilib_src_configure() {
+	local myconf=()
 	# we use blkid/uuid from util-linux now
-	ac_cv_lib_uuid_uuid_generate=yes \
-	ac_cv_lib_blkid_blkid_get_cache=yes \
+	if use kernel_linux ; then
+		export ac_cv_lib_{uuid_uuid_generate,blkid_blkid_get_cache}=yes
+		myconf+=( --disable-lib{blkid,uuid} )
+	fi
 	ac_cv_path_LDCONFIG=: \
 	ECONF_SOURCE="${S}" \
 	CC="$(tc-getCC)" \
 	BUILD_CC="$(tc-getBUILD_CC)" \
 	BUILD_LD="$(tc-getBUILD_LD)" \
 	econf \
-		--disable-lib{blkid,uuid} \
 		--disable-quota \
 		$(tc-is-static-only || echo --enable-elf-shlibs) \
 		$(tc-has-tls || echo --disable-tls) \
-		$(use_enable nls)
+		$(use_enable nls) \
+		"${myconf[@]}"
 }
 
 multilib_src_compile() {
@@ -63,7 +66,7 @@ multilib_src_compile() {
 
 multilib_src_install() {
 	emake V=1 STRIP=: DESTDIR="${D}" install || die
-	multilib_is_native_abi && gen_usr_ldscript -a com_err ss
+	multilib_is_native_abi && gen_usr_ldscript -a com_err ss $(usex kernel_linux '' 'uuid blkid')
 	# configure doesn't have an option to disable static libs :/
 	use static-libs || find "${ED}" -name '*.a' -delete
 }

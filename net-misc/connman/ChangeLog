@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.85 2014/05/02 15:32:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.86 2014/08/05 10:38:01 chainsaw Exp $
+
+*connman-1.24 (05 Aug 2014)
+
+  05 Aug 2014; Tony Vroon <chainsaw@gentoo.org> +connman-1.24.ebuild:
+  Version bump, as requested by Milton in bug #517574.
 
 *connman-1.23 (02 May 2014)
 *connman-1.22 (02 May 2014)

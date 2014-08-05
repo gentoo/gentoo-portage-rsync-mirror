@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.123 2014/08/05 07:57:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.124 2014/08/05 10:40:46 vapier Exp $
+
+  05 Aug 2014; Mike Frysinger <vapier@gentoo.org> e2fsprogs-libs-1.42.11.ebuild:
+  Re-enable libuuid/libblkid for non-Linux platforms #278667 by Alexis Ballier.
 
   05 Aug 2014; Mike Frysinger <vapier@gentoo.org>
   +files/e2fsprogs-libs-1.42.11-prototypes.patch, e2fsprogs-libs-1.42.11.ebuild:

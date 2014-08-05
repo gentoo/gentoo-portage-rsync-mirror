@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/spandsp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.31 2014/07/27 18:15:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.32 2014/08/05 10:52:21 chainsaw Exp $
+
+*spandsp-0.0.6 (05 Aug 2014)
+
+  05 Aug 2014; Tony Vroon <chainsaw@gentoo.org> +spandsp-0.0.6.ebuild,
+  metadata.xml:
+  USE-flags reworked by Oliver Jaksch, version bump closes bug #516830.
 
   27 Jul 2014; Rick Farina <zerochaos@gentoo.org> spandsp-0.0.6_pre12-r1.ebuild,
   spandsp-0.0.6_pre21.ebuild:
