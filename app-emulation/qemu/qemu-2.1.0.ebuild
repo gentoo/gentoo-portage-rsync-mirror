@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.1.0.ebuild,v 1.7 2014/08/05 08:54:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.1.0.ebuild,v 1.8 2014/08/05 09:29:12 vapier Exp $
 
 EAPI=5
 
@@ -31,7 +31,8 @@ LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="accessibility +aio alsa bluetooth +caps +curl debug +fdt glusterfs \
 gtk infiniband iscsi +jpeg \
-kernel_linux kernel_FreeBSD lzo ncurses nfs nls numa opengl +png pulseaudio python \
+kernel_linux kernel_FreeBSD lzo ncurses nfs nls numa opengl +pin-upstream-blobs
++png pulseaudio python \
 rbd sasl +seccomp sdl selinux smartcard snappy spice ssh static static-softmmu \
 static-user systemtap tci test +threads tls usb usbredir +uuid vde +vhost-net \
 virtfs +vnc xattr xen xfs"
@@ -91,20 +92,22 @@ SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	xattr? ( sys-apps/attr[static-libs(+)] )
 	xfs? ( sys-fs/xfsprogs[static-libs(+)] )"
 USER_LIB_DEPEND="${COMMON_LIB_DEPEND}"
+X86_FIRMWARE_DEPEND="
+	>=sys-firmware/ipxe-1.0.0_p20130624
+	pin-upstream-blobs? (
+		~sys-firmware/seabios-1.7.5
+		~sys-firmware/sgabios-0.1_pre8
+		~sys-firmware/vgabios-0.7a
+	)
+	!pin-upstream-blobs? (
+		sys-firmware/seabios
+		sys-firmware/sgabios
+		sys-firmware/vgabios
+	)"
 RDEPEND="!static-softmmu? ( ${SOFTMMU_LIB_DEPEND//\[static-libs(+)]} )
 	!static-user? ( ${USER_LIB_DEPEND//\[static-libs(+)]} )
-	qemu_softmmu_targets_i386? (
-		>=sys-firmware/ipxe-1.0.0_p20130624
-		~sys-firmware/seabios-1.7.5
-		~sys-firmware/sgabios-0.1_pre8
-		~sys-firmware/vgabios-0.7a
-	)
-	qemu_softmmu_targets_x86_64? (
-		>=sys-firmware/ipxe-1.0.0_p20130624
-		~sys-firmware/seabios-1.7.5
-		~sys-firmware/sgabios-0.1_pre8
-		~sys-firmware/vgabios-0.7a
-	)
+	qemu_softmmu_targets_i386? ( ${X86_FIRMWARE_DEPEND} )
+	qemu_softmmu_targets_x86_64? ( ${X86_FIRMWARE_DEPEND} )
 	accessibility? ( app-accessibility/brltty )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )

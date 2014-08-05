@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-openvpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-openvpn/ChangeLog,v 1.57 2014/08/01 21:04:14 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-openvpn/ChangeLog,v 1.58 2014/08/05 09:24:03 swift Exp $
+
+  05 Aug 2014; Sven Vermeulen <swift@gentoo.org>
+  -selinux-openvpn-2.20130424-r1.ebuild, -selinux-openvpn-2.20130424-r2.ebuild,
+  -selinux-openvpn-2.20130424-r3.ebuild, -selinux-openvpn-2.20130424-r4.ebuild:
+  Remove obsolete ebuilds
 
 *selinux-openvpn-2.20140311-r4 (01 Aug 2014)
 

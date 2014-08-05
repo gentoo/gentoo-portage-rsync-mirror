@@ -21,6 +21,9 @@
     <flag name='ncurses'>Enable the ncurses-based console</flag>
     <flag name='nfs'>Enable NFS support</flag>
     <flag name='numa'>Enable NUMA support</flag>
+	<flag name='pin-upstream-blobs'>Pin the versions of BIOS firmware to the version included in the upstream release.
+		This is needed to sanely support migration/suspend/resume/snapshotting/etc... of instances.
+		When the blobs are different, random corruption/bugs/crashes/etc... may be observed.</flag>
     <flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
     <flag name='rbd'>Enable rados block device backend support, see http://ceph.newdream.net/wiki/QEMU-RBD</flag>
     <flag name='sdl'>Enable the SDL-based console</flag>

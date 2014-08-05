@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15952 2014/08/05 07:06:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15953 2014/08/05 09:02:53 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -152,13 +152,6 @@ dev-lang/libcilkrts
 # It's a development version that was included without
 # notifying gnome team.
 =dev-python/pygobject-3.13.3
-
-# Lars Wendler <polynomial-c@gentoo.org> (20 Jul 2014)
-# e2fsprogs-1.42.11 fails to build (no parallel build problem):
-# make[2]: *** No rule to make target '../../lib/libss.a', needed by
-# 'tst_libext2fs'.  Stop.
-=sys-fs/e2fsprogs-1.42.11
-=sys-libs/e2fsprogs-libs-1.42.11
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (19 Jul 2014)
 # Dev channel releases are only for people who are developers or want more

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.11.ebuild,v 1.3 2014/08/05 07:47:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.11.ebuild,v 1.4 2014/08/05 09:01:52 vapier Exp $
 
 EAPI=4
 
@@ -38,12 +38,13 @@ src_prepare() {
 		epatch "${WORKDIR}"/${PN}-1.42.9-mint-r1.patch
 	fi
 	epatch "${FILESDIR}"/${PN}-1.42.10-fix-build-cflags.patch
+	epatch "${FILESDIR}"/${PN}-1.42.11-prototypes.patch
 	# blargh ... trick e2fsprogs into using e2fsprogs-libs
 	rm -rf doc
 	sed -i -r \
 		-e 's:@LIBINTL@:@LTLIBINTL@:' \
-		-e '/^LIB(COM_ERR|SS)/s:[$][(]LIB[)]/lib([^@]*)@LIB_EXT@:-l\1:' \
-		-e '/^DEPLIB(COM_ERR|SS)/s:=.*:=:' \
+		-e '/^(STATIC_)?LIB(COM_ERR|SS)/s:[$][(]LIB[)]/lib([^@]*)@(STATIC_)?LIB_EXT@:-l\1:' \
+		-e '/^DEP(STATIC_)?LIB(COM_ERR|SS)/s:=.*:=:' \
 		MCONFIG.in || die "muck libs" #122368
 	sed -i -r \
 		-e '/^LIB_SUBDIRS/s:lib/(et|ss)::g' \

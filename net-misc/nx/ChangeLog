@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.85 2014/05/21 06:48:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.86 2014/08/05 09:11:37 voyageur Exp $
+
+*nx-3.5.0.27 (05 Aug 2014)
+
+  05 Aug 2014; Bernard Cafarelli <voyageur@gentoo.org> -nx-3.5.0.20-r1.ebuild,
+  -nx-3.5.0.21.ebuild, -nx-3.5.0.22.ebuild, +nx-3.5.0.27.ebuild:
+  Version bump, clean some versions
 
 *nx-3.5.0.24 (21 May 2014)
 
