@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ibus-qt-1.3.3.ebuild,v 1.1 2014/08/01 07:33:54 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ibus-qt-1.3.3.ebuild,v 1.2 2014/08/05 10:13:50 dlan Exp $
 
 EAPI="5"
 inherit cmake-utils eutils multilib
@@ -26,6 +26,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 DOCS="AUTHORS README TODO"
+
+PATCHES=( "${FILESDIR}"/${PN}-1.3-doc.patch )
 
 mycmakeargs="-DLIBDIR=$(get_libdir) all"
 

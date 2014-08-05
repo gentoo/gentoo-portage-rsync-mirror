@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.22 2014/08/01 07:33:54 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.23 2014/08/05 10:13:50 dlan Exp $
+
+  05 Aug 2014; Yixun Lan <dlan@gentoo.org> ibus-qt-1.3.3.ebuild,
+  +files/ibus-qt-1.3-doc.patch:
+  fix bug 519032, remove hard doxygen dep, thanks Johannes Janssen
 
 *ibus-qt-1.3.3 (01 Aug 2014)
 

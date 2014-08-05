@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/sshguard
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.20 2013/01/31 16:36:47 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.21 2014/08/05 10:22:37 jer Exp $
+
+*sshguard-1.5-r3 (05 Aug 2014)
+
+  05 Aug 2014; Jeroen Roovers <jer@gentoo.org> +sshguard-1.5-r3.ebuild,
+  +files/sshguard-1.5-day-starts-with-0.patch:
+  Fix parsing metalog entries with days starting with 0 by Amyas (bug #518988).
 
   31 Jan 2013; Jeroen Roovers <jer@gentoo.org> files/sshguard.confd:
   Fix case in man page reference, by Marckus J. (bug #454788).
