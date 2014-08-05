@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-mercurial/trac-mercurial-1.0.0.3_pre20130206.ebuild,v 1.1 2013/02/06 13:52:09 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-mercurial/trac-mercurial-1.0.0.3_pre20130206.ebuild,v 1.2 2014/08/04 23:58:51 williamh Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ EHG_REVISION="8df754d9b36a"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+# KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools"

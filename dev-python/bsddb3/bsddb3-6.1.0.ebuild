@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.1.0.ebuild,v 1.6 2014/08/03 23:19:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.1.0.ebuild,v 1.7 2014/08/04 23:46:36 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -17,16 +17,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-lin
 IUSE="doc"
 
 RDEPEND="
-	|| (
-		sys-libs/db:6.1=
-		sys-libs/db:6.0=
-		sys-libs/db:5.3=
-		sys-libs/db:5.2=
-		sys-libs/db:5.1=
-		sys-libs/db:5.0=
-		sys-libs/db:4.8=
-		sys-libs/db:4.7=
-	)
+	>=sys-libs/db-4.7
+	<sys-libs/db-6.2:=
 "
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"

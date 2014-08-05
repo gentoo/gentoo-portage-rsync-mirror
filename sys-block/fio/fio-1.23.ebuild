@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-1.23.ebuild,v 1.1 2008/12/07 02:37:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-1.23.ebuild,v 1.2 2014/08/05 01:16:05 robbat2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 

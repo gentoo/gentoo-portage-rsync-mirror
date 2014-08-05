@@ -1,9 +1,16 @@
 # ChangeLog for app-emulation/playonlinux
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.20 2013/02/14 07:11:40 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.21 2014/08/05 00:54:27 zx2c4 Exp $
+
+*playonlinux-4.2.4 (05 Aug 2014)
+
+  05 Aug 2014; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +files/playonlinux-4.2.4-binary-plugin.patch,
+  +files/playonlinux-4.2.4-pol-bash.patch, +files/playonlinux-pkg.1,
+  +files/playonlinux.1, +playonlinux-4.2.4.ebuild:
+  Version bump.
 
 *playonlinux-4.1.9 (14 Feb 2013)
 
   14 Feb 2013; Michael Weber <xmw@gentoo.org> +playonlinux-4.1.9.ebuild:
   Version bump (bug 424207)
-

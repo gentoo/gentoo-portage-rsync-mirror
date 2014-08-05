@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15949 2014/08/04 20:43:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15951 2014/08/05 00:08:28 williamh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (05 Aug 2014)
+# Abandoned upstream with no in-tree consumers. Likely added by mistake
+# when evaluating the dependencies of dev-python/passlib. Additionally,
+# Yamlog's public source code repository has been removed.
+# Removal in 30 days, bug #518920.
+dev-python/Bcryptor
+dev-python/Yamlog
 
 # Robin H. Johnson <robbat2@gentoo.org> (04 Aug 2014)
 # Masked for testing, presently fails upstream testsuite:
@@ -647,10 +655,6 @@ www-apache/mod_spdy
 # Mask 5.1 series because the backport of the CVE-2012-5627
 # has not be done. bug #446240 comment 2
 =dev-db/mariadb-5.1.67
-
-# Patrick Lauer <patrick@gentoo.org> (19 Aug 2013)
-# Masking live ebuilds
-=www-apps/trac-mercurial-1.0.0.3_pre20130206
 
 # Tom Wijsman <TomWij@gentoo.org> (15 Aug 2013)
 # Dependencies are unable to satisfy current version,

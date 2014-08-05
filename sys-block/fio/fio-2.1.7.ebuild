@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.7.ebuild,v 1.1 2014/04/01 05:44:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.7.ebuild,v 1.2 2014/08/05 01:16:05 robbat2 Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -26,6 +26,7 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	chmod g-w "${T}"
 	sed -i '/^DEBUGFLAGS/s, -D_FORTIFY_SOURCE=2,,g' Makefile || die
 	epatch_user
 }
