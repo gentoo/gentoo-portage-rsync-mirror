@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.706 2014/08/04 02:13:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.707 2014/08/05 19:13:25 maksbotan Exp $
+
+  05 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org> package.use.mask:
+  Mask app-leechcraft/lc-azoth[sarin]
 
   04 Aug 2014; Mike Frysinger <vapier@gentoo.org> package.use.mask:
   Mask x86-specific flashrom USE flags in base.

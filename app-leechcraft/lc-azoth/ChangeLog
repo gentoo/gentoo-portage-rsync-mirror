@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-azoth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.22 2014/08/03 18:45:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.23 2014/08/05 19:30:18 maksbotan Exp $
+
+  05 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org> lc-azoth-9999.ebuild,
+  metadata.xml:
+  Add sarin plugin to 9999. Thanks to 0xd34df00d
 
 *lc-azoth-0.6.70 (03 Aug 2014)
 

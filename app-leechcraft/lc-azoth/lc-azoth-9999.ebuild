@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.11 2014/06/16 17:29:49 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.12 2014/08/05 19:30:18 maksbotan Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ KEYWORDS=""
 IUSE="debug doc astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier
 		+chathistory +crypt +depester +embedmedia +herbicide +hili +isterique
 		+juick +keeso +lastseen	+metacontacts media +msn +murm +latex +nativeemoticons
-		+otroid +spell shx +standardstyles +vader +woodpecker +xmpp +xtazy"
+		+otroid +spell sarin shx +standardstyles +vader +woodpecker +xmpp +xtazy"
 
 COMMON_DEPEND="~app-leechcraft/lc-core-${PV}
 		dev-libs/qjson
@@ -32,7 +32,9 @@ COMMON_DEPEND="~app-leechcraft/lc-core-${PV}
 			~app-leechcraft/lc-xtazy-${PV}
 			dev-qt/qtdbus:4
 		)
-		crypt? ( app-crypt/qca app-crypt/qca-gnupg )"
+		crypt? ( app-crypt/qca app-crypt/qca-gnupg )
+		sarin? ( net-libs/tox )
+"
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen[dot] )"
 RDEPEND="${COMMON_DEPEND}
@@ -79,6 +81,7 @@ src_configure() {
 		$(cmake-utils_use_enable murm AZOTH_MURM)
 		$(cmake-utils_use_enable nativeemoticons AZOTH_NATIVEEMOTICONS)
 		$(cmake-utils_use_enable otroid AZOTH_OTROID)
+		$(cmake-utils_use_enable sarin AZOTH_SARIN)
 		$(cmake-utils_use_enable spell AZOTH_ROSENTHAL)
 		$(cmake-utils_use_enable shx AZOTH_SHX)
 		$(cmake-utils_use_enable standardstyles AZOTH_STANDARDSTYLES)

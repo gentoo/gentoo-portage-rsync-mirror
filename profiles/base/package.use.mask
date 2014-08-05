@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.588 2014/08/04 02:13:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.589 2014/08/05 19:13:25 maksbotan Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Maxim Koltsov <maksbotan@gentoo.org> (05 Aug 2014)
+# net-libs/tox is in mva overlay only ATM
+app-leechcraft/lc-azoth sarin
 
 # Mike Frysinger <vapier@gentoo.org> (04 Aug 2014)
 # Mask flashrom drivers that only work on x86 due to in/out asm insns #454024
