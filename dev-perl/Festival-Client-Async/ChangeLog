@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Festival-Client-Async
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/ChangeLog,v 1.17 2012/06/24 12:59:44 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/ChangeLog,v 1.18 2014/08/05 13:24:04 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Festival-Client-Async-0.30.300.ebuild:
+  Fix DESCRIPTION
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.55-r2.ebuild,v 1.2 2014/08/04 13:51:11 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.55-r2.ebuild,v 1.3 2014/08/05 12:47:08 gienah Exp $
 
 EAPI=3
 inherit multilib eutils flag-o-matic pax-utils
@@ -28,7 +28,7 @@ KEYWORDS=""
 IUSE="+asdf ldb source +threads +unicode debug doc pax_kernel zlib"
 
 DEPEND="doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )
-	pax_kernel? ( sys-apps/paxctl )"
+	pax_kernel? ( sys-apps/paxctl sys-apps/elfix )"
 RDEPEND="asdf? ( >=dev-lisp/gentoo-init-0.1 )"
 
 # Disable warnings about executable stacks, as this won't be fixed soon by upstream

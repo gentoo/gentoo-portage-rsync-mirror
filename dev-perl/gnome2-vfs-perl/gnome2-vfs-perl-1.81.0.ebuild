@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.81.0.ebuild,v 1.7 2012/05/04 04:10:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.81.0.ebuild,v 1.8 2014/08/05 13:19:06 zlogene Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ MODULE_AUTHOR=TSCH
 MODULE_VERSION=1.081
 inherit perl-module
 
-DESCRIPTION="Perl interface to the 2.x series of the Gnome Virtual File System libraries."
+DESCRIPTION="Perl interface to the 2.x series of the Gnome Virtual File System libraries"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

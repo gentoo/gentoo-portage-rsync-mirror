@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.8.1.ebuild,v 1.1 2014/06/02 12:27:36 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.8.1.ebuild,v 1.2 2014/08/05 13:12:28 voyageur Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND=">=app-admin/eselect-wxwidgets-0.7-r1
 	>=dev-db/sqlite-3.7
 	>=dev-libs/tinyxml-2.6.1-r1[stl]
 	net-dns/libidn
-	>=net-libs/gnutls-2.8.3
+	>=net-libs/gnutls-3.1.12
 	aqua? ( >=x11-libs/wxGTK-2.8.12:2.8[aqua] )
 	!aqua? ( >=x11-libs/wxGTK-2.8.12:2.8[X] x11-misc/xdg-utils )
 	dbus? ( sys-apps/dbus )"

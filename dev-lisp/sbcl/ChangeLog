@@ -1,6 +1,15 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.208 2014/08/04 13:51:11 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.209 2014/08/05 12:47:08 gienah Exp $
+
+  05 Aug 2014; Mark Wright <gienah@gentoo.org> sbcl-1.0.55-r1.ebuild,
+  sbcl-1.0.55-r2.ebuild, sbcl-1.1.15.ebuild, sbcl-1.1.16.ebuild,
+  sbcl-1.1.17.ebuild, sbcl-1.1.18.ebuild, sbcl-1.2.2.ebuild:
+  Fix Bug 519040 - dev-lisp/sbcl-1.2.2: emerge fails on PaX system: paxctl not
+  set on internal sbcl, thanks to Klaus Kusche for reporting. Fix Bug 517000 -
+  dev-lisp/sbcl should not invoke paxctl directly, thanks to Luis Ressel for the
+  earlier fix and reporting.  Add to IUSE pax-kernel and to DEPEND pax_kernel? (
+  sys-apps/paxctl sys-apps/elfix ).
 
   04 Aug 2014; Mark Wright <gienah@gentoo.org> sbcl-1.0.55-r1.ebuild,
   sbcl-1.0.55-r2.ebuild, sbcl-1.1.15.ebuild, sbcl-1.1.16.ebuild,

@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.116 2014/06/02 12:27:36 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.117 2014/08/05 13:12:28 voyageur Exp $
+
+  05 Aug 2014; Bernard Cafarelli <voyageur@gentoo.org> -filezilla-3.7.4.ebuild,
+  -filezilla-3.7.4.1.ebuild, -filezilla-3.8.0.ebuild, filezilla-3.8.1.ebuild:
+  Update gnutls dependency, thanks Nils Stöckmann in bug #517014. Also clean
+  some versions
 
 *filezilla-3.8.1 (02 Jun 2014)
 

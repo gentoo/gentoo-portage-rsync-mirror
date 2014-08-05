@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.7.0.ebuild,v 1.6 2012/03/31 12:10:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.7.0.ebuild,v 1.7 2014/08/05 13:18:14 zlogene Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ MODULE_AUTHOR=TSCH
 MODULE_VERSION=1.007
 inherit perl-module
 
-DESCRIPTION="Create user interfaces directly from Glade XML files."
+DESCRIPTION="Create user interfaces directly from Glade XML files"
 HOMEPAGE="http://gtk2-perl.sf.net/ ${HOMEPAGE}"
 
 SLOT="0"
