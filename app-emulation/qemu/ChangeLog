@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.278 2014/08/05 08:24:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.280 2014/08/05 08:54:59 vapier Exp $
+
+  05 Aug 2014; Mike Frysinger <vapier@gentoo.org> qemu-2.1.0.ebuild,
+  qemu-9999.ebuild:
+  Unify configure lists so that we disable all the softmmu flags when building
+  the user targets to avoid automagic deps leaking in.
+
+  05 Aug 2014; Mike Frysinger <vapier@gentoo.org> qemu-2.0.0-r1.ebuild,
+  qemu-2.1.0.ebuild, qemu-9999.ebuild:
+  Add USE=infiniband to control librdma automagic dep.
 
   05 Aug 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml,
   qemu-2.1.0.ebuild, qemu-9999.ebuild:

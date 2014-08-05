@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0-r1.ebuild,v 1.12 2014/08/05 08:21:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0-r1.ebuild,v 1.13 2014/08/05 08:38:15 vapier Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.qemu.org http://www.linux-kvm.org"
 LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="accessibility +aio alsa bluetooth +caps +curl debug +fdt glusterfs \
-gtk iscsi +jpeg \
+gtk infiniband iscsi +jpeg \
 kernel_linux kernel_FreeBSD lzo ncurses nfs nls opengl +png pulseaudio python \
 rbd sasl +seccomp sdl selinux smartcard snappy spice ssh static static-softmmu \
 static-user systemtap tci test +threads tls usb usbredir +uuid vde +vhost-net \
@@ -70,6 +70,7 @@ SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	curl? ( >=net-misc/curl-7.15.4[static-libs(+)] )
 	fdt? ( >=sys-apps/dtc-1.4.0[static-libs(+)] )
 	glusterfs? ( >=sys-cluster/glusterfs-3.4.0[static-libs(+)] )
+	infiniband? ( sys-infiniband/librdmacm[static-libs(+)] )
 	jpeg? ( virtual/jpeg[static-libs(+)] )
 	lzo? ( dev-libs/lzo:2[static-libs(+)] )
 	ncurses? ( sys-libs/ncurses[static-libs(+)] )
@@ -335,6 +336,7 @@ qemu_src_configure() {
 			$(use_enable curl)
 			$(use_enable fdt)
 			$(use_enable glusterfs)
+			$(use_enable infiniband rdma)
 			$(use_enable iscsi libiscsi)
 			$(use_enable jpeg vnc-jpeg)
 			$(use_enable kernel_linux kvm)
