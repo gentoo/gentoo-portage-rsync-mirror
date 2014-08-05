@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=!native? ( sys-devel/gcc[vanilla] ) native? ( || ( dev-lang/ekopath dev-lang/path64 ) ) valgrind? ( dev-util/valgrind ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=!native? ( sys-devel/gcc[vanilla] ) native? ( || ( dev-lang/ekopath dev-lang/path64 ) ) valgrind? ( dev-util/valgrind ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Path64 Compiler Suite Community Edition
 EAPI=4
 HOMEPAGE=http://www.pathscale.com/ekopath-compiler-suite
@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=!native? ( sys-devel/gcc[vanilla] ) native? ( || ( dev-lang/ekopath dev-lang/path64 ) ) valgrind? ( dev-util/valgrind )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~xarthisius/distfiles/path64-suite-1.0.0_pre20120223.tbz2 http://dev.gentoo.org/~xarthisius/distfiles/path64-compiler-1.0.0_pre20120223.tbz2 assembler? ( http://dev.gentoo.org/~xarthisius/distfiles/path64-assembler-1.0.0_pre20120223.tbz2 ) debugger? ( http://dev.gentoo.org/~xarthisius/distfiles/path64-debugger-1.0.0_pre20120223.tbz2 )
-_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=e2e3d00ba06877382908a2517e193cd1

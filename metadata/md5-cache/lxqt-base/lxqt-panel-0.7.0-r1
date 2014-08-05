@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 >=lxde-base/menu-cache-0.3.3 lxqt-base/liblxqt lxqt-base/liblxqt-mount lxqt-base/libsysstat lxqt-base/lxqt-globalkeys razorqt-base/libqtxdg x11-libs/libX11 cpuload? ( sys-libs/libstatgrab ) networkmonitor? ( sys-libs/libstatgrab ) sensors? ( sys-apps/lm_sensors ) sysstat? ( lxqt-base/libsysstat ) volume? ( alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) ) worldclock? ( dev-libs/icu:= ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 >=lxde-base/menu-cache-0.3.3 lxqt-base/liblxqt lxqt-base/liblxqt-mount lxqt-base/libsysstat lxqt-base/lxqt-globalkeys razorqt-base/libqtxdg x11-libs/libX11 cpuload? ( sys-libs/libstatgrab ) networkmonitor? ( sys-libs/libstatgrab ) sensors? ( sys-apps/lm_sensors ) sysstat? ( lxqt-base/libsysstat ) volume? ( alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) ) worldclock? ( dev-libs/icu:= ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=LXQt desktop panel and plugins
 EAPI=5
 HOMEPAGE=http://www.lxqt.org/
@@ -10,5 +10,5 @@ RDEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 >=lxde-base/menu-cache-0.
 REQUIRED_USE=volume? ( || ( alsa pulseaudio ) )
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/lxqt/0.7.0/lxqt-panel-0.7.0.tar.xz
-_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=9fc1d5935908622ee299c2abd9775ab2

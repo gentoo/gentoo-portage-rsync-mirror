@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare pretend test unpack
-DEPEND=~app-leechcraft/lc-core-9999 dev-qt/qtdbus:4 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
+DEPEND=~app-leechcraft/lc-core-9999 dev-qt/qtdbus:4 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
 DESCRIPTION=Fetches info about current tune and provides it to other plugins
 EAPI=5
 HOMEPAGE=http://leechcraft.org/
@@ -7,5 +7,5 @@ IUSE=debug
 LICENSE=Boost-1.0
 RDEPEND=~app-leechcraft/lc-core-9999 dev-qt/qtdbus:4
 SLOT=0
-_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	leechcraft	6609acc541f2bc8ba65e461352fdf169	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	leechcraft	6609acc541f2bc8ba65e461352fdf169	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=046a1864aeecd9ffe8426d627d204cb5

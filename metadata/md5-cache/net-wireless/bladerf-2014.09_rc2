@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=dev-libs/libusb-1.0.16 virtual/pkgconfig tecla? ( dev-libs/libtecla ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/pkgconfig
+DEPEND=>=dev-libs/libusb-1.0.16 virtual/pkgconfig tecla? ( dev-libs/libtecla ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/pkgconfig
 DESCRIPTION=Libraries for supporing the BladeRF hardware from Nuand
 EAPI=5
 HOMEPAGE=http://nuand.com/
@@ -10,5 +10,5 @@ PDEPEND=>=net-wireless/bladerf-firmware-1.7.1 >=net-wireless/bladerf-fpga-0.0.6
 RDEPEND=>=dev-libs/libusb-1.0.16
 SLOT=0/2014.09_rc2
 SRC_URI=https://github.com/Nuand/bladeRF/archive/bladeRF-2014.09-rc2.tar.gz
-_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	da001465a2e939c93f7ae16947ce3438
+_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=504a2d066fbbdfe2ccdd576f6cf67d34

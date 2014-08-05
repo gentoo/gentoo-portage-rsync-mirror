@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=>=dev-qt/qtcore-4.6:4 >=dev-qt/qtgui-4.6:4 >=dev-qt/qtsql-4.6:4 sys-libs/zlib x11-libs/libX11 dcc_video? ( media-libs/libv4l theora? ( media-libs/libogg media-libs/libtheora ) ) kde? ( >=kde-base/kdelibs-4 ) oss? ( audiofile? ( media-libs/audiofile ) ) perl? ( dev-lang/perl ) phonon? ( || ( media-libs/phonon >=dev-qt/qtphonon-4.6:4 ) ) qt-dbus? ( >=dev-qt/qtdbus-4.6:4 ) ssl? ( dev-libs/openssl ) webkit? ( >=dev-qt/qtwebkit-4.6:4 ) virtual/pkgconfig x11-proto/scrnsaverproto nls? ( sys-devel/gettext ) doc? ( app-doc/doxygen ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) python? ( =dev-lang/python-2* )
+DEPEND=>=dev-qt/qtcore-4.6:4 >=dev-qt/qtgui-4.6:4 >=dev-qt/qtsql-4.6:4 sys-libs/zlib x11-libs/libX11 dcc_video? ( media-libs/libv4l theora? ( media-libs/libogg media-libs/libtheora ) ) kde? ( >=kde-base/kdelibs-4 ) oss? ( audiofile? ( media-libs/audiofile ) ) perl? ( dev-lang/perl ) phonon? ( || ( media-libs/phonon >=dev-qt/qtphonon-4.6:4 ) ) qt-dbus? ( >=dev-qt/qtdbus-4.6:4 ) ssl? ( dev-libs/openssl ) webkit? ( >=dev-qt/qtwebkit-4.6:4 ) virtual/pkgconfig x11-proto/scrnsaverproto nls? ( sys-devel/gettext ) doc? ( app-doc/doxygen ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) python? ( =dev-lang/python-2* )
 DESCRIPTION=Advanced IRC Client
 EAPI=5
 HOMEPAGE=http://www.kvirc.net/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-qt/qtcore-4.6:4 >=dev-qt/qtgui-4.6:4 >=dev-qt/qtsql-4.6:4 sys-libs
 REQUIRED_USE=audiofile? ( oss ) theora? ( dcc_video )
 SLOT=4
 SRC_URI=http://people.apache.org/~Arfrever/gentoo/kvirc-4.4_pre6250.tar.xz
-_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=867289d1543e4e4ed880ccb6b8a0e876

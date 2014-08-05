@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.108 2014/07/11 08:21:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.109 2014/08/05 22:59:44 johu Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -31,7 +31,7 @@ WANT_CMAKE="${WANT_CMAKE:-always}"
 # @ECLASS-VARIABLE: CMAKE_MIN_VERSION
 # @DESCRIPTION:
 # Specify the minimum required CMake version.
-CMAKE_MIN_VERSION="${CMAKE_MIN_VERSION:-2.8.9}"
+CMAKE_MIN_VERSION="${CMAKE_MIN_VERSION:-2.8.12}"
 
 # @ECLASS-VARIABLE: CMAKE_REMOVE_MODULES_LIST
 # @DESCRIPTION:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/factory_girl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/factory_girl/ChangeLog,v 1.4 2014/05/03 06:14:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/factory_girl/ChangeLog,v 1.5 2014/08/05 22:59:08 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> factory_girl-4.2.0-r1.ebuild:
+  Remove ruby18 target.
 
 *factory_girl-4.4.0 (03 May 2014)
 
