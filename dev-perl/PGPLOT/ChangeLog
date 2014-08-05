@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PGPLOT
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PGPLOT/ChangeLog,v 1.21 2014/08/04 17:43:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PGPLOT/ChangeLog,v 1.22 2014/08/05 17:52:50 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> PGPLOT-2.210.0.ebuild:
+  Bump to EAPI=5
 
   04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> PGPLOT-2.210.0.ebuild:
   Fix DESCRIPTION

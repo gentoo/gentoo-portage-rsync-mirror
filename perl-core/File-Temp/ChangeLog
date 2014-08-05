@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/File-Temp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.67 2014/07/25 21:31:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.68 2014/08/05 17:48:21 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> File-Temp-0.220.0-r1.ebuild,
+  File-Temp-0.230.400.ebuild:
+  Fix DESCRIPTION
 
 *File-Temp-0.220.0-r1 (25 Jul 2014)
 

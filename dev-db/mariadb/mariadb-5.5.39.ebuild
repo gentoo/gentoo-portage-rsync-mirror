@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.5.38-r1.ebuild,v 1.1 2014/07/29 03:28:26 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.5.39.ebuild,v 1.1 2014/08/05 17:40:30 grknight Exp $
 
 EAPI="5"
 MY_EXTRAS_VER="20140729-0112Z"
@@ -64,7 +64,7 @@ src_test() {
 		# create symlink for the tests to find mysql_tzinfo_to_sql
 		ln -s "${CMAKE_BUILD_DIR}/sql/mysql_tzinfo_to_sql" "${S}/sql/"
 
-		# These are failing in MySQL 5.5 for now and are believed to be
+		# These are failing in MariaDB 5.5 for now and are believed to be
 		# false positives:
 		#
 		# main.information_schema, binlog.binlog_statement_insert_delayed,
@@ -87,7 +87,8 @@ src_test() {
 		pushd "${TESTDIR}"
 
 		# run mysql-test tests
-		perl mysql-test-run.pl --force --vardir="${S}/mysql-test/var-tests"
+		perl mysql-test-run.pl --force --vardir="${S}/mysql-test/var-tests" \
+			--testcase-timeout=30
 		retstatus_tests=$?
 		[[ $retstatus_tests -eq 0 ]] || eerror "tests failed"
 		has usersandbox $FEATURES && eerror "Some tests may fail with FEATURES=usersandbox"

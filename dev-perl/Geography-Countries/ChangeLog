@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Geography-Countries
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/ChangeLog,v 1.30 2012/06/24 13:00:03 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/ChangeLog,v 1.31 2014/08/05 17:39:45 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Geography-Countries-2009041301.0.0.ebuild:
+  Fix DESCRIPTION
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Element-Extended
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/ChangeLog,v 1.42 2012/12/05 11:32:15 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/ChangeLog,v 1.43 2014/08/05 17:41:29 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  HTML-Element-Extended-1.180.0.ebuild:
+  Fix DESCRIPTION
 
   05 Dec 2012; Fabian Groffen <grobian@gentoo.org>
   HTML-Element-Extended-1.180.0.ebuild:

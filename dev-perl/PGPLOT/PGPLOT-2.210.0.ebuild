@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PGPLOT/PGPLOT-2.210.0.ebuild,v 1.5 2014/08/04 17:43:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PGPLOT/PGPLOT-2.210.0.ebuild,v 1.6 2014/08/05 17:52:50 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=KGB
 MODULE_VERSION=2.21

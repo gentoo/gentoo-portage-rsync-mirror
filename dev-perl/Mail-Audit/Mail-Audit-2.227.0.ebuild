@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/Mail-Audit-2.227.0.ebuild,v 1.5 2012/04/16 21:28:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/Mail-Audit-2.227.0.ebuild,v 1.6 2014/08/05 17:44:01 zlogene Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ MODULE_AUTHOR=RJBS
 MODULE_VERSION=2.227
 inherit perl-module
 
-DESCRIPTION="Mail sorting/delivery module for Perl."
+DESCRIPTION="Mail sorting/delivery module for Perl"
 
 SLOT="0"
 KEYWORDS="amd64 ppc x86"

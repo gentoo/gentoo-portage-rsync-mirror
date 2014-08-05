@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-SimpleParse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-SimpleParse/ChangeLog,v 1.24 2012/06/24 12:59:05 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-SimpleParse/ChangeLog,v 1.25 2014/08/05 17:43:13 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  HTML-SimpleParse-0.120.0.ebuild:
+  Fix DESCRIPTION
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

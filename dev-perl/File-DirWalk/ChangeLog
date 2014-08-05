@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-DirWalk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/ChangeLog,v 1.28 2013/01/06 20:38:50 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/ChangeLog,v 1.29 2014/08/05 17:39:07 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> File-DirWalk-0.400.0.ebuild:
+  Fix DESCRIPTION
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -File-DirWalk-0.300.0.ebuild:
   Cleanup

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15953 2014/08/05 09:02:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15954 2014/08/05 18:00:30 williamh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# William Hubbs <williamh@gentoo.org> (5 Aug 2014)
+# Masked by QA for removal in 30 days.
+# The unmasked version is very old, there are multiple open security
+# bugs and several version bumps. The package appears to be abandoned.
+# This will be removed on 5 Sep 2014 unless someone takes over
+# maintenance and brings it up to date.
+# See bug #518886
+www-apps/joomla
 
 # Sergey Popov <pinkbyte@gentoo.org> (05 Aug 2014)
 # Lacks patch in FILESDIR => fails to build
@@ -920,10 +929,6 @@ sci-chemistry/webmo
 # - doesn't build when boehm-gc is built without threads
 # - no SLOTting yet!
 =dev-scheme/guile-2.0.0
-
-# Christian Faulhammer <fauli@gentoo.org> (12 Mar 2011)
-# Mask for testing
->=www-apps/joomla-1.6.0
 
 # Ryan Hill <dirtyepic@gentoo.org> (30 Mar 2011)
 # Masked indefinitely (until 0.40 is released).

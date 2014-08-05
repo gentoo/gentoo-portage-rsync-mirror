@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LongString/Test-LongString-0.150.0.ebuild,v 1.6 2012/11/23 13:13:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LongString/Test-LongString-0.150.0.ebuild,v 1.7 2014/08/05 17:46:53 zlogene Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ MODULE_AUTHOR=RGARCIA
 MODULE_VERSION=0.15
 inherit perl-module
 
-DESCRIPTION="A library to test long strings."
+DESCRIPTION="A library to test long strings"
 
 SLOT="0"
 KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"

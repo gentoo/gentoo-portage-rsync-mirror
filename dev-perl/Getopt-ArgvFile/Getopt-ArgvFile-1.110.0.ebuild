@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-ArgvFile/Getopt-ArgvFile-1.110.0.ebuild,v 1.2 2011/09/03 21:05:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-ArgvFile/Getopt-ArgvFile-1.110.0.ebuild,v 1.3 2014/08/05 17:40:44 zlogene Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ MODULE_AUTHOR=JSTENZEL
 MODULE_VERSION=1.11
 inherit perl-module
 
-DESCRIPTION="This module is a simple supplement to other option handling modules."
+DESCRIPTION="This module is a simple supplement to other option handling modules"
 
 SLOT="0"
 LICENSE="|| ( Artistic Artistic-2 )" # Artistic+
