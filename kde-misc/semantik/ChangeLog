@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/semantik
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.13 2014/01/18 07:03:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.14 2014/08/05 16:31:42 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> semantik-0.8.4.ebuild,
+  semantik-0.9.0.ebuild, semantik-0.9.1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *semantik-0.9.1 (18 Jan 2014)
 

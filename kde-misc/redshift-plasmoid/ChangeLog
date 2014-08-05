@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/redshift-plasmoid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/redshift-plasmoid/ChangeLog,v 1.2 2014/07/25 02:08:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/redshift-plasmoid/ChangeLog,v 1.3 2014/08/05 16:31:43 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> redshift-plasmoid-0.6.2.ebuild,
+  redshift-plasmoid-1.0.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *redshift-plasmoid-1.0 (25 Jul 2014)
 

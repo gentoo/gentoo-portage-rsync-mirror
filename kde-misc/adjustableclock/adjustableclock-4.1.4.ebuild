@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/adjustableclock/adjustableclock-4.1.4.ebuild,v 1.1 2014/03/14 07:58:39 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/adjustableclock/adjustableclock-4.1.4.ebuild,v 1.2 2014/08/05 16:31:41 mrueg Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ KDE_LINGUAS_DIR="applet/locale"
 KDE_LINGUAS="de et pl pt pt_BR sv tr uk"
 inherit kde4-base
 
-DESCRIPTION="Plasmoid to show date and time in adjustable format using rich text."
+DESCRIPTION="Plasmoid to show date and time in adjustable format using rich text"
 HOMEPAGE="http://kde-look.org/content/show.php/Adjustable+Clock?content=92825"
 SRC_URI="http://kde-look.org/CONTENT/content-files/92825-${P}.tar.bz2"
 

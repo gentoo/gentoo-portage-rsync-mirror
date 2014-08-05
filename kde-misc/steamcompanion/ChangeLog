@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/steamcompanion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/steamcompanion/ChangeLog,v 1.13 2014/04/24 15:32:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/steamcompanion/ChangeLog,v 1.14 2014/08/05 16:31:41 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> steamcompanion-0.5.4-r1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   24 Apr 2014; Johannes Huber <johu@gentoo.org> -steamcompanion-0.5.4.ebuild,
   steamcompanion-0.5.4-r1.ebuild:

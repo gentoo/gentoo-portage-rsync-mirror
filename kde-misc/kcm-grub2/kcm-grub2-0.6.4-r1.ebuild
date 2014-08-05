@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/kcm-grub2-0.6.4-r1.ebuild,v 1.2 2014/07/29 11:21:21 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/kcm-grub2-0.6.4-r1.ebuild,v 1.3 2014/08/05 16:31:42 mrueg Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ KDE_LINGUAS="ca ca@valencia cs da de el es et fi fr ga gl hu it lt nl pa pl pt
 pt_BR ro ru sk sl sv uk tr zh_TW"
 inherit kde4-base
 
-DESCRIPTION="KCModule for configuring the GRUB2 bootloader."
+DESCRIPTION="KCModule for configuring the GRUB2 bootloader"
 HOMEPAGE="http://kde-apps.org/content/show.php?content=139643"
 SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 

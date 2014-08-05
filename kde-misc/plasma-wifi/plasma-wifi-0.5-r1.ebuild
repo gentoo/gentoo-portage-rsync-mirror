@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-wifi/plasma-wifi-0.5-r1.ebuild,v 1.1 2013/06/21 22:53:55 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-wifi/plasma-wifi-0.5-r1.ebuild,v 1.2 2014/08/05 16:31:41 mrueg Exp $
 
 EAPI=5
 
 inherit kde4-base
 
-DESCRIPTION="KDE4 plasmoid. Displays the currect signal strength."
+DESCRIPTION="KDE4 plasmoid. Displays the currect signal strength"
 HOMEPAGE="http://www.kde-look.org/content/show.php/cpuload?content=79476"
 SRC_URI="http://kde-look.org/CONTENT/content-files/79476-${P}.tgz"
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/plasmoid-workflow
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasmoid-workflow/ChangeLog,v 1.1 2013/09/01 01:46:55 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasmoid-workflow/ChangeLog,v 1.2 2014/08/05 16:31:45 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> plasmoid-workflow-0.4.1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *plasmoid-workflow-0.4.1 (01 Sep 2013)
 
@@ -8,4 +11,3 @@
   +plasmoid-workflow-0.4.1.ebuild, +metadata.xml:
   New package, bug 464018. Thanks to Matija "hook" Šuklje for the initial
   ebuild.
-

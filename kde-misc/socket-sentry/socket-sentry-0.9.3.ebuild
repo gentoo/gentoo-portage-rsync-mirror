@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/socket-sentry/socket-sentry-0.9.3.ebuild,v 1.1 2013/06/22 21:30:54 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/socket-sentry/socket-sentry-0.9.3.ebuild,v 1.2 2014/08/05 16:31:48 mrueg Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit kde4-base
 MY_PN="socketsentry"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A KDE plasmoid that displays real-time network traffic on your Linux computer."
+DESCRIPTION="A KDE plasmoid that displays real-time network traffic on your Linux computer"
 HOMEPAGE="http://code.google.com/p/socket-sentry"
 SRC_URI="http://socket-sentry.googlecode.com/files/${MY_P}.tar.gz"
 

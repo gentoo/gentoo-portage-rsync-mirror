@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kolor-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kolor-manager/ChangeLog,v 1.8 2014/07/30 23:34:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kolor-manager/ChangeLog,v 1.9 2014/08/05 16:31:40 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> kolor-manager-1.0.1.ebuild,
+  kolor-manager-1.0.2.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *kolor-manager-1.0.2 (30 Jul 2014)
 
