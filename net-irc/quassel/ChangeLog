@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.172 2014/06/10 11:37:13 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.173 2014/08/05 07:35:28 patrick Exp $
+
+  05 Aug 2014; Patrick Lauer <patrick@gentoo.org> quassel-0.9.2.ebuild,
+  quassel-0.9.3.ebuild:
+  Make description more repoman-happy
 
   10 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> quassel-0.9.3.ebuild:
   x86 stable wrt bug #509496

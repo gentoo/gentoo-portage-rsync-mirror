@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r4.ebuild,v 1.3 2011/12/19 13:06:31 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r4.ebuild,v 1.4 2014/08/05 07:59:55 patrick Exp $
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Load test and measure performance on HTTP/FTP services and databases."
+DESCRIPTION="Load test and measure performance on HTTP/FTP services and databases"
 HOMEPAGE="http://jmeter.apache.org/"
 SRC_URI="mirror://apache/jakarta/jmeter/source/jakarta-${P}_src.tgz"
 COMMON_DEP="

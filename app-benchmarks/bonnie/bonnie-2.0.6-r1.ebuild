@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/bonnie-2.0.6-r1.ebuild,v 1.1 2010/10/12 18:22:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/bonnie-2.0.6-r1.ebuild,v 1.2 2014/08/05 07:59:56 patrick Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Performance Test of Filesystem I/O using standard C library calls."
+DESCRIPTION="Performance Test of Filesystem I/O using standard C library calls"
 HOMEPAGE="http://www.textuality.com/bonnie/"
 SRC_URI="http://www.textuality.com/bonnie/bonnie.tar.gz"
 

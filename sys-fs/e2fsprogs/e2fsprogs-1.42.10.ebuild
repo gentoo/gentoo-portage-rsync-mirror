@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.12 2014/08/01 11:31:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.13 2014/08/05 07:47:34 vapier Exp $
 
 EAPI=4
 
@@ -29,14 +29,6 @@ DEPEND="${RDEPEND}
 	sys-apps/texinfo"
 
 S=${WORKDIR}/${P%_pre*}
-
-pkg_setup() {
-	if [[ ! -e ${EROOT}/etc/mtab ]] ; then
-		# add some crap to deal with missing /etc/mtab #217719
-		ewarn "No /etc/mtab file, creating one temporarily"
-		echo "${PN} crap for src_test" > "${EROOT}"/etc/mtab
-	fi
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.41.8-makefile.patch

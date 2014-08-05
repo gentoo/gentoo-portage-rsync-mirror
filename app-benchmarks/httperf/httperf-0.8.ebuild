@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/httperf-0.8.ebuild,v 1.12 2012/03/19 19:06:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/httperf-0.8.ebuild,v 1.13 2014/08/05 07:59:56 patrick Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit eutils autotools toolchain-funcs
 
-DESCRIPTION="A tool from HP for measuring web server performance."
+DESCRIPTION="A tool from HP for measuring web server performance"
 HOMEPAGE="http://www.hpl.hp.com/research/linux/httperf/index.php"
 SRC_URI="ftp://ftp.hpl.hp.com/pub/${PN}/${P}.tar.gz"
 

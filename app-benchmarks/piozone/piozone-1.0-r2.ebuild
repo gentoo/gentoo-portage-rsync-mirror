@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/piozone-1.0-r2.ebuild,v 1.15 2010/11/10 19:05:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/piozone-1.0-r2.ebuild,v 1.16 2014/08/05 07:59:56 patrick Exp $
 
 inherit eutils
 
-DESCRIPTION="A hard-disk benchmarking tool."
+DESCRIPTION="A hard-disk benchmarking tool"
 HOMEPAGE="http://www.lysator.liu.se/~pen/piozone/"
 SRC_URI="ftp://ftp.lysator.liu.se/pub/unix/piozone/${P}.tar.gz"
 

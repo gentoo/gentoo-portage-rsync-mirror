@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.11.ebuild,v 1.1 2014/07/20 10:42:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.11.ebuild,v 1.2 2014/08/05 07:57:48 vapier Exp $
 
 EAPI="4"
 
@@ -36,6 +36,7 @@ src_prepare() {
 	printf 'all:\n%%:;@:\n' > doc/Makefile.in # don't bother with docs #305613
 	epatch "${FILESDIR}"/${PN}-1.42.9-no-quota.patch
 	epatch "${FILESDIR}"/${PN}-1.42.10-fix-build-cflags.patch
+	epatch "${FILESDIR}"/${PN}-1.42.11-prototypes.patch
 	eautoreconf
 }
 

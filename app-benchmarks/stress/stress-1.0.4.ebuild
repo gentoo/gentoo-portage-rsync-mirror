@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/stress-1.0.4.ebuild,v 1.4 2013/06/03 19:23:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/stress-1.0.4.ebuild,v 1.5 2014/08/05 07:59:56 patrick Exp $
 
 EAPI=4
 
 inherit flag-o-matic
 
 MY_P=${PN}-${PV/_/}
-DESCRIPTION="Imposes stressful loads on different aspects of the system."
+DESCRIPTION="Imposes stressful loads on different aspects of the system"
 HOMEPAGE="http://weather.ou.edu/~apw/projects/stress"
 SRC_URI="http://weather.ou.edu/~apw/projects/stress/${MY_P}.tar.gz"
 

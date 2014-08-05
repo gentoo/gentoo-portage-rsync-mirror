@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/bonnie++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.39 2014/07/28 12:30:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.40 2014/08/05 07:59:56 patrick Exp $
+
+  05 Aug 2014; Patrick Lauer <patrick@gentoo.org> bonnie++-1.93c.ebuild,
+  bonnie++-1.95.ebuild, bonnie++-1.96-r1.ebuild, bonnie++-1.96.ebuild,
+  bonnie++-1.97.ebuild:
+  Make description more repoman-happy
 
   28 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> bonnie++-1.97.ebuild:
   Add ~mips keyword wrt bug #518286

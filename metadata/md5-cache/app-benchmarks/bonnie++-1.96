@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install
-DESCRIPTION=Hard drive bottleneck testing benchmark suite.
+DESCRIPTION=Hard drive bottleneck testing benchmark suite
 HOMEPAGE=http://www.coker.com.au/bonnie++/
 IUSE=debug
 KEYWORDS=alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86
@@ -7,4 +7,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.coker.com.au/bonnie++/experimental/bonnie++-1.96.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ba249b083e7603d09947bc1499dec459
+_md5_=59017cf3902af8f5d1b27c9736a84637

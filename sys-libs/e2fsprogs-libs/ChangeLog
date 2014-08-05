@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.122 2014/07/23 15:38:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.123 2014/08/05 07:57:48 vapier Exp $
+
+  05 Aug 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/e2fsprogs-libs-1.42.11-prototypes.patch, e2fsprogs-libs-1.42.11.ebuild:
+  Add fix from upstream for implicit prototypes.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> e2fsprogs-libs-1.42.10.ebuild:
   Stable for x86, wrt bug #512012

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.9.3.ebuild,v 1.3 2014/06/10 11:37:13 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.9.3.ebuild,v 1.4 2014/08/05 07:35:28 patrick Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ EGIT_BRANCH="master"
 QT_MINIMAL="4.6.0"
 KDE_MINIMAL="4.4"
 
-DESCRIPTION="Qt4/KDE4 IRC client supporting a remote daemon for 24/7 connectivity."
+DESCRIPTION="Qt4/KDE4 IRC client supporting a remote daemon for 24/7 connectivity"
 HOMEPAGE="http://quassel-irc.org/"
 [[ "${PV}" == "9999" ]] || SRC_URI="http://quassel-irc.org/pub/${P/_/-}.tar.bz2"
 

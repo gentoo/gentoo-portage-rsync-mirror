@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.97.ebuild,v 1.2 2014/07/28 12:30:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.97.ebuild,v 1.3 2014/08/05 07:59:56 patrick Exp $
 
 EAPI="2"
 
 inherit eutils
 
-DESCRIPTION="Hard drive bottleneck testing benchmark suite."
+DESCRIPTION="Hard drive bottleneck testing benchmark suite"
 HOMEPAGE="http://www.coker.com.au/bonnie++/"
 SRC_URI="http://www.coker.com.au/bonnie++/experimental/${P}.tgz"
 

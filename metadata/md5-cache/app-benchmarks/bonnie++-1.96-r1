@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare
-DESCRIPTION=Hard drive bottleneck testing benchmark suite.
+DESCRIPTION=Hard drive bottleneck testing benchmark suite
 EAPI=2
 HOMEPAGE=http://www.coker.com.au/bonnie++/
 IUSE=debug
@@ -8,4 +8,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.coker.com.au/bonnie++/experimental/bonnie++-1.96.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=9087be1805947de3e3d7c2f1a2195600
+_md5_=feed03ae738ba37e06ed8d74758f4710

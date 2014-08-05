@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/bonnie
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/ChangeLog,v 1.19 2011/08/25 14:10:56 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/ChangeLog,v 1.20 2014/08/05 07:59:56 patrick Exp $
+
+  05 Aug 2014; Patrick Lauer <patrick@gentoo.org> bonnie-2.0.6-r1.ebuild,
+  bonnie-2.0.6.ebuild:
+  Make description more repoman-happy
 
   25 Aug 2011; Jeroen Roovers <jer@gentoo.org> files/Makefile.patch:
   Fix parallel make warning thanks to Michael (bug #380345).
