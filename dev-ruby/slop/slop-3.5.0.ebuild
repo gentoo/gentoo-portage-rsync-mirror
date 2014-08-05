@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/slop-3.5.0.ebuild,v 1.1 2014/03/27 12:14:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/slop-3.5.0.ebuild,v 1.2 2014/08/05 16:00:44 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 jruby"
@@ -10,7 +10,7 @@ RUBY_FAKEGEM_EXTRADOC="CHANGES.md README.md"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A simple option parser with an easy to remember syntax and friendly API."
+DESCRIPTION="A simple option parser with an easy to remember syntax and friendly API"
 HOMEPAGE="https://github.com/injekt/slop"
 SRC_URI="https://github.com/injekt/${PN}/archive/v${PV}.tar.gz -> ${P}.tgz"
 

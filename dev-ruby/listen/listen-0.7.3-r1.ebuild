@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-0.7.3-r1.ebuild,v 1.1 2014/04/20 08:34:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-0.7.3-r1.ebuild,v 1.2 2014/08/05 16:00:49 mrueg Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Listens to file modifications and notifies you about the changes."
+DESCRIPTION="Listens to file modifications and notifies you about the changes"
 HOMEPAGE="https://github.com/guard/listen"
 SRC_URI="https://github.com/guard/listen/archive/v${PV}.tar.gz -> ${P}-git.tgz"
 

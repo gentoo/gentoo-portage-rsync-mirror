@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.25.ebuild,v 1.3 2014/08/01 06:49:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.25.ebuild,v 1.4 2014/08/05 15:55:07 ottxor Exp $
 
 EAPI="4"
 
@@ -84,9 +84,13 @@ lfs_fallocate_test() {
 multilib_src_configure() {
 	lfs_fallocate_test
 	export ac_cv_header_security_pam_misc_h=$(multilib_native_usex pam) #485486
+	# We manually set --libdir to the default since on prefix, econf will set it to
+	# a value which the configure script does not recognize.  This makes it set the
+	# usrlib_execdir to a bad value. bug #518898#c2, fixed upstream for >2.25
 	ECONF_SOURCE=${S} \
 	econf \
-		--enable-fs-paths-extra=/usr/sbin:/bin:/usr/bin \
+		--enable-fs-paths-extra="${EPREFIX}/usr/sbin:${EPREFIX}/bin:${EPREFIX}/usr/bin" \
+		--libdir='${prefix}/'"$(get_libdir)" \
 		$(multilib_native_use_enable nls) \
 		--enable-agetty \
 		--with-bashcompletiondir="$(get_bashcompdir)" \

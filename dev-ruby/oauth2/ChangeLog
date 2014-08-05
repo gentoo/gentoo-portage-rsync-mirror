@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/oauth2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.22 2014/07/16 05:16:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.23 2014/08/05 16:00:48 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> oauth2-0.9.4.ebuild,
+  oauth2-1.0.0.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *oauth2-1.0.0 (16 Jul 2014)
 

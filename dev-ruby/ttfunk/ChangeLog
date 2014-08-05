@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ttfunk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.11 2014/06/24 05:47:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.12 2014/08/05 16:00:33 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> ttfunk-1.0.3-r1.ebuild,
+  ttfunk-1.1.1.ebuild, ttfunk-1.2.0.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *ttfunk-1.2.0 (24 Jun 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.175 2014/07/25 03:10:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.176 2014/08/05 16:00:55 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> activeresource-3.2.19.ebuild,
+  activeresource-4.0.0.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> activeresource-3.2.19.ebuild:
   Add ruby21 target.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/uglifier-2.5.3.ebuild,v 1.1 2014/07/21 05:52:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/uglifier-2.5.3.ebuild,v 1.2 2014/08/05 16:00:52 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -13,7 +13,7 @@ RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Ruby wrapper for UglifyJS JavaScript compressor."
+DESCRIPTION="Ruby wrapper for UglifyJS JavaScript compressor"
 HOMEPAGE="https://github.com/lautis/uglifier"
 
 LICENSE="MIT"

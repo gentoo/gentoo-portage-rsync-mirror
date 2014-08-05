@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/tidy-ext-0.1.14-r1.ebuild,v 1.8 2014/07/21 14:55:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/tidy-ext-0.1.14-r1.ebuild,v 1.9 2014/08/05 16:00:52 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 inherit ruby-fakegem eutils
 
-DESCRIPTION="W3C HTML Tidy library implemented as a Ruby extension."
+DESCRIPTION="W3C HTML Tidy library implemented as a Ruby extension"
 HOMEPAGE="http://github.com/carld/tidy"
 
 LICENSE="HTML-Tidy"

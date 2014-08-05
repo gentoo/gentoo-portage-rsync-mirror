@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/text-hyphen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/ChangeLog,v 1.61 2014/04/24 16:33:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/ChangeLog,v 1.62 2014/08/05 16:00:27 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> text-hyphen-1.4.1-r1.ebuild,
+  text-hyphen-1.4.1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> text-hyphen-1.4.1-r1.ebuild,
   text-hyphen-1.4.1.ebuild:

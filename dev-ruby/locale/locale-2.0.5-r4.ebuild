@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.0.5-r4.ebuild,v 1.1 2014/05/27 06:01:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.0.5-r4.ebuild,v 1.2 2014/08/05 16:00:38 mrueg Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_TASK_TEST="test"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A pure ruby library which provides basic APIs for localization."
+DESCRIPTION="A pure ruby library which provides basic APIs for localization"
 HOMEPAGE="http://locale.rubyforge.org/"
 LICENSE="|| ( Ruby GPL-2 )"
 

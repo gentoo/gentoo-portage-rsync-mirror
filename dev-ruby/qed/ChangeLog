@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/qed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qed/ChangeLog,v 1.1 2014/05/15 18:09:24 p8952 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qed/ChangeLog,v 1.2 2014/08/05 16:01:01 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> qed-2.9.1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *qed-2.9.1 (15 May 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/sexp_processor-4.2.1.ebuild,v 1.10 2014/04/05 21:56:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/sexp_processor-4.2.1.ebuild,v 1.11 2014/08/05 16:00:44 mrueg Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="README.txt History.txt"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Processor for s-expressions created as part of the ParseTree project."
+DESCRIPTION="Processor for s-expressions created as part of the ParseTree project"
 HOMEPAGE="http://www.zenspider.com/ZSS/Products/ParseTree/"
 
 LICENSE="GPL-2"

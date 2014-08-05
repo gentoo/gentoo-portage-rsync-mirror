@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/barby/barby-0.5.0-r3.ebuild,v 1.2 2014/06/12 16:09:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/barby/barby-0.5.0-r3.ebuild,v 1.3 2014/08/05 16:00:46 mrueg Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Ruby barcode generator that doesn't rely on 3rd party libraries."
+DESCRIPTION="Ruby barcode generator that doesn't rely on 3rd party libraries"
 HOMEPAGE="http://toretore.eu/barby/"
 
 GITHUB_USER="toretore"

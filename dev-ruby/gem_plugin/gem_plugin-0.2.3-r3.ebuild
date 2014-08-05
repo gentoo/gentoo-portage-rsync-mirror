@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/gem_plugin-0.2.3-r3.ebuild,v 1.2 2014/04/24 21:02:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/gem_plugin-0.2.3-r3.ebuild,v 1.3 2014/08/05 16:00:43 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 jruby"
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_EXTRAINSTALL="resources"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A plugin system based only on rubygems that uses dependencies only."
+DESCRIPTION="A plugin system based only on rubygems that uses dependencies only"
 # Hosted by mongrel's rubyforge
 HOMEPAGE="http://mongrel.rubyforge.org/"
 

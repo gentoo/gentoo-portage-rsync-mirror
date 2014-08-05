@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/journey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/ChangeLog,v 1.10 2014/05/04 13:07:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/ChangeLog,v 1.11 2014/08/05 16:00:56 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> journey-1.0.4-r1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *journey-1.0.4-r1 (04 May 2014)
 

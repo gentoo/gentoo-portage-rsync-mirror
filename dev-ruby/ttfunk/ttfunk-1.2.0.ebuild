@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ttfunk-1.2.0.ebuild,v 1.1 2014/06/24 05:47:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ttfunk-1.2.0.ebuild,v 1.2 2014/08/05 16:00:33 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 jruby"
@@ -10,7 +10,7 @@ RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 inherit ruby-fakegem versionator
 
-DESCRIPTION="A TrueType font parser written in pure ruby."
+DESCRIPTION="A TrueType font parser written in pure ruby"
 HOMEPAGE="https://github.com/prawnpdf/ttfunk/"
 SRC_URI="https://github.com/prawnpdf/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 

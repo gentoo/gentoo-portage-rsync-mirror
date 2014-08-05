@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-2.4.0.ebuild,v 1.8 2014/04/24 16:36:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-2.4.0.ebuild,v 1.9 2014/08/05 16:00:44 mrueg Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ RUBY_FAKEGEM_TASK_TEST="none"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Ruby libxml with a user friendly API, akin to REXML, but feature complete and significantly faster."
+DESCRIPTION="Ruby libxml with a user friendly API, akin to REXML, but feature complete and significantly faster"
 HOMEPAGE="https://github.com/xml4r/libxml-ruby"
 
 LICENSE="MIT"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.11.0.ebuild,v 1.2 2014/04/20 10:20:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.11.0.ebuild,v 1.3 2014/08/05 16:00:37 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_GEMSPEC="sprockets.gemspec"
 
 inherit ruby-fakegem versionator
 
-DESCRIPTION="Ruby library for compiling and serving web assets."
+DESCRIPTION="Ruby library for compiling and serving web assets"
 HOMEPAGE="https://github.com/sstephenson/sprockets"
 SRC_URI="https://github.com/sstephenson/sprockets/archive/v${PV}.tar.gz -> ${P}-git.tgz"
 

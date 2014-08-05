@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/eventmachine-1.0.3-r1.ebuild,v 1.4 2014/05/09 06:26:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/eventmachine-1.0.3-r1.ebuild,v 1.5 2014/08/05 16:01:02 mrueg Exp $
 
 EAPI=5
 # jruby → has shims for Java handling but tests fail badly, remaining
@@ -13,7 +13,7 @@ RUBY_FAKEGEM_EXTRADOC="docs/*.md README.md"
 
 inherit ruby-fakegem
 
-DESCRIPTION="EventMachine is a fast, simple event-processing library for Ruby programs."
+DESCRIPTION="EventMachine is a fast, simple event-processing library for Ruby programs"
 HOMEPAGE="http://rubyeventmachine.com"
 
 LICENSE="|| ( GPL-2 Ruby )"

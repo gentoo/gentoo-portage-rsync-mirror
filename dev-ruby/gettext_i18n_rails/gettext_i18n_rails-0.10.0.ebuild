@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/gettext_i18n_rails-0.10.0.ebuild,v 1.2 2014/04/05 23:35:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/gettext_i18n_rails-0.10.0.ebuild,v 1.3 2014/08/05 16:00:57 mrueg Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ RUBY_FAKEGEM_EXTRAINSTALL="init.rb"
 
 inherit ruby-fakegem
 
-DESCRIPTION="FastGettext / Rails integration."
+DESCRIPTION="FastGettext / Rails integration"
 HOMEPAGE="https://github.com/grosser/gettext_i18n_rails"
 
 LICENSE="public-domain"

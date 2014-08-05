@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/brass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/brass/ChangeLog,v 1.1 2014/05/15 18:00:11 p8952 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/brass/ChangeLog,v 1.2 2014/08/05 16:00:59 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> brass-1.2.1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *brass-1.2.1 (15 May 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/evented-spec/evented-spec-0.9.0.ebuild,v 1.5 2014/06/22 04:54:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/evented-spec/evented-spec-0.9.0.ebuild,v 1.6 2014/08/05 16:01:00 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 jruby"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 inherit versionator ruby-fakegem
 
-DESCRIPTION="A set of helpers to help you test your asynchronous code."
+DESCRIPTION="A set of helpers to help you test your asynchronous code"
 HOMEPAGE="https://github.com/ruby-amqp/evented-spec"
 
 LICENSE="MIT"

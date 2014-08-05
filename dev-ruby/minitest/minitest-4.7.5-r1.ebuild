@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-4.7.5-r1.ebuild,v 1.1 2014/04/27 23:47:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-4.7.5-r1.ebuild,v 1.2 2014/08/05 16:00:39 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 jruby"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="History.txt Manifest.txt README.txt"
 
 inherit ruby-fakegem
 
-DESCRIPTION="minitest/unit is a small and fast replacement for ruby's huge and slow test/unit."
+DESCRIPTION="minitest/unit is a small and fast replacement for ruby's huge and slow test/unit"
 HOMEPAGE="https://github.com/seattlerb/minitest"
 
 LICENSE="MIT"

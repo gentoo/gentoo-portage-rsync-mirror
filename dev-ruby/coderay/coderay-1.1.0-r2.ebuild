@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-1.1.0-r2.ebuild,v 1.2 2014/06/16 15:39:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-1.1.0-r2.ebuild,v 1.3 2014/08/05 16:00:34 mrueg Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ RUBY_FAKEGEM_EXTRADOC="Changes-pre-1.0.textile Changes.textile FOLDERS README_IN
 
 inherit ruby-fakegem
 
-DESCRIPTION="A Ruby library for syntax highlighting."
+DESCRIPTION="A Ruby library for syntax highlighting"
 HOMEPAGE="http://coderay.rubychan.de/"
 SRC_URI="https://github.com/rubychan/coderay/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.158 2014/06/17 10:36:17 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.159 2014/08/05 16:00:43 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> hoe-2.12.5.ebuild,
+  hoe-2.13.0-r1.ebuild, hoe-3.11.0.ebuild, hoe-3.12.0.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   17 Jun 2014; Tobias Klausmann <klausman@gentoo.org> hoe-2.13.0-r1.ebuild:
   Stable on alpha, bug #490180

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sparklines
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/ChangeLog,v 1.17 2014/04/19 03:29:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/ChangeLog,v 1.18 2014/08/05 16:00:56 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> sparklines-0.5.2-r3.ebuild,
+  sparklines-0.5.2-r4.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   19 Apr 2014; Manuel Rüger <mrueg@gentoo.org> sparklines-0.5.2-r3.ebuild,
   sparklines-0.5.2-r4.ebuild:

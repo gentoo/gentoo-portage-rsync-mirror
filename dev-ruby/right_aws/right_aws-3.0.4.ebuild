@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/right_aws/right_aws-3.0.4.ebuild,v 1.2 2014/04/24 20:09:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/right_aws/right_aws-3.0.4.ebuild,v 1.3 2014/08/05 16:00:47 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 jruby"
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_EXTRADOC="README.txt History.txt"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A robust, fast, and secure interface to Amazon EC2, EBS, S3, SQS, SDB, and CloudFront."
+DESCRIPTION="A robust, fast, and secure interface to Amazon EC2, EBS, S3, SQS, SDB, and CloudFront"
 HOMEPAGE="http://www.rightscale.com/"
 
 LICENSE="MIT"

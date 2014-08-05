@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/em-http-request
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.12 2014/04/05 14:46:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.13 2014/08/05 16:00:54 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> em-http-request-0.2.14.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> em-http-request-0.2.14.ebuild:
   Remove ree18 and ruby18 target.

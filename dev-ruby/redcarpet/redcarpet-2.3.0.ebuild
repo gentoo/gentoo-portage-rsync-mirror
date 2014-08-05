@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/redcarpet-2.3.0.ebuild,v 1.4 2014/05/15 00:56:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/redcarpet-2.3.0.ebuild,v 1.5 2014/08/05 16:00:32 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_TASK_TEST="test:unit"
 inherit multilib ruby-fakegem
 
 SRC_URI="https://github.com/vmg/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-DESCRIPTION="A Ruby wrapper for Upskirt."
+DESCRIPTION="A Ruby wrapper for Upskirt"
 HOMEPAGE="https://github.com/vmg/redcarpet"
 
 LICENSE="MIT"

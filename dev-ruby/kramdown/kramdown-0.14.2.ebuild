@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/kramdown-0.14.2.ebuild,v 1.5 2014/07/05 13:30:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/kramdown-0.14.2.ebuild,v 1.6 2014/08/05 16:00:28 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 jruby"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRAINSTALL="data"
 
 inherit ruby-fakegem
 
-DESCRIPTION="yet-another-markdown-parser but fast, pure Ruby, using a strict syntax definition."
+DESCRIPTION="yet-another-markdown-parser but fast, pure Ruby, using a strict syntax definition"
 HOMEPAGE="http://kramdown.rubyforge.org/"
 
 LICENSE="GPL-3"

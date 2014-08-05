@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.9-r1.ebuild,v 1.4 2014/04/20 18:19:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.9-r1.ebuild,v 1.5 2014/08/05 16:00:48 mrueg Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="README.textile"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Add Internationalization support to your Ruby application."
+DESCRIPTION="Add Internationalization support to your Ruby application"
 HOMEPAGE="http://rails-i18n.org/"
 
 LICENSE="MIT"

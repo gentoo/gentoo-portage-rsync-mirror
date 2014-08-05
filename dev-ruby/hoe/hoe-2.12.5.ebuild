@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.12.5.ebuild,v 1.12 2014/04/05 23:32:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.12.5.ebuild,v 1.13 2014/08/05 16:00:43 mrueg Exp $
 
 EAPI=2
 USE_RUBY="ruby19 jruby"
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_EXTRAINSTALL="template"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Hoe extends rake to provide full project automation."
+DESCRIPTION="Hoe extends rake to provide full project automation"
 HOMEPAGE="http://seattlerb.rubyforge.org/"
 
 LICENSE="MIT"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/chronic-0.10.2.ebuild,v 1.3 2014/07/25 13:24:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/chronic-0.10.2.ebuild,v 1.4 2014/08/05 16:00:28 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 jruby"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_GEMSPEC="chronic.gemspec"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Chronic is a natural language date/time parser written in pure Ruby."
+DESCRIPTION="Chronic is a natural language date/time parser written in pure Ruby"
 HOMEPAGE="https://github.com/mojombo/chronic"
 LICENSE="MIT"
 

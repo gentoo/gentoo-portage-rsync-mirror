@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/wirble-0.1.3-r3.ebuild,v 1.1 2014/05/23 05:32:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/wirble-0.1.3-r3.ebuild,v 1.2 2014/08/05 16:01:01 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_TASK_TEST=""
 
 inherit ruby-fakegem
 
-DESCRIPTION="Wirble is a set of enhancements for Irb."
+DESCRIPTION="Wirble is a set of enhancements for Irb"
 HOMEPAGE="http://pablotron.org/software/wirble/"
 
 LICENSE="Ruby"

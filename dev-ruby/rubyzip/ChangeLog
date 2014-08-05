@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyzip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.39 2014/07/22 15:56:38 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.40 2014/08/05 15:50:37 armin76 Exp $
+
+  05 Aug 2014; Raúl Porcel <armin76@gentoo.org> rubyzip-0.9.9.ebuild:
+  sparc stable, bug #505100
 
   22 Jul 2014; Tobias Klausmann <klausman@gentoo.org> rubyzip-0.9.9-r1.ebuild:
   Keyworded on alpha, bug #465948

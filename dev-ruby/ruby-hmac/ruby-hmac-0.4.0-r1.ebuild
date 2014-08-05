@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-hmac/ruby-hmac-0.4.0-r1.ebuild,v 1.2 2014/04/24 17:45:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-hmac/ruby-hmac-0.4.0-r1.ebuild,v 1.3 2014/08/05 16:00:33 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 jruby"
@@ -10,7 +10,7 @@ RUBY_FAKEGEM_EXTRADOC="History.txt README.txt"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A common interface to HMAC functionality as documented in RFC2104."
+DESCRIPTION="A common interface to HMAC functionality as documented in RFC2104"
 HOMEPAGE="http://ruby-hmac.rubyforge.org/"
 
 LICENSE="MIT"

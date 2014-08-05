@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.46.ebuild,v 1.1 2014/07/28 12:14:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.47.ebuild,v 1.1 2014/08/05 15:55:28 axs Exp $
 
 EAPI=5
 
@@ -113,6 +113,11 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}/${PN}-1.34-no_updates_dialog.patch" \
 		"${FILESDIR}/${PN}-disable_plugins.patch"
+
+	# override install path for bash-completions
+	local mybcd="${D}/$(get_bashcompdir)"
+	sed -e "s#^def \(get_bash_completion_path.*\)\$#def \1\n    return os.path.join('${mybcd}','calibre')\n\ndef old_\1#" \
+	  -i "${S}"/src/calibre/linux.py || die "Could not fix bash-completions install path"
 }
 
 src_install() {
@@ -183,8 +188,8 @@ src_install() {
 	domenu "${HOME}"/.local/share/applications/*.desktop ||
 		die "failed to install .desktop menu files"
 
-	dobashcomp "${ED}"usr/share/bash-completion/completions/calibre
-	rm -r "${ED}"usr/share/bash-completion
+#	dobashcomp "${ED}"usr/share/bash-completion/completions/calibre
+#	rm -r "${ED}"usr/share/bash-completion
 	find "${ED}"usr/share -type d -empty -delete
 
 	cd "${ED}"/usr/share/calibre/fonts/liberation || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/rb-inotify-0.9.0.ebuild,v 1.4 2014/04/05 13:53:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/rb-inotify-0.9.0.ebuild,v 1.5 2014/08/05 16:00:29 mrueg Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ RUBY_FAKEGEM_GEMSPEC="rb-inotify.gemspec"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A thorough inotify wrapper for Ruby using FFI."
+DESCRIPTION="A thorough inotify wrapper for Ruby using FFI"
 HOMEPAGE="https://github.com/nex3/rb-inotify"
 
 LICENSE="MIT"

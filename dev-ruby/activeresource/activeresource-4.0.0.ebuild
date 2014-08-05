@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/activeresource-4.0.0.ebuild,v 1.1 2013/12/24 15:45:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/activeresource-4.0.0.ebuild,v 1.2 2014/08/05 16:00:55 mrueg Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_GEMSPEC="activeresource.gemspec"
 
 inherit ruby-fakegem versionator
 
-DESCRIPTION="Think Active Record for web resources.."
+DESCRIPTION="Think Active Record for web resources"
 HOMEPAGE="http://rubyforge.org/projects/activeresource/"
 SRC_URI="http://github.com/rails/${PN}/archive/v${PV}.tar.gz -> ${P}.tgz"
 

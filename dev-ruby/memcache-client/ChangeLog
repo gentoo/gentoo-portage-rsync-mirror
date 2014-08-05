@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/memcache-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/ChangeLog,v 1.19 2014/04/20 17:57:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/ChangeLog,v 1.20 2014/08/05 16:00:43 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> memcache-client-1.8.5-r1.ebuild,
+  memcache-client-1.8.5.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   20 Apr 2014; Hans de Graaff <graaff@gentoo.org>
   memcache-client-1.8.5-r1.ebuild:

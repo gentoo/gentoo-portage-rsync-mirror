@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tilt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.32 2014/04/22 19:11:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.33 2014/08/05 16:00:38 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> tilt-1.3.3.ebuild,
+  tilt-1.4.1-r1.ebuild, tilt-1.4.1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *tilt-1.4.1-r1 (22 Apr 2014)
 

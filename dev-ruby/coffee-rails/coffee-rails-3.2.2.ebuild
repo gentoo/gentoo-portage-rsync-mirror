@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-rails/coffee-rails-3.2.2.ebuild,v 1.5 2014/06/26 06:08:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-rails/coffee-rails-3.2.2.ebuild,v 1.6 2014/08/05 16:00:47 mrueg Exp $
 
 EAPI=4
 USE_RUBY="ruby19 ruby20"
@@ -10,7 +10,7 @@ RUBY_FAKEGEM_EXTRADOC="README.markdown"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Coffee Script adapter for the Rails asset pipeline."
+DESCRIPTION="Coffee Script adapter for the Rails asset pipeline"
 HOMEPAGE="https://github.com/rails/coffee-rails"
 
 LICENSE="MIT"

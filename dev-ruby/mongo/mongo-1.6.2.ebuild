@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongo/mongo-1.6.2.ebuild,v 1.3 2014/04/05 23:45:39 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongo/mongo-1.6.2.ebuild,v 1.4 2014/08/05 16:00:35 mrueg Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RUBY_S="${GITHUB_USER}-${GITHUB_PROJECT}-*"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A Ruby driver for MongoDB."
+DESCRIPTION="A Ruby driver for MongoDB"
 HOMEPAGE="http://www.mongodb.org/"
 SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/tarball/${PV} -> ${GITHUB_PROJECT}-${PV}.tar.gz"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.480 2014/08/05 14:27:40 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.481 2014/08/05 15:55:07 ottxor Exp $
+
+  05 Aug 2014; Christoph Junghans <ottxor@gentoo.org> util-linux-2.24.2.ebuild,
+  util-linux-2.25.ebuild:
+  re-added prefix support (bug #518898)
 
   05 Aug 2014; Christoph Junghans <ottxor@gentoo.org> util-linux-2.24.2.ebuild:
   added prefix support (bug #518898)

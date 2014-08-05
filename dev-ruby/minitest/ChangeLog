@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.159 2014/07/21 14:54:56 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.160 2014/08/05 16:00:39 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> minitest-4.7.4.ebuild,
+  minitest-4.7.5-r1.ebuild, minitest-4.7.5.ebuild, minitest-5.3.3-r1.ebuild,
+  minitest-5.3.3.ebuild, minitest-5.3.4.ebuild, minitest-5.3.5.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   21 Jul 2014; Tobias Klausmann <klausman@gentoo.org> minitest-5.3.3.ebuild:
   Stable on alpha, bug #505920

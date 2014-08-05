@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.6-r2.ebuild,v 1.6 2014/05/14 18:13:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.6-r2.ebuild,v 1.7 2014/08/05 16:00:48 mrueg Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.md"
 
 inherit ruby-fakegem eutils
 
-DESCRIPTION="A fast and liberal HTML parser for Ruby."
+DESCRIPTION="A fast and liberal HTML parser for Ruby"
 HOMEPAGE="http://wiki.github.com/hpricot/hpricot"
 
 LICENSE="MIT"

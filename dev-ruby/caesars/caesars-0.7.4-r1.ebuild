@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/caesars/caesars-0.7.4-r1.ebuild,v 1.2 2014/05/15 00:52:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/caesars/caesars-0.7.4-r1.ebuild,v 1.3 2014/08/05 16:00:57 mrueg Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ RUBY_FAKEGEM_BINWRAP=""
 
 inherit ruby-fakegem
 
-DESCRIPTION="Rapid DSL prototyping in Ruby."
+DESCRIPTION="Rapid DSL prototyping in Ruby"
 HOMEPAGE="http://solutious.com/"
 
 LICENSE="MIT"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-4.1.4.ebuild,v 1.1 2014/07/03 06:19:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-4.1.4.ebuild,v 1.2 2014/08/05 16:00:53 mrueg Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_GEMSPEC="activemodel.gemspec"
 
 inherit ruby-fakegem versionator
 
-DESCRIPTION="A toolkit for building modeling frameworks like Active Record and Active Resource."
+DESCRIPTION="A toolkit for building modeling frameworks like Active Record and Active Resource"
 HOMEPAGE="http://github.com/rails/rails"
 SRC_URI="http://github.com/rails/rails/archive/v${PV}.tar.gz -> rails-${PV}.tgz"
 

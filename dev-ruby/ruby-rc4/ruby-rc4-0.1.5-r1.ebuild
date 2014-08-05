@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rc4/ruby-rc4-0.1.5-r1.ebuild,v 1.2 2014/04/24 16:56:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rc4/ruby-rc4-0.1.5-r1.ebuild,v 1.3 2014/08/05 16:00:26 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 jruby"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="README.md"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A pure Ruby implementation of the Rc4 algorithm."
+DESCRIPTION="A pure Ruby implementation of the Rc4 algorithm"
 HOMEPAGE="https://github.com/caiges/Ruby-RC4"
 
 LICENSE="MIT"

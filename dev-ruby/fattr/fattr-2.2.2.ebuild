@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fattr/fattr-2.2.2.ebuild,v 1.2 2014/05/21 02:02:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fattr/fattr-2.2.2.ebuild,v 1.3 2014/08/05 16:00:34 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 jruby"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_TASK_TEST=""
 
 inherit ruby-fakegem
 
-DESCRIPTION="fattr.rb is a \"fatter attr\" for ruby."
+DESCRIPTION="fattr.rb is a \"fatter attr\" for ruby"
 HOMEPAGE="http://rubyforge.org/projects/codeforpeople/"
 
 LICENSE="Ruby"

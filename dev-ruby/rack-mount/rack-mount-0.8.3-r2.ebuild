@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/rack-mount-0.8.3-r2.ebuild,v 1.1 2014/07/25 03:05:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/rack-mount-0.8.3-r2.ebuild,v 1.2 2014/08/05 16:00:26 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 jruby"
@@ -10,7 +10,7 @@ RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
 inherit versionator ruby-fakegem
 
-DESCRIPTION="A stackable dynamic tree based Rack router."
+DESCRIPTION="A stackable dynamic tree based Rack router"
 HOMEPAGE="https://github.com/josh/rack-mount"
 SRC_URI="https://github.com/josh/rack-mount/tarball/v${PV} -> ${P}.tgz"
 RUBY_S="josh-${PN}-*"

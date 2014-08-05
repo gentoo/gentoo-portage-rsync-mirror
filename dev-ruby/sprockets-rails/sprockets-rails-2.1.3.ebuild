@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets-rails/sprockets-rails-2.1.3.ebuild,v 1.1 2014/05/29 05:59:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets-rails/sprockets-rails-2.1.3.ebuild,v 1.2 2014/08/05 16:00:51 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem versionator
 
-DESCRIPTION="Sprockets implementation for Rails 4.x (and beyond) Asset Pipeline."
+DESCRIPTION="Sprockets implementation for Rails 4.x (and beyond) Asset Pipeline"
 HOMEPAGE="https://github.com/rails/sprockets-rails"
 SRC_URI="https://github.com/rails/sprockets-rails/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 

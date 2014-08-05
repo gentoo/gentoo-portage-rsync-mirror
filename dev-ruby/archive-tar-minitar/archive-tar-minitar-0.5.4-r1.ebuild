@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/archive-tar-minitar-0.5.4-r1.ebuild,v 1.2 2014/04/05 13:49:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/archive-tar-minitar-0.5.4-r1.ebuild,v 1.3 2014/08/05 16:00:49 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 jruby"
@@ -15,7 +15,7 @@ RUBY_FAKEGEM_EXTRADOC="README ChangeLog"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Provides POSIX tarchive management from Ruby programs."
+DESCRIPTION="Provides POSIX tarchive management from Ruby programs"
 HOMEPAGE="http://rubyforge.org/projects/ruwiki/"
 SRC_URI="mirror://rubygems/minitar-${PV}.gem"
 

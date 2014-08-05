@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.55 2014/07/21 13:57:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.56 2014/08/05 16:00:48 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> hpricot-0.8.6-r1.ebuild,
+  hpricot-0.8.6-r2.ebuild, hpricot-0.8.6-r3.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   21 Jul 2014; Tobias Klausmann <klausman@gentoo.org> hpricot-0.8.6-r1.ebuild:
   Stable on alpha, bug #493780

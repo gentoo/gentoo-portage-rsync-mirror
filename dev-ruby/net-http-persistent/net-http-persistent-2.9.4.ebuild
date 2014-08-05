@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/net-http-persistent-2.9.4.ebuild,v 1.3 2014/06/20 18:50:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/net-http-persistent-2.9.4.ebuild,v 1.4 2014/08/05 16:00:36 mrueg Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ RUBY_FAKEGEM_EXTRADOC="History.txt README.rdoc"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Manages persistent connections using Net::HTTP plus a speed fix for Ruby 1.8."
+DESCRIPTION="Manages persistent connections using Net::HTTP plus a speed fix for Ruby 1.8"
 HOMEPAGE="https://github.com/drbrain/net-http-persistent"
 
 LICENSE="MIT"

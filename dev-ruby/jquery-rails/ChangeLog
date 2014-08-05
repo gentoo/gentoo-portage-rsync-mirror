@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/jquery-rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.35 2014/06/26 05:40:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.36 2014/08/05 16:00:28 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> jquery-rails-1.0.19-r1.ebuild,
+  jquery-rails-2.2.2.ebuild, jquery-rails-2.3.0.ebuild,
+  jquery-rails-3.0.4.ebuild, jquery-rails-3.1.0.ebuild,
+  jquery-rails-3.1.1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *jquery-rails-3.1.1 (26 Jun 2014)
 

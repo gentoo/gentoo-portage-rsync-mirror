@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/sinatra-1.4.4.ebuild,v 1.2 2014/04/05 18:04:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/sinatra-1.4.4.ebuild,v 1.3 2014/08/05 16:00:47 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="README.md AUTHORS CHANGES"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort."
+DESCRIPTION="Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort"
 HOMEPAGE="http://www.sinatrarb.com/"
 
 LICENSE="MIT"

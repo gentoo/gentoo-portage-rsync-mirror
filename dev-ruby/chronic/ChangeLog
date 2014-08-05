@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/chronic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/ChangeLog,v 1.17 2014/07/25 13:24:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/ChangeLog,v 1.18 2014/08/05 16:00:28 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> chronic-0.10.2.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> chronic-0.10.2.ebuild:
   Add ruby21 target.

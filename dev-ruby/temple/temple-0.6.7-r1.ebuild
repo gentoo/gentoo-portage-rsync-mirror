@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/temple-0.6.7-r1.ebuild,v 1.3 2014/05/16 18:18:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/temple-0.6.7-r1.ebuild,v 1.4 2014/08/05 16:00:40 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_TASK_TEST=""
 
 inherit ruby-fakegem
 
-DESCRIPTION="An abstraction and a framework for compiling templates to pure Ruby."
+DESCRIPTION="An abstraction and a framework for compiling templates to pure Ruby"
 HOMEPAGE="http://github.com/judofyr/temple"
 
 LICENSE="MIT"

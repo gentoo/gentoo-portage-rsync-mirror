@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-4.0.8.ebuild,v 1.1 2014/07/03 05:57:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-4.0.8.ebuild,v 1.2 2014/08/05 16:00:25 mrueg Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ RUBY_FAKEGEM_GEMSPEC="actionpack.gemspec"
 
 inherit ruby-fakegem versionator
 
-DESCRIPTION="Eases web-request routing, handling, and response."
+DESCRIPTION="Eases web-request routing, handling, and response"
 HOMEPAGE="http://rubyforge.org/projects/actionpack/"
 SRC_URI="http://github.com/rails/rails/archive/v${PV}.tar.gz -> rails-${PV}.tgz"
 

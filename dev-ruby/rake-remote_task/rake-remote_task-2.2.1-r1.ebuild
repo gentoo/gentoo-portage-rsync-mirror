@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-remote_task/rake-remote_task-2.2.1-r1.ebuild,v 1.2 2014/04/24 20:25:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-remote_task/rake-remote_task-2.2.1-r1.ebuild,v 1.3 2014/08/05 16:00:58 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -11,8 +11,7 @@ RUBY_FAKEGEM_EXTRADOC="History.txt README.txt"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Vlad the Deployer's sexy brainchild is rake-remote_task, extending
-Rake with remote task goodness."
+DESCRIPTION="Vlad the Deployer's sexy brainchild is rake-remote_task, extending Rake with remote task goodness"
 HOMEPAGE="http://rubyhitsquad.com/"
 
 LICENSE="MIT"

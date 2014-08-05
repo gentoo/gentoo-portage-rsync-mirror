@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/oauth-0.4.7-r1.ebuild,v 1.1 2014/05/21 02:24:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/oauth-0.4.7-r1.ebuild,v 1.2 2014/08/05 16:00:52 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 jruby"
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_EXTRADOC="HISTORY README.rdoc TODO"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A RubyGem for implementing both OAuth clients and servers."
+DESCRIPTION="A RubyGem for implementing both OAuth clients and servers"
 HOMEPAGE="http://oauth.rubyforge.org/"
 
 LICENSE="MIT"

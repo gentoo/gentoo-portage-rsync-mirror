@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/mysql2-0.3.16.ebuild,v 1.1 2014/05/15 05:34:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/mysql2-0.3.16.ebuild,v 1.2 2014/08/05 16:00:30 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_EXTRADOC="README.md"
 
 inherit multilib ruby-fakegem
 
-DESCRIPTION="A modern, simple and very fast Mysql library for Ruby - binding to libmysql."
+DESCRIPTION="A modern, simple and very fast Mysql library for Ruby - binding to libmysql"
 HOMEPAGE="https://github.com/brianmario/mysql2"
 
 LICENSE="MIT"

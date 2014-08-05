@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/webrobots-0.1.1.ebuild,v 1.4 2014/04/05 23:49:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/webrobots-0.1.1.ebuild,v 1.5 2014/08/05 16:00:52 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A library to help write robots.txt compliant web robots."
+DESCRIPTION="A library to help write robots.txt compliant web robots"
 HOMEPAGE="http://rubygems.org/gems/webrobots"
 
 LICENSE="BSD-2"

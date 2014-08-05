@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.84 2014/07/12 07:01:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.85 2014/08/05 16:00:49 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> railties-3.2.19.ebuild,
+  railties-4.0.8.ebuild, railties-4.1.4.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   12 Jul 2014; Hans de Graaff <graaff@gentoo.org> -railties-3.2.18.ebuild,
   -railties-4.0.5.ebuild, -railties-4.0.6.ebuild, -railties-4.1.1.ebuild,

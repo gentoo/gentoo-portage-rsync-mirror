@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/simple_oauth-0.2.0-r1.ebuild,v 1.3 2014/06/11 06:25:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/simple_oauth-0.2.0-r1.ebuild,v 1.4 2014/08/05 16:00:27 mrueg Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ RUBY_FAKEGEM_EXTRADOC="README.md"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Simply builds and verifies OAuth headers."
+DESCRIPTION="Simply builds and verifies OAuth headers"
 HOMEPAGE="https://github.com/laserlemon/simple_oauth"
 
 LICENSE="MIT"

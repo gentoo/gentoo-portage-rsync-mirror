@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/unf-0.1.1.ebuild,v 1.4 2014/04/19 03:35:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/unf-0.1.1.ebuild,v 1.5 2014/08/05 16:00:35 mrueg Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A wrapper library to bring Unicode Normalization Form support to Ruby/JRuby."
+DESCRIPTION="A wrapper library to bring Unicode Normalization Form support to Ruby/JRuby"
 HOMEPAGE="https://github.com/knu/ruby-unf"
 
 LICENSE="BSD-2"

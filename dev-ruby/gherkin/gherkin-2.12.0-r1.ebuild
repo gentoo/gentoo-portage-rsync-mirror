@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-2.12.0-r1.ebuild,v 1.3 2014/04/24 17:35:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-2.12.0-r1.ebuild,v 1.4 2014/08/05 16:00:53 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -13,7 +13,7 @@ RUBY_FAKEGEM_EXTRADOC="History.md README.md"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Fast Gherkin lexer and parser based on Ragel."
+DESCRIPTION="Fast Gherkin lexer and parser based on Ragel"
 HOMEPAGE="https://github.com/cucumber/gherkin"
 LICENSE="MIT"
 SRC_URI="https://github.com/cucumber/gherkin/archive/v${PV}.tar.gz -> ${P}-git.tgz"
