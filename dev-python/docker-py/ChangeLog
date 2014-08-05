@@ -1,10 +1,12 @@
 # ChangeLog for dev-python/docker-py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/ChangeLog,v 1.1 2014/07/01 21:40:15 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/ChangeLog,v 1.2 2014/08/05 02:59:37 idella4 Exp $
+
+  05 Aug 2014; Ian Delaney <idella4@gentoo.org> docker-py-0.3.2.ebuild:
+  add py2.7 support, fixes Bug #518966
 
 *docker-py-0.3.2 (01 Jul 2014)
 
   01 Jul 2014; Patrick McLean <chutzpah@gentoo.org> +docker-py-0.3.2.ebuild,
   +files/docker-py-0.3.2-no-version-lock.patch, +metadata.xml:
   Initial commit.
-

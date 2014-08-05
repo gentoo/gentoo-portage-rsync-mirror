@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-1.3.0.ebuild,v 1.1 2014/07/31 06:56:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-1.3.0.ebuild,v 1.2 2014/08/05 02:52:57 idella4 Exp $
 
 EAPI=5
 
@@ -49,7 +49,7 @@ python_test() {
 python_install_all() {
 	doman man/{pylint,pyreverse}.1
 	use examples && local EXAMPLES=( examples/. )
-	use doc && HTML_DOCS=( doc/_build/html/. )
+	use doc && local HTML_DOCS=( doc/_build/singlehtml/. )
 	distutils-r1_python_install_all
 }
 

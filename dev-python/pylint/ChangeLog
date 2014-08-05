@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.109 2014/07/31 06:56:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.110 2014/08/05 02:52:57 idella4 Exp $
+
+  05 Aug 2014; Ian Delaney <idella4@gentoo.org> pylint-1.3.0.ebuild:
+  correction to doc install, fixes Bug #519034
 
 *pylint-1.3.0 (31 Jul 2014)
 
