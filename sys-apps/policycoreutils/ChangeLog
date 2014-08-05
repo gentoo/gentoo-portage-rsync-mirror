@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.140 2014/07/30 11:58:46 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.141 2014/08/05 09:56:13 swift Exp $
+
+  05 Aug 2014; Sven Vermeulen <swift@gentoo.org>
+  -policycoreutils-2.2.5-r2.ebuild, -policycoreutils-2.3-r1.ebuild,
+  -policycoreutils-2.3.ebuild, metadata.xml:
+  Remove obsoleted ebuilds
 
   30 Jul 2014; Sven Vermeulen <swift@gentoo.org> policycoreutils-2.3-r2.ebuild:
   Fix bug #514194 - Stabilization of SELinux userspace 2.3

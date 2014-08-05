@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.14 2014/08/05 09:19:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.15 2014/08/05 09:32:43 vapier Exp $
 
 EAPI=4
 
@@ -35,6 +35,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.40-fbsd.patch
 	epatch "${FILESDIR}"/${P}-e2fsck-fix-makefile-dependency.patch
 	epatch "${FILESDIR}"/${P}-fix-build-cflags.patch
+
 	# blargh ... trick e2fsprogs into using e2fsprogs-libs
 	rm -rf doc
 	sed -i -r \
@@ -45,9 +46,10 @@ src_prepare() {
 	sed -i -r \
 		-e '/^LIB_SUBDIRS/s:lib/(et|ss)::g' \
 		Makefile.in || die "remove subdirs"
+	ln -s $(which mk_cmds) lib/ss/ || die
 
 	# Avoid rebuild
-	touch lib/ss/ss_err.h
+	echo '#include_next <ss/ss_err.h>' > lib/ss/ss_err.h
 	eautoreconf
 }
 

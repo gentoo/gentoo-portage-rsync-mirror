@@ -1,18 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.18 2014/08/05 09:57:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.6.1.ebuild,v 1.1 2014/08/05 09:49:31 polynomial-c Exp $
 
 EAPI=5
 
-inherit autotools java-pkg-opt-2 git-r3 flag-o-matic eutils multilib-minimal
-EGIT_REPO_URI="git://git.videolan.org/libbluray.git"
+inherit autotools java-pkg-opt-2 flag-o-matic eutils multilib-minimal
 
 DESCRIPTION="Blu-ray playback libraries"
 HOMEPAGE="http://www.videolan.org/developers/libbluray.html"
+SRC_URI="http://ftp.videolan.org/pub/videolan/libbluray/${PV}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="aacs java static-libs +truetype utils +xml"
 
 COMMON_DEPEND="
@@ -44,6 +44,7 @@ src_prepare() {
 
 		java-pkg-opt-2_src_prepare
 	fi
+
 	eautoreconf
 }
 

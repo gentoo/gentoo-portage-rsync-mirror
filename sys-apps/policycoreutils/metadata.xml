@@ -16,7 +16,6 @@
 	</longdescription>
 	<use>
 	  <flag name='audit'>Enable support for <pkg>sys-process/audit</pkg> and use the audit_* functions (like audit_getuid instead of getuid())</flag>
-	  <flag name='sesandbox'>Enable support for SELinux sandbox application</flag>
 	</use>
 	<upstream>
 	  <remote-id type="cpe">cpe:/a:redhat:policycoreutils</remote-id>

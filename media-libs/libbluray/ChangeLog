@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.65 2014/07/04 19:44:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.67 2014/08/05 09:57:51 polynomial-c Exp $
+
+  05 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> libbluray-9999.ebuild:
+  Adjusted live ebuild.
+
+*libbluray-0.6.1 (05 Aug 2014)
+
+  05 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> -libbluray-0.2.2.ebuild,
+  -libbluray-0.2.3.ebuild, -libbluray-0.3.0-r1.ebuild, -libbluray-0.4.0.ebuild,
+  +libbluray-0.6.1.ebuild:
+  Version bump. Removed old. Thanks to Uwe L. Korn for providing an ebuild
+  patch in bug #516770.
 
   04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libbluray-0.5.0.ebuild:
   Stable for sparc, wrt bug #504788

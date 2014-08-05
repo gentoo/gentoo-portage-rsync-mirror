@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libsepol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.66 2014/07/30 11:02:13 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.67 2014/08/05 09:41:56 swift Exp $
+
+  05 Aug 2014; Sven Vermeulen <swift@gentoo.org> -libsepol-2.1.9-r3.ebuild:
+  Remove old ebuilds
 
   30 Jul 2014; Sven Vermeulen <swift@gentoo.org> libsepol-2.3.ebuild:
   Fix bug #514194 - Stabilization of SELinux userspace 2.3
