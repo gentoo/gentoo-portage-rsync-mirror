@@ -9,4 +9,4 @@ RDEPEND=net-firewall/iptables
 SLOT=0
 SRC_URI=mirror://sourceforge/reaim/reaim-0.8.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e76e05875012f42b2bdd825cdc4cc414
+_md5_=48ae283b15bfa197d4cd530b663f7a6b

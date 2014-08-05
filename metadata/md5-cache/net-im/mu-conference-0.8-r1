@@ -10,4 +10,4 @@ RDEPEND=dev-libs/expat >=dev-libs/glib-2 net-dns/libidn net-im/jabberd2 mysql? (
 SLOT=0
 SRC_URI=http://download.gna.org/mu-conference/mu-conference_0.8.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=277c2398c6ca97d4613931b7f24521e5
+_md5_=145ebcfe382834dc545edb694414f856

@@ -10,4 +10,4 @@ RDEPEND=crypt? ( >=app-crypt/gpgme-1 ) ncurses? ( sys-libs/ncurses dev-libs/cdk 
 SLOT=2
 SRC_URI=mirror://sourceforge/licq/licq-1.3.8.tar.bz2
 _eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=47346cb9946872e2ed15f304bc99912a
+_md5_=8d8b76217e3e01afbaa013e8436f5cc3

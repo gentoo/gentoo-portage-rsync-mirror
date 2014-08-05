@@ -9,4 +9,4 @@ RDEPEND=net-im/jabber-base >=dev-python/twisted-core-2.5.0 >=dev-python/twisted-
 SLOT=0
 SRC_URI=http://msn-transport.jabberstudio.org/tarballs/pymsnt-0.11.3.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=70b927f454d434cb581a47f870e3daf2
+_md5_=78a73f0d79f9881804bd9ade9ca8af53

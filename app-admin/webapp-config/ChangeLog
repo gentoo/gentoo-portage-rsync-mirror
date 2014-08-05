@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.112 2014/08/01 10:16:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.113 2014/08/05 21:21:09 blueness Exp $
+
+  05 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  webapp-config-1.52-r1.ebuild:
+  Stable on ppc, bug #492904
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> webapp-config-1.52-r1.ebuild:
   ia64/sparc stable wrt #492904

@@ -10,4 +10,4 @@ RDEPEND=>=dev-lang/tk-8.5 >=dev-tcltk/tkpng-0.9 >=dev-tcltk/tktreectrl-2.2.9 >=d
 SLOT=0
 SRC_URI=mirror://sourceforge/coccinella/Coccinella-0.96.20Src.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c3ccdad8668eb161cea26c7381956e15
+_md5_=e3cb79d5ac6ced2b13a11e9948e5ca3b

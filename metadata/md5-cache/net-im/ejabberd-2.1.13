@@ -10,4 +10,4 @@ RDEPEND=>=net-im/jabber-base-0.01 >=dev-libs/expat-1.95 >=dev-lang/erlang-12.2.5
 SLOT=0
 SRC_URI=http://www.process-one.net/downloads/ejabberd/2.1.13/ejabberd-2.1.13.tgz mod_statsdx? ( http://dev.gentoo.org/~radhermit/dist/ejabberd-mod_statsdx-1118.patch.gz )
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	ssl-cert	b53367370fde96e19beca78050a47c61	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=0697125758de5ce4e848bd7782a08fe4
+_md5_=5e52d51dd02350b992f2848cc9610a6d
