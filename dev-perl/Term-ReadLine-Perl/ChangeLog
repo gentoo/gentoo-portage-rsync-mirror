@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ReadLine-Perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/ChangeLog,v 1.45 2014/05/28 20:30:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/ChangeLog,v 1.46 2014/08/05 11:20:17 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Term-ReadLine-Perl-1.30.300-r1.ebuild:
+  Fix DESCRIPTION
 
   28 May 2014; Mikle Kolyada <zlogene@gentoo.org>
   -Term-ReadLine-Perl-1.30.300.ebuild, Term-ReadLine-Perl-1.30.300-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ConfigReader/ConfigReader-0.500.0.ebuild,v 1.2 2011/09/03 21:05:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ConfigReader/ConfigReader-0.500.0.ebuild,v 1.3 2014/08/05 11:11:11 zlogene Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ MODULE_AUTHOR=AMW
 MODULE_VERSION=0.5
 inherit perl-module
 
-DESCRIPTION="Read directives from a configuration file."
+DESCRIPTION="Read directives from a configuration file"
 
 LICENSE="LGPL-2"
 SLOT="0"

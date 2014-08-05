@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-XS-Loop-Poll/POE-XS-Loop-Poll-1.0.0.ebuild,v 1.1 2011/08/29 11:01:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-XS-Loop-Poll/POE-XS-Loop-Poll-1.0.0.ebuild,v 1.2 2014/08/05 11:18:49 zlogene Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ MODULE_AUTHOR=TONYC
 MODULE_VERSION=1.000
 inherit perl-module
 
-DESCRIPTION="An XS implementation of POE::Loop, using poll(2)."
+DESCRIPTION="An XS implementation of POE::Loop, using poll(2)"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"

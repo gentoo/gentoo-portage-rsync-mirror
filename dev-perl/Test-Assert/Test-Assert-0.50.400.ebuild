@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Assert/Test-Assert-0.50.400.ebuild,v 1.1 2011/08/28 14:15:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Assert/Test-Assert-0.50.400.ebuild,v 1.2 2014/08/05 11:21:43 zlogene Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ MODULE_AUTHOR=DEXTER
 MODULE_VERSION=0.0504
 inherit perl-module
 
-DESCRIPTION="Assertion methods for those who like JUnit."
+DESCRIPTION="Assertion methods for those who like JUnit"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"

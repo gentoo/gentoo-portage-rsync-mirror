@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Assert
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Assert/ChangeLog,v 1.9 2012/11/18 11:38:20 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Assert/ChangeLog,v 1.10 2014/08/05 11:21:43 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> Test-Assert-0.50.400.ebuild:
+  Fix DESCRIPTION
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

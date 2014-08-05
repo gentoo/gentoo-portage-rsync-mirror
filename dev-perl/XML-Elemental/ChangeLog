@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Elemental
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Elemental/ChangeLog,v 1.25 2012/06/24 12:59:55 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Elemental/ChangeLog,v 1.26 2014/08/05 11:22:35 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> XML-Elemental-2.110.0.ebuild:
+  Fix DESCRIPTION
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

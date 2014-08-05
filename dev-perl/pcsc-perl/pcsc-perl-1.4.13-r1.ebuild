@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/pcsc-perl/pcsc-perl-1.4.13-r1.ebuild,v 1.1 2013/08/27 13:42:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pcsc-perl/pcsc-perl-1.4.13-r1.ebuild,v 1.2 2014/08/05 11:12:46 zlogene Exp $
 
 EAPI=5
 
 inherit perl-module eutils multilib
 
-DESCRIPTION="A Perl Module for PC/SC SmartCard access."
+DESCRIPTION="A Perl Module for PC/SC SmartCard access"
 HOMEPAGE="http://ludovic.rousseau.free.fr/softwares/pcsc-perl/"
 SRC_URI="http://ludovic.rousseau.free.fr/softwares/${PN}/${P}.tar.bz2"
 

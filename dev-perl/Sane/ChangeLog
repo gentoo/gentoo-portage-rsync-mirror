@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sane
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sane/ChangeLog,v 1.8 2012/09/02 15:11:45 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sane/ChangeLog,v 1.9 2014/08/05 11:11:58 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> Sane-0.50.0.ebuild:
+  Fix DESCRIPTION
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -Sane-0.30.0.ebuild,
   -Sane-0.40.0.ebuild:

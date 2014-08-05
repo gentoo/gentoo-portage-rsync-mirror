@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/POE-XS-Queue-Array
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-XS-Queue-Array/ChangeLog,v 1.6 2012/11/18 11:34:06 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-XS-Queue-Array/ChangeLog,v 1.7 2014/08/05 11:19:21 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  POE-XS-Queue-Array-0.6.0.ebuild:
+  Fix DESCRIPTION
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

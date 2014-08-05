@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/POE-XS-Loop-Poll
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-XS-Loop-Poll/ChangeLog,v 1.8 2012/11/18 11:33:46 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-XS-Loop-Poll/ChangeLog,v 1.9 2014/08/05 11:18:49 zlogene Exp $
+
+  05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> POE-XS-Loop-Poll-1.0.0.ebuild:
+  Fix DESCRIPTION
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

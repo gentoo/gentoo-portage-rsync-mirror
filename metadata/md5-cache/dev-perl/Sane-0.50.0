@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=>=media-gfx/sane-backends-1.0.19 dev-perl/extutils-depends dev-perl/extutils-pkgconfig test? ( dev-perl/Test-Pod ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
-DESCRIPTION=The Sane module allows you to access SANE-compatible scanners in a Perl.
+DESCRIPTION=The Sane module allows you to access SANE-compatible scanners in a Perl
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/Sane/
 IUSE=test
@@ -10,4 +10,4 @@ RDEPEND=>=media-gfx/sane-backends-1.0.19 || ( >=dev-lang/perl-5.16 <dev-lang/per
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RA/RATCLIFFE/Sane-0.05.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=bee353cf118b3125c400733a1f0fa926
+_md5_=4d3ab78ee2c55d5a5a17f729b69bff5c
