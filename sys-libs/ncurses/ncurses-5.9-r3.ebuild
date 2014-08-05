@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r3.ebuild,v 1.16 2014/07/13 19:30:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r3.ebuild,v 1.17 2014/08/05 16:09:26 ottxor Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic toolchain-funcs multilib-minimal
@@ -63,7 +63,7 @@ src_configure() {
 
 multilib_src_configure() {
 	do_configure narrowc
-	use unicode && do_configure widec --enable-widec --includedir=/usr/include/ncursesw
+	use unicode && do_configure widec --enable-widec --includedir="${EPREFIX}"/usr/include/ncursesw
 }
 
 do_configure() {
@@ -77,7 +77,7 @@ do_configure() {
 		# We need the basic terminfo files in /etc, bug #37026.  We will
 		# add '--with-terminfo-dirs' and then populate /etc/terminfo in
 		# src_install() ...
-		--with-terminfo-dirs="/etc/terminfo:/usr/share/terminfo"
+		--with-terminfo-dirs="${EPREFIX}/etc/terminfo:${EPREFIX}/usr/share/terminfo"
 
 		# Disabled until #245417 is sorted out.
 		#$(use_with berkdb hashed-db)
@@ -88,7 +88,7 @@ do_configure() {
 		--enable-pc-files
 		--with-pkg-config="$(tc-getPKG_CONFIG)"
 		# This path is used to control where the .pc files are installed.
-		PKG_CONFIG_LIBDIR="/usr/$(get_libdir)/pkgconfig"
+		PKG_CONFIG_LIBDIR="${EPREFIX}/usr/$(get_libdir)/pkgconfig"
 
 		# Now the rest of the various standard flags.
 		--with-shared
@@ -183,8 +183,10 @@ multilib_src_install() {
 		$(usex unicode 'ncursesw' '') \
 		$(use tinfo && usex unicode 'tinfow' '') \
 		$(usev tinfo)
-	ln -sf libncurses.so "${D}"/usr/$(get_libdir)/libcurses.so || die
-	use static-libs || find "${D}"/usr/ -name '*.a' -a '!' -name '*curses++*.a' -delete
+	if ! tc-is-static-only ; then
+		ln -sf libncurses$(get_libname) "${ED}"/usr/$(get_libdir)/libcurses$(get_libname) || die
+	fi
+	use static-libs || find "${ED}"/usr/ -name '*.a' -a '!' -name '*curses++*.a' -delete
 
 	# Build fails to create this ...
 	dosym ../share/terminfo /usr/$(get_libdir)/terminfo
@@ -197,12 +199,12 @@ multilib_src_install_all() {
 		for x in ansi console dumb linux rxvt rxvt-unicode screen sun vt{52,100,102,200,220} \
 				 xterm xterm-color xterm-xfree86
 		do
-			local termfile=$(find "${D}"/usr/share/terminfo/ -name "${x}" 2>/dev/null)
+			local termfile=$(find "${ED}"/usr/share/terminfo/ -name "${x}" 2>/dev/null)
 			local basedir=$(basename $(dirname "${termfile}"))
 
 			if [[ -n ${termfile} ]] ; then
 				dodir /etc/terminfo/${basedir}
-				mv ${termfile} "${D}"/etc/terminfo/${basedir}/
+				mv ${termfile} "${ED}"/etc/terminfo/${basedir}/
 				dosym ../../../../etc/terminfo/${basedir}/${x} \
 					/usr/share/terminfo/${basedir}/${x}
 			fi
@@ -212,7 +214,7 @@ multilib_src_install_all() {
 	echo "CONFIG_PROTECT_MASK=\"/etc/terminfo\"" > "${T}"/50ncurses
 	doenvd "${T}"/50ncurses
 
-	use minimal && rm -r "${D}"/usr/share/terminfo*
+	use minimal && rm -r "${ED}"/usr/share/terminfo*
 	# Because ncurses5-config --terminfo returns the directory we keep it
 	keepdir /usr/share/terminfo #245374
 

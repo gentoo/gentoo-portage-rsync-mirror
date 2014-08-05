@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
 DEPEND=ruby_targets_ruby19? ( test? ( dev-ruby/bluecloth[ruby_targets_ruby19] dev-ruby/coffee-script[ruby_targets_ruby19] dev-ruby/erubis[ruby_targets_ruby19] dev-ruby/nokogiri[ruby_targets_ruby19] dev-ruby/radius[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( dev-ruby/bluecloth[ruby_targets_ruby20] dev-ruby/coffee-script[ruby_targets_ruby20] dev-ruby/erubis[ruby_targets_ruby20] dev-ruby/nokogiri[ruby_targets_ruby20] dev-ruby/radius[ruby_targets_ruby20] ) ) ruby_targets_ruby21? ( test? ( dev-ruby/bluecloth[ruby_targets_ruby21] dev-ruby/coffee-script[ruby_targets_ruby21] dev-ruby/erubis[ruby_targets_ruby21] dev-ruby/nokogiri[ruby_targets_ruby21] dev-ruby/radius[ruby_targets_ruby21] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/haml[ruby_targets_ruby19] ) ) test? ( ruby_targets_ruby19? ( >=dev-ruby/builder-2.0.0[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/builder-2.0.0[ruby_targets_ruby20] ) ruby_targets_ruby21? ( >=dev-ruby/builder-2.0.0[ruby_targets_ruby21] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( dev-ruby/rake[ruby_targets_ruby20] ) ) ruby_targets_ruby21? ( test? ( dev-ruby/rake[ruby_targets_ruby21] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) )
-DESCRIPTION=A thin interface over a Ruby template engines to make their usage as generic as possible.
+DESCRIPTION=A thin interface over a Ruby template engines to make their usage as generic as possible
 EAPI=5
 HOMEPAGE=http://github.com/rtomayko/tilt
 IUSE=test elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 test test
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 )
 SLOT=0
 SRC_URI=mirror://rubygems/tilt-1.4.1.gem
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=10c22267b9384ee51a5daa78f7ed4305
+_md5_=0ed5639bca66a52ff3538cc63072343f

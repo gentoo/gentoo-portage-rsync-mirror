@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
 DEPEND=net-analyzer/rrdtool[graph] ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 )
-DESCRIPTION=Ruby bindings for rrdtool.
+DESCRIPTION=Ruby bindings for rrdtool
 EAPI=5
 HOMEPAGE=http://oss.oetiker.ch/rrdtool/
 IUSE=elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 )
 SLOT=0
 SRC_URI=http://oss.oetiker.ch/rrdtool/pub/rrdtool-1.4.8.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=65833153180151d50e28323243ed8559
+_md5_=c3afe96fd5808b84915f7fb232eb40b3
