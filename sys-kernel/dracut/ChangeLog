@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.174 2014/07/21 19:18:24 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.175 2014/08/05 18:02:57 aidecoe Exp $
+
+  05 Aug 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r4.ebuild,
+  dracut-036-r4.ebuild, dracut-037-r3.ebuild, dracut-038-r2.ebuild:
+  Replaced sys-apps/usleep dependency with app-admin/killproc.
+  Fixes bug #467214.
 
   21 Jul 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-038-r1.ebuild,
   -files/038-0006-inst_simple-doesn-t-take-H-parameter.patch:

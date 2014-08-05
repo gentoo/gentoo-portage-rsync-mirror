@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.13.3.ebuild,v 1.1 2014/07/16 17:40:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.13.3.ebuild,v 1.2 2014/08/05 18:17:13 mrueg Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ CMAKE_REQUIRED="never"
 KDE_REQUIRED="never"
 inherit kde4-base
 
-DESCRIPTION="Environment setting required for all KDE4 apps to run."
+DESCRIPTION="Environment setting required for all KDE4 apps to run"
 SRC_URI=""
 ESVN_REPO_URI=""
 

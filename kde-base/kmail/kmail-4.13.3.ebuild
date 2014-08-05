@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.13.3.ebuild,v 1.1 2014/07/16 17:40:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.13.3.ebuild,v 1.2 2014/08/05 18:17:12 mrueg Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ KMNAME="kdepim"
 VIRTUALX_REQUIRED=test
 inherit flag-o-matic kde4-meta
 
-DESCRIPTION="KMail is the email component of Kontact, the integrated personal information manager of KDE."
+DESCRIPTION="KMail is the email component of Kontact, the integrated personal information manager of KDE"
 HOMEPAGE="http://www.kde.org/applications/internet/kmail/"
 KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"

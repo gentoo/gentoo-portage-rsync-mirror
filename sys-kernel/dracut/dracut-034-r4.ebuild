@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-034-r4.ebuild,v 1.5 2014/02/27 13:02:33 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-034-r4.ebuild,v 1.6 2014/08/05 18:02:57 aidecoe Exp $
 
 EAPI=4
 
@@ -87,7 +87,7 @@ RDEPEND="${CDEPEND}
 	net? ( net-misc/curl >=net-misc/dhcp-4.2.4_p2-r1[client] sys-apps/iproute2 )
 	selinux? ( sys-libs/libselinux sys-libs/libsepol )
 	dracut_modules_biosdevname? ( sys-apps/biosdevname )
-	dracut_modules_bootchart? ( app-benchmarks/bootchart2 sys-apps/usleep
+	dracut_modules_bootchart? ( app-admin/killproc app-benchmarks/bootchart2
 		sys-process/acct )
 	dracut_modules_btrfs? ( sys-fs/btrfs-progs )
 	dracut_modules_caps? ( sys-libs/libcap )

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.12.5-r2.ebuild,v 1.2 2014/07/27 13:42:13 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.12.5-r2.ebuild,v 1.3 2014/08/05 18:17:11 mrueg Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit kde4-base fdo-mime multilib toolchain-funcs flag-o-matic
 
 EGIT_BRANCH="KDE/4.12"
 
-DESCRIPTION="KDE libraries needed by all KDE programs."
+DESCRIPTION="KDE libraries needed by all KDE programs"
 
 KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"

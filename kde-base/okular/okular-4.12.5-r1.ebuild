@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.12.5-r1.ebuild,v 1.1 2014/05/26 21:44:29 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.12.5-r1.ebuild,v 1.2 2014/08/05 18:17:17 mrueg Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ RESTRICT=test
 
 inherit kde4-base
 
-DESCRIPTION="Okular is a universal document viewer based on KPDF for KDE 4."
+DESCRIPTION="Okular is a universal document viewer based on KPDF for KDE 4"
 HOMEPAGE="http://okular.kde.org http://www.kde.org/applications/graphics/okular"
 KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="chm crypt debug djvu ebook +jpeg mobi +postscript +pdf +tiff"

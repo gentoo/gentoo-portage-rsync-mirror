@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdiamond
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdiamond/ChangeLog,v 1.209 2014/07/23 16:53:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdiamond/ChangeLog,v 1.210 2014/08/05 18:17:22 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> kdiamond-4.12.5.ebuild,
+  kdiamond-4.13.3.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org> -kdiamond-4.13.2.ebuild:
   Remove KDE SC 4.13.2

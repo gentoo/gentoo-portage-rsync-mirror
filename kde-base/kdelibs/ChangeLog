@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1020 2014/07/27 13:42:13 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1021 2014/08/05 18:17:11 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> kdelibs-4.12.5-r1.ebuild,
+  kdelibs-4.12.5-r2.ebuild, kdelibs-4.13.3-r1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   27 Jul 2014; Richard Freeman <rich0@gentoo.org> kdelibs-4.12.5-r2.ebuild:
   amd64 stable - 517864

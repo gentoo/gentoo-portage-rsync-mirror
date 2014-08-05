@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdiamond/kdiamond-4.12.5.ebuild,v 1.5 2014/05/08 07:32:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdiamond/kdiamond-4.12.5.ebuild,v 1.6 2014/08/05 18:17:22 mrueg Exp $
 
 EAPI=5
 
 KDE_HANDBOOK="optional"
 inherit kde4-base
 
-DESCRIPTION="KDE: KDiamond is a three-in-a-row game."
+DESCRIPTION="KDE: KDiamond is a three-in-a-row game"
 HOMEPAGE="
 	http://www.kde.org/applications/games/kdiamond/
 	http://games.kde.org/game.php?game=kdiamond

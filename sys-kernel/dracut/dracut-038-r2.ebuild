@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-038-r2.ebuild,v 1.1 2014/07/21 19:13:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-038-r2.ebuild,v 1.2 2014/08/05 18:02:57 aidecoe Exp $
 
 EAPI=4
 
@@ -235,7 +235,7 @@ pkg_postinst() {
 		sys-apps/iproute2
 	optfeature \
 		"Measure performance of the boot process for later visualisation" \
-		app-benchmarks/bootchart2 sys-apps/usleep sys-process/acct
+		app-benchmarks/bootchart2 app-admin/killproc sys-process/acct
 	optfeature "Scan for Btrfs on block devices"  sys-fs/btrfs-progs
 	optfeature "Load kernel modules and drop this privilege for real init" \
 		sys-libs/libcap

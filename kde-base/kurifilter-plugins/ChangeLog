@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kurifilter-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kurifilter-plugins/ChangeLog,v 1.222 2014/07/23 16:53:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kurifilter-plugins/ChangeLog,v 1.223 2014/08/05 18:17:07 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> kurifilter-plugins-4.12.5.ebuild,
+  kurifilter-plugins-4.13.3.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org>
   -kurifilter-plugins-4.13.2.ebuild:
