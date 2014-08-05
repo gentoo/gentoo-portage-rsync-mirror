@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.114 2014/07/04 11:59:57 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.115 2014/08/05 11:53:45 armin76 Exp $
+
+  05 Aug 2014; Raúl Porcel <armin76@gentoo.org> paramiko-1.12.2.ebuild,
+  paramiko-1.13.0.ebuild:
+  Add ~alpha/~sparc wrt #490374
 
   04 Jul 2014; Tobias Klausmann <klausman@gentoo.org> paramiko-1.12.2.ebuild:
   Keyworded on alpha, bug #490374

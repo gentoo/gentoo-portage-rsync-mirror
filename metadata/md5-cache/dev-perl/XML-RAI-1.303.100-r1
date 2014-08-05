@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=>=dev-perl/TimeDate-1.16 dev-perl/XML-Elemental >=dev-perl/XML-RSS-Parser-4 dev-perl/Class-XPath dev-lang/perl:=[-build(-)]
-DESCRIPTION=RSS Abstraction Interface.
+DESCRIPTION=RSS Abstraction Interface
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/XML-RAI/
 KEYWORDS=amd64 x86
@@ -9,4 +9,4 @@ RDEPEND=>=dev-perl/TimeDate-1.16 dev-perl/XML-Elemental >=dev-perl/XML-RSS-Parse
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TI/TIMA/XML-RAI-1.3031.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=b3f4d5d7fedc8d62174346153f1beb66
+_md5_=e1dcfa8931d2a70a6c223b666bd19029

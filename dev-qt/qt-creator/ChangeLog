@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qt-creator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.31 2014/08/03 22:53:06 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.32 2014/08/05 11:41:54 pesa Exp $
+
+  05 Aug 2014; Davide Pesavento <pesa@gentoo.org> qt-creator-3.2.0_rc1.ebuild:
+  Tweak sed expression to correctly disable clang plugin. Bug 519030 by Uwe L.
+  Korn.
 
   03 Aug 2014; Davide Pesavento <pesa@gentoo.org> -qt-creator-3.0.1.ebuild,
   metadata.xml, qt-creator-3.2.0_rc1.ebuild:

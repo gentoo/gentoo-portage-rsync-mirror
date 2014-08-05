@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gnat-gcc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.66 2013/11/25 03:09:48 nerdboy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.67 2014/08/05 11:42:10 armin76 Exp $
+
+  05 Aug 2014; Raúl Porcel <armin76@gentoo.org> gnat-gcc-4.3.5.ebuild,
+  gnat-gcc-4.4.3.ebuild, gnat-gcc-4.4.5.ebuild, gnat-gcc-4.4.7.ebuild,
+  gnat-gcc-4.5.4.ebuild, gnat-gcc-4.6.4.ebuild:
+  Drop sparc keywords
 
   25 Nov 2013; Steve Arnold <nerdboy@gentoo.org> gnat-gcc-4.5.4.ebuild,
   gnat-gcc-4.6.4.ebuild, +files/gnat-gcc-4.5.4-tex-version-workaround.patch:

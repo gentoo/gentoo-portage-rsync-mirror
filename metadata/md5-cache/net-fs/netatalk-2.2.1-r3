@@ -4,7 +4,7 @@ DESCRIPTION=Open Source AFP server and other AppleTalk-related utilities
 EAPI=4
 HOMEPAGE=http://netatalk.sourceforge.net/
 IUSE=acl appletalk avahi cracklib cups debug kerberos ldap pam quota slp ssl static-libs tcpd
-KEYWORDS=amd64 arm ppc ppc64 sh sparc x86 ~x86-fbsd
+KEYWORDS=amd64 arm ppc ppc64 x86 ~x86-fbsd
 LICENSE=GPL-2 BSD
 RDEPEND=!app-editors/yudit dev-libs/libgcrypt:0 sys-apps/coreutils >=sys-libs/db-4.2.52 acl? ( sys-apps/attr sys-apps/acl ) appletalk? ( cups? ( net-print/cups ) ) avahi? ( net-dns/avahi[dbus] ) cracklib? ( sys-libs/cracklib ) kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( virtual/pam ) slp? ( net-libs/openslp ) ssl? ( dev-libs/openssl ) tcpd? ( sys-apps/tcp-wrappers )
 REQUIRED_USE=ldap? ( acl )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/netatalk/netatalk-2.2.1.tar.bz2
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=d24ce0ef024279a0aadc10e5423aee3e
+_md5_=5d75931357d8508d3b91c8550c10708b

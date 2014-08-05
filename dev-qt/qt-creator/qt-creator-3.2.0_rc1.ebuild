@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.2.0_rc1.ebuild,v 1.2 2014/08/03 22:53:06 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.2.0_rc1.ebuild,v 1.3 2014/08/05 11:41:54 pesa Exp $
 
 EAPI=5
 
@@ -74,7 +74,8 @@ src_prepare() {
 	for plugin in "${QTC_PLUGINS[@]#[+-]}"; do
 		if ! use ${plugin%:*}; then
 			einfo "Disabling ${plugin%:*} plugin"
-			sed -i -re "/^\s+${plugin#*:}\>/d" src/plugins/plugins.pro \
+			sed -i -re "/(^\s+|SUBDIRS\s*\+=\s*)${plugin#*:}\>/d" \
+				src/plugins/plugins.pro \
 				|| die "failed to disable ${plugin%:*} plugin"
 		fi
 	done

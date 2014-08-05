@@ -11,4 +11,4 @@ RDEPEND==dev-libs/botan-1.10*[threads] >=dev-qt/designer-4.8.5:4 >=dev-qt/qtcore
 SLOT=0
 SRC_URI=http://download.qt-project.org/development_releases/qtcreator/3.2/3.2.0-rc1/qt-creator-opensource-src-3.2.0-rc1.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	40136c5fe0002a0d3937e869ae4ee0e2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=55cdc257079750711f962c544b8fa991
+_md5_=c4a045ebbe481ce89296f30a5452cafa
