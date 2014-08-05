@@ -1,6 +1,9 @@
 # ChangeLog for net-im/err
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/err/ChangeLog,v 1.14 2013/10/05 16:24:15 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/err/ChangeLog,v 1.15 2014/08/05 18:34:16 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> err-1.7.1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *err-1.7.1 (05 Oct 2013)
 

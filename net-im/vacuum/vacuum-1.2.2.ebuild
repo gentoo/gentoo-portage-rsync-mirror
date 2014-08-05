@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-1.2.2.ebuild,v 1.2 2013/09/18 11:51:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-1.2.2.ebuild,v 1.3 2014/08/05 18:34:14 mrueg Exp $
 
 EAPI="4"
 LANGS="de pl ru uk"
 
 inherit cmake-utils
 
-DESCRIPTION="Qt4 Crossplatform Jabber client."
+DESCRIPTION="Qt4 Crossplatform Jabber client"
 HOMEPAGE="http://code.google.com/p/vacuum-im"
 SRC_URI="http://vacuum-im.googlecode.com/files/${P}.tar.xz"
 

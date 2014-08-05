@@ -1,6 +1,10 @@
 # ChangeLog for net-im/jabber-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/ChangeLog,v 1.18 2014/01/08 06:41:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/ChangeLog,v 1.19 2014/08/05 18:34:17 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> jabber-base-0.00.ebuild,
+  jabber-base-0.01.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> jabber-base-0.00.ebuild,
   jabber-base-0.01.ebuild:

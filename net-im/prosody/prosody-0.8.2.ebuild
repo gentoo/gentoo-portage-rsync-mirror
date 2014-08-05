@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.8.2.ebuild,v 1.6 2014/01/27 02:21:51 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.8.2.ebuild,v 1.7 2014/08/05 18:34:13 mrueg Exp $
 
 EAPI="2"
 
 inherit eutils multilib toolchain-funcs versionator
 
 MY_PV=$(replace_version_separator 3 '')
-DESCRIPTION="Prosody is a flexible communications server for Jabber/XMPP written in Lua."
+DESCRIPTION="Prosody is a flexible communications server for Jabber/XMPP written in Lua"
 HOMEPAGE="http://prosody.im/"
 SRC_URI="http://prosody.im/downloads/source/${PN}-${MY_PV}.tar.gz"
 

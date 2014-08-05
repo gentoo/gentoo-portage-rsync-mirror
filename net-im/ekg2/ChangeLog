@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ekg2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.53 2013/10/16 12:13:32 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.54 2014/08/05 18:34:16 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> ekg2-0.3.1-r1.ebuild,
+  ekg2-9999.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   16 Oct 2013; Michał Górny <mgorny@gentoo.org> ekg2-9999.ebuild:
   Switch to git-r3. Add SLOT operators to dependencies.

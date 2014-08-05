@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.210 2014/07/09 12:34:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.211 2014/08/05 18:34:08 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> gajim-0.15.4.ebuild,
+  gajim-0.16_rc1.ebuild, gajim-0.16_rc2.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *gajim-0.16_rc2 (09 Jul 2014)
 

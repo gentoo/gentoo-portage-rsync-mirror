@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
 DEPEND=>=dev-libs/dbus-glib-0.82 >=dev-libs/glib-2.30:2 >=sys-apps/dbus-0.95 >=net-libs/telepathy-glib-0.19 connman? ( net-misc/connman ) gnome-keyring? ( gnome-base/libgnome-keyring ) networkmanager? ( >=net-misc/networkmanager-0.7 ) upower? ( || ( ( >=sys-power/upower-0.9.11 <sys-power/upower-0.99 ) sys-power/upower-pm-utils ) ) dev-libs/libxslt >=dev-util/gtk-doc-am-1.17 virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4
-DESCRIPTION=An account manager and channel dispatcher for the Telepathy framework.
+DESCRIPTION=An account manager and channel dispatcher for the Telepathy framework
 EAPI=5
 HOMEPAGE=http://telepathy.freedesktop.org/wiki/Mission%20Control
 IUSE=connman debug gnome-keyring networkmanager +upower
@@ -11,4 +11,4 @@ REQUIRED_USE=?? ( connman networkmanager )
 SLOT=0
 SRC_URI=http://telepathy.freedesktop.org/releases/telepathy-mission-control/telepathy-mission-control-5.14.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=62886d278ab096711dffcc875f1cb949
+_md5_=39d70947b7a81e4d0c1b33b4dbc47aec

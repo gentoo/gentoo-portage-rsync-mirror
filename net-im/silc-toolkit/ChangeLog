@@ -1,6 +1,9 @@
 # ChangeLog for net-im/silc-toolkit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.104 2012/05/28 08:53:17 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.105 2014/08/05 18:34:08 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> silc-toolkit-1.1.10.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   28 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -silc-toolkit-1.1.7.ebuild,
   -silc-toolkit-1.1.8.ebuild, silc-toolkit-1.1.10.ebuild:
@@ -411,4 +414,3 @@
 
   13 Feb 2004; Chuck Short <zul@gentoo.org> silc-toolkit-0.9.11.ebuild:
   Initial version by Andrej Kacian < andrej @ kacian.sk >, closes #34533.
-

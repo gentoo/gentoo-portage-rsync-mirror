@@ -1,6 +1,9 @@
 # ChangeLog for net-im/qwit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qwit/ChangeLog,v 1.8 2013/03/02 22:54:11 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/qwit/ChangeLog,v 1.9 2014/08/05 18:34:13 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> qwit-1.1_pre2.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qwit-1.1_pre2.ebuild:
   Move Qt dependencies to the new category

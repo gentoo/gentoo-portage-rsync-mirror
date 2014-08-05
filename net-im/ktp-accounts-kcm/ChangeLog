@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ktp-accounts-kcm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-accounts-kcm/ChangeLog,v 1.29 2014/04/26 11:05:32 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-accounts-kcm/ChangeLog,v 1.30 2014/08/05 18:34:21 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> ktp-accounts-kcm-0.8.0.ebuild,
+  ktp-accounts-kcm-0.8.1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   26 Apr 2014; Johannes Huber <johu@gentoo.org>
   -ktp-accounts-kcm-0.7.1-r1.ebuild,

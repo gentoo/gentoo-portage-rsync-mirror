@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/turses/turses-0.2.13.ebuild,v 1.1 2013/03/21 05:18:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/turses/turses-0.2.13.ebuild,v 1.2 2014/08/05 18:34:08 mrueg Exp $
 
 EAPI=4
 

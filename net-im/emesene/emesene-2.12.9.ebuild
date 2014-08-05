@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.12.9.ebuild,v 1.8 2013/03/23 10:48:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.12.9.ebuild,v 1.9 2014/08/05 18:34:06 mrueg Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"

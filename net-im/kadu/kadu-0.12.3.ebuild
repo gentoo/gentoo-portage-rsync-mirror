@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.12.3.ebuild,v 1.5 2013/03/02 22:51:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.12.3.ebuild,v 1.6 2014/08/05 18:34:20 mrueg Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit base cmake-utils flag-o-matic
 
 MY_P="${P/_/-}"
 
-DESCRIPTION="An open source Gadu-Gadu and Jabber/XMPP protocol Instant Messenger client."
+DESCRIPTION="An open source Gadu-Gadu and Jabber/XMPP protocol Instant Messenger client"
 HOMEPAGE="http://www.kadu.net"
 SRC_URI="http://download.kadu.im/stable/${P}.tar.bz2"
 

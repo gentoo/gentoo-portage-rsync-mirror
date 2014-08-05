@@ -1,6 +1,10 @@
 # ChangeLog for net-im/mu-conference
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/ChangeLog,v 1.30 2013/08/21 23:45:54 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/ChangeLog,v 1.31 2014/08/05 18:34:10 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> mu-conference-0.7.ebuild,
+  mu-conference-0.8-r1.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   21 Aug 2013; Manuel Rüger <mrueg@gentoo.org> mu-conference-0.8-r1.ebuild:
   Fix bug #481818

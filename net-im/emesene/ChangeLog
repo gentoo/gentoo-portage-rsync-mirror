@@ -1,6 +1,10 @@
 # ChangeLog for net-im/emesene
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/ChangeLog,v 1.44 2013/03/23 10:48:57 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/ChangeLog,v 1.45 2014/08/05 18:34:06 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> emesene-2.12.9.ebuild,
+  emesene-9999.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   23 Mar 2013; Markos Chandras <hwoarang@gentoo.org> emesene-2.12.9.ebuild,
   emesene-9999.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for net-im/vacuum
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/ChangeLog,v 1.19 2014/01/29 15:21:10 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/ChangeLog,v 1.20 2014/08/05 18:34:14 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> vacuum-1.2.2.ebuild,
+  vacuum-1.2.3.ebuild, vacuum-1.2.4.ebuild, vacuum-9999.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
 *vacuum-1.2.4 (29 Jan 2014)
 

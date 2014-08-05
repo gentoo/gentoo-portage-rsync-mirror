@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/err/err-1.7.1.ebuild,v 1.1 2013/10/05 16:24:15 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/err/err-1.7.1.ebuild,v 1.2 2014/08/05 18:34:16 mrueg Exp $
 
 EAPI=5
 

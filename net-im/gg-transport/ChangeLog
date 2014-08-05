@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gg-transport
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/ChangeLog,v 1.24 2012/12/16 14:16:05 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/ChangeLog,v 1.25 2014/08/05 18:34:20 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> gg-transport-2.2.4.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #95685

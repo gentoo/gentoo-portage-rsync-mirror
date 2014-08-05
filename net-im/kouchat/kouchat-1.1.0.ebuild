@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kouchat/kouchat-1.1.0.ebuild,v 1.3 2012/12/16 13:54:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kouchat/kouchat-1.1.0.ebuild,v 1.4 2014/08/05 18:34:12 mrueg Exp $
 
 EAPI=1
 JAVA_PKG_IUSE=""
 
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="KouChat is a simple serverless chat client for local area networks."
+DESCRIPTION="KouChat is a simple serverless chat client for local area networks"
 HOMEPAGE="http://kouchat.googlecode.com/"
 SRC_URI="http://kouchat.googlecode.com/files/${P}-src.tar.gz
 	http://dev.gentoo.org/~serkan/distfiles/${P}-buildfiles.tar.gz"

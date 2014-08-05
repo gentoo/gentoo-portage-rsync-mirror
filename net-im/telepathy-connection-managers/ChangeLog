@@ -1,6 +1,11 @@
 # ChangeLog for net-im/telepathy-connection-managers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-connection-managers/ChangeLog,v 1.22 2014/04/27 08:09:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-connection-managers/ChangeLog,v 1.23 2014/08/05 18:34:05 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org>
+  telepathy-connection-managers-2-r2.ebuild,
+  telepathy-connection-managers-2.ebuild:
+  Remove trailing '.' from DESCRIPTION.
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org>
   -telepathy-connection-managers-2-r1.ebuild:

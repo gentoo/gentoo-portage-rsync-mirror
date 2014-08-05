@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.8-r1.ebuild,v 1.4 2012/09/14 14:16:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.8-r1.ebuild,v 1.5 2014/08/05 18:34:07 mrueg Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"

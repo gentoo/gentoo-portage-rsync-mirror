@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.8.0.ebuild,v 1.7 2014/02/22 22:22:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.8.0.ebuild,v 1.8 2014/08/05 18:34:06 mrueg Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_{6,7} )
 
 inherit gnome2 python-any-r1 virtualx
 
-DESCRIPTION="Telepathy Logger is a session daemon that should be activated whenever telepathy is being used."
+DESCRIPTION="Telepathy Logger is a session daemon that should be activated whenever telepathy is being used"
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/Logger"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.bz2"
 

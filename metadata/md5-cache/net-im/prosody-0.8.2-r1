@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install postinst prepare test
 DEPEND=net-im/jabber-base >=dev-lang/lua-5.1 >=net-dns/libidn-1.1 >=dev-libs/openssl-0.9.8 virtual/pkgconfig
-DESCRIPTION=Prosody is a flexible communications server for Jabber/XMPP written in Lua.
+DESCRIPTION=Prosody is a flexible communications server for Jabber/XMPP written in Lua
 EAPI=5
 HOMEPAGE=http://prosody.im/
 IUSE=libevent mysql postgres sqlite ssl zlib
@@ -10,4 +10,4 @@ RDEPEND=net-im/jabber-base >=dev-lang/lua-5.1 >=net-dns/libidn-1.1 >=dev-libs/op
 SLOT=0
 SRC_URI=http://prosody.im/downloads/source/prosody-0.8.2.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=7fc7bfc2d4cb6fdb0f13f62cfbb44444
+_md5_=93c5cf5a8a065904dbe64a3c49723c01
