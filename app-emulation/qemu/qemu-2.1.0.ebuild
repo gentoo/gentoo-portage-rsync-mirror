@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.1.0.ebuild,v 1.1 2014/08/04 06:45:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.1.0.ebuild,v 1.5 2014/08/05 08:24:32 vapier Exp $
 
 EAPI=5
 
@@ -31,8 +31,8 @@ LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="accessibility +aio alsa bluetooth +caps +curl debug +fdt glusterfs \
 gtk iscsi +jpeg \
-kernel_linux kernel_FreeBSD ncurses nls opengl +png pulseaudio python \
-rbd sasl +seccomp sdl selinux smartcard spice ssh static static-softmmu \
+kernel_linux kernel_FreeBSD lzo ncurses nfs nls numa opengl +png pulseaudio python \
+rbd sasl +seccomp sdl selinux smartcard snappy spice ssh static static-softmmu \
 static-user systemtap tci test +threads tls usb usbredir +uuid vde +vhost-net \
 virtfs +vnc xattr xen xfs"
 
@@ -71,12 +71,16 @@ SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	fdt? ( >=sys-apps/dtc-1.4.0[static-libs(+)] )
 	glusterfs? ( >=sys-cluster/glusterfs-3.4.0[static-libs(+)] )
 	jpeg? ( virtual/jpeg[static-libs(+)] )
+	lzo? ( dev-libs/lzo:2[static-libs(+)] )
 	ncurses? ( sys-libs/ncurses[static-libs(+)] )
+	nfs? ( net-fs/libnfs[static-libs(+)] )
+	numa? ( sys-process/numactl[static-libs(+)] )
 	png? ( media-libs/libpng[static-libs(+)] )
 	rbd? ( sys-cluster/ceph[static-libs(+)] )
 	sasl? ( dev-libs/cyrus-sasl[static-libs(+)] )
 	sdl? ( >=media-libs/libsdl-1.2.11[static-libs(+)] )
 	seccomp? ( >=sys-libs/libseccomp-2.1.0[static-libs(+)] )
+	snappy? ( app-arch/snappy[static-libs(+)] )
 	spice? ( >=app-emulation/spice-0.12.0[static-libs(+)] )
 	ssh? ( >=net-libs/libssh2-1.2.8[static-libs(+)] )
 	tls? ( net-libs/gnutls[static-libs(+)] )
@@ -329,15 +333,20 @@ qemu_src_configure() {
 			$(use_enable iscsi libiscsi)
 			$(use_enable jpeg vnc-jpeg)
 			$(use_enable kernel_linux kvm)
+			$(use_enable lzo)
 			$(use_enable ncurses curses)
+			$(use_enable nfs libnfs)
+			$(use_enable numa)
 			$(use_enable opengl glx)
 			$(use_enable png vnc-png)
 			$(use_enable rbd)
 			$(use_enable sasl vnc-sasl)
 			$(use_enable seccomp)
 			$(use_enable smartcard smartcard-nss)
+			$(use_enable snappy)
 			$(use_enable spice)
 			$(use_enable ssh libssh2)
+			$(use_enable tls quorum)
 			$(use_enable tls vnc-tls)
 			$(use_enable tls vnc-ws)
 			$(use_enable usb libusb)

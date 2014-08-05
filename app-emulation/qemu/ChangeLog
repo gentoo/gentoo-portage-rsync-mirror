@@ -1,6 +1,22 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.274 2014/08/04 06:47:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.278 2014/08/05 08:24:32 vapier Exp $
+
+  05 Aug 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  qemu-2.1.0.ebuild, qemu-9999.ebuild:
+  Add USE=numa to control numactl automagic dep.
+
+  05 Aug 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  qemu-2.0.0-r1.ebuild, qemu-2.1.0.ebuild, qemu-9999.ebuild:
+  Add USE=lzo/snappy to control liblzo/snappy automagic deps.
+
+  05 Aug 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  qemu-2.0.0-r1.ebuild, qemu-2.1.0.ebuild, qemu-9999.ebuild:
+  Add USE=nfs to control libnfs automagic dep.
+
+  05 Aug 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  qemu-2.0.0-r1.ebuild, qemu-2.0.0.ebuild, qemu-2.1.0.ebuild, qemu-9999.ebuild:
+  Control quorum via USE=tls since it also relies on gnutls.
 
   04 Aug 2014; Mike Frysinger <vapier@gentoo.org> files/qemu-binfmt.initd-r1:
   actually use the new $QEMU_BINFMT_FLAGS
