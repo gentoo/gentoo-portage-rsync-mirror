@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.15.1-r1.ebuild,v 1.1 2014/08/04 10:21:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.16.ebuild,v 1.1 2014/08/05 07:10:07 xmw Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="Processor Hardware Control for Intel CPUs"
 HOMEPAGE="http://www.linux-phc.org/
 	http://www.linux-phc.org/forum/viewtopic.php?f=7&t=267"
 #no automatic filenames here, sorry
-SRC_URI="http://www.linux-phc.org/forum/download/file.php?id=161 -> phc-intel-pack-rev15.1.tar.bz2"
+SRC_URI="http://www.linux-phc.org/forum/download/file.php?id=162 -> phc-intel-pack-rev16.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -46,10 +46,8 @@ src_prepare() {
 		"${FILESDIR}"/phc-intel-0.3.2-rev15-trailing-space-3.5.patch \
 		"${FILESDIR}"/phc-intel-0.3.2-rev14-trailing-space-3.13.patch \
 		"${FILESDIR}"/phc-intel-0.3.2-rev14-trailing-space-3.14.patch \
-		"${FILESDIR}"/phc-intel-0.3.2-rev15-trailing-space-3.15.patch
-
-	cp -rv inc/3.15 inc/3.16 || die
-	epatch "${FILESDIR}"/phc-intel-0.3.2-rev15-3.16.patch
+		"${FILESDIR}"/phc-intel-0.3.2-rev15-trailing-space-3.15.patch \
+		"${FILESDIR}"/phc-intel-0.3.2-rev16-trailing-space-3.16.patch
 
 	sed -e '/^all:/s:prepare::' \
 		-i Makefile || die

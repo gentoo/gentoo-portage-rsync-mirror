@@ -1,6 +1,19 @@
 # ChangeLog for sys-power/phc-intel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.18 2014/08/04 10:21:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.20 2014/08/05 07:13:28 xmw Exp $
+
+  05 Aug 2014; Michael Weber <xmw@gentoo.org>
+  -files/phc-intel-0.3.2-rev12-trailing-space-3.5.patch,
+  -phc-intel-0.3.2.12.14-r1.ebuild:
+  Drop old version
+
+*phc-intel-0.3.2.12.16 (05 Aug 2014)
+
+  05 Aug 2014; Michael Weber <xmw@gentoo.org>
+  +files/phc-intel-0.3.2-rev16-trailing-space-3.16.patch,
+  +phc-intel-0.3.2.12.16.ebuild, -files/phc-intel-0.3.2-rev15-3.16.patch,
+  -phc-intel-0.3.2.12.15.1-r1.ebuild:
+  Version bump, drop intermediate fix revision.
 
 *phc-intel-0.3.2.12.15.1-r1 (04 Aug 2014)
 

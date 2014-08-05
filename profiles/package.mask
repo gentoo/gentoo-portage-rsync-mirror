@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15951 2014/08/05 00:08:28 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15952 2014/08/05 07:06:02 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (05 Aug 2014)
+# Lacks patch in FILESDIR => fails to build
+# Masked by QA until maintainer will sort things out
+=app-emulation/fuse-1.1.1
 
 # Michał Górny <mgorny@gentoo.org> (05 Aug 2014)
 # Abandoned upstream with no in-tree consumers. Likely added by mistake
