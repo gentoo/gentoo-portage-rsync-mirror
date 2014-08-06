@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15955 2014/08/06 09:01:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15956 2014/08/06 16:58:01 lu_zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -294,7 +294,7 @@ sci-physics/camfr
 
 # Tom Wijsman <TomWij@gentoo.org> (8 Jun 2014)
 # Mask VLC ebuilds that are affected with security bug CVE-2013-6934:
-# 
+#
 #     A vulnerability has been discovered in VLC Media Player, which can be
 #     exploited by malicious people to compromise a user's system.
 #
@@ -409,7 +409,7 @@ dev-java/ibm-jdk-bin:1.5
 
 # Ian Delaney <idella4@gentoo.org> (22 May 2014)
 # The bumped version has been given added py3.4 support.
-# Given testsuite failures, a period of masking allows for possible 
+# Given testsuite failures, a period of masking allows for possible
 # patching from upstream to be added to this version.
 # Masked until py3.4 support is added to media-gfx/cairosvg
 =dev-python/weasyprint-0.22
@@ -491,10 +491,6 @@ sys-fs/rdiff-backup-fs
 # Unmask this if you want to upgrade or switch to Oracle JDK / JRE 1.8.
 >=virtual/jdk-1.8
 >=virtual/jre-1.8
-
-# Luca Barbato <lu_zero@gentoo.org> (30 Mar 2014)
-# Current stable for upstream, pending a tinderbox run.
-=media-video/libav-10*
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Mar 2014)
 # Affected by multiple vulnerabilities, #445916, #471098 and #472280
