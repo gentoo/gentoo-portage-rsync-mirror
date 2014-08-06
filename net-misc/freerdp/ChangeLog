@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/freerdp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.73 2014/07/20 20:50:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.75 2014/08/06 00:54:55 floppym Exp $
+
+*freerdp-1.1.0_beta1_p20130710-r2 (06 Aug 2014)
+
+  06 Aug 2014; Mike Gilbert <floppym@gentoo.org>
+  +freerdp-1.1.0_beta1_p20130710-r2.ebuild:
+  Backport usb changes from live ebuild.
+
+  06 Aug 2014; Mike Gilbert <floppym@gentoo.org> freerdp-9999.1.ebuild:
+  Add usb use flag to enable USB redirection support, bug 518798 by Francisco
+  Javier. Drop channels flag and just build them always.
 
   20 Jul 2014; Mike Gilbert <floppym@gentoo.org>
   freerdp-1.1.0_beta1_p20130710-r1.ebuild:
