@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.6.ebuild,v 1.2 2014/07/31 17:06:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.6.ebuild,v 1.3 2014/08/06 03:22:22 patrick Exp $
 
 EAPI=5
 
@@ -240,6 +240,8 @@ src_prepare() {
 	sed -e "s/USE_FLAG_AVAHI/${avahi_init}/" -i "${S}/libvirtd.init"
 	sed -e "s/USE_FLAG_ISCSI/${iscsi_init}/" -i "${S}/libvirtd.init"
 	sed -e "s/USE_FLAG_RBD/${rbd_init}/" -i "${S}/libvirtd.init"
+
+	epatch "${FILESDIR}/${P}-numa.patch"
 }
 
 src_configure() {
