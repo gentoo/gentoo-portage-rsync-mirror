@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1342 2014/08/05 22:59:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1343 2014/08/06 08:25:02 swift Exp $
+
+  06 Aug 2014; Sven Vermeulen <swift@gentoo.org> selinux-policy-2.eclass:
+  Add support for different GIT repositories with SELinux policy ebuilds
 
   05 Aug 2014; Johannes Huber <johu@gentoo.org> cmake-utils.eclass:
   Raise CMAKE_MIN_VERSION to 2.8.12 by Ben Kohler <bkohler@gmail.com>, bug
