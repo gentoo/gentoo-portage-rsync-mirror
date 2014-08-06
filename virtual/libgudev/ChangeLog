@@ -1,6 +1,14 @@
 # ChangeLog for virtual/libgudev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/ChangeLog,v 1.13 2014/08/04 07:11:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/ChangeLog,v 1.14 2014/08/06 18:32:09 mgorny Exp $
+
+*libgudev-215-r1 (06 Aug 2014)
+
+  06 Aug 2014; Michał Górny <mgorny@gentoo.org> +libgudev-215-r1.ebuild,
+  -libgudev-215.ebuild:
+  Revbump to ensure that users get rebuild due to USE=systemd rather than
+  blocker against it, and to ensure that previous breakage with USE=systemd
+  ,static-libs does not persist.
 
   04 Aug 2014; Michał Górny <mgorny@gentoo.org> libgudev-215.ebuild:
   Fix not installing anything with USE=systemd,static-libs. That combination
