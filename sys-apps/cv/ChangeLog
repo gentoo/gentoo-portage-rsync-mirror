@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/cv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cv/ChangeLog,v 1.1 2014/08/06 02:43:45 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cv/ChangeLog,v 1.4 2014/08/06 20:17:14 jer Exp $
+
+  06 Aug 2014; Jeroen Roovers <jer@gentoo.org> cv-0.4.1.ebuild:
+  Install README.md.
+
+  06 Aug 2014; Jeroen Roovers <jer@gentoo.org> cv-0.4.1.ebuild:
+  Respect CC, LDFLAGS. Fix building against sys-libs/ncurses[tinfo].
+
+  06 Aug 2014; Jeroen Roovers <jer@gentoo.org> cv-0.4.1.ebuild:
+  Add SRC_URI arrow (bug #519214 by Casper Ti. Vector).
 
 *cv-0.4.1 (06 Aug 2014)
 
