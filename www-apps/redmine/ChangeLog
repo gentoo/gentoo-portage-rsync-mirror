@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/redmine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.43 2014/08/05 23:04:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.44 2014/08/06 00:06:01 mrueg Exp $
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> redmine-2.4.6.ebuild:
+  NMU: Remove .travis.yml, too.
 
 *redmine-2.4.6 (05 Aug 2014)
 

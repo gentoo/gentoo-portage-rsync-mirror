@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-2.4.6.ebuild,v 1.1 2014/08/05 23:04:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-2.4.6.ebuild,v 1.2 2014/08/06 00:06:01 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -60,7 +60,7 @@ all_ruby_prepare() {
 	rm -r log files/delete.me || die
 
 	# bug #406605
-	rm .gitignore .hgignore || die
+	rm .gitignore .hgignore .travis.yml || die
 
 	rm Gemfile config/preinitializer.rb || die
 
