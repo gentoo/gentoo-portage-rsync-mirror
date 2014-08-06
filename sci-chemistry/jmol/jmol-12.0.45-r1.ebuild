@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.0.45.ebuild,v 1.3 2013/08/09 11:56:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.0.45-r1.ebuild,v 1.1 2014/08/06 19:01:49 creffett Exp $
 
-EAPI=1
+EAPI=5
 WEBAPP_OPTIONAL="yes"
 
 inherit eutils webapp java-pkg-2 java-ant-2
@@ -38,9 +38,7 @@ pkg_setup() {
 	java-pkg-2_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PV}/${PN}-nointl.patch \
 		"${FILESDIR}"/${PV}/${PN}-manifest.patch
