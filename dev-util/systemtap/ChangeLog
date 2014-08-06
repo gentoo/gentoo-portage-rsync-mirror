@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.119 2014/08/02 11:25:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.120 2014/08/06 05:42:26 patrick Exp $
+
+*systemtap-2.5 (06 Aug 2014)
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> +systemtap-2.5.ebuild:
+  Bump
 
   02 Aug 2014; Raúl Porcel <armin76@gentoo.org> systemtap-2.4-r1.ebuild:
   alpha/ia64/sparc stable wrt #512328
