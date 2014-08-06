@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.81 2014/07/06 23:17:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.83 2014/08/06 01:13:22 vapier Exp $
+
+*gnuconfig-20140728 (06 Aug 2014)
+
+  06 Aug 2014; Mike Frysinger <vapier@gentoo.org> +gnuconfig-20140728.ebuild:
+  Version bump.
+
+  06 Aug 2014; Mike Frysinger <vapier@gentoo.org> gnuconfig-20140212.ebuild:
+  Stabilize for all.
 
   06 Jul 2014; Joshua Kinard <kumba@gentoo.org> gnuconfig-20131128.ebuild:
   Changed mips -> ~mips: we don't have a stable keyword anymore.
