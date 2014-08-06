@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.83 2014/01/16 17:29:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.84 2014/08/06 18:18:36 zlogene Exp $
+
+*postgrey-1.35 (06 Aug 2014)
+
+  06 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> +postgrey-1.35.ebuild:
+  Version bump wrt bug #518470. Thanks to Andreis Vinogradovs
 
   16 Jan 2014; Jeroen Roovers <jer@gentoo.org> files/postgrey.conf.new:
   Spelling.
