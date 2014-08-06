@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.678 2014/08/01 23:30:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.679 2014/08/06 10:59:56 polynomial-c Exp $
+
+  06 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> samba-4.1.11.ebuild:
+  Fixed dependency on ldb.
 
 *samba-4.1.11 (01 Aug 2014)
 *samba-4.0.21 (01 Aug 2014)
