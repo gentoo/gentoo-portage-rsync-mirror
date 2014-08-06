@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-37.0.2062.35.ebuild,v 1.1 2014/07/24 03:59:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-38.0.2114.2.ebuild,v 1.1 2014/08/06 16:09:06 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -100,6 +100,7 @@ RDEPEND+="
 	!=www-client/chromium-9999
 	!<www-plugins/chrome-binary-plugins-37
 	x11-misc/xdg-utils
+	virtual/opengl
 	virtual/ttf-fonts
 	tcmalloc? ( !<x11-drivers/nvidia-drivers-331.20 )"
 
@@ -168,9 +169,6 @@ src_prepare() {
 	#		out/Release/gen/sdk/toolchain/linux_x86_newlib || die
 	#	touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	# fi
-
-	epatch "${FILESDIR}/${PN}-angle-r0.patch"
-	epatch "${FILESDIR}/${PN}-ffmpeg-r2.patch"
 
 	epatch_user
 
@@ -249,6 +247,7 @@ src_prepare() {
 		'third_party/x86inc' \
 		'third_party/zlib/google' \
 		'url/third_party/mozilla' \
+		'v8/src/third_party/kernel' \
 		'v8/src/third_party/valgrind' \
 		--do-remove || die
 }
@@ -300,7 +299,6 @@ src_configure() {
 		-Duse_system_libxslt=1
 		-Duse_system_minizip=1
 		-Duse_system_nspr=1
-		-Duse_system_openssl=1
 		-Duse_system_re2=1
 		-Duse_system_snappy=1
 		-Duse_system_speex=1
@@ -344,7 +342,9 @@ src_configure() {
 		-Dlogging_like_official_build=1"
 
 	# Never use bundled gold binary. Disable gold linker flags for now.
+	# Do not use bundled clang.
 	myconf+="
+		-Dclang=0
 		-Dlinux_use_bundled_binutils=0
 		-Dlinux_use_bundled_gold=0
 		-Dlinux_use_gold_flags=0"
@@ -358,10 +358,12 @@ src_configure() {
 		-Dpython_ver=${EPYTHON#python}
 		-Dsystem_libdir=$(get_libdir)"
 
+	ffmpeg_branding="Chromium"
 	if ! use bindist; then
 		# Enable H.264 support in bundled ffmpeg.
-		myconf+=" -Dffmpeg_branding=Chrome"
+		ffmpeg_branding="Chrome"
 	fi
+	myconf+=" -Dffmpeg_branding=${ffmpeg_branding}"
 
 	# Set up Google API keys, see http://www.chromium.org/developers/how-tos/api-keys .
 	# Note: these are for Gentoo use ONLY. For your own distribution,
@@ -444,7 +446,8 @@ src_configure() {
 	# Re-configure bundled ffmpeg. See bug #491378 for example reasons.
 	einfo "Configuring bundled ffmpeg..."
 	pushd third_party/ffmpeg > /dev/null || die
-	chromium/scripts/build_ffmpeg.py linux ${ffmpeg_target_arch} -- ${build_ffmpeg_args} || die
+	chromium/scripts/build_ffmpeg.py linux ${ffmpeg_target_arch} \
+		--branding ${ffmpeg_branding} -- ${build_ffmpeg_args} || die
 	chromium/scripts/copy_config.sh || die
 	chromium/scripts/generate_gyp.py || die
 	popd > /dev/null || die
