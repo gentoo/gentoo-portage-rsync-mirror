@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine-doors/wine-doors-0.1.3.ebuild,v 1.3 2011/04/06 18:30:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine-doors/wine-doors-0.1.3.ebuild,v 1.4 2014/08/06 06:44:38 patrick Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
 
 inherit distutils
 
-DESCRIPTION="Wine-doors is a package manager for wine."
+DESCRIPTION="Wine-doors is a package manager for wine"
 HOMEPAGE="http://www.wine-doors.org"
 SRC_URI="http://www.wine-doors.org/releases/${P}.tar.gz"
 

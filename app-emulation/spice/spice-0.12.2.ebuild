@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.2.ebuild,v 1.5 2013/09/12 22:29:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.2.ebuild,v 1.6 2014/08/06 06:44:37 patrick Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 
 inherit eutils python
 
-DESCRIPTION="SPICE server and client."
+DESCRIPTION="SPICE server and client"
 HOMEPAGE="http://spice-space.org/"
 SRC_URI="http://spice-space.org/download/releases/${P}.tar.bz2"
 

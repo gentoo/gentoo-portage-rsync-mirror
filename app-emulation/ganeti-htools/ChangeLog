@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/ganeti-htools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ChangeLog,v 1.14 2013/12/23 15:56:37 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ChangeLog,v 1.15 2014/08/06 06:44:37 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> ganeti-htools-0.2.8.ebuild,
+  ganeti-htools-0.3.0.ebuild, ganeti-htools-0.3.1.ebuild:
+  Make description more repoman-happy
 
   23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #66351

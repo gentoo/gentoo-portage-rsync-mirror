@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libcacard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libcacard/ChangeLog,v 1.17 2014/01/15 12:49:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libcacard/ChangeLog,v 1.18 2014/08/06 06:44:37 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> libcacard-0.1.2.ebuild:
+  Make description more repoman-happy
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libcacard-0.1.2.ebuild:
   Stable for arm, wrt bug #488926

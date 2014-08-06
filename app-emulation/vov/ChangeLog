@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vov
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/ChangeLog,v 1.7 2014/01/17 07:04:25 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/ChangeLog,v 1.8 2014/08/06 06:44:38 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> vov-2.0.0.ebuild:
+  Make description more repoman-happy
 
   17 Jan 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
   update maintainer email

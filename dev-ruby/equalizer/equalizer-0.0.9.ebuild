@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/equalizer/equalizer-0.0.9.ebuild,v 1.1 2013/12/24 06:24:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/equalizer/equalizer-0.0.9.ebuild,v 1.2 2014/08/06 06:44:46 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20 ruby21 jruby"
 
 RUBY_FAKEGEM_EXTRADOC="CONTRIBUTING.md README.md"
 RUBY_FAKEGEM_TASK_DOC=""

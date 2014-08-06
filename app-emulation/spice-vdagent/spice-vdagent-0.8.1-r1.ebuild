@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.8.1-r1.ebuild,v 1.4 2014/05/18 09:19:24 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.8.1-r1.ebuild,v 1.5 2014/08/06 06:44:37 patrick Exp $
 
 EAPI=4
 
 inherit linux-info
 
-DESCRIPTION="SPICE VD Linux Guest Agent."
+DESCRIPTION="SPICE VD Linux Guest Agent"
 HOMEPAGE="http://spice-space.org/"
 SRC_URI="http://spice-space.org/download/releases/${P}.tar.bz2"
 

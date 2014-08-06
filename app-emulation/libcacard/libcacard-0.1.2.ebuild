@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libcacard/libcacard-0.1.2.ebuild,v 1.17 2014/01/15 12:49:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libcacard/libcacard-0.1.2.ebuild,v 1.18 2014/08/06 06:44:37 patrick Exp $
 
 EAPI=4
 
-DESCRIPTION="Library for emulating CAC cards."
+DESCRIPTION="Library for emulating CAC cards"
 HOMEPAGE="http://spice-space.org/"
 SRC_URI="http://spice-space.org/download/${PN}/${P}.tar.bz2"
 

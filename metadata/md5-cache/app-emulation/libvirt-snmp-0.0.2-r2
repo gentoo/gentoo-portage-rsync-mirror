@@ -1,6 +1,6 @@
 DEFINED_PHASES=install postinst prepare
 DEPEND=app-emulation/libvirt net-analyzer/net-snmp virtual/pkgconfig
-DESCRIPTION=Provides SNMP functionality for libvirt.
+DESCRIPTION=Provides SNMP functionality for libvirt
 EAPI=4
 HOMEPAGE=http://libvirt.org
 KEYWORDS=~amd64
@@ -9,4 +9,4 @@ RDEPEND=app-emulation/libvirt net-analyzer/net-snmp
 SLOT=0
 SRC_URI=http://www.libvirt.org/sources/snmp/libvirt-snmp-0.0.2.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ab7e55451e204a9991f5a9eb4cc496a2
+_md5_=3300c65ebc887b00ab5f74d326261e3b

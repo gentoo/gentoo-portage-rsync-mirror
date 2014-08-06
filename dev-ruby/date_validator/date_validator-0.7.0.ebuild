@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/date_validator/date_validator-0.7.0.ebuild,v 1.2 2014/05/21 01:52:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/date_validator/date_validator-0.7.0.ebuild,v 1.3 2014/08/06 06:41:51 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_TEST="test"
 
@@ -42,4 +42,6 @@ all_ruby_prepare() {
 	sed -i \
 		-e '/git ls-files/d' \
 		${RUBY_FAKEGEM_GEMSPEC} || die
+	sed -i \
+		-e '/[Bb]undler/s/^/#/' Rakefile || die
 }

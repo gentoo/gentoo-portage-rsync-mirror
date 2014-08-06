@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.1.0.ebuild,v 1.1 2014/07/04 04:00:48 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.1.0.ebuild,v 1.2 2014/08/06 06:44:36 patrick Exp $
 
 EAPI=5
 
-DESCRIPTION="Docker complements kernel namespacing with a high-level API which operates at the process level."
+DESCRIPTION="Docker complements kernel namespacing with a high-level API which operates at the process level"
 HOMEPAGE="https://www.docker.io/"
 
 GITHUB_URI="github.com/dotcloud/docker"

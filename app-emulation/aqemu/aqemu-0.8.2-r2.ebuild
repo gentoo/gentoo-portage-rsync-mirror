@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/aqemu-0.8.2-r2.ebuild,v 1.5 2013/03/02 19:24:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/aqemu-0.8.2-r2.ebuild,v 1.6 2014/08/06 06:44:37 patrick Exp $
 
 EAPI=4
 
 inherit  cmake-utils
 
-DESCRIPTION="Graphical interface for QEMU and KVM emulators. Using Qt4."
+DESCRIPTION="Graphical interface for QEMU and KVM emulators, using Qt4"
 HOMEPAGE="http://sourceforge.net/projects/aqemu"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 

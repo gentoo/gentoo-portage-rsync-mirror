@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ganeti-htools-0.3.0.ebuild,v 1.2 2012/03/07 17:56:06 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ganeti-htools-0.3.0.ebuild,v 1.3 2014/08/06 06:44:36 patrick Exp $
 
 EAPI="2"
 
 inherit eutils multilib
 
 DESCRIPTION="Cluster tools for fixing common allocation problems on Ganeti 2.0
-clusters."
+clusters"
 HOMEPAGE="http://code.google.com/p/ganeti/"
 SRC_URI="http://ganeti.googlecode.com/files/${P}.tar.gz"
 

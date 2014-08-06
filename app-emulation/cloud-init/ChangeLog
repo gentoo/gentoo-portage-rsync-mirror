@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/cloud-init
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/ChangeLog,v 1.9 2014/07/06 12:30:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/ChangeLog,v 1.10 2014/08/06 06:44:38 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> cloud-init-0.7.5-r1.ebuild:
+  Make description more repoman-happy
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> cloud-init-0.7.5-r1.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt-snmp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-snmp/ChangeLog,v 1.5 2012/09/10 15:54:56 cardoe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-snmp/ChangeLog,v 1.6 2014/08/06 06:44:38 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> libvirt-snmp-0.0.2-r2.ebuild,
+  libvirt-snmp-0.0.3.ebuild:
+  Make description more repoman-happy
 
 *libvirt-snmp-0.0.3 (10 Sep 2012)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/kirbybase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/ChangeLog,v 1.26 2014/05/21 02:03:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/ChangeLog,v 1.27 2014/08/06 06:57:58 mrueg Exp $
+
+*kirbybase-2.6.1-r2 (06 Aug 2014)
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +kirbybase-2.6.1-r2.ebuild:
+  Add ruby21 target.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> kirbybase-2.6.1-r1.ebuild:
   Remove ruby18 target.

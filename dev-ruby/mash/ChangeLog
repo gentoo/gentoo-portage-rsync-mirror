@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mash/ChangeLog,v 1.10 2014/05/21 01:58:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mash/ChangeLog,v 1.11 2014/08/06 07:01:15 mrueg Exp $
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> mash-0.1.1-r2.ebuild:
+  Add ruby21 target.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> mash-0.1.1-r2.ebuild:
   Remove ruby18 target.

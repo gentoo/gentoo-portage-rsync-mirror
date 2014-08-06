@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/crossover-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/ChangeLog,v 1.12 2014/06/18 19:01:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/ChangeLog,v 1.13 2014/08/06 06:44:38 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org>
+  crossover-bin-12.1.2-r1.ebuild, crossover-bin-12.2.0-r1.ebuild,
+  crossover-bin-12.2.1-r1.ebuild, crossover-bin-12.2.2.ebuild,
+  crossover-bin-12.5.0.ebuild:
+  Make description more repoman-happy
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> crossover-bin-12.1.2-r1.ebuild,
   crossover-bin-12.2.0-r1.ebuild, crossover-bin-12.2.1-r1.ebuild,

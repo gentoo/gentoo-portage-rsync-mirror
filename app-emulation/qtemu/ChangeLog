@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qtemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qtemu/ChangeLog,v 1.9 2014/05/30 22:02:15 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qtemu/ChangeLog,v 1.10 2014/08/06 06:44:38 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> qtemu-1.0.5.ebuild:
+  Make description more repoman-happy
 
   30 May 2014; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Drop to maintainer-needed.

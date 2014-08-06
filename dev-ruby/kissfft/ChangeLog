@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/kissfft
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kissfft/ChangeLog,v 1.7 2014/05/21 01:57:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kissfft/ChangeLog,v 1.8 2014/08/06 06:59:59 mrueg Exp $
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> kissfft-0.0.1-r1.ebuild:
+  Add ruby21 target.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> kissfft-0.0.1-r1.ebuild:
   Remove ruby18 target.

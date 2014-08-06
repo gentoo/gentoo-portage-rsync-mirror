@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.59 2014/07/01 16:42:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.60 2014/08/06 06:44:37 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> spice-0.12.2.ebuild,
+  spice-0.12.3-r1.ebuild, spice-0.12.4-r1.ebuild, spice-0.12.5.ebuild:
+  Make description more repoman-happy
 
 *spice-0.12.5 (01 Jul 2014)
 

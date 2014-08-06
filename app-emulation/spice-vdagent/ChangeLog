@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spice-vdagent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/ChangeLog,v 1.11 2014/05/18 09:19:24 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/ChangeLog,v 1.12 2014/08/06 06:44:37 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> spice-vdagent-0.10.1.ebuild,
+  spice-vdagent-0.12.0.ebuild, spice-vdagent-0.8.1-r1.ebuild:
+  Make description more repoman-happy
 
   18 May 2014; Sven Vermeulen <swift@gentoo.org> spice-vdagent-0.10.1.ebuild,
   spice-vdagent-0.12.0.ebuild, spice-vdagent-0.8.1-r1.ebuild:

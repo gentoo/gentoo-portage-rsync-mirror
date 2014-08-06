@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/vov-2.0.0.ebuild,v 1.3 2009/09/23 15:34:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/vov-2.0.0.ebuild,v 1.4 2014/08/06 06:44:38 patrick Exp $
 
 inherit flag-o-matic
 
-DESCRIPTION="vov (Vov's Obsessive Von-Neumann) is a tool that emulates the behavior of a Von-Neumann machine."
+DESCRIPTION="vov (Vov's Obsessive Von-Neumann) is a tool that emulates the behavior of a Von-Neumann machine"
 HOMEPAGE="http://home.gna.org/vov/"
 SRC_URI="http://download.gna.org/vov/${P}.tar.gz"
 
