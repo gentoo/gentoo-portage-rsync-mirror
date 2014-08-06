@@ -8,6 +8,6 @@ KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.26 gtk? ( x11-libs/gtk+:3 )
 SLOT=3
-SRC_URI=mirror://sourceforge/cxx-gtk-utils/c++-gtk-utils-2.0.24.tar.gz
+SRC_URI=mirror://sourceforge/cxx-gtk-utils/c++-gtk-utils-2.0.25.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=32e31e38a85a684aeed7514ff08f4670
+_md5_=530046a55699d3acbeac572660452f5a

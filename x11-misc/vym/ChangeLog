@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/vym
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.35 2014/05/04 23:51:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.36 2014/08/06 09:10:35 jer Exp $
+
+*vym-2.3.24 (06 Aug 2014)
+
+  06 Aug 2014; Jeroen Roovers <jer@gentoo.org> +vym-2.3.24.ebuild:
+  Version bump.
 
 *vym-2.3.22 (04 May 2014)
 
