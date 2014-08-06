@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/bluedevil-2.0_rc1-r1.ebuild,v 1.2 2014/05/10 09:14:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/bluedevil-2.0_rc1-r1.ebuild,v 1.3 2014/08/06 17:51:33 johu Exp $
 
 EAPI=5
 
@@ -23,8 +23,5 @@ DEPEND="
 	>=net-libs/libbluedevil-2
 	x11-misc/shared-mime-info
 "
-RDEPEND="${DEPEND}
-	!app-mobilephone/obexd
-	!net-wireless/kbluetooth
-"
+RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
