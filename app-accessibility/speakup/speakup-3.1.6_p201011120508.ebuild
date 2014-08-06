@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.1.6_p201011120508.ebuild,v 1.6 2011/06/25 13:29:48 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.1.6_p201011120508.ebuild,v 1.7 2014/08/06 06:24:38 patrick Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ fi
 
 inherit $vcs linux-mod
 
-DESCRIPTION="The speakup linux kernel based screen reader."
+DESCRIPTION="The speakup linux kernel based screen reader"
 HOMEPAGE="http://linux-speakup.org"
 
 LICENSE="GPL-2"

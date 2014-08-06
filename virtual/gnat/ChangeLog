@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gnat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/ChangeLog,v 1.13 2011/09/23 14:10:10 george Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/ChangeLog,v 1.14 2014/08/06 06:11:37 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> gnat-4.4.ebuild:
+  Drop sparc keywords as dev-lang/gnat-gcc lost keywords
 
   23 Sep 2011; George Shapovalov <george@gentoo.org> gnat-4.3.ebuild,
   gnat-4.4.ebuild:
@@ -54,4 +57,3 @@
   13 Apr 2006; George Shapovalov <george@gentoo.org> +metadata.xml,
   +gnat-3.4.ebuild:
   added a new virtual for new gnat compilers
-

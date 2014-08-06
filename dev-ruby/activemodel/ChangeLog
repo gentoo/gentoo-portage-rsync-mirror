@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.86 2014/08/05 16:00:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.87 2014/08/06 06:19:52 mrueg Exp $
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> activemodel-3.2.19.ebuild:
+  Add ruby21 target.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> activemodel-3.2.19.ebuild,
   activemodel-4.0.8.ebuild, activemodel-4.1.4.ebuild:

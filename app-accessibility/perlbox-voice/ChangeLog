@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/perlbox-voice
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/ChangeLog,v 1.10 2013/11/23 15:21:54 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/ChangeLog,v 1.11 2014/08/06 06:24:39 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> perlbox-voice-0.09-r1.ebuild:
+  Make description more repoman-happy
 
   23 Nov 2013; Mikle Kolyada <zlogene@gentoo.org> perlbox-voice-0.09-r2.ebuild:
   amd64/x86 stable wrt bug #491886

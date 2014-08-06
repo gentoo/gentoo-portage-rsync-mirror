@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/mbrola
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.58 2012/03/06 21:31:21 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.59 2014/08/06 06:24:38 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> mbrola-3.0.1h-r5.ebuild,
+  mbrola-3.0.1h-r6.ebuild:
+  Make description more repoman-happy
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> mbrola-3.0.1h-r6.ebuild:
   Marking mbrola-3.0.1h-r6 ppc64 for bug 391419

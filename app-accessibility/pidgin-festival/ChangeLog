@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/pidgin-festival
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/ChangeLog,v 1.11 2012/05/03 01:48:59 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/ChangeLog,v 1.12 2014/08/06 06:24:38 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> pidgin-festival-2.4.ebuild:
+  Make description more repoman-happy
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> pidgin-festival-2.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -45,4 +48,3 @@
   26 Oct 2007; Olivier Crête <tester@gentoo.org> +metadata.xml,
   +pidgin-festival-2.2.ebuild:
   Add new package, which is the continuatio of net-im/festival-gaim
-

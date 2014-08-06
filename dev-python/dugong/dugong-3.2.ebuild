@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/dugong-3.1.ebuild,v 1.2 2014/08/06 06:05:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/dugong-3.2.ebuild,v 1.1 2014/08/06 06:05:59 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python3_{3,4} )
@@ -20,6 +20,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 
 python_test() {
+	# https://bitbucket.org/nikratio/python-dugong/issue/12
 	# This test hangs
 	sed -e 's:test_blocking_send:_&:' -i test/test_dugong.py || die
 	py.test -v || die "Tests failed under ${EPYTHON}"

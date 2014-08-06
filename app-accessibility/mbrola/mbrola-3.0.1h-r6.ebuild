@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r6.ebuild,v 1.7 2012/03/06 21:31:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r6.ebuild,v 1.8 2014/08/06 06:24:38 patrick Exp $
 
 IUSE="linguas_de linguas_es linguas_fr linguas_it linguas_la linguas_pl
 	linguas_ro linguas_sv"
 
 S=${WORKDIR}
 
-DESCRIPTION="Speech synthesizer based on the concatenation of diphones. Includes sample voices."
+DESCRIPTION="Speech synthesizer based on the concatenation of diphones. Includes sample voices"
 HOMEPAGE="http://tcts.fpms.ac.be/synthesis/mbrola.html"
 MY_PV=${PV//./}
 TCTS="http://tcts.fpms.ac.be/synthesis"

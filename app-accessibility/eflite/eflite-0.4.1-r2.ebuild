@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.4.1-r2.ebuild,v 1.4 2014/07/28 13:42:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.4.1-r2.ebuild,v 1.5 2014/08/06 06:24:37 patrick Exp $
 
 EAPI="5"
 inherit autotools eutils user
 
-DESCRIPTION="A speech server that allows emacspeak and other screen readers to interact with festival lite."
+DESCRIPTION="A speech server that allows emacspeak and other screen readers to interact with festival lite"
 HOMEPAGE="http://eflite.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
