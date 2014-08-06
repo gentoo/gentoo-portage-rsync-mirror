@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/afm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/afm/ChangeLog,v 1.4 2014/05/14 23:53:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/afm/ChangeLog,v 1.5 2014/08/06 01:38:54 mrueg Exp $
+
+*afm-0.2.2 (06 Aug 2014)
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +afm-0.2.2.ebuild,
+  -afm-0.2.0_p20130408-r1.ebuild, -afm-0.2.0_p20130408.ebuild:
+  Version bump. Add ruby21 target. Cleanup old.
 
 *afm-0.2.0_p20130408-r1 (14 May 2014)
 
