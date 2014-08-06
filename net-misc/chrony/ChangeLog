@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.137 2014/08/04 18:29:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.138 2014/08/06 09:44:31 jer Exp $
+
+*chrony-1.30-r1 (06 Aug 2014)
+
+  06 Aug 2014; Jeroen Roovers <jer@gentoo.org> -chrony-1.29.1.ebuild,
+  -chrony-1.30.ebuild, +chrony-1.30-r1.ebuild, -files/50-chrony.list,
+  files/chrony.logrotate:
+  Add "missingok" in logrotate script by Dimitri Semitsoglou-Tsiapos (bug
+  #519134).
 
   04 Aug 2014; Raúl Porcel <armin76@gentoo.org> chrony-1.30.ebuild:
   sparc/x86 stable wrt #518572
