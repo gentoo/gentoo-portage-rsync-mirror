@@ -1,6 +1,10 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.40 2014/07/10 10:46:29 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.41 2014/08/06 07:09:31 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> fbreader-0.99.4-r1.ebuild,
+  fbreader-0.99.4-r2.ebuild:
+  Make description more repoman-happy
 
 *fbreader-0.99.4-r2 (10 Jul 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/getxbook
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/getxbook/ChangeLog,v 1.4 2013/07/24 13:38:18 grozin Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/getxbook/ChangeLog,v 1.5 2014/08/06 07:09:33 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> getxbook-1.0.ebuild:
+  Make description more repoman-happy
 
   24 Jul 2013; Andrey Grozin <grozin@gentoo.org> -getxbook-0.9.ebuild,
   getxbook-1.0.ebuild, -files/getxbook-makefile.patch:
@@ -23,4 +26,3 @@
   15 Feb 2012; Andrey Grozin <grozin@gentoo.org> +getxbook-0.8.ebuild,
   +files/getxbook-makefile.patch, +metadata.xml:
   Initial import
-

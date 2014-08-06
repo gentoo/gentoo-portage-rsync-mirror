@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/expander/expander-2.0.5-r1.ebuild,v 1.2 2012/10/17 17:02:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/expander/expander-2.0.5-r1.ebuild,v 1.3 2014/08/06 07:09:34 patrick Exp $
 
 EAPI=4
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Expander is a utility that acts as a filter for text editors."
+DESCRIPTION="Expander is a utility that acts as a filter for text editors"
 HOMEPAGE="http://www.nedit.org"
 SRC_URI="ftp://ftp.nedit.org/pub/contrib/misc/nedit_expander_kit_2.05.tar.gz"
 

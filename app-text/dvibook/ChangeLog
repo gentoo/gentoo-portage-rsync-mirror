@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvibook
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvibook/ChangeLog,v 1.10 2007/07/22 10:11:31 omp Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvibook/ChangeLog,v 1.11 2014/08/06 07:09:33 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> dvibook-20001129.ebuild:
+  Make description more repoman-happy
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> dvibook-20001129.ebuild:
   Remove virtual/x11 from dependencies.
@@ -34,4 +37,3 @@
   +files/dvibook-20001129.patch, +dvibook-20001129.ebuild:
   Initial import. Ebuild submitted by Ulrich Mueller <ulm@kph.uni-mainz.de>,
   closing bug #56468.
-

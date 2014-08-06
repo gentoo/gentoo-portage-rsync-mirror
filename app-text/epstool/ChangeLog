@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epstool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.39 2014/04/06 23:54:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.40 2014/08/06 07:09:33 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> epstool-3.08-r1.ebuild:
+  Make description more repoman-happy
 
   06 Apr 2014; Jeroen Roovers <jer@gentoo.org> epstool-3.08-r1.ebuild,
   files/gcc43.patch:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/memoizable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/ChangeLog,v 1.11 2014/04/18 17:16:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/ChangeLog,v 1.12 2014/08/06 07:26:55 mrueg Exp $
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> memoizable-0.4.2.ebuild:
+  Add ruby21 target.
 
   18 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -memoizable-0.4.1-r1.ebuild,
   -memoizable-0.4.1.ebuild:

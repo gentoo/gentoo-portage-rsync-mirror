@@ -1,6 +1,10 @@
 # ChangeLog for app-text/agrep
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.30 2011/03/02 01:37:14 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.31 2014/08/06 07:09:33 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> agrep-2.04-r1.ebuild,
+  agrep-2.04.ebuild:
+  Make description more repoman-happy
 
   02 Mar 2011; Brent Baude <ranger@gentoo.org> agrep-2.04-r1.ebuild:
   stable ppc64, bug 350714

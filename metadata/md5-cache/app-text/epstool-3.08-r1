@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=app-text/ghostscript-gpl
-DESCRIPTION=Creates or extracts preview images in EPS files, fixes bounding boxes,converts to bitmaps.
+DESCRIPTION=Creates or extracts preview images in EPS files, fixes bounding boxes,converts to bitmaps
 EAPI=5
 HOMEPAGE=http://www.cs.wisc.edu/~ghost/gsview/epstool.htm
 KEYWORDS=amd64 ~arm hppa ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos
@@ -9,4 +9,4 @@ RDEPEND=app-text/ghostscript-gpl
 SLOT=0
 SRC_URI=ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/ghostgum/epstool-3.08.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=3d195fd1dc170d8902b354a2db866873
+_md5_=d254c396d8fe69021bfd8294e02e0878

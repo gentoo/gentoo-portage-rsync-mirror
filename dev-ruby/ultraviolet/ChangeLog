@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ultraviolet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ultraviolet/ChangeLog,v 1.13 2014/07/18 08:56:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ultraviolet/ChangeLog,v 1.14 2014/08/06 07:24:57 mrueg Exp $
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> ultraviolet-1.0.1.ebuild:
+  Add ruby21 target.
 
   18 Jul 2014; Hans de Graaff <graaff@gentoo.org> ultraviolet-1.0.1.ebuild:
   Fix USE=doc. Fix HOMEPAGE. Add ruby20.

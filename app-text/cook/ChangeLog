@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cook
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cook/ChangeLog,v 1.18 2013/11/07 02:57:50 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cook/ChangeLog,v 1.19 2014/08/06 07:09:32 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> cook-1.0.2-r1.ebuild:
+  Make description more repoman-happy
 
   07 Nov 2013; Patrick Lauer <patrick@gentoo.org> cook-1.0.2-r1.ebuild:
   Shorten description, make repoman happier

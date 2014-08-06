@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ebook-tools-0.2.2.ebuild,v 1.6 2013/08/24 13:09:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ebook-tools-0.2.2.ebuild,v 1.7 2014/08/06 07:09:34 patrick Exp $
 
 EAPI=4
 
 inherit cmake-utils multilib
 
-DESCRIPTION="Tools for accessing and converting various ebook file formats."
+DESCRIPTION="Tools for accessing and converting various ebook file formats"
 HOMEPAGE="http://sourceforge.net/projects/ebook-tools"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

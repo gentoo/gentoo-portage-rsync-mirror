@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.10.0.ebuild,v 1.1 2014/02/03 23:57:03 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.10.0.ebuild,v 1.2 2014/08/06 07:09:31 patrick Exp $
 
 EAPI=5
 inherit cmake-utils
 
-DESCRIPTION="Qt4 Bible study application using the SWORD library."
+DESCRIPTION="Qt4 Bible study application using the SWORD library"
 HOMEPAGE="http://www.bibletime.info/"
 SRC_URI="mirror://sourceforge/project/bibletime/BibleTime%202/BibleTime%202%20source%20code/${P}.tar.xz"
 

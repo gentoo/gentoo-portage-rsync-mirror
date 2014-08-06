@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rest-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.21 2014/07/20 06:34:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.22 2014/08/06 07:09:10 mrueg Exp $
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> rest-client-1.7.2.ebuild:
+  Add ruby21 target.
 
 *rest-client-1.7.2 (20 Jul 2014)
 

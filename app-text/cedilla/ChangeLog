@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cedilla
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/ChangeLog,v 1.14 2012/12/05 01:35:58 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/ChangeLog,v 1.15 2014/08/06 07:09:32 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> cedilla-0.6.ebuild:
+  Make description more repoman-happy
 
   05 Dec 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Change maintainer tag (bug #390951).
@@ -48,4 +51,3 @@
 
   22 Aug 2003; Chuck Short <zul@gentoo.org> files/cedilla-gentoo.patch:
   Initial Version. Closes #22067.
-

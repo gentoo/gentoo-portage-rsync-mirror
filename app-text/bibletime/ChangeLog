@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibletime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.70 2014/02/03 23:57:03 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.71 2014/08/06 07:09:32 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> bibletime-2.10.0.ebuild,
+  bibletime-2.9.1.ebuild:
+  Make description more repoman-happy
 
 *bibletime-2.10.0 (03 Feb 2014)
 

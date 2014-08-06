@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/rest-client-1.7.2.ebuild,v 1.1 2014/07/20 06:34:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/rest-client-1.7.2.ebuild,v 1.2 2014/08/06 07:09:10 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvibook/dvibook-20001129.ebuild,v 1.8 2007/07/22 10:11:31 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvibook/dvibook-20001129.ebuild,v 1.9 2014/08/06 07:09:33 patrick Exp $
 
 inherit eutils
 
-DESCRIPTION="DVI file utilities: dvibook, dviconcat, dvitodvi, and dviselect."
+DESCRIPTION="DVI file utilities: dvibook, dviconcat, dvitodvi, and dviselect"
 HOMEPAGE="http://www.ctan.org/tex-archive/dviware/dvibook/"
 # Taken from: ftp://tug.ctan.org/tex-archive/dviware/${PN}.tar.gz
 SRC_URI="mirror://gentoo/${P}.tar.gz"

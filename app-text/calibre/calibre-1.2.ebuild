@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.2.ebuild,v 1.3 2014/06/14 07:01:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.2.ebuild,v 1.4 2014/08/06 07:09:34 patrick Exp $
 
 EAPI=5
 
 inherit eutils fdo-mime bash-completion-r1 multilib toolchain-funcs
 
-DESCRIPTION="Ebook management application."
+DESCRIPTION="Ebook management application"
 HOMEPAGE="http://calibre-ebook.com/"
 [[ ${PV} == ${PV%.*}.${PV#*.} ]] && MY_PV=${PV}.0 || MY_PV=${PV}
 SRC_URI="http://sourceforge.net/projects/calibre/files/${MY_PV}/${PN}-${MY_PV}.tar.xz"

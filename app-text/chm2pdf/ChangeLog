@@ -1,6 +1,10 @@
 # ChangeLog for app-text/chm2pdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.13 2014/03/09 03:43:01 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.14 2014/08/06 07:09:32 patrick Exp $
+
+  06 Aug 2014; Patrick Lauer <patrick@gentoo.org> chm2pdf-0.9.1-r1.ebuild,
+  chm2pdf-0.9.1.ebuild:
+  Make description more repoman-happy
 
   09 Mar 2014; Ryan Hill <rhill@gentoo.org> metadata.xml:
   Change my email.
@@ -47,4 +51,3 @@
   +metadata.xml, +chm2pdf-0.9.1.ebuild:
   Initial import of chm2pdf program. Fixes bug #205208 . Thanks to Milan
   Nikolic <gen2brain@gmail.com> for the patch
-

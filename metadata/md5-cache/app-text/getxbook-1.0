@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DESCRIPTION=Download books from google, amazon, barnes and noble.
+DESCRIPTION=Download books from google, amazon, barnes and noble
 EAPI=4
 HOMEPAGE=http://njw.me.uk/software/getxbook/
 IUSE=pdf djvu ocr tk
@@ -9,4 +9,4 @@ RDEPEND=djvu? ( app-text/djvu ) pdf? ( media-gfx/imagemagick ) ocr? ( app-text/t
 SLOT=0
 SRC_URI=http://njw.me.uk/software/getxbook/getxbook-1.0.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=8d715dec47543140410ea5eaa3632773
+_md5_=47b324403eb3e4eba13642e2f5d7af21

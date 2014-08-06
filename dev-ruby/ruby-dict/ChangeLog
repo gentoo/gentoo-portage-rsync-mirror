@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-dict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.17 2014/04/24 20:15:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.18 2014/08/06 07:12:59 mrueg Exp $
+
+*ruby-dict-0.9.4-r4 (06 Aug 2014)
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +ruby-dict-0.9.4-r4.ebuild:
+  Add ruby21 target.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-dict-0.9.4-r3.ebuild:
   Remove ruby18 support.
