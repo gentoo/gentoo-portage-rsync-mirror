@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.4.ebuild,v 1.3 2014/06/17 15:52:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.4.ebuild,v 1.4 2014/08/06 22:10:47 ottxor Exp $
 
 EAPI=5
 
@@ -31,14 +31,6 @@ RDEPEND="
 					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	test? ( dev-lang/perl )"
-
-#can go once mpi is multlib
-MULTILIB_WRAPPED_HEADERS=(
-	/usr/include/fftw3-mpi.h
-	/usr/include/fftw3l-mpi.f03
-	/usr/include/fftw3-mpi.f03
-	/usr/include/fftw3q.f03
-)
 
 pkg_setup() {
 	# XXX: this looks like it should be used with BUILD_TYPE!=binary
@@ -154,20 +146,7 @@ src_install () {
 	DOCS=( AUTHORS ChangeLog NEWS README TODO COPYRIGHT CONVENTIONS )
 	HTML_DOCS=( doc/html/ )
 
-	#copied from autotools-multilib_secure_install
-	my_abi_src_install() {
-		autotools-utils_src_install
-		#https://github.com/FFTW/fftw3/pull/6
-		# f03 are installed unconditionally, not a big problem as the quad
-		# header is the only one to be wrapped.
-		[[ ${BUILD_DIR} = *-quad* ]] || rm -f "${ED}/usr/include/fftw3q.f03"
-		if [[ ${#MULTIBUILD_VARIANTS[@]} -gt 1 ]]; then
-			multilib_prepare_wrappers
-			multilib_check_headers
-		fi
-	}
-	multibuild_foreach_variant multilib_foreach_abi my_abi_src_install
-	multilib_install_wrappers
+	multibuild_foreach_variant multilib_parallel_foreach_abi autotools-utils_src_install
 
 	if use doc; then
 		dodoc doc/*.pdf

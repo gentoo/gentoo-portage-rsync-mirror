@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.158 2014/06/17 15:52:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.159 2014/08/06 22:10:47 ottxor Exp $
+
+  06 Aug 2014; Christoph Junghans <ottxor@gentoo.org> -fftw-3.3.3-r3.ebuild,
+  fftw-3.3.4.ebuild:
+  disable header wrapping (bug #519094)
 
   17 Jun 2014; Michał Górny <mgorny@gentoo.org> fftw-3.3.4.ebuild:
   Use ${ABI} to disable quad precision w/ abi_x86_32.
