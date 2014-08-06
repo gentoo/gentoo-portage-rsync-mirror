@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/paint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/paint/ChangeLog,v 1.7 2014/05/21 01:36:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/paint/ChangeLog,v 1.8 2014/08/06 07:41:40 mrueg Exp $
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> paint-0.8.7.ebuild:
+  Add ruby21 target.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> -paint-0.8.6-r1.ebuild,
   paint-0.8.7.ebuild:

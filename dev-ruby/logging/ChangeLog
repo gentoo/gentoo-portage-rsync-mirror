@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/logging
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logging/ChangeLog,v 1.4 2014/05/07 19:15:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logging/ChangeLog,v 1.5 2014/08/06 07:54:17 mrueg Exp $
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> logging-1.8.2.ebuild:
+  Add ruby21 target.
 
   07 May 2014; Manuel Rüger <mrueg@gentoo.org> -logging-1.8.1-r1.ebuild,
   -logging-1.8.1.ebuild, logging-1.8.2.ebuild:

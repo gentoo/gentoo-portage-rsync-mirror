@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-inifile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inifile/ChangeLog,v 1.9 2014/04/24 20:07:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inifile/ChangeLog,v 1.10 2014/08/06 07:32:27 mrueg Exp $
+
+  06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> ruby-inifile-2.0.0-r2.ebuild:
+  Add ruby21 target.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-inifile-2.0.0-r2.ebuild:
   Remove ruby18 support.
