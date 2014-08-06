@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/extutils-depends
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.87 2014/07/24 23:05:56 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.88 2014/08/06 20:34:30 jer Exp $
+
+  06 Aug 2014; Jeroen Roovers <jer@gentoo.org> extutils-depends-0.306.0.ebuild:
+  Stable for HPPA (bug #517898).
 
   24 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   extutils-depends-0.306.0.ebuild:

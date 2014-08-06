@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.32.0.ebuild,v 1.6 2014/08/03 18:42:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.32.0.ebuild,v 1.7 2014/08/06 20:36:59 jer Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="A Perl Module for Tk"
 
 LICENSE+=" BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND="
