@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-1.5.0_rc3.ebuild,v 1.2 2014/08/05 16:36:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-1.5.0_rc3.ebuild,v 1.3 2014/08/06 19:52:46 jer Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="64bit debug geoip ipv6 mongodb mysql postgres sqlite threads ulog"
 
-DEPEND="
+RDEPEND="
 	net-libs/libpcap
 	geoip? ( dev-libs/geoip )
 	mongodb? ( >=dev-libs/mongo-c-driver-0.8.1-r1 )
@@ -22,7 +22,10 @@ DEPEND="
 	postgres? ( dev-db/postgresql-base )
 	sqlite? ( =dev-db/sqlite-3* )
 "
-RDEPEND="${DEPEND}"
+DEPEND="
+	${RDEPEND}
+	virtual/pkgconfig
+"
 
 S="${WORKDIR}/${P/_/}"
 
