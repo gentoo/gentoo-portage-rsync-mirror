@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.7 2013/08/15 09:39:28 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.8 2014/08/06 10:20:02 swift Exp $
 EAPI="4"
 
 inherit eutils git-2
@@ -9,7 +9,8 @@ IUSE="+peer_perms +open_perms +ubac +unconfined doc"
 
 DESCRIPTION="Gentoo base policy for SELinux"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/hardened-refpolicy.git"
+EGIT_REPO_URI="${SELINUX_GIT_REPO:-git://git.overlays.gentoo.org/proj/hardened-refpolicy.git https://git.overlays.gentoo.org/gitroot/proj/hardened-refpolicy.git}"
+EGIT_BRANCH="${SELINUX_GIT_BRANCH:-master}"
 EGIT_SOURCEDIR="${WORKDIR}/refpolicy"
 LICENSE="GPL-2"
 SLOT="0"
