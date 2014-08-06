@@ -1,7 +1,5 @@
-Index: wally-2.2.0/CMakeLists.txt
-===================================================================
---- wally-2.2.0.orig/CMakeLists.txt
-+++ wally-2.2.0/CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
 @@ -238,11 +238,6 @@ else( APPLE )
      add_custom_command( TARGET ${PROGNAME} POST_BUILD COMMAND strip ARGS ${WALLY_PATH} WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR} )
    endif( CMAKE_BUILD_TYPE STREQUAL Release )

@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.47 2014/07/25 22:00:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.48 2014/08/06 11:36:51 jer Exp $
+
+*wally-2.4.5 (06 Aug 2014)
+
+  06 Aug 2014; Jeroen Roovers <jer@gentoo.org> wally-2.4.4.ebuild,
+  +wally-2.4.5.ebuild, files/wally-2.2.0-disable-kde4.patch,
+  files/wally-2.2.0-disable_popup.patch, files/wally-2.4.4-gold.patch:
+  Version bump.
 
   25 Jul 2014; Johannes Huber <johu@gentoo.org> wally-2.4.4.ebuild:
   EAPI 5.

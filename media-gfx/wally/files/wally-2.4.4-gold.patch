@@ -1,5 +1,5 @@
---- CMakeLists.txt
-+++ CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
 @@ -284,7 +284,7 @@
    set( PROGNAME wally )
  

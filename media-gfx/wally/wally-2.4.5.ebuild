@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.4.ebuild,v 1.7 2014/08/06 11:36:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.5.ebuild,v 1.1 2014/08/06 11:36:51 jer Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug kde"
 
 DEPEND="
@@ -33,8 +33,7 @@ DOCS=(
 	"README.shortcuts" "TODO"
 )
 PATCHES=(
-	"${FILESDIR}/${P}-gold.patch"
-	"${FILESDIR}/${PN}-2.2.0-disable_popup.patch"
+	"${FILESDIR}"/${PN}-2.2.0-disable_popup.patch
 )
 
 src_prepare() {
