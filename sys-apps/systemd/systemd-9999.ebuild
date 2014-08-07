@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.131 2014/08/07 02:07:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.132 2014/08/07 15:07:24 floppym Exp $
 
 EAPI=5
 
@@ -67,7 +67,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-libs/glibc-2.14
 	!sys-fs/udev"
 
-# sys-apps/daemon: the daemon only (+ build-time lib dep for tests)
+# sys-apps/dbus: the daemon only (+ build-time lib dep for tests)
 PDEPEND=">=sys-apps/dbus-1.6.8-r1:0[systemd]
 	>=sys-apps/hwids-20130717-r1[udev]
 	>=sys-fs/udev-init-scripts-25
