@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.322 2014/07/30 21:26:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.324 2014/08/07 06:19:26 pinkbyte Exp $
+
+  07 Aug 2014; Sergey Popov <pinkbyte@gentoo.org> boost-1.52.0-r7.ebuild:
+  Make dev-util/boost-build dependency less strict
+
+  07 Aug 2014; Sergey Popov <pinkbyte@gentoo.org> boost-1.52.0-r7.ebuild:
+  Backport fix for bug #498134, wrt bug #518840. Thanks to Michael Jones
+  <gentoo AT jonesmz.com> for discovering this issue
 
   30 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> boost-1.52.0-r7.ebuild:
   Whitespace

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.52.0-r7.ebuild,v 1.4 2014/07/30 21:26:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.52.0-r7.ebuild,v 1.6 2014/08/07 06:19:26 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -27,7 +27,7 @@ RDEPEND="icu? ( >=dev-libs/icu-3.6:= )
 	sys-libs/zlib
 	!app-admin/eselect-boost"
 DEPEND="${RDEPEND}
-	=dev-util/boost-build-1.52.0-r1"
+	=dev-util/boost-build-1.52.0*"
 
 S=${WORKDIR}/${MY_P}
 
@@ -107,6 +107,9 @@ ejam() {
 }
 
 src_configure() {
+	# Workaround for too many parallel processes requested, bug #506064
+	[ "$(makeopts_jobs)" -gt 64 ] && MAKEOPTS="${MAKEOPTS} -j64"
+
 	OPTIONS="$(usex debug gentoodebug gentoorelease) -j$(makeopts_jobs) -q -d+2 --user-config=${S}/user-config.jam"
 
 	if [[ ${CHOST} == *-darwin* ]]; then
