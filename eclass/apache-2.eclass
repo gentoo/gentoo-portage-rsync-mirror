@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.38 2014/08/05 14:19:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.39 2014/08/07 07:37:54 polynomial-c Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -181,7 +181,7 @@ check_module_critical() {
 	local unsupported=0
 
 	for m in ${MODULE_CRITICAL} ; do
-		if ! has ${m} ${MY_MODS} ; then
+		if ! has ${m} ${MY_MODS[@]} ; then
 			ewarn "Module '${m}' is required in the default apache configuration."
 			unsupported=1
 		fi
@@ -210,7 +210,7 @@ check_module_critical() {
 check_module_depends() {
 	local err=0
 
-	for m in ${MY_MODS} ; do
+	for m in ${MY_MODS[@]} ; do
 		for dep in ${MODULE_DEPENDS} ; do
 			if [[ "${m}" == "${dep%:*}" ]] ; then
 				if ! use apache2_modules_${dep#*:} ; then
@@ -249,62 +249,63 @@ setup_modules() {
 		mod_type="shared"
 	fi
 
-	MY_CONF="--enable-so=static"
+	MY_CONF=( --enable-so=static )
+	MY_MODS=()
 
 	if use ldap ; then
-		MY_CONF+=" --enable-authnz_ldap=${mod_type} --enable-ldap=${mod_type}"
-		MY_MODS+=" ldap authnz_ldap"
+		MY_CONF+=( --enable-authnz_ldap=${mod_type} --enable-ldap=${mod_type} )
+		MY_MODS+=( ldap authnz_ldap )
 	else
-		MY_CONF+=" --disable-authnz_ldap --disable-ldap"
+		MY_CONF+=( --disable-authnz_ldap --disable-ldap )
 	fi
 
 	if use ssl ; then
-		MY_CONF+=" --with-ssl="${EPREFIX}"/usr --enable-ssl=${mod_type}"
-		MY_MODS+=" ssl"
+		MY_CONF+=( --with-ssl="${EPREFIX}"/usr --enable-ssl=${mod_type} )
+		MY_MODS+=( ssl )
 	else
-		MY_CONF+=" --without-ssl --disable-ssl"
+		MY_CONF+=( --without-ssl --disable-ssl )
 	fi
 
 	if use suexec ; then
 		elog "You can manipulate several configure options of suexec"
 		elog "through the following environment variables:"
 		elog
-		elog " SUEXEC_SAFEPATH: Default PATH for suexec (default: "${EPREFIX}"/usr/local/bin:"${EPREFIX}"/usr/bin:"${EPREFIX}"/bin)"
-		elog "  SUEXEC_LOGFILE: Path to the suexec logfile (default: "${EPREFIX}"/var/log/apache2/suexec_log)"
+		elog " SUEXEC_SAFEPATH: Default PATH for suexec (default: '${EPREFIX}/usr/local/bin:${EPREFIX}/usr/bin:${EPREFIX}/bin')"
+		elog "  SUEXEC_LOGFILE: Path to the suexec logfile (default: '${EPREFIX}/var/log/apache2/suexec_log')"
 		elog "   SUEXEC_CALLER: Name of the user Apache is running as (default: apache)"
-		elog "  SUEXEC_DOCROOT: Directory in which suexec will run scripts (default: "${EPREFIX}"/var/www)"
+		elog "  SUEXEC_DOCROOT: Directory in which suexec will run scripts (default: '${EPREFIX}/var/www')"
 		elog "   SUEXEC_MINUID: Minimum UID, which is allowed to run scripts via suexec (default: 1000)"
 		elog "   SUEXEC_MINGID: Minimum GID, which is allowed to run scripts via suexec (default: 100)"
 		elog "  SUEXEC_USERDIR: User subdirectories (like /home/user/html) (default: public_html)"
 		elog "    SUEXEC_UMASK: Umask for the suexec process (default: 077)"
 		elog
 
-		MY_CONF+=" --with-suexec-safepath=${SUEXEC_SAFEPATH:-"${EPREFIX}"/usr/local/bin:"${EPREFIX}"/usr/bin:"${EPREFIX}"/bin}"
-		MY_CONF+=" --with-suexec-logfile=${SUEXEC_LOGFILE:-"${EPREFIX}"/var/log/apache2/suexec_log}"
-		MY_CONF+=" --with-suexec-bin="${EPREFIX}"/usr/sbin/suexec"
-		MY_CONF+=" --with-suexec-userdir=${SUEXEC_USERDIR:-public_html}"
-		MY_CONF+=" --with-suexec-caller=${SUEXEC_CALLER:-apache}"
-		MY_CONF+=" --with-suexec-docroot=${SUEXEC_DOCROOT:-"${EPREFIX}"/var/www}"
-		MY_CONF+=" --with-suexec-uidmin=${SUEXEC_MINUID:-1000}"
-		MY_CONF+=" --with-suexec-gidmin=${SUEXEC_MINGID:-100}"
-		MY_CONF+=" --with-suexec-umask=${SUEXEC_UMASK:-077}"
-		MY_CONF+=" --enable-suexec=${mod_type}"
-		MY_MODS+=" suexec"
+		MY_CONF+=( --with-suexec-safepath="${SUEXEC_SAFEPATH:-${EPREFIX}/usr/local/bin:${EPREFIX}/usr/bin:${EPREFIX}/bin}" )
+		MY_CONF+=( --with-suexec-logfile="${SUEXEC_LOGFILE:-${EPREFIX}/var/log/apache2/suexec_log}" )
+		MY_CONF+=( --with-suexec-bin="${EPREFIX}/usr/sbin/suexec" )
+		MY_CONF+=( --with-suexec-userdir=${SUEXEC_USERDIR:-public_html} )
+		MY_CONF+=( --with-suexec-caller=${SUEXEC_CALLER:-apache} )
+		MY_CONF+=( --with-suexec-docroot="${SUEXEC_DOCROOT:-${EPREFIX}/var/www}" )
+		MY_CONF+=( --with-suexec-uidmin=${SUEXEC_MINUID:-1000} )
+		MY_CONF+=( --with-suexec-gidmin=${SUEXEC_MINGID:-100} )
+		MY_CONF+=( --with-suexec-umask=${SUEXEC_UMASK:-077} )
+		MY_CONF+=( --enable-suexec=${mod_type} )
+		MY_MODS+=( suexec )
 	else
-		MY_CONF+=" --disable-suexec"
+		MY_CONF+=( --disable-suexec )
 	fi
 
 	for x in ${IUSE_MODULES} ; do
 		if use apache2_modules_${x} ; then
-			MY_CONF+=" --enable-${x}=${mod_type}"
-			MY_MODS+=" ${x}"
+			MY_CONF+=( --enable-${x}=${mod_type} )
+			MY_MODS+=( ${x} )
 		else
-			MY_CONF+=" --disable-${x}"
+			MY_CONF+=( --disable-${x} )
 		fi
 	done
 
 	# sort and uniquify MY_MODS
-	MY_MODS=$(echo ${MY_MODS} | tr ' ' '\n' | sort -u)
+	MY_MODS=( $(echo ${MY_MODS[@]} | tr ' ' '\n' | sort -u) )
 	check_module_depends
 	check_module_critical
 }
@@ -329,7 +330,7 @@ generate_load_module() {
 		return
 	fi
 
-	for m in ${MY_MODS} ; do
+	for m in ${MY_MODS[@]} ; do
 		if [[ -e "${mod_dir}/mod_${m}.so" ]] ; then
 			for def in ${MODULE_DEFINES} ; do
 				if [[ "${m}" == "${def%:*}" ]] ; then
@@ -391,7 +392,7 @@ apache-2_pkg_setup() {
 	setup_modules
 
 	if use debug; then
-		MY_CONF+=" --enable-maintainer-mode --enable-exception-hook"
+		MY_CONF+=( --enable-maintainer-mode --enable-exception-hook )
 	fi
 
 	elog "Please note that you need SysV IPC support in your kernel."
@@ -507,7 +508,7 @@ apache-2_src_configure() {
 		--with-port=80 \
 		--with-program-name=apache2 \
 		--enable-layout=Gentoo \
-		${MY_CONF} || die "econf failed!"
+		"${MY_CONF[@]}"
 
 	sed -i -e 's:apache2\.conf:httpd.conf:' include/ap_config_auto.h
 }
@@ -517,7 +518,7 @@ apache-2_src_configure() {
 # This function runs `emake install' and generates, installs and adapts the gentoo
 # specific configuration files found in the tarball
 apache-2_src_install() {
-	emake DESTDIR="${D}" MKINSTALLDIRS="mkdir -p" install || die "make install failed"
+	emake DESTDIR="${D}" MKINSTALLDIRS="mkdir -p" install
 
 	# install our configuration files
 	keepdir /etc/apache2/vhosts.d
