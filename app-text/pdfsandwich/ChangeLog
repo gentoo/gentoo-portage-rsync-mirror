@@ -1,6 +1,12 @@
 # ChangeLog for app-text/pdfsandwich
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfsandwich/ChangeLog,v 1.8 2014/07/29 13:19:03 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfsandwich/ChangeLog,v 1.9 2014/08/07 11:19:37 tomka Exp $
+
+*pdfsandwich-0.1.2-r1 (07 Aug 2014)
+
+  07 Aug 2014; Thomas Kahle <tomka@gentoo.org> +pdfsandwich-0.1.2-r1.ebuild,
+  -pdfsandwich-0.0.7.ebuild, -pdfsandwich-0.0.8.ebuild:
+  EAPI bump, add missing dep on *magick (bug 519282), remove old
 
 *pdfsandwich-0.1.2 (29 Jul 2014)
 
