@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1015 2014/08/05 15:35:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1016 2014/08/07 00:40:11 rhill Exp $
+
+*gcc-4.9.1 (07 Aug 2014)
+
+  07 Aug 2014; Ryan Hill <rhill@gentoo.org> +gcc-4.9.1.ebuild:
+  4.9.1 p1.0 (bug #517262). Patch for bug #519172, might also fix bug #518580.
 
   05 Aug 2014; Raúl Porcel <armin76@gentoo.org> gcc-4.8.0.ebuild,
   gcc-4.8.1-r1.ebuild, gcc-4.8.2.ebuild, gcc-4.8.3.ebuild:
