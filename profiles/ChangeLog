@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9289 2014/08/06 16:58:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9290 2014/08/07 10:47:08 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Aug 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Restore libav-10 mask due to blockers and a lot of unported packages.
 
   06 Aug 2014; Luca Barbato <lu_zero@gentoo.org> package.mask:
   Drop the libav p.mask

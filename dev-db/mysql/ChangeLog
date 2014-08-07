@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.678 2014/08/04 04:01:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.679 2014/08/07 10:39:05 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> mysql-5.5.39.ebuild:
+  Stable for HPPA (bug #518718).
 
   04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> -files/my.cnf,
   -files/my.cnf-4.0, -files/my.cnf-4.1, -files/mysql.init,

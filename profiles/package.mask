@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15956 2014/08/06 16:58:01 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15957 2014/08/07 10:47:08 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -491,6 +491,11 @@ sys-fs/rdiff-backup-fs
 # Unmask this if you want to upgrade or switch to Oracle JDK / JRE 1.8.
 >=virtual/jdk-1.8
 >=virtual/jre-1.8
+
+# Luca Barbato <lu_zero@gentoo.org> (30 Mar 2014)
+# Current stable for upstream, pending a tinderbox run.
+# Note: mask restored because of #509294, #519258.
+=media-video/libav-10*
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Mar 2014)
 # Affected by multiple vulnerabilities, #445916, #471098 and #472280

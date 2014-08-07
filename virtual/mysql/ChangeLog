@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.36 2014/08/04 04:04:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.37 2014/08/07 10:37:36 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> mysql-5.5.ebuild:
+  Stable for HPPA (bug #518718).
 
   04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> -mysql-4.0.ebuild,
   -mysql-4.1.ebuild, -mysql-5.0.ebuild:
