@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/giflib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.87 2014/07/31 04:08:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.88 2014/08/07 16:37:13 mgorny Exp $
+
+  07 Aug 2014; Michał Górny <mgorny@gentoo.org> giflib-5.0.6.ebuild:
+  Fix typo in myeconfargs. Pass ac_cv* values verbosely via command-line rather
+  than environment. Bug #519294.
 
   31 Jul 2014; Mike Frysinger <vapier@gentoo.org> giflib-4.1.6-r3.ebuild,
   giflib-4.2.3-r1.ebuild:

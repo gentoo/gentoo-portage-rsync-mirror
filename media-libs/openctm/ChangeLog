@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/openctm
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/ChangeLog,v 1.1 2014/08/07 16:50:58 amynka Exp $
+
+*openctm-1.0.3 (07 Aug 2014)
+
+  07 Aug 2014; Amy Winston <amynka@gentoo.org>
+  +files/openctm-fix-makefiles.patch, +metadata.xml, +openctm-1.0.3.ebuild:
+  Initial commit. Package will be used by meshlab

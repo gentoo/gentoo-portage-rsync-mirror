@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-5.0.6.ebuild,v 1.2 2014/06/10 01:05:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-5.0.6.ebuild,v 1.3 2014/08/07 16:37:13 mgorny Exp $
 
 EAPI=5
 
@@ -28,13 +28,14 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconfargs=(
+	local myeconfargs=(
+		# No need for xmlto as they ship generated files.
+		ac_cv_prog_have_xmlto=no
+
 		$(use_enable static-libs static)
 	)
-	# No need for xmlto as they ship generated files.
-	ac_cv_prog_have_xmlto=no \
-		autotools-multilib_src_configure
 
+	autotools-multilib_src_configure
 }
 
 src_install() {

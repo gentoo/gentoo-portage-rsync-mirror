@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-4.4.2.ebuild,v 1.2 2014/03/18 19:22:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-4.4.2.ebuild,v 1.3 2014/08/07 16:45:53 mgorny Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ src_configure() {
 		myeconfargs+=( --enable-netcdf4 )
 		append-cppflags -DHAVE_NETCDF4_H
 	else
-		myconfargs+=( --disable-netcdf4 )
+		myeconfargs+=( --disable-netcdf4 )
 	fi
 	autotools-utils_src_configure
 }

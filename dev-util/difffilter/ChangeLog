@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/difffilter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/difffilter/ChangeLog,v 1.15 2012/08/03 08:19:30 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/difffilter/ChangeLog,v 1.16 2014/08/07 16:45:44 mgorny Exp $
+
+  07 Aug 2014; Michał Górny <mgorny@gentoo.org> difffilter-0.3.1.ebuild,
+  difffilter-0.3.3.ebuild:
+  Fix myconfargs typo, bug #519292.
 
   03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> difffilter-0.3.3.ebuild:
   Stable on amd64 wrt bug #418949
