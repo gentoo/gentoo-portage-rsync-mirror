@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/gummiboot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gummiboot/ChangeLog,v 1.1 2014/08/02 07:54:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gummiboot/ChangeLog,v 1.2 2014/08/07 08:11:18 mgorny Exp $
+
+  07 Aug 2014; Michał Górny <mgorny@gentoo.org> gummiboot-45.ebuild:
+  Use locally-hosted, fully-generated distfile instead of the unstable snapshot,
+  bug #518822.
 
 *gummiboot-9999 (02 Aug 2014)
 *gummiboot-45 (02 Aug 2014)
