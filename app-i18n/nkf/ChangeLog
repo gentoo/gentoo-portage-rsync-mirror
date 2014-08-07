@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/nkf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.57 2013/12/01 07:21:09 matsuu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.59 2014/08/07 10:05:36 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> nkf-2.1.3.ebuild:
+  Stable for HPPA (bug #518292).
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> nkf-2.1.3.ebuild,
+  +files/nkf-2.1.3-strip.patch:
+  Do not inject CFLAGS. Unconditionally patch. Convert sed script to patch.
 
 *nkf-2.1.3 (01 Dec 2013)
 
