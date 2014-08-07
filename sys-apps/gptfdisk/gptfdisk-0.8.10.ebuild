@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.10.ebuild,v 1.7 2014/08/01 11:34:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.10.ebuild,v 1.8 2014/08/07 13:36:06 jer Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ src_prepare() {
 
 	sed \
 		-e '/g++/s:=:?=:g' \
-		-e "s:-lncursesw:$(${PKG_CONFIG} --libs ncursesw):g" \
+		-e 's:-lncursesw:$(shell $(PKG_CONFIG) --libs ncursesw):g' \
 		-i Makefile || die
 
 	use static && append-ldflags -static

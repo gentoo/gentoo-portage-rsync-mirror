@@ -10,4 +10,4 @@ RDEPEND=!static? ( dev-libs/popt ncurses? ( >=sys-libs/ncurses-5.7-r7 ) kernel_l
 SLOT=0
 SRC_URI=mirror://sourceforge/gptfdisk/gptfdisk-0.8.10.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=826801a2b512beeb07cb2c122aea8950
+_md5_=d8d8258e7a0ede5c13cbad141aae7cf6
