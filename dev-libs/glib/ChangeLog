@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.617 2014/08/02 09:16:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.618 2014/08/07 18:03:07 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> glib-2.40.0-r1.ebuild:
+  Stable for HPPA (bug #512012).
 
   02 Aug 2014; Pacho Ramos <pacho@gentoo.org> glib-2.40.0-r1.ebuild:
   Rework the way we force glib and goi to be in sync (#518424 by Alexander Tsoy)

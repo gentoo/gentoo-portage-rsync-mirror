@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.3.ebuild,v 1.1 2014/06/13 01:21:17 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.3.ebuild,v 1.2 2014/08/07 18:23:45 ryao Exp $
 
 EAPI="4"
 
@@ -66,7 +66,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 15 || die "Linux 3.15 is the latest supported version."; }
+		{ kernel_is le 3 16 || die "Linux 3.16 is the latest supported version."; }
 
 	check_extra_config
 }

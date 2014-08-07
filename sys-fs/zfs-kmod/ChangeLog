@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.50 2014/07/09 01:29:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.51 2014/08/07 18:23:45 ryao Exp $
+
+  07 Aug 2014; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.3.ebuild:
+  No code changes are needed to support Linux 3.16. I modifying the ebuild to
+  add support now that I am satisfied with the results of my testing.
 
   09 Jul 2014; Matthew Thode <prometheanfire@gentoo.org> zfs-kmod-9999.ebuild:
   swiching to https for git ebuild

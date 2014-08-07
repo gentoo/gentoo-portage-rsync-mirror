@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.75 2014/07/09 01:27:27 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.76 2014/08/07 18:23:04 ryao Exp $
+
+  07 Aug 2014; Richard Yao <ryao@gentoo.org> spl-0.6.3.ebuild:
+  No code changes are needed to support Linux 3.16. I modifying the ebuild to
+  add support now that I am satisfied with the results of my testing.
 
   09 Jul 2014; Matthew Thode <prometheanfire@gentoo.org> spl-9999.ebuild:
   swiching to https for git ebuild
