@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/razercfg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.26 2014/06/20 14:13:34 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.27 2014/08/07 17:30:35 joker Exp $
+
+*razercfg-0.29 (07 Aug 2014)
+
+  07 Aug 2014; Christian Birchinger <joker@gentoo.org> +razercfg-0.29.ebuild:
+  Version bump
 
   20 Jun 2014; Christian Birchinger <joker@gentoo.org> razercfg-0.26.ebuild:
   Change the Python interpreter detection.

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.232 2014/06/15 05:19:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.233 2014/08/07 17:24:42 polynomial-c Exp $
+
+*iproute2-3.16.0 (07 Aug 2014)
+
+  07 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> +iproute2-3.16.0.ebuild:
+  Version bump (bug #519322).
 
 *iproute2-3.15.0 (15 Jun 2014)
 
