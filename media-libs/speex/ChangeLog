@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/speex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.110 2014/08/06 20:22:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.111 2014/08/07 19:02:35 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> speex-1.2_rc1-r2.ebuild:
+  Stable for HPPA (bug #512012).
 
   06 Aug 2014; Markus Meier <maekke@gentoo.org> speex-1.2_rc1-r2.ebuild:
   arm stable, bug #512012

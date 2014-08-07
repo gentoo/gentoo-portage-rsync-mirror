@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.120 2014/07/28 13:49:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.121 2014/08/07 19:26:56 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> flex-2.5.39-r1.ebuild:
+  Stable for HPPA (bug #512012).
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> flex-2.5.39-r1.ebuild:
   Stable for ppc, wrt bug #512012

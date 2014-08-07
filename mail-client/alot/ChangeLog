@@ -1,6 +1,22 @@
 # ChangeLog for mail-client/alot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.20 2014/02/16 15:11:21 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.21 2014/08/07 19:05:49 aidecoe Exp $
+
+*alot-0.3.6 (07 Aug 2014)
+
+  07 Aug 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +alot-0.3.6.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  * implement vim-style "move last" command (bound to G)
+  * fixes in reply/forwarding
+  * add option "--tags" to taglist command to display only a subset of the tags
+  * fix: safely interrumpt a command sequence
+  * use suffix ".eml" for temporary email files when editing
+  * interpret "compose mailto:foo@bar" commands
+  * new "tomorrow" colour theme
+  * Add some Emacs keybindings for prompts
 
   16 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -alot-0.3.2.ebuild,
   -alot-0.3.3.ebuild, -alot-0.3.4.ebuild:

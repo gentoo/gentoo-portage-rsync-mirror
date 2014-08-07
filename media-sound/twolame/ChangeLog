@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/twolame
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.54 2014/07/31 14:34:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.55 2014/08/07 19:12:47 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> twolame-0.3.13-r1.ebuild:
+  Stable for HPPA (bug #512012).
 
   31 Jul 2014; Tobias Klausmann <klausman@gentoo.org> twolame-0.3.13-r1.ebuild:
   Stable on alpha, bug #515234
