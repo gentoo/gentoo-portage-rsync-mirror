@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-6.4.1.ebuild,v 1.4 2013/12/24 12:48:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-7.1.18.ebuild,v 1.1 2014/08/07 11:43:09 keri Exp $
 
 EAPI=4
 
@@ -10,12 +10,12 @@ PATCHSET_VER="0"
 
 DESCRIPTION="free, small, and standard compliant Prolog compiler"
 HOMEPAGE="http://www.swi-prolog.org/"
-SRC_URI="http://www.swi-prolog.org/download/stable/src/pl-${PV}.tar.gz
+SRC_URI="http://www.swi-prolog.org/download/devel/src/pl-${PV}.tar.gz
 	mirror://gentoo/${P}-gentoo-patchset-${PATCHSET_VER}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="archive debug doc +gmp hardened java minimal odbc +readline ssl static-libs test zlib X"
 
 RDEPEND="sys-libs/ncurses
@@ -62,7 +62,7 @@ src_configure() {
 
 	export CC_FOR_BUILD=$(tc-getBUILD_CC)
 
-	cd "${S}"/src
+	cd "${S}"/src || die
 	econf \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		$(use_enable gmp) \
@@ -77,7 +77,7 @@ src_configure() {
 			jpltestconf="--with-junit=$(java-config --classpath junit)"
 		fi
 
-		cd "${S}/packages"
+		cd "${S}/packages" || die
 		econf \
 			--libdir="${EPREFIX}"/usr/$(get_libdir) \
 			$(use_with archive) \
@@ -92,21 +92,21 @@ src_configure() {
 }
 
 src_compile() {
-	cd "${S}"/src
+	cd "${S}"/src || die
 	emake
 
 	if ! use minimal ; then
-		cd "${S}/packages"
+		cd "${S}/packages" || die
 		emake
 	fi
 }
 
 src_test() {
-	cd "${S}/src"
+	cd "${S}/src" || die
 	emake check
 
 	if ! use minimal ; then
-		cd "${S}/packages"
+		cd "${S}/packages" || die
 		emake check
 	fi
 }
