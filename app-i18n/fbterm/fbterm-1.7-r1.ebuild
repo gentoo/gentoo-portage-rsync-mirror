@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbterm/fbterm-1.7.ebuild,v 1.2 2012/07/07 07:49:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbterm/fbterm-1.7-r1.ebuild,v 1.1 2014/08/07 14:28:44 dlan Exp $
 
-EAPI="4"
+EAPI="5"
 inherit autotools-utils
 
 DESCRIPTION="Fast terminal emulator for the Linux framebuffer"
@@ -28,7 +28,7 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 DOCS=( AUTHORS NEWS README )
 
 src_configure() {
-	local myconfargs=(
+	local myeconfargs=(
 		$(use_enable gpm)
 		$(use_enable video_cards_vesa vesa)
 	)
