@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.135 2014/07/19 13:44:21 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.136 2014/08/07 19:34:47 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> acl-2.2.52-r1.ebuild:
+  Stable for HPPA (bug #512012).
 
   19 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> acl-2.2.52-r1.ebuild:
   Mark sparc stable

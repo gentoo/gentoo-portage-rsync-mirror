@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/alot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.21 2014/08/07 19:05:49 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.22 2014/08/07 19:44:13 aidecoe Exp $
+
+  07 Aug 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> alot-0.3.5.ebuild,
+  alot-0.3.6.ebuild:
+  Removed deprecated call to default pkg_setup.
 
 *alot-0.3.6 (07 Aug 2014)
 

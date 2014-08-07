@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.338 2014/08/01 19:35:04 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.339 2014/08/07 19:37:18 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> libsoup-2.46.0-r1.ebuild:
+  Stable for HPPA (bug #512012).
 
   01 Aug 2014;  <tgall@gentoo.org> libsoup-2.44.2.ebuild,
   libsoup-2.46.0-r1.ebuild:
