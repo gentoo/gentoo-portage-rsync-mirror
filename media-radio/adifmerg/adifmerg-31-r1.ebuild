@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/adifmerg/adifmerg-29.ebuild,v 1.3 2011/01/11 15:22:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/adifmerg/adifmerg-31-r1.ebuild,v 1.1 2014/08/07 07:03:24 tomjbe Exp $
+
+EAPI=5
 
 MY_P=${P/-}
 
@@ -10,7 +12,7 @@ SRC_URI="http://jaakko.home.cern.ch/jaakko/Soft/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
 RDEPEND="dev-lang/perl"
@@ -18,12 +20,12 @@ RDEPEND="dev-lang/perl"
 S=${WORKDIR}/${MY_P}
 
 src_install() {
-	dobin adifmerg || die "dobin failed"
-	doman doc/adifmerg.1 || die "doman failed"
-	dodoc CHANGELOG README || die "dodoc failed"
+	dobin adifmerg
+	doman doc/adifmerg.1
+	dodoc CHANGELOG README
 
 	if use examples; then
 		insinto /usr/share/${PN}
-		doins -r script || die "doins failed"
+		doins -r script
 	fi
 }
