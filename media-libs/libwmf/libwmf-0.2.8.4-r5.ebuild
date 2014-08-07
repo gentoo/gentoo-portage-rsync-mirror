@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r5.ebuild,v 1.15 2013/10/13 14:55:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r5.ebuild,v 1.16 2014/08/07 09:13:42 jer Exp $
 
 EAPI=5
 
@@ -68,7 +68,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconfargs=()
+	local myeconfargs=()
 	# NOTE: The gd that is included is gd-2.0.0. Even with --with-sys-gd, that gd is built
 	# and included in libwmf. Since nothing in-tree seems to use media-libs/libwmf[gd],
 	# we're explicitly disabling gd use w.r.t. bug 268161
