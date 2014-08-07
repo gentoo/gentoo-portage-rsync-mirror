@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.283 2014/07/28 13:42:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.284 2014/08/07 18:43:34 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> gtkmm-3.12.0.ebuild:
+  Stable for HPPA (bug #512012).
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gtkmm-3.12.0.ebuild:
   Stable for ppc, wrt bug #512012

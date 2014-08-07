@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.96 2014/08/05 14:36:46 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.97 2014/08/07 18:50:14 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> gd-2.0.35-r4.ebuild:
+  Stable for HPPA (bug #512012).
 
   05 Aug 2014; Christoph Junghans <ottxor@gentoo.org> gd-2.0.35-r4.ebuild:
   added prefix support (bug #518970)

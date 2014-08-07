@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libaacplus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/ChangeLog,v 1.19 2014/07/28 13:45:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/ChangeLog,v 1.20 2014/08/07 18:55:51 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> libaacplus-2.0.2-r2.ebuild:
+  Stable for HPPA (bug #512012).
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libaacplus-2.0.2-r2.ebuild:
   Stable for ppc, wrt bug #512012

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.148 2014/07/28 13:45:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.149 2014/08/07 18:54:50 jer Exp $
+
+  07 Aug 2014; Jeroen Roovers <jer@gentoo.org> faad2-2.7-r3.ebuild:
+  Stable for HPPA (bug #512012).
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> faad2-2.7-r3.ebuild:
   Stable for ppc, wrt bug #512012
