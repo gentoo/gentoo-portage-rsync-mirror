@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/neverball
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.47 2014/05/15 16:52:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.48 2014/08/07 06:43:50 mr_bones_ Exp $
+
+*neverball-1.6.0 (07 Aug 2014)
+
+  07 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> +neverball-1.6.0.ebuild:
+  version bump (bug #519194)
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> neverball-1.5.4.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to

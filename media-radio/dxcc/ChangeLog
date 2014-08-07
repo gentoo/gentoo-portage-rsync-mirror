@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/dxcc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/dxcc/ChangeLog,v 1.3 2010/10/22 14:41:07 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/dxcc/ChangeLog,v 1.4 2014/08/07 06:58:26 tomjbe Exp $
+
+*dxcc-20080225-r1 (07 Aug 2014)
+
+  07 Aug 2014; Thomas Beierlein <tomjbe@gentoo.org> +dxcc-20080225-r1.ebuild:
+  bump EAPI
 
   22 Oct 2010; Christian Faulhammer <fauli@gentoo.org> dxcc-20080225.ebuild:
   stable x86, bug 341467
