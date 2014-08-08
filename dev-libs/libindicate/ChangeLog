@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.39 2014/06/19 15:06:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.40 2014/08/07 23:48:16 blueness Exp $
+
+  07 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  libindicate-12.10.1.ebuild:
+  Keyword ~ppc and ~ppc64, bug #468984
 
   19 Jun 2014; Tobias Klausmann <klausman@gentoo.org>
   libindicate-12.10.1.ebuild:
