@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.34 2014/07/12 10:55:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.35 2014/08/08 21:35:19 ago Exp $
+
+  08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> jail-2.0.ebuild:
+  Stable for ppc, wrt bug #514892
 
   12 Jul 2014; Agostino Sarubbo <ago@gentoo.org> jail-2.0.ebuild:
   Stable for x86, wrt bug #514892

@@ -1,6 +1,23 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1310 2014/08/08 19:50:11 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1311 2014/08/08 22:01:05 ago Exp $
+
+*vanilla-sources-3.15.9 (08 Aug 2014)
+*vanilla-sources-3.10.52 (08 Aug 2014)
+*vanilla-sources-3.2.62 (08 Aug 2014)
+*vanilla-sources-3.12.26 (08 Aug 2014)
+*vanilla-sources-3.14.16 (08 Aug 2014)
+*vanilla-sources-3.4.102 (08 Aug 2014)
+
+  08 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
+  +vanilla-sources-3.10.52.ebuild, +vanilla-sources-3.12.26.ebuild,
+  +vanilla-sources-3.14.16.ebuild, +vanilla-sources-3.15.9.ebuild,
+  +vanilla-sources-3.2.62.ebuild, +vanilla-sources-3.4.102.ebuild,
+  -vanilla-sources-3.10.51.ebuild, -vanilla-sources-3.12.25.ebuild,
+  -vanilla-sources-3.14.15.ebuild, -vanilla-sources-3.15.8.ebuild,
+  -vanilla-sources-3.2.61.ebuild, -vanilla-sources-3.4.100.ebuild,
+  -vanilla-sources-3.4.101.ebuild:
+  Version bump for the 3.2 / 3.4 / 3.10 / 3.12 / 3.14 / 3.15 series, remove old.
 
   08 Aug 2014; Mike Pagano <mpagano@gentoo.org> vanilla-sources-3.16.0.ebuild:
   Add deblob indicator to vanilla-sources-3.16.0

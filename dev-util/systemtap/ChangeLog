@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.120 2014/08/06 05:42:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.121 2014/08/08 21:34:48 ago Exp $
+
+  08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> systemtap-2.4-r1.ebuild:
+  Stable for ppc, wrt bug #512328
 
 *systemtap-2.5 (06 Aug 2014)
 

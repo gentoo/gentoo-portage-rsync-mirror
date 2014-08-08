@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.48 2014/08/04 18:43:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.49 2014/08/08 21:42:20 ago Exp $
+
+  08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> tix-8.4.3-r1.ebuild:
+  Stable for ppc, wrt bug #500518
 
   04 Aug 2014; Raúl Porcel <armin76@gentoo.org> tix-8.4.3-r1.ebuild:
   ia64/sparc stable wrt #500518

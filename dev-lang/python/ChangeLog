@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.779 2014/08/04 18:51:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.780 2014/08/08 21:42:14 ago Exp $
+
+  08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> python-2.7.7.ebuild,
+  python-3.2.5-r6.ebuild, python-3.3.5-r1.ebuild:
+  Stable for ppc, wrt bug #500518
 
   04 Aug 2014; Raúl Porcel <armin76@gentoo.org> python-2.7.7.ebuild,
   python-3.2.5-r6.ebuild, python-3.3.5-r1.ebuild:
