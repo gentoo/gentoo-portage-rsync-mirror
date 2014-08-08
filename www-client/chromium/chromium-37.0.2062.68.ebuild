@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-37.0.2062.44.ebuild,v 1.2 2014/07/30 17:46:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-37.0.2062.68.ebuild,v 1.1 2014/08/08 03:01:44 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -169,7 +169,7 @@ src_prepare() {
 	#	touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	# fi
 
-	epatch "${FILESDIR}/${PN}-angle-r0.patch"
+	epatch "${FILESDIR}/${PN}-angle-r1.patch"
 	epatch "${FILESDIR}/${PN}-ffmpeg-r2.patch"
 	epatch "${FILESDIR}/${PN}-ffmpeg-r3.patch"
 
