@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1344 2014/08/07 07:37:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1345 2014/08/08 17:57:28 ottxor Exp $
+
+  08 Aug 2014; Christoph Junghans <ottxor@gentoo.org> db-use.eclass:
+  added prefix support
 
   07 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> apache-2.eclass:
   Fixed numerous misquotings by introducing arrays. Removed some useless "die"
