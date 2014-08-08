@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.139 2014/07/27 10:56:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.140 2014/08/08 14:22:51 jer Exp $
+
+  08 Aug 2014; Jeroen Roovers <jer@gentoo.org> serf-1.3.6.ebuild:
+  Stable for HPPA (bug #518616).
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> serf-1.3.5.ebuild:
   x86 stable wrt bug #512454

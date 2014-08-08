@@ -1,12 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.394.ebuild,v 1.2 2014/07/09 12:40:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.394.ebuild,v 1.3 2014/08/08 14:12:05 jer Exp $
 
 EAPI=5
 inherit nsplugins toolchain-funcs versionator multilib multilib-minimal
 
 DESCRIPTION="Adobe Flash Player"
-HOMEPAGE="http://www.adobe.com/products/flashplayer.html"
+HOMEPAGE="
+	http://www.adobe.com/products/flashplayer.html
+	http://get.adobe.com/flashplayer/
+"
 
 AF_URI="http://fpdownload.macromedia.com/get/flashplayer/pdc"
 AF_DB_URI="http://fpdownload.macromedia.com/pub/flashplayer/updaters"

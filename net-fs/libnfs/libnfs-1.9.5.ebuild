@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/libnfs-9999.ebuild,v 1.6 2014/08/08 14:23:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/libnfs-1.9.5.ebuild,v 1.1 2014/08/08 14:23:24 vapier Exp $
 
 EAPI="5"
 
@@ -28,6 +28,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}-${P}"
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.9.5-headers.patch
+	"${FILESDIR}"/${PN}-1.9.5-implicit-internal.patch
+)
 
 src_install() {
 	autotools-utils_src_install
