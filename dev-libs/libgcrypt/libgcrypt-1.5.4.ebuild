@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.5.3-r100.ebuild,v 1.4 2014/06/18 19:14:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.5.4.ebuild,v 1.1 2014/08/08 08:57:41 alonbl Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -9,8 +9,7 @@ inherit autotools-multilib
 
 DESCRIPTION="General purpose crypto library based on the code used in GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
-SRC_URI="mirror://gnupg/libgcrypt/${P}.tar.bz2
-	ftp://ftp.gnupg.org/gcrypt/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gnupg/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1 MIT"
 SLOT="11/11" # subslot = soname major version
