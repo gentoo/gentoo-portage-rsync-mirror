@@ -1,0 +1,20 @@
+commit 992a1826f870e8c095414351e2e9dcc044145786
+Author: Jan Grulich <jgrulich@redhat.com>
+Date:   Fri Aug 8 14:59:32 2014 +0200
+
+    Add missing include to fix build on some systems
+    
+    BUG:338124
+
+diff --git a/vpn/openvpn/openvpn.h b/vpn/openvpn/openvpn.h
+index 64c30e4..bc3f2fb 100644
+--- a/vpn/openvpn/openvpn.h
++++ b/vpn/openvpn/openvpn.h
+@@ -26,6 +26,7 @@
+ 
+ #include "vpnuiplugin.h"
+ 
++#include <QTextStream>
+ #include <QVariant>
+ 
+ class OpenVpnUiPlugin : public VpnUiPlugin
