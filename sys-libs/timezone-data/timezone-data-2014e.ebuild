@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2014e.ebuild,v 1.3 2014/07/30 06:46:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2014e.ebuild,v 1.4 2014/08/08 07:23:09 vapier Exp $
 
 EAPI="4"
 
@@ -101,7 +101,7 @@ get_TIMEZONE() {
 	else
 		tz="FOOKABLOIE"
 	fi
-	[[ -z ${tz} ]]
+	[[ -z ${tz} ]] && return 1 || echo "${tz}"
 }
 
 pkg_preinst() {

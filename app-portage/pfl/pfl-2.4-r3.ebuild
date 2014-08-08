@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.4-r2.ebuild,v 1.2 2014/07/25 21:13:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.4-r3.ebuild,v 1.1 2014/08/08 07:30:56 billie Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ IUSE="+network-cron"
 DEPEND=""
 RDEPEND="${DEPEND}
 	net-misc/curl
-	sys-apps/portage"
+	sys-apps/portage[${PYTHON_USEDEP}]"
 
 src_prepare() {
 	epatch "${FILESDIR}"/e-file-20110906-http-response.patch \
