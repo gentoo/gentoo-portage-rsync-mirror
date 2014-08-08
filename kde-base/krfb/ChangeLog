@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.319 2014/08/04 15:25:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.320 2014/08/08 16:31:09 nativemad Exp $
+
+  08 Aug 2014; <mad@gentoo.org> krfb-4.12.5-r1.ebuild:
+  x86 stable, see bug 515276
 
   04 Aug 2014; Johannes Huber <johu@gentoo.org> krfb-4.12.5-r1.ebuild,
   krfb-4.13.3-r1.ebuild:
