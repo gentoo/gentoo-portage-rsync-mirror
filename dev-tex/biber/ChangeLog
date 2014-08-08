@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/biber
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biber/ChangeLog,v 1.5 2014/05/29 12:56:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biber/ChangeLog,v 1.7 2014/08/08 12:27:54 mrueg Exp $
+
+  08 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -biber-1.8.ebuild,
+  -files/biber-1.8-drop-mozilla-ca.patch:
+  Cleanup old.
 
 *biber-1.9 (29 May 2014)
 

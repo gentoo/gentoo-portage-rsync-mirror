@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.123.ebuild,v 1.3 2014/07/30 19:22:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.123.ebuild,v 1.5 2014/08/08 12:29:02 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-info linux-mod multilib nvidia-driver \
@@ -80,6 +80,25 @@ pkg_pretend() {
 		die "Unexpected \${DEFAULT_ABI} = ${DEFAULT_ABI}"
 	fi
 
+	if use kernel_linux && kernel_is ge 3 16 ; then
+		ewarn "Gentoo supports kernels which are supported by NVIDIA"
+		ewarn "which are limited to the following kernels:"
+		ewarn "<sys-kernel/gentoo-sources-3.16"
+		ewarn "<sys-kernel/vanilla-sources-3.16"
+		ewarn ""
+		ewarn "You are free to utilize epatch_user to provide whatever"
+		ewarn "support you feel is appropriate, but will not receive"
+		ewarn "support as a result of those changes."
+		ewarn ""
+		ewarn "Do not file a bug report about this."
+	fi
+
+	# Since Nvidia ships 3 different series of drivers, we need to give the user
+	# some kind of guidance as to what version they should install. This tries
+	# to point the user in the right direction but can't be perfect. check
+	# nvidia-driver.eclass
+	nvidia-driver-check-warning
+
 	# Kernel features/options to check for
 	CONFIG_CHECK="~ZONE_DMA ~MTRR ~SYSVIPC ~!LOCKDEP"
 	use x86 && CONFIG_CHECK+=" ~HIGHMEM"
@@ -104,25 +123,6 @@ pkg_setup() {
 		# later on in the build process
 		BUILD_FIXES="ARCH=$(uname -m | sed -e 's/i.86/i386/')"
 	fi
-
-	if use kernel_linux && kernel_is ge 3 14 ; then
-		ewarn "Gentoo supports kernels which are supported by NVIDIA"
-		ewarn "which are limited to the following kernels:"
-		ewarn "<sys-kernel/gentoo-sources-3.16"
-		ewarn "<sys-kernel/vanilla-sources-3.16"
-		ewarn ""
-		ewarn "You are free to utilize epatch_user to provide whatever"
-		ewarn "support you feel is appropriate, but will not receive"
-		ewarn "support as a result of those changes."
-		ewarn ""
-		ewarn "Do not file a bug report about this."
-	fi
-
-	# Since Nvidia ships 3 different series of drivers, we need to give the user
-	# some kind of guidance as to what version they should install. This tries
-	# to point the user in the right direction but can't be perfect. check
-	# nvidia-driver.eclass
-	nvidia-driver-check-warning
 
 	# set variables to where files are in the package structure
 	if use kernel_FreeBSD; then

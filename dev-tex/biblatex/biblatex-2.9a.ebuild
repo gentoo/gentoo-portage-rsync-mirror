@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/biblatex-2.8.ebuild,v 1.1 2013/10/22 21:33:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/biblatex-2.9a.ebuild,v 1.1 2014/08/08 12:22:01 mrueg Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ src_install() {
 	doins -r bibtex tex
 
 	dodoc doc/latex/biblatex/{README,RELEASE}
-	use doc && { pushd doc/latex/biblatex/ ; latex-package_src_doinstall doc ; popd ; }
+	use doc && { pushd doc/ ; latex-package_src_doinstall doc ; popd ; }
 	if use examples ; then
 		docinto examples
 		dodoc -r doc/latex/biblatex/examples

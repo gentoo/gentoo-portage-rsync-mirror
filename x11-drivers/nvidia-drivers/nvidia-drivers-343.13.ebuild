@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-343.13.ebuild,v 1.2 2014/08/07 10:24:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-343.13.ebuild,v 1.3 2014/08/08 12:02:07 jer Exp $
 
 EAPI=5
 
@@ -82,7 +82,7 @@ pkg_pretend() {
 		die "Unexpected \${DEFAULT_ABI} = ${DEFAULT_ABI}"
 	fi
 
-	if use kernel_linux && kernel_is ge 3 16 ; then
+	if use kernel_linux && kernel_is ge 3 17 ; then
 		ewarn "Gentoo supports kernels which are supported by NVIDIA"
 		ewarn "which are limited to the following kernels:"
 		ewarn "<sys-kernel/gentoo-sources-3.17"

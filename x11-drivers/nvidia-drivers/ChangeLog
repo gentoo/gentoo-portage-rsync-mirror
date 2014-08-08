@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.566 2014/08/07 10:24:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.568 2014/08/08 12:29:02 jer Exp $
+
+  08 Aug 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-304.123.ebuild,
+  nvidia-drivers-331.89.ebuild:
+  Fix version comparisons.
+
+  08 Aug 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-304.123.ebuild,
+  nvidia-drivers-343.13.ebuild:
+  Move kernel/device checks to pkg_pretend() in 304. Raise compatible kernel
+  version in 343 properly.
 
   07 Aug 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-343.13.ebuild:
   Raise kernel version compatibility.
