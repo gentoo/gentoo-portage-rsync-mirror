@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.98.ebuild,v 1.1 2014/08/06 16:56:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.98.ebuild,v 1.2 2014/08/08 09:48:23 voyageur Exp $
 
 EAPI=5
 
@@ -54,8 +54,7 @@ src_unpack(){
 src_prepare() {
 	if ! use kde; then
 		# adapt to Gentoo paths
-		sed -e s,documentation.path.*$,documentation.path\ =\
-		"${EPREFIX}"/usr/share/doc/"${PF}", \
+		sed -e s,documentation.path.*$,documentation.path\ =\ "${EPREFIX}"/usr/share/doc/"${PF}", \
 		-e s,target.path.*$,target.path\ =\ "${EPREFIX}"/usr/bin, \
 		"${S}"/src-QT4/kdiff3.pro > "${S}"/src-QT4/kdiff3_fixed.pro
 	else
