@@ -1,5 +1,5 @@
 DEFINED_PHASES=install nofetch unpack
-DESCRIPTION=Binary plugins -- native API Flash and PDF -- from Google Chrome for use in Chromium.
+DESCRIPTION=Binary plugins from Google Chrome for use in Chromium
 EAPI=4
 HOMEPAGE=http://www.google.com/chrome
 IUSE=+flash
@@ -10,4 +10,4 @@ RESTRICT=bindist mirror strip
 SLOT=beta
 SRC_URI=amd64? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-beta/google-chrome-beta_37.0.2062.68-1_amd64.deb ) x86? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-beta/google-chrome-beta_37.0.2062.68-1_i386.deb )
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=f521b6cd198cc9f44b1f55e26933898b
+_md5_=b72ea610c6f83c0a93f7eaaf4fe7e0ca
