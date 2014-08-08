@@ -1,19 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.8.ebuild,v 1.10 2012/05/04 18:35:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.8.ebuild,v 1.12 2014/08/08 08:13:07 alonbl Exp $
 
 EAPI="4"
 inherit libtool
 
 DESCRIPTION="A library implementing a layer on top of PKCS#11 API to make using PKCS#11 implementations easier."
-HOMEPAGE="http://www.opensc-project.org/libp11/"
-
-if [[ "${PV}" = "9999" ]]; then
-	inherit autotools subversion
-	ESVN_REPO_URI="http://www.opensc-project.org/svn/${PN}/trunk"
-else
-	SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
-fi
+HOMEPAGE="https://github.com/opensc/libp11/wiki"
+SRC_URI="mirror://sourceforge/opensc/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

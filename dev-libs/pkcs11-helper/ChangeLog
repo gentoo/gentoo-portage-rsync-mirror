@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pkcs11-helper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.76 2014/03/19 13:52:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.77 2014/08/08 08:14:51 alonbl Exp $
+
+  08 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> -pkcs11-helper-1.10.ebuild:
+  Cleanup
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pkcs11-helper-1.11.ebuild:
   Stable for alpha, wrt bug #495412

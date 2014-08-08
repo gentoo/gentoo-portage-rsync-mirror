@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libp11
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.64 2012/05/04 18:35:48 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.66 2014/08/08 08:13:07 alonbl Exp $
+
+  08 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> libp11-0.2.8-r1.ebuild,
+  libp11-0.2.8.ebuild:
+  Update urls, cleanup
+
+  08 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> -libp11-0.2.7.ebuild,
+  libp11-0.2.8-r1.ebuild, libp11-0.2.8.ebuild:
+  Update urls, cleanup
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libp11-0.2.7.ebuild,
   libp11-0.2.8.ebuild, libp11-0.2.8-r1.ebuild:
@@ -226,4 +234,3 @@
   03 Jun 2006; Petre Rodan <kaiowas@gentoo.org> +metadata.xml,
   +libp11-0.2.1.ebuild:
   initial commit. contributed by Mark Raddatz in bug #115276
-

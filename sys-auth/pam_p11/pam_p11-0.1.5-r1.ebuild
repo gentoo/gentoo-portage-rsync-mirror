@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/pam_p11-0.1.5-r1.ebuild,v 1.8 2012/05/04 18:57:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/pam_p11-0.1.5-r1.ebuild,v 1.9 2014/08/08 08:09:21 alonbl Exp $
 
 EAPI=2
 
 inherit pam flag-o-matic
 
 DESCRIPTION="PAM module for authenticating against PKCS#11 tokens"
-HOMEPAGE="http://www.opensc-project.org/pam_p11/"
-SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
+HOMEPAGE="https://github.com/opensc/pam_p11/wiki"
+SRC_URI="sourceforge://opensc/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
