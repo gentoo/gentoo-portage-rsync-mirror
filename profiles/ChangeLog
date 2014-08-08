@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9291 2014/08/08 17:15:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9292 2014/08/08 18:23:19 polynomial-c Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> package.mask:
+  Added mask for >=media-sound/umurmur-0.2.15 until =dev-libs/protobuf-c-1*
+  mask is gone.
 
   08 Aug 2014; Tim Harder <radhermit@gentoo.org> package.mask:
   Update dev-libs/protobuf-c mask.

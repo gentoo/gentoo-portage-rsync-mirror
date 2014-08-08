@@ -1,21 +1,21 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/umurmur-0.2.13.ebuild,v 1.6 2013/12/26 17:14:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/umurmur-0.2.15.ebuild,v 1.1 2014/08/08 18:26:05 polynomial-c Exp $
 
 EAPI=5
 
-inherit eutils readme.gentoo user
+inherit autotools systemd eutils readme.gentoo user
 
 DESCRIPTION="Minimalistic Murmur (Mumble server)"
-HOMEPAGE="http://code.google.com/p/umurmur/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="http://code.google.com/p/umurmur/ https://github.com/fatbob313/umurmur"
+SRC_URI="https://github.com/fatbob313/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="polarssl"
 
-DEPEND=">=dev-libs/protobuf-c-0.14
+DEPEND=">=dev-libs/protobuf-c-1.0.0_rc2
 	dev-libs/libconfig
 	polarssl? ( >=net-libs/polarssl-1.0.0 )
 	!polarssl? ( dev-libs/openssl:0 )"
@@ -31,6 +31,10 @@ DOC_CONTENTS="
 pkg_setup() {
 	enewgroup murmur
 	enewuser murmur "" "" "" murmur
+}
+
+src_prepare() {
+	eautoreconf
 }
 
 src_configure() {
@@ -50,6 +54,7 @@ src_install() {
 
 	newinitd "${FILESDIR}"/umurmurd.initd umurmurd
 	newconfd "${FILESDIR}"/umurmurd.confd umurmurd
+	systemd_dounit "${FILESDIR}"/umurmurd.service
 
 	dodoc AUTHORS ChangeLog
 	newdoc README.md README
