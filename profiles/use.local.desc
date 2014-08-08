@@ -5680,8 +5680,6 @@ net-misc/strongswan:farp - Enable faking of ARP responses for virtual IP address
 net-misc/strongswan:gcrypt - Enable dev-libs/libgcrypt plugin which provides 3DES, AES, Blowfish, Camellia, CAST, DES, Serpent and Twofish ciphers along with MD4, MD5 and SHA1/2 hash algorithms, RSA and DH groups 1,2,5,14-18 and 22-24(4.4+). Also includes a software random number generator.
 net-misc/strongswan:non-root - Force IKEv1/IKEv2 daemons to normal user privileges. This might impose some restrictions mainly to the IKEv1 daemon. Disable only if you really require superuser privileges.
 net-misc/strongswan:openssl - Enable dev-libs/openssl plugin which is required for Elliptic Curve Cryptography (DH groups 19-21,25,26) and ECDSA. Also provides 3DES, AES, Blowfish, Camellia, CAST, DES, IDEA and RC5 ciphers along with MD2, MD4, MD5 and SHA1/2 hash algorithms, RSA and DH groups 1,2,5,14-18 and 22-24(4.4+) dev-libs/openssl has to be compiled with USE="-bindist".
-net-misc/stunnel:listen-queue - Enable Listen Queue support for Stunnel
-net-misc/stunnel:xforward - Enable X-Forwarded-For support for Stunnel
 net-misc/teamviewer:system-wine - Use app-emulation/wine instead of bundled one.
 net-misc/termpkg:uucp - Adds support for uucp style device locking
 net-misc/tigervnc:internal-fltk - Build+link internal and enhanced fltk library

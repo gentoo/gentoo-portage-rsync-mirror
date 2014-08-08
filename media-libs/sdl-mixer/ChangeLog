@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.129 2014/06/30 16:35:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.130 2014/08/08 11:57:02 hasufell Exp $
+
+  08 Aug 2014; Julian Ospald <hasufell@gentoo.org> sdl-mixer-1.2.12-r3.ebuild,
+  sdl-mixer-1.2.12-r4.ebuild,
+  +files/sdl-mixer-1.2.12-Fix-compiling-against-libmodplug-0.8.8.5.patch:
+  Fix compiling against libmodplug-0.8.8.5 wrt #519372
 
   30 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -sdl-mixer-1.2.12-r1.ebuild:

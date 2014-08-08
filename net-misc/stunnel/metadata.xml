@@ -12,8 +12,4 @@
 		protocols (like POP, IMAP, LDAP, etc) by having Stunnel provide the
 		encryption, requiring no changes to the daemon's code.
 	</longdescription>
-	<use>
-		<flag name="xforward">Enable X-Forwarded-For support for Stunnel</flag>
-		<flag name="listen-queue">Enable Listen Queue support for Stunnel</flag>
-	</use>
 </pkgmetadata>

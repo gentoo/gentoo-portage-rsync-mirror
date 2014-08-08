@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12-r3.ebuild,v 1.12 2014/05/05 03:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12-r3.ebuild,v 1.13 2014/08/08 11:57:01 hasufell Exp $
 
 EAPI=4
 inherit eutils
@@ -50,6 +50,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-wav.patch \
 		"${FILESDIR}"/${P}-clang.patch \
+		"${FILESDIR}"/${P}-Fix-compiling-against-libmodplug-0.8.8.5.patch \
 		"${FILESDIR}"/${P}-mikmod-r58{7,8}.patch #445980
 	sed -i \
 		-e '/link.*play/s/-o/$(LDFLAGS) -o/' \
