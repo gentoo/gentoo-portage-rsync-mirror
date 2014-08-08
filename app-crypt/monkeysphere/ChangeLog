@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/monkeysphere
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysphere/ChangeLog,v 1.7 2014/07/29 12:42:28 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysphere/ChangeLog,v 1.8 2014/08/08 11:30:23 k_f Exp $
+
+*monkeysphere-0.37 (08 Aug 2014)
+
+  08 Aug 2014; Kristian Fiskerstrand <k_f@gentoo.org>
+  +files/monkeysphere-0.37_default_shell.patch,
+  +files/monkeysphere-0.37_hd_od.patch, +monkeysphere-0.37.ebuild:
+  Version bump: new upstream release of 0.37
 
   29 Jul 2014; Kristian Fiskerstrand <k_f@gentoo.org>
   monkeysphere-0.36-r2.ebuild:
