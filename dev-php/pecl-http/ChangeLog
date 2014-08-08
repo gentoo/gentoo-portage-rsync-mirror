@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pecl-http
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/ChangeLog,v 1.15 2014/06/03 10:16:58 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/ChangeLog,v 1.16 2014/08/08 09:06:38 dev-zero Exp $
+
+*pecl-http-1.7.6-r1 (08 Aug 2014)
+
+  08 Aug 2014; Tiziano Müller <dev-zero@gentoo.org> +pecl-http-1.7.6-r1.ebuild:
+  Rev bump to add php5-5 USE flag.
 
 *pecl-http-1.7.6 (03 Jun 2014)
 
