@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1021 2014/08/05 18:17:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1022 2014/08/08 13:59:29 nativemad Exp $
+
+  08 Aug 2014; <mad@gentoo.org> kdelibs-4.12.5-r2.ebuild:
+  x86 stable, see bug 517864
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> kdelibs-4.12.5-r1.ebuild,
   kdelibs-4.12.5-r2.ebuild, kdelibs-4.13.3-r1.ebuild:

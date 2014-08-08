@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20131210.ebuild,v 1.1 2013/12/17 10:34:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20131210.ebuild,v 1.2 2014/08/08 14:00:42 blueness Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://googledrive.com/host/0B3fBvzttpiiSMTdoaVExWWNsRjg/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/2"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 # upstream bug #2597171, pyewf has implicit declarations
 #IUSE="debug python rawio unicode"
 IUSE="bfio debug ewf +fuse rawio +ssl static-libs +uuid unicode zlib"

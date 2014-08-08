@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libbfio/libbfio-0.0.20130609_alpha.ebuild,v 1.2 2013/07/27 15:04:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libbfio/libbfio-0.0.20130609_alpha.ebuild,v 1.3 2014/08/08 13:58:22 blueness Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.pentoo.ch/~zero/distfiles/${PN}-alpha-${MY_DATE}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="unicode"
 
 S="${WORKDIR}/${PN}-${MY_DATE}"
