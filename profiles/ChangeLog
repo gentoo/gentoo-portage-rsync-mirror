@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9290 2014/08/07 10:47:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9291 2014/08/08 17:15:29 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Aug 2014; Tim Harder <radhermit@gentoo.org> package.mask:
+  Update dev-libs/protobuf-c mask.
 
   07 Aug 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Restore libav-10 mask due to blockers and a lot of unported packages.

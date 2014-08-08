@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/greenlet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.28 2014/05/23 13:04:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.29 2014/08/08 17:07:42 radhermit Exp $
+
+*greenlet-0.4.3 (08 Aug 2014)
+
+  08 Aug 2014; Tim Harder <radhermit@gentoo.org> +greenlet-0.4.3.ebuild:
+  Version bump.
 
   23 May 2014; Ian Delaney <idella4@gentoo.org> greenlet-0.4.2.ebuild:
   drop py2.6 add py3.4

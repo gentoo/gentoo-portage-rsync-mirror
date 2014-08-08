@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/protobuf-c
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.6 2014/07/01 06:58:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.8 2014/08/08 17:18:19 radhermit Exp $
+
+  08 Aug 2014; Tim Harder <radhermit@gentoo.org> -protobuf-c-1.0.0_rc1.ebuild,
+  -protobuf-c-1.0.0_rc2.ebuild:
+  Remove old.
+
+*protobuf-c-1.0.1 (08 Aug 2014)
+
+  08 Aug 2014; Tim Harder <radhermit@gentoo.org> +protobuf-c-1.0.1.ebuild:
+  Version bump.
 
 *protobuf-c-1.0.0_rc2 (01 Jul 2014)
 
