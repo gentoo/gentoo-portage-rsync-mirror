@@ -1,4 +1,7 @@
 
+  08 Aug 2014; Sven Vermeulen <swift@gentoo.org> selinux-pan-9999.ebuild:
+  Make 9999 ebuilds EAPI=5 and transform to make master for version bumps
+
   05 Aug 2014; Sven Vermeulen <swift@gentoo.org>
   -selinux-pan-2.20130424-r1.ebuild, -selinux-pan-2.20130424-r2.ebuild,
   -selinux-pan-2.20130424-r3.ebuild, -selinux-pan-2.20130424-r4.ebuild:

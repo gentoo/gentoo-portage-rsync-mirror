@@ -1,11 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mandb/selinux-mandb-9999.ebuild,v 1.1 2013/12/29 14:37:45 swift Exp $
-EAPI="4"
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mandb/selinux-mandb-9999.ebuild,v 1.2 2014/08/08 18:49:18 swift Exp $
+EAPI="5"
 
 IUSE=""
 MODS="mandb"
-BASEPOL="9999"
 
 inherit selinux-policy-2
 

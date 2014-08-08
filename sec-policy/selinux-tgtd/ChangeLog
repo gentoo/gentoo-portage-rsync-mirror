@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-tgtd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-tgtd/ChangeLog,v 1.41 2014/08/05 09:24:16 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-tgtd/ChangeLog,v 1.42 2014/08/08 18:49:28 swift Exp $
+
+  08 Aug 2014; Sven Vermeulen <swift@gentoo.org> selinux-tgtd-9999.ebuild:
+  Make 9999 ebuilds EAPI=5 and transform to make master for version bumps
 
   05 Aug 2014; Sven Vermeulen <swift@gentoo.org>
   -selinux-tgtd-2.20130424-r1.ebuild, -selinux-tgtd-2.20130424-r2.ebuild,

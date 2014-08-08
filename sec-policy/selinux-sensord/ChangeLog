@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-sensord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-sensord/ChangeLog,v 1.13 2014/08/05 09:24:11 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-sensord/ChangeLog,v 1.14 2014/08/08 18:49:58 swift Exp $
+
+  08 Aug 2014; Sven Vermeulen <swift@gentoo.org> selinux-sensord-9999.ebuild:
+  Make 9999 ebuilds EAPI=5 and transform to make master for version bumps
 
   05 Aug 2014; Sven Vermeulen <swift@gentoo.org>
   -selinux-sensord-2.20130424-r1.ebuild, -selinux-sensord-2.20130424-r2.ebuild,

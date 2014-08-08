@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.64 2014/05/29 00:57:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.65 2014/08/08 18:55:33 nativemad Exp $
+
+  08 Aug 2014; <mad@gentoo.org> ltrace-0.7.2.ebuild:
+  x86 stable, see bug 445538
 
   29 May 2014; Jeroen Roovers <jer@gentoo.org> ltrace-0.7.3_p4.ebuild:
   Re-add ~sparc.

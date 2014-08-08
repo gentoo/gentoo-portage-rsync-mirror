@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ogdi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.42 2014/08/01 09:59:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.43 2014/08/08 18:40:21 nativemad Exp $
+
+  08 Aug 2014; <mad@gentoo.org> ogdi-3.2.0_beta2.ebuild:
+  x86 stable, see bug 413635
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> ogdi-3.2.0_beta2.ebuild:
   Drop sparc keyword

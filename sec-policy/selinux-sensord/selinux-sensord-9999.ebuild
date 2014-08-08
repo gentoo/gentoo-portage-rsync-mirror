@@ -1,11 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-sensord/selinux-sensord-9999.ebuild,v 1.1 2013/07/24 19:39:00 swift Exp $
-EAPI="4"
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-sensord/selinux-sensord-9999.ebuild,v 1.2 2014/08/08 18:49:58 swift Exp $
+EAPI="5"
 
 IUSE=""
 MODS="sensord"
-BASEPOL="9999"
 
 inherit selinux-policy-2
 

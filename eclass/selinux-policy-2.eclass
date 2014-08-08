@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.22 2014/08/06 08:25:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.23 2014/08/08 18:35:11 swift Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -29,7 +29,7 @@
 # This variable contains the version string of the selinux-base-policy package
 # that this module build depends on. It is used to patch with the appropriate
 # patch bundle(s) that are part of selinux-base-policy.
-: ${BASEPOL:=""}
+: ${BASEPOL:=${PVR}}
 
 # @ECLASS-VARIABLE: POLICY_PATCH
 # @DESCRIPTION:

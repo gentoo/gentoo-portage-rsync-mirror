@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-speedtouch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-speedtouch/ChangeLog,v 1.41 2014/08/05 09:24:14 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-speedtouch/ChangeLog,v 1.42 2014/08/08 18:50:05 swift Exp $
+
+  08 Aug 2014; Sven Vermeulen <swift@gentoo.org> selinux-speedtouch-9999.ebuild:
+  Make 9999 ebuilds EAPI=5 and transform to make master for version bumps
 
   05 Aug 2014; Sven Vermeulen <swift@gentoo.org>
   -selinux-speedtouch-2.20130424-r1.ebuild,

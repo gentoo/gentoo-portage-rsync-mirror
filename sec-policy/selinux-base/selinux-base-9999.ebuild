@@ -1,36 +1,56 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.8 2014/08/06 10:20:02 swift Exp $
-EAPI="4"
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.9 2014/08/08 18:49:22 swift Exp $
+EAPI="5"
 
-inherit eutils git-2
+inherit eutils
+
+if [[ ${PV} == 9999* ]]; then
+	EGIT_REPO_URI="${SELINUX_GIT_REPO:-git://git.overlays.gentoo.org/proj/hardened-refpolicy.git https://git.overlays.gentoo.org/gitroot/proj/hardened-refpolicy.git}"
+	EGIT_BRANCH="${SELINUX_GIT_BRANCH:-master}"
+	EGIT_SOURCEDIR="${WORKDIR}/refpolicy"
+
+	inherit git-2
+
+	KEYWORDS=""
+else
+	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
+			http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-${PVR}.tar.bz2"
+
+	KEYWORDS="~amd64 ~x86"
+fi
 
 IUSE="+peer_perms +open_perms +ubac +unconfined doc"
 
 DESCRIPTION="Gentoo base policy for SELinux"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
-EGIT_REPO_URI="${SELINUX_GIT_REPO:-git://git.overlays.gentoo.org/proj/hardened-refpolicy.git https://git.overlays.gentoo.org/gitroot/proj/hardened-refpolicy.git}"
-EGIT_BRANCH="${SELINUX_GIT_BRANCH:-master}"
-EGIT_SOURCEDIR="${WORKDIR}/refpolicy"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS=""
-
-RDEPEND=">=sys-apps/policycoreutils-2.1.10
+RDEPEND=">=sys-apps/policycoreutils-2.3
 	virtual/udev
 	!<=sec-policy/selinux-base-policy-2.20120725"
 DEPEND="${RDEPEND}
 	sys-devel/m4
-	>=sys-apps/checkpolicy-2.1.8"
+	>=sys-apps/checkpolicy-2.3"
 
 S=${WORKDIR}/
 
-src_unpack() {
-	git-2_src_unpack
-}
+#src_unpack() {
+#	git-2_src_unpack
+#}
 
 src_prepare() {
+	if [[ ${PV} != 9999* ]]; then
+		# Apply the gentoo patches to the policy. These patches are only necessary
+		# for base policies, or for interface changes on modules.
+		EPATCH_MULTI_MSG="Applying SELinux policy updates ... " \
+		EPATCH_SUFFIX="patch" \
+		EPATCH_SOURCE="${WORKDIR}" \
+		EPATCH_FORCE="yes" \
+		epatch
+	fi
+
 	cd "${S}/refpolicy"
 	make bare
 	# Fix bug 257111 - Correct the initial sid for cron-started jobs in the
