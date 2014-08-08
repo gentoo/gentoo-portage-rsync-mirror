@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/efl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.17 2014/06/29 14:15:32 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.18 2014/08/08 14:48:02 tommy Exp $
+
+  08 Aug 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> efl-1.10.1.ebuild:
+  Add dependency on x11-libs/libxkbcommon with USE=drm, bug 516060
 
 *efl-1.10.1 (29 Jun 2014)
 

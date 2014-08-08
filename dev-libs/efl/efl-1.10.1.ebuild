@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.10.1.ebuild,v 1.1 2014/06/29 14:15:32 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.10.1.ebuild,v 1.2 2014/08/08 14:48:02 tommy Exp $
 
 EAPI="5"
 
@@ -40,6 +40,7 @@ REQUIRED_USE="
 
 RDEPEND="
 	debug? ( dev-util/valgrind )
+	drm? ( >=x11-libs/libxkbcommon-0.3.0 )
 	fontconfig? ( media-libs/fontconfig )
 	fribidi? ( dev-libs/fribidi )
 	gif? ( media-libs/giflib )
