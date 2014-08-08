@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgit2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/ChangeLog,v 1.23 2014/06/21 09:04:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/ChangeLog,v 1.24 2014/08/08 16:49:02 radhermit Exp $
+
+*libgit2-0.21.1 (08 Aug 2014)
+
+  08 Aug 2014; Tim Harder <radhermit@gentoo.org> +libgit2-0.21.1.ebuild:
+  Version bump (bug #519378).
 
   21 Jun 2014; Tim Harder <radhermit@gentoo.org> -libgit2-0.19.0.ebuild,
   -libgit2-0.20.0.ebuild:
