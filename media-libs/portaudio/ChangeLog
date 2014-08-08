@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.105 2014/08/03 18:33:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.106 2014/08/08 21:24:56 ago Exp $
+
+  08 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
+  portaudio-19_pre20140130.ebuild:
+  Stable for sparc, wrt bug #503920
 
   03 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
   portaudio-19_pre20140130.ebuild:

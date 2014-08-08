@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.49 2014/08/02 18:16:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.50 2014/08/08 21:23:51 ago Exp $
+
+  08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> qpdf-5.1.1.ebuild:
+  Stable for sparc, wrt bug #508134
 
   02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> qpdf-5.1.1.ebuild:
   Stable for ppc64, wrt bug #508134

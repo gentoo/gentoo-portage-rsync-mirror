@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.98 2014/08/06 20:36:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.99 2014/08/08 21:23:03 ago Exp $
+
+  08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> perl-tk-804.32.0.ebuild:
+  Stable for sparc, wrt bug #518032
 
   06 Aug 2014; Jeroen Roovers <jer@gentoo.org> perl-tk-804.32.0.ebuild:
   Stable for HPPA (bug #518032).

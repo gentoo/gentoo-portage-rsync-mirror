@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xapian-omega
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/ChangeLog,v 1.43 2014/07/20 10:02:57 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/ChangeLog,v 1.44 2014/08/08 21:25:26 ago Exp $
+
+  08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> xapian-omega-1.2.17.ebuild:
+  Stable for sparc, wrt bug #506974
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   xapian-omega-1.2.17.ebuild:

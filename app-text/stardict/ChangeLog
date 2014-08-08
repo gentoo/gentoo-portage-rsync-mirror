@@ -1,6 +1,9 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.40 2014/08/03 18:36:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.41 2014/08/08 21:24:31 ago Exp $
+
+  08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> stardict-3.0.4.ebuild:
+  Stable for sparc, wrt bug #510900
 
   03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> stardict-3.0.4.ebuild:
   Stable for ppc, wrt bug #510900
