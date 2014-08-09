@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-1.2.ebuild,v 1.1 2014/07/02 10:37:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-1.2.ebuild,v 1.2 2014/08/09 11:03:25 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV}.orig.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 
 CDEPEND="
