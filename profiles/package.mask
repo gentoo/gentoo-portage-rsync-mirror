@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15959 2014/08/08 18:23:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15960 2014/08/09 18:30:06 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,12 +30,20 @@
 
 #--- END OF EXAMPLES ---
 
-# Lars Wendler <polynomial-c@gentoo.org> (8 Aug 2014)
+# Samuli Suominen <ssuominen@gentoo.org> (09 Aug 2014)
+# usleep command is part of the app-admin/killproc package,
+# and adding this separate usleep package was a mistake
+# emerge -C sys-apps/usleep
+# emerge app-admin/killproc
+# removal in about 30 days wrt bug #467212
+sys-apps/usleep
+
+# Lars Wendler <polynomial-c@gentoo.org> (08 Aug 2014)
 # Depends on >=dev-libs/protobuf-c-1.0.0_rc2 which is masked.
 # Can be unmasked when protobuf-c mask is gone.
 >=media-sound/umurmur-0.2.15
 
-# William Hubbs <williamh@gentoo.org> (5 Aug 2014)
+# William Hubbs <williamh@gentoo.org> (05 Aug 2014)
 # Masked by QA for removal in 30 days.
 # The unmasked version is very old, there are multiple open security
 # bugs and several version bumps. The package appears to be abandoned.

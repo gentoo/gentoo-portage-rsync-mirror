@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9292 2014/08/08 18:23:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9293 2014/08/09 18:30:06 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite sys-apps/usleep wrt #467212
 
   08 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> package.mask:
   Added mask for >=media-sound/umurmur-0.2.15 until =dev-libs/protobuf-c-1*
