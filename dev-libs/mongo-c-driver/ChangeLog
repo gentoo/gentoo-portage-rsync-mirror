@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/mongo-c-driver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/ChangeLog,v 1.14 2014/08/07 19:09:24 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/ChangeLog,v 1.15 2014/08/09 20:34:22 nativemad Exp $
+
+  09 Aug 2014; Andreas Schuerch <nativemad@gentoo.org>
+  mongo-c-driver-0.7.1-r1.ebuild:
+  x86 stable, see bug 503410
 
   07 Aug 2014; Chema Alonso <nimiux@gentoo.org> mongo-c-driver-0.7.1-r1.ebuild:
   Stable for amd64 wrt bug #503410
