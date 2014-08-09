@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.405 2014/08/02 17:52:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.406 2014/08/09 19:08:06 zlogene Exp $
+
+  09 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> -freetype-2.4.11.ebuild,
+  -freetype-2.5.0.1.ebuild, -freetype-2.5.3.ebuild:
+  Drop insecure versions wrt bug #504088
 
   02 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> freetype-2.5.3-r1.ebuild:
   ppc64 stable wrt bug #504088
