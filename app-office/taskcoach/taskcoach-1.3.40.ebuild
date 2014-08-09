@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-1.3.40.ebuild,v 1.1 2014/05/30 22:24:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-1.3.40.ebuild,v 1.2 2014/08/09 18:43:59 nativemad Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.taskcoach.org http://pypi.python.org/pypi/TaskCoach"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="libnotify"
 DEPEND=">=dev-python/wxpython-2.8.9.2:2.8[${PYTHON_USEDEP}]
 	>=dev-python/twisted-core-10.0"
