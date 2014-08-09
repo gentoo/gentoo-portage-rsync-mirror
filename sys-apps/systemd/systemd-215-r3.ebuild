@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-215-r3.ebuild,v 1.8 2014/08/07 20:55:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-215-r3.ebuild,v 1.9 2014/08/09 15:11:34 floppym Exp $
 
 EAPI=5
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
-inherit autotools-utils bash-completion-r1 fcaps linux-info multilib \
+inherit autotools-utils bash-completion-r1 linux-info multilib \
 	multilib-minimal pam python-single-r1 systemd toolchain-funcs udev \
 	user
 
@@ -459,9 +459,6 @@ pkg_postinst() {
 	fi
 
 	udev_reload || FAIL=1
-
-	# Bug 468876
-	fcaps cap_dac_override,cap_sys_ptrace=ep usr/bin/systemd-detect-virt
 
 	# Bug 465468, make sure locales are respect, and ensure consistency
 	# between OpenRC & systemd
