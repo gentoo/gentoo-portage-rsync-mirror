@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=sci-biology/bioperl-1.6.9 dev-perl/DBD-mysql dev-perl/DBI sci-biology/biosql virtual/perl-Module-Build || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=>=sci-biology/bioperl-1.6.9 dev-perl/DBD-mysql dev-perl/DBI sci-biology/biosql virtual/perl-Module-Build dev-lang/perl:=[-build(-)]
 DESCRIPTION=Perl tools for bioinformatics - Perl API that accesses the BioSQL schema
-EAPI=2
+EAPI=5
 HOMEPAGE=http://www.bioperl.org/
 IUSE=test
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=>=sci-biology/bioperl-1.6.9 dev-perl/DBD-mysql dev-perl/DBI sci-biology/biosql || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=>=sci-biology/bioperl-1.6.9 dev-perl/DBD-mysql dev-perl/DBI sci-biology/biosql dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/C/CJ/CJFIELDS/BioPerl-DB-1.006900.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=1966af233be9a0bcc5ec53fadc6527dc
+_md5_=6a7702088daf4500574e40b6119a3b0e

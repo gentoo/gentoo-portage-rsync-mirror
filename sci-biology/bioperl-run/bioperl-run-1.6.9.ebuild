@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.6.9.ebuild,v 1.1 2011/07/18 06:30:59 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.6.9.ebuild,v 1.2 2014/08/09 22:49:45 zlogene Exp $
 
-EAPI="2"
+EAPI="5"
 
 BIOPERL_RELEASE=1.6.9
 

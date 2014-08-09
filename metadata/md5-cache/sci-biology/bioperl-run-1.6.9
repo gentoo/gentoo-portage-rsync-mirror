@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=virtual/perl-Module-Build >=sci-biology/bioperl-1.6.9 !minimal? ( dev-perl/Algorithm-Diff dev-perl/XML-Twig dev-perl/IO-String dev-perl/IPC-Run dev-perl/File-Sort ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=virtual/perl-Module-Build >=sci-biology/bioperl-1.6.9 !minimal? ( dev-perl/Algorithm-Diff dev-perl/XML-Twig dev-perl/IO-String dev-perl/IPC-Run dev-perl/File-Sort ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Perl tools for bioinformatics - Wrapper modules around key bioinformatics applications
-EAPI=2
+EAPI=5
 HOMEPAGE=http://www.bioperl.org/
 IUSE=-minimal test
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=>=sci-biology/bioperl-1.6.9 !minimal? ( dev-perl/Algorithm-Diff dev-perl/XML-Twig dev-perl/IO-String dev-perl/IPC-Run dev-perl/File-Sort ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=>=sci-biology/bioperl-1.6.9 !minimal? ( dev-perl/Algorithm-Diff dev-perl/XML-Twig dev-perl/IO-String dev-perl/IPC-Run dev-perl/File-Sort ) dev-lang/perl:=[-build(-)]
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/C/CJ/CJFIELDS/BioPerl-Run-1.006900.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=4c2cd6e2b622fbe7c1987c4b5c8bcf72
+_md5_=e8b00c3bbf3dbf123ddf0a86512f7839

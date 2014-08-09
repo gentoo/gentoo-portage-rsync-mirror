@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.6.1.ebuild,v 1.6 2009/06/11 19:33:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.6.1.ebuild,v 1.7 2014/08/09 22:49:45 zlogene Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit perl-module
 
