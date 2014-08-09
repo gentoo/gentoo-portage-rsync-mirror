@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.118 2014/05/30 20:04:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.119 2014/08/09 13:52:07 vapier Exp $
+
+*dropbear-2014.65 (09 Aug 2014)
+
+  09 Aug 2014; Mike Frysinger <vapier@gentoo.org> +dropbear-2014.65.ebuild:
+  Version bump.
 
   30 May 2014; Mike Frysinger <vapier@gentoo.org> files/dropbear.init.d:
   Generate keys for all types dropbear supports.
