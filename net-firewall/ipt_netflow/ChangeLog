@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/ipt_netflow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ChangeLog,v 1.14 2014/07/18 12:41:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ChangeLog,v 1.15 2014/08/09 09:58:09 jer Exp $
+
+*ipt_netflow-2.0 (09 Aug 2014)
+
+  09 Aug 2014; Jeroen Roovers <jer@gentoo.org> +ipt_netflow-2.0.ebuild,
+  +files/ipt_netflow-2.0-configure.patch:
+  Version bump.
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -ipt_netflow-1.8-r3.ebuild,
   ipt_netflow-1.8-r4.ebuild, files/ipt_netflow-1.8-pax-const.patch,

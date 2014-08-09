@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.278 2014/08/08 10:17:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.279 2014/08/09 09:32:10 ago Exp $
+
+  09 Aug 2014; Agostino Sarubbo <ago@gentoo.org> nspr-4.10.6-r1.ebuild:
+  Stable for ppc, wrt bug #517876
 
   08 Aug 2014; Jeroen Roovers <jer@gentoo.org> nspr-4.10.6-r1.ebuild:
   Stable for HPPA (bug #517876).

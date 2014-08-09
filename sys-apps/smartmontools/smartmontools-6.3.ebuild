@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.16 2014/08/09 09:36:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-6.3.ebuild,v 1.1 2014/08/09 09:36:30 polynomial-c Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit subversion autotools
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~ia64-linux ~x86-freebsd ~x86-linux ~x64-macos"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~x64-macos"
 fi
 
 DESCRIPTION="Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.) monitoring tools"
@@ -21,7 +21,11 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="caps minimal selinux static"
 
-DEPEND="caps? ( sys-libs/libcap-ng )
+DEPEND="
+	caps? (
+		static? ( sys-libs/libcap-ng[static-libs] )
+		!static? ( sys-libs/libcap-ng )
+	)
 	selinux? (
 		sys-libs/libselinux
 		sec-policy/selinux-smartmon
