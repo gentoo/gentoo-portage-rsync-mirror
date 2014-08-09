@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.10 2014/05/31 10:59:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.11 2014/08/09 20:11:44 swift Exp $
 
 EAPI=5
 
@@ -13,10 +13,11 @@ HOMEPAGE="http://irssi.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="ipv6 +perl ssl socks5 +proxy"
+IUSE="ipv6 +perl selinux ssl socks5 +proxy"
 
 RDEPEND="sys-libs/ncurses
 	>=dev-libs/glib-2.6.0
+	selinux? ( sec-policy/selinux-irc )
 	ssl? ( dev-libs/openssl )
 	perl? ( dev-lang/perl )
 	socks5? ( >=net-proxy/dante-1.1.18 )"

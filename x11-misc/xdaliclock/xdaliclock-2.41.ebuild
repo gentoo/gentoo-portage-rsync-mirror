@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/xdaliclock-2.41.ebuild,v 1.6 2014/08/03 18:35:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/xdaliclock-2.41.ebuild,v 1.7 2014/08/09 20:29:33 jer Exp $
 
 EAPI=5
 
-DESCRIPTION="Dali Clock is a digital clock. When a digit changes, it melts into its new shape."
+DESCRIPTION="Dali Clock is a digital clock. When a digit changes, it melts into its new shape"
 HOMEPAGE="http://www.jwz.org/xdaliclock"
 SRC_URI="http://www.jwz.org/${PN}/${P}.tar.gz"
 
