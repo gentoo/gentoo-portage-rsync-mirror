@@ -1,4 +1,10 @@
 
+*selinux-pan-2.20140311-r5 (09 Aug 2014)
+
+  09 Aug 2014; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20140311-r5.ebuild:
+  Bump towards r5 (fixes duplicate context for hiawatha)
+
   08 Aug 2014; Sven Vermeulen <swift@gentoo.org> selinux-pan-9999.ebuild:
   Make 9999 ebuilds EAPI=5 and transform to make master for version bumps
 
