@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-2.4-r1.ebuild,v 1.7 2014/08/08 21:34:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-2.4-r1.ebuild,v 1.8 2014/08/09 10:47:55 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.sourceware.org/${PN}/ftp/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ~ppc64 ~s390 sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 ~s390 sparc x86"
 IUSE="sqlite"
 
 RDEPEND=">=dev-libs/elfutils-0.142

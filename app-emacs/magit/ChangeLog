@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/magit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.14 2014/07/27 11:19:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.15 2014/08/09 10:42:50 nimiux Exp $
+
+  09 Aug 2014; Chema Alonso <nimiux@gentoo.org> magit-1.2.0-r1.ebuild:
+  Stable for amd64 wrt bug #509736
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> magit-1.2.0-r1.ebuild:
   x86 stable wrt bug #509736
