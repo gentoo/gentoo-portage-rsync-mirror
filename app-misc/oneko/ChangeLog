@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/oneko
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.22 2014/07/19 14:15:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.23 2014/08/09 12:04:35 ago Exp $
+
+  09 Aug 2014; Agostino Sarubbo <ago@gentoo.org> oneko-1.2-r2.ebuild:
+  Stable for ppc, wrt bug #391475
 
   19 Jul 2014; Jeroen Roovers <jer@gentoo.org> oneko-1.2-r2.ebuild:
   EAPI bump.

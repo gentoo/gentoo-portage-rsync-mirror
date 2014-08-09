@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/printrun
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/printrun/ChangeLog,v 1.1 2014/08/07 17:03:47 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/printrun/ChangeLog,v 1.2 2014/08/09 12:25:39 amynka Exp $
+
+  09 Aug 2014; Amy Winston <amynka@gentoo.org> printrun-20140730.ebuild:
+  Missing dependency added.
 
 *printrun-20140730 (07 Aug 2014)
 

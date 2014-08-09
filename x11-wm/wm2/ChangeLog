@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/wm2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/ChangeLog,v 1.14 2013/10/19 15:32:05 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/ChangeLog,v 1.15 2014/08/09 12:05:06 ago Exp $
+
+  09 Aug 2014; Agostino Sarubbo <ago@gentoo.org> wm2-4-r1.ebuild:
+  Stable for ppc, wrt bug #393817
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due desktop-wm removal

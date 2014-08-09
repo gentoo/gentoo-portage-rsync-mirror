@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/aewm++
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.22 2013/10/19 15:19:15 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.23 2014/08/09 12:05:22 ago Exp $
+
+  09 Aug 2014; Agostino Sarubbo <ago@gentoo.org> aewm++-1.1.5-r1.ebuild:
+  Stable for ppc, wrt bug #393947
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due desktop-wm removal

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/printrun/printrun-20140730.ebuild,v 1.1 2014/08/07 17:03:47 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/printrun/printrun-20140730.ebuild,v 1.2 2014/08/09 12:25:39 amynka Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/pyserial
+DEPEND="dev-python/psutil
+	dev-python/pyserial
 	dev-python/wxpython
 	dev-python/pyglet
 	dev-python/dbus-python
