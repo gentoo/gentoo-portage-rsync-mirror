@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/pipelight/pipelight-9999.ebuild,v 1.5 2014/08/03 22:41:19 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/pipelight/pipelight-9999.ebuild,v 1.6 2014/08/09 16:51:55 ryao Exp $
 
 EAPI=5
 
@@ -38,6 +38,7 @@ src_install() {
 	# properly duplicate the plugins.
 	# XXX: Patch the script to support DESTDIR and send the patch upstream.
 	sed -e "s:^\(PIPELIGHT_LIBRARY_PATH=\"\)\\(.*\):\1${ED}usr/$(get_libdir)/${PN}\":" \
+		-e "s:^\(PLUGIN_PATH=\"\)\\(.*\):\1${ED}usr/$(get_libdir)/${PN}\":" \
 		"${ED}/usr/bin/pipelight-plugin" > "${T}/pipelight-plugin" \
 		|| die "Generating temporary pipelight-plugin failed"
 	chmod u+x "${T}/pipelight-plugin" \
@@ -72,4 +73,9 @@ postinst() {
 	einfo "pipelight-plugin --update as root. Browsers like Chrome (all"
 	einfo "versions before 35) will initialize plugins at boot while browsers"
 	einfo "like Firefox will initialize plugins on demand."
+	einfo
+	# Users must be in the video group for video acceleration
+	einfo "Membership in the video group is required for using plugins that"
+	einfo "feature hardware acceleration for video decoding. This is important"
+	einfo "for video streaming sites that use Silverlight."
 }
