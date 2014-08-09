@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ronn-0.7.3-r3.ebuild,v 1.1 2014/05/14 18:08:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ronn-0.7.3-r3.ebuild,v 1.2 2014/08/09 10:26:09 jer Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -10,7 +10,7 @@ RUBY_FAKEGEM_EXTRADOC="AUTHORS CHANGES README.md"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Ronn converts simple, human readable textfiles to roff for terminal display, and also to HTML."
+DESCRIPTION="Ronn converts simple, human readable textfiles to roff for terminal display, and also to HTML"
 HOMEPAGE="http://github.com/rtomayko/ronn/"
 
 LICENSE="MIT"

@@ -1,7 +1,7 @@
 diff -Nuar a/docs/conf/inspircd.conf.example b/docs/conf/inspircd.conf.example
---- a/docs/conf/inspircd.conf.example	2014-01-21 14:13:25.000000000 +0100
-+++ b/docs/conf/inspircd.conf.example	2014-01-27 12:07:50.189947703 +0100
-@@ -415,11 +415,11 @@
+--- a/docs/conf/inspircd.conf.example	2014-07-24 14:24:00.000000000 +0200
++++ b/docs/conf/inspircd.conf.example	2014-08-09 10:21:01.439999954 +0200
+@@ -412,11 +412,11 @@
  
  # This file has all the information about oper classes, types and o:lines.
  # You *MUST* edit it.
@@ -15,7 +15,7 @@ diff -Nuar a/docs/conf/inspircd.conf.example b/docs/conf/inspircd.conf.example
  
  #-#-#-#-#-#-#-#-#-#-  MISCELLANEOUS CONFIGURATION  -#-#-#-#-#-#-#-#-#-#
  #                                                                     #
-@@ -429,7 +429,8 @@
+@@ -426,7 +426,8 @@
  #   motd - displayed on connect and when a user executes /MOTD
  #   rules - displayed when the user executes /RULES
  # Modules can also define their own files
@@ -25,7 +25,7 @@ diff -Nuar a/docs/conf/inspircd.conf.example b/docs/conf/inspircd.conf.example
  
  # Example of an executable file include. Note this will be read on rehash,
  # not when the command is run.
-@@ -475,7 +476,7 @@
+@@ -472,7 +473,7 @@
  # the default of 'inspircd.pid' is used.                              #
  #                                                                     #
  
@@ -34,7 +34,7 @@ diff -Nuar a/docs/conf/inspircd.conf.example b/docs/conf/inspircd.conf.example
  
  #-#-#-#-#-#-#-#-#-#-#-#-#- BANLIST LIMITS #-#-#-#-#-#-#-#-#-#-#-#-#-#-#
  #                                                                     #
-@@ -957,7 +958,7 @@
+@@ -953,7 +954,7 @@
  # provide almost all the features of InspIRCd. :)                     #
  #                                                                     #
  # The default does nothing -- we include it for simplicity for you.   #
@@ -43,7 +43,7 @@ diff -Nuar a/docs/conf/inspircd.conf.example b/docs/conf/inspircd.conf.example
  
  # Here are some pre-built modules.conf files that closely match the
  # default configurations of some popular IRCd's. You still may want to
-@@ -969,10 +970,10 @@
+@@ -965,10 +966,10 @@
  # recommended that you make your own modules file based on modules.conf.example.
  
  # Settings similar to UnrealIRCd defaults.
@@ -57,8 +57,8 @@ diff -Nuar a/docs/conf/inspircd.conf.example b/docs/conf/inspircd.conf.example
  
  #########################################################################
 diff -Nuar a/make/template/main.mk b/make/template/main.mk
---- a/make/template/main.mk	2014-01-21 14:13:25.000000000 +0100
-+++ b/make/template/main.mk	2014-01-27 12:12:11.749946234 +0100
+--- a/make/template/main.mk	2014-07-24 14:24:00.000000000 +0200
++++ b/make/template/main.mk	2014-08-09 10:24:59.039999948 +0200
 @@ -34,7 +34,7 @@
  SYSTEM = @SYSTEM@
  BUILDPATH = @BUILD_DIR@
@@ -195,8 +195,8 @@ diff -Nuar a/make/template/main.mk b/make/template/main.mk
  @GNU_ONLY RCS_FILES = $(wildcard .git/index src/version.sh)
  @BSD_ONLY RCS_FILES = src/version.sh
 diff -Nuar a/make/unit-cc.pl b/make/unit-cc.pl
---- a/make/unit-cc.pl	2014-01-21 14:13:25.000000000 +0100
-+++ b/make/unit-cc.pl	2014-01-27 12:12:25.179946158 +0100
+--- a/make/unit-cc.pl	2014-07-24 14:24:00.000000000 +0200
++++ b/make/unit-cc.pl	2014-08-09 10:25:15.089999947 +0200
 @@ -97,7 +97,7 @@
  	my $libs = '';
  	my $binary = $ENV{RUNCC};
