@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.116 2014/08/03 18:34:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.117 2014/08/09 09:23:42 jer Exp $
+
+  09 Aug 2014; Jeroen Roovers <jer@gentoo.org> -synergy-1.4.15.ebuild,
+  synergy-1.4.16_p1969.ebuild, synergy-1.5.0_p2278.ebuild,
+  -files/synergy-1.4.12-pthread.patch:
+  Fix DESCRIPTION.
 
   03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> synergy-1.4.16_p1969.ebuild:
   Stable for ppc, wrt bug #509656
