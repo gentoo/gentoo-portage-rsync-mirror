@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.108 2014/07/13 06:01:16 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.109 2014/08/09 11:52:54 jer Exp $
+
+  09 Aug 2014; Jeroen Roovers <jer@gentoo.org> libgpg-error-1.13.ebuild:
+  Stable for HPPA (bug #519432).
 
   13 Jul 2014; Alon Bar-Lev <alonbl@gentoo.org> libgpg-error-1.13.ebuild:
   Make gnupg-error.h abi specific as it is generated, bug#516952
