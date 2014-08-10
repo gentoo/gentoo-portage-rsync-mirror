@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/pdf-core-0.2.5.ebuild,v 1.4 2014/08/06 02:05:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/pdf-core-0.2.5.ebuild,v 1.5 2014/08/10 09:28:28 graaff Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
-RUBY_FAKEGEM_TASK_DOC="rdoc"
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 
 inherit ruby-fakegem
 
@@ -20,8 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
 
-ruby_add_bdepend "test? ( dev-ruby/pdf-inspector
-	dev-ruby/pdf-reader )"
+ruby_add_bdepend "test? ( =dev-ruby/pdf-inspector-1.1*
+	>=dev-ruby/pdf-reader-1.2 =dev-ruby/pdf-reader-1* )"
 
 all_ruby_prepare() {
 	sed -i -e "/[Bb]undler/d" spec/spec_helper.rb || die

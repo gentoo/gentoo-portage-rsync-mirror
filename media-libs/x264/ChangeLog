@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.110 2014/08/09 10:47:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.111 2014/08/10 09:30:42 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> x264-0.0.20140308.ebuild:
+  Stable for sparc, wrt bug #515234
 
   09 Aug 2014; Agostino Sarubbo <ago@gentoo.org> x264-0.0.20140308.ebuild:
   Stable for ppc64, wrt bug #515234
