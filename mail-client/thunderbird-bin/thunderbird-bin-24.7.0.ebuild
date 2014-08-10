@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-24.7.0.ebuild,v 1.3 2014/08/04 19:22:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-24.7.0.ebuild,v 1.4 2014/08/10 14:29:24 swift Exp $
 
 EAPI="5"
 MOZ_ESR="0"
@@ -38,9 +38,10 @@ RESTRICT="strip mirror"
 KEYWORDS="-* amd64 x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+crashreporter"
+IUSE="+crashreporter selinux"
 
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/unzip
+	selinux? ( sec-policy/selinux-thunderbird )"
 RDEPEND="virtual/freedesktop-icon-theme
 	dev-libs/dbus-glib
 	=media-libs/libpng-1.6*
@@ -50,6 +51,7 @@ RDEPEND="virtual/freedesktop-icon-theme
 	>=x11-libs/gtk+-2.2:2
 	>=media-libs/alsa-lib-1.0.16
 	crashreporter? ( net-misc/curl )
+	selinux? ( sec-policy/selinux-thunderbird )
 "
 
 QA_PREBUILT="

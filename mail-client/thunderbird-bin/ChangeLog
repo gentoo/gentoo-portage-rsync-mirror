@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.152 2014/08/04 19:22:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.153 2014/08/10 14:29:24 swift Exp $
+
+  10 Aug 2014; Sven Vermeulen <swift@gentoo.org> thunderbird-bin-17.0.10.ebuild,
+  thunderbird-bin-17.0.9.ebuild, thunderbird-bin-24.6.0.ebuild,
+  thunderbird-bin-24.7.0.ebuild, thunderbird-bin-31.0.ebuild:
+  Add USE=selinux dependency to sec-policy/selinux-thunderbidr
 
   04 Aug 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-bin-24.7.0.ebuild:
   Stable for x86, wrt bug #517876
