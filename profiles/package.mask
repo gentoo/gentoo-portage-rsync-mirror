@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15960 2014/08/09 18:30:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15961 2014/08/10 12:40:41 dev-zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tiziano Müller <dev-zero@gentoo.org> (10 Aug 2014)
+# Bundles an old (2.0.0) and vulnerable, but modified version of expat.
+# Testsuite is completely broken and upstream seems to be working on the
+# next rewrite instead of fixing this one. Nothing in the tree depends on it.
+# Removal in a month.
+dev-python/amara
 
 # Samuli Suominen <ssuominen@gentoo.org> (09 Aug 2014)
 # usleep command is part of the app-admin/killproc package,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/caps-plugins-0.9.15.ebuild,v 1.3 2014/01/12 20:14:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/caps-plugins-0.9.15.ebuild,v 1.4 2014/08/10 12:56:41 nativemad Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://quitte.de/dsp/caps_${PV}.tar.bz2
 	doc? ( http://quitte.de/dsp/caps-doc_${PV}.tar.bz2 )"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="media-libs/ladspa-sdk"
 RDEPEND="
