@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellkam
-# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/ChangeLog,v 1.17 2013/08/31 14:41:51 pacho Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/ChangeLog,v 1.18 2014/08/10 20:01:29 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gkrellkam-2.0.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   31 Aug 2013; Pacho Ramos <pacho@gentoo.org>
   +files/gkrellkam-2.0.0-makefile.patch, gkrellkam-2.0.0.ebuild:

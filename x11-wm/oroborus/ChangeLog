@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/oroborus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.39 2013/10/19 15:27:59 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.40 2014/08/10 19:59:15 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> oroborus-2.0.20.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> -oroborus-2.0.18.ebuild,
   metadata.xml:

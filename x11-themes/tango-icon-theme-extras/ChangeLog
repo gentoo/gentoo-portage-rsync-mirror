@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tango-icon-theme-extras
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.28 2013/10/04 22:52:58 tetromino Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.29 2014/08/10 19:59:11 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  tango-icon-theme-extras-0.1.0-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   tango-icon-theme-extras-0.1.0-r1.ebuild,
@@ -120,4 +124,3 @@
   11 Jan 2006; Luis Medinas <metalgod@gentoo.org> +metadata.xml,
   +tango-icon-theme-extras-0.1.0.ebuild:
   Initial Import.
-

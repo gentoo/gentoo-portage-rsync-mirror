@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.101 2014/06/29 10:27:52 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.102 2014/08/10 19:57:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> couchdb-1.5.1.ebuild,
+  couchdb-1.6.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   29 Jun 2014; Dirkjan Ochtman <djc@gentoo.org> couchdb-1.6.0.ebuild:
   Allow erlang-17 for couchdb-1.6.0

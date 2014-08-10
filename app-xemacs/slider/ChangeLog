@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/slider
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/slider/ChangeLog,v 1.17 2011/07/22 11:25:04 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/slider/ChangeLog,v 1.18 2014/08/10 19:32:36 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> slider-1.15.ebuild,
+  slider-1.16.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> slider-1.16.ebuild:
   ppc64 stable wrt #369897

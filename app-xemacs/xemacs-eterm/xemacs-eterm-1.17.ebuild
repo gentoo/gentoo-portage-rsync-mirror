@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-eterm/xemacs-eterm-1.17.ebuild,v 1.4 2007/06/03 19:35:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-eterm/xemacs-eterm-1.17.ebuild,v 1.5 2014/08/10 19:47:18 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Terminal emulation."
+DESCRIPTION="Terminal emulation"
 PKG_CAT="standard"
 
 MY_PN=${PN/xemacs-/}

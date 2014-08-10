@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/blockdpy/blockdpy-1.ebuild,v 1.2 2009/05/09 16:31:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/blockdpy/blockdpy-1.ebuild,v 1.3 2014/08/10 20:01:25 slyfox Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="Tool to block access via the physical display while x11vnc is running."
+DESCRIPTION="Tool to block access via the physical display while x11vnc is running"
 HOMEPAGE="http://www.karlrunge.com/x11vnc/blockdpy.c"
 SRC_URI="http://www.karlrunge.com/x11vnc/blockdpy.c"
 

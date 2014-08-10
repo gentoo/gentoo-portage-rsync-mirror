@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/vc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vc/ChangeLog,v 1.22 2011/07/22 11:24:59 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vc/ChangeLog,v 1.23 2014/08/10 19:41:11 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> vc-1.41.ebuild,
+  vc-1.48.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> vc-1.48.ebuild:
   ppc64 stable wrt #369897

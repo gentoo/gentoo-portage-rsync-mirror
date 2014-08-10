@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/bfm-0.6.4-r1.ebuild,v 1.11 2014/04/07 19:34:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/bfm-0.6.4-r1.ebuild,v 1.12 2014/08/10 20:01:11 slyfox Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
 
-DESCRIPTION="a dockapp and gkrellm plug-in combining timecop's bubblemon and wmfishtime."
+DESCRIPTION="a dockapp and gkrellm plug-in combining timecop's bubblemon and wmfishtime"
 HOMEPAGE="http://www.jnrowe.ukfsn.org/projects/bfm.html"
 SRC_URI="http://www.jnrowe.ukfsn.org/files/${P}.tar.bz2"
 

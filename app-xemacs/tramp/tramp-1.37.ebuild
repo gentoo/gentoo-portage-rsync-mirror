@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/tramp-1.37.ebuild,v 1.7 2007/11/25 15:06:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/tramp-1.37.ebuild,v 1.8 2014/08/10 19:40:34 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Remote shell-based file editing."
+DESCRIPTION="Remote shell-based file editing"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/commonbox-styles-extra
-# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/ChangeLog,v 1.31 2013/10/19 18:36:14 pchrist Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/ChangeLog,v 1.32 2014/08/10 19:58:08 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  commonbox-styles-extra-0.2-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Oct 2013; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
   Add myself to metadata.xml

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/skk/skk-1.24.ebuild,v 1.6 2011/07/22 11:25:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/skk/skk-1.24.ebuild,v 1.7 2014/08/10 19:31:59 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="MULE: Japanese Language Input Method."
+DESCRIPTION="MULE: Japanese Language Input Method"
 PKG_CAT="mule"
 
 RDEPEND="app-xemacs/viper

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.1.3.ebuild,v 1.7 2012/10/17 08:19:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.1.3.ebuild,v 1.8 2014/08/10 19:59:56 slyfox Exp $
 
 EAPI=4
 JAVA_PKG_IUSE="doc source test"
@@ -9,7 +9,7 @@ inherit eutils user versionator java-pkg-2 java-ant-2
 MY_PV=$(replace_all_version_separators _ )
 MY_P="${PN}_${MY_PV}"
 
-DESCRIPTION="The leading SQL relational database engine written in Java."
+DESCRIPTION="The leading SQL relational database engine written in Java"
 HOMEPAGE="http://hsqldb.org"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 

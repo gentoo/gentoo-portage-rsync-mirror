@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/w3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/w3/ChangeLog,v 1.21 2011/07/22 11:24:57 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/w3/ChangeLog,v 1.22 2014/08/10 19:44:51 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> w3-1.33.ebuild,
+  w3-1.35.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> w3-1.35.ebuild:
   ppc64 stable wrt #369897

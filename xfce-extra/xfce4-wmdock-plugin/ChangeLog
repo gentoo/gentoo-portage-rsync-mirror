@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-wmdock-plugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/ChangeLog,v 1.17 2014/06/21 10:20:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/ChangeLog,v 1.18 2014/08/10 19:54:11 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  xfce4-wmdock-plugin-0.6.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
   +files/xfce4-wmdock-plugin-0.6.0-LINGUAS.patch,

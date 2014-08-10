@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/x-symbol
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/x-symbol/ChangeLog,v 1.10 2011/07/22 11:25:03 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/x-symbol/ChangeLog,v 1.11 2014/08/10 19:45:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> x-symbol-1.10.ebuild,
+  x-symbol-1.11.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> x-symbol-1.11.ebuild:
   ppc64 stable wrt #369897
@@ -36,4 +40,3 @@
   23 Nov 2006; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
   +x-symbol-1.10.ebuild:
   Initial version.
-

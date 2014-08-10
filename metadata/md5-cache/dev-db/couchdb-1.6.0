@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare setup test
 DEPEND=>=dev-libs/icu-4.3.1:= dev-lang/erlang[ssl] >=dev-libs/openssl-0.9.8j:0 >=net-misc/curl-7.18.2 <dev-lang/spidermonkey-1.8.7 selinux? ( sec-policy/selinux-couchdb )
-DESCRIPTION=Apache CouchDB is a distributed, fault-tolerant and schema-free document-oriented database.
+DESCRIPTION=Apache CouchDB is a distributed, fault-tolerant and schema-free document-oriented database
 EAPI=5
 HOMEPAGE=http://couchdb.apache.org/
 IUSE=selinux test
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://apache/couchdb/source/1.6.0/apache-couchdb-1.6.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	51ad5130f4a69b1a118ca5296de276ae	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=d78049861c06df7f723584e4b29a4f88
+_md5_=f40e3a0634b70bb57f0fa756f54e6c5c

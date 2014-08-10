@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/larswm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/ChangeLog,v 1.27 2014/03/22 17:52:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/ChangeLog,v 1.28 2014/08/10 19:58:40 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> larswm-7.5.3-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org> -larswm-7.5.3.ebuild:
   Remove old.

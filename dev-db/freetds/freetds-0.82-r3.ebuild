@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.82-r3.ebuild,v 1.5 2012/01/06 21:12:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.82-r3.ebuild,v 1.6 2014/08/10 19:58:52 slyfox Exp $
 
 EAPI="3"
 
 inherit autotools flag-o-matic
 
-DESCRIPTION="Tabular Datastream Library."
+DESCRIPTION="Tabular Datastream Library"
 HOMEPAGE="http://www.freetds.org/"
 SRC_URI="http://ibiblio.org/pub/Linux/ALPHA/freetds/stable/${P}.tar.gz"
 

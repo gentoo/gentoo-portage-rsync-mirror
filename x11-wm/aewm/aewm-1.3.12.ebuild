@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.3.12.ebuild,v 1.1 2014/03/09 05:01:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.3.12.ebuild,v 1.2 2014/08/10 19:56:44 slyfox Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
 
-DESCRIPTION="A minimalistic X11 window manager."
+DESCRIPTION="A minimalistic X11 window manager"
 HOMEPAGE="http://www.red-bean.com/~decklin/software/aewm/"
 SRC_URI="${HOMEPAGE}${P}.tar.bz2"
 

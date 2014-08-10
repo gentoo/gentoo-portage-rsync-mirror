@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare setup
 DEPEND=net-misc/wget app-admin/gkrellm[X] =app-admin/gkrellm-2* virtual/pkgconfig
-DESCRIPTION=an Image-Watcher-Plugin for GKrellM2.
+DESCRIPTION=an Image-Watcher-Plugin for GKrellM2
 EAPI=5
 HOMEPAGE=http://gkrellkam.sourceforge.net
 KEYWORDS=x86 ppc sparc alpha amd64
@@ -9,4 +9,4 @@ RDEPEND=net-misc/wget app-admin/gkrellm[X] =app-admin/gkrellm-2*
 SLOT=0
 SRC_URI=mirror://sourceforge/gkrellkam/gkrellkam_2.0.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	gkrellm-plugin	4599c73f33aed9a9988a7031f60d2ed8	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=6f56d06b8c8710387b2a739dcbc765f8
+_md5_=3c00c404a4ec04bea1b12a827d39e0a4

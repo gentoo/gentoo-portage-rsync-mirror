@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/xemacs-devel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-devel/ChangeLog,v 1.24 2011/07/22 11:24:58 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-devel/ChangeLog,v 1.25 2014/08/10 19:46:41 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xemacs-devel-1.75.ebuild,
+  xemacs-devel-1.80.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> xemacs-devel-1.80.ebuild:
   ppc64 stable wrt #369897

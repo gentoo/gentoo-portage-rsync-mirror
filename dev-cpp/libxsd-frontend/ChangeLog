@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libxsd-frontend
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/ChangeLog,v 1.18 2014/02/24 19:33:59 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/ChangeLog,v 1.19 2014/08/10 19:54:52 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  libxsd-frontend-1.18.0-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
   -libxsd-frontend-1.18.0-r1.ebuild, -libxsd-frontend-1.18.0.ebuild:

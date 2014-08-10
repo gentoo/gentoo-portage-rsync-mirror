@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/adadoc
-# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/ChangeLog,v 1.12 2013/05/10 08:02:08 patrick Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/ChangeLog,v 1.13 2014/08/10 19:52:07 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> adadoc-2.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> adadoc-2.1.ebuild:
   Quoting

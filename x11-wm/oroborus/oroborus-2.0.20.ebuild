@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.20.ebuild,v 1.6 2012/06/04 19:32:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.20.ebuild,v 1.7 2014/08/10 19:59:15 slyfox Exp $
 
 EAPI=4
 
-DESCRIPTION="Small and fast window manager."
+DESCRIPTION="Small and fast window manager"
 HOMEPAGE="http://www.oroborus.org"
 SRC_URI="mirror://debian/pool/main/o/${PN}/${PN}_${PV}.tar.gz"
 

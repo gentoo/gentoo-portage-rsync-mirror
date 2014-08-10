@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/astime/astime-2.8-r1.ebuild,v 1.8 2010/11/08 16:32:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/astime/astime-2.8-r1.ebuild,v 1.9 2014/08/10 20:01:02 slyfox Exp $
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Analogue clock utility for X Windows."
+DESCRIPTION="Analogue clock utility for X Windows"
 HOMEPAGE="http://www.tigr.net/"
 SRC_URI="http://www.tigr.net/afterstep/download/astime/${P}.tar.gz"
 LICENSE="GPL-2"

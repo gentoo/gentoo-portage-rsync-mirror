@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/henplus-0.9.8.ebuild,v 1.3 2010/01/07 21:33:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/henplus-0.9.8.ebuild,v 1.4 2014/08/10 19:59:28 slyfox Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 eutils java-ant-2
 
-DESCRIPTION="Java-based multisession SQL shell for databases with JDBC support."
+DESCRIPTION="Java-based multisession SQL shell for databases with JDBC support"
 HOMEPAGE="http://henplus.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"

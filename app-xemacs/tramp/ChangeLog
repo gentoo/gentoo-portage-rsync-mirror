@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/tramp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.31 2014/08/09 10:46:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.32 2014/08/10 19:40:34 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tramp-1.37.ebuild,
+  tramp-1.40.ebuild, tramp-1.52.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 Aug 2014; Agostino Sarubbo <ago@gentoo.org> tramp-1.52.ebuild:
   Stable for ppc64, wrt bug #509830

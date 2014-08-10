@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbackend-elements/libbackend-elements-1.7.2.ebuild,v 1.8 2013/04/02 20:55:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbackend-elements/libbackend-elements-1.7.2.ebuild,v 1.9 2014/08/10 19:53:46 slyfox Exp $
 
 EAPI="2"
 
 inherit toolchain-funcs versionator
 
-DESCRIPTION="A collection of elementary building blocks for implementing compiler backends in c++."
+DESCRIPTION="A collection of elementary building blocks for implementing compiler backends in c++"
 HOMEPAGE="http://kolpackov.net/projects/libbackend-elements/"
 SRC_URI="ftp://kolpackov.net/pub/projects/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
 LICENSE="GPL-2"

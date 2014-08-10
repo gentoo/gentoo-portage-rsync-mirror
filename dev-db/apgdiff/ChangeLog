@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/apgdiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/apgdiff/ChangeLog,v 1.15 2014/05/14 16:46:47 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/apgdiff/ChangeLog,v 1.16 2014/08/10 19:56:34 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> apgdiff-1.4.ebuild,
+  apgdiff-2.2.1.ebuild, apgdiff-2.2.2.ebuild, apgdiff-2.3.ebuild,
+  apgdiff-2.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   14 May 2014; Tom Wijsman <TomWij@gentoo.org> apgdiff-1.4.ebuild,
   apgdiff-2.2.1.ebuild, apgdiff-2.2.2.ebuild, apgdiff-2.3.ebuild,

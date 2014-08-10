@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/bmpanel-0.9.27-r1.ebuild,v 1.5 2012/12/17 20:44:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/bmpanel-0.9.27-r1.ebuild,v 1.6 2014/08/10 20:01:34 slyfox Exp $
 
 EAPI=2
 
 inherit base eutils
 
-DESCRIPTION="a lightweight, NETWM compliant panel for X11 Window System."
+DESCRIPTION="a lightweight, NETWM compliant panel for X11 Window System"
 HOMEPAGE="http://nsf.110mb.com/bmpanel"
 SRC_URI="http://nsf.110mb.com/${PN}/${P}.tar.gz"
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/xemacs-packages-all
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.21 2012/11/04 08:34:17 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.22 2014/08/10 19:48:34 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  xemacs-packages-all-2007.04.27-r1.ebuild,
+  xemacs-packages-all-2010.07.29.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Nov 2012; Ulrich Müller <ulm@gentoo.org>
   xemacs-packages-all-2007.04.27-r1.ebuild,
@@ -91,4 +96,3 @@
   Initial import. This is a meta package that will pull in all xemacs packages.
   As such it has the same effect as installing xemacs-packages-sumo, but without
   the nasty file collisions as mentioned in #23949.
-

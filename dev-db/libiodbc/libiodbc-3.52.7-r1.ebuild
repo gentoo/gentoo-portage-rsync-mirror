@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.52.7-r1.ebuild,v 1.5 2012/07/11 23:02:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.52.7-r1.ebuild,v 1.6 2014/08/10 20:00:58 slyfox Exp $
 
 EAPI=4
 
 inherit eutils
 
-DESCRIPTION="ODBC Interface for Linux."
+DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.iodbc.org/"
 SRC_URI="http://www.iodbc.org/downloads/iODBC/${P}.tar.gz"
 

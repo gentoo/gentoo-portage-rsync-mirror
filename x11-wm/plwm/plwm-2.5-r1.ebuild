@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.5-r1.ebuild,v 1.8 2011/04/16 18:47:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.5-r1.ebuild,v 1.9 2014/08/10 19:59:47 slyfox Exp $
 
 PYTHON_DEPEND="2"
 
 inherit eutils python
 
-DESCRIPTION="Python classes for, and an implementation of, a window manager."
+DESCRIPTION="Python classes for, and an implementation of, a window manager"
 HOMEPAGE="http://plwm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/plwm/${P}.tar.gz"
 

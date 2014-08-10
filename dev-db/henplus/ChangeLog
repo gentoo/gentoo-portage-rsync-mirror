@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/henplus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.25 2014/08/03 07:54:23 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.26 2014/08/10 19:59:28 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> henplus-0.9.8.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -henplus-0.9.7-r1.ebuild:
   Remove old
@@ -92,4 +95,3 @@
   16 Feb 2004; Chris Aniszczyk <zx@gentoo.org> :
   Initial Import.
   Thanks to Marco Hennings <m.hennings@gmx.de> for the initial ebuild. Bug #40197
-

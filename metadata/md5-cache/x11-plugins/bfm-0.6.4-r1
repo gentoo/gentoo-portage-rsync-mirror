@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXext virtual/pkgconfig gkrellm? ( >=app-admin/gkrellm-2 )
-DESCRIPTION=a dockapp and gkrellm plug-in combining timecop's bubblemon and wmfishtime.
+DESCRIPTION=a dockapp and gkrellm plug-in combining timecop's bubblemon and wmfishtime
 EAPI=5
 HOMEPAGE=http://www.jnrowe.ukfsn.org/projects/bfm.html
 IUSE=gkrellm
@@ -10,4 +10,4 @@ RDEPEND=x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXext
 SLOT=0
 SRC_URI=http://www.jnrowe.ukfsn.org/files/bfm-0.6.4.tar.bz2
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f96428f896c9a370d69475ca743e1d42
+_md5_=dcb2a2ade30ec83e27da308a68816332

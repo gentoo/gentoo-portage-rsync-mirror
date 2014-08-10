@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/gkrellkam-2.0.0.ebuild,v 1.14 2013/08/31 14:41:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/gkrellkam-2.0.0.ebuild,v 1.15 2014/08/10 20:01:29 slyfox Exp $
 
 EAPI="5"
 inherit eutils gkrellm-plugin toolchain-funcs
 
 MY_P=${P/-/_}
 
-DESCRIPTION="an Image-Watcher-Plugin for GKrellM2."
+DESCRIPTION="an Image-Watcher-Plugin for GKrellM2"
 SRC_URI="mirror://sourceforge/gkrellkam/${MY_P}.tar.gz"
 HOMEPAGE="http://gkrellkam.sourceforge.net"
 LICENSE="GPL-2"

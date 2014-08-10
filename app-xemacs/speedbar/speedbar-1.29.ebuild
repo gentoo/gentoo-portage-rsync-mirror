@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/speedbar/speedbar-1.29.ebuild,v 1.6 2011/07/22 11:25:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/speedbar/speedbar-1.29.ebuild,v 1.7 2014/08/10 19:35:01 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Provides a separate frame with convenient references."
+DESCRIPTION="Provides a separate frame with convenient references"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

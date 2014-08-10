@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/sounds-wav
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sounds-wav/ChangeLog,v 1.12 2008/03/19 20:03:48 graaff Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sounds-wav/ChangeLog,v 1.13 2014/08/10 19:34:24 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sounds-wav-1.12.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   A herd should not be listed as maintainer

@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.3.ebuild,v 1.20 2010/09/28 17:22:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.3.ebuild,v 1.21 2014/08/10 20:00:44 slyfox Exp $
 
 inherit eutils autotools
 
 MY_PV="${PV}-1"
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION="The libdbi-drivers project maintains drivers for libdbi."
+DESCRIPTION="The libdbi-drivers project maintains drivers for libdbi"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://libdbi-drivers.sourceforge.net/"
 LICENSE="LGPL-2.1"

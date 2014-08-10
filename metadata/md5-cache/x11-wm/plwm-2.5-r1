@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=>=dev-python/python-xlib-0.12 =dev-lang/python-2*
-DESCRIPTION=Python classes for, and an implementation of, a window manager.
+DESCRIPTION=Python classes for, and an implementation of, a window manager
 HOMEPAGE=http://plwm.sourceforge.net/
 KEYWORDS=ppc x86
 LICENSE=GPL-2
@@ -8,4 +8,4 @@ RDEPEND=>=dev-python/python-xlib-0.12 =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://sourceforge/plwm/plwm-2.5.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f00a3522cebbf8353c94f8fa59f0ddbb
+_md5_=dade4a9ca71651cb70046a6af074d3b6

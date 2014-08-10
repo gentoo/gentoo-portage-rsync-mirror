@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/xfce4-wmdock-plugin-0.6.0.ebuild,v 1.4 2014/06/21 10:20:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/xfce4-wmdock-plugin-0.6.0.ebuild,v 1.5 2014/08/10 19:54:11 slyfox Exp $
 
 EAPI=5
 inherit multilib xfconf
 
-DESCRIPTION="a compatibility layer for running WindowMaker dockapps on Xfce4."
+DESCRIPTION="a compatibility layer for running WindowMaker dockapps on Xfce4"
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-wmdock-plugin"
 SRC_URI="mirror://xfce/src/panel-plugins/${PN}/${PV%.*}/${P}.tar.bz2"
 

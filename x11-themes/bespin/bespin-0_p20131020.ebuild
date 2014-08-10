@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/bespin-0_p20131020.ebuild,v 1.1 2014/02/10 15:47:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/bespin-0_p20131020.ebuild,v 1.2 2014/08/10 19:56:53 slyfox Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
@@ -18,7 +18,7 @@ else
 	KEYWORDS=""
 fi
 
-DESCRIPTION="Very configurable Qt4/KDE4 style derived from the Oxygen project."
+DESCRIPTION="Very configurable Qt4/KDE4 style derived from the Oxygen project"
 HOMEPAGE="http://cloudcity.sourceforge.net/"
 
 LICENSE="GPL-2"

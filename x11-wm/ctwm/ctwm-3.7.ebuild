@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.11 2010/11/08 18:47:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.12 2014/08/10 19:57:40 slyfox Exp $
 
 inherit eutils
 
-DESCRIPTION="A clean, light window manager."
+DESCRIPTION="A clean, light window manager"
 HOMEPAGE="http://ctwm.free.lp.se/"
 SRC_URI="http://ctwm.free.lp.se/dist/${P}.tar.gz"
 

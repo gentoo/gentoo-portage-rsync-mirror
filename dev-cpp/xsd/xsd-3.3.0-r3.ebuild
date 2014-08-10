@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/xsd-3.3.0-r3.ebuild,v 1.2 2014/02/24 19:41:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/xsd-3.3.0-r3.ebuild,v 1.3 2014/08/10 19:56:05 slyfox Exp $
 
 EAPI=5
 
 inherit toolchain-funcs eutils versionator
 
-DESCRIPTION="An open-source, cross-platform W3C XML Schema to C++ data binding compiler."
+DESCRIPTION="An open-source, cross-platform W3C XML Schema to C++ data binding compiler"
 HOMEPAGE="http://www.codesynthesis.com/products/xsd/"
 SRC_URI="http://www.codesynthesis.com/download/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
 LICENSE="GPL-2"

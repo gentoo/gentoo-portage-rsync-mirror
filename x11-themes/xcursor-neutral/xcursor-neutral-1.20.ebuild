@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/xcursor-neutral-1.20.ebuild,v 1.7 2013/08/06 18:11:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/xcursor-neutral-1.20.ebuild,v 1.8 2014/08/10 19:59:43 slyfox Exp $
 
 MY_P="48837-Neutral_Plus_1.2.tar.bz2"
 MY_PN="Neutral_Plus"
 
-DESCRIPTION="\"Neutral_Plus\", the standard X.Org mouse cursor with shadows and animations."
+DESCRIPTION="\"Neutral_Plus\", the standard X.Org mouse cursor with shadows and animations"
 HOMEPAGE="http://kde-look.org/content/show.php/show.php?content=48837"
 SRC_URI="http://kde-look.org/CONTENT/content-files/${MY_P}"
 

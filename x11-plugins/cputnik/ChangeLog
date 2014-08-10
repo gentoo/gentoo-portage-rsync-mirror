@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/cputnik
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/cputnik/ChangeLog,v 1.10 2012/11/18 18:50:57 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/cputnik/ChangeLog,v 1.11 2014/08/10 20:01:20 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cputnik-0.1.1.ebuild,
+  cputnik-0.2.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> cputnik-0.2.0.ebuild:
   Add ~amd64

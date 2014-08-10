@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libfrontend-elements/libfrontend-elements-1.1.4.ebuild,v 1.8 2013/04/02 20:55:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libfrontend-elements/libfrontend-elements-1.1.4.ebuild,v 1.9 2014/08/10 19:54:17 slyfox Exp $
 
 EAPI="2"
 
 inherit toolchain-funcs versionator
 
-DESCRIPTION="A collection of elementary building blocks for implementing compiler frontends in c++."
+DESCRIPTION="A collection of elementary building blocks for implementing compiler frontends in c++"
 HOMEPAGE="http://kolpackov.net/projects/libfrontend-elements/"
 SRC_URI="ftp://kolpackov.net/pub/projects/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
 LICENSE="GPL-2"

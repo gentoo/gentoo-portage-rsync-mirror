@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/larswm-7.5.3-r1.ebuild,v 1.6 2012/03/19 18:49:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/larswm-7.5.3-r1.ebuild,v 1.7 2014/08/10 19:58:40 slyfox Exp $
 
 EAPI="2"
 
 inherit toolchain-funcs
 
-DESCRIPTION="Tiling window manager for X11, based on 9wm by David Hogan."
+DESCRIPTION="Tiling window manager for X11, based on 9wm by David Hogan"
 HOMEPAGE="http://larswm.fnurt.net/"
 SRC_URI="http://larswm.fnurt.net/${P}.tar.gz"
 LICENSE="9wm"

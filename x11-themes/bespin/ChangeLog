@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/bespin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.9 2014/02/25 17:57:01 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.10 2014/08/10 19:56:53 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> bespin-0_p20131020.ebuild,
+  bespin-0_p20140225.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *bespin-0_p20140225 (25 Feb 2014)
 

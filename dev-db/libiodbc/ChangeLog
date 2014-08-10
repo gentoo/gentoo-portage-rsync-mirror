@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/libiodbc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.61 2014/06/23 07:36:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.62 2014/08/10 20:00:58 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libiodbc-3.52.7-r1.ebuild,
+  libiodbc-3.52.7.ebuild, libiodbc-3.52.8-r1.ebuild, libiodbc-3.52.8-r2.ebuild,
+  libiodbc-3.52.8.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *libiodbc-3.52.8-r2 (23 Jun 2014)
 

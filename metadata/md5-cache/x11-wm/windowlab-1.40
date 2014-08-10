@@ -1,6 +1,6 @@
 DEFINED_PHASES=install postinst prepare setup
 DEPEND=truetype? ( x11-libs/libXft ) x11-libs/libXext x11-proto/xextproto virtual/pkgconfig
-DESCRIPTION=small and simple window manager of novel design.
+DESCRIPTION=small and simple window manager of novel design
 EAPI=2
 HOMEPAGE=http://www.nickgravgaard.com/windowlab/
 IUSE=truetype
@@ -10,4 +10,4 @@ RDEPEND=truetype? ( x11-libs/libXft ) x11-libs/libXext
 SLOT=0
 SRC_URI=http://www.nickgravgaard.com/windowlab/windowlab-1.40.tar
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=29ed4b22e838bfcd4db66e4f6ab14522
+_md5_=f0689c30d464fd1f69b894bb28e615a8

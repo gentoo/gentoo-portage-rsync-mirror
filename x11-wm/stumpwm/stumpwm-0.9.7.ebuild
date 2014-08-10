@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/stumpwm-0.9.7.ebuild,v 1.2 2012/11/17 16:58:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/stumpwm-0.9.7.ebuild,v 1.3 2014/08/10 20:00:16 slyfox Exp $
 
 EAPI="2"
 
 inherit common-lisp eutils
 
-DESCRIPTION="Stumpwm is a tiling, keyboard driven X11 Window Manager written entirely in Common Lisp."
+DESCRIPTION="Stumpwm is a tiling, keyboard driven X11 Window Manager written entirely in Common Lisp"
 HOMEPAGE="http://www.nongnu.org/stumpwm/index.html"
 SRC_URI="http://download.savannah.nongnu.org/releases/stumpwm/${P}.tgz"
 LICENSE="GPL-2"

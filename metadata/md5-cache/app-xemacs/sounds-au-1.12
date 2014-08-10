@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install unpack
-DESCRIPTION=XEmacs Sun sound files.
+DESCRIPTION=XEmacs Sun sound files
 HOMEPAGE=http://xemacs.org/
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2
@@ -7,4 +7,4 @@ RDEPEND=app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/sounds-au-1.12-pkg.tar.gz
 _eclasses_=xemacs-packages	29b865270cd0de904945912d5041f1cc
-_md5_=83c37a96ec0e07e22e35f30b1aeb7a54
+_md5_=a82f3bb5d3e67bcfa7eab251b27de83a

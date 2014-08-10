@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-1.13-r1.ebuild,v 1.2 2014/06/18 19:04:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-1.13-r1.ebuild,v 1.3 2014/08/10 19:58:22 slyfox Exp $
 
 EAPI=5
 
 inherit eutils multilib-minimal
 
-DESCRIPTION="A cluster implementation of the TDB database used to store temporary data."
+DESCRIPTION="A cluster implementation of the TDB database used to store temporary data"
 HOMEPAGE="http://ctdb.samba.org/"
 # upstream is too sexy for releases, grab tags from:
 #    http://git.samba.org/?p=ctdb.git;a=summary

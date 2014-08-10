@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/w3/w3-1.35.ebuild,v 1.6 2011/07/22 11:24:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/w3/w3-1.35.ebuild,v 1.7 2014/08/10 19:44:51 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="A Web browser."
+DESCRIPTION="A Web browser"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/mail-lib

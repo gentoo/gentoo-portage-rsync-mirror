@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/aewm++-1.1.5-r1.ebuild,v 1.4 2014/08/09 12:05:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/aewm++-1.1.5-r1.ebuild,v 1.5 2014/08/10 19:57:09 slyfox Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
 
-DESCRIPTION="A window manager with more modern features than aewm but with the same look and feel."
+DESCRIPTION="A window manager with more modern features than aewm but with the same look and feel"
 HOMEPAGE="http://github.com/frankhale/aewmpp"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
