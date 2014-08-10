@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.106 2014/08/01 11:05:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.107 2014/08/10 08:23:58 jer Exp $
+
+*debhelper-9.20140809 (10 Aug 2014)
+
+  10 Aug 2014; Jeroen Roovers <jer@gentoo.org> +debhelper-9.20140809.ebuild:
+  Version bump.
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> debhelper-9.20140228.ebuild:
   sparc/x86 stable, bug #506100
