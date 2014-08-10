@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-python/psutil dev-python/pyserial dev-python/wxpython dev-python/pyglet dev-python/dbus-python media-gfx/cairosvg python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DEPEND=dev-python/pyserial dev-python/wxpython dev-python/pyglet dev-python/dbus-python media-gfx/cairosvg python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 DESCRIPTION=GUI interface for 3D printing on RepRap and other printers
 EAPI=5
 HOMEPAGE=https://github.com/kliment/Printrun
 IUSE=python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=dev-python/psutil dev-python/pyserial dev-python/wxpython dev-python/pyglet dev-python/dbus-python media-gfx/cairosvg python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+RDEPEND=dev-python/pyserial dev-python/wxpython dev-python/pyglet dev-python/dbus-python media-gfx/cairosvg python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=https://github.com/kliment/Printrun/archive/printrun-20140730.tar.gz
 _eclasses_=distutils-r1	d48d51c220f1678179fc4ab13b534ec1	eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=afcecffad4924cd47d3423ebae49bb1c
+_md5_=a097baeeebc4582e497046d8bda749e1
