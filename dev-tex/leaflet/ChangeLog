@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/leaflet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.32 2012/05/09 17:15:04 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.33 2014/08/10 21:26:52 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> leaflet-20041222.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> leaflet-20041222.ebuild:
   keyword ~amd64-fbsd
@@ -100,5 +103,3 @@
   21 May 2002; Bruce A. Locke <blocke@shivan.org> latex-leaflet-19990601.ebuild :
 
   Contributed by m-turk@nwu.edu (Matthew Turk)
-
-

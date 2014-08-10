@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qjackctl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.81 2014/01/18 12:29:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.82 2014/08/10 21:10:31 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> qjackctl-0.3.10.ebuild,
+  qjackctl-0.3.11.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *qjackctl-0.3.11 (18 Jan 2014)
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.12.ebuild,v 1.6 2011/12/19 00:50:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.12.ebuild,v 1.7 2014/08/10 21:07:06 slyfox Exp $
 
 EAPI=2
 
 inherit toolchain-funcs
 
-DESCRIPTION="A command line editor for id3v2 tags."
+DESCRIPTION="A command line editor for id3v2 tags"
 HOMEPAGE="http://id3v2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/id3v2/${P}.tar.gz"
 

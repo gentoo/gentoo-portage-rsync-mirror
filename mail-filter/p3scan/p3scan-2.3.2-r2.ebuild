@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/p3scan-2.3.2-r2.ebuild,v 1.1 2013/01/15 15:01:34 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/p3scan-2.3.2-r2.ebuild,v 1.2 2014/08/10 21:16:46 slyfox Exp $
 
 EAPI=4
 
 inherit eutils toolchain-funcs user
 
-DESCRIPTION="This is a full-transparent proxy-server for POP3-Clients."
+DESCRIPTION="This is a full-transparent proxy-server for POP3-Clients"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://p3scan.sf.net/"
 

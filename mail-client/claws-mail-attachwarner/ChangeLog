@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-attachwarner
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.77 2013/05/07 18:35:50 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.78 2014/08/10 21:17:05 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  claws-mail-attachwarner-1.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 May 2013; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-attachwarner-1.0.ebuild:

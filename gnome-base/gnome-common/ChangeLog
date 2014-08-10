@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.136 2014/08/07 18:45:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.137 2014/08/10 21:20:34 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gnome-common-3.6.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Aug 2014; Jeroen Roovers <jer@gentoo.org> gnome-common-3.12.0.ebuild:
   Stable for HPPA (bug #512012).

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-recstatus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-recstatus/ChangeLog,v 1.5 2014/02/23 20:44:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-recstatus/ChangeLog,v 1.6 2014/08/10 21:06:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  vdr-recstatus-0.0.8.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-recstatus-0.0.5.ebuild:
@@ -25,4 +29,3 @@
   02 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
   +vdr-recstatus-0.0.5.ebuild:
   initial ebuild, tanks to Guido Zuliani on bug 200963
-

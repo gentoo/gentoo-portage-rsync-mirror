@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-13.12.ebuild,v 1.1 2014/01/23 04:48:34 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-13.12.ebuild,v 1.2 2014/08/10 21:26:29 slyfox Exp $
 
 EAPI="5"
 WX_GTK_VER="2.8"
 
 inherit eutils wxwidgets
 
-DESCRIPTION="The open source, cross platform, free C++ IDE."
+DESCRIPTION="The open source, cross platform, free C++ IDE"
 HOMEPAGE="http://www.codeblocks.org/"
 LICENSE="GPL-3"
 SLOT="0"

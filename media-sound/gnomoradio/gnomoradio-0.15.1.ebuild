@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.14 2012/07/21 14:43:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.15 2014/08/10 21:06:12 slyfox Exp $
 
 EAPI=4
 inherit autotools eutils
 
-DESCRIPTION="Finds, fetches, shares, and plays freely licensed music."
+DESCRIPTION="Finds, fetches, shares, and plays freely licensed music"
 HOMEPAGE="http://gnomoradio.org"
 SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.bz2"
 

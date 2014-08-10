@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ftjam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ftjam/ChangeLog,v 1.19 2014/03/09 03:41:09 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ftjam/ChangeLog,v 1.20 2014/08/10 21:27:09 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ftjam-2.5.3_rc2-r1.ebuild,
+  ftjam-2.5.3_rc2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 Mar 2014; Ryan Hill <rhill@gentoo.org> metadata.xml:
   Change my email.
@@ -71,4 +75,3 @@
   10 Jun 2007; Ryan Hill <dirtyepic@gentoo.org>
   +files/ftjam-2.5.3-nostrip.patch, +metadata.xml, +ftjam-2.5.3_rc2.ebuild:
   Initial import.
-

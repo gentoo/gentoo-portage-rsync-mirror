@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzrtools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.39 2013/08/07 00:47:15 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.40 2014/08/10 21:22:36 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> bzrtools-2.4.1.ebuild,
+  bzrtools-2.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Aug 2013; Mike Gilbert <floppym@gentoo.org> bzrtools-2.5.ebuild:
   Fix DOCS variable (must be an array) and drop broken src_test function.

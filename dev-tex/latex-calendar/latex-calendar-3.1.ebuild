@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-calendar/latex-calendar-3.1.ebuild,v 1.8 2013/04/03 22:23:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-calendar/latex-calendar-3.1.ebuild,v 1.9 2014/08/10 21:26:26 slyfox Exp $
 
 inherit latex-package
 
 MY_P="calendar"
-DESCRIPTION="LaTeX package used to create Calendars.  Very flexible and robust."
+DESCRIPTION="LaTeX package used to create Calendars.  Very flexible and robust"
 HOMEPAGE="http://www.ctan.org/tex-archive/macros/latex/contrib/calendar/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 

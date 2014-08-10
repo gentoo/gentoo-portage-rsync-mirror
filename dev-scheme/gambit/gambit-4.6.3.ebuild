@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.6.3.ebuild,v 1.1 2012/01/24 14:08:41 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.6.3.ebuild,v 1.2 2014/08/10 21:25:17 slyfox Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ MY_PN=gambc
 MY_PV=${PV//./_}
 MY_P=${MY_PN}-v${MY_PV}
 
-DESCRIPTION="Gambit-C is a native Scheme to C compiler and interpreter."
+DESCRIPTION="Gambit-C is a native Scheme to C compiler and interpreter"
 HOMEPAGE="http://www.iro.umontreal.ca/~gambit/"
 SRC_URI="http://www.iro.umontreal.ca/~gambit/download/gambit/v${PV%.*}/source/${MY_P}.tgz"
 

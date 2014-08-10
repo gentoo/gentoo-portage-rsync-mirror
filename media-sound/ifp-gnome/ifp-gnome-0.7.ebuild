@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ifp-gnome/ifp-gnome-0.7.ebuild,v 1.5 2011/02/22 17:24:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ifp-gnome/ifp-gnome-0.7.ebuild,v 1.6 2014/08/10 21:07:13 slyfox Exp $
 
 EAPI=2
 
 PYTHON_DEPEND=2
 inherit eutils python
 
-DESCRIPTION="Gnome front-end for file management on iRiver iFP MP3 players."
+DESCRIPTION="Gnome front-end for file management on iRiver iFP MP3 players"
 HOMEPAGE="http://ifp-gnome.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

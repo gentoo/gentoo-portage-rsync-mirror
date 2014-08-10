@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/tap-reverbed-0.ebuild,v 1.9 2012/05/05 08:52:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/tap-reverbed-0.ebuild,v 1.10 2014/08/10 21:12:25 slyfox Exp $
 
 EAPI=2
 
 inherit autotools eutils
 
 MY_P="${PN}-r0"
-DESCRIPTION="Standalone JACK counterpart of LADSPA plugin TAP Reverberator."
+DESCRIPTION="Standalone JACK counterpart of LADSPA plugin TAP Reverberator"
 HOMEPAGE="http://tap-plugins.sourceforge.net/reverbed.html"
 SRC_URI="mirror://sourceforge/tap-plugins/${MY_P}.tar.gz"
 

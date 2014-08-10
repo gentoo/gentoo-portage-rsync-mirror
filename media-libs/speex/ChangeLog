@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/speex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.114 2014/08/10 09:30:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.115 2014/08/10 21:12:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> speex-1.2_rc1-r1.ebuild,
+  speex-1.2_rc1-r2.ebuild, speex-1.2_rc1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> speex-1.2_rc1-r2.ebuild:
   Stable for sparc, wrt bug #515234

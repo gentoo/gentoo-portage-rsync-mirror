@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/linuxsampler-1.0.0-r1.ebuild,v 1.1 2012/09/16 18:27:45 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/linuxsampler-1.0.0-r1.ebuild,v 1.2 2014/08/10 21:07:29 slyfox Exp $
 
 EAPI="4"
 
 inherit eutils
 
-DESCRIPTION="LinuxSampler is a software audio sampler engine with professional grade features."
+DESCRIPTION="LinuxSampler is a software audio sampler engine with professional grade features"
 HOMEPAGE="http://www.linuxsampler.org/"
 SRC_URI="http://download.linuxsampler.org/packages/${P}.tar.bz2"
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install postinst setup
 DEPEND=virtual/libiconv berkdb? ( >=sys-libs/db-3.2 ) !berkdb? ( sqlite? ( >=dev-db/sqlite-3.6.22 ) !sqlite? ( tokyocabinet? ( dev-db/tokyocabinet ) !tokyocabinet? ( >=sys-libs/db-3.2 ) ) ) sci-libs/gsl
-DESCRIPTION=Bayesian spam filter designed with fast algorithms, and tuned for speed.
+DESCRIPTION=Bayesian spam filter designed with fast algorithms, and tuned for speed
 EAPI=4
 HOMEPAGE=http://bogofilter.sourceforge.net/
 IUSE=berkdb sqlite tokyocabinet
@@ -10,4 +10,4 @@ RDEPEND=virtual/libiconv berkdb? ( >=sys-libs/db-3.2 ) !berkdb? ( sqlite? ( >=de
 SLOT=0
 SRC_URI=mirror://sourceforge/bogofilter/bogofilter-1.2.3.tar.bz2
 _eclasses_=db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=719e208c4b45c0133e620c201c95a78e
+_md5_=9fef162dd6421890adfcbeda951d736e

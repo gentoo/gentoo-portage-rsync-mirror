@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dio/pecl-dio-0.0.7.ebuild,v 1.1 2013/03/05 11:05:06 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dio/pecl-dio-0.0.7.ebuild,v 1.2 2014/08/10 21:01:35 slyfox Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ inherit php-ext-pecl-r2
 
 KEYWORDS="~amd64 ~x86"
 
-DESCRIPTION="Direct I/O functions for PHP."
+DESCRIPTION="Direct I/O functions for PHP"
 LICENSE="PHP-3"
 SLOT="0"
 IUSE=""

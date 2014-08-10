@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.6-r2.ebuild,v 1.8 2011/01/13 20:11:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.6-r2.ebuild,v 1.9 2014/08/10 21:26:41 slyfox Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ inherit eutils multilib
 
 MY_P="${PN}${PV}"
 
-DESCRIPTION="TLS OpenSSL extension to Tcl."
+DESCRIPTION="TLS OpenSSL extension to Tcl"
 HOMEPAGE="http://tls.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tls/${MY_P}-src.tar.gz"
 

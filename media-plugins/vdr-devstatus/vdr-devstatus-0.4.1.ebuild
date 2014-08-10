@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-devstatus/vdr-devstatus-0.4.1.ebuild,v 1.4 2013/06/27 17:50:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-devstatus/vdr-devstatus-0.4.1.ebuild,v 1.5 2014/08/10 21:06:13 slyfox Exp $
 
 EAPI="5"
 
 inherit vdr-plugin-2
 
-DESCRIPTION="VDR plugin: display the usa status of the available DVB devices."
+DESCRIPTION="VDR plugin: display the usa status of the available DVB devices"
 HOMEPAGE="http://www.u32.de/vdr.html"
 SRC_URI="http://www.u32.de/download/${P}.tgz"
 

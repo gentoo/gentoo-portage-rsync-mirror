@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.31 2014/01/28 03:48:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.32 2014/08/10 21:10:13 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> epsilon-0.6.0-r1.ebuild,
+  epsilon-0.6.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *epsilon-0.7.0 (28 Jan 2014)
 

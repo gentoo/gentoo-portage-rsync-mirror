@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/leaflet-20041222.ebuild,v 1.21 2012/05/09 17:15:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/leaflet-20041222.ebuild,v 1.22 2014/08/10 21:26:52 slyfox Exp $
 
 inherit latex-package eutils
 
 S=${WORKDIR}/leaflet
 
-DESCRIPTION="LaTeX package used to create leaflet-type brochures."
+DESCRIPTION="LaTeX package used to create leaflet-type brochures"
 SRC_URI="mirror://gentoo/${P}.zip"
 HOMEPAGE="http://www.ctan.org/tex-archive/macros/latex/contrib/leaflet/"
 

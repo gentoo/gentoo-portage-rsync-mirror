@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/p3scan
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.18 2013/01/15 15:01:34 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.19 2014/08/10 21:16:46 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> p3scan-2.3.1.ebuild,
+  p3scan-2.3.2-r1.ebuild, p3scan-2.3.2-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *p3scan-2.3.2-r2 (15 Jan 2013)
 

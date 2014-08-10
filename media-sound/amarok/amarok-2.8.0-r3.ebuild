@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.8.0-r3.ebuild,v 1.1 2014/07/30 23:58:57 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.8.0-r3.ebuild,v 1.2 2014/08/10 21:03:34 slyfox Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ VIRTUALX_REQUIRED="test"
 VIRTUALDBUS_TEST="true"
 inherit flag-o-matic kde4-base pax-utils
 
-DESCRIPTION="Advanced audio player based on KDE framework."
+DESCRIPTION="Advanced audio player based on KDE framework"
 HOMEPAGE="http://amarok.kde.org/"
 if [[ ${PV} != *9999* ]]; then
 	if [[ $PV == *[6-9][0-9]* ]]; then

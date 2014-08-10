@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/mp32ogg-0.11-r5.ebuild,v 1.8 2012/03/18 15:48:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/mp32ogg-0.11-r5.ebuild,v 1.9 2014/08/10 21:08:04 slyfox Exp $
 
 EAPI=2
 inherit eutils
 
-DESCRIPTION="A perl script to convert MP3 files to Ogg Vorbis files."
+DESCRIPTION="A perl script to convert MP3 files to Ogg Vorbis files"
 HOMEPAGE="http://faceprint.com/code/"
 SRC_URI="ftp://ftp.faceprint.com/pub/software/scripts/mp32ogg"
 

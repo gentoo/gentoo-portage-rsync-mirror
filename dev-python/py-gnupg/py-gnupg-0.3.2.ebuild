@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-gnupg/py-gnupg-0.3.2.ebuild,v 1.13 2010/07/23 22:16:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-gnupg/py-gnupg-0.3.2.ebuild,v 1.14 2014/08/10 21:15:51 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ inherit distutils
 
 MY_P="GnuPGInterface-${PV}"
 
-DESCRIPTION="A Python module to interface with GnuPG."
+DESCRIPTION="A Python module to interface with GnuPG"
 HOMEPAGE="http://py-gnupg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/py-gnupg/${MY_P}.tar.gz"
 

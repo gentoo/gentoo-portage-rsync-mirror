@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/combine_wave/combine_wave-0.3.1-r1.ebuild,v 1.2 2011/04/26 12:58:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/combine_wave/combine_wave-0.3.1-r1.ebuild,v 1.3 2014/08/10 21:04:51 slyfox Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils toolchain-funcs
 
 IUSE=""
 
-DESCRIPTION="sync up 2 audio ch. and/or combine 2 mono audio ch. into one stereo wave ch."
+DESCRIPTION="sync up 2 audio ch. and/or combine 2 mono audio ch. into one stereo wave ch"
 HOMEPAGE="http://panteltje.com/panteltje/dvd/"
 SRC_URI="http://panteltje.com/panteltje/dvd/${P}.tgz"
 

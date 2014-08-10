@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/build/build-0.3.9.ebuild,v 1.7 2013/04/02 20:56:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/build/build-0.3.9.ebuild,v 1.8 2014/08/10 21:25:53 slyfox Exp $
 
 EAPI="4"
 
 inherit versionator
 
-DESCRIPTION="A massively-parallel software build system implemented on top of GNU make."
+DESCRIPTION="A massively-parallel software build system implemented on top of GNU make"
 HOMEPAGE="http://kolpackov.net/projects/build/"
 SLOT="$(get_version_component_range 1-2)"
 SRC_URI="http://www.codesynthesis.com/download/${PN}/${SLOT}/${P}.tar.bz2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.6.0.ebuild,v 1.1 2014/04/04 14:49:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.6.0.ebuild,v 1.2 2014/08/10 21:22:22 slyfox Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -11,7 +11,7 @@ inherit bash-completion-r1 distutils-r1 eutils flag-o-matic versionator
 MY_P=${PN}-${PV}
 SERIES=$(get_version_component_range 1-2)
 
-DESCRIPTION="Bazaar is a next generation distributed version control system."
+DESCRIPTION="Bazaar is a next generation distributed version control system"
 HOMEPAGE="http://bazaar-vcs.org/"
 SRC_URI="http://launchpad.net/bzr/${SERIES}/${PV}/+download/${MY_P}.tar.gz"
 

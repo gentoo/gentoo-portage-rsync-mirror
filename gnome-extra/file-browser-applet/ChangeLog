@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/file-browser-applet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/ChangeLog,v 1.29 2013/03/03 15:45:48 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/ChangeLog,v 1.30 2014/08/10 21:19:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  file-browser-applet-0.6.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Mar 2013; Pacho Ramos <pacho@gentoo.org> -file-browser-applet-0.6.6.ebuild,
   metadata.xml:

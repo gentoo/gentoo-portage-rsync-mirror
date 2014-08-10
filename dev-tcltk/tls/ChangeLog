@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tls
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.34 2011/01/13 20:11:28 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.35 2014/08/10 21:26:41 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tls-1.5.0-r1.ebuild,
+  tls-1.6-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> tls-1.6-r2.ebuild:
   ppc stable, mark ~ppc64 wrt #332415

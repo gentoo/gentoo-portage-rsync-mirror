@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.8.0.ebuild,v 1.4 2012/04/30 19:56:16 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.8.0.ebuild,v 1.5 2014/08/10 21:06:00 slyfox Exp $
 
 EAPI="4"
 
 inherit vdr-plugin-2
 
-DESCRIPTION="VDR plugin: Admin OSD - This is not! the webadmin program called vdradmin."
+DESCRIPTION="VDR plugin: Admin OSD - This is not! the webadmin program called vdradmin"
 HOMEPAGE="http://htpc-forum.de"
 SRC_URI="mirror://vdrfiles/${PN}/${P}.tgz"
 

@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/gnome-common-3.6.0.ebuild,v 1.13 2013/09/05 05:54:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/gnome-common-3.6.0.ebuild,v 1.14 2014/08/10 21:20:33 slyfox Exp $
 
 EAPI="4"
 inherit gnome.org
 
-DESCRIPTION="Common files for development of Gnome packages."
+DESCRIPTION="Common files for development of Gnome packages"
 HOMEPAGE="http://git.gnome.org/browse/gnome-common"
 
 LICENSE="GPL-3"

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/stringparser_bbcode/stringparser_bbcode-0.3.3.ebuild,v 1.2 2012/01/28 14:37:18 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/stringparser_bbcode/stringparser_bbcode-0.3.3.ebuild,v 1.3 2014/08/10 21:05:52 slyfox Exp $
 
 EAPI="4"
 
-DESCRIPTION="A PHP class to parse BB codes."
+DESCRIPTION="A PHP class to parse BB codes"
 HOMEPAGE="http://christian-seiler.de/projekte/php/bbcode/index_en.html"
 SRC_URI="http://christian-seiler.de/projekte/php/bbcode/download/${P}.tar.gz"
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/testresources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testresources/ChangeLog,v 1.10 2014/07/20 11:05:30 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testresources/ChangeLog,v 1.11 2014/08/10 21:23:23 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  testresources-0.2.7-r1.ebuild, testresources-0.2.7-r2.ebuild,
+  testresources-0.2.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   testresources-0.2.7-r2.ebuild:

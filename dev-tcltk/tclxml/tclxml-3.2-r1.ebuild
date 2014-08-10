@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.2-r1.ebuild,v 1.10 2011/03/27 19:46:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.2-r1.ebuild,v 1.11 2014/08/10 21:26:19 slyfox Exp $
 
 EAPI="3"
 
 inherit eutils multilib
 
-DESCRIPTION="Pure Tcl implementation of an XML parser."
+DESCRIPTION="Pure Tcl implementation of an XML parser"
 HOMEPAGE="http://tclxml.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tclxml/${P}.tar.gz"
 

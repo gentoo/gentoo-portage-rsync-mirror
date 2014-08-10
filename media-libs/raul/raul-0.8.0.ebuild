@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/raul-0.8.0.ebuild,v 1.6 2012/11/24 14:36:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/raul-0.8.0.ebuild,v 1.7 2014/08/10 21:11:40 slyfox Exp $
 
 EAPI=4
 
 inherit waf-utils python eutils
 
-DESCRIPTION="C++ utility library primarily aimed at audio/musical applications."
+DESCRIPTION="C++ utility library primarily aimed at audio/musical applications"
 HOMEPAGE="http://wiki.drobilla.net/Raul"
 SRC_URI="http://download.drobilla.net/${P}.tar.bz2"
 

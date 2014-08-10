@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.15 2011/05/24 06:53:32 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.16 2014/08/10 21:22:28 slyfox Exp $
 
 EAPI=2
 inherit eutils autotools games
 
-DESCRIPTION="a Pacman clone in full 3D with a few surprises. Rockets, bombs and explosions abound."
+DESCRIPTION="a Pacman clone in full 3D with a few surprises. Rockets, bombs and explosions abound"
 HOMEPAGE="http://pacmanarena.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/pacman-arena-${PV}.tar.bz2
 	mirror://sourceforge/${PN}/pacman-data-0.0.zip"

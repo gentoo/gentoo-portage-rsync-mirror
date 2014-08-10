@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/spandsp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.32 2014/08/05 10:52:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.33 2014/08/10 21:12:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  spandsp-0.0.6_pre12-r1.ebuild, spandsp-0.0.6_pre21.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *spandsp-0.0.6 (05 Aug 2014)
 

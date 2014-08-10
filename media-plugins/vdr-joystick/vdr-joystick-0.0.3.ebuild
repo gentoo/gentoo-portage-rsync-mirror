@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-joystick/vdr-joystick-0.0.3.ebuild,v 1.3 2014/02/23 20:05:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-joystick/vdr-joystick-0.0.3.ebuild,v 1.4 2014/08/10 21:06:40 slyfox Exp $
 
 EAPI=5
 
 inherit vdr-plugin-2
 
-DESCRIPTION="VDR plugin: allows using a joystick as a remote control for VDR."
+DESCRIPTION="VDR plugin: allows using a joystick as a remote control for VDR"
 HOMEPAGE="http://www.powarman.de/vdr_plugins.htm"
 SRC_URI="http://home.arcor.de/andreas.regel/files/joystick/${P}.tgz"
 

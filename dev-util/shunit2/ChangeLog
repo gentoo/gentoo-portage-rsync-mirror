@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/shunit2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shunit2/ChangeLog,v 1.5 2011/08/01 05:24:51 dberkholz Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shunit2/ChangeLog,v 1.6 2014/08/10 21:29:29 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> shunit2-2.1.4.ebuild,
+  shunit2-2.1.5.ebuild, shunit2-2.1.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *shunit2-2.1.6 (01 Aug 2011)
 
@@ -26,4 +30,3 @@
   +shunit2-2.1.4.ebuild:
   New package: shUnit2 is a unit-test framework for Bourne-based shell
   scripts (Toffanin Mauro, GeCHI overlay).
-

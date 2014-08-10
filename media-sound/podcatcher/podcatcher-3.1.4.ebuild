@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/podcatcher/podcatcher-3.1.4.ebuild,v 1.2 2009/06/06 09:26:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/podcatcher/podcatcher-3.1.4.ebuild,v 1.3 2014/08/10 21:09:50 slyfox Exp $
 
-DESCRIPTION="Podcast client for the command-line written in Ruby."
+DESCRIPTION="Podcast client for the command-line written in Ruby"
 HOMEPAGE="http://podcatcher.rubyforge.org"
 SRC_URI="http://rubyforge.org/frs/download.php/43722/${P}.tar.gz"
 

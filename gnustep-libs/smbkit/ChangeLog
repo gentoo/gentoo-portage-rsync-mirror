@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/smbkit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/smbkit/ChangeLog,v 1.17 2007/11/16 15:15:25 beandog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/smbkit/ChangeLog,v 1.18 2014/08/10 21:18:30 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  smbkit-0.0.1.20061010.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   16 Nov 2007; Steve Dibb <beandog@gentoo.org> smbkit-0.0.1.20061010.ebuild:
   amd64 stable, bug 195990
@@ -85,4 +89,3 @@
   04 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
   +smbkit-0.0.1_pre20041004.ebuild:
   Original import of package; keyworded for ~x86.
-

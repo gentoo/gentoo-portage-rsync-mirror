@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/abntex/abntex-0.9_beta2.ebuild,v 1.1 2011/05/08 16:26:08 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/abntex/abntex-0.9_beta2.ebuild,v 1.2 2014/08/10 21:25:03 slyfox Exp $
 
 EAPI=3
 
@@ -9,7 +9,7 @@ inherit latex-package
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION="LaTeX macros for writing documents following the ABNT norms."
+DESCRIPTION="LaTeX macros for writing documents following the ABNT norms"
 HOMEPAGE="http://abntex.codigolivre.org.br/ http://abntex.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	doc? ( mirror://sourceforge/${PN}/${PN}-doc-${MY_PV}.tar.gz )"

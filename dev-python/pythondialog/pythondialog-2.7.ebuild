@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/pythondialog-2.7.ebuild,v 1.11 2011/01/01 19:56:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/pythondialog-2.7.ebuild,v 1.12 2014/08/10 21:20:11 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-DESCRIPTION="A Python module for making simple text/console-mode user interfaces."
+DESCRIPTION="A Python module for making simple text/console-mode user interfaces"
 HOMEPAGE="http://pythondialog.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pythondialog/${PF}.tar.bz2"
 

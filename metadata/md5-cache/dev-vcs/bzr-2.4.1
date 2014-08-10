@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare test
 DEPEND=emacs? ( virtual/emacs ) test? ( || ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-python/celementtree ) curl? ( dev-python/pycurl ) sftp? ( dev-python/paramiko ) || ( dev-python/pyftpdlib dev-python/medusa ) dev-python/subunit >=dev-python/testtools-0.9.5 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
-DESCRIPTION=Bazaar is a next generation distributed version control system.
+DESCRIPTION=Bazaar is a next generation distributed version control system
 EAPI=3
 HOMEPAGE=http://bazaar-vcs.org/
 IUSE=curl doc emacs +sftp test bash-completion
@@ -11,4 +11,4 @@ RDEPEND=|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-python/celeme
 SLOT=0
 SRC_URI=http://launchpad.net/bzr/2.4/2.4.1/+download/bzr-2.4.1.tar.gz
 _eclasses_=bash-completion	f913ed18b57a2d3372c4291680454db4	distutils	34e0f373c466bb0e97ba194735f1acf2	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=c52a71336d4461ea5e053d66eb0a15b8
+_md5_=f190f7e9515efb86e9542d217a323aa7

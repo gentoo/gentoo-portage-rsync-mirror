@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp32ogg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/ChangeLog,v 1.18 2012/03/18 15:48:03 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/ChangeLog,v 1.19 2014/08/10 21:08:04 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mp32ogg-0.11-r5.ebuild,
+  mp32ogg-0.11-r6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> mp32ogg-0.11-r5.ebuild,
   mp32ogg-0.11-r6.ebuild:

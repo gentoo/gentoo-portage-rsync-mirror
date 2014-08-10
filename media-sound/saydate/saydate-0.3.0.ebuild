@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/saydate-0.3.0.ebuild,v 1.16 2009/08/03 13:11:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/saydate-0.3.0.ebuild,v 1.17 2014/08/10 21:11:34 slyfox Exp $
 
 S=${WORKDIR}/${PN}
-DESCRIPTION="A Linux shell program that talks the date and system uptime."
+DESCRIPTION="A Linux shell program that talks the date and system uptime"
 HOMEPAGE="http://unihedron.com/projects/saydate/saydate.php"
 SRC_URI="http://unihedron.com/projects/saydate/${P}.tar.gz"
 LICENSE="GPL-2"

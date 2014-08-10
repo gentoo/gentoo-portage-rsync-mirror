@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=virtual/latex-base >=sys-apps/texinfo-4.2-r5
-DESCRIPTION=A source pretty printer for LaTeX - styles to stylise your source and code examples.
+DESCRIPTION=A source pretty printer for LaTeX - styles to stylise your source and code examples
 HOMEPAGE=http://www.tug.org/
 IUSE=examples
 KEYWORDS=amd64 ppc ~sparc x86
@@ -9,4 +9,4 @@ RDEPEND=virtual/latex-base
 SLOT=0
 SRC_URI=mirror://gentoo/lgrind.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=16ce51084f872ca6f9e4957e6315d00e
+_md5_=6b35ff965c3ef4f51eb0e2bdc073d830

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mkpythonproj
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mkpythonproj/ChangeLog,v 1.4 2012/04/20 22:35:07 neurogeek Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mkpythonproj/ChangeLog,v 1.5 2014/08/10 21:13:56 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mkpythonproj-1.7.ebuild,
+  mkpythonproj-1.8.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *mkpythonproj-1.8 (20 Apr 2012)
 
@@ -20,4 +24,3 @@
   +files/mkpythonproj_licenses.patch, +metadata.xml,
   +mkpythonproj-1.7.ebuild:
   Initial commit.
-

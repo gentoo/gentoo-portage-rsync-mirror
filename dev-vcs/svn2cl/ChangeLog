@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/svn2cl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2cl/ChangeLog,v 1.3 2011/12/21 09:00:13 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2cl/ChangeLog,v 1.4 2014/08/10 21:23:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> svn2cl-0.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> svn2cl-0.12.ebuild:
   x86 stable wrt bug #393957
@@ -54,4 +57,3 @@
   03 Oct 2005; Aaron Walker <ka0ttic@gentoo.org>
   +files/svn2cl-no-same-dir-xsl.diff, +metadata.xml, +svn2cl-0.3.ebuild:
   Initial commit.
-

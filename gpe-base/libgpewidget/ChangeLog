@@ -1,6 +1,10 @@
 # ChangeLog for gpe-base/libgpewidget
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/ChangeLog,v 1.12 2012/07/21 16:30:05 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/ChangeLog,v 1.13 2014/08/10 21:17:51 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  libgpewidget-0.117-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Jul 2012; Pacho Ramos <pacho@gentoo.org>
   +files/libgpewidget-0.117-glib-single-include.patch,

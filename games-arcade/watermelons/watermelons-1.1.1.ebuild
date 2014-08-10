@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/watermelons-1.1.1.ebuild,v 1.6 2010/09/09 17:37:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/watermelons-1.1.1.ebuild,v 1.7 2014/08/10 21:23:05 slyfox Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
 inherit eutils python games
 
 MY_PN="melons"
-DESCRIPTION="A thrilling watermelon bouncing game."
+DESCRIPTION="A thrilling watermelon bouncing game"
 HOMEPAGE="http://www.imitationpickles.org/melons/index.html"
 SRC_URI="mirror://gentoo/${MY_PN}-${PV}.tgz"
 # No version upstream

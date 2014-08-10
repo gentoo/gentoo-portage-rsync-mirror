@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/tcl-sql-20000114-r2.ebuild,v 1.2 2012/06/07 20:41:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/tcl-sql-20000114-r2.ebuild,v 1.3 2014/08/10 21:26:08 slyfox Exp $
 
 EAPI="3"
 
 inherit eutils multilib toolchain-funcs
 
-DESCRIPTION="A generic Tcl interface to SQL databases."
+DESCRIPTION="A generic Tcl interface to SQL databases"
 HOMEPAGE="http://www.parand.com/tcl-sql/"
 SRC_URI="mirror://sourceforge/tcl-sql/${PN}-${PV}.tgz"
 

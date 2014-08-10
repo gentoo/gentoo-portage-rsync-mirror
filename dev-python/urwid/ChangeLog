@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.71 2014/04/08 07:24:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.72 2014/08/10 21:24:44 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> urwid-0.9.9.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *urwid-1.2.1 (08 Apr 2014)
 

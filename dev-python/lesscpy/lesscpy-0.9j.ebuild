@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lesscpy/lesscpy-0.9j.ebuild,v 1.1 2013/10/23 05:45:59 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lesscpy/lesscpy-0.9j.ebuild,v 1.2 2014/08/10 21:13:10 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-DESCRIPTION="A compiler written in Python for the LESS language."
+DESCRIPTION="A compiler written in Python for the LESS language"
 HOMEPAGE="https://pypi.python.org/pypi/lesscpy"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 

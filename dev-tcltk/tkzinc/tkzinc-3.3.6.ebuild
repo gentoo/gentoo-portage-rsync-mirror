@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.3.6.ebuild,v 1.2 2013/01/08 16:04:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.3.6.ebuild,v 1.3 2014/08/10 21:26:29 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ AUTOTOOLS_AUTORECONF=yes
 
 inherit autotools-utils
 
-DESCRIPTION="A Tk widget library."
+DESCRIPTION="A Tk widget library"
 HOMEPAGE="http://www.tkzinc.org"
 SRC_URI="http://www.tkzinc.org/Packages/Tkzinc-${PV}plus.tar.gz"
 

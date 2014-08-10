@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/editobj-0.5.7-r2.ebuild,v 1.2 2013/09/05 18:46:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/editobj-0.5.7-r2.ebuild,v 1.3 2014/08/10 21:10:01 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -10,7 +10,7 @@ inherit distutils-r1
 
 MY_P="${P/editobj/EditObj}"
 
-DESCRIPTION="EditObj can create a dialog box to edit ANY Python object."
+DESCRIPTION="EditObj can create a dialog box to edit ANY Python object"
 SRC_URI="http://download.gna.org/songwrite/${MY_P}.tar.gz"
 HOMEPAGE="http://home.gna.org/oomadness/en/editobj/index.html"
 

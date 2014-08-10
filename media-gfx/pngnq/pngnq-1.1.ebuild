@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/pngnq-1.1.ebuild,v 1.2 2013/02/21 09:53:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/pngnq-1.1.ebuild,v 1.3 2014/08/10 21:15:58 slyfox Exp $
 
 EAPI=5
 inherit autotools eutils
 
-DESCRIPTION="Pngnq is a tool for quantizing PNG images in RGBA format."
+DESCRIPTION="Pngnq is a tool for quantizing PNG images in RGBA format"
 HOMEPAGE="http://pngnq.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=dev-lang/tcl-8.2 >=dev-tcltk/tcllib-1.2 xml? ( >=dev-libs/libxml2-2.6.9 ) expat? ( dev-libs/expat )
-DESCRIPTION=Pure Tcl implementation of an XML parser.
+DESCRIPTION=Pure Tcl implementation of an XML parser
 HOMEPAGE=http://tclxml.sourceforge.net/
 IUSE=expat threads xml
 KEYWORDS=alpha amd64 ~ppc sparc x86
@@ -9,4 +9,4 @@ RDEPEND=>=dev-lang/tcl-8.2 >=dev-tcltk/tcllib-1.2 xml? ( >=dev-libs/libxml2-2.6.
 SLOT=0
 SRC_URI=mirror://sourceforge/tclxml/tclxml-3.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=51cf3d09ea59ad7b93dc55552ee11cd5
+_md5_=b95a9876f77d7ff0d6cfe5d0972a58fa

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdif/sdif-3.8.6.ebuild,v 1.6 2013/11/06 04:37:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdif/sdif-3.8.6.ebuild,v 1.7 2014/08/10 21:11:52 slyfox Exp $
 
 IUSE="doc threads ftruncate debug"
 
@@ -10,7 +10,7 @@ MY_PN="${PN/sdif/SDIF}"
 MY_P=${MY_PN}-${PV}-src
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="The Sound Description Interchange Format Library deals with audio and wave processing."
+DESCRIPTION="The Sound Description Interchange Format Library deals with audio and wave processing"
 HOMEPAGE="http://www.ircam.fr/anasyn/sdif"
 SRC_URI="http://www.ircam.fr/anasyn/sdif/download/${MY_P}.tar.gz
 	 doc? ( http://www.ircam.fr/anasyn/sdif/download/${MY_PN}-doc.tar.gz  )"

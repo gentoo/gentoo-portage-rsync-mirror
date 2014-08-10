@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.18 2012/05/05 08:02:38 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.19 2014/08/10 21:11:26 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> phat-0.4.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> phat-0.4.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -64,4 +67,3 @@
   +phat-0.2.3.ebuild:
   Intial import to the tree.  Thanks to mikael soderholm 
   <gnarlie@ihku.org> for the intial ebuild.  This closes bug #66879.
-

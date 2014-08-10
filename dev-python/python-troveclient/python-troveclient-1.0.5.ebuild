@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-troveclient/python-troveclient-1.0.5.ebuild,v 1.2 2014/07/06 12:49:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-troveclient/python-troveclient-1.0.5.ebuild,v 1.3 2014/08/10 21:19:53 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-DESCRIPTION="This is a client for the OpenStack Trove API, a scalable relational database service."
+DESCRIPTION="This is a client for the OpenStack Trove API, a scalable relational database service"
 HOMEPAGE="https://github.com/openstack/python-troveclient"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 

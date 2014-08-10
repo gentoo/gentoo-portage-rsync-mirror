@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=virtual/latex-base >=sys-apps/texinfo-4.2-r5
-DESCRIPTION=A bundle of style and class files for creating dynamic online presentations.
+DESCRIPTION=A bundle of style and class files for creating dynamic online presentations
 HOMEPAGE=http://texpower.sourceforge.net/
 IUSE=doc
 KEYWORDS=amd64 ppc sparc x86
@@ -9,4 +9,4 @@ RDEPEND=virtual/latex-base
 SLOT=0
 SRC_URI=mirror://sourceforge/texpower/texpower-0-1b.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e6e4c468f7daf642ce2636f58dcc247f
+_md5_=4f3753d4731fea6c2aeb2be0130959c6

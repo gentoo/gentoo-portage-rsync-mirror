@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/bigloo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.46 2012/11/07 20:13:01 tetromino Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.47 2014/08/10 21:25:09 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> bigloo-3.0c_p4.ebuild,
+  bigloo-3.4a_p3.ebuild, bigloo-3.6a.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   bigloo-3.4a_p3.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/intel-ocl-sdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/ChangeLog,v 1.9 2014/03/24 16:13:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/ChangeLog,v 1.10 2014/08/10 21:27:51 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  intel-ocl-sdk-2.0.31360.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Drop maintainership

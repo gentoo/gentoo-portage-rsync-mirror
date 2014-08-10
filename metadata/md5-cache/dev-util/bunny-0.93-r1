@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare test
 DEPEND=dev-libs/openssl
-DESCRIPTION=A small general purpose fuzzer for C programs.
+DESCRIPTION=A small general purpose fuzzer for C programs
 EAPI=2
 HOMEPAGE=http://code.google.com/p/bunny-the-fuzzer
 KEYWORDS=~amd64 ~x86
@@ -9,4 +9,4 @@ RDEPEND=dev-libs/openssl
 SLOT=0
 SRC_URI=http://bunny-the-fuzzer.googlecode.com/files/bunny-0.93.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=3aa60e8757efe47de401d2b5349a35fe
+_md5_=0bca72eab6c25fb40689e7071a4f4d58

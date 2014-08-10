@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/berusky-1.4.ebuild,v 1.3 2012/08/04 09:50:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/berusky-1.4.ebuild,v 1.4 2014/08/10 21:22:03 slyfox Exp $
 
 EAPI=2
 inherit autotools eutils games
 
 DATAFILE=${PN}-data-${PV}
-DESCRIPTION="free logic game based on an ancient puzzle named Sokoban."
+DESCRIPTION="free logic game based on an ancient puzzle named Sokoban"
 HOMEPAGE="http://anakreon.cz/?q=node/1"
 SRC_URI="http://www.anakreon.cz/download/${P}.tar.gz
 	http://www.anakreon.cz/download/${DATAFILE}.tar.gz"

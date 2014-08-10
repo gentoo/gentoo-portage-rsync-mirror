@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/texpower-0.2.ebuild,v 1.4 2007/08/25 17:39:39 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/texpower-0.2.ebuild,v 1.5 2014/08/10 21:27:59 slyfox Exp $
 
 inherit latex-package
 
 IUSE="doc"
 MY_P="${P/./-}"
 
-DESCRIPTION="A bundle of style and class files for creating dynamic online presentations."
+DESCRIPTION="A bundle of style and class files for creating dynamic online presentations"
 SRC_URI="mirror://sourceforge/texpower/${MY_P}.tar.gz"
 HOMEPAGE="http://texpower.sourceforge.net/"
 LICENSE="GPL-2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplecv/simplecv-1.3.ebuild,v 1.4 2014/04/23 19:51:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplecv/simplecv-1.3.ebuild,v 1.5 2014/08/10 21:22:08 slyfox Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit distutils-r1 vcs-snapshot
 
 MY_PN=SimpleCV
 
-DESCRIPTION="Python interface to several powerful open source computer vision libraries."
+DESCRIPTION="Python interface to several powerful open source computer vision libraries"
 HOMEPAGE="http://simplecv.org/"
 SRC_URI="https://github.com/sightmachine/${MY_PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 

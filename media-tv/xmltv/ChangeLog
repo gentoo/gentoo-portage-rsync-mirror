@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xmltv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.91 2013/10/28 14:00:38 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.92 2014/08/10 21:03:29 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xmltv-0.5.50.ebuild,
+  xmltv-0.5.55.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *xmltv-0.5.57 (28 Oct 2013)
 

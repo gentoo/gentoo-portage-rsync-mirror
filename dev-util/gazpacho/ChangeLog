@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gazpacho
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/ChangeLog,v 1.13 2012/02/26 04:49:28 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/ChangeLog,v 1.14 2014/08/10 21:27:22 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gazpacho-0.7.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   26 Feb 2012; Patrick Lauer <patrick@gentoo.org> gazpacho-0.7.2.ebuild:
   Restricting pypy
@@ -69,4 +72,3 @@
   +gazpacho-0.5.3.ebuild:
   Initial commit. Thank you for the ebuild, Marien Zwart <m_zwart@123mail.org>
   bug# 88771
-

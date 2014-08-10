@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/rblcheck
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/rblcheck/ChangeLog,v 1.13 2011/06/25 18:28:51 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/rblcheck/ChangeLog,v 1.14 2014/08/10 21:17:07 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> rblcheck-1.5-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> rblcheck-1.5-r1.ebuild:
   alpha/sparc stable wrt #370669

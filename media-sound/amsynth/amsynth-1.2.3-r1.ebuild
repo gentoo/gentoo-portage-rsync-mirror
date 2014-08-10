@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.3-r1.ebuild,v 1.4 2012/05/05 08:05:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.3-r1.ebuild,v 1.5 2014/08/10 21:03:44 slyfox Exp $
 
 EAPI=4
 
 inherit base autotools
 
 MY_P=${P/ams/amS}
-DESCRIPTION="Virtual analogue synthesizer."
+DESCRIPTION="Virtual analogue synthesizer"
 HOMEPAGE="http://amsynthe.sourceforge.net/"
 SRC_URI="mirror://sourceforge/amsynthe/${MY_P}.tar.gz"
 

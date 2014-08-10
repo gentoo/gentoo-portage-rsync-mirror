@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vimpc/vimpc-0.09.1.ebuild,v 1.3 2014/06/24 19:41:32 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vimpc/vimpc-0.09.1.ebuild,v 1.4 2014/08/10 21:12:50 slyfox Exp $
 
 EAPI=4
 
-DESCRIPTION="An ncurses based mpd client with vi like key bindings."
+DESCRIPTION="An ncurses based mpd client with vi like key bindings"
 HOMEPAGE="http://vimpc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/project/${PN}/Release%20${PV}/${P}.tar.gz"
 

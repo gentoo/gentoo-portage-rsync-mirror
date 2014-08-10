@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-uuid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-uuid/ChangeLog,v 1.3 2014/07/04 14:59:33 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-uuid/ChangeLog,v 1.4 2014/08/10 21:04:19 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pecl-uuid-1.0.3-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pecl-uuid-1.0.3-r1 (04 Jul 2014)
 

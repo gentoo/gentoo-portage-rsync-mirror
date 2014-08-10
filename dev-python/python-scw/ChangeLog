@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-scw
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-scw/ChangeLog,v 1.5 2012/02/24 08:34:07 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-scw/ChangeLog,v 1.6 2014/08/10 21:19:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> python-scw-0.4.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-scw-0.4.7.ebuild:
   Restricting pypy
@@ -19,4 +22,3 @@
 
   20 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> +python-scw-0.4.7.ebuild:
   Initial Commit. Bug #136102. Thanks to Ali Sabil and Georg Bluhm
-

@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/cs2d/cs2d-0122.ebuild,v 1.1 2013/07/29 22:07:03 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/cs2d/cs2d-0122.ebuild,v 1.2 2014/08/10 21:21:50 slyfox Exp $
 
 EAPI=5
 
 inherit eutils games
 
-DESCRIPTION="Counter-Strike 2D is freeware clone of Counter-Strike with some added features in gameplay."
+DESCRIPTION="Counter-Strike 2D is freeware clone of Counter-Strike with some added features in gameplay"
 HOMEPAGE="http://www.cs2d.com/"
 SRC_URI="http://dev.gentoo.org/~maksbotan/cs2d/cs2d_${PV}_linux.zip
 	http://dev.gentoo.org/~maksbotan/cs2d/cs2d_${PV}_win.zip

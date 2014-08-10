@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/me-tv/me-tv-1.4.0.10.ebuild,v 1.2 2013/03/03 07:51:26 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/me-tv/me-tv-1.4.0.10.ebuild,v 1.3 2014/08/10 21:03:11 slyfox Exp $
 
 EAPI="4"
 
 inherit eutils versionator autotools gnome2
 
-DESCRIPTION="Me TV is a GTK desktop application for watching digital television."
+DESCRIPTION="Me TV is a GTK desktop application for watching digital television"
 HOMEPAGE="http://me-tv.sourceforge.net/"
 SRC_URI="http://launchpad.net/${PN}/$(get_version_component_range 1-2)/$(get_version_component_range 1-3)/+download/${P}.tar.gz"
 RESTRICT="mirror"

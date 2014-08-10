@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/xjump-2.7.5.ebuild,v 1.13 2013/11/11 18:45:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/xjump-2.7.5.ebuild,v 1.14 2014/08/10 21:23:14 slyfox Exp $
 
 EAPI=5
 inherit eutils games
 
 DEBIAN_PATCH="6.1"
-DESCRIPTION="An X game where one tries to jump up as many levels as possible."
+DESCRIPTION="An X game where one tries to jump up as many levels as possible"
 HOMEPAGE="http://packages.debian.org/stable/games/xjump"
 SRC_URI="mirror://debian/pool/main/x/${PN}/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/x/${PN}/${PN}_${PV}-${DEBIAN_PATCH}.debian.tar.gz"

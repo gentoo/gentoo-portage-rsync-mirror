@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2cl/svn2cl-0.9.ebuild,v 1.1 2011/02/10 21:36:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2cl/svn2cl-0.9.ebuild,v 1.2 2014/08/10 21:23:47 slyfox Exp $
 
 inherit eutils
 
-DESCRIPTION="Create a GNU-style ChangeLog from subversion's svn log --xml output."
+DESCRIPTION="Create a GNU-style ChangeLog from subversion's svn log --xml output"
 HOMEPAGE="http://ch.tudelft.nl/~arthur/svn2cl/"
 SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-jamendo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/ChangeLog,v 1.13 2012/05/27 08:12:51 angelos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/ChangeLog,v 1.14 2014/08/10 21:05:53 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  gmpc-jamendo-11.8.16.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 May 2012; Christoph Mende <angelos@gentoo.org> -gmpc-jamendo-0.20.0.ebuild:
   Remove old
@@ -57,4 +61,3 @@
   19 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
   +gmpc-jamendo-0.18.0.ebuild:
   Initial commit wrt #268069, thanks to Anton Romanov for reporting.
-

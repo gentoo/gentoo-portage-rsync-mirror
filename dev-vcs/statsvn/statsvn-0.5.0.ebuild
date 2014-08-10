@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/statsvn/statsvn-0.5.0.ebuild,v 1.3 2010/06/22 18:51:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/statsvn/statsvn-0.5.0.ebuild,v 1.4 2014/08/10 21:23:39 slyfox Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source test"
 
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="StatSVN generates HTML reports from SVN repository logs."
+DESCRIPTION="StatSVN generates HTML reports from SVN repository logs"
 HOMEPAGE="http://www.statsvn.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-source.zip"
 LICENSE="LGPL-2.1"

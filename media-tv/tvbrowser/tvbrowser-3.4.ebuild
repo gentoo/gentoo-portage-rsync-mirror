@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-3.4.ebuild,v 1.1 2014/07/12 07:47:22 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-3.4.ebuild,v 1.2 2014/08/10 21:03:19 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Themeable and easy to use TV Guide - written in Java."
+DESCRIPTION="Themeable and easy to use TV Guide - written in Java"
 HOMEPAGE="http://www.tvbrowser.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P/-/_}_src.zip"
 

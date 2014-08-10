@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/zynaddsubfx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.45 2013/02/14 20:21:11 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.46 2014/08/10 21:13:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> zynaddsubfx-2.4.1.ebuild,
+  zynaddsubfx-2.4.2.ebuild, zynaddsubfx-2.4.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> zynaddsubfx-2.4.3.ebuild:
   Stable for x86, wrt bug #457406

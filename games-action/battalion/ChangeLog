@@ -1,6 +1,9 @@
 # ChangeLog for games-action/battalion
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/ChangeLog,v 1.12 2013/04/14 06:34:19 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/ChangeLog,v 1.13 2014/08/10 21:21:43 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> battalion-1.4b.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   14 Apr 2013; Ulrich Müller <ulm@gentoo.org> battalion-1.4b.ebuild:
   Fix LICENSE, see README file; also includes some code from tcltk that has a
@@ -39,4 +42,3 @@
   03 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> +battalion-1.4b.ebuild:
   Initial import. Ebuild submitted by Alexandru Toma <flash3001@yahoo.com>.
   Closing bug #52682.
-

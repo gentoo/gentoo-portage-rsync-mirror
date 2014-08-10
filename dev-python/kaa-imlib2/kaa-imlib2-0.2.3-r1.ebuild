@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/kaa-imlib2-0.2.3-r1.ebuild,v 1.7 2012/02/23 07:24:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/kaa-imlib2-0.2.3-r1.ebuild,v 1.8 2014/08/10 21:12:56 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="2.4 3.* 2.7-pypy-* *-jython"
 
 inherit distutils eutils
 
-DESCRIPTION="Imlib2 wrapper for Python."
+DESCRIPTION="Imlib2 wrapper for Python"
 HOMEPAGE="http://freevo.sourceforge.net/kaa/"
 SRC_URI="mirror://sourceforge/freevo/${P}.tar.gz"
 

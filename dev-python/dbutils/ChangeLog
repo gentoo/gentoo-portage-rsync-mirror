@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dbutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbutils/ChangeLog,v 1.6 2011/09/20 23:35:41 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbutils/ChangeLog,v 1.7 2014/08/10 21:09:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> dbutils-1.0.ebuild,
+  dbutils-1.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Sep 2011; Mike Gilbert <floppym@gentoo.org> dbutils-1.1.ebuild:
   Simplify src_test(). Patch by Arfrever.
@@ -28,4 +32,3 @@
   21 Oct 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +dbutils-0.9.4.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

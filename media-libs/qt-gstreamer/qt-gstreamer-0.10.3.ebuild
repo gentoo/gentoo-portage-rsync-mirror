@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-0.10.3.ebuild,v 1.5 2014/05/04 12:10:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-0.10.3.ebuild,v 1.6 2014/08/10 21:11:33 slyfox Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ fi
 
 inherit cmake-utils ${GIT_ECLASS}
 
-DESCRIPTION="QtGStreamer provides C++ bindings for GStreamer with a Qt-style API."
+DESCRIPTION="QtGStreamer provides C++ bindings for GStreamer with a Qt-style API"
 HOMEPAGE="http://gstreamer.freedesktop.org/wiki/QtGStreamer"
 
 LICENSE="LGPL-2.1"

@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/potamus-14.ebuild,v 1.1 2013/01/17 22:26:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/potamus-14.ebuild,v 1.2 2014/08/10 21:10:08 slyfox Exp $
 
 EAPI=4
 
 inherit gnome2
 
-DESCRIPTION="a lightweight audio player with a simple interface and an emphasis on high audio quality."
+DESCRIPTION="a lightweight audio player with a simple interface and an emphasis on high audio quality"
 HOMEPAGE="http://offog.org/code/potamus.html"
 SRC_URI="http://offog.org/files/${P}.tar.gz"
 

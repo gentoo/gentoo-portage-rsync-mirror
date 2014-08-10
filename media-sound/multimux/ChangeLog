@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/multimux
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/ChangeLog,v 1.16 2008/07/06 17:42:26 gentoofan23 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/ChangeLog,v 1.17 2014/08/10 21:09:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> multimux-0.2.5.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   06 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
   multimux-0.2.5.2.ebuild:
@@ -65,4 +68,3 @@
   07 Oct 2004; Christian Parpart <trapni@gentoo.org> :
   EBuild submitted by Stefan Briesenick <sbriesen@gmx.de>
   I just adapted to meet ebuild policies.
-

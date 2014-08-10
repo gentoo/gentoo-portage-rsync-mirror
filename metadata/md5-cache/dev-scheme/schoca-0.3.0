@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install
 DEPEND=dev-ml/findlib dev-lang/ocaml[ocamlopt?]
-DESCRIPTION=Schoca is a Scheme implementation in OCaml.
+DESCRIPTION=Schoca is a Scheme implementation in OCaml
 EAPI=3
 HOMEPAGE=http://sourceforge.net/projects/chesslib/
 IUSE=+ocamlopt
@@ -11,4 +11,4 @@ RESTRICT=installsources
 SLOT=0
 SRC_URI=mirror://sourceforge/chesslib/schoca-0.3.0.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=24cc2a5f81cf240288b807cb1e065f59
+_md5_=5d506b01d8e239e10c497facc82c327f

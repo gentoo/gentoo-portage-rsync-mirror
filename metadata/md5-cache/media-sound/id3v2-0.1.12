@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=media-libs/id3lib
-DESCRIPTION=A command line editor for id3v2 tags.
+DESCRIPTION=A command line editor for id3v2 tags
 EAPI=2
 HOMEPAGE=http://id3v2.sourceforge.net/
 KEYWORDS=amd64 ~hppa ppc ppc64 x86 ~x86-fbsd
@@ -9,4 +9,4 @@ RDEPEND=media-libs/id3lib
 SLOT=0
 SRC_URI=mirror://sourceforge/id3v2/id3v2-0.1.12.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=4b758131595c7b54b01d7eff9b45a34f
+_md5_=53b46672285c342656eaebaedc9981a6

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/herrie
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.39 2012/07/29 18:39:29 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.40 2014/08/10 21:06:56 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> herrie-2.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> herrie-2.2.ebuild:
   Drop sparc keywords
@@ -168,4 +171,3 @@
   +files/herrie-1.5.1-gnu-source-define.patch, +metadata.xml,
   +herrie-1.5.1.ebuild:
   Initial ebuild, based on the contribution by Ruud Althuizen (bug #152371)
-

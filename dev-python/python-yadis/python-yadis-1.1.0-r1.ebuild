@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/python-yadis-1.1.0-r1.ebuild,v 1.2 2012/08/02 22:09:39 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/python-yadis-1.1.0-r1.ebuild,v 1.3 2014/08/10 21:20:00 slyfox Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
-DESCRIPTION="Yadis service discovery library."
+DESCRIPTION="Yadis service discovery library"
 HOMEPAGE="http://www.openidenabled.com/yadis/libraries/python/"
 SRC_URI="http://www.openidenabled.com/resources/downloads/python-openid/${P}.tar.gz"
 

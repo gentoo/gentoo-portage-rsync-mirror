@@ -1,6 +1,6 @@
 DEFINED_PHASES=install
 DEPEND=~mail-client/claws-mail-3.9.0 virtual/pkgconfig
-DESCRIPTION=This plugin lets you remove attachments from mails.
+DESCRIPTION=This plugin lets you remove attachments from mails
 HOMEPAGE=http://www.claws-mail.org/
 KEYWORDS=amd64 ~ppc ppc64 x86
 LICENSE=GPL-3
@@ -8,4 +8,4 @@ RDEPEND=~mail-client/claws-mail-3.9.0
 SLOT=0
 SRC_URI=http://www.claws-mail.org/downloads/plugins/att_remover-1.0.15.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f6dba25ce2bd4cbc42805dfb8fb6d91d
+_md5_=e8da4bede9db7516c3c9f8d57a1a16df

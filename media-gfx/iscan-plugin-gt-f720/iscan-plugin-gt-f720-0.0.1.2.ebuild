@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/iscan-plugin-gt-f720-0.0.1.2.ebuild,v 1.3 2014/03/03 23:31:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/iscan-plugin-gt-f720-0.0.1.2.ebuild,v 1.4 2014/08/10 21:14:41 slyfox Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ MY_PV="$(get_version_component_range 1-3)"
 MY_PVR="$(replace_version_separator 3 -)"
 MY_P="esci-interpreter-gt-f720-${MY_PVR}"
 
-DESCRIPTION="Epson Perfection V300 PHOTO scanner plugin for SANE 'epkowa' backend."
+DESCRIPTION="Epson Perfection V300 PHOTO scanner plugin for SANE 'epkowa' backend"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
 SRC_URI="amd64? ( http://dev.gentoo.org/~flameeyes/avasys/${MY_P}.x86_64.rpm )
 	x86? ( http://dev.gentoo.org/~flameeyes/avasys/${MY_P}.i386.rpm )"

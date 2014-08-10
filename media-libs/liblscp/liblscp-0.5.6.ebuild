@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblscp/liblscp-0.5.6.ebuild,v 1.1 2009/10/18 17:13:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblscp/liblscp-0.5.6.ebuild,v 1.2 2014/08/10 21:09:12 slyfox Exp $
 
-DESCRIPTION="a C++ library for the Linux Sampler control protocol."
+DESCRIPTION="a C++ library for the Linux Sampler control protocol"
 HOMEPAGE="http://www.linuxsampler.org"
 SRC_URI="http://download.linuxsampler.org/packages/${P}.tar.gz"
 

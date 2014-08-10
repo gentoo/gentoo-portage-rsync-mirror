@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyramid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyramid/ChangeLog,v 1.3 2014/06/05 07:53:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyramid/ChangeLog,v 1.4 2014/08/10 21:17:34 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pyramid-1.4.3.ebuild,
+  pyramid-1.5.1.ebuild, pyramid-1.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pyramid-1.5.1 (05 Jun 2014)
 

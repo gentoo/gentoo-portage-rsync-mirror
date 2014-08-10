@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-2.2.ebuild,v 1.1 2014/07/01 15:56:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-2.2.ebuild,v 1.2 2014/08/10 21:21:26 slyfox Exp $
 
 EAPI=5
 inherit games
 
 MY_FULL_PV=1.9.3
 MY_PN="${PN/-bin/}"
-DESCRIPTION="Quakeworld client with mqwcl functionality and many more features."
+DESCRIPTION="Quakeworld client with mqwcl functionality and many more features"
 HOMEPAGE="http://ezquake.sf.net/"
 SRC_URI="
 	amd64? ( mirror://sourceforge/${MY_PN}/${MY_PN}_linux-x86_64.${MY_FULL_PV}.tar.gz

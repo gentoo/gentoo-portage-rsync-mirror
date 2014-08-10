@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.4-r1.ebuild,v 1.5 2013/08/09 13:42:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.4-r1.ebuild,v 1.6 2014/08/10 21:07:54 slyfox Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SLOT="2.6"
 MY_PN="${PN/-plugins/}"
 MY_P="${MY_PN}_${PV}"
 
-DESCRIPTION="Plugins for avidemux; a video editor designed for simple cutting, filtering and encoding tasks."
+DESCRIPTION="Plugins for avidemux; a video editor designed for simple cutting, filtering and encoding tasks"
 HOMEPAGE="http://fixounet.free.fr/avidemux"
 SRC_URI="mirror://sourceforge/${MY_PN}/${PV}/${MY_P}.tar.gz"
 

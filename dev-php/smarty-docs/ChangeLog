@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/smarty-docs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.58 2013/03/30 11:13:56 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.59 2014/08/10 21:05:45 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> smarty-docs-2.6.14.ebuild,
+  smarty-docs-3.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   30 Mar 2013; Matti Bickel <mabi@gentoo.org> -smarty-docs-2.6.11.ebuild,
   -smarty-docs-2.6.ebuild:

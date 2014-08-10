@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/mh-20111011.ebuild,v 1.11 2012/05/24 21:41:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/mh-20111011.ebuild,v 1.12 2014/08/10 21:27:27 slyfox Exp $
 
 inherit latex-package
 
-DESCRIPTION="Additional LaTeX math tools."
+DESCRIPTION="Additional LaTeX math tools"
 HOMEPAGE="http://www.ctan.org/tex-archive/macros/latex/contrib/mh/"
 SRC_URI="mirror://gentoo/${P}.zip"
 LICENSE="LPPL-1.3"

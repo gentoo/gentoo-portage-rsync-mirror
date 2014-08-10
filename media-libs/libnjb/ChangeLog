@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libnjb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.48 2012/12/11 21:53:18 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.49 2014/08/10 21:10:07 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libnjb-2.2.6.ebuild,
+  libnjb-2.2.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> libnjb-2.2.6.ebuild,
   libnjb-2.2.7.ebuild:
@@ -204,4 +208,3 @@
   03 Oct 2003; Greg Fitzgerald <gregf@gentoo.org> libnjb-0.9.1b.ebuild,
   files/libnjb-errno.patch:
   Initial Release
-

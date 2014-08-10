@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musique/musique-1.2.1.ebuild,v 1.4 2013/10/01 21:24:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musique/musique-1.2.1.ebuild,v 1.5 2014/08/10 21:09:21 slyfox Exp $
 
 EAPI="5"
 
 inherit eutils qt4-r2
 
-DESCRIPTION="Qt4 music player."
+DESCRIPTION="Qt4 music player"
 HOMEPAGE="http://flavio.tordini.org/musique"
 # Same tarball for every release. We repackage it
 SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"

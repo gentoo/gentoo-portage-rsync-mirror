@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-1.2.0.ebuild,v 1.1 2014/04/06 11:49:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-1.2.0.ebuild,v 1.2 2014/08/10 21:08:33 slyfox Exp $
 
 EAPI="5"
 
 inherit gst-plugins10
 
-DESCRIPTION="Gnonlin is a set of GStreamer elements to ease the creation of non-linear multimedia editors."
+DESCRIPTION="Gnonlin is a set of GStreamer elements to ease the creation of non-linear multimedia editors"
 HOMEPAGE="http://gnonlin.sourceforge.net"
 
 LICENSE="LGPL-2"

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prepare setup
 DEPEND=gpm? ( sys-libs/gpm )
-DESCRIPTION=A portable viewer of binary files, hexadecimal and disassembler modes.
+DESCRIPTION=A portable viewer of binary files, hexadecimal and disassembler modes
 EAPI=4
 HOMEPAGE=http://beye.sourceforge.net/
 IUSE=gpm mmx sse
@@ -11,4 +11,4 @@ REQUIRED_USE=mmx sse
 SLOT=0
 SRC_URI=mirror://sourceforge/beye/6.1.0/biew-610-src.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=25f21781df71232c3a902c0d4b510173
+_md5_=c858e8e00399d8b35e47ebecd045d54f

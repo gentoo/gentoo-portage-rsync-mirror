@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cthumb/cthumb-4.2.ebuild,v 1.10 2005/08/07 12:58:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cthumb/cthumb-4.2.ebuild,v 1.11 2014/08/10 21:13:54 slyfox Exp $
 
-DESCRIPTION="Create a statical HTML Image gallery with captions for each image."
+DESCRIPTION="Create a statical HTML Image gallery with captions for each image"
 
 HOMEPAGE="http://cthumb.sourceforge.net"
 SRC_URI="mirror://sourceforge/cthumb/${P}.tar.gz"

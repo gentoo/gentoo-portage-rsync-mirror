@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/meterbridge-0.9.3.ebuild,v 1.6 2012/05/05 08:34:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/meterbridge-0.9.3.ebuild,v 1.7 2014/08/10 21:07:49 slyfox Exp $
 
 EAPI=2
 
 inherit eutils autotools
 
-DESCRIPTION="Software meterbridge for the UNIX based JACK audio system."
+DESCRIPTION="Software meterbridge for the UNIX based JACK audio system"
 HOMEPAGE="http://plugin.org.uk/meterbridge/"
 SRC_URI="http://plugin.org.uk/meterbridge/${P}.tar.gz"
 

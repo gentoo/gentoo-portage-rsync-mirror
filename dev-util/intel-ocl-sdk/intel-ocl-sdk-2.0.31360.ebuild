@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-2.0.31360.ebuild,v 1.4 2012/11/01 09:01:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-2.0.31360.ebuild,v 1.5 2014/08/10 21:27:51 slyfox Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit rpm multilib
 
 INTEL_CL=usr/$(get_libdir)/OpenCL/vendors/intel/
 
-DESCRIPTION="Intel's implementation of the OpenCL standard optimized for Intel processors."
+DESCRIPTION="Intel's implementation of the OpenCL standard optimized for Intel processors"
 HOMEPAGE="http://software.intel.com/en-us/articles/opencl-sdk/"
 SRC_URI="http://registrationcenter.intel.com/irc_nas/2563/intel_sdk_for_ocl_applications_2012_x64.tgz"
 

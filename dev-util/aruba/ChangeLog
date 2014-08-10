@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.40 2014/07/22 15:58:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.41 2014/08/10 21:25:06 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> aruba-0.5.3.ebuild,
+  aruba-0.5.4-r1.ebuild, aruba-0.5.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Jul 2014; Tobias Klausmann <klausman@gentoo.org> aruba-0.5.4-r1.ebuild:
   Keyworded on alpha, bug #465948

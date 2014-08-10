@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.11.1-r1.ebuild,v 1.3 2014/05/17 16:45:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.11.1-r1.ebuild,v 1.4 2014/08/10 21:08:08 slyfox Exp $
 
 EAPI=5
 
 inherit eutils multilib-minimal
 
-DESCRIPTION="CELT is a very low delay audio codec designed for high-quality communications."
+DESCRIPTION="CELT is a very low delay audio codec designed for high-quality communications"
 HOMEPAGE="http://www.celt-codec.org/"
 SRC_URI="http://downloads.us.xiph.org/releases/${PN}/${P}.tar.gz"
 

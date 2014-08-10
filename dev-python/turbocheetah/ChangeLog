@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/turbocheetah
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbocheetah/ChangeLog,v 1.6 2010/07/03 23:15:33 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbocheetah/ChangeLog,v 1.7 2014/08/10 21:23:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> turbocheetah-1.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   turbocheetah-1.0.ebuild:
@@ -26,4 +29,3 @@
   05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
   turbocheetah-0.9.5.ebuild, +metadata.xml:
   Initial ebuild
-

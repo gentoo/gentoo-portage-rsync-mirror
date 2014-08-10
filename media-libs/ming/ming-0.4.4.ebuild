@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.4.ebuild,v 1.12 2013/05/03 18:41:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.4.ebuild,v 1.13 2014/08/10 21:10:58 slyfox Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ AUTOTOOLS_AUTORECONF=yes
 
 inherit autotools-utils flag-o-matic multilib php-ext-source-r2 perl-module python
 
-DESCRIPTION="An Open Source library for Flash movie generation."
+DESCRIPTION="An Open Source library for Flash movie generation"
 HOMEPAGE="http://ming.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ming/${P}.tar.bz2"
 

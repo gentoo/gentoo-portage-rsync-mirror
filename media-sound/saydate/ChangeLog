@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/saydate
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/ChangeLog,v 1.11 2007/01/05 17:53:58 flameeyes Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/ChangeLog,v 1.12 2014/08/10 21:11:34 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> saydate-0.3.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> saydate-0.3.0.ebuild:
   Dummify src_compile.

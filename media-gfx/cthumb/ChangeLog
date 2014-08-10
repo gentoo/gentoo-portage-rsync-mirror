@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/cthumb
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cthumb/ChangeLog,v 1.13 2007/05/15 09:55:15 bangert Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cthumb/ChangeLog,v 1.14 2014/08/10 21:13:54 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cthumb-4.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>

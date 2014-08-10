@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-lzf/pecl-lzf-1.6.2.ebuild,v 1.1 2013/03/05 11:24:36 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-lzf/pecl-lzf-1.6.2.ebuild,v 1.2 2014/08/10 21:02:29 slyfox Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ inherit php-ext-pecl-r2
 
 KEYWORDS="~amd64 ~x86"
 
-DESCRIPTION="This package handles LZF de/compression."
+DESCRIPTION="This package handles LZF de/compression"
 LICENSE="PHP-3"
 SLOT="0"
 IUSE=""

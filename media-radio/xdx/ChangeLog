@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xdx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.30 2014/06/14 09:33:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.31 2014/08/10 21:04:10 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xdx-2.4.2.ebuild,
+  xdx-2.4.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> xdx-2.4.3.ebuild:
   x86 stable wrt bug #507996
@@ -105,4 +109,3 @@
 
   03 Jun 2004; <rphillips@gentoo.org> xdx-1.2.ebuild :
   Initial Import. Contributed by Robb. Bug #52307
-

@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/pstack-1.1-r1.ebuild,v 1.2 2010/11/25 17:38:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/pstack-1.1-r1.ebuild,v 1.3 2014/08/10 21:29:01 slyfox Exp $
 
 EAPI="2"
 
 inherit toolchain-funcs
 
-DESCRIPTION="Display stack trace of a running process."
+DESCRIPTION="Display stack trace of a running process"
 SRC_URI="mirror://gentoo/${PN}.tgz"
 HOMEPAGE="http://www.linuxcommand.org/man_pages/pstack1.html"
 # Old upstream HOMEPAGE: www.whatsis.com/pastack is dead, using

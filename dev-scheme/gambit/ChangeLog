@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/gambit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.40 2013/07/16 07:22:16 hkbst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.41 2014/08/10 21:25:17 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gambit-4.6.2.ebuild,
+  gambit-4.6.3.ebuild, gambit-4.6.4.ebuild, gambit-4.6.5.ebuild,
+  gambit-4.6.7.ebuild, gambit-4.6.9.ebuild, gambit-4.7.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *gambit-4.7.0 (16 Jul 2013)
 
@@ -204,4 +209,3 @@
   Initial port. Ebuild contributed by Mihai Radu <tiganu@gmail.com>, David
   Wang <tiganu@gmail.com>, Pupeno <pupeno@pupeno.com> and Matthew Kennedy
   <mkennedy@gentoo.org>; Resolves Bug #67906.
-

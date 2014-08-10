@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib-ext/mwlib-ext-0.12.4-r1.ebuild,v 1.1 2013/07/01 10:04:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib-ext/mwlib-ext-0.12.4-r1.ebuild,v 1.2 2014/08/10 21:14:03 slyfox Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ inherit distutils-r1
 MY_PN="${PN/-/.}"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Extension module to mwlib to pull in reportlab."
+DESCRIPTION="Extension module to mwlib to pull in reportlab"
 HOMEPAGE="http://code.pediapress.com/wiki/wiki http://pypi.python.org/pypi/mwlib.ext"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 

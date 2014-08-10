@@ -1,6 +1,6 @@
 DEFINED_PHASES=install postinst postrm setup unpack
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
-DESCRIPTION=A sanserif typeface in the style of xkcd.
+DESCRIPTION=A sanserif typeface in the style of xkcd
 EAPI=5
 HOMEPAGE=http://antiyawn.com/uploads/humorsans.html
 IUSE=X
@@ -9,4 +9,4 @@ LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=http://www.antiyawn.com/uploads/Humor-Sans-1.0.ttf
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e14902e6133fe71f322933b0401e35f4
+_md5_=a1009701303b6f79fc63f63891b62eb3

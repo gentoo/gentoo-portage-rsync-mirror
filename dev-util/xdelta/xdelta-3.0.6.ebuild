@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.6.ebuild,v 1.9 2014/01/26 12:13:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.6.ebuild,v 1.10 2014/08/10 21:30:09 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -9,7 +9,7 @@ inherit autotools python-single-r1
 
 MY_P=${PN}${PV%.*.*}-${PV}
 
-DESCRIPTION="a binary diff and differential compression tools. VCDIFF (RFC 3284) delta compression."
+DESCRIPTION="a binary diff and differential compression tools. VCDIFF (RFC 3284) delta compression"
 HOMEPAGE="http://xdelta.org/"
 SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tar.gz"
 

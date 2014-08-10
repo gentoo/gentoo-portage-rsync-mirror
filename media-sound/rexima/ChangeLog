@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rexima
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.14 2011/02/03 07:32:40 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.15 2014/08/10 21:11:04 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> rexima-1.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Feb 2011; Tim Harder <radhermit@gentoo.org> rexima-1.4.ebuild:
   Update HOMEPAGE (bug #353382 thanks to Malte Starostik).
@@ -42,4 +45,3 @@
   Initial revision.
   
   Submitted by: John Oxley <oxo-gentoo@rucus.ru.ac.za>
-

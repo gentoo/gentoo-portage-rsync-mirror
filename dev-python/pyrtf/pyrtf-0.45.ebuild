@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/pyrtf-0.45.ebuild,v 1.6 2010/07/23 21:23:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/pyrtf-0.45.ebuild,v 1.7 2014/08/10 21:17:43 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ inherit distutils
 MY_PN="PyRTF"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A set of Python classes that make it possible to produce RTF documents from Python programs."
+DESCRIPTION="A set of Python classes that make it possible to produce RTF documents from Python programs"
 HOMEPAGE="http://pyrtf.sourceforge.net http://pypi.python.org/pypi/PyRTF"
 SRC_URI="mirror://sourceforge/$PN/${MY_P}.tar.gz"
 

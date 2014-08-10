@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/deskzilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.16 2014/03/02 07:30:00 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.17 2014/08/10 21:26:39 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> deskzilla-1.7.1-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *deskzilla-1.7.1-r1 (02 Mar 2014)
 

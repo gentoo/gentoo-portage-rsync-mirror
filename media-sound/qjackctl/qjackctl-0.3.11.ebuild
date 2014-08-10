@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.11.ebuild,v 1.1 2014/01/18 12:29:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.11.ebuild,v 1.2 2014/08/10 21:10:31 slyfox Exp $
 
 EAPI=4
 
 inherit qt4-r2
 
-DESCRIPTION="A Qt application to control the JACK Audio Connection Kit and ALSA sequencer connections."
+DESCRIPTION="A Qt application to control the JACK Audio Connection Kit and ALSA sequencer connections"
 HOMEPAGE="http://qjackctl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/qjackctl/${P}.tar.gz"
 

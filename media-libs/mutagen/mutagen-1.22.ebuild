@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.22.ebuild,v 1.9 2014/05/14 14:39:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.22.ebuild,v 1.10 2014/08/10 21:11:10 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-DESCRIPTION="Mutagen is an audio metadata tag reader and writer implemented in pure Python."
+DESCRIPTION="Mutagen is an audio metadata tag reader and writer implemented in pure Python"
 HOMEPAGE="http://code.google.com/p/mutagen http://pypi.python.org/pypi/mutagen"
 SRC_URI="https://bitbucket.org/lazka/${PN}/downloads/${P}.tar.gz"
 

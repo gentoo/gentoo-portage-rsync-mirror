@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.258 2014/03/13 09:48:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.259 2014/08/10 21:28:20 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> kdevelop-4.5.2.ebuild,
+  kdevelop-4.6.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Mar 2014; Johannes Huber <johu@gentoo.org> kdevelop-4.6.0.ebuild:
   Drop USE reviewboard as dev-libs/qjson is now non-optional, bug #504452.

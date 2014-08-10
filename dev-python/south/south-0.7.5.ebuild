@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.7.5.ebuild,v 1.4 2012/12/16 13:58:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.7.5.ebuild,v 1.5 2014/08/10 21:22:49 slyfox Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="2.5 3.*"
 
 inherit distutils
 
-DESCRIPTION="Intelligent schema migrations for Django apps."
+DESCRIPTION="Intelligent schema migrations for Django apps"
 HOMEPAGE="http://south.aeracode.org/"
 SRC_URI="https://bitbucket.org/andrewgodwin/south/get/${PV}.tar.gz -> ${P}.tar.gz"
 

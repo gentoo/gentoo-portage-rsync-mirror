@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/libgig-3.3.0.ebuild,v 1.3 2012/05/05 08:02:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/libgig-3.3.0.ebuild,v 1.4 2014/08/10 21:08:47 slyfox Exp $
 
 inherit eutils
 
-DESCRIPTION="a C++ library for loading Gigasampler files and DLS (Downloadable Sounds) Level 1/2 files."
+DESCRIPTION="a C++ library for loading Gigasampler files and DLS (Downloadable Sounds) Level 1/2 files"
 HOMEPAGE="http://www.linuxsampler.org/libgig/"
 SRC_URI="http://download.linuxsampler.org/packages/${P}.tar.bz2"
 

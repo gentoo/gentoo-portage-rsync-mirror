@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/europecv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.39 2012/05/09 17:21:09 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.40 2014/08/10 21:25:30 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  europecv-20060424-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   europecv-20060424-r1.ebuild:
@@ -160,4 +164,3 @@
   +europecv-20040603.ebuild:
   Initial import. Ebuild submitted by Thomas Leitner <thomas_leitner@gmx.at>;
   bug #67520.
-

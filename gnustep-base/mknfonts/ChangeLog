@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/mknfonts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.24 2010/01/07 15:24:43 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.25 2014/08/10 21:18:35 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mknfonts-0.5-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   mknfonts-0.5-r1.ebuild:
@@ -83,4 +86,3 @@
 
   28 Aug 2004; Armando Di Cianno <fafhrd@gentoo.org> :
   Added first package.
-

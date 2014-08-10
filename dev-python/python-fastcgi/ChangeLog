@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-fastcgi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fastcgi/ChangeLog,v 1.4 2012/02/22 07:57:33 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fastcgi/ChangeLog,v 1.5 2014/08/10 21:18:58 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> python-fastcgi-1.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-fastcgi-1.1.ebuild:
   Restricting jython
@@ -18,4 +21,3 @@
   +files/python-fastcgi-1.1-setup.patch, +metadata.xml,
   +python-fastcgi-1.1.ebuild:
   Initial release.
-

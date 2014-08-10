@@ -1,6 +1,6 @@
 DEFINED_PHASES=install
 DEPEND=virtual/latex-base dev-lang/perl app-arch/unzip
-DESCRIPTION=Perl script for automatically building LaTeX documents.
+DESCRIPTION=Perl script for automatically building LaTeX documents
 EAPI=5
 HOMEPAGE=http://www.phys.psu.edu/~collins/software/latexmk/
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos
@@ -9,4 +9,4 @@ RDEPEND=virtual/latex-base dev-lang/perl
 SLOT=0
 SRC_URI=http://www.phys.psu.edu/~collins/software/latexmk/latexmk-439.zip
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=4152fd19b55d095f76b925afd8c7bb06
+_md5_=da3d3daf45a4ff670221a2031a4ac8e4

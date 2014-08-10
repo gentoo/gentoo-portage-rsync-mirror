@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.45 2014/05/02 06:46:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.46 2014/08/10 21:07:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> axiom-0.6.0-r1.ebuild,
+  axiom-0.6.0.ebuild, axiom-0.7.0.ebuild, axiom-0.7.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *axiom-0.7.1 (02 May 2014)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.15 2012/11/30 23:03:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.16 2014/08/10 21:17:31 slyfox Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="A robust implementation of POP-before-SMTP."
+DESCRIPTION="A robust implementation of POP-before-SMTP"
 HOMEPAGE="http://mail.cc.umanitoba.ca/drac/"
 SRC_URI="ftp://ftp.cc.umanitoba.ca/src/${PN}.tar.Z"
 

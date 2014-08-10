@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare
 DEPEND=!x11-libs/qwt[doc] media-libs/fontconfig media-libs/freetype virtual/opengl virtual/glu x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXt x11-libs/libXext javascript? ( dev-lang/spidermonkey:0 ) openal? ( media-libs/openal ) doc? ( app-doc/doxygen ) virtual/pkgconfig
-DESCRIPTION=a high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1.
+DESCRIPTION=a high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1
 EAPI=2
 HOMEPAGE=http://www.coin3d.org/
 IUSE=debug doc javascript openal
@@ -10,4 +10,4 @@ RDEPEND=!x11-libs/qwt[doc] media-libs/fontconfig media-libs/freetype virtual/ope
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~xarthisius/distfiles/Coin-3.1.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f49517a74028ad93874afe8246dc4e96
+_md5_=1f1505d16b1677be62d15cc1a3dad4ae

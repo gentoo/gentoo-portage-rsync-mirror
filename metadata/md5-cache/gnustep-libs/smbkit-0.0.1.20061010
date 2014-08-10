@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=net-fs/samba >=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
-DESCRIPTION=SMBKit offers a samba library and headers for GNUstep.
+DESCRIPTION=SMBKit offers a samba library and headers for GNUstep
 HOMEPAGE=http://www.gnustep.org
 IUSE=debug doc
 KEYWORDS=amd64 ppc x86
@@ -9,4 +9,4 @@ RDEPEND=net-fs/samba >=gnustep-base/gnustep-make-2.0 virtual/gnustep-back debug?
 SLOT=0
 SRC_URI=mirror://gentoo/smbkit-0.0.1.20061010.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	gnustep-2	5c8ef29c1d72267699559746ef1c0096	gnustep-base	87d599af9a09a523d6d233e462f3758e	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=6142a6282b5fe45d1f8b9c3780bdf61e
+_md5_=cb7eb64e853a84781f3616fe42fa90b2

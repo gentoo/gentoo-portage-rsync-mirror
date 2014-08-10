@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kinterbasdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.34 2010/11/14 15:09:33 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.35 2014/08/10 21:13:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> kinterbasdb-3.2.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   14 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -kinterbasdb-3.2.ebuild:

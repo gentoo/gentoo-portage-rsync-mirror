@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1-r2.ebuild,v 1.14 2014/05/17 13:50:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1-r2.ebuild,v 1.15 2014/08/10 21:07:30 slyfox Exp $
 
 EAPI="5"
 # A few tests fail with python3.3 :(
@@ -11,7 +11,7 @@ inherit distutils-r1 eutils
 MY_PN="BeautifulSoup"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="HTML/XML parser for quick-turnaround applications like screen-scraping."
+DESCRIPTION="HTML/XML parser for quick-turnaround applications like screen-scraping"
 HOMEPAGE="http://www.crummy.com/software/BeautifulSoup/ http://pypi.python.org/pypi/BeautifulSoup"
 SRC_URI="http://www.crummy.com/software/${MY_PN}/download/${MY_P}.tar.gz"
 

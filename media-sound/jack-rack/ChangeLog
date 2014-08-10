@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.47 2014/03/04 20:22:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.48 2014/08/10 21:07:22 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jack-rack-1.4.7-r1.ebuild,
+  jack-rack-1.4.8_rc1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> jack-rack-1.4.8_rc1.ebuild:
   Stable for x86, wrt bug #503044

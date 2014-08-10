@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/mp3splt-2.6.ebuild,v 1.5 2014/05/17 14:04:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/mp3splt-2.6.ebuild,v 1.6 2014/08/10 21:08:40 slyfox Exp $
 
 EAPI=4
 inherit multilib
 
-DESCRIPTION="a command line utility to split mp3 and ogg files without decoding."
+DESCRIPTION="a command line utility to split mp3 and ogg files without decoding"
 HOMEPAGE="http://mp3splt.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

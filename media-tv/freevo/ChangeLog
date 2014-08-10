@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/freevo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.84 2014/03/12 18:27:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.85 2014/08/10 21:02:58 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> freevo-1.7.6.1.ebuild,
+  freevo-1.9.0-r1.ebuild, freevo-1.9.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Mar 2014; Julian Ospald <hasufell@gentoo.org> freevo-1.9.0-r1.ebuild,
   +files/freevo-1.9.0-distutils-r1.patch:

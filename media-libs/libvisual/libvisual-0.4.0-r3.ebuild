@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.4.0-r3.ebuild,v 1.6 2014/08/07 19:05:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.4.0-r3.ebuild,v 1.7 2014/08/10 21:10:43 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ AUTOTOOLS_AUTORECONF=1
 
 inherit autotools-multilib
 
-DESCRIPTION="Libvisual is an abstraction library that comes between applications and audio visualisation plugins."
+DESCRIPTION="Libvisual is an abstraction library that comes between applications and audio visualisation plugins"
 HOMEPAGE="http://libvisual.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/frozen-flask/frozen-flask-0.10.ebuild,v 1.1 2013/03/20 08:05:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/frozen-flask/frozen-flask-0.10.ebuild,v 1.2 2014/08/10 21:11:20 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -13,7 +13,7 @@ inherit distutils
 MY_PN="Frozen-Flask"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Freezes a Flask application into a set of static files."
+DESCRIPTION="Freezes a Flask application into a set of static files"
 HOMEPAGE="https://github.com/SimonSapin/Frozen-Flask http://pypi.python.org/pypi/Frozen-Flask"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 

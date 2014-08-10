@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpired/xpired-1.22.ebuild,v 1.12 2012/09/01 06:12:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpired/xpired-1.22.ebuild,v 1.13 2014/08/10 21:21:13 slyfox Exp $
 
 EAPI=2
 inherit eutils games
 
-DESCRIPTION="A Sokoban-styled puzzle game with lots more action."
+DESCRIPTION="A Sokoban-styled puzzle game with lots more action"
 HOMEPAGE="http://xpired.sourceforge.net"
 SRC_URI="mirror://sourceforge/xpired/${P}-linux_source.tar.gz"
 

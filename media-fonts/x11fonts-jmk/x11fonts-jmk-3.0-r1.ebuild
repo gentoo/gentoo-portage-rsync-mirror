@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/x11fonts-jmk-3.0-r1.ebuild,v 1.17 2011/06/14 11:38:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/x11fonts-jmk-3.0-r1.ebuild,v 1.18 2014/08/10 21:14:12 slyfox Exp $
 
 inherit eutils
 
 MY_P=jmk-x11-fonts-${PV}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="This package contains character-cell fonts for use with X."
+DESCRIPTION="This package contains character-cell fonts for use with X"
 SRC_URI="http://www.pobox.com/~jmknoble/fonts/${MY_P}.tar.gz"
 HOMEPAGE="http://www.jmknoble.net/fonts/"
 LICENSE="GPL-2"

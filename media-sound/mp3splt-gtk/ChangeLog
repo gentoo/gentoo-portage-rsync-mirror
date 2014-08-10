@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mp3splt-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.39 2014/07/28 14:33:14 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.40 2014/08/10 21:08:53 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mp3splt-gtk-0.5.9.ebuild,
+  mp3splt-gtk-0.7.3.ebuild, mp3splt-gtk-0.9.1.ebuild, mp3splt-gtk-0.9.1a.ebuild,
+  mp3splt-gtk-0.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   28 Jul 2014; Sebastian Pipping <sping@gentoo.org> mp3splt-gtk-0.9.1a.ebuild:
   Fix libmp3splt dependency (bug #518314)

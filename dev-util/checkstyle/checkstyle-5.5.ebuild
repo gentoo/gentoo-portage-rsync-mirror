@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-5.5.ebuild,v 1.3 2011/12/21 12:39:35 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-5.5.ebuild,v 1.4 2014/08/10 21:26:19 slyfox Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A development tool to help programmers write Java code that adheres to a coding standard."
+DESCRIPTION="A development tool to help programmers write Java code that adheres to a coding standard"
 HOMEPAGE="http://checkstyle.sourceforge.net"
 SRC_URI="mirror://sourceforge/checkstyle/${P}-src.tar.gz
 	http://dev.gentoo.org/~sera/distfiles/${PN}-5.4-maven-build.xml.tar.bz2"

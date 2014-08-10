@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/qt-gstreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.13 2014/07/28 10:54:05 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.14 2014/08/10 21:11:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  qt-gstreamer-0.10.3.ebuild, qt-gstreamer-1.2.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *qt-gstreamer-1.2.0 (28 Jul 2014)
 

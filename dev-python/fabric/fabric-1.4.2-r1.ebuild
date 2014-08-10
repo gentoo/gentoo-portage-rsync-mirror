@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.4.2-r1.ebuild,v 1.2 2012/05/16 17:51:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.4.2-r1.ebuild,v 1.3 2014/08/10 21:10:24 slyfox Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -13,7 +13,7 @@ PYTHON_TESTS_RESTRICTED_ABIS="2.5"
 
 inherit distutils eutils vcs-snapshot
 
-DESCRIPTION="Fabric is a simple, Pythonic tool for remote execution and deployment."
+DESCRIPTION="Fabric is a simple, Pythonic tool for remote execution and deployment"
 HOMEPAGE="http://fabfile.org http://pypi.python.org/pypi/Fabric"
 SRC_URI="http://github.com/${PN}/${PN}/tarball/${PV} -> ${P}.tar.gz"
 

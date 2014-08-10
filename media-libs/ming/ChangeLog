@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.103 2013/05/03 18:41:06 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.104 2014/08/10 21:10:58 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ming-0.4.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 May 2013; Samuli Suominen <ssuominen@gentoo.org> ming-0.4.4.ebuild:
   Use AC_CONFIG_HEADERS instead of AM_CONFIG_HEADER for automake-1.13

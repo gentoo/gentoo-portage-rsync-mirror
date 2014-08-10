@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare
 DEPEND=>=dev-python/py-1.4.0 app-arch/unzip dev-python/setuptools dev-lang/python
-DESCRIPTION=pycmd: tools for managing/searching Python related files.
+DESCRIPTION=pycmd: tools for managing/searching Python related files
 EAPI=3
 HOMEPAGE=http://pypi.python.org/pypi/pycmd
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
@@ -9,4 +9,4 @@ RDEPEND=>=dev-python/py-1.4.0 dev-lang/python
 SLOT=0
 SRC_URI=mirror://pypi/p/pycmd/pycmd-1.0.zip
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=efbb972084b36295287a32063f9566e0
+_md5_=1273e9c35cd25cd0e277fd9088aa47e3

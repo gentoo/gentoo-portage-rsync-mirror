@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.69 2014/07/04 07:06:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.70 2014/08/10 21:26:00 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> glossaries-3.04.ebuild,
+  glossaries-4.07.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Jul 2014; Tim Harder <radhermit@gentoo.org> glossaries-4.07.ebuild:
   Fix HOMEPAGE.

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-news
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.77 2014/07/28 13:44:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.78 2014/08/10 21:24:01 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  twisted-news-12.3.0.ebuild, twisted-news-13.0.0-r1.ebuild,
+  twisted-news-13.0.0.ebuild, twisted-news-13.2.0.ebuild,
+  twisted-news-14.0.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> twisted-news-13.0.0-r1.ebuild:
   Stable for ppc, wrt bug #512012

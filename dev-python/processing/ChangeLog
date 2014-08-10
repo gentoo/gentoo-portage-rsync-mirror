@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/processing
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/processing/ChangeLog,v 1.6 2012/02/22 07:44:34 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/processing/ChangeLog,v 1.7 2014/08/10 21:15:26 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> processing-0.52.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> processing-0.52.ebuild:
   Restricting jython
@@ -23,4 +26,3 @@
   02 Jul 2008; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
   +processing-0.52.ebuild:
   Initial rev.
-

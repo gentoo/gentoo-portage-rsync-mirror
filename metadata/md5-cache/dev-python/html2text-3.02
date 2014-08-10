@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare
 DEPEND=dev-python/chardet dev-python/feedparser dev-python/setuptools dev-lang/python
-DESCRIPTION=Turn HTML into equivalent Markdown-structured text.
+DESCRIPTION=Turn HTML into equivalent Markdown-structured text
 EAPI=3
 HOMEPAGE=http://www.aaronsw.com/2002/html2text/ https://github.com/aaronsw/html2text http://pypi.python.org/pypi/html2text
 KEYWORDS=amd64 x86
@@ -9,4 +9,4 @@ RDEPEND=dev-python/chardet dev-python/feedparser dev-lang/python
 SLOT=0
 SRC_URI=https://github.com/aaronsw/html2text/tarball/3.02/html2text-3.02.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=bc8e24e139ff1f7815f35477b5d0107d
+_md5_=b286538725494b7f6b48d3b45cbcca33

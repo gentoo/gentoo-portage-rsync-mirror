@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dbx/pecl-dbx-1.1.2.ebuild,v 1.2 2013/03/05 11:00:44 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dbx/pecl-dbx-1.1.2.ebuild,v 1.3 2014/08/10 21:01:28 slyfox Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ inherit php-ext-pecl-r2
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-DESCRIPTION="The dbx module is a database abstraction layer."
+DESCRIPTION="The dbx module is a database abstraction layer"
 LICENSE="PHP-3"
 SLOT="0"
 IUSE=""

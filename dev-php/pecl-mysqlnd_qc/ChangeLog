@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/pecl-mysqlnd_qc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_qc/ChangeLog,v 1.4 2013/03/17 15:57:45 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_qc/ChangeLog,v 1.5 2014/08/10 21:03:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  pecl-mysqlnd_qc-1.0.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

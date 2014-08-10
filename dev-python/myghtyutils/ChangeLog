@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/myghtyutils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/myghtyutils/ChangeLog,v 1.3 2010/07/01 02:29:38 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/myghtyutils/ChangeLog,v 1.4 2014/08/10 21:14:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> myghtyutils-0.52.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   01 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   myghtyutils-0.52.ebuild:
@@ -13,4 +16,3 @@
   05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
   +myghtyutils-0.52.ebuild, +metadata.xml:
   Initial ebuild
-

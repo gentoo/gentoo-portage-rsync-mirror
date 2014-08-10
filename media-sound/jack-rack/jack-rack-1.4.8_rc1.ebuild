@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.8_rc1.ebuild,v 1.6 2014/03/04 20:22:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.8_rc1.ebuild,v 1.7 2014/08/10 21:07:22 slyfox Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic toolchain-funcs
@@ -8,7 +8,7 @@ inherit autotools eutils flag-o-matic toolchain-funcs
 MY_P=${PN}_${PV/_/\~}
 DEB_URI="mirror://debian/pool/main/j/${PN}"
 
-DESCRIPTION="JACK Rack is an effects rack for the JACK low latency audio API."
+DESCRIPTION="JACK Rack is an effects rack for the JACK low latency audio API"
 HOMEPAGE="http://jack-rack.sourceforge.net/"
 SRC_URI="${DEB_URI}/${MY_P}.orig.tar.gz ${DEB_URI}/${MY_P}-1.debian.tar.gz"
 

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DESCRIPTION=Control your own kingdom in this simulation.
+DESCRIPTION=Control your own kingdom in this simulation
 EAPI=4
 HOMEPAGE=http://www.linuxgamepublishing.com/info.php?id=8&
 KEYWORDS=amd64 ppc x86
@@ -9,4 +9,4 @@ RESTRICT=mirror bindist strip
 SLOT=0
 SRC_URI=http://demos.linuxgamepublishing.com/majesty/majesty_demo.run
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=b48c24652bf88c23f394c402e928ffbd
+_md5_=c9a8cb9cc0c909d0536fa031338eb55b

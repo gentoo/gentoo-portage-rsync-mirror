@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-filebrowser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-filebrowser/ChangeLog,v 1.6 2014/02/23 19:55:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-filebrowser/ChangeLog,v 1.7 2014/08/10 21:06:19 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  vdr-filebrowser-0.2.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-filebrowser-0.2.1.ebuild:
@@ -40,4 +44,3 @@
   +metadata.xml, +vdr-filebrowser-0.0.6b.ebuild:
   initial ebuild, taken from vdr testing overlay; also thanks to E.O'Donnell
   on bug 208210
-

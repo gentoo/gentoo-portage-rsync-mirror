@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/storm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.15 2013/08/15 05:29:13 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.16 2014/08/10 21:22:57 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> storm-0.18.ebuild,
+  storm-0.19.ebuild, storm-0.20.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   15 Aug 2013; Patrick Lauer <patrick@gentoo.org> storm-0.20.ebuild:
   Whitespace

@@ -1,6 +1,6 @@
 DEFINED_PHASES=install prepare
 DEPEND=dev-lang/tcl virtual/mysql
-DESCRIPTION=A generic Tcl interface to SQL databases.
+DESCRIPTION=A generic Tcl interface to SQL databases
 EAPI=3
 HOMEPAGE=http://www.parand.com/tcl-sql/
 KEYWORDS=~amd64 ~ppc ~x86
@@ -9,4 +9,4 @@ RDEPEND=dev-lang/tcl virtual/mysql
 SLOT=0
 SRC_URI=mirror://sourceforge/tcl-sql/tcl-sql-20000114.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=82da62c45b3f9d13297dd9721ce8db45
+_md5_=c2cfbd73849920ab4117e91fe3ff2f55

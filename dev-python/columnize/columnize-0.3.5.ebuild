@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/columnize/columnize-0.3.5.ebuild,v 1.1 2013/04/22 07:06:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/columnize/columnize-0.3.5.ebuild,v 1.2 2014/08/10 21:09:00 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -10,7 +10,7 @@ DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
 
-DESCRIPTION="Format a simple (i.e. not nested) list into aligned columns."
+DESCRIPTION="Format a simple (i.e. not nested) list into aligned columns"
 HOMEPAGE="http://code.google.com/p/pycolumnize/ http://pypi.python.org/pypi/columnize"
 SRC_URI="http://pycolumnize.googlecode.com/files/${P}.tar.gz"
 

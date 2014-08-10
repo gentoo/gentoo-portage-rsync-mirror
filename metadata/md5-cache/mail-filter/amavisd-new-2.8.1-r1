@@ -1,6 +1,6 @@
 DEFINED_PHASES=install postinst preinst prepare
 DEPEND=>=sys-apps/sed-4 >=dev-lang/perl-5.8.2 virtual/pkgconfig
-DESCRIPTION=High-performance interface between the MTA and content checkers.
+DESCRIPTION=High-performance interface between the MTA and content checkers
 EAPI=4
 HOMEPAGE=http://www.ijs.si/software/amavisd/
 IUSE=clamav courier dkim ldap mysql postgres qmail razor snmp spamassassin zmq
@@ -10,4 +10,4 @@ RDEPEND=>=sys-apps/sed-4 >=dev-lang/perl-5.8.2 >=sys-apps/coreutils-5.0-r3 app-a
 SLOT=0
 SRC_URI=http://www.ijs.si/software/amavisd/amavisd-new-2.8.1.tar.xz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=acc0b1930460c7c94ec9651cba621e74
+_md5_=6f183608e912e5ec17765734c5713b9b

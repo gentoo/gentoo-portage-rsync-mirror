@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-chooser/gnome-color-chooser-0.2.5.ebuild,v 1.3 2014/05/14 17:42:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-chooser/gnome-color-chooser-0.2.5.ebuild,v 1.4 2014/08/10 21:19:44 slyfox Exp $
 
 EAPI=5
 
 inherit gnome2 flag-o-matic
 
-DESCRIPTION="GTK+/GNOME color customization tool."
+DESCRIPTION="GTK+/GNOME color customization tool"
 HOMEPAGE="http://gnomecc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gnomecc/${P}.tar.bz2"
 

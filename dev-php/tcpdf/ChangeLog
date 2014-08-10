@@ -1,10 +1,12 @@
 # ChangeLog for dev-php/tcpdf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/tcpdf/ChangeLog,v 1.1 2012/03/10 11:07:38 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/tcpdf/ChangeLog,v 1.2 2014/08/10 21:06:11 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tcpdf-5.9.149.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *tcpdf-5.9.149 (10 Mar 2012)
 
   10 Mar 2012; Matti Bickel <mabi@gentoo.org> +metadata.xml,
   +tcpdf-5.9.149.ebuild:
   initial commit (based on ebuild by Francisco Javier, bug #223953)
-

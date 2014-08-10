@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nosehtmloutput
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nosehtmloutput/ChangeLog,v 1.7 2014/05/01 04:21:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nosehtmloutput/ChangeLog,v 1.8 2014/08/10 21:14:42 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  nosehtmloutput-0.0.4-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   01 May 2014; Ian Delaney <idella4@gentoo.org> nosehtmloutput-0.0.4-r1.ebuild:
   add py3.4 support

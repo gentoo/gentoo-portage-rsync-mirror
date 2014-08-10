@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=>=dev-lang/tcl-8.2 dev-libs/libxslt >=dev-tcltk/tcllib-1.2 >=dev-libs/libxml2-2.6.9 dev-libs/expat !dev-tcltk/tcldom
-DESCRIPTION=Pure Tcl implementation of an XML parser.
+DESCRIPTION=Pure Tcl implementation of an XML parser
 EAPI=3
 HOMEPAGE=http://tclxml.sourceforge.net/
 IUSE=debug threads
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/tclxml/tclxml-3.2.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=fd1ada633073fb90cb8f5467704de525
+_md5_=65b9a70be1ff2d61630a020f595b265d

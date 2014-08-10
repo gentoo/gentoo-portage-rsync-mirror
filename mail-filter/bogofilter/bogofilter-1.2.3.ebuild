@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.3.ebuild,v 1.8 2012/12/15 17:45:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.3.ebuild,v 1.9 2014/08/10 21:15:42 slyfox Exp $
 
 EAPI=4
 inherit db-use eutils flag-o-matic toolchain-funcs
 
-DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
+DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed"
 HOMEPAGE="http://bogofilter.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/a2jmidid-8.ebuild,v 1.3 2013/06/25 18:43:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/a2jmidid-8.ebuild,v 1.4 2014/08/10 21:03:04 slyfox Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ NO_WAF_LIBDIR=1
 
 inherit python toolchain-funcs waf-utils
 
-DESCRIPTION="Daemon for exposing legacy ALSA sequencer applications in JACK MIDI system."
+DESCRIPTION="Daemon for exposing legacy ALSA sequencer applications in JACK MIDI system"
 HOMEPAGE="http://home.gna.org/a2jmidid/"
 SRC_URI="http://download.gna.org/a2jmidid/${P}.tar.bz2"
 

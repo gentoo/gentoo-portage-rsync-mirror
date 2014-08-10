@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-ssh2/pecl-ssh2-0.12-r1.ebuild,v 1.1 2013/07/28 19:42:18 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-ssh2/pecl-ssh2-0.12-r1.ebuild,v 1.2 2014/08/10 21:03:42 slyfox Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ USE_PHP="php5-5 php5-4"
 
 inherit php-ext-pecl-r2
 
-DESCRIPTION="Provides bindings to the functions of libssh2 which implements the SSH2 protocol."
+DESCRIPTION="Provides bindings to the functions of libssh2 which implements the SSH2 protocol"
 LICENSE="PHP-3"
 SLOT="0"
 IUSE=""

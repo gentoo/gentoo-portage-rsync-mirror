@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/twill-0.9.ebuild,v 1.7 2013/03/26 09:38:45 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/twill-0.9.ebuild,v 1.8 2014/08/10 21:23:46 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ inherit distutils
 MY_PV="${PV/_beta/b}"
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION="Simple scripting language for web browsing with Python API."
+DESCRIPTION="Simple scripting language for web browsing with Python API"
 HOMEPAGE="http://twill.idyll.org/"
 SRC_URI="http://darcs.idyll.org/~t/projects/${MY_P}.tar.gz"
 

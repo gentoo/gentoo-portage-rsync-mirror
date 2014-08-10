@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.10.0.ebuild,v 1.14 2013/08/03 09:45:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.10.0.ebuild,v 1.15 2014/08/10 21:14:27 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ inherit twisted
 MY_PN="Nevow"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A web templating framework that provides LivePage, an automatic AJAX toolkit."
+DESCRIPTION="A web templating framework that provides LivePage, an automatic AJAX toolkit"
 HOMEPAGE="http://divmod.org/trac/wiki/DivmodNevow http://pypi.python.org/pypi/Nevow"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 

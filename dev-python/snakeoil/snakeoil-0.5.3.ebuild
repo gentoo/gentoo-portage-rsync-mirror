@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.5.3.ebuild,v 1.1 2013/09/26 11:16:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.5.3.ebuild,v 1.2 2014/08/10 21:22:41 slyfox Exp $
 
 EAPI=4
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -14,7 +14,7 @@ else
 	SRC_URI="http://snakeoil.googlecode.com/files/${P}.tar.bz2"
 fi
 
-DESCRIPTION="Miscellaneous python utility code."
+DESCRIPTION="Miscellaneous python utility code"
 HOMEPAGE="http://snakeoil.googlecode.com/"
 
 LICENSE="BSD"

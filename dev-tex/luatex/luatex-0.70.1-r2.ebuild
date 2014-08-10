@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1-r2.ebuild,v 1.12 2013/08/14 11:24:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1-r2.ebuild,v 1.13 2014/08/10 21:27:15 slyfox Exp $
 
 EAPI=5
 
 inherit libtool eutils texlive-common
 
-DESCRIPTION="An extended version of pdfTeX using Lua as an embedded scripting language."
+DESCRIPTION="An extended version of pdfTeX using Lua as an embedded scripting language"
 HOMEPAGE="http://www.luatex.org/"
 SRC_URI="http://foundry.supelec.fr/gf/download/frsrelease/392/1730/${PN}-beta-${PV}.tar.bz2
 	http://foundry.supelec.fr/gf/download/frsrelease/392/1732/${PN}-beta-${PV}-doc.tar.bz2"

@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.24.6-r1.ebuild,v 1.5 2014/05/18 10:16:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.24.6-r1.ebuild,v 1.6 2014/08/10 21:18:23 slyfox Exp $
 
 EAPI=5
 inherit eutils gnustep-base
 
-DESCRIPTION="A library of general-purpose, non-graphical Objective C objects."
+DESCRIPTION="A library of general-purpose, non-graphical Objective C objects"
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
 

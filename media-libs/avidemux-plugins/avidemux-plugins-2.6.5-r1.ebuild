@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.5-r1.ebuild,v 1.1 2013/09/01 20:33:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.5-r1.ebuild,v 1.2 2014/08/10 21:07:54 slyfox Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ inherit cmake-utils eutils flag-o-matic python-single-r1
 
 SLOT="2.6"
 
-DESCRIPTION="Plugins for avidemux; a video editor designed for simple cutting, filtering and encoding tasks."
+DESCRIPTION="Plugins for avidemux; a video editor designed for simple cutting, filtering and encoding tasks"
 HOMEPAGE="http://fixounet.free.fr/avidemux"
 
 # Multiple licenses because of all the bundled stuff.

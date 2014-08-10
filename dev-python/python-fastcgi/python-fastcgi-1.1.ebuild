@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fastcgi/python-fastcgi-1.1.ebuild,v 1.4 2012/02/22 07:57:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fastcgi/python-fastcgi-1.1.ebuild,v 1.5 2014/08/10 21:18:58 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils eutils
 
-DESCRIPTION="Interface to OpenMarket's FastCGI C Library/SDK."
+DESCRIPTION="Interface to OpenMarket's FastCGI C Library/SDK"
 HOMEPAGE="http://pypi.python.org/pypi/python-fastcgi"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 

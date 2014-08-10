@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ninvaders/ninvaders-0.1.1.ebuild,v 1.5 2008/03/25 13:58:31 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ninvaders/ninvaders-0.1.1.ebuild,v 1.6 2014/08/10 21:22:20 slyfox Exp $
 
 inherit toolchain-funcs games
 
-DESCRIPTION="ASCII space invaders clone."
+DESCRIPTION="ASCII space invaders clone"
 HOMEPAGE="http://ninvaders.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ninvaders/${P}.tar.gz"
 

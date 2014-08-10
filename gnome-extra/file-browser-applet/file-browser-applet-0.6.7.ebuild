@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.6.7.ebuild,v 1.4 2012/05/05 06:25:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.6.7.ebuild,v 1.5 2014/08/10 21:19:37 slyfox Exp $
 
 EAPI="2"
 
 inherit gnome2 cmake-utils
 
-DESCRIPTION="Browse, open and manage files in your computer directly from the GNOME panel."
+DESCRIPTION="Browse, open and manage files in your computer directly from the GNOME panel"
 HOMEPAGE="http://code.google.com/p/gnome-menu-file-browser-applet/"
 SRC_URI="http://gnome-menu-file-browser-applet.googlecode.com/files/${P}.tar.gz"
 

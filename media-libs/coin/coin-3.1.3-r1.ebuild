@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r1.ebuild,v 1.7 2013/08/09 13:42:58 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r1.ebuild,v 1.8 2014/08/10 21:08:18 slyfox Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit flag-o-matic base
 MY_P=${P/c/C}
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="A high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1."
+DESCRIPTION="A high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1"
 HOMEPAGE="http://www.coin3d.org/"
 SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/all/${MY_P}.tar.gz"
 

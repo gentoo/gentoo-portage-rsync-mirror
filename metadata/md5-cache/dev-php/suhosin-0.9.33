@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=dev-lang/php[unicode] !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-3? ( dev-lang/php:5.3 )
-DESCRIPTION=Suhosin is an advanced protection system for PHP installations.
+DESCRIPTION=Suhosin is an advanced protection system for PHP installations
 EAPI=5
 HOMEPAGE=http://www.suhosin.org/
 IUSE=php_targets_php5-3
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( php_targets_php5-3 )
 SLOT=0
 SRC_URI=http://download.suhosin.org/suhosin-0.9.33.tgz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=bcf38d242438eb731a5eba383b4372cd
+_md5_=c27a17ff5dd3d7f9243228f99d365f7a

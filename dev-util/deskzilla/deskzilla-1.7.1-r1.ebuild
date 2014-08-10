@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.7.1-r1.ebuild,v 1.1 2014/03/02 07:30:00 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.7.1-r1.ebuild,v 1.2 2014/08/10 21:26:39 slyfox Exp $
 
 EAPI=5
 
 inherit java-pkg-2 versionator
 
-DESCRIPTION="A desktop client for Mozilla's Bugzilla bug tracking system."
+DESCRIPTION="A desktop client for Mozilla's Bugzilla bug tracking system"
 HOMEPAGE="http://almworks.com/deskzilla"
 
 MY_PV=$(replace_all_version_separators '_') #${PV/beta/b})

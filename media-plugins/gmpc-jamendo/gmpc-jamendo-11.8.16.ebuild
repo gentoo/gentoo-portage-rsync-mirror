@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/gmpc-jamendo-11.8.16.ebuild,v 1.4 2012/05/05 08:27:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/gmpc-jamendo-11.8.16.ebuild,v 1.5 2014/08/10 21:05:53 slyfox Exp $
 
 EAPI=4
 
-DESCRIPTION="Plugin allows you to browse and preview music available on jamendo."
+DESCRIPTION="Plugin allows you to browse and preview music available on jamendo"
 HOMEPAGE="http://gmpc.wikia.com/wiki/GMPC_PLUGIN_JAMENDO"
 SRC_URI="http://download.sarine.nl/Programs/gmpc/11.8/${P}.tar.gz"
 

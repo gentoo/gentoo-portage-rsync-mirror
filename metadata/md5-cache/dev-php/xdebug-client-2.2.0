@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=libedit? ( dev-libs/libedit )
-DESCRIPTION=Xdebug client for the Common Debugger Protocol (DBGP).
+DESCRIPTION=Xdebug client for the Common Debugger Protocol (DBGP)
 HOMEPAGE=http://www.xdebug.org/
 IUSE=libedit
 KEYWORDS=alpha amd64 ~hppa ia64 ppc ppc64 sparc x86
@@ -8,4 +8,4 @@ LICENSE=Xdebug
 RDEPEND=libedit? ( dev-libs/libedit )
 SLOT=0
 SRC_URI=http://pecl.php.net/get/xdebug-2.2.0.tgz
-_md5_=86de0579b71c448b04b53fe625c7e942
+_md5_=4b65a89562639dee070e68bd18908109

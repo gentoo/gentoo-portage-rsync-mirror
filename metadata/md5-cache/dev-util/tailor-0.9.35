@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare
 DEPEND==dev-lang/python-2*
-DESCRIPTION=A tool to migrate changesets between version control systems.
+DESCRIPTION=A tool to migrate changesets between version control systems
 EAPI=3
 HOMEPAGE=http://wiki.darcs.net/index.html/Tailor
 KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
@@ -9,4 +9,4 @@ RDEPEND==dev-lang/python-2*
 SLOT=0
 SRC_URI=http://darcs.arstecnica.it/tailor-0.9.35.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=6e28451fae4f1e4dd71e37f4702e4260
+_md5_=d928e13ac3c9620d95949cace7cf79c0

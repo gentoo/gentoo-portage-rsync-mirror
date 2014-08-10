@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/flabels/flabels-1.0.ebuild,v 1.3 2012/10/07 12:40:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/flabels/flabels-1.0.ebuild,v 1.4 2014/08/10 21:25:36 slyfox Exp $
 
 EAPI=4
 
 inherit latex-package
 
-DESCRIPTION="Macros for typesetting pretty lables (optionally colored) for the back of files or binders."
+DESCRIPTION="Macros for typesetting pretty lables (optionally colored) for the back of files or binders"
 HOMEPAGE="http://www.ctan.org/tex-archive/help/Catalogue/entries/flabels.html"
 # downloaded from:
 # ftp.ctan.org/tex-archive/help/Catalogue/entries/flabels.tar.gz

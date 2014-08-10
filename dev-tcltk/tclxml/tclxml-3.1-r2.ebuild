@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.1-r2.ebuild,v 1.8 2011/08/13 06:34:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.1-r2.ebuild,v 1.9 2014/08/10 21:26:19 slyfox Exp $
 
 inherit autotools eutils toolchain-funcs
 
-DESCRIPTION="Pure Tcl implementation of an XML parser."
+DESCRIPTION="Pure Tcl implementation of an XML parser"
 HOMEPAGE="http://tclxml.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tclxml/${P}.tar.gz"
 

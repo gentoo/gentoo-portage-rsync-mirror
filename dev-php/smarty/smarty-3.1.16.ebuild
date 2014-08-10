@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-3.1.16.ebuild,v 1.1 2014/01/08 17:24:28 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-3.1.16.ebuild,v 1.2 2014/08/10 21:05:33 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 MY_P="Smarty-${PV}"
 DOC_PV="3.1.8"
 
-DESCRIPTION="A template engine for PHP."
+DESCRIPTION="A template engine for PHP"
 HOMEPAGE="http://www.smarty.net/"
 SRC_URI="http://www.smarty.net/files/${MY_P}.tar.gz
 	doc? ( http://www.smarty.net/files/docs/manual-en-${DOC_PV}.zip )"

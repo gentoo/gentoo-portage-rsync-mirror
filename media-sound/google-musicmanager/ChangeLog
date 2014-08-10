@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/google-musicmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/ChangeLog,v 1.39 2014/05/26 21:44:45 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/ChangeLog,v 1.40 2014/08/10 21:06:19 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  google-musicmanager-1.0.113.5623_beta.ebuild,
+  google-musicmanager-1.0.117.4968_beta.ebuild,
+  google-musicmanager-1.0.65.1341_beta.ebuild,
+  google-musicmanager-1.0.84.1107_beta.ebuild,
+  google-musicmanager-1.0.91.1050_beta.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *google-musicmanager-1.0.117.4968_beta (26 May 2014)
 

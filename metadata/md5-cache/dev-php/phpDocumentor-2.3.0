@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=!dev-php/PEAR-PhpDocumentor dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=The phpDocumentor package provides automatic documenting of php api directly from the source.
+DESCRIPTION=The phpDocumentor package provides automatic documenting of php api directly from the source
 EAPI=5
 HOMEPAGE=http://pear.phpdoc.org/phpDocumentor
 IUSE=doc
@@ -10,4 +10,4 @@ RDEPEND=media-gfx/graphviz dev-lang/php[iconv,intl,xslt] dev-lang/php >=dev-php/
 SLOT=0
 SRC_URI=http://pear.phpdoc.org/get/phpDocumentor-2.3.0.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=68f1eeed2c29e2b9fd0c5ce3b4533c28
+_md5_=cb4e87047b93fdf69ea032d7561774e4

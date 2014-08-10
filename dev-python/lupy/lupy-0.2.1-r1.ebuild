@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/lupy-0.2.1-r1.ebuild,v 1.6 2010/07/03 22:46:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/lupy-0.2.1-r1.ebuild,v 1.7 2014/08/10 21:13:33 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ inherit distutils
 MY_PN="Lupy"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Lupy is a is a full-text indexer and search engine written in Python."
+DESCRIPTION="Lupy is a is a full-text indexer and search engine written in Python"
 HOMEPAGE="http://divmod.org/projects/lupy http://pypi.python.org/pypi/Lupy"
 SRC_URI="mirror://sourceforge/lupy/${MY_P}.tar.gz"
 

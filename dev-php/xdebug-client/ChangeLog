@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/xdebug-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.70 2014/05/03 13:58:25 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.71 2014/08/10 21:06:23 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  xdebug-client-2.2.0.ebuild, xdebug-client-2.2.1.ebuild,
+  xdebug-client-2.2.2.ebuild, xdebug-client-2.2.3.ebuild,
+  xdebug-client-2.2.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *xdebug-client-2.2.5 (03 May 2014)
 

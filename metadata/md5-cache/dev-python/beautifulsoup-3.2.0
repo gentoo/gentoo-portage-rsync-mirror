@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare test
 DEPEND==dev-lang/python-2*
-DESCRIPTION=HTML/XML parser for quick-turnaround applications like screen-scraping.
+DESCRIPTION=HTML/XML parser for quick-turnaround applications like screen-scraping
 EAPI=3
 HOMEPAGE=http://www.crummy.com/software/BeautifulSoup/ http://pypi.python.org/pypi/BeautifulSoup
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris
@@ -9,4 +9,4 @@ RDEPEND=!dev-python/beautifulsoup:0 =dev-lang/python-2*
 SLOT=python-2
 SRC_URI=http://www.crummy.com/software/BeautifulSoup/download/3.x/BeautifulSoup-3.2.0.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=cdb52e18908d18d29e3c76bdba7edb15
+_md5_=5153ca84625a6b6663a10cf3169811cc

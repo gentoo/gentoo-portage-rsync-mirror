@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-99999999.ebuild,v 1.4 2012/05/04 04:22:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-99999999.ebuild,v 1.5 2014/08/10 21:22:57 slyfox Exp $
 
 EAPI=3
 
@@ -9,7 +9,7 @@ EGIT_REPO_URI="git://repo.or.cz/tuxanci.git"
 
 inherit games cmake-utils ${GIT}
 
-DESCRIPTION="Tuxanci is first tux shooter inspired by game Bulanci."
+DESCRIPTION="Tuxanci is first tux shooter inspired by game Bulanci"
 HOMEPAGE="http://www.tuxanci.org/"
 if [[ ${PV} = 9999* ]]; then
 	SRC_URI=""

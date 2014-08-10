@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/smbkit/smbkit-0.0.1.20061010.ebuild,v 1.4 2007/11/16 15:15:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/smbkit/smbkit-0.0.1.20061010.ebuild,v 1.5 2014/08/10 21:18:30 slyfox Exp $
 
 inherit gnustep-2
 
-DESCRIPTION="SMBKit offers a samba library and headers for GNUstep."
+DESCRIPTION="SMBKit offers a samba library and headers for GNUstep"
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 

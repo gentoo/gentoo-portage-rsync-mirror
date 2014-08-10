@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/itsdangerous
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/itsdangerous/ChangeLog,v 1.10 2014/04/03 06:15:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/itsdangerous/ChangeLog,v 1.11 2014/08/10 21:12:29 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> itsdangerous-0.21.ebuild,
+  itsdangerous-0.22.ebuild, itsdangerous-0.23.ebuild, itsdangerous-0.24.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *itsdangerous-0.24 (03 Apr 2014)
 

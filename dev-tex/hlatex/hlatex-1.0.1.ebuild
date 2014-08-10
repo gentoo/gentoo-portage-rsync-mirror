@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-1.0.1.ebuild,v 1.8 2012/11/05 00:36:43 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-1.0.1.ebuild,v 1.9 2014/08/10 21:26:16 slyfox Exp $
 
 EAPI=3
 
 inherit toolchain-funcs latex-package
 
 MY_P="HLaTeX-${PV}"
-DESCRIPTION="HLaTeX is a LaTeX package to use Hangul with LaTeX."
+DESCRIPTION="HLaTeX is a LaTeX package to use Hangul with LaTeX"
 HOMEPAGE="http://project.ktug.or.kr/hlatex/"
 UHCFONTS="uhc-myoungjo-1.0.tar.gz
 	uhc-gothic-1.0.tar.gz

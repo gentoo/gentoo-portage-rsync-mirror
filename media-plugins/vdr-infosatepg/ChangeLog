@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-infosatepg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-infosatepg/ChangeLog,v 1.7 2014/02/23 20:00:22 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-infosatepg/ChangeLog,v 1.8 2014/08/10 21:06:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  vdr-infosatepg-0.0.11.ebuild, vdr-infosatepg-0.0.12.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-infosatepg-0.0.10.ebuild, vdr-infosatepg-0.0.11.ebuild:
@@ -38,4 +42,3 @@
   18 Feb 2009; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
   +vdr-infosatepg-0.0.8.ebuild:
   initial ebuild; thanks to T.Rheinhold
-

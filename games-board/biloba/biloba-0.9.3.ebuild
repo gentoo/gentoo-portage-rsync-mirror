@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/biloba-0.9.3.ebuild,v 1.5 2014/05/15 16:34:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/biloba-0.9.3.ebuild,v 1.6 2014/08/10 21:21:32 slyfox Exp $
 
 EAPI=2
 inherit autotools eutils games
 
-DESCRIPTION="a board game, up to 4 players, with AI and network."
+DESCRIPTION="a board game, up to 4 players, with AI and network"
 HOMEPAGE="http://biloba.sourceforge.net/"
 SRC_URI="mirror://sourceforge/biloba/${P}.tar.gz"
 

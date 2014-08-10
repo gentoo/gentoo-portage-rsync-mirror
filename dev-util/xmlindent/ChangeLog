@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xmlindent
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/ChangeLog,v 1.7 2012/07/29 16:01:34 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/ChangeLog,v 1.8 2014/08/10 21:30:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  xmlindent-0.2.17-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> xmlindent-0.2.17-r1.ebuild:
   Drop sparc keywords
@@ -26,4 +30,3 @@
 
   17 Dec 2005; Tom Martin <slarti@gentoo.org> +xmlindent-0.2.17.ebuild:
   Initial import, thanks to Sascha Herrmann <starfox899@web.de> in bug #113535.
-

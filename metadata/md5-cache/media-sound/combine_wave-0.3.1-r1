@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DESCRIPTION=sync up 2 audio ch. and/or combine 2 mono audio ch. into one stereo wave ch.
+DESCRIPTION=sync up 2 audio ch. and/or combine 2 mono audio ch. into one stereo wave ch
 EAPI=2
 HOMEPAGE=http://panteltje.com/panteltje/dvd/
 KEYWORDS=~amd64 ~x86
@@ -7,4 +7,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://panteltje.com/panteltje/dvd/combine_wave-0.3.1.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=49ae4aa1453e40ef355e1347f8d90831
+_md5_=bd8350b0b1e237c3c29a35502c67478e

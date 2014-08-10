@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.16 2013/04/14 06:34:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.17 2014/08/10 21:21:43 slyfox Exp $
 
 EAPI=2
 inherit games
 
-DESCRIPTION="Be a rampaging monster and destroy the city."
+DESCRIPTION="Be a rampaging monster and destroy the city"
 HOMEPAGE="http://evlweb.eecs.uic.edu/aej/AndyBattalion.html"
 SRC_URI="http://evlweb.eecs.uic.edu/aej/BATTALION/${PN}${PV}.tar.bz2"
 

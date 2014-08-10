@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.81.ebuild,v 1.9 2012/09/23 10:09:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.81.ebuild,v 1.10 2014/08/10 21:03:21 slyfox Exp $
 
 EAPI=4
 inherit autotools eutils
 
-DESCRIPTION="A heavily multi-threaded pluggable audio player."
+DESCRIPTION="A heavily multi-threaded pluggable audio player"
 HOMEPAGE="http://www.alsaplayer.org/"
 SRC_URI="http://www.alsaplayer.org/${P}.tar.bz2"
 

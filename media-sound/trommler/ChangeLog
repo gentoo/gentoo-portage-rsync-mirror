@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/trommler
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.27 2012/05/05 08:54:36 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.28 2014/08/10 21:12:43 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> trommler-3.8.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> trommler-3.8.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

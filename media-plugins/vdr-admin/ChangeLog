@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-admin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/ChangeLog,v 1.12 2012/04/30 19:56:16 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/ChangeLog,v 1.13 2014/08/10 21:06:00 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> vdr-admin-0.8.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   30 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-admin-0.8.0.ebuild:
   eapi=4, vdr-plugin-2.eclass
@@ -41,4 +44,3 @@
   15 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org> +files/rc-addon.sh,
   +metadata.xml, +vdr-admin-0.4.0.ebuild:
   initial version
-

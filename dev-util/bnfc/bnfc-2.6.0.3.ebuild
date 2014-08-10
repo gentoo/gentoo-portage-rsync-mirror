@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/bnfc-2.6.0.3.ebuild,v 1.1 2013/02/09 19:06:11 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/bnfc-2.6.0.3.ebuild,v 1.2 2014/08/10 21:25:29 slyfox Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit haskell-cabal
 MY_PN="BNFC"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A compiler front-end generator."
+DESCRIPTION="A compiler front-end generator"
 HOMEPAGE="http://bnfc.digitalgrammars.com/"
 SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 

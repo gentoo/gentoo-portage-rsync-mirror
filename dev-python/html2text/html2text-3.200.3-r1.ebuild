@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/html2text-3.200.3-r1.ebuild,v 1.3 2014/03/31 21:09:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/html2text-3.200.3-r1.ebuild,v 1.4 2014/08/10 21:11:59 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_{6,7},3_{2,3}} pypy pypy2_0 )
 
 inherit distutils-r1
 
-DESCRIPTION="Turn HTML into equivalent Markdown-structured text."
+DESCRIPTION="Turn HTML into equivalent Markdown-structured text"
 HOMEPAGE="http://www.aaronsw.com/2002/html2text/
 	https://github.com/aaronsw/html2text http://pypi.python.org/pypi/html2text"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.100 2014/07/28 13:44:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.101 2014/08/10 21:24:30 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  twisted-words-12.3.0.ebuild, twisted-words-13.0.0-r1.ebuild,
+  twisted-words-13.0.0.ebuild, twisted-words-13.2.0.ebuild,
+  twisted-words-14.0.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> twisted-words-13.0.0-r1.ebuild:
   Stable for ppc, wrt bug #512012

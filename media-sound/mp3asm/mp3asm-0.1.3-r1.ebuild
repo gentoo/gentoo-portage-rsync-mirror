@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3asm/mp3asm-0.1.3-r1.ebuild,v 1.12 2005/08/07 13:27:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3asm/mp3asm-0.1.3-r1.ebuild,v 1.13 2014/08/10 21:08:13 slyfox Exp $
 
 IUSE=""
 
 MY_P=${PN}-${PV}-${PR/r/}
-DESCRIPTION="A command line tool to clean and edit mp3 files."
+DESCRIPTION="A command line tool to clean and edit mp3 files"
 HOMEPAGE="http://sourceforge.net/projects/mp3asm/"
 SRC_URI="mirror://sourceforge/mp3asm/${MY_P}.tar.bz2"
 

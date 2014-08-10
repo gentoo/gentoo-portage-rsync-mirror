@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.2.ebuild,v 1.6 2014/06/18 14:11:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.2.ebuild,v 1.7 2014/08/10 21:15:10 slyfox Exp $
 
 EAPI=4
 inherit eutils user
 
 MY_P="${P/_/-}"
-DESCRIPTION="High-performance interface between the MTA and content checkers."
+DESCRIPTION="High-performance interface between the MTA and content checkers"
 HOMEPAGE="http://www.ijs.si/software/amavisd/"
 SRC_URI="http://www.ijs.si/software/amavisd/${MY_P}.tar.gz"
 

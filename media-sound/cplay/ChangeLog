@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cplay
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.25 2010/07/30 00:03:46 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.26 2014/08/10 21:05:01 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cplay-1.49.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   30 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> cplay-1.49.ebuild:
   Fix python.eclass usage wrt #313941 by Arfrever Frehtes Taifersar
@@ -92,4 +95,3 @@
   Initial release of cplay, which is curses based audio frontend that uses
   external programs for playing files. Supported players are:
   ogg123, mpg123, mpg321, splay, madplay and mikmod.
-

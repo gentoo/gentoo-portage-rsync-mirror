@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-base/gnustep-back-cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.40 2014/01/29 15:12:44 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.41 2014/08/10 21:18:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  gnustep-back-cairo-0.22.0.ebuild, gnustep-back-cairo-0.23.0.ebuild,
+  gnustep-back-cairo-0.24.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *gnustep-back-cairo-0.24.0 (29 Jan 2014)
 

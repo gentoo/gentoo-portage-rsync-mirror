@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/flask-xml-rpc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-xml-rpc/ChangeLog,v 1.4 2013/06/17 02:39:01 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-xml-rpc/ChangeLog,v 1.5 2014/08/10 21:11:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  flask-xml-rpc-0.1.2-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Jun 2013; Patrick Lauer <patrick@gentoo.org> flask-xml-rpc-0.1.2-r1.ebuild:
   Fix python targets as flask was downrated

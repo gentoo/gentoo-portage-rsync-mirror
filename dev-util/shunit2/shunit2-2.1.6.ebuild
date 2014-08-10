@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shunit2/shunit2-2.1.6.ebuild,v 1.1 2011/08/01 05:24:51 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shunit2/shunit2-2.1.6.ebuild,v 1.2 2014/08/10 21:29:29 slyfox Exp $
 
 EAPI="4"
 
 inherit eutils
 
-DESCRIPTION="Unit-test framework for Bourne-based shell scripts."
+DESCRIPTION="Unit-test framework for Bourne-based shell scripts"
 HOMEPAGE="http://code.google.com/p/shunit2/wiki/ProjectInfo"
 SRC_URI="http://shunit2.googlecode.com/files/${P}.tgz"
 

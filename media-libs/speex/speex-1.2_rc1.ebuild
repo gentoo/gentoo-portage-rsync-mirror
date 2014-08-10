@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_rc1.ebuild,v 1.11 2012/05/05 08:02:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_rc1.ebuild,v 1.12 2014/08/10 21:12:16 slyfox Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
 
 MY_P=${P/_} ; MY_P=${MY_P/_p/.}
 
-DESCRIPTION="Audio compression format designed for speech."
+DESCRIPTION="Audio compression format designed for speech"
 HOMEPAGE="http://www.speex.org"
 SRC_URI="http://downloads.xiph.org/releases/speex/${MY_P}.tar.gz"
 

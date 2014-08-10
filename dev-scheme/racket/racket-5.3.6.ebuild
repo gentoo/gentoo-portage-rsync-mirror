@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/racket-5.3.6.ebuild,v 1.2 2014/06/26 18:07:17 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/racket-5.3.6.ebuild,v 1.3 2014/08/10 21:25:26 slyfox Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ EAPI="4"
 inherit eutils
 #inherit git-2
 
-DESCRIPTION="Racket is a general-purpose programming language with strong support for domain-specific languages."
+DESCRIPTION="Racket is a general-purpose programming language with strong support for domain-specific languages"
 HOMEPAGE="http://racket-lang.org/"
 SRC_URI="http://download.racket-lang.org/installers/${PV}/${PN}/${P}-src-unix.tgz"
 #SRC_URI="http://pre.racket-lang.org/installers/plt-${PV}-src-unix.tgz"

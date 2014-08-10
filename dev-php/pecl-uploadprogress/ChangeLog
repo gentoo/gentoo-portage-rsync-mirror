@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/pecl-uploadprogress
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-uploadprogress/ChangeLog,v 1.4 2013/07/26 13:38:05 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-uploadprogress/ChangeLog,v 1.5 2014/08/10 21:04:13 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  pecl-uploadprogress-1.0.3.1-r1.ebuild, pecl-uploadprogress-1.0.3.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pecl-uploadprogress-1.0.3.1-r1 (26 Jul 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r2.ebuild,v 1.7 2014/03/21 20:53:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r2.ebuild,v 1.8 2014/08/10 21:08:18 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit autotools-utils flag-o-matic
 
 MY_P=${P/c/C}
 
-DESCRIPTION="A high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1."
+DESCRIPTION="A high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1"
 HOMEPAGE="http://www.coin3d.org/"
 SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/all/${MY_P}.tar.gz"
 

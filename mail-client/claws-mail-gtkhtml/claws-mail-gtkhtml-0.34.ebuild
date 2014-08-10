@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/claws-mail-gtkhtml-0.34.ebuild,v 1.3 2013/05/08 03:51:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/claws-mail-gtkhtml-0.34.ebuild,v 1.4 2014/08/10 21:17:14 slyfox Exp $
 
 inherit eutils
 
 MY_P="${PN#claws-mail-}2_viewer-${PV}"
 
-DESCRIPTION="Renders HTML mail using the gtkhtml2 rendering widget."
+DESCRIPTION="Renders HTML mail using the gtkhtml2 rendering widget"
 HOMEPAGE="http://www.claws-mail.org/"
 SRC_URI="http://www.claws-mail.org/downloads/plugins/${MY_P}.tar.gz"
 LICENSE="GPL-3"

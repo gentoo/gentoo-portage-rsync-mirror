@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01-r1.ebuild,v 1.1 2014/06/26 18:49:19 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01-r1.ebuild,v 1.2 2014/08/10 21:21:56 slyfox Exp $
 
 EAPI=5
 
 inherit eutils games
 
 MY_PN=${PN/-bin/}
-DESCRIPTION="Save Princess Mariana through one-on-one battles with demonic barbarians."
+DESCRIPTION="Save Princess Mariana through one-on-one battles with demonic barbarians"
 HOMEPAGE="http://www.tdbsoft.com/"
 SRC_URI="http://www.pcpages.com/tomberrr/downloads/${MY_PN}${PV/./}_linux.zip"
 

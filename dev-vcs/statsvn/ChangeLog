@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/statsvn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/statsvn/ChangeLog,v 1.4 2014/06/18 19:26:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/statsvn/ChangeLog,v 1.5 2014/08/10 21:23:39 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> statsvn-0.5.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   18 Jun 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/statsvn-0.4.1-fixstatcvsusage.patch, -statsvn-0.4.1.ebuild:

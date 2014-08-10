@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/atlas-c++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.41 2014/01/26 11:03:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.42 2014/08/10 21:07:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> atlas-c++-0.6.0.ebuild,
+  atlas-c++-0.6.1-r1.ebuild, atlas-c++-0.6.1.ebuild, atlas-c++-0.6.2.ebuild,
+  atlas-c++-0.6.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> atlas-c++-0.6.3.ebuild:
   Stable for x86, wrt bug #495708

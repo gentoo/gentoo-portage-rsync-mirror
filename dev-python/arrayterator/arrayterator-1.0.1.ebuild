@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/arrayterator/arrayterator-1.0.1.ebuild,v 1.4 2010/10/30 19:23:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/arrayterator/arrayterator-1.0.1.ebuild,v 1.5 2014/08/10 21:07:02 slyfox Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-DESCRIPTION="This class creates a buffered iterator for reading big arrays in small contiguous blocks."
+DESCRIPTION="This class creates a buffered iterator for reading big arrays in small contiguous blocks"
 HOMEPAGE="http://pypi.python.org/pypi/arrayterator"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 

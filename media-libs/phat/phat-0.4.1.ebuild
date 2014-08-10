@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/phat-0.4.1.ebuild,v 1.9 2012/05/05 08:02:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/phat-0.4.1.ebuild,v 1.10 2014/08/10 21:11:26 slyfox Exp $
 
 EAPI=2
 
-DESCRIPTION="PHAT is a collection of GTK+ widgets geared toward pro-audio apps."
+DESCRIPTION="PHAT is a collection of GTK+ widgets geared toward pro-audio apps"
 HOMEPAGE="http://phat.berlios.de"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 

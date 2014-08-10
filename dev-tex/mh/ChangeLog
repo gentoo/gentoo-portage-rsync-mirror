@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/mh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.36 2012/05/24 21:41:41 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.37 2014/08/10 21:27:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mh-20111011.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 May 2012; Alexis Ballier <aballier@gentoo.org> mh-20111011.ebuild:
   depend on tl-latexrecommended-2011 now that tl 2011 is stable.
@@ -125,4 +128,3 @@
   +mh-20080407.ebuild:
   Initial import, ebuild by Andrey Grozin <A.G.Grozin@inp.nsk.su> simplified
   by me, bug #214163
-

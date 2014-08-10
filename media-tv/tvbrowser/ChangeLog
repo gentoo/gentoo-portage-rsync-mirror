@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/tvbrowser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.41 2014/07/14 19:20:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.42 2014/08/10 21:03:19 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tvbrowser-3.2.1-r1.ebuild,
+  tvbrowser-3.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *tvbrowser-3.4 (12 Jul 2014)
 

@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/bomns-0.99.2.ebuild,v 1.4 2010/01/07 23:23:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/bomns-0.99.2.ebuild,v 1.5 2014/08/10 21:22:12 slyfox Exp $
 
 EAPI=2
 inherit autotools flag-o-matic games
 
-DESCRIPTION="A fast-paced multiplayer deathmatch arcade game."
+DESCRIPTION="A fast-paced multiplayer deathmatch arcade game"
 HOMEPAGE="http://greenridge.sourceforge.net"
 SRC_URI="mirror://sourceforge/greenridge/${P}.tar.gz"
 

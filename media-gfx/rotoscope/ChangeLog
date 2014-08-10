@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/rotoscope
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rotoscope/ChangeLog,v 1.6 2012/05/05 07:00:26 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rotoscope/ChangeLog,v 1.7 2014/08/10 21:16:04 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> rotoscope-0.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> rotoscope-0.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -22,4 +25,3 @@
 
   08 Jan 2008; Samuli Suominen <drac@gentoo.org> +rotoscope-0.2.ebuild:
   Initial commit wrt #170933, thanks to Hinrik Örn Sigurðsson for ebuild.
-

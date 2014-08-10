@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.6.2.1-r1.ebuild,v 1.1 2014/06/27 16:43:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.6.2.1-r1.ebuild,v 1.2 2014/08/10 21:12:16 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ DISTUTILS_SINGLE_IMPL=true
 
 inherit distutils-r1
 
-DESCRIPTION="an elegant GTK+ music client for the Music Player Daemon (MPD)."
+DESCRIPTION="an elegant GTK+ music client for the Music Player Daemon (MPD)"
 HOMEPAGE="http://sonata.berlios.de/"
 SRC_URI="http://codingteam.net/project/${PN}/download/file/${P}.tar.bz2"
 

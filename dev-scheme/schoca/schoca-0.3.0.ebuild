@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schoca/schoca-0.3.0.ebuild,v 1.4 2010/10/06 02:28:00 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schoca/schoca-0.3.0.ebuild,v 1.5 2014/08/10 21:25:42 slyfox Exp $
 
 EAPI="3"
 
 inherit eutils
 
-DESCRIPTION="Schoca is a Scheme implementation in OCaml."
+DESCRIPTION="Schoca is a Scheme implementation in OCaml"
 HOMEPAGE="http://sourceforge.net/projects/chesslib/"
 SRC_URI="mirror://sourceforge/chesslib/${P}.tar.bz2"
 

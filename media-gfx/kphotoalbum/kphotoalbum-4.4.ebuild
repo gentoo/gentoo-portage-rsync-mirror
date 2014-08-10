@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.4.ebuild,v 1.6 2014/05/13 18:04:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.4.ebuild,v 1.7 2014/08/10 21:15:31 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ hi hne hr hu is it ja km lt mai nb nds nl nn pa pl pt pt_BR ro ru se sk sv tr ug
 vi zh_CN zh_TW"
 inherit kde4-base
 
-DESCRIPTION="KDE Photo Album is a tool for indexing, searching, and viewing images."
+DESCRIPTION="KDE Photo Album is a tool for indexing, searching, and viewing images"
 HOMEPAGE="http://www.kphotoalbum.org/"
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.5.0.ebuild,v 1.2 2013/05/02 07:45:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.5.0.ebuild,v 1.3 2014/08/10 21:29:47 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils autotools
 
 MY_P=${PN}2-${PV}
 
-DESCRIPTION="The Visual Development Kit used for VDK Builder."
+DESCRIPTION="The Visual Development Kit used for VDK Builder"
 HOMEPAGE="http://vdkbuilder.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 

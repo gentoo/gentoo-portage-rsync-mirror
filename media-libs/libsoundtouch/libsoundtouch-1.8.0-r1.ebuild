@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.8.0-r1.ebuild,v 1.2 2014/06/18 19:49:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.8.0-r1.ebuild,v 1.3 2014/08/10 21:10:27 slyfox Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib-minimal
 
 MY_PN=${PN/lib}
 
-DESCRIPTION="Audio processing library for changing tempo, pitch and playback rates."
+DESCRIPTION="Audio processing library for changing tempo, pitch and playback rates"
 HOMEPAGE="http://www.surina.net/soundtouch/"
 SRC_URI="http://www.surina.net/soundtouch/${P/lib}.tar.gz"
 

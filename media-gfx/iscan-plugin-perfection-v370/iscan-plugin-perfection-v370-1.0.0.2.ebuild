@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-perfection-v370/iscan-plugin-perfection-v370-1.0.0.2.ebuild,v 1.1 2013/02/26 16:13:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-perfection-v370/iscan-plugin-perfection-v370-1.0.0.2.ebuild,v 1.2 2014/08/10 21:15:01 slyfox Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ MY_PVR="$(replace_version_separator 3 -)"
 SCANNER="Perfection V370"
 FIRMWARE="esfwdd.bin"
 
-DESCRIPTION="Epson ${SCANNER} and similar scanner plugin for SANE 'epkowa' backend."
+DESCRIPTION="Epson ${SCANNER} and similar scanner plugin for SANE 'epkowa' backend"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
 SRC_URI="amd64? ( http://dev.gentoo.org/~flameeyes/avasys/${PN}-${MY_PVR}.x86_64.rpm )
 	x86? ( http://dev.gentoo.org/~flameeyes/avasys/${PN}-${MY_PVR}.i386.rpm )"

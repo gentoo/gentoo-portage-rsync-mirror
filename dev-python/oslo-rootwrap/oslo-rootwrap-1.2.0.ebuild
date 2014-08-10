@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-rootwrap/oslo-rootwrap-1.2.0.ebuild,v 1.2 2014/07/06 12:44:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-rootwrap/oslo-rootwrap-1.2.0.ebuild,v 1.3 2014/08/10 21:14:56 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-DESCRIPTION="The Oslo Rootwrap allows fine filtering of shell commands to run as root from OpenStack services."
+DESCRIPTION="The Oslo Rootwrap allows fine filtering of shell commands to run as root from OpenStack services"
 HOMEPAGE="https://pypi.python.org/pypi/oslo.config"
 SRC_URI="mirror://pypi/${PN:0:1}/oslo.rootwrap/oslo.rootwrap-${PV}.tar.gz"
 S="${WORKDIR}/oslo.rootwrap-${PV}"

@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libspf2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.59 2013/01/04 09:04:38 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.60 2014/08/10 21:16:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libspf2-1.2.9-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Jan 2013; Eray Aslan <eras@gentoo.org> -libspf2-1.2.9-r1.ebuild,
   -libspf2-1.2.9-r2.ebuild, -libspf2-1.2.9.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.116 2014/06/20 08:48:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.117 2014/08/10 21:07:30 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  beautifulsoup-3.1.0.1-r1.ebuild, beautifulsoup-3.1.0.1-r2.ebuild,
+  beautifulsoup-3.2.0.ebuild, beautifulsoup-3.2.1-r1.ebuild,
+  beautifulsoup-3.2.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Jun 2014; Tobias Klausmann <klausman@gentoo.org>
   beautifulsoup-4.2.0.ebuild:

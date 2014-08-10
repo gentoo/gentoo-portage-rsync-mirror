@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libsieve
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/ChangeLog,v 1.20 2012/05/13 12:40:25 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/ChangeLog,v 1.21 2014/08/10 21:16:22 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libsieve-2.2.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 May 2012; Agostino Sarubbo <ago@gentoo.org> -libsieve-2.2.5.ebuild:
   Remove old
@@ -80,4 +83,3 @@
   +libsieve-2.2.1.ebuild:
   libsieve - A library for parsing, sorting and filtering your mail. bug #149770
   dep for DBMail (bug #22331) - thanks go to Aaron.
-

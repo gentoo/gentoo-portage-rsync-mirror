@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.5.1.ebuild,v 1.1 2014/07/22 16:20:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.5.1.ebuild,v 1.2 2014/08/10 21:28:47 slyfox Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ else
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~m68k ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 fi
 
-DESCRIPTION="A small build system similar to make."
+DESCRIPTION="A small build system similar to make"
 HOMEPAGE="http://github.com/martine/ninja"
 
 LICENSE="Apache-2.0"

@@ -1,6 +1,6 @@
 DEFINED_PHASES=install postinst prepare
 DEPEND=dev-libs/libpcre >=net-mail/ripmime-1.4.0.9 >=net-mail/mailbase-1
-DESCRIPTION=This is a full-transparent proxy-server for POP3-Clients.
+DESCRIPTION=This is a full-transparent proxy-server for POP3-Clients
 EAPI=4
 HOMEPAGE=http://p3scan.sf.net/
 KEYWORDS=~amd64 ~ppc ~x86
@@ -9,4 +9,4 @@ RDEPEND=net-firewall/iptables sys-apps/openrc
 SLOT=0
 SRC_URI=mirror://sourceforge/p3scan/p3scan-2.3.2.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=4e133d8f0db1fa9c34013a6ee2975a36
+_md5_=784dd155c3167184eb6c998728cd8bff

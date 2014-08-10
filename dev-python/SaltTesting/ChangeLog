@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/SaltTesting
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/SaltTesting/ChangeLog,v 1.3 2014/05/06 01:08:02 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/SaltTesting/ChangeLog,v 1.4 2014/08/10 21:06:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> SaltTesting-0.5.2.ebuild,
+  SaltTesting-0.5.3.ebuild, SaltTesting-2014.4.24.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *SaltTesting-2014.4.24 (06 May 2014)
 
@@ -19,4 +23,3 @@
   +files/SaltTesting-0.5.2-silence-DepricationWarning.patch, +metadata.xml:
   Initial import, required testing tools needed in the several Salt Stack
   projects.
-

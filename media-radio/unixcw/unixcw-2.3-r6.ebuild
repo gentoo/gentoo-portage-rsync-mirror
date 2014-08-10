@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-2.3-r6.ebuild,v 1.6 2013/03/02 21:52:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-2.3-r6.ebuild,v 1.7 2014/08/10 21:04:02 slyfox Exp $
 
 EAPI=2
 
 inherit autotools eutils multilib
 
-DESCRIPTION="A package of programs that fit together to form a morse code tutor program."
+DESCRIPTION="A package of programs that fit together to form a morse code tutor program"
 HOMEPAGE="http://radio.linux.org.au/?sectpat=morse"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/apps/ham/morse/${P}.tgz
 	qt4? (	mirror://gentoo/unixcw-2.3-qt3to4.patch.gz )"

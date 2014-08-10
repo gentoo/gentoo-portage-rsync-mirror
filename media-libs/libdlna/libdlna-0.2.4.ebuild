@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/libdlna-0.2.4.ebuild,v 1.5 2013/04/21 13:26:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/libdlna-0.2.4.ebuild,v 1.6 2014/08/10 21:08:39 slyfox Exp $
 
 EAPI=4
 inherit eutils multilib
 
-DESCRIPTION="A reference open-source implementation of DLNA (Digital Living Network Alliance) standards."
+DESCRIPTION="A reference open-source implementation of DLNA (Digital Living Network Alliance) standards"
 HOMEPAGE="http://libdlna.geexbox.org"
 SRC_URI="http://libdlna.geexbox.org/releases/${P}.tar.bz2"
 

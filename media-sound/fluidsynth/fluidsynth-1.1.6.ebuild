@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.1.6.ebuild,v 1.7 2012/12/27 08:17:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.1.6.ebuild,v 1.8 2014/08/10 21:05:38 slyfox Exp $
 
 EAPI=4
 inherit cmake-utils flag-o-matic
 
-DESCRIPTION="Fluidsynth is a software real-time synthesizer based on the Soundfont 2 specifications."
+DESCRIPTION="Fluidsynth is a software real-time synthesizer based on the Soundfont 2 specifications"
 HOMEPAGE="http://www.fluidsynth.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

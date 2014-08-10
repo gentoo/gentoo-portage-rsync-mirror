@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/g-brief
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.32 2012/05/09 17:15:47 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.33 2014/08/10 21:25:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> g-brief-4.0.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> g-brief-4.0.2.ebuild:
   keyword ~amd64-fbsd
@@ -105,4 +108,3 @@
   g-brief will help you writing formless letters in German and English. It
   accepts a lot of additional commands for address, phone, internet-availability
   etc.
-

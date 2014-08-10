@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jif/jif-3.1_rc1.ebuild,v 1.3 2012/05/11 13:24:14 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jif/jif-3.1_rc1.ebuild,v 1.4 2014/08/10 21:28:08 slyfox Exp $
 
 inherit java-pkg-2
 
@@ -13,7 +13,7 @@ MY_P=${MY_PN}${MY_PV_MAJOR}_src_${MY_PV_MINOR}
 
 IUSE=""
 
-DESCRIPTION="JIF is an IDE for the creation of text adventures based on Graham Nelson's Inform standard."
+DESCRIPTION="JIF is an IDE for the creation of text adventures based on Graham Nelson's Inform standard"
 HOMEPAGE="http://www.slade.altervista.org/JIF/"
 SRC_URI="http://www.slade.altervista.org/downloads/${MY_P}.zip"
 

@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.22.0.ebuild,v 1.7 2012/12/20 13:08:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.22.0.ebuild,v 1.8 2014/08/10 21:18:12 slyfox Exp $
 
 EAPI=4
 inherit gnustep-base
 
-DESCRIPTION="Cairo back-end component for the GNUstep GUI Library."
+DESCRIPTION="Cairo back-end component for the GNUstep GUI Library"
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-back-${PV}.tar.gz"
 

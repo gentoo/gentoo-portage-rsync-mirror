@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test
 DEPEND=dev-python/paramiko dev-python/setuptools doc? ( dev-python/sphinx ) test? ( <dev-python/fudge-1.0 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) test? ( dev-python/nose )
-DESCRIPTION=Fabric is a simple, Pythonic tool for remote execution and deployment.
+DESCRIPTION=Fabric is a simple, Pythonic tool for remote execution and deployment
 EAPI=4
 HOMEPAGE=http://fabfile.org http://pypi.python.org/pypi/Fabric
 IUSE=doc test
@@ -10,4 +10,4 @@ RDEPEND=dev-python/paramiko || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =de
 SLOT=0
 SRC_URI=mirror://pypi/F/Fabric/Fabric-1.5.0.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=6e55092a8196157951cc22e4a189a532
+_md5_=54a557655e926fe4a5e318310995cca2

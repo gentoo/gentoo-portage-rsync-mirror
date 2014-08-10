@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/esci-interpreter-gt-s80/esci-interpreter-gt-s80-0.2.1.1.ebuild,v 1.2 2013/02/26 16:15:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/esci-interpreter-gt-s80/esci-interpreter-gt-s80-0.2.1.1.ebuild,v 1.3 2014/08/10 21:14:01 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit rpm versionator multilib
 MY_PV="$(get_version_component_range 1-3)"
 MY_PVR="$(replace_version_separator 3 -)"
 
-DESCRIPTION="Epson GT-S50 and GT-S80 scanner plugins for SANE 'epkowa' backend."
+DESCRIPTION="Epson GT-S50 and GT-S80 scanner plugins for SANE 'epkowa' backend"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
 SRC_URI="amd64? ( http://dev.gentoo.org/~flameeyes/avasys/${PN}-${MY_PVR}.x86_64.rpm )
 	x86? ( http://dev.gentoo.org/~flameeyes/avasys/${PN}-${MY_PVR}.i386.rpm )"

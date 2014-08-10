@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-0.991.ebuild,v 1.10 2008/02/04 20:42:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-0.991.ebuild,v 1.11 2014/08/10 21:26:16 slyfox Exp $
 
 inherit latex-package
 
-DESCRIPTION="HLaTeX is a LaTeX package to use Hangul with LaTeX."
+DESCRIPTION="HLaTeX is a LaTeX package to use Hangul with LaTeX"
 HOMEPAGE="http://ftp.ktug.or.kr/mirrors/HLaTeX/hlatex.html"
 #SRC_URI="ftp://ftp.dante.de/tex-archive/languages/korean/HLaTeX.tar.gz ftp://ftp.dante.de/tex-archive/fonts/korean/HLaTeX.tar.gz"
 SRC_URI="mirror://gentoo/${P}.tar.gz

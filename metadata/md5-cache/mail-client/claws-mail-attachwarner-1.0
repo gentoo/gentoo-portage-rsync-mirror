@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install
 DEPEND=~mail-client/claws-mail-3.9.0 nls? ( >=sys-devel/gettext-0.12.1 ) virtual/pkgconfig
-DESCRIPTION=Warn about missing attachment, if it's mentioned in message body.
+DESCRIPTION=Warn about missing attachment, if it's mentioned in message body
 HOMEPAGE=http://www.claws-mail.org/
 IUSE=nls
 KEYWORDS=amd64 ~ppc x86
@@ -8,4 +8,4 @@ LICENSE=GPL-3
 RDEPEND=~mail-client/claws-mail-3.9.0 nls? ( >=sys-devel/gettext-0.12.1 )
 SLOT=0
 SRC_URI=http://www.claws-mail.org/downloads/plugins/attachwarner-1.0.tar.gz
-_md5_=78eeb1c18a95c6f5824274cf930d5840
+_md5_=74486fce938bb46b17fa348f5189942c

@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/multimux-0.2.5.2.ebuild,v 1.5 2008/07/06 17:42:26 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/multimux-0.2.5.2.ebuild,v 1.6 2014/08/10 21:09:12 slyfox Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
 IUSE=""
 
-DESCRIPTION="combines up to 8 audio mono wave ch. into one big multi ch. wave file."
+DESCRIPTION="combines up to 8 audio mono wave ch. into one big multi ch. wave file"
 HOMEPAGE="http://panteltje.com/panteltje/dvd/"
 SRC_URI="http://panteltje.com/panteltje/dvd/${P}.tgz"
 

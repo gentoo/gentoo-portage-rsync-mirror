@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/aruba-0.5.4-r1.ebuild,v 1.4 2014/07/22 15:58:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/aruba-0.5.4-r1.ebuild,v 1.5 2014/08/10 21:25:06 slyfox Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -13,7 +13,7 @@ RUBY_FAKEGEM_GEMSPEC="aruba.gemspec"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Cucumber steps for driving out command line applications."
+DESCRIPTION="Cucumber steps for driving out command line applications"
 HOMEPAGE="https://github.com/cucumber/aruba"
 LICENSE="MIT"
 

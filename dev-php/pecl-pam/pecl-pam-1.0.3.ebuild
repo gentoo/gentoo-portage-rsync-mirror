@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-pam/pecl-pam-1.0.3.ebuild,v 1.1 2013/03/05 11:34:40 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-pam/pecl-pam-1.0.3.ebuild,v 1.2 2014/08/10 21:03:09 slyfox Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ inherit php-ext-pecl-r2 pam
 
 KEYWORDS="~amd64 ~x86"
 
-DESCRIPTION="This extension provides PAM (Pluggable Authentication Modules) integration."
+DESCRIPTION="This extension provides PAM (Pluggable Authentication Modules) integration"
 LICENSE="PHP-2.02"
 SLOT="0"
 IUSE="debug"

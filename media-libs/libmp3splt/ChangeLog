@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmp3splt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.43 2014/07/27 11:25:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.44 2014/08/10 21:09:45 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libmp3splt-0.5.9.ebuild,
+  libmp3splt-0.7.2.ebuild, libmp3splt-0.7.3.ebuild, libmp3splt-0.9.0.ebuild,
+  libmp3splt-0.9.1.ebuild, libmp3splt-0.9.1a.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> libmp3splt-0.9.1.ebuild:
   x86 stable wrt bug #514880

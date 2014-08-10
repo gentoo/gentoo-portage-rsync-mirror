@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.3.ebuild,v 1.3 2014/01/26 11:03:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.3.ebuild,v 1.4 2014/08/10 21:07:33 slyfox Exp $
 EAPI=5
 
 inherit eutils autotools
 
 MY_PN="Atlas-C++"
 MY_P=${MY_PN}-${PV}
-DESCRIPTION="Atlas protocol, used in role playing games at worldforge."
+DESCRIPTION="Atlas protocol, used in role playing games at worldforge"
 HOMEPAGE="http://www.worldforge.org/dev/eng/libraries/atlas_cpp"
 SRC_URI="mirror://sourceforge/worldforge/${MY_P}.tar.bz2"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0-r1.ebuild,v 1.2 2014/03/12 18:27:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0-r1.ebuild,v 1.3 2014/08/10 21:02:58 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PYTHON_REQ_USE="xml"
 DISTUTILS_SINGLE_IMPL=1
 inherit eutils distutils-r1
 
-DESCRIPTION="Digital video jukebox (PVR, DVR)."
+DESCRIPTION="Digital video jukebox (PVR, DVR)"
 HOMEPAGE="http://www.freevo.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

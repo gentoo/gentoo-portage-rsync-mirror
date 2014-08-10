@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/montecarlo/montecarlo-0.ebuild,v 1.1 2011/03/22 15:31:14 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/montecarlo/montecarlo-0.ebuild,v 1.2 2014/08/10 21:14:01 slyfox Exp $
 
 EAPI="4"
 
 inherit font
 
 MY_PN="MonteCarlo"
-DESCRIPTION="monospace font, created by programmers, for programmers."
+DESCRIPTION="monospace font, created by programmers, for programmers"
 HOMEPAGE="http://www.bok.net/MonteCarlo/"
 SRC_URI="http://www.bok.net/${MY_PN}/downloads/${MY_PN}-PCF.tgz
 	bdf? ( http://www.bok.net/${MY_PN}/downloads/${MY_PN}-BDF.tgz )"

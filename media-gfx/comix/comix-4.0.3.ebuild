@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-4.0.3.ebuild,v 1.4 2009/05/17 16:08:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-4.0.3.ebuild,v 1.5 2014/08/10 21:13:44 slyfox Exp $
 
 inherit python
 
-DESCRIPTION="A GTK image viewer specifically designed to handle comic books."
+DESCRIPTION="A GTK image viewer specifically designed to handle comic books"
 HOMEPAGE="http://comix.sourceforge.net"
 SRC_URI="mirror://sourceforge/comix/${P}.tar.gz"
 LICENSE="GPL-2"

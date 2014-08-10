@@ -1,6 +1,6 @@
 DEFINED_PHASES=install postinst prepare unpack
 DEPEND=>=app-arch/rpm2targz-9.0.0.3g
-DESCRIPTION=Intel's implementation of the OpenCL standard optimized for Intel processors.
+DESCRIPTION=Intel's implementation of the OpenCL standard optimized for Intel processors
 EAPI=4
 HOMEPAGE=http://software.intel.com/en-us/articles/opencl-sdk/
 IUSE=tools
@@ -11,4 +11,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://registrationcenter.intel.com/irc_nas/2563/intel_sdk_for_ocl_applications_2012_x64.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=b7298fa0e208ce608acbe87f9c0f28ac
+_md5_=2fe90c56b74afb512d4a8ea6ba5a403a

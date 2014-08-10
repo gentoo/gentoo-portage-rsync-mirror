@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/visualvm/visualvm-1.3.3-r1.ebuild,v 1.2 2012/05/21 19:03:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/visualvm/visualvm-1.3.3-r1.ebuild,v 1.3 2014/08/10 21:29:54 slyfox Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ VISUALVM_PKG="visualvm_harness-1.3"
 VISUALVM_TARBALL="visualvm_133-src.tar.gz"
 NETBEANS_PROFILER_TARBALL="netbeans-profiler-visualvm_release701.tar.gz"
 
-DESCRIPTION="Integrates commandline JDK tools and profiling capabilites."
+DESCRIPTION="Integrates commandline JDK tools and profiling capabilites"
 HOMEPAGE="http://icedtea.classpath.org"
 SRC_URI="
 	http://icedtea.classpath.org/download/visualvm/${VISUALVM_PKG}.tar.gz

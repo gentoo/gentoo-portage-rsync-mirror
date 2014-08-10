@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.19.ebuild,v 1.2 2011/11/05 19:33:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.19.ebuild,v 1.3 2014/08/10 21:22:56 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -10,7 +10,7 @@ PYTHON_TESTS_FAILURES_TOLERANT_ABIS="*-jython"
 
 inherit distutils
 
-DESCRIPTION="An object-relational mapper for Python developed at Canonical."
+DESCRIPTION="An object-relational mapper for Python developed at Canonical"
 HOMEPAGE="https://storm.canonical.com/ http://pypi.python.org/pypi/storm"
 SRC_URI="http://launchpad.net/storm/trunk/${PV}/+download/${P}.tar.bz2"
 

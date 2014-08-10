@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.5.ebuild,v 1.5 2012/08/02 18:25:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.5.ebuild,v 1.6 2014/08/10 21:16:54 slyfox Exp $
 
 EAPI=4
 SUPPORT_PYTHON_ABIS="1"
@@ -8,7 +8,7 @@ RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
 inherit distutils
 
-DESCRIPTION="Python interface for the GNU scientific library (gsl)."
+DESCRIPTION="Python interface for the GNU scientific library (gsl)"
 HOMEPAGE="http://pygsl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prepare setup
 DEPEND=dev-libs/openssl >=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
-DESCRIPTION=A set of Objective-C classes that model a mail system.
+DESCRIPTION=A set of Objective-C classes that model a mail system
 EAPI=4
 HOMEPAGE=http://www.collaboration-world.com/pantomime/
 IUSE=debug doc
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/openssl >=gnustep-base/gnustep-make-2.0 virtual/gnustep-back de
 SLOT=0
 SRC_URI=http://download.gna.org/gnustep-nonfsf/Pantomime-1.2.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	gnustep-2	5c8ef29c1d72267699559746ef1c0096	gnustep-base	87d599af9a09a523d6d233e462f3758e	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=7d195ef9e48d4fbf80981e17875e3ed8
+_md5_=7f8181d021e267e031b80c39075ec937

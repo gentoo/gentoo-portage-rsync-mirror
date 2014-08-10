@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/codecgraph-20120114.ebuild,v 1.3 2012/04/20 20:33:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/codecgraph-20120114.ebuild,v 1.4 2014/08/10 21:04:44 slyfox Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
 
 inherit base python
 
-DESCRIPTION="Generates a graph based on the ALSA description of an HD Audio codec."
+DESCRIPTION="Generates a graph based on the ALSA description of an HD Audio codec"
 HOMEPAGE="http://helllabs.org/codecgraph/"
 SRC_URI="http://helllabs.org/codecgraph/${P}.tar.gz"
 LICENSE="GPL-2"

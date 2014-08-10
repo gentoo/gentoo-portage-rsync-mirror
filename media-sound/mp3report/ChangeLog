@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3report
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3report/ChangeLog,v 1.4 2007/02/22 01:15:36 peper Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3report/ChangeLog,v 1.5 2014/08/10 21:08:29 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mp3report-1.0.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
@@ -15,4 +18,3 @@
 
   01 Oct 2005; <chainsaw@gentoo.org> +metadata.xml, +mp3report-1.0.2.ebuild:
   Initial commit. Ebuild based on the one by Rene Zbinden <rene.zbinden@solnet.ch> in bug #81172.
-

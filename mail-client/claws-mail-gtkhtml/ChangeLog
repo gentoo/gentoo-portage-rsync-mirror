@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-gtkhtml
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.95 2013/05/08 03:51:12 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.96 2014/08/10 21:17:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  claws-mail-gtkhtml-0.34.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 May 2013; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-gtkhtml-0.34.ebuild:
@@ -426,4 +430,3 @@
   19 Dec 2006; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   +claws-mail-gtkhtml-0.13.ebuild:
   This is the new name of mail-client/sylpheed-claws-gtkhtml.
-

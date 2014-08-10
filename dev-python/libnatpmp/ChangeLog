@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libnatpmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libnatpmp/ChangeLog,v 1.14 2014/04/06 17:23:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libnatpmp/ChangeLog,v 1.15 2014/08/10 21:13:24 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libnatpmp-20130911.ebuild,
+  libnatpmp-20140401-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   06 Apr 2014; Michał Górny <mgorny@gentoo.org> libnatpmp-20140401-r1.ebuild:
   Enable PYTHON_TARGETS=pypy.

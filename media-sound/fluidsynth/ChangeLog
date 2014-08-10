@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.80 2014/06/24 22:16:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.81 2014/08/10 21:05:38 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fluidsynth-1.1.1.ebuild,
+  fluidsynth-1.1.5.ebuild, fluidsynth-1.1.6-r1.ebuild, fluidsynth-1.1.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 Jun 2014; Michał Górny <mgorny@gentoo.org> fluidsynth-1.1.6-r1.ebuild:
   Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for

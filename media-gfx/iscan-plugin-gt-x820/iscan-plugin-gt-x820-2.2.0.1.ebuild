@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-x820/iscan-plugin-gt-x820-2.2.0.1.ebuild,v 1.1 2013/02/18 09:49:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-x820/iscan-plugin-gt-x820-2.2.0.1.ebuild,v 1.2 2014/08/10 21:14:54 slyfox Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ inherit rpm versionator multilib
 MY_PV="$(get_version_component_range 1-3)"
 MY_PVR="$(replace_version_separator 3 -)"
 
-DESCRIPTION="Epson Perfection V600 scanner plugin for SANE 'epkowa' backend."
+DESCRIPTION="Epson Perfection V600 scanner plugin for SANE 'epkowa' backend"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
 SRC_URI="amd64? ( http://dev.gentoo.org/~flameeyes/avasys/${PN}-${MY_PVR}.x86_64.rpm )
 	x86? ( http://dev.gentoo.org/~flameeyes/avasys/${PN}-${MY_PVR}.i386.rpm )"

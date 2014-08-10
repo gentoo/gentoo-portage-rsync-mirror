@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.7.1.ebuild,v 1.1 2014/05/02 06:46:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.7.1.ebuild,v 1.2 2014/08/10 21:07:14 slyfox Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -8,7 +8,7 @@ PYTHON_REQ_USE="sqlite"
 
 inherit twisted-r1
 
-DESCRIPTION="Object database implemented on top of SQLite."
+DESCRIPTION="Object database implemented on top of SQLite"
 HOMEPAGE="http://divmod.org/trac/wiki/DivmodAxiom http://pypi.python.org/pypi/Axiom"
 SRC_URI="mirror://pypi/${TWISTED_PN:0:1}/${TWISTED_PN}/${TWISTED_P}.tar.gz"
 

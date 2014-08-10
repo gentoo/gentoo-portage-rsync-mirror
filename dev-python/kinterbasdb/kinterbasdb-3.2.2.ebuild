@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.2.2.ebuild,v 1.3 2010/11/10 17:20:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.2.2.ebuild,v 1.4 2014/08/10 21:13:03 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
-DESCRIPTION="firebird/interbase interface for Python."
+DESCRIPTION="firebird/interbase interface for Python"
 HOMEPAGE="http://kinterbasdb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/firebird/${P}.tar.gz"
 

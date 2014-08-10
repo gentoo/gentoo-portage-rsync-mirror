@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.124 2014/05/04 14:39:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.125 2014/08/10 21:16:43 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pygments-1.4.ebuild,
+  pygments-1.5-r1.ebuild, pygments-1.5.ebuild, pygments-1.6-r1.ebuild,
+  pygments-1.6.ebuild, pygments-1.6_p20140324.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 May 2014; Mike Gilbert <floppym@gentoo.org> pygments-1.6_p20140324.ebuild:
   Add a comment explaining the 2to3 call for python3.2.

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-2.7.2.ebuild,v 1.3 2010/03/09 12:59:04 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-2.7.2.ebuild,v 1.4 2014/08/10 21:13:35 slyfox Exp $
 
 inherit java-pkg-2 eutils versionator
 
@@ -8,7 +8,7 @@ MY_V=$(delete_all_version_separators)
 MY_P="aoi${MY_V}"
 MY_MANUAL_V="2.6"
 S="${WORKDIR}/ArtOfIllusion${MY_V}"
-DESCRIPTION="A free, open-source 3D modelling and rendering studio."
+DESCRIPTION="A free, open-source 3D modelling and rendering studio"
 SRC_URI="mirror://sourceforge/aoi/${MY_P}.zip
 	doc? ( mirror://sourceforge/aoi/manual${MY_MANUAL_V}.zip )"
 HOMEPAGE="http://aoi.sourceforge.net/index"

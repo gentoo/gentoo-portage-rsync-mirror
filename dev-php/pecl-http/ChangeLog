@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/pecl-http
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/ChangeLog,v 1.16 2014/08/08 09:06:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/ChangeLog,v 1.17 2014/08/10 21:02:04 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pecl-http-1.7.4.ebuild,
+  pecl-http-1.7.5.ebuild, pecl-http-1.7.6-r1.ebuild, pecl-http-1.7.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pecl-http-1.7.6-r1 (08 Aug 2014)
 

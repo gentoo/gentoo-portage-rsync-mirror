@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.10.ebuild,v 1.12 2012/06/09 00:02:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.10.ebuild,v 1.13 2014/08/10 21:08:55 slyfox Exp $
 
 IUSE=""
 
 inherit eutils multilib
 
-DESCRIPTION="An application/library for connecting OSS apps to Jackit."
+DESCRIPTION="An application/library for connecting OSS apps to Jackit"
 HOMEPAGE="http://gige.xdv.org/soft/libjackasyn"
 SRC_URI="http://gige.xdv.org/soft/libjackasyn/download/${P}.tar.gz"
 

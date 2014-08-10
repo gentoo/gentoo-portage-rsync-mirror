@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_ms/pecl-mysqlnd_ms-1.5.2.ebuild,v 1.1 2013/07/03 21:11:06 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_ms/pecl-mysqlnd_ms-1.5.2.ebuild,v 1.2 2014/08/10 21:02:56 slyfox Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ inherit php-ext-pecl-r2
 
 KEYWORDS="~amd64"
 
-DESCRIPTION="A replication and load balancing plugin for the mysqlnd library."
+DESCRIPTION="A replication and load balancing plugin for the mysqlnd library"
 LICENSE="PHP-3"
 SLOT="0"
 IUSE=""

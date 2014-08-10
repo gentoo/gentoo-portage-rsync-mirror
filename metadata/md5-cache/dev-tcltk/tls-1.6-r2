@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install
 DEPEND=dev-lang/tcl dev-libs/openssl tk? ( dev-lang/tk )
-DESCRIPTION=TLS OpenSSL extension to Tcl.
+DESCRIPTION=TLS OpenSSL extension to Tcl
 EAPI=3
 HOMEPAGE=http://tls.sourceforge.net/
 IUSE=tk
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/tls/tls1.6-src.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c7c5d357e8d1eeee6d114dbaa10e3523
+_md5_=aaaac294d01b6851de47bd2169b2f39f

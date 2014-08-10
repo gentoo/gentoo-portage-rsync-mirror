@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/simpleparse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.33 2014/07/17 23:44:40 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.34 2014/08/10 21:22:17 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  simpleparse-2.1.1-r1.ebuild, simpleparse-2.1.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *simpleparse-2.1.1-r1 (17 Jul 2014)
 
@@ -151,4 +155,3 @@
   
   New ebuild authored by Zach Forrest <zach@disinformation.ca>
   This closes bug #910!
-

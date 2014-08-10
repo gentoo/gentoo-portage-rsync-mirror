@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/kaa-base
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.29 2013/07/01 15:04:16 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.30 2014/08/10 21:12:38 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> kaa-base-0.6.0-r1.ebuild,
+  kaa-base-0.6.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   01 Jul 2013; Mike Gilbert <floppym@gentoo.org> kaa-base-0.6.0-r1.ebuild:
   Set DISTUTILS_IN_SOURCE_BUILD to resolve build failure.

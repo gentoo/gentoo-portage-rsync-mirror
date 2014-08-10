@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raul
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.17 2012/11/24 14:36:49 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.18 2014/08/10 21:11:40 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> raul-0.8.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 Nov 2012; Alexis Ballier <aballier@gentoo.org> raul-0.8.0.ebuild,
   +files/raul-0.8.0-gcc47.patch:
@@ -77,4 +80,3 @@
   29 May 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
   +raul-0.4.0.ebuild:
   initial import, ebuild by me
-

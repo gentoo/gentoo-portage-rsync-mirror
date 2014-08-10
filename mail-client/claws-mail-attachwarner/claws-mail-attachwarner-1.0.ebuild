@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/claws-mail-attachwarner-1.0.ebuild,v 1.5 2013/05/07 18:35:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/claws-mail-attachwarner-1.0.ebuild,v 1.6 2014/08/10 21:17:05 slyfox Exp $
 
 MY_P="${P#claws-mail-}"
 
-DESCRIPTION="Warn about missing attachment, if it's mentioned in message body."
+DESCRIPTION="Warn about missing attachment, if it's mentioned in message body"
 HOMEPAGE="http://www.claws-mail.org/"
 SRC_URI="http://www.claws-mail.org/downloads/plugins/${MY_P}.tar.gz"
 LICENSE="GPL-3"

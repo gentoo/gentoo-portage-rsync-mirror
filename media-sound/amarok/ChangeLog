@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.471 2014/07/30 23:58:57 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.472 2014/08/10 21:03:34 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> amarok-2.8.0-r1.ebuild,
+  amarok-2.8.0-r2.ebuild, amarok-2.8.0-r3.ebuild, amarok-2.8.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *amarok-2.8.0-r3 (30 Jul 2014)
 

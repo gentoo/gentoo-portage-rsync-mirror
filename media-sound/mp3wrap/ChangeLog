@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3wrap
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3wrap/ChangeLog,v 1.10 2007/02/03 19:48:10 flameeyes Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3wrap/ChangeLog,v 1.11 2014/08/10 21:09:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mp3wrap-0.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
@@ -29,4 +32,3 @@
   Initial revision.
   
   Submitted by: TGL <degrenier@easyconnect.fr>
-

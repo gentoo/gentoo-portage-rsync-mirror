@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/vtcl/vtcl-1.6.0-r1.ebuild,v 1.4 2009/09/22 13:15:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/vtcl/vtcl-1.6.0-r1.ebuild,v 1.5 2014/08/10 21:26:50 slyfox Exp $
 
-DESCRIPTION="Visual Tcl is a high-quality application development environment."
+DESCRIPTION="Visual Tcl is a high-quality application development environment"
 HOMEPAGE="http://vtcl.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"

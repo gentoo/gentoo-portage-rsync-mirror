@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/pyusb-1.0.0_alpha1.ebuild,v 1.3 2012/07/25 17:57:50 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/pyusb-1.0.0_alpha1.ebuild,v 1.4 2014/08/10 21:20:21 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -11,7 +11,7 @@ inherit distutils
 
 MY_P="${P/_alpha/-a}"
 
-DESCRIPTION="USB support for Python."
+DESCRIPTION="USB support for Python"
 HOMEPAGE="http://pyusb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 

@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/g-brief-4.0.2.ebuild,v 1.18 2012/05/09 17:15:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/g-brief-4.0.2.ebuild,v 1.19 2014/08/10 21:25:47 slyfox Exp $
 
 inherit latex-package
 
 S=${WORKDIR}/${PN}
 
 # checksum from official ftp site changes frequently so we mirror it
-DESCRIPTION="LaTeX styles for formless letters in German or English."
+DESCRIPTION="LaTeX styles for formless letters in German or English"
 SRC_URI="mirror://gentoo/${P}.zip"
 HOMEPAGE="http://www.ctan.org/tex-archive/macros/latex/contrib/g-brief/"
 LICENSE="LPPL-1.2"

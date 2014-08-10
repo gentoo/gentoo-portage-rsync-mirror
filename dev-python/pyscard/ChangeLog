@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyscard
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyscard/ChangeLog,v 1.3 2012/12/21 23:06:33 alonbl Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyscard/ChangeLog,v 1.4 2014/08/10 21:17:49 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pyscard-1.6.12.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> pyscard-1.6.12.ebuild:
   Add swig dependency, per bug#415301, thanks to Kristian

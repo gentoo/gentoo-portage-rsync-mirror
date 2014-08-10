@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timemachine
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/ChangeLog,v 1.20 2012/05/05 08:54:14 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/ChangeLog,v 1.21 2014/08/10 21:12:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> timemachine-0.3.1.ebuild,
+  timemachine-0.3.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> timemachine-0.3.1.ebuild,
   timemachine-0.3.3.ebuild:
@@ -82,4 +86,3 @@
   
   Thanks to Toni Arnold <toni__arnold@bluewin.ch> for the ebuild.
   Closes bug #52555.
-

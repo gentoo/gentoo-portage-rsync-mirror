@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=dev-lang/tcl dev-libs/openssl tk? ( dev-lang/tk )
-DESCRIPTION=TLS OpenSSL extension to Tcl.
+DESCRIPTION=TLS OpenSSL extension to Tcl
 HOMEPAGE=http://tls.sourceforge.net/
 IUSE=tk
 KEYWORDS=alpha amd64 hppa ppc sparc x86
@@ -10,4 +10,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/tls/tls1.5.0-src.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=28c4fc5e8aa9450d2a9c04662afd317e
+_md5_=b8419a03f159dd4d5c116e34fa180809

@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.9.2.ebuild,v 1.1 2014/04/17 22:00:29 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.9.2.ebuild,v 1.2 2014/08/10 21:25:35 slyfox Exp $
 
 EAPI=5
 inherit elisp-common multilib eutils flag-o-matic
 
-DESCRIPTION="Scheme48 is an implementation of the Scheme Programming Language."
+DESCRIPTION="Scheme48 is an implementation of the Scheme Programming Language"
 HOMEPAGE="http://www.s48.org/"
 SRC_URI="http://www.s48.org/${PV}/${P}.tgz"
 

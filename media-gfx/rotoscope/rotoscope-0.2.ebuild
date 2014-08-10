@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rotoscope/rotoscope-0.2.ebuild,v 1.6 2012/05/05 07:00:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rotoscope/rotoscope-0.2.ebuild,v 1.7 2014/08/10 21:16:04 slyfox Exp $
 
 EAPI=2
 
-DESCRIPTION="Graphics program that can be used to give photos a cartoon-like appearance."
+DESCRIPTION="Graphics program that can be used to give photos a cartoon-like appearance"
 HOMEPAGE="http://www.toonyphotos.com"
 SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.orig.tar.gz"
 

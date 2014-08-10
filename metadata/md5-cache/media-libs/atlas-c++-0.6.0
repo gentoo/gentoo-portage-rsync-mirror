@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install
 DEPEND=doc? ( app-doc/doxygen )
-DESCRIPTION=Atlas protocol, used in role playing games at worldforge.
+DESCRIPTION=Atlas protocol, used in role playing games at worldforge
 HOMEPAGE=http://www.worldforge.org/dev/eng/libraries/atlas_cpp
 IUSE=bzip2 doc zlib
 KEYWORDS=~amd64 ~x86
@@ -8,4 +8,4 @@ LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=mirror://sourceforge/worldforge/Atlas-C++-0.6.0.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=849fe23c559e5735cea950ff35232806
+_md5_=004f07fedbd4fde088c06afccf563a34

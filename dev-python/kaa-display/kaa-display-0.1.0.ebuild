@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/kaa-display-0.1.0.ebuild,v 1.9 2012/06/04 19:41:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/kaa-display-0.1.0.ebuild,v 1.10 2014/08/10 21:12:47 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="2.4 3.* *-jython 2.7-pypy-*"
 
 inherit distutils
 
-DESCRIPTION="Python API providing Low level support for various displays, such as X11 or framebuffer."
+DESCRIPTION="Python API providing Low level support for various displays, such as X11 or framebuffer"
 HOMEPAGE="http://freevo.sourceforge.net/kaa/"
 SRC_URI="mirror://sourceforge/freevo/${P}.tar.gz"
 

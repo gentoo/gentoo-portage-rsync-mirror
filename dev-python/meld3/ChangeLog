@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/meld3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/ChangeLog,v 1.14 2014/05/12 15:48:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/ChangeLog,v 1.15 2014/08/10 21:13:49 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> meld3-0.6.10-r1.ebuild,
+  meld3-0.6.10.ebuild, meld3-0.6.7.ebuild, meld3-0.6.8.ebuild,
+  meld3-0.6.9-r1.ebuild, meld3-1.0.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *meld3-1.0.0 (12 May 2014)
 

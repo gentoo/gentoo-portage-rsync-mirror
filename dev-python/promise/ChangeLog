@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/promise
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/promise/ChangeLog,v 1.4 2011/04/14 19:01:05 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/promise/ChangeLog,v 1.5 2014/08/10 21:15:32 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> promise-0.2.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *promise-0.2.2 (14 Apr 2011)
 
@@ -22,4 +25,3 @@
   05 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> +promise-0.2.0.ebuild,
   +metadata.xml:
   Initial version of promise.
-

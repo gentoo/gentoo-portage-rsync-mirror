@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spamprobe
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.29 2013/02/19 17:26:44 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.30 2014/08/10 21:17:24 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> spamprobe-1.4d.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Feb 2013; Ryan Hill <dirtyepic@gentoo.org> spamprobe-1.4d.ebuild,
   +files/spamprobe-1.4d-gcc47.patch:
@@ -123,4 +126,3 @@
   +spamprobe-0.9h.ebuild:
   Initial version. Closes #19192, ebuild and patch submitted by Alexander
   Schneider <A.Schneider@magicspace.de>.
-

@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.17 2014/03/04 19:18:24 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.18 2014/08/10 21:22:46 slyfox Exp $
 
 EAPI=5
 inherit eutils games
 
-DESCRIPTION="A game similar to Super Mario Bros."
+DESCRIPTION="A game similar to Super Mario Bros"
 HOMEPAGE="http://super-tux.sourceforge.net"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnomoradio
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/ChangeLog,v 1.24 2012/07/21 14:43:47 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/ChangeLog,v 1.25 2014/08/10 21:06:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gnomoradio-0.15.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Jul 2012; Pacho Ramos <pacho@gentoo.org>
   +files/gnomoradio-0.15.1-glib-single-include.patch, gnomoradio-0.15.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/prefsmodule
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/prefsmodule/ChangeLog,v 1.15 2008/03/08 13:17:07 coldwind Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/prefsmodule/ChangeLog,v 1.16 2014/08/10 21:18:21 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  prefsmodule-1.1.1_pre20061204-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   prefsmodule-1.1.1_pre20061204-r1.ebuild:
@@ -84,4 +88,3 @@
   09 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org>
   +prefsmodule-1.1.1_pre20040909.ebuild:
   Added Package
-

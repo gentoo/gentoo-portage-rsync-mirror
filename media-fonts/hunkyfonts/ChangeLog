@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/hunkyfonts
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hunkyfonts/ChangeLog,v 1.14 2013/02/24 16:43:15 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hunkyfonts/ChangeLog,v 1.15 2014/08/10 21:13:54 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> hunkyfonts-0.3.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 Feb 2013; Ulrich Müller <ulm@gentoo.org> hunkyfonts-0.3.1.ebuild:
   Fix LICENSE, bug 437082.
@@ -52,4 +55,3 @@
   +hunkyfonts-0.2.0.ebuild:
   Initial import. Ebuild submitted by Przemyslaw Meciag <p_maciag@wp.pl>,
   closing bug #61449.
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/git-python
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.10 2013/05/07 14:57:29 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.11 2014/08/10 21:11:41 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> git-python-0.1.7.ebuild,
+  git-python-0.3.2_rc1-r1.ebuild, git-python-0.3.2_rc1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *git-python-0.3.2_rc1-r1 (07 May 2013)
 

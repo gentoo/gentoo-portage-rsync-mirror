@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-libs/openssl app-arch/unzip !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=DomainKeys Identified Mail library from Alt-N Inc.
+DESCRIPTION=DomainKeys Identified Mail library from Alt-N Inc
 EAPI=4
 HOMEPAGE=http://libdkim.sourceforge.net
 KEYWORDS=amd64 x86
@@ -9,4 +9,4 @@ RDEPEND=!mail-filter/libdkim-exim dev-libs/openssl
 SLOT=0
 SRC_URI=mirror://sourceforge/libdkim/libdkim-1.0.21.zip
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	autotools-utils	3727db64c7b960903d5033280f108080	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f55bed1250a6199577ea4b2ab8441230
+_md5_=25a404fd8c0b937cca718a928d1b9463

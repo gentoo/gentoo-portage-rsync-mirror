@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/galaxyhack-1.74.ebuild,v 1.5 2012/11/04 18:30:21 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/galaxyhack-1.74.ebuild,v 1.6 2014/08/10 21:20:51 slyfox Exp $
 
 EAPI=4
 inherit eutils flag-o-matic games
 
-DESCRIPTION="Multiplayer AI script based strategy game."
+DESCRIPTION="Multiplayer AI script based strategy game"
 HOMEPAGE="http://galaxyhack.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	mirror://gentoo/${PN}.png"

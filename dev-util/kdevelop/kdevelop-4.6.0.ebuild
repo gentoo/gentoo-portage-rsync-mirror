@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.6.0.ebuild,v 1.2 2014/03/13 09:48:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.6.0.ebuild,v 1.3 2014/08/10 21:28:20 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ pl pt pt_BR ru sk sl sv th uk zh_CN zh_TW"
 VIRTUALX_REQUIRED=test
 inherit kde4-base
 
-DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C++ and many other languages."
+DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C++ and many other languages"
 LICENSE="GPL-2 LGPL-2"
 IUSE="+cmake +cxx debug okteta qthelp"
 SRC_URI="mirror://kde/stable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.xz"

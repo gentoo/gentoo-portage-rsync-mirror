@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install
 DEPEND=app-arch/zip x11-libs/wxGTK:2.8[X] contrib? ( app-text/hunspell dev-libs/boost:= dev-libs/libgamin ) virtual/pkgconfig
-DESCRIPTION=The open source, cross platform, free C++ IDE.
+DESCRIPTION=The open source, cross platform, free C++ IDE
 EAPI=5
 HOMEPAGE=http://www.codeblocks.org/
 IUSE=contrib debug pch static-libs
@@ -10,4 +10,4 @@ RDEPEND=app-arch/zip x11-libs/wxGTK:2.8[X] contrib? ( app-text/hunspell dev-libs
 SLOT=0
 SRC_URI=mirror://berlios/codeblocks/codeblocks_12.11-1.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=9dbd2334c8df304d51b55a78e13d80f0
+_md5_=316f6d454cc37cb919d99b0299ba7c2b

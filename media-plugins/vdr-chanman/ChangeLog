@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-chanman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-chanman/ChangeLog,v 1.5 2014/02/23 14:32:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-chanman/ChangeLog,v 1.6 2014/08/10 21:06:07 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> vdr-chanman-0.0.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-chanman-0.0.6.ebuild:

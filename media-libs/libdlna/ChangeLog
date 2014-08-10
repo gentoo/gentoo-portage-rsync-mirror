@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdlna
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.10 2013/04/21 13:26:35 lu_zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.11 2014/08/10 21:08:39 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libdlna-0.2.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Apr 2013; Luca Barbato <lu_zero@gentoo.org>
   -files/libdlna-0.2.3-ffmpeg_api.patch,

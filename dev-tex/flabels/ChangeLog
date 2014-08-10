@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/flabels
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/flabels/ChangeLog,v 1.5 2012/10/07 12:40:44 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/flabels/ChangeLog,v 1.6 2014/08/10 21:25:36 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> flabels-1.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Oct 2012; Agostino Sarubbo <ago@gentoo.org> flabels-1.0.ebuild:
   EAPI 4

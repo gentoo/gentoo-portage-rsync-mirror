@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.4a_p3.ebuild,v 1.2 2012/11/07 20:13:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.4a_p3.ebuild,v 1.3 2014/08/10 21:25:09 slyfox Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ MY_P=${MY_P/_beta*/-beta}
 BGL_RELEASE=${PV/_*/}
 PATCHSET="1"
 
-DESCRIPTION="Bigloo is a Scheme implementation."
+DESCRIPTION="Bigloo is a Scheme implementation"
 HOMEPAGE="http://www-sop.inria.fr/indes/fp/Bigloo/bigloo.html"
 SRC_URI="ftp://ftp-sop.inria.fr/members/Cyprien.Nicolas/mirror/bigloo-${BGL_RELEASE}-patchset-${PATCHSET}.tbz2
 	ftp://ftp-sop.inria.fr/indes/fp/Bigloo/${MY_P}.tar.gz"

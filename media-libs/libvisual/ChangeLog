@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvisual
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.55 2014/08/07 19:05:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.56 2014/08/10 21:10:43 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libvisual-0.4.0-r1.ebuild,
+  libvisual-0.4.0-r2.ebuild, libvisual-0.4.0-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Aug 2014; Jeroen Roovers <jer@gentoo.org> libvisual-0.4.0-r3.ebuild:
   Stable for HPPA (bug #512012).

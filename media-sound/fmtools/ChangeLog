@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fmtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.18 2014/05/04 08:26:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.19 2014/08/10 21:05:46 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fmtools-1.0.2-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org> fmtools-2.0.7.ebuild:
   Stable for x86, wrt bug #502856

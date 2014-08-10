@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdkim/libdkim-1.0.21-r2.ebuild,v 1.3 2014/03/03 23:49:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdkim/libdkim-1.0.21-r2.ebuild,v 1.4 2014/08/10 21:16:12 slyfox Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 
 inherit autotools-utils eutils toolchain-funcs
 
-DESCRIPTION="DomainKeys Identified Mail library from Alt-N Inc."
+DESCRIPTION="DomainKeys Identified Mail library from Alt-N Inc"
 HOMEPAGE="http://libdkim.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 

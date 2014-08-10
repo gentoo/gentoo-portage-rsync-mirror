@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare test
 DEPEND=dev-python/setuptools =dev-lang/python-2*
-DESCRIPTION=You can integrate gettext support, themed icons and scrollkeeper based documentation in distutils.
+DESCRIPTION=You can integrate gettext support, themed icons and scrollkeeper based documentation in distutils
 EAPI=3
 HOMEPAGE=https://launchpad.net/python-distutils-extra
 KEYWORDS=amd64 ppc x86
@@ -9,4 +9,4 @@ RDEPEND=dev-python/setuptools =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://launchpad.net/python-distutils-extra/trunk/2.33/+download/python-distutils-extra-2.33.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=4d17f24d9cf592308aa244a0c3111de7
+_md5_=ee132299259f998fdaa3d7459f0cc2b8

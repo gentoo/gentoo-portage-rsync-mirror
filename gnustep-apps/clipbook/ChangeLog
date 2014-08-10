@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/clipbook
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/clipbook/ChangeLog,v 1.16 2007/11/16 15:28:54 beandog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/clipbook/ChangeLog,v 1.17 2014/08/10 21:19:32 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  clipbook-0.6.0.8.3-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   16 Nov 2007; Steve Dibb <beandog@gentoo.org> clipbook-0.6.0.8.3-r1.ebuild:
   amd64 stable, bug 195990
@@ -85,4 +89,3 @@
   04 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
   +clipbook-0.94_pre20040928.ebuild:
   Original import; keyworded for ~x86.
-

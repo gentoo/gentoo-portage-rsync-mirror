@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/aop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/aop/ChangeLog,v 1.10 2009/01/30 16:06:42 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/aop/ChangeLog,v 1.11 2014/08/10 21:21:40 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> aop-0.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   30 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/aop-0.6-as-needed.patch, aop-0.6.ebuild:
@@ -35,4 +38,3 @@
   02 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +aop-0.6.ebuild:
   initial commit - ebuild submitted by Adrian Fruehwirth via bug #72611
-

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare unpack
 DEPEND=dev-texlive/texlive-latex dev-texlive/texlive-latexrecommended lyx? ( app-office/lyx ) virtual/latex-base >=sys-apps/texinfo-4.2-r5
-DESCRIPTION=LaTeX macros for writing documents following the ABNT norms.
+DESCRIPTION=LaTeX macros for writing documents following the ABNT norms
 EAPI=3
 HOMEPAGE=http://abntex.codigolivre.org.br/ http://abntex.sourceforge.net/
 IUSE=doc examples lyx
@@ -10,4 +10,4 @@ RDEPEND=dev-texlive/texlive-latex dev-texlive/texlive-latexrecommended lyx? ( ap
 SLOT=0
 SRC_URI=mirror://sourceforge/abntex/abntex-0.9-beta2.tar.gz doc? ( mirror://sourceforge/abntex/abntex-doc-0.9-beta2.tar.gz )
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=b4b8ee918e817b34c8d3da5f084330f4
+_md5_=5015f94608a8309795333c9387655bec

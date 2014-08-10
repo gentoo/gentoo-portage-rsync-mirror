@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-3.2.0.ebuild,v 1.4 2013/03/02 21:52:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-3.2.0.ebuild,v 1.5 2014/08/10 21:04:02 slyfox Exp $
 
 EAPI=4
 
 inherit autotools eutils flag-o-matic multilib
 
-DESCRIPTION="A package of programs that fit together to form a morse code tutor program."
+DESCRIPTION="A package of programs that fit together to form a morse code tutor program"
 HOMEPAGE="http://unixcw.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tailor/tailor-0.9.35.ebuild,v 1.4 2012/02/16 13:10:33 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tailor/tailor-0.9.35.ebuild,v 1.5 2014/08/10 21:29:38 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-DESCRIPTION="A tool to migrate changesets between version control systems."
+DESCRIPTION="A tool to migrate changesets between version control systems"
 HOMEPAGE="http://wiki.darcs.net/index.html/Tailor"
 SRC_URI="http://darcs.arstecnica.it/${P}.tar.gz"
 

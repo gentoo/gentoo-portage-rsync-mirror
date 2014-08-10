@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=dev-python/requests[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/beautifulsoup:4[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] test? ( dev-python/mock[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-vcs/git-1.8.2.1
-DESCRIPTION=Python library for oEmbed with auto-discovered and manually added providers.
+DESCRIPTION=Python library for oEmbed with auto-discovered and manually added providers
 EAPI=5
 HOMEPAGE=https://github.com/rafaelmartins/pyoembed
 IUSE=test python_targets_python2_7
@@ -9,4 +9,4 @@ RDEPEND=dev-python/requests[python_targets_python2_7(-)?,-python_single_target_p
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 _eclasses_=distutils-r1	d48d51c220f1678179fc4ab13b534ec1	eutils	06133990e861be0fe60c2b428fd025d9	git-r3	6ebae45064cb04482f3c702632dd9528	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=553c291fe537ff00705a77db7a79a120
+_md5_=457e539c8be60534fda4605fe9d68865

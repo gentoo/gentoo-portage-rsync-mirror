@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-1.4d.ebuild,v 1.8 2013/02/19 17:26:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-1.4d.ebuild,v 1.9 2014/08/10 21:17:24 slyfox Exp $
 
 EAPI=2
 inherit eutils
 
-DESCRIPTION="Fast, intelligent, automatic spam detector using Bayesian analysis."
+DESCRIPTION="Fast, intelligent, automatic spam detector using Bayesian analysis"
 HOMEPAGE="http://spamprobe.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblingoteach/liblingoteach-0.2.3.ebuild,v 1.4 2012/05/05 08:02:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblingoteach/liblingoteach-0.2.3.ebuild,v 1.5 2014/08/10 21:09:03 slyfox Exp $
 
 EAPI=2
 
-DESCRIPTION="A library to support lingoteach-ui and for generic lesson development."
+DESCRIPTION="A library to support lingoteach-ui and for generic lesson development"
 HOMEPAGE="http://lingoteach.sourceforge.net"
 SRC_URI="mirror://sourceforge/lingoteach/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare setup
 DEPEND=virtual/libiconv berkdb? ( >=sys-libs/db-3.2 ) !berkdb? ( sqlite? ( >=dev-db/sqlite-3.6.22 ) !sqlite? ( tokyocabinet? ( dev-db/tokyocabinet ) !tokyocabinet? ( >=sys-libs/db-3.2 ) ) ) sci-libs/gsl app-arch/pax !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=Bayesian spam filter designed with fast algorithms, and tuned for speed.
+DESCRIPTION=Bayesian spam filter designed with fast algorithms, and tuned for speed
 EAPI=5
 HOMEPAGE=http://bogofilter.sourceforge.net/
 IUSE=berkdb sqlite tokyocabinet
@@ -10,4 +10,4 @@ RDEPEND=virtual/libiconv berkdb? ( >=sys-libs/db-3.2 ) !berkdb? ( sqlite? ( >=de
 SLOT=0
 SRC_URI=mirror://sourceforge/bogofilter/bogofilter-1.2.4.tar.bz2
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=081cbb396f6f9f2d704cce31d35b5eb6
+_md5_=a655b62726ab78b9859ecb14e0966403

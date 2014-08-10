@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/xdebug-client-2.2.0.ebuild,v 1.9 2012/12/30 20:24:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/xdebug-client-2.2.0.ebuild,v 1.10 2014/08/10 21:06:23 slyfox Exp $
 
 KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
 
 MY_PV="${PV/_/}"
 MY_PV="${MY_PV/rc/RC}"
 
-DESCRIPTION="Xdebug client for the Common Debugger Protocol (DBGP)."
+DESCRIPTION="Xdebug client for the Common Debugger Protocol (DBGP)"
 HOMEPAGE="http://www.xdebug.org/"
 SRC_URI="http://pecl.php.net/get/xdebug-${MY_PV}.tgz"
 LICENSE="Xdebug"

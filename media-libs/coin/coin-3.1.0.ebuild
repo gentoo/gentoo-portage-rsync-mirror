@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.0.ebuild,v 1.12 2013/08/09 13:42:58 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.0.ebuild,v 1.13 2014/08/10 21:08:18 slyfox Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit eutils
 MY_P=${P/c/C}
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="a high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1."
+DESCRIPTION="a high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1"
 HOMEPAGE="http://www.coin3d.org/"
 SRC_URI="http://dev.gentoo.org/~xarthisius/distfiles/${MY_P}.tar.gz"
 

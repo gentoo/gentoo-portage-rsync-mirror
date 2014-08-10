@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/vtcl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/vtcl/ChangeLog,v 1.9 2009/09/22 13:15:45 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/vtcl/ChangeLog,v 1.10 2014/08/10 21:26:50 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> vtcl-1.6.0-r1.ebuild,
+  vtcl-1.6.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Sep 2009; Markus Meier <maekke@gentoo.org> vtcl-1.6.0-r1.ebuild:
   amd64 stable, bug #281410
@@ -33,4 +37,3 @@
   +vtcl-1.6.0.ebuild:
   added new ebuild as per bug # 42324
   ebuild written by Minati jean michel
-

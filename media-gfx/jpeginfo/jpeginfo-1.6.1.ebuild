@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/jpeginfo-1.6.1.ebuild,v 1.8 2012/03/18 15:58:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/jpeginfo-1.6.1.ebuild,v 1.9 2014/08/10 21:15:12 slyfox Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Prints information and tests integrity of JPEG/JFIF files."
+DESCRIPTION="Prints information and tests integrity of JPEG/JFIF files"
 HOMEPAGE="http://www.kokkonen.net/tjko/projects.html"
 SRC_URI="http://www.kokkonen.net/tjko/src/${P}.tar.gz"
 

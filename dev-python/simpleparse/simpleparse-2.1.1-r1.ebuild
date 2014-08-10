@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.1.1-r1.ebuild,v 1.1 2014/07/17 23:44:40 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.1.1-r1.ebuild,v 1.2 2014/08/10 21:22:17 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -9,7 +9,7 @@ inherit distutils-r1
 MY_PN="SimpleParse"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A Parser Generator for mxTextTools."
+DESCRIPTION="A Parser Generator for mxTextTools"
 HOMEPAGE="http://simpleparse.sourceforge.net http://pypi.python.org/pypi/SimpleParse"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 

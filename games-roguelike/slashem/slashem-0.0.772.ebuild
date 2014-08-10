@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.8 2013/03/02 21:20:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.9 2014/08/10 21:20:58 slyfox Exp $
 
 inherit eutils flag-o-matic games
 
@@ -9,7 +9,7 @@ SE_FIXVER="${SE_VER}F2"
 SE_PN="se007e7f2.tar.gz"
 SE_CONF="conf12s.tar.gz"
 
-DESCRIPTION="Super Lotsa Added Stuff Hack - Extended Magic. A Nethack Variant."
+DESCRIPTION="Super Lotsa Added Stuff Hack - Extended Magic. A Nethack Variant"
 HOMEPAGE="http://www.slashem.org/"
 #SRC_URI="http://www.juiblex.co.uk/nethack/slashem/${SE_PN}"
 SRC_URI="mirror://sourceforge/slashem/${SE_PN}

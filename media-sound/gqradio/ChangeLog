@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gqradio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.20 2014/02/02 09:38:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.21 2014/08/10 21:06:29 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gqradio-1.9.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
   +files/gqradio-1.9.2-underlinking.patch, gqradio-1.9.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmnote
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/ChangeLog,v 1.11 2012/05/05 08:02:29 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/ChangeLog,v 1.12 2014/08/10 21:09:29 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libmnote-0.5.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libmnote-0.5.6.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -28,4 +31,3 @@
   08 Jan 2003; Martin Holzer <mholzer@gentoo.org> libmnote-0.5.6.ebuild
   files/digest-libmnote-0.5.6 ChangeLog : 
   Initial version.
-

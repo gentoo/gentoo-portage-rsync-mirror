@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xjump
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/ChangeLog,v 1.11 2013/11/11 18:45:46 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/ChangeLog,v 1.12 2014/08/10 21:23:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xjump-2.7.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   11 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> xjump-2.7.5.ebuild:
   EAPI=5; update to latest debian patchball

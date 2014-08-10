@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fusil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fusil/ChangeLog,v 1.10 2014/06/18 10:28:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fusil/ChangeLog,v 1.11 2014/08/10 21:11:34 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fusil-1.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   18 Jun 2014; Ian Delaney <idella4@gentoo.org> fusil-1.5.ebuild:
   drop pypy2_0, tidy

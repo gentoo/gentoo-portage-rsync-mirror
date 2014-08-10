@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.8.ebuild,v 1.2 2013/08/28 06:26:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.8.ebuild,v 1.3 2014/08/10 21:29:20 slyfox Exp $
 
 EAPI=5
 
 inherit eutils autotools autotools-utils
 
-DESCRIPTION="Compiles finite state machines from regular languages into executable code."
+DESCRIPTION="Compiles finite state machines from regular languages into executable code"
 HOMEPAGE="http://www.complang.org/ragel/"
 SRC_URI="http://www.complang.org/ragel/${P}.tar.gz"
 

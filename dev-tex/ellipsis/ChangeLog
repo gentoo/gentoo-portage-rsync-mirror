@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ellipsis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ellipsis/ChangeLog,v 1.5 2012/11/09 19:01:10 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ellipsis/ChangeLog,v 1.6 2014/08/10 21:25:17 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ellipsis-1.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 Nov 2012; Agostino Sarubbo <ago@gentoo.org> ellipsis-1.6.ebuild:
   Add ~amd64, wrt bug #442138

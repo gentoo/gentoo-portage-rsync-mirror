@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.80 2014/07/06 12:41:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.81 2014/08/10 21:09:52 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> dulwich-0.9.4.ebuild,
+  dulwich-0.9.5.ebuild, dulwich-0.9.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> dulwich-0.9.4.ebuild,
   dulwich-0.9.5.ebuild, dulwich-0.9.7.ebuild:

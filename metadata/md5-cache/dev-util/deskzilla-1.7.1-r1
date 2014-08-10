@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst preinst prepare setup unpack
 DEPEND=>=dev-java/java-config-2.1.9-r1
-DESCRIPTION=A desktop client for Mozilla's Bugzilla bug tracking system.
+DESCRIPTION=A desktop client for Mozilla's Bugzilla bug tracking system
 EAPI=5
 HOMEPAGE=http://almworks.com/deskzilla
 IUSE=elibc_FreeBSD
@@ -11,4 +11,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://d1.almworks.com/.files/deskzilla-1_7_1_without_jre.tar.gz http://dev.gentoo.org/~ercpe/distfiles/dev-util/deskzilla/deskzilla_gentoo.license
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=dd0b23ddbf0599b700f267b18fafa496
+_md5_=fbd8712e9f694a978e8770256ef89631

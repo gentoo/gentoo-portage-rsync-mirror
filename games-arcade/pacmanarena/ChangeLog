@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/pacmanarena
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/ChangeLog,v 1.15 2011/05/24 06:53:32 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/ChangeLog,v 1.16 2014/08/10 21:22:28 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pacmanarena-0.15.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 May 2011; Tupone Alfredo <tupone@gentoo.org> pacmanarena-0.15.ebuild,
   +files/pacmanarena-0.15-underlink.patch:
@@ -57,4 +60,3 @@
   25 Sep 2003; Michael Sterrett <msterret@gentoo.org> pacmanarena-0.01.ebuild:
   initial commit; ebuild based on the one submitted by Gustavo Felisberto via
   bug 29425
-

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=media-sound/pulseaudio media-libs/ftgl >=media-libs/libprojectm-2.1.0 >=media-libs/libprojectm-qt-2.1.0 virtual/opengl virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
-DESCRIPTION=A Qt GUI for projectM that visualizes your pulseaudio output.
+DESCRIPTION=A Qt GUI for projectM that visualizes your pulseaudio output
 EAPI=5
 HOMEPAGE=http://projectm.sourceforge.net
 KEYWORDS=amd64 x86
@@ -9,4 +9,4 @@ RDEPEND=media-sound/pulseaudio media-libs/ftgl >=media-libs/libprojectm-2.1.0 >=
 SLOT=0
 SRC_URI=mirror://sourceforge/projectm/projectM-complete-2.1.0-Source.tar.gz
 _eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=b7f134a21ece59f0d4ae8904947bcd6e
+_md5_=dac16a3cbe55e48975d2cb82add00ff5

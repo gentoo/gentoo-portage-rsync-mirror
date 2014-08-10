@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aylet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.17 2012/05/05 08:10:27 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.18 2014/08/10 21:04:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> aylet-0.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> aylet-0.5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -57,4 +60,3 @@
   03 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> aylet-0.3.ebuild,
   metadata.xml:
   Initial ebuild provided by Vlastimil Holer <xholer@fi.muni.cz> in bug #35848.
-

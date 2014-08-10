@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-4.0.4-r1.ebuild,v 1.1 2013/08/15 02:43:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-4.0.4-r1.ebuild,v 1.2 2014/08/10 21:13:44 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PLOCALES="ca cs es fr hr hu id ja ko pl pt_BR ru sv zh_CN zh_TW"
 
 inherit eutils fdo-mime gnome2-utils l10n python-single-r1
 
-DESCRIPTION="A GTK image viewer specifically designed to handle comic books."
+DESCRIPTION="A GTK image viewer specifically designed to handle comic books"
 HOMEPAGE="http://comix.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

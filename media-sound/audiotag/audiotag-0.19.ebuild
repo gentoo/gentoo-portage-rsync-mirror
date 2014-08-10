@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/audiotag-0.19.ebuild,v 1.5 2014/03/11 19:10:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/audiotag-0.19.ebuild,v 1.6 2014/08/10 21:04:03 slyfox Exp $
 
-DESCRIPTION="A command-line tool for mass tagging/renaming of audio files."
+DESCRIPTION="A command-line tool for mass tagging/renaming of audio files"
 HOMEPAGE="http://github.com/Daenyth/audiotag"
 SRC_URI="http://github.com/downloads/Daenyth/${PN}/${P}.tar.bz2"
 

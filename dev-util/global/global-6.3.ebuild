@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-6.3.ebuild,v 1.1 2014/06/10 01:22:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-6.3.ebuild,v 1.2 2014/08/10 21:27:32 slyfox Exp $
 
 EAPI="5"
 
 inherit autotools elisp-common eutils
 
-DESCRIPTION="GNU Global is a tag system to find the locations of a specified object in various sources."
+DESCRIPTION="GNU Global is a tag system to find the locations of a specified object in various sources"
 HOMEPAGE="http://www.gnu.org/software/global/global.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 

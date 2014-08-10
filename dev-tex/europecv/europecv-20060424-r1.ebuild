@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/europecv-20060424-r1.ebuild,v 1.22 2012/05/09 17:21:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/europecv-20060424-r1.ebuild,v 1.23 2014/08/10 21:25:30 slyfox Exp $
 
 inherit latex-package
 
-DESCRIPTION="LaTeX class for the standard model for curricula vitae as recommended by the European Commission."
+DESCRIPTION="LaTeX class for the standard model for curricula vitae as recommended by the European Commission"
 HOMEPAGE="http://www.ctan.org/tex-archive/help/Catalogue/entries/europecv.html"
 # Downloaded from:
 # ftp://cam.ctan.org/tex-archive/macros/latex/contrib/europecv.zip

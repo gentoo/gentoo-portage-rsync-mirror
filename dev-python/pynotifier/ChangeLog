@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pynotifier
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.25 2014/03/05 15:39:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.26 2014/08/10 21:17:10 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  pynotifier-0.7.0-r1.ebuild, pynotifier-0.7.0-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pynotifier-0.7.0-r2.ebuild:
   Stable for ppc, wrt bug #495620

@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare unpack
 DEPEND=dev-java/icedtea:6 dev-java/netbeans-harness:7.1 dev-java/netbeans-platform:7.1 dev-java/ant-core dev-java/ant-nodeps !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=Integrates commandline JDK tools and profiling capabilites.
+DESCRIPTION=Integrates commandline JDK tools and profiling capabilites
 EAPI=4
 HOMEPAGE=http://icedtea.classpath.org
 KEYWORDS=~amd64
@@ -9,4 +9,4 @@ RDEPEND=dev-java/icedtea:6 dev-java/netbeans-harness:7.1 dev-java/netbeans-platf
 SLOT=6
 SRC_URI=http://icedtea.classpath.org/download/visualvm/visualvm_harness-1.3.tar.gz http://icedtea.classpath.org/download/visualvm/visualvm_133-src.tar.gz http://icedtea.classpath.org/download/visualvm/netbeans-profiler-visualvm_release701.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=1d865c4e7580c90473b945f556127244
+_md5_=29b9826a2b595c3a70b00308682f8d52

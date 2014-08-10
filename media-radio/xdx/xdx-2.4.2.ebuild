@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.2.ebuild,v 1.9 2013/07/30 14:36:01 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.2.ebuild,v 1.10 2014/08/10 21:04:10 slyfox Exp $
 
 EAPI="5"
 
 inherit eutils
 
-DESCRIPTION="a GTK+ TCP/IP DX-cluster and ON4KST chat client."
+DESCRIPTION="a GTK+ TCP/IP DX-cluster and ON4KST chat client"
 HOMEPAGE="http://www.ibiblio.org/pub/linux/apps/ham"
 SRC_URI="http://www.ibiblio.org/pub/linux/apps/ham/${P}.tar.gz"
 

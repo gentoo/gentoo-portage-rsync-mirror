@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/lgrind
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.18 2013/04/13 17:47:50 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.19 2014/08/10 21:27:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> lgrind-3.67-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Apr 2013; Ulrich Müller <ulm@gentoo.org> -files/99lgrind,
   -lgrind-3.67-r2.ebuild, lgrind-3.67-r3.ebuild:
@@ -70,4 +73,3 @@
   metadata.xml:
   First version of lgrind. Thanks to <steingrd@ifi.uio.no> for request and
   ebuild submission on bug #28279
-

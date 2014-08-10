@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/bomns
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/ChangeLog,v 1.7 2010/01/07 23:23:00 josejx Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/ChangeLog,v 1.8 2014/08/10 21:22:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> bomns-0.99.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Jan 2010; Joseph Jezak <josejx@gentoo.org> bomns-0.99.2.ebuild:
   Marked ppc stable for bug #294334.
@@ -28,4 +31,3 @@
   +bomns-0.99.1.ebuild:
   Initial import. Ebuild by Fernando V. <email@missionaccomplish.com>. Closing
   bug #110094.
-

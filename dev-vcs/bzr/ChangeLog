@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.72 2014/04/04 14:49:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.73 2014/08/10 21:22:22 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> bzr-2.4.1.ebuild,
+  bzr-2.4.2.ebuild, bzr-2.5.0.ebuild, bzr-2.5.1-r1.ebuild, bzr-2.5.1.ebuild,
+  bzr-2.6.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *bzr-2.6.0 (04 Apr 2014)
 

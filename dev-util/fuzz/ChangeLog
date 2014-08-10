@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fuzz
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fuzz/ChangeLog,v 1.4 2011/04/20 12:50:54 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fuzz/ChangeLog,v 1.5 2014/08/10 21:27:15 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fuzz-0.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Apr 2011; Justin Lecher <jlec@gentoo.org> fuzz-0.6.ebuild:
   Respect CC, #244004
@@ -18,4 +21,3 @@
   +fuzz-0.6.ebuild:
   Initial commit, vaguely based on original submission in bug #144749 by
   Aggelos Orfanakos <agorf@gentoo.org>.
-

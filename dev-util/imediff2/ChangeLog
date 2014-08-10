@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/imediff2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/ChangeLog,v 1.9 2014/07/04 15:23:21 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/ChangeLog,v 1.10 2014/08/10 21:27:45 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> imediff2-1.1.2-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *imediff2-1.1.2-r3 (04 Jul 2014)
 

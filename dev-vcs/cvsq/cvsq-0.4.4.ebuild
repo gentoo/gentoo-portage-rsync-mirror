@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsq/cvsq-0.4.4.ebuild,v 1.3 2013/11/06 04:49:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsq/cvsq-0.4.4.ebuild,v 1.4 2014/08/10 21:22:55 slyfox Exp $
 
 IUSE=""
 
-DESCRIPTION="A tool that enables developers to work comfortably offline with CVS by queuing the commits."
+DESCRIPTION="A tool that enables developers to work comfortably offline with CVS by queuing the commits"
 SRC_URI="http://metawire.org/~vslavik/sw/cvsq/download/${P}.tar.gz"
 HOMEPAGE="http://metawire.org/~vslavik/sw/cvsq/"
 

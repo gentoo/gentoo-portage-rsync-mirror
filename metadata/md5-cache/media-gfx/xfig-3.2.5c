@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst prepare
 DEPEND=x11-libs/libXaw x11-libs/libXp x11-libs/libXaw3d nls? ( x11-libs/libXaw3d[unicode] ) x11-libs/libXi x11-libs/libXt virtual/jpeg media-libs/libpng media-fonts/font-misc-misc media-fonts/urw-fonts >=media-gfx/transfig-3.2.5-r1 media-libs/netpbm x11-misc/imake x11-proto/xproto x11-proto/inputproto
-DESCRIPTION=A menu-driven tool to draw and manipulate objects interactively in an X window.
+DESCRIPTION=A menu-driven tool to draw and manipulate objects interactively in an X window
 EAPI=5
 HOMEPAGE=http://www.xfig.org
 IUSE=nls
@@ -10,4 +10,4 @@ RDEPEND=x11-libs/libXaw x11-libs/libXp x11-libs/libXaw3d nls? ( x11-libs/libXaw3
 SLOT=0
 SRC_URI=mirror://sourceforge/mcj/xfig.3.2.5c.full.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=63b81d3fc5cb11b19f1bf66604951430
+_md5_=d79a375e28405d4f470728fed57661e1

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mcomix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.18 2014/06/10 02:24:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.19 2014/08/10 21:15:46 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mcomix-1.00-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   10 Jun 2014; Mike Gilbert <floppym@gentoo.org> -mcomix-1.00.ebuild:
   Remove old.

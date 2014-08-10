@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/mp3check-0.8.7.ebuild,v 1.4 2013/07/27 22:22:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/mp3check-0.8.7.ebuild,v 1.5 2014/08/10 21:08:22 slyfox Exp $
 
 EAPI=5
 inherit flag-o-matic toolchain-funcs
 
-DESCRIPTION="Checks mp3 files for consistency and prints several errors and warnings."
+DESCRIPTION="Checks mp3 files for consistency and prints several errors and warnings"
 HOMEPAGE="http://code.google.com/p/mp3check/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tgz"
 

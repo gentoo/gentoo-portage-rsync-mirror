@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pmd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.34 2009/11/05 18:04:04 caster Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.35 2014/08/10 21:28:56 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pmd-4.2.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 Nov 2009; Vlastimil Babka <caster@gentoo.org>
   -files/pmd-3.7-gentoo.patch, -files/pmd-3.8-gentoo.patch, -pmd-3.9.ebuild,
@@ -149,4 +152,3 @@
   15 Feb 2004; Chris Aniszczyk <zx@gentoo.org> pmd-1.5.ebuild:
   Initial Release.
   Thanks to Robert Thomas <rwt@cc.gatech.edu> for the initial ebuild. Bug #28230
-

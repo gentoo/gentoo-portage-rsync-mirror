@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/cvsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsd/ChangeLog,v 1.3 2014/01/14 07:39:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsd/ChangeLog,v 1.4 2014/08/10 21:22:45 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cvsd-1.0.16.ebuild,
+  cvsd-1.0.17.ebuild, cvsd-1.0.7.ebuild, cvsd-1.0.8.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *cvsd-1.0.17 (14 Jan 2014)
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/anubis-4.1.1-r1.ebuild,v 1.3 2014/06/14 09:34:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/anubis-4.1.1-r1.ebuild,v 1.4 2014/08/10 21:15:20 slyfox Exp $
 
 EAPI=4
 inherit eutils autotools pam toolchain-funcs user
 
-DESCRIPTION="GNU Anubis is an outgoing mail processor."
+DESCRIPTION="GNU Anubis is an outgoing mail processor"
 HOMEPAGE="http://www.gnu.org/software/anubis/"
 
 SRC_URI="mirror://gnu/anubis/${P}.tar.gz"

@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.8.ebuild,v 1.8 2012/05/05 08:54:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.8.ebuild,v 1.9 2014/08/10 21:12:43 slyfox Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
 
-DESCRIPTION="GTK+ based drum machine."
+DESCRIPTION="GTK+ based drum machine"
 HOMEPAGE="http://muth.org/Robert/Trommler"
 SRC_URI="http://muth.org/Robert/${PN/t/T}/${P/-/.}.tar.gz"
 

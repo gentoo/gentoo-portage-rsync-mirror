@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/camera
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/camera/ChangeLog,v 1.8 2008/03/08 13:58:52 coldwind Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/camera/ChangeLog,v 1.9 2014/08/10 21:19:23 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> camera-0.8-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> camera-0.8-r1.ebuild:
   amd64 stable wrt bug #207381
@@ -31,4 +34,3 @@
   12 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
   +camera-0.8.ebuild:
   Original package import
-

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare setup unpack
 DEPEND=media-gfx/graphviz media-gfx/imagemagick =dev-lang/python-2*
-DESCRIPTION=Generates a graph based on the ALSA description of an HD Audio codec.
+DESCRIPTION=Generates a graph based on the ALSA description of an HD Audio codec
 EAPI=4
 HOMEPAGE=http://helllabs.org/codecgraph/
 KEYWORDS=~amd64
@@ -9,4 +9,4 @@ RDEPEND=media-gfx/graphviz =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://helllabs.org/codecgraph/codecgraph-20120114.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=6a836fbc16a54b77057837fc34c7dd6c
+_md5_=d18f483e29e2103c4084cf8213ff9ac4

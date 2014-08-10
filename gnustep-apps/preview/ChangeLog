@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/preview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/ChangeLog,v 1.21 2012/07/12 12:03:29 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/ChangeLog,v 1.22 2014/08/10 21:20:07 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> preview-0.8.5-r1.ebuild,
+  preview-0.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org> preview-0.9.ebuild:
   Fix compilation with GCC 4.7, bug #426296
@@ -93,4 +97,3 @@
   12 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
   +preview-0.7.ebuild:
   Orginal package import; keyworded for ~x86
-

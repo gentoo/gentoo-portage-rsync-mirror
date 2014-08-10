@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/flake
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flake/ChangeLog,v 1.4 2007/08/05 16:11:21 drac Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flake/ChangeLog,v 1.5 2014/08/10 21:05:26 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> flake-0.11.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *flake-0.11 (05 Aug 2007)
 
@@ -15,4 +18,3 @@
 
   08 Mar 2007; Steve Dibb <beandog@gentoo.org> ChangeLog:
   Initial import, thanks to Ben de Groot for ebuild
-

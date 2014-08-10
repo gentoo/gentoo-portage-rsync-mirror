@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setproctitle/setproctitle-1.1.3.ebuild,v 1.5 2013/03/01 09:12:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setproctitle/setproctitle-1.1.3.ebuild,v 1.6 2014/08/10 21:21:38 slyfox Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -9,7 +9,7 @@ DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils toolchain-funcs
 
-DESCRIPTION="Allow customization of the process title."
+DESCRIPTION="Allow customization of the process title"
 HOMEPAGE="http://code.google.com/p/py-setproctitle/ http://pypi.python.org/pypi/setproctitle"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 

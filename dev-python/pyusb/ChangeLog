@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyusb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/ChangeLog,v 1.16 2014/05/29 08:47:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/ChangeLog,v 1.17 2014/08/10 21:20:21 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pyusb-0.4.2.ebuild,
+  pyusb-0.4.3.ebuild, pyusb-1.0.0_alpha1.ebuild, pyusb-1.0.0_alpha3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   29 May 2014; Ian Delaney <idella4@gentoo.org> pyusb-1.0.0_beta1.ebuild:
   rm deprecated PYTHON_MODNAME

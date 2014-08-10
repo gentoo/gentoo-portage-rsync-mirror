@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/camerakit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camerakit/ChangeLog,v 1.9 2008/03/08 13:56:26 coldwind Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camerakit/ChangeLog,v 1.10 2014/08/10 21:18:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  camerakit-0.0.1.20041011-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   camerakit-0.0.1.20041011-r1.ebuild:
@@ -39,4 +43,3 @@
   12 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
   +camerakit-0.0.1.20041011.ebuild:
   Original package import
-

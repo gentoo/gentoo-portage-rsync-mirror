@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.28.ebuild,v 1.9 2013/07/23 13:53:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.28.ebuild,v 1.10 2014/08/10 21:29:07 slyfox Exp $
 
 EAPI=4
 
 inherit eutils cmake-utils
 
 MY_P=${PN}-v${PV}
-DESCRIPTION="A development environment entirely dedicated to Qt4."
+DESCRIPTION="A development environment entirely dedicated to Qt4"
 HOMEPAGE="http://biord-software.org/qdevelop/"
 SRC_URI="http://biord-software.org/downloads/${MY_P}.tar.gz"
 

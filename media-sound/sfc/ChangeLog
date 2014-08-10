@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sfc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/ChangeLog,v 1.17 2011/06/07 04:57:43 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/ChangeLog,v 1.18 2014/08/10 21:11:52 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sfc-0.016.ebuild,
+  sfc-0.018.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *sfc-0.018 (07 Jun 2011)
 
@@ -55,4 +59,3 @@
 
   13 Jun 2003; robh <robh@gentoo.org> sfc-0.012.ebuild:
   Initial version. Submitted by: Josep Andreu, closes #22216
-

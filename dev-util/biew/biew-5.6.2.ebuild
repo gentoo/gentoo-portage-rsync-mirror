@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.2.ebuild,v 1.10 2012/06/07 21:02:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.2.ebuild,v 1.11 2014/08/10 21:25:20 slyfox Exp $
 
 inherit eutils flag-o-matic
 
-DESCRIPTION="A portable viewer of binary files, hexadecimal and disassembler modes."
+DESCRIPTION="A portable viewer of binary files, hexadecimal and disassembler modes"
 HOMEPAGE="http://biew.sourceforge.net"
 SRC_URI="mirror://sourceforge/biew/${PN}${PV//./}.tar.bz2"
 

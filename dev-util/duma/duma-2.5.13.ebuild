@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.5.13.ebuild,v 1.7 2009/09/23 17:44:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.5.13.ebuild,v 1.8 2014/08/10 21:26:48 slyfox Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
 MY_P="${PN}_$(replace_all_version_separators '_')"
 
-DESCRIPTION="DUMA (Detect Unintended Memory Access) is a memory debugging library."
+DESCRIPTION="DUMA (Detect Unintended Memory Access) is a memory debugging library"
 HOMEPAGE="http://duma.sourceforge.net/"
 
 SRC_URI="mirror://sourceforge/duma/${MY_P}.tar.gz"

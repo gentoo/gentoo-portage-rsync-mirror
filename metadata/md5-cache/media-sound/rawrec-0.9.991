@@ -1,9 +1,9 @@
 DEFINED_PHASES=compile install unpack
-DESCRIPTION=CLI program to play and record audiofiles.
+DESCRIPTION=CLI program to play and record audiofiles
 HOMEPAGE=http://rawrec.sourceforge.net
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/rawrec/rawrec-0.9.991.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=2f31de65cb095dab0223eaf85c745964
+_md5_=6871e3472a0db25cb23c5b9fbb739fee

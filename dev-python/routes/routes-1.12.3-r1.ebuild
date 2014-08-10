@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.12.3-r1.ebuild,v 1.2 2013/09/05 18:46:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.12.3-r1.ebuild,v 1.3 2014/08/10 21:21:16 slyfox Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -10,7 +10,7 @@ inherit distutils-r1
 MY_PN="Routes"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A Python re-implementation of the Rails routes system for mapping URL's to Controllers/Actions."
+DESCRIPTION="A Python re-implementation of the Rails routes system for mapping URL's to Controllers/Actions"
 HOMEPAGE="http://routes.groovie.org http://pypi.python.org/pypi/Routes"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 

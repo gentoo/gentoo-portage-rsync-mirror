@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/orpheus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.32 2013/03/03 06:39:04 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.33 2014/08/10 21:09:41 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> orpheus-1.6-r1.ebuild,
+  orpheus-1.6-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> orpheus-1.6-r2.ebuild,
   +files/orpheus-1.6-gcc47.patch:

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/combine_wave
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/combine_wave/ChangeLog,v 1.8 2011/04/26 13:12:16 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/combine_wave/ChangeLog,v 1.9 2014/08/10 21:04:51 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  combine_wave-0.3.1-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   26 Apr 2011; Christoph Mende <angelos@gentoo.org>
   combine_wave-0.3.1-r1.ebuild, files/combine_wave-0.3.1-overflow.patch:
@@ -37,4 +41,3 @@
   05 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org>
   +files/combine_wave-0.3.diff, +metadata.xml, +combine_wave-0.3.ebuild:
   initial commit.
-

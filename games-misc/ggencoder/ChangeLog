@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/ggencoder
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/ggencoder/ChangeLog,v 1.4 2013/03/02 21:17:27 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/ggencoder/ChangeLog,v 1.5 2014/08/10 21:21:18 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ggencoder-0.91a.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> ggencoder-0.91a.ebuild:
   Move Qt dependencies to the new category

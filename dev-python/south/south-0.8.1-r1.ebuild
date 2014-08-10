@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.8.1-r1.ebuild,v 1.1 2014/03/13 15:01:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.8.1-r1.ebuild,v 1.2 2014/08/10 21:22:49 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit vcs-snapshot distutils-r1
 
-DESCRIPTION="Intelligent schema migrations for Django apps."
+DESCRIPTION="Intelligent schema migrations for Django apps"
 HOMEPAGE="http://south.aeracode.org/"
 SRC_URI="https://bitbucket.org/andrewgodwin/south/get/${PV}.tar.gz -> ${P}.tar.gz"
 

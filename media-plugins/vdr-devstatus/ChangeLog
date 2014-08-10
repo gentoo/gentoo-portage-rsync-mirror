@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-devstatus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-devstatus/ChangeLog,v 1.6 2013/06/27 17:50:03 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-devstatus/ChangeLog,v 1.7 2014/08/10 21:06:13 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  vdr-devstatus-0.4.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Jun 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-devstatus-0.4.1.ebuild:
@@ -33,4 +37,3 @@
   18 Nov 2008; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
   +vdr-devstatus-0.2.0.ebuild:
   Initial import of ebuild.
-

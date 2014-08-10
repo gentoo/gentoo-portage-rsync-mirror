@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.6.0.ebuild,v 1.10 2013/02/20 14:35:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.6.0.ebuild,v 1.11 2014/08/10 21:12:38 slyfox Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
 
 inherit distutils
 
-DESCRIPTION="Basic Framework for all Kaa Python Modules."
+DESCRIPTION="Basic Framework for all Kaa Python Modules"
 HOMEPAGE="http://freevo.sourceforge.net/kaa/"
 SRC_URI="mirror://sourceforge/freevo/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.0.ebuild,v 1.4 2012/06/07 18:43:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.0.ebuild,v 1.5 2014/08/10 21:18:12 slyfox Exp $
 
 EAPI=4
 inherit eutils gnustep-2
@@ -9,7 +9,7 @@ MY_P=${P/p/P}
 
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="A set of Objective-C classes that model a mail system."
+DESCRIPTION="A set of Objective-C classes that model a mail system"
 HOMEPAGE="http://www.collaboration-world.com/pantomime/"
 SRC_URI="http://download.gna.org/gnustep-nonfsf/${MY_P}.tar.gz"
 

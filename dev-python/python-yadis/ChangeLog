@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-yadis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/ChangeLog,v 1.6 2012/11/07 20:50:02 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/ChangeLog,v 1.7 2014/08/10 21:20:00 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  python-yadis-1.1.0-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Nov 2012; Ian Delaney <idella4@gentoo.org>
   files/python-yadis-1.1.0-gentoo-test.patch, python-yadis-1.1.0-r1.ebuild:

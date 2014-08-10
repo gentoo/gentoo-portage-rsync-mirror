@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/positron
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.20 2011/03/11 19:33:13 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.21 2014/08/10 21:09:59 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> positron-1.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   11 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   positron-1.1.ebuild:
@@ -68,4 +71,3 @@
 
   24 May 2003; Todd Berman <tberman@gentoo.org> positron-1.0_beta1.ebuild:
   Initial Import.
-

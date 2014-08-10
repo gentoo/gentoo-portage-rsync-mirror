@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/gazpacho-0.7.2.ebuild,v 1.3 2012/02/26 04:49:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/gazpacho-0.7.2.ebuild,v 1.4 2014/08/10 21:27:22 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
 
 inherit distutils gnome.org eutils
 
-DESCRIPTION="Gazpacho is a glade-like gtk interface designer."
+DESCRIPTION="Gazpacho is a glade-like gtk interface designer"
 HOMEPAGE="http://gazpacho.sicem.biz/"
 LICENSE="LGPL-2.1"
 SLOT="0"

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.6-r1.ebuild,v 1.7 2012/10/07 15:43:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.6-r1.ebuild,v 1.8 2014/08/10 21:09:41 slyfox Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ WANT_AUTOMAKE="1.9"
 
 inherit eutils autotools
 
-DESCRIPTION="Command line MP3 player."
+DESCRIPTION="Command line MP3 player"
 HOMEPAGE="http://konst.org.ua/en/orpheus"
 SRC_URI="http://konst.org.ua/download/${P}.tar.gz"
 

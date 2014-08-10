@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-0.9.ebuild,v 1.5 2013/09/05 18:40:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-0.9.ebuild,v 1.6 2014/08/10 21:26:08 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ DOCS=( CHANGES README.rst )
 
 inherit distutils-r1
 
-DESCRIPTION="Colored, side-by-side diff terminal viewer."
+DESCRIPTION="Colored, side-by-side diff terminal viewer"
 HOMEPAGE="https://github.com/ymattw/${PN}"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 

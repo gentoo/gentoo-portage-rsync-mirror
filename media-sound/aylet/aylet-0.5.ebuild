@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.5.ebuild,v 1.9 2012/05/05 08:10:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.5.ebuild,v 1.10 2014/08/10 21:04:12 slyfox Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Aylet plays music files in the .ay format."
+DESCRIPTION="Aylet plays music files in the .ay format"
 HOMEPAGE="http://rus.members.beeb.net/aylet.html"
 SRC_URI="http://ftp.ibiblio.org/pub/Linux/apps/sound/players/${P}.tar.gz"
 

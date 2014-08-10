@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.1.ebuild,v 1.4 2012/05/05 08:55:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.1.ebuild,v 1.5 2014/08/10 21:13:12 slyfox Exp $
 
 EAPI=4
 inherit eutils cmake-utils
 
 MY_P=ZynAddSubFX-${PV}
 
-DESCRIPTION="ZynAddSubFX is an opensource software synthesizer."
+DESCRIPTION="ZynAddSubFX is an opensource software synthesizer"
 HOMEPAGE="http://zynaddsubfx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/zynaddsubfx/${MY_P}.tar.bz2"
 

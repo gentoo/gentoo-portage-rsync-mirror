@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.2.ebuild,v 1.5 2012/03/09 10:32:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.2.ebuild,v 1.6 2014/08/10 21:12:06 slyfox Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -11,7 +11,7 @@ inherit distutils
 MY_PN="collective-${PN}"
 S="${WORKDIR}/${MY_PN}-2354d4f"
 
-DESCRIPTION="Package used for parsing and generating iCalendar files (RFC 2445)."
+DESCRIPTION="Package used for parsing and generating iCalendar files (RFC 2445)"
 HOMEPAGE="http://github.com/collective/icalendar"
 SRC_URI="http://github.com/collective/${PN}/tarball/${PV} -> ${P}.tar.gz"
 

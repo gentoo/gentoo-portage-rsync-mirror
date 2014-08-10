@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=test? ( curl? ( dev-python/pycurl[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) sftp? ( dev-python/paramiko[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) >=dev-python/pyftpdlib-0.7.0[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/subunit >=dev-python/testtools-0.9.5[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[threads,ssl,xml] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
-DESCRIPTION=Bazaar is a next generation distributed version control system.
+DESCRIPTION=Bazaar is a next generation distributed version control system
 EAPI=5
 HOMEPAGE=http://bazaar-vcs.org/
 IUSE=curl doc +sftp test python_targets_python2_7
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://launchpad.net/bzr/2.6/2.6.0/+download/bzr-2.6.0.tar.gz
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	distutils-r1	d48d51c220f1678179fc4ab13b534ec1	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=47b14629bcae053bcefca3f48b363860
+_md5_=7a797da9d839090a4522d577e1fc981c

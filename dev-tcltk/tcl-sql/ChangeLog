@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tcl-sql
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/ChangeLog,v 1.7 2012/06/07 20:41:43 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/ChangeLog,v 1.8 2014/08/10 21:26:08 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  tcl-sql-20000114-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> tcl-sql-20000114-r2.ebuild:
   inherit multilib for get_libdir
@@ -31,4 +35,3 @@
   Initial addition to portage
   bug #14010.
   Ebuild from Will Buckner
-

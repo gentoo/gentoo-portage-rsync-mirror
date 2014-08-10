@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/latexmk-437.ebuild,v 1.1 2013/07/21 11:12:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/latexmk-437.ebuild,v 1.2 2014/08/10 21:26:39 slyfox Exp $
 
 EAPI=5
 
 inherit bash-completion-r1
 
-DESCRIPTION="Perl script for automatically building LaTeX documents."
+DESCRIPTION="Perl script for automatically building LaTeX documents"
 HOMEPAGE="http://www.phys.psu.edu/~collins/software/latexmk/"
 SRC_URI="http://www.phys.psu.edu/~collins/software/latexmk/${P}.zip"
 

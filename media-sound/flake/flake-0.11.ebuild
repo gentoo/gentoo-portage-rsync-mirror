@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flake/flake-0.11.ebuild,v 1.1 2007/08/05 16:11:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flake/flake-0.11.ebuild,v 1.2 2014/08/10 21:05:26 slyfox Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="An alternative to the FLAC reference encoder."
+DESCRIPTION="An alternative to the FLAC reference encoder"
 HOMEPAGE="http://flake-enc.sourceforge.net"
 SRC_URI="mirror://sourceforge/flake-enc/${P}.tar.bz2"
 

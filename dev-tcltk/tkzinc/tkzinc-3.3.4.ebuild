@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.3.4.ebuild,v 1.5 2013/01/08 16:04:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.3.4.ebuild,v 1.6 2014/08/10 21:26:29 slyfox Exp $
 
 EAPI="3"
 
 inherit autotools eutils
 
-DESCRIPTION="A Tk widget library."
+DESCRIPTION="A Tk widget library"
 HOMEPAGE="http://www.tkzinc.org"
 SRC_URI="http://www.tkzinc.org/Packages/zinc-tk_${PV}.tar.gz"
 

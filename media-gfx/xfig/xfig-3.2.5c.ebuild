@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5c.ebuild,v 1.1 2014/06/09 14:12:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5c.ebuild,v 1.2 2014/08/10 21:16:30 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils multilib
 
 MY_P=${PN}.${PV}
 
-DESCRIPTION="A menu-driven tool to draw and manipulate objects interactively in an X window."
+DESCRIPTION="A menu-driven tool to draw and manipulate objects interactively in an X window"
 HOMEPAGE="http://www.xfig.org"
 SRC_URI="mirror://sourceforge/mcj/${MY_P}.full.tar.gz"
 

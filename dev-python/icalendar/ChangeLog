@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/icalendar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.41 2014/07/27 02:05:14 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.42 2014/08/10 21:12:06 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> icalendar-2.2.ebuild,
+  icalendar-3.5.ebuild, icalendar-3.7.ebuild, icalendar-3.8.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *icalendar-3.8.2 (27 Jul 2014)
 

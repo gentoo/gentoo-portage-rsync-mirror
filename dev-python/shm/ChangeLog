@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/shm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shm/ChangeLog,v 1.10 2012/02/22 08:11:00 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shm/ChangeLog,v 1.11 2014/08/10 21:22:01 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> shm-1.2.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> shm-1.2.2.ebuild:
   Restricting jython too
@@ -37,4 +40,3 @@
   28 Apr 2008; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
   +shm-1.2.1.ebuild:
   Add new ebuild, closes bug #194591.
-

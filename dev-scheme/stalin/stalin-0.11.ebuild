@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stalin/stalin-0.11.ebuild,v 1.3 2008/06/02 22:06:26 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stalin/stalin-0.11.ebuild,v 1.4 2014/08/10 21:26:00 slyfox Exp $
 
 inherit eutils
 
-DESCRIPTION="An aggressively optimizing Scheme compiler."
+DESCRIPTION="An aggressively optimizing Scheme compiler"
 HOMEPAGE="http://community.schemewiki.org/?Stalin"
 SRC_URI="ftp://ftp.ecn.purdue.edu/qobi/${P}.tgz"
 LICENSE="GPL-3"
