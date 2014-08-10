@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/alabaster
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/alabaster/ChangeLog,v 1.1 2014/08/10 14:35:43 idella4 Exp $
+
+*alabaster-0.6.0 (10 Aug 2014)
+
+  10 Aug 2014; Ian Delaney <idella4@gentoo.org> +alabaster-0.6.0.ebuild,
+  +metadata.xml:
+  new minimal ebuild, prepared by me, A sphinx theme, required for doc build of
+  fabric

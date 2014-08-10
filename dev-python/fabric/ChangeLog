@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.45 2014/06/24 10:03:58 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.46 2014/08/10 14:56:05 idella4 Exp $
+
+*fabric-1.9.1 (10 Aug 2014)
+
+  10 Aug 2014; Ian Delaney <idella4@gentoo.org> +fabric-1.9.1.ebuild,
+  fabric-1.9.0.ebuild:
+  bump; add dep for doc build, fix doc build & install, fixes Bug #519392
 
   24 Jun 2014; Ian Delaney <idella4@gentoo.org> fabric-1.9.0.ebuild:
   re-set paramiko in RDEPEND, noted by Arfrever
