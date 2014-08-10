@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/misc-games/misc-games-1.22.ebuild,v 1.6 2011/07/22 11:25:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/misc-games/misc-games-1.22.ebuild,v 1.7 2014/08/10 19:15:19 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Other amusements and diversions."
+DESCRIPTION="Other amusements and diversions"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

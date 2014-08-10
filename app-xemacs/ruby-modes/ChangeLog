@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/ruby-modes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ruby-modes/ChangeLog,v 1.23 2012/06/02 14:51:33 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ruby-modes/ChangeLog,v 1.24 2014/08/10 19:27:41 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ruby-modes-1.02.ebuild,
+  ruby-modes-1.04.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Jun 2012; Alexis Ballier <aballier@gentoo.org> ruby-modes-1.04.ebuild:
   keyword ~amd64-fbsd

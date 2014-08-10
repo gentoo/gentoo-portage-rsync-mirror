@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/games
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/games/ChangeLog,v 1.24 2011/06/03 12:10:48 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/games/ChangeLog,v 1.25 2014/08/10 19:03:04 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> games-1.20.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Jun 2011; Hans de Graaff <graaff@gentoo.org> -games-1.17.ebuild,
   -games-1.18.ebuild:

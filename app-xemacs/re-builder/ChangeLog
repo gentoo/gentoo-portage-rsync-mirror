@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/re-builder
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/re-builder/ChangeLog,v 1.4 2008/04/28 18:04:23 armin76 Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/re-builder/ChangeLog,v 1.5 2014/08/10 19:25:52 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> re-builder-1.05.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   28 Apr 2008; Raúl Porcel <armin76@gentoo.org> re-builder-1.05.ebuild:
   alpha stable wrt #219332
@@ -16,4 +19,3 @@
   26 Nov 2006; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
   +re-builder-1.05.ebuild:
   Initial version.
-

@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/games/games-1.20.ebuild,v 1.7 2010/10/25 22:19:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/games/games-1.20.ebuild,v 1.8 2014/08/10 19:03:04 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Tetris, Sokoban, and Snake."
+DESCRIPTION="Tetris, Sokoban, and Snake"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

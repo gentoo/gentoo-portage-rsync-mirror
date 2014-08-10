@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/semantic/semantic-1.21.ebuild,v 1.9 2011/07/22 11:25:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/semantic/semantic-1.21.ebuild,v 1.10 2014/08/10 19:29:31 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Semantic bovinator (Yacc/Lex for XEmacs). Includes Senator."
+DESCRIPTION="Semantic bovinator (Yacc/Lex for XEmacs). Includes Senator"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/ede

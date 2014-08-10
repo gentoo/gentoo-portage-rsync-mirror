@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/psgml
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml/ChangeLog,v 1.19 2011/07/22 11:25:07 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml/ChangeLog,v 1.20 2014/08/10 19:24:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> psgml-1.44.ebuild,
+  psgml-1.45.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> psgml-1.45.ebuild:
   ppc64 stable wrt #369897

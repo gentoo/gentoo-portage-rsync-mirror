@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml/psgml-1.45.ebuild,v 1.6 2011/07/22 11:25:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml/psgml-1.45.ebuild,v 1.7 2014/08/10 19:24:02 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Validated HTML/SGML editing."
+DESCRIPTION="Validated HTML/SGML editing"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

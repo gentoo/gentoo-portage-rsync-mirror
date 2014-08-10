@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml-dtds/psgml-dtds-1.03.ebuild,v 1.4 2007/07/11 02:37:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml-dtds/psgml-dtds-1.03.ebuild,v 1.5 2014/08/10 19:24:38 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Deprecated collection of DTDs for psgml."
+DESCRIPTION="Deprecated collection of DTDs for psgml"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

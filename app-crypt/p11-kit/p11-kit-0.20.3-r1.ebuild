@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.20.3-r1.ebuild,v 1.2 2014/08/10 02:26:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.20.3-r1.ebuild,v 1.3 2014/08/10 19:26:10 grobian Exp $
 
 EAPI=5
 
@@ -12,12 +12,13 @@ SRC_URI="http://p11-glue.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="+asn1 debug +libffi +trust"
 REQUIRED_USE="trust? ( asn1 )"
 
 RDEPEND="asn1? ( >=dev-libs/libtasn1-3.4[${MULTILIB_USEDEP}] )
-	libffi? ( >=dev-libs/libffi-3.0.0[${MULTILIB_USEDEP}] )"
+	libffi? ( >=dev-libs/libffi-3.0.0[${MULTILIB_USEDEP}] )
+	trust? ( app-misc/ca-certificates )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -29,6 +30,7 @@ pkg_setup() {
 multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf \
 		$(use_enable trust trust-module) \
+		$(use_with trust trust-paths ${EPREFIX}/etc/ssl/certs/ca-certificates.crt) \
 		$(use_enable debug) \
 		$(use_with libffi) \
 		$(use_with asn1 libtasn1)

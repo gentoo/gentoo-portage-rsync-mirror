@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/sh-script
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sh-script/ChangeLog,v 1.26 2011/07/22 11:25:02 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sh-script/ChangeLog,v 1.27 2014/08/10 19:30:44 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sh-script-1.22.ebuild,
+  sh-script-1.24.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> sh-script-1.24.ebuild:
   ppc64 stable wrt #369897

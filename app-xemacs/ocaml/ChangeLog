@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ocaml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ocaml/ChangeLog,v 1.18 2012/06/02 14:52:04 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ocaml/ChangeLog,v 1.19 2014/08/10 19:18:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ocaml-0.06.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Jun 2012; Alexis Ballier <aballier@gentoo.org> ocaml-0.06.ebuild:
   keyword ~amd64-fbsd

@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mailcrypt/mailcrypt-2.14.ebuild,v 1.4 2007/07/11 02:37:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mailcrypt/mailcrypt-2.14.ebuild,v 1.5 2014/08/10 19:12:42 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Support for messaging encryption with PGP."
+DESCRIPTION="Support for messaging encryption with PGP"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/mail-lib

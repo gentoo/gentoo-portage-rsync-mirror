@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/haskell-mode
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/haskell-mode/ChangeLog,v 1.21 2009/02/20 00:10:55 fauli Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/haskell-mode/ChangeLog,v 1.22 2014/08/10 19:06:00 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> haskell-mode-1.11.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
   -haskell-mode-1.10.ebuild:

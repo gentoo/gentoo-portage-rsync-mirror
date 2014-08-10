@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/perl-modes/perl-modes-1.14.ebuild,v 1.6 2011/07/22 11:25:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/perl-modes/perl-modes-1.14.ebuild,v 1.7 2014/08/10 19:22:12 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Perl support."
+DESCRIPTION="Perl support"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

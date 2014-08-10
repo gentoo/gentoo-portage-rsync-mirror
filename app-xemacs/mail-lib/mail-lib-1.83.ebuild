@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/mail-lib-1.83.ebuild,v 1.8 2014/08/09 10:46:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/mail-lib-1.83.ebuild,v 1.9 2014/08/10 19:12:06 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Fundamental lisp files for providing email support."
+DESCRIPTION="Fundamental lisp files for providing email support"
 PKG_CAT="standard"
 
 EXPERIMENTAL=true

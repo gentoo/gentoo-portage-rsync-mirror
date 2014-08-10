@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/fsf-compat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/fsf-compat/ChangeLog,v 1.25 2012/06/02 14:11:32 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/fsf-compat/ChangeLog,v 1.26 2014/08/10 19:02:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fsf-compat-1.15.ebuild,
+  fsf-compat-1.19.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Jun 2012; Alexis Ballier <aballier@gentoo.org> fsf-compat-1.19.ebuild:
   keyword ~amd64-fbsd

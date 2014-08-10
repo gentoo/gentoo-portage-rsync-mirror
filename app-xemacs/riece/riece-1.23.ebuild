@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/riece/riece-1.23.ebuild,v 1.8 2008/04/28 18:04:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/riece/riece-1.23.ebuild,v 1.9 2014/08/10 19:26:28 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="IRC client for Emacs."
+DESCRIPTION="IRC client for Emacs"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

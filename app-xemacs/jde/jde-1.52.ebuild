@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/jde/jde-1.52.ebuild,v 1.6 2011/07/22 11:25:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/jde/jde-1.52.ebuild,v 1.7 2014/08/10 19:09:05 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Integrated Development Environment for Java."
+DESCRIPTION="Integrated Development Environment for Java"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/cc-mode

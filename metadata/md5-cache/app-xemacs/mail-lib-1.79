@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install unpack
-DESCRIPTION=Fundamental lisp files for providing email support.
+DESCRIPTION=Fundamental lisp files for providing email support
 HOMEPAGE=http://xemacs.org/
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2
@@ -7,4 +7,4 @@ RDEPEND=app-xemacs/xemacs-eterm app-xemacs/xemacs-base app-xemacs/fsf-compat app
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/mail-lib-1.79-pkg.tar.gz
 _eclasses_=xemacs-packages	29b865270cd0de904945912d5041f1cc
-_md5_=63d84a0c098b72cdf702c4e4dd133303
+_md5_=78f7f0a9880b445195b8aaf2a9d9653e

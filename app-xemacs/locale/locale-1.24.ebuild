@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/locale/locale-1.24.ebuild,v 1.4 2007/07/11 02:37:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/locale/locale-1.24.ebuild,v 1.5 2014/08/10 19:11:30 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="MULE: Localized menubars and localized splash screens."
+DESCRIPTION="MULE: Localized menubars and localized splash screens"
 PKG_CAT="mule"
 
 RDEPEND="app-xemacs/mule-base

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/igrep/igrep-1.16.ebuild,v 1.6 2011/07/22 11:24:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/igrep/igrep-1.16.ebuild,v 1.7 2014/08/10 19:07:52 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Enhanced front-end for Grep."
+DESCRIPTION="Enhanced front-end for Grep"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/dired

@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/misc-games
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/misc-games/ChangeLog,v 1.28 2011/07/22 11:25:03 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/misc-games/ChangeLog,v 1.29 2014/08/10 19:15:19 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> misc-games-1.19.ebuild,
+  misc-games-1.22.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> misc-games-1.22.ebuild:
   ppc64 stable wrt #369897
