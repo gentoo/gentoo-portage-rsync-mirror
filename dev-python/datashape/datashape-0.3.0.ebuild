@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/datashape/datashape-0.3.0.ebuild,v 1.1 2014/08/09 08:29:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/datashape/datashape-0.3.0.ebuild,v 1.2 2014/08/10 01:27:16 idella4 Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="
 "
 DEPEND="doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( ${RDEPEND}
-		dev-python/nose[${PYTHON_USEDEP}] )"
+		dev-python/pytest[${PYTHON_USEDEP}] )"
 
 python_prepare_all() {
 	# Prevent un-needed d'loading
@@ -38,9 +38,7 @@ python_compile_all() {
 }
 
 python_test() {
-	# https://github.com/ContinuumIO/datashape/issues/78
-	cd "${BUILD_DIR}"/lib* || die
-	nosetests -v || die
+	py.test -v || die "Tests failed under ${EPYTHON}"
 }
 
 python_install_all() {

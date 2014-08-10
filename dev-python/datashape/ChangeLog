@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/datashape
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/datashape/ChangeLog,v 1.4 2014/08/09 08:29:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/datashape/ChangeLog,v 1.5 2014/08/10 01:27:16 idella4 Exp $
+
+  10 Aug 2014; Ian Delaney <idella4@gentoo.org> datashape-0.3.0.ebuild:
+  switch test dep to pytest, update test phase
 
 *datashape-0.3.0 (09 Aug 2014)
 
