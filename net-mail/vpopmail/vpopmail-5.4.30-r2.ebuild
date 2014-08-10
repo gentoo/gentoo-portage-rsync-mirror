@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.30-r2.ebuild,v 1.6 2013/05/31 00:46:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.30-r2.ebuild,v 1.7 2014/08/10 20:47:32 slyfox Exp $
 
 EAPI="2"
 
 inherit autotools eutils fixheadtails qmail user
 
 HOMEPAGE="http://www.inter7.com/index.php?page=vpopmail"
-DESCRIPTION="A collection of programs to manage virtual email domains and accounts on your Qmail mail servers."
+DESCRIPTION="A collection of programs to manage virtual email domains and accounts on your Qmail mail servers"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"

@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-10.4.1.ebuild,v 1.2 2010/12/17 20:18:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-10.4.1.ebuild,v 1.3 2014/08/10 20:41:36 slyfox Exp $
 
 EAPI=3
 inherit eutils multilib
 
 MY_P=ecl-${PV}
 
-DESCRIPTION="ECL is an embeddable Common Lisp implementation."
+DESCRIPTION="ECL is an embeddable Common Lisp implementation"
 HOMEPAGE="http://common-lisp.net/project/ecl/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 

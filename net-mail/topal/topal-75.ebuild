@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/topal-75.ebuild,v 1.4 2013/02/22 17:28:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/topal-75.ebuild,v 1.5 2014/08/10 20:46:47 slyfox Exp $
 
 EAPI=4
 
 inherit toolchain-funcs eutils
 
-DESCRIPTION="Topal is a 'glue' program that links GnuPG and Pine/Alpine."
+DESCRIPTION="Topal is a 'glue' program that links GnuPG and Pine/Alpine"
 HOMEPAGE="http://homepage.ntlworld.com/phil.brooke/topal/"
 SRC_URI="http://homepage.ntlworld.com/phil.brooke/topal/rel-${PV}/topal-package-${PV}.tgz"
 

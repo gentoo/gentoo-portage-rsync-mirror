@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwimax/madwimax-0.1.1-r1.ebuild,v 1.1 2013/02/05 13:25:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwimax/madwimax-0.1.1-r1.ebuild,v 1.2 2014/08/10 20:34:59 slyfox Exp $
 
 EAPI=5
 inherit autotools linux-info udev
 
-DESCRIPTION="A reverse-engineered Linux driver for mobile WiMAX devices based on Samsung CMC-730 chip."
+DESCRIPTION="A reverse-engineered Linux driver for mobile WiMAX devices based on Samsung CMC-730 chip"
 HOMEPAGE="http://code.google.com/p/madwimax/"
 SRC_URI="http://madwimax.googlecode.com/files/${P}.tar.gz"
 

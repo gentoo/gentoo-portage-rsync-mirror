@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.98.ebuild,v 1.5 2014/08/03 05:52:34 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.98.ebuild,v 1.6 2014/08/10 20:45:10 slyfox Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
 
 inherit eutils flag-o-matic python toolchain-funcs
 
-DESCRIPTION="A useful collection of mail servers, clients, and filters."
+DESCRIPTION="A useful collection of mail servers, clients, and filters"
 HOMEPAGE="http://www.gnu.org/software/mailutils/mailutils.html"
 #SRC_URI="mirror://gnu/mailutils/${P}.tar.xz"
 SRC_URI="mirror://gnu-alpha/mailutils/${P}.tar.xz"

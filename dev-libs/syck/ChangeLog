@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/syck
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.31 2012/09/20 12:47:51 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.32 2014/08/10 20:39:40 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> syck-0.55-r4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -105,4 +108,3 @@
   14 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +syck-0.53.ebuild:
   Dep for new yaml code. Initial ebuild submitted by evanm@frap.net in bug 90577
-

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/vanessa-adt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.17 2012/03/09 09:45:49 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.18 2014/08/10 20:40:09 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  vanessa-adt-0.0.4_beta4.ebuild, vanessa-adt-0.0.6.ebuild,
+  vanessa-adt-0.0.7.ebuild, vanessa-adt-0.0.8.ebuild, vanessa-adt-0.0.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *vanessa-adt-0.0.9 (09 Mar 2012)
 

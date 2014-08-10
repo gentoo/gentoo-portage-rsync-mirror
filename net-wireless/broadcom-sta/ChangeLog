@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.61 2014/07/22 02:11:33 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.62 2014/08/10 20:34:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  broadcom-sta-6.30.223.30-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *broadcom-sta-6.30.223.248-r1 (22 Jul 2014)
 

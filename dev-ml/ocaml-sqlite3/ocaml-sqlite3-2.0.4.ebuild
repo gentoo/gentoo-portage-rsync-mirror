@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ocaml-sqlite3-2.0.4.ebuild,v 1.2 2013/03/03 11:41:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ocaml-sqlite3-2.0.4.ebuild,v 1.3 2014/08/10 20:43:12 slyfox Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit oasis
 MY_PN="sqlite3-ocaml"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A package for ocaml that provides access to SQLite databases."
+DESCRIPTION="A package for ocaml that provides access to SQLite databases"
 HOMEPAGE="http://bitbucket.org/mmottl/sqlite3-ocaml"
 SRC_URI="http://bitbucket.org/mmottl/${MY_PN}/downloads/${MY_P}.tar.gz"
 

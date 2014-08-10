@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PHP_CodeCoverage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/ChangeLog,v 1.14 2014/05/12 13:16:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/ChangeLog,v 1.15 2014/08/10 20:58:00 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PHP_CodeCoverage-1.1.2.ebuild, PHP_CodeCoverage-1.2.13.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 May 2014; Michael Palimaka <kensington@gentoo.org>
   PHP_CodeCoverage-1.1.2.ebuild, PHP_CodeCoverage-1.2.13.ebuild:

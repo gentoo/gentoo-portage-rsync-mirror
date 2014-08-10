@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=>=dev-libs/openssl-0.9.7 snmp? ( net-analyzer/net-snmp[ucd-compat(+)] ) pcap? ( net-libs/libpcap ) !<sys-devel/gettext-0.18.1.1-r3 sys-devel/automake =sys-devel/autoconf-2.1* sys-devel/libtool
-DESCRIPTION=Internet bandwidth, latency, and loss of links analyzer.
+DESCRIPTION=Internet bandwidth, latency, and loss of links analyzer
 EAPI=4
 HOMEPAGE=http://www.kitchenlab.org/www/bmah/Software/pchar/
 IUSE=ipv6 pcap snmp
@@ -9,4 +9,4 @@ LICENSE=BSD
 SLOT=0
 SRC_URI=http://www.kitchenlab.org/www/bmah/Software/pchar/pchar-1.5.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=5e185b21ce479a8dafc142190b755237
+_md5_=15aff7f48964c3e7697a744272dbed6e

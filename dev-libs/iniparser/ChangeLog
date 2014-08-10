@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/iniparser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.37 2014/08/07 18:07:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.38 2014/08/10 20:34:17 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> iniparser-3.1-r1.ebuild,
+  iniparser-3.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Aug 2014; Jeroen Roovers <jer@gentoo.org> iniparser-3.1-r1.ebuild:
   Stable for HPPA (bug #512012).

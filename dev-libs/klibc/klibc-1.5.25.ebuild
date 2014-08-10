@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.25.ebuild,v 1.9 2014/01/15 09:43:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.25.ebuild,v 1.10 2014/08/10 20:34:39 slyfox Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -18,7 +18,7 @@
 
 inherit eutils multilib toolchain-funcs
 
-DESCRIPTION="A minimal libc subset for use with initramfs."
+DESCRIPTION="A minimal libc subset for use with initramfs"
 HOMEPAGE="http://www.zytor.com/mailman/listinfo/klibc"
 KV_MAJOR="2" KV_MINOR="6" KV_SUB="39"
 PKV_EXTRA=""

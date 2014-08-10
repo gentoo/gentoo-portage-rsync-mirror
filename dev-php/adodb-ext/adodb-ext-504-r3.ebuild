@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb-ext/adodb-ext-504-r3.ebuild,v 1.1 2013/02/20 07:12:15 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb-ext/adodb-ext-504-r3.ebuild,v 1.2 2014/08/10 20:59:14 slyfox Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ inherit eutils php-ext-source-r2
 
 KEYWORDS="~amd64 ~x86"
 
-DESCRIPTION="PHP extension providing up to 100% speedup by replacing parts of ADOdb with C code."
+DESCRIPTION="PHP extension providing up to 100% speedup by replacing parts of ADOdb with C code"
 HOMEPAGE="http://adodb.sourceforge.net/"
 SRC_URI="http://phplens.com/lens/dl/${P}.zip"
 LICENSE="BSD"

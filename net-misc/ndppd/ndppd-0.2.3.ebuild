@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndppd/ndppd-0.2.3.ebuild,v 1.1 2013/04/17 20:57:30 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndppd/ndppd-0.2.3.ebuild,v 1.2 2014/08/10 20:45:22 slyfox Exp $
 
 EAPI=5
 
-DESCRIPTION="Proxies NDP messages between interfaces."
+DESCRIPTION="Proxies NDP messages between interfaces"
 HOMEPAGE="http://priv.nu/projects/ndppd/"
 SRC_URI="http://priv.nu/projects/ndppd/files/${P}.tar.gz"
 

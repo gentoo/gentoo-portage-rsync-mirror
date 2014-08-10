@@ -1,6 +1,10 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.45 2014/03/04 20:11:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.46 2014/08/10 20:57:55 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> devede-3.16.9.ebuild,
+  devede-3.21.0.ebuild, devede-3.22.0.ebuild, devede-3.23.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> devede-3.23.0.ebuild:
   Stable for x86, wrt bug #496538

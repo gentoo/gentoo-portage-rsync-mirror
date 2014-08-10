@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=dev-libs/openssl virtual/pkgconfig doc? ( app-doc/doxygen ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=A library implementing a layer on top of PKCS#11 API to make using PKCS#11 implementations easier.
+DESCRIPTION=A library implementing a layer on top of PKCS#11 API to make using PKCS#11 implementations easier
 EAPI=4
 HOMEPAGE=https://github.com/opensc/libp11/wiki
 IUSE=doc
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/openssl
 SLOT=0
 SRC_URI=mirror://sourceforge/opensc/libp11/libp11-0.2.8.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ceea8185d85197fea2d2798eff332f1f
+_md5_=b21edfd0cda58c3fea70b58f28204b51

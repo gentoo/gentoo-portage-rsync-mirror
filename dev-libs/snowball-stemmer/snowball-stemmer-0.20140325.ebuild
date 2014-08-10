@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/snowball-stemmer/snowball-stemmer-0.20140325.ebuild,v 1.2 2014/07/21 19:23:27 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/snowball-stemmer/snowball-stemmer-0.20140325.ebuild,v 1.3 2014/08/10 20:39:30 slyfox Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit eutils versionator
 # http://snowball.tartarus.org/dist/libstemmer_c.tgz.
 PVDATE=$(get_after_major_version)
 
-DESCRIPTION="This contains all you need to include the snowball stemming algorithms into a C project of your own."
+DESCRIPTION="This contains all you need to include the snowball stemming algorithms into a C project of your own"
 HOMEPAGE="http://snowball.tartarus.org/download.php"
 SRC_URI="http://dev.gentoo.org/~graaff/libstemmer_c-${PVDATE}.tgz"
 

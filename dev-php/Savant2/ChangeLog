@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/Savant2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Savant2/ChangeLog,v 1.4 2012/06/10 11:55:48 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Savant2/ChangeLog,v 1.5 2014/08/10 20:58:21 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> Savant2-2.4.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   10 Jun 2012; Matti Bickel <mabi@gentoo.org> Savant2-2.4.3.ebuild:
   remove unneeded depend.php call
@@ -20,4 +23,3 @@
   +Savant2-2.4.1.ebuild:
   New ebuild for Savant2, compatible with new-style PHP, goes along with
   dev-php5/Savant3 for PHP5.
-

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/blinkentools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkentools/ChangeLog,v 1.8 2012/05/05 08:58:58 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkentools/ChangeLog,v 1.9 2014/08/10 20:57:35 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> blinkentools-2.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> blinkentools-2.9.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -31,4 +34,3 @@
   +blinkentools-2.9.ebuild:
   Thanks to Niels 'NachtKind' Will in Bug #61819 for this ebuild, dedicated to
   all Blinkenlight-lovers.
-

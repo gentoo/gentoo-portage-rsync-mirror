@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbackup/dvbackup-0.0.4-r1.ebuild,v 1.2 2010/07/29 21:50:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbackup/dvbackup-0.0.4-r1.ebuild,v 1.3 2014/08/10 20:58:04 slyfox Exp $
 
 EAPI="2"
 
 inherit eutils
 
-DESCRIPTION="A small utility for creating backups on DV tapes."
+DESCRIPTION="A small utility for creating backups on DV tapes"
 HOMEPAGE="http://dvbackup.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dvbackup/${P}.tar.gz"
 

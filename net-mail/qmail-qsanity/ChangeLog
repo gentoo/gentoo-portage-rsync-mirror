@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail-qsanity
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qsanity/ChangeLog,v 1.6 2013/02/02 18:42:30 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qsanity/ChangeLog,v 1.7 2014/08/10 20:46:01 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> qmail-qsanity-0.52.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Feb 2013; Ulrich Müller <ulm@gentoo.org> qmail-qsanity-0.52.ebuild:
   Fix LICENSE, bug 453166.
@@ -20,4 +23,3 @@
   04 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
   qmail-qsanity-0.52.ebuild:
   Initial Commit.
-

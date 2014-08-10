@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/frameworks/frameworks-0.3.7.ebuild,v 1.3 2012/05/05 08:58:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/frameworks/frameworks-0.3.7.ebuild,v 1.4 2014/08/10 20:59:15 slyfox Exp $
 
 EAPI=2
 
-DESCRIPTION="A small v4l frame capture utility especially suited for stop motion animation."
+DESCRIPTION="A small v4l frame capture utility especially suited for stop motion animation"
 SRC_URI="http://frameworks.polycrystal.org/release/${P}.tar.gz"
 HOMEPAGE="http://frameworks.polycrystal.org"
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install postinst postrm preinst prepare setup
 DEPEND=dev-libs/glib:2= x11-libs/gtk+:3= x11-libs/startup-notification:= dev-python/dbus-python[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] || ( dev-python/pygobject:2 dev-python/pygobject:3 ) >=net-wireless/bluez-4.61:= python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] nls? ( dev-util/intltool sys-devel/gettext ) virtual/pkgconfig dev-python/cython[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=sys-apps/sed-4 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks.
+DESCRIPTION=GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks
 EAPI=5
 HOMEPAGE=http://blueman-project.org/
 IUSE=gconf sendto network nls policykit pulseaudio python_targets_python2_7 python_single_target_python2_7
@@ -11,4 +11,4 @@ REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( p
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~zerochaos/distfiles/blueman-1.23_p20140717.tar.xz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=5c2b7919362fe2026648a99115732acd
+_md5_=733cfe5fb2b6b3215455fd40b018d588

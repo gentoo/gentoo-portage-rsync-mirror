@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=>=sys-apps/sed-4
-DESCRIPTION=A point-to-point bandwidth measurement tool.
+DESCRIPTION=A point-to-point bandwidth measurement tool
 EAPI=2
 HOMEPAGE=http://fgouget.free.fr/bing/index-en.shtml
 KEYWORDS=amd64 ~arm ia64 ppc sparc x86
@@ -8,4 +8,4 @@ LICENSE=BSD-4
 SLOT=0
 SRC_URI=mirror://debian/pool/main/b/bing/bing_1.1.3.orig.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=a676c234445b52ad854e5edeb140a4f7
+_md5_=d919e13857161996fd2bcc3dfaceb906

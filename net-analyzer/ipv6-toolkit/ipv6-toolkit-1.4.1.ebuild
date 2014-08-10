@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipv6-toolkit/ipv6-toolkit-1.4.1.ebuild,v 1.2 2013/12/29 08:52:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipv6-toolkit/ipv6-toolkit-1.4.1.ebuild,v 1.3 2014/08/10 20:58:27 slyfox Exp $
 
 EAPI=4
 
 inherit eutils
 
-DESCRIPTION="Set of IPv6 security/trouble-shooting tools, that can send arbitrary IPv6-based packets."
+DESCRIPTION="Set of IPv6 security/trouble-shooting tools, that can send arbitrary IPv6-based packets"
 HOMEPAGE="http://www.si6networks.com/tools/ipv6toolkit/"
 MY_PN="ipv6toolkit"
 MY_P="${MY_PN}-v${PV}"

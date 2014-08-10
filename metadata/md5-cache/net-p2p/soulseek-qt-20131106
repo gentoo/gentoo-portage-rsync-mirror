@@ -1,5 +1,5 @@
 DEFINED_PHASES=install
-DESCRIPTION=Official binary Qt SoulSeek client.
+DESCRIPTION=Official binary Qt SoulSeek client
 EAPI=5
 HOMEPAGE=http://www.soulseekqt.net/
 KEYWORDS=~amd64 ~x86
@@ -8,4 +8,4 @@ RDEPEND=dev-qt/qtgui:4 dev-qt/qtcore:4
 RESTRICT=mirror
 SLOT=0
 SRC_URI=x86? ( http://www.soulseekqt.net/SoulseekQT/Linux/SoulseekQt-2013-11-6.tgz ) amd64? ( http://www.soulseekqt.net/SoulseekQT/Linux/SoulseekQt-2013-11-6-64bit.tgz )
-_md5_=45e98fe3350797d9faee74e07cf13678
+_md5_=fc1b677b3c7f84d9d09238c71475225b

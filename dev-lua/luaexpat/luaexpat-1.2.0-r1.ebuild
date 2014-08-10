@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/luaexpat-1.2.0-r1.ebuild,v 1.8 2014/03/04 20:37:39 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/luaexpat-1.2.0-r1.ebuild,v 1.9 2014/08/10 20:41:57 slyfox Exp $
 
 EAPI=5
 
 inherit multilib toolchain-funcs flag-o-matic eutils
 
-DESCRIPTION="LuaExpat is a SAX XML parser based on the Expat library."
+DESCRIPTION="LuaExpat is a SAX XML parser based on the Expat library"
 HOMEPAGE="http://www.keplerproject.org/luaexpat/"
 SRC_URI="http://matthewwild.co.uk/projects/${PN}/${P}.tar.gz"
 

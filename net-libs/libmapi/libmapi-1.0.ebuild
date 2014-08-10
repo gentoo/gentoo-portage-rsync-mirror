@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmapi/libmapi-1.0.ebuild,v 1.1 2012/10/10 14:24:38 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmapi/libmapi-1.0.ebuild,v 1.2 2014/08/10 20:49:26 slyfox Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -10,7 +10,7 @@ inherit autotools eutils python
 MY_PN=openchange
 MY_P=${MY_PN}-${PV}-BORG
 
-DESCRIPTION="Portable open-source implementations of Exchange protocols."
+DESCRIPTION="Portable open-source implementations of Exchange protocols"
 HOMEPAGE="http://www.openchange.org/"
 SRC_URI="http://tracker.openchange.org/attachments/download/180/${MY_P}.tar.gz"
 

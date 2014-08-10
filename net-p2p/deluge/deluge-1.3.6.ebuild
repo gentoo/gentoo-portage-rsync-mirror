@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.6.ebuild,v 1.6 2013/09/14 10:05:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.6.ebuild,v 1.7 2014/08/10 20:36:34 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 
 inherit distutils eutils python systemd
 
-DESCRIPTION="BitTorrent client with a client/server model."
+DESCRIPTION="BitTorrent client with a client/server model"
 HOMEPAGE="http://deluge-torrent.org/"
 SRC_URI="http://download.deluge-torrent.org/source/${P}.tar.bz2"
 

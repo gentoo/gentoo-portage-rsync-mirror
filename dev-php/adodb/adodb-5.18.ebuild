@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.18.ebuild,v 1.11 2013/08/07 13:32:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.18.ebuild,v 1.12 2014/08/10 20:59:07 slyfox Exp $
 
 EAPI=4
 
 inherit versionator
 
 MY_PV=$(delete_all_version_separators "${PV}" )
-DESCRIPTION="Active Data Objects Data Base library for PHP."
+DESCRIPTION="Active Data Objects Data Base library for PHP"
 HOMEPAGE="http://adodb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/adodb/adodb-php5-only/${PN}-${MY_PV}-for-php5/${PN}${MY_PV}a.tgz"
 

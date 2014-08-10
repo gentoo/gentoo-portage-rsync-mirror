@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ratproxy/ratproxy-1.58.ebuild,v 1.1 2010/05/22 15:02:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ratproxy/ratproxy-1.58.ebuild,v 1.2 2014/08/10 20:35:32 slyfox Exp $
 
 inherit eutils flag-o-matic
 
-DESCRIPTION="A semi-automated, largely passive web application security audit tool."
+DESCRIPTION="A semi-automated, largely passive web application security audit tool"
 HOMEPAGE="http://code.google.com/p/ratproxy/"
 SRC_URI="http://ratproxy.googlecode.com/files/${P}.tar.gz"
 

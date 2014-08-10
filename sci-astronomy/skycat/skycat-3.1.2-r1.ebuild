@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/skycat-3.1.2-r1.ebuild,v 1.2 2012/07/24 19:58:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/skycat-3.1.2-r1.ebuild,v 1.3 2014/08/10 20:32:07 slyfox Exp $
 
 EAPI=4
 inherit eutils autotools
 
-DESCRIPTION="ESO astronomical image visualizer with catalog access."
+DESCRIPTION="ESO astronomical image visualizer with catalog access"
 HOMEPAGE="http://archive.eso.org/skycat"
 SRC_URI="http://archive.eso.org/cms/tools-documentation/skycat-download/${P}.tar.gz"
 

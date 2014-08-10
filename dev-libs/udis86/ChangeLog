@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/udis86
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.23 2014/07/13 09:59:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.24 2014/08/10 20:39:59 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> udis86-1.7-r1.ebuild,
+  udis86-1.7-r2.ebuild, udis86-1.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> udis86-1.7-r2.ebuild:
   Stable for ppc, wrt bug #507140

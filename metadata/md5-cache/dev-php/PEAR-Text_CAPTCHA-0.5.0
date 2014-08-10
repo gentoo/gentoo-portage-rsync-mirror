@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=Generation of CAPTCHAs.
+DESCRIPTION=Generation of CAPTCHAs
 EAPI=5
 HOMEPAGE=http://pear.php.net/Text_CAPTCHA
 IUSE=minimal
@@ -10,4 +10,4 @@ RDEPEND=>=dev-php/PEAR-Text_Password-1.1.1 dev-lang/php[gd,truetype] !minimal? (
 SLOT=0
 SRC_URI=http://pear.php.net/get/Text_CAPTCHA-0.5.0.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=d8a39c08e9943ed4a928d3acfa3bddb0
+_md5_=215068793bdec287e77621007d990047

@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/tinystats
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/tinystats/ChangeLog,v 1.5 2011/07/20 17:20:40 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/tinystats/ChangeLog,v 1.6 2014/08/10 20:42:45 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tinystats-1.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118937
@@ -19,4 +22,3 @@
   14 May 2006; Thilo Bangert <bangert@gentoo.org> ChangeLog:
   initial import. tinystats is a filter that reads tinydns logs 
   and stores stats about query types and errors.
-

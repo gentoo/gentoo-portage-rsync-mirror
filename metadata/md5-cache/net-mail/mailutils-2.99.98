@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install postinst postrm prepare setup
 DEPEND=!mail-client/nmh !mail-filter/libsieve !mail-client/mailx !mail-client/nail sys-libs/ncurses sys-libs/readline sys-devel/libtool virtual/mta berkdb? ( sys-libs/db ) bidi? ( dev-libs/fribidi ) gdbm? ( sys-libs/gdbm ) guile? ( dev-scheme/guile ) kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) nls? ( sys-devel/gettext ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql-base ) sasl? ( virtual/gsasl ) ssl? ( net-libs/gnutls ) tcpd? ( sys-apps/tcp-wrappers ) tokyocabinet? ( dev-db/tokyocabinet ) virtual/pkgconfig python? ( =dev-lang/python-2* )
-DESCRIPTION=A useful collection of mail servers, clients, and filters.
+DESCRIPTION=A useful collection of mail servers, clients, and filters
 EAPI=5
 HOMEPAGE=http://www.gnu.org/software/mailutils/mailutils.html
 IUSE=berkdb bidi +clients gdbm sasl guile ipv6 kerberos ldap mysql nls pam postgres python servers ssl static-libs +threads tcpd tokyocabinet
@@ -10,4 +10,4 @@ RDEPEND=!mail-client/nmh !mail-filter/libsieve !mail-client/mailx !mail-client/n
 SLOT=0
 SRC_URI=mirror://gnu-alpha/mailutils/mailutils-2.99.98.tar.xz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=2ab1f159d1137e8288016666c5d439ac
+_md5_=a85709b8beb2c5c55a1adc1d1503322b

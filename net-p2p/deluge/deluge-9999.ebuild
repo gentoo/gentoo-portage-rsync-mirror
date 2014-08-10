@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.34 2013/08/03 09:45:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.35 2014/08/10 20:36:34 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -10,7 +10,7 @@ inherit distutils git-2
 EGIT_REPO_URI="git://deluge-torrent.org/${PN}.git
 	http://git.deluge-torrent.org/${PN}/"
 
-DESCRIPTION="BitTorrent client with a client/server model."
+DESCRIPTION="BitTorrent client with a client/server model"
 HOMEPAGE="http://deluge-torrent.org/"
 SRC_URI=""
 

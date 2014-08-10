@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/zniper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zniper/ChangeLog,v 1.7 2014/07/18 12:23:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zniper/ChangeLog,v 1.8 2014/08/10 21:01:11 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> zniper-1.0-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> zniper-1.0-r1.ebuild:
   EAPI bump. Do not install README. Fix building against

@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/PEAR-HTML_Table-1.8.2.ebuild,v 1.7 2008/03/28 23:43:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/PEAR-HTML_Table-1.8.2.ebuild,v 1.8 2014/08/10 20:49:14 slyfox Exp $
 
 inherit php-pear-r1
 
-DESCRIPTION="Makes the design of HTML tables easy, flexible, reusable and efficient."
+DESCRIPTION="Makes the design of HTML tables easy, flexible, reusable and efficient"
 
 LICENSE="BSD"
 SLOT="0"

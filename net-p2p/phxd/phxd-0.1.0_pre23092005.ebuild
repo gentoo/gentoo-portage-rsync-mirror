@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/phxd-0.1.0_pre23092005.ebuild,v 1.8 2014/01/08 06:30:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/phxd-0.1.0_pre23092005.ebuild,v 1.9 2014/08/10 20:37:50 slyfox Exp $
 
 inherit eutils user
 
-DESCRIPTION="Next generation Hotline server in python. kang's branch."
+DESCRIPTION="Next generation Hotline server in python. kang's branch"
 HOMEPAGE="http://www.avaraline.net"
 SRC_URI="mirror://gentoo/phxd-0.1.0_pre23092005.tar.bz2"
 

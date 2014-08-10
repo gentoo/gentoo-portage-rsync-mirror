@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/postgresql-ocaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/ChangeLog,v 1.38 2014/06/14 10:54:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/ChangeLog,v 1.39 2014/08/10 20:43:29 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  postgresql-ocaml-2.0.4.ebuild, postgresql-ocaml-2.0.5.ebuild,
+  postgresql-ocaml-2.0.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   postgresql-ocaml-2.0.5.ebuild:

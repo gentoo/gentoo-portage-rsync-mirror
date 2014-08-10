@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install
-DESCRIPTION=A handy shell-like interface for browsing LDAP servers and editing their content.
+DESCRIPTION=A handy shell-like interface for browsing LDAP servers and editing their content
 EAPI=5
 HOMEPAGE=http://projects.martini.nu/shelldap/
 KEYWORDS=~amd64 ~x86
@@ -7,4 +7,4 @@ LICENSE=BSD
 RDEPEND=dev-perl/Algorithm-Diff dev-perl/perl-ldap dev-perl/TermReadKey dev-perl/Term-ReadLine-Gnu dev-perl/Term-Shell dev-perl/YAML-Syck virtual/perl-Digest-MD5
 SLOT=0
 SRC_URI=http://code.martini.nu/shelldap/archive/bf9d6fa1b1d4.tar.bz2 -> shelldap-0.7_p20130220.tar.bz2
-_md5_=c73bc840695ad1a707747d5e49924af6
+_md5_=4693d77b2e754ce3ac98b91345f10be7

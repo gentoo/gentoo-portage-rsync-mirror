@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_URL2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL2/ChangeLog,v 1.21 2014/05/17 14:02:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL2/ChangeLog,v 1.22 2014/08/10 20:53:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-Net_URL2-2.0.0.ebuild, PEAR-Net_URL2-2.0.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> PEAR-Net_URL2-2.0.5.ebuild:
   Stable for alpha, wrt bug #502760

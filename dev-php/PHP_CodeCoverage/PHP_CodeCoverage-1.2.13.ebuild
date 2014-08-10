@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/PHP_CodeCoverage-1.2.13.ebuild,v 1.6 2014/05/12 13:16:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/PHP_CodeCoverage-1.2.13.ebuild,v 1.7 2014/08/10 20:58:00 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PHP_PEAR_URI="pear.phpunit.de"
 
 inherit php-pear-r1
 
-DESCRIPTION="Provides collection, processing, and rendering functionality for PHP code coverage information."
+DESCRIPTION="Provides collection, processing, and rendering functionality for PHP code coverage information"
 HOMEPAGE="http://pear.phpunit.de"
 
 LICENSE="BSD"

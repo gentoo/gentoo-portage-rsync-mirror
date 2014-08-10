@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcoyotl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcoyotl/ChangeLog,v 1.20 2013/07/23 10:31:37 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcoyotl/ChangeLog,v 1.21 2014/08/10 20:35:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libcoyotl-3.1.0-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> -libcoyotl-3.1.0.ebuild:
   Drop old revision

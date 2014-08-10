@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=Element for HTML_QuickForm that emulate a multi-select.
+DESCRIPTION=Element for HTML_QuickForm that emulate a multi-select
 HOMEPAGE=http://pear.php.net/HTML_QuickForm_advmultiselect
 KEYWORDS=amd64 x86
 LICENSE=BSD
@@ -8,4 +8,4 @@ RDEPEND=>=dev-php/PEAR-HTML_QuickForm-3.2.5-r1 >=dev-php/PEAR-HTML_Common-1.2.2 
 SLOT=0
 SRC_URI=http://pear.php.net/get/HTML_QuickForm_advmultiselect-1.4.0.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=cd3e74e5065bf0fbdad01f68fff4c5ca
+_md5_=78307d63bdddd65d3543102e485d1f17

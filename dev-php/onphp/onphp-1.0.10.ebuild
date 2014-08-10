@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/onphp/onphp-1.0.10.ebuild,v 1.2 2012/01/28 14:07:28 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/onphp/onphp-1.0.10.ebuild,v 1.3 2014/08/10 21:00:24 slyfox Exp $
 
 EAPI="4"
 
 KEYWORDS="~amd64 ~x86"
 
-DESCRIPTION="onPHP is the LGPL'ed multi-purpose object-oriented PHP framework."
+DESCRIPTION="onPHP is the LGPL'ed multi-purpose object-oriented PHP framework"
 HOMEPAGE="http://onphp.org/"
 SRC_URI="http://onphp.org/download/${P}.tar.bz2
 		doc? ( http://onphp.org/download/${PN}-api-${PV}.tar.bz2 )"

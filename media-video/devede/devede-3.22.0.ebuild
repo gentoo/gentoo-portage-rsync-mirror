@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.22.0.ebuild,v 1.1 2012/07/19 06:32:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.22.0.ebuild,v 1.2 2014/08/10 20:57:55 slyfox Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2:2.7"
 
 inherit multilib python
 
-DESCRIPTION="Program to create video CDs and DVDs, suitable to be played in home DVD players."
+DESCRIPTION="Program to create video CDs and DVDs, suitable to be played in home DVD players"
 HOMEPAGE="http://www.rastersoft.com/programas/devede.html"
 SRC_URI="http://www.rastersoft.com/descargas/${P}.tar.bz2"
 

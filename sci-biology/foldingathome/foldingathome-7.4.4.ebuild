@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-7.4.4.ebuild,v 1.1 2014/07/16 21:32:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-7.4.4.ebuild,v 1.2 2014/08/10 20:31:38 slyfox Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ MY_BASEURI="https://fah.stanford.edu/file-releases/public/release/fahclient"
 MY_64B_URI="${MY_BASEURI}/centos-5.3-64bit/v$(get_version_component_range 1-2)/fahclient_${PV}-64bit-release.tar.bz2"
 MY_32B_URI="${MY_BASEURI}/centos-5.5-32bit/v$(get_version_component_range 1-2)/fahclient_${PV}-32bit-release.tar.bz2"
 
-DESCRIPTION="Folding@Home is a distributed computing project for protein folding."
+DESCRIPTION="Folding@Home is a distributed computing project for protein folding"
 HOMEPAGE="http://folding.stanford.edu/FAQ-SMP.html"
 SRC_URI="x86? ( ${MY_32B_URI} )
 	amd64? ( ${MY_64B_URI} )"

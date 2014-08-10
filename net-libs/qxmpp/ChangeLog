@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/qxmpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.42 2014/06/28 12:58:19 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.43 2014/08/10 20:50:11 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> qxmpp-0.7.4.ebuild,
+  qxmpp-0.7.5.ebuild, qxmpp-0.7.6-r1.ebuild, qxmpp-0.7.6.ebuild,
+  qxmpp-0.8.0.ebuild, qxmpp-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   28 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org> qxmpp-0.8.0.ebuild:
   Disable building of examples, which require dev-libs/qtgui. Bug #513894.

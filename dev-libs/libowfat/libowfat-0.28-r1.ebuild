@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.28-r1.ebuild,v 1.9 2014/01/16 13:52:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.28-r1.ebuild,v 1.10 2014/08/10 20:37:09 slyfox Exp $
 
 EAPI=2
 inherit flag-o-matic toolchain-funcs eutils
 
-DESCRIPTION="reimplement libdjb - excellent libraries from Dan Bernstein."
+DESCRIPTION="reimplement libdjb - excellent libraries from Dan Bernstein"
 SRC_URI="http://dl.fefe.de/${P}.tar.bz2"
 HOMEPAGE="http://www.fefe.de/libowfat/"
 

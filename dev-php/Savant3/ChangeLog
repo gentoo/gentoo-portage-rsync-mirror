@@ -1,6 +1,9 @@
-# ChangeLog for dev-php5/Savant3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Savant3/ChangeLog,v 1.2 2012/06/10 12:05:21 mabi Exp $
+# ChangeLog for dev-php/Savant3
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Savant3/ChangeLog,v 1.3 2014/08/10 20:58:30 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> Savant3-3.0.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   10 Jun 2012; Matti Bickel <mabi@gentoo.org> Savant3-3.0.0.ebuild:
   remove unneeded depend.php call
@@ -17,4 +20,3 @@
   30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   +Savant3-3.0.0.ebuild:
   Port from project overlay
-

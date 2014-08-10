@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/dnstop-20121017.ebuild,v 1.1 2014/07/07 01:45:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/dnstop-20121017.ebuild,v 1.2 2014/08/10 20:42:23 slyfox Exp $
 
 EAPI=5
 
 inherit eutils
 
-DESCRIPTION="Displays various tables of DNS traffic on your network."
+DESCRIPTION="Displays various tables of DNS traffic on your network"
 HOMEPAGE="http://dnstop.measurement-factory.com/"
 SRC_URI="http://dnstop.measurement-factory.com/src/${P}.tar.gz"
 

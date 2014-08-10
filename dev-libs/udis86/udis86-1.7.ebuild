@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/udis86-1.7.ebuild,v 1.14 2012/05/24 03:19:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/udis86-1.7.ebuild,v 1.15 2014/08/10 20:39:59 slyfox Exp $
 
 EAPI=3
 
 inherit autotools eutils
 
-DESCRIPTION="Disassembler library for the x86/-64 architecture sets."
+DESCRIPTION="Disassembler library for the x86/-64 architecture sets"
 HOMEPAGE="http://udis86.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

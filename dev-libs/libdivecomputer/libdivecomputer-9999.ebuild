@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/libdivecomputer-9999.ebuild,v 1.3 2014/02/27 08:38:43 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/libdivecomputer-9999.ebuild,v 1.4 2014/08/10 20:35:08 slyfox Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ else
 	SRC_URI="http://www.divesoftware.org/libdc/releases/${P}.tar.gz"
 fi
 
-DESCRIPTION="Library for communication with dive computers from various manufacturers."
+DESCRIPTION="Library for communication with dive computers from various manufacturers"
 HOMEPAGE="http://www.divesoftware.org/libdc"
 LICENSE="LGPL-2.1"
 

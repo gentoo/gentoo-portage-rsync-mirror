@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-1.0.2-r1.ebuild,v 1.6 2013/02/15 22:46:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-1.0.2-r1.ebuild,v 1.7 2014/08/10 20:45:28 slyfox Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs user
@@ -52,7 +52,7 @@ MAX_MAILBOX_WORK_BYTES=150000000 # Default is 2147483647
 
 IUSE="pam mbox +maildir"
 
-DESCRIPTION="A security oriented POP3 server."
+DESCRIPTION="A security oriented POP3 server"
 HOMEPAGE="http://www.openwall.com/popa3d/"
 
 SRC_URI="http://www.openwall.com/popa3d/${P}.tar.gz

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.31 2014/05/31 11:27:41 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.32 2014/08/10 20:48:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> vde-2.2.2.ebuild,
+  vde-2.3.1.ebuild, vde-2.3.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *vde-2.3.2 (31 May 2014)
 

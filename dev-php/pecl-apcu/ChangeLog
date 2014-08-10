@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pecl-apcu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apcu/ChangeLog,v 1.7 2014/05/03 13:52:04 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apcu/ChangeLog,v 1.8 2014/08/10 21:00:54 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pecl-apcu-4.0.0.ebuild,
+  pecl-apcu-4.0.1-r1.ebuild, pecl-apcu-4.0.1.ebuild, pecl-apcu-4.0.2.ebuild,
+  pecl-apcu-4.0.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pecl-apcu-4.0.4 (03 May 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/maildirtree
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildirtree/ChangeLog,v 1.11 2011/12/05 11:31:13 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildirtree/ChangeLog,v 1.12 2014/08/10 20:45:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> maildirtree-0.6-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 Dec 2011; Eray Aslan <eras@gentoo.org> -maildirtree-0.6.ebuild:
   remove old
@@ -42,4 +45,3 @@
   +maildirtree-0.6.ebuild:
   Initial import. Closes #71414, ebuild submitted by Gudleik Rasch
   <gudleik@rastamatra.org>.
-

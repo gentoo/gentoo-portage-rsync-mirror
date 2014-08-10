@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/videotrans-1.6.1.ebuild,v 1.1 2011/11/25 15:59:19 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/videotrans-1.6.1.ebuild,v 1.2 2014/08/10 21:01:04 slyfox Exp $
 
 EAPI=4
 
 inherit base eutils
 
-DESCRIPTION="A package to convert movies to DVD format and to build DVDs with."
+DESCRIPTION="A package to convert movies to DVD format and to build DVDs with"
 HOMEPAGE="http://videotrans.sourceforge.net/"
 SRC_URI="mirror://sourceforge/videotrans/${P}.tar.bz2"
 

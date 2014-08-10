@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.8.0.ebuild,v 1.5 2014/02/22 22:36:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.8.0.ebuild,v 1.6 2014/08/10 20:34:51 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
 
 inherit python-single-r1
 
-DESCRIPTION="Telepathy connection manager providing libpurple supported protocols."
+DESCRIPTION="Telepathy connection manager providing libpurple supported protocols"
 HOMEPAGE="http://developer.pidgin.im/wiki/TelepathyHaze"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 

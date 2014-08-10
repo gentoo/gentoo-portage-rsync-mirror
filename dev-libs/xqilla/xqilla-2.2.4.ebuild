@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.2.4.ebuild,v 1.3 2013/07/17 08:28:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.2.4.ebuild,v 1.4 2014/08/10 20:40:44 slyfox Exp $
 
 EAPI="2"
 inherit autotools base
 
 MY_P="XQilla-${PV}"
 
-DESCRIPTION="An XQuery and XPath 2 library and command line utility written in C++."
+DESCRIPTION="An XQuery and XPath 2 library and command line utility written in C++"
 HOMEPAGE="http://xqilla.sourceforge.net/HomePage"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="Apache-2.0 BSD"

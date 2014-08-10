@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.103 2014/07/08 07:40:03 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.104 2014/08/10 20:49:13 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libetpan-1.0.ebuild,
+  libetpan-1.1.ebuild, libetpan-1.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *libetpan-1.5 (08 Jul 2014)
 

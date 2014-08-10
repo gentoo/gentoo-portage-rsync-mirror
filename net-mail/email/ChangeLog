@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/email
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.34 2012/02/19 12:23:13 klausman Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.35 2014/08/10 20:44:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> email-2.5.0.ebuild,
+  email-3.0.5.ebuild, email-3.1.2.ebuild, email-3.1.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> email-3.1.3.ebuild:
   Stable on alpha, bug #391207
@@ -138,4 +142,3 @@
   12 Nov 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   +email-2.3.0.ebuild:
   Initial import, ebuild written by me.
-

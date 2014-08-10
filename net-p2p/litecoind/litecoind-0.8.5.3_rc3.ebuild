@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/litecoind/litecoind-0.8.5.3_rc3.ebuild,v 1.2 2014/01/08 06:28:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/litecoind/litecoind-0.8.5.3_rc3.ebuild,v 1.3 2014/08/10 20:37:27 slyfox Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ MyPV="${PV/_/-}"
 MyPN="litecoin"
 MyP="${MyPN}-${MyPV}"
 
-DESCRIPTION="P2P Internet currency based on Bitcoin but easier to mine."
+DESCRIPTION="P2P Internet currency based on Bitcoin but easier to mine"
 HOMEPAGE="https://litecoin.org/"
 SRC_URI="https://github.com/${MyPN}-project/${MyPN}/archive/v${MyPV}.tar.gz -> ${MyP}.tar.gz"
 

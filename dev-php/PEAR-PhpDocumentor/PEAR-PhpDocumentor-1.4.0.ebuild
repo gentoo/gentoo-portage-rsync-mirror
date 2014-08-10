@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/PEAR-PhpDocumentor-1.4.0.ebuild,v 1.9 2007/12/06 00:49:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/PEAR-PhpDocumentor-1.4.0.ebuild,v 1.10 2014/08/10 20:54:58 slyfox Exp $
 
 inherit php-pear-r1
 
-DESCRIPTION="The phpDocumentor package provides automatic documenting of php api directly from the source."
+DESCRIPTION="The phpDocumentor package provides automatic documenting of php api directly from the source"
 # see http://pear.php.net/bugs/bug.php?id=12577 for additional info on licensing mess
 LICENSE="PHP-2.02 PHP-3 LGPL-2.1 public-domain Apache-2.0 BSD"
 SLOT="0"

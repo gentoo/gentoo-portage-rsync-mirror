@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ndsad-1.33.ebuild,v 1.7 2008/09/16 07:57:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ndsad-1.33.ebuild,v 1.8 2014/08/10 20:58:57 slyfox Exp $
 
 inherit autotools
 
-DESCRIPTION="Cisco netflow probe from libpcap, ULOG, tee/divert sources."
+DESCRIPTION="Cisco netflow probe from libpcap, ULOG, tee/divert sources"
 HOMEPAGE="http://sourceforge.net/projects/ndsad"
 SRC_URI="mirror://sourceforge/ndsad/ndsad-${PV}.tgz"
 

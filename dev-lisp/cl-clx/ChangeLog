@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-clx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/ChangeLog,v 1.17 2014/07/11 08:46:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/ChangeLog,v 1.18 2014/08/10 20:41:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cl-clx-0.7.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   11 Jul 2014; Patrick Lauer <patrick@gentoo.org> cl-clx-0.7.3.ebuild:
   Stable on amd64 #511170

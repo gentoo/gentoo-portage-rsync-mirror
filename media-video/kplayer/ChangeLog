@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.55 2014/03/21 20:09:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.56 2014/08/10 21:00:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> kplayer-0.7.2-r1.ebuild,
+  kplayer-0.7.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *kplayer-0.7.2-r1 (21 Mar 2014)
 

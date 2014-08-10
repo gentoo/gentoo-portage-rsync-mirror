@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0-r1.ebuild,v 1.8 2014/01/26 12:17:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0-r1.ebuild,v 1.9 2014/08/10 20:59:27 slyfox Exp $
 
 EAPI=4
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
-DESCRIPTION="GPAC is an implementation of the MPEG-4 Systems standard developed from scratch in ANSI C."
+DESCRIPTION="GPAC is an implementation of the MPEG-4 Systems standard developed from scratch in ANSI C"
 HOMEPAGE="http://gpac.wp.mines-telecom.fr/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

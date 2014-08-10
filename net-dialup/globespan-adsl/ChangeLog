@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/globespan-adsl
-# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.28 2012/10/07 09:03:39 pacho Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.29 2014/08/10 20:55:36 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  globespan-adsl-0.11-r1.ebuild, globespan-adsl-0.12.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #24135.

@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.4.16.ebuild,v 1.7 2012/12/21 13:25:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.4.16.ebuild,v 1.8 2014/08/10 20:33:08 slyfox Exp $
 
 EAPI=4
 inherit eutils db-use multilib
 
 MY_PV="${PV/_/}"
 
-DESCRIPTION="Developer support for the Cyrus IMAP Server."
+DESCRIPTION="Developer support for the Cyrus IMAP Server"
 HOMEPAGE="http://www.cyrusimap.org/"
 SRC_URI="ftp://ftp.cyrusimap.org/cyrus-imapd/cyrus-imapd-${MY_PV}.tar.gz"
 

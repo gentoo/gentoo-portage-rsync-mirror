@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/datacoin-hp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/datacoin-hp/ChangeLog,v 1.3 2014/02/25 18:22:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/datacoin-hp/ChangeLog,v 1.4 2014/08/10 20:36:24 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> datacoin-hp-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   25 Feb 2014; Anthony G. Basile <blueness@gentoo.org> files/datacoin.initd:
   Add imrpoved initd, bug #500602

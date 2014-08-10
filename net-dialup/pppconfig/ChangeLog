@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/pppconfig
 # Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.30 2014/05/26 13:33:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.31 2014/08/10 20:56:07 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  pppconfig-2.3.17-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pppconfig-2.3.21 (26 May 2014)
 

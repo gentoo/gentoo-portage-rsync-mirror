@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.9.0.ebuild,v 1.2 2014/06/23 10:21:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.9.0.ebuild,v 1.3 2014/08/10 20:43:50 slyfox Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_P="${P/dahdi/dahdi-linux}"
 JNET=1.0.14
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="Kernel modules for Digium compatible hardware (formerly known as Zaptel)."
+DESCRIPTION="Kernel modules for Digium compatible hardware (formerly known as Zaptel)"
 HOMEPAGE="http://www.asterisk.org"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/dahdi-linux/releases/${MY_P}.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-a4a-a0017.tar.gz

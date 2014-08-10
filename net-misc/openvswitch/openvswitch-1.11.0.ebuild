@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.11.0.ebuild,v 1.3 2013/11/25 19:41:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.11.0.ebuild,v 1.4 2014/08/10 20:46:09 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit eutils linux-info linux-mod python-single-r1
 
-DESCRIPTION="Production quality, multilayer virtual switch."
+DESCRIPTION="Production quality, multilayer virtual switch"
 HOMEPAGE="http://openvswitch.org"
 SRC_URI="http://openvswitch.org/releases/${P}.tar.gz"
 

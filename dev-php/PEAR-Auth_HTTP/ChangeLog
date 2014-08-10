@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Auth_HTTP
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth_HTTP/ChangeLog,v 1.10 2012/02/02 15:15:57 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth_HTTP/ChangeLog,v 1.11 2014/08/10 20:44:06 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-Auth_HTTP-2.1.6-r1.ebuild, PEAR-Auth_HTTP-2.1.8.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *PEAR-Auth_HTTP-2.1.8 (02 Feb 2012)
 
@@ -47,4 +51,3 @@
   24 May 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Auth_HTTP-2.1.6.ebuild:
   Initial ebuild.
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Benchmark
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.57 2012/06/09 14:39:01 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.58 2014/08/10 20:44:19 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-Benchmark-1.2.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 Jun 2012; Matti Bickel <mabi@gentoo.org> -PEAR-Benchmark-1.2.7-r1.ebuild:
   remove old
@@ -233,4 +237,3 @@
   12 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Benchmark-1.2.2.ebuild:
   Initial ebuild for PEAR Benchmark package.
-

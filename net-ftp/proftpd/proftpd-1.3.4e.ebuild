@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4e.ebuild,v 1.1 2014/05/16 21:08:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4e.ebuild,v 1.2 2014/08/10 20:54:43 slyfox Exp $
 
 EAPI=5
 inherit eutils multilib systemd
@@ -12,7 +12,7 @@ MOD_GSS="1.3.3"
 MOD_MSG="0.4.1"
 MOD_VROOT="0.9.3"
 
-DESCRIPTION="An advanced and very configurable FTP server."
+DESCRIPTION="An advanced and very configurable FTP server"
 HOMEPAGE="http://www.proftpd.org/
 	http://www.castaglia.org/proftpd/
 	http://www.thrallingpenguin.com/resources/mod_clamav.htm

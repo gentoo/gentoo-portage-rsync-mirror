@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0-r1.ebuild,v 1.4 2014/07/27 19:05:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0-r1.ebuild,v 1.5 2014/08/10 20:58:09 slyfox Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
 
 KEYWORDS="~amd64 arm ~ppc x86"
 
-DESCRIPTION="A simple CLI program for displaying network statistics in real time."
+DESCRIPTION="A simple CLI program for displaying network statistics in real time"
 HOMEPAGE="http://ifstatus.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-v${PV}.tar.gz"
 LICENSE="GPL-2"

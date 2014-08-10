@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r1.ebuild,v 1.7 2012/12/02 08:23:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r1.ebuild,v 1.8 2014/08/10 20:32:57 slyfox Exp $
 
 # Please note: apache, java, mono and ruby support disabled for now.
 # Fill a bug if you need it.
@@ -13,7 +13,7 @@ PYTHON_DEPEND="python? 2"
 
 inherit autotools eutils multilib perl-app python
 
-DESCRIPTION="Clearsilver is a fast, powerful, and language-neutral HTML template system."
+DESCRIPTION="Clearsilver is a fast, powerful, and language-neutral HTML template system"
 HOMEPAGE="http://www.clearsilver.net/"
 SRC_URI="http://www.clearsilver.net/downloads/${P}.tar.gz"
 

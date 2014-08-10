@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkentools/blinkentools-2.9.ebuild,v 1.7 2012/05/05 08:58:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkentools/blinkentools-2.9.ebuild,v 1.8 2014/08/10 20:57:35 slyfox Exp $
 
-DESCRIPTION="blinkentools is a set of commandline utilities related to Blinkenlights."
+DESCRIPTION="blinkentools is a set of commandline utilities related to Blinkenlights"
 HOMEPAGE="http://www.blinkenlights.net/project/developer-tools"
 SRC_URI="http://www.blinkenlights.de/dist/${P}.tar.gz"
 

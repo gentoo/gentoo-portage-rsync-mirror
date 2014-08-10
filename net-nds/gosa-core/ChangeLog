@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/gosa-core
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-core/ChangeLog,v 1.4 2011/03/01 06:47:43 dev-zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-core/ChangeLog,v 1.5 2014/08/10 20:53:00 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gosa-core-2.6.10.ebuild,
+  gosa-core-2.6.11.ebuild, gosa-core-2.6.12.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *gosa-core-2.6.12 (01 Mar 2011)
 
@@ -22,4 +26,3 @@
   29 Jul 2010; Tiziano Müller <dev-zero@gentoo.org>
   +gosa-core-2.6.10.ebuild, +files/gosa.include, +metadata.xml:
   Initial commit, ebuild written by me (bug #224983).
-

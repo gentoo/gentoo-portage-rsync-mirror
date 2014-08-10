@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.83 2014/05/30 02:22:15 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.84 2014/08/10 20:32:38 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> rox-2.10.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *rox-2.10-r1 (30 May 2014)
 

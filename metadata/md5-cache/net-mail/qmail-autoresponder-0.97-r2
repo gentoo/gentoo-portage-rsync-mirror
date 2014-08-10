@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prepare
 DEPEND=>=dev-libs/bglibs-1.106 mysql? ( virtual/mysql )
-DESCRIPTION=Rate-limited autoresponder for qmail.
+DESCRIPTION=Rate-limited autoresponder for qmail
 EAPI=2
 HOMEPAGE=http://untroubled.org/qmail-autoresponder/
 IUSE=mysql
@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/bglibs-1.106 mysql? ( virtual/mysql ) virtual/qmail mysql? ( 
 SLOT=0
 SRC_URI=http://untroubled.org/qmail-autoresponder/archive/qmail-autoresponder-0.97.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c43e2b4bc80c036320aa3ce63eb5709d
+_md5_=711089e373d0836507924c3d571d6f10

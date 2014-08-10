@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/libmowgli-1.0.0.ebuild,v 1.10 2013/07/17 20:36:15 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/libmowgli-1.0.0.ebuild,v 1.11 2014/08/10 20:36:47 slyfox Exp $
 
 EAPI=3
 
-DESCRIPTION="High-performance C development framework. Can be used stand-alone or as a supplement to GLib."
+DESCRIPTION="High-performance C development framework. Can be used stand-alone or as a supplement to GLib"
 HOMEPAGE="http://www.atheme.org/project/mowgli"
 SRC_URI="http://distfiles.atheme.org/${P}.tar.bz2"
 IUSE=""

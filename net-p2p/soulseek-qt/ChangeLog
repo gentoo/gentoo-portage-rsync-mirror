@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/soulseek-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/soulseek-qt/ChangeLog,v 1.6 2014/01/06 13:27:56 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/soulseek-qt/ChangeLog,v 1.7 2014/08/10 20:38:26 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  soulseek-qt-20131106.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *soulseek-qt-20131106 (06 Jan 2014)
 

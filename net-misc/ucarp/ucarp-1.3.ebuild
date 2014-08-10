@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-1.3.ebuild,v 1.3 2011/04/02 12:50:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-1.3.ebuild,v 1.4 2014/08/10 20:48:37 slyfox Exp $
 
 inherit eutils
 
-DESCRIPTION="Portable userland implementation of Common Address Redundancy Protocol (CARP)."
+DESCRIPTION="Portable userland implementation of Common Address Redundancy Protocol (CARP)"
 HOMEPAGE="http://www.ucarp.org"
 LICENSE="GPL-2"
 DEPEND="net-libs/libpcap"

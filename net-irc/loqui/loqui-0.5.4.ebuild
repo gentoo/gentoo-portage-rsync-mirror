@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/loqui-0.5.4.ebuild,v 1.4 2014/05/10 13:46:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/loqui-0.5.4.ebuild,v 1.5 2014/08/10 20:53:28 slyfox Exp $
 
 EAPI=4
 
-DESCRIPTION="a graphical IRC client for GNOME2 on UNIX like operating system."
+DESCRIPTION="a graphical IRC client for GNOME2 on UNIX like operating system"
 HOMEPAGE="https://launchpad.net/loqui/"
 SRC_URI="https://launchpad.net/loqui/${PV%.*}/${PV}/+download/${P}.tar.gz"
 

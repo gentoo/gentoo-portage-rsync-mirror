@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=Abstract base class for HTML classes (PHP5 port of PEAR-HTML_Common package).
+DESCRIPTION=Abstract base class for HTML classes (PHP5 port of PEAR-HTML_Common package)
 EAPI=4
 HOMEPAGE=http://pear.php.net/HTML_Common2
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
@@ -9,4 +9,4 @@ RDEPEND=dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/HTML_Common2-2.1.0.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=a396fa7e084ba9614de14a1bcba1629f
+_md5_=9316cd63653cade097e866988a122086

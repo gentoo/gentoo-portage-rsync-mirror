@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/phpldapadmin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.60 2014/04/11 01:41:31 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.61 2014/08/10 20:53:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  phpldapadmin-1.2.3-r1.ebuild, phpldapadmin-1.2.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   11 Apr 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   phpldapadmin-1.2.3.ebuild:

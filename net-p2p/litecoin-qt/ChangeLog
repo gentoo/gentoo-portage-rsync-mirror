@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/litecoin-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/litecoin-qt/ChangeLog,v 1.3 2014/05/26 21:36:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/litecoin-qt/ChangeLog,v 1.4 2014/08/10 20:37:19 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  litecoin-qt-0.8.5.3_rc3.ebuild, litecoin-qt-0.8.6.1.ebuild,
+  litecoin-qt-0.8.7.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *litecoin-qt-0.8.7.1 (26 May 2014)
 

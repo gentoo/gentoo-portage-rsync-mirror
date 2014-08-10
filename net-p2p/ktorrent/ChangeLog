@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.204 2014/06/08 11:30:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.205 2014/08/10 20:37:11 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ktorrent-4.3.1-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -ktorrent-4.3.1.ebuild:
   Cleanup old.

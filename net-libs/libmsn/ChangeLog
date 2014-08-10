@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmsn
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.38 2012/08/08 20:28:23 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.39 2014/08/10 20:49:51 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libmsn-4.2.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Aug 2012; Johannes Huber <johu@gentoo.org>
   -files/libmsn-4.2-install-xmlparser-header.patch, -libmsn-4.2.ebuild:

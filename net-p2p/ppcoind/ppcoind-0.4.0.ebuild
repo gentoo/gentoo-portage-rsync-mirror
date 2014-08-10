@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ppcoind/ppcoind-0.4.0.ebuild,v 1.1 2014/05/26 21:53:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ppcoind/ppcoind-0.4.0.ebuild,v 1.2 2014/08/10 20:38:05 slyfox Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ MyPV="${PV/_/-}"
 MyPN="ppcoin"
 MyP="${MyPN}-${MyPV}"
 
-DESCRIPTION="Cryptocurrency forked from Bitcoin which aims to be energy efficiency."
+DESCRIPTION="Cryptocurrency forked from Bitcoin which aims to be energy efficiency"
 HOMEPAGE="http://peercoin.net/"
 SRC_URI="mirror://sourceforge/${MyPN}/${MyP}-linux.tar.gz -> ${MyP}.tar.gz"
 

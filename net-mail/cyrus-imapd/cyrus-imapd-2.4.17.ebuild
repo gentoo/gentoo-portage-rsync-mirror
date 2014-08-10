@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.17.ebuild,v 1.10 2013/02/25 12:09:57 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.17.ebuild,v 1.11 2014/08/10 20:44:18 slyfox Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools db-use eutils multilib pam ssl-cert user toolchain-funcs
 
 MY_P=${P/_/}
 
-DESCRIPTION="The Cyrus IMAP Server."
+DESCRIPTION="The Cyrus IMAP Server"
 HOMEPAGE="http://www.cyrusimap.org/"
 SRC_URI="ftp://ftp.cyrusimap.org/cyrus-imapd/${MY_P}.tar.gz"
 

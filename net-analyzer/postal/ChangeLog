@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/postal
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/ChangeLog,v 1.9 2012/03/05 14:37:09 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/ChangeLog,v 1.10 2014/08/10 21:00:36 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> postal-0.70.ebuild,
+  postal-0.72.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *postal-0.72 (05 Mar 2012)
 
@@ -43,4 +47,3 @@
   08 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> +metadata.xml,
   +postal-0.62.ebuild:
   New ebuild provided by Daniel Seyffer in bug 17413.
-

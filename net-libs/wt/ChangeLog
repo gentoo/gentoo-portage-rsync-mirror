@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/wt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.27 2013/11/16 09:42:54 mattm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.28 2014/08/10 20:50:43 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wt-3.2.2_p1-r1.ebuild,
+  wt-3.3.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   16 Nov 2013; Matthew Marlowe <mattm@gentoo.org> wt-3.3.1.ebuild:
   Keywording wt-3.3.1 for ~amd64 and ~x86, Bump has passed initial dev testing.

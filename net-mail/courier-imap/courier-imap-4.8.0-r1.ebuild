@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.8.0-r1.ebuild,v 1.11 2013/09/26 17:30:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.8.0-r1.ebuild,v 1.12 2014/08/10 20:43:48 slyfox Exp $
 
 EAPI=5
 inherit autotools eutils multilib libtool systemd
 
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 
-DESCRIPTION="An IMAP daemon designed specifically for maildirs."
+DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 HOMEPAGE="http://www.courier-mta.org/"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 LICENSE="GPL-3"

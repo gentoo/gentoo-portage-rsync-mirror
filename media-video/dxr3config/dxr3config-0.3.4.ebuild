@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/dxr3config-0.3.4.ebuild,v 1.2 2013/06/23 18:19:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/dxr3config-0.3.4.ebuild,v 1.3 2014/08/10 20:58:10 slyfox Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ inherit eutils
 MY_PV="${PV/./-}"
 MY_P="${PN}${MY_PV/./-}"
 
-DESCRIPTION="a small tool, which helps you to find the appropriate module parameters for a dxr3-mpeg card."
+DESCRIPTION="a small tool, which helps you to find the appropriate module parameters for a dxr3-mpeg card"
 HOMEPAGE="http://free.pages.at/wicky4vdr"
 SRC_URI="http://free.pages.at/wicky4vdr/download/${MY_P}.tgz"
 

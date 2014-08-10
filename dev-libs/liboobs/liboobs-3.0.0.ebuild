@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-3.0.0.ebuild,v 1.7 2014/06/22 18:47:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-3.0.0.ebuild,v 1.8 2014/08/10 20:36:58 slyfox Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 
 inherit gnome2
 
-DESCRIPTION="Liboobs is a wrapping library to the System Tools Backends."
+DESCRIPTION="Liboobs is a wrapping library to the System Tools Backends"
 HOMEPAGE="http://library.gnome.org/devel/liboobs/stable/"
 
 LICENSE="LGPL-2"

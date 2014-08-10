@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_AJAX
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_AJAX/ChangeLog,v 1.4 2009/08/22 18:11:12 beandog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_AJAX/ChangeLog,v 1.5 2014/08/10 20:47:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-HTML_AJAX-0.5.2.ebuild, PEAR-HTML_AJAX-0.5.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *PEAR-HTML_AJAX-0.5.6 (22 Aug 2009)
 
@@ -22,4 +26,3 @@
   29 Sep 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-HTML_AJAX-0.5.0.ebuild:
   Initial ebuild, closes bug #147047.
-

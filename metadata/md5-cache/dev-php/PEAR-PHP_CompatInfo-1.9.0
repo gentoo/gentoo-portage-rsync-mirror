@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=Find out the minimum version and the extensions required for a piece of code to run.
+DESCRIPTION=Find out the minimum version and the extensions required for a piece of code to run
 EAPI=4
 HOMEPAGE=http://pear.php.net/PHP_CompatInfo
 IUSE=minimal
@@ -10,4 +10,4 @@ RDEPEND=dev-lang/php[tokenizer] !minimal? ( >=dev-php/PEAR-Console_Table-1.0.5 >
 SLOT=0
 SRC_URI=http://pear.php.net/get/PHP_CompatInfo-1.9.0.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=160de24932a9b2e62e4e1c2692193e14
+_md5_=945c42b6c4d2f5b634a5ad381562f7b3

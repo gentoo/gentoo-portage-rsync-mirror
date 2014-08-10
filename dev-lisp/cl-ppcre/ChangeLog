@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-ppcre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.50 2014/07/11 08:47:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.51 2014/08/10 20:41:23 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cl-ppcre-1.2.10.ebuild,
+  cl-ppcre-1.2.11.ebuild, cl-ppcre-1.2.12.ebuild, cl-ppcre-1.2.13.ebuild,
+  cl-ppcre-1.2.14.ebuild, cl-ppcre-1.2.15.ebuild, cl-ppcre-1.2.16.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   11 Jul 2014; Patrick Lauer <patrick@gentoo.org> cl-ppcre-1.2.16.ebuild:
   Stable on amd64 #511170

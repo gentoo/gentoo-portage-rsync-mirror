@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTTP_Session2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Session2/ChangeLog,v 1.6 2012/01/18 19:51:03 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Session2/ChangeLog,v 1.7 2014/08/10 20:50:24 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-HTTP_Session2-0.7.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   18 Jan 2012; Matti Bickel <mabi@gentoo.org> -PEAR-HTTP_Session2-0.6.1.ebuild,
   PEAR-HTTP_Session2-0.7.3.ebuild:
@@ -44,4 +48,3 @@
   22 Dec 2007; Jakub Moc <jakub@gentoo.org>
   +PEAR-HTTP_Session2-0.6.1.ebuild:
   New ebuild
-

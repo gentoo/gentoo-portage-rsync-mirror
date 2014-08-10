@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/torsocks-2.0.0_rc2.ebuild,v 1.2 2013/09/17 19:12:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/torsocks-2.0.0_rc2.ebuild,v 1.3 2014/08/10 20:35:52 slyfox Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ MY_PV="$(replace_version_separator 3 -)"
 MY_PF="${PN}-${MY_PV}"
 S="${WORKDIR}/${MY_PF}"
 
-DESCRIPTION="Use most socks-friendly applications with Tor."
+DESCRIPTION="Use most socks-friendly applications with Tor"
 HOMEPAGE="http://github.com/dgoulet/torsocks"
 SRC_URI="https://github.com/dgoulet/torsocks/archive/v${MY_PV}.tar.gz -> ${MY_PF}.tar.gz"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.59 2014/03/10 10:58:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.60 2014/08/10 20:53:35 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ngircd-0.12.1.ebuild,
+  ngircd-13.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> ngircd-17.1.ebuild:
   Remove virtual/libc dependency.

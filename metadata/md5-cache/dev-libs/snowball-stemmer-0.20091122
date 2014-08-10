@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DESCRIPTION=This contains all you need to include the snowball stemming algorithms into a C project of your own.
+DESCRIPTION=This contains all you need to include the snowball stemming algorithms into a C project of your own
 EAPI=5
 HOMEPAGE=http://snowball.tartarus.org/download.php
 IUSE=static-libs
@@ -8,4 +8,4 @@ LICENSE=BSD-2
 SLOT=0
 SRC_URI=mirror://gentoo/libstemmer_c-20091122.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=ed8b07a63a3e96abf87def86fe600f37
+_md5_=c66f2461ade518db98962d39896e3ad7

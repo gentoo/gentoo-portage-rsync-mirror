@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/stuntman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stuntman/ChangeLog,v 1.3 2014/02/18 19:11:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stuntman/ChangeLog,v 1.4 2014/08/10 20:48:00 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> stuntman-1.2.6-r1.ebuild,
+  stuntman-1.2.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *stuntman-1.2.6-r1 (18 Feb 2014)
 
@@ -18,4 +22,3 @@
   07 Jan 2014; Tony Vroon <chainsaw@gentoo.org> +stuntman-1.2.6.ebuild,
   +files/initd.v1, +metadata.xml:
   Initial commit. Ebuild & init script by Jaco Kroon, closes bug #496934.
-

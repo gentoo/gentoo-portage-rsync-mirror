@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-2.0.3-r1.ebuild,v 1.3 2014/01/26 13:49:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-2.0.3-r1.ebuild,v 1.4 2014/08/10 20:34:39 slyfox Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -21,7 +21,7 @@ K_TARBALL_SUFFIX="xz"
 
 inherit eutils multilib toolchain-funcs flag-o-matic
 
-DESCRIPTION="A minimal libc subset for use with initramfs."
+DESCRIPTION="A minimal libc subset for use with initramfs"
 HOMEPAGE="http://www.zytor.com/mailman/listinfo/klibc/ https://www.kernel.org/pub/linux/libs/klibc/"
 KV_MAJOR="3" KV_MINOR="x" KV_SUB="12"
 PKV_EXTRA=""

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/sswf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/ChangeLog,v 1.14 2014/03/19 04:20:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/ChangeLog,v 1.15 2014/08/10 21:00:54 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sswf-1.8.2-r1.ebuild,
+  sswf-1.8.4-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Mar 2014; Steve Dibb <beandog@gentoo.org> sswf-1.8.2-r1.ebuild,
   sswf-1.8.4-r1.ebuild:

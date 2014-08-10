@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-File_SMBPasswd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_SMBPasswd/ChangeLog,v 1.21 2012/02/12 15:39:07 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_SMBPasswd/ChangeLog,v 1.22 2014/08/10 20:47:26 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-File_SMBPasswd-1.0.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Feb 2012; Matti Bickel <mabi@gentoo.org> -PEAR-File_SMBPasswd-1.0.2.ebuild:
   remove old
@@ -85,4 +89,3 @@
   25 Feb 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-File_SMBPasswd-1.0.2.ebuild:
   Initial ebuild.
-

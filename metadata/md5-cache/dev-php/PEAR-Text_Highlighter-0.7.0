@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=A package for syntax highlighting.
+DESCRIPTION=A package for syntax highlighting
 HOMEPAGE=http://pear.php.net/Text_Highlighter
 KEYWORDS=~amd64 ~x86
 LICENSE=PHP-3
@@ -8,4 +8,4 @@ RDEPEND=dev-php/PEAR-XML_Parser dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Text_Highlighter-0.7.0.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=76b7a4b12c775a33161db0b0e5a0e592
+_md5_=93d5a5e7dd4f0f4aadb4583b71523a59

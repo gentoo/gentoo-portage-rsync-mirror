@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/lithium
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/lithium/ChangeLog,v 1.6 2013/03/02 08:01:38 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/lithium/ChangeLog,v 1.7 2014/08/10 20:32:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> lithium-006.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare test unpack
 DEPEND=dev-lang/perl
-DESCRIPTION=A minimal libc subset for use with initramfs.
+DESCRIPTION=A minimal libc subset for use with initramfs
 EAPI=5
 HOMEPAGE=http://www.zytor.com/mailman/listinfo/klibc/ https://www.kernel.org/pub/linux/libs/klibc/
 IUSE=debug test custom-cflags
@@ -11,4 +11,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://kernel/linux/libs/klibc/2.0/klibc-2.0.3.tar.xz mirror://debian/pool/main/k/klibc/klibc_2.0.2-1.debian.tar.gz mirror://kernel/linux/kernel/v3.x/linux-3.12.tar.xz mirror://kernel/linux/kernel/v3.x/testing/linux-3.12.tar.xz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=7780a386a89670c7d74004cb396bc9ac
+_md5_=5b596e2aa91aec97bdbe5355be77ac9c

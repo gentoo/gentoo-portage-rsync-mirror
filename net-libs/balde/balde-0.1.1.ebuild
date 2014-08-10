@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/balde/balde-0.1.1.ebuild,v 1.1 2014/05/18 21:52:47 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/balde/balde-0.1.1.ebuild,v 1.2 2014/08/10 20:48:00 slyfox Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ if [[ ${PV} = *9999* ]]; then
 	inherit git-r3 autotools
 fi
 
-DESCRIPTION="A microframework for C based on GLib and bad intentions."
+DESCRIPTION="A microframework for C based on GLib and bad intentions"
 HOMEPAGE="http://balde.io/"
 
 SRC_URI="https://github.com/${PN}/${PN}/releases/download/v${PV}/${P}.tar.bz2"

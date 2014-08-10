@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.2.ebuild,v 1.3 2012/06/02 11:55:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.2.ebuild,v 1.4 2014/08/10 21:00:01 slyfox Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ sr@latin sv th tr uk zh_CN zh_TW"
 KDE_HANDBOOK=optional
 inherit kde4-base
 
-DESCRIPTION="KPlayer is a KDE media player based on mplayer."
+DESCRIPTION="KPlayer is a KDE media player based on mplayer"
 HOMEPAGE="https://projects.kde.org/projects/extragear/multimedia/kplayer"
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.xz"
 

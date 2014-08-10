@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/portmon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.15 2014/07/16 16:44:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.16 2014/08/10 21:00:25 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> portmon-2.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   16 Jul 2014; Jeroen Roovers <jer@gentoo.org> portmon-2.0.ebuild,
   metadata.xml:
@@ -53,4 +56,3 @@
   files/portmon.init:
   Initial Release. Closes bug #23475 Reported by Chuck Short
   <chuck_short@rogers.com>
-

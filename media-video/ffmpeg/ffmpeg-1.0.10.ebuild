@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.10.ebuild,v 1.1 2014/07/27 07:57:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.10.ebuild,v 1.2 2014/08/10 20:58:53 slyfox Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ fi
 
 inherit eutils flag-o-matic multilib toolchain-funcs ${SCM}
 
-DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec."
+DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec"
 HOMEPAGE="http://ffmpeg.org/"
 if [ "${PV#9999}" != "${PV}" ] ; then
 	SRC_URI=""

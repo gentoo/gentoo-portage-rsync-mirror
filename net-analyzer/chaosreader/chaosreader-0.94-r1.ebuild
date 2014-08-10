@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/chaosreader-0.94-r1.ebuild,v 1.1 2012/03/17 10:44:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/chaosreader-0.94-r1.ebuild,v 1.2 2014/08/10 20:57:36 slyfox Exp $
 
 EAPI=4
 
 inherit eutils
 
-DESCRIPTION="A tool to trace TCP/UDP/... sessions and fetch application data from snoop or tcpdump logs."
+DESCRIPTION="A tool to trace TCP/UDP/... sessions and fetch application data from snoop or tcpdump logs"
 HOMEPAGE="http://chaosreader.sourceforge.net"
 SRC_URI="http://dev.gentoo.org/~spock/portage/distfiles/${P}.bz2"
 SLOT="0"

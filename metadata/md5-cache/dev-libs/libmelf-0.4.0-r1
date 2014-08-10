@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DESCRIPTION=libmelf is a library interface for manipulating ELF object files.
+DESCRIPTION=libmelf is a library interface for manipulating ELF object files
 EAPI=3
 HOMEPAGE=http://www.hick.org/code/skape/libmelf/
 KEYWORDS=~amd64 ~x86
@@ -7,4 +7,4 @@ LICENSE=Artistic
 SLOT=0
 SRC_URI=http://www.hick.org/code/skape/libmelf/libmelf-0.4.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=5f2d0340f29ee73194c8435b0752e53e
+_md5_=ec55236e31521b8c56ff8217717d11c8

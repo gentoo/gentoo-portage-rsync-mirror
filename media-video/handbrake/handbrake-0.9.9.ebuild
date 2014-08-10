@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9.ebuild,v 1.14 2014/07/24 18:45:30 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9.ebuild,v 1.15 2014/08/10 20:59:36 slyfox Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-DESCRIPTION="Open-source, GPL-licensed, multiplatform, multithreaded video transcoder."
+DESCRIPTION="Open-source, GPL-licensed, multiplatform, multithreaded video transcoder"
 HOMEPAGE="http://handbrake.fr/"
 LICENSE="GPL-2"
 

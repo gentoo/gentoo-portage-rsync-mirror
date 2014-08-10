@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_Beautifier/PEAR-PHP_Beautifier-0.1.15.ebuild,v 1.1 2011/03/19 11:44:49 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_Beautifier/PEAR-PHP_Beautifier-0.1.15.ebuild,v 1.2 2014/08/10 20:54:19 slyfox Exp $
 
 EAPI="2"
 inherit php-pear-r1
 
 KEYWORDS="~amd64 ~x86"
 
-DESCRIPTION="Code Beautifier for PHP."
+DESCRIPTION="Code Beautifier for PHP"
 LICENSE="PHP-3"
 SLOT="0"
 IUSE=""

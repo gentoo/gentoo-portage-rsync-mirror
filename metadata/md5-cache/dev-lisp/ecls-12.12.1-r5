@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare setup
 DEPEND=dev-libs/gmp virtual/libffi >=dev-libs/boehm-gc-7.1[threads?] >=dev-lisp/asdf-2.33-r3:= app-text/texi2html emacs? ( virtual/emacs >=app-admin/eselect-emacs-1.12 )
-DESCRIPTION=ECL is an embeddable Common Lisp implementation.
+DESCRIPTION=ECL is an embeddable Common Lisp implementation
 EAPI=5
 HOMEPAGE=http://ecls.sourceforge.net/
 IUSE=debug emacs gengc precisegc sse +threads +unicode X
@@ -11,4 +11,4 @@ RESTRICT=mirror
 SLOT=0/12.12.1
 SRC_URI=mirror://sourceforge/ecls/ecl-12.12.1.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=da526afe78bdc459e32a5779bd73bc42
+_md5_=bbf99725ee4828ee4ca126cf35874504

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.70 2014/08/03 05:52:34 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.71 2014/08/10 20:45:10 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mailutils-2.99.98.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Aug 2014;  <tgall@gentoo.org> mailutils-2.99.98.ebuild:
   arm64, initial support

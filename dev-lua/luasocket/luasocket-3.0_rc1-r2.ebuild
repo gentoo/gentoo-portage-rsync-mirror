@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/luasocket-3.0_rc1-r2.ebuild,v 1.5 2014/03/04 20:36:49 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/luasocket-3.0_rc1-r2.ebuild,v 1.6 2014/08/10 20:42:11 slyfox Exp $
 
 EAPI=5
 
 inherit multilib flag-o-matic
 
-DESCRIPTION="Networking support library for the Lua language."
+DESCRIPTION="Networking support library for the Lua language"
 HOMEPAGE="http://www.tecgraf.puc-rio.br/~diego/professional/luasocket/"
 SRC_URI="https://github.com/diegonehab/${PN}/archive/v${PV/_/-}.tar.gz -> ${P}.tar.gz"
 

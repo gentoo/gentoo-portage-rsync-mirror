@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/traylib-0.3.2.1.ebuild,v 1.8 2012/02/10 03:06:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/traylib-0.3.2.1.ebuild,v 1.9 2014/08/10 20:33:07 slyfox Exp $
 
 PYTHON_DEPEND="2:2.5"
 inherit python eutils multilib
 
 MY_PN="TrayLib"
-DESCRIPTION="TrayLib is a library for tray-based rox panel applets."
+DESCRIPTION="TrayLib is a library for tray-based rox panel applets"
 HOMEPAGE="http://rox4debian.berlios.de"
 SRC_URI="ftp://ftp.berlios.de/pub/rox4debian/libs/${MY_PN}-${PV}.tgz"
 

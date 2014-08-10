@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.22.1.ebuild,v 1.5 2014/03/09 12:03:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.22.1.ebuild,v 1.6 2014/08/10 20:50:25 slyfox Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -9,7 +9,7 @@ VALA_USE_DEPEND="vapigen"
 
 inherit eutils gnome2 python-r1 vala virtualx
 
-DESCRIPTION="GLib bindings for the Telepathy D-Bus protocol."
+DESCRIPTION="GLib bindings for the Telepathy D-Bus protocol"
 HOMEPAGE="http://telepathy.freedesktop.org"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 

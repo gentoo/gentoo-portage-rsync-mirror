@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ultimate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.25 2014/01/08 06:39:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.26 2014/08/10 20:54:00 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ultimate-3.0.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> ultimate-3.0.2-r2.ebuild:
   Inherit the user eclass for enewuser/etc...

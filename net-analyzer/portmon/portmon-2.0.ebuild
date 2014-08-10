@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/portmon-2.0.ebuild,v 1.10 2014/07/16 16:44:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/portmon-2.0.ebuild,v 1.11 2014/08/10 21:00:25 slyfox Exp $
 
 EAPI=5
 
-DESCRIPTION="Portmon is a network service monitoring daemon."
+DESCRIPTION="Portmon is a network service monitoring daemon"
 HOMEPAGE="http://aboleo.net/software/portmon/"
 SRC_URI="${HOMEPAGE}downloads/${P}.tar.gz"
 

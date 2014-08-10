@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xqilla
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/ChangeLog,v 1.14 2013/07/17 08:28:02 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/ChangeLog,v 1.15 2014/08/10 20:40:44 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xqilla-2.2.4.ebuild,
+  xqilla-2.3.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Jul 2013; Ryan Hill <dirtyepic@gentoo.org> xqilla-2.2.4.ebuild,
   +files/xqilla-2.2.4-gcc47.patch:
@@ -92,4 +96,3 @@
   02 Mar 2007; Chris Carlin (volkris) <carlin@jlab.org>
   +xqilla-1.0.1.ebuild, +metadata.xml:
   New Ebuild for bug 167937
-

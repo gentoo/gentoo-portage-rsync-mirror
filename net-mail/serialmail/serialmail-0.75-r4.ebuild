@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r4.ebuild,v 1.6 2013/01/01 20:45:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r4.ebuild,v 1.7 2014/08/10 20:46:30 slyfox Exp $
 
 EAPI=4
 
 inherit eutils
 
-DESCRIPTION="A serialmail is a collection of tools for passing mail across serial links."
+DESCRIPTION="A serialmail is a collection of tools for passing mail across serial links"
 HOMEPAGE="http://cr.yp.to/serialmail.html"
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz
 	mirror://gentoo/${P}-patch.tar.bz2"

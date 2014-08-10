@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=app-arch/unzip =dev-lang/php-5* dev-lang/php
-DESCRIPTION=Active Data Objects Data Base library for PHP.
+DESCRIPTION=Active Data Objects Data Base library for PHP
 EAPI=4
 HOMEPAGE=http://adodb.sourceforge.net/
 KEYWORDS=alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86
@@ -9,4 +9,4 @@ RDEPEND==dev-lang/php-5* dev-lang/php
 SLOT=0
 SRC_URI=mirror://sourceforge/adodb/adodb517.zip
 _eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-lib-r1	d7318e400ae0d443613d286980877fd4	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=a5d3cf2c62f8207f11f2903df4720a6d
+_md5_=2b690d4ff52af45dd033f7067cd36b2b

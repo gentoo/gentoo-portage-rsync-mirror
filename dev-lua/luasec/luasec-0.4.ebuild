@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/luasec-0.4.ebuild,v 1.3 2012/05/04 04:01:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/luasec-0.4.ebuild,v 1.4 2014/08/10 20:42:04 slyfox Exp $
 
 EAPI=2
 
 inherit multilib toolchain-funcs flag-o-matic eutils
 
-DESCRIPTION="Lua binding for OpenSSL library to provide TLS/SSL communication."
+DESCRIPTION="Lua binding for OpenSSL library to provide TLS/SSL communication"
 HOMEPAGE="http://www.inf.puc-rio.br/~brunoos/luasec/"
 SRC_URI="http://www.inf.puc-rio.br/~brunoos/luasec/download/${P}.tar.gz"
 

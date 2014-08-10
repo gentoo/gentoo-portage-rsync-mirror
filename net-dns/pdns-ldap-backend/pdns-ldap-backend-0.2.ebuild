@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-ldap-backend/pdns-ldap-backend-0.2.ebuild,v 1.1 2013/05/21 06:20:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-ldap-backend/pdns-ldap-backend-0.2.ebuild,v 1.2 2014/08/10 20:42:40 slyfox Exp $
 
 EAPI=5
 
 inherit autotools eutils multilib
 
-DESCRIPTION="Fork of the official but unmaintained LDAP backend."
+DESCRIPTION="Fork of the official but unmaintained LDAP backend"
 HOMEPAGE="http://repo.or.cz/w/pdns-ldap-backend.git http://sequanux.org/cgi-bin/mailman/listinfo/pdns-ldap-backend"
 SRC_URI="http://sequanux.org/dl/${PN}/${P}.tar.gz"
 

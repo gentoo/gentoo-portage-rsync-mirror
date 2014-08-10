@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-1.36.ebuild,v 1.5 2013/10/24 13:20:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-1.36.ebuild,v 1.6 2014/08/10 20:59:48 slyfox Exp $
 
-DESCRIPTION="Web Server vulnerability scanner."
+DESCRIPTION="Web Server vulnerability scanner"
 HOMEPAGE="http://www.cirt.net/Nikto2"
 SRC_URI="http://www.cirt.net/source/nikto/ARCHIVE/${P}.tar.gz"
 

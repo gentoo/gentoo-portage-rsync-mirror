@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/primecoind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/ChangeLog,v 1.3 2014/02/25 18:26:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/ChangeLog,v 1.4 2014/08/10 20:38:19 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  primecoind-0.1.2-r1.ebuild, primecoind-0.1.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *primecoind-0.1.2-r1 (25 Feb 2014)
 

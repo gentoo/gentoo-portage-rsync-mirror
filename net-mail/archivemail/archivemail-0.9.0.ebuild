@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.9.0.ebuild,v 1.5 2013/03/31 09:53:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.9.0.ebuild,v 1.6 2014/08/10 20:43:13 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit distutils
 
-DESCRIPTION="Tool written in Python for archiving and compressing old email in mailboxes."
+DESCRIPTION="Tool written in Python for archiving and compressing old email in mailboxes"
 HOMEPAGE="http://archivemail.sourceforge.net/"
 SRC_URI="mirror://sourceforge/archivemail/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-3.3.4.ebuild,v 1.2 2014/06/26 12:17:00 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-3.3.4.ebuild,v 1.3 2014/08/10 20:46:53 slyfox Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit eutils python-single-r1 systemd user
 
-DESCRIPTION="RabbitMQ is a high-performance AMQP-compliant message broker written in Erlang."
+DESCRIPTION="RabbitMQ is a high-performance AMQP-compliant message broker written in Erlang"
 HOMEPAGE="http://www.rabbitmq.com/"
 SRC_URI="http://www.rabbitmq.com/releases/rabbitmq-server/v${PV}/rabbitmq-server-${PV}.tar.gz"
 

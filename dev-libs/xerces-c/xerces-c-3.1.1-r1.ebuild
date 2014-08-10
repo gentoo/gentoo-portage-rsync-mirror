@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-3.1.1-r1.ebuild,v 1.9 2013/01/18 23:55:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-3.1.1-r1.ebuild,v 1.10 2014/08/10 20:40:30 slyfox Exp $
 
 EAPI="2"
 
 inherit eutils
 
-DESCRIPTION="A validating XML parser written in a portable subset of C++."
+DESCRIPTION="A validating XML parser written in a portable subset of C++"
 HOMEPAGE="http://xerces.apache.org/xerces-c/"
 SRC_URI="mirror://apache/xerces/c/3/sources/${P}.tar.gz"
 LICENSE="Apache-2.0"

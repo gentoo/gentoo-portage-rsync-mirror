@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3-r3.ebuild,v 1.14 2014/07/14 16:36:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3-r3.ebuild,v 1.15 2014/08/10 20:59:38 slyfox Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
 
-DESCRIPTION="Ultrafast implementation of ping."
+DESCRIPTION="Ultrafast implementation of ping"
 HOMEPAGE="http://apenwarr.ca/netselect/"
 SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 

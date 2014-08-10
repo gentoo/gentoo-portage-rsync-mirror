@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/luasec-0.4.1_p20130620.ebuild,v 1.1 2013/09/11 19:18:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/luasec-0.4.1_p20130620.ebuild,v 1.2 2014/08/10 20:42:04 slyfox Exp $
 
 EAPI=5
 
 inherit vcs-snapshot multilib toolchain-funcs
 
-DESCRIPTION="Lua binding for OpenSSL library to provide TLS/SSL communication."
+DESCRIPTION="Lua binding for OpenSSL library to provide TLS/SSL communication"
 HOMEPAGE="https://github.com/brunoos/luasec http://www.inf.puc-rio.br/~brunoos/luasec/"
 COMMIT="063e8a8a5c57858cdc845f8d51b994426edd37ab"
 SRC_URI="https://github.com/brunoos/luasec/tarball/${COMMIT} -> ${P}.tar.gz"

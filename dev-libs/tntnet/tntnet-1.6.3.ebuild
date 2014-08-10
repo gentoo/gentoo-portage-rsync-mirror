@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.3.ebuild,v 1.9 2013/06/28 19:22:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.3.ebuild,v 1.10 2014/08/10 20:39:48 slyfox Exp $
 
 EAPI="2"
 
 inherit autotools eutils
 
-DESCRIPTION="A modular, multithreaded webapplicationserver extensible with C++."
+DESCRIPTION="A modular, multithreaded webapplicationserver extensible with C++"
 HOMEPAGE="http://www.tntnet.org/"
 SRC_URI="http://www.tntnet.org/download/${P}.tar.gz"
 

@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.29-r1.ebuild,v 1.7 2012/05/13 10:52:22 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.29-r1.ebuild,v 1.8 2014/08/10 20:54:57 slyfox Exp $
 
 EAPI=2
 inherit eutils confutils flag-o-matic
 
 KEYWORDS="~x86-fbsd"
 
-DESCRIPTION="Fast, production-quality, standard-conformant FTP server."
+DESCRIPTION="Fast, production-quality, standard-conformant FTP server"
 HOMEPAGE="http://www.pureftpd.org/"
 SRC_URI="ftp://ftp.pureftpd.org/pub/${PN}/releases/${P}.tar.bz2"
 

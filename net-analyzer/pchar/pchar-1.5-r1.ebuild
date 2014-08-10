@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pchar/pchar-1.5-r1.ebuild,v 1.1 2012/08/20 03:38:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pchar/pchar-1.5-r1.ebuild,v 1.2 2014/08/10 21:00:03 slyfox Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ WANT_AUTOMAKE=none
 
 inherit eutils autotools toolchain-funcs
 
-DESCRIPTION="Internet bandwidth, latency, and loss of links analyzer."
+DESCRIPTION="Internet bandwidth, latency, and loss of links analyzer"
 HOMEPAGE="http://www.kitchenlab.org/www/bmah/Software/pchar/"
 SRC_URI="http://www.kitchenlab.org/www/bmah/Software/${PN}/${P}.tar.gz"
 

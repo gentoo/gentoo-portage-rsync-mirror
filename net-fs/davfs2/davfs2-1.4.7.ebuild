@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.4.7.ebuild,v 1.6 2012/10/17 03:44:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.4.7.ebuild,v 1.7 2014/08/10 20:54:46 slyfox Exp $
 
 EAPI=4
 
 inherit autotools eutils linux-mod user
 
-DESCRIPTION="Linux FUSE (or coda) driver that allows you to mount a WebDAV resource."
+DESCRIPTION="Linux FUSE (or coda) driver that allows you to mount a WebDAV resource"
 HOMEPAGE="http://savannah.nongnu.org/projects/davfs2"
 SRC_URI="http://mirror.lihnidos.org/GNU/savannah/davfs2/${P}.tar.gz"
 

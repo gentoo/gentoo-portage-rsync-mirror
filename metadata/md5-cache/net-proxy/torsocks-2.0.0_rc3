@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=Use most socks-friendly applications with Tor.
+DESCRIPTION=Use most socks-friendly applications with Tor
 EAPI=5
 HOMEPAGE=http://github.com/dgoulet/torsocks
 IUSE=static-libs
@@ -9,4 +9,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://github.com/dgoulet/torsocks/archive/v2.0.0-rc3.tar.gz -> torsocks-2.0.0-rc3.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=555bae1e8bbb984a48c14cdd3bac907e
+_md5_=240eb8ae8895abfdf8e0056f00d5617c

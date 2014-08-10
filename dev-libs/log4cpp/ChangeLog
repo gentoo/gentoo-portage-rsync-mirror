@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.19 2014/07/22 16:32:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.20 2014/08/10 20:38:10 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> log4cpp-1.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Jul 2014; Rick Farina <zerochaos@gentoo.org> log4cpp-1.0.ebuild:
   adding ~arm keyword

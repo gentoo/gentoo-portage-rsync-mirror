@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-HTML_QuickForm_advmultiselect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm_advmultiselect/ChangeLog,v 1.5 2012/06/19 13:08:27 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm_advmultiselect/ChangeLog,v 1.6 2014/08/10 20:48:50 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-HTML_QuickForm_advmultiselect-1.4.0.ebuild,
+  PEAR-HTML_QuickForm_advmultiselect-1.5.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   PEAR-HTML_QuickForm_advmultiselect-1.5.1.ebuild:
@@ -29,4 +34,3 @@
   28 Nov 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +PEAR-HTML_QuickForm_advmultiselect-1.4.0.ebuild:
   New ebuild, Bug 200638
-

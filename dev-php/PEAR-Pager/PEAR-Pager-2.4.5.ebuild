@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/PEAR-Pager-2.4.5.ebuild,v 1.2 2014/03/12 04:47:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/PEAR-Pager-2.4.5.ebuild,v 1.3 2014/08/10 20:54:45 slyfox Exp $
 
 inherit php-pear-r1
 
-DESCRIPTION="Data paging class."
+DESCRIPTION="Data paging class"
 
 LICENSE="BSD"
 SLOT="0"

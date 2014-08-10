@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ctorrent-3.3.2-r1.ebuild,v 1.5 2010/09/19 17:55:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ctorrent-3.3.2-r1.ebuild,v 1.6 2014/08/10 20:36:15 slyfox Exp $
 
 inherit eutils
 
 MY_P="${PN}-dnh${PV}"
 
-DESCRIPTION="Enhanced CTorrent is a BitTorrent console client written in C and C++."
+DESCRIPTION="Enhanced CTorrent is a BitTorrent console client written in C and C++"
 HOMEPAGE="http://www.rahul.net/dholmes/ctorrent/"
 SRC_URI="mirror://sourceforge/dtorrent/${MY_P}.tar.gz"
 

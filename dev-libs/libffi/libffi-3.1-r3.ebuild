@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.1-r3.ebuild,v 1.1 2014/05/30 11:08:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.1-r3.ebuild,v 1.2 2014/08/10 20:35:34 slyfox Exp $
 
 EAPI=5
 inherit eutils libtool multilib multilib-minimal toolchain-funcs
 
-DESCRIPTION="a portable, high level programming interface to various calling conventions."
+DESCRIPTION="a portable, high level programming interface to various calling conventions"
 HOMEPAGE="http://sourceware.org/libffi/"
 SRC_URI="ftp://sourceware.org/pub/${PN}/${P}.tar.gz"
 

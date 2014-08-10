@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/asdf-binary-locations
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf-binary-locations/ChangeLog,v 1.2 2012/10/01 17:36:41 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf-binary-locations/ChangeLog,v 1.3 2014/08/10 20:41:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  asdf-binary-locations-20061018.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   01 Oct 2012; Fabian Groffen <grobian@gentoo.org>
   asdf-binary-locations-20061018.ebuild:

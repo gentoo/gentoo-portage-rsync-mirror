@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup
 DEPEND=dev-python/demjson >=dev-python/morbid-0.8.4 dev-python/stomper dev-python/twisted-core dev-python/twisted-web dev-python/setuptools =dev-lang/python-2*
-DESCRIPTION=Real-time communication for the browser.
+DESCRIPTION=Real-time communication for the browser
 EAPI=3
 HOMEPAGE=http://orbited.org
 KEYWORDS=amd64 x86
@@ -9,4 +9,4 @@ RDEPEND=dev-python/demjson >=dev-python/morbid-0.8.4 dev-python/stomper dev-pyth
 SLOT=0
 SRC_URI=mirror://pypi/o/orbited/orbited-0.7.10.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e6fd0a3c16c2d62f21d613b9a762d6dc
+_md5_=f851dc0299facac2b74a78d94877802e

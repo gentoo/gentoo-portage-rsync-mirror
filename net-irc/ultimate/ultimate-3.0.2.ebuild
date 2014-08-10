@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-3.0.2.ebuild,v 1.3 2009/09/23 18:45:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-3.0.2.ebuild,v 1.4 2014/08/10 20:54:00 slyfox Exp $
 
 inherit eutils fixheadtails
 
 MY_P="Ultimate${PV/_/.}"
 
-DESCRIPTION="An IRCd server based on DALnet's DreamForge IRCd."
+DESCRIPTION="An IRCd server based on DALnet's DreamForge IRCd"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.shadow-realm.org/"
 

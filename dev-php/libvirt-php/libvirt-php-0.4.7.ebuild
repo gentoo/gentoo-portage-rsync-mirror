@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/libvirt-php-0.4.7.ebuild,v 1.1 2013/03/02 05:12:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/libvirt-php-0.4.7.ebuild,v 1.2 2014/08/10 21:00:07 slyfox Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ USE_PHP="php5-3 php5-4"
 
 inherit php-ext-source-r2 eutils
 
-DESCRIPTION="PHP 5 bindings for libvirt."
+DESCRIPTION="PHP 5 bindings for libvirt"
 HOMEPAGE="http://libvirt.org/php/"
 SRC_URI="http://libvirt.org/sources/php/${P}.tar.gz"
 

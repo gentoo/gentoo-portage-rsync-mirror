@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-1.0.ebuild,v 1.9 2011/08/07 16:44:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-1.0.ebuild,v 1.10 2014/08/10 20:49:13 slyfox Exp $
 
 EAPI="2"
 
 inherit autotools eutils
 
-DESCRIPTION="A portable, efficient middleware for different kinds of mail access."
+DESCRIPTION="A portable, efficient middleware for different kinds of mail access"
 HOMEPAGE="http://libetpan.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

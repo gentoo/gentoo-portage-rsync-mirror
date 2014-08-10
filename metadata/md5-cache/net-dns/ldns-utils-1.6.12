@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare
 DEPEND=>=net-libs/ldns-1.6.12[gost?,ssl?] examples? ( net-libs/libpcap ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=Set of utilities to simplify various dns(sec) tasks.
+DESCRIPTION=Set of utilities to simplify various dns(sec) tasks
 EAPI=3
 HOMEPAGE=http://www.nlnetlabs.nl/projects/ldns/
 IUSE=examples gost ssl
@@ -10,4 +10,4 @@ RDEPEND=>=net-libs/ldns-1.6.12[gost?,ssl?] examples? ( net-libs/libpcap )
 SLOT=0
 SRC_URI=http://www.nlnetlabs.nl/downloads/ldns/ldns-1.6.12.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=913466c58e997b1bfdce09b98d53473e
+_md5_=74333b95c95d9a19ff849502fc8f3c86

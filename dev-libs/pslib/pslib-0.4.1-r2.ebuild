@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/pslib-0.4.1-r2.ebuild,v 1.5 2012/05/26 18:59:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/pslib-0.4.1-r2.ebuild,v 1.6 2014/08/10 20:38:57 slyfox Exp $
 
 EAPI=2
 inherit autotools eutils
 
-DESCRIPTION="pslib is a C-library to create PostScript files on the fly."
+DESCRIPTION="pslib is a C-library to create PostScript files on the fly"
 HOMEPAGE="http://pslib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pslib/${P}.tar.gz"
 

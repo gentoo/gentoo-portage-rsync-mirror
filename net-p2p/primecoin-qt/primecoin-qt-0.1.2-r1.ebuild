@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoin-qt/primecoin-qt-0.1.2-r1.ebuild,v 1.1 2014/01/26 12:16:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoin-qt/primecoin-qt-0.1.2-r1.ebuild,v 1.2 2014/08/10 20:38:12 slyfox Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ MyPV="${PV/_/-}"
 MyPN="primecoin"
 MyP="${MyPN}-${MyPV}"
 
-DESCRIPTION="Cryptocurrency forked from Bitcoin which aims to be energy efficiency."
+DESCRIPTION="Cryptocurrency forked from Bitcoin which aims to be energy efficiency"
 HOMEPAGE="http://primecoin.org/"
 SRC_URI="mirror://sourceforge/${MyPN}/${MyP}-linux.tar.gz -> ${MyP}.tar.gz"
 

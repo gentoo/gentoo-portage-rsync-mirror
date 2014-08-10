@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfio/elfio-1.0.3.ebuild,v 1.2 2009/03/04 17:19:25 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfio/elfio-1.0.3.ebuild,v 1.3 2014/08/10 20:33:33 slyfox Exp $
 
 inherit eutils autotools
 
 MY_P=ELFIO-${PV}
-DESCRIPTION="ELF (Executable and Linkable Format) reader and producer implemented as a C++ library."
+DESCRIPTION="ELF (Executable and Linkable Format) reader and producer implemented as a C++ library"
 HOMEPAGE="http://elfio.sourceforge.net/"
 SRC_URI="mirror://sourceforge/elfio/${MY_P}.tar.gz"
 

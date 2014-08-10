@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblogging/liblogging-1.0.4.ebuild,v 1.1 2014/05/04 14:08:27 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblogging/liblogging-1.0.4.ebuild,v 1.2 2014/08/10 20:36:02 slyfox Exp $
 
 EAPI=5
 
 inherit autotools-utils eutils
 
-DESCRIPTION="Liblogging is an easy to use, portable, open source library for system logging."
+DESCRIPTION="Liblogging is an easy to use, portable, open source library for system logging"
 HOMEPAGE="http://www.liblogging.org"
 SRC_URI="http://download.rsyslog.com/liblogging/${P}.tar.gz"
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.7.ebuild,v 1.3 2011/11/28 11:41:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.7.ebuild,v 1.4 2014/08/10 20:47:04 slyfox Exp $
 
 EAPI=4
 
 inherit eutils
 
-DESCRIPTION="Proxy IMAP transactions between an IMAP client and an IMAP server."
+DESCRIPTION="Proxy IMAP transactions between an IMAP client and an IMAP server"
 HOMEPAGE="http://www.imapproxy.org/"
 SRC_URI="mirror://sourceforge/squirrelmail/squirrelmail-imap_proxy-${PV}.tar.bz2"
 

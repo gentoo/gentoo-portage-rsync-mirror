@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_CompatInfo/PEAR-PHP_CompatInfo-1.9.0.ebuild,v 1.1 2012/01/18 21:53:35 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_CompatInfo/PEAR-PHP_CompatInfo-1.9.0.ebuild,v 1.2 2014/08/10 20:54:33 slyfox Exp $
 
 EAPI="4"
 
 inherit php-pear-r1
 
-DESCRIPTION="Find out the minimum version and the extensions required for a piece of code to run."
+DESCRIPTION="Find out the minimum version and the extensions required for a piece of code to run"
 
 LICENSE="PHP-3.01"
 SLOT="0"

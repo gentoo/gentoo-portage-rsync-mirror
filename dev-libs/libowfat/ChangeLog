@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libowfat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.38 2014/03/12 10:21:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.39 2014/08/10 20:37:09 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libowfat-0.24.ebuild,
+  libowfat-0.28-r1.ebuild, libowfat-0.28.ebuild, libowfat-0.29.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libowfat-0.29.ebuild:
   Stable for sparc, wrt bug #417341

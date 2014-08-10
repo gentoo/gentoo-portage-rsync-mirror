@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xml-security-c/xml-security-c-1.6.1.ebuild,v 1.2 2012/05/04 18:35:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xml-security-c/xml-security-c-1.6.1.ebuild,v 1.3 2014/08/10 20:40:37 slyfox Exp $
 
 EAPI="4"
 
 inherit eutils
 
-DESCRIPTION="Apache C++ XML security libraries."
+DESCRIPTION="Apache C++ XML security libraries"
 HOMEPAGE="http://santuario.apache.org/"
 SRC_URI="mirror://apache/santuario/c-library/${P}.tar.gz"
 LICENSE="Apache-2.0"

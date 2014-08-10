@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=>=sys-apps/sed-4
-DESCRIPTION=Network performance benchmark including tests for TCP, UDP, sockets, ATM and more.
+DESCRIPTION=Network performance benchmark including tests for TCP, UDP, sockets, ATM and more
 EAPI=5
 HOMEPAGE=http://www.netperf.org/
 IUSE=demo sctp
@@ -9,4 +9,4 @@ LICENSE=netperf
 SLOT=0
 SRC_URI=ftp://ftp.netperf.org/netperf/netperf-2.6.0.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=8f1ac4b7a30ffdca99475a325ead6900
+_md5_=c9a5a36ce38b66328dd7a8237ab96f47

@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libspnav/libspnav-0.2.2.ebuild,v 1.6 2012/11/04 10:31:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libspnav/libspnav-0.2.2.ebuild,v 1.7 2014/08/10 20:37:53 slyfox Exp $
 
 EAPI="4"
 
 inherit multilib eutils toolchain-funcs
 
 MY_PN='spacenav'
-DESCRIPTION="The libspnav provides a replacement of the magellan library with cleaner and more orthogonal API."
+DESCRIPTION="The libspnav provides a replacement of the magellan library with cleaner and more orthogonal API"
 HOMEPAGE="http://spacenav.sourceforge.net/"
 SRC_URI="mirror://sourceforge/project/${MY_PN}/${MY_PN}%20library%20%28SDK%29/${PN}%20${PV}/${P}.tar.gz"
 LICENSE="BSD"

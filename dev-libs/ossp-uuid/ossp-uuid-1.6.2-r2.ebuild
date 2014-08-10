@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ossp-uuid-1.6.2-r2.ebuild,v 1.14 2013/03/11 07:37:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ossp-uuid-1.6.2-r2.ebuild,v 1.15 2014/08/10 20:38:35 slyfox Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ PHP_EXT_OPTIONAL_USE="php"
 
 inherit eutils multilib php-ext-source-r2
 
-DESCRIPTION="An ISO-C:1999 API and corresponding CLI for the generation of DCE 1.1, ISO/IEC 11578:1996 and RFC 4122 compliant UUID."
+DESCRIPTION="An ISO-C:1999 API and corresponding CLI for the generation of DCE 1.1, ISO/IEC 11578:1996 and RFC 4122 compliant UUID"
 HOMEPAGE="http://www.ossp.org/pkg/lib/uuid/"
 SRC_URI="ftp://ftp.ossp.org/pkg/lib/uuid/${MY_P}.tar.gz"
 

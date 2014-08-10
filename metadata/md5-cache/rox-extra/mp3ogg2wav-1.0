@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm setup
 DEPEND==dev-lang/python-2* !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=Mp3Ogg2Wav: A small rox utility to convert .ogg and .mp3 files to .wav files.
+DESCRIPTION=Mp3Ogg2Wav: A small rox utility to convert .ogg and .mp3 files to .wav files
 HOMEPAGE=http://kymatica.com/index.php/Software
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
@@ -8,4 +8,4 @@ RDEPEND=>=dev-python/pyogg-1.3 >=dev-python/pyvorbis-1.3 >=dev-python/pymad-0.5.
 SLOT=0
 SRC_URI=http://kymatica.com/uploads/Software/Mp3Ogg2Wav-1.0.tar.bz2
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	rox	673b6c35a38ec70fa57c5e8f0c13127e	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c104486bf674d2b3a1c7b8c9cf803bc1
+_md5_=a5efe2bed2ff28a14ad400d41e3ccf1f

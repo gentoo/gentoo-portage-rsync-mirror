@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/mdk/mdk-3.6-r1.ebuild,v 1.1 2014/05/03 17:18:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/mdk/mdk-3.6-r1.ebuild,v 1.2 2014/08/10 20:35:06 slyfox Exp $
 
 EAPI="5"
 inherit eutils toolchain-funcs
 
 MY_P="${PN}${PV/./-v}"
-DESCRIPTION="Wireless injection tool with various functions."
+DESCRIPTION="Wireless injection tool with various functions"
 HOMEPAGE="http://homepages.tu-darmstadt.de/~p_larbig/wlan"
 SRC_URI="${HOMEPAGE}/${MY_P}.tar.bz2"
 

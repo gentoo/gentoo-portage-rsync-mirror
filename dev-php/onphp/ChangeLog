@@ -1,6 +1,9 @@
-# ChangeLog for dev-php5/onphp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/onphp/ChangeLog,v 1.7 2012/01/28 14:07:28 mabi Exp $
+# ChangeLog for dev-php/onphp
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/onphp/ChangeLog,v 1.8 2014/08/10 21:00:24 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> onphp-1.0.10.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   26 Jan 2012; Matti Bickel <mabi@gentoo.org> -onphp-0.10.13.ebuild,
   -onphp-1.0.9.ebuild, onphp-1.0.10.ebuild:

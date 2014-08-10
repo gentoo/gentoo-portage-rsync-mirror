@@ -1,6 +1,9 @@
 # ChangeLog for net-print/pykota
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.31 2014/06/12 15:26:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.32 2014/08/10 20:36:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pykota-1.26.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -pykota-1.25_p2437-r1.ebuild:
   Cleanup old.

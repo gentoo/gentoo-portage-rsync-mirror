@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Math_Stats
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Math_Stats/ChangeLog,v 1.29 2013/08/07 13:23:11 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Math_Stats/ChangeLog,v 1.30 2014/08/10 20:51:35 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-Math_Stats-0.9.0_beta3-r1.ebuild, PEAR-Math_Stats-0.9.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> PEAR-Math_Stats-0.9.1.ebuild:
   Stable for x86, wrt bug #470430

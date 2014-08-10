@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/relay-ctrl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/ChangeLog,v 1.28 2011/02/07 10:53:55 bangert Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/ChangeLog,v 1.29 2014/08/10 20:46:10 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  relay-ctrl-3.1.1-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Feb 2011; Thilo Bangert <bangert@gentoo.org> relay-ctrl-3.1.1-r2.ebuild:
   sys-process/daemontools -> virtual/daemontools

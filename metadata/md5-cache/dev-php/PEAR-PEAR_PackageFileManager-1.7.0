@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=>=dev-php/pear-1.8.1 dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=Takes an existing package.xml file and updates it with a new filelist and changelog.
+DESCRIPTION=Takes an existing package.xml file and updates it with a new filelist and changelog
 EAPI=4
 HOMEPAGE=http://pear.php.net/PEAR_PackageFileManager
 IUSE=minimal
@@ -10,4 +10,4 @@ RDEPEND=dev-lang/php[xml,simplexml] !minimal? ( >=dev-php/PEAR-PHP_CompatInfo-1.
 SLOT=0
 SRC_URI=http://pear.php.net/get/PEAR_PackageFileManager-1.7.0.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=36765492800fa747300ebefdb63fd350
+_md5_=2521c0ae7fd28fecb0d93560ac8eea29

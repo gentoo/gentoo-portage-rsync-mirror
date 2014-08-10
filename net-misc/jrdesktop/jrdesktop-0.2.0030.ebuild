@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jrdesktop/jrdesktop-0.2.0030.ebuild,v 1.2 2009/06/29 21:06:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jrdesktop/jrdesktop-0.2.0030.ebuild,v 1.3 2014/08/10 20:45:01 slyfox Exp $
 
 JAVA_PKG_IUSE="source doc"
 WANT_ANT_TASKS="ant-nodeps"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Java Remote Desktop (jrdesktop) software for viewing and/or controlling a distance PC."
+DESCRIPTION="Java Remote Desktop (jrdesktop) software for viewing and/or controlling a distance PC"
 HOMEPAGE="http://jrdesktop.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.src.zip"
 

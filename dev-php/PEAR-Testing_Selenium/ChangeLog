@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Testing_Selenium
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Testing_Selenium/ChangeLog,v 1.13 2011/03/26 10:57:04 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Testing_Selenium/ChangeLog,v 1.14 2014/08/10 20:55:35 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-Testing_Selenium-0.4.2.ebuild, PEAR-Testing_Selenium-0.4.3.ebuild,
+  PEAR-Testing_Selenium-0.4.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *PEAR-Testing_Selenium-0.4.4 (26 Mar 2011)
 
@@ -79,4 +84,3 @@
   19 Nov 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Testing_Selenium-0.2.1.ebuild:
   Initial ebuild.
-

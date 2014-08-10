@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.32.ebuild,v 1.2 2014/07/14 22:30:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.32.ebuild,v 1.3 2014/08/10 20:59:14 slyfox Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
 
-DESCRIPTION="a network benchmarking tool that measures net throughput with NetBIOS and TCP/IP protocols."
+DESCRIPTION="a network benchmarking tool that measures net throughput with NetBIOS and TCP/IP protocols"
 HOMEPAGE="http://www.ars.de/ars/ars.nsf/docs/netio"
 SRC_URI='http://www.ars.de/ARS/ars.nsf/f24a6a0b94c22d82862566960071bf5a/aa577bc4be573b05c125706d004c75b5/$FILE/netio132.zip'
 

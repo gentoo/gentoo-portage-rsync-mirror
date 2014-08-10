@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pytvshows
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/ChangeLog,v 1.11 2012/03/06 09:39:35 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/ChangeLog,v 1.12 2014/08/10 20:46:46 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pytvshows-0.2-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   06 Mar 2012; Pacho Ramos <pacho@gentoo.org>
   +files/pytvshows-0.2-feedurl.patch, +files/pytvshows-0.2-improved-re.patch,
@@ -45,4 +48,3 @@
   11 Dec 2008; Jeremy Olexa <darkside@gentoo.org> +metadata.xml,
   +pytvshows-0.2.ebuild:
   Initial commit of pytvshows, ebuild by myself
-

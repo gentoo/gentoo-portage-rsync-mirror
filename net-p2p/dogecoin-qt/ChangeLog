@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dogecoin-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dogecoin-qt/ChangeLog,v 1.6 2014/03/22 05:42:36 sdamashek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dogecoin-qt/ChangeLog,v 1.7 2014/08/10 20:36:42 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> dogecoin-qt-1.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *dogecoin-qt-1.6 (22 Mar 2014)
 

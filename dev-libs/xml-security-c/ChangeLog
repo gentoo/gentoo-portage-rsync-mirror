@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xml-security-c
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xml-security-c/ChangeLog,v 1.5 2012/05/04 18:35:52 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xml-security-c/ChangeLog,v 1.6 2014/08/10 20:40:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  xml-security-c-1.6.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> xml-security-c-1.6.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -51,4 +55,3 @@
   +xml-security-c-1.4.0.ebuild, +metadata.xml:
   New ebuild wrt bug 202952. Thanks to original bug authors and chithead,
   scarabeus, pva and tommy for help polishing.
-

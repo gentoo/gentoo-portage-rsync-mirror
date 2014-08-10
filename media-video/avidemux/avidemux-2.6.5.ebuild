@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.5.ebuild,v 1.1 2013/09/01 11:53:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.5.ebuild,v 1.2 2014/08/10 20:57:26 slyfox Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ inherit cmake-utils eutils flag-o-matic l10n
 
 SLOT="2.6"
 
-DESCRIPTION="Video editor designed for simple cutting, filtering and encoding tasks."
+DESCRIPTION="Video editor designed for simple cutting, filtering and encoding tasks"
 HOMEPAGE="http://fixounet.free.fr/${PN}"
 
 # Multiple licenses because of all the bundled stuff.

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst
-DESCRIPTION=Delayed delivery notification for qmail.
+DESCRIPTION=Delayed delivery notification for qmail
 HOMEPAGE=http://untroubled.org/qmail-notify/
 KEYWORDS=amd64 ~hppa ~ppc sparc x86
 LICENSE=GPL-2
@@ -7,4 +7,4 @@ RDEPEND=virtual/cron virtual/qmail
 SLOT=0
 SRC_URI=http://untroubled.org/qmail-notify/archive/qmail-notify-0.93.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=042df7aac5f2d1e368a9ccf78fbdc3e6
+_md5_=8d3a57a1d081f85fb4691a5411a08fc9

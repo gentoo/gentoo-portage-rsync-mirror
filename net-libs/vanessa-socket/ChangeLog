@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/vanessa-socket
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/ChangeLog,v 1.19 2012/03/09 09:48:23 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/ChangeLog,v 1.20 2014/08/10 20:50:35 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  vanessa-socket-0.0.10.ebuild, vanessa-socket-0.0.12.ebuild,
+  vanessa-socket-0.0.5_beta4.ebuild, vanessa-socket-0.0.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *vanessa-socket-0.0.12 (09 Mar 2012)
 

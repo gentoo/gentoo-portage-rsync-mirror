@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ntpclient-2010.365.ebuild,v 1.3 2013/09/22 06:49:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ntpclient-2010.365.ebuild,v 1.4 2014/08/10 20:45:38 slyfox Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs
 
-DESCRIPTION="A NTP (RFC-1305) client for unix-alike computers."
+DESCRIPTION="A NTP (RFC-1305) client for unix-alike computers"
 HOMEPAGE="http://doolittle.icarus.com/ntpclient/"
 SRC_URI="http://doolittle.icarus.com/${PN}/${PN}_${PV/./_}.tar.gz"
 

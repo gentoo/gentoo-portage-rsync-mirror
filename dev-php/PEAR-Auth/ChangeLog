@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Auth
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.54 2013/05/20 06:24:07 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.55 2014/08/10 20:43:49 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> PEAR-Auth-1.6.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 May 2013; Ole Markus With <olemarkus@gentoo.org> PEAR-Auth-1.6.4.ebuild:
   Fix bad dependency for ppc64

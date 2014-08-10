@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.5.ebuild,v 1.1 2014/07/23 23:13:43 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.5.ebuild,v 1.2 2014/08/10 21:01:03 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ EAPI="5"
 WEBAPP_OPTIONAL="yes"
 inherit flag-o-matic webapp depend.php autotools java-pkg-opt-2 user systemd toolchain-funcs
 
-DESCRIPTION="ZABBIX is software for monitoring of your applications, network and servers."
+DESCRIPTION="ZABBIX is software for monitoring of your applications, network and servers"
 HOMEPAGE="http://www.zabbix.com/"
 MY_P=${P/_/}
 MY_PV=${PV/_/}

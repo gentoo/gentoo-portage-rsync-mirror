@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Services_W3C_HTMLValidator
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_W3C_HTMLValidator/ChangeLog,v 1.4 2012/01/18 22:06:16 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_W3C_HTMLValidator/ChangeLog,v 1.5 2014/08/10 20:55:25 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-Services_W3C_HTMLValidator-1.0.0-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *PEAR-Services_W3C_HTMLValidator-1.0.0-r1 (18 Jan 2012)
 
@@ -32,4 +36,3 @@
   03 Jan 2008; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +PEAR-Services_W3C_HTMLValidator-1.0.0_rc1.ebuild:
   New ebuild, optional dependency for PEAR-PHP_Debug
-

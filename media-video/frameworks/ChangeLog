@@ -1,6 +1,9 @@
 # ChangeLog for media-video/frameworks
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/frameworks/ChangeLog,v 1.9 2012/05/05 08:58:50 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/frameworks/ChangeLog,v 1.10 2014/08/10 20:59:15 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> frameworks-0.3.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> frameworks-0.3.7.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -41,4 +44,3 @@
   +frameworks-0.3.4.ebuild:
   Initial import into the tree. This closes bug #43586. Thanks to Dominik
   Diesch for the ebuild.
-

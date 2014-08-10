@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-ui/gupnp-ui-0.1.1.ebuild,v 1.3 2012/05/05 02:54:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-ui/gupnp-ui-0.1.1.ebuild,v 1.4 2014/08/10 20:48:40 slyfox Exp $
 
 EAPI=2
 
-DESCRIPTION="Collection of simple GTK+ widgets on top of GUPnP."
+DESCRIPTION="Collection of simple GTK+ widgets on top of GUPnP"
 HOMEPAGE="http://gupnp.org"
 SRC_URI="http://gupnp.org/sources/${PN}/${P}.tar.gz"
 

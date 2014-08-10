@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ipv6-toolkit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipv6-toolkit/ChangeLog,v 1.3 2013/12/29 08:52:33 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipv6-toolkit/ChangeLog,v 1.4 2014/08/10 20:58:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ipv6-toolkit-1.3.1.ebuild,
+  ipv6-toolkit-1.4.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   29 Dec 2013; Kacper Kowalik <xarthisius@gentoo.org> ipv6-toolkit-1.4.1.ebuild:
   Fix SRC_URI as upstream silently replaced ungzipped tar with compressed one

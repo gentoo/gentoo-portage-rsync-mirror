@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgeier
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/ChangeLog,v 1.24 2012/06/07 17:25:47 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/ChangeLog,v 1.25 2014/08/10 20:35:42 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libgeier-0.13.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Jun 2012; Johannes Huber <johu@gentoo.org> libgeier-0.13.ebuild:
   Stable for x86, wrt bug #418757
@@ -96,4 +99,3 @@
 
   12 Jan 2006; <wrobel@gentoo.org> +metadata.xml, +libgeier-0.5.2.ebuild:
   Added libgeier to the package. Necessary for app-office/taxbird
-

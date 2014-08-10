@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-4.0.1.ebuild,v 1.10 2013/06/29 16:18:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-4.0.1.ebuild,v 1.11 2014/08/10 20:37:35 slyfox Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ inherit python-any-r1
 
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
-DESCRIPTION="C++ client API for PostgreSQL. The standard front-end for writing C++ programs that use PostgreSQL."
+DESCRIPTION="C++ client API for PostgreSQL. The standard front-end for writing C++ programs that use PostgreSQL"
 SRC_URI="http://pqxx.org/download/software/${PN}/${P}.tar.gz"
 HOMEPAGE="http://pqxx.org/development/libpqxx/"
 LICENSE="BSD"

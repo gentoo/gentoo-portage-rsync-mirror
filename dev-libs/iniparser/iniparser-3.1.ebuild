@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.1.ebuild,v 1.10 2014/02/02 02:40:15 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.1.ebuild,v 1.11 2014/08/10 20:34:17 slyfox Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=1
 inherit autotools-utils
 
-DESCRIPTION="A free stand-alone ini file parsing library."
+DESCRIPTION="A free stand-alone ini file parsing library"
 HOMEPAGE="http://ndevilla.free.fr/iniparser/"
 
 SRC_URI="http://ndevilla.free.fr/iniparser/${P}.tar.gz"

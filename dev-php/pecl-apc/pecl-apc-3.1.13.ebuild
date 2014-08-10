@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/pecl-apc-3.1.13.ebuild,v 1.4 2013/08/15 10:35:34 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/pecl-apc-3.1.13.ebuild,v 1.5 2014/08/10 21:00:46 slyfox Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ inherit php-ext-pecl-r2 confutils eutils
 
 KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~x86"
 
-DESCRIPTION="A free, open, and robust framework for caching and optimizing PHP code."
+DESCRIPTION="A free, open, and robust framework for caching and optimizing PHP code"
 LICENSE="PHP-3.01"
 SLOT="0"
 IUSE="mmap"

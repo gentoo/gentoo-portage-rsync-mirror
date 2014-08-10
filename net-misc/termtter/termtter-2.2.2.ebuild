@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/termtter/termtter-2.2.2.ebuild,v 1.1 2013/11/27 14:16:03 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/termtter/termtter-2.2.2.ebuild,v 1.2 2014/08/10 20:48:06 slyfox Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_TASK_TEST="spec"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Termtter is a terminal based Twitter client."
+DESCRIPTION="Termtter is a terminal based Twitter client"
 HOMEPAGE="https://github.com/termtter/termtter"
 
 LICENSE="MIT"

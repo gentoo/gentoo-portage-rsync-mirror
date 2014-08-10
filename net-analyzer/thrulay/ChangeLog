@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/thrulay
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.14 2012/08/23 05:56:26 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.15 2014/08/10 21:00:52 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> thrulay-0.6.ebuild,
+  thrulay-0.8.ebuild, thrulay-0.9-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Aug 2012; Michael Weber <xmw@gentoo.org> thrulay-0.9-r1.ebuild:
   ppc stable (bug 419239).

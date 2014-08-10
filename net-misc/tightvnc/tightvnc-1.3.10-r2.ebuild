@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r2.ebuild,v 1.7 2014/08/09 12:04:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r2.ebuild,v 1.8 2014/08/10 20:48:18 slyfox Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs java-pkg-opt-2
 IUSE="java tcpd server"
 
 S="${WORKDIR}/vnc_unixsrc"
-DESCRIPTION="A great client/server software package allowing remote network access to graphical desktops."
+DESCRIPTION="A great client/server software package allowing remote network access to graphical desktops"
 SRC_URI="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2
 	mirror://gentoo/${PN}.png
 	java? ( mirror://sourceforge/vnc-tight/${P}_javasrc.tar.gz )"

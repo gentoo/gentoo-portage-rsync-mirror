@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.57 2014/07/13 12:49:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.58 2014/08/10 21:00:44 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> smokeping-2.6.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Jul 2014; Jeroen Roovers <jer@gentoo.org> smokeping-2.6.9.ebuild:
   Depend on net-analyzer/rrdtool[graph] (bug #509682 by Marcin Mirosław).

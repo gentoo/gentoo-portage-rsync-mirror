@@ -1,6 +1,6 @@
 DEFINED_PHASES=install prepare
 DEPEND=>=sys-apps/sed-4
-DESCRIPTION=Collection of utilities for parsing Internet mail messages.
+DESCRIPTION=Collection of utilities for parsing Internet mail messages
 EAPI=4
 HOMEPAGE=http://cr.yp.to/mess822.html
 KEYWORDS=amd64 ppc x86
@@ -10,4 +10,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://cr.yp.to/software/mess822-0.58.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=a294b4c338fcb943d0d3f7d4f3ccaf45
+_md5_=618c49ad54f6b5ecb56c5beb814e2f39

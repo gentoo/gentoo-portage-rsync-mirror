@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/radiusclient
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.27 2013/06/27 16:32:06 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.28 2014/08/10 20:56:22 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> radiusclient-0.3.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *radiusclient-0.3.2-r1 (27 Jun 2013)
 
@@ -103,4 +106,3 @@
   21 Nov 2004; Alin Nastac <mrness@gentoo.org> +metadata.xml,
   +files/pkgsysconfdir-install.patch, +radiusclient-0.3.2.ebuild:
   Initial import from #71591, thanks to Evan Borgstrom <evan@mirrored.ca>.
-

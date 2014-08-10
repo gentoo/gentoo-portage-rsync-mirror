@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_Server
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.42 2012/12/27 16:08:59 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.43 2014/08/10 20:53:15 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-Net_Server-1.0.2-r1.ebuild, PEAR-Net_Server-1.0.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Dec 2012; Raúl Porcel <armin76@gentoo.org> PEAR-Net_Server-1.0.3.ebuild:
   alpha/sparc stable wrt #441268

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_CSS/PEAR-HTML_CSS-1.5.4.ebuild,v 1.3 2012/07/01 21:02:11 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_CSS/PEAR-HTML_CSS-1.5.4.ebuild,v 1.4 2014/08/10 20:47:42 slyfox Exp $
 
 inherit php-pear-r1
 
-DESCRIPTION="Provides a simple interface for generating a stylesheet declaration."
+DESCRIPTION="Provides a simple interface for generating a stylesheet declaration"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/chaosreader
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/ChangeLog,v 1.16 2012/03/20 18:57:47 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/ChangeLog,v 1.17 2014/08/10 20:57:36 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  chaosreader-0.94-r1.ebuild, chaosreader-0.94.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   This will now be proxy maintained as discussed in bug #408935#c3
@@ -63,4 +67,3 @@
   01 Feb 2004; Michal Januszewski <spock@gentoo.org> chaosreader-0.92.ebuild,
   metadata.xml:
   Initial commit, package requested by user. Closes #38922.
-

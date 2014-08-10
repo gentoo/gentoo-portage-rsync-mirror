@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qrosscore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosscore/ChangeLog,v 1.10 2014/07/14 05:21:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosscore/ChangeLog,v 1.11 2014/08/10 20:39:11 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> qrosscore-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   14 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> qrosscore-0.3.1.ebuild,
   qrosscore-9999.ebuild:

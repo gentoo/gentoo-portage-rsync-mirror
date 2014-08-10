@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/jpgraph
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.29 2012/09/02 14:42:23 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.30 2014/08/10 20:59:52 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jpgraph-3.0.7-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Sep 2012; Matti Bickel <mabi@gentoo.org> -jpgraph-2.3.ebuild:
   remove old

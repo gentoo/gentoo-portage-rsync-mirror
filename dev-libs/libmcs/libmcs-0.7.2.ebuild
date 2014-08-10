@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.7.2.ebuild,v 1.10 2012/05/04 18:35:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.7.2.ebuild,v 1.11 2014/08/10 20:36:29 slyfox Exp $
 
 EAPI=4
 
-DESCRIPTION="Abstracts the storage of configuration settings away from applications."
+DESCRIPTION="Abstracts the storage of configuration settings away from applications"
 HOMEPAGE="http://git.atheme.org/libmcs/"
 SRC_URI="http://distfiles.atheme.org/${P}.tgz"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.5.4.ebuild,v 1.1 2013/07/21 08:39:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.5.4.ebuild,v 1.2 2014/08/10 20:49:20 slyfox Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools-utils eutils versionator user
 
 MY_PV=$(get_version_component_range 1-2)
 
-DESCRIPTION="An implementation of the Infinote protocol written in GObject-based C."
+DESCRIPTION="An implementation of the Infinote protocol written in GObject-based C"
 HOMEPAGE="http://gobby.0x539.de/"
 SRC_URI="http://releases.0x539.de/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"

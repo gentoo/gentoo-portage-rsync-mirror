@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-haze
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.49 2014/02/22 22:36:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.50 2014/08/10 20:34:51 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  telepathy-haze-0.6.0.ebuild, telepathy-haze-0.8.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> telepathy-haze-0.8.0.ebuild:
   Fix wrong commit, bug 502160

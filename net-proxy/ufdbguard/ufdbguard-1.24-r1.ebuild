@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.24-r1.ebuild,v 1.4 2014/01/08 06:25:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.24-r1.ebuild,v 1.5 2014/08/10 20:36:01 slyfox Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils user
 
 MY_P="ufdbGuard-${PV}"
 
-DESCRIPTION="ufdbGuard is a redirector for the Squid internet proxy."
+DESCRIPTION="ufdbGuard is a redirector for the Squid internet proxy"
 HOMEPAGE="http://www.urlfilterdb.com/en/products/ufdbguard.html"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	doc? ( mirror://sourceforge/${PN}/ReferenceManual_v${PV/\./_}.pdf -> ${P}-manual.pdf )"

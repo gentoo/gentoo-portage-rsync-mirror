@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.10.ebuild,v 1.7 2012/05/03 04:40:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.10.ebuild,v 1.8 2014/08/10 20:32:37 slyfox Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -8,7 +8,7 @@ inherit eutils multilib
 MY_P="rox-filer-${PV}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="ROX is a desktop environment and filer based on RISC OS."
+DESCRIPTION="ROX is a desktop environment and filer based on RISC OS"
 HOMEPAGE="http://rox.sourceforge.net/"
 SRC_URI="mirror://sourceforge/rox/${MY_P}.tar.bz2"
 

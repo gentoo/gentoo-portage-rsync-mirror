@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/postal-0.72.ebuild,v 1.1 2012/03/05 14:37:09 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/postal-0.72.ebuild,v 1.2 2014/08/10 21:00:36 slyfox Exp $
 
 EAPI=4
 inherit autotools eutils
 
-DESCRIPTION="SMTP and POP mailserver benchmark. Supports SSL, randomized user accounts and more."
+DESCRIPTION="SMTP and POP mailserver benchmark. Supports SSL, randomized user accounts and more"
 HOMEPAGE="http://www.coker.com.au/postal/"
 SRC_URI="http://www.coker.com.au/postal/${P}.tgz"
 LICENSE="GPL-3"

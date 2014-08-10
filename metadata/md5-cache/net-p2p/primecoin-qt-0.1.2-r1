@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare unpack
 DEPEND=dev-libs/boost[threads(+)] dev-libs/openssl:0[-bindist] qrcode? ( media-gfx/qrencode ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] <=dev-libs/leveldb-1.12.0[-snappy] dev-qt/qtgui:4 dbus? ( dev-qt/qtdbus:4 ) >=app-shells/bash-4.1 >=sys-apps/sed-4
-DESCRIPTION=Cryptocurrency forked from Bitcoin which aims to be energy efficiency.
+DESCRIPTION=Cryptocurrency forked from Bitcoin which aims to be energy efficiency
 EAPI=5
 HOMEPAGE=http://primecoin.org/
 IUSE=dbus ipv6 kde +qrcode upnp linguas_af_ZA linguas_ar linguas_bg linguas_bs linguas_ca_ES linguas_ca linguas_cs linguas_cy linguas_da linguas_de linguas_el_GR linguas_en linguas_eo linguas_es_CL linguas_es linguas_et linguas_eu_ES linguas_fa_IR linguas_fa linguas_fi linguas_fr_CA linguas_fr linguas_gu_IN linguas_he linguas_hi_IN linguas_hr linguas_hu linguas_it linguas_ja linguas_la linguas_lt linguas_lv_LV linguas_nb linguas_nl linguas_pl linguas_pt_BR linguas_pt_PT linguas_ro_RO linguas_ru linguas_sk linguas_sr linguas_sv linguas_th_TH linguas_tr linguas_uk linguas_zh_CN linguas_zh_TW
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/boost[threads(+)] dev-libs/openssl:0[-bindist] qrcode? ( media-
 SLOT=0
 SRC_URI=mirror://sourceforge/primecoin/primecoin-0.1.2-linux.tar.gz -> primecoin-0.1.2.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	kde4-functions	492237eb2823bdc02bc769530501f0ea	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	40136c5fe0002a0d3937e869ae4ee0e2	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=4710f3b8a8417164effe5f1293b9cb8a
+_md5_=631231d89bbb20eec555f358cdb0259f

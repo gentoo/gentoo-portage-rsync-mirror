@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.306 2014/07/30 19:30:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.307 2014/08/10 20:36:06 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> hplip-3.14.1.ebuild,
+  hplip-3.14.4.ebuild, hplip-3.14.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> hplip-3.14.1.ebuild,
   hplip-3.14.4.ebuild, hplip-3.14.6.ebuild:

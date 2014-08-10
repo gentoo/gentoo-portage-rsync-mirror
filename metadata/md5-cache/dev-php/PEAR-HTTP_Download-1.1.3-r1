@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 ) dev-lang/php[postgres=] dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=Provides functionality to send HTTP downloads.
+DESCRIPTION=Provides functionality to send HTTP downloads
 EAPI=2
 HOMEPAGE=http://pear.php.net/HTTP_Download
 IUSE=minimal postgres
@@ -10,4 +10,4 @@ RDEPEND=|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 ) dev-lang/php[postgres=
 SLOT=0
 SRC_URI=http://pear.php.net/get/HTTP_Download-1.1.3.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ae468358f2e345b073fb116d5ac38a96
+_md5_=cb49b79d9e029572b1cf2eecd60d9576

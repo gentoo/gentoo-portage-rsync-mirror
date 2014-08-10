@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/xrn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/xrn/ChangeLog,v 1.5 2010/04/30 15:43:50 flameeyes Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/xrn/ChangeLog,v 1.6 2014/08/10 20:42:23 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xrn-9.02.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   30 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org> xrn-9.02.ebuild:
   Use serial make until bug #314667 is resolved.
@@ -26,4 +29,3 @@
   +xrn-9.02.ebuild:
   Initial import, ebuild submitted by Alastair Murray
   <alastairmurray@hotmail.com> in bug #56345.
-

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aggregate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.17 2014/03/12 03:49:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.18 2014/08/10 20:43:10 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> aggregate-1.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Mar 2014; Patrick Lauer <patrick@gentoo.org> aggregate-1.6.ebuild:
   Shorten description for improved repoman happy

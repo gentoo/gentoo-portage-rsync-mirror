@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-bjnp/cups-bjnp-1.2.1.ebuild,v 1.1 2013/08/10 14:01:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-bjnp/cups-bjnp-1.2.1.ebuild,v 1.2 2014/08/10 20:35:43 slyfox Exp $
 
 EAPI=5
 
-DESCRIPTION="CUPS backend for the canon printers using the proprietary USB over IP BJNP protocol."
+DESCRIPTION="CUPS backend for the canon printers using the proprietary USB over IP BJNP protocol"
 HOMEPAGE="http://sourceforge.net/projects/cups-bjnp/"
 SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 

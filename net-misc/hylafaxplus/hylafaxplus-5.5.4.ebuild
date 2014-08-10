@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/hylafaxplus-5.5.4.ebuild,v 1.1 2013/09/27 12:56:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/hylafaxplus-5.5.4.ebuild,v 1.2 2014/08/10 20:44:19 slyfox Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit eutils multilib pam toolchain-funcs
 MY_PN="${PN/plus/}"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Enterprise client-server fax package for class 1 and 2 fax modems."
+DESCRIPTION="Enterprise client-server fax package for class 1 and 2 fax modems"
 HOMEPAGE="http://hylafax.sourceforge.net"
 SRC_URI="mirror://sourceforge/hylafax/${MY_P}.tar.gz"
 

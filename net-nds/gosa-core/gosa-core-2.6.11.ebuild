@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-core/gosa-core-2.6.11.ebuild,v 1.1 2010/08/23 08:57:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-core/gosa-core-2.6.11.ebuild,v 1.2 2014/08/10 20:53:00 slyfox Exp $
 
 EAPI=3
 
 inherit eutils
 
-DESCRIPTION="LDAP administration frontend for user administration."
+DESCRIPTION="LDAP administration frontend for user administration"
 HOMEPAGE="https://oss.gonicus.de/labs/gosa/wiki/WikiStart."
 SRC_URI="ftp://oss.gonicus.de/pub/gosa/${P}.tar.bz2
 	http://oss.gonicus.de/pub/gosa/${P}.tar.bz2

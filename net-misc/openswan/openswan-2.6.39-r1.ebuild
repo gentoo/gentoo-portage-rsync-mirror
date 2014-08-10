@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.39-r1.ebuild,v 1.3 2014/01/05 00:59:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.39-r1.ebuild,v 1.4 2014/08/10 20:46:00 slyfox Exp $
 
 EAPI="4"
 
 inherit eutils linux-info systemd toolchain-funcs flag-o-matic
 
-DESCRIPTION="Open Source implementation of IPsec for the Linux operating system (was SuperFreeS/WAN)."
+DESCRIPTION="Open Source implementation of IPsec for the Linux operating system (was SuperFreeS/WAN)"
 HOMEPAGE="http://www.openswan.org/"
 SRC_URI="http://download.openswan.org/openswan/${P}.tar.gz"
 

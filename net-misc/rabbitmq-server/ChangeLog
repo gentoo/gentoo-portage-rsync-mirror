@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rabbitmq-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.44 2014/06/26 12:17:00 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.45 2014/08/10 20:46:53 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  rabbitmq-server-3.1.4.ebuild, rabbitmq-server-3.2.3.ebuild,
+  rabbitmq-server-3.2.4.ebuild, rabbitmq-server-3.3.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   26 Jun 2014; Ultrabug <ultrabug@gentoo.org> rabbitmq-server-3.3.4.ebuild:
   minor enhancement wrt #492846

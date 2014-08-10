@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.29 2014/07/14 22:30:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.30 2014/08/10 20:59:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> netio-1.32.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   14 Jul 2014; Jeroen Roovers <jer@gentoo.org> netio-1.32.ebuild:
   EAPI bump.

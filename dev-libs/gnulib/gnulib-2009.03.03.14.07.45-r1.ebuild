@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-2009.03.03.14.07.45-r1.ebuild,v 1.1 2010/02/20 20:36:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-2009.03.03.14.07.45-r1.ebuild,v 1.2 2014/08/10 20:33:44 slyfox Exp $
 
 EAPI=3
 
 inherit eutils autotools
 
-DESCRIPTION="Gnulib is a library of common routines intended to be shared at the source level."
+DESCRIPTION="Gnulib is a library of common routines intended to be shared at the source level"
 HOMEPAGE="http://www.gnu.org/software/gnulib"
 
 # This tar.gz is created on-the-fly when downloaded from

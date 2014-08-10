@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.9.0
-DESCRIPTION=The simple PHP template alternative to Smarty.
+DESCRIPTION=The simple PHP template alternative to Smarty
 HOMEPAGE=http://phpsavant.com/yawiki/index.php?area=Savant3
 IUSE=minimal
 KEYWORDS=~amd64 ~x86
@@ -9,4 +9,4 @@ RDEPEND=!minimal? ( >=dev-php/Savant3-Plugin-Form-0.2.1 ) dev-lang/php >=dev-php
 SLOT=0
 SRC_URI=http://phpsavant.com/Savant3-3.0.0.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-lib-r1	683c04445ce44b20b5df954b5050e387	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=0fc6540eab24dd76215a888ccdbfe3b5
+_md5_=4ff2671c85d95c39b5afd02f2d2307f9

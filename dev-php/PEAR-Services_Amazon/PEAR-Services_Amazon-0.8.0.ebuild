@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Amazon/PEAR-Services_Amazon-0.8.0.ebuild,v 1.1 2009/08/22 22:24:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Amazon/PEAR-Services_Amazon-0.8.0.ebuild,v 1.2 2014/08/10 20:55:11 slyfox Exp $
 
 inherit php-pear-r1
 
-DESCRIPTION="Provides access to Amazon's retail and associate web services."
+DESCRIPTION="Provides access to Amazon's retail and associate web services"
 
 LICENSE="BSD-2"
 SLOT="0"

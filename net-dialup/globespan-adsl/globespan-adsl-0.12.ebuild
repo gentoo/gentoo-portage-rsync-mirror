@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.12.ebuild,v 1.5 2008/03/13 01:27:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.12.ebuild,v 1.6 2014/08/10 20:55:36 slyfox Exp $
 
 inherit eutils
 
 MY_PN="eciadsl-usermode-${PV}"
 
-DESCRIPTION="Driver for various ADSL modems. Also known as EciAdsl."
+DESCRIPTION="Driver for various ADSL modems. Also known as EciAdsl"
 SRC_URI="http://eciadsl.flashtux.org/download/${MY_PN}.tar.gz"
 HOMEPAGE="http://eciadsl.flashtux.org"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mingetty
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.56 2011/02/06 22:35:42 leio Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.57 2014/08/10 20:56:06 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mingetty-1.07-r1.ebuild,
+  mingetty-1.08.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> mingetty-1.07-r1.ebuild:
   Drop to ~mips

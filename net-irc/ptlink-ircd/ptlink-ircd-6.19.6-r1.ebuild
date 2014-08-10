@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.6-r1.ebuild,v 1.3 2014/01/08 06:37:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.6-r1.ebuild,v 1.4 2014/08/10 20:53:43 slyfox Exp $
 
 inherit eutils ssl-cert user
 
 MY_P="PTlink${PV}"
 
-DESCRIPTION="PTlink IRCd is a secure IRC daemon with many advanced features."
+DESCRIPTION="PTlink IRCd is a secure IRC daemon with many advanced features"
 HOMEPAGE="http://www.ptlink.net/"
 SRC_URI="ftp://ftp.sunsite.dk/projects/ptlink/ircd/${MY_P}.tar.gz"
 LICENSE="GPL-2"

@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23_p20140717-r1.ebuild,v 1.2 2014/08/04 16:23:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23_p20140717-r1.ebuild,v 1.3 2014/08/10 20:34:24 slyfox Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_7 )
 inherit eutils python-single-r1 gnome2-utils autotools
 
-DESCRIPTION="GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks."
+DESCRIPTION="GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks"
 HOMEPAGE="http://blueman-project.org/"
 
 if [[ ${PV} == "9999" ]] ; then

@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 ) dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=Manipulate many kinds of password files.
+DESCRIPTION=Manipulate many kinds of password files
 EAPI=2
 HOMEPAGE=http://pear.php.net/File_Passwd
 KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86
@@ -9,4 +9,4 @@ RDEPEND=|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 ) dev-lang/php >=dev-php
 SLOT=0
 SRC_URI=http://pear.php.net/get/File_Passwd-1.1.7.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=3f6b0e25da9ea444391b768c680b499f
+_md5_=55ee3ed429d72a0ab81b664faa5a2771

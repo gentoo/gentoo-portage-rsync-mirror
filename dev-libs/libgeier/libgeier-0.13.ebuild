@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.13.ebuild,v 1.4 2014/01/25 03:52:38 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.13.ebuild,v 1.5 2014/08/10 20:35:42 slyfox Exp $
 
 EAPI=5
 
-DESCRIPTION="Libgeier provides a library to access the german digital tax project ELSTER."
+DESCRIPTION="Libgeier provides a library to access the german digital tax project ELSTER"
 HOMEPAGE="http://www.taxbird.de/"
 SRC_URI="http://www.taxbird.de/download/${PN}/${PV}/${P}.tar.gz"
 

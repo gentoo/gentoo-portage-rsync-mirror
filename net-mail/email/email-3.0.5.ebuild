@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/email-3.0.5.ebuild,v 1.5 2009/10/04 14:30:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/email-3.0.5.ebuild,v 1.6 2014/08/10 20:44:37 slyfox Exp $
 
 inherit flag-o-matic
 
-DESCRIPTION="Advanced CLI tool for sending email."
+DESCRIPTION="Advanced CLI tool for sending email"
 HOMEPAGE="http://www.cleancode.org/projects/email"
 SRC_URI="http://www.cleancode.org/downloads/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"

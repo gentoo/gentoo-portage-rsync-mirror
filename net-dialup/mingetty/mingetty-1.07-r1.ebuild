@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.07-r1.ebuild,v 1.11 2011/02/06 22:35:42 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.07-r1.ebuild,v 1.12 2014/08/10 20:56:06 slyfox Exp $
 
 inherit toolchain-funcs eutils
 
-DESCRIPTION="A compact getty program for virtual consoles only."
+DESCRIPTION="A compact getty program for virtual consoles only"
 HOMEPAGE="http://sourceforge.net/projects/mingetty"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

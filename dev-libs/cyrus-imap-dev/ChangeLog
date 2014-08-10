@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.94 2013/02/15 22:41:16 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.95 2014/08/10 20:33:08 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  cyrus-imap-dev-2.4.16.ebuild, cyrus-imap-dev-2.4.17.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> cyrus-imap-dev-2.4.17.ebuild:
   Stable for sparc, wrt bug #456530

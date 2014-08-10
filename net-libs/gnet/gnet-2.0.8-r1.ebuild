@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8-r1.ebuild,v 1.13 2013/04/24 17:38:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8-r1.ebuild,v 1.14 2014/08/10 20:48:33 slyfox Exp $
 
 EAPI="2"
 GCONF_DEBUG="yes"
 
 inherit autotools eutils gnome2
 
-DESCRIPTION="A simple network library."
+DESCRIPTION="A simple network library"
 HOMEPAGE="http://live.gnome.org/GNetLibrary"
 
 LICENSE="LGPL-2"

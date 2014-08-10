@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ndsad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ChangeLog,v 1.11 2014/07/27 11:41:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ChangeLog,v 1.12 2014/08/10 20:58:57 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ndsad-1.33-r1.ebuild,
+  ndsad-1.33.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> ndsad-1.33-r1.ebuild:
   x86 stable wrt bug #517108

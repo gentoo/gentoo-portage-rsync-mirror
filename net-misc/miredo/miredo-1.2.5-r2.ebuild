@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.5-r2.ebuild,v 1.4 2013/05/31 12:48:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.5-r2.ebuild,v 1.5 2014/08/10 20:45:08 slyfox Exp $
 
 EAPI=4
 
 inherit autotools eutils linux-info user
 
-DESCRIPTION="Miredo is an open-source Teredo IPv6 tunneling software."
+DESCRIPTION="Miredo is an open-source Teredo IPv6 tunneling software"
 HOMEPAGE="http://www.remlab.net/miredo/"
 SRC_URI="http://www.remlab.net/files/${PN}/${P}.tar.xz"
 

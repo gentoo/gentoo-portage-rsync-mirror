@@ -1,10 +1,13 @@
 # ChangeLog for dev-php/PEAR-Crypt_Blowfish
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_Blowfish/ChangeLog,v 1.1 2011/06/04 18:57:35 a3li Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_Blowfish/ChangeLog,v 1.2 2014/08/10 20:45:21 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-Crypt_Blowfish-1.1.0_rc2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *PEAR-Crypt_Blowfish-1.1.0_rc2 (04 Jun 2011)
 
   04 Jun 2011; Alex Legler <a3li@gentoo.org>
   +PEAR-Crypt_Blowfish-1.1.0_rc2.ebuild, +metadata.xml:
   Initial commit, dependency of www-apps/horde-4.
-

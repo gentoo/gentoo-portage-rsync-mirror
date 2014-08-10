@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/primecoind-0.1.2.ebuild,v 1.2 2014/01/08 06:27:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/primecoind-0.1.2.ebuild,v 1.3 2014/08/10 20:38:19 slyfox Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ MyPV="${PV/_/-}"
 MyPN="primecoin"
 MyP="${MyPN}-${MyPV}"
 
-DESCRIPTION="P2P Internet currency based on Bitcoin but easier to mine."
+DESCRIPTION="P2P Internet currency based on Bitcoin but easier to mine"
 HOMEPAGE="http://primecoin.org/"
 SRC_URI="mirror://sourceforge/${MyPN}/${MyP}-linux.tar.gz -> ${MyP}.tar.gz"
 

@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guacamole-server/guacamole-server-0.8.3.ebuild,v 1.1 2013/11/26 12:48:44 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guacamole-server/guacamole-server-0.8.3.ebuild,v 1.2 2014/08/10 20:44:12 slyfox Exp $
 
 EAPI=4
 
 inherit eutils
-DESCRIPTION="This is the proxy-daemon used by www-apps/guacamole."
+DESCRIPTION="This is the proxy-daemon used by www-apps/guacamole"
 
 HOMEPAGE="http://guacamole.sourceforge.net/"
 SRC_URI="mirror://sourceforge/guacamole/${P}.tar.gz"

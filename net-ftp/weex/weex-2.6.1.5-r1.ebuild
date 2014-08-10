@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/weex-2.6.1.5-r1.ebuild,v 1.1 2005/10/04 09:32:49 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/weex-2.6.1.5-r1.ebuild,v 1.2 2014/08/10 20:55:07 slyfox Exp $
 
 inherit eutils
 
-DESCRIPTION="Automates maintaining a web page or other FTP archive."
+DESCRIPTION="Automates maintaining a web page or other FTP archive"
 HOMEPAGE="http://weex.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

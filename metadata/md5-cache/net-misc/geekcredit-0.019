@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst
 DEPEND=dev-lang/python app-crypt/gnupg
-DESCRIPTION=Digital complementary currency for internet.
+DESCRIPTION=Digital complementary currency for internet
 HOMEPAGE=http://home.gna.org/geekcredit/
 KEYWORDS=x86 ~ppc
 LICENSE=GPL-2
@@ -8,4 +8,4 @@ RDEPEND=dev-lang/python app-crypt/gnupg
 SLOT=0
 SRC_URI=http://download.gna.org/geekcredit/gc-0.019.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=d8fab898c83cec017c7e26a8d2b7927d
+_md5_=a61240c421e9b83cab17352684add401

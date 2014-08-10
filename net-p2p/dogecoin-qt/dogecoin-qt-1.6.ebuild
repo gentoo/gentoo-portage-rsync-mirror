@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dogecoin-qt/dogecoin-qt-1.6.ebuild,v 1.1 2014/03/22 05:42:36 sdamashek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dogecoin-qt/dogecoin-qt-1.6.ebuild,v 1.2 2014/08/10 20:36:42 slyfox Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ MyPV="${PV/_/-}"
 MyPN="dogecoin"
 MyP="${MyPN}-${MyPV}"
 
-DESCRIPTION="P2P Internet currency favored by Shiba Inus worldwide."
+DESCRIPTION="P2P Internet currency favored by Shiba Inus worldwide"
 HOMEPAGE="https://dogecoin.com/"
 SRC_URI="https://github.com/${MyPN}/${MyPN}/archive/${MyPV}.tar.gz -> ${MyP}.tar.gz"
 

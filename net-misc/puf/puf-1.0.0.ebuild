@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/puf/puf-1.0.0.ebuild,v 1.5 2012/09/26 18:36:09 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/puf/puf-1.0.0.ebuild,v 1.6 2014/08/10 20:46:37 slyfox Exp $
 
 EAPI=4
 
-DESCRIPTION="A download tool for UNIX-like systems."
+DESCRIPTION="A download tool for UNIX-like systems"
 HOMEPAGE="http://puf.sourceforge.net/"
 SRC_URI="mirror://sourceforge/puf/${P}.tar.gz"
 

@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/pytvshows-0.2-r1.ebuild,v 1.5 2012/03/06 09:39:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/pytvshows-0.2-r1.ebuild,v 1.6 2014/08/10 20:46:46 slyfox Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 
 inherit distutils eutils
 
-DESCRIPTION="downloads torrents for TV shows from RSS feeds provided by ezrss.it."
+DESCRIPTION="downloads torrents for TV shows from RSS feeds provided by ezrss.it"
 HOMEPAGE="http://sourceforge.net/projects/pytvshows/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

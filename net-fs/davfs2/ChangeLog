@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/davfs2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.62 2012/10/17 03:44:53 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.63 2014/08/10 20:54:46 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> davfs2-1.4.5-r1.ebuild,
+  davfs2-1.4.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> davfs2-1.4.7.ebuild:
   x86 stable wrt bug #435068

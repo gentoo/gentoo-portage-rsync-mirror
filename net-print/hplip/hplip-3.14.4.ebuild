@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.4.ebuild,v 1.4 2014/07/30 19:30:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.4.ebuild,v 1.5 2014/08/10 20:36:06 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PYTHON_REQ_USE="threads,xml"
 
 inherit eutils fdo-mime linux-info python-single-r1 udev autotools toolchain-funcs
 
-DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools."
+DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools"
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
 SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
 		http://dev.gentoo.org/~billie/distfiles/${PN}-3.14.3-patches-1.tar.xz"

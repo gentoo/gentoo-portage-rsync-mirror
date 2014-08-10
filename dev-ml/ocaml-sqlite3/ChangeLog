@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-sqlite3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.34 2014/01/19 12:44:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.35 2014/08/10 20:43:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  ocaml-sqlite3-2.0.4.ebuild, ocaml-sqlite3-2.0.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *ocaml-sqlite3-2.0.5 (19 Jan 2014)
 
@@ -175,4 +179,3 @@
   +files/ocaml-sqlite3-0.22.0-destdir.patch, +metadata.xml,
   +ocaml-sqlite3-0.22.0.ebuild:
   Initial import, thanks to Pierre Clairambault for the ebuild
-

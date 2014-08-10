@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/fwipsec
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwipsec/ChangeLog,v 1.13 2010/09/17 09:28:12 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwipsec/ChangeLog,v 1.14 2014/08/10 20:55:39 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fwipsec-0.4.2-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Sep 2010; Robin H. Johnson <robbat2@gentoo.org>
   fwipsec-0.4.2-r1.ebuild:
@@ -49,4 +52,3 @@
   New firewall easy configuration script. It also gives you the bonus of turning
   on squid and IP/SEC for VPN's. This package was created by Jay Pfeifer and his
   associates.
-

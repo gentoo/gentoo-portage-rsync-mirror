@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.17.4.ebuild,v 1.4 2009/05/08 12:08:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.17.4.ebuild,v 1.5 2014/08/10 20:48:29 slyfox Exp $
 
 inherit eutils python
 
-DESCRIPTION="Telnet client for the IBM AS/400 that emulates 5250 terminals and printers."
+DESCRIPTION="Telnet client for the IBM AS/400 that emulates 5250 terminals and printers"
 HOMEPAGE="http://tn5250.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

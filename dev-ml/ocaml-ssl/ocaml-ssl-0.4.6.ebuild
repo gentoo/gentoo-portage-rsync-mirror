@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ocaml-ssl-0.4.6.ebuild,v 1.5 2013/03/03 14:52:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ocaml-ssl-0.4.6.ebuild,v 1.6 2014/08/10 20:43:21 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit findlib eutils
 
 IUSE="doc"
 
-DESCRIPTION="OCaml bindings for OpenSSL."
+DESCRIPTION="OCaml bindings for OpenSSL"
 SRC_URI="mirror://sourceforge/savonet/${P}.tar.gz"
 HOMEPAGE="http://savonet.sourceforge.net"
 

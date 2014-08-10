@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=The phpDocumentor package provides automatic documenting of php api directly from the source.
+DESCRIPTION=The phpDocumentor package provides automatic documenting of php api directly from the source
 HOMEPAGE=http://pear.php.net/PhpDocumentor
 IUSE=minimal
 KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86
@@ -9,4 +9,4 @@ RDEPEND=!minimal? ( >=dev-php/PEAR-XML_Beautifier-1.1-r1 ) dev-lang/php >=dev-ph
 SLOT=0
 SRC_URI=http://pear.php.net/get/PhpDocumentor-1.4.0.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=9f8eaddb84ff2276184c5940f79fdb57
+_md5_=391307daa492a674bb29d01fd9bf041d

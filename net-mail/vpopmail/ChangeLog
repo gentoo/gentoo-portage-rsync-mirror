@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/vpopmail
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.118 2013/06/11 18:51:18 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.119 2014/08/10 20:47:32 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> vpopmail-5.4.16.ebuild,
+  vpopmail-5.4.30-r1.ebuild, vpopmail-5.4.30-r2.ebuild,
+  vpopmail-5.4.33-r1.ebuild, vpopmail-5.4.33.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   11 Jun 2013; Markus Meier <maekke@gentoo.org> vpopmail-5.4.33.ebuild:
   arm stable, bug #269129

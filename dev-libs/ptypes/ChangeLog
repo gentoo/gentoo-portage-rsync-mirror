@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ptypes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ChangeLog,v 1.17 2014/03/12 02:56:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ChangeLog,v 1.18 2014/08/10 20:39:04 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ptypes-2.0.2-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Mar 2014; Patrick Lauer <patrick@gentoo.org> ptypes-2.0.2-r1.ebuild:
   Shorten description for improved repoman happy

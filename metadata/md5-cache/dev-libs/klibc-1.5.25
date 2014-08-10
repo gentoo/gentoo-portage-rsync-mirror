@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install test unpack
 DEPEND=dev-lang/perl
-DESCRIPTION=A minimal libc subset for use with initramfs.
+DESCRIPTION=A minimal libc subset for use with initramfs
 HOMEPAGE=http://www.zytor.com/mailman/listinfo/klibc
 IUSE=debug
 KEYWORDS=~alpha amd64 ~arm ia64 -mips ~ppc ~ppc64 ~sparc x86
@@ -10,4 +10,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://kernel/linux/libs/klibc/1.5/klibc-1.5.25.tar.bz2 mirror://kernel/linux/kernel/v2.6/linux-2.6.39.tar.bz2 mirror://kernel/linux/kernel/v2.6/testing/linux-2.6.39.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=d0648206c832d9cdfc569423f159fd7d
+_md5_=c3b590c1d83dd909fae78e681865f39d

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/facile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.20 2013/08/19 13:26:14 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.21 2014/08/10 20:42:43 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> facile-1.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> facile-1.1.ebuild:
   eapi5, define subslot for ocaml rev deps, add := dep on ocaml
@@ -80,4 +83,3 @@
   18 Jul 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it> +metadata.xml,
   facile-1.1.ebuild:
   Added Changelog and metadata. Fixed LICENSE.
-

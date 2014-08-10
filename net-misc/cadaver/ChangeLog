@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cadaver
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.42 2011/09/18 13:57:20 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.43 2014/08/10 20:43:25 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cadaver-0.23.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   18 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Add Arfrever as proxy maintainer with proxy-maintainers as herd.

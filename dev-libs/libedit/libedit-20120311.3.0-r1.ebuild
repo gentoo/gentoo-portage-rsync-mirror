@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20120311.3.0-r1.ebuild,v 1.13 2013/03/10 16:20:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20120311.3.0-r1.ebuild,v 1.14 2014/08/10 20:35:21 slyfox Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs versionator base
 MY_PV=$(get_major_version)-$(get_after_major_version)
 MY_P=${PN}-${MY_PV}
 
-DESCRIPTION="BSD replacement for libreadline."
+DESCRIPTION="BSD replacement for libreadline"
 HOMEPAGE="http://www.thrysoee.dk/editline/"
 SRC_URI="http://www.thrysoee.dk/editline/${MY_P}.tar.gz"
 

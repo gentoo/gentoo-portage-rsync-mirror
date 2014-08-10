@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/brag
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/brag/ChangeLog,v 1.8 2012/03/19 19:12:18 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/brag/ChangeLog,v 1.9 2014/08/10 20:42:17 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> brag-1.4.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Mar 2012; Raúl Porcel <armin76@gentoo.org> brag-1.4.1.ebuild,
   brag-1.4.3.ebuild:

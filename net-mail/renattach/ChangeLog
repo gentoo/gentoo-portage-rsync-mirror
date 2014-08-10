@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/renattach
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/renattach/ChangeLog,v 1.8 2014/07/03 17:51:21 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/renattach/ChangeLog,v 1.9 2014/08/10 20:46:21 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> renattach-1.2.4-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *renattach-1.2.4-r1 (03 Jul 2014)
 

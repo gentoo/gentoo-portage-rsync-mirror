@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare setup
 DEPEND=ssl? ( dev-libs/openssl ) lzo? ( dev-libs/lzo:2 ) zlib? ( sys-libs/zlib ) socks5? ( net-proxy/dante ) sys-devel/bison
-DESCRIPTION=Create virtual tunnels over TCP/IP networks with traffic shaping, encryption, and compression.
+DESCRIPTION=Create virtual tunnels over TCP/IP networks with traffic shaping, encryption, and compression
 EAPI=4
 HOMEPAGE=http://vtun.sourceforge.net/
 IUSE=lzo socks5 ssl zlib
@@ -10,4 +10,4 @@ RDEPEND=ssl? ( dev-libs/openssl ) lzo? ( dev-libs/lzo:2 ) zlib? ( sys-libs/zlib 
 SLOT=0
 SRC_URI=mirror://sourceforge/vtun/vtun-3.0.2.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=80992d3bbbf5f50b5e8b4b46dd21024d
+_md5_=c082c3d0548a121427dbdc5c15e4386c

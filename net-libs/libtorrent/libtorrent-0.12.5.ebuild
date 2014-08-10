@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.5.ebuild,v 1.8 2012/05/05 02:54:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.5.ebuild,v 1.9 2014/08/10 20:50:03 slyfox Exp $
 
 inherit base eutils toolchain-funcs flag-o-matic libtool
 
-DESCRIPTION="LibTorrent is a BitTorrent library written in C++ for *nix."
+DESCRIPTION="LibTorrent is a BitTorrent library written in C++ for *nix"
 HOMEPAGE="http://libtorrent.rakshasa.no/"
 SRC_URI="http://libtorrent.rakshasa.no/downloads/${P}.tar.gz"
 SLOT="0"

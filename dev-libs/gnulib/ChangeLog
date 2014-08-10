@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gnulib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/ChangeLog,v 1.12 2011/09/21 08:21:11 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/ChangeLog,v 1.13 2014/08/10 20:33:44 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  gnulib-2009.03.03.14.07.45-r1.ebuild, gnulib-9999-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> gnulib-9999-r1.ebuild:
   Migrate to git-2.
@@ -45,4 +49,3 @@
   +gnulib-9999.ebuild:
   New ebuild, imported from my overlay.
   Thanks to Davide Angelocola wrt bug #162295 for original ebuild.
-

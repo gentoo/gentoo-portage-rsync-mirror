@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.120 2014/01/26 12:17:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.121 2014/08/10 20:59:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gpac-0.4.5-r4.ebuild,
+  gpac-0.4.5-r5.ebuild, gpac-0.5.0-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> gpac-0.5.0-r1.ebuild:
   Stable for sparc, wrt bug #495820

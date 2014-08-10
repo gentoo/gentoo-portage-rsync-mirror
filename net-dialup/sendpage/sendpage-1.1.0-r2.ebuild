@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/sendpage-1.1.0-r2.ebuild,v 1.2 2013/09/10 06:52:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/sendpage-1.1.0-r2.ebuild,v 1.3 2014/08/10 20:56:31 slyfox Exp $
 
 EAPI=5
 
 inherit perl-module eutils user
 
 MY_P=${PN}-1.001
-DESCRIPTION="Dialup alphapaging software."
+DESCRIPTION="Dialup alphapaging software"
 HOMEPAGE="http://www.sendpage.org/"
 SRC_URI="http://www.sendpage.org/download/${MY_P}.tar.gz"
 S="${WORKDIR}/${MY_P}"

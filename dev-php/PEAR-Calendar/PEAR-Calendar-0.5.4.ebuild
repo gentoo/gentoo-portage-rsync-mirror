@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Calendar/PEAR-Calendar-0.5.4.ebuild,v 1.1 2009/08/22 22:32:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Calendar/PEAR-Calendar-0.5.4.ebuild,v 1.2 2014/08/10 20:44:43 slyfox Exp $
 
 inherit php-pear-r1
 
-DESCRIPTION="A package for building Calendar data structures."
+DESCRIPTION="A package for building Calendar data structures"
 
 LICENSE="PHP-2.02"
 SLOT="0"

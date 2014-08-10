@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/eggdrop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.90 2012/10/08 16:59:53 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.91 2014/08/10 20:53:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> eggdrop-1.6.18-r3.ebuild,
+  eggdrop-1.6.19.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Oct 2012; Anthony G. Basile <blueness@gentoo.org> eggdrop-1.6.21.ebuild:
   stable ppc, bug #437400

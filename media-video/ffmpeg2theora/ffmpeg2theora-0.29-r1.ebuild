@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.29-r1.ebuild,v 1.4 2014/03/15 19:04:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.29-r1.ebuild,v 1.5 2014/08/10 20:59:06 slyfox Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs scons-utils
 
-DESCRIPTION="A simple converter to create Ogg Theora files."
+DESCRIPTION="A simple converter to create Ogg Theora files"
 HOMEPAGE="http://www.v2v.cc/~j/ffmpeg2theora/"
 SRC_URI="http://www.v2v.cc/~j/${PN}/downloads/${P}.tar.bz2"
 

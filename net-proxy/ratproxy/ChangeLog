@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/ratproxy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ratproxy/ChangeLog,v 1.5 2010/05/22 15:02:09 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ratproxy/ChangeLog,v 1.6 2014/08/10 20:35:32 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ratproxy-1.58.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *ratproxy-1.58 (22 May 2010)
 
@@ -28,4 +31,3 @@
   08 Jul 2008; Timothy Redaelli <drizzt@gentoo.org>
   +files/ratproxy-Makefile.patch, +metadata.xml, +ratproxy-1.51.ebuild:
   New ebuild.
-

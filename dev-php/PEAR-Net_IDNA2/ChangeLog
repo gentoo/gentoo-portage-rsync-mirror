@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_IDNA2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IDNA2/ChangeLog,v 1.8 2012/07/02 12:13:29 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IDNA2/ChangeLog,v 1.9 2014/08/10 20:52:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-Net_IDNA2-0.1.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Jul 2012; Jeroen Roovers <jer@gentoo.org> PEAR-Net_IDNA2-0.1.1.ebuild:
   Marked ~hppa too.
@@ -31,4 +35,3 @@
   01 Oct 2011; Peter Volkov <pva@gentoo.org> +PEAR-Net_IDNA2-0.1.1.ebuild,
   +metadata.xml:
   Initial import. Dependency of mail-client/roundcube.
-

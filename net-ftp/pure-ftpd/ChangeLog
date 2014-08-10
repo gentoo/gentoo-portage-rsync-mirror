@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.151 2014/04/30 16:34:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.152 2014/08/10 20:54:57 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  pure-ftpd-1.0.29-r1.ebuild, pure-ftpd-1.0.36-r1.ebuild,
+  pure-ftpd-1.0.36.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pure-ftpd-1.0.36-r1 (30 Apr 2014)
 

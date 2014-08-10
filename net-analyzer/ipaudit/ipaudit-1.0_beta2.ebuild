@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipaudit/ipaudit-1.0_beta2.ebuild,v 1.7 2011/04/02 12:53:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipaudit/ipaudit-1.0_beta2.ebuild,v 1.8 2014/08/10 20:58:17 slyfox Exp $
 
 inherit eutils
-DESCRIPTION="IPAudit monitors network activity on a network by host, protocol and port."
+DESCRIPTION="IPAudit monitors network activity on a network by host, protocol and port"
 HOMEPAGE="http://ipaudit.sourceforge.net/"
 MY_P="${PN}-${PV/_beta/BETA}"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"

@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=Classes to calculate statistical parameters.
+DESCRIPTION=Classes to calculate statistical parameters
 HOMEPAGE=http://pear.php.net/Math_Stats
 KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86
 LICENSE=PHP-2.02
@@ -8,4 +8,4 @@ RDEPEND=dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Math_Stats-0.9.0beta3.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=581ae3a695af78ba7a14711ae8c6ee39
+_md5_=e98ae1e3f5fa2d3bdda3ee0c05a464c6

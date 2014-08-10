@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/spamcup
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/ChangeLog,v 1.12 2011/06/23 11:43:49 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/ChangeLog,v 1.13 2014/08/10 20:46:38 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> spamcup-1.09.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Jun 2011; Eray Aslan <eras@gentoo.org> -spamcup-1.08.ebuild:
   Remove old
@@ -47,4 +50,3 @@
   19 Sep 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   +spamcup-1.08.ebuild:
   Initial version. Closes #42920.
-

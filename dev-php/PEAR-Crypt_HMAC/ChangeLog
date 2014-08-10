@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Crypt_HMAC
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_HMAC/ChangeLog,v 1.7 2007/12/05 23:51:07 jokey Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_HMAC/ChangeLog,v 1.8 2014/08/10 20:45:32 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-Crypt_HMAC-1.0.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   PEAR-Crypt_HMAC-1.0.1.ebuild:
@@ -33,4 +37,3 @@
   24 May 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Crypt_HMAC-1.0.1.ebuild:
   Initial ebuild.
-

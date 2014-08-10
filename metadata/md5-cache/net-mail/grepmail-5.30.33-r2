@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=dev-perl/Inline dev-perl/TimeDate dev-perl/DateManip virtual/perl-Digest-MD5 >=dev-perl/Mail-Mbox-MessageParser-1.40.01 dev-lang/perl:=[-build(-)]
-DESCRIPTION=Search normal or compressed mailbox using a regular expression or dates.
+DESCRIPTION=Search normal or compressed mailbox using a regular expression or dates
 EAPI=5
 HOMEPAGE=http://grepmail.sourceforge.net/
 KEYWORDS=amd64 ppc x86
@@ -9,4 +9,4 @@ RDEPEND=dev-perl/Inline dev-perl/TimeDate dev-perl/DateManip virtual/perl-Digest
 SLOT=0
 SRC_URI=mirror://sourceforge/grepmail/grepmail-5.3033.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=edd7af5c160cc20047a81e0a46b16fb1
+_md5_=1c8f58e3cb7b59d7f41041fcfd3cae94

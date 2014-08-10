@@ -1,6 +1,9 @@
 # ChangeLog for media-video/winki
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/winki/ChangeLog,v 1.23 2011/04/21 21:21:58 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/winki/ChangeLog,v 1.24 2014/08/10 21:01:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> winki-0.4.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Apr 2011; Tim Harder <radhermit@gentoo.org> winki-0.4.5.ebuild:
   Use virtual/ffmpeg (bug #362141).
@@ -82,4 +85,3 @@
   Intial import to the tree as per bug #59198. Fixed /opt/winki to be
   /usr/share/winki with some patching. Did runtime testing on the various
   options and it worked ok, so I'm pulling it to stable on x86.
-

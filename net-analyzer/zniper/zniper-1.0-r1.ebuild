@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zniper/zniper-1.0-r1.ebuild,v 1.5 2014/07/18 12:23:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zniper/zniper-1.0-r1.ebuild,v 1.6 2014/08/10 21:01:11 slyfox Exp $
 
 EAPI=5
 inherit toolchain-funcs
 
-DESCRIPTION="Displays and kill active TCP connections seen by the selected interface."
+DESCRIPTION="Displays and kill active TCP connections seen by the selected interface"
 HOMEPAGE="http://www.signedness.org/tools/"
 SRC_URI="https://dev.gentoo.org/~jer/${P}.tgz"
 

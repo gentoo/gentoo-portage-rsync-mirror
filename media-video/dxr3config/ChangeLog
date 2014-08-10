@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dxr3config
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/ChangeLog,v 1.9 2013/06/23 18:19:36 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/ChangeLog,v 1.10 2014/08/10 20:58:10 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> dxr3config-0.3.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Jun 2013; Joerg Bornkessel <hd_brummy@gentoo.org> dxr3config-0.3.4.ebuild:
   eapi=5; fixed unclear license, see wrt bug 446218
@@ -38,4 +41,3 @@
   Initial import of ebuild, based on one from Christoph Diesch
   <christoph.diesch@t-online.de>, will be maintained by Samuli Suominen
   <sasuomin@uusikaupunki.fi>, Bug #144034.
-

@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/traylib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.12 2013/03/02 07:55:10 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.13 2014/08/10 20:33:07 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> traylib-0.3.2.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Mar 2013; Pacho Ramos <pacho@gentoo.org> -traylib-0.2.5.ebuild,
   metadata.xml:

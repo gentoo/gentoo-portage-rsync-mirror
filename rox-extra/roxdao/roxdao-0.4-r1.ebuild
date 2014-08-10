@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxdao/roxdao-0.4-r1.ebuild,v 1.5 2008/08/30 15:37:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxdao/roxdao-0.4-r1.ebuild,v 1.6 2014/08/10 20:33:58 slyfox Exp $
 
 ROX_LIB_VER=2.0.3
 inherit rox
 
 MY_PN="RoxDAO"
-DESCRIPTION="RoxDAO: A graphical frontend to cdrdao for the ROX Desktop."
+DESCRIPTION="RoxDAO: A graphical frontend to cdrdao for the ROX Desktop"
 HOMEPAGE="http://kymatica.com/index.php/Software"
 SRC_URI="http://kymatica.com/uploads/Software/${MY_PN}-${PV}.tar.bz2"
 

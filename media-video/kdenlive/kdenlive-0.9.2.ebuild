@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.9.2.ebuild,v 1.6 2014/05/13 23:08:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.9.2.ebuild,v 1.7 2014/08/10 20:59:53 slyfox Exp $
 
 EAPI=5
 KDE_LINGUAS="ca cs da de el es et fi fr ga gl he hr hu it ja lt nb nds nl pl pt
@@ -9,7 +9,7 @@ KDE_HANDBOOK="optional"
 OPENGL_REQUIRED="always"
 inherit kde4-base
 
-DESCRIPTION="Kdenlive! (pronounced Kay-den-live) is a Non Linear Video Editing Suite for KDE."
+DESCRIPTION="Kdenlive! (pronounced Kay-den-live) is a Non Linear Video Editing Suite for KDE"
 HOMEPAGE="http://www.kdenlive.org/"
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 

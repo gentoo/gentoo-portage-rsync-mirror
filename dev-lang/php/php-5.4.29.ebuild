@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.29.ebuild,v 1.1 2014/05/30 20:11:48 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.29.ebuild,v 1.2 2014/08/10 20:32:19 slyfox Exp $
 
 EAPI=5
 
@@ -58,7 +58,7 @@ SRC_URI="
 	${PHP_SRC_URI}
 	${PHP_PATCHSET_URI}"
 
-DESCRIPTION="The PHP language runtime engine: CLI, CGI, FPM/FastCGI, Apache2 and embed SAPIs."
+DESCRIPTION="The PHP language runtime engine: CLI, CGI, FPM/FastCGI, Apache2 and embed SAPIs"
 HOMEPAGE="http://php.net/"
 LICENSE="PHP-3"
 

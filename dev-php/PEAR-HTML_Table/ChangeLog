@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-HTML_Table
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/ChangeLog,v 1.42 2011/03/17 10:24:57 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/ChangeLog,v 1.43 2014/08/10 20:49:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-HTML_Table-1.8.1.ebuild, PEAR-HTML_Table-1.8.2.ebuild,
+  PEAR-HTML_Table-1.8.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   PEAR-HTML_Table-1.8.3.ebuild:
@@ -172,4 +177,3 @@
   21 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-HTML_Table-1.5.ebuild:
   Initial ebuild.
-

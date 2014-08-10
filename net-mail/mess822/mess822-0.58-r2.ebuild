@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r2.ebuild,v 1.5 2012/12/21 13:42:04 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r2.ebuild,v 1.6 2014/08/10 20:45:18 slyfox Exp $
 
 EAPI=4
 
 inherit multilib toolchain-funcs eutils
 
-DESCRIPTION="Collection of utilities for parsing Internet mail messages."
+DESCRIPTION="Collection of utilities for parsing Internet mail messages"
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/mess822.html"
 

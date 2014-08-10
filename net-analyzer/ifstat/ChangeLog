@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ifstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.34 2014/01/19 12:27:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.35 2014/08/10 20:58:00 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ifstat-1.1-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Jan 2014; Jeroen Roovers <jer@gentoo.org> ifstat-1.1-r2.ebuild,
   +files/ifstat-1.1-hardened.patch:

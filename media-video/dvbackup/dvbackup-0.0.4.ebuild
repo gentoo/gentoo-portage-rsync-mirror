@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbackup/dvbackup-0.0.4.ebuild,v 1.2 2005/07/19 12:31:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbackup/dvbackup-0.0.4.ebuild,v 1.3 2014/08/10 20:58:03 slyfox Exp $
 
-DESCRIPTION="A small utility for creating backups on DV tapes."
+DESCRIPTION="A small utility for creating backups on DV tapes"
 HOMEPAGE="http://dvbackup.sourceforge.net/"
 SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/dvbackup/${P}.tar.gz"
 

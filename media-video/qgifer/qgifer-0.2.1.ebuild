@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qgifer/qgifer-0.2.1.ebuild,v 1.3 2013/07/14 15:49:26 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qgifer/qgifer-0.2.1.ebuild,v 1.4 2014/08/10 21:00:45 slyfox Exp $
 
 EAPI="5"
 
 inherit cmake-utils
 
-DESCRIPTION="A video-based animated GIF creator."
+DESCRIPTION="A video-based animated GIF creator"
 HOMEPAGE="https://sourceforge.net/projects/qgifer/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-source.tar.gz"
 

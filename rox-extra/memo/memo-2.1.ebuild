@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/memo-2.1.ebuild,v 1.7 2010/11/15 16:08:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/memo-2.1.ebuild,v 1.8 2014/08/10 20:33:33 slyfox Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ ROX_LIB_VER=1.9.8
 inherit python rox
 
 MY_PN="Memo"
-DESCRIPTION="Memo is a simple alarm clock and clock applet for the ROX Desktop."
+DESCRIPTION="Memo is a simple alarm clock and clock applet for the ROX Desktop"
 HOMEPAGE="http://rox.sourceforge.net/phpwiki/index.php/Memo"
 SRC_URI="mirror://sourceforge/rox/${P}.tar.bz2"
 

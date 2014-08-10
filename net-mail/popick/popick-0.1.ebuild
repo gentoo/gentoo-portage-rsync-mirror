@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/popick-0.1.ebuild,v 1.7 2013/11/06 03:34:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/popick-0.1.ebuild,v 1.8 2014/08/10 20:45:35 slyfox Exp $
 
 inherit eutils
 
-DESCRIPTION="POP3 mailbox deleter using regular expressions to match message headers and delete messages."
+DESCRIPTION="POP3 mailbox deleter using regular expressions to match message headers and delete messages"
 HOMEPAGE="http://www.topfx.com"
 SRC_URI="http://www.topfx.com/dist/${P}.tar.gz"
 LICENSE="GPL-2"

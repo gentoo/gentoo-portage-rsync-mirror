@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93-r1.ebuild,v 1.11 2010/01/14 15:22:02 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93-r1.ebuild,v 1.12 2014/08/10 20:45:53 slyfox Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="Delayed delivery notification for qmail."
+DESCRIPTION="Delayed delivery notification for qmail"
 SRC_URI="http://untroubled.org/qmail-notify/archive/${P}.tar.gz"
 HOMEPAGE="http://untroubled.org/qmail-notify/"
 

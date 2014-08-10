@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.5.0-r1.ebuild,v 1.7 2012/08/05 18:05:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.5.0-r1.ebuild,v 1.8 2014/08/10 20:59:26 slyfox Exp $
 
 EAPI="4"
 
 inherit eutils
 
-DESCRIPTION="Network performance benchmark including tests for TCP, UDP, sockets, ATM and more."
+DESCRIPTION="Network performance benchmark including tests for TCP, UDP, sockets, ATM and more"
 SRC_URI="ftp://ftp.netperf.org/${PN}/${P}.tar.bz2"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/geekcredit-0.019.ebuild,v 1.6 2011/04/05 05:51:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/geekcredit-0.019.ebuild,v 1.7 2014/08/10 20:43:58 slyfox Exp $
 
 inherit python
 
 MY_P=${P/geekcredit/gc}
 IUSE=""
-DESCRIPTION="Digital complementary currency for internet."
+DESCRIPTION="Digital complementary currency for internet"
 SRC_URI="http://download.gna.org/geekcredit/${MY_P}.tgz"
 HOMEPAGE="http://home.gna.org/geekcredit/"
 SLOT="0"

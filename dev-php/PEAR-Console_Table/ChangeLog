@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Console_Table
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Table/ChangeLog,v 1.43 2014/03/19 15:20:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Table/ChangeLog,v 1.44 2014/08/10 20:45:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-Console_Table-1.1.3.ebuild, PEAR-Console_Table-1.1.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
   PEAR-Console_Table-1.1.6.ebuild:

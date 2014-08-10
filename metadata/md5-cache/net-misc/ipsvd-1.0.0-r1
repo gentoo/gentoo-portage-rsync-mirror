@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare
-DESCRIPTION=ipsvd is a set of internet protocol service daemons for Unix.
+DESCRIPTION=ipsvd is a set of internet protocol service daemons for Unix
 EAPI=3
 HOMEPAGE=http://smarden.org/ipsvd/
 IUSE=static
@@ -8,4 +8,4 @@ LICENSE=BSD
 SLOT=0
 SRC_URI=http://smarden.org/ipsvd/ipsvd-1.0.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=821d04a30159fc96b55dba06c779a6d8
+_md5_=1c9c1a02027b4e0b0598a5baa88f917d

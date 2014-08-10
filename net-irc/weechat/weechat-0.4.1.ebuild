@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.4.1.ebuild,v 1.4 2014/03/01 22:10:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.4.1.ebuild,v 1.5 2014/08/10 20:54:10 slyfox Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ EGIT_REPO_URI="git://git.sv.gnu.org/weechat.git"
 [[ ${PV} == "9999" ]] && GIT_ECLASS="git-2"
 inherit eutils python-single-r1 multilib cmake-utils ${GIT_ECLASS}
 
-DESCRIPTION="Portable and multi-interface IRC client."
+DESCRIPTION="Portable and multi-interface IRC client"
 HOMEPAGE="http://weechat.org/"
 [[ ${PV} == "9999" ]] || SRC_URI="http://${PN}.org/files/src/${P}.tar.bz2"
 

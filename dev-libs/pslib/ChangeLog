@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pslib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.24 2014/02/27 17:32:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.25 2014/08/10 20:38:57 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pslib-0.4.1-r2.ebuild,
+  pslib-0.4.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> pslib-0.4.5.ebuild:
   Keyword amd64-linux and x86-linux

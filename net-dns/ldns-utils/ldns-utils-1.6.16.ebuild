@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.16.ebuild,v 1.3 2013/12/11 15:35:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.16.ebuild,v 1.4 2014/08/10 20:42:35 slyfox Exp $
 
 EAPI="3"
 inherit eutils
 
 MY_P="${P/-utils}"
-DESCRIPTION="Set of utilities to simplify various dns(sec) tasks."
+DESCRIPTION="Set of utilities to simplify various dns(sec) tasks"
 HOMEPAGE="http://www.nlnetlabs.nl/projects/ldns/"
 SRC_URI="http://www.nlnetlabs.nl/downloads/ldns/${MY_P}.tar.gz"
 

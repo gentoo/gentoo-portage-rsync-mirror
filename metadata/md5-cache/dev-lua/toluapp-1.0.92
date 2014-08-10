@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install
 DEPEND=>=dev-lang/lua-5.1.1 dev-util/scons >=sys-apps/sed-4
-DESCRIPTION=A tool to integrate C/C++ code with Lua.
+DESCRIPTION=A tool to integrate C/C++ code with Lua
 HOMEPAGE=http://www.codenix.com/~tolua/
 KEYWORDS=amd64 ppc x86
 LICENSE=MIT
@@ -8,4 +8,4 @@ RDEPEND=>=dev-lang/lua-5.1.1
 SLOT=0
 SRC_URI=http://www.codenix.com/~tolua/tolua++-1.0.92.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=67af236100e70f5cb89ee9363c6cb659
+_md5_=0eefecabe19d5c6e60679ee89557e7bf

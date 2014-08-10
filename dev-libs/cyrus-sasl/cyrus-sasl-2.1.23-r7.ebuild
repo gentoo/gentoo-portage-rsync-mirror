@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.23-r7.ebuild,v 1.12 2013/09/14 10:41:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.23-r7.ebuild,v 1.13 2014/08/10 20:33:25 slyfox Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit eutils flag-o-matic multilib autotools pam java-pkg-opt-2 db-use
 ntlm_patch="${P}-ntlm_impl-spnego.patch.gz"
 SASLAUTHD_CONF_VER="2.1.21"
 
-DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)."
+DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)"
 HOMEPAGE="http://asg.web.cmu.edu/sasl/"
 SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
 	ntlm_unsupported_patch? ( mirror://gentoo/${ntlm_patch} )"

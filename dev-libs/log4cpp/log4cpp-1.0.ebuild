@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-1.0.ebuild,v 1.8 2014/07/22 16:32:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-1.0.ebuild,v 1.9 2014/08/10 20:38:10 slyfox Exp $
 
 EAPI=2
 inherit autotools eutils
 
-DESCRIPTION="Library of C++ classes for flexible logging to files, syslog and other destinations."
+DESCRIPTION="Library of C++ classes for flexible logging to files, syslog and other destinations"
 HOMEPAGE="http://log4cpp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

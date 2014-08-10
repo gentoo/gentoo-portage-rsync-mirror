@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Table_Matrix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table_Matrix/ChangeLog,v 1.24 2011/12/13 23:42:48 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table_Matrix/ChangeLog,v 1.25 2014/08/10 20:49:26 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  PEAR-HTML_Table_Matrix-1.0.10.ebuild, PEAR-HTML_Table_Matrix-1.0.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Dec 2011; Agostino Sarubbo <ago@gentoo.org>
   PEAR-HTML_Table_Matrix-1.0.10.ebuild:
@@ -112,4 +116,3 @@
   21 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-HTML_Table_Matrix-1.0.7.ebuild:
   Initial ebuild.
-

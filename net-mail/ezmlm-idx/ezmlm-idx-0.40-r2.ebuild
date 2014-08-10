@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.21 2013/03/30 14:52:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.22 2014/08/10 20:44:47 slyfox Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
@@ -12,7 +12,7 @@ EZMLM_P=ezmlm-0.53
 
 S2=${WORKDIR}/${PB}-${PV}
 S=${WORKDIR}/${EZMLM_P}
-DESCRIPTION="Simple yet powerful mailing list manager for qmail."
+DESCRIPTION="Simple yet powerful mailing list manager for qmail"
 SRC_URI="
 	http://gd.tuwien.ac.at/infosys/mail/qmail/ezmlm-patches/${PB}-${PV}.tar.gz
 	http://cr.yp.to/software/${EZMLM_P}.tar.gz

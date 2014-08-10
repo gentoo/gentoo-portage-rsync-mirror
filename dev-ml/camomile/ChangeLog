@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camomile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.36 2013/03/06 15:20:25 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.37 2014/08/10 20:42:32 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> camomile-0.8.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   06 Mar 2013; Alexis Ballier <aballier@gentoo.org> camomile-0.8.4.ebuild:
   eapi5: define subslot; use slot deps and remove useless || die
@@ -130,4 +133,3 @@
 
   08 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> +camomile-0.5.3.ebuild:
   Camomile is a comprehensive unicode library for ocaml. Adding latest version.
-

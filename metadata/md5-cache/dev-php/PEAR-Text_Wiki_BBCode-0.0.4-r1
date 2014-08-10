@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 ) dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=BBCode parser for Text_Wiki.
+DESCRIPTION=BBCode parser for Text_Wiki
 EAPI=2
 HOMEPAGE=http://pear.php.net/Text_Wiki_BBCode
 KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
@@ -9,4 +9,4 @@ RDEPEND=>=dev-php/PEAR-Text_Wiki-1.0.3 dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Text_Wiki_BBCode-0.0.4.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=83212e6172bf40898821ed9e989a9f30
+_md5_=69db09677e0faf8830cd3756c4f172a6

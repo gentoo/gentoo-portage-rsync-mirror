@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/aggregate-1.6.ebuild,v 1.18 2014/03/12 03:49:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/aggregate-1.6.ebuild,v 1.19 2014/08/10 20:43:10 slyfox Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Take a list of prefixes and perform two optimisations to reduce the length of the prefix list."
+DESCRIPTION="Take a list of prefixes and perform two optimisations to reduce the length of the prefix list"
 HOMEPAGE="http://dist.automagic.org/"
 SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 

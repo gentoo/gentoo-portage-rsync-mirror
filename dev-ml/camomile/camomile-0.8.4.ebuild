@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/camomile-0.8.4.ebuild,v 1.4 2013/03/06 15:20:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/camomile-0.8.4.ebuild,v 1.5 2014/08/10 20:42:32 slyfox Exp $
 
 EAPI="5"
 
 inherit findlib eutils
 
-DESCRIPTION="Camomile is a comprehensive Unicode library for ocaml."
+DESCRIPTION="Camomile is a comprehensive Unicode library for ocaml"
 HOMEPAGE="http://github.com/yoriyuki/Camomile/wiki"
 SRC_URI="http://github.com/downloads/yoriyuki/Camomile/${P}.tar.bz2"
 

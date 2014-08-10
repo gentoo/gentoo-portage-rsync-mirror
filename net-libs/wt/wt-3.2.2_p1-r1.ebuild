@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1-r1.ebuild,v 1.5 2013/11/15 20:28:02 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1-r1.ebuild,v 1.6 2014/08/10 20:50:42 slyfox Exp $
 
 EAPI="3"
 
 inherit cmake-utils versionator eutils user
 
-DESCRIPTION="C++ library for developing interactive web applications."
+DESCRIPTION="C++ library for developing interactive web applications"
 MY_P=${P/_/-}
 HOMEPAGE="http://webtoolkit.eu/"
 SRC_URI="mirror://sourceforge/witty/wt/3.2.2/${MY_P}.tar.gz"

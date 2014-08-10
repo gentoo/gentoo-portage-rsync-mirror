@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.8-r1.ebuild,v 1.4 2009/01/18 17:43:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.8-r1.ebuild,v 1.5 2014/08/10 20:32:28 slyfox Exp $
 
 ROX_LIB_VER=1.9.14
 inherit rox eutils toolchain-funcs autotools
 
 MY_PN="OroboROX"
 
-DESCRIPTION="OroboROX is a small window manager for the ROX Desktop."
+DESCRIPTION="OroboROX is a small window manager for the ROX Desktop"
 HOMEPAGE="http://rox.sourceforge.net/"
 SRC_URI="http://roxos.sunsite.dk/dev-contrib/guido/${MY_PN}-${PV}.tar.bz2"
 

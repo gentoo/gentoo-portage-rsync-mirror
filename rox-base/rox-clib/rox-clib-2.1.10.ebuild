@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.10.ebuild,v 1.11 2013/06/16 08:19:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.10.ebuild,v 1.12 2014/08/10 20:32:52 slyfox Exp $
 
 EAPI=1
 inherit eutils multilib
 
 MY_PN="ROX-CLib"
-DESCRIPTION="A library for ROX applications written in C."
+DESCRIPTION="A library for ROX applications written in C"
 HOMEPAGE="http://rox.sourceforge.net/"
 SRC_URI="http://www.kerofin.demon.co.uk/rox/${MY_PN}-${PV}.tar.gz"
 

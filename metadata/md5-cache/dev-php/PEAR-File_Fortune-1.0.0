@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=>=dev-lang/php-5.1.4 dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=Interface for reading from and writing to fortune files.
+DESCRIPTION=Interface for reading from and writing to fortune files
 HOMEPAGE=http://pear.php.net/File_Fortune
 KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=BSD
@@ -8,4 +8,4 @@ RDEPEND=>=dev-lang/php-5.1.4 dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/File_Fortune-1.0.0.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=66a6fa589790c87b64b3a57f264bdfcf
+_md5_=10b46239fb530913270f114b70e1d5f8

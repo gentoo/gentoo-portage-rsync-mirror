@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.25-r1.ebuild,v 1.1 2014/08/10 13:13:52 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.25-r1.ebuild,v 1.2 2014/08/10 20:47:46 slyfox Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit autotools eutils python-single-r1 vala
 
-DESCRIPTION="Set of GObject and Gtk objects for connecting to Spice servers and a client GUI."
+DESCRIPTION="Set of GObject and Gtk objects for connecting to Spice servers and a client GUI"
 HOMEPAGE="http://spice-space.org http://gitorious.org/spice-gtk"
 
 LICENSE="LGPL-2.1"

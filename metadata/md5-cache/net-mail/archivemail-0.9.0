@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test
 DEPEND==dev-lang/python-2*
-DESCRIPTION=Tool written in Python for archiving and compressing old email in mailboxes.
+DESCRIPTION=Tool written in Python for archiving and compressing old email in mailboxes
 EAPI=3
 HOMEPAGE=http://archivemail.sourceforge.net/
 KEYWORDS=amd64 sparc x86
@@ -9,4 +9,4 @@ RDEPEND==dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://sourceforge/archivemail/archivemail-0.9.0.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=5e0da9abff8029ed03ffc36f1e36d7f1
+_md5_=267ab550a63b3c4b9c5cc3b7a83cd24d

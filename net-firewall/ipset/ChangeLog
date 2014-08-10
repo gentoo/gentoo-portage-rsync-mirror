@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.77 2014/06/21 20:25:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.78 2014/08/10 20:55:50 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ipset-6.15.ebuild,
+  ipset-6.16.1.ebuild, ipset-6.16.ebuild, ipset-6.17.ebuild, ipset-6.19.ebuild,
+  ipset-6.20.1.ebuild, ipset-6.21.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Jun 2014; Robin H. Johnson <robbat2@gentoo.org> ipset-6.20.1.ebuild:
   Stable on amd64 per bug #502870, works for infra (actually do it this time)

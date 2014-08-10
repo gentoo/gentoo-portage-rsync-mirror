@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/topal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.16 2013/03/17 15:03:51 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.17 2014/08/10 20:46:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> topal-75.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

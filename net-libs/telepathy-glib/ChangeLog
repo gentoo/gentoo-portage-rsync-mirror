@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.158 2014/06/20 14:45:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.159 2014/08/10 20:50:26 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  telepathy-glib-0.20.1-r1.ebuild, telepathy-glib-0.22.1.ebuild,
+  telepathy-glib-0.24.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Jun 2014; Agostino Sarubbo <ago@gentoo.org> telepathy-glib-0.24.0.ebuild:
   Stable for arm, wrt bug #508862

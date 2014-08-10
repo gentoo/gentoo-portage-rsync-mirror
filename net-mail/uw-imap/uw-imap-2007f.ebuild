@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2007f.ebuild,v 1.8 2012/03/08 15:00:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2007f.ebuild,v 1.9 2014/08/10 20:47:17 slyfox Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit eutils flag-o-matic ssl-cert
 MY_P="imap-${PV}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="UW server daemons for IMAP and POP network mail protocols."
+DESCRIPTION="UW server daemons for IMAP and POP network mail protocols"
 SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 HOMEPAGE="http://www.washington.edu/imap/"
 

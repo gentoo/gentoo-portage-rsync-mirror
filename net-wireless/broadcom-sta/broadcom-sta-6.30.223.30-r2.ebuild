@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-6.30.223.30-r2.ebuild,v 1.1 2013/08/23 12:31:04 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-6.30.223.30-r2.ebuild,v 1.2 2014/08/10 20:34:33 slyfox Exp $
 
 EAPI="5"
 inherit eutils linux-info linux-mod unpacker
 
-DESCRIPTION="Broadcom's IEEE 802.11a/b/g/n hybrid Linux device driver."
+DESCRIPTION="Broadcom's IEEE 802.11a/b/g/n hybrid Linux device driver"
 HOMEPAGE="https://launchpad.net/ubuntu/+source/bcmwl http://www.broadcom.com/support/802.11/linux_sta.php"
 BASE_URI="https://launchpad.net/~albertomilone/+archive/broadcom/+files"
 BASE_NAME="bcmwl-kernel-source_${PV}%2Bbdcom-0ubuntu1%7Eppa1_"

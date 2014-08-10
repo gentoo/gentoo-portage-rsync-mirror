@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/redir
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/ChangeLog,v 1.12 2009/10/23 13:05:18 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/ChangeLog,v 1.13 2014/08/10 20:47:05 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> redir-2.2.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Oct 2009; Jeroen Roovers <jer@gentoo.org> redir-2.2.1.ebuild,
   +files/redir-2.2.1-include.patch:
@@ -39,4 +42,3 @@
   19 Sep 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org> redir-2.2.1.ebuild:
   New package -- port redirector submitted by Minati jean michel
   <magnet@suidzer0.org> in bug #29094
-

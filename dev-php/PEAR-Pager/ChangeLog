@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Pager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.40 2014/03/12 04:47:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.41 2014/08/10 20:54:45 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> PEAR-Pager-2.4.4.ebuild,
+  PEAR-Pager-2.4.5.ebuild, PEAR-Pager-2.4.8.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Mar 2014; Patrick Lauer <patrick@gentoo.org> PEAR-Pager-2.4.5.ebuild,
   PEAR-Pager-2.4.8.ebuild:

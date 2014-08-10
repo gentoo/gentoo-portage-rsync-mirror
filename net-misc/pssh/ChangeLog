@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/pssh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/ChangeLog,v 1.7 2012/08/18 10:33:33 pesa Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/ChangeLog,v 1.8 2014/08/10 20:46:29 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pssh-2.1.1.ebuild,
+  pssh-2.2.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pssh-2.3.1 (18 Aug 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/geekcredit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/ChangeLog,v 1.18 2011/04/05 05:51:35 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/ChangeLog,v 1.19 2014/08/10 20:43:58 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> geekcredit-0.019.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> geekcredit-0.019.ebuild:
   Depend on dev-lang/python because virtual/python will go away, bug 358849.
@@ -65,4 +68,3 @@
   28 Mar 2004; Chuck Short <zul@gentoo.org> geekcredit-0.015.ebuild:
   Initial version, ebuild written by Lukasz Strzyowski < lucass@gentoo.pl >
   Ebuild modfified by me. Closes #45914
-

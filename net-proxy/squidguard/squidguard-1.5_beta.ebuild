@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.5_beta.ebuild,v 1.2 2014/01/08 06:24:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.5_beta.ebuild,v 1.3 2014/08/10 20:35:44 slyfox Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ inherit eutils autotools user
 
 MY_P="squidGuard-${PV/_/-}"
 
-DESCRIPTION="Combined filter, redirector and access controller plugin for Squid."
+DESCRIPTION="Combined filter, redirector and access controller plugin for Squid"
 HOMEPAGE="http://www.squidguard.org"
 SRC_URI="http://www.squidguard.org/Downloads/Devel/${MY_P}.tar.gz"
 

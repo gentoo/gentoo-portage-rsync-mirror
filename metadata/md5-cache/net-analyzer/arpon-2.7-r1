@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prepare test
 DEPEND=dev-libs/libdnet net-libs/libnet:1.1 net-libs/libpcap sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
-DESCRIPTION=ArpON (Arp handler inspectiON) is a portable Arp handler.
+DESCRIPTION=ArpON (Arp handler inspectiON) is a portable Arp handler
 EAPI=4
 HOMEPAGE=http://arpon.sourceforge.net/
 KEYWORDS=amd64 x86
@@ -9,4 +9,4 @@ RDEPEND=dev-libs/libdnet net-libs/libnet:1.1 net-libs/libpcap
 SLOT=0
 SRC_URI=mirror://sourceforge/arpon/ArpON-2.7.tar.gz
 _eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ad0ca49b783588da1ededfdafecce60e
+_md5_=266e78998dcca91d88ab7dbab79f316f

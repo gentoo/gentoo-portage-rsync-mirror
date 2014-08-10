@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare setup test
 DEPEND=dev-libs/openssl dev-libs/libnl net-wireless/wireless-regdb dev-python/m2crypto =dev-lang/python-2* virtual/pkgconfig
-DESCRIPTION=Central Regulatory Domain Agent for wireless networks.
+DESCRIPTION=Central Regulatory Domain Agent for wireless networks
 EAPI=4
 HOMEPAGE=http://wireless.kernel.org/en/developers/Regulatory
 KEYWORDS=amd64 arm ~mips ppc ppc64 x86
@@ -9,4 +9,4 @@ RDEPEND=dev-libs/openssl dev-libs/libnl net-wireless/wireless-regdb >=virtual/ud
 SLOT=0
 SRC_URI=http://linuxwireless.org/download/crda/crda-1.1.2.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=abfe9c12c6090c4561a9121e7d1d1034
+_md5_=bedd324041287a89b60cb91e8d064d06

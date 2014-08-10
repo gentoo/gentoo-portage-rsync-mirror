@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-3.0_beta1.ebuild,v 1.3 2013/12/25 09:38:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-3.0_beta1.ebuild,v 1.4 2014/08/10 20:35:52 slyfox Exp $
 
 EAPI=4
 inherit toolchain-funcs
 
-DESCRIPTION="Provides a virtual printer for CUPS to produce PDF files."
+DESCRIPTION="Provides a virtual printer for CUPS to produce PDF files"
 HOMEPAGE="http://www.cups-pdf.de/"
 SRC_URI="http://www.cups-pdf.de/src/${PN}_${PV/_}.tar.gz"
 

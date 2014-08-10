@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/radiusclient-0.3.2.ebuild,v 1.25 2012/09/06 01:19:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/radiusclient-0.3.2.ebuild,v 1.26 2014/08/10 20:56:22 slyfox Exp $
 
 inherit eutils autotools
 
-DESCRIPTION="A library for writing RADIUS clients accompanied with several client utilities."
+DESCRIPTION="A library for writing RADIUS clients accompanied with several client utilities"
 HOMEPAGE="http://freshmeat.net/projects/radiusclient/"
 SRC_URI="ftp://ftp.cityline.net/pub/radiusclient/${P}.tar.gz"
 

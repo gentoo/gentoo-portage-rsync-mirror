@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 ) dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=Provides methods for dumping structured information about a variable.
+DESCRIPTION=Provides methods for dumping structured information about a variable
 EAPI=2
 HOMEPAGE=http://pear.php.net/Var_Dump
 KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
@@ -9,4 +9,4 @@ RDEPEND=|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 ) dev-lang/php >=dev-php
 SLOT=0
 SRC_URI=http://pear.php.net/get/Var_Dump-1.0.3.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=47378da8305f0b2b2fa5266c70cba470
+_md5_=3fd497a92840dd88dcb7d11caeaa9f36

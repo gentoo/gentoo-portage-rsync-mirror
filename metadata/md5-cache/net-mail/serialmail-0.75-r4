@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=sys-apps/groff >=sys-apps/ucspi-tcp-0.88
-DESCRIPTION=A serialmail is a collection of tools for passing mail across serial links.
+DESCRIPTION=A serialmail is a collection of tools for passing mail across serial links
 EAPI=4
 HOMEPAGE=http://cr.yp.to/serialmail.html
 IUSE=static
@@ -11,4 +11,4 @@ RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://cr.yp.to/software/serialmail-0.75.tar.gz mirror://gentoo/serialmail-0.75-patch.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=83affd18ad77568412d3f0f06368713c
+_md5_=594d8ae6e3fc2f95708591e3aab8c6b9

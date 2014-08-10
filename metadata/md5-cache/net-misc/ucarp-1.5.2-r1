@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare unpack
 DEPEND=net-libs/libpcap nls? ( sys-devel/gettext )
-DESCRIPTION=Portable userland implementation of Common Address Redundancy Protocol (CARP).
+DESCRIPTION=Portable userland implementation of Common Address Redundancy Protocol (CARP)
 EAPI=4
 HOMEPAGE=http://www.ucarp.org
 IUSE=nls
@@ -10,4 +10,4 @@ RDEPEND=net-libs/libpcap
 SLOT=0
 SRC_URI=ftp://ftp.ucarp.org/pub/ucarp/ucarp-1.5.2.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=5bf47ce7071a02a8e2aebc3ccbde180a
+_md5_=da6539fc987d93e16f11506010c2d170

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cmd5checkpw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.59 2014/01/08 06:40:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.60 2014/08/10 20:43:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  cmd5checkpw-0.30-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> cmd5checkpw-0.30-r1.ebuild:
   Inherit the user eclass for enewuser/etc...

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/clusterssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/ChangeLog,v 1.20 2014/07/26 12:44:42 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/ChangeLog,v 1.21 2014/08/10 20:43:41 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> clusterssh-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   26 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> clusterssh-9999.ebuild:
   Bump to EAPI=5 (bug #478714)

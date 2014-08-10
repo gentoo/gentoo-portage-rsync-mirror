@@ -1,6 +1,6 @@
 DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=Autofill a table with data.
+DESCRIPTION=Autofill a table with data
 HOMEPAGE=http://pear.php.net/HTML_Table_Matrix
 KEYWORDS=~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86
 LICENSE=PHP-3
@@ -8,4 +8,4 @@ RDEPEND=>=dev-php/PEAR-HTML_Table-1.5-r1 >=dev-php/PEAR-Numbers_Words-0.13.1-r1 
 SLOT=0
 SRC_URI=http://pear.php.net/get/HTML_Table_Matrix-1.0.10.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=76e6947baf06cc1234ae3e48b075fc7c
+_md5_=b9d3eb345037c2eccf16dbb886c3aed7

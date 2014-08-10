@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/thrulay-0.6.ebuild,v 1.4 2007/06/10 19:17:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/thrulay-0.6.ebuild,v 1.5 2014/08/10 21:00:52 slyfox Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="Measure the capacity of a network by sending a bulk TCP stream over it."
+DESCRIPTION="Measure the capacity of a network by sending a bulk TCP stream over it"
 HOMEPAGE="http://www.internet2.edu/~shalunov/thrulay/"
 SRC_URI="http://www.internet2.edu/~shalunov/thrulay/${P}.tar.gz"
 LICENSE="BSD"

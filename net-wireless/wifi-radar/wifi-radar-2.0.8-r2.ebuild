@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-2.0.8-r2.ebuild,v 1.4 2014/07/05 14:00:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-2.0.8-r2.ebuild,v 1.5 2014/08/10 20:35:15 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -12,7 +12,7 @@ MY_PL="$(get_version_component_range 3)"
 MY_PL="s0${MY_PL}"
 MY_PV="${MY_PV}.${MY_PL}"
 
-DESCRIPTION="WiFi Radar is a Python/PyGTK2 utility for managing WiFi profiles."
+DESCRIPTION="WiFi Radar is a Python/PyGTK2 utility for managing WiFi profiles"
 HOMEPAGE="http://wifi-radar.tuxfamily.org/"
 SRC_URI="${HOMEPAGE}pub/${PN}-${MY_PV}.tar.bz2"
 
