@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/gnuvd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gnuvd/ChangeLog,v 1.4 2014/01/05 11:15:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gnuvd/ChangeLog,v 1.5 2014/08/10 02:33:08 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> gnuvd-1.0.11.ebuild:
+  Fix description for more repoman happy
 
   05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-

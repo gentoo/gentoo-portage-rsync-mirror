@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/opendict
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.28 2013/02/05 02:13:49 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.29 2014/08/10 02:33:07 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> opendict-0.6.3.ebuild:
+  Fix description for more repoman happy
 
   05 Feb 2013; Ryan Hill <dirtyepic@gentoo.org> opendict-0.6.3.ebuild,
   +files/opendict-0.6.3-pyxml.patch:
@@ -100,4 +103,3 @@
 
   13 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> :
   Initial commit. Thanks <roma1390@uosis.mif.vu.lt> for the ebuild. bug #32120
-

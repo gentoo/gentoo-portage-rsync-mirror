@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.9 2013/02/05 02:13:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.10 2014/08/10 02:33:07 patrick Exp $
 
 EAPI=3
 PYTHON_DEPEND=2
 
 inherit eutils gnome2 python
 
-DESCRIPTION="OpenDict is a free cross-platform dictionary program."
+DESCRIPTION="OpenDict is a free cross-platform dictionary program"
 HOMEPAGE="http://opendict.sourceforge.net/"
 SRC_URI="http://opendict.idiles.com/files/${P}.tar.gz"
 LICENSE="GPL-2"

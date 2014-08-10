@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ydpdict-1.0.2.ebuild,v 1.5 2014/02/22 08:08:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ydpdict-1.0.2.ebuild,v 1.6 2014/08/10 02:33:08 patrick Exp $
 
 EAPI=5
 
-DESCRIPTION="Interface for the Collins Dictionary."
+DESCRIPTION="Interface for the Collins Dictionary"
 HOMEPAGE="http://toxygen.net/ydpdict/"
 SRC_URI="http://toxygen.net/${PN}/${P}.tar.gz"
 

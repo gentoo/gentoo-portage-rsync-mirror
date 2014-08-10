@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/libydpdict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/libydpdict/ChangeLog,v 1.13 2014/03/07 01:02:22 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/libydpdict/ChangeLog,v 1.14 2014/08/10 02:33:07 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> libydpdict-1.0.2.ebuild:
+  Fix description for more repoman happy
 
   07 Mar 2014; Chris Reffett <creffett@gentoo.org> -libydpdict-0.99.3.ebuild:
   Remove old
