@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.4.ebuild,v 1.2 2013/10/13 18:25:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.4.ebuild,v 1.3 2014/08/10 20:03:23 slyfox Exp $
 
 EAPI=5
 inherit fdo-mime
 
-DESCRIPTION="ObConf is a tool for configuring the Openbox window manager."
+DESCRIPTION="ObConf is a tool for configuring the Openbox window manager"
 HOMEPAGE="http://openbox.org/wiki/ObConf:About"
 SRC_URI="http://openbox.org/dist/${PN}/${P}.tar.gz"
 

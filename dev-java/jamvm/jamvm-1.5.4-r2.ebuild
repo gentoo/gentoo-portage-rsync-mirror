@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.5.4-r2.ebuild,v 1.4 2012/12/07 21:40:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.5.4-r2.ebuild,v 1.5 2014/08/10 20:16:11 slyfox Exp $
 
 EAPI=4
 
 inherit eutils flag-o-matic multilib java-vm-2 autotools
 
-DESCRIPTION="An extremely small and specification-compliant virtual machine."
+DESCRIPTION="An extremely small and specification-compliant virtual machine"
 HOMEPAGE="http://jamvm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/wmbluecpu-0.6.ebuild,v 1.8 2008/11/25 23:41:48 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/wmbluecpu-0.6.ebuild,v 1.9 2014/08/10 20:05:02 slyfox Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="a blue dockapp to monitor CPU usage."
+DESCRIPTION="a blue dockapp to monitor CPU usage"
 HOMEPAGE="http://misuceldestept.go.ro/wmbluecpu"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmacpiload-ac
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpiload-ac/ChangeLog,v 1.10 2012/10/18 14:15:51 s4t4n Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpiload-ac/ChangeLog,v 1.11 2014/08/10 20:03:54 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  wmacpiload-ac-0.2.0-r1.ebuild, wmacpiload-ac-0.2.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *wmacpiload-ac-0.2.0-r1 (18 Oct 2012)
 
@@ -41,4 +45,3 @@
 
   30 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmacpiload-ac-0.1.2_p3.ebuild:
   Initial import. Thanks to Eric Olinger, closes #49347.
-

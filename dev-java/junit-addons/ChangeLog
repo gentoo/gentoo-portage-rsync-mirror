@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit-addons
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit-addons/ChangeLog,v 1.4 2010/01/03 21:14:23 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit-addons/ChangeLog,v 1.5 2014/08/10 20:20:32 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> junit-addons-1.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   junit-addons-1.4.ebuild:
@@ -17,4 +20,3 @@
   31 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> +files/1.4-build.xml,
   +files/1.4-common.properties, +metadata.xml, +junit-addons-1.4.ebuild:
   Initial addition for bug #161918. Ebuild written by me.
-

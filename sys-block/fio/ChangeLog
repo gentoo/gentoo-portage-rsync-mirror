@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/fio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.50 2014/08/05 01:16:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.51 2014/08/10 20:22:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fio-2.0.15.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> fio-1.17.2.ebuild,
   fio-1.17.ebuild, fio-1.18.1.ebuild, fio-1.20.ebuild, fio-1.21.ebuild,

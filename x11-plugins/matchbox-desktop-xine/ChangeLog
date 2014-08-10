@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/matchbox-desktop-xine
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-xine/ChangeLog,v 1.8 2012/06/04 01:53:07 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-xine/ChangeLog,v 1.9 2014/08/10 20:02:38 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  matchbox-desktop-xine-0.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> matchbox-desktop-xine-0.4.ebuild:
   adding ~ppc (bug 309407)
@@ -35,4 +39,3 @@
   04 Jun 2006; <yvasilev@gentoo.org> +metadata.xml,
   +matchbox-desktop-xine-0.4.ebuild:
   Initial Import.
-

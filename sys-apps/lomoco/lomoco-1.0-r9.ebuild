@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r9.ebuild,v 1.6 2014/07/30 19:23:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r9.ebuild,v 1.7 2014/08/10 20:24:33 slyfox Exp $
 
 EAPI=4
 inherit autotools eutils multilib toolchain-funcs udev
 
-DESCRIPTION="Lomoco can configure vendor-specific options on Logitech USB mice."
+DESCRIPTION="Lomoco can configure vendor-specific options on Logitech USB mice"
 HOMEPAGE="http://www.lomoco.org/"
 SRC_URI="http://www.lomoco.org/${P}.tar.gz"
 

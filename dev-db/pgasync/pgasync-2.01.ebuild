@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgasync/pgasync-2.01.ebuild,v 1.4 2013/08/03 09:45:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgasync/pgasync-2.01.ebuild,v 1.5 2014/08/10 20:02:01 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
-DESCRIPTION="An asynchronous api to postgres for twisted."
+DESCRIPTION="An asynchronous api to postgres for twisted"
 HOMEPAGE="http://www.jamwt.com/pgasync/"
 SRC_URI="http://www.jamwt.com/pgasync/files/${P}.tar.gz"
 

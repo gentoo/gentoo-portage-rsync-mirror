@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-compress/commons-compress-1.8.1.ebuild,v 1.1 2014/06/01 09:20:08 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-compress/commons-compress-1.8.1.ebuild,v 1.2 2014/08/10 20:10:06 slyfox Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Commons Compress defines an API for working with ar, cpio, tar, zip, gzip and bzip2 files."
+DESCRIPTION="Commons Compress defines an API for working with ar, cpio, tar, zip, gzip and bzip2 files"
 
 LICENSE="Apache-2.0"
 SLOT="0"

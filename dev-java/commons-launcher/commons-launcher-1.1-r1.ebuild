@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-1.1-r1.ebuild,v 1.6 2011/12/19 12:14:25 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-1.1-r1.ebuild,v 1.7 2014/08/10 20:11:34 slyfox Exp $
 
 JAVA_PKG_IUSE="examples doc source"
 
 inherit base java-pkg-2 java-ant-2
 
-DESCRIPTION="Commons-launcher eliminates the need for a batch or shell script to launch a Java class."
+DESCRIPTION="Commons-launcher eliminates the need for a batch or shell script to launch a Java class"
 HOMEPAGE="http://commons.apache.org/launcher/"
 SRC_URI="mirror://apache/jakarta/${PN/-//}/source/${P}-src.tar.gz"
 LICENSE="Apache-2.0"

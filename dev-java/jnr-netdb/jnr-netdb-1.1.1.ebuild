@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/jnr-netdb-1.1.1.ebuild,v 1.1 2012/09/25 10:45:52 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/jnr-netdb-1.1.1.ebuild,v 1.2 2014/08/10 20:18:54 slyfox Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2 vcs-snapshot
 
-DESCRIPTION="Network services database access for java."
+DESCRIPTION="Network services database access for java"
 HOMEPAGE="https://github.com/jnr/jnr-netdb"
 SRC_URI="https://github.com/jnr/${PN}/tarball/${PV} -> ${P}.tar.gz"
 

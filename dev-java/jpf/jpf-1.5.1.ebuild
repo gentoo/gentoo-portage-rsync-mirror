@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jpf/jpf-1.5.1.ebuild,v 1.4 2009/04/04 19:14:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jpf/jpf-1.5.1.ebuild,v 1.5 2014/08/10 20:19:31 slyfox Exp $
 
 EAPI=1
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Java Plugin Framework - a runtime engine that dynamically discovers and loads plugins."
+DESCRIPTION="Java Plugin Framework - a runtime engine that dynamically discovers and loads plugins"
 HOMEPAGE="http://${PN}.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.zip"
 LICENSE="LGPL-2.1"

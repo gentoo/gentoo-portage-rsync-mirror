@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_suphp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/ChangeLog,v 1.24 2012/11/27 19:32:30 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/ChangeLog,v 1.25 2014/08/10 20:18:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mod_suphp-0.7.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-

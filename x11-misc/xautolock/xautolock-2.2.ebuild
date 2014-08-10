@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.2.ebuild,v 1.9 2012/12/16 15:27:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.2.ebuild,v 1.10 2014/08/10 20:04:48 slyfox Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="An automatic X screen-locker/screen-saver."
+DESCRIPTION="An automatic X screen-locker/screen-saver"
 SRC_URI="http://www.ibiblio.org/pub/Linux/X11/screensavers/${P}.tgz"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/X11/screensavers/"
 LICENSE="GPL-2"

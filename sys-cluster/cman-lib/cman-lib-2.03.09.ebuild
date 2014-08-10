@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/cman-lib-2.03.09.ebuild,v 1.4 2010/10/20 12:34:52 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/cman-lib-2.03.09.ebuild,v 1.5 2014/08/10 20:20:22 slyfox Exp $
 
 inherit eutils versionator
 
@@ -10,7 +10,7 @@ MY_P="cluster-${CLUSTER_RELEASE}"
 MAJ_PV="$(get_major_version)"
 MIN_PV="$(get_version_component_range 2).$(get_version_component_range 3)"
 
-DESCRIPTION="A library for cluster management common to the various pieces of Cluster Suite."
+DESCRIPTION="A library for cluster management common to the various pieces of Cluster Suite"
 HOMEPAGE="http://sources.redhat.com/cluster/wiki/"
 SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/octopus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/ChangeLog,v 1.19 2010/04/05 22:38:13 caster Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/ChangeLog,v 1.20 2014/08/10 20:01:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> octopus-3.0.1-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 Apr 2010; Vlastimil Babka <caster@gentoo.org> -octopus-3.0.1-r2.ebuild:
   Remove old.
@@ -76,4 +79,3 @@
   22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   +files/octopus-3.0.1-gentoo-build.xml, +octopus-3.0.1.ebuild:
   Initial import. Fixes bug #75622.
-

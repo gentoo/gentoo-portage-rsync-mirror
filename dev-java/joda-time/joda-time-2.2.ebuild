@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-2.2.ebuild,v 1.2 2013/05/09 22:07:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-2.2.ebuild,v 1.3 2014/08/10 20:19:22 slyfox Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ JAVA_ANT_REWRITE_CLASSPATH="true"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A quality open-source replacement for the Java Date and Time classes."
+DESCRIPTION="A quality open-source replacement for the Java Date and Time classes"
 HOMEPAGE="http://joda-time.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-dist.tar.gz"
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtz
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.20 2010/09/20 09:24:07 s4t4n Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.21 2014/08/10 20:09:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmtz-0.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Sep 2010; Michele Noberasco <ssuominen@gentoo.org> wmtz-0.7.ebuild:
   Honour Gentoo LDFLAGS, see bug #337890.

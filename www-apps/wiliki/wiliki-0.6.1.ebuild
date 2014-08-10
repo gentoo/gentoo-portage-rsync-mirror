@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wiliki/wiliki-0.6.1.ebuild,v 1.1 2010/07/02 00:21:32 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wiliki/wiliki-0.6.1.ebuild,v 1.2 2014/08/10 20:15:57 slyfox Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit webapp eutils
 MY_PN="WiLiKi"
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="WiLiKi is a lightweight Wiki engine written in and running on Gauche Scheme."
+DESCRIPTION="WiLiKi is a lightweight Wiki engine written in and running on Gauche Scheme"
 HOMEPAGE="http://practical-scheme.net/wiliki/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/jrexx-1.1.1-r1.ebuild,v 1.13 2013/09/01 09:28:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/jrexx-1.1.1-r1.ebuild,v 1.14 2014/08/10 20:19:49 slyfox Exp $
 
 inherit java-pkg-2
 
-DESCRIPTION="Regular expression API for textual pattern matching based on the finite state automaton theory."
+DESCRIPTION="Regular expression API for textual pattern matching based on the finite state automaton theory"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 HOMEPAGE="http://www.karneim.com/jrexx/"
 LICENSE="LGPL-2.1"

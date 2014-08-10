@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/xgks-pmel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.10 2012/10/16 19:16:53 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.11 2014/08/10 20:25:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xgks-pmel-2.5.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org> xgks-pmel-2.5.5.ebuild,
   metadata.xml:

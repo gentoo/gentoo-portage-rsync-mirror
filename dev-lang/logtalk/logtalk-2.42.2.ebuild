@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/logtalk-2.42.2.ebuild,v 1.1 2011/01/27 23:40:36 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/logtalk-2.42.2.ebuild,v 1.2 2014/08/10 20:29:05 slyfox Exp $
 
 inherit eutils versionator fdo-mime
 
-DESCRIPTION="Open source object-oriented logic programming language."
+DESCRIPTION="Open source object-oriented logic programming language"
 HOMEPAGE="http://logtalk.org"
 MY_PV="lgt$(delete_all_version_separators)"
 SRC_URI="http://logtalk.org/files/${MY_PV}.tar.bz2"

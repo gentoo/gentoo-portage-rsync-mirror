@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare setup
 DEPEND=nls? ( sys-devel/gettext ) =app-admin/gkrellm-2* virtual/pkgconfig
-DESCRIPTION=A GKrellM plugin that shows sunrise and sunset times.
+DESCRIPTION=A GKrellM plugin that shows sunrise and sunset times
 EAPI=3
 HOMEPAGE=http://gkrellsun.sourceforge.net/
 IUSE=nls
@@ -10,4 +10,4 @@ RDEPEND=nls? ( sys-devel/gettext ) =app-admin/gkrellm-2*
 SLOT=1
 SRC_URI=mirror://sourceforge/gkrellsun/gkrellsun-1.0.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	gkrellm-plugin	4599c73f33aed9a9988a7031f60d2ed8	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e27137bf336fa117e5680617873fcaab
+_md5_=dc317e8c487eae907ac7300f28ea0143

@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sjsxp/sjsxp-1.0.1-r1.ebuild,v 1.4 2011/12/18 19:55:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sjsxp/sjsxp-1.0.1-r1.ebuild,v 1.5 2014/08/10 20:23:46 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="The Sun Java Streaming XML Parser (SJSXP) is an efficient implementation of the StAX API."
+DESCRIPTION="The Sun Java Streaming XML Parser (SJSXP) is an efficient implementation of the StAX API"
 HOMEPAGE="http://sjsxp.dev.java.net/"
 # CVS: cvs -d :pserver:guest@cvs.dev.java.net:/cvs checkout -r sjsxp-1_0_1 sjsxp/zephyr
 SRC_URI="mirror://gentoo/${P}.tar.bz2"

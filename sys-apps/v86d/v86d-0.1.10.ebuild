@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.10.ebuild,v 1.4 2012/04/28 12:49:21 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.10.ebuild,v 1.5 2014/08/10 20:25:31 slyfox Exp $
 
 EAPI=2
 
 inherit eutils flag-o-matic linux-info multilib
 
-DESCRIPTION="A daemon to run x86 code in an emulated environment."
+DESCRIPTION="A daemon to run x86 code in an emulated environment"
 HOMEPAGE="http://dev.gentoo.org/~spock/projects/uvesafb/"
 SRC_URI="http://dev.gentoo.org/~spock/projects/uvesafb/archive/${P/_/-}.tar.bz2"
 

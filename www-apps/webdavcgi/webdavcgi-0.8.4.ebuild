@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/webdavcgi/webdavcgi-0.8.4.ebuild,v 1.2 2014/07/29 16:40:56 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/webdavcgi/webdavcgi-0.8.4.ebuild,v 1.3 2014/08/10 20:15:51 slyfox Exp $
 
 EAPI=5
 
 inherit eutils toolchain-funcs versionator
 
-DESCRIPTION="A Perl CGI for accessing and sharing files, or calendar/addressbooks via WebDAV."
+DESCRIPTION="A Perl CGI for accessing and sharing files, or calendar/addressbooks via WebDAV"
 HOMEPAGE="http://webdavcgi.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.4-r2.ebuild,v 1.7 2014/01/08 06:09:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.4-r2.ebuild,v 1.8 2014/08/10 20:09:17 slyfox Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic toolchain-funcs user
 
 MY_P="s${P}"
 
-DESCRIPTION="Fork of thttpd, a small, fast, multiplexing webserver."
+DESCRIPTION="Fork of thttpd, a small, fast, multiplexing webserver"
 HOMEPAGE="http://opensource.dyc.edu/sthttpd"
 SRC_URI="http://opensource.dyc.edu/pub/sthttpd/${MY_P}.tar.gz"
 S="${WORKDIR}/${MY_P}"

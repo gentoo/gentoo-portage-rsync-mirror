@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install
 DEPEND=app-arch/xz-utils
-DESCRIPTION=Platform independent library providing basic system functions.
+DESCRIPTION=Platform independent library providing basic system functions
 EAPI=5
 HOMEPAGE=http://libhx.sourceforge.net
 KEYWORDS=amd64 ppc x86
@@ -8,4 +8,4 @@ LICENSE=GPL-3
 SLOT=0
 SRC_URI=mirror://sourceforge/libhx/libHX-3.16.tar.xz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=eabc0356e1d08220571362e3c1ee6284
+_md5_=380f3dd6867193416c53f4afd1017f75

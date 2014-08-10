@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/obconf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.112 2013/10/19 15:08:47 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.113 2014/08/10 20:03:23 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  obconf-2.0.3_p20111019.ebuild, obconf-2.0.4.ebuild, obconf-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due desktop-wm removal

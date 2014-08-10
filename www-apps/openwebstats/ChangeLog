@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/openwebstats
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/openwebstats/ChangeLog,v 1.7 2013/11/06 02:26:38 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/openwebstats/ChangeLog,v 1.8 2014/08/10 20:14:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> openwebstats-1.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   30 Oct 2013; Patrick Lauer <patrick@gentoo.org> openwebstats-1.1.ebuild:
   Shorten description, fix quoting, make repoman happier

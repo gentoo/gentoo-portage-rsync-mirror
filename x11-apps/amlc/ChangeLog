@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/amlc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/amlc/ChangeLog,v 1.6 2008/11/24 17:33:07 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/amlc/ChangeLog,v 1.7 2014/08/10 20:07:04 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> amlc-0.5.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
   Rename my old e-mail drac at gentoo.org to ssuominen at gentoo.org.
@@ -22,4 +25,3 @@
   04 Feb 2007; <drac@gentoo.org> +amlc-0.5.1.ebuild:
   Initial ebuild for bug 82759 from Sunrise Overlay after discussing with
   upstream.
-

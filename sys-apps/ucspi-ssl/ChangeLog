@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-ssl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.27 2012/11/06 08:12:14 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.28 2014/08/10 20:25:24 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   06 Nov 2012; Ulrich Müller <ulm@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
   Update LICENSE, public domain according to information on HOMEPAGE.
@@ -94,4 +97,3 @@
 
   04 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> ucspi-ssl-0.50.ebuild:
   Initial import. Ebuild submitted by sen_ml@eccosys.com in #14937
-

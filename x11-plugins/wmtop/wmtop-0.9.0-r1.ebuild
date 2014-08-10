@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.9.0-r1.ebuild,v 1.5 2012/07/29 18:36:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.9.0-r1.ebuild,v 1.6 2014/08/10 20:09:24 slyfox Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs
 
-DESCRIPTION="dockapp for monitoring the top three processes using cpu or memory."
+DESCRIPTION="dockapp for monitoring the top three processes using cpu or memory"
 HOMEPAGE="http://www.swanson.ukfsn.org/#wmtop"
 SRC_URI="http://www.swanson.ukfsn.org/wmdock/${P}.tar.gz"
 

@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-bot-sentry/pidgin-bot-sentry-1.3.0.ebuild,v 1.3 2012/05/05 05:12:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-bot-sentry/pidgin-bot-sentry-1.3.0.ebuild,v 1.4 2014/08/10 20:02:52 slyfox Exp $
 
 EAPI="3"
 
 inherit eutils multilib
 
 MY_P="${P#pidgin-}"
-DESCRIPTION="Bot Sentry is a Pidgin plugin to prevent Instant Message (IM) spam."
+DESCRIPTION="Bot Sentry is a Pidgin plugin to prevent Instant Message (IM) spam"
 HOMEPAGE="http://pidgin-bs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pidgin-bs/${MY_P}.tar.bz2"
 

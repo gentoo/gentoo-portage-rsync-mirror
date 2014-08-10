@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/minisat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/ChangeLog,v 1.7 2012/10/07 09:12:35 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/ChangeLog,v 1.8 2014/08/10 20:23:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> minisat-2.1.0.ebuild,
+  minisat-2.2.0-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #24135.

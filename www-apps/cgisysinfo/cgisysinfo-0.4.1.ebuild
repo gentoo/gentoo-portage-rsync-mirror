@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgisysinfo/cgisysinfo-0.4.1.ebuild,v 1.1 2013/04/06 23:48:46 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgisysinfo/cgisysinfo-0.4.1.ebuild,v 1.2 2014/08/10 20:12:53 slyfox Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-DESCRIPTION="A small cgi utility to show basic system information."
+DESCRIPTION="A small cgi utility to show basic system information"
 HOMEPAGE="http://projects.rafaelmartins.eng.br/cgisysinfo"
 
 LICENSE="GPL-2"

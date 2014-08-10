@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/burlap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.22 2014/02/07 15:02:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.23 2014/08/10 20:09:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> burlap-3.0.8-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Feb 2014; Tom Wijsman <TomWij@gentoo.org> burlap-3.0.8-r3.ebuild:
   Make PATCHES an array to fix repoman warning.

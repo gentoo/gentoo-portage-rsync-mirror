@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-libs/libdockapp
-DESCRIPTION=WindowMaker DockApp: Provides a popup menu of icons like in AfterStep, as a dockable application.
+DESCRIPTION=WindowMaker DockApp: Provides a popup menu of icons like in AfterStep, as a dockable application
 HOMEPAGE=http://www.fcoutant.freesurf.fr/wmmenu.html
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
@@ -8,4 +8,4 @@ RDEPEND=x11-libs/libdockapp
 SLOT=0
 SRC_URI=http://www.fcoutant.freesurf.fr/download/wmmenu-1.2.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=eba25e547cb5d90c2518bd98573b4be9
+_md5_=58a870ba435fb5dbd2aa6ee0baea96d5

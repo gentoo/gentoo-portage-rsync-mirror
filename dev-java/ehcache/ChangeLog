@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ehcache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.17 2014/07/14 10:44:09 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.18 2014/08/10 20:12:55 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ehcache-1.1-r1.ebuild,
+  ehcache-1.1-r2.ebuild, ehcache-1.2.4-r2.ebuild, ehcache-1.2.4-r3.ebuild,
+  ehcache-1.2.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *ehcache-1.2.4-r3 (14 Jul 2014)
 

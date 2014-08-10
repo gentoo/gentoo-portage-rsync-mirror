@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/freehep-rtti
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freehep-rtti/ChangeLog,v 1.3 2014/08/03 13:40:30 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freehep-rtti/ChangeLog,v 1.4 2014/08/10 20:13:23 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> freehep-rtti-2.0.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -freehep-rtti-2.0.ebuild:
   Remove old

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authn_sasl/mod_authn_sasl-1.2.ebuild,v 1.1 2011/10/14 17:27:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authn_sasl/mod_authn_sasl-1.2.ebuild,v 1.2 2014/08/10 20:14:40 slyfox Exp $
 
 inherit eutils apache-module
 
-DESCRIPTION="Cyrus SASL authentication module for Apache."
+DESCRIPTION="Cyrus SASL authentication module for Apache"
 HOMEPAGE="http://mod-authn-sasl.sourceforge.net/"
 SRC_URI="http://downloads.sourceforge.net/project/mod-authn-sasl/mod-authn-sasl/${PV}/${P}.tar.bz2"
 

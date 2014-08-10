@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20110203.ebuild,v 1.4 2014/06/29 22:35:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20110203.ebuild,v 1.5 2014/08/10 20:27:39 slyfox Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ MY_PV=$(replace_version_separator 2 '-' )
 UPSTREAM_VERSION=$(get_version_component_range 1-2)
 URL="http://www-asim.lip6.fr/pub/alliance/distribution/${UPSTREAM_VERSION}"
 
-DESCRIPTION="Digital IC design tools (simulation, synthesis, place/route, etc...)."
+DESCRIPTION="Digital IC design tools (simulation, synthesis, place/route, etc...)"
 HOMEPAGE="https://soc-extras.lip6.fr/en/alliance-abstract-en/"
 SRC_URI="${URL}/${PN}-${MY_PV}.tar.gz"
 

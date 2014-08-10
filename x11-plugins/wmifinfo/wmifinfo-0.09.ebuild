@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/wmifinfo-0.09.ebuild,v 1.8 2010/03/10 11:23:20 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/wmifinfo-0.09.ebuild,v 1.9 2014/08/10 20:06:57 slyfox Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="a dockapp for monitoring network interfaces."
+DESCRIPTION="a dockapp for monitoring network interfaces"
 HOMEPAGE="http://zevv.nl/play/code/wmifinfo"
 SRC_URI="http://zevv.nl/play/code/${PN}/${P}.tgz"
 

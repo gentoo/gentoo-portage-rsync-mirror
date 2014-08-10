@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3-r2.ebuild,v 1.3 2012/06/12 11:32:25 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3-r2.ebuild,v 1.4 2014/08/10 20:22:39 slyfox Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ WANT_ANT_TASKS="ant-nodeps"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Proxool is a Java connection pool."
+DESCRIPTION="Proxool is a Java connection pool"
 HOMEPAGE="http://proxool.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-source.tar.gz"
 

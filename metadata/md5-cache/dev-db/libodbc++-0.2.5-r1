@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare
 DEPEND=dev-db/unixODBC sys-libs/ncurses
-DESCRIPTION=C++ class library that provides a subset of the well-known JDBC 2.0(tm) and runs on top of ODBC.
+DESCRIPTION=C++ class library that provides a subset of the well-known JDBC 2.0(tm) and runs on top of ODBC
 EAPI=2
 HOMEPAGE=http://libodbcxx.sourceforge.net/
 KEYWORDS=~alpha ~amd64 ~hppa ~ppc ~x86
@@ -9,4 +9,4 @@ RDEPEND=dev-db/unixODBC sys-libs/ncurses
 SLOT=0
 SRC_URI=mirror://sourceforge/libodbcxx/libodbc++-0.2.5.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=cf35b2b3ae436926e0071e5d8d57d2fa
+_md5_=0919f97177d09aed63dd0c224f2a0c4b

@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.5.ebuild,v 1.10 2012/01/01 12:28:23 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.5.ebuild,v 1.11 2014/08/10 20:22:50 slyfox Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2 eutils versionator
 
 MY_P="${PN}$(replace_version_separator 1 _ $(replace_version_separator 2 R))"
 
-DESCRIPTION="An open-source implementation of JavaScript written in Java."
+DESCRIPTION="An open-source implementation of JavaScript written in Java"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/js/${MY_P}.zip
 	mirror://gentoo/rhino-swing-ex-1.0.zip"
 HOMEPAGE="http://www.mozilla.org/rhino/"

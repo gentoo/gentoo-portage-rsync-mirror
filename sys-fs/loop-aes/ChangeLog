@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.102 2014/04/15 20:23:34 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.103 2014/08/10 20:19:48 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> loop-aes-3.7a.ebuild,
+  loop-aes-3.7b.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *loop-aes-3.7b (15 Apr 2014)
 

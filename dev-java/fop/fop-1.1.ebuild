@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-1.1.ebuild,v 1.1 2013/07/08 14:23:45 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-1.1.ebuild,v 1.2 2014/08/10 20:13:16 slyfox Exp $
 
 # TODO: if 'doc' use flag is used then should build also extra docs ('docs' ant target), currently it cannot
 #       be built as it needs forrest which we do not have
@@ -13,7 +13,7 @@ WANT_ANT_TASKS="ant-trax"
 
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="Formatting Objects Processor is a print formatter driven by XSL."
+DESCRIPTION="Formatting Objects Processor is a print formatter driven by XSL"
 HOMEPAGE="http://xmlgraphics.apache.org/fop/"
 SRC_URI="mirror://apache/xmlgraphics/${PN}/source/${P}-src.zip"
 

@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.3.ebuild,v 1.4 2009/03/18 15:03:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.3.ebuild,v 1.5 2014/08/10 20:11:24 slyfox Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Applies XPath expressions to graphs of objects of all kinds."
+DESCRIPTION="Applies XPath expressions to graphs of objects of all kinds"
 HOMEPAGE="http://commons.apache.org/jxpath/"
 SRC_URI="mirror://apache/commons/jxpath/source/${P}-src.tar.gz"
 

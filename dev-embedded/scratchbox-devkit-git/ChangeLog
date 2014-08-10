@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/scratchbox-devkit-git
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-git/ChangeLog,v 1.7 2011/09/13 19:01:34 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-git/ChangeLog,v 1.8 2014/08/10 20:04:58 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  scratchbox-devkit-git-1.0.1.ebuild, scratchbox-devkit-git-1.0.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #278944
@@ -35,4 +39,3 @@
   19 Nov 2009; Dominik Kapusta <ayoy@gentoo.org>
   +scratchbox-devkit-git-1.0.1.ebuild, +metadata.xml:
   Initial commit of git devkit for scratchbox
-

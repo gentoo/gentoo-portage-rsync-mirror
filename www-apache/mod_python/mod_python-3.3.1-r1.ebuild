@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1-r1.ebuild,v 1.8 2013/01/04 09:18:53 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1-r1.ebuild,v 1.9 2014/08/10 20:17:28 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit apache-module autotools eutils python
 
-DESCRIPTION="An Apache2 module providing an embedded Python interpreter."
+DESCRIPTION="An Apache2 module providing an embedded Python interpreter"
 HOMEPAGE="http://www.modpython.org/"
 SRC_URI="mirror://apache/httpd/modpython/${P}.tgz"
 

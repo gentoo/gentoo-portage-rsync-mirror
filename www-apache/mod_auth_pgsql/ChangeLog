@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_auth_pgsql
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/ChangeLog,v 1.9 2012/11/27 19:06:10 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/ChangeLog,v 1.10 2014/08/10 20:14:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  mod_auth_pgsql-2.0.3-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-

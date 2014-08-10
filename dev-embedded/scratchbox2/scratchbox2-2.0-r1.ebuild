@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox2/scratchbox2-2.0-r1.ebuild,v 1.2 2009/12/12 09:58:58 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox2/scratchbox2-2.0-r1.ebuild,v 1.3 2014/08/10 20:06:08 slyfox Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit autotools eutils multilib toolchain-funcs
 MY_PN="${PN/cratch}"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A cross-compilation toolkit designed to make embedded Linux application development easier."
+DESCRIPTION="A cross-compilation toolkit designed to make embedded Linux application development easier"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/sbox2"
 SRC_URI="http://cgit.freedesktop.org/${MY_PN}/snapshot/${MY_P}.tar.bz2"
 

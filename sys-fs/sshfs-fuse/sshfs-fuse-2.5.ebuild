@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-2.5.ebuild,v 1.1 2014/01/24 18:04:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-2.5.ebuild,v 1.2 2014/08/10 20:20:23 slyfox Exp $
 
 EAPI="4"
 
-DESCRIPTION="Fuse-filesystem utilizing the sftp service."
+DESCRIPTION="Fuse-filesystem utilizing the sftp service"
 SRC_URI="mirror://sourceforge/fuse/${P}.tar.gz"
 HOMEPAGE="http://fuse.sourceforge.net/sshfs.html"
 

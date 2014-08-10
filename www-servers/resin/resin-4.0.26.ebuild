@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.26.ebuild,v 1.2 2014/01/08 06:08:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.26.ebuild,v 1.3 2014/08/10 20:09:05 slyfox Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2 eutils flag-o-matic multilib autotools user
 
-DESCRIPTION="A fast Servlet and JSP engine."
+DESCRIPTION="A fast Servlet and JSP engine"
 HOMEPAGE="http://www.caucho.com"
 SRC_URI="http://www.caucho.com/download/${P}-src.zip
 	mirror://gentoo/resin-gentoo-patches-${PV}.tar.bz2"

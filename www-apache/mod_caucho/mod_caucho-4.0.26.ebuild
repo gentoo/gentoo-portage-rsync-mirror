@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-4.0.26.ebuild,v 1.6 2013/06/29 14:29:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-4.0.26.ebuild,v 1.7 2014/08/10 20:15:01 slyfox Exp $
 
 EAPI="2"
 
 inherit eutils apache-module autotools
 
-DESCRIPTION="mod_caucho connects Resin and Apache2."
+DESCRIPTION="mod_caucho connects Resin and Apache2"
 HOMEPAGE="http://www.caucho.com/"
 SRC_URI="http://www.caucho.com/download/resin-${PV}-src.zip
 	mirror://gentoo/resin-gentoo-patches-${PV}.tar.bz2"

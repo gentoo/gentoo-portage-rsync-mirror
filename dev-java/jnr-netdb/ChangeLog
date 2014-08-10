@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jnr-netdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.13 2014/01/12 23:50:48 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.14 2014/08/10 20:18:54 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jnr-netdb-1.0.1.ebuild,
+  jnr-netdb-1.0.6.ebuild, jnr-netdb-1.1.1.ebuild, jnr-netdb-1.1.2-r1.ebuild,
+  jnr-netdb-1.1.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *jnr-netdb-1.1.2-r1 (12 Jan 2014)
 

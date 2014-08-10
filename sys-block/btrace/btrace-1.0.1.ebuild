@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-1.0.1.ebuild,v 1.3 2011/02/07 07:30:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-1.0.1.ebuild,v 1.4 2014/08/10 20:21:30 slyfox Exp $
 
 inherit eutils toolchain-funcs flag-o-matic linux-info
 
-DESCRIPTION="btrace can show detailed info about what is happening on a block device io queue."
+DESCRIPTION="btrace can show detailed info about what is happening on a block device io queue"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/axboe/blktrace/"
 MY_PN="blktrace"
 MY_P="${MY_PN}-${PV}"

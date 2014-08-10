@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmCalClock
-# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/ChangeLog,v 1.21 2012/02/15 09:45:02 voyageur Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/ChangeLog,v 1.22 2014/08/10 20:03:09 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmCalClock-1.25-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
   wmCalClock-1.25-r2.ebuild:

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install
 DEPEND=>=dev-lang/mono-2.0
-DESCRIPTION=tool to help the programmer output log statements to a variety of output targets.
+DESCRIPTION=tool to help the programmer output log statements to a variety of output targets
 EAPI=4
 HOMEPAGE=http://logging.apache.org/log4net/
 KEYWORDS=amd64 x86
@@ -9,4 +9,4 @@ RDEPEND=>=dev-lang/mono-2.0
 SLOT=0
 SRC_URI=mirror://apache/logging/log4net/source/log4net-1.2.11-src.zip http://dev.gentoo.org/~pacho/dotnet/log4net.snk
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=f43c66e5b45a3384c3bf37beb4dca06c
+_md5_=f1c084509a1d963ab60b19fada2fa72d

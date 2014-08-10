@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/httpunit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/ChangeLog,v 1.13 2014/01/14 23:00:40 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/ChangeLog,v 1.14 2014/08/10 20:14:56 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> httpunit-1.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   14 Jan 2014; Tom Wijsman <TomWij@gentoo.org> -httpunit-1.6.2-r3.ebuild:
   Removal of the older version which has QA issues, because the newer version

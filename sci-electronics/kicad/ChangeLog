@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/kicad
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.66 2013/10/12 20:54:21 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.67 2014/08/10 20:27:55 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> kicad-20130518.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Oct 2013; Pacho Ramos <pacho@gentoo.org> -kicad-20120119_p3256.ebuild,
   -kicad-99999999.ebuild, metadata.xml:

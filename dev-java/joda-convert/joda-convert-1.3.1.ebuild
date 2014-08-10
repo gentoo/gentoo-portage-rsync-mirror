@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-convert/joda-convert-1.3.1.ebuild,v 1.6 2014/01/25 10:29:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-convert/joda-convert-1.3.1.ebuild,v 1.7 2014/08/10 20:19:12 slyfox Exp $
 
 EAPI="5"
 JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Java library for conversion between Object and String."
+DESCRIPTION="Java library for conversion between Object and String"
 HOMEPAGE="http://www.joda.org/joda-convert/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-dist.tar.gz"
 

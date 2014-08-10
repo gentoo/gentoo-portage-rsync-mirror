@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=sys-libs/ncurses sys-libs/readline dev-lang/tcl dev-lang/tk dev-tcltk/blt app-shells/tcsh
-DESCRIPTION=The VLSI design CAD tool.
+DESCRIPTION=The VLSI design CAD tool
 HOMEPAGE=http://www.opencircuitdesign.com/magic/index.html
 KEYWORDS=amd64 ppc x86
 LICENSE=HPND GPL-2+
 RDEPEND=sys-libs/ncurses sys-libs/readline dev-lang/tcl dev-lang/tk dev-tcltk/blt
 SLOT=0
 SRC_URI=http://www.opencircuitdesign.com/magic/archive/magic-7.4.46.tgz ftp://ftp.mosis.edu/pub/sondeen/magic/new/beta/2002a.tar.gz
-_md5_=60a81f224e174637dafcb48605242941
+_md5_=eac21c831cd24044bf10d39fd74a4f7b

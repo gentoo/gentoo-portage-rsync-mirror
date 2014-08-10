@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jump
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.16 2007/12/16 02:33:16 betelgeuse Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.17 2014/08/10 20:20:25 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jump-0.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   16 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> +files/0.5-test.patch,
   jump-0.5.ebuild:
@@ -71,4 +74,3 @@
 
   14 May 2003; Dylan Carlson <absinthe@gentoo.org> jump-0.4.1.ebuild:
   Initial import.
-

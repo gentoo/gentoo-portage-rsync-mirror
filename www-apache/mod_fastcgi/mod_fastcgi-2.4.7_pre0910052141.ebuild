@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/mod_fastcgi-2.4.7_pre0910052141.ebuild,v 1.5 2012/10/16 02:52:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/mod_fastcgi-2.4.7_pre0910052141.ebuild,v 1.6 2014/08/10 20:15:34 slyfox Exp $
 
 inherit apache-module
 
 MY_P="${PN}-SNAP-${PV/2.4.7_pre/}"
 
-DESCRIPTION="FastCGI is a open extension to CGI without the limitations of server specific APIs."
+DESCRIPTION="FastCGI is a open extension to CGI without the limitations of server specific APIs"
 HOMEPAGE="http://fastcgi.com/"
 SRC_URI="http://www.fastcgi.com/dist/${MY_P}.tar.gz"
 

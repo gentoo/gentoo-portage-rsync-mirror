@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jpfcodegen
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jpfcodegen/ChangeLog,v 1.3 2009/04/27 00:15:13 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jpfcodegen/ChangeLog,v 1.4 2014/08/10 20:19:40 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jpfcodegen-0.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Apr 2009; Brent Baude <ranger@gentoo.org> jpfcodegen-0.4.ebuild:
   Marking jpfcodegen-0.4 ~ppc for bug 236505
@@ -13,4 +16,3 @@
   22 Dec 2008; Vlastimil Babka <caster@gentoo.org> +metadata.xml,
   +jpfcodegen-0.4.ebuild:
   New package - dependency of JabRef.
-

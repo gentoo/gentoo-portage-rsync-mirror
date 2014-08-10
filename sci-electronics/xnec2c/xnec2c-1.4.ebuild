@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/xnec2c-1.4.ebuild,v 1.5 2011/06/02 13:23:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/xnec2c-1.4.ebuild,v 1.6 2014/08/10 20:29:03 slyfox Exp $
 
 EAPI="2"
 
 inherit autotools eutils
 
-DESCRIPTION="A GTK+ graphical interactive version of nec2c."
+DESCRIPTION="A GTK+ graphical interactive version of nec2c"
 HOMEPAGE="http://5b4az.chronos.org.uk/pages/nec2.html"
 SRC_URI="http://5b4az.chronos.org.uk/pkg/nec2/xnec2c/${P}.tar.bz2"
 

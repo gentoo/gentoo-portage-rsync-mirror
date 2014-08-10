@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfware/wulfware-2.6.0.ebuild,v 1.3 2008/05/23 08:41:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfware/wulfware-2.6.0.ebuild,v 1.4 2014/08/10 20:21:30 slyfox Exp $
 
 inherit autotools eutils multilib toolchain-funcs
 
-DESCRIPTION="Applications to monitor on a beowulf- or GRID-style clusters."
+DESCRIPTION="Applications to monitor on a beowulf- or GRID-style clusters"
 HOMEPAGE="http://www.phy.duke.edu/~rgb/Beowulf/wulfware.php"
 SRC_URI="http://www.phy.duke.edu/~rgb/Beowulf/${PN}/${P}.tgz"
 

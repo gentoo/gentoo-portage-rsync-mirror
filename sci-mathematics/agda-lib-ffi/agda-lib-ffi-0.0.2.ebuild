@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda-lib-ffi/agda-lib-ffi-0.0.2.ebuild,v 1.1 2014/07/02 15:23:21 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda-lib-ffi/agda-lib-ffi-0.0.2.ebuild,v 1.2 2014/08/10 20:23:23 slyfox Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit haskell-cabal
 
 AGDA_P="lib-0.7"
 
-DESCRIPTION="Auxiliary Haskell code used by Agda's standard library."
+DESCRIPTION="Auxiliary Haskell code used by Agda's standard library"
 HOMEPAGE="http://wiki.portal.chalmers.se/agda/"
 SRC_URI="http://www.cse.chalmers.se/~nad/software/${AGDA_P}.tar.gz"
 

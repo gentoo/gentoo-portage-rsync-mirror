@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmlife
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/ChangeLog,v 1.6 2014/04/07 19:40:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/ChangeLog,v 1.7 2014/08/10 20:07:13 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmlife-1.0.0.ebuild,
+  wmlife-1.0.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmlife-1.0.0.ebuild,
   wmlife-1.0.1.ebuild:

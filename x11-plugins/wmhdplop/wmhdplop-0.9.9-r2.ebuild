@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.9-r2.ebuild,v 1.1 2010/09/03 13:47:55 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.9-r2.ebuild,v 1.2 2014/08/10 20:06:48 slyfox Exp $
 
 EAPI="2"
 
 inherit eutils multilib
 
-DESCRIPTION="a dockapp for monitoring disk activities with fancy visuals."
+DESCRIPTION="a dockapp for monitoring disk activities with fancy visuals"
 HOMEPAGE="http://hules.free.fr/wmhdplop"
 SRC_URI="http://hules.free.fr/${PN}/${P}.tar.gz"
 

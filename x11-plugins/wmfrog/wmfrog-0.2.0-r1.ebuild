@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/wmfrog-0.2.0-r1.ebuild,v 1.4 2010/08/31 13:00:34 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/wmfrog-0.2.0-r1.ebuild,v 1.5 2014/08/10 20:06:30 slyfox Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
 
-DESCRIPTION="a weather application, it shows the weather in a graphical way."
+DESCRIPTION="a weather application, it shows the weather in a graphical way"
 HOMEPAGE="http://wiki.colar.net/wmfrog_dockapp"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 

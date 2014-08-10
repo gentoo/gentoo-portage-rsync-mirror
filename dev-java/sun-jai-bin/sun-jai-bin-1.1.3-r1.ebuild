@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.3-r1.ebuild,v 1.3 2013/01/13 11:29:27 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.3-r1.ebuild,v 1.4 2014/08/10 20:24:29 slyfox Exp $
 
 inherit java-pkg-2
 
 MY_PV=${PV//./_}
-DESCRIPTION="JAI is a class library for managing images."
+DESCRIPTION="JAI is a class library for managing images"
 HOMEPAGE="https://jai.dev.java.net/"
 
 BASE=http://download.java.net/media/jai/builds/release/${MY_PV}

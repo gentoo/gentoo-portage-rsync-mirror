@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dynalang/dynalang-0.4.ebuild,v 1.4 2010/06/06 21:50:32 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dynalang/dynalang-0.4.ebuild,v 1.5 2014/08/10 20:12:41 slyfox Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ inherit java-pkg-2 java-ant-2
 
 MY_P="${PN}-mop-${PV}"
 
-DESCRIPTION="Library for implementation of interoperable metaobject protocols for dynamic languages."
+DESCRIPTION="Library for implementation of interoperable metaobject protocols for dynamic languages"
 HOMEPAGE="http://sourceforge.net/projects/dynalang/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}/${MY_P}.tgz"
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/libfakekey-0.1-r1.ebuild,v 1.5 2013/05/06 03:57:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/libfakekey-0.1-r1.ebuild,v 1.6 2014/08/10 20:06:20 slyfox Exp $
 
 EAPI=2
 
 inherit eutils autotools
 
-DESCRIPTION="Helper library for the x11-misc/matchbox-keyboard package."
+DESCRIPTION="Helper library for the x11-misc/matchbox-keyboard package"
 HOMEPAGE="http://matchbox-project.org/"
 SRC_URI="http://matchbox-project.org/sources/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3-r3.ebuild,v 1.2 2009/12/09 22:40:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3-r3.ebuild,v 1.3 2014/08/10 20:14:40 slyfox Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-antlr ant-swing ant-junit"
@@ -10,7 +10,7 @@ JAVA_PKG_WANT_BOOTCLASSPATH="1.5"
 inherit java-pkg-2 java-ant-2
 
 MY_PV="3.1"
-DESCRIPTION="A powerful, ultra-high performance object / relational persistence and query service for Java."
+DESCRIPTION="A powerful, ultra-high performance object / relational persistence and query service for Java"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.hibernate.org"
 LICENSE="LGPL-2"

@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_authn_sasl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authn_sasl/ChangeLog,v 1.3 2012/11/27 19:07:27 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authn_sasl/ChangeLog,v 1.4 2014/08/10 20:14:40 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mod_authn_sasl-1.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -mod_authn_sasl-1.1.ebuild,
   metadata.xml:

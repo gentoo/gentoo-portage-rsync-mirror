@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.4.1.ebuild,v 1.8 2012/01/01 12:21:10 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.4.1.ebuild,v 1.9 2014/08/10 20:15:43 slyfox Exp $
 
 inherit base java-pkg-2
 
-DESCRIPTION="Jacl is an implementation of Tcl written in Java."
+DESCRIPTION="Jacl is an implementation of Tcl written in Java"
 HOMEPAGE="http://tcljava.sourceforge.net"
 MY_P="${P//-}"
 SRC_URI="mirror://sourceforge/tcljava/${MY_P}.tar.gz"

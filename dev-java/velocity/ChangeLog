@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/velocity
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.47 2014/02/07 00:09:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.48 2014/08/10 20:26:13 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> velocity-1.6.3.ebuild,
+  velocity-1.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *velocity-1.7 (07 Feb 2014)
 
@@ -182,4 +186,3 @@
   
   * servlet-based WWW development
   * general application use
-

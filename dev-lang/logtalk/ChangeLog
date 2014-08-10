@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/logtalk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/ChangeLog,v 1.9 2011/01/27 23:40:36 miknix Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/ChangeLog,v 1.10 2014/08/10 20:29:05 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> logtalk-2.34.1.ebuild,
+  logtalk-2.35.1.ebuild, logtalk-2.37.1.ebuild, logtalk-2.37.4.ebuild,
+  logtalk-2.41.0.ebuild, logtalk-2.42.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *logtalk-2.42.2 (27 Jan 2011)
 
@@ -45,4 +50,3 @@
   10 Jan 2009; <keri@gentoo.org> +metadata.xml, +logtalk-2.34.1.ebuild:
   Initial port. Ebuild contributed by Angelo Arrifano <miknix@gentoo.org>.
   Closes #248791
-

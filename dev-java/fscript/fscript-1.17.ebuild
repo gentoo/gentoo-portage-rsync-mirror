@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/fscript-1.17.ebuild,v 1.3 2007/06/10 10:13:56 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/fscript-1.17.ebuild,v 1.4 2014/08/10 20:13:39 slyfox Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Java based scripting engine designed to be embedded into other Java applications."
+DESCRIPTION="Java based scripting engine designed to be embedded into other Java applications"
 HOMEPAGE="http://fscript.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="LGPL-2"

@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/kaffeine-mozilla-plugin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/kaffeine-mozilla-plugin/ChangeLog,v 1.2 2012/07/12 12:16:29 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/kaffeine-mozilla-plugin/ChangeLog,v 1.3 2014/08/10 20:09:42 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  kaffeine-mozilla-plugin-0.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Jul 2012; Michael Palimaka <kensington@gentoo.org> metadata.xml:
   Cleanup metadata.

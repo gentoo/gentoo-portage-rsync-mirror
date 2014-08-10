@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/webgraph
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/ChangeLog,v 1.17 2007/10/24 06:28:09 wltjr Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/ChangeLog,v 1.18 2014/08/10 20:26:22 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> webgraph-1.4.1-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -webgraph-1.4.1.ebuild:

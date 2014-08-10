@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst prepare
 DEPEND=sys-boot/dvhtool
-DESCRIPTION=ARCLoad - SGI Multi-bootloader. Able to bootload many different SGI Systems.
+DESCRIPTION=ARCLoad - SGI Multi-bootloader. Able to bootload many different SGI Systems
 EAPI=4
 HOMEPAGE=http://www.linux-mips.org/wiki/index.php/ARCLoad
 KEYWORDS=-* ~mips
@@ -9,4 +9,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/arcload-0.5.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=99af149b9af65fd954251ea1f871589b
+_md5_=8e546d36b04296b9f5888a7a6bbcfe2c

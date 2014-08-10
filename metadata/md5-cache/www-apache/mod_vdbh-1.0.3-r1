@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst setup
 DEPEND=virtual/mysql >=sys-libs/zlib-1.1.4 =www-servers/apache-2*
-DESCRIPTION=An Apache2 module for mass virtual hosting using a MySQL database.
+DESCRIPTION=An Apache2 module for mass virtual hosting using a MySQL database
 HOMEPAGE=http://www.synthemesc.com/mod_vdbh/
 KEYWORDS=ppc x86
 LICENSE=Apache-1.1
@@ -8,4 +8,4 @@ RDEPEND=virtual/mysql >=sys-libs/zlib-1.1.4 =www-servers/apache-2*
 SLOT=0
 SRC_URI=http://www.synthemesc.com/downloads/mod_vdbh/mod_vdbh-1.0.3.tar.gz
 _eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c064d6cf683f153abf60c59a0ca0468b
+_md5_=a21c6eda2acd71f3057ac44a0491f36d

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0-r3.ebuild,v 1.5 2014/08/02 18:10:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0-r3.ebuild,v 1.6 2014/08/10 20:10:37 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="source"
 
 inherit eutils java-pkg-2 java-ant-2 java-osgi
 
-DESCRIPTION="EL is the JSP 2.0 Expression Language Interpreter from Apache."
+DESCRIPTION="EL is the JSP 2.0 Expression Language Interpreter from Apache"
 HOMEPAGE="http://commons.apache.org/el/"
 SRC_URI="mirror://apache/jakarta/commons/el/source/${P}-src.tar.gz"
 

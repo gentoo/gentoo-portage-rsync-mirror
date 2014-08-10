@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.3-r3.ebuild,v 1.1 2014/06/25 23:08:37 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.3-r3.ebuild,v 1.2 2014/08/10 20:01:30 slyfox Exp $
 
 EAPI=5
 WANT_AUTOMAKE="1.13"
@@ -11,7 +11,7 @@ inherit eutils autotools-utils
 
 MY_PN="super-smack"
 MY_P="${MY_PN}-${PV}"
-DESCRIPTION="Benchmarking, stress testing, and load generation tool for MySQL & PostGreSQL."
+DESCRIPTION="Benchmarking, stress testing, and load generation tool for MySQL & PostGreSQL"
 HOMEPAGE="http://vegan.net/tony/supersmack/"
 SRC_URI="http://vegan.net/tony/supersmack/${MY_P}.tar.gz"
 

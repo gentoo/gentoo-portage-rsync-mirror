@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/parity/parity-1.2.5.ebuild,v 1.1 2012/03/12 16:07:46 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/parity/parity-1.2.5.ebuild,v 1.2 2014/08/10 20:20:00 slyfox Exp $
 
 EAPI=4
 
-DESCRIPTION="An Interix to native Win32 Cross-Compiler Tool (requires Visual Studio)."
+DESCRIPTION="An Interix to native Win32 Cross-Compiler Tool (requires Visual Studio)"
 HOMEPAGE="http://www.sourceforge.net/projects/parity/"
 
 if [[ ${PV} == 9999 ]]; then

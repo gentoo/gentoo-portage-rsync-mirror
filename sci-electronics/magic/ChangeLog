@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/magic
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.73 2013/05/15 12:15:49 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.74 2014/08/10 20:28:13 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> magic-7.4.46-r1.ebuild,
+  magic-7.5.202-r1.ebuild, magic-7.5.202.ebuild, magic-7.5.231.ebuild,
+  magic-8.0.138.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *magic-8.0.138 (15 May 2013)
 

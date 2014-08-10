@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_cookie_mysql2/mod_auth_cookie_mysql2-1.0.ebuild,v 1.2 2012/10/16 04:58:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_cookie_mysql2/mod_auth_cookie_mysql2-1.0.ebuild,v 1.3 2014/08/10 20:13:46 slyfox Exp $
 
 inherit apache-module
 
-DESCRIPTION="An Apache2 backend authentication module that uses cookies and MySQL."
+DESCRIPTION="An Apache2 backend authentication module that uses cookies and MySQL"
 HOMEPAGE="http://home.digithi.de/digithi/dev/mod_auth_cookie_mysql/"
 SRC_URI="http://home.digithi.de/digithi/dev/mod_auth_cookie_mysql/${P/-/_}.tar.gz"
 

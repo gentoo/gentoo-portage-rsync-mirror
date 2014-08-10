@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/mod_depends-0.7.0_p200702041.ebuild,v 1.3 2008/01/31 17:28:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/mod_depends-0.7.0_p200702041.ebuild,v 1.4 2014/08/10 20:15:17 slyfox Exp $
 
 inherit eutils apache-module
 
-DESCRIPTION="An apache helper module for handling dependencies properly."
+DESCRIPTION="An apache helper module for handling dependencies properly"
 SRC_URI="http://upstream.rm-rf.in/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.outoforder.cc/projects/apache/mod_depends/"
 

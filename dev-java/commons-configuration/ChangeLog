@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-configuration
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/ChangeLog,v 1.11 2010/03/20 13:06:53 betelgeuse Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/ChangeLog,v 1.12 2014/08/10 20:10:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  commons-configuration-1.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
   -commons-configuration-1.4.ebuild:
@@ -50,4 +54,3 @@
   +files/commons-configuration-1.4-gentoo.patch, +metadata.xml,
   +commons-configuration-1.4.ebuild:
   New ebuild. Work done by fordfrog, caster and me. Fixes bug #161436.
-

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prepare setup unpack
 DEPEND==dev-dotnet/xsp-2.10* =www-servers/apache-2.2* >=dev-lang/mono-2.10 virtual/pkgconfig userland_GNU? ( >=sys-apps/findutils-4.4.0 )
-DESCRIPTION=Apache module for Mono.
+DESCRIPTION=Apache module for Mono
 EAPI=2
 HOMEPAGE=http://www.mono-project.com/Mod_mono
 IUSE=debug
@@ -10,4 +10,4 @@ RDEPEND==dev-dotnet/xsp-2.10* =www-servers/apache-2.2* >=dev-lang/mono-2.10
 SLOT=0
 SRC_URI=http://download.mono-project.com/sources/mod_mono/mod_mono-2.10.tar.bz2
 _eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	base	87f7447ccfc06fd0729ff4684e11e0d6	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	06133990e861be0fe60c2b428fd025d9	go-mono	95f4d6f11343dd05b134d8d1d2efd9e0	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=831f28a87e610c620cc5a493d1b2f183
+_md5_=ad117f2028d9a1e631b504b0f7e646ec

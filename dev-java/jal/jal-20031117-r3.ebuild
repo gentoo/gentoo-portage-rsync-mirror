@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/jal-20031117-r3.ebuild,v 1.7 2013/01/04 15:30:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/jal-20031117-r3.ebuild,v 1.8 2014/08/10 20:16:03 slyfox Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="Partial port of the C++ Standard Template Library."
+DESCRIPTION="Partial port of the C++ Standard Template Library"
 SRC_URI="http://vigna.dsi.unimi.it/jal/${P}-src.tar.gz"
 HOMEPAGE="http://vigna.dsi.unimi.it/jal/"
 

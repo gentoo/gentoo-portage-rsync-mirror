@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmcpuload
-# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.29 2012/02/15 09:46:27 voyageur Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.30 2014/08/10 20:05:51 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmcpuload-1.0.1.ebuild,
+  wmcpuload-1.1.0_pre5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmcpuload-1.0.1.ebuild,
   wmcpuload-1.1.0_pre5.ebuild:

@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.3.1-r1.ebuild,v 1.7 2010/04/24 17:39:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.3.1-r1.ebuild,v 1.8 2014/08/10 20:28:29 slyfox Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A text-processing Java classes that serialize objects to XML and back again."
+DESCRIPTION="A text-processing Java classes that serialize objects to XML and back again"
 HOMEPAGE="http://xstream.codehaus.org/index.html"
 SRC_URI="http://repository.codehaus.org/com/thoughtworks/${PN}/${PN}-distribution/${PV}/${PN}-distribution-${PV}-src.zip"
 

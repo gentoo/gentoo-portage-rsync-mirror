@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prepare test
 DEPEND=mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-server ) !<sys-devel/gettext-0.18.1.1-r3 =sys-devel/automake-1.13* >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=Benchmarking, stress testing, and load generation tool for MySQL & PostGreSQL.
+DESCRIPTION=Benchmarking, stress testing, and load generation tool for MySQL & PostGreSQL
 EAPI=5
 HOMEPAGE=http://vegan.net/tony/supersmack/
 IUSE=+mysql postgres
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( mysql postgres )
 SLOT=0
 SRC_URI=http://vegan.net/tony/supersmack/super-smack-1.3.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	autotools-utils	3727db64c7b960903d5033280f108080	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=1991b12feec8eaba98f4627a6b8cbb7d
+_md5_=d841867fd4cd8806ea70c648c745ef96

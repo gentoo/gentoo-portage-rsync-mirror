@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prepare setup
 DEPEND=dev-libs/klibc
-DESCRIPTION=A daemon to run x86 code in an emulated environment.
+DESCRIPTION=A daemon to run x86 code in an emulated environment
 EAPI=2
 HOMEPAGE=http://dev.gentoo.org/~spock/projects/uvesafb/
 IUSE=debug x86emu
@@ -9,4 +9,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~spock/projects/uvesafb/archive/v86d-0.1.10.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=3df5e5730c3e5607dbe8ef0d6c94ed6d
+_md5_=9402bff1ef17a0819bb1592add8c5619

@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/openpam
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.25 2013/11/30 13:36:25 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.26 2014/08/10 20:22:19 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> openpam-20071221.ebuild,
+  openpam-20111218.ebuild, openpam-20120526-r1.ebuild, openpam-20120526.ebuild,
+  openpam-20130907.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *openpam-20130907 (30 Nov 2013)
 

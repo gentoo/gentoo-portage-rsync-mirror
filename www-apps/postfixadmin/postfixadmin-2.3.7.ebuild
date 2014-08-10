@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.3.7.ebuild,v 1.3 2014/03/22 20:17:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.3.7.ebuild,v 1.4 2014/08/10 20:14:45 slyfox Exp $
 
 EAPI="4"
 
 inherit user webapp
 
-DESCRIPTION="Web Based Management tool for Postfix style virtual domains and users."
+DESCRIPTION="Web Based Management tool for Postfix style virtual domains and users"
 HOMEPAGE="http://postfixadmin.sourceforge.net"
 SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${P}/${P}.tar.gz"
 

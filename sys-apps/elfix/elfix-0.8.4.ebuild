@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.8.4.ebuild,v 1.9 2014/01/26 12:12:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.8.4.ebuild,v 1.10 2014/08/10 20:23:53 slyfox Exp $
 
 EAPI="5"
 
-DESCRIPTION="A suite of tools to work with ELF objects on Hardened Gentoo."
+DESCRIPTION="A suite of tools to work with ELF objects on Hardened Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/pax-quickstart.xml
 	http://dev.gentoo.org/~blueness/elfix/"
 SRC_URI="http://dev.gentoo.org/~blueness/elfix/${P}.tar.gz"

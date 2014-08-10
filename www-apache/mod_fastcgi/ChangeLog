@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_fastcgi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.17 2013/07/10 02:45:54 neurogeek Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.18 2014/08/10 20:15:34 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  mod_fastcgi-2.4.7_pre0910052141-r1.ebuild,
+  mod_fastcgi-2.4.7_pre0910052141.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *mod_fastcgi-2.4.7_pre0910052141-r1 (10 Jul 2013)
 

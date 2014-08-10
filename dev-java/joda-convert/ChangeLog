@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/joda-convert
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-convert/ChangeLog,v 1.6 2014/01/25 10:29:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-convert/ChangeLog,v 1.7 2014/08/10 20:19:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> joda-convert-1.3.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   25 Jan 2014; Tim Harder <radhermit@gentoo.org> joda-convert-1.3.1.ebuild:
   Update HOMEPAGE.

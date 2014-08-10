@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-203sb1/scratchbox-toolchain-cs2009q1-203sb1-1.0.13.ebuild,v 1.3 2010/01/18 13:03:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-203sb1/scratchbox-toolchain-cs2009q1-203sb1-1.0.13.ebuild,v 1.4 2014/08/10 20:05:47 slyfox Exp $
 
 SBOX_GROUP="sbox"
 
 MY_PV="${PV}-2-i386"
 
-DESCRIPTION="A cross-compilation toolkit designed to make embedded Linux application development easier."
+DESCRIPTION="A cross-compilation toolkit designed to make embedded Linux application development easier"
 HOMEPAGE="http://www.scratchbox.org/"
 SRC_URI="http://scratchbox.org/download/files/sbox-releases/stable/tarball/${PN/toolchain/toolchain-arm-linux}-${MY_PV}.tar.gz
 	http://scratchbox.org/download/files/sbox-releases/stable/tarball/${PN/toolchain/toolchain-i486-linux}-${MY_PV}.tar.gz"

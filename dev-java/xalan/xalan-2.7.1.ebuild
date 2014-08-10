@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.1.ebuild,v 1.11 2013/06/14 19:38:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.1.ebuild,v 1.12 2014/08/10 20:26:33 slyfox Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -12,7 +12,7 @@ MY_PV="$(replace_all_version_separators _)"
 MY_P="${MY_PN}_${MY_PV}"
 SRC_DIST="${MY_P}-src.tar.gz"
 BIN_DIST="${MY_P}-bin.zip"
-DESCRIPTION="Apache's XSLT processor for transforming XML documents into HTML, text, or other XML document types."
+DESCRIPTION="Apache's XSLT processor for transforming XML documents into HTML, text, or other XML document types"
 HOMEPAGE="http://xml.apache.org/xalan-j/index.html"
 SRC_URI="mirror://apache/xml/${MY_PN}/source/${SRC_DIST}
 	doc? ( mirror://apache/xml/${MY_PN}/binaries/${BIN_DIST} )"

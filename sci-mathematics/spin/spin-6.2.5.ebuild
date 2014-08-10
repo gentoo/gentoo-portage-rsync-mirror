@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/spin-6.2.5.ebuild,v 1.1 2013/11/18 00:11:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/spin-6.2.5.ebuild,v 1.2 2014/08/10 20:24:12 slyfox Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs versionator
 MY_PV=$(replace_all_version_separators '')
 MY_P="${PN}${MY_PV}"
 
-DESCRIPTION="Tool for formal verification of distributed software systems."
+DESCRIPTION="Tool for formal verification of distributed software systems"
 HOMEPAGE="http://spinroot.com/"
 SRC_URI="http://spinroot.com/spin/Src/${MY_P}.tar.gz"
 

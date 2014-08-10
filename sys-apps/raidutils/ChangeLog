@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/raidutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.16 2014/01/21 04:00:13 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.17 2014/08/10 20:24:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> raidutils-0.0.6-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Jan 2014; Chris Reffett <creffett@gentoo.org> raidutils-0.0.6-r2.ebuild:
   EAPI bump

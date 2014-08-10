@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/schedtool-1.3.0-r1.ebuild,v 1.7 2013/01/04 21:41:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/schedtool-1.3.0-r1.ebuild,v 1.8 2014/08/10 20:11:39 slyfox Exp $
 
 EAPI=4
 
 inherit toolchain-funcs
 
-DESCRIPTION="A tool to query or alter a process' scheduling policy."
+DESCRIPTION="A tool to query or alter a process' scheduling policy"
 HOMEPAGE="http://freequaos.host.sk/schedtool"
 SRC_URI="http://freequaos.host.sk/${PN}/${P}.tar.bz2"
 

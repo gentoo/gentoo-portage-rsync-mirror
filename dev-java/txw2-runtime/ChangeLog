@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/txw2-runtime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.15 2014/06/17 10:59:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.16 2014/08/10 20:26:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  txw2-runtime-20070407-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -txw2-runtime-20070407-r1.ebuild,
   -txw2-runtime-20070407.ebuild:

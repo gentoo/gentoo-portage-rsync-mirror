@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-cli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.48 2014/01/08 17:45:25 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.49 2014/08/10 20:09:49 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> commons-cli-1.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Jan 2014; Tom Wijsman <TomWij@gentoo.org> commons-cli-1.2.ebuild:
   Fixed up Copyright year.

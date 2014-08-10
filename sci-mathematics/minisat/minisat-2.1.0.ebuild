@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/minisat-2.1.0.ebuild,v 1.1 2011/04/17 22:54:19 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/minisat-2.1.0.ebuild,v 1.2 2014/08/10 20:23:37 slyfox Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils toolchain-funcs
 
 MY_P="${PN}2-070721"
 
-DESCRIPTION="Small yet efficient SAT solver with reference paper."
+DESCRIPTION="Small yet efficient SAT solver with reference paper"
 HOMEPAGE="http://minisat.se/Main.html"
 SRC_URI="http://minisat.se/downloads/${MY_P}.zip
 	doc? ( http://minisat.se/downloads/MiniSat.pdf )"

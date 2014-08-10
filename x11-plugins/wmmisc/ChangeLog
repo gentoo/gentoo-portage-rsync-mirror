@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmisc
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmisc/ChangeLog,v 1.8 2008/06/28 07:06:56 maekke Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmisc/ChangeLog,v 1.9 2014/08/10 20:08:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmmisc-1.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   28 Jun 2008; Markus Meier <maekke@gentoo.org> wmmisc-1.1.ebuild:
   x86 stable, bug #229583

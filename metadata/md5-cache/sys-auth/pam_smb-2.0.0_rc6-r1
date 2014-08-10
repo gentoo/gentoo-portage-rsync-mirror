@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=>=sys-libs/pam-0.75
-DESCRIPTION=The PAM SMB module, allows authentication against a SMB (such as the Win_x families) server.
+DESCRIPTION=The PAM SMB module, allows authentication against a SMB (such as the Win_x families) server
 HOMEPAGE=http://www.csn.ul.ie/~airlied/pam_smb/
 KEYWORDS=~ppc x86
 LICENSE=GPL-2
@@ -8,4 +8,4 @@ RDEPEND=>=sys-libs/pam-0.75
 SLOT=0
 SRC_URI=mirror://samba/pam_smb/v2/pam_smb-2.0.0-rc6.tar.gz http://www.csn.ul.ie/~airlied/pam_smb/v2/pam_smb-2.0.0-rc6.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=6f35adb9087a26e4fc11e4fa03537a3c
+_md5_=064d1cc2a029c5e5da8398a6da47950a

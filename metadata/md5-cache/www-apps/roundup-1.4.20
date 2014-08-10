@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup
 DEPEND=>=sys-libs/db-3.2.9 =dev-lang/python-2*
-DESCRIPTION=Simple-to-use and -install issue-tracking system with command-line, web, and e-mail interfaces.
+DESCRIPTION=Simple-to-use and -install issue-tracking system with command-line, web, and e-mail interfaces
 EAPI=4
 HOMEPAGE=http://roundup.sourceforge.net http://pypi.python.org/pypi/roundup
 KEYWORDS=amd64 ppc sparc x86
@@ -9,4 +9,4 @@ RDEPEND=>=sys-libs/db-3.2.9 =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://pypi/r/roundup/roundup-1.4.20.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=1adb903473b28bb949f4cf4ac4a3c013
+_md5_=6255bd7bce894b9cd617d356d53369dc

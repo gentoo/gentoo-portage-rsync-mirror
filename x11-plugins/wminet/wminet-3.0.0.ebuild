@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/wminet-3.0.0.ebuild,v 1.6 2010/09/17 10:11:31 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/wminet-3.0.0.ebuild,v 1.7 2014/08/10 20:07:07 slyfox Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="dockapp for monitoring internet connections to and from your computer."
+DESCRIPTION="dockapp for monitoring internet connections to and from your computer"
 HOMEPAGE="http://www.swanson.ukfsn.org/#wminet"
 SRC_URI="http://www.swanson.ukfsn.org/wmdock/${P}.tar.gz"
 

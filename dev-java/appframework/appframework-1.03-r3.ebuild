@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/appframework-1.03-r3.ebuild,v 1.1 2014/04/01 20:47:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/appframework-1.03-r3.ebuild,v 1.2 2014/08/10 20:07:54 slyfox Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ inherit java-pkg-2 java-ant-2
 MY_PN="AppFramework"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A small set of Java classes that simplify building desktop applications."
+DESCRIPTION="A small set of Java classes that simplify building desktop applications"
 HOMEPAGE="https://appframework.dev.java.net/"
 SRC_URI="https://appframework.dev.java.net/downloads/${MY_P}-src.zip"
 

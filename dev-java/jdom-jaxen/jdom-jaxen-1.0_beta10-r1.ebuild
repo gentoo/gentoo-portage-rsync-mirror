@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/jdom-jaxen-1.0_beta10-r1.ebuild,v 1.8 2008/04/08 16:01:37 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/jdom-jaxen-1.0_beta10-r1.ebuild,v 1.9 2014/08/10 20:18:05 slyfox Exp $
 
 JAVA_PKG_IUSE=""
 
@@ -10,7 +10,7 @@ MY_PN="jdom"
 MY_PV="b10"
 MY_P="${MY_PN}-${MY_PV}"
 
-DESCRIPTION="Jaxen binding for jdom."
+DESCRIPTION="Jaxen binding for jdom"
 HOMEPAGE="http://www.jdom.org"
 SRC_URI="http://www.jdom.org/dist/source/${MY_P}.tar.gz"
 

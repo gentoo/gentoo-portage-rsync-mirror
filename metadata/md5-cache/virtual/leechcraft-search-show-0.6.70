@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
-DESCRIPTION=Virtual for LeechCraft plugins providing UI for search plugins.
+DESCRIPTION=Virtual for LeechCraft plugins providing UI for search plugins
 EAPI=4
 KEYWORDS=~amd64 ~x86
 RDEPEND=app-leechcraft/lc-summary
 SLOT=0
-_md5_=4f5528e06591ac619ec06ce10ad26833
+_md5_=4f90e6e071f1be7b4a5da098dda80d75

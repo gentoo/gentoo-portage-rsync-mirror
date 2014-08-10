@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.70 2014/01/24 18:04:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.71 2014/08/10 20:20:23 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sshfs-fuse-2.4.ebuild,
+  sshfs-fuse-2.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *sshfs-fuse-2.5 (24 Jan 2014)
 

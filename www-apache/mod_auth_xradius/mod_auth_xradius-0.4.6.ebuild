@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_xradius/mod_auth_xradius-0.4.6.ebuild,v 1.1 2013/06/10 09:12:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_xradius/mod_auth_xradius-0.4.6.ebuild,v 1.2 2014/08/10 20:14:33 slyfox Exp $
 
 EAPI="5"
 
 inherit autotools eutils
 
-DESCRIPTION="Radius authentication for Apache."
+DESCRIPTION="Radius authentication for Apache"
 HOMEPAGE="http://www.outoforder.cc/projects/apache/mod_auth_xradius/"
 SRC_URI="http://www.outoforder.cc/downloads/${PN}/${P}.tar.bz2"
 

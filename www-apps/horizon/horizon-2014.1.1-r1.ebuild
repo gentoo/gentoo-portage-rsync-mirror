@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-2014.1.1-r1.ebuild,v 1.1 2014/07/08 16:09:14 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-2014.1.1-r1.ebuild,v 1.2 2014/08/10 20:13:31 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-DESCRIPTION="A Django-based project aimed at providing a complete OpenStack Dashboard."
+DESCRIPTION="A Django-based project aimed at providing a complete OpenStack Dashboard"
 HOMEPAGE="https://launchpad.net/horizon"
 SRC_URI="http://launchpad.net/${PN}/icehouse/${PV}/+download/${P}.tar.gz"
 

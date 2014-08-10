@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-4.4.2.ebuild,v 1.5 2011/12/31 12:32:47 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-4.4.2.ebuild,v 1.6 2014/08/10 20:15:08 slyfox Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ JAVA_PKG_IUSE="doc test source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A set of Java libraries providing Unicode and Globalization support."
+DESCRIPTION="A set of Java libraries providing Unicode and Globalization support"
 MY_PV=${PV//./_}
 
 SRC_URI="http://download.icu-project.org/files/${PN}/${PV}/${PN}-${MY_PV}-src.jar

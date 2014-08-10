@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/wmpiki-0.2.1.ebuild,v 1.10 2010/09/03 09:24:12 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/wmpiki-0.2.1.ebuild,v 1.11 2014/08/10 20:08:32 slyfox Exp $
 
 EAPI=2
 inherit eutils
 
 IUSE=""
 
-DESCRIPTION="Wmpiki is a dockapp which checks and displays small leds for indicate hosts activity."
+DESCRIPTION="Wmpiki is a dockapp which checks and displays small leds for indicate hosts activity"
 HOMEPAGE="http://clay.ll.pl/projects.html#dockapps"
 SRC_URI="http://clay.ll.pl/download/${P}.tar.gz"
 

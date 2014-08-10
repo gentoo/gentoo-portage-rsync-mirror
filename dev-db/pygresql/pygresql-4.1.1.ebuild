@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-4.1.1.ebuild,v 1.8 2014/01/26 12:00:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-4.1.1.ebuild,v 1.9 2014/08/10 20:02:22 slyfox Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit distutils-r1
 
 MY_P="PyGreSQL-${PV}"
 
-DESCRIPTION="A Python interface for the PostgreSQL database."
+DESCRIPTION="A Python interface for the PostgreSQL database"
 HOMEPAGE="http://www.pygresql.org/"
 SRC_URI="mirror://pypi/P/PyGreSQL/${MY_P}.tgz"
 

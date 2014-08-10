@@ -1,9 +1,9 @@
 DEFINED_PHASES=install unpack
-DESCRIPTION=Collection of tools including assembler, linker and librarian for PIC microcontrollers.
+DESCRIPTION=Collection of tools including assembler, linker and librarian for PIC microcontrollers
 HOMEPAGE=http://gputils.sourceforge.net/
 KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/gputils/gputils-0.13.6.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=9f50ef916751ecaf67a5ccb0ee9ecdb8
+_md5_=caca5b2e87084970504e9637048c28d8

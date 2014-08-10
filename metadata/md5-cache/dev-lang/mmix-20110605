@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=|| ( >=dev-util/cweb-3.63 virtual/tex-base )
-DESCRIPTION=Donald Knuth's MMIX Assembler and Simulator.
+DESCRIPTION=Donald Knuth's MMIX Assembler and Simulator
 EAPI=2
 HOMEPAGE=http://www-cs-faculty.stanford.edu/~knuth/mmix.html
 IUSE=doc
@@ -9,4 +9,4 @@ LICENSE=mmix
 SLOT=0
 SRC_URI=http://www-cs-faculty.stanford.edu/~knuth/programs/mmix-20110605.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=4e3b45c10f894cfde8e7cf40fab35b53
+_md5_=b99b30bf05dd01a43f02c944e59d3287

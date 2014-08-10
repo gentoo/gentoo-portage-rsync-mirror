@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prepare setup
 DEPEND=dbi? ( dev-db/libdbi ) gdbm? ( sys-libs/gdbm ) =www-servers/apache-2.2*
-DESCRIPTION=Apache2 module which provides an FTP server.
+DESCRIPTION=Apache2 module which provides an FTP server
 EAPI=2
 HOMEPAGE=http://www.outoforder.cc/projects/apache/mod_ftpd/
 IUSE=dbi gdbm
@@ -10,4 +10,4 @@ RDEPEND=dbi? ( dev-db/libdbi ) gdbm? ( sys-libs/gdbm ) =www-servers/apache-2.2*
 SLOT=0
 SRC_URI=http://www.outoforder.cc/downloads/mod_ftpd/mod_ftpd-0.14.tar.bz2
 _eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=1548b6835d626976929f80f79031e94f
+_md5_=dc2af4fdcfb08fe567a71d85f14f6557

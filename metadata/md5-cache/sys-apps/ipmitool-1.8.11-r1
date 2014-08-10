@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare
 DEPEND=dev-libs/openssl openipmi? ( sys-libs/openipmi ) virtual/os-headers
-DESCRIPTION=Utility for controlling IPMI enabled devices.
+DESCRIPTION=Utility for controlling IPMI enabled devices
 EAPI=4
 HOMEPAGE=http://ipmitool.sf.net/
 IUSE=openipmi
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/openssl
 SLOT=0
 SRC_URI=mirror://sourceforge/ipmitool/ipmitool-1.8.11.tar.gz https://launchpad.net/ubuntu/+archive/primary/+files/ipmitool_1.8.11-5ubuntu1.diff.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c453b8849a09b2b1f9d7e797b0b41ebb
+_md5_=bcabf1800007d2edde37bd12f976b6dc

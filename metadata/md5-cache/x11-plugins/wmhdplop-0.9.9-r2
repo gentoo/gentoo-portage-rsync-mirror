@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=media-libs/imlib2[X] x11-libs/libX11 x11-libs/libXext media-fonts/corefonts >=media-libs/freetype-2 x11-proto/xextproto
-DESCRIPTION=a dockapp for monitoring disk activities with fancy visuals.
+DESCRIPTION=a dockapp for monitoring disk activities with fancy visuals
 EAPI=2
 HOMEPAGE=http://hules.free.fr/wmhdplop
 KEYWORDS=~amd64 ~ppc x86
@@ -9,4 +9,4 @@ RDEPEND=media-libs/imlib2[X] x11-libs/libX11 x11-libs/libXext media-fonts/corefo
 SLOT=0
 SRC_URI=http://hules.free.fr/wmhdplop/wmhdplop-0.9.9.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=65ca64e2fa87ff522244705111890b00
+_md5_=05a3d770fb7c559e8819ad58e1eca451

@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.7-r1.ebuild,v 1.7 2010/05/28 19:32:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.7-r1.ebuild,v 1.8 2014/08/10 20:12:27 slyfox Exp $
 
 EAPI="2"
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2
 
-DESCRIPTION="Java bindings for the D-Bus messagebus."
+DESCRIPTION="Java bindings for the D-Bus messagebus"
 HOMEPAGE="http://dbus.freedesktop.org/"
 SRC_URI="http://dbus.freedesktop.org/releases/dbus-java/${P}.tar.gz"
 

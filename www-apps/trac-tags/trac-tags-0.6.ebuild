@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-tags/trac-tags-0.6.ebuild,v 1.2 2011/02/27 16:46:23 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-tags/trac-tags-0.6.ebuild,v 1.3 2014/08/10 20:15:43 slyfox Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ inherit distutils
 MY_REV="9901"
 MY_DIR="tagsplugin/tags/${PV}"
 
-DESCRIPTION="Tags plugin for Trac."
+DESCRIPTION="Tags plugin for Trac"
 HOMEPAGE="http://trac-hacks.org/wiki/TagsPlugin"
 SRC_URI="http://trac-hacks.org/changeset/${MY_REV}/${MY_DIR}?old_path=%2F&format=zip
 	-> ${P}.zip"

@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-1.3.3.ebuild,v 1.4 2008/06/19 11:12:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-1.3.3.ebuild,v 1.5 2014/08/10 20:04:28 slyfox Exp $
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="a (fast, light, and cool eye-candy) quick launch bar."
+DESCRIPTION="a (fast, light, and cool eye-candy) quick launch bar"
 HOMEPAGE="http://www.tecnologia-aplicada.com.ar/rodolfo"
 SRC_URI="http://www.tecnologia-aplicada.com.ar/rodolfo/${P}.tbz2
 	http://www.tecapli.com.ar/rodolfo/${P}.tbz2"

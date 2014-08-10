@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jms
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/ChangeLog,v 1.17 2012/01/01 19:37:50 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/ChangeLog,v 1.18 2014/08/10 20:24:59 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sun-jms-1.1-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> sun-jms-1.1-r2.ebuild:
   Drop ia64 support #345433
@@ -90,4 +93,3 @@
   30 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +jms-1.1.ebuild:
   inital import, ebuild contributed by Dan <dan@intuitivelyobvious.net>
-

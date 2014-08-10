@@ -1,6 +1,6 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/weboob-0h.ebuild,v 1.1 2014/01/09 04:52:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/weboob-0h.ebuild,v 1.2 2014/08/10 20:10:43 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -24,7 +24,7 @@ else
 	S="${WORKDIR}/${MY_P}"
 fi
 
-DESCRIPTION="Weboob (Web Outside of Browsers) provides several applications to interact with a lot of websites."
+DESCRIPTION="Weboob (Web Outside of Browsers) provides several applications to interact with a lot of websites"
 HOMEPAGE="http://weboob.org/"
 
 LICENSE="AGPL-3"

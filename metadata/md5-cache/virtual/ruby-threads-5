@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup test unpack
 DEPEND=ruby_targets_ruby21? ( dev-lang/ruby:2.1 )
-DESCRIPTION=Virtual ebuild for a ruby interpreter with threading enabled.
+DESCRIPTION=Virtual ebuild for a ruby interpreter with threading enabled
 EAPI=5
 IUSE=elibc_FreeBSD ruby_targets_ruby21
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x64-macos
@@ -8,4 +8,4 @@ RDEPEND=dev-lang/ruby:2.1 ruby_targets_ruby21? ( dev-lang/ruby:2.1 )
 REQUIRED_USE=|| ( ruby_targets_ruby21 )
 SLOT=ruby21
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=e1045c54e82b6c174792fdca2e55d8b7
+_md5_=989fc83a9a85e8caef115f885df4ac94

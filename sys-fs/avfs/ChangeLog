@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.49 2014/04/25 08:46:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.50 2014/08/10 20:19:19 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> avfs-1.0.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   25 Apr 2014; Tim Harder <radhermit@gentoo.org> -avfs-0.9.9.ebuild,
   -avfs-1.0.0.ebuild, -files/avfs-0.9.8-gcc43_fix_open_missing_mode.patch:

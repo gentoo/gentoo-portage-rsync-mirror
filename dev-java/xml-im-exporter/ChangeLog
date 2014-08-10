@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-im-exporter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/ChangeLog,v 1.7 2009/09/11 22:13:18 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/ChangeLog,v 1.8 2014/08/10 20:27:00 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  xml-im-exporter-1.1-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   11 Sep 2009; Markus Meier <maekke@gentoo.org>
   xml-im-exporter-1.1-r1.ebuild:
@@ -33,4 +37,3 @@
   +xml-im-exporter-1.1.ebuild:
   Inital import, ebuild based on the contribution by Josh Nichols
   <nichoj@alum.rpi.edu>. Fixes #93515.
-

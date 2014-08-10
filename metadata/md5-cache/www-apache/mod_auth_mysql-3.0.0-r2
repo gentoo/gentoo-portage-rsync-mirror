@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst prepare setup
 DEPEND=virtual/mysql sys-libs/zlib =www-servers/apache-2.2*
-DESCRIPTION=Basic authentication for Apache using a MySQL database.
+DESCRIPTION=Basic authentication for Apache using a MySQL database
 EAPI=2
 HOMEPAGE=http://modauthmysql.sourceforge.net/
 KEYWORDS=amd64 x86
@@ -9,4 +9,4 @@ RDEPEND=virtual/mysql sys-libs/zlib !www-apache/mod-auth-mysql =www-servers/apac
 SLOT=0
 SRC_URI=mirror://sourceforge/modauthmysql/mod_auth_mysql-3.0.0.tar.gz
 _eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=5ca94f870e9cb6aee7dc5f3a0c69a431
+_md5_=2285a7c69f9654e1dce0f5873bfb2263

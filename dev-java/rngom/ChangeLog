@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rngom
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/ChangeLog,v 1.9 2008/03/28 17:54:55 nixnut Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/ChangeLog,v 1.10 2014/08/10 20:22:59 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> rngom-20051226.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   28 Mar 2008; nixnut <nixnut@gentoo.org> rngom-20051226.ebuild:
   Stable on ppc wrt bug 214778
@@ -35,4 +38,3 @@
   01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/build.xml-20051226, +metadata.xml, +rngom-20051226.ebuild:
   Initial commit of rngom.
-

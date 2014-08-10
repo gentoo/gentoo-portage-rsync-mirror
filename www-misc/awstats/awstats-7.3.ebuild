@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.3.ebuild,v 1.1 2014/04/26 20:23:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.3.ebuild,v 1.2 2014/08/10 20:10:20 slyfox Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit eutils
 
 MY_P=${PN}-${PV%_p*}
 
-DESCRIPTION="AWStats is short for Advanced Web Statistics."
+DESCRIPTION="AWStats is short for Advanced Web Statistics"
 HOMEPAGE="http://www.awstats.org/"
 
 if [ ${MY_P} != ${P} ]; then

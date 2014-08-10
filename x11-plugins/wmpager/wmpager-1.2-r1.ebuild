@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpager/wmpager-1.2-r1.ebuild,v 1.13 2010/10/27 08:52:41 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpager/wmpager-1.2-r1.ebuild,v 1.14 2014/08/10 20:08:24 slyfox Exp $
 
 EAPI=2
 
-DESCRIPTION="A simple pager docklet for the WindowMaker window manager."
+DESCRIPTION="A simple pager docklet for the WindowMaker window manager"
 HOMEPAGE="http://wmpager.sourceforge.net/"
 SRC_URI="mirror://sourceforge/wmpager/${P}.tar.gz"
 

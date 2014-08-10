@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/helpgui
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/helpgui/ChangeLog,v 1.7 2007/05/20 17:26:41 caster Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/helpgui/ChangeLog,v 1.8 2014/08/10 20:14:23 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> helpgui-1.1-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 May 2007; Vlastimil Babka <caster@gentoo.org> -helpgui-1.1.ebuild:
   Gen-1 punt.
@@ -27,4 +30,3 @@
   +helpgui-1.1.ebuild:
   Initial import, ebuild based on the contribution by Josh Nichols
   <nichoj@alum.rpi.edu>. Fixes #93561
-

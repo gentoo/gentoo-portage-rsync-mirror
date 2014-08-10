@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-3.8.1-r1.ebuild,v 1.8 2011/12/31 12:32:47 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-3.8.1-r1.ebuild,v 1.9 2014/08/10 20:15:08 slyfox Exp $
 
 # We currently download the Javadoc documentation.
 # It could optionally be built using the Ant build file.
@@ -12,7 +12,7 @@ JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2 java-osgi
 
-DESCRIPTION="ICU4J is a set of Java libraries providing Unicode and Globalization support."
+DESCRIPTION="ICU4J is a set of Java libraries providing Unicode and Globalization support"
 MY_PV=${PV//./_}
 
 SRC_URI="http://download.icu-project.org/files/${PN}/${PV}/${PN}-${MY_PV}-src.jar

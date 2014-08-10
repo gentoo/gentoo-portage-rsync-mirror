@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.13.ebuild,v 1.6 2009/12/29 07:43:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.13.ebuild,v 1.7 2014/08/10 20:13:32 slyfox Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -8,7 +8,7 @@ WANT_ANT_TASKS="ant-nodeps"
 
 inherit java-pkg-2 java-ant-2 eutils
 
-DESCRIPTION=" FreeMarker is a template engine; a generic tool to generate text output based on templates."
+DESCRIPTION=" FreeMarker is a template engine; a generic tool to generate text output based on templates"
 HOMEPAGE="http://freemarker.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

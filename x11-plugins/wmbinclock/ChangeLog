@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbinclock
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/ChangeLog,v 1.17 2008/11/25 23:30:05 tcunha Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/ChangeLog,v 1.18 2014/08/10 20:04:44 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmbinclock-0.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   25 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmbinclock-0.5.ebuild:
   stable sparc, bug 215651
@@ -61,4 +64,3 @@
 
   03 Jun 2003; Brad Cowan <bcowan@gentoo.org> wmbinclock-0.1.ebuild:
   Initial import. Thanks to Bret Towe bug #18110.
-

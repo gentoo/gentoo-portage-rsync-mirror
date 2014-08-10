@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.9-r4.ebuild,v 1.11 2011/12/31 12:40:04 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.9-r4.ebuild,v 1.12 2014/08/10 20:17:55 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="JDepend traverses Java class file directories and generates design quality metrics per package."
+DESCRIPTION="JDepend traverses Java class file directories and generates design quality metrics per package"
 HOMEPAGE="http://www.clarkware.com/software/JDepend.html"
 SRC_URI="http://www.clarkware.com/software/${P}.zip"
 

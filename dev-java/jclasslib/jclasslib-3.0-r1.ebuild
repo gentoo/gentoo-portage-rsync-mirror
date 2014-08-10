@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/jclasslib-3.0-r1.ebuild,v 1.4 2007/09/28 22:11:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/jclasslib-3.0-r1.ebuild,v 1.5 2014/08/10 20:17:37 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2
 
 MY_PV=${PV/./_}
-DESCRIPTION="A bytecode viewer is a tool."
+DESCRIPTION="A bytecode viewer is a tool"
 HOMEPAGE="http://www.ej-technologies.com/products/jclasslib/overview.html"
 SRC_URI="mirror://sourceforge/${PN}/${PN}_unix_${MY_PV}.tar.gz"
 

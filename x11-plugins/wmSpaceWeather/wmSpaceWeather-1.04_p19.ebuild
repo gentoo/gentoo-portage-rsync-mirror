@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/wmSpaceWeather-1.04_p19.ebuild,v 1.7 2010/07/25 19:11:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/wmSpaceWeather-1.04_p19.ebuild,v 1.8 2014/08/10 20:03:48 slyfox Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ MY_PV_PATCH="${PV/_p/-}"
 MY_P_ORIG="${MY_PN}_${MY_PV_ORIG}.orig"
 MY_P_PATCH="${MY_PN}_${MY_PV_PATCH}.diff"
 
-DESCRIPTION="dockapp showing weather at geosynchronous orbit."
+DESCRIPTION="dockapp showing weather at geosynchronous orbit"
 HOMEPAGE="http://packages.debian.org/sid/wmspaceweather"
 SRC_URI="mirror://debian/pool/main/w/${MY_PN}/${MY_P_ORIG}.tar.gz
 	    mirror://debian/pool/main/w/${MY_PN}/${MY_P_PATCH}.gz"

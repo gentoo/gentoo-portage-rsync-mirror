@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/log4net-1.2.11.ebuild,v 1.4 2012/06/04 07:08:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/log4net-1.2.11.ebuild,v 1.5 2014/08/10 20:03:08 slyfox Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit eutils mono multilib versionator
 
 PV_MAJOR=$(get_version_component_range 1-2)
 
-DESCRIPTION="tool to help the programmer output log statements to a variety of output targets."
+DESCRIPTION="tool to help the programmer output log statements to a variety of output targets"
 HOMEPAGE="http://logging.apache.org/log4net/"
 SRC_URI="mirror://apache/logging/log4net/source/${P}-src.zip
 	http://dev.gentoo.org/~pacho/dotnet/log4net.snk"

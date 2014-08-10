@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/beansbinding/beansbinding-1.2.1.ebuild,v 1.5 2010/01/18 19:12:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/beansbinding/beansbinding-1.2.1.ebuild,v 1.6 2014/08/10 20:08:42 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Implementation of JSR295."
+DESCRIPTION="Implementation of JSR295"
 HOMEPAGE="https://beansbinding.dev.java.net"
 SRC_URI="https://beansbinding.dev.java.net/files/documents/6779/73673/${P}-src.zip"
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare
 DEPEND=xft? ( media-libs/freetype x11-libs/libXft ) x11-libs/libX11 x11-libs/libXext x11-libs/libXt app-text/rman x11-misc/imake xft? ( virtual/pkgconfig )
-DESCRIPTION=Digital clock for the X window system.
+DESCRIPTION=Digital clock for the X window system
 EAPI=4
 HOMEPAGE=http://packages.qa.debian.org/d/dclock.html
 IUSE=xft
@@ -10,4 +10,4 @@ RDEPEND=xft? ( media-libs/freetype x11-libs/libXft ) x11-libs/libX11 x11-libs/li
 SLOT=0
 SRC_URI=mirror://debian/pool/main/d/dclock/dclock_2.2.2.orig.tar.gz mirror://debian/pool/main/d/dclock/dclock_2.2.2-4.debian.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ad7f95dcfca4a37c99f00d61546b8949
+_md5_=1f700f9407957df0b955ccec70492b7c

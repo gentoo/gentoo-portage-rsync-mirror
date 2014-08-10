@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vdbh/mod_vdbh-1.0.3-r1.ebuild,v 1.1 2007/07/29 15:18:08 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vdbh/mod_vdbh-1.0.3-r1.ebuild,v 1.2 2014/08/10 20:18:22 slyfox Exp $
 
 inherit apache-module
 
 KEYWORDS="ppc x86"
 
-DESCRIPTION="An Apache2 module for mass virtual hosting using a MySQL database."
+DESCRIPTION="An Apache2 module for mass virtual hosting using a MySQL database"
 HOMEPAGE="http://www.synthemesc.com/mod_vdbh/"
 SRC_URI="http://www.synthemesc.com/downloads/${PN}/${P}.tar.gz"
 LICENSE="Apache-1.1"

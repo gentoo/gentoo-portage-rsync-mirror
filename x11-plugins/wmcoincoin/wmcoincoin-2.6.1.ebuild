@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/wmcoincoin-2.6.1.ebuild,v 1.2 2014/04/07 19:49:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/wmcoincoin-2.6.1.ebuild,v 1.3 2014/08/10 20:05:40 slyfox Exp $
 
 EAPI=5
 
-DESCRIPTION="a dockapp for browsing dacode news and board sites."
+DESCRIPTION="a dockapp for browsing dacode news and board sites"
 HOMEPAGE="http://hules.free.fr/wmcoincoin"
 SRC_URI="http://hules.free.fr/${PN}/download/${P}.tar.gz"
 

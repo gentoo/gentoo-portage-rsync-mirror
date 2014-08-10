@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/driconf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.31 2011/03/28 22:28:03 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.32 2014/08/10 20:02:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> driconf-0.9.1-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> driconf-0.9.1-r1.ebuild:
   Pin pygtk and gtk+ to slot 2.
@@ -112,4 +115,3 @@
   +driconf-0.2.7.ebuild:
   Initial import.  Thanks to James Le Cuirot and Christoph Brill (egore) for the
   ebuild.  Bug #70267 .
-

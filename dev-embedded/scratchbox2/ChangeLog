@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/scratchbox2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox2/ChangeLog,v 1.6 2011/09/13 19:06:11 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox2/ChangeLog,v 1.7 2014/08/10 20:06:08 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> scratchbox2-2.0-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #278944
@@ -25,4 +28,3 @@
   +files/scratchbox2-2.0-gentoo.patch,
   +files/scratchbox2-2.0-glibc-2.10.patch, +metadata.xml:
   Initial commit for scratchbox2 - moved from dev-embedded/scratchbox
-

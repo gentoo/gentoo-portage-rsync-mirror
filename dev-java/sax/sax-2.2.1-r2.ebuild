@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/sax-2.2.1-r2.ebuild,v 1.8 2014/04/01 15:56:25 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/sax-2.2.1-r2.ebuild,v 1.9 2014/08/10 20:23:08 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Simple API for XML, originally a Java-only API. It was the first widely adopted API for XML in Java."
+DESCRIPTION="Simple API for XML, originally a Java-only API. It was the first widely adopted API for XML in Java"
 
 HOMEPAGE="http://sax.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sax/sax2r3.zip"

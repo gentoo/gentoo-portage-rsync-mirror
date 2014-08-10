@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.4.ebuild,v 1.5 2013/06/09 12:13:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.4.ebuild,v 1.6 2014/08/10 20:17:53 slyfox Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ MY_PN=modsecurity-apache
 MY_PV=${PV/_rc/-rc}
 MY_P=${MY_PN}_${MY_PV}
 
-DESCRIPTION="Web application firewall and Intrusion Detection System for Apache."
+DESCRIPTION="Web application firewall and Intrusion Detection System for Apache"
 HOMEPAGE="http://www.modsecurity.org/"
 SRC_URI="http://www.modsecurity.org/tarball/${PV}/${MY_P}.tar.gz"
 

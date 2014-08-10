@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.27.ebuild,v 1.1 2013/10/03 18:21:01 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.27.ebuild,v 1.2 2014/08/10 20:14:07 slyfox Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit eutils webapp
 MY_PV="${PV%_p*}"
 MY_P="mythweb-${MY_PV}"
 
-DESCRIPTION="PHP scripts intended to manage MythTV from a web browser."
+DESCRIPTION="PHP scripts intended to manage MythTV from a web browser"
 HOMEPAGE="http://www.mythtv.org"
 LICENSE="GPL-2"
 SRC_URI="https://github.com/MythTV/mythweb/archive/v${MY_PV}.tar.gz -> mythweb-${MY_PV}.tar.gz

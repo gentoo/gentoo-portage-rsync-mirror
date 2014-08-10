@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/xcircuit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.65 2013/06/10 06:36:15 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.66 2014/08/10 20:28:53 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xcircuit-3.4.30.ebuild,
+  xcircuit-3.6.165.ebuild, xcircuit-3.7.48.ebuild, xcircuit-3.7.49.ebuild,
+  xcircuit-3.7.50.ebuild, xcircuit-3.8.39.ebuild, xcircuit-3.8.40.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *xcircuit-3.7.50 (10 Jun 2013)
 *xcircuit-3.8.40 (10 Jun 2013)

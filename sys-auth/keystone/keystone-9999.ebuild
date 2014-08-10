@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.18 2014/07/26 23:13:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.19 2014/08/10 20:21:57 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit git-2 distutils-r1 user
 
-DESCRIPTION="The Openstack authentication, authorization, and service catalog written in Python."
+DESCRIPTION="The Openstack authentication, authorization, and service catalog written in Python"
 HOMEPAGE="https://launchpad.net/keystone"
 EGIT_REPO_URI="https://github.com/openstack/keystone.git"
 EGIT_BRANCH="master"

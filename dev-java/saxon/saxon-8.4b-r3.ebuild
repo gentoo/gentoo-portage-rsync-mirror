@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-8.4b-r3.ebuild,v 1.7 2010/03/28 17:37:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-8.4b-r3.ebuild,v 1.8 2014/08/10 20:23:18 slyfox Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 eutils java-ant-2
 
-DESCRIPTION="A collection of tools for processing XML documents: XSLT processor, XSL library, parser."
+DESCRIPTION="A collection of tools for processing XML documents: XSLT processor, XSL library, parser"
 MyPV=${PV%b}
 SRC_URI="mirror://sourceforge/saxon/saxonb${MyPV/./-}.zip"
 HOMEPAGE="http://saxon.sourceforge.net/"

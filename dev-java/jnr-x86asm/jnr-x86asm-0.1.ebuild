@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-x86asm/jnr-x86asm-0.1.ebuild,v 1.5 2012/12/22 19:47:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-x86asm/jnr-x86asm-0.1.ebuild,v 1.6 2014/08/10 20:19:04 slyfox Exp $
 
 EAPI=3
 
@@ -9,7 +9,7 @@ WANT_ANT_TASKS="ant-nodeps"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A pure-java port of asmjit."
+DESCRIPTION="A pure-java port of asmjit"
 HOMEPAGE="http://github.com/wmeissner/jnr-x86asm/"
 SRC_URI="http://github.com/wmeissner/${PN}/tarball/0.1 -> ${P}.tar.gz"
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/tapecat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tapecat/ChangeLog,v 1.6 2009/09/11 11:34:31 flameeyes Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tapecat/ChangeLog,v 1.7 2014/08/10 20:22:35 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tapecat-1.0.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   11 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   tapecat-1.0.0.ebuild:
@@ -25,4 +28,3 @@
   New ebuild. Tapecat is a useful tool to analyze the content of tapes without
   storing all of the content onto disk. Ebuild by Robin H. Johnson
   <robbat2@gentoo.org>.
-

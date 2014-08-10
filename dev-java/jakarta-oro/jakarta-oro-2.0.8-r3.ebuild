@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/jakarta-oro-2.0.8-r3.ebuild,v 1.6 2012/08/20 02:25:36 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/jakarta-oro-2.0.8-r3.ebuild,v 1.7 2014/08/10 20:15:54 slyfox Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A set of text-processing Java classes."
+DESCRIPTION="A set of text-processing Java classes"
 HOMEPAGE="http://jakarta.apache.org/oro/index.html"
 SRC_URI="mirror://apache/jakarta/oro/source/${P}.tar.gz"
 

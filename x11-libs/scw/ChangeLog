@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/scw
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.10 2012/05/05 03:52:24 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.11 2014/08/10 20:06:45 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> scw-0.4.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> scw-0.4.7.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -43,4 +46,3 @@
   10 Apr 2006; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   +scw-0.4.3.ebuild:
   Initial commit.
-

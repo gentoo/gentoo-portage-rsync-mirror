@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/roundup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.69 2014/06/18 19:49:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.70 2014/08/10 20:15:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> roundup-1.4.20.ebuild,
+  roundup-1.4.21.ebuild, roundup-1.5.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   18 Jun 2014; Tim Harder <radhermit@gentoo.org> -roundup-1.4.16.ebuild,
   -roundup-1.4.19.ebuild:

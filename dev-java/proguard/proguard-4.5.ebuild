@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/proguard-4.5.ebuild,v 1.4 2011/12/16 08:36:15 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/proguard-4.5.ebuild,v 1.5 2014/08/10 20:22:30 slyfox Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Free Java class file shrinker, optimizer, and obfuscator."
+DESCRIPTION="Free Java class file shrinker, optimizer, and obfuscator"
 HOMEPAGE="http://proguard.sourceforge.net/"
 MY_P=${P/-/}
 MY_P=${MY_P/_/}

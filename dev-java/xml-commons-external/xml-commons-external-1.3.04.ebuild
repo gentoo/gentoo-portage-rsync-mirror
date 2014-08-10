@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/xml-commons-external-1.3.04.ebuild,v 1.15 2013/06/14 19:22:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/xml-commons-external-1.3.04.ebuild,v 1.16 2014/08/10 20:26:53 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="An Apache-hosted set of externally-defined standards interfaces, namely DOM, SAX, and JAXP."
+DESCRIPTION="An Apache-hosted set of externally-defined standards interfaces, namely DOM, SAX, and JAXP"
 HOMEPAGE="http://xml.apache.org/commons/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 # upstream source tar.gz is missing build.xml and other stuff, so we get it like this

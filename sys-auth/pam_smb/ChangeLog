@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_smb
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/ChangeLog,v 1.7 2007/09/12 21:22:53 dev-zero Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/ChangeLog,v 1.8 2014/08/10 20:22:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  pam_smb-2.0.0_rc6-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Sep 2007; Tiziano Müller <dev-zero@gentoo.org>
   -pam_smb-1.9.9-r1.ebuild, -pam_smb-1.9.9-r2.ebuild,

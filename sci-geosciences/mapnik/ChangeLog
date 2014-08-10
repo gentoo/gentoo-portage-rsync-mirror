@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.42 2014/03/04 21:42:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.43 2014/08/10 20:28:01 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mapnik-2.0.1.ebuild,
+  mapnik-2.0.2.ebuild, mapnik-2.1.0.ebuild, mapnik-2.2.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> mapnik-2.2.0.ebuild:
   Add subslot dependency on dev-libs/icu

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=>=sys-freebsd/freebsd-sources-8.2 app-arch/cpio virtual/pmake
-DESCRIPTION=Virtio drivers from FreeBSD Ports' emulators/virtio-kmod.
+DESCRIPTION=Virtio drivers from FreeBSD Ports' emulators/virtio-kmod
 EAPI=4
 HOMEPAGE=http://www.freshports.org/emulators/virtio-kmod/
 IUSE=custom-cflags +debug
@@ -10,4 +10,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://freebsd/ports/local-distfiles/kuriyama/virtio-0.228301.tar.gz
 _eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=3abee89c87961cdb318b0af69606bc99
+_md5_=5a349f1c5072619dd0f359dab4caf2d2

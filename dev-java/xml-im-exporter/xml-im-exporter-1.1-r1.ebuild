@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/xml-im-exporter-1.1-r1.ebuild,v 1.3 2009/09/11 22:13:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/xml-im-exporter-1.1-r1.ebuild,v 1.4 2014/08/10 20:27:00 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="XML Im-/Exporter is a library to assist you in the process of importing and exporting XML."
+DESCRIPTION="XML Im-/Exporter is a library to assist you in the process of importing and exporting XML"
 HOMEPAGE="http://xml-im-exporter.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}${PV}.tgz"
 

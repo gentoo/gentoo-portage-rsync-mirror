@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.9.4.ebuild,v 1.1 2014/05/18 04:32:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.9.4.ebuild,v 1.2 2014/08/10 20:04:08 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PYTHON_REQ_USE="xml"
 
 inherit eutils python-single-r1
 
-DESCRIPTION="TreeLine is a structured information storage program."
+DESCRIPTION="TreeLine is a structured information storage program"
 HOMEPAGE="http://treeline.bellz.org/"
 SRC_URI="mirror://sourceforge/project/${PN}/${PV}/${P}.tar.gz"
 

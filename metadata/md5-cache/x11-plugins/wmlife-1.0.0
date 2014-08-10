@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure prepare
 DEPEND=x11-libs/gtk+:2 >=gnome-base/gnome-panel-2 >=gnome-base/libgnomeui-2 x11-libs/libX11 x11-libs/libXext x11-libs/libSM x11-libs/libICE x11-libs/libXt virtual/pkgconfig
-DESCRIPTION=dockapp running Conway's Game of Life (and program launcher).
+DESCRIPTION=dockapp running Conway's Game of Life (and program launcher)
 EAPI=5
 HOMEPAGE=http://www.swanson.ukfsn.org/#wmlife
 KEYWORDS=~amd64 ~x86
@@ -9,4 +9,4 @@ RDEPEND=x11-libs/gtk+:2 >=gnome-base/gnome-panel-2 >=gnome-base/libgnomeui-2 x11
 SLOT=0
 SRC_URI=http://www.swanson.ukfsn.org/wmlife/wmlife-1.0.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e53468a8125195b2c197f855b1bf0f8d
+_md5_=ca0e0c048ecab2454f67fbb4a547e979

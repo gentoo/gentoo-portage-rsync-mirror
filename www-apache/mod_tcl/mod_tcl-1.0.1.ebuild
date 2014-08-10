@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/mod_tcl-1.0.1.ebuild,v 1.7 2012/10/12 08:34:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/mod_tcl-1.0.1.ebuild,v 1.8 2014/08/10 20:18:10 slyfox Exp $
 
 inherit apache-module
 
 KEYWORDS="~amd64 ppc x86"
 
-DESCRIPTION="An Apache2 module providing an embedded Tcl interpreter."
+DESCRIPTION="An Apache2 module providing an embedded Tcl interpreter"
 HOMEPAGE="http://tcl.apache.org/mod_tcl/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="Apache-1.1"

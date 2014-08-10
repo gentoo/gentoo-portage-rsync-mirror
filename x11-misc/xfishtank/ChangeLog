@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xfishtank
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/ChangeLog,v 1.20 2012/03/06 21:50:44 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/ChangeLog,v 1.21 2014/08/10 20:04:58 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xfishtank-2.1-r1.ebuild,
+  xfishtank-2.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> xfishtank-2.1-r1.ebuild:
   Marking xfishtank-2.1-r1 ppc64 for bug 394045
@@ -68,4 +72,3 @@
   12 Apr 2004; Markus Nigbur <pyrania@gentoo.org> metadata.xml,
   xfishtank-2.1.ebuild:
   Initial import. Closing bug #42706.
-

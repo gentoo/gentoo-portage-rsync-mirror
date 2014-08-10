@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ngspice-25.ebuild,v 1.2 2013/02/20 00:32:43 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ngspice-25.ebuild,v 1.3 2014/08/10 20:28:24 slyfox Exp $
 
 EAPI="3"
 
 inherit autotools eutils
 
-DESCRIPTION="The Next Generation Spice (Electronic Circuit Simulator)."
+DESCRIPTION="The Next Generation Spice (Electronic Circuit Simulator)"
 SRC_URI="mirror://sourceforge/ngspice/${P}.tar.gz
 	mirror://sourceforge/ngspice/${PN}-${PV}-manual.pdf.gz"
 HOMEPAGE="http://ngspice.sourceforge.net"

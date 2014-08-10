@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgintex/pidgintex-1.1.1.ebuild,v 1.5 2011/08/24 19:52:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgintex/pidgintex-1.1.1.ebuild,v 1.6 2014/08/10 20:02:59 slyfox Exp $
 
 EAPI="2"
 inherit toolchain-funcs multilib
 
 MY_P=pidginTeX-${PV}
 
-DESCRIPTION="Pidgin plugin to render LaTeX expressions in messages."
+DESCRIPTION="Pidgin plugin to render LaTeX expressions in messages"
 HOMEPAGE="http://code.google.com/p/pidgintex"
 SRC_URI="http://pidgintex.googlecode.com/files/${MY_P}.tar.gz"
 

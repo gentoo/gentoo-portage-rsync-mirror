@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1-r2.ebuild,v 1.3 2014/03/03 23:29:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1-r2.ebuild,v 1.4 2014/08/10 20:21:29 slyfox Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="A free Java implementation of inverted-index compression technique."
+DESCRIPTION="A free Java implementation of inverted-index compression technique"
 SRC_URI="http://mg4j.dsi.unimi.it/${P}-src.tar.gz"
 HOMEPAGE="http://mg4j.dsi.unimi.it"
 

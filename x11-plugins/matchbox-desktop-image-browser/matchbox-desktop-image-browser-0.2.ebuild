@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/matchbox-desktop-image-browser-0.2.ebuild,v 1.8 2012/06/04 00:47:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/matchbox-desktop-image-browser-0.2.ebuild,v 1.9 2014/08/10 20:02:29 slyfox Exp $
 
 inherit versionator eutils autotools
 
 MY_PN=${PN/matchbox/mb}
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="An alpha-ish image browser plug in for matchbox-desktop."
+DESCRIPTION="An alpha-ish image browser plug in for matchbox-desktop"
 HOMEPAGE="http://matchbox-project.org/"
 SRC_URI="http://matchbox-project.org/sources/${MY_PN}/$(get_version_component_range 1-2)/${MY_P}.tar.bz2"
 LICENSE="GPL-2"

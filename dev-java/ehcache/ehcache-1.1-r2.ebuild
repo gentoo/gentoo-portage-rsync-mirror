@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.1-r2.ebuild,v 1.1 2014/07/14 10:36:25 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.1-r2.ebuild,v 1.2 2014/08/10 20:12:55 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-pkg-simple
 
-DESCRIPTION="Ehcache is a pure Java, fully-featured, in-process cache."
+DESCRIPTION="Ehcache is a pure Java, fully-featured, in-process cache"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 HOMEPAGE="http://ehcache.sourceforge.net"
 

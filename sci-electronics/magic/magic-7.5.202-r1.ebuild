@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.5.202-r1.ebuild,v 1.4 2013/04/23 08:40:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.5.202-r1.ebuild,v 1.5 2014/08/10 20:28:13 slyfox Exp $
 
 EAPI=5
 
 inherit multilib eutils autotools
 
-DESCRIPTION="The VLSI design CAD tool."
+DESCRIPTION="The VLSI design CAD tool"
 HOMEPAGE="http://www.opencircuitdesign.com/magic/index.html"
 SRC_URI="http://www.opencircuitdesign.com/magic/archive/${P}.tgz \
 	ftp://ftp.mosis.edu/pub/sondeen/magic/new/beta/2002a.tar.gz"

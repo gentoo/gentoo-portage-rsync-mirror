@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1.9999.ebuild,v 1.3 2014/07/26 23:09:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1.9999.ebuild,v 1.4 2014/08/10 20:20:15 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 eutils git-2 user
 
-DESCRIPTION="Cinder is the OpenStack Block storage service, a spin out of nova-volumes."
+DESCRIPTION="Cinder is the OpenStack Block storage service, a spin out of nova-volumes"
 HOMEPAGE="https://launchpad.net/cinder"
 EGIT_REPO_URI="https://github.com/openstack/cinder.git"
 EGIT_BRANCH="stable/icehouse"

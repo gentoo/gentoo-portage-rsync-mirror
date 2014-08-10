@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20060715_beta.ebuild,v 1.10 2008/01/17 21:31:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20060715_beta.ebuild,v 1.11 2014/08/10 20:22:23 slyfox Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source"
@@ -9,7 +9,7 @@ inherit java-pkg-2 java-ant-2
 
 MY_PV=${PV/_beta/}
 MY_P=${PN}-beta-${MY_PV}
-DESCRIPTION="UI toolkit for building highly interactive visualizations of structured and unstructured data."
+DESCRIPTION="UI toolkit for building highly interactive visualizations of structured and unstructured data"
 SRC_URI="mirror://sourceforge/prefuse/${MY_P}.zip"
 HOMEPAGE="http://prefuse.org"
 LICENSE="BSD"

@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/superswitcher-0.6.ebuild,v 1.8 2012/07/21 14:19:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/superswitcher-0.6.ebuild,v 1.9 2014/08/10 20:03:59 slyfox Exp $
 
 EAPI=4
 inherit autotools eutils
 
-DESCRIPTION="A more feature-full replacement of the Alt-Tab window switching behavior."
+DESCRIPTION="A more feature-full replacement of the Alt-Tab window switching behavior"
 HOMEPAGE="http://code.google.com/p/superswitcher/"
 SRC_URI="http://superswitcher.googlecode.com/files/${P}.tar.gz"
 

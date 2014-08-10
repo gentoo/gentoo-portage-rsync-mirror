@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/wmMoonClock-1.27-r1.ebuild,v 1.8 2012/02/15 09:52:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/wmMoonClock-1.27-r1.ebuild,v 1.9 2014/08/10 20:03:38 slyfox Exp $
 
 inherit eutils multilib toolchain-funcs
 
-DESCRIPTION="dockapp that shows lunar ephemeris to a high accuracy."
+DESCRIPTION="dockapp that shows lunar ephemeris to a high accuracy"
 SRC_URI="http://dockapps.windowmaker.org/download.php/id/21/${P}.tar.gz"
 HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/14"
 

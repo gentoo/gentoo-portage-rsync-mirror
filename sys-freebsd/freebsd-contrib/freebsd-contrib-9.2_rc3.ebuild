@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-9.2_rc3.ebuild,v 1.1 2013/08/26 20:42:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-9.2_rc3.ebuild,v 1.2 2014/08/10 20:19:23 slyfox Exp $
 
 inherit bsdmk freebsd flag-o-matic multilib
 
-DESCRIPTION="Contributed sources for FreeBSD."
+DESCRIPTION="Contributed sources for FreeBSD"
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 	SRC_URI="mirror://gentoo/${GNU}.tar.bz2

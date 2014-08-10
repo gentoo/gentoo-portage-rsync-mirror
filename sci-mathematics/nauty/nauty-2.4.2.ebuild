@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nauty/nauty-2.4.2.ebuild,v 1.4 2012/05/16 12:47:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nauty/nauty-2.4.2.ebuild,v 1.5 2014/08/10 20:23:44 slyfox Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit versionator
 MY_PV=$(replace_version_separator 2 'r')
 MY_PV=$(delete_version_separator 1 ${MY_PV})
 
-DESCRIPTION="program for computing automorphism groups of graphs and digraphs."
+DESCRIPTION="program for computing automorphism groups of graphs and digraphs"
 HOMEPAGE="http://cs.anu.edu.au/~bdm/nauty/"
 SRC_URI="http://cs.anu.edu.au/~bdm/${PN}/${PN}${MY_PV}.tar.gz"
 

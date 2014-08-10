@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmauda
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.19 2012/10/02 15:25:07 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.20 2014/08/10 20:04:25 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmauda-0.7.ebuild,
+  wmauda-0.8.ebuild, wmauda-0.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *wmauda-0.9 (02 Oct 2012)
 
@@ -80,4 +84,3 @@
   +wmauda-0.2.ebuild:
   Initial version of wmauda, a replacement for wmxmms that works with
   Audacious. I am upstream for this package
-

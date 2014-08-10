@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/sugarcrm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sugarcrm/ChangeLog,v 1.6 2013/03/28 14:43:03 maksbotan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sugarcrm/ChangeLog,v 1.7 2014/08/10 20:15:17 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sugarcrm-6.5.10.ebuild,
+  sugarcrm-6.5.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *sugarcrm-6.5.10 (28 Mar 2013)
 *sugarcrm-6.5.10-r1 (28 Mar 2013)

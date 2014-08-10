@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare setup
 DEPEND=dev-python/pygtk:2 sys-libs/ncurses virtual/libusb:1 dbus? ( sys-apps/dbus dev-libs/dbus-glib ) ntp? ( net-misc/ntp ) qt4? ( dev-qt/qtgui:4 ) app-text/xmlto =app-text/docbook-xml-dtd-4.1* test? ( sys-devel/bc ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients.
+DESCRIPTION=GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients
 EAPI=3
 HOMEPAGE=http://gpsd.berlios.de/
 IUSE=gpsd_protocols_ashtech gpsd_protocols_aivdm gpsd_protocols_clientdebug gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_navcom gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tsip gpsd_protocols_tripmate gpsd_protocols_tnt gpsd_protocols_ubx dbus ipv6 ntp qt4 test udev
@@ -10,4 +10,4 @@ RDEPEND=dev-python/pygtk:2 sys-libs/ncurses virtual/libusb:1 dbus? ( sys-apps/db
 SLOT=0
 SRC_URI=mirror://berlios/gpsd/gpsd-2.96bis.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=ca5d742a0baa02a3f38ae15f2585c695
+_md5_=feda5182129320b38ccb1880f5ee12a4

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.5 >=virtual/jre-1.5 dev-java/asm:1.5 dev-java/concurrent-util:0 dev-java/dom4j:1 dev-java/jrexx:0 dev-java/junit:0 dev-java/trove:0 dev-java/qdox:1.6 app-arch/unzip >=dev-java/java-config-2.1.9-r1 >=sys-apps/portage-2.1.2.7 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=sys-apps/portage-2.1.2.7 >=dev-java/javatoolkit-0.3.0-r2
-DESCRIPTION=AspectWerkz is a dynamic, lightweight and high-performant AOP/AOSD framework for Java.
+DESCRIPTION=AspectWerkz is a dynamic, lightweight and high-performant AOP/AOSD framework for Java
 EAPI=1
 HOMEPAGE=http://aspectwerkz.codehaus.org
 IUSE=elibc_FreeBSD source elibc_FreeBSD
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=2
 SRC_URI=http://dist.codehaus.org/aspectwerkz/distributions/aspectwerkz-2.0.RC2.zip
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=e130dc5393e25971a655bba2daac1824
+_md5_=19ace8874c7b78b1c45833427431c8e8

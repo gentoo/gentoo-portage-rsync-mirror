@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.3.ebuild,v 1.3 2009/12/28 08:47:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.3.ebuild,v 1.4 2014/08/10 20:27:49 slyfox Exp $
 
 EAPI="2"
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="XMLUnit extends JUnit and NUnit to enable unit testing of XML."
+DESCRIPTION="XMLUnit extends JUnit and NUnit to enable unit testing of XML"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 HOMEPAGE="http://xmlunit.sourceforge.net/"
 LICENSE="BSD"

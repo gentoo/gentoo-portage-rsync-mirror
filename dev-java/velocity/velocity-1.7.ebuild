@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.7.ebuild,v 1.1 2014/02/07 00:09:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.7.ebuild,v 1.2 2014/08/10 20:26:13 slyfox Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="examples doc source"
 
 inherit java-pkg-2 java-ant-2 eutils
 
-DESCRIPTION="A Java-based template engine for easy creation/rendering of documents that format and present data."
+DESCRIPTION="A Java-based template engine for easy creation/rendering of documents that format and present data"
 HOMEPAGE="http://velocity.apache.org"
 SRC_URI="mirror://apache/${PN}/engine/${PV}/${P}.tar.gz"
 

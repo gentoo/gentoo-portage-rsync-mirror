@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/annogen/annogen-0.1.0.ebuild,v 1.2 2014/07/08 08:21:21 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/annogen/annogen-0.1.0.ebuild,v 1.3 2014/08/10 20:06:45 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source examples"
 
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="A tool which helps you work with JSR175 annotations."
+DESCRIPTION="A tool which helps you work with JSR175 annotations"
 HOMEPAGE="http://annogen.codehaus.org/"
 SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P}.zip"
 

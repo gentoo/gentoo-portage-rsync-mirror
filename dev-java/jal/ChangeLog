@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/ChangeLog,v 1.17 2013/01/04 15:30:30 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/ChangeLog,v 1.18 2014/08/10 20:16:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jal-20031117-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Jan 2013; Ulrich Müller <ulm@gentoo.org> jal-20031117-r3.ebuild:
   Fix LICENSE (again), see README file, bug 448212.

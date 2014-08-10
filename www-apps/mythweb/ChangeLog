@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.103 2014/07/27 10:42:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.104 2014/08/10 20:14:07 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mythweb-0.26.0.ebuild,
+  mythweb-0.27.1.ebuild, mythweb-0.27.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Jul 2014; Pacho Ramos <pacho@gentoo.org> -mythweb-0.25.2.ebuild,
   -mythweb-0.25.3.ebuild:

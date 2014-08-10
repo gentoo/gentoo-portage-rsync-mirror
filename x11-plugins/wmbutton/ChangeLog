@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbutton
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.16 2008/11/25 23:43:55 tcunha Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.17 2014/08/10 20:05:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmbutton-0.6.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   25 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmbutton-0.6.1.ebuild:
   stable sparc, bug 215651

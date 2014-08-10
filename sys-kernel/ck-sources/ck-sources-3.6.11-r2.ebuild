@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.6.11-r2.ebuild,v 1.1 2013/03/18 20:43:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.6.11-r2.ebuild,v 1.2 2014/08/10 20:18:42 slyfox Exp $
 
 EAPI="5"
 ETYPE="sources"
@@ -21,7 +21,7 @@ detect_arch
 
 K_BRANCH_ID="${KV_MAJOR}.${KV_MINOR}"
 
-DESCRIPTION="Full Linux ${K_BRANCH_ID} kernel sources with Con Kolivas' high performance patchset and Gentoo's genpatches."
+DESCRIPTION="Full Linux ${K_BRANCH_ID} kernel sources with Con Kolivas' high performance patchset and Gentoo's genpatches"
 
 #-- If Gentoo-Sources don't follow then extra incremental patches are needed -
 

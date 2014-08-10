@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.5.ebuild,v 1.5 2012/09/30 18:44:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.5.ebuild,v 1.6 2014/08/10 20:08:55 slyfox Exp $
 
 EAPI=2
 inherit eutils
 
 MY_P=${P/p/P}
-DESCRIPTION="A http/https reverse-proxy and load-balancer."
+DESCRIPTION="A http/https reverse-proxy and load-balancer"
 HOMEPAGE="http://www.apsis.ch/pound/"
 SRC_URI="http://www.apsis.ch/pound/${MY_P}.tgz"
 

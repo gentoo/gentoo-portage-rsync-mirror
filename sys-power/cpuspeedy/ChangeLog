@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpuspeedy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpuspeedy/ChangeLog,v 1.7 2011/07/20 15:05:24 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpuspeedy/ChangeLog,v 1.8 2014/08/10 20:12:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cpuspeedy-0.4.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
@@ -90,4 +93,3 @@
   29 Mar 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.2.ebuild,
   metadata.xml,files/cpuspeedy-0.2.patch:
   Inital import - thanks to Lukasz Strzygowski <lucass@gentoo.pl> in bug #45841
-

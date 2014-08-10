@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.26 2014/07/20 16:45:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.27 2014/08/10 20:17:28 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  mod_python-3.3.1-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Jul 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
   Fix typo in metadata.xml.

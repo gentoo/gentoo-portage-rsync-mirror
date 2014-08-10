@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/whyteboard/whyteboard-0.41.1.ebuild,v 1.3 2012/09/05 08:13:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/whyteboard/whyteboard-0.41.1.ebuild,v 1.4 2014/08/10 20:07:33 slyfox Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2" # Upstream doesn't support Python 3.x
 
 inherit eutils python multilib
 
-DESCRIPTION="A simple image, PDF and postscript file annotator."
+DESCRIPTION="A simple image, PDF and postscript file annotator"
 LICENSE="ISC"
 SLOT="0"
 IUSE=""

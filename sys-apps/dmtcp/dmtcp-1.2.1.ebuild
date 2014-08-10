@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmtcp/dmtcp-1.2.1.ebuild,v 1.3 2011/05/03 08:30:18 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmtcp/dmtcp-1.2.1.ebuild,v 1.4 2014/08/10 20:23:39 slyfox Exp $
 
 EAPI=3
 
 inherit autotools elisp-common eutils multilib
 
-DESCRIPTION="DMTCP is the Distributed MultiThreaded Checkpointing tool."
+DESCRIPTION="DMTCP is the Distributed MultiThreaded Checkpointing tool"
 HOMEPAGE="http://dmtcp.sourceforge.net/index.html"
 SRC_URI="mirror://sourceforge/dmtcp/${P}.tar.gz"
 

@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zerofree/zerofree-1.0.1.ebuild,v 1.3 2013/03/06 20:01:29 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zerofree/zerofree-1.0.1.ebuild,v 1.4 2014/08/10 20:20:31 slyfox Exp $
 
 EAPI="4"
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Zero's out all free space on a filesystem."
+DESCRIPTION="Zero's out all free space on a filesystem"
 HOMEPAGE="http://intgat.tigress.co.uk/rmy/uml/index.html"
 SRC_URI="http://intgat.tigress.co.uk/rmy/uml/${P}.tgz"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/xmlgraphics-commons-1.5.ebuild,v 1.1 2013/07/08 14:10:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/xmlgraphics-commons-1.5.ebuild,v 1.2 2014/08/10 20:27:30 slyfox Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ VIRTUALX_COMMAND="eant"
 
 inherit java-pkg-2 java-ant-2 virtualx
 
-DESCRIPTION="A library of several reusable components used by Apache Batik and Apache FOP."
+DESCRIPTION="A library of several reusable components used by Apache Batik and Apache FOP"
 HOMEPAGE="http://xmlgraphics.apache.org/commons/index.html"
 SRC_URI="mirror://apache/xmlgraphics/commons/source/${P}-src.tar.gz"
 

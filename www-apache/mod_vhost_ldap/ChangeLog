@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_vhost_ldap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/ChangeLog,v 1.10 2012/11/27 19:35:25 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/ChangeLog,v 1.11 2014/08/10 20:18:29 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  mod_vhost_ldap-1.0.0-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-

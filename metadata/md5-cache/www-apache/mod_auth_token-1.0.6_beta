@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst prepare setup
 DEPEND==www-servers/apache-2.2*
-DESCRIPTION=Token based URI access module for Apache2.
+DESCRIPTION=Token based URI access module for Apache2
 EAPI=3
 HOMEPAGE=http://code.google.com/p/mod-auth-token/
 KEYWORDS=~amd64
@@ -9,4 +9,4 @@ RDEPEND==www-servers/apache-2.2*
 SLOT=0
 SRC_URI=http://mod-auth-token.googlecode.com/files/mod_auth_token-1.0.6-beta.tar.gz
 _eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=5a7229eeeea0e189a110320fdf806464
+_md5_=60560ba1ed0022d4cd216f42d3275bfb

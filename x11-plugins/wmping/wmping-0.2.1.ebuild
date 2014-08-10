@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmping/wmping-0.2.1.ebuild,v 1.4 2014/04/07 18:03:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmping/wmping-0.2.1.ebuild,v 1.5 2014/08/10 20:08:49 slyfox Exp $
 
 EAPI=5
 
-DESCRIPTION="a simple host status monitoring dockapp."
+DESCRIPTION="a simple host status monitoring dockapp"
 HOMEPAGE="http://sourceforge.net/projects/wmping"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

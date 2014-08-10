@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kxml/kxml-2.3.0.ebuild,v 1.1 2013/10/15 23:18:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kxml/kxml-2.3.0.ebuild,v 1.2 2014/08/10 20:20:54 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc examples source"
 
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="Small XML pull parser for constrained environments such as Applets, Personal Java or MIDP devices."
+DESCRIPTION="Small XML pull parser for constrained environments such as Applets, Personal Java or MIDP devices"
 HOMEPAGE="http://${PN}.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}2-src-${PV}.zip"
 

@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-transaction/commons-transaction-1.2.ebuild,v 1.3 2009/06/29 21:15:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-transaction/commons-transaction-1.2.ebuild,v 1.4 2014/08/10 20:12:00 slyfox Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A library of utility classes commonly used in transactional Java programming."
+DESCRIPTION="A library of utility classes commonly used in transactional Java programming"
 SRC_URI="mirror://apache/commons/transaction/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare setup test
-DESCRIPTION=library wrapping the interix lib-c to make it less buggy.
+DESCRIPTION=library wrapping the interix lib-c to make it less buggy
 EAPI=3
 HOMEPAGE=http://suacomp.sf.net
 IUSE=debug
@@ -8,4 +8,4 @@ LICENSE=BEER-WARE
 SLOT=0
 SRC_URI=mirror://sourceforge/suacomp/suacomp-0.6.14.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=805e2c1a6ae9dd1cc757d93508283690
+_md5_=40bea158ce00e8f6563b2908082cac9e

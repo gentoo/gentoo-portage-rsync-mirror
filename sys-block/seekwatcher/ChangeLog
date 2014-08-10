@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/seekwatcher
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.8 2012/03/09 18:48:42 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.9 2014/08/10 20:22:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> seekwatcher-0.12.ebuild,
+  seekwatcher-0.12_p20091015.ebuild, seekwatcher-0.6.ebuild,
+  seekwatcher-0.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *seekwatcher-0.12_p20091015 (09 Mar 2012)
 
@@ -41,4 +46,3 @@
   18 Aug 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +seekwatcher-0.6.ebuild:
   Initial Commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

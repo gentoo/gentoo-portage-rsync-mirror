@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DEPEND==sys-freebsd/freebsd-sources-9.2* =sys-freebsd/freebsd-mk-defs-9.2* virtual/pmake virtual/pmake
-DESCRIPTION=Contributed sources for FreeBSD.
+DESCRIPTION=Contributed sources for FreeBSD
 HOMEPAGE=http://www.freebsd.org/
 IUSE=profile
 KEYWORDS=~amd64-fbsd ~sparc-fbsd ~x86-fbsd
@@ -8,4 +8,4 @@ LICENSE=BSD GPL-2+ libodialog
 SLOT=0
 SRC_URI=mirror://gentoo/freebsd-gnu-9.2_rc3.tar.bz2 mirror://gentoo/freebsd-contrib-9.2_rc3.tar.bz2
 _eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	freebsd	9df2a927373191607071d802c1058c96	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=aee169845633caf339631ba51bb2be39
+_md5_=5b0b74bccdf1e19fcfe14dcbab0ce4de

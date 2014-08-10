@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/appframework
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/ChangeLog,v 1.8 2014/04/01 20:47:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/ChangeLog,v 1.9 2014/08/10 20:07:55 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  appframework-1.03-r2.ebuild, appframework-1.03-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *appframework-1.03-r3 (01 Apr 2014)
 

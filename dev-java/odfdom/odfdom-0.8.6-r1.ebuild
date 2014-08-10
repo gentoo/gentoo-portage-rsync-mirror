@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom/odfdom-0.8.6-r1.ebuild,v 1.1 2012/08/26 14:04:54 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom/odfdom-0.8.6-r1.ebuild,v 1.2 2014/08/10 20:22:01 slyfox Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="The ODFDOM reference implementation, written in Java."
+DESCRIPTION="The ODFDOM reference implementation, written in Java"
 HOMEPAGE="http://odftoolkit.org/projects/odfdom"
 SRC_URI="http://odftoolkit.org/projects/odfdom/downloads/download/current-version%252F${P}-sources.zip -> ${P}-sources.zip"
 LICENSE="Apache-2.0"

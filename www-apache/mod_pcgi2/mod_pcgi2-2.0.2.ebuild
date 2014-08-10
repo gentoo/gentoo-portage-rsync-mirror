@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_pcgi2/mod_pcgi2-2.0.2.ebuild,v 1.2 2007/11/28 12:47:40 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_pcgi2/mod_pcgi2-2.0.2.ebuild,v 1.3 2014/08/10 20:17:11 slyfox Exp $
 
 inherit apache-module
 
 KEYWORDS="~ppc ~x86"
 
-DESCRIPTION="An Apache module to talk to Zope Corporation's PCGI."
+DESCRIPTION="An Apache module to talk to Zope Corporation's PCGI"
 HOMEPAGE="http://www.zope.org/Members/phd/mod_pcgi2/"
 SRC_URI="http://zope.org/Members/phd/${PN}/${PN}/${P}-src.tar.gz"
 LICENSE="GPL-2"

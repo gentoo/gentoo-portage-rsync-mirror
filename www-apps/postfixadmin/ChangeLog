@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/postfixadmin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.35 2014/03/22 20:20:46 sdamashek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.36 2014/08/10 20:14:45 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> postfixadmin-2.3.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Mar 2014; Samuel Damashek <sdamashek@gentoo.org>
   -postfixadmin-2.3.6.ebuild:

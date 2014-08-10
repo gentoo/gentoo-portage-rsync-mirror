@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.2.2_p4-r1.ebuild,v 1.1 2014/07/02 00:46:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.2.2_p4-r1.ebuild,v 1.2 2014/08/10 20:01:52 slyfox Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs
 
-DESCRIPTION="Digital clock for the X window system."
+DESCRIPTION="Digital clock for the X window system"
 HOMEPAGE="http://packages.qa.debian.org/d/dclock.html"
 SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}_${PV/_p*/}.orig.tar.gz
 		mirror://debian/pool/main/d/${PN}/${PN}_${PV/_p/-}.debian.tar.gz"

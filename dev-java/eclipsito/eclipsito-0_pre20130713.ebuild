@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipsito/eclipsito-0_pre20130713.ebuild,v 1.1 2013/07/13 10:45:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipsito/eclipsito-0_pre20130713.ebuild,v 1.2 2014/08/10 20:12:48 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="A small subset of Eclipse core libraries for modular applications."
+DESCRIPTION="A small subset of Eclipse core libraries for modular applications"
 HOMEPAGE="https://code.google.com/p/eclipsito/"
 SRC_URI="http://dev.gentoo.org/~tomwij/files/dist/${P}.tar.xz"
 

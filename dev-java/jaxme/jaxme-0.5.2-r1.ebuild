@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.5.2-r1.ebuild,v 1.1 2014/03/02 16:44:15 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.5.2-r1.ebuild,v 1.2 2014/08/10 20:17:17 slyfox Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ inherit java-pkg-2 java-ant-2 eutils
 
 MY_PN=ws-${PN}
 MY_P=${MY_PN}-${PV}
-DESCRIPTION="JaxMe 2 is an open source implementation of JAXB, the specification for Java/XML binding."
+DESCRIPTION="JaxMe 2 is an open source implementation of JAXB, the specification for Java/XML binding"
 HOMEPAGE="http://ws.apache.org/jaxme/index.html"
 SRC_URI="mirror://apache/ws/${PN}/source/${MY_P}-src.tar.gz"
 

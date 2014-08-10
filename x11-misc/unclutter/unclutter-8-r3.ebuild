@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/unclutter-8-r3.ebuild,v 1.2 2014/04/10 13:23:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/unclutter-8-r3.ebuild,v 1.3 2014/08/10 20:04:20 slyfox Exp $
 
 EAPI=5
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Hides mouse pointer while not in use."
+DESCRIPTION="Hides mouse pointer while not in use"
 HOMEPAGE="http://www.ibiblio.org/pub/X11/contrib/utilities/unclutter-8.README"
 SRC_URI="ftp://ftp.x.org/contrib/utilities/${P}.tar.Z"
 

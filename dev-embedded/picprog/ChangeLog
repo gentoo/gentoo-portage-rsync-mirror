@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/picprog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/ChangeLog,v 1.25 2011/12/09 05:09:33 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/ChangeLog,v 1.26 2014/08/10 20:04:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> picprog-1.9.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 Dec 2011; Tim Harder <radhermit@gentoo.org> picprog-1.9.1.ebuild:
   Remove empty DEPEND and quote toolchain prefix.
@@ -100,4 +103,3 @@
 
   20 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> picprog-1.3.ebuild:
   initial commit, bug #26805 submitted by Roman Valls <brainstorm@menta.net>
-

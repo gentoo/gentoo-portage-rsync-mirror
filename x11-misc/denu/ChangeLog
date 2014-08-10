@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/denu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.17 2012/05/09 15:25:19 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.18 2014/08/10 20:02:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> denu-2.3.2-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 May 2012; Michael Palimaka <kensington@gentoo.org> -denu-2.3.2.ebuild:
   Remove old.
@@ -54,4 +57,3 @@
 
   19 Mar 2005; <blubb@gentoo.org> :
   initial import
-

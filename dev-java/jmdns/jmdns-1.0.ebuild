@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/jmdns-1.0.ebuild,v 1.5 2009/05/23 21:10:26 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/jmdns-1.0.ebuild,v 1.6 2014/08/10 20:18:21 slyfox Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2
 
-DESCRIPTION="JmDNS is an implementation of multi-cast DNS in Java."
+DESCRIPTION="JmDNS is an implementation of multi-cast DNS in Java"
 SRC_URI="mirror://sourceforge/${PN}/${P}-Final.tar.gz"
 HOMEPAGE="http://jmdns.sourceforge.net"
 IUSE=""

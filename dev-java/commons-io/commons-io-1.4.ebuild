@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.4.ebuild,v 1.10 2012/01/01 12:16:29 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.4.ebuild,v 1.11 2014/08/10 20:11:05 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils
 
 MY_P="${P}-src"
-DESCRIPTION="Commons-IO contains utility classes, stream implementations, file filters, and endian classes."
+DESCRIPTION="Commons-IO contains utility classes, stream implementations, file filters, and endian classes"
 HOMEPAGE="http://commons.apache.org/io/"
 SRC_URI="mirror://apache/commons/io/source/${MY_P}.tar.gz"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r3.ebuild,v 1.2 2009/12/09 22:39:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r3.ebuild,v 1.3 2014/08/10 20:01:37 slyfox Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -10,7 +10,7 @@ inherit versionator java-pkg-2 java-ant-2
 
 MY_PV=${PV//./-}
 MY_PV=${MY_PV/-/.}
-DESCRIPTION="A Java-based Extraction, Transformation, and Loading (ETL) tool."
+DESCRIPTION="A Java-based Extraction, Transformation, and Loading (ETL) tool"
 SRC_URI="http://download.forge.objectweb.org/${PN}/${PN}-${MY_PV}.src.tar.gz
 	mirror://gentoo/${PN}-xmls-${PV}.tar.bz2"
 HOMEPAGE="http://octopus.objectweb.org"

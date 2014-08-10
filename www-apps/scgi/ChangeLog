@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/scgi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/ChangeLog,v 1.17 2012/11/27 19:41:48 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/ChangeLog,v 1.18 2014/08/10 20:15:11 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> scgi-1.14.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -scgi-1.10.ebuild,
   -scgi-1.12.ebuild, -scgi-1.13.ebuild, -scgi-1.2.ebuild, metadata.xml:

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12.ebuild,v 1.8 2012/05/05 04:53:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12.ebuild,v 1.9 2014/08/10 20:04:39 slyfox Exp $
 
 EAPI=3
 
-DESCRIPTION="X based config tool for the windowmaker X windowmanager."
+DESCRIPTION="X based config tool for the windowmaker X windowmanager"
 HOMEPAGE="http://wmakerconf.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P/-/_}.tar.gz"
 

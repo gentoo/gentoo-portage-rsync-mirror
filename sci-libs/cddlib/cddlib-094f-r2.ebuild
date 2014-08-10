@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cddlib/cddlib-094f-r2.ebuild,v 1.4 2011/08/13 07:12:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cddlib/cddlib-094f-r2.ebuild,v 1.5 2014/08/10 20:24:54 slyfox Exp $
 
 EAPI="3"
 
 inherit autotools-utils
 
-DESCRIPTION="C implementation of the Double Description Method of Motzkin et al."
+DESCRIPTION="C implementation of the Double Description Method of Motzkin et al"
 HOMEPAGE="http://www.ifor.math.ethz.ch/~fukuda/cdd_home/"
 SRC_URI="ftp://ftp.ifor.math.ethz.ch/pub/fukuda/cdd/${P}.tar.gz"
 

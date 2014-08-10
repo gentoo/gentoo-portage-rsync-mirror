@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.86 2014/04/25 08:50:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.87 2014/08/10 20:14:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> phpsysinfo-3.0.19.ebuild,
+  phpsysinfo-3.0.20.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *phpsysinfo-3.1.12 (25 Apr 2014)
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/sun-javamail-1.4.3.ebuild,v 1.11 2013/02/05 07:20:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/sun-javamail-1.4.3.ebuild,v 1.12 2014/08/10 20:24:39 slyfox Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A Java-based framework to build multiplatform mail and messaging applications."
+DESCRIPTION="A Java-based framework to build multiplatform mail and messaging applications"
 HOMEPAGE="http://java.sun.com/products/javamail/index.html"
 
 # error 500 without the double slash, wonder what HTTP standard says about this

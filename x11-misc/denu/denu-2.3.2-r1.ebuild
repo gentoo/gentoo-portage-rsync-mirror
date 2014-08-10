@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/denu-2.3.2-r1.ebuild,v 1.5 2012/02/24 20:08:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/denu-2.3.2-r1.ebuild,v 1.6 2014/08/10 20:02:02 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 inherit python
 
-DESCRIPTION="A menu generation program for fluxbox, waimea, openbox, icewm, gnome and kde."
+DESCRIPTION="A menu generation program for fluxbox, waimea, openbox, icewm, gnome and kde"
 HOMEPAGE="http://denu.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/xscreensaver-app-2.3-r2.ebuild,v 1.1 2013/07/18 21:23:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/xscreensaver-app-2.3-r2.ebuild,v 1.2 2014/08/10 20:05:12 slyfox Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -9,7 +9,7 @@ MY_PN=${PN/-a/.A}
 MY_PN=${MY_PN/xs/XS}
 MY_PN=${MY_PN/s/S}
 
-DESCRIPTION="XScreenSaver dockapp for the Window Maker window manager."
+DESCRIPTION="XScreenSaver dockapp for the Window Maker window manager"
 HOMEPAGE="http://xscreensaverapp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/project/xscreensaverapp/${MY_PN}/${PV}/${MY_PN}-${PV}.tar.gz"
 

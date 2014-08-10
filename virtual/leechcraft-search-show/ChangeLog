@@ -1,6 +1,11 @@
 # ChangeLog for virtual/leechcraft-search-show
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-search-show/ChangeLog,v 1.34 2014/08/03 19:08:42 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-search-show/ChangeLog,v 1.35 2014/08/10 20:11:30 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  leechcraft-search-show-0.6.60.ebuild, leechcraft-search-show-0.6.65.ebuild,
+  leechcraft-search-show-0.6.70.ebuild, leechcraft-search-show-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *leechcraft-search-show-0.6.70 (03 Aug 2014)
 

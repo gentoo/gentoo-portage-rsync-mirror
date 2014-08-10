@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/xsensors-0.70.ebuild,v 1.8 2012/05/05 04:53:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/xsensors-0.70.ebuild,v 1.9 2014/08/10 20:05:30 slyfox Exp $
 
 EAPI=2
 inherit autotools eutils
 
-DESCRIPTION="A hardware health information viewer, interface to lm-sensors."
+DESCRIPTION="A hardware health information viewer, interface to lm-sensors"
 HOMEPAGE="http://www.linuxhardware.org/xsensors/"
 SRC_URI="http://www.linuxhardware.org/xsensors/${P}.tar.gz"
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2-r2.ebuild,v 1.10 2014/01/08 17:40:06 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2-r2.ebuild,v 1.11 2014/08/10 20:07:08 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A collection of tasks (and at one point maybe types and other tools) for Apache Ant."
+DESCRIPTION="A collection of tasks (and at one point maybe types and other tools) for Apache Ant"
 HOMEPAGE="http://ant-contrib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ant-contrib/${PN}-${PV/_beta/b}-src.tar.bz2"
 LICENSE="Apache-2.0"

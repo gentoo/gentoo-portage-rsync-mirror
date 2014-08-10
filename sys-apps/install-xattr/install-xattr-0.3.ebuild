@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/install-xattr-0.3.ebuild,v 1.6 2014/08/01 12:02:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/install-xattr-0.3.ebuild,v 1.7 2014/08/10 20:24:15 slyfox Exp $
 
 EAPI=5
-DESCRIPTION="Wrapper to coreutil's install to preserve Filesystem Extended Attributes."
+DESCRIPTION="Wrapper to coreutil's install to preserve Filesystem Extended Attributes"
 HOMEPAGE="http://dev.gentoo.org/~blueness/install-xattr/"
 
 inherit toolchain-funcs

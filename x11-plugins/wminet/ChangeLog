@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wminet
-# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/ChangeLog,v 1.16 2010/09/17 10:11:31 s4t4n Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/ChangeLog,v 1.17 2014/08/10 20:07:07 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wminet-3.0.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wminet-3.0.0.ebuild:
   Honour Gentoo LDFLAGS, see bug #337726.

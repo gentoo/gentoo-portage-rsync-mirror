@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare
 DEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXt app-text/rman x11-misc/imake
-DESCRIPTION=Digital clock for the X window system.
+DESCRIPTION=Digital clock for the X window system
 EAPI=4
 HOMEPAGE=http://packages.qa.debian.org/d/dclock.html
 KEYWORDS=amd64 ppc x86
@@ -9,4 +9,4 @@ RDEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXt
 SLOT=0
 SRC_URI=mirror://debian/pool/main/d/dclock/dclock_2.2.2.orig.tar.gz mirror://debian/pool/main/d/dclock/dclock_2.2.2-4.debian.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=8bc3d479f786e5233ea0626b4ed24524
+_md5_=9fb66cb7a0e10cbeb36058fe8a9c3829

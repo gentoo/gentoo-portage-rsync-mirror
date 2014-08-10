@@ -1,9 +1,9 @@
 DEFINED_PHASES=install preinst prepare setup unpack
 DEPEND=dev-util/confix || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
-DESCRIPTION=An Interix to native Win32 Cross-Compiler Tool (requires Visual Studio).
+DESCRIPTION=An Interix to native Win32 Cross-Compiler Tool (requires Visual Studio)
 EAPI=4
 HOMEPAGE=http://www.sourceforge.net/projects/parity/
 LICENSE=LGPL-3
 SLOT=0
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=079cb5092cd8d7635a47430d83d90719
+_md5_=3e9e405f102c3bd83605eb4307d1f09a

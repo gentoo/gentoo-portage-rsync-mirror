@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.16.1-r1.ebuild,v 1.5 2013/05/17 07:20:20 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.16.1-r1.ebuild,v 1.6 2014/08/10 20:10:36 slyfox Exp $
 
 EAPI=5
 
 inherit autotools eutils
 
-DESCRIPTION="A text based web browser with no ssl support."
+DESCRIPTION="A text based web browser with no ssl support"
 HOMEPAGE="http://netrik.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

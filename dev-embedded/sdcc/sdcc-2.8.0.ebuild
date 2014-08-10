@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.8.0.ebuild,v 1.3 2009/08/10 08:11:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.8.0.ebuild,v 1.4 2014/08/10 20:06:17 slyfox Exp $
 
 inherit eutils autotools
 
-DESCRIPTION="Small device C compiler (for various microprocessors)."
+DESCRIPTION="Small device C compiler (for various microprocessors)"
 HOMEPAGE="http://sdcc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sdcc/${PN}-src-${PV}.tar.bz2
 	doc? ( mirror://sourceforge/sdcc/${PN}-doc-${PV}.tar.bz2 )"

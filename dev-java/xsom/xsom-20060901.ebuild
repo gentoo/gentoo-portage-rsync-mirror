@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsom/xsom-20060901.ebuild,v 1.8 2014/04/01 16:00:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsom/xsom-20060901.ebuild,v 1.9 2014/08/10 20:28:19 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="XML Schema Object Model (XSOM) allows Java apps to easy parse and inspect XML Schema docs."
+DESCRIPTION="XML Schema Object Model (XSOM) allows Java apps to easy parse and inspect XML Schema docs"
 HOMEPAGE="https://xsom.dev.java.net/"
 # Upstream does not have versioned source bundles :|
 SRC_URI="mirror://gentoo/xsom-src-${PV}.tar.bz2"

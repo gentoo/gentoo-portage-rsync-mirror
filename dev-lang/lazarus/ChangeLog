@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lazarus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.44 2014/06/22 04:25:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.45 2014/08/10 20:28:54 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> lazarus-1.0.10.ebuild,
+  lazarus-1.0.12.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *lazarus-1.2.4 (22 Jun 2014)
 

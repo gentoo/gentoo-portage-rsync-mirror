@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/wmDownload-0.1.2a-r1.ebuild,v 1.5 2009/06/04 00:03:52 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/wmDownload-0.1.2a-r1.ebuild,v 1.6 2014/08/10 20:03:18 slyfox Exp $
 
 inherit eutils multilib toolchain-funcs
 
-DESCRIPTION="dockapp that displays how much data you've received on each eth and ppp device."
+DESCRIPTION="dockapp that displays how much data you've received on each eth and ppp device"
 SRC_URI="mirror://sourceforge/wmdownload/${P}.tar.gz"
 HOMEPAGE="http://wmdownload.sourceforge.net/"
 

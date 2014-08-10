@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/massxpert
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/ChangeLog,v 1.14 2014/01/06 15:24:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/ChangeLog,v 1.15 2014/08/10 20:28:39 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> massxpert-2.0.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *massxpert-3.4.0 (06 Jan 2014)
 

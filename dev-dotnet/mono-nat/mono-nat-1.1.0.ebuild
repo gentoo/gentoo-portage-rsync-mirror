@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-nat/mono-nat-1.1.0.ebuild,v 1.4 2012/05/22 12:17:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-nat/mono-nat-1.1.0.ebuild,v 1.5 2014/08/10 20:03:14 slyfox Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit mono multilib
 
 MY_PN=Mono.Nat
 
-DESCRIPTION="Mono.Nat is a C# library used for automatic port forwarding, using either uPnP or nat-pmp."
+DESCRIPTION="Mono.Nat is a C# library used for automatic port forwarding, using either uPnP or nat-pmp"
 HOMEPAGE="http://projects.qnetp.net/projects/show/mono-nat"
 SRC_URI="http://projects.qnetp.net/attachments/download/76/${P}.tar.gz
 	mirror://gentoo/mono.snk.bz2"

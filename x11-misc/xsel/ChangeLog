@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.26 2014/03/04 20:28:41 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.27 2014/08/10 20:05:22 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xsel-1.2.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> xsel-1.2.0.ebuild:
   Add ~mips keyword.

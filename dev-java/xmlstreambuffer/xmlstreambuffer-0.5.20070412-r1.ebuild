@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlstreambuffer/xmlstreambuffer-0.5.20070412-r1.ebuild,v 1.1 2008/07/19 00:21:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlstreambuffer/xmlstreambuffer-0.5.20070412-r1.ebuild,v 1.2 2014/08/10 20:27:40 slyfox Exp $
 
 JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2 versionator
 
 MY_PV=$(replace_version_separator 2 '_')
-DESCRIPTION="Mechanisms to create and processs stream buffers using standard XML APIs."
+DESCRIPTION="Mechanisms to create and processs stream buffers using standard XML APIs"
 HOMEPAGE="https://xmlstreambuffer.dev.java.net/"
 SRC_URI="https://xmlstreambuffer.dev.java.net/files/documents/4258/55235/StreamBufferPackage_src_${MY_PV}_033857.zip"
 

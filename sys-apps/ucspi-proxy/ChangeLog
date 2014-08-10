@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-proxy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.17 2012/08/20 20:02:12 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.18 2014/08/10 20:25:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ucspi-proxy-0.97.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Aug 2012; Mike Frysinger <vapier@gentoo.org> ucspi-proxy-0.98.ebuild:
   Drop pointless sed dependency.

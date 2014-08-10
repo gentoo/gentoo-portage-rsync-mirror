@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tapecat/tapecat-1.0.0.ebuild,v 1.6 2009/09/11 11:34:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tapecat/tapecat-1.0.0.ebuild,v 1.7 2014/08/10 20:22:35 slyfox Exp $
 
-DESCRIPTION="tapecat is a tape utility used to describe the physical content of a tape."
+DESCRIPTION="tapecat is a tape utility used to describe the physical content of a tape"
 HOMEPAGE="http://www.inventivetechnology.at/tapecat/"
 SRC_URI="http://downloads.inventivetechnology.at/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.146 2014/03/08 15:53:36 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.147 2014/08/10 20:06:57 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ant-1.8.2.ebuild,
+  ant-1.8.4.ebuild, ant-1.9.1.ebuild, ant-1.9.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> -ant-1.7.1.ebuild,
   -ant-1.8.0.ebuild, -ant-1.8.1.ebuild:

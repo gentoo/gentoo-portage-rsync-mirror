@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.4.30.ebuild,v 1.5 2009/12/26 17:45:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.4.30.ebuild,v 1.6 2014/08/10 20:28:53 slyfox Exp $
 
 EAPI=2
 inherit autotools eutils
 
-DESCRIPTION="Circuit drawing and schematic capture program."
+DESCRIPTION="Circuit drawing and schematic capture program"
 SRC_URI="http://opencircuitdesign.com/xcircuit/archive/${P}.tgz"
 HOMEPAGE="http://opencircuitdesign.com/xcircuit"
 

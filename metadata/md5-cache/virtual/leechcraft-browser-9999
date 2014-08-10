@@ -1,6 +1,6 @@
 DEFINED_PHASES=-
-DESCRIPTION=Virtual for LeechCraft plugins providing a web browser.
+DESCRIPTION=Virtual for LeechCraft plugins providing a web browser
 EAPI=4
 RDEPEND=app-leechcraft/lc-poshuku
 SLOT=0
-_md5_=08004e1f458dfd078be1a896d1ecea6d
+_md5_=bc55176acd7b4ef0f3a034d855112e26

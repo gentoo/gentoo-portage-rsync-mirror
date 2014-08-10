@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-input-manager/matchbox-applet-input-manager-0.6.ebuild,v 1.11 2012/06/04 00:33:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-input-manager/matchbox-applet-input-manager-0.6.ebuild,v 1.12 2014/08/10 20:01:59 slyfox Exp $
 
 inherit versionator eutils
 
 MY_PN=${PN/matchbox/mb}
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Matchbox panel tray app for managing software input methods."
+DESCRIPTION="Matchbox panel tray app for managing software input methods"
 HOMEPAGE="http://matchbox-project.org/"
 SRC_URI="http://matchbox-project.org/sources/${MY_PN}/$(get_version_component_range 1-2)/${MY_P}.tar.bz2"
 LICENSE="GPL-2"

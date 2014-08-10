@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.1.ebuild,v 1.2 2012/05/27 08:07:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.1.ebuild,v 1.3 2014/08/10 20:28:01 slyfox Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ MY_P="${PN}-v${PV}"
 
 inherit eutils python scons-utils toolchain-funcs
 
-DESCRIPTION="A Free Toolkit for developing mapping applications."
+DESCRIPTION="A Free Toolkit for developing mapping applications"
 HOMEPAGE="http://www.mapnik.org/"
 SRC_URI="http://github.com/downloads/${PN}/${PN}/${MY_P}.tar.bz2"
 

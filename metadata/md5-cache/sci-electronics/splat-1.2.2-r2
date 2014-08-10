@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=sys-libs/zlib app-arch/bzip2
-DESCRIPTION=RF Signal Propagation, Loss, And Terrain analysis tool for the spectrum between 20 MHz and 20 GHz.
+DESCRIPTION=RF Signal Propagation, Loss, And Terrain analysis tool for the spectrum between 20 MHz and 20 GHz
 HOMEPAGE=http://www.qsl.net/kd2bd/splat.html
 IUSE=doc linguas_es
 KEYWORDS=~amd64 ~ppc ~x86
@@ -9,4 +9,4 @@ RDEPEND=sys-libs/zlib app-arch/bzip2
 SLOT=0
 SRC_URI=http://www.qsl.net/kd2bd/splat-1.2.2.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=5c9f5dcb57b2df21ffdff5546b9e3286
+_md5_=44af23c454226d06d4ecca94b92b27b0

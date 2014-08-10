@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
 DEPEND=X? ( >=dev-python/PyQt4-4.9.4-r1[X,phonon,python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=sys-apps/sed-4
-DESCRIPTION=Weboob (Web Outside of Browsers) provides several applications to interact with a lot of websites.
+DESCRIPTION=Weboob (Web Outside of Browsers) provides several applications to interact with a lot of websites
 EAPI=5
 HOMEPAGE=http://weboob.org/
 IUSE=X +secure-updates fast-libs python_targets_python2_7
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://symlink.me/attachments/download/235/weboob-0.h.tar.gz
 _eclasses_=distutils-r1	d48d51c220f1678179fc4ab13b534ec1	eutils	06133990e861be0fe60c2b428fd025d9	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=e9642a407e4d5ea19e73b5d34ff217e8
+_md5_=8f08c6a9e4ecbe6dd6dc65560d7a6ede

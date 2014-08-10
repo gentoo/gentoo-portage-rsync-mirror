@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.96-r1.ebuild,v 1.6 2014/01/06 15:02:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.96-r1.ebuild,v 1.7 2014/08/10 20:27:43 slyfox Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2:2.6"
 
 inherit python autotools user eutils
 
-DESCRIPTION="GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients."
+DESCRIPTION="GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients"
 HOMEPAGE="http://gpsd.berlios.de/"
 SRC_URI="mirror://berlios/gpsd/${P}bis.tar.gz"
 

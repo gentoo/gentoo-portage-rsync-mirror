@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/raidutils-0.0.6-r2.ebuild,v 1.5 2014/01/21 04:00:13 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/raidutils-0.0.6-r2.ebuild,v 1.6 2014/08/10 20:24:47 slyfox Exp $
 
 EAPI=5
 inherit eutils
 
-DESCRIPTION="Utilities to manage i2o/dtp RAID controllers."
+DESCRIPTION="Utilities to manage i2o/dtp RAID controllers"
 HOMEPAGE="http://i2o.shadowconnect.com/"
 # http://cvs.fedoraproject.org/viewvc/rpms/raidutils/devel/
 SRC_URI="http://i2o.shadowconnect.com/raidutils/${P}.tar.bz2

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-6.5.4.ebuild,v 1.6 2014/04/20 11:35:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-6.5.4.ebuild,v 1.7 2014/08/10 20:13:06 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Provides faster type-specific maps, sets and lists with a small memory footprint."
+DESCRIPTION="Provides faster type-specific maps, sets and lists with a small memory footprint"
 SRC_URI="http://fastutil.dsi.unimi.it/${P}-src.tar.gz"
 HOMEPAGE="http://fastutil.dsi.unimi.it"
 

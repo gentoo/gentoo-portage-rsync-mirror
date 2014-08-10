@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/javassist-3.7.ebuild,v 1.5 2010/01/03 20:49:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/javassist-3.7.ebuild,v 1.6 2014/08/10 20:16:42 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
 # TODO add notes about where the distfile comes from
-DESCRIPTION="Javassist makes Java bytecode manipulation simple."
+DESCRIPTION="Javassist makes Java bytecode manipulation simple"
 SRC_URI="mirror://sourceforge/jboss/${P}.GA.zip"
 HOMEPAGE="http://www.csg.is.titech.ac.jp/~chiba/javassist/"
 

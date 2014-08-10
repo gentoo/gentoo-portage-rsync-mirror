@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/scratchbox-toolchain-cs2007q3-glibc2_5
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2007q3-glibc2_5/ChangeLog,v 1.8 2013/02/03 11:39:04 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2007q3-glibc2_5/ChangeLog,v 1.9 2014/08/10 20:05:40 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  scratchbox-toolchain-cs2007q3-glibc2_5-1.0.12.ebuild,
+  scratchbox-toolchain-cs2007q3-glibc2_5-1.0.14-r1.ebuild,
+  scratchbox-toolchain-cs2007q3-glibc2_5-1.0.14.ebuild,
+  scratchbox-toolchain-cs2007q3-glibc2_5-1.0.16.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #453094

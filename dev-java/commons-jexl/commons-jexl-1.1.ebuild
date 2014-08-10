@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/commons-jexl-1.1.ebuild,v 1.6 2011/12/19 12:22:54 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/commons-jexl-1.1.ebuild,v 1.7 2014/08/10 20:11:14 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="Expression language engine, can be embedded in applications and frameworks."
+DESCRIPTION="Expression language engine, can be embedded in applications and frameworks"
 HOMEPAGE="http://commons.apache.org/jexl/"
 SRC_URI="mirror://apache/jakarta/commons/jexl/source/${P}-src.tar.gz"
 

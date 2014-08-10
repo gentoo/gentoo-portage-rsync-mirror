@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkodi/kodkodi-1.5.2.ebuild,v 1.2 2013/08/17 02:59:08 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkodi/kodkodi-1.5.2.ebuild,v 1.3 2014/08/10 20:23:30 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-pkg-simple multilib
 
-DESCRIPTION="A text front-end for the Kodkod Java library."
+DESCRIPTION="A text front-end for the Kodkod Java library"
 HOMEPAGE="http://www21.in.tum.de/~blanchet/#software"
 SRC_URI="http://www21.in.tum.de/~blanchet/${P}.tgz"
 

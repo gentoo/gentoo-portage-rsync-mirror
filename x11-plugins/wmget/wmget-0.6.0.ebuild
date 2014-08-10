@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/wmget-0.6.0.ebuild,v 1.10 2010/08/31 10:20:23 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/wmget-0.6.0.ebuild,v 1.11 2014/08/10 20:06:39 slyfox Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="a libcurl based dockapp for automated downloads."
+DESCRIPTION="a libcurl based dockapp for automated downloads"
 HOMEPAGE="http://amtrickey.net/wmget/"
 SRC_URI="http://amtrickey.net/download/${P}-src.tar.gz"
 

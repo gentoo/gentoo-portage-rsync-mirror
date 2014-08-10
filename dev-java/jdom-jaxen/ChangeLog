@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdom-jaxen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/ChangeLog,v 1.18 2013/07/28 10:41:22 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/ChangeLog,v 1.19 2014/08/10 20:18:05 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jdom-jaxen-1.0-r1.ebuild,
+  jdom-jaxen-1.0_beta10-r1.ebuild, jdom-jaxen-1.0_beta9-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   28 Jul 2013; Fabian Groffen <grobian@gentoo.org> jdom-jaxen-1.0-r1.ebuild:
   Marked ~x64-macos, bug #435528

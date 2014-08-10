@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/linsmith-0.99.24.ebuild,v 1.3 2013/02/08 21:41:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/linsmith-0.99.24.ebuild,v 1.4 2014/08/10 20:28:03 slyfox Exp $
 
 EAPI="2"
 
 inherit eutils autotools
 
-DESCRIPTION="Smith charting program, mainly designed for educational use."
+DESCRIPTION="Smith charting program, mainly designed for educational use"
 HOMEPAGE="http://www.jcoppens.com/soft/linsmith/index.en.php"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

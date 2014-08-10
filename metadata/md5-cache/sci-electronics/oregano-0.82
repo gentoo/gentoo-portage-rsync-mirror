@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install postinst postrm preinst prepare unpack
 DEPEND=dev-libs/libxml2:2 x11-libs/goocanvas:2.0 x11-libs/gtk+:3 x11-libs/gtksourceview:3.0 app-text/rarian virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
-DESCRIPTION=Oregano is an application for schematic capture and simulation of electrical circuits.
+DESCRIPTION=Oregano is an application for schematic capture and simulation of electrical circuits
 EAPI=4
 HOMEPAGE=https://github.com/marc-lorber/oregano
 KEYWORDS=~amd64 ~ppc ~x86
@@ -9,4 +9,4 @@ RDEPEND=dev-libs/libxml2:2 x11-libs/goocanvas:2.0 x11-libs/gtk+:3 x11-libs/gtkso
 SLOT=0
 SRC_URI=https://github.com/marc-lorber/oregano/tarball/v0.82 -> oregano-0.82.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=c0914eb2cf005814f68cabfdde844394
+_md5_=a9a8ad0ce9fb58e3717a73eb5b0a769a

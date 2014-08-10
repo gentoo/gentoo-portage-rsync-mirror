@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-1.2.ebuild,v 1.4 2010/10/19 05:53:42 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-1.2.ebuild,v 1.5 2014/08/10 20:01:21 slyfox Exp $
 
-DESCRIPTION="Gentoo MySQL init scripts."
+DESCRIPTION="Gentoo MySQL init scripts"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI=""
 

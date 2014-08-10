@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst prepare setup
 DEPEND=app-arch/unzip =www-servers/apache-2.2* !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=mod_caucho connects Resin and Apache2.
+DESCRIPTION=mod_caucho connects Resin and Apache2
 EAPI=2
 HOMEPAGE=http://www.caucho.com/
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
@@ -9,4 +9,4 @@ RDEPEND==www-servers/apache-2.2*
 SLOT=0
 SRC_URI=http://www.caucho.com/download/resin-4.0.14-src.zip mirror://gentoo/resin-gentoo-patches-4.0.14.tar.bz2
 _eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	autotools	82621aada74cb2a492bd8e73d49e9f54	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=9e3c5a1840c76077dd0255a7d76cb158
+_md5_=6920bb61edb1a300d3d32e327c755542

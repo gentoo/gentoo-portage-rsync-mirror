@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jmf/ant-jmf-1.9.1.ebuild,v 1.1 2013/07/05 14:16:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jmf/ant-jmf-1.9.1.ebuild,v 1.2 2014/08/10 20:07:36 slyfox Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ ANT_TASK_DEPNAME=""
 
 inherit ant-tasks
 
-DESCRIPTION="Apache Ant's optional tasks for the Java Media Framework (JMF)."
+DESCRIPTION="Apache Ant's optional tasks for the Java Media Framework (JMF)"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux \
 	~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"

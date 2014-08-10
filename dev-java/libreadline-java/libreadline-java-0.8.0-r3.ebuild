@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/libreadline-java-0.8.0-r3.ebuild,v 1.8 2012/05/04 18:49:51 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/libreadline-java-0.8.0-r3.ebuild,v 1.9 2014/08/10 20:21:13 slyfox Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 eutils
 
-DESCRIPTION="A JNI-wrapper to GNU Readline."
+DESCRIPTION="A JNI-wrapper to GNU Readline"
 HOMEPAGE="http://java-readline.sourceforge.net/"
 SRC_URI="mirror://sourceforge/java-readline/${P}-src.tar.gz"
 

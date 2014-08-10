@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/mod_wsgi-3.5.ebuild,v 1.5 2014/06/08 10:55:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/mod_wsgi-3.5.ebuild,v 1.6 2014/08/10 20:18:37 slyfox Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ PYTHON_REQ_USE="threads"
 
 inherit apache-module eutils python-single-r1
 
-DESCRIPTION="An Apache2 module for running Python WSGI applications."
+DESCRIPTION="An Apache2 module for running Python WSGI applications"
 HOMEPAGE="http://code.google.com/p/modwsgi/"
 SRC_URI="https://github.com/GrahamDumpleton/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 

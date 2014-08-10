@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gjdoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.50 2014/08/03 13:42:59 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.51 2014/08/10 20:13:49 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gjdoc-0.7.9-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -gjdoc-0.7.9-r1.ebuild:
   Remove old
@@ -182,4 +185,3 @@
   +metadata.xml, +gjdoc-0.7.5.ebuild:
   Initial addition. Thanks to nichoj and belanger for the initial packaging in
   experimental.
-

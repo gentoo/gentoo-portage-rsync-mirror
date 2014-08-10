@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxb-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/ChangeLog,v 1.7 2009/06/23 15:49:50 betelgeuse Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/ChangeLog,v 1.8 2014/08/10 20:17:05 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jaxb-tools-2.1.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Jun 2009; Petteri Räty <betelgeuse@gentoo.org>
   jaxb-tools-2.1.2.ebuild:
@@ -30,4 +33,3 @@
   01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +files/build.xml-2.1.2,
   +metadata.xml, +jaxb-tools-2.1.2.ebuild:
   Initial commit of jaxb-tools.
-

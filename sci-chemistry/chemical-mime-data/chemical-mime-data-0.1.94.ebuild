@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/chemical-mime-data-0.1.94.ebuild,v 1.5 2012/05/04 07:02:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/chemical-mime-data-0.1.94.ebuild,v 1.6 2014/08/10 20:28:26 slyfox Exp $
 
 EAPI="2"
 
 inherit eutils fdo-mime
 
-DESCRIPTION="A collection of data files to add support for chemical MIME types."
+DESCRIPTION="A collection of data files to add support for chemical MIME types"
 HOMEPAGE="http://chemical-mime.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN/-data/}/${P}.tar.bz2"
 

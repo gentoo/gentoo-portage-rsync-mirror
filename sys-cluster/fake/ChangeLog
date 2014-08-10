@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/fake
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fake/ChangeLog,v 1.13 2012/11/18 18:49:18 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fake/ChangeLog,v 1.14 2014/08/10 20:20:36 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fake-1.1.10.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> fake-1.1.10.ebuild:
   Add ~amd64

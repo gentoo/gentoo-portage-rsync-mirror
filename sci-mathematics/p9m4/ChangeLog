@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/p9m4
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/ChangeLog,v 1.5 2012/07/02 14:20:07 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/ChangeLog,v 1.6 2014/08/10 20:24:01 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> p9m4-05.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Jul 2012; Mark Wright <gienah@gentoo.org> files/p9m4-v05-package.patch:
   Remove py2app, fixes bug 423555 - sci-mathematics/p9m4-05: tries to use

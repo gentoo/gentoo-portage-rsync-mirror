@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.5 app-arch/unzip dev-java/istack-commons-runtime:0 dev-java/jsr173:0 java-virtuals/jaf dev-java/txw2-runtime:0 >=dev-java/java-config-2.1.9-r1 >=sys-apps/portage-2.1.2.7 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=sys-apps/portage-2.1.2.7 >=dev-java/javatoolkit-0.3.0-r2
-DESCRIPTION=Reference implementation of the JAXB specification.
+DESCRIPTION=Reference implementation of the JAXB specification
 EAPI=1
 HOMEPAGE=http://jaxb.dev.java.net/
 IUSE=elibc_FreeBSD source elibc_FreeBSD
@@ -10,4 +10,4 @@ RDEPEND=>=virtual/jre-1.5 dev-java/istack-commons-runtime:0 dev-java/jsr173:0 ja
 SLOT=2
 SRC_URI=https://jaxb.dev.java.net/2.1.2/JAXB2_src_20070125.jar
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=df626bb122449d6decb5cf51020ab09e
+_md5_=3b27531677c1d262e4d19306e3a51eff

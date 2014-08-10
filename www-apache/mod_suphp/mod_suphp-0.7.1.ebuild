@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.7.1.ebuild,v 1.1 2009/09/17 10:16:44 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.7.1.ebuild,v 1.2 2014/08/10 20:18:02 slyfox Exp $
 
 EAPI="2"
 
 inherit apache-module confutils
 
-DESCRIPTION="suPHP is a tool for executing PHP scripts with the permissions of their owners."
+DESCRIPTION="suPHP is a tool for executing PHP scripts with the permissions of their owners"
 HOMEPAGE="http://www.suphp.org/"
 SRC_URI="http://www.suphp.org/download/suphp-${PV}.tar.gz"
 

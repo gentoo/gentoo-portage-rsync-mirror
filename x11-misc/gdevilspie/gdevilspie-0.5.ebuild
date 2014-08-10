@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdevilspie/gdevilspie-0.5.ebuild,v 1.1 2012/05/13 08:52:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdevilspie/gdevilspie-0.5.ebuild,v 1.2 2014/08/10 20:02:27 slyfox Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
 
 inherit distutils
 
-DESCRIPTION="A user friendly interface to the devilspie window matching daemon, to create rules easily."
+DESCRIPTION="A user friendly interface to the devilspie window matching daemon, to create rules easily"
 HOMEPAGE="http://code.google.com/p/gdevilspie/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 

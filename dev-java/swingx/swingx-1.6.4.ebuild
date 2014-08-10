@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swingx/swingx-1.6.4.ebuild,v 1.1 2013/07/13 11:30:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swingx/swingx-1.6.4.ebuild,v 1.2 2014/08/10 20:25:22 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-pkg-simple
 
-DESCRIPTION="A collection of powerful, useful, and just plain fun Swing components."
+DESCRIPTION="A collection of powerful, useful, and just plain fun Swing components"
 HOMEPAGE="https://java.net/projects/swingx/"
 SRC_URI="https://java.net/projects/${PN}/downloads/download/releases/${PN}-all-${PV}-sources.jar
 	https://java.net/projects/${PN}/downloads/download/releases/${PN}-mavensupport-${PV}-sources.jar"

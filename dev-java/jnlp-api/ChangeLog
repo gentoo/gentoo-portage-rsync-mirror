@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jnlp-api
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-api/ChangeLog,v 1.3 2011/10/09 17:01:04 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-api/ChangeLog,v 1.4 2014/08/10 20:18:43 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jnlp-api-6.0.18.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 Oct 2011; Markus Meier <maekke@gentoo.org> jnlp-api-6.0.18.ebuild:
   x86 stable, bug #382695
@@ -16,4 +19,3 @@
   +metadata.xml:
   New package for stuff that builds against JNLP API classes javax/jnlp, to
   replace the broken dev-java/netx, bug #382351.
-

@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=>=dev-libs/glib-2 >=media-libs/swfdec-0.8[gtk] >=dev-util/intltool-0.35 virtual/pkgconfig
-DESCRIPTION=Swfdec-mozilla is a decoder/renderer netscape style plugin for Macromedia Flash animations.
+DESCRIPTION=Swfdec-mozilla is a decoder/renderer netscape style plugin for Macromedia Flash animations
 EAPI=2
 HOMEPAGE=http://swfdec.freedesktop.org/
 KEYWORDS=amd64 ppc x86
@@ -9,4 +9,4 @@ RDEPEND=>=dev-libs/glib-2 >=media-libs/swfdec-0.8[gtk]
 SLOT=0
 SRC_URI=http://swfdec.freedesktop.org/download/swfdec-mozilla/0.8/swfdec-mozilla-0.8.2.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=2507cf9fc8b05999208cc883eaf31658
+_md5_=3c137e511e28fd9ffb3dc068cdd690d5

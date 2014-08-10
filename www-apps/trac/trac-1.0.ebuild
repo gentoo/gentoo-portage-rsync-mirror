@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-1.0.ebuild,v 1.5 2013/01/13 11:20:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-1.0.ebuild,v 1.6 2014/08/10 20:15:29 slyfox Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ inherit distutils user webapp
 MY_PV=${PV/_beta/b}
 MY_P=Trac-${MY_PV}
 
-DESCRIPTION="Trac is a minimalistic web-based project management, wiki and bug/issue tracking system."
+DESCRIPTION="Trac is a minimalistic web-based project management, wiki and bug/issue tracking system"
 HOMEPAGE="http://trac.edgewall.com/ http://pypi.python.org/pypi/Trac"
 SRC_URI="http://ftp.edgewall.com/pub/trac/${MY_P}.tar.gz"
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-cache/libnss-cache-0.10.1.ebuild,v 1.1 2011/05/29 16:03:46 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-cache/libnss-cache-0.10.1.ebuild,v 1.2 2014/08/10 20:22:04 slyfox Exp $
 
 EAPI=3
 
 inherit eutils multilib toolchain-funcs
 
-DESCRIPTION="libnss-cache is a library that serves nss lookups."
+DESCRIPTION="libnss-cache is a library that serves nss lookups"
 HOMEPAGE="http://code.google.com/p/nsscache/"
 SRC_URI="http://nsscache.googlecode.com/files/${P}.tar.gz"
 

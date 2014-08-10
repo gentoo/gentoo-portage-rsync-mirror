@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/wmfortune-0.241.ebuild,v 1.16 2012/02/15 09:47:50 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/wmfortune-0.241.ebuild,v 1.17 2014/08/10 20:06:21 slyfox Exp $
 
 inherit eutils multilib toolchain-funcs
 
-DESCRIPTION="a dockapp showing fortune-mod messages."
+DESCRIPTION="a dockapp showing fortune-mod messages"
 HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/90"
 SRC_URI="http://dockapps.windowmaker.org/download.php/id/128/${P}.tar.gz"
 

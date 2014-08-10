@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/pyblosxom-1.4.3.ebuild,v 1.4 2012/09/02 22:59:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/pyblosxom-1.4.3.ebuild,v 1.5 2014/08/10 20:14:52 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils eutils webapp
 
-DESCRIPTION="PyBlosxom is a lightweight weblog system."
+DESCRIPTION="PyBlosxom is a lightweight weblog system"
 HOMEPAGE="http://pyblosxom.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

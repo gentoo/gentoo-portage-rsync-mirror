@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.105-r2.ebuild,v 1.7 2014/07/25 19:50:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.105-r2.ebuild,v 1.8 2014/08/10 20:20:05 slyfox Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
 
-DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
+DESCRIPTION="User-land utilities for LVM2 (device-mapper) software"
 HOMEPAGE="http://sources.redhat.com/lvm2/"
 SRC_URI="ftp://sources.redhat.com/pub/lvm2/${PN/lvm/LVM}.${PV}.tgz
 	ftp://sources.redhat.com/pub/lvm2/old/${PN/lvm/LVM}.${PV}.tgz"

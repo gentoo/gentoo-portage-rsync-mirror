@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit-addons/junit-addons-1.4.ebuild,v 1.4 2010/01/03 21:14:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit-addons/junit-addons-1.4.ebuild,v 1.5 2014/08/10 20:20:32 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="JUnit-addons is a collection of helper classes for JUnit."
+DESCRIPTION="JUnit-addons is a collection of helper classes for JUnit"
 HOMEPAGE="http://junit-addons.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 

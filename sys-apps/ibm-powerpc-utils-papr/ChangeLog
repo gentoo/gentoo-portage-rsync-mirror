@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ibm-powerpc-utils-papr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ChangeLog,v 1.17 2013/07/21 08:27:04 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ChangeLog,v 1.18 2014/08/10 20:24:00 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  ibm-powerpc-utils-papr-1.1.0.ebuild, ibm-powerpc-utils-papr-1.1.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #88306

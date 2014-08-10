@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jpfcodegen/jpfcodegen-0.4.ebuild,v 1.3 2009/04/27 00:15:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jpfcodegen/jpfcodegen-0.4.ebuild,v 1.4 2014/08/10 20:19:40 slyfox Exp $
 
 EAPI=1
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Generator of classes for accessing the attributes and extensions of JPF plug-ins."
+DESCRIPTION="Generator of classes for accessing the attributes and extensions of JPF plug-ins"
 HOMEPAGE="http://jabref.sourceforge.net/"
 
 # packaging instructions:

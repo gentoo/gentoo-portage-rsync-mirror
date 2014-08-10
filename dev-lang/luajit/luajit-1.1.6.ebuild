@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/luajit-1.1.6.ebuild,v 1.1 2010/10/13 00:07:11 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/luajit-1.1.6.ebuild,v 1.2 2014/08/10 20:29:14 slyfox Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit pax-utils
 
 MY_P="LuaJIT-${PV}"
 
-DESCRIPTION="A Just-In-Time Compiler for the Lua programming language."
+DESCRIPTION="A Just-In-Time Compiler for the Lua programming language"
 HOMEPAGE="http://luajit.org/"
 SRC_URI="http://luajit.org/download/${MY_P}.tar.gz"
 

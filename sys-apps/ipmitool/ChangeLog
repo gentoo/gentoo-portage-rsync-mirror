@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ipmitool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.25 2014/06/28 00:43:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.26 2014/08/10 20:24:25 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ipmitool-1.8.11-r1.ebuild,
+  ipmitool-1.8.11.ebuild, ipmitool-1.8.14.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *ipmitool-1.8.14 (28 Jun 2014)
 

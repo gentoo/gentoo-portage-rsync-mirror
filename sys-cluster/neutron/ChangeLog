@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/neutron
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.38 2014/08/01 05:14:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.39 2014/08/10 20:20:58 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> neutron-2014.1.1.ebuild,
+  neutron-2014.1.9999.ebuild, neutron-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   01 Aug 2014; Matthew Thode <prometheanfire@gentoo.org> neutron-9999.ebuild:
   updating git master neutron

@@ -1,5 +1,5 @@
 DEFINED_PHASES=install postinst prepare
-DESCRIPTION=AWStats is short for Advanced Web Statistics.
+DESCRIPTION=AWStats is short for Advanced Web Statistics
 EAPI=4
 HOMEPAGE=http://www.awstats.org/
 IUSE=geoip ipv6
@@ -9,4 +9,4 @@ RDEPEND=>=dev-lang/perl-5.6.1 virtual/perl-Time-Local dev-perl/URI geoip? ( dev-
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~flameeyes/awstats/awstats-7.1_p20121017.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=a943bf104adc4df335a855c6d76ab08b
+_md5_=4f3fe3226081cd1a0b96f4a58a330e1f

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-digester
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.65 2014/03/08 15:26:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.66 2014/08/10 20:10:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  commons-digester-1.8.1-r1.ebuild, commons-digester-2.1.ebuild,
+  commons-digester-3.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> -commons-digester-1.8.1.ebuild:
   Remove old.

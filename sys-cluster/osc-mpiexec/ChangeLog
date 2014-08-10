@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/osc-mpiexec
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/osc-mpiexec/ChangeLog,v 1.4 2010/03/02 02:40:39 jsbronder Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/osc-mpiexec/ChangeLog,v 1.5 2014/08/10 20:21:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> osc-mpiexec-0.83.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Mar 2010; Justin Bronder <jsbronder@gentoo.org>
   osc-mpiexec-0.83.ebuild:
@@ -21,4 +24,3 @@
   sys-cluster/mpiexec and cleanup of the ebuild. However, we also move the
   installed mpiexec* files to osc-mpiexec* so that this package can coexist
   with the newer MPI implementations implementing MPI-2.
-

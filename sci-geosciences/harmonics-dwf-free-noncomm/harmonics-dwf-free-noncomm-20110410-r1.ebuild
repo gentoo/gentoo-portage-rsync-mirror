@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/harmonics-dwf-free-noncomm/harmonics-dwf-free-noncomm-20110410-r1.ebuild,v 1.1 2013/02/10 23:29:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/harmonics-dwf-free-noncomm/harmonics-dwf-free-noncomm-20110410-r1.ebuild,v 1.2 2014/08/10 20:27:50 slyfox Exp $
 
 EAPI=5
 
 MY_P="${P/-free-noncomm-/-}"
-DESCRIPTION="Tidal harmonics database for libtcd."
+DESCRIPTION="Tidal harmonics database for libtcd"
 HOMEPAGE="http://www.flaterco.com/xtide/"
 # Even though the SRC_URI is labeled nonfree, the data is actually available for
 # any non-commercial use.

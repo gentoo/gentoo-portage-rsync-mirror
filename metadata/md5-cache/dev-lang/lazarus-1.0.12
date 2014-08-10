@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=>=dev-lang/fpc-2.6.0[source] net-misc/rsync x11-libs/gtk+:2 >=sys-devel/binutils-2.19.1-r1
-DESCRIPTION=Lazarus IDE is a feature rich visual programming environment emulating Delphi.
+DESCRIPTION=Lazarus IDE is a feature rich visual programming environment emulating Delphi
 EAPI=5
 HOMEPAGE=http://www.lazarus.freepascal.org/
 IUSE=minimal
@@ -11,4 +11,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=http://downloads.sourceforge.net/project/lazarus/Lazarus%20Zip%20_%20GZip/Lazarus%201.0.12/lazarus-1.0.12-0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=cf86721997854e6af6645551af4a328a
+_md5_=ec3de03bda8ead013d4126d1e79ecee4

@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/wmmemload-0.1.6-r1.ebuild,v 1.1 2012/01/04 14:29:17 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/wmmemload-0.1.6-r1.ebuild,v 1.2 2014/08/10 20:07:47 slyfox Exp $
 
 EAPI=4
 inherit autotools eutils
 
-DESCRIPTION="dockapp that displays memory and swap space usage."
+DESCRIPTION="dockapp that displays memory and swap space usage"
 HOMEPAGE="http://www.markstaggs.net/wmmemload"
 SRC_URI="http://markstaggs.net/${PN}-download/${P}.tar.gz"
 

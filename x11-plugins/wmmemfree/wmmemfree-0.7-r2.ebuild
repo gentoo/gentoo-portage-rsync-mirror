@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemfree/wmmemfree-0.7-r2.ebuild,v 1.6 2010/09/20 09:01:56 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemfree/wmmemfree-0.7-r2.ebuild,v 1.7 2014/08/10 20:07:35 slyfox Exp $
 
 EAPI=3
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="a blue memory monitoring dockapp."
+DESCRIPTION="a blue memory monitoring dockapp"
 HOMEPAGE="http://misuceldestept.go.ro/wmmemfree"
 SRC_URI="http://ibiblio.org/pub/linux/X11/xutils/${P}.tar.bz2"
 

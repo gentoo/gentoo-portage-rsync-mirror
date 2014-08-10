@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.2-r1.ebuild,v 1.5 2013/09/05 13:46:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.2-r1.ebuild,v 1.6 2014/08/10 20:08:27 slyfox Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source test"
 
 inherit eutils java-pkg-2
 
-DESCRIPTION="An easy-to-use Java logging toolkit designed for secure, performance-oriented logging."
+DESCRIPTION="An easy-to-use Java logging toolkit designed for secure, performance-oriented logging"
 HOMEPAGE="http://avalon.apache.org/"
 SRC_URI="mirror://apache/avalon/logkit/source/logkit-${PV}-src.tar.gz"
 

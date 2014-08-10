@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/jal
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jal/ChangeLog,v 1.4 2011/05/28 00:50:37 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jal/ChangeLog,v 1.5 2014/08/10 20:03:49 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jal-0.4.60.ebuild,
+  jal-0.4.62.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *jal-0.4.62 (28 May 2011)
 
@@ -20,4 +24,3 @@
   23 Jan 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +jal-0.4.60.ebuild:
   Initial import as per bug #78215. Ebuild by Giulio Malventi <giulio@vene.ws>.
-

@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/novnc-9999.ebuild,v 1.1 2013/09/27 01:39:57 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/novnc-9999.ebuild,v 1.2 2014/08/10 20:14:21 slyfox Exp $
 
 EAPI=5
 
 inherit git-2
 
-DESCRIPTION="noVNC is a VNC client implemented using HTML5 technologies."
+DESCRIPTION="noVNC is a VNC client implemented using HTML5 technologies"
 HOMEPAGE="http://kanaka.github.com/noVNC/"
 EGIT_REPO_URI="https://github.com/kanaka/noVNC.git"
 S="${WORKDIR}/noVNC-${PV}"

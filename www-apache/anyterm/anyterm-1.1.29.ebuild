@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.29.ebuild,v 1.3 2012/07/07 19:02:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.29.ebuild,v 1.4 2014/08/10 20:13:32 slyfox Exp $
 
 EAPI="2"
 
 inherit eutils flag-o-matic
 
-DESCRIPTION="A terminal anywhere."
+DESCRIPTION="A terminal anywhere"
 HOMEPAGE="http://anyterm.org/"
 SRC_URI="http://anyterm.org/download/${P}.tbz2"
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install preinst setup test unpack
 DEPEND=|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* =virtual/jdk-1.4* ) app-arch/unzip >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
-DESCRIPTION=ICU4J is a set of Java libraries providing Unicode and Globalization support.
+DESCRIPTION=ICU4J is a set of Java libraries providing Unicode and Globalization support
 HOMEPAGE=http://www.icu-project.org/
 IUSE=doc test elibc_FreeBSD source elibc_FreeBSD elibc_FreeBSD
 KEYWORDS=amd64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
@@ -10,4 +10,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://download.icu-project.org/files/icu4j/3.8.1/icu4j-3_8_1-src.jar doc? ( http://download.icu-project.org/files/icu4j/3.8.1/icu4j-3_8_1-docs.jar )
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-osgi	fb81d0ede6b5759b64ec19226fe6d2f2	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=c25bee94a547df16a0c7f26ae0de9111
+_md5_=9750398203b743793051e67a761c4d29

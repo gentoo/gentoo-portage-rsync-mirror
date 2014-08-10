@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9-r1.ebuild,v 1.7 2014/03/09 19:48:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9-r1.ebuild,v 1.8 2014/08/10 20:06:29 slyfox Exp $
 
 EAPI=5
 inherit autotools eutils
 
-DESCRIPTION="The Matchbox Library."
+DESCRIPTION="The Matchbox Library"
 HOMEPAGE="http://matchbox-project.org/"
 SRC_URI="http://matchbox-project.org/sources/${PN}/${PV}/${P}.tar.bz2
 	mirror://sourceforge/check/check-0.9.12.tar.gz" # For check.m4

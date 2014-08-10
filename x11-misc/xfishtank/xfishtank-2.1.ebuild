@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1.ebuild,v 1.13 2009/05/04 09:16:05 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1.ebuild,v 1.14 2014/08/10 20:04:58 slyfox Exp $
 
 inherit eutils
 
 MY_P=${P}tp
 
-DESCRIPTION="Turns your root window into an aquarium."
+DESCRIPTION="Turns your root window into an aquarium"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/X11/demos/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/X11/demos/${MY_P}.tar.gz"
 

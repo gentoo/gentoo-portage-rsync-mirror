@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.19 2014/06/09 03:33:49 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.20 2014/08/10 20:12:47 slyfox Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ fi
 
 inherit distutils-r1 ${GIT_ECLASS}
 
-DESCRIPTION="A Mercurial (or Git) based blogging engine."
+DESCRIPTION="A Mercurial (or Git) based blogging engine"
 HOMEPAGE="http://blohg.org/ http://pypi.python.org/pypi/blohg"
 
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"

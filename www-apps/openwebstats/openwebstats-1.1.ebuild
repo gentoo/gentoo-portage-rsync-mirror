@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/openwebstats/openwebstats-1.1.ebuild,v 1.6 2013/11/06 02:26:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/openwebstats/openwebstats-1.1.ebuild,v 1.7 2014/08/10 20:14:27 slyfox Exp $
 
 inherit webapp
 
-DESCRIPTION="PHP stats application that reads Apache log files and imports the data to a MySQL database."
+DESCRIPTION="PHP stats application that reads Apache log files and imports the data to a MySQL database"
 HOMEPAGE="http://openwebstats.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

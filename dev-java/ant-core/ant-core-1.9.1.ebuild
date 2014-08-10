@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.9.1.ebuild,v 1.1 2013/07/05 11:02:05 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.9.1.ebuild,v 1.2 2014/08/10 20:07:23 slyfox Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ inherit eutils java-pkg-2 java-ant-2 prefix versionator
 
 MY_P="apache-ant-${PV}"
 
-DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files."
+DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files"
 HOMEPAGE="http://ant.apache.org/"
 SRC_URI="mirror://apache/ant/source/${MY_P}-src.tar.bz2
 	http://dev.gentoo.org/~tomwij/files/dist/ant-${PV}-gentoo.tar.bz2"

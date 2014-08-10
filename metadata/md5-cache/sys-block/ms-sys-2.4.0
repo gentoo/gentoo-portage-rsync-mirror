@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install
 DEPEND=sys-devel/gettext
-DESCRIPTION=A command-line program for writing Microsoft compatible boot records.
+DESCRIPTION=A command-line program for writing Microsoft compatible boot records
 EAPI=5
 HOMEPAGE=http://ms-sys.sourceforge.net
 IUSE=linguas_sv
@@ -10,4 +10,4 @@ RDEPEND=virtual/libintl
 SLOT=0
 SRC_URI=mirror://sourceforge/ms-sys/ms-sys-2.4.0.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=1881cbf478d3d51137dfc50e10331103
+_md5_=2ae988f17dd445468062454db06e9136

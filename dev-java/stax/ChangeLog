@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/stax
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/stax/ChangeLog,v 1.6 2009/12/28 08:53:45 josejx Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stax/ChangeLog,v 1.7 2014/08/10 20:24:20 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> stax-1.2.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   28 Dec 2009; Joseph Jezak <josejx@gentoo.org> stax-1.2.0.ebuild:
   Marked ppc/ppc64 stable for bug #287619.
@@ -23,4 +26,3 @@
   +files/1.2.0-build-version.patch, +metadata.xml, +stax-1.2.0.ebuild:
   Initial addition for bug #92763. Initial ebuild done by kiorky
   <kiorky@cryptelium.net> and then improved by me.
-

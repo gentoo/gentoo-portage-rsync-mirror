@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/mod_auth_pgsql-2.0.3-r1.ebuild,v 1.6 2012/10/12 09:47:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/mod_auth_pgsql-2.0.3-r1.ebuild,v 1.7 2014/08/10 20:14:16 slyfox Exp $
 
 inherit apache-module multilib
 
-DESCRIPTION="This module allows user authentication against information stored in a PostgreSQL database."
+DESCRIPTION="This module allows user authentication against information stored in a PostgreSQL database"
 HOMEPAGE="http://www.giuseppetanzilli.it/mod_auth_pgsql2/"
 SRC_URI="http://www.giuseppetanzilli.it/mod_auth_pgsql2/dist/${P}.tar.gz"
 

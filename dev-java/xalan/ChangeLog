@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xalan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.96 2014/06/17 10:42:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.97 2014/08/10 20:26:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xalan-2.7.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -xalan-2.7.0-r4.ebuild,
   -xalan-2.7.0-r5.ebuild:

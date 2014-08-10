@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/mercator
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.31 2013/09/28 13:10:06 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.32 2014/08/10 20:06:32 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mercator-0.3.2.ebuild,
+  mercator-0.3.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *mercator-0.3.3 (28 Sep 2013)
 

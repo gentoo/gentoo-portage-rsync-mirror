@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/scratchbox-devkit-doctools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-doctools/ChangeLog,v 1.9 2013/02/03 11:36:54 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-doctools/ChangeLog,v 1.10 2014/08/10 20:04:51 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  scratchbox-devkit-doctools-1.0.13.ebuild,
+  scratchbox-devkit-doctools-1.0.14.ebuild,
+  scratchbox-devkit-doctools-1.0.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #453094

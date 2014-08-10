@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmSpaceWeather
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.19 2010/07/25 19:11:11 nirbheek Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.20 2014/08/10 20:03:48 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  wmSpaceWeather-1.04_p19.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
   wmSpaceWeather-1.04_p19.ebuild:

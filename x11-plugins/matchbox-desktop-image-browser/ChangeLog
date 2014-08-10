@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/matchbox-desktop-image-browser
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/ChangeLog,v 1.10 2012/06/04 00:47:26 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/ChangeLog,v 1.11 2014/08/10 20:02:29 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  matchbox-desktop-image-browser-0.2-r1.ebuild,
+  matchbox-desktop-image-browser-0.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org>
   matchbox-desktop-image-browser-0.2.ebuild:
@@ -50,4 +55,3 @@
   +files/matchbox-desktop-image-browser-0.2-include_fix.patch,
   +metadata.xml, +matchbox-desktop-image-browser-0.2.ebuild:
   Initial Import.
-

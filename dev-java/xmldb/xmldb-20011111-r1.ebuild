@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.21 2013/06/28 11:55:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.22 2014/08/10 20:27:20 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -9,7 +9,7 @@ inherit java-pkg-2 eutils java-ant-2
 MY_PN="${PN}-api"
 MY_PV="11112001"
 MY_P="${MY_PN}-${MY_PV}"
-DESCRIPTION="Java implementation for specifications made by XML:DB."
+DESCRIPTION="Java implementation for specifications made by XML:DB"
 HOMEPAGE="http://sourceforge.net/projects/xmldb-org/"
 SRC_URI="mirror://sourceforge/xmldb-org/${MY_P}.tar.gz"
 

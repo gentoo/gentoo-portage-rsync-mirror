@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/parity/parity-9999.ebuild,v 1.5 2013/01/17 11:07:21 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/parity/parity-9999.ebuild,v 1.6 2014/08/10 20:20:00 slyfox Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 	KEYWORDS="~x86-interix"
 fi
-DESCRIPTION="An Interix to native Win32 Cross-Compiler Tool (requires Visual Studio)."
+DESCRIPTION="An Interix to native Win32 Cross-Compiler Tool (requires Visual Studio)"
 HOMEPAGE="http://www.sourceforge.net/projects/parity/"
 
 LICENSE="LGPL-3"

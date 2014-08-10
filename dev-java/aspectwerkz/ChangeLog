@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/aspectwerkz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.36 2014/08/04 18:43:49 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.37 2014/08/10 20:08:15 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> aspectwerkz-2.0-r1.ebuild,
+  aspectwerkz-2.0.ebuild, aspectwerkz-2.0_rc2-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Aug 2014; Ralph Sennhauser <sera@gentoo.org> aspectwerkz-2.0-r1.ebuild:
   Avoid default doc target as the ebuild uses precompiled documentation.

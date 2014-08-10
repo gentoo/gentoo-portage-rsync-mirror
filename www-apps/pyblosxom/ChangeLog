@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/pyblosxom
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/ChangeLog,v 1.14 2012/09/02 22:59:11 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/ChangeLog,v 1.15 2014/08/10 20:14:52 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pyblosxom-1.4.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 Sep 2012; Anthony G. Basile <blueness@gentoo.org> pyblosxom-1.4.3.ebuild:
   Keyword ~arm, bug #343507
@@ -70,4 +73,3 @@
   +files/gentoo-webapp.patch, +files/postinstall-en.txt,
   +pyblosxom-1.2.1.ebuild:
   Added pyblosxom-1.2.1 from the webapps overlay to the portage tree
-

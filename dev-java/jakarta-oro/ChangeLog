@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jakarta-oro
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/ChangeLog,v 1.24 2014/08/03 14:23:01 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/ChangeLog,v 1.25 2014/08/10 20:15:54 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  jakarta-oro-2.0.8-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -jakarta-oro-2.0.8-r2.ebuild:
   Remove old

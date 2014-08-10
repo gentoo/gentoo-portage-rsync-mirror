@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/jaxb-tools-2.1.2.ebuild,v 1.6 2009/06/23 15:49:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/jaxb-tools-2.1.2.ebuild,v 1.7 2014/08/10 20:17:05 slyfox Exp $
 
 EAPI="1"
 JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Reference implementation of the JAXB specification."
+DESCRIPTION="Reference implementation of the JAXB specification"
 HOMEPAGE="http://jaxb.dev.java.net/"
 SRC_URI="https://jaxb.dev.java.net/${PV}/JAXB2_src_20070125.jar"
 

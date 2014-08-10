@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/mbr-gpt/mbr-gpt-0.0.1.ebuild,v 1.2 2008/03/25 08:41:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/mbr-gpt/mbr-gpt-0.0.1.ebuild,v 1.3 2014/08/10 20:21:10 slyfox Exp $
 
 inherit eutils flag-o-matic
 
-DESCRIPTION="An MBR that can handle BIOS-based boot on GPT."
+DESCRIPTION="An MBR that can handle BIOS-based boot on GPT"
 MY_P="${PN}_${PV}"
 HOMEPAGE="http://aybabtu.com/mbr-gpt/"
 SRC_URI="http://aybabtu.com/mbr-gpt/${MY_P}.tar.gz"

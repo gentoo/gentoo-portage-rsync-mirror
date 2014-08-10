@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/libnss-cache
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-cache/ChangeLog,v 1.8 2012/10/06 19:58:03 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-cache/ChangeLog,v 1.9 2014/08/10 20:22:04 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  libnss-cache-0.1-r1.ebuild, libnss-cache-0.10.1.ebuild,
+  libnss-cache-0.10.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *libnss-cache-0.10.2 (06 Oct 2012)
 
@@ -46,4 +51,3 @@
   18 Mar 2009; Alec Warner <antarus@gentoo.org>
   +files/0.1-make-install.patch, +libnss-cache-0.1.ebuild:
   Initial import of libnss-cache.
-

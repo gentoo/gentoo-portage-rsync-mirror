@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmapmload
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapmload/ChangeLog,v 1.15 2011/12/13 23:28:46 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapmload/ChangeLog,v 1.16 2014/08/10 20:04:08 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmapmload-0.3.3.ebuild,
+  wmapmload-0.3.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Dec 2011; Agostino Sarubbo <ago@gentoo.org> wmapmload-0.3.4.ebuild:
   Stable for AMD64, wrt bug #392807
@@ -52,5 +56,3 @@
   ChangeLog, files/digest-wmapmload-0.3.0 :
   
   Initial import thanks to Autobot.
-
-

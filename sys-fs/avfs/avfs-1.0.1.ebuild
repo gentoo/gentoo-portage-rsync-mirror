@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-1.0.1.ebuild,v 1.6 2013/04/25 19:15:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-1.0.1.ebuild,v 1.7 2014/08/10 20:19:19 slyfox Exp $
 
 EAPI=4
 inherit eutils
 
-DESCRIPTION="AVFS is a virtual filesystem that allows browsing of compressed files."
+DESCRIPTION="AVFS is a virtual filesystem that allows browsing of compressed files"
 HOMEPAGE="http://sourceforge.net/projects/avf"
 SRC_URI="mirror://sourceforge/avf/${P}.tar.bz2"
 

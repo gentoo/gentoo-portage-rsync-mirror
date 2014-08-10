@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.1.ebuild,v 1.8 2014/04/07 19:59:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.1.ebuild,v 1.9 2014/08/10 20:05:22 slyfox Exp $
 
 EAPI=5
 inherit eutils
 
-DESCRIPTION="a nice digital clock with 7 different styles either in LCD or LED style."
+DESCRIPTION="a nice digital clock with 7 different styles either in LCD or LED style"
 HOMEPAGE="http://tnemeth.free.fr/projets/dockapps.html"
 SRC_URI="mirror://debian/pool/main/w/${PN}/${PN}_${PV}-1.tar.gz"
 

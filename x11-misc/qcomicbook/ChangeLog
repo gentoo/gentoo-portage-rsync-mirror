@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.52 2014/02/09 13:37:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.53 2014/08/10 20:03:40 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> qcomicbook-0.9.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *qcomicbook-0.9.0-r1 (09 Feb 2014)
 

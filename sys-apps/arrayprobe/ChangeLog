@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/arrayprobe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/arrayprobe/ChangeLog,v 1.10 2014/03/08 22:26:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/arrayprobe/ChangeLog,v 1.11 2014/08/10 20:23:08 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> arrayprobe-2.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Mar 2014; Mike Frysinger <vapier@gentoo.org> arrayprobe-2.0-r2.ebuild:
   Add ia64 love.

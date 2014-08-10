@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup
 DEPEND=>=dev-libs/boost-1.48[python?] dev-libs/icu dev-libs/libxml2 media-fonts/dejavu media-libs/freetype media-libs/libpng media-libs/tiff net-misc/curl sci-libs/proj sys-libs/zlib virtual/jpeg x11-libs/agg[truetype] bidi? ( dev-libs/fribidi ) cairo? ( x11-libs/cairo dev-cpp/cairomm python? ( dev-python/pycairo ) ) gdal? ( sci-libs/gdal ) geos? ( sci-libs/geos ) postgres? ( >=dev-db/postgresql-base-8.3 ) sqlite? ( dev-db/sqlite:3 ) python? ( =dev-lang/python-2* ) dev-util/scons
-DESCRIPTION=A Free Toolkit for developing mapping applications.
+DESCRIPTION=A Free Toolkit for developing mapping applications
 EAPI=4
 HOMEPAGE=http://www.mapnik.org/
 IUSE=bidi cairo debug doc gdal geos postgres python sqlite
@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/boost-1.48[python?] dev-libs/icu dev-libs/libxml2 media-fonts
 SLOT=0
 SRC_URI=http://github.com/downloads/mapnik/mapnik/mapnik-v2.1.0.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=4b6ee6ec1d4024730cf27702ad35f35e
+_md5_=d9e41633fe51d5b30bfc537ba65b3bae

@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/phpsysinfo-3.0.20.ebuild,v 1.2 2013/05/14 04:49:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/phpsysinfo-3.0.20.ebuild,v 1.3 2014/08/10 20:14:37 slyfox Exp $
 
 EAPI="5"
 
 inherit webapp
 
-DESCRIPTION="phpSysInfo is a nice package that will display your system stats via PHP."
+DESCRIPTION="phpSysInfo is a nice package that will display your system stats via PHP"
 HOMEPAGE="http://rk4an.github.com/phpsysinfo/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

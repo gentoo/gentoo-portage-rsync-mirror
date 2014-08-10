@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cos
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cos/ChangeLog,v 1.5 2014/03/08 18:07:01 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cos/ChangeLog,v 1.6 2014/08/10 20:12:17 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cos-20021105-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *cos-20021105-r3 (08 Mar 2014)
 

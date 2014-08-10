@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/spin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/ChangeLog,v 1.18 2007/11/13 12:38:55 opfer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/ChangeLog,v 1.19 2014/08/10 20:24:10 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> spin-1.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Nov 2007; Christian Faulhammer <opfer@gentoo.org> spin-1.5.ebuild:
   filtered jikes
@@ -62,4 +65,3 @@
   03 Dec 2004; Don Seiler <rizzo@gentoo.org> +metadata.xml,
   +spin-1.3.1.ebuild:
   Initial add
-

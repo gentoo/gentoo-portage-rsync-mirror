@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/scratchbox-toolchain-cs2009q1-203sb1
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-203sb1/ChangeLog,v 1.4 2011/09/13 19:03:16 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-203sb1/ChangeLog,v 1.5 2014/08/10 20:05:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  scratchbox-toolchain-cs2009q1-203sb1-1.0.13.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #278944
@@ -20,4 +24,3 @@
   17 Jan 2010; Dominik Kapusta <ayoy@gentoo.org>
   +scratchbox-toolchain-cs2009q1-203sb1-1.0.13.ebuild, +metadata.xml:
   Initial commit for cs2009q1 203sb1 scratchbox toolchain
-

@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/mod_auth_mysql-3.0.0-r3.ebuild,v 1.1 2013/04/02 07:31:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/mod_auth_mysql-3.0.0-r3.ebuild,v 1.2 2014/08/10 20:14:00 slyfox Exp $
 
 EAPI="2"
 
 inherit apache-module eutils multilib
 
-DESCRIPTION="Basic authentication for Apache using a MySQL database."
+DESCRIPTION="Basic authentication for Apache using a MySQL database"
 HOMEPAGE="http://modauthmysql.sourceforge.net/"
 SRC_URI="mirror://sourceforge/modauthmysql/${P}.tar.gz"
 

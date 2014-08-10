@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-javamail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.30 2014/06/17 11:35:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.31 2014/08/10 20:24:39 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sun-javamail-1.4.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -sun-javamail-1.4.1.ebuild,
   -sun-javamail-1.4.2.ebuild:

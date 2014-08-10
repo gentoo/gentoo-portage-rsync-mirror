@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.187 2014/05/21 07:56:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.188 2014/08/10 20:18:54 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  vserver-sources-2.3.0.36.32.ebuild, vserver-sources-2.3.6.11.ebuild,
+  vserver-sources-2.3.6.5.ebuild, vserver-sources-2.3.6.8.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *vserver-sources-2.3.6.8 (21 May 2014)
 *vserver-sources-2.3.6.11 (21 May 2014)

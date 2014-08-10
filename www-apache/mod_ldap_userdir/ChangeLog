@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_ldap_userdir
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ldap_userdir/ChangeLog,v 1.15 2012/11/27 19:21:21 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ldap_userdir/ChangeLog,v 1.16 2014/08/10 20:16:19 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  mod_ldap_userdir-1.1.16.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -mod_ldap_userdir-1.1.12.ebuild,
   -mod_ldap_userdir-1.1.5.ebuild, metadata.xml:

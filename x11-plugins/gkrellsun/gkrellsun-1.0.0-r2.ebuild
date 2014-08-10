@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/gkrellsun-1.0.0-r2.ebuild,v 1.1 2010/07/28 14:41:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/gkrellsun-1.0.0-r2.ebuild,v 1.2 2014/08/10 20:01:49 slyfox Exp $
 
 EAPI="3"
 inherit gkrellm-plugin eutils
 
 IUSE="nls"
-DESCRIPTION="A GKrellM plugin that shows sunrise and sunset times."
+DESCRIPTION="A GKrellM plugin that shows sunrise and sunset times"
 HOMEPAGE="http://gkrellsun.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gkrellsun/${P}.tar.gz"
 

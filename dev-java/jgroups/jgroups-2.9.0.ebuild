@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.9.0.ebuild,v 1.4 2010/05/28 19:35:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.9.0.ebuild,v 1.5 2014/08/10 20:18:14 slyfox Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -10,7 +10,7 @@ inherit java-pkg-2 java-ant-2
 MY_PN="JGroups"
 MY_PV="${PV/_p/-sp}"
 MY_P="${MY_PN}-${MY_PV}.GA"
-DESCRIPTION="JGroups is a toolkit for reliable multicast communication."
+DESCRIPTION="JGroups is a toolkit for reliable multicast communication"
 SRC_URI="mirror://sourceforge/javagroups/${MY_P}.src.zip"
 HOMEPAGE="http://www.jgroups.org/javagroupsnew/docs/"
 LICENSE="LGPL-2.1"

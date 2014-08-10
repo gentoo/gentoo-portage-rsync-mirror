@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/piccolo/piccolo-1.04.ebuild,v 1.1 2013/09/17 15:19:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/piccolo/piccolo-1.04.ebuild,v 1.2 2014/08/10 20:22:14 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A small, extremely fast XML parser for Java."
+DESCRIPTION="A small, extremely fast XML parser for Java"
 HOMEPAGE="http://piccolo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/suacomp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/ChangeLog,v 1.15 2012/09/29 13:02:23 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/ChangeLog,v 1.16 2014/08/10 20:13:05 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> suacomp-0.6.13.ebuild,
+  suacomp-0.6.14.ebuild, suacomp-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   +files/suacomp-0.6.14-strtoll.patch, suacomp-0.6.14.ebuild:

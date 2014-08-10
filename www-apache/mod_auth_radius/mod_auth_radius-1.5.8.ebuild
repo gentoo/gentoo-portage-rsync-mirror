@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_radius/mod_auth_radius-1.5.8.ebuild,v 1.2 2013/05/13 13:31:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_radius/mod_auth_radius-1.5.8.ebuild,v 1.3 2014/08/10 20:14:22 slyfox Exp $
 
 EAPI="5"
 
 inherit apache-module eutils
 
-DESCRIPTION="Radius authentication for Apache."
+DESCRIPTION="Radius authentication for Apache"
 HOMEPAGE="http://freeradius.org/mod_auth_radius/"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${P}.tar"
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ipmitool-1.8.11.ebuild,v 1.4 2009/10/24 11:38:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ipmitool-1.8.11.ebuild,v 1.5 2014/08/10 20:24:25 slyfox Exp $
 
-DESCRIPTION="Utility for controlling IPMI enabled devices."
+DESCRIPTION="Utility for controlling IPMI enabled devices"
 HOMEPAGE="http://ipmitool.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 #IUSE="freeipmi openipmi"

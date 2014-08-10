@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/xnec2c
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/ChangeLog,v 1.14 2014/07/29 04:48:08 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/ChangeLog,v 1.15 2014/08/10 20:29:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xnec2c-1.4.ebuild,
+  xnec2c-1.5.ebuild, xnec2c-1.6.ebuild, xnec2c-2.4.ebuild, xnec2c-2.5.ebuild,
+  xnec2c-2.8.ebuild, xnec2c-2.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *xnec2c-2.9 (29 Jul 2014)
 

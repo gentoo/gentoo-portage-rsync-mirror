@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-el
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.34 2014/08/03 10:36:55 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.35 2014/08/10 20:10:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> commons-el-1.0-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -commons-el-1.0-r2.ebuild:
   Remove old

@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-api/jnlp-api-6.0.18.ebuild,v 1.3 2011/10/09 17:01:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-api/jnlp-api-6.0.18.ebuild,v 1.4 2014/08/10 20:18:43 slyfox Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="source"
 
 inherit eutils java-pkg-2 java-pkg-simple
 
-DESCRIPTION="JNLP API classes, repackaged from the icedtea-web fork of netx."
+DESCRIPTION="JNLP API classes, repackaged from the icedtea-web fork of netx"
 HOMEPAGE="http://jcp.org/en/jsr/detail?id=56"
 SRC_URI="http://dev.gentoo.org/~caster/distfiles/${P}.tar.bz2"
 

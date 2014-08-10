@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/scw-0.4.7.ebuild,v 1.5 2012/05/05 03:52:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/scw-0.4.7.ebuild,v 1.6 2014/08/10 20:06:45 slyfox Exp $
 
 EAPI=3
 
-DESCRIPTION="A GTK+ widget set specifically designed for chat programs."
+DESCRIPTION="A GTK+ widget set specifically designed for chat programs"
 HOMEPAGE="http://scwwidgets.googlepages.com"
 SRC_URI="http://scwwidgets.googlepages.com/${P}.tar.gz"
 

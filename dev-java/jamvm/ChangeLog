@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jamvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.52 2014/06/17 10:53:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.53 2014/08/10 20:16:11 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jamvm-1.5.4-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -files/jamvm-1.5.4-r1.env,
   -jamvm-1.5.4-r1.ebuild:

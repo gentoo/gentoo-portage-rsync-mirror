@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xautolock
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.29 2012/12/17 19:16:01 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.30 2014/08/10 20:04:48 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xautolock-2.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Dec 2012; Jeroen Roovers <jer@gentoo.org> -xautolock-2.1-r1.ebuild:
   Old.

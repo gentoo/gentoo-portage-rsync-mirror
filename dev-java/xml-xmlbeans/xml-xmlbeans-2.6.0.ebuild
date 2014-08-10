@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-2.6.0.ebuild,v 1.1 2013/09/17 17:15:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-2.6.0.ebuild,v 1.2 2014/08/10 20:27:10 slyfox Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ inherit eutils java-pkg-2 java-ant-2
 
 MY_P="xmlbeans-${PV}"
 
-DESCRIPTION="An XML-Java binding tool."
+DESCRIPTION="An XML-Java binding tool"
 HOMEPAGE="http://xmlbeans.apache.org/"
 SRC_URI="http://archive.apache.org/dist/xmlbeans/source/${MY_P}-src.zip"
 

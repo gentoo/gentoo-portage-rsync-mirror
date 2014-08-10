@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.9.2.ebuild,v 1.6 2013/10/20 16:30:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.9.2.ebuild,v 1.7 2014/08/10 20:06:57 slyfox Exp $
 
 EAPI="5"
 
 inherit versionator
 
-DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files."
+DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files"
 HOMEPAGE="http://ant.apache.org/"
 
 LICENSE="Apache-2.0"

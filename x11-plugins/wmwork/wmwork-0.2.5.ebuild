@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwork/wmwork-0.2.5.ebuild,v 1.3 2008/01/21 12:33:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwork/wmwork-0.2.5.ebuild,v 1.4 2014/08/10 20:09:57 slyfox Exp $
 
-DESCRIPTION="a dockapp that lets you easily track time spent on different projects."
+DESCRIPTION="a dockapp that lets you easily track time spent on different projects"
 HOMEPAGE="http://www.godisch.de/debian/wmwork"
 SRC_URI="http://www.godisch.de/debian/${PN}/${P}.tar.gz"
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/txw2-runtime-20070407-r2.ebuild,v 1.4 2012/03/06 21:14:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/txw2-runtime-20070407-r2.ebuild,v 1.5 2014/08/10 20:26:03 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="TXW is a library that allows you to write XML documents."
+DESCRIPTION="TXW is a library that allows you to write XML documents"
 HOMEPAGE="https://txw.dev.java.net/"
 SRC_URI="https://txw.dev.java.net/files/documents/3310/54821/txw2-${PV}.zip"
 

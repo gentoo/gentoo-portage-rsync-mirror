@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.70-r1.ebuild,v 1.17 2012/11/06 08:12:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.70-r1.ebuild,v 1.18 2014/08/10 20:25:24 slyfox Exp $
 
 inherit eutils fixheadtails qmail
 
-DESCRIPTION="Command-line tools for building SSL client-server applications."
+DESCRIPTION="Command-line tools for building SSL client-server applications"
 HOMEPAGE="http://www.superscript.com/ucspi-ssl/"
 SRC_URI="http://www.superscript.com/ucspi-ssl/${P}.tar.gz
 		http://www.suspectclass.com/~sgifford/ucspi-tls/files/ucspi-ssl-0.70-ucspitls-0.1.patch"

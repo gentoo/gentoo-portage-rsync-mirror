@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/mod_survey-3.2.4.ebuild,v 1.5 2008/02/04 09:05:30 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/mod_survey-3.2.4.ebuild,v 1.6 2014/08/10 20:13:58 slyfox Exp $
 
 inherit webapp
 
 WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
 
-DESCRIPTION="XML-defined web questionnaires as a plug-in module using Apache."
+DESCRIPTION="XML-defined web questionnaires as a plug-in module using Apache"
 HOMEPAGE="http://www.modsurvey.org"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc mysql nls postgres"

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-3.2.ebuild,v 1.2 2013/05/30 07:57:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-3.2.ebuild,v 1.3 2014/08/10 20:11:53 slyfox Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ inherit eutils java-pkg-2 java-ant-2 java-osgi
 
 MY_P="${P}-src"
 
-DESCRIPTION="The purpose of the library is to provide fundamental protocol access, not higher-level abstractions."
+DESCRIPTION="The purpose of the library is to provide fundamental protocol access, not higher-level abstractions"
 HOMEPAGE="http://commons.apache.org/net/"
 SRC_URI="mirror://apache/commons/net/source/${MY_P}.tar.gz"
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/macopix
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.24 2012/10/12 17:40:56 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.25 2014/08/10 20:02:56 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> macopix-1.7.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Oct 2012; Agostino Sarubbo <ago@gentoo.org> macopix-1.7.4.ebuild:
   Stable for amd64, wrt bug #322851
@@ -96,4 +99,3 @@
   01 May 2004; Mamoru KOMACHI <usata@gentoo.org> macopix-1.0.3.ebuild:
   Initial import. Thanks to Christopher Eineke <christopher.eineke@gmx.de>
   for submitting the ebuild. Closing bug #49568.
-

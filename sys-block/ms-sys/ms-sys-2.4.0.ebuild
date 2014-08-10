@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ms-sys-2.4.0.ebuild,v 1.1 2014/06/14 16:50:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ms-sys-2.4.0.ebuild,v 1.2 2014/08/10 20:22:18 slyfox Exp $
 
 EAPI=5
 
 inherit toolchain-funcs
 
-DESCRIPTION="A command-line program for writing Microsoft compatible boot records."
+DESCRIPTION="A command-line program for writing Microsoft compatible boot records"
 HOMEPAGE="http://ms-sys.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

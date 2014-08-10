@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/simplyhtml/simplyhtml-0.13.1.ebuild,v 1.9 2012/09/29 17:59:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/simplyhtml/simplyhtml-0.13.1.ebuild,v 1.10 2014/08/10 20:23:38 slyfox Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source"
@@ -10,7 +10,7 @@ MY_PN="SimplyHTML"
 MY_PV="$(replace_all_version_separators _)"
 #MY_P="${MY_PN}_${PV}"
 
-DESCRIPTION="Text processing application based on HTML and CSS files."
+DESCRIPTION="Text processing application based on HTML and CSS files"
 HOMEPAGE="http://${PN}.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}_src_${MY_PV}.tar.gz"
 #SRC_URI="mirror://gentoo/${P}.tar.bz2"

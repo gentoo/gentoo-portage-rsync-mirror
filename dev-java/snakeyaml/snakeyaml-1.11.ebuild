@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snakeyaml/snakeyaml-1.11.ebuild,v 1.1 2013/07/11 21:22:25 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snakeyaml/snakeyaml-1.11.ebuild,v 1.2 2014/08/10 20:23:55 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-pkg-simple
 
-DESCRIPTION="A YAML 1.1 parser and emitter for Java 5."
+DESCRIPTION="A YAML 1.1 parser and emitter for Java 5"
 HOMEPAGE="http://code.google.com/p/snakeyaml/"
 SRC_URI="http://snakeyaml.googlecode.com/files/SnakeYAML-all-${PV}.zip"
 

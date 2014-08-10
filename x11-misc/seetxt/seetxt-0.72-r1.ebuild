@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/seetxt/seetxt-0.72-r1.ebuild,v 1.2 2013/09/10 02:36:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/seetxt/seetxt-0.72-r1.ebuild,v 1.3 2014/08/10 20:03:52 slyfox Exp $
 
 EAPI=5
 
 inherit autotools eutils
 
-DESCRIPTION="Clever, lightweight GUI text file and manual page viewer for X windows."
+DESCRIPTION="Clever, lightweight GUI text file and manual page viewer for X windows"
 HOMEPAGE="http://code.google.com/p/seetxt/ http://seetxt.sourceforge.net/"
 SRC_URI="http://seetxt.googlecode.com/files/${P}.tar.bz2"
 

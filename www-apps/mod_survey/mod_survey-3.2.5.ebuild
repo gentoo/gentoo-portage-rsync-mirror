@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/mod_survey-3.2.5.ebuild,v 1.2 2008/03/22 23:58:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/mod_survey-3.2.5.ebuild,v 1.3 2014/08/10 20:13:58 slyfox Exp $
 
 inherit depend.apache webapp
 
@@ -9,7 +9,7 @@ SLOT="0"
 
 MY_PN=${PN/_/}
 
-DESCRIPTION="XML-defined web questionnaires as a plug-in module using Apache."
+DESCRIPTION="XML-defined web questionnaires as a plug-in module using Apache"
 HOMEPAGE="http://www.modsurvey.org"
 SRC_URI="http://www.modsurvey.org/download/tarballs/${MY_PN}-${PV}.tgz
 	doc? ( http://www.modsurvey.org/download/tarballs/${MY_PN}-docs-${PV}.tgz )"

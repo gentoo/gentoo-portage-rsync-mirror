@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r5.ebuild,v 1.6 2008/05/03 15:52:51 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r5.ebuild,v 1.7 2014/08/10 20:14:33 slyfox Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A binary web service protocol."
+DESCRIPTION="A binary web service protocol"
 HOMEPAGE="http://www.caucho.com/hessian/"
 SRC_URI="http://www.caucho.com/hessian/download/${P}-src.jar"
 

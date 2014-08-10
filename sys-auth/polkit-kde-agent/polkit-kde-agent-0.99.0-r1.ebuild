@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/polkit-kde-agent-0.99.0-r1.ebuild,v 1.5 2013/04/02 20:57:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/polkit-kde-agent-0.99.0-r1.ebuild,v 1.6 2014/08/10 20:22:58 slyfox Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ KDE_LINGUAS="ca ca@valencia cs da de en_GB eo es et fi fr ga
 	sk sr sr@ijekavian sr@ijekavianlatin sr@latin sv th tr uk zh_TW"
 inherit kde4-base
 
-DESCRIPTION="PolKit agent module for KDE."
+DESCRIPTION="PolKit agent module for KDE"
 HOMEPAGE="http://www.kde.org"
 if [[ ${KDE_BUILD_TYPE} != live ]] ; then
 	SRC_URI="mirror://kde/stable/apps/KDE4.x/admin/${MY_P}.tar.bz2"

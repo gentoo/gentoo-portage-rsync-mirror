@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/v86d
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.36 2013/01/20 10:07:56 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.37 2014/08/10 20:25:31 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> v86d-0.1.10.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Jan 2013; Pacho Ramos <pacho@gentoo.org>
   -files/v86d-0.1.8-concurrent-make.patch, -files/v86d-0.1.9-prot_write.patch,

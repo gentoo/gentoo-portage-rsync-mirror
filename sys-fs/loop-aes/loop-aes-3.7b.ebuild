@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.7b.ebuild,v 1.1 2014/04/15 20:23:34 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.7b.ebuild,v 1.2 2014/08/10 20:19:48 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ inherit linux-mod
 
 MY_P="${PN/aes/AES}-v${PV}"
 
-DESCRIPTION="Linux kernel module to encrypt local file systems and disk partitions with AES cipher."
+DESCRIPTION="Linux kernel module to encrypt local file systems and disk partitions with AES cipher"
 HOMEPAGE="http://loop-aes.sourceforge.net/loop-AES.README"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 

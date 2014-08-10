@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/linsmith
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.21 2014/07/30 18:37:20 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.22 2014/08/10 20:28:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> linsmith-0.99.24.ebuild,
+  linsmith-0.99.25.ebuild, linsmith-0.99.26.ebuild, linsmith-0.99.28.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *linsmith-0.99.28 (30 Jul 2014)
 

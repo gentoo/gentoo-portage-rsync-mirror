@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/resin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.118 2014/01/08 06:08:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.119 2014/08/10 20:09:05 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> resin-4.0.13-r1.ebuild,
+  resin-4.0.14.ebuild, resin-4.0.15.ebuild, resin-4.0.22.ebuild,
+  resin-4.0.25.ebuild, resin-4.0.26.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> resin-4.0.13-r1.ebuild,
   resin-4.0.14.ebuild, resin-4.0.15.ebuild, resin-4.0.22.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/btrace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.25 2014/01/11 21:27:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.26 2014/08/10 20:21:30 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> btrace-1.0.0.ebuild,
+  btrace-1.0.1-r1.ebuild, btrace-1.0.1.ebuild, btrace-1.0.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   11 Jan 2014; Pacho Ramos <pacho@gentoo.org> -btrace-0.0.20071210202527.ebuild:
   Drop old version that cannot be downloaded (#269121 by Jan Kunzmann)

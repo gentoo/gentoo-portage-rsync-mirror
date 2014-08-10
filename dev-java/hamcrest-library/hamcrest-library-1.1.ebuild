@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-library/hamcrest-library-1.1.ebuild,v 1.1 2014/02/28 17:36:12 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-library/hamcrest-library-1.1.ebuild,v 1.2 2014/08/10 20:14:16 slyfox Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ MY_PN=${PN/-library}
 MY_P="${MY_PN}-${PV}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="Core library of matchers for building test expressions."
+DESCRIPTION="Core library of matchers for building test expressions"
 HOMEPAGE="http://code.google.com/p/${MY_PN}/"
 SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tgz"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/httpcomponents-core/httpcomponents-core-4.2.4.ebuild,v 1.1 2013/07/13 13:38:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpcomponents-core/httpcomponents-core-4.2.4.ebuild,v 1.2 2014/08/10 20:14:49 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="source examples"
 
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="A low level toolset of Java components focused on HTTP and associated protocols."
+DESCRIPTION="A low level toolset of Java components focused on HTTP and associated protocols"
 HOMEPAGE="http://hc.apache.org/index.html"
 SRC_URI="mirror://apache/${PN/-//http}/source/${P}-src.tar.gz"
 

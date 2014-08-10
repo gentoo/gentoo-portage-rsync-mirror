@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jclasslib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/ChangeLog,v 1.11 2007/10/24 04:53:58 wltjr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/ChangeLog,v 1.12 2014/08/10 20:17:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jclasslib-3.0-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -files/build.xml.patch, -jclasslib-2.0.ebuild, -jclasslib-3.0.ebuild:
@@ -49,4 +52,3 @@
   19 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +files/build.xml.patch, +jclasslib-2.0.ebuild:
   initial import, ebuild created by me, as a dep
-

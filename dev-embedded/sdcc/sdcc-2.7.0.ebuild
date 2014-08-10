@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.7.0.ebuild,v 1.2 2008/08/06 18:04:19 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.7.0.ebuild,v 1.3 2014/08/10 20:06:17 slyfox Exp $
 
-DESCRIPTION="Small device C compiler (for various microprocessors)."
+DESCRIPTION="Small device C compiler (for various microprocessors)"
 HOMEPAGE="http://sdcc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sdcc/${PN}-src-${PV}.tar.bz2
 	doc? ( mirror://sourceforge/sdcc/${PN}-doc-${PV}.tar.bz2 )"

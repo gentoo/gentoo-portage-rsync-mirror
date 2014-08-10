@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-fileupload
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.71 2013/04/22 10:14:03 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.72 2014/08/10 20:10:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  commons-fileupload-1.2.1-r1.ebuild, commons-fileupload-1.2.2.ebuild,
+  commons-fileupload-1.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> commons-fileupload-1.3.ebuild:
   Stable for ppc64, wrt bug #466460

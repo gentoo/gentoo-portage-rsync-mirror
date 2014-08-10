@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/blohg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.32 2014/06/10 01:04:15 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.33 2014/08/10 20:12:47 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> blohg-0.13.ebuild,
+  blohg-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *blohg-0.13 (10 Jun 2014)
 

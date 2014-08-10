@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.6.1.ebuild,v 1.7 2008/11/25 23:43:55 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.6.1.ebuild,v 1.8 2014/08/10 20:05:11 slyfox Exp $
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="a dockapp application that displays nine configurable buttons."
+DESCRIPTION="a dockapp application that displays nine configurable buttons"
 HOMEPAGE="http://www.freshports.org/x11/wmbutton"
 SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/${P}.tar.gz
 	branding? ( mirror://gentoo/${PN}-buttons.xpm )"

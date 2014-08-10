@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/scratchbox-devkit-debian-squeeze
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-debian-squeeze/ChangeLog,v 1.5 2011/09/13 19:00:48 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-debian-squeeze/ChangeLog,v 1.6 2014/08/10 20:04:44 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  scratchbox-devkit-debian-squeeze-1.0.4.ebuild,
+  scratchbox-devkit-debian-squeeze-1.0.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #278944
@@ -34,4 +39,3 @@
   +scratchbox-devkit-debian-squeeze-1.0.2.ebuild, +metadata.xml:
   Initial ebuild for debian-queeze scratchbox devkit. Thanks to David King
   (amigadave@amigadave.com) for the ebuild (bug #311163).
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.3.1.ebuild,v 1.5 2008/11/16 16:27:25 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.3.1.ebuild,v 1.6 2014/08/10 20:16:30 slyfox Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 JAVA_PKG_IUSE="doc source test"
@@ -8,7 +8,7 @@ inherit base java-pkg-2 java-ant-2 eutils
 
 MY_PN="wrapper"
 MY_P="${MY_PN}_${PV}_src"
-DESCRIPTION="A wrapper that makes it possible to install a Java Application as daemon."
+DESCRIPTION="A wrapper that makes it possible to install a Java Application as daemon"
 HOMEPAGE="http://wrapper.tanukisoftware.org/"
 SRC_URI="http://${MY_PN}.tanukisoftware.org/download/${PV}/${MY_P}.zip"
 

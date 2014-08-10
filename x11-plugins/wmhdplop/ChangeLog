@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmhdplop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.18 2010/09/03 13:47:55 s4t4n Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.19 2014/08/10 20:06:48 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmhdplop-0.9.9-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *wmhdplop-0.9.9-r2 (03 Sep 2010)
 
@@ -81,4 +84,3 @@
 
   26 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmhdplop-0.9.6.ebuild:
   Initial import. Thanks to didbaba. Closes #61808.
-

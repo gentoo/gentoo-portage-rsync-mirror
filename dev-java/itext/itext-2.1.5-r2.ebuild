@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.1.5-r2.ebuild,v 1.5 2013/09/05 10:45:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.1.5-r2.ebuild,v 1.6 2014/08/10 20:15:26 slyfox Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ DISTFILE="${PN/it/iT}-src-${PV}.tar.gz"
 ASIANJAR="iTextAsian.jar"
 ASIANCMAPSJAR="iTextAsianCmaps.jar"
 
-DESCRIPTION="A Java library that generate documents in the Portable Document Format (PDF) and/or HTML."
+DESCRIPTION="A Java library that generate documents in the Portable Document Format (PDF) and/or HTML"
 HOMEPAGE="http://www.lowagie.com/iText/"
 SRC_URI="mirror://sourceforge/itext/${DISTFILE}
 	cjk? ( mirror://sourceforge/itext/${ASIANJAR}

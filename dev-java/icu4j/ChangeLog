@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icu4j
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.63 2014/04/22 00:00:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.64 2014/08/10 20:15:08 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> icu4j-3.8.1-r1.ebuild,
+  icu4j-4.0.1.1.ebuild, icu4j-4.2.1.1.ebuild, icu4j-4.4.1.1.ebuild,
+  icu4j-4.4.2.ebuild, icu4j-49.1.ebuild, icu4j-52.1.ebuild, icu4j-53.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *icu4j-53.1 (21 Apr 2014)
 

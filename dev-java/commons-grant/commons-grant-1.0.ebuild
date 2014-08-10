@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-grant/commons-grant-1.0.ebuild,v 1.1 2013/07/08 13:33:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-grant/commons-grant-1.0.ebuild,v 1.2 2014/08/10 20:10:54 slyfox Exp $
 
 # Note: Upstream is dead... only place to find is on the ibiblio maven repo
 # and on jpackage.org
@@ -15,7 +15,7 @@ MY_PV="${MY_PV//_beta/.b}"
 MY_P="${MY_PN}-${MY_PV}"
 JPACKAGE_REVISION="4"
 
-DESCRIPTION="A small collection of hacks to make using Ant in an embedded envinronment much easier."
+DESCRIPTION="A small collection of hacks to make using Ant in an embedded envinronment much easier"
 # This link seems dead, but I don't have anywhere else to turn
 HOMEPAGE="http://jakarta.apache.org/commons/sandbox/grant/"
 SRC_URI="mirror://jpackage/1.6/generic/free/SRPMS/${MY_P}-${JPACKAGE_REVISION}jpp.src.rpm"

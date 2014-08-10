@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-0.0_p20131222.ebuild,v 1.2 2014/01/05 11:37:17 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-0.0_p20131222.ebuild,v 1.3 2014/08/10 20:12:23 slyfox Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ EGIT_REPO_URI="git://github.com/pathscale/libcxxrt.git"
 
 inherit flag-o-matic toolchain-funcs portability ${SCM} multilib-minimal
 
-DESCRIPTION="C++ Runtime from PathScale, FreeBSD and NetBSD."
+DESCRIPTION="C++ Runtime from PathScale, FreeBSD and NetBSD"
 HOMEPAGE="https://github.com/pathscale/libcxxrt http://www.pathscale.com/node/265"
 if [ "${PV%9999}" = "${PV}" ] ; then
 	SRC_URI="mirror://gentoo/${P}.tar.xz"

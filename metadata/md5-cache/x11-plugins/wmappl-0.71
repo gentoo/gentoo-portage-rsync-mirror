@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile install
 DEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXt x11-libs/libXpm x11-proto/xextproto
-DESCRIPTION=Simple application launcher for the Window Maker dock.
+DESCRIPTION=Simple application launcher for the Window Maker dock
 HOMEPAGE=http://wmappl.sourceforge.net/
 KEYWORDS=x86 sparc amd64 ppc
 LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXt x11-libs/libXpm
 SLOT=0
 SRC_URI=mirror://sourceforge/wmappl/wmappl-0.71.tar.gz
-_md5_=4b276bb4da6df046e9255812aa03934d
+_md5_=a748ecf28106a04efca6b31fbb44811e

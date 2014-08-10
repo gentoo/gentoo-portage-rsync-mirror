@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/wmbinclock-0.5.ebuild,v 1.6 2008/11/25 23:30:05 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/wmbinclock-0.5.ebuild,v 1.7 2014/08/10 20:04:44 slyfox Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="a nifty little binary clock dockapp."
+DESCRIPTION="a nifty little binary clock dockapp"
 HOMEPAGE="http://wmbinclock.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 

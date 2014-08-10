@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/luajit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.20 2014/08/10 08:24:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.21 2014/08/10 20:29:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> luajit-1.1.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> luajit-2.0.2.ebuild:
   Add ~ppc, wrt bug #517842

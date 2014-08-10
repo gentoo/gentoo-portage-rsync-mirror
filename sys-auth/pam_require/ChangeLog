@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_require
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_require/ChangeLog,v 1.7 2013/02/03 11:10:01 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_require/ChangeLog,v 1.8 2014/08/10 20:22:40 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pam_require-0.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -pam_require-0.6.ebuild,
   metadata.xml:

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare
 DEPEND=>=sys-kernel/linux-headers-2.6
-DESCRIPTION=Utilities to manage i2o/dtp RAID controllers.
+DESCRIPTION=Utilities to manage i2o/dtp RAID controllers
 EAPI=5
 HOMEPAGE=http://i2o.shadowconnect.com/
 IUSE=static-libs
@@ -9,4 +9,4 @@ LICENSE=BSD
 SLOT=0
 SRC_URI=http://i2o.shadowconnect.com/raidutils/raidutils-0.0.6.tar.bz2 mirror://gentoo/raidutils-rpm.patch.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=0d8a7c5816a38f648200405fe7763597
+_md5_=1a900e375e6d8de4e9606f2eb10a5c74

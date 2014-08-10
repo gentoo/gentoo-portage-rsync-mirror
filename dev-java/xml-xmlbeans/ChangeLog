@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xml-xmlbeans
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.35 2013/09/17 17:15:56 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.36 2014/08/10 20:27:10 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xml-xmlbeans-2.6.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *xml-xmlbeans-2.6.0 (17 Sep 2013)
 

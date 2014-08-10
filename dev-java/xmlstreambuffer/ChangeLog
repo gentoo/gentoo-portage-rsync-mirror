@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xmlstreambuffer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlstreambuffer/ChangeLog,v 1.10 2011/12/21 08:41:53 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlstreambuffer/ChangeLog,v 1.11 2014/08/10 20:27:40 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  xmlstreambuffer-0.5.20070412-r1.ebuild,
+  xmlstreambuffer-0.5.20070412-r2.ebuild, xmlstreambuffer-0.5.20070412.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   xmlstreambuffer-0.5.20070412-r2.ebuild:
@@ -46,4 +51,3 @@
   01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
   +xmlstreambuffer-0.5.20070412.ebuild:
   Initial commit of xmlstreambuffer.
-

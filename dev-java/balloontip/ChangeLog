@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/balloontip
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/balloontip/ChangeLog,v 1.1 2013/07/13 11:45:57 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/balloontip/ChangeLog,v 1.2 2014/08/10 20:08:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> balloontip-1.2.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *balloontip-1.2.1 (13 Jul 2013)
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install preinst prepare setup
 DEPEND=>=virtual/jdk-1.4 app-arch/unzip >=virtual/jdk-1.4 zlib? ( dev-java/jzlib:0 ) >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
-DESCRIPTION=JSch is a pure Java implementation of SSH2.
+DESCRIPTION=JSch is a pure Java implementation of SSH2
 EAPI=2
 HOMEPAGE=http://www.jcraft.com/jsch/
 IUSE=zlib elibc_FreeBSD doc source examples elibc_FreeBSD elibc_FreeBSD
@@ -10,4 +10,4 @@ RDEPEND=>=virtual/jdk-1.4 zlib? ( dev-java/jzlib:0 ) >=dev-java/java-config-2.1.
 SLOT=0
 SRC_URI=mirror://sourceforge/jsch/jsch-0.1.41.zip
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-osgi	fb81d0ede6b5759b64ec19226fe6d2f2	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=3054c7367c967995ffc2ad4f0c1f5526
+_md5_=afce85f6cad30e8c89940c7daf5f18ec

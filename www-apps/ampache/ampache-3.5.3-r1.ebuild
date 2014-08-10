@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.5.3-r1.ebuild,v 1.4 2012/06/22 21:24:02 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.5.3-r1.ebuild,v 1.5 2014/08/10 20:12:40 slyfox Exp $
 
 EAPI="2"
 
 inherit webapp
 
-DESCRIPTION="Ampache is a PHP-based tool for managing, updating and playing your audio files via a web interface."
+DESCRIPTION="Ampache is a PHP-based tool for managing, updating and playing your audio files via a web interface"
 HOMEPAGE="http://www.ampache.org/"
 SRC_URI="http://www.ampache.org/downloads/${P}.tar.gz"
 

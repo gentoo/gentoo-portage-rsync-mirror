@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ruby-threads-1.ebuild,v 1.18 2014/01/29 15:55:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ruby-threads-1.ebuild,v 1.19 2014/08/10 20:11:50 slyfox Exp $
 
 EAPI=2
 USE_RUBY="ruby19"
 
 inherit ruby-ng
 
-DESCRIPTION="Virtual ebuild for a ruby interpreter with threading enabled."
+DESCRIPTION="Virtual ebuild for a ruby interpreter with threading enabled"
 HOMEPAGE=""
 SRC_URI=""
 

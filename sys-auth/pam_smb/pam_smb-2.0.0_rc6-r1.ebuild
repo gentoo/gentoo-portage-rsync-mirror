@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-2.0.0_rc6-r1.ebuild,v 1.4 2007/09/12 21:22:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-2.0.0_rc6-r1.ebuild,v 1.5 2014/08/10 20:22:47 slyfox Exp $
 
 inherit eutils pam
 
 MY_P=${P/_rc/-rc}
 
-DESCRIPTION="The PAM SMB module, allows authentication against a SMB (such as the Win_x families) server."
+DESCRIPTION="The PAM SMB module, allows authentication against a SMB (such as the Win_x families) server"
 HOMEPAGE="http://www.csn.ul.ie/~airlied/pam_smb/"
 SRC_URI="mirror://samba/pam_smb/v2/${MY_P}.tar.gz
 	http://www.csn.ul.ie/~airlied/pam_smb/v2/${MY_P}.tar.gz"

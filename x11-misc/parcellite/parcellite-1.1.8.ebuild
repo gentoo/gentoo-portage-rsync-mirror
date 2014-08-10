@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-1.1.8.ebuild,v 1.1 2014/07/12 11:06:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-1.1.8.ebuild,v 1.2 2014/08/10 20:03:30 slyfox Exp $
 
 EAPI=5
 inherit eutils fdo-mime
 
 MY_P=${PN}-${PV/_}
 
-DESCRIPTION="A lightweight GTK+ based clipboard manager."
+DESCRIPTION="A lightweight GTK+ based clipboard manager"
 HOMEPAGE="http://parcellite.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 

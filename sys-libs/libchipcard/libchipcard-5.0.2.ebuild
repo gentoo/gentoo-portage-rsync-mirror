@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-5.0.2.ebuild,v 1.5 2012/04/16 19:39:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-5.0.2.ebuild,v 1.6 2014/08/10 20:12:16 slyfox Exp $
 
 EAPI=2
 
-DESCRIPTION="Libchipcard is a library for easy access to chip cards via chip card readers (terminals)."
+DESCRIPTION="Libchipcard is a library for easy access to chip cards via chip card readers (terminals)"
 HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
 SRC_URI="http://www.aquamaniac.de/sites/download/download.php?package=02&release=26&file=01&dummy=${P}.tar.gz -> ${P}.tar.gz"
 

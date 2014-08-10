@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_roaming/mod_roaming-2.0.0-r1.ebuild,v 1.2 2007/11/25 13:34:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_roaming/mod_roaming-2.0.0-r1.ebuild,v 1.3 2014/08/10 20:17:34 slyfox Exp $
 
 inherit apache-module
 
 KEYWORDS="x86"
 
-DESCRIPTION="Apache2 module enabling Netscape Communicator roaming profiles."
+DESCRIPTION="Apache2 module enabling Netscape Communicator roaming profiles"
 HOMEPAGE="http://www.klomp.org/mod_roaming/"
 SRC_URI="http://www.klomp.org/${PN}/${P}.tar.gz"
 LICENSE="BSD"

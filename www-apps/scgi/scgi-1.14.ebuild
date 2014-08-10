@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/scgi-1.14.ebuild,v 1.3 2011/09/01 16:29:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/scgi-1.14.ebuild,v 1.4 2014/08/10 20:15:11 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
-DESCRIPTION="A Python package for implementing SCGI servers."
+DESCRIPTION="A Python package for implementing SCGI servers"
 HOMEPAGE="http://pypi.python.org/pypi/scgi http://python.ca/scgi/ http://www.mems-exchange.org/software/scgi/"
 SRC_URI="http://python.ca/scgi/releases/${P}.tar.gz"
 

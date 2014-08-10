@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.5.0.ebuild,v 1.1 2013/09/27 06:02:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.5.0.ebuild,v 1.2 2014/08/10 20:15:02 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit distutils-r1
 
-DESCRIPTION="Simple-to-use and -install issue-tracking system with command-line, web, and e-mail interfaces."
+DESCRIPTION="Simple-to-use and -install issue-tracking system with command-line, web, and e-mail interfaces"
 HOMEPAGE="http://roundup.sourceforge.net http://pypi.python.org/pypi/roundup"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/helpgui/helpgui-1.1-r1.ebuild,v 1.4 2007/05/19 17:57:06 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/helpgui/helpgui-1.1-r1.ebuild,v 1.5 2014/08/10 20:14:23 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="HelpGUI is a simple library which develop a help viewer component."
+DESCRIPTION="HelpGUI is a simple library which develop a help viewer component"
 HOMEPAGE="http://helpgui.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.jar"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-core/hamcrest-core-1.1.ebuild,v 1.14 2013/06/14 19:48:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-core/hamcrest-core-1.1.ebuild,v 1.15 2014/08/10 20:14:08 slyfox Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -9,7 +9,7 @@ inherit java-pkg-2 java-ant-2
 MY_PN="hamcrest"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Library of matchers for building test expressions."
+DESCRIPTION="Library of matchers for building test expressions"
 HOMEPAGE="http://code.google.com/p/${MY_PN}/"
 SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tgz"
 LICENSE="BSD-2"

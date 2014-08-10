@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/dvhtool
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/ChangeLog,v 1.14 2011/08/18 03:35:05 mattst88 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/ChangeLog,v 1.15 2014/08/10 20:21:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> dvhtool-1.0.1-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   18 Aug 2011; Matt Turner <mattst88@gentoo.org> dvhtool-1.0.1-r2.ebuild,
   files/dvhtool-1.0.1-debian.diff:

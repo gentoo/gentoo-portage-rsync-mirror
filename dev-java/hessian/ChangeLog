@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/hessian
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/ChangeLog,v 1.23 2011/12/21 08:52:20 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/ChangeLog,v 1.24 2014/08/10 20:14:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> hessian-3.0.20.ebuild,
+  hessian-3.0.8-r5.ebuild, hessian-3.1.6.ebuild, hessian-4.0.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> hessian-4.0.3.ebuild:
   x86 stable wrt bug #393943
@@ -118,4 +122,3 @@
   +hessian-2.1.12.ebuild, +hessian-3.0.8.ebuild:
   Initial addition. Ebuilds contributed by Josh Nichols 
   <nichoj@alum.rpi.edu>. Fixes bug 97007.
-

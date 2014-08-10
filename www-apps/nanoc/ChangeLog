@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/nanoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.12 2014/05/07 19:07:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.13 2014/08/10 20:14:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> nanoc-3.6.4.ebuild,
+  nanoc-3.6.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 May 2014; Manuel Rüger <mrueg@gentoo.org> nanoc-3.6.4.ebuild,
   nanoc-3.6.5.ebuild:

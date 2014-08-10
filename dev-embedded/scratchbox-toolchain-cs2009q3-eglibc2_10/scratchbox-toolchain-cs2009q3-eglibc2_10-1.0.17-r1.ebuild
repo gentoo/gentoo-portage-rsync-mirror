@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q3-eglibc2_10/scratchbox-toolchain-cs2009q3-eglibc2_10-1.0.17-r1.ebuild,v 1.1 2010/09/08 17:32:00 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q3-eglibc2_10/scratchbox-toolchain-cs2009q3-eglibc2_10-1.0.17-r1.ebuild,v 1.2 2014/08/10 20:06:01 slyfox Exp $
 
 ARMHARDV="hard-${PV}-3"
 ARMSOFTV="soft-${PV}-4"
 I486V="${PV}-3"
 
-DESCRIPTION="A cross-compilation toolkit designed to make embedded Linux application development easier."
+DESCRIPTION="A cross-compilation toolkit designed to make embedded Linux application development easier"
 HOMEPAGE="http://www.scratchbox.org/"
 SRC_URI="http://scratchbox.org/download/files/sbox-releases/hathor/tarball/${PN/_/.}-armv7-${ARMHARDV}-i386.tar.gz
 	http://scratchbox.org/download/files/sbox-releases/hathor/tarball/${PN/_/.}-armv7-${ARMSOFTV}-i386.tar.gz

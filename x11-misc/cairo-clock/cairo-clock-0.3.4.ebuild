@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/cairo-clock-0.3.4.ebuild,v 1.2 2012/05/05 04:53:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/cairo-clock-0.3.4.ebuild,v 1.3 2014/08/10 20:01:40 slyfox Exp $
 
 EAPI=4
 
-DESCRIPTION="An analog clock displaying the system-time."
+DESCRIPTION="An analog clock displaying the system-time"
 HOMEPAGE="http://macslow.net/?page_id=23"
 SRC_URI="http://macslow.thepimp.net/projects/${PN}/${P}.tar.gz"
 

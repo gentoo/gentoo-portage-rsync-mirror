@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/cman-lib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/ChangeLog,v 1.10 2012/12/16 13:51:26 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/ChangeLog,v 1.11 2014/08/10 20:20:22 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  cman-lib-2.03.09-r1.ebuild, cman-lib-2.03.09.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> cman-lib-2.03.09-r1.ebuild:
   Stable for x86, wrt bug #441524

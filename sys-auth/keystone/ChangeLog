@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.76 2014/07/26 23:13:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.77 2014/08/10 20:21:57 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  keystone-2014.1.1-r2.ebuild, keystone-2014.1.9999.ebuild,
+  keystone-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   26 Jul 2014; Matthew Thode <prometheanfire@gentoo.org>
   keystone-2014.1.1-r2.ebuild, keystone-2014.1.9999.ebuild,

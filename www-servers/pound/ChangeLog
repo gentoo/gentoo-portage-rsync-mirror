@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/pound
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.52 2013/03/25 03:30:44 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.53 2014/08/10 20:08:55 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pound-2.5.ebuild,
+  pound-2.6.ebuild, pound-2.7a.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pound-2.7a (25 Mar 2013)
 

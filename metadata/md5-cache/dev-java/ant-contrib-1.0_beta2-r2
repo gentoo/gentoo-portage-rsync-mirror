@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install preinst setup test unpack
 DEPEND=>=virtual/jdk-1.4 >=virtual/jre-1.4 >=dev-java/bcel-5.1 >=dev-java/xerces-2.7 >=dev-java/ant-core-1.7.0 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
-DESCRIPTION=A collection of tasks (and at one point maybe types and other tools) for Apache Ant.
+DESCRIPTION=A collection of tasks (and at one point maybe types and other tools) for Apache Ant
 HOMEPAGE=http://ant-contrib.sourceforge.net/
 IUSE=elibc_FreeBSD doc source elibc_FreeBSD
 KEYWORDS=amd64 ppc ppc64 x86 ~x86-fbsd
@@ -10,4 +10,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/ant-contrib/ant-contrib-1.0b2-src.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=6efb6e612b4672a71efc25ab5372ce36
+_md5_=55ac83f0a2b9987d22287a526dfbf71a

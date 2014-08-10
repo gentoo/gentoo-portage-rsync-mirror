@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2-r3.ebuild,v 1.3 2010/01/03 21:26:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2-r3.ebuild,v 1.4 2014/08/10 20:22:08 slyfox Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc"
 
 inherit java-pkg-2
 
-DESCRIPTION="OSCache is a widely used, high performance J2EE caching framework."
+DESCRIPTION="OSCache is a widely used, high performance J2EE caching framework"
 SRC_URI="https://oscache.dev.java.net/files/documents/629/2653/${P}-full.zip"
 HOMEPAGE="http://www.opensymphony.com/oscache/"
 LICENSE="Apache-2.0"

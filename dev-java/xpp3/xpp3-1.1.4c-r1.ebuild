@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.4c-r1.ebuild,v 1.15 2013/06/27 21:26:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.4c-r1.ebuild,v 1.16 2014/08/10 20:28:10 slyfox Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -9,7 +9,7 @@ inherit java-pkg-2 java-ant-2
 MY_PV=${PV/m/.M}
 MY_P=${PN}-${MY_PV}
 
-DESCRIPTION="An implementation of XMLPULL V1 API."
+DESCRIPTION="An implementation of XMLPULL V1 API"
 HOMEPAGE="http://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/index.html"
 SRC_URI="http://www.extreme.indiana.edu/dist/java-repository/${PN}/distributions/${MY_P}_src.zip"
 

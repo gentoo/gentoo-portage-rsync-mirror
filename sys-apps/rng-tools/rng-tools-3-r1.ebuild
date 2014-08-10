@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/rng-tools-3-r1.ebuild,v 1.1 2012/07/19 10:44:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/rng-tools-3-r1.ebuild,v 1.2 2014/08/10 20:25:06 slyfox Exp $
 
 EAPI=2
 inherit eutils autotools
 
-DESCRIPTION="Daemon to use hardware random number generators."
+DESCRIPTION="Daemon to use hardware random number generators"
 HOMEPAGE="http://gkernel.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gkernel/${P}.tar.gz"
 LICENSE="GPL-2"

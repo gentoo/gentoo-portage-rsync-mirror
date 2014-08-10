@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/pygresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.71 2014/03/11 22:26:44 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.72 2014/08/10 20:02:23 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pygresql-4.1.1-r1.ebuild,
+  pygresql-4.1.1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pygresql-4.1.1-r1 (11 Mar 2014)
 

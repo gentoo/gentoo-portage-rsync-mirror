@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_token/mod_auth_token-1.0.6_beta.ebuild,v 1.4 2012/02/14 17:19:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_token/mod_auth_token-1.0.6_beta.ebuild,v 1.5 2014/08/10 20:14:27 slyfox Exp $
 
 EAPI=3
 
 inherit apache-module eutils
 
 MY_P="${PN}-${PV/_/-}"
-DESCRIPTION="Token based URI access module for Apache2."
+DESCRIPTION="Token based URI access module for Apache2"
 HOMEPAGE="http://code.google.com/p/mod-auth-token/"
 SRC_URI="http://mod-auth-token.googlecode.com/files/${MY_P}.tar.gz"
 

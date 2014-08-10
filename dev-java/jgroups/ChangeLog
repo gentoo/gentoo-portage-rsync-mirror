@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jgroups
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.35 2010/06/15 09:40:59 caster Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.36 2014/08/10 20:18:14 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jgroups-2.9.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   15 Jun 2010; Vlastimil Babka <caster@gentoo.org> -jgroups-2.7.0.ebuild:
   Remove old.
@@ -138,4 +141,3 @@
 
   30 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +jgroups-2.2.7.ebuild:
   inital import, ebuild contributed by Dan <dan@intuitivelyobvious.net>
-

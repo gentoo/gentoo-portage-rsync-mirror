@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.83 2014/08/07 08:26:48 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.84 2014/08/10 20:02:32 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> redis-2.6.15-r1.ebuild,
+  redis-2.6.16.ebuild, redis-2.8.11.ebuild, redis-2.8.8.ebuild,
+  redis-2.8.9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *redis-2.8.13 (07 Aug 2014)
 

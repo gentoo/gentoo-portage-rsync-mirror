@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/xmlgraphics-commons-1.2-r1.ebuild,v 1.1 2013/06/30 19:58:47 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/xmlgraphics-commons-1.2-r1.ebuild,v 1.2 2014/08/10 20:27:30 slyfox Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A library of several reusable components used by Apache Batik and Apache FOP."
+DESCRIPTION="A library of several reusable components used by Apache Batik and Apache FOP"
 HOMEPAGE="http://xmlgraphics.apache.org/commons/index.html"
 SRC_URI="mirror://apache/xmlgraphics/commons/source/${P}-src.tar.gz"
 

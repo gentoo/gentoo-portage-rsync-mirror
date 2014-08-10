@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/saxon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.44 2012/12/09 17:39:47 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.45 2014/08/10 20:23:18 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> saxon-6.5.5.ebuild,
+  saxon-8.4b-r3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> saxon-9.2.0.6.ebuild:
   Stable for ppc64, wrt bug #421733

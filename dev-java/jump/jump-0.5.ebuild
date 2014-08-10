@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/jump-0.5.ebuild,v 1.4 2007/12/16 02:33:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/jump-0.5.ebuild,v 1.5 2014/08/10 20:20:25 slyfox Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="JUMP Ultimate Math Package (JUMP) is a Java-based extensible high-precision math package."
+DESCRIPTION="JUMP Ultimate Math Package (JUMP) is a Java-based extensible high-precision math package"
 SRC_URI="mirror://sourceforge/${PN}-math/${P}.tar.gz"
 HOMEPAGE="http://jump-math.sourceforge.net/"
 KEYWORDS="amd64 ~ppc x86"

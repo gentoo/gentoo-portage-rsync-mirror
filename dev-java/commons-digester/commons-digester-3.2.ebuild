@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-3.2.ebuild,v 1.2 2013/08/14 09:30:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-3.2.ebuild,v 1.3 2014/08/10 20:10:27 slyfox Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ inherit eutils java-pkg-2 java-ant-2
 
 MY_P="${PN}3-${PV}-src"
 
-DESCRIPTION="Reads XML configuration files to provide initialization of various Java objects within the system."
+DESCRIPTION="Reads XML configuration files to provide initialization of various Java objects within the system"
 HOMEPAGE="http://commons.apache.org/digester/"
 SRC_URI="mirror://apache/commons/digester/source/${MY_P}.tar.gz"
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup
 DEPEND=>=x11-libs/gtk+-2.4:2 >=dev-python/pygtk-2.4:2 x11-apps/xdriinfo =dev-lang/python-2* =dev-lang/python-2*[xml]
-DESCRIPTION=driconf is a GTK+2 GUI configurator for DRI.
+DESCRIPTION=driconf is a GTK+2 GUI configurator for DRI
 EAPI=3
 HOMEPAGE=http://dri.freedesktop.org/wiki/DriConf
 KEYWORDS=amd64 ppc ppc64 ~sparc x86
@@ -9,4 +9,4 @@ RDEPEND=>=x11-libs/gtk+-2.4:2 >=dev-python/pygtk-2.4:2 x11-apps/xdriinfo =dev-la
 SLOT=0
 SRC_URI=http://freedesktop.org/~fxkuehl/driconf/driconf-0.9.1.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=20ed2769198e0410c4c891703f4a94c3
+_md5_=ec4900aa30795eb0c49069b91f78baef

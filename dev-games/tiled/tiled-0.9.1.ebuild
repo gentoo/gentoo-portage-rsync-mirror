@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/tiled-0.9.1.ebuild,v 1.1 2014/05/06 13:22:51 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/tiled-0.9.1.ebuild,v 1.2 2014/08/10 20:06:39 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ MY_P="${PN}-qt-${PV}"
 
 inherit multilib l10n qt4-r2
 
-DESCRIPTION="A general purpose tile map editor."
+DESCRIPTION="A general purpose tile map editor"
 HOMEPAGE="http://www.mapeditor.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 

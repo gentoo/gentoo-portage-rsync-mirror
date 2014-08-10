@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb/ChangeLog,v 1.11 2009/06/23 15:51:27 betelgeuse Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb/ChangeLog,v 1.12 2014/08/10 20:16:53 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jaxb-2.1.2-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Jun 2009; Petteri Räty <betelgeuse@gentoo.org> jaxb-2.1.2-r1.ebuild:
   Add slot deps to java deps in order for new slot of istack-commons-runtime
@@ -40,4 +43,3 @@
   01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +files/build.xml-2.1.2,
   +metadata.xml, +jaxb-2.1.2.ebuild:
   Initial commit of jaxb.
-

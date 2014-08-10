@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lomoco
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.25 2014/07/30 19:23:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.26 2014/08/10 20:24:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> lomoco-1.0-r9.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> lomoco-1.0-r9.ebuild:
   Use shorter get_udevdir() instead of the longer deprecated udev_get_udevdir()

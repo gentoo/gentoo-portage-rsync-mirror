@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/elfix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/ChangeLog,v 1.84 2014/07/30 17:35:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/ChangeLog,v 1.85 2014/08/10 20:23:53 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> elfix-0.8.1.ebuild,
+  elfix-0.8.3.ebuild, elfix-0.8.4.ebuild, elfix-0.8.5.ebuild,
+  elfix-0.8.6.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *elfix-0.8.6 (30 Jul 2014)
 

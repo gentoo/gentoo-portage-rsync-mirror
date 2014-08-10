@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-3.0.8-r3.ebuild,v 1.4 2014/02/07 15:02:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-3.0.8-r3.ebuild,v 1.5 2014/08/10 20:09:02 slyfox Exp $
 
 EAPI=1
 
 inherit base java-pkg-2 java-ant-2
 
-DESCRIPTION="The Burlap web service protocol."
+DESCRIPTION="The Burlap web service protocol"
 HOMEPAGE="http://www.caucho.com/burlap/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 

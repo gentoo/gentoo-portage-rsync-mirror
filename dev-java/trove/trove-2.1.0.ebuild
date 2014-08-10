@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-2.1.0.ebuild,v 1.6 2013/09/01 09:28:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-2.1.0.ebuild,v 1.7 2014/08/10 20:25:54 slyfox Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="GNU Trove: High performance collections for Java."
+DESCRIPTION="GNU Trove: High performance collections for Java"
 SRC_URI="mirror://sourceforge/trove4j/${P}.tar.gz"
 HOMEPAGE="http://trove4j.sourceforge.net"
 LICENSE="LGPL-2.1"

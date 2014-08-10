@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare
 DEPEND=dev-libs/libaio
-DESCRIPTION=Write job files matching the I/O load one wants to simulate.
+DESCRIPTION=Write job files matching the I/O load one wants to simulate
 EAPI=4
 HOMEPAGE=http://brick.kernel.dk/snaps/
 KEYWORDS=~amd64 ~ia64 ~ppc ~ppc64 ~x86
@@ -9,4 +9,4 @@ RDEPEND=dev-libs/libaio
 SLOT=0
 SRC_URI=http://brick.kernel.dk/snaps/fio-2.0.15.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=131ead3d8645d71209c029541c65de66
+_md5_=80c83a904e7de887df14abfc4142e876

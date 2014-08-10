@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/awstats
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.35 2014/04/26 20:23:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.36 2014/08/10 20:10:20 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> awstats-7.1.1.ebuild,
+  awstats-7.1_p20121017.ebuild, awstats-7.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *awstats-7.3 (26 Apr 2014)
 

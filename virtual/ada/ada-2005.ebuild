@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ada/ada-2005.ebuild,v 1.6 2010/01/11 10:54:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ada/ada-2005.ebuild,v 1.7 2014/08/10 20:11:16 slyfox Exp $
 
-DESCRIPTION="Virtual for selecting an appropriate Ada compiler."
+DESCRIPTION="Virtual for selecting an appropriate Ada compiler"
 HOMEPAGE=""
 SRC_URI=""
 LICENSE=""

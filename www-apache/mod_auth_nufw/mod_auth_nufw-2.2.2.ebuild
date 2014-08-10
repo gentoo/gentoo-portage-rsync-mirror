@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/mod_auth_nufw-2.2.2.ebuild,v 1.2 2010/06/17 21:59:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/mod_auth_nufw-2.2.2.ebuild,v 1.3 2014/08/10 20:14:07 slyfox Exp $
 
 EAPI="2"
 
 inherit autotools confutils apache-module
 
-DESCRIPTION="A NuFW authentication module for Apache."
+DESCRIPTION="A NuFW authentication module for Apache"
 HOMEPAGE="http://software.inl.fr/trac/wiki/EdenWall/mod_auth_nufw"
 SRC_URI="http://software.inl.fr/releases/${PN}/${P}.tar.bz2"
 

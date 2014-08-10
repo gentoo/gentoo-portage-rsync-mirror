@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install postinst postrm preinst prepare
 DEPEND=dev-libs/libxml2:2 x11-libs/wxGTK:2.8 >=sys-apps/sed-4
-DESCRIPTION=Graphical frontend to Maxima, using the wxWidgets toolkit.
+DESCRIPTION=Graphical frontend to Maxima, using the wxWidgets toolkit
 EAPI=5
 HOMEPAGE=http://wxmaxima.sourceforge.net/
 KEYWORDS=~amd64 ~ppc ~x86
@@ -9,4 +9,4 @@ RDEPEND=dev-libs/libxml2:2 x11-libs/wxGTK:2.8 media-fonts/jsmath sci-visualizati
 SLOT=0
 SRC_URI=mirror://sourceforge/wxmaxima/wxMaxima-12.09.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=99d0f2eae41f25fae1c959ee59b38a2a
+_md5_=5a3a9fb395fd5b45f3604e664b2445b8

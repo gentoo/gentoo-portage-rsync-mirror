@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-9999.ebuild,v 1.2 2014/01/08 06:09:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-9999.ebuild,v 1.3 2014/08/10 20:09:17 slyfox Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ else
 	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
 fi
 
-DESCRIPTION="Fork of thttpd, a small, fast, multiplexing webserver."
+DESCRIPTION="Fork of thttpd, a small, fast, multiplexing webserver"
 HOMEPAGE="http://opensource.dyc.edu/sthttpd"
 
 LICENSE="BSD GPL-2"

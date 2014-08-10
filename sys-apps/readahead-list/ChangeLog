@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/readahead-list
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/ChangeLog,v 1.18 2009/09/23 20:26:00 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/ChangeLog,v 1.19 2014/08/10 20:24:55 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  readahead-list-0.20050517.0220.ebuild,
+  readahead-list-1.20060421.1016-r1.ebuild,
+  readahead-list-1.20060421.1016.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   readahead-list-0.20050517.0220.ebuild,
@@ -97,4 +103,3 @@
   +readahead-list-0.20050320.2320.ebuild:
   Initial ebuild. Ebuild and upstream package by Robin H. Johnson
   <robbat2@gentoo.org>. See bug #64724 for some details on this.
-

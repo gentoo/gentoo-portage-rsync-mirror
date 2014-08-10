@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/preload-0.6.4-r3.ebuild,v 1.3 2012/11/21 10:11:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/preload-0.6.4-r3.ebuild,v 1.4 2014/08/10 20:24:40 slyfox Exp $
 
 EAPI=4
 inherit eutils autotools
 
-DESCRIPTION="Adaptive readahead daemon."
+DESCRIPTION="Adaptive readahead daemon"
 HOMEPAGE="http://sourceforge.net/projects/preload/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

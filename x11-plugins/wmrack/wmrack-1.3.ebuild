@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrack/wmrack-1.3.ebuild,v 1.3 2010/08/31 10:43:52 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrack/wmrack-1.3.ebuild,v 1.4 2014/08/10 20:08:57 slyfox Exp $
 
 inherit multilib toolchain-funcs
 
-DESCRIPTION="a sound mixer and CD player dockapp."
+DESCRIPTION="a sound mixer and CD player dockapp"
 HOMEPAGE="http://wmrack.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

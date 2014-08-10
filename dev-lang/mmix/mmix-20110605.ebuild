@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20110605.ebuild,v 1.3 2012/03/10 17:09:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20110605.ebuild,v 1.4 2014/08/10 20:29:23 slyfox Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Donald Knuth's MMIX Assembler and Simulator."
+DESCRIPTION="Donald Knuth's MMIX Assembler and Simulator"
 HOMEPAGE="http://www-cs-faculty.stanford.edu/~knuth/mmix.html"
 SRC_URI="http://www-cs-faculty.stanford.edu/~knuth/programs/${P}.tar.gz"
 

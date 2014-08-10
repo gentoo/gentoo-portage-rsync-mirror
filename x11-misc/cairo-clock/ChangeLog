@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/cairo-clock
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.12 2012/05/05 04:53:53 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.13 2014/08/10 20:01:41 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cairo-clock-0.3.3.ebuild,
+  cairo-clock-0.3.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> cairo-clock-0.3.3.ebuild,
   cairo-clock-0.3.4.ebuild:
@@ -49,4 +53,3 @@
   +metadata.xml:
   Add x11-misc/cairo-clock to tree. Loosely based on Samuli Suominen's ebuild.
   (bug #126181)
-

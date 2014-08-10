@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jsch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.84 2013/05/06 09:29:48 fordfrog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.85 2014/08/10 20:19:59 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jsch-0.1.41.ebuild,
+  jsch-0.1.44.ebuild, jsch-0.1.49.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *jsch-0.1.49 (06 May 2013)
 
@@ -319,4 +323,3 @@
   files/build.xml-dstamp.patch.gz:
   Initial import of Jsch, It builds from sources. Dependency required to build
   ANT.
-

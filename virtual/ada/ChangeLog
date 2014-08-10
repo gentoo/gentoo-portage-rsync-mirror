@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ada
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ada/ChangeLog,v 1.7 2010/01/11 10:54:52 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ada/ChangeLog,v 1.8 2014/08/10 20:11:16 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ada-2005.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> ada-1995.ebuild,
   ada-2005.ebuild:
@@ -27,4 +30,3 @@
   26 Dec 2007; George Shapovalov <george@gentoo.org> +metadata.xml,
   +ada-1995.ebuild, +ada-2005.ebuild:
   new virtual, to track Ada standard versions
-

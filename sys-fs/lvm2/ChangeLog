@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.360 2014/07/31 18:44:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.361 2014/08/10 20:20:05 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> lvm2-2.02.103.ebuild,
+  lvm2-2.02.105-r2.ebuild, lvm2-2.02.106.ebuild, lvm2-2.02.107.ebuild,
+  lvm2-2.02.108.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   31 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.108.ebuild:
   Use type -P to get path of true instead of hardcoding it.

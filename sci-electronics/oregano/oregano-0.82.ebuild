@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.82.ebuild,v 1.5 2013/05/30 14:37:48 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.82.ebuild,v 1.6 2014/08/10 20:28:33 slyfox Exp $
 
 EAPI="4"
 
 inherit autotools eutils fdo-mime vcs-snapshot gnome2-utils
 
-DESCRIPTION="Oregano is an application for schematic capture and simulation of electrical circuits."
+DESCRIPTION="Oregano is an application for schematic capture and simulation of electrical circuits"
 HOMEPAGE="https://github.com/marc-lorber/oregano"
 SRC_URI="https://github.com/marc-lorber/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 

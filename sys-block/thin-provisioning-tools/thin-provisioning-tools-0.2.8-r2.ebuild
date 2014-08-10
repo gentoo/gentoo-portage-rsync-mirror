@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.2.8-r2.ebuild,v 1.1 2013/12/28 00:39:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.2.8-r2.ebuild,v 1.2 2014/08/10 20:22:49 slyfox Exp $
 
 EAPI=5
 inherit base autotools
 
-DESCRIPTION="A suite of tools for thin provisioning on Linux."
+DESCRIPTION="A suite of tools for thin provisioning on Linux"
 HOMEPAGE="https://github.com/jthornber/thin-provisioning-tools"
 EXT=.tar.gz
 BASE_A=${P}${EXT}

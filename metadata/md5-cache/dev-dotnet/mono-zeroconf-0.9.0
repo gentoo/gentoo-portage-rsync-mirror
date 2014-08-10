@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare unpack
 DEPEND=>=dev-lang/mono-2.0 >=net-dns/avahi-0.6[mono] virtual/pkgconfig
-DESCRIPTION=a cross platform Zero Configuration Networking library for Mono and .NET.
+DESCRIPTION=a cross platform Zero Configuration Networking library for Mono and .NET
 EAPI=2
 HOMEPAGE=http://www.mono-project.com/Mono.Zeroconf
 IUSE=doc
@@ -10,4 +10,4 @@ RDEPEND=>=dev-lang/mono-2.0 >=net-dns/avahi-0.6[mono]
 SLOT=0
 SRC_URI=http://banshee-project.org/files/mono-zeroconf/mono-zeroconf-0.9.0.tar.bz2
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=d70c305e4f06c4e274448244a6d3d180
+_md5_=b22116ef4e82e459087817ac41f27dff

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/nanoc-3.6.4.ebuild,v 1.3 2014/05/07 19:07:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/nanoc-3.6.4.ebuild,v 1.4 2014/08/10 20:14:14 slyfox Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_TASK_TEST="test"
 
 inherit ruby-fakegem
 
-DESCRIPTION="nanoc is a simple but very flexible static site generator written in Ruby."
+DESCRIPTION="nanoc is a simple but very flexible static site generator written in Ruby"
 HOMEPAGE="http://nanoc.stoneship.org/"
 LICENSE="MIT"
 
