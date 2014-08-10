@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/libnm-qt-0.9.8.2-r1.ebuild,v 1.1 2014/07/07 01:55:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/libnm-qt-0.9.8.2-r1.ebuild,v 1.2 2014/08/10 22:05:22 johu Exp $
 
 EAPI=5
 
@@ -25,7 +25,10 @@ RDEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	net-misc/mobile-broadband-provider-info
-	>=net-misc/networkmanager-0.9.8.4
+	|| (
+		>=net-misc/networkmanager-0.9.8.4[consolekit]
+		>=net-misc/networkmanager-0.9.8.4[systemd]
+	)
 	modemmanager? ( >=net-libs/libmm-qt-1.0.0 )
 "
 DEPEND="${RDEPEND}
