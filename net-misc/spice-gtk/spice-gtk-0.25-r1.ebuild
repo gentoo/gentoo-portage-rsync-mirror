@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.25.ebuild,v 1.3 2014/07/24 18:15:33 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.25-r1.ebuild,v 1.1 2014/08/10 13:13:52 dev-zero Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -36,6 +36,7 @@ RDEPEND="${PYTHON_DEPS}
 		media-libs/gst-plugins-base:0.10 )
 	>=x11-libs/pixman-0.17.7
 	>=media-libs/celt-0.5.1.1:0.5.1
+	media-libs/opus
 	dev-libs/openssl
 	gtk3? ( x11-libs/gtk+:3[introspection?] )
 	x11-libs/gtk+:2[introspection?]

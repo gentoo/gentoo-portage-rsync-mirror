@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.60 2014/08/06 06:44:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.61 2014/08/10 13:06:49 dev-zero Exp $
+
+*spice-0.12.5-r1 (10 Aug 2014)
+
+  10 Aug 2014; Tiziano Müller <dev-zero@gentoo.org>
+  +files/spice-0.12.5-fix-crash-when-clearing-surface-memory.patch,
+  +files/spice-0.12.5-server-dont-assert-on-invalid-client-message.patch,
+  +spice-0.12.5-r1.ebuild, -spice-0.12.5.ebuild:
+  Rev.bump to pull in media-libs/opus to avoid automagic dep (bug #518546). Pull
+  more patches from upstream.
 
   06 Aug 2014; Patrick Lauer <patrick@gentoo.org> spice-0.12.2.ebuild,
   spice-0.12.3-r1.ebuild, spice-0.12.4-r1.ebuild, spice-0.12.5.ebuild:

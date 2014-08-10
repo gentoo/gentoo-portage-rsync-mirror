@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.5.ebuild,v 1.2 2014/08/06 06:44:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.5-r1.ebuild,v 1.1 2014/08/10 13:06:49 dev-zero Exp $
 
 EAPI=5
 
@@ -22,6 +22,7 @@ IUSE="client sasl smartcard static-libs" # static
 RDEPEND=">=x11-libs/pixman-0.17.7[static-libs(+)?]
 	>=dev-libs/glib-2.22:2[static-libs(+)?]
 	>=media-libs/celt-0.5.1.1:0.5.1[static-libs(+)?]
+	media-libs/opus[static-libs(+)?]
 	dev-libs/openssl[static-libs(+)?]
 	virtual/jpeg[static-libs(+)?]
 	sys-libs/zlib[static-libs(+)?]
@@ -57,7 +58,9 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}/0.11.0-gold.patch" \
-		"${FILESDIR}/${P}-fix-assert-in-mjpeg_encoder_adjust_params_to_bit_rate.patch"
+		"${FILESDIR}/${P}-fix-assert-in-mjpeg_encoder_adjust_params_to_bit_rate.patch" \
+		"${FILESDIR}/${P}-server-dont-assert-on-invalid-client-message.patch" \
+		"${FILESDIR}/${P}-fix-crash-when-clearing-surface-memory.patch"
 
 	epatch_user
 }
