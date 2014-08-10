@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1348 2014/08/10 10:02:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1349 2014/08/10 22:40:21 johu Exp $
+
+  10 Aug 2014; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
+  Raise gcc minimum version to 4.7, bugs #462550, #471770, #508324.
 
   10 Aug 2014; Jeroen Roovers <jer@gentoo.org> nvidia-driver.eclass:
   Check for earlier version, not different version (bug #519558 by kavol).
