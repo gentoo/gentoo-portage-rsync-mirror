@@ -1,10 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/pkg_preinst.eblit,v 1.12 2014/06/14 23:29:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/pkg_preinst.eblit,v 1.13 2014/08/10 03:35:56 vapier Exp $
 
 # Simple test to make sure our new glibc isnt completely broken.
 # Make sure we don't test with statically built binaries since
 # they will fail.  Also, skip if this glibc is a cross compiler.
+#
+# If coreutils is built with USE=multicall, some of these files
+# will just be wrapper scripts, not actual ELFs we can test.
 glibc_sanity_check() {
 	cd / #228809
 
@@ -18,11 +21,14 @@ glibc_sanity_check() {
 	pushd "${ED}"/$(get_libdir) >/dev/null
 
 	local x striptest
-	for x in date env ls true uname ; do
+	for x in cal date env free ls true uname uptime ; do
 		x=$(type -p ${x})
 		[[ -z ${x} || ${x} != ${EPREFIX}/* ]] && continue
 		striptest=$(LC_ALL="C" file -L ${x} 2>/dev/null) || continue
-		[[ ${striptest} == *"statically linked"* ]] && continue
+		case ${striptest} in
+		*"statically linked"*) continue;;
+		*"ASCII text"*) continue;;
+		esac
 		./ld-*.so --library-path . ${x} > /dev/null \
 			|| die "simple run test (${x}) failed"
 	done
