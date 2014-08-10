@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/pdsh-2.18-r1.ebuild,v 1.3 2010/04/22 17:08:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/pdsh-2.18-r1.ebuild,v 1.4 2014/08/10 18:22:03 slyfox Exp $
 
 EAPI="2"
 
 inherit eutils autotools
 
-DESCRIPTION="A high-performance, parallel remote shell utility."
+DESCRIPTION="A high-performance, parallel remote shell utility"
 HOMEPAGE="https://computing.llnl.gov/linux/pdsh.html"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"

@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/spacenavd-0.5-r5.ebuild,v 1.3 2014/07/30 19:20:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/spacenavd-0.5-r5.ebuild,v 1.4 2014/08/10 18:09:26 slyfox Exp $
 
 EAPI="4"
 
 inherit eutils linux-info systemd toolchain-funcs udev
 
 MY_PN='spacenav'
-DESCRIPTION="The spacenavd daemon provides free alternative to the 3dxserv daemon."
+DESCRIPTION="The spacenavd daemon provides free alternative to the 3dxserv daemon"
 HOMEPAGE="http://spacenav.sourceforge.net/"
 SRC_URI="mirror://sourceforge/project/${MY_PN}/${MY_PN}%20daemon/${PN}%20${PV}/${P}.tar.gz"
 LICENSE="GPL-3"

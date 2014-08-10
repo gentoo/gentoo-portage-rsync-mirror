@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.5.2.ebuild,v 1.4 2014/08/01 05:23:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.5.2.ebuild,v 1.5 2014/08/10 18:14:36 slyfox Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ BRANDING="${PN}-branding-gentoo-0.8.tar.xz"
 inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python-single-r1 multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
 unset SCM_ECLASS
 
-DESCRIPTION="LibreOffice, a full office productivity suite."
+DESCRIPTION="LibreOffice, a full office productivity suite"
 HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="branding? ( http://dev.gentoo.org/~dilfridge/distfiles/${BRANDING} )"
 [[ -n ${PATCHSET} ]] && SRC_URI+=" http://dev.gentooexperimental.org/~scarabeus/${PATCHSET}"

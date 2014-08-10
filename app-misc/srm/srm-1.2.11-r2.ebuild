@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.11-r2.ebuild,v 1.6 2012/03/09 15:06:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.11-r2.ebuild,v 1.7 2014/08/10 18:10:02 slyfox Exp $
 
 EAPI="4"
 
 inherit autotools eutils
 
-DESCRIPTION="A command-line compatible rm which destroys file contents before unlinking."
+DESCRIPTION="A command-line compatible rm which destroys file contents before unlinking"
 HOMEPAGE="http://sourceforge.net/projects/srm/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

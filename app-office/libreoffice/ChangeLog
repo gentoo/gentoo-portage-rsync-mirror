@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.562 2014/08/01 05:23:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.563 2014/08/10 18:14:36 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  libreoffice-4.2.5.2.ebuild, libreoffice-4.2.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   01 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
   libreoffice-4.2.5.2.ebuild, libreoffice-4.2.9999.ebuild,

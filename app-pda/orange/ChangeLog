@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/orange
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/ChangeLog,v 1.19 2012/06/15 09:08:58 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/ChangeLog,v 1.20 2014/08/10 18:20:17 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> orange-0.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   15 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> orange-0.4.ebuild:
   Switch from obsolete dev-libs/libsynce to app-pda/synce-core.
@@ -66,4 +69,3 @@
   orange-0.2.ebuild:
   Initial import. Closes #2882. Thanks to Gustavo Felisberto
   <gustavo@felisberto.net>
-

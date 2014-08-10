@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-6.07.ebuild,v 1.6 2014/07/17 08:49:46 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-6.07.ebuild,v 1.7 2014/08/10 18:04:27 slyfox Exp $
 
 EAPI=4
 inherit eutils user
@@ -9,7 +9,7 @@ MY_PN=gw
 MY_PV=${PV/./-}
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Genealogy software program with a Web interface."
+DESCRIPTION="Genealogy software program with a Web interface"
 HOMEPAGE="http://opensource.geneanet.org/projects/geneweb"
 SRC_URI="http://opensource.geneanet.org/attachments/download/240/${MY_P}-src.tgz
 	mirror://gentoo/${P}-reduce-utf8.ml.patch.gz"

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=sys-libs/ncurses-5.2
-DESCRIPTION=sc is a free curses-based spreadsheet program that uses key bindings similar to vi and less.
+DESCRIPTION=sc is a free curses-based spreadsheet program that uses key bindings similar to vi and less
 HOMEPAGE=http://ibiblio.org/pub/Linux/apps/financial/spreadsheet/
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=public-domain
@@ -8,4 +8,4 @@ RDEPEND=>=sys-libs/ncurses-5.2 !dev-lang/stratego !<sci-chemistry/ccp4-apps-6.1.
 SLOT=0
 SRC_URI=ftp://ibiblio.org/pub/Linux/apps/financial/spreadsheet/sc-7.16.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=a8ec9b5cbd6c1b685d679d86dfaaa180
+_md5_=2d5b24a1f6882f08f4f03026cc7df757

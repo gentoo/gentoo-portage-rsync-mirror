@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/tablix-0.3.5-r1.ebuild,v 1.4 2012/02/16 17:44:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/tablix-0.3.5-r1.ebuild,v 1.5 2014/08/10 18:10:36 slyfox Exp $
 
 EAPI="2"
 inherit eutils autotools
 
 MY_PV="${PN}2-${PV}"
 
-DESCRIPTION="Tablix is a powerful free software kernel for solving general timetabling problems."
+DESCRIPTION="Tablix is a powerful free software kernel for solving general timetabling problems"
 HOMEPAGE="http://www.tablix.org/"
 SRC_URI="http://www.tablix.org/releases/stable/${MY_PV}.tar.gz"
 

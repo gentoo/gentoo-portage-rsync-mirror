@@ -1,6 +1,9 @@
 # ChangeLog for app-text/queequeg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/ChangeLog,v 1.9 2011/01/08 17:15:13 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/ChangeLog,v 1.10 2014/08/10 18:30:54 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> queequeg-0.91.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   queequeg-0.91.ebuild:
@@ -33,4 +36,3 @@
   +queequeg-0.91.ebuild:
   Initial import. Based on the ebuild from Atzm Watanabe
   <sitosito@p.chan.ne.jp> at GentooJP ebuild Project, and modified by me.
-

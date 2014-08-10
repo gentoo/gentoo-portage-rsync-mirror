@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnomecatalog/gnomecatalog-0.3.4.2.ebuild,v 1.4 2013/01/17 15:57:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnomecatalog/gnomecatalog-0.3.4.2.ebuild,v 1.5 2014/08/10 18:04:58 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
 
 inherit distutils eutils
 
-DESCRIPTION="Cataloging software for CDs and DVDs."
+DESCRIPTION="Cataloging software for CDs and DVDs"
 HOMEPAGE="http://gnomecatalog.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 

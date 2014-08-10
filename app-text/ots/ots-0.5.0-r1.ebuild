@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.5.0-r1.ebuild,v 1.7 2014/01/18 20:05:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.5.0-r1.ebuild,v 1.8 2014/08/10 18:27:29 slyfox Exp $
 
 EAPI=5
 inherit autotools eutils
 
-DESCRIPTION="Open source Text Summarizer, as used in newer releases of abiword and kword."
+DESCRIPTION="Open source Text Summarizer, as used in newer releases of abiword and kword"
 HOMEPAGE="http://libots.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libots/${P}.tar.gz"
 

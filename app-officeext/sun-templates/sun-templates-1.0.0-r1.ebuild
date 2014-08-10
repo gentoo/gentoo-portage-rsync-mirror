@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/sun-templates/sun-templates-1.0.0-r1.ebuild,v 1.3 2013/04/27 08:31:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/sun-templates/sun-templates-1.0.0-r1.ebuild,v 1.4 2014/08/10 18:18:38 slyfox Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ URI_EXTENSIONS="${OFFICE_EXTENSIONS[@]/#/http://ooo.itc.hu/oxygenoffice/download
 
 inherit office-ext-r1
 
-DESCRIPTION="Collection of sun templates for various countries."
+DESCRIPTION="Collection of sun templates for various countries"
 HOMEPAGE="http://ooo.itc.hu/oxygenoffice/download/libreoffice/"
 SRC_URI="${URI_EXTENSIONS}"
 

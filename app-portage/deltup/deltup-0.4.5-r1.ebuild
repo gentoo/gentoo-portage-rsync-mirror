@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.5-r1.ebuild,v 1.2 2013/10/13 14:17:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.5-r1.ebuild,v 1.3 2014/08/10 18:20:53 slyfox Exp $
 
 EAPI=5
 
 inherit eutils toolchain-funcs flag-o-matic
 
-DESCRIPTION="Delta-Update - patch system for updating source-archives."
+DESCRIPTION="Delta-Update - patch system for updating source-archives"
 HOMEPAGE="http://deltup.sourceforge.net"
 SRC_URI="http://deltup.org/e107_files/downloads//${P}.tar.gz"
 

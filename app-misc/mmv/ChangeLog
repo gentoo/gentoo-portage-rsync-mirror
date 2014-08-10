@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mmv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.29 2014/06/09 09:00:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.30 2014/08/10 18:08:18 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mmv-1.01b_p15.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   09 Jun 2014; Tobias Klausmann <klausman@gentoo.org> mmv-1.01b_p15.ebuild:
   Keyword mmv on alpha

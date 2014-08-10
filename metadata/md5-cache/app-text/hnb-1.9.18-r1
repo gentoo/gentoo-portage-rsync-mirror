@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DESCRIPTION=A program to organize many kinds of data in one place.
+DESCRIPTION=A program to organize many kinds of data in one place
 EAPI=2
 HOMEPAGE=http://hnb.sourceforge.net/
 KEYWORDS=amd64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
@@ -8,4 +8,4 @@ RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=http://hnb.sourceforge.net/.files/hnb-1.9.18.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e4a88b8c6ee4377ef03c7d2d2d4f5af8
+_md5_=2d309379a8b464cad639de236b5fd190

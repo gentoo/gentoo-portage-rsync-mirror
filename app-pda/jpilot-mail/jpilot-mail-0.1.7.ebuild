@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-mail/jpilot-mail-0.1.7.ebuild,v 1.2 2012/05/03 20:20:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-mail/jpilot-mail-0.1.7.ebuild,v 1.3 2014/08/10 18:19:45 slyfox Exp $
 
 EAPI=2
 inherit eutils multilib
 
 MY_PN=jpilot-Mail
 
-DESCRIPTION="jpilot-Mail is a jpilot plugin to deliver mail from the pilot and upload mail to it."
+DESCRIPTION="jpilot-Mail is a jpilot plugin to deliver mail from the pilot and upload mail to it"
 HOMEPAGE="http://ludovic.rousseau.free.fr/softwares/jpilot-Mail/"
 SRC_URI="http://ludovic.rousseau.free.fr/softwares/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b_p15.ebuild,v 1.7 2014/06/09 09:00:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b_p15.ebuild,v 1.8 2014/08/10 18:08:18 slyfox Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit eutils flag-o-matic toolchain-funcs
 DEB_PATCH_VER=${PV#*_p}
 MY_VER=${PV%_p*}
 
-DESCRIPTION="Move/copy/append/link multiple files according to a set of wildcard patterns."
+DESCRIPTION="Move/copy/append/link multiple files according to a set of wildcard patterns"
 HOMEPAGE="http://packages.debian.org/unstable/utils/mmv"
 SRC_URI="
 	mirror://debian/pool/main/m/mmv/${PN}_${MY_VER}.orig.tar.gz

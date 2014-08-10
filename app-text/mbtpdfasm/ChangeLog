@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mbtpdfasm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mbtpdfasm/ChangeLog,v 1.10 2013/11/07 03:07:20 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mbtpdfasm/ChangeLog,v 1.11 2014/08/10 18:26:52 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  mbtpdfasm-1.0.28-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   07 Nov 2013; Patrick Lauer <patrick@gentoo.org> mbtpdfasm-1.0.28-r1.ebuild:
   Shorten description, make repoman happier

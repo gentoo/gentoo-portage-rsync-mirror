@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sleepyhead/sleepyhead-0.9.3.ebuild,v 1.2 2014/07/07 16:32:46 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sleepyhead/sleepyhead-0.9.3.ebuild,v 1.3 2014/08/10 18:08:51 slyfox Exp $
 
 EAPI=4
 inherit eutils qt4-r2
-DESCRIPTION="Software used to analyze data from CPAP machines."
+DESCRIPTION="Software used to analyze data from CPAP machines"
 HOMEPAGE="https://sourceforge.net/apps/mediawiki/sleepyhead/index.php?title=Main_Page"
 
 # Point to any required sources; these will be automatically downloaded by

@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7-r2.ebuild,v 1.2 2009/12/15 16:49:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7-r2.ebuild,v 1.3 2014/08/10 18:11:46 slyfox Exp $
 
 IUSE="moneyplex"
 
-DESCRIPTION="This library provides a driver for using Towitoko smartcard readers under UNIX environment."
+DESCRIPTION="This library provides a driver for using Towitoko smartcard readers under UNIX environment"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.gentoo.org/"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/tedia2sql
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/ChangeLog,v 1.12 2007/11/25 17:22:48 drac Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/ChangeLog,v 1.13 2014/08/10 18:18:06 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tedia2sql-1.2.12.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   25 Nov 2007; Samuli Suominen <drac@gentoo.org> tedia2sql-1.2.12.ebuild:
   Keyword ~amd64 wrt #192542.
@@ -32,4 +35,3 @@
   14 Jan 2004; <rphillips@gentoo.org> tedia2sql-1.2.8.ebuild,
   files/tedia2sql-gentoo.patch:
   New package submitted by Mathias Hasselmann
-

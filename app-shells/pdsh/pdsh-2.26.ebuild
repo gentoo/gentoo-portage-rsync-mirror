@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/pdsh-2.26.ebuild,v 1.1 2011/08/10 07:28:54 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/pdsh-2.26.ebuild,v 1.2 2014/08/10 18:22:03 slyfox Exp $
 
 EAPI="2"
 
-DESCRIPTION="A high-performance, parallel remote shell utility."
+DESCRIPTION="A high-performance, parallel remote shell utility"
 HOMEPAGE="https://computing.llnl.gov/linux/pdsh.html"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 

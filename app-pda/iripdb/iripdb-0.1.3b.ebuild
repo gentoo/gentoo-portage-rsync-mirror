@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/iripdb/iripdb-0.1.3b.ebuild,v 1.6 2010/09/12 13:18:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/iripdb/iripdb-0.1.3b.ebuild,v 1.7 2014/08/10 18:19:12 slyfox Exp $
 
 inherit eutils toolchain-funcs
 
 MY_P=${P/iripdb/iRipDB}
 S=${WORKDIR}/${PN}
 
-DESCRIPTION="iRipDB allows generating the DB files necessary for the iRiver iHP-1xx series of MP3/Ogg HD Players."
+DESCRIPTION="iRipDB allows generating the DB files necessary for the iRiver iHP-1xx series of MP3/Ogg HD Players"
 HOMEPAGE="http://www.fataltourist.com/iripdb/"
 SRC_URI="http://www.fataltourist.com/iripdb/${MY_P}.zip"
 

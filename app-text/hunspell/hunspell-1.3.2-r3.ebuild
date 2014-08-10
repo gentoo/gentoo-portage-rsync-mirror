@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r3.ebuild,v 1.15 2012/07/25 10:33:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r3.ebuild,v 1.16 2014/08/10 18:24:38 slyfox Exp $
 
 EAPI=4
 inherit eutils multilib autotools flag-o-matic versionator
 
 MY_P=${PN}-${PV/_beta/b}
 
-DESCRIPTION="Hunspell spell checker - an improved replacement for myspell in OOo."
+DESCRIPTION="Hunspell spell checker - an improved replacement for myspell in OOo"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://hunspell.sourceforge.net/"
 

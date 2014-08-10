@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-4.1.0.ebuild,v 1.1 2014/05/05 23:01:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-4.1.0.ebuild,v 1.2 2014/08/10 18:16:56 slyfox Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ else
 fi
 UP="en-US/RPMS"
 
-DESCRIPTION="Apache OpenOffice productivity suite."
+DESCRIPTION="Apache OpenOffice productivity suite"
 HOMEPAGE="http://www.openoffice.org/"
 SRC_URI="amd64? ( "${FILEPATH}"/Apache_OpenOffice_${PV}_Linux_x86-64_install-rpm_en-US.tar.gz )
 	x86? ( "${FILEPATH}"/Apache_OpenOffice_${PV}_Linux_x86_install-rpm_en-US.tar.gz )"

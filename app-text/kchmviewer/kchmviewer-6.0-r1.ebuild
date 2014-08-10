@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-6.0-r1.ebuild,v 1.7 2013/03/26 18:15:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-6.0-r1.ebuild,v 1.8 2014/08/10 18:25:14 slyfox Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
@@ -9,7 +9,7 @@ KDE_LINGUAS_DIR="po"
 
 inherit base eutils fdo-mime qt4-r2 kde4-base
 
-DESCRIPTION="A feature rich chm file viewer, based on Qt."
+DESCRIPTION="A feature rich chm file viewer, based on Qt"
 HOMEPAGE="http://www.kchmviewer.net/"
 SRC_URI="mirror://sourceforge/kchmviewer/${P}.tar.gz"
 

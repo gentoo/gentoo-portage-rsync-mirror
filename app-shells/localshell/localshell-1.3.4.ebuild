@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.3.4.ebuild,v 1.4 2013/03/26 10:12:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.3.4.ebuild,v 1.5 2014/08/10 18:21:29 slyfox Exp $
 
 EAPI=4
 
 inherit base eutils
 
-DESCRIPTION="Localshell allows per-user/group local control of shell execution."
+DESCRIPTION="Localshell allows per-user/group local control of shell execution"
 HOMEPAGE="http://git.orbis-terrarum.net/?p=infrastructure/localshellc.git;a=summary"
 SRC_URI="${HOMEPAGE}/${P}.tar.bz2"
 

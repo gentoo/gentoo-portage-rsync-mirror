@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/toilet-0.2.ebuild,v 1.6 2012/05/03 19:41:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/toilet-0.2.ebuild,v 1.7 2014/08/10 18:11:13 slyfox Exp $
 
 EAPI=2
 
-DESCRIPTION="The Other Implementations letters. Figlet replacement."
+DESCRIPTION="The Other Implementations letters. Figlet replacement"
 HOMEPAGE="http://libcaca.zoy.org/toilet.html"
 SRC_URI="http://caca.zoy.org/raw-attachment/wiki/${PN}/${P}.tar.gz"
 

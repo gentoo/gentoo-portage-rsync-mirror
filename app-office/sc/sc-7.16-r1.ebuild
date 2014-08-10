@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.16-r1.ebuild,v 1.7 2012/06/02 06:57:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.16-r1.ebuild,v 1.8 2014/08/10 18:17:32 slyfox Exp $
 
 inherit eutils multilib toolchain-funcs
 
-DESCRIPTION="sc is a free curses-based spreadsheet program that uses key bindings similar to vi and less."
+DESCRIPTION="sc is a free curses-based spreadsheet program that uses key bindings similar to vi and less"
 SRC_URI="ftp://ibiblio.org/pub/Linux/apps/financial/spreadsheet/${P}.tar.gz"
 HOMEPAGE="http://ibiblio.org/pub/Linux/apps/financial/spreadsheet/"
 

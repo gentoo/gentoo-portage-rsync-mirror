@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/yagtd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/yagtd/ChangeLog,v 1.13 2011/07/20 17:16:51 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/yagtd/ChangeLog,v 1.14 2014/08/10 18:12:18 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> yagtd-0.3.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118937
@@ -60,4 +63,3 @@
   +yagtd-0.2.4.ebuild:
   initial import - CLI todo list manager based on the _Getting Things Done_
   philosophy.
-

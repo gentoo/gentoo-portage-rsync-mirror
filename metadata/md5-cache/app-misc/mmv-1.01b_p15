@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DESCRIPTION=Move/copy/append/link multiple files according to a set of wildcard patterns.
+DESCRIPTION=Move/copy/append/link multiple files according to a set of wildcard patterns
 EAPI=3
 HOMEPAGE=http://packages.debian.org/unstable/utils/mmv
 KEYWORDS=~alpha amd64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
@@ -7,4 +7,4 @@ LICENSE=LGPL-2
 SLOT=0
 SRC_URI=mirror://debian/pool/main/m/mmv/mmv_1.01b.orig.tar.gz mirror://debian/pool/main/m/mmv/mmv_1.01b-15.diff.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=eaa0e55870a23fc3519da835ffacd789
+_md5_=18f147b2158b25d913446cb5cbc46318

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pelican
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.17 2014/07/23 02:15:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.18 2014/08/10 18:28:34 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pelican-3.2.2.ebuild,
+  pelican-3.3.ebuild, pelican-3.4.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Jul 2014; Patrick Lauer <patrick@gentoo.org> pelican-3.2.2.ebuild:
   Remove py3.2 support as jinja dropped it

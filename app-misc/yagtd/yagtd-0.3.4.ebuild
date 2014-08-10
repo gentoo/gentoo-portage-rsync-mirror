@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/yagtd/yagtd-0.3.4.ebuild,v 1.4 2011/01/15 14:41:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/yagtd/yagtd-0.3.4.ebuild,v 1.5 2014/08/10 18:12:18 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-DESCRIPTION="CLI todo list manager based on the 'Getting Things Done' philosophy."
+DESCRIPTION="CLI todo list manager based on the 'Getting Things Done' philosophy"
 HOMEPAGE="https://gna.org/projects/yagtd/"
 SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
 

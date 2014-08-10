@@ -1,6 +1,10 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.113 2014/08/01 20:00:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.114 2014/08/10 18:24:38 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> hunspell-1.3.2-r3.ebuild,
+  hunspell-1.3.3.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *hunspell-1.3.3 (01 Aug 2014)
 

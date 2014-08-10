@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.2.5.2.ebuild,v 1.3 2014/06/29 16:43:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.2.5.2.ebuild,v 1.4 2014/08/10 18:16:21 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit rpm eutils multilib versionator
 
 MY_PV=$(get_version_component_range 1-3)
 
-DESCRIPTION="Translations for the Libreoffice suite."
+DESCRIPTION="Translations for the Libreoffice suite"
 HOMEPAGE="http://www.libreoffice.org"
 BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/stable/${MY_PV}/rpm"
 

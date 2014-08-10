@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tablix
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/ChangeLog,v 1.14 2012/05/10 15:17:32 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/ChangeLog,v 1.15 2014/08/10 18:10:36 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tablix-0.3.5-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -tablix-0.3.5.ebuild:
   Remove old
@@ -46,4 +49,3 @@
   18 Jul 2003; Don Seiler <rizzo@gentoo.org>; tablix-0.0.3.ebuild:
   Initial import. Thanks to Christian Hollander <gentoo@fire-live.de> for
   submitting the ebuild.
-

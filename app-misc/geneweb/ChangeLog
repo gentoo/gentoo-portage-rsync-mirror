@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geneweb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.32 2014/07/17 13:21:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.33 2014/08/10 18:04:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> geneweb-6.07.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   17 Jul 2014; Alfredo Tupone <tupone@gentoo.org> -geneweb-5.02.ebuild,
   -geneweb-6.02-r1.ebuild, -geneweb-6.06.ebuild,

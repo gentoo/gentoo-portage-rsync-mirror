@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-1.0.0.ebuild,v 1.3 2013/03/25 20:33:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-1.0.0.ebuild,v 1.4 2014/08/10 18:01:37 slyfox Exp $
 
 EAPI="4"
 
 inherit multilib versionator
 
-DESCRIPTION="Basenji is a volume indexing tool designed for easy and fast indexing of volume collections."
+DESCRIPTION="Basenji is a volume indexing tool designed for easy and fast indexing of volume collections"
 HOMEPAGE="http://launchpad.net/basenji"
 SRC_URI="http://launchpad.net/basenji/trunk/$(get_version_component_range 1-2)/+download/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=prepare
 DEPEND=virtual/jre sys-apps/pcsc-lite
-DESCRIPTION=Graphical interface to the Belgian Electronic Identity Card.
+DESCRIPTION=Graphical interface to the Belgian Electronic Identity Card
 EAPI=5
 HOMEPAGE=http://eid.belgium.be
 KEYWORDS=~amd64 ~x86
@@ -9,4 +9,4 @@ RDEPEND=virtual/jre sys-apps/pcsc-lite
 SLOT=0
 SRC_URI=http://eid.belgium.be/en/binaries/eid-viewer-4%2E0%2E7-184%2Esrc%2Etar_tcm406-250014.gz -> eid-viewer-4.0.7_p184.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=68347accc22d74acf51536ff81f32f07
+_md5_=ad07c370b674712927cd04e50cac8d42

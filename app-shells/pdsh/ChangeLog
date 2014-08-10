@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/pdsh
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.19 2011/08/10 07:28:53 ultrabug Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.20 2014/08/10 18:22:03 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pdsh-2.18-r1.ebuild,
+  pdsh-2.26.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pdsh-2.26 (10 Aug 2011)
 
@@ -92,4 +96,3 @@
   20 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +pdsh-2.9.ebuild:
   (#81171) Add the parallel distributed shell (jghobrial@uh.edu).
-

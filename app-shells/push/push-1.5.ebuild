@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/push/push-1.5.ebuild,v 1.12 2013/12/27 13:55:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/push/push-1.5.ebuild,v 1.13 2014/08/10 18:22:49 slyfox Exp $
 
 EAPI="4"
 inherit vcs-snapshot
 
-DESCRIPTION="A POSIX shell function to treat a variable like an array, quoting args."
+DESCRIPTION="A POSIX shell function to treat a variable like an array, quoting args"
 HOMEPAGE="https://github.com/vaeth/push/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 

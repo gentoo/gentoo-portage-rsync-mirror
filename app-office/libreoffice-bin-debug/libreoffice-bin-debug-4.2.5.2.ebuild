@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/libreoffice-bin-debug-4.2.5.2.ebuild,v 1.3 2014/06/29 16:43:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/libreoffice-bin-debug-4.2.5.2.ebuild,v 1.4 2014/08/10 18:15:46 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ BASE_PACKAGENAME="debug"
 BASE_AMD64_URI="http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-${BASE_PACKAGENAME}-"
 BASE_X86_URI="http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-${BASE_PACKAGENAME}-"
 
-DESCRIPTION="LibreOffice, a full office productivity suite. Binary package, debug info."
+DESCRIPTION="LibreOffice, a full office productivity suite. Binary package, debug info"
 HOMEPAGE="http://www.libreoffice.org"
 SRC_URI_AMD64="
 	${BASE_AMD64_URI}libreoffice-${PVR}.tar.xz

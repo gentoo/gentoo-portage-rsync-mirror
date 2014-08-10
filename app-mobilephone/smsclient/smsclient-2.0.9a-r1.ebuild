@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/smsclient-2.0.9a-r1.ebuild,v 1.4 2013/08/21 18:58:44 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/smsclient-2.0.9a-r1.ebuild,v 1.5 2014/08/10 18:12:50 slyfox Exp $
 
 EAPI="5"
 
 inherit eutils user
 
-DESCRIPTION="Utility to send SMS messages to mobile phones and pagers."
+DESCRIPTION="Utility to send SMS messages to mobile phones and pagers"
 HOMEPAGE="http://www.smsclient.org"
 SRC_URI="http://www.smsclient.org/download/${PN}-${PV%?}/${P}.tar.gz"
 

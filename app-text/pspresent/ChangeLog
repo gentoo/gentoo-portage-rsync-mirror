@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pspresent
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.32 2012/06/27 15:46:01 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.33 2014/08/10 18:29:44 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pspresent-1.3-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   27 Jun 2012; Michael Palimaka <kensington@gentoo.org> -pspresent-1.3.ebuild:
   Remove old.

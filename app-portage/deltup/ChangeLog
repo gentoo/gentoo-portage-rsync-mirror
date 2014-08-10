@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/deltup
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.29 2013/10/13 14:17:37 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.30 2014/08/10 18:20:53 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> deltup-0.4.5-r1.ebuild,
+  deltup-0.4.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   13 Oct 2013; Pacho Ramos <pacho@gentoo.org>
   +files/deltup-0.4.5-underlink.patch, deltup-0.4.5-r1.ebuild:

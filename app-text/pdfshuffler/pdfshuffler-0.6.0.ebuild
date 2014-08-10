@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/pdfshuffler-0.6.0.ebuild,v 1.3 2012/08/18 14:28:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/pdfshuffler-0.6.0.ebuild,v 1.4 2014/08/10 18:28:00 slyfox Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 
 inherit distutils eutils fdo-mime gnome2-utils
 
-DESCRIPTION="PDF-Shuffler is GUI app that can merge or split pdfs and rotate, crop and rearrange their pages."
+DESCRIPTION="PDF-Shuffler is GUI app that can merge or split pdfs and rotate, crop and rearrange their pages"
 HOMEPAGE="http://sourceforge.net/projects/pdfshuffler/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

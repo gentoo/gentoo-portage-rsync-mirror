@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare unpack
 DEPEND=|| ( app-arch/unrar app-arch/rar ) >=gnome-base/libgnomeui-2 sys-devel/gettext virtual/pkgconfig
-DESCRIPTION=a simple comic book pager.
+DESCRIPTION=a simple comic book pager
 EAPI=3
 HOMEPAGE=http://cbrpager.sourceforge.net
 KEYWORDS=~amd64 ~ppc ~x86
@@ -9,4 +9,4 @@ RDEPEND=|| ( app-arch/unrar app-arch/rar ) >=gnome-base/libgnomeui-2
 SLOT=0
 SRC_URI=mirror://sourceforge/cbrpager/cbrpager-0.9.22.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=d0daf3a5f9e1c4e01cbe8c3a23cd4060
+_md5_=3af03ac612e6c1f1b51edda4e2fcb6af

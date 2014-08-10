@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/iripdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/iripdb/ChangeLog,v 1.15 2010/09/12 13:18:45 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/iripdb/ChangeLog,v 1.16 2014/08/10 18:19:12 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> iripdb-0.1.3b.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   12 Sep 2010; Pacho Ramos <pacho@gentoo.org> iripdb-0.1.3b.ebuild:
   Make this respect LDFLAGS, bug #334463 by Diego E. 'Flameeyes' Pettenò.
@@ -51,4 +54,3 @@
   22 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
   +iripdb-0.1.1.ebuild:
   New package added; keyworded for ~x86.
-

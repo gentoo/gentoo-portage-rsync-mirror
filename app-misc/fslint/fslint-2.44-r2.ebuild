@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/fslint-2.44-r2.ebuild,v 1.2 2014/04/05 15:09:12 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/fslint-2.44-r2.ebuild,v 1.3 2014/08/10 18:03:54 slyfox Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_6 python2_7 )
 
 inherit eutils python-r1
 
-DESCRIPTION="A utility to find various forms of lint on a filesystem."
+DESCRIPTION="A utility to find various forms of lint on a filesystem"
 HOMEPAGE="http://www.pixelbeat.org/fslint/"
 SRC_URI="http://www.pixelbeat.org/${PN}/${P}.tar.gz"
 

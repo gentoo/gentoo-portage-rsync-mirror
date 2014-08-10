@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/jpilot-mail
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-mail/ChangeLog,v 1.2 2012/05/03 20:20:57 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-mail/ChangeLog,v 1.3 2014/08/10 18:19:45 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jpilot-mail-0.1.7.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> jpilot-mail-0.1.7.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -18,4 +21,3 @@
   18 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/jpilot-mail-0.1.7.patch, +metadata.xml, +jpilot-mail-0.1.7.ebuild:
   Initial ebuild based upon bug 86017. Thanks to Serhij S. Stasyuk.
-

@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/hnb-1.9.18-r1.ebuild,v 1.7 2012/05/29 19:24:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/hnb-1.9.18-r1.ebuild,v 1.8 2014/08/10 18:23:24 slyfox Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="A program to organize many kinds of data in one place."
+DESCRIPTION="A program to organize many kinds of data in one place"
 SRC_URI="http://hnb.sourceforge.net/.files/${P}.tar.gz"
 HOMEPAGE="http://hnb.sourceforge.net/"
 

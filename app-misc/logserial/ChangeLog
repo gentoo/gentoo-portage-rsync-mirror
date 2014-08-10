@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/logserial
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logserial/ChangeLog,v 1.8 2010/08/31 13:04:55 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logserial/ChangeLog,v 1.9 2014/08/10 18:06:37 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> logserial-0.4.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   31 Aug 2010; Markos Chandras <hwoarang@gentoo.org> logserial-0.4.2.ebuild:
   Stable on amd64 wrt bug #335344
