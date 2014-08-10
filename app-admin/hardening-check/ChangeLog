@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hardening-check
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hardening-check/ChangeLog,v 1.7 2014/02/20 13:11:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hardening-check/ChangeLog,v 1.8 2014/08/10 10:14:22 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> -hardening-check-2.4.ebuild,
+  hardening-check-2.5.ebuild:
+  Update homepage, remove old
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> hardening-check-2.5.ebuild:
   Stable for x86, wrt bug #500100

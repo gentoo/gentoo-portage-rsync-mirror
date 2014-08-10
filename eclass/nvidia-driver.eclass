@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.24 2014/08/08 12:13:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.25 2014/08/10 10:02:43 jer Exp $
 
 # @ECLASS: nvidia-driver.eclass
 # @MAINTAINER:
@@ -65,7 +65,6 @@ drv_304x="
 	02e4 038b 0390 0391 0392 0393 0394 0395 0397 0398 0399 039c 039e 03d0 03d1
 	03d2 03d5 03d6 0531 0533 053a 053b 053e 07e0 07e1 07e2 07e3 07e5
 "
-
 
 drv_340x="
 	0191 0193 0194 0197 019d 019e 0400 0401 0402 0403 0404 0405 0406 0407 0408
@@ -162,25 +161,28 @@ nvidia-driver-get-mask() {
 nvidia-driver-check-warning() {
 	local NVIDIA_MASK="$(nvidia-driver-get-mask)"
 
-	if [ -n "${NVIDIA_MASK}" ] && ! version_compare "${NVIDIA_MASK##*-}" "${PV}"; then
-		ewarn "***** WARNING *****"
-		ewarn
-		ewarn "You are currently installing a version of nvidia-drivers that is"
-		ewarn "known not to work with a video card you have installed on your"
-		ewarn "system. If this is intentional, please ignore this. If it is not"
-		ewarn "please perform the following steps:"
-		ewarn
-		ewarn "Add the following mask entry to /etc/portage/package.mask by"
-		if [ -d "${ROOT}/etc/portage/package.mask" ]; then
-			ewarn "echo \"${NVIDIA_MASK}\" > /etc/portage/package.mask/nvidia-drivers"
-		else
-			ewarn "echo \"${NVIDIA_MASK}\" >> /etc/portage/package.mask"
+	if [ -n "${NVIDIA_MASK}" ]; then
+		version_compare "${NVIDIA_MASK##*-}" "${PV}"
+		if [ x"${?}" = x1 ]; then
+			ewarn "***** WARNING *****"
+			ewarn
+			ewarn "You are currently installing a version of nvidia-drivers that is"
+			ewarn "known not to work with a video card you have installed on your"
+			ewarn "system. If this is intentional, please ignore this. If it is not"
+			ewarn "please perform the following steps:"
+			ewarn
+			ewarn "Add the following mask entry to /etc/portage/package.mask by"
+			if [ -d "${ROOT}/etc/portage/package.mask" ]; then
+				ewarn "echo \"${NVIDIA_MASK}\" > /etc/portage/package.mask/nvidia-drivers"
+			else
+				ewarn "echo \"${NVIDIA_MASK}\" >> /etc/portage/package.mask"
+			fi
+			ewarn
+			ewarn "Failure to perform the steps above could result in a non-working"
+			ewarn "X setup."
+			ewarn
+			ewarn "For more information please read:"
+			ewarn "http://www.nvidia.com/object/IO_32667.html"
 		fi
-		ewarn
-		ewarn "Failure to perform the steps above could result in a non-working"
-		ewarn "X setup."
-		ewarn
-		ewarn "For more information please read:"
-		ewarn "http://www.nvidia.com/object/IO_32667.html"
 	fi
 }

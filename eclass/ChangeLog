@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1347 2014/08/10 05:47:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1348 2014/08/10 10:02:43 jer Exp $
+
+  10 Aug 2014; Jeroen Roovers <jer@gentoo.org> nvidia-driver.eclass:
+  Check for earlier version, not different version (bug #519558 by kavol).
 
   10 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> mysql-v2.eclass:
   Add extra download URL from overlay.
