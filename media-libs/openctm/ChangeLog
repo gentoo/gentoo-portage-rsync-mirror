@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openctm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/ChangeLog,v 1.1 2014/08/07 16:50:58 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/ChangeLog,v 1.2 2014/08/10 12:28:12 amynka Exp $
+
+  10 Aug 2014; Amy Winston <amynka@gentoo.org>
+  files/openctm-fix-makefiles.patch, openctm-1.0.3.ebuild:
+  Obey settings of CC and CXX. Update patch from debian to reflect this.
 
 *openctm-1.0.3 (07 Aug 2014)
 

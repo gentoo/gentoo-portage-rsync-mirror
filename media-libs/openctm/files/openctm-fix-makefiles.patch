@@ -1,9 +1,62 @@
-Description: Debian changes to Makefiles
-Author: Teemu Ikonen <tpikonen@gmail.com>
-
---- openctm-1.0.3.orig/Makefile.linux
-+++ openctm-1.0.3/Makefile.linux
-@@ -47,19 +47,21 @@ documentation:
+diff -urN OpenCTM-1.0.3.old/doc/Makefile.linux OpenCTM-1.0.3/doc/Makefile.linux
+--- OpenCTM-1.0.3.old/doc/Makefile.linux	1970-01-01 01:00:00.000000000 +0100
++++ OpenCTM-1.0.3/doc/Makefile.linux	2014-08-10 13:56:45.821979758 +0200
+@@ -0,0 +1,2 @@
++%:
++	true
+diff -urN OpenCTM-1.0.3.old/lib/Makefile.linux OpenCTM-1.0.3/lib/Makefile.linux
+--- OpenCTM-1.0.3.old/lib/Makefile.linux	2014-08-10 13:55:34.090983462 +0200
++++ OpenCTM-1.0.3/lib/Makefile.linux	2014-08-10 13:59:03.312971874 +0200
+@@ -27,13 +27,18 @@
+ ###############################################################################
+ 
+ LZMADIR = liblzma
+-CC = gcc
+-CFLAGS = -O3 -W -Wall -c -fPIC -DOPENCTM_BUILD -I$(LZMADIR) -DLZMA_PREFIX_CTM -std=c99 -pedantic
+-CFLAGS_LZMA = -O3 -W -Wall -c -fPIC -DLZMA_PREFIX_CTM -std=c99 -pedantic
++CC ?= gcc
++CFLAGS += -W -Wall -c -fPIC -std=c99 -pedantic
++INCDEF = -DOPENCTM_BUILD -I$(LZMADIR) -DLZMA_PREFIX_CTM
++INCDEF_LZMA = -DLZMA_PREFIX_CTM
+ RM = rm -f
+ DEPEND = $(CPP) -MM
+ 
+-DYNAMICLIB = libopenctm.so
++VERSION = 1.0.3
++SOVERSION = 1
++LIBNAME = libopenctm.so
++SONAME = $(LIBNAME).$(SOVERSION)
++DYNAMICLIB = $(LIBNAME).$(VERSION)
+ 
+ OBJS = openctm.o \
+        stream.o \
+@@ -64,16 +69,18 @@
+ all: $(DYNAMICLIB)
+ 
+ clean:
+-	$(RM) $(DYNAMICLIB) $(OBJS) $(LZMA_OBJS)
++	$(RM) $(DYNAMICLIB) $(SONAME) $(LIBNAME) $(OBJS) $(LZMA_OBJS)
+ 
+ $(DYNAMICLIB): $(OBJS) $(LZMA_OBJS)
+-	gcc -shared -s -Wl,-soname,$@ -o $@ $(OBJS) $(LZMA_OBJS) -lm
++	$(CC) $(LDFLAGS) -shared -s -Wl,-soname,$(SONAME) -o $@ $(OBJS) $(LZMA_OBJS) -lm
++	ln -s $(DYNAMICLIB) $(SONAME)
++	ln -s $(DYNAMICLIB) $(LIBNAME)
+ 
+ %.o: %.c
+-	$(CC) $(CFLAGS) $<
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCDEF) $<
+ 
+ %.o: $(LZMADIR)/%.c
+-	$(CC) $(CFLAGS_LZMA) $<
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCDEF_LZMA) $<
+ 
+ depend:
+ 	$(DEPEND) $(SRCS) $(LZMA_SRCS) > make.depend
+diff -urN OpenCTM-1.0.3.old/Makefile.linux OpenCTM-1.0.3/Makefile.linux
+--- OpenCTM-1.0.3.old/Makefile.linux	2014-08-10 13:55:34.096983462 +0200
++++ OpenCTM-1.0.3/Makefile.linux	2014-08-10 13:56:45.821979758 +0200
+@@ -47,19 +47,21 @@
  
  
  # Installation settings
@@ -33,60 +86,10 @@ Author: Teemu Ikonen <tpikonen@gmail.com>
 -	$(MKDIR) $(MAN1DIR)
  	$(CP) doc/ctmconv.1 $(MAN1DIR)
  	$(CP) doc/ctmviewer.1 $(MAN1DIR)
---- openctm-1.0.3.orig/lib/Makefile.linux
-+++ openctm-1.0.3/lib/Makefile.linux
-@@ -28,12 +28,17 @@
- 
- LZMADIR = liblzma
- CC = gcc
--CFLAGS = -O3 -W -Wall -c -fPIC -DOPENCTM_BUILD -I$(LZMADIR) -DLZMA_PREFIX_CTM -std=c99 -pedantic
--CFLAGS_LZMA = -O3 -W -Wall -c -fPIC -DLZMA_PREFIX_CTM -std=c99 -pedantic
-+CFLAGS += -W -Wall -c -fPIC -std=c99 -pedantic
-+INCDEF = -DOPENCTM_BUILD -I$(LZMADIR) -DLZMA_PREFIX_CTM
-+INCDEF_LZMA = -DLZMA_PREFIX_CTM
- RM = rm -f
- DEPEND = $(CPP) -MM
- 
--DYNAMICLIB = libopenctm.so
-+VERSION = 1.0.3
-+SOVERSION = 1
-+LIBNAME = libopenctm.so
-+SONAME = $(LIBNAME).$(SOVERSION)
-+DYNAMICLIB = $(LIBNAME).$(VERSION)
- 
- OBJS = openctm.o \
-        stream.o \
-@@ -64,16 +69,18 @@ LZMA_SRCS = $(LZMADIR)/Alloc.c \
- all: $(DYNAMICLIB)
- 
- clean:
--	$(RM) $(DYNAMICLIB) $(OBJS) $(LZMA_OBJS)
-+	$(RM) $(DYNAMICLIB) $(SONAME) $(LIBNAME) $(OBJS) $(LZMA_OBJS)
- 
- $(DYNAMICLIB): $(OBJS) $(LZMA_OBJS)
--	gcc -shared -s -Wl,-soname,$@ -o $@ $(OBJS) $(LZMA_OBJS) -lm
-+	gcc $(LDFLAGS) -shared -s -Wl,-soname,$(SONAME) -o $@ $(OBJS) $(LZMA_OBJS) -lm
-+	ln -s $(DYNAMICLIB) $(SONAME)
-+	ln -s $(DYNAMICLIB) $(LIBNAME)
- 
- %.o: %.c
--	$(CC) $(CFLAGS) $<
-+	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCDEF) $<
- 
- %.o: $(LZMADIR)/%.c
--	$(CC) $(CFLAGS_LZMA) $<
-+	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCDEF_LZMA) $<
- 
- depend:
- 	$(DEPEND) $(SRCS) $(LZMA_SRCS) > make.depend
---- /dev/null
-+++ openctm-1.0.3/doc/Makefile.linux
-@@ -0,0 +1,2 @@
-+%:
-+	true
---- openctm-1.0.3.orig/tools/Makefile.linux
-+++ openctm-1.0.3/tools/Makefile.linux
-@@ -26,49 +26,55 @@
+diff -urN OpenCTM-1.0.3.old/tools/Makefile.linux OpenCTM-1.0.3/tools/Makefile.linux
+--- OpenCTM-1.0.3.old/tools/Makefile.linux	2014-08-10 13:55:34.094983462 +0200
++++ OpenCTM-1.0.3/tools/Makefile.linux	2014-08-10 14:00:52.484964897 +0200
+@@ -26,49 +26,50 @@
  ###############################################################################
  
  OPENCTMDIR = ../lib
@@ -100,15 +103,17 @@ Author: Teemu Ikonen <tpikonen@gmail.com>
 -TINYXMLDIR = tinyxml
 -ZLIBDIR = zlib
 -PNGLITEDIR = pnglite
+-
+-CPP = g++
+-CPPFLAGS = -c -O3 -W -Wall `pkg-config --cflags gtk+-2.0` -I$(OPENCTMDIR) -I$(RPLYDIR) -I$(JPEGDIR) -I$(TINYXMLDIR) -I$(GLEWDIR) -I$(ZLIBDIR) -I$(PNGLITEDIR)
 +# rply in libvxl1-dev is version 1.1, we need v. 1.01
 +#RPLYDIR = /usr/include/vxl/rply
 +#TINYXMLDIR = tinyxml
 +#ZLIBDIR = zlib
 +#PNGLITEDIR = pnglite
- 
--CPP = g++
--CPPFLAGS = -c -O3 -W -Wall `pkg-config --cflags gtk+-2.0` -I$(OPENCTMDIR) -I$(RPLYDIR) -I$(JPEGDIR) -I$(TINYXMLDIR) -I$(GLEWDIR) -I$(ZLIBDIR) -I$(PNGLITEDIR)
-+CXX = g++
++
++CXX ?= g++
++CC ?= gcc
 +CXXFLAGS += -W -Wall `pkg-config --cflags gtk+-2.0` -I$(OPENCTMDIR) -I$(RPLYDIR) -I$(GLEWDIR)
  
  MESHOBJS = mesh.o meshio.o ctm.o ply.o rply.o stl.o 3ds.o dae.o obj.o lwo.o off.o wrl.o
@@ -124,30 +129,22 @@ Author: Teemu Ikonen <tpikonen@gmail.com>
 -	cd $(JPEGDIR) && $(MAKE) -f makefile.linux clean
 -	cd $(TINYXMLDIR) && $(MAKE) -f Makefile.linux clean
 -	cd $(ZLIBDIR) && $(MAKE) -f Makefile.linux clean
-+#	cd $(JPEGDIR) && $(MAKE) -f makefile.linux clean
-+#	cd $(TINYXMLDIR) && $(MAKE) -f Makefile.linux clean
-+#	cd $(ZLIBDIR) && $(MAKE) -f Makefile.linux clean
-+
-+#libopenctm.so: $(OPENCTMDIR)/libopenctm.so
-+#	cp $< $@
-+
+-
+-libopenctm.so: $(OPENCTMDIR)/libopenctm.so
+-	cp $< $@
+ 
+-ctmconv: $(CTMCONVOBJS) $(TINYXMLDIR)/libtinyxml.a libopenctm.so
+-	$(CPP) -s -o $@ -L$(OPENCTMDIR) -L$(TINYXMLDIR) $(CTMCONVOBJS) -Wl,-rpath,. -lopenctm -ltinyxml
 +ctmconv: $(CTMCONVOBJS)
 +	$(CXX) $(LDFLAGS) -s -o $@ -L$(OPENCTMDIR) $(CTMCONVOBJS) -lopenctm -ltinyxml
-+
+ 
+-ctmviewer: $(CTMVIEWEROBJS) $(JPEGDIR)/libjpeg.a $(TINYXMLDIR)/libtinyxml.a $(ZLIBDIR)/libz.a libopenctm.so
+-	$(CPP) -s -o $@ -L$(OPENCTMDIR) -L$(TINYXMLDIR) -L$(JPEGDIR) -L$(ZLIBDIR) $(CTMVIEWEROBJS) -Wl,-rpath,. -lopenctm -ltinyxml -ljpeg -lz -lglut `pkg-config --libs gtk+-2.0`
 +ctmviewer: $(CTMVIEWEROBJS)
 +	$(CXX) $(LDFLAGS) -s -o $@ -L$(OPENCTMDIR) $(CTMVIEWEROBJS) -lopenctm \
 +	-ltinyxml -ljpeg -lpnglite -lz -lGL -lglut -lGLU -lGLEW \
 +	-lgtk-x11-2.0 -lgobject-2.0 -lglib-2.0
  
--libopenctm.so: $(OPENCTMDIR)/libopenctm.so
--	cp $< $@
--
--ctmconv: $(CTMCONVOBJS) $(TINYXMLDIR)/libtinyxml.a libopenctm.so
--	$(CPP) -s -o $@ -L$(OPENCTMDIR) -L$(TINYXMLDIR) $(CTMCONVOBJS) -Wl,-rpath,. -lopenctm -ltinyxml
--
--ctmviewer: $(CTMVIEWEROBJS) $(JPEGDIR)/libjpeg.a $(TINYXMLDIR)/libtinyxml.a $(ZLIBDIR)/libz.a libopenctm.so
--	$(CPP) -s -o $@ -L$(OPENCTMDIR) -L$(TINYXMLDIR) -L$(JPEGDIR) -L$(ZLIBDIR) $(CTMVIEWEROBJS) -Wl,-rpath,. -lopenctm -ltinyxml -ljpeg -lz -lglut `pkg-config --libs gtk+-2.0`
--
 -ctmbench: $(CTMBENCHOBJS) libopenctm.so
 -	$(CPP) -s -o $@ -L$(OPENCTMDIR) $(CTMBENCHOBJS) -Wl,-rpath,. -lopenctm
 +ctmbench: $(CTMBENCHOBJS)
@@ -166,13 +163,12 @@ Author: Teemu Ikonen <tpikonen@gmail.com>
  systimer.o: systimer.cpp systimer.h
  sysdialog_gtk.o: sysdialog_gtk.cpp sysdialog.h
  convoptions.o: convoptions.cpp convoptions.h
-@@ -91,22 +97,22 @@ phong_frag.h: phong.frag bin2c
+@@ -91,22 +92,7 @@
  	./bin2c phong.frag phongFragSrc > $@
  
  bin2c: bin2c.cpp
 -	$(CPP) -Os -W -Wall -o $@ $<
-+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(LDFLAGS) -Os -W -Wall -o $@ $<
- 
+-
 -$(JPEGDIR)/libjpeg.a:
 -	cd $(JPEGDIR) && $(MAKE) -f makefile.linux libjpeg.a
 -
@@ -181,26 +177,14 @@ Author: Teemu Ikonen <tpikonen@gmail.com>
 -
 -glew.o: $(GLEWDIR)/glew.c
 -	gcc -c -Os -W -I$(GLEWDIR) -o $@ $<
-+#$(JPEGDIR)/libjpeg.a:
-+#	cd $(JPEGDIR) && $(MAKE) -f makefile.linux libjpeg.a
-+#
-+#$(ZLIBDIR)/libz.a:
-+#	cd $(ZLIBDIR) && $(MAKE) -f Makefile.linux
-+#
-+#glew.o: $(GLEWDIR)/glew.c
-+#	gcc -c -Os -W -I$(GLEWDIR) -o $@ $<
++	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(LDFLAGS) -Os -W -Wall -o $@ $<
  
  rply.o: $(RPLYDIR)/rply.c
 -	gcc -c -O2 -W -I$(RPLYDIR) -o $@ $<
 -
 -pnglite.o: $(PNGLITEDIR)/pnglite.c
 -	gcc -c -O2 -W -I$(PNGLITEDIR) -o $@ $<
-+	gcc $(CPPFLAGS) $(CFLAGS) -c -O2 -W -I$(RPLYDIR) -o $@ $<
- 
+-
 -$(TINYXMLDIR)/libtinyxml.a:
 -	cd $(TINYXMLDIR) && $(MAKE) -f Makefile.linux
-+#pnglite.o: $(PNGLITEDIR)/pnglite.c
-+#	gcc -c -O2 -W -I$(PNGLITEDIR) -o $@ $<
-+#
-+#$(TINYXMLDIR)/libtinyxml.a:
-+#	cd $(TINYXMLDIR) && $(MAKE) -f Makefile.linux
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c -O2 -W -I$(RPLYDIR) -o $@ $<

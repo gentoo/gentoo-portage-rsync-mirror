@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/openctm-1.0.3.ebuild,v 1.1 2014/08/07 16:50:58 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/openctm-1.0.3.ebuild,v 1.2 2014/08/10 12:28:12 amynka Exp $
 
 EAPI=5
 
-inherit eutils multilib qt4-r2 versionator
+inherit eutils multilib versionator flag-o-matic
 
 MY_PF=OpenCTM-${PV}
 
@@ -16,8 +16,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-DEPEND="
-        dev-libs/tinyxml
+
+DEPEND="dev-libs/tinyxml
 	media-libs/freeglut
 	media-libs/glew
 	media-libs/pnglite
@@ -34,4 +34,8 @@ src_prepare() {
 	sed -i -e 's:-s ::g' \
 		"${S}"/Makefile \
 		"${S}"/*/Makefile.linux || die
+}
+
+src_compile() {
+	emake CC=$(tc-getCC) CXX=$(tc-getCXX)
 }
