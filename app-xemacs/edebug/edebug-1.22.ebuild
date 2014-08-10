@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edebug/edebug-1.22.ebuild,v 1.3 2007/06/03 18:08:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edebug/edebug-1.22.ebuild,v 1.4 2014/08/10 18:53:52 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="An Emacs Lisp debugger."
+DESCRIPTION="An Emacs Lisp debugger"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

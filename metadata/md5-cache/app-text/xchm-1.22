@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install postinst postrm
 DEPEND=>=dev-libs/chmlib-0.36 x11-libs/wxGTK:2.8[X]
-DESCRIPTION=Utility for viewing Compiled HTML Help (CHM) files.
+DESCRIPTION=Utility for viewing Compiled HTML Help (CHM) files
 EAPI=4
 HOMEPAGE=http://xchm.sourceforge.net/
 IUSE=nls
@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/chmlib-0.36 x11-libs/wxGTK:2.8[X]
 SLOT=0
 SRC_URI=mirror://sourceforge/xchm/xchm-1.22.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=a9d58b7db00464cb5bfd6f74ed344d24
+_md5_=3564ac5cdb3d56f2d01a8532faa03cc4

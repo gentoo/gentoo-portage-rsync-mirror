@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ecb
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ecb/ChangeLog,v 1.10 2008/03/19 19:24:16 graaff Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ecb/ChangeLog,v 1.11 2014/08/10 18:52:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ecb-1.22.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   A herd should not be listed as maintainer

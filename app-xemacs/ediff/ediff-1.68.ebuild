@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ediff-1.68.ebuild,v 1.6 2008/05/12 13:54:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ediff-1.68.ebuild,v 1.7 2014/08/10 18:54:28 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Interface over GNU patch."
+DESCRIPTION="Interface over GNU patch"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/pcl-cvs

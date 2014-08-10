@@ -1,6 +1,9 @@
 # ChangeLog for app-text/skribe
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/skribe/ChangeLog,v 1.4 2011/11/24 12:46:35 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/skribe/ChangeLog,v 1.5 2014/08/10 18:34:17 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> skribe-1.2l.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #290906
@@ -17,4 +20,3 @@
   +metadata.xml:
   Skibe initial commit wrt bug 191495. Thanks Austen for the initial layout
   of the ebuild
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/silvercity-0.9.7.ebuild,v 1.11 2011/02/21 16:21:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/silvercity-0.9.7.ebuild,v 1.12 2014/08/10 18:33:45 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ inherit distutils
 MY_PN="SilverCity"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A lexical analyser for many languages."
+DESCRIPTION="A lexical analyser for many languages"
 HOMEPAGE="http://silvercity.sourceforge.net/"
 SRC_URI="mirror://sourceforge/silvercity/${MY_P}.tar.gz"
 

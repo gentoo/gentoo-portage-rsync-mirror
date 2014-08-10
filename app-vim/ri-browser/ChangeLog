@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/ri-browser
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ri-browser/ChangeLog,v 1.5 2006/11/23 05:47:00 wormo Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ri-browser/ChangeLog,v 1.6 2014/08/10 18:40:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ri-browser-1.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Nov 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   ri-browser-1.2.ebuild:
@@ -20,4 +23,3 @@
   28 Feb 2005; Tom Martin <slarti@gentoo.org> +metadata.xml,
   +ri-browser-1.2.ebuild:
   Initial import.
-

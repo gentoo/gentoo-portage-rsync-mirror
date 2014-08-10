@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install unpack
-DESCRIPTION=Interface over GNU patch.
+DESCRIPTION=Interface over GNU patch
 HOMEPAGE=http://xemacs.org/
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2
@@ -7,4 +7,4 @@ RDEPEND=app-xemacs/pcl-cvs app-xemacs/elib app-xemacs/dired app-xemacs/xemacs-ba
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/ediff-1.81-pkg.tar.gz
 _eclasses_=xemacs-packages	29b865270cd0de904945912d5041f1cc
-_md5_=4b7c6daeaf93cbd6cb16cfd2be0bd590
+_md5_=033df5b8ce86b4d4542d756c943e07bc

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/skribe/skribe-1.2l.ebuild,v 1.3 2010/09/15 21:47:28 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/skribe/skribe-1.2l.ebuild,v 1.4 2014/08/10 18:34:17 slyfox Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ inherit multilib
 
 MY_P="${PN}${PV}"
 
-DESCRIPTION="Skribe is a text processor for technical documents written in scheme."
+DESCRIPTION="Skribe is a text processor for technical documents written in scheme"
 HOMEPAGE="http://www-sop.inria.fr/mimosa/fp/Skribe/"
 SRC_URI="ftp://ftp-sop.inria.fr/mimosa/fp/Skribe/${MY_P}.tar.gz"
 

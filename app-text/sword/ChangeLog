@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sword
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.71 2014/02/03 23:56:26 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.72 2014/08/10 18:34:52 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sword-1.6.2.ebuild,
+  sword-1.7.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *sword-1.7.2 (03 Feb 2014)
 

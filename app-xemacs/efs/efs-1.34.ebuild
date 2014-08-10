@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/efs/efs-1.34.ebuild,v 1.6 2011/07/22 11:25:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/efs/efs-1.34.ebuild,v 1.7 2014/08/10 18:56:20 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Treat files on remote systems the same as local files."
+DESCRIPTION="Treat files on remote systems the same as local files"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

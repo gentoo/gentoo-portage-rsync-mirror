@@ -1,6 +1,9 @@
 # ChangeLog for app-text/reed
-# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/reed/ChangeLog,v 1.11 2012/10/29 08:47:15 ago Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/reed/ChangeLog,v 1.12 2014/08/10 18:31:27 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> reed-5.4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   29 Oct 2012; Agostino Sarubbo <ago@gentoo.org> reed-5.4.ebuild:
   EAPI4, add ~amd64

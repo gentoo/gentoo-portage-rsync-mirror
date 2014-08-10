@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/egg-its/egg-its-1.27.ebuild,v 1.3 2007/06/03 19:47:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/egg-its/egg-its-1.27.ebuild,v 1.4 2014/08/10 18:56:56 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="MULE: Wnn (4.2 and 6) support.  SJ3 support."
+DESCRIPTION="MULE: Wnn (4.2 and 6) support.  SJ3 support"
 PKG_CAT="mule"
 
 RDEPEND="app-xemacs/leim

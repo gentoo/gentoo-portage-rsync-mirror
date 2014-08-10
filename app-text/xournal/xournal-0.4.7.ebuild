@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.7.ebuild,v 1.8 2013/05/02 16:18:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.7.ebuild,v 1.9 2014/08/10 18:38:21 slyfox Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ GCONF_DEBUG=no
 
 inherit gnome2 autotools
 
-DESCRIPTION="Xournal is an application for notetaking, sketching, and keeping a journal using a stylus."
+DESCRIPTION="Xournal is an application for notetaking, sketching, and keeping a journal using a stylus"
 HOMEPAGE="http://xournal.sourceforge.net/"
 
 LICENSE="GPL-2"

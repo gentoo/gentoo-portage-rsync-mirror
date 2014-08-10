@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.118 2014/08/03 00:45:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.119 2014/08/10 18:35:30 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tree-1.7.0.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -tree-1.6.0-r1.ebuild:
   old

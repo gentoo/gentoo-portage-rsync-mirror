@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ebuild-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ebuild-mode/ChangeLog,v 1.4 2014/01/18 18:49:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ebuild-mode/ChangeLog,v 1.5 2014/08/10 18:51:26 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ebuild-mode-1.19.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> ebuild-mode-1.24.ebuild:
   amd64 stable, bug #491972

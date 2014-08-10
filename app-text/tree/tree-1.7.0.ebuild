@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.7.0.ebuild,v 1.10 2014/08/02 18:13:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.7.0.ebuild,v 1.11 2014/08/10 18:35:30 slyfox Exp $
 
 EAPI=5
 inherit toolchain-funcs flag-o-matic bash-completion-r1
 
-DESCRIPTION="Lists directories recursively, and produces an indented listing of files."
+DESCRIPTION="Lists directories recursively, and produces an indented listing of files"
 HOMEPAGE="http://mama.indstate.edu/users/ice/tree/"
 SRC_URI="ftp://mama.indstate.edu/linux/tree/${P}.tgz"
 

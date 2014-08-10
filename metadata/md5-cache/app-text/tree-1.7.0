@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DESCRIPTION=Lists directories recursively, and produces an indented listing of files.
+DESCRIPTION=Lists directories recursively, and produces an indented listing of files
 EAPI=5
 HOMEPAGE=http://mama.indstate.edu/users/ice/tree/
 KEYWORDS=alpha amd64 arm arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos
@@ -8,4 +8,4 @@ RDEPEND=!=sci-biology/meme-4.8.1
 SLOT=0
 SRC_URI=ftp://mama.indstate.edu/linux/tree/tree-1.7.0.tgz
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=218b4f85cc292776e6415a2e6db211ca
+_md5_=1b48a0ffcee7cb29cdeab06ae290a30c

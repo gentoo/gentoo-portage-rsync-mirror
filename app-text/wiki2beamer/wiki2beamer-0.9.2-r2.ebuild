@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wiki2beamer/wiki2beamer-0.9.2-r2.ebuild,v 1.2 2011/06/30 00:11:37 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wiki2beamer/wiki2beamer-0.9.2-r2.ebuild,v 1.3 2014/08/10 18:36:02 slyfox Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit python
 
-DESCRIPTION="Tool to produce LaTeX Beamer code from wiki-like input."
+DESCRIPTION="Tool to produce LaTeX Beamer code from wiki-like input"
 
 HOMEPAGE="http://wiki2beamer.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"

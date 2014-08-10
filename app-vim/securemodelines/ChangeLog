@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/securemodelines
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.15 2010/12/05 20:37:04 mattst88 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.16 2014/08/10 18:40:38 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  securemodelines-20080424.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   05 Dec 2010; Matt Turner <mattst88@gentoo.org> securemodelines-20080424.ebuild:
   Added ~mips keyword. Bug 178480.
@@ -74,4 +78,3 @@
   +securemodelines-20070409.ebuild:
   Initial ebuild. This package provides a secure replacement for vim's builtin
   modeline support.
-

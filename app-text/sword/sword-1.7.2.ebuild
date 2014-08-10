@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.7.2.ebuild,v 1.1 2014/02/03 23:56:26 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.7.2.ebuild,v 1.2 2014/08/10 18:34:51 slyfox Exp $
 
 EAPI=5
 inherit eutils flag-o-matic
 
-DESCRIPTION="Library for Bible reading software."
+DESCRIPTION="Library for Bible reading software"
 HOMEPAGE="http://www.crosswire.org/sword/"
 SRC_URI="http://www.crosswire.org/ftpmirror/pub/${PN}/source/v${PV%.*}/${P}.tar.gz"
 

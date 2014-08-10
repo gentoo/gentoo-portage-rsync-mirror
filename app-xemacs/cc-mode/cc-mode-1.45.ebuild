@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cc-mode/cc-mode-1.45.ebuild,v 1.3 2007/06/03 17:50:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cc-mode/cc-mode-1.45.ebuild,v 1.4 2014/08/10 18:44:51 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="C, C++ and Java language support."
+DESCRIPTION="C, C++ and Java language support"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

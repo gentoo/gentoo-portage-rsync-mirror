@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cookie/cookie-1.15.ebuild,v 1.3 2007/06/03 17:51:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cookie/cookie-1.15.ebuild,v 1.4 2014/08/10 18:47:17 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Spook and Yow (Zippy quotes)."
+DESCRIPTION="Spook and Yow (Zippy quotes)"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base

@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eudc/eudc-1.39.ebuild,v 1.3 2007/06/03 18:25:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eudc/eudc-1.39.ebuild,v 1.4 2014/08/10 19:00:00 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="Emacs Unified Directory Client (LDAP, PH)."
+DESCRIPTION="Emacs Unified Directory Client (LDAP, PH)"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/fsf-compat

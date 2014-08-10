@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/clearcase/clearcase-1.10.ebuild,v 1.3 2007/06/03 17:51:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/clearcase/clearcase-1.10.ebuild,v 1.4 2014/08/10 18:46:04 slyfox Exp $
 
 SLOT="0"
 IUSE=""
-DESCRIPTION="New Clearcase Version Control for XEmacs (UNIX, Windows)."
+DESCRIPTION="New Clearcase Version Control for XEmacs (UNIX, Windows)"
 PKG_CAT="standard"
 
 RDEPEND="app-xemacs/dired

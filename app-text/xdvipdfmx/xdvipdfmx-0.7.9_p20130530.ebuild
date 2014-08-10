@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/xdvipdfmx-0.7.9_p20130530.ebuild,v 1.1 2013/06/25 21:57:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/xdvipdfmx-0.7.9_p20130530.ebuild,v 1.2 2014/08/10 18:37:16 slyfox Exp $
 
 EAPI="5"
 
-DESCRIPTION="Extended dvipdfmx for use with XeTeX and other unicode TeXs."
+DESCRIPTION="Extended dvipdfmx for use with XeTeX and other unicode TeXs"
 HOMEPAGE="http://scripts.sil.org/svn-view/xdvipdfmx/
 	http://tug.org/texlive/"
 SRC_URI="mirror://gentoo/texlive-${PV#*_p}-source.tar.xz"

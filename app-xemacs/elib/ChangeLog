@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/elib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/elib/ChangeLog,v 1.19 2011/07/22 11:25:05 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/elib/ChangeLog,v 1.20 2014/08/10 18:57:33 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> elib-1.11.ebuild,
+  elib-1.13.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> elib-1.13.ebuild:
   ppc64 stable wrt #369897

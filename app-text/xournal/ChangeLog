@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xournal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.47 2013/05/02 16:18:50 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.48 2014/08/10 18:38:21 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xournal-0.4.7.ebuild,
+  xournal-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   02 May 2013; Andreas K. Huettel <dilfridge@gentoo.org> xournal-0.4.7.ebuild,
   +files/xournal-0.4.7-am113-2.patch, xournal-9999.ebuild:

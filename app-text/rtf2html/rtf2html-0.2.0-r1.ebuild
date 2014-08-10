@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/rtf2html-0.2.0-r1.ebuild,v 1.5 2012/10/19 19:11:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/rtf2html-0.2.0-r1.ebuild,v 1.6 2014/08/10 18:32:02 slyfox Exp $
 
 EAPI="4"
 
 inherit base flag-o-matic
 
-DESCRIPTION="RTF to HTML converter."
+DESCRIPTION="RTF to HTML converter"
 HOMEPAGE="http://rtf2html.sourceforge.net/"
 SRC_URI="mirror://sourceforge/rtf2html/${P}.tar.bz2"
 
