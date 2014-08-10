@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/linuxfromscratch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/ChangeLog,v 1.27 2014/02/01 23:28:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/ChangeLog,v 1.28 2014/08/10 10:58:06 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> linuxfromscratch-7.2.ebuild,
+  linuxfromscratch-7.4.ebuild:
+  Fix description for more repoman happy
 
   01 Feb 2014; Mike Frysinger <vapier@gentoo.org> linuxfromscratch-7.2.ebuild,
   linuxfromscratch-7.4.ebuild:

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/vilearn-1.0.ebuild,v 1.11 2011/12/19 14:41:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/vilearn-1.0.ebuild,v 1.12 2014/08/10 10:58:06 patrick Exp $
 
 EAPI="4"
 
-DESCRIPTION="vilearn is an interactive vi tutorial comprised of 5 tutorials for the vi-impaired."
+DESCRIPTION="vilearn is an interactive vi tutorial comprised of 5 tutorials for the vi-impaired"
 HOMEPAGE="http://vilearn.org/"
 SRC_URI="http://vilearn.org/${P}.tar.gz"
 

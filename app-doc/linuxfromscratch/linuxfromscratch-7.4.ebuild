@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/linuxfromscratch-7.4.ebuild,v 1.3 2014/02/01 23:28:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/linuxfromscratch-7.4.ebuild,v 1.4 2014/08/10 10:58:06 patrick Exp $
 
 EAPI=5
 
 MY_SRC="http://www.linuxfromscratch.org/lfs/downloads/${PV}"
 BOOTSCRIPT_PV="20130821"
 
-DESCRIPTION="LFS documents building a Linux system entirely from source."
+DESCRIPTION="LFS documents building a Linux system entirely from source"
 HOMEPAGE="http://www.linuxfromscratch.org/lfs"
 SRC_URI="${MY_SRC}/LFS-BOOK-${PV}.tar.bz2
 		${MY_SRC}/lfs-bootscripts-${BOOTSCRIPT_PV}.tar.bz2

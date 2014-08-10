@@ -1,6 +1,26 @@
 # ChangeLog for app-doc/phrack
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.21 2012/06/28 15:53:05 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.22 2014/08/10 10:58:05 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> phrack-01.ebuild,
+  phrack-02.ebuild, phrack-03.ebuild, phrack-04.ebuild, phrack-05.ebuild,
+  phrack-06.ebuild, phrack-07.ebuild, phrack-08.ebuild, phrack-09.ebuild,
+  phrack-10.ebuild, phrack-11.ebuild, phrack-12.ebuild, phrack-13.ebuild,
+  phrack-14.ebuild, phrack-15.ebuild, phrack-16.ebuild, phrack-17.ebuild,
+  phrack-18.ebuild, phrack-19.ebuild, phrack-20.ebuild, phrack-21.ebuild,
+  phrack-22.ebuild, phrack-23.ebuild, phrack-24.ebuild, phrack-25.ebuild,
+  phrack-26.ebuild, phrack-27.ebuild, phrack-28.ebuild, phrack-29.ebuild,
+  phrack-30.ebuild, phrack-31.ebuild, phrack-32.ebuild, phrack-33.ebuild,
+  phrack-34.ebuild, phrack-35.ebuild, phrack-36.ebuild, phrack-37.ebuild,
+  phrack-38.ebuild, phrack-39.ebuild, phrack-40.ebuild, phrack-41.ebuild,
+  phrack-42.ebuild, phrack-43.ebuild, phrack-44.ebuild, phrack-45.ebuild,
+  phrack-46.ebuild, phrack-47.ebuild, phrack-48.ebuild, phrack-49.ebuild,
+  phrack-50.ebuild, phrack-51.ebuild, phrack-52.ebuild, phrack-53.ebuild,
+  phrack-54.ebuild, phrack-55.ebuild, phrack-56.ebuild, phrack-57.ebuild,
+  phrack-58.ebuild, phrack-59.ebuild, phrack-60.ebuild, phrack-61.ebuild,
+  phrack-62.ebuild, phrack-63.ebuild, phrack-64.ebuild, phrack-65.ebuild,
+  phrack-66.ebuild, phrack-67.ebuild, phrack-68.ebuild:
+  Fix description for more repoman happy
 
 *phrack-68 (28 Jun 2012)
 

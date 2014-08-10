@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/psmark/psmark-2.1.ebuild,v 1.3 2009/10/04 19:14:37 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/psmark/psmark-2.1.ebuild,v 1.4 2014/08/10 10:58:06 patrick Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ MY_P=${MY_PN}${PV}
 S=${WORKDIR}/${PN}
 
 IUSE=""
-DESCRIPTION="Prints watermark-like text on any PostScript document."
+DESCRIPTION="Prints watermark-like text on any PostScript document"
 HOMEPAGE="http://www.antitachyon.com/Content/10_Produkte/50_Utilities/psmark/"
 SRC_URI="http://www.antitachyon.com/download/${MY_P}.tar.gz"
 
