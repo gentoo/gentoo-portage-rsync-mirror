@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/zoo-2.10-r4.ebuild,v 1.9 2013/08/03 15:31:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/zoo-2.10-r4.ebuild,v 1.10 2014/08/10 01:43:11 patrick Exp $
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Manipulate archives of files in compressed form."
+DESCRIPTION="Manipulate archives of files in compressed form"
 HOMEPAGE="ftp://ftp.kiarchive.ru/pub/unix/arcers"
 SRC_URI="ftp://ftp.kiarchive.ru/pub/unix/arcers/${P}pl1.tar.gz
 	mirror://gentoo/${P}-gcc-issues-fix.patch"

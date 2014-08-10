@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DESCRIPTION=Fully automated disaster recovery supporting a broad variety of backup strategies and scenarios.
+DESCRIPTION=Fully automated disaster recovery supporting a broad variety of backup strategies and scenarios
 EAPI=5
 HOMEPAGE=http://relax-and-recover.org/
 IUSE=udev
@@ -9,4 +9,4 @@ RDEPEND=dev-libs/openssl net-dialup/mingetty net-fs/nfs-utils sys-apps/iproute2 
 SLOT=0
 SRC_URI=mirror://sourceforge/rear/rear-1.15.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=44be017a5d2a744b82442e41b619cbfe
+_md5_=ac775a019b259079966e1c91f1450d23

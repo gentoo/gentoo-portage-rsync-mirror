@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/mirdir
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/mirdir/ChangeLog,v 1.8 2011/12/21 08:58:13 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/mirdir/ChangeLog,v 1.9 2014/08/10 01:54:01 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> mirdir-2.1.ebuild:
+  Fix description for more repoman happy
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mirdir-2.1-r1.ebuild:
   x86 stable wrt bug #393959
@@ -33,4 +36,3 @@
   05 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +mirdir-2.1.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

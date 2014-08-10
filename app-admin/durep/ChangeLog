@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/durep
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/ChangeLog,v 1.21 2012/12/21 01:21:15 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/ChangeLog,v 1.22 2014/08/10 01:37:42 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> durep-0.9-r4.ebuild:
+  Fix description for more repoman happy
 
   21 Dec 2012; Julian Ospald <hasufell@gentoo.org> -durep-0.9-r3.ebuild,
   -files/durep-0.9-color-output.patch:

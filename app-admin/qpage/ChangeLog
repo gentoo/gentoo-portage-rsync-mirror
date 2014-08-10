@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/qpage
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/ChangeLog,v 1.10 2010/12/18 04:38:04 chutzpah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/ChangeLog,v 1.11 2014/08/10 01:37:39 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> qpage-3.3.ebuild:
+  Fix description for more repoman happy
 
   18 Dec 2010; Patrick McLean <chutzpah@gentoo.org> qpage-3.3.ebuild:
   Make sure that CC environment variable is being properly respected (bug
@@ -52,4 +55,3 @@
   files/qpage, files/qpage-3.3-gentoo.patch:
   Initial import.  Ebuild submitted by Mark Wagner <mark@lanfear.net>
   in bug 19961.
-

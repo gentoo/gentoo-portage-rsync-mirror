@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/backuppc-3.2.1-r3.ebuild,v 1.2 2014/07/29 16:29:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/backuppc-3.2.1-r3.ebuild,v 1.3 2014/08/10 01:54:00 patrick Exp $
 
 EAPI=5
 inherit eutils systemd webapp user
 
 MY_P="BackupPC-${PV}"
 
-DESCRIPTION="A high-performance system for backing up computers to a server's disk."
+DESCRIPTION="A high-performance system for backing up computers to a server's disk"
 HOMEPAGE="http://backuppc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	http://dev.gentooexperimental.org/~dreeevil/02-fix-config.pl-formatting.patch"

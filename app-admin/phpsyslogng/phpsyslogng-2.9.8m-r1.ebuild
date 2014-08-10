@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/phpsyslogng-2.9.8m-r1.ebuild,v 1.2 2011/10/16 10:58:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/phpsyslogng-2.9.8m-r1.ebuild,v 1.3 2014/08/10 01:37:41 patrick Exp $
 
 inherit webapp
 
-DESCRIPTION="php-syslog-ng is a log monitor designed to easily manage logs from many hosts."
+DESCRIPTION="php-syslog-ng is a log monitor designed to easily manage logs from many hosts"
 HOMEPAGE="http://php-syslog-ng.googlecode.com/"
 SRC_URI="http://php-syslog-ng.googlecode.com/files/php-syslog-ng-${PV}.tar.gz"
 

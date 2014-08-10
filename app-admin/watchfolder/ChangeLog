@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/watchfolder
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/ChangeLog,v 1.14 2009/03/01 23:59:39 patrick Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/ChangeLog,v 1.15 2014/08/10 01:37:43 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> watchfolder-0.3.3.ebuild:
+  Fix description for more repoman happy
 
   01 Mar 2009; Patrick Lauer <patrick@gentoo.org>
   +files/0.3.3-fortify-sources.patch, watchfolder-0.3.3.ebuild:

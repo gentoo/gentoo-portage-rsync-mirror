@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/torrentzip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/ChangeLog,v 1.5 2014/01/02 14:28:24 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/ChangeLog,v 1.6 2014/08/10 01:43:12 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> torrentzip-0.2-r1.ebuild:
+  Fix description for more repoman happy
 
   02 Jan 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml,
   torrentzip-0.2-r1.ebuild:

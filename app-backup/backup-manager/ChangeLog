@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/backup-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backup-manager/ChangeLog,v 1.22 2014/06/24 12:42:49 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backup-manager/ChangeLog,v 1.23 2014/08/10 01:54:00 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org>
+  backup-manager-0.7.10.1-r1.ebuild, backup-manager-0.7.10.1-r2.ebuild,
+  backup-manager-0.7.5.ebuild:
+  Fix description for more repoman happy
 
 *backup-manager-0.7.10.1-r2 (24 Jun 2014)
 
@@ -115,4 +120,3 @@
   +files/backup-manager-upload-execution-fix.diff,
   +files/bzip2-path-fix.diff, +metadata.xml, +backup-manager-0.7.2.ebuild:
   New ebuild submitted by Park Ji-in, mithrandir at electrang dot net, bug 126638
-

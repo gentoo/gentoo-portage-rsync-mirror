@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/rdiff-backup/rdiff-backup-1.2.8-r1.ebuild,v 1.6 2011/03/20 18:31:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/rdiff-backup/rdiff-backup-1.2.8-r1.ebuild,v 1.7 2014/08/10 01:54:02 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils eutils
 
-DESCRIPTION="Remote incremental file backup utility; uses librsync's rdiff utility to create concise, versioned backups."
+DESCRIPTION="Remote incremental file backup utility; uses librsync's rdiff utility to create concise, versioned backups"
 HOMEPAGE="http://www.nongnu.org/rdiff-backup/"
 SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ec2-ami-tools-1.4.0.5-r3.ebuild,v 1.1 2013/09/07 14:22:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ec2-ami-tools-1.4.0.5-r3.ebuild,v 1.2 2014/08/10 01:37:43 patrick Exp $
 
 EAPI="5"
 
 inherit versionator
 
-DESCRIPTION="These command-line tools serve as the client interface to the Amazon EC2 web service."
+DESCRIPTION="These command-line tools serve as the client interface to the Amazon EC2 web service"
 HOMEPAGE="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=368&categoryID=88"
 SRC_URI="http://s3.amazonaws.com/ec2-downloads/${P}.zip"
 

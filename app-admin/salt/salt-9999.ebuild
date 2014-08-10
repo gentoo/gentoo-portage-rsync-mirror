@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.11 2014/07/08 21:45:21 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.12 2014/08/10 01:37:40 patrick Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=(python{2_6,2_7})
 
 inherit eutils distutils-r1 systemd
 
-DESCRIPTION="Salt is a remote execution and configuration manager."
+DESCRIPTION="Salt is a remote execution and configuration manager"
 HOMEPAGE="http://saltstack.org/"
 
 if [[ ${PV} == 9999* ]]; then

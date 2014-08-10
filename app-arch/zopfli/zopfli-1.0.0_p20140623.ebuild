@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/zopfli-1.0.0_p20140623.ebuild,v 1.1 2014/07/10 02:30:54 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/zopfli-1.0.0_p20140623.ebuild,v 1.2 2014/08/10 01:43:12 patrick Exp $
 
 EAPI="5"
 
 inherit eutils toolchain-funcs vcs-snapshot
 
-DESCRIPTION="Compression library programmed in C to perform very good, but slow, deflate or zlib compression."
+DESCRIPTION="Compression library programmed in C to perform very good, but slow, deflate or zlib compression"
 HOMEPAGE="https://code.google.com/p/zopfli/"
 SRC_URI="https://zopfli.googlecode.com/archive/b831d9813d44d85b4f1497be9cb877e4d5c4bbd7.tar.gz -> ${P}.tar.gz"
 

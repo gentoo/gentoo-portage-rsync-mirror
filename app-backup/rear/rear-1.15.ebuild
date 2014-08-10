@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/rear/rear-1.15.ebuild,v 1.1 2013/10/17 18:48:39 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/rear/rear-1.15.ebuild,v 1.2 2014/08/10 01:54:00 patrick Exp $
 
 EAPI="5"
 
-DESCRIPTION="Fully automated disaster recovery supporting a broad variety of backup strategies and scenarios."
+DESCRIPTION="Fully automated disaster recovery supporting a broad variety of backup strategies and scenarios"
 HOMEPAGE="http://relax-and-recover.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/dirvish/dirvish-1.2.1.ebuild,v 1.2 2012/02/12 18:10:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/dirvish/dirvish-1.2.1.ebuild,v 1.3 2014/08/10 01:54:02 patrick Exp $
 
-DESCRIPTION="Dirvish is a fast, disk based, rotating network backup system."
+DESCRIPTION="Dirvish is a fast, disk based, rotating network backup system"
 HOMEPAGE="http://www.dirvish.org/"
 SRC_URI="http://dirvish.org/${P}.tgz"
 

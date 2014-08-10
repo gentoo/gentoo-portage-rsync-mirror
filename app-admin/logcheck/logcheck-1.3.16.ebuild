@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logcheck/logcheck-1.3.16.ebuild,v 1.1 2014/02/08 06:06:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logcheck/logcheck-1.3.16.ebuild,v 1.2 2014/08/10 01:37:41 patrick Exp $
 
 EAPI="5"
 
 inherit user
 
-DESCRIPTION="Mails anomalies in the system logfiles to the administrator."
+DESCRIPTION="Mails anomalies in the system logfiles to the administrator"
 HOMEPAGE="http://packages.debian.org/sid/logcheck"
 SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${PV}.tar.xz"
 

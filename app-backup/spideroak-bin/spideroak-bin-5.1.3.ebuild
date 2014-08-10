@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.1.3.ebuild,v 1.1 2014/04/06 14:47:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.1.3.ebuild,v 1.2 2014/08/10 01:54:01 patrick Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ inherit eutils unpacker
 
 SRC_URI_BASE="https://spideroak.com/getbuild?platform=ubuntu"
 
-DESCRIPTION="An easy, secure and consolidated free online backup, storage, access and sharing system."
+DESCRIPTION="An easy, secure and consolidated free online backup, storage, access and sharing system"
 HOMEPAGE="https://spideroak.com"
 SRC_URI="x86? ( ${SRC_URI_BASE}&arch=i386&version=${PV} -> ${P}_x86.deb )
 	amd64? ( ${SRC_URI_BASE}&arch=x86_64&version=${PV} -> ${P}_amd64.deb )"

@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/vzdump
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/vzdump/ChangeLog,v 1.5 2013/07/24 11:56:43 pva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/vzdump/ChangeLog,v 1.6 2014/08/10 01:54:01 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> vzdump-1.2.ebuild:
+  Fix description for more repoman happy
 
   24 Jul 2013; Peter Volkov <pva@gentoo.org> -vzdump-1.1.ebuild,
   vzdump-1.2.ebuild, metadata.xml:
@@ -23,4 +26,3 @@
   23 Mar 2009; Thilo Bangert <bangert@gentoo.org> +metadata.xml,
   +vzdump-1.1.ebuild:
   initial import - request from bug #219430
-

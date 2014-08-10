@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/recursos
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/ChangeLog,v 1.9 2014/07/15 14:26:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/ChangeLog,v 1.10 2014/08/10 01:37:40 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> recursos-2.0.ebuild:
+  Fix description for more repoman happy
 
   15 Jul 2014; Jeroen Roovers <jer@gentoo.org> recursos-2.0.ebuild:
   Set USE=graph dependency on net-analyzer/rrdtool (bug #509682).

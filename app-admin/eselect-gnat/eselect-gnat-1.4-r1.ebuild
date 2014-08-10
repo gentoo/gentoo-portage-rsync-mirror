@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/eselect-gnat-1.4-r1.ebuild,v 1.1 2008/05/16 22:09:38 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/eselect-gnat-1.4-r1.ebuild,v 1.2 2014/08/10 01:37:39 patrick Exp $
 
 inherit eutils
 
-DESCRIPTION="gnat module for eselect."
+DESCRIPTION="gnat module for eselect"
 HOMEPAGE="http://www.gentoo.org"
 SRC_URI=""
 

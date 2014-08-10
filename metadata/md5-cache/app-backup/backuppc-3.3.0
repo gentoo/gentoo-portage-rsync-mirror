@@ -1,6 +1,6 @@
 DEFINED_PHASES=install postinst prepare prerm setup test
 DEPEND=dev-lang/perl app-admin/apache-tools app-admin/makepasswd >=app-admin/webapp-config-1.50.15
-DESCRIPTION=A high-performance system for backing up computers to a server's disk.
+DESCRIPTION=A high-performance system for backing up computers to a server's disk
 EAPI=5
 HOMEPAGE=http://backuppc.sourceforge.net/
 IUSE=rss samba vhosts
@@ -10,4 +10,4 @@ RDEPEND=dev-lang/perl app-admin/apache-tools app-admin/makepasswd virtual/perl-I
 SLOT=0
 SRC_URI=mirror://sourceforge/backuppc/BackupPC-3.3.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747	webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=5a47a62182d65a952ab07f3f009e7a49
+_md5_=26a9369449fc4474c12c3a4d105e8ac2

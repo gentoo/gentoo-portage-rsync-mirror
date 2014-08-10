@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-oodict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.34 2014/01/05 10:53:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.35 2014/08/10 01:37:40 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org>
+  eselect-oodict-20100228.ebuild:
+  Fix description for more repoman happy
 
   05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-

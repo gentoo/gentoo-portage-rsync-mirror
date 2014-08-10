@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astroid/astroid-1.2.0.ebuild,v 1.2 2014/07/31 07:04:04 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astroid/astroid-1.2.0.ebuild,v 1.3 2014/08/10 01:49:03 idella4 Exp $
 
 EAPI=5
 
@@ -24,13 +24,6 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		~dev-python/pylint-1.3.0[${PYTHON_USEDEP}] )"
 # Required for tests
 DISTUTILS_IN_SOURCE_BUILD=1
-
-#python_prepare_all() {
-	# https://bitbucket.org/logilab/astroid/issue/8/
-#	sed -e "s/test_numpy_crash/_&/" -i test/unittest_regrtest.py
-
-#	distutils-r1_python_prepare_all
-#}
 
 # Restrict to test phase, required because suite fails horribly without it
 src_test() {

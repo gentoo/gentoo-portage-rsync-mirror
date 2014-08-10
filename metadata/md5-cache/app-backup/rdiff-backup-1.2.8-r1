@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm prepare
 DEPEND=>=net-libs/librsync-0.9.7 !arm? ( xattr? ( dev-python/pyxattr ) acl? ( dev-python/pylibacl ) ) =dev-lang/python-2*
-DESCRIPTION=Remote incremental file backup utility; uses librsync's rdiff utility to create concise, versioned backups.
+DESCRIPTION=Remote incremental file backup utility; uses librsync's rdiff utility to create concise, versioned backups
 EAPI=3
 HOMEPAGE=http://www.nongnu.org/rdiff-backup/
 IUSE=acl xattr
@@ -10,4 +10,4 @@ RDEPEND=>=net-libs/librsync-0.9.7 !arm? ( xattr? ( dev-python/pyxattr ) acl? ( d
 SLOT=0
 SRC_URI=http://savannah.nongnu.org/download/rdiff-backup/rdiff-backup-1.2.8.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=b6565503523d79a289122de507334bc9
+_md5_=7959df4ea2a4c34d90564d4d289585cb

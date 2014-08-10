@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/watchfolder-0.3.3.ebuild,v 1.8 2009/03/01 23:59:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/watchfolder-0.3.3.ebuild,v 1.9 2014/08/10 01:37:43 patrick Exp $
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Watches directories and processes files, similar to the watchfolder option of Acrobat Distiller."
+DESCRIPTION="Watches directories and processes files, similar to the watchfolder option of Acrobat Distiller"
 HOMEPAGE="http://freshmeat.net/projects/watchd/"
 SRC_URI="http://dstunrea.sdf-eu.org/files/${P}.tar.gz"
 

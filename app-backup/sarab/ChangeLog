@@ -1,6 +1,10 @@
 # ChangeLog for app-backup/sarab
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/sarab/ChangeLog,v 1.14 2012/06/29 06:59:15 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/sarab/ChangeLog,v 1.15 2014/08/10 01:54:01 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> sarab-0.2.4.ebuild,
+  sarab-0.2.7.ebuild, sarab-1.0.0.ebuild:
+  Fix description for more repoman happy
 
   29 Jun 2012; Jeff Horelick <jdhore@gentoo.org> sarab-1.0.0.ebuild:
   marked x86 per bug 423805
@@ -75,4 +79,3 @@
   25 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
   +sarab-0.2.2.ebuild:
   Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
-

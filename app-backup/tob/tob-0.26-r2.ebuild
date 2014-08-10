@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/tob/tob-0.26-r2.ebuild,v 1.3 2014/01/21 04:57:12 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/tob/tob-0.26-r2.ebuild,v 1.4 2014/08/10 01:54:01 patrick Exp $
 
 EAPI=5
 
 inherit eutils
 
-DESCRIPTION="A general driver for making and maintaining backups."
+DESCRIPTION="A general driver for making and maintaining backups"
 HOMEPAGE="http://tinyplanet.ca/projects/tob/"
 SRC_URI="http://tinyplanet.ca/projects/tob/${P}.tgz"
 

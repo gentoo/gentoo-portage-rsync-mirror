@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/sarab/sarab-1.0.0.ebuild,v 1.3 2012/06/29 06:59:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/sarab/sarab-1.0.0.ebuild,v 1.4 2014/08/10 01:54:01 patrick Exp $
 
 inherit eutils
 
-DESCRIPTION="SaraB is a powerful and automated backup scheduling system based on DAR."
+DESCRIPTION="SaraB is a powerful and automated backup scheduling system based on DAR"
 HOMEPAGE="http://sarab.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sarab/${P}.tar.gz"
 LICENSE="GPL-2"

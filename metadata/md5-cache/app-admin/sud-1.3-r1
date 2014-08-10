@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DESCRIPTION=a daemon to execute processes with special (and customizable) privileges in a nosuid environment.
+DESCRIPTION=A daemon to execute processes with special (and customizable) privileges in a nosuid environment
 EAPI=2
 HOMEPAGE=http://s0ftpj.org/projects/sud/index.htm
 KEYWORDS=~amd64 ~ppc ~x86
@@ -7,4 +7,4 @@ LICENSE=BSD
 SLOT=0
 SRC_URI=http://s0ftpj.org/projects/sud/sud-1.3.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=b458175d2a531931201f903bc8725aa7
+_md5_=28d87bea25034c6474a57778f45a6b00

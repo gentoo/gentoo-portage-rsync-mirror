@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/syslog-summary-1.14.ebuild,v 1.5 2011/12/18 17:44:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/syslog-summary-1.14.ebuild,v 1.6 2014/08/10 01:37:44 patrick Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.5"
 
 inherit eutils python
 
-DESCRIPTION="Summarizes the contents of a syslog log file."
+DESCRIPTION="Summarizes the contents of a syslog log file"
 HOMEPAGE="http://github.com/dpaleino/syslog-summary"
 SRC_URI="mirror://github/dpaleino/${PN}/${P}.tar.gz"
 

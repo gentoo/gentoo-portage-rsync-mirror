@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.5.ebuild,v 1.5 2013/05/16 13:20:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.5.ebuild,v 1.6 2014/08/10 01:37:40 patrick Exp $
 
 EAPI="2"
 
-DESCRIPTION="a utility for monitoring and managing daemons or similar programs running on a Unix system."
+DESCRIPTION="a utility for monitoring and managing daemons or similar programs running on a Unix system"
 HOMEPAGE="http://mmonit.com/monit/"
 SRC_URI="http://mmonit.com/monit/dist/${P}.tar.gz"
 

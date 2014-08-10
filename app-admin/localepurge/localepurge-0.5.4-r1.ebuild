@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/localepurge-0.5.4-r1.ebuild,v 1.11 2013/02/24 18:11:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/localepurge-0.5.4-r1.ebuild,v 1.12 2014/08/10 01:37:39 patrick Exp $
 
 EAPI=4
 
 inherit eutils prefix
 
-DESCRIPTION="Script to recover diskspace wasted for unneeded locale files and localized man pages."
+DESCRIPTION="Script to recover diskspace wasted for unneeded locale files and localized man pages"
 HOMEPAGE="http://gentoo.org
 http://git.overlays.gentoo.org/gitweb/?p=proj/localepurge.git;a=summary"
 SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tbz2"

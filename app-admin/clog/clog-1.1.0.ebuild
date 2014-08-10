@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/clog/clog-1.1.0.ebuild,v 1.1 2014/04/07 12:07:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/clog/clog-1.1.0.ebuild,v 1.2 2014/08/10 01:37:43 patrick Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ EGIT_REPO_URI="https://git.tasktools.org/scm/ut/${PN}.git"
 
 inherit cmake-utils bash-completion-r1
 
-DESCRIPTION="A colorized log tail utility."
+DESCRIPTION="A colorized log tail utility"
 HOMEPAGE="http://tasktools.org/projects/clog.html"
 [[ ${PV} == *9999* ]] || \
 	SRC_URI="http://taskwarrior.org/download/${P}.tar.gz"

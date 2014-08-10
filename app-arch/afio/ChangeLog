@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/afio
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/ChangeLog,v 1.23 2013/03/03 16:49:10 wschlich Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/ChangeLog,v 1.24 2014/08/10 01:43:13 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> afio-2.5.1.ebuild,
+  afio-2.5.ebuild:
+  Fix description for more repoman happy
 
   03 Mar 2013; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
   removed myself from metadata.xml

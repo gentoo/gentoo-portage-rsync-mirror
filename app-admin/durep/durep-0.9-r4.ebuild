@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/durep-0.9-r4.ebuild,v 1.4 2012/12/06 04:29:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/durep-0.9-r4.ebuild,v 1.5 2014/08/10 01:37:42 patrick Exp $
 
 EAPI=4
 inherit eutils
 
-DESCRIPTION="A perl script designed for monitoring disk usage in a more visual way than du."
+DESCRIPTION="A perl script designed for monitoring disk usage in a more visual way than du"
 HOMEPAGE="http://gentoo.org"
 SRC_URI="http://www.hibernaculum.net/download/${P}.tar.gz"
 

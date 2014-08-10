@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/eselect-oodict-20100228.ebuild,v 1.5 2012/03/06 21:35:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/eselect-oodict-20100228.ebuild,v 1.6 2014/08/10 01:37:40 patrick Exp $
 
-DESCRIPTION="Manages configuration of dictionaries for OpenOffice.Org."
+DESCRIPTION="Manages configuration of dictionaries for OpenOffice.Org"
 HOMEPAGE="http://www.gentoo.org/"
 
 SRC_URI="mirror://gentoo/oodict.eselect-${PVR}.bz2"

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/cancd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/ChangeLog,v 1.9 2011/12/31 15:42:32 idl0r Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/ChangeLog,v 1.10 2014/08/10 01:37:44 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> cancd-0.1.0.ebuild:
+  Fix description for more repoman happy
 
 *cancd-0.1.0-r2 (31 Dec 2011)
 
@@ -43,4 +46,3 @@
   14 Nov 2005; Robin H. Johnson <robbat2@gentoo.org> +files/cancd-conf.d,
   +files/cancd-init.d, +cancd-0.1.0.ebuild:
   Initial commit, ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

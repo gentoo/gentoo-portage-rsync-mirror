@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-fontconfig/eselect-fontconfig-1.0.ebuild,v 1.18 2007/12/29 11:40:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-fontconfig/eselect-fontconfig-1.0.ebuild,v 1.19 2014/08/10 01:37:42 patrick Exp $
 
-DESCRIPTION="An eselect module to manage /etc/fonts/conf.d symlinks."
+DESCRIPTION="An eselect module to manage /etc/fonts/conf.d symlinks"
 HOMEPAGE="http://www.gentoo.org"
 SRC_URI=""
 
