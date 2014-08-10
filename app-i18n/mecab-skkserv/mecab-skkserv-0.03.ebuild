@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/mecab-skkserv-0.03.ebuild,v 1.7 2013/08/03 12:14:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/mecab-skkserv-0.03.ebuild,v 1.8 2014/08/10 17:50:46 slyfox Exp $
 
 EAPI="5"
 
 inherit autotools-utils multilib
 
-DESCRIPTION="mecab-skkserv is a Kana-Kanji conversion server using MeCab."
+DESCRIPTION="mecab-skkserv is a Kana-Kanji conversion server using MeCab"
 HOMEPAGE="http://chasen.org/~taku/software/mecab-skkserv/"
 SRC_URI="http://chasen.org/~taku/software/mecab-skkserv/${P}.tar.gz"
 

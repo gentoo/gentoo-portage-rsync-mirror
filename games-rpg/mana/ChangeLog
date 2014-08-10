@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/mana
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/ChangeLog,v 1.17 2014/08/01 15:55:51 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/ChangeLog,v 1.18 2014/08/10 17:39:01 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mana-0.6.1.ebuild:
+  Stable for x86, wrt bug #518226
 
   01 Aug 2014; Chema Alonso <nimiux@gentoo.org> mana-0.6.1.ebuild:
   Stable for amd64 wrt bug #518226
@@ -66,4 +69,3 @@
   23 Nov 2011; Tupone Alfredo <tupone@gentoo.org> +mana-0.5.3.ebuild,
   +files/mana-0.5.3-gentoo.patch:
   New package. Replacement of games-rpg/tmw Bug #363795 by Ben Longbons
-

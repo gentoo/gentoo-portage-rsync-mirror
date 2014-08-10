@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/wxhexeditor-0.22.ebuild,v 1.1 2013/06/24 14:22:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/wxhexeditor-0.22.ebuild,v 1.2 2014/08/10 17:42:44 slyfox Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ inherit eutils toolchain-funcs wxwidgets
 
 MY_PN="wxHexEditor"
 
-DESCRIPTION="A cross-platform hex editor designed specially for large files."
+DESCRIPTION="A cross-platform hex editor designed specially for large files"
 HOMEPAGE="http://wxhexeditor.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-v${PV}-src.tar.bz2"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/wily
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.18 2012/05/10 14:54:49 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.19 2014/08/10 17:42:11 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wily-1.0-r1.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -wily-1.0.ebuild:
   Remove old

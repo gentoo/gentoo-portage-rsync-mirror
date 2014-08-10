@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/libguess-1.0.ebuild,v 1.16 2012/05/03 19:24:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/libguess-1.0.ebuild,v 1.17 2014/08/10 17:49:02 slyfox Exp $
 
 EAPI=2
 
-DESCRIPTION="A high-speed character set detection library."
+DESCRIPTION="A high-speed character set detection library"
 HOMEPAGE="http://www.atheme.org/project/libguess"
 SRC_URI="http://distfiles.atheme.org/${P}.tbz2"
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.90 2014/08/08 21:22:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.92 2014/08/10 17:43:59 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> fribidi-0.19.6.ebuild:
+  Stable for ia64, wrt bug #517606
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> fribidi-0.19.6.ebuild:
+  Stable for x86, wrt bug #517606
 
   08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> fribidi-0.19.6.ebuild:
   Stable for sparc, wrt bug #517606

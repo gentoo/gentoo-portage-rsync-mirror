@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/libguess
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.27 2014/07/31 20:10:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.28 2014/08/10 17:49:02 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libguess-1.0.ebuild,
+  libguess-1.1.ebuild, libguess-1.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *libguess-1.2 (31 Jul 2014)
 

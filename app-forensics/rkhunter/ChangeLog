@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.104 2014/08/03 18:39:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.105 2014/08/10 17:46:50 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> rkhunter-1.4.0.ebuild,
+  rkhunter-1.4.2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> rkhunter-1.4.2.ebuild:
   Stable for ppc, wrt bug #515868

@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/retroshare
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/ChangeLog,v 1.6 2014/07/29 16:40:18 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/ChangeLog,v 1.7 2014/08/10 17:37:53 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> retroshare-0.5.5c.ebuild:
+  Stable for x86, wrt bug #518206
 
   29 Jul 2014; Chema Alonso <nimiux@gentoo.org> retroshare-0.5.5c.ebuild:
   Stable for amd64 wrt bug #518206

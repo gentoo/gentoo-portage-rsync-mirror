@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/apel-10.8.ebuild,v 1.8 2011/05/10 09:50:15 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/apel-10.8.ebuild,v 1.9 2014/08/10 17:43:22 slyfox Exp $
 
 EAPI=3
 
 inherit elisp
 
-DESCRIPTION="A Portable Emacs Library is a library for making portable Emacs Lisp programs."
+DESCRIPTION="A Portable Emacs Library is a library for making portable Emacs Lisp programs"
 HOMEPAGE="http://cvs.m17n.org/elisp/APEL/"
 SRC_URI="ftp://ftp.jpl.org/pub/elisp/apel/${P}.tar.gz"
 

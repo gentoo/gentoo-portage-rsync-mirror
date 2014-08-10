@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/drascula
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/ChangeLog,v 1.8 2014/07/28 12:02:31 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/ChangeLog,v 1.9 2014/08/10 17:37:05 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> drascula-1.0-r2.ebuild:
+  Stable for x86, wrt bug #518062
 
   28 Jul 2014; Chema Alonso <nimiux@gentoo.org> drascula-1.0-r2.ebuild:
   Stable for amd64 wrt bug #518062
@@ -35,4 +38,3 @@
   16 Sep 2008; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +drascula-1.0.ebuild:
   initial commit - modified ebuild submitted by Anton Romanov via bug #237276
-

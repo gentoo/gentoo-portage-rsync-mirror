@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/manaplus/manaplus-1.3.9.29.ebuild,v 1.2 2014/08/01 16:05:32 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/manaplus/manaplus-1.3.9.29.ebuild,v 1.3 2014/08/10 17:39:15 ago Exp $
 
 # REMINDER: check sdl2 support on version bump
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.evolonline.org/manaplus/download/${PV}/manaplus-${PV}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="nls opengl"
 
 RDEPEND="

@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/aee/aee-2.2.15b.ebuild,v 1.6 2012/10/20 17:17:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/aee/aee-2.2.15b.ebuild,v 1.7 2014/08/10 17:39:47 slyfox Exp $
 
 EAPI="4"
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="An easy to use text editor."
+DESCRIPTION="An easy to use text editor"
 HOMEPAGE="http://mahon.cwx.net/"
 SRC_URI="http://mahon.cwx.net/sources/${P}.tar.gz"
 

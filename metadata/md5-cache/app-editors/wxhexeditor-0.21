@@ -1,6 +1,6 @@
 DEFINED_PHASES=prepare pretend
 DEPEND=app-crypt/mhash dev-libs/udis86 x11-libs/wxGTK:2.8[X]
-DESCRIPTION=A cross-platform hex editor designed specially for large files.
+DESCRIPTION=A cross-platform hex editor designed specially for large files
 EAPI=5
 HOMEPAGE=http://wxhexeditor.sourceforge.net/
 KEYWORDS=~amd64 ~x86
@@ -9,4 +9,4 @@ RDEPEND=app-crypt/mhash dev-libs/udis86 x11-libs/wxGTK:2.8[X]
 SLOT=0
 SRC_URI=mirror://sourceforge/wxhexeditor/wxHexEditor-v0.21-src.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=c2498af887b8a99dd7301d6ad20053a0
+_md5_=b957625d9c2b3d834ff1095ea8e1b9a4

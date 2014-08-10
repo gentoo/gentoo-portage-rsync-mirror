@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-vrooby/lc-vrooby-0.6.60.ebuild,v 1.4 2014/07/27 16:25:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-vrooby/lc-vrooby-0.6.60.ebuild,v 1.5 2014/08/10 17:59:55 slyfox Exp $
 
 EAPI="5"
 
 inherit leechcraft
 
-DESCRIPTION="Vrooby, removable device manager for LeechCraft."
+DESCRIPTION="Vrooby, removable device manager for LeechCraft"
 
 SLOT="0"
 KEYWORDS="amd64 x86"

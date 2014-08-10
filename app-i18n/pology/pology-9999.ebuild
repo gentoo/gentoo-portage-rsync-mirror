@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/pology-9999.ebuild,v 1.3 2013/01/18 10:21:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/pology-9999.ebuild,v 1.4 2014/08/10 17:52:30 slyfox Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ PYTHON_DEPEND="2:2.7"
 inherit python cmake-utils bash-completion-r1 ${VCS_ECLASS}
 unset VCS_ECLASS
 
-DESCRIPTION="A framework for custom processing of PO files."
+DESCRIPTION="A framework for custom processing of PO files"
 HOMEPAGE="http://pology.nedohodnik.net"
 [[ ${PV} == 9999 ]] || SRC_URI="http://pology.nedohodnik.net//release/${P}.tar.bz2"
 

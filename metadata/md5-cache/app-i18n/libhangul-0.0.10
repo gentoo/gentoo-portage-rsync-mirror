@@ -1,8 +1,8 @@
 DEFINED_PHASES=install
-DESCRIPTION=libhangul is a generalized and portable library for processing hangul.
+DESCRIPTION=libhangul is a generalized and portable library for processing hangul
 HOMEPAGE=http://kldp.net/projects/hangul/
 KEYWORDS=amd64 ppc x86
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=http://kldp.net/frs/download.php/5417/libhangul-0.0.10.tar.gz
-_md5_=1d075a0968a1f5e3f4657cc47c54d6a3
+_md5_=b9ad85592cbe6b5c1756bac347625f86

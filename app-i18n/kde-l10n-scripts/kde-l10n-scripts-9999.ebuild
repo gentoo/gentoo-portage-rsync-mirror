@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-l10n-scripts/kde-l10n-scripts-9999.ebuild,v 1.5 2013/12/16 18:02:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-l10n-scripts/kde-l10n-scripts-9999.ebuild,v 1.6 2014/08/10 17:48:24 slyfox Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://github.com/vpelcak/kde-scripts.git"
 [[ ${PV} == 9999 ]] && inherit git-2
 
-DESCRIPTION="Set of scripts to manage KDE translation files."
+DESCRIPTION="Set of scripts to manage KDE translation files"
 HOMEPAGE="https://github.com/vpelcak/kde-scripts"
 [[ ${PV} == 9999 ]] || SRC_URI=""
 

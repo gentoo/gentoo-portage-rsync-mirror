@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pbbuttonsd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.78 2012/09/09 16:21:47 josejx Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.79 2014/08/10 17:53:05 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  pbbuttonsd-0.8.1-r3.ebuild, pbbuttonsd-0.8.1-r4.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *pbbuttonsd-0.8.1-r4 (09 Sep 2012)
 

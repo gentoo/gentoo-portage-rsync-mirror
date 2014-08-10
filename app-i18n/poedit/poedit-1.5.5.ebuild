@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.5.5.ebuild,v 1.7 2013/12/23 15:27:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.5.5.ebuild,v 1.8 2014/08/10 17:51:57 slyfox Exp $
 
 EAPI=5
 WX_GTK_VER=2.8
 
 inherit eutils fdo-mime flag-o-matic wxwidgets
 
-DESCRIPTION="Cross-platform gettext catalogs (.po files) editor."
+DESCRIPTION="Cross-platform gettext catalogs (.po files) editor"
 HOMEPAGE="http://poedit.sourceforge.net/"
 SRC_URI="mirror://sourceforge/poedit/${P}.tar.gz"
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.1-r4.ebuild,v 1.1 2012/09/09 16:21:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.1-r4.ebuild,v 1.2 2014/08/10 17:53:05 slyfox Exp $
 
 inherit autotools flag-o-matic eutils
 
-DESCRIPTION="Handles power management and special keys on laptops."
+DESCRIPTION="Handles power management and special keys on laptops"
 HOMEPAGE="http://pbbuttons.berlios.de"
 SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 

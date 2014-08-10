@@ -4,10 +4,10 @@ DESCRIPTION=Devilspie like window matching utility, using LUA for scripting
 EAPI=5
 HOMEPAGE=http://devilspie2.gusnan.se
 IUSE=debug linguas_fi linguas_fr linguas_ja linguas_nl linguas_pt_BR linguas_ru linguas_sv
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2.32.4:2 >=dev-lang/lua-5.1.5 >=x11-libs/gtk+-3.4.4:3 >=x11-libs/libwnck-3.4.4:3 x11-libs/libX11
 SLOT=0
 SRC_URI=http://devilspie2.gusnan.se/download/devilspie2_0.36-src.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f0abe4334be1d8d1ae90577329473eec
+_md5_=2f0f16ea2b44c87bba6b751963b955c2

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/wxhexeditor
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.6 2013/06/24 14:22:13 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.7 2014/08/10 17:42:44 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wxhexeditor-0.20.ebuild,
+  wxhexeditor-0.21.ebuild, wxhexeditor-0.22.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *wxhexeditor-0.22 (24 Jun 2013)
 
@@ -40,4 +44,3 @@
   +files/wxhexeditor-0.09-gcc45.patch, +metadata.xml:
   Initial import. Based on ebuilds by Yoshi Watanabe and Philipp Richter in
   bug #283994.
-

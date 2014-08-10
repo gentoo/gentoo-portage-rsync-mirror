@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/autopsy-2.24-r1.ebuild,v 1.4 2012/06/29 12:39:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/autopsy-2.24-r1.ebuild,v 1.5 2014/08/10 17:45:40 slyfox Exp $
 
 EAPI=4
 
-DESCRIPTION="A graphical interface to the digital forensic analysis tools in The Sleuth Kit."
+DESCRIPTION="A graphical interface to the digital forensic analysis tools in The Sleuth Kit"
 HOMEPAGE="http://www.sleuthkit.org/autopsy/"
 SRC_URI="mirror://sourceforge/autopsy/${P}.tar.gz"
 

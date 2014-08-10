@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install
-DESCRIPTION=Library for providing a basic file input/output abstraction layer.
+DESCRIPTION=Library for providing a basic file input/output abstraction layer
 EAPI=5
 HOMEPAGE=http://code.google.com/p/libbfio/
 IUSE=unicode
@@ -8,4 +8,4 @@ LICENSE=LGPL-3
 SLOT=0
 SRC_URI=http://dev.pentoo.ch/~zero/distfiles/libbfio-alpha-20120425.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=e28cca7b264cf994fb73c144ce941d3a
+_md5_=1009fcb797f81eab9d746fdd024ca2fd

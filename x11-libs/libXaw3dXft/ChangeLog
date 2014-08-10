@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXaw3dXft
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3dXft/ChangeLog,v 1.5 2014/08/01 17:49:45 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3dXft/ChangeLog,v 1.6 2014/08/10 17:36:26 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libXaw3dXft-1.6.2c.ebuild:
+  Stable for x86, wrt bug #517498
 
   01 Aug 2014; Chema Alonso <nimiux@gentoo.org> libXaw3dXft-1.6.2c.ebuild:
   Stable for amd64 wrt bug #517498

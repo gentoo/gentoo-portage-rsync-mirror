@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-lmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/ChangeLog,v 1.16 2014/08/03 18:56:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/ChangeLog,v 1.17 2014/08/10 17:56:30 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> lc-lmp-0.6.60.ebuild,
+  lc-lmp-0.6.65.ebuild, lc-lmp-0.6.70.ebuild, lc-lmp-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *lc-lmp-0.6.70 (03 Aug 2014)
 

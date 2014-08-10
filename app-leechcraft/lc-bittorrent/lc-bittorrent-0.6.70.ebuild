@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-bittorrent/lc-bittorrent-0.6.70.ebuild,v 1.1 2014/08/03 18:46:16 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-bittorrent/lc-bittorrent-0.6.70.ebuild,v 1.2 2014/08/10 17:54:47 slyfox Exp $
 
 EAPI="4"
 
 inherit leechcraft
 
-DESCRIPTION="Full-featured BitTorrent client plugin for LeechCraft."
+DESCRIPTION="Full-featured BitTorrent client plugin for LeechCraft"
 
 SLOT="0"
 KEYWORDS=" ~amd64 ~x86"

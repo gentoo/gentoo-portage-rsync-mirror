@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628-r2.ebuild,v 1.10 2014/01/30 20:28:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628-r2.ebuild,v 1.11 2014/08/10 17:50:14 slyfox Exp $
 
 EAPI=4
 
 inherit autotools
 
-DESCRIPTION="A collection of Polish translations of Linux manual pages."
+DESCRIPTION="A collection of Polish translations of Linux manual pages"
 HOMEPAGE="http://www.batnet.pl/ptm/"
 SRC_URI="http://www.batnet.pl/ptm/man-PL${PV:6:2}-${PV:4:2}-${PV:0:4}.tar.gz"
 

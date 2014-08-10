@@ -1,4 +1,8 @@
 
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> unhide-20121229.ebuild,
+  unhide-20130526.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
+
 *unhide-20130526 (27 May 2013)
 
   27 May 2013; Anthony G. Basile <blueness@gentoo.org> +unhide-20130526.ebuild,

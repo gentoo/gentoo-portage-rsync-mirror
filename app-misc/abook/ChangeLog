@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/abook
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.65 2013/01/04 11:56:59 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.66 2014/08/10 18:01:05 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> abook-0.6.0_pre2.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   04 Jan 2013; Eray Aslan <eras@gentoo.org> -abook-0.5.6-r1.ebuild,
   -files/0.5.6-01_editor.patch:

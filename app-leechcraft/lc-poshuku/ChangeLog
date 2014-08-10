@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-poshuku
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-poshuku/ChangeLog,v 1.14 2014/08/03 19:01:17 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-poshuku/ChangeLog,v 1.15 2014/08/10 17:58:13 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> lc-poshuku-0.6.60.ebuild,
+  lc-poshuku-0.6.65.ebuild, lc-poshuku-0.6.70.ebuild, lc-poshuku-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *lc-poshuku-0.6.70 (03 Aug 2014)
 

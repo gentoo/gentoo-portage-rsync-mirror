@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=X? ( x11-libs/libX11 )
-DESCRIPTION=An easy to use text editor.
+DESCRIPTION=An easy to use text editor
 EAPI=4
 HOMEPAGE=http://mahon.cwx.net/
 IUSE=X
@@ -10,4 +10,4 @@ RDEPEND=X? ( x11-libs/libX11 )
 SLOT=0
 SRC_URI=http://mahon.cwx.net/sources/aee-2.2.15b.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=b549dd18008c2612347fbadcfd15acb5
+_md5_=e3d67bee3534c5499525ab8e705e667a

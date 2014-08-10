@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/libhangul-0.1.0.ebuild,v 1.5 2012/05/03 19:24:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/libhangul-0.1.0.ebuild,v 1.6 2014/08/10 17:49:37 slyfox Exp $
 
 EAPI=4
 
-DESCRIPTION="libhangul is a generalized and portable library for processing hangul."
+DESCRIPTION="libhangul is a generalized and portable library for processing hangul"
 HOMEPAGE="http://code.google.com/p/libhangul/"
 SRC_URI="http://libhangul.googlecode.com/files/${P}.tar.gz"
 

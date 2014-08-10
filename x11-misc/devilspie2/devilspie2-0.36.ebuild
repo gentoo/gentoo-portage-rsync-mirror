@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/devilspie2-0.36.ebuild,v 1.2 2014/07/30 15:48:35 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/devilspie2-0.36.ebuild,v 1.3 2014/08/10 17:38:19 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://devilspie2.gusnan.se/download/${PN}_${PV}-src.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2.32.4:2

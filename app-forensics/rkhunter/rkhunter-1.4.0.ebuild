@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.4.0.ebuild,v 1.9 2014/06/30 14:21:44 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.4.0.ebuild,v 1.10 2014/08/10 17:46:50 slyfox Exp $
 
 EAPI=4
 
 inherit eutils bash-completion-r1
 
-DESCRIPTION="Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers."
+DESCRIPTION="Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers"
 HOMEPAGE="http://rkhunter.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

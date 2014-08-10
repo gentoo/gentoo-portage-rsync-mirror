@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/abook-0.6.0_pre2.ebuild,v 1.8 2012/12/30 15:08:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/abook-0.6.0_pre2.ebuild,v 1.9 2014/08/10 18:01:05 slyfox Exp $
 
 EAPI=3
 
 inherit eutils
 
 MY_P="${P/_/}"
-DESCRIPTION="Abook is a text-based addressbook program designed to use with mutt mail client."
+DESCRIPTION="Abook is a text-based addressbook program designed to use with mutt mail client"
 HOMEPAGE="http://abook.sourceforge.net/"
 SRC_URI="http://abook.sourceforge.net/devel/${MY_P}.tar.gz"
 

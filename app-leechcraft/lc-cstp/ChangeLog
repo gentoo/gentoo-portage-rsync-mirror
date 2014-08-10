@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-cstp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-cstp/ChangeLog,v 1.12 2014/08/03 18:48:19 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-cstp/ChangeLog,v 1.13 2014/08/10 17:55:21 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> lc-cstp-0.6.60.ebuild,
+  lc-cstp-0.6.65.ebuild, lc-cstp-0.6.70.ebuild, lc-cstp-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *lc-cstp-0.6.70 (03 Aug 2014)
 

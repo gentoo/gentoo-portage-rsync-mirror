@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/youtube-viewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.34 2014/07/30 16:01:35 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.35 2014/08/10 17:37:38 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> youtube-viewer-3.1.1.ebuild:
+  Stable for x86, wrt bug #518204
 
   30 Jul 2014; Chema Alonso <nimiux@gentoo.org> youtube-viewer-3.1.1.ebuild:
   Stable for amd64 wrt bug #518204

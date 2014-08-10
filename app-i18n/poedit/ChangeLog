@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/poedit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.81 2013/12/23 15:27:57 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.82 2014/08/10 17:51:57 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> poedit-1.4.6.1.ebuild,
+  poedit-1.5.5.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> poedit-1.5.5.ebuild:
   Stable for sparc, wrt bug #485188

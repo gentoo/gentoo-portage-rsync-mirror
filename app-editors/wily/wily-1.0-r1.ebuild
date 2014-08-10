@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/wily-1.0-r1.ebuild,v 1.6 2012/03/18 15:41:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/wily-1.0-r1.ebuild,v 1.7 2014/08/10 17:42:11 slyfox Exp $
 
 inherit toolchain-funcs
 
 MY_P="${P/1.0/9libs}"
 
-DESCRIPTION="An emulation of ACME, Plan9's hybrid window system, shell and editor for programmers."
+DESCRIPTION="An emulation of ACME, Plan9's hybrid window system, shell and editor for programmers"
 HOMEPAGE="http://www.netlib.org/research/9libs/"
 SRC_URI="ftp://www.netlib.org/research/9libs/${MY_P}.tar.gz"
 

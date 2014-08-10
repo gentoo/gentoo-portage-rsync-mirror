@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DEPEND=>=virtual/emacs-23
-DESCRIPTION=When you start Emacs, Session restores various variables from your last session.
+DESCRIPTION=When you start Emacs, Session restores various variables from your last session
 EAPI=5
 HOMEPAGE=http://emacs-session.sourceforge.net/
 KEYWORDS=amd64 ppc x86
@@ -9,4 +9,4 @@ RDEPEND=>=virtual/emacs-23
 SLOT=0
 SRC_URI=mirror://sourceforge/emacs-session/session-2.3a.tar.gz
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f7682c2181c2667cf771143bcac2f903
+_md5_=7c8a9b596ca68fb88a0dfe136999c4d3

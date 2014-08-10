@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nethogs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.26 2014/07/22 08:50:43 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.27 2014/08/10 17:34:47 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> nethogs-0.8.0-r4.ebuild:
+  Stable for x86, wrt bug #512308
 
   22 Jul 2014; Chema Alonso <nimiux@gentoo.org> nethogs-0.8.0-r4.ebuild:
   Stable for amd64 wrt bug #512308
@@ -108,4 +111,3 @@
   version to compile with gcc-3.4. Thanks to Tom Hendrikx <tom@whyscream.net>,
   Athul Acharya <aacharya@gmail.com>, Daniel Willmann <willmann.daniel@web.de>
   and Dan McDonald <slashdevslashtty@gmail.com> for participating.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.2.ebuild,v 1.10 2014/04/26 19:58:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.2.ebuild,v 1.11 2014/08/10 17:40:30 slyfox Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit eutils fdo-mime python
 
 MY_P=${P/_/-}
 
-DESCRIPTION="A GTK HTML editor for the experienced web designer or programmer."
+DESCRIPTION="A GTK HTML editor for the experienced web designer or programmer"
 SRC_URI="http://www.bennewitz.com/bluefish/stable/source/${MY_P}.tar.bz2"
 HOMEPAGE="http://bluefish.openoffice.nl/"
 

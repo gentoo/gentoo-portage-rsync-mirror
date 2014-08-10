@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-popishu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-popishu/ChangeLog,v 1.12 2014/08/03 19:00:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-popishu/ChangeLog,v 1.13 2014/08/10 17:57:38 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> lc-popishu-0.6.60.ebuild,
+  lc-popishu-0.6.65.ebuild, lc-popishu-0.6.70.ebuild, lc-popishu-9999.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
 *lc-popishu-0.6.70 (03 Aug 2014)
 

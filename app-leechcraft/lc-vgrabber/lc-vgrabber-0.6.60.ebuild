@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-vgrabber/lc-vgrabber-0.6.60.ebuild,v 1.3 2014/04/03 08:57:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-vgrabber/lc-vgrabber-0.6.60.ebuild,v 1.4 2014/08/10 17:59:21 slyfox Exp $
 
 EAPI="4"
 
 inherit leechcraft
 
-DESCRIPTION="Allows to find, stream and save audio and video from VKontakte in LeechCraft."
+DESCRIPTION="Allows to find, stream and save audio and video from VKontakte in LeechCraft"
 
 SLOT="0"
 KEYWORDS="amd64 x86"

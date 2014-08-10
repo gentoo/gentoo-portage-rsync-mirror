@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm setup unpack
 DEPEND=>=virtual/emacs-23
-DESCRIPTION=A major mode for editing comma-separated value files.
+DESCRIPTION=A major mode for editing comma-separated value files
 HOMEPAGE=http://centaur.maths.qmw.ac.uk/Emacs/
 KEYWORDS=amd64 ~ppc sparc x86
 LICENSE=GPL-2
@@ -8,4 +8,4 @@ RDEPEND=>=virtual/emacs-23
 SLOT=0
 SRC_URI=mirror://gentoo/csv-mode-1.50.tar.gz
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=edfa86bb9cc33e14b0642141af37d0e9
+_md5_=5c316401a2386a78cd053f8e08741bfa

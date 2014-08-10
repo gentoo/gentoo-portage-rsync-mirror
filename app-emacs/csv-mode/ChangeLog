@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/csv-mode
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/csv-mode/ChangeLog,v 1.5 2008/12/01 19:16:59 tcunha Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csv-mode/ChangeLog,v 1.6 2014/08/10 17:43:57 slyfox Exp $
+
+  10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> csv-mode-1.50.ebuild:
+  QA: drop trailing '.' from DESCRIPTION
 
   01 Dec 2008; Tiago Cunha <tcunha@gentoo.org> csv-mode-1.50.ebuild:
   stable sparc
@@ -19,4 +22,3 @@
   19 May 2006; Matthew Kennedy <mkennedy@gentoo.org>
   +files/50csv-mode-gentoo.el, +metadata.xml, +csv-mode-1.50.ebuild:
   Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
-

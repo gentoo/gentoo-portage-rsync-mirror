@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ee/ee-1.4.6.ebuild,v 1.4 2012/09/29 16:48:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ee/ee-1.4.6.ebuild,v 1.5 2014/08/10 17:41:40 slyfox Exp $
 
 EAPI="4"
 
 inherit toolchain-funcs
 
-DESCRIPTION="An easy to use text editor. Intended to be usable with little or no instruction."
+DESCRIPTION="An easy to use text editor. Intended to be usable with little or no instruction"
 HOMEPAGE="http://mahon.cwx.net/"
 SRC_URI="http://mahon.cwx.net/sources/${P}.src.tgz"
 

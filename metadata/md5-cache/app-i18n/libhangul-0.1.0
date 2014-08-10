@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install
 DEPEND=nls? ( virtual/libintl ) virtual/pkgconfig nls? ( sys-devel/gettext ) test? ( dev-libs/check )
-DESCRIPTION=libhangul is a generalized and portable library for processing hangul.
+DESCRIPTION=libhangul is a generalized and portable library for processing hangul
 EAPI=4
 HOMEPAGE=http://code.google.com/p/libhangul/
 IUSE=nls static-libs test
@@ -9,4 +9,4 @@ LICENSE=LGPL-2.1
 RDEPEND=nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=http://libhangul.googlecode.com/files/libhangul-0.1.0.tar.gz
-_md5_=cc075ab084186e53d566e29b79aefd79
+_md5_=c39429823f6996dc76f4a6eef243e52f
