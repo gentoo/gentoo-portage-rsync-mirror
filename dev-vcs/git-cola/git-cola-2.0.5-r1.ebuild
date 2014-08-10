@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.0.5.ebuild,v 1.1 2014/07/27 08:26:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.0.5-r1.ebuild,v 1.1 2014/08/10 07:13:51 dev-zero Exp $
 
 EAPI=5
 
@@ -85,6 +85,9 @@ python_install_all() {
 		docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		prefix="${EPREFIX}/usr" \
 		install
+
+	python_fix_shebang "${D}/usr/share/git-cola/bin/git-xbase"
+	python_optimize "${D}/usr/share/git-cola/lib/cola"
 
 	if ! use doc ; then
 		HTML_DOCS=( "${FILESDIR}"/index.html )

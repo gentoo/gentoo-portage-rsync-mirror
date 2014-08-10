@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.30 2014/07/27 08:26:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.31 2014/08/10 07:13:51 dev-zero Exp $
+
+*git-cola-2.0.5-r1 (10 Aug 2014)
+
+  10 Aug 2014; Tiziano Müller <dev-zero@gentoo.org> +git-cola-2.0.5-r1.ebuild,
+  -git-cola-2.0.0.ebuild, -git-cola-2.0.1.ebuild, -git-cola-2.0.2.ebuild,
+  -git-cola-2.0.3.ebuild, -git-cola-2.0.5.ebuild:
+  Fix shebang of rebase-helper (bug #519514), optimize python modules in non-
+  standard location. Drop old.
 
 *git-cola-2.0.5 (27 Jul 2014)
 
