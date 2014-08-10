@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=gtk? ( x11-libs/gtk+:2 ) >=sys-apps/pcsc-lite-1.2.9 xpi? ( || ( >=www-client/firefox-bin-3.6.24 >=www-client/firefox-3.6.20 ) ) !app-misc/beid-runtime virtual/pkgconfig app-arch/unzip
-DESCRIPTION=Belgian Electronic Identity Card middleware supplied by the Belgian Federal Government.
+DESCRIPTION=Belgian Electronic Identity Card middleware supplied by the Belgian Federal Government
 EAPI=5
 HOMEPAGE=http://eid.belgium.be
 IUSE=+gtk +xpi
@@ -10,4 +10,4 @@ RDEPEND=gtk? ( x11-libs/gtk+:2 ) >=sys-apps/pcsc-lite-1.2.9 xpi? ( || ( >=www-cl
 SLOT=0
 SRC_URI=http://eid.belgium.be/en/binaries/eid-mw-4.0.6-1480.tar_tcm406-250016.gz -> eid-mw-4.0.6-1480.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=f2ddb931f1b739e1797aa13a6d6c875b
+_md5_=d32583153dd5a6fb08cb84e53c246c3e

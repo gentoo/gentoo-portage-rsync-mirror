@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pius
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pius/ChangeLog,v 1.4 2013/05/12 14:38:55 tomk Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pius/ChangeLog,v 1.5 2014/08/10 02:27:00 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> pius-2.0.10.ebuild,
+  pius-2.0.8.ebuild, pius-2.0.9.ebuild:
+  Fix description for more repoman happy
 
 *pius-2.0.10 (12 May 2013)
 

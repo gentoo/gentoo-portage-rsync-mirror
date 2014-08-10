@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.4-r1.ebuild,v 1.7 2012/10/25 18:28:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.4-r1.ebuild,v 1.8 2014/08/10 02:14:17 patrick Exp $
 
 EAPI=4
 GCONF_DEBUG=no
 inherit eutils gnome2
 
-DESCRIPTION="GnomeBaker is a GTK2/Gnome cd burning application."
+DESCRIPTION="GnomeBaker is a GTK2/Gnome cd burning application"
 HOMEPAGE="http://sourceforge.net/projects/gnomebaker"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

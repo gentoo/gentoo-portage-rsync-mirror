@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/eid-mw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/ChangeLog,v 1.9 2014/07/10 14:53:53 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/ChangeLog,v 1.10 2014/08/10 02:26:59 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> eid-mw-4.0.2_p1188.ebuild,
+  eid-mw-4.0.4_p1253.ebuild, eid-mw-4.0.6_p1480.ebuild, eid-mw-9999.ebuild:
+  Fix description for more repoman happy
 
 *eid-mw-9999 (10 Jul 2014)
 *eid-mw-4.0.6_p1480 (10 Jul 2014)

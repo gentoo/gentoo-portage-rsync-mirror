@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=>=sys-apps/pcsc-lite-1.6.4 virtual/libusb:0 virtual/pkgconfig virtual/pkgconfig
-DESCRIPTION=Non CCID driver for ACR38 AC1038-based Smart Card Reader.
+DESCRIPTION=Non CCID driver for ACR38 AC1038-based Smart Card Reader
 EAPI=5
 HOMEPAGE=http://www.acs.com.hk
 KEYWORDS=~amd64 ~x86
@@ -9,4 +9,4 @@ RDEPEND=>=sys-apps/pcsc-lite-1.6.4 virtual/libusb:0
 SLOT=0
 SRC_URI=http://www.linuxunderground.be/ACR38_LINUX_100711_P.tar.bz2
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	autotools-utils	3727db64c7b960903d5033280f108080	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	da001465a2e939c93f7ae16947ce3438	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=94ae2a2b89934fe30ea359c1c2dce25f
+_md5_=5b61f1dca98cb73e6fc460d5591a1432

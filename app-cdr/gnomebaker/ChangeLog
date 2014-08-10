@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gnomebaker
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.65 2012/10/25 18:28:40 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.66 2014/08/10 02:14:17 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> gnomebaker-0.6.4-r1.ebuild:
+  Fix description for more repoman happy
 
   25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> -gnomebaker-0.6.4.ebuild,
   gnomebaker-0.6.4-r1.ebuild:
@@ -279,4 +282,3 @@
   +gnomebaker-0.3.ebuild:
   New ebuild. Tested on x86, ppc and sparc. Thanks to the contributors in bug
   #59613.
-

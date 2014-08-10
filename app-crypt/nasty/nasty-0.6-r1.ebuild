@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nasty/nasty-0.6-r1.ebuild,v 1.5 2009/07/15 22:53:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nasty/nasty-0.6-r1.ebuild,v 1.6 2014/08/10 02:27:01 patrick Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Proof-of-concept GPG passphrase recovery tool."
+DESCRIPTION="Proof-of-concept GPG passphrase recovery tool"
 HOMEPAGE="http://www.vanheusden.com/nasty/"
 SRC_URI="http://www.vanheusden.com/nasty/${P}.tgz"
 LICENSE="GPL-2"

@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/cuecue-0.2.2-r1.ebuild,v 1.6 2011/10/20 13:37:50 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/cuecue-0.2.2-r1.ebuild,v 1.7 2014/08/10 02:14:18 patrick Exp $
 
 EAPI=4
 
 inherit base eutils flag-o-matic
 
-DESCRIPTION="Cuecue is a suite to convert .cue + [.ogg|.flac|.wav|.mp3] to .cue + .bin."
+DESCRIPTION="Cuecue is a suite to convert .cue + [.ogg|.flac|.wav|.mp3] to .cue + .bin"
 HOMEPAGE="http://cuecue.berlios.de/"
 SRC_URI="mirror://berlios/cuecue/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=sys-devel/gettext
-DESCRIPTION=Rotix allows you to generate rotational obfuscations.
+DESCRIPTION=Rotix allows you to generate rotational obfuscations
 EAPI=5
 HOMEPAGE=http://gentoo.org
 KEYWORDS=amd64 ia64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris
@@ -9,4 +9,4 @@ RDEPEND=sys-devel/gettext
 SLOT=0
 SRC_URI=http://elektron.its.tudelft.nl/~hemmin98/rotix_releases/rotix-0.83/rotix-0.83.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c5a2c0d6b52de99ce8dfdc853f6bba8e
+_md5_=b9788216e7760398444ae37a9c193f25

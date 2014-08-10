@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mdcrack/mdcrack-1.2.ebuild,v 1.5 2010/12/23 12:40:05 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mdcrack/mdcrack-1.2.ebuild,v 1.6 2014/08/10 02:27:00 patrick Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="A MD4/MD5/NTML hashes bruteforcer."
+DESCRIPTION="A MD4/MD5/NTML hashes bruteforcer"
 HOMEPAGE="http://mdcrack.df.ru/"
 SRC_URI="http://mdcrack.df.ru/download/${P}.tar.gz"
 

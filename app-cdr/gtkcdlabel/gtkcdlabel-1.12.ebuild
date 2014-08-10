@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.12.ebuild,v 1.7 2011/03/30 23:07:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.12.ebuild,v 1.8 2014/08/10 02:14:16 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
 inherit python
 
-DESCRIPTION="a GUI frontend to cdlabelgen which is a program that can generate a variety of CD tray covers."
+DESCRIPTION="a GUI frontend to cdlabelgen which is a program that can generate a variety of CD tray covers"
 HOMEPAGE="http://gtkcdlabel.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 

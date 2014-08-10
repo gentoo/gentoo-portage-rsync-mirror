@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvd95
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/ChangeLog,v 1.11 2012/12/02 16:19:53 sping Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/ChangeLog,v 1.12 2014/08/10 02:14:18 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> dvd95-1.5_p3.ebuild,
+  dvd95-1.6_p0.ebuild:
+  Fix description for more repoman happy
 
   02 Dec 2012; Sebastian Pipping <sping@gentoo.org> dvd95-1.6_p0.ebuild,
   +files/dvd95-1.6_p0-link-libxml2.patch:
@@ -58,4 +62,3 @@
   03 Dec 2006; Lars Weiler <pylon@gentoo.org> +metadata.xml,
   +dvd95-1.1_p1.ebuild:
   New ebuild from Bug #141704.
-

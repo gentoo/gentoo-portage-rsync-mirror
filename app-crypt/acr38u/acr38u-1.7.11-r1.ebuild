@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.11-r1.ebuild,v 1.3 2012/12/11 14:50:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.11-r1.ebuild,v 1.4 2014/08/10 02:27:00 patrick Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ MY_P=ACR38_LINUX_$(get_version_component_range 1)00$(get_version_component_range
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~x86"
-DESCRIPTION="Non CCID driver for ACR38 AC1038-based Smart Card Reader."
+DESCRIPTION="Non CCID driver for ACR38 AC1038-based Smart Card Reader"
 
 #SRC_URI="http://www.acs.com.hk/drivers/eng/${MY_P}.tar.bz2"
 # tarball release is encapsuled in a .zip file :-(

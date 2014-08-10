@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.5.6.ebuild,v 1.6 2008/09/03 21:23:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.5.6.ebuild,v 1.7 2014/08/10 02:14:17 patrick Exp $
 
-DESCRIPTION="Creates CD-Covers via LaTeX by fetching cd-info from freedb.org or local file."
+DESCRIPTION="Creates CD-Covers via LaTeX by fetching cd-info from freedb.org or local file"
 HOMEPAGE="http://www.vanhemert.co.uk/disc-cover.html"
 SRC_URI="http://www.vanhemert.co.uk/files/${P}.tar.gz"
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/rotix-0.83.ebuild,v 1.18 2014/01/21 05:01:50 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/rotix-0.83.ebuild,v 1.19 2014/08/10 02:27:00 patrick Exp $
 
 EAPI=5
 inherit eutils flag-o-matic
 
-DESCRIPTION="Rotix allows you to generate rotational obfuscations."
+DESCRIPTION="Rotix allows you to generate rotational obfuscations"
 HOMEPAGE="http://gentoo.org"
 SRC_URI="http://elektron.its.tudelft.nl/~hemmin98/rotix_releases/${P}/${P}.tar.bz2"
 

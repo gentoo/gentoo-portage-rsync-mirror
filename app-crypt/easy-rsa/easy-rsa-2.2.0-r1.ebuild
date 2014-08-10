@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/easy-rsa-2.2.0-r1.ebuild,v 1.8 2014/04/13 10:28:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/easy-rsa-2.2.0-r1.ebuild,v 1.9 2014/08/10 02:26:59 patrick Exp $
 
 EAPI=4
 
 inherit eutils
 
-DESCRIPTION="Small RSA key management package, based on OpenSSL."
+DESCRIPTION="Small RSA key management package, based on OpenSSL"
 HOMEPAGE="http://openvpn.net/"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~s390 ~sh ~sparc x86"
 SRC_URI="http://swupdate.openvpn.net/community/releases/${P}_master.tar.gz"

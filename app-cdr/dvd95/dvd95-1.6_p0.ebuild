@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.6_p0.ebuild,v 1.3 2012/12/02 16:19:53 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.6_p0.ebuild,v 1.4 2014/08/10 02:14:17 patrick Exp $
 
 EAPI=2
 inherit eutils autotools
 
-DESCRIPTION="DVD95 is a Gnome application to convert DVD9 to DVD5."
+DESCRIPTION="DVD95 is a Gnome application to convert DVD9 to DVD5"
 HOMEPAGE="http://dvd95.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dvd95/${P/_}.tar.gz"
 

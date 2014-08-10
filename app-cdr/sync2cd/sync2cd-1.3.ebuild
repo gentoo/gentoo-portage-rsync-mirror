@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/sync2cd/sync2cd-1.3.ebuild,v 1.6 2011/04/06 17:37:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/sync2cd/sync2cd-1.3.ebuild,v 1.7 2014/08/10 02:14:17 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit distutils
 
-DESCRIPTION="An incremental archiving tool to CD/DVD."
+DESCRIPTION="An incremental archiving tool to CD/DVD"
 HOMEPAGE="http://www.calins.ch/software/sync2cd.html"
 SRC_URI="http://www.calins.ch/download/${PN}/${P}.tar.gz"
 

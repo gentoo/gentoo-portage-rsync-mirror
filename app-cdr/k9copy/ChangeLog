@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.76 2014/04/04 07:47:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.77 2014/08/10 02:14:17 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> k9copy-2.3.8-r1.ebuild,
+  k9copy-2.3.8.ebuild:
+  Fix description for more repoman happy
 
   04 Apr 2014; Johannes Huber <johu@gentoo.org>
   +files/k9copy-2.3.8-ffmpeg-2.1.patch, k9copy-2.3.8-r1.ebuild:

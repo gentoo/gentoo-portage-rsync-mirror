@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/eid-mw-4.0.6_p1480.ebuild,v 1.1 2014/07/10 14:53:53 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/eid-mw-4.0.6_p1480.ebuild,v 1.2 2014/08/10 02:26:59 patrick Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ fi
 
 SLOT="0"
 LICENSE="LGPL-3"
-DESCRIPTION="Belgian Electronic Identity Card middleware supplied by the Belgian Federal Government."
+DESCRIPTION="Belgian Electronic Identity Card middleware supplied by the Belgian Federal Government"
 
 HOMEPAGE="http://eid.belgium.be"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/stan
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/ChangeLog,v 1.9 2013/06/04 05:38:07 alonbl Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/ChangeLog,v 1.10 2014/08/10 02:27:00 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> stan-0.4.1.ebuild:
+  Fix description for more repoman happy
 
   04 Jun 2013; Alon Bar-Lev <alonbl@gentoo.org> stan-0.4.1.ebuild:
   Fix automake-1.13 compatibility, bug#467556

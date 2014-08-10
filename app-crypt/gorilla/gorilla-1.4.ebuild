@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gorilla/gorilla-1.4.ebuild,v 1.4 2011/02/13 19:00:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gorilla/gorilla-1.4.ebuild,v 1.5 2014/08/10 02:27:01 patrick Exp $
 
 inherit eutils
 
 DESCRIPTION="Password Safe clone for Linux. Stores passwords in secure way with
-GUI interface."
+GUI interface"
 HOMEPAGE="http://www.fpx.de/fp/Software/Gorilla/"
 SRC_URI="http://www.fpx.de/fp/Software/Gorilla/download/${P}.tar.gz"
 

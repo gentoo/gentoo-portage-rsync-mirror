@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.19.4.ebuild,v 1.2 2013/09/01 18:54:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.19.4.ebuild,v 1.3 2014/08/10 02:26:59 patrick Exp $
 
 EAPI=5
 
 inherit eutils
 
-DESCRIPTION="Provides a standard configuration setup for installing PKCS#11."
+DESCRIPTION="Provides a standard configuration setup for installing PKCS#11"
 HOMEPAGE="http://p11-glue.freedesktop.org/p11-kit.html"
 SRC_URI="http://p11-glue.freedesktop.org/releases/${P}.tar.gz"
 

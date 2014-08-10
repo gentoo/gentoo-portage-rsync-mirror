@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/nasty
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nasty/ChangeLog,v 1.6 2009/07/15 22:53:38 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nasty/ChangeLog,v 1.7 2014/08/10 02:27:01 patrick Exp $
+
+  10 Aug 2014; Patrick Lauer <patrick@gentoo.org> nasty-0.6-r1.ebuild:
+  Fix description for more repoman happy
 
   15 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   nasty-0.6-r1.ebuild, +files/nasty-0.6-flags.patch:
@@ -28,4 +31,3 @@
   19 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +nasty-0.6.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

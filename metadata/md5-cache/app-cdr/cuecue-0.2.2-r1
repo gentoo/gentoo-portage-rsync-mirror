@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare unpack
 DEPEND=mp3? ( media-libs/libmad ) flac? ( media-libs/flac ) vorbis? ( media-libs/libvorbis media-libs/libogg )
-DESCRIPTION=Cuecue is a suite to convert .cue + [.ogg|.flac|.wav|.mp3] to .cue + .bin.
+DESCRIPTION=Cuecue is a suite to convert .cue + [.ogg|.flac|.wav|.mp3] to .cue + .bin
 EAPI=4
 HOMEPAGE=http://cuecue.berlios.de/
 IUSE=flac mp3 +vorbis
@@ -10,4 +10,4 @@ REQUIRED_USE=|| ( flac mp3 vorbis )
 SLOT=0
 SRC_URI=mirror://berlios/cuecue/cuecue-0.2.2.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=12772a84f9d7400d7387112a93798a00
+_md5_=5f1dc6cb3cecca78c7eb63bd3a19be1c
