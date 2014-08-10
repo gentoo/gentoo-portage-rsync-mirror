@@ -8,4 +8,7 @@
 		virtualization components that enhance performance and user experience
 		of virtual machines.
 	</longdescription>
+	<use>
+		<flag name="vmhgfs">Build the vmhgfs module for file sharing support with the host</flag>
+	</use>
 </pkgmetadata>

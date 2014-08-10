@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-2013.09.16.1328054.ebuild,v 1.5 2013/10/22 22:21:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-2013.09.16.1328054.ebuild,v 1.6 2014/08/10 16:18:12 floppym Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="vmhgfs"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -26,7 +26,9 @@ pkg_setup() {
 		!UIDGID_STRICT_TYPE_CHECKS"
 
 	# See logic in configure.ac.
-	local MODULES="vmxnet vmhgfs"
+	local MODULES="vmxnet"
+
+	use vmhgfs && MODULES+=" vmhgfs"
 
 	if kernel_is -lt 3 9; then
 		MODULES+=" vmci vsock"

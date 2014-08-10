@@ -549,6 +549,7 @@ app-emulation/lxc:vanilla - Avoid adding Gentoo Linux-specific modifications, wh
 app-emulation/open-vm-tools:doc - Generate API documentation
 app-emulation/open-vm-tools:fuse - Build vmblock-fuse in favor of FUSE based blocking mechanism for DnD
 app-emulation/open-vm-tools:pic - Force shared libraries to be built as PIC
+app-emulation/open-vm-tools-kmod:vmhgfs - Build the vmhgfs module for file sharing support with the host
 app-emulation/playonlinux:winbind - Enables support for the winbind auth daemon
 app-emulation/q4wine:gnome - Use the gksu sudo GUI for managing the devices
 app-emulation/q4wine:icoutils - Enable icoutils support
