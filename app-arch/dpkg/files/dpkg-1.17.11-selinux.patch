@@ -1,0 +1,46 @@
+ - AM_CONDITIONAL should not be run conditionally.
+ - When you have established you cannot build it, you cannot test it either.
+ - Why does it try to build libselinux compatibility _using_ the libselinux headers and library?
+
+--- a/m4/dpkg-libs.m4
++++ b/m4/dpkg-libs.m4
+@@ -92,15 +92,16 @@
+ 		[AC_DEFINE([HAVE_SETEXECFILECON], [1],
+ 		           [Define to 1 if SELinux setexecfilecon is present])
+ 	])
+-	AM_CONDITIONAL(HAVE_SETEXECFILECON,
+-	               [test "x$ac_cv_lib_selinux_setexecfilecon" = "xyes"])
+-
+ 	AC_CHECK_HEADER([selinux/selinux.h],,
+ 		[if test -n "$with_selinux"; then
+ 			AC_MSG_FAILURE([selinux header not found])
+ 		 fi])
+ fi
+-])# DPKG_LIB_SELINUX
++AM_CONDITIONAL(HAVE_SETEXECFILECON,
++    [test "x$ac_cv_lib_selinux_setexecfilecon" = "xyes"])
++])
++
++# DPKG_LIB_SELINUX
+ 
+ # _DPKG_CHECK_LIB_CURSES_NARROW
+ # -----------------------------
+--- a/lib/compat/Makefile.am
++++ b/lib/compat/Makefile.am
+@@ -10,7 +10,6 @@
+ libcompat_test_la_CPPFLAGS = $(AM_CPPFLAGS) -DTEST_LIBCOMPAT=1
+ libcompat_test_la_SOURCES = \
+ 	compat.h \
+-	selinux.c \
+ 	strnlen.c \
+ 	strndup.c \
+ 	strerror.c \
+@@ -57,7 +56,7 @@
+ libcompat_la_SOURCES += strsignal.c
+ endif
+ 
+-if !HAVE_SETEXECFILECON
++if HAVE_SETEXECFILECON
+ libcompat_la_SOURCES += selinux.c
+ endif
+ 
