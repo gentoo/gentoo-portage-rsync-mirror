@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/systemc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/ChangeLog,v 1.16 2013/09/15 14:40:07 tomjbe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/ChangeLog,v 1.17 2014/08/10 17:07:58 tomjbe Exp $
+
+*systemc-2.3.1 (10 Aug 2014)
+
+  10 Aug 2014; Thomas Beierlein <tomjbe@gentoo.org> +systemc-2.3.1.ebuild:
+  Version bump (bug #508568). Thanks Jeremiah
 
 *systemc-2.3.0 (15 Sep 2013)
 

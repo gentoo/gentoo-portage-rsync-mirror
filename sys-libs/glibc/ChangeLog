@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1005 2014/08/10 03:35:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1006 2014/08/10 17:29:37 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> glibc-2.19-r1.ebuild:
+  Stable for x86, wrt bug #518364
 
   10 Aug 2014; Mike Frysinger <vapier@gentoo.org>
   files/eblits/pkg_preinst.eblit:
