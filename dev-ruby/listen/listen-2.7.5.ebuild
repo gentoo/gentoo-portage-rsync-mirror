@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-2.7.5.ebuild,v 1.1 2014/08/10 23:21:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-2.7.5.ebuild,v 1.2 2014/08/11 00:04:09 mrueg Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ DESCRIPTION="Listens to file modifications and notifies you about the changes"
 HOMEPAGE="https://github.com/guard/listen"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="2"
 KEYWORDS="~amd64"
 IUSE=""
 
