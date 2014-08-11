@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpi4py/mpi4py-1.3.1.ebuild,v 1.3 2014/08/11 07:06:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpi4py/mpi4py-1.3.1.ebuild,v 1.4 2014/08/11 16:14:09 ottxor Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	virtual/mpi[romio] )"
 DISTUTILS_IN_SOURCE_BUILD=1
 
-PATCHES=( "${FILESDIR}"/${P}-py3-test-backport-1.patch )
+PATCHES=( "${FILESDIR}"/${P}-py3-test-backport-1.patch "${FILESDIR}"/${P}-ldshared.patch )
 
 python_prepare_all() {
 	# not needed on install
