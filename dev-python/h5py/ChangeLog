@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/h5py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.30 2014/07/23 16:04:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.31 2014/08/11 07:07:13 jlec Exp $
+
+  11 Aug 2014; Justin Lecher <jlec@gentoo.org> h5py-2.3.1.ebuild:
+  Add python3.4 support
 
   23 Jul 2014; Kacper Kowalik <xarthisius@gentoo.org> h5py-2.3.1.ebuild:
   Introduce subslot and strict mpi= dependency for hdf5, see #302621

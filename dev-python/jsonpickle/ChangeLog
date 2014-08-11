@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/jsonpickle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.21 2014/05/12 09:18:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.22 2014/08/11 07:14:25 idella4 Exp $
+
+*jsonpickle-0.7.2 (11 Aug 2014)
+
+  11 Aug 2014; Ian Delaney <idella4@gentoo.org> +jsonpickle-0.7.2.ebuild:
+  bump; add IUSE doc, drop arm keyword to enable addition of doc deps, add doc
+  build/install, update test phase
 
 *jsonpickle-0.7.1 (12 May 2014)
 

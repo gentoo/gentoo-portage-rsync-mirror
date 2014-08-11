@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.3.2.ebuild,v 1.2 2014/08/11 07:14:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.4.ebuild,v 1.1 2014/08/11 07:14:45 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
 inherit distutils-r1
 
@@ -25,6 +25,7 @@ RDEPEND="
 	>=sci-libs/cfitsio-3.350:0=
 	sys-libs/zlib:0="
 DEPEND="${RDEPEND}
+	dev-python/astropy-helpers[${PYTHON_USEDEP}]
 	dev-python/cython[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	virtual/pkgconfig
@@ -34,7 +35,7 @@ DEPEND="${RDEPEND}
 		media-gfx/graphviz
 	)
 	test? (
-		dev-libs/libxml2
+		dev-libs/libxml2[${PYTHON_USEDEP}]
 		dev-python/h5py[${PYTHON_USEDEP}]
 		dev-python/matplotlib[${PYTHON_USEDEP}]
 		dev-python/pytest[${PYTHON_USEDEP}]
@@ -42,7 +43,7 @@ DEPEND="${RDEPEND}
 	)"
 
 python_compile() {
-	distutils-r1_python_compile --use-system-libraries
+	distutils-r1_python_compile --use-system-libraries --offline
 }
 
 python_compile_all() {
@@ -56,7 +57,11 @@ python_compile_all() {
 }
 
 python_test() {
-	esetup.py test
+	esetup.py --offline test
+}
+
+python_install() {
+	distutils-r1_python_install --offline
 }
 
 python_install_all() {

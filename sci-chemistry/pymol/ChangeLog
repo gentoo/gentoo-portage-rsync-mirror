@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.114 2014/07/10 09:29:47 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.115 2014/08/11 07:27:00 jlec Exp $
+
+*pymol-1.7.2.0 (11 Aug 2014)
+
+  11 Aug 2014; Justin Lecher <jlec@gentoo.org> +pymol-1.7.2.0.ebuild:
+  Version Bump
 
   10 Jul 2014; Chema Alonso <nimiux@gentoo.org> pymol-1.7.0.1.ebuild:
   Stable for amd64 wrt bug #507142
