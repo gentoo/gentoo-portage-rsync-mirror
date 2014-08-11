@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/baloo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/ChangeLog,v 1.16 2014/07/23 16:53:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/ChangeLog,v 1.17 2014/08/11 22:53:20 johu Exp $
+
+  11 Aug 2014; Johannes Huber <johu@gentoo.org> -files/baloo-4.13.0-nokcm.patch,
+  baloo-4.13.3.ebuild, metadata.xml:
+  Drop alternate kcm hack, we are going stable without it. Decided in last herd
+  meeting.
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org> -baloo-4.13.2.ebuild:
   Remove KDE SC 4.13.2
