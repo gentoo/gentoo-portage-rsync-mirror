@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/microcode-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.30 2014/06/28 14:13:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.31 2014/08/11 11:46:42 nimiux Exp $
+
+  11 Aug 2014; Chema Alonso <nimiux@gentoo.org> microcode-data-20140430.ebuild:
+  Stable for amd64 wrt bug #515604
 
 *microcode-data-20140624 (28 Jun 2014)
 

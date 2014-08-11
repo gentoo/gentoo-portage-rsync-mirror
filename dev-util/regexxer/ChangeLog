@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/regexxer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.27 2014/07/27 11:16:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.28 2014/08/11 11:44:02 nimiux Exp $
+
+  11 Aug 2014; Chema Alonso <nimiux@gentoo.org> regexxer-0.10.ebuild:
+  Stable for amd64 wrt bug #516368
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> regexxer-0.10.ebuild:
   x86 stable wrt bug #516368
