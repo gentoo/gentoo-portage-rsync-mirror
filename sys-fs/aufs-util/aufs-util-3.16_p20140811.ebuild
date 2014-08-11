@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.16_p20140811.ebuild,v 1.2 2014/08/10 21:30:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.16_p20140811.ebuild,v 1.3 2014/08/11 08:04:59 jlec Exp $
 
 EAPI=5
 
@@ -37,6 +37,8 @@ src_prepare() {
 
 	sed \
 		-e '/LDFLAGS/s: -s::g' \
+		-e '/LDLIBS/s:-lrt::g' \
+		-e '/LDLIBS/s:$: -lrt:g' \
 		-i fhsm/Makefile || die
 
 	tc-export CC AR

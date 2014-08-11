@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs-util
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.35 2014/08/10 21:30:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.36 2014/08/11 08:04:59 jlec Exp $
+
+  11 Aug 2014; Justin Lecher <jlec@gentoo.org> aufs-util-3.16_p20140811.ebuild:
+  As-needed fix
 
   10 Aug 2014; Justin Lecher <jlec@gentoo.org> aufs-util-3.16_p20140811.ebuild:
   Bump to latest aufs3
