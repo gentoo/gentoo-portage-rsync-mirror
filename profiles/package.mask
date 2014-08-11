@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15962 2014/08/11 10:20:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15963 2014/08/11 21:40:57 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -237,14 +237,6 @@ app-emacs/sawfish
 # Requires >=libav-10, which is masked, or >=ffmpeg-2.1.4
 # If you use ffmpeg instead of libav, sorry!
 =media-video/mpv-0.4*
-
-# Michał Górny <mgorny@gentoo.org> (6 Jul 2014)
-# (on behalf of python@gentoo.org)
-# The modules provided by those virtuals are built-in in all currently
-# supported Python implementations. If your ebuild depends on either
-# of them, please just remove the dependency. Removal in 30 days.
-virtual/python-argparse
-virtual/python-unittest2
 
 # Hans de Graaff <graaff@gentoo.org> (6 Jul 2014)
 # Mask old slot for removal in 30 days since there are no longer

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9296 2014/08/11 10:20:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9297 2014/08/11 21:40:57 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Aug 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Tree-clean virtual/python-{argparse,unittest2}.
 
   11 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> package.mask:
   Unmask dev-lang/ghc-7.8.

@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/espresso
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.16 2013/12/11 12:44:33 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.17 2014/08/11 21:33:08 ottxor Exp $
+
+*espresso-3.3.0 (11 Aug 2014)
+
+  11 Aug 2014; Christoph Junghans <ottxor@gentoo.org> +espresso-3.3.0.ebuild,
+  espresso-3.2.0.ebuild, metadata.xml:
+  version bump
 
   11 Dec 2013; Justin Lecher <jlec@gentoo.org> espresso-3.2.0.ebuild:
   Drop unnecessay dep
