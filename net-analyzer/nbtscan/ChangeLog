@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nbtscan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.35 2014/08/02 11:42:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.36 2014/08/11 12:04:05 nimiux Exp $
+
+  11 Aug 2014; Chema Alonso <nimiux@gentoo.org> nbtscan-1.5.1-r3.ebuild:
+  Stable for amd64 wrt bug #517092
 
   02 Aug 2014; Raúl Porcel <armin76@gentoo.org> nbtscan-1.5.1-r1.ebuild,
   nbtscan-1.5.1-r3.ebuild:
