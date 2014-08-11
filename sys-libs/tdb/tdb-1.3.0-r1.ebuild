@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.3.0-r1.ebuild,v 1.6 2014/08/07 19:30:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.3.0-r1.ebuild,v 1.7 2014/08/11 03:36:14 patrick Exp $
 
 EAPI=5
 
@@ -39,6 +39,12 @@ multilib_src_configure() {
 
 	waf-utils_src_configure \
 		"${extra_opts[@]}"
+}
+
+multilib_src_compile() {
+	# need to avoid parallel building, this looks like the sanest way with waf-utils/multiprocessing eclasses
+	unset MAKEOPTS
+	waf-utils_src_compile
 }
 
 multilib_src_test() {
