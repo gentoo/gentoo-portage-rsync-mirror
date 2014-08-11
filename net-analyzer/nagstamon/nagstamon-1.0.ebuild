@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.12_p20140402.ebuild,v 1.2 2014/04/03 21:32:53 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-1.0.ebuild,v 1.1 2014/08/11 20:37:34 idl0r Exp $
 
 EAPI="5"
 
@@ -9,11 +9,11 @@ PYTHON_COMPAT=( python2_6 python2_7 )
 inherit eutils python-r1
 
 MY_PN="Nagstamon"
-#MY_P="${MY_PN}-${PV/_/}-20130729"
+MY_P="${MY_PN}-${PV/_}"
 
 DESCRIPTION="Nagstamon is a Nagios status monitor for a systray and displays a realtime status of a Nagios box"
 HOMEPAGE="http://nagstamon.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -36,7 +36,6 @@ src_prepare() {
 	epatch "${FILESDIR}/nagstamon-0.9.11_rc1-resources.patch"
 
 	rm Nagstamon/resources/LICENSE
-	rm Nagstamon/BeautifulSoup.py
 }
 
 src_install() {
@@ -52,7 +51,7 @@ src_install() {
 		insinto $(python_get_sitedir)/${MY_PN}
 		doins {GUI,Config,Objects,Custom,Actions}.py
 		touch "${D}/$(python_get_sitedir)/${MY_PN}/__init__.py" || die
-		doins -r Server/
+		doins -r Server/ thirdparty/
 
 		insinto /usr/share/${PN}/resources
 		doins resources/*
