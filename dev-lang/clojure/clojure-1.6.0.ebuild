@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/clojure-1.6.0.ebuild,v 1.2 2014/07/27 10:36:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/clojure-1.6.0.ebuild,v 1.3 2014/08/11 15:04:28 nimiux Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="source test"
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/clojure/clojure/tarball/${P} -> ${P}.tar.gz"
 
 LICENSE="EPL-1.0 Apache-2.0 BSD"
 SLOT="1.6"
-KEYWORDS="~amd64 x86 ~x86-linux"
+KEYWORDS="amd64 x86 ~x86-linux"
 IUSE=""
 RESTRICT="test" # patches welcome to fix the test
 

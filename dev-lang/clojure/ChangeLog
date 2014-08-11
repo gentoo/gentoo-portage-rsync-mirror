@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/clojure
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.17 2014/07/27 10:36:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.18 2014/08/11 15:04:28 nimiux Exp $
+
+  11 Aug 2014; Chema Alonso <nimiux@gentoo.org> clojure-1.6.0.ebuild:
+  Stable for amd64 wrt bug #517216
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> clojure-1.6.0.ebuild:
   x86 stable wrt bug #517216
