@@ -1,56 +1,57 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-6.2.1_beta.ebuild,v 1.3 2014/06/18 20:43:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-6.6.0.ebuild,v 1.1 2014/08/11 20:18:31 idl0r Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils
 
 DESCRIPTION="CadSoft EAGLE schematic and printed circuit board (PCB) layout editor"
 HOMEPAGE="http://www.cadsoft.de"
-SRC_URI="ftp://ftp.cadsoft.de/${PN}/betatest/${PN}-lin-${PV/_beta/-beta}.run"
+SRC_URI="ftp://ftp.cadsoft.de/${PN}/program/${PV%\.[0-9]}/${PN}-lin-${PV}.run"
 
 LICENSE="cadsoft"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 -*"
 IUSE="doc linguas_de linguas_zh"
 
-RESTRICT="strip"
-
-QA_PREBUILT="opt/eagle-${PV}/bin/eagle"
+QA_PREBUILT="opt/eagle/bin/eagle"
 
 RDEPEND="sys-libs/glibc
 	x86? (
 		sys-libs/zlib
+		dev-libs/openssl
+		x11-libs/libXi
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXrender
 		x11-libs/libXrandr
 		x11-libs/libXcursor
-		x11-libs/libXi
 		media-libs/freetype
 		media-libs/fontconfig
-		dev-libs/openssl
-		virtual/jpeg
 	)
 	amd64? (
-		app-emulation/emul-linux-x86-baselibs
 		|| (
 			(
-				>=x11-libs/libX11-1.6.2[abi_x86_32]
-				>=x11-libs/libXext-1.3.2[abi_x86_32]
-				>=x11-libs/libXrender-0.9.8[abi_x86_32]
-				>=x11-libs/libXrandr-1.4.2[abi_x86_32]
-				>=x11-libs/libXcursor-1.1.14[abi_x86_32]
-				>=x11-libs/libXi-1.7.2[abi_x86_32]
-				>=media-libs/freetype-2.5.0.1[abi_x86_32]
-				>=media-libs/fontconfig-2.10.92[abi_x86_32]
+				>=dev-libs/openssl-1.0.1h-r2[abi_x86_32(-)]
+				>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
 			)
-			app-emulation/emul-linux-x86-xlibs
+			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+		)
+		|| (
+			(
+				>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+				>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+				>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
+				>=x11-libs/libXrandr-1.4.2[abi_x86_32(-)]
+				>=x11-libs/libXcursor-1.1.14[abi_x86_32(-)]
+				>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
+				>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
+				>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
+			)
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
 		)
 	)"
-
-S=${WORKDIR}/${P/_beta/}
 
 # Append ${PV} since that's what upstream installs to
 case "${LINGUAS}" in
@@ -66,7 +67,7 @@ src_unpack() {
 }
 
 src_install() {
-	local installdir="/opt/eagle-${PV}"
+	local installdir="/opt/eagle"
 
 	# Set MY_LANG for this function only since UPDATE_zh and README_zh
 	# don't exist
@@ -89,9 +90,10 @@ src_install() {
 	cd doc
 	dodoc README_${MY_LANG} UPDATE_${MY_LANG} library_${MY_LANG}.txt
 	doman eagle.1
+
 	# Install extra documentation if requested
 	if use doc; then
-		dodoc {connect-device-split-symbol-${MY_INST_LANG},elektro-tutorial,manual_${MY_INST_LANG},tutorial_${MY_INST_LANG}}.pdf
+		dodoc {connect-device-split-symbol-${MY_INST_LANG},elektro-tutorial,manual_${MY_INST_LANG},tutorial_${MY_INST_LANG},layer-setup_designrules}.pdf
 	fi
 	# Remove docs left in $installdir
 	rm -rf "${D}${installdir}/doc"
@@ -102,7 +104,7 @@ src_install() {
 
 	# Create desktop entry
 	newicon bin/${PN}icon50.png ${PF}-icon50.png
-	make_desktop_entry "${ROOT}/usr/bin/eagle-${PV}" "CadSoft EAGLE Layout Editor" ${PF}-icon50 "Graphics;Electronics"
+	make_desktop_entry "${ROOT}/opt/bin/eagle" "CadSoft EAGLE Layout Editor" ${PF}-icon50 "Graphics;Electronics"
 }
 
 pkg_postinst() {

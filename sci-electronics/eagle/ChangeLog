@@ -1,6 +1,15 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.60 2014/06/18 20:43:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.61 2014/08/11 20:18:31 idl0r Exp $
+
+*eagle-7.1.0 (11 Aug 2014)
+*eagle-6.6.0 (11 Aug 2014)
+*eagle-5.12.0 (11 Aug 2014)
+
+  11 Aug 2014; Christian Ruppert <idl0r@gentoo.org> -eagle-5.10.0-r1.ebuild,
+  +eagle-5.12.0.ebuild, -eagle-6.2.0.ebuild, -eagle-6.2.1_beta.ebuild,
+  -eagle-6.5.0.ebuild, +eagle-6.6.0.ebuild, +eagle-7.1.0.ebuild:
+  Version bumps - bug 516668. Cleanup.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> eagle-6.2.0.ebuild,
   eagle-6.2.1_beta.ebuild, eagle-6.5.0.ebuild:

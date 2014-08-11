@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-6.5.0.ebuild,v 1.3 2014/06/18 20:43:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.12.0.ebuild,v 1.1 2014/08/11 20:18:31 idl0r Exp $
 
 EAPI="5"
 
@@ -8,21 +8,19 @@ inherit eutils
 
 DESCRIPTION="CadSoft EAGLE schematic and printed circuit board (PCB) layout editor"
 HOMEPAGE="http://www.cadsoft.de"
-SRC_URI="ftp://ftp.cadsoft.de/${PN}/program/${PV%\.[0-9]}/${PN}-lin-${PV}.run"
 
+KEYWORDS="~amd64 ~x86"
+IUSE="doc linguas_de linguas_zh"
 LICENSE="cadsoft"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 -*"
-IUSE="doc linguas_de linguas_zh"
 
-RESTRICT="strip"
+SRC_URI="ftp://ftp.cadsoft.de/eagle/program/${PV%\.[0-9]}/${PN}-lin-${PV}.run"
 
-QA_PREBUILT="opt/eagle/bin/eagle"
+QA_PREBUILT="opt/${P}/bin/eagle"
 
 RDEPEND="sys-libs/glibc
 	x86? (
 		sys-libs/zlib
-		dev-libs/openssl
 		x11-libs/libXi
 		x11-libs/libX11
 		x11-libs/libXext
@@ -31,12 +29,15 @@ RDEPEND="sys-libs/glibc
 		x11-libs/libXcursor
 		media-libs/freetype
 		media-libs/fontconfig
+		|| ( virtual/jpeg:62  media-libs/jpeg:62 )
+		media-libs/libpng:1.2
 	)
 	amd64? (
 		|| (
 			(
-				>=dev-libs/openssl-1.0.1h-r2[abi_x86_32(-)]
 				>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
+				virtual/jpeg:62[-abi_x86_32(-)]
+				media-libs/libpng:1.2[-abi_x86_32(-)]
 			)
 			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 		)
@@ -56,12 +57,15 @@ RDEPEND="sys-libs/glibc
 	)"
 
 # Append ${PV} since that's what upstream installs to
+INSTALLDIR="/opt/eagle-${PV}"
 case "${LINGUAS}" in
 	*de*)
 		MY_LANG="de";;
 	*)
 		MY_LANG="en";;
 esac
+# Mandatory documentation being installed
+DOCS="README_${MY_LANG} UPDATE_${MY_LANG} library_${MY_LANG}.txt"
 
 src_unpack() {
 	# Extract the built-in .tar.bz2 file starting at __DATA__
@@ -69,44 +73,41 @@ src_unpack() {
 }
 
 src_install() {
-	local installdir="/opt/eagle"
-
 	# Set MY_LANG for this function only since UPDATE_zh and README_zh
 	# don't exist
 	[[ ${LINGUAS} == *zh* ]] && MY_INST_LANG="zh" || MY_INST_LANG="${MY_LANG}"
 
-	insinto $installdir
-	doins -r .
-
-	fperms 0755 ${installdir}/bin/eagle
+	cd "${S}"
+	dodir ${INSTALLDIR}
+	# Copy all to INSTALLDIR
+	cp -r . "${D}"/${INSTALLDIR}
 
 	# Install wrapper (suppressing leading tabs)
-	# see bug #188368 or http://www.cadsoftusa.com/training/faq/#3
-	exeinto /opt/bin
-	newexe "${FILESDIR}/eagle_wrapper_script" eagle
-	# Finally, append the path of the eagle binary respecting $installdir and any
+	# see bug #188368 or http://www.cadsoft.de/faq.htm#17040701
+	exeinto /usr/bin
+	newexe "${FILESDIR}/eagle_wrapper_script" eagle-${PV}
+	dosym eagle-${PV} /usr/bin/eagle
+	# Finally, append the path of the eagle binary respecting INSTALLDIR and any
 	# arguments passed to the script (thanks Denilson)
-	echo "${installdir}/bin/eagle" '"$@"' >> "${D}/opt/bin/eagle"
+	echo "${INSTALLDIR}/bin/eagle" '"$@"' >> "${D}/usr/bin/eagle-${PV}"
 
 	# Install the documentation
 	cd doc
-	dodoc README_${MY_LANG} UPDATE_${MY_LANG} library_${MY_LANG}.txt
+	dodoc ${DOCS}
 	doman eagle.1
-
 	# Install extra documentation if requested
-	if use doc; then
-		dodoc {connect-device-split-symbol-${MY_INST_LANG},elektro-tutorial,manual_${MY_INST_LANG},tutorial_${MY_INST_LANG},layer-setup_designrules}.pdf
-	fi
-	# Remove docs left in $installdir
-	rm -rf "${D}${installdir}/doc"
-	cd "${S}"
+	use doc && dodoc elektro-tutorial.pdf manual_${MY_INST_LANG}.pdf tutorial_${MY_INST_LANG}.pdf
+	# Remove docs left in INSTALLDIR
+	rm -rf "${D}${INSTALLDIR}/doc"
+	cd ..
 
-	echo -e "ROOTPATH=${installdir}/bin\nPRELINK_PATH_MASK=${installdir}" > "${S}/90eagle-${PV}"
+	echo -e "ROOTPATH=${INSTALLDIR}/bin\nPRELINK_PATH_MASK=${INSTALLDIR}" > "${S}/90eagle-${PV}"
 	doenvd "${S}/90eagle-${PV}"
 
 	# Create desktop entry
-	newicon bin/${PN}icon50.png ${PF}-icon50.png
-	make_desktop_entry "${ROOT}/opt/bin/eagle" "CadSoft EAGLE Layout Editor" ${PF}-icon50 "Graphics;Electronics"
+	mv bin/${PN}icon50.png bin/${PF}-icon50.png
+	doicon bin/${PF}-icon50.png
+	make_desktop_entry "${ROOT}/usr/bin/eagle-${PV}" "CadSoft EAGLE Layout Editor" ${PF}-icon50 "Graphics;Electronics"
 }
 
 pkg_postinst() {
@@ -115,8 +116,8 @@ pkg_postinst() {
 	elog "You must first run eagle as root to invoke product registration."
 	echo
 	ewarn "Due to some necessary changes in the data structure, once you edit"
-	ewarn "a file with version 6.x you will no longer be able to edit it"
-	ewarn "with versions prior to 6.0!"
+	ewarn "a file with version 5.x you will no longer be able to edit it"
+	ewarn "with versions prior to 5.0!"
 	ewarn
-	ewarn "Please read /usr/share/doc/${PF}/UPDATE_${MY_LANG} if you are upgrading from 5.xx/4.xx."
+	ewarn "Please read /usr/share/doc/${PF}/UPDATE_${MY_LANG} if you are upgrading from 4.xx."
 }

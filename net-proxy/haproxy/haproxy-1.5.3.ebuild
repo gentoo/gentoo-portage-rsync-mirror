@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5.2-r1.ebuild,v 1.1 2014/08/11 18:15:56 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5.3.ebuild,v 1.2 2014/08/11 20:06:25 idl0r Exp $
 
 EAPI="5"
 
@@ -77,7 +77,7 @@ src_compile() {
 	if use tools ; then
 		for contrib in halog iprange ; do
 			emake -C contrib/${contrib} \
-				CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC=$(tc-getCC) ${args}
+				CFLAGS="${CFLAGS}" OPTIMIZE="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC=$(tc-getCC) ${args}
 		done
 	fi
 }
