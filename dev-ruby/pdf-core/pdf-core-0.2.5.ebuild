@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/pdf-core-0.2.5.ebuild,v 1.5 2014/08/10 09:28:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/pdf-core-0.2.5.ebuild,v 1.6 2014/08/11 10:12:57 jer Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://github.com/prawnpdf/pdf-core/"
 
 LICENSE="|| ( Ruby GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 IUSE="test"
 
 ruby_add_bdepend "test? ( =dev-ruby/pdf-inspector-1.1*

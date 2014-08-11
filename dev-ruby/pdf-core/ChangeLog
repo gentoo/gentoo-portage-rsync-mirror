@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/ChangeLog,v 1.5 2014/08/10 09:28:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/ChangeLog,v 1.6 2014/08/11 10:12:57 jer Exp $
+
+  11 Aug 2014; Jeroen Roovers <jer@gentoo.org> pdf-core-0.2.5.ebuild:
+  Marked ~hppa (bug #519170).
 
   10 Aug 2014; Hans de Graaff <graaff@gentoo.org> pdf-core-0.2.5.ebuild:
   Fix USE=doc. Specific dependencies in accordance with the gemspec.

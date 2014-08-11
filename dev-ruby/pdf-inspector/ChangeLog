@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-inspector
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/ChangeLog,v 1.13 2014/08/06 02:01:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/ChangeLog,v 1.14 2014/08/11 10:12:08 jer Exp $
+
+  11 Aug 2014; Jeroen Roovers <jer@gentoo.org> pdf-inspector-1.1.0-r1.ebuild:
+  Marked ~hppa (bug #519170).
 
   06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> pdf-inspector-1.1.0-r1.ebuild:
   Drop jruby.

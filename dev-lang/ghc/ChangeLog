@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.263 2014/08/01 20:33:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.264 2014/08/11 10:18:57 slyfox Exp $
+
+  11 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.8.3.ebuild:
+  Keyword amd64/x86 where we have bianries.
 
   01 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   +files/ghc-7.6.3-preserve-inplace-xattr.patch, ghc-7.6.3-r1.ebuild,

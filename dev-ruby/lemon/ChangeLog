@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/lemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/lemon/ChangeLog,v 1.2 2014/08/05 16:00:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/lemon/ChangeLog,v 1.3 2014/08/11 10:06:42 jer Exp $
+
+  11 Aug 2014; Jeroen Roovers <jer@gentoo.org> lemon-0.9.1.ebuild:
+  Marked ~hppa (bug #519170).
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> lemon-0.9.1.ebuild:
   Remove trailing '.' from DESCRIPTION.

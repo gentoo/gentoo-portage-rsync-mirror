@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubytest-cli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytest-cli/ChangeLog,v 1.3 2014/08/06 01:45:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytest-cli/ChangeLog,v 1.4 2014/08/11 10:05:16 jer Exp $
+
+  11 Aug 2014; Jeroen Roovers <jer@gentoo.org> rubytest-cli-0.2.0.ebuild:
+  Marked ~hppa (bug #519170).
 
   06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -rubytest-cli-0.1.0.ebuild:
   Cleanup old.

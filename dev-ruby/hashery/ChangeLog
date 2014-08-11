@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hashery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashery/ChangeLog,v 1.2 2014/08/05 16:01:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashery/ChangeLog,v 1.3 2014/08/11 10:07:13 jer Exp $
+
+  11 Aug 2014; Jeroen Roovers <jer@gentoo.org> hashery-2.1.1.ebuild:
+  Marked ~hppa (bug #519170).
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> hashery-2.1.1.ebuild:
   Remove trailing '.' from DESCRIPTION.
