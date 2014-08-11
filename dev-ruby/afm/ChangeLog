@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/afm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/afm/ChangeLog,v 1.5 2014/08/06 01:38:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/afm/ChangeLog,v 1.6 2014/08/11 09:57:05 jer Exp $
+
+  11 Aug 2014; Jeroen Roovers <jer@gentoo.org> afm-0.2.2.ebuild:
+  Marked ~hppa (bug #519170).
 
 *afm-0.2.2 (06 Aug 2014)
 

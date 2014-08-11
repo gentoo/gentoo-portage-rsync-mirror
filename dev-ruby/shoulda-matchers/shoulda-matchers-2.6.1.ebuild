@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-matchers/shoulda-matchers-2.6.1.ebuild,v 1.1 2014/05/19 06:11:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-matchers/shoulda-matchers-2.6.1.ebuild,v 1.2 2014/08/11 09:55:44 jer Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ HOMEPAGE="https://github.com/thoughtbot/shoulda-matchers"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/activesupport-3.0.0"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shoulda-context
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/ChangeLog,v 1.5 2014/04/25 05:13:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/ChangeLog,v 1.6 2014/08/11 09:53:48 jer Exp $
+
+  11 Aug 2014; Jeroen Roovers <jer@gentoo.org> shoulda-context-1.1.6.ebuild:
+  Marked ~hppa (bug #519170).
 
   25 Apr 2014; Hans de Graaff <graaff@gentoo.org>
   -shoulda-context-1.1.4.ebuild:
