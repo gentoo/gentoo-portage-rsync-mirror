@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.205 2014/06/18 20:32:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.206 2014/08/10 23:58:26 jer Exp $
+
+*libidn-1.29 (10 Aug 2014)
+
+  10 Aug 2014; Jeroen Roovers <jer@gentoo.org> -libidn-1.28-r1.ebuild,
+  +libidn-1.29.ebuild:
+  Version bump.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libidn-1.28-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
