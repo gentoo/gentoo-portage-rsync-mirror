@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=a52? ( media-libs/a52dec ) aac? ( >=media-libs/faad2-2.0 ) alsa? ( media-libs/alsa-lib ) ffmpeg? ( virtual/ffmpeg ) jack? ( media-sound/jack-audio-connection-kit ) jpeg? ( virtual/jpeg ) mad? ( >=media-libs/libmad-0.15.1b ) opengl? ( virtual/opengl media-libs/freeglut ) >=media-libs/libogg-1.1 png? ( >=media-libs/libpng-1.4 ) vorbis? ( >=media-libs/libvorbis-1.1 ) theora? ( media-libs/libtheora ) truetype? ( >=media-libs/freetype-2.1.4 ) wxwidgets? ( =x11-libs/wxGTK-2.8* ) xml? ( >=dev-libs/libxml2-2.6.0 ) xvid? ( >=media-libs/xvid-1.0.1 ) sdl? ( media-libs/libsdl ) jpeg2k? ( <media-libs/openjpeg-2 ) ssl? ( dev-libs/openssl ) pulseaudio? ( media-sound/pulseaudio ) x11-libs/libXt x11-libs/libX11 x11-libs/libXv x11-libs/libXext
 SLOT=0
 SRC_URI=mirror://sourceforge/gpac/gpac-0.4.5.tar.gz mirror://gentoo/gpac-0.4.5-patches-9.tar.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
 _md5_=8caf68fee85d68abfe12b390466197ab

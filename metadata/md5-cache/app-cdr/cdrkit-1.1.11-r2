@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=app-arch/bzip2 !app-cdr/cdrtools dev-libs/libcdio-paranoia sys-apps/file sys-libs/zlib unicode? ( virtual/libiconv ) kernel_linux? ( sys-libs/libcap )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/c/cdrkit/cdrkit_1.1.11.orig.tar.gz http://dev.gentoo.org/~ssuominen/cdrkit-1.1.11-libcdio-paranoia.tar.xz
-_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=496cf3470100bac12ed495fb79f674eb

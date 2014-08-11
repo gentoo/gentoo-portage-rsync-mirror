@@ -9,5 +9,5 @@ LICENSE=AGPL-3
 RDEPEND=dev-libs/openssl[static-libs?] media-libs/freetype:2[static-libs?] media-libs/jbig2dec[static-libs?] media-libs/openjpeg:2[static-libs?] net-misc/curl[static-libs?] virtual/jpeg[static-libs?] X? ( x11-libs/libX11[static-libs?] x11-libs/libXext[static-libs?] )
 SLOT=0/1.4
 SRC_URI=http://git.ghostscript.com/?p=mupdf.git;a=snapshot;h=eebc3385ebfa60574d78cf41badd6622987c1121;sf=tgz -> mupdf-1.4.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=31a31fbc6296dce6eacab47db02cfe2a

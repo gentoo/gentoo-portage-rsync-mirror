@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86 ~ppc
 LICENSE=GPL-2
 SLOT=2
 SRC_URI=mirror://gentoo/GtkAda-gpl-2.10.0.tgz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	gnat	2395d33f9259e627b1fb6f2719f4d235	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gnat	2395d33f9259e627b1fb6f2719f4d235	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=740bb8735843cbf04f6fa52f1fed32a6

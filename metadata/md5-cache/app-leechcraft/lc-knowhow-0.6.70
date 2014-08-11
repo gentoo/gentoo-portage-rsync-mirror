@@ -9,5 +9,5 @@ LICENSE=Boost-1.0
 RDEPEND=~app-leechcraft/lc-core-0.6.70
 SLOT=0
 SRC_URI=http://dist.leechcraft.org/LeechCraft/0.6.70/leechcraft-0.6.70.tar.xz
-_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	leechcraft	6609acc541f2bc8ba65e461352fdf169	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	leechcraft	6609acc541f2bc8ba65e461352fdf169	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=e78bf5b4ab31ebc20011b05cb813b860

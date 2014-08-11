@@ -8,5 +8,5 @@ LICENSE=POSTGRESQL GPL-2
 RDEPEND=>=dev-db/postgresql-base-8.3.0 x11-libs/wxGTK:2.8
 SLOT=0
 SRC_URI=mirror://postgresql/pgadmin3/release/pgagent/pgAgent-3.3.0-Source.tar.gz
-_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
+_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
 _md5_=078a707feaef73166a034c9f8932dee3

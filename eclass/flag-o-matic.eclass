@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.201 2014/07/11 08:21:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.202 2014/08/11 00:36:05 kumba Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -47,7 +47,7 @@ setup-allowed-flags() {
 		-mno-faster-structs -mfaster-structs -m32 -m64 -mx32 -mabi \
 		-mlittle-endian -mbig-endian -EL -EB -fPIC -mlive-g0 -mcmodel \
 		-mstack-bias -mno-stack-bias -msecure-plt -m*-toc -mfloat-abi \
-		-D* -U*"
+		-mfix-r10000 -mno-fix-r10000 -D* -U*"
 
 	# 4.5
 	ALLOWED_FLAGS+=" -mno-fma4 -mno-movbe -mno-xop -mno-lwp"

@@ -9,5 +9,5 @@ RDEPEND=!static? ( dev-libs/npth >=dev-libs/libassuan-2 >=dev-libs/libgcrypt-1.6
 REQUIRED_USE=smartcard? ( !static )
 SLOT=0
 SRC_URI=ftp://ftp.gnupg.org/gcrypt/gnupg/unstable/gnupg-2.1.0-beta751.tar.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=ba26d41e9bde8873848191a63b9e1824

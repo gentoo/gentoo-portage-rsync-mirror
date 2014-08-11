@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libpcre >=net-misc/curl-7.17.1 x11-libs/libXpm x11-libs/libXext x11-libs/libX11 x11-wm/windowmaker
 SLOT=0
 SRC_URI=mirror://sourceforge/wmweatherplus/wmweather+-2.13.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=a7aaa12fb8fd454015aa0f27d6ea466c

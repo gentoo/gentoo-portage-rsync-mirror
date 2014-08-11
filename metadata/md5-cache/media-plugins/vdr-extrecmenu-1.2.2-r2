@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-video/vdr-1.6.0 >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=mirror://vdr-developerorg/936/vdr-extrecmenu-1.2.2.tgz mirror://gentoo/dvdarchive-2.3-beta.sh.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825
 _md5_=f10edd7b4c55ae19c12203c97e121ca2

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-perl/config-general dev-libs/libxslt infiniband? ( sys-infiniband/libibverbs sys-infiniband/librdmacm ) app-text/docbook-xsl-stylesheets sys-apps/sg3_utils
 SLOT=0
 SRC_URI=https://github.com/fujita/tgt/tarball/v1.0.24 -> tgt-1.0.24.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=7888ef124c757c2fea98d4a679e39423

@@ -10,5 +10,5 @@ RDEPEND=>=dev-lang/lua-5.1 mysql? ( virtual/mysql ) postgres? ( dev-db/postgresq
 REQUIRED_USE=|| ( mysql postgres sqlite )
 SLOT=0
 SRC_URI=http://luadbi.googlecode.com/files/luadbi.0.5.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=eb4d961af4546874b1d0c45e1ed86360

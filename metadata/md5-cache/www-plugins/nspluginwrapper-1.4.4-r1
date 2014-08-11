@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=x11-libs/gtk+-2:2 net-misc/curl app-emulation/emul-linux-x86-xlibs app-emulation/emul-linux-x86-gtklibs >=sys-apps/util-linux-2.13
 SLOT=0
 SRC_URI=http://web.mit.edu/davidben/Public/nspluginwrapper/nspluginwrapper-1.4.4.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=869526e4586f97a0f57f524d51569441

@@ -10,5 +10,5 @@ RDEPEND=~dev-util/nvidia-cuda-toolkit-6.0.37 media-libs/freeglut examples? ( med
 RESTRICT=test
 SLOT=0
 SRC_URI=amd64? ( http://developer.download.nvidia.com/compute/cuda/6_0/rel/installers/cuda_6.0.37_linux_64.run ) x86? ( http://developer.download.nvidia.com/compute/cuda/6_0/rel/installers/cuda_6.0.37_linux_32.run )
-_eclasses_=cuda	9be39ddb95b9b07ec931f30628d40757	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=cuda	9be39ddb95b9b07ec931f30628d40757	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=515f6b2649049af4ab6cda7811a3fd65

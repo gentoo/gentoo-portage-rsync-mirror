@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=sys-libs/ncurses-5.2 perl? ( >=dev-lang/perl-5.6.1[-ithreads] ) ssl? ( >=dev-libs/openssl-0.9.5 )
 SLOT=0
 SRC_URI=ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/epic4-2.10.tar.bz2 ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-20050315.tar.gz mirror://gentoo/epic4-local.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=5115bb3078924d98c07e17b059aabf8e

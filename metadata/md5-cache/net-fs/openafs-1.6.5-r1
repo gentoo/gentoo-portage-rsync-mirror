@@ -9,5 +9,5 @@ LICENSE=IBM BSD openafs-krb5-a APSL-2
 RDEPEND=~net-fs/openafs-kernel-1.6.5 sys-libs/ncurses pam? ( sys-libs/pam ) kerberos? ( virtual/krb5 )
 SLOT=0
 SRC_URI=http://openafs.org/dl/openafs/1.6.5/openafs-1.6.5-src.tar.bz2 http://openafs.org/dl/openafs/1.6.5/openafs-1.6.5-doc.tar.bz2 mirror://gentoo/openafs-1.6.5-patches-1.tar.bz2
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=fdb7eaa96040a82df18d6d93299b92ef

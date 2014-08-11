@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=media-video/vdr >=dev-libs/tntnet-2.2.1[ssl=] >=dev-libs/cxxtools-2.2.1 pcre? ( >=dev-libs/libpcre-8.12[cxx] ) >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=mirror://gentoo/vdr-live-0.3.0_p20130504.tar.bz2 http://dev.gentoo.org/~hd_brummy/distfiles/vdr-live-0.3.0_p20130504.tar.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ssl-cert	b53367370fde96e19beca78050a47c61	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ssl-cert	b53367370fde96e19beca78050a47c61	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825
 _md5_=b87f3bad3fdc8937b3ecedc9a32d6555

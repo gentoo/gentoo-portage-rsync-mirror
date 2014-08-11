@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/boost-1.42 media-libs/netpbm x11-libs/fltk:1[opengl] app-text/ghostscript-gpl virtual/glu sci-visualization/gnuplot
 SLOT=0
 SRC_URI=http://kavli.nano.tudelft.nl/~gsteele/spyview/versions/spyview-20111018.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=6011808fc5cff056cc42f08dbc73504f

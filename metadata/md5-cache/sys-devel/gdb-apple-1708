@@ -9,5 +9,5 @@ LICENSE=APSL-2 GPL-2
 RDEPEND=>=sys-libs/ncurses-5.2-r2 =dev-db/sqlite-3*
 SLOT=0
 SRC_URI=http://www.opensource.apple.com/darwinsource/tarballs/other/gdb-1708.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=fbe7a64b5ec2bc38b735e21d306c2474

@@ -8,5 +8,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=!<net-misc/iputils-20121221-r1
 SLOT=0
 SRC_URI=mirror://sourceforge/traceroute/traceroute-2.0.20.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=a0feacb19b4af29c4878eecdca1be1e2

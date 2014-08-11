@@ -9,5 +9,5 @@ LICENSE=GPL-2-with-exceptions
 RDEPEND=zlib? ( >=sys-libs/zlib-1.2.2.3 ) bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) !dev-libs/libelf
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/e/l/elfutils/0.153/elfutils-0.153.tar.bz2 https://fedorahosted.org/releases/e/l/elfutils/0.153/elfutils-portability.patch -> elfutils-0.153-portability.patch https://fedorahosted.org/releases/e/l/elfutils/0.153/elfutils-robustify.patch -> elfutils-0.153-robustify.patch
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=d82f17328648f2bcf411213145935102

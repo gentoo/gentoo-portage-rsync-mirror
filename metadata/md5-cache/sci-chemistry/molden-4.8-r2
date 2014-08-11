@@ -9,5 +9,5 @@ LICENSE=MOLDEN
 RDEPEND=x11-libs/libXmu virtual/glu opengl? ( media-libs/freeglut virtual/opengl ) virtual/fortran
 SLOT=0
 SRC_URI=ftp://ftp.cmbi.kun.nl/pub/molgraph/molden/molden4.8.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=28bd70850ec8b1c96d4a67a91e3dc8b1

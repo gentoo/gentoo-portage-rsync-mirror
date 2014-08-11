@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=http://www.gcd.org/sengoku/stone/stone-2.3e.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=cf4a120733bb79f5b886f6c03632828e

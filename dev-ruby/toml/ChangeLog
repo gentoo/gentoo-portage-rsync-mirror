@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/toml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/toml/ChangeLog,v 1.4 2014/08/06 07:24:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/toml/ChangeLog,v 1.5 2014/08/11 00:31:31 mrueg Exp $
+
+  11 Aug 2014; Manuel Rüger <mrueg@gentoo.org> toml-0.1.1.ebuild:
+  Further fixes to run tests natively, drop version dependency on parslet.
 
   06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> toml-0.1.1.ebuild:
   Add ruby21 target.

@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=sys-fs/fuse
 SLOT=0
 SRC_URI=http://ftp.FreeBSD.org/pub/FreeBSD/ports/distfiles/fuse4bsd/498acaef33b0.tar.gz mirror://gentoo/freebsd-sbin-9.1.tar.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=ea2982de24f1cc425b9be9c8137ee001

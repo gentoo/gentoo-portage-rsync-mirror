@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1349 2014/08/10 22:40:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1350 2014/08/11 00:36:20 kumba Exp $
+
+  11 Aug 2014; Joshua Kinard <kumba@gentoo.org> flag-o-matic.eclass:
+  Added -mfix-r10000/-mno-fix-r10000 to ALLOWED_FLAGS for MIPS.
 
   10 Aug 2014; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
   Raise gcc minimum version to 4.7, bugs #462550, #471770, #508324.
