@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.252 2014/07/18 13:26:48 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.253 2014/08/11 13:38:48 vapier Exp $
+
+  11 Aug 2014; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.9-r3.ebuild:
+  Mark arm64/ia64/ppc/ppc64/s390/sh/sparc stable #504714.
 
   18 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   nfs-utils-1.2.9-r3.ebuild:

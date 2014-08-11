@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.40 2014/08/09 13:42:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.41 2014/08/11 13:37:31 vapier Exp $
+
+  11 Aug 2014; Mike Frysinger <vapier@gentoo.org> libtirpc-0.2.4-r1.ebuild:
+  Mark arm64/ppc/ppc64/s390/sh stable #514912.
 
 *libtirpc-0.2.5 (09 Aug 2014)
 
