@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.21-r1.ebuild,v 1.7 2014/08/07 19:31:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.21-r1.ebuild,v 1.8 2014/08/11 03:23:09 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -42,6 +42,8 @@ multilib_src_configure() {
 }
 
 multilib_src_compile() {
+	# need to avoid parallel building, this looks like the sanest way with waf-utils/multiprocessing eclasses
+	unset MAKEOPTS
 	waf-utils_src_compile
 }
 
