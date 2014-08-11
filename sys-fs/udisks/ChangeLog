@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.167 2014/07/27 11:41:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.168 2014/08/11 14:55:56 nimiux Exp $
+
+  11 Aug 2014; Chema Alonso <nimiux@gentoo.org> udisks-1.0.5-r1.ebuild:
+  Stable for amd64 wrt bug #516766
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> udisks-1.0.5-r1.ebuild:
   x86 stable wrt bug #516766

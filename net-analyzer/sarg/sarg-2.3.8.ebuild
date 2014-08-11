@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.8.ebuild,v 1.3 2014/07/27 11:37:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.8.ebuild,v 1.4 2014/08/11 14:40:26 nimiux Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sarg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 IUSE="+gd ldap pcre"
 
