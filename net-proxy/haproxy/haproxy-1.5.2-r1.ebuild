@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5.2.ebuild,v 1.1 2014/07/12 20:19:31 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5.2-r1.ebuild,v 1.1 2014/08/11 18:15:56 idl0r Exp $
 
 EAPI="5"
 
@@ -30,8 +30,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -e 's:@SBINDIR@:'/usr/sbin':' contrib/systemd/haproxy.service.in \
+	sed -e 's:@SBINDIR@:'/usr/bin':' contrib/systemd/haproxy.service.in \
 	> contrib/systemd/haproxy.service || die
+
+	sed -ie 's:/usr/sbin/haproxy:/usr/bin/haproxy:' src/haproxy-systemd-wrapper.c || die
 }
 
 src_compile() {
@@ -91,7 +93,7 @@ src_install() {
 	dodoc CHANGELOG ROADMAP doc/{configuration,haproxy-en}.txt
 	doman doc/haproxy.1
 
-	dosbin haproxy-systemd-wrapper
+	dobin haproxy-systemd-wrapper
 	systemd_dounit contrib/systemd/haproxy.service
 
 	if use tools ; then
