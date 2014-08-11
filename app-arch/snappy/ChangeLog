@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/snappy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/ChangeLog,v 1.16 2014/04/03 18:22:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/ChangeLog,v 1.17 2014/08/11 22:07:50 blueness Exp $
+
+  11 Aug 2014; Anthony G. Basile <blueness@gentoo.org> snappy-1.1.1.ebuild,
+  snappy-1.1.2-r1.ebuild, snappy-1.1.2.ebuild:
+  Keyword ~ppc, ~ppc64 for bug #519618
 
 *snappy-1.1.2-r1 (03 Apr 2014)
 

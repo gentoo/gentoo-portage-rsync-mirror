@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/google-perftools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.29 2013/06/25 16:56:48 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.30 2014/08/11 22:10:08 blueness Exp $
+
+  11 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  google-perftools-2.0-r2.ebuild:
+  Keyword ~ppc, ~ppc64 for bug #519618
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> google-perftools-2.0-r2.ebuild:
   Stable for amd64, wrt bug #473292

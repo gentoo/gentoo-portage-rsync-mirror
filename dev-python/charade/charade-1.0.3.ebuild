@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/charade/charade-1.0.3.ebuild,v 1.10 2014/06/08 17:02:01 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/charade/charade-1.0.3.ebuild,v 1.11 2014/08/11 22:22:11 blueness Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ia64 ~mips x86"
+KEYWORDS="amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

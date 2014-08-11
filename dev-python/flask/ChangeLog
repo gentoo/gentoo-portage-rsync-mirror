@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/flask
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.31 2014/05/30 06:38:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.32 2014/08/11 22:26:08 blueness Exp $
+
+  11 Aug 2014; Anthony G. Basile <blueness@gentoo.org> flask-0.10.1-r1.ebuild,
+  flask-0.10.1.ebuild, flask-9999.ebuild:
+  Keyword ~ppc, ~ppc64 for bug #519618
 
   30 May 2014; Ian Delaney <idella4@gentoo.org> flask-0.10.1-r1.ebuild,
   flask-9999.ebuild:

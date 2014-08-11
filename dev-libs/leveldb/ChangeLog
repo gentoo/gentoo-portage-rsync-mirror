@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/leveldb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.22 2014/08/06 03:05:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.23 2014/08/11 22:10:39 blueness Exp $
+
+  11 Aug 2014; Anthony G. Basile <blueness@gentoo.org> leveldb-1.10.0-r1.ebuild,
+  leveldb-1.11.0-r1.ebuild, leveldb-1.12.0-r1.ebuild, leveldb-1.13.0-r1.ebuild,
+  leveldb-1.14.0.ebuild, leveldb-1.15.0-r1.ebuild, leveldb-1.15.0.ebuild,
+  leveldb-1.17.ebuild, leveldb-1.9.0-r5.ebuild, leveldb-1.9.0-r6.ebuild:
+  Keyword ~ppc, ~ppc64 for bug #519618
 
 *leveldb-1.17 (06 Aug 2014)
 

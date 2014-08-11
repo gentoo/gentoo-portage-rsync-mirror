@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.219 2014/08/10 20:43:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.220 2014/08/11 22:24:36 mrueg Exp $
+
+  11 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -courier-imap-4.8.0-r1.ebuild,
+  -files/courier-authdaemond.service,
+  -files/courier-imap-4.0.1-disable-fam-configure.in.patch,
+  -files/courier-imap-4.0.6-aclocal-fix.patch,
+  -files/courier-imap-4.0.6-db4-bdbobj_configure.in.patch,
+  -files/courier-imap-4.0.6-db4-configure.in.patch,
+  -files/courier-imap-4.0.6-db4-tcpd_configure.in.patch,
+  -files/courier-imapd-ssl.service, -files/courier-imapd.service:
+  Cleanup old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   courier-imap-4.15-r1.ebuild, courier-imap-4.8.0-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/requests-0.14.2-r1.ebuild,v 1.2 2013/03/28 10:18:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/requests-0.14.2-r1.ebuild,v 1.3 2014/08/11 22:22:59 blueness Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
