@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.2-r1.ebuild,v 1.11 2014/08/01 17:43:33 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.2-r1.ebuild,v 1.12 2014/08/11 04:36:23 vapier Exp $
 
 EAPI="4"
 
@@ -46,7 +46,6 @@ src_install() {
 	newconfd "${FILESDIR}"/in.tftpd.confd-0.44 in.tftpd
 	newinitd "${FILESDIR}"/in.tftpd.rc6 in.tftpd
 
-	dodir /tftproot
 	systemd_dounit "${FILESDIR}"/tftp.service
 	systemd_dounit "${FILESDIR}"/tftp.socket
 

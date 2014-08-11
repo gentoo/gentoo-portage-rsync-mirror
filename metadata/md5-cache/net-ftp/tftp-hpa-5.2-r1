@@ -10,4 +10,4 @@ RDEPEND=selinux? ( sec-policy/selinux-tftp ) readline? ( sys-libs/readline ) tcp
 SLOT=0
 SRC_URI=mirror://kernel/software/network/tftp/tftp-hpa/tftp-hpa-5.2.tar.xz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=9309c64d0b89f3336ac44b16ae787407
+_md5_=58222000d7a11f3962c7f18d977b89d8

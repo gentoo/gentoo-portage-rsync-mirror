@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dugong
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/ChangeLog,v 1.4 2014/08/06 06:05:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/ChangeLog,v 1.5 2014/08/11 04:58:29 idella4 Exp $
+
+  11 Aug 2014; Ian Delaney <idella4@gentoo.org> dugong-3.2.ebuild:
+  update test phase
 
 *dugong-3.2 (06 Aug 2014)
 
