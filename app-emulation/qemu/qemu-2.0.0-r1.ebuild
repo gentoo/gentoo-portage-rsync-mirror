@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0-r1.ebuild,v 1.14 2014/08/08 14:22:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0-r1.ebuild,v 1.15 2014/08/11 01:08:11 vapier Exp $
 
 EAPI=5
 
@@ -340,7 +340,8 @@ qemu_src_configure() {
 			$(use_enable iscsi libiscsi)
 			$(use_enable jpeg vnc-jpeg)
 			$(use_enable kernel_linux kvm)
-			$(use_enable lzo)
+			# This version was missing --disable-lzo #519520
+			$(usex lzo --enable-lzo '')
 			$(use_enable ncurses curses)
 			$(use_enable nfs libnfs)
 			$(use_enable opengl glx)
@@ -349,7 +350,8 @@ qemu_src_configure() {
 			$(use_enable sasl vnc-sasl)
 			$(use_enable seccomp)
 			$(use_enable smartcard smartcard-nss)
-			$(use_enable snappy)
+			# This version was missing --disable-snappy #519520
+			$(usex snappy --enable-snappy '')
 			$(use_enable spice)
 			$(use_enable ssh libssh2)
 			$(use_enable tls quorum)

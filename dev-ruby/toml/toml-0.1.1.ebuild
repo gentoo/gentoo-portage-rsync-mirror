@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/toml/toml-0.1.1.ebuild,v 1.3 2014/08/11 00:31:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/toml/toml-0.1.1.ebuild,v 1.5 2014/08/11 01:18:17 mrueg Exp $
 
 EAPI=5
 
@@ -8,6 +8,7 @@ USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_EXTRADOC="README.md"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
+RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem
 
@@ -25,7 +26,7 @@ ruby_add_bdepend "test? ( dev-ruby/minitest
 ruby_add_rdepend "dev-ruby/parslet"
 
 all_ruby_prepare() {
-	sed -i -e "s/, '~> 1.5.0'//" ${PN}.gemspec || die
+	sed -i -e "s/, \"~> 1.5.0\"//" ${PN}.gemspec || die
 	sed -i -e "s/, '~> 1.7.8'//" Gemfile || die
 	sed -i -e "/simplecov/d" -e "/[Bb]undle/d" Rakefile Gemfile || die
 	sed -i -e "/bundler/d" -e "1igem 'minitest', '~>5'" -e "s/MiniTest/Minitest/" test/test_*.rb || die
