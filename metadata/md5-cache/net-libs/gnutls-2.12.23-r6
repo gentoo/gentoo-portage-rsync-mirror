@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare setup test
-DEPEND=>=dev-libs/libtasn1-0.3.4 guile? ( >=dev-scheme/guile-1.8[networking] ) nettle? ( >=dev-libs/nettle-2.1[gmp] ) !nettle? ( >=dev-libs/libgcrypt-1.4.0:0 ) nls? ( virtual/libintl ) pkcs11? ( >=app-crypt/p11-kit-0.11 ) zlib? ( >=sys-libs/zlib-1.2.3.1 ) !bindist? ( lzo? ( >=dev-libs/lzo-2 ) ) virtual/pkgconfig sys-devel/libtool doc? ( dev-util/gtk-doc ) nls? ( sys-devel/gettext ) test? ( app-misc/datefudge ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-libs/libtasn1-0.3.4 guile? ( >=dev-scheme/guile-1.8[networking] ) nettle? ( >=dev-libs/nettle-2.1[gmp] ) !nettle? ( >=dev-libs/libgcrypt-1.4.0:0 ) nls? ( virtual/libintl ) pkcs11? ( >=app-crypt/p11-kit-0.11 ) zlib? ( >=sys-libs/zlib-1.2.3.1 ) !bindist? ( lzo? ( >=dev-libs/lzo-2 ) ) virtual/pkgconfig sys-devel/libtool doc? ( dev-util/gtk-doc ) nls? ( sys-devel/gettext ) test? ( app-misc/datefudge ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=A TLS 1.2 and SSL 3.0 implementation for the GNU project
 EAPI=5
 HOMEPAGE=http://www.gnutls.org/
@@ -9,5 +9,5 @@ LICENSE=GPL-3 LGPL-2.1
 RDEPEND=>=dev-libs/libtasn1-0.3.4 guile? ( >=dev-scheme/guile-1.8[networking] ) nettle? ( >=dev-libs/nettle-2.1[gmp] ) !nettle? ( >=dev-libs/libgcrypt-1.4.0:0 ) nls? ( virtual/libintl ) pkcs11? ( >=app-crypt/p11-kit-0.11 ) zlib? ( >=sys-libs/zlib-1.2.3.1 ) !bindist? ( lzo? ( >=dev-libs/lzo-2 ) )
 SLOT=0
 SRC_URI=ftp://ftp.gnutls.org/gcrypt/gnutls/v2.12/gnutls-2.12.23.tar.bz2
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=f4e4cb47ea261c3b2a7f1ee9e589b878

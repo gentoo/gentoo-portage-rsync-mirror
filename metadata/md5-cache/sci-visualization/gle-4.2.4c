@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare unpack
-DEPEND=sys-libs/ncurses X? ( x11-libs/libX11 ) qt4? ( dev-qt/qtopengl:4 ) jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) emacs? ( virtual/emacs ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=sys-libs/ncurses X? ( x11-libs/libX11 ) qt4? ( dev-qt/qtopengl:4 ) jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) emacs? ( virtual/emacs ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=Graphics Layout Engine
 EAPI=5
 HOMEPAGE=http://glx.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=BSD-2 emacs? ( GPL-2 ) qt4? ( GPL-2 )
 RDEPEND=sys-libs/ncurses X? ( x11-libs/libX11 ) qt4? ( dev-qt/qtopengl:4 ) jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) emacs? ( virtual/emacs ) app-text/ghostscript-gpl virtual/latex-base vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/glx/gle-graphics-4.2.4cf-src.tar.gz doc? ( mirror://sourceforge/glx/gle-manual-4.2.2.pdf mirror://sourceforge/glx/GLEusersguide.pdf )
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	base	87f7447ccfc06fd0729ff4684e11e0d6	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	qmake-utils	40136c5fe0002a0d3937e869ae4ee0e2	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	base	87f7447ccfc06fd0729ff4684e11e0d6	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	qmake-utils	40136c5fe0002a0d3937e869ae4ee0e2	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=c1dddfecc4b459e420aad80a3e7a9a70

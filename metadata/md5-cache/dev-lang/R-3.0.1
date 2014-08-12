@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare setup
-DEPEND=app-arch/bzip2 app-text/ghostscript-gpl dev-libs/libpcre virtual/blas cairo? ( x11-libs/cairo[X] x11-libs/pango ) icu? ( dev-libs/icu ) jpeg? ( virtual/jpeg:0 ) lapack? ( virtual/lapack ) perl? ( dev-lang/perl ) png? ( media-libs/libpng ) readline? ( sys-libs/readline ) tk? ( dev-lang/tk ) X? ( x11-libs/libXmu x11-misc/xdg-utils ) virtual/pkgconfig doc? ( virtual/latex-base dev-texlive/texlive-fontsrecommended ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/fortran
+DEPEND=app-arch/bzip2 app-text/ghostscript-gpl dev-libs/libpcre virtual/blas cairo? ( x11-libs/cairo[X] x11-libs/pango ) icu? ( dev-libs/icu ) jpeg? ( virtual/jpeg:0 ) lapack? ( virtual/lapack ) perl? ( dev-lang/perl ) png? ( media-libs/libpng ) readline? ( sys-libs/readline ) tk? ( dev-lang/tk ) X? ( x11-libs/libXmu x11-misc/xdg-utils ) virtual/pkgconfig doc? ( virtual/latex-base dev-texlive/texlive-fontsrecommended ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool virtual/fortran
 DESCRIPTION=Language and environment for statistical computing and graphics
 EAPI=5
 HOMEPAGE=http://www.r-project.org/
@@ -11,5 +11,5 @@ REQUIRED_USE=png? ( || ( cairo X ) ) jpeg? ( || ( cairo X ) ) tiff? ( || ( cairo
 RESTRICT=minimal? ( test )
 SLOT=0
 SRC_URI=mirror://cran/src/base/R-3/R-3.0.1.tar.gz bash-completion? ( http://dev.gentoo.org/~bicatali/distfiles/R-20130129.bash_completion.bz2 )
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=44ae922928a419925dcbb9792f778a17

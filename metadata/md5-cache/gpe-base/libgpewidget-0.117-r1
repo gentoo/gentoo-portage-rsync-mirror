@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=x11-libs/gtk+:2 media-libs/libpng cairo? ( x11-libs/cairo[X] x11-libs/pango[X] ) >=gpe-base/gpe-icons-0.25 sys-devel/gettext x11-proto/kbproto x11-proto/renderproto x11-proto/xproto >=dev-util/intltool-0.29 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=x11-libs/gtk+:2 media-libs/libpng cairo? ( x11-libs/cairo[X] x11-libs/pango[X] ) >=gpe-base/gpe-icons-0.25 sys-devel/gettext x11-proto/kbproto x11-proto/renderproto x11-proto/xproto >=dev-util/intltool-0.29 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=A collection of widgets and other common code shared by many GPE applications
 EAPI=4
 HOMEPAGE=http://gpe.linuxtogo.org
@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=x11-libs/gtk+:2 media-libs/libpng cairo? ( x11-libs/cairo[X] x11-libs/pango[X] )
 SLOT=0
 SRC_URI=http://gpe.linuxtogo.org/download/source/libgpewidget-0.117.tar.bz2
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	gpe	dc397204e130de43bfcf156546e8d9d4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	gpe	dc397204e130de43bfcf156546e8d9d4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=6c34078b38302a7b92d407b1f9ac92ae

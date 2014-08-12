@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.207 2014/07/29 23:15:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.208 2014/08/12 12:01:43 vapier Exp $
+
+  12 Aug 2014; Mike Frysinger <vapier@gentoo.org> use.mask:
+  Mask untested mumble. #509216 by Émeric Maschino.
 
   29 Jul 2014; Robin H. Johnson <robbat2@gentoo.org> package.use.mask:
   Update MySQL tcmalloc mask for percona-server.

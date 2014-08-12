@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
-DEPEND=>=x11-libs/libgksu-2.0.4 virtual/pkgconfig gnome-base/gnome-common !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4 ~dev-python/gnome-python-extras-base-2.25.3 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] virtual/pkgconfig
+DEPEND=>=x11-libs/libgksu-2.0.4 virtual/pkgconfig gnome-base/gnome-common !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool >=sys-apps/sed-4 ~dev-python/gnome-python-extras-base-2.25.3 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] virtual/pkgconfig
 DESCRIPTION=Python bindings for libgksu
 EAPI=5
 HOMEPAGE=http://pygtk.org/
@@ -10,5 +10,5 @@ RDEPEND=>=x11-libs/libgksu-2.0.4 ~dev-python/gnome-python-extras-base-2.25.3 pyt
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gnome/sources/gnome-python-extras/2.25/gnome-python-extras-2.25.3.tar.bz2
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome-python-common-r1	3ebf8436a00591c0d63aff2be3302433	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome-python-common-r1	3ebf8436a00591c0d63aff2be3302433	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=6dce13e78ce6942aee732b182564e5d8

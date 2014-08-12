@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.32 media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 sys-apps/dbus >=x11-libs/gtk+-3.2:3 x11-libs/libX11 >=xfce-base/libxfce4ui-4.11 >=xfce-base/libxfce4util-4.11 >=xfce-base/xfconf-4.10 clutter? ( >=media-libs/clutter-1.16.4 >=media-libs/clutter-gtk-1.4.4 ) libnotify? ( >=x11-libs/libnotify-0.7 ) taglib? ( >=media-libs/taglib-1.6 ) media-plugins/gst-plugins-meta:1.0
 SLOT=0
 SRC_URI=mirror://xfce/src/apps/parole/0.7/parole-0.7.0.tar.bz2
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	xfconf	20671cc91311ca7e3446047c1175cf16
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	xfconf	20671cc91311ca7e3446047c1175cf16
 _md5_=6b357258ff21cb9e53225f6bda5dbb34

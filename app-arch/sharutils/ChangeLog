@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.128 2014/05/17 13:59:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.129 2014/08/12 12:19:31 vapier Exp $
+
+  12 Aug 2014; Mike Frysinger <vapier@gentoo.org> sharutils-4.14-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> sharutils-4.14-r1.ebuild:
   Stable for alpha, wrt bug #502608

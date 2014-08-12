@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=rsh? ( net-misc/netkit-rsh ) >=net-libs/neon-0.24.6[zlib?,ssl?,expat?] xml? ( >=net-libs/neon-0.24.6[-expat] ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=rsh? ( net-misc/netkit-rsh ) >=net-libs/neon-0.24.6[zlib?,ssl?,expat?] xml? ( >=net-libs/neon-0.24.6[-expat] ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=Maintain remote web sites with ease
 EAPI=2
 HOMEPAGE=http://www.manyfish.co.uk/sitecopy/ http://packages.debian.org/unstable/sitecopy
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=rsh? ( net-misc/netkit-rsh ) >=net-libs/neon-0.24.6[zlib?,ssl?,expat?] xml? ( >=net-libs/neon-0.24.6[-expat] )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/s/sitecopy/sitecopy_0.16.6.orig.tar.gz mirror://debian/pool/main/s/sitecopy/sitecopy_0.16.6-3.diff.gz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=49df99aceffd9dd419f67729f4f5d13a

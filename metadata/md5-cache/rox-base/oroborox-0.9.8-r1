@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm setup unpack
-DEPEND=>=media-libs/freetype-2.0 x11-proto/xproto x11-proto/xextproto x11-proto/xf86vidmodeproto x11-libs/libXft x11-libs/libXpm x11-libs/libXrandr x11-libs/libXrender x11-libs/libXcomposite x11-libs/libXdamage xinerama? ( x11-proto/xineramaproto ) =dev-lang/python-2* !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=media-libs/freetype-2.0 x11-proto/xproto x11-proto/xextproto x11-proto/xf86vidmodeproto x11-libs/libXft x11-libs/libXpm x11-libs/libXrandr x11-libs/libXrender x11-libs/libXcomposite x11-libs/libXdamage xinerama? ( x11-proto/xineramaproto ) =dev-lang/python-2* !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=OroboROX is a small window manager for the ROX Desktop
 HOMEPAGE=http://rox.sourceforge.net/
 IUSE=xinerama
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/freetype-2.0 x11-libs/libX11 x11-libs/libXext x11-libs/libXft x11-libs/libXpm x11-libs/libXrandr x11-libs/libXrender x11-libs/libXxf86vm xinerama? ( x11-libs/libXinerama ) =dev-lang/python-2* >=rox-base/rox-2.1.0 >=rox-base/rox-lib-1.9.14
 SLOT=0
 SRC_URI=http://roxos.sunsite.dk/dev-contrib/guido/OroboROX-0.9.8.tar.bz2
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	rox	673b6c35a38ec70fa57c5e8f0c13127e	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	rox	673b6c35a38ec70fa57c5e8f0c13127e	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=b3da95ecc73cb898c66eee9731620043

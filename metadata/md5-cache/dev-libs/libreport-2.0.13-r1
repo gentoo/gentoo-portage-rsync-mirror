@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup
-DEPEND=>=dev-libs/btparser-0.18:= >=dev-libs/glib-2.21:2 dev-libs/json-c:= dev-libs/libtar dev-libs/libxml2:2 dev-libs/newt:= dev-libs/nss:= dev-libs/xmlrpc-c:= net-libs/libproxy:= net-misc/curl:=[ssl] sys-apps/dbus >=x11-libs/gtk+-3.3.12:3 x11-misc/xdg-utils python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] app-text/asciidoc app-text/xmlto >=dev-util/intltool-0.3.50 >=sys-devel/gettext-0.17 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-libs/btparser-0.18:= >=dev-libs/glib-2.21:2 dev-libs/json-c:= dev-libs/libtar dev-libs/libxml2:2 dev-libs/newt:= dev-libs/nss:= dev-libs/xmlrpc-c:= net-libs/libproxy:= net-misc/curl:=[ssl] sys-apps/dbus >=x11-libs/gtk+-3.3.12:3 x11-misc/xdg-utils python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] app-text/asciidoc app-text/xmlto >=dev-util/intltool-0.3.50 >=sys-devel/gettext-0.17 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=Generic library for reporting software bugs
 EAPI=5
 HOMEPAGE=https://fedorahosted.org/abrt/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/btparser-0.18:= >=dev-libs/glib-2.21:2 dev-libs/json-c:= dev-
 RESTRICT=test
 SLOT=0
 SRC_URI=https://fedorahosted.org/released/abrt/libreport-2.0.13.tar.gz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=d4f88aa345bef31cb123da5360cd00ed

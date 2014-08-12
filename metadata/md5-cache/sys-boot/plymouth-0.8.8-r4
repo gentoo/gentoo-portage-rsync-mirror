@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/libpng-1.2.16 gtk? ( dev-libs/glib:2 >=x11-libs/gtk+-2.12:2 ) libkms? ( x11-libs/libdrm[libkms] ) pango? ( >=x11-libs/pango-1.21 ) video_cards_intel? ( x11-libs/libdrm[video_cards_intel] ) video_cards_radeon? ( x11-libs/libdrm[video_cards_radeon] ) virtual/udev
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/plymouth/releases/plymouth-0.8.8.tar.bz2 http://dev.gentoo.org/~aidecoe/distfiles/sys-boot/plymouth/gentoo-logo.png
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	autotools-utils	3727db64c7b960903d5033280f108080	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	readme.gentoo	106edea5533517715013de909a333abd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	autotools-utils	3727db64c7b960903d5033280f108080	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	readme.gentoo	106edea5533517715013de909a333abd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=2465271e8ada0527cde65e14664731d3

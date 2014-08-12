@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=dev-libs/popt sys-apps/iproute2 dev-libs/libnl:1.1 dev-libs/openssl >=sys-kernel/linux-headers-2.6.30 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=dev-libs/popt sys-apps/iproute2 dev-libs/libnl:1.1 dev-libs/openssl >=sys-kernel/linux-headers-2.6.30 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=A strong & robust keepalive facility to the Linux Virtual Server project
 EAPI=4
 HOMEPAGE=http://www.keepalived.org/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/popt sys-apps/iproute2 dev-libs/libnl:1.1 dev-libs/openssl
 SLOT=0
 SRC_URI=http://www.keepalived.org/software/keepalived-1.2.2.tar.gz mirror://debian/pool/main/k/keepalived/keepalived_1.2.2-3.diff.gz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=70e7abc07f89affa96c8fdce66be9dc3

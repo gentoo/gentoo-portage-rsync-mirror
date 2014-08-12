@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare test
-DEPEND=>=dev-libs/glib-2.32.0 >=dev-libs/libzip-0.8 ftdi? ( >=dev-embedded/libftdi-0.16 ) serial? ( dev-libs/libserialport ) usb? ( virtual/libusb:1 ) test? ( >=dev-libs/check-0.9.4 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-libs/glib-2.32.0 >=dev-libs/libzip-0.8 ftdi? ( >=dev-embedded/libftdi-0.16 ) serial? ( dev-libs/libserialport ) usb? ( virtual/libusb:1 ) test? ( >=dev-libs/check-0.9.4 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=provide basic hardware drivers for logic analyzers and input/output file format support
 EAPI=5
 HOMEPAGE=http://sigrok.org/wiki/Libsigrok
@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=!static-libs? ( >=dev-libs/glib-2.32.0 >=dev-libs/libzip-0.8 ftdi? ( >=dev-embedded/libftdi-0.16 ) serial? ( dev-libs/libserialport ) usb? ( virtual/libusb:1 ) ) static-libs? ( >=dev-libs/glib-2.32.0[static-libs(+)] >=dev-libs/libzip-0.8[static-libs(+)] ftdi? ( >=dev-embedded/libftdi-0.16[static-libs(+)] ) serial? ( dev-libs/libserialport[static-libs(+)] ) usb? ( virtual/libusb:1[static-libs(+)] ) )
 SLOT=0
 SRC_URI=http://sigrok.org/download/source/libsigrok/libsigrok-0.3.0.tar.gz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=e3b0dada3d8a3fcc84f4f257934382c9

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=mpi? ( virtual/mpi[romio] ) szip? ( >=sci-libs/szip-2.1:0= ) zlib? ( sys-libs/zlib:0= ) sys-devel/libtool:2 >=sys-devel/autoconf-2.69 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool fortran? ( virtual/fortran )
+DEPEND=mpi? ( virtual/mpi[romio] ) szip? ( >=sci-libs/szip-2.1:0= ) zlib? ( sys-libs/zlib:0= ) sys-devel/libtool:2 >=sys-devel/autoconf-2.69 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool fortran? ( virtual/fortran )
 DESCRIPTION=General purpose library and file format for storing scientific data
 EAPI=5
 HOMEPAGE=http://www.hdfgroup.org/HDF5/
@@ -10,5 +10,5 @@ RDEPEND=mpi? ( virtual/mpi[romio] ) szip? ( >=sci-libs/szip-2.1:0= ) zlib? ( sys
 REQUIRED_USE=cxx? ( !mpi ) mpi? ( !cxx ) threads? ( !cxx !mpi !fortran ) fortran2003? ( fortran )
 SLOT=0/1.8.13
 SRC_URI=http://www.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.13/src/hdf5-1.8.13.tar.bz2
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	autotools-utils	3727db64c7b960903d5033280f108080	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	autotools-utils	3727db64c7b960903d5033280f108080	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=f6a61bfd5678a226a6d69a0cd2b33a2e

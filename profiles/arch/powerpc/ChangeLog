@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.273 2014/08/08 13:35:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.274 2014/08/12 12:02:00 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  Mask USE=rbd on sys-block/fio since it pulls in ceph which is broken
 
   08 Aug 2014; Anthony G. Basile <blueness@gentoo.org> package.mask:
   Remove mask on dev-texlive/texlive-* tested okay on ppc and ppc64, bug

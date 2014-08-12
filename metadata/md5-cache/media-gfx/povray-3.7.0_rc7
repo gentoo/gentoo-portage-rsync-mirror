@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install preinst prepare test
-DEPEND=>=dev-libs/boost-1.50.0:=[threads(+)] media-libs/libpng:0 sys-libs/zlib virtual/jpeg mkl? ( sci-libs/mkl ) openexr? ( media-libs/ilmbase media-libs/openexr ) tiff? ( media-libs/tiff:0 ) X? ( media-libs/libsdl ) sys-devel/boost-m4 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+DEPEND=>=dev-libs/boost-1.50.0:=[threads(+)] media-libs/libpng:0 sys-libs/zlib virtual/jpeg mkl? ( sci-libs/mkl ) openexr? ( media-libs/ilmbase media-libs/openexr ) tiff? ( media-libs/tiff:0 ) X? ( media-libs/libsdl ) sys-devel/boost-m4 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
 DESCRIPTION=The Persistence of Vision Raytracer
 EAPI=5
 HOMEPAGE=http://www.povray.org/
@@ -9,5 +9,5 @@ LICENSE=povlegal-3.6
 RDEPEND=>=dev-libs/boost-1.50.0:=[threads(+)] media-libs/libpng:0 sys-libs/zlib virtual/jpeg mkl? ( sci-libs/mkl ) openexr? ( media-libs/ilmbase media-libs/openexr ) tiff? ( media-libs/tiff:0 ) X? ( media-libs/libsdl )
 SLOT=0
 SRC_URI=http://www.povray.org/redirect/www.povray.org/beta/source/povray-3.7.0.RC7.tar.bz2
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	autotools-utils	3727db64c7b960903d5033280f108080	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	autotools-utils	3727db64c7b960903d5033280f108080	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=1e52a2cc83d8e9f75f63eaa6c65f5af6

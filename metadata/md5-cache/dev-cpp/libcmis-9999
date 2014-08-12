@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst postrm prepare unpack
-DEPEND=!dev-cpp/libcmis:0 dev-libs/boost:= dev-libs/libxml2 net-misc/curl virtual/pkgconfig man? ( app-text/docbook2X dev-libs/libxslt ) test? ( dev-util/cppunit ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+DEPEND=!dev-cpp/libcmis:0 dev-libs/boost:= dev-libs/libxml2 net-misc/curl virtual/pkgconfig man? ( app-text/docbook2X dev-libs/libxslt ) test? ( dev-util/cppunit ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool dev-vcs/git
 DESCRIPTION=C++ client library for the CMIS interface
 EAPI=5
 HOMEPAGE=https://sourceforge.net/projects/libcmis/
@@ -7,5 +7,5 @@ IUSE=static-libs man test
 LICENSE=|| ( GPL-2 LGPL-2 MPL-1.1 )
 RDEPEND=!dev-cpp/libcmis:0 dev-libs/boost:= dev-libs/libxml2 net-misc/curl
 SLOT=0.4
-_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=51f5b3addfb9737b158568e7141aca1d

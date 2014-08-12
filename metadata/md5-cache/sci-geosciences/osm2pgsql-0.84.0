@@ -1,5 +1,5 @@
 DEFINED_PHASES=prepare
-DEPEND=app-arch/bzip2 dev-db/postgresql-base dev-libs/libxml2:2 sci-libs/geos sci-libs/proj sys-libs/zlib lua? ( dev-lang/lua ) pbf? ( dev-libs/protobuf-c ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=app-arch/bzip2 dev-db/postgresql-base dev-libs/libxml2:2 sci-libs/geos sci-libs/proj sys-libs/zlib lua? ( dev-lang/lua ) pbf? ( dev-libs/protobuf-c ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=Converts OSM data to SQL and insert into PostgreSQL db
 EAPI=5
 HOMEPAGE=http://wiki.openstreetmap.org/wiki/Osm2pgsql
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-arch/bzip2 dev-db/postgresql-base dev-libs/libxml2:2 sci-libs/geos sci-libs/proj sys-libs/zlib lua? ( dev-lang/lua ) pbf? ( dev-libs/protobuf-c )
 SLOT=0
 SRC_URI=https://github.com/openstreetmap/osm2pgsql/archive/0.84.0.tar.gz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=150c7cad97627a084722471e237b2a3b

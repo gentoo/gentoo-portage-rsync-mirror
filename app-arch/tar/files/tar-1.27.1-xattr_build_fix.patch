@@ -1,49 +1,6 @@
 http://lists.gnu.org/archive/html/bug-tar/2013-12/msg00023.html
 https://bugs.gentoo.org/489170
 
---- tar-1.27.1/acinclude.m4	2013-03-14 21:18:09.000000000 +0100
-+++ tar-1.27.1/acinclude.m4	2013-03-14 21:18:09.000000000 +0100
-@@ -37,18 +37,27 @@
-     [], [with_xattrs=maybe]
-   )
- 
--  AC_CHECK_HEADERS([attr/xattr.h])
--  AM_CONDITIONAL([TAR_COND_XATTR_H],[test "$ac_cv_header_attr_xattr_h" = yes])
--  if test "$ac_cv_header_attr_xattr_h" = yes; then
--    AC_CHECK_FUNCS(getxattr  fgetxattr  lgetxattr \
--                   setxattr  fsetxattr  lsetxattr \
--                   listxattr flistxattr llistxattr,
--        # only when functions are present
--        AC_DEFINE([HAVE_ATTR_XATTR_H], [1],
--                    [define to 1 if we have <attr/xattr.h> header])
--        if test "$with_xattrs" != no; then
--          AC_DEFINE([HAVE_XATTRS],,[Define when we have working linux xattrs.])
--        fi
--    )
-+  AC_CHECK_HEADERS([sys/xattr.h attr/xattr.h])
-+  AM_CONDITIONAL([TAR_COND_XATTR_H],
-+    [test "$ac_cv_header_sys_xattr_h" = yes -o "$ac_cv_header_attr_xattr_h" = yes])
-+
-+  if test "$with_xattrs" != no; then
-+    # If <sys/xattr.h> doesn't exist and <attr/xattr.h> does,
-+    # then link against libattr.so and not libc
-+    if test "$ac_cv_header_sys_xattr_h" = no -a "$ac_cv_header_attr_xattr_h" = yes; then
-+      AC_CHECK_LIB([attr],[fgetxattr])
-+    fi
-+    have_functions=yes
-+    for xattr_func in getxattr  fgetxattr  lgetxattr \
-+                      setxattr  fsetxattr  lsetxattr \
-+                      listxattr flistxattr llistxattr; do \
-+      AC_SEARCH_LIBS([$xattr_func], [attr],, [have_functions=no])
-+      test $have_functions = no && break
-+    done
-+    if test $have_functions = yes; then
-+      AC_DEFINE([HAVE_XATTRS],[1],[Define when we have working linux xattrs.])
-+    else
-+      test "$with_xattrs" = yes && AC_MSG_ERROR([xattr support requested but not found.])
-+    fi
-   fi
- ])
 --- tar-1.27.1/configure	2013-11-17 17:18:39.000000000 +0100
 +++ tar-1.27.1/configure	2013-11-17 17:18:39.000000000 +0100
 @@ -33619,19 +33619,20 @@

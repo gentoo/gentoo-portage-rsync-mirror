@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst prepare prerm setup
-DEPEND=>=sys-libs/db-4.2 >=sys-libs/zlib-1.1.4 >=media-libs/libpng-1.2 >=media-libs/gd-1.8.3 dev-libs/geoip >=app-admin/webapp-config-1.50.15 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=sys-libs/db-4.2 >=sys-libs/zlib-1.1.4 >=media-libs/libpng-1.2 >=media-libs/gd-1.8.3 dev-libs/geoip >=app-admin/webapp-config-1.50.15 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=Webserver log file analyzer
 EAPI=2
 HOMEPAGE=http://sysd.org/stas/node/10
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-libs/db-4.2 >=sys-libs/zlib-1.1.4 >=media-libs/libpng-1.2 >=media-libs/gd-1.8.3 dev-libs/geoip >=app-admin/webapp-config-1.50.15
 SLOT=0
 SRC_URI=ftp://ftp.mrunix.net/pub/webalizer/old/webalizer-2.01-10-src.tar.bz2 http://sysd.org/stas/files/active/0/geolizer_2.01-10-patch.20070115.tar.gz mirror://gentoo/webalizer.conf.gz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=75d0b2ddf3522d02c648a7540612b6eb

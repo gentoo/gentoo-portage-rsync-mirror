@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst postrm prepare setup
-DEPEND=ldap? ( net-nds/openldap ) dev-lang/swig >=sys-kernel/linux-headers-2.6.23 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2*
+DEPEND=ldap? ( net-nds/openldap ) dev-lang/swig >=sys-kernel/linux-headers-2.6.23 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool =dev-lang/python-2*
 DESCRIPTION=Userspace utilities for storing and processing auditing records
 EAPI=3
 HOMEPAGE=http://people.redhat.com/sgrubb/audit/
@@ -10,5 +10,5 @@ RDEPEND=ldap? ( net-nds/openldap ) =dev-lang/python-2*
 RESTRICT=test
 SLOT=0
 SRC_URI=http://people.redhat.com/sgrubb/audit/audit-1.7.18.tar.gz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=c4691670a6b1d69dfddbe160e8a568ea

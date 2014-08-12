@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.128 2014/03/19 13:48:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.129 2014/08/12 12:18:29 vapier Exp $
+
+  12 Aug 2014; Mike Frysinger <vapier@gentoo.org> cpio-2.11-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> cpio-2.11-r1.ebuild:
   Stable for alpha, wrt bug #471402

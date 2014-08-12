@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure prepare
-DEPEND=>=dev-libs/wayland-1.1.90 gnome-base/librsvg media-libs/mesa[gles2,wayland] x11-libs/pixman clients? ( >=x11-libs/cairo-1.10.0 x11-libs/gdk-pixbuf dev-libs/glib:2 x11-libs/libxkbcommon media-libs/libpng app-text/poppler ) colord? ( x11-misc/colord ) debug? ( sys-libs/libunwind ) drm? ( >=virtual/udev-136 >=x11-libs/libdrm-2.4.30 media-libs/mesa[gbm] ) egl? ( media-libs/mesa[egl] ) gles2? ( x11-libs/cairo[gles2] ) rdp? ( >=net-misc/freerdp-1.1.0_beta1_p20130710 ) x11? ( x11-libs/libxcb x11-libs/libX11 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-libs/wayland-1.1.90 gnome-base/librsvg media-libs/mesa[gles2,wayland] x11-libs/pixman clients? ( >=x11-libs/cairo-1.10.0 x11-libs/gdk-pixbuf dev-libs/glib:2 x11-libs/libxkbcommon media-libs/libpng app-text/poppler ) colord? ( x11-misc/colord ) debug? ( sys-libs/libunwind ) drm? ( >=virtual/udev-136 >=x11-libs/libdrm-2.4.30 media-libs/mesa[gbm] ) egl? ( media-libs/mesa[egl] ) gles2? ( x11-libs/cairo[gles2] ) rdp? ( >=net-misc/freerdp-1.1.0_beta1_p20130710 ) x11? ( x11-libs/libxcb x11-libs/libX11 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=Wayland reference compositor
 EAPI=5
 HOMEPAGE=http://wayland.freedesktop.org/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/wayland-1.1.90 gnome-base/librsvg media-libs/mesa[gles2,wayla
 REQUIRED_USE=rpi? ( !drm !egl gles2 )
 SLOT=0
 SRC_URI=http://wayland.freedesktop.org/releases/weston-1.2.0.tar.xz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=fb6961c92ed893768696f47cb856d8f5

@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst preinst prepare setup
-DEPEND=dev-libs/openssl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( sys-libs/pam ) readline? ( sys-libs/readline ) selinux? ( sys-libs/libselinux sec-policy/selinux-ipsec ) >=sys-kernel/linux-headers-2.6.30 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=dev-libs/openssl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( sys-libs/pam ) readline? ( sys-libs/readline ) selinux? ( sys-libs/libselinux sec-policy/selinux-ipsec ) >=sys-kernel/linux-headers-2.6.30 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=A port of KAME's IPsec utilities to the Linux-2.6 IPsec implementation
 EAPI=4
 HOMEPAGE=http://ipsec-tools.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=BSD GPL-2
 RDEPEND=dev-libs/openssl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( sys-libs/pam ) readline? ( sys-libs/readline ) selinux? ( sys-libs/libselinux sec-policy/selinux-ipsec )
 SLOT=0
 SRC_URI=mirror://sourceforge/ipsec-tools/ipsec-tools-0.8.0.tar.bz2
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=e02cf966505200802e6c9847109db1ab

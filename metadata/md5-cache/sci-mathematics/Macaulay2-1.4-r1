@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test
-DEPEND=sys-libs/gdbm >=dev-libs/ntl-5.5.2 >=sci-mathematics/pari-2.3.4[gmp] >=sys-libs/readline-6.1 dev-libs/libxml2:2 sci-mathematics/frobby sci-mathematics/4ti2 sci-mathematics/nauty >=sci-mathematics/normaliz-2.5 <sci-mathematics/normaliz-2.7 sci-mathematics/gfan >=dev-libs/mpfr-3.0.0 >=sci-libs/mpir-2.1.1[cxx] sci-libs/cddlib sci-libs/cdd+ sci-libs/lrslib[gmp] virtual/blas virtual/lapack dev-util/ctags sys-libs/ncurses sys-process/time emacs? ( virtual/emacs ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=sys-libs/gdbm >=dev-libs/ntl-5.5.2 >=sci-mathematics/pari-2.3.4[gmp] >=sys-libs/readline-6.1 dev-libs/libxml2:2 sci-mathematics/frobby sci-mathematics/4ti2 sci-mathematics/nauty >=sci-mathematics/normaliz-2.5 <sci-mathematics/normaliz-2.7 sci-mathematics/gfan >=dev-libs/mpfr-3.0.0 >=sci-libs/mpir-2.1.1[cxx] sci-libs/cddlib sci-libs/cdd+ sci-libs/lrslib[gmp] virtual/blas virtual/lapack dev-util/ctags sys-libs/ncurses sys-process/time emacs? ( virtual/emacs ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=research tool for commutative algebra and algebraic geometry
 EAPI=2
 HOMEPAGE=http://www.math.uiuc.edu/Macaulay2/
@@ -10,5 +10,5 @@ RDEPEND=sys-libs/gdbm >=dev-libs/ntl-5.5.2 >=sci-mathematics/pari-2.3.4[gmp] >=s
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.math.uiuc.edu/Macaulay2/Downloads//OtherSourceCode/1.4/factory-3-1-1.tar.gz http://www.math.uiuc.edu/Macaulay2/Downloads//OtherSourceCode/1.4/libfac-3-1-1.tar.gz http://www.math.uiuc.edu/Macaulay2/Extra/gc-7.2alpha5-2010-09-03.tar.gz http://www.math.uiuc.edu/Macaulay2/Downloads//SourceCode/Macaulay2-1.4-r12617-src.tar.bz2
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=169dbda86bd006edf411f832f263a7b0

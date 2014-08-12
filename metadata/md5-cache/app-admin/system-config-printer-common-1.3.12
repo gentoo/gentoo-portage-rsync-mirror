@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup
-DEPEND=>=dev-libs/glib-2 dev-libs/libxml2[python] dev-python/dbus-python >=dev-python/pycups-1.9.60 dev-python/pycurl >=dev-python/pygobject-2.21.5:2 net-print/cups[dbus] >=virtual/udev-172 virtual/libusb:1 dev-util/intltool virtual/pkgconfig doc? ( dev-python/epydoc ) !<sys-devel/gettext-0.18.1.1-r3 =sys-devel/automake-1.11* >=sys-devel/autoconf-2.68 sys-devel/libtool || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) virtual/pkgconfig
+DEPEND=>=dev-libs/glib-2 dev-libs/libxml2[python] dev-python/dbus-python >=dev-python/pycups-1.9.60 dev-python/pycurl >=dev-python/pygobject-2.21.5:2 net-print/cups[dbus] >=virtual/udev-172 virtual/libusb:1 dev-util/intltool virtual/pkgconfig doc? ( dev-python/epydoc ) !<sys-devel/gettext-0.18.1.1-r3 =sys-devel/automake-1.11* >=sys-devel/autoconf-2.69 sys-devel/libtool || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) virtual/pkgconfig
 DESCRIPTION=Common modules of Red Hat's printer administration tool
 EAPI=4
 HOMEPAGE=http://cyberelk.net/tim/software/system-config-printer/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2 dev-libs/libxml2[python] dev-python/dbus-python >=dev-
 RESTRICT=test
 SLOT=0
 SRC_URI=http://cyberelk.net/tim/data/system-config-printer/1.3/system-config-printer-1.3.12.tar.xz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	da001465a2e939c93f7ae16947ce3438
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=1f6329ed7dc65f27574f67548d1e45ee

@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=>=sys-libs/ncurses-5.9-r1[unicode?] nls? ( sys-devel/gettext ) !ncurses? ( slang? ( sys-libs/slang ) ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=sys-libs/ncurses-5.9-r1[unicode?] nls? ( sys-devel/gettext ) !ncurses? ( slang? ( sys-libs/slang ) ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=GNU GPL'd Pico clone with more functionality
 EAPI=3
 HOMEPAGE=http://www.nano-editor.org/
@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=sys-libs/ncurses-5.9-r1[unicode?] nls? ( sys-devel/gettext ) !ncurses? ( slang? ( sys-libs/slang ) )
 SLOT=0
 SRC_URI=http://www.nano-editor.org/dist/v2.3/nano-2.3.1.tar.gz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=86b4d590782eac22f92c2ff63fe9b0f5

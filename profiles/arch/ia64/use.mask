@@ -111,6 +111,9 @@ xemacs
 # Needs to be tested
 video_cards_nouveau
 
+# Matt Turner <mattst88@gmail.com> (06 May 2011)
+# media-sound/mumble not keyworded on ppc
+mumble
 
 # Samuli Suominen <ssuominen@gentoo.org> (02 Dec 2009)
 # This will need media-sound/musepack-tools

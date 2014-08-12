@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-libs/geoip-1.4.0 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-4? ( dev-lang/php:5.4 )
+DEPEND=>=dev-libs/geoip-1.4.0 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-4? ( dev-lang/php:5.4 )
 DESCRIPTION=PHP extension to map IP address to geographic places
 EAPI=5
 HOMEPAGE=http://pecl.php.net/geoip
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/geoip-1.4.0 php_targets_php5-5? ( dev-lang/php:5.5 ) php_targ
 REQUIRED_USE=|| ( php_targets_php5-5 php_targets_php5-4 )
 SLOT=0
 SRC_URI=http://pecl.php.net/get/geoip-1.0.8.tgz
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=000ea5040aa2601784bde654c72909e2

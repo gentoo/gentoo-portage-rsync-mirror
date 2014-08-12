@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare setup test unpack
-DEPEND=virtual/blas virtual/lapack mpi? ( virtual/mpi[fortran] ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/fortran
+DEPEND=virtual/blas virtual/lapack mpi? ( virtual/mpi[fortran] ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool virtual/fortran
 DESCRIPTION=Arnoldi package library to solve large scale eigenvalue problems
 EAPI=4
 HOMEPAGE=http://www.caam.rice.edu/software/ARPACK/
@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=virtual/blas virtual/lapack mpi? ( virtual/mpi[fortran] ) virtual/fortran
 SLOT=0
 SRC_URI=http://www.caam.rice.edu/software/ARPACK/SRC/arpack96.tar.gz http://www.caam.rice.edu/software/ARPACK/SRC/parpack96.tar.gz http://dev.gentoo.org/~bicatali/arpack-96-patches-2.tar.bz2 doc? ( http://www.caam.rice.edu/software/ARPACK/SRC/ug.ps.gz http://www.caam.rice.edu/software/ARPACK/DOCS/tutorial.ps.gz )
-_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=e96c69569f0d1edc2be6ec6b8c02656e
