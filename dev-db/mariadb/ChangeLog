@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.46 2014/08/08 22:07:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.47 2014/08/12 17:16:36 grknight Exp $
+
+*mariadb-10.0.13 (12 Aug 2014)
+
+  12 Aug 2014;  <grknight@gentoo.org> +mariadb-10.0.13.ebuild:
+  Version bump
 
   08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mariadb-5.5.39.ebuild:
   Stable for x86, wrt bug #474800
