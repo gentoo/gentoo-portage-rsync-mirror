@@ -2706,10 +2706,8 @@ games-simulation/corsix-th:sdl - Use SDL for rendering.
 games-simulation/corsix-th:sound - Use SDL mixer for in-game sound.
 games-simulation/corsix-th:truetype - Use high quality fonts.
 games-simulation/flightgear:dbus - Enable screensaver DBus interaction
-games-simulation/flightgear:fgpanel - Enables standalone lightweight 2D-panel rendering utility
 games-simulation/flightgear:jsbsim - Enables JSBSim Flight Dynamics Model (default)
 games-simulation/flightgear:oldfdm - Enables deprecated Flight Dynamics Models (LaRCsim, UIUC)
-games-simulation/flightgear:subversion - Enables terrasync scenery downloader
 games-simulation/flightgear:udev - Enables event-based Input devices through virtual/udev
 games-simulation/flightgear:utils - Builds various utilities (fgpanel, terrasync, fgviewer among others)
 games-simulation/flightgear:yasim - Enables YASim Flight Dynamics Model
@@ -3903,6 +3901,7 @@ media-sound/jack-audio-connection-kit:pam - Add basic realime configuration via 
 media-sound/jalv:gtk2 - Adds support for GTK+2 in addition to GTK+3 controlled by the gtk useflag.
 media-sound/jalv:gtkmm - Adds support for dev-cpp/gtkmm: C++ interface for GTK+2
 media-sound/kid3:acoustid - Enable support for acoustic fingerprinting plugin using (media-libs/chromaprint)
+media-sound/kid3:phonon - Enable sound support via media-libs/phonon or dev-qt/qtphonon
 media-sound/kwave:opus - Enable Opus audio codec support
 media-sound/kwave:phonon - Enable playback via Phonon
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**

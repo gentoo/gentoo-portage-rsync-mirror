@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nio4r/nio4r-1.0.0.ebuild,v 1.2 2014/05/07 05:19:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nio4r/nio4r-1.0.0.ebuild,v 1.3 2014/08/12 22:46:53 blueness Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ HOMEPAGE="https://github.com/celluloid/nio4r"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE=""
 
 RDEPEND+=" dev-libs/libev"

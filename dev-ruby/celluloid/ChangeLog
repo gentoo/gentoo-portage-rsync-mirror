@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/celluloid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/ChangeLog,v 1.8 2014/03/31 01:28:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/ChangeLog,v 1.9 2014/08/12 22:45:35 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  celluloid-0.15.2-r2.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519596
 
   31 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -celluloid-0.15.2-r1.ebuild:
   Cleanup old.

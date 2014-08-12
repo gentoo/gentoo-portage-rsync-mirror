@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/listen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.33 2014/08/11 02:12:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.34 2014/08/12 22:48:59 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> listen-2.7.5.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519596
 
   11 Aug 2014; Manuel Rüger <mrueg@gentoo.org> listen-2.7.5.ebuild:
   Fix gemspec.
