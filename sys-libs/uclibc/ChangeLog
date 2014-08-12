@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.92 2014/08/04 01:55:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.93 2014/08/12 06:47:41 vapier Exp $
+
+  12 Aug 2014; Mike Frysinger <vapier@gentoo.org> uclibc-0.9.33.2-r12.ebuild,
+  uclibc-9999.ebuild:
+  Die if people try USE=nptl w/i386 targets.
 
 *uclibc-0.9.33.2-r12 (04 Aug 2014)
 

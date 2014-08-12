@@ -5,9 +5,16 @@
     <email>pinkbyte@gentoo.org</email>
     <name>Sergey Popov</name>
   </maintainer>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+    <name>Justin Lecher</name>
+  </maintainer>
   <upstream>
     <remote-id type="github">ansible/ansible</remote-id>
     <bugs-to>https://github.com/ansible/ansible/issues</bugs-to>
   </upstream>
-  <longdescription lang="en">Radically simple deployment, model-driven configuration management, and command execution framework.</longdescription>
+  <longdescription lang="en">
+Radically simple deployment, model-driven configuration management, and 
+command execution framework.
+</longdescription>
 </pkgmetadata>

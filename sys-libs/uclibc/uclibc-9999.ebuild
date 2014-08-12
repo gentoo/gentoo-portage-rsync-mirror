@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-9999.ebuild,v 1.6 2013/05/19 05:36:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-9999.ebuild,v 1.7 2014/08/12 06:47:41 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs savedconfig
 if [[ ${PV} == "9999" ]] ; then
@@ -78,6 +78,14 @@ check_cpu_opts() {
 	i[3456]86*)  export UCLIBC_CPU="${CTARGET:1:1}86";;
 	# XXX: Should figure out how to handle sparc.
 	esac
+
+	if use nptl ; then
+		case ${CTARGET} in
+		i386*)
+			die "Your target has no support for NPTL"
+			;;
+		esac
+	fi
 }
 
 kconfig_q_opt() {
