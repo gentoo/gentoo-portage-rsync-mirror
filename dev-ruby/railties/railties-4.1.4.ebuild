@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-4.1.4.ebuild,v 1.2 2014/08/05 16:00:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-4.1.4.ebuild,v 1.3 2014/08/12 21:41:28 blueness Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -21,7 +21,7 @@ SRC_URI="http://github.com/rails/rails/archive/v${PV}.tar.gz -> rails-${PV}.tgz"
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64 ~arm"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64"
 IUSE=""
 
 RUBY_S="rails-${PV}/${PN}"

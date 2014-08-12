@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.85 2014/08/05 16:00:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.86 2014/08/12 21:41:28 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> railties-3.2.19.ebuild,
+  railties-4.0.8.ebuild, railties-4.1.4.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> railties-3.2.19.ebuild,
   railties-4.0.8.ebuild, railties-4.1.4.ebuild:
