@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.10.ebuild,v 1.1 2014/08/12 11:05:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.10.ebuild,v 1.2 2014/08/12 19:25:17 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -64,14 +64,6 @@ REQUIRED_USE="
 	)"
 
 want_apache
-
-pkg_pretend() {
-	if use test && ! has_version ~${CATEGORY}/${P} ; then
-		ewarn "The test suite shows errors when there is an older version of"
-		ewarn "${CATEGORY}/${PN} installed."
-		die "Tests will fail due to old version of this package being installed."
-	fi
-}
 
 pkg_setup() {
 	if use berkdb ; then
@@ -295,26 +287,33 @@ src_compile() {
 }
 
 src_test() {
-	default
+	if has_version ~${CATEGORY}/${P} ; then
+		default
 
-	if use ctypes-python ; then
-		python_test() {
-			"${PYTHON}" subversion/bindings/ctypes-python/test/run_all.py \
-				|| die "ctypes-python tests fail with ${EPYTHON}"
-		}
+		if use ctypes-python ; then
+			python_test() {
+				"${PYTHON}" subversion/bindings/ctypes-python/test/run_all.py \
+					|| die "ctypes-python tests fail with ${EPYTHON}"
+			}
 
-		distutils-r1_src_test
-	fi
+			distutils-r1_src_test
+		fi
 
-	if use python ; then
-		swig_py_test() {
-			pushd "${BUILD_DIR}" >/dev/null || die
-			"${PYTHON}" tests/run_all.py || die "swig-py tests fail with ${EPYTHON}"
-			popd >/dev/null || die
-		}
+		if use python ; then
+			swig_py_test() {
+				pushd "${BUILD_DIR}" >/dev/null || die
+				"${PYTHON}" tests/run_all.py || die "swig-py tests fail with ${EPYTHON}"
+				popd >/dev/null || die
+			}
 
-		BUILD_DIR=subversion/bindings/swig/python \
-		python_foreach_impl swig_py_test
+			BUILD_DIR=subversion/bindings/swig/python \
+			python_foreach_impl swig_py_test
+		fi
+	else
+		ewarn "The test suite shows errors when there is an older version of"
+		ewarn "${CATEGORY}/${PN} installed. Please install =${CATEGORY}/${P}*"
+		ewarn "before running the test suite."
+		ewarn "Test suite skipped."
 	fi
 }
 
