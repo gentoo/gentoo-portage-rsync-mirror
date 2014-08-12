@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.268 2014/08/02 07:04:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.269 2014/08/12 20:27:16 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  actionmailer-3.2.19.ebuild, actionmailer-4.0.8.ebuild,
+  actionmailer-4.1.4.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
   02 Aug 2014; Hans de Graaff <graaff@gentoo.org> actionmailer-3.2.19.ebuild:
   Avoid a implicit dependency on dev-ruby/mysql with FEATURES=test, fixing bug
