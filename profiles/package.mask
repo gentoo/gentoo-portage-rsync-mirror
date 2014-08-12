@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15963 2014/08/11 21:40:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15964 2014/08/12 07:25:28 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -420,15 +420,6 @@ dev-java/ibm-jdk-bin:1.5
 # patching from upstream to be added to this version.
 # Masked until py3.4 support is added to media-gfx/cairosvg
 =dev-python/weasyprint-0.22
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (19 May 2014)
-# Masked until dev-libs/glib supports the new timezone format, bug #510422
-=sys-libs/timezone-data-2014c
-
-# Ryan Hill <rhill@gentoo.org> (18 May 2014)
-# Masked for testing.
-# Tracker: https://bugs.gentoo.org/495124
->=sys-devel/gcc-4.9.0
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (14 May 2014)
 # Depends on libevdev which still needs keywording, bug #487944

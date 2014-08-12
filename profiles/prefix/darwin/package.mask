@@ -1,7 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.41 2014/01/14 20:03:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.42 2014/08/12 07:14:10 grobian Exp $
 
+
+# Fabian Groffen <grobian@gentoo.org> (12 Aug 2014)
+# Fails to compile on xattr stuff, next release should solve that, #518444
+=app-arch/tar-1.28
 
 # Fabian Groffen <grobian@gentoo.org> (14 Jan 2014)
 # util-linux has no business on Darwin systems

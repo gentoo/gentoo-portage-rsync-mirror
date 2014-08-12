@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kiwi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.26 2013/08/03 09:45:42 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.27 2014/08/12 07:16:31 idella4 Exp $
+
+*kiwi-1.9.39.2 (12 Aug 2014)
+
+  12 Aug 2014; Ian Delaney <idella4@gentoo.org> +kiwi-1.9.39.2.ebuild:
+  bump; drop py2.6, update deps, re-instate test phase
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> kiwi-1.9.34.ebuild,
   kiwi-1.9.35.ebuild, kiwi-1.9.36.ebuild, kiwi-1.9.36.2.ebuild,

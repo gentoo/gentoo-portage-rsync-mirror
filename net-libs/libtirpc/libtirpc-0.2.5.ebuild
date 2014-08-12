@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.5.ebuild,v 1.1 2014/08/09 13:42:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.5.ebuild,v 1.2 2014/08/12 07:14:49 vapier Exp $
 
 EAPI="4"
 
@@ -29,6 +29,10 @@ RDEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cp -r tirpc "${S}"/ || die
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-stdarg.patch
 }
 
 multilib_src_configure() {

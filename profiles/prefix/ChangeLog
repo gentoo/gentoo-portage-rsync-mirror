@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.426 2014/07/28 13:48:19 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.427 2014/08/12 07:14:10 grobian Exp $
+
+  12 Aug 2014; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Mask tar-1.28 on Darwin for bug #518444
 
   28 Jul 2014; Michael Haubenwallner <haubi@gentoo.org> linux/profile.bashrc:
   (<glibc-2.6) -fgnu89-inline is for C only; allow user to override.

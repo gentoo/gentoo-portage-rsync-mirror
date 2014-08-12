@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9297 2014/08/11 21:40:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9298 2014/08/12 07:25:27 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Aug 2014; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Drop gcc-4.9 mask as we already have KEYWORDS="". Drop old timezone-data
+  mask as we've stabilized newer versions.
 
   11 Aug 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Tree-clean virtual/python-{argparse,unittest2}.
