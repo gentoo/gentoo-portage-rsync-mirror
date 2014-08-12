@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.334 2014/07/23 16:53:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.335 2014/08/12 17:41:19 kensington Exp $
+
+  12 Aug 2014; Michael Palimaka <kensington@gentoo.org>
+  kdebase-meta-4.13.3.ebuild, metadata.xml:
+  Add display-manager USE flag.
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org> -kdebase-meta-4.13.2.ebuild:
   Remove KDE SC 4.13.2

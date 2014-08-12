@@ -2927,6 +2927,7 @@ kde-base/kdeartwork-kscreensaver:eigen - Enable various arithmetic screensavers 
 kde-base/kdeartwork-kscreensaver:kexiv2 - Enable image rotation based on exif tags with libkexiv2.
 kde-base/kdebase-data:wallpapers - Install the KDE wallpapers
 kde-base/kdebase-kioslaves:sftp - Enable SFTP protocol support using net-libs/libssh
+kde-base/kdebase-meta:display-manager - Pull in a graphical display manager
 kde-base/kdebase-meta:wallpapers - Install the KDE wallpapers
 kde-base/kdebase-runtime-meta:crash-reporter - Builds a gui tool to submit crash information to the upstream backtracker
 kde-base/kdebase-runtime-meta:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)

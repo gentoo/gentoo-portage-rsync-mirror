@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.13.3.ebuild,v 1.1 2014/07/16 17:40:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.13.3.ebuild,v 1.2 2014/08/12 17:41:19 kensington Exp $
 
 EAPI=5
 inherit kde4-meta-pkg
 
 DESCRIPTION="Merge this to pull in all kdebase-derived packages"
 KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
-IUSE="+wallpapers"
+IUSE="+display-manager +wallpapers"
 
 RDEPEND="
 	$(add_kdebase_dep dolphin)
@@ -57,5 +57,5 @@ RDEPEND="
 	$(add_kdebase_dep qguiplatformplugin_kde '' 4.11)
 	$(add_kdebase_dep solid-actions-kcm '' 4.11)
 	$(add_kdebase_dep systemsettings '' 4.11)
-	!prefix? ( $(add_kdebase_dep kdm '' 4.11) )
+	!prefix? ( display-manager? ( || ( $(add_kdebase_dep kdm '' 4.11) x11-misc/lightdm x11-misc/sddm ) ) )
 "
