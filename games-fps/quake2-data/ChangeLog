@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake2-data
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/ChangeLog,v 1.17 2013/03/29 16:10:32 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/ChangeLog,v 1.18 2014/08/12 11:32:42 vapier Exp $
+
+  12 Aug 2014; Mike Frysinger <vapier@gentoo.org> quake2-data-3.20.ebuild:
+  Add ia64 love #509214 by Émeric Maschino.
 
   29 Mar 2013; Julian Ospald <hasufell@gentoo.org> quake2-data-3.20.ebuild:
   use unpack_zip from unpacker.eclass instead of unzip

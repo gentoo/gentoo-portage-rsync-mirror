@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.27 2013/03/29 16:10:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.28 2014/08/12 11:32:42 vapier Exp $
 
 EAPI=2
 inherit unpacker eutils cdrom games
@@ -11,7 +11,7 @@ SRC_URI="mirror://idsoftware/quake2/q2-${PV}-x86-full-ctf.exe"
 
 LICENSE="Q2EULA"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc sparc x86 ~x86-fbsd"
 IUSE="videos"
 
 DEPEND="app-arch/unzip"

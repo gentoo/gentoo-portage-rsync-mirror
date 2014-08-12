@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.27 2014/05/24 21:04:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.28 2014/08/12 12:01:00 vapier Exp $
 
 # quake3-9999          -> latest git
 # quake3-9999.REV      -> use git REV
@@ -60,10 +60,7 @@ my_arch() {
 }
 
 my_platform() {
-	case "${ARCH}" in
-		alpha|amd64|ppc|x86)  echo "linux" ;;
-		x86-fbsd)             echo "freebsd" ;;
-	esac
+	usex kernel_linux linux freebsd
 }
 
 src_compile() {

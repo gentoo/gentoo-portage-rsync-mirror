@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.18 2012/02/05 06:15:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.19 2014/08/12 11:33:36 vapier Exp $
 
 CDROM_OPTIONAL="yes"
 inherit eutils unpacker cdrom games
@@ -11,7 +11,7 @@ SRC_URI="mirror://idsoftware/quake3/linux/linuxq3apoint-${PV}-3.x86.run"
 
 LICENSE="Q3AEULA"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}
