@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/corosync
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.30 2013/10/17 12:39:46 ultrabug Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.31 2014/08/12 15:27:41 ultrabug Exp $
+
+*corosync-2.3.3 (12 Aug 2014)
+*corosync-1.4.7 (12 Aug 2014)
+
+  12 Aug 2014; Ultrabug <ultrabug@gentoo.org> -corosync-1.3.3-r1.ebuild,
+  -corosync-1.4.3-r1.ebuild, -corosync-1.4.4.ebuild, +corosync-1.4.7.ebuild,
+  -corosync-2.3.1.ebuild, -corosync-2.3.2.ebuild, +corosync-2.3.3.ebuild:
+  version bump, drop old ebuilds
 
 *corosync-2.3.2 (17 Oct 2013)
 

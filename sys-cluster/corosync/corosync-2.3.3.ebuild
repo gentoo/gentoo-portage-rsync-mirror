@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-2.3.2.ebuild,v 1.1 2013/10/17 12:39:46 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-2.3.3.ebuild,v 1.1 2014/08/12 15:27:41 ultrabug Exp $
 
 EAPI=4
 
 inherit autotools base
 
-MY_TREE="2c7906d"
+MY_TREE="32ec81c"
 
 DESCRIPTION="OSI Certified implementation of a complete cluster engine"
 HOMEPAGE="http://www.corosync.org/"
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/corosync/corosync/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD-2 public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="doc infiniband static-libs"
 
 # TODO: support those new configure flags
@@ -65,4 +65,15 @@ src_install() {
 
 	keepdir /var/lib/corosync
 	use static-libs || rm -rf "${D}"/usr/$(get_libdir)/*.a || die
+}
+
+pkg_postinst() {
+	if [[ ${REPLACING_VERSIONS} < 2.0 ]]; then
+		ewarn "!! IMPORTANT !!"
+		ewarn " "
+		ewarn "Migrating from a previous version of corosync can be dangerous !"
+		ewarn " "
+		ewarn "Make sure you backup your cluster configuration before proceeding"
+		ewarn " "
+	fi
 }
