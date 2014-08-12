@@ -9,5 +9,5 @@ LICENSE=GPL-2-with-linking-exception
 RDEPEND=sys-libs/zlib net-libs/http-parser ssh? ( net-libs/libssh2 )
 SLOT=0/21
 SRC_URI=https://github.com/libgit2/libgit2/archive/v0.21.0.tar.gz -> libgit2-0.21.0.tar.gz
-_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=33d6e2f1bcc9ea07dc3f65bb1cca8f05

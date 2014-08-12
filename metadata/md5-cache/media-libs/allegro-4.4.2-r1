@@ -9,5 +9,5 @@ LICENSE=Allegro MIT GPL-2+ ZLIB
 RDEPEND=alsa? ( media-libs/alsa-lib ) jack? ( media-sound/jack-audio-connection-kit ) jpeg? ( virtual/jpeg ) png? ( media-libs/libpng:0= ) svga? ( media-libs/svgalib ) vorbis? ( media-libs/libvorbis ) X? ( x11-libs/libX11 x11-libs/libXcursor x11-libs/libXext x11-libs/libXpm x11-libs/libXt x11-libs/libXxf86dga x11-libs/libXxf86vm opengl? ( virtual/glu virtual/opengl ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/alleg/allegro-4.4.2.tar.gz
-_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=ede1ad8a414a3618d1c1c47b4d6bc110

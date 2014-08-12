@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libpcre media-libs/portaudio sci-libs/arpack sci-libs/fftw:3.0 sci-libs/umfpack sys-libs/ncurses virtual/lapack virtual/glu virtual/opengl dev-qt/qtgui:4 dev-qt/qtopengl:4 dev-qt/qtsvg:4 volpack? ( media-libs/volpack )
 SLOT=0
 SRC_URI=mirror://sourceforge/freemat/FreeMat-4.0-Source.tar.gz
-_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=cae6e6150b475e1b623f5e4a9ca10537

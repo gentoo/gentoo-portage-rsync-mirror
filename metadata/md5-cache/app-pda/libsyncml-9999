@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.12 >=dev-libs/libwbxml-0.11.0 dev-libs/libxml2 http? ( net-libs/libsoup:2.4 ) obex? ( net-wireless/bluez >=dev-libs/openobex-1.1[bluetooth] )
 REQUIRED_USE=|| ( http obex )
 SLOT=0
-_eclasses_=cmake-utils	cba1edd09c6c76c5964fab4a5703c328	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=e45a420179006f305f3677a1d00d220e
