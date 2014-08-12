@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1402 2014/08/05 14:19:02 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1403 2014/08/12 19:54:39 dolsen Exp $
+
+*portage-2.2.12 (12 Aug 2014)
+
+  12 Aug 2014; Brian Dolbec <dolsen@gentoo.org> +portage-2.2.12.ebuild:
+  Version bump. Fixes bugs 512578, 519074, 518968. New emaint module "merges".
 
   05 Aug 2014; Brian Dolbec <dolsen@gentoo.org> portage-2.2.11-r1.ebuild,
   portage-9999.ebuild:
@@ -20,7 +25,8 @@
 *portage-2.2.11 (03 Aug 2014)
 
   03 Aug 2014; Brian Dolbec <dolsen@gentoo.org> +portage-2.2.11.ebuild:
-  new portage release
+  new portage release.  Fixes bugs 516428, 517416, 501534, 511984, 487074,
+  512690, 510538, 438976, 506186, 488820, 505944, 505428.
 
   26 Jul 2014; Michał Górny <mgorny@gentoo.org> portage-9999.ebuild:
   Remove code for python2_6 & pypy2_0 which both are removed nowadays.
@@ -119,7 +125,7 @@
   version bump. This fixes the following bugs: bug #395359,
   bug #472104, bug #485920, bug #486580, bug #487198, bug #488972,
   bug #489544, bug #489662, bug #490362, bug #491426, bug #492314.
-  Bug #484436 tracks all bugs since portage-2.2.1. 
+  Bug #484436 tracks all bugs since portage-2.2.1.
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.2.7.ebuild:
   Stable for sparc, wrt bug #488156
