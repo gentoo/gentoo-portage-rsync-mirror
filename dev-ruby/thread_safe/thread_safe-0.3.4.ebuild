@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thread_safe/thread_safe-0.3.4.ebuild,v 1.2 2014/07/07 12:03:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thread_safe/thread_safe-0.3.4.ebuild,v 1.3 2014/08/12 21:28:00 blueness Exp $
 
 EAPI=5
 # jruby → there is code for this in ext but that requires compiling java.
@@ -17,7 +17,7 @@ HOMEPAGE="https://github.com/headius/thread_safe"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 
 # Higher atomic dependency since earlier versions crash on ruby20 while

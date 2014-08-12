@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/kramdown
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.35 2014/08/06 02:23:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.36 2014/08/12 21:19:08 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> kramdown-0.14.2.ebuild,
+  kramdown-1.2.0-r1.ebuild, kramdown-1.4.1.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
 *kramdown-1.4.1 (06 Aug 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/prawn-table-0.1.0.ebuild,v 1.2 2014/08/06 02:15:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/prawn-table-0.1.0.ebuild,v 1.3 2014/08/12 21:18:18 blueness Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -14,7 +14,7 @@ DESCRIPTION="Provides support for tables in Prawn"
 HOMEPAGE="http://prawn.majesticseacreature.com/"
 LICENSE="|| ( GPL-2+ Ruby )"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/mocha

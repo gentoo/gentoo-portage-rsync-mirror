@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/thor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.21 2014/04/19 08:41:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.22 2014/08/12 21:30:54 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> thor-0.15.2.ebuild,
+  thor-0.18.1.ebuild, thor-0.19.1.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
 *thor-0.19.1 (19 Apr 2014)
 

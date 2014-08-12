@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/atomic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/atomic/ChangeLog,v 1.15 2014/07/03 15:17:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/atomic/ChangeLog,v 1.16 2014/08/12 21:27:22 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> atomic-1.1.16.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
   03 Jul 2014; Tobias Klausmann <klausman@gentoo.org> atomic-1.1.16.ebuild:
   Keyworded on alpha, bug #487178

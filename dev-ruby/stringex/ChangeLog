@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/stringex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/ChangeLog,v 1.22 2014/04/19 10:52:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/ChangeLog,v 1.23 2014/08/12 21:05:23 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> stringex-1.5.1.ebuild,
+  stringex-2.0.8.ebuild, stringex-2.4.2.ebuild, stringex-2.5.1.ebuild,
+  stringex-2.5.2.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
   19 Apr 2014; Hans de Graaff <graaff@gentoo.org> stringex-2.5.2.ebuild:
   Add ruby20, ruby21 again. Fix test invocation.

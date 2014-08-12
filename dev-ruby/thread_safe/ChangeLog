@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/thread_safe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thread_safe/ChangeLog,v 1.17 2014/07/07 12:03:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thread_safe/ChangeLog,v 1.18 2014/08/12 21:28:00 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> thread_safe-0.3.4.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
   07 Jul 2014; Tobias Klausmann <klausman@gentoo.org> thread_safe-0.3.4.ebuild:
   Keyworded on alpha, bug #487178
