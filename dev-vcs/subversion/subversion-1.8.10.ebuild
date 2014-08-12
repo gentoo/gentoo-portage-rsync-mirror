@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.8.ebuild,v 1.2 2014/06/10 00:52:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.10.ebuild,v 1.1 2014/08/12 11:05:37 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -58,9 +58,20 @@ DEPEND="${COMMON_DEPEND}
 REQUIRED_USE="
 	ctypes-python? ( ${PYTHON_REQUIRED_USE} )
 	python? ( ${PYTHON_REQUIRED_USE} )
-	test? ( ${PYTHON_REQUIRED_USE} )"
+	test? (
+		${PYTHON_REQUIRED_USE}
+		!dso
+	)"
 
 want_apache
+
+pkg_pretend() {
+	if use test && ! has_version ~${CATEGORY}/${P} ; then
+		ewarn "The test suite shows errors when there is an older version of"
+		ewarn "${CATEGORY}/${PN} installed."
+		die "Tests will fail due to old version of this package being installed."
+	fi
+}
 
 pkg_setup() {
 	if use berkdb ; then
@@ -116,7 +127,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.5.6-aix-dso.patch \
 		"${FILESDIR}"/${PN}-1.8.0-hpux-dso.patch \
 		"${FILESDIR}"/${PN}-fix-parallel-build-support-for-perl-bindings.patch \
-		"${FILESDIR}"/${PN}-1.8.1-revert_bdb6check.patch
+		"${FILESDIR}"/${PN}-1.8.1-revert_bdb6check.patch \
+		"${FILESDIR}"/${PN}-1.8.9-po_fixes.patch
 	epatch_user
 
 	fperms +x build/transform_libtool_scripts.sh
@@ -283,11 +295,6 @@ src_compile() {
 }
 
 src_test() {
-	if ! has_version ~${CATEGORY}/${P} ; then
-		ewarn "The test suite shows errors when there is an older version of"
-		ewarn "${CATEGORY}/${PN} installed."
-	fi
-
 	default
 
 	if use ctypes-python ; then

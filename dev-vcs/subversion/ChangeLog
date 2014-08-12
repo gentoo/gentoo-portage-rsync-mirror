@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.183 2014/08/09 10:48:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.184 2014/08/12 11:05:37 polynomial-c Exp $
+
+*subversion-1.8.10 (12 Aug 2014)
+
+  12 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> -subversion-1.8.8.ebuild,
+  +subversion-1.8.10.ebuild:
+  Security bump (bug #519202). Removed old. Added pkg_pretend which fails if
+  USE=test is set and an old version of this package is installed (bug
+  #516054). Don't run tests with USE=dso.
 
   09 Aug 2014; Agostino Sarubbo <ago@gentoo.org> subversion-1.7.17.ebuild:
   Stable for ppc64, wrt bug #500482
