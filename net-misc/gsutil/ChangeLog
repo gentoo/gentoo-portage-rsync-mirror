@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/gsutil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/ChangeLog,v 1.15 2014/02/25 01:13:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/ChangeLog,v 1.16 2014/08/12 05:12:53 vapier Exp $
+
+*gsutil-4.4 (12 Aug 2014)
+
+  12 Aug 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/gsutil-4.4-use-friendy-version-checks.patch, +gsutil-4.4.ebuild:
+  Version bump #516026 by Bruno Ricci.
 
 *gsutil-3.38 (25 Feb 2014)
 

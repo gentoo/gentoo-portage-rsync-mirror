@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.293 2014/06/18 18:51:54 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.294 2014/08/12 05:20:14 polynomial-c Exp $
+
+*ppp-2.4.7 (12 Aug 2014)
+
+  12 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> +ppp-2.4.7.ebuild:
+  Security bump (bug #519650).
 
 *ppp-2.4.6-r3 (18 Jun 2014)
 
