@@ -340,7 +340,6 @@ app-crypt/gnupg:mta - Build mta support using virtual/mta.
 app-crypt/gnupg:smartcard - Build scdaemon software. Enables usage of OpenPGP cards. For other type of smartcards, try app-crypt/gnupg-pkcs11-scd.
 app-crypt/gnupg:usb - Build direct CCID access for scdaemon; requires dev-libs/libusb.
 app-crypt/gpgme:common-lisp - Install common-lisp files
-app-crypt/gpgme:pth - Enable support for GNU Portable Threads multithreading library
 app-crypt/hashcat-gui:cuda - Install oclhashcat-{plus,lite}-bin to take advantage of hardware cuda support.
 app-crypt/hashcat-gui:opencl - Install oclhashcat-{plus,lite}-bin to take advantage of hardware opencl support.
 app-crypt/heimdal:hdb-ldap - Adds support for LDAP as a database backend
