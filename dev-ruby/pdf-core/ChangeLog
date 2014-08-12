@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/ChangeLog,v 1.6 2014/08/11 10:12:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/ChangeLog,v 1.7 2014/08/12 13:16:19 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> pdf-core-0.2.5.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
   11 Aug 2014; Jeroen Roovers <jer@gentoo.org> pdf-core-0.2.5.ebuild:
   Marked ~hppa (bug #519170).

@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.84 2014/08/06 18:18:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.85 2014/08/12 13:17:02 zlogene Exp $
+
+  12 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> postgrey-1.35.ebuild:
+  Fix newconfd target file
 
 *postgrey-1.35 (06 Aug 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ttfunk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.13 2014/08/11 10:10:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.14 2014/08/12 13:13:08 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> ttfunk-1.1.1.ebuild,
+  ttfunk-1.2.0.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
   11 Aug 2014; Jeroen Roovers <jer@gentoo.org> ttfunk-1.1.1.ebuild,
   ttfunk-1.2.0.ebuild:

@@ -9,4 +9,4 @@ RDEPEND=>=dev-lang/perl-5.6.0 dev-perl/net-server dev-perl/IO-Multiplex dev-perl
 SLOT=0
 SRC_URI=http://postgrey.schweikert.ch/pub/postgrey-1.35.tar.gz http://postgrey.schweikert.ch/pub/old/postgrey-1.35.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=da05c23a0e88c0ada9703db1684f430a
+_md5_=dcb2e397af11dc1ccc8a792dbad8ffd5
