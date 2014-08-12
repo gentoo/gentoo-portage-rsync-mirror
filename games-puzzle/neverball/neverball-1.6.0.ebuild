@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.6.0.ebuild,v 1.1 2014/08/07 06:43:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.6.0.ebuild,v 1.2 2014/08/12 15:45:00 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -68,15 +68,17 @@ src_install() {
 	fi
 	dodoc doc/{authors.txt,manual.txt,release-notes.md} README.md
 
-	local res
-	for res in 16 32 64 128 256; do
-		newicon -s ${res} dist/neverball_${res}.png ${P}.png
+	local res name
+	for name in ball putt; do
+		for res in 16 32 64 128 256; do
+			newicon -s ${res} dist/never${name}_${res}.png never${name}.png
+		done
 	done
 
 	doman dist/*.6
 	newman dist/mapc.1 neverball-mapc.6
 	make_desktop_entry neverball Neverball
-	make_desktop_entry neverputt Neverputt
+	make_desktop_entry neverputt Neverputt neverputt
 
 	prepgamesdirs
 }
