@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.11.ebuild,v 1.3 2014/08/05 10:40:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.11.ebuild,v 1.4 2014/08/12 05:57:34 vapier Exp $
 
 EAPI="4"
 
@@ -37,6 +37,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.42.9-no-quota.patch
 	epatch "${FILESDIR}"/${PN}-1.42.10-fix-build-cflags.patch
 	epatch "${FILESDIR}"/${PN}-1.42.11-prototypes.patch
+	# Not everyone has gettext installed (like USE=-nls).
+	echo 'm4_ifndef([AM_GNU_GETTEXT],[m4_define([AM_GNU_GETTEXT])])' >> acinclude.m4
 	eautoreconf
 }
 

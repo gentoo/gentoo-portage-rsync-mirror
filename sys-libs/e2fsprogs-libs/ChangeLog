@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.128 2014/08/10 17:25:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.129 2014/08/12 05:57:34 vapier Exp $
+
+  12 Aug 2014; Mike Frysinger <vapier@gentoo.org> e2fsprogs-libs-1.42.11.ebuild:
+  Fix USE=-nls builds that lack gettext.
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> e2fsprogs-libs-1.42.10.ebuild:
   Stable for sparc, wrt bug #517936
