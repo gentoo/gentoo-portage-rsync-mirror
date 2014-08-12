@@ -10,5 +10,6 @@
 	</longdescription>
 	<use>
 		<flag name="ssh">enable support for ssh connections</flag>
+		<flag name="telnet">enable support for telnet connections</flag>
 	</use>
 </pkgmetadata>
