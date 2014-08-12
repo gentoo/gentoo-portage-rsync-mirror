@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gentoo-functions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.18 2014/07/23 14:37:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.19 2014/08/12 22:27:14 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  gentoo-functions-0.7.ebuild:
+  Stable on arm, ppc and ppc64.  Bug #519734.
 
   23 Jul 2014; William Hubbs <williamh@gentoo.org>
   -files/gentoo-functions-0.3.sh, -gentoo-functions-0.3.ebuild,
