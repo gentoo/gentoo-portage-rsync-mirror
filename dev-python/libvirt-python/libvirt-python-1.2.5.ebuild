@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-1.2.5.ebuild,v 1.1 2014/06/16 15:32:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-1.2.5.ebuild,v 1.3 2014/08/12 20:34:53 ago Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="http://libvirt.org/sources/python/${MY_P}.tar.gz
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND=">=app-emulation/libvirt-0.9.6:=[-python(-)]"
