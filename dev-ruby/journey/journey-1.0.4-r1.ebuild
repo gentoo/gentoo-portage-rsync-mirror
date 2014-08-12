@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/journey-1.0.4-r1.ebuild,v 1.2 2014/08/05 16:00:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/journey-1.0.4-r1.ebuild,v 1.3 2014/08/12 18:53:02 blueness Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -17,7 +17,7 @@ HOMEPAGE="https://github.com/rails/journey"
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64 ~arm ~x86 ~x64-macos ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x64-macos ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend "doc? ( dev-ruby/hoe )"

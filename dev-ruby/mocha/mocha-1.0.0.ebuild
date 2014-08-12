@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-1.0.0.ebuild,v 1.1 2014/04/03 05:56:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-1.0.0.ebuild,v 1.2 2014/08/12 18:38:09 blueness Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 jruby"
@@ -20,7 +20,7 @@ HOMEPAGE="http://gofreerange.com/mocha/docs/"
 
 LICENSE="MIT"
 SLOT="1.0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64"
 IUSE=""
 
 ruby_add_bdepend "

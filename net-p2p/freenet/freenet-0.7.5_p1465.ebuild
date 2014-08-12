@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1462.ebuild,v 1.1 2014/06/01 10:29:19 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1465.ebuild,v 1.1 2014/08/12 18:49:48 tommy Exp $
 
 EAPI="5"
-DATE=20130915
+DATE=20140810
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2 multilib systemd user
 
 DESCRIPTION="An encrypted network without censorship"
 HOMEPAGE="https://freenetproject.org/"
-SRC_URI="https://github.com/${PN}/fred-official/archive/build0${PV#*p}.zip -> ${P}.zip
+SRC_URI="https://github.com/${PN}/fred/archive/build0${PV#*p}.zip -> ${P}.zip
 	mirror://gentoo/seednodes-${DATE}.fref.bz2
 	mirror://gentoo/freenet-ant-1.7.1.jar"
 
@@ -53,7 +53,7 @@ EANT_BUILD_XML="build-clean.xml"
 EANT_GENTOO_CLASSPATH="bcprov-1.49,commons-compress,db4o-jdk5,db4o-jdk12,db4o-jdk11,db-je-3.3,fec,java-service-wrapper,jbitcollider-core,lzma,lzmajio,mersennetwister"
 EANT_EXTRA_ARGS="-Dsuppress.gjs=true -Dlib.contrib.present=true -Dlib.bouncycastle.present=true -Dlib.junit.present=true -Dtest.skip=true"
 
-S=${WORKDIR}/fred-official-build0${PV#*p}
+S=${WORKDIR}/fred-build0${PV#*p}
 
 pkg_setup() {
 	has_version dev-java/icedtea[cacao] && {

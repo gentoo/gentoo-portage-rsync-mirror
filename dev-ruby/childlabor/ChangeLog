@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/childlabor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childlabor/ChangeLog,v 1.8 2014/04/19 07:57:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childlabor/ChangeLog,v 1.9 2014/08/12 18:39:09 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  childlabor-0.0.3-r1.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
   19 Apr 2014; Hans de Graaff <graaff@gentoo.org> childlabor-0.0.3-r1.ebuild:
   Add ruby21. Avoid spec failing with portage.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.118 2014/08/09 10:14:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.119 2014/08/12 18:38:09 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> mocha-0.14.0.ebuild,
+  mocha-1.0.0.ebuild, mocha-1.1.0.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
   09 Aug 2014; Jeroen Roovers <jer@gentoo.org> mocha-0.10.5-r1.ebuild,
   mocha-0.12.10.ebuild, mocha-0.13.3-r1.ebuild:

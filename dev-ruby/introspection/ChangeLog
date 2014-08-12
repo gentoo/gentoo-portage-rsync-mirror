@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/introspection
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/introspection/ChangeLog,v 1.6 2014/07/22 16:51:25 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/introspection/ChangeLog,v 1.7 2014/08/12 18:37:20 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  introspection-0.0.3.ebuild:
+  Keyword ~ppc and ~ppc64, bug #519170
 
   22 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   introspection-0.0.3.ebuild:
