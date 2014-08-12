@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.427 2014/08/12 07:14:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.428 2014/08/12 08:08:55 grobian Exp $
+
+  12 Aug 2014; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Masked libffi-3.1 for it needs some work, bug #513428
 
   12 Aug 2014; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Mask tar-1.28 on Darwin for bug #518444

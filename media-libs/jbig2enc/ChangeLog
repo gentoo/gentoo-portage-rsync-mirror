@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/jbig2enc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2enc/ChangeLog,v 1.3 2013/09/22 06:45:53 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2enc/ChangeLog,v 1.4 2014/08/12 08:28:48 pinkbyte Exp $
+
+*jbig2enc-0.28-r1 (12 Aug 2014)
+
+  12 Aug 2014; Sergey Popov <pinkbyte@gentoo.org> +jbig2enc-0.28-r1.ebuild,
+  +files/jbig2enc-0.28-leptonica-1.70.patch:
+  Revision bump: add compatibility patch for >=media-libs/leptonica-1.70, wrt
+  bug #513954
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> jbig2enc-0.28.ebuild:
   Stable for x86, wrt bug #485256
