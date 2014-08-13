@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.222 2014/07/31 22:14:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.223 2014/08/13 02:28:44 reavertm Exp $
+
+  13 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org> package.use.mask:
+  Mask gg11 flag due to missing keywords (bug 519772)
 
   31 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.stable.mask:
   Temporarily mask USE="test" for sys-block/thin-provisioning-tools because of

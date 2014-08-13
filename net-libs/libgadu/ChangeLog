@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.75 2014/05/26 05:51:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.76 2014/08/13 02:30:01 reavertm Exp $
+
+*libgadu-1.12.0 (13 Aug 2014)
+
+  13 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org>
+  +files/libgadu-1.12.0-tests.patch, +libgadu-1.12.0.ebuild,
+  -libgadu-1.11.3.ebuild, metadata.xml:
+  Version bump, remove old.
 
   26 May 2014; Manuel Rüger <mrueg@gentoo.org> libgadu-1.11.3.ebuild,
   libgadu-1.11.4.ebuild:
