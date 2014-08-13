@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-what
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/ChangeLog,v 1.10 2014/05/15 11:37:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/ChangeLog,v 1.11 2014/08/12 23:17:18 blueness Exp $
+
+  12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> virt-what-1.12.ebuild:
+  Keyword ~ppc and ~ppc64, bug #507714
 
   15 May 2014; Jeroen Roovers <jer@gentoo.org> virt-what-1.12.ebuild,
   metadata.xml:
