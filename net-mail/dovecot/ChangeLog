@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.485 2014/08/03 18:19:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.486 2014/08/13 21:31:19 blueness Exp $
+
+  13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> dovecot-2.2.12.ebuild,
+  dovecot-2.2.13-r1.ebuild, dovecot-2.2.13.ebuild:
+  Keyword ~ppc and ~ppc64, bug #501600
 
   03 Aug 2014; Markus Meier <maekke@gentoo.org> dovecot-2.2.13-r1.ebuild:
   arm stable, bug #509954
