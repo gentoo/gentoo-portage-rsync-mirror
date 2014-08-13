@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.171 2014/08/10 20:21:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.172 2014/08/13 12:24:03 jer Exp $
+
+  13 Aug 2014; Jeroen Roovers <jer@gentoo.org> consolekit-0.4.6.ebuild:
+  Marked ~hppa (bug #517804).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> consolekit-0.4.6.ebuild:
   QA: drop trailing '.' from DESCRIPTION

@@ -1,5 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.80 2014/05/20 10:23:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.81 2014/08/13 12:25:16 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (20 May 2014)
@@ -33,14 +33,6 @@ cg
 # Jeroen Roovers <jer@gentoo.org> (13 Nov 2012)
 # media-libs/fdk-aac is not supported on HPPA (bug #442806)
 fdk
-
-# Jeroen Roovers <jer@gentoo.org> (15 Oct 2012)
-# sys-auth/consolekit does not work without CONFIG_AUDITSYSCALL,
-# which is not supported on HPPA (bug #438368)
-colord
-consolekit
-policykit
-realtime
 
 # Jeroen Roovers <jer@gentoo.org> (23 May 2012)
 # sys-apps/gptfdisk creates partition tables incompatible with the HPPA

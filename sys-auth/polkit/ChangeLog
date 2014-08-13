@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.175 2014/05/17 15:31:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.176 2014/08/13 12:24:16 jer Exp $
+
+  13 Aug 2014; Jeroen Roovers <jer@gentoo.org> polkit-0.112-r2.ebuild:
+  Marked ~hppa (bug #517804).
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> polkit-0.112-r1.ebuild:
   Stable for alpha, wrt bug #508862
