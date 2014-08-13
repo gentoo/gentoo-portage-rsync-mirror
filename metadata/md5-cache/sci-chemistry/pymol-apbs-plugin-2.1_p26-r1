@@ -4,11 +4,11 @@ DESCRIPTION=APBS plugin for pymol
 EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/pymolapbsplugin/
 IUSE=python_targets_python2_7
-KEYWORDS=amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 ~ppc x86 ~amd64-linux ~x86-linux
 LICENSE=pymol
 RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] sci-chemistry/apbs sci-chemistry/pdb2pqr !<sci-chemistry/pymol-1.2.2-r1
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://sourceforge.net/p/pymolapbsplugin/code/26/tree/trunk/src/apbsplugin.py?format=raw -> pymol-apbs-plugin-2.1_p26.py
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=a1d064721229fdfa404ef5dfd0681c1a
+_md5_=0584c71d417c998dfd0db40e0d2062b7
