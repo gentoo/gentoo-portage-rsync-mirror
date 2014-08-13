@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.26 2014/08/05 08:43:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.27 2014/08/13 18:45:21 blueness Exp $
+
+  13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> lz4-0_p106-r1.ebuild,
+  lz4-0_p120.ebuild, lz4-9999.ebuild:
+  Keyword ~ppc and ~ppc64, bug #501600
 
   05 Aug 2014; Jeroen Roovers <jer@gentoo.org> lz4-0_p120.ebuild, metadata.xml:
   Add USE=valgrind, bring back ~alpha ~hppa ~ia64 (bug #519084).

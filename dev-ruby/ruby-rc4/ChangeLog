@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-rc4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rc4/ChangeLog,v 1.15 2014/08/06 01:32:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rc4/ChangeLog,v 1.16 2014/08/13 18:52:38 armin76 Exp $
+
+  13 Aug 2014; Raúl Porcel <armin76@gentoo.org> ruby-rc4-0.1.5-r2.ebuild:
+  Add ~sparc wrt #468536
 
 *ruby-rc4-0.1.5-r2 (06 Aug 2014)
 

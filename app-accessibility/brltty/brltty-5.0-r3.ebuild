@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-5.0-r3.ebuild,v 1.2 2014/08/06 21:30:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-5.0-r3.ebuild,v 1.3 2014/08/13 18:44:41 teiresias Exp $
 
 EAPI=5
 
@@ -123,7 +123,7 @@ src_compile() {
 	if use python; then
 		python_build() {
 			cd "Bindings/Python" || die
-				emake
+			emake
 		}
 		python_foreach_impl run_in_build_dir python_build
 	fi
@@ -138,7 +138,8 @@ src_install() {
 
 	if use python; then
 		python_install() {
-				emake install
+			cd "Bindings/Python" || die
+			emake install
 		}
 		python_foreach_impl run_in_build_dir python_install
 	fi

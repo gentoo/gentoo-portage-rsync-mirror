@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.91 2014/08/09 10:12:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.92 2014/08/13 18:39:05 armin76 Exp $
+
+  13 Aug 2014; Raúl Porcel <armin76@gentoo.org> redcloth-4.2.9-r2.ebuild:
+  Add ~sparc wrt #468536
 
   09 Aug 2014; Jeroen Roovers <jer@gentoo.org> redcloth-4.2.9-r1.ebuild:
   Stable for HPPA (bug #513430).

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.119 2014/08/12 18:38:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.120 2014/08/13 18:43:33 armin76 Exp $
+
+  13 Aug 2014; Raúl Porcel <armin76@gentoo.org> mocha-0.10.5-r2.ebuild,
+  mocha-0.11.4-r1.ebuild, mocha-0.12.10.ebuild, mocha-0.12.10-r1.ebuild,
+  mocha-0.13.3-r1.ebuild, mocha-0.13.3-r2.ebuild:
+  Add ~sparc wrt #468536
 
   12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> mocha-0.14.0.ebuild,
   mocha-1.0.0.ebuild, mocha-1.1.0.ebuild:

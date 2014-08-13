@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.151 2014/08/06 21:30:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.152 2014/08/13 18:44:41 teiresias Exp $
+
+  13 Aug 2014; Christopher Brannon <teiresias@gentoo.org> brltty-5.0-r3.ebuild:
+  Fix building with +java USE flag.
+
+  I broke it when I converted the ebuild to use python-r1.
 
   06 Aug 2014; Jeroen Roovers <jer@gentoo.org> brltty-5.0-r3.ebuild:
   Stable for HPPA (bug #518990).

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/levenshtein/levenshtein-0.2.2-r2.ebuild,v 1.3 2014/08/05 16:00:34 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/levenshtein/levenshtein-0.2.2-r2.ebuild,v 1.4 2014/08/13 18:39:56 armin76 Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -17,7 +17,7 @@ HOMEPAGE="http://github.com/mbleigh/mash"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 each_ruby_configure() {

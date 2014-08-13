@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/childprocess-0.5.3.ebuild,v 1.3 2014/08/05 16:00:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/childprocess-0.5.3.ebuild,v 1.4 2014/08/13 18:48:19 armin76 Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -19,7 +19,7 @@ HOMEPAGE="https://github.com/jarib/childprocess"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 ruby_add_bdepend "doc? ( dev-ruby/yard dev-ruby/rspec:2 )"

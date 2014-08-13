@@ -1,6 +1,10 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.87 2014/07/17 13:19:34 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.88 2014/08/13 18:45:25 johu Exp $
+
+  13 Aug 2014; Johannes Huber <johu@gentoo.org> rekonq-2.4.2-r1.ebuild:
+  RDEPEND on kde-base/kdebase-kioslaves by Fabio Rossi <rossi.f@inwind.it>, bug
+  #497734.
 
   17 Jul 2014; Michael Palimaka <kensington@gentoo.org> rekonq-2.4.2-r1.ebuild:
   Remove workaround now handled in the eclass.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pdfrw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pdfrw/ChangeLog,v 1.5 2014/08/03 18:24:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pdfrw/ChangeLog,v 1.6 2014/08/13 18:37:53 blueness Exp $
+
+  13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> pdfrw-0.1.ebuild:
+  Keyword ~ppc and ~ppc64, bug #515222
 
   03 Aug 2014; Markus Meier <maekke@gentoo.org> pdfrw-0.1.ebuild:
   add ~arm, bug #515222

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.4.2-r1.ebuild,v 1.2 2014/07/17 13:19:34 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.4.2-r1.ebuild,v 1.3 2014/08/13 18:45:25 johu Exp $
 
 EAPI=5
 
@@ -34,6 +34,7 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
+	$(add_kdebase_dep kdebase-kioslaves)
 	$(add_kdebase_dep keditbookmarks)
 "
 

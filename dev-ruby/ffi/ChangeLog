@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.71 2014/07/21 14:00:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.72 2014/08/13 18:46:24 armin76 Exp $
+
+  13 Aug 2014; Raúl Porcel <armin76@gentoo.org> ffi-1.9.3.ebuild:
+  Add ~sparc wrt #468536
 
   21 Jul 2014; Manuel Rüger <mrueg@gentoo.org> -ffi-1.1.5.ebuild:
   Cleanup old.
