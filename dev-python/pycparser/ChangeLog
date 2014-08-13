@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycparser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.24 2014/07/06 13:18:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.25 2014/08/13 17:13:53 blueness Exp $
+
+  13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> pycparser-2.10.ebuild:
+  Keyword ~ppc and ~ppc64, bug #503094
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> pycparser-2.09.1-r1.ebuild:
   Replace obsolete mirror://bitbucket with the real URI.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/iso8601
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.21 2014/06/08 12:10:41 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.22 2014/08/13 17:24:03 blueness Exp $
+
+  13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> iso8601-0.1.10.ebuild,
+  iso8601-0.1.4-r1.ebuild, iso8601-0.1.4.ebuild, iso8601-0.1.8.ebuild:
+  Keyword ~ppc and ~ppc64, bug #503094
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> iso8601-0.1.10.ebuild,
   iso8601-0.1.4-r1.ebuild, iso8601-0.1.4.ebuild, iso8601-0.1.8.ebuild:

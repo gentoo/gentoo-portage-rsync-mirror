@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pretend
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.11 2014/06/22 12:40:23 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.12 2014/08/13 17:25:59 blueness Exp $
+
+  13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> pretend-1.0.7.ebuild,
+  pretend-1.0.8.ebuild:
+  Keyword ~ppc and ~ppc64, bug #503094
 
   22 Jun 2014; Tobias Klausmann <klausman@gentoo.org> pretend-1.0.8.ebuild:
   Keyworded on alpha, bug #503094

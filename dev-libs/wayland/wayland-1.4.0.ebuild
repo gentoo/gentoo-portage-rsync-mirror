@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.4.0.ebuild,v 1.13 2014/06/18 19:18:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.4.0.ebuild,v 1.14 2014/08/13 17:16:56 armin76 Exp $
 
 EAPI=5
 
@@ -18,10 +18,10 @@ HOMEPAGE="http://wayland.freedesktop.org/"
 
 if [[ $PV = 9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"
-	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 x86"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ppc ppc64 ~s390 ~sh ~sparc x86"
 else
 	SRC_URI="http://wayland.freedesktop.org/releases/${P}.tar.xz"
-	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 x86"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ppc ppc64 ~s390 ~sh ~sparc x86"
 fi
 
 LICENSE="MIT"
