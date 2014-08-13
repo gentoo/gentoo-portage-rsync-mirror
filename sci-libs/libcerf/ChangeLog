@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libcerf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcerf/ChangeLog,v 1.5 2014/07/27 09:32:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcerf/ChangeLog,v 1.6 2014/08/13 17:59:17 blueness Exp $
+
+  13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> libcerf-1.3.ebuild:
+  Keyword ~ppc and ~ppc64, bug #517726
 
   27 Jul 2014; Fabian Groffen <grobian@gentoo.org> libcerf-1.3.ebuild:
   Add missing Prefix keywords, bug #517726

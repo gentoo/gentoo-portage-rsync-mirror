@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.10.1-r2.ebuild,v 1.5 2014/08/06 20:30:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.10.1-r2.ebuild,v 1.6 2014/08/13 17:34:47 armin76 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy pypy2_0 )
@@ -12,7 +12,7 @@ if [ "${PV}" = "9999" ]; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/williamh/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 	inherit vcs-snapshot
 fi
 

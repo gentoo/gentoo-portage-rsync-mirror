@@ -4,11 +4,11 @@ DESCRIPTION=HTML parser based on the HTML5 specification
 EAPI=5
 HOMEPAGE=http://code.google.com/p/html5lib/ http://pypi.python.org/pypi/html5lib
 IUSE=test python_targets_python2_7 python_targets_pypy
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=MIT
 RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml(+)] ) python_targets_pypy? ( virtual/pypy:0=[xml(+)] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_pypy(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_pypy )
 SLOT=0
 SRC_URI=http://html5lib.googlecode.com/files/html5lib-0.95.tar.gz
 _eclasses_=distutils-r1	d48d51c220f1678179fc4ab13b534ec1	eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=7c863f7931d3a1329cdc32e2c7e744ca
+_md5_=fff5bf182ad7b3295ecf2d8689d0e5b6
