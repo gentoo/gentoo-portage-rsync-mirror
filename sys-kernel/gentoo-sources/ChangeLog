@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1391 2014/08/09 00:13:09 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1392 2014/08/13 06:19:16 nativemad Exp $
+
+  13 Aug 2014; Andreas Schuerch <nativemad@gentoo.org>
+  gentoo-sources-3.14.16.ebuild:
+  x86 stable, see bug 518600. Thanks Myckel Habets
 
   08 Aug 2014; Michael Pagano <mpagano@gentoo.org>
   gentoo-sources-3.16.0.ebuild:
