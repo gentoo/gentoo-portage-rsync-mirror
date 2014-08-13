@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/freemind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.67 2014/08/03 09:49:07 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.68 2014/08/13 09:33:50 ago Exp $
+
+  13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> freemind-1.0.0-r1.ebuild:
+  Stable for ppc, wrt bug #501728
 
 *freemind-1.0.1 (03 Aug 2014)
 

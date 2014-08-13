@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.148 2014/08/01 11:25:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.149 2014/08/13 09:34:59 ago Exp $
+
+  13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libsndfile-1.0.25-r1.ebuild:
+  Stable for ppc, wrt bug #502210
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> libsndfile-1.0.25-r1.ebuild:
   sparc stable wrt #502210

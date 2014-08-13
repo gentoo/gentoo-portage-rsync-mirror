@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.107 2014/08/10 08:23:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.108 2014/08/13 09:31:54 ago Exp $
+
+  13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> debhelper-9.20140228.ebuild:
+  Stable for ppc, wrt bug #506100
 
 *debhelper-9.20140809 (10 Aug 2014)
 

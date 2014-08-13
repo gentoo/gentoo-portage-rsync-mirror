@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.1-r1.ebuild,v 1.5 2014/03/25 00:18:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.1-r1.ebuild,v 1.6 2014/08/13 09:36:29 ago Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SRC_URI="
 
 LICENSE="GPL-2 LGPL-2.1 FDL-1.2"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc static-libs"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
