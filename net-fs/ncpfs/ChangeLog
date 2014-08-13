@@ -1,6 +1,23 @@
 # ChangeLog for net-fs/ncpfs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.32 2012/12/04 10:21:15 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.33 2014/08/13 05:47:27 kumba Exp $
+
+*ncpfs-2.2.6-r3 (13 Aug 2014)
+
+  13 Aug 2014; Joshua Kinard <kumba@gentoo.org> +ncpfs-2.2.6-r3.ebuild,
+  +files/ncpfs-2.2.6-align-fix.patch,
+  +files/ncpfs-2.2.6-cve-2011-1679-1680.patch,
+  +files/ncpfs-2.2.6-drop-kernel-check.patch,
+  +files/ncpfs-2.2.6-drop-mtab-support.patch,
+  +files/ncpfs-2.2.6-getuid-fix.patch,
+  +files/ncpfs-2.2.6-ldflags-support.patch,
+  +files/ncpfs-2.2.6-makefile-fix-soname-link.patch,
+  +files/ncpfs-2.2.6-no-suid-root.patch,
+  +files/ncpfs-2.2.6-pam_ncp_auth-fix.patch, +files/ncpfs-2.2.6-pie-fix.patch,
+  +files/ncpfs-2.2.6-remove-libncp_atomic-header.patch,
+  +files/ncpfs-2.2.6-servername-array-fix.patch:
+  Added 2.2.6-r3 that contains patches from Mageia and Debian that address
+  several issues, including bugs #371477, #497278, & #446696.
 
   04 Dec 2012;  <ago@gentoo.org> ncpfs-2.2.6-r2.ebuild:
   stable for x86, wrt to bug #418227
