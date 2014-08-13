@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/checkbashisms
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkbashisms/ChangeLog,v 1.4 2013/03/13 00:06:20 sochotnicky Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkbashisms/ChangeLog,v 1.5 2014/08/13 04:06:35 vapier Exp $
+
+  13 Aug 2014; Mike Frysinger <vapier@gentoo.org> -checkbashisms-2.0.0.5.ebuild,
+  checkbashisms-2.0.0.2.ebuild:
+  There is no 2.0.0.5 release; our copy is the same as the 2.0.0.2 release.
 
   13 Mar 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   checkbashisms-2.0.0.5.ebuild:
@@ -22,4 +26,3 @@
   +checkbashisms-2.0.0.2.ebuild, +metadata.xml:
   Initial commit. Bug #398275, ebuild submitted by Michael
   <gentoo@scribeofthenile.com>.
-
