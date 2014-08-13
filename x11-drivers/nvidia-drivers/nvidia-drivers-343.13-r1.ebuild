@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-343.13.ebuild,v 1.3 2014/08/08 12:02:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-343.13-r1.ebuild,v 1.1 2014/08/13 08:12:47 jer Exp $
 
 EAPI=5
 
@@ -332,6 +332,10 @@ src_install() {
 
 	if use tools; then
 		doexe ${NV_OBJ}/nvidia-settings
+		insinto /usr/share/nvidia/
+		doins nvidia-application-profiles-${PV}-key-documentation
+		insinto /etc/nvidia
+		newins nvidia-application-profiles-${PV}-rc nvidia-application-profiles-rc
 	fi
 
 	exeinto /usr/bin/
