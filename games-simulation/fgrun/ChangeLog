@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/fgrun
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/ChangeLog,v 1.12 2012/01/21 15:57:35 reavertm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/ChangeLog,v 1.13 2014/08/13 00:23:06 reavertm Exp $
+
+*fgrun-3.0.0 (13 Aug 2014)
+
+  13 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org> +fgrun-3.0.0.ebuild,
+  -fgrun-1.6.0.ebuild, -files/fgrun-1.5.2-fltk.patch:
+  Version bump, remove old, exported from git tag 3.0.0-final. Fixes bug 436600.
 
 *fgrun-1.6.0 (21 Jan 2012)
 
@@ -53,4 +59,3 @@
   26 Apr 2007; Tupone Alfredo <tupone@gentoo.org>
   +files/fgrun-0.4.8-fltk.patch, +metadata.xml, +fgrun-0.4.8.ebuild:
   New package. Bug #130115 by Lawrence Shafer
-

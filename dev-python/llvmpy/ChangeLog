@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/llvmpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmpy/ChangeLog,v 1.7 2014/06/16 08:58:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmpy/ChangeLog,v 1.8 2014/08/13 00:06:30 idella4 Exp $
+
+*llvmpy-0.12.7 (12 Aug 2014)
+
+  12 Aug 2014; Ian Delaney <idella4@gentoo.org> +llvmpy-0.12.7.ebuild:
+  bump; add pypy support, fix fix to qa build issue, thanks to Arfrever for the
+  fix
 
 *llvmpy-0.12.6 (16 Jun 2014)
 
