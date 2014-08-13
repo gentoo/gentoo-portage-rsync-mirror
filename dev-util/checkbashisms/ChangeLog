@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/checkbashisms
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkbashisms/ChangeLog,v 1.5 2014/08/13 04:06:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkbashisms/ChangeLog,v 1.6 2014/08/13 04:36:24 vapier Exp $
+
+*checkbashisms-2.0.0.2-r1 (13 Aug 2014)
+
+  13 Aug 2014; Mike Frysinger <vapier@gentoo.org>
+  +checkbashisms-2.0.0.2-r1.ebuild, +files/checkbashisms-2.0.0.2-export.patch,
+  +files/checkbashisms-2.0.0.2-kill.patch,
+  +files/checkbashisms-2.0.0.2-version.patch:
+  Fix kill/export false positives #458392 by Julian Ospald.
 
   13 Aug 2014; Mike Frysinger <vapier@gentoo.org> -checkbashisms-2.0.0.5.ebuild,
   checkbashisms-2.0.0.2.ebuild:

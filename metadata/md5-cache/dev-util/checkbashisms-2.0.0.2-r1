@@ -1,0 +1,11 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Perl script to check for commonly used bash features not defined by POSIX
+EAPI=4
+HOMEPAGE=http://sourceforge.net/projects/checkbaskisms/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-lang/perl virtual/perl-Getopt-Long !<dev-util/rpmdevtools-8.3-r1
+SLOT=0
+SRC_URI=mirror://sourceforge/checkbaskisms/2.0.0.2/checkbashisms -> checkbashisms-2.0.0.2
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=4ec005539f0078ec661aee147e35db11
