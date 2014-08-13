@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/capistrano
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.102 2014/05/15 01:07:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.103 2014/08/13 13:20:26 graaff Exp $
+
+*capistrano-2.15.5-r1 (13 Aug 2014)
+
+  13 Aug 2014; Hans de Graaff <graaff@gentoo.org> +capistrano-2.15.5-r1.ebuild,
+  +files/capistrano-2.15.5-sudo-cleanup.patch:
+  Add ruby20. Fix double sudo in cleanup task.
 
   15 May 2014; Manuel Rüger <mrueg@gentoo.org> -capistrano-2.14.2.ebuild,
   capistrano-2.15.5.ebuild:
