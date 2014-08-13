@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.63 2014/08/04 03:52:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.64 2014/08/13 11:13:38 blueness Exp $
+
+  13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> linux/musl/package.mask,
+  linux/uclibc/package.mask:
+  Use eudev on uclibc and musl.
 
   04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> linux/package.mask:
   hmaccalc depends in prelink.

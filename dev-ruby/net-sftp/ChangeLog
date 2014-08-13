@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-sftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/ChangeLog,v 1.62 2014/05/21 02:30:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/ChangeLog,v 1.63 2014/08/13 11:02:00 graaff Exp $
+
+  13 Aug 2014; Hans de Graaff <graaff@gentoo.org> net-sftp-2.1.2-r1.ebuild:
+  Add ruby21.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> net-sftp-2.0.5-r1.ebuild:
   Remove ruby18 target.
