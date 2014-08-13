@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mkpythonproj
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mkpythonproj/ChangeLog,v 1.5 2014/08/10 21:13:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mkpythonproj/ChangeLog,v 1.6 2014/08/13 03:20:05 idella4 Exp $
+
+*mkpythonproj-1.9 (13 Aug 2014)
+
+  13 Aug 2014; Ian Delaney <idella4@gentoo.org> +mkpythonproj-1.9.ebuild:
+  bump
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mkpythonproj-1.7.ebuild,
   mkpythonproj-1.8.ebuild:
