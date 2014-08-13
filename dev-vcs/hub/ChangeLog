@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/hub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/ChangeLog,v 1.10 2014/05/29 16:01:54 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/ChangeLog,v 1.11 2014/08/13 18:01:41 ottxor Exp $
+
+*hub-1.12.2 (13 Aug 2014)
+
+  13 Aug 2014; Christoph Junghans <ottxor@gentoo.org> +hub-1.12.2.ebuild:
+  version bump (bug #519828)
 
 *hub-1.12.1 (29 May 2014)
 

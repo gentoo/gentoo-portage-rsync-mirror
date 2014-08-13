@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.47 2014/07/06 13:02:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.48 2014/08/13 18:24:16 blueness Exp $
+
+  13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> tornado-2.2.1.ebuild,
+  tornado-2.4-r1.ebuild, tornado-2.4.1.ebuild, tornado-2.4.ebuild,
+  tornado-3.1.1-r1.ebuild, tornado-3.1.1.ebuild, tornado-3.2.1.ebuild,
+  tornado-3.2.ebuild:
+  Keyword ~ppc and ~ppc64, bug #486272
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> tornado-3.1.1-r1.ebuild,
   tornado-3.2.1.ebuild, tornado-3.2.ebuild:

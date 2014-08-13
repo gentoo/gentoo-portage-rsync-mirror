@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/backports
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/backports/ChangeLog,v 1.5 2014/03/31 20:24:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/backports/ChangeLog,v 1.6 2014/08/13 18:22:48 blueness Exp $
+
+  13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> backports-1.0.ebuild:
+  Keyword ~ppc and ~ppc64, bug #486272
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> backports-1.0.ebuild:
   Add support for the new PyPy slotting.
