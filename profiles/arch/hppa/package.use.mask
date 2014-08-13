@@ -1,8 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.143 2014/07/29 10:19:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.144 2014/08/13 11:41:50 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (13 Aug 2014)
+# Needs dev-libs/protobuf{-c} which has not been ported to HPPA (bug #519772)
+net-libs/libgadu gg11
 
 # Jeroen Roovers <jer@gentoo.org> (29 Jul 2014)
 # Test phase requires dev-db/mongodb which requires dev-util/google-perftools
