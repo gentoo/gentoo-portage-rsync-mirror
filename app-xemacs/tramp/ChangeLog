@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/tramp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.32 2014/08/10 19:40:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.33 2014/08/13 15:13:51 matsl Exp $
+
+  13 Aug 2014; Mats Lidell <matsl@gentoo.org> -tramp-1.37.ebuild,
+  -tramp-1.40.ebuild:
+  Maintainer cleanup. Remove old ebuilds.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tramp-1.37.ebuild,
   tramp-1.40.ebuild, tramp-1.52.ebuild:

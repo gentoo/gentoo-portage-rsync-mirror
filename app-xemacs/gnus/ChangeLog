@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/gnus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.42 2014/08/10 19:04:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.43 2014/08/13 15:21:04 matsl Exp $
+
+  13 Aug 2014; Mats Lidell <matsl@gentoo.org> -gnus-1.91.ebuild,
+  -gnus-1.94.ebuild:
+  Maintainer cleanup. Remove old ebuilds.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gnus-1.91.ebuild,
   gnus-1.94.ebuild, gnus-1.99.ebuild:
