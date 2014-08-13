@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sexp_processor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/ChangeLog,v 1.34 2014/08/05 16:00:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/ChangeLog,v 1.35 2014/08/13 01:54:37 mrueg Exp $
+
+*sexp_processor-3.2.0-r1 (13 Aug 2014)
+
+  13 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +sexp_processor-3.2.0-r1.ebuild:
+  Add ruby20, ruby21 target.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> sexp_processor-3.2.0.ebuild,
   sexp_processor-4.2.1.ebuild, sexp_processor-4.4.3-r1.ebuild,

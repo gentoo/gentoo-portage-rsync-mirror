@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.132 2014/07/18 07:45:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.133 2014/08/13 01:50:14 mrueg Exp $
+
+  13 Aug 2014; Manuel Rüger <mrueg@gentoo.org> rack-1.4.5-r3.ebuild:
+  Add ruby21 support.
 
   18 Jul 2014; Hans de Graaff <graaff@gentoo.org> -rack-1.2.8.ebuild,
   -rack-1.3.10.ebuild:
