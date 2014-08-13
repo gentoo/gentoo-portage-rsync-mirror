@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/classifier
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier/ChangeLog,v 1.4 2014/07/25 13:23:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier/ChangeLog,v 1.6 2014/08/13 16:37:19 mrueg Exp $
+
+  13 Aug 2014; Manuel Rüger <mrueg@gentoo.org> classifier-1.3.4.ebuild:
+  Make depends look nicer.
+
+  13 Aug 2014; Manuel Rüger <mrueg@gentoo.org> classifier-1.3.4.ebuild:
+  Add hardblocker on dev-ruby/classifier-reborn.
 
   25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> classifier-1.3.4.ebuild:
   Add ruby21 target.

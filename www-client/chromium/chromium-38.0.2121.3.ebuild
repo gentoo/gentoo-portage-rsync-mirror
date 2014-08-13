@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-38.0.2107.2.ebuild,v 1.1 2014/07/30 17:46:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-38.0.2121.3.ebuild,v 1.1 2014/08/13 17:01:30 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -170,8 +170,6 @@ src_prepare() {
 	#	touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	# fi
 
-	epatch "${FILESDIR}/${PN}-ffmpeg-r3.patch"
-
 	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
@@ -203,7 +201,6 @@ src_prepare() {
 		'third_party/flot' \
 		'third_party/hunspell' \
 		'third_party/iccjpeg' \
-		'third_party/icu/icu.isolate' \
 		'third_party/jinja2' \
 		'third_party/jstemplate' \
 		'third_party/khronos' \
@@ -251,6 +248,7 @@ src_prepare() {
 		'url/third_party/mozilla' \
 		'v8/src/third_party/kernel' \
 		'v8/src/third_party/valgrind' \
+		'v8/third_party/fdlibm' \
 		--do-remove || die
 }
 
@@ -347,6 +345,7 @@ src_configure() {
 	# Do not use bundled clang.
 	myconf+="
 		-Dclang=0
+		-Dhost_clang=0
 		-Dlinux_use_bundled_binutils=0
 		-Dlinux_use_bundled_gold=0
 		-Dlinux_use_gold_flags=0"

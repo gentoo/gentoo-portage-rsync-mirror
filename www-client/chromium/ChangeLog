@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1116 2014/08/13 04:00:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1117 2014/08/13 17:01:30 phajdan.jr Exp $
+
+*chromium-38.0.2121.3 (13 Aug 2014)
+
+  13 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-38.0.2121.3.ebuild, -chromium-38.0.2107.2.ebuild:
+  Dev channel bump. Remove old.
 
 *chromium-36.0.1985.143 (13 Aug 2014)
 
