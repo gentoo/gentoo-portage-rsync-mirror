@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.142 2014/08/12 08:34:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.143 2014/08/13 07:38:42 idella4 Exp $
+
+  13 Aug 2014; Ian Delaney <idella4@gentoo.org> ipython-2.1.0.ebuild,
+  ipython-2.2.0.ebuild:
+  add missing doc dep tornado, cross testing by cel1, fixes bug #519774
 
 *ipython-2.2.0 (12 Aug 2014)
 
