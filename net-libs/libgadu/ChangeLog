@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.76 2014/08/13 02:30:01 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.77 2014/08/13 23:00:37 reavertm Exp $
+
+  13 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org> libgadu-1.12.0.ebuild,
+  metadata.xml:
+  After deeper inspection, protobuf-c (gg11 support) is not really optional,
+  fixes bug 519812.
 
 *libgadu-1.12.0 (13 Aug 2014)
 

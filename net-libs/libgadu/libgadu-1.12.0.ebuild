@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.12.0.ebuild,v 1.1 2014/08/13 02:30:01 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.12.0.ebuild,v 1.2 2014/08/13 23:00:37 reavertm Exp $
 
 EAPI=5
 
@@ -11,16 +11,16 @@ HOMEPAGE="http://toxygen.net/libgadu/"
 SRC_URI="https://github.com/wojtekka/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 SLOT="0"
-IUSE="doc +gg11 gnutls ssl static-libs test threads"
+IUSE="doc gnutls ssl static-libs test threads"
 
 REQUIRED_USE="
 	gnutls? ( ssl )
 "
 COMMON_DEPEND="
+	>=dev-libs/protobuf-c-0.15
 	sys-libs/zlib
-	gg11? ( >=dev-libs/protobuf-c-0.15 )
 	ssl? (
 		gnutls? ( net-libs/gnutls )
 		!gnutls? ( >=dev-libs/openssl-0.9.6m )
@@ -50,7 +50,7 @@ DOCS=(AUTHORS ChangeLog NEWS README)
 
 src_configure() {
 	local myeconfargs=(
-		$(use_with gg11 protobuf)
+		--with-protobuf
 		$(use_enable test tests)
 		$(use_with threads pthread)
 	)

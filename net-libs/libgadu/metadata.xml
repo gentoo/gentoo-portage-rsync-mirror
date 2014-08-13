@@ -6,7 +6,4 @@
 		<email>reavertm@gentoo.org</email>
 		<name>Maciej Mrozowski</name>
 	</maintainer>
-	<use>
-		<flag name="gg11">Enable GaduGadu 11 protocol support</flag>
-	</use>
 </pkgmetadata>
