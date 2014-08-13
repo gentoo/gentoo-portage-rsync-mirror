@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.152 2014/08/02 02:04:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.153 2014/08/13 09:17:21 ago Exp $
+
+  13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mercurial-2.8.2.ebuild:
+  Stable for ppc, wrt bug #500346
 
 *mercurial-3.1 (02 Aug 2014)
 

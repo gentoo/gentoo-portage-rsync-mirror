@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sflowtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.46 2014/08/11 14:46:24 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.47 2014/08/13 09:28:34 ago Exp $
+
+  13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> sflowtool-3.32.ebuild:
+  Stable for ppc, wrt bug #517276
 
   11 Aug 2014; Chema Alonso <nimiux@gentoo.org> sflowtool-3.32.ebuild:
   Stable for amd64 wrt bug #517276

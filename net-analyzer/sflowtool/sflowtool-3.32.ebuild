@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.32.ebuild,v 1.3 2014/08/11 14:46:24 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.32.ebuild,v 1.4 2014/08/13 09:28:34 ago Exp $
 
 EAPI=5
 inherit flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="http://www.inmon.com/bin/${P}.tar.gz"
 
 LICENSE="inmon-sflow"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug"
 
 src_prepare() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.124 2014/08/02 11:18:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.125 2014/08/13 09:28:10 ago Exp $
+
+  13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mrtg-2.17.4-r1.ebuild:
+  Stable for ppc, wrt bug #509992
 
   02 Aug 2014; Raúl Porcel <armin76@gentoo.org> mrtg-2.17.4-r1.ebuild:
   sparc stable, bug #509992

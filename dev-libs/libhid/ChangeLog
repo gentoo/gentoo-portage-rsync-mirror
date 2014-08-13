@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libhid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/ChangeLog,v 1.9 2014/08/13 08:47:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/ChangeLog,v 1.10 2014/08/13 09:12:28 jer Exp $
+
+  13 Aug 2014; Jeroen Roovers <jer@gentoo.org> libhid-0.2.16-r3.ebuild:
+  Disable "debugging" which merely adds compiler flags.
 
   13 Aug 2014; Jeroen Roovers <jer@gentoo.org> libhid-0.2.16-r3.ebuild:
   Stop configure from mangling CFLAGS (bug #519768).
