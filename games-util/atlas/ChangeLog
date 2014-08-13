@@ -1,6 +1,14 @@
 # ChangeLog for games-util/atlas
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.29 2011/10/16 03:32:27 reavertm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.30 2014/08/12 23:52:12 reavertm Exp $
+
+*atlas-0.4.9_p20140320 (12 Aug 2014)
+
+  12 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org>
+  +atlas-0.4.9_p20140320.ebuild, -atlas-0.3.1_p20101101-r1.ebuild,
+  -atlas-0.3.1_p20101101.ebuild, -files/atlas-0.3.1_p20101101-libpng15.patch,
+  -files/atlas-0.3.1_p20101101-simgear-2.4.0.patch:
+  Version bump, remove old, effectively fixes bug 458448.
 
   16 Oct 2011; Maciej Mrozowski <reavertm@gentoo.org>
   atlas-0.3.1_p20101101-r1.ebuild:
@@ -120,4 +128,3 @@
 
   26 Aug 2003; Michael Sterrett <msterret@gentoo.org> atlas-0.2.2.ebuild:
   initial commit.  ebuild draft from Jeff Thorsett via bug 25540
-
