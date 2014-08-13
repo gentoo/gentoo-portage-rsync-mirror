@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15964 2014/08/12 07:25:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15965 2014/08/13 02:41:34 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,11 +44,6 @@ dev-python/amara
 # emerge app-admin/killproc
 # removal in about 30 days wrt bug #467212
 sys-apps/usleep
-
-# Lars Wendler <polynomial-c@gentoo.org> (08 Aug 2014)
-# Depends on >=dev-libs/protobuf-c-1.0.0_rc2 which is masked.
-# Can be unmasked when protobuf-c mask is gone.
->=media-sound/umurmur-0.2.15
 
 # William Hubbs <williamh@gentoo.org> (05 Aug 2014)
 # Masked by QA for removal in 30 days.
@@ -444,10 +439,6 @@ dev-java/ibm-jdk-bin:1.5
 # https://github.com/mate-desktop/mate-bluetooth/issues/22
 # http://mate-desktop.org/blog/2014-03-11-mate-desktop-singing-the-bluez
 net-wireless/mate-bluetooth
-
-# Tim Harder <radhermit@gentoo.org> (25 Apr 2014)
-# Mask new releases for testing
-=dev-libs/protobuf-c-1*
 
 # Matti Bickel <mabi@gentoo.org> (22 Apr 2014)
 # Masked slotted lua for testing

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/criu-1.1.ebuild,v 1.1 2014/02/19 12:07:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/criu-1.2-r1.ebuild,v 1.1 2014/08/13 02:40:02 radhermit Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="dev-libs/protobuf-c"
+RDEPEND="<dev-libs/protobuf-c-1"
 DEPEND="${RDEPEND}
 	app-text/asciidoc
 	app-text/xmlto"
@@ -26,6 +26,7 @@ RESTRICT="test"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.6-flags.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
 
 	# use raw ldflags for direct ld calls
 	sed -i "s/\$\$\?(LDFLAGS)/$(raw-ldflags)/" scripts/Makefile.build || die
@@ -44,6 +45,6 @@ src_test() {
 }
 
 src_install() {
-	emake PREFIX="${EPREFIX}"/usr DESTDIR="${D}" install
+	emake SYSCONFDIR="${EPREFIX}"/etc PREFIX="${EPREFIX}"/usr DESTDIR="${D}" install
 	dodoc CREDITS README
 }

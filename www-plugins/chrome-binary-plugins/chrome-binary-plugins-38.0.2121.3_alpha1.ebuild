@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-38.0.2114.2_alpha1.ebuild,v 1.2 2014/08/08 02:26:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-38.0.2121.3_alpha1.ebuild,v 1.1 2014/08/13 02:53:25 floppym Exp $
 
 EAPI=4
 

@@ -1,6 +1,17 @@
 # ChangeLog for sys-process/criu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/ChangeLog,v 1.8 2014/03/01 05:40:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/ChangeLog,v 1.10 2014/08/13 02:40:02 radhermit Exp $
+
+*criu-1.2-r1 (13 Aug 2014)
+
+  13 Aug 2014; Tim Harder <radhermit@gentoo.org> -criu-1.2.ebuild,
+  +criu-1.2-r1.ebuild:
+  Specify required protobuf-c version range.
+
+  13 Aug 2014; Tim Harder <radhermit@gentoo.org> -criu-0.5.ebuild,
+  -criu-0.6.ebuild, -criu-0.7.ebuild, -criu-0.8.ebuild, -criu-1.0.ebuild,
+  -criu-1.1.ebuild, -files/crtools-0.4-flags.patch:
+  Remove old.
 
 *criu-1.2 (01 Mar 2014)
 
