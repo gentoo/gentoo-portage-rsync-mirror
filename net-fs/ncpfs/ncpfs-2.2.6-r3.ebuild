@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6-r3.ebuild,v 1.1 2014/08/13 05:47:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6-r3.ebuild,v 1.2 2014/08/13 07:01:46 kumba Exp $
 
 EAPI="5"
 
@@ -31,9 +31,6 @@ src_prepare() {
 	# CVE-2010-0788, CVE-2010-0790, & CVE-2010-0791.
 	# http://seclists.org/fulldisclosure/2010/Mar/122
 	epatch "${FILESDIR}"/${P}-multiple-vulns.patch
-
-	# Bug 371477
-	epatch "${FILESDIR}"/${P}-cve-2011-1679-1680.patch
 
 	# Add a patch that removes the __attribute__((packed)); directive
 	# from several struct members in include/ncp/ncplib.h.  This will

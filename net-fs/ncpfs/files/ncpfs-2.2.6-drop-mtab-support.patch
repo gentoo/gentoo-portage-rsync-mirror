@@ -1,6 +1,6 @@
 diff -Naurp ncpfs-2.2.6.orig/sutil/ncplogin.c ncpfs-2.2.6/sutil/ncplogin.c
---- ncpfs-2.2.6.orig/sutil/ncplogin.c	2014-08-12 22:03:48.059170406 -0400
-+++ ncpfs-2.2.6/sutil/ncplogin.c	2014-08-12 22:08:09.029168854 -0400
+--- ncpfs-2.2.6.orig/sutil/ncplogin.c	2014-08-13 02:52:56.859067273 -0400
++++ ncpfs-2.2.6/sutil/ncplogin.c	2014-08-13 02:53:42.699067001 -0400
 @@ -111,7 +111,6 @@
  #include <stdlib.h>
  #include <stdarg.h>
@@ -23,8 +23,8 @@ diff -Naurp ncpfs-2.2.6.orig/sutil/ncplogin.c ncpfs-2.2.6/sutil/ncplogin.c
  	if (info.echo_mnt_pnt) {
  		printf(_("mounted on:%s\n"),mount_point);
 diff -Naurp ncpfs-2.2.6.orig/sutil/ncpm_common.c ncpfs-2.2.6/sutil/ncpm_common.c
---- ncpfs-2.2.6.orig/sutil/ncpm_common.c	2014-08-12 22:03:48.149170405 -0400
-+++ ncpfs-2.2.6/sutil/ncpm_common.c	2014-08-12 22:08:09.029168854 -0400
+--- ncpfs-2.2.6.orig/sutil/ncpm_common.c	2014-08-13 02:52:56.959067273 -0400
++++ ncpfs-2.2.6/sutil/ncpm_common.c	2014-08-13 02:55:38.349066313 -0400
 @@ -104,7 +104,6 @@
  #include <stdlib.h>
  #include <stdarg.h>
@@ -33,7 +33,7 @@ diff -Naurp ncpfs-2.2.6.orig/sutil/ncpm_common.c ncpfs-2.2.6/sutil/ncpm_common.c
  #include <ncp/kernel/ipx.h>
  #include <sys/ioctl.h>
  #if MOUNT3
-@@ -1423,80 +1422,6 @@ static const struct smntflags {
+@@ -1423,68 +1422,6 @@ static const struct smntflags {
         {MS_NODIRATIME,	"nodiratime"},
         {0,		NULL}};
  
@@ -44,7 +44,6 @@ diff -Naurp ncpfs-2.2.6.orig/sutil/ncpm_common.c ncpfs-2.2.6/sutil/ncpm_common.c
 -	struct mntent ment;
 -	int fd;
 -	FILE* mtab;
--	off_t	goodoffset;
 -
 -	if (check_name(mount_name) == -1 || check_name(mpnt) == -1)
 -		errexit(107, _("Illegal character in mount entry\n"));
@@ -79,25 +78,14 @@ diff -Naurp ncpfs-2.2.6.orig/sutil/ncpm_common.c ncpfs-2.2.6/sutil/ncpm_common.c
 -
 -	if ((mtab = setmntent(MOUNTED, "a+")) == NULL)
 -	{
--		unlink(MOUNTED "~");
 -		errexit(59, _("Can't open %s\n"), MOUNTED);
 -	}
--	fseek (mtab, 0, SEEK_END);
--	goodoffset = ftell(mtab);
 -	if (addmntent(mtab, &ment) == 1)
 -	{
--		/* restore good state */
--		ftruncate(fileno(mtab), goodoffset);
--		endmntent(mtab);
--		unlink(MOUNTED "~");
 -		errexit(60, _("Can't write mount entry\n"));
 -	}
 -	if (fchmod(fileno(mtab), 0644) == -1)
 -	{
--		/* restore good state */
--		ftruncate(fileno(mtab), goodoffset);
--		endmntent(mtab);
--		unlink(MOUNTED "~");
 -		errexit(61, _("Can't set perms on %s\n"), MOUNTED);
 -	}
 -	endmntent(mtab);
@@ -115,8 +103,8 @@ diff -Naurp ncpfs-2.2.6.orig/sutil/ncpm_common.c ncpfs-2.2.6/sutil/ncpm_common.c
  	const struct optinfo* optr;
  
 diff -Naurp ncpfs-2.2.6.orig/sutil/ncpm_common.h ncpfs-2.2.6/sutil/ncpm_common.h
---- ncpfs-2.2.6.orig/sutil/ncpm_common.h	2014-08-12 22:03:47.919170406 -0400
-+++ ncpfs-2.2.6/sutil/ncpm_common.h	2014-08-12 22:08:09.029168854 -0400
+--- ncpfs-2.2.6.orig/sutil/ncpm_common.h	2014-08-13 02:52:56.749067274 -0400
++++ ncpfs-2.2.6/sutil/ncpm_common.h	2014-08-13 02:53:42.699067001 -0400
 @@ -60,7 +60,6 @@ void verify_argv(int argc, char* argv[])
  int ncp_mount_specific(struct ncp_conn* conn, int pathNS, const unsigned char* NWpath, int pathlen);
  int mount_ok(struct stat *st);
@@ -126,8 +114,8 @@ diff -Naurp ncpfs-2.2.6.orig/sutil/ncpm_common.h ncpfs-2.2.6/sutil/ncpm_common.h
  struct ncp_mount_info {
  	struct ncp_mount_data_independent mdata;
 diff -Naurp ncpfs-2.2.6.orig/sutil/ncpmount.c ncpfs-2.2.6/sutil/ncpmount.c
---- ncpfs-2.2.6.orig/sutil/ncpmount.c	2014-08-12 22:03:47.919170406 -0400
-+++ ncpfs-2.2.6/sutil/ncpmount.c	2014-08-12 22:08:09.029168854 -0400
+--- ncpfs-2.2.6.orig/sutil/ncpmount.c	2014-08-13 02:52:56.749067274 -0400
++++ ncpfs-2.2.6/sutil/ncpmount.c	2014-08-13 02:53:42.699067001 -0400
 @@ -114,7 +114,6 @@
  #include <stdlib.h>
  #include <stdarg.h>
@@ -149,9 +137,9 @@ diff -Naurp ncpfs-2.2.6.orig/sutil/ncpmount.c ncpfs-2.2.6/sutil/ncpmount.c
  }
  
 diff -Naurp ncpfs-2.2.6.orig/sutil/ncpumount.c ncpfs-2.2.6/sutil/ncpumount.c
---- ncpfs-2.2.6.orig/sutil/ncpumount.c	2014-08-12 22:03:47.949170406 -0400
-+++ ncpfs-2.2.6/sutil/ncpumount.c	2014-08-12 22:09:30.179168372 -0400
-@@ -179,113 +179,6 @@ static void enableAlarm(void) {
+--- ncpfs-2.2.6.orig/sutil/ncpumount.c	2014-08-13 02:52:56.749067274 -0400
++++ ncpfs-2.2.6/sutil/ncpumount.c	2014-08-13 02:55:10.369066480 -0400
+@@ -179,108 +179,6 @@ static void enableAlarm(void) {
  	sigprocmask(SIG_UNBLOCK, &sa.sa_mask, NULL);
  }
  
@@ -184,12 +172,7 @@ diff -Naurp ncpfs-2.2.6.orig/sutil/ncpumount.c ncpfs-2.2.6/sutil/ncpumount.c
 -			i++;
 -		}
 -		if (!found) {
--			if (addmntent(new_mtab, mnt)) {
--				eprintf(_("Can't addmntent to %s: %s\n"), MOUNTED_TMP,
--					strerror(errno));
--				endmntent(mtab);
--				return 1;
--			}
+-			addmntent(new_mtab, mnt);
 -		}
 -	}
 -
@@ -265,7 +248,7 @@ diff -Naurp ncpfs-2.2.6.orig/sutil/ncpumount.c ncpfs-2.2.6/sutil/ncpumount.c
  int ncp_mnt_umount(const char *abs_mnt, const char *rel_mnt)
  {
  	if (umount(rel_mnt) != 0) {
-@@ -622,10 +515,6 @@ static int old_ncpumount(int argc, char
+@@ -617,10 +515,6 @@ static int old_ncpumount(int argc, char
  			ret = 1;
  			continue;
  		}
@@ -276,7 +259,7 @@ diff -Naurp ncpfs-2.2.6.orig/sutil/ncpumount.c ncpfs-2.2.6/sutil/ncpumount.c
  	}
  	return ret;
  }
-@@ -744,7 +633,6 @@ main(int argc, char *argv[])
+@@ -739,7 +633,6 @@ main(int argc, char *argv[])
  			if (serverName || allConns) {
  				processBindServers(conns,curEntries,serverName,umountTable,&mountEntries);
  			}
