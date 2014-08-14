@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gnujump
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnujump/ChangeLog,v 1.6 2013/04/26 01:03:53 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnujump/ChangeLog,v 1.7 2014/08/14 04:19:15 mr_bones_ Exp $
+
+  14 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> gnujump-1.0.8.ebuild:
+  EAPI=5; fix underlinking (bug #496924)
 
 *gnujump-1.0.8 (26 Apr 2013)
 

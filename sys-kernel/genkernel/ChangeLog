@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.394 2014/08/12 15:05:45 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.395 2014/08/14 04:06:41 patrick Exp $
+
+*genkernel-3.4.51.1-r1 (14 Aug 2014)
+
+  14 Aug 2014; Patrick Lauer <patrick@gentoo.org> +genkernel-3.4.51.1-r1.ebuild:
+  Bump with new kernel configs for x86,amd64. Adds fhandle etc. for udev and
+  some other useful things.
 
 *genkernel-3.4.51.1 (12 Aug 2014)
 
