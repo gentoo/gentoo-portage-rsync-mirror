@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/tpm-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/ChangeLog,v 1.24 2014/08/03 15:25:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/ChangeLog,v 1.25 2014/08/14 16:59:01 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> tpm-tools-1.3.8.ebuild:
+  x86 stable wrt bug #510204
 
   03 Aug 2014;  <tgall@gentoo.org> tpm-tools-1.3.5-r1.ebuild,
   tpm-tools-1.3.8.ebuild:

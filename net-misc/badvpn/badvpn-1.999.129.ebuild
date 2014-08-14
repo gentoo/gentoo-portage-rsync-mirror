@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/badvpn-1.999.129.ebuild,v 1.1 2014/03/20 19:31:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/badvpn-1.999.129.ebuild,v 1.2 2014/08/14 16:40:34 phajdan.jr Exp $
 
 EAPI=5
 inherit eutils cmake-utils user toolchain-funcs systemd
@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/ambrop72/badvpn https://code.google.com/p/badvpn/"
 SRC_URI="https://github.com/ambrop72/badvpn/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm x86"
 SLOT="0"
 TARGETS="+client +ncd +server +tun2socks +udpgw"
 IUSE="${TARGETS} debug"

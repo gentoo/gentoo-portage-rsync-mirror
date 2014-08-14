@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nevow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.53 2014/08/10 21:14:27 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.54 2014/08/14 16:36:59 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> nevow-0.11.1.ebuild:
+  x86 stable wrt bug #518242
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> nevow-0.10.0.ebuild,
   nevow-0.11.1.ebuild:

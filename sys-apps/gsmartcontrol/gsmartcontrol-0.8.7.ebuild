@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/gsmartcontrol-0.8.7.ebuild,v 1.4 2014/07/17 12:08:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/gsmartcontrol-0.8.7.ebuild,v 1.5 2014/08/14 16:47:44 phajdan.jr Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -12,7 +12,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2
 
 LICENSE="|| ( GPL-2 GPL-3 ) Boost-1.0 BSD Unlicense ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="test"
 
 COMMON_DEPEND="dev-cpp/gtkmm:2.4

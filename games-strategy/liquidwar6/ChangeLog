@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/liquidwar6
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/ChangeLog,v 1.6 2014/06/09 15:40:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/ChangeLog,v 1.7 2014/08/14 16:42:35 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  liquidwar6-0.4.3681.ebuild:
+  x86 stable wrt bug #518252
 
   09 Jun 2014; Julian Ospald <hasufell@gentoo.org> liquidwar6-0.4.3681.ebuild,
   +files/liquidwar6-0.4.3681-check-headers.patch:

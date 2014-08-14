@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.23.ebuild,v 1.1 2014/02/23 22:04:05 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.23.ebuild,v 1.2 2014/08/14 16:53:37 phajdan.jr Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://bues.ch/cms/hacking/razercfg.html"
 SRC_URI="http://bues.ch/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="+pm-utils qt4"
 
 RDEPEND="${DEPEND}

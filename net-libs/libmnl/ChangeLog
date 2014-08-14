@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.34 2014/07/31 08:18:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.35 2014/08/14 16:59:48 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> libmnl-1.0.3-r1.ebuild:
+  x86 stable wrt bug #517418
 
   31 Jul 2014; Jeroen Roovers <jer@gentoo.org> libmnl-1.0.3-r1.ebuild:
   Stable for HPPA (bug #517418).

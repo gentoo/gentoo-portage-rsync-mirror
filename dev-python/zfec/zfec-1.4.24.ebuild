@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zfec/zfec-1.4.24.ebuild,v 1.3 2014/07/06 12:51:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zfec/zfec-1.4.24.ebuild,v 1.4 2014/08/14 16:35:13 phajdan.jr Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/z/zfec/zfec-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 COMMON_DEPEND=""

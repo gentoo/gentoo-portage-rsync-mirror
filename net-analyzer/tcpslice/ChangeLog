@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpslice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/ChangeLog,v 1.19 2014/07/17 16:52:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/ChangeLog,v 1.20 2014/08/14 16:56:21 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  tcpslice-1.2a_p3-r1.ebuild:
+  x86 stable wrt bug #517340
 
 *tcpslice-1.2a_p3-r1 (17 Jul 2014)
 

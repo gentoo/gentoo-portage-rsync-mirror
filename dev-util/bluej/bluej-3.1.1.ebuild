@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bluej/bluej-3.1.1.ebuild,v 1.1 2014/03/04 02:25:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bluej/bluej-3.1.1.ebuild,v 1.2 2014/08/14 17:00:56 phajdan.jr Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ doc? ( http://bluej.org/download/files/${PN}-ref-manual.pdf
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 RDEPEND=">=virtual/jdk-1.5.0"
 DEPEND="${RDEPEND}

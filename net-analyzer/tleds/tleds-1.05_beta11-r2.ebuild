@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11-r2.ebuild,v 1.3 2014/08/01 10:42:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11-r2.ebuild,v 1.4 2014/08/14 16:58:12 phajdan.jr Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -16,7 +16,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=" ~amd64 ~ppc ~x86"
+KEYWORDS=" ~amd64 ~ppc x86"
 IUSE="X"
 
 DEPEND="X? ( x11-libs/libX11 )"

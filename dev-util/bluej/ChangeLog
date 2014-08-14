@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bluej
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bluej/ChangeLog,v 1.10 2014/03/04 02:25:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bluej/ChangeLog,v 1.11 2014/08/14 17:00:56 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> bluej-3.1.1.ebuild:
+  x86 stable wrt bug #518188
 
 *bluej-3.1.1 (04 Mar 2014)
 

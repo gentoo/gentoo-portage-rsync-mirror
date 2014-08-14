@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libuv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.22 2014/08/01 22:06:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.23 2014/08/14 16:39:15 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> libuv-0.11.25-r1.ebuild:
+  x86 stable wrt bug #518244
 
 *libuv-0.11.27 (01 Aug 2014)
 

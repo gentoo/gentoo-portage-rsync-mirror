@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/foolscap-0.6.4-r1.ebuild,v 1.1 2013/08/25 21:07:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/foolscap-0.6.4-r1.ebuild,v 1.2 2014/08/14 16:38:20 phajdan.jr Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://${PN}.lothar.com/releases/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc ssl"
 
 RDEPEND=">=dev-python/twisted-core-2.4.0[${PYTHON_USEDEP}]

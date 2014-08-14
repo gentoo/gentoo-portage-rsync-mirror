@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/tahoe-lafs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/ChangeLog,v 1.7 2014/07/06 12:54:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/ChangeLog,v 1.8 2014/08/14 16:37:40 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  tahoe-lafs-1.10.0-r2.ebuild:
+  x86 stable wrt bug #518242
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> tahoe-lafs-1.10.0-r2.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-

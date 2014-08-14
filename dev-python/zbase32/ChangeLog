@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/zbase32
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zbase32/ChangeLog,v 1.1 2013/08/01 01:40:51 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zbase32/ChangeLog,v 1.2 2014/08/14 16:34:29 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> zbase32-1.1.5.ebuild:
+  x86 stable wrt bug #518242
 
 *zbase32-1.1.5 (01 Aug 2013)
 

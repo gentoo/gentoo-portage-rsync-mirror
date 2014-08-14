@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/foolscap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.46 2013/08/25 21:07:06 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.47 2014/08/14 16:38:20 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  foolscap-0.6.4-r1.ebuild:
+  x86 stable wrt bug #518242
 
 *foolscap-0.6.4-r1 (25 Aug 2013)
 

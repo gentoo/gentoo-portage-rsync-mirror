@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.2a_p3-r1.ebuild,v 1.1 2014/07/17 16:52:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.2a_p3-r1.ebuild,v 1.2 2014/08/14 16:56:21 phajdan.jr Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -13,7 +13,7 @@ LICENSE="BSD"
 SLOT="0"
 SRC_URI="mirror://debian/pool/main/t/${PN}/${MY_P}.orig.tar.gz
 	mirror://debian/pool/main/t/${PN}/${MY_P}-4.debian.tar.gz"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 RDEPEND="net-libs/libpcap"
 DEPEND="${RDEPEND}"
