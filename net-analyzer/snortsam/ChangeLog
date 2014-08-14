@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snortsam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.37 2014/08/13 23:27:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.38 2014/08/13 23:40:58 jer Exp $
+
+  13 Aug 2014; Jeroen Roovers <jer@gentoo.org>
+  files/snortsam-2.70-gentoo.patch:
+  And more.
 
   13 Aug 2014; Jeroen Roovers <jer@gentoo.org>
   files/snortsam-2.70-gentoo.patch:

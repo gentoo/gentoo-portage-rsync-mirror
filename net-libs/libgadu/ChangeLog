@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.77 2014/08/13 23:00:37 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.78 2014/08/13 23:58:36 jer Exp $
+
+  13 Aug 2014; Jeroen Roovers <jer@gentoo.org> libgadu-1.12.0.ebuild:
+  Marked -hppa (bug #519854).
 
   13 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org> libgadu-1.12.0.ebuild,
   metadata.xml:
