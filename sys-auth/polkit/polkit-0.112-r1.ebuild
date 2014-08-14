@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r1.ebuild,v 1.12 2014/05/17 15:31:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r1.ebuild,v 1.13 2014/08/14 08:46:40 jer Exp $
 
 EAPI=5
 inherit eutils multilib pam pax-utils systemd user
@@ -11,12 +11,14 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="examples gtk +introspection kde nls pam selinux systemd"
 
-RDEPEND="ia64? ( =dev-lang/spidermonkey-1.8.5*[-debug] )
+RDEPEND="
+	ia64? ( =dev-lang/spidermonkey-1.8.5*[-debug] )
+	hppa? ( =dev-lang/spidermonkey-1.8.5*[-debug] )
 	mips? ( =dev-lang/spidermonkey-1.8.5*[-debug] )
-	!ia64? ( !mips? ( dev-lang/spidermonkey:17[-debug] ) )
+	!hppa? ( !ia64? ( !mips? ( dev-lang/spidermonkey:17[-debug] ) ) )
 	>=dev-libs/glib-2.32
 	>=dev-libs/expat-2:=
 	introspection? ( >=dev-libs/gobject-introspection-1 )

@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.327 2014/08/12 10:09:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.329 2014/08/14 08:52:11 pinkbyte Exp $
+
+  14 Aug 2014; Sergey Popov <pinkbyte@gentoo.org> boost-1.55.0-r2.ebuild:
+  Add proper blocker for app-emulation/emul-linux-x86-cpplibs, wrt bug #519744,
+  inherit multilib eclass explicitly
+
+  14 Aug 2014; Sergey Popov <pinkbyte@gentoo.org> boost-1.52.0-r7.ebuild,
+  boost-1.53.0-r1.ebuild, boost-1.54.0-r1.ebuild, boost-1.55.0-r1.ebuild,
+  boost-1.55.0-r2.ebuild:
+  Drop obsolete Python 2.6 support
 
 *boost-1.55.0-r2 (12 Aug 2014)
 
