@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/eigen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.80 2013/08/27 20:32:23 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.81 2014/08/14 17:21:40 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> eigen-3.1.3.ebuild:
+  x86 stable wrt bug #511392
 
   27 Aug 2013; Alexis Ballier <aballier@gentoo.org> eigen-2.0.17.ebuild:
   keyword ~amd64-fbsd

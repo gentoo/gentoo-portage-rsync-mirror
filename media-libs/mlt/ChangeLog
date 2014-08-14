@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.110 2014/06/23 05:36:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.111 2014/08/14 17:17:13 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> mlt-0.9.0.ebuild:
+  x86 stable wrt bug #517978
 
   23 Jun 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml

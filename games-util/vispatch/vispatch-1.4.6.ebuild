@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/vispatch/vispatch-1.4.6.ebuild,v 1.1 2013/01/27 04:52:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/vispatch/vispatch-1.4.6.ebuild,v 1.2 2014/08/14 17:04:37 phajdan.jr Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/vispatch/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 S=${WORKDIR}/${P}/source

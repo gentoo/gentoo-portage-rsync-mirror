@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beanstalkd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.36 2014/08/11 08:17:03 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.37 2014/08/14 17:24:34 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  beanstalkd-1.9-r1.ebuild:
+  x86 stable wrt bug #512332
 
 *beanstalkd-1.10 (11 Aug 2014)
 

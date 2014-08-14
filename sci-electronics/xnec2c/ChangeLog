@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/xnec2c
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/ChangeLog,v 1.15 2014/08/10 20:29:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/ChangeLog,v 1.16 2014/08/14 17:19:51 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> xnec2c-2.8.ebuild:
+  x86 stable wrt bug #518514
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xnec2c-1.4.ebuild,
   xnec2c-1.5.ebuild, xnec2c-1.6.ebuild, xnec2c-2.4.ebuild, xnec2c-2.5.ebuild,

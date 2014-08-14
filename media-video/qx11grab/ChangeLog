@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qx11grab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.41 2014/08/02 22:58:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.42 2014/08/14 17:18:01 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  qx11grab-0.4.10-r1.ebuild:
+  x86 stable wrt bug #517980
 
 *qx11grab-0.4.10-r1 (02 Aug 2014)
 

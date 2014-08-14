@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/nekohtml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.14 2014/08/10 20:21:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.15 2014/08/14 17:09:19 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> nekohtml-1.9.18.ebuild:
+  x86 stable wrt bug #518952
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> nekohtml-1.9.18.ebuild,
   nekohtml-1.9.6.ebuild:

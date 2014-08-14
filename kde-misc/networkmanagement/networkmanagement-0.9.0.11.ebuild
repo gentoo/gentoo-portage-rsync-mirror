@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.11.ebuild,v 1.3 2014/08/13 15:56:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.11.ebuild,v 1.4 2014/08/14 17:05:48 phajdan.jr Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ HOMEPAGE="https://projects.kde.org/projects/extragear/base/networkmanagement"
 [[ ${PV} = 9999* ]] || SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug openconnect"
 

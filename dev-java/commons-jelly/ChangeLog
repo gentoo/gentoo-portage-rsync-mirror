@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-jelly
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.17 2012/07/13 13:47:12 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.18 2014/08/14 17:02:49 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  commons-jelly-1.0-r5.ebuild:
+  x86 stable wrt bug #518928
 
 *commons-jelly-1.0-r5 (13 Jul 2012)
 

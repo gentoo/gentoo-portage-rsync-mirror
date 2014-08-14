@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/fldigi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/ChangeLog,v 1.95 2014/07/29 05:05:07 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/ChangeLog,v 1.96 2014/08/14 17:10:41 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> fldigi-3.21.82.ebuild:
+  x86 stable wrt bug #518442
 
 *fldigi-3.21.83 (29 Jul 2014)
 

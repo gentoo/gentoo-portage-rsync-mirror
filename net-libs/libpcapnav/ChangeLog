@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcapnav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/ChangeLog,v 1.10 2014/07/18 15:19:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/ChangeLog,v 1.11 2014/08/14 17:12:14 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> libpcapnav-0.8.ebuild:
+  x86 stable wrt bug #517422
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> libpcapnav-0.8.ebuild,
   +files/libpcapnav-0.8-includes.patch:
