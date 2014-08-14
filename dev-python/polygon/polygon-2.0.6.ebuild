@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/polygon-2.0.6.ebuild,v 1.2 2014/07/06 13:18:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/polygon-2.0.6.ebuild,v 1.3 2014/08/14 00:08:27 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -21,9 +21,6 @@ S=${WORKDIR}/Polygon2-${PV}
 
 DOCS=( HISTORY doc/Polygon.txt )
 
-src_test() {
-	python_test() {
-		PYTHONPATH="${BUILD_DIR}/lib" ${EPYTHON} test/Test.py || die
-	}
-	python_foreach_impl python_test
+python_test() {
+        ${PYTHON} test/Test.py || die "Tests failed"
 }

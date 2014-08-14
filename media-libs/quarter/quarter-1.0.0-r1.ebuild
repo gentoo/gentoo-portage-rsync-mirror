@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/quarter-1.0.0-r1.ebuild,v 1.5 2013/03/02 21:48:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/quarter-1.0.0-r1.ebuild,v 1.6 2014/08/14 00:15:23 reavertm Exp $
 
-EAPI="2"
+EAPI=5
 
-inherit base
+inherit autotools-utils
 
 MY_P="${P/q/Q}"
 
@@ -37,24 +37,13 @@ PATCHES=(
 DOCS=(AUTHORS NEWS README)
 
 src_configure() {
-	# Bug 336008
-	MAKEOPTS=-j1
-
-	econf \
-		htmldir="${ROOT}usr/share/doc/${PF}/html" \
-		--enable-pkgconfig \
-		--enable-shared \
-		--with-coin \
-		$(use_enable debug) \
-		$(use_enable debug symbols) \
-		$(use_enable doc html) \
-		$(use_enable static-libs static)
-}
-
-src_install() {
-	base_src_install
-
-	# Do not install .la files
-	rm -f "${D}"/usr/lib*/qt4/plugins/designer/*.{la,a}
-	use static-libs || rm -f "${D}"/usr/lib*/*.la
+	local myeconfargs=(
+		htmldir="${ROOT}usr/share/doc/${PF}/html"
+		--enable-pkgconfig
+		--with-coin
+		$(use_enable debug)
+		$(use_enable debug symbols)
+		$(use_enable doc html)
+	)
+	autotools-utils_src_configure
 }

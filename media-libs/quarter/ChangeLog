@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/quarter
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/ChangeLog,v 1.6 2013/03/02 21:48:45 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/ChangeLog,v 1.7 2014/08/14 00:15:23 reavertm Exp $
+
+  14 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org>
+  files/quarter-1.0.0-gcc44.patch, quarter-1.0.0-r1.ebuild:
+  Fix patch, bug 477114, Move to EAPI 5.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> quarter-1.0.0-r1.ebuild:
   Move Qt dependencies to the new category

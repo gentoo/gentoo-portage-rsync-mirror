@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/polygon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.12 2014/07/06 13:18:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.13 2014/08/14 00:08:27 idella4 Exp $
+
+*polygon-3.0.7 (13 Aug 2014)
+
+  13 Aug 2014; Ian Delaney <idella4@gentoo.org> +polygon-3.0.7.ebuild,
+  -polygon-3.0.6.ebuild, polygon-2.0.6.ebuild:
+  bump; tidy, rm old
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> polygon-2.0.6.ebuild,
   polygon-3.0.6.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.60 2014/03/06 10:56:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.61 2014/08/14 00:03:40 jer Exp $
+
+  14 Aug 2014; Jeroen Roovers <jer@gentoo.org> protobuf-2.4.0a.ebuild,
+  protobuf-2.4.1.ebuild, protobuf-2.5.0.ebuild:
+  Marked -hppa (bug #519772).
 
   06 Mar 2014; Agostino Sarubbo <ago@gentoo.org> protobuf-2.5.0.ebuild:
   Revert wrong commit wrt bug #503046
