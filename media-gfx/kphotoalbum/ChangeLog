@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.65 2014/08/10 21:15:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.66 2014/08/14 21:10:04 johu Exp $
+
+  14 Aug 2014; Johannes Huber <johu@gentoo.org> -kphotoalbum-4.4-r1.ebuild,
+  metadata.xml:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> kphotoalbum-4.4.ebuild:
   QA: drop trailing '.' from DESCRIPTION
