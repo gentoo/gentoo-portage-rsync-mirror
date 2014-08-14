@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.23 2014/08/10 20:34:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.24 2014/08/14 21:43:49 zerochaos Exp $
+
+  14 Aug 2014; Rick Farina <zerochaos@gentoo.org> blueman-9999.ebuild:
+  remove blocker, upstream doesn't use their own icons anymore
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> blueman-1.21-r1.ebuild,
   blueman-1.23-r1.ebuild, blueman-1.23-r2.ebuild, blueman-1.23.ebuild,
