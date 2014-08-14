@@ -17,7 +17,7 @@ these files use frexp/ldexp which is in -lm
  
  lastcomm_SOURCES = lastcomm.c common.c dev_hash.c file_rd.c \
    hashtab.c pacct_rd.c uid_hash.c
-+sa_LDADD = $(LDADD) -lm
++lastcomm_LDADD = $(LDADD) -lm
  
  sa_SOURCES = sa.c common.c file_rd.c hashtab.c \
    pacct_rd.c uid_hash.c

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.190 2014/07/30 19:25:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.191 2014/08/14 12:48:38 polynomial-c Exp $
+
+  14 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.3.14.ebuild:
+  Fixed compile error through missing define (bug #514658).
 
   30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> virtualbox-4.2.24.ebuild,
   virtualbox-4.2.26.ebuild, virtualbox-4.3.12.ebuild, virtualbox-4.3.14.ebuild,
