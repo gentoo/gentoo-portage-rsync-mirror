@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/polygon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.13 2014/08/14 00:08:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.14 2014/08/14 05:23:53 patrick Exp $
+
+  14 Aug 2014; Patrick Lauer <patrick@gentoo.org> polygon-2.0.6.ebuild:
+  Whitespace
 
 *polygon-3.0.7 (13 Aug 2014)
 
