@@ -1,24 +1,22 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.10 2014/08/14 07:15:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.3.ebuild,v 1.9 2014/08/14 07:15:15 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE="tk?"
 
-inherit cmake-utils fdo-mime multilib python-single-r1 subversion
+inherit cmake-utils fdo-mime python-single-r1
 
 DESCRIPTION="Desktop publishing (DTP) and layout program"
 HOMEPAGE="http://www.scribus.net/"
-SRC_URI=""
-ESVN_REPO_URI="svn://scribus.net/trunk/Scribus"
-ESVN_PROJECT=Scribus-1.5
+SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="cairo debug examples graphicsmagick hunspell +minimal osg +pdf poppler scripts templates tk"
+KEYWORDS="amd64 hppa ppc ppc64 ~sparc x86"
+IUSE="cairo debug examples hunspell +minimal +pdf scripts templates tk"
 
 # a=$(ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'); echo ${a}
 IUSE_LINGUAS=" af ar bg br ca cs_CZ cy da_DK de de_1901 de_CH el en_AU en_GB en_US es_ES et eu fi fr gl hu id it ja ko lt_LT nb_NO nl pl_PL pt pt_BR ru sa sk_SK sl sq sr sv th_TH tr uk zh_CN zh_TW"
@@ -46,10 +44,7 @@ COMMON_DEPEND="
 	cairo? ( x11-libs/cairo[X,svg] )
 	!cairo? ( media-libs/libart_lgpl )
 	hunspell? ( app-text/hunspell )
-	graphicsmagick? ( media-gfx/graphicsmagick )
-	osg? ( dev-games/openscenegraph )
 	pdf? ( app-text/podofo )
-	poppler? ( app-text/poppler )
 	scripts? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
 	tk? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
 "
@@ -59,7 +54,8 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.5.0-docs.patch
+	"${FILESDIR}"/${PN}-1.4.2-docs.patch
+	"${FILESDIR}"/${PN}-1.4.0-minizip.patch
 	)
 
 src_prepare() {
@@ -71,17 +67,13 @@ src_prepare() {
 	MARK_AS_ADVANCED( ZLIB_LIBRARY ZLIB_INCLUDE_DIR )
 	EOF
 
-	sed \
-		-e "/^\s*unzip\.[ch]/d" \
-		-e "/^\s*ioapi\.[ch]/d" \
-		-i scribus/CMakeLists.txt || die
+	rm scribus/{ioapi,unzip}.[ch] || die
 
 	sed \
 		-e 's:\(${CMAKE_INSTALL_PREFIX}\):./\1:g' \
 		-i resources/templates/CMakeLists.txt || die
 
 	cmake-utils_src_prepare
-	subversion_src_prepare
 }
 
 src_configure() {
@@ -90,7 +82,7 @@ src_configure() {
 		if use linguas_${lang}; then
 			langs+=",${lang}"
 		else
-			sed -e "/${lang}/d" -i doc/CMakeLists.txt || die
+			sed -e "/${lang}/d" -i scribus/doc/CMakeLists.txt || die
 		fi
 	done
 
@@ -99,14 +91,12 @@ src_configure() {
 		-DPYTHON_INCLUDE_PATH="$(python_get_includedir)"
 		-DPYTHON_LIBRARY="$(python_get_library_path)"
 		-DWANT_NORPATH=ON
-		-DWANT_QTARTHUR=ON
 		-DWANT_QT3SUPPORT=OFF
 		-DGENTOOVERSION=${PVR}
 		-DWANT_GUI_LANG=${langs#,}
 		$(cmake-utils_use_with pdf PODOFO)
 		$(cmake-utils_use_want cairo)
-		$(cmake-utils_use_want graphicsmagick)
-		$(cmake-utils_use_want osg)
+		$(cmake-utils_use_want !cairo QTARTHUR)
 		$(cmake-utils_use_want debug DEBUG)
 		$(cmake-utils_use_want minimal NOHEADERINSTALL)
 		$(cmake-utils_use_want hunspell HUNSPELL)
