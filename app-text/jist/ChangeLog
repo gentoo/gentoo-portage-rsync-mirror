@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jist
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jist/ChangeLog,v 1.14 2013/10/26 13:56:02 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jist/ChangeLog,v 1.15 2014/08/14 13:54:50 mrueg Exp $
+
+  14 Aug 2014; Manuel Rüger <mrueg@gentoo.org> jist-1.3.0.ebuild,
+  jist-1.3.1.ebuild, jist-1.4.0.ebuild, jist-1.5.0.ebuild, jist-1.5.1.ebuild:
+  Remove ruby18 from USE_RUBY.
 
   26 Oct 2013; Julian Ospald <hasufell@gentoo.org> jist-1.5.1.ebuild:
   add ruby20

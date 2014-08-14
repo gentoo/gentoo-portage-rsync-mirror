@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/command-t-1.6.ebuild,v 1.1 2013/12/17 09:12:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/command-t-1.6.ebuild,v 1.2 2014/08/14 13:51:56 mrueg Exp $
 
 EAPI="5"
-USE_RUBY="ruby18 ruby19 ruby20"
+USE_RUBY="ruby19 ruby20"
 
 inherit vim-plugin ruby-ng
 

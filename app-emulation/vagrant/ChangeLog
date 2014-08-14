@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vagrant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/ChangeLog,v 1.38 2014/04/21 06:19:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/ChangeLog,v 1.39 2014/08/14 13:57:02 mrueg Exp $
+
+  14 Aug 2014; Manuel Rüger <mrueg@gentoo.org> vagrant-1.0.7.ebuild:
+  Remove ruby18 from USE_RUBY.
 
   21 Apr 2014; Tim Harder <radhermit@gentoo.org> -vagrant-1.4.3-r1.ebuild:
   Remove old.

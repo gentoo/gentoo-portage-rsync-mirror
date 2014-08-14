@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jist/jist-1.3.0.ebuild,v 1.1 2012/12/10 20:45:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jist/jist-1.3.0.ebuild,v 1.2 2014/08/14 13:54:50 mrueg Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""

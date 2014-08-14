@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.6.2-r1.ebuild,v 1.4 2013/03/04 19:16:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.6.2-r1.ebuild,v 1.5 2014/08/14 14:00:22 mrueg Exp $
 
 EAPI=5
 
 VIRTUALX_REQUIRED=always
 VIRTUALX_COMMAND=./configure
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 inherit ruby-ng virtualx
 

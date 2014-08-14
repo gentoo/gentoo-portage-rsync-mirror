@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rubyripper
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.46 2013/03/04 19:16:40 billie Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.47 2014/08/14 14:00:22 mrueg Exp $
+
+  14 Aug 2014; Manuel Rüger <mrueg@gentoo.org> rubyripper-0.6.2-r1.ebuild:
+  Remove ruby18 from USE_RUBY.
 
   04 Mar 2013; Daniel Pielmeier <billie@gentoo.org> rubyripper-0.6.2-r1.ebuild:
   Switch to EAPI 5.
@@ -198,4 +201,3 @@
   15 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   +rubyripper-0.2.ebuild:
   Initial import, ebuild by Ben de Groot, submitted in bug #146738.
-
