@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.14.0.ebuild,v 1.4 2014/08/14 15:30:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.14.1.ebuild,v 1.1 2014/08/14 15:30:09 idella4 Exp $
 
 EAPI=5
 
@@ -39,9 +39,9 @@ DEPEND="${CDEPEND}
 		dev-python/rpy[$(python_gen_usedep 'python2_7')]
 		sci-libs/scipy[${PYTHON_USEDEP}]
 		>=dev-python/sphinx-1.2.1[${PYTHON_USEDEP}]
-		dev-python/xlrd[$(python_gen_usedep 'python2*')]
-		dev-python/xlwt[$(python_gen_usedep 'python2*')]
-		sci-libs/scikits_timeseries[$(python_gen_usedep 'python2*')]
+		dev-python/xlrd[$(python_gen_usedep 'python2_7')]
+		dev-python/xlwt[$(python_gen_usedep 'python2_7')]
+		sci-libs/scikits_timeseries[$(python_gen_usedep 'python2_7')]
 		x11-misc/xclip
 		)
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
@@ -56,8 +56,8 @@ RDEPEND="${CDEPEND}
 	sci-libs/scipy[${PYTHON_USEDEP}]
 	excel? (
 		>=dev-python/openpyxl-1.6.1[${PYTHON_USEDEP}]
-		dev-python/xlrd[$(python_gen_usedep 'python2*')]
-		dev-python/xlwt[$(python_gen_usedep 'python2*')]
+		dev-python/xlrd[$(python_gen_usedep 'python2_7')]
+		dev-python/xlwt[$(python_gen_usedep 'python2_7')]
 	)
 	html? (
 		dev-python/beautifulsoup:4[${PYTHON_USEDEP}]
@@ -89,7 +89,11 @@ python_compile_all() {
 python_compile() {
 	if ! python_is_python3; then
 		local CFLAGS=${CFLAGS}
+		local CXXFLAGS=${CXXFLAGS}
+		export CFLAGS
+		export CXXFLAGS
 		append-cflags -fno-strict-aliasing
+		append-cxxflags -fno-strict-aliasing
 	fi
 
 	distutils-r1_python_compile

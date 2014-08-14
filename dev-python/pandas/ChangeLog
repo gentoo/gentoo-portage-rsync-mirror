@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.26 2014/06/25 11:27:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.27 2014/08/14 15:30:09 idella4 Exp $
+
+*pandas-0.14.1 (14 Aug 2014)
+
+  14 Aug 2014; Ian Delaney <idella4@gentoo.org> +pandas-0.14.1.ebuild,
+  pandas-0.14.0.ebuild:
+  bump; update dep openpyxl, fix strict-aliasing qa issue
 
   25 Jun 2014; Ian Delaney <idella4@gentoo.org> pandas-0.14.0.ebuild:
   set no-strict-aliasing under py2.7, revise sed statement, correct doc location
