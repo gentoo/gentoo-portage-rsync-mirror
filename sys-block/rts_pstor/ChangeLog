@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/rts_pstor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/rts_pstor/ChangeLog,v 1.4 2014/07/10 13:10:51 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/rts_pstor/ChangeLog,v 1.5 2014/08/14 18:10:46 vikraman Exp $
+
+*rts_pstor-1.10-r3 (14 Aug 2014)
+
+  14 Aug 2014; Vikraman Choudhury (vikraman) <vikraman@gentoo.org>
+  +rts_pstor-1.10-r3.ebuild, -rts_pstor-1.10-r2.ebuild:
+  Install module to /lib/modules/${KV}/misc.
 
   10 Jul 2014; Vikraman Choudhury (vikraman) <vikraman@gentoo.org>
   -rts_pstor-1.10-r1.ebuild, -rts_pstor-1.10.ebuild:
