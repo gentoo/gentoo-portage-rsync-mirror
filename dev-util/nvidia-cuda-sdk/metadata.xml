@@ -7,10 +7,6 @@
     <name>Justin Lecher</name>
   </maintainer>
   <use>
-    <flag name="emulation">
-			Build binaries for device emulation mode.  These binaries
-			will not require a CUDA-capable GPU to run.
-		</flag>
     <flag name="opencl">
 			Build OpenCL binaries.
 		</flag>
