@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/jimtcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.14 2014/06/10 00:21:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.15 2014/08/14 01:45:51 vapier Exp $
+
+*jimtcl-0.75-r1 (14 Aug 2014)
+
+  14 Aug 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/jimtcl-0.75-bootstrap.patch, +jimtcl-0.75-r1.ebuild,
+  jimtcl-9999.ebuild:
+  Rewrite ebuild to fix many errors & merge the live/release versions.
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> jimtcl-0.73.ebuild,
   jimtcl-0.74-r1.ebuild, jimtcl-0.75.ebuild:
