@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/classifier
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier/ChangeLog,v 1.6 2014/08/13 16:37:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier/ChangeLog,v 1.7 2014/08/14 02:44:44 patrick Exp $
+
+  14 Aug 2014; Patrick Lauer <patrick@gentoo.org> classifier-1.3.4.ebuild:
+  Whitespace
 
   13 Aug 2014; Manuel Rüger <mrueg@gentoo.org> classifier-1.3.4.ebuild:
   Make depends look nicer.
