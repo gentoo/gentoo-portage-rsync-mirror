@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snortsam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.36 2014/07/17 14:31:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.37 2014/08/13 23:27:45 jer Exp $
+
+  13 Aug 2014; Jeroen Roovers <jer@gentoo.org>
+  files/snortsam-2.70-gentoo.patch:
+  Remove duplicate LDFLAGS variables.
 
   17 Jul 2014; Jeroen Roovers <jer@gentoo.org> snortsam-2.70.ebuild:
   Set CC in src_configure().
