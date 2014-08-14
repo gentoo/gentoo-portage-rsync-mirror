@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/unfoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.34 2014/08/05 11:33:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.35 2014/08/14 16:24:55 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> unfoo-1.0.8.ebuild:
+  x86 stable wrt bug #517302
 
   05 Aug 2014; Raúl Porcel <armin76@gentoo.org> unfoo-1.0.6.ebuild:
   Drop sparc keywords

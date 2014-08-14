@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.22 2014/07/27 12:52:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.23 2014/08/14 16:14:12 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libsdl2-2.0.3-r100.ebuild:
+  x86 stable wrt bug #514904
 
 *libsdl2-2.0.3-r100 (27 Jul 2014)
 

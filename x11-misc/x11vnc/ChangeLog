@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.112 2014/01/22 23:59:19 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.113 2014/08/14 16:25:51 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> x11vnc-0.9.13-r1.ebuild:
+  x86 stable wrt bug #518214
 
   22 Jan 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Added proxy maintainers herd.

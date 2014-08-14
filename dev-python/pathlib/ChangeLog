@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pathlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pathlib/ChangeLog,v 1.1 2014/03/30 19:42:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pathlib/ChangeLog,v 1.2 2014/08/14 16:24:01 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> pathlib-1.0.ebuild:
+  x86 stable wrt bug #518212
 
 *pathlib-1.0 (30 Mar 2014)
 

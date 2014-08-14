@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.229 2014/08/06 09:22:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.230 2014/08/14 16:28:57 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> unrar-5.1.6.ebuild:
+  x86 stable wrt bug #518926
 
   06 Aug 2014; Jeroen Roovers <jer@gentoo.org> unrar-5.1.6.ebuild:
   Stable for HPPA (bug #518926).

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Linux-DesktopFiles
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-DesktopFiles/ChangeLog,v 1.5 2013/11/02 17:06:43 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-DesktopFiles/ChangeLog,v 1.6 2014/08/14 16:18:15 phajdan.jr Exp $
+
+  14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Linux-DesktopFiles-0.80.0.ebuild:
+  x86 stable wrt bug #518186
 
 *Linux-DesktopFiles-0.80.0 (02 Nov 2013)
 
