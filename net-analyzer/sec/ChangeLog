@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/ChangeLog,v 1.27 2014/08/11 14:37:38 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/ChangeLog,v 1.28 2014/08/14 20:44:51 jer Exp $
+
+  14 Aug 2014; Jeroen Roovers <jer@gentoo.org> -sec-2.7.0.ebuild:
+  Old.
 
   11 Aug 2014; Chema Alonso <nimiux@gentoo.org> sec-2.7.5.ebuild:
   Stable for amd64 wrt bug #517274

@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/nepomukshell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/nepomukshell/ChangeLog,v 1.2 2014/05/13 23:17:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/nepomukshell/ChangeLog,v 1.3 2014/08/14 20:59:34 johu Exp $
+
+  14 Aug 2014; Johannes Huber <johu@gentoo.org> -nepomukshell-0.8.0.ebuild:
+  Remove old.
 
 *nepomukshell-0.8.0-r1 (13 May 2014)
 
