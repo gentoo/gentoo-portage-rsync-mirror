@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/rts5229-1.07-r3.ebuild,v 1.1 2014/07/10 13:05:14 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/rts5229-1.07-r4.ebuild,v 1.1 2014/08/14 18:00:43 vikraman Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
 
-MODULE_NAMES="rts5229(kernel/drivers/scsi)"
+MODULE_NAMES="rts5229(misc/drivers/scsi)"
 BUILD_TARGETS="default"
 
 src_prepare() {
