@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lackman/lc-lackman-0.6.65.ebuild,v 1.1 2014/04/10 17:56:27 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lackman/lc-lackman-0.6.65.ebuild,v 1.2 2014/08/14 09:21:36 pinkbyte Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit leechcraft
 
-DESCRIPTION="LeechCraft Package Manager for extensions, scripts, themes etc."
+DESCRIPTION="LeechCraft Package Manager for extensions, scripts, themes etc"
 
 SLOT="0"
 KEYWORDS=" ~amd64 ~x86"
