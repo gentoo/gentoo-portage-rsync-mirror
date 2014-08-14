@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r2.ebuild,v 1.3 2014/08/13 12:24:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r2.ebuild,v 1.4 2014/08/14 14:14:06 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib pam pax-utils systemd user
@@ -70,7 +70,7 @@ src_configure() {
 		$(use_enable introspection) \
 		--disable-examples \
 		$(use_enable nls) \
-		$(if use ia64 || use mips; then echo --with-mozjs=mozjs185; else echo --with-mozjs=mozjs-17.0; fi) \
+		$(if use hppa || use ia64 || use mips; then echo --with-mozjs=mozjs185; else echo --with-mozjs=mozjs-17.0; fi) \
 		"$(systemd_with_unitdir)" \
 		--with-authfw=$(usex pam pam shadow) \
 		$(use pam && echo --with-pam-module-dir="$(getpam_mod_dir)") \
@@ -85,7 +85,8 @@ src_compile() {
 	local m=''
 	# Only used when USE="jit" is enabled for 'dev-lang/spidermonkey:17' wrt #485910
 	has_version 'dev-lang/spidermonkey:17[jit]' && m='m'
-	# ia64 and mips uses spidermonkey-1.8.5 which requires different pax-mark flags
+	# hppa, ia64 and mips uses spidermonkey-1.8.5 which requires different pax-mark flags
+	use hppa && m='mr'
 	use ia64 && m='mr'
 	use mips && m='mr'
 	pax-mark ${m} ${f}
