@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.37 2014/01/07 15:01:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.38 2014/08/15 01:30:28 idella4 Exp $
+
+*pysvn-1.7.9 (15 Aug 2014)
+
+  15 Aug 2014; Ian Delaney <idella4@gentoo.org>
+  +files/pysvn-1.7.9-respect_flags.patch, +pysvn-1.7.9.ebuild:
+  drop py2.6 py3.2 add py3.4, re-based patch, re-instated test phase, tidy
 
   07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> pysvn-1.7.8.ebuild:
   Fixed dependency on subversion (bug #497400).
