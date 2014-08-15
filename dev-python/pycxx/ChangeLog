@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycxx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.50 2014/03/31 21:07:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.51 2014/08/14 23:58:14 idella4 Exp $
+
+  14 Aug 2014; Ian Delaney <idella4@gentoo.org> pycxx-6.2.5.ebuild:
+  drop py2.6 pypy add py3_4
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> pycxx-6.2.5.ebuild:
   Add support for the new PyPy slotting.
