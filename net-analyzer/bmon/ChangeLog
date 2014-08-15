@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.57 2014/07/27 11:14:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.58 2014/08/15 19:23:50 jer Exp $
+
+  15 Aug 2014; Jeroen Roovers <jer@gentoo.org> -bmon-2.1.1_pre1.ebuild,
+  -files/bmon-2.1.0-gcc4.diff, -files/bmon-2.1.0-libnl-1.0.patch,
+  -files/bmon-2.1.0-nostrip.patch, -files/bmon-2.1.0-sysfs-symlink.patch,
+  -files/bmon-2.1.1-verbose.patch, metadata.xml:
+  Old.
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> bmon-3.2.ebuild:
   x86 stable wrt bug #516862

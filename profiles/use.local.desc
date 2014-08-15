@@ -4504,7 +4504,6 @@ net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Secu
 net-analyzer/barnyard2:aruba - Enable Aruba support
 net-analyzer/barnyard2:gre - Enable GRE support
 net-analyzer/barnyard2:mpls - Enable support for mpls networks
-net-analyzer/bmon:rrdtool - Enables net-analyzer/rrdtool support
 net-analyzer/bwm-ng:csv - Enable csv output
 net-analyzer/bwm-ng:html - Enable html output
 net-analyzer/cacti:doc - install html documentation

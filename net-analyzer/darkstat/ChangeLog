@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.65 2014/08/14 20:41:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.66 2014/08/15 19:18:31 jer Exp $
+
+  15 Aug 2014; Jeroen Roovers <jer@gentoo.org> darkstat-3.0.718.ebuild:
+  sed must die().
 
   14 Aug 2014; Jeroen Roovers <jer@gentoo.org> -darkstat-3.0.717.ebuild:
   Old.

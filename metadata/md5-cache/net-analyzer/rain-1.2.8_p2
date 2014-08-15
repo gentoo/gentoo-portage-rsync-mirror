@@ -1,8 +1,0 @@
-DEFINED_PHASES=install unpack
-DESCRIPTION=powerful tool for testing stability of hardware and software utilizing IP protocols
-HOMEPAGE=http://www.mirrors.wiretapped.net/security/packet-construction/rain/
-KEYWORDS=~amd64 ~ppc ~sparc x86
-LICENSE=GPL-2
-SLOT=0
-SRC_URI=http://www.mirrors.wiretapped.net/security/packet-construction/rain/rain-1.2.8r2.tar.bz2
-_md5_=a79704ce8298a35b6c2c0803d5e8eda4
