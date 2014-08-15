@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.0.24-r1.ebuild,v 1.2 2013/07/28 08:12:45 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.0.24-r1.ebuild,v 1.3 2014/08/15 22:32:49 xmw Exp $
 
 EAPI=5
 
@@ -92,8 +92,5 @@ src_compile() {
 
 src_install() {
 	backintime_run emake DESTDIR="${D}" install
-}
-
-pkg_postinst() {
 	python_optimize "${D}"
 }
