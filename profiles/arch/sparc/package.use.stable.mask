@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.stable.mask,v 1.4 2014/07/31 22:14:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.stable.mask,v 1.5 2014/08/15 17:46:59 armin76 Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,10 +17,6 @@
 #
 
 #--- END OF EXAMPLES ---
-
-# Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2014)
-# Untested dev-lang/ruby based dependencies wrt #493780
-sys-block/thin-provisioning-tools test
 
 # Pacho Ramos <pacho@gentoo.org> (02 Jul 2014)
 # Mask due Gnome3 not going to be stabilized on this arch

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.273 2014/08/15 09:19:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.274 2014/08/15 18:00:06 armin76 Exp $
+
+  15 Aug 2014; Raúl Porcel <armin76@gentoo.org> rrdtool-1.4.8-r1.ebuild:
+  ia64/sparc stable, bug #517234
 
   15 Aug 2014; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.8-r1.ebuild,
   rrdtool-1.4.8-r3.ebuild:

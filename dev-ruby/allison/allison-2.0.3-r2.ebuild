@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/allison-2.0.3-r2.ebuild,v 1.11 2014/08/05 16:00:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/allison-2.0.3-r2.ebuild,v 1.12 2014/08/15 17:53:49 armin76 Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 jruby"
@@ -18,7 +18,7 @@ HOMEPAGE="http://fauna.github.com/fauna/allison/files/README.html"
 
 LICENSE="AFL-3.0"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86 ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~s390 sparc x86 ~x86-solaris"
 IUSE=""
 
 all_ruby_install() {
