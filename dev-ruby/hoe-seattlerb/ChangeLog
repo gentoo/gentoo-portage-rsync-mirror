@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.61 2014/08/10 23:23:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.62 2014/08/15 17:21:31 armin76 Exp $
+
+  15 Aug 2014; Raúl Porcel <armin76@gentoo.org> hoe-seattlerb-1.3.2-r1.ebuild:
+  sparc stable, bug #490180
 
 *hoe-seattlerb-1.3.3 (10 Aug 2014)
 

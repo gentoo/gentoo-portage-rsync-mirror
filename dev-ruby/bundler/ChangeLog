@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.65 2014/07/22 15:56:56 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.66 2014/08/15 17:03:27 armin76 Exp $
+
+  15 Aug 2014; Raúl Porcel <armin76@gentoo.org> bundler-1.3.5.ebuild,
+  bundler-1.3.5-r1.ebuild, bundler-1.3.6.ebuild:
+  Add ~sparc wrt #471306
 
   22 Jul 2014; Tobias Klausmann <klausman@gentoo.org> bundler-1.3.5-r1.ebuild:
   Keyworded on alpha, bug #465948

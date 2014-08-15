@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.80 2014/08/14 06:01:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.81 2014/08/15 17:07:32 armin76 Exp $
+
+  15 Aug 2014; Raúl Porcel <armin76@gentoo.org> cucumber-1.3.2.ebuild,
+  cucumber-1.3.10.ebuild, cucumber-1.3.14.ebuild, cucumber-1.3.15.ebuild,
+  cucumber-1.3.16.ebuild:
+  Add ~sparc wrt #471306
 
 *cucumber-1.3.16 (14 Aug 2014)
 

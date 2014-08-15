@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.146 2014/07/18 17:57:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.147 2014/08/15 17:23:56 armin76 Exp $
+
+  15 Aug 2014; Raúl Porcel <armin76@gentoo.org> zentest-4.9.5.ebuild:
+  sparc stable, bug #490180
 
   18 Jul 2014; Manuel Rüger <mrueg@gentoo.org> zentest-4.9.5.ebuild:
   Fix minitest dependency. Stable on amd64. Bug #490180.

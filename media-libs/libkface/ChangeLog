@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkface
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/ChangeLog,v 1.47 2014/06/04 21:41:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/ChangeLog,v 1.48 2014/08/15 17:27:09 johu Exp $
+
+*libkface-4.2.0 (15 Aug 2014)
+
+  15 Aug 2014; Johannes Huber <johu@gentoo.org> +libkface-4.2.0.ebuild:
+  Version bump.
 
 *libkface-4.0.0 (04 Jun 2014)
 

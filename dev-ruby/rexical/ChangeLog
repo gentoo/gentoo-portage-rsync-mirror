@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rexical
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.45 2014/07/14 18:00:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.46 2014/08/15 17:24:54 armin76 Exp $
+
+  15 Aug 2014; Raúl Porcel <armin76@gentoo.org> rexical-1.0.5-r2.ebuild:
+  sparc stable wrt #505916
 
   14 Jul 2014; Hans de Graaff <graaff@gentoo.org> rexical-1.0.5-r3.ebuild:
   Revert x86 stable keyword since it was based on a wrong list in bug 505920,

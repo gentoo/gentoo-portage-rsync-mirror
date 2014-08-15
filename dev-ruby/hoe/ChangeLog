@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.159 2014/08/05 16:00:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.160 2014/08/15 17:20:16 armin76 Exp $
+
+  15 Aug 2014; Raúl Porcel <armin76@gentoo.org> hoe-2.13.0-r1.ebuild:
+  sparc stable, bug #490180
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> hoe-2.12.5.ebuild,
   hoe-2.13.0-r1.ebuild, hoe-3.11.0.ebuild, hoe-3.12.0.ebuild:
