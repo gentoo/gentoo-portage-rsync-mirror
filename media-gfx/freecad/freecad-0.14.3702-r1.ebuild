@@ -1,20 +1,20 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-9999.ebuild,v 1.2 2014/08/15 13:53:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.14.3702-r1.ebuild,v 1.1 2014/08/15 13:53:23 xmw Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit cmake-utils eutils git-2 fortran-2 multilib python-single-r1
+inherit cmake-utils eutils fortran-2 multilib python-single-r1
 
 DESCRIPTION="QT based Computer Aided Design application"
 HOMEPAGE="http://www.freecadweb.org/"
-EGIT_REPO_URI="git://git.code.sf.net/p/free-cad/code"
+SRC_URI="mirror://sourceforge/free-cad/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="dev-cpp/eigen:3
@@ -66,7 +66,7 @@ src_prepare() {
 	einfo remove bundled libs
 	rm -rf src/3rdParty/{boost,Pivy*}
 
-	#epatch "${FILESDIR}"/${PN}-0.14.3702-install-paths.patch
+	epatch "${FILESDIR}"/${P}-install-paths.patch
 
 	#bug 518996
 	sed -e "/LibDir = /s:'lib':'"$(get_libdir)"':g" \

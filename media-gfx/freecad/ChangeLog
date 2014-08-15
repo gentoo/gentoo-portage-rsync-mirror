@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/freecad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.21 2014/07/29 20:36:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.22 2014/08/15 13:53:23 xmw Exp $
+
+*freecad-0.14.3702-r1 (15 Aug 2014)
+
+  15 Aug 2014; Michael Weber <xmw@gentoo.org> +freecad-0.14.3702-r1.ebuild,
+  freecad-9999.ebuild:
+  Revbump to fix module search path, big thanks to Casey Bralla and Marek for
+  working this out with upstream (bug 518996).
 
 *freecad-9999 (29 Jul 2014)
 *freecad-0.14.3702 (29 Jul 2014)

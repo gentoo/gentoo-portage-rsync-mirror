@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-3.1.8-r1.ebuild,v 1.5 2014/04/05 14:31:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-3.1.8-r1.ebuild,v 1.6 2014/08/15 14:01:04 blueness Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://haml-lang.com/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 # TODO: haml has some emacs modes that it could be installing, in case
 IUSE=""

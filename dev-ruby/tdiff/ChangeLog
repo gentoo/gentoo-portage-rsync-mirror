@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tdiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tdiff/ChangeLog,v 1.4 2014/05/27 04:55:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tdiff/ChangeLog,v 1.5 2014/08/15 13:56:03 blueness Exp $
+
+  15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> tdiff-0.3.3.ebuild:
+  Keyword ~ppc ~ppc64, bug #511424
 
   27 May 2014; Hans de Graaff <graaff@gentoo.org> tdiff-0.3.3.ebuild:
   Add ruby21.

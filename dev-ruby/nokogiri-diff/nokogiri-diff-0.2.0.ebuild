@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri-diff/nokogiri-diff-0.2.0.ebuild,v 1.3 2014/05/07 19:17:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri-diff/nokogiri-diff-0.2.0.ebuild,v 1.4 2014/08/15 13:56:39 blueness Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ DESCRIPTION="Calculate the differences (added or removed nodes) between two XML/
 HOMEPAGE="https://github.com/postmodern/nokogiri-diff"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~arm"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64"
 SLOT="0"
 IUSE=""
 

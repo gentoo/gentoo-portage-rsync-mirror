@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tdiff/tdiff-0.3.3.ebuild,v 1.4 2014/05/27 04:55:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tdiff/tdiff-0.3.3.ebuild,v 1.5 2014/08/15 13:56:03 blueness Exp $
 
 EAPI=5
 
@@ -17,6 +17,6 @@ DESCRIPTION="Calculates the differences between two tree-like structures"
 HOMEPAGE="https://github.com/postmodern/tdiff"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~arm"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64"
 SLOT="0"
 IUSE=""
