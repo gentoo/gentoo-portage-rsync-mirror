@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.27 2014/08/14 15:30:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.28 2014/08/15 02:45:07 idella4 Exp $
+
+  15 Aug 2014; Ian Delaney <idella4@gentoo.org> pandas-0.14.1.ebuild:
+  add commented links to bugs filed upstream
 
 *pandas-0.14.1 (14 Aug 2014)
 
