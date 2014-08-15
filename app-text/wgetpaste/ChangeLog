@@ -1,6 +1,12 @@
 # ChangeLog for app-text/wgetpaste
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.138 2013/12/10 09:45:38 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.139 2014/08/15 11:49:51 maksbotan Exp $
+
+*wgetpaste-2.25 (15 Aug 2014)
+
+  15 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org> +wgetpaste-2.25.ebuild,
+  -wgetpaste-2.20-r1.ebuild, -wgetpaste-2.21.ebuild, -wgetpaste-2.23.ebuild:
+  Bump to 2.25, bug #519948. Clean old.
 
 *wgetpaste-2.23 (10 Dec 2013)
 
