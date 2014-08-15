@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/networkx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.26 2014/07/14 11:14:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.27 2014/08/15 00:17:57 blueness Exp $
+
+  15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> networkx-1.9.ebuild:
+  Keyword ~ppc, bug #517086
 
 *networkx-1.9 (14 Jul 2014)
 

@@ -1,6 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.208 2014/08/14 23:34:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.210 2014/08/15 00:17:23 blueness Exp $
+
+# Anthony G. Basile <blueness@gentoo.org> (14 Aug 2014)
+# Mask USE=doc because it pulls in matplotlib whic has
+# too many unkeyworded dependencies. Bug #517086
+=dev-python/networkx-1.9 doc examples test
 
 # Anthony G. Basile <blueness@gentoo.org> (14 Aug 2014)
 # Mask these flags since mongodb is broken on ppc/ppc64
