@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/c-ares
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.87 2014/08/03 17:12:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.88 2014/08/15 15:58:27 jer Exp $
+
+  15 Aug 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove empty <longdescription>.
 
   03 Aug 2014;  <tgall@gentoo.org> c-ares-1.10.0-r1.ebuild, c-ares-1.9.1.ebuild:
   arm64, initial support

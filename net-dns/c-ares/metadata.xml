@@ -5,7 +5,6 @@
   <email>blueness@gentoo.org</email>
   <name>Anthony G. Basile</name>
 </maintainer>
-<longdescription></longdescription>
 <upstream>
   <remote-id type="cpe">cpe:/a:daniel_stenberg:c-ares</remote-id>
 </upstream>
