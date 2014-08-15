@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.6.0.ebuild,v 1.6 2014/08/05 16:00:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.6.0.ebuild,v 1.7 2014/08/15 07:19:04 graaff Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="${RDEPEND}
-	dev-libs/libxml2
+	dev-libs/libxml2:=
 	dev-libs/libxslt"
 DEPEND="${DEPEND}
 	dev-libs/libxml2
