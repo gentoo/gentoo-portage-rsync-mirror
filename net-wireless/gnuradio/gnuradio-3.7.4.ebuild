@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.4.ebuild,v 1.5 2014/08/01 23:44:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.4.ebuild,v 1.6 2014/08/15 00:52:36 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -50,7 +50,6 @@ RDEPEND="${PYTHON_DEPS}
 	fcd? ( virtual/libusb:1 )
 	filter? ( sci-libs/scipy )
 	grc? (
-		dev-python/cheetah
 		dev-python/lxml[${PYTHON_USEDEP}]
 		>=dev-python/pygtk-2.10:2[${PYTHON_USEDEP}]
 	)
@@ -81,6 +80,7 @@ RDEPEND="${PYTHON_DEPS}
 "
 DEPEND="${RDEPEND}
 	dev-lang/swig
+	dev-python/cheetah[${PYTHON_USEDEP}]
 	virtual/pkgconfig
 	doc? (
 		>=app-doc/doxygen-1.5.7.1
