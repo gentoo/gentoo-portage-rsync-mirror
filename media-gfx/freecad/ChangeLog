@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/freecad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.22 2014/08/15 13:53:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.23 2014/08/15 22:02:26 xmw Exp $
+
+  15 Aug 2014; Michael Weber <xmw@gentoo.org> freecad-0.14.3702-r1.ebuild,
+  freecad-9999.ebuild:
+  Upstream switched from PyQt4 to pyside (thanks jer, bug 520016)
 
 *freecad-0.14.3702-r1 (15 Aug 2014)
 
