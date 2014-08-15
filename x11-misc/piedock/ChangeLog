@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/piedock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/ChangeLog,v 1.24 2014/05/05 00:46:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/ChangeLog,v 1.25 2014/08/15 08:42:41 jer Exp $
+
+*piedock-1.6.6 (15 Aug 2014)
+
+  15 Aug 2014; Jeroen Roovers <jer@gentoo.org> -piedock-1.6.3.ebuild,
+  +piedock-1.6.6.ebuild, -files/piedock-1.6.2-mem.patch:
+  Version bump.
 
 *piedock-1.6.4 (05 May 2014)
 

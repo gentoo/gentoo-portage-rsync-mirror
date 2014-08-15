@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/a8/a8-0.11-r2.ebuild,v 1.3 2014/07/06 12:51:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/a8/a8-0.11-r2.ebuild,v 1.4 2014/08/15 08:49:51 ssuominen Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 eutils gnome2-utils
 
 DESCRIPTION="An ultra-lightweight IDE, that embeds Vim, a terminal emulator, and a file browser"
-HOMEPAGE="http://code.google.com/p/abominade/"
+HOMEPAGE="http://github.com/aliafshar/a8"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"

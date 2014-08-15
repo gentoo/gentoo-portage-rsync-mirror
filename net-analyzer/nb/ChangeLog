@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/ChangeLog,v 1.20 2014/07/14 12:15:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/ChangeLog,v 1.21 2014/08/15 08:55:03 jer Exp $
+
+*nb-0.9.02 (15 Aug 2014)
+*nb-0.8.17 (15 Aug 2014)
+
+  15 Aug 2014; Jeroen Roovers <jer@gentoo.org> +nb-0.8.17.ebuild,
+  +nb-0.9.02.ebuild:
+  Version bump.
 
   14 Jul 2014; Jeroen Roovers <jer@gentoo.org> -nb-0.8.14.ebuild,
   -files/nb-0.8.14-configure.patch:

@@ -2,7 +2,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
 DEPEND=>=dev-python/dbus-python-1[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/logbook[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/psutil dev-python/pyyaml[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/pygtk-2.22[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/pygtkhelpers-0.4.3 dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=x11-libs/vte-0.28.2-r206:0[python,python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=sys-apps/sed-4
 DESCRIPTION=An ultra-lightweight IDE, that embeds Vim, a terminal emulator, and a file browser
 EAPI=5
-HOMEPAGE=http://code.google.com/p/abominade/
+HOMEPAGE=http://github.com/aliafshar/a8
 IUSE=python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://pypi/a/a8/a8-0.11.tar.gz
 _eclasses_=distutils-r1	d48d51c220f1678179fc4ab13b534ec1	eutils	06133990e861be0fe60c2b428fd025d9	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=3c5b1fe318878ea51cdc9e05e7ca9d8b
+_md5_=9e2fca00a00d78b69e7f7fbec2a28e3d

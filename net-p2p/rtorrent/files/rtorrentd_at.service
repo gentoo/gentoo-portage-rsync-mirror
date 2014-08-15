@@ -1,6 +1,6 @@
 [Unit]
 Description=rTorrent
-requires=network.target local-fs.target
+Requires=network.target local-fs.target
 
 [Service]
 Type=forking

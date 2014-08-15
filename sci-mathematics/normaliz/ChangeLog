@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/normaliz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.19 2014/08/14 17:23:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.20 2014/08/15 08:53:57 jlec Exp $
+
+  15 Aug 2014; Justin Lecher <jlec@gentoo.org> -normaliz-2.5-r1.ebuild,
+  -normaliz-2.10.ebuild, metadata.xml:
+  Drop old
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> normaliz-2.10.1.ebuild:
   x86 stable wrt bug #509002
