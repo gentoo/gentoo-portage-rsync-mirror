@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.140 2014/08/14 17:19:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.141 2014/08/15 19:43:07 johu Exp $
+
+  15 Aug 2014; Johannes Huber <johu@gentoo.org> dos2unix-6.0.5.ebuild:
+  amd64 stable, bug #519022
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> dos2unix-6.0.5.ebuild:
   x86 stable wrt bug #519022
