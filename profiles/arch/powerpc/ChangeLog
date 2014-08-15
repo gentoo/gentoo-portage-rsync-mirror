@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.278 2014/08/13 19:22:55 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.279 2014/08/14 23:16:33 blueness Exp $
+
+  14 Aug 2014; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  Mask USE='doc mongodb nbconvert notebook qt4' on dev-python/ipython since
+  mongodb is broken
 
   13 Aug 2014; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
   unmask libcerf useflag (bug 517726)

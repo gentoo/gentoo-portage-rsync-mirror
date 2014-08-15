@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.206 2014/08/13 19:22:55 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.207 2014/08/14 23:16:33 blueness Exp $
+
+# Anthony G. Basile <blueness@gentoo.org> (14 Aug 2014)
+# Mask these flags since mongodb is broken on ppc/ppc64
+dev-python/ipython doc mongodb nbconvert notebook qt4
 
 # Maciej Mrozowski <reavertm@gentoo.org> (13 Aug 2014)
 # Missing keywords on dev-libs/protobuf-c (bug 519772)
