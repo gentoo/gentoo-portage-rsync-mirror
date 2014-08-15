@@ -5106,6 +5106,7 @@ net-irc/rbot:translator - Add dependency over dev-ruby/mechanize, which is neede
 net-irc/shadowircd:largenet - Enable support/tweaks for large networks
 net-irc/srvx:bahamut - Choose bahamut protocol over p10 protocol
 net-irc/supybot:twisted - Allows supybot to use dev-python/twisted as driver
+net-irc/unrealircd:class-nofakelag - Enable an unsupported class::options flag called “nofakelag” allowing you to grant fakelag exemption to normal user (instead of just opers).
 net-irc/unrealircd:extban-stacking - Enable extended channel bans (such as +b ~c: and +b ~n:) to contain other extended bans instead of just hostmasks.
 net-irc/unrealircd:operoverride - Enable OperOverride extension
 net-irc/unrealircd:operoverride-verify - Enable requiring opers to invite themselves to +s/+p channels

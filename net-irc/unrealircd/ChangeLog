@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.117 2014/01/08 06:39:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.118 2014/08/15 06:40:27 binki Exp $
+
+*unrealircd-3.2.10.4 (15 Aug 2014)
+
+  15 Aug 2014; Nathan Phillip Brink <binki@gentoo.org>
+  +unrealircd-3.2.10.4.ebuild, metadata.xml:
+  Bump to unrealircd-3.2.10.4 and add USE=class-nofakelag for bug #512170.
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> unrealircd-3.2.9.ebuild:
   Inherit the user eclass for enewuser/etc...
