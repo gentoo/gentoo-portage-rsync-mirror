@@ -9,7 +9,6 @@
 		<email>joker@gentoo.org</email>
 		<name>Christian Birchinger</name>
 	</maintainer>
-	<herd>games</herd>
 	<use>
 		<flag name='audio-sdl'>Enable SDL audio plugin.</flag>
 		<flag name='input-sdl'>Enable SDL input plugin.</flag>

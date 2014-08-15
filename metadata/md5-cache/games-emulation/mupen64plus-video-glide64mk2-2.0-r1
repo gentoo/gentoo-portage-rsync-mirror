@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=>=games-emulation/mupen64plus-core-2.0-r1:0= media-libs/libpng:0= media-libs/libsdl:0= sys-libs/zlib:0= virtual/opengl:0= hires? ( dev-libs/boost:0= ) virtual/pkgconfig
+DESCRIPTION=A fork of Mupen64 Nintendo 64 emulator, glide64mk2 video plugin
+EAPI=5
+HOMEPAGE=http://code.google.com/p/mupen64plus/
+IUSE=hires sse
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 LGPL-2.1
+RDEPEND=>=games-emulation/mupen64plus-core-2.0-r1:0= media-libs/libpng:0= media-libs/libsdl:0= sys-libs/zlib:0= virtual/opengl:0= hires? ( dev-libs/boost:0= )
+SLOT=0
+SRC_URI=https://github.com/mupen64plus/mupen64plus-video-glide64mk2/releases/download/2.0/mupen64plus-video-glide64mk2-src-2.0.tar.gz
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=88f9f14abf2c9e9f45f0d2b6ab49f2fb

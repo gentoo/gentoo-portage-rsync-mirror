@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/mupen64plus-ui-console
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-ui-console/ChangeLog,v 1.3 2013/12/19 16:55:06 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-ui-console/ChangeLog,v 1.4 2014/08/15 10:20:03 mgorny Exp $
+
+*mupen64plus-ui-console-2.0-r1 (15 Aug 2014)
+
+  15 Aug 2014; Michał Górny <mgorny@gentoo.org>
+  +mupen64plus-ui-console-2.0-r1.ebuild, metadata.xml:
+  Remove games team maintainership following the Council decision. Use standard
+  install layout.
 
   19 Dec 2013; Michał Górny <mgorny@gentoo.org>
   mupen64plus-ui-console-2.0.ebuild:

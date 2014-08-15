@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.284 2014/08/10 09:38:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.285 2014/08/15 10:05:21 jer Exp $
+
+*dpkg-1.17.12 (15 Aug 2014)
+
+  15 Aug 2014; Jeroen Roovers <jer@gentoo.org> -dpkg-1.17.10-r1.ebuild,
+  -dpkg-1.17.11.ebuild, +dpkg-1.17.12.ebuild,
+  -files/dpkg-1.17.11-selinux.patch:
+  Version bump.
 
 *dpkg-1.17.11 (10 Aug 2014)
 

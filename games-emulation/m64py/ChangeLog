@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/m64py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/m64py/ChangeLog,v 1.4 2014/05/08 20:49:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/m64py/ChangeLog,v 1.5 2014/08/15 10:22:03 mgorny Exp $
+
+*m64py-0.2.1-r1 (15 Aug 2014)
+
+  15 Aug 2014; Michał Górny <mgorny@gentoo.org> +m64py-0.2.1-r1.ebuild,
+  -m64py-0.1.8.ebuild, -m64py-0.2.0.ebuild, metadata.xml:
+  Remove games team maintainership following the Council decision. Use standard
+  install layout. Drop old.
 
 *m64py-0.2.1 (08 May 2014)
 
