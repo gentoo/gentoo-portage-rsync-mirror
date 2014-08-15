@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gemoji
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemoji/ChangeLog,v 1.2 2014/08/05 16:00:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemoji/ChangeLog,v 1.3 2014/08/15 06:12:05 graaff Exp $
+
+*gemoji-2.1.0 (15 Aug 2014)
+
+  15 Aug 2014; Hans de Graaff <graaff@gentoo.org> +gemoji-2.1.0.ebuild:
+  Version bump. Install the required image files. Add ruby21.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> gemoji-1.5.0.ebuild:
   Remove trailing '.' from DESCRIPTION.
