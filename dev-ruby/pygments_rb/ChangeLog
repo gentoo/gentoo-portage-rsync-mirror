@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pygments_rb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/ChangeLog,v 1.3 2014/07/16 13:35:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/ChangeLog,v 1.4 2014/08/15 15:01:29 mrueg Exp $
+
+  15 Aug 2014; Manuel Rüger <mrueg@gentoo.org> pygments_rb-0.6.0.ebuild:
+  Restrict yajl-ruby dependency to =1.1*.
 
   16 Jul 2014; Manuel Rüger <mrueg@gentoo.org> pygments_rb-0.6.0.ebuild:
   Add ruby20 support. Remove python 2.6 support.
