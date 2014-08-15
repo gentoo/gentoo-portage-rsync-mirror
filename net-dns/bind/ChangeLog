@@ -1,6 +1,17 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.501 2014/08/02 18:20:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.502 2014/08/15 12:05:02 idl0r Exp $
+
+*bind-9.10.0_p2 (15 Aug 2014)
+*bind-9.9.5_p1 (15 Aug 2014)
+
+  15 Aug 2014; Christian Ruppert <idl0r@gentoo.org> -bind-9.8.6.ebuild,
+  -bind-9.9.4_p2.ebuild, -bind-9.9.5-r2.ebuild, +bind-9.9.5_p1.ebuild,
+  +bind-9.10.0_p2.ebuild, -files/named.conf, -files/named.conf-r6,
+  +files/named.conf-r8, -files/named.confd-r6, -files/named.init-r12,
+  -files/named.service, metadata.xml:
+  Version bumps. Cleanup. Migrate to python-r1. Fixes #516472, #501290, #499892
+  and #506346.
 
   02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> bind-9.9.5-r3.ebuild:
   Stable for ppc64, wrt bug #506796

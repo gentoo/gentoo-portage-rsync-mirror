@@ -1,8 +1,8 @@
 /*
  * Refer to the named.conf(5) and named(8) man pages, and the documentation
- * in /usr/share/doc/bind-9 for more details.
+ * in /usr/share/doc/bind-*/ for more details.
  * Online versions of the documentation can be found here:
- * http://www.isc.org/software/bind/documentation
+ * https://kb.isc.org/article/AA-01031
  *
  * If you are going to set up an authoritative server, make sure you
  * understand the hairy details of how DNS works. Even with simple mistakes,
@@ -28,7 +28,7 @@ acl "trusted" {
 
 options {
 	directory "/var/bind";
-	pid-file "/var/run/named/named.pid";
+	pid-file "/run/named/named.pid";
 
 	/* https://www.isc.org/solutions/dlv >=bind-9.7.x only */
 	//bindkeys-file "/etc/bind/bind.keys";
@@ -87,7 +87,7 @@ options {
 
 */
 
-	//dnssec-enable yes;
+	dnssec-enable yes;
 	//dnssec-validation yes;
 
 	/*
@@ -95,7 +95,7 @@ options {
 	 * "If the root key provided has expired,
 	 * named will log the expiration and validation will not work."
 	 */
-	//dnssec-validation auto;
+	dnssec-validation auto;
 
 	/* if you have problems and are behind a firewall: */
 	//query-source address * port 53;
@@ -128,12 +128,6 @@ zone "." in {
 zone "localhost" IN {
 	type master;
 	file "pri/localhost.zone";
-	notify no;
-};
-
-zone "127.in-addr.arpa" IN {
-	type master;
-	file "pri/127.zone";
 	notify no;
 };
 

@@ -12,6 +12,7 @@
 		<flag name="fixed-rrset">Enables fixed rrset-order option</flag>
 		<flag name="gost">Enables gost OpenSSL engine support</flag>
 		<flag name="gssapi">Enable gssapi support</flag>
+		<flag name="nslint">Build and install the nslint util</flag>
 		<flag name="rpz">Enable response policy rewriting (rpz)</flag>
 		<flag name="rrl">Response Rate Limiting (RRL) - Experimental</flag>
 		<flag name="sdb-ldap">Enables ldap-sdb backend</flag>

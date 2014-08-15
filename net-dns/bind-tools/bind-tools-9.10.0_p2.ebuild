@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.4.ebuild,v 1.11 2014/03/19 16:15:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.10.0_p2.ebuild,v 1.1 2014/08/15 12:03:17 idl0r Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils autotools flag-o-matic toolchain-funcs
 
@@ -17,11 +17,14 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz"
 
 LICENSE="ISC BSD BSD-2 HPND JNIC RSA openssl"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="doc gssapi idn ipv6 readline ssl urandom xml"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+IUSE="doc gost gssapi idn ipv6 readline ssl urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
+REQUIRED_USE="gost? ( ssl )"
+
 DEPEND="ssl? ( dev-libs/openssl:0 )
+	gost? ( >=dev-libs/openssl-1.0.0:0[-bindist] )
 	xml? ( dev-libs/libxml2 )
 	idn? ( net-dns/idnkit )
 	gssapi? ( virtual/krb5 )
@@ -29,6 +32,9 @@ DEPEND="ssl? ( dev-libs/openssl:0 )
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+# bug 479092, requires networking
+RESTRICT="test"
 
 src_prepare() {
 	# bug 231247
@@ -66,6 +72,7 @@ src_configure() {
 		$(use_with xml libxml2) \
 		$(use_with gssapi) \
 		$(use_with readline) \
+		$(use_with gost) \
 		${myconf}
 
 	# bug #151839
@@ -76,6 +83,7 @@ src_compile() {
 	local AR=$(tc-getAR)
 
 	emake AR=$AR -C lib/ || die "emake lib failed"
+	emake AR=$AR -C bin/delv/ || die "emake bin/delv failed"
 	emake AR=$AR -C bin/dig/ || die "emake bin/dig failed"
 	emake AR=$AR -C bin/nsupdate/ || die "emake bin/nsupdate failed"
 	emake AR=$AR -C bin/dnssec/ || die "emake bin/dnssec failed"
@@ -83,6 +91,10 @@ src_compile() {
 
 src_install() {
 	dodoc README CHANGES FAQ
+
+	cd "${S}"/bin/delv
+	dobin delv
+	doman delv.1
 
 	cd "${S}"/bin/dig
 	dobin dig host nslookup

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.3_p2.ebuild,v 1.13 2014/01/18 18:17:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.5_p1.ebuild,v 1.1 2014/08/15 12:03:17 idl0r Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils autotools flag-o-matic toolchain-funcs
 
@@ -17,11 +17,14 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz"
 
 LICENSE="ISC BSD BSD-2 HPND JNIC RSA openssl"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="doc gssapi idn ipv6 readline ssl urandom xml"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+IUSE="doc gost gssapi idn ipv6 readline ssl urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
+REQUIRED_USE="gost? ( ssl )"
+
 DEPEND="ssl? ( dev-libs/openssl:0 )
+	gost? ( >=dev-libs/openssl-1.0.0:0[-bindist] )
 	xml? ( dev-libs/libxml2 )
 	idn? ( net-dns/idnkit )
 	gssapi? ( virtual/krb5 )
@@ -29,6 +32,9 @@ DEPEND="ssl? ( dev-libs/openssl:0 )
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+# bug 479092, requires networking
+RESTRICT="test"
 
 src_prepare() {
 	# bug 231247
@@ -38,7 +44,8 @@ src_prepare() {
 	sed -i '/^SUBDIRS/s:tests::' bin/Makefile.in lib/Makefile.in || die
 
 	# bug #220361
-	rm {aclocal,libtool}.m4
+	rm aclocal.m4
+	rm -rf libtool.m4/
 	eautoreconf
 }
 
@@ -65,6 +72,7 @@ src_configure() {
 		$(use_with xml libxml2) \
 		$(use_with gssapi) \
 		$(use_with readline) \
+		$(use_with gost) \
 		${myconf}
 
 	# bug #151839
