@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagstamon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.46 2014/08/11 20:37:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.47 2014/08/15 10:54:05 idl0r Exp $
+
+  15 Aug 2014; Christian Ruppert <idl0r@gentoo.org> nagstamon-1.0.ebuild:
+  Move some stuff outside of the python_foreach_impl function
 
 *nagstamon-1.0 (11 Aug 2014)
 

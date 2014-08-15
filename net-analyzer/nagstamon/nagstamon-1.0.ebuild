@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-1.0.ebuild,v 1.1 2014/08/11 20:37:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-1.0.ebuild,v 1.2 2014/08/15 10:54:05 idl0r Exp $
 
 EAPI="5"
 
@@ -47,16 +47,16 @@ src_install() {
 
 	newbin ../nagstamon.py nagstamon
 
+	insinto /usr/share/${PN}/resources
+	doins resources/*
+
+	domenu "${FILESDIR}"/${PN}.desktop
+
 	nagstamon_install() {
 		insinto $(python_get_sitedir)/${MY_PN}
 		doins {GUI,Config,Objects,Custom,Actions}.py
 		touch "${D}/$(python_get_sitedir)/${MY_PN}/__init__.py" || die
 		doins -r Server/ thirdparty/
-
-		insinto /usr/share/${PN}/resources
-		doins resources/*
-
-		domenu "${FILESDIR}"/${PN}.desktop
 	}
 
 	python_foreach_impl nagstamon_install
