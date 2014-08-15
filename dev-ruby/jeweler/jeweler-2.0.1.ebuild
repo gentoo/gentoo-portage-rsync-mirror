@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-2.0.1.ebuild,v 1.1 2014/05/25 07:57:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-2.0.1.ebuild,v 1.2 2014/08/15 14:34:10 blueness Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -22,7 +22,7 @@ HOMEPAGE="http://wiki.github.com/technicalpickles/jeweler"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend "doc? ( dev-ruby/yard )

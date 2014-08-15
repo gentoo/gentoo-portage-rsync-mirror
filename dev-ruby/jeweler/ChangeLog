@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/jeweler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.25 2014/05/25 07:57:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.26 2014/08/15 14:34:10 blueness Exp $
+
+  15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> jeweler-2.0.1.ebuild:
+  Keyword ~ppc ~ppc64, bug #511424
 
 *jeweler-2.0.1 (25 May 2014)
 

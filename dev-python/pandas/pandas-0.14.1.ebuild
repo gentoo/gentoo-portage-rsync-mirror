@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.14.1.ebuild,v 1.2 2014/08/15 02:45:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.14.1.ebuild,v 1.3 2014/08/15 14:32:57 idella4 Exp $
 
 EAPI=5
 
@@ -106,11 +106,10 @@ src_test() {
 }
 
 python_test() {
-	# https://github.com/pydata/pandas/issues/8032
 	pushd  "${BUILD_DIR}"/lib > /dev/null
 	PYTHONPATH=. MPLCONFIGDIR=. HOME=. \
-		VIRTUALX_COMMAND="nosetests --verbosity=3 pandas" \
-		virtualmake || die
+		nosetests --verbosity=3 -A 'not network and not disabled' pandas \
+		|| die "Tests failed under ${EPYTHON}"
 	popd > /dev/null
 }
 

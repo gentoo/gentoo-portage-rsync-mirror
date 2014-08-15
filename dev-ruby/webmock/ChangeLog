@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/webmock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.29 2014/07/20 06:45:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.30 2014/08/15 14:32:50 blueness Exp $
+
+  15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> webmock-1.18.0.ebuild,
+  webmock-1.7.4.ebuild:
+  Keyword ~ppc ~ppc64, bug #511424
 
   20 Jul 2014; Hans de Graaff <graaff@gentoo.org> webmock-1.18.0.ebuild:
   Add ruby21.
