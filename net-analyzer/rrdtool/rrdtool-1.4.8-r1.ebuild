@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8-r1.ebuild,v 1.7 2014/08/14 16:43:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8-r1.ebuild,v 1.8 2014/08/15 09:19:46 jer Exp $
 
 EAPI="5"
 
@@ -42,6 +42,8 @@ DEPEND="
 "
 RDEPEND="
 	${CDEPEND}
+"
+PDEPEND="
 	ruby? ( dev-ruby/rrdtool-bindings )
 "
 
