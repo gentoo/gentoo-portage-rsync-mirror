@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libmediawiki
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmediawiki/ChangeLog,v 1.26 2014/06/04 21:51:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmediawiki/ChangeLog,v 1.27 2014/08/15 18:07:52 johu Exp $
+
+*libmediawiki-4.2.0 (15 Aug 2014)
+
+  15 Aug 2014; Johannes Huber <johu@gentoo.org> +libmediawiki-4.2.0.ebuild:
+  Version bump.
 
 *libmediawiki-4.0.0 (04 Jun 2014)
 

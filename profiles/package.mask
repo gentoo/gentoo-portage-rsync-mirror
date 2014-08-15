@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15967 2014/08/14 09:13:44 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15968 2014/08/15 18:24:22 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,10 +29,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Eray Aslan <eras@gentoo.org> (14 Aug 2014)
-# Security mask - bug #509954 until keywording is sorted out
-=net-mail/dovecot-2.2.9
 
 # Sergey Popov <pinkbyte@gentoo.org> (14 Aug 2014)
 # Mask new version of Boost - it's known to cause breakages,
