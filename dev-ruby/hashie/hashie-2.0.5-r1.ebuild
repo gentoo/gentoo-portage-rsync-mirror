@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/hashie-2.0.5-r1.ebuild,v 1.4 2014/08/05 16:00:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/hashie-2.0.5-r1.ebuild,v 1.5 2014/08/15 14:06:36 blueness Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://intridea.com/posts/hashie-the-hash-toolkit"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 all_ruby_prepare() {

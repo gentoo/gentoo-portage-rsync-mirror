@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/em-http-request
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.13 2014/08/05 16:00:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.14 2014/08/15 14:18:55 blueness Exp $
+
+  15 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  em-http-request-0.2.14.ebuild:
+  Keyword ~ppc, bug #511424
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> em-http-request-0.2.14.ebuild:
   Remove trailing '.' from DESCRIPTION.

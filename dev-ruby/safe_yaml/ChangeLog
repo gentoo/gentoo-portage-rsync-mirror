@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/safe_yaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/safe_yaml/ChangeLog,v 1.12 2014/06/14 03:04:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/safe_yaml/ChangeLog,v 1.14 2014/08/15 14:26:12 blueness Exp $
+
+  15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix failed gpg signature
+
+  15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> safe_yaml-1.0.2.ebuild,
+  safe_yaml-1.0.3.ebuild:
+  Keyword ~ppc ~ppc64, bug #511424
 
   14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -safe_yaml-0.9.7-r2.ebuild,
   -safe_yaml-1.0.1.ebuild, safe_yaml-1.0.3.ebuild:

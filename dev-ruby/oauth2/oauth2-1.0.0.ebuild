@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/oauth2-1.0.0.ebuild,v 1.2 2014/08/05 16:00:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/oauth2-1.0.0.ebuild,v 1.3 2014/08/15 14:14:47 blueness Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://github.com/intridea/oauth2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/faraday-0.8

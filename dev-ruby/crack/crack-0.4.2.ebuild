@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/crack-0.4.2.ebuild,v 1.4 2014/08/05 16:00:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/crack-0.4.2.ebuild,v 1.5 2014/08/15 14:27:36 blueness Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ HOMEPAGE="https://github.com/jnunemaker/crack"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux ~x64-macos ~x64-solaris"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~amd64-linux ~x64-macos ~x64-solaris"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/minitest )"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/oauth2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.23 2014/08/05 16:00:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.24 2014/08/15 14:14:47 blueness Exp $
+
+  15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> oauth2-0.9.4.ebuild,
+  oauth2-1.0.0.ebuild:
+  Keyword ~ppc ~ppc64, bug #511424
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> oauth2-0.9.4.ebuild,
   oauth2-1.0.0.ebuild:

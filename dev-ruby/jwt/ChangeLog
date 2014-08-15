@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/jwt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jwt/ChangeLog,v 1.13 2014/07/25 13:35:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jwt/ChangeLog,v 1.14 2014/08/15 14:11:10 blueness Exp $
+
+  15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> jwt-0.1.13.ebuild,
+  jwt-1.0.0.ebuild:
+  Keyword ~ppc ~ppc64, bug #511424
 
   25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> -jwt-0.1.11.ebuild,
   -jwt-0.1.12.ebuild:

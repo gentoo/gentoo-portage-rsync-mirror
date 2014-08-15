@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/heredoc_unindent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heredoc_unindent/ChangeLog,v 1.7 2014/05/24 06:27:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heredoc_unindent/ChangeLog,v 1.8 2014/08/15 14:24:14 blueness Exp $
+
+  15 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  heredoc_unindent-1.1.2-r3.ebuild:
+  Keyword ~ppc ~ppc64, bug #511424
 
   24 May 2014; Hans de Graaff <graaff@gentoo.org>
   heredoc_unindent-1.1.2-r3.ebuild:
