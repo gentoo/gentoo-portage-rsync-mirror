@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gentoo-functions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.20 2014/08/15 19:30:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.21 2014/08/16 10:41:15 johu Exp $
+
+  16 Aug 2014; Johannes Huber <johu@gentoo.org> gentoo-functions-0.7.ebuild:
+  amd64 stable, bug #519734
 
   15 Aug 2014; Jeroen Roovers <jer@gentoo.org> gentoo-functions-0.7.ebuild:
   Stable for HPPA (bug #519734).
