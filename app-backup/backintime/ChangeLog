@@ -1,6 +1,18 @@
 # ChangeLog for app-backup/backintime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.21 2014/08/15 22:32:49 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.22 2014/08/16 01:33:55 xmw Exp $
+
+*backintime-1.0.24-r2 (16 Aug 2014)
+*backintime-1.0.36-r1 (16 Aug 2014)
+
+  16 Aug 2014; Michael Weber <xmw@gentoo.org> +backintime-1.0.24-r2.ebuild,
+  +backintime-1.0.36-r1.ebuild, +files/backintime-1.0.24-wrapper.patch,
+  +files/backintime-1.0.36-wrapper.patch, -backintime-1.0.24-r1.ebuild,
+  -backintime-1.0.36.ebuild, -files/backintime-1.0.4-dont-install-license.diff,
+  -files/backintime-1.0.6-wrapper.patch:
+  Revbump to fix python2 invocation and hard depend on ssh-agent (bug 482106,
+  thanks Rob Tongue; bug 487764, thanks Jaime Martin). Depend on gksu iff
+  USE=gnome (bug 476774, thanks Christian Strahl). Drop old version.
 
 *backintime-1.0.36 (15 Aug 2014)
 

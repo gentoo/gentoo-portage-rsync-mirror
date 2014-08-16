@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.0.36.ebuild,v 1.1 2014/08/15 22:32:49 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.0.36-r1.ebuild,v 1.1 2014/08/16 01:33:55 xmw Exp $
 
 EAPI=5
 
@@ -20,13 +20,14 @@ IUSE="kde gnome"
 RDEPEND="${PYTHON_DEPEND}
 	dev-python/keyring[${PYTHON_USEDEP}]
 	dev-python/notify-python[${PYTHON_USEDEP}]
+	net-misc/openssh
 	net-misc/rsync[xattr,acl]
 	kde? (
 		>=kde-base/kdelibs-4
 		kde-base/pykde4[${PYTHON_USEDEP}]
 		kde-base/kompare
 		kde-base/kdesu
-		)
+	)
 	gnome? (
 		gnome-base/libglade
 		dev-util/meld
@@ -35,7 +36,8 @@ RDEPEND="${PYTHON_DEPEND}
 		dev-python/libgnome-python
 		dev-python/pygobject:2[${PYTHON_USEDEP}]
 		dev-python/pygtk[${PYTHON_USEDEP}]
-		)"
+		x11-libs/gksu
+	)"
 
 DEPEND="${RDEPEND}"
 
@@ -53,14 +55,14 @@ src_prepare() {
 	cp "${FILESDIR}"/backintime-1.0.4-kde4-root.desktop \
 		kde4/backintime-kde4-root.desktop || die
 
-	epatch "${FILESDIR}"/${PN}-1.0.6-wrapper.patch
-	sed -e "/ python /s:python:${PYTHON}:" \
-		-e "/^APP_PATH=/s:/usr:${EPREFIX}/usr:" \
-		-i common/backintime \
-		-i gnome/backintime-gnome \
-		-i kde4/backintime-kde4 || die
+	#bug 482106
+	epatch "${FILESDIR}"/${P}-wrapper.patch
+	sed -e "s:^python2 :${PYTHON} :" \
+		-e "s:APP_PATH=\"/usr:APP_PATH=\"${EPREFIX}/usr:" \
+		-i kde4/backintime-kde4 gnome/backintime-gnome \
+			common/backintime || die
 
-	backintime_variants="common $(usex gnome gnome "") $(usex kde kde4 '')"
+	backintime_variants="common $(usex gnome gnome '') $(usex kde kde4 '')"
 	backintime_run() {
 		local variant
 		for variant in ${backintime_variants} ; do
