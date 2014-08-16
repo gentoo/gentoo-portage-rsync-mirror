@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sprockets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.24 2014/08/05 16:00:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.25 2014/08/16 15:57:39 blueness Exp $
+
+  16 Aug 2014; Anthony G. Basile <blueness@gentoo.org> sprockets-2.1.3.ebuild,
+  sprockets-2.11.0.ebuild, sprockets-2.2.2-r1.ebuild:
+  Keyword on ~ppc and ~ppc64, request by mrueg
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> sprockets-2.1.3.ebuild,
   sprockets-2.11.0.ebuild, sprockets-2.2.2-r1.ebuild:

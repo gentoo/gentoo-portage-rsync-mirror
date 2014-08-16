@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.2.2-r1.ebuild,v 1.4 2014/08/05 16:00:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.2.2-r1.ebuild,v 1.5 2014/08/16 15:57:39 blueness Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -19,7 +19,7 @@ SRC_URI="https://github.com/sstephenson/sprockets/archive/v${PV}.tar.gz -> ${P}-
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 IUSE=""
 

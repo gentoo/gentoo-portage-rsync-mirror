@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.211 2014/08/15 13:41:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.212 2014/08/16 15:55:39 blueness Exp $
+
+# Anthony G. Basile <blueness@gentoo.org> (16 Aug 2014)
+# Ultimately pulls in nodejs which is broken.
+dev-ruby/sprockets test
 
 # Anthony G. Basile <blueness@gentoo.org> (15 Aug 2014)
 # Ultimately pulls in nodejs which is broken.
