@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/classifier-reborn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier-reborn/ChangeLog,v 1.2 2014/08/13 16:38:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier-reborn/ChangeLog,v 1.3 2014/08/16 12:53:52 mrueg Exp $
+
+*classifier-reborn-2.0.1 (16 Aug 2014)
+
+  16 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +classifier-reborn-2.0.1.ebuild:
+  Version bump.
 
   13 Aug 2014; Manuel Rüger <mrueg@gentoo.org> classifier-reborn-2.0.0.ebuild:
   Add hardblocker on dev-ruby/classifier.
