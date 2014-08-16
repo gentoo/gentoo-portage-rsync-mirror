@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/afm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/afm/ChangeLog,v 1.7 2014/08/12 13:07:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/afm/ChangeLog,v 1.8 2014/08/16 08:24:08 graaff Exp $
+
+  16 Aug 2014; Hans de Graaff <graaff@gentoo.org> afm-0.2.2.ebuild:
+  Avoid dependency on bundler also with USE=doc, fixing bug 519532.
 
   12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> afm-0.2.2.ebuild:
   Keyword ~ppc and ~ppc64, bug #519170
