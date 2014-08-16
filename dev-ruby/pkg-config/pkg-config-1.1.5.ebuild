@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/pkg-config-1.1.5.ebuild,v 1.3 2014/04/23 06:13:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/pkg-config-1.1.5.ebuild,v 1.4 2014/08/16 14:13:03 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -24,7 +24,6 @@ IUSE="test"
 ruby_add_bdepend "test? ( >=dev-ruby/test-unit-2.5.1-r1 )"
 # this is used for testing
 DEPEND+=" test? ( x11-libs/cairo )"
-RDEPEND+=" virtual/pkgconfig"
 
 all_ruby_prepare() {
 # drop failing tests

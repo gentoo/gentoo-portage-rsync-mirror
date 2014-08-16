@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pkg-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.25 2014/04/23 06:13:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.26 2014/08/16 14:13:03 mrueg Exp $
+
+  16 Aug 2014; Manuel Rüger <mrueg@gentoo.org> pkg-config-1.1.5.ebuild:
+  Remove unneeded dependency.
 
   23 Apr 2014; Hans de Graaff <graaff@gentoo.org> pkg-config-1.1.5.ebuild:
   Add ruby21.
