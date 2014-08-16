@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/diffuse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.21 2014/01/14 13:52:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.22 2014/08/16 09:25:37 idella4 Exp $
+
+*diffuse-0.4.8 (16 Aug 2014)
+
+  16 Aug 2014; Ian Delaney <idella4@gentoo.org> +diffuse-0.4.8.ebuild:
+  bump, drop py2.6
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> diffuse-0.4.7-r1.ebuild:
   Stable for x86, wrt bug #495666
