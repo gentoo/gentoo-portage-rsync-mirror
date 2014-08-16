@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcommon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.34 2014/08/14 16:52:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.35 2014/08/16 10:15:59 johu Exp $
+
+  16 Aug 2014; Johannes Huber <johu@gentoo.org> jcommon-1.0.18.ebuild:
+  amd64 stable, bug #518944
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> jcommon-1.0.18.ebuild:
   x86 stable wrt bug #518944

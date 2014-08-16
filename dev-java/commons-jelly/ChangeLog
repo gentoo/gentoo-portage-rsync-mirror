@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-jelly
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.18 2014/08/14 17:02:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.19 2014/08/16 10:03:00 johu Exp $
+
+  16 Aug 2014; Johannes Huber <johu@gentoo.org> commons-jelly-1.0-r5.ebuild:
+  amd64 stable, bug #518928
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   commons-jelly-1.0-r5.ebuild:
@@ -91,4 +94,3 @@
   +files/commons-jelly-1.0-gentoo.patch, +metadata.xml,
   +commons-jelly-1.0.ebuild:
   Initial commit (bug #70847).
-

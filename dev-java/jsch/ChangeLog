@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.86 2014/08/14 17:06:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.87 2014/08/16 10:09:46 johu Exp $
+
+  16 Aug 2014; Johannes Huber <johu@gentoo.org> jsch-0.1.49.ebuild:
+  amd64 stable, bug #518940
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> jsch-0.1.49.ebuild:
   x86 stable wrt bug #518940
