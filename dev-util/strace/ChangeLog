@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.200 2014/03/24 15:08:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.202 2014/08/16 05:22:46 vapier Exp $
+
+*strace-4.9 (16 Aug 2014)
+
+  16 Aug 2014; Mike Frysinger <vapier@gentoo.org> +strace-4.9.ebuild,
+  strace-9999.ebuild:
+  Version bump.
+
+  16 Aug 2014; Mike Frysinger <vapier@gentoo.org> strace-4.8.ebuild:
+  Mark s390/sh stable.
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> strace-4.8.ebuild:
   Stable for ppc, wrt bug #501648

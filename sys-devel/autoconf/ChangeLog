@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.189 2014/02/14 21:54:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.190 2014/08/16 05:06:53 vapier Exp $
+
+  16 Aug 2014; Mike Frysinger <vapier@gentoo.org> autoconf-2.62-r1.ebuild,
+  autoconf-2.64.ebuild:
+  Mark stable for all.
 
   14 Feb 2014; Mike Frysinger <vapier@gentoo.org> autoconf-9999.ebuild:
   Upgrade to EAPI=4.
