@@ -1,6 +1,27 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.64 2014/08/13 11:13:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.65 2014/08/16 21:10:36 blueness Exp $
+
+  16 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  -linux/uclibc/amd64/make.defaults, -linux/uclibc/amd64/package.mask,
+  linux/uclibc/amd64/parent, -linux/uclibc/amd64/use.force,
+  -linux/uclibc/amd64/use.mask, -linux/uclibc/arm/armv6j/make.defaults,
+  linux/uclibc/arm/armv6j/parent, -linux/uclibc/arm/armv7a/make.defaults,
+  linux/uclibc/arm/armv7a/parent, -linux/uclibc/arm/make.defaults,
+  -linux/uclibc/arm/parent, -linux/uclibc/arm/use.force,
+  -linux/uclibc/arm/use.mask, linux/uclibc/make.defaults,
+  -linux/uclibc/mips/make.defaults, -linux/uclibc/mips/mipsel/make.defaults,
+  linux/uclibc/mips/mipsel/parent, -linux/uclibc/mips/package.mask,
+  linux/uclibc/mips/parent, -linux/uclibc/mips/use.force,
+  -linux/uclibc/mips/use.mask, -linux/uclibc/package.mask,
+  -linux/uclibc/packages, -linux/uclibc/packages.build, -linux/uclibc/parent,
+  -linux/uclibc/ppc/make.defaults, -linux/uclibc/ppc/package.mask,
+  -linux/uclibc/ppc/package.use.mask, linux/uclibc/ppc/parent,
+  -linux/uclibc/ppc/use.force, -linux/uclibc/ppc/use.mask,
+  -linux/uclibc/use.force, linux/uclibc/use.mask,
+  -linux/uclibc/x86/make.defaults, linux/uclibc/x86/parent,
+  -linux/uclibc/x86/use.force, -linux/uclibc/x86/use.mask:
+  Inherit hardened/linux/uclibc from default/linux/uclibc
 
   13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> linux/musl/package.mask,
   linux/uclibc/package.mask:
