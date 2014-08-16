@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/librevenge-9999.ebuild,v 1.1 2014/08/15 13:02:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/librevenge-9999.ebuild,v 1.2 2014/08/16 07:36:55 scarabeus Exp $
 
 EAPI="5"
 
@@ -22,13 +22,12 @@ SLOT="0"
 IUSE="doc test"
 
 RDEPEND="
-	dev-libs/boost
-	dev-util/cppunit
-	sys-libs/zlib
+	dev-libs/boost:=
+	sys-libs/zlib[${MULTILIB_USEDEP}]
 "
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	test? ( dev-util/cppunit )
+	test? ( dev-util/cppunit[${MULTILIB_USEDEP}] )
 "
 
 src_prepare() {

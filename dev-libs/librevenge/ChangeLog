@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/librevenge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/ChangeLog,v 1.1 2014/08/15 13:02:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/ChangeLog,v 1.2 2014/08/16 07:36:55 scarabeus Exp $
+
+  16 Aug 2014; Tomáš Chvátal <scarabeus@gentoo.org> librevenge-0.0.1.ebuild,
+  librevenge-9999.ebuild:
+  We do not need the cppunit on runtime, just for tests.
 
 *librevenge-9999 (15 Aug 2014)
 *librevenge-0.0.1 (15 Aug 2014)
