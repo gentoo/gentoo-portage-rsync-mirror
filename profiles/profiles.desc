@@ -171,25 +171,33 @@ amd64		hardened/linux/amd64/selinux				stable
 amd64		hardened/linux/amd64/no-multilib			stable
 amd64		hardened/linux/amd64/no-multilib/selinux		stable
 amd64		hardened/linux/amd64/x32				dev
-amd64		hardened/linux/uclibc/amd64				dev
 amd64		hardened/linux/musl/amd64				exp
 arm		hardened/linux/arm/armv7a				dev
 arm		hardened/linux/arm/armv6j				dev
-arm		hardened/linux/uclibc/arm/armv7a			dev
 arm		hardened/linux/musl/arm/armv7a				exp
 ia64		hardened/linux/ia64					dev
-mips		hardened/linux/uclibc/mips				dev
-mips		hardened/linux/uclibc/mips/mipsel			dev
 mips		hardened/linux/musl/mips				exp
 mips		hardened/linux/musl/mips/mipsel				exp
 ppc		hardened/linux/powerpc/ppc32				dev
 ppc		hardened/linux/powerpc/ppc64/32bit-userland		dev
-ppc		hardened/linux/uclibc/ppc				dev
 ppc64		hardened/linux/powerpc/ppc64/64bit-userland		dev
 x86		hardened/linux/x86					stable
 x86		hardened/linux/x86/selinux				stable
-x86		hardened/linux/uclibc/x86				dev
 x86		hardened/linux/musl/x86					exp
+
+# Non-embedded uclibc profiles
+amd64		default/linux/uclibc/amd64				dev
+amd64		hardened/linux/uclibc/amd64				dev
+arm		default/linux/uclibc/arm/armv7a				dev
+arm		hardened/linux/uclibc/arm/armv7a			dev
+mips		default/linux/uclibc/mips				dev
+mips		hardened/linux/uclibc/mips				dev
+mips		default/linux/uclibc/mips/mipsel			dev
+mips		hardened/linux/uclibc/mips/mipsel			dev
+ppc		default/linux/uclibc/ppc				dev
+ppc		hardened/linux/uclibc/ppc				dev
+x86		default/linux/uclibc/x86				dev
+x86		hardened/linux/uclibc/x86				dev
 
 # uclibc/embedded multiarch profiles
 #amd64		uclibc/amd64					dev
