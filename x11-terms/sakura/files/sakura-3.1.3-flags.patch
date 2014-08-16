@@ -1,5 +1,5 @@
---- sakura-3.1.3/CMakeLists.txt
-+++ sakura-3.1.3/CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
 @@ -35,12 +35,6 @@
  ADD_DEFINITIONS (-DDATADIR=\\\"${CMAKE_INSTALL_PREFIX}/share\\\")
  ADD_DEFINITIONS (-DBUILDTYPE=\\\"${CMAKE_BUILD_TYPE}\\\")

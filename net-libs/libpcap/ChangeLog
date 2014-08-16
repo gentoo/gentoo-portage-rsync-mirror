@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.200 2014/08/02 11:27:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.201 2014/08/16 15:29:08 jer Exp $
+
+  16 Aug 2014; Jeroen Roovers <jer@gentoo.org> libpcap-1.6.1-r1.ebuild,
+  +files/mgmt.h:
+  Use obsolete bluetooth header (bug #517772).
 
   02 Aug 2014; Raúl Porcel <armin76@gentoo.org> libpcap-1.5.3.ebuild:
   sparc stable, bug #511502
