@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15968 2014/08/15 18:24:22 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15969 2014/08/16 19:23:15 ryao Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Richard Yao <ryao@gentoo.org> (15 Aug 2014)
+# Mask non-maintainer ebuild. Ebuild will be removed on the next version bump.
+# The proposed config files were not reviewed by the genkernel developers.
+# Cursory review suggests that they risk breaking older kernel builds.
+# New configs will be added through the proper channel.
+=sys-kernel/genkernel-3.4.51.1-r1
 
 # Sergey Popov <pinkbyte@gentoo.org> (14 Aug 2014)
 # Mask new version of Boost - it's known to cause breakages,
