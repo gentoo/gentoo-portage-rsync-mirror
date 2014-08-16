@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-3.1.0.ebuild,v 1.7 2013/05/25 07:42:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-3.1.0.ebuild,v 1.8 2014/08/16 14:36:20 jer Exp $
 
 EAPI="5"
 
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0-gcc-as-needed.patch
+	epatch "${FILESDIR}"/${PN}-3.2.1-gold.patch
 
 	for i in "${S}"/lib/*.h ; do
 		sed -i \
