@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll/jekyll-2.3.0.ebuild,v 1.1 2014/08/15 14:59:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll/jekyll-2.3.0.ebuild,v 1.2 2014/08/16 13:09:59 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -43,7 +43,8 @@ ruby_add_bdepend "test? (
 		dev-ruby/redcloth
 		dev-ruby/rouge
 		dev-ruby/rr
-		>=dev-ruby/shoulda-3 )"
+		>=dev-ruby/shoulda-3
+		dev-ruby/test-unit:2 )"
 
 all_ruby_prepare() {
 	sed -i -e "/simplecov/,+2d" test/helper.rb || die
