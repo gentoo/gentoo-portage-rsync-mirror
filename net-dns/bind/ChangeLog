@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.502 2014/08/15 12:05:02 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.503 2014/08/16 18:33:33 idl0r Exp $
+
+  16 Aug 2014; Christian Ruppert <idl0r@gentoo.org> bind-9.10.0_p2.ebuild:
+  Fix doc installation, bug 520008
 
 *bind-9.10.0_p2 (15 Aug 2014)
 *bind-9.9.5_p1 (15 Aug 2014)
