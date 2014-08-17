@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.278 2014/08/06 17:36:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.279 2014/08/17 09:36:05 kensington Exp $
+
+  17 Aug 2014; Michael Palimaka <kensington@gentoo.org>
+  kdepimlibs-4.13.3.ebuild:
+  Require media-libs/phonon to be built against Qt4 wrt bug #519312.
 
   06 Aug 2014; Johannes Huber <johu@gentoo.org> kdepimlibs-4.13.3.ebuild:
   DEPEND on app-office/akonadi-server[qt4], bug #519066.

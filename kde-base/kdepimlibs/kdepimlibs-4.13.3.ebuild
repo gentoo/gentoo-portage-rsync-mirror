@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.13.3.ebuild,v 1.3 2014/08/06 17:36:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.13.3.ebuild,v 1.4 2014/08/17 09:36:05 kensington Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ DEPEND="
 	>=dev-libs/libical-0.48-r2:=
 	dev-libs/cyrus-sasl
 	>=dev-libs/qjson-0.8.1
-	media-libs/phonon
+	media-libs/phonon[qt4]
 	x11-misc/shared-mime-info
 	prison? ( media-libs/prison:4 )
 	ldap? ( net-nds/openldap )
