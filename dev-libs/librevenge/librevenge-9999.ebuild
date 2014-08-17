@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/librevenge-9999.ebuild,v 1.2 2014/08/16 07:36:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/librevenge-9999.ebuild,v 1.3 2014/08/17 07:33:59 scarabeus Exp $
 
 EAPI="5"
 
 inherit eutils multilib-minimal
 
-DESCRIPTION="A helper library for REVerses ENGineered formats filters"
+DESCRIPTION="A helper library for REVerse ENGineered formats filters"
 HOMEPAGE="http://sf.net/p/libwpd/librevenge"
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.code.sf.net/p/libwpd/librevenge"
