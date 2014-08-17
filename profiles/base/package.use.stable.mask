@@ -1,9 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.20 2014/08/01 19:50:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.21 2014/08/16 23:52:28 zlogene Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Mikle Kolyada <zlogene@gentoo.org> (16 Aug 2014)
+# Not yet stabilized dependency, need more testing
+>=dev-perl/PDL-2.4.11 pdl2 pgplot plplot
 
 # Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2014)
 # Optional (not required by anything in gentoo-x86) and fragile (based on
