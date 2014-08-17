@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.72 2014/08/17 12:55:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.16.ebuild,v 1.1 2014/08/17 12:55:32 lu_zero Exp $
 
 EAPI=5
 
@@ -22,20 +22,24 @@ else # Official release
 	SRC_URI="http://${PN}.org/releases/${P}.tar.xz"
 fi
 
+SRC_URI+=" test? ( http://dev.gentoo.org/~lu_zero/libav/fate-9.tar.xz )"
+
 LICENSE="LGPL-2.1  gpl? ( GPL-3 )"
-SLOT="0/10"
-[[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64
-~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
-~x64-solaris ~x86-solaris"
+SLOT="0/9"
+
+# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
+[[ ${PV} == *9999 ]] || \
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+
 IUSE="aac alsa amr bindist +bzip2 cdio cpudetection custom-cflags debug doc
 	+encode faac fdk frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k mp3
 	+network openssl opus oss pic pulseaudio rtmp schroedinger sdl speex ssl
 	static-libs test theora threads tools truetype v4l vaapi vdpau vorbis vpx X
-	wavpack webp x264 x265 xvid +zlib"
+	x264 xvid +zlib"
 
 # String for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
-CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext neon ssse3 vis avx2"
+CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext neon ssse3 vis"
 for i in ${CPU_FEATURES} ; do
 	IUSE+=" ${i%:*}"
 done
@@ -65,10 +69,7 @@ RDEPEND="
 			>=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}]
 			>=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}]
 		)
-		webp? ( >=media-libs/libwebp-0.3.0[${MULTILIB_USEDEP}] )
-		wavpack? ( >=media-sound/wavpack-4.60.1-r1[${MULTILIB_USEDEP}] )
 		x264? ( >=media-libs/x264-0.0.20130506:=[${MULTILIB_USEDEP}] )
-		x265? ( >=media-libs/x265-1.0:=[${MULTILIB_USEDEP}] )
 		xvid? ( >=media-libs/xvid-1.3.2-r1[${MULTILIB_USEDEP}] )
 	)
 	frei0r? ( media-plugins/frei0r-plugins )
@@ -125,12 +126,9 @@ RDEPEND="${RDEPEND}
 # x264 requires gpl2
 REQUIRED_USE="bindist? ( !faac !openssl !fdk )
 	rtmp? ( network )
-	amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) cdio? ( gpl ) x265? ( gpl )
+	amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) cdio? ( gpl )
 	test? ( encode zlib )
 "
-
-# Test on live ebuild are not possible as they require trunk fate
-RESTRICT="test"
 
 MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/libavutil/avconfig.h
@@ -185,7 +183,7 @@ multilib_src_configure() {
 		use mp3 && myconf+=( --enable-libmp3lame )
 		use amr && myconf+=( --enable-libvo-amrwbenc )
 		use aac && myconf+=( --enable-libvo-aacenc )
-		uses="faac theora vorbis wavpack webp x264 x265 xvid"
+		uses="faac theora vorbis x264 xvid"
 		for i in ${uses}; do
 			use ${i} && myconf+=( --enable-lib${i} )
 		done
@@ -212,7 +210,7 @@ multilib_src_configure() {
 	done
 	# libavfilter options
 	multilib_is_native_abi && use frei0r && myconf+=( --enable-frei0r )
-	use truetype && myconf+=( --enable-libfreetype )
+	use truetype &&  myconf+=( --enable-libfreetype )
 
 	# Threads; we only support pthread for now
 	use threads && myconf+=( --enable-pthreads )
@@ -235,7 +233,7 @@ multilib_src_configure() {
 
 	# disable mmx accelerated code if PIC is required
 	# as the provided asm decidedly is not PIC for x86.
-	if use pic && [[ ${ABI} == x86 ]]; then
+	if use pic && [[ ${ABI} == x86 ]] ; then
 		myconf+=( --disable-mmx --disable-mmxext )
 	fi
 
@@ -296,7 +294,7 @@ multilib_src_configure() {
 multilib_src_compile() {
 	emake
 
-	if use tools; then
+	if multilib_is_native_abi && use tools; then
 		tc-export CC
 
 		emake ${TOOLS[@]/#/tools/}
@@ -305,18 +303,21 @@ multilib_src_compile() {
 
 multilib_src_install() {
 	emake DESTDIR="${D}" install install-man
+
 	use doc && dodoc doc/*.html
 
-	if use tools; then
+	if multilib_is_native_abi && use tools; then
 		dobin ${TOOLS[@]/#/tools/}
 	fi
 }
 
 multilib_src_install_all() {
 	dodoc Changelog README INSTALL
+	dodoc doc/*.txt
 }
 
 multilib_src_test() {
-	LD_LIBRARY_PATH="${BUILD_DIR}/libavcore:${BUILD_DIR}/libswscale:${BUILD_DIR}/libavcodec:${BUILD_DIR}/libavdevice:${BUILD_DIR}/libavfilter:${BUILD_DIR}/libavformat:${BUILD_DIR}/libavutil" \
-		emake -j1 fate
+	echo ${WORKDIR}/fate
+	LD_LIBRARY_PATH="${BUILD_DIR}/libswscale:${BUILD_DIR}/libavcodec:${BUILD_DIR}/libavdevice:${BUILD_DIR}/libavfilter:${BUILD_DIR}/libavformat:${BUILD_DIR}/libavresample:${BUILD_DIR}/libavutil" \
+		emake -j1 fate SAMPLES="${WORKDIR}/fate"
 }
