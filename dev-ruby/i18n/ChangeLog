@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.67 2014/08/05 16:00:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.68 2014/08/17 00:43:07 blueness Exp $
+
+  17 Aug 2014; Anthony G. Basile <blueness@gentoo.org> i18n-0.6.11.ebuild:
+  Keyword on ~ppc and ~ppc64, request by mrueg
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> i18n-0.6.11.ebuild,
   i18n-0.6.9-r1.ebuild, i18n-0.6.9.ebuild:
