@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/ChangeLog,v 1.1 2014/08/17 12:27:27 blueness Exp $
+
+  17 Aug 2014; Anthony G. Basile <blueness@gentoo.org> +mips/package.use,
+  ppc/package.mask:
+  USE=internal-glib for dev-util/pkgconfig on mips to avoid pull in glib
+
