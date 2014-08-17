@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=gif? ( media-libs/giflib ) jpeg? ( virtual/jpeg ) png? ( media-libs/libpng:0= ) tiff? ( media-libs/tiff:0= )
 SLOT=0
 SRC_URI=http://webp.googlecode.com/files/libwebp-0.3.0.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	fbb9baa0b4039304643e36e9820fdecf	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	9eb4b5fb858228316d8bb32ada51f6a5	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=86ef3631561f91b99af51a7286fbdd04
