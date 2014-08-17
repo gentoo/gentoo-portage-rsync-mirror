@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.202 2014/07/27 09:22:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.203 2014/08/17 01:54:21 twitch153 Exp $
 
 # Mask use-flag firebird and package dev-db/firebird for bug 460780
 firebird
@@ -388,3 +388,8 @@ openrc-force
 # The support for implementations will be disabled in 30 days.
 python_targets_python2_6
 python_single_target_python2_6
+
+# Devan Franchini <twitch153@gentoo.org> (16 Aug 2014)
+# g-sorcery is only in an overlay so far, and not yet in the main portage
+# tree.
+g-sorcery
