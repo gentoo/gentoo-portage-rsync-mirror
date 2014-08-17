@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.145 2014/08/17 08:58:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.146 2014/08/17 09:04:47 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -101,10 +101,6 @@ app-office/lyx gnumeric
 # Jeroen Roovers <jer@gentoo.org> (24 Feb 2011)
 # Needs Java (bug #355353)
 app-text/texlive pdfannotextractor
-
-# Jeroen Roovers <jer@gentoo.org> (5 Jan 2011)
-# Mask dev-lang/spidermonkey (bug #347827)
-www-client/elinks javascript
 
 # Jeroen Roovers <jer@gentoo.org> (30 Nov 2010)
 # Mask doc-pdf because of Java dependencies (bug #347259)

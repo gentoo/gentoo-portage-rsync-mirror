@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.220 2014/07/25 14:26:47 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.221 2014/08/17 09:03:52 jer Exp $
+
+  17 Aug 2014; Jeroen Roovers <jer@gentoo.org> heimdal-1.5.3-r2.ebuild:
+  Stable for HPPA (bug #518006).
 
   25 Jul 2014; Eray Aslan <eras@gentoo.org> +files/heimdal_tinfo.patch,
   heimdal-1.5.3-r2.ebuild:
