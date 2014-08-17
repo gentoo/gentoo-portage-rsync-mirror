@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1007 2014/08/11 13:48:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1008 2014/08/17 16:24:42 jer Exp $
+
+  17 Aug 2014; Jeroen Roovers <jer@gentoo.org> glibc-2.19-r1.ebuild:
+  Stable for HPPA (bug #518364).
 
   11 Aug 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.19-r1.ebuild:
   Pull in some more hppa patches #518460 by Guy Martin.
