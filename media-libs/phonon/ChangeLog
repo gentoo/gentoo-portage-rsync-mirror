@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.58 2014/08/10 21:42:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.59 2014/08/17 13:02:06 jer Exp $
+
+  17 Aug 2014; Jeroen Roovers <jer@gentoo.org> phonon-4.7.2.ebuild:
+  Stable for HPPA (bug #519592).
 
   10 Aug 2014; Johannes Huber <johu@gentoo.org> -phonon-4.7.1-r1.ebuild,
   phonon-4.7.2.ebuild, phonon-9999.ebuild:
