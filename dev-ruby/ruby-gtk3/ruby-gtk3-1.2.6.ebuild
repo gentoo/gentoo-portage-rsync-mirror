@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk3/ruby-gtk3-1.2.6.ebuild,v 1.1 2013/05/04 05:34:51 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk3/ruby-gtk3-1.2.6.ebuild,v 1.2 2014/08/17 10:14:25 blueness Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -8,7 +8,7 @@ USE_RUBY="ruby19"
 inherit ruby-ng-gnome2
 
 DESCRIPTION="Ruby Gtk3 bindings"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc"
 IUSE=""
 
 DEPEND="${DEPEND} x11-libs/gtk+:3"

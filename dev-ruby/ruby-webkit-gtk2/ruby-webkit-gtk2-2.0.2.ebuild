@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-webkit-gtk2/ruby-webkit-gtk2-2.0.2.ebuild,v 1.1 2013/12/09 16:13:22 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-webkit-gtk2/ruby-webkit-gtk2-2.0.2.ebuild,v 1.2 2014/08/17 10:16:25 blueness Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -8,7 +8,7 @@ USE_RUBY="ruby19 ruby20"
 inherit ruby-ng-gnome2
 
 DESCRIPTION="Ruby WebKitGtk+ for Gtk 2.0 bindings"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc"
 IUSE=""
 
 DEPEND="${DEPEND} net-libs/webkit-gtk:2"

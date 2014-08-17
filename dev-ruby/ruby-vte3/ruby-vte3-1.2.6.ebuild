@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte3/ruby-vte3-1.2.6.ebuild,v 1.1 2013/05/04 16:45:00 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte3/ruby-vte3-1.2.6.ebuild,v 1.2 2014/08/17 10:20:26 blueness Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -8,7 +8,7 @@ USE_RUBY="ruby19"
 inherit ruby-ng-gnome2
 
 DESCRIPTION="Ruby VTE bindings"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc"
 IUSE=""
 
 DEPEND="${DEPEND} x11-libs/vte:2.90"

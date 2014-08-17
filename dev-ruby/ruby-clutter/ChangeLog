@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-clutter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-clutter/ChangeLog,v 1.5 2014/03/15 15:17:48 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-clutter/ChangeLog,v 1.6 2014/08/17 10:08:56 blueness Exp $
+
+  17 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  ruby-clutter-1.2.6.ebuild, ruby-clutter-2.0.2.ebuild,
+  ruby-clutter-2.1.0.ebuild, ruby-clutter-2.2.0.ebuild:
+  Keyword on ~ppc and ~ppc64, request by mrueg
 
 *ruby-clutter-2.2.0 (15 Mar 2014)
 

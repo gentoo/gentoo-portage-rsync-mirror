@@ -1,3 +1,12 @@
+# ChangeLog for dev-ruby/ruby-clutter-gstreamer
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-clutter-gstreamer/ChangeLog,v 1.4 2014/08/17 10:10:06 blueness Exp $
+
+  17 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  ruby-clutter-gstreamer-2.0.2.ebuild, ruby-clutter-gstreamer-2.1.0.ebuild,
+  ruby-clutter-gstreamer-2.2.0.ebuild:
+  Keyword on ~ppc, request by mrueg
+
 *ruby-clutter-gstreamer-2.2.0 (15 Mar 2014)
 
   15 Mar 2014; Naohiro Aota <naota@gentoo.org>
