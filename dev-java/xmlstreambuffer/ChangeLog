@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/xmlstreambuffer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlstreambuffer/ChangeLog,v 1.11 2014/08/10 20:27:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlstreambuffer/ChangeLog,v 1.13 2014/08/17 08:58:00 ercpe Exp $
+
+*xmlstreambuffer-0.5.20070412-r3 (17 Aug 2014)
+
+  17 Aug 2014; Johann Schmitz <ercpe@gentoo.org>
+  +xmlstreambuffer-0.5.20070412-r3.ebuild:
+  Bump to EAPI=5, some qa
+
+*xmlstreambuffer-1.5.3 (17 Aug 2014)
+
+  17 Aug 2014; Johann Schmitz <ercpe@gentoo.org> +xmlstreambuffer-1.5.3.ebuild:
+  Version bump as per #518856
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   xmlstreambuffer-0.5.20070412-r1.ebuild,
