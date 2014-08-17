@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1352 2014/08/17 03:34:32 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1353 2014/08/17 22:50:23 grknight Exp $
+
+  18 Aug 2014; Brian Evans <grknight@gentoo.org> mysql-multilib.eclass:
+  Move ENABLE_DTRACE check to the multilib_src_configure wrt bug 520028
 
   17 Aug 2014; Jonathan Callen <jcallen@gentoo.org> multilib-build.eclass:
   Add new multilib_native_enable and multilib_native_with functions; fix

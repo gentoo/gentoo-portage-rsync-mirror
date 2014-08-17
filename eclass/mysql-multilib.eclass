@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.4 2014/07/31 22:26:07 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.5 2014/08/17 22:50:23 grknight Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -448,6 +448,7 @@ multilib_src_configure() {
 		-DWITH_SSL=$(usex ssl system bundled)
 		-DWITH_DEFAULT_COMPILER_OPTIONS=0
 		-DWITH_DEFAULT_FEATURE_SET=0
+		$(cmake-utils_use_enable systemtap DTRACE)
 	)
 
 	if in_iuse bindist ; then
