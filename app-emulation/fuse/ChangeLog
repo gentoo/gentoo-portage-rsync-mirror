@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/fuse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.42 2014/07/23 23:12:31 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.43 2014/08/17 15:55:56 neurogeek Exp $
+
+  17 Aug 2014; Jesus Rivero <neurogeek@gentoo.org>
+  +files/fuse-1.1.1-gold-link-lm.patch:
+  Adding missing patch. Closes bug #518284
 
 *fuse-1.1.1 (23 Jul 2014)
 
