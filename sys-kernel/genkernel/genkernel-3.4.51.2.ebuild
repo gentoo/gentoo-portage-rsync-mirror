@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.51.1-r1.ebuild,v 1.1 2014/08/14 04:06:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.51.2.ebuild,v 1.1 2014/08/17 20:27:08 ryao Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
 
-EAPI="5"
+EAPI="3"
 
 VERSION_BUSYBOX='1.20.2'
 VERSION_DMRAID='1.0.0.rc16-3'
@@ -42,8 +42,6 @@ then
 else
 	inherit bash-completion-r1 eutils
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
-		http://packages.gentooexperimental.org/genkernel/config.amd64
-		http://packages.gentooexperimental.org/genkernel/config.x86
 		${COMMON_URI}"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 fi
@@ -140,10 +138,6 @@ src_install() {
 	newbashcomp "${FILESDIR}"/genkernel.bash "${PN}"
 	insinto /etc
 	doins "${FILESDIR}"/initramfs.mounts
-
-	# inject new kernel configs
-	cp "${DISTDIR}/config.x86" "${D}/usr/share/genkernel/arch/x86/kernel-config" || die
-	cp "${DISTDIR}/config.amd64" "${D}/usr/share/genkernel/arch/x86_64/kernel-config" || die
 }
 
 pkg_postinst() {
