@@ -29,23 +29,6 @@ After=network.target mysqld.service
 #Wants=httpd.service
 
 [Service]
-# You have 2 choices for 'Type': simple or forking 
-# These require ExecStart lines which are NOT interchangeable.
-# Type=simple is recommended. 
-# If using 'Type=simple'
-# 1) you cannot have --daemon in the command line 
-
-# If using 'Type=forking'
-# 1) you must have --daemon in the command line AND
-# 2) you must have  --pidfile /somewhere in the command line AND
-# 3) you must have a line PIDFILE=/somewhere in the [service] stanza
-# this lets systemd know how to find the forked process PID, 
-# otherwise it presumes the starting process will be the remaining process
-# (cf. with the mysqld_safe process which starts mysqld and then disappears).
-# Specifying a pidfile with Type simple does not cause any problems and
-# may help in debugging startup failures.
-
-#Type=forking
 Type=simple
 
 Environment=MYTHCONFDIR=/etc/mythtv
@@ -71,12 +54,13 @@ User=mythtv
 
 # Systemd sends stdout to syslog, and mythbackend has console logging enabled without --daemon.
 # Send stdout to /dev/null so console logging doesn't go to syslog
-StandardOutput=null
+#StandardOutput=null
 # Default setting for Type=simple.
-ExecStart=/usr/bin/mythbackend --logpath /var/log/mythtv --loglevel crit
+#ExecStart=/usr/bin/mythbackend --logpath /var/log/mythtv --loglevel crit
+ExecStart=/usr/bin/mythbackend --loglevel notice --nologserver
 
 # Whether systemd will continue over-watch and restart on any halt
-#Restart=always
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
