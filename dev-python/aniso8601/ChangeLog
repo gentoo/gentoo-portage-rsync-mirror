@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/aniso8601
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aniso8601/ChangeLog,v 1.2 2014/06/21 22:58:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aniso8601/ChangeLog,v 1.3 2014/08/18 04:57:12 idella4 Exp $
+
+*aniso8601-0.83 (18 Aug 2014)
+
+  18 Aug 2014; Ian Delaney <idella4@gentoo.org> +aniso8601-0.83.ebuild:
+  bump; add pypy
 
   21 Jun 2014; Mike Gilbert <floppym@gentoo.org> aniso8601-0.82.ebuild:
   Depend on setuptools.
