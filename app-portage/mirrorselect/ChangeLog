@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.142 2014/08/02 18:18:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.143 2014/08/18 07:01:59 blueness Exp $
+
+  18 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  mirrorselect-2.2.2.ebuild, mirrorselect-9999.ebuild:
+  Keyword ~ppc ~ppc64, bug #509628
 
   02 Aug 2014; Raúl Porcel <armin76@gentoo.org> mirrorselect-2.2.2.ebuild:
   alpha/ia64/sparc stable wrt #513278
