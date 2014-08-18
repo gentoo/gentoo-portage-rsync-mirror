@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/grsync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.34 2014/07/22 19:27:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.35 2014/08/18 19:17:19 creffett Exp $
+
+  18 Aug 2014; Christopher Reffett <2011creffett@gentoo.org>
+  -grsync-1.1.1.ebuild:
+  QA: drop old EAPI 1 ebuild
 
   22 Jul 2014; Pacho Ramos <pacho@gentoo.org> grsync-1.2.4.ebuild:
   amd64/x86 stable, bug #511968

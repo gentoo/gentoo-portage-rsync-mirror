@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-27.ebuild,v 1.1 2014/08/17 18:16:53 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-27.ebuild,v 1.2 2014/08/18 19:02:25 williamh Exp $
 
 EAPI=5
 
@@ -23,18 +23,17 @@ IUSE=""
 
 RESTRICT="test"
 
-COMMON_DEPEND=">=virtual/udev-180
-	!<sys-fs/udev-186"
-DEPEND="${COMMON_DEPEND}"
-RDEPEND="${COMMON_DEPEND}
-	>=sys-apps/openrc-0.13"
+RDEPEND=">=virtual/udev-180
+	!<sys-fs/udev-186
+	!<sys-apps/openrc-0.13"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch_user
 }
 
 pkg_postinst() {
-	# Add udev and udev-mount to the sysinit runlevel automatically if this is
+	# Add udev to the sysinit runlevel automatically if this is
 	# the first install of this package.
 	if [[ -z ${REPLACING_VERSIONS} ]]; then
 		if [[ ! -d ${ROOT%/}/etc/runlevels/sysinit ]]; then
