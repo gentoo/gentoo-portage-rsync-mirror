@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.14 2013/12/23 01:05:20 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92-r1.ebuild,v 1.1 2014/08/18 20:07:14 creffett Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils toolchain-funcs multilib user
 

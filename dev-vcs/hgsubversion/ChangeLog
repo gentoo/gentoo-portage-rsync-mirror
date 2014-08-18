@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/hgsubversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/ChangeLog,v 1.33 2014/08/10 21:23:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/ChangeLog,v 1.35 2014/08/18 20:07:35 djc Exp $
+
+  18 Aug 2014; Dirkjan Ochtman <djc@gentoo.org> -hgsubversion-1.3.ebuild:
+  Remove old version
+
+*hgsubversion-1.6.3 (18 Aug 2014)
+
+  18 Aug 2014; Dirkjan Ochtman <djc@gentoo.org> +hgsubversion-1.6.3.ebuild:
+  Version bump hgsubversion to 1.6.3
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> hgsubversion-1.3.ebuild,
   hgsubversion-1.4.ebuild, hgsubversion-1.6.1.ebuild, hgsubversion-9999.ebuild:
