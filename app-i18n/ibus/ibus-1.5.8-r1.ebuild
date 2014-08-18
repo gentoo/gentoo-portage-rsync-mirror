@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.8.ebuild,v 1.2 2014/08/04 07:22:49 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.8-r1.ebuild,v 1.1 2014/08/18 06:04:03 dlan Exp $
 
 EAPI=5
 
@@ -9,19 +9,17 @@ VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 # Vapigen is needed for the vala binding
 # Valac is needed when building from git for the engine
-AUTOTOOLS_AUTORECONF=1
-AUTOTOOLS_IN_SOURCE_BUILD=1
 
-inherit autotools-utils bash-completion-r1 eutils gnome2-utils multilib python-single-r1 readme.gentoo vala virtualx
+inherit bash-completion-r1 eutils gnome2-utils multilib python-single-r1 readme.gentoo vala virtualx
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
-SRC_URI="https://github.com/ibus/ibus/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/ibus/ibus/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="deprecated gconf gtk +gtk3 +introspection nls +python test +vala wayland +X"
+IUSE="deprecated gconf gtk +gtk3 +introspection nls +python test vala wayland +X"
 REQUIRED_USE="|| ( gtk gtk3 X )
 	deprecated? ( python )
 	python? (
@@ -62,7 +60,6 @@ RDEPEND="${COMMON_DEPEND}
 	)"
 DEPEND="${COMMON_DEPEND}
 	>=dev-lang/perl-5.8.1
-	dev-util/gtk-doc
 	dev-util/gtk-doc-am
 	dev-util/intltool
 	virtual/pkgconfig
@@ -74,7 +71,7 @@ DEPEND="${COMMON_DEPEND}
 # IBUS-CRITICAL **: bus_test_client_init: assertion `ibus_bus_is_connected (_bus)' failed
 RESTRICT="test"
 
-DOCS="AUTHORS NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 DISABLE_AUTOFORMATTING="yes"
 DOC_CONTENTS="To use ibus, you should:
@@ -99,7 +96,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	autotools-utils_src_prepare
+	# We run "dconf update" in pkg_postinst/postrm to avoid sandbox violations
+	sed -e 's/dconf update/$(NULL)/' \
+		-i data/dconf/Makefile.{am,in} || die
 	use vala && vala_src_prepare
 }
 
