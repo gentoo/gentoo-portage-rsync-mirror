@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=dev-libs/gmp[cxx] app-arch/unzip
+DESCRIPTION=tool for computations in affine monoids and more
+EAPI=2
+HOMEPAGE=http://www.mathematik.uni-osnabrueck.de/normaliz/
+IUSE=extras openmp
+KEYWORDS=amd64 x86
+LICENSE=GPL-3
+RDEPEND=dev-libs/gmp[cxx]
+SLOT=0
+SRC_URI=http://www.mathematik.uni-osnabrueck.de/normaliz/Normaliz2.5.zip
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=3a9e8feafed6b2554e18152b8331e051
