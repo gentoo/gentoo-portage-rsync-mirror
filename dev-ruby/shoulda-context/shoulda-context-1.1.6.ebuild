@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/shoulda-context-1.1.6.ebuild,v 1.3 2014/08/11 09:53:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/shoulda-context-1.1.6.ebuild,v 1.4 2014/08/18 01:42:40 blueness Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://thoughtbot.com/projects/shoulda"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64"
 IUSE="doc test"
 
 ruby_add_bdepend "test? ( dev-ruby/test-unit:2 dev-ruby/mocha )"

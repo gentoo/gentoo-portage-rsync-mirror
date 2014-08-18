@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shoulda
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.33 2014/08/11 09:56:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.34 2014/08/18 01:44:55 blueness Exp $
+
+  18 Aug 2014; Anthony G. Basile <blueness@gentoo.org> shoulda-3.5.0-r1.ebuild:
+  Keyword ~ppc ~ppc64, bug #501968
 
   11 Aug 2014; Jeroen Roovers <jer@gentoo.org> shoulda-2.11.3-r2.ebuild,
   shoulda-3.5.0-r1.ebuild:

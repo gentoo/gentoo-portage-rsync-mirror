@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.70 2014/06/10 00:56:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.71 2014/08/18 02:00:04 mrueg Exp $
+
+*poppler-data-0.4.7 (18 Aug 2014)
+
+  18 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +poppler-data-0.4.7.ebuild,
+  -poppler-data-0.4.5-r1.ebuild:
+  Version bump. Cleanup old.
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> poppler-data-0.4.6.ebuild:
   Add arm64 love.

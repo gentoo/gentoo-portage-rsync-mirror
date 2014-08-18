@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/shoulda-3.5.0-r1.ebuild,v 1.4 2014/08/11 09:56:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/shoulda-3.5.0-r1.ebuild,v 1.5 2014/08/18 01:44:55 blueness Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="https://github.com/thoughtbot/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="MIT"
 SLOT="3"
-KEYWORDS="~amd64 ~arm ~hppa"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64"
 IUSE=""
 
 # This now more or less a meta-gem and it only contains features for
