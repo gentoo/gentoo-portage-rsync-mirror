@@ -1,40 +1,39 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/389-ds-console-1.2.6.ebuild,v 1.1 2011/08/14 09:29:59 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/389-admin-console-1.1.8-r1.ebuild,v 1.1 2014/08/18 19:54:09 creffett Exp $
 
-EAPI="2"
+EAPI=5
 
 JAVA_PKG_IUSE="doc source"
 
-inherit java-pkg-2 java-ant-2 eutils versionator
+inherit java-pkg-2 java-ant-2
 
 MY_PV=${PV/_alpha/.a}
 MY_PV=${MY_PV/_rc/.rc}
-MY_MV="$(get_version_component_range 1-2)"
 
-DESCRIPTION="Java based remote management console used for Managing 389-admin 389-ds"
+DESCRIPTION="389 Server Management Console (jar and help files)"
 HOMEPAGE="http://port389.org/"
 SRC_URI="http://directory.fedoraproject.org/sources/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-SLOT="1.2"
+SLOT="1.1"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEP="dev-java/jss:3.4
 	dev-java/ldapsdk:4.1
-	>=dev-java/idm-console-framework-1.1
-	net-nds/389-ds-base"
-RDEPEND="|| ( >=virtual/jre-1.6 >=virtual/jdk-1.6 )
+	>=dev-java/idm-console-framework-1.1.7"
+RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jdk-1.5 )
 	${COMMON_DEP}"
 DEPEND="sys-apps/sed
-	>=virtual/jdk-1.6
+	>=virtual/jdk-1.5
 	${COMMON_DEP}"
+PDEPEND="net-nds/389-admin"
 
 src_prepare() {
 	# Gentoo java rules say no jars with version number
 	# so sed away the version indicator '-'
-	sed -e "s!-\*!\*!g" -i build.xml || die "sed failed"
+	sed -e "s!-\*!\*!g" -i build.xml
 
 	java-pkg_jar-from ldapsdk-4.1 ldapjdk.jar
 	java-pkg_jar-from jss-3.4 xpclass.jar jss4.jar
@@ -54,19 +53,20 @@ src_compile() {
 
 src_install() {
 	java-pkg_jarinto /usr/share/dirsrv/html/java
-	java-pkg_newjar "${S}"/build/package/389-ds-${MY_PV}.jar 389-ds-${MY_PV}.jar
-	java-pkg_newjar "${S}"/build/package/389-ds-${MY_PV}_en.jar 389-ds-${MY_PV}_en.jar
+	# have to install versioned jars, otherwise 389-console will crash
+	java-pkg_newjar "${S}"/build/package/389-admin-${MY_PV}.jar 389-admin-${MY_PV}.jar
+	java-pkg_newjar "${S}"/build/package/389-admin-${MY_PV}_en.jar 389-admin-${MY_PV}_en.jar
 
-	dosym 389-ds-${MY_PV}.jar /usr/share/dirsrv/html/java/389-ds.jar
-	dosym 389-ds-${MY_PV}_en.jar /usr/share/dirsrv/html/java/389-ds_en.jar
-	dosym 389-ds-${MY_PV}.jar /usr/share/dirsrv/html/java/389-ds-${MY_MV}.jar
-	dosym 389-ds-${MY_PV}_en.jar /usr/share/dirsrv/html/java/389-ds-${MY_MV}_en.jar
+	dosym 389-admin-${MY_PV}.jar /usr/share/dirsrv/html/java/389-admin.jar
+	dosym 389-admin-${MY_PV}.jar /usr/share/dirsrv/html/java/389-admin-${SLOT}.jar
+	dosym 389-admin-${MY_PV}_en.jar /usr/share/dirsrv/html/java/389-admin_en.jar
+	dosym 389-admin-${MY_PV}_en.jar /usr/share/dirsrv/html/java/389-admin-${SLOT}_en.jar
 
-	insinto /usr/share/dirsrv/manual/en/slapd
+	insinto /usr/share/dirsrv/manual/en/admin
 	doins "${S}"/help/en/*.html
 	doins "${S}"/help/en/tokens.map
 
-	insinto /usr/share/dirsrv/manual/en/slapd/help
+	insinto /usr/share/dirsrv/manual/en/admin/help
 	doins "${S}"/help/en/help/*.html
 
 	use doc && java-pkg_dojavadoc build/doc
