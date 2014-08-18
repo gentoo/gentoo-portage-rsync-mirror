@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.8-r1.ebuild,v 1.1 2014/08/18 06:04:03 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.8-r1.ebuild,v 1.2 2014/08/18 08:33:51 dlan Exp $
 
 EAPI=5
 
@@ -97,7 +97,7 @@ pkg_setup() {
 
 src_prepare() {
 	# We run "dconf update" in pkg_postinst/postrm to avoid sandbox violations
-	sed -e 's/dconf update/$(NULL)/' \
+	sed -e 's/dconf update/:/' \
 		-i data/dconf/Makefile.{am,in} || die
 	use vala && vala_src_prepare
 }

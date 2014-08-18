@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.149 2014/08/18 06:04:03 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.150 2014/08/18 08:33:51 dlan Exp $
+
+  18 Aug 2014; Yixun Lan <dlan@gentoo.org> ibus-1.5.8-r1.ebuild:
+  rework dconf sed operation
 
 *ibus-1.5.8-r1 (18 Aug 2014)
 

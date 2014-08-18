@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.75 2014/07/06 14:41:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.76 2014/08/18 08:56:06 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -293,7 +293,7 @@ python_gen_usedep() {
 	[[ ${matches[@]} ]] || die "No supported implementations match python_gen_usedep patterns: ${@}"
 
 	local out=${matches[@]}
-	echo ${out// /,}
+	echo "${out// /,}"
 }
 
 # @FUNCTION: python_gen_useflags
@@ -330,7 +330,7 @@ python_gen_useflags() {
 		done
 	done
 
-	echo ${matches[@]}
+	echo "${matches[@]}"
 }
 
 # @FUNCTION: python_gen_cond_dep
@@ -387,7 +387,7 @@ python_gen_cond_dep() {
 		done
 	done
 
-	echo ${matches[@]}
+	echo "${matches[@]}"
 }
 
 # @ECLASS-VARIABLE: BUILD_DIR

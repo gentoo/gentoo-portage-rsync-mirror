@@ -10,5 +10,5 @@ RDEPEND=dev-libs/gmp dev-libs/mpc dev-libs/mpfr python_targets_python2_7? ( >=de
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 )
 SLOT=2
 SRC_URI=http://gmpy.googlecode.com/files/gmpy2-2.0.0.zip
-_eclasses_=distutils-r1	d48d51c220f1678179fc4ab13b534ec1	eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	c820706d8b22c1d0fe215a9d4a47671d	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=distutils-r1	d48d51c220f1678179fc4ab13b534ec1	eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=0a0dd7e269b092f94b1c93dd2b8b64ff
