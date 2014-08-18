@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ssl-fetch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-fetch/ChangeLog,v 1.18 2014/08/02 18:15:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-fetch/ChangeLog,v 1.19 2014/08/18 06:59:52 blueness Exp $
+
+  18 Aug 2014; Anthony G. Basile <blueness@gentoo.org> ssl-fetch-0.2.1.ebuild,
+  ssl-fetch-0.2.ebuild, ssl-fetch-9999.ebuild:
+  Keyword ~ppc ~ppc64, bug #509628
 
   02 Aug 2014; Raúl Porcel <armin76@gentoo.org> ssl-fetch-0.2.ebuild,
   ssl-fetch-0.2.1.ebuild:

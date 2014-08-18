@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-fetch/ssl-fetch-0.2.ebuild,v 1.8 2014/08/02 18:15:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-fetch/ssl-fetch-0.2.ebuild,v 1.9 2014/08/18 06:59:52 blueness Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips sparc ~x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sparc ~x86"
 
 DEPEND=""
 
