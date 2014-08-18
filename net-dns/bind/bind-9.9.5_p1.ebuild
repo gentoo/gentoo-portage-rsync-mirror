@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.5_p1.ebuild,v 1.1 2014/08/15 12:05:02 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.5_p1.ebuild,v 1.2 2014/08/18 18:51:23 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -138,7 +138,7 @@ src_prepare() {
 #			${GEOIP_PATCH_A} || die
 #		sed -i -e 's:^ PATCHVER=2: PATCHVER=4:' ${GEOIP_PATCH_A} || die
 #		epatch -F0 ${GEOIP_PATCH_A}
-		epatch -F0 "${DISTDIR}/${P}-geoip.patch"
+		epatch -F0 "${DISTDIR}/${GEOIP_PATCH_A}"
 	fi
 
 	# Disable tests for now, bug 406399
