@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionview/ChangeLog,v 1.7 2014/08/12 21:40:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionview/ChangeLog,v 1.8 2014/08/18 22:17:12 graaff Exp $
+
+*actionview-4.1.5 (18 Aug 2014)
+
+  18 Aug 2014; Hans de Graaff <graaff@gentoo.org> +actionview-4.1.5.ebuild:
+  Version bump for security bug 520212.
 
   12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> actionview-4.1.4.ebuild:
   Keyword ~ppc and ~ppc64, bug #519170

@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.288 2014/08/16 15:58:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.289 2014/08/18 22:17:52 graaff Exp $
+
+*actionpack-4.1.5 (18 Aug 2014)
+*actionpack-4.0.9 (18 Aug 2014)
+
+  18 Aug 2014; Hans de Graaff <graaff@gentoo.org> +actionpack-4.0.9.ebuild,
+  +actionpack-4.1.5.ebuild:
+  Version bump for security bug 520212.
 
   16 Aug 2014; Anthony G. Basile <blueness@gentoo.org> actionpack-3.2.19.ebuild,
   actionpack-4.0.8.ebuild:

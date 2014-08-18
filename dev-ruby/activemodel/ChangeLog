@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.88 2014/08/12 21:39:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.89 2014/08/18 22:16:35 graaff Exp $
+
+*activemodel-4.1.5 (18 Aug 2014)
+*activemodel-4.0.9 (18 Aug 2014)
+
+  18 Aug 2014; Hans de Graaff <graaff@gentoo.org> +activemodel-4.0.9.ebuild,
+  +activemodel-4.1.5.ebuild:
+  Version bump for security bug 520212.
 
   12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> activemodel-4.0.8.ebuild,
   activemodel-4.1.4.ebuild:
