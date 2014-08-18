@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta751.ebuild,v 1.2 2014/07/25 03:53:22 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta783.ebuild,v 1.1 2014/08/18 22:43:34 k_f Exp $
 
 EAPI="5"
 
@@ -9,13 +9,12 @@ inherit eutils flag-o-matic toolchain-funcs
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 MY_P="${P/_/-}"
-#SRC_URI="mirror://gnupg/gnupg/${PN}/unstable/${MY_P}.tar.bz2"
-SRC_URI="ftp://ftp.gnupg.org/gcrypt/${PN}/unstable/${MY_P}.tar.bz2"
+SRC_URI="mirror://gnupg/gnupg/unstable/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="adns bzip2 doc nls readline static selinux smartcard usb"
+IUSE="bzip2 doc nls readline static selinux smartcard usb"
 
 COMMON_DEPEND_LIBS="
 	dev-libs/npth
@@ -24,8 +23,9 @@ COMMON_DEPEND_LIBS="
 	>=dev-libs/libgpg-error-1.13
 	>=dev-libs/libksba-1.0.7
 	>=net-misc/curl-7.10
+	>=net-libs/gnutls-3.0
 	sys-libs/zlib
-	adns? ( >=net-libs/adns-1.4 )
+	net-nds/openldap
 	bzip2? ( app-arch/bzip2 )
 	readline? ( sys-libs/readline )
 	smartcard? ( usb? ( virtual/libusb:0 ) )
@@ -92,7 +92,6 @@ src_configure() {
 		--enable-gpgsm \
 		--enable-agent \
 		"${myconf[@]}" \
-		$(use_with adns) \
 		$(use_enable bzip2) \
 		$(use_enable nls) \
 		$(use_with readline) \

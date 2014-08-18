@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.538 2014/08/13 14:24:41 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.539 2014/08/18 22:43:34 k_f Exp $
+
+*gnupg-2.1.0_beta783 (18 Aug 2014)
+
+  18 Aug 2014; Kristian Fiskerstrand <k_f@gentoo.org>
+  +gnupg-2.1.0_beta783.ebuild, -gnupg-2.1.0_beta751.ebuild:
+  Bump 2.1 version to beta783. Fix bug #519200
 
 *gnupg-2.0.26 (13 Aug 2014)
 
