@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.212 2014/08/16 15:55:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.213 2014/08/17 23:46:58 blueness Exp $
+
+# Anthony G. Basile <blueness@gentoo.org> (17 Aug 2014)
+# This pulls in qemu[smartcard] which is masked
+=net-misc/spice-gtk-0.25-r1 smartcard
 
 # Anthony G. Basile <blueness@gentoo.org> (16 Aug 2014)
 # Ultimately pulls in nodejs which is broken.

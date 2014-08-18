@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.283 2014/08/16 15:55:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.284 2014/08/17 23:46:58 blueness Exp $
+
+  17 Aug 2014; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  Mask USE=smartcard for =net-misc/spice-gtk-0.25-r1 since it pulls in
+  qemu[smartcard] which is masked
 
   16 Aug 2014; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Mask FEATURES=test on dev-ruby/sprockets since it pulls in execjs and
