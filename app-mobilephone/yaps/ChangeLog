@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/yaps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.28 2014/04/09 07:18:39 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.29 2014/08/19 13:46:46 creffett Exp $
+
+*yaps-0.96-r5 (19 Aug 2014)
+
+  19 Aug 2014; Christopher Reffett <2011creffett@gentoo.org>
+  +yaps-0.96-r5.ebuild:
+  QA: revbump, EAPI bump
 
   09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
