@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dahdi-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.33 2014/08/10 17:34:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.34 2014/08/19 08:30:05 chainsaw Exp $
+
+*dahdi-tools-2.10.0 (19 Aug 2014)
+
+  19 Aug 2014; Tony Vroon <chainsaw@gentoo.org> +dahdi-tools-2.10.0.ebuild:
+  New release adds hardware support for TE436/TE236 cards and reduces ioctl
+  spam on non-existent channels from dahdi_cfg. Fixes default recall tone and
+  Australian congestion tone.
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> dahdi-tools-2.9.0.1.ebuild:
   Stable for x86, wrt bug #511738
