@@ -1,10 +1,10 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.192 2014/08/19 10:41:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.193 2014/08/19 12:04:20 armin76 Exp $
 
   19 Aug 2014; Raúl Porcel <armin76@gentoo.org> subversion-1.7.18.ebuild,
   subversion-1.8.10.ebuild:
-  alpha/arm/arm75/ia64/sparc stable wrt #519202
+  alpha/arm/arm64/ia64/sparc stable wrt #519202
 
   19 Aug 2014; Agostino Sarubbo <ago@gentoo.org> subversion-1.7.18.ebuild,
   subversion-1.8.10.ebuild:

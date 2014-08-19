@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-reader
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/ChangeLog,v 1.38 2014/08/12 13:13:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/ChangeLog,v 1.39 2014/08/19 12:10:16 armin76 Exp $
+
+  19 Aug 2014; Raúl Porcel <armin76@gentoo.org> pdf-reader-1.3.3.ebuild:
+  add ~alpha/~arm/~ia64/~sparc/~x86, bug #519170
 
   12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> pdf-reader-1.3.3.ebuild:
   Keyword ~ppc and ~ppc64, bug #519170

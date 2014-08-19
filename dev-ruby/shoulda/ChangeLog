@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/shoulda
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.34 2014/08/18 01:44:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.35 2014/08/19 12:05:03 armin76 Exp $
+
+  19 Aug 2014; Raúl Porcel <armin76@gentoo.org> shoulda-2.11.3-r1.ebuild,
+  shoulda-2.11.3-r2.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #519170
 
   18 Aug 2014; Anthony G. Basile <blueness@gentoo.org> shoulda-3.5.0-r1.ebuild:
   Keyword ~ppc ~ppc64, bug #501968

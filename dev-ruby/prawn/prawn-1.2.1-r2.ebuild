@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn/prawn-1.2.1-r2.ebuild,v 1.4 2014/08/12 13:17:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn/prawn-1.2.1-r2.ebuild,v 1.5 2014/08/19 12:12:48 armin76 Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -16,7 +16,7 @@ HOMEPAGE="http://prawn.majesticseacreature.com/"
 SRC_URI="https://github.com/prawnpdf/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="|| ( GPL-2 Ruby )"
 SLOT="1"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/pdf-core

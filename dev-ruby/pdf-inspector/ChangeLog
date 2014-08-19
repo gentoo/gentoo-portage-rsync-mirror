@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-inspector
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/ChangeLog,v 1.15 2014/08/12 13:15:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/ChangeLog,v 1.16 2014/08/19 12:11:29 armin76 Exp $
+
+  19 Aug 2014; Raúl Porcel <armin76@gentoo.org> pdf-inspector-1.1.0-r1.ebuild:
+  add ~alpha/~arm/~ia64/~sparc/~x86, bug #519170
 
   12 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
   pdf-inspector-1.1.0-r1.ebuild:
