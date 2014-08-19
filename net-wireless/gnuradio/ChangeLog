@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.49 2014/08/15 00:52:36 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.50 2014/08/19 02:31:49 zerochaos Exp $
+
+  18 Aug 2014; Rick Farina <zerochaos@gentoo.org> gnuradio-3.7.4.ebuild,
+  gnuradio-9999.ebuild:
+  cheetah is an rdep of grc, and an unconditional dep of build.
 
   15 Aug 2014; Rick Farina <zerochaos@gentoo.org> gnuradio-3.6.5.1-r2.ebuild,
   gnuradio-3.7.4.ebuild, gnuradio-9999.ebuild:

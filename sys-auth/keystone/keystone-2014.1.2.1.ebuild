@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.1-r2.ebuild,v 1.3 2014/08/10 20:21:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.2.1.ebuild,v 1.1 2014/08/19 02:39:33 prometheanfire Exp $
 
 EAPI=5
 
@@ -10,7 +10,8 @@ inherit distutils-r1 user
 
 DESCRIPTION="The Openstack authentication, authorization, and service catalog written in Python"
 HOMEPAGE="https://launchpad.net/keystone"
-SRC_URI="http://launchpad.net/${PN}/icehouse/${PV}/+download/${P}.tar.gz"
+#SRC_URI="http://launchpad.net/${PN}/icehouse/${PV}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/icehouse/2014.1.2/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -90,8 +91,6 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )"
 
 PATCHES=(
-	"${FILESDIR}/2014.1.1-CVE-2014-3476.patch"
-	"${FILESDIR}/2014.1.1-CVE-2014-3250.patch"
 )
 
 pkg_setup() {
