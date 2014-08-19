@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/brass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/brass/ChangeLog,v 1.5 2014/08/12 13:00:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/brass/ChangeLog,v 1.6 2014/08/19 11:40:17 armin76 Exp $
+
+  19 Aug 2014; Raúl Porcel <armin76@gentoo.org> brass-1.2.1.ebuild:
+  add ~alpha/~arm/~ia64/~sparc/~x86, bug #519170
 
   12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix gpg signing of manifest
