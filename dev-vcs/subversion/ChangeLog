@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.189 2014/08/17 16:23:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.191 2014/08/19 06:43:48 ago Exp $
+
+  19 Aug 2014; Agostino Sarubbo <ago@gentoo.org> subversion-1.7.18.ebuild,
+  subversion-1.8.10.ebuild:
+  Stable for x86, wrt bug #519202
+
+  19 Aug 2014; Agostino Sarubbo <ago@gentoo.org> subversion-1.7.18.ebuild,
+  subversion-1.8.10.ebuild:
+  Stable for amd64, wrt bug #519202
 
   17 Aug 2014; Jeroen Roovers <jer@gentoo.org> subversion-1.7.18.ebuild:
   Stable for HPPA (bug #519202).
