@@ -1,28 +1,27 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/cbatticon-1.2.0.ebuild,v 1.3 2013/05/14 09:42:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/cbatticon-1.4.0.ebuild,v 1.2 2014/08/19 12:53:14 jer Exp $
 
 EAPI=5
 
 inherit toolchain-funcs
 
-DESCRIPTION="A GTK+ battery icon which uses libudev to be lightweight and fast"
+DESCRIPTION="A lightweight and fast battery icon that sits in your system tray"
 HOMEPAGE="https://github.com/ColinJones/cbatticon"
 SRC_URI="https://github.com/ColinJones/cbatticon/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
 
-RDEPEND="x11-libs/gtk+:2
+RDEPEND="x11-libs/gtk+:3
 	x11-libs/libnotify"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_compile() {
 	tc-export CC
-	emake V=1 VERSION="${PF}"
+	emake WITH_GTK3=1 V=1 VERSION="${PF}"
 }
 
 src_install() {

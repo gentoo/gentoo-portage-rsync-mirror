@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=x11-libs/gtk+:3 x11-libs/libnotify virtual/pkgconfig
+DESCRIPTION=A lightweight and fast battery icon that sits in your system tray
+EAPI=5
+HOMEPAGE=https://github.com/ColinJones/cbatticon
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/gtk+:3 x11-libs/libnotify
+SLOT=0
+SRC_URI=https://github.com/ColinJones/cbatticon/archive/1.4.0.tar.gz -> cbatticon-1.4.0.tar.gz
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=a49f9ab0c2116b1e4d87952a701b5730
