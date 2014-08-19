@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.872 2014/08/19 06:43:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.873 2014/08/19 07:36:16 ago Exp $
+
+  19 Aug 2014; Agostino Sarubbo <ago@gentoo.org> php-5.3.29.ebuild:
+  Stable for ia64, wrt bug #519932
 
   19 Aug 2014; Agostino Sarubbo <ago@gentoo.org> php-5.3.29.ebuild:
   Stable for x86, wrt bug #519932
