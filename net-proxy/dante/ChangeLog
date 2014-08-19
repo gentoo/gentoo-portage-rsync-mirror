@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/dante
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.77 2014/07/13 09:58:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.78 2014/08/19 02:30:06 zerochaos Exp $
+
+*dante-1.4.0-r2 (19 Aug 2014)
+
+  19 Aug 2014; Rick Farina <zerochaos@gentoo.org> +dante-1.4.0-r2.ebuild:
+  fixing bug #497586 and setting defaults back to 1.4.0_pre settings. avoiding
+  load on arch teams for this tested fix
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> dante-1.4.0-r1.ebuild:
   Stable for ppc, wrt bug #506794
