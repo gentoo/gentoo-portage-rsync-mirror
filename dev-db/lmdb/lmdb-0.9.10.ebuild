@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/lmdb-0.9.10.ebuild,v 1.2 2014/01/18 13:47:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/lmdb-0.9.10.ebuild,v 1.3 2014/08/19 20:24:23 blueness Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="mirror://openldap/openldap-release/openldap-${OPENLDAP_VERSION}.tgz"
 
 LICENSE="OPENLDAP"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="static-libs"
 
 DEPEND=""

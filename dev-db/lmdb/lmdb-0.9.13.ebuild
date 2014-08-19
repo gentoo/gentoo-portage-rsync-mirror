@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/lmdb-0.9.13.ebuild,v 1.1 2014/07/19 14:12:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/lmdb-0.9.13.ebuild,v 1.2 2014/08/19 20:24:23 blueness Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="https://gitorious.org/mdb/mdb/archive/59d30a49c3ad403235ba30f65e074eddf
 
 LICENSE="OPENLDAP"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="static-libs"
 
 DEPEND=""
