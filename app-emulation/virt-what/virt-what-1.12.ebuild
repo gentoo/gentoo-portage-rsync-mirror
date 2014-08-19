@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/virt-what-1.12.ebuild,v 1.7 2014/08/12 23:17:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/virt-what-1.12.ebuild,v 1.8 2014/08/19 11:17:00 armin76 Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://people.redhat.com/~rjones/virt-what/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="dmi"
 
 DEPEND="dev-lang/perl"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-ISO8601
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.22 2014/07/04 14:52:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.23 2014/08/19 11:18:41 armin76 Exp $
+
+  19 Aug 2014; Raúl Porcel <armin76@gentoo.org>
+  DateTime-Format-ISO8601-0.80.0.ebuild:
+  Add ~sparc wrt #497068
 
   04 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   DateTime-Format-ISO8601-0.80.0.ebuild:

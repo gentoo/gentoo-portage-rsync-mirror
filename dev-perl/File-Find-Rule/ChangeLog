@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Find-Rule
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/ChangeLog,v 1.71 2014/07/04 14:52:23 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/ChangeLog,v 1.72 2014/08/19 11:12:52 armin76 Exp $
+
+  19 Aug 2014; Raúl Porcel <armin76@gentoo.org> File-Find-Rule-0.330.0.ebuild:
+  Add ~sparc wrt #497068
 
   04 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   File-Find-Rule-0.330.0.ebuild:

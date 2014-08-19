@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.103 2014/08/13 17:37:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.104 2014/08/19 11:18:06 armin76 Exp $
+
+  19 Aug 2014; Raúl Porcel <armin76@gentoo.org> facter-2.0.2.ebuild,
+  facter-2.1.0.ebuild:
+  Add ~sparc wrt #513322
 
   13 Aug 2014; Raúl Porcel <armin76@gentoo.org> facter-1.7.6.ebuild:
   sparc stable wrt #514476

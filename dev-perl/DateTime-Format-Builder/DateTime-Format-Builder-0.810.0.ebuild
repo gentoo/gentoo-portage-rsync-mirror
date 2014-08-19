@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/DateTime-Format-Builder-0.810.0.ebuild,v 1.7 2014/07/04 14:52:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/DateTime-Format-Builder-0.810.0.ebuild,v 1.8 2014/08/19 11:15:12 armin76 Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Create DateTime parser classes and objects"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 x86 ~ppc-aix ~x86-fbsd ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~sparc x86 ~ppc-aix ~x86-fbsd ~x86-solaris"
 IUSE="test"
 
 RDEPEND="dev-perl/DateTime

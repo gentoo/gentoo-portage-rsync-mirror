@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-2.1.0.ebuild,v 1.1 2014/06/30 03:42:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-2.1.0.ebuild,v 1.2 2014/08/19 11:18:06 armin76 Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="+dmi +pciutils +virt"
 #KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 
 CDEPEND="
 	app-emulation/virt-what
