@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.315 2014/07/23 16:53:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.317 2014/08/19 15:30:15 johu Exp $
+
+  19 Aug 2014; Johannes Huber <johu@gentoo.org> ksmserver-4.11.11-r1.ebuild:
+  Add missing eclass + use get_libdir instead of hardcoded path.
+
+*ksmserver-4.11.11-r1 (19 Aug 2014)
+
+  19 Aug 2014; Johannes Huber <johu@gentoo.org> +ksmserver-4.11.11-r1.ebuild,
+  -ksmserver-4.11.11.ebuild:
+  pax-mark kscreenlocker_greet by Anthony Basile <blueness@gentoo.org>, bug
+  #483236.
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org> -ksmserver-4.11.10.ebuild:
   Remove KDE Workspace 4.11.10
