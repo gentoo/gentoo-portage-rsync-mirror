@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.330 2014/08/14 09:07:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.331 2014/08/19 10:37:37 armin76 Exp $
+
+  19 Aug 2014; Raúl Porcel <armin76@gentoo.org> boost-1.52.0-r7.ebuild:
+  alpha/ia64/sparc stable wrt #518488
 
   14 Aug 2014; Sergey Popov <pinkbyte@gentoo.org> boost-1.52.0-r7.ebuild:
   Stable for x86, wrt bug #518488
