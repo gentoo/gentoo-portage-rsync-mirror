@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openctm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/ChangeLog,v 1.4 2014/08/13 20:17:26 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/ChangeLog,v 1.5 2014/08/18 23:11:10 amynka Exp $
+
+  18 Aug 2014; Amy Winston <amynka@gentoo.org> openctm-1.0.3.ebuild:
+  bad sed repaired
 
   13 Aug 2014; Amy Winston <amynka@gentoo.org> metadata.xml:
   3dprint herd added
