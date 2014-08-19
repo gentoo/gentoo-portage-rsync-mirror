@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9306 2014/08/19 08:39:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9309 2014/08/19 19:06:58 polynomial-c Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> package.mask:
+  Masked git-2.1.0 because it segfaults portage's sandbox during run of the
+  testsuite (bug #520270).
+
+  19 Aug 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Remove redundant entry.
+
+  19 Aug 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Remove mask for app-emacs/sawfish, package has been removed.
 
   19 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> package.mask:
   Mask >=dev-util/re2c-0.13.7.2 (bug #518904).

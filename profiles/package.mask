@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15972 2014/08/19 08:39:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15975 2014/08/19 19:06:58 polynomial-c Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Lars Wendler <polynomial-c@gentoo.org> (19 Aug 2014)
+# t7004-tag.sh testsuite causes segfault when run in portage's sandbox
+# (bug #520270).
+=dev-vcs/git-2.1.0
 
 # Sergei Trofimovich <slyfox@gentoo.org> (19 Aug 2014)
 # Handling complex conditions broke php's lexer (bug #518904).
@@ -221,17 +226,10 @@ games-emulation/handy
 games-fps/rtcw
 games-fps/unreal
 games-server/mtavc
-games-sports/racer-bin
 games-strategy/heroes3
 games-strategy/heroes3-demo
 games-strategy/smac
 sys-block/afacli
-
-# Ulrich Müller <ulm@gentoo.org> (13 Jul 2014)
-# Development of stand-alone package stopped in 2004.
-# sawfish.el is now provided by x11-wm/sawfish with USE=emacs.
-# Masked for removal in 30 days, bug #493114.
-app-emacs/sawfish
 
 # Michael Weber <xmw@gentoo.org> (10 Jul 2014)
 # Masked for removal in 30 days.
