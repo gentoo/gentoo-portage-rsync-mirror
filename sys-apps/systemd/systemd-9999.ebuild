@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.134 2014/08/17 23:12:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.135 2014/08/19 21:15:26 williamh Exp $
 
 EAPI=5
 
@@ -503,6 +503,12 @@ pkg_postinst() {
 		elog "To get additional features, a number of optional runtime dependencies may"
 		elog "be installed:"
 		elog "- sys-apps/systemd-ui: for GTK+ systemadm UI and gnome-ask-password-agent"
+	fi
+
+	if has_version sys-apps/openrc &&
+		! has_version sys-fs/udev-init-scripts; then
+		elog "If you plan to boot using OpenRC and udev or eudev, you"
+		elog "need to install the udev-init-scripts package."
 	fi
 }
 

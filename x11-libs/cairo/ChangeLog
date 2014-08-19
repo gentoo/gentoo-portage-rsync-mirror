@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.383 2014/07/26 08:57:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.384 2014/08/19 21:01:35 mattst88 Exp $
+
+  19 Aug 2014; Matt Turner <mattst88@gentoo.org> cairo-9999.ebuild:
+  Drop LTO, bugs 517258 and 517884.
 
   26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> cairo-1.10.2-r3.ebuild,
   cairo-1.12.14-r4.ebuild, cairo-1.12.16-r2.ebuild, cairo-1.12.16-r3.ebuild,
