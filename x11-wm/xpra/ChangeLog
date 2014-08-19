@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.110 2014/07/27 11:31:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.111 2014/08/19 17:14:52 xmw Exp $
+
+*xpra-0.13.9 (19 Aug 2014)
+
+  19 Aug 2014; Michael Weber <xmw@gentoo.org> +xpra-0.13.9.ebuild,
+  -xpra-0.13.3.ebuild:
+  Version bump
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> xpra-0.11.6.ebuild:
   x86 stable wrt bug #512864
