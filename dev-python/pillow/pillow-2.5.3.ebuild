@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.5.3.ebuild,v 1.1 2014/08/19 07:20:20 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.5.3.ebuild,v 1.2 2014/08/19 17:00:06 djc Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
@@ -99,7 +99,7 @@ python_install_all() {
 
 	if use scanner; then
 		docinto sane
-		dodoc Sane/{CHANGES,README,sanedoc.txt}
+		dodoc Sane/{CHANGES,README.rst,sanedoc.txt}
 	fi
 
 	if use examples && use scanner; then

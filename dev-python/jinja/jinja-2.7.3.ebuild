@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.7.3.ebuild,v 1.10 2014/08/09 10:48:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.7.3.ebuild,v 1.11 2014/08/19 16:45:18 djc Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
 
 inherit eutils distutils-r1
 
@@ -42,6 +42,9 @@ wrap_opts() {
 
 python_compile() {
 	wrap_opts distutils-r1_python_compile
+	if [[ ${EPYTHON} == python3.2 ]]; then
+		2to3 --no-diffs -n -w -f unicode "${BUILD_DIR}/lib" || die
+	fi
 }
 
 python_compile_all() {
