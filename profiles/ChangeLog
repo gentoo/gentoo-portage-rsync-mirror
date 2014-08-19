@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9305 2014/08/17 07:20:43 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9306 2014/08/19 08:39:24 slyfox Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> package.mask:
+  Mask >=dev-util/re2c-0.13.7.2 (bug #518904).
 
   17 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org> package.mask:
   Mask mpv-0.5 series too

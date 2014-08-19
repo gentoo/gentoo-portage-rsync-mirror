@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.80.5.ebuild,v 1.1 2014/08/01 02:31:42 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.80.5.ebuild,v 1.2 2014/08/19 08:57:46 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -17,7 +17,7 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-inherit autotools eutils multilib python-any-r1 udev ${scm_eclass}
+inherit autotools eutils multilib python-any-r1 udev readme.gentoo ${scm_eclass}
 
 DESCRIPTION="Ceph distributed filesystem"
 HOMEPAGE="http://ceph.com/"
@@ -133,19 +133,6 @@ src_install() {
 	#install udev rules
 	udev_dorules udev/50-rbd.rules
 	udev_dorules udev/95-ceph-osd.rules
-}
 
-pkg_postinst() {
-	elog "We suggest to install following packages"
-	elog " sys-block/parted		to manage disk partions"
-	elog " sys-fs/btrfs-progs	to use btrfs filesytem"
-	elog " sys-fs/cryptsetup	to use encrypted devices with dm-crypt"
-	elog ""
-	elog "To have many daemons of one type, create your own script:"
-	elog ""
-	elog "cd /etc/init.d"
-	elog "for dmn in mds.a mon.a osd.0 osd.1 osd.2; do"
-	elog "  ln -s ceph ceph-\${dmn};"
-	elog "  rc-update add ceph-\${dmn} default;"
-	elog "done"
+	readme.gentoo_src_install
 }
