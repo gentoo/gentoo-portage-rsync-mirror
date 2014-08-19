@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1119 2014/08/17 19:05:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1120 2014/08/19 17:38:11 phajdan.jr Exp $
+
+*chromium-38.0.2125.0 (19 Aug 2014)
+
+  19 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-36.0.1985.125.ebuild, -chromium-38.0.2114.2.ebuild,
+  +chromium-38.0.2125.0.ebuild, +files/chromium-system-jinja-r6.patch:
+  Dev channel bump. Use system jinja, ply, markupsafe. Remove old.
 
   17 Aug 2014; Agostino Sarubbo <ago@gentoo.org> chromium-36.0.1985.143.ebuild:
   Stable for x86, wrt bug #519788
