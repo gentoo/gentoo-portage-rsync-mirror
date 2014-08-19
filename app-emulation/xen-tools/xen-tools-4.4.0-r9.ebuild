@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r8.ebuild,v 1.2 2014/07/30 19:20:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r9.ebuild,v 1.1 2014/08/19 14:16:01 dlan Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ if [[ $PV == *9999 ]]; then
 	live_eclass="mercurial"
 else
 	KEYWORDS="~amd64 ~arm -x86"
-	UPSTREAM_VER=4
+	UPSTREAM_VER=5
 	GENTOO_VER=
 	SEABIOS_VER=1.7.3.1
 
