@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/Test-Exception-0.320.0.ebuild,v 1.11 2014/03/13 11:34:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/Test-Exception-0.320.0-r1.ebuild,v 1.1 2014/08/20 17:55:22 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=ADIE
 MODULE_VERSION=0.32

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.17.6.ebuild,v 1.2 2014/07/06 12:53:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.18.0.ebuild,v 1.1 2014/08/20 17:35:12 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )

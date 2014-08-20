@@ -1,6 +1,17 @@
 # ChangeLog for games-engines/renpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.44 2014/07/30 18:06:23 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.46 2014/08/20 17:36:28 hasufell Exp $
+
+  20 Aug 2014; Julian Ospald <hasufell@gentoo.org> -renpy-6.17.4.ebuild,
+  -renpy-6.17.6.ebuild, -files/renpy-6.17.4-multiple-abi.patch,
+  -files/renpy-6.17.6-multiple-abi.patch:
+  rm old
+
+*renpy-6.18.0 (20 Aug 2014)
+
+  20 Aug 2014; Julian Ospald <hasufell@gentoo.org>
+  +files/renpy-6.18.0-multiple-abi.patch, +renpy-6.18.0.ebuild:
+  version bump
 
   30 Jul 2014; Chema Alonso <nimiux@gentoo.org> renpy-6.17.7.ebuild:
   Stable for amd64 wrt bug #518182

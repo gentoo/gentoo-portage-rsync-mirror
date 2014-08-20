@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/hiawatha
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/ChangeLog,v 1.7 2014/07/12 00:19:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/ChangeLog,v 1.8 2014/08/20 17:49:45 hasufell Exp $
+
+*hiawatha-9.7 (20 Aug 2014)
+
+  20 Aug 2014; Julian Ospald <hasufell@gentoo.org> +hiawatha-9.7.ebuild:
+  version bump
 
   12 Jul 2014; Julian Ospald <hasufell@gentoo.org> hiawatha-9.6.ebuild,
   hiawatha-9.6-r1.ebuild:

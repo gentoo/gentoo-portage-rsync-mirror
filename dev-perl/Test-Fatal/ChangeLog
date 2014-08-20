@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Test-Fatal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.32 2014/02/01 23:53:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.33 2014/08/20 18:00:47 axs Exp $
+
+*Test-Fatal-0.10.0-r1 (20 Aug 2014)
+
+  20 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Test-Fatal-0.10.0-r1.ebuild, -Test-Fatal-0.10.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Test-Fatal-0.10.0.ebuild:
   Add arm64/m68k love.
