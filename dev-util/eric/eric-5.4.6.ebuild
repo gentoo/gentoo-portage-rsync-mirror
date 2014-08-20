@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-5.4.0_rc1.ebuild,v 1.2 2014/08/03 15:55:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-5.4.6.ebuild,v 1.1 2014/08/20 18:38:29 pesa Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ unset L
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="spell"
+IUSE=""
 
 DEPEND="
 	${PYTHON_DEPS}
@@ -39,15 +39,12 @@ RDEPEND="${DEPEND}
 	>=dev-python/coverage-3.2[${PYTHON_USEDEP}]
 	>=dev-python/pygments-1.6[${PYTHON_USEDEP}]
 "
-PDEPEND="
-	spell? ( dev-python/pyenchant[${PYTHON_USEDEP}] )
-"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	# Avoid file collisions between different slots of Eric.
+	# Avoid file collisions between different slots of Eric
 	sed -i -e 's/^Icon=eric$/&5/' eric/eric5.desktop || die
 	sed -i -e 's/\([^[:alnum:]]\)eric\.png\([^[:alnum:]]\)/\1eric5.png\2/' \
 		$(grep -lr 'eric\.png' .) || die
@@ -56,14 +53,15 @@ src_prepare() {
 	rm -f eric/APIs/Python/zope-*.api
 	rm -f eric/APIs/Ruby/Ruby-*.api
 
-	# Delete internal copies of dev-python/chardet,
-	# dev-python/coverage and dev-python/pygments.
+	# Delete internal copies of dev-python/chardet and dev-python/pygments
 	rm -fr eric/ThirdParty/{CharDet,Pygments}
+
+	# Delete internal copy of dev-python/coverage
 	rm -fr eric/DebugClients/Python{,3}/coverage
 	sed -i -e 's/from DebugClients\.Python3\?\.coverage/from coverage/' \
 		$(grep -lr 'from DebugClients\.Python3\?\.coverage' .) || die
 
-	# Fix desktop files (bug 458092).
+	# Fix desktop files (bug 458092)
 	sed -i -e '/^Categories=/s:Python:X-&:' eric/eric5{,_webbrowser}.desktop || die
 }
 
@@ -85,10 +83,11 @@ src_install() {
 pkg_postinst() {
 	elog "The following packages will give Eric extended functionality:"
 	elog "  dev-python/cx_Freeze"
+	elog "  dev-python/pyenchant"
 	elog "  dev-python/pylint"
 	elog "  dev-python/pysvn"
 	elog "  dev-vcs/mercurial"
 	elog
 	elog "This version has a plugin interface with plugin-autofetch from"
-	elog "the application itself. You may want to check those as well."
+	elog "the application itself. You may want to check that as well."
 }

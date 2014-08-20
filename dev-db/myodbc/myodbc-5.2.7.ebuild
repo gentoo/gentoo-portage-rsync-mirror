@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-5.2.7.ebuild,v 1.1 2014/07/29 03:35:31 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-5.2.7.ebuild,v 1.2 2014/08/20 18:52:50 grknight Exp $
 
 EAPI=5
 inherit cmake-utils eutils flag-o-matic versionator
@@ -38,7 +38,9 @@ src_prepare() {
 	echo "TARGET_LINK_LIBRARIES(myodbc-installer odbc)" >> "${S}/installer/CMakeLists.txt"
 
 	# Patch document path so it doesn't install files to /usr
-	epatch "${FILESDIR}/cmake-doc-path.patch"
+	epatch "${FILESDIR}/cmake-doc-path.patch" \
+		"${FILESDIR}/${PV}-cxxlinkage.patch" \
+		"${FILESDIR}/${PV}-mariadb-dynamic-array.patch"
 }
 
 src_configure() {
@@ -49,6 +51,7 @@ src_configure() {
 		-DWITH_UNIXODBC=1
 		-DRPM_BUILD=1
 		-DMYSQLCLIENT_LIB_NAME="libmysqlclient_r.so"
+		-DWITH_DOCUMENTATION_INSTALL_PATH=/usr/share/doc/${P}
 	)
 
 	cmake-utils_src_configure

@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.106 2014/08/14 16:50:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.107 2014/08/20 19:00:42 johu Exp $
+
+  20 Aug 2014; Johannes Huber <johu@gentoo.org> unetbootin-608.ebuild:
+  amd64 stable, bug #511158
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> unetbootin-608.ebuild:
   x86 stable wrt bug #511158

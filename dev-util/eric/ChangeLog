@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.209 2014/08/03 15:55:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.210 2014/08/20 18:38:29 pesa Exp $
+
+*eric-5.4.6 (20 Aug 2014)
+*eric-4.5.24 (20 Aug 2014)
+
+  20 Aug 2014; Davide Pesavento <pesa@gentoo.org> +eric-4.5.24.ebuild,
+  +eric-5.4.6.ebuild, -eric-4.5.17.ebuild, -eric-5.3.8.ebuild,
+  -eric-5.4.0_rc1.ebuild:
+  Version bumps.
 
   03 Aug 2014; Michał Górny <mgorny@gentoo.org> eric-5.4.0_rc1.ebuild:
   Enable Python 3.3 & 3.4.
