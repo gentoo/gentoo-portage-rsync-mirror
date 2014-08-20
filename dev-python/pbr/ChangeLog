@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pbr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.19 2014/07/20 11:04:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.20 2014/08/20 20:37:21 blueness Exp $
+
+  20 Aug 2014; Anthony G. Basile <blueness@gentoo.org> pbr-0.5.23-r2.ebuild,
+  pbr-0.5.23.ebuild, pbr-0.7.0.ebuild, pbr-0.8.0.ebuild, pbr-0.8.2.ebuild:
+  Keyword ~ppc ~ppc64, bug #508282
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> pbr-0.8.0.ebuild:
   Keyworded on alpha, bug #508282
