@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/Sub-Name-0.50.0.ebuild,v 1.14 2014/02/23 14:53:17 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/Sub-Name-0.50.0-r1.ebuild,v 1.1 2014/08/20 18:04:27 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=FLORA
 MODULE_VERSION=0.05

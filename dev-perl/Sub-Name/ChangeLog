@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Sub-Name
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.27 2014/02/23 14:53:17 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.28 2014/08/20 18:04:27 axs Exp $
+
+*Sub-Name-0.50.0-r1 (20 Aug 2014)
+
+  20 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Sub-Name-0.50.0-r1.ebuild, -Sub-Name-0.50.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   23 Feb 2014; Naohiro Aota <naota@gentoo.org> Sub-Name-0.50.0.ebuild:
   Add ~x86-fbsd.

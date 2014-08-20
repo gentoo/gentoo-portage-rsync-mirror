@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor/Class-Accessor-0.340.0.ebuild,v 1.9 2012/09/01 11:15:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor/Class-Accessor-0.340.0-r1.ebuild,v 1.1 2014/08/20 18:05:01 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=KASEI
 MODULE_VERSION=0.34
