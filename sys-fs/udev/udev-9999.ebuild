@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.316 2014/08/02 00:29:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.317 2014/08/20 08:29:30 ssuominen Exp $
 
 EAPI=5
 
@@ -170,6 +170,7 @@ multilib_src_configure() {
 		--disable-seccomp
 		$(multilib_native_use_enable selinux)
 		--disable-xz
+		--disable-lz4
 		--disable-pam
 		$(multilib_native_use_enable acl)
 		--disable-gcrypt
@@ -178,6 +179,8 @@ multilib_src_configure() {
 		--disable-qrencode
 		--disable-microhttpd
 		--disable-gnutls
+		--disable-libcurl
+		--disable-libidn
 		--disable-readahead
 		--disable-quotacheck
 		--disable-logind

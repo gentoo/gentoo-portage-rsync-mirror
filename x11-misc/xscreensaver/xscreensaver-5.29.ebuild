@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.29.ebuild,v 1.7 2014/08/13 09:35:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.29.ebuild,v 1.9 2014/08/20 08:30:54 jer Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib pam
@@ -87,8 +87,6 @@ src_configure() {
 
 	unset BC_ENV_ARGS #24568
 	export RPM_PACKAGE_VERSION=no #368025
-
-	append-libs -lpthread
 
 	econf \
 		$(use_with jpeg) \

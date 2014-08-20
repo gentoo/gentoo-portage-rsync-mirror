@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/pktstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.27 2014/07/16 16:37:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.29 2014/08/20 08:07:57 jer Exp $
+
+  20 Aug 2014; Jeroen Roovers <jer@gentoo.org> pktstat-1.8.5-r1.ebuild,
+  files/pktstat-1.8.5-smtp_line.patch:
+  Just remove the offending lines instead.
+
+*pktstat-1.8.5-r1 (20 Aug 2014)
+
+  20 Aug 2014; Jeroen Roovers <jer@gentoo.org> +pktstat-1.8.5-r1.ebuild,
+  +files/pktstat-1.8.5-smtp_line.patch:
+  Remove debug function (bug #458898).
 
   16 Jul 2014; Jeroen Roovers <jer@gentoo.org> pktstat-1.8.5.ebuild,
   +files/pktstat-1.8.5-tinfo.patch:

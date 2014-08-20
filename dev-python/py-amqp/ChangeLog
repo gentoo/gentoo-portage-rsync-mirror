@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py-amqp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/ChangeLog,v 1.23 2014/07/06 12:45:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/ChangeLog,v 1.24 2014/08/20 08:08:22 idella4 Exp $
+
+*py-amqp-1.4.6 (20 Aug 2014)
+
+  20 Aug 2014; Ian Delaney <idella4@gentoo.org> +py-amqp-1.4.6.ebuild:
+  bump; drop py2.6
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> py-amqp-1.4.5.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
