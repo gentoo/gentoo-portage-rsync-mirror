@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-4.2.0.ebuild,v 1.1 2014/08/15 18:04:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-4.2.0.ebuild,v 1.2 2014/08/20 14:43:48 johu Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner upnp videoslideshow vkontakte"
+IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki panorama redeyes scanner upnp videoslideshow vkontakte"
 
 COMMONDEPEND="
 	$(add_kdebase_dep libkipi)
@@ -39,7 +39,7 @@ COMMONDEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/qjson
-	gpssync?	( media-libs/libkgeomap )
+	gpssync?	( >=media-libs/libkgeomap-4.2.0 )
 	media-libs/libpng:0=
 	media-libs/tiff
 	virtual/jpeg
@@ -72,7 +72,6 @@ RDEPEND="${COMMONDEPEND}
 	cdr? 		( app-cdr/k3b )
 	expoblending? 	( media-gfx/hugin )
 	imagemagick? 	( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )
-	mjpeg? 		( media-video/mjpegtools )
 	panorama?	(
 			  media-gfx/enblend
 			  >=media-gfx/hugin-2011.0.0
