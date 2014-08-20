@@ -1,13 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-608.ebuild,v 1.3 2014/08/20 19:00:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-608.ebuild,v 1.4 2014/08/20 22:44:26 jer Exp $
 
 EAPI=5
 
 inherit eutils qt4-r2
 
-DESCRIPTION="Universal Netboot Installer creates Live USB systems for various OS
-distributions."
+DESCRIPTION="Universal Netboot Installer creates Live USB systems for various OS distributions"
 HOMEPAGE="http://unetbootin.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-source-${PV}.tar.gz"
 
