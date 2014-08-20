@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.226 2014/04/22 13:45:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.227 2014/08/20 07:11:43 ssuominen Exp $
+
+*xfwm4-4.11.2 (20 Aug 2014)
+
+  20 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> +xfwm4-4.11.2.ebuild:
+  Version bump.
 
   22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
   -files/xfwm4-4.10.0-gtk34.patch, -xfwm4-4.10.0-r1.ebuild:

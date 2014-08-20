@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst postrm preinst prepare setup
+DEPEND=>=dev-libs/glib-2.20 >=x11-libs/gtk+-2.24:2 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/libXrandr x11-libs/libXrender x11-libs/pango >=x11-libs/libwnck-2.30:1 >=xfce-base/libxfce4util-4.10 >=xfce-base/libxfce4ui-4.10 >=xfce-base/xfconf-4.10 dri? ( >=x11-libs/libdrm-2.4 ) startup-notification? ( x11-libs/startup-notification ) xcomposite? ( x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes ) dev-util/intltool sys-devel/gettext virtual/pkgconfig >=sys-apps/sed-4
+DESCRIPTION=Window manager for the Xfce desktop environment
+EAPI=5
+HOMEPAGE=http://www.xfce.org/projects/
+IUSE=debug dri startup-notification +xcomposite
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/glib-2.20 >=x11-libs/gtk+-2.24:2 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/libXrandr x11-libs/libXrender x11-libs/pango >=x11-libs/libwnck-2.30:1 >=xfce-base/libxfce4util-4.10 >=xfce-base/libxfce4ui-4.10 >=xfce-base/xfconf-4.10 dri? ( >=x11-libs/libdrm-2.4 ) startup-notification? ( x11-libs/startup-notification ) xcomposite? ( x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes )
+SLOT=0
+SRC_URI=mirror://xfce/src/xfce/xfwm4/4.11/xfwm4-4.11.2.tar.bz2
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	xfconf	20671cc91311ca7e3446047c1175cf16
+_md5_=985cd25b1ca953bf0d3f522a1282e04e
