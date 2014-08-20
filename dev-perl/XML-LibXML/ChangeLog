@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.157 2014/03/16 12:53:19 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.158 2014/08/20 19:47:33 axs Exp $
+
+*XML-LibXML-2.1.400-r1 (20 Aug 2014)
+
+  20 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +XML-LibXML-2.1.400-r1.ebuild, -XML-LibXML-2.1.400.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   16 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> XML-LibXML-2.1.400.ebuild:
   alpha stable wrt bug #495512
