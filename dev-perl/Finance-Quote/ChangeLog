@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Finance-Quote
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.74 2014/06/12 18:21:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.75 2014/08/20 17:30:14 ssuominen Exp $
+
+*Finance-Quote-1.350.0 (20 Aug 2014)
+
+  20 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +Finance-Quote-1.350.0.ebuild:
+  Version bump and complete dependencies wrt #520330 by Harold Naparst
 
   12 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> Finance-Quote-1.290.0.ebuild:
   Add missing test dependency wrt bug #509504

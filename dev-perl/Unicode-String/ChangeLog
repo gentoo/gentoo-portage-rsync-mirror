@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Unicode-String
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/ChangeLog,v 1.47 2012/12/05 11:35:28 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/ChangeLog,v 1.48 2014/08/20 17:28:52 axs Exp $
+
+*Unicode-String-2.90.0-r1 (20 Aug 2014)
+
+  20 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Unicode-String-2.90.0-r1.ebuild, -Unicode-String-2.90.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   05 Dec 2012; Fabian Groffen <grobian@gentoo.org> Unicode-String-2.90.0.ebuild:
   Marked ~x86-linux, bug #444950

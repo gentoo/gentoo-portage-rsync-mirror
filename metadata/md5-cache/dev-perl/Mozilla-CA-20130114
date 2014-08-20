@@ -4,10 +4,10 @@ DESCRIPTION=Mozilla's CA cert bundle in PEM format
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Mozilla-CA/
 IUSE=test
-KEYWORDS=~amd64
+KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~x86
 LICENSE=MPL-1.1
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/A/AB/ABH/Mozilla-CA-20130114.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=8eb13c1a56e2c2503e70e6fa532d58bf
+_md5_=a99b219579db06f9b29ade12f6c27a0b

@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/MP3-Info
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.73 2014/05/07 08:02:03 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.74 2014/08/20 17:27:48 axs Exp $
+
+*MP3-Info-1.240.0-r1 (20 Aug 2014)
+
+  20 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +MP3-Info-1.240.0-r1.ebuild, -MP3-Info-1.240.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> MP3-Info-1.240.0.ebuild:
   Add ~arm keyword

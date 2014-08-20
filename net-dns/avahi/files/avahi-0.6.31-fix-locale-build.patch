@@ -1,0 +1,22 @@
+avahi-gobject fails to build under et_EE and possibly other locales.
+
+The regex for a sed in avahi-gobject/Makefile fails under various locales.
+Forcing LANG=C fixes the issue.
+
+Patch-by: Rafał Mużyło <galtgendo@o2.pl>
+
+X-Gentoo-Bug: 501664
+X-Gentoo-Bug-URL: https://bugs.gentoo.org/501664
+
+diff -Naur avahi-0.6.31.orig/avahi-gobject/Makefile.in avahi-0.6.31/avahi-gobject/Makefile.in
+--- avahi-0.6.31.orig/avahi-gobject/Makefile.in	2014-08-20 13:10:02.914432590 -0400
++++ avahi-0.6.31/avahi-gobject/Makefile.in	2014-08-20 13:12:09.024436983 -0400
+@@ -992,7 +992,7 @@
+ 
+ @HAVE_DBUS_TRUE@@HAVE_GOBJECT_TRUE@signals-marshal.list: $(CORE_SOURCES) Makefile.am
+ @HAVE_DBUS_TRUE@@HAVE_GOBJECT_TRUE@	$(AM_V_GEN)( cd $(srcdir) && \
+-@HAVE_DBUS_TRUE@@HAVE_GOBJECT_TRUE@	sed -n -e 's/.*_ga_signals_marshal_\([A-Z]*__[A-Z_]*\).*/\1/p' \
++@HAVE_DBUS_TRUE@@HAVE_GOBJECT_TRUE@	LANG=C sed -n -e 's/.*_ga_signals_marshal_\([A-Z]*__[A-Z_]*\).*/\1/p' \
+ @HAVE_DBUS_TRUE@@HAVE_GOBJECT_TRUE@		$(CORE_SOURCES) ) \
+ @HAVE_DBUS_TRUE@@HAVE_GOBJECT_TRUE@		| sed -e 's/__/:/' -e 'y/_/,/' | sort -u > $@.tmp && \
+ @HAVE_DBUS_TRUE@@HAVE_GOBJECT_TRUE@	if cmp -s $@.tmp $@; then \
