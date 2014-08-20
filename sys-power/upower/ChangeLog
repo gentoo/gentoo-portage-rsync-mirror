@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.159 2014/06/20 06:25:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.160 2014/08/20 06:50:29 ssuominen Exp $
+
+*upower-0.99.1 (20 Aug 2014)
+
+  20 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> +upower-0.99.1.ebuild:
+  Version bump; raise SLOT from 0/2 to 0/3 based on increased SONAME of
+  libupower-glib.so
 
 *upower-0.9.23-r3 (20 Jun 2014)
 
