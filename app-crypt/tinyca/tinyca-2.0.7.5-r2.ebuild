@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-2.0.7.5.ebuild,v 1.3 2009/11/20 13:15:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-2.0.7.5-r2.ebuild,v 1.1 2014/08/20 03:41:09 alonbl Exp $
+
+EAPI=5
 
 inherit eutils
 
@@ -11,7 +13,7 @@ SRC_URI="http://tinyca.sm-zone.net/${MY_P}.tar.bz2"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 LANGS="en de cs es sv"
 
@@ -28,17 +30,17 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.0.7.3-compositefix.patch"
+	epatch "${FILESDIR}/${P}-openssl-1.patch"
+	epatch "${FILESDIR}/${P}-perl-5.18.patch"
 	sed -i -e 's:./lib:/usr/share/tinyca/lib:g' \
 		-e 's:./templates:/usr/share/tinyca/templates:g' \
 		-e 's:./locale:/usr/share/locale:g' "${S}/tinyca2"
 }
 
 src_compile() {
-	make -C po
+	emake -C po
 }
 
 locale_install() {

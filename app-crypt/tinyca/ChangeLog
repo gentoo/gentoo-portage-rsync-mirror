@@ -1,6 +1,16 @@
 # ChangeLog for app-crypt/tinyca
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.22 2013/07/04 12:18:41 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.24 2014/08/20 03:41:09 alonbl Exp $
+
+*tinyca-2.0.7.5-r2 (20 Aug 2014)
+
+  20 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/tinyca-2.0.7.5-perl-5.18.patch, +tinyca-2.0.7.5-r2.ebuild:
+  Fix perl-5.18 compatibility, bug#506374, thanks to Kevin Bryan
+
+  20 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> -tinyca-2.0.7.3.ebuild,
+  -tinyca-2.0.7.5.ebuild:
+  Cleanup
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> tinyca-2.0.7.5-r1.ebuild:
   Stable for x86, wrt bug #470300
