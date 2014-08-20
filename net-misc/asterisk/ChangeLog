@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.490 2014/07/14 20:13:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.491 2014/08/20 12:26:20 chainsaw Exp $
+
+*asterisk-12.5.0 (20 Aug 2014)
+*asterisk-11.12.0 (20 Aug 2014)
+
+  20 Aug 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.12.0.ebuild,
+  +asterisk-12.5.0.ebuild:
+  Squelching the FORTIFY_SOURCE warnings, as we have this in our GCC specs the
+  build system should not try to apply it again on the command line. At long
+  last handles large SIP-over-SSL packets correctly. LUA vs convential dial
+  plan context clashes found & fixed.
 
 *asterisk-12.4.0 (14 Jul 2014)
 *asterisk-11.11.0 (14 Jul 2014)

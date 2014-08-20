@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.197 2014/08/13 02:28:43 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.198 2014/08/20 12:16:45 armin76 Exp $
+
+  20 Aug 2014; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  polarssl is now stable, remove p.use.mask for net-misc/openvpn polarssl
 
   13 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org> package.use.mask:
   Mask gg11 flag due to missing keywords (bug 519772)

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.162 2014/08/13 02:28:43 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.163 2014/08/20 12:16:45 armin76 Exp $
 
 # Maciej Mrozowski <reavertm@gentoo.org> (13 Aug 2014)
 # Missing keywords on dev-libs/protobuf-c (bug 519772)
@@ -72,10 +72,6 @@ media-libs/phonon zeitgeist
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 May 2013)
 # depends on sys-devel/llvm[video_cards_radeon]
 media-libs/mesa r600-llvm-compiler
-
-# Dirkjan Ochtman <djc@gentoo.org> (3 May 2013)
-# depends on net-libs/polarssl
->=net-misc/openvpn-2.3.1 polarssl
 
 # Gilles Dartiguelongue <eva@gentoo.org> (1 Apr 2013)
 # missing keyword on media-libs/tremor, bug #453200

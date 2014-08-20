@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gentoo-systemd-integration
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.29 2014/07/20 08:22:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.30 2014/08/20 12:24:38 armin76 Exp $
+
+  20 Aug 2014; Raúl Porcel <armin76@gentoo.org>
+  gentoo-systemd-integration-4.ebuild:
+  ia64/sparc stable wrt #506824
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   gentoo-systemd-integration-4.ebuild:

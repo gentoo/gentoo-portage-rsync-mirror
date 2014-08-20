@@ -1,0 +1,12 @@
+# ChangeLog for xfce-extra/xfdashboard
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfdashboard/ChangeLog,v 1.1 2014/08/20 12:24:12 ssuominen Exp $
+
+*xfdashboard-0.3.0 (20 Aug 2014)
+*xfdashboard-0.2.2 (20 Aug 2014)
+
+  20 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +xfdashboard-0.2.2.ebuild, +xfdashboard-0.3.0.ebuild:
+  Initial commit (as per upstream, 0.2.x is stable series, and 0.3.x is
+  development series)
+
