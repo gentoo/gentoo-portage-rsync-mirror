@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.40 2014/08/07 23:48:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.41 2014/08/20 11:26:50 armin76 Exp $
+
+  20 Aug 2014; Raúl Porcel <armin76@gentoo.org> libindicate-12.10.1.ebuild:
+  Add ~sparc wrt #468984
 
   07 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
   libindicate-12.10.1.ebuild:
