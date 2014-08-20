@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.135 2014/08/12 15:25:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.136 2014/08/20 11:34:06 armin76 Exp $
+
+  20 Aug 2014; Raúl Porcel <armin76@gentoo.org> roundcube-1.0.2.ebuild:
+  arm stable and add ~sparc wrt #507512
 
   12 Aug 2014; Agostino Sarubbo <ago@gentoo.org> roundcube-1.0.2.ebuild:
   Stable for x86, wrt bug #507512

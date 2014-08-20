@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gentoo-functions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.22 2014/08/19 07:43:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.23 2014/08/20 11:38:07 armin76 Exp $
+
+  20 Aug 2014; Raúl Porcel <armin76@gentoo.org> gentoo-functions-0.7.ebuild:
+  alpha/arm64/sparc/x86 stable wrt #519734
 
   19 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gentoo-functions-0.7.ebuild:
   Stable for ia64, wrt bug #519734

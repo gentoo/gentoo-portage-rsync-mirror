@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.32 2014/08/10 20:48:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.33 2014/08/20 11:34:55 pinkbyte Exp $
+
+*vde-2.3.2-r1 (20 Aug 2014)
+
+  20 Aug 2014; Sergey Popov <pinkbyte@gentoo.org> +vde-2.3.2-r1.ebuild:
+  Revision bump: add support for user patches, fix DESCRIPTION, migrate to
+  python-single-r1 eclass, wrt bug #514714
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> vde-2.2.2.ebuild,
   vde-2.3.1.ebuild, vde-2.3.2.ebuild:
