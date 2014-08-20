@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.710 2014/08/16 23:52:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.711 2014/08/20 14:17:23 ssuominen Exp $
+
+  20 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.stable.mask:
+  Mask USE="static" for sys-fs/cryptsetup and sys-fs/lvm2 wrt bugs #496612 and
+  #516224 in preparation of stabilization wrt bug #493892
 
   16 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> package.use.stable.mask:
   Mask dev-perl/PDL pdl2 pgplot plplot.

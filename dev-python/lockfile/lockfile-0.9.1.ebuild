@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.9.1.ebuild,v 1.6 2012/06/09 08:17:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.9.1.ebuild,v 1.7 2014/08/20 14:05:28 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -15,7 +15,7 @@ SRC_URI="http://pylockfile.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 arm ppc x86"
+KEYWORDS="amd64 arm ppc ~sparc x86"
 IUSE="doc"
 
 DEPEND="doc? ( dev-python/sphinx )"

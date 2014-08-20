@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.9.1-r1.ebuild,v 1.9 2014/07/22 04:19:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.9.1-r1.ebuild,v 1.10 2014/08/20 14:05:28 armin76 Exp $
 
 EAPI=5
 # py2.5 dropped; Test file reveals py2.5 can't support a core file
@@ -14,7 +14,7 @@ SRC_URI="http://pylockfile.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 arm ppc x86"
+KEYWORDS="amd64 arm ppc ~sparc x86"
 IUSE="doc test"
 
 DEPEND="doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
