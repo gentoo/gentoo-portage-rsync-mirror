@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9309 2014/08/19 19:06:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9310 2014/08/20 08:46:40 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Aug 2014; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove mask now that virtual/ruby-test-unit has been removed.
 
   19 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> package.mask:
   Masked git-2.1.0 because it segfaults portage's sandbox during run of the
