@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openctm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/ChangeLog,v 1.5 2014/08/18 23:11:10 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/ChangeLog,v 1.6 2014/08/20 10:58:35 amynka Exp $
+
+  20 Aug 2014; Amy Winston <amynka@gentoo.org> +files/openctm-no-strip.patch,
+  openctm-1.0.3.ebuild:
+  Sed madness removed and integrated to no-strip.patch
 
   18 Aug 2014; Amy Winston <amynka@gentoo.org> openctm-1.0.3.ebuild:
   bad sed repaired

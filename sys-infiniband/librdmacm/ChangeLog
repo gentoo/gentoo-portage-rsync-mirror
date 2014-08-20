@@ -1,6 +1,12 @@
 # ChangeLog for sys-infiniband/librdmacm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/librdmacm/ChangeLog,v 1.6 2014/04/16 08:22:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/librdmacm/ChangeLog,v 1.8 2014/08/20 10:44:31 ago Exp $
+
+  20 Aug 2014; Agostino Sarubbo <ago@gentoo.org> librdmacm-1.0.18.ebuild:
+  Stable for x86, wrt bug #510208
+
+  20 Aug 2014; Agostino Sarubbo <ago@gentoo.org> librdmacm-1.0.18.ebuild:
+  Stable for amd64, wrt bug #510208
 
 *librdmacm-1.0.18 (16 Apr 2014)
 

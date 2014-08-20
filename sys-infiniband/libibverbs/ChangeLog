@@ -1,6 +1,12 @@
 # ChangeLog for sys-infiniband/libibverbs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libibverbs/ChangeLog,v 1.7 2014/04/16 09:11:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libibverbs/ChangeLog,v 1.9 2014/08/20 10:44:40 ago Exp $
+
+  20 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libibverbs-1.1.7.ebuild:
+  Stable for x86, wrt bug #510208
+
+  20 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libibverbs-1.1.7.ebuild:
+  Stable for amd64, wrt bug #510208
 
   16 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> libibverbs-1.1.7.ebuild:
   [sys-infiniband/libibverbs] Fix build, its not a snap
