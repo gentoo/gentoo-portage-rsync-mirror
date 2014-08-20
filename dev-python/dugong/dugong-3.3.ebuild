@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/dugong-3.3.ebuild,v 1.1 2014/08/18 06:36:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/dugong-3.3.ebuild,v 1.2 2014/08/20 07:57:24 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python3_{3,4} )
@@ -19,9 +19,8 @@ IUSE="doc examples test"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 
-PATCHES=( "${FILESDIR}"/3.2-extract_links.patch
-		"${FILESDIR}"/3.2-timeout.patch
-		"${FILESDIR}"/3.2-aborted_write.patch )
+PATCHES=( "${FILESDIR}"/3.3-test-timeout.patch
+		"${FILESDIR}"/3.2-extract_links.patch )
 
 python_test() {
 	# https://bitbucket.org/nikratio/python-dugong/issue/12

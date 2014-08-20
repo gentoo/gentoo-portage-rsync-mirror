@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.135 2014/08/19 21:15:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.136 2014/08/20 07:44:27 mgorny Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="acl audit cryptsetup curl doc elfutils +firmware-loader gcrypt gudev http
-	introspection kdbus +kmod lz4 lzma pam policykit python qrcode +seccomp
+	idn introspection kdbus +kmod lz4 lzma pam policykit python qrcode +seccomp
 	selinux ssl test vanilla"
 
 MINKV="3.8"
@@ -44,6 +44,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 		>=net-libs/libmicrohttpd-0.9.33:0=
 		ssl? ( >=net-libs/gnutls-3.1.4:0= )
 	)
+	idn? ( net-dns/libidn:0= )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1:0= )
 	kmod? ( >=sys-apps/kmod-15:0= )
 	lz4? ( >=app-arch/lz4-0_p119:0=[${MULTILIB_USEDEP}] )
@@ -218,6 +219,7 @@ multilib_src_configure() {
 		$(use_enable gudev)
 		$(multilib_native_use_enable http microhttpd)
 		$(usex http $(multilib_native_use_enable ssl gnutls) --disable-gnutls)
+		$(multilib_native_use_enable idn libidn)
 		$(multilib_native_use_enable introspection)
 		$(use_enable kdbus)
 		$(multilib_native_use_enable kmod)
