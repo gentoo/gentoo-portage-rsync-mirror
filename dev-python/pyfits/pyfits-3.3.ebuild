@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.3.ebuild,v 1.1 2014/07/22 14:10:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.3.ebuild,v 1.2 2014/08/20 04:16:27 idella4 Exp $
 
 EAPI=5
 
@@ -38,6 +38,10 @@ python_prepare_all() {
 	sed -i \
 		-e "s/\(hook_package_dir = \)lib/\1$(get_libdir)/g" \
 		"${S}"/setup.cfg || die
+
+	# https://github.com/spacetelescope/PyFITS/issues/95
+	sed -e "s/except UserWarning, w/except UserWarning as w/" -i lib/pyfits/scripts/fitscheck.py
+
 	distutils-r1_python_prepare_all
 }
 
