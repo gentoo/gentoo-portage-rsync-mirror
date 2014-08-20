@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DESCRIPTION=KDE toys - merge this to pull in all kdetoys-derived packages
+EAPI=5
+HOMEPAGE=http://www.kde.org/ http://techbase.kde.org/Projects/Kdetoys
+IUSE=aqua
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=metapackage
+RDEPEND=>=kde-base/amor-4.14.0:4[aqua=] >=kde-base/kteatime-4.14.0:4[aqua=] >=kde-base/ktux-4.14.0:4[aqua=]
+SLOT=4
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	kde4-functions	492237eb2823bdc02bc769530501f0ea	kde4-meta-pkg	3b3335a3600b45434b4cf659369c8301	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=aa40cd52bd787d3b2f4adc35aa20ae39

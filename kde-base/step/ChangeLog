@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/step
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.216 2014/07/23 16:53:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.217 2014/08/20 16:02:50 johu Exp $
+
+*step-4.14.0 (20 Aug 2014)
+
+  20 Aug 2014; Johannes Huber <johu@gentoo.org> +step-4.14.0.ebuild:
+  Version bump KDE SC 4.14.0
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org> -step-4.13.2.ebuild:
   Remove KDE SC 4.13.2

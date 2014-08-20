@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.323 2014/08/09 11:37:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.324 2014/08/20 16:02:41 johu Exp $
+
+*krfb-4.14.0 (20 Aug 2014)
+
+  20 Aug 2014; Johannes Huber <johu@gentoo.org> +krfb-4.14.0.ebuild,
+  +files/krfb-4.14.0-CVE-2014-4607-unbundle-libvncserver.patch:
+  Version bump KDE SC 4.14.0
 
   09 Aug 2014; Johannes Huber <johu@gentoo.org> -krfb-4.12.5.ebuild,
   krfb-4.12.5-r1.ebuild:

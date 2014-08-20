@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kimagemapeditor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.305 2014/07/23 16:53:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.306 2014/08/20 16:02:48 johu Exp $
+
+*kimagemapeditor-4.14.0 (20 Aug 2014)
+
+  20 Aug 2014; Johannes Huber <johu@gentoo.org> +kimagemapeditor-4.14.0.ebuild:
+  Version bump KDE SC 4.14.0
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org> -kimagemapeditor-4.13.2.ebuild:
   Remove KDE SC 4.13.2

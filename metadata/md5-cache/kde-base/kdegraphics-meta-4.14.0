@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DESCRIPTION=kdegraphics - merge this to pull in all kdegraphics-derived packages
+EAPI=5
+HOMEPAGE=http://www.kde.org/applications/graphics/
+IUSE=scanner aqua
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=metapackage
+RDEPEND=>=kde-base/gwenview-4.14.0:4[aqua=] >=kde-base/kamera-4.14.0:4[aqua=] >=kde-base/kcolorchooser-4.14.0:4[aqua=] >=kde-base/kdegraphics-mobipocket-4.14.0:4[aqua=] >=kde-base/kgamma-4.14.0:4[aqua=] >=kde-base/kolourpaint-4.14.0:4[aqua=] >=kde-base/kruler-4.14.0:4[aqua=] >=kde-base/ksnapshot-4.14.0:4[aqua=] >=kde-base/libkdcraw-4.14.0:4[aqua=] >=kde-base/libkexiv2-4.14.0:4[aqua=] >=kde-base/libkipi-4.14.0:4[aqua=] >=kde-base/okular-4.14.0:4[aqua=] >=kde-base/svgpart-4.14.0:4[aqua=] >=kde-base/thumbnailers-4.14.0:4[aqua=] scanner? ( >=kde-base/ksaneplugin-4.14.0:4[aqua=] >=kde-base/libksane-4.14.0:4[aqua=] )
+SLOT=4
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	kde4-functions	492237eb2823bdc02bc769530501f0ea	kde4-meta-pkg	3b3335a3600b45434b4cf659369c8301	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=a36d5ac6267c8d750a8a1fc507d53866

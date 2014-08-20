@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.355 2014/08/05 18:17:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.356 2014/08/20 16:02:42 johu Exp $
+
+*konqueror-4.14.0 (20 Aug 2014)
+
+  20 Aug 2014; Johannes Huber <johu@gentoo.org> +konqueror-4.14.0.ebuild:
+  Version bump KDE SC 4.14.0
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> konqueror-4.12.5.ebuild,
   konqueror-4.13.3.ebuild:

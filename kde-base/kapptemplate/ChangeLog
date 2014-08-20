@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.291 2014/08/05 18:17:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.292 2014/08/20 16:02:43 johu Exp $
+
+*kapptemplate-4.14.0 (20 Aug 2014)
+
+  20 Aug 2014; Johannes Huber <johu@gentoo.org> +kapptemplate-4.14.0.ebuild:
+  Version bump KDE SC 4.14.0
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> kapptemplate-4.12.5.ebuild,
   kapptemplate-4.13.3.ebuild:

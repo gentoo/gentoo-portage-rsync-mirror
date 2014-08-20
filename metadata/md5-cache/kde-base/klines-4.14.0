@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
+DEPEND=>=kde-base/libkdegames-4.14.0:4[aqua=] >=sys-apps/sed-4 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-util/automoc virtual/pkgconfig !aqua? ( >=x11-libs/libXtst-1.1.0 x11-proto/xf86vidmodeproto ) handbook? ( app-text/docbook-xml-dtd:4.2 app-text/docbook-xsl-stylesheets ) dev-lang/perl >=dev-qt/qt3support-4.8.5:4[accessibility] >=dev-qt/qtcore-4.8.5:4[qt3support,ssl] >=dev-qt/qtdbus-4.8.5:4 >=dev-qt/designer-4.8.5:4[-phonon] >=dev-qt/qtgui-4.8.5:4[accessibility,dbus(+)] >=dev-qt/qtscript-4.8.5:4 >=dev-qt/qtsql-4.8.5:4[qt3support] >=dev-qt/qtsvg-4.8.5:4 >=dev-qt/qttest-4.8.5:4 >=dev-qt/qtwebkit-4.8.5:4 >=kde-base/kdelibs-4.14.0:4[aqua=] selinux? ( sec-policy/selinux-games )
+DESCRIPTION=KDE: Kolor Lines - a little game about balls and how to get rid of them
+EAPI=5
+HOMEPAGE=http://www.kde.org/applications/games/klines/ http://games.kde.org/game.php?game=klines
+IUSE=debug +handbook selinux aqua
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=>=kde-base/libkdegames-4.14.0:4[aqua=] >=kde-base/oxygen-icons-4.14.0:4[aqua=] handbook? ( >=kde-base/kdelibs-4.14.0:4[aqua=,handbook] ) dev-lang/perl >=dev-qt/qt3support-4.8.5:4[accessibility] >=dev-qt/qtcore-4.8.5:4[qt3support,ssl] >=dev-qt/qtdbus-4.8.5:4 >=dev-qt/designer-4.8.5:4[-phonon] >=dev-qt/qtgui-4.8.5:4[accessibility,dbus(+)] >=dev-qt/qtscript-4.8.5:4 >=dev-qt/qtsql-4.8.5:4[qt3support] >=dev-qt/qtsvg-4.8.5:4 >=dev-qt/qttest-4.8.5:4 >=dev-qt/qtwebkit-4.8.5:4 >=kde-base/kdelibs-4.14.0:4[aqua=] selinux? ( sec-policy/selinux-games )
+SLOT=4/4.14
+SRC_URI=mirror://kde/stable/4.14.0/src/klines-4.14.0.tar.xz
+_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	kde4-base	ac5a39cce917ff325551988db062a3d0	kde4-functions	492237eb2823bdc02bc769530501f0ea	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=e4beb33db4346595998384cefcff8a65
