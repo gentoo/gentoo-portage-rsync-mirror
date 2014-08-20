@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/flake8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.15 2014/07/20 11:05:24 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.16 2014/08/20 20:30:48 blueness Exp $
+
+  20 Aug 2014; Anthony G. Basile <blueness@gentoo.org> flake8-2.0.ebuild,
+  flake8-2.1.0.ebuild:
+  Keyword ~ppc ~ppc64, bug #508282
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> flake8-2.0.ebuild:
   Keyworded on alpha, bug #508282

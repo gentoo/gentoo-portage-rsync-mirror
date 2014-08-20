@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/flake8-2.0.ebuild,v 1.10 2014/07/20 11:05:24 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/flake8-2.0.ebuild,v 1.11 2014/08/20 20:30:48 blueness Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="A wrapper around PyFlakes, pep8 & mccabe"
 HOMEPAGE="http://bitbucket.org/tarek/flake8"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 x86"
 IUSE="test"
 LICENSE="MIT"
 SLOT="0"

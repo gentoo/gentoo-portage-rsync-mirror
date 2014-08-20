@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/Test-Tester-0.109.0.ebuild,v 1.2 2014/02/01 23:40:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/Test-Tester-0.109.0-r1.ebuild,v 1.1 2014/08/20 20:08:35 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=FDALY
 MODULE_VERSION=0.109
