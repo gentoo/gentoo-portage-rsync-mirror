@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/uuidtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.38 2014/08/14 14:11:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.39 2014/08/20 15:09:10 graaff Exp $
+
+  20 Aug 2014; Hans de Graaff <graaff@gentoo.org> uuidtools-2.1.5.ebuild:
+  Avoid specs that fail without a network interface.
 
 *uuidtools-2.1.5 (14 Aug 2014)
 
