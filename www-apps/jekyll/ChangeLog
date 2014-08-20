@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/jekyll
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll/ChangeLog,v 1.4 2014/08/16 13:09:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll/ChangeLog,v 1.5 2014/08/20 19:05:38 mrueg Exp $
+
+  20 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -jekyll-1.5.1.ebuild:
+  Cleanup old.
 
   16 Aug 2014; Manuel Rüger <mrueg@gentoo.org> jekyll-2.3.0.ebuild:
   Add missing test dependency.
