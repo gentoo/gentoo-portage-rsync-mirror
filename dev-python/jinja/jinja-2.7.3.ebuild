@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.7.3.ebuild,v 1.11 2014/08/19 16:45:18 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.7.3.ebuild,v 1.12 2014/08/19 23:31:16 floppym Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-f
 IUSE="doc examples"
 
 RDEPEND="dev-python/markupsafe[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	!dev-python/jinja:compat"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-0.6 )"
 

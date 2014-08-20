@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.122 2014/08/19 16:45:18 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.123 2014/08/19 23:31:16 floppym Exp $
+
+  19 Aug 2014; Mike Gilbert <floppym@gentoo.org> jinja-2.7.3.ebuild:
+  Add blocker on compat slot.
 
   19 Aug 2014; Dirkjan Ochtman <djc@gentoo.org> jinja-2.7.3.ebuild:
   Hack python 3.2 compatibility into Jinja 2.7
