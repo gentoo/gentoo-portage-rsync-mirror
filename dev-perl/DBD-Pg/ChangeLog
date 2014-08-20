@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.134 2014/06/13 19:08:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.135 2014/08/20 21:30:38 axs Exp $
+
+*DBD-Pg-2.19.3-r1 (20 Aug 2014)
+
+  20 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +DBD-Pg-2.19.3-r1.ebuild, -DBD-Pg-2.19.3.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
 *DBD-Pg-3.3.0 (13 Jun 2014)
 

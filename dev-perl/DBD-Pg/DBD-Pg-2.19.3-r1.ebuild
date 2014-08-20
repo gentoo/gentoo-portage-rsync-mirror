@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-2.19.3.ebuild,v 1.10 2012/12/27 08:42:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-2.19.3-r1.ebuild,v 1.1 2014/08/20 21:30:38 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=TURNSTEP
 MODULE_VERSION=2.19.3
