@@ -1,6 +1,14 @@
 # ChangeLog for media-video/makemkv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.42 2014/08/19 20:46:04 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.43 2014/08/20 00:37:34 mattm Exp $
+
+*makemkv-1.8.12-r1 (20 Aug 2014)
+
+  20 Aug 2014; Matthew Marlowe <mattm@gentoo.org> +makemkv-1.8.12-r1.ebuild,
+  -makemkv-1.8.11.ebuild, -makemkv-1.8.12.ebuild, -makemkv-1.8.7.ebuild,
+  -makemkv-1.8.8.ebuild, -makemkv-1.8.9.ebuild:
+  Cleaning out legacy makemkv ebuilds, keeping and recommending: 1.8.10 for
+  systems running glibc < 2.12 1.8.12 for systems running glibc >= 2.12
 
 *makemkv-1.8.12 (19 Aug 2014)
 
