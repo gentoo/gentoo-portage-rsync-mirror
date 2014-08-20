@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.77 2014/08/17 11:57:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.79 2014/08/20 16:00:01 ago Exp $
+
+  20 Aug 2014; Agostino Sarubbo <ago@gentoo.org> monkeyd-1.5.3.ebuild:
+  Stable for x86, wrt bug #520220
+
+  20 Aug 2014; Agostino Sarubbo <ago@gentoo.org> monkeyd-1.5.3.ebuild:
+  Stable for amd64, wrt bug #520220
 
 *monkeyd-1.5.3 (17 Aug 2014)
 

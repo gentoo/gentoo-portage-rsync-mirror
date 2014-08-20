@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.304 2014/08/17 18:15:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.305 2014/08/20 15:34:21 williamh Exp $
+
+  20 Aug 2014; William Hubbs <williamh@gentoo.org> openrc-0.13.ebuild,
+  openrc-9999.ebuild:
+  Add a blocker on older versions of procps for bug #520314
 
 *openrc-0.13 (17 Aug 2014)
 

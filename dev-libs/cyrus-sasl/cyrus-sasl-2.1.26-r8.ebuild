@@ -1,14 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r3.ebuild,v 1.14 2014/08/20 15:45:47 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r8.ebuild,v 1.1 2014/08/20 15:33:50 eras Exp $
 
 EAPI=5
 
-# should be fixed in automake-1.13.2(?).  Please test when released.
-# See automake bug #13514
-WANT_AUTOMAKE="1.12"
-
-inherit eutils flag-o-matic multilib autotools pam java-pkg-opt-2 db-use systemd
+inherit eutils flag-o-matic multilib multilib-minimal autotools pam java-pkg-opt-2 db-use systemd
 
 SASLAUTHD_CONF_VER="2.1.26"
 
@@ -18,23 +14,27 @@ SRC_URI="ftp://ftp.cyrusimap.org/cyrus-sasl/${P}.tar.gz"
 
 LICENSE="BSD-with-attribution"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="authdaemond berkdb gdbm kerberos ldapdb openldap mysql pam postgres sample sqlite
 srp ssl static-libs urandom"
 
 DEPEND="net-mail/mailbase
 	authdaemond? ( || ( net-mail/courier-imap mail-mta/courier ) )
-	berkdb? ( >=sys-libs/db-3.2 )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	kerberos? ( virtual/krb5 )
-	openldap? ( net-nds/openldap )
+	berkdb? ( >=sys-libs/db-4.8.30-r1[${MULTILIB_USEDEP}] )
+	gdbm? ( >=sys-libs/gdbm-1.10-r1[${MULTILIB_USEDEP}] )
+	kerberos? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )
+	openldap? ( >=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}] )
 	mysql? ( virtual/mysql )
-	pam? ( virtual/pam )
+	pam? ( >=virtual/pam-0-r1[${MULTILIB_USEDEP}] )
 	postgres? ( dev-db/postgresql-base )
-	sqlite? ( dev-db/sqlite:3 )
-	ssl? ( dev-libs/openssl )
+	sqlite? ( >=dev-db/sqlite-3.8.2:3[${MULTILIB_USEDEP}] )
+	ssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jdk-1.4 )"
 RDEPEND="${DEPEND}"
+
+MULTILIB_WRAPPED_HEADERS=(
+	/usr/include/sasl/md5global.h
+)
 
 pkg_setup() {
 	java-pkg-opt-2_pkg_setup
@@ -55,6 +55,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.1.26-CVE-2013-4122.patch
 	epatch "${FILESDIR}"/${PN}-2.1.26-send-imap-logout.patch
 	epatch "${FILESDIR}"/${PN}-2.1.26-canonuser-ldapdb-garbage-in-out-buffer.patch
+	epatch "${FILESDIR}"/${PN}-2.1.26-fix_dovecot_authentication.patch
 
 	# Get rid of the -R switch (runpath_switch for Sun)
 	# >=gcc-4.6 errors out with unknown option
@@ -65,8 +66,12 @@ src_prepare() {
 	sed -i '/^sasldir =/s:=.*:= $(plugindir):' \
 		"${S}"/plugins/Makefile.{am,in} || die "sed failed"
 
+	# #486740 #468556
 	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' \
+		-e 's:AC_CONFIG_MACRO_DIR:AC_CONFIG_MACRO_DIRS:g' \
 		configure.in || die
+	sed -i -e 's:AC_CONFIG_MACRO_DIR:AC_CONFIG_MACRO_DIRS:g' \
+		saslauthd/configure.in || die
 
 	eautoreconf
 }
@@ -75,44 +80,52 @@ src_configure() {
 	append-flags -fno-strict-aliasing
 	append-cppflags -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED -D_BSD_SOURCE -DLDAP_DEPRECATED
 
-	# Java support.
-	use java && export JAVAC="${JAVAC} ${JAVACFLAGS}"
+	multilib-minimal_src_configure
+}
 
-	local myconf
+multilib_src_configure() {
+	# Java support.
+	multilib_is_native_abi && use java && export JAVAC="${JAVAC} ${JAVACFLAGS}"
+
+	local myconf=()
 
 	# Add authdaemond support (bug #56523).
 	if use authdaemond ; then
-		myconf="${myconf} --with-authdaemond=/var/lib/courier/authdaemon/socket"
+		myconf+=( --with-authdaemond=/var/lib/courier/authdaemon/socket )
 	fi
 
 	# Fix for bug #59634.
 	if ! use ssl ; then
-		myconf="${myconf} --without-des"
+		myconf+=( --without-des )
 	fi
 
-	if use mysql || use postgres || use sqlite ; then
-		myconf="${myconf} --enable-sql"
+	if use sqlite || { multilib_is_native_abi && { use mysql || use postgres; }; } ; then
+		myconf+=( --enable-sql )
 	else
-		myconf="${myconf} --disable-sql"
+		myconf+=( --disable-sql )
 	fi
 
 	# Default to GDBM if both 'gdbm' and 'berkdb' are present.
 	if use gdbm ; then
 		einfo "Building with GNU DB as database backend for your SASLdb"
-		myconf="${myconf} --with-dblib=gdbm"
+		myconf+=( --with-dblib=gdbm )
 	elif use berkdb ; then
 		einfo "Building with BerkeleyDB as database backend for your SASLdb"
-		myconf="${myconf} --with-dblib=berkeley --with-bdb-incdir=$(db_includedir)"
+		myconf+=(
+			--with-dblib=berkeley
+			--with-bdb-incdir="$(db_includedir)"
+		)
 	else
 		einfo "Building without SASLdb support"
-		myconf="${myconf} --with-dblib=none"
+		myconf+=( --with-dblib=none )
 	fi
 
 	# Use /dev/urandom instead of /dev/random (bug #46038).
 	if use urandom ; then
-		myconf="${myconf} --with-devrandom=/dev/urandom"
+		myconf+=( --with-devrandom=/dev/urandom )
 	fi
 
+	ECONF_SOURCE=${S} \
 	econf \
 		--enable-login \
 		--enable-ntlm \
@@ -130,54 +143,59 @@ src_configure() {
 		$(use_with pam) \
 		$(use_with openldap ldap) \
 		$(use_enable ldapdb) \
-		$(use_enable sample) \
+		$(multilib_native_use_enable sample) \
 		$(use_enable kerberos gssapi) \
-		$(use_enable java) \
-		$(use_with java javahome ${JAVA_HOME}) \
-		$(use_with mysql mysql /usr) \
-		$(use_with postgres pgsql) \
+		$(multilib_native_use_enable java) \
+		$(multilib_native_use_with java javahome ${JAVA_HOME}) \
+		$(multilib_native_use_with mysql mysql /usr) \
+		$(multilib_native_use_with postgres pgsql) \
 		$(use_with sqlite sqlite3 /usr/$(get_libdir)) \
 		$(use_enable srp) \
 		$(use_enable static-libs static) \
-		${myconf}
+		"${myconf[@]}"
 }
 
-src_compile() {
+multilib_src_compile() {
 	emake
 
 	# Default location for java classes breaks OpenOffice (bug #60769).
 	# Thanks to axxo@gentoo.org for the solution.
-	cd "${S}"
-	if use java ; then
+	if multilib_is_native_abi && use java ; then
 		jar -cvf ${PN}.jar -C java $(find java -name "*.class")
 	fi
 }
 
-src_install() {
-	emake DESTDIR="${D}" install
+multilib_src_install() {
+	default
+
+	if multilib_is_native_abi; then
+		if use sample ; then
+			docinto sample
+			dodoc "${S}"/sample/*.c
+			exeinto /usr/share/doc/${P}/sample
+			doexe sample/client sample/server
+		fi
+
+		# Default location for java classes breaks OpenOffice (bug #60769).
+		if use java ; then
+			java-pkg_dojar ${PN}.jar
+			java-pkg_regso "${D}/usr/$(get_libdir)/libjavasasl.so"
+			# hackish, don't wanna dig through makefile
+			rm -Rf "${D}/usr/$(get_libdir)/java"
+			docinto "java"
+			dodoc "${S}/java/README" "${FILESDIR}/java.README.gentoo" "${S}"/java/doc/*
+			dodir "/usr/share/doc/${PF}/java/Test"
+			insinto "/usr/share/doc/${PF}/java/Test"
+			doins "${S}"/java/Test/*.java
+		fi
+
+		dosbin saslauthd/testsaslauthd
+	fi
+}
+
+multilib_src_install_all() {
 	keepdir /etc/sasl2
 
-	if use sample ; then
-		docinto sample
-		dodoc sample/*.c
-		exeinto /usr/share/doc/${P}/sample
-		doexe sample/client sample/server
-	fi
-
-	# Default location for java classes breaks OpenOffice (bug #60769).
-	if use java ; then
-		java-pkg_dojar ${PN}.jar
-		java-pkg_regso "${D}/usr/$(get_libdir)/libjavasasl.so"
-		# hackish, don't wanna dig through makefile
-		rm -Rf "${D}/usr/$(get_libdir)/java"
-		docinto "java"
-		dodoc "${S}/java/README" "${FILESDIR}/java.README.gentoo" "${S}"/java/doc/*
-		dodir "/usr/share/doc/${PF}/java/Test"
-		insinto "/usr/share/doc/${PF}/java/Test"
-		doins "${S}"/java/Test/*.java
-	fi
-
-	docinto ""
 	dodoc AUTHORS ChangeLog NEWS README doc/TODO doc/*.txt
 	newdoc pwcheck/README README.pwcheck
 	dohtml doc/*.html
@@ -195,13 +213,7 @@ src_install() {
 	systemd_dounit "${FILESDIR}/saslauthd.service"
 	systemd_dotmpfilesd "${FILESDIR}/${PN}.conf"
 
-	newsbin "${S}/saslauthd/testsaslauthd" testsaslauthd
-
-	use static-libs || find "${D}"/usr/lib*/sasl2 -name 'lib*.la' -delete
-}
-
-pkg_preinst() {
-	preserve_old_lib /usr/$(get_libdir)/libsasl2.so.2
+	prune_libtool_files --modules
 }
 
 pkg_postinst () {
@@ -227,6 +239,4 @@ pkg_postinst () {
 
 	elog "pwcheck and saslauthd home directories have moved to:"
 	elog "  /run/saslauthd, using tmpfiles.d"
-
-	preserve_old_lib_notify /usr/$(get_libdir)/libsasl2.so.2
 }

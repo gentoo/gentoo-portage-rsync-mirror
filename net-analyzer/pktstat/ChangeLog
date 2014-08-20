@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/pktstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.29 2014/08/20 08:07:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.31 2014/08/20 15:59:57 ago Exp $
+
+  20 Aug 2014; Agostino Sarubbo <ago@gentoo.org> pktstat-1.8.5-r1.ebuild:
+  Stable for x86, wrt bug #458898
+
+  20 Aug 2014; Agostino Sarubbo <ago@gentoo.org> pktstat-1.8.5-r1.ebuild:
+  Stable for amd64, wrt bug #458898
 
   20 Aug 2014; Jeroen Roovers <jer@gentoo.org> pktstat-1.8.5-r1.ebuild,
   files/pktstat-1.8.5-smtp_line.patch:

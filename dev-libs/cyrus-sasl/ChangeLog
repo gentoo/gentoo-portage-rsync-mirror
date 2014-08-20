@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.303 2014/08/10 20:33:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.305 2014/08/20 15:45:47 eras Exp $
+
+  20 Aug 2014; Eray Aslan <eras@gentoo.org> cyrus-sasl-2.1.26-r3.ebuild:
+  Fix stable version for >mysql-5.5 as well
+
+*cyrus-sasl-2.1.26-r8 (20 Aug 2014)
+
+  20 Aug 2014; Eray Aslan <eras@gentoo.org> +cyrus-sasl-2.1.26-r8.ebuild:
+  Fix buiding with >mysql-5.5 - bug #519646
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   cyrus-sasl-2.1.23-r7.ebuild, cyrus-sasl-2.1.26-r3.ebuild,

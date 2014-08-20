@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.118 2014/06/18 01:19:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.119 2014/08/20 15:36:45 jer Exp $
+
+  20 Aug 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add proxy-maint herd.
 
   18 Jun 2014; Mike Frysinger <vapier@gentoo.org>
   -files/7-stable/rsyslog-imuxsock-shrink.patch, -rsyslog-7.6.3-r2.ebuild:
