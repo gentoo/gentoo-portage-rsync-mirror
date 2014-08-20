@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/abstract
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/ChangeLog,v 1.22 2014/08/05 16:00:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/ChangeLog,v 1.23 2014/08/20 13:30:22 mrueg Exp $
+
+  20 Aug 2014; Manuel Rüger <mrueg@gentoo.org> abstract-1.0.0-r2.ebuild,
+  abstract-1.0.0-r3.ebuild:
+  Rubyforge is dead. Update HOMEPAGE.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> abstract-1.0.0-r2.ebuild,
   abstract-1.0.0-r3.ebuild:

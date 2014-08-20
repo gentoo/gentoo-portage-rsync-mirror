@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/abstract-1.0.0-r2.ebuild,v 1.5 2014/08/05 16:00:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/abstract-1.0.0-r2.ebuild,v 1.6 2014/08/20 13:30:22 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 jruby"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="README.txt"
 inherit ruby-fakegem
 
 DESCRIPTION="Library which enable you to define abstract method in Ruby"
-HOMEPAGE="http://rubyforge.org/projects/abstract"
+HOMEPAGE="https://rubygems.org/gems/abstract"
 
 LICENSE="Ruby"
 SLOT="0"
