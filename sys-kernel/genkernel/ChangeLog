@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.396 2014/08/17 20:27:08 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.397 2014/08/20 12:39:36 armin76 Exp $
+
+  20 Aug 2014; Raúl Porcel <armin76@gentoo.org> genkernel-3.4.49.ebuild,
+  genkernel-3.4.49.2.ebuild:
+  ia64/sparc stable wrt bug #511992
 
 *genkernel-3.4.51.2 (17 Aug 2014)
 

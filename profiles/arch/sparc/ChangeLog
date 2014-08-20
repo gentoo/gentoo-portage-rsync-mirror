@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.224 2014/08/15 17:46:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.225 2014/08/20 12:32:53 armin76 Exp $
+
+  20 Aug 2014; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask redis
 
   15 Aug 2014; Raúl Porcel <armin76@gentoo.org> package.use.stable.mask:
   Remove sys-block/thin-provisioning-tools test from p.use.stable.mask as deps

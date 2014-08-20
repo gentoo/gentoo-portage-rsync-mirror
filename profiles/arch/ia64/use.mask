@@ -94,6 +94,7 @@ aacplus
 devil
 gts
 clang
+redis
 
 # Stuff that doesn't compile on ia64
 chicken

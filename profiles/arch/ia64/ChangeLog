@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.210 2014/08/20 11:55:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.211 2014/08/20 12:32:13 armin76 Exp $
+
+  20 Aug 2014; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask redis
 
   20 Aug 2014; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
   Move ocamlopt from p.use.mask to use.mask as instructed in bug #430352
