@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1-r1.ebuild,v 1.4 2013/06/15 20:09:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1-r1.ebuild,v 1.5 2014/08/20 23:47:19 reavertm Exp $
 
-EAPI=3
+EAPI=5
 
 inherit eutils cmake-utils flag-o-matic wxwidgets
 
@@ -16,11 +16,12 @@ SRC_URI="http://www.openscenegraph.org/downloads/stable_releases/${MY_P}/source/
 LICENSE="wxWinLL-3 LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="curl debug doc examples ffmpeg fltk fox gdal gif glut gtk itk jpeg jpeg2k
-openexr openinventor osgapps pdf png qt4 sdl svg tiff truetype vnc wxwidgets xine xrandr zlib"
+IUSE="curl debug doc examples ffmpeg fltk fox gdal gif glut gtk jpeg jpeg2k
+openexr openinventor osgapps pdf png qt4 sdl svg tiff truetype vnc wxwidgets
+xine xrandr zlib"
 
 # NOTE: OpenAL (support missing)
-# TODO: COLLADA, FBX, OpenVRML, Performer, DCMTK
+# TODO: COLLADA, FBX, ITK, OpenVRML, Performer, DCMTK
 RDEPEND="
 	x11-libs/libSM
 	x11-libs/libXext
@@ -43,7 +44,6 @@ RDEPEND="
 	ffmpeg? ( virtual/ffmpeg )
 	gdal? ( sci-libs/gdal )
 	gif? ( media-libs/giflib )
-	itk? ( dev-tcltk/itk )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
 	openexr? (
@@ -94,6 +94,7 @@ src_configure() {
 
 	mycmakeargs=(
 		-DDYNAMIC_OPENSCENEGRAPH=ON
+		-DWITH_ITK=OFF
 		-DWITH_OpenAL=OFF # Commented out in buildsystem
 		-DGENTOO_DOCDIR="/usr/share/doc/${PF}"
 		$(cmake-utils_use_with curl)
@@ -107,7 +108,6 @@ src_configure() {
 		$(cmake-utils_use_with gif GIFLIB)
 		$(cmake-utils_use_with glut)
 		$(cmake-utils_use_with gtk GtkGl)
-		$(cmake-utils_use_with itk)
 		$(cmake-utils_use_with jpeg)
 		$(cmake-utils_use_with jpeg2k Jasper)
 		$(cmake-utils_use_with openexr OpenEXR)

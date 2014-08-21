@@ -12,7 +12,6 @@ The OpenSceneGraph is an open source high performance 3D graphics toolkit, used 
   <use>
     <flag name="fox">Build examples using <pkg>x11-libs/fox</pkg> library</flag>
     <flag name="gdal">Enable support for <pkg>sci-libs/gdal</pkg> library</flag>
-	<flag name="itk">Build <pkg>dev-tcltk/itk</pkg> plugin</flag>
     <flag name="openinventor">Build OpenInventor plugin</flag>
     <flag name="osgapps">Build osg applications</flag>
     <flag name="xrandr">Enable support for the X xrandr extension</flag>

@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.56 2014/02/13 21:22:42 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.57 2014/08/20 23:47:19 reavertm Exp $
+
+  20 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org> metadata.xml,
+  openscenegraph-3.0.1-r1.ebuild:
+  Remove not really supported USE flag "itk", bug 520364.
 
   13 Feb 2014; Maciej Mrozowski <reavertm@gentoo.org>
   files/openscenegraph-3.0.1-cmake.patch:
