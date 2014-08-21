@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Cisco-Reconfig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cisco-Reconfig/ChangeLog,v 1.17 2014/03/09 03:27:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cisco-Reconfig/ChangeLog,v 1.18 2014/08/21 13:12:06 axs Exp $
+
+*Cisco-Reconfig-0.910.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Cisco-Reconfig-0.910.0-r1.ebuild, -Cisco-Reconfig-0.910.0.ebuild:
+  bumped 0.910.0 EAPI to 5; committed directly to stable as no other changes
+  present and revbump helps stable systems to keep from dieing on perl-5.18
+  upgrade
 
   09 Mar 2014; Tim Harder <radhermit@gentoo.org>
   -Cisco-Reconfig-0.900.0.ebuild:
