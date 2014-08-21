@@ -1,4 +1,10 @@
 
+*selinux-pan-2.20140311-r6 (21 Aug 2014)
+
+  21 Aug 2014; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20140311-r6.ebuild:
+  Release of 2.20140311-r6
+
 *selinux-pan-2.20140311-r5 (09 Aug 2014)
 
   09 Aug 2014; Sven Vermeulen <swift@gentoo.org>

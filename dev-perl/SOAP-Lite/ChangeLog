@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/SOAP-Lite
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.87 2013/08/17 13:33:07 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.88 2014/08/21 19:02:22 axs Exp $
+
+*SOAP-Lite-0.715.0-r1 (21 Aug 2014)
+*SOAP-Lite-1.040.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +SOAP-Lite-0.715.0-r1.ebuild, +SOAP-Lite-1.040.0-r1.ebuild,
+  -SOAP-Lite-0.715.0.ebuild, -SOAP-Lite-1.040.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
 *SOAP-Lite-1.040.0 (17 Aug 2013)
 
