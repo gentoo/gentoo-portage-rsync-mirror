@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.213 2014/08/12 04:47:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.214 2014/08/21 15:14:10 vapier Exp $
+
+*xbmc-13.2 (21 Aug 2014)
+
+  21 Aug 2014; Mike Frysinger <vapier@gentoo.org> +xbmc-13.2.ebuild:
+  Version bump #512700 by Michael Cook.
 
   12 Aug 2014; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Add support for running tests #519118 by Anthony Ryan.
