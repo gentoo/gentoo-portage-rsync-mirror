@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/XML-SAX
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.83 2013/02/25 21:08:27 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.84 2014/08/21 14:56:44 axs Exp $
+
+*XML-SAX-0.990.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +XML-SAX-0.990.0-r1.ebuild, -XML-SAX-0.990.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> XML-SAX-0.990.0.ebuild:
   Add ~arm-linux keyword.

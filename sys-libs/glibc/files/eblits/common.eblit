@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.38 2014/08/21 14:08:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.39 2014/08/21 14:41:39 vapier Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -38,6 +38,10 @@ alt_libdir() {
 }
 alt_usrlibdir() {
 	echo $(alt_prefix)/usr/$(get_libdir)
+}
+
+builddir() {
+	echo "${WORKDIR}/build-${ABI}-${CTARGET}-$1"
 }
 
 setup_target_flags() {
