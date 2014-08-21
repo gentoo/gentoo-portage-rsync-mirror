@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.27.ebuild,v 1.1 2014/08/05 09:11:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.27.ebuild,v 1.2 2014/08/21 11:07:28 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils multilib readme.gentoo
@@ -38,6 +38,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2.0-nxproxy_read_from_stdin.patch
 
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-jpeg-9a.patch #481360
 	# -fPIC
 	epatch "${FILESDIR}"/1.5.0/nxcomp-1.5.0-pic.patch
 	# Drop force -O3, set AR/RANLIB and

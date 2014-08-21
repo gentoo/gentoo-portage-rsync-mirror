@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.169 2014/08/13 02:28:44 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.170 2014/08/21 11:27:49 armin76 Exp $
 
 # Maciej Mrozowski <reavertm@gentoo.org> (13 Aug 2014)
 # Missing keywords on dev-libs/protobuf-c (bug 519772)
@@ -159,10 +159,6 @@ net-libs/glib-networking smartcard
 # Alexey Shvetsov <alexxy@gentoo.org> (17 Dec 2011)
 # Mask use numa for openmpi
 sys-cluster/openmpi openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm openmpi_ofed_features_rdmacm
-
-# Raúl Porcel <armin76@gentoo.org> (05 Nov 2011)
-# jit not supported on sparc
-dev-libs/libpcre jit
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (03 Nov 2011)
 # Missing keywords in gst-plugins-faac, bug #389433

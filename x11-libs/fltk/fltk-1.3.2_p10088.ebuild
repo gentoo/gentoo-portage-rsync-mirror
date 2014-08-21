@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.2_p10088.ebuild,v 1.1 2014/02/02 11:15:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.2_p10088.ebuild,v 1.2 2014/08/21 11:25:33 ssuominen Exp $
 
 EAPI=5
 
@@ -49,7 +49,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.3.1-as-needed.patch \
 		"${FILESDIR}"/${PN}-1.3.2-desktop.patch \
 		"${FILESDIR}"/${PN}-1.3.0-share.patch \
-		"${FILESDIR}"/${PN}-1.3.2-conf-tests.patch
+		"${FILESDIR}"/${PN}-1.3.2-conf-tests.patch \
+		"${FILESDIR}"/${PN}-1.3.2-jpeg-9a.patch
 	sed \
 		-e 's:@HLINKS@::g' -i FL/Makefile.in || die
 	sed -i \

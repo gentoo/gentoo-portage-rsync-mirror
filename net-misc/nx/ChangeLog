@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.86 2014/08/05 09:11:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.87 2014/08/21 11:07:28 ssuominen Exp $
+
+  21 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/nx-3.5.0.27-jpeg-9a.patch, nx-3.5.0.27.ebuild:
+  Fix building with media-libs/jpeg >= 9a wrt #481360 by Gabriel Marcano
 
 *nx-3.5.0.27 (05 Aug 2014)
 
