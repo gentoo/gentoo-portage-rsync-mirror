@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.166 2014/06/09 23:22:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.167 2014/08/21 11:56:52 ssuominen Exp $
+
+*jpeg-8d-r2 (21 Aug 2014)
+
+  21 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> +jpeg-8d-r2.ebuild:
+  Special SLOT="8" to install only libjpeg.so.8 SONAME
 
   09 Jun 2014; Mike Frysinger <vapier@gentoo.org> jpeg-6b-r12.ebuild,
   jpeg-8d-r1.ebuild:

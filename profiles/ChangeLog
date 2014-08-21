@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9310 2014/08/20 08:46:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9311 2014/08/21 11:31:26 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask media-libs/jpeg >= 9a wrt Tracker #479818 because it doesn't have any
+  bugs left open.
 
   20 Aug 2014; Hans de Graaff <graaff@gentoo.org> package.mask:
   Remove mask now that virtual/ruby-test-unit has been removed.

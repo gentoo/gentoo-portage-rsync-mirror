@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-3.03_rc1.ebuild,v 1.2 2014/07/20 13:28:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-3.03_rc1.ebuild,v 1.3 2014/08/21 11:35:02 armin76 Exp $
 
 EAPI=5
 
@@ -64,7 +64,7 @@ SRC_URI="http://dev.gentoo.org/~tomka/files/${PN}-3.03-rc1.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="doc examples jpeg png tiff -webp +scrollview static-libs linguas_ar linguas_bg linguas_ca linguas_chr linguas_cs linguas_de linguas_da linguas_el linguas_es linguas_fi linguas_fr linguas_he linguas_hi linguas_hu linguas_id linguas_it linguas_jp linguas_ko linguas_lt linguas_lv linguas_nl linguas_no linguas_pl linguas_pt linguas_ro linguas_ru linguas_sk linguas_sl linguas_sr linguas_sv linguas_th linguas_tl linguas_tr linguas_uk linguas_vi linguas_zh_CN linguas_zh_TW osd"
 

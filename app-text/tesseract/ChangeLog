@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.50 2014/07/20 13:28:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.51 2014/08/21 11:35:02 armin76 Exp $
+
+  21 Aug 2014; Raúl Porcel <armin76@gentoo.org> tesseract-3.02.ebuild,
+  tesseract-3.02-r1.ebuild, tesseract-3.03_rc1.ebuild:
+  Add ~sparc wrt #437670
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   tesseract-3.03_rc1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libaosd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/ChangeLog,v 1.9 2014/06/26 10:05:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/ChangeLog,v 1.11 2014/08/21 11:42:26 armin76 Exp $
+
+  21 Aug 2014; Raúl Porcel <armin76@gentoo.org> libaosd-0.2.7.ebuild:
+  Add ~ia64/~sparc wrt bug #473920
 
   26 Jun 2014; Pacho Ramos <pacho@gentoo.org> libaosd-0.2.7.ebuild:
   Needs cairo[X], bug #515170

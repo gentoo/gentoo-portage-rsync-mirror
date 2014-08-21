@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.5.2.ebuild,v 1.6 2014/08/15 09:10:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.5.2.ebuild,v 1.7 2014/08/21 11:45:51 ssuominen Exp $
 
 EAPI=5
 
@@ -340,6 +340,8 @@ src_prepare() {
 		EPATCH_SUFFIX="patch" \
 		epatch
 	fi
+
+	epatch "${FILESDIR}"/${P}-jpeg-9a.patch #479946
 
 	base_src_prepare
 

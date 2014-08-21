@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/leptonica
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.18 2014/07/30 07:13:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.19 2014/08/21 11:33:58 armin76 Exp $
+
+  21 Aug 2014; Raúl Porcel <armin76@gentoo.org> leptonica-1.68.ebuild,
+  leptonica-1.69.ebuild, leptonica-1.70.ebuild, leptonica-1.71.ebuild:
+  Add ~sparc wrt #437670
 
   30 Jul 2014; Thomas Kahle <tomka@gentoo.org>
   +files/leptonica-1.71-openjpeg-2.0.patch, leptonica-1.71.ebuild:

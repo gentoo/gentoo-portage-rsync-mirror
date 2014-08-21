@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15976 2014/08/20 08:46:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15977 2014/08/21 11:31:26 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -531,11 +531,6 @@ lxde-base/lxpolkit
 # Ole Markus With <olemarkus@gentoo.org> (28 Jan 2014)
 # PHP 5.6 still in early development
 >=dev-lang/php-5.6
-
-# Samuli Suominen <ssuominen@gentoo.org> (24 Jan 2014)
-# Roll ~arch version back from .so.9 to .so.8 due to too many unresolved issues.
-# See http://bugs.gentoo.org/479818 for progress.
->=media-libs/jpeg-9
 
 # Christian Ruppert <idl0r@gentoo.org> (19 Jan 2014)
 # Experimental, for now

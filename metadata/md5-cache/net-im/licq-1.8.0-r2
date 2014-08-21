@@ -4,10 +4,10 @@ DESCRIPTION=ICQ Client with v8 support
 EAPI=5
 HOMEPAGE=http://www.licq.org/
 IUSE=debug doc linguas_he nls socks5 ssl xosd aosd jabber qt4 msn
-KEYWORDS=~alpha ~amd64 ~x86
+KEYWORDS=~alpha ~amd64 ~ia64 ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=>=app-crypt/gpgme-1 jabber? ( net-libs/gloox ) qt4? ( dev-qt/qtgui:4 ) socks5? ( net-proxy/dante ) ssl? ( >=dev-libs/openssl-0.9.5a ) xosd? ( x11-libs/xosd ) aosd? ( x11-libs/libaosd )
 SLOT=2
 SRC_URI=mirror://sourceforge/licq/licq-1.8.0.tar.bz2 https://github.com/licq-im/licq/commit/6b5f463697739be42948a052a03cc706f06c2150.patch -> licq-1.8.0-socks5.patch https://github.com/licq-im/licq/commit/b05d42fda3da5d1b42bd89feb3b49516ce7d85b3.patch -> licq-1.8.0-doxygen.patch
 _eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e252270e16204e46870d1142c3beaa48
+_md5_=cfbc9cb82bebae46a2c3136983c71cca

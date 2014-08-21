@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.123.ebuild,v 1.5 2014/08/08 12:29:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.123.ebuild,v 1.6 2014/08/21 11:49:02 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-info linux-mod multilib nvidia-driver \
@@ -48,7 +48,7 @@ RDEPEND="${COMMON}
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/pango[X]
-		|| ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] )
+		x11-libs/pangox-compat
 	)
 	X? (
 		<x11-base/xorg-server-1.16.99
