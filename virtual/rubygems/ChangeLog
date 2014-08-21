@@ -1,6 +1,11 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.60 2014/05/01 06:32:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.61 2014/08/21 09:19:32 graaff Exp $
+
+  21 Aug 2014; Hans de Graaff <graaff@gentoo.org> rubygems-4.ebuild,
+  rubygems-6.ebuild, rubygems-7.ebuild:
+  Move the specific rubygems versioning requirements for each dev-lang/ruby
+  implementation into the virtual.
 
   01 May 2014; Hans de Graaff <graaff@gentoo.org> rubygems-7.ebuild:
   Add missing x86-fbsd keyword that is available on the underlying

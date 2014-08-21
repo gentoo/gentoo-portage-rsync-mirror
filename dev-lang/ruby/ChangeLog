@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.661 2014/07/27 11:36:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.663 2014/08/21 09:23:19 graaff Exp $
+
+  21 Aug 2014; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p547.ebuild,
+  ruby-2.0.0_p481.ebuild, ruby-2.1.2.ebuild:
+  Depend on the rubygems virtual with an explicit SLOT now that the specific
+  rubygems versions are listed in virtual/rubygems. This will make the
+  dependencies more explicit and should decrease resolver surprises picking the
+  wrong virtual/rubygems SLOT later on.
+
+  21 Aug 2014; Hans de Graaff <graaff@gentoo.org> -ruby-1.9.3_p545.ebuild:
+  Cleanup.
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> ruby-1.9.3_p547.ebuild,
   ruby-2.0.0_p481.ebuild:

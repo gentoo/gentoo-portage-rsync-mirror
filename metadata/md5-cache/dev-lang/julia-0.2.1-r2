@@ -10,4 +10,4 @@ RDEPEND=dev-lang/R:0= dev-libs/double-conversion:0= dev-libs/gmp:0= dev-libs/lib
 SLOT=0
 SRC_URI=https://github.com/JuliaLang/julia/archive/v0.2.1.tar.gz -> julia-0.2.1.tar.gz http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/SFMT/dSFMT-src-2.2.tar.gz http://dev.gentoo.org/~bicatali/distfiles/libuv-julia-0.2.1.tar.gz
 _eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	51ad5130f4a69b1a118ca5296de276ae	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=b7cd9474a9e05633de3723f635c5b8f9
+_md5_=3b38f3c00720b2b2730d02f655fd73d4

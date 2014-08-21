@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare test
+DEPEND=dev-lang/R:0= dev-libs/double-conversion:0= dev-libs/gmp:0= dev-libs/libpcre:3= dev-libs/mpfr:0= dev-libs/openspecfun sci-libs/arpack:0= sci-libs/camd:0= sci-libs/cholmod:0= sci-libs/fftw:3.0= sci-libs/openlibm:0= sci-libs/spqr:0= sci-libs/umfpack:0= sci-mathematics/glpk:0= =sys-devel/llvm-3.4* >=sys-libs/libunwind-1.1:7= sys-libs/readline:0= sys-libs/zlib:0= virtual/blas virtual/lapack emacs? ( app-emacs/ess ) dev-util/patchelf virtual/pkgconfig
+DESCRIPTION=High-performance programming language for technical computing
+EAPI=5
+HOMEPAGE=http://julialang.org/
+IUSE=emacs
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=MIT
+RDEPEND=dev-lang/R:0= dev-libs/double-conversion:0= dev-libs/gmp:0= dev-libs/libpcre:3= dev-libs/mpfr:0= dev-libs/openspecfun sci-libs/arpack:0= sci-libs/camd:0= sci-libs/cholmod:0= sci-libs/fftw:3.0= sci-libs/openlibm:0= sci-libs/spqr:0= sci-libs/umfpack:0= sci-mathematics/glpk:0= =sys-devel/llvm-3.4* >=sys-libs/libunwind-1.1:7= sys-libs/readline:0= sys-libs/zlib:0= virtual/blas virtual/lapack emacs? ( app-emacs/ess )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/JuliaLang/julia/archive/v0.3.0.tar.gz -> julia-0.3.0.tar.gz http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/SFMT/dSFMT-src-2.2.tar.gz http://dev.gentoo.org/~patrick/libuv-julia-0.3.0.tar.bz2 http://dev.gentoo.org/~patrick/rmath-0_p20140821.tar.bz2 http://www.public-software-group.org/pub/projects/utf8proc/v1.1.6/utf8proc-v1.1.6.tar.gz
+_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	51ad5130f4a69b1a118ca5296de276ae	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=7ad14b4ce10884a6bc8eb625821f8c41
