@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.60 2014/08/07 19:17:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.61 2014/08/21 10:46:23 ago Exp $
+
+  21 Aug 2014; Agostino Sarubbo <ago@gentoo.org> ffmpeg-9-r1.ebuild,
+  ffmpeg-9.ebuild:
+  Stable for ppc64, wrt bug #512012
 
   07 Aug 2014; Jeroen Roovers <jer@gentoo.org> ffmpeg-9-r1.ebuild:
   Stable for HPPA (bug #512012).

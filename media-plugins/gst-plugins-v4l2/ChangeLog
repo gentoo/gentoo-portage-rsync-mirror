@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-v4l2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.149 2014/08/07 20:03:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.150 2014/08/21 10:44:37 ago Exp $
+
+  21 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-v4l2-0.10.31-r1.ebuild, gst-plugins-v4l2-1.2.4-r1.ebuild:
+  Stable for ppc64, wrt bug #512012
 
   07 Aug 2014; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-v4l2-0.10.31-r1.ebuild, gst-plugins-v4l2-1.2.4-r1.ebuild:

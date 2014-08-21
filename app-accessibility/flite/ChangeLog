@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/flite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.60 2014/08/02 11:19:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.61 2014/08/21 10:38:15 ago Exp $
+
+  21 Aug 2014; Agostino Sarubbo <ago@gentoo.org> flite-1.4-r4.ebuild:
+  Stable for ppc64, wrt bug #512012
 
   02 Aug 2014; Raúl Porcel <armin76@gentoo.org> flite-1.2-r2.ebuild,
   flite-1.3-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/gst-plugins-jpeg-0.10.31-r1.ebuild,v 1.6 2014/08/07 19:52:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/gst-plugins-jpeg-0.10.31-r1.ebuild,v 1.7 2014/08/21 10:43:21 ago Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ GST_ORG_MODULE=gst-plugins-good
 inherit gstreamer
 
 DESCRIPTION="GStreamer encoder/decoder for JPEG format"
-KEYWORDS="~alpha amd64 ~arm hppa ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=virtual/jpeg-0-r2[${MULTILIB_USEDEP}]

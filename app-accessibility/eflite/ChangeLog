@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/eflite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.40 2014/08/06 06:24:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.41 2014/08/21 10:38:13 ago Exp $
+
+  21 Aug 2014; Agostino Sarubbo <ago@gentoo.org> eflite-0.4.1-r2.ebuild:
+  Stable for ppc64, wrt bug #512012
 
   06 Aug 2014; Patrick Lauer <patrick@gentoo.org> eflite-0.4.1-r2.ebuild,
   eflite-0.4.1.ebuild:
