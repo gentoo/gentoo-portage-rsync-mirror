@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-25.0.1597.0.ebuild,v 1.2 2014/08/20 16:40:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-25.0.1597.0.ebuild,v 1.3 2014/08/21 12:12:55 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="af ar az be bg bn ca cs da de el en_GB en_US es_LA es fi fr_CA
@@ -75,5 +75,6 @@ src_install() {
 	mv * "${D}" || die
 	dosym ../$(get_libdir)/${PN}/${PN} /usr/bin/${PN}
 	dodir /usr/$(get_libdir)/${PN}/lib
+	dosym /usr/$(get_libdir)/libudev.so /usr/$(get_libdir)/${PN}/lib/libudev.so.0
 	fperms 4711 /usr/$(get_libdir)/${PN}/opera_sandbox
 }

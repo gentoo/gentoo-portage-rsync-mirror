@@ -10,4 +10,4 @@ RDEPEND=dev-libs/glib:2 dev-libs/nspr dev-libs/nss >=dev-libs/openssl-1.0.1:0 gn
 SLOT=0
 SRC_URI=amd64? ( http://get.geo.opera.com/pub/opera-developer/25.0.1597.0/linux/opera-developer_25.0.1597.0_amd64.deb )
 _eclasses_=chromium	4a9f555199b35aa57f60b0e9b9627d2a	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=f57eaeeb5cdbadf5d0298b0669be7488
+_md5_=46ab7c75c7053f7e9f002a2723711d4b
