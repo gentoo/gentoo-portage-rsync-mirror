@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/File-Slurp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.66 2014/06/09 23:39:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.67 2014/08/21 17:20:34 axs Exp $
+
+*File-Slurp-9999.190.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +File-Slurp-9999.190.0-r1.ebuild, -File-Slurp-9999.190.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   09 Jun 2014; Mike Frysinger <vapier@gentoo.org> File-Slurp-9999.190.0.ebuild:
   Add arm64 love.
