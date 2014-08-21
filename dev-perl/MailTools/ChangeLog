@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/MailTools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.110 2014/02/01 23:49:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.111 2014/08/21 15:47:47 axs Exp $
+
+*MailTools-2.120.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +MailTools-2.120.0-r1.ebuild, -MailTools-2.120.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   01 Feb 2014; Mike Frysinger <vapier@gentoo.org> MailTools-2.120.0.ebuild:
   Add arm64/m68k love.
