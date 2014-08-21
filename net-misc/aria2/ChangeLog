@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.96 2014/07/04 14:26:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.97 2014/08/21 14:19:37 armin76 Exp $
+
+  21 Aug 2014; Raúl Porcel <armin76@gentoo.org> aria2-1.18.0.ebuild,
+  aria2-1.18.5.ebuild:
+  Add ~sparc wrt #488294
 
   04 Jul 2014; Tiziano Müller <dev-zero@gentoo.org>
   +files/aria2-1.18.5-fix-gnutls-2.x-compatibility.patch, aria2-1.18.5.ebuild:

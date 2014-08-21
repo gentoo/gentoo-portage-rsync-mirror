@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.117 2014/08/20 12:32:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.118 2014/08/21 14:18:24 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -133,6 +133,8 @@ clang
 metalink
 tremor
 fdk
+tcmalloc
+jemalloc
 
 # No hardware to test
 ifp

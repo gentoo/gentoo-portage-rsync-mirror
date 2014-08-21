@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Module-Runtime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Runtime/ChangeLog,v 1.26 2014/02/01 23:51:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Runtime/ChangeLog,v 1.27 2014/08/21 14:10:17 axs Exp $
+
+*Module-Runtime-0.13.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Module-Runtime-0.13.0-r1.ebuild, -Module-Runtime-0.13.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Module-Runtime-0.13.0.ebuild:
   Add arm64/m68k love.

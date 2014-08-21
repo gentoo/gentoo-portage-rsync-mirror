@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/Crypt-RIPEMD160-0.50.0.ebuild,v 1.7 2012/06/17 14:25:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/Crypt-RIPEMD160-0.50.0-r1.ebuild,v 1.1 2014/08/21 14:26:12 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=TODDR
 MODULE_VERSION=0.05

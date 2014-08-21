@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Class-Load
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.44 2014/05/07 10:56:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.45 2014/08/21 14:11:14 axs Exp $
+
+*Class-Load-0.200.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Class-Load-0.200.0-r1.ebuild, -Class-Load-0.200.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> -Class-Load-0.06.ebuild,
   -Class-Load-0.170.0.ebuild, -Class-Load-0.190.0.ebuild:

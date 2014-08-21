@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.93 2014/02/19 10:51:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.94 2014/08/21 14:21:51 axs Exp $
+
+*Clone-0.350.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Clone-0.350.0-r1.ebuild, -Clone-0.350.0.ebuild:
+  bumped 0.350.0 EAPI to 5; committed directly to stable as no other changes
+  present and revbump helps stable systems to keep from dieing on perl-5.18
+  upgrade
 
   19 Feb 2014; Tim Harder <radhermit@gentoo.org> -Clone-0.310.0.ebuild,
   -Clone-0.340.0.ebuild:

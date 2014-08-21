@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.170 2014/08/21 11:27:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.171 2014/08/21 14:18:24 armin76 Exp $
 
 # Maciej Mrozowski <reavertm@gentoo.org> (13 Aug 2014)
 # Missing keywords on dev-libs/protobuf-c (bug 519772)
@@ -69,10 +69,6 @@ www-plugins/gnash jemalloc
 # Pacho Ramos <pacho@gentoo.org> (20 Jul 2013)
 # Keywords pending, bug #476710
 >=gnome-base/gnome-extra-apps-3.8 games
-
-# Michael Weber <xmw@gentoo.org> (08 Jul 2013)
-# missing keywords on dev-python/pydns
-net-dns/rbldnsd test
 
 # Patrick Lauer <patrick@gentoo.org> (17 June 2013)
 # Fix per-arch mask of phonon[zeitgeist] #460140

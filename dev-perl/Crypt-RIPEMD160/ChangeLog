@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Crypt-RIPEMD160
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/ChangeLog,v 1.29 2012/09/02 17:32:13 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/ChangeLog,v 1.30 2014/08/21 14:26:12 axs Exp $
+
+*Crypt-RIPEMD160-0.50.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Crypt-RIPEMD160-0.50.0-r1.ebuild, -Crypt-RIPEMD160-0.50.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -Crypt-RIPEMD160-0.04.ebuild:
   Cleanup
