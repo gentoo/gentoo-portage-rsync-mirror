@@ -6,8 +6,8 @@ except /
 
 Patch by Kevin McCarthy <signals42@gmail.com>
 
---- teapot-2.3.0/fteapot.fl
-+++ teapot-2.3.0/fteapot.fl
+--- a/fteapot.fl
++++ b/fteapot.fl
 @@ -5,6 +5,10 @@
  decl {\#include <stdint.h>} {private global
  }

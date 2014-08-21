@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/teapot/teapot-2.3.0.ebuild,v 1.1 2013/05/31 13:49:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/teapot/teapot-2.3.0.ebuild,v 1.2 2014/08/21 07:30:49 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit cmake-utils flag-o-matic
 
 DESCRIPTION="A powerful spreadhseet program"
