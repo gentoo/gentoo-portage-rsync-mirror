@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.4.ebuild,v 1.2 2014/08/15 18:38:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.4-r1.ebuild,v 1.1 2014/08/21 08:02:11 jlec Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cairo debug examples hunspell +minimal +pdf scripts templates tk"
 
 # a=$(ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'); echo ${a}
@@ -128,7 +128,12 @@ src_install() {
 
 	mv "${ED}"/usr/share/doc/${PF}/{en,html} || die
 	ln -sf html "${ED}"/usr/share/doc/${PF}/en || die
-	docompress -x /usr/share/doc/${PF}/en
+	cat >> "${T}"/COPYING <<- EOF
+	${PN} is licensed under the "${LICENSE}".
+	Please visit http://www.gnu.org/licenses/gpl-2.0.html for the complete license text.
+	EOF
+	dodoc "${T}"/COPYING
+	docompress -x /usr/share/doc/${PF}/en /usr/share/doc/${PF}/{AUTHORS,TRANSLATION,LINKS,COPYING}
 	doicon resources/icons/scribus.png
 	domenu scribus.desktop
 }

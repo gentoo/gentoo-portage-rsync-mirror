@@ -1,6 +1,12 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.193 2014/08/15 18:38:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.194 2014/08/21 08:02:11 jlec Exp $
+
+*scribus-1.4.4-r1 (21 Aug 2014)
+
+  21 Aug 2014; Justin Lecher <jlec@gentoo.org> -scribus-1.4.4.ebuild,
+  +scribus-1.4.4-r1.ebuild:
+  Fix empty info tabs, #520114
 
   15 Aug 2014; Jeroen Roovers <jer@gentoo.org> scribus-1.4.4.ebuild:
   Stable for HPPA (bug #519890).

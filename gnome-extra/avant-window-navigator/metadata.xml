@@ -3,7 +3,6 @@
 <pkgmetadata>
   <use>
     <flag name='gconf'>Enable GConf as configuration backend</flag>
-    <flag name='vala'>Enable installation of <pkg>dev-lang/vala</pkg> binding</flag>
   </use>
   <herd>desktop-misc</herd>
   <longdescription>
