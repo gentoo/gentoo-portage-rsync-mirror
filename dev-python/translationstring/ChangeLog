@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/translationstring
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/ChangeLog,v 1.12 2014/03/31 21:13:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/ChangeLog,v 1.13 2014/08/21 01:22:27 idella4 Exp $
+
+  21 Aug 2014; Ian Delaney <idella4@gentoo.org> translationstring-1.1-r1.ebuild:
+  drop py2.6 pypy2_0 add py3.4
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> translationstring-1.1-r1.ebuild:
   Add support for the new PyPy slotting.

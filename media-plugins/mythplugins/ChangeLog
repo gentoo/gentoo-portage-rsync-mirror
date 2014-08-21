@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/mythplugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.31 2014/08/18 02:25:27 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.32 2014/08/21 01:07:16 rich0 Exp $
+
+  21 Aug 2014; Richard Freeman <rich0@gentoo.org>
+  -mythplugins-0.26.0_p20130322.ebuild, -mythplugins-0.26.0_p20130419.ebuild,
+  -mythplugins-0.26.0_p20130526.ebuild, -mythplugins-0.26.0_p20130630.ebuild,
+  -mythplugins-0.26.0_p20130729.ebuild, -mythplugins-0.27_p20130924.ebuild,
+  -mythplugins-0.27_p20131124.ebuild, -mythplugins-0.27.1_p20140527.ebuild:
+  Clean out old versions.
 
 *mythplugins-0.27.1_p20140817 (18 Aug 2014)
 
