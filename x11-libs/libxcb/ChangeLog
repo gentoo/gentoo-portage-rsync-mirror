@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.143 2014/07/29 14:27:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.144 2014/08/21 02:28:34 floppym Exp $
+
+  21 Aug 2014; Mike Gilbert <floppym@gentoo.org> libxcb-1.10.ebuild:
+  Add missing ${PYTHON_DEPS} to DEPEND, bug 520146.
 
   29 Jul 2014; Michał Górny <mgorny@gentoo.org> libxcb-1.10.ebuild,
   libxcb-1.9.3-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.10.ebuild,v 1.14 2014/07/29 14:27:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.10.ebuild,v 1.15 2014/08/21 02:28:34 floppym Exp $
 
 EAPI=5
 
@@ -26,6 +26,7 @@ RDEPEND=">=dev-libs/libpthread-stubs-0.3-r1[${MULTILIB_USEDEP}]
 # Note: ${PYTHON_USEDEP} needs to go verbatim
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
+	${PYTHON_DEPS}
 	$(python_gen_any_dep \
 		">=x11-proto/xcb-proto-1.10[${MULTILIB_USEDEP},\${PYTHON_USEDEP}]")"
 
