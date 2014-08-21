@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.1.ebuild,v 1.6 2014/08/10 20:20:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.2.ebuild,v 1.1 2014/08/21 20:44:22 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -85,7 +85,6 @@ RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 
 PATCHES=(
 	"${FILESDIR}/sphinx_mapping.patch"
-	"${FILESDIR}/neutron-2014.1.1-CVE-2014-3555.patch"
 )
 
 pkg_setup() {

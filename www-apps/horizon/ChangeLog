@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/horizon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/ChangeLog,v 1.32 2014/08/10 20:13:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/ChangeLog,v 1.33 2014/08/21 20:59:43 prometheanfire Exp $
+
+*horizon-2014.1.2 (21 Aug 2014)
+
+  21 Aug 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/2014.1.2-CVE-2014-3594.patch, +horizon-2014.1.2.ebuild,
+  -files/2014.1.1-CVE-2014-3473.patch, -horizon-2014.1.1-r1.ebuild:
+  bup, fix for bug 520420 CVE-2014-3594
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   horizon-2014.1.1-r1.ebuild, horizon-2014.1.9999.ebuild, horizon-9999.ebuild:

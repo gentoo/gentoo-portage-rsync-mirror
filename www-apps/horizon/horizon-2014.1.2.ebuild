@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-2014.1.1-r1.ebuild,v 1.2 2014/08/10 20:13:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-2014.1.2.ebuild,v 1.1 2014/08/21 20:59:43 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -40,6 +40,7 @@ RDEPEND=">=dev-python/django-1.4[${PYTHON_USEDEP}]
 		<dev-python/django-1.7[${PYTHON_USEDEP}]
 		>=dev-python/django-compressor-1.3[${PYTHON_USEDEP}]
 		>=dev-python/django-openstack-auth-1.1.4[${PYTHON_USEDEP}]
+		!~dev-python/django-openstack-auth-1.1.6[${PYTHON_USEDEP}]
 		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
 		>=dev-python/httplib2-0.7.5[${PYTHON_USEDEP}]
 		>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
@@ -58,10 +59,10 @@ RDEPEND=">=dev-python/django-1.4[${PYTHON_USEDEP}]
 		>=dev-python/python-swiftclient-1.6[${PYTHON_USEDEP}]
 		>=dev-python/python-troveclient-1.0.3[${PYTHON_USEDEP}]
 		>=dev-python/pytz-2010h[${PYTHON_USEDEP}]
-		>=dev-python/six-1.5.2[${PYTHON_USEDEP}]"
+		>=dev-python/six-1.6.0[${PYTHON_USEDEP}]"
 
 PATCHES=(
-	"${FILESDIR}/2014.1.1-CVE-2014-3473.patch"
+	"${FILESDIR}/2014.1.2-CVE-2014-3594.patch"
 )
 
 src_test() {
