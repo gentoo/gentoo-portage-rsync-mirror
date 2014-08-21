@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.276 2014/08/19 19:10:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.277 2014/08/21 05:16:37 polynomial-c Exp $
+
+  21 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> git-2.1.0.ebuild:
+  Don't install no longer available contrib files (git-diffall and vim).
 
 *git-2.1.0 (19 Aug 2014)
 

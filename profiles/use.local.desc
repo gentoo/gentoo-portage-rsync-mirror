@@ -7281,7 +7281,6 @@ www-servers/lighttpd:webdav - Enable webdav properties
 www-servers/monkeyd:debug - Enable lots of debugging info
 www-servers/monkeyd:jemalloc - Use dev-libs/jemalloc for allocations
 www-servers/monkeyd:minimal - Do not install shared lib and include files
-www-servers/monkeyd:musl - Enable musl compatibility mode
 www-servers/nginx:aio - Enables file AIO support
 www-servers/nginx:http - Enable HTTP core support
 www-servers/nginx:http-cache - Enable HTTP cache support
