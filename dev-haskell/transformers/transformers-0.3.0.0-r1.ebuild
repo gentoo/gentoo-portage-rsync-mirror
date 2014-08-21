@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers/transformers-0.3.0.0-r1.ebuild,v 1.8 2013/04/22 10:13:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers/transformers-0.3.0.0-r1.ebuild,v 1.9 2014/08/21 10:05:34 slyfox Exp $
 
 EAPI=5
 
@@ -20,11 +20,6 @@ IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.10.4:="
 DEPEND="${RDEPEND}
-		>=dev-haskell/cabal-1.6"
+	>=dev-haskell/cabal-1.6"
 
-CABAL_CORE_LIB_GHC_PV="7.7.2013*"
-
-src_configure() {
-	haskell-cabal_src_configure \
-		--flag=applicativeinbase
-}
+CABAL_CORE_LIB_GHC_PV="7.8.1 7.8.2 7.8.3"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/transformers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers/ChangeLog,v 1.19 2014/07/02 14:37:45 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers/ChangeLog,v 1.20 2014/08/21 10:05:34 slyfox Exp $
+
+  21 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  transformers-0.3.0.0-r1.ebuild:
+  Added as a core lib for ghc-7.8 (thanks to nacon.
 
 *transformers-0.4.1.0 (02 Jul 2014)
 
