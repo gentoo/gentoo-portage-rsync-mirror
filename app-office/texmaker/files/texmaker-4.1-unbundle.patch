@@ -29,13 +29,6 @@ index 51d2082..607f66e 100644
  #else
  QString dicDir=PREFIX"/share/texmaker/";
  #endif
-@@ -10835,4 +10835,4 @@ if (singlemode && currentEditorView())
- 	    UpdateBibliography();
- 	    }
- 	}
--}
-\ No newline at end of file
-+}
 diff --git a/texmaker.pro b/texmaker.pro
 index bce8dd4..2f205bb 100644
 --- a/texmaker.pro
