@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-6.5.14.ebuild,v 1.1 2014/08/21 08:58:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-6.5.14.ebuild,v 1.2 2014/08/21 13:50:16 jlec Exp $
 
 EAPI=5
 
@@ -108,13 +108,12 @@ src_install() {
 
 	if use doc; then
 		ebegin "Installing docs ..."
-			dodoc -r doc
-			dodoc *.txt */*.pdf
-			treecopy $(find -type f -name readme.txt) "${ED}"/usr/share/doc/${PF}/
+			treecopy $(find -type f \( -name readme.txt -o -name "*.pdf" \)) "${ED}"/usr/share/doc/${PF}/
+			docompress -x $(find "${ED}"/usr/share/doc/${PF}/ -type f -name readme.txt | sed -e "s:${ED}::")
 		eend
 	fi
 
-	crap+=" *.txt doc Samples.htm* */*.pdf"
+	crap+=" *.txt Samples.htm*"
 
 	ebegin "Cleaning before installation..."
 		for i in ${crap}; do
@@ -122,8 +121,7 @@ src_install() {
 				find ${i} -delete || die
 			fi
 		done
-		find -type f -name "*.o" -delete
-		find -type f -name "readme.txt" -delete
+		find -type f \( -name "*.o" -o -name "*.pdf" -o -name "readme.txt" \) -delete || die
 	eend
 
 	ebegin "Moving files..."
