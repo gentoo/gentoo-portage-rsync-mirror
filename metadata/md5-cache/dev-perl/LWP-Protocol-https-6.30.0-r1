@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=app-misc/ca-certificates >=dev-perl/libwww-perl-6.20.0 >=dev-perl/Net-HTTP-6 >=dev-perl/IO-Socket-SSL-1.540.0 virtual/perl-ExtUtils-MakeMaker || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=app-misc/ca-certificates >=dev-perl/libwww-perl-6.20.0 >=dev-perl/Net-HTTP-6 >=dev-perl/IO-Socket-SSL-1.540.0 virtual/perl-ExtUtils-MakeMaker dev-lang/perl:=[-build(-)]
 DESCRIPTION=Provide https support for LWP::UserAgent
-EAPI=4
+EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/LWP-Protocol-https/
 KEYWORDS=alpha amd64 arm arm64 hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=app-misc/ca-certificates >=dev-perl/libwww-perl-6.20.0 >=dev-perl/Net-HTTP-6 >=dev-perl/IO-Socket-SSL-1.540.0 || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=app-misc/ca-certificates >=dev-perl/libwww-perl-6.20.0 >=dev-perl/Net-HTTP-6 >=dev-perl/IO-Socket-SSL-1.540.0 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/G/GA/GAAS/LWP-Protocol-https-6.03.tar.gz http://dev.gentoo.org/~tove/distfiles/dev-perl/LWP-Protocol-https/LWP-Protocol-https_ca-cert-r1.patch.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=f5f7d2d2958dbc07126c5e8c83eaf1fe
+_md5_=1a6f22889db3ef4b479fe3c71fb5e43e

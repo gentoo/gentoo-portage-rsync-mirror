@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/hackrf-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hackrf-tools/ChangeLog,v 1.8 2014/05/01 14:41:53 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hackrf-tools/ChangeLog,v 1.9 2014/08/21 20:10:13 zerochaos Exp $
+
+*hackrf-tools-2014.04.1-r1 (21 Aug 2014)
+
+  21 Aug 2014; Rick Farina <zerochaos@gentoo.org>
+  +hackrf-tools-2014.04.1-r1.ebuild, -hackrf-tools-2013.06.1-r1.ebuild,
+  -hackrf-tools-2013.07.1.ebuild, -hackrf-tools-2014.04.1.ebuild,
+  hackrf-tools-9999.ebuild:
+  adding dfu recovery firmware, moving location as requested by upstream, fixing
+  udev rule
 
 *hackrf-tools-2014.04.1 (01 May 2014)
 
