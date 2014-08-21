@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.56 2014/08/19 08:57:46 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.57 2014/08/21 03:39:21 dlan Exp $
+
+  21 Aug 2014; Yixun Lan <dlan@gentoo.org> ceph-0.56.3.ebuild,
+  +files/ceph.confd, +files/ceph.initd:
+  roll back old stable versions, bug 520250
 
 *ceph-0.67.10 (19 Aug 2014)
 
