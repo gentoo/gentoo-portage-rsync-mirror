@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/TermReadKey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.53 2014/07/26 14:36:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.54 2014/08/21 18:08:49 axs Exp $
+
+*TermReadKey-2.300.200-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +TermReadKey-2.300.200-r1.ebuild, -TermReadKey-2.300.200.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -TermReadKey-2.300.0.ebuild:

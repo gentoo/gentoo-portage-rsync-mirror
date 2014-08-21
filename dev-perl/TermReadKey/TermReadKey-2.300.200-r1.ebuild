@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/TermReadKey-2.300.200.ebuild,v 1.12 2014/01/20 23:11:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/TermReadKey-2.300.200-r1.ebuild,v 1.1 2014/08/21 18:08:49 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=STSI
 MODULE_VERSION=2.30.02
