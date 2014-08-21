@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.65 2014/08/16 21:10:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.66 2014/08/21 00:54:03 blueness Exp $
+
+  21 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  +linux/musl/mips/package.mask:
+  Mask some packages for musl/mipsel
 
   16 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
   -linux/uclibc/amd64/make.defaults, -linux/uclibc/amd64/package.mask,
