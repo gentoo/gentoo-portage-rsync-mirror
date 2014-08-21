@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/mysql-5.1.67-init.d-r1,v 1.1 2014/05/16 01:49:43 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/init.d-2.0,v 1.1 2014/08/21 03:08:13 grknight Exp $
+
+extra_commands="checkconfig"
 
 depend() {
 	use net.lo
@@ -36,6 +38,9 @@ start() {
 		return 1
 	fi
 
+	# Check the config or die
+	checkconfig || return 1
+
 	# Now we can startup
 	ebegin "Starting $(mysql_svcname)"
 
@@ -51,6 +56,12 @@ start() {
 	local datadir=$(get_config "${MY_CNF}" datadir | tail -n1)
 	local pidfile=$(get_config "${MY_CNF}" pid-file | tail -n1)
 	local socket=$(get_config "${MY_CNF}" socket | tail -n1)
+	local chroot=$(get_config "${MY_CNF}" chroot | tail -n1)
+
+	if [ -n "${chroot}" ] ; then
+		socket="${chroot}/${socket}"
+		pidfile="${chroot}/${pidfile}"
+	fi
 
 	if [ ! -d "${datadir}" ] ; then
 		eerror "MySQL datadir \`${datadir}' is empty or invalid"
@@ -121,5 +132,22 @@ stop() {
 		--retry ${stop_timeout}
 	eend $?
 }
+
+checkconfig() {
+	local basedir=$(get_config "${MY_CNF}" basedir | tail -n1)
+	ebegin "Checking mysqld configuration"
+
+	# Suppress output to check the return value
+	"${basedir}"/sbin/mysqld --help --verbose &> /dev/null
+
+	# If the above command does not return 0,
+	# then there is an error to echo to the user
+	if [ $? -ne 0 ] ; then
+		"${basedir}"/sbin/mysqld --help --verbose > /dev/null
+	fi
+
+	eend $? "MySQL config check failed"
+}
+
 # vim: filetype=gentoo-init-d sw=2 ts=2 sts=2 noet:
 

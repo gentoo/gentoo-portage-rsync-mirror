@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.0_pre1-r7.ebuild,v 1.2 2014/08/10 20:01:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.0.ebuild,v 1.1 2014/08/21 03:08:13 grknight Exp $
 
 EAPI=5
 
@@ -23,8 +23,8 @@ RDEPEND="!<dev-db/mysql-5.1"
 S=${WORKDIR}
 
 src_install() {
-	newconfd "${FILESDIR}/mysql-5.1.53-conf.d" "mysql"
-	newinitd "${FILESDIR}/mysql-5.1.67-init.d-r1" "mysql"
+	newconfd "${FILESDIR}/conf.d-${PV}" "mysql"
+	newinitd "${FILESDIR}/init.d-${PV}" "mysql"
 
 	# systemd unit installation
 	exeinto /usr/libexec
