@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20140815.ebuild,v 1.2 2014/08/20 18:22:23 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20140815.ebuild,v 1.3 2014/08/20 23:11:11 ottxor Exp $
 
 EAPI=5
 
@@ -49,7 +49,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples gzip lammps-memalign mpi static-libs"
 
 DEPEND="
-	mpi? ( virtual/mpi )
+	mpi? (
+		virtual/blas
+		virtual/lapack
+		virtual/mpi
+	)
 	sci-libs/voro++
 	"
 RDEPEND="${DEPEND}"
@@ -74,6 +78,7 @@ lmp_emake() {
 		MPI_INC=$(usex mpi '' "-I../STUBS") \
 		MPI_PATH=$(usex mpi '' '-L../STUBS') \
 		MPI_LIB=$(usex mpi '' '-lmpi_stubs') \
+		user-atc_SYSLIB="$(usex mpi "$($(tc-getPKG_CONFIG) --libs blas) $($(tc-getPKG_CONFIG) --libs lapack)" '')"\
 		"$@"
 }
 

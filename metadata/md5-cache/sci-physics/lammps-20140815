@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install prepare setup
-DEPEND=mpi? ( virtual/mpi ) sci-libs/voro++ virtual/fortran
+DEPEND=mpi? ( virtual/blas virtual/lapack virtual/mpi ) sci-libs/voro++ virtual/fortran
 DESCRIPTION=Large-scale Atomic/Molecular Massively Parallel Simulator
 EAPI=5
 HOMEPAGE=http://lammps.sandia.gov/
 IUSE=doc examples gzip lammps-memalign mpi static-libs
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=mpi? ( virtual/mpi ) sci-libs/voro++ virtual/fortran
+RDEPEND=mpi? ( virtual/blas virtual/lapack virtual/mpi ) sci-libs/voro++ virtual/fortran
 SLOT=0
 SRC_URI=http://lammps.sandia.gov/tars/lammps-15Aug14.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=2f717be2a9af7da32c37d8b052b4006c
+_md5_=0d4eb3a5de475190a648b3122ad90301
