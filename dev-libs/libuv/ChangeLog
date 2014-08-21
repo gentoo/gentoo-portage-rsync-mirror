@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libuv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.23 2014/08/14 16:39:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.24 2014/08/21 12:51:36 armin76 Exp $
+
+  21 Aug 2014; Raúl Porcel <armin76@gentoo.org> libuv-0.11.22.ebuild,
+  libuv-0.11.22-r1.ebuild, libuv-0.11.24.ebuild, libuv-0.11.25-r1.ebuild,
+  libuv-0.11.26.ebuild, libuv-0.11.27.ebuild:
+  Add ~sparc wrt #488294
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> libuv-0.11.25-r1.ebuild:
   x86 stable wrt bug #518244

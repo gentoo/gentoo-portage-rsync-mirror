@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/lockdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.22 2014/07/15 21:11:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.23 2014/08/21 12:52:24 armin76 Exp $
+
+  21 Aug 2014; Raúl Porcel <armin76@gentoo.org> lockdev-1.0.3.1.2-r2.ebuild,
+  lockdev-1.0.3.1.2-r3.ebuild:
+  Add ~sparc wrt bug #493156
 
   15 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -lockdev-1.0.3.1.2-r1.ebuild,
   lockdev-1.0.3.1.2-r3.ebuild:

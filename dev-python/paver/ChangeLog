@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.40 2014/08/20 05:15:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.41 2014/08/21 12:40:12 armin76 Exp $
+
+  21 Aug 2014; Raúl Porcel <armin76@gentoo.org> paver-1.1.1.ebuild,
+  paver-1.1.1-r1.ebuild, paver-1.2.0.ebuild, paver-1.2.1.ebuild,
+  paver-1.2.2.ebuild, paver-1.2.3.ebuild:
+  Add ~sparc wrt bug #454638
 
 *paver-1.2.3 (20 Aug 2014)
 
