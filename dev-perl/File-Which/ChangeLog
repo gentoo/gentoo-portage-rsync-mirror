@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/File-Which
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.34 2012/09/01 11:36:04 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.35 2014/08/21 19:31:39 axs Exp $
+
+*File-Which-1.90.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +File-Which-1.90.0-r1.ebuild, -File-Which-1.90.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> File-Which-1.90.0.ebuild:
   Marked ~ppc-aix, bug #432288

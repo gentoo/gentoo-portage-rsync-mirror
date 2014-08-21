@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Template-Toolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.82 2014/03/06 10:36:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.83 2014/08/21 19:45:50 axs Exp $
+
+*Template-Toolkit-2.250.0-r1 (21 Aug 2014)
+*Template-Toolkit-2.240.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Template-Toolkit-2.240.0-r1.ebuild, +Template-Toolkit-2.250.0-r1.ebuild,
+  -Template-Toolkit-2.240.0.ebuild, -Template-Toolkit-2.250.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   06 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
   Template-Toolkit-2.250.0.ebuild:

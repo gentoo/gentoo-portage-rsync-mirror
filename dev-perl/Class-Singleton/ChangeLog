@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Class-Singleton
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.34 2014/02/02 00:01:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.35 2014/08/21 19:31:15 axs Exp $
+
+*Class-Singleton-1.400.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Class-Singleton-1.400.0-r1.ebuild, -Class-Singleton-1.400.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   02 Feb 2014; Mike Frysinger <vapier@gentoo.org>
   Class-Singleton-1.400.0.ebuild:

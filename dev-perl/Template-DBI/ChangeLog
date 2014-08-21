@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Template-DBI
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/ChangeLog,v 1.33 2012/09/03 04:32:58 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/ChangeLog,v 1.34 2014/08/21 19:45:26 axs Exp $
+
+*Template-DBI-2.650.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Template-DBI-2.650.0-r1.ebuild, -Template-DBI-2.650.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   03 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
   Template-DBI-2.650.0.ebuild:

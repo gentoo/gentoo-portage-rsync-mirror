@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Template-Latex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.22 2012/09/02 18:06:07 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.23 2014/08/21 19:41:11 axs Exp $
+
+*Template-Latex-2.170.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Template-Latex-2.170.0-r1.ebuild, -Template-Latex-2.170.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   02 Sep 2012; Raúl Porcel <armin76@gentoo.org> Template-Latex-2.170.0.ebuild:
   Drop alpha keywords
@@ -82,4 +89,3 @@
   15 Aug 2006; Christian Hartmann <ian@gentoo.org> +files/Makefile.patch,
   +metadata.xml, +Template-Latex-2.17.ebuild:
   New package
-

@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/XML-RSS
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.102 2014/03/09 07:24:05 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.103 2014/08/21 19:37:39 axs Exp $
+
+*XML-RSS-1.540.0-r1 (21 Aug 2014)
+*XML-RSS-1.490.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +XML-RSS-1.490.0-r1.ebuild, +XML-RSS-1.540.0-r1.ebuild,
+  -XML-RSS-1.490.0.ebuild, -XML-RSS-1.540.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   09 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> XML-RSS-1.540.0.ebuild:
   alpha stable wrt bug #495518

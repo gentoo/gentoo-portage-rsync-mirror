@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/IPC-Run3
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.64 2013/01/06 23:48:21 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.65 2014/08/21 19:34:12 axs Exp $
+
+*IPC-Run3-0.45.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +IPC-Run3-0.45.0-r1.ebuild, -IPC-Run3-0.45.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   06 Jan 2013; Mike Frysinger <vapier@gentoo.org> IPC-Run3-0.45.0.ebuild:
   Mark s390/sh stable.

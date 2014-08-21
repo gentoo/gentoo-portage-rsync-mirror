@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=virtual/perl-Module-Build-0.35 >=dev-perl/Params-Validate-0.91 dev-perl/List-MoreUtils dev-lang/perl:=[-build(-)]
+DESCRIPTION=Localization support for DateTime
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/DateTime-Locale/
+KEYWORDS=alpha amd64 arm arm64 hppa ia64 ppc ppc64 s390 sh sparc x86 ~ppc-aix ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
+LICENSE=|| ( Artistic GPL-2 ) unicode
+RDEPEND=>=dev-perl/Params-Validate-0.91 dev-perl/List-MoreUtils dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/D/DR/DROLSKY/DateTime-Locale-0.45.tar.gz
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=292395abd84239d3c1c67bff6abbcd6f

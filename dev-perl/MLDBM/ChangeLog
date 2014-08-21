@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/MLDBM
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.42 2013/09/05 15:11:38 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.43 2014/08/21 19:44:36 axs Exp $
+
+*MLDBM-2.40.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +MLDBM-2.40.0-r1.ebuild, -MLDBM-2.40.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   05 Sep 2013; Ian Delaney <idella4@gentoo.org> -MLDBM-2.01.ebuild:
   drop old

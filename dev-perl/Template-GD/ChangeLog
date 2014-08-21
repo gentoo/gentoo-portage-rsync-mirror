@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Template-GD
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.24 2012/09/02 18:06:54 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.25 2014/08/21 19:43:17 axs Exp $
+
+*Template-GD-2.660.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Template-GD-2.660.0-r1.ebuild, -Template-GD-2.660.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   02 Sep 2012; Raúl Porcel <armin76@gentoo.org> Template-GD-2.660.0.ebuild:
   Drop alpha keywords
