@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/socket-sentry/socket-sentry-0.9.3.ebuild,v 1.2 2014/08/05 16:31:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/socket-sentry/socket-sentry-0.9.3-r1.ebuild,v 1.1 2014/08/21 17:47:53 johu Exp $
 
 EAPI=5
 
-inherit kde4-base
+inherit kde4-base user
 
 MY_PN="socketsentry"
 MY_P="${MY_PN}-${PV}"
@@ -29,9 +29,30 @@ PATCHES=( "${FILESDIR}/${PN}-0.9.3-automagictests.patch" )
 
 S="${WORKDIR}/${MY_P}"
 
+# tests fails to build, new gtest related?
+RESTRICT="test"
+
+pkg_setup() {
+	kde4-base_pkg_setup
+
+	SOCKETSENTRY_GROUP=${MY_PN}
+	enewgroup ${SOCKETSENTRY_GROUP}
+}
+
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_with test TESTS)
 	)
 	cmake-utils_src_configure
+}
+
+pkg_postinst() {
+	kde4-base_pkg_postinst
+
+	ewarn
+	ewarn "Remember, in order to use ${PN} plasmoid, you have to"
+	ewarn "be in the '${SOCKETSENTRY_GROUP}' group."
+	ewarn
+	ewarn "Just run 'gpasswd -a <USER> ${SOCKETSENTRY_GROUP}', then have <USER> re-login."
+	ewarn
 }

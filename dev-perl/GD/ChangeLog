@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/GD
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.114 2014/06/10 01:06:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.115 2014/08/21 17:45:59 axs Exp $
+
+*GD-2.460.0-r1 (21 Aug 2014)
+*GD-2.500.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +GD-2.460.0-r1.ebuild,
+  +GD-2.500.0-r1.ebuild, -GD-2.460.0.ebuild, -GD-2.500.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> GD-2.460.0.ebuild,
   GD-2.500.0.ebuild:

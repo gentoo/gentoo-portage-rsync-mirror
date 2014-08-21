@@ -1,18 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.500.0.ebuild,v 1.3 2014/06/10 01:06:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.460.0-r1.ebuild,v 1.1 2014/08/21 17:45:59 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=LDS
-MODULE_VERSION=2.50
+MODULE_VERSION=2.46
 inherit perl-module
 
 DESCRIPTION="interface to Thomas Boutell's gd library"
 
 LICENSE="|| ( Artistic-2 GPL-1 GPL-2 GPL-3 )" # Artistic-2 or GPL1+
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 ~arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="animgif gif jpeg png truetype xpm"
 
 RDEPEND=">=media-libs/gd-2.0.33
