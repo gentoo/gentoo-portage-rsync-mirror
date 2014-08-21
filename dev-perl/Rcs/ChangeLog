@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Rcs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Rcs/ChangeLog,v 1.6 2012/06/24 12:58:38 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Rcs/ChangeLog,v 1.7 2014/08/21 18:45:05 axs Exp $
+
+*Rcs-1.50.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +Rcs-1.50.0-r1.ebuild,
+  -Rcs-1.50.0.ebuild:
+  bump EAPI to 5 to help with dev-lang/perl upgrades
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

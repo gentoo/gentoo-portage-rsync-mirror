@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/Readonly-1.30.0.ebuild,v 1.11 2014/05/26 12:04:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/Readonly-1.30.0-r1.ebuild,v 1.1 2014/08/21 18:37:12 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=ROODE
 MODULE_VERSION=1.03

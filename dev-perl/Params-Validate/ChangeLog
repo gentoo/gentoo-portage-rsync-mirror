@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Params-Validate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.122 2014/03/19 17:54:43 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.123 2014/08/21 18:37:04 axs Exp $
+
+*Params-Validate-1.70.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Params-Validate-1.70.0-r1.ebuild, -Params-Validate-1.70.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   19 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -Params-Validate-1.0.0.ebuild,
   -Params-Validate-1.60.0.ebuild, Params-Validate-1.80.0.ebuild:

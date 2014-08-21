@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Readonly
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.21 2014/05/26 12:04:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.23 2014/08/21 18:38:04 axs Exp $
+
+*Readonly-1.30.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Readonly-1.30.0-r1.ebuild, -Readonly-1.30.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes
+  present and revbump helps stable systems to keep from dieing on perl-5.18
+  upgrade
 
   26 May 2014; Jeroen Roovers <jer@gentoo.org> Readonly-1.30.0.ebuild:
   Stable for HPPA too.

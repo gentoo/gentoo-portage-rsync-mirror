@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Test-Taint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.35 2014/03/15 06:14:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.36 2014/08/21 18:36:55 axs Exp $
+
+*Test-Taint-1.60.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Test-Taint-1.60.0-r1.ebuild, -Test-Taint-1.60.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   15 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> Test-Taint-1.60.0.ebuild:
   Add ~sh keyword wrt bug #484456

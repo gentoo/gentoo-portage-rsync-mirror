@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Readonly-XS
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly-XS/ChangeLog,v 1.13 2014/03/18 13:22:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly-XS/ChangeLog,v 1.14 2014/08/21 18:39:01 axs Exp $
+
+*Readonly-XS-1.50.0-r1 (21 Aug 2014)
+
+  21 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Readonly-XS-1.50.0-r1.ebuild, -Readonly-XS-1.50.0.ebuild:
+  bumped EAPI to 5, to help with dev-lang/perl upgrades
 
   18 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> Readonly-XS-1.50.0.ebuild:
   Add ~sh keyword wrt bug #484458
