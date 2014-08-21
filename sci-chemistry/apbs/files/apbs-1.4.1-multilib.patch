@@ -31,7 +31,7 @@ index 75ddbdd..c46f5e7 100644
          set(TABI_LIBRARY_BASENAME ${CMAKE_STATIC_LIBRARY_PREFIX}${TABI}${CMAKE_STATIC_LIBRARY_SUFFIX})
      endif()
 -    
-+	
++
 +    file(GLOB MODS ${LIBRARY_OUTPUT_PATH}/*.mod)
 +
      install(
@@ -70,18 +70,6 @@ index 75ddbdd..c46f5e7 100644
      
      SET(HAVE_MC_H YES)
  endif()
-diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 44d20fa..5d5150b 100644
---- a/src/CMakeLists.txt
-+++ b/src/CMakeLists.txt
-@@ -23,7 +23,6 @@ macro(add_items TYPE)
- endmacro()
- 
- 
--
- macro(add_sublibrary LIBRARY)
-     set(LIBRARY_NAME "apbs_${LIBRARY}")
-     set(LIBRARY_DEPENDENCIES ${APBS_LIBS} ${ARGN})
 diff --git a/src/fem/CMakeLists.txt b/src/fem/CMakeLists.txt
 index 5a950c2..dc37f48 100644
 --- a/src/fem/CMakeLists.txt
