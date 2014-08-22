@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.123 2014/07/30 22:12:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.124 2014/08/22 04:36:54 prometheanfire Exp $
+
+*radvd-2.5 (22 Aug 2014)
+
+  22 Aug 2014; Matthew Thode <prometheanfire@gentoo.org> +radvd-2.5.ebuild:
+  bup and possible fixes for bug 518814 and bug 520332
 
 *radvd-2.3 (30 Jul 2014)
 
