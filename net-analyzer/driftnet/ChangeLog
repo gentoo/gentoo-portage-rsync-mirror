@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/driftnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.45 2014/07/27 11:18:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.46 2014/08/22 14:30:54 creffett Exp $
+
+*driftnet-0.1.6-r5 (22 Aug 2014)
+
+  22 Aug 2014; Christopher Reffett <2011creffett@gentoo.org>
+  +driftnet-0.1.6-r5.ebuild:
+  QA: revbump, convert to EAPI 5.
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   driftnet-0.1.6_p20090401.ebuild:
