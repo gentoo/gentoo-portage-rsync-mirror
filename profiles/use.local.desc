@@ -1866,6 +1866,11 @@ dev-libs/m17n-lib:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
 dev-libs/m17n-lib:gd - Build API and utilities based on media-libs/gd. This flag is only meaningful if the X USE flag is also enabled.
 dev-libs/m17n-lib:libotf - Use dev-libs/libotf to handle OpenType fonts
 dev-libs/m17n-lib:libxml2 - Use dev-libs/libxml2 to parse XML
+dev-libs/marisa:popcnt - Enable popcnt instruction support
+dev-libs/marisa:sse4 - Enable sse4 instruction support
+dev-libs/marisa:sse4.1 - Enable sse4.1 instruction support
+dev-libs/marisa:sse4.2 - Enable sse4.2 instruction support
+dev-libs/marisa:sse4a - Enable sse4a instruction support
 dev-libs/nss:cacert - Include root certs from CAcert (http://http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
 dev-libs/nss:nss-pem - Add support for libnsspem
 dev-libs/nss:utils - Install utilities included with the library

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-1.2.ebuild,v 1.2 2014/08/03 14:22:30 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-1.2.ebuild,v 1.3 2014/08/22 02:51:26 dlan Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ RDEPEND="app-i18n/opencc
 	dev-cpp/glog
 	>=dev-cpp/yaml-cpp-0.5.0
 	dev-db/kyotocabinet
+	dev-libs/marisa
 	>=dev-libs/boost-1.46.0[threads(+)]
 	sys-libs/zlib
 	x11-proto/xproto"

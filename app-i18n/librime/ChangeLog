@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/librime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.17 2014/08/03 14:22:30 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.18 2014/08/22 02:51:26 dlan Exp $
+
+  22 Aug 2014; Yixun Lan <dlan@gentoo.org> librime-1.2.ebuild:
+  fix broken marisa dep, bug 519000, thanks Wang Bin for reporting
 
   03 Aug 2014; Yixun Lan <dlan@gentoo.org> librime-1.2.ebuild:
   correct url, bug 518736, thanks huyh <huyuehui at yahoo.com> for reporting

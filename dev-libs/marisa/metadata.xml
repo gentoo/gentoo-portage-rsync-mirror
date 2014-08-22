@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>cjk</herd>
+<longdescription lang="en">
+</longdescription>
+<use>
+	<flag name='sse4.1'>Enable sse4.1 instruction support</flag>
+	<flag name='sse4.2'>Enable sse4.2 instruction support</flag>
+	<flag name='sse4'>Enable sse4 instruction support</flag>
+	<flag name='sse4a'>Enable sse4a instruction support</flag>
+	<flag name='popcnt'>Enable popcnt instruction support</flag>
+</use>
+</pkgmetadata>
