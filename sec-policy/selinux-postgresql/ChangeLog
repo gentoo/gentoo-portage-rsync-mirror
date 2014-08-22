@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-postgresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postgresql/ChangeLog,v 1.74 2014/08/21 19:31:16 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postgresql/ChangeLog,v 1.75 2014/08/22 17:40:09 swift Exp $
+
+  22 Aug 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-postgresql-2.20140311-r5.ebuild:
+  Stabilize r5 policies
 
 *selinux-postgresql-2.20140311-r6 (21 Aug 2014)
 

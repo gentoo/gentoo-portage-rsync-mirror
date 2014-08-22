@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/dcaenc
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dcaenc/ChangeLog,v 1.1 2014/08/22 17:50:07 beandog Exp $
+
+*dcaenc-2 (22 Aug 2014)
+
+  22 Aug 2014; Steve Dibb <beandog@gentoo.org> +dcaenc-2.ebuild, +metadata.xml:
+  Initial commit, bug 491232
+

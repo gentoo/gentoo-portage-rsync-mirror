@@ -1,4 +1,8 @@
 
+  22 Aug 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-pan-2.20140311-r5.ebuild:
+  Stabilize r5 policies
+
 *selinux-pan-2.20140311-r6 (21 Aug 2014)
 
   21 Aug 2014; Sven Vermeulen <swift@gentoo.org>

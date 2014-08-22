@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-2.20140311-r5.ebuild,v 1.1 2014/08/09 19:34:44 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-2.20140311-r5.ebuild,v 1.2 2014/08/22 17:40:11 swift Exp $
 EAPI="5"
 
 inherit eutils
@@ -17,7 +17,7 @@ else
 	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
 			http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-${PVR}.tar.bz2"
 
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 IUSE="+peer_perms +open_perms +ubac +unconfined doc"

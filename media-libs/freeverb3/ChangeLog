@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freeverb3
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/ChangeLog,v 1.41 2013/12/18 20:27:18 sping Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/ChangeLog,v 1.42 2014/08/22 17:43:26 sping Exp $
+
+*freeverb3-3.1.1 (22 Aug 2014)
+
+  22 Aug 2014; Sebastian Pipping <sping@gentoo.org> +freeverb3-3.1.1.ebuild:
+  Bump to 3.1.1
 
 *freeverb3-3.1.0 (18 Dec 2013)
 

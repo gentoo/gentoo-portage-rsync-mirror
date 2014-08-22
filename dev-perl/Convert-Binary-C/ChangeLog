@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Convert-Binary-C
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-Binary-C/ChangeLog,v 1.15 2014/05/24 07:38:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-Binary-C/ChangeLog,v 1.16 2014/08/22 17:40:52 axs Exp $
+
+*Convert-Binary-C-0.760.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Convert-Binary-C-0.760.0-r1.ebuild, -Convert-Binary-C-0.760.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   24 May 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #199047

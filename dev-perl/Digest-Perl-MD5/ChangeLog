@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Digest-Perl-MD5
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.24 2013/04/25 21:30:00 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.25 2014/08/22 17:49:30 axs Exp $
+
+*Digest-Perl-MD5-1.800.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Digest-Perl-MD5-1.800.0-r1.ebuild, -Digest-Perl-MD5-1.800.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   25 Apr 2013; Agostino Sarubbo <ago@gentoo.org> Digest-Perl-MD5-1.800.0.ebuild:
   Stable for sh, wrt bug #449298

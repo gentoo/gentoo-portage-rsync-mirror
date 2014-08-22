@@ -3,10 +3,10 @@ DEPEND=sec-policy/selinux-daemontools >=sys-apps/policycoreutils-2.0.82 >=sec-po
 DESCRIPTION=SELinux policy for djbdns
 EAPI=5
 HOMEPAGE=http://www.gentoo.org/proj/en/hardened/selinux/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=sec-policy/selinux-daemontools >=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20140311-r5
 SLOT=0
 SRC_URI=http://oss.tresys.com/files/refpolicy/refpolicy-2.20140311.tar.bz2 http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-2.20140311-r5.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	selinux-policy-2	e23f1e94b172891df53bcdd02951088e	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=21646c77b691b7484637ddc1bb8a7949
+_md5_=887a00873255b96e60c10cfcc5264df0

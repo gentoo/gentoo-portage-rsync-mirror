@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20140311-r5.ebuild,v 1.1 2014/08/09 19:34:19 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20140311-r5.ebuild,v 1.2 2014/08/22 17:40:04 swift Exp $
 EAPI="5"
 
 inherit eutils
@@ -16,7 +16,7 @@ if [[ ${PV} == 9999* ]]; then
 else
 	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
 			http://dev.gentoo.org/~swift/patches/${PN}/patchbundle-${PN}-${PVR}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
@@ -27,7 +27,7 @@ IUSE="+unconfined"
 RDEPEND="=sec-policy/selinux-base-${PVR}"
 PDEPEND="unconfined? ( sec-policy/selinux-unconfined )"
 DEPEND=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 MODS="application authlogin bootloader clock consoletype cron dmesg fstools getty hostname hotplug init iptables libraries locallogin logging lvm miscfiles modutils mount mta netutils nscd portage raid rsync selinuxutil setrans ssh staff storage su sysadm sysnetwork tmpfiles udev userdomain usermanage unprivuser xdg"
 LICENSE="GPL-2"

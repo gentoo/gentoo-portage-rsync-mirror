@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/HTTP-Server-Simple
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Server-Simple/ChangeLog,v 1.58 2013/01/13 13:31:35 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Server-Simple/ChangeLog,v 1.59 2014/08/22 17:59:57 axs Exp $
+
+*HTTP-Server-Simple-0.440.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +HTTP-Server-Simple-0.440.0-r1.ebuild, -HTTP-Server-Simple-0.440.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   13 Jan 2013; Markus Meier <maekke@gentoo.org>
   HTTP-Server-Simple-0.440.0.ebuild:
