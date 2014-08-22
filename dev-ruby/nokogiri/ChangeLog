@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.101 2014/08/15 07:19:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.102 2014/08/22 07:27:29 graaff Exp $
+
+*nokogiri-1.6.3.1 (22 Aug 2014)
+
+  22 Aug 2014; Hans de Graaff <graaff@gentoo.org> +nokogiri-1.6.3.1.ebuild:
+  Version bump.
 
   15 Aug 2014; Hans de Graaff <graaff@gentoo.org> nokogiri-1.6.0.ebuild:
   Nokogiri checks compiled vs. runtime version of libxml2 and will start

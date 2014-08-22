@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1120 2014/08/19 17:38:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1121 2014/08/22 07:06:01 phajdan.jr Exp $
+
+  22 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-37.0.2062.68.ebuild, chromium-38.0.2125.0.ebuild:
+  Depend on >=gnome-base/libgnome-keyring-3.12, bug #520078 by Yuriy Rusinov.
 
 *chromium-38.0.2125.0 (19 Aug 2014)
 
