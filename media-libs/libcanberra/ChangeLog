@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.108 2014/04/27 07:40:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.109 2014/08/22 14:33:17 ssuominen Exp $
+
+  22 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  libcanberra-0.30-r1.ebuild:
+  Pull in virtual/libudev with := instead of virtual/udev.
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -libcanberra-0.29.ebuild:
   drop old

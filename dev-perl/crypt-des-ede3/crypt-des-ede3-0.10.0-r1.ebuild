@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-des-ede3/crypt-des-ede3-0.10.0.ebuild,v 1.2 2011/09/03 21:05:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-des-ede3/crypt-des-ede3-0.10.0-r1.ebuild,v 1.1 2014/08/22 14:47:41 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MY_PN=Crypt-DES_EDE3
 MODULE_AUTHOR=BTROTT

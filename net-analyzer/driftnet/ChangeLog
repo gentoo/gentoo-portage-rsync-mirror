@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/driftnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.46 2014/08/22 14:30:54 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.47 2014/08/22 14:37:56 creffett Exp $
+
+  22 Aug 2014; Christopher Reffett <2011creffett@gentoo.org>
+  -driftnet-0.1.6-r5.ebuild:
+  shouldn't have committed that, didn't realize that the _p20090401 version
+  superseded the -r4 version
 
 *driftnet-0.1.6-r5 (22 Aug 2014)
 
