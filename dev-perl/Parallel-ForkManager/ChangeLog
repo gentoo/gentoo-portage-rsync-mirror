@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Parallel-ForkManager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parallel-ForkManager/ChangeLog,v 1.23 2014/06/27 10:17:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parallel-ForkManager/ChangeLog,v 1.24 2014/08/22 19:47:17 axs Exp $
+
+*Parallel-ForkManager-1.20.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Parallel-ForkManager-1.20.0-r1.ebuild, -Parallel-ForkManager-1.20.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   27 Jun 2014; Mikle Kolyada <zlogene@gentoo.org>
   -Parallel-ForkManager-0.7.5.ebuild, Parallel-ForkManager-1.20.0.ebuild:

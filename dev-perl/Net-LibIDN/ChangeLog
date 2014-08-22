@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-LibIDN
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-LibIDN/ChangeLog,v 1.27 2012/06/24 12:58:37 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-LibIDN/ChangeLog,v 1.28 2014/08/22 19:43:12 axs Exp $
+
+*Net-LibIDN-0.120.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Net-LibIDN-0.120.0-r1.ebuild, -Net-LibIDN-0.120.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

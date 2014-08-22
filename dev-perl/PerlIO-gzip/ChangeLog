@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/PerlIO-gzip
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-gzip/ChangeLog,v 1.17 2013/02/18 13:26:50 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-gzip/ChangeLog,v 1.18 2014/08/22 19:48:46 axs Exp $
+
+*PerlIO-gzip-0.180.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +PerlIO-gzip-0.180.0-r1.ebuild, -PerlIO-gzip-0.180.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   18 Feb 2013; Alexis Ballier <aballier@gentoo.org> PerlIO-gzip-0.180.0.ebuild:
   keyword ~amd64-fbsd

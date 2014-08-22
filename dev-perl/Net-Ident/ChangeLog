@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-Ident
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.31 2012/09/01 11:43:52 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.32 2014/08/22 19:42:16 axs Exp $
+
+*Net-Ident-1.230.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Net-Ident-1.230.0-r1.ebuild, -Net-Ident-1.230.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Net-Ident-1.230.0.ebuild:
   Marked ~ppc-aix, bug #432288
