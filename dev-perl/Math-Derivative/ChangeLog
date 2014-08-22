@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Math-Derivative
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Derivative/ChangeLog,v 1.8 2014/05/24 07:39:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Derivative/ChangeLog,v 1.9 2014/08/22 17:26:19 axs Exp $
+
+*Math-Derivative-0.10.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Math-Derivative-0.10.0-r1.ebuild, -Math-Derivative-0.10.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   24 May 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #199047

@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Class-Data-Inheritable
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Data-Inheritable/ChangeLog,v 1.46 2012/09/01 11:18:28 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Data-Inheritable/ChangeLog,v 1.47 2014/08/22 17:16:15 axs Exp $
+
+*Class-Data-Inheritable-0.80.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Class-Data-Inheritable-0.80.0-r1.ebuild,
+  -Class-Data-Inheritable-0.80.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   Class-Data-Inheritable-0.80.0.ebuild:
