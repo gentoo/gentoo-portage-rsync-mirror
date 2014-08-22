@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/text-template
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-template/ChangeLog,v 1.30 2013/12/27 17:35:20 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-template/ChangeLog,v 1.31 2014/08/22 20:28:30 axs Exp $
+
+*text-template-1.460.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +text-template-1.460.0-r1.ebuild, -text-template-1.460.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   27 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> text-template-1.460.0.ebuild:
   alpha stable wrt bug #495556

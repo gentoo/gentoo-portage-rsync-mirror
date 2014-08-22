@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Proc-Simple
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.44 2013/06/30 21:10:22 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.45 2014/08/22 20:10:35 axs Exp $
+
+*Proc-Simple-1.310.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Proc-Simple-1.310.0-r1.ebuild, -Proc-Simple-1.310.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> Proc-Simple-1.310.0.ebuild:
   Stable for ppc, wrt bug #449610

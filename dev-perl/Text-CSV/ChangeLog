@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Text-CSV
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.56 2014/03/15 10:03:00 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.57 2014/08/22 20:24:32 axs Exp $
+
+*Text-CSV-1.320.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Text-CSV-1.320.0-r1.ebuild, -Text-CSV-1.320.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   15 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> Text-CSV-1.320.0.ebuild:
   alpha stable wrt bug #495494

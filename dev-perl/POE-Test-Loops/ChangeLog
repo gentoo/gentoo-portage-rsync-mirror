@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/POE-Test-Loops
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Test-Loops/ChangeLog,v 1.41 2014/03/05 15:26:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Test-Loops/ChangeLog,v 1.42 2014/08/22 20:10:00 axs Exp $
+
+*POE-Test-Loops-1.353.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +POE-Test-Loops-1.353.0-r1.ebuild, -POE-Test-Loops-1.353.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> POE-Test-Loops-1.353.0.ebuild:
   Stable for ppc, wrt bug #495442

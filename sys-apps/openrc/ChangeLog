@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.305 2014/08/20 15:34:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.308 2014/08/22 20:17:35 williamh Exp $
+
+  22 Aug 2014; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  sync live ebuild
+
+  22 Aug 2014; William Hubbs <williamh@gentoo.org> -openrc-0.13.ebuild:
+  remove broken version
+
+*openrc-0.13.1 (22 Aug 2014)
+
+  22 Aug 2014; William Hubbs <williamh@gentoo.org> +openrc-0.13.1.ebuild:
+  version bump for regression #520606
 
   20 Aug 2014; William Hubbs <williamh@gentoo.org> openrc-0.13.ebuild,
   openrc-9999.ebuild:

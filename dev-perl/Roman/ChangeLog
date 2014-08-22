@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Roman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Roman/ChangeLog,v 1.9 2014/07/11 10:33:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Roman/ChangeLog,v 1.10 2014/08/22 20:13:26 axs Exp $
+
+*Roman-1.230.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Roman-1.230.0-r1.ebuild, -Roman-1.230.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   11 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> Roman-1.230.0.ebuild:
   Add ~arm64 keyword
