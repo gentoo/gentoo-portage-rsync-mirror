@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/HTTP-Daemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.30 2014/01/20 23:24:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.31 2014/08/22 16:25:12 axs Exp $
+
+*HTTP-Daemon-6.10.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +HTTP-Daemon-6.10.0-r1.ebuild, -HTTP-Daemon-6.10.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> HTTP-Daemon-6.10.0.ebuild:
   Add arm64 love.

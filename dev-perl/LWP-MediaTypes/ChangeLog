@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/LWP-MediaTypes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-MediaTypes/ChangeLog,v 1.30 2014/01/20 23:24:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-MediaTypes/ChangeLog,v 1.31 2014/08/22 16:24:25 axs Exp $
+
+*LWP-MediaTypes-6.20.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +LWP-MediaTypes-6.20.0-r1.ebuild, -LWP-MediaTypes-6.20.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> LWP-MediaTypes-6.20.0.ebuild:
   Add arm64 love.

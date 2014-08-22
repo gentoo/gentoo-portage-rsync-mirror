@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/File-Listing
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Listing/ChangeLog,v 1.35 2014/01/20 23:25:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Listing/ChangeLog,v 1.36 2014/08/22 16:06:29 axs Exp $
+
+*File-Listing-6.40.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +File-Listing-6.40.0-r1.ebuild, -File-Listing-6.40.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> File-Listing-6.40.0.ebuild:
   Add arm64 love.

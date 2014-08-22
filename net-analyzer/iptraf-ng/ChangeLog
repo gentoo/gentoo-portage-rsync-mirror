@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/iptraf-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.78 2014/05/06 16:37:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.79 2014/08/22 16:10:02 jer Exp $
+
+*iptraf-ng-1.1.4-r2 (22 Aug 2014)
+
+  22 Aug 2014; Jeroen Roovers <jer@gentoo.org> +iptraf-ng-1.1.4-r2.ebuild,
+  +files/iptraf-ng-1.1.4-printf-format.patch,
+  +files/iptraf-ng-1.1.4-sprintf-format.patch:
+  Fix three format security bugs (already fixed upstream, bug #520562).
 
   06 May 2014; Jeroen Roovers <jer@gentoo.org> -iptraf-ng-1.1.3.1-r2.ebuild,
   -files/iptraf-ng-1.1.3.1-kernel-v3.5-kill-off-token-ring-support.patch:

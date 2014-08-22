@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Font-TTF
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.37 2012/09/11 20:31:09 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.38 2014/08/22 16:13:30 axs Exp $
+
+*Font-TTF-1.20.0-r1 (22 Aug 2014)
+*Font-TTF-0.480.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Font-TTF-0.480.0-r1.ebuild, +Font-TTF-1.20.0-r1.ebuild,
+  -Font-TTF-0.480.0.ebuild, -Font-TTF-1.20.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   11 Sep 2012; Alexis Ballier <aballier@gentoo.org> Font-TTF-1.20.0.ebuild:
   keyword ~amd64-fbsd, bug #433451
