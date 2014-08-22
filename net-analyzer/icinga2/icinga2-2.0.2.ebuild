@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.0.0.ebuild,v 1.1 2014/06/16 15:35:03 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.0.2.ebuild,v 1.1 2014/08/22 05:27:00 prometheanfire Exp $
 
 EAPI=5
 inherit depend.apache eutils cmake-utils toolchain-funcs user versionator systemd
@@ -50,9 +50,8 @@ src_configure() {
 		-DICINGA2_GROUP=icingacmd
 		-DICINGA2_COMMAND_USER=icinga
 		-DICINGA2_COMMAND_GROUP=icingacmd
+		-DINSTALL_SYSTEMD_SERVICE_AND_INITSCRIPT=yes
 	)
-#		-DUSE_SYSTEMD=ON
-
 	cmake-utils_src_configure
 }
 
@@ -95,10 +94,13 @@ src_install() {
 	keepdir /var/lib/icinga/archives
 	keepdir /var/lib/icinga/rw
 	keepdir /var/lib/icinga/spool/checkresults
-	keepdir /usr/var/lib/icinga2
+
+	#remove dirs that shouldn't be installed
+	rm -r "${D}var/run" || die "failed to remove  /var/run"
+	rm -r "${D}var/cache" || die "failed to remove /var/cache"
 
 	fowners icinga:icinga /var/lib/icinga || die "Failed chown of /var/lib/icinga"
-	fowners icinga:icinga /usr/var/lib/icinga2 || die "Failed chown of /usr/var/lib/icinga2"
+	fowners icinga:icinga /var/lib/icinga2 || die "Failed chown of /var/lib/icinga2"
 }
 
 pkg_postinst() {
