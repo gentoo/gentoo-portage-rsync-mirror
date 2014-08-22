@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15979 2014/08/22 03:44:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15980 2014/08/22 21:17:12 slyfox Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -42,11 +42,6 @@
 # t7004-tag.sh testsuite causes segfault when run in portage's sandbox
 # (bug #520270).
 =dev-vcs/git-2.1.0
-
-# Sergei Trofimovich <slyfox@gentoo.org> (19 Aug 2014)
-# Handling complex conditions broke php's lexer (bug #518904).
-# Working on it upstream.
->=dev-util/re2c-0.13.7.2
 
 # Sergey Popov <pinkbyte@gentoo.org> (14 Aug 2014)
 # Mask new version of Boost - it's known to cause breakages,

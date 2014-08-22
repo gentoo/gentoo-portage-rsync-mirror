@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dugong
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/ChangeLog,v 1.8 2014/08/20 07:57:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/ChangeLog,v 1.9 2014/08/22 21:03:50 radhermit Exp $
+
+  22 Aug 2014; Tim Harder <radhermit@gentoo.org> -dugong-2.2.ebuild,
+  -dugong-3.0.ebuild, -dugong-3.1.ebuild:
+  Remove old.
 
   20 Aug 2014; Ian Delaney <idella4@gentoo.org> +files/3.3-test-timeout.patch,
   dugong-3.3.ebuild:

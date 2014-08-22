@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/UNIVERSAL-isa
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-isa/ChangeLog,v 1.14 2013/06/11 19:06:02 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-isa/ChangeLog,v 1.15 2014/08/22 21:13:50 axs Exp $
+
+*UNIVERSAL-isa-1.201.207.260-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +UNIVERSAL-isa-1.201.207.260-r1.ebuild, -UNIVERSAL-isa-1.201.207.260.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   11 Jun 2013; Markus Meier <maekke@gentoo.org>
   UNIVERSAL-isa-1.201.207.260.ebuild:

@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Spreadsheet-ParseExcel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.74 2013/04/25 21:29:54 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.75 2014/08/22 21:11:17 axs Exp $
+
+*Spreadsheet-ParseExcel-0.590.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Spreadsheet-ParseExcel-0.590.0-r1.ebuild,
+  -Spreadsheet-ParseExcel-0.590.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   25 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   Spreadsheet-ParseExcel-0.590.0.ebuild:

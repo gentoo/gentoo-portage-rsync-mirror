@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Math-Calc-Units
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Calc-Units/ChangeLog,v 1.11 2012/12/06 04:13:56 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Calc-Units/ChangeLog,v 1.12 2014/08/22 21:03:51 axs Exp $
+
+*Math-Calc-Units-1.70.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Math-Calc-Units-1.70.0-r1.ebuild, -Math-Calc-Units-1.70.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Math-Calc-Units-1.70.0.ebuild:

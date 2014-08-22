@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/net-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.83 2014/03/10 10:55:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.84 2014/08/22 21:05:34 axs Exp $
+
+*net-server-2.7.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +net-server-2.7.0-r1.ebuild, -net-server-2.7.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   10 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -net-server-0.97.ebuild,
   -net-server-0.990.0.ebuild, -net-server-2.6.0.ebuild:

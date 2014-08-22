@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Expect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.23 2012/10/21 08:56:36 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.24 2014/08/22 21:27:23 axs Exp $
+
+*Expect-1.210.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Expect-1.210.0-r1.ebuild, -Expect-1.210.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org> Expect-1.210.0.ebuild:
   add ~arm, bug #389547

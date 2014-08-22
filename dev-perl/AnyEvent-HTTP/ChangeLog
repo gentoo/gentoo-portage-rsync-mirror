@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/AnyEvent-HTTP
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent-HTTP/ChangeLog,v 1.11 2013/06/18 18:08:59 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent-HTTP/ChangeLog,v 1.12 2014/08/22 21:16:27 axs Exp $
+
+*AnyEvent-HTTP-2.150.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +AnyEvent-HTTP-2.150.0-r1.ebuild, -AnyEvent-HTTP-2.150.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   18 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> AnyEvent-HTTP-2.150.0.ebuild:
   amd64/x86 stable wrt bug #449570

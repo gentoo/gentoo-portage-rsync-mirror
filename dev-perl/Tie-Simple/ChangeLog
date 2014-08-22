@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Tie-Simple
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Simple/ChangeLog,v 1.8 2012/09/14 08:38:02 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Simple/ChangeLog,v 1.9 2014/08/22 21:12:03 axs Exp $
+
+*Tie-Simple-1.03-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Tie-Simple-1.03-r1.ebuild, -Tie-Simple-1.03.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   14 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Leave the package to the perl@ herd.
