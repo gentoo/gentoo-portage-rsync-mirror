@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Lingua-Stem-It
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/ChangeLog,v 1.20 2012/06/24 12:58:21 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/ChangeLog,v 1.21 2014/08/22 18:08:42 axs Exp $
+
+*Lingua-Stem-It-0.20.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Lingua-Stem-It-0.20.0-r1.ebuild, -Lingua-Stem-It-0.20.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

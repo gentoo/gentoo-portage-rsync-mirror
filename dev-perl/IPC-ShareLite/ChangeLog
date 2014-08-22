@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/IPC-ShareLite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.39 2012/11/23 13:08:50 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.40 2014/08/22 18:04:00 axs Exp $
+
+*IPC-ShareLite-0.170.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +IPC-ShareLite-0.170.0-r1.ebuild, -IPC-ShareLite-0.170.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   IPC-ShareLite-0.170.0.ebuild:

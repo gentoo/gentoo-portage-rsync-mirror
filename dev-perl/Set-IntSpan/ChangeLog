@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Set-IntSpan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/ChangeLog,v 1.53 2014/03/09 11:22:25 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/ChangeLog,v 1.54 2014/08/22 18:17:03 axs Exp $
+
+*Set-IntSpan-1.190.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Set-IntSpan-1.190.0-r1.ebuild, -Set-IntSpan-1.190.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   09 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> Set-IntSpan-1.190.0.ebuild:
   alpha stable wrt bug #495470

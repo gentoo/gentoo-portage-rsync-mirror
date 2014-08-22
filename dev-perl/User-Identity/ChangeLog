@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/User-Identity
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/User-Identity/ChangeLog,v 1.5 2014/02/15 03:14:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/User-Identity/ChangeLog,v 1.6 2014/08/22 18:29:16 axs Exp $
+
+*User-Identity-0.930.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +User-Identity-0.930.0-r1.ebuild, -User-Identity-0.930.0.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
 *User-Identity-0.940.0 (15 Feb 2014)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Linux-Pid
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-Pid/ChangeLog,v 1.13 2012/11/13 15:54:31 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-Pid/ChangeLog,v 1.14 2014/08/22 18:11:04 axs Exp $
+
+*Linux-Pid-0.40.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Linux-Pid-0.40.0-r1.ebuild, -Linux-Pid-0.40.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   13 Nov 2012; Brent Baude <ranger@gentoo.org> Linux-Pid-0.40.0.ebuild:
   Marking Linux-Pid-0.40.0 ppc64 for bug 432610

@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.59 2014/07/10 17:53:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.60 2014/08/22 18:05:45 axs Exp $
+
+*libintl-perl-1.200.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +libintl-perl-1.200.0-r1.ebuild, -libintl-perl-1.200.0.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
   10 Jul 2014; Fabian Groffen <grobian@gentoo.org> libintl-perl-1.230.0.ebuild:
   Marked ~m68k-mint, bug #516634

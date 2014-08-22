@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/IO-Multiplex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.39 2014/05/01 12:13:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.40 2014/08/22 18:02:16 axs Exp $
+
+*IO-Multiplex-1.130.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +IO-Multiplex-1.130.0-r1.ebuild, -IO-Multiplex-1.130.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   01 May 2014; Mikle Kolyada <zlogene@gentoo.org> -IO-Multiplex-1.09.ebuild,
   IO-Multiplex-1.130.0.ebuild:
