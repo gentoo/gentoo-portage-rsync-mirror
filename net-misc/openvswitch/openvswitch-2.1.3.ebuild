@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.9.0.ebuild,v 1.5 2014/08/10 20:46:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.1.3.ebuild,v 1.1 2014/08/22 04:28:25 prometheanfire Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit eutils linux-info linux-mod python-single-r1
+inherit eutils linux-info linux-mod python-single-r1 systemd autotools
 
 DESCRIPTION="Production quality, multilayer virtual switch"
 HOMEPAGE="http://openvswitch.org"
@@ -15,7 +15,7 @@ SRC_URI="http://openvswitch.org/releases/${P}.tar.gz"
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug modules monitor +pyside +ssl"
+IUSE="debug modules monitor +ssl"
 
 RDEPEND=">=sys-apps/openrc-0.10.5
 	ssl? ( dev-libs/openssl )
@@ -24,20 +24,21 @@ RDEPEND=">=sys-apps/openrc-0.10.5
 		dev-python/twisted-core
 		dev-python/twisted-conch
 		dev-python/twisted-web
-		pyside? ( dev-python/pyside[${PYTHON_USEDEP}] )
-		!pyside? ( dev-python/PyQt4[${PYTHON_USEDEP}] )
+		dev-python/PyQt4[${PYTHON_USEDEP}]
 		net-zope/zope-interface[${PYTHON_USEDEP}] )
 	debug? ( dev-lang/perl )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 CONFIG_CHECK="~NET_CLS_ACT ~NET_CLS_U32 ~NET_SCH_INGRESS ~NET_ACT_POLICE ~IPV6 ~TUN"
-MODULE_NAMES="brcompat(net:${S}/datapath/linux) openvswitch(net:${S}/datapath/linux)"
+MODULE_NAMES="openvswitch(net:${S}/datapath/linux)"
 BUILD_TARGETS="all"
 
 pkg_setup() {
 	if use modules ; then
 		CONFIG_CHECK+=" ~!OPENVSWITCH"
+		kernel_is ge 2 6 32 || die "Linux >= 2.6.32 and <= 3.12 required for userspace modules"
+		kernel_is lt 3 12 || die "Linux >= 2.6.32 and <= 3.12 required for userspace modules"
 		linux-mod_pkg_setup
 	else
 		CONFIG_CHECK+=" ~OPENVSWITCH"
@@ -51,14 +52,18 @@ src_prepare() {
 	sed -i \
 		-e '/^SUBDIRS/d' \
 		datapath/Makefile.in || die "sed failed"
+	epatch "${FILESDIR}/xcp-interface-reconfigure.patch"
+	epatch "${FILESDIR}/kernel-3.12-support.patch"
+	eautoreconf
 }
 src_configure() {
 	set_arch_to_kernel
 	use monitor || export ovs_cv_python="no"
-	use pyside || export ovs_cv_pyuic4="no"
+	#pyside is staticly disabled
+	export ovs_cv_pyuic4="no"
 
 	local linux_config
-	use modules && linux_config="--with-linux=${KERNEL_DIR}"
+	use modules && linux_config="--with-linux=${KV_OUT_DIR}"
 
 	econf ${linux_config} \
 		--with-rundir=/var/run/openvswitch \
@@ -74,8 +79,7 @@ src_compile() {
 
 	use monitor && python_fix_shebang \
 		utilities/ovs-{pcap,tcpundump,test,vlan-test} \
-		utilities/bugtool/ovs-bugtool \
-		ovsdb/ovsdbmonitor/ovsdbmonitor
+		utilities/bugtool/ovs-bugtool
 
 	use modules && linux-mod_src_compile
 }
@@ -100,12 +104,14 @@ src_install() {
 	use monitor || rmdir "${ED}/usr/share/ovsdbmonitor"
 	use debug || rm "${ED}/usr/bin/ovs-parse-leaks"
 
-	newconfd "${FILESDIR}/ovsdb-server_conf" ovsdb-server
+	newconfd "${FILESDIR}/ovsdb-server_conf2" ovsdb-server
 	newconfd "${FILESDIR}/ovs-vswitchd_conf" ovs-vswitchd
-	newconfd "${FILESDIR}/ovs-controller_conf" ovs-controller
 	newinitd "${FILESDIR}/ovsdb-server-r1" ovsdb-server
 	newinitd "${FILESDIR}/ovs-vswitchd-r1" ovs-vswitchd
-	newinitd "${FILESDIR}/ovs-controller-r1" ovs-controller
+
+	systemd_dounit "${FILESDIR}/ovsdb-server.service"
+	systemd_dounit "${FILESDIR}/ovs-vswitchd.service"
+	systemd_newtmpfilesd "${FILESDIR}/openvswitch.tmpfiles" openvswitch.conf
 
 	insinto /etc/logrotate.d
 	newins rhel/etc_logrotate.d_openvswitch openvswitch
