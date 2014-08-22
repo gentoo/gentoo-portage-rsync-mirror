@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.875 2014/08/21 09:46:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.876 2014/08/22 09:29:01 olemarkus Exp $
+
+*php-5.5.16 (22 Aug 2014)
+
+  22 Aug 2014; Ole Markus With <olemarkus@gentoo.org> +php-5.5.16.ebuild,
+  metadata.xml:
+  Version bump of php 5.5. Added webp support
 
   21 Aug 2014; Agostino Sarubbo <ago@gentoo.org> php-5.3.29.ebuild:
   Stable for ppc, wrt bug #519932

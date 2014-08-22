@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.1.12.ebuild,v 1.4 2014/06/26 14:49:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.1.12.ebuild,v 1.5 2014/08/22 09:26:25 voyageur Exp $
 
 EAPI=4
 inherit eutils multilib systemd toolchain-funcs user
@@ -20,6 +20,7 @@ REQUIRED_USE="|| ( postgres sqlite )"
 DEPEND="doc? ( sys-apps/man )"
 RDEPEND="dev-perl/Capture-Tiny
 	dev-perl/Config-Simple
+	dev-perl/File-BaseDir
 	dev-perl/File-ReadBackwards
 	media-fonts/font-cursor-misc
 	media-fonts/font-misc-misc
@@ -27,6 +28,7 @@ RDEPEND="dev-perl/Capture-Tiny
 	net-misc/openssh
 	x11-apps/xauth
 	x11-apps/xhost
+	x11-apps/xwininfo
 	fuse? ( sys-fs/sshfs-fuse )
 	postgres? ( dev-perl/DBD-Pg )
 	sqlite? ( dev-perl/DBD-SQLite )"
