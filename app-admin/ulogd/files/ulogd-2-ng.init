@@ -1,22 +1,23 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/files/ulogd-2-ng.init,v 1.1 2013/12/17 21:38:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/files/ulogd-2-ng.init,v 1.2 2014/08/22 10:31:59 dlan Exp $
 
 ULOGD_PIDFILE="/run/ulogd.pid"
-ULOGD_EXEC="/usr/sbin/ulogd"
+ULOGD_BINARY="/usr/sbin/ulogd"
 ULOGD_OPTS="--daemon --uid ulogd --pidfile ${ULOGD_PIDFILE}"
 
 extra_started_commands="reload reopen_logs"
 
 depend() {
-	need net
+	before iptables ip6tables ebtables firewall
+	after mysql postgresql
 }
 
 start() {
 	ebegin "Starting ${SVCNAME}"
-	start-stop-daemon --start --quiet \
-		--exec ${ULOGD_EXEC} \
+	start-stop-daemon --start \
+		--exec ${ULOGD_BINARY} --pidfile ${ULOGD_PIDFILE} \
 		-- ${ULOGD_OPTS}
 	eend $?
 }

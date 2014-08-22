@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.88 2014/07/13 10:01:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.89 2014/08/22 10:31:59 dlan Exp $
+
+  22 Aug 2014; Yixun Lan <dlan@gentoo.org> files/ulogd-2-ng.init,
+  files/ulogd-2.init:
+  bug 520294, fix init script issue. proxy for itumaykin at gmail.com
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> ulogd-2.0.3.ebuild:
   Stable for ppc, wrt bug #508846
