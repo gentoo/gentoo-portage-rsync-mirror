@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=virtual/perl-IO-Compress virtual/perl-File-Spec dev-lang/perl:=[-build(-)]
+DESCRIPTION=A library to extract height/width from images
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Image-Size/
+KEYWORDS=amd64 ppc ppc64 x86
+LICENSE=|| ( Artistic-2 LGPL-2.1 )
+RDEPEND=virtual/perl-IO-Compress virtual/perl-File-Spec dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/R/RJ/RJRAY/Image-Size-3.232.tar.gz
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=c6b4d7f79f64fab65aaa6c0b04cf3604

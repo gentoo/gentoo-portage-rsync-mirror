@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Text-Diff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.31 2014/08/05 13:21:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.32 2014/08/22 20:47:24 axs Exp $
+
+*Text-Diff-1.410.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Text-Diff-1.410.0-r1.ebuild, -Text-Diff-1.410.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> Text-Diff-1.410.0.ebuild:
   Fix DESCRIPTION

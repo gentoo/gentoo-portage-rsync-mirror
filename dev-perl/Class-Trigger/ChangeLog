@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Class-Trigger
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.51 2013/11/04 18:09:25 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.52 2014/08/22 20:41:29 axs Exp $
+
+*Class-Trigger-0.140.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Class-Trigger-0.140.0-r1.ebuild, -Class-Trigger-0.140.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   04 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> Class-Trigger-0.140.0.ebuild:
   Add ~arm and ~mips keywords

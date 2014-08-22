@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Graph
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.73 2014/02/22 13:26:01 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.74 2014/08/22 20:49:27 axs Exp $
+
+*Graph-0.960.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Graph-0.960.0-r1.ebuild, -Graph-0.960.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   22 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> -Graph-0.940.0.ebuild,
   Graph-0.960.0.ebuild:

@@ -1,6 +1,17 @@
 # ChangeLog for dev-perl/Data-Stag
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stag/ChangeLog,v 1.11 2014/05/24 07:38:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stag/ChangeLog,v 1.12 2014/08/22 20:54:02 axs Exp $
+
+*Data-Stag-0.110.0-r1 (22 Aug 2014)
+*Data-Stag-0.140.0-r1 (22 Aug 2014)
+*Data-Stag-0.130.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Data-Stag-0.110.0-r1.ebuild, +Data-Stag-0.130.0-r1.ebuild,
+  +Data-Stag-0.140.0-r1.ebuild, -Data-Stag-0.110.0.ebuild,
+  -Data-Stag-0.130.0.ebuild, -Data-Stag-0.140.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   24 May 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #199047
