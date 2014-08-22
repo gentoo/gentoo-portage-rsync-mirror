@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/YAML-Syck
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.55 2014/05/14 20:52:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.56 2014/08/22 18:35:20 axs Exp $
+
+*YAML-Syck-1.200.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +YAML-Syck-1.200.0-r1.ebuild, -YAML-Syck-1.200.0.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
   14 May 2014; Mikle Kolyada <zlogene@gentoo.org> -YAML-Syck-1.210.0.ebuild,
   -YAML-Syck-1.220.0.ebuild, -YAML-Syck-1.250.0.ebuild:

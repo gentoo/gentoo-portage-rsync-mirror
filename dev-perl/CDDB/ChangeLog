@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/CDDB
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB/ChangeLog,v 1.37 2013/08/25 06:49:46 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB/ChangeLog,v 1.38 2014/08/22 18:48:28 axs Exp $
+
+*CDDB-1.220.0-r1 (22 Aug 2014)
+*CDDB-1.222.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +CDDB-1.220.0-r1.ebuild, +CDDB-1.222.0-r1.ebuild, -CDDB-1.220.0.ebuild,
+  -CDDB-1.222.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
 *CDDB-1.222.0 (25 Aug 2013)
 

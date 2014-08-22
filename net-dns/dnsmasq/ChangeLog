@@ -1,6 +1,15 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.252 2014/08/03 16:59:53 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.253 2014/08/22 18:38:14 chutzpah Exp $
+
+*dnsmasq-2.71-r1 (22 Aug 2014)
+
+  22 Aug 2014; Patrick McLean <chutzpah@gentoo.org> -dnsmasq-2.67.ebuild,
+  -dnsmasq-2.68.ebuild, -dnsmasq-2.70.ebuild, +dnsmasq-2.71-r1.ebuild:
+  Revision bump, clean up USE flag handling a bit. Install example
+  configuration file as a doc as well as the default config. Make sure
+  /var/lib/misc/dnsmasq.leases exists and is owned by dnsmasq (bug #520396).
+  Clean out some old versions.
 
   03 Aug 2014;  <tgall@gentoo.org> dnsmasq-2.66.ebuild, dnsmasq-2.71.ebuild:
   arm64, initial support

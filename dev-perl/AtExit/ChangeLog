@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/AtExit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AtExit/ChangeLog,v 1.19 2012/11/18 11:07:29 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AtExit/ChangeLog,v 1.20 2014/08/22 18:36:04 axs Exp $
+
+*AtExit-2.10.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +AtExit-2.10.0-r1.ebuild, -AtExit-2.10.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.
