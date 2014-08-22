@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prepare
+DEPEND=selinux? ( sec-policy/selinux-cachefilesd ) virtual/pkgconfig
+DESCRIPTION=Provides a caching directory on an already mounted filesystem
+EAPI=5
+HOMEPAGE=http://people.redhat.com/~dhowells/fscache/
+IUSE=doc selinux
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=selinux? ( sec-policy/selinux-cachefilesd )
+SLOT=0
+SRC_URI=http://people.redhat.com/~dhowells/fscache/cachefilesd-0.10.5.tar.bz2 -> cachefilesd-0.10.5.tar
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=2955972ae7807ba7df4c46bf5bf2e53f

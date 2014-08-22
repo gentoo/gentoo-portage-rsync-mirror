@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Archive-Zip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.88 2014/02/19 10:37:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.89 2014/08/22 14:01:01 axs Exp $
+
+*Archive-Zip-1.300.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Archive-Zip-1.300.0-r1.ebuild, -Archive-Zip-1.300.0.ebuild:
+  bumped 1.300.0 EAPI to 5; committed directly to stable as no other changes
+  present and revbump helps stable systems to keep from dieing on perl-5.18
+  upgrade
 
 *Archive-Zip-1.370.0 (19 Feb 2014)
 
