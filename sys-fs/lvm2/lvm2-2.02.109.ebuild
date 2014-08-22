@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.109.ebuild,v 1.2 2014/08/22 11:54:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.109.ebuild,v 1.3 2014/08/22 21:45:31 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -96,6 +96,8 @@ src_prepare() {
 
 	# Without thin-privision-tools, there is nothing to install for target install_man7:
 	use thin || { sed -i -e '/^install_lvm2/s:install_man7::' man/Makefile.in || die; }
+
+	sed -i -e 's:|share):|shared):' configure.in || die #520640
 
 	eautoreconf
 }
