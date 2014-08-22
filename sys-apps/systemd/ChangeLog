@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.303 2014/08/20 07:44:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.304 2014/08/22 10:22:16 mgorny Exp $
+
+*systemd-216 (22 Aug 2014)
+
+  22 Aug 2014; Michał Górny <mgorny@gentoo.org> +systemd-216.ebuild:
+  Version bump.
 
   20 Aug 2014; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
   Handle IDN dependency for resolved.

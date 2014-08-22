@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/reviewboard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/ChangeLog,v 1.9 2014/07/05 14:53:03 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/ChangeLog,v 1.10 2014/08/22 10:26:40 idella4 Exp $
+
+  22 Aug 2014; Ian Delaney <idella4@gentoo.org> -reviewboard-1.7.12.ebuild:
+  remove old unviable version
 
   05 Jul 2014; Michael Palimaka <kensington@gentoo.org> metadata.xml:
   Remove myself as a maintainer.
