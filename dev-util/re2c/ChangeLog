@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/re2c
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.74 2014/07/27 08:42:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.75 2014/08/22 19:26:26 slyfox Exp $
+
+  22 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> re2c-0.13.7.2.ebuild:
+  Added 'epatch_user' to ease patch testing.
 
 *re2c-0.13.7.2 (27 Jul 2014)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Convert-UUlib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.66 2012/09/02 17:34:00 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.67 2014/08/22 19:07:36 axs Exp $
+
+*Convert-UUlib-1.400.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Convert-UUlib-1.400.0-r1.ebuild, -Convert-UUlib-1.400.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -Convert-UUlib-1.340.ebuild:
   Cleanup

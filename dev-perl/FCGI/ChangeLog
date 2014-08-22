@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/FCGI
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.30 2014/02/22 09:40:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.31 2014/08/22 19:15:57 axs Exp $
+
+*FCGI-0.740.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +FCGI-0.740.0-r1.ebuild, -FCGI-0.740.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   22 Feb 2014; Ulrich Müller <ulm@gentoo.org> FCGI-0.740.0.ebuild:
   Fix LICENSE, "openmarket" is a duplicate of "FastCGI".

@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/locale-maketext-fuzzy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-fuzzy/ChangeLog,v 1.25 2013/02/07 21:57:24 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-fuzzy/ChangeLog,v 1.26 2014/08/22 19:29:12 axs Exp $
+
+*locale-maketext-fuzzy-0.110.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +locale-maketext-fuzzy-0.110.0-r1.ebuild,
+  -locale-maketext-fuzzy-0.110.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org>
   locale-maketext-fuzzy-0.110.0.ebuild:
