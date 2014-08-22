@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-3.14.2.ebuild,v 1.2 2014/06/20 06:00:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-3.14.2.ebuild,v 1.3 2014/08/22 09:36:50 floppym Exp $
 
 EAPI=5
 
@@ -27,12 +27,12 @@ SLOT="0/${libbtrfs_soname}"
 IUSE=""
 
 RDEPEND="
-	dev-libs/lzo
-	sys-libs/zlib
-	sys-apps/acl
-	sys-fs/e2fsprogs
+	dev-libs/lzo:2=
+	sys-libs/zlib:0=
+	sys-fs/e2fsprogs:0=
 "
 DEPEND="${RDEPEND}
+	sys-apps/acl
 	app-text/asciidoc
 	app-text/docbook-xml-dtd:4.5
 	app-text/xmlto

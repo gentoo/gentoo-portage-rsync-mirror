@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.81 2014/06/20 06:00:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.82 2014/08/22 09:36:50 floppym Exp $
+
+  22 Aug 2014; Mike Gilbert <floppym@gentoo.org> -btrfs-progs-3.14.1-r1.ebuild,
+  -btrfs-progs-3.14.1.ebuild, -btrfs-progs-3.14_pre20140414.ebuild,
+  btrfs-progs-3.14.2.ebuild, btrfs-progs-9999.ebuild:
+  Add slot-operator deps. Remove acl from RDEPEND.
 
   20 Jun 2014; Mike Gilbert <floppym@gentoo.org>
   +files/btrfs-progs-3.14.2-install-man.patch, btrfs-progs-3.14.2.ebuild:
