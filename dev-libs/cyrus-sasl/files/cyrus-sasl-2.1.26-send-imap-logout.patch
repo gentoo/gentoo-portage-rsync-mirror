@@ -12,7 +12,7 @@
      int	s=-1;				/* socket to remote auth host   */
      struct addrinfo *r;			/* remote socket address info   */
      struct iovec iov[5];		/* for sending LOGIN command    */
-+    struct iovec iov2[1];               /* for sending LOGOUT command   */
++    struct iovec iov2[2];               /* for sending LOGOUT command   */
      char *qlogin;			/* pointer to "quoted" login    */
      char *qpass;			/* pointer to "quoted" password */
      char *c;				/* scratch pointer              */

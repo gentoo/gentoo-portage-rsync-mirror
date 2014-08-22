@@ -1,17 +1,17 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.3-r1.ebuild,v 1.5 2013/11/09 15:30:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-1.0.0_rc2.ebuild,v 1.1 2014/08/22 12:00:03 voyageur Exp $
 
 EAPI="5"
 inherit eutils readme.gentoo systemd
 
 DESCRIPTION="Portable DHCPv6 implementation (server, client and relay)"
 HOMEPAGE="http://klub.com.pl/dhcpv6/"
-SRC_URI="http://klub.com.pl/dhcpv6/dibbler/${P}.tar.gz"
+SRC_URI="http://klub.com.pl/dhcpv6/dibbler/${P/_rc/RC}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~mips x86"
+KEYWORDS="~amd64 ~hppa ~mips ~x86"
 IUSE="doc"
 
 DEPEND="doc? ( || (
@@ -19,6 +19,8 @@ DEPEND="doc? ( || (
 		dev-tex/floatflt )
 	)"
 RDEPEND=""
+
+S=${WORKDIR}/${P/_rc/RC}
 
 DOC_CONTENTS="Make sure that you modify client.conf, server.conf and/or relay.conf
 to suit your needs. They are stored in /etc/dibbler"
