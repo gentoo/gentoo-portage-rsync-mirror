@@ -1,6 +1,20 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.141 2014/07/12 13:59:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.143 2014/08/22 15:25:20 jer Exp $
+
+*fail2ban-99999999 (22 Aug 2014)
+
+  22 Aug 2014; Jeroen Roovers <jer@gentoo.org> +fail2ban-99999999.ebuild:
+  Add live ebuild.
+
+*fail2ban-0.9.0-r2 (22 Aug 2014)
+*fail2ban-0.8.14 (22 Aug 2014)
+
+  22 Aug 2014; Jeroen Roovers <jer@gentoo.org> +fail2ban-0.8.14.ebuild,
+  -fail2ban-0.9.0-r1.ebuild, +fail2ban-0.9.0-r2.ebuild,
+  +files/fail2ban-0.9.0-loglevel-int.patch:
+  Version bump. Add patch for loglevel expected to be an int (bug #520536 by
+  Fabio Scaccabarozzi).
 
   12 Jul 2014; Jeroen Roovers <jer@gentoo.org> fail2ban-0.9.0-r1.ebuild:
   Set USE=sqlite dependency on dev-lang/python (bug #507306).
