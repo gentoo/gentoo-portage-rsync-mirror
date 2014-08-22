@@ -7,4 +7,4 @@ LICENSE=BSD
 RDEPEND=virtual/libusb:1 =net-libs/libhackrf-9999:=
 SLOT=0
 _eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	da001465a2e939c93f7ae16947ce3438
-_md5_=079c998cb7d079105e7ce074c444ee4a
+_md5_=3d11d56a9e59dfef27dcc1c6ee857a45
