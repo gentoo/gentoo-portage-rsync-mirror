@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.1.1.ebuild,v 1.2 2014/04/26 16:08:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.1.1.ebuild,v 1.3 2014/08/22 03:49:29 patrick Exp $
 
 EAPI="5"
-POSTGRES_COMPAT=( 9.{0,1,2,3} )
+POSTGRES_COMPAT=( 9.{0,1,2,3,4} )
 
 inherit autotools eutils versionator
 
@@ -21,12 +21,13 @@ IUSE="doc gtk test"
 
 RDEPEND="
 		|| (
+			dev-db/postgresql-server:9.4
 			dev-db/postgresql-server:9.3
 			dev-db/postgresql-server:9.2
 			dev-db/postgresql-server:9.1
 			dev-db/postgresql-server:9.0
 		)
-		dev-libs/json-c
+		<dev-libs/json-c-0.11
 		dev-libs/libxml2:2
 		>=sci-libs/geos-3.3.8
 		>=sci-libs/proj-4.6.0

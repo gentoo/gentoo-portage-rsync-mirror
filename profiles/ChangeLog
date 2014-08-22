@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9312 2014/08/21 12:50:54 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9313 2014/08/22 03:44:33 idella4 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Aug 22 2014; Ian Delaney <idella4@gentoo.org> package.mask:
+  Unmask old reviewboard-1.7.12
 
   21 Aug 2014; Brian Evans <grknight@gentoo.org> package.mask:
   Remove old mask on =dev-db/mariadb-5.1.67. Add masks for virtual/mysql-5{2,3}

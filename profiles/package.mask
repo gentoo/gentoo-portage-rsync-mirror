@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15978 2014/08/21 12:50:54 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15979 2014/08/22 03:44:33 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -655,10 +655,6 @@ www-apache/mod_spdy
 # Dependencies are unable to satisfy current version,
 # broken; needs a version bump from bug #475552.
 dev-java/itext:5
-
-# Ian Delaney <idella4@gentoo.org> (01 Aug 2013)
-# Mask while awaiting bump to dep Djblets-0.7.16
-=dev-util/reviewboard-1.7.12
 
 # Jeroen Roovers <jer@gentoo.org> (31 Jul 2013)
 # Needs >=dev-lang/lua-5.2
