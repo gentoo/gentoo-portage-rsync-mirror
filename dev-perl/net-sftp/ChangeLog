@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/net-sftp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/ChangeLog,v 1.20 2012/10/14 18:46:33 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/ChangeLog,v 1.21 2014/08/22 16:46:08 axs Exp $
+
+*net-sftp-0.100.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +net-sftp-0.100.0-r1.ebuild, -net-sftp-0.100.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   14 Oct 2012; Raúl Porcel <armin76@gentoo.org> net-sftp-0.100.0.ebuild:
   Drop alpha keywords

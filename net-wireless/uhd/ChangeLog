@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/uhd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/ChangeLog,v 1.12 2014/04/25 12:56:11 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/ChangeLog,v 1.13 2014/08/22 16:42:29 zerochaos Exp $
+
+*uhd-3.7.2 (22 Aug 2014)
+
+  22 Aug 2014; Rick Farina <zerochaos@gentoo.org> +uhd-3.7.2.ebuild,
+  -uhd-3.4.3-r1.ebuild, -uhd-3.4.3-r2.ebuild, -uhd-3.4.3.ebuild,
+  -uhd-3.5.0.ebuild, -uhd-3.5.3.ebuild, -uhd-3.6.2.ebuild, -uhd-3.7.0.ebuild:
+  bump, remove a bunch of old/unneeded versions
 
   25 Apr 2014; Jason A. Donenfeld <zx2c4@gentoo.org> metadata.xml:
   Add self to maintainers.
