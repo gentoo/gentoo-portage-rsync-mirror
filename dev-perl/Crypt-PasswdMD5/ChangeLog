@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Crypt-PasswdMD5
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-PasswdMD5/ChangeLog,v 1.16 2014/03/09 03:20:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-PasswdMD5/ChangeLog,v 1.17 2014/08/22 15:37:24 axs Exp $
+
+*Crypt-PasswdMD5-1.300.0-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Crypt-PasswdMD5-1.300.0-r1.ebuild, -Crypt-PasswdMD5-1.300.0.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
 *Crypt-PasswdMD5-1.400.0 (09 Mar 2014)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/math-pari
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.77 2014/01/26 15:59:06 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.78 2014/08/22 15:44:03 axs Exp $
+
+*math-pari-2.10.806.50-r1 (22 Aug 2014)
+
+  22 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +math-pari-2.10.806.50-r1.ebuild, -math-pari-2.10.806.50.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   26 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> -math-pari-2.01080604.ebuild,
   math-pari-2.10.806.50.ebuild:
