@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.136 2014/02/19 19:39:59 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.137 2014/08/23 19:06:38 alonbl Exp $
+
+*opensc-0.14.0 (23 Aug 2014)
+
+  23 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> +opensc-0.14.0.ebuild:
+  Version bump, bug#520714, thanks to Alexander Bezrukov
 
   19 Feb 2014; Alon Bar-Lev <alonbl@gentoo.org>
   -files/opensc-0.11.13+pcsc-lite-1.6.2.patch,
