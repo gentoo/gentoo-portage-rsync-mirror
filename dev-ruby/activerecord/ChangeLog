@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.276 2014/08/18 22:18:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.277 2014/08/23 07:01:57 graaff Exp $
+
+  23 Aug 2014; Hans de Graaff <graaff@gentoo.org> -activerecord-4.0.8.ebuild,
+  -activerecord-4.1.4.ebuild:
+  Cleanup.
 
 *activerecord-4.1.5 (18 Aug 2014)
 *activerecord-4.0.9 (18 Aug 2014)
