@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/librevenge-0.0.1.ebuild,v 1.3 2014/08/17 07:33:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/librevenge-0.0.1.ebuild,v 1.4 2014/08/23 14:07:10 jer Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://sf.net/projects/libwpd/files/${PN}/${P}/${P}.tar.xz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~hppa ~x86"
 fi
 
 LICENSE="|| ( MPL-2.0 LGPL-2.1 )"

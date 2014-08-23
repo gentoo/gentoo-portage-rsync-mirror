@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.127 2014/08/23 13:22:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.128 2014/08/23 14:07:48 jer Exp $
+
+  23 Aug 2014; Jeroen Roovers <jer@gentoo.org> libwpd-0.10.0.ebuild:
+  Marked ~hppa (bug #520692).
 
 *libwpd-0.10.0 (23 Aug 2014)
 

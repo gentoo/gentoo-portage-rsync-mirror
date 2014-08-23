@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.10.0.ebuild,v 1.1 2014/08/23 13:22:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.10.0.ebuild,v 1.2 2014/08/23 14:07:48 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="|| ( LGPL-2.1 MPL-2.0 )"
 SLOT="0.10"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="doc test +tools"
 
 RDEPEND="dev-libs/librevenge"

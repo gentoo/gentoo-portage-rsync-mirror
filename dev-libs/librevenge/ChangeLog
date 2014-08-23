@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/librevenge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/ChangeLog,v 1.3 2014/08/17 07:33:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/ChangeLog,v 1.4 2014/08/23 14:07:10 jer Exp $
+
+  23 Aug 2014; Jeroen Roovers <jer@gentoo.org> librevenge-0.0.1.ebuild:
+  Marked ~hppa (bug #520692).
 
   17 Aug 2014; Tomáš Chvátal <scarabeus@gentoo.org> librevenge-0.0.1.ebuild,
   librevenge-9999.ebuild:
