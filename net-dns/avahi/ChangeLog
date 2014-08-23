@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.268 2014/08/20 17:22:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.269 2014/08/23 17:42:07 blueness Exp $
+
+  23 Aug 2014; Anthony G. Basile <blueness@gentoo.org> avahi-0.6.31-r5.ebuild:
+  Stable on ~ppc, ~ppc64.  Bug #520338
 
   20 Aug 2014; Anthony G. Basile <blueness@gentoo.org> -avahi-0.6.31-r3.ebuild,
   -avahi-0.6.31-r4.ebuild:
