@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Cache-Cache
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/ChangeLog,v 1.58 2012/11/23 13:19:37 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/ChangeLog,v 1.59 2014/08/23 22:16:32 axs Exp $
+
+*Cache-Cache-1.60.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Cache-Cache-1.60.0-r1.ebuild, -Cache-Cache-1.60.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   23 Nov 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix failed gpg signiture on Manifest

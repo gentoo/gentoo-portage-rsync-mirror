@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/NetPacket
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.56 2014/03/05 15:25:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.57 2014/08/23 22:02:38 axs Exp $
+
+*NetPacket-1.400.100-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +NetPacket-1.400.100-r1.ebuild, -NetPacket-1.400.100.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> NetPacket-1.400.100.ebuild:
   Stable for ppc, wrt bug #495436

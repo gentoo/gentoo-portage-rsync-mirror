@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Test-Command
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command/ChangeLog,v 1.12 2014/03/04 19:26:47 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command/ChangeLog,v 1.13 2014/08/23 22:07:12 axs Exp $
+
+*Test-Command-0.80.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Test-Command-0.80.0-r1.ebuild, -Test-Command-0.80.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   Test-Command-0.80.0.ebuild:

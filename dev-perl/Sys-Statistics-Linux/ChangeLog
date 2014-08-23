@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Sys-Statistics-Linux
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/ChangeLog,v 1.55 2012/07/29 19:06:41 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/ChangeLog,v 1.56 2014/08/23 22:05:19 axs Exp $
+
+*Sys-Statistics-Linux-0.660.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Sys-Statistics-Linux-0.660.0-r1.ebuild, -Sys-Statistics-Linux-0.660.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   29 Jul 2012; Torsten Veller <tove@gentoo.org>
   -Sys-Statistics-Linux-0.49.ebuild, -Sys-Statistics-Linux-0.600.0.ebuild,

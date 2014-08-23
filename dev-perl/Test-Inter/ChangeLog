@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Test-Inter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.22 2012/07/25 05:06:44 ryao Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.23 2014/08/23 22:08:13 axs Exp $
+
+*Test-Inter-1.30.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Test-Inter-1.30.0-r1.ebuild, -Test-Inter-1.30.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   25 Jul 2012; Richard Yao <ryao@gentoo.org> Test-Inter-1.30.0.ebuild:
   Keyword ~amd64-fbsd

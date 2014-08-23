@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Test-Class
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.74 2014/08/04 18:51:19 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.75 2014/08/23 22:06:10 axs Exp $
+
+*Test-Class-0.390.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Test-Class-0.390.0-r1.ebuild, -Test-Class-0.390.0.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
   04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> Test-Class-0.390.0.ebuild,
   Test-Class-0.410.0.ebuild:

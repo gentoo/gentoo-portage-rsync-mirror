@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=media-libs/libdiscid-0.2.2 virtual/perl-Module-Build virtual/pkgconfig test? ( dev-perl/Test-Pod virtual/perl-Test-Simple ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=Perl interface for the MusicBrainz libdiscid library
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/MusicBrainz-DiscID/
+IUSE=test
+KEYWORDS=amd64 ppc ppc64 x86
+LICENSE=GPL-2
+RDEPEND=>=media-libs/libdiscid-0.2.2 dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/N/NJ/NJH/MusicBrainz-DiscID-0.03.tar.gz http://dev.gentoo.org/~tove/distfiles/dev-perl/MusicBrainz-DiscID/MusicBrainz-DiscID-0.30.0-patch.tar.bz2
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=13cbe0c7a245d8d33072ed269609da20
