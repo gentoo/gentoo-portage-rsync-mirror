@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.106 2014/08/04 09:27:43 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.107 2014/08/23 02:38:10 axs Exp $
+
+*BerkeleyDB-0.530.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +BerkeleyDB-0.530.0-r1.ebuild, -BerkeleyDB-0.530.0.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
   04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> BerkeleyDB-0.510.0.ebuild,
   BerkeleyDB-0.530.0.ebuild, BerkeleyDB-0.540.0.ebuild:

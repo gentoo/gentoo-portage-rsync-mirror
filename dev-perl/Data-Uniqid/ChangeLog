@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Data-Uniqid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Uniqid/ChangeLog,v 1.5 2014/05/31 10:20:39 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Uniqid/ChangeLog,v 1.6 2014/08/23 02:43:54 axs Exp $
+
+*Data-Uniqid-0.120.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Data-Uniqid-0.120.0-r1.ebuild, -Data-Uniqid-0.120.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   31 May 2014; Mikle Kolyada <zlogene@gentoo.org> Data-Uniqid-0.120.0.ebuild:
   amd64/x86 stable
