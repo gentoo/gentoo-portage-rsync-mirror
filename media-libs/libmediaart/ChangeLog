@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmediaart
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/ChangeLog,v 1.6 2014/08/21 10:42:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/ChangeLog,v 1.7 2014/08/23 15:31:25 ago Exp $
+
+  23 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libmediaart-0.4.0.ebuild:
+  Stable for ia64, wrt bug #512012
 
   21 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libmediaart-0.4.0.ebuild:
   Stable for ppc64, wrt bug #512012

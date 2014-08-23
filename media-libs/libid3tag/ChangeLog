@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libid3tag
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.56 2014/08/21 10:42:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.57 2014/08/23 15:31:19 ago Exp $
+
+  23 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libid3tag-0.15.1b-r4.ebuild:
+  Stable for ia64, wrt bug #512012
 
   21 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libid3tag-0.15.1b-r4.ebuild:
   Stable for ppc64, wrt bug #512012

@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.160 2014/08/20 06:50:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.161 2014/08/23 15:34:22 ago Exp $
+
+  23 Aug 2014; Agostino Sarubbo <ago@gentoo.org> upower-0.99.0-r1.ebuild:
+  Stable for ia64, wrt bug #512012
 
 *upower-0.99.1 (20 Aug 2014)
 
