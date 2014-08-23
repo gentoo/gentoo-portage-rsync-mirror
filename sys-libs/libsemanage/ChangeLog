@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.74 2014/08/05 09:49:13 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.75 2014/08/23 11:35:24 swift Exp $
+
+*libsemanage-2.3-r3 (23 Aug 2014)
+
+  23 Aug 2014; Sven Vermeulen <swift@gentoo.org> +libsemanage-2.3-r3.ebuild:
+  Fix bug #520608 - Install .so in correct multilib location
 
   05 Aug 2014; Sven Vermeulen <swift@gentoo.org> -libsemanage-2.2.ebuild,
   -libsemanage-2.3-r1.ebuild, -libsemanage-2.3.ebuild:
