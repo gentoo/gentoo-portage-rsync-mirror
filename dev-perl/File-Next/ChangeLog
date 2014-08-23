@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/File-Next
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Next/ChangeLog,v 1.27 2014/06/19 08:36:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Next/ChangeLog,v 1.28 2014/08/23 02:00:03 axs Exp $
+
+*File-Next-1.120.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +File-Next-1.120.0-r1.ebuild, -File-Next-1.120.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   19 Jun 2014; Tobias Klausmann <klausman@gentoo.org> File-Next-1.120.0.ebuild:
   Keyworded on alpha
