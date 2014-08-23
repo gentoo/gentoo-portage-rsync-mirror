@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.277 2014/08/21 10:38:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.279 2014/08/23 10:19:15 scarabeus Exp $
+
+  23 Aug 2014; Tomáš Chvátal <scarabeus@gentoo.org> icu-52.1.ebuild,
+  icu-53.1.ebuild:
+  Fix trailing whitespace warning.
+
+*icu-53.1 (23 Aug 2014)
+
+  23 Aug 2014; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/icu-fix-tests-depending-on-date.patch, +icu-53.1.ebuild,
+  icu-52.1.ebuild:
+  Add patch to fix time-based test. Add icu 53, should work with lo 4.2.6.
+  bug#520322 and bug#506916
 
   21 Aug 2014; Agostino Sarubbo <ago@gentoo.org> icu-52.1.ebuild:
   Stable for ppc64, wrt bug #512012
