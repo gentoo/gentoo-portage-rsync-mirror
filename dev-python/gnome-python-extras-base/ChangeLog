@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.32 2014/08/21 10:39:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.33 2014/08/23 15:28:58 ago Exp $
+
+  23 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
+  gnome-python-extras-base-2.25.3-r1.ebuild:
+  Stable for ia64, wrt bug #512012
 
   21 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-python-extras-base-2.25.3-r1.ebuild:

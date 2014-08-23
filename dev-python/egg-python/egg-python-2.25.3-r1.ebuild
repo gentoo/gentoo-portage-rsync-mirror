@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.25.3-r1.ebuild,v 1.5 2014/08/21 10:39:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.25.3-r1.ebuild,v 1.6 2014/08/23 15:28:50 ago Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ inherit autotools eutils gnome-python-common-r1
 DESCRIPTION="EggTrayIcon bindings for Python"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="examples"
 
 RDEPEND=">=dev-python/libbonobo-python-2.22.1[${PYTHON_USEDEP}]
