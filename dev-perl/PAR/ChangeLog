@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/PAR
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.24 2012/11/04 12:52:47 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.25 2014/08/23 03:33:34 axs Exp $
+
+*PAR-1.7.0-r1 (23 Aug 2014)
+*PAR-1.5.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +PAR-1.5.0-r1.ebuild,
+  +PAR-1.7.0-r1.ebuild, -PAR-1.5.0.ebuild, -PAR-1.7.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
 *PAR-1.7.0 (04 Nov 2012)
 
