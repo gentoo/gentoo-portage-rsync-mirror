@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-DNS-Async
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Async/ChangeLog,v 1.8 2012/11/18 11:29:39 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Async/ChangeLog,v 1.9 2014/08/23 21:26:50 axs Exp $
+
+*Net-DNS-Async-1.70.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Net-DNS-Async-1.70.0-r1.ebuild, -Net-DNS-Async-1.70.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

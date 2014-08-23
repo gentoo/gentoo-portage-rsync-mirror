@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eval-Closure/Eval-Closure-0.80.0.ebuild,v 1.6 2013/01/13 12:48:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eval-Closure/Eval-Closure-0.80.0-r1.ebuild,v 1.1 2014/08/23 21:22:34 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=DOY
 MODULE_VERSION=0.08
