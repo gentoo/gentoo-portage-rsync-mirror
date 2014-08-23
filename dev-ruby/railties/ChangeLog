@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.87 2014/08/18 22:19:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.88 2014/08/23 07:01:07 graaff Exp $
+
+  23 Aug 2014; Hans de Graaff <graaff@gentoo.org> -railties-4.0.8.ebuild,
+  -railties-4.1.4.ebuild:
+  Cleanup.
 
 *railties-4.1.5 (18 Aug 2014)
 *railties-4.0.9 (18 Aug 2014)
