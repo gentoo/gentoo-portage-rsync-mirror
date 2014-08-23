@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/openstack-guest-agents-unix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/openstack-guest-agents-unix/ChangeLog,v 1.4 2014/07/27 00:58:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/openstack-guest-agents-unix/ChangeLog,v 1.5 2014/08/23 21:53:53 ulm Exp $
+
+  23 Aug 2014; Ulrich Müller <ulm@gentoo.org>
+  files/patches-1.39.0-20140621.patch:
+  QA: Fix bad characters in patch file, bug 519916.
 
   27 Jul 2014; Robin H. Johnson <robbat2@gentoo.org>
   openstack-guest-agents-unix-1.39.0.ebuild:

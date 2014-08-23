@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Test-Differences
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Differences/ChangeLog,v 1.31 2012/11/23 13:21:25 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Differences/ChangeLog,v 1.32 2014/08/23 21:45:29 axs Exp $
+
+*Test-Differences-0.610.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Test-Differences-0.610.0-r1.ebuild, -Test-Differences-0.610.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   Test-Differences-0.610.0.ebuild:

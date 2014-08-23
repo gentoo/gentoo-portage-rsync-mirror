@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Class-Accessor-Chained
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Chained/ChangeLog,v 1.13 2012/09/01 11:16:19 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Chained/ChangeLog,v 1.14 2014/08/23 21:50:12 axs Exp $
+
+*Class-Accessor-Chained-0.10.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Class-Accessor-Chained-0.10.0-r1.ebuild,
+  -Class-Accessor-Chained-0.10.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   Class-Accessor-Chained-0.10.0.ebuild:

@@ -71,7 +71,7 @@ Date:   Thu Feb 13 19:26:36 2014 +0000
 
     Fix nova-agent not starting on some systems
     
-    data/host existing could cause a fault on xs_handle.mkdir(self.request_path) if request_path (data/host) already existed. Wrap it in a try/except clause to ignore the fault as if the directory already exists, there's no reason to throw an exception while trying to create it.
+    data/host existing could cause a fault on xs_handle.mkdir(self.request_path) if request_path (data/host) already existed. Wrap it in a try/except clause to ignore the fault as if the directory already exists, there's no reason to throw an exception while trying to create it.
     
     Workaround without this patch is to xenstore-rm data/host from affected VMs, or to do it from dom0 with the full path.
 

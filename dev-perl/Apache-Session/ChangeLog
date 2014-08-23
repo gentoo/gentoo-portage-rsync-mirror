@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Apache-Session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.73 2014/01/26 15:04:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.74 2014/08/23 21:34:53 axs Exp $
+
+*Apache-Session-1.900.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Apache-Session-1.900.0-r1.ebuild, -Apache-Session-1.900.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   26 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
   -Apache-Session-1.890.0.ebuild, Apache-Session-1.900.0.ebuild:

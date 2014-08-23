@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-XMPP
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.40 2012/09/06 01:37:46 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.41 2014/08/23 21:40:36 axs Exp $
+
+*Net-XMPP-1.20.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Net-XMPP-1.20.0-r1.ebuild, -Net-XMPP-1.20.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   06 Sep 2012; Anthony G. Basile <blueness@gentoo.org> Net-XMPP-1.20.0.ebuild:
   Keyword ~arm
