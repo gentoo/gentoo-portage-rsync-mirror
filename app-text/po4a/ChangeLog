@@ -1,6 +1,9 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.72 2014/02/15 12:07:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.73 2014/08/23 09:06:51 jer Exp $
+
+  23 Aug 2014; Jeroen Roovers <jer@gentoo.org> po4a-0.45.ebuild:
+  Stable for HPPA (bug #520014).
 
   15 Feb 2014; Markos Chandras <hwoarang@gentoo.org> po4a-0.45.ebuild:
   Add ~mips

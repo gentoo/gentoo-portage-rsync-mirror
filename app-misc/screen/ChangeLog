@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.196 2014/04/30 15:21:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.197 2014/08/23 09:14:27 jer Exp $
+
+  23 Aug 2014; Jeroen Roovers <jer@gentoo.org> screen-4.2.1-r2.ebuild:
+  Restore keywords.
 
 *screen-4.2.1-r2 (30 Apr 2014)
 
