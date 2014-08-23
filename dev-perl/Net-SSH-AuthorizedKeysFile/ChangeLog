@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Net-SSH-AuthorizedKeysFile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSH-AuthorizedKeysFile/ChangeLog,v 1.14 2012/06/24 12:58:26 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSH-AuthorizedKeysFile/ChangeLog,v 1.15 2014/08/23 02:12:05 axs Exp $
+
+*Net-SSH-AuthorizedKeysFile-0.160.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Net-SSH-AuthorizedKeysFile-0.160.0-r1.ebuild,
+  -Net-SSH-AuthorizedKeysFile-0.160.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

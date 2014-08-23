@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/leveldb-1.17.ebuild,v 1.2 2014/08/11 22:10:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/leveldb-1.17.ebuild,v 1.3 2014/08/23 02:04:29 floppym Exp $
 
 EAPI=5
 
@@ -10,7 +10,8 @@ GITCRAP="e353fbc7ea81"
 
 DESCRIPTION="a fast key-value storage library written at Google"
 HOMEPAGE="http://code.google.com/p/leveldb/"
-SRC_URI="https://${PN}.googlecode.com/archive/${PV}.tar.gz -> ${P}.tar.gz"
+#SRC_URI="https://${PN}.googlecode.com/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~floppym/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

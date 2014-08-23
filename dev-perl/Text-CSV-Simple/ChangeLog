@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Text-CSV-Simple
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV-Simple/ChangeLog,v 1.11 2013/11/04 19:08:05 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV-Simple/ChangeLog,v 1.12 2014/08/23 02:18:49 axs Exp $
+
+*Text-CSV-Simple-1.0.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Text-CSV-Simple-1.0.0-r1.ebuild, -Text-CSV-Simple-1.0.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   04 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> Text-CSV-Simple-1.0.0.ebuild:
   Add ~arm and ~mips keywords

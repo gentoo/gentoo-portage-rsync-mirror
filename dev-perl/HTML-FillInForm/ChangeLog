@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/HTML-FillInForm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FillInForm/ChangeLog,v 1.32 2014/08/04 17:41:39 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FillInForm/ChangeLog,v 1.33 2014/08/23 02:02:01 axs Exp $
+
+*HTML-FillInForm-2.200.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +HTML-FillInForm-2.200.0-r1.ebuild, -HTML-FillInForm-2.200.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   HTML-FillInForm-2.100.0.ebuild, HTML-FillInForm-2.200.0.ebuild:

@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.170 2014/04/26 18:36:58 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.171 2014/08/23 02:19:57 axs Exp $
+
+*Net-DNS-0.660.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Net-DNS-0.660.0-r1.ebuild, -Net-DNS-0.660.0.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
 *Net-DNS-0.740.0 (26 Apr 2014)
 

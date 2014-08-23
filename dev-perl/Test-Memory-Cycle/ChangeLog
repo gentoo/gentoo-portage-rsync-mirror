@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Test-Memory-Cycle
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/ChangeLog,v 1.30 2013/01/13 13:35:38 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/ChangeLog,v 1.31 2014/08/23 02:16:07 axs Exp $
+
+*Test-Memory-Cycle-1.40.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Test-Memory-Cycle-1.40.0-r1.ebuild, -Test-Memory-Cycle-1.40.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   13 Jan 2013; Markus Meier <maekke@gentoo.org>
   Test-Memory-Cycle-1.40.0.ebuild:

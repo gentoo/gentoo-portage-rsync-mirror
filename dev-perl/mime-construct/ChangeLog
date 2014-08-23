@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/mime-construct
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mime-construct/ChangeLog,v 1.17 2012/06/04 02:13:12 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mime-construct/ChangeLog,v 1.18 2014/08/23 02:09:22 axs Exp $
+
+*mime-construct-1.900.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +mime-construct-1.900.0-r1.ebuild, -mime-construct-1.900.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> mime-construct-1.900.0.ebuild:
   ppc stable (bug 400757)
@@ -71,4 +78,3 @@
   19 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +mime-construct-1.9.ebuild:
   Initial import for johnm, dep for asterisk work
-
