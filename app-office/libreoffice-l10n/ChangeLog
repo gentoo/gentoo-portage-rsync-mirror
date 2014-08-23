@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.112 2014/08/10 18:16:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.113 2014/08/23 09:54:54 scarabeus Exp $
+
+*libreoffice-l10n-4.2.6.2 (23 Aug 2014)
+
+  23 Aug 2014; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libreoffice-l10n-4.2.6.2.ebuild:
+  Version bump to 4.2.6 fixes bug#520282.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   libreoffice-l10n-4.2.5.2.ebuild:

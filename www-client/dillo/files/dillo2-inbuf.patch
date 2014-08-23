@@ -1,6 +1,5 @@
-=== modified file 'src/form.cc'
---- src/form.cc	2008-10-21 21:02:31 +0000
-+++ src/form.cc	2008-10-21 21:02:53 +0000
+--- a/src/form.cc
++++ b/src/form.cc
 @@ -1240,8 +1240,9 @@
     int rc = 0;
     Dstr *output;

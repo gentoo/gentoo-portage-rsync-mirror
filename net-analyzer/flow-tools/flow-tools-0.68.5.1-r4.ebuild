@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5.1-r3.ebuild,v 1.1 2014/07/11 12:24:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5.1-r4.ebuild,v 1.1 2014/08/23 09:35:02 jer Exp $
 
 EAPI=5
 inherit eutils user
@@ -32,11 +32,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i \
-		-e 's|/var/run/|/run/|g' \
-		src/flow-capture.c \
-		src/flow-fanout.c \
-		|| die
+	epatch "${FILESDIR}"/${P}-run.patch
+	epatch "${FILESDIR}"/${P}-syslog.patch
 }
 
 src_configure() {

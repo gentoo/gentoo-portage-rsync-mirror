@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-216.ebuild,v 1.1 2014/08/22 10:22:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-216.ebuild,v 1.2 2014/08/23 09:43:33 mgorny Exp $
 
 EAPI=5
 
@@ -428,6 +428,9 @@ pkg_postinst() {
 	enewgroup input
 	enewgroup systemd-journal
 	newusergroup systemd-bus-proxy
+	newusergroup systemd-journal-gateway
+	newusergroup systemd-journal-remote
+	newusergroup systemd-journal-upload
 	newusergroup systemd-network
 	newusergroup systemd-resolve
 	newusergroup systemd-timesync

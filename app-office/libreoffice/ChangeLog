@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.566 2014/08/21 12:13:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.567 2014/08/23 09:56:17 scarabeus Exp $
+
+*libreoffice-4.2.6.2 (23 Aug 2014)
+
+  23 Aug 2014; Tomáš Chvátal <scarabeus@gentoo.org> +libreoffice-4.2.6.2.ebuild:
+  Version bump to 4.2.6 fixes bug#520282.
 
   21 Aug 2014; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/libreoffice-4.2.5.2-jpeg-9a.patch, libreoffice-4.2.5.2.ebuild:
