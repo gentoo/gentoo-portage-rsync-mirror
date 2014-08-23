@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.23 2014/08/08 18:35:11 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.24 2014/08/23 10:37:18 swift Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -313,6 +313,18 @@ selinux-policy-2_pkg_postinst() {
 		else
 			einfo "SELinux modules loaded succesfully."
 		fi
+	done
+
+	# Relabel depending packages
+	PKGSET="";
+	if [ -x /usr/bin/qdepends ] ; then
+	  PKGSET=$(/usr/bin/qdepends -Cq -Q ${CATEGORY}/${PN});
+	elif [ -x /usr/bin/equery ] ; then
+	  PKGSET=$(/usr/bin/equery -Cq depends ${CATEGORY}/${PN});
+	fi
+	for PKG in ${PKGSET};
+	do
+      rlpkg ${PKG};
 	done
 }
 

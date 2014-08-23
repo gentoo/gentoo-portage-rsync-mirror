@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1354 2014/08/18 08:56:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1355 2014/08/23 10:37:18 swift Exp $
+
+  23 Aug 2014; Sven Vermeulen <swift@gentoo.org> selinux-policy-2.eclass:
+  Adding relabeling support for SELinux depending packages
 
   18 Aug 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Add extra quoting to prevent accidental globbing.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/devilspie2-0.32.ebuild,v 1.1 2014/02/24 01:57:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/devilspie2-0.37.ebuild,v 1.1 2014/08/23 10:32:46 jer Exp $
 
 EAPI=5
 
@@ -43,5 +43,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Default folder for scripts is ~/.config/devilspie2/"
+	elog "Default directory for scripts is ~/.config/devilspie2/"
 }
