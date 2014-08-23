@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/XML-AutoWriter
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-AutoWriter/ChangeLog,v 1.30 2013/05/02 06:06:49 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-AutoWriter/ChangeLog,v 1.31 2014/08/23 00:30:52 axs Exp $
+
+*XML-AutoWriter-0.400.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +XML-AutoWriter-0.400.0-r1.ebuild, -XML-AutoWriter-0.400.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   02 May 2013; Ulrich Müller <ulm@gentoo.org> XML-AutoWriter-0.400.0.ebuild:
   Relicensed to user's choice of GPL, Artistic, or BSD license, bug 445266.

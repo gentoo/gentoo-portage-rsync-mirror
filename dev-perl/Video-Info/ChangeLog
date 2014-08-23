@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Video-Info
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.16 2011/09/04 11:22:18 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.17 2014/08/23 00:30:04 axs Exp $
+
+*Video-Info-0.993.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Video-Info-0.993.0-r1.ebuild, -Video-Info-0.993.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Video-Info-0.993.ebuild:
   Cleanup
@@ -67,4 +74,3 @@
   19 Apr 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Video-Info-0.999.ebuild:
   new dep for mplay, bug 74394
-

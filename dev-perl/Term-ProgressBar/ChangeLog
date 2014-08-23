@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Term-ProgressBar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/ChangeLog,v 1.50 2014/07/21 14:51:13 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/ChangeLog,v 1.51 2014/08/23 00:22:56 axs Exp $
+
+*Term-ProgressBar-2.140.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Term-ProgressBar-2.140.0-r1.ebuild, -Term-ProgressBar-2.140.0.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
 *Term-ProgressBar-2.150.0 (21 Jul 2014)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-Server-Mail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Server-Mail/ChangeLog,v 1.9 2014/03/03 23:42:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Server-Mail/ChangeLog,v 1.10 2014/08/23 00:19:40 axs Exp $
+
+*Net-Server-Mail-0.210.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Net-Server-Mail-0.210.0-r1.ebuild, -Net-Server-Mail-0.210.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> Net-Server-Mail-0.210.0.ebuild:
   amd64 stable, bug #495432

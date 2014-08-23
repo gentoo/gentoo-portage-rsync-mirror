@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/File-NCopy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.29 2013/01/06 20:37:26 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.30 2014/08/23 00:11:40 axs Exp $
+
+*File-NCopy-0.360.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +File-NCopy-0.360.0-r1.ebuild, -File-NCopy-0.360.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -File-NCopy-0.34.ebuild:
   Cleanup

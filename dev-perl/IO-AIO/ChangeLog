@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/IO-AIO
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.26 2014/06/27 17:31:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.27 2014/08/23 00:13:25 axs Exp $
+
+*IO-AIO-4.180-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +IO-AIO-4.180-r1.ebuild, -IO-AIO-4.180.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
   27 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> -IO-AIO-2.33.ebuild,
   -IO-AIO-3.3.1.ebuild, -IO-AIO-3.710.0.ebuild, -IO-AIO-4.120.0.ebuild,
