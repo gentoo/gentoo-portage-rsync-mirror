@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SMTP-SSL/Net-SMTP-SSL-1.10.0.ebuild,v 1.5 2014/01/20 20:40:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SMTP-SSL/Net-SMTP-SSL-1.10.0-r1.ebuild,v 1.1 2014/08/23 01:27:42 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=CWEST
 MODULE_VERSION=1.01

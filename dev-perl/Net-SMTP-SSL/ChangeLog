@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-SMTP-SSL
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SMTP-SSL/ChangeLog,v 1.20 2014/01/20 20:40:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SMTP-SSL/ChangeLog,v 1.21 2014/08/23 01:27:42 axs Exp $
+
+*Net-SMTP-SSL-1.10.0-r1 (23 Aug 2014)
+
+  23 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Net-SMTP-SSL-1.10.0-r1.ebuild, -Net-SMTP-SSL-1.10.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Net-SMTP-SSL-1.10.0.ebuild:
   Add arm64 love.
