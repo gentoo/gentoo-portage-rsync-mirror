@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-filemagic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ChangeLog,v 1.19 2014/05/21 01:28:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ChangeLog,v 1.20 2014/08/23 05:57:35 graaff Exp $
+
+*ruby-filemagic-0.6.1 (23 Aug 2014)
+
+  23 Aug 2014; Hans de Graaff <graaff@gentoo.org> +ruby-filemagic-0.6.1.ebuild:
+  Version bump.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> -ruby-filemagic-0.5.0.ebuild,
   -ruby-filemagic-0.5.2.ebuild:
