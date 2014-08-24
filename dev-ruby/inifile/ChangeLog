@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/inifile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/inifile/ChangeLog,v 1.9 2014/08/13 01:43:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/inifile/ChangeLog,v 1.10 2014/08/24 05:04:21 graaff Exp $
+
+*inifile-3.0.0 (24 Aug 2014)
+
+  24 Aug 2014; Hans de Graaff <graaff@gentoo.org> +inifile-3.0.0.ebuild:
+  Version bump.
 
   13 Aug 2014; Manuel Rüger <mrueg@gentoo.org> inifile-2.0.2-r1.ebuild:
   Add ruby21 support.
