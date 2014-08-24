@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.50 2014/08/19 02:31:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.51 2014/08/24 21:49:25 zerochaos Exp $
+
+  24 Aug 2014; Rick Farina <zerochaos@gentoo.org> +files/include_stringh.patch,
+  gnuradio-3.7.4.ebuild, gnuradio-9999.ebuild, metadata.xml:
+  update VCS ebuild to remove as much automagic as possible, audio is still
+  automagic
 
   18 Aug 2014; Rick Farina <zerochaos@gentoo.org> gnuradio-3.7.4.ebuild,
   gnuradio-9999.ebuild:
