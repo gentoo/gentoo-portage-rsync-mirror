@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.124 2014/07/06 08:54:16 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.126 2014/08/24 07:16:26 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -10,9 +10,9 @@
 #
 
 
-# Fabian Groffen <grobian@gentoo.org> (12 Jun 2014)
-# Fails to build with USE=-unicode, breaks bootstrap, bug #512064
-=app-editors/nano-2.3.3
+# Fabian Groffen <grobain@gentoo.org> (24 Aug 2014)
+# Not ready yet for general use, see tracker and bug #519884
+=sys-devel/bison-3.0.2
 
 # Fabian Groffen <grobian@gentoo.org> (11 Feb 2014)
 # Fails to compile, bug #493464
