@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.97 2014/08/24 15:34:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.98 2014/08/24 17:35:01 ssuominen Exp $
+
+  24 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/openjpeg-1.4-cmake-stdbool.patch, -files/openjpeg-1.4-libpng15.patch,
+  -files/openjpeg-1.4-linking.patch, -files/openjpeg-1.4-pkgconfig.patch,
+  -files/openjpeg-1.5.0-build.patch, -files/openjpeg-9999-build.patch,
+  -files/openjpeg-9999-mupdf.patch, -openjpeg-1.4-r1.ebuild,
+  -openjpeg-1.5.0.ebuild, -openjpeg-1.5.1-r1.ebuild, -openjpeg-9999.ebuild:
+  old
 
   24 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> openjpeg-1.5.2.ebuild,
   openjpeg-2.1.0.ebuild:

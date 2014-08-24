@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/openjpeg-2.1.0.ebuild,v 1.2 2014/08/24 15:34:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/openjpeg-2.1.0.ebuild,v 1.3 2014/08/24 17:37:08 ssuominen Exp $
 
 EAPI=5
 inherit cmake-utils multilib
@@ -39,7 +39,7 @@ src_configure() {
 
 	cmake-utils_src_configure
 
-	if use static-libs ; then
+	if use static-libs; then
 		mycmakeargs=(
 			-DOPENJPEG_INSTALL_LIB_DIR="$(get_libdir)"
 			$(cmake-utils_use_build test TESTING)
@@ -52,13 +52,13 @@ src_configure() {
 src_compile() {
 	cmake-utils_src_compile
 
-	if use static-libs ; then
+	if use static-libs; then
 		BUILD_DIR=${BUILD_DIR}_static cmake-utils_src_compile
 	fi
 }
 
 src_install() {
-	if use static-libs ; then
+	if use static-libs; then
 		BUILD_DIR=${BUILD_DIR}_static cmake-utils_src_install
 		#static bins overwritten by shared install
 	fi
