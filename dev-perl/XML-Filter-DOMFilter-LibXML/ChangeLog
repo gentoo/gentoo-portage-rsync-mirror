@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/XML-Filter-DOMFilter-LibXML
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Filter-DOMFilter-LibXML/ChangeLog,v 1.16 2012/11/22 10:05:03 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Filter-DOMFilter-LibXML/ChangeLog,v 1.17 2014/08/24 02:46:22 axs Exp $
+
+*XML-Filter-DOMFilter-LibXML-0.20.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +XML-Filter-DOMFilter-LibXML-0.20.0-r1.ebuild,
+  -XML-Filter-DOMFilter-LibXML-0.20.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   22 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   XML-Filter-DOMFilter-LibXML-0.20.0.ebuild:

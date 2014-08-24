@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.111 2014/06/22 18:45:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.112 2014/08/24 02:49:29 axs Exp $
+
+*XML-Twig-3.440.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +XML-Twig-3.440.0-r1.ebuild, -XML-Twig-3.440.0.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
   22 Jun 2014; Markus Meier <maekke@gentoo.org> XML-Twig-3.460.0.ebuild:
   add ~arm, bug #512040

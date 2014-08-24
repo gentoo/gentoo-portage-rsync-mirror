@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Schedule-At
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.36 2012/09/02 15:11:12 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.37 2014/08/24 02:33:49 axs Exp $
+
+*Schedule-At-1.150.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Schedule-At-1.150.0-r1.ebuild, -Schedule-At-1.150.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -Schedule-At-1.130.0.ebuild:
   Cleanup

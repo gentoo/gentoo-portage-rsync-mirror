@@ -1,6 +1,16 @@
 # ChangeLog for dev-perl/POE
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.133 2014/07/07 18:54:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.134 2014/08/24 02:32:45 axs Exp $
+
+*POE-1.350.0-r1 (24 Aug 2014)
+*POE-1.354.0-r1 (24 Aug 2014)
+*POE-1.356-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +POE-1.350.0-r1.ebuild,
+  +POE-1.354.0-r1.ebuild, +POE-1.356-r1.ebuild, -POE-1.350.0.ebuild,
+  -POE-1.354.0.ebuild, -POE-1.356.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   07 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> POE-1.350.0.ebuild,
   POE-1.354.0.ebuild, POE-1.356.ebuild:
