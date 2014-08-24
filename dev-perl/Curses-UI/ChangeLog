@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Curses-UI
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.38 2012/04/21 19:40:08 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.39 2014/08/24 02:30:27 axs Exp $
+
+*Curses-UI-0.960.900-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Curses-UI-0.960.900-r1.ebuild, -Curses-UI-0.960.900.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   21 Apr 2012; Torsten Veller <tove@gentoo.org> -Curses-UI-0.960.700.ebuild,
   -Curses-UI-0.960.800.ebuild:
@@ -140,4 +147,3 @@
 
   01 May 2004; Eric Sammer <esammer@gentoo.org> :
   Initial import. This is a dependency of Lire. Closes bug #49428.
-

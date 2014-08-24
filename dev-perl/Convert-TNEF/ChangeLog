@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Convert-TNEF
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.32 2013/01/08 18:28:52 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.33 2014/08/24 02:10:05 axs Exp $
+
+*Convert-TNEF-0.180.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Convert-TNEF-0.180.0-r1.ebuild, -Convert-TNEF-0.180.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   08 Jan 2013; Torsten Veller <tove@gentoo.org> -Convert-TNEF-0.170.0.ebuild:
   Cleanup

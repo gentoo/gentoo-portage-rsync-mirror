@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/JSON-RPC
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-RPC/ChangeLog,v 1.17 2012/09/02 16:05:58 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-RPC/ChangeLog,v 1.18 2014/08/24 02:04:59 axs Exp $
+
+*JSON-RPC-1.30.0-r1 (24 Aug 2014)
+*JSON-RPC-0.960.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +JSON-RPC-0.960.0-r1.ebuild, +JSON-RPC-1.30.0-r1.ebuild,
+  -JSON-RPC-0.960.0.ebuild, -JSON-RPC-1.30.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -JSON-RPC-1.10.0.ebuild,
   -JSON-RPC-1.20.0.ebuild:
