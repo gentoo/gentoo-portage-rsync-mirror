@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Test-Inline
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.81 2013/08/15 07:10:23 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.82 2014/08/24 01:37:39 axs Exp $
+
+*Test-Inline-2.213.0-r1 (24 Aug 2014)
+*Test-Inline-2.212.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Test-Inline-2.212.0-r1.ebuild, +Test-Inline-2.213.0-r1.ebuild,
+  -Test-Inline-2.212.0.ebuild, -Test-Inline-2.213.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
 *Test-Inline-2.213.0 (15 Aug 2013)
 

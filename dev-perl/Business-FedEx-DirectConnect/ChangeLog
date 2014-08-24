@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Business-FedEx-DirectConnect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Business-FedEx-DirectConnect/ChangeLog,v 1.14 2012/06/24 12:59:35 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Business-FedEx-DirectConnect/ChangeLog,v 1.15 2014/08/24 01:58:12 axs Exp $
+
+*Business-FedEx-DirectConnect-1.10.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Business-FedEx-DirectConnect-1.10.0-r1.ebuild,
+  -Business-FedEx-DirectConnect-1.10.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

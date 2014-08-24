@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/XML-RSS-Feed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/ChangeLog,v 1.35 2014/03/03 23:44:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/ChangeLog,v 1.36 2014/08/24 01:56:04 axs Exp $
+
+*XML-RSS-Feed-2.400.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +XML-RSS-Feed-2.400.0-r1.ebuild, -XML-RSS-Feed-2.400.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> XML-RSS-Feed-2.400.0.ebuild:
   amd64 stable, bug #495520

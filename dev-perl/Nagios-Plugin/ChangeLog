@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Nagios-Plugin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Nagios-Plugin/ChangeLog,v 1.17 2012/12/06 04:13:37 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Nagios-Plugin/ChangeLog,v 1.18 2014/08/24 01:45:08 axs Exp $
+
+*Nagios-Plugin-0.360.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Nagios-Plugin-0.360.0-r1.ebuild, -Nagios-Plugin-0.360.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Nagios-Plugin-0.360.0.ebuild:

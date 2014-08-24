@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Mail-ListDetector
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/ChangeLog,v 1.28 2012/06/24 12:59:41 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/ChangeLog,v 1.29 2014/08/24 01:44:19 axs Exp $
+
+*Mail-ListDetector-1.40.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Mail-ListDetector-1.40.0-r1.ebuild, -Mail-ListDetector-1.40.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

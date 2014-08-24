@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/WWW-Mechanize
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.93 2014/01/20 17:00:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.94 2014/08/24 01:57:14 axs Exp $
+
+*WWW-Mechanize-1.730.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +WWW-Mechanize-1.730.0-r1.ebuild, -WWW-Mechanize-1.730.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   20 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> -WWW-Mechanize-1.720.0.ebuild,
   WWW-Mechanize-1.730.0.ebuild:

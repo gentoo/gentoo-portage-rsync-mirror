@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Throwable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Throwable/ChangeLog,v 1.13 2014/07/31 17:46:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Throwable/ChangeLog,v 1.14 2014/08/24 01:50:05 axs Exp $
+
+*Throwable-0.200.3-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Throwable-0.200.3-r1.ebuild, -Throwable-0.200.3.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
   31 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> Throwable-0.102.80.ebuild:
   Bump to EAPI=5

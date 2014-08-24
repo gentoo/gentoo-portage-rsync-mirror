@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/DateTime-Format-ISO8601
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.23 2014/08/19 11:18:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.24 2014/08/24 01:55:14 axs Exp $
+
+*DateTime-Format-ISO8601-0.80.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +DateTime-Format-ISO8601-0.80.0-r1.ebuild,
+  -DateTime-Format-ISO8601-0.80.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   19 Aug 2014; Raúl Porcel <armin76@gentoo.org>
   DateTime-Format-ISO8601-0.80.0.ebuild:

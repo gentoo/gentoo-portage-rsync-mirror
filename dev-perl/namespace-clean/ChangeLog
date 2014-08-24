@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/namespace-clean
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.32 2014/07/21 14:58:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.33 2014/08/24 01:39:43 axs Exp $
+
+*namespace-clean-0.240.0-r1 (24 Aug 2014)
+*namespace-clean-0.210.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +namespace-clean-0.210.0-r1.ebuild, +namespace-clean-0.240.0-r1.ebuild,
+  -namespace-clean-0.210.0.ebuild, -namespace-clean-0.240.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   21 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   -namespace-clean-0.220.0.ebuild, -namespace-clean-0.230.0.ebuild:
