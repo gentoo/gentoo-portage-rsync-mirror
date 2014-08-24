@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.95 2014/03/23 17:15:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.96 2014/08/24 15:20:59 ssuominen Exp $
+
+*openjpeg-2.1.0 (24 Aug 2014)
+*openjpeg-1.5.2 (24 Aug 2014)
+
+  24 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> +openjpeg-1.5.2.ebuild,
+  +openjpeg-2.1.0.ebuild:
+  Version bump wrt #518556
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> openjpeg-2.0.0.ebuild:
   Stable for sparc, wrt bug #482788
