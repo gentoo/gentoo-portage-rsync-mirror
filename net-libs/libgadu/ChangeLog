@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.84 2014/08/21 09:49:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.85 2014/08/24 09:02:55 ago Exp $
+
+  24 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libgadu-1.11.4.ebuild:
+  Stable for alpha, wrt bug #505558
 
   21 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libgadu-1.11.4.ebuild:
   Stable for ppc, wrt bug #505558

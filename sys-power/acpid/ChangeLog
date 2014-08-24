@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/acpid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.118 2014/07/21 19:38:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.119 2014/08/24 09:04:35 ssuominen Exp $
+
+*acpid-2.0.23 (24 Aug 2014)
+
+  24 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> +acpid-2.0.23.ebuild:
+  Version bump.
 
   21 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> acpid-2.0.22.ebuild:
   Check for CONFIG_INPUT_EVDEV wrt #508460 by Thomas D.
