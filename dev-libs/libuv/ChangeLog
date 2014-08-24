@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libuv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.24 2014/08/21 12:51:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.26 2014/08/24 16:38:42 hasufell Exp $
+
+  24 Aug 2014; Julian Ospald <hasufell@gentoo.org> libuv-0.11.25-r1.ebuild:
+  amd64 stable wrt bug #518244
+
+*libuv-0.11.29 (24 Aug 2014)
+
+  24 Aug 2014; Julian Ospald <hasufell@gentoo.org> -libuv-0.11.22.ebuild,
+  -libuv-0.11.22-r1.ebuild, -libuv-0.11.24.ebuild, +libuv-0.11.29.ebuild:
+  version bump, rm old
 
   21 Aug 2014; Raúl Porcel <armin76@gentoo.org> libuv-0.11.22.ebuild,
   libuv-0.11.22-r1.ebuild, libuv-0.11.24.ebuild, libuv-0.11.25-r1.ebuild,
