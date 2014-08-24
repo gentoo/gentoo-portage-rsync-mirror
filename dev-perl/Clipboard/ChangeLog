@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Clipboard
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.18 2013/01/15 22:09:54 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.19 2014/08/24 12:43:36 axs Exp $
+
+*Clipboard-0.130.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Clipboard-0.130.0-r1.ebuild, -Clipboard-0.130.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   15 Jan 2013; Markus Meier <maekke@gentoo.org> Clipboard-0.130.0.ebuild:
   add ~arm, bug #449762

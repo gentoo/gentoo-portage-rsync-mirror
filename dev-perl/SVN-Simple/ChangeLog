@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/SVN-Simple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.31 2014/03/08 08:20:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.32 2014/08/24 12:55:29 axs Exp $
+
+*SVN-Simple-0.280.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +SVN-Simple-0.280.0-r1.ebuild, -SVN-Simple-0.280.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   08 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> SVN-Simple-0.280.0.ebuild:
   sparc stable wrt bug #495468

@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/SDL
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/ChangeLog,v 1.20 2014/07/29 11:39:50 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/ChangeLog,v 1.21 2014/08/24 12:58:25 axs Exp $
+
+*SDL-2.540-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +SDL-2.540-r1.ebuild,
+  -SDL-2.540.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
 *SDL-2.544 (29 Jul 2014)
 
