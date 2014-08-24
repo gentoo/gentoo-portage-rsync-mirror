@@ -1,6 +1,14 @@
 # ChangeLog for games-sports/dustrac
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/dustrac/ChangeLog,v 1.4 2014/07/28 17:59:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/dustrac/ChangeLog,v 1.5 2014/08/24 16:24:11 hasufell Exp $
+
+*dustrac-1.7.3 (24 Aug 2014)
+
+  24 Aug 2014; Julian Ospald <hasufell@gentoo.org> -dustrac-1.6.2.ebuild,
+  -dustrac-1.6.3.ebuild, -dustrac-1.7.1.ebuild, +dustrac-1.7.3.ebuild,
+  -files/dustrac-1.6.2-cmake.patch, -files/dustrac-1.6.2-desktopfile.patch,
+  +files/dustrac-1.7.3-cmake.patch:
+  version bump, rm old
 
 *dustrac-1.7.2 (28 Jul 2014)
 

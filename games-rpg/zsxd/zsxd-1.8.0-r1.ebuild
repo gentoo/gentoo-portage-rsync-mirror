@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsdx/zsdx-1.7.1.ebuild,v 1.3 2014/04/13 20:26:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsxd/zsxd-1.8.0-r1.ebuild,v 1.1 2014/08/24 16:09:58 hasufell Exp $
 
 EAPI=5
 
-inherit cmake-utils gnome2-utils games
+inherit eutils gnome2-utils cmake-utils games
 
-DESCRIPTION="A free 2D Zelda fangame"
+DESCRIPTION="A free 2D Zelda fangame parody"
 HOMEPAGE="http://www.solarus-games.org/"
 SRC_URI="http://www.zelda-solarus.com/downloads/${PN}/${P}.tar.gz"
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND="games-engines/solarus"
+RDEPEND=">=games-engines/solarus-1.2.0
+	<games-engines/solarus-1.3.0"
 DEPEND="app-arch/zip"
 
 DOCS=( ChangeLog readme.txt )
@@ -47,7 +48,7 @@ src_install() {
 	rm -f "${ED%/}${GAMES_BINDIR}"/${PN}
 	games_make_wrapper ${PN} "solarus \"${GAMES_DATADIR}/solarus/${PN}\""
 
-	make_desktop_entry "${PN}" "Zelda: Mystery of Solarus DX"
+	make_desktop_entry "${PN}" "Zelda: Mystery of Solarus XD"
 	prepgamesdirs
 }
 
@@ -58,9 +59,5 @@ pkg_preinst() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	gnome2_icon_cache_update
-}
-
-pkg_postrm() {
 	gnome2_icon_cache_update
 }

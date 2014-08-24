@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsxd/zsxd-1.8.0.ebuild,v 1.1 2014/05/22 17:12:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsdx/zsdx-1.9.0.ebuild,v 1.1 2014/08/24 16:03:24 hasufell Exp $
 
 EAPI=5
 
-inherit eutils gnome2-utils cmake-utils games
+inherit cmake-utils gnome2-utils games
 
-DESCRIPTION="A free 2D Zelda fangame parody"
+DESCRIPTION="A free 2D Zelda fangame"
 HOMEPAGE="http://www.solarus-games.org/"
 SRC_URI="http://www.zelda-solarus.com/downloads/${PN}/${P}.tar.gz"
 
@@ -16,11 +16,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND="games-engines/solarus"
+RDEPEND=">=games-engines/solarus-1.3.0
+	<games-engines/solarus-1.4.0"
 DEPEND="app-arch/zip"
 
 DOCS=( ChangeLog readme.txt )
-PATCHES=( "${FILESDIR}"/${P}-paths.patch )
 
 src_prepare() {
 	cmake-utils_src_prepare
@@ -28,8 +28,8 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DDATADIR="${GAMES_DATADIR}/solarus"
-		-DBINDIR="${GAMES_BINDIR}"
+		-DSOLARUS_INSTALL_DATAROOTDIR="${GAMES_DATADIR}"
+		-DSOLARUS_INSTALL_BINDIR="${GAMES_BINDIR}"
 	)
 	cmake-utils_src_configure
 }
@@ -47,7 +47,7 @@ src_install() {
 	rm -f "${ED%/}${GAMES_BINDIR}"/${PN}
 	games_make_wrapper ${PN} "solarus \"${GAMES_DATADIR}/solarus/${PN}\""
 
-	make_desktop_entry "${PN}" "Zelda: Mystery of Solarus XD"
+	make_desktop_entry "${PN}" "Zelda: Mystery of Solarus DX"
 	prepgamesdirs
 }
 
@@ -58,5 +58,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	games_pkg_postinst
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
 	gnome2_icon_cache_update
 }

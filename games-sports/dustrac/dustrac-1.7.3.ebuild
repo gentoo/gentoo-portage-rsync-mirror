@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/dustrac/dustrac-1.7.1.ebuild,v 1.1 2014/07/25 11:52:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/dustrac/dustrac-1.7.3.ebuild,v 1.1 2014/08/24 16:24:11 hasufell Exp $
 
 EAPI=5
 
@@ -21,12 +21,12 @@ RDEPEND="
 	dev-qt/qtopengl:4
 	media-libs/libvorbis
 	media-libs/openal
-	media-libs/mesa[gles2]"
+	media-libs/mesa"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.6.3-cmake.patch \
+	epatch "${FILESDIR}"/${P}-cmake.patch \
 		"${FILESDIR}"/${PN}-1.6.3-desktopfile.patch
 }
 

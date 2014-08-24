@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsdx/zsdx-1.8.0.ebuild,v 1.1 2014/05/22 17:10:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsdx/zsdx-1.7.1-r1.ebuild,v 1.1 2014/08/24 16:01:48 hasufell Exp $
 
 EAPI=5
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND="games-engines/solarus"
+RDEPEND=">=games-engines/solarus-1.1.0
+	<games-engines/solarus-1.2.0"
 DEPEND="app-arch/zip"
 
 DOCS=( ChangeLog readme.txt )

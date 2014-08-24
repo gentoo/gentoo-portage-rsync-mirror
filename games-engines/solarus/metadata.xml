@@ -7,7 +7,8 @@
 		<name>Julian Ospald</name>
 	</maintainer>
 	<use>
-		<flag name='luajit'>Use LuaJIT instead of default Lua</flag>
+		<flag name='doc'>Install doxygen developer documentation.</flag>
+		<flag name='luajit'>Use LuaJIT instead of default Lua.</flag>
 	</use>
 	<upstream>
 		<remote-id type='github'>christopho/solarus</remote-id>
