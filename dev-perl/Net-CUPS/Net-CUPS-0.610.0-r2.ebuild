@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/Net-CUPS-0.610.0-r1.ebuild,v 1.3 2012/12/06 18:19:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/Net-CUPS-0.610.0-r2.ebuild,v 1.1 2014/08/24 13:01:13 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=DHAGEMAN
 MODULE_VERSION=0.61
