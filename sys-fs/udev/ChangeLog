@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1083 2014/08/20 08:35:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1084 2014/08/24 06:20:21 ssuominen Exp $
+
+  24 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> udev-216.ebuild:
+  Apply upstream commits http://cgit.freedesktop.org/systemd/systemd/commit/src/
+  shared/missing.h?id=a7d611f280b3eadafd6b411b659a321b4d6e63f4 and http://cgit.f
+  reedesktop.org/systemd/systemd/commit/src/shared/missing.h?id=2de1851fe3611c59
+  abf77127c6b5bc1b91eb7cba to fix building on MIPS wrt #520720 by David Holm
 
 *udev-216 (20 Aug 2014)
 
