@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.24-r5.ebuild,v 1.2 2014/08/14 17:11:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.24-r6.ebuild,v 1.1 2014/08/24 08:07:02 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
@@ -14,14 +14,15 @@ SLOT="1.2"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="+glib +libnet static-libs"
 
-DEPEND="
-	net-libs/libpcap
+RDEPEND="
+	!net-libs/libnids:1.1
 	glib? ( dev-libs/glib )
 	libnet? ( >=net-libs/libnet-1.1.0-r3 )
+	net-libs/libpcap
 "
-RDEPEND="
-	${DEPEND}
-	!net-libs/libnids:1.1
+DEPEND="
+	${RDEPEND}
+	glib? ( virtual/pkgconfig )
 "
 
 src_prepare() {
@@ -35,8 +36,8 @@ src_configure() {
 
 	econf \
 		--enable-shared \
-		$(use_enable glib libglib) \
-		$(use_enable libnet libnet)
+		$(usex glib '' --disable-libglib) \
+		$(use_enable libnet)
 }
 
 src_compile() {

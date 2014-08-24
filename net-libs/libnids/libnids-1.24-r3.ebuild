@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.24-r3.ebuild,v 1.4 2013/06/29 18:36:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.24-r3.ebuild,v 1.5 2014/08/24 08:07:02 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -14,11 +14,16 @@ SLOT="1.2"
 KEYWORDS="amd64 ppc x86"
 IUSE="+glib +libnet static-libs"
 
-DEPEND="net-libs/libpcap
+RDEPEND="
+	!net-libs/libnids:1.1
 	glib? ( dev-libs/glib )
-	libnet? ( >=net-libs/libnet-1.1.0-r3 )"
-RDEPEND="${DEPEND}
-	!net-libs/libnids:1.1"
+	libnet? ( >=net-libs/libnet-1.1.0-r3 )
+	net-libs/libpcap
+"
+DEPEND="
+	${RDEPEND}
+	glib? ( virtual/pkgconfig )
+"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-ldflags.patch"
