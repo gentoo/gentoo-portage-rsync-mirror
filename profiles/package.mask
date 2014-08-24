@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15981 2014/08/22 22:17:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15982 2014/08/24 13:58:46 slyfox Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -766,11 +766,6 @@ app-text/cuneiform
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development
 =sys-block/open-iscsi-2.0.873
-
-# Sergei Trofimovich <slyfox@gentoo.org> (05 Jan 2013)
-# Masked for testing. Is not compatible with cvsps-2 (bug #450424).
-# But can be used on it's own! Try 'cvsps --fast-export'.
->=dev-vcs/cvsps-3
 
 # Sven Wegener <swegener@gentoo.org> (21 Dec 2012)
 # temporary mask for socket location change

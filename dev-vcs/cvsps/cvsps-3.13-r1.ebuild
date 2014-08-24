@@ -1,17 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/cvsps-3.13.ebuild,v 1.3 2014/03/13 20:09:09 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/cvsps-3.13-r1.ebuild,v 1.1 2014/08/24 13:49:08 slyfox Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Generates patchset information from a CVS repository"
+DESCRIPTION="Generates patchset information from a CVS repository (supports fast-import)"
 HOMEPAGE="http://www.catb.org/~esr/cvsps/"
 SRC_URI="http://www.catb.org/~esr/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
@@ -19,7 +19,16 @@ RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
 	app-text/asciidoc"
 
+RESTRICT=test # upstream does not ship tests
+
 src_prepare() {
+	local gentoo_name=${PN}-3
+
+	epatch "${FILESDIR}"/${P}-make.patch
+	mv ${PN}.asc ${gentoo_name}.asc || die
+	sed -i "s/${PN}/${gentoo_name}/g" ${gentoo_name}.asc || die
+	MAKEOPTS+=" PROG=${gentoo_name}"
+
 	tc-export CC
 	export prefix=/usr
 }

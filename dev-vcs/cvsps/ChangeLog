@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/cvsps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.22 2014/03/13 20:09:09 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.23 2014/08/24 13:49:08 slyfox Exp $
+
+*cvsps-3.13-r1 (24 Aug 2014)
+
+  24 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> +cvsps-3.13-r1.ebuild,
+  +files/cvsps-3.13-make.patch, -cvsps-2.1.ebuild, -cvsps-3.10.ebuild,
+  -cvsps-3.13.ebuild:
+  Slot cvsps-3 to SLOT=3 to let git-cvsimport work with cvsps-2 (bug #450424).
 
   13 Mar 2014; Christoph Junghans <ottxor@gentoo.org> cvsps-3.13.ebuild:
   added ~x64-macos (tested by me)
