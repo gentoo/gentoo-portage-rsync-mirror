@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install unpack
+DEPEND==dev-lang/python-2*
+DESCRIPTION=Kernel and mesa firmware for nouveau (video accel and pgraph)
+EAPI=5
+HOMEPAGE=http://nouveau.freedesktop.org/wiki/VideoAcceleration/
+KEYWORDS=~x86 ~amd64
+LICENSE=MIT NVIDIA-r2
+RESTRICT=bindist mirror
+SLOT=0
+SRC_URI=http://us.download.nvidia.com/XFree86/Linux-x86/340.32/NVIDIA-Linux-x86-340.32.run https://raw.github.com/imirkin/re-vp2/96641bfebb2547402b2145fcf0e3116410f0da87/extract_firmware.py -> nvidia_extract_firmware-340.32.py
+_eclasses_=unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=61fb2d9190c2a6c3ba0ee9aff978127c
