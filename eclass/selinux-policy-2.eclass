@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.25 2014/08/23 16:16:37 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.26 2014/08/24 07:54:37 swift Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -63,7 +63,7 @@
 # using a single variable, rather than having to set the packagename_LIVE_REPO
 # variable for each and every SELinux policy module package they want to install.
 # The default value is Gentoo's hardened-refpolicy repository.
-: ${SELINUX_GIT_REPO:="https://github.com/sjvermeu/hardened-refpolicy.git git://git.overlays.gentoo.org/proj/hardened-refpolicy.git https://git.overlays.gentoo.org/gitroot/proj/hardened-refpolicy.git"};
+: ${SELINUX_GIT_REPO:="git://git.overlays.gentoo.org/proj/hardened-refpolicy.git https://git.overlays.gentoo.org/gitroot/proj/hardened-refpolicy.git"};
 
 # @ECLASS-VARIABLE: SELINUX_GIT_BRANCH
 # @DESCRIPTION:

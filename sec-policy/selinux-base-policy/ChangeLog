@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.152 2014/08/23 16:18:47 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.153 2014/08/24 07:53:58 swift Exp $
+
+  24 Aug 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-base-policy-9999.ebuild:
+  Back to gogo infrastructure
 
   23 Aug 2014; Sven Vermeulen <swift@gentoo.org>
   selinux-base-policy-9999.ebuild:
