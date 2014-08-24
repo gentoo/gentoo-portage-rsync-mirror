@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.4-r1.ebuild,v 1.1 2014/07/06 21:15:48 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.7.ebuild,v 1.1 2014/08/24 19:09:45 alonbl Exp $
 
 EAPI=5
 
@@ -56,6 +56,8 @@ src_prepare() {
 	for file in $(grep -l AutoGen-ed src/*.c) ; do
 		rm src/$(basename ${file} .c).{c,h} || die
 	done
+
+	epatch "${FILESDIR}/${P}-build.patch"
 
 	# support user patches
 	epatch_user
