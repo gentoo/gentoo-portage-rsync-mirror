@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Email-Abstract
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Abstract/ChangeLog,v 1.38 2014/07/11 17:21:39 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Abstract/ChangeLog,v 1.39 2014/08/24 01:22:44 axs Exp $
+
+*Email-Abstract-3.3.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Email-Abstract-3.3.0-r1.ebuild, -Email-Abstract-3.3.0.ebuild:
+  bumped current stable ebuild(s) EAPI to 5; committed directly to stable as no
+  other changes present and revbump helps stable systems to keep from dieing on
+  perl-5.18 upgrade
 
 *Email-Abstract-3.7.0 (11 Jul 2014)
 

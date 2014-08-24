@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Email-Send
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/ChangeLog,v 1.35 2013/09/13 05:50:56 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/ChangeLog,v 1.36 2014/08/24 01:26:01 axs Exp $
+
+*Email-Send-2.199.0-r1 (24 Aug 2014)
+*Email-Send-2.198.0-r1 (24 Aug 2014)
+
+  24 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Email-Send-2.198.0-r1.ebuild, +Email-Send-2.199.0-r1.ebuild,
+  -Email-Send-2.198.0.ebuild, -Email-Send-2.199.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
 *Email-Send-2.199.0 (13 Sep 2013)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Starter/Module-Starter-1.600.0.ebuild,v 1.3 2014/07/21 19:00:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Starter/Module-Starter-1.600.0-r1.ebuild,v 1.1 2014/08/24 01:16:04 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=XSAWYERX
 MODULE_VERSION=1.60
