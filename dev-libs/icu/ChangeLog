@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.279 2014/08/23 10:19:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.280 2014/08/24 06:37:28 scarabeus Exp $
+
+  24 Aug 2014; Tomáš Chvátal <scarabeus@gentoo.org> icu-53.1.ebuild:
+  Forgot to bump subslot.
 
   23 Aug 2014; Tomáš Chvátal <scarabeus@gentoo.org> icu-52.1.ebuild,
   icu-53.1.ebuild:
