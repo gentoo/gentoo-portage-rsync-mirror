@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.76 2014/08/23 20:19:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.79 2014/08/25 10:26:41 ago Exp $
+
+  25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gdbm-1.11.ebuild:
+  Stable for sparc, wrt bug #518120
+
+  25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gdbm-1.11.ebuild:
+  Stable for arm, wrt bug #518120
+
+  25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gdbm-1.11.ebuild:
+  Stable for alpha, wrt bug #518120
 
   23 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gdbm-1.11.ebuild:
   Stable for ia64, wrt bug #518120
