@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-augeas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.41 2014/08/15 17:57:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.42 2014/08/25 15:36:29 mrueg Exp $
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> ruby-augeas-0.5.0.ebuild:
+  Mark amd64 stable. Bug #516934.
 
   15 Aug 2014; Raúl Porcel <armin76@gentoo.org> ruby-augeas-0.5.0.ebuild:
   ia64/sparc stable wrt #516934

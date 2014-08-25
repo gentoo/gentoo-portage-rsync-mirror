@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.4.ebuild,v 1.7 2014/08/19 02:31:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.4-r1.ebuild,v 1.1 2014/08/25 15:47:57 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -99,6 +99,7 @@ src_prepare() {
 	# Useless UI element would require qt3support, bug #365019
 	sed -i '/qPixmapFromMimeSource/d' "${S}"/gr-qtgui/lib/spectrumdisplayform.ui || die
 	epatch "${FILESDIR}"/${PN}-3.6.1-automagic-audio.patch
+	epatch "${FILESDIR}"/${P}-include_stringh.patch
 }
 
 src_configure() {
@@ -133,7 +134,6 @@ src_configure() {
 		-DSYSCONFDIR="${EPREFIX}"/etc \
 		-DPYTHON_EXECUTABLE="${PYTHON}"
 	)
-	use qt4 && mycmakeargs+=( -DQWT_INCLUDE_DIRS="${EPREFIX}"/usr/include/qwt5 )
 	cmake-utils_src_configure
 }
 

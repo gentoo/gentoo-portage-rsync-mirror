@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.142 2014/08/17 00:45:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.143 2014/08/25 16:00:10 mrueg Exp $
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> ruby-gettext-3.1.1.ebuild:
+  Mark amd64 stable. Bug #505920.
 
   17 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
   ruby-gettext-2.3.3.ebuild, ruby-gettext-2.3.8.ebuild,

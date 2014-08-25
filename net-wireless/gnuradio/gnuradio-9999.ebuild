@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.21 2014/08/24 21:49:25 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.22 2014/08/25 15:47:57 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -153,7 +153,6 @@ src_configure() {
 		-DSYSCONFDIR="${EPREFIX}"/etc \
 		-DPYTHON_EXECUTABLE="${PYTHON}"
 	)
-	use qt4 && mycmakeargs+=( -DQWT_INCLUDE_DIRS="${EPREFIX}"/usr/include/qwt5 )
 	cmake-utils_src_configure
 }
 
