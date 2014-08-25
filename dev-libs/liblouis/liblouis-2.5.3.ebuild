@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblouis/liblouis-2.5.3.ebuild,v 1.4 2014/07/04 13:03:42 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblouis/liblouis-2.5.3.ebuild,v 1.5 2014/08/25 12:38:27 armin76 Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="http://liblouis.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~sparc ~x86"
 IUSE="python"
 RDEPEND="python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}"
