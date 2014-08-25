@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/nftables
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nftables/ChangeLog,v 1.2 2014/02/01 20:13:10 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nftables/ChangeLog,v 1.3 2014/08/25 19:30:47 mrueg Exp $
+
+*nftables-0.3 (25 Aug 2014)
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +files/nftables.confd,
+  +files/nftables.init, +nftables-0.3.ebuild:
+  NMU: Version bump. See bug #511460. Generate manpage on buildtime. Add init
+  script based on iptables scripts by Nicholas Vinson. See bug #508182.
 
   01 Feb 2014; Steev Klimaszewski <steev@gentoo.org> nftables-0.099.ebuild:
   Add ~arm keyword. Tested by aholler on armv5
@@ -10,4 +17,3 @@
   24 Jan 2014; Tony Vroon <chainsaw@gentoo.org> +nftables-0.099.ebuild,
   +files/nftables-0.099-94300c7.patch, +files/nftables.8, +metadata.xml:
   Initial commit. Patches & ebuilds by dwfreed, with some minor tweaks by me.
-

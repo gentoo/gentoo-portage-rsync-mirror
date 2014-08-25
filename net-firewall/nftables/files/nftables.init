@@ -1,0 +1,201 @@
+#!/sbin/runscript
+# Copyright 2014 Nicholas Vinson
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+extra_commands="check clear list panic save"
+extra_started_commands="reload"
+
+nftables_name=nftables
+nft_bin=/sbin/nft
+
+depend() {
+    need localmount #434774
+    before net
+}
+
+checkkernel() {
+    ${nft_bin} list tables &>/dev/null
+    if [ $? -ne 0 ]; then
+        eerror "Your kernel lacks ${nftables_name} support, please load"
+        eerror "appropriate modules and try again."
+        return 1
+    fi
+    return 0
+}
+
+checkconfig() {
+    if [ ! -f ${NFTABLES_SAVE} ]; then
+        eerror "Not starting ${nftables_name}.  First create some rules then run:"
+        eerror "/etc/init.d/${nftables_name} save"
+        return 1
+    fi
+    return 0
+}
+
+checkfamilies() {
+    if [ -n "${families+set}" ]; then
+        return
+    fi
+
+    local families=()
+    for l3f in ip arp ip6 bridge inet; do
+        ${nft_bin} list tables ${l3f} &> /dev/null
+        if [ $? -eq 0 ]; then
+            families+=($l3f)
+        fi
+    done
+}
+
+havefamily() {
+    local i tfamily=$1
+    checkfamilies
+
+    for i in ${families[@]}; do
+        if [ $i == $tfamily ]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+clearNFT() {
+    checkfamilies
+
+    local l3f line table chain
+
+    for l3f in ${families[@]}; do
+        ${nft_bin} list tables ${l3f} | while read line; do
+            table=$(echo ${line} | sed "s/table[ \t]*//")
+            ${nft_bin} flush table ${l3f} ${table}
+            ${nft_bin} list table ${l3f} ${table} | while read l; do
+                chain=$(echo $l | grep -o 'chain [^[:space:]]\+' |\
+                        cut -d ' ' -f2)
+                if [ -n "${chain}" ]; then
+                    ${nft_bin} flush chain ${l3f} ${table} ${chain}
+                    ${nft_bin} delete chain ${l3f} ${table} ${chain}
+                fi
+            done
+            ${nft_bin} delete table ${l3f} ${table}
+        done
+    done
+}
+
+addpanictable() {
+    local l3f=$1
+    nft add table ${l3f} panic
+    nft add chain ${l3f} panic input \{ type filter hook input priority 0\; \}
+    nft add chain ${l3f} panic output \{ type filter hook output priority 0\; \}
+    nft add chain ${l3f} panic forward \{ type filter hook forward priority 0\; \}
+    nft add rule ${l3f} panic input drop
+    nft add rule ${l3f} panic output drop
+    nft add rule ${l3f} panic forward drop
+}
+
+checkrules() {
+    ewarn "Rules not checked as ${nftables_name} does not support this feature."
+    return 0
+}
+
+start() {
+    checkkernel || return 1
+    checkconfig || return 1
+    ebegin "Loading ${nftables_name} state and starting firewall"
+    clearNFT
+    ${nft_bin} -f ${NFTABLES_SAVE}
+    eend $?
+}
+
+stop() {
+    if [ "${SAVE_ON_STOP}" = "yes" ] ; then
+        save || return 1
+    fi
+
+    ebegin "Stopping firewall"
+    clearNFT
+    eend $?
+}
+
+reload() {
+    checkkernel || return 1
+    # checkrules || return 1
+    ebegin "Flushing firewall"
+    clearNFT
+
+    start
+}
+
+check() {
+    # Short name for users of init.d script
+    checkrules
+}
+
+clear() {
+    clearNFT
+}
+
+list() {
+    checkfamilies
+    local l3f
+
+    for l3f in ${families[@]}; do
+        ${nft_bin} list tables ${l3f} | while read line; do
+            line=$(echo ${line} | sed "s/table/table ${l3f}/")
+            echo "$(${nft_bin} list ${line})"
+        done
+    done
+}
+
+save() {
+    checkfamilies
+
+    ebegin "Saving ${nftables_name} state"
+    checkpath -q -d "$(dirname "${NFTABLES_SAVE}")"
+    checkpath -q -m 0600 -f "${NFTABLES_SAVE}"
+
+    local l3f line tmp_save="${NFTABLES_SAVE}.tmp"
+
+    touch "${tmp_save}"
+    for l3f in ${families[@]}; do
+        ${nft_bin} list tables ${l3f} | while read line; do
+            line=$(echo ${line} | sed "s/table/table ${l3f}/")
+            # The below substitution fixes an issue where nft -n output may not
+            # always be parsable by nft -f.  For example, nft -n might print
+            #
+            #     ip6 saddr ::1 ip6 daddr ::1 counter packets 0 bytes 0 accept
+            #
+            # but nft -f refuses to parse that string with error:
+            #
+            #     In file included from internal:0:0-0:
+            #     /var/lib/nftables/rules-save:1:1-2: Error: Could not process rule:
+            #     Invalid argument
+            #     table ip6 filter {
+            #     ^^
+            echo "$(${nft_bin} ${SAVE_OPTIONS} list ${line} |\
+                    sed 's/\(::[0-9a-fA-F]\+\)\([^/]\)/\1\/128\2/g')" >> "${tmp_save}"
+        done
+    done
+    mv "${tmp_save}" "${NFTABLES_SAVE}"
+}
+
+panic() {
+    checkkernel || return 1
+    if service_started ${nftables_name}; then
+        rc-service ${nftables_name} stop
+    fi
+
+    ebegin "Dropping all packets"
+    clearNFT
+
+    if havefamily "inet"; then
+        einfo inet
+    fi
+
+    local l3f
+    for l3f in ${families[@]}; do
+        case ${l3f} in
+            ip) addpanictable ${l3f} ;;
+            ip6) addpanictable ${l3f} ;;
+        esac
+    done
+}
