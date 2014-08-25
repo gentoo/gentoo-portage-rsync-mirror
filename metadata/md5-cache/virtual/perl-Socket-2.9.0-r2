@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Socket
 EAPI=5
-KEYWORDS=alpha amd64 hppa ~ppc ~ppc64 x86
+KEYWORDS=alpha amd64 hppa ~ppc ~ppc64 ~sparc x86
 RDEPEND=|| ( =dev-lang/perl-5.18* ~perl-core/Socket-2.9.0 ) !<perl-core/Socket-2.9.0 !>perl-core/Socket-2.9.0-r999
 SLOT=0
-_md5_=789c0b1ab18f772d47cec48cd9080e86
+_md5_=185b626098d587f2791cb383e8537d78
