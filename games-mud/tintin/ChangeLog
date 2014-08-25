@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/tintin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.128 2014/08/25 21:22:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.129 2014/08/25 21:54:13 mr_bones_ Exp $
+
+*tintin-2.01.0 (25 Aug 2014)
+
+  25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> +tintin-2.01.0.ebuild:
+  version bump
 
   25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/tintin-2.00.8-ldpermission.patch, -tintin-2.00.8.ebuild:
