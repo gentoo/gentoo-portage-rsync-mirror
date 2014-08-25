@@ -1,21 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/crumbs/crumbs-9999.ebuild,v 1.2 2014/08/25 21:17:56 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/crumbs/crumbs-1.2.2-r1.ebuild,v 1.1 2014/08/25 21:17:56 alunduil Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
 
-inherit distutils-r1 git-2
-
-EGIT_REPO_URI="git://github.com/alunduil/crumbs.git"
+inherit distutils-r1
 
 DESCRIPTION="Generalized all-in-one parameters module"
 HOMEPAGE="https://github.com/alunduil/crumbs"
-SRC_URI=""
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE="inotify test"
 
 DEPEND="
