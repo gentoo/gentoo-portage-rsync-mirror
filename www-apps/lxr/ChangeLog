@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/lxr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.23 2014/07/26 18:07:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.24 2014/08/25 02:36:49 patrick Exp $
+
+  25 Aug 2014; Patrick Lauer <patrick@gentoo.org> lxr-0.9.8-r1.ebuild,
+  metadata.xml:
+  QA: Surgical removal of swish-e dependency that is being treecleaned
 
   26 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -lxr-0.9.8.ebuild,
   lxr-0.9.8-r1.ebuild:
