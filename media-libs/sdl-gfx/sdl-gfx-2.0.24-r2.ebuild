@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.24.ebuild,v 1.10 2013/02/02 22:52:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.24-r2.ebuild,v 1.2 2014/08/24 23:14:49 hasufell Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -8,7 +8,7 @@ inherit autotools eutils
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="Graphics drawing primitives library for SDL"
 HOMEPAGE="http://www.ferzkopp.net/joomla/content/view/19/14/"
-SRC_URI="http://www.ferzkopp.net/Software/SDL_gfx-2.0/${MY_P}.tar.gz"
+SRC_URI="http://www.ferzkopp.net/Software/SDL_gfx-2.0/${MY_P}.tar.gz -> ${MY_P}-1.tar.gz" # 520358
 
 LICENSE="ZLIB"
 SLOT="0"

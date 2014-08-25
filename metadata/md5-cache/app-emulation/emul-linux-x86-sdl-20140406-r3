@@ -1,0 +1,14 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=sys-apps/findutils-4.2.26
+DESCRIPTION=Provides precompiled 32bit libraries
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
+IUSE=abi_x86_32 +development
+KEYWORDS=-* amd64
+LICENSE=!abi_x86_32? ( LGPL-2 LGPL-2.1 ZLIB ) abi_x86_32? ( metapackage )
+RDEPEND=~app-emulation/emul-linux-x86-xlibs-20140406 ~app-emulation/emul-linux-x86-baselibs-20140406 ~app-emulation/emul-linux-x86-soundlibs-20140406 ~app-emulation/emul-linux-x86-medialibs-20140406 abi_x86_32? ( >=media-libs/openal-1.15.1-r1[abi_x86_32(-)] >=media-libs/freealut-1.1.0-r3[abi_x86_32(-)] >=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)] >=media-libs/sdl-gfx-2.0.24-r3[abi_x86_32(-)] >=media-libs/sdl-image-1.2.12-r1[abi_x86_32(-)] >=media-libs/sdl-mixer-1.2.12-r4[abi_x86_32(-)] >=media-libs/sdl-net-1.2.8-r1[abi_x86_32(-)] >=media-libs/sdl-sound-1.0.3-r1[abi_x86_32(-)] >=media-libs/sdl-ttf-2.0.11-r1[abi_x86_32(-)] >=media-libs/smpeg-0.4.4-r10[abi_x86_32(-)] )
+RESTRICT=strip
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-sdl-20140406.tar.xz
+_eclasses_=emul-linux-x86	21b03579b81acf650f0077bfd9fc2586	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=7e87333c320b3f5c0e9d2951452d7cbd

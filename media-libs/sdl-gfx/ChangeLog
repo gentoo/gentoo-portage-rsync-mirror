@@ -1,6 +1,22 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.100 2014/06/18 19:55:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.103 2014/08/24 23:27:53 hasufell Exp $
+
+*sdl-gfx-2.0.25 (24 Aug 2014)
+
+  24 Aug 2014; Julian Ospald <hasufell@gentoo.org> +sdl-gfx-2.0.25.ebuild:
+  version bump
+
+  24 Aug 2014; Julian Ospald <hasufell@gentoo.org> -sdl-gfx-2.0.24.ebuild,
+  sdl-gfx-2.0.24-r2.ebuild:
+  stabilize
+
+*sdl-gfx-2.0.24-r3 (24 Aug 2014)
+*sdl-gfx-2.0.24-r2 (24 Aug 2014)
+
+  24 Aug 2014; Julian Ospald <hasufell@gentoo.org> -sdl-gfx-2.0.24-r1.ebuild,
+  +sdl-gfx-2.0.24-r2.ebuild, +sdl-gfx-2.0.24-r3.ebuild:
+  fix broken checksum wrt #520358
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> sdl-gfx-2.0.24-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

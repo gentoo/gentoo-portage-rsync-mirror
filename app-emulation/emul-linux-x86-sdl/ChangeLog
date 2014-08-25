@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.84 2014/06/26 09:24:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.85 2014/08/24 23:21:05 hasufell Exp $
+
+*emul-linux-x86-sdl-20140508-r1 (24 Aug 2014)
+*emul-linux-x86-sdl-20140406-r3 (24 Aug 2014)
+
+  24 Aug 2014; Julian Ospald <hasufell@gentoo.org>
+  -emul-linux-x86-sdl-20140406-r2.ebuild,
+  +emul-linux-x86-sdl-20140406-r3.ebuild, -emul-linux-x86-sdl-20140508.ebuild,
+  +emul-linux-x86-sdl-20140508-r1.ebuild:
+  fix deps, because media-libs/sdl-gfx-2.0.24-r3 is the first multilib ebuild
+  wrt #520358
 
   26 Jun 2014; Pacho Ramos <pacho@gentoo.org>
   emul-linux-x86-sdl-20140508.ebuild:
