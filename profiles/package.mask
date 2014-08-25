@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15983 2014/08/24 15:37:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15984 2014/08/25 15:22:19 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (25 Aug 2014)
+# cfdisk wipes out partition table when removing partitions. Masking
+# so that our users won't run into it. Bug #520838.
+>=sys-apps/util-linux-2.25
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (24 Aug 2014)
 # Lack of maintainer, webapp with potential security problems

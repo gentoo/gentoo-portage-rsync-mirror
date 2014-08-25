@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9317 2014/08/24 15:37:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9318 2014/08/25 15:22:19 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Aug 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask util-linux because of cfdisk breakage, bug #520838.
 
   24 Aug 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask www-apps/swish-e for removal

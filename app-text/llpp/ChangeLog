@@ -1,6 +1,12 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.60 2014/07/21 23:08:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.61 2014/08/25 15:25:09 xmw Exp $
+
+*llpp-20_p20140818 (25 Aug 2014)
+
+  25 Aug 2014; Michael Weber <xmw@gentoo.org> +files/llpp-20-WM_CLASS.patch,
+  +llpp-20_p20140818.ebuild, metadata.xml:
+  Version bump, prepare for upcoming USE=egl
 
 *llpp-19 (21 Jul 2014)
 
