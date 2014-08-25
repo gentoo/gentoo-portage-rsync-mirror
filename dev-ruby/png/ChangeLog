@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/png
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/ChangeLog,v 1.13 2014/08/02 01:51:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/ChangeLog,v 1.14 2014/08/25 14:25:07 mrueg Exp $
+
+*png-1.2.0-r2 (25 Aug 2014)
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +png-1.2.0-r2.ebuild:
+  Add ruby20, ruby21 support.
 
   02 Aug 2014; Manuel Rüger <mrueg@gentoo.org> png-1.2.0-r1.ebuild:
   Fix build.
