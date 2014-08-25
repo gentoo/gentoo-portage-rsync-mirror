@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.16.1-r1.ebuild,v 1.6 2014/08/09 20:14:47 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.16.1-r1.ebuild,v 1.7 2014/08/25 15:01:01 mrueg Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 arm x86"
+KEYWORDS="amd64 arm x86"
 IUSE="pygobject pyqt4 pyside test"
 
 RDEPEND="virtual/udev
