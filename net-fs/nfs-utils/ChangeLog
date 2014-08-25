@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.253 2014/08/11 13:38:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.254 2014/08/25 17:21:36 mrueg Exp $
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -nfs-utils-1.1.6-r1.ebuild,
+  -nfs-utils-1.2.0.ebuild:
+  Cleanup EAPI=1 ebuilds. See bug #513914.
 
   11 Aug 2014; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.9-r3.ebuild:
   Mark arm64/ia64/ppc/ppc64/s390/sh/sparc stable #504714.

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-opensteamworks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/ChangeLog,v 1.26 2014/08/14 16:48:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/ChangeLog,v 1.27 2014/08/25 17:18:56 mrueg Exp $
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> pidgin-opensteamworks-1.4.ebuild:
+  Mark amd64 stable. Bug #517808.
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   pidgin-opensteamworks-1.4.ebuild:
