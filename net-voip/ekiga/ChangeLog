@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.60 2014/08/04 18:51:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.61 2014/08/25 22:58:29 creffett Exp $
+
+  25 Aug 2014; Christopher Reffett <2011creffett@gentoo.org>
+  -ekiga-3.2.7.ebuild:
+  Security cleanup wrt bug 445846
 
   04 Aug 2014; Raúl Porcel <armin76@gentoo.org> ekiga-4.0.0-r1.ebuild:
   sparc stable wrt #445846

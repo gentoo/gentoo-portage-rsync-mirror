@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.73 2014/01/08 06:13:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.74 2014/08/25 22:55:00 creffett Exp $
+
+  25 Aug 2014; Christopher Reffett <2011creffett@gentoo.org>
+  -otrs-3.1.11.ebuild, -otrs-3.1.12.ebuild, -otrs-3.2.3.ebuild:
+  Security cleanup wrt bug 439336
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> otrs-3.1.11.ebuild,
   otrs-3.1.12.ebuild, otrs-3.2.3.ebuild:

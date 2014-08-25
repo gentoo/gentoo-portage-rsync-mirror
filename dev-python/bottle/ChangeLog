@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bottle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.37 2014/07/15 04:38:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.38 2014/08/25 22:45:53 creffett Exp $
+
+  25 Aug 2014; Christopher Reffett <2011creffett@gentoo.org>
+  -bottle-0.11.6-r1.ebuild, -bottle-0.12.5.ebuild:
+  Security cleanup wrt bug 509350
 
 *bottle-0.12.7 (15 Jul 2014)
 
