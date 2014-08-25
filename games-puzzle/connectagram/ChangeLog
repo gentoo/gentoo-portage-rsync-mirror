@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/connectagram
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/connectagram/ChangeLog,v 1.7 2014/02/05 07:14:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/connectagram/ChangeLog,v 1.8 2014/08/25 22:19:53 mr_bones_ Exp $
+
+  25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -connectagram-1.1.0.ebuild, -files/connectagram-1.1.0-gentoo.patch:
+  old
 
 *connectagram-1.1.1 (05 Feb 2014)
 
