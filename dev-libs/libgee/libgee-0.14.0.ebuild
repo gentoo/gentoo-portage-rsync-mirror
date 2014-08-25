@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.14.0.ebuild,v 1.6 2014/08/23 15:28:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.14.0.ebuild,v 1.7 2014/08/25 10:57:13 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Libgee"
 
 LICENSE="LGPL-2.1+"
 SLOT="0.8"
-KEYWORDS="~alpha amd64 ~arm ia64 ppc ppc64 ~sh ~sparc x86 ~x86-linux"
+KEYWORDS="alpha amd64 ~arm ia64 ppc ppc64 ~sh ~sparc x86 ~x86-linux"
 IUSE="+introspection"
 
 # FIXME: add doc support, requires valadoc

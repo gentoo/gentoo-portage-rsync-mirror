@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/gnome-python-base-2.28.1-r1.ebuild,v 1.7 2014/08/23 15:28:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/gnome-python-base-2.28.1-r1.ebuild,v 1.8 2014/08/25 10:57:38 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -32,7 +32,7 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-KEYWORDS="~alpha amd64 ~arm ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 ~arm ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 

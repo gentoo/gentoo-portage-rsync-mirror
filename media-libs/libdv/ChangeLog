@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.95 2014/08/23 15:31:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.96 2014/08/25 10:59:49 ago Exp $
+
+  25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libdv-1.0.0-r3.ebuild:
+  Stable for alpha, wrt bug #512012
 
   23 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libdv-1.0.0-r3.ebuild:
   Stable for ia64, wrt bug #512012

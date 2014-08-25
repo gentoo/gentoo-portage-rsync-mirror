@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.198 2014/08/23 15:28:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.199 2014/08/25 10:36:08 ago Exp $
+
+  25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> tcl-8.5.15-r1.ebuild:
+  Stable for alpha, wrt bug #518006
 
   23 Aug 2014; Agostino Sarubbo <ago@gentoo.org> tcl-8.5.15-r1.ebuild:
   Stable for ia64, wrt bug #512012
