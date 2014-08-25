@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.162 2014/08/15 17:35:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.163 2014/08/25 05:32:44 graaff Exp $
+
+*minitest-5.4.0 (25 Aug 2014)
+
+  25 Aug 2014; Hans de Graaff <graaff@gentoo.org> +minitest-5.4.0.ebuild:
+  Version bump.
 
   15 Aug 2014; Raúl Porcel <armin76@gentoo.org> minitest-4.7.5.ebuild:
   sparc stable, bug #493780
