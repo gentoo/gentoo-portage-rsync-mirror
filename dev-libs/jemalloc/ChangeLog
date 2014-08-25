@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.46 2014/08/08 08:44:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.47 2014/08/25 11:58:45 armin76 Exp $
+
+  25 Aug 2014; Raúl Porcel <armin76@gentoo.org> jemalloc-3.6.0.ebuild:
+  Add ~sparc
 
   08 Aug 2014; Tobias Klausmann <klausman@gentoo.org> jemalloc-3.6.0.ebuild:
   Stable on alpha, bug 512330
