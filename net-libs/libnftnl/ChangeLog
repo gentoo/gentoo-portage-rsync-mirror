@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnftnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/ChangeLog,v 1.4 2014/02/01 20:09:06 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/ChangeLog,v 1.5 2014/08/25 17:53:18 mrueg Exp $
+
+*libnftnl-1.0.2 (25 Aug 2014)
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +libnftnl-1.0.2.ebuild:
+  NMU: Version bump bug #518194.
 
   01 Feb 2014; Steev Klimaszewski <steev@gentoo.org> libnftnl-1.0.0-r2.ebuild:
   Add ~arm keyword. Tested by aholler on armv5
@@ -24,4 +29,3 @@
   +metadata.xml:
   Initial commit, ebuild by me. Dependency of net-firewall/nftables, as
   requested by Robin Kauffman in bug #498724.
-

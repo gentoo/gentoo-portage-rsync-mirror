@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/six
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.48 2014/08/20 12:49:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.49 2014/08/25 17:32:25 mrueg Exp $
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> six-1.6.1.ebuild:
+  Mark amd64 stable. Bug #516408.
 
   20 Aug 2014; Raúl Porcel <armin76@gentoo.org> six-1.6.1.ebuild:
   alpha/ia64/sparc stable wrt #516408

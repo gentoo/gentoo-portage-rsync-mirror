@@ -9,7 +9,6 @@
 	</longdescription>
 	<use>
 		<flag name="bluez">use bluez to support clock following and scanning</flag>
-		<flag name="clock_debug">support for clock following an existing local bluetooth connection with bluez</flag>
 		<flag name="dfu">Install ubertooth-dfu (needed for read/write of firmware)</flag>
 		<flag name="pcap">Use libpcap for packet capture and read/write</flag>
 		<flag name="specan">Enable the ubertooth spectrum analyzer</flag>
