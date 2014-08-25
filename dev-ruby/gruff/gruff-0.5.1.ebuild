@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.5.1.ebuild,v 1.2 2014/05/15 01:02:39 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.5.1.ebuild,v 1.3 2014/08/25 16:16:36 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -25,7 +25,7 @@ HOMEPAGE="http://rubyforge.org/projects/gruff/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-macos"
+KEYWORDS="amd64 ~x86 ~x86-macos"
 IUSE=""
 
 RUBY_PATCHES=(

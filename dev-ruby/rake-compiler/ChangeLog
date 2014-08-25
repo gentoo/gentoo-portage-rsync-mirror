@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake-compiler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.83 2014/08/15 17:15:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.84 2014/08/25 16:01:10 mrueg Exp $
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> rake-compiler-0.9.2.ebuild:
+  Mark amd64 stable. Bug #505920.
 
   15 Aug 2014; Raúl Porcel <armin76@gentoo.org> rake-compiler-0.9.3.ebuild:
   Add ~sparc wrt #465948

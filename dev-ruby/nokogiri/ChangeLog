@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.102 2014/08/22 07:27:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.103 2014/08/25 16:02:31 mrueg Exp $
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> nokogiri-1.5.10.ebuild:
+  Mark amd64 stable. Bug #505920.
 
 *nokogiri-1.6.3.1 (22 Aug 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.88 2014/08/13 18:39:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.89 2014/08/25 16:10:27 mrueg Exp $
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> coderay-1.1.0-r1.ebuild:
+  Mark amd64 stable. Bug #513430.
 
   13 Aug 2014; Raúl Porcel <armin76@gentoo.org> coderay-1.1.0-r2.ebuild:
   Add ~sparc wrt #468536

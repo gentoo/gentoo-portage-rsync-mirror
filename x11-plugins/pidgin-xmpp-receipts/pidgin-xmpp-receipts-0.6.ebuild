@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-xmpp-receipts/pidgin-xmpp-receipts-0.6.ebuild,v 1.1 2014/01/29 01:49:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-xmpp-receipts/pidgin-xmpp-receipts-0.6.ebuild,v 1.2 2014/08/25 16:20:53 mrueg Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://www.assembla.com/spaces/pidgin-xmpp-receipts/documents/ckA6jCV5
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND="net-im/pidgin[gtk]"
