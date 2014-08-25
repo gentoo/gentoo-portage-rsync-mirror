@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.4.ebuild,v 1.8 2014/08/23 15:32:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.4.ebuild,v 1.9 2014/08/25 11:01:16 ago Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic multilib-minimal
@@ -12,7 +12,7 @@ SRC_URI="http://gstreamer.freedesktop.org/src/${MY_PN}/${MY_PN}-${PV}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="1.0"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="+orc"
 
 RDEPEND="

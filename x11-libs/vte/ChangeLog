@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.394 2014/08/23 15:34:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.395 2014/08/25 11:04:09 ago Exp $
+
+  25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> vte-0.36.3.ebuild:
+  Stable for alpha, wrt bug #512012
 
   23 Aug 2014; Agostino Sarubbo <ago@gentoo.org> vte-0.36.3.ebuild:
   Stable for ia64, wrt bug #512012

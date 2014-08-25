@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.62 2014/08/23 15:34:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.63 2014/08/25 11:03:34 ago Exp $
+
+  25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> ffmpeg-9-r1.ebuild,
+  ffmpeg-9.ebuild:
+  Stable for alpha, wrt bug #512012
 
   23 Aug 2014; Agostino Sarubbo <ago@gentoo.org> ffmpeg-9-r1.ebuild,
   ffmpeg-9.ebuild:

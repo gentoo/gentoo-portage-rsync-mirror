@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-standard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.68 2014/08/23 15:35:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.69 2014/08/25 11:04:13 ago Exp $
+
+  25 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
+  gnome-themes-standard-3.12.0.ebuild:
+  Stable for alpha, wrt bug #512012
 
   23 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-themes-standard-3.12.0.ebuild:
