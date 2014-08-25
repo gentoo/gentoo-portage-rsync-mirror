@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdiscount
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.31 2014/08/15 17:40:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.32 2014/08/25 16:34:45 mrueg Exp $
+
+  25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> rdiscount-1.6.8-r2.ebuild:
+  Mark amd64 stable. Bug #503570.
 
   15 Aug 2014; Raúl Porcel <armin76@gentoo.org> rdiscount-1.6.8-r1.ebuild:
   sparc stable, bug #493780

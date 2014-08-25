@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Gtk2-WebKit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-WebKit/ChangeLog,v 1.17 2012/07/29 17:45:09 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-WebKit/ChangeLog,v 1.18 2014/08/25 16:40:49 axs Exp $
+
+*Gtk2-WebKit-0.90.0-r1 (25 Aug 2014)
+
+  25 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Gtk2-WebKit-0.90.0-r1.ebuild, -Gtk2-WebKit-0.90.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> Gtk2-WebKit-0.90.0.ebuild:
   Drop sparc keywords
