@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.465 2014/08/01 11:39:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.466 2014/08/25 00:05:18 radhermit Exp $
+
+*vim-7.4.417 (25 Aug 2014)
+
+  25 Aug 2014; Tim Harder <radhermit@gentoo.org> +vim-7.4.417.ebuild:
+  Version bump.
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> vim-7.4.273.ebuild:
   sparc stable, bug #511190
