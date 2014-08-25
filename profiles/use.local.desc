@@ -3005,6 +3005,7 @@ kde-base/korundum:nepomuk - Compile bindings for Nepomuk
 kde-base/korundum:okular - Compile bindings for kde-base/okular
 kde-base/krdc:rdesktop - Enable runtime dependency for net-misc/rdesktop
 kde-base/krdc:telepathy - Enable desktop sharing through a telepathy client
+kde-base/krfb:ktp - Enable displaying of KDE Telepathy contacts
 kde-base/krfb:telepathy - Enable desktop sharing through a telepathy client
 kde-base/ksnapshot:kipi - Support for the KDE Image Plugin Interface.
 kde-base/kstars:fits - Enable support for the FITS image format through cfitsio

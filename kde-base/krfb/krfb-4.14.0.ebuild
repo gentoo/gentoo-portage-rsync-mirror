@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/krfb-4.14.0.ebuild,v 1.1 2014/08/20 16:02:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/krfb-4.14.0.ebuild,v 1.2 2014/08/25 03:55:42 patrick Exp $
 
 EAPI=5
 
@@ -10,7 +10,8 @@ inherit kde4-base
 DESCRIPTION="VNC-compatible server to share KDE desktops"
 HOMEPAGE="http://www.kde.org/applications/system/krfb/"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug telepathy"
+IUSE="debug telepathy ktp"
+REQUIRED_USE="ktp? ( telepathy )"
 
 DEPEND="
 	>=net-libs/libvncserver-0.9.9
@@ -36,6 +37,7 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with telepathy TelepathyQt4)
+		$(cmake-utils_use_with ktp KTp)
 	)
 
 	kde4-base_src_configure

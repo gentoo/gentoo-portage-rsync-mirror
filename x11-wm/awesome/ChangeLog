@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.162 2014/04/18 17:41:39 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.163 2014/08/25 03:32:27 prometheanfire Exp $
+
+*awesome-3.5.5-r1 (25 Aug 2014)
+
+  25 Aug 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +awesome-3.5.5-r1.ebuild, +files/awesome-3.5.5-cflag-cleanup.patch:
+  fix for bug 509658
 
 *awesome-3.5.5 (18 Apr 2014)
 
