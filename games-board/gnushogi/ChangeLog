@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnushogi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/ChangeLog,v 1.22 2014/08/13 09:17:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/ChangeLog,v 1.23 2014/08/25 20:50:38 mr_bones_ Exp $
+
+  25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -files/1.3-errno.patch,
+  -files/gnushogi-1.3-gcc4.patch, -files/gnushogi-1.3-ovflfix.patch,
+  -files/gnushogi-1.3-parallel.patch, -gnushogi-1.3.ebuild:
+  old
 
   13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gnushogi-1.4.1.ebuild:
   Stable for ppc, wrt bug #505214

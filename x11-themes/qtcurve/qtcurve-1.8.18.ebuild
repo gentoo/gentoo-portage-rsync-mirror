@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.18.ebuild,v 1.2 2014/02/04 14:10:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.18.ebuild,v 1.3 2014/08/25 20:52:02 polynomial-c Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
@@ -52,7 +52,10 @@ S="${WORKDIR}/${P/_/}"
 
 DOCS=( AUTHORS ChangeLog.md README.md TODO.md )
 
-PATCHES=( "${DISTDIR}/${P}-dont_use_c++11.patch" )
+PATCHES=(
+	"${DISTDIR}/${P}-dont_use_c++11.patch"
+	"${FILESDIR}/${P}-remove_qt_filedialog_api.patch"
+	)
 
 pkg_setup() {
 	# bug #498776

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/cavezofphear
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/ChangeLog,v 1.16 2014/08/03 18:40:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/ChangeLog,v 1.17 2014/08/25 20:48:22 mr_bones_ Exp $
+
+  25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -cavezofphear-0.5.ebuild,
+  -files/cavezofphear-0.5-gentoo.patch:
+  old
 
   03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> cavezofphear-0.5.1.ebuild:
   Stable for ppc, wrt bug #517198

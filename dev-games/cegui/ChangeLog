@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.64 2014/05/09 20:12:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.65 2014/08/25 20:46:05 mr_bones_ Exp $
+
+  25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -cegui-0.8.2.ebuild:
+  old
 
   09 May 2014; Julian Ospald <hasufell@gentoo.org> cegui-0.8.3.ebuild,
   +files/cegui-0.8.3-freetype.patch:

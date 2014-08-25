@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/fakenes
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.26 2013/02/24 12:14:24 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.27 2014/08/25 20:55:22 mr_bones_ Exp $
+
+  25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -fakenes-0.5.8-r1.ebuild:
+  old
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> fakenes-0.5.8-r2.ebuild:
   Stable for x86, wrt bug #458834

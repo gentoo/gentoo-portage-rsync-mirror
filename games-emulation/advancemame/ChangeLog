@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/advancemame
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.54 2014/08/13 09:14:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.55 2014/08/25 20:53:17 mr_bones_ Exp $
+
+  25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -advancemame-0.106.1.ebuild, -files/advancemame-0.106.1-pic.patch:
+  old
 
   13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> advancemame-1.2.ebuild:
   Stable for ppc, wrt bug #516072

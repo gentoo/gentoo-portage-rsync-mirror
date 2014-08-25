@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gfceux
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/ChangeLog,v 1.8 2013/02/14 12:09:02 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/ChangeLog,v 1.9 2014/08/25 20:55:57 mr_bones_ Exp $
+
+  25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -gfceux-2.1.1.ebuild:
+  old
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gfceux-2.1.1-r1.ebuild:
   Stable for x86, wrt bug #457112
