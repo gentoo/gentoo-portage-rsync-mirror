@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.1_p20121127.ebuild,v 1.7 2013/06/07 22:52:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.1_p20121127.ebuild,v 1.8 2014/08/25 09:06:55 xmw Exp $
 
 EAPI=4
 

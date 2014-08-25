@@ -10,4 +10,4 @@ RDEPEND=media-libs/freetype:2 media-libs/jbig2dec >=media-libs/openjpeg-1.5:0 vi
 SLOT=0
 SRC_URI=mirror://gentoo/mupdf-1.1_p20121127.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=40a70fdd9f640fc7e1408544edcefac3
+_md5_=354659b987f3bf51131a8534bd247d1e

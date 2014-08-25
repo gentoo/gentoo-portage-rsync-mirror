@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.35 2014/08/08 21:35:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.36 2014/08/25 09:14:52 k_f Exp $
+
+  25 Aug 2014; Kristian Fiskerstrand <k_f@gentoo.org> -jail-1.9-r3.ebuild:
+  Cleanup for security bug #514892 as requested by proxy maintainer
 
   08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> jail-2.0.ebuild:
   Stable for ppc, wrt bug #514892

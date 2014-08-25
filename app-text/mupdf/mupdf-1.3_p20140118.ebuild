@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.3_p20140118.ebuild,v 1.7 2014/06/05 09:45:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.3_p20140118.ebuild,v 1.8 2014/08/25 09:06:55 xmw Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="X vanilla static static-libs"
 LIB_DEPEND="dev-libs/openssl[static-libs?]
 	media-libs/freetype:2[static-libs?]
 	media-libs/jbig2dec[static-libs?]
-	media-libs/openjpeg:2[static-libs?]
+	<media-libs/openjpeg-2.1:2[static-libs?]
 	net-misc/curl[static-libs?]
 	virtual/jpeg[static-libs?]
 	X? ( x11-libs/libX11[static-libs?]

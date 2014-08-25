@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/libXcm-0.5.2-r1.ebuild,v 1.5 2014/06/18 19:50:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/libXcm-0.5.2-r1.ebuild,v 1.6 2014/08/25 09:25:29 xmw Exp $
 
 EAPI=5
 
@@ -13,14 +13,13 @@ SRC_URI="mirror://sourceforge/oyranos/${PN}/${PN}-0.4.x/${P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86"
-IUSE="X doc static-libs"
+IUSE="X static-libs"
 
 RDEPEND="X? ( >=x11-libs/libXmu-1.1.1-r1[${MULTILIB_USEDEP}]
 		>=x11-libs/libXfixes-5.0.1[${MULTILIB_USEDEP}]
 		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 		>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}] )"
-DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+DEPEND="${RDEPEND}"
 
 src_configure() {
 	local myeconfargs=(
@@ -29,14 +28,4 @@ src_configure() {
 		$(use_enable static-libs static)
 	)
 	autotools-multilib_src_configure
-}
-
-src_compile() {
-	autotools-multilib_src_compile
-	use doc && doxygen
-}
-
-src_install() {
-	autotools-multilib_src_install
-	use doc && dohtml doc/html/*
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libXcm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.19 2014/07/30 22:33:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.20 2014/08/25 09:25:29 xmw Exp $
+
+  25 Aug 2014; Michael Weber <xmw@gentoo.org> libXcm-0.5.2-r1.ebuild,
+  libXcm-0.5.3.ebuild, libXcm-9999.ebuild:
+  Drop USE=doc (bug 472532).
 
 *libXcm-9999 (30 Jul 2014)
 
