@@ -14,4 +14,8 @@
     <flag name="html">Enable HTML i/o via <pkg>dev-python/beautifulsoup</pkg></flag>
     <flag name="R">Enable support for R via <pkg>dev-python/rpy</pkg></flag>
   </use>
+  <upstream>
+    <remote-id type="pypi">pandas</remote-id>
+    <remote-id type="github">pydata/pandas</remote-id>
+  </upstream>
 </pkgmetadata>

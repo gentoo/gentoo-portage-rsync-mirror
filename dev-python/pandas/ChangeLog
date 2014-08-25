@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.29 2014/08/15 14:32:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.30 2014/08/25 06:23:56 idella4 Exp $
+
+  25 Aug 2014; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  add remote-ids to metadata.xml
 
   15 Aug 2014; Ian Delaney <idella4@gentoo.org> pandas-0.14.1.ebuild:
   update test phase

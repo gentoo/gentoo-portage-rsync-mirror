@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/supervisor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.15 2014/08/02 01:38:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.16 2014/08/25 06:19:03 idella4 Exp $
+
+*supervisor-3.1.1 (25 Aug 2014)
+
+  25 Aug 2014; Ian Delaney <idella4@gentoo.org> +supervisor-3.1.1.ebuild:
+  bump; add IUSE doc, doc build, tidy
 
   02 Aug 2014; Ian Delaney <idella4@gentoo.org> supervisor-3.1.0.ebuild:
   drop py2.6, unrestrict workable test phase, tidy
