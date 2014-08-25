@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.5.ebuild,v 1.2 2014/08/25 09:06:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.5.ebuild,v 1.3 2014/08/25 09:38:00 xmw Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="X vanilla +curl +openssl static static-libs"
 LIB_DEPEND="dev-libs/openssl[static-libs?]
 	media-libs/freetype:2[static-libs?]
 	media-libs/jbig2dec[static-libs?]
-	<media-libs/openjpeg-2.1:2[static-libs?]
+	media-libs/openjpeg:2[static-libs?]
 	net-misc/curl[static-libs?]
 	virtual/jpeg[static-libs?]
 	X? ( x11-libs/libX11[static-libs?]
@@ -41,6 +41,11 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.4-old-debian-files.patch \
 		"${FILESDIR}"/${PN}-1.3-pkg-config.patch \
 		"${FILESDIR}"/${PN}-1.5-Makerules-openssl-curl.patch
+
+	if has_version ">=media-libs/openjpeg-2.1:2" ; then
+		epatch \
+			"${FILESDIR}"/${PN}-1.5-openjpeg-2.1.patch
+	fi
 
 	sed -e "/^libdir=/s:/lib:/$(get_libdir):" \
 		-e "/^prefix=/s:=.*:=${EROOT}/usr:" \

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.107 2014/08/25 09:06:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.108 2014/08/25 09:38:00 xmw Exp $
+
+  25 Aug 2014; Michael Weber <xmw@gentoo.org>
+  +files/mupdf-1.5-openjpeg-2.1.patch, mupdf-1.5.ebuild, mupdf-9999.ebuild:
+  Fix for openjpeg-2.1 (bug 520774).
 
   25 Aug 2014; Michael Weber <xmw@gentoo.org> mupdf-1.1_p20121127.ebuild,
   mupdf-1.3_p20140118.ebuild, mupdf-1.4-r1.ebuild, mupdf-1.5.ebuild:
