@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Apache-SizeLimit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SizeLimit/ChangeLog,v 1.18 2013/08/25 06:45:26 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SizeLimit/ChangeLog,v 1.19 2014/08/25 02:16:45 axs Exp $
+
+*Apache-SizeLimit-0.960.0-r1 (25 Aug 2014)
+*Apache-SizeLimit-0.970.0-r1 (25 Aug 2014)
+
+  25 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Apache-SizeLimit-0.960.0-r1.ebuild, +Apache-SizeLimit-0.970.0-r1.ebuild,
+  -Apache-SizeLimit-0.960.0.ebuild, -Apache-SizeLimit-0.970.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
 *Apache-SizeLimit-0.970.0 (25 Aug 2013)
 

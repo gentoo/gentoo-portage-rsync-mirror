@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Gtk2-Notify
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Notify/ChangeLog,v 1.7 2012/08/11 12:45:29 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Notify/ChangeLog,v 1.8 2014/08/25 02:06:04 axs Exp $
+
+*Gtk2-Notify-0.05-r1 (25 Aug 2014)
+
+  25 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Gtk2-Notify-0.05-r1.ebuild, -Gtk2-Notify-0.05.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   11 Aug 2012; Markus Meier <maekke@gentoo.org> Gtk2-Notify-0.05.ebuild:
   x86 stable, bug #416121

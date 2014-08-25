@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Alien-wxWidgets
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.57 2013/12/30 07:53:26 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.58 2014/08/25 02:20:49 axs Exp $
+
+*Alien-wxWidgets-0.640.0-r1 (25 Aug 2014)
+
+  25 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Alien-wxWidgets-0.640.0-r1.ebuild, -Alien-wxWidgets-0.640.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   30 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> Alien-wxWidgets-0.610.0.ebuild,
   Alien-wxWidgets-0.620.0.ebuild, Alien-wxWidgets-0.640.0.ebuild:

@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Apache-AuthTicket
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/ChangeLog,v 1.22 2014/08/04 09:24:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/ChangeLog,v 1.23 2014/08/25 02:19:52 axs Exp $
+
+*Apache-AuthTicket-0.900.0-r1 (25 Aug 2014)
+*Apache-AuthTicket-0.930.0-r1 (25 Aug 2014)
+
+  25 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Apache-AuthTicket-0.900.0-r1.ebuild, +Apache-AuthTicket-0.930.0-r1.ebuild,
+  -Apache-AuthTicket-0.900.0.ebuild, -Apache-AuthTicket-0.930.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
   04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   Apache-AuthTicket-0.900.0.ebuild, Apache-AuthTicket-0.930.0.ebuild:
