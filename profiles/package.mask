@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15984 2014/08/25 15:22:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15985 2014/08/25 20:23:43 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -262,17 +262,6 @@ sys-block/afacli
 # Mask old slot for removal in 30 days since there are no longer
 # dependencies on it.
 dev-ruby/builder:0
-
-# Michael Sterrett <mr_bones_@gentoo.org> (02 Jul 2014)
-# No longer maintained upstream.
-# Masked for removal on 20140801.
-# Use games-action/d2x-rebirth instead which is actively maintained.
-games-action/d2x
-
-# Michael Sterrett <mr_bones_@gentoo.org> (02 Jul 2014)
-# No longer maintained upstream and segfaults on
-# modern systems.  Masked for removal on 20140801.
-games-arcade/koules
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
 # Severe security issue (bug 460780), unhandled for over a year.
