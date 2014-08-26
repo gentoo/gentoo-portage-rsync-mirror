@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/IO-All
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-All/ChangeLog,v 1.11 2013/01/06 20:23:25 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-All/ChangeLog,v 1.12 2014/08/26 17:03:02 axs Exp $
+
+*IO-All-0.460.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +IO-All-0.460.0-r1.ebuild, -IO-All-0.460.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -IO-All-0.440.0.ebuild:
   Cleanup
