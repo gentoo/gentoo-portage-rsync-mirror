@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.1.0.ebuild,v 1.3 2014/08/24 13:56:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.1.0.ebuild,v 1.4 2014/08/26 17:00:01 polynomial-c Exp $
 
 EAPI=5
 
@@ -110,6 +110,8 @@ REQUIRED_USE="
 	gtk? ( python )
 	python? ( ${PYTHON_REQUIRED_USE} )
 "
+
+RESTRICT="test" # 520270
 
 pkg_setup() {
 	if use subversion && has_version "dev-vcs/subversion[dso]"; then

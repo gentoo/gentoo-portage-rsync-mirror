@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.278 2014/08/24 13:56:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.279 2014/08/26 17:00:01 polynomial-c Exp $
+
+  26 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> git-2.1.0.ebuild:
+  Restrict test for >=git-2.1.0. See bug #520270 for details.
 
   24 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> git-1.8.1.5-r1.ebuild,
   git-1.8.1.5.ebuild, git-1.8.2.1.ebuild, git-1.8.3.2-r1.ebuild,

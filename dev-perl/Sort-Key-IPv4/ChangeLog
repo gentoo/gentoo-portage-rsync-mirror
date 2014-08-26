@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Sort-Key-IPv4
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Key-IPv4/ChangeLog,v 1.1 2014/08/26 16:52:29 chainsaw Exp $
+
+*Sort-Key-IPv4-0.30.0 (26 Aug 2014)
+
+  26 Aug 2014; Tony Vroon <chainsaw@gentoo.org> +Sort-Key-IPv4-0.30.0.ebuild,
+  +metadata.xml:
+  Initial commit, ebuild by g-cpan with minor modifications by me. Package
+  request from Owen Conway in the LINX engineering team.
+
