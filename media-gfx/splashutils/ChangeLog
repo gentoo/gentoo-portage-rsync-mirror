@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.222 2014/08/10 21:16:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.223 2014/08/26 10:22:31 slyfox Exp $
+
+  26 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/splashutils-1.5.4.4-ft25.patch, splashutils-1.5.4.4-r4.ebuild:
+  Fix build failure against stable freetype (bug #506124 by Nathan Caldwell and
+  others, fix by  Lars Wendler).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   splashutils-1.5.4.4-r1.ebuild, splashutils-1.5.4.4-r2.ebuild:

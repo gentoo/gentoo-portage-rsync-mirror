@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r4.ebuild,v 1.1 2013/10/14 13:50:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r4.ebuild,v 1.2 2014/08/26 10:22:31 slyfox Exp $
 
 EAPI=5
 inherit autotools eutils multilib toolchain-funcs
@@ -88,6 +88,8 @@ src_prepare() {
 	if use truetype ; then
 		cd "${SM}"
 		epatch "${FILESDIR}/splashutils-1.5.4.4-freetype-bz2.patch"
+		#cd "${S}"
+		epatch "${FILESDIR}/splashutils-1.5.4.4-ft25.patch"
 	fi
 
 	cd "${S}"

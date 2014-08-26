@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docker-py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/ChangeLog,v 1.3 2014/08/10 21:09:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/ChangeLog,v 1.4 2014/08/26 10:04:17 idella4 Exp $
+
+  26 Aug 2014; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  add remote-id to metadata.xml
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> docker-py-0.3.2.ebuild:
   QA: drop trailing '.' from DESCRIPTION

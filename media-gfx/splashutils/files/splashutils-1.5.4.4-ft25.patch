@@ -1,0 +1,15 @@
+Gentoo-bug: https://bugs.gentoo.org/506124
+Signed-off-by: Lars Wendler (Polynomial-C)
+--- miscsplashutils-0.1.8/fbtruetype/ttf.c
++++ miscsplashutils-0.1.8/fbtruetype/ttf.c
+@@ -13,8 +13,8 @@
+ #include <ft2build.h>
+ #include FT_FREETYPE_H
+ /* #include <freetype/freetype.h> */
+-#include <freetype/ftoutln.h>
+-#include <freetype/ttnameid.h>
++#include FT_OUTLINE_H
++#include FT_TRUETYPE_IDS_H
+ 
+ #include "ttf.h"
+ 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/FreezeThaw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.34 2014/01/16 21:27:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.35 2014/08/26 10:12:41 kumba Exp $
+
+  26 Aug 2014; Joshua Kinard <kumba@gentoo.org> FreezeThaw-0.500.100-r1.ebuild:
+  Added ~mips to KEYWORDS, per Bug #520758.
 
   16 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> -FreezeThaw-0.500.100.ebuild,
   FreezeThaw-0.500.100-r1.ebuild:

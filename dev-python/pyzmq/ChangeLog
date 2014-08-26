@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.49 2014/08/14 23:22:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.50 2014/08/26 10:10:05 kumba Exp $
+
+  26 Aug 2014; Joshua Kinard <kumba@gentoo.org> pyzmq-14.3.1.ebuild:
+  Added ~mips to KEYWORDS, per Bug #520744.
 
   14 Aug 2014; Anthony G. Basile <blueness@gentoo.org> pyzmq-13.1.0.ebuild,
   pyzmq-14.0.1.ebuild, pyzmq-14.1.1.ebuild, pyzmq-14.3.0.ebuild,
