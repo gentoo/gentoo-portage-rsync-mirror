@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.79 2014/08/25 10:26:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.80 2014/08/26 11:02:23 mgorny Exp $
+
+  26 Aug 2014; Michał Górny <mgorny@gentoo.org> gdbm-1.10-r1.ebuild,
+  gdbm-1.11.ebuild:
+  Install documentation files, bug #520944.
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gdbm-1.11.ebuild:
   Stable for sparc, wrt bug #518120

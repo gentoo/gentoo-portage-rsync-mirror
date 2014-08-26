@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.11.ebuild,v 1.13 2014/08/25 10:26:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.11.ebuild,v 1.14 2014/08/26 11:02:23 mgorny Exp $
 
 EAPI="4"
 
@@ -57,6 +57,8 @@ multilib_src_compile() {
 }
 
 multilib_src_install_all() {
+	einstalldocs
+
 	use static-libs || find "${ED}" -name '*.la' -delete
 	mv "${ED}"/usr/include/gdbm/gdbm.h "${ED}"/usr/include/ || die
 }
