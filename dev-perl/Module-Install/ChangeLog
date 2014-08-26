@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Module-Install
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.26 2012/11/18 11:27:23 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.27 2014/08/26 19:03:47 axs Exp $
+
+*Module-Install-1.60.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Module-Install-1.60.0-r1.ebuild, -Module-Install-1.60.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.
