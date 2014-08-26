@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.71.ebuild,v 1.5 2014/08/26 09:09:55 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.71.ebuild,v 1.6 2014/08/26 12:52:14 tomka Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ IUSE="gif jpeg jpeg2k png tiff webp utils zlib static-libs"
 DEPEND="gif? ( media-libs/giflib )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( >=media-libs/openjpeg-2.1 )
+	!jpeg2k? ( !<media-libs/openjpeg-2.1 )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
 	webp? ( media-libs/libwebp )
