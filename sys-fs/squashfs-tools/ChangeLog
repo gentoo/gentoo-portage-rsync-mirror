@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.105 2014/07/11 22:51:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.106 2014/08/26 11:39:01 armin76 Exp $
+
+  26 Aug 2014; Raúl Porcel <armin76@gentoo.org> squashfs-tools-4.3.ebuild:
+  Add ~m68k/~sh/~sparc wrt bug #499468
 
   11 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> squashfs-tools-4.3.ebuild:
   Add ~s390 keyword
