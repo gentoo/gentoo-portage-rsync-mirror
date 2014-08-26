@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/joymouse
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joymouse/ChangeLog,v 1.11 2008/01/15 09:57:41 nyhm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joymouse/ChangeLog,v 1.12 2014/08/26 16:28:57 mr_bones_ Exp $
+
+  26 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> joymouse-0.5.ebuild:
+  EAPI=5; fix compile warning (bug #521096)
 
   15 Jan 2008; Tristan Heaven <nyhm@gentoo.org> joymouse-0.5.ebuild:
   Add x11-proto/inputproto dep, bug #205065

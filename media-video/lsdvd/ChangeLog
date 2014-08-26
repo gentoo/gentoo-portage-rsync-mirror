@@ -1,6 +1,12 @@
 # ChangeLog for media-video/lsdvd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.46 2014/03/18 15:43:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.47 2014/08/26 16:14:53 beandog Exp $
+
+*lsdvd-0.16-r3 (26 Aug 2014)
+
+  26 Aug 2014; Steve Dibb <beandog@gentoo.org> +lsdvd-0.16-r3.ebuild,
+  +files/lsdvd-0.16-chapter-count.patch, +files/lsdvd-0.16-newline.patch:
+  Add patches for removing extra newlines, and fixing chapter count display
 
   18 Mar 2014; Steve Dibb <beandog@gentoo.org> lsdvd-0.16-r1.ebuild,
   lsdvd-0.16-r2.ebuild:

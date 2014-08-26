@@ -1,12 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/Clone || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
-DESCRIPTION=Merge nested Perl data structures
-EAPI=4
-HOMEPAGE=http://search.cpan.org/dist/Data-Utilities/
+DEPEND=test? ( dev-perl/Test-Differences >=dev-perl/yaml-0.67 dev-perl/File-Slurp ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=POD Object Model
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Pod-POM/
+IUSE=test
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=dev-perl/Clone || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=virtual/perl-parent dev-lang/perl:=[-build(-)]
 SLOT=0
-SRC_URI=mirror://cpan/authors/id/C/CO/CORNELIS/Data-Utilities-0.04.tar.gz
+SRC_URI=mirror://cpan/authors/id/A/AN/ANDREWF/Pod-POM-0.28.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=71a465ea39b06c3276d58f60a01d2206
+_md5_=eec29de41e4244167492b71a4aa603f2

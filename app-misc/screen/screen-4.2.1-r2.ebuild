@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.1-r2.ebuild,v 1.2 2014/08/23 09:14:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.1-r2.ebuild,v 1.3 2014/08/26 16:07:14 jer Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ src_prepare() {
 		-e "s:/etc/utmp:${EPREFIX}/var/run/utmp:g" \
 		-e "s:/local/screens/S-:${EPREFIX}/tmp/screen/S-:g" \
 		doc/screen.1 \
-		|| die "sed doc/screen.1 failed"
+		|| die
 
 	# reconfigure
 	eautoreconf
@@ -67,11 +67,14 @@ src_configure() {
 		--enable-telnet \
 		--enable-colors256 \
 		$(use_enable pam)
+}
 
-	LC_ALL=POSIX emake term.h
+src_compile() {
+	LC_ALL=POSIX emake comm.h term.h
 	emake osdef.h
 
 	emake -C doc screen.info
+	default
 }
 
 src_install() {
