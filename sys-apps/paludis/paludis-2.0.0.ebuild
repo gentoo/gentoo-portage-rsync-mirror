@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.0.0.ebuild,v 1.2 2014/06/27 07:02:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.0.0.ebuild,v 1.3 2014/08/26 04:28:34 jdhore Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://paludis.exherbo.org/download/${P}.tar.bz2"
 IUSE="doc pbins pink python ruby search-index test xml"
 LICENSE="GPL-2 vim"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
 
 COMMON_DEPEND="
 	>=app-admin/eselect-1.2.13
