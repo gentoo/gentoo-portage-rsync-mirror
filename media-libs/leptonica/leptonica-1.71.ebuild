@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.71.ebuild,v 1.4 2014/08/21 11:33:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.71.ebuild,v 1.5 2014/08/26 09:09:55 tomka Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="gif jpeg jpeg2k png tiff webp utils zlib static-libs"
 
 DEPEND="gif? ( media-libs/giflib )
 	jpeg? ( virtual/jpeg )
-	jpeg2k? ( media-libs/openjpeg:2 )
+	jpeg2k? ( >=media-libs/openjpeg-2.1 )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
 	webp? ( media-libs/libwebp )
@@ -27,8 +27,6 @@ RDEPEND="${DEPEND}"
 DOCS=( README version-notes )
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-openjpeg-2.0.patch"
-
 	# unhtmlize docs
 	local X
 	for X in ${DOCS[@]}; do
