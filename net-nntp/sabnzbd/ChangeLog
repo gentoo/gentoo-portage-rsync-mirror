@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/sabnzbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.22 2014/06/19 16:50:52 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.23 2014/08/26 14:08:14 jsbronder Exp $
+
+*sabnzbd-0.7.18 (26 Aug 2014)
+
+  26 Aug 2014; Justin Bronder <jsbronder@gentoo.org> +sabnzbd-0.7.18.ebuild:
+  Version bump (#516786). Thanks to James Chew for the report.
 
   19 Jun 2014; Justin Bronder <jsbronder@gentoo.org> files/sabnzbd.initd:
   Check that api is not disabled before attempting to use it for shutdown.
