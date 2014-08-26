@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.89 2014/08/22 10:31:59 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.90 2014/08/26 08:46:13 pinkbyte Exp $
+
+  26 Aug 2014; Sergey Popov <pinkbyte@gentoo.org> -ulogd-2.0.2.ebuild,
+  -files/ulogd-2.0.2-automagic.patch, -files/ulogd-2.init:
+  Drop old version as requested by proxied maintainer
 
   22 Aug 2014; Yixun Lan <dlan@gentoo.org> files/ulogd-2-ng.init,
   files/ulogd-2.init:
