@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.9.ebuild,v 1.1 2014/06/14 21:44:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.9.ebuild,v 1.2 2014/08/26 22:10:36 amynka Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -75,6 +75,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.4.3-gcc47.patch"
 	"${FILESDIR}/${PN}-2.4.2-cflags.patch"
 	"${FILESDIR}/${PN}-2.4.8-javamagic.patch"
+	"${FILESDIR}/${PN}-2.4.9-cuda.patch"
 )
 
 pkg_setup() {
