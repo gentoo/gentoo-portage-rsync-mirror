@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/PBS-Client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PBS-Client/ChangeLog,v 1.11 2014/05/24 07:40:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PBS-Client/ChangeLog,v 1.12 2014/08/26 15:33:14 axs Exp $
+
+*PBS-Client-0.100.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +PBS-Client-0.100.0-r1.ebuild, -PBS-Client-0.100.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   24 May 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #199047

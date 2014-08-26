@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Text-FindIndent
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-FindIndent/ChangeLog,v 1.8 2012/06/24 12:58:56 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-FindIndent/ChangeLog,v 1.9 2014/08/26 15:45:36 axs Exp $
+
+*Text-FindIndent-0.100.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Text-FindIndent-0.100.0-r1.ebuild, -Text-FindIndent-0.100.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

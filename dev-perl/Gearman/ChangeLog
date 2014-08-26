@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Gearman
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gearman/ChangeLog,v 1.10 2013/08/25 15:42:08 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gearman/ChangeLog,v 1.11 2014/08/26 15:57:33 axs Exp $
+
+*Gearman-1.110.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Gearman-1.110.0-r1.ebuild, -Gearman-1.110.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   25 Aug 2013; Ian Delaney <idella4@gentoo.org> -Gearman-1.09.ebuild,
   -Gearman-1.10.ebuild, -Gearman-1.11.ebuild:
