@@ -1,6 +1,17 @@
 # ChangeLog for dev-perl/Devel-GlobalDestruction
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.27 2014/08/21 15:24:35 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.28 2014/08/26 18:07:11 axs Exp $
+
+*Devel-GlobalDestruction-0.70.0-r1 (26 Aug 2014)
+*Devel-GlobalDestruction-0.90.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Devel-GlobalDestruction-0.70.0-r1.ebuild,
+  +Devel-GlobalDestruction-0.90.0-r1.ebuild,
+  -Devel-GlobalDestruction-0.70.0.ebuild,
+  -Devel-GlobalDestruction-0.90.0.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on perl-5.18 upgrade
 
 *Devel-GlobalDestruction-0.50.0-r1 (21 Aug 2014)
 

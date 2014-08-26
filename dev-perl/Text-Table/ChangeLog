@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Text-Table
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Table/ChangeLog,v 1.17 2013/09/03 05:52:11 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Table/ChangeLog,v 1.18 2014/08/26 18:15:10 axs Exp $
+
+*Text-Table-1.127.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Text-Table-1.127.0-r1.ebuild, -Text-Table-1.127.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
 *Text-Table-1.127.0 (03 Sep 2013)
 
