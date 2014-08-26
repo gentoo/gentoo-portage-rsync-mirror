@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Math-Base36
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Base36/ChangeLog,v 1.11 2013/09/06 04:52:26 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Base36/ChangeLog,v 1.12 2014/08/26 15:28:21 axs Exp $
+
+*Math-Base36-0.120.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Math-Base36-0.120.0-r1.ebuild, -Math-Base36-0.120.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   06 Sep 2013; Patrick Lauer <patrick@gentoo.org> Math-Base36-0.120.0.ebuild:
   Add missing test dep

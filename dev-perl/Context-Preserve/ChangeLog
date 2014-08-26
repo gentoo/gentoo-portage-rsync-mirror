@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Context-Preserve
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Context-Preserve/ChangeLog,v 1.8 2014/08/05 13:19:50 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Context-Preserve/ChangeLog,v 1.9 2014/08/26 15:06:29 axs Exp $
+
+*Context-Preserve-0.10.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Context-Preserve-0.10.0-r1.ebuild, -Context-Preserve-0.10.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   Context-Preserve-0.10.0.ebuild:
