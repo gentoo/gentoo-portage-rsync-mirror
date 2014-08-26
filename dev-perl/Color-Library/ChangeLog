@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Color-Library
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Color-Library/ChangeLog,v 1.10 2013/03/17 17:51:10 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Color-Library/ChangeLog,v 1.11 2014/08/26 17:38:25 axs Exp $
+
+*Color-Library-0.21.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Color-Library-0.21.0-r1.ebuild, -Color-Library-0.21.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   17 Mar 2013; Torsten Veller <tove@gentoo.org> metadata.xml:
   Maintained by perl team

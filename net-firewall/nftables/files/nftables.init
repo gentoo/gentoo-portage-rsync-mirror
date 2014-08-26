@@ -38,7 +38,7 @@ checkfamilies() {
         return
     fi
 
-    local families=()
+    families=()
     for l3f in ip arp ip6 bridge inet; do
         ${nft_bin} list tables ${l3f} &> /dev/null
         if [ $? -eq 0 ]; then
@@ -186,10 +186,6 @@ panic() {
 
     ebegin "Dropping all packets"
     clearNFT
-
-    if havefamily "inet"; then
-        einfo inet
-    fi
 
     local l3f
     for l3f in ${families[@]}; do

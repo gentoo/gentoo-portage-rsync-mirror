@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Test-Portability-Files
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Portability-Files/ChangeLog,v 1.7 2013/01/06 02:55:36 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Portability-Files/ChangeLog,v 1.8 2014/08/26 17:32:57 axs Exp $
+
+*Test-Portability-Files-0.60.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Test-Portability-Files-0.60.0-r1.ebuild,
+  -Test-Portability-Files-0.60.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   06 Jan 2013; Zac Medico <zmedico@gentoo.org>
   Test-Portability-Files-0.60.0.ebuild:

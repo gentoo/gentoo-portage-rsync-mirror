@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/libnftnl-1.0.2.ebuild,v 1.1 2014/08/25 17:53:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/libnftnl-1.0.2.ebuild,v 1.2 2014/08/26 17:48:02 mrueg Exp $
 
 EAPI=5
 
@@ -39,11 +39,6 @@ src_configure() {
 		$(use_with json json-parsing)
 }
 
-src_compile() {
-	default
-	use test && emake check
-}
-
 src_install() {
 	default
 	gen_usr_ldscript -a nftnl
@@ -57,6 +52,7 @@ src_install() {
 }
 
 src_test() {
+	default
 	cd tests || die
 	./test-script.sh || die
 }

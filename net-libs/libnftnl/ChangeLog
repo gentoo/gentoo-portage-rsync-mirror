@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnftnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/ChangeLog,v 1.6 2014/08/26 10:57:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/ChangeLog,v 1.7 2014/08/26 17:48:02 mrueg Exp $
+
+  26 Aug 2014; Manuel Rüger <mrueg@gentoo.org> libnftnl-1.0.2.ebuild:
+  Apply ebuild improvements suggested by dwfreed.
 
   26 Aug 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
   Add myself as maintainer. Acked by Chainsaw.
