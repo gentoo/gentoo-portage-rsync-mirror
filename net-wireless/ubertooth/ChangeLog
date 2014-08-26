@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ubertooth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.25 2014/08/25 17:42:12 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.26 2014/08/26 01:33:17 zerochaos Exp $
+
+  26 Aug 2014; Rick Farina <zerochaos@gentoo.org> ubertooth-2014.04.1-r1.ebuild,
+  ubertooth-9999.ebuild:
+  fix typo/stupidity in firmware fix
 
 *ubertooth-2014.04.1-r1 (25 Aug 2014)
 

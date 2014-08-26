@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/solarus/solarus-1.2.0.ebuild,v 1.1 2014/05/22 17:10:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/solarus/solarus-1.3.1.ebuild,v 1.1 2014/08/26 01:31:39 hasufell Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.zelda-solarus.com/downloads/${PN}/${P}-src.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="luajit"
+IUSE="doc luajit"
 
 RDEPEND="
 	dev-games/physfs
@@ -25,10 +25,8 @@ RDEPEND="
 	>=media-libs/sdl2-ttf-2.0.12
 	luajit? ( dev-lang/luajit:2 )
 	!luajit? ( dev-lang/lua )"
-DEPEND="${RDEPEND}"
-
-DOCS=( ChangeLog readme.txt )
-PATCHES=( "${FILESDIR}"/${P}-paths.patch )
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 src_prepare() {
 	cmake-utils_src_prepare
@@ -44,9 +42,15 @@ src_configure() {
 
 src_compile() {
 	cmake-utils_src_compile
+	if use doc ; then
+		cd doc || die
+		doxygen || die
+	fi
 }
 
 src_install() {
 	cmake-utils_src_install
+	doman solarus.6
+	use doc && dohtml -r doc/${PV%.*}/html/*
 	prepgamesdirs
 }

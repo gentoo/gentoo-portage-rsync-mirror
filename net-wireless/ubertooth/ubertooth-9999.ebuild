@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.24 2014/08/25 17:42:12 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.25 2014/08/26 01:33:17 zerochaos Exp $
 
 EAPI="5"
 
@@ -94,7 +94,7 @@ src_install() {
 		ewarn "Firmware isn't available for git releases, we assume you are already"
 		ewarn "on the latest and/or can build your own."
 	else
-	        use ubertooth1-firmware && doins ubertooth-one-firmware-bin/${PN}-one-${PV}-bluetooth_rxtx.dfu
+	        use ubertooth1-firmware && newins ubertooth-one-firmware-bin/bluetooth_rxtx.dfu ${PN}-one-${PV}-bluetooth_rxtx.dfu
 	fi
 
 	if use udev; then
