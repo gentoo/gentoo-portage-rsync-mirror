@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/topgit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/ChangeLog,v 1.5 2014/08/11 17:59:13 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/ChangeLog,v 1.6 2014/08/26 20:48:57 mgorny Exp $
+
+  26 Aug 2014; Michał Górny <mgorny@gentoo.org> topgit-0.9.ebuild:
+  Remove needless USE=bash-completion. Install completion file using a correct
+  name for autoloading.
 
 *topgit-0.9 (11 Aug 2014)
 
