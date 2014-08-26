@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Data-Dumper-Concise
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper-Concise/ChangeLog,v 1.20 2013/04/16 17:58:20 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper-Concise/ChangeLog,v 1.21 2014/08/26 14:47:21 axs Exp $
+
+*Data-Dumper-Concise-2.20.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Data-Dumper-Concise-2.20.0-r1.ebuild, -Data-Dumper-Concise-2.20.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   16 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org>
   Data-Dumper-Concise-2.20.0.ebuild:
