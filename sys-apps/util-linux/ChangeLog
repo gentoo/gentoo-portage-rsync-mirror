@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.482 2014/08/05 23:04:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.483 2014/08/26 19:59:37 mgorny Exp $
+
+  26 Aug 2014; Michał Górny <mgorny@gentoo.org> util-linux-2.24.2.ebuild,
+  util-linux-2.25.ebuild, util-linux-9999.ebuild:
+  Install bash-completion files unconditionally.
 
   05 Aug 2014; Mike Frysinger <vapier@gentoo.org>
   +files/util-linux-2.25-lscpu-pic.patch, util-linux-2.25.ebuild:

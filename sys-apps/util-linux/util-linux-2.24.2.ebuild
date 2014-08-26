@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.2.ebuild,v 1.6 2014/08/05 14:27:40 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.2.ebuild,v 1.7 2014/08/26 19:59:37 mgorny Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
 LICENSE="GPL-2 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
-IUSE="bash-completion caps +cramfs cytune fdformat ncurses nls pam python selinux slang static-libs +suid test tty-helpers udev unicode"
+IUSE="caps +cramfs cytune fdformat ncurses nls pam python selinux slang static-libs +suid test tty-helpers udev unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -99,7 +99,7 @@ multilib_src_configure() {
 		$(multilib_native_use_enable nls) \
 		--enable-agetty \
 		--with-bashcompletiondir="$(get_bashcompdir)" \
-		$(multilib_native_use_enable bash-completion) \
+		--enable-bash-completion \
 		$(multilib_native_use_enable caps setpriv) \
 		$(multilib_native_use_enable cramfs) \
 		$(multilib_native_use_enable cytune) \

@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Bio-Das
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/ChangeLog,v 1.34 2012/12/20 17:34:09 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/ChangeLog,v 1.35 2014/08/26 19:36:32 axs Exp $
+
+*Bio-Das-1.170.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Bio-Das-1.170.0-r1.ebuild, -Bio-Das-1.170.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   20 Dec 2012; Justin Lecher <jlec@gentoo.org> Bio-Das-1.170.0.ebuild:
   Dropping ~ppc do to broken revdeps. If wanted please file a bug

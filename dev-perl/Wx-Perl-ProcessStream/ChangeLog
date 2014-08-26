@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Wx-Perl-ProcessStream
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Wx-Perl-ProcessStream/ChangeLog,v 1.13 2012/06/24 12:59:53 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Wx-Perl-ProcessStream/ChangeLog,v 1.14 2014/08/26 19:45:06 axs Exp $
+
+*Wx-Perl-ProcessStream-0.320.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Wx-Perl-ProcessStream-0.320.0-r1.ebuild,
+  -Wx-Perl-ProcessStream-0.320.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
