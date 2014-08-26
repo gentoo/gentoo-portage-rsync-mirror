@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/figlet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.40 2014/07/08 03:30:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.41 2014/08/26 07:35:49 jer Exp $
+
+  26 Aug 2014; Jeroen Roovers <jer@gentoo.org> figlet-2.2.5.ebuild:
+  Stable for HPPA (bug #520870).
 
 *figlet-2.2.5 (08 Jul 2014)
 
