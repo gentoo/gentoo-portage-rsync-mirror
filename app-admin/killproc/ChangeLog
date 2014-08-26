@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/killproc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.32 2014/08/04 12:25:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.33 2014/08/26 09:41:25 kumba Exp $
+
+  26 Aug 2014; Joshua Kinard <kumba@gentoo.org> killproc-2.13-r1.ebuild:
+  Added ~mips to KEYWORDS.
 
   04 Aug 2014; Anthony G. Basile <blueness@gentoo.org> killproc-2.13-r1.ebuild:
   Keyword ~ppc64, bug #467210
