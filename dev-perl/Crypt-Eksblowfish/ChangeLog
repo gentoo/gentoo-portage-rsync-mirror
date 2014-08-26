@@ -1,10 +1,15 @@
 # ChangeLog for dev-perl/Crypt-Eksblowfish
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Eksblowfish/ChangeLog,v 1.1 2013/11/28 14:50:24 chainsaw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Eksblowfish/ChangeLog,v 1.2 2014/08/26 18:48:46 axs Exp $
+
+*Crypt-Eksblowfish-0.9.0-r2 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Crypt-Eksblowfish-0.9.0-r2.ebuild, -Crypt-Eksblowfish-0.9.0-r1.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
 *Crypt-Eksblowfish-0.9.0-r1 (28 Nov 2013)
 
   28 Nov 2013; Tony Vroon <chainsaw@gentoo.org>
   +Crypt-Eksblowfish-0.9.0-r1.ebuild, +metadata.xml:
   Initial commit; ebuild based on perl-experimental overlay submission.
-

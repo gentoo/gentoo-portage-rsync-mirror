@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Perl-Critic-Policy-Dynamic-NoIndirect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic-Policy-Dynamic-NoIndirect/ChangeLog,v 1.6 2012/12/22 18:25:18 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic-Policy-Dynamic-NoIndirect/ChangeLog,v 1.7 2014/08/26 18:42:28 axs Exp $
+
+*Perl-Critic-Policy-Dynamic-NoIndirect-0.60.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Perl-Critic-Policy-Dynamic-NoIndirect-0.60.0-r1.ebuild,
+  -Perl-Critic-Policy-Dynamic-NoIndirect-0.60.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   Perl-Critic-Policy-Dynamic-NoIndirect-0.60.0.ebuild:

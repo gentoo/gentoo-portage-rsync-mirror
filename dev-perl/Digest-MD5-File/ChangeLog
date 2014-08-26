@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Digest-MD5-File
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5-File/ChangeLog,v 1.6 2012/09/02 17:14:28 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5-File/ChangeLog,v 1.7 2014/08/26 18:57:39 axs Exp $
+
+*Digest-MD5-File-0.80.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Digest-MD5-File-0.80.0-r1.ebuild, -Digest-MD5-File-0.80.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -Digest-MD5-File-0.70.0.ebuild:
   Cleanup

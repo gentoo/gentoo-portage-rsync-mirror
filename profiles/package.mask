@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15989 2014/08/26 17:01:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15990 2014/08/26 19:00:48 k_f Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Kristian Fiskerstrand <k_f@gentoo.org> (26 Aug 2014)
+# Open security bug #386221 (CVE-2010-3353)
+# Does not seem actively maintained
+# Masked for removal in 30 days
+media-sound/cowbell
 
 # Michał Górny <mgorny@gentoo.org> (25 Aug 2014)
 # cfdisk wipes out partition table when removing partitions. Masking

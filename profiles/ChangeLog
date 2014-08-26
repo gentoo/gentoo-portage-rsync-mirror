@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9322 2014/08/26 17:01:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9323 2014/08/26 19:00:48 k_f Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Aug 2014; Kristian Fiskerstrand <k_f@gentoo.org> package.mask:
+  Add mask for media-sound/cowbell for removal in 30 days
 
   26 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> package.mask:
   Removed git mask.

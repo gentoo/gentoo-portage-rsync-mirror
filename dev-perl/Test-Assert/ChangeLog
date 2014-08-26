@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Test-Assert
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Assert/ChangeLog,v 1.10 2014/08/05 11:21:43 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Assert/ChangeLog,v 1.11 2014/08/26 18:45:36 axs Exp $
+
+*Test-Assert-0.50.400-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Test-Assert-0.50.400-r1.ebuild, -Test-Assert-0.50.400.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   05 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> Test-Assert-0.50.400.ebuild:
   Fix DESCRIPTION

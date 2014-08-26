@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/maybe
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/maybe/ChangeLog,v 1.8 2012/11/18 11:26:35 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/maybe/ChangeLog,v 1.9 2014/08/26 18:31:13 axs Exp $
+
+*maybe-0.20.200-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +maybe-0.20.200-r1.ebuild, -maybe-0.20.200.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

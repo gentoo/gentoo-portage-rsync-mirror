@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Data-Stream-Bulk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stream-Bulk/ChangeLog,v 1.19 2012/09/02 17:24:48 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stream-Bulk/ChangeLog,v 1.20 2014/08/26 18:49:31 axs Exp $
+
+*Data-Stream-Bulk-0.110.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Data-Stream-Bulk-0.110.0-r1.ebuild, -Data-Stream-Bulk-0.110.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org>
   -Data-Stream-Bulk-0.100.0.ebuild:

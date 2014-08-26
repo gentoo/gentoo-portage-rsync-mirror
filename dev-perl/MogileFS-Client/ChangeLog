@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/MogileFS-Client
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MogileFS-Client/ChangeLog,v 1.16 2013/08/26 13:38:13 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MogileFS-Client/ChangeLog,v 1.17 2014/08/26 18:52:42 axs Exp $
+
+*MogileFS-Client-1.170.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +MogileFS-Client-1.170.0-r1.ebuild, -MogileFS-Client-1.170.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   26 Aug 2013; Ian Delaney <idella4@gentoo.org> -MogileFS-Client-1.08.ebuild,
   -MogileFS-Client-1.09.ebuild, -MogileFS-Client-1.10.ebuild,

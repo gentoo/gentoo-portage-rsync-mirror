@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Router-Simple
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Router-Simple/ChangeLog,v 1.6 2013/01/06 15:19:38 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Router-Simple/ChangeLog,v 1.7 2014/08/26 18:31:58 axs Exp $
+
+*Router-Simple-0.140.0-r1 (26 Aug 2014)
+
+  26 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +Router-Simple-0.140.0-r1.ebuild, -Router-Simple-0.140.0.ebuild:
+  bumped EAPI to 5 to help with dev-lang/perl upgrade
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -Router-Simple-0.90.0.ebuild,
   -Router-Simple-0.100.0.ebuild, -Router-Simple-0.130.0.ebuild:
