@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15985 2014/08/25 20:23:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15987 2014/08/26 05:52:41 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -258,11 +258,6 @@ sys-block/afacli
 =media-video/mpv-0.4*
 =media-video/mpv-0.5*
 
-# Hans de Graaff <graaff@gentoo.org> (6 Jul 2014)
-# Mask old slot for removal in 30 days since there are no longer
-# dependencies on it.
-dev-ruby/builder:0
-
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
 # Severe security issue (bug 460780), unhandled for over a year.
 # Masked for removal in 30 days.
@@ -271,11 +266,6 @@ dev-db/flamerobin
 dev-libs/ibpp
 dev-python/kinterbasdb
 dev-php/PEAR-MDB2_Driver_ibase
-
-# Hans de Graaff <graaff@gentoo.org> (28 Jun 2014)
-# Mask old slot for removal in 30 days since there are no longer
-# dependencies on it.
-dev-ruby/mail:2.4
 
 # Mikle Kolyada <zlogene@gentoo.org> (27 Jun 2014)
 # Masked for proper testing. (Major updates in the code).
@@ -340,7 +330,9 @@ sci-physics/camfr
 =sys-kernel/gentoo-sources-3.14.5
 
 # Hans de Graaff <graaff@gentoo.org> (1 Jun 2014)
-# Mask new rubinius version for testing
+# Mask new rubinius version for testing. Current versions have some
+# issues that should be solved in the forthcoming rubinius 2.3
+# release.
 =dev-lang/rubinius-2*
 
 # Markos Chandras <hwoarang@gentoo.org> (30 May 2014)

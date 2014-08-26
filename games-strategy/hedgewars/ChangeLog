@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.58 2014/05/15 17:04:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.59 2014/08/26 05:43:34 mr_bones_ Exp $
+
+  26 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/hedgewars-0.9.19-de_translation_fix.patch,
+  -files/hedgewars-0.9.19-missionmap.patch, -hedgewars-0.9.19-r1.ebuild:
+  old
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> hedgewars-0.9.19-r1.ebuild,
   hedgewars-0.9.19.3.ebuild, hedgewars-0.9.20.ebuild:
