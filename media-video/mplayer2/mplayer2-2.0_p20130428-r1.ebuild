@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130428-r1.ebuild,v 1.13 2014/08/22 18:15:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130428-r1.ebuild,v 1.14 2014/08/27 12:40:09 ago Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_URI="http://rion-overlay.googlecode.com/files/${P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ~ppc ppc64 ~sparc x86 ~amd64-linux"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~amd64-linux"
 IUSE="+alsa aqua bluray bs2b cddb +cdio cpudetection debug directfb doc dvb +dvd
 +dvdnav +enca ftp gif +iconv ipv6 jack joystick jpeg ladspa lcms +libass libcaca
 lirc md5sum mng +mp3 +network +opengl oss png pnm portaudio +postproc pulseaudio

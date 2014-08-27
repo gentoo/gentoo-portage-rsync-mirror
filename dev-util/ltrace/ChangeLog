@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.65 2014/08/08 18:55:33 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.66 2014/08/27 12:39:46 ago Exp $
+
+  27 Aug 2014; Agostino Sarubbo <ago@gentoo.org> ltrace-0.7.2.ebuild:
+  Stable for ppc, wrt bug #445538
 
   08 Aug 2014; <mad@gentoo.org> ltrace-0.7.2.ebuild:
   x86 stable, see bug 445538

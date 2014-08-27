@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.7.2.ebuild,v 1.4 2014/08/08 18:55:33 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.7.2.ebuild,v 1.5 2014/08/27 12:39:46 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://alioth.debian.org/frs/download.php/${NUM}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 x86"
+KEYWORDS="-alpha amd64 ~arm ~ia64 ~mips ppc ~ppc64 x86"
 IUSE="debug selinux test unwind"
 
 RDEPEND="dev-libs/elfutils
