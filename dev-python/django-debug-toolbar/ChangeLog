@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/django-debug-toolbar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/ChangeLog,v 1.9 2014/03/03 11:00:45 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/ChangeLog,v 1.10 2014/08/27 08:55:39 maksbotan Exp $
+
+*django-debug-toolbar-1.2.1 (27 Aug 2014)
+
+  27 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +django-debug-toolbar-1.2.1.ebuild:
+  Bump to 1.2.1. Fix tests exclusion, remove OS X fork file removal as they do
+  not exist anymore, drop 2.6 and 3.2, add 3.4
 
   03 Mar 2014; Ultrabug <ultrabug@gentoo.org>
   django-debug-toolbar-0.10.2.ebuild, django-debug-toolbar-0.11.0.ebuild:
