@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11-r1.ebuild,v 1.7 2014/03/27 19:18:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11-r2.ebuild,v 1.1 2014/08/27 17:21:14 axs Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils flag-o-matic perl-module
 
 DESCRIPTION="dvd::rip is a graphical frontend for transcode"
