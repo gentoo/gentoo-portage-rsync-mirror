@@ -8,5 +8,5 @@ LICENSE=Apache-2.0
 RDEPEND=dev-lang/erlang
 SLOT=0
 SRC_URI=http://github.com/rebar/rebar/archive/2.3.0.tar.gz -> rebar-2.3.0.tar.gz
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=bash-completion-r1	a41d285e86c3d31fda4fa967ba61f72e	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=ddfa7a8a37bdf9706bce31ff1f3213d6

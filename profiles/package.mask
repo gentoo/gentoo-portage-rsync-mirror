@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15990 2014/08/26 19:00:48 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15991 2014/08/27 08:05:04 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (27 Aug 2014)
+# Does not work since late 2013, due to update servers shutdown
+# See bug #520858, removal in a month
+games-server/halflife-steam
 
 # Kristian Fiskerstrand <k_f@gentoo.org> (26 Aug 2014)
 # Open security bug #386221 (CVE-2010-3353)

@@ -1,6 +1,15 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.261 2014/01/22 19:27:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.262 2014/08/27 08:13:54 mgorny Exp $
+
+*bash-completion-2.1-r1 (27 Aug 2014)
+
+  27 Aug 2014; Michał Górny <mgorny@gentoo.org> +bash-completion-2.1-r1.ebuild,
+  metadata.xml:
+  Use bash-completion-r1 to reuse the current installation paths or respect the
+  eclass defaults on new installs. Provide forward compatibility with new
+  completionsdir location for eselect-bashcomp. Add myself as co-maintainer to
+  help with the possible issues.
 
   22 Jan 2014; Samuli Suominen <ssuominen@gentoo.org>
   -bash-completion-2.1-r1.ebuild:

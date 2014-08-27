@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses[unicode?] >=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) visualizer? ( fftw? ( sci-libs/fftw:3.0 ) ) iconv? ( virtual/libiconv ) taglib? ( media-libs/taglib )
 SLOT=0
 SRC_URI=http://ncmpcpp.rybczak.net/stable/ncmpcpp-0.5.10.tar.bz2
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=bash-completion-r1	a41d285e86c3d31fda4fa967ba61f72e	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=ac451c5a336b1b51b725949ef108fee0

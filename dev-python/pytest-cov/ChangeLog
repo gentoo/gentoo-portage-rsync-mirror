@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest-cov
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-cov/ChangeLog,v 1.4 2014/04/02 20:53:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-cov/ChangeLog,v 1.5 2014/08/27 08:22:32 idella4 Exp $
+
+  27 Aug 2014; Ian Delaney <idella4@gentoo.org> pytest-cov-1.6.ebuild:
+  add keyword ~x86, pypy support
 
   02 Apr 2014; Patrick McLean <chutzpah@gentoo.org> pytest-cov-1.6.ebuild:
   Add python3_4 support.

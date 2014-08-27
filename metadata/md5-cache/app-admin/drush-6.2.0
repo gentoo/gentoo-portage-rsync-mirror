@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/php[cli,ctype,json,simplexml] dev-php/PEAR-Console_Table
 SLOT=0
 SRC_URI=https://github.com/drush-ops/drush/archive/6.2.0.tar.gz -> drush-6.2.0.tar.gz
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=bash-completion-r1	a41d285e86c3d31fda4fa967ba61f72e	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=0e74afa30ab44fdeb5f79ce12d30a124

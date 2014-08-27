@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.12 2014/01/22 19:41:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.13 2014/08/27 08:15:27 mgorny Exp $
 
 # @ECLASS: bash-completion-r1.eclass
 # @MAINTAINER:
@@ -57,7 +57,7 @@ _bash-completion-r1_get_bashdir() {
 _bash-completion-r1_get_bashcompdir() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	_bash-completion-r1_get_bashdir completionsdir /usr/share/bash-completion
+	_bash-completion-r1_get_bashdir completionsdir /usr/share/bash-completion/completions
 }
 
 # @FUNCTION: _bash-completion-r1_get_helpersdir
