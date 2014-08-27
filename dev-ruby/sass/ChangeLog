@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.61 2014/08/05 16:00:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.62 2014/08/27 17:39:12 mrueg Exp $
+
+  27 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -sass-3.2.18.ebuild,
+  -sass-3.3.11.ebuild, sass-3.3.14.ebuild:
+  Remove slot restriction from dev-ruby/listen in 3.3.14. Cleanup old.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> sass-3.1.21.ebuild,
   sass-3.2.18.ebuild, sass-3.2.19-r1.ebuild, sass-3.2.19.ebuild,

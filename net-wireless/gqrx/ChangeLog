@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/gqrx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gqrx/ChangeLog,v 1.4 2014/08/06 02:49:11 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gqrx/ChangeLog,v 1.6 2014/08/27 17:50:06 zerochaos Exp $
+
+  27 Aug 2014; Rick Farina <zerochaos@gentoo.org> gqrx-2.3.0-r1.ebuild,
+  gqrx-9999.ebuild:
+  more fix for 521206
+
+*gqrx-2.3.0-r1 (27 Aug 2014)
+
+  27 Aug 2014; Rick Farina <zerochaos@gentoo.org> +files/no_qtsvg.patch,
+  +gqrx-2.3.0-r1.ebuild, -gqrx-2.3.0.ebuild, gqrx-9999.ebuild:
+  fixing bug 521206 by removing incorrect qtsvg requirement
 
 *gqrx-2.3.0 (06 Aug 2014)
 
