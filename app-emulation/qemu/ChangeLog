@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.287 2014/08/27 03:17:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.288 2014/08/27 13:16:45 ago Exp $
+
+*qemu-2.1.0-r1 (27 Aug 2014)
+
+  27 Aug 2014; Agostino Sarubbo <ago@gentoo.org> +files/CVE-2014-5388.patch,
+  +qemu-2.1.0-r1.ebuild:
+  Fix CVE-2014-5388 wrt bug #520688
 
   27 Aug 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml
