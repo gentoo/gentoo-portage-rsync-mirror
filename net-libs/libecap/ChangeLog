@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libecap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.39 2014/07/04 13:58:48 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.40 2014/08/27 12:29:14 ago Exp $
+
+  27 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libecap-1.0.0.ebuild:
+  Stable for ppc, wrt bug #495854
 
   04 Jul 2014; Tobias Klausmann <klausman@gentoo.org> libecap-1.0.0.ebuild:
   Stable on alpha, bug #495854

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.108 2014/08/25 09:38:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.109 2014/08/27 12:26:53 ago Exp $
+
+  27 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mupdf-1.3_p20140118.ebuild:
+  Stable for ppc, wrt bug #472532
 
   25 Aug 2014; Michael Weber <xmw@gentoo.org>
   +files/mupdf-1.5-openjpeg-2.1.patch, mupdf-1.5.ebuild, mupdf-9999.ebuild:

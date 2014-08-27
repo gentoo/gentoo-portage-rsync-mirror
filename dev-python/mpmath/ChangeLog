@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mpmath
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.34 2014/08/05 08:16:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.35 2014/08/27 12:20:54 blueness Exp $
+
+  27 Aug 2014; Anthony G. Basile <blueness@gentoo.org> mpmath-0.18.ebuild,
+  mpmath-0.19.ebuild:
+  Keyword ~ppc ~ppc64, bug #495116
 
   05 Aug 2014; Ian Delaney <idella4@gentoo.org> mpmath-0.19.ebuild:
   drop py2.6 add py3.4 support

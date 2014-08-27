@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/libXcm-0.5.2-r1.ebuild,v 1.6 2014/08/25 09:25:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/libXcm-0.5.2-r1.ebuild,v 1.7 2014/08/27 12:27:02 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/oyranos/${PN}/${PN}-0.4.x/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="X static-libs"
 
 RDEPEND="X? ( >=x11-libs/libXmu-1.1.1-r1[${MULTILIB_USEDEP}]

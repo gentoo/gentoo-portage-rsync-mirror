@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libXcm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.20 2014/08/25 09:25:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.21 2014/08/27 12:27:02 ago Exp $
+
+  27 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libXcm-0.5.2-r1.ebuild:
+  Stable for ppc, wrt bug #472532
 
   25 Aug 2014; Michael Weber <xmw@gentoo.org> libXcm-0.5.2-r1.ebuild,
   libXcm-0.5.3.ebuild, libXcm-9999.ebuild:

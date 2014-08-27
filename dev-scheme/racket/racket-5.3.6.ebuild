@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/racket-5.3.6.ebuild,v 1.3 2014/08/10 21:25:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/racket-5.3.6.ebuild,v 1.4 2014/08/27 12:25:33 ago Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ EGIT_REPO_URI="git://git.racket-lang.org/plt.git"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="backtrace cairo doc futures jit places plot threads X"
 
 RDEPEND="dev-db/sqlite:3 x11-libs/cairo[X?] virtual/libffi"

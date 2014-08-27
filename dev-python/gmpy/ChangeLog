@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.42 2014/07/22 17:47:04 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.43 2014/08/27 12:06:13 blueness Exp $
+
+  27 Aug 2014; Anthony G. Basile <blueness@gentoo.org> gmpy-1.16.ebuild,
+  gmpy-1.17.ebuild, gmpy-2.0.0.ebuild, gmpy-2.0.3.ebuild:
+  Keyword ~ppc ~ppc64, bug #495116
 
   22 Jul 2014; Rick Farina <zerochaos@gentoo.org> gmpy-1.16.ebuild,
   gmpy-1.17.ebuild, gmpy-2.0.0.ebuild, gmpy-2.0.3.ebuild:
