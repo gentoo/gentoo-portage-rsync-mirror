@@ -1,13 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-9999.ebuild,v 1.5 2014/04/02 18:11:50 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-9999.ebuild,v 1.6 2014/08/27 18:26:53 mgorny Exp $
 
 EAPI=5
 
-PYTHON_DEPEND="2"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit bash-completion-r1 eutils multilib python-r1
+inherit bash-completion-r1 eutils multilib python-single-r1
 
 DESCRIPTION="Framework which enables integration with the Security Content Automation Protocol (SCAP)"
 HOMEPAGE="http://www.open-scap.org/"
@@ -25,7 +24,7 @@ fi
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="acl bash-completion caps debug doc gconf ldap nss pcre perl python rpm selinux sce sql test xattr"
+IUSE="acl caps debug doc gconf ldap nss pcre perl python rpm selinux sce sql test xattr"
 #RESTRICT="test"
 
 RDEPEND="!nss? ( dev-libs/libgcrypt:0 )
@@ -41,7 +40,8 @@ RDEPEND="!nss? ( dev-libs/libgcrypt:0 )
 	dev-libs/libpcre
 	dev-libs/libxml2
 	dev-libs/libxslt
-	net-misc/curl"
+	net-misc/curl
+	${PYTHON_DEPS}"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	perl? ( dev-lang/swig )
@@ -58,6 +58,8 @@ src_unpack() {
 		git-2_src_unpack
 	fi
 }
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
 #	uncoment for debugging test
@@ -147,14 +149,12 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
-	find "${D}" -name '*.la' -delete || die
+	emake install DESTDIR="${D}"
+	prune_libtool_files --all
 	if use doc ; then
-		dohtml -r docs/html/* || die
-		dodoc docs/examples/* || die
+		dohtml -r docs/html/.
+		dodoc docs/examples/.
 	fi
-	if use bash-completion ; then
-		dobashcomp "${D}"/etc/bash_completion.d/oscap
-	fi
+	dobashcomp "${D}"/etc/bash_completion.d/oscap
 	rm -rf "${D}"/etc/bash_completion.d || die
 }

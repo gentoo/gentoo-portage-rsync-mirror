@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/collectl-3.7.3.ebuild,v 1.1 2014/05/28 09:45:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/collectl-3.7.3.ebuild,v 1.2 2014/08/27 18:15:30 ryao Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/collectl/${P}.src.tar.gz"
 
 LICENSE="GPL-2 Artistic"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8.8

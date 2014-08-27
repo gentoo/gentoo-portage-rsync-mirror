@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supernova/supernova-1.0.3-r1.ebuild,v 1.1 2014/08/25 22:45:18 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supernova/supernova-1.0.3-r1.ebuild,v 1.2 2014/08/27 18:02:02 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/major/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="bash-completion doc examples"
+IUSE="doc examples"
 
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
@@ -36,5 +36,5 @@ python_install_all() {
 
 	distutils-r1_python_install_all
 
-	use bash-completion && newbashcomp contrib/${PN}-completion.bash ${PN}
+	newbashcomp contrib/${PN}-completion.bash ${PN}
 }
