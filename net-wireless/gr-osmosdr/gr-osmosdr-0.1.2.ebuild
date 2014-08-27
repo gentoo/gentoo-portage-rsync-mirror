@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-0.1.1.ebuild,v 1.3 2014/08/27 01:32:39 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-0.1.2.ebuild,v 1.1 2014/08/27 01:32:39 zerochaos Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -16,6 +16,7 @@ if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="git://git.osmocom.org/${PN}.git"
 	KEYWORDS=""
 else
+	#git archive --format=tar --prefix=gr-osmosdr-${PV}/ v${PV} | xz > ../gr-osmosdr-${PV}.tar.xz
 	SRC_URI="https://dev.gentoo.org/~zerochaos/distfiles/${P}.tar.xz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
@@ -27,17 +28,16 @@ IUSE="bladerf fcd hackrf iqbalance python rtlsdr uhd"
 
 #	osmosdr? ( net-libs/libosmosdr:= )
 
-#from "git show v0.1.1"
-#gnuradio 3.7.3
-#uhd 003.007.000-1-ga8caec5f
-#librtlsdr v0.5.3-5-g6ee5
-#libosmosdr v0.1-43-gb697
-#libmirisdr 3174
-#libhackrf 0.3
-#gr-iqbal v0.37.1-5-gd4fd4dd4
-#libairspy 9350af1a
-#libbladeRF 0.14.0-git-d9db543
+#from "git show v${PV}"
+#gr-iqbal 44ab02f6
 #gr-fcdproplus 1edbe523
+#uhd d99ce4ef99
+#librtlsdr v0.5.3-6-gd447
+#libmirisdr 3174
+#libosmosdr v0.1-43-gb697
+#libhackrf 635d429a
+#libbladeRF af887e5d
+#libairspy b4c38a71
 
 RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[fcd?]
 	bladerf? ( net-wireless/bladerf:= )

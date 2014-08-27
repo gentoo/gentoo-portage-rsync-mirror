@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-9999.ebuild,v 1.15 2014/07/25 05:00:25 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-9999.ebuild,v 1.16 2014/08/27 01:32:39 zerochaos Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -16,6 +16,7 @@ if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="git://git.osmocom.org/${PN}.git"
 	KEYWORDS=""
 else
+	#git archive --format=tar --prefix=gr-osmosdr-${PV}/ v${PV} | xz > ../gr-osmosdr-${PV}.tar.xz
 	SRC_URI="https://dev.gentoo.org/~zerochaos/distfiles/${P}.tar.xz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
