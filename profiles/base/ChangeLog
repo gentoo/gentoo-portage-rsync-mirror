@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.711 2014/08/20 14:17:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.712 2014/08/27 02:18:47 zerochaos Exp $
+
+  26 Aug 2014 Rick Farina <zerochaos@gentoo.org> package.use.mask:
+  mirisdr does not seem to like making releases
+  <net-wireless/gr-osmosdr-9999 mirisdr
 
   20 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.stable.mask:
   Mask USE="static" for sys-fs/cryptsetup and sys-fs/lvm2 wrt bugs #496612 and

@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.590 2014/08/09 19:07:27 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.591 2014/08/27 02:18:47 zerochaos Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Rick Farina <zerochaos@gentoo.org> (26 Aug 2014)
+# mirisdr does not seem to like making releases
+<net-wireless/gr-osmosdr-9999 mirisdr
 
 # Maxim Koltsov <maksbotan@gentoo.org> (05 Aug 2014)
 # net-libs/tox is in mva overlay only ATM
