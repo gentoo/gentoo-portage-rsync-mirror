@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=Program for making large letters out of ordinary text
+EAPI=5
+HOMEPAGE=http://www.figlet.org/
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+LICENSE=AFL-2.1
+SLOT=0
+SRC_URI=ftp://ftp.figlet.org/pub/figlet/program/unix/figlet222.tar.gz mirror://gentoo/contributed-figlet-221.tar.gz mirror://gentoo/ms-dos-figlet-221.tar.gz
+_eclasses_=bash-completion-r1	a41d285e86c3d31fda4fa967ba61f72e	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=553be1e7e572c0583381a8de503b5e15

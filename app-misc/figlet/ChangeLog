@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/figlet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.41 2014/08/26 07:35:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.42 2014/08/27 13:43:54 mgorny Exp $
+
+*figlet-222-r1 (27 Aug 2014)
+
+  27 Aug 2014; Michał Górny <mgorny@gentoo.org> +figlet-222-r1.ebuild:
+  Convert to a modern EAPI and bash-completion-r1.
 
   26 Aug 2014; Jeroen Roovers <jer@gentoo.org> figlet-2.2.5.ebuild:
   Stable for HPPA (bug #520870).

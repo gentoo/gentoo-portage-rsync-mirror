@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libsodium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.15 2014/08/26 10:00:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.16 2014/08/27 13:47:03 mrueg Exp $
+
+*libsodium-0.7.0 (27 Aug 2014)
+
+  27 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +libsodium-0.7.0.ebuild:
+  Version bump.
 
   26 Aug 2014; Joshua Kinard <kumba@gentoo.org> libsodium-0.6.1.ebuild:
   Added ~mips to KEYWORDS, per Bug #520740.

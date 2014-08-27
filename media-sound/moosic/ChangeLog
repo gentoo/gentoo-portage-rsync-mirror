@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/moosic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.23 2012/09/07 22:14:03 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.24 2014/08/27 14:00:13 mgorny Exp $
+
+*moosic-1.5.6-r1 (27 Aug 2014)
+
+  27 Aug 2014; Michał Górny <mgorny@gentoo.org> +moosic-1.5.6-r1.ebuild:
+  Convert to a distutils-r1 and bash-completion-r1.
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
