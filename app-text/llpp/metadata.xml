@@ -5,8 +5,5 @@
 <email>xmw@gentoo.org</email>
 <name>Michael Weber</name>
 </maintainer>
-<use>
-<flag name="egl">build with EGL support</flag>
-</use>
 </pkgmetadata>
 

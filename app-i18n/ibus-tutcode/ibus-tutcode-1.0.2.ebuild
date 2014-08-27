@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-tutcode/ibus-tutcode-1.0.2.ebuild,v 1.1 2012/07/08 21:44:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-tutcode/ibus-tutcode-1.0.2.ebuild,v 1.2 2014/08/27 03:27:19 patrick Exp $
 
 EAPI=4
 
@@ -14,10 +14,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 RESTRICT="test"
 
-DEPEND=">=dev-lang/python-2.5
-	>=sys-devel/gettext-0.16.1
+CDEPEND=">=dev-lang/python-2.5
+	>=sys-devel/gettext-0.16.1"
+DEPEND="${CDEPEND}
 	test? ( app-i18n/ibus )"
-RDEPEND="${DEPEND}
+RDEPEND="${CDEPEND}
 	app-i18n/ibus"
 
 src_install() {

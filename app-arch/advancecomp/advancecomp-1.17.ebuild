@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/advancecomp-1.17.ebuild,v 1.1 2013/04/18 20:04:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/advancecomp-1.17.ebuild,v 1.2 2014/08/27 03:25:20 patrick Exp $
 
 EAPI=5
 
@@ -15,13 +15,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="mng png test"
 
-DEPEND="app-arch/bzip2
-	sys-libs/zlib
+RDEPEND="app-arch/bzip2
+	sys-libs/zlib"
+DEPEND="${RDEPEND}
 	test? (
 		app-text/tofrodos
 		dev-util/valgrind
 	)"
-RDEPEND="${DEPEND}"
 
 #RESTRICT="test" #282441
 

@@ -562,7 +562,6 @@ app-emulation/qemu:fdt - Enables firmware device tree support
 app-emulation/qemu:glusterfs - Enables GlusterFS cluster fileystem via sys-cluster/glusterfs
 app-emulation/qemu:iscsi - Enable direct iSCSI support via net-libs/libiscsi instead of indirectly via the Linux block layer that sys-block/open-iscsi does.
 app-emulation/qemu:jpeg - Enable jpeg image support for the VNC console server
-app-emulation/qemu:mixemu - Enable audio mixer emulation. On Fedora, known to cause performance problems when using SDL output and ALSA. For OSS, locks the sound device from other applications.
 app-emulation/qemu:ncurses - Enable the ncurses-based console
 app-emulation/qemu:nfs - Enable NFS support
 app-emulation/qemu:numa - Enable NUMA support
@@ -1096,7 +1095,6 @@ app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search libra
 app-text/libgxps:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/liblangtag:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/libwpd:tools - Build miscellaneous tools
-app-text/llpp:egl - build with EGL support
 app-text/lodgeit:vim - Install a vim plugin allowing to paste and download from within vim
 app-text/mate-document-viewer:caja - Enable property page extension in mate-base/mate-file-manager
 app-text/mate-document-viewer:dvi - Enable build-in DVI viewer
@@ -6866,7 +6864,6 @@ sys-fs/aufs3:nfs - Enable support for nfs export
 sys-fs/aufs3:pax_kernel - Apply patch needed for pax enabled kernels
 sys-fs/aufs3:ramfs - Enable initramfs/rootfs support
 sys-fs/btrfs-progs:debug-utils - Build additional utils for debugging
-sys-fs/cryptsetup:dynamic - Build cryptsetup dynamically
 sys-fs/cryptsetup:gcrypt - Use dev-libs/libgcrypt crypto backend
 sys-fs/cryptsetup:kernel - Use kernel crypto backend (mainly for embedded systems)
 sys-fs/cryptsetup:nettle - Use dev-libs/nettle crypto backend

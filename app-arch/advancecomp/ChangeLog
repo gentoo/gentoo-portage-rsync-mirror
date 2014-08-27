@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/advancecomp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.43 2013/04/18 20:04:57 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.44 2014/08/27 03:25:20 patrick Exp $
+
+  27 Aug 2014; Patrick Lauer <patrick@gentoo.org> advancecomp-1.17.ebuild:
+  Shuffle dependencies so that test deps are not in RDEPEND
 
 *advancecomp-1.17 (18 Apr 2013)
 

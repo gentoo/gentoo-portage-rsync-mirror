@@ -1,8 +1,8 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.712 2014/08/27 02:18:47 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.713 2014/08/27 03:26:21 zerochaos Exp $
 
-  26 Aug 2014 Rick Farina <zerochaos@gentoo.org> package.use.mask:
+  26 Aug 2014; Rick Farina <zerochaos@gentoo.org> package.use.mask:
   mirisdr does not seem to like making releases
   <net-wireless/gr-osmosdr-9999 mirisdr
 

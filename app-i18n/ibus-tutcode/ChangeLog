@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-tutcode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-tutcode/ChangeLog,v 1.4 2012/07/08 21:44:14 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-tutcode/ChangeLog,v 1.5 2014/08/27 03:27:19 patrick Exp $
+
+  27 Aug 2014; Patrick Lauer <patrick@gentoo.org> ibus-tutcode-1.0.2.ebuild:
+  Shuffle dependencies so that test deps are not in RDEPEND
 
 *ibus-tutcode-1.0.2 (08 Jul 2012)
 

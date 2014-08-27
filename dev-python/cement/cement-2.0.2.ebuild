@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cement/cement-2.0.2.ebuild,v 1.6 2014/07/06 12:40:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cement/cement-2.0.2.ebuild,v 1.7 2014/08/27 03:29:31 patrick Exp $
 
 EAPI=5
 
@@ -19,11 +19,11 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="test doc"
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/nose[${PYTHON_USEDEP}]
-	dev-python/coverage[${PYTHON_USEDEP}] )
+RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	test? ( dev-python/nose[${PYTHON_USEDEP}]
+		dev-python/coverage[${PYTHON_USEDEP}] )"
 
 DOCS=( ChangeLog CONTRIBUTORS README.md )
 PATCHES=( "${FILESDIR}"/tests-installation.patch )

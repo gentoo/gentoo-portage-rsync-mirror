@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-9999.ebuild,v 1.16 2014/08/27 01:32:39 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-9999.ebuild,v 1.17 2014/08/27 03:15:51 zerochaos Exp $
 
 EAPI=5
-PYTHON_DEPEND="python? 2"
+PYTHON_COMPAT=( python2_7 )
 
-inherit cmake-utils python
+inherit cmake-utils python-single-r1
 
 DESCRIPTION="GNU Radio source block for OsmoSDR and rtlsdr and hackrf"
 HOMEPAGE="http://sdr.osmocom.org/trac/wiki/GrOsmoSDR"
@@ -24,31 +24,29 @@ fi
 LICENSE="GPL-3"
 SLOT="0/${PV}"
 IUSE="bladerf fcd hackrf iqbalance mirisdr python rtlsdr uhd"
-#IUSE="fcd hackrf iqbalance mirisdr osmosdr python rtlsdr uhd"
 
-#	osmosdr? ( net-libs/libosmosdr:= )
-RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[fcd?]
+RDEPEND="${PYTHON_DEPS}
+	>=net-wireless/gnuradio-3.7_rc:0=[fcd?,${PYTHON_USEDEP}]
 	bladerf? ( net-wireless/bladerf:= )
 	hackrf? ( net-libs/libhackrf:= )
-	iqbalance? ( net-wireless/gr-iqbal:= )
+	iqbalance? ( net-wireless/gr-iqbal:=[${PYTHON_USEDEP}] )
 	mirisdr? ( net-libs/libmirisdr:= )
 	rtlsdr? ( >=net-wireless/rtl-sdr-0.5.3:= )
-	uhd? ( net-wireless/uhd:= )"
+	uhd? ( net-wireless/uhd:=[${PYTHON_USEDEP}] )"
 DEPEND="${RDEPEND}
 	dev-python/cheetah"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
-	python_convert_shebangs -q -r 2 "${S}"
+	epatch_user
 }
 
 src_configure() {
 	local mycmakeargs=(
 		-DENABLE_DEFAULT=OFF
+		-DPYTHON_EXECUTABLE="${PYTHON}"
+		-DENABLE_FILE=ON
 		$(cmake-utils_use_enable bladerf)
 		$(cmake-utils_use_enable fcd)
 		$(cmake-utils_use_enable hackrf)
@@ -59,7 +57,11 @@ src_configure() {
 		$(cmake-utils_use_enable rtlsdr RTL_TCP)
 		$(cmake-utils_use_enable uhd)
 	)
-#		$(cmake-utils_use_enable osmosdr)
 
 	cmake-utils_src_configure
+}
+
+src_install() {
+	cmake-utils_src_install
+	python_fix_shebang "${ED}"/usr/bin
 }
