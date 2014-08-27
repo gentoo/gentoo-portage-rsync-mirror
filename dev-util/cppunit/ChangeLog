@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.101 2014/08/25 10:58:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.102 2014/08/27 09:01:30 jer Exp $
+
+  27 Aug 2014; Jeroen Roovers <jer@gentoo.org> cppunit-1.13.2-r2.ebuild:
+  Stable for SPARC (bug #512012).
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> cppunit-1.13.2-r2.ebuild:
   Stable for alpha, wrt bug #512012

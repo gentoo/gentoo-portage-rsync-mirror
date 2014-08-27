@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.368 2014/08/27 07:26:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.369 2014/08/27 09:10:15 ssuominen Exp $
+
+  27 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.109.ebuild:
+  Restrict old 2.02.109-r0 to old sys-apps/util-linux < 2.25 for USE="static"
+  wrt #520450
 
 *lvm2-2.02.109-r1 (27 Aug 2014)
 
