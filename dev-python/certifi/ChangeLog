@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/certifi
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/certifi/ChangeLog,v 1.7 2014/08/27 15:24:31 idella4 Exp $
+
+*certifi-14.05.14 (27 Aug 2014)
+
+  27 Aug 2014; Ian Delaney <idella4@gentoo.org> +certifi-14.05.14.ebuild,
+  +metadata.xml:
+  new ebuild, dep to tornado-4.0.1, ebuild written by me
