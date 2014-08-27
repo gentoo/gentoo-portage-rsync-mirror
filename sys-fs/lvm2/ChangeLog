@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.367 2014/08/24 17:24:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.368 2014/08/27 07:26:17 ssuominen Exp $
+
+*lvm2-2.02.109-r1 (27 Aug 2014)
+
+  27 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> +lvm2-2.02.109-r1.ebuild:
+  Revision bump for last correction in files/lvm2-2.02.106-pthread-
+  pkgconfig.patch and to have ~arch version with REQUIRED_USE blocking usage of
+  USE="static udev" wrt #520450.
 
   24 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
   files/lvm2-2.02.106-pthread-pkgconfig.patch:

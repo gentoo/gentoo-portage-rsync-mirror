@@ -1,15 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.22 2014/08/20 14:17:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.23 2014/08/27 07:14:50 ssuominen Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
-
-# Samuli Suominen <ssuominen@gentoo.org> (20 Aug 2014)
-# Constant compile errors, like bugs #496612 and #516224
-# Masked because affected version(s) are going stable from bug #493892
-sys-fs/cryptsetup static
-sys-fs/lvm2 static
 
 # Mikle Kolyada <zlogene@gentoo.org> (16 Aug 2014)
 # Not yet stabilized dependency, need more testing
