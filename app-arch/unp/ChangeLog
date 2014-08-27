@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/ChangeLog,v 1.31 2012/01/28 15:31:25 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/ChangeLog,v 1.32 2014/08/27 21:02:19 hanno Exp $
+
+  27 Aug 2014; Hanno Boeck <hanno@gentoo.org> -unp-1.0.15-r1.ebuild,
+  -unp-1.0.15-r2.ebuild, -unp-2.0_pre5.ebuild,
+  -files/unp-1.0.15-7z-lzma-xz.diff, -files/unp-1.0.15-lzma-7z.patch:
+  Remove old.
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> unp-2.0_pre7.ebuild:
   x86 stable wrt bug #396767
