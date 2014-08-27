@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.106 2014/08/06 18:24:15 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.107 2014/08/27 07:57:29 pinkbyte Exp $
+
+  27 Aug 2014; Sergey Popov <pinkbyte@gentoo.org>
+  virt-manager-0.10.0-r2.ebuild:
+  Add x11-themes/gnome-icon-theme dependency to stable version as well
 
 *virt-manager-1.0.1 (06 Aug 2014)
 

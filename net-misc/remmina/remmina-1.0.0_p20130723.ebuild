@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0_p20130723.ebuild,v 1.2 2014/03/01 22:19:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0_p20130723.ebuild,v 1.3 2014/08/27 07:59:47 pinkbyte Exp $
 
 EAPI="4"
 
@@ -31,6 +31,7 @@ RDEPEND="
 	>=dev-libs/glib-2.31.18:2
 	>=net-libs/libvncserver-0.9.8.2
 	x11-libs/libxkbfile
+	x11-themes/gnome-icon-theme
 	avahi? ( net-dns/avahi[gtk3] )
 	ayatana? ( dev-libs/libappindicator )
 	crypt? ( dev-libs/libgcrypt:0 )
