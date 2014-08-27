@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bakefile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bakefile/ChangeLog,v 1.5 2013/02/05 02:23:59 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bakefile/ChangeLog,v 1.6 2014/08/27 14:14:09 mgorny Exp $
+
+*bakefile-0.2.9-r1 (27 Aug 2014)
+
+  27 Aug 2014; Michał Górny <mgorny@gentoo.org> +bakefile-0.2.9-r1.ebuild:
+  Convert to a python-single-r1 and bash-completion-r1.
 
 *bakefile-0.2.9 (05 Feb 2013)
 
@@ -26,4 +31,3 @@
   21 Jul 2009; Markus Ullmann <jokey@gentoo.org> +bakefile-0.2.6.ebuild,
   +files/bakefile-0.2.6-enlarge-buffers.patch, +metadata.xml:
   Initial import for wx dependency of webkit nightly
-

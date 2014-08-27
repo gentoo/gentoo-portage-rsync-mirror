@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/frostwire
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.11 2012/05/21 19:35:57 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.12 2014/08/27 14:17:46 mrueg Exp $
+
+  27 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -frostwire-4.13.5-r1.ebuild:
+  NMU: EAPI1 cleanup wrt bug #518784.
 
   21 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   frostwire-4.13.5-r1.ebuild, frostwire-4.20.9.ebuild:
@@ -58,4 +61,3 @@
   Initial ebuild for Frostwire, fork of Limewire. Based on ebuild from
   java-experimental overlay and limewire ebuilds. It's buggy and still needs
   work. Adding to tree for exposure and to mirror sources for upstream.
-
