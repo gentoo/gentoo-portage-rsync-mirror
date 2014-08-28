@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.25 2013/08/02 13:52:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.26 2014/08/28 10:07:45 jer Exp $
 
 EAPI="4"
 
@@ -23,8 +23,6 @@ IUSE="gtk lua ncat ndiff nmap-update nping ssl"
 NMAP_PYTHON_DEPEND="
 || (
 	dev-lang/python:2.7[sqlite]
-	dev-lang/python:2.6[sqlite]
-	dev-lang/python:2.5[sqlite]
 )
 "
 DEPEND="

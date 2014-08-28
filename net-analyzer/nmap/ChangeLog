@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.309 2014/06/06 00:25:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.310 2014/08/28 10:07:45 jer Exp $
+
+*nmap-6.47 (28 Aug 2014)
+
+  28 Aug 2014; Jeroen Roovers <jer@gentoo.org> nmap-6.01.ebuild,
+  nmap-6.25.ebuild, nmap-6.46.ebuild, +nmap-6.47.ebuild:
+  Version bump. Remove <python2.7 dependencies.
 
   06 Jun 2014; Jeroen Roovers <jer@gentoo.org> -nmap-6.40.ebuild,
   -nmap-6.40-r1.ebuild, -files/nmap-6.40-uninstaller.patch:

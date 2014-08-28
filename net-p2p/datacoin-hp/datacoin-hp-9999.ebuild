@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/datacoin-hp/datacoin-hp-9999.ebuild,v 1.3 2014/08/10 20:36:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/datacoin-hp/datacoin-hp-9999.ebuild,v 1.4 2014/08/28 10:25:41 mgorny Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ EGIT_REPO_URI="https://github.com/foo1inge/${PN}.git"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="bash-completion examples upnp ipv6 examples logrotate hardened"
 
 RDEPEND="
