@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/verynice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.26 2014/02/23 08:49:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.27 2014/08/28 21:08:03 mgorny Exp $
+
+  28 Aug 2014; Michał Górny <mgorny@gentoo.org> -verynice-1.1-r1.ebuild,
+  -verynice-1.1.ebuild:
+  Drop old.
 
   23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> verynice-1.1-r2.ebuild:
   Stable for ppc, wrt bug #499838
