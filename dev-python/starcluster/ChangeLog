@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/starcluster
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/ChangeLog,v 1.8 2013/04/19 13:56:41 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/ChangeLog,v 1.9 2014/08/28 11:16:05 mgorny Exp $
+
+  28 Aug 2014; Michał Górny <mgorny@gentoo.org> starcluster-0.93.3-r1.ebuild,
+  starcluster-0.93.3.ebuild:
+  Remove mistakenly left USE=bash-completion.
 
 *starcluster-0.93.3-r1 (19 Apr 2013)
 

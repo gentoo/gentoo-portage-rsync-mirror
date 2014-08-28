@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.3.1.ebuild,v 1.1 2014/08/15 00:26:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.3.1.ebuild,v 1.2 2014/08/28 11:20:50 mgorny Exp $
 
 EAPI=5
 
@@ -22,11 +22,10 @@ HOMEPAGE="http://www.golang.org"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="bash-completion emacs vim-syntax zsh-completion"
+IUSE="emacs vim-syntax zsh-completion"
 
 DEPEND=""
-RDEPEND="bash-completion? ( app-shells/bash-completion )
-	emacs? ( virtual/emacs )
+RDEPEND="emacs? ( virtual/emacs )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 	zsh-completion? ( app-shells/zsh-completion )"
 
@@ -89,9 +88,7 @@ src_install()
 	# [1] http://code.google.com/p/go/issues/detail?id=2775
 	doins -r doc include lib pkg src
 
-	if use bash-completion; then
-		dobashcomp misc/bash/go
-	fi
+	dobashcomp misc/bash/go
 
 	if use emacs; then
 		elisp-install ${PN} misc/emacs/*.el misc/emacs/*.elc

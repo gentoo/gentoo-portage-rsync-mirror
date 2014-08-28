@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3.ebuild,v 1.6 2013/03/04 16:22:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3.ebuild,v 1.7 2014/08/28 11:16:05 mgorny Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-3"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="doc bash-completion epydoc"
+IUSE="doc epydoc"
 
 RDEPEND=">=dev-python/ssh-1.7.13
 	>=dev-python/boto-2.3.0
