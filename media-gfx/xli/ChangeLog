@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.58 2014/04/03 20:15:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.59 2014/08/28 13:52:10 jer Exp $
+
+  28 Aug 2014; Jeroen Roovers <jer@gentoo.org> xli-1.17.0-r5.ebuild:
+  Stable for HPPA (bug #518168).
 
 *xli-1.17.0-r5 (03 Apr 2014)
 
