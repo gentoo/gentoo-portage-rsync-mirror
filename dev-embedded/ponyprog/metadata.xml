@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dev-embedded</herd>
-<longdescription>PonyProg is a serial device programmer software with a user friendly GUI framework</longdescription>
-<use>
-  <flag name='epiphany'>Enable support for <pkg>www-client/epiphany</pkg>
-    </flag>
-</use>
 </pkgmetadata>

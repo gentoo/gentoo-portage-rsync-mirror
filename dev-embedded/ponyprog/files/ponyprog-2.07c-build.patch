@@ -1,26 +1,24 @@
-Respect LDFLAGS, CC, CXX
+Fix parallel make and respect CC, CXX and LDFLAGS
 
+http://bugs.gentoo.org/282244
 http://bugs.gentoo.org/317767
-
-Fix parallel make
-
-https://bugs.gentoo.org/show_bug.cgi?id=282244
 
 --- Makefile
 +++ Makefile
-@@ -331,7 +331,7 @@
+@@ -331,8 +331,8 @@
+ 
  prps:	$(PRPS)
  
 -$(PROG):	$(OBJS)
-+$(PROG):	$(OBJS) vlib
 -	$(CXX) -o $@ $(OBJS) $(LDFLAGS)
++$(PROG):	$(OBJS) vlib
 +	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(LIBDIR) $(LIBS)
  
  %.o: %.cpp
  	$(CXX) $(CFLAGS) -c $< -o $@
 --- v/Config.mk
 +++ v/Config.mk
-@@ -35,8 +35,6 @@
+@@ -40,8 +40,6 @@
  #---------------------------------------------------------------------
  #CC	=	gcc
  #CXX	=	g++
@@ -29,7 +27,7 @@ https://bugs.gentoo.org/show_bug.cgi?id=282244
  
  #---------------------------------------------------------------------
  # VPATH for dependencies on header files
-@@ -297,5 +295,3 @@
+@@ -302,5 +300,3 @@
  #---------------------------------------------------------------------
  # LINK/LOAD options
  #---------------------------------------------------------------------
@@ -45,4 +43,3 @@ https://bugs.gentoo.org/show_bug.cgi?id=282244
  
  
  #xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-

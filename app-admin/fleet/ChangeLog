@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fleet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/ChangeLog,v 1.1 2014/07/19 19:43:53 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/ChangeLog,v 1.2 2014/08/28 15:28:18 alunduil Exp $
+
+  28 Aug 2014; Alex Brandt <alunduil@gentoo.org> fleet-9999.ebuild:
+  binary moved: fleet -> fleetd
 
 *fleet-9999 (19 Jul 2014)
 *fleet-0.5.4 (19 Jul 2014)

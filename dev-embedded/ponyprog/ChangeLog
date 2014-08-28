@@ -1,6 +1,18 @@
 # ChangeLog for dev-embedded/ponyprog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.28 2014/05/20 12:10:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.31 2014/08/28 15:11:48 ssuominen Exp $
+
+  28 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/ponyprog-2.07a-build.patch, -ponyprog-2.07a-r1.ebuild,
+  -ponyprog-2.07a-r2.ebuild, -ponyprog-2.07c.ebuild, metadata.xml:
+  old
+
+  28 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> ponyprog-2.07c-r1.ebuild:
+  amd64/x86 stable
+
+  28 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  files/ponyprog-2.07c-build.patch:
+  Refresh -build.patch wrt #521364 by Agostino Sarubbo
 
 *ponyprog-2.07c-r1 (20 May 2014)
 
