@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.70 2014/04/29 23:20:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.71 2014/08/28 16:03:32 ssuominen Exp $
+
+  28 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/irrlicht-1.8.1-jpeg-9a.patch, irrlicht-1.8.1.ebuild:
+  Use upstream patch to fix building with media-libs/jpeg >= 9a wrt #520746 by
+  Diego Elio Pettenò
 
   29 Apr 2014; Julian Ospald <hasufell@gentoo.org> irrlicht-1.8-r2.ebuild,
   irrlicht-1.8.1.ebuild, +files/irrlicht-1.8-mesa-10.x.patch,

@@ -1,10 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.9.ebuild,v 1.16 2014/03/04 20:01:04 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.9.ebuild,v 1.17 2014/08/28 16:23:28 ssuominen Exp $
 
-EAPI=4
-
-inherit gnome2-utils
+EAPI=5
+inherit eutils gnome2-utils
 
 DESCRIPTION="A decoding library for RAW image formats"
 HOMEPAGE="http://libopenraw.freedesktop.org/wiki/"
@@ -28,6 +27,10 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-jpeg-9a.patch
+}
+
 src_configure() {
 	econf \
 		--with-boost="${EPREFIX}"/usr \
@@ -37,7 +40,7 @@ src_configure() {
 
 src_install() {
 	default
-	find "${ED}"usr -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
 }
 
 pkg_preinst() {

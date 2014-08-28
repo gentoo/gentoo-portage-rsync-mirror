@@ -1,7 +1,7 @@
-DEFINED_PHASES=configure install postinst preinst
+DEFINED_PHASES=configure install postinst preinst prepare
 DEPEND=virtual/jpeg:0 dev-libs/libxml2 gtk? ( >=dev-libs/glib-2 >=x11-libs/gdk-pixbuf-2.24.0:2 ) >=dev-libs/boost-1.35 virtual/pkgconfig test? ( net-misc/curl ) >=sys-apps/sed-4
 DESCRIPTION=A decoding library for RAW image formats
-EAPI=4
+EAPI=5
 HOMEPAGE=http://libopenraw.freedesktop.org/wiki/
 IUSE=gtk static-libs test
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-solaris
@@ -9,5 +9,5 @@ LICENSE=GPL-3 LGPL-3
 RDEPEND=virtual/jpeg:0 dev-libs/libxml2 gtk? ( >=dev-libs/glib-2 >=x11-libs/gdk-pixbuf-2.24.0:2 )
 SLOT=0
 SRC_URI=http://libopenraw.freedesktop.org/download/libopenraw-0.0.9.tar.bz2
-_eclasses_=gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=3ee4147a51932f0a2ab9af5e8def3e52
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=e5e240d383220c507b5de1cd80b6a000

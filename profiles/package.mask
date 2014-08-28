@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15994 2014/08/28 10:05:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15995 2014/08/28 16:29:19 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -585,11 +585,6 @@ www-client/google-chrome:unstable
 # Monolithic dev-dotnet/{gnome,gtk}-sharp introduction mask, see bug #382491.
 >=dev-dotnet/gnome-sharp-2.24.2-r1
 >=dev-dotnet/gtk-sharp-2.12.21
-
-# Pacho Ramos <pacho@gentoo.org> (02 Jan 2014)
-# Breaks reverse dependencies and upstream don't want us
-# to use it (#483562)
-=media-libs/libopenraw-0.1.0_pre20130826
 
 # Julian Ospald <hasufell@gentoo.org> (30 Dec 2013)
 # breaks every consumer

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9328 2014/08/28 10:05:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9329 2014/08/28 16:29:19 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Remove mask for removed version of the libopenraw git snapshot.
 
   28 Aug 2014; Jeroen Roovers <jer@gentoo.org> package.mask:
   Update net-analyzer/nmap mask.

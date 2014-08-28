@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.66 2014/03/04 20:01:04 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.68 2014/08/28 16:29:21 ssuominen Exp $
+
+  28 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -libopenraw-0.1.0_pre20130826.ebuild:
+  Remove snapshot of libopenraw which should have never been committed.
+
+  28 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/libopenraw-0.0.9-jpeg-9a.patch, libopenraw-0.0.9.ebuild:
+  Fix building with media-libs/jpeg >= 9a wrt #520888 using a patch loaned from
+  Fink. Upstream has changed the code in git so this is required only for 0.0.9
+  release.
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   libopenraw-0.0.9.ebuild:

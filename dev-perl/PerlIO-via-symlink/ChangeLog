@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PerlIO-via-symlink
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-symlink/ChangeLog,v 1.21 2014/03/29 16:13:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-symlink/ChangeLog,v 1.22 2014/08/28 16:04:58 zlogene Exp $
+
+  28 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  PerlIO-via-symlink-0.50.0-r1.ebuild:
+  amd64 stable wrt bug #520850
 
   29 Mar 2014; Mikle Kolyada <zlogene@gentoo.org>
   PerlIO-via-symlink-0.50.0-r1.ebuild:
