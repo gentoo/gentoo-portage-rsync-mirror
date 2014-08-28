@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.85 2014/07/22 12:43:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.86 2014/08/28 04:27:21 jdhore Exp $
+
+*pkgconf-0.9.6 (28 Aug 2014)
+
+  28 Aug 2014; Jeff Horelick <jdhore@gentoo.org> +pkgconf-0.9.6.ebuild:
+  Version bump
 
   22 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
   -files/pkgconf-0.8-fix-build-fbsd.patch, -pkgconf-0.8.9.ebuild,
