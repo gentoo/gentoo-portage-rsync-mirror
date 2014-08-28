@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.288 2014/08/27 13:16:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.289 2014/08/28 07:36:55 vapier Exp $
+
+  28 Aug 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/qemu-2.1.0-CVE-2014-5388.patch, -files/CVE-2014-5388.patch,
+  qemu-2.1.0-r1.ebuild:
+  Clean up CVE patch #520688 by Agostino Sarubbo.
 
 *qemu-2.1.0-r1 (27 Aug 2014)
 

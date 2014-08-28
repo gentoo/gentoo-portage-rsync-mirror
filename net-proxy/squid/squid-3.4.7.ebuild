@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.7.ebuild,v 1.1 2014/08/28 07:17:03 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.7.ebuild,v 1.2 2014/08/28 07:57:59 eras Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
@@ -122,8 +122,14 @@ src_configure() {
 	local digest_modules="file"
 	use ldap && digest_modules+=",LDAP,eDirectory"
 
-	local negotiate_modules="none"
-	use kerberos && negotiate_modules="kerberos,wrapper"
+	local negotiate_modules myconf
+	if use kerberos ; then
+		negotiate_modules="kerberos,wrapper"
+		myconf="--with-krb5-config=yes"
+	else
+		negotiate_modules="none"
+		myconf="--with-krb5-config=no"
+	fi
 
 	local ntlm_modules="none"
 	use samba && ntlm_modules="smb_lm"
@@ -192,7 +198,8 @@ src_configure() {
 		$(use_enable htcp) \
 		$(use_enable wccp) \
 		$(use_enable wccpv2) \
-		${transparent}
+		${transparent} \
+		${myconf}
 }
 
 src_install() {

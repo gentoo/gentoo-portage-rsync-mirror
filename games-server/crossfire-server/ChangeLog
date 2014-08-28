@@ -1,6 +1,10 @@
 # ChangeLog for games-server/crossfire-server
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.30 2013/02/14 22:05:28 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.31 2014/08/28 07:49:33 mr_bones_ Exp $
+
+  28 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -crossfire-server-1.60.0.ebuild, -files/crossfire-server-1.60.0-curl.patch:
+  old
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> crossfire-server-1.70.0.ebuild:
   Stable for ppc, wrt bug #457118
