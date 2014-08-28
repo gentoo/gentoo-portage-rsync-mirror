@@ -1,6 +1,17 @@
 # ChangeLog for net-firewall/nftables
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nftables/ChangeLog,v 1.5 2014/08/26 17:53:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nftables/ChangeLog,v 1.7 2014/08/28 13:28:19 williamh Exp $
+
+  28 Aug 2014; William Hubbs <williamh@gentoo.org>
+  -files/nftables-0.099-94300c7.patch, -files/nftables.8,
+  -nftables-0.099.ebuild, -nftables-0.3-r1.ebuild, -nftables-0.3.ebuild:
+  remove old versions
+
+*nftables-0.3-r2 (28 Aug 2014)
+
+  28 Aug 2014; William Hubbs <williamh@gentoo.org> +nftables-0.3-r2.ebuild,
+  files/nftables.init:
+  revision bump for bug #521232 approved by Manuel Rueger
 
 *nftables-0.3-r1 (26 Aug 2014)
 

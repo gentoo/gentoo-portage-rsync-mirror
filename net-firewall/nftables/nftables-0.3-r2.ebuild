@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nftables/nftables-0.099.ebuild,v 1.2 2014/02/01 20:13:10 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nftables/nftables-0.3-r2.ebuild,v 1.1 2014/08/28 13:25:47 williamh Exp $
 
 EAPI=5
 
-inherit autotools base linux-info
+inherit autotools linux-info
 
 DESCRIPTION="Linux kernel (3.13+) firewall, NAT and packet mangling tools"
 HOMEPAGE="http://netfilter.org/projects/nftables/"
@@ -16,13 +16,13 @@ IUSE="debug"
 SRC_URI="http://netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
 RDEPEND="net-libs/libmnl
-	>=net-libs/libnftnl-1.0.0-r2
+	>=net-libs/libnftnl-1.0.2
 	dev-libs/gmp
 	sys-libs/readline"
 DEPEND="${RDEPEND}
+	>=app-text/docbook2X-0.8.8-r4
 	sys-devel/bison
 	sys-devel/flex"
-PATCHES=( "${FILESDIR}/nftables-0.099-94300c7.patch" )
 
 pkg_setup() {
 	if kernel_is ge 3 13; then
@@ -34,7 +34,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	base_src_prepare
+	epatch_user
 	eautoreconf
 }
 
@@ -46,5 +46,8 @@ src_configure() {
 
 src_install() {
 	default
-	doman "${FILESDIR}"/nftables.8
+
+	newconfd "${FILESDIR}"/${PN}.confd ${PN}
+	newinitd "${FILESDIR}"/${PN}.init ${PN}
+	keepdir /var/lib/nftables
 }
