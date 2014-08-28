@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20140508-r1.ebuild,v 1.5 2014/06/26 09:24:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20140508-r1.ebuild,v 1.8 2014/08/28 16:55:46 ssuominen Exp $
 
 EAPI=5
 inherit eutils emul-linux-x86
@@ -8,7 +8,7 @@ inherit eutils emul-linux-x86
 LICENSE="LGPL-2.1 GPL-3"
 KEYWORDS="-* amd64"
 
-IUSE="mng"
+IUSE=""
 
 DEPEND=""
 RDEPEND="
@@ -18,7 +18,6 @@ RDEPEND="
 			>=dev-db/sqlite-3.8.2:3[abi_x86_32(-)]
 			>=dev-libs/glib-2.34.3[abi_x86_32(-)]
 			>=dev-libs/openssl-1.0.1h-r2[abi_x86_32(-)]
-			mng? ( <media-libs/libmng-2[abi_x86_32(-)] )
 			>=media-libs/libpng-1.6.10:0/16[abi_x86_32(-)]
 			>=media-libs/tiff-3.9.7-r1[abi_x86_32(-)]
 			>=sys-apps/dbus-1.6.18-r1[abi_x86_32(-)]
@@ -58,9 +57,8 @@ RDEPEND="
 src_install() {
 	emul-linux-x86_src_install
 
-	if ! use mng; then
-		rm "${D%/}"/usr/"$(get_abi_LIBDIR x86)"/qt4/plugins/imageformats/libqmng.so || die
-	fi
+	# Built against libmng-1 SONAME, remove this line once it's built against libmng-2 SONAME:
+	rm "${D%/}"/usr/"$(get_abi_LIBDIR x86)"/qt4/plugins/imageformats/libqmng.so || die
 
 	# Set LDPATH for not needing dev-qt/qtcore
 	cat <<-EOF > "${T}/44qt4-emul"

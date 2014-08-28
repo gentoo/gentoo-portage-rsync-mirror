@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.132 2014/07/30 19:39:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.133 2014/08/28 16:55:33 mgorny Exp $
+
+  28 Aug 2014; Michał Górny <mgorny@gentoo.org> drbd-8.4.3.ebuild:
+  Install the bash completion file to the correct location using bash-
+  completion-r1. Remove USE=bash-completion since the file needs to be installed
+  unconditionally.
 
   30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> drbd-8.3.13.ebuild:,
   Use shorter get_udevdir() instead of the longer deprecated udev_get_udevdir()

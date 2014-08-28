@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.223 2014/08/26 10:22:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.224 2014/08/28 16:51:10 ssuominen Exp $
+
+  28 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  splashutils-1.5.4.4-r1.ebuild:
+  Remove old reference to removed version of media-libs/libmng.
 
   26 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   +files/splashutils-1.5.4.4-ft25.patch, splashutils-1.5.4.4-r4.ebuild:

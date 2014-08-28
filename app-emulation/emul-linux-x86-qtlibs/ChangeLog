@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.97 2014/06/26 09:24:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.98 2014/08/28 16:49:18 ssuominen Exp $
+
+  28 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  emul-linux-x86-qtlibs-20140508-r1.ebuild:
+  Punt USE="mng" which was pulling in removed version of media-libs/libmng which
+  isn't SLOTted.
 
   26 Jun 2014; Pacho Ramos <pacho@gentoo.org>
   emul-linux-x86-qtlibs-20140508-r1.ebuild:

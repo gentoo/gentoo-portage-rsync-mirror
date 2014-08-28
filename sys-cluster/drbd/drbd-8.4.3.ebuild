@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.4.3.ebuild,v 1.5 2014/07/30 19:34:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.4.3.ebuild,v 1.6 2014/08/28 16:55:33 mgorny Exp $
 
 EAPI=4
 
-inherit eutils multilib versionator udev
+inherit bash-completion-r1 eutils multilib versionator udev
 
 LICENSE="GPL-2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://oss.linbit.com/drbd/$(get_version_component_range 1-2 ${PV})/${P
 HOMEPAGE="http://www.drbd.org"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="bash-completion heartbeat pacemaker +udev xen"
+IUSE="heartbeat pacemaker +udev xen"
 SLOT="0"
 
 src_prepare() {
@@ -27,8 +27,8 @@ src_prepare() {
 	sed -e "s:@prefix@/lib:@prefix@/$(get_libdir):" \
 		-e "s:(DESTDIR)/lib:(DESTDIR)/$(get_libdir):" \
 		-i user/{,legacy/}Makefile.in || die
-	# correct install paths
-	sed -i -e "s:\$(sysconfdir)/bash_completion.d:/usr/share/bash-completion:" \
+	# correct install paths (really correct this time)
+	sed -i -e "s:\$(sysconfdir)/bash_completion.d:$(get_bashcompdir):" \
 		scripts/Makefile.in || die
 	# don't participate in user survey bug 360483
 	sed -i -e '/usage-count/ s/yes/no/' scripts/drbd.conf.example || die
@@ -45,7 +45,7 @@ src_configure() {
 		$(use_with xen) \
 		$(use_with pacemaker) \
 		$(use_with heartbeat) \
-		$(use_with bash-completion bashcompletion) \
+		--with-bashcompletion \
 		--with-distro=gentoo
 }
 

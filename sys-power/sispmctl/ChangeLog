@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/sispmctl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/sispmctl/ChangeLog,v 1.9 2014/03/30 13:47:16 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/sispmctl/ChangeLog,v 1.10 2014/08/28 16:43:44 mgorny Exp $
+
+  28 Aug 2014; Michał Górny <mgorny@gentoo.org> sispmctl-3.1.ebuild:
+  Remove USE=bash-completion, install the completion file unconditionally. Use
+  bash-completion-r1 to install in the correct location.
 
 *sispmctl-3.1 (30 Mar 2014)
 

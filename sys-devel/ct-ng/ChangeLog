@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/ct-ng
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.47 2013/10/03 12:19:27 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.48 2014/08/28 16:47:50 mgorny Exp $
+
+  28 Aug 2014; Michał Górny <mgorny@gentoo.org> ct-ng-1.19.0.ebuild:
+  Remove unused USE=bash-completion. Install the completion file using the
+  correct name.
 
   03 Oct 2013; Anthony G. Basile <blueness@gentoo.org> -ct-ng-1.12.4.ebuild,
   -ct-ng-1.13.4.ebuild, -ct-ng-1.14.1.ebuild, -ct-ng-1.15.3.ebuild:
