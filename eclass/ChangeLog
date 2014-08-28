@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1357 2014/08/27 08:15:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1358 2014/08/28 18:20:49 swift Exp $
+
+  28 Aug 2014; Sven Vermeulen <swift@gentoo.org> selinux-policy-2.eclass:
+  Simplify rlpkg call and optimize package relabeling thanks to Jason Perfinion
 
   27 Aug 2014; Michał Górny <mgorny@gentoo.org> bash-completion-r1.eclass:
   Make completionsdir default to the new location (for new installs). Eselect
