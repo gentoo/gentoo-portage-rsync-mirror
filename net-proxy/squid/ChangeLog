@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.466 2014/07/01 11:03:52 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.467 2014/08/28 07:17:03 eras Exp $
+
+*squid-3.3.13 (28 Aug 2014)
+*squid-3.4.7 (28 Aug 2014)
+
+  28 Aug 2014; Eray Aslan <eras@gentoo.org> +squid-3.3.13.ebuild,
+  +squid-3.4.7.ebuild:
+  Security bump
 
 *squid-3.4.6 (01 Jul 2014)
 
