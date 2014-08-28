@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/bmake-20140214.ebuild,v 1.1 2014/04/23 10:00:31 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/bmake-20140214.ebuild,v 1.2 2014/08/28 08:36:35 naota Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ S="${WORKDIR}/${PN}"
 src_configure() {
 	econf \
 		--with-mksrc=../mk \
-		--with-default-sys-path=${EPREFIX}/usr/share/mk/${PN} \
+		--with-default-sys-path="${EPREFIX}"/usr/share/mk/${PN} \
 		--with-machine_arch=${ARCH}
 }
 
@@ -39,7 +39,7 @@ src_test() {
 		|| die "tests compilation failed"
 	sed -i \
 		-e "s:${S}/::g" \
-		-e "s:bmake:make:g" \
+		-e "s:bmake\\[.\\]:make:g" \
 		-e "s:unit-tests/::g" \
 		test.out || die "Fixing values failed"
 	diff -u test.exp test.out
