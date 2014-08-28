@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/mime-types-1.25.1.ebuild,v 1.5 2014/08/05 16:00:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/mime-types-1.25.1.ebuild,v 1.6 2014/08/28 02:50:05 mrueg Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="History.rdoc README.rdoc"
 inherit ruby-fakegem
 
 DESCRIPTION="Provides a mailcap-like MIME Content-Type lookup for Ruby"
-HOMEPAGE="http://rubyforge.org/projects/mime-types"
+HOMEPAGE="https://github.com/halostatue/mime-types/"
 
 LICENSE="MIT Artistic GPL-2"
 SLOT="0"

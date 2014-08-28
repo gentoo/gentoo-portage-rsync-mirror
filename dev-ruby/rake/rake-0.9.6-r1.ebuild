@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.9.6-r1.ebuild,v 1.2 2014/04/03 08:59:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.9.6-r1.ebuild,v 1.3 2014/08/28 02:51:28 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 jruby"
@@ -13,7 +13,7 @@ RUBY_FAKEGEM_TASK_TEST=""
 inherit bash-completion-r1 ruby-fakegem
 
 DESCRIPTION="Make-like scripting in Ruby"
-HOMEPAGE="http://rake.rubyforge.org/"
+HOMEPAGE="https://github.com/jimweirich/rake"
 
 LICENSE="MIT"
 SLOT="0"

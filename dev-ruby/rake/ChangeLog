@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.156 2014/06/12 16:10:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.157 2014/08/28 02:51:28 mrueg Exp $
+
+  28 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -rake-10.2.2.ebuild,
+  -rake-10.3.1.ebuild, rake-0.9.6-r1.ebuild, rake-0.9.6.ebuild,
+  rake-10.3.2.ebuild:
+  Cleanup old. Update HOMEPAGE.
 
   12 Jun 2014; Manuel Rüger <mrueg@gentoo.org> rake-0.9.6.ebuild:
   Remove ruby18.
