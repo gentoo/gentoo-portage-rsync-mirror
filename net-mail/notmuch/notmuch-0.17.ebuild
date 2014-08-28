@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.17.ebuild,v 1.6 2014/07/21 19:06:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.17.ebuild,v 1.7 2014/08/28 09:37:07 aidecoe Exp $
 
 EAPI=5
 
@@ -84,11 +84,11 @@ src_prepare() {
 
 src_configure() {
 	local myeconfargs=(
-		--bashcompletiondir="${ROOT}/usr/share/bash-completion"
-		--emacslispdir="${ROOT}/${SITELISP}/${PN}"
-		--emacsetcdir="${ROOT}/${SITEETC}/${PN}"
+		--bashcompletiondir="${EPREFIX}/usr/share/bash-completion"
+		--emacslispdir="${EPREFIX}/${SITELISP}/${PN}"
+		--emacsetcdir="${EPREFIX}/${SITEETC}/${PN}"
 		--with-gmime-version=2.6
-		--zshcompletiondir="${ROOT}/usr/share/zsh/site-functions"
+		--zshcompletiondir="${EPREFIX}/usr/share/zsh/site-functions"
 		$(use_with bash-completion)
 		$(use_with emacs)
 		$(use_with zsh-completion)

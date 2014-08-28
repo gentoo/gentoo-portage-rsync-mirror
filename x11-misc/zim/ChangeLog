@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/zim
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/ChangeLog,v 1.22 2013/05/31 15:22:57 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/ChangeLog,v 1.23 2014/08/28 09:55:22 jer Exp $
+
+*zim-0.61 (28 Aug 2014)
+
+  28 Aug 2014; Jeroen Roovers <jer@gentoo.org> -zim-0.56.ebuild,
+  -zim-0.57.ebuild, +zim-0.61.ebuild, files/zim-0.60-remove-ubuntu-theme.patch:
+  Version bump.
 
 *zim-0.60 (31 May 2013)
 

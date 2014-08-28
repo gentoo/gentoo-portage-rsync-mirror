@@ -1,8 +1,8 @@
 # don't install /usr/share/icons/ubuntu-mono-{dark,light}
 # it's only used in conjunction with appindicator
 # and clutters the icon-themes menu in gnome
---- zim-0.60/setup.py
-+++ zim-0.60/setup.py
+--- a/setup.py
++++ b/setup.py
 @@ -94,12 +94,6 @@
  			files = [os.path.join(dir, f) for f in files]
  			data_files.append((target, files))

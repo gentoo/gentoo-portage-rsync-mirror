@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/peewee
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/ChangeLog,v 1.13 2014/08/20 06:20:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/ChangeLog,v 1.14 2014/08/28 09:34:30 patrick Exp $
+
+*peewee-2.3.1 (28 Aug 2014)
+
+  28 Aug 2014; Patrick Lauer <patrick@gentoo.org> +peewee-2.3.1.ebuild:
+  Bump
 
 *peewee-2.3.0 (20 Aug 2014)
 
