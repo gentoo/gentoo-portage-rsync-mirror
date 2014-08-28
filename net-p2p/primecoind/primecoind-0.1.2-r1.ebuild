@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/primecoind-0.1.2-r1.ebuild,v 1.2 2014/08/10 20:38:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/primecoind-0.1.2-r1.ebuild,v 1.3 2014/08/28 22:42:59 blueness Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/${MyPN}/${MyP}-linux.tar.gz -> ${MyP}.tar.gz"
 LICENSE="MIT ISC GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bash-completion examples ipv6 logrotate upnp"
+IUSE="examples ipv6 logrotate upnp"
 
 RDEPEND="
 	dev-libs/boost[threads(+)]
@@ -108,9 +108,8 @@ src_install() {
 	newman contrib/debian/manpages/bitcoind.1 primecoind.1
 	newman contrib/debian/manpages/bitcoin.conf.5 primecoin.conf.5
 
-	if use bash-completion; then
-		newbashcomp contrib/bitcoind.bash-completion ${PN}.bash-completion
-	fi
+	sed -i -e 's/bitcoin/primecoin/g' contrib/bitcoind.bash-completion
+	newbashcomp contrib/bitcoind.bash-completion ${PN}.bash-completion
 
 	if use examples; then
 		docinto examples

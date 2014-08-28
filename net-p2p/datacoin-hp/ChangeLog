@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/datacoin-hp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/datacoin-hp/ChangeLog,v 1.5 2014/08/28 10:25:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/datacoin-hp/ChangeLog,v 1.6 2014/08/28 22:52:09 blueness Exp $
+
+  28 Aug 2014; Anthony G. Basile <blueness@gentoo.org> datacoin-hp-9999.ebuild:
+  Remove USE=bash-completion and fix datacoin-hp.bash-completion, bug #521352
 
   28 Aug 2014; Michał Górny <mgorny@gentoo.org> datacoin-hp-9999.ebuild:
   Remove KEYWORDS from live ebuild.
