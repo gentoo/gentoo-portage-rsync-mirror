@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhackrf/libhackrf-2013.07.1.ebuild,v 1.1 2013/07/27 04:52:57 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhackrf/libhackrf-2014.08.1.ebuild,v 1.1 2014/08/28 20:15:57 zerochaos Exp $
 
 EAPI=5
 
-inherit cmake-utils
+inherit cmake-utils udev
 
 DESCRIPTION="library for communicating with HackRF SDR platform"
 HOMEPAGE="http://greatscottgadgets.com/hackrf/"
@@ -27,3 +27,16 @@ IUSE=""
 
 DEPEND="virtual/libusb:1"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	sed -i 's#plugdev#usb#' 53-hackrf.rules
+}
+
+src_install() {
+	cmake-utils_src_install
+	udev_dorules 53-hackrf.rules
+}
+
+pkg_postinst() {
+	einfo "Users in the usb group can use hackrf."
+}
