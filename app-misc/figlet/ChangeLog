@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/figlet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.42 2014/08/27 13:43:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.43 2014/08/28 18:38:16 mr_bones_ Exp $
+
+  28 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -figlet-222-r1.ebuild:
+  remove unwanted rev bump
 
 *figlet-222-r1 (27 Aug 2014)
 
