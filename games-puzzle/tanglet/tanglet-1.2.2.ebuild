@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tanglet/tanglet-1.2.2.ebuild,v 1.1 2014/05/19 19:54:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tanglet/tanglet-1.2.2.ebuild,v 1.2 2014/08/28 06:07:44 mr_bones_ Exp $
 
 EAPI=5
-
 LANGS="cs de es en fr he hu it nl ro tr uk"
 LANGSLONG="es_CL"
 inherit eutils gnome2-utils qt4-r2 games
@@ -20,14 +19,13 @@ IUSE=""
 DEPEND="sys-libs/zlib
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4"
-RDEPEND="${DEPEND}"
+RDEPEND=${DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-datadir.patch
 	sed -i -e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		src/locale_dialog.cpp \
-		src/main.cpp \
-		|| die "sed failed"
+		src/main.cpp || die
 }
 
 src_configure() {

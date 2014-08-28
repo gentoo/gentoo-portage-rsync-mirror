@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/tanglet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tanglet/ChangeLog,v 1.17 2014/05/19 19:54:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tanglet/ChangeLog,v 1.19 2014/08/28 06:07:44 mr_bones_ Exp $
+
+  28 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> tanglet-1.2.2.ebuild:
+  tidy
+
+  28 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/tanglet-1.2.0-datadir.patch, -tanglet-1.2.0.ebuild:
+  old
 
 *tanglet-1.2.2 (19 May 2014)
 

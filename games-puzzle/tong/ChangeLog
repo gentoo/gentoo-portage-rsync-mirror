@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/tong
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/ChangeLog,v 1.11 2014/05/15 16:54:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/ChangeLog,v 1.12 2014/08/28 06:13:08 mr_bones_ Exp $
+
+  28 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/tong-1.0-fps.patch, -files/tong-1.0-makefile.patch, -tong-1.0.ebuild:
+  old
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> tong-1.2.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to

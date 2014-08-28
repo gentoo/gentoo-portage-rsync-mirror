@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.8.2.ebuild,v 1.1 2014/08/22 11:09:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.8.2.ebuild,v 1.2 2014/08/28 06:10:37 idella4 Exp $
 
 EAPI=5
 
@@ -11,14 +11,15 @@ FORTRAN_NEEDED=lapack
 inherit distutils-r1 eutils flag-o-matic fortran-2 multilib toolchain-funcs versionator
 
 DOC_PV="1.8.1"
+DOC_P="${PN}-${DOC_PV}"
 
 DESCRIPTION="Fast array and numerical python library"
 HOMEPAGE="http://numpy.scipy.org/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz
 	doc? (
-		http://docs.scipy.org/doc/${P/2/1}/${PN}-html-${DOC_PV}.zip
-		http://docs.scipy.org/doc/${P/2/1}/${PN}-ref-${DOC_PV}.pdf
-		http://docs.scipy.org/doc/${P2/1}/${PN}-user-${DOC_PV}.pdf
+		http://docs.scipy.org/doc/${DOC_P}/${PN}-html-${DOC_PV}.zip
+		http://docs.scipy.org/doc/${DOC_P}/${PN}-ref-${DOC_PV}.pdf
+		http://docs.scipy.org/doc/${DOC_P}/${PN}-user-${DOC_PV}.pdf
 	)"
 # It appears the docs haven't been upgraded, still @ 1.8.1
 LICENSE="BSD"
