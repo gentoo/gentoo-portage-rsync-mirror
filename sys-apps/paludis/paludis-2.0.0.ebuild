@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.0.0.ebuild,v 1.3 2014/08/26 04:28:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.0.0.ebuild,v 1.4 2014/08/28 03:54:55 jdhore Exp $
 
 EAPI=4
 
@@ -87,6 +87,7 @@ src_prepare() {
 	# The package explicitly wants ruby1.9, so fix the script on it.
 	# https://bugs.gentoo.org/show_bug.cgi?id=439372#c2
 	sed -i -e '1s/ruby/&19/' ruby/demos/*.rb || die
+	epatch "${FILESDIR}/${P}-fix-format-security.patch"
 
 	epatch_user
 }

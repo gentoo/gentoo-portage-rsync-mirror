@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.244 2014/08/26 04:28:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.245 2014/08/28 03:54:55 jdhore Exp $
+
+  28 Aug 2014; Jeff Horelick <jdhore@gentoo.org>
+  +files/paludis-2.0.0-fix-format-security.patch, paludis-2.0.0.ebuild:
+  Fix building with -Werror=format-security. Fixes bug #521326  Patch from
+  upstream: http://git.exherbo.org/paludis/paludis.git/commit/?id=f777dadef60143
+  4550aa3fb411eebab04ad07103
 
   26 Aug 2014; Jeff Horelick <jdhore@gentoo.org> paludis-2.0.0.ebuild:
   marked x86 wrt bug #520874
