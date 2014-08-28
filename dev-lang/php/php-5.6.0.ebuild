@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.6.0_beta2.ebuild,v 1.2 2014/08/10 20:32:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.6.0.ebuild,v 1.1 2014/08/28 14:05:32 olemarkus Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ function php_get_uri ()
 {
 	case "${1}" in
 		"php-pre")
-			echo "http://downloads.php.net/tyrael/${2}"
+			echo "http://downloads.php.net/dsp/${2}"
 		;;
 		"php")
 			echo "http://www.php.net/distributions/${2}"
@@ -72,13 +72,14 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 	oci8-instant-client odbc +opcache pcntl pdo +phar +posix postgres qdbm
 	readline recode selinux +session sharedmem
 	+simplexml snmp soap sockets spell sqlite ssl
-	sybase-ct sysvipc systemd tidy +tokenizer truetype unicode wddx
+	sybase-ct sysvipc systemd tidy +tokenizer truetype unicode vpx wddx
 	+xml xmlreader xmlwriter xmlrpc xpm xslt zip zlib"
 
 DEPEND="
 	>=app-admin/eselect-php-0.7.1-r3[apache2?,fpm?]
 	>=dev-libs/libpcre-8.32[unicode]
-	apache2? ( www-servers/apache[threads=] )
+	apache2? ( || ( >=www-servers/apache-2.4[apache2_modules_unixd,threads=]
+		<www-servers/apache-2.4[threads=] ) )
 	berkdb? ( =sys-libs/db-4* )
 	bzip2? ( app-arch/bzip2 )
 	cdb? ( || ( dev-db/cdb dev-db/tinycdb ) )
@@ -135,6 +136,7 @@ DEPEND="
 			virtual/jpeg:0 media-libs/libpng:0= sys-libs/zlib )
 	)
 	unicode? ( dev-libs/oniguruma )
+	vpx? ( media-libs/libvpx )
 	wddx? ( >=dev-libs/libxml2-2.6.8 )
 	xml? ( >=dev-libs/libxml2-2.6.8 )
 	xmlrpc? ( >=dev-libs/libxml2-2.6.8 virtual/libiconv )
@@ -155,6 +157,7 @@ php="=${CATEGORY}/${PF}"
 
 REQUIRED_USE="
 	truetype? ( gd )
+	vpx? ( gd )
 	cjk? ( gd )
 	exif? ( gd )
 
@@ -419,7 +422,8 @@ src_configure() {
 	$(use_enable cjk gd-jis-conv )
 	$(use_with gd jpeg-dir ${EPREFIX}/usr)
 	$(use_with gd png-dir ${EPREFIX}/usr)
-	$(use_with xpm xpm-dir ${EPREFIX}/usr)"
+	$(use_with xpm xpm-dir ${EPREFIX}/usr)
+	$(use_with vpx vpx-dir ${EPREFIX}/usr)"
 	# enable gd last, so configure can pick up the previous settings
 	my_conf+="
 	$(use_with gd gd)"

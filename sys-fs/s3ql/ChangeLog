@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/s3ql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.37 2014/08/22 21:00:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.39 2014/08/28 14:17:23 radhermit Exp $
+
+  28 Aug 2014; Tim Harder <radhermit@gentoo.org> -s3ql-1.18.1.ebuild,
+  -s3ql-2.9.ebuild, -s3ql-2.10.1.ebuild:
+  Remove old.
+
+*s3ql-2.11 (28 Aug 2014)
+*s3ql-1.19 (28 Aug 2014)
+
+  28 Aug 2014; Tim Harder <radhermit@gentoo.org> +s3ql-1.19.ebuild,
+  +s3ql-2.11.ebuild:
+  Security bumps (bug #521344).
 
   22 Aug 2014; Tim Harder <radhermit@gentoo.org> -s3ql-1.15.ebuild,
   -s3ql-1.16.ebuild, -s3ql-1.17.ebuild, -s3ql-2.2.ebuild, -s3ql-2.3.ebuild,

@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.100 2014/08/28 11:39:27 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.102 2014/08/28 14:14:21 aidecoe Exp $
+
+  28 Aug 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.18.1.ebuild:
+  src_prepare() doesn't have 'default'.
+
+  28 Aug 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.18.1.ebuild:
+  Moved check for /etc/mutt/notmuch-mutt.rc to pkg_preinst(). Now it should
+  work fine with binpkgs.
 
   28 Aug 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.18.1.ebuild:
   Unconditional installation of zsh/bash completion files. Fixes bug #521372.
