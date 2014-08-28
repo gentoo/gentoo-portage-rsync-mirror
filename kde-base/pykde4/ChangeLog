@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.298 2014/08/20 16:02:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.299 2014/08/28 11:31:52 kensington Exp $
+
+  28 Aug 2014; Michael Palimaka <kensington@gentoo.org>
+  +files/pykde4-4.14.0-arm-sip.patch, pykde4-4.14.0.ebuild:
+  Rebase failing patch wrt bug #520952.
 
 *pykde4-4.14.0 (20 Aug 2014)
 

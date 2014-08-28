@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/Alien-SDL-1.440.0.ebuild,v 1.5 2014/08/25 17:17:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/Alien-SDL-1.440.0.ebuild,v 1.6 2014/08/28 11:48:56 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module toolchain-funcs
 DESCRIPTION="building, finding and using SDL binaries"
 
 SLOT="0"
-KEYWORDS="amd64 hppa ~x86"
+KEYWORDS="amd64 hppa x86"
 
 # Archive::Extract, File::Fetch, File::Find, Test::More -> dev-lang/perl
 RDEPEND="dev-perl/Archive-Zip

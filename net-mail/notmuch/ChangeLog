@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.99 2014/08/28 09:37:07 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.100 2014/08/28 11:39:27 aidecoe Exp $
+
+  28 Aug 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.18.1.ebuild:
+  Unconditional installation of zsh/bash completion files. Fixes bug #521372.
 
   28 Aug 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
   notmuch-0.16-r1.ebuild, notmuch-0.17.ebuild, notmuch-0.18.1.ebuild:

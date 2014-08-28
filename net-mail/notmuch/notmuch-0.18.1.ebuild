@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.18.1.ebuild,v 1.4 2014/08/28 09:37:07 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.18.1.ebuild,v 1.5 2014/08/28 11:39:27 aidecoe Exp $
 
 EAPI=5
 
@@ -20,10 +20,10 @@ REQUIRED_USE="
 	python? ( ${PYTHON_REQUIRED_USE} )
 	test? ( crypt emacs python )
 	"
-IUSE="bash-completion crypt debug doc emacs mutt nmbug python test
-	zsh-completion"
+IUSE="crypt debug doc emacs mutt nmbug python test"
 
 CDEPEND="
+	>=app-shells/bash-completion-1.9
 	>=dev-libs/glib-2.22
 	>=dev-libs/gmime-2.6.7
 	!=dev-libs/gmime-2.6.19
@@ -42,7 +42,6 @@ DEPEND="${CDEPEND}
 		>=app-editors/emacs-vcs-23[libxml2] ) sys-devel/gdb )
 	"
 RDEPEND="${CDEPEND}
-	bash-completion? ( >=app-shells/bash-completion-1.9 )
 	crypt? ( app-crypt/gnupg )
 	nmbug? ( dev-vcs/git virtual/perl-File-Temp virtual/perl-Pod-Parser )
 	mutt? ( dev-perl/File-Which dev-perl/Mail-Box dev-perl/MailTools
@@ -50,7 +49,6 @@ RDEPEND="${CDEPEND}
 		virtual/perl-Digest-SHA virtual/perl-File-Path virtual/perl-Getopt-Long
 		virtual/perl-Pod-Parser
 		)
-	zsh-completion? ( app-shells/zsh )
 	"
 
 DOCS=( AUTHORS NEWS README )
@@ -103,9 +101,7 @@ src_configure() {
 		--emacsetcdir="${EPREFIX}/${SITEETC}/${PN}"
 		--with-gmime-version=2.6
 		--zshcompletiondir="${EPREFIX}/usr/share/zsh/site-functions"
-		$(use_with bash-completion)
 		$(use_with emacs)
-		$(use_with zsh-completion)
 	)
 	tc-export CC CXX
 	econf "${myeconfargs[@]}"

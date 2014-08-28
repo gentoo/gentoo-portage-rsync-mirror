@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.237 2014/07/28 17:33:53 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.238 2014/08/28 11:36:56 mgorny Exp $
+
+  28 Aug 2014; Michał Górny <mgorny@gentoo.org> R-3.1.1.ebuild:
+  Remove USE=bash-completion, install the completion file unconditionally
+  following the Council decision.
 
 *R-3.1.1 (28 Jul 2014)
 

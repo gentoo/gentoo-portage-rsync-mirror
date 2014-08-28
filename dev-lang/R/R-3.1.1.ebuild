@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.1.1.ebuild,v 1.1 2014/07/28 17:33:53 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.1.1.ebuild,v 1.2 2014/08/28 11:36:56 mgorny Exp $
 
 EAPI=5
 
@@ -11,12 +11,12 @@ DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
 SRC_URI="
 	mirror://cran/src/base/R-3/${P}.tar.gz
-	bash-completion? ( http://dev.gentoo.org/~bicatali/distfiles/${BCP}.bz2 )"
+	http://dev.gentoo.org/~bicatali/distfiles/${BCP}.bz2"
 
 LICENSE="|| ( GPL-2 GPL-3 ) LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
-IUSE="bash-completion cairo doc icu java jpeg lapack minimal nls openmp perl png prefix profile readline static-libs tiff tk X"
+IUSE="cairo doc icu java jpeg lapack minimal nls openmp perl png prefix profile readline static-libs tiff tk X"
 REQUIRED_USE="png? ( || ( cairo X ) ) jpeg? ( || ( cairo X ) ) tiff? ( || ( cairo X ) )"
 
 CDEPEND="
@@ -180,7 +180,7 @@ src_install() {
 		R_HOME=${R_DIR}
 	EOF
 	doenvd 99R
-	use bash-completion && newbashcomp "${WORKDIR}"/${BCP} ${PN}
+	newbashcomp "${WORKDIR}"/${BCP} ${PN}
 	# The buildsystem has a different understanding of install_names than
 	# we require.  Since it builds modules like shared objects (wrong), many
 	# objects (all modules) get an incorrect install_name.  Fixing the build
