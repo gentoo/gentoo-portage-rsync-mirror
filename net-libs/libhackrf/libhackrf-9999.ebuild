@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhackrf/libhackrf-9999.ebuild,v 1.4 2014/08/28 14:48:52 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhackrf/libhackrf-9999.ebuild,v 1.5 2014/08/28 17:07:36 zerochaos Exp $
 
 EAPI=5
 
@@ -29,12 +29,12 @@ DEPEND="virtual/libusb:1"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i 's#plugdev#usb#' 52-hackrf.rules
+	sed -i 's#plugdev#usb#' 53-hackrf.rules
 }
 
 src_install() {
 	cmake-utils_src_install
-	udev_dorules 52-hackrf.rules
+	udev_dorules 53-hackrf.rules
 }
 
 pkg_postinst() {

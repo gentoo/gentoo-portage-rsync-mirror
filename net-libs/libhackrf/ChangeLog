@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libhackrf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhackrf/ChangeLog,v 1.7 2014/08/28 14:48:52 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhackrf/ChangeLog,v 1.8 2014/08/28 17:07:36 zerochaos Exp $
+
+  28 Aug 2014; Rick Farina <zerochaos@gentoo.org> libhackrf-9999.ebuild:
+  upstream renamed udev rules to avoid collisions
 
   28 Aug 2014; Rick Farina <zerochaos@gentoo.org> libhackrf-9999.ebuild:
   udev rules moved from hackrf-tools to libhackrf
