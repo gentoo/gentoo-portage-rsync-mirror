@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-ErrorHandler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.34 2014/01/02 12:53:14 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.35 2014/08/28 17:34:43 zlogene Exp $
+
+  28 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -Class-ErrorHandler-0.10.0.ebuild:
+  Drop old.
 
   02 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
   Class-ErrorHandler-0.30.0.ebuild:
