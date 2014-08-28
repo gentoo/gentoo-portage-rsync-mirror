@@ -10,4 +10,4 @@ RESTRICT=bindist mirror strip
 SLOT=unstable
 SRC_URI=amd64? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_38.0.2125.24-1_amd64.deb ) x86? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_38.0.2125.24-1_i386.deb )
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=a7279964b373394cb29d2b02964ddbf7
+_md5_=296e8ad77222cd41e00e3cef85fd7ac9

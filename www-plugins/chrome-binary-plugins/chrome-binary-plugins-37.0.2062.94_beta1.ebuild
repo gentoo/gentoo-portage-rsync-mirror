@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-37.0.2062.94_beta1.ebuild,v 1.1 2014/08/21 18:16:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-37.0.2062.94_beta1.ebuild,v 1.2 2014/08/28 00:25:06 floppym Exp $
 
 EAPI=4
 
@@ -12,14 +12,17 @@ HOMEPAGE="http://www.google.com/chrome"
 case ${PV} in
 	*_alpha*)
 		SLOT="unstable"
+		CHROMEDIR="opt/google/chrome-${SLOT}"
 		MY_PV=${PV/_alpha/-}
 		;;
 	*_beta*)
 		SLOT="beta"
+		CHROMEDIR="opt/google/chrome-${SLOT}"
 		MY_PV=${PV/_beta/-}
 		;;
 	*_p*)
 		SLOT="stable"
+		CHROMEDIR="opt/google/chrome"
 		MY_PV=${PV/_p/-}
 		;;
 	*)
@@ -50,7 +53,7 @@ for x in 0 beta stable unstable; do
 	fi
 done
 
-S="${WORKDIR}/opt/google/chrome-${SLOT}"
+S="${WORKDIR}/${CHROMEDIR}"
 QA_PREBUILT="*"
 
 pkg_nofetch() {

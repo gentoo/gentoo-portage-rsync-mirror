@@ -1,6 +1,15 @@
 # ChangeLog for www-plugins/chrome-binary-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.171 2014/08/27 20:39:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.173 2014/08/28 00:25:06 floppym Exp $
+
+  28 Aug 2014; Mike Gilbert <floppym@gentoo.org>
+  chrome-binary-plugins-37.0.2062.94_beta1.ebuild,
+  chrome-binary-plugins-38.0.2125.24_alpha1.ebuild:
+  Sync the other slots.
+
+  28 Aug 2014; Mike Gilbert <floppym@gentoo.org>
+  chrome-binary-plugins-37.0.2062.94_p1.ebuild:
+  Fix ${S} in the stable slot.
 
   27 Aug 2014; Mike Gilbert <floppym@gentoo.org>
   chrome-binary-plugins-37.0.2062.94_p1.ebuild:
