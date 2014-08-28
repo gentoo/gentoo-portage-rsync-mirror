@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.234 2014/08/12 23:21:34 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.235 2014/08/28 15:32:29 mrueg Exp $
+
+  28 Aug 2014; Manuel Rüger <mrueg@gentoo.org> spamassassin-3.4.0.ebuild:
+  Readd accidently dropped keywords. Rekeywording for other arches in bug
+  #521400.
 
 *spamassassin-3.4.0 (12 Aug 2014)
 

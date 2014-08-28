@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r8.ebuild,v 1.17 2013/05/03 14:19:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r8.ebuild,v 1.18 2014/08/28 15:44:22 zlogene Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SLOT="2.1"
 LICENSE="GPL-2"
 IUSE="doc float fortran mpi openmp threads static-libs"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 pkg_setup() {
 	use openmp && FORTRAN_NEED_OPENMP="1"
