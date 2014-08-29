@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.23 2014/08/27 07:14:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.24 2014/08/29 12:53:35 hasufell Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
@@ -22,7 +22,7 @@ app-crypt/tpm-tools pkcs11
 
 # Mikle Kolyada <zlogene@gentoo.org>
 # Not yet stabilized dependency (bug #514906)
-media-video/mpv libcaca sdl
+media-video/mpv libcaca
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
 # Not yet stabilized dependencies blocking sec bug 514886
