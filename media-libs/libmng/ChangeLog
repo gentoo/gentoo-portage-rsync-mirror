@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.98 2014/08/28 15:44:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.99 2014/08/29 04:24:38 ssuominen Exp $
+
+  29 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/libmng-2.0.2-jpeg-9a.patch, libmng-2.0.2-r1.ebuild:
+  Remove old kludge for jpeg-9 which is now unnecessary for jpeg-9a wrt #520906
+  by Diego Elio Pettenò
 
   28 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> -libmng-1.0.10-r1.ebuild,
   -libmng-1.0.10-r2.ebuild, -libmng-2.0.2.ebuild:

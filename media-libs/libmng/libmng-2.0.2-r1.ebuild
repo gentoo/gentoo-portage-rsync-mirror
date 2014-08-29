@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-2.0.2-r1.ebuild,v 1.12 2014/08/28 15:43:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-2.0.2-r1.ebuild,v 1.13 2014/08/29 04:24:38 ssuominen Exp $
 
 EAPI=5
 inherit eutils autotools-multilib
@@ -22,7 +22,9 @@ RDEPEND=">=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}]
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-stdio.patch
+	epatch \
+		"${FILESDIR}"/${P}-stdio.patch \
+		"${FILESDIR}"/${P}-jpeg-9a.patch
 	emake distclean
 	autotools-multilib_src_prepare
 }
