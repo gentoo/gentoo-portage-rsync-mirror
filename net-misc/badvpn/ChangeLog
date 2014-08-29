@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/badvpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.18 2014/08/14 16:40:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.19 2014/08/29 09:21:27 nimiux Exp $
+
+  29 Aug 2014; Chema Alonso <nimiux@gentoo.org> badvpn-1.999.129.ebuild:
+  Stable for amd64 wrt bug #518248
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> badvpn-1.999.129.ebuild:
   x86 stable wrt bug #518248
