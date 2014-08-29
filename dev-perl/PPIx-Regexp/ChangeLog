@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PPIx-Regexp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/ChangeLog,v 1.45 2013/07/20 11:39:10 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/ChangeLog,v 1.46 2014/08/29 05:55:23 zlogene Exp $
+
+  29 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> -PPIx-Regexp-0.28.0.ebuild,
+  -PPIx-Regexp-0.29.0.ebuild:
+  Drop old.
 
   20 Jul 2013; Mikle Kolyada <zlogene@gentoo.org> PPIx-Regexp-0.33.0.ebuild:
   amd64/x86 stable wrt bug #470414
