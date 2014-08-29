@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/riece/riece-8.0.0.tar.gz
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=633f1c2cfee5aa71834246f36325ef8f
+_md5_=7fe24c3428ead930518d5cac1ffd8f1e

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.5.ebuild,v 1.1 2014/08/27 19:59:35 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.5.ebuild,v 1.2 2014/08/29 20:31:03 axs Exp $
 
 EAPI=5
 
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 	virtual/yacc"
 
 S=${WORKDIR}/${P/_/.}
+PATCHES=( "${FILESDIR}"/${P}-gif-error.patch )
 
 # Tests only work when the package is tested on a system
 # which does not presently have any version of ming installed.
