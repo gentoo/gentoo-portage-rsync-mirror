@@ -1,8 +1,6 @@
 Remove ldconfig(1) execution to prevent the installation script from accessing
 outside of a sandbox.
 
-Author: Heather Cynede
-
 diff --git a/src/etc/install.sh b/src/etc/install.sh
 index c949743..7c3daa5 100644
 --- a/src/etc/install.sh

@@ -1,19 +1,21 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-9999.ebuild,v 1.1 2014/07/31 14:29:09 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-999.ebuild,v 1.1 2014/08/29 14:12:27 jauhien Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit elisp-common eutils git-r3 python-any-r1
+inherit elisp-common eutils python-any-r1
+
+MY_P=${PN}-nightly
 
 DESCRIPTION="Systems programming language from Mozilla"
 HOMEPAGE="http://www.rust-lang.org/"
-EGIT_REPO_URI="git://github.com/rust-lang/rust.git"
+MY_SRC_URI="http://static.rust-lang.org/dist/${MY_P}.tar.gz"
 
 LICENSE="|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA"
-SLOT="0"
+SLOT="nightly"
 KEYWORDS=""
 
 IUSE="clang debug emacs libcxx vim-syntax zsh-completion"
@@ -23,15 +25,21 @@ RDEPEND="vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 	zsh-completion? ( app-shells/zsh )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
+	app-admin/eselect-rust
 	>=dev-lang/perl-5.0
+	net-misc/wget
 	clang? ( sys-devel/clang )
 	emacs? ( virtual/emacs )
-	libcxx? ( sys-libs/libcxx )"
+	libcxx? ( sys-libs/libcxx )
+	!dev-lang/rust:0"
+
+S="${WORKDIR}/${MY_P}"
 
 SITEFILE="50${PN}-mode-gentoo.el"
 
 src_unpack() {
-	git-r3_src_unpack
+	wget "${MY_SRC_URI}" || die
+	unpack ./"${PN}-nightly.tar.gz"
 
 	use amd64 && BUILD_TRIPLE=x86_64-unknown-linux-gnu
 	use x86 && BUILD_TRIPLE=i686-unknown-linux-gnu
@@ -43,12 +51,14 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.12.0-no-ldconfig.patch"
+	epatch "${FILESDIR}/${PN}-0.12.0-no-ldconfig.patch" "${FILESDIR}/${PN}-9999-libdir.patch"
 }
 
 src_configure() {
 	"${ECONF_SOURCE:-.}"/configure \
-		--prefix="${EPREFIX}/usr/" \
+		--prefix="${EPREFIX}/usr" \
+		--libdir="${EPREFIX}/usr/lib/${P}" \
+		--mandir="${EPREFIX}/usr/share/${P}/man" \
 		$(use_enable clang) \
 		$(use_enable debug) \
 		$(use_enable debug llvm-assertions) \
@@ -58,11 +68,12 @@ src_configure() {
 		$(use_enable !debug optimize-tests) \
 		$(use_enable libcxx libcpp) \
 		--disable-manage-submodules \
+		--disable-verify-install \
 		|| die
 }
 
 src_compile() {
-	default
+	emake VERBOSE=1
 
 	if use emacs; then
 		cd src/etc/emacs || die
@@ -75,25 +86,47 @@ src_install() {
 	default
 
 	if use emacs; then
-		elisp-install ${PN}-mode src/etc/emacs/*.el src/etc/emacs/*.elc
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+		local sf="${T}/${SITEFILE}"
+		local my_elisp_pn=${PN}-mode
+
+		insinto "/usr/share/${P}/emacs/site-lisp/${my_elisp_pn}"
+		doins -r src/etc/emacs/*.el src/etc/emacs/*.elc
+
+		cp "${FILESDIR}/${SITEFILE}" "${sf}" || die
+		sed -i -e "s:@SITELISP@:${EPREFIX}${SITELISP}/${my_elisp_pn}:g" "${sf}" || die
+		insinto "/usr/share/${P}/emacs/site-lisp/site-gentoo.d/"
+		doins "${sf}"
 	fi
 
 	if use vim-syntax; then
-		insinto /usr/share/vim/vimfiles
+		insinto /usr/share/${P}/vim/vimfiles
 		doins -r src/etc/vim/*
 	fi
 
 	if use zsh-completion; then
-		insinto "/usr/share/zsh/site-functions"
+		insinto "/usr/share/${P}/zsh/site-functions"
 		doins src/etc/zsh/_rust
 	fi
+
+	mv "${D}/usr/bin/rustc" "${D}/usr/bin/rustc-${PV}" || die
+	mv "${D}/usr/bin/rustdoc" "${D}/usr/bin/rustdoc-${PV}" || die
+
+	cat <<-EOF > "${T}"/50${P}
+	LDPATH="/usr/lib/${P}"
+	MANPATH="/usr/share/${P}/man"
+	EOF
+	doenvd "${T}"/50${P}
 }
 
 pkg_postinst() {
-	use emacs && elisp-site-regen
+	eselect rust update --if-unset
+
+	elog "Rust uses slots now, use 'eselect rust list'"
+	elog "and 'eselect rust set' to list and set rust version."
+	elog "For more information see 'eselect rust help'"
+	elog "and http://wiki.gentoo.org/wiki/Project:Eselect/User_guide"
 }
 
 pkg_postrm() {
-	use emacs && elisp-site-regen
+	eselect rust unset --if-invalid
 }
