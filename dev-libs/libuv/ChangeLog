@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libuv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.26 2014/08/24 16:38:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.27 2014/08/29 01:33:49 blueness Exp $
+
+  29 Aug 2014; Anthony G. Basile <blueness@gentoo.org> libuv-0.11.25-r1.ebuild,
+  libuv-0.11.26.ebuild, libuv-0.11.27.ebuild, libuv-0.11.29.ebuild:
+  Keyword ~ppc ~ppc64, bug #488294
 
   24 Aug 2014; Julian Ospald <hasufell@gentoo.org> libuv-0.11.25-r1.ebuild:
   amd64 stable wrt bug #518244
