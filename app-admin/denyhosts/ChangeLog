@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.82 2014/08/14 16:49:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.83 2014/08/29 11:50:30 nimiux Exp $
+
+  29 Aug 2014; Chema Alonso <nimiux@gentoo.org> denyhosts-2.6-r10.ebuild:
+  Stable for amd64 wrt bug #517810
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   denyhosts-2.6-r10.ebuild:
