@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.5 2014/08/17 22:50:23 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.6 2014/08/29 18:50:39 grknight Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -73,7 +73,8 @@ fi
 # MariaDB has left the numbering schema but keeping compatibility
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then
 	case ${PV} in
-		10.0*|10.1*) MYSQL_PV_MAJOR="5.6" ;;
+		10.0*) MYSQL_PV_MAJOR="5.6" ;;
+		10.1*) MYSQL_PV_MAJOR="5.7" ;;
 	esac
 fi
 
@@ -135,7 +136,7 @@ if [[ -z ${SERVER_URI} ]]; then
 		MY_PV=$(get_version_component_range 1-3 ${PV})
 		PERCONA_RELEASE=$(get_version_component_range 4-5 ${PV})
 		PERCONA_RC=$(get_version_component_range 6 ${PV})
-		SERVER_URI="http://www.percona.com/redir/downloads/${PERCONA_PN}-${MIRROR_PV}/${PERCONA_PN}-${MY_PV}-${PERCONA_RC}${PERCONA_RELEASE}/source/tarball/${PERCONA_PN}-${MY_PV}-${PERCONA_RC}${PERCONA_RELEASE}.tar.gz"
+		SERVER_URI="http://www.percona.com/redir/downloads/${PERCONA_PN}-${MIRROR_PV}/${PERCONA_PN}-${MY_PV}-${PERCONA_RC}${PERCONA_RELEASE}/source/tarball/${PN}-${MY_PV}-${PERCONA_RC}${PERCONA_RELEASE}.tar.gz"
 #		http://www.percona.com/redir/downloads/Percona-Server-5.5/LATEST/source/tarball/Percona-Server-5.5.30-rel30.2.tar.gz
 #		http://www.percona.com/redir/downloads/Percona-Server-5.6/Percona-Server-5.6.13-rc60.5/source/tarball/Percona-Server-5.6.13-rc60.5.tar.gz
 	else
@@ -246,6 +247,10 @@ else
 	DEPEND="${DEPEND} !bindist? ( >=sys-libs/readline-4.1:0=[${MULTILIB_USEDEP}] )"
 fi
 
+if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] ; then
+	mysql_version_is_at_least "5.7.5" && DEPEND="${DEPEND} dev-libs/boost:0="
+fi
+
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 	# Bug 441700 MariaDB >=5.3 include custom mytop
 	DEPEND="${DEPEND}
@@ -259,10 +264,10 @@ if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 			"
 	fi
 	mysql_version_is_at_least "10.0.7" && DEPEND="${DEPEND} oqgraph? ( dev-libs/judy:0= )"
-	if mysql_version_is_at_least "10.0.9" ; then
-		DEPEND="${DEPEND} >=dev-libs/libpcre-8.35:3="
-	fi
+	mysql_version_is_at_least "10.0.9" && DEPEND="${DEPEND} >=dev-libs/libpcre-8.35:3="
 fi
+
+[[ ${PN} == "percona-server" ]] && DEPEND="${DEPEND} !minimal? ( pam? ( virtual/pam:0= ) )"
 
 # Having different flavours at the same time is not a good idea
 for i in "mysql" "mariadb" "mariadb-galera" "percona-server" "mysql-cluster" ; do
@@ -298,8 +303,11 @@ if [[ ${PN} == "mariadb-galera" ]] ; then
 	# The wsrep API version must match between the ebuild and sys-cluster/galera.
 	# This will be indicated by WSREP_REVISION in the ebuild and the first number
 	# in the version of sys-cluster/galera
+	#
+	# lsof is required as of 5.5.38 and 10.0.11 for the rsync sst
 	RDEPEND="${RDEPEND}
 		=sys-cluster/galera-${WSREP_REVISION}*
+		sys-process/lsof
 	"
 fi
 
@@ -322,6 +330,9 @@ PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )
 
 # my_config.h includes ABI specific data
 MULTILIB_WRAPPED_HEADERS=( /usr/include/mysql/my_config.h /usr/include/mysql/private/embedded_priv.h )
+
+# wrap the config script
+MULTILIB_CHOST_TOOLS=( /usr/bin/mysql_config )
 
 #
 # HELPER FUNCTIONS:

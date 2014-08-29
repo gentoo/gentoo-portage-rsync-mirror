@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-17.ebuild,v 1.11 2014/06/06 16:11:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-17.ebuild,v 1.12 2014/08/29 18:35:57 ryao Exp $
 
 EAPI=5
 
@@ -74,8 +74,8 @@ src_prepare() {
 
 src_configure() {
 	local myeconfargs=(
-		--bindir=/bin
-		--with-rootlibdir="/$(get_libdir)"
+		--bindir="${EROOT}bin"
+		--with-rootlibdir="${EROOT}$(get_libdir)"
 		--enable-shared
 		$(use_enable static-libs static)
 		$(use_enable tools)
@@ -168,23 +168,23 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [[ -L ${ROOT%/}/etc/runlevels/boot/static-nodes ]]; then
+	if [[ -L ${EROOT%/}/etc/runlevels/boot/static-nodes ]]; then
 		ewarn "Removing old conflicting static-nodes init script from the boot runlevel"
-		rm -f "${ROOT%/}"/etc/runlevels/boot/static-nodes
+		rm -f "${EROOT%/}"/etc/runlevels/boot/static-nodes
 	fi
 
 	# Add kmod to the runlevel automatically if this is the first install of this package.
 	if [[ -z ${REPLACING_VERSIONS} ]]; then
-		if [[ ! -d ${ROOT%/}/etc/runlevels/sysinit ]]; then
-			mkdir -p "${ROOT%/}"/etc/runlevels/sysinit
+		if [[ ! -d ${EROOT%/}/etc/runlevels/sysinit ]]; then
+			mkdir -p "${EROOT%/}"/etc/runlevels/sysinit
 		fi
-		if [[ -x ${ROOT%/}/etc/init.d/kmod-static-nodes ]]; then
-			ln -s /etc/init.d/kmod-static-nodes "${ROOT%/}"/etc/runlevels/sysinit/kmod-static-nodes
+		if [[ -x ${EROOT%/}/etc/init.d/kmod-static-nodes ]]; then
+			ln -s /etc/init.d/kmod-static-nodes "${EROOT%/}"/etc/runlevels/sysinit/kmod-static-nodes
 		fi
 	fi
 
-	if [[ -e ${ROOT%/}/etc/runlevels/sysinit ]]; then
-		if [[ ! -e ${ROOT%/}/etc/runlevels/sysinit/kmod-static-nodes ]]; then
+	if [[ -e ${EROOT%/}/etc/runlevels/sysinit ]]; then
+		if [[ ! -e ${EROOT%/}/etc/runlevels/sysinit/kmod-static-nodes ]]; then
 			ewarn
 			ewarn "You need to add kmod-static-nodes to the sysinit runlevel for"
 			ewarn "kernel modules to have required static nodes!"
