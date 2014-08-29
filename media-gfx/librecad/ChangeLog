@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/librecad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/librecad/ChangeLog,v 1.6 2014/07/15 17:33:42 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/librecad/ChangeLog,v 1.7 2014/08/29 07:55:16 slis Exp $
+
+*librecad-2.0.5 (29 Aug 2014)
+
+  29 Aug 2014; Sławek Lis <slis@gentoo.org> +librecad-2.0.5.ebuild:
+  Version bump
 
   15 Jul 2014; Chema Alonso <nimiux@gentoo.org> librecad-2.0.3.ebuild:
   Stable for amd64 wrt bug #509906
