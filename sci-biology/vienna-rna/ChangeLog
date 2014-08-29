@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/vienna-rna
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.52 2014/08/29 15:05:13 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.53 2014/08/29 16:54:27 zlogene Exp $
+
+  29 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> -vienna-rna-1.8.5.ebuild,
+  vienna-rna-2.1.1.ebuild:
+  ppc stable wrt bug #520776; Drop old.
 
   29 Aug 2014; Sergey Popov <pinkbyte@gentoo.org> vienna-rna-2.1.1.ebuild:
   Stable on amd64 and x86, wrt bug #520776

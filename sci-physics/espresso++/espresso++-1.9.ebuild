@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/espresso++-1.8.1.ebuild,v 1.1 2014/08/25 22:41:55 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/espresso++-1.9.ebuild,v 1.1 2014/08/29 16:39:53 ottxor Exp $
 
 EAPI=5
 
