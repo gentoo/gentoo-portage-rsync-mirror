@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/gs-elpa
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gs-elpa/ChangeLog,v 1.1 2014/08/29 13:08:32 jauhien Exp $
+
+*gs-elpa-9999 (29 Aug 2014)
+*gs-elpa-0.1.1 (29 Aug 2014)
+
+  29 Aug 2014; Jauhien Piatlicki <jauhien@gentoo.org> +gs-elpa-0.1.1.ebuild,
+  +gs-elpa-9999.ebuild, +metadata.xml:
+  initial import
