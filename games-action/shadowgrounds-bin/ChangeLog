@@ -1,6 +1,10 @@
 # ChangeLog for games-action/shadowgrounds-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/ChangeLog,v 1.5 2014/06/25 13:46:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/ChangeLog,v 1.6 2014/08/29 17:20:34 mr_bones_ Exp $
+
+  29 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -shadowgrounds-bin-0_beta12.ebuild:
+  old
 
   25 Jun 2014; Michał Górny <mgorny@gentoo.org>
   shadowgrounds-bin-0_beta12-r1.ebuild:

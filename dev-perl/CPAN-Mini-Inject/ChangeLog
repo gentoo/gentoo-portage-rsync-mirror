@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CPAN-Mini-Inject
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/ChangeLog,v 1.30 2014/08/24 02:24:43 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/ChangeLog,v 1.31 2014/08/29 17:08:33 zlogene Exp $
+
+  29 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -CPAN-Mini-Inject-0.310.0.ebuild:
+  Drop old
 
 *CPAN-Mini-Inject-0.330.0-r1 (24 Aug 2014)
 
