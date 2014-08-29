@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.99 2014/08/29 06:57:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.100 2014/08/29 07:14:55 mgorny Exp $
+
+  29 Aug 2014; Michał Górny <mgorny@gentoo.org> aria2-1.18.7.ebuild:
+  Version bump for a number of bugfixes.
 
 *aria2-1.18.7 (29 Aug 2014)
 

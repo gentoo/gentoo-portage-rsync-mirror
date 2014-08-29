@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.18.7.ebuild,v 1.1 2014/08/29 06:57:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.18.7.ebuild,v 1.2 2014/08/29 07:14:55 mgorny Exp $
 
 EAPI="5"
 
@@ -59,7 +59,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-fix-gnutls-2.x-compatibility.patch"
 	epatch_user
 	sed -i -e "s|/tmp|${T}|" test/*.cc test/*.txt || die "sed failed"
 }

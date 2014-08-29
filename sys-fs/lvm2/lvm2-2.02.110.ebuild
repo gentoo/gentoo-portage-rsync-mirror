@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.110.ebuild,v 1.1 2014/08/29 05:24:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.110.ebuild,v 1.3 2014/08/29 07:15:02 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="readline static static-libs systemd clvm cman lvm1 lvm2create_initrd selinux +udev +thin device-mapper-only"
 REQUIRED_USE="device-mapper-only? ( !clvm !cman !lvm1 !lvm2create_initrd !thin )
+	systemd? ( udev )
 	static? ( !udev )" #520450
 
 DEPEND_COMMON="clvm? ( cman? ( =sys-cluster/cman-3* ) =sys-cluster/libdlm-3* )
@@ -79,8 +80,11 @@ src_prepare() {
 
 	sed -i -e '/FLAG/s:-O2::' configure{.in,} || die #480212
 
-	if ! use device-mapper-only; then
+	if use udev && ! use device-mapper-only; then
 		sed -i -e '/use_lvmetad =/s:0:1:' conf/example.conf.in || die #514196
+		elog "Notice that \"use_lvmetad\" setting is enabled with USE=\"udev\" in"
+		elog "/etc/lvm/lvm.conf, which will require restart of udev, lvm, and lvmetad"
+		elog "if it was previously disabled."
 	fi
 
 	sed -i -e "s:/usr/bin/true:$(type -P true):" scripts/blk_availability_systemd_red_hat.service.in || die #517514
