@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.204 2014/08/29 11:52:06 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.205 2014/08/29 12:12:46 olemarkus Exp $
 
 # Mask use-flag firebird and package dev-db/firebird for bug 460780
 firebird
@@ -33,6 +33,7 @@ vdpau
 infiniband
 
 # PHP 5.6 still has no stable version
+php_targets_php5-3
 php_targets_php5-6
 
 # Its deps are not mature enough yet
