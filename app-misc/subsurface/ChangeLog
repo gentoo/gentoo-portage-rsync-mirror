@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/subsurface
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.12 2014/03/12 10:28:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.13 2014/08/29 02:08:55 dlan Exp $
+
+*subsurface-4.2 (29 Aug 2014)
+
+  29 Aug 2014; Yixun Lan <dlan@gentoo.org> +subsurface-4.2.ebuild,
+  subsurface-9999.ebuild:
+  version bump, requested by maintainer, bug #500158, thanks Martin Gysel
+  (bearsh)
 
   12 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> subsurface-9999.ebuild:
   Add missing dependency on dev-libs/libgit2, wrt bug #503778

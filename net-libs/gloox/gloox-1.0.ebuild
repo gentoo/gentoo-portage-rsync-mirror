@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-1.0.ebuild,v 1.6 2014/08/21 11:43:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-1.0.ebuild,v 1.7 2014/08/29 02:12:38 blueness Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ SRC_URI="http://camaya.net/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 ~ia64 ~sparc x86"
 IUSE="debug gnutls idn ssl zlib"
 
 DEPEND="idn? ( net-dns/libidn )

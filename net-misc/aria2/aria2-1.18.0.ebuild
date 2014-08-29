@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.18.0.ebuild,v 1.4 2014/08/21 14:19:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.18.0.ebuild,v 1.5 2014/08/29 02:09:35 blueness Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://aria2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="adns bittorrent +gnutls libuv +libxml2 metalink +nettle nls sqlite scripts ssl test xmlrpc"
 
