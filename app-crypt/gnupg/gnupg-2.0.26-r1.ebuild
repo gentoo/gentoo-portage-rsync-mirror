@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta783.ebuild,v 1.2 2014/08/29 21:14:37 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.26-r1.ebuild,v 1.2 2014/08/29 21:14:37 alonbl Exp $
 
 EAPI="5"
 
@@ -8,28 +8,26 @@ inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
-MY_P="${P/_/-}"
-SRC_URI="mirror://gnupg/gnupg/unstable/${MY_P}.tar.bz2"
+SRC_URI="mirror://gnupg/gnupg/${P}.tar.bz2"
+# SRC_URI="ftp://ftp.gnupg.org/gcrypt/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
-IUSE="bzip2 doc nls readline static selinux smartcard usb"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+IUSE="bzip2 doc ldap nls mta readline static selinux smartcard usb"
 
 COMMON_DEPEND_LIBS="
-	dev-libs/npth
 	>=dev-libs/libassuan-2
-	>=dev-libs/libgcrypt-1.6.1
-	>=dev-libs/libgpg-error-1.13
+	>=dev-libs/libgcrypt-1.4:0=
+	>=dev-libs/libgpg-error-1.11
 	>=dev-libs/libksba-1.0.7
+	>=dev-libs/pth-1.3.7
 	>=net-misc/curl-7.10
-	>=net-libs/gnutls-3.0
 	sys-libs/zlib
-	net-nds/openldap
 	bzip2? ( app-arch/bzip2 )
 	readline? ( sys-libs/readline )
 	smartcard? ( usb? ( virtual/libusb:0 ) )
-	"
+	ldap? ( net-nds/openldap )"
 COMMON_DEPEND_BINS="|| ( app-crypt/pinentry app-crypt/pinentry-qt )"
 
 # Existence of executables is checked during configuration.
@@ -37,8 +35,8 @@ DEPEND="${COMMON_DEPEND_LIBS}
 	${COMMON_DEPEND_BINS}
 	static? (
 		>=dev-libs/libassuan-2[static-libs]
-		>=dev-libs/libgcrypt-1.4[static-libs]
-		>=dev-libs/libgpg-error-1.7[static-libs]
+		>=dev-libs/libgcrypt-1.4:0=[static-libs]
+		>=dev-libs/libgpg-error-1.11[static-libs]
 		>=dev-libs/libksba-1.0.7[static-libs]
 		>=dev-libs/pth-1.3.7[static-libs]
 		>=net-misc/curl-7.10[static-libs]
@@ -50,16 +48,16 @@ DEPEND="${COMMON_DEPEND_LIBS}
 
 RDEPEND="!static? ( ${COMMON_DEPEND_LIBS} )
 	${COMMON_DEPEND_BINS}
+	mta? ( virtual/mta )
 	!<=app-crypt/gnupg-2.0.1
 	selinux? ( sec-policy/selinux-gpg )
 	nls? ( virtual/libintl )"
 
 REQUIRED_USE="smartcard? ( !static )"
 
-S="${WORKDIR}/${MY_P}"
-
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.0.17-gpgsm-gencert.patch"
+	epatch "${FILESDIR}/${P}-Need-to-init-the-trustdb-for-import.patch"
 	epatch_user
 }
 
@@ -95,6 +93,8 @@ src_configure() {
 		"${myconf[@]}" \
 		$(use_enable bzip2) \
 		$(use_enable nls) \
+		$(use_enable mta mailto) \
+		$(use_enable ldap) \
 		$(use_with readline) \
 		CC_FOR_BUILD="$(tc-getBUILD_CC)"
 }
@@ -125,6 +125,9 @@ src_install() {
 	dosym gpg2keys_hkp /usr/libexec/gpgkeys_hkp
 	dosym gpg2keys_finger /usr/libexec/gpgkeys_finger
 	dosym gpg2keys_curl /usr/libexec/gpgkeys_curl
+	if use ldap; then
+		dosym gpg2keys_ldap /usr/libexec/gpgkeys_ldap
+	fi
 	echo ".so man1/gpg2.1" > "${ED}"/usr/share/man/man1/gpg.1
 	echo ".so man1/gpgv2.1" > "${ED}"/usr/share/man/man1/gpgv.1
 
