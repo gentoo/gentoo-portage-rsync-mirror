@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/org-ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/org-ruby/ChangeLog,v 1.3 2014/07/25 05:27:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/org-ruby/ChangeLog,v 1.4 2014/08/29 15:33:59 mrueg Exp $
+
+*org-ruby-0.9.9 (29 Aug 2014)
+
+  29 Aug 2014; Manuel Rüger <mrueg@gentoo.org> +org-ruby-0.9.9.ebuild:
+  Version bump.
 
 *org-ruby-0.9.7 (25 Jul 2014)
 
