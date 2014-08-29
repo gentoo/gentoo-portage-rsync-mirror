@@ -1,12 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-2.1.1.ebuild,v 1.3 2013/09/05 19:44:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-2.1.1.ebuild,v 1.5 2014/08/29 15:05:13 pinkbyte Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 DISTUTILS_OPTIONAL=true
 AUTOTOOLS_AUTORECONF=true
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 inherit autotools-utils distutils-r1 multilib perl-module toolchain-funcs
 
@@ -16,7 +17,7 @@ SRC_URI="http://www.tbi.univie.ac.at/~ronny/RNA/ViennaRNA-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="vienna-rna"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc openmp python static-libs"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -37,8 +38,6 @@ PATCHES=(
 	"${FILESDIR}"/${P}-prll.patch
 	"${FILESDIR}"/${P}-impl-decl.patch
 )
-
-AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	sed -i 's/ getline/ v_getline/' Readseq/ureadseq.c || die
