@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-7.0.01.ebuild,v 1.1 2014/06/22 16:06:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-7.0.01.ebuild,v 1.2 2014/08/29 01:13:28 blueness Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="fontforge utils"
 
 DEPEND="

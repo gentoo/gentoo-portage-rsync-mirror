@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bdf2psf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bdf2psf/ChangeLog,v 1.5 2014/07/17 13:34:16 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bdf2psf/ChangeLog,v 1.6 2014/08/29 01:08:52 blueness Exp $
+
+  29 Aug 2014; Anthony G. Basile <blueness@gentoo.org> bdf2psf-1.104.ebuild:
+  Keyword ~ppc ~ppc64, bug #500844
 
   17 Jul 2014; Tobias Klausmann <klausman@gentoo.org> bdf2psf-1.104.ebuild:
   Keyworded on alpha, bug #500844
