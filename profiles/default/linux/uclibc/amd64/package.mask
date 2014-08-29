@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/amd64/package.mask,v 1.1 2014/08/16 20:43:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/amd64/package.mask,v 1.2 2014/08/29 18:21:40 mr_bones_ Exp $
 
 # Anthony G. Basile <blueness@gentoo.org> (07 Oct 2012)
 # profile hardened/linux/uclibc/amd64 is not mutlilib
@@ -25,6 +25,8 @@ app-emulation/emul-linux-x86-xlibs
 # Alfredo Tupone <tupone@gentoo.org> (02 Feb 2013)
 # Depending on masked packages
 games-strategy/dominions2-demo
+games-strategy/coldwar
+games-strategy/coldwar-demo
 
 # Ulrich Müller <ulm@gentoo.org> (18 Mar 2013)
 # Packages that rely on multilib

@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1-r1.ebuild,v 1.2 2014/06/25 17:27:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1-r1.ebuild,v 1.3 2014/08/29 18:01:42 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils unpacker versionator games
 
 MY_PN="gorky17"
@@ -52,18 +51,17 @@ src_unpack() {
 	unpack_makeself ${MY_PN}_demo.run
 	unpack ./data/data.tar.gz
 
-	mkdir patch
-	cd patch
+	mkdir patch_dir
+	cd patch_dir
 	unpack_makeself ${PN}-${MY_PV}-x86.run
 	cd "${S}"
 
 	# Apply patch
 	mv bin/Linux/x86/* .
-	mv patch/*.sh .
-	./patch/bin/Linux/x86/loki_patch patch/patch.dat . \
-		|| die "loki_patch failed"
+	mv patch_dir/*.sh .
+	./patch_dir/bin/Linux/x86/loki_patch patch_dir/patch.dat . || die
 
-	rm -r update.sh *patch.sh data lgp_* patch setup* bin
+	rm -r update.sh *patch.sh data lgp_* patch_dir setup* bin
 }
 
 src_install() {
