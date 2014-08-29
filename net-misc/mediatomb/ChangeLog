@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.56 2014/08/14 16:55:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.57 2014/08/29 10:30:26 nimiux Exp $
+
+  29 Aug 2014; Chema Alonso <nimiux@gentoo.org> mediatomb-0.12.1-r8.ebuild:
+  Stable for amd64 wrt bug #517850
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   mediatomb-0.12.1-r8.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gambatte
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gambatte/ChangeLog,v 1.7 2014/08/14 16:41:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gambatte/ChangeLog,v 1.8 2014/08/29 10:03:19 nimiux Exp $
+
+  29 Aug 2014; Chema Alonso <nimiux@gentoo.org>
+  gambatte-0.5.0_p20131102.ebuild:
+  Stable for amd64 wrt bug #518250
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gambatte-0.5.0_p20131102.ebuild:
