@@ -1,6 +1,16 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.271 2014/08/28 09:57:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.274 2014/08/29 13:40:28 chithanh Exp $
+
+  29 Aug 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -openoffice-bin-4.0.1.ebuild, -openoffice-bin-4.1.0.ebuild:
+  Remove vulnerable versions, bug #521136.
+
+  29 Aug 2014; Agostino Sarubbo <ago@gentoo.org> openoffice-bin-4.1.1.ebuild:
+  Stable for x86, wrt bug #521136
+
+  29 Aug 2014; Agostino Sarubbo <ago@gentoo.org> openoffice-bin-4.1.1.ebuild:
+  Stable for amd64, wrt bug #521136
 
 *openoffice-bin-4.1.1 (28 Aug 2014)
 

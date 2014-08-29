@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/eselect-rust
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rust/ChangeLog,v 1.1 2014/08/29 13:49:14 jauhien Exp $
+
+*eselect-rust-0.1_pre20140820 (29 Aug 2014)
+
+  29 Aug 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  +eselect-rust-0.1_pre20140820.ebuild, +metadata.xml:
+  initial import from gentoo-rust overlay
