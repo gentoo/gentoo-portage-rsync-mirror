@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ppcoin-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ppcoin-qt/ChangeLog,v 1.3 2014/08/10 20:37:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ppcoin-qt/ChangeLog,v 1.4 2014/08/28 23:16:00 blueness Exp $
+
+  28 Aug 2014; Anthony G. Basile <blueness@gentoo.org> -ppcoin-qt-0.3.0.ebuild:
+  Remove older version
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ppcoin-qt-0.3.0.ebuild,
   ppcoin-qt-0.4.0.ebuild:
