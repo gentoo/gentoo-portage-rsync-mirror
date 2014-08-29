@@ -1,10 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-survivor-bin/shadowgrounds-survivor-bin-0_beta11-r1.ebuild,v 1.2 2014/06/25 13:46:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-survivor-bin/shadowgrounds-survivor-bin-0_beta11-r1.ebuild,v 1.3 2014/08/29 17:51:48 mr_bones_ Exp $
 
 EAPI=5
-
-inherit unpacker games eutils
+inherit unpacker eutils games
 
 DESCRIPTION="human survivors who battle against the ongoing alien onslaught"
 HOMEPAGE="http://shadowgroundsgame.com/survivor/"

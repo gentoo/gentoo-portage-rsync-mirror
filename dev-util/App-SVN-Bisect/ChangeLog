@@ -1,10 +1,15 @@
 # ChangeLog for dev-util/App-SVN-Bisect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/App-SVN-Bisect/ChangeLog,v 1.1 2012/02/22 03:55:22 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/App-SVN-Bisect/ChangeLog,v 1.2 2014/08/29 17:38:59 axs Exp $
+
+*App-SVN-Bisect-1.1-r1 (29 Aug 2014)
+
+  29 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +App-SVN-Bisect-1.1-r1.ebuild, -App-SVN-Bisect-1.1.ebuild:
+  Bumped EAPI to 5 to support dev-lang/perl upgrades
 
 *App-SVN-Bisect-1.1 (22 Feb 2012)
 
   22 Feb 2012; Mike Gilbert <floppym@gentoo.org> +App-SVN-Bisect-1.1.ebuild,
   +metadata.xml:
   Import package from sunrise. Bug 360651.
-

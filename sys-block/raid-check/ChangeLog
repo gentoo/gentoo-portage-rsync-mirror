@@ -1,0 +1,11 @@
+# ChangeLog for sys-block/raid-check
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/raid-check/ChangeLog,v 1.1 2014/08/29 18:01:14 chutzpah Exp $
+
+*raid-check-20140719 (29 Aug 2014)
+
+  29 Aug 2014; Patrick McLean <chutzpah@gentoo.org>
+  +raid-check-20140719.ebuild, +files/raid-check-20140719-makefile.patch,
+  +files/raid-check-20140719-path.patch, +metadata.xml:
+  Initial commit, bug #493334
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-38.0.2121.3.ebuild,v 1.1 2014/08/13 17:01:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-38.0.2125.24.ebuild,v 1.1 2014/08/29 17:39:01 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -14,7 +14,7 @@ inherit chromium eutils flag-o-matic multilib multiprocessing pax-utils \
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}-lite.tar.xz"
+SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -47,7 +47,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	>=dev-libs/nss-3.14.3:=
 	dev-libs/re2:=
 	gnome? ( >=gnome-base/gconf-2.24.0:= )
-	gnome-keyring? ( gnome-base/libgnome-keyring:= )
+	gnome-keyring? ( >=gnome-base/libgnome-keyring-3.12:= )
 	>=media-libs/alsa-lib-1.0.19:=
 	media-libs/flac:=
 	media-libs/fontconfig:=
@@ -107,10 +107,14 @@ RDEPEND+="
 # Python dependencies. The DEPEND part needs to be kept in sync
 # with python_check_deps.
 DEPEND+=" $(python_gen_any_dep '
+	dev-python/jinja[${PYTHON_USEDEP}]
+	dev-python/ply[${PYTHON_USEDEP}]
 	dev-python/simplejson[${PYTHON_USEDEP}]
 ')"
 python_check_deps() {
-	has_version "dev-python/simplejson[${PYTHON_USEDEP}]"
+	has_version "dev-python/jinja[${PYTHON_USEDEP}]" && \
+		has_version "dev-python/ply[${PYTHON_USEDEP}]" && \
+		has_version "dev-python/simplejson[${PYTHON_USEDEP}]"
 }
 
 if ! has chromium_pkg_die ${EBUILD_DEATH_HOOKS}; then
@@ -170,6 +174,8 @@ src_prepare() {
 	#	touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	# fi
 
+	epatch "${FILESDIR}/${PN}-system-jinja-r6.patch"
+
 	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
@@ -191,17 +197,18 @@ src_prepare() {
 		'net/third_party/nss' \
 		'third_party/WebKit' \
 		'third_party/angle' \
+		'third_party/angle/src/third_party/compiler' \
 		'third_party/brotli' \
 		'third_party/cacheinvalidation' \
-		'third_party/cld' \
+		'third_party/cld_2' \
 		'third_party/cros_system_api' \
 		'third_party/dom_distiller_js' \
+		'third_party/dom_distiller_js/package/proto_gen/third_party/dom_distiller_js' \
 		'third_party/ffmpeg' \
 		'third_party/fips181' \
 		'third_party/flot' \
 		'third_party/hunspell' \
 		'third_party/iccjpeg' \
-		'third_party/jinja2' \
 		'third_party/jstemplate' \
 		'third_party/khronos' \
 		'third_party/leveldatabase' \
@@ -211,13 +218,13 @@ src_prepare() {
 		'third_party/libsrtp' \
 		'third_party/libusb' \
 		'third_party/libvpx' \
+		'third_party/libvpx/source/libvpx/third_party/x86inc' \
 		'third_party/libwebm' \
 		'third_party/libxml/chromium' \
 		'third_party/libXNVCtrl' \
 		'third_party/libyuv' \
 		'third_party/lss' \
 		'third_party/lzma_sdk' \
-		'third_party/markupsafe' \
 		'third_party/mesa' \
 		'third_party/modp_b64' \
 		'third_party/mt19937ar' \
@@ -225,10 +232,12 @@ src_prepare() {
 		'third_party/opus' \
 		'third_party/ots' \
 		'third_party/pdfium' \
+		'third_party/pdfium/third_party/logging.h' \
+		'third_party/pdfium/third_party/macros.h' \
+		'third_party/pdfium/third_party/numerics' \
+		'third_party/pdfium/third_party/template_util.h' \
 		'third_party/polymer' \
-		'third_party/ply' \
 		'third_party/protobuf' \
-		'third_party/pywebsocket' \
 		'third_party/qcms' \
 		'third_party/readability' \
 		'third_party/sfntly' \
@@ -238,6 +247,11 @@ src_prepare() {
 		'third_party/tcmalloc' \
 		'third_party/tlslite' \
 		'third_party/trace-viewer' \
+		'third_party/trace-viewer/third_party/jszip' \
+		'third_party/trace-viewer/third_party/tvcm' \
+		'third_party/trace-viewer/third_party/tvcm/third_party/d3' \
+		'third_party/trace-viewer/third_party/tvcm/third_party/gl-matrix' \
+		'third_party/trace-viewer/third_party/tvcm/third_party/polymer' \
 		'third_party/undoview' \
 		'third_party/usrsctp' \
 		'third_party/webdriver' \
@@ -352,12 +366,6 @@ src_configure() {
 
 	# Always support proprietary codecs.
 	myconf+=" -Dproprietary_codecs=1"
-
-	# Set python version and libdir so that python_arch.sh can find libpython.
-	# Bug 492864.
-	myconf+="
-		-Dpython_ver=${EPYTHON#python}
-		-Dsystem_libdir=$(get_libdir)"
 
 	ffmpeg_branding="Chromium"
 	if ! use bindist; then

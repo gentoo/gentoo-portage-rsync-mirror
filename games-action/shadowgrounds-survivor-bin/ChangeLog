@@ -1,6 +1,14 @@
 # ChangeLog for games-action/shadowgrounds-survivor-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-survivor-bin/ChangeLog,v 1.5 2014/06/25 13:46:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-survivor-bin/ChangeLog,v 1.7 2014/08/29 17:51:48 mr_bones_ Exp $
+
+  29 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  shadowgrounds-survivor-bin-0_beta11-r1.ebuild:
+  tidy
+
+  29 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -shadowgrounds-survivor-bin-0_beta11.ebuild:
+  old
 
   25 Jun 2014; Michał Górny <mgorny@gentoo.org>
   shadowgrounds-survivor-bin-0_beta11-r1.ebuild:

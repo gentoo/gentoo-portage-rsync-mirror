@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/coldwar-1.0.1-r1.ebuild,v 1.2 2014/06/25 17:28:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/coldwar-1.0.1-r1.ebuild,v 1.3 2014/08/29 17:58:08 mr_bones_ Exp $
 
 EAPI=5
 
@@ -54,15 +54,15 @@ src_unpack() {
 	use linguas_ru && unpack "./cd/langpack_ru.tar.gz"
 	rm -f cd
 
-	cp -rf "${CDROM_ROOT}"/bin/Linux/x86/* . || die "cp exes failed"
-	cp -f "${CDROM_ROOT}"/{READ*,icon*} . || die "cp READ* failed"
+	cp -rf "${CDROM_ROOT}"/bin/Linux/x86/* . || die
+	cp -f "${CDROM_ROOT}"/{READ*,icon*} . || die
 
-	mkdir -p patch
-	cd patch
+	mkdir -p patch_dir
+	cd patch_dir
 	unpack_makeself ${MY_P}-x86.run
-	bin/Linux/x86/loki_patch patch.dat "${S}" || die "loki_patch failed"
+	bin/Linux/x86/loki_patch patch.dat "${S}" || die
 	cd "${S}"
-	rm -rf patch
+	rm -rf patch_dir
 }
 
 src_install() {
