@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdivecomputer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/ChangeLog,v 1.13 2014/08/10 20:35:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/ChangeLog,v 1.14 2014/08/29 08:37:36 dlan Exp $
+
+  29 Aug 2014; Yixun Lan <dlan@gentoo.org> libdivecomputer-9999.ebuild:
+  fix bug 503572, proxy for maintainer, thanks Martin Gysel (bearsh)
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   libdivecomputer-0.4.1.ebuild, libdivecomputer-0.4.2.ebuild,

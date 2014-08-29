@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/libdivecomputer-9999.ebuild,v 1.4 2014/08/10 20:35:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/libdivecomputer-9999.ebuild,v 1.5 2014/08/29 08:37:36 dlan Exp $
 
 EAPI="5"
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://libdivecomputer.git.sourceforge.net/gitroot/libdivecomputer/libdivecomputer"
 	GIT_ECLASS="git-2"
-	AUTOTOOLIZE=yes
+	AUTOTOOLS_AUTORECONF=1
 	KEYWORDS=""
 else
 	KEYWORDS="~amd64 ~x86"
@@ -33,24 +33,12 @@ RDEPEND="usb? ( virtual/libusb:1 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_prepare() {
-	if [[ -n ${AUTOTOOLIZE} ]]; then
-		autotools-utils_src_prepare
-	else
-		epatch_user
-	fi
-}
-
 src_configure() {
 	autotools-utils_src_configure
 
 	if ! use tools ; then
 		sed -i 's|examples||' Makefile || die "sed failed"
 	fi
-}
-
-src_compile() {
-	autotools-utils_src_compile
 }
 
 src_install() {
