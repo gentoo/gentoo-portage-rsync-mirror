@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.7.7.ebuild,v 1.2 2013/02/04 20:28:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.7.7.ebuild,v 1.3 2014/08/29 19:17:03 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="The Portable OpenGL FrameWork"
-HOMEPAGE="http://glfw.sourceforge.net/"
+HOMEPAGE="http://www.glfw.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="ZLIB"

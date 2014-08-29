@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst prepare
-DEPEND=ssl? ( dev-libs/openssl ) kernel_linux? ( dev-libs/libnl:3 crda? ( net-wireless/crda ) ) madwifi? ( || ( >net-wireless/madwifi-ng-tools-0.9.3 net-wireless/madwifi-old ) ) virtual/pkgconfig
+DEPEND=ssl? ( dev-libs/openssl ) kernel_linux? ( dev-libs/libnl:3 crda? ( net-wireless/crda ) ) madwifi? ( || ( >net-wireless/madwifi-ng-tools-0.9.3 ) ) virtual/pkgconfig
 DESCRIPTION=IEEE 802.11 wireless LAN Host AP daemon
 EAPI=4
 HOMEPAGE=http://hostap.epitest.fi
 IUSE=ipv6 logwatch madwifi +ssl +wps +crda
 KEYWORDS=amd64 ~mips ppc x86
 LICENSE=|| ( GPL-2 BSD )
-RDEPEND=ssl? ( dev-libs/openssl ) kernel_linux? ( dev-libs/libnl:3 crda? ( net-wireless/crda ) ) madwifi? ( || ( >net-wireless/madwifi-ng-tools-0.9.3 net-wireless/madwifi-old ) )
+RDEPEND=ssl? ( dev-libs/openssl ) kernel_linux? ( dev-libs/libnl:3 crda? ( net-wireless/crda ) ) madwifi? ( || ( >net-wireless/madwifi-ng-tools-0.9.3 ) )
 SLOT=0
 SRC_URI=http://hostap.epitest.fi/releases/hostapd-2.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=45d04d6eea9ff302eb519abc2c51e3fb
+_md5_=3c8d8dc29d13ea7bab5133d20f76d18f

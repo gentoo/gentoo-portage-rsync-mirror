@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.149 2014/06/06 16:23:18 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.150 2014/08/29 19:28:44 gurligebis Exp $
+
+*hostapd-2.2-r1 (29 Aug 2014)
+
+  29 Aug 2014; <gurligebis@gentoo.org> hostapd-2.0-r1.ebuild,
+  -hostapd-2.2.ebuild, +hostapd-2.2-r1.ebuild:
+  Adding 802.11ac support, removing references to madwifi-old, fixing bug
+  #521130
 
 *hostapd-2.2 (06 Jun 2014)
 

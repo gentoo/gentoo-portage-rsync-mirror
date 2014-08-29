@@ -1,6 +1,14 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.787 2014/08/29 19:00:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.789 2014/08/29 19:08:50 aballier Exp $
+
+  29 Aug 2014; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.10.14.ebuild,
+  -ffmpeg-2.2.5.ebuild, -ffmpeg-2.3.ebuild, -ffmpeg-2.3.1.ebuild,
+  -ffmpeg-2.3.2.ebuild:
+  remove old
+
+  29 Aug 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  update subslot per upstream git master, bug #521502 by gerion
 
   29 Aug 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   add lzma useflag

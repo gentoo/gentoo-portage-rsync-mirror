@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH2/XML-XSH2-2.1.6.ebuild,v 1.4 2012/11/26 04:22:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH2/XML-XSH2-2.1.6-r1.ebuild,v 1.1 2014/08/29 19:10:15 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=PAJAS
 MODULE_VERSION=2.1.6
