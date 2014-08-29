@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.84 2014/07/30 14:27:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.85 2014/08/29 00:52:25 blueness Exp $
+
+  29 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  bitcoin-qt-0.9.2.1.ebuild:
+  Switch from einstall to emake, bug #521440
 
   30 Jul 2014; Anthony G. Basile <blueness@gentoo.org> bitcoin-qt-0.8.5.ebuild,
   bitcoin-qt-0.8.6.ebuild, bitcoin-qt-0.9.2.1.ebuild:

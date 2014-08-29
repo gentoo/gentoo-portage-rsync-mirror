@@ -1,6 +1,6 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.9.2.1.ebuild,v 1.3 2014/08/28 10:17:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.9.2.1.ebuild,v 1.4 2014/08/29 00:46:19 blueness Exp $
 
 EAPI=4
 
@@ -70,7 +70,7 @@ src_test() {
 }
 
 src_install() {
-	einstall
+	emake DESTDIR="${D}" install
 
 	insinto /etc/bitcoin
 	newins "${FILESDIR}/bitcoin.conf" bitcoin.conf
@@ -78,7 +78,7 @@ src_install() {
 	fperms 600 /etc/bitcoin/bitcoin.conf
 
 	newconfd "${FILESDIR}/bitcoin.confd" ${PN}
-	newinitd "${FILESDIR}/bitcoin.initd" ${PN}
+	newinitd "${FILESDIR}/bitcoin.initd-r1" ${PN}
 	systemd_dounit "${FILESDIR}/bitcoind.service"
 
 	keepdir /var/lib/bitcoin/.bitcoin
