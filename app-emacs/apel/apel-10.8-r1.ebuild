@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/apel-10.8-r1.ebuild,v 1.9 2014/08/20 12:18:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/apel-10.8-r1.ebuild,v 1.10 2014/08/29 06:36:55 ulm Exp $
 
 EAPI=4
 
@@ -32,22 +32,20 @@ src_prepare() {
 src_compile() {
 	emake PREFIX="${ED}/usr" \
 		LISPDIR="${ED}/${SITELISP}" \
-		VERSION_SPECIFIC_LISPDIR="${ED}/${SITELISP}" || die
+		VERSION_SPECIFIC_LISPDIR="${ED}/${SITELISP}"
 }
 
 src_install() {
-	einstall PREFIX="${ED}/usr" \
+	emake PREFIX="${ED}/usr" \
 		LISPDIR="${ED}/${SITELISP}" \
-		VERSION_SPECIFIC_LISPDIR="${ED}/${SITELISP}" || die
-
+		VERSION_SPECIFIC_LISPDIR="${ED}/${SITELISP}" \
+		install
 	elisp-site-file-install "${FILESDIR}/50apel-gentoo.el"
-
 	dodoc ChangeLog README*
 }
 
 pkg_postinst() {
 	elisp-site-regen
-
 	elog "See the README.en file in /usr/share/doc/${PF} for tips"
 	elog "on how to customize this package."
 	elog "And you need to rebuild packages depending on ${PN}."

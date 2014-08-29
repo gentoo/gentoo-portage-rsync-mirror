@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/lookup-1.4.1.ebuild,v 1.4 2012/10/10 20:54:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/lookup-1.4.1.ebuild,v 1.5 2014/08/29 06:48:10 ulm Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ ELISP_PATCHES="${P}-garbage-char.patch"
 SITEFILE="50${PN}-gentoo.el"
 
 src_configure() {
-	default
+	econf --with-lispdir="${EPREFIX}${SITELISP}/${PN}"
 }
 
 src_compile() {
@@ -28,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall lispdir="${D}${SITELISP}/${PN}"
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+	emake -j1 DESTDIR="${D}" install
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	dodoc AUTHORS ChangeLog NEWS README
 }

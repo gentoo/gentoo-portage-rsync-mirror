@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/apel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.57 2014/08/20 12:18:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.58 2014/08/29 06:36:55 ulm Exp $
+
+  29 Aug 2014; Ulrich Müller <ulm@gentoo.org> apel-10.8-r1.ebuild:
+  Replace einstall by emake. Remove unnecessary die statements.
 
   20 Aug 2014; Raúl Porcel <armin76@gentoo.org> apel-10.8-r1.ebuild:
   ia64 stable wrt #505424

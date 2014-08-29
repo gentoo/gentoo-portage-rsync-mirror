@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/lookup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/ChangeLog,v 1.17 2012/10/10 20:54:18 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/ChangeLog,v 1.18 2014/08/29 06:48:10 ulm Exp $
+
+  29 Aug 2014; Ulrich Müller <ulm@gentoo.org> lookup-1.4.1.ebuild:
+  Call econf properly, replace einstall by emake.
 
   10 Oct 2012; Ulrich Müller <ulm@gentoo.org> +files/50lookup-gentoo.el,
   -files/51lookup-gentoo.el, lookup-1.4.1.ebuild,
