@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/edb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.13 2014/02/24 08:08:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.14 2014/08/29 20:47:08 ulm Exp $
+
+  29 Aug 2014; Ulrich Müller <ulm@gentoo.org> edb-1.31.ebuild:
+  Replace einstall by emake.
 
   24 Feb 2014; Ulrich Müller <ulm@gentoo.org> edb-1.31.ebuild,
   +files/50edb-gentoo.el, -files/52edb-gentoo.el:

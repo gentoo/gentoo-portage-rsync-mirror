@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/edb-1.31.ebuild,v 1.3 2014/02/24 08:08:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/edb-1.31.ebuild,v 1.4 2014/08/29 20:47:08 ulm Exp $
 
 EAPI=5
 
@@ -27,8 +27,11 @@ src_compile() {
 }
 
 src_install() {
-	einstall sitelisp="${D}${SITELISP}"
+	emake -j1 \
+		sitelisp="${ED}${SITELISP}" \
+		infodir="${ED}/usr/share/info" \
+		install
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	dodoc AUTHORS BUGS ChangeLog HACKING NEWS README THANKS TODO doc/refcard.ps
-	insinto /usr/share/doc/${PF}; doins -r examples
+	dodoc -r examples
 }

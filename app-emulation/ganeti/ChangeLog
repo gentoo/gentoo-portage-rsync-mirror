@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.92 2014/07/02 23:57:25 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.93 2014/08/29 20:52:43 chutzpah Exp $
+
+*ganeti-2.11.5 (29 Aug 2014)
+
+  29 Aug 2014; Patrick McLean <chutzpah@gentoo.org> +ganeti-2.11.5.ebuild,
+  +files/ganeti-2.11-daemon-util-tests.patch,
+  +files/ganeti-2.11-dont-nest-libdir.patch,
+  +files/ganeti-2.11-dont-print-man-help.patch,
+  +files/ganeti-2.11-useradd.patch, metadata.xml:
+  Version bump. Add multiple-users USE flag that enables ganeti's multiuser
+  support (contributed by Guido Serra). Add monitoring USE flag to enable
+  ganeti's monitoring daemon.
 
 *ganeti-2.11.2-r3 (02 Jul 2014)
 *ganeti-2.10.5-r3 (02 Jul 2014)
