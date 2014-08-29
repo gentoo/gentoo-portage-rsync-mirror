@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.241 2014/08/28 20:02:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.242 2014/08/29 06:07:51 zlogene Exp $
+
+  29 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> zsh-5.0.5.ebuild:
+  ppc64 stable wrt bug #505590
 
 *zsh-5.0.6 (28 Aug 2014)
 
