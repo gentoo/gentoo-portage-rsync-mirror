@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.0.2.ebuild,v 1.4 2014/08/24 13:56:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.0.2.ebuild,v 1.5 2014/08/30 08:59:38 polynomial-c Exp $
 
 EAPI=5
 
@@ -449,13 +449,6 @@ src_install() {
 		dodoc svn-fe.txt
 		use doc && doman svn-fe.1 && dohtml svn-fe.html
 		cd "${S}"
-	fi
-
-	# remote-helpers
-	if use python ; then
-		python_scriptinto /usr/libexec/git-core/
-		python_doscript "${S}"/contrib/remote-helpers/git-remote-{bzr,hg}
-		python_optimize
 	fi
 
 	dodir /usr/share/${PN}/contrib

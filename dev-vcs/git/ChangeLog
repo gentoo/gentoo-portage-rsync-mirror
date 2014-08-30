@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.279 2014/08/26 17:00:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.280 2014/08/30 08:59:38 polynomial-c Exp $
+
+  30 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> git-2.0.2.ebuild,
+  git-2.0.4.ebuild, git-2.1.0.ebuild, git-9999.ebuild, git-9999-r1.ebuild,
+  git-9999-r2.ebuild, git-9999-r3.ebuild:
+  Don't install git-remote helpers for bzr and hg anymore (bug #512422). Synced
+  live ebuilds with latest release ebuild.
 
   26 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> git-2.1.0.ebuild:
   Restrict test for >=git-2.1.0. See bug #520270 for details.
