@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.124 2014/08/13 17:34:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.125 2014/08/30 19:32:21 williamh Exp $
+
+  30 Aug 2014; William Hubbs <williamh@gentoo.org> pybugz-9999.ebuild:
+  only support python-3.3 or newer due to upstream bugs in python 2.x
 
   13 Aug 2014; Raúl Porcel <armin76@gentoo.org> pybugz-0.10.1-r2.ebuild:
   alpha/ia64/sparc stable wrt #517550
