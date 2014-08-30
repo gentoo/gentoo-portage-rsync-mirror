@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/rstudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.14 2014/08/27 15:51:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.15 2014/08/30 15:46:38 nimiux Exp $
+
+  30 Aug 2014; Chema Alonso <nimiux@gentoo.org> rstudio-0.98.490-r1.ebuild:
+  Stable for amd64 wrt bug #516464
 
 *rstudio-0.98.1028 (27 Aug 2014)
 
