@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.8.1.ebuild,v 1.16 2014/08/05 18:34:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.8.1.ebuild,v 1.17 2014/08/30 12:29:14 mgorny Exp $
 
 DESCRIPTION="Console based AIM client that looks like ircII"
 HOMEPAGE="http://dev.ojnk.net/"
@@ -21,13 +21,13 @@ src_compile() {
 }
 
 src_install() {
-	einstall
+	emake DESTDIR="${D}" install || die
 
-	doman doc/pork.1
+	doman doc/pork.1 || die
 	insinto /usr/share/pork/examples
-	doins examples/blist.txt
+	doins examples/blist.txt || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README STYLE TODO QUICK_START
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README STYLE TODO QUICK_START || die
 }
 
 pkg_postinst() {

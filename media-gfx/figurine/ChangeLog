@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/figurine
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/figurine/ChangeLog,v 1.11 2010/01/07 22:06:22 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/figurine/ChangeLog,v 1.12 2014/08/30 12:20:41 mgorny Exp $
+
+  30 Aug 2014; Michał Górny <mgorny@gentoo.org> figurine-1.0.5.ebuild:
+  Replace einstall with emake install, bug #521554.
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   figurine-1.0.5.ebuild:

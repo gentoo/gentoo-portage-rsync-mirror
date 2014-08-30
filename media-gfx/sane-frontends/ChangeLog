@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sane-frontends
-# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.42 2013/07/21 09:40:48 pacho Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.43 2014/08/30 12:03:13 mgorny Exp $
+
+  30 Aug 2014; Michał Górny <mgorny@gentoo.org> sane-frontends-1.0.14.ebuild:
+  Replace einstall with emake install, bug #521558.
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #473480

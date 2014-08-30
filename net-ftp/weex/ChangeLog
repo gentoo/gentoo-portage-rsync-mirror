@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/weex
 # Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.13 2014/08/10 20:55:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.14 2014/08/30 12:18:33 mgorny Exp $
+
+  30 Aug 2014; Michał Górny <mgorny@gentoo.org> weex-2.6.1.5-r1.ebuild:
+  Replace einstall with emake install, bug #521586.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> weex-2.6.1.5-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

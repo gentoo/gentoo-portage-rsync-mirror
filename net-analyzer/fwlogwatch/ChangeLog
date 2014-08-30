@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fwlogwatch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.33 2014/08/15 15:55:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.34 2014/08/30 12:04:23 nimiux Exp $
+
+  30 Aug 2014; Chema Alonso <nimiux@gentoo.org> fwlogwatch-1.4.ebuild:
+  Stable for amd64 wrt bug #513992
 
   15 Aug 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove short <longdescription>.

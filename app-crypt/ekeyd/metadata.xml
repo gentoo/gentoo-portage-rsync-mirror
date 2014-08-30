@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
+		<email>k_f@gentoo.org</email>
+		<name>Kristian Fiskerstrand</name>
   </maintainer>
   <use>
     <flag name='usb'>

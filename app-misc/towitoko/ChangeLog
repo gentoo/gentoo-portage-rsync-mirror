@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/towitoko
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/ChangeLog,v 1.17 2014/08/10 18:11:46 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/ChangeLog,v 1.18 2014/08/30 12:23:17 mgorny Exp $
+
+  30 Aug 2014; Michał Górny <mgorny@gentoo.org> towitoko-2.0.7-r2.ebuild:
+  Replace einstall with emake install, bug #521458.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> towitoko-2.0.7-r2.ebuild:
   QA: drop trailing '.' from DESCRIPTION

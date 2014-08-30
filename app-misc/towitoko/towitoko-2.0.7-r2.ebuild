@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7-r2.ebuild,v 1.3 2014/08/10 18:11:46 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7-r2.ebuild,v 1.4 2014/08/30 12:23:17 mgorny Exp $
 
 IUSE="moneyplex"
 
@@ -19,13 +19,13 @@ src_compile() {
 	use moneyplex && myconf="${myconf} --disable-atr-check"
 
 	econf \
-		`use_enable moneyplex win32-com` \
+		$(use_enable moneyplex win32-com) \
 		${myconf} || die "econf failed"
 	emake || die
 }
 
 src_install() {
-	einstall || die
+	emake DESTDIR="${D}" install || die
 }
 
 pkg_postinst() {

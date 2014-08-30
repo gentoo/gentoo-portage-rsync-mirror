@@ -9,4 +9,4 @@ RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=mirror://sourceforge/weex/weex-2.6.1.5.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=912253b3334d5f2f3c168df58b9951cb
+_md5_=6eb45ad4a2d10cbf868066863b44f7b9

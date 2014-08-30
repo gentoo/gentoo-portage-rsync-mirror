@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.14.ebuild,v 1.12 2009/06/23 22:30:56 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.14.ebuild,v 1.13 2014/08/30 12:03:13 mgorny Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_compile() {
 src_install() {
 	local gimpplugindir
 	local gimptool
-	einstall datadir=${D}/usr/share/misc || die
+	emake DESTDIR="${D}" install || die
 	if use gimp; then
 		for gimptool in gimptool gimptool-2.0 gimptool-1.2; do
 			if [ -x /usr/bin/${gimptool} ]; then

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r4.ebuild,v 1.10 2013/05/15 12:45:49 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r4.ebuild,v 1.11 2014/08/30 12:07:41 mgorny Exp $
 
 EAPI=1
 
@@ -80,7 +80,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall mandir="${D}"/usr/share/man/man1 || die
+	emake DESTDIR="${D}" install || die
 
 	cd "${S}"/doc
 	dodoc README* *.txt BUGS FAQ

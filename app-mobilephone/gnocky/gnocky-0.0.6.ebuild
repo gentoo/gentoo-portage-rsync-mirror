@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnocky/gnocky-0.0.6.ebuild,v 1.3 2012/05/02 20:10:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnocky/gnocky-0.0.6.ebuild,v 1.4 2014/08/30 12:26:03 mgorny Exp $
 
 EAPI="2"
 
@@ -21,5 +21,5 @@ DEPEND="virtual/pkgconfig
 
 src_install()
 {
-	einstall || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 }

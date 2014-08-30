@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/free42
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/ChangeLog,v 1.22 2014/08/30 11:17:15 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/ChangeLog,v 1.23 2014/08/30 12:22:14 nimiux Exp $
+
+  30 Aug 2014; Chema Alonso <nimiux@gentoo.org> -free42-1.4.77.ebuild,
+  -files/free42-1.4.77-fix-alsa.patch, -files/free42-1.4.77-fix-makefile.patch:
+  Drop old
 
   30 Aug 2014; Chema Alonso <nimiux@gentoo.org> free42-1.5.3a.ebuild:
   Stable for amd64 wrt bug #517878
