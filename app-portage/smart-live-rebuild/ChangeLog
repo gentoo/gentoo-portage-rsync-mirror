@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.64 2014/07/06 13:17:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.65 2014/08/30 12:44:02 mgorny Exp $
+
+  30 Aug 2014; Michał Górny <mgorny@gentoo.org> smart-live-rebuild-1.3.4.ebuild:
+  Enable Python 3.4 on the release version.
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> smart-live-rebuild-1.3.3.ebuild,
   smart-live-rebuild-1.3.4.ebuild, smart-live-rebuild-9999.ebuild:

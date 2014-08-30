@@ -8,4 +8,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/selfdhcp/selfdhcp-0.2a.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=3eb9125da9e16a496d56b59b9bcfa84a
+_md5_=fc367bb84e4c669dd9f3f1488cdc8b5a

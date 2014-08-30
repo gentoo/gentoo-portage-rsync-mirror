@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/selfdhcp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/ChangeLog,v 1.9 2014/08/10 20:47:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/ChangeLog,v 1.10 2014/08/30 12:37:22 mgorny Exp $
+
+  30 Aug 2014; Michał Górny <mgorny@gentoo.org> selfdhcp-0.2a-r1.ebuild:
+  Replace einstall with emake install, bug #521630.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> selfdhcp-0.2a-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION
