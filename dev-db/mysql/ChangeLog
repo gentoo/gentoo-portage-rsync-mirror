@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.688 2014/08/28 14:06:54 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.689 2014/08/30 00:53:55 grknight Exp $
+
+*mysql-5.6.20-r1 (30 Aug 2014)
+
+  30 Aug 2014; Brian Evans <grknight@gentoo.org> +mysql-5.6.20-r1.ebuild:
+  Revision bump to enable multilib
 
   28 Aug 2014;  <grknight@gentoo.org> -files/mysql-5.5.32-Werror.patch,
   files/my.cnf-5.5:
