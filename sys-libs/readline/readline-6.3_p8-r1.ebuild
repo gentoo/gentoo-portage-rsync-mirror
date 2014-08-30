@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3_p6-r1.ebuild,v 1.1 2014/07/08 09:03:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3_p8-r1.ebuild,v 1.1 2014/08/30 08:20:50 polynomial-c Exp $
 
 EAPI=4
 
@@ -55,7 +55,7 @@ src_prepare() {
 	[[ ${PLEVEL} -gt 0 ]] && epatch $(patches -s)
 	epatch "${FILESDIR}"/${PN}-5.0-no_rpath.patch
 	epatch "${FILESDIR}"/${PN}-6.2-rlfe-tgoto.patch #385091
-	epatch "${FILESDIR}"/${PN}-6.3-revert-all-at-newline-history-segfault.patch
+	epatch "${FILESDIR}"/${PN}-6.3-fix-long-prompt-vi-search.patch
 
 	# Force ncurses linking. #71420
 	# Use pkg-config to get the right values. #457558
