@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/yajl-ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.32 2014/08/20 18:44:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.33 2014/08/30 10:26:32 mrueg Exp $
+
+  30 Aug 2014; Manuel Rüger <mrueg@gentoo.org> yajl-ruby-1.1.0-r1.ebuild:
+  Stable on amd64.
 
 *yajl-ruby-1.2.1 (20 Aug 2014)
 
