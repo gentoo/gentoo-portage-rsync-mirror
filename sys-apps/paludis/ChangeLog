@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.246 2014/08/29 13:48:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.247 2014/08/30 03:53:57 jdhore Exp $
+
+  30 Aug 2014; Jeff Horelick <jdhore@gentoo.org> paludis-2.0.0.ebuild:
+  Mark amd64 wrt bug #520874
 
   29 Aug 2014; Jeff Horelick <jdhore@gentoo.org> paludis-2.0.0.ebuild:
   Depend on GCC 4.7 because that's actually what's required.
