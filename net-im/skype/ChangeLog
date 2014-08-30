@@ -1,6 +1,9 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.159 2014/08/30 15:30:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.160 2014/08/30 17:27:14 ulm Exp $
+
+  30 Aug 2014; Ulrich Müller <ulm@gentoo.org> skype-4.3.0.37.ebuild:
+  Depend on 32-bit pulseaudio, bug 518922.
 
   30 Aug 2014; Michał Górny <mgorny@gentoo.org>
   -files/skype-4.2.0.11-desktop.patch, -files/skype-4.2.0.13-desktop.patch,

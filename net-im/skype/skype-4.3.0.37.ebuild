@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37.ebuild,v 1.2 2014/06/19 19:20:13 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37.ebuild,v 1.3 2014/08/30 17:27:14 ulm Exp $
 
 EAPI=5
 
@@ -10,13 +10,13 @@ DESCRIPTION="P2P Internet Telephony (VoiceIP) client"
 HOMEPAGE="http://www.skype.com/"
 SRC_URI="http://download.${PN}.com/linux/${P}.tar.bz2"
 
-LICENSE="${PN}-4.0.0.7-copyright ${PN}-4.0.0.7-third-party_attributions.txt"
+LICENSE="skype-4.0.0.7-copyright skype-4.0.0.7-third-party_attributions.txt"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="pax_kernel +pulseaudio selinux"
 
 QA_PREBUILT=opt/bin/${PN}
-RESTRICT="mirror strip" #299368
+RESTRICT="mirror bindist strip" #299368
 
 EMUL_X86_VER=20120520
 
@@ -33,7 +33,10 @@ RDEPEND="
 			>=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER}
 		)
 		|| (
-			media-libs/alsa-lib[abi_x86_32(-)]
+			(
+				media-libs/alsa-lib[abi_x86_32(-)]
+				pulseaudio? ( media-sound/pulseaudio[abi_x86_32(-)] )
+			)
 			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}
 		)
 		|| (
