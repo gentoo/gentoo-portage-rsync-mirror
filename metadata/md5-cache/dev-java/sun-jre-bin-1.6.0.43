@@ -10,5 +10,5 @@ RDEPEND=X? ( x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXts
 RESTRICT=fetch strip
 SLOT=1.6
 SRC_URI=amd64? ( jre-6u43-linux-x64.bin ) ia64? ( jre-6u43-linux-ia64.bin ) x86? ( jre-6u43-linux-i586.bin )
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	834752b84da3c4deea95f5b186aada54	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	51ad5130f4a69b1a118ca5296de276ae	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	834752b84da3c4deea95f5b186aada54	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	8257582809714b788173511f975d767d	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=1030b664ca4d025d25923123c66ed9ab

@@ -9,5 +9,5 @@ LICENSE=LGPL-2+
 RDEPEND=>=dev-libs/glib-2.24:2 >=dev-libs/libxml2-2.4.9 introspection? ( >=dev-libs/gobject-introspection-0.6.8 ) !<media-libs/gst-plugins-base-0.10.26
 SLOT=0.10
 SRC_URI=http://gstreamer.freedesktop.org/src/gstreamer/gstreamer-0.10.36.tar.xz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	51ad5130f4a69b1a118ca5296de276ae	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	8257582809714b788173511f975d767d	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=6a9c9d7bc166da009d3d2ecb19f6d3b1

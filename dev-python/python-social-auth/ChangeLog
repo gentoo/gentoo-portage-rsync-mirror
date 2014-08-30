@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/python-social-auth
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-social-auth/ChangeLog,v 1.1 2014/08/30 14:20:15 maksbotan Exp $
+
+*python-social-auth-0.1.26 (30 Aug 2014)
+
+  30 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org> +metadata.xml,
+  +python-social-auth-0.1.26.ebuild:
+  Add dev-python/python-social-auth

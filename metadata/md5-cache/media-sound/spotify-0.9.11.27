@@ -10,5 +10,5 @@ RDEPEND=x11-libs/libxcb x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=amd64? ( http://repository.spotify.com/pool/non-free/s/spotify/spotify-client_0.9.11.27.g2b1a638.81-1_amd64.deb )
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	51ad5130f4a69b1a118ca5296de276ae	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	8257582809714b788173511f975d767d	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=3acf094a8cad3e8762b1f0ad6061908b
