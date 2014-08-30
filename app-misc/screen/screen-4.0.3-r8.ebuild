@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r8.ebuild,v 1.6 2014/03/10 21:21:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r8.ebuild,v 1.7 2014/08/30 10:32:59 polynomial-c Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	selinux? ( sec-policy/selinux-screen )"
 DEPEND="${RDEPEND}"
 RDEPEND="${RDEPEND}
-	>=sys-apps/openrc-0.11.6"
+	!<sys-apps/openrc-0.11.6"
 
 pkg_setup() {
 	# Make sure utmp group exists, as it's used later on.

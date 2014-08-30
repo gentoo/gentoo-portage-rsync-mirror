@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-9999.ebuild,v 1.3 2014/03/10 21:21:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-9999.ebuild,v 1.4 2014/08/30 10:32:59 polynomial-c Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://git.savannah.gnu.org/screen.git"
 EGIT_BOOTSTRAP="cd src; ./autogen.sh"
@@ -25,8 +25,7 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	selinux? ( sec-policy/selinux-screen )"
 DEPEND="${RDEPEND}
 	sys-apps/texinfo"
-RDEPEND="${RDEPEND}
-	>=sys-apps/openrc-0.11.6"
+RDEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${P}/src
 
@@ -46,15 +45,15 @@ src_prepare() {
 	# Fix manpage.
 	sed -i \
 		-e "s:/usr/local/etc/screenrc:${EPREFIX}/etc/screenrc:g" \
-		-e "s:/usr/local/screens:${EPREFIX}/run/screen:g" \
+		-e "s:/usr/local/screens:${EPREFIX}/tmp/screen:g" \
 		-e "s:/local/etc/screenrc:${EPREFIX}/etc/screenrc:g" \
 		-e "s:/etc/utmp:${EPREFIX}/var/run/utmp:g" \
-		-e "s:/local/screens/S-:${EPREFIX}/run/screen/S-:g" \
+		-e "s:/local/screens/S-:${EPREFIX}/tmp/screen/S-:g" \
 		doc/screen.1 \
-		|| die "sed doc/screen.1 failed"
+		|| die
 
 	# reconfigure
-	eautoconf
+	eautoreconf
 }
 
 src_configure() {
@@ -66,7 +65,7 @@ src_configure() {
 	use debug && append-cppflags "-DDEBUG"
 
 	econf \
-		--with-socket-dir="${EPREFIX}/run/screen" \
+		--with-socket-dir="${EPREFIX}/tmp/screen" \
 		--with-sys-screenrc="${EPREFIX}/etc/screenrc" \
 		--with-pty-mode=0620 \
 		--with-pty-group=5 \
@@ -74,11 +73,14 @@ src_configure() {
 		--enable-telnet \
 		--enable-colors256 \
 		$(use_enable pam)
+}
 
-	LC_ALL=POSIX emake term.h
+src_compile() {
+	LC_ALL=POSIX emake comm.h term.h
 	emake osdef.h
 
 	emake -C doc screen.info
+	default
 }
 
 src_install() {
@@ -99,7 +101,8 @@ src_install() {
 	fi
 
 	dodir /etc/tmpfiles.d
-	echo "d /run/screen ${tmpfiles_perms} root ${tmpfiles_group}" >"${ED}"/etc/tmpfiles.d/screen.conf
+	echo "d /tmp/screen ${tmpfiles_perms} root ${tmpfiles_group}" \
+		>"${ED}"/etc/tmpfiles.d/screen.conf
 
 	insinto /usr/share/screen
 	doins terminfo/{screencap,screeninfo.src}
@@ -124,6 +127,19 @@ pkg_postinst() {
 		elog "Some dangerous key bindings have been removed or changed to more safe values."
 		elog "We enable some xterm hacks in our default screenrc, which might break some"
 		elog "applications. Please check /etc/screenrc for information on these changes."
+	fi
+
+	# Add /tmp/screen in case it doesn't exist yet. This should solve
+	# problems like bug #508634 where tmpfiles.d isn't in effect.
+	local rundir="${EROOT%/}/tmp/screen"
+	if [[ ! -d ${rundir} ]] ; then
+		if use multiuser || use prefix ; then
+			tmpfiles_group="root"
+		else
+			tmpfiles_group="utmp"
+		fi
+		mkdir -m 0775 "${rundir}"
+		chgrp ${tmpfiles_group} "${rundir}"
 	fi
 
 	ewarn "This revision changes the screen socket location to /run/screen."
