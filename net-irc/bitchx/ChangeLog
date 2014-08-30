@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bitchx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.73 2013/01/28 19:32:19 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.74 2014/08/30 04:43:10 binki Exp $
+
+  30 Aug 2014; Nathan Phillip Brink <binki@gentoo.org> bitchx-1.2.ebuild:
+  Drop einstall() from bitchx-1.2 for bug #521438.
 
   28 Jan 2013; Jeroen Roovers <jer@gentoo.org> bitchx-1.2.ebuild,
   files/bitchx-1.2-build.patch:
