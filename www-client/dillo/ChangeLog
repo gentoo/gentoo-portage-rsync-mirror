@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.130 2014/08/23 14:34:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.131 2014/08/30 18:45:25 nimiux Exp $
+
+  30 Aug 2014; Chema Alonso <nimiux@gentoo.org> dillo-3.0.4.ebuild:
+  Stable for amd64 wrt bug #520680
 
   23 Aug 2014; Jeroen Roovers <jer@gentoo.org> dillo-3.0.4.ebuild:
   Stable for HPPA (bug #520680).
