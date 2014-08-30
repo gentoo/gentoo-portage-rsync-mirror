@@ -1,6 +1,14 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.158 2014/08/05 18:34:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.159 2014/08/30 15:30:59 mgorny Exp $
+
+  30 Aug 2014; Michał Górny <mgorny@gentoo.org>
+  -files/skype-4.2.0.11-desktop.patch, -files/skype-4.2.0.13-desktop.patch,
+  -skype-2.2.0.35-r99.ebuild, -skype-4.0.0.8-r1.ebuild, -skype-4.1.0.20.ebuild,
+  -skype-4.2.0.11-r1.ebuild, -skype-4.2.0.11.ebuild, -skype-4.2.0.13.ebuild,
+  metadata.xml:
+  Remove old versions that can no longer connect to Skype servers. Suggested by
+  Joost Roeleveld.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> skype-2.2.0.35-r99.ebuild,
   skype-4.0.0.8-r1.ebuild, skype-4.1.0.20.ebuild, skype-4.2.0.11-r1.ebuild,

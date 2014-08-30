@@ -10,7 +10,6 @@
 	time, but to talk and chat with your friends.
 	</longdescription>
   <use>
-    <flag name="qt-static">Install the main skype binary with internal copy of Qt</flag>
     <flag name="pax_kernel">Triggers a paxmarking of the main skype binary</flag>
   </use>
 </pkgmetadata>

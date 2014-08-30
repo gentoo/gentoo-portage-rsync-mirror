@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.65 2014/08/10 20:59:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.66 2014/08/30 15:15:17 nimiux Exp $
+
+  30 Aug 2014; Chema Alonso <nimiux@gentoo.org> netperf-2.6.0-r1.ebuild:
+  Stable for amd64 wrt bug #517128
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> netperf-2.5.0-r1.ebuild,
   netperf-2.6.0-r1.ebuild:
