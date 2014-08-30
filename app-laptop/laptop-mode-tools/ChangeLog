@@ -1,6 +1,14 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.93 2014/07/14 16:37:16 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.94 2014/08/30 19:05:46 alonbl Exp $
+
+*laptop-mode-tools-1.65-r1 (30 Aug 2014)
+
+  30 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/laptop-mode-tools-1.65-usb-autosuspend.patch,
+  +laptop-mode-tools-1.65-r1.ebuild:
+  Disable usb-autosuspend per default, use newer runtime-pm withi udev,
+  bug#520124, thanks to  Ted Tanberry
 
   14 Jul 2014; Alon Bar-Lev <alonbl@gentoo.org>
   -files/laptop-mode-tools-1.63-conf.patch,
