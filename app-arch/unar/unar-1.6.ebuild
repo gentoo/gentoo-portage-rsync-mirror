@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unar/unar-1.6.ebuild,v 1.2 2014/03/02 21:28:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unar/unar-1.6.ebuild,v 1.3 2014/08/30 14:33:28 nimiux Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://theunarchiver.googlecode.com/files/${PN}${PV}_src.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND="gnustep-base/gnustep-base
