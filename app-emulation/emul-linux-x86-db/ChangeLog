@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/emul-linux-x86-db
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-db/ChangeLog,v 1.20 2014/08/19 16:04:59 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-db/ChangeLog,v 1.22 2014/08/30 01:09:53 grknight Exp $
+
+  30 Aug 2014; Brian Evans <grknight@gentoo.org>
+  emul-linux-x86-db-20140508-r3.ebuild:
+  Fix revision number on install
+
+*emul-linux-x86-db-20140508-r3 (30 Aug 2014)
+
+  30 Aug 2014; Brian Evans <grknight@gentoo.org>
+  +emul-linux-x86-db-20140508-r3.ebuild:
+  Revision bump to add new mysql multilib providers
 
 *emul-linux-x86-db-20140508-r2 (19 Aug 2014)
 
