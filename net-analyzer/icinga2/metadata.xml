@@ -6,7 +6,7 @@
 <name>Matthew Thode</name>
 </maintainer>
 <longdescription lang="en">
-A rebuild of a rebuild of nagios from the ground up, again
+Distributed, general purpose, network monitoring engine.
 </longdescription>
 	<use>
 		<flag name="classicui">Adds support for the old interface</flag>
