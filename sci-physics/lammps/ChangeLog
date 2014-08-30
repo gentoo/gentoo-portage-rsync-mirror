@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.38 2014/08/20 23:11:11 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.39 2014/08/30 16:47:10 nimiux Exp $
+
+  30 Aug 2014; Chema Alonso <nimiux@gentoo.org> lammps-20140628.ebuild:
+  Stable for amd64 wrt bug #519320
 
   20 Aug 2014; Christoph Junghans <ottxor@gentoo.org> lammps-20140815.ebuild:
   fixed build with newer lapack/blas version
