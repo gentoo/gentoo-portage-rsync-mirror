@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/ekeyd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.33 2014/08/30 12:29:19 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.34 2014/08/30 13:04:17 k_f Exp $
+
+*ekeyd-1.1.5 (30 Aug 2014)
+
+  30 Aug 2014; Kristian Fiskerstrand <k_f@gentoo.org> +ekeyd-1.1.5.ebuild,
+  +files/90-ekeyd.rules, +files/ekeyd-1.1.5-const_char_usage.patch,
+  +files/ekeyd-1.1.5-enoent.patch, +files/ekeyd-1.1.5-misc.patch,
+  +files/ekeyd-1.1.5-path-fixes.patch, +files/ekeyd-1.1.5-remove-werror.patch,
+  +files/ekeyd-1.1.5-udev-rule.patch, +files/ekeyd.service:
+  Version bump: Bringing in 1.1.5 from overlay
 
   30 Aug 2014; Kristian Fiskerstrand <k_f@gentoo.org> metadata.xml:
   Adding myself as maintainer for this maintainer-needed package
