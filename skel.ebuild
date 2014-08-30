@@ -147,7 +147,7 @@ RDEPEND="${DEPEND}"
 	# make to a single process.  The -j1 is a visual clue to others
 	# that the makefiles have bugs that have been worked around.
 
-	#emake || die
+	#emake
 #}
 
 # The following src_install function is implemented as default by portage, so
@@ -159,7 +159,7 @@ RDEPEND="${DEPEND}"
 	# anything outside of DESTDIR; do this by reading and
 	# understanding the install part of the Makefiles.
 	# This is the preferred way to install.
-	#emake DESTDIR="${D}" install || die
+	#emake DESTDIR="${D}" install
 
 	# When you hit a failure with emake, do not just use make. It is
 	# better to fix the Makefiles to allow proper parallelization.
@@ -175,11 +175,11 @@ RDEPEND="${DEPEND}"
 	#	mandir="${D}"/usr/share/man \
 	#	infodir="${D}"/usr/share/info \
 	#	libdir="${D}"/usr/$(get_libdir) \
-	#	install || die
+	#	install
 	# Again, verify the Makefiles!  We don't want anything falling
 	# outside of ${D}.
 
 	# The portage shortcut to the above command is simply:
 	#
-	#einstall || die
+	#einstall
 #}
