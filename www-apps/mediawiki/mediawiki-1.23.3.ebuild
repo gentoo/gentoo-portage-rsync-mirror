@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.21.11.ebuild,v 1.1 2014/06/26 06:52:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.23.3.ebuild,v 1.1 2014/08/30 13:45:49 dev-zero Exp $
 
 EAPI=5
 inherit webapp versionator
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~x86"
 IUSE="imagemagick mysql postgres sqlite"
 
-RDEPEND=">=dev-lang/php-5.3.2[mysql?,postgres?,session,xml,xmlreader]
+RDEPEND=">=dev-lang/php-5.3.2[json,mysql?,postgres?,session,xml,xmlreader]
 	imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )
 	!imagemagick? ( dev-lang/php[gd] )
 	sqlite? (
