@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/uhinv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uhinv/ChangeLog,v 1.7 2012/10/07 10:17:03 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uhinv/ChangeLog,v 1.8 2014/08/30 11:59:45 mgorny Exp $
+
+  30 Aug 2014; Michał Górny <mgorny@gentoo.org> uhinv-0.4.ebuild:
+  Replace einstall with emake install, bug #521658.
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #200342

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dchroot/dchroot-0.12.1.ebuild,v 1.3 2010/01/02 18:46:36 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dchroot/dchroot-0.12.1.ebuild,v 1.4 2014/08/30 11:55:13 mgorny Exp $
 
 EAPI="2"
 
@@ -31,6 +31,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	emake DESTDIR="${D}" install || die
 	dodoc README TODO
 }

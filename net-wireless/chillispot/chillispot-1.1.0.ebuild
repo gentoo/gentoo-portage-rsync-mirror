@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-1.1.0.ebuild,v 1.6 2012/06/28 10:41:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-1.1.0.ebuild,v 1.7 2014/08/30 11:50:24 mgorny Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_install() {
-	einstall STRIPPROG=true || die "einstall failed"
+	emake DESTDIR="${D}" STRIPPROG=true install || die "emake install failed"
 	cd doc && dodoc chilli.conf freeradius.users hotspotlogin.cgi firewall.iptables
 
 	# init script provided by Michele Beltrame bug #124698

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/chillispot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.24 2012/06/28 10:41:01 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.25 2014/08/30 11:50:24 mgorny Exp $
+
+  30 Aug 2014; Michał Górny <mgorny@gentoo.org> chillispot-1.1.0.ebuild:
+  Replace einstall with emake install, bug #521602.
 
   28 Jun 2012; Agostino Sarubbo <ago@gentoo.org> chillispot-1.1.0.ebuild:
   Stable for amd64, wrt bug #423863
