@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/leptonica
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.21 2014/08/26 12:52:14 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.22 2014/08/30 17:54:58 nimiux Exp $
+
+  30 Aug 2014; Chema Alonso <nimiux@gentoo.org> leptonica-1.70.ebuild:
+  Stable for amd64 wrt bug #513376
 
   26 Aug 2014; Thomas Kahle <tomka@gentoo.org> leptonica-1.71.ebuild:
   Fix another build failure by deps

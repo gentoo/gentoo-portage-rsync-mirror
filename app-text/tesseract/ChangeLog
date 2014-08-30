@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.51 2014/08/21 11:35:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.52 2014/08/30 17:55:26 nimiux Exp $
+
+  30 Aug 2014; Chema Alonso <nimiux@gentoo.org> tesseract-3.03_rc1.ebuild:
+  Stable for amd64 wrt bug #513376
 
   21 Aug 2014; Raúl Porcel <armin76@gentoo.org> tesseract-3.02.ebuild,
   tesseract-3.02-r1.ebuild, tesseract-3.03_rc1.ebuild:
