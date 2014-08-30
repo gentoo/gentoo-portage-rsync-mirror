@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nikto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.29 2014/08/10 20:59:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.30 2014/08/30 18:18:59 monsieurp Exp $
+
+  30 Aug 2014;  <patrice@gentoo.org> nikto-2.1.5.ebuild:
+  #489240: version bump to 2.1.5 + EAPI bump to 5
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> nikto-1.36.ebuild,
   nikto-2.03.ebuild, nikto-2.1.4.ebuild:

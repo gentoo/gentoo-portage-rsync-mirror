@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-2.1.5.ebuild,v 1.1 2014/08/30 17:48:49 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-2.1.5.ebuild,v 1.2 2014/08/30 18:18:59 monsieurp Exp $
 EAPI=5
 inherit perl-module
 
@@ -51,7 +51,6 @@ src_install() {
 	for pm in ${NIKTO_PMS}; do
 		dosym /usr/share/nikto/plugins/${pm} ${VENDOR_LIB}/${pm}
 	done
-
 	dodoc docs/*.txt || die
 	dohtml docs/nikto_manual.html || die
 

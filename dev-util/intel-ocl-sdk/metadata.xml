@@ -2,9 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>zerochaos@gentoo.org</email>
+		<name>Rick Farina</name>
 	</maintainer>
 	<use>
+		<flag name='android'>Install android related files</flag>
+		<flag name='bundled_libs'>Keep bundled-libs (not recommended)</flag>
 		<flag name='tools'>Install Intel Offline Compiler</flag>
 	</use>
 </pkgmetadata>
