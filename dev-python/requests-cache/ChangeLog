@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/requests-cache
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/ChangeLog,v 1.7 2013/11/26 05:27:41 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/ChangeLog,v 1.8 2014/08/31 09:17:25 idella4 Exp $
+
+*requests-cache-0.4.5 (31 Aug 2014)
+
+  31 Aug 2014; Ian Delaney <idella4@gentoo.org> +requests-cache-0.4.5.ebuild:
+  bump; drop py2.6 add py3.4 pypy, add doc build, tidy
 
 *requests-cache-0.4.4 (26 Nov 2013)
 
