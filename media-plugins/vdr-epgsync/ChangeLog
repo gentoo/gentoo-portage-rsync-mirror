@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-epgsync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsync/ChangeLog,v 1.10 2014/04/11 23:42:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsync/ChangeLog,v 1.11 2014/08/31 08:58:14 hd_brummy Exp $
+
+  31 Aug 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-epgsync-0.0.4.ebuild, -vdr-epgsync-1.0.0.ebuild,
+  vdr-epgsync-1.0.1.ebuild:
+  cleanup old; stable amd64 x86
 
 *vdr-epgsync-1.0.1 (11 Apr 2014)
 
