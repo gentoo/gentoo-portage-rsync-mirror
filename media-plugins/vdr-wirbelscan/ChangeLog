@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-wirbelscan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wirbelscan/ChangeLog,v 1.8 2014/02/23 21:05:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wirbelscan/ChangeLog,v 1.9 2014/08/31 11:46:03 hd_brummy Exp $
+
+  31 Aug 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-wirbelscan-0.0.7.ebuild:
+  cleanup old
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-wirbelscan-0.0.7.ebuild:

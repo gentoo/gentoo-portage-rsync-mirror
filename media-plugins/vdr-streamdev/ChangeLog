@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-streamdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/ChangeLog,v 1.26 2014/03/02 19:42:41 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/ChangeLog,v 1.27 2014/08/31 11:37:13 hd_brummy Exp $
+
+  31 Aug 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-streamdev-0.5.2.ebuild, -vdr-streamdev-0.6.0.ebuild, -files/confd-0.5.0,
+  -files/rc-addon-0.5.0.sh, -files/vdr-streamdev-0.6.0_vdr-2.1.2.diff:
+  cleanup old
 
   02 Mar 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-streamdev-0.6.1.ebuild:

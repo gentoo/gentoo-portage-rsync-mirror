@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-zaphistory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-zaphistory/ChangeLog,v 1.18 2014/03/02 19:34:45 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-zaphistory/ChangeLog,v 1.19 2014/08/31 11:47:28 hd_brummy Exp $
+
+  31 Aug 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-zaphistory-0.9.5.ebuild,
+  -files/vdr-zaphistory-0.9.4-fix-crash-no-info.diff:
+  cleanup old
 
   02 Mar 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-zaphistory-0.9.6.ebuild:
