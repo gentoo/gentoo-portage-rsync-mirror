@@ -1,6 +1,12 @@
 # ChangeLog for app-forensics/foremost
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.26 2012/01/09 19:02:59 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.27 2014/08/31 00:37:43 ikelos Exp $
+
+*foremost-1.5.7-r2 (31 Aug 2014)
+
+  31 Aug 2014; Mike Auty <ikelos@gentoo.org> +foremost-1.5.7-r2.ebuild,
+  +files/foremost-1.5.7-format-security.patch:
+  Add in patch for -Werror=format-security warning (fixes bug 521038).
 
   09 Jan 2012; Brent Baude <ranger@gentoo.org> foremost-1.5.7-r1.ebuild:
   Marking foremost-1.5.7-r1 ppc for bug 391467
