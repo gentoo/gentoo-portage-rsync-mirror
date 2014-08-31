@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.426 2014/07/28 16:12:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.427 2014/08/31 16:29:29 zlogene Exp $
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> perl-5.18.2-r1.ebuild:
+  arm stable wrt bug #504786
 
   28 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> perl-5.18.2-r1.ebuild:
   amd64 stable wrt bug #381424

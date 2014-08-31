@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Module-ScanDeps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-ScanDeps/ChangeLog,v 1.41 2014/08/31 10:31:59 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-ScanDeps/ChangeLog,v 1.43 2014/08/31 16:17:02 zlogene Exp $
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Module-ScanDeps-1.120.0.ebuild:
+  ia64 stable wrt bug #520850
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Module-ScanDeps-1.120.0.ebuild:
+  sparc stable wrt bug #520850
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   Module-ScanDeps-1.120.0.ebuild:

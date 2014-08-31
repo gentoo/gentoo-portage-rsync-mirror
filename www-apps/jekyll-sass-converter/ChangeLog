@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/jekyll-sass-converter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-sass-converter/ChangeLog,v 1.1 2014/08/15 14:54:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-sass-converter/ChangeLog,v 1.2 2014/08/31 16:02:24 mrueg Exp $
+
+*jekyll-sass-converter-1.2.1 (31 Aug 2014)
+
+  31 Aug 2014; Manuel Rüger <mrueg@gentoo.org>
+  +jekyll-sass-converter-1.2.1.ebuild, -jekyll-sass-converter-1.2.0.ebuild:
+  Version bump. Cleanup old.
 
 *jekyll-sass-converter-1.2.0 (15 Aug 2014)
 

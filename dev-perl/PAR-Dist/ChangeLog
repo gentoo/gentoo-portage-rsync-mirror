@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/PAR-Dist
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.81 2014/08/23 01:28:43 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.83 2014/08/31 16:16:12 zlogene Exp $
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> PAR-Dist-0.490.0-r1.ebuild:
+  ia64 stable wrt bug #520850
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> PAR-Dist-0.490.0-r1.ebuild:
+  sparc stable wrt bug #520850
 
 *PAR-Dist-0.490.0-r1 (23 Aug 2014)
 
