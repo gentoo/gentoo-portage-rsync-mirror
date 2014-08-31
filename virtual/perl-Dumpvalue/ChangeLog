@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Dumpvalue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Dumpvalue/ChangeLog,v 1.15 2014/07/28 16:26:11 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Dumpvalue/ChangeLog,v 1.16 2014/08/31 16:43:42 zlogene Exp $
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Dumpvalue-1.170.0-r3.ebuild:
+  arm stable wrt bug #504786
 
   28 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   perl-Dumpvalue-1.170.0-r3.ebuild:

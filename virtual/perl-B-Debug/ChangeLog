@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-B-Debug
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-B-Debug/ChangeLog,v 1.7 2014/07/28 16:14:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-B-Debug/ChangeLog,v 1.8 2014/08/31 16:33:30 zlogene Exp $
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  perl-B-Debug-1.180.0-r2.ebuild:
+  arm stable wrt bug #504786
 
   28 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   perl-B-Debug-1.180.0-r2.ebuild:

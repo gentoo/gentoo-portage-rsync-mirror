@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-File-Path
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Path/ChangeLog,v 1.13 2014/07/24 09:30:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Path/ChangeLog,v 1.14 2014/08/31 16:55:45 zlogene Exp $
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  perl-File-Path-2.90.0-r2.ebuild:
+  arm stable wrt bug #504786
 
   24 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   perl-File-Path-2.90.0-r2.ebuild:

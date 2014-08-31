@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for File-Path
 EAPI=5
-KEYWORDS=alpha amd64 ~arm ~ia64 ~ppc ~sparc x86 ~ppc-aix
+KEYWORDS=alpha amd64 arm ~ia64 ~ppc ~sparc x86 ~ppc-aix
 RDEPEND=|| ( =dev-lang/perl-5.20* =dev-lang/perl-5.18* ~perl-core/File-Path-2.90.0 ) !<perl-core/File-Path-2.90.0 !>perl-core/File-Path-2.90.0-r999
 SLOT=0
-_md5_=3a22af286487c918ef02397b263acfb3
+_md5_=929b82435a68aa6c0f000830e11b11ba
