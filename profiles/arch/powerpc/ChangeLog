@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.284 2014/08/17 23:46:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.285 2014/08/31 18:31:49 blueness Exp $
+
+  31 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
+  -ppc32/pegasos/deprecated, -ppc32/pegasos/eapi, -ppc32/pegasos/parent:
+  Remove pegasos profiles
 
   17 Aug 2014; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Mask USE=smartcard for =net-misc/spice-gtk-0.25-r1 since it pulls in
