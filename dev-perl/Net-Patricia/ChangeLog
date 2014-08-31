@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Patricia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/ChangeLog,v 1.37 2014/08/23 00:18:53 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/ChangeLog,v 1.38 2014/08/31 06:31:29 naota Exp $
+
+  31 Aug 2014; Naohiro Aota <naota@gentoo.org> Net-Patricia-1.210.0-r1.ebuild:
+  Add ~x86-fbsd. #521400
 
 *Net-Patricia-1.210.0-r1 (23 Aug 2014)
 

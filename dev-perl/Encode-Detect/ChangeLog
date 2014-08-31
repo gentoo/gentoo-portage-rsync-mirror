@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Encode-Detect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Detect/ChangeLog,v 1.14 2014/08/23 21:53:06 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Detect/ChangeLog,v 1.15 2014/08/31 06:34:26 naota Exp $
+
+  31 Aug 2014; Naohiro Aota <naota@gentoo.org> Encode-Detect-1.10.0-r1.ebuild:
+  Add ~x86-fbsd. #521400
 
 *Encode-Detect-1.10.0-r1 (23 Aug 2014)
 
