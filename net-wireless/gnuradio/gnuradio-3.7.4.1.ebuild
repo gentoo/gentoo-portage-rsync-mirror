@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.4-r1.ebuild,v 1.1 2014/08/25 15:47:57 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.4.1.ebuild,v 1.1 2014/08/31 03:07:29 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
+CMAKE_BUILD_TYPE="None"
 inherit cmake-utils fdo-mime python-single-r1
 
 DESCRIPTION="Toolkit that provides signal processing blocks to implement software radios"
@@ -13,17 +14,24 @@ LICENSE="GPL-3"
 SLOT="0/${PV}"
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="http://gnuradio.org/git/gnuradio.git"
-	inherit git-2
+	#EGIT_REPO_URI="http://gnuradio.org/git/gnuradio.git"
+	EGIT_REPO_URI="git://anonscm.debian.org/users/bottoms/gnuradio.git"
+	EGIT_BRANCH="gr-vocoder-use-system-codecs"
+	inherit git-r3
 	KEYWORDS=""
 else
 	SRC_URI="http://gnuradio.org/releases/${PN}/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
-IUSE="alsa +analog +digital channels +ctrlport doc examples fcd +filter grc jack log oss pager performance-counters portaudio +qt4 sdl uhd +utils wavelet wxwidgets"
+IUSE="+audio +alsa atsc +analog +digital channels +ctrlport doc dtv examples fcd fec +filter grc jack log noaa oss pager performance-counters portaudio +qt4 sdl test trellis uhd vocoder +utils wavelet wxwidgets zeromq"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
+		audio? ( || ( alsa oss jack portaudio ) )
+		alsa? ( audio )
+		oss? ( audio )
+		jack ( audio )
+		portaudio? ( audio )
 		analog? ( filter )
 		digital? ( filter analog )
 		pager? ( filter analog )
@@ -63,13 +71,15 @@ RDEPEND="${PYTHON_DEPS}
 	)
 	qt4? (
 		>=dev-python/PyQt4-4.4[X,opengl,${PYTHON_USEDEP}]
-		>=dev-python/pyqwt-5.2:5
+		>=dev-python/pyqwt-5.2:5[${PYTHON_USEDEP}]
 		>=dev-qt/qtcore-4.4
 		>=dev-qt/qtgui-4.4:4
 		>=x11-libs/qwt-5.2
 	)
 	sdl? ( >=media-libs/libsdl-1.2.0 )
 	uhd? ( >=net-wireless/uhd-3.4.3-r1:=[${PYTHON_USEDEP}] )
+	utils? ( dev-python/matplotlib[${PYTHON_USEDEP}] )
+	vocoder? ( media-sound/gsm )
 	wavelet? (
 		>=sci-libs/gsl-1.10
 	)
@@ -78,7 +88,10 @@ RDEPEND="${PYTHON_DEPS}
 		dev-python/numpy[${PYTHON_USEDEP}]
 		dev-python/wxpython:2.8[${PYTHON_USEDEP}]
 	)
-"
+	zeromq? ( >=net-libs/zeromq-2.1.11
+		net-libs/cppzmq )
+	"
+
 DEPEND="${RDEPEND}
 	dev-lang/swig
 	dev-python/cheetah[${PYTHON_USEDEP}]
@@ -98,42 +111,58 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Useless UI element would require qt3support, bug #365019
 	sed -i '/qPixmapFromMimeSource/d' "${S}"/gr-qtgui/lib/spectrumdisplayform.ui || die
-	epatch "${FILESDIR}"/${PN}-3.6.1-automagic-audio.patch
-	epatch "${FILESDIR}"/${P}-include_stringh.patch
+	#epatch "${FILESDIR}"/${PN}-3.6.1-automagic-audio.patch
+	#epatch "${FILESDIR}/${P}-build-type-nonfatal.patch"
 }
 
 src_configure() {
 	# TODO: docs are installed to /usr/share/doc/${PN} not /usr/share/doc/${PF}
 	# SYSCONFDIR/GR_PREFSDIR default to install below CMAKE_INSTALL_PREFIX
-		#this flag breaks everything, but more likely it's a sign we need to work on this
-		#-DENABLE_DEFAULT=OFF
+	#audio provider is still automagic
+	#zeromq missing deps isn't fatal
 	mycmakeargs=(
+		-DENABLE_DEFAULT=OFF
+		-DENABLE_GNURADIO_RUNTIME=ON
+		-DENABLE_VOLK=ON
+		-DENABLE_PYTHON=ON
+		-DENABLE_GR_BLOCKS=ON
+		-DENABLE_GR_FFT=ON
+		-DENABLE_GR_AUDIO=ON
 		$(cmake-utils_use_enable alsa GR_AUDIO_ALSA) \
 		$(cmake-utils_use_enable analog GR_ANALOG) \
+		$(cmake-utils_use_enable atsc GR_ATSC) \
 		$(cmake-utils_use_enable channels GR_CHANNELS) \
 		$(cmake-utils_use_enable ctrlport GR_CTRLPORT) \
 		$(cmake-utils_use_enable digital GR_DIGITAL) \
 		$(cmake-utils_use_enable doc DOXYGEN) \
 		$(cmake-utils_use_enable doc SPHINX) \
+		$(cmake-utils_use_enable dtv GR_DTV) \
 		$(cmake-utils_use_enable fcd GR_FCD) \
+		$(cmake-utils_use_enable fec GR_FEC) \
 		$(cmake-utils_use_enable filter GR_FILTER) \
 		$(cmake-utils_use_enable grc GRC) \
 		$(cmake-utils_use_enable jack GR_AUDIO_JACK) \
 		$(cmake-utils_use_enable log GR_LOG) \
+		$(cmake-utils_use_enable noaa GR_NOAA) \
 		$(cmake-utils_use_enable oss GR_AUDIO_OSS) \
 		$(cmake-utils_use_enable pager GR_PAGER) \
 		$(cmake-utils_use_enable performance-counters ENABLE_PERFORMANCE_COUNTERS) \
 		$(cmake-utils_use_enable portaudio GR_AUDIO_PORTAUDIO) \
+		$(cmake-utils_use_enable test TESTING) \
+		$(cmake-utils_use_enable trellis GR_TRELLIS) \
 		$(cmake-utils_use_enable uhd GR_UHD) \
 		$(cmake-utils_use_enable utils GR_UTILS) \
+		$(cmake-utils_use_enable vocoder GR_VOCODER) \
 		$(cmake-utils_use_enable wavelet GR_WAVELET) \
 		$(cmake-utils_use_enable wxwidgets GR_WXGUI) \
 		$(cmake-utils_use_enable qt4 GR_QTGUI) \
 		$(cmake-utils_use_enable sdl GR_VIDEO_SDL) \
+		$(cmake-utils_use_enable zeromq GR_ZEROMQ) \
 		-DENABLE_GR_CORE=ON \
 		-DSYSCONFDIR="${EPREFIX}"/etc \
 		-DPYTHON_EXECUTABLE="${PYTHON}"
 	)
+	use vocoder && mycmakeargs+=( -DGR_USE_SYSTEM_LIBGSM=TRUE )
 	cmake-utils_src_configure
 }
 

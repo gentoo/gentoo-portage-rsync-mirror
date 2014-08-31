@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/memtest86
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.44 2013/10/18 19:13:43 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.45 2014/08/31 03:06:02 floppym Exp $
+
+*memtest86-4.3.3-r2 (31 Aug 2014)
+
+  31 Aug 2014; Mike Gilbert <floppym@gentoo.org> +files/39_memtest86,
+  +memtest86-4.3.3-r2.ebuild:
+  Add a more robust grub config generator, bug 456308.
 
   18 Oct 2013; Anthony G. Basile <blueness@gentoo.org>
   files/memtest86-4.3.3-build-nopie.patch:
