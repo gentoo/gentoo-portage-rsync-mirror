@@ -1,6 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Module-Pluggable
-KEYWORDS=alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm ~arm64 ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
 RDEPEND=~perl-core/Module-Pluggable-4.700.0
 SLOT=0
-_md5_=df8211abad037c7654020d9ccc453a1c
+_md5_=c5feeda5e6f44eb693a90c336f8b4314

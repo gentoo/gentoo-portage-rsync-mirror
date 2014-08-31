@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-IO
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.42 2014/07/28 16:48:02 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.43 2014/08/31 17:04:13 zlogene Exp $
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> perl-IO-1.280.0-r1.ebuild:
+  arm stable wrt bug #504786
 
   28 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> perl-IO-1.280.0-r1.ebuild:
   amd64 stable wrt bug #381424
