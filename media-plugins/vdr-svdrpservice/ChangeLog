@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-svdrpservice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-svdrpservice/ChangeLog,v 1.9 2014/01/02 13:00:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-svdrpservice/ChangeLog,v 1.10 2014/08/31 06:24:37 hd_brummy Exp $
+
+  31 Aug 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-svdrpservice-0.0.4.ebuild:
+  cleanup
 
   02 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-svdrpservice-1.0.0.ebuild:
