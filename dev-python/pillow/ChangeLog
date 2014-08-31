@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.35 2014/08/19 17:00:06 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.36 2014/08/31 13:44:55 floppym Exp $
+
+  31 Aug 2014; Mike Gilbert <floppym@gentoo.org> pillow-2.5.3.ebuild:
+  Fix test phase, bug 521346.
 
   19 Aug 2014; Dirkjan Ochtman <djc@gentoo.org> pillow-2.5.3.ebuild:
   Fix install of scanner README
