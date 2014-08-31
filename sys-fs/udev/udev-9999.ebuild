@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.317 2014/08/20 08:29:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.319 2014/08/31 14:14:20 ssuominen Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl doc +firmware-loader gudev introspection +kmod selinux static-libs"
+IUSE="acl doc gudev introspection +kmod selinux static-libs"
 
 RESTRICT="test"
 
@@ -88,7 +88,7 @@ check_default_rules() {
 }
 
 pkg_setup() {
-	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD ~EPOLL ~FHANDLE ~NET"
+	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD ~EPOLL ~FHANDLE ~NET ~!FW_LOADER_USER_HELPER"
 	linux-info_pkg_setup
 
 	# CONFIG_FHANDLE was introduced by 2.6.39
@@ -192,7 +192,6 @@ multilib_src_configure() {
 		--with-html-dir=/usr/share/doc/${PF}/html
 		--without-python
 		--with-bashcompletiondir="$(get_bashcompdir)"
-		$(use firmware-loader && echo "--with-firmware-path=/lib/firmware/updates:/lib/firmware")
 		--with-rootprefix=
 		$(multilib_is_native_abi && echo "--with-rootlibdir=/$(get_libdir)")
 	)
