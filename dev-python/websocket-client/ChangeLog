@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/websocket-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/websocket-client/ChangeLog,v 1.1 2014/08/31 01:02:48 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/websocket-client/ChangeLog,v 1.2 2014/08/31 01:53:22 alunduil Exp $
+
+  31 Aug 2014; Alex Brandt <alunduil@gentoo.org> websocket-client-0.11.0.ebuild,
+  websocket-client-0.17.0.ebuild:
+  fix minor style issues and add missing environment items  idella4 provided
+  cross testing on other pythons (python 3.4 and pypy) and x86 arch as well as
+  feedback on certain style issues.  These have been incorporated into the
+  ebuilds.
 
 *websocket-client-0.17.0 (31 Aug 2014)
 *websocket-client-0.11.0 (31 Aug 2014)
@@ -10,4 +17,3 @@
   +metadata.xml:
   New ebuild for websocket-client. Ebuild written by me. Partial fix for bug
   #520912
-
