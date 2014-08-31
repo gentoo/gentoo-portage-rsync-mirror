@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-XSpp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-XSpp/ChangeLog,v 1.29 2013/05/15 14:15:36 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-XSpp/ChangeLog,v 1.30 2014/08/31 10:42:06 zlogene Exp $
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -ExtUtils-XSpp-0.160.200.ebuild, -ExtUtils-XSpp-0.160.300.ebuild:
+  Drop old.
 
   15 May 2013; Agostino Sarubbo <ago@gentoo.org> ExtUtils-XSpp-0.170.0.ebuild:
   Stable for x86, wrt bug #463046

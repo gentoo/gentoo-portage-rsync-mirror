@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/YAML-LibYAML
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-LibYAML/ChangeLog,v 1.4 2013/03/17 17:09:41 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-LibYAML/ChangeLog,v 1.5 2014/08/31 10:46:20 zlogene Exp $
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -YAML-LibYAML-0.380.0-r1.ebuild:
+  Drop old.
 
 *YAML-LibYAML-0.410.0 (17 Mar 2013)
 
