@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-4.4.0.117.ebuild,v 1.1 2014/08/30 18:29:46 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-4.4.0.117-r1.ebuild,v 1.1 2014/08/31 15:17:36 zerochaos Exp $
 
 EAPI=5
 
@@ -67,7 +67,7 @@ src_install() {
 	insopts -m 755
 	doins "${WORKDIR}/${INTEL_CL}"/lib64/*
 
-	insinto /"${INTEL_CL}"/lib64
+	insinto /"${INTEL_CL}"/bin
 	doins "${WORKDIR}"/"${INTEL_CL}"/bin/*
 
 	# TODO put this somewhere

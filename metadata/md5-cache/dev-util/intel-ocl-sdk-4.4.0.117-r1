@@ -11,4 +11,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://registrationcenter.intel.com/irc_nas/4181/intel_sdk_for_ocl_applications_2014_ubuntu_4.4.0.117_x64.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=073f1b0794ffeb62592ad5eda191eca3
+_md5_=1bda4218ed5f5644f90e63780b0b41a4
