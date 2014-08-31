@@ -1,0 +1,13 @@
+# ChangeLog for dev-python/websocket-client
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/websocket-client/ChangeLog,v 1.1 2014/08/31 01:02:48 alunduil Exp $
+
+*websocket-client-0.17.0 (31 Aug 2014)
+*websocket-client-0.11.0 (31 Aug 2014)
+
+  31 Aug 2014; Alex Brandt <alunduil@gentoo.org>
+  +websocket-client-0.11.0.ebuild, +websocket-client-0.17.0.ebuild,
+  +metadata.xml:
+  New ebuild for websocket-client. Ebuild written by me. Partial fix for bug
+  #520912
+
