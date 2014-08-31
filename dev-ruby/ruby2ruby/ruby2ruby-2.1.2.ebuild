@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ruby2ruby-2.0.7.ebuild,v 1.2 2014/04/05 12:14:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ruby2ruby-2.1.2.ebuild,v 1.1 2014/08/31 19:29:48 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -22,10 +22,10 @@ IUSE="test"
 
 ruby_add_rdepend "
 	dev-ruby/sexp_processor:4
-	dev-ruby/ruby_parser:3
+	>=dev-ruby/ruby_parser-3.1:3
 	!<dev-ruby/ruby2ruby-1.3.1-r1"
 ruby_add_bdepend "doc?  ( dev-ruby/hoe dev-ruby/hoe-seattlerb )
-	test? ( dev-ruby/minitest )"
+	test? ( >=dev-ruby/minitest-5.3:5 )"
 
 all_ruby_prepare() {
 	sed -i -e '/plugin :isolate/ s:^:#:' Rakefile || die
