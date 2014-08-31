@@ -1,6 +1,11 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.46 2014/08/14 14:26:59 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.47 2014/08/31 21:44:50 grknight Exp $
+
+*mysql-5.6-r2 (31 Aug 2014)
+
+  31 Aug 2014; Brian Evans <grknight@gentoo.org> +mysql-5.6-r2.ebuild:
+  Revision bump for 5.6 to support multilib
 
 *mysql-5.6-r1 (14 Aug 2014)
 
