@@ -1,18 +1,21 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.12 2014/08/31 14:54:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.17_rc1.ebuild,v 1.1 2014/08/31 14:53:06 swegener Exp $
 
 EAPI=5
 
-inherit autotools perl-module git-r3
+inherit autotools-utils eutils flag-o-matic perl-module toolchain-funcs
 
-EGIT_REPO_URI="git://github.com/irssi/irssi.git"
+# Keep for _rc compability
+MY_P="${P/_/-}"
 
 DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"
+SRC_URI="http://irssi.org/files/${MY_P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="ipv6 +perl selinux ssl socks5 +proxy"
 
 RDEPEND="sys-libs/ncurses
@@ -22,21 +25,18 @@ RDEPEND="sys-libs/ncurses
 	perl? ( dev-lang/perl )
 	socks5? ( >=net-proxy/dante-1.1.18 )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	>=sys-devel/autoconf-2.58
-	dev-lang/perl
-	|| (
-		www-client/lynx
-		www-client/elinks
-	)"
+	virtual/pkgconfig"
 RDEPEND="${RDEPEND}
 	perl? ( !net-im/silc-client )"
 
-src_prepare() {
-	sed -i -e /^autoreconf/d autogen.sh || die
-	NOCONFIGURE=1 ./autogen.sh || die
+S=${WORKDIR}/${MY_P}
 
-	eautoreconf
+src_prepare() {
+	cd m4
+	epatch "${FILESDIR}/${PN}-0.8.15-tinfo.patch"
+	cd ..
+	AUTOTOOLS_AUTORECONF=1
+	autotools-utils_src_prepare
 }
 
 src_configure() {

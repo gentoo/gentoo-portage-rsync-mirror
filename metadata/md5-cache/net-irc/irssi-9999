@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses >=dev-libs/glib-2.6.0 selinux? ( sec-policy/selinux-irc ) ssl? ( dev-libs/openssl ) perl? ( dev-lang/perl ) socks5? ( >=net-proxy/dante-1.1.18 ) perl? ( !net-im/silc-client ) dev-lang/perl:=[-build(-)]
 SLOT=0
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=d7f9910a27f2f49816f8655835ec8ea5
+_md5_=53e8233b5e5ed90a63fb1824fa990688
