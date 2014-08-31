@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/org-ruby/org-ruby-0.9.9.ebuild,v 1.2 2014/08/30 10:20:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/org-ruby/org-ruby-0.9.9.ebuild,v 1.3 2014/08/31 05:57:37 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -27,5 +27,5 @@ ruby_add_bdepend "test? ( dev-ruby/tilt )"
 
 all_ruby_prepare() {
 	#Fix tests until rspec:3 is available in the tree
-	sed -i -e "s/truthy/true/" -e "s/falsy/false/" spec/headline_spec.rb spec/parser_spec.rb spec/line_spec.rb || die 
+	sed -i -e "s/truthy/true/" -e "s/falsy/false/" spec/headline_spec.rb spec/parser_spec.rb spec/line_spec.rb || die
 }

@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/hgview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/ChangeLog,v 1.14 2014/06/10 03:30:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/ChangeLog,v 1.15 2014/08/31 05:57:13 radhermit Exp $
+
+*hgview-1.8.2 (31 Aug 2014)
+
+  31 Aug 2014; Tim Harder <radhermit@gentoo.org> +hgview-1.8.2.ebuild:
+  Version bump.
 
 *hgview-1.8.1 (10 Jun 2014)
 
