@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/multimode-1.4_pre20140301.ebuild,v 1.3 2014/03/03 18:01:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/multimode-1.4_p20140831.ebuild,v 1.1 2014/08/31 22:48:46 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT="python2_7"
@@ -18,14 +18,16 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit subversion
 	KEYWORDS=""
 else
+	#SRC_URI="http://www.sbrac.org/files/${PN}-r${PV}.tar.gz"
 	SRC_URI="https://dev.gentoo.org/~zerochaos/distfiles/${P}.tar.xz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
-DEPEND=">=net-wireless/gr-osmosdr-0.0.1
+DEPEND=""
+RDEPEND="${DEPEND}
+	>=net-wireless/gr-osmosdr-0.1.0:=
 	>=net-wireless/gnuradio-3.7:=[utils,${PYTHON_USEDEP}]
-	>=net-wireless/rtl-sdr-0.5.0"
-RDEPEND="${DEPEND}"
+	>=net-wireless/rtl-sdr-0.5.0:="
 
 src_install() {
 	newbin ${PN}.py ${PN}

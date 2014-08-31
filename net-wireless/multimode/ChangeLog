@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/multimode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/ChangeLog,v 1.9 2014/03/03 18:01:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/ChangeLog,v 1.10 2014/08/31 22:48:46 zerochaos Exp $
+
+*multimode-1.4_p20140831 (31 Aug 2014)
+
+  31 Aug 2014; Rick Farina <zerochaos@gentoo.org>
+  +multimode-1.4_p20140831.ebuild, -multimode-1.4_pre20140301.ebuild,
+  multimode-9999.ebuild:
+  version bump to build with new gr-osmosdr
 
   03 Mar 2014; Rick Farina <zerochaos@gentoo.org> multimode-1.00-r1.ebuild,
   multimode-1.4_pre20140301.ebuild, multimode-9999.ebuild:
