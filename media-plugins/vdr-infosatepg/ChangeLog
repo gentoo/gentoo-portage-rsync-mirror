@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-infosatepg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-infosatepg/ChangeLog,v 1.8 2014/08/10 21:06:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-infosatepg/ChangeLog,v 1.9 2014/08/31 11:18:34 hd_brummy Exp $
+
+  31 Aug 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-infosatepg-0.0.11.ebuild:
+  cleanup old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   vdr-infosatepg-0.0.11.ebuild, vdr-infosatepg-0.0.12.ebuild:
