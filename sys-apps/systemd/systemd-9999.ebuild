@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.137 2014/08/23 09:43:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.138 2014/08/31 15:47:06 floppym Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acl audit cryptsetup curl doc elfutils +firmware-loader gcrypt gudev http
+IUSE="acl audit cryptsetup curl doc elfutils gcrypt gudev http
 	idn introspection kdbus +kmod lz4 lzma pam policykit python qrcode +seccomp
 	selinux ssl test vanilla"
 
@@ -122,11 +122,10 @@ pkg_pretend() {
 		~EPOLL ~FANOTIFY ~FHANDLE ~INOTIFY_USER ~IPV6 ~NET ~NET_NS ~PROC_FS
 		~SECCOMP ~SIGNALFD ~SYSFS ~TIMERFD ~TMPFS_XATTR
 		~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2
-		~!GRKERNSEC_PROC"
+		~!GRKERNSEC_PROC ~!FW_LOADER_USER_HELPER"
 
 	use acl && CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
 	kernel_is -lt 3 7 && CONFIG_CHECK+=" ~HOTPLUG"
-	use firmware-loader || CONFIG_CHECK+=" ~!FW_LOADER_USER_HELPER"
 
 	if linux_config_exists; then
 		local uevent_helper_path=$(linux_chkconfig_string UEVENT_HELPER_PATH)
@@ -149,12 +148,6 @@ pkg_pretend() {
 	if [[ ${MERGE_TYPE} != buildonly ]]; then
 		if kernel_is -lt ${MINKV//./ }; then
 			ewarn "Kernel version at least ${MINKV} required"
-		fi
-
-		if ! use firmware-loader && kernel_is -lt 3 8; then
-			ewarn "You seem to be using kernel older than 3.8. Those kernel versions"
-			ewarn "require systemd with USE=firmware-loader to support loading"
-			ewarn "firmware. Missing this flag may cause some hardware not to work."
 		fi
 
 		check_extra_config
@@ -273,12 +266,6 @@ multilib_src_configure() {
 
 		--with-ntp-servers="0.gentoo.pool.ntp.org 1.gentoo.pool.ntp.org 2.gentoo.pool.ntp.org 3.gentoo.pool.ntp.org"
 	)
-
-	if use firmware-loader; then
-		myeconfargs+=(
-			--with-firmware-path="/lib/firmware/updates:/lib/firmware"
-		)
-	fi
 
 	if ! multilib_is_native_abi; then
 		myeconfargs+=(

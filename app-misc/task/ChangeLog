@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/task
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.46 2013/09/29 20:45:03 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.47 2014/08/31 15:35:39 dev-zero Exp $
+
+*task-2.3.0 (31 Aug 2014)
+
+  31 Aug 2014; Tiziano Müller <dev-zero@gentoo.org>
+  +files/task-2.3.0-issue-1473-rcdir-fix.patch, +task-2.3.0.ebuild:
+  Version bump (bug #498834), thanks to Elias Probst.
 
   29 Sep 2013; Tim Harder <radhermit@gentoo.org> task-2.2.0.ebuild:
   Add arm keyword (bug #486258).

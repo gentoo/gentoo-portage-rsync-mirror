@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.1.8.ebuild,v 1.1 2014/08/31 15:29:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.1.8.ebuild,v 1.2 2014/08/31 15:32:18 blueness Exp $
 
 EAPI="5"
 
@@ -90,7 +90,7 @@ src_install() {
 pkg_postinst() {
 	if use headless; then
 		einfo "For instructions on running SpiderOak without a GUI, please read the FAQ:"
-		einfo "  https://spideroak.com/faq/questions/62/how_do_i_install_spideroak_on_a_headless_linux_server/"
+		einfo "  https://spideroak.com/faq/questions/31/how_do_i_install_spideroak_on_a_headless_linux_server/"
 		einfo "  https://spideroak.com/faq/questions/67/how_can_i_use_spideroak_from_the_commandline/"
 	fi
 }

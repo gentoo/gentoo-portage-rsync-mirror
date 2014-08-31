@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-FolderType
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-FolderType/ChangeLog,v 1.10 2013/08/25 07:53:12 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-FolderType/ChangeLog,v 1.11 2014/08/31 16:00:55 zlogene Exp $
+
+  31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Email-FolderType-0.813.0.ebuild:
+  Bump to EAPI=5
 
 *Email-FolderType-0.814.0 (25 Aug 2013)
 

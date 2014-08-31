@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.306 2014/08/27 12:24:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.307 2014/08/31 15:47:06 floppym Exp $
+
+  31 Aug 2014; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Drop firmware-loader support.
 
   27 Aug 2014; Agostino Sarubbo <ago@gentoo.org> systemd-215-r3.ebuild:
   Stable for ppc, wrt bug #517120
