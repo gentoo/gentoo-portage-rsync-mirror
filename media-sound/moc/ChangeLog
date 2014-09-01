@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.116 2014/08/31 05:12:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.117 2014/09/01 05:02:52 radhermit Exp $
+
+  01 Sep 2014; Tim Harder <radhermit@gentoo.org> -moc-2.5.0_beta2.ebuild,
+  -moc-2.5.0_beta1_p20130907.ebuild:
+  Remove old.
 
 *moc-2.5.0 (31 Aug 2014)
 
