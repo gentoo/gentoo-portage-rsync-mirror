@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/votca-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.23 2013/07/02 14:15:12 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.24 2014/08/31 23:37:54 ottxor Exp $
+
+*votca-tools-1.2.4 (31 Aug 2014)
+
+  31 Aug 2014; Christoph Junghans <ottxor@gentoo.org> +votca-tools-1.2.4.ebuild,
+  -files/votca-tools-1.2.3-boost-1.53.patch, -votca-tools-1.2.3-r3.ebuild:
+  version bump
 
   02 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
   votca-tools-1.2.3-r3.ebuild:

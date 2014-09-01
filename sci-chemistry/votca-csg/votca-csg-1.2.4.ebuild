@@ -1,18 +1,17 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.3-r1.ebuild,v 1.1 2013/04/14 17:52:29 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.4.ebuild,v 1.1 2014/08/31 23:41:37 ottxor Exp $
 
 EAPI=5
 
 inherit bash-completion-r1 cmake-utils multilib
 
-IUSE="doc examples extras +gromacs +system-boost"
+IUSE="doc examples extras +gromacs"
 PDEPEND="extras? ( =sci-chemistry/votca-csgapps-${PV} )"
 if [ "${PV}" != "9999" ]; then
-	SRC_URI="http://votca.googlecode.com/files/${P}.tar.gz
-		doc? ( http://votca.googlecode.com/files/${PN}-manual-${PV}.pdf )
-		examples? (	http://votca.googlecode.com/files/${PN}-tutorials-${PV}.tar.gz )"
-	RESTRICT="primaryuri"
+	SRC_URI="http://downloads.votca.googlecode.com/hg/${P}.tar.gz
+		doc? ( http://downloads.votca.googlecode.com/hg/${PN}-manual-${PV}.pdf )
+		examples? (	http://downloads.votca.googlecode.com/hg/${PN}-tutorials-${PV}.tar.gz )"
 else
 	SRC_URI=""
 	inherit mercurial
@@ -29,7 +28,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-macos"
 
 #perl is only used for scripts
-RDEPEND="~sci-libs/votca-tools-${PV}[system-boost=]
+RDEPEND="~sci-libs/votca-tools-${PV}
 	gromacs? ( sci-chemistry/gromacs:= )
 	dev-lang/perl
 	app-shells/bash"
@@ -45,7 +44,7 @@ src_configure() {
 	local GMX_DEV="OFF" GMX_DOUBLE="OFF" extra
 
 	if use gromacs; then
-		has_version =sci-chemistry/gromacs-9999 && GMX_DEV="ON"
+		has_version ">=sci-chemistry/gromacs-5" && GMX_DEV="ON"
 		has_version sci-chemistry/gromacs[double-precision] && GMX_DOUBLE="ON"
 	fi
 
@@ -54,12 +53,12 @@ src_configure() {
 		extra+=" -DCMAKE_BUILD_WITH_INSTALL_RPATH=OFF"
 
 	mycmakeargs=(
-		$(cmake-utils_use system-boost EXTERNAL_BOOST)
 		$(cmake-utils_use_with gromacs GMX)
 		-DWITH_GMX_DEVEL="${GMX_DEV}"
 		-DGMX_DOUBLE="${GMX_DOUBLE}"
 		${extra}
 		-DWITH_RC_FILES=OFF
+		-DEXTERNAL_BOOST=ON
 		-DLIB=$(get_libdir)
 	)
 	cmake-utils_src_configure
