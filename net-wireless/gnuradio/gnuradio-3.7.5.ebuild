@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.5.ebuild,v 1.1 2014/08/31 03:07:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.5.ebuild,v 1.2 2014/09/01 17:26:38 chithanh Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -30,7 +30,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 		audio? ( || ( alsa oss jack portaudio ) )
 		alsa? ( audio )
 		oss? ( audio )
-		jack ( audio )
+		jack? ( audio )
 		portaudio? ( audio )
 		analog? ( filter )
 		digital? ( filter analog )

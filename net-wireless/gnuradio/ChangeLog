@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.53 2014/08/31 03:07:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.54 2014/09/01 17:26:38 chithanh Exp $
+
+  01 Sep 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnuradio-3.7.4.1.ebuild, gnuradio-3.7.5.ebuild, gnuradio-9999.ebuild:
+  Add missing ? in REQUIRED_USE, bug #521900.
 
 *gnuradio-3.7.4.1 (31 Aug 2014)
 *gnuradio-3.7.5 (31 Aug 2014)
