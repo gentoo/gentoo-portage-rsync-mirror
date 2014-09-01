@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9336 2014/09/01 14:27:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9337 2014/09/01 18:04:07 sping Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Sep 2014; Sebastian Pipping <sping@gentoo.org> thirdpartymirrors:
+  Update gimp mirrors: Move out of sync gwdg.de near the end, remove two
+  unconnectable ones, add those listed on http://www.gimp.org/downloads/ .
 
   01 Sep 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
   rm mask on >=media-video/mpv-0.4.2 wrt #521808

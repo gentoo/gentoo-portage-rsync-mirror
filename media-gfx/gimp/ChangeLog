@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.435 2014/07/24 18:05:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.436 2014/09/01 18:11:40 sping Exp $
+
+*gimp-2.8.14 (01 Sep 2014)
+
+  01 Sep 2014; Sebastian Pipping <sping@gentoo.org> +gimp-2.8.14.ebuild:
+  Bump to 2.8.14 (bug #521310; freetype patch got applied upstream, gettext
+  dependency bumped, python 2.6 not in tree any more)
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> gimp-2.8.10-r1.ebuild,
   gimp-2.8.10.ebuild, gimp-2.8.6.ebuild, gimp-2.8.8-r1.ebuild, gimp-9999.ebuild:
