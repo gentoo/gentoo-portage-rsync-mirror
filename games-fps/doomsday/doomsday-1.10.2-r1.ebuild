@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.10.2.ebuild,v 1.8 2014/05/15 16:44:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.10.2-r1.ebuild,v 1.1 2014/09/01 07:58:26 mgorny Exp $
 
 # TODO: fmod support broken (deng_fmod)
 
@@ -46,7 +46,7 @@ RDEPEND="${DEPEND}
 	!dedicated? (
 		snowberry? (
 			${PYTHON_DEPS}
-			dev-lang/python-exec:0[${PYTHON_USEDEP}]
+			dev-lang/python-exec:2[${PYTHON_USEDEP}]
 			dev-python/wxpython[${PYTHON_USEDEP}]
 		)
 	)"
@@ -60,9 +60,6 @@ PDEPEND="
 	)"
 
 S=${S}/${PN}
-
-# disable python-exec:2 support, bug #484424
-_PYTHON_WANT_PYTHON_EXEC2=0
 
 pkg_setup() {
 	games_pkg_setup
@@ -138,7 +135,7 @@ src_install() {
 				# hack around improper path handling
 				sed -i \
 					-e "s:os.chdir.*$:os.chdir('$(python_get_sitedir)/snowberry'):" \
-					"${D}"/"${GAMES_BINDIR}"/launch-doomsday-${EPYTHON} || die
+					"${D%/}$(python_get_scriptdir)"/launch-doomsday || die
 			}
 			python_foreach_impl installmodules
 			# remove old module dir
