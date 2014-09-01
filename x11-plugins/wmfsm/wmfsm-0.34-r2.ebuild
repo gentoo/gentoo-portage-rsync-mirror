@@ -1,8 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/wmfsm-0.34-r1.ebuild,v 1.11 2014/09/01 21:18:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/wmfsm-0.34-r2.ebuild,v 1.1 2014/09/01 21:18:24 voyageur Exp $
 
-inherit eutils
+EAPI=5
+
+inherit autotools eutils
 
 IUSE=""
 DESCRIPTION="dockapp for monitoring filesystem usage"
@@ -11,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
@@ -21,13 +23,14 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"/wmfsm
+src_prepare() {
 	epatch "${FILESDIR}"/${P}.linux-fs.patch
+	sed -e "/^X11LIBS/s/-I$x_includes //" -i configure.in || die "sed failed"
+
+	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog
 }

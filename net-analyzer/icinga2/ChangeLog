@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/icinga2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.8 2014/08/30 23:38:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.9 2014/09/01 21:03:51 prometheanfire Exp $
+
+*icinga2-2.1.0-r3 (01 Sep 2014)
+
+  01 Sep 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/icinga2-2.1.0-create_var_cache.patch, +icinga2-2.1.0-r3.ebuild,
+  -icinga2-2.1.0-r2.ebuild, metadata.xml:
+  another bump from feandil
 
 *icinga2-2.1.0-r2 (30 Aug 2014)
 

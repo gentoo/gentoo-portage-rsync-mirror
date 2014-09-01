@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.1.0-r2.ebuild,v 1.1 2014/08/30 23:38:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.1.0-r3.ebuild,v 1.1 2014/09/01 21:03:51 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,14 +15,14 @@ SRC_URI="http://github.com/Icinga/icinga2/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+mysql postgres classicui +plugins"
+IUSE="+mysql postgres classicui nano-syntax +plugins +vim-syntax"
 
 DEPEND="dev-util/cmake
 		dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-libs/openssl
-		dev-libs/boost
+		>=dev-libs/boost-1.41
 		sys-devel/bison
-		sys-devel/flex
+		>=sys-devel/flex-2.5.35
 		mysql? ( virtual/mysql )
 		postgres? ( dev-db/postgresql-base )"
 
@@ -38,6 +38,11 @@ pkg_setup() {
 	enewgroup icinga
 	enewgroup icingacmd
 	enewuser icinga -1 -1 /var/lib/icinga2 "icinga,icingacmd"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-create_var_cache.patch"
+	epatch_user
 }
 
 src_configure() {
@@ -92,17 +97,35 @@ src_install() {
 	fi
 
 	keepdir /etc/icinga2
-	keepdir /var/lib/icinga
-	keepdir /var/lib/icinga/archives
-	keepdir /var/lib/icinga/rw
-	keepdir /var/lib/icinga/spool/checkresults
+	keepdir /var/lib/icinga2/api/zones
+	keepdir /var/lib/icinga2/api/repository
+	keepdir /var/lib/icinga2/api/log
+	keepdir /var/spool/icinga2/perfdata
 
 	#remove dirs that shouldn't be installed
 	rm -r "${D}var/run" || die "failed to remove  /var/run"
 	rm -r "${D}var/cache" || die "failed to remove /var/cache"
 
-	fowners icinga:icinga /var/lib/icinga || die "Failed chown of /var/lib/icinga"
+	fowners icinga:icinga /etc/icinga2 || die "Failed chown of /etc/icinga2"
 	fowners icinga:icinga /var/lib/icinga2 || die "Failed chown of /var/lib/icinga2"
+	fowners icinga:icinga /var/spool/icinga2 || die "Failed chown of /var/spool/icinga2"
+	fowners icinga:icingacmd /var/log/icinga2 || die "Failed chown of /var/log/icinga2"
+
+	fperms ug+rwX,o-rwx /etc/icinga2
+	fperms ug+rwX,o-rwx /var/lib/icinga2
+	fperms ug+rwX,o-rwx /var/spool/icinga2
+	fperms ug+rwX,o-rwx /var/log/icinga2
+
+	if use vim-syntax; then
+		insinto /usr/share/vim/vimfiles
+		doins -r tools/syntax/vim/ftdetect
+		doins -r tools/syntax/vim/syntax
+	fi
+
+	if use nano-syntax; then
+		insinto /usr/share/nano
+		doins tools/syntax/nano/icinga2.nanorc
+	fi
 }
 
 pkg_postinst() {

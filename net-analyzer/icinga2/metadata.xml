@@ -10,6 +10,7 @@ Distributed, general purpose, network monitoring engine.
 </longdescription>
 	<use>
 		<flag name="classicui">Adds support for the old interface</flag>
+		<flag name="nano-syntax">Adds support for syntax used in the nano editor</flag>
 		<flag name="plugins">Adds support for nagios plugins</flag>
 	</use>
 </pkgmetadata>

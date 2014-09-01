@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmfsm
-# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/ChangeLog,v 1.14 2012/02/15 09:48:17 voyageur Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/ChangeLog,v 1.15 2014/09/01 21:18:24 voyageur Exp $
+
+*wmfsm-0.34-r2 (01 Sep 2014)
+
+  01 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> wmfsm-0.34-r1.ebuild,
+  +wmfsm-0.34-r2.ebuild, files/wmfsm-0.34.linux-fs.patch:
+  EAPI bump, ebuild cleanup, fix compilation. Replace einstall with emake
+  install, bug #521680
 
   15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmfsm-0.34-r1.ebuild:
   Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607
