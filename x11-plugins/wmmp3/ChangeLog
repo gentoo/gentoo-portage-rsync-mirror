@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmp3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/ChangeLog,v 1.14 2012/02/15 09:52:43 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/ChangeLog,v 1.15 2014/09/01 15:26:27 voyageur Exp $
+
+  01 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> wmmp3-0.12.ebuild:
+  Replace einstall with emake install, bug #521686
 
   15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmmp3-0.12.ebuild:
   Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607
