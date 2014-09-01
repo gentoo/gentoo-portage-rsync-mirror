@@ -7,7 +7,6 @@
 		<name>Jason A. Donenfeld</name>
 	</maintainer>
 	<use>
-		<flag name="pdf">Install Chrome's native PDF reader plugin.</flag>
-		<flag name="flash">Install Chrome's native Pepper Flash.</flag>
+		<flag name="flash">Install Chrome's native Pepper Flash</flag>
 	</use>
 </pkgmetadata>

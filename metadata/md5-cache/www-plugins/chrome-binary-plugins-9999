@@ -1,11 +1,11 @@
-DEFINED_PHASES=install unpack
+DEFINED_PHASES=install nofetch unpack
 DESCRIPTION=Binary plugins from Google Chrome for use in Chromium
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.google.com/chrome
-IUSE=+flash +pdf
+IUSE=+flash
 LICENSE=google-chrome
 RDEPEND=!www-plugins/chrome-binary-plugins:0 !www-plugins/chrome-binary-plugins:beta !www-plugins/chrome-binary-plugins:stable
 RESTRICT=bindist mirror strip
 SLOT=unstable
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=f609945540976c73343607e63a4b9945
+_md5_=3ee9958b1cf39b3d61b51101f0232df0

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-37.0.2062.94_p1.ebuild,v 1.3 2014/08/28 00:21:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-37.0.2062.94_p1.ebuild,v 1.4 2014/08/31 23:11:41 floppym Exp $
 
-EAPI=4
+EAPI=5
 
 inherit multilib unpacker
 
@@ -10,7 +10,7 @@ DESCRIPTION="Binary plugins from Google Chrome for use in Chromium"
 HOMEPAGE="http://www.google.com/chrome"
 
 case ${PV} in
-	*_alpha*)
+	*_alpha*|9999*)
 		SLOT="unstable"
 		CHROMEDIR="opt/google/chrome-${SLOT}"
 		MY_PV=${PV/_alpha/-}
@@ -33,17 +33,19 @@ esac
 MY_PN="google-chrome-${SLOT}"
 MY_P="${MY_PN}_${MY_PV}"
 
+if [[ ${PV} != 9999* ]]; then
 SRC_URI="
 	amd64? (
-		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_amd64.deb
+		https://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_amd64.deb
 	)
 	x86? (
-		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_i386.deb
+		https://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_i386.deb
 	)
 "
+KEYWORDS="~amd64 ~x86"
+fi
 
 LICENSE="google-chrome"
-KEYWORDS="~amd64 ~x86"
 IUSE="+flash"
 RESTRICT="bindist mirror strip"
 
@@ -59,6 +61,15 @@ QA_PREBUILT="*"
 pkg_nofetch() {
 	eerror "Please wait 24 hours and sync your portage tree before reporting fetch failures."
 }
+
+if [[ ${PV} == 9999* ]]; then
+src_unpack() {
+	local base="https://dl.google.com/linux/direct"
+	local debarch=${ARCH/x86/i386}
+	wget -O google-chrome.deb "${base}/google-chrome-${SLOT}_current_${debarch}.deb" || die
+	unpack_deb ./google-chrome.deb
+}
+fi
 
 src_install() {
 	local version flapper
