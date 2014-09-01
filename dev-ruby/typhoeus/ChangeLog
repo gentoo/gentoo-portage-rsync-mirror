@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/typhoeus
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/typhoeus/ChangeLog,v 1.1 2014/09/01 05:52:35 graaff Exp $
+
+*typhoeus-0.6.9 (01 Sep 2014)
+
+  01 Sep 2014; Hans de Graaff <graaff@gentoo.org> +typhoeus-0.6.9.ebuild,
+  +metadata.xml:
+  Initial import. Dependency for forthcoming dev-ruby/vcr.
+
