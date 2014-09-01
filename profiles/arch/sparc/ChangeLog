@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.228 2014/08/25 12:25:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.229 2014/09/01 14:26:08 hasufell Exp $
+
+  01 Sep 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask >=media-video/mpv-0.4.2 explicitly wrt #521808
 
   25 Aug 2014; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask zmq, bug #442188

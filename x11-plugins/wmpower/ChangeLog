@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmpower
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.31 2011/12/18 19:50:45 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.32 2014/09/01 14:30:16 voyageur Exp $
+
+  01 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> -wmpower-0.4.2.ebuild,
+  wmpower-0.4.3.ebuild:
+  Replace einstall with emake install, bug #521690. Remove old version
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> wmpower-0.4.3.ebuild:
   x86 stable wrt bug #393745

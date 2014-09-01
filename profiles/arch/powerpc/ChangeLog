@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.285 2014/08/31 18:31:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.286 2014/09/01 14:26:37 hasufell Exp $
+
+  01 Sep 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask >=media-video/mpv-0.4.2 explicitly wrt #521808
 
   31 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
   -ppc32/pegasos/deprecated, -ppc32/pegasos/eapi, -ppc32/pegasos/parent:

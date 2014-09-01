@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15997 2014/08/29 17:45:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15998 2014/09/01 14:27:56 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -263,12 +263,6 @@ sys-block/afacli
 # Upstream released bugfixes against buffer overflows
 =dev-libs/libmodbus-3.0.3
 =dev-libs/libmodbus-3.1.0
-
-# Maxim Koltsov <maksbotan@gentoo.org> (9 Jul 2014)
-# Requires >=libav-10, which is masked, or >=ffmpeg-2.1.4
-# If you use ffmpeg instead of libav, sorry!
-=media-video/mpv-0.4*
-=media-video/mpv-0.5*
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
 # Severe security issue (bug 460780), unhandled for over a year.
