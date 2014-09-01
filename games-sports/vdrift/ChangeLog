@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/vdrift
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.24 2014/09/01 01:00:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.25 2014/09/01 01:08:14 mr_bones_ Exp $
+
+  01 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/vdrift-20090615-ldflags.patch, -vdrift-20090615.ebuild:
+  old
 
   01 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
   +files/vdrift-20120722-bullet.patch, vdrift-20120722.ebuild:
