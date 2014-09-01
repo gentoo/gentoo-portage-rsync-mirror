@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/leptonica
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.23 2014/09/01 09:29:28 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.24 2014/09/01 19:37:32 tomka Exp $
+
+  01 Sep 2014; Thomas Kahle <tomka@gentoo.org> leptonica-1.71-r1.ebuild:
+  Fix bug 518540 differently again
 
 *leptonica-1.71-r1 (01 Sep 2014)
 
