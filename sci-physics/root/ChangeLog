@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.131 2014/03/27 18:51:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.132 2014/09/01 16:40:31 mgorny Exp $
+
+  01 Sep 2014; Michał Górny <mgorny@gentoo.org> root-5.34.18-r1.ebuild,
+  root-5.34.18.ebuild:
+  Remove := subslot operator from || () block since it is meaningless and
+  broken.
 
   27 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> root-5.34.18-r1.ebuild:
   Uncomment inadvertently commented out user and group creation

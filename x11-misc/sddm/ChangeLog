@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/sddm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.8 2014/07/24 11:28:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.9 2014/09/01 16:43:24 mgorny Exp $
+
+  01 Sep 2014; Michał Górny <mgorny@gentoo.org> sddm-0.1.0-r1.ebuild:
+  Remove := subslot operator from || () block since it is meaningless and
+  broken.
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Punt description for USE="upower" and correct description for USE="consolekit"

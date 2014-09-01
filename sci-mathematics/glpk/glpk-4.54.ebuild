@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.54.ebuild,v 1.1 2014/04/05 21:32:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.54.ebuild,v 1.2 2014/09/01 16:41:18 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	sys-libs/zlib:0=
 	gmp? ( dev-libs/gmp:0= )
 	mysql? ( virtual/mysql )
-	odbc? ( || ( dev-db/libiodbc:0= dev-db/unixODBC:0= ) )"
+	odbc? ( || ( dev-db/libiodbc:0 dev-db/unixODBC:0 ) )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

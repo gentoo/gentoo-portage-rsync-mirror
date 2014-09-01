@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.238 2014/08/28 11:36:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.239 2014/09/01 16:42:31 mgorny Exp $
+
+  01 Sep 2014; Michał Górny <mgorny@gentoo.org> R-3.0.3.ebuild, R-3.1.0.ebuild,
+  R-3.1.1.ebuild:
+  Remove := subslot operator from || () block since it is meaningless and
+  broken.
 
   28 Aug 2014; Michał Górny <mgorny@gentoo.org> R-3.1.1.ebuild:
   Remove USE=bash-completion, install the completion file unconditionally

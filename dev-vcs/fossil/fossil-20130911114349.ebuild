@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/fossil-20130911114349.ebuild,v 1.3 2014/05/04 08:25:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/fossil-20130911114349.ebuild,v 1.4 2014/09/01 16:41:42 mgorny Exp $
 
 EAPI=5
 MY_P=${PN}-src-${PV}
@@ -17,7 +17,7 @@ KEYWORDS="amd64 x86"
 IUSE="json +lineedit sqlite +ssl tcl"
 
 DEPEND="sys-libs/zlib
-		lineedit? ( || ( sys-libs/readline:0= dev-libs/libedit ) )
+		lineedit? ( || ( sys-libs/readline:0 dev-libs/libedit ) )
 		ssl? ( dev-libs/openssl )
 		sqlite? ( dev-db/sqlite:3 )
 		tcl? ( dev-lang/tcl )

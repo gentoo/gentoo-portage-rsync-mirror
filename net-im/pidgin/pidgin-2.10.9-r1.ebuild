@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.9-r1.ebuild,v 1.13 2014/08/25 11:02:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.9-r1.ebuild,v 1.14 2014/09/01 16:44:44 mgorny Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ RDEPEND="
 		prediction? ( >=dev-db/sqlite-3.3:3 ) )
 	gstreamer? ( =media-libs/gstreamer-0.10*
 		=media-libs/gst-plugins-good-0.10*
-		|| ( net-libs/farstream:0.1 net-libs/farsight2:= )
+		|| ( net-libs/farstream:0.1 net-libs/farsight2 )
 		media-plugins/gst-plugins-meta:0.10
 		media-plugins/gst-plugins-gconf:0.10 )
 	zeroconf? ( net-dns/avahi[dbus] )

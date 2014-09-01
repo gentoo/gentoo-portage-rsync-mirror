@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigenserver/ocsigenserver-2.2.0.ebuild,v 1.3 2013/07/23 17:56:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigenserver/ocsigenserver-2.2.0.ebuild,v 1.4 2014/09/01 16:43:52 mgorny Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ DEPEND=">=dev-ml/lwt-2.3.0:=[react,ssl]
 		>=dev-ml/pcre-ocaml-6.0.1:=
 		>=dev-ml/tyxml-2.1:=
 		>=dev-lang/ocaml-3.12:=[ocamlopt?]
-		dbm? ( || ( dev-ml/camldbm:= >=dev-lang/ocaml-3.12:=[gdbm] ) )
+		dbm? ( || ( dev-ml/camldbm >=dev-lang/ocaml-3.12[gdbm] ) )
 		sqlite? ( dev-ml/ocaml-sqlite3:= )"
 RDEPEND="${DEPEND}"
 

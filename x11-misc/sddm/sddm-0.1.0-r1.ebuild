@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.1.0-r1.ebuild,v 1.4 2014/06/08 11:32:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.1.0-r1.ebuild,v 1.5 2014/09/01 16:43:24 mgorny Exp $
 
 EAPI=5
 inherit cmake-utils toolchain-funcs
@@ -21,7 +21,7 @@ RDEPEND="sys-libs/pam
 	dev-qt/qtdbus:4
 	consolekit? ( sys-auth/consolekit )
 	systemd? ( sys-apps/systemd:= )
-	upower? ( || ( sys-power/upower:= sys-power/upower-pm-utils ) )"
+	upower? ( || ( sys-power/upower sys-power/upower-pm-utils ) )"
 DEPEND="${RDEPEND}
 	>=sys-devel/gcc-4.7.0
 	virtual/pkgconfig"
