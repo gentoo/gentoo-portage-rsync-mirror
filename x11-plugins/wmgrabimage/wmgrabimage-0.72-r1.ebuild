@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgrabimage/wmgrabimage-0.72-r1.ebuild,v 1.12 2012/09/05 08:16:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgrabimage/wmgrabimage-0.72-r1.ebuild,v 1.13 2014/09/01 15:35:56 voyageur Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin
-	einstall DESTDIR="${D}/usr" || die "einstall failed."
+	emake DESTDIR="${D}/usr" install || die "einstall failed."
 
 	doman wmGrabImage.1
 

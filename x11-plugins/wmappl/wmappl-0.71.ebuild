@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/wmappl-0.71.ebuild,v 1.8 2014/08/10 20:04:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/wmappl-0.71.ebuild,v 1.9 2014/09/01 15:42:53 voyageur Exp $
 
 IUSE=""
 DESCRIPTION="Simple application launcher for the Window Maker dock"
@@ -24,5 +24,5 @@ src_compile() {
 }
 
 src_install () {
-	einstall || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 }

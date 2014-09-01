@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.16 2012/02/15 09:46:56 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.17 2014/09/01 15:40:22 voyageur Exp $
+
+  01 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> wmdf-0.1.6-r1.ebuild:
+  Replace einstall with emake install, bug #521678
 
   15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmdf-0.1.6-r1.ebuild:
   Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607

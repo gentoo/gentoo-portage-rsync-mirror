@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpasman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/ChangeLog,v 1.15 2014/04/07 19:38:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/ChangeLog,v 1.16 2014/09/01 15:48:04 voyageur Exp $
+
+  01 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> wmpasman-0.8.4.1.ebuild:
+  Replace einstall with emake install, bug #521444
 
   07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmpasman-0.8.4.1.ebuild,
   wmpasman-0.8.5.3.ebuild:

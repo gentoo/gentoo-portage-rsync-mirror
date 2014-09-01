@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmappl
 # Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/ChangeLog,v 1.15 2014/08/10 20:04:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/ChangeLog,v 1.16 2014/09/01 15:42:53 voyageur Exp $
+
+  01 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> wmappl-0.71.ebuild:
+  Replace einstall with emake install, bug #521676
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmappl-0.71.ebuild:
   QA: drop trailing '.' from DESCRIPTION

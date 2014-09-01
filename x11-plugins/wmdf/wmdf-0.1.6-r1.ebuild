@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/wmdf-0.1.6-r1.ebuild,v 1.10 2012/02/15 09:46:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/wmdf-0.1.6-r1.ebuild,v 1.11 2014/09/01 15:40:22 voyageur Exp $
 
 inherit eutils
 
@@ -32,6 +32,6 @@ src_unpack() {
 }
 
 src_install() {
-	einstall || die "Install failed"
+	emake DESTDIR="${D}" install || die "Install failed"
 	dodoc README AUTHORS ChangeLog NEWS THANKS TODO
 }

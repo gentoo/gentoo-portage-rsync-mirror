@@ -8,4 +8,4 @@ RDEPEND=>=net-misc/wget-1.9-r2 >=media-gfx/imagemagick-5.5.7.15 x11-libs/libX11 
 SLOT=0
 SRC_URI=http://dockapps.windowmaker.org/files/12/19/wmGrabImage-0.72.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ba4632519128eccb0a5dae47eac496f1
+_md5_=8a6cb18517ac219635c6ac3eeffae9b9

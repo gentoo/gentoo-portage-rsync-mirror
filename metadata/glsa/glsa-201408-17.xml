@@ -9,7 +9,8 @@
   </synopsis>
   <product type="ebuild">qemu</product>
   <announced>August 30, 2014</announced>
-  <revised>August 30, 2014: 1</revised>
+  <revised>September 01, 2014: 2</revised>
+  <bug>486352</bug>
   <bug>505946</bug>
   <bug>507692</bug>
   <bug>507790</bug>
@@ -50,6 +51,7 @@
     
   </resolution>
   <references>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-4377">CVE-2013-4377</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-4544">CVE-2013-4544</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2014-0142">CVE-2014-0142</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2014-0143">CVE-2014-0143</uri>
@@ -66,7 +68,7 @@
   <metadata tag="requester" timestamp="Sat, 14 Jun 2014 02:33:03 +0000">
     BlueKnight
   </metadata>
-  <metadata tag="submitter" timestamp="Sat, 30 Aug 2014 00:57:16 +0000">
+  <metadata tag="submitter" timestamp="Mon, 01 Sep 2014 15:33:05 +0000">
     pinkbyte
   </metadata>
 </glsa>

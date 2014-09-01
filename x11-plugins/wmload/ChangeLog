@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmload
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmload/ChangeLog,v 1.12 2012/09/05 08:17:42 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmload/ChangeLog,v 1.13 2014/09/01 15:32:15 voyageur Exp $
+
+  01 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> wmload-0.9.2.ebuild:
+  Replace einstall with emake install, bug #521684
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> wmload-0.9.2.ebuild:
   Use domenu instead insinto + doins to install .desktop files

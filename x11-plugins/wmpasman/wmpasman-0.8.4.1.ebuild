@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/wmpasman-0.8.4.1.ebuild,v 1.12 2014/04/07 19:38:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/wmpasman-0.8.4.1.ebuild,v 1.13 2014/09/01 15:48:04 voyageur Exp $
 
 EAPI=5
 
@@ -27,7 +27,6 @@ src_prepare() {
 }
 
 src_install() {
-	# TODO: einstall is deprecated, convert to emake with args
-	einstall
+	emake DESTDIR="${D}" install
 	dodoc BUGS ChangeLog README TODO WARNINGS
 }

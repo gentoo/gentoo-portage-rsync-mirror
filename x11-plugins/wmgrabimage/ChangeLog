@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmgrabimage
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgrabimage/ChangeLog,v 1.16 2012/09/05 08:16:38 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgrabimage/ChangeLog,v 1.17 2014/09/01 15:35:56 voyageur Exp $
+
+  01 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  wmgrabimage-0.72-r1.ebuild:
+  Replace einstall with emake install, bug #521682
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> wmgrabimage-0.72-r1.ebuild:
   Use domenu instead insinto + doins to install .desktop files
