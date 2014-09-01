@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r2.ebuild,v 1.11 2014/08/25 10:58:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r2.ebuild,v 1.12 2014/09/01 22:46:07 ottxor Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="acl avahi doc fam gnutls ipv6 kerberos samba ssl"
 
 RDEPEND=">=gnome-base/gconf-2.32.4-r1[${MULTILIB_USEDEP}]
@@ -128,6 +128,10 @@ multilib_src_configure() {
 	# so should always be behind the use_enable options
 	# foser <foser@gentoo.org 19 Apr 2004
 	use gnutls && use ssl && myconf+=( --disable-openssl )
+
+	#bug #519060
+	#configure script is so messed up on res_init on Darwin
+	[[ ${CHOST} == *-darwin* ]] && export LIBS="${LIBS} -lresolv"
 
 	ECONF_SOURCE=${S} \
 	gnome2_src_configure "${myconf[@]}"

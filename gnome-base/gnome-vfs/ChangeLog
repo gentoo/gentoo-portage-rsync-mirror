@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.358 2014/08/25 10:58:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.359 2014/09/01 22:46:07 ottxor Exp $
+
+  01 Sep 2014; Christoph Junghans <ottxor@gentoo.org>
+  gnome-vfs-2.24.4-r2.ebuild:
+  added prefix support (bug #519060)
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gnome-vfs-2.24.4-r2.ebuild:
   Stable for alpha, wrt bug #512012
