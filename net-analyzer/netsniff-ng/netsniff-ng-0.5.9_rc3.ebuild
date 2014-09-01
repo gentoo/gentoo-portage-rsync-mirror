@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/netsniff-ng-0.5.8_rc3.ebuild,v 1.1 2013/12/03 09:22:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/netsniff-ng-0.5.9_rc3.ebuild,v 1.1 2014/09/01 16:24:28 xmw Exp $
 
 EAPI=5
 
@@ -55,6 +55,7 @@ src_compile() {
 }
 
 src_install() {
-	emake PREFIX="${ED}" install
+	emake PREFIX="${ED}usr" ETCDIR="${ED}etc" install
+
 	dodoc AUTHORS README REPORTING-BUGS
 }

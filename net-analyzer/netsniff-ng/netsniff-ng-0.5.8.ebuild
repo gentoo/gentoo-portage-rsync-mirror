@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/netsniff-ng-0.5.8_rc2.ebuild,v 1.1 2013/08/05 07:42:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/netsniff-ng-0.5.8.ebuild,v 1.1 2014/09/01 16:11:01 xmw Exp $
 
 EAPI=5
 
@@ -34,10 +34,6 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	#needed for <libcli-1.9.7
-	epatch "${FILESDIR}"/${PN}-0.5.8-libcli-test.patch \
-		"${FILESDIR}"/${PN}-0.5.8-fortify_source.patch
-
 	sed -e '/CFLAGS/s:?=:+=:' \
 		-e '/CFLAGS/s:\(-g\|-O2\|-O3\|-m\(arch\|tune\)=native\)::g' \
 		 -i Makefile || die
@@ -48,6 +44,8 @@ src_prepare() {
 
 	export NACL_INC_DIR="${EROOT}usr/include/nacl"
 	export NACL_LIB_DIR="${EROOT}usr/$(get_libdir)/nacl"
+
+	epatch_user
 }
 
 src_compile() {
@@ -57,6 +55,7 @@ src_compile() {
 }
 
 src_install() {
-	emake PREFIX="${ED}" install
+	emake PREFIX="${ED}usr" ETCDIR="${ED}etc" install
+
 	dodoc AUTHORS README REPORTING-BUGS
 }
