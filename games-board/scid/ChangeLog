@@ -1,6 +1,12 @@
 # ChangeLog for games-board/scid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.42 2014/03/20 22:20:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.43 2014/09/01 00:36:56 hasufell Exp $
+
+*scid-4.5.2 (01 Sep 2014)
+
+  01 Sep 2014; Julian Ospald <hasufell@gentoo.org> +scid-4.5.2.ebuild,
+  +files/scid-4.5.2-gentoo.patch:
+  version bump wrt #506534, convert to python-any-r1
 
   20 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/scid-4.3-gentoo.patch, -files/scid-4.3-parallelmake.patch,

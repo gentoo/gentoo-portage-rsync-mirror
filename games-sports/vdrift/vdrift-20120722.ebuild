@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20120722.ebuild,v 1.1 2014/09/01 00:20:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20120722.ebuild,v 1.2 2014/09/01 01:00:55 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils scons-utils games
@@ -11,7 +11,7 @@ HOMEPAGE="http://vdrift.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	mirror://sourceforge/${PN}/${MY_P}c_patch.diff"
 
-LICENSE="GPL-3 ZLIB"
+LICENSE="GPL-3 ZLIB LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -40,7 +40,8 @@ src_unpack() {
 src_prepare() {
 	epatch \
 		"${DISTDIR}"/${MY_P}c_patch.diff \
-		"${FILESDIR}"/${P}-build.patch
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-bullet.patch
 }
 
 src_compile() {
