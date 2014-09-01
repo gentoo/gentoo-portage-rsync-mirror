@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbatteries/wmbatteries-0.1.3.ebuild,v 1.4 2007/07/22 05:25:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbatteries/wmbatteries-0.1.3.ebuild,v 1.5 2014/09/01 13:38:23 voyageur Exp $
 
 inherit eutils
 
@@ -20,6 +20,6 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 src_install() {
-	einstall || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 	dodoc AUTHORS THANKS README example/wmbatteriesrc
 }

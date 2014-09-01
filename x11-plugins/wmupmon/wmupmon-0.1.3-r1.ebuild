@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmupmon/wmupmon-0.1.3-r1.ebuild,v 1.8 2008/11/26 00:10:12 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmupmon/wmupmon-0.1.3-r1.ebuild,v 1.9 2014/09/01 13:45:58 voyageur Exp $
 
 inherit eutils
 
@@ -27,6 +27,6 @@ src_unpack() {
 }
 
 src_install() {
-	einstall || die "einstall failed."
+	emake DESTDIR="${D}" install || die "einstall failed."
 	dodoc AUTHORS README THANKS ChangeLog
 }

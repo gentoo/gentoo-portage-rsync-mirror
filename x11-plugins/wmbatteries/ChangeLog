@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmbatteries
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbatteries/ChangeLog,v 1.5 2007/07/22 05:25:35 dberkholz Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbatteries/ChangeLog,v 1.6 2014/09/01 13:38:23 voyageur Exp $
+
+  01 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  wmbatteries-0.1.3.ebuild:
+  Replace einstall with emake install, bug #521752
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmbatteries-0.1.3.ebuild:

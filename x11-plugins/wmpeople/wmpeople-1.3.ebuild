@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpeople/wmpeople-1.3.ebuild,v 1.6 2007/07/22 04:40:15 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpeople/wmpeople-1.3.ebuild,v 1.7 2014/09/01 13:35:51 voyageur Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	>=net-mail/peephole-1.2"
 
 src_install() {
-	einstall || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 	dodoc AUTHORS ChangeLog README
 }
 
