@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SVG
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/ChangeLog,v 1.60 2014/08/29 17:00:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/ChangeLog,v 1.61 2014/09/01 12:14:16 zlogene Exp $
+
+  29 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> -SVG-2.510.0.ebuild,
+  -SVG-2.530.0.ebuild:
+  Dtop old
 
   29 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> -SVG-2.510.0.ebuild,
   -SVG-2.530.0.ebuild:
