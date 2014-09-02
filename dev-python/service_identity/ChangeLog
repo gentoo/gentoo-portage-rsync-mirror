@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/service_identity
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/service_identity/ChangeLog,v 1.1 2014/09/02 08:26:18 idella4 Exp $
+
+*service_identity-14.0.0 (02 Sep 2014)
+
+  02 Sep 2014; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +service_identity-14.0.0.ebuild:
+  new package, dep to testsuite of tornado, written by me
