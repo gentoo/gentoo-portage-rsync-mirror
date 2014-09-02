@@ -1,31 +1,32 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.16.4-r1.ebuild,v 1.3 2014/03/09 12:02:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.18.4.ebuild,v 1.1 2014/09/02 10:05:05 pacho Exp $
 
 EAPI="5"
-CLUTTER_LA_PUNT="yes"
+GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
-# Inherit gnome2 after clutter to download sources from gnome.org
-# since clutter-project.org doesn't provide .xz tarballs
-inherit clutter eutils gnome2 virtualx
+inherit gnome2 virtualx
 
+HOMEPAGE="https://wiki.gnome.org/Projects/Clutter"
 DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 
 LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0"
 IUSE="debug doc gtk +introspection test" # evdev tslib
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 # NOTE: glx flavour uses libdrm + >=mesa-7.3
 # XXX: uprof needed for profiling
 # >=libX11-1.3.1 needed for X Generic Event support
+# XXX: evdev input requires libinput and gudev >= 136
 RDEPEND="
 	>=dev-libs/glib-2.37.3:2
 	>=dev-libs/atk-2.5.3[introspection?]
 	>=dev-libs/json-glib-0.12[introspection?]
-	>=media-libs/cogl-1.15.9:1.0=[introspection?,pango]
+	>=media-libs/cogl-1.17.5:1.0=[introspection?,pango]
 	media-libs/fontconfig
-	>=x11-libs/cairo-1.10:=[glib]
+	>=x11-libs/cairo-1.12:=[glib]
 	>=x11-libs/pango-1.30[introspection?]
 
 	virtual/opengl
@@ -41,35 +42,30 @@ RDEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 "
 DEPEND="${RDEPEND}
-	>=dev-util/gtk-doc-am-1.15
+	>=dev-util/gtk-doc-am-1.20
 	virtual/pkgconfig
 	>=sys-devel/gettext-0.17
 	doc? (
-		>=dev-util/gtk-doc-1.15
+		>=dev-util/gtk-doc-1.20
 		>=app-text/docbook-sgml-utils-0.6.14[jadetex]
 		dev-libs/libxslt )
 	test? ( x11-libs/gdk-pixbuf )"
 
 # Tests fail with both swrast and llvmpipe
 # They pass under r600g or i965, so the bug is in mesa
-RESTRICT="test"
+#RESTRICT="test"
 
 src_prepare() {
 	# We only need conformance tests, the rest are useless for us
-	sed -e 's/^\(SUBDIRS =\).*/\1 accessibility data conform/g' \
+	sed -e 's/^\(SUBDIRS =\).*/\1 accessibility conform/g' \
 		-i tests/Makefile.am || die "am tests sed failed"
-	sed -e 's/^\(SUBDIRS =\)[^\]*/\1  accessibility data conform/g' \
+	sed -e 's/^\(SUBDIRS =\)[^\]*/\1  accessibility conform/g' \
 		-i tests/Makefile.in || die "in tests sed failed"
-
-	# Fix buffer_age code path, bug #503560
-	epatch "${FILESDIR}/${P}-buffer-age.patch"
 
 	gnome2_src_prepare
 }
 
 src_configure() {
-	DOCS="README NEWS ChangeLog*"
-
 	# XXX: Conformance test suite (and clutter itself) does not work under Xvfb
 	# (GLX error blabla)
 	# XXX: Profiling, coverage disabled for now
@@ -92,21 +88,9 @@ src_configure() {
 		$(use_enable doc docs) \
 		$(use_enable gtk gdk-backend) \
 		$(use_enable introspection) \
-		$(use_enable test conformance) \
 		$(use_enable test gdk-pixbuf)
 }
 
-src_compile() {
-	default
-	if use test; then
-		emake -C tests/conform
-	fi
-}
-
 src_test() {
-	Xemake check
-}
-
-src_install() {
-	clutter_src_install
+	Xemake check -C tests/conform
 }

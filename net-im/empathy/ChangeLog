@@ -1,6 +1,13 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.154 2014/08/05 18:34:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.155 2014/09/02 10:16:14 pacho Exp $
+
+*empathy-3.12.5 (02 Sep 2014)
+
+  02 Sep 2014; Pacho Ramos <pacho@gentoo.org> +empathy-3.12.5.ebuild,
+  -empathy-3.10.3.ebuild, -empathy-3.12.3.ebuild:
+  Version bump, drop old, UTF8 is needed for python stuff during building
+  (#489774 by Mike Gilbert, tontisimo and others).
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> empathy-2.34.0-r2.ebuild,
   empathy-3.10.3.ebuild, empathy-3.12.3.ebuild, empathy-3.12.4.ebuild:

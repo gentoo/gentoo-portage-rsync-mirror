@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.3.ebuild,v 1.3 2014/07/24 18:32:39 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.5.ebuild,v 1.1 2014/09/02 10:16:14 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -94,6 +94,7 @@ PDEPEND=">=net-im/telepathy-mission-control-5.14"
 
 pkg_setup() {
 	python-any-r1_pkg_setup
+	export PYTHONIOENCODING=UTF-8 # See bug 489774
 }
 
 src_configure() {

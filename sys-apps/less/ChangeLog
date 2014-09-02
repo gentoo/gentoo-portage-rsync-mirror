@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.183 2014/08/25 03:24:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.184 2014/09/02 10:15:30 polynomial-c Exp $
+
+*less-466 (02 Sep 2014)
+
+  02 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> -less-443.ebuild,
+  -less-445.ebuild, -less-445-r1.ebuild, -less-449.ebuild, -less-450.ebuild,
+  -less-456.ebuild, -less-459.ebuild, -less-460.ebuild, +less-466.ebuild:
+  Version bump. Removed old.
 
   25 Aug 2014; Mike Gilbert <floppym@gentoo.org> files/less.envd:
   Revert SYSTEMD_LESS; systemd has a better default hard-coded.
