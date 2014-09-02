@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1361 2014/08/30 14:06:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1362 2014/09/02 15:28:05 mgorny Exp $
+
+  02 Sep 2014; Michał Górny <mgorny@gentoo.org> bash-completion-r1.eclass:
+  Add bashcomp_alias function to create command aliases for completion.
 
   30 Aug 2014; Anthony G. Basile <blueness@gentoo.org> pax-utils.eclass:
   Update pax-utils.eclass according to bug #520198

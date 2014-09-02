@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.4.ebuild,v 1.4 2014/08/06 22:10:47 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.4.ebuild,v 1.5 2014/09/02 15:09:29 dev-zero Exp $
 
 EAPI=5
 
@@ -146,7 +146,7 @@ src_install () {
 	DOCS=( AUTHORS ChangeLog NEWS README TODO COPYRIGHT CONVENTIONS )
 	HTML_DOCS=( doc/html/ )
 
-	multibuild_foreach_variant multilib_parallel_foreach_abi autotools-utils_src_install
+	multibuild_foreach_variant multilib_foreach_abi autotools-utils_src_install
 
 	if use doc; then
 		dodoc doc/*.pdf

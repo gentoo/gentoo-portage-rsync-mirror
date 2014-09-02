@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.13 2014/08/27 08:15:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.14 2014/09/02 15:28:05 mgorny Exp $
 
 # @ECLASS: bash-completion-r1.eclass
 # @MAINTAINER:
@@ -115,4 +115,20 @@ newbashcomp() {
 		insinto "$(_bash-completion-r1_get_bashcompdir)"
 		newins "${@}"
 	)
+}
+
+# @FUNCTION: bashcomp_alias
+# @USAGE: <basename> <alias>...
+# @DESCRIPTION:
+# Alias <basename> completion to one or more commands (<alias>es).
+bashcomp_alias() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	[[ ${#} -lt 2 ]] && die "Usage: ${FUNCNAME} <basename> <alias>..."
+	local base=${1} f
+	shift
+
+	for f; do
+		dosym "${base}" "$(_bash-completion-r1_get_bashcompdir)/${f}"
+	done
 }

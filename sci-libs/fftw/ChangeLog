@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.160 2014/08/28 15:44:22 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.161 2014/09/02 15:09:29 dev-zero Exp $
+
+  02 Sep 2014; Tiziano Müller <dev-zero@gentoo.org> fftw-3.3.4.ebuild:
+  Disable parallel ABI-install (bug #521044).
 
   28 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> fftw-2.1.5-r8.ebuild:
   arm stable wrt bug #496422

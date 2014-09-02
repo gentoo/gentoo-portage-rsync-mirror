@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gforth
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.37 2013/05/15 05:35:44 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.38 2014/09/02 15:30:17 pacho Exp $
+
+  02 Sep 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Carsten will take care of this
 
   15 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Fix metadata.xml
