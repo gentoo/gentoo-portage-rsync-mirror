@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/proot-4.0.0.ebuild,v 1.1 2014/07/23 12:46:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/proot-4.0.1.ebuild,v 1.1 2014/09/02 07:07:02 pinkbyte Exp $
 
 EAPI=5
 MY_PN="PRoot"
@@ -30,7 +30,8 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 src_prepare() {
 	epatch  "${FILESDIR}/${PN}-3.2.1-makefile.patch" \
 		"${FILESDIR}/${PN}-2.3.1-lib-paths-fix.patch" \
-		"${FILESDIR}/${PN}-3.2.2-build-care.patch"
+		"${FILESDIR}/${PN}-3.2.2-build-care.patch" \
+		"${FILESDIR}/${PN}-4.0.1-argv.patch"
 	epatch_user
 }
 

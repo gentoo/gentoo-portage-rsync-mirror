@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/proot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/ChangeLog,v 1.9 2014/07/23 12:46:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/ChangeLog,v 1.10 2014/09/02 07:07:02 pinkbyte Exp $
+
+*proot-4.0.1 (02 Sep 2014)
+
+  02 Sep 2014; Sergey Popov <pinkbyte@gentoo.org> -proot-4.0.0.ebuild,
+  +proot-4.0.1.ebuild, +files/proot-4.0.1-argv.patch:
+  Version bump, wrt bug #520050 with fix for bug #517496. Thanks to Joakim
+  Tjernlund <Joakim.Tjernlund AT transmode.se> for discovering this issues.
+  Drop old version
 
 *proot-4.0.0 (23 Jul 2014)
 
