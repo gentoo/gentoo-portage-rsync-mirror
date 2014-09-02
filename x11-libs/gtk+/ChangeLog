@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.732 2014/08/25 11:03:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.733 2014/09/02 00:26:32 ottxor Exp $
+
+  02 Sep 2014; Christoph Junghans <ottxor@gentoo.org>
+  +files/gtk+-3.12.2-darwin10.6.patch, gtk+-3.12.2.ebuild:
+  fix build on Darwin 10.6 (bug #519058)
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gtk+-2.24.24.ebuild,
   gtk+-3.12.2.ebuild:

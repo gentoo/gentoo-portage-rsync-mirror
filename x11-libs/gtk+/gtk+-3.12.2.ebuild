@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.12.2.ebuild,v 1.8 2014/08/25 11:03:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.12.2.ebuild,v 1.9 2014/09/02 00:26:32 ottxor Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit flag-o-matic gnome2 multilib virtualx
+inherit eutils flag-o-matic gnome2 multilib virtualx
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
@@ -107,6 +107,9 @@ src_prepare() {
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2
 	strip-flags
+
+	# Build fix on Darwin 10.6; bug #519058
+	epatch "${FILESDIR}/${P}-darwin10.6.patch"
 
 	if ! use test ; then
 		# don't waste time building tests
