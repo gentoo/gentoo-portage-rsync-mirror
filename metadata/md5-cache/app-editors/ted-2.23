@@ -9,4 +9,4 @@ RDEPEND=x11-libs/gtk+:2 media-libs/tiff virtual/jpeg media-libs/libpng x11-libs/
 SLOT=0
 SRC_URI=ftp://ftp.nluug.nl/pub/editors/ted/ted-2.23.src.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=59c633a7924ab8582ece65e66f46ff7b
+_md5_=001d73adde8bad7389117526f1557539

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-4.0.1.ebuild,v 1.1 2014/09/02 09:35:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-4.0.1.ebuild,v 1.2 2014/09/02 11:25:14 idella4 Exp $
 
 EAPI=5
 
@@ -17,13 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="curl test"
 
-RDEPEND="curl? ( $(python_gen_cond_dep 'dev-python/pycurl[${PYTHON_USEDEP}]' python2_7) )"
-DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? (
+RDEPEND="curl? ( $(python_gen_cond_dep 'dev-python/pycurl[${PYTHON_USEDEP}]' python2_7) )
+		dev-python/certifi[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	test? ( ${RDEPEND}
 		dev-python/mock[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep 'dev-python/twisted-names[${PYTHON_USEDEP}]' python2_7)
-		dev-python/certifi[${PYTHON_USEDEP}]
 		dev-python/service_identity[${PYTHON_USEDEP}]
 	)"
 

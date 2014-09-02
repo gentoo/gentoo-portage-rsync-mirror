@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.23.ebuild,v 1.5 2013/06/29 16:25:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.23.ebuild,v 1.6 2014/09/02 11:13:08 pacho Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -39,6 +39,9 @@ src_prepare() {
 		-e 's/.static//g' \
 		-e '/strip/d' \
 		tedPackage/makefile.in || die 'sed failed on tedPackage/makefile.in'
+
+	# Fix build with freetype-2.5
+	sed -i "s|^\(#[ \t]*include[ \t]*<\)freetype/|\1|" appFrame/appFontConfig.c || die
 
 	mkdir lib || die
 }

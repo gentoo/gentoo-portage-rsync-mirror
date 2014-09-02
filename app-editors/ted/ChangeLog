@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ted
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.63 2013/07/03 07:46:23 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.64 2014/09/02 11:13:08 pacho Exp $
+
+  02 Sep 2014; Pacho Ramos <pacho@gentoo.org> ted-2.23.ebuild:
+  Fix build with freetype-2.5
 
   03 Jul 2013; Michael Palimaka <kensington@gentoo.org>
   -files/ted-2.21-make.patch, -ted-2.22.ebuild:
