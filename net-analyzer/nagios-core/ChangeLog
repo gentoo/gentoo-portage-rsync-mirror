@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.191 2014/08/03 16:31:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.192 2014/09/02 14:29:10 creffett Exp $
+
+*nagios-core-3.5.1 (02 Sep 2014)
+
+  02 Sep 2014; Chris Reffett <creffett@gentoo.org>
+  +files/nagios-core-3.5.1-process_cgivars.patch, +nagios-core-3.5.1.ebuild:
+  Bump to 3.5.1 and add patch wrt security bugs 501200, 495132, 447802
 
   03 Aug 2014;  <tgall@gentoo.org> nagios-core-3.3.1.ebuild:
   arm64, initial support
