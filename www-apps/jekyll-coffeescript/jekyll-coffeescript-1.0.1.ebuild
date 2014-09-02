@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-coffeescript/jekyll-coffeescript-1.0.0.ebuild,v 1.1 2014/08/15 14:50:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-coffeescript/jekyll-coffeescript-1.0.1.ebuild,v 1.1 2014/09/02 00:53:05 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -11,6 +11,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 
 inherit ruby-fakegem
 
+SRC_URI="https://github.com/jekyll/jekyll-coffeescript/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 DESCRIPTION="A CoffeeScript Converter for Jekyll"
 HOMEPAGE="https://github.com/jekyll/jekyll-coffeescript"
 
