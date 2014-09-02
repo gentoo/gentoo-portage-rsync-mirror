@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.80 2014/08/29 18:35:57 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.81 2014/09/02 03:24:55 ryao Exp $
 
 EAPI=5
 
@@ -74,8 +74,8 @@ src_prepare() {
 
 src_configure() {
 	local myeconfargs=(
-		--bindir="${EROOT}bin"
-		--with-rootlibdir="${EROOT}$(get_libdir)"
+		--bindir="${EPREFIX}/bin"
+		--with-rootlibdir="${EPREFIX}/$(get_libdir)"
 		--enable-shared
 		$(use_enable static-libs static)
 		$(use_enable tools)

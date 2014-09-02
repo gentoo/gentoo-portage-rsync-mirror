@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-16.ebuild,v 1.16 2014/08/29 18:35:57 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-16.ebuild,v 1.17 2014/09/02 03:24:55 ryao Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils multilib
@@ -59,8 +59,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--bindir="${EROOT}bin" \
-		--with-rootlibdir="${EROOT}$(get_libdir)" \
+		--bindir="${EPREFIX}/bin" \
+		--with-rootlibdir="${EPREFIX}/$(get_libdir)" \
 		--enable-shared \
 		$(use_enable static-libs static) \
 		$(use_enable tools) \

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/llvmmath
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmmath/ChangeLog,v 1.1 2014/02/11 03:35:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmmath/ChangeLog,v 1.2 2014/09/02 03:23:36 patrick Exp $
+
+  02 Sep 2014; Patrick Lauer <patrick@gentoo.org> llvmmath-0.1.2.ebuild:
+  Add py3.4 support
 
 *llvmmath-0.1.2 (11 Feb 2014)
 

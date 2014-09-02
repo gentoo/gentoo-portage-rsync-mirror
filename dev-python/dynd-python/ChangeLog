@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dynd-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dynd-python/ChangeLog,v 1.2 2014/06/10 20:48:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dynd-python/ChangeLog,v 1.3 2014/09/02 03:28:57 patrick Exp $
+
+  02 Sep 2014; Patrick Lauer <patrick@gentoo.org> dynd-python-0.6.2.ebuild:
+  Add py3.4 support
 
 *dynd-python-0.6.2 (10 Jun 2014)
 
