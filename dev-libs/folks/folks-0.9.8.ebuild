@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.9.6.ebuild,v 1.3 2014/03/09 11:54:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.9.8.ebuild,v 1.1 2014/09/02 10:38:39 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -10,11 +10,11 @@ VALA_USE_DEPEND="vapigen"
 inherit gnome2 vala virtualx
 
 DESCRIPTION="Library for aggregating people from multiple sources"
-HOMEPAGE="https://live.gnome.org/Folks"
+HOMEPAGE="https://wiki.gnome.org/Projects/Folks"
 
 LICENSE="LGPL-2.1+"
 SLOT="0/25" # subslot = libfolks soname version
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
 # TODO: --enable-profiling
 # Vala isn't really optional, https://bugzilla.gnome.org/show_bug.cgi?id=701099
 IUSE="bluetooth eds socialweb +telepathy test tracker utils zeitgeist"
@@ -30,10 +30,10 @@ COMMON_DEPEND="
 	sys-libs/readline:=
 
 	bluetooth? ( >=net-wireless/bluez-5 )
-	eds? ( >=gnome-extra/evolution-data-server-3.9.1:=[vala] )
+	eds? ( >=gnome-extra/evolution-data-server-3.8:=[vala] )
 	socialweb? ( >=net-libs/libsocialweb-0.25.20 )
 	telepathy? ( >=net-libs/telepathy-glib-0.19[vala] )
-	tracker? ( >=app-misc/tracker-0.16:= )
+	tracker? ( >=app-misc/tracker-1:0= )
 	zeitgeist? ( >=gnome-extra/zeitgeist-0.9.14 )
 "
 # telepathy-mission-control needed at runtime; it is used by the telepathy
@@ -43,6 +43,9 @@ RDEPEND="${COMMON_DEPEND}
 "
 # folks socialweb backend requires that libsocialweb be built with USE=vala,
 # even when building folks with --disable-vala.
+#
+# FIXME:
+# test? ( bluetooth? ( dbusmock is missing in the tree ) )
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/gobject-introspection-1.30
 	>=dev-util/intltool-0.50.0
@@ -50,11 +53,19 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 
 	socialweb? ( >=net-libs/libsocialweb-0.25.15[vala] )
-	test? ( sys-apps/dbus )
+	test? ( sys-apps/dbus
+		bluetooth? (
+			>=gnome-extra/evolution-data-server-3.9.1
+			>=dev-libs/glib-2.39.2 ) )
 	!<dev-lang/vala-0.22.1:0.22
 "
 
 src_prepare() {
+	# Allow building against tracker-1.0
+	# https://bugzilla.gnome.org/show_bug.cgi?id=728520
+	sed -e 's/\(TRACKER_SPARQL_MAJOR\)=0.16/\1=1.0/' \
+		-i configure{.ac,} || die
+
 	vala_src_prepare
 	gnome2_src_prepare
 }

@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9339 2014/09/02 05:30:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9341 2014/09/02 10:59:10 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Sep 2014; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Use the correct slots for the jruby mask and add missing virtual/rubygems.
+
+  02 Sep 2014; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Update gforth message to postpone its removal a bit more
 
   02 Sep 2014; Hans de Graaff <graaff@gentoo.org> base/use.mask, package.mask:
   Mask jruby 1.6 and its RUBY_TARGETS USE flag.

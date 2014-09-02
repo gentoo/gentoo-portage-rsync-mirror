@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.10.3.ebuild,v 1.5 2014/06/16 14:56:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.12.2.ebuild,v 1.1 2014/09/02 10:31:45 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -9,13 +9,13 @@ GNOME2_LA_PUNT="yes"
 inherit eutils gnome2
 
 DESCRIPTION="Simple document viewer for GNOME"
-HOMEPAGE="http://www.gnome.org/projects/evince/"
+HOMEPAGE="https://wiki.gnome.org/Apps/Evince"
 
 LICENSE="GPL-2+ CC-BY-SA-3.0"
 # subslot = evd3.(suffix of libevdocument3)-evv3.(suffix of libevview3)
 SLOT="0/evd3.4-evv3.3"
 IUSE="debug djvu dvi +introspection libsecret nautilus +postscript t1lib tiff xps"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 
 # Since 2.26.2, can handle poppler without cairo support. Make it optional ?
 # not mature enough
@@ -29,9 +29,6 @@ COMMON_DEPEND="
 	sys-libs/zlib:=
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-3.8:3[introspection?]
-	x11-libs/libX11:=
-	>=x11-libs/libSM-1:=
-	x11-libs/libICE:=
 	gnome-base/gsettings-desktop-schemas
 	>=x11-libs/cairo-1.10:=
 	>=app-text/poppler-0.24:=[cairo]
@@ -43,7 +40,7 @@ COMMON_DEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-1 )
 	libsecret? ( >=app-crypt/libsecret-0.5 )
 	nautilus? ( >=gnome-base/nautilus-2.91.4[introspection?] )
-	postscript? ( >=app-text/libspectre-0.2.0:= )
+	postscript? ( >=app-text/libspectre-0.2:= )
 	tiff? ( >=media-libs/tiff-3.6:0= )
 	xps? ( >=app-text/libgxps-0.2.1:= )
 "
@@ -60,16 +57,14 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	>=dev-util/gtk-doc-am-1.13
 	>=dev-util/intltool-0.35
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 # Needs dogtail and pyspi from http://fedorahosted.org/dogtail/
 # Releases: http://people.redhat.com/zcerza/dogtail/releases/
 RESTRICT="test"
 
 src_prepare() {
-	# ???
-	ELTCONF="--portage"
-
 	gnome2_src_prepare
 
 	# Do not depend on gnome-icon-theme, bug #326855, #391859
@@ -84,7 +79,6 @@ src_configure() {
 		--enable-pdf \
 		--enable-comics \
 		--enable-thumbnailer \
-		--with-smclient=xsmp \
 		--with-platform=gnome \
 		--enable-dbus \
 		$(use_enable djvu) \
