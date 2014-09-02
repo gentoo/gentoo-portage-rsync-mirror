@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-215-r1.ebuild,v 1.8 2014/08/01 15:36:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-215-r1.ebuild,v 1.9 2014/09/02 12:32:27 ssuominen Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/os-headers
 	virtual/pkgconfig
 	>=sys-devel/make-3.82-r4
-	>=sys-kernel/linux-headers-3.5
+	>=sys-kernel/linux-headers-3.13
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 # Try with `emerge -C docbook-xml-dtd` to see the build failure without DTDs
 if [[ ${PV} = 9999* ]]; then

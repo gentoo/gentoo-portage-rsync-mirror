@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1086 2014/08/31 14:37:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1087 2014/09/02 12:32:27 ssuominen Exp $
+
+  02 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> udev-215-r1.ebuild:
+  Raise linux-headers dependency for 215-r1 because of the file handle struct
+  patch wrt #521902. This problem is specific to 215-r1, and -r1 only.
 
   31 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Make sure CONFIG_FW_LOADER_USER_HELPER is set to =n and remove references to
