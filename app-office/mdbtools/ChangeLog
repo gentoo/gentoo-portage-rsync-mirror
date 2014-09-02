@@ -1,6 +1,9 @@
 # ChangeLog for app-office/mdbtools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.60 2013/10/14 13:30:15 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.61 2014/09/02 07:35:43 pinkbyte Exp $
+
+  02 Sep 2014; Sergey Popov <pinkbyte@gentoo.org> mdbtools-0.7.1.ebuild:
+  Stable on amd64 and x86, wrt bug #521896
 
 *mdbtools-0.7.1 (14 Oct 2013)
 
