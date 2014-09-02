@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/openmortal
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.15 2007/02/07 06:40:28 nyhm Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.16 2014/09/02 21:50:25 mr_bones_ Exp $
+
+*openmortal-0.7-r1 (02 Sep 2014)
+
+  02 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/openmortal-0.7-freetype.patch, +openmortal-0.7-r1.ebuild:
+  add freetype patch from Andrei Slavoiu (bug #506762); EAPI=5
 
   07 Feb 2007; Tristan Heaven <nyhm@gentoo.org> openmortal-0.7.ebuild:
   Install menu entry, bug #160239
