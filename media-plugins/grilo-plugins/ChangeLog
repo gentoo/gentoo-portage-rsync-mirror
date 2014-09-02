@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/grilo-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.41 2014/07/23 15:20:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.42 2014/09/02 13:39:14 pacho Exp $
+
+*grilo-plugins-0.2.13 (02 Sep 2014)
+
+  02 Sep 2014; Pacho Ramos <pacho@gentoo.org> +grilo-plugins-0.2.13.ebuild,
+  -grilo-plugins-0.2.10.ebuild, metadata.xml:
+  Version bump, drop old
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> grilo-plugins-0.2.12.ebuild:
   Stable for x86, wrt bug #512012

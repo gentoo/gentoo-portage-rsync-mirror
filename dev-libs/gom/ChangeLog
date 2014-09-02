@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/gom
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gom/ChangeLog,v 1.1 2014/09/02 13:35:14 pacho Exp $
+
+*gom-0.2.1 (02 Sep 2014)
+
+  02 Sep 2014; Pacho Ramos <pacho@gentoo.org> +gom-0.2.1.ebuild, +metadata.xml:
+  New package needed for grilo-plugins

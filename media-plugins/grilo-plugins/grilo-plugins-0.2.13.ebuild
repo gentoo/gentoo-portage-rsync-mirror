@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.10.ebuild,v 1.6 2014/03/09 12:02:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.13.ebuild,v 1.1 2014/09/02 13:39:14 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -13,12 +13,14 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Grilo"
 
 LICENSE="LGPL-2.1+"
 SLOT="0.2"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
-IUSE="daap +dvd flickr freebox gnome-online-accounts pocket tracker upnp-av +vimeo +youtube"
+KEYWORDS="~amd64 ~x86"
+IUSE="daap +dvd flickr freebox gnome-online-accounts lua pocket thetvdb tracker upnp-av +vimeo +youtube"
 
 RDEPEND="
-	>=dev-libs/glib-2.32:2
-	>=media-libs/grilo-0.2.8:${SLOT}[network,playlist]
+	>=dev-libs/glib-2.36:2
+	>=media-libs/grilo-0.2.10:${SLOT}[network,playlist]
+	>=media-libs/libmediaart-0.1
+	>=dev-libs/gom-0.2.1
 
 	dev-libs/gmime:2.6
 	dev-libs/json-glib
@@ -30,21 +32,22 @@ RDEPEND="
 	flickr? ( net-libs/liboauth )
 	freebox? ( net-dns/avahi )
 	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.7.1 )
+	lua? (
+		>=dev-lang/lua-5.2
+		app-arch/libarchive )
 	pocket? (
-		dev-libs/json-glib
-		>=net-libs/gnome-online-accounts-3.7.1
-		>=net-libs/rest-0.7
+		>=net-libs/gnome-online-accounts-3.11.4
+		>=net-libs/rest-0.7.90
 		>=dev-libs/totem-pl-parser-3.4.1 )
+	thetvdb? (
+		app-arch/libarchive
+		dev-libs/libxml2 )
 	tracker? ( >=app-misc/tracker-0.10.5:= )
 	youtube? (
 		>=dev-libs/libgdata-0.9.1
 		dev-libs/totem-pl-parser )
-	upnp-av? (
-		net-libs/gssdp
-		>=net-libs/gupnp-0.13
-		>=net-libs/gupnp-av-0.5 )
+	upnp-av? ( net-libs/libsoup )
 	vimeo? (
-		dev-libs/libgcrypt:0
 		dev-libs/totem-pl-parser )
 "
 DEPEND="${RDEPEND}
@@ -67,7 +70,6 @@ src_configure() {
 		--enable-bookmarks \
 		--enable-filesystem \
 		--enable-gravatar \
-		--enable-guardianvideos \
 		--enable-jamendo \
 		--enable-lastfm-albumart \
 		--enable-localmetadata \
@@ -82,9 +84,11 @@ src_configure() {
 		$(use_enable flickr) \
 		$(use_enable freebox) \
 		$(use_enable gnome-online-accounts goa) \
+		$(use_enable lua lua-factory) \
 		$(use_enable pocket) \
+		$(use_enable thetvdb) \
 		$(use_enable tracker) \
-		$(use_enable upnp-av upnp) \
+		$(use_enable upnp-av dleyna) \
 		$(use_enable vimeo) \
 		$(use_enable youtube)
 }
