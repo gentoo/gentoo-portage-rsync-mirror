@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.135 2014/08/22 14:26:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.136 2014/09/02 22:34:36 blueness Exp $
+
+  02 Sep 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/eudev-fix-selinux-headers.patch, eudev-1.10.ebuild:
+  Fix bug #520684
 
 *eudev-1.10 (22 Aug 2014)
 

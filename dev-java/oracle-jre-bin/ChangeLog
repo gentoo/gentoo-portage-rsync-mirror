@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/oracle-jre-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.63 2014/07/21 19:08:39 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.64 2014/09/02 22:49:52 sping Exp $
+
+*oracle-jre-bin-1.8.0.20 (02 Sep 2014)
+
+  02 Sep 2014; Sebastian Pipping <sping@gentoo.org>
+  +oracle-jre-bin-1.8.0.20.ebuild:
+  Dare to bump to 1.8.0.20 myself (bug #521304)
 
   21 Jul 2014; Ralph Sennhauser <sera@gentoo.org>
   -oracle-jre-bin-1.7.0.55.ebuild, -oracle-jre-bin-1.7.0.60.ebuild,

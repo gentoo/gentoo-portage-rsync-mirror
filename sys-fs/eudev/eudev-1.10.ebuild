@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.10.ebuild,v 1.1 2014/08/22 14:26:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.10.ebuild,v 1.2 2014/09/02 22:34:36 blueness Exp $
 
 EAPI="5"
 
@@ -103,6 +103,9 @@ src_prepare() {
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' -i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
+
+	# Bug #520684
+	epatch "${FILESDIR}"/${PN}-fix-selinux-headers.patch
 
 	epatch_user
 
