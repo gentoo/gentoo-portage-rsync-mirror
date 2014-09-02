@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intel-ocl-sdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/ChangeLog,v 1.12 2014/08/31 15:17:36 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/ChangeLog,v 1.13 2014/09/01 23:36:15 zerochaos Exp $
+
+  01 Sep 2014; Rick Farina <zerochaos@gentoo.org> metadata.xml:
+  update maintainers entry
 
 *intel-ocl-sdk-4.4.0.117-r1 (31 Aug 2014)
 
