@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/tuareg-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.47 2014/04/13 16:39:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.48 2014/09/02 13:19:34 ulm Exp $
+
+*tuareg-mode-2.0.8 (02 Sep 2014)
+
+  02 Sep 2014; Ulrich Müller <ulm@gentoo.org> -tuareg-mode-2.0.6.ebuild,
+  tuareg-mode-2.0.7.ebuild, +tuareg-mode-2.0.8.ebuild,
+  -files/50tuareg-mode-gentoo-2.0.6.el, +files/50tuareg-mode-gentoo.el:
+  Version bump, bug 521950. Move site-init file to canonical name. Remove old.
 
   13 Apr 2014; Ulrich Müller <ulm@gentoo.org> -tuareg-mode-2.0.1.ebuild,
   -files/50tuareg-mode-gentoo.el, -files/tuareg-mode-2.0.1-make_install.patch:

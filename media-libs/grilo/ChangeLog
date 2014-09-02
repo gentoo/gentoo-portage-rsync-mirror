@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.41 2014/05/04 12:11:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.42 2014/09/02 13:04:45 pacho Exp $
+
+*grilo-0.2.11 (02 Sep 2014)
+
+  02 Sep 2014; Pacho Ramos <pacho@gentoo.org> +grilo-0.2.11.ebuild,
+  -grilo-0.2.9.ebuild:
+  Version bump, drop old, don't rename grilo-simple-playlist as we don't have
+  the older slot for some time.
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org> grilo-0.2.10.ebuild:
   x86 stable, bug 508862

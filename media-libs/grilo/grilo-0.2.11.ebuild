@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.9.ebuild,v 1.5 2014/03/09 12:02:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.11.ebuild,v 1.1 2014/09/02 13:04:45 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -16,13 +16,13 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Grilo"
 
 LICENSE="LGPL-2.1+"
 SLOT="0.2/1" # subslot is libgrilo-0.2 soname suffix
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="gtk examples +introspection +network playlist test vala"
 REQUIRED_USE="test? ( introspection )"
 
 RDEPEND="
-	>=dev-libs/glib-2.32:2
+	>=dev-libs/glib-2.34:2
 	dev-libs/libxml2:2
 	net-libs/liboauth
 	gtk? ( >=x11-libs/gtk+-3:3 )
@@ -78,12 +78,6 @@ src_install() {
 	gnome2_src_install
 	# Upstream made this conditional on gtk-doc build...
 	emake -C doc install DESTDIR="${ED}"
-
-	# Prevent file collision with other slot
-	if use vala; then
-		mv "${ED}usr/bin/grilo-simple-playlist" \
-			"${ED}usr/bin/grilo-simple-playlist-${SLOT%/*}" || die
-	fi
 
 	if use examples; then
 		# Install example code
