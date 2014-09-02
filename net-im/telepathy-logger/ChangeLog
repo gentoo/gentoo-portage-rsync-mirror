@@ -1,6 +1,11 @@
 # ChangeLog for net-im/telepathy-logger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/ChangeLog,v 1.64 2014/08/05 18:34:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/ChangeLog,v 1.65 2014/09/02 09:48:27 pacho Exp $
+
+*telepathy-logger-0.8.1 (02 Sep 2014)
+
+  02 Sep 2014; Pacho Ramos <pacho@gentoo.org> +telepathy-logger-0.8.1.ebuild:
+  Version bump
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> telepathy-logger-0.4.0-r1.ebuild,
   telepathy-logger-0.6.0.ebuild, telepathy-logger-0.8.0.ebuild:
