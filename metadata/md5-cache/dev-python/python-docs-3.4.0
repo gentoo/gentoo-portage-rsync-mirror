@@ -6,4 +6,4 @@ KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
 LICENSE=PSF-2
 SLOT=3.4
 SRC_URI=http://www.python.org/ftp/python/doc/3.4.0/python-3.4.0-docs-html.tar.bz2
-_md5_=72bf7daf49f2ec56d32f29cd51e415d0
+_md5_=e3a638635a8f9e4593a9a27b1ffabc93
