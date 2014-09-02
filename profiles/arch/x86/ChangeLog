@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.173 2014/08/04 02:13:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.174 2014/09/02 11:51:19 graaff Exp $
+
+  02 Sep 2014; Hans de Graaff <graaff@gentoo.org> use.mask:
+  ruby_targets_jruby is now masked everywhere.
 
   04 Aug 2014; Mike Frysinger <vapier@gentoo.org> package.use.mask:
   Unmask x86-specific flashrom USE flags.

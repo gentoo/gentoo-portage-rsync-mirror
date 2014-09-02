@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.79 2014/07/12 15:02:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.80 2014/09/02 11:51:44 chainsaw Exp $
+
+*lilo-24.0-r1 (02 Sep 2014)
+
+  02 Sep 2014; Tony Vroon <chainsaw@gentoo.org> +lilo-24.0-r1.ebuild:
+  Fixing up dolilo for changed kernel build processes resulting in a duplicate
+  label and thus a defective configuration file. Also copes with /dev/ram0 for
+  initramfs boots.
 
   12 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> lilo-24.0.ebuild:
   amd64 stable wrt bug #503058

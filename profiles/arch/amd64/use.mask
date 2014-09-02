@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.63 2014/07/27 09:22:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.64 2014/09/02 11:51:44 graaff Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
@@ -77,7 +77,7 @@
 
 # 2010/01/08 - Diego E. Pettenò <flameeyes@gentoo.org>
 # Add support for JRuby targets where jruby is available
--ruby_targets_jruby
+# -ruby_targets_jruby
 
 # 2011/10/21 - Hans de Graaff <graaff@gentoo.org>
 # Add support for Rubinius targets where rbx is available
