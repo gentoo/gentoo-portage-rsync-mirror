@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=~dev-libs/libdynd-0.6.2 >=dev-python/numpy-1.5[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)] >=dev-python/cython-0.19[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)] test? ( dev-python/nose[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)] ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=~dev-libs/libdynd-0.6.2 >=dev-python/numpy-1.5[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] >=dev-python/cython-0.19[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] test? ( dev-python/nose[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Python exposure of multidimensionnal array library libdynd
 EAPI=5
 HOMEPAGE=https://github.com/ContinuumIO/dynd-python
-IUSE=doc test python_targets_python2_7 python_targets_python3_2 python_targets_python3_3
+IUSE=doc test python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
-RDEPEND=~dev-libs/libdynd-0.6.2 >=dev-python/numpy-1.5[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
+RDEPEND=~dev-libs/libdynd-0.6.2 >=dev-python/numpy-1.5[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
 SLOT=0
 SRC_URI=https://github.com/ContinuumIO/dynd-python/archive/v0.6.2.tar.gz -> dynd-python-0.6.2.tar.gz
 _eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=12e26dc7b026af6bf2f31d64f112fc52
+_md5_=8178a2b2b006f3907c0e22eda28d65e3

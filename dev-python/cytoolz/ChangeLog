@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/cytoolz
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cytoolz/ChangeLog,v 1.1 2014/09/02 03:59:10 patrick Exp $
+
+*cytoolz-0.7.0 (02 Sep 2014)
+
+  02 Sep 2014; Patrick Lauer <patrick@gentoo.org> +cytoolz-0.7.0.ebuild,
+  +metadata.xml:
+  Initial import, dependency of dev-python/blaze
