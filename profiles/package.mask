@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15999 2014/09/02 00:30:44 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16000 2014/09/02 05:30:23 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,21 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (1 Sep 2014)
+# Mask jruby 1.6.x for removal in 30 days. This version is still based
+# on ruby 1.8.  Many packages are no longer compatible with its
+# syntax, and security support for ruby 1.8 has stopped. This
+# incompatibility now has reached central packages like rubygems so we
+# have decided to remove jruby 1.6 now.  jruby upstream has released
+# the 1.7.x series some time ago, but unfortunately we only have a
+# masked version that has too many issues to unmask. Please let us
+# know if you know java and ruby and want to help out here:
+# http://moving-innovations.com/blog/2014/04/23/the-precarious-state-of-jruby-in-gentoo
+=dev-java/jruby-1.6*
+virtual/ruby-rdoc:2
+virtual/ruby-ssl:2
+virtual/ruby-threads:2
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (29 Aug 2014)
 # Dev channel releases are only for people who are developers or want more

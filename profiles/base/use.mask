@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.205 2014/08/29 12:12:46 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.206 2014/09/02 05:30:24 graaff Exp $
 
 # Mask use-flag firebird and package dev-db/firebird for bug 460780
 firebird
@@ -13,6 +13,7 @@ cuda
 
 # on the way out
 ruby_targets_ruby18
+ruby_targets_jruby
 
 # masking here and unmasking in default/linux/
 kmod
