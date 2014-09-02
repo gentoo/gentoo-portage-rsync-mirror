@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.113 2014/08/03 16:45:03 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.114 2014/09/02 14:38:22 creffett Exp $
+
+*nagios-3.5.1 (02 Sep 2014)
+
+  02 Sep 2014; Chris Reffett <creffett@gentoo.org> +nagios-3.5.1.ebuild:
+  Bump along with nagios-core
 
   03 Aug 2014;  <tgall@gentoo.org> nagios-3.3.1.ebuild:
   arm64, initial support
