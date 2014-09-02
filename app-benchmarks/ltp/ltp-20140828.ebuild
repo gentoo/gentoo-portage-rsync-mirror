@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20120903.ebuild,v 1.3 2013/02/15 17:23:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20140828.ebuild,v 1.1 2014/09/02 19:43:00 hwoarang Exp $
 
 EAPI="4"
 
@@ -11,11 +11,11 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A testsuite for the linux kernel"
 HOMEPAGE="http://ltp.sourceforge.net/"
-SRC_URI="mirror://sourceforge/ltp/LTP%20Source/${P}/${MY_P}.bz2 -> ${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/ltp/LTP%20Source/${P}/${MY_P}.tar.bz2 -> ${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="expect perl pm open-posix python rt"
 
 DEPEND="expect? ( dev-tcltk/expect )
@@ -31,8 +31,7 @@ pkg_setup() {
 	export CREATE=0
 
 	DOC_CONTENTS="LTP requires root access to run the tests.
-		The LTP root directory is located in /usr/libexec/${PN}
-		but the results and output folders will be created in /tmp.
+		The LTP root directory is located in /opt/${PN}.
 		For more information please read the ltp-howto located in
 		/usr/share/doc/${PF}"
 }
@@ -40,26 +39,24 @@ pkg_setup() {
 src_prepare() {
 	# regenerate
 	AT_M4DIR="m4" eautoreconf
-	# Create output/ and results/ directories
-	# in /tmp. We don't want to pollute the libexec
-	# directory
-	epatch "${FILESDIR}"/runltp-path.patch
 }
 
 src_configure() {
 	# FIXME: improve me
 	local myconf=
-	use open-posix && myconf+="--with open-posix-testsuite "
+	use open-posix && myconf+="--with-open-posix-testsuite "
 	use pm && mytconf+="--with-power-management-testsuite "
 	use rt && myconf+="--with-realtime-testsuite "
 	use perl && myconf+="--with-perl "
 	use python && myconf+="--with-python "
 	use expect && myconf+="--with-expect "
+	# Prevent any kernel stuff for now as it leads to sandbox violations
+	myconf+="--without-modules --with-linux-dir=/dev/null"
 
-	# Better put it into /usr/libexec as everything needs to
+	# Better put it into /opt/${PN} as everything needs to
 	# be under the same directory..
 
-	econf --prefix=/usr/libexec/${PN} ${myconf}
+	econf --prefix=/opt/${PN} ${myconf}
 }
 
 src_compile() {
