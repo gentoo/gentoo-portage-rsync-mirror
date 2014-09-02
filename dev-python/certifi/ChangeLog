@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/certifi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/certifi/ChangeLog,v 1.7 2014/08/27 15:24:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/certifi/ChangeLog,v 1.8 2014/09/02 02:28:57 idella4 Exp $
+
+  02 Sep 2014; Ian Delaney <idella4@gentoo.org> certifi-14.05.14.ebuild:
+  add py3.2 to appease www-servers/tornado.
 
 *certifi-14.05.14 (27 Aug 2014)
 
