@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/dzen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/ChangeLog,v 1.15 2013/09/30 17:18:04 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/ChangeLog,v 1.16 2014/09/03 10:50:04 jer Exp $
+
+  03 Sep 2014; Jeroen Roovers <jer@gentoo.org> -dzen-0.8.5.ebuild,
+  dzen-0.9.5-r1.ebuild, +files/dzen-0.9.5-config-default.patch:
+  Replace some sed scripts with a patch. Do not inject pkg-config output
+  directly. Ensure USE flags match build configuration (bug #521776).
 
   30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> dzen-0.9.5-r1.ebuild:
   Stable for x86, wrt bug #485738

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/dzen-0.9.5-r1.ebuild,v 1.3 2013/09/30 17:18:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/dzen-0.9.5-r1.ebuild,v 1.4 2014/09/03 10:50:04 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs vcs-snapshot
@@ -32,42 +32,35 @@ DEPEND="
 DOCS=( README )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-off-by-one.patch
-
-	sed -i \
-		-e "s:-L/usr/lib::g" \
-		-e '/^CC.*/d' \
-		-e 's:-Os::g' \
-		-e 's:/usr/local:/usr:g' \
-		-e 's:CFLAGS =:CFLAGS +=:g' \
-		-e 's:^LDFLAGS =:LDFLAGS +=:' \
-		config.mk gadgets/config.mk || die
+	epatch \
+		"${FILESDIR}"/${P}-config-default.patch \
+		"${FILESDIR}"/${P}-off-by-one.patch
 
 	sed -i \
 		-e '/strip/d' \
 		-e 's:^	@:	:g' \
-		Makefile gadgets/Makefile \
-		|| die
+		-e 's:{CC}:(CC):g' \
+		Makefile gadgets/Makefile || die
+
+	tc-export CC PKG_CONFIG
 }
 
 src_configure() {
 	if use xinerama ; then
-		sed -e "/^LIBS/s/$/\ -lXinerama/" \
-			-e "/^CFLAGS/s/$/\ -DDZEN_XINERAMA/" \
+		sed -e '/^LIBS/s|$| -lXinerama|' \
+			-e '/^CFLAGS/s|$| -DDZEN_XINERAMA|' \
 			-i config.mk || die
 	fi
 	if use xpm ; then
-		sed -e "/^LIBS/s/$/\ -lXpm/" \
-			-e "/^CFLAGS/s/$/\ -DDZEN_XPM/" \
+		sed -e '/^LIBS/s|$| -lXpm|' \
+			-e '/^CFLAGS/s|$| -DDZEN_XPM|' \
 			-i config.mk || die
 	fi
 	if use xft ; then
-		sed -e "/^LIBS/s/$/\ \`pkg-config --libs xft\`/" \
-			-e "/^CFLAGS/s/$/\ -DDZEN_XFT \`pkg-config --cflags xft\`/" \
+		sed -e '/^LIBS/s|$| $(shell ${PKG_CONFIG} --libs xft)|' \
+			-e '/^CFLAGS/s|$| -DDZEN_XFT $(shell ${PKG_CONFIG} --cflags xft)|' \
 			-i config.mk || die
 	fi
-
-	tc-export CC
 }
 
 src_compile() {
