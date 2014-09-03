@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.379 2014/08/12 21:13:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.380 2014/09/03 16:10:40 polynomial-c Exp $
+
+*nss-3.17 (03 Sep 2014)
+
+  03 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> +nss-3.17.ebuild:
+  Version bump (bug #522044).
 
 *nss-3.16.4 (12 Aug 2014)
 
