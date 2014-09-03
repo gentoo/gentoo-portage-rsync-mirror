@@ -1,7 +1,7 @@
 http://bugs.gentoo.org/237046
 
---- grun.c
-+++ grun.c
+--- a/grun.c
++++ b/grun.c
 @@ -30,8 +30,6 @@
  
  #if defined (HAVE_GETTEXT) || defined (HAVE_CATGETS)

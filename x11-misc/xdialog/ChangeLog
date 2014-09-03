@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdialog
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.31 2012/05/13 15:53:32 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.32 2014/09/03 08:04:18 jer Exp $
+
+  03 Sep 2014; Jeroen Roovers <jer@gentoo.org> xdialog-2.3.1.ebuild:
+  Depend on dev-libs/glib:2 (bug #522012).
 
   13 May 2012; Julian Ospald <hasufell@gentoo.org> xdialog-2.3.1.ebuild:
   fix homepage and src_uri wrt #415637

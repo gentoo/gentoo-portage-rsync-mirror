@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.3.1.ebuild,v 1.9 2012/05/13 15:53:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.3.1.ebuild,v 1.10 2014/09/03 08:04:18 jer Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="drop-in replacement for cdialog using GTK"
@@ -14,10 +14,15 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ppc x86"
 IUSE="doc examples nls"
 
-RDEPEND=">=x11-libs/gtk+-2.2:2"
-DEPEND="${RDEPEND}
+RDEPEND="
+	dev-libs/glib:2
+	>=x11-libs/gtk+-2.2:2
+"
+DEPEND="
+	${RDEPEND}
 	virtual/pkgconfig
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+"
 
 S=${WORKDIR}/${P/x/X}
 
@@ -33,7 +38,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 	rm -rf "${D}"/usr/share/doc
 
 	dodoc AUTHORS BUGS ChangeLog README
