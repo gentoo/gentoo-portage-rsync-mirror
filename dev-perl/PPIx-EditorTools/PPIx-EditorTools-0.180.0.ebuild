@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-EditorTools/PPIx-EditorTools-0.180.0.ebuild,v 1.1 2013/08/16 08:08:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-EditorTools/PPIx-EditorTools-0.180.0.ebuild,v 1.2 2014/09/03 18:13:35 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=SZABGAB
 MODULE_VERSION=0.18
