@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.184 2014/09/02 10:15:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.185 2014/09/03 09:45:35 zlogene Exp $
+
+  03 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> less-458.ebuild:
+  amd64 stable wrt bug #521952
 
 *less-466 (02 Sep 2014)
 

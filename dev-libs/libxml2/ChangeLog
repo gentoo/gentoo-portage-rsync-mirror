@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.426 2014/06/24 19:59:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.427 2014/09/03 09:51:22 mgorny Exp $
+
+*libxml2-2.9.1-r5 (03 Sep 2014)
+
+  03 Sep 2014; Michał Górny <mgorny@gentoo.org> +libxml2-2.9.1-r5.ebuild:
+  CHOST-ize xml2-config, for bug #518728.
 
   24 Jun 2014; Mike Frysinger <vapier@gentoo.org> libxml2-2.9.1-r4.ebuild:
   Mark arm64/m68k/s390/sh stable.

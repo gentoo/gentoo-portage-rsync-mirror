@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.288 2014/08/25 10:57:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.289 2014/09/03 09:51:38 mgorny Exp $
+
+*libxslt-1.1.28-r4 (03 Sep 2014)
+
+  03 Sep 2014; Michał Górny <mgorny@gentoo.org>
+  +files/libxslt-1.1.28-AC_PATH_TOOL.patch, +libxslt-1.1.28-r4.ebuild:
+  Use wrapped xml2-config, bug #518728. And CHOST-ize xslt-config too while at
+  it.
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libxslt-1.1.28-r3.ebuild:
   Stable for alpha, wrt bug #512012
