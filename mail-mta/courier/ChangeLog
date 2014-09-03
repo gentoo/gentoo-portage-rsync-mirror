@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.174 2014/01/18 19:52:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.175 2014/09/03 12:47:56 hanno Exp $
+
+  03 Sep 2014; Hanno Boeck <hanno@gentoo.org> -courier-0.65.2.ebuild,
+  -courier-0.65.2-r1.ebuild, -courier-0.66.3.ebuild,
+  -courier-0.68.2.20120626.ebuild, -courier-0.69.0.ebuild,
+  -courier-0.70.ebuild, -files/bofh, -files/courier-init-r2,
+  -files/courier-init-r3, -files/dot_courier, -files/locallowercase,
+  -files/mailer.conf, -files/set-mime:
+  Cleanup.
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> courier-0.71.ebuild:
   Stable for alpha, wrt bug #486504
