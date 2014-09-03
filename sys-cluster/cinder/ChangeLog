@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/cinder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/ChangeLog,v 1.41 2014/08/21 20:50:06 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/ChangeLog,v 1.42 2014/09/03 20:46:02 ulm Exp $
+
+  03 Sep 2014; Ulrich Müller <ulm@gentoo.org> -files/cinder.confd:
+  QA: Remove unused file, bug 520768.
 
 *cinder-2014.1.2 (21 Aug 2014)
 
