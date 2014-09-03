@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.14 2012/12/26 16:16:27 tupone Exp $
-EAPI=4
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.15 2014/09/03 22:50:59 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils unpacker games
 
 DESCRIPTION="shoot through crazy psychedelic 3D environments"
@@ -22,6 +22,8 @@ RDEPEND="virtual/opengl
 		app-emulation/emul-linux-x86-compat
 		app-emulation/emul-linux-x86-sdl )
 	x86? (
+		media-libs/libsdl
+		sys-libs/lib-compat
 		x11-libs/libX11
 		x11-libs/libXext )"
 

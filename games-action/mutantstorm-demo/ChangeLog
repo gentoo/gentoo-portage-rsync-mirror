@@ -1,6 +1,10 @@
 # ChangeLog for games-action/mutantstorm-demo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/ChangeLog,v 1.14 2012/12/26 16:16:27 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/ChangeLog,v 1.15 2014/09/03 22:50:59 mr_bones_ Exp $
+
+  03 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  mutantstorm-demo-1.33.ebuild:
+  fix deps for x86 (bug #522086)
 
   26 Dec 2012; Tupone Alfredo <tupone@gentoo.org> mutantstorm-demo-1.33.ebuild:
   Use QA_PREBUILT. Bug #430982 by Diego Elio Pettenò
