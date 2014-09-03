@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mechanize
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.43 2014/06/17 09:56:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.44 2014/09/03 13:43:20 mrueg Exp $
+
+*mechanize-2.7.3 (03 Sep 2014)
+
+  03 Sep 2014; Manuel Rüger <mrueg@gentoo.org> +mechanize-2.7.3.ebuild:
+  Version bump. Thanks to Ole Reifschneider. Rekeywording in bug #522056
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> mechanize-2.6.0.ebuild:
   Update HOMEPAGE as rubyforge is down.
