@@ -1,6 +1,15 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.351 2014/08/10 18:37:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.352 2014/09/03 22:09:11 axs Exp $
+
+*firefox-32.0 (03 Sep 2014)
+*firefox-24.8.0 (03 Sep 2014)
+*firefox-31.1.0 (03 Sep 2014)
+
+  03 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +firefox-24.8.0.ebuild,
+  +firefox-31.1.0.ebuild, +firefox-32.0.ebuild, -firefox-24.5.0.ebuild,
+  -firefox-24.6.0.ebuild, -firefox-29.0.1.ebuild, -firefox-31.0.ebuild:
+  version bump, cheanup of some old ebuilds
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.7.0.ebuild:
   Stable for ppc64, wrt bug #517876

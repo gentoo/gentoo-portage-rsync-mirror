@@ -1,18 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.0.ebuild,v 1.4 2014/08/01 16:37:44 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-24.8.0.ebuild,v 1.1 2014/09/03 22:09:11 axs Exp $
 
-EAPI="5"
+EAPI=5
 VIRTUALX_REQUIRED="pgo"
 WANT_AUTOCONF="2.1"
-MOZ_ESR=""
+MOZ_ESR="1"
 
 # This list can be updated with scripts/get_langs.sh from the mozilla overlay
-MOZ_LANGS=( af ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da de el en
-en-GB en-US en-ZA eo es-AR es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gd
-gl gu-IN he hi-IN hr hu hy-AM id is it ja kk km kn ko ku lt lv mai mk ml mr
-nb-NO nl nn-NO or pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta te
-th tr uk vi xh zh-CN zh-TW zu )
+MOZ_LANGS=(af ak ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da de
+el en en-GB en-US en-ZA eo es-AR es-CL es-ES es-MX et eu fa fi fr
+fy-NL ga-IE gd gl gu-IN he hi-IN hr hu hy-AM id is it ja kk km kn ko ku
+lg lt lv mai mk ml mr nb-NO nl nn-NO nso or pa-IN pl pt-BR pt-PT rm ro
+ru si sk sl son sq sr sv-SE ta ta-LK te th tr uk vi zh-CN zh-TW zu )
 
 # Convert the ebuild version to the upstream mozilla version, used by mozlinguas
 MOZ_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
@@ -25,15 +25,13 @@ if [[ ${MOZ_ESR} == 1 ]]; then
 fi
 
 # Patch version
-PATCH="${PN}-31.0-patches-0.2"
+PATCH="${PN}-24.0-patches-0.9"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
 MOZ_HTTP_URI="http://ftp.mozilla.org/pub/${PN}/releases/"
 
-MOZCONFIG_OPTIONAL_WIFI=1
-
-inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-v4 multilib pax-utils fdo-mime autotools virtualx mozlinguas
+inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools virtualx mozlinguas
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
@@ -41,29 +39,30 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist gstreamer hardened +jit +minimal pgo pulseaudio selinux system-cairo system-icu system-jpeg system-sqlite test"
+IUSE="bindist gstreamer +jit +minimal pgo pulseaudio selinux system-cairo system-icu system-jpeg system-sqlite test"
 
 # More URIs appended below...
 SRC_URI="${SRC_URI}
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
-	http://dev.gentoo.org/~axs/distfiles/${PATCH}.tar.xz"
+	http://dev.gentoo.org/~nirbheek/mozilla/patchsets/${PATCH}.tar.xz"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
 	>=dev-libs/nss-3.16.2
-	>=dev-libs/nspr-4.10.6
+	>=dev-libs/nspr-4.10.4
+	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
-	>=media-libs/libpng-1.6.7[apng]
+	>=media-libs/libpng-1.5.13[apng]
 	virtual/libffi
-	gstreamer? ( media-plugins/gst-plugins-meta:1.0[ffmpeg] )
+	gstreamer? ( media-plugins/gst-plugins-meta:0.10[ffmpeg] )
 	pulseaudio? ( media-sound/pulseaudio )
 	system-cairo? ( >=x11-libs/cairo-1.12[X] )
 	system-icu? ( >=dev-libs/icu-51.1 )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
-	system-sqlite? ( >=dev-db/sqlite-3.8.3.1:3[secure-delete,debug=] )
-	>=media-libs/libvpx-1.3.0
+	system-sqlite? ( >=dev-db/sqlite-3.7.17:3[secure-delete,debug=] )
+	>=media-libs/libvpx-1.0.0
 	kernel_linux? ( media-libs/alsa-lib )
 	selinux? ( sec-policy/selinux-mozilla )"
 
@@ -169,6 +168,7 @@ src_prepare() {
 	# Fix sandbox violations during make clean, bug 372817
 	sed -e "s:\(/no-such-file\):${T}\1:g" \
 		-i "${S}"/config/rules.mk \
+		-i "${S}"/js/src/config/rules.mk \
 		-i "${S}"/nsprpub/configure{.in,} \
 		|| die
 
@@ -191,10 +191,6 @@ src_prepare() {
 src_configure() {
 	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 	MEXTENSIONS="default"
-	# Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
-	# Note: These are for Gentoo Linux use ONLY. For your own distribution, please
-	# get your own set of keys.
-	_google_api_key=AIzaSyDEAOvatFo0eTgsV_ZlEzx0ObmepsMzfAc
 
 	####################################
 	#
@@ -208,15 +204,8 @@ src_configure() {
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
 
-	# Add full relro support for hardened
-	use hardened && append-ldflags "-Wl,-z,relro,-z,now"
-
 	# We must force enable jemalloc 3 threw .mozconfig
-	echo "export MOZ_JEMALLOC=1" >> "${S}"/.mozconfig || die
-
-	# Setup api key for location services
-	echo -n "${_google_api_key}" > "${S}"/google-api-key
-	mozconfig_annotate '' --with-google-api-keyfile="${S}/google-api-key"
+	echo "export MOZ_JEMALLOC=1" >> ${S}/.mozconfig
 
 	mozconfig_annotate '' --enable-jemalloc
 	mozconfig_annotate '' --enable-replace-malloc
@@ -227,25 +216,21 @@ src_configure() {
 	mozconfig_annotate '' --disable-mailnews
 	mozconfig_annotate '' --with-system-png
 	mozconfig_annotate '' --enable-system-ffi
-	mozconfig_annotate '' --disable-gold
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 	mozconfig_annotate '' --build="${CTARGET:-${CHOST}}"
 
-	# gstreamer now needs the version specified
-	if use gstreamer; then
-		mozconfig_annotate '' --enable-gstreamer=1.0
-	else
-		mozconfig_annotate '' --disable-gstreamer
-	fi
+	mozconfig_use_enable gstreamer
 	mozconfig_use_enable pulseaudio
 	mozconfig_use_enable system-cairo
 	mozconfig_use_enable system-sqlite
 	mozconfig_use_with system-jpeg
 	mozconfig_use_with system-icu
 	mozconfig_use_enable system-icu intl-api
+	# Feature is know to cause problems on hardened
+	mozconfig_use_enable jit ion
 
 	# Allow for a proper pgo build
 	if use pgo; then
@@ -319,6 +304,12 @@ src_install() {
 		>> "${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
 		|| die
 
+	if ! use libnotify; then
+		echo "pref(\"browser.download.manager.showAlertOnComplete\", false);" \
+			>> "${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
+			|| die
+	fi
+
 	echo "pref(\"extensions.autoDisableScopes\", 3);" >> \
 		"${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
 		|| die
@@ -360,8 +351,8 @@ src_install() {
 
 	# Add StartupNotify=true bug 237317
 	if use startup-notification ; then
-		echo "StartupNotify=true"\
-			 >> "${ED}/usr/share/applications/${PN}.desktop" \
+		echo "StartupNotify=true" \
+			>> "${ED}/usr/share/applications/${PN}.desktop" \
 			|| die
 	fi
 
@@ -377,12 +368,7 @@ src_install() {
 	# FIXME: is this still needed??
 	use sparc && { sed -e 's/Firefox/FirefoxGentoo/g' \
 					 -i "${ED}/${MOZILLA_FIVE_HOME}/application.ini" \
-					|| die "sparc sed failed"; }
-
-	# revdep-rebuild entry
-	insinto /etc/revdep-rebuild
-	echo "SEARCH_DIRS_MASK=${MOZILLA_FIVE_HOME}" >> ${T}/10firefox
-	doins "${T}"/10${PN} || die
+					 || die "sparc sed failed"; }
 }
 
 pkg_preinst() {
