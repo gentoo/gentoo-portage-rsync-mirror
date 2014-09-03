@@ -20,7 +20,7 @@ Subject: Make dependence on TCL not be automagic (so that --with-tcl
 -)
 -
 -if test "x$tclconfig" = "xyes" ; then
--	for i in /usr/lib /usr/local/lib /usr/local/lib/tcl8.4 ; do
+-	for i in /usr/lib $localdir/lib $localdir/lib/tcl8.4 ; do
 -		if test -r $i/tclConfig.sh ; then
 -			tclconfig=$i/tclConfig.sh
 -			break;

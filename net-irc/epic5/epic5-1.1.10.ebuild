@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-1.1.7.ebuild,v 1.1 2014/03/25 08:03:27 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-1.1.10.ebuild,v 1.1 2014/09/03 01:36:35 binki Exp $
 
 EAPI=4
 
@@ -44,8 +44,9 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.2-libarchive-automagic.patch \
 		"${FILESDIR}"/${P}-ruby-automagic-as-needed.patch \
-		"${FILESDIR}"/${PN}-1.1.2-tcl-automagic-as-needed.patch \
-		"${FILESDIR}"/${PN}-1.1.2-perl-automagic-as-needed.patch
+		"${FILESDIR}"/${P}-tcl-automagic-as-needed.patch \
+		"${FILESDIR}"/${PN}-1.1.2-perl-automagic-as-needed.patch \
+		"${FILESDIR}"/${P}-without-localdir.patch
 	eautoconf
 }
 
@@ -67,15 +68,13 @@ src_compile() {
 }
 
 src_install () {
-	einstall \
-		sharedir="${D}"/usr/share \
-		libexecdir="${D}"/usr/lib/misc
+	emake DESTDIR="${D}" install
 
 	dodoc BUG_FORM COPYRIGHT EPIC4-USERS-README README KNOWNBUGS VOTES
 
 	cd "${S}"/doc || die
 	docinto doc
 	dodoc \
-		*.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load \
+		*.txt colors EPIC* IRCII_VERSIONS missing \
 		nicknames outputhelp README.SSL SILLINESS TS4
 }

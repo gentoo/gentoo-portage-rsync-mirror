@@ -1,6 +1,19 @@
 # ChangeLog for net-irc/epic5
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/ChangeLog,v 1.21 2014/03/25 08:03:27 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/ChangeLog,v 1.23 2014/09/03 01:58:07 binki Exp $
+
+  03 Sep 2014; Nathan Phillip Brink <binki@gentoo.org> -epic5-1.0.ebuild,
+  -epic5-1.1.7.ebuild, -files/epic5-1.1.2-tcl-automagic-as-needed.patch,
+  -files/epic5-1.1.7-ruby-automagic-as-needed.patch:
+  Clean old unstable versions.
+
+*epic5-1.1.10 (03 Sep 2014)
+
+  03 Sep 2014; Nathan Phillip Brink <binki@gentoo.org> +epic5-1.1.10.ebuild,
+  +files/epic5-1.1.10-ruby-automagic-as-needed.patch,
+  +files/epic5-1.1.10-tcl-automagic-as-needed.patch,
+  +files/epic5-1.1.10-without-localdir.patch:
+  Bump to epic5-1.1.10 and eradicate einstall() for bug #521590.
 
 *epic5-1.1.7 (25 Mar 2014)
 
