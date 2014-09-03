@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1363 2014/09/03 13:05:50 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1364 2014/09/03 21:52:44 axs Exp $
+
+  03 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +mozconfig-v4.1.eclass:
+  committed new eclass to support mozilla ebuilds
 
   03 Sep 2014; Brian Evans <grknight@gentoo.org> mysql-multilib.eclass:
   Fix libedit MULTILIB_USEDEP wrt bug 521964

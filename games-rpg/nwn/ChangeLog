@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.79 2012/12/21 09:59:20 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.80 2014/09/03 21:45:03 mr_bones_ Exp $
+
+  03 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org> nwn-1.68-r5.ebuild,
+  nwn-1.68-r6.ebuild, nwn-1.69-r1.ebuild:
+  clean deps (bug #522082)
 
 *nwn-1.68-r6 (21 Dec 2012)
 

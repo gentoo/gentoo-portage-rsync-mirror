@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r5.ebuild,v 1.5 2012/09/24 00:38:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r5.ebuild,v 1.6 2014/09/03 21:45:03 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -55,13 +55,11 @@ RDEPEND=">=games-rpg/nwn-data-1.29-r3
 	virtual/opengl
 	!<games-rpg/nwmouse-0.1-r1
 	x86? (
-		=virtual/libstdc++-3.3
 		x11-libs/libXext
 		x11-libs/libX11
 		media-libs/libsdl )
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-compat
 		app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-sdl )"
 DEPEND="app-arch/unzip"
