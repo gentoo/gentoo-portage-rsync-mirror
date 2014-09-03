@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/android-studio-0.5.8.135.1155795.ebuild,v 1.1 2014/05/11 21:14:32 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/android-studio-0.8.6.135.1339820.ebuild,v 1.1 2014/09/03 19:29:08 swift Exp $
 
 EAPI=5
 inherit eutils versionator
@@ -19,7 +19,7 @@ IUSE=""
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-arch/zip"
-RDEPEND=">=virtual/jdk-1.6"
+RDEPEND=">=virtual/jdk-1.7"
 S=${WORKDIR}/${PN}
 
 src_install() {
