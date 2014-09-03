@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.53 2014/05/05 12:20:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.54 2014/09/03 04:26:55 zerochaos Exp $
+
+*paxctl-0.9 (03 Sep 2014)
+
+  03 Sep 2014; Rick Farina <zerochaos@gentoo.org> +paxctl-0.9.ebuild,
+  paxctl-0.7-r2.ebuild, paxctl-0.8.ebuild:
+  bumping to 0.9 to include bugfix for bug #520198, adding epatch_user since it
+  makes life so much easier for testing
 
 *paxctl-0.8 (05 May 2014)
 
