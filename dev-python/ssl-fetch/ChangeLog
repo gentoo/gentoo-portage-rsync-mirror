@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ssl-fetch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-fetch/ChangeLog,v 1.22 2014/08/28 08:34:51 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-fetch/ChangeLog,v 1.23 2014/09/03 17:14:26 ottxor Exp $
+
+  03 Sep 2014; Christoph Junghans <ottxor@gentoo.org> ssl-fetch-0.2.1.ebuild:
+  added ~x64-macos (tested by me)
 
   28 Aug 2014; Naohiro Aota <naota@gentoo.org> ssl-fetch-0.2.1.ebuild:
   Add ~x86-fbsd. failed to add to 0.2.1 #509628

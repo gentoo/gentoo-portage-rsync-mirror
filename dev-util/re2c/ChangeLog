@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/re2c
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.76 2014/08/22 21:08:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.77 2014/09/03 17:18:07 ottxor Exp $
+
+  03 Sep 2014; Christoph Junghans <ottxor@gentoo.org> re2c-0.13.7.5.ebuild:
+  added ~x64-macos (tested by me)
 
 *re2c-0.13.7.5 (22 Aug 2014)
 
