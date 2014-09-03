@@ -1,6 +1,17 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.147 2014/05/17 14:06:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.149 2014/09/03 21:30:00 voyageur Exp $
+
+  03 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  windowmaker-0.95.6.ebuild, metadata.xml:
+  Missing new image formats dependencies, update xrandr configure flag
+
+*windowmaker-0.95.6 (03 Sep 2014)
+
+  03 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  +windowmaker-0.95.6.ebuild:
+  Version bump, supports more image formats, code cleanups and translation
+  updates
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> windowmaker-0.95.5-r1.ebuild:
   Stable for alpha, wrt bug #496082

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.99w.ebuild,v 1.2 2014/04/23 07:20:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.99w.ebuild,v 1.3 2014/09/03 21:30:02 mr_bones_ Exp $
 
 DESCRIPTION="Bink Video! Player"
 HOMEPAGE="http://www.radgametools.com/default.htm"
@@ -17,12 +17,10 @@ IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND="amd64? (
 		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-compat
 	)
 	x86? (
 		media-libs/libsdl
 		media-libs/sdl-mixer
-		~virtual/libstdc++-3.3
 	)"
 
 S=${WORKDIR}
