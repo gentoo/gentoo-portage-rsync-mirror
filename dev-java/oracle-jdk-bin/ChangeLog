@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.71 2014/08/10 19:01:35 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.72 2014/09/02 23:31:48 sping Exp $
+
+*oracle-jdk-bin-1.8.0.20 (02 Sep 2014)
+
+  02 Sep 2014; Sebastian Pipping <sping@gentoo.org>
+  +oracle-jdk-bin-1.8.0.20.ebuild:
+  Dare to bump to 1.8.0.20 myself (bug #520416); new tool javapackager(1) could
+  use a closer look
 
 *oracle-jdk-bin-1.7.0.67 (10 Aug 2014)
 
