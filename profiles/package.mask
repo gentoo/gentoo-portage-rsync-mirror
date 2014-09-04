@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16008 2014/09/03 22:26:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16009 2014/09/04 00:57:44 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -288,6 +288,7 @@ sys-libs/lib-compat
 sys-libs/lib-compat-loki
 =app-emulation/emul-linux-x86-compat-20140508-r1
 =games-action/descent3-1.4.0b-r1
+games-action/mutantstorm-demo
 games-action/phobiaii
 games-emulation/handy
 games-fps/rtcw

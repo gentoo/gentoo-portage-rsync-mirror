@@ -1,7 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.99w.ebuild,v 1.3 2014/09/03 21:30:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.99w.ebuild,v 1.4 2014/09/04 00:57:12 mr_bones_ Exp $
 
+EAPI=5
 DESCRIPTION="Bink Video! Player"
 HOMEPAGE="http://www.radgametools.com/default.htm"
 # No version on the archives and upstream has said they are not
@@ -31,5 +32,5 @@ QA_EXECSTACK="opt/bin/BinkPlayer"
 
 src_install() {
 	into /opt
-	dobin BinkPlayer || die
+	dobin BinkPlayer
 }

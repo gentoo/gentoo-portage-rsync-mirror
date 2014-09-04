@@ -1,0 +1,8 @@
+# ChangeLog for dev-ruby/ast
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ast/ChangeLog,v 1.1 2014/09/04 00:37:34 mrueg Exp $
+
+*ast-2.0.0 (04 Sep 2014)
+
+  04 Sep 2014; Manuel Rüger <mrueg@gentoo.org> +ast-2.0.0.ebuild, +metadata.xml:
+  Initial version.
