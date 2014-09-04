@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.24 2014/08/29 10:15:52 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.25 2014/09/04 08:09:43 mr_bones_ Exp $
+
+  04 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/libsdl2-2.0.1-static-libs.patch,
+  -files/libsdl2-2.0.2-gles-wayland.patch,
+  -files/libsdl2-2.0.2-static-libs.patch, -libsdl2-2.0.1-r1.ebuild,
+  -libsdl2-2.0.2-r1.ebuild, -libsdl2-2.0.2.ebuild:
+  old
 
   29 Aug 2014; Chema Alonso <nimiux@gentoo.org> libsdl2-2.0.3-r100.ebuild:
   Stable for amd64 wrt bug #514904
