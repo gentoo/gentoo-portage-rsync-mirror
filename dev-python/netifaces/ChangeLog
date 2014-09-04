@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/netifaces
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.18 2014/06/06 09:04:58 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.19 2014/09/04 21:31:09 radhermit Exp $
+
+*netifaces-0.10.4 (04 Sep 2014)
+
+  04 Sep 2014; Tim Harder <radhermit@gentoo.org> +netifaces-0.10.4.ebuild,
+  +files/netifaces-0.10.4-remove-osx-fix.patch:
+  Version bump.
 
   06 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> -netifaces-0.8.ebuild,
   -netifaces-0.8-r1.ebuild:
