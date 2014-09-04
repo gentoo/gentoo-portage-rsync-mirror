@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.1.4.ebuild,v 1.1 2014/09/02 10:23:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.1.4.ebuild,v 1.2 2014/09/04 05:19:58 polynomial-c Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86"
 IUSE=""
 
 RDEPEND="sys-fs/e2fsprogs
-	!<sys-fs/xfsprogs-3
+	>=sys-fs/xfsprogs-3.2.0
 	sys-apps/dmapi
 	>=sys-apps/attr-2.4.19"
 DEPEND="${RDEPEND}

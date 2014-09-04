@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsdump
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.110 2014/09/02 10:23:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.111 2014/09/04 05:19:58 polynomial-c Exp $
+
+  04 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> xfsdump-3.1.4.ebuild:
+  Fixed dependency on xfsprogs which lead to a compile failure (bug #522030).
 
 *xfsdump-3.1.4 (02 Sep 2014)
 
