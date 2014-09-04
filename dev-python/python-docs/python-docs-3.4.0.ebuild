@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-3.4.0.ebuild,v 1.2 2014/09/02 06:44:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-3.4.0.ebuild,v 1.3 2014/09/04 03:11:17 idella4 Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ pkg_setup() {
 }
 
 src_install() {
-	dohtml -A xml -A inv -r ./
+	dohtml -A xml -r ./
 	echo "PYTHONDOCS_${SLOT//./_}=\"${EPREFIX}/usr/share/doc/${PF}/html/library\"" > "60python-docs-${SLOT}"
 	doenvd "60python-docs-${SLOT}"
 }

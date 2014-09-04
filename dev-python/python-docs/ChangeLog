@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.193 2014/09/02 06:44:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.194 2014/09/04 03:11:17 idella4 Exp $
+
+*python-docs-3.4.0-r1 (04 Sep 2014)
+*python-docs-2.7.6-r1 (04 Sep 2014)
+*python-docs-3.3.5-r1 (04 Sep 2014)
+
+  04 Sep 2014; Ian Delaney <idella4@gentoo.org> +python-docs-2.7.6-r1.ebuild,
+  +python-docs-3.3.5-r1.ebuild, +python-docs-3.4.0-r1.ebuild,
+  python-docs-2.7.6.ebuild, python-docs-3.4.0.ebuild:
+  switch prior changes to revbumps
 
   02 Sep 2014; Ian Delaney <idella4@gentoo.org> python-docs-2.7.6.ebuild,
   python-docs-3.3.5.ebuild, python-docs-3.4.0.ebuild:
