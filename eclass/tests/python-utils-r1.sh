@@ -87,10 +87,10 @@ test_var PYTHON_INCLUDEDIR pypy /usr/lib/pypy/include
 test_var PYTHON_PKG_DEP pypy '*virtual/pypy*:0='
 test_var PYTHON_SCRIPTDIR pypy /usr/lib/python-exec/pypy
 
-test_is "EPYTHON=python2.7 python_is_python3" 1
-test_is "EPYTHON=python3.2 python_is_python3" 0
-test_is "EPYTHON=jython2.7 python_is_python3" 1
-test_is "EPYTHON=pypy python_is_python3" 1
+test_is "python_is_python3 python2.7" 1
+test_is "python_is_python3 python3.2" 0
+test_is "python_is_python3 jython2.7" 1
+test_is "python_is_python3 pypy" 1
 
 # generic shebangs
 test_fix_shebang '#!/usr/bin/python' python2.7 '#!/usr/bin/python2.7'

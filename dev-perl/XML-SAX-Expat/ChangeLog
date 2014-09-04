@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-SAX-Expat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/ChangeLog,v 1.7 2014/02/15 03:08:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/ChangeLog,v 1.8 2014/09/04 13:39:26 zlogene Exp $
+
+  04 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> XML-SAX-Expat-0.400.0.ebuild,
+  XML-SAX-Expat-0.500.0.ebuild:
+  Bump to EAPI=5
 
 *XML-SAX-Expat-0.510.0 (15 Feb 2014)
 

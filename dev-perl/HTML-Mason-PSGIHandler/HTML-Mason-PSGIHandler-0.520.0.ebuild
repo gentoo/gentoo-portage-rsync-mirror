@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason-PSGIHandler/HTML-Mason-PSGIHandler-0.520.0.ebuild,v 1.1 2012/02/03 17:03:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason-PSGIHandler/HTML-Mason-PSGIHandler-0.520.0.ebuild,v 1.2 2014/09/04 13:32:15 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=ABH
 MODULE_VERSION=0.52

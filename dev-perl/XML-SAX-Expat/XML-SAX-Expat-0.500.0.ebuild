@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/XML-SAX-Expat-0.500.0.ebuild,v 1.1 2013/08/26 03:50:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/XML-SAX-Expat-0.500.0.ebuild,v 1.2 2014/09/04 13:39:26 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=BJOERN
 MODULE_VERSION=0.50

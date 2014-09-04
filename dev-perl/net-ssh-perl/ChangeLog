@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/net-ssh-perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.44 2014/08/22 16:35:16 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.45 2014/09/04 13:36:06 zlogene Exp $
+
+  04 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> -net-ssh-perl-1.340.0.ebuild,
+  -net-ssh-perl-1.350.0.ebuild:
+  Drop old.
 
 *net-ssh-perl-1.360.0-r1 (22 Aug 2014)
 
