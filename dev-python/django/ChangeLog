@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.140 2014/09/02 07:35:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.141 2014/09/04 14:25:21 idella4 Exp $
+
+  04 Sep 2014; Ian Delaney <idella4@gentoo.org> -django-1.4.13.ebuild,
+  -django-1.5.8.ebuild, -django-1.6.5.ebuild:
+  drop vulnerable versions wrt Bug #521324
 
   02 Sep 2014; Agostino Sarubbo <ago@gentoo.org> django-1.4.14.ebuild,
   django-1.5.9.ebuild, django-1.6.6.ebuild:

@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/exiftool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.145 2014/08/31 05:30:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.147 2014/09/04 14:30:37 radhermit Exp $
+
+  04 Sep 2014; Tim Harder <radhermit@gentoo.org> -exiftool-9.55.ebuild,
+  -exiftool-9.58.ebuild, -exiftool-9.59.ebuild, -exiftool-9.61.ebuild,
+  -exiftool-9.62.ebuild, -exiftool-9.64.ebuild, -exiftool-9.65.ebuild,
+  -exiftool-9.66.ebuild, -exiftool-9.67.ebuild:
+  Remove old.
+
+*exiftool-9.70 (04 Sep 2014)
+
+  04 Sep 2014; Tim Harder <radhermit@gentoo.org> +exiftool-9.70.ebuild:
+  Version bump.
 
 *exiftool-9.69 (31 Aug 2014)
 
