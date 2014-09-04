@@ -1,6 +1,12 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.379 2014/07/23 15:23:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.380 2014/09/04 15:33:53 pacho Exp $
+
+*totem-3.12.2 (04 Sep 2014)
+
+  04 Sep 2014; Pacho Ramos <pacho@gentoo.org> +totem-3.12.2.ebuild,
+  -files/totem-3.8.2-vimeo-compat.patch, -totem-3.10.1.ebuild, metadata.xml:
+  Version bump, drop old
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> totem-3.12.1.ebuild:
   Stable for x86, wrt bug #512012
