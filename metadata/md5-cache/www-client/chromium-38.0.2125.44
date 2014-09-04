@@ -10,4 +10,4 @@ RDEPEND=>=app-accessibility/speech-dispatcher-0.8:= app-arch/bzip2:= app-arch/sn
 SLOT=0
 SRC_URI=https://commondatastorage.googleapis.com/chromium-browser-official/chromium-38.0.2125.44.tar.xz
 _eclasses_=chromium	4a9f555199b35aa57f60b0e9b9627d2a	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pax-utils	8257582809714b788173511f975d767d	portability	a45c088f246ef5091e029f6285d7ce42	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=01db201adaec8c74c441f2907b2c9044
+_md5_=d34ca03ef7bd434bea8073b110872bd3
