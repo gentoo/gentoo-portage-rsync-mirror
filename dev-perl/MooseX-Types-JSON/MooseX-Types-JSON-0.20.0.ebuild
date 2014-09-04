@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-JSON/MooseX-Types-JSON-0.20.0.ebuild,v 1.1 2011/08/29 17:35:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-JSON/MooseX-Types-JSON-0.20.0.ebuild,v 1.2 2014/09/04 13:29:37 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=MILA
 MODULE_VERSION=0.02

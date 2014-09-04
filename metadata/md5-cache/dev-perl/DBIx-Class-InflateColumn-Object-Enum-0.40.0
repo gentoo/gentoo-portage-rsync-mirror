@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/DBIx-Class dev-perl/Object-Enum dev-perl/DBICx-TestDatabase || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=dev-perl/DBIx-Class dev-perl/Object-Enum dev-perl/DBICx-TestDatabase dev-lang/perl:=[-build(-)]
 DESCRIPTION=Allows a DBIx::Class user to define a Object::Enum column
-EAPI=4
+EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/DBIx-Class-InflateColumn-Object-Enum/
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=dev-perl/DBIx-Class dev-perl/Object-Enum dev-perl/DBICx-TestDatabase || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=dev-perl/DBIx-Class dev-perl/Object-Enum dev-perl/DBICx-TestDatabase dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/J/JM/JMMILLS/DBIx-Class-InflateColumn-Object-Enum-0.04.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=ebbad2918eea05e37399a8e06033bee1
+_md5_=a3b4b4d52457e1e444f6e0910e68e5d2

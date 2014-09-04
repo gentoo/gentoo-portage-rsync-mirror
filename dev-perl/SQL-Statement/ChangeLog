@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SQL-Statement
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.69 2014/08/21 19:45:02 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.70 2014/09/04 13:25:24 zlogene Exp $
+
+  04 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> -SQL-Statement-1.330.0.ebuild:
+  Drop old.
 
 *SQL-Statement-1.405.0-r1 (21 Aug 2014)
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class-InflateColumn-Object-Enum/DBIx-Class-InflateColumn-Object-Enum-0.40.0.ebuild,v 1.1 2011/08/31 13:38:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class-InflateColumn-Object-Enum/DBIx-Class-InflateColumn-Object-Enum-0.40.0.ebuild,v 1.2 2014/09/04 13:22:55 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=JMMILLS
 MODULE_VERSION=0.04
