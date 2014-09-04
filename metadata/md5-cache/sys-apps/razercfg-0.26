@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=qt4? ( >=dev-python/pyside-1.2.1[python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_single_target_python3_2(+)?,python_single_target_python3_3(+)?] ) pm-utils? ( sys-power/pm-utils )
 SLOT=0
 SRC_URI=http://bues.ch/razercfg/razercfg-0.26.tar.bz2
-_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	da001465a2e939c93f7ae16947ce3438
+_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=e77ea90691ffcf478a43c78916144dfa

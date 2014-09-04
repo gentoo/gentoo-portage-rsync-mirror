@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.60 2014/07/06 11:45:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.61 2014/09/04 14:52:58 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -960,13 +960,16 @@ python_fix_shebang() {
 			local shebang i
 			local error= from=
 
-			read shebang <"${f}"
+			IFS= read -r shebang <${f}
 
 			# First, check if it's shebang at all...
 			if [[ ${shebang} == '#!'* ]]; then
+				local split_shebang=()
+				read -r -a split_shebang <<<${shebang}
+
 				# Match left-to-right in a loop, to avoid matching random
 				# repetitions like 'python2.7 python2'.
-				for i in ${shebang}; do
+				for i in "${split_shebang[@]}"; do
 					case "${i}" in
 						*"${EPYTHON}")
 							debug-print "${FUNCNAME}: in file ${f#${D}}"

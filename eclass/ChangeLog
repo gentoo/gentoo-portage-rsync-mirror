@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1365 2014/09/04 14:00:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1366 2014/09/04 14:52:58 mgorny Exp $
+
+  04 Sep 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass,
+  tests/python-utils-r1.sh:
+  Preserve all whitespace in shebangs, and add regression test for that. Also,
+  prevent filename expansion when word-splitting it. Bug #522080.
 
   04 Sep 2014; Michał Górny <mgorny@gentoo.org> tests/python-utils-r1.sh:
   Fix tests for python_is_python3.

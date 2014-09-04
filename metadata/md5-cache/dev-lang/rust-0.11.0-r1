@@ -10,5 +10,5 @@ RDEPEND=vim-syntax? ( || ( app-editors/vim app-editors/gvim ) ) zsh-completion? 
 REQUIRED_USE=libcxx? ( clang )
 SLOT=0.11
 SRC_URI=http://static.rust-lang.org/dist/rust-0.11.0.tar.gz amd64? ( http://static.rust-lang.org/dist/rust-0.11.0-x86_64-unknown-linux-gnu.tar.gz ) x86? ( http://static.rust-lang.org/dist/rust-0.11.0-i686-unknown-linux-gnu.tar.gz )
-_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=c74646529d4df494d478d1d8c53da24a

@@ -134,6 +134,9 @@ test_fix_shebang '#!/mnt/python2/usr/bin/python3 python2' python2.7 \
 	'#!/mnt/python2/usr/bin/python2.7 python2' --force
 test_fix_shebang '#!/usr/bin/foo' python2.7 FAIL
 
+# regression test for bug #522080
+test_fix_shebang '#!/usr/bin/python ' python2.7 '#!/usr/bin/python2.7 '
+
 # make sure we don't break pattern matching
 test_is "_python_impl_supported python2_5" 1
 test_is "_python_impl_supported python2_6" 1
