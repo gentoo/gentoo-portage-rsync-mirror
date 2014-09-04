@@ -1,0 +1,12 @@
+# ChangeLog for dev-ruby/parser
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parser/ChangeLog,v 1.2 2014/09/04 01:50:18 mrueg Exp $
+
+  04 Sep 2014; Manuel Rüger <mrueg@gentoo.org> parser-2.2.0_pre4.ebuild:
+  Fix typo.
+
+*parser-2.2.0_pre4 (04 Sep 2014)
+
+  04 Sep 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +parser-2.2.0_pre4.ebuild:
+  Initial commit.
