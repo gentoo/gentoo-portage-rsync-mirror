@@ -1,13 +1,14 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=Neverwinter Nights Dedicated server
+EAPI=5
 HOMEPAGE=http://nwn.bioware.com/downloads/standaloneserver.html
 IUSE=linguas_en
 KEYWORDS=-* amd64 x86
 LICENSE=NWN-EULA
-RDEPEND=amd64? ( app-emulation/emul-linux-x86-baselibs app-emulation/emul-linux-x86-compat ) games-misc/games-envd
+RDEPEND=games-misc/games-envd
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=http://files.bioware.com/neverwinternights/updates/windows/server/NWNDedicatedServer1.69.zip linguas_en? ( http://files.bioware.com/neverwinternights/dialog//english/NWNEnglish1.69dialog.zip )
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=0a74b5831b204966dba1be26ebb23120
+_md5_=2b739c49f0b87fe0399741791e0c7e82

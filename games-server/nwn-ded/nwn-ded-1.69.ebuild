@@ -1,7 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.69.ebuild,v 1.4 2012/12/28 17:55:51 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.69.ebuild,v 1.5 2014/09/04 07:41:03 mr_bones_ Exp $
 
+EAPI=5
 inherit games
 
 LANGUAGES="linguas_en"
@@ -19,8 +20,6 @@ IUSE="${LANGUAGES}"
 RESTRICT="mirror strip"
 
 DEPEND="app-arch/unzip"
-RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-compat )"
 
 S=${WORKDIR}
 
@@ -28,10 +27,10 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 QA_PREBUILT="${dir:1}/common/nwserver"
 
 src_unpack() {
-	mkdir common || die "Failed creating directory"
-	cd common
+	mkdir common || die
+	cd common || die
 	unpack NWNDedicatedServer${PV}.zip
-	tar -zxf linuxdedserver${PV/./}.tar.gz || die "Failed unpacking linuxdedserver"
+	tar -zxf linuxdedserver${PV/./}.tar.gz || die
 	rm -f *dedserver*.{tar.gz,sit,zip} *.exe *.dll
 	cd ..
 	local currentlocale=""
@@ -45,9 +44,9 @@ src_unpack() {
 			if [ -z "${a/*Italian*/}" ]; then currentlocale="it"; fi
 			if [ -z "${a/*Spanish*/}" ]; then currentlocale="es"; fi
 			if [ -z "${a/*Japanese*/}" ]; then currentlocale="ja"; fi
-			mkdir ${currentlocale} || die "Failed creating directory"
+			mkdir ${currentlocale} || die
 			cd ${currentlocale}
-			cp -rfl ../common/* . || die "Failed hard-linking to common directory"
+			cp -rfl ../common/* . || die
 			unpack "${a}"
 			cd ..
 		fi
@@ -65,7 +64,7 @@ src_install() {
 		fi
 	done
 
-	mv * "${D}/${dir}"/ || die "Failed installing server"
+	mv * "${D}/${dir}"/ || die
 
 	prepgamesdirs
 	chmod -R g+w "${D}/${dir}"
