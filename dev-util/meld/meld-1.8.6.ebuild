@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.8.4.ebuild,v 1.5 2014/03/09 11:56:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.8.6.ebuild,v 1.1 2014/09/04 12:06:31 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,12 +13,11 @@ HOMEPAGE="http://meldmerge.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
-IUSE="+highlight gnome"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
+IUSE="+highlight gnome"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-# FIXME: switch gconf-python to python-r1
 RDEPEND="
 	${PYTHON_DEPS}
 	>=dev-python/pygtk-2.14:2[${PYTHON_USEDEP}]
@@ -26,7 +25,7 @@ RDEPEND="
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/pycairo[${PYTHON_USEDEP}]
 	highlight? ( >=dev-python/pygtksourceview-2.10[${PYTHON_USEDEP}] )
-	gnome? ( >=dev-python/gconf-python-2.22:2 )
+	gnome? ( >=dev-python/gconf-python-2.22:2[${PYTHON_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
