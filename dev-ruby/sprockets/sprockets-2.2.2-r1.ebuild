@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.2.2-r1.ebuild,v 1.5 2014/08/16 15:57:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.2.2-r1.ebuild,v 1.6 2014/09/04 03:40:46 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 
@@ -24,7 +24,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-m
 IUSE=""
 
 ruby_add_rdepend "
-	=dev-ruby/hike-1* >=dev-ruby/hike-1.2
+	>=dev-ruby/hike-1.2:0
 	=dev-ruby/multi_json-1*
 	=dev-ruby/rack-1*
 	=dev-ruby/tilt-1* >=dev-ruby/tilt-1.3.1"
@@ -33,7 +33,7 @@ ruby_add_bdepend "test? (
 		dev-ruby/json
 		dev-ruby/rack-test
 		=dev-ruby/coffee-script-2*
-		=dev-ruby/execjs-1*
+		dev-ruby/execjs:1
 	)"
 
 all_ruby_prepare() {
