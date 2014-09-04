@@ -1,6 +1,16 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.359 2014/08/25 10:59:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.360 2014/09/04 10:10:30 pacho Exp $
+
+*librsvg-2.40.3 (04 Sep 2014)
+
+  04 Sep 2014; Pacho Ramos <pacho@gentoo.org> +librsvg-2.40.3.ebuild,
+  -files/librsvg-2.36.0-rsvg-view-automagic.patch,
+  -files/librsvg-2.36.4-resource-uri-1.patch,
+  -files/librsvg-2.36.4-resource-uri-2.patch,
+  -files/librsvg-2.36.4-resource-uri-3.patch,
+  -files/librsvg-2.39.0-canonicalize-realpath.patch, -librsvg-2.40.1-r1.ebuild:
+  Version bump, drop old
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> librsvg-2.40.2-r1.ebuild:
   Stable for alpha, wrt bug #512012

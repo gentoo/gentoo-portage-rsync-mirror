@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.191 2014/04/26 06:57:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.192 2014/09/04 10:20:19 pacho Exp $
+
+*libsigc++-2.3.2 (04 Sep 2014)
+
+  04 Sep 2014; Pacho Ramos <pacho@gentoo.org> +libsigc++-2.3.2.ebuild:
+  Version bump
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -libsigc++-2.2.10.ebuild,
   -libsigc++-2.2.11.ebuild:

@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gforth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.38 2014/09/02 15:30:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.39 2014/09/04 10:08:32 pinkbyte Exp $
+
+*gforth-0.7.3 (04 Sep 2014)
+
+  04 Sep 2014; Sergey Popov <pinkbyte@gentoo.org> -gforth-0.7.0.ebuild,
+  +gforth-0.7.3.ebuild:
+  Version bump, fix bugs #414967, #426980 and #498032. Drop old and broken
+  version
 
   02 Sep 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Carsten will take care of this

@@ -1,27 +1,26 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/libpeas-1.9.0.ebuild,v 1.6 2014/03/09 11:55:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/libpeas-1.10.1.ebuild,v 1.1 2014/09/04 10:04:39 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit eutils gnome2 multilib python-r1 virtualx
+inherit gnome2 multilib python-r1 virtualx
 
 DESCRIPTION="A GObject plugins library"
 HOMEPAGE="http://developer.gnome.org/libpeas/stable/"
 
 LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
-IUSE="gjs +gtk glade +python seed"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
+IUSE="+gtk glade +python seed"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	>=dev-libs/glib-2.32:2
-	>=dev-libs/gobject-introspection-0.10.1
-	gjs? ( >=dev-libs/gjs-1.37.1 )
+	>=dev-libs/gobject-introspection-1.39
 	glade? ( >=dev-util/glade-3.9.1:3.10 )
 	gtk? ( >=x11-libs/gtk+-3:3[introspection] )
 	python? (
@@ -32,7 +31,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.11
 	>=dev-util/intltool-0.40
-	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 "
 
@@ -51,7 +49,6 @@ src_prepare() {
 
 src_configure() {
 	local myconf="
-		$(use_enable gjs)
 		$(use_enable glade glade-catalog)
 		$(use_enable gtk)
 		$(use_enable seed)
@@ -62,8 +59,8 @@ src_configure() {
 
 	configuration() {
 		local myconf="$@"
-		[[ ${EPYTHON} == python2* ]] && myconf+=" --enable-python2 --disable-python3 PYTHON2_CONFIG=/usr/bin/python-config-${EPYTHON#python}"
-		[[ ${EPYTHON} == python3* ]] && myconf+=" --enable-python3 --disable-python2 PYTHON3_CONFIG=/usr/bin/python-config-${EPYTHON#python}"
+		[[ ${EPYTHON} == python2* ]] && myconf+=" --enable-python2 --disable-python3 PYTHON2_CONFIG=/usr/bin/python-config"
+		[[ ${EPYTHON} == python3* ]] && myconf+=" --enable-python3 --disable-python2 PYTHON3_CONFIG=/usr/bin/python-config"
 		gnome2_src_configure ${myconf}
 	}
 
