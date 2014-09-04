@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/execjs-1.4.0.ebuild,v 1.4 2014/05/21 02:19:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/execjs-1.4.0.ebuild,v 1.5 2014/09/04 02:53:46 mrueg Exp $
 
-EAPI=4
-USE_RUBY="ruby19 ruby20"
+EAPI=5
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 
@@ -22,7 +22,7 @@ HOMEPAGE="https://github.com/sstephenson/execjs"
 SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/tarball/v${PV} -> ${P}-git.tgz"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="1"
 KEYWORDS="~amd64 ~arm ~x86 ~x64-macos"
 
 IUSE="test"
@@ -39,3 +39,8 @@ ruby_add_rdepend ">=dev-ruby/multi_json-1.0"
 # https://github.com/sstephenson/execjs/issues/62
 
 RDEPEND="${RDEPEND} || ( net-libs/nodejs )"
+
+all_ruby_prepare() {
+	# Network access
+	sed -i -e "/test_coffeescript/,+5d" test/test_execjs.rb || die
+}
