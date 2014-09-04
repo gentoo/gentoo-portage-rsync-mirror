@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-Random
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Random/ChangeLog,v 1.16 2013/05/25 07:58:34 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Random/ChangeLog,v 1.17 2014/09/04 10:52:35 zlogene Exp $
+
+  04 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> -Data-Random-0.50.0.ebuild,
+  -Data-Random-0.60.0.ebuild:
+  Drop old.
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> Data-Random-0.80.0.ebuild:
   Stable for sparc, wrt bug #461118
