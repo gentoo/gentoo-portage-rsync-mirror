@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.268 2014/08/25 11:04:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.269 2014/09/04 09:49:58 pacho Exp $
+
+*gtksourceview-3.12.3 (04 Sep 2014)
+
+  04 Sep 2014; Pacho Ramos <pacho@gentoo.org> +gtksourceview-3.12.3.ebuild,
+  -gtksourceview-3.10.2.ebuild, -gtksourceview-3.12.1.ebuild:
+  Version bump, drop old
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gtksourceview-3.12.2.ebuild:
   Stable for alpha, wrt bug #512012

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Patricia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/ChangeLog,v 1.38 2014/08/31 06:31:29 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/ChangeLog,v 1.39 2014/09/04 09:36:31 jer Exp $
+
+  04 Sep 2014; Jeroen Roovers <jer@gentoo.org> Net-Patricia-1.210.0-r1.ebuild:
+  Marked ~hppa (bug #521400).
 
   31 Aug 2014; Naohiro Aota <naota@gentoo.org> Net-Patricia-1.210.0-r1.ebuild:
   Add ~x86-fbsd. #521400

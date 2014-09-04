@@ -4,10 +4,10 @@ DESCRIPTION=Patricia Trie perl module for fast IP address lookups
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Net-Patricia/
 IUSE=ipv6
-KEYWORDS=amd64 ~ppc x86 ~x86-fbsd
+KEYWORDS=amd64 ~hppa ~ppc x86 ~x86-fbsd
 LICENSE=GPL-2+
 RDEPEND=dev-perl/Net-CIDR-Lite ipv6? ( dev-perl/Socket6 ) dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/G/GR/GRUBER/Net-Patricia-1.21.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=eef3ceab4eedaef0bade5654e5f96359
+_md5_=66f7e691133127d4885db4466b56d347

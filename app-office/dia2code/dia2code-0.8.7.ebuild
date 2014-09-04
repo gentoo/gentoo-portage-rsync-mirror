@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/dia2code-0.8.7.ebuild,v 1.3 2014/07/23 15:13:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/dia2code-0.8.7.ebuild,v 1.4 2014/09/04 09:32:58 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -17,9 +17,7 @@ KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="dev-libs/libxml2"
-RDEPEND="${DEPEND}
-	>=app-office/dia-0.90.0
-"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	gnome2_src_install
