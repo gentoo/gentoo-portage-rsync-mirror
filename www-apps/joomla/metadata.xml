@@ -4,11 +4,26 @@
   <herd>web-apps</herd>
   <herd>proxy-maintainers</herd>
   <maintainer>
+    <email>harold@alum.mit.edu</email>
+    <name>Harold Naparst</name>
+    <description>Primary Maintainer, Assign bugs</description>
+  </maintainer>
+  <maintainer>
     <email>oli.huber@gmail.com</email>
-    <name>Olivier Huber </name>
+    <name>Olivier Huber</name>
+    <description>Co Maintainer, CC bugs</description>
   </maintainer>
   <maintainer>
     <email>fauli@gentoo.org</email>
     <name>Christian Faulhammer</name>
   </maintainer>
+  <longdescription lang="en">
+    Joomla is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications.
+  </longdescription>
+  <use>
+    <flag name='mariadb'>Uses mariadb as a database backend. If not enabled, mysql is required.  The default is to use mysql.</flag>
+  </use>
+  <upstream>
+    <doc lang="en">http://docs.joomla.org</doc>
+  </upstream>
 </pkgmetadata>

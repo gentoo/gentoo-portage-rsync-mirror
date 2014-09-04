@@ -7135,6 +7135,7 @@ www-apps/gallery:zip - Add app-arch/zip for the zip download module
 www-apps/gitit:plugins - enables optional plugin runtime loader
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
+www-apps/joomla:mariadb - Uses mariadb as a database backend. If not enabled, mysql is required. The default is to use mysql.
 www-apps/nikola:assets - Support web asset management through dev-python/assets
 www-apps/nikola:charts - Support chart generation through dev-python/pygal
 www-apps/nikola:hyphenation - Add hyphenation support through dev-python/pyphen
