@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/yt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/yt/ChangeLog,v 1.1 2014/08/26 21:34:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/yt/ChangeLog,v 1.2 2014/09/04 22:48:30 xarthisius Exp $
+
+*yt-3.0.1 (04 Sep 2014)
+
+  04 Sep 2014; Kacper Kowalik <xarthisius@gentoo.org> +yt-3.0.1.ebuild:
+  Version bump
 
 *yt-3.0 (26 Aug 2014)
 
