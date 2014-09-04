@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.290 2014/05/22 19:11:53 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.291 2014/09/04 20:00:31 jer Exp $
+
+*net-snmp-5.7.3_pre5 (04 Sep 2014)
+
+  04 Sep 2014; Jeroen Roovers <jer@gentoo.org> +net-snmp-5.7.3_pre5.ebuild:
+  Version bump.
 
   22 May 2014; Matthew Thode <prometheanfire@gentoo.org>
   files/net-snmp-5.1.2-snmpconf-selinux.patch:
