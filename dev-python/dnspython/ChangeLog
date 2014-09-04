@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.88 2014/08/30 11:55:58 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.89 2014/09/04 15:29:11 idella4 Exp $
+
+*dnspython-1.12.0 (04 Sep 2014)
+
+  04 Sep 2014; Ian Delaney <idella4@gentoo.org> +dnspython-1.12.0.ebuild:
+  bump
 
   30 Aug 2014; Chema Alonso <nimiux@gentoo.org> dnspython-1.11.1.ebuild:
   Stable for amd64 wrt bug #513558

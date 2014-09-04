@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/rest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.26 2014/08/07 18:25:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.27 2014/09/04 15:21:14 pacho Exp $
+
+*rest-0.7.92 (04 Sep 2014)
+
+  04 Sep 2014; Pacho Ramos <pacho@gentoo.org> +rest-0.7.92.ebuild,
+  -rest-0.7.90.ebuild:
+  Version bump, drop old
 
   07 Aug 2014; Jeroen Roovers <jer@gentoo.org> rest-0.7.91.ebuild:
   Stable for HPPA (bug #512012).

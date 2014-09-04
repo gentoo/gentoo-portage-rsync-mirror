@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.22.1.ebuild,v 1.3 2014/05/04 12:12:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.22.3.ebuild,v 1.1 2014/09/04 15:29:57 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,8 +12,8 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Rygel"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="X nls +sqlite tracker test transcode"
+KEYWORDS="~amd64 ~x86"
+IUSE="X +sqlite tracker test transcode"
 
 # The deps for tracker? and transcode? are just the earliest available
 # version at the time of writing this ebuild
@@ -28,7 +28,7 @@ RDEPEND="
 	>=net-libs/gssdp-0.13
 	>=net-libs/gupnp-0.19
 	>=net-libs/gupnp-av-0.12.4
-	>=net-libs/libsoup-2.42:2.4
+	>=net-libs/libsoup-2.44:2.4
 	>=sys-apps/util-linux-2.20
 	x11-misc/shared-mime-info
 	sqlite? (
@@ -71,7 +71,7 @@ src_configure() {
 		--enable-gst-launch-plugin \
 		--enable-mediathek-plugin \
 		--with-media-engine=gstreamer \
-		$(use_enable nls) \
+		--enable-nls \
 		$(use_enable sqlite media-export-plugin) \
 		$(use_enable test tests) \
 		$(use_enable tracker tracker-plugin) \

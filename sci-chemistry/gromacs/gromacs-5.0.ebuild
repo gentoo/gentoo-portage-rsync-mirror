@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-5.0.ebuild,v 1.1 2014/06/30 03:24:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-5.0.ebuild,v 1.2 2014/09/04 15:04:24 ottxor Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ HOMEPAGE="http://www.gromacs.org/"
 #        base,    vmd plugins, fftpack from numpy,  blas/lapck from netlib,        memtestG80 library,  mpi_thread lib
 LICENSE="LGPL-2.1 UoI-NCSA !mkl? ( !fftw? ( BSD ) !blas? ( BSD ) !lapack? ( BSD ) ) cuda? ( LGPL-3 ) threads? ( BSD )"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="X blas boost cuda +doc -double-precision +fftw lapack +make-symlinks mkl mpi +offensive openmp +single-precision test +threads +tng ${ACCE_IUSE}"
 
 CDEPEND="
@@ -188,6 +188,8 @@ src_configure() {
 			-DGMX_LIBS_SUFFIX="${suffix}"
 			)
 		BUILD_DIR="${WORKDIR}/${P}_${x}" cmake-utils_src_configure
+		[[ ${CHOST} != *-darwin* ]] || \
+		  sed -i '/SET(CMAKE_INSTALL_NAME_DIR/s/^/#/' "${WORKDIR}/${P}_${x}/gentoo_rules.cmake" || die
 		use mpi || continue
 		einfo "Configuring for ${x} precision with mpi"
 		mycmakeargs=(
@@ -202,6 +204,8 @@ src_configure() {
 			-DGMX_LIBS_SUFFIX="_mpi${suffix}"
 			)
 		BUILD_DIR="${WORKDIR}/${P}_${x}_mpi" CC="mpicc" cmake-utils_src_configure
+		[[ ${CHOST} != *-darwin* ]] || \
+		  sed -i '/SET(CMAKE_INSTALL_NAME_DIR/s/^/#/' "${WORKDIR}/${P}_${x}_mpi/gentoo_rules.cmake" || die
 	done
 }
 
