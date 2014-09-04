@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r5.ebuild,v 1.8 2014/01/03 15:43:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r5.ebuild,v 1.9 2014/09/04 16:08:10 mgorny Exp $
 
 EAPI="5"
 
@@ -105,6 +105,12 @@ src_compile() {
 		fi
 		popd > /dev/null
 	fi
+
+	if use python ; then
+		pushd "${S}"/lib/python > /dev/null
+		distutils-r1_src_compile
+		popd > /dev/null
+	fi
 }
 
 src_install() {
@@ -150,7 +156,7 @@ src_install() {
 
 	if use python ; then
 		pushd "${S}"/lib/python > /dev/null
-		distutils-r1_python_install
+		distutils-r1_src_install
 		popd > /dev/null
 	fi
 

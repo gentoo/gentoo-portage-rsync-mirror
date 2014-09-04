@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.102 2014/01/03 15:51:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.103 2014/09/04 16:08:10 mgorny Exp $
+
+  04 Sep 2014; Michał Górny <mgorny@gentoo.org> antlr-2.7.7-r5.ebuild:
+  Call proper distutils-r1 phases. Fixes bug #521368.
 
   03 Jan 2014; Ulrich Müller <ulm@gentoo.org> -antlr-2.7.7.ebuild,
   -antlr-2.7.7-r1.ebuild, antlr-2.7.7-r2.ebuild, -antlr-2.7.7-r3.ebuild,
