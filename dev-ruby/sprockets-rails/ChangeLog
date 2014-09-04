@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sprockets-rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets-rails/ChangeLog,v 1.7 2014/08/05 16:00:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets-rails/ChangeLog,v 1.8 2014/09/04 05:46:43 graaff Exp $
+
+  04 Sep 2014; Hans de Graaff <graaff@gentoo.org>
+  -sprockets-rails-2.1.1.ebuild:
+  Cleanup.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> sprockets-rails-2.0.0.ebuild,
   sprockets-rails-2.1.1.ebuild, sprockets-rails-2.1.3.ebuild:
