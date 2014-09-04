@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=>=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) dev-libs/boost[nls] sys-libs/ncurses[unicode?] sys-libs/readline taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
+DESCRIPTION=featureful ncurses based MPD client inspired by ncmpc
+EAPI=5
+HOMEPAGE=http://ncmpcpp.rybczak.net/
+IUSE=clock curl outputs taglib unicode visualizer
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=>=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) dev-libs/boost[nls] sys-libs/ncurses[unicode?] sys-libs/readline taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0 )
+SLOT=0
+SRC_URI=http://ncmpcpp.rybczak.net/stable/ncmpcpp-0.6_beta2.tar.bz2
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=7cee5984dd75886d0e4fbacabe653c68

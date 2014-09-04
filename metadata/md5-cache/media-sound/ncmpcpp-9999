@@ -1,11 +1,11 @@
 DEFINED_PHASES=configure install postinst prepare unpack
-DEPEND=>=dev-libs/boost-1.50[nls] sys-libs/ncurses[unicode?] >=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) visualizer? ( sci-libs/fftw:3.0 ) taglib? ( media-libs/taglib ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool >=dev-vcs/git-1.8.2.1
+DEPEND=>=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) dev-libs/boost[nls] sys-libs/ncurses[unicode?] sys-libs/readline taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool >=dev-vcs/git-1.8.2.1
 DESCRIPTION=featureful ncurses based MPD client inspired by ncmpc
 EAPI=5
 HOMEPAGE=http://ncmpcpp.rybczak.net/
 IUSE=clock curl outputs taglib unicode visualizer
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/boost-1.50[nls] sys-libs/ncurses[unicode?] >=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) visualizer? ( sci-libs/fftw:3.0 ) taglib? ( media-libs/taglib )
+RDEPEND=>=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) dev-libs/boost[nls] sys-libs/ncurses[unicode?] sys-libs/readline taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0 )
 SLOT=0
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	06133990e861be0fe60c2b428fd025d9	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c1f3c91e3823dbf1ba825ac03d393437
+_md5_=5a07034b2ce9a7acd9b26423974866fc
