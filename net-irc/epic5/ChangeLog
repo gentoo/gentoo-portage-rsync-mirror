@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/epic5
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/ChangeLog,v 1.24 2014/09/03 04:31:16 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/ChangeLog,v 1.25 2014/09/04 04:53:58 binki Exp $
+
+  04 Sep 2014; Nathan Phillip Brink <binki@gentoo.org>
+  +files/epic5-1.1.10-socks5-libsocks.patch, epic5-1.1.10.ebuild:
+  Reform USE=socks5 fix into a patch.
 
   03 Sep 2014; Nathan Phillip Brink <binki@gentoo.org> epic5-1.1.10.ebuild:
   Fix USE=socks5 compatibility with in-tree versions of dante.

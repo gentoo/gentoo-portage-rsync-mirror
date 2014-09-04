@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jcs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.26 2014/06/17 10:55:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.27 2014/09/04 04:53:25 ercpe Exp $
+
+  04 Sep 2014; Johann Schmitz <ercpe@gentoo.org> jcs-1.2.7.9-r1.ebuild,
+  jcs-1.3-r1.ebuild:
+  Added :0 to dev-java/ dependencies to avoid breakage on the upcoming bumps of
+  the dependencies. Haven't touched the other QA issues.
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -jcs-1.2.7.9.ebuild,
   -jcs-1.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-1.1.10.ebuild,v 1.2 2014/09/03 04:31:16 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-1.1.10.ebuild,v 1.3 2014/09/04 04:53:58 binki Exp $
 
 EAPI=4
 
@@ -46,13 +46,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-ruby-automagic-as-needed.patch \
 		"${FILESDIR}"/${P}-tcl-automagic-as-needed.patch \
 		"${FILESDIR}"/${PN}-1.1.2-perl-automagic-as-needed.patch \
-		"${FILESDIR}"/${P}-without-localdir.patch
-
-	# We want --with-socks5 except it tries -lsocks5 instead of -lsocks.
-	grep -qe -lsocks5 configure.in \
-		&& sed -i -e s/-lsocks5/-lsocks/ configure.in \
-		|| die "fixing socks5 support."
-
+		"${FILESDIR}"/${P}-without-localdir.patch \
+		"${FILESDIR}"/${P}-socks5-libsocks.patch
 	eautoconf
 }
 
