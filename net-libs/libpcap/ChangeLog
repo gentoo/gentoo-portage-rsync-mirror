@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.202 2014/08/16 15:37:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.203 2014/09/04 04:14:56 ssuominen Exp $
+
+*libpcap-1.6.2 (04 Sep 2014)
+
+  04 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> +libpcap-1.6.2.ebuild:
+  Version bump.
 
   16 Aug 2014; Jeroen Roovers <jer@gentoo.org> files/mgmt.h:
   Strip unneeded declarations from header file.
