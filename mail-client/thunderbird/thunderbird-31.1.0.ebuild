@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-31.1.0.ebuild,v 1.1 2014/09/03 22:11:38 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-31.1.0.ebuild,v 1.2 2014/09/04 20:13:00 axs Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -64,15 +64,15 @@ RDEPEND="
 	>=dev-libs/nspr-4.10.6
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
-	>=media-libs/libpng-1.6.6[apng]
+	>=media-libs/libpng-1.6.10[apng]
 	virtual/libffi
 	gstreamer? ( media-plugins/gst-plugins-meta:1.0[ffmpeg] )
 	pulseaudio? ( media-sound/pulseaudio )
 	system-cairo? ( >=x11-libs/cairo-1.12[X] )
 	system-icu? ( >=dev-libs/icu-51.1 )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
-	system-sqlite? ( >=dev-db/sqlite-3.8.3.1:3[secure-delete,debug=] )
-	>=media-libs/libvpx-1.0.0
+	system-sqlite? ( >=dev-db/sqlite-3.8.4.2:3[secure-delete,debug=] )
+	>=media-libs/libvpx-1.3.0
 	kernel_linux? ( media-libs/alsa-lib )
 	selinux? ( sec-policy/selinux-thunderbird )
 	!x11-plugins/enigmail

@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.266 2014/08/23 13:47:55 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.267 2014/09/04 20:30:42 slyfox Exp $
+
+  04 Sep 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/ghc-7.8.3-cc-lang.patch, +files/ghc-7.8.3-deRefStablePtr.patch,
+  +files/ghc-7.8.3-ia64-prim.patch, +files/ghc-7.8.3-linker-warn.patch,
+  +files/ghc-7.8.3-pic-asm.patch, +files/ghc-7.8.3-pic-sparc.patch,
+  -files/ghc-7.8.2-ia64-no-shared.patch, files/ghc-7.8.3-prim-lm.patch,
+  ghc-7.8.3.ebuild:
+  A bunch of UNREG backports (fixes sparc dynamic libraries, ia64 gmp support).
 
   23 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant maintainer in favour of herd.

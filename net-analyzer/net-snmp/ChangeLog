@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.291 2014/09/04 20:00:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.292 2014/09/04 20:11:02 jer Exp $
+
+*net-snmp-5.7.3_pre5-r1 (04 Sep 2014)
+
+  04 Sep 2014; Jeroen Roovers <jer@gentoo.org> -net-snmp-5.7.3_pre5.ebuild,
+  +net-snmp-5.7.3_pre5-r1.ebuild:
+  Add upstream patch for CVE-2014-3565 (bug #522062).
 
 *net-snmp-5.7.3_pre5 (04 Sep 2014)
 
