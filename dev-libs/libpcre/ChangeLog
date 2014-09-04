@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.242 2014/08/23 15:28:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.244 2014/09/04 06:50:07 vapier Exp $
+
+  04 Sep 2014; Mike Frysinger <vapier@gentoo.org> libpcre-8.35.ebuild:
+  Mark arm64/m68k/s390/sh/sparc stable.
+
+*libpcre-8.35-r1 (04 Sep 2014)
+
+  04 Sep 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/libpcre-8.35-export-output.patch, +libpcre-8.35-r1.ebuild:
+  Add fix from upstream for exported symbols in C++ lib.
 
   23 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libpcre-8.35.ebuild:
   Stable for ia64, wrt bug #512012
