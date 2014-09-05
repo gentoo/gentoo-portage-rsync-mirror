@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+DEPEND=app-crypt/gcr[introspection,vala] app-crypt/libsecret dev-db/sqlite:3 dev-libs/glib:2 >=dev-libs/libgee-0.8.5:0.8 dev-libs/libxml2:2 dev-libs/gmime:2.6 media-libs/libcanberra >=net-libs/webkit-gtk-1.10.0:3[introspection] >=x11-libs/gtk+-3.10.0:3[introspection] x11-libs/libnotify app-text/gnome-doc-utils dev-util/desktop-file-utils nls? ( sys-devel/gettext ) || ( dev-lang/vala:0.24 dev-lang/vala:0.22 ) virtual/pkgconfig >=sys-apps/sed-4 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=A lightweight, easy-to-use, feature-rich email client
+EAPI=5
+HOMEPAGE=http://www.yorba.org/projects/geary/
+IUSE=nls
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=app-crypt/gcr[introspection,vala] app-crypt/libsecret dev-db/sqlite:3 dev-libs/glib:2 >=dev-libs/libgee-0.8.5:0.8 dev-libs/libxml2:2 dev-libs/gmime:2.6 media-libs/libcanberra >=net-libs/webkit-gtk-1.10.0:3[introspection] >=x11-libs/gtk+-3.10.0:3[introspection] x11-libs/libnotify gnome-base/gsettings-desktop-schemas nls? ( virtual/libintl )
+SLOT=0
+SRC_URI=ftp://ftp.gnome.org/pub/GNOME/sources/geary/0.7/geary-0.7.2.tar.xz
+_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	vala	d8f392783fdc2395fc64af046f2ca961
+_md5_=c75c77fa443b3176046379ef16d20f40

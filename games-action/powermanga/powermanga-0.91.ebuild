@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.91.ebuild,v 1.6 2014/05/15 16:24:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.91.ebuild,v 1.7 2014/09/05 20:44:28 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils autotools games
@@ -38,7 +38,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-flags.patch \
 		"${FILESDIR}"/${P}-automake-1.13.patch
 	sed -i \
-		-e "/scoredir/s#/var/games/powermanga#${GAMES_DATADIR}/powermanga#" \
+		-e "/scoredir/s#/var/games/powermanga#${GAMES_STATEDIR}#" \
 		src/Makefile.am || die
 	eautoreconf
 }

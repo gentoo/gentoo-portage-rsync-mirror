@@ -1,6 +1,9 @@
 # ChangeLog for games-action/powermanga
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.30 2014/05/15 16:24:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.31 2014/09/05 20:44:28 mr_bones_ Exp $
+
+  05 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org> powermanga-0.91.ebuild:
+  fix savegame dir with patch from Samuel BAUER via bug #515676
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> powermanga-0.90.ebuild,
   powermanga-0.91.ebuild:
