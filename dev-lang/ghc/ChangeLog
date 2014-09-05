@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.267 2014/09/04 20:30:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.268 2014/09/05 10:40:45 slyfox Exp $
+
+  05 Sep 2014; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.8.3.ebuild:
+  Allow USE=gmp on ia64 (fixed by ghc-7.8.3-ia64-prim.patch).
 
   04 Sep 2014; Sergei Trofimovich <slyfox@gentoo.org>
   +files/ghc-7.8.3-cc-lang.patch, +files/ghc-7.8.3-deRefStablePtr.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.3.ebuild,v 1.9 2014/09/04 20:30:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.3.ebuild,v 1.10 2014/09/05 10:40:45 slyfox Exp $
 
 EAPI=5
 
@@ -97,8 +97,6 @@ DEPEND="${RDEPEND}
 PDEPEND="!ghcbootstrap? ( =app-admin/haskell-updater-1.2* )"
 
 REQUIRED_USE="?? ( ghcbootstrap binary )"
-# ia64 fails to return from STG GMP primitives (stage2 always SIGSEGVs)
-REQUIRED_USE+=" ia64? ( !gmp )"
 
 # yeah, top-level 'use' sucks. I'd like to have it in 'src_install()'
 use binary && QA_PREBUILT="*"
