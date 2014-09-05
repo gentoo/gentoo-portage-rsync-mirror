@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-Plugin-DeepAbstractSearch/Class-DBI-Plugin-DeepAbstractSearch-0.80.0.ebuild,v 1.1 2011/09/01 11:18:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-Plugin-DeepAbstractSearch/Class-DBI-Plugin-DeepAbstractSearch-0.80.0.ebuild,v 1.2 2014/09/05 15:15:14 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=SRIHA
 MODULE_VERSION=0.08

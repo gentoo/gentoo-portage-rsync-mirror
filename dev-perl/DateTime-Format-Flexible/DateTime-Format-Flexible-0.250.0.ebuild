@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Flexible/DateTime-Format-Flexible-0.250.0.ebuild,v 1.1 2013/08/16 08:49:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Flexible/DateTime-Format-Flexible-0.250.0.ebuild,v 1.2 2014/09/05 15:17:16 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=THINC
 MODULE_VERSION=0.25

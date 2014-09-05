@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/owncloud-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/ChangeLog,v 1.13 2014/08/05 08:45:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/ChangeLog,v 1.14 2014/09/05 15:06:32 voyageur Exp $
+
+*owncloud-client-1.6.3 (05 Sep 2014)
+
+  05 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  +owncloud-client-1.6.3.ebuild:
+  Version bump
 
 *owncloud-client-1.6.2 (05 Aug 2014)
 
