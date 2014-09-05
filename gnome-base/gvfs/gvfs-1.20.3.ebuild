@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.20.1.ebuild,v 1.3 2014/07/24 18:14:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.20.3.ebuild,v 1.1 2014/09/05 09:57:24 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,6 +17,7 @@ SLOT="0"
 IUSE="afp archive avahi bluray cdda fuse gnome-online-accounts gphoto2 gtk +http ios libsecret mtp samba systemd test +udev udisks"
 REQUIRED_USE="
 	cdda? ( udev )
+	mtp? ( udev )
 	udisks? ( udev )
 	systemd? ( udisks )
 "
@@ -72,6 +73,8 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_prepare() {
+	DOCS="AUTHORS ChangeLog NEWS MAINTAINERS README TODO" # ChangeLog.pre-1.2 README.commits
+
 	if ! use udev; then
 		sed -e 's/gvfsd-burn/ /' \
 			-e 's/burn.mount.in/ /' \
@@ -88,7 +91,8 @@ src_configure() {
 	# --enable-documentation installs man pages
 	# --disable-obexftp, upstream bug #729945
 	gnome2_src_configure \
-		--disable-bash-completion \
+		--enable-bash-completion \
+		--with-bash-completion-dir="$(get_bashcompdir)" \
 		--disable-gdu \
 		--disable-hal \
 		--disable-obexftp \
@@ -112,10 +116,4 @@ src_configure() {
 		$(use_enable samba) \
 		$(use_enable systemd libsystemd-login) \
 		$(use_enable udisks udisks2)
-}
-
-src_install() {
-	DOCS="AUTHORS ChangeLog NEWS MAINTAINERS README TODO" # ChangeLog.pre-1.2 README.commits
-	gnome2_src_install
-	dobashcomp programs/completion/gvfs
 }

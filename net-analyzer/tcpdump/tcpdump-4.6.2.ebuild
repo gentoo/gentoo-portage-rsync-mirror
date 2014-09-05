@@ -1,11 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.6.2.ebuild,v 1.1 2014/09/04 19:25:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.6.2.ebuild,v 1.2 2014/09/05 09:46:33 jer Exp $
 
 EAPI=5
-
-AUTOTOOLS_AUTO_DEPEND="no" # Only cross-compiling
-inherit autotools eutils flag-o-matic toolchain-funcs user
+inherit eutils flag-o-matic toolchain-funcs user
 
 DESCRIPTION="A Tool for network monitoring and data acquisition"
 HOMEPAGE="http://www.tcpdump.org/"
@@ -15,7 +13,7 @@ SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="+drop-root smi ssl ipv6 -samba suid test"
+IUSE="+drop-root smi ssl ipv6 samba suid test"
 
 RDEPEND="
 	drop-root? ( sys-libs/libcap-ng )
@@ -33,28 +31,12 @@ DEPEND="
 "
 
 pkg_setup() {
-	if use samba ; then
-		ewarn
-		ewarn "CAUTION !!! CAUTION !!! CAUTION"
-		ewarn
-		ewarn "You're about to compile tcpdump with samba printing support"
-		ewarn "Upstream tags it with:"
-		ewarn "WARNING: The SMB printer may have exploitable buffer overflows!!!"
-		ewarn "So think twice whether this is fine with you"
-		ewarn
-		ewarn "CAUTION !!! CAUTION !!! CAUTION"
-		ewarn
-	fi
 	if use drop-root || use suid; then
 		enewgroup tcpdump
 		enewuser tcpdump -1 -1 -1 tcpdump
 	fi
 }
 
-src_prepare() {
-	sed -i aclocal.m4 -e 's|\"-O2\"|\"\"|g' || die
-	eautoconf
-}
 src_configure() {
 	# tcpdump needs some optimization. see bug #108391
 	# but do not replace -Os

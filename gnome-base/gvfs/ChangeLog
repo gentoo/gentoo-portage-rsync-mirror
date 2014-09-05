@@ -1,6 +1,19 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.267 2014/08/25 10:58:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.268 2014/09/05 09:57:24 pacho Exp $
+
+*gvfs-1.20.3 (05 Sep 2014)
+
+  05 Sep 2014; Pacho Ramos <pacho@gentoo.org> +gvfs-1.20.3.ebuild,
+  -files/gvfs-1.12.3-gphoto2-2.5-1.patch,
+  -files/gvfs-1.12.3-gphoto2-2.5-2.patch,
+  -files/gvfs-1.12.3-gphoto2-stricter-checks.patch,
+  -files/gvfs-1.12.3-libcdio-0.84.patch, -files/gvfs-1.16.3-emit-signal.patch,
+  -files/gvfs-1.2.2-expose-archive-backend.patch,
+  -files/gvfs-1.2.2-gphoto2-stricter-checks.patch, -gvfs-1.18.3.ebuild,
+  -gvfs-1.20.1.ebuild, metadata.xml:
+  Version bump, use upstream rules to install bach-completion file, 'mtp' needs
+  'udev' support (#521472 by Christopher Head), drop old.
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gvfs-1.20.2.ebuild:
   Stable for alpha, wrt bug #512012
