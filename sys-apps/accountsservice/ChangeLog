@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/accountsservice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.45 2014/06/20 14:45:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.46 2014/09/05 11:52:43 zlogene Exp $
+
+  05 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> accountsservice-0.6.37.ebuild:
+  ppc/ppc64 stable wrt bug #518014
 
   20 Jun 2014; Agostino Sarubbo <ago@gentoo.org> accountsservice-0.6.37.ebuild:
   Stable for arm, wrt bug #508862
