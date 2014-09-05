@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.76 2014/08/07 18:23:04 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.77 2014/09/05 18:30:46 ryao Exp $
+
+  05 Sep 2014; Richard Yao <ryao@gentoo.org> spl-0.6.3.ebuild, spl-9999.ebuild:
+  Add preliminary ebuild changes for Gentoo Prefix support; Make die always
+  print a message; Fix CONFIG_CHECK when USE=debug is set; Sync 0.6.3 and 9999
+  ebuilds
 
   07 Aug 2014; Richard Yao <ryao@gentoo.org> spl-0.6.3.ebuild:
   No code changes are needed to support Linux 3.16. I modifying the ebuild to

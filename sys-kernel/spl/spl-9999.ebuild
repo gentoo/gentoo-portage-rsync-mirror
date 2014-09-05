@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.41 2014/07/09 01:27:27 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.42 2014/09/05 18:30:46 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -48,30 +48,32 @@ pkg_setup() {
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 	"
-	use debug && CONFIG_CHECK="FRAME_POINTER
-	DEBUG_INFO
-	!DEBUG_INFO_REDUCED"
+
+	use debug && CONFIG_CHECK="${CONFIG_CHECK}
+		FRAME_POINTER
+		DEBUG_INFO
+		!DEBUG_INFO_REDUCED
+	"
 
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 9 || die "Linux 3.9 is the latest supported version."; }
+		{ kernel_is le 3 16 || die "Linux 3.16 is the latest supported version."; }
 
 	check_extra_config
 }
 
 src_prepare() {
 	# Workaround for hard coded path
-	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/check.sh || die
-
-	if [ ${PV} != "9999" ]
-	then
-		# Be more like FreeBSD and Illumos when handling hostids
-		epatch "${FILESDIR}/${PN}-0.6.0_rc14-simplify-hostid-logic.patch"
-	fi
+	sed -i "s|/sbin/lsmod|/bin/lsmod|" "${S}/scripts/check.sh" || \
+		die "Cannot patch check.sh"
 
 	# splat is unnecessary unless we are debugging
 	use debug || sed -e 's/^subdir-m += splat$//' -i "${S}/module/Makefile.in"
+
+	# Set module revision number
+	[ ${PV} != "9999" ] && \
+		{ sed -i "s/\(Release:\)\(.*\)1/\1\2${PR}-gentoo/" "${S}/META" || die "Could not set Gentoo release"; }
 
 	autotools-utils_src_prepare
 }
@@ -94,7 +96,7 @@ src_configure() {
 }
 
 src_install() {
-	autotools-utils_src_install
+	autotools-utils_src_install INSTALL_MOD_PATH=${INSTALL_MOD_PATH:-$EROOT}
 	dodoc AUTHORS DISCLAIMER README.markdown
 }
 

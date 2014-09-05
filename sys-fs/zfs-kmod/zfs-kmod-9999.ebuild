@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.24 2014/07/09 01:29:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.25 2014/09/05 18:23:36 ryao Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ AT_M4DIR="config"
 AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
-inherit bash-completion-r1 flag-o-matic linux-info linux-mod toolchain-funcs autotools-utils
+inherit flag-o-matic linux-info linux-mod toolchain-funcs autotools-utils
 
 if [ ${PV} == "9999" ] ; then
 	inherit git-2
@@ -67,7 +67,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 15 || die "Linux 3.15 is the latest supported version."; }
+		{ kernel_is le 3 16 || die "Linux 3.16 is the latest supported version."; }
 
 	check_extra_config
 }
@@ -75,6 +75,10 @@ pkg_setup() {
 src_prepare() {
 	# Remove GPLv2-licensed ZPIOS unless we are debugging
 	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
+
+	# Set module revision number
+	[ ${PV} != "9999" ] && \
+		{ sed -i "s/\(Release:\)\(.*\)1/\1\2${PR}-gentoo/" "${S}/META" || die "Could not set Gentoo release"; }
 
 	autotools-utils_src_prepare
 }
@@ -84,7 +88,7 @@ src_configure() {
 	filter-ldflags -Wl,*
 
 	set_arch_to_kernel
-	local myeconfargs=(
+	local myeconfargs=(${myeconfargs}
 		--bindir="${EPREFIX}/bin"
 		--sbindir="${EPREFIX}/sbin"
 		--with-config=kernel
@@ -92,11 +96,16 @@ src_configure() {
 		--with-linux-obj="${KV_OUT_DIR}"
 		$(use_enable debug)
 	)
+
+	SPL_PATH=$(basename $(echo "${EROOT}usr/src/spl-"*)) \
+			myeconfargs="${myeconfargs} --with-spl=${EROOT}usr/src/${SPL_PATH} \
+							--with-spl-obj=${EROOT}usr/src/${SPL_PATH}/${KV_FULL}"
+
 	autotools-utils_src_configure
 }
 
 src_install() {
-	autotools-utils_src_install
+	autotools-utils_src_install INSTALL_MOD_PATH=${INSTALL_MOD_PATH:-$EROOT}
 	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
 }
 
