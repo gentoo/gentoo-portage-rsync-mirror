@@ -20,9 +20,6 @@
   <longdescription lang="en">
     Joomla is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications.
   </longdescription>
-  <use>
-    <flag name='mariadb'>Uses mariadb as a database backend. If not enabled, mysql is required.  The default is to use mysql.</flag>
-  </use>
   <upstream>
     <doc lang="en">http://docs.joomla.org</doc>
   </upstream>
