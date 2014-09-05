@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.446 2014/08/27 12:25:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.447 2014/09/05 22:32:36 radhermit Exp $
+
+*vim-core-7.4.430 (05 Sep 2014)
+
+  05 Sep 2014; Tim Harder <radhermit@gentoo.org> +vim-core-7.4.430.ebuild,
+  vim-core-9999.ebuild:
+  Version bump. Use upstream patches instead of rolling our own (thanks to
+  exherbo for the code) and fix cross-compile issues (bug #473372).
 
   27 Aug 2014; Agostino Sarubbo <ago@gentoo.org> vim-core-7.4.273.ebuild:
   Stable for ppc, wrt bug #511190

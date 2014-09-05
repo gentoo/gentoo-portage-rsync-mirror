@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/java-service-wrapper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/ChangeLog,v 1.16 2014/08/10 20:16:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/ChangeLog,v 1.17 2014/09/05 22:34:15 jauhien Exp $
+
+*java-service-wrapper-3.5.25 (05 Sep 2014)
+
+  05 Sep 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  +files/java-service-wrapper-3.5.25-as-needed.patch,
+  +files/java-service-wrapper-3.5.25-gentoo-wrapper-defaults.patch,
+  +files/java-service-wrapper-3.5.25-testsuite.patch,
+  +java-service-wrapper-3.5.25.ebuild:
+  version bump, closing bug #517730
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   java-service-wrapper-3.2.3.ebuild, java-service-wrapper-3.3.1.ebuild,

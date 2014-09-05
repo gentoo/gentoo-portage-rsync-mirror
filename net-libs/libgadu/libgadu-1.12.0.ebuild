@@ -1,8 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.12.0.ebuild,v 1.3 2014/08/13 23:58:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.12.0.ebuild,v 1.4 2014/09/05 22:37:44 reavertm Exp $
 
 EAPI=5
+
+AUTOTOOLS_AUTORECONF=1
 
 inherit autotools-utils
 
@@ -39,7 +41,6 @@ RDEPEND="${COMMON_DEPEND}
 	!=net-im/kadu-0.6.0.1
 "
 
-AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 PATCHES=(

@@ -1,8 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.4.ebuild,v 1.10 2014/08/25 11:53:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.4.ebuild,v 1.11 2014/09/05 22:37:44 reavertm Exp $
 
 EAPI=5
+
+AUTOTOOLS_AUTORECONF=1
 
 inherit autotools-utils
 
@@ -39,10 +41,6 @@ RDEPEND="${COMMON_DEPEND}
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 DOCS=(AUTHORS ChangeLog NEWS README)
-
-src_prepare() {
-	eautoreconf
-}
 
 src_configure() {
 	local myeconfargs=(

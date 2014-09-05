@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.86 2014/08/25 11:53:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.87 2014/09/05 22:37:44 reavertm Exp $
+
+  05 Sep 2014; Maciej Mrozowski <reavertm@gentoo.org> libgadu-1.11.4.ebuild,
+  libgadu-1.12.0.ebuild:
+  Properly trigger autoreconf, buf 520946.
 
   25 Aug 2014; Raúl Porcel <armin76@gentoo.org> libgadu-1.11.4.ebuild:
   sparc stable wrt #505558
