@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/batmon/batmon-0.6.ebuild,v 1.2 2012/06/18 15:04:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/batmon/batmon-0.8.ebuild,v 1.1 2014/09/05 14:58:07 voyageur Exp $
 
-EAPI=4
+EAPI=5
 inherit gnustep-2
 
 DESCRIPTION="displays the status of your laptop battery"

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16014 2014/09/05 13:49:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16016 2014/09/05 14:55:06 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,9 +30,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Bernard Cafarelli <voyageur@gentoo.org> (05 Sep 2014)
+# Does not connect anymore, does not work with current pidgin versions
+# Dead upstream
+# Masked for removal in 30 days, bug #355797
+x11-plugins/pidgin-facebookchat
+
 # Michał Górny <mgorny@gentoo.org> (05 Sep 2014)
 # New version is built using C++11, and reverse dependencies may
 # require being switched to C++11 as well. Mask for testing.
+~sys-devel/clang-3.5.0
 ~sys-devel/llvm-3.5.0
 
 # Sergey Popov <pinkbyte@gentoo.org> (04 Sep 2014)
@@ -51,9 +58,11 @@
 # You can still use your MSN account in net-im/skype
 # or switch to an open protocol instead
 # Masked for removal in 30 days
+# Added msn-pecan to the list (voyageur)
 net-im/kmess
 net-im/amsn
 x11-themes/amsn-skins
+x11-plugins/msn-pecan
 
 # Christian Faulhammer <fauli@gentoo.org> (02 Sep 2014)
 # website not working anymore and will stay like this,
