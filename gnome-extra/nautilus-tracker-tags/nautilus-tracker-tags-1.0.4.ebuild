@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-tracker-tags/nautilus-tracker-tags-0.16.4.ebuild,v 1.3 2013/12/08 18:57:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-tracker-tags/nautilus-tracker-tags-1.0.4.ebuild,v 1.1 2014/09/05 09:31:02 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="tracker"
@@ -8,16 +8,16 @@ GNOME_ORG_MODULE="tracker"
 inherit gnome.org toolchain-funcs
 
 DESCRIPTION="Nautilus extension to tag files for Tracker"
-HOMEPAGE="https://projects.gnome.org/tracker/"
+HOMEPAGE="https://wiki.gnome.org/Projects/Tracker"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 COMMON_DEPEND="
 	~app-misc/tracker-${PV}
-	>=dev-libs/glib-2.35.1:2
+	>=dev-libs/glib-2.38:2
 	>=gnome-base/nautilus-2.90
 	x11-libs/gtk+:3
 "

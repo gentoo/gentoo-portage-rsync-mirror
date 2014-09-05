@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-1.0.1.ebuild,v 1.4 2014/07/24 12:01:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-1.0.4.ebuild,v 1.1 2014/09/05 09:30:16 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_{6,7} )
-VALA_MIN_API_VERSION="0.14"
+VALA_MIN_API_VERSION="0.18"
 
 inherit autotools eutils gnome2 linux-info multilib python-any-r1 vala versionator virtualx
 
@@ -16,8 +16,8 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Tracker"
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/100"
 IUSE="cue eds elibc_glibc exif ffmpeg firefox-bookmarks flac gif gsf
-gstreamer gtk iptc +iso +jpeg upower +miner-fs mp3 nautilus networkmanager
-pdf playlist rss test thunderbird +tiff upnp-av +vorbis +xml xmp xps"
+gstreamer gtk iptc +iso +jpeg +miner-fs mp3 nautilus networkmanager
+pdf playlist rss test thunderbird +tiff upnp-av upower +vorbis +xml xmp xps"
 
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
@@ -93,7 +93,7 @@ DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	$(vala_depend)
 	>=dev-util/gtk-doc-am-1.8
-	>=dev-util/intltool-0.40
+	>=dev-util/intltool-0.40.0
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 	gtk? ( >=dev-libs/libgee-0.3 )
@@ -142,9 +142,6 @@ src_prepare() {
 	sed -e '\%/steroids/tracker/tracker_sparql_update_async%,+3 d' \
 		-i tests/tracker-steroids/tracker-test.c || die
 
-	# Fix building with libmediaart disabled, bug #509048
-	epatch "${FILESDIR}/${PN}-1.0.1-libmediaart-disabled.patch"
-
 	eautoreconf # See bug #367975
 	gnome2_src_prepare
 	vala_src_prepare
@@ -183,7 +180,10 @@ src_configure() {
 		--enable-introspection \
 		--enable-libpng \
 		--enable-libmediaart \
+		--enable-miner-apps \
+		--enable-miner-user-guides \
 		--enable-tracker-fts \
+		--enable-tracker-writeback \
 		--enable-enca \
 		--with-unicode-support=libicu \
 		$(use_enable cue libcue) \
