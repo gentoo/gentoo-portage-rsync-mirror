@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flask-sqlalchemy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-sqlalchemy/ChangeLog,v 1.14 2014/05/30 07:31:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-sqlalchemy/ChangeLog,v 1.15 2014/09/05 13:47:00 idella4 Exp $
+
+*flask-sqlalchemy-2.0 (05 Sep 2014)
+
+  05 Sep 2014; Ian Delaney <idella4@gentoo.org> +flask-sqlalchemy-2.0.ebuild:
+  bump; update doc install, test phase
 
   30 May 2014; Ian Delaney <idella4@gentoo.org> flask-sqlalchemy-1.0-r1.ebuild,
   flask-sqlalchemy-1.0.ebuild:

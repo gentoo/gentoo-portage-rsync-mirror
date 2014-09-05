@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.483 2014/08/26 19:59:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.484 2014/09/05 13:20:22 polynomial-c Exp $
+
+*util-linux-2.25.1 (05 Sep 2014)
+
+  05 Sep 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -util-linux-2.22.2.ebuild, -util-linux-2.25.ebuild,
+  +util-linux-2.25.1.ebuild, -files/util-linux-2.25-lscpu-pic.patch,
+  metadata.xml:
+  Version bump. Removed old.
 
   26 Aug 2014; Michał Górny <mgorny@gentoo.org> util-linux-2.24.2.ebuild,
   util-linux-2.25.ebuild, util-linux-9999.ebuild:

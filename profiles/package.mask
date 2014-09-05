@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16012 2014/09/05 07:33:12 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16014 2014/09/05 13:49:00 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (05 Sep 2014)
+# New version is built using C++11, and reverse dependencies may
+# require being switched to C++11 as well. Mask for testing.
+~sys-devel/llvm-3.5.0
 
 # Sergey Popov <pinkbyte@gentoo.org> (04 Sep 2014)
 # Security mask, wrt bugs #488212, #498164, #500260,
@@ -104,11 +108,6 @@ games-server/halflife-steam
 # Does not seem actively maintained
 # Masked for removal in 30 days
 media-sound/cowbell
-
-# Michał Górny <mgorny@gentoo.org> (25 Aug 2014)
-# cfdisk wipes out partition table when removing partitions. Masking
-# so that our users won't run into it. Bug #520838.
->=sys-apps/util-linux-2.25
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (24 Aug 2014)
 # Lack of maintainer, webapp with potential security problems
