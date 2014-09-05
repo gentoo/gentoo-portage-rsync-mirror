@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/dmd-bin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.19 2009/08/24 15:11:08 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.20 2014/09/05 11:05:12 ulm Exp $
+
+  05 Sep 2014; Ulrich Müller <ulm@gentoo.org> dmd-bin-1.016.ebuild,
+  dmd-bin-2.008-r1.ebuild:
+  QA: Remove unnecessary dependencies on app-emulation/emul-linux-x86-compat
+  and virtual/libstdc++, bug 522046.
 
   23 Aug 2009; William Hubbs <williamh@gentoo.org> dmd-bin-1.016.ebuild,
   dmd-bin-2.008-r1.ebuild:

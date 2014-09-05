@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.016.ebuild,v 1.7 2009/08/24 15:11:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.016.ebuild,v 1.8 2014/09/05 11:05:12 ulm Exp $
 
 inherit eutils
 
@@ -11,19 +11,17 @@ DESCRIPTION="Digital Mars D Compiler"
 HOMEPAGE="http://www.digitalmars.com/d/"
 SRC_URI="http://ftp.digitalmars.com/${MY_P}.zip"
 
-IUSE=""
 LICENSE="DMD"
-RESTRICT="mirror strip"
 SLOT="0"
 KEYWORDS="~x86"
+RESTRICT="mirror strip"
 
 LOC="/opt/dmd"
 S="${WORKDIR}"
 
 DEPEND="sys-apps/findutils
 	app-arch/unzip"
-RDEPEND="amd64? ( app-emulation/emul-linux-x86-compat )
-	x86? ( ~virtual/libstdc++-3.3 )"
+RDEPEND="~virtual/libstdc++-3.3"
 
 src_unpack() {
 	unpack ${A}
