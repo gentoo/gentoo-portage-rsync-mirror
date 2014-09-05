@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/amavis-logwatch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis-logwatch/ChangeLog,v 1.1 2013/12/20 00:31:31 mjo Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis-logwatch/ChangeLog,v 1.2 2014/09/05 21:39:21 mjo Exp $
+
+*amavis-logwatch-1.51.03 (05 Sep 2014)
+
+  05 Sep 2014; Michael Orlitzky <mjo@gentoo.org>
+  +amavis-logwatch-1.51.03.ebuild, -amavis-logwatch-1.51.02.ebuild,
+  metadata.xml:
+  Version bump. Remove old version and obsolete logwatch use flag.
 
 *amavis-logwatch-1.51.02 (20 Dec 2013)
 

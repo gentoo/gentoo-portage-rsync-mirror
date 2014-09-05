@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.152 2014/08/04 18:30:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.154 2014/09/05 21:49:41 mjo Exp $
+
+  05 Sep 2014; Michael Orlitzky <mjo@gentoo.org> -files/djbdns-setup,
+  -files/dnscache-setup, -files/tinydns-setup:
+  Remove unused setup scripts.
+
+  05 Sep 2014; Michael Orlitzky <mjo@gentoo.org> -djbdns-1.05-r26.ebuild,
+  -djbdns-1.05-r27.ebuild, -djbdns-1.05-r28.ebuild:
+  Remove old versions, fixing bug #504414 in the process.
 
   04 Aug 2014; Raúl Porcel <armin76@gentoo.org> djbdns-1.05-r29.ebuild:
   sparc stable wrt #511900
