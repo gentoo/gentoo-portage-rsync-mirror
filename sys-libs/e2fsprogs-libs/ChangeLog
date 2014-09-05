@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.129 2014/08/12 05:57:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.130 2014/09/05 18:39:49 polynomial-c Exp $
+
+*e2fsprogs-libs-1.42.12 (05 Sep 2014)
+
+  05 Sep 2014; Lars Wendler <polynomial-c@gentoo.org>
+  +e2fsprogs-libs-1.42.12.ebuild:
+  Version bump.
 
   12 Aug 2014; Mike Frysinger <vapier@gentoo.org> e2fsprogs-libs-1.42.11.ebuild:
   Fix USE=-nls builds that lack gettext.
