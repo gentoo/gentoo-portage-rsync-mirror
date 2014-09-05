@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Util
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Util/ChangeLog,v 1.8 2013/01/16 20:10:25 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Util/ChangeLog,v 1.9 2014/09/05 15:37:08 zlogene Exp $
+
+  05 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> -Module-Util-1.80.0.ebuild:
+  Drop old.
 
 *Module-Util-1.90.0 (16 Jan 2013)
 
