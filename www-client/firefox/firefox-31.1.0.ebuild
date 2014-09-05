@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.1.0.ebuild,v 1.1 2014/09/03 22:09:11 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.1.0.ebuild,v 1.2 2014/09/05 16:23:25 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -56,14 +56,14 @@ RDEPEND="
 	>=dev-libs/nss-3.16.2
 	>=dev-libs/nspr-4.10.6
 	>=media-libs/mesa-10.2
-	>=media-libs/libpng-1.6.7[apng]
+	>=media-libs/libpng-1.6.10[apng]
 	virtual/libffi
 	gstreamer? ( media-plugins/gst-plugins-meta:1.0[ffmpeg] )
 	pulseaudio? ( media-sound/pulseaudio )
 	system-cairo? ( >=x11-libs/cairo-1.12[X] )
 	system-icu? ( >=dev-libs/icu-51.1 )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
-	system-sqlite? ( >=dev-db/sqlite-3.8.3.1:3[secure-delete,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.8.4.2:3[secure-delete,debug=] )
 	>=media-libs/libvpx-1.3.0
 	kernel_linux? ( media-libs/alsa-lib )
 	selinux? ( sec-policy/selinux-mozilla )"
@@ -137,6 +137,13 @@ pkg_pretend() {
 		CHECKREQS_DISK_BUILD="4G"
 	fi
 	check-reqs_pkg_setup
+
+	if use jit && [[ -n ${PROFILE_IS_HARDENED} ]]; then
+		ewarn "You are emerging this package on a hardened profile with USE=jit enabled."
+		ewarn "This is horribly insecure as it disables all PAGEEXEC restrictions."
+		ewarn "Please ensure you know what you are doing.  If you don't, please consider"
+		ewarn "emerging the package with USE=-jit"
+	fi
 }
 
 src_unpack() {
@@ -368,6 +375,7 @@ src_install() {
 
 	# Required in order to use plugins and even run firefox on hardened.
 	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
+	use jit && pax-mark p "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin}
 
 	if use minimal; then
 		rm -r "${ED}"/usr/include "${ED}${MOZILLA_FIVE_HOME}"/{idl,include,lib,sdk} \

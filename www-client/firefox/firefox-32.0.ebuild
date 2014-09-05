@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-32.0.ebuild,v 1.1 2014/09/03 22:09:11 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-32.0.ebuild,v 1.2 2014/09/05 16:23:25 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -53,17 +53,17 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
-	>=dev-libs/nss-3.16.4
+	>=dev-libs/nss-3.16.2
 	>=dev-libs/nspr-4.10.6
 	>=media-libs/mesa-10.2
-	>=media-libs/libpng-1.6.7[apng]
+	>=media-libs/libpng-1.6.10[apng]
 	virtual/libffi
 	gstreamer? ( media-plugins/gst-plugins-meta:1.0[ffmpeg] )
 	pulseaudio? ( media-sound/pulseaudio )
 	system-cairo? ( >=x11-libs/cairo-1.12[X] )
 	system-icu? ( >=dev-libs/icu-51.1 )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
-	system-sqlite? ( >=dev-db/sqlite-3.8.3.1:3[secure-delete,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.8.4.2:3[secure-delete,debug=] )
 	>=media-libs/libvpx-1.3.0
 	kernel_linux? ( media-libs/alsa-lib )
 	selinux? ( sec-policy/selinux-mozilla )"

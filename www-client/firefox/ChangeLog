@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.354 2014/09/05 09:07:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.355 2014/09/05 16:23:25 axs Exp $
+
+  05 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-31.1.0.ebuild,
+  firefox-32.0.ebuild:
+  fixed minimum versions on some deps, fix is in-place, revbumps will be coming
+  after other bugs are sorted
 
   05 Sep 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.8.0.ebuild:
   Stable for x86, wrt bug #522020
