@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.84.ebuild,v 1.5 2014/08/09 10:48:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.84.ebuild,v 1.6 2014/09/05 05:39:30 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 systemd user
@@ -136,7 +136,7 @@ pkg_postinst() {
 
 	elog "If you use ${PN}-daemon, please, set 'rpc-username' and"
 	elog "'rpc-password' (in plain text, ${PN}-daemon will hash it on"
-	elog "start) in settings.json file located at /var/${PN}/config or"
+	elog "start) in settings.json file located at /var/lib/${PN}/config or"
 	elog "any other appropriate config directory."
 	elog
 	elog "Since µTP is enabled by default, ${PN} needs large kernel buffers for"

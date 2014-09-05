@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.260 2014/08/10 05:17:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.261 2014/09/05 05:39:30 ssuominen Exp $
+
+  05 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> transmission-2.84.ebuild:
+  Reference /var/lib instead of /var in pkg_postinst() message wrt #521898
 
   10 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
   -files/transmission-2.82-qt4.patch, -transmission-2.82-r3.ebuild,
