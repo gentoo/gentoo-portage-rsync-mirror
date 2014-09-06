@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.437 2014/09/01 18:40:59 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.438 2014/09/06 21:13:46 sping Exp $
+
+*gimp-2.8.10-r2 (06 Sep 2014)
+
+  06 Sep 2014; Sebastian Pipping <sping@gentoo.org> gimp-2.8.10-r1.ebuild,
+  +gimp-2.8.10-r2.ebuild, +files/gimp-2.8.10-CVE-2013-1913.patch,
+  +files/gimp-2.8.10-CVE-2013-1978.patch, +files/gimp-2.8.10-freetype251.patch:
+  Add patches for CVE-2013-{1913,1978} to 2.8.10-r2 (bug #493372, 2.8.14 has
+  them already); inline gimp-2.8.10-freetype251.patch (checksum changed)
 
   01 Sep 2014; Sebastian Pipping <sping@gentoo.org> -gimp-2.8.10.ebuild:
   Remove old version
