@@ -1,7 +1,7 @@
 https://bugs.gentoo.org/show_bug.cgi?id=422915
 
---- tmp/powermanga-0.90.orig/src/shots.c	2007-08-24 00:55:17.000000000 -0700
-+++ powermanga-0.90-dfsg/src/shots.c	2011-12-26 21:10:28.000000000 -0800
+--- tmp/powermanga-0.90.orig/src/shots.c
++++ powermanga-0.90-dfsg/src/shots.c
 @@ -447,8 +447,6 @@
            {
              bullet->img_angle = (Sint16) (bullet->angle / PI_SUR_16);

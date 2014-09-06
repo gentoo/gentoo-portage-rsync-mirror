@@ -1,5 +1,5 @@
---- configure.ac.old	2011-05-19 07:52:47.862129502 +0200
-+++ configure.ac	2011-05-19 07:52:59.780877256 +0200
+--- configure.ac.old
++++ configure.ac
 @@ -31,14 +31,11 @@
  
  
@@ -15,8 +15,8 @@
  
  dnl ttf and sdl_image for shareware version only
  dnl AC_CHECK_LIB(SDL_ttf,TTF_Init,,[AC_MSG_ERROR([SDL_ttf])])
---- src/Makefile.am.old	2011-05-19 07:58:50.128783975 +0200
-+++ src/Makefile.am	2011-05-19 07:58:55.639128359 +0200
+--- src/Makefile.am.old
++++ src/Makefile.am
 @@ -7,7 +7,7 @@
  powermanga_SOURCES = $(SOURCES_MAIN) $(SOURCES_EXTRA)
  #powermanga_CXXFLAGS = -DPREFIX=\"$(prefix)\" -DSCOREFILE=\"$(scoredir)/$(score)\" @XLIB_CFLAGS@ @SDL_CFLAGS@

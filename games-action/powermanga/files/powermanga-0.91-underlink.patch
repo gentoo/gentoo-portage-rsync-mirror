@@ -1,5 +1,5 @@
---- src/Makefile.am.old	2011-05-19 07:58:50.128783975 +0200
-+++ src/Makefile.am	2011-05-19 07:58:55.639128359 +0200
+--- src/Makefile.am.old
++++ src/Makefile.am
 @@ -8,7 +8,7 @@
  powermanga_CFLAGS = -DPREFIX=\"$(prefix)\" \
                      -DSCOREFILE=\"$(scoredir)/$(score)\" \
