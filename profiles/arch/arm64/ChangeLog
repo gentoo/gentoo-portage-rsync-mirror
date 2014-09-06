@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm64/ChangeLog,v 1.3 2014/08/04 02:13:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm64/ChangeLog,v 1.4 2014/09/06 10:31:37 mgorny Exp $
+
+  06 Sep 2014; Michał Górny <mgorny@gentoo.org> use.mask:
+  Wipe out references to removed Python targets.
 
   04 Aug 2014; Mike Frysinger <vapier@gentoo.org> package.use.mask:
   Drop flashrom masks that are in base now.

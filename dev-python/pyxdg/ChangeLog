@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.120 2014/03/31 21:06:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.121 2014/09/06 10:41:07 mgorny Exp $
+
+  06 Sep 2014; Michał Górny <mgorny@gentoo.org> pyxdg-0.25-r1.ebuild:
+  Enable python3.4 support, clean old targets.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> pyxdg-0.25-r1.ebuild,
   pyxdg-0.25.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.592 2014/09/06 10:27:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.593 2014/09/06 10:31:52 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -177,8 +177,7 @@ dev-libs/boost context
 
 # Gilles Dartiguelongue <eva@gentoo.org> (25 Dec 2013)
 # gjs: tests fail and support for it was purely and simply removed in master/1.9
-# python2_6: unit tests fail for this abi, must report usptream
->=dev-libs/libpeas-1.9 gjs python_targets_python2_6
+>=dev-libs/libpeas-1.9 gjs
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2013)
 # Gstreamer support fails to build due to libtool shortcomings when using
