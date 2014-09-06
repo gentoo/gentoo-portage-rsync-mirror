@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta8-r1.ebuild,v 1.6 2013/09/16 21:34:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta8-r1.ebuild,v 1.8 2014/09/06 05:36:16 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 MY_P="${P/_beta/b}"
@@ -22,11 +22,16 @@ IUSE="+atcp debug doc +gmcp ipv6 +option102 ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	dev-libs/libpcre"
-DEPEND="${RDEPEND}"
+DEPEND=${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${DISTDIR}"/tf-all*patch.txt "${FILESDIR}"/${P}-pcre.patch "${FILESDIR}"/${P}-stdarg.patch )
+src_prepare() {
+	epatch \
+		"${DISTDIR}"/tf-all*patch.txt \
+		"${FILESDIR}"/${P}-pcre.patch \
+		"${FILESDIR}"/${P}-stdarg.patch
+}
 
 src_configure() {
 	STRIP=: egamesconf \
@@ -36,20 +41,20 @@ src_configure() {
 		$(use_enable ssl) \
 		$(use_enable debug core) \
 		$(use_enable ipv6 inet6) \
-		--enable-manpage || die
+		--enable-manpage
 }
 
 src_install() {
-	dogamesbin src/tf || die
+	dogamesbin src/tf
 	newman src/tf.1.nroffman tf.1
 	dodoc CHANGES CREDITS README
 
 	insinto "${GAMES_DATADIR}"/${PN}-lib
 	# the application looks for this file here if /changes is called.
 	# see comments on bug #23274
-	doins CHANGES || die
+	doins CHANGES
 	insopts -m0755
-	doins tf-lib/* || die
+	doins tf-lib/*
 	if use doc ; then
 		cd ../${MY_P}-help
 		dohtml -r *.html commands topics
