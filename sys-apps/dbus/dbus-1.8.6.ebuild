@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.6.ebuild,v 1.12 2014/07/24 12:15:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.6.ebuild,v 1.13 2014/09/06 16:46:43 ottxor Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -12,7 +12,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/dbus/${P}.tar.gz"
 
 LICENSE="|| ( AFL-2.1 GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="debug doc selinux static-libs systemd test X"
 
 RDEPEND=">=dev-libs/expat-2
@@ -101,13 +101,20 @@ multilib_src_configure() {
 		--disable-embedded-tests
 		--disable-modular-tests
 		$(use_enable debug stats)
-		--with-session-socket-dir=/tmp
-		--with-system-pid-file=/var/run/dbus.pid
-		--with-system-socket=/var/run/dbus/system_bus_socket
+		--with-session-socket-dir="${EPREFIX}"/tmp
+		--with-system-pid-file="${EPREFIX}"/var/run/dbus.pid
+		--with-system-socket="${EPREFIX}"/var/run/dbus/system_bus_socket
 		--with-dbus-user=messagebus
 		$(use_with X x)
 		"$(systemd_with_unitdir)"
 		)
+
+	if [[ ${CHOST} == *-darwin* ]]; then
+		myconf+=(
+			--enable-launchd
+			--with-launchd-agent-dir="${EPREFIX}"/Library/LaunchAgents
+		)
+	fi
 
 	if multilib_is_native_abi; then
 		docconf=(
@@ -222,4 +229,25 @@ pkg_postinst() {
 	# dependencies with hardcoded paths (although the known ones got fixed already)
 	dbus-uuidgen --ensure="${EROOT%/}"/etc/machine-id
 	ln -sf "${EROOT%/}"/etc/machine-id "${EROOT%/}"/var/lib/dbus/machine-id
+
+	if [[ ${CHOST} == *-darwin* ]]; then
+		local plist="org.freedesktop.dbus-session.plist"
+		elog
+		elog
+		elog "For MacOS/Darwin we now ship launchd support for dbus."
+		elog "This enables autolaunch of dbus at session login and makes"
+		elog "dbus usable under MacOS/Darwin."
+		elog
+		elog "The launchd plist file ${plist} has been"
+		elog "installed in ${EPREFIX}/Library/LaunchAgents."
+		elog "For it to be used, you will have to do all of the following:"
+		elog " + cd ~/Library/LaunchAgents"
+		elog " + ln -s ${EPREFIX}/Library/LaunchAgents/${plist}"
+		elog " + logout and log back in"
+		elog
+		elog "If your application needs a proper DBUS_SESSION_BUS_ADDRESS"
+		elog "specified and refused to start otherwise, then export the"
+		elog "the following to your environment:"
+		elog " DBUS_SESSION_BUS_ADDRESS=\"launchd:env=DBUS_LAUNCHD_SESSION_BUS_SOCKET\""
+	fi
 }

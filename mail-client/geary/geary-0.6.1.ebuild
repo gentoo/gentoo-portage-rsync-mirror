@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.6.1.ebuild,v 1.2 2014/08/14 16:20:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.6.1.ebuild,v 1.3 2014/09/06 16:41:05 nimiux Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/geary/${PV:0:3}/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 DEPEND="

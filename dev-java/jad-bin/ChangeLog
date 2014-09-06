@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jad-bin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jad-bin/ChangeLog,v 1.10 2012/09/28 17:29:06 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jad-bin/ChangeLog,v 1.11 2014/09/06 16:51:54 ercpe Exp $
+
+*jad-bin-1.5.8e-r1 (06 Sep 2014)
+
+  06 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +jad-bin-1.5.8e-r1.ebuild:
+  EAPI bump
 
   28 Sep 2012; Ralph Sennhauser <sera@gentoo.org> jad-bin-1.5.8e.ebuild:
   Use QA_PREBUILT. #432716

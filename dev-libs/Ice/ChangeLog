@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.35 2014/09/06 11:06:53 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.36 2014/09/06 16:45:15 zerochaos Exp $
+
+  06 Sep 2014; Rick Farina <zerochaos@gentoo.org> Ice-3.5.1.ebuild:
+  since none of the changelogs include reasoning for dropping the stable
+  keywords, I'm going to assume it was an accident and restore them.
 
   06 Sep 2014; Sergey Popov <pinkbyte@gentoo.org> Ice-3.5.1.ebuild:
   Make dependency on dev-libs/db more strict, forbid linking to incompatible

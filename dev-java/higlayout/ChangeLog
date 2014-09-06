@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/higlayout
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/higlayout/ChangeLog,v 1.5 2007/10/27 14:01:14 angelos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/higlayout/ChangeLog,v 1.6 2014/09/06 16:45:00 ercpe Exp $
+
+*higlayout-1.0-r2 (06 Sep 2014)
+
+  06 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +higlayout-1.0-r2.ebuild:
+  EAPI bump; make use of java-pkg-simple
 
   27 Oct 2007; Christoph Mende <angelos@gentoo.org> higlayout-1.0-r1.ebuild:
   Stable on amd64 wrt bug #190643
@@ -24,4 +29,3 @@
   07 Jan 2007; Vlastimil Babka <caster@gentoo.org> +metadata.xml,
   +higlayout-1.0.ebuild:
   New package, as Heaven requested in bug #160773.
-
