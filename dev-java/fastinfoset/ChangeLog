@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/fastinfoset
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastinfoset/ChangeLog,v 1.10 2014/06/17 13:41:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastinfoset/ChangeLog,v 1.12 2014/09/06 16:21:54 ercpe Exp $
+
+*fastinfoset-1.2.11 (06 Sep 2014)
+
+  06 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +fastinfoset-1.2.11.ebuild:
+  Version bump
+
+*fastinfoset-1.2.1-r2 (06 Sep 2014)
+
+  06 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +fastinfoset-1.2.1-r2.ebuild:
+  EAPI bump, dropped ant to get rid of build.xml
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -fastinfoset-1.2.1.ebuild:
   NM: Cleanup superseded ebuilds.

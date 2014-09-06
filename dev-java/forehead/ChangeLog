@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/forehead
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/forehead/ChangeLog,v 1.8 2010/05/22 20:05:56 ken69267 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/forehead/ChangeLog,v 1.9 2014/09/06 16:28:25 ercpe Exp $
+
+*forehead-1.0_beta5-r2 (06 Sep 2014)
+
+  06 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +forehead-1.0_beta5-r2.ebuild:
+  EAPI bump, dropped java-ant-2 for java-pkg-simple
 
   22 May 2010; Kenneth Prugh <ken69267@gentoo.org>
   forehead-1.0_beta5-r1.ebuild:
@@ -34,4 +39,3 @@
   29 Mar 2005; Saleem Abdulrasool <compnerd@gentoo.org> +files/build.xml,
   +forehead-1.0_beta5.ebuild:
   Initial import; Resolves bug #70843
-
