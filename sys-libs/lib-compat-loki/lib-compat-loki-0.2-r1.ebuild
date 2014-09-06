@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat-loki/lib-compat-loki-0.2-r1.ebuild,v 1.1 2014/06/27 10:52:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat-loki/lib-compat-loki-0.2-r1.ebuild,v 1.2 2014/09/06 13:25:54 ulm Exp $
 
 EAPI=5
 
@@ -12,18 +12,11 @@ SRC_URI="http://www.blfh.de/gentoo/distfiles/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
-RDEPEND="
+RDEPEND="sys-libs/lib-compat
 	|| (
-		(
-			>=media-libs/libsdl-1.2.15-r4[abi_x86_32(-)]
-			sys-libs/lib-compat
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-compat[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-		)
+		>=media-libs/libsdl-1.2.15-r4[abi_x86_32(-)]
+		amd64? ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] )
 	)"
 
 # I'm not quite sure if this is necessary:
