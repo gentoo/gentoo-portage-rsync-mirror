@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-8.0.ebuild,v 1.2 2014/07/27 11:32:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-8.0.ebuild,v 1.3 2014/09/06 14:41:51 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -84,7 +84,7 @@ src_configure() {
 
 src_compile() {
 	tc-export CC
-	emake
+	emake XLIBPATHS=''
 	use gtk && emake -C hydra-gtk
 }
 
