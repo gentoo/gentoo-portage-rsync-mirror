@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.627 2014/09/06 18:56:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.628 2014/09/06 19:30:17 dilfridge Exp $
+
+  06 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.7.5.ebuild,
+  cups-1.7.9999.ebuild, cups-9999.ebuild:
+  Pass correct parameters regarding libusb to configure, bug 513552
 
 *cups-1.7.9999 (06 Sep 2014)
 
