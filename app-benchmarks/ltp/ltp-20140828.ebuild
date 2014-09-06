@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20140828.ebuild,v 1.1 2014/09/02 19:43:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20140828.ebuild,v 1.2 2014/09/06 08:19:33 hwoarang Exp $
 
 EAPI="4"
 
@@ -76,7 +76,7 @@ src_install() {
 	for txt in doc/*.txt; do
 		dodoc ${txt}
 	done
-	dodoc -r doc/examples doc/testcases
+	dodoc -r doc/testcases
 	dohtml -r doc/automation-*.html
 	doman doc/man1/*.1
 	doman doc/man3/*.3

@@ -10,4 +10,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/ltp/LTP%20Source/ltp-20140828/ltp-full-20140828.tar.bz2 -> ltp-20140828.tar.bz2
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=497f594cf5b4bb8cde8eb43843620a41
+_md5_=3945034ba2fed3fb2aab4c851a9ce8a1

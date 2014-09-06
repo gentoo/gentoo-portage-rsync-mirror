@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/ltp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.26 2014/09/02 19:43:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.27 2014/09/06 08:19:33 hwoarang Exp $
+
+  06 Sep 2014; Markos Chandras <hwoarang@gentoo.org> ltp-20140828.ebuild:
+  Fix dodoc. Bug #522156
 
 *ltp-20140828 (02 Sep 2014)
 
