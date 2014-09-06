@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-1.1.10.ebuild,v 1.3 2013/04/15 08:50:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-1.1.13.ebuild,v 1.1 2014/09/06 22:45:17 hasufell Exp $
 
 EAPI=5
 
-inherit eutils fdo-mime gnome2-utils
+inherit fdo-mime gnome2-utils
 
 DESCRIPTION="An open-source jukebox for large collections of mp3/ogg/flac files"
 HOMEPAGE="http://gmusicbrowser.org/"
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.org/download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 GSTREAMER_DEPEND="
@@ -37,10 +37,6 @@ RDEPEND="dev-lang/perl
 		( ${OTHER_DEPEND} )
 	)"
 DEPEND="sys-devel/gettext"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-linguas.patch
-}
 
 src_install() {
 	emake \

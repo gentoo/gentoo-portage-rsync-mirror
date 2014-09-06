@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/gmusicbrowser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/ChangeLog,v 1.29 2014/03/04 20:10:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/ChangeLog,v 1.30 2014/09/06 22:45:17 hasufell Exp $
+
+*gmusicbrowser-1.1.13 (06 Sep 2014)
+
+  06 Sep 2014; Julian Ospald <hasufell@gentoo.org> -gmusicbrowser-1.1.9.ebuild,
+  -gmusicbrowser-1.1.10.ebuild, +gmusicbrowser-1.1.13.ebuild,
+  -files/gmusicbrowser-1.1.10-linguas.patch:
+  version bump, rm old
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> gmusicbrowser-1.1.11.ebuild:
   Stable for x86, wrt bug #503002
