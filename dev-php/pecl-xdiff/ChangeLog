@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/pecl-xdiff
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-xdiff/ChangeLog,v 1.4 2013/11/07 22:28:42 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-xdiff/ChangeLog,v 1.5 2014/09/06 18:12:38 olemarkus Exp $
+
+*pecl-xdiff-1.5.2-r2 (06 Sep 2014)
+
+  06 Sep 2014; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-xdiff-1.5.2-r2.ebuild, -pecl-xdiff-1.5.2-r1.ebuild,
+  -pecl-xdiff-1.5.2.ebuild:
+  Revbump to support php 5.6
 
 *pecl-xdiff-1.5.2-r1 (07 Nov 2013)
 
