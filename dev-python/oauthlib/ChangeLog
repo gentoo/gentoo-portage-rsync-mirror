@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/oauthlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/ChangeLog,v 1.34 2014/07/06 12:44:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/ChangeLog,v 1.35 2014/09/06 07:47:04 idella4 Exp $
+
+  06 Sep 2014; Ian Delaney <idella4@gentoo.org> oauthlib-0.6.3.ebuild:
+  re-add py3.2 to support reverse deps, fix syntax in RDEPEND
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> oauthlib-0.1.3.ebuild,
   oauthlib-0.3.0.ebuild, oauthlib-0.6.1.ebuild, oauthlib-0.6.3.ebuild:

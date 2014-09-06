@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/cldc-api
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cldc-api/ChangeLog,v 1.6 2008/09/10 18:22:12 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cldc-api/ChangeLog,v 1.7 2014/09/06 07:34:41 ercpe Exp $
+
+*cldc-api-1.1-r1 (06 Sep 2014)
+
+  06 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +cldc-api-1.1-r1.ebuild:
+  Bump to EAPI=5
 
   10 Sep 2008; Brent Baude <ranger@gentoo.org> cldc-api-1.1.ebuild:
   stable ppc64, bug 235652
@@ -23,4 +28,3 @@
   +cldc-api-1.1.ebuild:
   New package, mainly to let eclipse-sdk build against free source-based CLDC
   API classes from the phoneme project, and not sun-j2me-bin.
-

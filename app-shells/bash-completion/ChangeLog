@@ -1,6 +1,15 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.263 2014/08/27 17:31:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.265 2014/09/06 07:45:11 mgorny Exp $
+
+  06 Sep 2014; Michał Górny <mgorny@gentoo.org> bash-completion-2.1-r2.ebuild:
+  Install helpers needed for completions as well, bug #520032.
+
+*bash-completion-2.1-r2 (06 Sep 2014)
+
+  06 Sep 2014; Michał Górny <mgorny@gentoo.org> +bash-completion-2.1-r2.ebuild,
+  -bash-completion-2.1-r1.ebuild:
+  Set correct version in pkg-config file, bug #486306.
 
 *bash-completion-2.1-r90 (27 Aug 2014)
 
