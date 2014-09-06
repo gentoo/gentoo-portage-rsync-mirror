@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/dtdparser
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dtdparser/ChangeLog,v 1.8 2007/06/01 09:25:10 caster Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dtdparser/ChangeLog,v 1.9 2014/09/06 15:35:47 ercpe Exp $
+
+*dtdparser-1.21-r2 (06 Sep 2014)
+
+  06 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +dtdparser-1.21-r2.ebuild:
+  Bumped to EAPI=5, dropped java-ant-2 in favor of java-pkg-simple to get rid of
+  the buildfile patch
 
   01 Jun 2007; Vlastimil Babka <caster@gentoo.org> -dtdparser-1.21.ebuild:
   Gen-1 punt.
@@ -34,4 +40,3 @@
   22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   +files/buildfile.patch, +dtdparser-1.21.ebuild:
   Initial import. Fixes #75529
-
