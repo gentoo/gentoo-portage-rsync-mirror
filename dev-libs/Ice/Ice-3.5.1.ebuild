@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.1.ebuild,v 1.8 2014/03/31 20:38:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.1.ebuild,v 1.9 2014/09/06 11:06:53 pinkbyte Exp $
 
 EAPI=5
 
@@ -16,13 +16,17 @@ SRC_URI="http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${
 	doc? ( http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${P}.pdf )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ia64 x86 ~x86-linux ~x64-macos"
+KEYWORDS="~amd64 ~arm ~ia64 ~x86 ~x86-linux ~x64-macos"
 IUSE="doc examples +ncurses mono python ruby test debug"
 
 RDEPEND=">=dev-libs/expat-2.0.1
 	>=app-arch/bzip2-1.0.5
 	>=dev-libs/openssl-0.9.8o:0
-	<sys-libs/db-6.0[cxx]
+	|| (
+		sys-libs/db:5.3[cxx]
+		sys-libs/db:5.1[cxx]
+		sys-libs/db:4.8[cxx]
+	)
 	~dev-cpp/libmcpp-2.7.2
 	python? ( ${PYTHON_DEPS} )
 	ruby? ( $(ruby_implementation_depend ruby19) )
@@ -92,6 +96,17 @@ src_prepare() {
 	fi
 }
 
+suitable_db_version() {
+	local tested_slots="5.3 5.1 4.8"
+	for ver in ${tested_slots}; do
+		if [[ -n $(db_findver sys-libs/db:${ver}) ]]; then
+			echo ${ver}
+			return 0
+		fi
+	done
+	die "No suitable BerkDB versions found, aborting"
+}
+
 src_configure() {
 	MAKE_RULES="prefix=\"${ED}/usr\"
 		install_docdir=\"${ED}/usr/share/doc/${PF}\"
@@ -103,13 +118,14 @@ src_configure() {
 	use ncurses && OPTIONS="${MAKE_RULES} USE_READLINE=yes" || MAKE_RULES="${MAKE_RULES} USE_READLINE=no"
 	use debug && OPTIONS"${MAKE_RULES} OPTIMIZE=no" || MAKE_RULES="${MAKE_RULES} OPTIMIZE=yes"
 
-	MAKE_RULES="${MAKE_RULES} DB_FLAGS=-I$(db_includedir)"
+	local BERKDB_VERSION="$(suitable_db_version)"
+	MAKE_RULES="${MAKE_RULES} DB_FLAGS=-I$(db_includedir ${BERKDB_VERSION})"
 	sed -i \
 		-e "s|g++|$(tc-getCXX)|" \
 		-e "s|\(CFLAGS[[:space:]]*=\)|\1 ${CFLAGS}|" \
 		-e "s|\(CXXFLAGS[[:space:]]*=\)|\1 ${CXXFLAGS}|" \
 		-e "s|\(LDFLAGS[[:space:]]*=\)|\1 ${LDFLAGS}|" \
-		-e "s|\(DB_LIBS[[:space:]]*=\) \-ldb_cxx|\1 -ldb_cxx-$(db_findver sys-libs/db)|" \
+		-e "s|\(DB_LIBS[[:space:]]*=\) \-ldb_cxx|\1 -ldb_cxx-$(db_findver sys-libs/db:${BERKDB_VERSION})|" \
 		cpp/config/Make.rules{,.Linux} py/config/Make.rules || die "sed failed"
 
 	if use python ; then

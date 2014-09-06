@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/bedup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/ChangeLog,v 1.9 2014/07/06 12:56:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/ChangeLog,v 1.10 2014/09/06 11:07:40 mgorny Exp $
+
+  06 Sep 2014; Michał Górny <mgorny@gentoo.org> bedup-0.9.0_p20140413.ebuild,
+  bedup-9999.ebuild:
+  Enable python3.4, and disable python3.2 since alembic no longer supports it.
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> bedup-0.9.0_p20140413.ebuild,
   bedup-9999.ebuild:

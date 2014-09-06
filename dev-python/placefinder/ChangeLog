@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/placefinder
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/placefinder/ChangeLog,v 1.1 2014/09/06 11:14:04 idella4 Exp $
+
+*placefinder-0.3 (06 Sep 2014)
+
+  06 Sep 2014; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +placefinder-0.3.ebuild:
+  new RDEP to geopy-1.1.3, simple minimal ebuild
