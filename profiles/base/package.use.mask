@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.594 2014/09/06 15:30:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.595 2014/09/06 17:43:40 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -8,8 +8,8 @@
 
 # Michał Górny <mgorny@gentoo.org> (06 Sep 2014)
 # Mask the removed/deprecated flags for old ebuilds that do not use
-# the eclass.
-sys-apps/portage python_targets_pypy2_0 python_targets_python3_2
+# the python-r1 eclass.
+sys-apps/portage python_targets_pypy2_0 python_targets_python2_6 python_targets_python3_2
 
 # Michał Górny <mgorny@gentoo.org> (06 Sep 2014)
 # (on behalf of Python team)
