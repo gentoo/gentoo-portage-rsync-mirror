@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.429 2014/08/04 18:34:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.430 2014/09/06 13:54:19 blueness Exp $
+
+  06 Sep 2014; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.4.22.ebuild,
+  files/tor-0.2.3.14_alpha-torrc.sample.patch:
+  Remove older stable.  Log at warn level, bug #522256.
 
   04 Aug 2014; Raúl Porcel <armin76@gentoo.org> tor-0.2.4.23.ebuild:
   sparc stable wrt #518654
