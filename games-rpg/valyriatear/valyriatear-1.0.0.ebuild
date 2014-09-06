@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/valyriatear-1.0.0_rc1.ebuild,v 1.1 2014/08/01 22:25:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/valyriatear-1.0.0.ebuild,v 1.1 2014/09/06 15:03:40 hasufell Exp $
 
 EAPI=5
 
@@ -9,8 +9,9 @@ inherit cmake-utils games
 MY_P=ValyriaTear-${PV/_rc/-rc}
 
 DESCRIPTION="A free 2D J-RPG based on the Hero of Allacrost engine"
-HOMEPAGE="http://valyriatear.blogspot.de/"
-SRC_URI="mirror://sourceforge/valyriatear/${MY_P}.tar.gz"
+HOMEPAGE="http://valyriatear.blogspot.de/
+	https://github.com/Bertram25/ValyriaTear"
+SRC_URI="https://github.com/Bertram25/ValyriaTear/archive/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-2+ GPL-3 CC-BY-SA-3.0 CC-BY-3.0 CC0-1.0 OFL-1.1"
 SLOT="0"
