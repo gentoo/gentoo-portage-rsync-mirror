@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.99 2014/03/12 05:03:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.100 2014/09/06 08:40:36 hwoarang Exp $
+
+*pcmanfm-1.2.2 (06 Sep 2014)
+
+  06 Sep 2014; Markos Chandras <hwoarang@gentoo.org> +pcmanfm-1.2.2.ebuild:
+  Version bump. Bug #518134
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> pcmanfm-1.1.2.ebuild:
   x86 stable wrt bug #494440

@@ -1,21 +1,21 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.41 2014/09/06 08:41:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-1.2.2.1.ebuild,v 1.1 2014/09/06 08:41:06 hwoarang Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="https://github.com/lxde/${PN}"
-# master seems way too unstable for us to use
-EGIT_BRANCH="1.1"
-inherit autotools git-2 fdo-mime vala
+inherit autotools fdo-mime vala
 
+MY_PV=${PV/_/}
+MY_P="${PN}-${MY_PV}"
 DESCRIPTION="A library for file management"
 HOMEPAGE="http://pcmanfm.sourceforge.net/"
+SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${MY_P}.tar.xz"
 
+KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
 SLOT="0/4.2.0" #copy ABI_VERSION because it seems upstream change it randomly
 IUSE="+automount debug doc examples exif udisks vala"
-KEYWORDS=""
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
@@ -36,11 +36,12 @@ DEPEND="${COMMON_DEPEND}
 	doc? (
 		dev-util/gtk-doc
 	)
+	app-arch/xz-utils
 	>=dev-util/intltool-0.40
 	virtual/pkgconfig
 	sys-devel/gettext"
 
-DOCS=( AUTHORS TODO )
+S="${WORKDIR}"/${MY_P}
 
 REQUIRED_USE="udisks? ( automount )"
 
@@ -48,13 +49,10 @@ src_prepare() {
 	if ! use doc; then
 		sed -ie '/^SUBDIR.*=/s#docs##' "${S}"/Makefile.am || die "sed failed"
 		sed -ie '/^[[:space:]]*docs/d' configure.ac || die "sed failed"
-	else
-		gtkdocize --copy || die
 	fi
 	sed -i -e "s:-O0::" -e "/-DG_ENABLE_DEBUG/s: -g::" \
 		configure.ac || die "sed failed"
 
-	intltoolize --force --copy --automake || die
 	#disable unused translations. Bug #356029
 	for trans in app-chooser ask-rename exec-file file-prop preferred-apps \
 		progress;do
@@ -97,7 +95,6 @@ src_configure() {
 src_install() {
 	default
 	find "${D}" -name '*.la' -exec rm -f '{}' +
-	# Remove broken symlink #439570
 	# Sometimes a directory is created instead of a symlink. No idea why...
 	# It is wrong anyway. We expect a libfm-1.0 directory and then a libfm
 	# symlink to it.
