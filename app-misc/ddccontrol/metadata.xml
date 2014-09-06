@@ -6,6 +6,6 @@
 	<name>Manuel Rüger</name>
 </maintainer>
 <use>
- <flag name='ddcpci'>enable direct PCI memory access (the setuid ddcpci util)</flag>
+ <flag name='pci'>enable direct PCI memory access (the setuid ddcpci util)</flag>
 </use>
 </pkgmetadata>

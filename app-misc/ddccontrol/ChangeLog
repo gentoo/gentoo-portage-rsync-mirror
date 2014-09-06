@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ddccontrol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.43 2014/06/17 11:39:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.44 2014/09/06 07:18:18 vapier Exp $
+
+  06 Sep 2014; Mike Frysinger <vapier@gentoo.org>
+  ddccontrol-0.4.2_p20140105-r1.ebuild, metadata.xml:
+  Rename USE=ddcpci to standard USE=pci, and only pull in pciutils when USE=pci.
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org>
   -ddccontrol-0.4.2_p20140105.ebuild:

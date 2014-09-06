@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2_p20140105-r1.ebuild,v 1.3 2014/06/17 08:46:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2_p20140105-r1.ebuild,v 1.4 2014/09/06 07:18:18 vapier Exp $
 
 EAPI=5
 
@@ -14,22 +14,24 @@ SRC_URI="https://github.com/ddccontrol/ddccontrol/archive/${COMMIT_ID}.tar.gz ->
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="+ddcpci doc gtk nls static-libs video_cards_fglrx"
+IUSE="doc gtk nls +pci static-libs video_cards_fglrx"
 S=${WORKDIR}/${PN}-${COMMIT_ID}
 
 RDEPEND="app-misc/ddccontrol-db
 	dev-libs/libxml2:2
-	sys-apps/pciutils
 	gtk? ( x11-libs/gtk+:2 )
 	nls? ( sys-devel/gettext )
+	pci? ( sys-apps/pciutils )
 	video_cards_fglrx? ( x11-libs/amd-adl-sdk )"
 DEPEND="${RDEPEND}
 	dev-perl/XML-Parser
 	dev-util/intltool
 	sys-kernel/linux-headers
-	doc? ( >=app-text/docbook-xsl-stylesheets-1.65.1
-		   >=dev-libs/libxslt-1.1.6
-	       app-text/htmltidy )"
+	doc? (
+		>=app-text/docbook-xsl-stylesheets-1.65.1
+		>=dev-libs/libxslt-1.1.6
+		app-text/htmltidy
+	)"
 
 src_prepare() {
 	sed -i 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die #467574
@@ -61,10 +63,10 @@ src_configure() {
 	econf \
 		--htmldir='$(datarootdir)'/doc/${PF}/html \
 		--disable-gnome-applet \
-		$(use_enable ddcpci) \
 		$(use_enable doc) \
 		$(use_enable gtk gnome) \
 		$(use_enable nls) \
+		$(use_enable pci ddcpci) \
 		$(use_enable static-libs static) \
 		$(use_enable video_cards_fglrx amdadl)
 }
