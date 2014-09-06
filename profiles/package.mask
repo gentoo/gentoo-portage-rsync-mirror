@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16016 2014/09/05 14:55:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16017 2014/09/05 23:09:33 mjo Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Orlitzky <mjo@gentoo.org> (05 Sep 2014)
+# No reverse dependencies, and the equivalent is now installed
+# as part of the only version of net-dns/djbdns left in the tree.
+# Masked for removal in 30 days (bug #522232).
+app-doc/djbdns-man
 
 # Bernard Cafarelli <voyageur@gentoo.org> (05 Sep 2014)
 # Does not connect anymore, does not work with current pidgin versions
