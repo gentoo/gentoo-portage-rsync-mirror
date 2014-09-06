@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.715 2014/09/02 10:14:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.716 2014/09/06 10:27:35 mgorny Exp $
+
+  06 Sep 2014; Michał Górny <mgorny@gentoo.org> package.use.force,
+  package.use.mask, use.mask:
+  Mask python3_2 target for removal. Clean up stale python2_6 and pypy2_0
+  targets.
 
   02 Sep 2014; Ole Markus With <olemarkus@gentoo.org> use.mask:
   Unmask php_targets_php5-6 USE flag

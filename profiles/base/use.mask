@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.207 2014/09/02 10:14:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.208 2014/09/06 10:27:35 mgorny Exp $
 
 # Mask use-flag firebird and package dev-db/firebird for bug 460780
 firebird
@@ -336,8 +336,6 @@ orc
 # Mike Gilbert <floppym@gentoo.org> (02 Jan 2013)
 # PyPy is unkeyworded on most arches. If you are running amd64 or x86,
 # please switch to one of the testing 13.0 profiles to get it.
-python_targets_pypy2_0
-python_single_target_pypy2_0
 python_targets_pypy
 python_single_target_pypy
 
@@ -382,10 +380,11 @@ qt5
 # could suffer unexpected problem, don't expect support for it then.
 openrc-force
 
-# Michał Górny <mgorny@gentoo.org> (26 Apr 2014)
+# Michał Górny <mgorny@gentoo.org> (06 Sep 2014)
 # (on behalf of Python team)
-# Python 2.6 is no longer supported upstream and security issue fixes
-# are not provided anymore. Python 2.7 is almost drop-in replacement.
-# The support for implementations will be disabled in 30 days.
-python_targets_python2_6
-python_single_target_python2_6
+# Python 3.2 is no longer supported upstream and there are no new
+# releases planned. Packages are removing support for it in favor
+# of 3.3 and 3.4. The support for implementations will be disabled
+# in 30 days.
+python_targets_python3_2
+python_single_target_python3_2

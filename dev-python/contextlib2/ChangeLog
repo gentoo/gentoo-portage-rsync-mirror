@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/contextlib2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/contextlib2/ChangeLog,v 1.4 2014/07/06 12:40:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/contextlib2/ChangeLog,v 1.5 2014/09/06 10:06:18 mgorny Exp $
+
+  06 Sep 2014; Michał Górny <mgorny@gentoo.org> contextlib2-0.4.0.ebuild:
+  Enable python3.4 support.
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> contextlib2-0.4.0.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-

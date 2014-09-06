@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.1.0-r1.ebuild,v 1.3 2014/08/28 12:02:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.1.0-r1.ebuild,v 1.4 2014/09/06 10:15:43 vapier Exp $
 
 EAPI=5
 
@@ -62,8 +62,13 @@ REQUIRED_USE="|| ( ${use_targets} )
 	virtfs? ( xattr )"
 
 # Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
+#
+# The attr lib isn't always linked in (although the USE flag is always
+# respected).  This is because qemu supports using the C library's API
+# when available rather than always using the extranl library.
 COMMON_LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
-	sys-libs/zlib[static-libs(+)]"
+	sys-libs/zlib[static-libs(+)]
+	xattr? ( sys-apps/attr[static-libs(+)] )"
 SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	>=x11-libs/pixman-0.28.0[static-libs(+)]
 	aio? ( dev-libs/libaio[static-libs(+)] )
@@ -89,7 +94,6 @@ SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	usb? ( >=dev-libs/libusb-1.0.18[static-libs(+)] )
 	uuid? ( >=sys-apps/util-linux-2.16.0[static-libs(+)] )
 	vde? ( net-misc/vde[static-libs(+)] )
-	xattr? ( sys-apps/attr[static-libs(+)] )
 	xfs? ( sys-fs/xfsprogs[static-libs(+)] )"
 USER_LIB_DEPEND="${COMMON_LIB_DEPEND}"
 X86_FIRMWARE_DEPEND="
@@ -299,6 +303,7 @@ qemu_src_configure() {
 		$(use_enable debug debug-tcg)
 		--enable-docs
 		$(use_enable tci tcg-interpreter)
+		$(use_enable xattr attr)
 	)
 
 	# Disable options not used by user targets as the default configure
@@ -347,7 +352,6 @@ qemu_src_configure() {
 		$(conf_softmmu vhost-net)
 		$(conf_softmmu virtfs)
 		$(conf_softmmu vnc)
-		$(conf_softmmu xattr attr)
 		$(conf_softmmu xen)
 		$(conf_softmmu xen xen-pci-passthrough)
 		$(conf_softmmu xfs xfsctl)
