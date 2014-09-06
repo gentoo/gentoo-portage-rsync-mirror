@@ -1,6 +1,12 @@
 # ChangeLog for games-action/powermanga
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.32 2014/09/06 00:54:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.33 2014/09/06 03:08:05 mr_bones_ Exp $
+
+  06 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/powermanga-0.90-segfault.patch, -files/powermanga-0.90-underlink.patch,
+  -powermanga-0.90.ebuild, files/powermanga-0.91-automake-1.13.patch,
+  files/powermanga-0.91-flags.patch:
+  old
 
 *powermanga-0.92 (06 Sep 2014)
 
