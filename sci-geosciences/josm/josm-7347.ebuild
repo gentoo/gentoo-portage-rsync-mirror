@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-9999.ebuild,v 1.4 2014/09/06 19:37:21 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-7347.ebuild,v 1.1 2014/09/06 19:37:21 nixphoeni Exp $
 
 EAPI=5
 
@@ -13,7 +13,13 @@ unset SUBVERSION_ECLASS
 
 DESCRIPTION="Java-based editor for the OpenStreetMap project"
 HOMEPAGE="http://josm.openstreetmap.de/"
-[[ ${PV} == "9999" ]] || SRC_URI="http://josm.hboeck.de/${P}.tar.xz"
+# Upstream doesn't provide versioned tarballs, so we'll have to create one on our own:
+# REVISION=${PV}
+# mkdir -p josm-${REVISION}
+# svn co -r ${REVISION} http://josm.openstreetmap.de/svn/trunk/ josm-${REVISION}
+# cd josm-${REVISION} && ant init-svn-revision-xml && cd -
+# tar -cz  --exclude=.svn -f /usr/portage/distfiles/josm-${REVISION}.tar.gz josm-${REVISION}
+[[ ${PV} == "9999" ]] || SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -30,14 +36,29 @@ S="${WORKDIR}/${P}"
 IUSE=""
 
 src_prepare() {
+
 	if [[ ${PV} == "9999" ]]; then
 
 		# create-revision needs the compile directory to be a svn directory
 		# see also http://lists.openstreetmap.org/pipermail/dev/2009-March/014182.html
 		sed -i \
 			-e "s:arg[ ]value=\".\":arg value=\"${ESVN_STORE_DIR}\/${PN}\/trunk\":" \
-			build.xml || die "Sed failed"
+			build.xml || die "sed failed"
+
+	else
+
+		# Remove dependency on git and svn just for generating a
+		# revision - the tarball should already have REVISION.XML
+		sed -i -e 's:, *init-git-revision-xml::g' \
+			-e '/<exec[ \t].*"svn"[ \t].*/,+5{d;n;}' \
+			-e 's:${svn.info.result}:1:' \
+			build.xml || die "sed failed"
+
+		# Fix for josm bug #10325
+		epatch "${FILESDIR}/${P}-dist-optimized-fix.patch"
+
 	fi
+
 }
 
 src_compile() {

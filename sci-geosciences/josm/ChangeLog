@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/josm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.47 2013/07/17 10:06:32 hanno Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.48 2014/09/06 19:37:21 nixphoeni Exp $
+
+*josm-7347 (06 Sep 2014)
+
+  06 Sep 2014; Joe Sapp <nixphoeni@gentoo.org> +josm-7347.ebuild,
+  +files/josm-7347-dist-optimized-fix.patch:
+  Version bump; thanks to Marcel Pennewiß, Elias Probst, Thomas Beutin, and
+  Jean-Claude Repetto on bug #483114
 
 *josm-6060 (17 Jul 2013)
 
