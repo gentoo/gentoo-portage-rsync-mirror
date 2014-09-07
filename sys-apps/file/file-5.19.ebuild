@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.19.ebuild,v 1.2 2014/06/18 20:44:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.19.ebuild,v 1.3 2014/09/07 18:55:10 floppym Exp $
 
 EAPI="4"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy2_0 )
 DISTUTILS_OPTIONAL=1
 
 inherit eutils distutils-r1 libtool toolchain-funcs multilib-minimal
