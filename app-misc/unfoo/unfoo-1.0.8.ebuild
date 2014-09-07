@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/unfoo-1.0.8.ebuild,v 1.3 2014/08/30 18:53:45 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/unfoo-1.0.8.ebuild,v 1.4 2014/09/07 10:46:45 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="https://github.com/jlec/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~s390 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ~ppc64 ~s390 x86 ~amd64-linux ~x86-linux"
 IUSE="+minimal test"
 
 COMMON_DEPS="

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wol/ChangeLog,v 1.19 2014/09/06 16:55:28 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wol/ChangeLog,v 1.20 2014/09/07 10:46:04 ago Exp $
+
+  07 Sep 2014; Agostino Sarubbo <ago@gentoo.org> wol-0.7.1-r1.ebuild:
+  Stable for ppc, wrt bug #516652
 
   06 Sep 2014; Chema Alonso <nimiux@gentoo.org> wol-0.7.1-r1.ebuild:
   Stable for amd64 wrt bug #516652

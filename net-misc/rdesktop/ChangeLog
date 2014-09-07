@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.159 2014/08/30 11:33:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.160 2014/09/07 10:46:24 ago Exp $
+
+  07 Sep 2014; Agostino Sarubbo <ago@gentoo.org> rdesktop-1.8.2.ebuild:
+  Stable for ppc, wrt bug #516658
 
   30 Aug 2014; Manuel Rüger <mrueg@gentoo.org> rdesktop-1.8.2.ebuild:
   Stable on amd64. See bug #516658.

@@ -1,8 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.25.ebuild,v 1.1 2014/08/15 11:49:51 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.25-r1.ebuild,v 1.1 2014/09/07 10:47:21 maksbotan Exp $
 
 EAPI="5"
+
+inherit eutils
 
 DESCRIPTION="Command-line interface to various pastebins"
 HOMEPAGE="http://wgetpaste.zlin.dk/"
@@ -19,6 +21,7 @@ RDEPEND="net-misc/wget
 
 src_prepare() {
 	sed -i -e "s:/etc:\"${EPREFIX}\"/etc:g" wgetpaste || die
+	epatch "${FILESDIR}"/wgetpaste-2.25-pinnwand.patch
 }
 
 src_install() {
