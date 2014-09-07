@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.11 2013/01/25 07:41:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.12 2014/09/07 08:36:04 ulm Exp $
 
 inherit games
 
@@ -19,8 +19,7 @@ RESTRICT="mirror strip"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="sys-libs/glibc
-	amd64? ( app-emulation/emul-linux-x86-compat )"
+RDEPEND=""
 
 S=${WORKDIR}
 
