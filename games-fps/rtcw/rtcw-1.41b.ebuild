@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.18 2014/09/07 09:48:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.19 2014/09/07 17:41:03 ulm Exp $
 
 EAPI=2
 inherit eutils unpacker games
@@ -26,11 +26,10 @@ UIDEPEND="virtual/opengl
 	)
 	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 RDEPEND="sys-libs/glibc
+	sys-libs/lib-compat
 	dedicated? ( app-misc/screen )
 	!dedicated? ( ${UIDEPEND} )
-	opengl? ( ${UIDEPEND} )
-	x86? ( sys-libs/lib-compat )
-	amd64? ( app-emulation/emul-linux-x86-compat )"
+	opengl? ( ${UIDEPEND} )"
 
 S=${WORKDIR}
 

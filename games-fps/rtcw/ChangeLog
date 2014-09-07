@@ -1,9 +1,10 @@
 # ChangeLog for games-fps/rtcw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.42 2014/09/07 09:48:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.43 2014/09/07 17:41:03 ulm Exp $
 
   07 Sep 2014; Ulrich Müller <ulm@gentoo.org> rtcw-1.41b.ebuild:
   Drop reverse dependencies of sys-libs/lib-compat to unstable, bug 517932.
+  Replace emul-linux-x86-compat dependency by sys-libs/lib-compat.
 
   20 Jan 2013; Tupone Alfredo <tupone@gentoo.org> rtcw-1.41b.ebuild:
   Use QA_PREBUILT Bug #452978 by Diego Elio Pettenò

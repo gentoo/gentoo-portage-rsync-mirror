@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.4.ebuild,v 1.2 2014/08/05 01:16:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.4.ebuild,v 1.3 2014/09/07 17:42:56 robbat2 Exp $
 
 EAPI="5"
 
@@ -27,7 +27,6 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	chmod g-w "${T}"
 	sed -i \
 		-e '/^DEBUGFLAGS/s, -D_FORTIFY_SOURCE=2,,g' \
 		-e '/-o gfio/s/$(LIBS)/$(LDFLAGS) $(LIBS)/' \
@@ -36,6 +35,7 @@ src_prepare() {
 }
 
 src_configure() {
+	chmod g-w "${T}"
 	# not a real configure script
 	./configure \
 		--extra-cflags="${CFLAGS}" --cc="$(tc-getCC)" \
