@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.312 2014/06/22 18:02:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.313 2014/09/07 19:07:16 rich0 Exp $
+
+  07 Sep 2014; Richard Freeman <rich0@gentoo.org> grub-2.02_beta2.ebuild:
+  amd64 stable - 522314
 
   22 Jun 2014; Mike Gilbert <floppym@gentoo.org> grub-2.02_beta2.ebuild,
   grub-9999-r1.ebuild:
