@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.7.ebuild,v 1.5 2013/11/14 22:02:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.7.ebuild,v 1.6 2014/09/07 15:32:25 ulm Exp $
 
 EAPI=2
 
@@ -18,18 +18,16 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND=""
-RDEPEND="
+RDEPEND="virtual/libstdc++:3.3
 	x86? (
 		x11-libs/libX11
 		media-libs/freetype
 		media-libs/libsdl
 		media-libs/sdl-ttf
-		sys-libs/libstdc++-v3
 	)
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-compat
 	)"
 
 GDIR=${GAMES_PREFIX_OPT}/drod

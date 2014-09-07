@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/jgoodies-binding-1.1.2.ebuild,v 1.6 2008/02/13 03:53:55 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/jgoodies-binding-1.1.2-r1.ebuild,v 1.1 2014/09/07 15:53:57 ercpe Exp $
+
+EAPI=5
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -13,7 +15,7 @@ SRC_URI="http://www.jgoodies.com/download/libraries/binding-${MY_V}.zip"
 
 LICENSE="BSD"
 SLOT="1.0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4.2
@@ -23,30 +25,13 @@ RDEPEND=">=virtual/jre-1.4.2
 
 S=${WORKDIR}/binding-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# Clean up the directory structure
-	rm -rvf *.jar lib
-
-	# Copy the Gentoo'ized build.xml
-	# cp ${FILESDIR}/build-${PV}.xml ${S}
-	java-ant_xml-rewrite -f build.xml -d -e javac -a bootclasspath
-	#	|| die "Failed to fix bootclasspath"
-	java-pkg_filter-compiler jikes
-}
-
-src_compile() {
-	eant jar # precompile javadocs
-}
-
 RESTRICT="test"
-# Needs X
-#src_test() {
-#	eant test -D\
-#		-Djunit.jar=$(java-pkg_getjar junit junit.jar)
-#}
+
+EANT_FILTER_COMPILER="jikes"
+
+java_prepare() {
+	find -name "*.jar" -delete || die
+}
 
 src_install() {
 	java-pkg_dojar build/binding.jar
@@ -54,6 +39,6 @@ src_install() {
 	dodoc RELEASE-NOTES.txt || die
 	dohtml README.html || die
 	use doc && java-pkg_dohtml -r docs/*
-	use source && java-pkg_dosrc src/core/*
+	use source && java-pkg_dosrc src/core/com
 	use examples && java-pkg_doexamples src/tutorial
 }

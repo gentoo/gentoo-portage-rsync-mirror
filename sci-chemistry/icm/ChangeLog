@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/icm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/ChangeLog,v 1.15 2014/06/18 20:42:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/ChangeLog,v 1.16 2014/09/07 15:47:08 ulm Exp $
+
+  07 Sep 2014; Ulrich Müller <ulm@gentoo.org> icm-3.7.2e.ebuild,
+  icm-3.7.3b.ebuild:
+  Replace emul-linux-x86-compat dependency by virtual/libstdc++, bug 522218.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> icm-3.7.2e.ebuild,
   icm-3.7.3b.ebuild:

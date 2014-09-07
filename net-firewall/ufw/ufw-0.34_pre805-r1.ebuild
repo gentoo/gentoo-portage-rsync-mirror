@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.34_pre805-r1.ebuild,v 1.1 2014/07/17 06:57:21 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.34_pre805-r1.ebuild,v 1.2 2014/09/07 15:31:30 jmorgan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -14,7 +14,7 @@ SRC_URI="mirror://sabayon/${CATEGORY}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples ipv6"
 
 DEPEND="sys-devel/gettext"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2e.ebuild,v 1.4 2014/06/18 20:42:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2e.ebuild,v 1.5 2014/09/07 15:47:08 ulm Exp $
 
 EAPI="5"
 
@@ -42,7 +42,7 @@ DEPEND="!sci-chemistry/icm-browser
 					sys-apps/keyutils
 			)
 			32bit? (
-					app-emulation/emul-linux-x86-compat
+					virtual/libstdc++:3.3
 					|| (
 						>=x11-libs/libX11-1.6.2[abi_x86_32]
 						app-emulation/emul-linux-x86-xlibs
