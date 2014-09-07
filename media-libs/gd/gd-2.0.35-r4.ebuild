@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r4.ebuild,v 1.12 2014/08/25 10:59:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r4.ebuild,v 1.13 2014/09/07 14:46:22 grobian Exp $
 
 EAPI="5"
 
-inherit autotools eutils multilib-minimal
+inherit autotools eutils flag-o-matic multilib-minimal
 
 DESCRIPTION="A graphics library for fast image creation"
 HOMEPAGE="http://libgd.org/ http://www.boutell.com/gd/"
@@ -54,6 +54,31 @@ src_prepare() {
 }
 
 multilib_src_configure() {
+	# setup a default FONT path that has a chance of existing using corefonts,
+	# as to make it more useful with e.g. gnuplot
+	local fontpath="${EPREFIX}/usr/share/fonts/corefonts"
+	# like with fontconfig, try to use fonts from the host OS, because that's
+	# beneficial for the user
+	use prefix && case ${CHOST} in
+		*-darwin*)
+			fontpath+=":/Library/Fonts:/System/Library/Fonts"
+		;;
+		*-solaris*)
+			[[ -d /usr/X/lib/X11/fonts/TrueType ]] && \
+				fontpath+=":/usr/X/lib/X11/fonts/TrueType"
+			[[ -d /usr/X/lib/X11/fonts/Type1 ]] && \
+				fontpath+=":/usr/X/lib/X11/fonts/Type1"
+			# OpenIndiana
+			[[ -d /usr/share/fonts/X11/Type1 ]] && \
+				fontpath+=":/usr/share/fonts/X11/Type1"
+		;;
+		*-linux-gnu)
+			[[ -d /usr/share/fonts/truetype ]] && \
+				fontpath+=":/usr/share/fonts/truetype"
+		;;
+	esac
+	append-cppflags "-DDEFAULT_FONTPATH=\\\"${fontpath}\\\""
+
 	export ac_cv_lib_z_deflate=$(usex zlib)
 	# we aren't actually {en,dis}abling X here ... the configure
 	# script uses it just to add explicit -I/-L paths which we

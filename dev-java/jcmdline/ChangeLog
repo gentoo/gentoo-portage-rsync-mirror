@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jcmdline
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcmdline/ChangeLog,v 1.9 2008/01/05 22:24:33 betelgeuse Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcmdline/ChangeLog,v 1.10 2014/09/07 14:56:22 ercpe Exp $
+
+*jcmdline-1.0.2-r2 (07 Sep 2014)
+
+  07 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +jcmdline-1.0.2-r2.ebuild:
+  EAPI bump, some qa
 
   05 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   jcmdline-1.0.2-r1.ebuild:
@@ -40,4 +45,3 @@
   +jcmdline-1.0.2.ebuild:
   Initial import, ebuild based on the one contributed by Scott Carr
   <scarr@progbits.com>. Fixes #80279
-
