@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.5.ebuild,v 1.2 2014/09/06 19:30:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.5.ebuild,v 1.3 2014/09/07 20:48:21 dilfridge Exp $
 
 EAPI=5
 
@@ -192,20 +192,6 @@ multilib_src_configure() {
 		)
 	fi
 
-	# the following is needed only because of bug 513552
-	# and replaces a simpler
-	# $(multilib_native_use_enable usb libusb)
-	#
-	if use usb && multilib_is_native_abi; then
-		myconf+=(
-			--enable-libusb=yes
-		)
-	else
-		myconf+=(
-			--enable-libusb=no
-		)
-	fi
-
 	# need to override KRB5CONFIG for proper flags
 	# https://www.cups.org/str.php?L4423
 	econf \
@@ -227,6 +213,7 @@ multilib_src_configure() {
 		$(multilib_native_use_enable pam) \
 		$(use_enable static-libs static) \
 		$(use_enable threads) \
+		$(multilib_native_use_enable usb libusb) \
 		--disable-dnssd \
 		$(multilib_native_use_with java) \
 		--without-perl \

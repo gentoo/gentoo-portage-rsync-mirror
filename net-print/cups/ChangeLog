@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.628 2014/09/06 19:30:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.629 2014/09/07 20:48:21 dilfridge Exp $
+
+  07 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.7.5.ebuild,
+  cups-1.7.9999.ebuild, cups-9999.ebuild:
+  Undo the last change; as correctly pointed out by Arfrever it makes no sense.
 
   06 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.7.5.ebuild,
   cups-1.7.9999.ebuild, cups-9999.ebuild:
