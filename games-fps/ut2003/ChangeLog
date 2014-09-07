@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2003
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.48 2010/12/16 19:20:44 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.49 2014/09/07 19:42:41 ulm Exp $
+
+  07 Sep 2014; Ulrich Müller <ulm@gentoo.org> ut2003-2225-r4.ebuild:
+  QA: Remove unnecessary dependency on emul-linux-x86-compat, bug 522130.
 
   16 Dec 2010; Michael Sterrett <mr_bones_@gentoo.org>
   ut2003-2225-r4.ebuild:

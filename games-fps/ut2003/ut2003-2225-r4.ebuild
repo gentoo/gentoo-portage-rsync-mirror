@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.15 2010/12/16 19:20:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.16 2014/09/07 19:42:41 ulm Exp $
 
 inherit eutils games
 
@@ -17,8 +17,7 @@ RESTRICT="strip"
 RDEPEND="dedicated? ( games-server/ut2003-ded )
 	!dedicated? ( virtual/opengl )
 	games-fps/ut2003-data
-	amd64? ( app-emulation/emul-linux-x86-compat
-		app-emulation/emul-linux-x86-xlibs )"
+	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
 S=${WORKDIR}
 
