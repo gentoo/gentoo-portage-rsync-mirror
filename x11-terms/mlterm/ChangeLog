@@ -1,6 +1,15 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.97 2014/08/25 17:55:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.98 2014/09/07 03:07:30 hattya Exp $
+
+*mlterm-3.3.8 (07 Sep 2014)
+
+  07 Sep 2014; Akinori Hattori <hattya@gentoo.org> +mlterm-3.3.8.ebuild,
+  -files/mlterm-2.9.1-gentoo.diff, -files/mlterm-2.9.3-asneeded.diff,
+  -files/mlterm-3.0.3-gentoo.diff, -files/mlterm-3.0.5-ldflags.patch,
+  -files/mlterm-3.0.7-ldflags.patch, -files/mlterm-3.0.8-ldflags.patch,
+  -mlterm-3.0.9-r1.ebuild, -mlterm-3.0.9.ebuild, metadata.xml:
+  new upstream release
 
   25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -mlterm-2.9.4-r4.ebuild:
   Cleanup EAPI=1 superseded version. See bug #518172.

@@ -7477,10 +7477,13 @@ x11-terms/eterm:utempter - Include libutempter support
 x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell search
 x11-terms/gnome-terminal:nautilus - Build gnome-base/nautilus extension
 x11-terms/hanterm:utempter - Records user logins. Useful on multi-user systems
+x11-terms/mlterm:fcitx - Enable app-i18n/fcitx support
 x11-terms/mlterm:ibus - Enable app-i18n/ibus support
 x11-terms/mlterm:libssh2 - Enable net-libs/libssh2 support
+x11-terms/mlterm:regis - Enable ReGIS support
 x11-terms/mlterm:scim - Enable app-i18n/scim support
 x11-terms/mlterm:uim - Enable app-i18n/uim support
+x11-terms/mlterm:utempter - Enable sys-libs/libutempter support
 x11-terms/mrxvt:menubar - Enable mrxvt menubar
 x11-terms/mrxvt:utempter - REcords user logins. Useful on multi-user systems
 x11-terms/rxvt:linuxkeys - Define LINUX_KEYS (changes Home/End key)
