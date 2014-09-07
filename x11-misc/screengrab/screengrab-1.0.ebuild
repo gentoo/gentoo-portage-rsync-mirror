@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/screengrab-1.0.ebuild,v 1.1 2013/08/16 17:49:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/screengrab-1.0.ebuild,v 1.2 2014/09/07 16:43:32 hwoarang Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://screengrab.doomer.org/download/screengrab-1_0_/  -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="x11-libs/libX11

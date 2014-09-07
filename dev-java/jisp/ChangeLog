@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jisp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jisp/ChangeLog,v 1.7 2007/05/07 07:45:20 dertobi123 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jisp/ChangeLog,v 1.8 2014/09/07 16:36:11 ercpe Exp $
+
+*jisp-2.5.1-r3 (07 Sep 2014)
+
+  07 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +jisp-2.5.1-r3.ebuild:
+  EAPI=5 bump, dropped java-ant-2 for java-pkg-simple
 
   07 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   jisp-2.5.1-r2.ebuild:
@@ -31,4 +36,3 @@
   +files/jisp-2.5.1-java15.patch, +files/build-2.5.1.xml, +metadata.xml,
   +jisp-2.5.1-r1.ebuild:
   Initial version.
-
