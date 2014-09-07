@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-2.5.7.ebuild,v 1.1 2014/07/13 11:36:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-2.5.8.ebuild,v 1.1 2014/09/07 11:03:44 blueness Exp $
 
 EAPI="5"
 

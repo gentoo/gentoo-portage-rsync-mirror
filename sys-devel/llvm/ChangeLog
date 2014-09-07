@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.203 2014/07/14 14:53:52 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.204 2014/09/07 11:12:00 mgorny Exp $
+
+*llvm-3.5.0 (07 Sep 2014)
+
+  07 Sep 2014; Michał Górny <mgorny@gentoo.org>
+  +files/clang-3.5-gentoo-runtime-gcc-detection-v3.patch,
+  +files/llvm-3.5-gcc-4.9.patch, +llvm-3.5.0.ebuild, llvm-9999.ebuild:
+  Version bump, bug #522188.
 
   14 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> llvm-3.3-r3.ebuild,
   llvm-3.4.1-r2.ebuild, llvm-3.4.2.ebuild, llvm-9999.ebuild:
