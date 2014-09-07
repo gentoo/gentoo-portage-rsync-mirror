@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/heroes3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/ChangeLog,v 1.23 2012/02/05 06:23:55 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/ChangeLog,v 1.24 2014/09/07 09:54:24 ulm Exp $
+
+  07 Sep 2014; Ulrich Müller <ulm@gentoo.org> heroes3-1.3.1a-r2.ebuild:
+  Drop reverse dependencies of sys-libs/lib-compat to unstable, bug 517932.
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org> heroes3-1.3.1a-r2.ebuild:
   Move to new unpacker eclass for unpack_makeself.

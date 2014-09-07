@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/handy/handy-0.82.ebuild,v 1.8 2014/04/17 07:00:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/handy/handy-0.82.ebuild,v 1.9 2014/09/07 09:43:59 ulm Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SRC_URI="http://sdlemu.ngemu.com/releases/Handy-SDL-${PV}${MY_RLS}.i386.linux-gl
 # any copyrighted materials"
 LICENSE="public-domain no-source-code"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 RESTRICT="strip"
 IUSE=""
 

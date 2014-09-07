@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/handy
 # Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/handy/ChangeLog,v 1.7 2014/04/17 07:00:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/handy/ChangeLog,v 1.8 2014/09/07 09:43:59 ulm Exp $
+
+  07 Sep 2014; Ulrich Müller <ulm@gentoo.org> handy-0.82.ebuild:
+  Drop reverse dependencies of sys-libs/lib-compat to unstable, bug 517932.
 
   17 Apr 2014; Ulrich Müller <ulm@gentoo.org> handy-0.82.ebuild:
   Fix LICENSE, bug 505622.

@@ -1,6 +1,9 @@
 # ChangeLog for games-action/descent3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.32 2014/06/27 11:29:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.33 2014/09/07 09:40:24 ulm Exp $
+
+  07 Sep 2014; Ulrich Müller <ulm@gentoo.org> descent3-1.4.0b-r1.ebuild:
+  Drop reverse dependencies of sys-libs/lib-compat to unstable, bug 517932.
 
 *descent3-1.4.0b-r2 (27 Jun 2014)
 

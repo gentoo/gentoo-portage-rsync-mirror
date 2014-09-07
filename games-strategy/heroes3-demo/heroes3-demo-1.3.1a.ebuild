@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.6 2014/05/03 10:03:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.7 2014/09/07 09:55:07 ulm Exp $
 
 inherit eutils unpacker games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://lokigames/loki_demos/${PN}.run"
 LICENSE="all-rights-reserved"
 SLOT="0"
 # Should also work on ppc
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror bindist strip"
 
