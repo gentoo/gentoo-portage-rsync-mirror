@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.10 2014/02/15 08:52:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.11 2014/09/07 06:29:23 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -381,6 +381,9 @@ src_prepare() {
 			# Make configure find docbook-xsl-stylesheets from Prefix
 			sed -i -e '/^FP_DIR_DOCBOOK_XSL/s:\[.*\]:['"${EPREFIX}"'/usr/share/sgml/docbook/xsl-stylesheets/]:' configure.ac || die
 		fi
+
+		# disable bitrot bfd support, bug #522268
+		sed -i -e 's/^AC_CHECK_LIB(bfd,    bfd_init)$/dnl &/' configure.ac || die
 
 		# as we have changed the build system
 		eautoreconf
