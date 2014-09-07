@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/term-ansicolor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.42 2014/08/05 16:00:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.43 2014/09/07 08:17:08 graaff Exp $
+
+  07 Sep 2014; Hans de Graaff <graaff@gentoo.org>
+  term-ansicolor-1.2.2-r1.ebuild:
+  Drop ruby21 for a new stable candidate.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> term-ansicolor-1.0.7.ebuild,
   term-ansicolor-1.2.2-r1.ebuild, term-ansicolor-1.3.0.ebuild:
