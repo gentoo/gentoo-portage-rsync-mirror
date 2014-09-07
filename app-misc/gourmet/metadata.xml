@@ -28,10 +28,6 @@
 		<remote-id type="github">thinkle/gourmet</remote-id>
 	</upstream>
 	<use>
-		<flag name='gnome-print'>
-			<pkg>&lt;=app-misc/gourmet-0.15.9</pkg>
-			Enable pretty Python printing with Gnome
-		</flag>
 		<flag name='i18n'>
 			<pkg>&gt;app-misc/gourmet-0.16</pkg>
 			Enable support for i18n through elib.intl
@@ -44,10 +40,6 @@
 		<flag name='print'>
 			<pkg>&gt;app-misc/gourmet-0.16</pkg>
 			Enable pretty Python printing
-		</flag>
-		<flag name='rtf'>
-			<pkg>&lt;=app-misc/gourmet-0.15.9</pkg>
-			Enable export to RTF
 		</flag>
 		<flag name='spell'>
 			<pkg>&gt;app-misc/gourmet-0.16</pkg>
