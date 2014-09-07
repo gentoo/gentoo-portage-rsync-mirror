@@ -1,9 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.208 2014/09/06 10:27:35 mgorny Exp $
-
-# Mask use-flag firebird and package dev-db/firebird for bug 460780
-firebird
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.209 2014/09/07 13:22:31 pacho Exp $
 
 # CURL_SSL=winssl is for prefix/windows/winnt only
 curl_ssl_winssl

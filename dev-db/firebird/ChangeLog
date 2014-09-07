@@ -1,6 +1,23 @@
 # ChangeLog for dev-db/firebird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.115 2014/05/30 12:58:22 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.116 2014/09/07 13:09:10 pacho Exp $
+
+  07 Sep 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/firebird-2.0.3.12981.0-CVE-2008-0387.patch,
+  -files/firebird-2.0.3.12981.0-CVE-2008-0467.patch,
+  -files/firebird-2.0.3.12981.0-external-libs.patch,
+  -files/firebird-2.0.3.12981.0-flags.patch,
+  -files/firebird-2.0.3.12981.0-make-deps.patch,
+  -files/firebird-2.1.2.18118.0-deps-flags-libs.patch,
+  -files/firebird-2.1.2.18118.0-gcc-icu-declare.patch,
+  -files/firebird-2.5.0.26074.0-build.patch,
+  -files/firebird-2.5.0.26074.0-client.patch,
+  -files/firebird-2.5.0.26074.0-deps-flags-libs.patch,
+  -files/firebird-2.5.0.26074.0-deps-flags.patch,
+  -files/firebird-2.5.0.26074.0-superclassic.patch,
+  -firebird-2.0.3.12981.0-r6.ebuild, -firebird-2.1.3.18185.0-r1.ebuild,
+  -firebird-2.5.2.26539.0.ebuild, metadata.xml:
+  Remove vulnerable versions, move to maintainer-needed (#460780)
 
 *firebird-2.5.2.26540.0 (30 May 2014)
 

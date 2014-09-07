@@ -4,10 +4,10 @@ DESCRIPTION=Yet Another Pager Software (optional with CAPI support)
 EAPI=5
 HOMEPAGE=ftp://sunsite.unc.edu/pub/Linux/apps/serialcomm/machines/
 IUSE=capi lua slang unicode
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=~amd64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=capi? ( net-dialup/capi4k-utils ) slang? ( >=sys-libs/slang-1.4 ) lua? ( dev-lang/lua ) !media-sound/abcmidi
 SLOT=0
 SRC_URI=capi? ( ftp://ftp.melware.net/capi4yaps/yaps-0.96.c4.tgz ) !capi? ( ftp://sunsite.unc.edu/pub/Linux/apps/serialcomm/machines/yaps-0.96.tar.gz )
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=bcd0a617af6a47ee2a6159ea0e87a897
+_md5_=f5e95901be8e454149b1d9f213b5fc28

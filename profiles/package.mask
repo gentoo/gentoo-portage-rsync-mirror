@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16019 2014/09/07 12:46:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16020 2014/09/07 13:15:14 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -164,14 +164,6 @@ sys-apps/usleep
 # Masked by QA until maintainer will sort things out
 =app-emulation/fuse-1.1.1
 
-# Michał Górny <mgorny@gentoo.org> (05 Aug 2014)
-# Abandoned upstream with no in-tree consumers. Likely added by mistake
-# when evaluating the dependencies of dev-python/passlib. Additionally,
-# Yamlog's public source code repository has been removed.
-# Removal in 30 days, bug #518920.
-dev-python/Bcryptor
-dev-python/Yamlog
-
 # Robin H. Johnson <robbat2@gentoo.org> (04 Aug 2014)
 # Masked for testing, presently fails upstream testsuite:
 # FAIL:07:02:35 (00:00:00) db_dump/db_load(./TESTDIR.3/recd001.db:child killed: kill signal): expected 0, got 1
@@ -191,74 +183,6 @@ dev-python/Yamlog
 # Masked for testing.
 >=dev-util/cmake-3.0.0
 
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Upstream dead, fails tests, nothing needs it.
-# Removal in a month (#336256)
-app-crypt/opencdk
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Upstream dead for ages, fails to build due underlinking,
-# nothing needs it (#367573). Removal in a month.
-net-dialup/gnome-ppp
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Not buildable for a long time, bug #414903
-# Removal in a month.
-media-plugins/vdr-dxr3
-media-video/dxr3config
-media-video/em8300-libraries
-media-video/em8300-modules
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Fails to build, tries to access /proc, nothing
-# needs it (#424093). Removal in a month
-net-misc/xsupplicant
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Dead since 2009, not compatible with apache-2.4
-# (#443670). Removal in a month.
-www-apache/mod_lisp2
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Last commit in 2002, last comment on bugs 2007.
-# No reverse dependencies (#460082). Removal in a month
-dev-python/py-gnupg
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Deprecated imports of PIL modules (#471540).
-# Removal in a month.
-media-sound/decibel-audio-player
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Dead for ages, segfaults at start (#486458).
-# Removal in a month.
-sys-power/gtk-cpuspeedy
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Doesn't build, security issues, nothing needs it
-# (#503208). Removal in a month.
-app-emulation/emul-linux-x86-glibc-errno-compat
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Fails to build, upstream dead with 2008, important
-# bugs unfixed by upstream (#514770). Removal in a month.
-sys-fs/chironfs
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Fails to build, dead since 2005 (#516288).
-# Removal in a month.
-net-p2p/giftui
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Dead for ages, doesn't work at all (#516676)
-# Removal in a month.
-app-misc/discomatic
-
-# Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
-# Segfaults, upstream dead (#516682).
-# Removal in a month.
-x11-misc/uf-view
-
 # Patrick Lauer <patrick@gentoo.org> (25 Jul 2014)
 # Upstream has declared it EOL, please migrate to
 # newer versions
@@ -270,11 +194,6 @@ x11-misc/uf-view
 # It's a development version that was included without
 # notifying gnome team.
 =dev-python/pygobject-3.13.3
-
-# Michael Weber <xmw@gentoo.org> (18 Jul 2014)
-# Masked for removal of affected versions in 30 days.
-# Security issue bug 513560
-<net-misc/iodine-0.7.0
 
 # Yixun Lan <dlan@gentoo.org> (17 Jul 2014)
 # Masked for proper testing. (Major updates in the code).
@@ -297,21 +216,6 @@ games-strategy/heroes3
 games-strategy/heroes3-demo
 games-strategy/smac
 sys-block/afacli
-
-# Michael Weber <xmw@gentoo.org> (10 Jul 2014)
-# Masked for removal in 30 days.
-# Upstream released bugfixes against buffer overflows
-=dev-libs/libmodbus-3.0.3
-=dev-libs/libmodbus-3.1.0
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
-# Severe security issue (bug 460780), unhandled for over a year.
-# Masked for removal in 30 days.
-dev-db/firebird
-dev-db/flamerobin
-dev-libs/ibpp
-dev-python/kinterbasdb
-dev-php/PEAR-MDB2_Driver_ibase
 
 # Mikle Kolyada <zlogene@gentoo.org> (27 Jun 2014)
 # Masked for proper testing. (Major updates in the code).
