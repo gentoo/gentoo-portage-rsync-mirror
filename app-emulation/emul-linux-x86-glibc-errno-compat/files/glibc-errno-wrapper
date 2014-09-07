@@ -1,2 +1,0 @@
-#!/bin/sh
-exec @PREFIX@/lib/ld-linux.so.2 --library-path @PREFIX@/lib "$@"

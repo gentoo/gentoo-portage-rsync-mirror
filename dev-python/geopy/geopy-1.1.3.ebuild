@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.1.3.ebuild,v 1.1 2014/09/06 12:14:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.1.3.ebuild,v 1.2 2014/09/07 12:53:28 idella4 Exp $
 
 EAPI=5
 
@@ -23,6 +23,8 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+
+PATCHES=( "${FILESDIR}"/${PV}-formatpy3.patch )
 
 python_test() {
 	# https://github.com/geopy/geopy/issues/74

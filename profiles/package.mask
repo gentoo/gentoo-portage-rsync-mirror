@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16018 2014/09/07 11:34:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16019 2014/09/07 12:46:45 dev-zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -150,13 +150,6 @@ www-apps/swish-e
 # according to it's ChangeLog
 ~dev-util/boost-build-1.56.0
 ~dev-libs/boost-1.56.0
-
-# Tiziano Müller <dev-zero@gentoo.org> (10 Aug 2014)
-# Bundles an old (2.0.0) and vulnerable, but modified version of expat.
-# Testsuite is completely broken and upstream seems to be working on the
-# next rewrite instead of fixing this one. Nothing in the tree depends on it.
-# Removal in a month.
-dev-python/amara
 
 # Samuli Suominen <ssuominen@gentoo.org> (09 Aug 2014)
 # usleep command is part of the app-admin/killproc package,

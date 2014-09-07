@@ -1,0 +1,24 @@
+From df361299c3f9a0922a683e5fa3869764932bb19a Mon Sep 17 00:00:00 2001
+From: Kjell Ahlstedt <kjell.ahlstedt@bredband.net>
+Date: Fri, 8 Aug 2014 12:47:02 +0200
+Subject: Add an include in limit_reference.h
+
+* sigc++/macros/limit_reference.h.m4: limit_reference.h must include
+visit_each.h, with the primary definition of template struct visitor.
+https://mail.gnome.org/archives/libsigc-list/2014-August/msg00001.html
+
+diff --git a/sigc++/macros/limit_reference.h.m4 b/sigc++/macros/limit_reference.h.m4
+index 802446c..bb4b3b7 100644
+--- a/sigc++/macros/limit_reference.h.m4
++++ b/sigc++/macros/limit_reference.h.m4
+@@ -137,6 +137,7 @@ divert(0)
+ 
+ _FIREWALL([LIMIT_REFERENCE])
+ 
++#include <sigc++/visit_each.h>
+ #include <sigc++/type_traits.h>
+ #include <sigc++/trackable.h>
+ 
+-- 
+cgit v0.10.1
+

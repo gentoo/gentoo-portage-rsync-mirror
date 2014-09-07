@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.166 2014/04/18 14:18:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.167 2014/09/07 12:59:59 gienah Exp $
+
+*octave-3.8.2 (07 Sep 2014)
+
+  07 Sep 2014; Mark Wright <gienah@gentoo.org> +octave-3.8.2.ebuild,
+  octave-3.8.1-r1.ebuild:
+  Bump octave to 3.8.2, fixes bump request Bug 520368, thanks to mrueg for
+  reporting. Add deps to USE java, fixes Bug 519756, thanks to M. B. for
+  reporting and the fix.
 
   17 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> octave-3.8.1-r1.ebuild:
   Removed checking of symbols in linear algebra libraries bug #507782

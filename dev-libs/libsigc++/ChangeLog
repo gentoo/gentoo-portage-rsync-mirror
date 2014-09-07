@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.192 2014/09/04 10:20:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.193 2014/09/07 12:41:18 pacho Exp $
+
+*libsigc++-2.3.2-r1 (07 Sep 2014)
+
+  07 Sep 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/libsigc++-2.3.2-missing-include.patch, +libsigc++-2.3.2-r1.ebuild,
+  -libsigc++-2.3.2.ebuild:
+  Add missing include (#522166 by Juergen Rose and Franz Fellner)
 
 *libsigc++-2.3.2 (04 Sep 2014)
 
