@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/javassist
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/ChangeLog,v 1.30 2014/08/10 20:16:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/ChangeLog,v 1.31 2014/09/07 07:26:26 ercpe Exp $
+
+*javassist-2.6-r2 (07 Sep 2014)
+
+  07 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +javassist-2.6-r2.ebuild:
+  EAPI bump; added use for samples
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> javassist-2.6-r1.ebuild,
   javassist-3.14.0.ebuild, javassist-3.4.ebuild, javassist-3.7.ebuild:

@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.18.2.ebuild,v 1.1 2014/04/03 08:32:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.18.2.ebuild,v 1.2 2014/09/07 07:11:13 radhermit Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit elisp-common autotools eutils python-single-r1
 
@@ -72,6 +72,9 @@ src_prepare() {
 
 	# respect AR
 	sed -i "s/^AR=ar/AR=$(tc-getAR)/" stepmake/stepmake/library-vars.make || die
+
+	# remove bundled texinfo file (fixes bug #448560)
+	rm tex/texinfo.tex || die
 
 	eautoreconf
 }

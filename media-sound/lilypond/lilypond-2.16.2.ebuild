@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.16.2.ebuild,v 1.5 2013/09/05 18:57:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.16.2.ebuild,v 1.6 2014/09/07 07:11:13 radhermit Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -53,6 +53,9 @@ src_prepare() {
 	for lang in ${LANGS}; do
 		use linguas_${lang} || rm po/${lang}.po || die
 	done
+
+	# remove bundled texinfo file (fixes bug #448560)
+	rm tex/texinfo.tex || die
 
 	eautoreconf
 }
