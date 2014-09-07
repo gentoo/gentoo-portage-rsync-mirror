@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/cara-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/ChangeLog,v 1.8 2014/06/18 20:42:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/ChangeLog,v 1.9 2014/09/07 15:25:22 ulm Exp $
+
+  07 Sep 2014; Ulrich Müller <ulm@gentoo.org> cara-bin-1.8.4.ebuild:
+  Replace emul-linux-x86-compat dependency by virtual/libstdc++, bug 522218.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> cara-bin-1.8.4.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

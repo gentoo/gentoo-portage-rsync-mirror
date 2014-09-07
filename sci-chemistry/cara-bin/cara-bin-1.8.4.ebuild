@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/cara-bin-1.8.4.ebuild,v 1.7 2014/06/18 20:42:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/cara-bin-1.8.4.ebuild,v 1.8 2014/09/07 15:25:22 ulm Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ RDEPEND="
 			)
 			app-emulation/emul-linux-x86-xlibs
 		)
-		app-emulation/emul-linux-x86-compat )
+	)
 	x86? (
 		media-libs/fontconfig
 		media-libs/freetype
@@ -47,7 +47,8 @@ RDEPEND="
 		x11-libs/libXi
 		x11-libs/libXrandr
 		x11-libs/libXrender
-		virtual/libstdc++ )
+	)
+	virtual/libstdc++
 	lua? ( dev-lang/lua )"
 DEPEND=""
 

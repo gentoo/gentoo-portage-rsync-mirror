@@ -6,9 +6,9 @@ HOMEPAGE=http://truecombat.com/
 IUSE=dedicated opengl dedicated opengl
 KEYWORDS=amd64 x86
 LICENSE=freedist
-RDEPEND=x86? ( =virtual/libstdc++-3.3 ) amd64? ( app-emulation/emul-linux-x86-compat ) games-misc/games-envd dedicated? ( games-fps/enemy-territory[dedicated] ) opengl? ( || ( games-fps/enemy-territory[opengl] games-fps/enemy-territory[-dedicated] ) ) !dedicated? ( !opengl? ( || ( games-fps/enemy-territory[opengl] games-fps/enemy-territory[-dedicated] ) ) )
+RDEPEND=~virtual/libstdc++-3.3 games-misc/games-envd dedicated? ( games-fps/enemy-territory[dedicated] ) opengl? ( || ( games-fps/enemy-territory[opengl] games-fps/enemy-territory[-dedicated] ) ) !dedicated? ( !opengl? ( || ( games-fps/enemy-territory[opengl] games-fps/enemy-territory[-dedicated] ) ) )
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=http://dragons-perch.net/tce/tcetest049.zip http://freeserver.name/files/installer/linux/tcetest049.zip http://mirror.rosvosektori.net/tcetest049.zip http://dragons-perch.net/tce/tce049b_all_os_fixed.zip
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	games	e221fed675714bd5545b7488aed9f822	games-mods	9d44c6f45289592ca9cf29d77424a048	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=a96e7b0aa4c0870301ef83fab56d51bf
+_md5_=111d77e7f15dea106e8e18327a14568f

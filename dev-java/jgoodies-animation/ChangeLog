@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jgoodies-animation
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/ChangeLog,v 1.11 2007/10/24 05:11:59 wltjr Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/ChangeLog,v 1.13 2014/09/07 15:28:46 ercpe Exp $
+
+  07 Sep 2014; Johann Schmitz <ercpe@gentoo.org> -files/build.xml:
+  Dropped old build.xml files
+
+*jgoodies-animation-1.2.0-r1 (07 Sep 2014)
+
+  07 Sep 2014; Johann Schmitz <ercpe@gentoo.org>
+  +jgoodies-animation-1.2.0-r1.ebuild:
+  EAPI bump, some qa
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -jgoodies-animation-1.1.3.ebuild:

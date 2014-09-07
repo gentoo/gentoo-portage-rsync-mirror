@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/novell-groupwise-client
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/ChangeLog,v 1.2 2013/12/12 07:35:23 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/ChangeLog,v 1.3 2014/09/07 15:20:29 ulm Exp $
+
+  07 Sep 2014; Ulrich Müller <ulm@gentoo.org>
+  novell-groupwise-client-8.0.2.96933.ebuild:
+  Remove dependency on app-emulation/emul-linux-x86-compat since it is
+  redundant with sys-libs/libstdc++-v3, bug 522218.
 
   12 Dec 2013; Justin Lecher <jlec@gentoo.org>
   novell-groupwise-client-8.0.2.96933.ebuild, metadata.xml:

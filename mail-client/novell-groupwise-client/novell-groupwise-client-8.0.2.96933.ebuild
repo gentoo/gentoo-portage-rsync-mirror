@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/novell-groupwise-client-8.0.2.96933.ebuild,v 1.2 2013/12/12 07:35:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/novell-groupwise-client-8.0.2.96933.ebuild,v 1.3 2014/09/07 15:20:29 ulm Exp $
 
 RESTRICT="binchecks fetch mirror strip"
 
@@ -23,9 +23,7 @@ RDEPEND="sys-libs/libstdc++-v3
 		|| ( virtual/jdk
 		virtual/jre )
 		multilib? (
-		amd64? ( app-emulation/emul-linux-x86-java ) ) )
-	multilib? (
-		amd64? ( app-emulation/emul-linux-x86-compat ) )"
+		amd64? ( app-emulation/emul-linux-x86-java ) ) )"
 
 src_unpack() {
 	unpack ${A}

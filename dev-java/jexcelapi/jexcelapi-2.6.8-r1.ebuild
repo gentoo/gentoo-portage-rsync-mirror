@@ -1,8 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/jexcelapi-2.6.8.ebuild,v 1.4 2014/09/07 15:17:52 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/jexcelapi-2.6.8-r1.ebuild,v 1.1 2014/09/07 15:17:52 ercpe Exp $
+
+EAPI=5
 
 JAVA_PKG_IUSE="doc source"
+
 inherit java-pkg-2 java-ant-2
 
 MY_P="${P//-/_}"
@@ -17,26 +20,18 @@ SLOT="2.5"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core"
+DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
+EANT_BUILD_XML="build/build.xml"
+EANT_FILTER_COMPILER="jikes"
+EANT_BUILD_TARGET="jxl"
+EANT_DOC_TARGET="docs"
 
-	cd "${S}"
-	find -name "*.jar" | xargs rm -v
-	find -name "*.class" -delete
-	rm -fr docs
-
-	# sun-jdk-1.5/jikes fails
-	java-pkg_filter-compiler jikes
-}
-
-src_compile() {
-	eant -f build/build.xml jxl $(use_doc docs)
+java_prepare() {
+	find "${S}" -name "*.jar" -o -name "*.class" -delete || die
 }
 
 src_install() {

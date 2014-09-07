@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jexcelapi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.22 2009/02/04 12:26:27 betelgeuse Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.23 2014/09/07 15:17:52 ercpe Exp $
+
+*jexcelapi-2.6.8-r1 (07 Sep 2014)
+
+  07 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +jexcelapi-2.6.8-r1.ebuild,
+  -files/2.5.1-jikes.patch, jexcelapi-2.6.8.ebuild:
+  EAPI bump, some qa and dropped patch file for old version
 
   04 Feb 2009; Petteri Räty <betelgeuse@gentoo.org>
   -jexcelapi-2.6.4.ebuild, -jexcelapi-2.6.6.ebuild:
@@ -85,4 +91,3 @@
   +files/2.5.1-jikes.patch, +jexcelapi-2.5.1.ebuild:
   Initial import, ebuild based on the contribution of Eddy Mulyono
   <eddymulyono@mail.com>. fixes #76209.
-
