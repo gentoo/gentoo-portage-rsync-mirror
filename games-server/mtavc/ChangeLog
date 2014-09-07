@@ -1,6 +1,9 @@
 # ChangeLog for games-server/mtavc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/ChangeLog,v 1.9 2013/04/21 10:22:56 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/ChangeLog,v 1.10 2014/09/07 11:31:57 ulm Exp $
+
+  07 Sep 2014; Ulrich Müller <ulm@gentoo.org> mtavc-0.5.ebuild:
+  Update dependency, this links against libstdc++.so.5.
 
   21 Apr 2013; Ulrich Müller <ulm@gentoo.org> mtavc-0.5.ebuild:
   Fix LICENSE, bug 465852.
