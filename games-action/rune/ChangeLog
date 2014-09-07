@@ -1,6 +1,9 @@
 # ChangeLog for games-action/rune
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.20 2012/01/16 19:10:25 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.21 2014/09/07 09:14:12 ulm Exp $
+
+  07 Sep 2014; Ulrich Müller <ulm@gentoo.org> rune-1.07-r2.ebuild:
+  QA: Remove unnecessary dependency on emul-linux-x86-compat, bug 522152.
 
   16 Jan 2012; Ulrich Müller <ulm@gentoo.org> rune-1.07-r2.ebuild:
   Migrate to cdrom.eclass, bug 398809.

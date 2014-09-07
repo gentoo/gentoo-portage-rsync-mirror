@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/javolution
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.18 2014/09/07 08:57:30 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.19 2014/09/07 09:19:13 ercpe Exp $
+
+*javolution-4.0.2-r1 (07 Sep 2014)
+
+  07 Sep 2014; Johann Schmitz <ercpe@gentoo.org> +files/4.0.2-fix-java7.patch,
+  +javolution-4.0.2-r1.ebuild, javolution-4.0.2.ebuild:
+  EAPI bump, minor qa, added patch to fix bug #421863
 
 *javolution-2.2.4-r2 (07 Sep 2014)
 
