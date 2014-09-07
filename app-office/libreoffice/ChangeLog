@@ -1,6 +1,14 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.567 2014/08/23 09:56:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.569 2014/09/07 12:19:39 scarabeus Exp $
+
+  07 Sep 2014; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.2.5.2.ebuild,
+  libreoffice-4.2.6.2.ebuild, libreoffice-4.2.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Update libwps dependencies.
+
+  07 Sep 2014; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  wpg and wpd bumped.
 
 *libreoffice-4.2.6.2 (23 Aug 2014)
 

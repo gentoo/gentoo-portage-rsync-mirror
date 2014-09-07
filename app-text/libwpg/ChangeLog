@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libwpg
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.28 2013/06/21 12:25:40 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.29 2014/09/07 12:11:21 scarabeus Exp $
+
+*libwpg-0.3.0 (07 Sep 2014)
+
+  07 Sep 2014; Tomáš Chvátal <scarabeus@gentoo.org> +libwpg-0.3.0.ebuild:
+  Add libwpg that uses librevenge
 
   21 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> -libwpg-0.2.1.ebuild:
   Drop older.
