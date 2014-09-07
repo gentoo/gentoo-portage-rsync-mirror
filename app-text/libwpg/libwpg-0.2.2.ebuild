@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/libwpg-0.2.2.ebuild,v 1.10 2013/05/07 17:51:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/libwpg-0.2.2.ebuild,v 1.11 2014/09/07 13:41:26 scarabeus Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ src_install() {
 pkg_postinst() {
 	alternatives_auto_makesym /usr/bin/wpg2svgbatch.pl "/usr/bin/wpg2svgbatch.pl-[0-9].[0-9]"
 	alternatives_auto_makesym /usr/bin/wpg2svg "/usr/bin/wpg2svg-[0-9].[0-9]"
-	alternatives_auto_makesym /usr/bin/wpg2raw "/usr/bin/wpg2raw-[0-9].[0-9]"	fi
+	alternatives_auto_makesym /usr/bin/wpg2raw "/usr/bin/wpg2raw-[0-9].[0-9]"
 }
 
 pkg_postrm() {

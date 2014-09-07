@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.12.2.ebuild,v 1.4 2014/07/23 15:24:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.12.2.ebuild,v 1.5 2014/09/07 13:33:37 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -32,7 +32,9 @@ RDEPEND="
 	avahi? ( >=net-dns/avahi-0.6.26[dbus,gtk3] )
 	rdp? ( net-misc/freerdp )
 	ssh? ( >=x11-libs/vte-0.20:2.90 )
-	spice? ( >=net-misc/spice-gtk-0.5[gtk3] )
+	spice? (
+		app-emulation/spice-protocol
+		>=net-misc/spice-gtk-0.5[gtk3] )
 	telepathy? (
 		dev-libs/dbus-glib
 		>=net-libs/telepathy-glib-0.11.6 )

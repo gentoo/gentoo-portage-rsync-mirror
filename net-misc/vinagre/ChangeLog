@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.107 2014/07/23 15:24:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.108 2014/09/07 13:33:37 pacho Exp $
+
+  07 Sep 2014; Pacho Ramos <pacho@gentoo.org> -vinagre-3.10.2.ebuild,
+  -vinagre-3.12.1.ebuild, vinagre-3.12.2.ebuild:
+  Pull in app-emulation/spice-protocol (#508820 by Alexander Tsoy), drop old
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> vinagre-3.12.2.ebuild:
   Stable for x86, wrt bug #512012
