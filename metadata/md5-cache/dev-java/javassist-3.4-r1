@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install preinst prepare setup
+DEPEND=>=virtual/jdk-1.4 app-arch/unzip >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
+DESCRIPTION=Javassist makes Java bytecode manipulation simple
+EAPI=5
+HOMEPAGE=http://www.csg.is.titech.ac.jp/~chiba/javassist/
+IUSE=elibc_FreeBSD doc source examples elibc_FreeBSD
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x86-macos
+LICENSE=MPL-1.1
+RDEPEND=>=virtual/jre-1.4 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+SLOT=3
+SRC_URI=mirror://sourceforge/jboss/javassist-3.4.zip
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=ead2660671909ad4822d30ea2eeb35bd
