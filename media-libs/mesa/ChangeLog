@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.571 2014/08/19 22:49:14 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.572 2014/09/07 17:09:58 mgorny Exp $
+
+*mesa-10.2.7 (07 Sep 2014)
+
+  07 Sep 2014; Michał Górny <mgorny@gentoo.org>
+  +files/mesa-10.2.7-llvm-unique_ptr.patch, +mesa-10.2.7.ebuild:
+  Version bump, requested in bug #522306. Update dependencies from ::x11. Fix
+  llvm-3.5.0 support, bug #522300.
 
 *mesa-10.2.6 (19 Aug 2014)
 
