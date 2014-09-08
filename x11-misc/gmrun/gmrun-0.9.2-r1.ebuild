@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gmrun/gmrun-0.9.2-r1.ebuild,v 1.9 2014/03/04 20:24:07 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gmrun/gmrun-0.9.2-r1.ebuild,v 1.10 2014/09/08 08:23:41 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -25,11 +25,9 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-sysconfdir.patch \
-		"${FILESDIR}"/${P}-glibc210.patch
+		"${FILESDIR}"/${P}-glibc210.patch \
+		"${FILESDIR}"/${P}-stlport.patch
 
-	# Disable check for STLport due to bug #164339
-	sed -i -e 's,^AC_PATH_STLPORT,dnl REMOVED ,g' configure.in
-	sed -i -e 's,@STLPORT_[A-Z]\+@,,g' src/Makefile.am
 	eautoreconf
 }
 

@@ -1,19 +1,17 @@
 http://bugs.gentoo.org/292856
 
-diff -ur gmrun-0.9.2.orig/config/Makefile.am gmrun-0.9.2/config/Makefile.am
---- gmrun-0.9.2.orig/config/Makefile.am	2001-05-17 09:58:07.000000000 +0300
-+++ gmrun-0.9.2/config/Makefile.am	2010-06-06 16:05:16.000000000 +0300
+--- a/config/Makefile.am
++++ b/config/Makefile.am
 @@ -1,6 +1,6 @@
- # $Id: gmrun-0.9.2-sysconfdir.patch,v 1.1 2010/06/06 13:13:11 ssuominen Exp $
+ # $Id: gmrun-0.9.2-sysconfdir.patch,v 1.2 2014/09/08 08:18:55 jer Exp $
  
 -myrcdir = @PACKAGE_DATA_DIR@
 +myrcdir = $(sysconfdir)
  myrc_DATA = gmrunrc
  
  EXTRA_DIST = gmrunrc
-diff -ur gmrun-0.9.2.orig/config.h.in gmrun-0.9.2/config.h.in
---- gmrun-0.9.2.orig/config.h.in	2003-11-16 12:47:07.000000000 +0200
-+++ gmrun-0.9.2/config.h.in	2010-06-06 16:07:14.000000000 +0300
+--- a/config.h.in
++++ b/config.h.in
 @@ -10,7 +10,6 @@
  #undef HAVE_STPCPY
  #undef HAVE_LIBSM
@@ -22,18 +20,16 @@ diff -ur gmrun-0.9.2.orig/config.h.in gmrun-0.9.2/config.h.in
  #undef PACKAGE_SOURCE_DIR
  
  /* Define if you have the <dirent.h> header file.  */
-diff -ur gmrun-0.9.2.orig/src/Makefile.am gmrun-0.9.2/src/Makefile.am
---- gmrun-0.9.2.orig/src/Makefile.am	2002-06-05 22:39:18.000000000 +0300
-+++ gmrun-0.9.2/src/Makefile.am	2010-06-06 16:09:11.000000000 +0300
+--- a/src/Makefile.am
++++ b/src/Makefile.am
 @@ -15,3 +15,5 @@
  
  gmrun_LDADD = @GTK_LIBS@ @STLPORT_LDFLAGS@
  
 +AM_CPPFLAGS = \
 +	-DPACKAGE_DATA_DIR='"$(datadir)/$(PACKAGE)"' -DPACKAGE_SYSCONF_DIR='"$(sysconfdir)"'
-diff -ur gmrun-0.9.2.orig/src/prefs.cc gmrun-0.9.2/src/prefs.cc
---- gmrun-0.9.2.orig/src/prefs.cc	2002-08-16 13:48:22.000000000 +0300
-+++ gmrun-0.9.2/src/prefs.cc	2010-06-06 16:07:14.000000000 +0300
+--- a/src/prefs.cc
++++ b/src/prefs.cc
 @@ -30,7 +30,7 @@
  
  Prefs::Prefs()

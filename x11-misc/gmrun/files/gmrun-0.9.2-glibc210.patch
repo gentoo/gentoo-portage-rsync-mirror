@@ -1,5 +1,5 @@
---- gmrun-0.9.2/src/gtkcompletionline.cc.orig	2009-06-19 22:38:14.000000000 +0400
-+++ gmrun-0.9.2/src/gtkcompletionline.cc	2009-06-19 22:37:14.000000000 +0400
+--- a/src/gtkcompletionline.cc
++++ b/src/gtkcompletionline.cc
 @@ -376,7 +377,7 @@
    return 0;
  }
