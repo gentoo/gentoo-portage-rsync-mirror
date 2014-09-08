@@ -3745,6 +3745,7 @@ media-plugins/mediastreamer-ilbc:20ms-frames - enable 20ms frame size (default i
 media-plugins/mythplugins:cdr - Allows MythMusic to burn CD-Rs
 media-plugins/mythplugins:exif - Allows MythGallery to read EXIF data from photos
 media-plugins/mythplugins:fftw - Adds visual effects to MythMusic when playing back music
+media-plugins/mythplugins:hls - HTTP Live Streaming support
 media-plugins/mythplugins:mytharchive - Allows you to archive recorded content to CD or DVD
 media-plugins/mythplugins:mythbrowser - Adds a web browser within MythTV
 media-plugins/mythplugins:mythgallery - Adds a picture viewing gallery within MythTV
