@@ -1,6 +1,10 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.126 2014/09/04 21:43:50 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.127 2014/09/08 02:54:39 williamh Exp $
+
+  08 Sep 2014; William Hubbs <williamh@gentoo.org> pybugz-0.11.ebuild,
+  pybugz-9999.ebuild:
+  add python 3.4 compatibility
 
 *pybugz-0.11 (04 Sep 2014)
 
