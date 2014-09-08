@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/requests-oauthlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-oauthlib/ChangeLog,v 1.5 2014/09/06 08:04:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-oauthlib/ChangeLog,v 1.6 2014/09/08 05:52:44 idella4 Exp $
+
+*requests-oauthlib-0.4.1 (08 Sep 2014)
+
+  08 Sep 2014; Ian Delaney <idella4@gentoo.org> +requests-oauthlib-0.4.1.ebuild:
+  bump; drop redundant patch
 
   06 Sep 2014; Ian Delaney <idella4@gentoo.org> requests-oauthlib-0.4.0.ebuild:
   drop py2.6 re-add py3.2 to support reverse deps
