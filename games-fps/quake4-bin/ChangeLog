@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake4-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.41 2014/07/09 19:48:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.42 2014/09/08 17:14:30 axs Exp $
+
+  08 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  -quake4-bin-1.4.2.ebuild:
+  remove old due to emul-linux-x86-compat dependency removal
 
 *quake4-bin-1.4.2-r1 (09 Jul 2014)
 
