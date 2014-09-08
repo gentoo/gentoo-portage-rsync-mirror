@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.149 2014/07/19 16:24:44 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.150 2014/09/08 01:02:46 kumba Exp $
+
+*net-tools-1.60_p20130513023548-r1 (08 Sep 2014)
+
+  08 Sep 2014; Joshua Kinard <kumba@gentoo.org>
+  +net-tools-1.60_p20130513023548-r1.ebuild:
+  Add several patches from Fedora to fix various issues.
 
   19 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   net-tools-1.60_p20130513023548.ebuild:
