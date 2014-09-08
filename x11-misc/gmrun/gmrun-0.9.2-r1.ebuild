@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gmrun/gmrun-0.9.2-r1.ebuild,v 1.10 2014/09/08 08:23:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gmrun/gmrun-0.9.2-r1.ebuild,v 1.11 2014/09/08 08:45:50 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -12,14 +12,18 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS="amd64 ~mips ppc x86"
-IUSE="elibc_glibc"
 
-RDEPEND="x11-libs/gtk+:2
-	dev-libs/popt"
-DEPEND="${RDEPEND}
-	virtual/pkgconfig
+RDEPEND="
+	dev-libs/glib:2
+	dev-libs/popt
+	x11-libs/gtk+:2
+"
+DEPEND="
+	${RDEPEND}
+	elibc_glibc? ( >=sys-libs/glibc-2.10 )
 	sys-apps/sed
-	elibc_glibc? ( >=sys-libs/glibc-2.10 )"
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	epatch \
