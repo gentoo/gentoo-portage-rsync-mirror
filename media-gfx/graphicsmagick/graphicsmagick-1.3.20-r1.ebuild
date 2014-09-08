@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.20.ebuild,v 1.1 2014/09/04 21:10:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.20-r1.ebuild,v 1.1 2014/09/08 18:40:29 radhermit Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -22,7 +22,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	fpx? ( media-libs/libfpx )
 	imagemagick? ( !media-gfx/imagemagick )
 	jbig? ( media-libs/jbigkit )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/jasper )
 	lcms? ( media-libs/lcms:2 )
 	lzma? ( app-arch/xz-utils )
