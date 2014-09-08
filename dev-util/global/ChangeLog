@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.130 2014/08/14 17:26:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.131 2014/09/08 07:15:16 nimiux Exp $
+
+  08 Sep 2014; Chema Alonso <nimiux@gentoo.org> global-6.3.ebuild:
+  Stable for amd64 wrt bug #518612
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> global-6.3.ebuild:
   x86 stable wrt bug #518612
