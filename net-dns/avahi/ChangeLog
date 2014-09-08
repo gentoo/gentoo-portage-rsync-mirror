@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.271 2014/08/30 18:45:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.272 2014/09/07 23:03:35 blueness Exp $
+
+  07 Sep 2014; Anthony G. Basile <blueness@gentoo.org>
+  files/avahi-0.6.31-fix-locale-build.patch:
+  Patch Makefile.am, not Makefile.in, bug #501664
 
   30 Aug 2014; Anthony G. Basile <blueness@gentoo.org> avahi-0.6.31-r5.ebuild:
   Stable on arm, bug #520338
