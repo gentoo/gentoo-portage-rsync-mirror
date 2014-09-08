@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tracing/tracing-0.8.ebuild,v 1.2 2014/07/27 11:09:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tracing/tracing-0.8.ebuild,v 1.3 2014/09/08 19:35:42 nimiux Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://code.liw.fi/debian/pool/main/p/python-${PN}/python-${PN}_${PV}.o
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="doc examples"
 
 S="${WORKDIR}/${MY_P}"

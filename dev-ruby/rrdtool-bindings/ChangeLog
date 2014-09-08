@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rrdtool-bindings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/ChangeLog,v 1.10 2014/08/15 17:59:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/ChangeLog,v 1.11 2014/09/08 19:47:54 nimiux Exp $
+
+  08 Sep 2014; Chema Alonso <nimiux@gentoo.org> rrdtool-bindings-1.4.8.ebuild:
+  Stable for amd64 wrt bug #517234
 
   15 Aug 2014; Raúl Porcel <armin76@gentoo.org> rrdtool-bindings-1.4.8.ebuild:
   ia64/sparc stable, bug #517234
