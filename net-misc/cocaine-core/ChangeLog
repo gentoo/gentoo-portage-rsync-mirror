@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/cocaine-core
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cocaine-core/ChangeLog,v 1.1 2013/01/28 08:00:44 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cocaine-core/ChangeLog,v 1.2 2014/09/08 11:19:19 pinkbyte Exp $
+
+*cocaine-core-0.9.2-r1 (08 Sep 2014)
+
+  08 Sep 2014; Sergey Popov <pinkbyte@gentoo.org> -cocaine-core-0.9.2.ebuild,
+  +cocaine-core-0.9.2-r1.ebuild, +files/cocaine-core-0.9.2-boost-1.53.patch:
+  Revision bump: EAPI 5, add subslot to dev-libs/boost dependency, fix building
+  with newer boost, wrt bug #497320. Thanks to Franz Fellner <alpine.art.de AT
+  gmail.com> for provided patch. Drop old revision
 
 *cocaine-core-0.9.2 (28 Jan 2013)
 
