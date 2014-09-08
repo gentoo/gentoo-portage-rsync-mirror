@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libiterm-mbt/libiterm-mbt-0.5.ebuild,v 1.3 2004/06/24 22:05:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libiterm-mbt/libiterm-mbt-0.5.ebuild,v 1.4 2014/09/08 13:56:51 naota Exp $
 
 DESCRIPTION="Hacked version of libiterm -- Internationalized Terminal Emulator Library"
 HOMEPAGE="http://www.doc.ic.ac.uk/~mbt99/Y/
@@ -20,6 +20,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	emake DESTDIR="${D}" install || die
 	dodoc README INSTALL
 }
