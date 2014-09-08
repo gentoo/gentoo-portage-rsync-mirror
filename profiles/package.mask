@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16021 2014/09/07 19:58:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16022 2014/09/08 17:32:33 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (8 Sep 2014)
+# Multiple security vulnerabilities, bug #510960.
+app-emulation/emul-linux-x86-compat
 
 # Michael Orlitzky <mjo@gentoo.org> (05 Sep 2014)
 # No reverse dependencies, and the equivalent is now installed
@@ -205,7 +209,6 @@ sys-apps/usleep
 # See bugs #515926 and #510960.
 sys-libs/lib-compat
 sys-libs/lib-compat-loki
-=app-emulation/emul-linux-x86-compat-20140508-r1
 games-action/mutantstorm-demo
 games-action/phobiaii
 games-emulation/handy
