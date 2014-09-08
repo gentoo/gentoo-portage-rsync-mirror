@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pypax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.89 2014/08/30 02:14:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.90 2014/09/08 20:49:32 blueness Exp $
+
+  08 Sep 2014; Anthony G. Basile <blueness@gentoo.org> -pypax-0.8.1-r1.ebuild,
+  -pypax-0.8.3.ebuild, -pypax-0.8.5.ebuild, pypax-0.8.4.ebuild,
+  pypax-0.8.6.ebuild:
+  Fix RDEPEND.
 
   30 Aug 2014; Ian Delaney <idella4@gentoo.org> pypax-0.8.6.ebuild:
   drop py2.6 add py3.4

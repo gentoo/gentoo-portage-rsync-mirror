@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/pypax-0.8.4.ebuild,v 1.11 2014/03/31 21:23:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/pypax-0.8.4.ebuild,v 1.12 2014/09/08 20:49:32 blueness Exp $
 
 EAPI="5"
 
@@ -22,11 +22,12 @@ IUSE="+ptpax +xtpax"
 
 REQUIRED_USE="|| ( ptpax xtpax )"
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+RDEPEND="
 	ptpax? ( dev-libs/elfutils )
 	xtpax? ( sys-apps/attr )"
 
-RDEPEND=""
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	${RDEPEND}"
 
 src_compile() {
 	unset PTPAX
