@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.6.2.ebuild,v 1.6 2014/06/29 08:28:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.7.2-r2.ebuild,v 1.1 2014/09/08 04:55:35 prometheanfire Exp $
 
-EAPI=2
-inherit autotools bash-completion eutils fixheadtails multilib user
+EAPI=5
+inherit autotools bash-completion-r1 eutils fixheadtails multilib user systemd flag-o-matic toolchain-funcs
 
 MY_P=${P/_/-}
 
@@ -15,22 +15,54 @@ SRC_URI="http://random.networkupstools.org/source/${PV%.*}/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="cgi snmp usb selinux ssl tcpd xml"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
-RDEPEND="cgi? ( >=media-libs/gd-2[png] )
+IUSE="avahi cgi ipmi snmp +usb selinux ssl tcpd xml"
+RDEPEND="avahi? ( net-dns/avahi )
+	cgi? ( >=media-libs/gd-2[png] )
 	snmp? ( net-analyzer/net-snmp )
 	usb? ( virtual/libusb:0 )
 	selinux? ( sec-policy/selinux-nut )
 	ssl? ( >=dev-libs/openssl-1 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	xml? ( >=net-libs/neon-0.25.0 )
+	ipmi? ( sys-libs/freeipmi )
 	virtual/udev"
 DEPEND="$RDEPEND
 	>=sys-apps/sed-4
 	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
+
+# Bug #480664 requested UPS_DRIVERS_IUSE for more flexibility in building this package
+SERIAL_DRIVERLIST="al175 bcmxcp belkin belkinunv bestfcom bestfortress bestuferrups bestups dummy-ups etapro everups gamatronic genericups isbmex liebert liebert-esp2 masterguard metasys oldmge-shut mge-utalk microdowell mge-shut oneac optiups powercom rhino safenet solis tripplite tripplitesu upscode2 victronups powerpanel blazer_ser clone clone-outlet ivtscd apcsmart apcsmart-old apcupsd-ups riello_ser nutdrv_qx"
+SNMP_DRIVERLIST="snmp-ups"
+USB_LIBUSB_DRIVERLIST="usbhid-ups bcmxcp_usb tripplite_usb blazer_usb richcomm_usb riello_usb nutdrv_qx"
+USB_DRIVERLIST=${USB_LIBUSB_DRIVERLIST}
+#HAL_DRIVERLIST="usbhid-ups bcmxcp_usb tripplite_usb blazer_usb riello_usb nutdrv_qx"
+NEONXML_DRIVERLIST="netxml-ups"
+IPMI_DRIVERLIST="nut-ipmipsu"
+# Now we build from it:
+for name in ${SERIAL_DRIVERLIST} ; do
+	IUSE_UPS_DRIVERS="${IUSE_UPS_DRIVERS} +ups_drivers_${name}"
+done
+for name in ${USB_DRIVERLIST} ; do
+	IUSE_UPS_DRIVERS="${IUSE_UPS_DRIVERS} +ups_drivers_${name}"
+	REQUIRED_USE="${REQUIRED_USE} ups_drivers_${name}? ( usb )"
+done
+for name in ${NEONXML_DRIVERLIST}; do
+	IUSE_UPS_DRIVERS="${IUSE_UPS_DRIVERS} ups_drivers_${name}"
+	REQUIRED_USE="${REQUIRED_USE} ups_drivers_${name}? ( xml )"
+done
+for name in ${SNMP_DRIVERLIST} ; do
+	IUSE_UPS_DRIVERS="${IUSE_UPS_DRIVERS} ups_drivers_${name}"
+	REQUIRED_USE="${REQUIRED_USE} ups_drivers_${name}? ( snmp )"
+done
+for name in ${IPMI_DRIVERLIST} ; do
+	IUSE_UPS_DRIVERS="${IUSE_UPS_DRIVERS} ups_drivers_${name}"
+	REQUIRED_USE="${REQUIRED_USE} ups_drivers_${name}? ( ipmi )"
+done
+IUSE="${IUSE} ${IUSE_UPS_DRIVERS}"
 
 # public files should be 644 root:root
 NUT_PUBLIC_FILES="/etc/nut/{ups,upssched}.conf"
@@ -51,13 +83,18 @@ pkg_setup() {
 }
 
 src_prepare() {
-	ht_fix_file configure.in
+	#ht_fix_file configure.in
 
-	epatch "${FILESDIR}"/${PN}-2.4.1-no-libdummy.patch
+	epatch "${FILESDIR}/nut-2.7.2/nut-2.7.2-no-libdummy.patch"
 	epatch "${FILESDIR}"/${PN}-2.6.2-lowspeed-buffer-size.patch
+	#epatch "${FILESDIR}"/${PN}-2.6.3-CVE-2012-2944.patch
+	#epatch "${FILESDIR}"/${PN}-2.6.5-freeipmi_fru.patch
+	epatch "${FILESDIR}"/${PN}-2.7.1-fix-scanning.patch
+	epatch "${FILESDIR}"/${PN}-2.7.1-snmpusb-order.patch
 
 	sed -e "s:GD_LIBS.*=.*-L/usr/X11R6/lib \(.*\) -lXpm -lX11:GD_LIBS=\"\1:" \
-		-i configure.in || die
+		-e '/systemdsystemunitdir=.*echo.*sed.*libdir/s,^,#,g' \
+		-i configure.ac || die
 
 	sed -e "s:52.nut-usbups.rules:70-nut-usbups.rules:" \
 		-i scripts/udev/Makefile.am || die
@@ -68,15 +105,29 @@ src_prepare() {
 		-e 's:@LIBSSL_LDFLAGS@:@LIBSSL_LIBS@:' \
 		lib/libupsclient{.pc,-config}.in || die #361685
 
+	# This file appears twice in the install list, and if both install rules
+	# trigger simultaneously during parallel-make, it fails.
+	sed -i \
+		-e '/nodist_sysconf_DATA/s,upsmon.conf.sample,,g' \
+		conf/Makefile.am || die
+
 	eautoreconf
 }
 
 src_configure() {
 	local myconf
+	append-flags -fno-lto
+	tc-export CC
+	tc-export CXX
+	tc-export AR
 
-	if [ -n "${NUT_DRIVERS}" ]; then
-		myconf="${myconf} --with-drivers=${NUT_DRIVERS// /,}"
-	fi
+	local UPS_DRIVERS=""
+	for u in $USE ; do
+		u2=${u#ups_drivers_}
+		[[ "${u}" != "${u2}" ]] && UPS_DRIVERS="${UPS_DRIVERS} ${u2}"
+	done
+	UPS_DRIVERS="${UPS_DRIVERS# }" UPS_DRIVERS="${UPS_DRIVERS% }"
+	myconf="${myconf} --with-drivers=${UPS_DRIVERS// /,}"
 
 	use cgi && myconf="${myconf} --with-cgipath=/usr/share/nut/cgi"
 
@@ -86,21 +137,25 @@ src_configure() {
 		--datarootdir=/usr/share/nut \
 		--datadir=/usr/share/nut \
 		--disable-static \
-		--with-dev \
-		$(use_with usb) \
-		--without-hal \
-		$(use_with snmp) \
-		$(use_with xml neon) \
-		--without-powerman \
-		$(use_with ssl) \
-		$(use_with tcpd wrap) \
-		$(use_with cgi) \
 		--with-statepath=/var/lib/nut \
 		--with-drvpath=/$(get_libdir)/nut \
 		--with-htmlpath=/usr/share/nut/html \
 		--with-user=nut \
 		--with-group=nut \
 		--with-logfacility=LOG_DAEMON \
+		--with-dev \
+		--with-serial \
+		--without-powerman \
+		$(use_with avahi) \
+		$(use_with cgi) \
+		$(use_with ipmi) \
+		$(use_with ipmi freeipmi) \
+		$(use_with snmp) \
+		$(use_with ssl) \
+		$(use_with tcpd wrap) \
+		$(use_with usb) \
+		$(use_with xml neon) \
+		$(systemd_with_unitdir) \
 		${myconf}
 }
 
@@ -110,9 +165,7 @@ src_install() {
 	find "${D}" -name '*.la' -exec rm -f {} +
 
 	dodir /sbin
-	dosym /$(get_libdir)/nut/upsdrvctl /sbin/upsdrvctl
-	# This needs to exist for the scripts
-	dosym /$(get_libdir)/nut/upsdrvctl /usr/sbin/upsdrvctl
+	dosym /usr/sbin/upsdrvctl /sbin/upsdrvctl
 
 	if use cgi; then
 		elog "CGI monitoring scripts are installed in /usr/share/nut/cgi."
@@ -134,9 +187,10 @@ src_install() {
 	docinto cables
 	dodoc docs/cables/* || die
 
-	newinitd "${FILESDIR}"/nut-2.2.2-init.d-upsd upsd || die
+	newinitd "${FILESDIR}"/nut-2.6.5-init.d-upsd upsd || die
 	newinitd "${FILESDIR}"/nut-2.2.2-init.d-upsdrv upsdrv || die
-	newinitd "${FILESDIR}"/nut-2.2.2-init.d-upsmon upsmon || die
+	newinitd "${FILESDIR}"/nut-2.6.5-init.d-upsmon upsmon || die
+	newinitd "${FILESDIR}"/nut-2.6.5-init.d-upslog upslog || die
 	newinitd "${FILESDIR}"/nut.powerfail.initd nut.powerfail || die
 
 	keepdir /var/lib/nut
@@ -167,7 +221,7 @@ src_install() {
 		doins scripts/hotplug/nut-usbups.hotplug
 	fi
 
-	dobashcompletion "${S}"/scripts/misc/nut.bash_completion
+	dobashcomp "${S}"/scripts/misc/nut.bash_completion
 }
 
 pkg_postinst() {
