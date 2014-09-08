@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.523 2014/08/04 19:57:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.524 2014/09/08 20:26:57 polynomial-c Exp $
+
+*openssh-6.6.1_p1-r3 (08 Sep 2014)
+
+  08 Sep 2014; Lars Wendler <polynomial-c@gentoo.org>
+  +openssh-6.6.1_p1-r3.ebuild, +files/openssh-6.6.1_p1-x509-glue.patch,
+  +files/openssh-6.6.1_p1-x509-hpn14v5-glue.patch:
+  Bumped hpn patch to 14v5 and X509 patch to version 8.0.
 
 *openssh-6.6.1_p1-r2 (04 Aug 2014)
 

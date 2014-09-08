@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0_rc1-r1.ebuild,v 1.1 2014/07/22 00:16:43 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0_rc2.ebuild,v 1.1 2014/09/08 20:27:12 ottxor Exp $
 
 EAPI=5
 
@@ -76,7 +76,7 @@ src_prepare() {
 		done
 		eautoreconf
 	else
-		epatch "${FILESDIR}/${P}-libcerf.patch"
+		epatch "${FILESDIR}/${PN}-5.0_rc1-libcerf.patch"
 		eautoreconf
 	fi
 
