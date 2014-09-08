@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-8.0.ebuild,v 1.3 2014/09/06 14:41:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-8.0.ebuild,v 1.4 2014/09/08 11:44:53 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -48,6 +48,8 @@ src_prepare() {
 		-e '/^OPTS/{s|=|+=|;s| -O3||}' \
 		-e '/ -o /s:$(OPTS):& $(LDFLAGS):g' \
 		Makefile.am || die
+	
+	epatch "${FILESDIR}"/${P}-configure.patch
 }
 
 src_configure() {
@@ -70,7 +72,9 @@ src_configure() {
 
 	# Note: despite the naming convention, the top level script is not an
 	# autoconf-based script.
-	./configure \
+	export NCP_PATH=$(usex ncp /usr/$(get_libdir) '')
+	export NCP_IPATH=$(usex ncp /usr/include '')
+	sh configure \
 		--prefix=/usr \
 		--nostrip \
 		$(use gtk && echo --disable-xhydra) \

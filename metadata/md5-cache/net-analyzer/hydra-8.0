@@ -10,4 +10,4 @@ RDEPEND=dev-libs/openssl sys-libs/ncurses firebird? ( dev-db/firebird ) gtk? ( d
 SLOT=0
 SRC_URI=http://freeworld.thc.org/releases/hydra-8.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=41f159c6525d565c0bfe4f621d69aadf
+_md5_=ae9929bc0c3d7b8f00131f97b9d7d000
