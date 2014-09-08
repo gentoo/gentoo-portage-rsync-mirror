@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-de
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.29 2014/07/15 23:22:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.30 2014/09/08 21:17:19 mrueg Exp $
+
+  08 Sep 2014; Manuel Rüger <mrueg@gentoo.org> -man-pages-de-1.4.ebuild,
+  -man-pages-de-1.5.ebuild:
+  Cleanup old.
 
 *man-pages-de-1.7 (15 Jul 2014)
 

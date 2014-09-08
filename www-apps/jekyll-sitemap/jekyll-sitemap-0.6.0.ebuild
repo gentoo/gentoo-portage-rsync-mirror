@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-sitemap/jekyll-sitemap-0.5.1.ebuild,v 1.1 2014/08/27 20:52:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-sitemap/jekyll-sitemap-0.6.0.ebuild,v 1.1 2014/09/08 21:09:08 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
