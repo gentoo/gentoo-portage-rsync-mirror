@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.141 2014/09/04 14:25:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.142 2014/09/09 05:27:31 idella4 Exp $
+
+*django-1.6.7 (09 Sep 2014)
+*django-1.4.15 (09 Sep 2014)
+*django-1.5.10 (09 Sep 2014)
+
+  09 Sep 2014; Ian Delaney <idella4@gentoo.org> +django-1.4.15.ebuild,
+  +django-1.5.10.ebuild, +django-1.6.7.ebuild, django-9999.ebuild:
+  bumps
 
   04 Sep 2014; Ian Delaney <idella4@gentoo.org> -django-1.4.13.ebuild,
   -django-1.5.8.ebuild, -django-1.6.5.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuseiso
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuseiso/ChangeLog,v 1.8 2014/01/14 13:58:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuseiso/ChangeLog,v 1.9 2014/09/09 05:08:04 dlan Exp $
+
+  09 Sep 2014; Yixun Lan <dlan@gentoo.org> -fuseiso-20070708.ebuild:
+  drop old
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> fuseiso-20070708-r1.ebuild:
   Stable for x86, wrt bug #495952
