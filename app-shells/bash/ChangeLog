@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.379 2014/08/30 07:47:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.380 2014/09/09 15:59:39 polynomial-c Exp $
+
+*bash-4.3_p24-r1 (09 Sep 2014)
+
+  09 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-4.3_p22-r1.ebuild,
+  +bash-4.3_p24-r1.ebuild, -files/bash-4.3-indirect-array-element.patch,
+  +files/bash-4.3-term-cleanup.patch:
+  Revbump so bash cleans up readline and its terminal state in all cases.
+  Removed old.
 
   30 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> files/bashrc:
   Added KDE's konsole to the list of valid terms for PROMPT_COMMAND.
