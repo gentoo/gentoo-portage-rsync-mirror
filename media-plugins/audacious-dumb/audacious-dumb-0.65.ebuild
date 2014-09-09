@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/audacious-dumb-0.65.ebuild,v 1.3 2012/05/05 08:27:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/audacious-dumb-0.65.ebuild,v 1.4 2014/09/09 13:40:15 joker Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit toolchain-funcs
 

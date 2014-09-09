@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=virtual/pkgconfig <media-sound/audacious-3.0 >=media-libs/dumb-0.9.3
 DESCRIPTION=Audacious Plug-in for accurate, high-quality IT/XM/S3M/MOD playback
-EAPI=2
+EAPI=5
 HOMEPAGE=http://www.netswarm.net/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
@@ -9,4 +9,4 @@ RDEPEND=<media-sound/audacious-3.0 >=media-libs/dumb-0.9.3
 SLOT=0
 SRC_URI=http://www.netswarm.net/misc/audacious-dumb-0.65.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f306fe5ebf58cb2afbb1d6c67cc69ed8
+_md5_=b166ab1dc2114df15acbf6bf0c860a17
