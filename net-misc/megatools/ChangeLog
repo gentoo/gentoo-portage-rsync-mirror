@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/megatools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/ChangeLog,v 1.1 2014/09/05 07:12:44 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/ChangeLog,v 1.2 2014/09/09 03:21:13 dlan Exp $
+
+*megatools-1.9.92-r1 (09 Sep 2014)
+
+  09 Sep 2014; Yixun Lan <dlan@gentoo.org> -megatools-1.9.92.ebuild,
+  +megatools-1.9.92-r1.ebuild, +files/megatools-1.9.92-fuse.patch,
+  metadata.xml:
+  fix bug 522258, 522260, thanks @hasufell
 
 *megatools-1.9.92 (05 Sep 2014)
 

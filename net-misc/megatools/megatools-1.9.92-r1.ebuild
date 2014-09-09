@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/megatools-1.9.92.ebuild,v 1.1 2014/09/05 07:12:44 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/megatools-1.9.92-r1.ebuild,v 1.1 2014/09/09 03:21:13 dlan Exp $
 
 EAPI=5
 
@@ -15,25 +15,29 @@ SRC_URI="https://github.com/megous/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="introspection doc"
+IUSE="fuse introspection static-libs"
 
-DEPEND="dev-libs/glib:2
-	dev-libs/openssl
+RDEPEND="dev-libs/glib:2
+	dev-libs/openssl:0
 	net-misc/curl
-	sys-fs/fuse
-	doc? ( app-text/asciidoc )
+	fuse? ( sys-fs/fuse )
 "
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig
+	app-text/asciidoc"
+
+PATCHES=( "${FILESDIR}"/${P}-fuse.patch )
 
 src_configure() {
 	local myeconfargs=(
 		--enable-shared
+		--enable-docs-build
 		--disable-maintainer-mode
 		--disable-warnings
-		--disable-static
 		--disable-glibtest
+		$(use_enable static-libs static)
 		$(use_enable introspection)
-		$(use_enable doc docs-build)
+		$(use_with fuse)
 	)
 	autotools-utils_src_configure
 }
