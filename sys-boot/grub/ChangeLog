@@ -1,6 +1,18 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.314 2014/09/09 19:55:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.315 2014/09/09 21:59:41 floppym Exp $
+
+*grub-2.02_beta2-r1 (09 Sep 2014)
+
+  09 Sep 2014; Mike Gilbert <floppym@gentoo.org> +files/2.02_beta2/0001-Makefile
+  .util.def-Link-grub-ofpathname-with-zfs-libs.patch, +files/2.02_beta2/0002-gru
+  b-install-support-for-partitioned-partx-loop-devi.patch,
+  +files/2.02_beta2/0003-Fix-grub-probe-0-option.patch, +files/2.02_beta2/0004-F
+  ix-partmap-cryptodisk-and-abstraction-handling-in-g.patch,
+  +files/2.02_beta2/0005-Fix-typo-gettext_print-instead-of-gettext_printf.patch,
+  +grub-2.02_beta2-r1.ebuild:
+  Backport several patches to resolve issues with grub-probe and grub-mkconfig.
+  Bug 522428, thanks to Coacher.
 
   09 Sep 2014; Mike Gilbert <floppym@gentoo.org>
   +files/grub-2.02_beta2-libzfs.patch, grub-2.02_beta2.ebuild:
