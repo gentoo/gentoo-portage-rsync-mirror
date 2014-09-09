@@ -4262,7 +4262,6 @@ media-video/libav:avx - Adds support for Advanced Vector Extensions instructions
 media-video/libav:bindist - Build binary redistributable version without including nonfree decoders and encoders.
 media-video/libav:cdio - Enable audio CD grabbing with dev-libs/libcdio.
 media-video/libav:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs).
-media-video/libav:dirac - Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.
 media-video/libav:faac - Use external faac library for AAC encoding
 media-video/libav:fdk - Use external fdk-aac library for AAC encoding
 media-video/libav:frei0r - Enable frei0r wrapping in libavfilter
@@ -4274,7 +4273,6 @@ media-video/libav:openssl - Prefer dev-libs/openssl over net-libs/gnutls to prov
 media-video/libav:opus - Use the external opus library for encoding and decoding.
 media-video/libav:pic - Force shared libraries to be built as PIC (this is slower).
 media-video/libav:pulseaudio - Enable pulseaudio input support.
-media-video/libav:qt-faststart - Build and install qt-faststart application.
 media-video/libav:rtmp - Enable Real Time Messaging Protocol using librtmp instead the native implementation.
 media-video/libav:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
 media-video/libav:ssl - Enable SSL/TLS support using dev-libs/openssl or dev-libs/gnutls.

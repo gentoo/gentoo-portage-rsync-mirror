@@ -17,7 +17,6 @@
 	<flag name="bindist">Build binary redistributable version without including nonfree decoders and encoders.</flag>
 	<flag name="cdio">Enable audio CD grabbing with <pkg>dev-libs/libcdio</pkg>.</flag>
 	<flag name="cpudetection">Enables runtime CPU detection (useful for bindist, compatibility on other CPUs).</flag>
-	<flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
 	<flag name="faac">Use external faac library for AAC encoding</flag>
 	<flag name="fdk">Use external fdk-aac library for AAC encoding</flag>
 	<flag name="frei0r">Enable frei0r wrapping in libavfilter</flag>
@@ -29,7 +28,6 @@
 	<flag name="opus">Use the external opus library for encoding and decoding.</flag>
 	<flag name="pulseaudio">Enable pulseaudio input support.</flag>
 	<flag name="pic">Force shared libraries to be built as PIC (this is slower).</flag>
-	<flag name="qt-faststart">Build and install qt-faststart application.</flag>
 	<flag name="rtmp">Enable Real Time Messaging Protocol using librtmp instead the native implementation.</flag>
 	<flag name="schroedinger">Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).</flag>
 	<flag name="ssl">Enable SSL/TLS support using <pkg>dev-libs/openssl</pkg> or <pkg>dev-libs/gnutls</pkg>.</flag>
