@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.46 2014/08/09 11:03:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.47 2014/09/09 17:17:32 nimiux Exp $
+
+  09 Sep 2014; Chema Alonso <nimiux@gentoo.org> an-1.2.ebuild:
+  Stable for amd64 wrt bug #519410
 
   09 Aug 2014; Jeroen Roovers <jer@gentoo.org> an-1.2.ebuild:
   Stable for HPPA (bug #519410).

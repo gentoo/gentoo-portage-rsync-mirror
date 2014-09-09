@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/urxvt-font-size/urxvt-font-size-20140501-r1.ebuild,v 1.1 2014/07/19 04:59:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/urxvt-font-size/urxvt-font-size-20140501-r1.ebuild,v 1.2 2014/09/09 17:30:10 nimiux Exp $
 
 EAPI=5
 inherit multilib
@@ -9,7 +9,7 @@ if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="git://github.com/majutsushi/urxvt-font-size.git"
 	inherit git-r3
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 	SRC_URI="http://dev.gentoo.org/~radhermit/dist/${P}.tar.gz"
 fi
 

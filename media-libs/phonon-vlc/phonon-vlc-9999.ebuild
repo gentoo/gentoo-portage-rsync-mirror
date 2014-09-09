@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-9999.ebuild,v 1.15 2014/06/21 16:37:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-9999.ebuild,v 1.16 2014/09/09 17:18:15 kensington Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ unset git_eclass
 
 DESCRIPTION="Phonon VLC backend"
 HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon/phonon-vlc"
-[[ ${PV} == 9999 ]] || SRC_URI="mirror://kde/stable/phonon/${MY_PN}/${PV}/src/${MY_P}.tar.xz"
+[[ ${PV} == 9999 ]] || SRC_URI="mirror://kde/stable/phonon/${MY_PN}/${PV}/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 
@@ -26,7 +26,7 @@ IUSE="debug +qt4 qt5"
 REQUIRED_USE="|| ( qt4 qt5 )"
 
 RDEPEND="
-	>=media-libs/phonon-4.7.0[qt4=,qt5=]
+	>=media-libs/phonon-4.8.0[qt4=,qt5=]
 	>=media-video/vlc-2.0.1:=[dbus,ogg,vorbis]
 	qt4? (
 		dev-qt/qtcore:4
