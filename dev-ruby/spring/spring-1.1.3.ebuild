@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spring/spring-1.1.3.ebuild,v 1.1 2014/06/06 06:54:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spring/spring-1.1.3.ebuild,v 1.2 2014/09/09 06:46:21 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -20,6 +20,8 @@ SLOT="1.1"
 KEYWORDS="~amd64"
 
 IUSE=""
+
+ruby_add_rdepend ">=dev-ruby/rubygems-2.1.0"
 
 ruby_add_bdepend "test? ( dev-ruby/bundler dev-ruby/activesupport virtual/ruby-minitest )"
 
