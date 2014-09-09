@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/terminus-font
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.100 2013/09/06 14:58:02 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.101 2014/09/09 17:56:29 vapier Exp $
+
+*terminus-font-4.39 (09 Sep 2014)
+
+  09 Sep 2014; Mike Frysinger <vapier@gentoo.org> +terminus-font-4.39.ebuild:
+  Version bump #509860 by bill.
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> terminus-font-4.38.ebuild:
   Stable for sparc, wrt bug #448010
