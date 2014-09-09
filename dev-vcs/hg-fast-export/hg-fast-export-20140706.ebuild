@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-fast-export/hg-fast-export-20140328.ebuild,v 1.2 2014/09/08 23:55:11 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-fast-export/hg-fast-export-20140706.ebuild,v 1.1 2014/09/09 00:00:38 ottxor Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit python-r1 vcs-snapshot
 
-COMMIT="779e2f6da887729fc513f5efceaa3a3083858c9b"
+COMMIT="2c21922ad1795e1d305dac6bdb977f2e50eb809e"
 DESCRIPTION="mercurial to git converter using git-fast-import"
 HOMEPAGE="https://github.com/frej/fast-export"
 SRC_URI="${HOMEPAGE}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
@@ -32,6 +32,7 @@ src_prepare() {
 
 src_install() {
 	newbin "${PN}".sh "${PN}"
+	dodoc README
 	python_foreach_impl python_doexe "${PN}".py
 	python_foreach_impl python_domodule hg2git.py
 }
