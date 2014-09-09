@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst prepare setup
+DEPEND=virtual/pkgconfig
+DESCRIPTION=A tool to log and decode Machine Check Exceptions
+EAPI=5
+HOMEPAGE=http://mcelog.org/
+IUSE=selinux
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=selinux? ( sec-policy/selinux-mcelog )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/andikleen/mcelog/archive/v103.tar.gz -> mcelog-103.tar.gz
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=3376045e050ea1a1f4825864c6233ba8

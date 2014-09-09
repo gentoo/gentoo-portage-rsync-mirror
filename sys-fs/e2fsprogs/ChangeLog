@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.296 2014/09/05 18:40:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.297 2014/09/09 01:51:43 jmorgan Exp $
+
+  09 Sep 2014; Jack Morgan <jmorgan@gentoo.org> e2fsprogs-1.42.10.ebuild:
+  sparc stable for bz512012
 
 *e2fsprogs-1.42.12 (05 Sep 2014)
 
