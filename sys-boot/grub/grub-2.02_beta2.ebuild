@@ -1,13 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2.ebuild,v 1.9 2014/09/07 19:07:16 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2.ebuild,v 1.10 2014/09/09 19:55:09 floppym Exp $
 
 EAPI=5
 
-if [[ ${PV} == 9999 ]]; then
-	AUTOTOOLS_AUTORECONF=1
-	GRUB_AUTOGEN=1
-fi
+AUTOTOOLS_AUTORECONF=1
+GRUB_AUTOGEN=1
 
 if [[ -n ${GRUB_AUTOGEN} ]]; then
 	PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
@@ -29,7 +27,7 @@ if [[ ${PV} != 9999 ]]; then
 		S=${WORKDIR}/${P%_*}
 	fi
 	KEYWORDS="amd64 ~x86"
-	PATCHES=()
+	PATCHES=( "${FILESDIR}/${P}-libzfs.patch" )
 else
 	inherit git-r3
 	EGIT_REPO_URI="git://git.sv.gnu.org/grub.git
