@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.25 2014/09/06 18:52:51 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.26 2014/09/09 04:40:24 patrick Exp $
+
+  09 Sep 2014; Patrick Lauer <patrick@gentoo.org> redshift-1.9.1.ebuild:
+  Add py3.4 support
 
   06 Sep 2014; Sebastian Pipping <sping@gentoo.org> redshift-1.9-r1.ebuild:
   Unlock support for Python 3.4 (bug #521904)
@@ -114,4 +117,3 @@
   +redshift-1.4.1.ebuild:
   Initial commit wrt #303173 by Peter Gantner, Kacper Kowalik and Joshua
   Rich.
-

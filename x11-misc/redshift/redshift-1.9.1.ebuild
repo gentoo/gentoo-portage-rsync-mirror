@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.9.1.ebuild,v 1.1 2014/07/26 21:01:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.9.1.ebuild,v 1.2 2014/09/09 04:40:24 patrick Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{3_2,3_3} )
+PYTHON_COMPAT=( python{3_2,3_3,3_4} )
 
 inherit autotools eutils gnome2-utils python-r1
 
