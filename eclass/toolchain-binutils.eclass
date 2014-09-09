@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.134 2014/08/11 13:32:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.135 2014/09/09 22:29:29 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -306,6 +306,9 @@ toolchain-binutils_src_configure() {
 		${EXTRA_ECONF}
 		# Disable modules that are in a combined binutils/gdb tree. #490566
 		--disable-{gdb,libdecnumber,readline,sim}
+		# Strip out broken static link flags.
+		# https://gcc.gnu.org/PR56750
+		--without-stage1-ldflags
 	)
 	echo ./configure "${myconf[@]}"
 	"${S}"/configure "${myconf[@]}" || die

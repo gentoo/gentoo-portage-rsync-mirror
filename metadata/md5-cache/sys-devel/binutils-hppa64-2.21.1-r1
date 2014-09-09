@@ -8,5 +8,5 @@ LICENSE=|| ( GPL-3 LGPL-3 )
 RDEPEND=>=sys-devel/binutils-config-1.9 zlib? ( sys-libs/zlib )
 SLOT=0
 SRC_URI=mirror://gnu/binutils/binutils-2.21.1.tar.bz2 mirror://gentoo/binutils-2.21.1-patches-1.1.tar.bz2 http://dev.gentoo.org/~vapier/dist/binutils-2.21.1-patches-1.1.tar.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-binutils	9954816db56bf9c75f4c71287824dde9	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-binutils	19b1a99507102595bf8c1d9a6fda518a	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=5ed288fb163337bba176460b85975e2a

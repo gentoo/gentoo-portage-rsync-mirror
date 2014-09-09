@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.17 2014/06/22 18:02:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.18 2014/09/09 22:03:39 floppym Exp $
 
 EAPI=5
 
@@ -156,16 +156,21 @@ src_unpack() {
 
 src_prepare() {
 	[[ ${PATCHES} ]] && epatch "${PATCHES[@]}"
+
 	sed -i -e /autoreconf/d autogen.sh || die
+
 	if use multislot; then
 		# fix texinfo file name, bug 416035
 		sed -i -e 's/^\* GRUB:/* GRUB2:/' -e 's/(grub)/(grub2)/' docs/grub.texi || die
 	fi
+
 	epatch_user
+
 	if [[ -n ${GRUB_AUTOGEN} ]]; then
 		python_setup
 		bash autogen.sh || die
 	fi
+
 	if [[ -n ${AUTOTOOLS_AUTORECONF} ]]; then
 		autopoint() { return 0; }
 		eautoreconf
