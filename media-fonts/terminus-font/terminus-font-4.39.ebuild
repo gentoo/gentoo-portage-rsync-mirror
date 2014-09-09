@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.39.ebuild,v 1.1 2014/09/09 17:56:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.39.ebuild,v 1.2 2014/09/09 18:56:27 vapier Exp $
 
 EAPI=4
 
@@ -66,7 +66,7 @@ src_install() {
 	local args=(
 		$(usex psf 'install-psf install-uni install-acm install-ref' '')
 		$(usex raw-font-data 'install.raw' '')
-		$(usex pcf 'install-pcf')
+		$(usex pcf 'install-pcf' '')
 	)
 	# Set the CHECKDIR to a dummy location so we always get the same set of
 	# files installed regardless of what is in / or ROOT or wherever.

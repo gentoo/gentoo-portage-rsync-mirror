@@ -4,10 +4,10 @@ DESCRIPTION=Advanced parallized login hacker
 EAPI=5
 HOMEPAGE=http://www.thc.org/thc-hydra/
 IUSE=firebird gtk idn mysql ncp oracle pcre postgres ssl subversion
-KEYWORDS=~amd64 ~ppc x86
+KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-3
 RDEPEND=dev-libs/openssl sys-libs/ncurses firebird? ( dev-db/firebird ) gtk? ( dev-libs/atk dev-libs/glib:2 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 ) idn? ( net-dns/libidn ) mysql? ( virtual/mysql ) ncp? ( net-fs/ncpfs ) oracle? ( dev-db/oracle-instantclient-basic ) pcre? ( dev-libs/libpcre ) postgres? ( dev-db/postgresql-base ) ssl? ( >=net-libs/libssh-0.4.0 ) subversion? ( dev-vcs/subversion )
 SLOT=0
 SRC_URI=http://freeworld.thc.org/releases/hydra-8.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ae9929bc0c3d7b8f00131f97b9d7d000
+_md5_=7e5b6f4fccaa1494aa0bfe12fe7bfaff

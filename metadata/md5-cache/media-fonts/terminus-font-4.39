@@ -10,4 +10,4 @@ REQUIRED_USE=X? ( pcf )
 SLOT=0
 SRC_URI=mirror://sourceforge/terminus-font/terminus-font-4.39/terminus-font-4.39.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=4235b9789fcf1428cd508db9a2aae6ba
+_md5_=8348d91624b38b0749739cd2ff21a353
