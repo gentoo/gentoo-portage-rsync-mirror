@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/ufo-ai
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.42 2014/05/10 05:40:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.43 2014/09/09 11:50:08 ssuominen Exp $
+
+  09 Sep 2014; Samuli Suominen <ssuominen@gentoo.org>
+  files/ufo-ai-2.4-mathlib.patch:
+  Complete -mathlib.patch by adding -lm to one more location in the linking wrt
+  #516938 by "M. B."
 
   10 May 2014; Samuli Suominen <ssuominen@gentoo.org>
   +files/ufo-ai-2.4-mathlib.patch, ufo-ai-2.4.ebuild:
