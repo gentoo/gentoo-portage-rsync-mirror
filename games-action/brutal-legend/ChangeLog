@@ -1,6 +1,13 @@
 # ChangeLog for games-action/brutal-legend
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/brutal-legend/ChangeLog,v 1.2 2014/06/18 19:19:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/brutal-legend/ChangeLog,v 1.4 2014/09/09 14:26:22 hasufell Exp $
+
+  09 Sep 2014; Julian Ospald <hasufell@gentoo.org> ChangeLog:
+  fix Manifest
+
+  12 Aug 2014; Julian Ospald <hasufell@gentoo.org>
+  brutal-legend-20130615.ebuild:
+  add trailing '.' to DESCRIPTION
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> brutal-legend-20130615.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

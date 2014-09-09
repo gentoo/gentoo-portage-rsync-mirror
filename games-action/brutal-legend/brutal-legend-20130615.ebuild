@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/brutal-legend/brutal-legend-20130615.ebuild,v 1.2 2014/06/18 19:19:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/brutal-legend/brutal-legend-20130615.ebuild,v 1.3 2014/09/09 14:21:37 hasufell Exp $
 
 # TODO: unbundle libsdl-2
 
@@ -9,7 +9,7 @@ EAPI=5
 inherit eutils unpacker gnome2-utils games
 
 TIMESTAMP=${PV:0:4}-${PV:4:2}-${PV:6:2}
-DESCRIPTION="Crush skulls, ravage the road in the Deuce, and unleash the power of Heavy Metal to reign down fire from the sky"
+DESCRIPTION="Crush skulls, ravage the road in the Deuce, and unleash the power of Heavy Metal to reign down fire from the sky."
 HOMEPAGE="https://www.ea.com/de/brutal-legend"
 SRC_URI="BrutalLegend-Linux-${TIMESTAMP}-setup.bin"
 
