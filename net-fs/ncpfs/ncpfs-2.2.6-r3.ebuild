@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6-r3.ebuild,v 1.2 2014/08/13 07:01:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6-r3.ebuild,v 1.3 2014/09/09 16:54:17 jer Exp $
 
-EAPI="5"
-
+EAPI=5
 inherit eutils pam
 
 DESCRIPTION="Provides Access to Netware services using the NCP protocol"
@@ -60,6 +59,9 @@ src_prepare() {
 	# Bug 446696.  This might need re-diffing if additional Makefile
 	# fixes are added.
 	epatch "${FILESDIR}"/${P}-makefile-fix-soname-link.patch
+
+	# bug 522444
+	epatch "${FILESDIR}"/${P}-zend_function_entry.patch
 }
 
 src_configure() {

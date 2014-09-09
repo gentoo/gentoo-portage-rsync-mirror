@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/ncpfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.34 2014/08/13 07:01:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.35 2014/09/09 16:54:17 jer Exp $
+
+  09 Sep 2014; Jeroen Roovers <jer@gentoo.org> ncpfs-2.2.6-r3.ebuild,
+  +files/ncpfs-2.2.6-zend_function_entry.patch:
+  function_entry -> zend_function_entry (bug #522444).
 
   13 Aug 2014; Joshua Kinard <kumba@gentoo.org> ncpfs-2.2.6-r3.ebuild,
   -files/ncpfs-2.2.6-cve-2011-1679-1680.patch,
