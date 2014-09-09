@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.98 2014/09/07 03:07:30 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.99 2014/09/09 09:34:31 jer Exp $
+
+  09 Sep 2014; Jeroen Roovers <jer@gentoo.org> mlterm-3.3.8.ebuild:
+  Marked ~hppa (bug #522284).
 
 *mlterm-3.3.8 (07 Sep 2014)
 
