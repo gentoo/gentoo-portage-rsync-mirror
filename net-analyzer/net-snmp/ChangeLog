@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.295 2014/09/06 15:36:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.296 2014/09/09 19:03:31 maekke Exp $
+
+  09 Sep 2014; Markus Meier <maekke@gentoo.org> net-snmp-5.7.3_pre5-r1.ebuild:
+  arm stable, bug #522062
 
   06 Sep 2014; Agostino Sarubbo <ago@gentoo.org> net-snmp-5.7.3_pre5-r1.ebuild:
   Stable for x86, wrt bug #522062
