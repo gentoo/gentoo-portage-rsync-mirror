@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mingw64-runtime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/ChangeLog,v 1.17 2014/09/09 17:52:13 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/ChangeLog,v 1.18 2014/09/09 18:16:49 alonbl Exp $
+
+  09 Sep 2014; Alon Bar-Lev <alonbl@gentoo.org> -mingw64-runtime-2.0.1.ebuild,
+  -mingw64-runtime-2.0.7.ebuild:
+  Cleanup old
 
 *mingw64-runtime-3.2.0-r1 (09 Sep 2014)
 
