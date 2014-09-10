@@ -1,23 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.36 2014/08/21 14:41:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.37 2014/09/10 08:16:30 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local builddir=$(builddir $(want_linuxthreads && echo linuxthreads || echo nptl))
+	cd "${builddir}"
 
-	local install_root="${D}$(alt_prefix)"
-	if want_linuxthreads ; then
-		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-linuxthreads
-		einfo "Installing GLIBC ${ABI} with linuxthreads ..."
-	else
-		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-nptl
-		einfo "Installing GLIBC ${ABI} with NPTL ..."
-	fi
-	emake install_root="${install_root}" install || die
+	emake install_root="${D}$(alt_prefix)" install || die
 
 	if want_linuxthreads && want_nptl ; then
 		einfo "Installing NPTL to $(alt_libdir)/tls/..."
-		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-nptl
+		cd "$(builddir nptl)"
 		dodir $(alt_libdir)/tls $(alt_usrlibdir)/nptl
 
 		local l src_lib

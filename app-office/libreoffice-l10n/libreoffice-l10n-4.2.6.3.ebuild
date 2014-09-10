@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.2.6.3.ebuild,v 1.1 2014/09/09 21:33:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.2.6.3.ebuild,v 1.2 2014/09/10 08:11:59 dilfridge Exp $
 
 EAPI=5
 
@@ -58,7 +58,9 @@ src_unpack() {
 
 		# for english we provide just helppack, as translation is always there
 		if [[ ${lang} != en ]]; then
-			rpmdir="LibreOffice_${PV}_Linux_x86_rpm_langpack_${dir}/RPMS/"
+			# HACKFIX: Upstream tarballs for this release appear to have wrong
+			# version. Thus hardcoding the version here
+			rpmdir="LibreOffice_4.2.6.2_Linux_x86_rpm_langpack_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			# First remove dictionaries, we want to use system ones.
 			rm -rf "${S}/${rpmdir}/"*dict*.rpm
@@ -66,7 +68,9 @@ src_unpack() {
 		fi
 		if [[ "${LANGUAGES_HELP}" =~ " ${lang} " ]] && use offlinehelp; then
 			[[ ${lang} == en ]] && dir="en-US"
-			rpmdir="LibreOffice_${PV}_Linux_x86_rpm_helppack_${dir}/RPMS/"
+			# HACKFIX: Upstream tarballs for this release appear to have wrong
+			# version. Thus hardcoding the version here
+			rpmdir="LibreOffice_4.2.6.2_Linux_x86_rpm_helppack_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			rpm_unpack ./"${rpmdir}/"*.rpm
 		fi
