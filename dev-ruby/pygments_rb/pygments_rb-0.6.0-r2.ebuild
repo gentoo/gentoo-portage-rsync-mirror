@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/pygments_rb-0.6.0-r1.ebuild,v 1.1 2014/09/02 15:31:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/pygments_rb-0.6.0-r2.ebuild,v 1.1 2014/09/10 12:15:02 mrueg Exp $
 
 EAPI=5
 
@@ -13,6 +13,8 @@ MY_P="${RUBY_FAKEGEM_NAME}-${PV}"
 RUBY_FAKEGEM_RECIPE_TEST="rake"
 RUBY_FAKEGEM_RECIPE_DOC="none"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
+
+RUBY_FAKEGEM_GEMSPEC="${RUBY_FAKEGEM_NAME}.gemspec"
 
 inherit ruby-fakegem python-single-r1
 
