@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/cado-nfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cado-nfs/ChangeLog,v 1.5 2014/01/23 02:45:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cado-nfs/ChangeLog,v 1.6 2014/09/10 07:58:07 patrick Exp $
+
+*cado-nfs-2.1 (10 Sep 2014)
+
+  10 Sep 2014; Patrick Lauer <patrick@gentoo.org> +cado-nfs-2.1.ebuild:
+  Bump
 
   23 Jan 2014; Patrick Lauer <patrick@gentoo.org> cado-nfs-2.0.ebuild:
   Add keywords and fix setting S
