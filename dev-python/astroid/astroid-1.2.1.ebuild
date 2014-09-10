@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astroid/astroid-1.2.0.ebuild,v 1.4 2014/09/10 09:35:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astroid/astroid-1.2.1.ebuild,v 1.1 2014/09/10 09:35:33 idella4 Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit distutils-r1
 
 DESCRIPTION="Abstract Syntax Tree for logilab packages"
 HOMEPAGE="http://bitbucket.org/logilab/astroid http://pypi.python.org/pypi/astroid"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -20,8 +20,10 @@ IUSE="test"
 # Version specified in __pkginfo__.py.
 RDEPEND=">=dev-python/logilab-common-0.60.0[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	app-arch/unzip
 	test? ( ${RDEPEND}
-		~dev-python/pylint-1.3.0[${PYTHON_USEDEP}] )"
+		~dev-python/pylint-1.3.0[${PYTHON_USEDEP}]
+		$(python_gen_cond_dep 'dev-python/egenix-mx-base[${PYTHON_USEDEP}]' python2_7) )"
 # Required for tests
 DISTUTILS_IN_SOURCE_BUILD=1
 
@@ -32,14 +34,9 @@ src_test() {
 }
 
 python_test() {
-	# https://bitbucket.org/logilab/astroid/issue/16/1-test-fail-test_socket_build-under-pypy
-	# https://bitbucket.org/logilab/astroid/issue/44/
 	"${PYTHON}" setup.py build
 
 	pushd build/lib > /dev/null
-	if [[ "${EPYTHON}" == pypy* ]]; then
-		sed -e 's:test_socket_build:_&:' -i ${PN}/test/unittest_builder.py || die
-	fi
 	PYTHONPATH=. pytest || die "Tests fail with ${EPYTHON}"
 	popd > /dev/null
 }
