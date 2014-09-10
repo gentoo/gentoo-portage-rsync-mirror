@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.40 2014/09/10 18:15:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.41 2014/09/10 19:15:42 vapier Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -23,7 +23,7 @@ alt_build_headers() {
 	if [[ -z ${ALT_BUILD_HEADERS} ]] ; then
 		ALT_BUILD_HEADERS=$(alt_headers)
 		if tc-is-cross-compiler ; then
-			ALT_BUILD_HEADERS=${ROOT}$(alt_headers)
+			ALT_BUILD_HEADERS=${SYSROOT}$(alt_headers)
 			if [[ ! -e ${ALT_BUILD_HEADERS}/linux/version.h ]] ; then
 				local header_path=$(echo '#include <linux/version.h>' | $(tc-getCPP ${CTARGET}) ${CFLAGS} 2>&1 | grep -o '[^"]*linux/version.h')
 				ALT_BUILD_HEADERS=${header_path%/linux/version.h}

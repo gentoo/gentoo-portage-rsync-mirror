@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1021 2014/09/10 18:57:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1022 2014/09/10 19:15:42 vapier Exp $
+
+  10 Sep 2014; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
+  Use SYSROOT when looking for source rather than ROOT #473728 by Benda Xu.
 
   10 Sep 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.20.ebuild:
   Upgrade EAPI to 4 #473728 by Benda Xu.
