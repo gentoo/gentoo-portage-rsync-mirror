@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2.ebuild,v 1.10 2014/09/09 19:55:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2.ebuild,v 1.11 2014/09/10 01:20:36 floppym Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ GRUB_ALL_PLATFORMS=(
 	# everywhere:
 	emu
 	# mips only:
-	qemu-mips yeeloong
+	qemu-mips loongson
 	# amd64, x86, ppc, ppc64:
 	ieee1275
 	# amd64, x86:
@@ -62,9 +62,6 @@ GRUB_ALL_PLATFORMS=(
 	efi-64
 )
 IUSE+=" ${GRUB_ALL_PLATFORMS[@]/#/grub_platforms_}"
-
-REQUIRED_USE="grub_platforms_qemu? ( truetype )
-	grub_platforms_yeeloong? ( truetype )"
 
 # os-prober: Used on runtime to detect other OSes
 # xorriso (dev-libs/libisoburn): Used on runtime for mkrescue
@@ -77,7 +74,7 @@ RDEPEND="
 	device-mapper? ( >=sys-fs/lvm2-2.02.45 )
 	libzfs? ( sys-fs/zfs )
 	mount? ( sys-fs/fuse )
-	truetype? ( media-libs/freetype )
+	truetype? ( media-libs/freetype:2= )
 	ppc? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils )
 	ppc64? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils )
 "
@@ -88,6 +85,10 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-apps/help2man
 	sys-apps/texinfo
+	grub_platforms_coreboot? ( media-libs/freetype:2 )
+	grub_platforms_qemu? ( media-libs/freetype:2 )
+	grub_platforms_ieee1275? ( media-libs/freetype:2 )
+	grub_platforms_loongson? ( media-libs/freetype:2 )
 	grub_platforms_xen? ( app-emulation/xen-tools )
 	static? (
 		app-arch/xz-utils[static-libs(+)]
