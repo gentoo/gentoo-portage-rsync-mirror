@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.148 2014/08/10 21:09:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.149 2014/09/10 21:56:29 zerochaos Exp $
+
+  10 Sep 2014; Rick Farina <zerochaos@gentoo.org> libmtp-1.1.6-r1.ebuild,
+  libmtp-9999.ebuild:
+  adding missing subslot dep for libgcrypt to prevent preserved-libs from having
+  to save us
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libmtp-1.1.6-r1.ebuild,
   libmtp-9999.ebuild:

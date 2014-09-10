@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.6-r1.ebuild,v 1.10 2014/08/10 21:09:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.6-r1.ebuild,v 1.11 2014/09/10 21:56:29 zerochaos Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SLOT="0"
 IUSE="+crypt doc examples static-libs"
 
 RDEPEND="virtual/libusb:1
-	crypt? ( dev-libs/libgcrypt:0 )"
+	crypt? ( dev-libs/libgcrypt:0= )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
