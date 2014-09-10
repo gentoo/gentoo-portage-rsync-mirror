@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-1.3.0.ebuild,v 1.3 2014/09/10 13:23:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-1.3.1.ebuild,v 1.1 2014/09/10 13:23:50 idella4 Exp $
 
 EAPI=5
 
@@ -18,12 +18,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-lin
 IUSE="doc examples test"
 
 RDEPEND=">=dev-python/logilab-common-0.53.0[${PYTHON_USEDEP}]
-	~dev-python/astroid-1.2.0[${PYTHON_USEDEP}]"
+	~dev-python/astroid-1.2.1[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( "${RDEPEND}" )"
-
-PATCHES=( "${FILESDIR}"/${PN}-0.26.0-gtktest.patch )
 
 # Usual. Requ'd for impl specific failures in test phase
 DISTUTILS_IN_SOURCE_BUILD=1
@@ -37,7 +35,7 @@ python_test() {
 	# Test suite appears not to work under Python 3.
 	# https://bitbucket.org/logilab/pylint/issue/240/
 	local msg="Test suite broken with ${EPYTHON}"
-	if [[ "${EPYTHON}" == python3* ]]; then
+	if python_is_python3; then
 		einfo "${msg}"
 		return 0
 	fi
