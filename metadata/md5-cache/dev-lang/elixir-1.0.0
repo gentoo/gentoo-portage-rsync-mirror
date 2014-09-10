@@ -7,6 +7,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=Apache-2.0 ErlPL-1.1
 RDEPEND=>=dev-lang/erlang-17
 SLOT=0
-SRC_URI=https://github.com/elixir-lang/elixir/archive/v0.14.2.tar.gz -> elixir-0.14.2.tar.gz
+SRC_URI=https://github.com/elixir-lang/elixir/archive/v1.0.0.tar.gz -> elixir-1.0.0.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f87c1913a7be414c584b4f4abc085973
+_md5_=5c79dc93642a8855a3911161acfa687c

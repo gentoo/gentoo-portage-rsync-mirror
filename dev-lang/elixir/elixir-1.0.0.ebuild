@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/elixir/elixir-0.12.1.ebuild,v 1.1 2014/01/07 21:39:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/elixir/elixir-1.0.0.ebuild,v 1.1 2014/09/10 14:33:08 hasufell Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/erlang-16"
+DEPEND=">=dev-lang/erlang-17"
 RDEPEND="${DEPEND}"
 
 src_compile() {
