@@ -1,8 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.784 2014/09/09 21:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.785 2014/09/10 08:33:04 vapier Exp $
 
-  09 Sep 2014; Mike Frysinger <vapier@gentoo.org> python-2.7.7.ebuild:
+  09 Sep 2014; Mike Frysinger <vapier@gentoo.org> python-2.7.7.ebuild,
+  python-3.3.5-r1.ebuild:
   Mark m68k/s390/sh stable.
 
   18 Aug 2014; Dirkjan Ochtman <djc@gentoo.org> -python-3.3.4.ebuild:
