@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mr/ChangeLog,v 1.15 2014/03/24 21:02:53 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mr/ChangeLog,v 1.16 2014/09/10 06:12:42 dev-zero Exp $
+
+*mr-1.20140831.1 (10 Sep 2014)
+
+  10 Sep 2014; Tiziano Müller <dev-zero@gentoo.org> +mr-1.20140831.1.ebuild:
+  Version bump.
 
 *mr-1.20140227 (24 Mar 2014)
 

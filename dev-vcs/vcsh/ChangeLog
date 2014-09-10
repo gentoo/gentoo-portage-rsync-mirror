@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/vcsh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/vcsh/ChangeLog,v 1.9 2014/09/09 15:10:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/vcsh/ChangeLog,v 1.10 2014/09/10 06:05:40 dev-zero Exp $
+
+*vcsh-1.20140508-r2 (10 Sep 2014)
+
+  10 Sep 2014; Tiziano Müller <dev-zero@gentoo.org> +vcsh-1.20140508-r2.ebuild,
+  -vcsh-1.20140508-r1.ebuild:
+  Use tarball with prebuilt manpage instead.
 
 *vcsh-1.20140508-r1 (09 Sep 2014)
 
