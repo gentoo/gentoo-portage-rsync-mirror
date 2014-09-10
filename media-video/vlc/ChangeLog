@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.911 2014/09/02 07:41:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.912 2014/09/10 22:06:30 zerochaos Exp $
+
+  10 Sep 2014; Rick Farina <zerochaos@gentoo.org> vlc-2.1.2.ebuild,
+  vlc-2.1.4.ebuild, vlc-2.1.9999.ebuild, vlc-9999.ebuild:
+  adding missing subslot dep for libgcrypt to prevent preserved-libs from having
+  to save us
 
   02 Sep 2014; Michał Górny <mgorny@gentoo.org> vlc-2.0.8.ebuild,
   vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild, vlc-2.0.9999.ebuild, vlc-2.1.0.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-9999.ebuild,v 1.13 2014/09/10 21:56:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-9999.ebuild,v 1.14 2014/09/10 22:17:02 zerochaos Exp $
 
 EAPI=5
 
@@ -23,7 +23,8 @@ SLOT="0"
 IUSE="+crypt doc examples static-libs"
 
 RDEPEND="virtual/libusb:1
-	crypt? ( dev-libs/libgcrypt:0= )"
+	crypt? ( dev-libs/libgcrypt:0=
+		dev-libs/libgpg-error )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"

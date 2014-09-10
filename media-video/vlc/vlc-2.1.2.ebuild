@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.2.ebuild,v 1.12 2014/09/02 07:41:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.2.ebuild,v 1.13 2014/09/10 22:06:30 zerochaos Exp $
 
 EAPI="5"
 
@@ -84,7 +84,7 @@ RDEPEND="
 		flac? ( media-libs/libogg:0 >=media-libs/flac-1.1.2:0 )
 		fluidsynth? ( >=media-sound/fluidsynth-1.1.2:0 )
 		fontconfig? ( media-libs/fontconfig:1.0 )
-		gcrypt? ( >=dev-libs/libgcrypt-1.2.0:0 )
+		gcrypt? ( >=dev-libs/libgcrypt-1.2.0:0= )
 		gme? ( media-libs/game-music-emu:0 )
 		gnome? ( gnome-base/gnome-vfs:2 dev-libs/glib:2 )
 		gnutls? ( >=net-libs/gnutls-3.0.20:0 )
