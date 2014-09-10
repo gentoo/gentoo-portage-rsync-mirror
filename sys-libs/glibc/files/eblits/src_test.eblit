@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_test.eblit,v 1.7 2014/09/10 08:16:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_test.eblit,v 1.8 2014/09/10 18:15:55 vapier Exp $
 
-toolchain-glibc_src_test() {
+glibc_src_test() {
 	cd "$(builddir $1)"
 	emake -j1 check && return 0
 	einfo "make check failed - re-running with --keep-going to get the rest of the results"
@@ -11,45 +11,20 @@ toolchain-glibc_src_test() {
 	return 1
 }
 
-eblit-glibc-src_test() {
-	local ret=0
-
-	setup_env
-
-	_maybe_die() {
-		if [[ -n ${OABI} ]] ; then
-			return ${ret}
-		elif [[ ${ret} -ne 0 ]] ; then
-			die "tests failed"
-		fi
-	}
-
-	# give tests more time to complete
-	export TIMEOUTFACTOR=5
-
-	if [[ -z ${OABI} ]] && has_multilib_profile ; then
-		OABI=${ABI}
-		einfo "Testing multilib glibc for ABIs: $(get_install_abis)"
-		for ABI in $(get_install_abis) ; do
-			export ABI
-			einfo "   Testing ${ABI} glibc"
-			eblit-glibc-src_test
-			: $(( ret += $? ))
-		done
-		ABI=${OABI}
-		unset OABI
-
-		_maybe_die
-		return
-	fi
-
-	local t
+toolchain-glibc_src_test() {
+	local ret=0 t
 	for t in linuxthreads nptl ; do
 		if want_${t} ; then
-			toolchain-glibc_src_test ${t}
-			: $(( ret += $? ))
+			glibc_src_test ${t}
+			: $(( ret |= $? ))
 		fi
 	done
-	_maybe_die
-	return
+	return ${ret}
+}
+
+eblit-glibc-src_test() {
+	# Give tests more time to complete.
+	export TIMEOUTFACTOR=5
+
+	foreach_abi toolchain-glibc_src_test || die "tests failed"
 }

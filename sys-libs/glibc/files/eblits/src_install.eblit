@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.37 2014/09/10 08:16:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.38 2014/09/10 18:15:55 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local builddir=$(builddir $(want_linuxthreads && echo linuxthreads || echo nptl))
@@ -239,29 +239,6 @@ eblit-glibc-src_install() {
 		return
 	fi
 
-	setup_env
-
-	if [[ -z ${OABI} ]] ; then
-		local abilist=""
-		if has_multilib_profile ; then
-			abilist=$(get_install_abis)
-			einfo "Installing multilib glibc for ABIs: ${abilist}"
-		elif is_crosscompile || tc-is-cross-compiler ; then
-			abilist=${DEFAULT_ABI}
-		fi
-		if [[ -n ${abilist} ]] ; then
-			OABI=${ABI}
-			for ABI in ${abilist} ; do
-				export ABI
-				eblit-glibc-src_install
-			done
-			ABI=${OABI}
-			unset OABI
-			src_strip
-			return 0
-		fi
-	fi
-
-	toolchain-glibc_src_install
-	[[ -z ${OABI} ]] && src_strip
+	foreach_abi toolchain-glibc_src_install
+	src_strip
 }

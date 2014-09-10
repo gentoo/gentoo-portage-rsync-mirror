@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.5.ebuild,v 1.7 2014/09/07 10:47:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.5.ebuild,v 1.8 2014/09/10 18:05:10 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -26,7 +26,7 @@ REQUIRED_USE="^^ ( ${CRYPTO_BACKENDS//+/} )
 LIB_DEPEND="dev-libs/libgpg-error[static-libs(+)]
 	dev-libs/popt[static-libs(+)]
 	sys-apps/util-linux[static-libs(+)]
-	gcrypt? ( dev-libs/libgcrypt:0[static-libs(+)] )
+	gcrypt? ( dev-libs/libgcrypt:0=[static-libs(+)] )
 	nettle? ( >=dev-libs/nettle-2.4[static-libs(+)] )
 	openssl? ( dev-libs/openssl[static-libs(+)] )
 	sys-fs/lvm2[static-libs(+)]

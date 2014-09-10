@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.39 2014/08/21 14:41:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.40 2014/09/10 18:15:55 vapier Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -300,6 +300,28 @@ setup_env() {
 	# top of each other.
 	: ${__GLIBC_CC:=$(tc-getCC ${CTARGET_OPT:-${CTARGET}})}
 	export __GLIBC_CC CC="${__GLIBC_CC} ${!VAR}"
+}
+
+foreach_abi() {
+	setup_env
+
+	local ret=0
+	local abilist=""
+	if has_multilib_profile ; then
+		abilist=$(get_install_abis)
+	elif is_crosscompile || tc-is-cross-compiler ; then
+		abilist=${DEFAULT_ABI}
+	fi
+	evar_push ABI
+	export ABI
+	for ABI in ${abilist:-default} ; do
+		setup_env
+		einfo "Running $1 for ABI ${ABI}"
+		$1
+		: $(( ret |= $? ))
+	done
+	evar_pop
+	return ${ret}
 }
 
 just_headers() {

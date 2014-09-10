@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.43 2014/09/10 07:46:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.44 2014/09/10 18:15:55 vapier Exp $
 
 dump_toolchain_settings() {
 	echo
@@ -250,27 +250,5 @@ eblit-glibc-src_compile() {
 			libc_cv_forced_unwind=yes
 	fi
 
-	setup_env
-
-	if [[ -z ${OABI} ]] ; then
-		local abilist=""
-		if has_multilib_profile ; then
-			abilist=$(get_install_abis)
-		elif is_crosscompile || tc-is-cross-compiler ; then
-			abilist=${DEFAULT_ABI}
-		fi
-		einfo "Building glibc for ABIs: ${abilist}"
-		if [[ -n ${abilist} ]] ; then
-			OABI=${ABI}
-			for ABI in ${abilist} ; do
-				export ABI
-				src_compile
-			done
-			ABI=${OABI}
-			unset OABI
-			return 0
-		fi
-	fi
-
-	toolchain-glibc_src_compile
+	foreach_abi toolchain-glibc_src_compile
 }
