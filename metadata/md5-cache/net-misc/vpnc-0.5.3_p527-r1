@@ -1,14 +1,14 @@
 DEFINED_PHASES=install postinst prepare setup
-DEPEND=dev-lang/perl dev-libs/libgcrypt:0= >=sys-apps/iproute2-2.6.19.20061214[-minimal] gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl ) selinux? ( sec-policy/selinux-vpn ) virtual/pkgconfig
+DEPEND=dev-lang/perl dev-libs/libgcrypt:0= >=sys-apps/iproute2-2.6.19.20061214[-minimal] gnutls? ( net-libs/gnutls:= ) !gnutls? ( dev-libs/openssl ) selinux? ( sec-policy/selinux-vpn ) virtual/pkgconfig
 DESCRIPTION=Free client for Cisco VPN routing software
 EAPI=5
 HOMEPAGE=http://www.unix-ag.uni-kl.de/~massar/vpnc/
 IUSE=resolvconf +gnutls bindist selinux
 KEYWORDS=amd64 arm ppc ppc64 sparc x86
 LICENSE=GPL-2 BSD
-RDEPEND=dev-lang/perl dev-libs/libgcrypt:0= >=sys-apps/iproute2-2.6.19.20061214[-minimal] gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl ) selinux? ( sec-policy/selinux-vpn ) resolvconf? ( net-dns/openresolv )
+RDEPEND=dev-lang/perl dev-libs/libgcrypt:0= >=sys-apps/iproute2-2.6.19.20061214[-minimal] gnutls? ( net-libs/gnutls:= ) !gnutls? ( dev-libs/openssl ) selinux? ( sec-policy/selinux-vpn ) resolvconf? ( net-dns/openresolv )
 REQUIRED_USE=bindist? ( gnutls )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/vpnc-0.5.3_p527.tar.xz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=e0beada82d751d0dc56b7f9fd0acfbb0
+_md5_=1aa76053e49bc0206f8266af890f593c

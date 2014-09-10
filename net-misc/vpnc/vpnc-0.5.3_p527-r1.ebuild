@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p527-r1.ebuild,v 1.10 2014/05/17 15:15:31 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p527-r1.ebuild,v 1.11 2014/09/10 21:29:50 zerochaos Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DEPEND="
 	dev-lang/perl
 	dev-libs/libgcrypt:0=
 	>=sys-apps/iproute2-2.6.19.20061214[-minimal]
-	gnutls? ( net-libs/gnutls )
+	gnutls? ( net-libs/gnutls:= )
 	!gnutls? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-vpn )"
 RDEPEND="${DEPEND}

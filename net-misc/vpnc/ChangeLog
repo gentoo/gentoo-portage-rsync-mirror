@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.129 2014/07/29 11:01:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.130 2014/09/10 21:29:50 zerochaos Exp $
+
+  10 Sep 2014; Rick Farina <zerochaos@gentoo.org> vpnc-0.5.3_p527-r1.ebuild:
+  enable subslot rebuilds for libgcrypt
 
   29 Jul 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix e-mail address.
