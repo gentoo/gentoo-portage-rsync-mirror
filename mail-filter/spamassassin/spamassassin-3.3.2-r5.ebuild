@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r3.ebuild,v 1.2 2014/07/21 19:04:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r5.ebuild,v 1.1 2014/09/10 20:22:25 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 inherit perl-module toolchain-funcs eutils systemd
 
@@ -72,6 +72,9 @@ src_prepare() {
 
 	# https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6626
 	epatch "${FILESDIR}/${P}-innodb.patch"
+
+	# https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6937#c2
+	epatch "${FILESDIR}/${P}-perl518.patch"
 }
 
 src_configure() {
@@ -142,7 +145,8 @@ src_install () {
 	newinitd "${FILESDIR}"/3.3.1-spamd.init spamd
 	newconfd "${FILESDIR}"/3.0.0-spamd.conf spamd
 
-	systemd_dounit "${FILESDIR}"/${PN}.service
+	systemd_newunit "${FILESDIR}"/${PN}.service-r1 ${PN}.service
+	systemd_install_serviced "${FILESDIR}"/${PN}.service.conf
 
 	if use postgres; then
 		sed -i -e 's:@USEPOSTGRES@::' "${ED}/etc/init.d/spamd"

@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.505 2014/08/18 18:51:23 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.506 2014/09/10 20:09:58 idl0r Exp $
+
+  10 Sep 2014; Christian Ruppert <idl0r@gentoo.org> bind-9.10.0_p2.ebuild:
+  The MySQL reconnect patch is no longer required, thanks to BtbN via IRC
 
   18 Aug 2014; Christian Ruppert <idl0r@gentoo.org> bind-9.9.5_p1.ebuild:
   Fix epatch, bug 520170
