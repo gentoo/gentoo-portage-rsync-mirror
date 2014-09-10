@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-2.10.ebuild,v 1.3 2014/03/04 19:29:52 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-2.10.ebuild,v 1.4 2014/09/10 19:53:27 hwoarang Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 IUSE="debug curl exif test xinerama"
 
 COMMON_DEPEND=">=media-libs/giblib-1.2.4
-	media-libs/imlib2
+	media-libs/imlib2[X]
 	>=media-libs/libpng-1.2:0=
 	x11-libs/libX11
 	curl? ( net-misc/curl )

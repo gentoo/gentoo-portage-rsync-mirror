@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.2.6.3.ebuild,v 1.2 2014/09/10 08:11:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.2.6.3-r1.ebuild,v 1.1 2014/09/10 19:54:13 dilfridge Exp $
 
 EAPI=5
 
@@ -26,13 +26,13 @@ LANGUAGES="${LANGUAGES_HELP}af ar as be br brx cy dgo fa ga gd kk kmr_Latn kn ko
 for lang in ${LANGUAGES_HELP}; do
 	helppack=""
 	[[ ${lang} == en ]] && lang2=${lang/en/en_US} || lang2=${lang}
-	helppack="offlinehelp? ( ${BASE_SRC_URI}/x86/LibreOffice_${MY_PV}_Linux_x86_rpm_helppack_${lang2/_/-}.tar.gz )"
+	helppack="offlinehelp? ( ${BASE_SRC_URI}/x86/LibreOffice_${MY_PV}-secfix_Linux_x86_rpm_helppack_${lang2/_/-}.tar.gz )"
 	SRC_URI+=" linguas_${lang}? ( ${helppack} )"
 done
 for lang in ${LANGUAGES}; do
 	langpack=""
 	[[ ${lang} == en ]] \
-		|| langpack="${BASE_SRC_URI}/x86/LibreOffice_${MY_PV}_Linux_x86_rpm_langpack_${lang/_/-}.tar.gz"
+		|| langpack="${BASE_SRC_URI}/x86/LibreOffice_${MY_PV}-secfix_Linux_x86_rpm_langpack_${lang/_/-}.tar.gz"
 	[[ -z ${langpack} ]] || SRC_URI+=" linguas_${lang}? ( ${langpack} )"
 	IUSE+=" linguas_${lang}"
 done
@@ -58,9 +58,7 @@ src_unpack() {
 
 		# for english we provide just helppack, as translation is always there
 		if [[ ${lang} != en ]]; then
-			# HACKFIX: Upstream tarballs for this release appear to have wrong
-			# version. Thus hardcoding the version here
-			rpmdir="LibreOffice_4.2.6.2_Linux_x86_rpm_langpack_${dir}/RPMS/"
+			rpmdir="LibreOffice_${PV}_Linux_x86_rpm_langpack_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			# First remove dictionaries, we want to use system ones.
 			rm -rf "${S}/${rpmdir}/"*dict*.rpm
@@ -68,9 +66,7 @@ src_unpack() {
 		fi
 		if [[ "${LANGUAGES_HELP}" =~ " ${lang} " ]] && use offlinehelp; then
 			[[ ${lang} == en ]] && dir="en-US"
-			# HACKFIX: Upstream tarballs for this release appear to have wrong
-			# version. Thus hardcoding the version here
-			rpmdir="LibreOffice_4.2.6.2_Linux_x86_rpm_helppack_${dir}/RPMS/"
+			rpmdir="LibreOffice_${PV}_Linux_x86_rpm_helppack_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			rpm_unpack ./"${rpmdir}/"*.rpm
 		fi
