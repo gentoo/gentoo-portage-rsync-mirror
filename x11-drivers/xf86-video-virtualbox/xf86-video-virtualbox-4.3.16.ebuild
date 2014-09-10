@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.3.12.ebuild,v 1.1 2014/05/17 09:35:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.3.16.ebuild,v 1.1 2014/09/10 05:35:23 polynomial-c Exp $
 
 EAPI=5
 
@@ -91,8 +91,6 @@ src_prepare() {
 	if gcc-specs-now ; then
 		epatch "${FILESDIR}/${PN}-4.3.6-link-lazy.patch"
 	fi
-
-	epatch "${FILESDIR}"/${PN}-4.3.8-vboxvideo_compilefixes.patch
 }
 
 src_configure() {

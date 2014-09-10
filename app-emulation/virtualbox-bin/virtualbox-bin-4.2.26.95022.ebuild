@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.26.95022.ebuild,v 1.2 2014/07/30 19:26:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.26.95022.ebuild,v 1.3 2014/09/10 05:33:06 polynomial-c Exp $
 
 EAPI=5
 
@@ -72,10 +72,7 @@ RDEPEND="!!app-emulation/virtualbox
 	x11-libs/libSM
 	x11-libs/libICE
 	x11-libs/libXdmcp
-	python? ( || (
-			dev-lang/python:2.7
-			dev-lang/python:2.6
-		) )"
+	python? ( dev-lang/python:2.7 )"
 
 S=${WORKDIR}
 
@@ -87,7 +84,6 @@ QA_TEXTRELS_x86="opt/VirtualBox/VBoxGuestPropSvc.so
 	opt/VirtualBox/VBoxDD2.so
 	opt/VirtualBox/VBoxOGLrenderspu.so
 	opt/VirtualBox/VBoxPython.so
-	opt/VirtualBox/VBoxPython2_6.so
 	opt/VirtualBox/VBoxPython2_7.so
 	opt/VirtualBox/VBoxDD.so
 	opt/VirtualBox/VBoxVRDP.so
@@ -128,7 +124,6 @@ QA_PRESTRIPPED="opt/VirtualBox/VBoxDD.so
 	opt/VirtualBox/VBoxOGLhosterrorspu.so
 	opt/VirtualBox/VBoxOGLrenderspu.so
 	opt/VirtualBox/VBoxPython.so
-	opt/VirtualBox/VBoxPython2_6.so
 	opt/VirtualBox/VBoxPython2_7.so
 	opt/VirtualBox/VBoxREM.so
 	opt/VirtualBox/VBoxREM32.so
@@ -249,9 +244,9 @@ src_install() {
 		fperms 0750 /opt/VirtualBox/kchmviewer
 	fi
 
-	if use python; then
+	if use python ; then
 		local pyslot
-		for pyslot in 2.6 2.7; do
+		for pyslot in 2.7 ; do
 			if has_version "dev-lang/python:${pyslot}" && [ -f "${S}/VBoxPython${pyslot/./_}.so" ] ; then
 				doins VBoxPython${pyslot/./_}.so
 			fi

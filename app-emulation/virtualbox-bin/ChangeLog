@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.183 2014/07/30 19:26:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.184 2014/09/10 05:33:06 polynomial-c Exp $
+
+*virtualbox-bin-4.3.16.95972 (10 Sep 2014)
+
+  10 Sep 2014; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-bin-4.2.24.ebuild, virtualbox-bin-4.2.26.95022.ebuild,
+  -virtualbox-bin-4.3.12.93733.ebuild, virtualbox-bin-4.3.14.95030.ebuild,
+  +virtualbox-bin-4.3.16.95972.ebuild:
+  Version bump. Removed old. Removed python-2.6 from all ebuilds.
 
   30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
   virtualbox-bin-4.2.24.ebuild, virtualbox-bin-4.2.26.95022.ebuild,

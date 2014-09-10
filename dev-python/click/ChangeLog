@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/click
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/click/ChangeLog,v 1.6 2014/09/04 14:17:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/click/ChangeLog,v 1.7 2014/09/10 05:50:01 idella4 Exp $
+
+*click-3.3 (10 Sep 2014)
+
+  10 Sep 2014; Ian Delaney <idella4@gentoo.org> +click-3.3.ebuild,
+  -click-2.4.ebuild, -click-2.5.ebuild, -click-3.1.ebuild, -click-3.2.ebuild:
+  bump; remove old
 
 *click-3.2 (04 Sep 2014)
 

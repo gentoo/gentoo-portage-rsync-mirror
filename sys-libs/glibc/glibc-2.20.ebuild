@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.19-r1.ebuild,v 1.10 2014/09/10 05:43:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.20.ebuild,v 1.1 2014/09/10 05:49:03 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 LICENSE="LGPL-2.1+ BSD HPND ISC inner-net rc PCRE"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 ~s390 sh sparc x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 RESTRICT="strip" # strip ourself #46186
 EMULTILIB_PKG="true"
 
@@ -25,8 +25,8 @@ case ${PV} in
 	;;
 esac
 GCC_BOOTSTRAP_VER="4.7.3-r1"
-PATCH_VER="3"                                  # Gentoo patchset
-NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.16"}       # min kernel version nptl requires
+PATCH_VER="1"                                  # Gentoo patchset
+NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.32"}       # min kernel version nptl requires
 
 IUSE="debug gd hardened multilib nscd selinux systemtap profile suid vanilla crosscompile_opts_headers-only"
 
@@ -75,13 +75,13 @@ RDEPEND="!sys-kernel/ps3-sources
 if [[ ${CATEGORY} == cross-* ]] ; then
 	DEPEND+=" !crosscompile_opts_headers-only? (
 		>=${CATEGORY}/binutils-2.20
-		>=${CATEGORY}/gcc-4.3
+		>=${CATEGORY}/gcc-4.4
 	)"
 	[[ ${CATEGORY} == *-linux* ]] && DEPEND+=" ${CATEGORY}/linux-headers"
 else
 	DEPEND+="
 		>=sys-devel/binutils-2.20
-		>=sys-devel/gcc-4.3
+		>=sys-devel/gcc-4.4
 		virtual/os-headers
 		!vanilla? ( >=sys-libs/timezone-data-2012c )"
 	RDEPEND+="
@@ -157,53 +157,31 @@ eblit-src_unpack-pre() {
 }
 
 eblit-src_unpack-post() {
+	cd "${S}"
+
 	if use hardened ; then
-		cd "${S}"
 		einfo "Patching to get working PIE binaries on PIE (hardened) platforms"
 		gcc-specs-pie && epatch "${FILESDIR}"/2.17/glibc-2.17-hardened-pie.patch
-		epatch "${FILESDIR}"/2.19/glibc-2.19-hardened-configure-picdefault.patch
 		epatch "${FILESDIR}"/2.18/glibc-2.18-hardened-inittls-nosysenter.patch
 
+		# We don't enable these for non-hardened as the output is very terse --
+		# it only states that a crash happened.  The default upstream behavior
+		# includes backtraces and symbols.
 		einfo "Installing Hardened Gentoo SSP and FORTIFY_SOURCE handler"
-		cp -f "${FILESDIR}"/2.18/glibc-2.18-gentoo-stack_chk_fail.c \
-			debug/stack_chk_fail.c || die
-		cp -f "${FILESDIR}"/2.18/glibc-2.18-gentoo-chk_fail.c \
-			debug/chk_fail.c || die
+		cp "${FILESDIR}"/2.20/glibc-2.20-gentoo-stack_chk_fail.c debug/stack_chk_fail.c || die
+		cp "${FILESDIR}"/2.20/glibc-2.20-gentoo-chk_fail.c debug/chk_fail.c || die
 
 		if use debug ; then
-			# When using Hardened Gentoo stack handler, have smashes dump core for
-			# analysis - debug only, as core could be an information leak
-			# (paranoia).
+			# Allow SIGABRT to dump core on non-hardened systems, or when debug is requested.
 			sed -i \
-				-e '/^CFLAGS-backtrace.c/ iCFLAGS-stack_chk_fail.c = -DSSP_SMASH_DUMPS_CORE' \
-				debug/Makefile \
-				|| die "Failed to modify debug/Makefile for debug stack handler"
-			sed -i \
-				-e '/^CFLAGS-backtrace.c/ iCFLAGS-chk_fail.c = -DSSP_SMASH_DUMPS_CORE' \
-				debug/Makefile \
-				|| die "Failed to modify debug/Makefile for debug fortify handler"
+				-e '/^CFLAGS-backtrace.c/ iCPPFLAGS-stack_chk_fail.c = -DSSP_SMASH_DUMPS_CORE' \
+				-e '/^CFLAGS-backtrace.c/ iCPPFLAGS-chk_fail.c = -DSSP_SMASH_DUMPS_CORE' \
+				debug/Makefile || die
 		fi
 
-		# Build nscd with ssp-all
+		# Build various bits with ssp-all
 		sed -i \
 			-e 's:-fstack-protector$:-fstack-protector-all:' \
-			nscd/Makefile \
-			|| die "Failed to ensure nscd builds with ssp-all"
-	fi
-}
-
-eblit-pkg_preinst-post() {
-	if [[ ${CTARGET} == arm* ]] ; then
-		# Backwards compat support for renaming hardfp ldsos #417287
-		local oldso='/lib/ld-linux.so.3'
-		local nldso='/lib/ld-linux-armhf.so.3'
-		if [[ -e ${D}${nldso} ]] ; then
-			if scanelf -qRyi "${ROOT}$(alt_prefix)"/*bin/ | grep -s "^${oldso}" ; then
-				ewarn "Symlinking old ldso (${oldso}) to new ldso (${nldso})."
-				ewarn "Please rebuild all packages using this old ldso as compat"
-				ewarn "support will be dropped in the future."
-				ln -s "${nldso##*/}" "${D}$(alt_prefix)${oldso}"
-			fi
-		fi
+			*/Makefile || die
 	fi
 }

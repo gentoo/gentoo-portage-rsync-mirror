@@ -1,6 +1,21 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1012 2014/08/21 14:41:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1015 2014/09/10 05:59:03 vapier Exp $
+
+  10 Sep 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/eblits/src_prepare.eblit, files/eblits/src_unpack.eblit:
+  Split src_prepare out of src_unpack #473728 by Benda Xu.
+
+*glibc-2.20 (10 Sep 2014)
+
+  10 Sep 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/2.20/glibc-2.20-gentoo-chk_fail.c,
+  +files/2.20/glibc-2.20-gentoo-stack_chk_fail.c, +glibc-2.20.ebuild,
+  files/eblits/src_compile.eblit, metadata.xml:
+  Version bump.
+
+  10 Sep 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.19-r1.ebuild:
+  Mark sparc stable.
 
   21 Aug 2014; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit,
   files/eblits/src_compile.eblit, files/eblits/src_install.eblit:
