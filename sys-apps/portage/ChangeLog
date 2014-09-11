@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1404 2014/08/31 21:27:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1405 2014/09/11 22:46:40 mgorny Exp $
+
+  11 Sep 2014; Michał Górny <mgorny@gentoo.org> portage-9999.ebuild:
+  Switch to distutils-r1 now that setup.py is in git.
 
 *portage-2.2.12-r1 (31 Aug 2014)
 
