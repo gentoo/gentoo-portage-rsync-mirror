@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-4.4.0.117-r1.ebuild,v 1.1 2014/08/31 15:17:36 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-4.4.0.117-r1.ebuild,v 1.2 2014/09/11 11:26:33 kensington Exp $
 
 EAPI=5
 
@@ -22,8 +22,8 @@ RDEPEND="app-admin/eselect-opencl
 		dev-cpp/tbb
 		sys-devel/clang
 		dev-libs/boost
-		dev-qt/qtgui
-		dev-qt/qtcore
+		dev-qt/qtgui:4
+		dev-qt/qtcore:4
 		)
 	"
 DEPEND=""

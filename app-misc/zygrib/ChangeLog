@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/zygrib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/ChangeLog,v 1.5 2014/06/25 16:43:25 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/ChangeLog,v 1.6 2014/09/11 11:21:28 kensington Exp $
+
+  11 Sep 2014; Michael Palimaka <kensington@gentoo.org> zygrib-6.2.3.ebuild:
+  Pin dev-qt/qtsvg to SLOT 4.
 
   25 Jun 2014; Marc Schiffbauer <mschiff@gentoo.org> zygrib-6.2.3.ebuild:
   Added missing depend on dev-qt/qtsvg. Fixes #515024. Thanks Patrick.

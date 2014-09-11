@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/meshlab/meshlab-1.3.2.ebuild,v 1.1 2014/08/14 18:38:38 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/meshlab/meshlab-1.3.2.ebuild,v 1.2 2014/09/11 11:27:50 kensington Exp $
 
 EAPI=5
 
@@ -17,8 +17,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND="dev-cpp/eigen:3
 	dev-cpp/muParser
-	dev-qt/qtcore
-	dev-qt/qtopengl
+	dev-qt/qtcore:4
+	dev-qt/qtopengl:4
 	media-libs/glew
 	media-libs/qhull
 	=media-libs/lib3ds-1*
