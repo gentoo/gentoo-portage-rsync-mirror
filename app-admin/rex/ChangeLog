@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/rex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rex/ChangeLog,v 1.21 2014/09/04 06:50:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rex/ChangeLog,v 1.22 2014/09/11 03:54:11 patrick Exp $
+
+*rex-0.52.1 (11 Sep 2014)
+
+  11 Sep 2014; Patrick Lauer <patrick@gentoo.org> +rex-0.52.1.ebuild:
+  Bump
 
 *rex-0.52.0 (04 Sep 2014)
 

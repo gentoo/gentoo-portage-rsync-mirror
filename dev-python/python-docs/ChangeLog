@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.196 2014/09/09 03:05:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.197 2014/09/11 02:48:08 patrick Exp $
+
+  11 Sep 2014; Patrick Lauer <patrick@gentoo.org> python-docs-3.2.5.ebuild:
+  Mark python-docs:3.2 stable to silence repoman
 
 *python-docs-3.2.5 (09 Sep 2014)
 

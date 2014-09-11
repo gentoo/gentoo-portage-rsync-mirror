@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.71 2014/08/12 22:40:50 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.72 2014/09/11 00:59:12 reavertm Exp $
+
+*flightgear-3.0.0-r1 (11 Sep 2014)
+
+  11 Sep 2014; Maciej Mrozowski <reavertm@gentoo.org> +files/ac3d.vim,
+  +files/nasal.vim, +flightgear-3.0.0-r1.ebuild:
+  Install examples, misc scripts and vim syntax, bug 520434.
 
   12 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org>
   -files/flightgear-2.8.0-fgpanel-linking.patch, -flightgear-2.10.0.ebuild,

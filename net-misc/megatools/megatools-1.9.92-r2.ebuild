@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/megatools-1.9.92-r1.ebuild,v 1.1 2014/09/09 03:21:13 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/megatools-1.9.92-r2.ebuild,v 1.1 2014/09/11 02:47:59 dlan Exp $
 
 EAPI=5
 
@@ -17,12 +17,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="fuse introspection static-libs"
 
-RDEPEND="dev-libs/glib:2
+COMMON_DEPEND="dev-libs/glib:2
 	dev-libs/openssl:0
 	net-misc/curl
 	fuse? ( sys-fs/fuse )
 "
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	net-libs/glib-networking[ssl]
+"
+DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	app-text/asciidoc"
 

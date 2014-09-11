@@ -3,20 +3,27 @@
 <pkgmetadata>
 	<herd>qt</herd>
 	<use>
-		<flag name="egl">Use EGL instead of default GLX to manage OpenGL
-		      contexts on the desktop</flag>
+		<flag name="egl">Use EGL instead of default GLX to manage OpenGL contexts</flag>
+		<flag name="eglfs">Compile EGL Full Screen/Single Surface support</flag>
+		<flag name="evdev">Enable evdev input support</flag>
 		<flag name="exceptions">Add support for exceptions - like catching them
 			inside the event loop (recommended by upstream)</flag>
+		<flag name="gles2">Use OpenGL ES 2.0 instead of desktop OpenGL</flag>
 		<flag name="glib">Enable <pkg>dev-libs/glib</pkg> eventloop support</flag>
 		<flag name="gtkstyle">Build a Qt style called GTK+ that mimics the active
 			GTK+ theme</flag>
+		<flag name="harfbuzz">Use <pkg>media-libs/harfbuzz</pkg> for text shaping
+			(experimental in Qt 5.3.x, default in Qt 5.4.0 and later). If enabled,
+			it can still be disabled at runtime by setting QT_HARFBUZZ environment
+			variable to &quot;old&quot;.</flag>
+		<flag name="ibus">Build the IBus input method plugin</flag>
+		<flag name="kms">Build the KMS platform plugin</flag>
 		<flag name="qt3support">Enable the Qt3Support libraries for Qt4. Note that
 			this does not mean you can compile pure Qt3 programs with Qt4.</flag>
 		<flag name="trace">
 			Build the 'trace' graphicssystem engine which allows to record
-			all drawing operations into a trace buffer. Later it can be replayed
-			with the qttracereplay utility
-		</flag>
+			all drawing operations into a trace buffer. The trace can be replayed
+			later with the qttracereplay tool.</flag>
 	</use>
 	<upstream>
 		<bugs-to>https://bugreports.qt-project.org/</bugs-to>

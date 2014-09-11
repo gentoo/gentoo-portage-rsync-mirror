@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qdbusviewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qdbusviewer/ChangeLog,v 1.14 2014/04/23 10:25:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qdbusviewer/ChangeLog,v 1.15 2014/09/11 01:43:50 pesa Exp $
+
+*qdbusviewer-5.3.1-r3 (11 Sep 2014)
+
+  11 Sep 2014; Davide Pesavento <pesa@gentoo.org> +qdbusviewer-5.3.1-r3.ebuild:
+  Import Qt5 from qt overlay.
 
   23 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> -qdbusviewer-5.2.1.ebuild:
   Drop qt5 ebuild.

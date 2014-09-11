@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/linguist
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/linguist/ChangeLog,v 1.16 2014/04/23 11:11:23 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/linguist/ChangeLog,v 1.17 2014/09/11 01:43:16 pesa Exp $
+
+*linguist-5.3.1-r3 (11 Sep 2014)
+
+  11 Sep 2014; Davide Pesavento <pesa@gentoo.org> +linguist-5.3.1-r3.ebuild:
+  Import Qt5 from qt overlay.
 
   23 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> -linguist-5.2.1.ebuild:
   Drop qt5 ebuild.

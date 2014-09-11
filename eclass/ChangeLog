@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1366 2014/09/04 14:52:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1367 2014/09/11 00:08:57 pesa Exp $
+
+  11 Sep 2014; Davide Pesavento <pesa@gentoo.org> qt5-build.eclass:
+  Restrict tests on 5.3.x (except live).
 
   04 Sep 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass,
   tests/python-utils-r1.sh:

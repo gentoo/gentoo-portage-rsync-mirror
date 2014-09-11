@@ -1,0 +1,13 @@
+# ChangeLog for dev-qt/qtwidgets
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/ChangeLog,v 1.4 2014/09/11 02:04:39 pesa Exp $
+
+  11 Sep 2014; Davide Pesavento <pesa@gentoo.org>
+  +files/qtwidgets-5.3.1-prefer-qpa.patch:
+  Add missing patch file.
+
+*qtwidgets-5.3.1-r3 (11 Sep 2014)
+
+  11 Sep 2014; Davide Pesavento <pesa@gentoo.org> +metadata.xml,
+  +qtwidgets-5.3.1-r3.ebuild:
+  Import Qt5 from qt overlay.

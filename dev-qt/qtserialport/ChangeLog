@@ -1,0 +1,9 @@
+# ChangeLog for dev-qt/qtserialport
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtserialport/ChangeLog,v 1.3 2014/09/11 01:46:22 pesa Exp $
+
+*qtserialport-5.3.1-r3 (11 Sep 2014)
+
+  11 Sep 2014; Davide Pesavento <pesa@gentoo.org> +metadata.xml,
+  +qtserialport-5.3.1-r3.ebuild:
+  Import Qt5 from qt overlay.

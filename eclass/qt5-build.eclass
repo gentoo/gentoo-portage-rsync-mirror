@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.4 2014/08/29 23:54:14 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.5 2014/09/11 00:08:57 pesa Exp $
 
 # @ECLASS: qt5-build.eclass
 # @MAINTAINER:
@@ -70,6 +70,8 @@ EGIT_REPO_URI=(
 [[ ${QT5_BUILD_TYPE} == live ]] && inherit git-r3
 
 IUSE="debug test"
+
+[[ ${QT5_BUILD_TYPE} == release && ${QT5_MINOR_VERSION} -le 3 ]] && RESTRICT="test"
 
 DEPEND="
 	dev-lang/perl

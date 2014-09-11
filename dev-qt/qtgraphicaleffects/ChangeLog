@@ -1,0 +1,9 @@
+# ChangeLog for dev-qt/qtgraphicaleffects
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgraphicaleffects/ChangeLog,v 1.4 2014/09/11 01:44:47 pesa Exp $
+
+*qtgraphicaleffects-5.3.1-r3 (11 Sep 2014)
+
+  11 Sep 2014; Davide Pesavento <pesa@gentoo.org> +metadata.xml,
+  +qtgraphicaleffects-5.3.1-r3.ebuild:
+  Import Qt5 from qt overlay.
