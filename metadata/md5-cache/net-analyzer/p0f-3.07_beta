@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=net-libs/libpcap
 DESCRIPTION=A tool to perform passive OS detection based on SYN packets
-EAPI=4
+EAPI=5
 HOMEPAGE=http://lcamtuf.coredump.cx/p0f3/
 IUSE=debug ipv6
 KEYWORDS=~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos
 LICENSE=LGPL-2.1
 RDEPEND=net-libs/libpcap
 SLOT=0
-SRC_URI=http://lcamtuf.coredump.cx/p0f3/releases/p0f-3.05b.tgz
+SRC_URI=http://lcamtuf.coredump.cx/p0f3/releases/p0f-3.07b.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=9a7be3cd136e7584e7ae9244678b2728
+_md5_=554006c4152061680a9d3d316c0454d1

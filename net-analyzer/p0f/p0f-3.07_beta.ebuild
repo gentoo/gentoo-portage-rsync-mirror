@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-3.05_beta.ebuild,v 1.2 2013/02/21 00:24:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-3.07_beta.ebuild,v 1.1 2014/09/11 18:09:19 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit toolchain-funcs
 
 MY_P=${P/_beta/b}

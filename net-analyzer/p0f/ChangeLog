@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/p0f
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.53 2014/08/10 20:59:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.54 2014/09/11 18:09:19 jer Exp $
+
+*p0f-3.07_beta (11 Sep 2014)
+
+  11 Sep 2014; Jeroen Roovers <jer@gentoo.org> -p0f-3.05_beta.ebuild,
+  +p0f-3.07_beta.ebuild:
+  Version bump (bug #522590 by Marcin Mirosław).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> p0f-2.0.8-r2.ebuild:
   QA: drop trailing '.' from DESCRIPTION
