@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.4.ebuild,v 1.7 2013/01/06 21:29:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.4.ebuild,v 1.8 2014/09/11 08:38:00 mr_bones_ Exp $
 
-EAPI=2
-inherit autotools base eutils games
+EAPI=5
+inherit autotools eutils games
 
 DESCRIPTION="DJ Delorie's Ace of Penguins solitaire games"
 HOMEPAGE="http://www.delorie.com/store/ace/"
@@ -19,31 +19,32 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
-PATCHES=( "${FILESDIR}"/${P}-no-xpm.patch "${FILESDIR}"/${P}-libpng15.patch "${FILESDIR}"/${P}-gold.patch "${FILESDIR}"/${P}-CC.patch "${FILESDIR}"/${P}-clang.patch )
 
 src_prepare() {
-	base_src_prepare
+	epatch \
+		"${FILESDIR}"/${P}-no-xpm.patch \
+		"${FILESDIR}"/${P}-libpng15.patch \
+		"${FILESDIR}"/${P}-gold.patch \
+		"${FILESDIR}"/${P}-CC.patch \
+		"${FILESDIR}"/${P}-clang.patch
 	eautoreconf
 }
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
 		--disable-static \
 		--program-prefix=ace-
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
+	default
 	dohtml docs/*
 	newicon docs/as.gif ${PN}.gif
-	cd "${D}${GAMES_BINDIR}" && {
-		local p
-		for p in *
-		do
-			make_desktop_entry $p "Ace ${p/ace-/}" /usr/share/pixmaps/${PN}.gif
-		done
-	}
+	cd "${D}${GAMES_BINDIR}" || die
+	local p
+	for p in *
+	do
+		make_desktop_entry $p "Ace ${p/ace-/}" /usr/share/pixmaps/${PN}.gif
+	done
 	prepgamesdirs
 }
