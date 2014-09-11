@@ -9,6 +9,6 @@ LICENSE=GPL-2
 RDEPEND=caps? ( sys-libs/libcap ) readline? ( >=sys-libs/readline-4.1-r4 ) selinux? ( sec-policy/selinux-chronyd )
 RESTRICT=test
 SLOT=0
-SRC_URI=http://download.tuxfamily.org/chrony/chrony-1.31-pre1.tar.gz
+SRC_URI=http://download.tuxfamily.org/chrony/chrony-1.31.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=831d6bbcc7138165a7141dbfa37000a3
+_md5_=4e456dec4dfa68e0f6447b806eb96178

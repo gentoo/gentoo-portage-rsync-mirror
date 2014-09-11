@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libtrace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/ChangeLog,v 1.12 2014/07/09 13:32:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/ChangeLog,v 1.13 2014/09/11 08:30:23 jer Exp $
+
+*libtrace-3.0.21 (11 Sep 2014)
+
+  11 Sep 2014; Jeroen Roovers <jer@gentoo.org> -libtrace-3.0.19.ebuild,
+  +libtrace-3.0.21.ebuild:
+  Version bump.
 
 *libtrace-3.0.20 (09 Jul 2014)
 

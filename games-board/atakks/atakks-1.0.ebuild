@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/atakks-1.0.ebuild,v 1.10 2013/06/29 17:19:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/atakks-1.0.ebuild,v 1.11 2014/09/11 08:13:26 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 MY_P=${P/-/_}
@@ -18,6 +18,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl:0"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${MY_P}
 
@@ -32,13 +33,13 @@ src_prepare() {
 }
 
 src_compile() {
-	emake E_CFLAGS="${CFLAGS}" || die
+	emake E_CFLAGS="${CFLAGS}"
 }
 
 src_install() {
-	dogamesbin ${PN} || die
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins *bmp || die
+	doins *bmp
 	newicon icon.bmp ${PN}.bmp
 	make_desktop_entry ${PN} Atakks /usr/share/pixmaps/${PN}.bmp
 	prepgamesdirs

@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/cvsweb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cvsweb/ChangeLog,v 1.2 2010/06/19 00:58:35 abcd Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cvsweb/ChangeLog,v 1.3 2014/09/11 08:26:50 dilfridge Exp $
+
+*cvsweb-3.0.6-r1 (11 Sep 2014)
+
+  11 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cvsweb-3.0.6-r1.ebuild, +files/cvsweb-3.0.6-perl518.patch:
+  Revision bump to add Perl 5.18 compatibility patch, bug 521824
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> cvsweb-3.0.5.ebuild,
   cvsweb-3.0.6.ebuild:

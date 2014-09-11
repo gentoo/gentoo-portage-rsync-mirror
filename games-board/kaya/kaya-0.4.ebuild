@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/kaya-0.4.ebuild,v 1.7 2014/03/20 20:33:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/kaya-0.4.ebuild,v 1.8 2014/09/11 08:10:16 mr_bones_ Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-ruby_add_rdepend "|| ( kde-base/korundum kde-base/kdebindings-ruby )"
+ruby_add_rdepend "kde-base/korundum"
 ruby_add_rdepend "dev-ruby/builder"
 
 pkg_setup() {
@@ -32,7 +32,7 @@ src_unpack() {
 
 	cd "${WORKDIR}"
 	mkdir all
-	mv ${P} all/ || die "Could not move sources"
+	mv ${P} all/ || die
 }
 
 all_ruby_prepare() {

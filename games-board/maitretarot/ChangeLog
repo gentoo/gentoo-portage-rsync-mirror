@@ -1,6 +1,10 @@
 # ChangeLog for games-board/maitretarot
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/maitretarot/ChangeLog,v 1.7 2010/11/08 19:57:42 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/maitretarot/ChangeLog,v 1.8 2014/09/11 08:24:23 mr_bones_ Exp $
+
+  11 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  maitretarot-0.1.98.ebuild:
+  EAPI=5
 
   08 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   maitretarot-0.1.98.ebuild:
