@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.175 2014/08/10 20:50:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.176 2014/09/11 18:35:09 jer Exp $
+
+  11 Sep 2014; Jeroen Roovers <jer@gentoo.org> libtorrent-0.13.3.ebuild:
+  Stable for HPPA (bug #499474).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libtorrent-0.12.5.ebuild:
   QA: drop trailing '.' from DESCRIPTION
