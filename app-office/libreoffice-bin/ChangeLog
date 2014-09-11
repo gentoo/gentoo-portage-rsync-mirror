@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.148 2014/08/10 18:15:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.149 2014/09/11 17:53:51 dilfridge Exp $
+
+*libreoffice-bin-4.2.6.3 (11 Sep 2014)
+
+  11 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-bin-4.2.6.3.ebuild:
+  Version bump for bug 522060
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   libreoffice-bin-4.2.5.2.ebuild:

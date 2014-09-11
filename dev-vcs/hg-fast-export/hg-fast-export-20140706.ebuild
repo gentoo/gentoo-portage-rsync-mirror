@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-fast-export/hg-fast-export-20140706.ebuild,v 1.1 2014/09/09 00:00:38 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-fast-export/hg-fast-export-20140706.ebuild,v 1.2 2014/09/11 17:40:50 ottxor Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit python-r1 vcs-snapshot
 
@@ -24,8 +24,9 @@ RDEPEND="dev-vcs/git
 	${PYTHON_DEPS}"
 
 src_prepare() {
-	sed -e '/^PYTHON/s/python/&2/' \
-		-e 's/PYTHON/E&/g' \
+	sed -e '/^PYTHON/s/python/&2.7/' \
+		-e '/^PYTHON/s/PYTHON:/E&/g' \
+		-e "/^ROOT/s:=.*:='${EPREFIX}/usr/bin':" \
 		-i "${PN}".sh || die
 	rm Makefile || die #don't compile old svn2git code
 }
