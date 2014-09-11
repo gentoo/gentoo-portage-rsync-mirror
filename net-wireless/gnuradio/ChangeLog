@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.54 2014/09/01 17:26:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.55 2014/09/11 11:33:48 kensington Exp $
+
+  11 Sep 2014; Michael Palimaka <kensington@gentoo.org> gnuradio-3.7.4.1.ebuild,
+  gnuradio-3.7.5.ebuild, gnuradio-9999.ebuild:
+  Pin dev-qt/qtcore to SLOT 4.
 
   01 Sep 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnuradio-3.7.4.1.ebuild, gnuradio-3.7.5.ebuild, gnuradio-9999.ebuild:
