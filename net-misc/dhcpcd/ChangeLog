@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.417 2014/08/01 21:12:57 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.418 2014/09/11 21:28:05 williamh Exp $
+
+  11 Sep 2014; William Hubbs <williamh@gentoo.org>
+  +files/dhcpcd-6.4.3-uclibc-fix.patch, dhcpcd-6.4.3.ebuild:
+  Add build-time fix for uclibc for bug #522158, thanks to David Flogeras for
+  the patch; Roy suggested that I should use this one for 6.4.3 instead of what
+  he has added to upstream.
 
   01 Aug 2014; William Hubbs <williamh@gentoo.org> -dhcpcd-5.6.4.ebuild,
   -dhcpcd-6.2.0-r1.ebuild, -files/dhcpcd-6.2.0-dynamic-init.patch,

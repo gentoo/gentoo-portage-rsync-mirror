@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.4.3.ebuild,v 1.9 2014/08/01 20:13:21 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.4.3.ebuild,v 1.10 2014/09/11 21:28:05 williamh Exp $
 
 EAPI=5
 
@@ -52,6 +52,7 @@ fi
 
 src_prepare()
 {
+	epatch "${FILESDIR}"/${P}-uclibc-fix.patch
 	epatch_user
 }
 
