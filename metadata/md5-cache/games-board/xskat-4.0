@@ -1,6 +1,7 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DEPEND=x11-libs/libX11 media-fonts/font-misc-misc x11-misc/gccmakedep x11-misc/imake x11-proto/xproto
 DESCRIPTION=Famous german card game
+EAPI=5
 HOMEPAGE=http://www.xskat.de/xskat.html
 KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=freedist
@@ -8,4 +9,4 @@ RDEPEND=x11-libs/libX11 media-fonts/font-misc-misc games-misc/games-envd
 SLOT=0
 SRC_URI=http://www.xskat.de/xskat-4.0.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=2045ad1c0d7ab73bf9145b7eff1fb145
+_md5_=2275cd7c25f61d0494cb3f6b6c1cfcf1

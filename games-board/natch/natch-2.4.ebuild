@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/natch/natch-2.4.ebuild,v 1.2 2010/09/07 14:52:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/natch/natch-2.4.ebuild,v 1.3 2014/09/11 07:43:13 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 MY_P="Natch-${PV}"
@@ -16,11 +16,12 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${MY_P}
 
 src_install() {
-	newgamesbin src/Natch natch || die "dogamesbin failed"
+	newgamesbin src/Natch natch
 	dodoc AUTHORS ChangeLog NEWS README THANKS example.txt
 	prepgamesdirs
 }

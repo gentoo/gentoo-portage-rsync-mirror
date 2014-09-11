@@ -1,6 +1,9 @@
 # ChangeLog for games-board/natch
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/natch/ChangeLog,v 1.4 2010/09/07 14:52:49 nyhm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/natch/ChangeLog,v 1.5 2014/09/11 07:43:13 mr_bones_ Exp $
+
+  11 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org> natch-2.4.ebuild:
+  EAPI=5
 
   07 Sep 2010; Tristan Heaven <nyhm@gentoo.org> natch-2.4.ebuild:
   Add ~amd64 keyword; EAPI=2
@@ -18,4 +21,3 @@
   26 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +natch-2.3.ebuild:
   initial commit (bug #67638)
-

@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xskat/xskat-4.0.ebuild,v 1.9 2010/09/10 10:32:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xskat/xskat-4.0.ebuild,v 1.10 2014/09/11 07:39:49 mr_bones_ Exp $
 
+EAPI=5
 inherit toolchain-funcs eutils games
 
 DESCRIPTION="Famous german card game"
@@ -20,13 +21,16 @@ DEPEND="${RDEPEND}
 	x11-misc/imake
 	x11-proto/xproto"
 
+src_prepare() {
+	xmkmf -a || die
+}
+
 src_compile() {
-	xmkmf -a || die "xmkmf failed"
-	emake CDEBUGFLAGS="${CFLAGS}" EXTRA_LDOPTIONS="${LDFLAGS}" CC="$(tc-getCC)" || die "emake failed"
+	emake CDEBUGFLAGS="${CFLAGS}" EXTRA_LDOPTIONS="${LDFLAGS}" CC="$(tc-getCC)"
 }
 
 src_install() {
-	dogamesbin xskat || die "dogamesbin failed"
+	dogamesbin xskat
 	newman xskat.man xskat.6
 	dodoc CHANGES README{,.IRC}
 	newicon icon.xbm ${PN}.xbm
