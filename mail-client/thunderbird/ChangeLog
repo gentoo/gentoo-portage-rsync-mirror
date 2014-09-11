@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.300 2014/09/07 13:27:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.301 2014/09/11 22:13:18 axs Exp $
+
+*thunderbird-31.1.1 (11 Sep 2014)
+
+  11 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +thunderbird-31.1.1.ebuild, -thunderbird-31.1.0.ebuild:
+  minor version bump; uses new enigmal that fixed security flaws; other bug
+  fixes
 
   07 Sep 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-24.8.0.ebuild:
   Stable for ppc64, wrt bug #522020
