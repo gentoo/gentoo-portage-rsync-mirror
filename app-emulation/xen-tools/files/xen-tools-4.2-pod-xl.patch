@@ -1,0 +1,17 @@
+From 665ddd98c4d418ced6f303b79b7a6322c69b7247 Mon Sep 17 00:00:00 2001
+From: Olaf Hering <olaf@aepfle.de>
+Subject: [PATCH] docs: remove emtpy =item from xl.1
+
+diff --git a/docs/man/xl.pod.1 b/docs/man/xl.pod.1
+index dd387c9..06518c4 100644
+--- a/docs/man/xl.pod.1
++++ b/docs/man/xl.pod.1
+@@ -851,8 +851,6 @@ The following is the effect of combining the above options:
+ 
+ =item B<-p [pool] -d>...       : Illegal
+ 
+-=item
+-
+ =back
+ 
+ =item B<sched-credit2> [I<OPTIONS>]

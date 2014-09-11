@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.255 2014/08/19 14:16:01 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.256 2014/09/11 05:33:16 dlan Exp $
+
+*xen-tools-4.4.1 (11 Sep 2014)
+*xen-tools-4.3.3 (11 Sep 2014)
+*xen-tools-4.2.5 (11 Sep 2014)
+
+  11 Sep 2014; Yixun Lan <dlan@gentoo.org> +xen-tools-4.2.5.ebuild,
+  +xen-tools-4.3.3.ebuild, +xen-tools-4.4.1.ebuild,
+  +files/xen-tools-4.2-pod-docs.patch,
+  +files/xen-tools-4.2-pod-utf8-chars.patch, +files/xen-tools-4.2-pod-xl.patch:
+  version bump, fix 4.2.x pod2man build error
 
 *xen-tools-4.4.0-r9 (19 Aug 2014)
 *xen-tools-4.3.2-r6 (19 Aug 2014)
