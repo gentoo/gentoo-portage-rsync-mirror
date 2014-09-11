@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r3.ebuild,v 1.2 2014/02/27 17:39:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r3.ebuild,v 1.3 2014/09/11 15:09:36 ulm Exp $
 
 EAPI=5
 
@@ -27,7 +27,9 @@ ELISP_REMOVE="imaxima.info"		# remove broken Info file (will be recreated)
 SITEFILE="50${PN}-gentoo.el"
 
 src_configure() {
-	econf --with-lispdir="${EPREFIX}${SITELISP}/${PN}"
+	econf \
+		--with-lispdir="${EPREFIX}${SITELISP}/${PN}" \
+		EMACS="${EMACS} ${EMACSFLAGS}"
 }
 
 src_compile() {

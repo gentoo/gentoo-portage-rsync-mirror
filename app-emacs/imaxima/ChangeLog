@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/imaxima
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.41 2014/02/27 17:39:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.42 2014/09/11 15:09:36 ulm Exp $
+
+  11 Sep 2014; Ulrich Müller <ulm@gentoo.org> imaxima-1.0-r3.ebuild:
+  Invoke Emacs with proper flags, bug 522582.
 
   27 Feb 2014; Ulrich Müller <ulm@gentoo.org> imaxima-1.0-r3.ebuild:
   Define ELISP_{PATCHES,REMOVE} for elisp.eclass.
