@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.29.ebuild,v 1.1 2014/09/08 14:30:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.29-r1.ebuild,v 1.1 2014/09/11 11:01:13 polynomial-c Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -32,7 +32,7 @@ inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-v4.1 multilib p
 
 PATCHFF="firefox-31.0-patches-0.2"
 PATCH="${PN}-2.23-patches-01"
-EMVER="1.7"
+EMVER="1.7.2"
 
 DESCRIPTION="Seamonkey Web Browser"
 HOMEPAGE="http://www.seamonkey-project.org"
