@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.4.0.ebuild,v 1.3 2014/09/11 05:15:57 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.3.3.ebuild,v 1.1 2014/09/11 05:15:57 dlan Exp $
 
 EAPI=5
 
@@ -85,10 +85,13 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN/-pvgrub/}-4.3-externals.patch
 
 	# Drop .config and Fix gcc-4.6
-	epatch 	"${FILESDIR}"/${PN/-pvgrub/}-4.4-fix_dotconfig-gcc.patch
+	epatch 	"${FILESDIR}"/${PN/-pvgrub/}-4.3-fix_dotconfig-gcc.patch
 
 	# fix jobserver in Makefile
 	epatch "${FILESDIR}"/${PN}-4.2-jserver.patch
+
+	# gcc warnings/QA fix
+	epatch "${FILESDIR}"/${PN}-4.3.1-qa.patch
 
 	#Substitute for internal downloading. pciutils copied only due to the only .bz2
 	cp "${DISTDIR}"/pciutils-2.2.9.tar.bz2 ./stubdom/ || die "pciutils not copied to stubdom"

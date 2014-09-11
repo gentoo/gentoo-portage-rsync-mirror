@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.594 2014/09/05 10:54:53 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.595 2014/09/11 05:19:22 vapier Exp $
+
+  11 Sep 2014; Mike Frysinger <vapier@gentoo.org>
+  files/openssl-1.0.1h-ipv6.patch:
+  Delete bogus hunk that creates a .rej file #522102 by Anthony Basile.
 
   05 Sep 2014; Tobias Klausmann <klausman@gentoo.org> openssl-1.0.1i.ebuild:
   Stable on alpha, bug 519264

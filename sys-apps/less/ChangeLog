@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.187 2014/09/07 10:44:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.188 2014/09/11 05:20:34 vapier Exp $
+
+  11 Sep 2014; Mike Frysinger <vapier@gentoo.org> less-458.ebuild:
+  Mark stable for all #521952.
 
   07 Sep 2014; Agostino Sarubbo <ago@gentoo.org> less-458.ebuild:
   Stable for ppc, wrt bug #521952
