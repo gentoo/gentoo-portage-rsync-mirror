@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=bluetooth? ( net-wireless/bluez:= ) usb? ( virtual/libusb:= ) virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/pkgconfig
+DESCRIPTION=An implementation of the OBEX protocol used for transferring data to mobile devices
+EAPI=5
+HOMEPAGE=http://sourceforge.net/projects/openobex/
+IUSE=bluetooth irda usb
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-2 LGPL-2.1
+RDEPEND=bluetooth? ( net-wireless/bluez:= ) usb? ( virtual/libusb:= )
+SLOT=0/2
+SRC_URI=mirror://sourceforge/openobex/1.7.1/openobex-1.7.1-Source.tar.gz
+_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	da001465a2e939c93f7ae16947ce3438
+_md5_=ab811f5a014861671724719f05a3b5ac
