@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16026 2014/09/11 02:57:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16027 2014/09/11 14:24:03 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -162,7 +162,12 @@ virtual/ruby-threads:jruby
 # Work-in-progress. Mask for some more testing and documentation,
 # a news item and till at least some of the blockers are fixed.
 # Bug #521146 for a tracker.
+#
+# Mask relevant gentoo-bashcomp too, since pretty much all it does is
+# splitting the completions. Upgrading before switching to -r90 would
+# mean that users have to re-enable all the completions.
 >=app-shells/bash-completion-2.1-r90
+>=app-shells/gentoo-bashcomp-20140911
 
 # Sergey Popov <pinkbyte@gentoo.org> (27 Aug 2014)
 # Does not work since late 2013, due to update servers shutdown
