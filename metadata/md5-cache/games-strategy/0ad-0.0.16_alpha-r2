@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
-DEPEND=dev-lang/spidermonkey:24 dev-libs/boost dev-libs/icu dev-libs/libxml2 ~games-strategy/0ad-data-0.0.16_alpha media-gfx/nvidia-texture-tools media-libs/libpng:0 media-libs/libsdl[X,opengl,video] net-libs/enet:1.3 net-libs/miniupnpc net-misc/curl sys-libs/zlib virtual/jpeg virtual/opengl x11-libs/libX11 x11-libs/libXcursor editor? ( x11-libs/wxGTK:2.8[X,opengl] ) lobby? ( net-libs/gloox ) sound? ( media-libs/libogg media-libs/libvorbis media-libs/openal ) virtual/pkgconfig test? ( dev-lang/perl ) >=sys-apps/sed-4
+DEPEND=dev-lang/spidermonkey:24 dev-libs/boost dev-libs/icu:= dev-libs/libxml2 ~games-strategy/0ad-data-0.0.16_alpha media-gfx/nvidia-texture-tools media-libs/libpng:0 media-libs/libsdl[X,opengl,video] net-libs/enet:1.3 net-libs/miniupnpc net-misc/curl sys-libs/zlib virtual/jpeg virtual/opengl x11-libs/libX11 x11-libs/libXcursor editor? ( x11-libs/wxGTK:2.8[X,opengl] ) lobby? ( net-libs/gloox ) sound? ( media-libs/libogg media-libs/libvorbis media-libs/openal ) virtual/pkgconfig test? ( dev-lang/perl ) >=sys-apps/sed-4
 DESCRIPTION=A free, real-time strategy game
 EAPI=5
 HOMEPAGE=http://play0ad.com/
 IUSE=editor +lobby pch sound test
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2 LGPL-2.1 MIT CC-BY-SA-3.0 ZLIB
-RDEPEND=dev-lang/spidermonkey:24 dev-libs/boost dev-libs/icu dev-libs/libxml2 ~games-strategy/0ad-data-0.0.16_alpha media-gfx/nvidia-texture-tools media-libs/libpng:0 media-libs/libsdl[X,opengl,video] net-libs/enet:1.3 net-libs/miniupnpc net-misc/curl sys-libs/zlib virtual/jpeg virtual/opengl x11-libs/libX11 x11-libs/libXcursor editor? ( x11-libs/wxGTK:2.8[X,opengl] ) lobby? ( net-libs/gloox ) sound? ( media-libs/libogg media-libs/libvorbis media-libs/openal ) games-misc/games-envd
+RDEPEND=dev-lang/spidermonkey:24 dev-libs/boost dev-libs/icu:= dev-libs/libxml2 ~games-strategy/0ad-data-0.0.16_alpha media-gfx/nvidia-texture-tools media-libs/libpng:0 media-libs/libsdl[X,opengl,video] net-libs/enet:1.3 net-libs/miniupnpc net-misc/curl sys-libs/zlib virtual/jpeg virtual/opengl x11-libs/libX11 x11-libs/libXcursor editor? ( x11-libs/wxGTK:2.8[X,opengl] ) lobby? ( net-libs/gloox ) sound? ( media-libs/libogg media-libs/libvorbis media-libs/openal ) games-misc/games-envd
 RESTRICT=test
 SLOT=0
 SRC_URI=http://releases.wildfiregames.com/0ad-0.0.16-alpha-unix-build.tar.xz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	games	e221fed675714bd5545b7488aed9f822	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=0ab0ff6a7d7620343e7d30c3ba29210a
+_md5_=f5765dff8d0a72dd6144d375e1b53c92

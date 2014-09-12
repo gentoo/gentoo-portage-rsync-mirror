@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/0ad/0ad-0.0.16_alpha-r2.ebuild,v 1.1 2014/06/17 20:44:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/0ad/0ad-0.0.16_alpha-r2.ebuild,v 1.2 2014/09/12 20:54:31 dilfridge Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RESTRICT="test"
 RDEPEND="
 	dev-lang/spidermonkey:24
 	dev-libs/boost
-	dev-libs/icu
+	dev-libs/icu:=
 	dev-libs/libxml2
 	~games-strategy/0ad-data-${PV}
 	media-gfx/nvidia-texture-tools
