@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tie-Cycle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Cycle/ChangeLog,v 1.3 2014/08/26 14:55:11 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Cycle/ChangeLog,v 1.4 2014/09/12 17:06:55 zlogene Exp $
+
+  12 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> -Tie-Cycle-1.170.0.ebuild:
+  Drop old.
 
 *Tie-Cycle-1.190.0-r1 (26 Aug 2014)
 
