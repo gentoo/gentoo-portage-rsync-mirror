@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qcheckers/qcheckers-20091230.ebuild,v 1.4 2013/03/02 21:13:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qcheckers/qcheckers-20091230.ebuild,v 1.5 2014/09/12 03:18:57 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils qt4-r2 games
 
 MY_PN=${PN/qc/QC}
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="dev-qt/qtgui:4"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${MY_PN}
 
@@ -25,7 +26,7 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin ${MY_PN} || die
+	dogamesbin ${MY_PN}
 	newicon icons/help-about.png ${PN}.png
 	make_desktop_entry ${MY_PN} ${MY_PN}
 	dodoc README
