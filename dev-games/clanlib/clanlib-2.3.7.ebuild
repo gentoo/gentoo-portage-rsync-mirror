@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-2.3.7.ebuild,v 1.1 2013/10/28 23:31:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-2.3.7.ebuild,v 1.2 2014/09/12 19:12:38 tupone Exp $
 
 EAPI=4
 inherit flag-o-matic eutils autotools-utils
@@ -44,7 +44,10 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${FILESDIR}"/${P}-autotools.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-autotools.patch
+	"${FILESDIR}"/${P}-doc.patch
+)
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
 DOCS=(
@@ -53,6 +56,11 @@ DOCS=(
 	PATCHES
 	README
 )
+
+src_prepare() {
+	autotools-utils_src_prepare
+	ln -sf ../../../Sources/API Documentation/Utilities/ReferenceDocs/ClanLib
+}
 
 src_configure() {
 	myeconfargs=(

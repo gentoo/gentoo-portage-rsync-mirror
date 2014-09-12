@@ -1,0 +1,9 @@
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/mips/package.use.mask,v 1.1 2014/09/12 19:06:25 vincent Exp $
+
+# Vicente Olivert Riera <vincent@gentoo.org> (11 Sep 2014)
+# www-client/midori[jit] depends on net-libs/webkit-gtk[jit]
+# which is masked on base/package.use.mask and not unmasked
+# on arch/mips/package.use.mask by "net-libs/webkit-gtk -jit"
+www-client/midori jit

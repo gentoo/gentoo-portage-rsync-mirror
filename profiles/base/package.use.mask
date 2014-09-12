@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.596 2014/09/07 13:22:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.597 2014/09/12 19:13:34 johu Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Johannes Huber <johu@gentoo.org> (12 Sep 2014)
+# Masked until all dependencies are packaged.
+media-sound/tomahawk qt5
 
 # Michał Górny <mgorny@gentoo.org> (06 Sep 2014)
 # Mask the removed/deprecated flags for old ebuilds that do not use

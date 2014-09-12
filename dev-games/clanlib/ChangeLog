@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/clanlib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.64 2013/10/28 23:31:47 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.65 2014/09/12 19:12:38 tupone Exp $
+
+  12 Sep 2014; Tupone Alfredo <tupone@gentoo.org> clanlib-2.3.7.ebuild,
+  +files/clanlib-2.3.7-doc.patch:
+  Fix build with USE=doc. Bug #521340 by flameeyes
 
 *clanlib-2.3.7 (28 Oct 2013)
 
