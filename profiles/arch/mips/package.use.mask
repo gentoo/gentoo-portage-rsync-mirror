@@ -1,11 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.65 2014/09/12 19:14:20 vincent Exp $
-
-# Vicente Olivert Riera <vincent@gentoo.org> (12 Sep 2014)
-# www-client/midori[webkit2] depends on net-libs/webkit-gtk:3
-# which fails to compile for MIPS
-www-client/midori webkit2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.66 2014/09/12 19:36:03 vincent Exp $
 
 # Vicente Olivert Riera <vincent@gentoo.org> (11 Sep 2014)
 # www-client/midori[jit] depends on net-libs/webkit-gtk[jit]

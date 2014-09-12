@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/snapper/snapper-9999.ebuild,v 1.3 2014/05/30 09:59:55 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/snapper/snapper-9999.ebuild,v 1.4 2014/09/12 19:32:35 dilfridge Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="+btrfs ext4 lvm pam xattr"
 
 RDEPEND="dev-libs/boost[threads]
 	dev-libs/libxml2
-	dev-libs/icu
+	dev-libs/icu:=
 	sys-apps/acl
 	sys-apps/dbus
 	sys-apps/util-linux
