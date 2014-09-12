@@ -1,6 +1,23 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.41 2014/08/08 21:24:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.44 2014/09/12 06:56:20 ssuominen Exp $
+
+  12 Sep 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/stardict-3.0.3-compositelookup_cpp.patch,
+  -files/stardict-3.0.3-correct-glib-include.patch,
+  -files/stardict-3.0.3-entry.patch, -files/stardict-3.0.3-gcc46.patch,
+  -files/stardict-3.0.3-overflow.patch, -stardict-3.0.3-r2.ebuild,
+  -stardict-3.0.4-r1.ebuild:
+  old
+
+  12 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> stardict-3.0.5.ebuild:
+  Add missing "sd2foldoc" to plugins handling in src_install() from "diff -u
+  stardict-3.0.4/tools/src/Makefile.am stardict-3.0.5/tools/src/Makefile.am"
+
+*stardict-3.0.5 (12 Sep 2014)
+
+  12 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> +stardict-3.0.5.ebuild:
+  Version bump wrt #522616
 
   08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> stardict-3.0.4.ebuild:
   Stable for sparc, wrt bug #510900
