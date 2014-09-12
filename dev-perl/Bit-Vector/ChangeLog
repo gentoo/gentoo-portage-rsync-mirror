@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Bit-Vector
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.58 2014/08/21 14:52:11 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.59 2014/09/12 17:38:15 zlogene Exp $
+
+*Bit-Vector-7.300.0 (12 Sep 2014)
+
+  12 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> +Bit-Vector-7.300.0.ebuild:
+  Version bump wrt bug #521358
 
 *Bit-Vector-7.200.0-r1 (21 Aug 2014)
 
