@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9368 2014/09/11 22:47:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9369 2014/09/12 09:41:56 maksbotan Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Sep 2014; Maxim Koltsov <maksbotan@gentoo.org> package.mask:
+  Mask mpv-0.{4,5} again
 
   11 Sep 2014; Michał Górny <mgorny@gentoo.org> desc/python_targets.desc:
   Restore python2_6 and pypy2_0 in desc/, since they are still used by old
