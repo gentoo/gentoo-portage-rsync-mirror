@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/grhino-0.16.1.ebuild,v 1.3 2010/10/10 18:54:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/grhino-0.16.1.ebuild,v 1.4 2014/09/11 23:10:01 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Reversi game for GNOME, supporting the Go/Game Text Protocol"
@@ -21,8 +21,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i '/^(\|locale\|help\|omf\|icon\|)/s:@datadir@:/usr/share:' \
-		Makefile.in \
-		|| die "sed failed"
+		Makefile.in || die
 }
 
 src_configure() {
@@ -42,13 +41,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc ChangeLog NEWS README TODO
-
-	if use gnome; then
-		make_desktop_entry ${PN} GRhino
-	fi
-
+	default
+	use gnome && make_desktop_entry ${PN} GRhino
 	prepgamesdirs
 }

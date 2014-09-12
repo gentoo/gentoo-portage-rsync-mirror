@@ -1,6 +1,9 @@
 # ChangeLog for games-board/grhino
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/ChangeLog,v 1.12 2010/10/10 18:54:47 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/ChangeLog,v 1.13 2014/09/11 23:10:01 mr_bones_ Exp $
+
+  11 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org> grhino-0.16.1.ebuild:
+  EAPI=5; tidy
 
   10 Oct 2010; Christian Faulhammer <fauli@gentoo.org> grhino-0.16.1.ebuild:
   stable x86, bug 340012
@@ -43,4 +46,3 @@
 
   08 Jan 2007; <tupone@gentoo.org> +grhino-0.16.0.ebuild:
   New ebuild. Bug #90373 by Anton Romanov
-
