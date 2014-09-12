@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.15.4.ebuild,v 1.2 2014/06/20 09:22:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.16.3.ebuild,v 1.1 2014/09/12 21:47:29 pesa Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit eutils python-r1 toolchain-funcs
 
@@ -27,7 +27,7 @@ else
 fi
 
 # Sub-slot based on SIP_API_MAJOR_NR from siplib/sip.h.in
-SLOT="0/10"
+SLOT="0/11"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="debug doc"
 
@@ -44,7 +44,7 @@ RDEPEND="${DEPEND}"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-4.9.3-darwin.patch
+	epatch "${FILESDIR}"/${PN}-4.15.5-darwin.patch
 
 	if [[ ${PV} == *9999* ]]; then
 		python2 build.py prepare || die
