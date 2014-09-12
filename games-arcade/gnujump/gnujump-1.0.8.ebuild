@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnujump/gnujump-1.0.8.ebuild,v 1.2 2014/08/14 04:19:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnujump/gnujump-1.0.8.ebuild,v 1.3 2014/09/12 16:22:38 nimiux Exp $
 
 EAPI=5
 inherit eutils flag-o-matic games
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/gnujump/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[sound,video]
