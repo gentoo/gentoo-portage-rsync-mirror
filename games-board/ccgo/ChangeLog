@@ -1,6 +1,9 @@
 # ChangeLog for games-board/ccgo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ChangeLog,v 1.13 2012/05/04 04:30:11 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ChangeLog,v 1.14 2014/09/12 07:31:53 mr_bones_ Exp $
+
+  12 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org> ccgo-0.3.6.4.ebuild:
+  EAPI=5; respect AR; pass desktop-file-validate; tidy
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> ccgo-0.3.6.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -47,4 +50,3 @@
   29 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +ccgo-0.3.6.2.ebuild:
   initial commit - ebuild supplied by Dustin Koupal via bug #100642
-

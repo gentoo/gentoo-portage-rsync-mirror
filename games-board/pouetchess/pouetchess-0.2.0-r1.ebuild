@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.13 2013/06/29 16:09:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.14 2014/09/12 07:56:16 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils scons-utils games
 
 MY_PN=${PN/c/C}
@@ -15,25 +15,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="debug"
 
-DEPEND="media-libs/libsdl:0
+DEPEND="media-libs/libsdl:0[opengl,video]
 	media-libs/sdl-image[jpeg,png]
 	virtual/glu
 	virtual/opengl"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${PN}_src_${PV}
 
-PATCHES=( "${FILESDIR}/${P}-sconstruct-sandbox.patch"
-	"${FILESDIR}/${P}-nvidia_glext.patch"
-	"${FILESDIR}/${P}-segfaults.patch"
-	"${FILESDIR}/${P}-gcc43.patch" )
-
 src_prepare() {
-	epatch "${PATCHES[@]}"
+	epatch \
+		"${FILESDIR}/${P}-sconstruct-sandbox.patch" \
+		"${FILESDIR}/${P}-nvidia_glext.patch" \
+		"${FILESDIR}/${P}-segfaults.patch" \
+		"${FILESDIR}/${P}-gcc43.patch"
 	# Fix for LibSDL >= 1.2.10 detection
 	sed -i \
 		-e "s:sdlver.split('.') >= \['1','2','8'\]:sdlver.split('.') >= [1,2,8]:" \
-		pouetChess.py \
-		|| die
+		pouetChess.py || die
 }
 
 src_configure() {
@@ -43,19 +42,18 @@ src_configure() {
 		optimize=false \
 		prefix="${GAMES_PREFIX}" \
 		datadir="${GAMES_DATADIR}"/${PN} \
-		$(use debug && echo debug=1) \
-		|| die
+		$(use debug && echo debug=1) || die
 }
 
 src_compile() {
-	escons || die
+	escons
 }
 
 src_install() {
-	dogamesbin bin/${MY_PN} || die
+	dogamesbin bin/${MY_PN}
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r data/* || die
+	doins -r data/*
 
 	dodoc ChangeLog README
 
