@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-powermanagement/lxqt-powermanagement-0.7.0.ebuild,v 1.2 2014/05/29 13:27:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-powermanagement/lxqt-powermanagement-0.7.0.ebuild,v 1.3 2014/09/12 14:24:39 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -24,7 +24,7 @@ RDEPEND="dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
 	dev-qt/qtsvg:4
-	lxqt-base/liblxqt
+	=lxqt-base/liblxqt-0.7.0
 	razorqt-base/libqtxdg
 	x11-libs/libX11
 	x11-libs/libxcb"
