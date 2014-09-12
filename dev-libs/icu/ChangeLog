@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.280 2014/08/24 06:37:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.282 2014/09/12 00:49:11 jmorgan Exp $
+
+  12 Sep 2014; Jack Morgan <jmorgan@gentoo.org> icu-52.1.ebuild:
+  sparc stable for bz512012
+
+  12 Sep 2014; Jack Morgan <jmorgan@gentoo.org> icu-51.2-r2.ebuild:
+  sparc stable wrt #511146
 
   24 Aug 2014; Tomáš Chvátal <scarabeus@gentoo.org> icu-53.1.ebuild:
   Forgot to bump subslot.
