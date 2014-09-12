@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cvsweb/cvsweb-3.0.6-r1.ebuild,v 1.1 2014/09/11 08:26:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cvsweb/cvsweb-3.0.6-r1.ebuild,v 1.2 2014/09/12 15:57:24 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.freebsd.org/projects/cvsweb.html"
 SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/scop/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8
