@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.5.ebuild,v 1.1 2014/09/11 05:33:16 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.5.ebuild,v 1.2 2014/09/12 02:21:28 dlan Exp $
 
 EAPI=5
 
@@ -16,13 +16,16 @@ if [[ $PV == *9999 ]]; then
 else
 	KEYWORDS="~amd64 ~x86"
 	UPSTREAM_VER=
-	GENTOO_VER=
+	# xen-tools's gentoo patches tarball
+	GENTOO_VER=0
+	# xen-tools's gentoo patches version which apply to this specific ebuild
+	GENTOO_GPV=0
 	SEABIOS_VER=1.6.3.2
 
 	[[ -n ${UPSTREAM_VER} ]] && \
 		UPSTREAM_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P/-tools/}-upstream-patches-${UPSTREAM_VER}.tar.xz"
 	[[ -n ${GENTOO_VER} ]] && \
-		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P/-tools/}-gentoo-patches-${GENTOO_VER}.tar.xz"
+		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN/-tools/}-gentoo-patches-${GENTOO_VER}.tar.xz"
 
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz
 	http://code.coreboot.org/p/seabios/downloads/get/seabios-${SEABIOS_VER}.tar.gz
@@ -40,7 +43,7 @@ DOCS=( README docs/README.xen-bugtool )
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="api custom-cflags debug doc flask hvm qemu ocaml pygrub screen static-libs xend system-seabios"
+IUSE="api custom-cflags debug doc flask hvm qemu ocaml pygrub screen static-libs system-seabios"
 
 REQUIRED_USE="hvm? ( qemu )
 	${PYTHON_REQUIRED_USE}"
@@ -136,21 +139,20 @@ src_prepare() {
 	fi
 
 	# Gentoo's patchset
-	if [[ -n ${GENTOO_VER} ]]; then
-		EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" \
-			epatch "${WORKDIR}"/patches-gentoo
+	if [[ -n ${GENTOO_VER} && -n ${GENTOO_GPV} ]]; then
+		source "${FILESDIR}"/gentoo-patches.conf
+		_gpv=_gpv_${PN/-/_}_${PV//./}_${GENTOO_GPV}
+		for i in ${!_gpv}; do
+			EPATCH_SUFFIX="patch" \
+			EPATCH_FORCE="yes" \
+				epatch "${WORKDIR}"/patches-gentoo/$i
+		done
 	fi
 
-	# Drop .config, fixes to gcc-4.6
-	epatch "${FILESDIR}"/${PN/-tools/}-4-fix_dotconfig-gcc.patch
+	use system-seabios && epatch "${WORKDIR}"/patches-gentoo/${PN}-4-unbundle-seabios.patch
 
-	# Xend
-	if ! use xend; then
-		sed -e 's:xm xen-bugtool xen-python-path xend:xen-bugtool xen-python-path:' \
-			-i tools/misc/Makefile || die "Disabling xend failed"
-		sed -e 's:^XEND_INITD:#XEND_INITD:' \
-			-i tools/examples/Makefile || die "Disabling xend failed"
+	if gcc-specs-pie; then
+		epatch "${WORKDIR}"/patches-gentoo/ipxe-nopie.patch
 	fi
 
 	# if the user *really* wants to use their own custom-cflags, let them
@@ -189,54 +191,6 @@ src_prepare() {
 		sed -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" -i Makefile || die
 	fi
 
-	# Fix texi2html build error with new texi2html, qemu.doc.html
-	epatch "${FILESDIR}"/${PN}-4-docfix.patch \
-		"${FILESDIR}"/${PN}-4-qemu-xen-doc.patch
-
-	epatch "${FILESDIR}"/${PN}-4.2-pod-utf8-chars.patch \
-		"${FILESDIR}"/${PN}-4.2-pod-docs.patch \
-		"${FILESDIR}"/${PN}-4.2-pod-xl.patch
-
-	# Fix network broadcast on bridged networks
-	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
-
-	# Bug 496708
-	epatch "${FILESDIR}"/${PN}-4-unbundle-ipxe.patch
-	use system-seabios && epatch "${FILESDIR}"/${PN}-4-unbundle-seabios.patch
-
-	# Fix bridge by idella4, bug #362575
-	epatch "${FILESDIR}/${PN}-4.1.1-bridge.patch"
-
-	# Don't build ipxe with pie on hardened, Bug #360805
-	if gcc-specs-pie; then
-		epatch "${FILESDIR}"/ipxe-nopie.patch
-	fi
-
-	# Prevent double stripping of files at install
-	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-nostrip.patch
-
-	# fix jobserver in Makefile
-	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-jserver.patch
-
-	# add missing header, Bug #467200
-	epatch "${FILESDIR}"/xen-4-ulong.patch \
-		"${FILESDIR}"/${PN}-4.2-xen_disk_leak.patch
-
-	# Set dom0-min-mem to kb; Bug #472982
-	epatch "${FILESDIR}"/${PN/-tools/}-4.2-configsxp.patch
-
-	# Bug 463840
-	epatch "${FILESDIR}"/${PN}-4.2.2-install.patch
-	epatch "${FILESDIR}"/${PN}-4.2.2-rt-link.patch
-
-	# Bug 379537
-	epatch "${FILESDIR}"/fix-gold-ld.patch
-
-	# Bug 510976
-	epatch "${FILESDIR}"/${PN}-4.2.4-udev-rules.patch
-
-	# bundled seabios
-	epatch "${FILESDIR}"/${PN}-4-anti-seabios-download.patch
 	mv ../seabios-${SEABIOS_VER} tools/firmware/seabios-dir-remote || die
 	pushd tools/firmware/ > /dev/null
 	ln -s seabios-dir-remote seabios-dir || die
@@ -323,9 +277,6 @@ src_install() {
 	rm -rf "${D}"/usr/share/doc/xen/
 	doman docs/man?/*
 
-	if use xend; then
-		newinitd "${FILESDIR}"/xend.initd-r2 xend || die "Couldn't install xen.initd"
-	fi
 	newconfd "${FILESDIR}"/xendomains.confd xendomains
 	newconfd "${FILESDIR}"/xenstored.confd xenstored
 	newconfd "${FILESDIR}"/xenconsoled.confd xenconsoled
@@ -375,13 +326,6 @@ pkg_postinst() {
 	elog "Recommended to utilise the xencommons script to config sytem at boot."
 	elog "Add by use of rc-update on completion of the install"
 
-	if [[ "$(scanelf -s __guard -q "${PYTHON}")" ]] ; then
-		echo
-		ewarn "xend may not work when python is built with stack smashing protection (ssp)."
-		ewarn "If 'xm create' fails with '<ProtocolError for /RPC2: -1 >', see bug #141866"
-		ewarn "This problem may be resolved as of Xen 3.0.4, if not post in the bug."
-	fi
-
 	# TODO: we need to have the current Python slot here.
 	if ! has_version "dev-lang/python[ncurses]"; then
 		echo
@@ -400,11 +344,6 @@ pkg_postinst() {
 		elog "HVM (VT-x and AMD-V) support has been disabled. If you need hvm"
 		elog "support enable the hvm use flag."
 		elog "An x86 or amd64 system is required to build HVM support."
-	fi
-
-	if use xend; then
-		echo
-		elog "xend capability has been enabled and installed"
 	fi
 
 	if grep -qsF XENSV= "${ROOT}/etc/conf.d/xend"; then

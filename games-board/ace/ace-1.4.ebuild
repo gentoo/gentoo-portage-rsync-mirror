@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.4.ebuild,v 1.8 2014/09/11 08:38:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.4.ebuild,v 1.9 2014/09/12 02:18:18 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils games
@@ -18,7 +18,6 @@ RDEPEND="x11-libs/libX11
 	media-libs/libpng:0"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
-
 
 src_prepare() {
 	epatch \

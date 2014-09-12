@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.1.ebuild,v 1.1 2014/09/11 05:33:16 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.1.ebuild,v 1.2 2014/09/12 02:21:28 dlan Exp $
 
 EAPI=5
 
@@ -18,13 +18,16 @@ if [[ $PV == *9999 ]]; then
 else
 	KEYWORDS="~amd64 ~arm -x86"
 	UPSTREAM_VER=
-	GENTOO_VER=
+	# xen-tools's gentoo patches tarball
+	GENTOO_VER=0
+	# xen-tools's gentoo patches version which apply to this specific ebuild
+	GENTOO_GPV=0
 	SEABIOS_VER=1.7.3.1
 
 	[[ -n ${UPSTREAM_VER} ]] && \
 		UPSTRAM_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P/-tools/}-upstream-patches-${UPSTREAM_VER}.tar.xz"
 	[[ -n ${GENTOO_VER} ]] && \
-		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P/-tools/}-gentoo-patches-${GENTOO_VER}.tar.xz"
+		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN/-tools}-gentoo-patches-${GENTOO_VER}.tar.xz"
 
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${MY_PV}/xen-${MY_PV}.tar.gz
 	http://code.coreboot.org/p/seabios/downloads/get/seabios-${SEABIOS_VER}.tar.gz
@@ -149,47 +152,18 @@ src_prepare() {
 	fi
 
 	# Gentoo's patchset
-	if [[ -n ${GENTOO_VER} ]]; then
-		EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" \
-			epatch "${WORKDIR}"/patches-gentoo
+	if [[ -n ${GENTOO_VER} && -n ${GENTOO_GPV} ]]; then
+		source "${FILESDIR}"/gentoo-patches.conf
+		_gpv=_gpv_${PN/-/_}_${PV//./}_${GENTOO_GPV}
+		for i in ${!_gpv}; do
+			EPATCH_SUFFIX="patch" \
+			EPATCH_FORCE="yes" \
+				epatch "${WORKDIR}"/patches-gentoo/$i
+		done
 	fi
 
-	# Fix network broadcast on bridged networks
-	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
-
-	# Bug 496708
-	epatch "${FILESDIR}"/${PN}-4-unbundle-ipxe.patch
-
-	# Fix bridge by idella4, bug #362575
-	epatch "${FILESDIR}/${PN}-4.1.1-bridge.patch"
-
-	# Prevent double stripping of files at install
-	epatch "${FILESDIR}"/${PN/-tools/}-4.4-nostrip.patch
-
-	# fix jobserver in Makefile
-	epatch "${FILESDIR}"/${PN/-tools/}-4.3-jserver.patch
-
-	# Set dom0-min-mem to kb; Bug #472982
-	epatch "${FILESDIR}"/${PN/-tools/}-4.2-configsxp.patch
-
-	# Bug 477676
-	epatch "${FILESDIR}"/${PN}-4.3-ar-cc.patch
-
-	# Bug 379537
-	epatch "${FILESDIR}"/fix-gold-ld.patch
-
-	# Prevent file collision with qemu package Bug 478064
-	epatch "${FILESDIR}"/xen-4.4-qemu-bridge.patch
 	mv tools/qemu-xen/qemu-bridge-helper.c tools/qemu-xen/xen-bridge-helper.c || die
 
-	epatch "${FILESDIR}"/${PN}-4.4-api-fix.patch
-
-	# Fix po file collision with app-emulation/qemu, while USE=qemu is enabled, Bug 508302
-	epatch "${FILESDIR}"/${PN}-4-qemu-fix-po-collision.patch
-
-	# bundled seabios
-	epatch "${FILESDIR}"/${PN}-4-anti-seabios-download.patch
 	mv ../seabios-${SEABIOS_VER} tools/firmware/seabios-dir-remote || die
 	pushd tools/firmware/ > /dev/null
 	ln -s seabios-dir-remote seabios-dir || die
@@ -398,13 +372,6 @@ pkg_postinst() {
 	elog ""
 	elog "Recommended to utilise the xencommons script to config sytem At boot"
 	elog "Add by use of rc-update on completion of the install"
-
-	if [[ "$(scanelf -s __guard -q "${PYTHON}")" ]] ; then
-		echo
-		ewarn "xend may not work when python is built with stack smashing protection (ssp)."
-		ewarn "If 'xm create' fails with '<ProtocolError for /RPC2: -1 >', see bug #141866"
-		ewarn "This problem may be resolved as of Xen 3.0.4, if not post in the bug."
-	fi
 
 	# TODO: we need to have the current Python slot here.
 	if ! has_version "dev-lang/python[ncurses]"; then

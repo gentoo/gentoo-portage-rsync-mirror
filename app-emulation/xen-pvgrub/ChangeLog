@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.56 2014/09/11 05:15:57 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.57 2014/09/12 02:29:11 dlan Exp $
+
+  12 Sep 2014; Yixun Lan <dlan@gentoo.org> -xen-pvgrub-4.4.0.ebuild:
+  cleanup due bug 522576
 
 *xen-pvgrub-4.4.1 (11 Sep 2014)
 *xen-pvgrub-4.3.3 (11 Sep 2014)
