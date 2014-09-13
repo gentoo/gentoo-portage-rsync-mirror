@@ -1,9 +1,10 @@
 #!/sbin/runscript
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 depend() {
-	need logger net
+	need net
+	use logger
 }
 
 start() {

@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.144 2014/07/10 08:16:13 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.145 2014/09/13 14:17:42 gurligebis Exp $
+
+*strongswan-5.2.0-r1 (13 Sep 2014)
+
+  13 Sep 2014; <gurligebis@gentoo.org> -strongswan-5.2.0.ebuild,
+  +strongswan-5.2.0-r1.ebuild, files/ipsec, metadata.xml:
+  Changing init script to "use logger" instead of "need logger" - fixing bug
+  #476514 .
+  Adding use flags for more plugins, fixing bugs #481740 and #504942 .
 
 *strongswan-5.2.0 (10 Jul 2014)
 

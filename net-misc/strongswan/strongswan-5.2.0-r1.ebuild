@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.2.0.ebuild,v 1.1 2014/07/10 08:16:13 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.2.0-r1.ebuild,v 1.1 2014/09/13 14:17:42 gurligebis Exp $
 
 EAPI=5
 inherit eutils linux-info systemd user
@@ -12,7 +12,17 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 LICENSE="GPL-2 RSA DES"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
-IUSE="+caps curl +constraints debug dhcp eap farp gcrypt ldap mysql networkmanager +non-root +openssl sqlite pam"
+IUSE="+caps curl +constraints debug dhcp eap farp gcrypt ldap mysql networkmanager +non-root +openssl sqlite pam pkcs11"
+
+STRONGSWAN_PLUGINS_STD="led lookip systime-fix unity vici"
+STRONGSWAN_PLUGINS_OPT="blowfish ccm ctr gcm ha ipseckey ntru padlock rdrand unbound whitelist"
+for mod in $STRONGSWAN_PLUGINS_STD; do
+	IUSE="${IUSE} +strongswan_plugins_${mod}"
+done
+
+for mod in $STRONGSWAN_PLUGINS_OPT; do
+	IUSE="${IUSE} strongswan_plugins_${mod}"
+done
 
 COMMON_DEPEND="!net-misc/openswan
 	>=dev-libs/gmp-4.1.5
@@ -24,7 +34,8 @@ COMMON_DEPEND="!net-misc/openswan
 	mysql? ( virtual/mysql )
 	sqlite? ( >=dev-db/sqlite-3.3.1 )
 	networkmanager? ( net-misc/networkmanager )
-	pam? ( sys-libs/pam )"
+	pam? ( sys-libs/pam )
+	strongswan_plugins_unbound? ( net-dns/unbound )"
 DEPEND="${COMMON_DEPEND}
 	virtual/linux-sources
 	sys-kernel/linux-headers"
@@ -110,15 +121,31 @@ src_configure() {
 	else
 		myconf="${myconf} --disable-eap-gtc"
 	fi
+
+	for mod in $STRONGSWAN_PLUGINS_STD; do
+		if use strongswan_plugins_${mod}; then
+			myconf+=" --enable-${mod}"
+		fi
+	done
+
+	for mod in $STRONGSWAN_PLUGINS_OPT; do
+		if use strongswan_plugins_${mod}; then
+			myconf+=" --enable-${mod}"
+		fi
+	done
+
 	econf \
 		--disable-static \
 		--enable-ikev1 \
 		--enable-ikev2 \
+		--enable-swanctl \
+		--enable-socket-dynamic \
 		$(use_with caps capabilities libcap) \
 		$(use_enable curl) \
 		$(use_enable constraints) \
 		$(use_enable ldap) \
 		$(use_enable debug leak-detective) \
+		$(use_enable dhcp) \
 		$(use_enable eap eap-sim) \
 		$(use_enable eap eap-sim-file) \
 		$(use_enable eap eap-simaka-sql) \
@@ -128,16 +155,19 @@ src_configure() {
 		$(use_enable eap eap-md5) \
 		$(use_enable eap eap-aka) \
 		$(use_enable eap eap-aka-3gpp2) \
+		$(use_enable eap md4) \
 		$(use_enable eap eap-mschapv2) \
 		$(use_enable eap eap-radius) \
 		$(use_enable eap eap-tls) \
-		$(use_enable openssl) \
+		$(use_enable eap xauth-eap) \
+		$(use_enable farp) \
 		$(use_enable gcrypt) \
 		$(use_enable mysql) \
-		$(use_enable sqlite) \
-		$(use_enable dhcp) \
-		$(use_enable farp) \
 		$(use_enable networkmanager nm) \
+		$(use_enable openssl) \
+		$(use_enable pam xauth-pam) \
+		$(use_enable pkcs11) \
+		$(use_enable sqlite) \
 		"$(systemd_with_unitdir)" \
 		${myconf}
 }
