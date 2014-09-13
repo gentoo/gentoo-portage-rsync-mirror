@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.2.6.3.ebuild,v 1.1 2014/09/11 17:53:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.2.6.3.ebuild,v 1.2 2014/09/13 08:35:34 dilfridge Exp $
 
 EAPI=5
 
@@ -83,10 +83,10 @@ COMMON_DEPEND="
 	app-arch/unzip
 	>=app-text/hunspell-1.3.2-r3
 	app-text/mythes
-	app-text/libabw
+	=app-text/libabw-0.0*
 	>=app-text/libexttextcat-3.2
-	app-text/libebook
-	app-text/libetonyek
+	=app-text/libebook-0.0*
+	=app-text/libetonyek-0.0*
 	app-text/liblangtag
 	app-text/libmspub
 	>=app-text/libmwaw-0.2

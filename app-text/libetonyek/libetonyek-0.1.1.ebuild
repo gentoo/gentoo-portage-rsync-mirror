@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libetonyek/libetonyek-9999.ebuild,v 1.4 2014/09/13 08:57:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libetonyek/libetonyek-0.1.1.ebuild,v 1.1 2014/09/13 08:57:12 dilfridge Exp $
 
 EAPI=5
 
