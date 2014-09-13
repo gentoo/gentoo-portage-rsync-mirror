@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.62 2014/08/12 06:41:33 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.63 2014/09/13 19:57:13 polynomial-c Exp $
+
+*tortoisehg-3.1.1 (13 Sep 2014)
+
+  13 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> +tortoisehg-3.1.1.ebuild:
+  Version bump.
 
   12 Aug 2014; Andreas Schuerch <nativemad@gentoo.org>
   tortoisehg-2.10.2.ebuild:
