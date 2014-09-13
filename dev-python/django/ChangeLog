@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.142 2014/09/09 05:27:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.144 2014/09/13 17:24:49 ago Exp $
+
+  13 Sep 2014; Agostino Sarubbo <ago@gentoo.org> django-1.4.15.ebuild,
+  django-1.5.10.ebuild, django-1.6.7.ebuild:
+  Stable for x86, wrt bug #521324
+
+  13 Sep 2014; Agostino Sarubbo <ago@gentoo.org> django-1.4.15.ebuild,
+  django-1.5.10.ebuild, django-1.6.7.ebuild:
+  Stable for amd64, wrt bug #521324
 
 *django-1.6.7 (09 Sep 2014)
 *django-1.4.15 (09 Sep 2014)

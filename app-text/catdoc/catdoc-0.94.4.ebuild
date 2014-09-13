@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/catdoc-0.94.4.ebuild,v 1.1 2014/09/11 20:33:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/catdoc-0.94.4.ebuild,v 1.3 2014/09/13 17:07:11 ago Exp $
 
 EAPI=5
 WANT_AUTOMAKE=none
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="tk"
 
 DEPEND="tk? ( >=dev-lang/tk-8.1 )"

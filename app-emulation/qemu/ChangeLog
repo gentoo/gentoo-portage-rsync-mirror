@@ -1,6 +1,20 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.293 2014/09/12 07:01:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.296 2014/09/13 17:11:54 ago Exp $
+
+  13 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  -files/qemu-2.0.0-CVE-2013-4541.patch, -files/qemu-2.0.0-CVE-2014-0222.patch,
+  -files/qemu-2.0.0-CVE-2014-0223.patch,
+  -files/qemu-2.0.0-qcow-check-max-sizes.patch,
+  -files/qemu-2.0.0-usb-post-load-checks.patch, -qemu-2.0.0-r1.ebuild,
+  -qemu-2.1.0.ebuild:
+  Remove old
+
+  13 Sep 2014; Agostino Sarubbo <ago@gentoo.org> qemu-2.1.0-r1.ebuild:
+  Stable for x86, wrt bug #520688
+
+  13 Sep 2014; Agostino Sarubbo <ago@gentoo.org> qemu-2.1.0-r1.ebuild:
+  Stable for amd64, wrt bug #520688
 
 *qemu-2.1.1 (12 Sep 2014)
 
