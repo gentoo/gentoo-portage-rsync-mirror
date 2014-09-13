@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16028 2014/09/12 09:41:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16029 2014/09/13 09:17:55 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -46,6 +46,7 @@ dev-libs/ibpp
 # Davide Pesavento <pesa@gentoo.org> (11 Sep 2014)
 # Mask Qt 5.3.x for wider testing to ensure that it does
 # not break or conflict with other packages (bug #454132)
+www-client/otter
 =dev-qt/assistant-5.3.1*
 =dev-qt/designer-5.3.1*
 =dev-qt/linguist-5.3.1*

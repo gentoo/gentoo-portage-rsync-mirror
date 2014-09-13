@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.720 2014/09/12 19:13:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.721 2014/09/13 09:10:08 hwoarang Exp $
+
+  13 Sep 2014; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
+  Mask midori[jit] everywhere
 
   12 Sep 2014; Johannes Huber <johu@gentoo.org> package.use.mask:
   Mask media-sound/tomahawk[qt5].

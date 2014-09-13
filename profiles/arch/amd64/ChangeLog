@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.274 2014/09/02 11:51:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.275 2014/09/13 09:08:30 hwoarang Exp $
+
+  13 Sep 2014; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
+  midori[jit] works on amd64
 
   02 Sep 2014; Hans de Graaff <graaff@gentoo.org> use.mask:
   ruby_targets_jruby is now masked everywhere.

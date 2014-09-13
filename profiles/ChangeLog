@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9369 2014/09/12 09:41:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9370 2014/09/13 09:17:55 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Sep 2014; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Add www-client/otter to dev-qt/*:5 mask.
 
   12 Sep 2014; Maxim Koltsov <maksbotan@gentoo.org> package.mask:
   Mask mpv-0.{4,5} again

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.137 2014/08/04 02:13:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.138 2014/09/13 09:07:59 hwoarang Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -118,6 +118,7 @@ app-emulation/qemu	spice
 # it's masked in base profile and unmasked here (bug #396313).
 net-libs/webkit-gtk -jit
 www-client/epiphany -jit
+www-client/midori -jit
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 Dec 2011)
 # NuppelVideo support is x86 only
