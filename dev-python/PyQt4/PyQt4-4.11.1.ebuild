@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.1.ebuild,v 1.1 2014/07/15 17:34:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.1.ebuild,v 1.3 2014/09/13 01:42:01 pesa Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit eutils multibuild python-r1 qmake-utils toolchain-funcs
 
@@ -200,7 +200,7 @@ src_install() {
 	dodoc NEWS THANKS
 
 	if use doc; then
-		dohtml -r doc/html/*
+		dodoc -r doc/html
 	fi
 
 	if use examples; then
