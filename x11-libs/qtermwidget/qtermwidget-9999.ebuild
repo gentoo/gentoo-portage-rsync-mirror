@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtermwidget/qtermwidget-9999.ebuild,v 1.1 2014/07/28 18:29:16 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtermwidget/qtermwidget-9999.ebuild,v 1.2 2014/09/13 16:36:24 kensington Exp $
 
 EAPI="5"
 
@@ -20,7 +20,8 @@ KEYWORDS=""
 IUSE="debug"
 # python
 
-DEPEND="dev-qt/qtgui:4"
+DEPEND="dev-qt/qtcore:4
+	dev-qt/qtgui:4"
 RDEPEND="${DEPEND}"
 
 #src_prepare() {

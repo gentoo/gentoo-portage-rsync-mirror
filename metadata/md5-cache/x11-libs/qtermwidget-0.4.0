@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=|| ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Qt4 terminal emulator widget
 EAPI=4
 HOMEPAGE=https://github.com/qterminal/
 IUSE=debug
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2
-RDEPEND=|| ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 )
+RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4
 SLOT=0
 SRC_URI=mirror://gentoo/qtermwidget-0.4.0.tar.xz
 _eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=1f4c527ff33fa13dd616348d6c836edf
+_md5_=ee4595f07bef7209dca970649b5f6cc0

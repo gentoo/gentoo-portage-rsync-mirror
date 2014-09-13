@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qtermwidget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtermwidget/ChangeLog,v 1.9 2014/08/03 16:53:22 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtermwidget/ChangeLog,v 1.10 2014/09/13 16:36:24 kensington Exp $
+
+  13 Sep 2014; Michael Palimaka <kensington@gentoo.org>
+  qtermwidget-0.4.0.37.ebuild, qtermwidget-0.4.0.ebuild,
+  qtermwidget-9999.ebuild:
+  Correct dependencies.
 
   03 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org> qtermwidget-0.4.0.37.ebuild:
   inherit vcs-snapshot, bug #518652. Thanks to Alex Xu (Hello 71)
