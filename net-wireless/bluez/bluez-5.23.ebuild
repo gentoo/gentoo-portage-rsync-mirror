@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.20-r1.ebuild,v 1.1 2014/06/26 17:18:43 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.23.ebuild,v 1.1 2014/09/13 12:27:43 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit eutils multilib python-any-r1 readme.gentoo systemd \
-	udev user multilib-minimal
+inherit autotools eutils multilib python-any-r1 readme.gentoo systemd udev user multilib-minimal
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org"
@@ -87,6 +86,8 @@ src_prepare() {
 			Makefile.{in,tools} || die
 	fi
 
+	eautoreconf
+
 	multilib_copy_sources
 }
 
@@ -108,6 +109,7 @@ multilib_src_configure() {
 	econf \
 		--localstatedir=/var \
 		--disable-android \
+		--enable-datafiles \
 		--enable-experimental \
 		--enable-optimization \
 		$(use_enable debug) \
@@ -116,6 +118,7 @@ multilib_src_configure() {
 		--enable-library \
 		$(multilib_native_use_enable test) \
 		--enable-tools \
+		--enable-manpages \
 		--enable-monitor \
 		$(multilib_native_use_enable cups) \
 		$(multilib_native_use_enable obex) \
@@ -160,17 +163,20 @@ multilib_src_install_all() {
 
 	keepdir /var/lib/bluetooth
 
+	# Upstream don't want people to play with them
+	# But we keep installing them due 'historical' reasons
 	insinto /etc/bluetooth
 	local d
 	for d in input network proximity; do
 		doins profiles/${d}/${d}.conf
 	done
-
 	doins src/main.conf
 	doins src/bluetooth.conf
 
-	insinto /usr/share/dbus-1/system-services
-	doins src/org.bluez.service
+# FIXME:
+# Looks like upstream installs it only for systemd, probably not needed
+#	insinto /usr/share/dbus-1/system-services
+#	doins src/org.bluez.service
 
 	newinitd "${FILESDIR}"/bluetooth-init.d-r3 bluetooth
 	newinitd "${FILESDIR}"/rfcomm-init.d-r2 rfcomm
@@ -187,8 +193,7 @@ pkg_postinst() {
 
 	if ! has_version sys-auth/consolekit && ! has_version sys-apps/systemd; then
 		elog "Since you don't have sys-auth/consolekit neither sys-apps/systemd, you will only"
-		elog "be able to run bluetooth clients as root. If you want to be able to run bluetooth clientes as"
-		elog "a regular user, you need to enable the consolekit use flag for this package or"
-		elog "to add the user to the plugdev group."
+		elog "be able to run bluetooth clients as root. If you want to be able to run bluetooth clients as"
+		elog "a regular user, you need to add the user to the plugdev group."
 	fi
 }
