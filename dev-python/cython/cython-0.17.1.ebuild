@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.17.1.ebuild,v 1.1 2012/11/16 02:19:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.17.1.ebuild,v 1.2 2014/09/13 20:33:49 xarthisius Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.20.1.ebuild,v 1.6 2014/09/13 20:33:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.21.ebuild,v 1.1 2014/09/13 20:33:49 xarthisius Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
 
 inherit distutils-r1 flag-o-matic toolchain-funcs
 
@@ -26,10 +26,6 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/numpy[$(python_gen_usedep python{2_7,3_2,3_3,3_4})] )"
 
 S="${WORKDIR}/${MY_PN}-${PV%_*}"
-
-PATCHES=(
-	"${FILESDIR}"/${P}-backport-test-fix.patch
-)
 
 python_compile() {
 	if [[ ${EPYTHON} == python2* ]]; then
