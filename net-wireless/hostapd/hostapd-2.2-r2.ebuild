@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.2-r1.ebuild,v 1.1 2014/08/29 19:28:44 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.2-r2.ebuild,v 1.1 2014/09/13 15:04:53 gurligebis Exp $
 
 EAPI="4"
 
@@ -13,15 +13,15 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~x86"
-IUSE="ipv6 logwatch madwifi +ssl +wps +crda"
+IUSE="ipv6 logwatch netlink sqlite +ssl +wps +crda"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	kernel_linux? (
 		dev-libs/libnl:3
 		crda? ( net-wireless/crda )
 	)
-	madwifi? ( ||
-		( >net-wireless/madwifi-ng-tools-0.9.3 ) )"
+	netlink? ( net-libs/libnfnetlink )
+	sqlite? ( >=dev-db/sqlite-3 )"
 
 RDEPEND="${DEPEND}"
 
@@ -44,10 +44,13 @@ src_configure() {
 
 	if use ssl; then
 		# SSL authentication methods
+		echo "CONFIG_EAP_FAST=y" >> ${CONFIG}
 		echo "CONFIG_EAP_TLS=y" >> ${CONFIG}
 		echo "CONFIG_EAP_TTLS=y" >> ${CONFIG}
 		echo "CONFIG_EAP_MSCHAPV2=y" >> ${CONFIG}
 		echo "CONFIG_EAP_PEAP=y" >> ${CONFIG}
+		echo "CONFIG_TLSV11=y" >> ${CONFIG}
+		echo "CONFIG_TLSV12=y" >> ${CONFIG}
 	fi
 
 	if use wps; then
@@ -55,12 +58,16 @@ src_configure() {
 		echo "CONFIG_WPS=y" >> ${CONFIG}
 		echo "CONFIG_WPS2=y" >> ${CONFIG}
 		echo "CONFIG_WPS_UPNP=y" >> ${CONFIG}
+		echo "CONFIG_WPS_NFC=y" >> ${CONFIG}
 		einfo "Enabling Wi-Fi Protected Setup support"
 	fi
 
+	echo "CONFIG_EAP_IKEV2=y" >> ${CONFIG}
+	echo "CONFIG_EAP_TNC=y" >> ${CONFIG}
 	echo "CONFIG_EAP_GTC=y" >> ${CONFIG}
 	echo "CONFIG_EAP_SIM=y" >> ${CONFIG}
 	echo "CONFIG_EAP_AKA=y" >> ${CONFIG}
+	echo "CONFIG_EAP_AKA_PRIME=y" >> ${CONFIG}
 	echo "CONFIG_EAP_EKE=y" >> ${CONFIG}
 	echo "CONFIG_EAP_PAX=y" >> ${CONFIG}
 	echo "CONFIG_EAP_PSK=y" >> ${CONFIG}
@@ -81,19 +88,11 @@ src_configure() {
 	echo "CONFIG_DRIVER_NONE=y" >> ${CONFIG}
 	einfo "  None driver enabled"
 
-	if use madwifi; then
-		# Add include path for madwifi-driver headers
-		einfo "  Madwifi driver enabled"
-		echo "CFLAGS += -I/usr/include/madwifi" >> ${CONFIG}
-		echo "CONFIG_DRIVER_MADWIFI=y" >> ${CONFIG}
-	else
-		einfo "  Madwifi driver disabled"
-	fi
-
 	einfo "  nl80211 driver enabled"
 	echo "CONFIG_DRIVER_NL80211=y" >> ${CONFIG}
 
 	# misc
+	echo "CONFIG_DEBUG_FILE=y" >> ${CONFIG}
 	echo "CONFIG_PKCS12=y" >> ${CONFIG}
 	echo "CONFIG_RADIUS_SERVER=y" >> ${CONFIG}
 	echo "CONFIG_IAPP=y" >> ${CONFIG}
@@ -104,11 +103,24 @@ src_configure() {
 	echo "CONFIG_PEERKEY=y" >> ${CONFIG}
 	echo "CONFIG_RSN_PREAUTH=y" >> ${CONFIG}
 	echo "CONFIG_INTERWORKING=y" >> ${CONFIG}
+	echo "CONFIG_FULL_DYNAMIC_VLAN=y" >> ${CONFIG}
+	echo "CONFIG_HS20=y" >> ${CONFIG}
+	echo "CONFIG_WNM=y" >> ${CONFIG}
 	echo "CONFIG_ACS=y" >> ${CONFIG}
+
+	if use netlink; then
+		# Netlink support
+		echo "CONFIG_VLAN_NETLINK=y" >> ${CONFIG}
+	fi
 
 	if use ipv6; then
 		# IPv6 support
 		echo "CONFIG_IPV6=y" >> ${CONFIG}
+	fi
+
+	if use sqlite; then
+		# Sqlite support
+		echo "CONFIG_SQLITE=y" >> ${CONFIG}
 	fi
 
 	# If we are using libnl 2.0 and above, enable support for it
@@ -178,15 +190,6 @@ pkg_postinst() {
 	einfo "essid_wlan0=\"test\""
 	einfo "mode_wlan0=\"master\""
 	einfo
-	if use madwifi; then
-		einfo "This package compiles against the headers installed by"
-		einfo "madwifi-old, madwifi-ng or madwifi-ng-tools."
-		einfo "You should remerge ${PN} after upgrading these packages."
-		einfo
-		einfo "Since you are using the madwifi-ng driver, you should disable or"
-		einfo "comment out wme_enabled from ${PN}.conf, since it will"
-		einfo "cause problems otherwise (see bug #260377"
-	fi
 	#if [ -e "${KV_DIR}"/net/mac80211 ]; then
 	#	einfo "This package now compiles against the headers installed by"
 	#	einfo "the kernel source for the mac80211 driver. You should "

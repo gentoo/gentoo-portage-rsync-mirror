@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.71 2014/05/03 18:39:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.72 2014/09/13 15:18:11 johu Exp $
 
 EAPI=5
 
@@ -16,37 +16,61 @@ HOMEPAGE="http://quassel-irc.org/"
 LICENSE="GPL-3"
 KEYWORDS=""
 SLOT="0"
-IUSE="ayatana crypt dbus debug kde monolithic phonon postgres +server +ssl syslog webkit X"
+IUSE="ayatana crypt dbus debug kde monolithic phonon postgres qt5 +server +ssl syslog webkit X"
 
 SERVER_RDEPEND="
-	dev-qt/qtscript:4
-	crypt? (
-		app-crypt/qca:2
-		app-crypt/qca-ossl
+	qt5? (
+		dev-qt/qtscript:5
+		postgres? ( dev-qt/qtsql:5[postgres] )
+		!postgres? ( dev-qt/qtsql:5[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] )
 	)
-	!postgres? ( dev-qt/qtsql:4[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] )
-	postgres? ( dev-qt/qtsql:4[postgres] )
+	!qt5? (
+		dev-qt/qtscript:4
+		crypt? (
+			app-crypt/qca:2
+			app-crypt/qca-ossl
+		)
+		postgres? ( dev-qt/qtsql:4[postgres] )
+		!postgres? ( dev-qt/qtsql:4[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] )
+	)
 	syslog? ( virtual/logger )
 "
 
 GUI_RDEPEND="
-	dev-qt/qtgui:4
-	ayatana? ( dev-libs/libindicate-qt )
-	dbus? (
-		dev-qt/qtdbus:4
-		dev-libs/libdbusmenu-qt
+	qt5? (
+		dev-qt/qtgui:5
+		dev-qt/qtwidgets:5
+		dbus? (
+			dev-libs/libdbusmenu-qt[qt5(+)]
+			dev-qt/qtdbus:5
+		)
+		phonon? ( media-libs/phonon[qt5] )
+		webkit? ( dev-qt/qtwebkit:5[widgets] )
 	)
-	kde? (
-		kde-base/kdelibs:4
-		kde-base/oxygen-icons:4
-		ayatana? ( kde-misc/plasma-widget-message-indicator )
+	!qt5? (
+		dev-qt/qtgui:4
+		ayatana? ( dev-libs/libindicate-qt )
+		dbus? (
+			dev-libs/libdbusmenu-qt[qt4(+)]
+			dev-qt/qtdbus:4
+			kde? (
+				kde-base/kdelibs:4
+				kde-base/oxygen-icons:4
+				ayatana? ( kde-misc/plasma-widget-message-indicator )
+			)
+		)
+		phonon? ( || ( media-libs/phonon[qt4] dev-qt/qtphonon:4 ) )
+		webkit? ( dev-qt/qtwebkit:4 )
 	)
-	phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) )
-	webkit? ( dev-qt/qtwebkit:4 )
 "
 
 RDEPEND="
-	dev-qt/qtcore:4[ssl?]
+	sys-libs/zlib
+	qt5? (
+		dev-qt/qtcore:5
+		dev-qt/qtnetwork:5[ssl?]
+	)
+	!qt5? ( dev-qt/qtcore:4[ssl?] )
 	monolithic? (
 		${SERVER_RDEPEND}
 		${GUI_RDEPEND}
@@ -55,23 +79,25 @@ RDEPEND="
 		server? ( ${SERVER_RDEPEND} )
 		X? ( ${GUI_RDEPEND} )
 	)
-	"
+"
 DEPEND="${RDEPEND}
-	kde? ( dev-util/automoc )"
+	qt5? ( dev-qt/linguist-tools:5 )
+"
 
-DOCS="AUTHORS ChangeLog README"
+DOCS=( AUTHORS ChangeLog README )
 
 S="${WORKDIR}/${P/_/-}"
 
 REQUIRED_USE="
 	|| ( X server monolithic )
+	ayatana? ( || ( X monolithic ) )
 	crypt? ( || ( server monolithic ) )
-	postgres? ( || ( server monolithic ) )
-	syslog? ( || ( server monolithic ) )
+	dbus? ( || ( X monolithic ) )
 	kde? ( || ( X monolithic ) )
 	phonon? ( || ( X monolithic ) )
-	dbus? ( || ( X monolithic ) )
-	ayatana? ( || ( X monolithic ) )
+	postgres? ( || ( server monolithic ) )
+	qt5? ( !ayatana !crypt !kde phonon )
+	syslog? ( || ( server monolithic ) )
 	webkit? ( || ( X monolithic ) )
 "
 
@@ -87,18 +113,19 @@ pkg_setup() {
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_with ayatana LIBINDICATE)
-		$(cmake-utils_use_want X QTCLIENT)
-		$(cmake-utils_use_want server CORE)
-		$(cmake-utils_use_want monolithic MONO)
-		$(cmake-utils_use_with webkit)
-		$(cmake-utils_use_with phonon)
+		$(cmake-utils_use_find_package ayatana IndicateQt)
+		$(cmake-utils_use_find_package crypt QCA2)
+		$(cmake-utils_use_find_package dbus dbusmenu-qt)
+		$(cmake-utils_use_find_package dbus dbusmenu-qt5)
 		$(cmake-utils_use_with kde)
-		$(cmake-utils_use_with dbus)
-		$(cmake-utils_use_with ssl OPENSSL)
-		$(cmake-utils_use_with syslog)
 		$(cmake-utils_use_with !kde OXYGEN)
-		$(cmake-utils_use_with crypt)
+		$(cmake-utils_use_want monolithic MONO)
+		$(cmake-utils_use_find_package phonon)
+		$(cmake-utils_use_find_package phonon Phonon4Qt5)
+		$(cmake-utils_use_use qt5)
+		$(cmake-utils_use_want server CORE)
+		$(cmake-utils_use_with webkit)
+		$(cmake-utils_use_want X QTCLIENT)
 		"-DEMBED_DATA=OFF"
 	)
 

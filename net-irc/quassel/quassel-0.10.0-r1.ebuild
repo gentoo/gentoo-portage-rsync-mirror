@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.10.0-r1.ebuild,v 1.2 2014/08/25 17:00:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.10.0-r1.ebuild,v 1.3 2014/09/13 15:30:22 johu Exp $
 
 EAPI=5
 
@@ -47,6 +47,7 @@ GUI_RDEPEND="
 
 RDEPEND="
 	dev-qt/qtcore:4[ssl?]
+	sys-libs/zlib
 	monolithic? (
 		${SERVER_RDEPEND}
 		${GUI_RDEPEND}
