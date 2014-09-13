@@ -1,6 +1,10 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.220 2014/09/09 02:55:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.221 2014/09/13 09:34:20 mgorny Exp $
+
+  13 Sep 2014; Michał Górny <mgorny@gentoo.org> libav-10.3.ebuild,
+  libav-10.9999.ebuild, libav-9999.ebuild:
+  Add epatch_user in the modern ebuilds.
 
   09 Sep 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag descriptions from metadata.xml
