@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.53 2014/07/06 13:16:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.54 2014/09/13 11:40:37 maekke Exp $
+
+  13 Sep 2014; Markus Meier <maekke@gentoo.org> gentoopm-0.2.9.ebuild:
+  arm stable, bug #517812
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> gentoopm-0.2.6.ebuild,
   gentoopm-0.2.8.ebuild, gentoopm-0.2.9.ebuild, gentoopm-9999.ebuild:
