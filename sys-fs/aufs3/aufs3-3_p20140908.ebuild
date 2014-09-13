@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20140114.ebuild,v 1.1 2014/01/13 07:16:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20140908.ebuild,v 1.1 2014/09/13 13:35:03 jlec Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic linux-info linux-mod multilib toolchain-funcs
+inherit eutils flag-o-matic linux-info linux-mod multilib readme.gentoo toolchain-funcs
 
 AUFS_VERSION="${PV%%_p*}"
 # highest branch version
-PATCH_MAX_VER=12
+PATCH_MAX_VER=16
 # highest supported version
-KERN_MAX_VER=13
+KERN_MAX_VER=17
 # lowest supported version
 KERN_MIN_VER=10
 
@@ -35,6 +35,8 @@ S="${WORKDIR}"/${PN}-standalone
 
 MODULE_NAMES="aufs(misc:${S})"
 
+README_GENTOO_SUFFIX="-r1"
+
 pkg_setup() {
 	CONFIG_CHECK+=" !AUFS_FS"
 	use inotify && CONFIG_CHECK+=" ~FSNOTIFY"
@@ -54,6 +56,10 @@ pkg_setup() {
 
 	if [[ "${KV_MINOR}" -gt "${PATCH_MAX_VER}" ]]; then
 		PATCH_BRANCH="x-rcN"
+	elif [[ "${KV_MINOR}" == "10" ]] && [[ "${KV_PATCH}" -ge "28" ]]; then
+		PATCH_BRANCH="${KV_MINOR}".x
+	elif [[ "${KV_MINOR}" == "12" ]]; then
+		PATCH_BRANCH="${KV_MINOR}".x
 	else
 		PATCH_BRANCH="${KV_MINOR}"
 	fi
@@ -75,7 +81,8 @@ pkg_setup() {
 	unpack ${A}
 	cd ${PN}-standalone || die
 	local module_branch=origin/${PN}.${PATCH_BRANCH}
-	git checkout -q -b local-gentoo ${module_branch} || die
+	einfo "Using ${module_branch} as patch source"
+	git checkout -q -b local-${PN}.${PATCH_BRANCH} ${module_branch} || die
 	combinediff ${PN}-base.patch ${PN}-standalone.patch  > "${T}"/combined-1.patch
 	combinediff "${T}"/combined-1.patch ${PN}-mmap.patch > ${PN}-standalone-base-mmap-combined.patch
 	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < ${PN}-standalone-base-mmap-combined.patch > /dev/null ); then
@@ -155,5 +162,12 @@ src_install() {
 
 	use kernel-patch || doins "${T}"/${PN}-standalone/${PN}-standalone-base-mmap-combined.patch
 
-	dodoc Documentation/filesystems/aufs/README
+	dodoc Documentation/filesystems/aufs/README "${T}"/${PN}-standalone/{aufs3-loopback,vfs-ino,tmpfs-idr}.patch
+
+	readme.gentoo_create_doc
+}
+
+pkg_postinst() {
+	readme.gentoo_pkg_postinst
+	linux-mod_pkg_postinst
 }

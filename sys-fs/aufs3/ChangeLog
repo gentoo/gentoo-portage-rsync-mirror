@@ -1,6 +1,23 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.104 2014/08/21 11:52:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.105 2014/09/13 13:35:03 jlec Exp $
+
+*aufs3-3_p20140908 (13 Sep 2014)
+
+  13 Sep 2014; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20131007.ebuild,
+  -aufs3-3_p20131014.ebuild, -aufs3-3_p20131104-r1.ebuild,
+  -aufs3-3_p20131111-r1.ebuild, -aufs3-3_p20131223.ebuild,
+  -aufs3-3_p20140114.ebuild, -aufs3-3_p20140119.ebuild,
+  -aufs3-3_p20140127.ebuild, -aufs3-3_p20140127-r1.ebuild,
+  -aufs3-3_p20140224.ebuild, -aufs3-3_p20140303.ebuild,
+  -aufs3-3_p20140310.ebuild, -aufs3-3_p20140420.ebuild,
+  -aufs3-3_p20140511.ebuild, -aufs3-3_p20140526.ebuild,
+  -aufs3-3_p20140602.ebuild, -aufs3-3_p20140609.ebuild,
+  -aufs3-3_p20140616.ebuild, -aufs3-3_p20140623.ebuild,
+  -aufs3-3_p20140630.ebuild, -aufs3-3_p20140707.ebuild,
+  -aufs3-3_p20140714.ebuild, -aufs3-3_p20140721.ebuild,
+  -aufs3-3_p20140728.ebuild, +aufs3-3_p20140908.ebuild:
+  Bump to latest aufs3; drop old
 
 *aufs3-3_p20140818 (21 Aug 2014)
 
