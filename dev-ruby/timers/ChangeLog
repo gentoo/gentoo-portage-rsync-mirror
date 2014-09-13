@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/timers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/timers/ChangeLog,v 1.10 2014/08/12 22:44:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/timers/ChangeLog,v 1.11 2014/09/13 06:11:51 graaff Exp $
+
+*timers-4.0.1 (13 Sep 2014)
+
+  13 Sep 2014; Hans de Graaff <graaff@gentoo.org> +timers-4.0.1.ebuild:
+  Version bump.
 
   12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> timers-1.1.0-r1.ebuild,
   timers-2.0.0.ebuild:
