@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.37 2014/08/31 15:16:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.38 2014/09/13 05:47:10 jer Exp $
+
+  13 Sep 2014; Jeroen Roovers <jer@gentoo.org> pillow-2.5.3.ebuild:
+  Stable for HPPA (bug #522426).
 
   31 Aug 2014; Mike Gilbert <floppym@gentoo.org> pillow-2.5.3.ebuild:
   Restore selftest.
