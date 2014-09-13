@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/ccrtp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.32 2014/03/01 22:13:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.33 2014/09/13 14:43:41 mgorny Exp $
+
+*ccrtp-2.0.9 (13 Sep 2014)
+
+  13 Sep 2014; Michał Górny <mgorny@gentoo.org> +ccrtp-2.0.9.ebuild:
+  Minor version bump. Set subslot to match SONAME.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> ccrtp-2.0.5.ebuild:
   Update libgcrypt dep to use slot :0.
