@@ -1,8 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.4-r1.ebuild,v 1.10 2014/04/02 20:53:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.4-r1.ebuild,v 1.11 2014/09/13 07:04:28 patrick Exp $
 
 EAPI=5
+
+# if it doesn't work ...
+RESTRICT="test"
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
 

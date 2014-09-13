@@ -1,0 +1,10 @@
+# ChangeLog for www-client/otter
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/otter/ChangeLog,v 1.1 2014/09/13 07:14:26 jer Exp $
+
+*otter-9999 (13 Sep 2014)
+
+  13 Sep 2014; Jeroen Roovers <jer@gentoo.org> +otter-9999.ebuild,
+  +metadata.xml:
+  Initial commit (bug #499576).
+
