@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>qt</herd>
-<herd>python</herd>
+	<herd>qt</herd>
+	<herd>python</herd>
+	<use>
+		<flag name="designer">Build plugin for Qt Designer</flag>
+	</use>
 </pkgmetadata>

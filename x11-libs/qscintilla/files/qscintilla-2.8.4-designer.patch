@@ -1,0 +1,22 @@
+This patch causes the designer plugin to be built against the just-built
+libqscintilla2.so, rather than trying to build against the system library
+which may either (a) not be installed yet, or (b) belong to an older
+installation and thus have a different soname (bug 466120).
+
+diff --git a/designer-Qt4Qt5/designer.pro b/designer-Qt4Qt5/designer.pro
+index e3432ff..2b7fa6a 100644
+--- a/designer-Qt4Qt5/designer.pro
++++ b/designer-Qt4Qt5/designer.pro
+@@ -4,7 +4,11 @@
+ TEMPLATE = lib
+ TARGET = qscintillaplugin
+ 
+-CONFIG += release plugin qscintilla2
++CONFIG += release plugin
++
++INCLUDEPATH  += ../Qt4Qt5
++QMAKE_LIBDIR += ../Qt4Qt5
++LIBS         += -lqscintilla2
+ 
+ greaterThan(QT_MAJOR_VERSION, 4) {
+     QT += designer

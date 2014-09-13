@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.8.3.ebuild,v 1.1 2014/07/18 19:50:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.8.4.ebuild,v 1.1 2014/09/13 01:07:02 pesa Exp $
 
 EAPI=5
 
@@ -15,19 +15,19 @@ SRC_URI="mirror://sourceforge/pyqt/${MY_P}.tar.gz"
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0/11"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc"
+IUSE="designer doc"
 
 DEPEND="
-	>=dev-qt/designer-4.8.5:4
 	>=dev-qt/qtcore-4.8.5:4
 	>=dev-qt/qtgui-4.8.5:4
+	designer? ( >=dev-qt/designer-4.8.5:4 )
 "
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
 PATCHES=(
-	"${FILESDIR}/${PN}-2.8.3-designer.patch"
+	"${FILESDIR}/${PN}-2.8.4-designer.patch"
 )
 
 src_unpack() {
@@ -53,44 +53,43 @@ src_prepare() {
 
 src_configure() {
 	pushd Qt4Qt5 > /dev/null
-	einfo "Configuration of qscintilla"
-	eqmake4 qscintilla.pro
+	eqmake4
 	popd > /dev/null
 
-	pushd designer-Qt4Qt5 > /dev/null
-	einfo "Configuration of designer plugin"
-	eqmake4 designer.pro
-	popd > /dev/null
+	if use designer; then
+		pushd designer-Qt4Qt5 > /dev/null
+		eqmake4
+		popd > /dev/null
+	fi
 }
 
 src_compile() {
 	pushd Qt4Qt5 > /dev/null
-	einfo "Building of qscintilla"
 	emake
 	popd > /dev/null
 
-	pushd designer-Qt4Qt5 > /dev/null
-	einfo "Building of designer plugin"
-	emake
-	popd > /dev/null
+	if use designer; then
+		pushd designer-Qt4Qt5 > /dev/null
+		emake
+		popd > /dev/null
+	fi
 }
 
 src_install() {
 	pushd Qt4Qt5 > /dev/null
-	einfo "Installation of qscintilla"
 	emake INSTALL_ROOT="${D}" install
 	popd > /dev/null
 
-	pushd designer-Qt4Qt5 > /dev/null
-	einfo "Installation of designer plugin"
-	emake INSTALL_ROOT="${D}" install
-	popd > /dev/null
+	if use designer; then
+		pushd designer-Qt4Qt5 > /dev/null
+		emake INSTALL_ROOT="${D}" install
+		popd > /dev/null
+	fi
 
 	dodoc NEWS
 
 	if use doc; then
-		dohtml doc/html-Qt4Qt5/*
-		insinto /usr/share/doc/${PF}
-		doins -r doc/Scintilla
+		docinto html
+		dodoc -r doc/html-Qt4Qt5/*
 	fi
 }
