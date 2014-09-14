@@ -1,6 +1,22 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.71 2014/06/14 11:10:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.73 2014/09/14 14:16:58 jer Exp $
+
+  14 Sep 2014; Jeroen Roovers <jer@gentoo.org> obexftp-0.24.ebuild:
+  Remove python 3.4 support.
+
+  14 Sep 2014; Jeroen Roovers <jer@gentoo.org> +obexftp-0.24.ebuild,
+  files/obexftp-0.23-fixruby.patch, files/obexftp-0.23-gentoo.patch,
+  +files/obexftp-0.24-config.patch, +files/obexftp-0.24-enable_bluetooth.patch,
+  +files/obexftp-0.24-python_sitedir.patch:
+  Version bump (bug #522750).
+
+*obexftp-0.24 (14 Sep 2014)
+
+  14 Sep 2014; Jeroen Roovers <jer@gentoo.org> +obexftp-0.24.ebuild,
+  files/obexftp-0.23-fixruby.patch, files/obexftp-0.23-gentoo.patch,
+  +files/obexftp-0.24-config.patch, +files/obexftp-0.24-python_sitedir.patch:
+  Version bump (bug #522750).
 
   14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -obexftp-0.23-r1.ebuild:
   Cleanup old.

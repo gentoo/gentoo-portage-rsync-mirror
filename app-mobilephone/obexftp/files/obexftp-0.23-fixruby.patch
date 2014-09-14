@@ -1,7 +1,5 @@
-Index: obexftp-0.23/swig/ruby/Makefile.am
-===================================================================
---- obexftp-0.23.orig/swig/ruby/Makefile.am
-+++ obexftp-0.23/swig/ruby/Makefile.am
+--- a/swig/ruby/Makefile.am
++++ b/swig/ruby/Makefile.am
 @@ -12,7 +12,7 @@ Makefile.ruby: extconf.rb
  	PREFIX=$(prefix) $(RUBY) $< --with-obexftp-include=$(top_srcdir)
  
