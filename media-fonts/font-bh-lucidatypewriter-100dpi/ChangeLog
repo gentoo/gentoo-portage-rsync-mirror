@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bh-lucidatypewriter-100dpi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-lucidatypewriter-100dpi/ChangeLog,v 1.38 2012/05/15 14:11:42 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-lucidatypewriter-100dpi/ChangeLog,v 1.39 2014/09/14 17:28:39 chithanh Exp $
+
+  14 Sep 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  font-bh-lucidatypewriter-100dpi-1.0.3.ebuild:
+  Fix license, bug #420025.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org>
   font-bh-lucidatypewriter-100dpi-1.0.3.ebuild:
@@ -167,4 +171,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +font-bh-lucidatypewriter-100dpi-0.99.0.ebuild:
   Initial commit for modular X.
-
