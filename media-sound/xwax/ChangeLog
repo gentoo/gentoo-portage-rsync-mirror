@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xwax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.59 2014/08/14 17:28:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.60 2014/09/14 22:11:48 nimiux Exp $
+
+  14 Sep 2014; Chema Alonso <nimiux@gentoo.org> xwax-1.5.ebuild:
+  Stable for amd64 wrt bug #518826
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> xwax-1.5.ebuild:
   x86 stable wrt bug #518826
