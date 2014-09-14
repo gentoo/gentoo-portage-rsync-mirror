@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.141 2014/09/14 12:51:58 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.142 2014/09/14 15:32:19 mrueg Exp $
+
+  14 Sep 2014; Manuel Rüger <mrueg@gentoo.org> wgetpaste-2.22.ebuild,
+  wgetpaste-2.25-r2.ebuild:
+  Install zsh-completion by default.
 
 *wgetpaste-2.25-r2 (14 Sep 2014)
 

@@ -8,4 +8,4 @@ LICENSE=public-domain
 RDEPEND=net-misc/wget zsh-completion? ( app-shells/zsh )
 SLOT=0
 SRC_URI=http://wgetpaste.zlin.dk/wgetpaste-2.22.tar.bz2
-_md5_=41eacb85ab626a946bd2276ad40c3bbf
+_md5_=e62b682fec2dab6ed12a7bd4c31679fa

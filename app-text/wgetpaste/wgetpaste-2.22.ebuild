@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.22.ebuild,v 1.8 2013/06/29 16:32:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.22.ebuild,v 1.9 2014/09/14 15:32:19 mrueg Exp $
 
 EAPI="4"
 
