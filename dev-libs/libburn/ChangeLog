@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.183 2014/08/10 20:34:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.184 2014/09/13 23:27:18 billie Exp $
+
+  13 Sep 2014; Daniel Pielmeier <billie@gentoo.org> -libburn-1.3.6.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libburn-1.3.4.ebuild,
   libburn-1.3.6.ebuild, libburn-1.3.8.ebuild:
