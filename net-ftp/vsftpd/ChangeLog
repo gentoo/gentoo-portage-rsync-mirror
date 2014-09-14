@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.179 2014/04/23 20:21:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.180 2014/09/14 11:04:49 hwoarang Exp $
+
+*vsftpd-3.0.2-r3 (14 Sep 2014)
+
+  14 Sep 2014; Markos Chandras <hwoarang@gentoo.org>
+  +files/vsftpd-3.0.2-aslim.patch, +vsftpd-3.0.2-r3.ebuild:
+  Increase VSFTP_AS_LIMIT macro to fix logins with pam_mysql. Bug #522412. Patch
+  by Harald Glatt (hachre) <bugzilla-gentoo@mail.hachre.de>
 
   23 Apr 2014; Markos Chandras <hwoarang@gentoo.org> vsftpd-3.0.2-r2.ebuild:
   Add epatch_user and override LIBS variable thanks to Mike Gilbert
