@@ -1,24 +1,19 @@
---- wgetpaste.old	2014-08-16 07:10:02.376075629 -0400
-+++ wgetpaste	2014-08-31 16:02:46.996001592 -0400
-@@ -14,12 +14,14 @@ E=$'\e'
- N=$'\n'
- 
+--- /var/tmp/portage/app-text/wgetpaste-2.25-r1/work/wgetpaste-2.25/wgetpaste	2014-05-23 20:51:44.000000000 +0400
++++ /usr/bin/wgetpaste	2014-09-14 16:46:21.345261294 +0400
+@@ -16,8 +16,10 @@
  ### services
  SERVICES="bpaste ca codepad dpaste gists poundpython"
  # bpaste
 -ENGINE_bpaste=lodgeit
+-URL_bpaste="http://bpaste.net/"
 +ENGINE_bpaste=pinnwand
- URL_bpaste="http://bpaste.net/"
++URL_bpaste="https://bpaste.net/"
 +DEFAULT_EXPIRATION_bpaste="1week"
 +DEFAULT_LANGUAGE_bpaste="text"
  # ca
  ENGINE_ca=ca
  URL_ca="http://pastebin.ca/"
- SIZE_ca="1024000 1%MB"
- # codepad
-@@ -141,10 +143,66 @@ objective-c objective-j ocaml ooc perl p
- ragel-c ragel-cpp ragel-d ragel-java ragel-objc ragel-ruby raw rconsole rebol redcode rst rhtml rb \
- rbcon splus sass scala scheme smalltalk smarty sql sqlite3 squidconf tcl tcsh tex diff vala vb.net \
+@@ -143,6 +145,62 @@
  vim xml xml+cheetah xml+django xml+evoque xml+mako xml+myghty xml+php xml+erb xml+smarty xslt yaml"
  POST_lodgeit="submit=Paste! % % language % % code"
  REGEX_RAW_lodgeit='s|^\(http://[^/]*/\)show\(/[[:alnum:]]*/\)$|\1raw\2|'
@@ -81,5 +76,12 @@
  
  ### errors
  die() {
- 	echo "$@" >&2
- 	exit 1
+@@ -514,7 +572,7 @@
+ 		sed -n -e "${!regex}" <<< "$*"
+ 	else
+ 		[[ needstdout = $1 ]] && return 1
+-		sed -n -e 's|^.*Location: \(http://[^ ]*\).*$|\1|p' <<< "$*"
++		sed -n -e 's|^.*Location: \(https\{0,1\}://[^ ]*\).*$|\1|p' <<< "$*"
+ 	fi
+ }
+ 
