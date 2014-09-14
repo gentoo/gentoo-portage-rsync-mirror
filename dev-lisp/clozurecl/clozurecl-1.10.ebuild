@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/clozurecl-1.8.ebuild,v 1.2 2012/06/07 17:31:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/clozurecl-1.10.ebuild,v 1.1 2014/09/14 09:57:58 grozin Exp $
 
-EAPI=3
-inherit eutils multilib
+EAPI=5
+inherit eutils multilib toolchain-funcs
 
 MY_PN=ccl
 MY_P=${MY_PN}-${PV}
@@ -21,7 +21,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND="!dev-lisp/openmcl"
+RDEPEND=">=dev-lisp/asdf-2.33-r3:="
+DEPEND="${RDEPEND}
+		!dev-lisp/openmcl"
 
 S="${WORKDIR}"/${MY_PN}
 
@@ -29,17 +31,24 @@ ENVD="${T}"/50ccl
 
 src_configure() {
 	if use x86; then
-		CCL_RUNTIME=lx86cl; CCL_HEADERS=x86-headers
+		CCL_RUNTIME=lx86cl; CCL_HEADERS=x86-headers; CCL_KERNEL=linuxx8632
 	elif use amd64; then
-		CCL_RUNTIME=lx86cl64; CCL_HEADERS=x86-headers64
+		CCL_RUNTIME=lx86cl64; CCL_HEADERS=x86-headers64; CCL_KERNEL=linuxx8664
 	elif use ppc; then
-		CCL_RUNTIME=ppccl; CCL_HEADERS=headers
+		CCL_RUNTIME=ppccl; CCL_HEADERS=headers; CCL_KERNEL=linuxppc
 	elif use ppc64; then
-		CCL_RUNTIME=ppccl64; CCL_HEADERS=headers64
+		CCL_RUNTIME=ppccl64; CCL_HEADERS=headers64; CCL_KERNEL=linuxppc64
 	fi
 }
 
+src_prepare() {
+	cp /usr/share/common-lisp/source/asdf/build/asdf.lisp tools/ || die
+}
+
 src_compile() {
+	emake -C lisp-kernel/${CCL_KERNEL} clean
+	emake -C lisp-kernel/${CCL_KERNEL} all CC="$(tc-getCC)"
+
 	unset CCL_DEFAULT_DIRECTORY
 	./${CCL_RUNTIME} -n -b -Q -e '(ccl:rebuild-ccl :full t)' -e '(ccl:quit)' || die "Compilation failed"
 
@@ -65,8 +74,9 @@ src_install() {
 	# until we figure out which source files are necessary for runtime
 	# optional features and which aren't, we install all sources
 	find . -type f -name '*fsl' -delete
+	rm -f lisp-kernel/${CCL_KERNEL}/*.o
 	cp -a compiler level-0 level-1 lib library \
-		lisp-kernel scripts tools xdump \
+		lisp-kernel scripts tools xdump contrib \
 		"${D}"/${install_dir} || die
 	cp -a ${CCL_HEADERS} "${D}"/${install_dir} || die
 
