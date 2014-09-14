@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r2.ebuild,v 1.3 2014/06/18 20:31:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r2.ebuild,v 1.4 2014/09/13 23:48:31 billie Exp $
 
 EAPI=5
 
@@ -49,6 +49,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-pic.patch
 	# https://sourceforge.net/p/mjpeg/bugs/139/
 	epatch "${FILESDIR}"/${P}-sdl-cflags.patch
+	epatch "${FILESDIR}"/mjpegtools-2.1.0-no_format.patch
 	eautoreconf
 	sed -i -e '/ARCHFLAGS=/s:=.*:=:' configure
 }
