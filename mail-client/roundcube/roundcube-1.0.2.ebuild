@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-1.0.2.ebuild,v 1.7 2014/09/14 07:50:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-1.0.2.ebuild,v 1.8 2014/09/14 22:39:43 jer Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ RDEPEND="
 	>=dev-php/PEAR-Net_Socket-1.0.14
 	mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) )
 	spell? ( dev-lang/php[curl,spell] )
-	sqlite? ( || ( dev-lang/php[sqlite] dev-lang/php[sqlite3] ) )
+	sqlite? ( dev-lang/php[sqlite] )
 	virtual/httpd-php
 "
 
