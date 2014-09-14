@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.104 2014/09/04 18:24:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.105 2014/09/14 09:20:51 maekke Exp $
+
+  14 Sep 2014; Markus Meier <maekke@gentoo.org> linux-firmware-20140603.ebuild:
+  arm stable, bug #521380
 
   04 Sep 2014; Jeroen Roovers <jer@gentoo.org> linux-firmware-20140603.ebuild:
   Stable for HPPA (bug #521380).

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.8-r1.ebuild,v 1.1 2014/07/20 18:17:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.8-r1.ebuild,v 1.2 2014/09/14 09:05:46 maekke Exp $
 
 EAPI=5
 
@@ -28,6 +28,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 PATCHES=(
 	"${FILESDIR}"/${PF}-build.patch
 	"${FILESDIR}"/${P}-x32.patch
+	"${FILESDIR}"/${P}-support-clang-visibility-as-gcc.patch
 )
 
 DOCS=( README docs/mounts.txt )
