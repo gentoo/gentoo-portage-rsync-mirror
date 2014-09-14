@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.8 2012/10/12 15:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.9 2014/09/14 07:58:17 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 WX_GTK_VER="2.8"
 inherit eutils autotools wxwidgets games
 
@@ -19,6 +19,7 @@ IUSE=""
 DEPEND="x11-libs/wxGTK:2.8[X,opengl]
 	virtual/glu
 	virtual/opengl"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${PN}
 
@@ -27,13 +28,12 @@ src_prepare() {
 		"${FILESDIR}"/${P}-underlink.patch
 	sed -i \
 		-e "s:wx-config:${WX_CONFIG}:" \
-		configure.in makefile.am \
-		|| die "sed failed"
+		configure.in makefile.am || die
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	doicon src/${PN}.xpm
 	make_desktop_entry ${PN} Blokish ${PN}
