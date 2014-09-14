@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.7 2014/03/27 08:58:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.8 2014/09/14 08:32:11 dilfridge Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://gitorious.org/ixion/pages/Home"
 [[ ${PV} == 9999 ]] || SRC_URI="http://kohei.us/files/ixion/src/${P}.tar.bz2"
 
 LICENSE="MIT"
-SLOT="0/0.7"
+SLOT="0"
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="static-libs"
