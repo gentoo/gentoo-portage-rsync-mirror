@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/getdata
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/ChangeLog,v 1.13 2012/10/18 21:43:25 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/ChangeLog,v 1.14 2014/09/14 16:05:45 jlec Exp $
+
+*getdata-0.8.5 (14 Sep 2014)
+
+  14 Sep 2014; Justin Lecher <jlec@gentoo.org> -getdata-0.8.0.ebuild,
+  +getdata-0.8.5.ebuild, +files/getdata-0.8.5-out-of-source.patch,
+  +files/getdata-0.8.5-serial-test.patch, metadata.xml:
+  Version Bump; backport fix for old automake, #514516; convert to new python
+  eclasses and EAPI=5
 
   18 Oct 2012; Justin Lecher <jlec@gentoo.org> getdata-0.8.0.ebuild,
   metadata.xml:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.40 2014/08/10 21:07:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.42 2014/09/14 16:09:54 xmw Exp $
+
+*celery-3.1.14 (14 Sep 2014)
+
+  14 Sep 2014; Michael Weber <xmw@gentoo.org> +celery-3.1.14.ebuild:
+  Version bump (non-maint commit).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> celery-3.1.11.ebuild,
   celery-3.1.12.ebuild, celery-3.1.13.ebuild:
