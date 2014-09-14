@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.5.1.ebuild,v 1.9 2014/03/26 08:44:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.5.1.ebuild,v 1.10 2014/09/14 08:30:16 dilfridge Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="static-libs"
 
 RDEPEND="
 	>=dev-libs/boost-1.51.0:=
-	<dev-libs/libixion-0.7:=
+	=dev-libs/libixion-0.5*
 	sys-libs/zlib
 "
 DEPEND="${RDEPEND}

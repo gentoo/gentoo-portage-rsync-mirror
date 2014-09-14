@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.577 2014/09/13 20:17:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.578 2014/09/14 08:23:52 dilfridge Exp $
+
+  14 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-4.2.5.2.ebuild, libreoffice-4.2.6.3.ebuild,
+  libreoffice-4.2.9999.ebuild, libreoffice-9999-r2.ebuild:
+  The slot operator on liborcus makes no sense.
 
   13 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-4.2.5.2.ebuild, libreoffice-4.2.6.3.ebuild,
