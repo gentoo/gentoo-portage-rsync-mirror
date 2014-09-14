@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minissdpd/minissdpd-1.2.20130907.ebuild,v 1.1 2013/09/07 13:20:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minissdpd/minissdpd-1.2.20140906-r1.ebuild,v 1.1 2014/09/14 12:21:25 blueness Exp $
 
 EAPI="5"
 inherit eutils toolchain-funcs
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=sys-apps/net-tools-1.60_p20120127084908[old-output]
+RDEPEND=">=sys-apps/net-tools-1.60_p20120127084908[-old-output]
 	|| ( net-misc/miniupnpd net-libs/miniupnpc )"
 
 src_prepare() {
@@ -29,7 +29,7 @@ src_compile() {
 
 src_install () {
 	einstall PREFIX="${D}"
-	newinitd "${FILESDIR}/${PN}.initd" ${PN}
+	newinitd "${FILESDIR}/${PN}.initd-r1" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 	dodoc Changelog.txt README
 	doman minissdpd.1
