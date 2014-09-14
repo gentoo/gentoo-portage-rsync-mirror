@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/unfoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.37 2014/09/07 10:46:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.38 2014/09/14 07:29:23 ago Exp $
+
+  14 Sep 2014; Agostino Sarubbo <ago@gentoo.org> unfoo-1.0.8.ebuild:
+  Stable for ppc64, wrt bug #517302
 
   07 Sep 2014; Agostino Sarubbo <ago@gentoo.org> unfoo-1.0.8.ebuild:
   Stable for ppc, wrt bug #517302
