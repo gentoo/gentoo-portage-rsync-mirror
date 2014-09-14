@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.308 2014/08/31 17:02:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.309 2014/09/14 10:18:09 pacho Exp $
+
+  14 Sep 2014; Pacho Ramos <pacho@gentoo.org> systemd-212-r5.ebuild,
+  systemd-215-r3.ebuild, systemd-216.ebuild, systemd-9999.ebuild:
+  Ensure udev init.d scripts are installed to not break booting with openRC
+  (#520224)
 
   31 Aug 2014; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
   Lower MINKV to 3.7.
