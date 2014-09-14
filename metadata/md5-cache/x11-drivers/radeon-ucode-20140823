@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst setup
+DESCRIPTION=IRQ microcode for r6xx/r7xx/Evergreen/N.Islands/S.Islands Radeon GPUs and APUs
+EAPI=5
+HOMEPAGE=http://people.freedesktop.org/~agd5f/radeon_ucode/
+KEYWORDS=~amd64 ~x86
+LICENSE=radeon-ucode
+RDEPEND=!sys-kernel/linux-firmware[-savedconfig]
+SLOT=0
+SRC_URI=mirror://gentoo/radeon-ucode-20140823.tar.xz
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=bc2cc83c44b7e07325df9a5680c3fbb4
