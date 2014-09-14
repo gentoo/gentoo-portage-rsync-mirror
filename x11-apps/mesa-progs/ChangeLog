@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/mesa-progs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.106 2013/10/08 05:02:43 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.107 2014/09/14 18:50:32 chithanh Exp $
+
+*mesa-progs-8.2.0 (14 Sep 2014)
+
+  14 Sep 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +mesa-progs-8.2.0.ebuild, -mesa-progs-8.0.1.ebuild:
+  Version bump, bug #517372. Remove old.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> mesa-progs-8.1.0.ebuild:
   Stable for x86, wrt bug #475480
