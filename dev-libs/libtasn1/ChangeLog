@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.216 2014/08/23 09:16:39 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.217 2014/09/15 19:16:32 alonbl Exp $
+
+*libtasn1-4.2 (15 Sep 2014)
+
+  15 Sep 2014; Alon Bar-Lev <alonbl@gentoo.org> +libtasn1-4.2.ebuild:
+  Version bump
 
 *libtasn1-3.8 (23 Aug 2014)
 *libtasn1-4.1 (23 Aug 2014)

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/minetest-0.4.9.ebuild,v 1.3 2014/04/05 11:11:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/minetest-0.4.9.ebuild,v 1.4 2014/09/15 19:02:47 hasufell Exp $
 
 EAPI=5
 inherit eutils cmake-utils gnome2-utils vcs-snapshot user games
@@ -127,9 +127,6 @@ pkg_postinst() {
 		elog
 		elog "optional dependencies:"
 		elog "	games-action/minetest_game (official mod)"
-		elog "	games-action/minetest_common (official mod)"
-		elog "	games-action/minetest_build (official mod)"
-		elog "	games-action/minetest_survival (official mod)"
 		elog
 	fi
 

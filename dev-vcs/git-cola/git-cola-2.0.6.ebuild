@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.0.4.ebuild,v 1.1 2014/06/25 13:54:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.0.6.ebuild,v 1.1 2014/09/15 19:23:43 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_7,3_3} )
 DISTUTILS_SINGLE_IMPL=true
 
-inherit distutils-r1 readme.gentoo
+inherit distutils-r1 readme.gentoo virtualx
 
 DESCRIPTION="The highly caffeinated git GUI"
 HOMEPAGE="http://git-cola.github.com/"
@@ -86,6 +86,9 @@ python_install_all() {
 		prefix="${EPREFIX}/usr" \
 		install
 
+	python_fix_shebang "${D}/usr/share/git-cola/bin/git-xbase"
+	python_optimize "${D}/usr/share/git-cola/lib/cola"
+
 	if ! use doc ; then
 		HTML_DOCS=( "${FILESDIR}"/index.html )
 	fi
@@ -96,7 +99,8 @@ python_install_all() {
 }
 
 python_test() {
-	PYTHONPATH="${S}:${S}/build/lib:${PYTHONPATH}" LC_ALL="C" nosetests \
-		--verbose --with-doctest --with-id --exclude=jsonpickle --exclude=json \
-		|| die "running nosetests failed"
+	PYTHONPATH="${S}:${S}/build/lib:${PYTHONPATH}" LC_ALL="C" \
+		VIRTUALX_COMMAND="nosetests --verbose --with-doctest \
+		--with-id --exclude=jsonpickle --exclude=json" \
+		virtualmake
 }
