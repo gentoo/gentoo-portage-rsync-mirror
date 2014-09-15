@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.10-r2.ebuild,v 1.1 2014/09/04 08:33:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.10-r2.ebuild,v 1.2 2014/09/15 10:57:43 blueness Exp $
 
 EAPI="5"
 
 KV_min=2.6.39
+WANT_AUTOMAKE=1.13
 
 inherit autotools eutils linux-info multilib multilib-minimal user
 
@@ -110,12 +111,10 @@ src_prepare() {
 
 	epatch_user
 
-	if [[ ! -e configure ]]; then
-		if use doc; then
-			gtkdocize --docdir docs || die "gtkdocize failed"
-		else
-			echo 'EXTRA_DIST =' > docs/gtk-doc.make
-		fi
+	if use doc; then
+		gtkdocize --docdir docs || die "gtkdocize failed"
+	else
+		echo 'EXTRA_DIST =' > docs/gtk-doc.make
 	fi
 	eautoreconf
 }

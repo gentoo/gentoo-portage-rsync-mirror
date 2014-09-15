@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.60 2014/08/22 14:26:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.61 2014/09/15 11:01:16 blueness Exp $
 
 EAPI="5"
 
@@ -106,16 +106,14 @@ src_prepare() {
 
 	epatch_user
 
-	if [[ ! -e configure ]]; then
-		if use doc; then
-			gtkdocize --docdir docs || die "gtkdocize failed"
-		else
-			echo 'EXTRA_DIST =' > docs/gtk-doc.make
-		fi
-		eautoreconf
+	if use doc; then
+		gtkdocize --docdir docs || die "gtkdocize failed"
 	else
-		elibtoolize
+		echo 'EXTRA_DIST =' > docs/gtk-doc.make
 	fi
+	# This may break without WANT_AUTOMAKE=1.13, but we
+	# we want this so we can fix problems upstream.
+	eautoreconf
 }
 
 multilib_src_configure() {
