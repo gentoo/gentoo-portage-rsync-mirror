@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iperf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.58 2014/09/14 10:24:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.59 2014/09/15 07:59:39 jer Exp $
+
+  15 Sep 2014; Jeroen Roovers <jer@gentoo.org> -files/iperf.initd:
+  Old.
 
   14 Sep 2014; Jeroen Roovers <jer@gentoo.org> -iperf-2.0.5.ebuild,
   -iperf-2.0.5-r1.ebuild, -iperf-3.0.5.ebuild, -iperf-3.0.6.ebuild:
