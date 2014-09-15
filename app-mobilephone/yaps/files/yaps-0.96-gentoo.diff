@@ -1,5 +1,5 @@
---- Config.orig	2005-06-02 20:28:35.000000000 +0200
-+++ Config	2005-10-16 15:13:32.000000000 +0200
+--- a/Config
++++ b/Config
 @@ -24,9 +24,9 @@
  #	Name of local configuration file (location is $HOME.)
  YAPS_LCFGFILE 	= .yapsrc
@@ -28,8 +28,8 @@
  endif
  ifdef	MATH
  LLIBS	+= -lm
---- Makefile.orig	2005-06-02 20:33:27.000000000 +0200
-+++ Makefile	2005-10-16 15:13:32.000000000 +0200
+--- a/Makefile
++++ b/Makefile
 @@ -33,19 +33,19 @@
  	lynx -cfg=/dev/null -nolist -dump $< > $@
  

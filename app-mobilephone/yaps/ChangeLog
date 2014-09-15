@@ -1,6 +1,16 @@
 # ChangeLog for app-mobilephone/yaps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.31 2014/09/07 16:28:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.33 2014/09/15 08:56:17 jer Exp $
+
+  15 Sep 2014; Jeroen Roovers <jer@gentoo.org> yaps-0.96-r5.ebuild,
+  files/yaps-0.96-gentoo.diff, -files/yaps-0.96-gentoo.patch,
+  files/yaps-0.96-getline-rename.patch:
+  Clean up patches. Remove weird USE=unicode.
+
+  15 Sep 2014; Jeroen Roovers <jer@gentoo.org> yaps-0.96-r5.ebuild,
+  +files/yaps-0.96-string.patch:
+  Set S (bug #522700). Respect LDFLAGS. Convert sed script to patch. Convert
+  helpful comment into USE default.
 
   07 Sep 2014; Manuel Rüger <mrueg@gentoo.org> -yaps-0.96-r4.ebuild:
   Cleanup old.

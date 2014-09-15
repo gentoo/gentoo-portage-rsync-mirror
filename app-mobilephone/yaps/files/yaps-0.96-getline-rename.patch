@@ -1,6 +1,5 @@
-diff -Nru yaps-0.96.orig/cfg.c yaps-0.96/cfg.c
---- yaps-0.96.orig/cfg.c	1997-06-11 14:05:34.000000000 +0200
-+++ yaps-0.96/cfg.c	2009-07-12 11:32:02.000000000 +0200
+--- a/cfg.c
++++ b/cfg.c
 @@ -203,7 +203,7 @@
  			fcur -> fp = fp;
  			fcur -> up = NULL;
@@ -19,9 +18,8 @@ diff -Nru yaps-0.96.orig/cfg.c yaps-0.96/cfg.c
  									if ((*ptr != '}') || *(ptr + 1)) {
  										plen = strlen (ptr);
  										if (len + plen + 2 >= siz) {
-diff -Nru yaps-0.96.orig/cv.c yaps-0.96/cv.c
---- yaps-0.96.orig/cv.c	1997-06-03 20:43:52.000000000 +0200
-+++ yaps-0.96/cv.c	2009-07-12 11:31:44.000000000 +0200
+--- a/cv.c
++++ b/cv.c
 @@ -151,7 +151,7 @@
  	MCHK (c);
  	if ((! c) || (! (fp = fopen (fname, "r"))))
@@ -31,9 +29,8 @@ diff -Nru yaps-0.96.orig/cv.c yaps-0.96/cv.c
  		for (sp = line; isspace (*sp); ++sp)
  			;
  		if (*sp && (*sp != '#')) {
-diff -Nru yaps-0.96.orig/pager.h yaps-0.96/pager.h
---- yaps-0.96.orig/pager.h	1997-06-12 13:59:28.000000000 +0200
-+++ yaps-0.96/pager.h	2009-07-12 11:31:33.000000000 +0200
+--- a/pager.h
++++ b/pager.h
 @@ -67,7 +67,7 @@
  /*{{{	utility */
  extern char	*skip (char *str);
@@ -43,9 +40,8 @@ diff -Nru yaps-0.96.orig/pager.h yaps-0.96/pager.h
  extern int	verbose_out (char *, ...);
  /*}}}*/
  /*{{{	string handling */
-diff -Nru yaps-0.96.orig/util.c yaps-0.96/util.c
---- yaps-0.96.orig/util.c	1997-05-31 19:20:40.000000000 +0200
-+++ yaps-0.96/util.c	2009-07-12 11:31:49.000000000 +0200
+--- a/util.c
++++ b/util.c
 @@ -36,7 +36,7 @@
  }
  
@@ -55,9 +51,8 @@ diff -Nru yaps-0.96.orig/util.c yaps-0.96/util.c
  {
  	char	*buf;
  	int	size;
-diff -Nru yaps-0.96.orig/yaps.c yaps-0.96/yaps.c
---- yaps-0.96.orig/yaps.c	1997-06-14 12:25:56.000000000 +0200
-+++ yaps-0.96/yaps.c	2009-07-12 11:31:39.000000000 +0200
+--- a/yaps.c
++++ b/yaps.c
 @@ -1177,7 +1177,7 @@
  			fprintf (stderr, "Unable to open message file %s for reading\n", mfile);
  			return NULL;
