@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/minfx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/minfx/ChangeLog,v 1.9 2014/05/06 11:44:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/minfx/ChangeLog,v 1.10 2014/09/15 11:25:20 jlec Exp $
+
+*minfx-1.0.10 (15 Sep 2014)
+
+  15 Sep 2014; Justin Lecher <jlec@gentoo.org> -minfx-1.0.3.ebuild,
+  +minfx-1.0.10.ebuild:
+  Version BUmp; drop version using old python eclass
 
 *minfx-1.0.6 (06 May 2014)
 
