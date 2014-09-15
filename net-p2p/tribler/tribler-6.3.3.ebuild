@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.3.3.ebuild,v 1.2 2014/09/13 13:10:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.3.3.ebuild,v 1.3 2014/09/15 18:11:32 blueness Exp $
 
 EAPI="5"
 
@@ -22,12 +22,15 @@ RDEPEND="
 	dev-lang/python:2.7[sqlite]
 	dev-python/apsw
 	dev-python/feedparser
+	dev-python/gmpy
 	dev-python/m2crypto
 	dev-python/netifaces
+	dev-python/pyasn1
+	dev-python/pycrypto
 	dev-python/twisted-core
 	dev-python/wxpython
 	dev-libs/openssl:0[-bindist]
-	net-libs/rb_libtorrent
+	net-libs/rb_libtorrent[python]
 	vlc? (
 			media-video/vlc
 			media-video/ffmpeg:0

@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/tribler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.54 2014/09/13 13:10:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.55 2014/09/15 18:11:32 blueness Exp $
+
+  15 Sep 2014; Anthony G. Basile <blueness@gentoo.org> tribler-6.3.3.ebuild:
+  Fix bug #522862
 
   13 Sep 2014; Anthony G. Basile <blueness@gentoo.org> tribler-6.3.3.ebuild:
   Depend on dev-python/twisted-core.  Fixes bug #522694.

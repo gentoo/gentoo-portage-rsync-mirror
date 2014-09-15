@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.200 2014/09/15 08:18:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.201 2014/09/15 18:28:56 jlec Exp $
+
+*tcl-8.6.2 (15 Sep 2014)
+*tcl-8.5.16 (15 Sep 2014)
+
+  15 Sep 2014; Justin Lecher <jlec@gentoo.org> +tcl-8.5.16.ebuild,
+  +tcl-8.6.2.ebuild:
+  Version BUmp, #522092
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> tcl-8.5.15-r1.ebuild:
   Stable for sparc, wrt bug #512012
