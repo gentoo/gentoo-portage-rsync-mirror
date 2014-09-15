@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.153 2014/08/25 11:03:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.154 2014/09/15 08:24:39 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> goffice-0.10.17.ebuild:
+  Stable for sparc, wrt bug #512012
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> goffice-0.10.17.ebuild:
   Stable for alpha, wrt bug #512012

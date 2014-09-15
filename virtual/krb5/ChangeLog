@@ -1,6 +1,9 @@
 # ChangeLog for virtual/krb5
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/krb5/ChangeLog,v 1.11 2014/09/13 11:52:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/krb5/ChangeLog,v 1.12 2014/09/15 08:24:29 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> krb5-0-r1.ebuild:
+  Stable for sparc, wrt bug #512012
 
   13 Sep 2014; Markus Meier <maekke@gentoo.org> krb5-0-r1.ebuild:
   arm stable, bug #518614

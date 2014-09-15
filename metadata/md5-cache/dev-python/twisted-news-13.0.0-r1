@@ -4,11 +4,11 @@ DESCRIPTION=Twisted News is an NNTP server and programming library
 EAPI=5
 HOMEPAGE=http://www.twistedmatrix.com/
 IUSE=python_targets_python2_7
-KEYWORDS=alpha amd64 ia64 ppc ppc64 ~sparc x86
+KEYWORDS=alpha amd64 ia64 ppc ppc64 sparc x86
 LICENSE=MIT
 RDEPEND==dev-python/twisted-core-13.0*[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] =dev-python/twisted-mail-13.0*[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://twistedmatrix.com/Releases/News/13.0/TwistedNews-13.0.0.tar.bz2
 _eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402	twisted-r1	8e3123a6498c5da6dd9d8135b3655efd	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=424af1e00172b929f6f10bc6fbf7697d
+_md5_=0bff30ed05aaa7e517e0302716f64fbc

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.101 2014/09/07 14:46:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.102 2014/09/15 08:20:50 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> gd-2.0.35-r4.ebuild:
+  Stable for sparc, wrt bug #512012
 
   07 Sep 2014; Fabian Groffen <grobian@gentoo.org> gd-2.0.35-r4.ebuild:
   Add back font paths for as long as we don't understand why fontconfig doesn't

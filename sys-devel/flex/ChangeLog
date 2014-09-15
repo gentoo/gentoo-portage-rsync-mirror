@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.125 2014/09/13 12:07:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.126 2014/09/15 08:23:54 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> flex-2.5.39-r1.ebuild:
+  Stable for sparc, wrt bug #512012
 
   13 Sep 2014; Markus Meier <maekke@gentoo.org> flex-2.5.39-r1.ebuild:
   arm stable, bug #512012

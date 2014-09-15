@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1-r4.ebuild,v 1.8 2014/08/25 11:00:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1-r4.ebuild,v 1.9 2014/09/15 08:21:39 ago Exp $
 
 EAPI=4
 inherit eutils libtool multilib-minimal
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/sidplay2/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="static-libs"
 RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r6
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"

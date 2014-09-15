@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/oniguruma
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.69 2014/08/25 10:57:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.70 2014/09/15 08:18:43 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> oniguruma-5.9.5.ebuild:
+  Stable for sparc, wrt bug #512012
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> oniguruma-5.9.5.ebuild:
   Stable for alpha, wrt bug #512012

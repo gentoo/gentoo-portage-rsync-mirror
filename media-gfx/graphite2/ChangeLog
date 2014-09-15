@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.73 2014/08/25 10:59:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.74 2014/09/15 08:20:46 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> graphite2-1.2.4-r1.ebuild:
+  Stable for sparc, wrt bug #512012
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> graphite2-1.2.4-r1.ebuild:
   Stable for alpha, wrt bug #512012

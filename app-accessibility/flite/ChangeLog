@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/flite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.62 2014/08/25 10:56:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.63 2014/09/15 08:17:46 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> flite-1.4-r4.ebuild:
+  Stable for sparc, wrt bug #512012
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> flite-1.4-r4.ebuild:
   Stable for alpha, wrt bug #512012

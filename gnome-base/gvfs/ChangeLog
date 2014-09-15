@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.268 2014/09/05 09:57:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.269 2014/09/15 08:20:20 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> gvfs-1.20.2.ebuild:
+  Stable for sparc, wrt bug #512012
 
 *gvfs-1.20.3 (05 Sep 2014)
 

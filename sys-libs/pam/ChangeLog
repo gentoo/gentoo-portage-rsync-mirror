@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.346 2014/09/13 12:07:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.347 2014/09/15 08:24:10 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> pam-1.1.8-r2.ebuild:
+  Stable for sparc, wrt bug #512012
 
   13 Sep 2014; Markus Meier <maekke@gentoo.org> pam-1.1.8-r2.ebuild:
   arm stable, bug #512012

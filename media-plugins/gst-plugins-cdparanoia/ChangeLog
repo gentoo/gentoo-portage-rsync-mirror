@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-cdparanoia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.242 2014/08/25 11:00:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.243 2014/09/15 08:21:53 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-cdparanoia-0.10.36-r1.ebuild,
+  gst-plugins-cdparanoia-1.2.4-r1.ebuild:
+  Stable for sparc, wrt bug #512012
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-cdparanoia-0.10.36-r1.ebuild,

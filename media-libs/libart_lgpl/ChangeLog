@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.87 2014/08/25 10:59:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.88 2014/09/15 08:21:11 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> libart_lgpl-2.3.21-r2.ebuild:
+  Stable for sparc, wrt bug #512012
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libart_lgpl-2.3.21-r2.ebuild:
   Stable for alpha, wrt bug #512012

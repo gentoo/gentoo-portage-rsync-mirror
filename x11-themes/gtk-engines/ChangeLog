@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.196 2014/08/25 11:04:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.197 2014/09/15 08:25:00 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> gtk-engines-2.20.2-r1.ebuild:
+  Stable for sparc, wrt bug #512012
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org> gtk-engines-2.20.2-r1.ebuild:
   Stable for alpha, wrt bug #512012

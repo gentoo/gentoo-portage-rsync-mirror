@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.158 2014/08/25 10:59:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.159 2014/09/15 08:20:56 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-bad-0.10.23-r2.ebuild, gst-plugins-bad-1.2.4-r1.ebuild:
+  Stable for sparc, wrt bug #512012
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-bad-0.10.23-r2.ebuild, gst-plugins-bad-1.2.4-r1.ebuild:

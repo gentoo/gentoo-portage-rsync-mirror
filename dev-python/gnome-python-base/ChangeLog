@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/ChangeLog,v 1.50 2014/08/25 10:57:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/ChangeLog,v 1.51 2014/09/15 08:19:02 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  gnome-python-base-2.28.1-r1.ebuild:
+  Stable for sparc, wrt bug #512012
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-python-base-2.28.1-r1.ebuild:

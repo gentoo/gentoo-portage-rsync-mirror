@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.3.ebuild,v 1.10 2014/08/25 11:03:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.3.ebuild,v 1.11 2014/09/15 08:23:44 ago Exp $
 
 EAPI=5
 
@@ -21,10 +21,10 @@ if [[ ${PV} == *9999 ]]; then
 	if [[ ${PV} != 9999 ]]; then
 		EGIT_BRANCH=branch-${PV/.9999}
 	fi
-	KEYWORDS="alpha hppa ia64 ppc64"
+	KEYWORDS="alpha hppa ia64 ppc64 sparc"
 else
 	SRC_URI="http://www.cups.org/software/${MY_PV}/${MY_P}-source.tar.bz2"
-	KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~m68k-mint"
+	KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~m68k-mint"
 fi
 
 DESCRIPTION="The Common Unix Printing System"

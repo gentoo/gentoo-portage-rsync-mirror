@@ -1,6 +1,10 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.114 2014/09/02 09:52:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.115 2014/09/15 08:23:26 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  telepathy-mission-control-5.16.2.ebuild:
+  Stable for sparc, wrt bug #512012
 
 *telepathy-mission-control-5.16.3 (02 Sep 2014)
 

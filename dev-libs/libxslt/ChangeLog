@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.289 2014/09/03 09:51:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.290 2014/09/15 08:18:41 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> libxslt-1.1.28-r3.ebuild:
+  Stable for sparc, wrt bug #512012
 
 *libxslt-1.1.28-r4 (03 Sep 2014)
 

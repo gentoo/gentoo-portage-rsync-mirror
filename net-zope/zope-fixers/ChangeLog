@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-fixers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.26 2014/08/23 15:33:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.27 2014/09/15 08:23:48 ago Exp $
+
+  15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> zope-fixers-1.1.2.ebuild:
+  Stable for sparc, wrt bug #512012
 
   23 Aug 2014; Agostino Sarubbo <ago@gentoo.org> zope-fixers-1.1.2.ebuild:
   Stable for ia64, wrt bug #512012
