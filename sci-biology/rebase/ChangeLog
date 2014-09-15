@@ -1,6 +1,14 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.126 2014/08/03 18:37:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.128 2014/09/15 17:00:06 jlec Exp $
+
+  15 Sep 2014; Justin Lecher <jlec@gentoo.org> -rebase-1111.ebuild:
+  Drop ebuild with deprecated EAPI
+
+*rebase-1409 (15 Sep 2014)
+
+  15 Sep 2014; Justin Lecher <jlec@gentoo.org> +rebase-1409.ebuild:
+  Version Bump
 
   03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> rebase-1403.ebuild:
   Stable for ppc, wrt bug #512118

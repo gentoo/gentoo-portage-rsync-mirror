@@ -1,6 +1,20 @@
 # ChangeLog for games-board/xboard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.62 2014/03/18 01:17:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.64 2014/09/15 17:00:12 mr_bones_ Exp $
+
+  15 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/xboard-4.7.3-Xaw3d.patch, +files/xboard-4.7.3-configure-switches.patch,
+  +files/xboard-4.7.3-gettext.patch, +files/xboard-4.7.3-gnuchess-default.patch,
+  +files/xboard-4.7.3-paths.patch, files/xboard-4.7.2-Xaw3d.patch,
+  files/xboard-4.7.2-configure-switches.patch, files/xboard-4.7.2-gettext.patch,
+  files/xboard-4.7.2-gnuchess-default.patch, files/xboard-4.7.2-paths.patch,
+  xboard-4.7.3.ebuild:
+  match patches to version
+
+*xboard-4.7.3 (15 Sep 2014)
+
+  15 Sep 2014; Sebastian Pipping <sping@gentoo.org> +xboard-4.7.3.ebuild:
+  Bump to 4.7.3 (bug #522332)
 
   18 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/xboard-4.6.2-gentoo.patch, -files/xboard-4.6.2-gettext.patch,
