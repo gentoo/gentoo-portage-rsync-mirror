@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.722 2014/09/14 11:41:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.723 2014/09/15 21:10:33 mgorny Exp $
+
+  15 Sep 2014; Michał Górny <mgorny@gentoo.org> use.mask:
+  Mask USE=zrtp on net-libs/ortp since it is screwed up.
 
   14 Sep 2014; Johannes Huber <johu@gentoo.org> package.use.mask:
   Mask dev-libs/libattica[qt5].

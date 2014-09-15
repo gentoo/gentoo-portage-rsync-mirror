@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.209 2014/09/07 13:22:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.210 2014/09/15 21:10:33 mgorny Exp $
 
 # CURL_SSL=winssl is for prefix/windows/winnt only
 curl_ssl_winssl
@@ -385,3 +385,9 @@ openrc-force
 # in 30 days.
 python_targets_python3_2
 python_single_target_python3_2
+
+# Michał Górny <mgorny@gentoo.org> (15 Sep 2014)
+# Unsuccessful version bump of net-libs/libzrtpcpp, seems to cause
+# undefined references few layers deeper. Need further investigation,
+# if anybody cares.
+net-libs/ortp zrtp
