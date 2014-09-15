@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.107 2014/09/14 18:50:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.108 2014/09/15 02:30:11 patrick Exp $
+
+  15 Sep 2014; Patrick Lauer <patrick@gentoo.org> mesa-progs-8.2.0.ebuild:
+  Temporarily drop keywords #522824
 
 *mesa-progs-8.2.0 (14 Sep 2014)
 
