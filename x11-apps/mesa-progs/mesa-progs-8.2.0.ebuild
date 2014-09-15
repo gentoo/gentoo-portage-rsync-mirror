@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-8.2.0.ebuild,v 1.2 2014/09/15 02:30:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-8.2.0.ebuild,v 1.3 2014/09/15 09:22:29 chithanh Exp $
 
 EAPI=5
 
@@ -25,9 +25,7 @@ fi
 
 LICENSE="LGPL-2"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
-# temporarily remove keywords #522824
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="egl gles1 gles2"
 
 RDEPEND="
@@ -55,22 +53,8 @@ src_prepare() {
 	eautoreconf
 }
 
-src_configure() {
-	# We're not using the complete buildsystem if we only want to build
-	# glxinfo and glxgears.
-	if use egl || use gles1 || use gles2; then
-		default_src_configure
-	fi
-}
-
 src_compile() {
-	if ! use egl && ! use gles1 && ! use gles2; then
-		tc-export CC
-		emake LDLIBS='-lX11 -lGL' src/xdemos/glxinfo
-		emake LDLIBS='-lX11 -lGL -lm' src/xdemos/glxgears
-	else
-		emake -C src/xdemos glxgears glxinfo
-	fi
+	emake -C src/xdemos glxgears glxinfo
 
 	if use egl; then
 		emake LDLIBS="-lEGL" -C src/egl/opengl/ eglinfo
