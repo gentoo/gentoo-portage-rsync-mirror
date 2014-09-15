@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.88 2014/08/21 08:56:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.89 2014/09/15 18:54:05 jlec Exp $
+
+  15 Sep 2014; Justin Lecher <jlec@gentoo.org>
+  nvidia-cuda-toolkit-6.5.14.ebuild:
+  Fix min nvidia-drivers version, thanks Marius Brehler for reporting, #521480
 
 *nvidia-cuda-toolkit-6.5.14 (21 Aug 2014)
 
