@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-init-scripts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.41 2014/08/21 03:08:13 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.42 2014/09/15 14:17:12 grknight Exp $
+
+*mysql-init-scripts-2.0-r1 (15 Sep 2014)
+
+  15 Sep 2014;  <grknight@gentoo.org> +mysql-init-scripts-2.0-r1.ebuild,
+  -mysql-init-scripts-2.0.ebuild, files/init.d-2.0:
+  Revision bump.  Update checkconfig section to accept alternate configurations.
+  Thanks to László Szalma <dblaci@dblaci.hu> for the input. wrt bug 522766
 
 *mysql-init-scripts-2.0 (21 Aug 2014)
 

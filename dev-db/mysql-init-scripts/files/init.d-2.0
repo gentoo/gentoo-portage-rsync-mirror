@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/init.d-2.0,v 1.1 2014/08/21 03:08:13 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/init.d-2.0,v 1.2 2014/09/15 14:17:12 grknight Exp $
 
 extra_commands="checkconfig"
 
@@ -134,19 +134,26 @@ stop() {
 }
 
 checkconfig() {
-	local basedir=$(get_config "${MY_CNF}" basedir | tail -n1)
-	ebegin "Checking mysqld configuration"
+	local my_cnf="${MY_CNF:-/etc/${SVCNAME}/my.cnf}"
+	local basedir=$(get_config "${my_cnf}" basedir | tail -n1)
+	local svc_name=$(mysql_svcname)
+	ebegin "Checking mysqld configuration for ${svc_name}"
 
-	# Suppress output to check the return value
-	"${basedir}"/sbin/mysqld --help --verbose &> /dev/null
+	if [ ${RC_CMD} == "checkconfig" ] ; then
+		# We are calling checkconfig specifically.  Print warnings regardless.
+		"${basedir}"/sbin/mysqld --defaults-file="${my_cnf}" --help --verbose > /dev/null
+	else
+		# Suppress output to check the return value
+		"${basedir}"/sbin/mysqld --defaults-file="${my_cnf}" --help --verbose > /dev/null 2>&1
 
-	# If the above command does not return 0,
-	# then there is an error to echo to the user
-	if [ $? -ne 0 ] ; then
-		"${basedir}"/sbin/mysqld --help --verbose > /dev/null
+		# If the above command does not return 0,
+		# then there is an error to echo to the user
+		if [ $? -ne 0 ] ; then
+			"${basedir}"/sbin/mysqld --defaults-file="${my_cnf}" --help --verbose > /dev/null
+		fi
 	fi
 
-	eend $? "MySQL config check failed"
+	eend $? "${svc_name} config check failed"
 }
 
 # vim: filetype=gentoo-init-d sw=2 ts=2 sts=2 noet:
