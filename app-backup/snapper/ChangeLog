@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/snapper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/snapper/ChangeLog,v 1.5 2014/09/12 19:32:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/snapper/ChangeLog,v 1.6 2014/09/15 06:38:13 dlan Exp $
+
+*snapper-0.2.3-r1 (15 Sep 2014)
+
+  15 Sep 2014; Yixun Lan <dlan@gentoo.org> -snapper-0.2.2-r1.ebuild,
+  -snapper-0.2.3.ebuild, +snapper-0.2.3-r1.ebuild:
+  temporarily fix bug 522656, drop old version
 
   12 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   snapper-0.2.2-r1.ebuild, snapper-0.2.3.ebuild, snapper-9999.ebuild:

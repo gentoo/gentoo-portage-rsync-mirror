@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/snapper/snapper-0.2.2-r1.ebuild,v 1.3 2014/09/12 19:32:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/snapper/snapper-0.2.3-r1.ebuild,v 1.1 2014/09/15 06:38:13 dlan Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/boost[threads]
 	sys-apps/util-linux
 	sys-libs/zlib
 	virtual/libintl
-	btrfs? ( sys-fs/btrfs-progs )
+	btrfs? ( <sys-fs/btrfs-progs-3.16 )
 	ext4? ( sys-fs/e2fsprogs )
 	lvm? ( sys-fs/lvm2 )
 	pam? ( sys-libs/pam )
