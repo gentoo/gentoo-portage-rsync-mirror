@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-3.0.0.ebuild,v 1.1 2014/07/27 11:55:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-3.0.2.ebuild,v 1.1 2014/09/15 22:43:29 johu Exp $
 
 EAPI=5
 
@@ -52,9 +52,9 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.8.10.2-FindPythonLibs.patch
 	"${FILESDIR}"/${PN}-2.8.12.1-FindImageMagick.patch
 	"${FILESDIR}"/${PN}-3.0.0-FindBLAS.patch
-	"${FILESDIR}"/${PN}-3.0.0-FindLAPACK.patch
 	"${FILESDIR}"/${PN}-3.0.0-FindBoost-python.patch
 	"${FILESDIR}"/${PN}-3.0.0-prefix-dirs.patch
+	"${FILESDIR}"/${PN}-3.0.2-FindLAPACK.patch
 )
 
 cmake_src_bootstrap() {

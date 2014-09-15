@@ -1,5 +1,5 @@
---- Modules/FindLAPACK.cmake
-+++ Modules/FindLAPACK.cmake
+--- Modules/FindLAPACK.cmake.orig	2014-09-15 23:50:11.377111987 +0200
++++ Modules/FindLAPACK.cmake	2014-09-15 23:52:54.734388375 +0200
 @@ -4,6 +4,10 @@
  #
  # Find LAPACK library
@@ -11,9 +11,9 @@
  # This module finds an installed fortran library that implements the
  # LAPACK linear-algebra interface (see http://www.netlib.org/lapack/).
  #
-@@ -72,6 +76,24 @@
- # N.B. _prefix is the prefix applied to the names of all cached variables that
- # are generated internally and marked advanced by this macro.
+@@ -140,6 +144,23 @@
+ 
+ endmacro()
  
 +#
 +# first, try PkgConfig
@@ -26,17 +26,16 @@
 +    if (NOT ${PC_LIB}_LIBRARY)
 +      message(FATAL_ERROR "Something is wrong in your pkg-config file - lib ${PC_LIB} not found in ${PC_LAPACK_LIBRARY_DIRS}")
 +    endif (NOT ${PC_LIB}_LIBRARY)
-+    list(APPEND LAPACK_LIBRARIES ${${PC_LIB}_LIBRARY}) 
++    list(APPEND LAPACK_LIBRARIES ${${PC_LIB}_LIBRARY})
 +  endforeach(PC_LIB)
 +  find_package_handle_standard_args(LAPACK DEFAULT_MSG LAPACK_LIBRARIES)
 +  mark_as_advanced(LAPACK_LIBRARIES)
 +else(PC_LAPACK_FOUND)
 +message(STATUS "No PkgConfig configuration for LAPACK found; starting more extensive search.")
-+
- set(_libraries_work TRUE)
- set(${LIBRARIES})
- set(_combined_name)
-@@ -348,3 +370,5 @@
+ 
+ set(LAPACK_LINKER_FLAGS)
+ set(LAPACK_LIBRARIES)
+@@ -348,3 +369,5 @@
  endif()
  
  set(CMAKE_FIND_LIBRARY_SUFFIXES ${_lapack_ORIG_CMAKE_FIND_LIBRARY_SUFFIXES})

@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.297 2014/08/21 19:42:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.298 2014/09/15 22:43:29 johu Exp $
+
+*cmake-3.0.2 (15 Sep 2014)
+
+  15 Sep 2014; Johannes Huber <johu@gentoo.org> +cmake-3.0.2.ebuild,
+  +files/cmake-3.0.2-FindLAPACK.patch, -cmake-3.0.0.ebuild,
+  -files/cmake-3.0.0-FindLAPACK.patch:
+  Version bump, adds updated patch for FindLAPACK module by Eugene Shalygin
+  <eugene.shalygin@gmail.com>, bug #518910. Remove old.
 
 *cmake-2.8.12.2-r2 (21 Aug 2014)
 
