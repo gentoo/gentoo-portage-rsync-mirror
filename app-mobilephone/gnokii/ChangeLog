@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.119 2014/06/14 11:32:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.120 2014/09/15 09:57:36 jer Exp $
+
+  15 Sep 2014; Jeroen Roovers <jer@gentoo.org> files/gnokii-0.6.29-pcsc.patch,
+  files/gnokii-0.6.31-fix_xgnokii_inclusion.patch,
+  files/gnokii-9999-icon.patch, files/gnokii-9999-translations.patch:
+  Clean up patches.
 
   14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -files/gnokii-0.6.27-TP-PI.patch,
   -files/gnokii-0.6.27-disable-database.patch, -files/gnokii-0.6.27-icon.patch,

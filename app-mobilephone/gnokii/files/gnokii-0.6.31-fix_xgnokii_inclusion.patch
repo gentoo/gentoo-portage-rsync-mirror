@@ -1,5 +1,5 @@
---- configure.in.ori	2012-04-03 13:06:36.452630827 +0200
-+++ configure.in	2012-04-03 13:07:19.139299726 +0200
+--- a/configure.in
++++ b/configure.in
 @@ -689,7 +689,7 @@
     fi
  fi

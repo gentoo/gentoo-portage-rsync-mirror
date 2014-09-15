@@ -1,6 +1,5 @@
-diff -Nru gnokii-9999.orig/xgnokii/xgnokii.desktop.in gnokii-9999/xgnokii/xgnokii.desktop.in
---- gnokii-9999.orig/xgnokii/xgnokii.desktop.in	2008-10-05 10:14:32.000000000 +0000
-+++ gnokii-9999/xgnokii/xgnokii.desktop.in	2009-01-11 17:11:02.000000000 +0000
+--- a/xgnokii/xgnokii.desktop.in
++++ b/xgnokii/xgnokii.desktop.in
 @@ -2,7 +2,7 @@
  _Name=Xgnokii
  _GenericName=Mobile Phone Suite
