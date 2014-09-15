@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/intel-common-15.0.0.090.ebuild,v 1.1 2014/09/15 11:55:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/intel-common-15.0.0.090-r1.ebuild,v 1.1 2014/09/15 12:34:28 jlec Exp $
 
 EAPI=5
 
@@ -23,10 +23,10 @@ CHECKREQS_DISK_BUILD=375M
 pkg_setup() {
 	einfo ${INTEL_SDP_EDIR}
 	INTEL_BIN_RPMS="openmp openmp-devel"
-	INTEL_DAT_RPMS="compilerpro-common"
+	INTEL_DAT_RPMS="compilerpro-common compilerpro-common-pset"
 	if use compiler; then
 		INTEL_BIN_RPMS+=" compilerpro-devel sourcechecker-devel"
-		INTEL_DAT_RPMS+=" compilerpro-vars sourcechecker-common"
+		INTEL_DAT_RPMS+=" compilerpro-vars sourcechecker-common ccompxe compxe fcompxe"
 	fi
 	intel-sdp_pkg_setup
 }
