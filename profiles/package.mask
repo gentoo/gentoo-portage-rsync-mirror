@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16034 2014/09/15 14:45:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16035 2014/09/15 15:27:15 polynomial-c Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -626,7 +626,7 @@ games-emulation/m64py
 >media-fonts/roboto-9999
 
 # Lars Wendler <polynomial-c@gentoo.org> (28 Oct 2013)
-# Masked alpha releases for testing.
+# Masked alpha/beta releases for testing.
 =app-arch/xz-utils-5.1*
 
 # Tiziano Müller <dev-zero@gentoo.org> (24 Oct 2013)
