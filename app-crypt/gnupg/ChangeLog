@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.548 2014/09/14 09:17:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.549 2014/09/15 17:15:24 alonbl Exp $
+
+*gnupg-2.0.26-r2 (15 Sep 2014)
+
+  15 Sep 2014; Alon Bar-Lev <alonbl@gentoo.org> +gnupg-2.0.26-r2.ebuild,
+  -gnupg-2.0.26-r1.ebuild, gnupg-2.1.0_beta783.ebuild, metadata.xml:
+  Install extra tools, including previous default ones as it becomes long list,
+  bug#522882
 
   14 Sep 2014; Markus Meier <maekke@gentoo.org> gnupg-2.0.26.ebuild:
   arm stable, bug #521174

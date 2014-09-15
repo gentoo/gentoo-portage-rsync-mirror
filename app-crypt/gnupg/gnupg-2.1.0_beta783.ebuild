@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta783.ebuild,v 1.2 2014/08/29 21:14:37 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta783.ebuild,v 1.3 2014/09/15 17:15:24 alonbl Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnupg/gnupg/unstable/${MY_P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="bzip2 doc nls readline static selinux smartcard usb"
+IUSE="bzip2 doc nls readline static selinux smartcard tools usb"
 
 COMMON_DEPEND_LIBS="
 	dev-libs/npth
@@ -111,8 +111,20 @@ src_compile() {
 src_install() {
 	default
 
-	# bug#192151
-	dobin tools/gpgsplit tools/gpg-zip
+	if use tools; then
+		for f in \
+				convert-from-106 \
+				gpg-check-pattern \
+				gpg-zip \
+				gpgconf \
+				gpgsplit \
+				lspgpot \
+				mail-signed-keys \
+				make-dns-cert \
+				; do
+			dobin "tools/${f}" tools/gpg-zip
+		done
+	fi
 
 	emake DESTDIR="${D}" -f doc/Makefile uninstall-nobase_dist_docDATA
 	rm "${ED}"/usr/share/gnupg/help* || die

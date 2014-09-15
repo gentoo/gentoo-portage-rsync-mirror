@@ -24,5 +24,8 @@
       Build mta support using
       <pkg>virtual/mta</pkg>.
     </flag>
+    <flag name='tools'>
+      Install extra tools.
+    </flag>
   </use>
 </pkgmetadata>
