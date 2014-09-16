@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.7.5.ebuild,v 1.1 2014/05/29 16:14:56 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.7.5.ebuild,v 1.2 2014/09/16 01:04:21 sping Exp $
 
 EAPI=4
 
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 	sys-apps/findutils"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-estonian.patch
+
 	rm -R src/{libpng,zlib} || die
 	find . -type d -name build -exec rm -R {} + || die
 

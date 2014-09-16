@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.92 2014/05/29 16:14:56 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.93 2014/09/16 01:04:21 sping Exp $
+
+  16 Sep 2014; Sebastian Pipping <sping@gentoo.org> optipng-0.7.5.ebuild,
+  +files/optipng-0.7.5-estonian.patch:
+  Fix compilation for et_EE locale (bug #522446)
 
 *optipng-0.7.5 (29 May 2014)
 
