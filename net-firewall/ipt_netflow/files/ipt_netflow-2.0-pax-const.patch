@@ -4,8 +4,8 @@ Adds support for building with PaX hardened kernel
 
 Adapted to version 2.0 by Sergey Popov <pinkbyte@gentoo.org>
 
---- ipt_NETFLOW.c.orig	2014-08-07 08:05:08.000000000 +0400
-+++ ipt_NETFLOW.c	2014-08-18 11:10:08.000000000 +0400
+--- a/ipt_NETFLOW.c
++++ b/ipt_NETFLOW.c
 @@ -845,13 +845,13 @@
  			 void __user *buffer, size_t *lenp, loff_t *fpos)
  {
