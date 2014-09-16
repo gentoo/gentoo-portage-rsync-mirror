@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.61.ebuild,v 1.1 2014/09/03 14:04:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.62.ebuild,v 1.1 2014/09/16 05:21:45 jer Exp $
 
 EAPI=5
 inherit eutils
