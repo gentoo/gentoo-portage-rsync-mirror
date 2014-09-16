@@ -1,6 +1,12 @@
 # ChangeLog for www-client/surf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.35 2013/11/01 14:53:54 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.36 2014/09/16 19:23:43 jer Exp $
+
+*surf-0.6-r2 (16 Sep 2014)
+
+  16 Sep 2014; Jeroen Roovers <jer@gentoo.org> +surf-0.6-r2.ebuild,
+  surf-9999.ebuild, metadata.xml:
+  Add USE=-savedconfig dependencies (bug #522954 by Harley Amundsen).
 
   01 Nov 2013; Jeroen Roovers <jer@gentoo.org> -surf-0.6.ebuild:
   Old.
