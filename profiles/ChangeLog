@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9380 2014/09/16 09:04:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9381 2014/09/16 11:12:15 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> desc/xfce_plugins.desc:
+  New description for xfce_plugins_power to replace xfce_plugins_battery and
+  xfce_plugins_brightness
 
   16 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask LibreOffice 4.3 for an initial short testing period
