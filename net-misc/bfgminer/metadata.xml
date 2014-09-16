@@ -20,6 +20,7 @@
 		<flag name='bfx'>Enable support for mining with BFx2 USB sticks</flag>
 		<flag name='bigpic'>Enable support for mining with Big Picture Mining USB sticks (Red/BlueFury, BF1, etc)</flag>
 		<flag name='bitfury'>Enable support for mining with 55nm Bitfury-based devices</flag>
+		<flag name='cointerra'>Enable support for mining with CoinTerra TerraMiner.</flag>
 		<flag name='cpumining'>Enable support for mining with CPUs</flag>
 		<flag name='drillbit'>Enable support for mining with Drillbit boards</flag>
 		<flag name='dualminer'>Enable support for mining with DualMiner USB sticks</flag>

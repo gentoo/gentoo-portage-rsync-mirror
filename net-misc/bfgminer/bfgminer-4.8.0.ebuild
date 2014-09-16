@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-4.4.0.ebuild,v 1.2 2014/07/22 15:28:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-4.8.0.ebuild,v 1.1 2014/09/16 00:39:28 blueness Exp $
 
 EAPI=5
 
@@ -15,9 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 
 # TODO: knc (needs i2c-tools header)
-IUSE="adl antminer avalon bfx bifury bitforce bfsb bigpic bitfury cpumining drillbit dualminer examples gridseed hardened hashbuster hashbuster2 hashfast icarus jingtian klondike +libusb littlefury lm_sensors metabank modminer nanofury ncurses opencl proxy proxy_getwork proxy_stratum rockminer screen scrypt twinfury +udev unicode x6500 zeusminer ztex"
+# TODO: minergate (needs actual miner_gate)
+IUSE="adl antminer avalon avalonmm bfx bifury bitforce bfsb bigpic bitfury cointerra cpumining drillbit dualminer examples gridseed hardened hashbuster hashbuster2 hashfast icarus jingtian klondike +libusb littlefury lm_sensors metabank modminer nanofury ncurses opencl proxy proxy_getwork proxy_stratum rockminer screen scrypt twinfury +udev udev-broad-rules unicode x6500 zeusminer ztex"
 REQUIRED_USE='
-	|| ( antminer avalon bfsb bfx bifury bigpic bitforce bitfury cpumining drillbit dualminer gridseed hashbuster hashbuster2 hashfast icarus klondike littlefury metabank modminer nanofury opencl proxy twinfury x6500 ztex )
+	|| ( antminer avalon avalonmm bfsb bfx bifury bigpic bitforce bitfury cointerra cpumining drillbit dualminer gridseed hashbuster hashbuster2 hashfast icarus klondike littlefury metabank modminer nanofury opencl proxy twinfury x6500 zeusminer ztex )
 	adl? ( opencl )
 	bfsb? ( bitfury )
 	bfx? ( bitfury libusb )
@@ -49,7 +50,8 @@ DEPEND='
 		sys-libs/ncurses[unicode?]
 	)
 	>=dev-libs/jansson-2
-	net-libs/libblkmaker
+	dev-libs/libbase58
+	net-libs/libblkmaker:=
 	udev? (
 		virtual/udev
 	)
@@ -130,12 +132,14 @@ src_configure() {
 		$(use_enable adl) \
 		$(use_enable antminer) \
 		$(use_enable avalon) \
+		$(use_enable avalonmm) \
 		$(use_enable bifury) \
 		$(use_enable bitforce) \
 		$(use_enable bfsb) \
 		$(use_enable bfx) \
 		$(use_enable bigpic) \
 		$(use_enable bitfury) \
+		$(use_enable cointerra) \
 		$(use_enable cpumining) \
 		$(use_enable drillbit) \
 		$(use_enable dualminer) \
@@ -157,6 +161,7 @@ src_configure() {
 		--with-system-libblkmaker \
 		$with_curses \
 		$(use_with udev libudev) \
+		$(use_enable udev-broad-rules broad-udevrules) \
 		$(use_with lm_sensors sensors) \
 		$(use_with proxy_getwork libmicrohttpd) \
 		$(use_with proxy_stratum libevent) \
