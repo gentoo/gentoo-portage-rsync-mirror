@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/freewnn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.49 2014/07/08 00:43:02 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.50 2014/09/15 23:05:14 naota Exp $
+
+  15 Sep 2014; Naohiro Aota <naota@gentoo.org>
+  +files/freewnn-1.1.1_alpha22-parallel-build.patch,
+  freewnn-1.1.1_alpha22.ebuild:
+  Add a patch to fix parallel build issue #517916
 
   08 Jul 2014; Naohiro Aota <naota@gentoo.org>
   files/freewnn-1.1.1_alpha21-ldflags.patch:

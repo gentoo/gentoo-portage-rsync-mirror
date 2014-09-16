@@ -1796,6 +1796,7 @@ dev-libs/keybinder:introspection - Use dev-libs/gobject-introspection for intros
 dev-libs/leveldb:snappy - support the snappy compression library
 dev-libs/libRocket:samples - Build samples
 dev-libs/libappindicator:introspection - Use dev-libs/gobject-introspection for introspection
+dev-libs/libbase58:tools - Build command line base58 tool
 dev-libs/libburn:cdio - Enable EXPERIMENTAL use of libcdio as system adapter
 dev-libs/libburn:track-src-odirect - Read track input with O_DIRECT (see man 2 open), this may deliver a better write performance in some situations
 dev-libs/libcdio:minimal - Only build the libcdio library and little more, just to be used to link against from multimedia players. With this USE flag enabled, none of the command-line utilities are built, nor is the CDDA library.

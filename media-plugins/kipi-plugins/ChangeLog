@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.167 2014/08/20 14:43:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.168 2014/09/15 23:30:42 reavertm Exp $
+
+  15 Sep 2014; Maciej Mrozowski <reavertm@gentoo.org> kipi-plugins-3.5.0.ebuild,
+  kipi-plugins-4.0.0.ebuild, kipi-plugins-4.2.0.ebuild:
+  Requires msgfmt (gettext) at build time.
 
   20 Aug 2014; Johannes Huber <johu@gentoo.org> kipi-plugins-4.2.0.ebuild:
   Raise DEPEND on media-libs/libkgeomap by Johannes Niess

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha22.ebuild,v 1.2 2014/07/07 05:20:56 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha22.ebuild,v 1.3 2014/09/15 23:05:14 naota Exp $
 
 EAPI=5
 
@@ -31,6 +31,8 @@ src_prepare() {
 		-e "s/@LN_S@/ln -sf/" || die
 
 	#bug #318593
+
+	epatch "${FILESDIR}"/${P}-parallel-build.patch #517916
 }
 
 src_configure() {
