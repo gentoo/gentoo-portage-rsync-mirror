@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-call-ui/ktp-call-ui-0.8.1.ebuild,v 1.2 2014/07/29 18:17:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-call-ui/ktp-call-ui-0.8.1.ebuild,v 1.3 2014/09/16 17:01:22 johu Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ DEPEND="
 	<media-libs/qt-gstreamer-1.0.0
 	>=net-im/ktp-common-internals-${PV}
 	<net-libs/telepathy-farstream-0.6
-	>=net-libs/telepathy-qt-0.9.3[farstream]
+	<net-libs/telepathy-qt-0.9.5[farstream]
 "
 RDEPEND="${DEPEND}
 	|| (

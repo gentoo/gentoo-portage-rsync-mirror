@@ -1,6 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.213 2014/08/17 23:46:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.214 2014/09/16 17:12:06 chithanh Exp $
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (16 Sep 2014)
+# Needs libepoxy keywording, bug #510940
+x11-base/xorg-server glamor wayland
+x11-drivers/xf86-video-nouveau glamor
 
 # Anthony G. Basile <blueness@gentoo.org> (17 Aug 2014)
 # This pulls in qemu[smartcard] which is masked

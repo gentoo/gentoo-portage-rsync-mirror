@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.572 2014/09/07 17:09:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.573 2014/09/16 17:23:19 chithanh Exp $
+
+  16 Sep 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-10.2.7.ebuild:
+  Enable gbm by default so we can enable glamor by default in xorg-server
 
 *mesa-10.2.7 (07 Sep 2014)
 

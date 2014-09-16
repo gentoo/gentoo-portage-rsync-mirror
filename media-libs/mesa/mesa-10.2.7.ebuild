@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.2.7.ebuild,v 1.1 2014/09/07 17:09:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.2.7.ebuild,v 1.2 2014/09/16 17:23:19 chithanh Exp $
 
 EAPI=5
 
@@ -49,7 +49,7 @@ for card in ${VIDEO_CARDS}; do
 done
 
 IUSE="${IUSE_VIDEO_CARDS}
-	bindist +classic debug +dri3 +egl +gallium gbm gles1 gles2 +llvm +nptl
+	bindist +classic debug +dri3 +egl +gallium +gbm gles1 gles2 +llvm +nptl
 	opencl openvg osmesa pax_kernel openmax pic r600-llvm-compiler selinux
 	vdpau wayland xvmc xa kernel_FreeBSD"
 

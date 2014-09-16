@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.229 2014/09/01 14:26:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.230 2014/09/16 17:12:06 chithanh Exp $
+
+  16 Sep 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask xorg-server glamor/wayland flags
 
   01 Sep 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
   mask >=media-video/mpv-0.4.2 explicitly wrt #521808
