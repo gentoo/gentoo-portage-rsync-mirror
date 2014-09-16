@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-auth-handler/ktp-auth-handler-0.8.1.ebuild,v 1.1 2014/04/26 01:17:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-auth-handler/ktp-auth-handler-0.8.1.ebuild,v 1.2 2014/09/16 20:19:14 johu Exp $
 
 EAPI=5
 
@@ -28,4 +28,6 @@ DEPEND="
 	>=net-im/ktp-common-internals-${PV}
 	>=net-libs/telepathy-qt-0.9.3
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	app-crypt/qca-ossl:2
+"

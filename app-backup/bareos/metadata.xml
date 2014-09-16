@@ -10,6 +10,7 @@
 		<flag name='director'>Install director</flag>
 		<flag name='storage-daemon'>Install storage daemon (bareos-sd)</flag>
 		<flag name='logwatch'>Install support files for logwatch</flag>
+		<flag name='fastlz'>Enable support vor lz4, lz4hc and lzfast using dev-libs/bareos-fastlzlib</flag>
 		<flag name='ndmp'>Enable support for NDMP (Network Data Management Protocol)</flag>
 		<flag name='sql-pooling'>Enable SQL pooling support</flag>
 		<flag name='scsi-crypto'>Enable low level SCSI crypto support</flag>

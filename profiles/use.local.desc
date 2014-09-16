@@ -288,6 +288,7 @@ app-backup/bacula:bacula-nosd - Disable building of storage daemon
 app-backup/bacula:logwatch - Install support files for logwatch
 app-backup/bareos:clientonly - Only install file-daemon (client)
 app-backup/bareos:director - Install director
+app-backup/bareos:fastlz - Enable support vor lz4, lz4hc and lzfast using dev-libs/bareos-fastlzlib
 app-backup/bareos:logwatch - Install support files for logwatch
 app-backup/bareos:ndmp - Enable support for NDMP (Network Data Management Protocol)
 app-backup/bareos:scsi-crypto - Enable low level SCSI crypto support
