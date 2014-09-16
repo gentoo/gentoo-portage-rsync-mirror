@@ -1,6 +1,23 @@
 # ChangeLog for net-libs/libblkmaker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libblkmaker/ChangeLog,v 1.8 2014/06/06 10:58:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libblkmaker/ChangeLog,v 1.12 2014/09/16 00:17:28 blueness Exp $
+
+  16 Sep 2014; Anthony G. Basile <blueness@gentoo.org> libblkmaker-0.3.2.ebuild:
+  Revert last commit
+
+  16 Sep 2014; Anthony G. Basile <blueness@gentoo.org> libblkmaker-0.3.2.ebuild:
+  Add subslotting to reflect change in ABI and soname
+
+  16 Sep 2014; Anthony G. Basile <blueness@gentoo.org>
+  -libblkmaker-0.3.1.ebuild, -libblkmaker-0.3.3.ebuild,
+  -libblkmaker-0.4.0.ebuild:
+  Remove older unstable versions
+
+*libblkmaker-0.5.0 (16 Sep 2014)
+
+  16 Sep 2014; Anthony G. Basile <blueness@gentoo.org>
+  +libblkmaker-0.5.0.ebuild:
+  Version bump
 
 *libblkmaker-0.4.0 (06 Jun 2014)
 *libblkmaker-0.3.3 (06 Jun 2014)
