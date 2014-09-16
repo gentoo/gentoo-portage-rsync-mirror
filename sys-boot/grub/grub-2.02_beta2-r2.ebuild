@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r2.ebuild,v 1.1 2014/09/10 20:50:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r2.ebuild,v 1.2 2014/09/16 18:07:47 floppym Exp $
 
 EAPI=5
 
@@ -36,10 +36,8 @@ fi
 
 DEJAVU=dejavu-sans-ttf-2.34
 UNIFONT=unifont-7.0.01
-SRC_URI+=" truetype? (
-	mirror://sourceforge/dejavu/${DEJAVU}.zip
-	mirror://gnu/unifont/${UNIFONT}/${UNIFONT}.pcf.gz
-)"
+SRC_URI+=" mirror://gnu/unifont/${UNIFONT}/${UNIFONT}.pcf.gz
+	truetype? ( mirror://sourceforge/dejavu/${DEJAVU}.zip )"
 
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
@@ -182,8 +180,10 @@ src_prepare() {
 }
 
 setup_fonts() {
-	ln -s "${WORKDIR}/${DEJAVU}/ttf/DejaVuSans.ttf" DejaVuSans.ttf || die
 	ln -s "${WORKDIR}/${UNIFONT}.pcf" unifont.pcf || die
+	if use truetype; then
+		ln -s "${WORKDIR}/${DEJAVU}/ttf/DejaVuSans.ttf" DejaVuSans.ttf || die
+	fi
 }
 
 grub_configure() {
@@ -230,10 +230,8 @@ grub_configure() {
 		myeconfargs+=( --program-transform-name="s,grub,grub2," )
 	fi
 
-	if use truetype; then
-		mkdir -p "${BUILD_DIR}" || die
-		run_in_build_dir setup_fonts
-	fi
+	mkdir -p "${BUILD_DIR}" || die
+	run_in_build_dir setup_fonts
 
 	autotools-utils_src_configure
 }

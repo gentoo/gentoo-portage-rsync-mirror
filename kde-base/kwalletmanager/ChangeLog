@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwalletmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/ChangeLog,v 1.114 2014/08/20 16:02:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/ChangeLog,v 1.115 2014/09/16 18:17:22 johu Exp $
+
+*kwalletmanager-4.14.1 (16 Sep 2014)
+
+  16 Sep 2014; Johannes Huber <johu@gentoo.org> +kwalletmanager-4.14.1.ebuild:
+  Version bump KDE SC 4.14.1
 
 *kwalletmanager-4.14.0 (20 Aug 2014)
 

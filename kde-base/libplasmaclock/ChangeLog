@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libplasmaclock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.206 2014/07/23 16:53:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.207 2014/09/16 18:17:22 johu Exp $
+
+*libplasmaclock-4.11.12 (16 Sep 2014)
+
+  16 Sep 2014; Johannes Huber <johu@gentoo.org> +libplasmaclock-4.11.12.ebuild:
+  Version bump KDE Workspace 4.11.12
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org> -libplasmaclock-4.11.10.ebuild:
   Remove KDE Workspace 4.11.10

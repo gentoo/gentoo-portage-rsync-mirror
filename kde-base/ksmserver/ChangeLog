@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.317 2014/08/19 15:30:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.318 2014/09/16 18:17:20 johu Exp $
+
+*ksmserver-4.11.12 (16 Sep 2014)
+
+  16 Sep 2014; Johannes Huber <johu@gentoo.org> +ksmserver-4.11.12.ebuild:
+  Version bump KDE Workspace 4.11.12
 
   19 Aug 2014; Johannes Huber <johu@gentoo.org> ksmserver-4.11.11-r1.ebuild:
   Add missing eclass + use get_libdir instead of hardcoded path.

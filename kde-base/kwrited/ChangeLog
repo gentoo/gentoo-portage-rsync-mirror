@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwrited
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.202 2014/08/05 18:17:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.203 2014/09/16 18:17:33 johu Exp $
+
+*kwrited-4.11.12 (16 Sep 2014)
+
+  16 Sep 2014; Johannes Huber <johu@gentoo.org> +kwrited-4.11.12.ebuild:
+  Version bump KDE Workspace 4.11.12
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> kwrited-4.11.11.ebuild,
   kwrited-4.11.9.ebuild:
