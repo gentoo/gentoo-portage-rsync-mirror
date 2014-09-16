@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nsat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.28 2014/08/02 11:45:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.29 2014/09/16 05:50:32 jer Exp $
+
+  16 Sep 2014; Jeroen Roovers <jer@gentoo.org> -nsat-1.5.ebuild:
+  Old.
 
   02 Aug 2014; Raúl Porcel <armin76@gentoo.org> nsat-1.5.ebuild,
   nsat-1.5-r3.ebuild:
