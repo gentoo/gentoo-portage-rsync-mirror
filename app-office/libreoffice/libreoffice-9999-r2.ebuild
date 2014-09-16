@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.228 2014/09/16 09:14:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.229 2014/09/16 21:25:00 dilfridge Exp $
 
 EAPI=5
 
@@ -74,7 +74,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding coinmp collada +cups dbus debug eds firebird gltf gnome gstreamer
-+gtk gtk3 jemalloc kde mysql odk opengl postgres telepathy test +vba vlc +webdav"
++gtk gtk3 jemalloc kde mysql odk opengl postgres telepathy test +vba vlc"
 
 LO_EXTS="nlpsolver scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -137,6 +137,7 @@ COMMON_DEPEND="
 	>=media-libs/libfreehand-0.1.0
 	>=media-libs/libvisio-0.1.0
 	>=net-misc/curl-7.21.4
+	net-libs/neon
 	net-nds/openldap
 	sci-mathematics/lpsolve
 	virtual/jpeg:0
@@ -182,7 +183,6 @@ COMMON_DEPEND="
 		>=net-libs/telepathy-glib-0.18.0
 		>=x11-libs/gtk+-2.24:2
 	)
-	webdav? ( net-libs/neon )
 "
 
 RDEPEND="${COMMON_DEPEND}
@@ -452,6 +452,7 @@ src_configure() {
 		--enable-cairo-canvas \
 		--enable-graphite \
 		--enable-largefile \
+		--enable-neon \
 		--enable-python=system \
 		--enable-randr \
 		--enable-randr-link \
@@ -510,7 +511,6 @@ src_configure() {
 		$(use_enable telepathy) \
 		$(use_enable vba) \
 		$(use_enable vlc) \
-		$(use_enable webdav neon) \
 		$(use_with coinmp system-coinmp) \
 		$(use_with gltf system-libgltf) \
 		$(use_with java) \
