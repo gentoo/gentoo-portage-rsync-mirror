@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.428 2014/09/15 09:38:33 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.429 2014/09/16 08:32:35 civil Exp $
+
+  16 Sep 2014;  <civil@gentoo.org> perl-5.20.1.ebuild:
+  Replace patchset's extention to xz. Fixes #522896
 
 *perl-5.20.1 (15 Sep 2014)
 
