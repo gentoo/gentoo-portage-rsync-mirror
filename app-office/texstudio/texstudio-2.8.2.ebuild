@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.8.2.ebuild,v 1.1 2014/08/12 08:20:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.8.2.ebuild,v 1.2 2014/09/16 11:51:32 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ COMMON_DEPEND="
 	dev-libs/quazip
 	x11-libs/libX11
 	x11-libs/libXext
-	|| ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 )
+	dev-qt/designer:4
+	>=dev-qt/qtgui-4.8.5:4
 	>=dev-qt/qtcore-4.6.1:4
 	>=dev-qt/qtscript-4.6.1:4
 	dev-qt/qtsingleapplication

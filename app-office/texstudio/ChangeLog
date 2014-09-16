@@ -1,6 +1,15 @@
 # ChangeLog for app-office/texstudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.27 2014/08/12 08:20:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.28 2014/09/16 11:51:32 jlec Exp $
+
+*texstudio-2.8.4 (16 Sep 2014)
+
+  16 Sep 2014; Justin Lecher <jlec@gentoo.org> texstudio-2.6.0.ebuild,
+  -texstudio-2.6.2.ebuild, -texstudio-2.6.4.ebuild, -texstudio-2.6.6.ebuild,
+  -texstudio-2.7.0.ebuild, -texstudio-2.8.0.ebuild, texstudio-2.8.2.ebuild,
+  +texstudio-2.8.4.ebuild:
+  Version BUmp, #522692; fixes build problem with Werror=format-security,
+  #521120; Drop obsolete deps; drop old
 
 *texstudio-2.8.2 (12 Aug 2014)
 

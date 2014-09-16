@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.6.6.ebuild,v 1.1 2013/11/06 12:39:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.8.4.ebuild,v 1.1 2014/09/16 11:51:32 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ COMMON_DEPEND="
 	dev-libs/quazip
 	x11-libs/libX11
 	x11-libs/libXext
-	|| ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 )
+	dev-qt/designer:4
+	>=dev-qt/qtgui-4.8.5:4
 	>=dev-qt/qtcore-4.6.1:4
 	>=dev-qt/qtscript-4.6.1:4
 	dev-qt/qtsingleapplication
@@ -40,7 +41,7 @@ S="${WORKDIR}"/${P/-/}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.6.4-hunspell-quazip.patch
-	"${FILESDIR}"/${PN}-2.6.0-desktop.patch
+	"${FILESDIR}"/${PN}-2.8.2-desktop.patch
 # Get it from fedora
 	"${FILESDIR}"/${PN}-2.5-viewers-use-xdg-open.patch
 	)
@@ -59,15 +60,19 @@ src_prepare() {
 		-e '/QUAZIP_STATIC/d' \
 		-i ${PN}.pro || die
 
-	cp "${FILESDIR}"/texmakerx_my.pri . || die
-	eprefixify texmakerx_my.pri
+#	cat >> ${PN}.pro <<- EOF
+#	exists(texmakerx_my.pri):include(texmakerx_my.pri)
+#	EOF
+
+	cp "${FILESDIR}"/texmakerx_my.pri ${PN}.pri || die
+	eprefixify ${PN}.pri
 
 	qt4-r2_src_prepare
 }
 
 src_install() {
 	local i
-	for i in 16x16 22x22 32x32 48x48 64x64; do
+	for i in 16x16 22x22 32x32 48x48 64x64 128x128; do
 		insinto /usr/share/icons/hicolor/${i}
 		newins utilities/${PN}${i}.png ${PN}.png
 	done
