@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-contact-list/ktp-contact-list-0.8.1.ebuild,v 1.1 2014/04/26 01:17:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-contact-list/ktp-contact-list-0.8.1.ebuild,v 1.2 2014/09/16 16:58:00 johu Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ DEPEND="
 	>=net-im/ktp-accounts-kcm-${PV}
 	>=net-im/ktp-common-internals-${PV}[semantic-desktop?]
 	>=net-libs/telepathy-qt-0.9.3
-	semantic-desktop? ( >=net-libs/libkpeople-0.2.1 )
+	semantic-desktop? ( <net-libs/libkpeople-0.3.0 )
 "
 RDEPEND="${DEPEND}"
 

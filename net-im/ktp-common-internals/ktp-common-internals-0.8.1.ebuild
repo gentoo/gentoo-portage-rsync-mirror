@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-common-internals/ktp-common-internals-0.8.1.ebuild,v 1.1 2014/04/26 01:17:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-common-internals/ktp-common-internals-0.8.1.ebuild,v 1.2 2014/09/16 16:58:52 johu Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ DEPEND="
 	>=net-libs/telepathy-logger-qt-0.5.80
 	semantic-desktop? (
 		$(add_kdebase_dep kdepimlibs)
-		>=net-libs/libkpeople-0.2.1
+		<net-libs/libkpeople-0.3.0
 	)
 "
 RDEPEND="${DEPEND}
