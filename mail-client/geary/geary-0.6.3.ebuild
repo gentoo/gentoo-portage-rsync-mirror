@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.7.1.ebuild,v 1.1 2014/08/24 16:26:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.6.3.ebuild,v 1.1 2014/09/16 10:27:37 hasufell Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ DEPEND="
 	dev-libs/gmime:2.6
 	media-libs/libcanberra
 	>=net-libs/webkit-gtk-1.10.0:3[introspection]
-	>=x11-libs/gtk+-3.10.0:3[introspection]
+	>=x11-libs/gtk+-3.6.0:3[introspection]
 	x11-libs/libnotify"
 RDEPEND="${DEPEND}
 	gnome-base/gsettings-desktop-schemas
@@ -44,7 +44,8 @@ DOCS=( AUTHORS MAINTAINERS README NEWS THANKS )
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.5.3-{cflags,vapigen}.patch \
+	epatch "${FILESDIR}"/${PN}-0.5.3-{unity,vapigen}.patch \
+		"${FILESDIR}"/${PN}-0.6.3-cflags.patch \
 		"${FILESDIR}"/${PN}-0.6.0-desktopfile.patch
 
 	local i
