@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.228 2014/09/16 09:14:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.9999.ebuild,v 1.1 2014/09/16 09:14:01 dilfridge Exp $
 
 EAPI=5
 
@@ -244,6 +244,9 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
+
+	# from master branch
+	"${FILESDIR}/${PN}-4.3.1.2-implement--with-system-coinmp.patch"
 )
 
 REQUIRED_USE="

@@ -1,0 +1,228 @@
+From 6d239ee19a4b1d9068fbd04b5a692c859142f613 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Zolnai=20Tam=C3=A1s?= <tamas.zolnai@collabora.com>
+Date: Fri, 29 Aug 2014 14:14:31 +0200
+Subject: [PATCH] Handle collada libraries seperately: --disable-collada
+
+Depends on gltf support.
+
+(cherry picked from commit 191f0944fd8fc30493eda58c7adfdfa0b538f507)
+
+Conflicts:
+	config_host.mk.in
+	sd/source/ui/func/fuinsert.cxx
+
+Change-Id: Ief0452da3d03b0ddbca45272e5f5cd268691aeca
+Reviewed-on: https://gerrit.libreoffice.org/11193
+Tested-by: Rene Engelhard <rene@debian.org>
+Reviewed-by: Rene Engelhard <rene@debian.org>
+---
+ RepositoryExternal.mk                   |  6 +++++-
+ avmedia/Library_avmedia.mk              |  5 +----
+ avmedia/source/framework/modeltools.cxx |  9 ++++++---
+ config_host.mk.in                       |  1 +
+ config_host/config_features.h.in        |  5 +++++
+ configure.ac                            | 23 +++++++++++++++++++----
+ include/avmedia/modeltools.hxx          |  4 ++++
+ sd/source/ui/func/fuinsert.cxx          |  9 +++++++++
+ 8 files changed, 50 insertions(+), 12 deletions(-)
+
+diff --git a/RepositoryExternal.mk b/RepositoryExternal.mk
+index b42dce2..cd99108 100644
+--- a/RepositoryExternal.mk
++++ b/RepositoryExternal.mk
+@@ -3324,6 +3324,8 @@ endef
+ 
+ endif # SYSTEN_LIBGLTF
+ 
++ifeq ($(ENABLE_COLLADA),TRUE)
++
+ define gb_LinkTarget__use_opencollada_parser
+ $(call gb_LinkTarget_set_include,$(1),\
+ 	-I$(call gb_UnpackedTarball_get_dir,opencollada)/COLLADABaseUtils/include \
+@@ -3354,7 +3356,9 @@ $(call gb_LinkTarget_use_static_libraries,$(1),\
+ )
+ endef
+ 
+-endif
++endif # ENABLE_COLLADA
++
++endif # ENABLE_GLTF
+ 
+ ### Jars ############################################################
+ 
+diff --git a/avmedia/Library_avmedia.mk b/avmedia/Library_avmedia.mk
+index 184c66c..7cc08fa 100644
+--- a/avmedia/Library_avmedia.mk
++++ b/avmedia/Library_avmedia.mk
+@@ -52,7 +52,7 @@ $(eval $(call gb_Library_add_exception_objects,avmedia,\
+ ))
+ endif
+ 
+-ifneq (,$(filter COLLADA2GLTF,$(BUILD_TYPE)))
++ifeq ($(ENABLE_COLLADA),TRUE)
+ $(eval $(call gb_Library_set_warnings_not_errors,avmedia))
+ 
+ ifeq ($(OS),LINUX)
+@@ -68,9 +68,6 @@ $(eval $(call gb_Library_use_externals,avmedia,\
+ 	png \
+ ))
+ 
+-$(eval $(call gb_Library_add_defs,avmedia,\
+-	-DENABLE_COLLADA2GLTF \
+-))
+ endif
+ 
+ $(eval $(call gb_Library_add_exception_objects,avmedia,\
+diff --git a/avmedia/source/framework/modeltools.cxx b/avmedia/source/framework/modeltools.cxx
+index 6119cb7..8c4251e 100644
+--- a/avmedia/source/framework/modeltools.cxx
++++ b/avmedia/source/framework/modeltools.cxx
+@@ -29,7 +29,9 @@
+ #include <boost/foreach.hpp>
+ #include <boost/optional.hpp>
+ 
+-#ifdef ENABLE_COLLADA2GLTF
++#include <config_features.h>
++
++#if HAVE_FEATURE_COLLADA
+ #include <COLLADA2GLTFWriter.h>
+ #include <GLTFAsset.h>
+ #endif
+@@ -42,7 +44,7 @@ using namespace boost::property_tree;
+ 
+ namespace avmedia {
+ 
+-#ifdef ENABLE_COLLADA2GLTF
++#if HAVE_FEATURE_COLLADA
+ 
+ static void lcl_UnzipKmz(const OUString& rSourceURL, const OUString& rOutputFolderURL, OUString& o_rDaeFileURL)
+ {
+@@ -242,7 +244,8 @@ bool Embed3DModel( const uno::Reference<frame::XModel>& xModel,
+         const OUString& rSourceURL, OUString& o_rEmbeddedURL)
+ {
+     OUString sSource = rSourceURL;
+-#ifdef ENABLE_COLLADA2GLTF
++
++#if HAVE_FEATURE_COLLADA
+     if( !rSourceURL.endsWithIgnoreAsciiCase(".json") )
+         KmzDae2Gltf(rSourceURL, sSource);
+ #endif
+diff --git a/config_host.mk.in b/config_host.mk.in
+index aec0fa5..36a6866 100644
+--- a/config_host.mk.in
++++ b/config_host.mk.in
+@@ -109,6 +109,7 @@ export ENABLE_CAIRO_CANVAS=@ENABLE_CAIRO_CANVAS@
+ export ENABLE_CHART_TESTS=@ENABLE_CHART_TESTS@
+ export ENABLE_CMIS=@ENABLE_CMIS@
+ export ENABLE_COINMP=@ENABLE_COINMP@
++export ENABLE_COLLADA=@ENABLE_COLLADA@
+ export ENABLE_CRASHDUMP=@ENABLE_CRASHDUMP@
+ export ENABLE_CUPS=@ENABLE_CUPS@
+ export ENABLE_CURL=@ENABLE_CURL@
+diff --git a/config_host/config_features.h.in b/config_host/config_features.h.in
+index 3fd1da5..f87ee27 100644
+--- a/config_host/config_features.h.in
++++ b/config_host/config_features.h.in
+@@ -142,4 +142,9 @@
+  */
+ #define HAVE_FEATURE_GLTF 0
+ 
++/*
++ * Whether we have COLLADA support.
++ */
++#define HAVE_FEATURE_COLLADA 0
++
+ #endif
+diff --git a/configure.ac b/configure.ac
+index 63e067b..b6e8124 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1395,6 +1395,10 @@ AC_ARG_ENABLE(gltf,
+     AS_HELP_STRING([--disable-gltf],
+         [Determines whether to build libraries related to glTF 3D model rendering.]))
+ 
++AC_ARG_ENABLE(collada,
++    AS_HELP_STRING([--disable-collada],
++        [Disable collada support (Rendering 3D models stored in *.dae and *.kmz format).]))
++
+ dnl ===================================================================
+ dnl Optional Packages (--with/without-)
+ dnl ===================================================================
+@@ -10572,10 +10576,6 @@ if test "x$enable_gltf" != "xno" -a $_os != Darwin -a $_os != iOS -a $_os != And
+     else
+     	BUILD_TYPE="$BUILD_TYPE LIBGLTF"
+     fi
+-    # otherwise build fails in collada2gltf external because of std::shared_ptr
+-    if test "$have_std_shared_ptr" = "yes"; then
+-        BUILD_TYPE="$BUILD_TYPE COLLADA2GLTF"
+-    fi
+ else
+     AC_MSG_RESULT([no])
+ fi
+@@ -10584,6 +10584,21 @@ AC_SUBST(SYSTEM_LIBGLTF)
+ AC_SUBST(LIBGLTF_CFLAGS)
+ AC_SUBST(LIBGLTF_LIBS)
+ 
++dnl ===================================================================
++dnl Check whether to enable COLLADA support
++dnl ===================================================================
++AC_MSG_CHECKING([whether to enable COLLADA support])
++ENABLE_COLLADA=
++if test "$enable_collada" != "no" -a "$ENABLE_GLTF" = "TRUE" -a "$have_std_shared_ptr" = "yes"; then
++    AC_MSG_RESULT([yes])
++    ENABLE_COLLADA=TRUE
++    AC_DEFINE(HAVE_FEATURE_COLLADA,1)
++    BUILD_TYPE="$BUILD_TYPE COLLADA2GLTF"
++else
++    AC_MSG_RESULT([no])
++fi
++AC_SUBST(ENABLE_COLLADA)
++
+ # pdf import?
+ AC_MSG_CHECKING([whether to build the PDF import feature])
+ ENABLE_PDFIMPORT=
+diff --git a/include/avmedia/modeltools.hxx b/include/avmedia/modeltools.hxx
+index ed2de44..526b240 100644
+--- a/include/avmedia/modeltools.hxx
++++ b/include/avmedia/modeltools.hxx
+@@ -11,9 +11,13 @@
+ #include <com/sun/star/frame/XModel.hpp>
+ #include <avmedia/avmediadllapi.h>
+ 
++#include <config_features.h>
++
+ namespace avmedia {
+ 
++#if HAVE_FEATURE_COLLADA
+ bool KmzDae2Gltf(const OUString& rSourceURL, OUString& o_rOutput);
++#endif
+ 
+ bool AVMEDIA_DLLPUBLIC Embed3DModel(
+     const ::com::sun::star::uno::Reference< ::com::sun::star::frame::XModel>& xModel,
+diff --git a/sd/source/ui/func/fuinsert.cxx b/sd/source/ui/func/fuinsert.cxx
+index cd03700..9c1c4ad 100644
+--- a/sd/source/ui/func/fuinsert.cxx
++++ b/sd/source/ui/func/fuinsert.cxx
+@@ -789,10 +789,19 @@ void FuInsert3DModel::DoExecute( SfxRequest& )
+     sfx2::FileDialogHelper aDlg( ui::dialogs::TemplateDescription::FILEOPEN_SIMPLE, 0 );
+ 
+     aDlg.SetTitle( "Insert 3D Model" );
++
++#if HAVE_FEATURE_COLLADA
+     aDlg.AddFilter( "All supported formats", "*.json;*.dae;*.kmz"  );
++#else
++    aDlg.AddFilter( "All supported formats", "*.json"  );
++#endif
++
+     aDlg.AddFilter( "JSON - GL Transmission Format", "*.json" );
++
++#if HAVE_FEATURE_COLLADA
+     aDlg.AddFilter( "DAE - COLLADA", "*.dae" );
+     aDlg.AddFilter( "KMZ - Keyhole Markup language Zipped", "*.kmz"  );
++#endif
+ 
+     OUString sURL;
+     if( aDlg.Execute() == ERRCODE_NONE )
+-- 
+2.1.0
+

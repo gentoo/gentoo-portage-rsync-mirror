@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.228 2014/09/16 09:14:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.1.2.ebuild,v 1.1 2014/09/16 09:14:01 dilfridge Exp $
 
 EAPI=5
 
@@ -91,7 +91,7 @@ unset lo_xt
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
@@ -244,6 +244,14 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
+
+	# from libreoffice-4-3 branch
+	"${FILESDIR}/${PN}-4.3.1.2-implement--with-system-gltf.patch"
+	"${FILESDIR}/${PN}-4.3.1.2-handle-collada-libs-seperately.patch"
+	"${FILESDIR}/${PN}-4.3.1.2-upgrade-to-libgltf-0.0.1.patch"
+
+	# from master branch
+	"${FILESDIR}/${PN}-4.3.1.2-implement--with-system-coinmp.patch"
 )
 
 REQUIRED_USE="

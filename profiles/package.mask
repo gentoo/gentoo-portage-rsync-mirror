@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16038 2014/09/16 08:03:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16039 2014/09/16 09:04:05 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (16 Sep 2014)
+# Masked for an inital (short) testing period
+=app-office/libreoffice-4.3*
+=app-office/libreoffice-l10n-4.3*
 
 # Michał Górny <mgorny@gentoo.org> (15 Sep 2014)
 # Causes undefined references few layers down (in mediastreamer),

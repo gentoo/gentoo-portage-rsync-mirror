@@ -1,0 +1,157 @@
+From 2378f45d70c9ce4a093fd6b09216c1cd4563ebe2 Mon Sep 17 00:00:00 2001
+From: Rene Engelhard <rene@debian.org>
+Date: Tue, 5 Aug 2014 20:05:35 +0200
+Subject: [PATCH] implement --with-system-gltf
+
+Change-Id: Ic842006b28f8043bcbbaa81ab5a20e15aa52ac82
+(cherry picked from commit 97bda8e081fd746e9ef743b165b5bf621fc21fbb)
+---
+ RepositoryExternal.mk                     | 18 ++++++++++++++++++
+ avmedia/source/opengl/oglframegrabber.hxx |  4 ++++
+ avmedia/source/opengl/oglplayer.hxx       |  4 ++++
+ avmedia/source/opengl/oglwindow.hxx       |  4 ++++
+ config_host.mk.in                         |  3 +++
+ configure.ac                              | 15 ++++++++++++++-
+ 6 files changed, 47 insertions(+), 1 deletion(-)
+
+diff --git a/RepositoryExternal.mk b/RepositoryExternal.mk
+index ff50598..b42dce2 100644
+--- a/RepositoryExternal.mk
++++ b/RepositoryExternal.mk
+@@ -3281,6 +3281,8 @@ endif # DESKTOP
+ 
+ ifeq ($(ENABLE_GLTF),TRUE)
+ 
++ifneq ($(SYSTEM_LIBGLTF),TRUE)
++
+ define gb_LinkTarget__use_libgltf
+ $(call gb_LinkTarget_set_include,$(1),\
+     -I$(call gb_UnpackedTarball_get_dir,libgltf)/inc \
+@@ -3306,6 +3308,22 @@ $(call gb_ExternalProject_use_external_project,$(1),libgltf)
+ 
+ endef
+ 
++else # SYSTEM_LIBGLTF
++
++define gb_LinkTarget__use_libgltf
++$(call gb_LinkTarget_set_include,$(1),\
++	$$(INCLUDE) \
++	$(LIBGLTF_CFLAGS) \
++)
++$(call gb_LinkTarget_add_libs,$(1),$(LIBGLTF_LIBS))
++$(call gb_LinkTarget_add_defs,$(1),\
++	-DSYSTEM_LIBGLTF \
++)
++
++endef
++
++endif # SYSTEN_LIBGLTF
++
+ define gb_LinkTarget__use_opencollada_parser
+ $(call gb_LinkTarget_set_include,$(1),\
+ 	-I$(call gb_UnpackedTarball_get_dir,opencollada)/COLLADABaseUtils/include \
+diff --git a/avmedia/source/opengl/oglframegrabber.hxx b/avmedia/source/opengl/oglframegrabber.hxx
+index 5beb15b..0d38224 100644
+--- a/avmedia/source/opengl/oglframegrabber.hxx
++++ b/avmedia/source/opengl/oglframegrabber.hxx
+@@ -14,7 +14,11 @@
+ #include <com/sun/star/lang/XServiceInfo.hpp>
+ #include <com/sun/star/media/XFrameGrabber.hpp>
+ 
++#ifdef SYSTEM_LIBGLTF
++#include <libgltf/libgltf.h>
++#else
+ #include <libgltf.h>
++#endif
+ 
+ namespace avmedia { namespace ogl {
+ 
+diff --git a/avmedia/source/opengl/oglplayer.hxx b/avmedia/source/opengl/oglplayer.hxx
+index 03ad515..52aa395 100644
+--- a/avmedia/source/opengl/oglplayer.hxx
++++ b/avmedia/source/opengl/oglplayer.hxx
+@@ -14,7 +14,11 @@
+ #include <cppuhelper/basemutex.hxx>
+ #include <com/sun/star/lang/XServiceInfo.hpp>
+ #include <com/sun/star/media/XPlayer.hpp>
++#ifdef SYSTEM_LIBGLTF
++#include <libgltf/libgltf.h>
++#else
+ #include <libgltf.h>
++#endif
+ #include <vcl/opengl/OpenGLContext.hxx>
+ #include <vcl/timer.hxx>
+ 
+diff --git a/avmedia/source/opengl/oglwindow.hxx b/avmedia/source/opengl/oglwindow.hxx
+index a68f667..ae86083 100644
+--- a/avmedia/source/opengl/oglwindow.hxx
++++ b/avmedia/source/opengl/oglwindow.hxx
+@@ -17,7 +17,11 @@
+ #include <com/sun/star/media/XPlayerWindow.hpp>
+ #include <com/sun/star/media/ZoomLevel.hpp>
+ 
++#ifdef SYSTEM_LIBGLTF
++#include <libgltf/libgltf.h>
++#else
+ #include <libgltf.h>
++#endif
+ #include <vcl/opengl/OpenGLContext.hxx>
+ #include <vcl/syschild.hxx>
+ 
+diff --git a/config_host.mk.in b/config_host.mk.in
+index b7e5b6c..aec0fa5 100644
+--- a/config_host.mk.in
++++ b/config_host.mk.in
+@@ -127,6 +127,9 @@ export ENABLE_GRAPHITE=@ENABLE_GRAPHITE@
+ export ENABLE_ORCUS=@ENABLE_ORCUS@
+ export ENABLE_HARFBUZZ=@ENABLE_HARFBUZZ@
+ export ENABLE_GLTF=@ENABLE_GLTF@
++export SYSTEM_LIBGLTF=@SYSTEM_LIBGLTF@
++export LIBGLTF_CFLAGS=@LIBGLTF_CFLAGS@
++export LIBGLTF_LIBS=@LIBGLTF_LIBS@
+ export ENABLE_GSTREAMER=@ENABLE_GSTREAMER@
+ export ENABLE_GSTREAMER_0_10=@ENABLE_GSTREAMER_0_10@
+ export ENABLE_GTK3=@ENABLE_GTK3@
+diff --git a/configure.ac b/configure.ac
+index 02791ca..63e067b 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1552,6 +1552,11 @@ AC_ARG_WITH(system-jpeg,
+         [Use jpeg already on system.]),,
+     [with_system_jpeg=auto])
+ 
++AC_ARG_WITH(system-libgltf,
++    AS_HELP_STRING([--with-system-libgltf],
++        [Use libgltf already on system.]),,
++    [with_system_libgltf=auto])
++
+ AC_ARG_WITH(system-clucene,
+     AS_HELP_STRING([--with-system-clucene],
+         [Use clucene already on system.]),,
+@@ -10561,7 +10566,12 @@ if test "x$enable_gltf" != "xno" -a $_os != Darwin -a $_os != iOS -a $_os != And
+     ENABLE_GLTF=TRUE
+     AC_MSG_RESULT([yes])
+     AC_DEFINE(HAVE_FEATURE_GLTF,1)
+-    BUILD_TYPE="$BUILD_TYPE LIBGLTF"
++    if test "$with_system_libgltf" = "yes"; then
++	SYSTEM_LIBGLTF=TRUE
++	PKG_CHECK_MODULES( LIBGLTF, libgltf-0.0 )
++    else
++    	BUILD_TYPE="$BUILD_TYPE LIBGLTF"
++    fi
+     # otherwise build fails in collada2gltf external because of std::shared_ptr
+     if test "$have_std_shared_ptr" = "yes"; then
+         BUILD_TYPE="$BUILD_TYPE COLLADA2GLTF"
+@@ -10570,6 +10580,9 @@ else
+     AC_MSG_RESULT([no])
+ fi
+ AC_SUBST(ENABLE_GLTF)
++AC_SUBST(SYSTEM_LIBGLTF)
++AC_SUBST(LIBGLTF_CFLAGS)
++AC_SUBST(LIBGLTF_LIBS)
+ 
+ # pdf import?
+ AC_MSG_CHECKING([whether to build the PDF import feature])
+-- 
+2.1.0
+

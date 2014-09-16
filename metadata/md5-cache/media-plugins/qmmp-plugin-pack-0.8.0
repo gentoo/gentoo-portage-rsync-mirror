@@ -3,10 +3,10 @@ DEPEND=>=media-libs/taglib-1.7.0 >=media-sound/mpg123-1.13.0 >=media-sound/qmmp-
 DESCRIPTION=A set of extra plugins for Qmmp
 EAPI=5
 HOMEPAGE=http://qmmp.ylsoftware.com/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=media-libs/taglib-1.7.0 >=media-sound/mpg123-1.13.0 >=media-sound/qmmp-0.8.0 dev-qt/qtgui:4
 SLOT=0
 SRC_URI=http://qmmp.ylsoftware.com/files/plugins/qmmp-plugin-pack-0.8.0.tar.bz2
 _eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ee3c888da03ddb7e3b4cea347fb8506c
+_md5_=8138bee1d17460e175709dddf5b3d524
