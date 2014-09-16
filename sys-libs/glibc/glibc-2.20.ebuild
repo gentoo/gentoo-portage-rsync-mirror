@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.20.ebuild,v 1.2 2014/09/10 18:57:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.20.ebuild,v 1.3 2014/09/16 04:30:18 vapier Exp $
 
 EAPI="4"
 
@@ -84,11 +84,9 @@ else
 	DEPEND+="
 		>=sys-devel/binutils-2.20
 		>=sys-devel/gcc-4.4
-		virtual/os-headers
-		!vanilla? ( >=sys-libs/timezone-data-2012c )"
-	RDEPEND+="
-		vanilla? ( !sys-libs/timezone-data )
-		!vanilla? ( sys-libs/timezone-data )"
+		virtual/os-headers"
+	RDEPEND+=" vanilla? ( !sys-libs/timezone-data )"
+	PDEPEND+=" !vanilla? ( sys-libs/timezone-data )"
 fi
 
 upstream_uris() {
