@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.5 2014/09/11 00:08:57 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.6 2014/09/16 14:18:43 pesa Exp $
 
 # @ECLASS: qt5-build.eclass
 # @MAINTAINER:
@@ -225,8 +225,8 @@ qt5-build_src_compile() {
 qt5-build_src_test() {
 	echo ">>> Test phase [QtTest]: ${CATEGORY}/${PF}"
 
-	# '-after SUBDIRS-=cmake' disables broken tests - bug #474004
-	qt5_foreach_target_subdir qt5_qmake -after SUBDIRS-=cmake
+	# '-after SUBDIRS-=...' disables broken cmake tests (bug 474004)
+	qt5_foreach_target_subdir qt5_qmake -after SUBDIRS-=cmake SUBDIRS-=installed_cmake
 	qt5_foreach_target_subdir emake
 
 	# create a custom testrunner script that correctly sets
