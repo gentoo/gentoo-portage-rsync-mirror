@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/geary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/ChangeLog,v 1.23 2014/09/16 10:29:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/ChangeLog,v 1.24 2014/09/16 13:30:44 hasufell Exp $
+
+  16 Sep 2014; Julian Ospald <hasufell@gentoo.org> geary-0.6.3.ebuild:
+  fix dependencies wrt #522942
 
   16 Sep 2014; Julian Ospald <hasufell@gentoo.org> -geary-0.6.0.ebuild,
   -geary-0.7.0.ebuild, -geary-0.7.1.ebuild:
