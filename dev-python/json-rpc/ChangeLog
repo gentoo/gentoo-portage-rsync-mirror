@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/json-rpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/json-rpc/ChangeLog,v 1.1 2014/06/26 00:27:10 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/json-rpc/ChangeLog,v 1.2 2014/09/16 17:45:31 chutzpah Exp $
+
+*json-rpc-1.7.0 (16 Sep 2014)
+
+  16 Sep 2014; Patrick McLean <chutzpah@gentoo.org> +json-rpc-1.7.0.ebuild:
+  Version bump.
 
 *json-rpc-1.6.0 (26 Jun 2014)
 
