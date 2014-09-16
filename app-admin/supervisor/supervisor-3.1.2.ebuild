@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.1.0.ebuild,v 1.2 2014/08/02 01:38:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.1.2.ebuild,v 1.1 2014/09/16 07:06:46 idella4 Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 )	# py2 only
 # xml.etree.ElementTree module required.
 PYTHON_REQ_USE="xml"
 
-inherit distutils-r1 eutils
+inherit distutils-r1
 
 MY_PV="${PV/_beta/b}"
 
@@ -19,25 +19,21 @@ SRC_URI="mirror://pypi/${P:0:1}/${PN}/${PN}-${MY_PV}.tar.gz"
 LICENSE="repoze ZPL BSD HPND GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="test"
+IUSE="doc iterparse test"
 
-RDEPEND=">=dev-python/meld3-0.6.10-r1[${PYTHON_USEDEP}]
+# ALL versions of meld3 match to >=meld3-0.6.5 
+RDEPEND="dev-python/meld3[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	test? ( dev-python/mock[${PYTHON_USEDEP}] )"
+	iterparse? ( >=dev-python/celementtree-1.0.2[${PYTHON_USEDEP}] )
+	test? ( $(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7) )
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-python_prepare_all() {
-	# write missing MANIFEST.in file, otherwise required files get lost due to
-	# egg_info being passed to setup.py
-	cat > MANIFEST.in << EOF
-include supervisor/*.txt
-recursive-include supervisor/skel *.conf
-recursive-include supervisor/ui *.html *.css *.gif *.png
-recursive-include supervisor/tests *.conf *.txt
-EOF
-	distutils-r1_python_prepare_all
+python_compile_all() {
+	# Somehow the test phase is called and run on invoking a doc build; harmless
+	use doc && emake -C docs html
 }
 
 python_test() {
@@ -47,5 +43,6 @@ python_test() {
 python_install_all() {
 	newinitd "${FILESDIR}/init.d-r1" supervisord
 	newconfd "${FILESDIR}/conf.d" supervisord
+	use doc && local HTML_DOCS=( docs/.build/html/. )
 	distutils-r1_python_install_all
 }
