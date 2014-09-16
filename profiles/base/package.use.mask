@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.602 2014/09/16 17:12:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.603 2014/09/16 20:50:31 grknight Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -612,12 +612,6 @@ net-dns/pdnsd isdn urandom
 # Raúl Porcel <armin76@gentoo.org> (13 Feb 2011)
 # Masked until devs know how to use repoman
 <media-video/mplayer-9999 bluray
-
-# Robin H. Johnson <robbat2@gentoo.org> (28 Nov 2010)
-# bug 344885: USE=debug causes compile to fail presently.
-=dev-db/mysql-5.1.51* debug
-=dev-db/mysql-5.1.52* debug
-=dev-db/mysql-5.1.53* debug
 
 # Justin Lecher <jlec@gentoo.org> (17 Nov 2010)
 # Upstream didn't release patches for aria yet
