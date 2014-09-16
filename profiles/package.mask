@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16040 2014/09/16 14:44:45 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16041 2014/09/16 15:25:18 mjo Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Orlitzky <mjo@gentoo.org> (16 Sep 2014)
+# Superseded by app-text/dos2unix, use that instead.
+# Masked for removal in 30 days (bug #522804).
+app-text/unix2dos
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (16 Sep 2014)
 # Masked for an inital (short) testing period
