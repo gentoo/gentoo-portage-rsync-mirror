@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.0.ebuild,v 1.1 2014/08/04 11:15:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.1.ebuild,v 1.1 2014/09/16 22:00:40 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user
@@ -27,7 +27,7 @@ GTK_COMMON_DEPEND="
 "
 RDEPEND="
 	>=dev-libs/glib-2.14:2
-	netlink? ( dev-libs/libnl )
+	netlink? ( dev-libs/libnl:3 )
 	adns? ( >=net-dns/c-ares-1.5 )
 	crypt? ( dev-libs/libgcrypt:0 )
 	caps? ( sys-libs/libcap )
@@ -38,7 +38,7 @@ RDEPEND="
 	)
 	kerberos? ( virtual/krb5 )
 	lua? ( >=dev-lang/lua-5.1 )
-	pcap? ( net-libs/libpcap[-netlink] )
+	pcap? ( net-libs/libpcap )
 	portaudio? ( media-libs/portaudio )
 	qt4? (
 		dev-qt/qtcore:4
@@ -126,7 +126,7 @@ src_configure() {
 		$(use_with gtk3) \
 		$(use_with kerberos krb5) \
 		$(use_with lua) \
-		$(use_with netlink libnl) \
+		$(use_with netlink libnl=3) \
 		$(use_with pcap dumpcap-group wireshark) \
 		$(use_with pcap) \
 		$(use_with portaudio) \

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.5.3.ebuild,v 1.8 2014/08/02 11:27:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.5.3.ebuild,v 1.9 2014/09/16 21:58:48 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -18,7 +18,7 @@ IUSE="bluetooth dbus ipv6 netlink static-libs canusb"
 RDEPEND="
 	bluetooth? ( net-wireless/bluez )
 	dbus? ( sys-apps/dbus )
-	netlink? ( dev-libs/libnl )
+	netlink? ( dev-libs/libnl:3 )
 	canusb? ( virtual/libusb )
 "
 DEPEND="${RDEPEND}
