@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.204 2014/09/07 11:12:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.205 2014/09/16 14:33:37 voyageur Exp $
+
+  16 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.5.0.ebuild,
+  +files/llvm-3.5.0-fix_LLVMExports_cmake.patch:
+  Backport upstream fix for cmake files, thanks David Hallas <david@cgp.dk> in
+  bug #522510
 
 *llvm-3.5.0 (07 Sep 2014)
 

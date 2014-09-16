@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.5.0.ebuild,v 1.1 2014/09/07 11:12:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.5.0.ebuild,v 1.2 2014/09/16 14:33:37 voyageur Exp $
 
 EAPI=5
 
@@ -144,6 +144,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
 	epatch "${FILESDIR}"/${PN}-3.5-gcc-4.9.patch
 	epatch "${FILESDIR}"/${PN}-3.5-gentoo-install.patch
+
+	epatch "${FILESDIR}"/${P}-fix_LLVMExports_cmake.patch
 
 	if use clang; then
 		# Automatically select active system GCC's libraries, bugs #406163 and #417913

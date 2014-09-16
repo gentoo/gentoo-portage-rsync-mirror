@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtsvg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsvg/ChangeLog,v 1.16 2014/09/11 01:46:44 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsvg/ChangeLog,v 1.17 2014/09/16 14:47:15 pesa Exp $
+
+*qtsvg-5.3.2 (16 Sep 2014)
+
+  16 Sep 2014; Davide Pesavento <pesa@gentoo.org> +qtsvg-5.3.2.ebuild,
+  -qtsvg-5.3.1-r3.ebuild:
+  Version bump.
 
 *qtsvg-5.3.1-r3 (11 Sep 2014)
 

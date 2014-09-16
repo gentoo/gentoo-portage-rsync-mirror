@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtimageformats
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtimageformats/ChangeLog,v 1.1 2014/09/11 01:45:15 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtimageformats/ChangeLog,v 1.2 2014/09/16 14:45:52 pesa Exp $
+
+*qtimageformats-5.3.2 (16 Sep 2014)
+
+  16 Sep 2014; Davide Pesavento <pesa@gentoo.org> +qtimageformats-5.3.2.ebuild,
+  -qtimageformats-5.3.1-r3.ebuild:
+  Version bump.
 
 *qtimageformats-5.3.1-r3 (11 Sep 2014)
 
