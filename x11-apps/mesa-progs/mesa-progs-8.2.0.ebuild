@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-8.2.0.ebuild,v 1.3 2014/09/15 09:22:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-8.2.0.ebuild,v 1.4 2014/09/16 16:23:26 chithanh Exp $
 
 EAPI=5
 
@@ -29,9 +29,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE="egl gles1 gles2"
 
 RDEPEND="
-	egl? ( media-libs/glew )
-	gles1? ( media-libs/glew )
-	gles2? ( media-libs/glew )
+	media-libs/freeglut
+	media-libs/glew
 	media-libs/mesa[egl?,gles1?,gles2?]
 	virtual/opengl
 	x11-libs/libX11"
