@@ -1,11 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.use.mask,v 1.6 2014/09/16 07:35:33 dolsen Exp $
+# Exp $
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (23 Nov 2007)
 # Unmask when we get HAL 0.5.10 straightened out
 media-sound/pulseaudio policykit
 
-# Brian Dolbec <dolsen@gentoo.org> (16 Sep 2014)
-# mask pypy for portage due to incompatibility with libselinux
-sys-apps/portage python_targets_pypy
+# Brian Dolbec <dolsen@gentoo.org> (17 Sep 2014)
+# mask pypy for several utilities due to incompatibility with libselinux
+sys-apps/portage python_targets_pypy python_targets_pypy2_0
+app-portage/gentoolkit python_targets_pypy python_targets_pypy2_0
+app-portage/layman python_targets_pypy python_targets_pypy2_0
+app-admin/webapp-config python_targets_pypy python_targets_pypy2_0
