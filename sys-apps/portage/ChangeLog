@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1407 2014/09/16 23:45:31 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1408 2014/09/17 06:22:02 zmedico Exp $
+
+  17 Sep 2014; Zac Medico <zmedico@gentoo.org> portage-2.2.13.ebuild:
+  Recompile the emaint module with lower optimization than the distutils-r1
+  default, since emaint breaks when __doc__ is optimized away.
 
 *portage-2.2.13 (16 Sep 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.13.ebuild,v 1.1 2014/09/16 23:45:31 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.13.ebuild,v 1.2 2014/09/17 06:22:02 zmedico Exp $
 
 EAPI=5
 
@@ -171,6 +171,16 @@ python_install() {
 
 python_install_all() {
 	distutils-r1_python_install_all
+
+	# Recompile the emaint module with lower optimization than the
+	# distutils-r1 default, since emaint breaks when __doc__ is
+	# optimized away.
+	local python d
+	for python in "${PYTHON_COMPAT[@]}" ; do
+		python=${python/_/.}
+		d=${EPREFIX}/usr/$(get_libdir)/${python}/site-packages/portage/emaint
+		"${EPREFIX}/usr/bin/${python}" -O -m compileall -q -f -d "${d}" "${D%/}${d}" || die
+	done
 
 	local targets=()
 	use doc && targets+=( install_docbook )
