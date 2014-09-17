@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molsketch/molsketch-0.2.0-r1.ebuild,v 1.6 2013/07/18 06:09:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molsketch/molsketch-0.2.0-r1.ebuild,v 1.7 2014/09/17 11:58:04 jlec Exp $
 
 EAPI=3
 
@@ -43,6 +43,8 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-	  -DOPENBABEL2_INCLUDE_DIR="${EPREFIX}/usr/include/openbabel-2.0" )
+		-DOPENBABEL2_INCLUDE_DIR="${EPREFIX}/usr/include/openbabel-2.0"
+		-DCMAKE_DISABLE_FIND_PACKAGE_KDE4=ON
+	)
 	cmake-utils_src_configure
 }
