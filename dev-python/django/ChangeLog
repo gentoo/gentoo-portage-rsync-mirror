@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.146 2014/09/14 11:26:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.147 2014/09/17 13:02:10 idella4 Exp $
+
+  17 Sep 2014; Ian Delaney <idella4@gentoo.org> -django-1.4.14.ebuild,
+  -django-1.5.9.ebuild, -django-1.6.6.ebuild, django-1.6.7.ebuild,
+  django-1.7.ebuild:
+  syntax fix, drop vulnerable versions wrt Bug #521324
 
   14 Sep 2014; Ian Delaney <idella4@gentoo.org> -files/1.7-test_serialize.patch:
   remove redundant upstream patch

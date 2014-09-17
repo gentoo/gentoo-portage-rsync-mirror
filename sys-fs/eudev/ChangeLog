@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.140 2014/09/15 11:01:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.141 2014/09/17 13:13:33 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org> eudev-1.10-r2.ebuild:
+  Stable for HPPA (bug #522792).
 
   15 Sep 2014; Anthony G. Basile <blueness@gentoo.org> eudev-9999.ebuild:
   Update 9999 version wrt bug #522606

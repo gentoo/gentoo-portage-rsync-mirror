@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.429 2014/09/16 08:32:35 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.430 2014/09/17 13:31:00 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org> perl-5.18.2-r1.ebuild:
+  Stable for HPPA (bug #504786).
 
   16 Sep 2014;  <civil@gentoo.org> perl-5.20.1.ebuild:
   Replace patchset's extention to xz. Fixes #522896

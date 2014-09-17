@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.7.ebuild,v 1.1 2014/09/14 05:42:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.7.ebuild,v 1.2 2014/09/17 13:02:10 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -22,7 +22,7 @@ IUSE="doc mysql postgres sqlite test"
 
 RDEPEND="virtual/python-imaging[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	postgres? ( $(python_gen_cond_dep 'dev-python/psycopg:2[${PYTHON_USEDEP}]' python2_7 'python{3_3,3_4}') )
+	postgres? ( $(python_gen_cond_dep 'dev-python/psycopg:2[${PYTHON_USEDEP}]' python2_7 python{3_3,3_4}) )
 	mysql? ( $(python_gen_cond_dep '>=dev-python/mysql-python-1.2.3[${PYTHON_USEDEP}]' python2_7) )"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.7[${PYTHON_USEDEP}] )
