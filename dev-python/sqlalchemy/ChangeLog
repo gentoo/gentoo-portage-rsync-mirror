@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.134 2014/09/15 16:30:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.135 2014/09/17 19:52:03 hwoarang Exp $
+
+  17 Sep 2014; Markos Chandras <hwoarang@gentoo.org> sqlalchemy-0.9.7.ebuild:
+  Add ~mips
 
   15 Sep 2014; Ian Delaney <idella4@gentoo.org> sqlalchemy-0.9.7.ebuild:
   further corrections; delete redundant deps on sqlite and options of
