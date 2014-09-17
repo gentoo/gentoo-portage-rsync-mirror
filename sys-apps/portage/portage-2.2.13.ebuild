@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.13.ebuild,v 1.2 2014/09/17 06:22:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.13.ebuild,v 1.3 2014/09/17 06:51:11 zmedico Exp $
 
 EAPI=5
 
@@ -177,6 +177,7 @@ python_install_all() {
 	# optimized away.
 	local python d
 	for python in "${PYTHON_COMPAT[@]}" ; do
+		use python_targets_${python} || continue
 		python=${python/_/.}
 		d=${EPREFIX}/usr/$(get_libdir)/${python}/site-packages/portage/emaint
 		"${EPREFIX}/usr/bin/${python}" -O -m compileall -q -f -d "${d}" "${D%/}${d}" || die

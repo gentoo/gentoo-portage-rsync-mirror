@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.52 2014/09/15 18:56:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.53 2014/09/17 06:48:21 jlec Exp $
+
+  17 Sep 2014; Justin Lecher <jlec@gentoo.org> nvidia-cuda-sdk-6.5.14.ebuild:
+  Fix nvidia drivers dep version, thanks Marius Brehler noticing the typo
 
   15 Sep 2014; Justin Lecher <jlec@gentoo.org> nvidia-cuda-sdk-6.5.14.ebuild:
   Fix min nvidia-drivers version, thanks Marius Brehler for reporting, #521480
