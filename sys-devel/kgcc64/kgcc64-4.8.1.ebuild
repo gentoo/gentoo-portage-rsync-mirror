@@ -1,6 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.8.1.ebuild,v 1.1 2013/10/09 23:08:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.8.1.ebuild,v 1.2 2014/09/17 08:20:33 jer Exp $
+
+EAPI=4
 
 case ${CHOST} in
 	hppa*)    CTARGET=hppa64-${CHOST#*-};;
@@ -17,7 +19,7 @@ GCC_TARGET_NO_MULTILIB=true
 PATCH_VER="1.2"
 GCC_FILESDIR=${FILESDIR/${PN}/gcc}
 
-inherit toolchain eutils
+inherit eutils toolchain
 
 DESCRIPTION="64bit kernel compiler"
 

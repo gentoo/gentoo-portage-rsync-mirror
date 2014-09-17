@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile prepare
+DEPEND=dev-libs/glib:2 lxde-base/menu-cache x11-libs/gtk+:2 virtual/pkgconfig
+DESCRIPTION=Another dynamic menu generator for Openbox
+EAPI=5
+HOMEPAGE=http://mimasgpc.free.fr/openbox-menu_en.html
+IUSE=+icons svg
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-libs/glib:2 lxde-base/menu-cache x11-libs/gtk+:2 icons? ( x11-wm/openbox[imlib,svg?] ) !icons? ( x11-wm/openbox )
+REQUIRED_USE=svg? ( icons )
+SLOT=0
+SRC_URI=https://bitbucket.org/fabriceT/openbox-menu/downloads/openbox-menu-0.5.1.tar.bz2
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=3db103d067820976717f0b78aa5280e8

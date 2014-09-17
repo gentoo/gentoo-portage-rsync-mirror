@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.7.4.ebuild,v 1.2 2014/06/25 12:37:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.7.4.ebuild,v 1.3 2014/09/17 08:20:33 jer Exp $
 
-EAPI=2
+EAPI=4
 
 case ${CHOST} in
 	hppa*)    CTARGET=hppa64-${CHOST#*-};;

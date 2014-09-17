@@ -1,8 +1,9 @@
-DEFINED_PHASES=compile install postinst postrm setup test unpack
+DEFINED_PHASES=compile configure install postinst postrm prepare pretend setup test unpack
 DEPEND=>=dev-libs/gmp-4.2.1 >=dev-libs/mpfr-2.3.2 >=sys-devel/gcc-config-1.4 hppa? ( sys-devel/binutils-hppa64 ) !sys-devel/gcc-hppa64 !sys-devel/gcc-mips64 !sys-devel/gcc-powerpc64 !sys-devel/gcc-sparc64 >=sys-apps/texinfo-4.8 >=sys-devel/bison-1.875 >=sys-apps/sed-4 sys-devel/gnuconfig sys-libs/zlib nls? ( virtual/libintl ) virtual/libiconv >=dev-libs/gmp-4.3.2 >=dev-libs/mpfr-2.4.2 >=sys-devel/bison-1.875 >=sys-devel/flex-2.5.4 nls? ( sys-devel/gettext ) regression-test? ( >=dev-util/dejagnu-1.4.4 >=sys-devel/autogen-5.5.4 )
 DESCRIPTION=64bit kernel compiler
+EAPI=4
 HOMEPAGE=http://gcc.gnu.org/
-IUSE=multislot regression-test vanilla nls nptl
+IUSE=multislot regression-test vanilla +nls +nptl
 KEYWORDS=hppa sparc
 LICENSE=GPL-2 LGPL-2.1
 PDEPEND=>=sys-devel/gcc-config-1.7
@@ -11,4 +12,4 @@ RESTRICT=strip
 SLOT=4.4
 SRC_URI=mirror://gnu/gcc/gcc-4.4.5/gcc-4.4.5.tar.bz2 mirror://gentoo/gcc-4.4.5-patches-1.2.tar.bz2 http://dev.gentoo.org/~vapier/dist/gcc-4.4.5-patches-1.2.tar.bz2 http://dev.gentoo.org/~rhill/dist/gcc-4.4.5-patches-1.2.tar.bz2 http://dev.gentoo.org/~halcy0n/patches/gcc-4.4.5-patches-1.2.tar.bz2 http://dev.gentoo.org/~zorry/patches/gcc/gcc-4.4.5-patches-1.2.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fixheadtails	c6fd1fc49c9dc11924f28a1406f251a0	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	8257582809714b788173511f975d767d	toolchain	5642cc160e7328a9cf574534317a4f9a	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=a5d3c437cc15acf27ec2f09bafbf4644
+_md5_=57ab0b71d886c81b13bf7e82c61107b3
