@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/microcode-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.32 2014/08/14 16:15:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.33 2014/09/17 20:03:47 flameeyes Exp $
+
+*microcode-data-20140913 (17 Sep 2014)
+
+  17 Sep 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  +microcode-data-20140913.ebuild, -microcode-data-20130906.ebuild:
+  Update to new version and drop old version.
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   microcode-data-20140430.ebuild:
