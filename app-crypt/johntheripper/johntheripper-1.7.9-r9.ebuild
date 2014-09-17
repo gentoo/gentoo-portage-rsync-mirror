@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r9.ebuild,v 1.1 2013/12/02 17:48:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r9.ebuild,v 1.2 2014/09/17 12:54:50 jlec Exp $
 
 EAPI="5"
 
@@ -163,7 +163,7 @@ src_prepare() {
 	if use cuda; then
 		cuda_src_prepare
 		sed \
-			-e "/^NVCC_FLAGS/s:$: ${NVCCFLAGS}:g" \
+			-e "/^NVCC_FLAGS/s:-arch sm_10:${NVCCFLAGS}:g" \
 			-i Makefile || die
 	fi
 

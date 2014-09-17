@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/automx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/ChangeLog,v 1.13 2014/04/27 20:58:21 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/ChangeLog,v 1.14 2014/09/17 12:48:05 mschiff Exp $
+
+  17 Sep 2014; Marc Schiffbauer <mschiff@gentoo.org> -automx-0.10.1.ebuild,
+  automx-0.10.2.ebuild:
+  Removed automx-0.10.1.ebuild. Added DISTUTILS_SINGLE_IMPL=1 to 0.10.2 to fix
+  installation with mod_wsgi
 
 *automx-0.10.2 (27 Apr 2014)
 

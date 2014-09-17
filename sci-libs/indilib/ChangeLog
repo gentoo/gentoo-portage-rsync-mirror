@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/indilib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.42 2014/07/16 15:08:58 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.43 2014/09/17 12:50:52 kensington Exp $
+
+*indilib-0.9.9 (17 Sep 2014)
+
+  17 Sep 2014; Michael Palimaka <kensington@gentoo.org> +indilib-0.9.9.ebuild:
+  Version bump.
 
 *indilib-0.9.8.1 (16 Jul 2014)
 
