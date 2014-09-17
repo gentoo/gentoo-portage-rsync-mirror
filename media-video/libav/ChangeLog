@@ -1,6 +1,14 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.221 2014/09/13 09:34:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.223 2014/09/17 00:19:13 lu_zero Exp $
+
+*libav-11 (17 Sep 2014)
+
+  17 Sep 2014; Luca Barbato <lu_zero@gentoo.org> +libav-11.ebuild:
+  New major release
+
+  17 Sep 2014; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Update depencencies and allow to override the EGIT variables
 
   13 Sep 2014; Michał Górny <mgorny@gentoo.org> libav-10.3.ebuild,
   libav-10.9999.ebuild, libav-9999.ebuild:

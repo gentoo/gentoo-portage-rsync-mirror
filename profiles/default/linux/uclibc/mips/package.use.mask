@@ -1,6 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/mips/package.use.mask,v 1.1 2014/09/12 19:06:25 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/mips/package.use.mask,v 1.2 2014/09/17 00:28:22 pesa Exp $
+
+# Davide Pesavento <pesa@gentoo.org> (17 Sep 2014)
+# dev-qt/qtdeclarative:4 and net-misc/{connman,networkmanager}
+# are not keyworded on mips.
+dev-qt/designer:4 declarative
+dev-qt/qtbearer:4 connman networkmanager
 
 # Vicente Olivert Riera <vincent@gentoo.org> (11 Sep 2014)
 # www-client/midori[jit] depends on net-libs/webkit-gtk[jit]
