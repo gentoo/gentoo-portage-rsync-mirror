@@ -1,5 +1,5 @@
---- a/libpcap-1.2.0/configure.in
-+++ b/libpcap-1.2.0/configure.in
+--- a/configure.in
++++ b/configure.in
 @@ -291,7 +291,12 @@
  dnl XXX This could be done for cross-compiling, but for now it's not.
  dnl

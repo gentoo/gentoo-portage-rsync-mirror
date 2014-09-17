@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1371 2014/09/16 17:49:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1372 2014/09/17 10:21:37 jlec Exp $
+
+  17 Sep 2014; Justin Lecher <jlec@gentoo.org> cuda.eclass:
+  nvcc always needs tp know the compiler location
 
   16 Sep 2014; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
   Add kde-workspace 4.11.12 SRC_URI, remove obsolete.

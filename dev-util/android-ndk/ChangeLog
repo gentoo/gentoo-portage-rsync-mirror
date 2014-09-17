@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/android-ndk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/ChangeLog,v 1.14 2014/07/26 11:56:14 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/ChangeLog,v 1.15 2014/09/17 10:08:02 jauhien Exp $
+
+*android-ndk-10b (17 Sep 2014)
+
+  17 Sep 2014; Jauhien Piatlicki <jauhien@gentoo.org> +android-ndk-10b.ebuild:
+  version bump
 
 *android-ndk-10 (26 Jul 2014)
 

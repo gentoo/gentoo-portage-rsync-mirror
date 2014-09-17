@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.194 2014/09/17 08:48:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.195 2014/09/17 10:13:35 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org> -tcpdump-4.3.0.ebuild,
+  -files/tcpdump-4.3.0-ssl-detect.patch, metadata.xml:
+  Old.
 
   17 Sep 2014; Agostino Sarubbo <ago@gentoo.org> tcpdump-4.5.1-r1.ebuild:
   Stable for ppc64, wrt bug #511502

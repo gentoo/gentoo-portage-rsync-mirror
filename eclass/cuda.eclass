@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cuda.eclass,v 1.3 2013/08/11 16:20:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cuda.eclass,v 1.4 2014/09/17 10:21:37 jlec Exp $
 
 inherit flag-o-matic toolchain-funcs versionator
 
@@ -101,9 +101,7 @@ cuda_sanitize() {
 	[[ "${CUDA_VERBOSE}" == true ]] && NVCCFLAGS+=" -v"
 
 	# Tell nvcc where to find a compatible compiler
-	if has_version \<=dev-util/nvidia-cuda-toolkit-5.5; then
-		NVCCFLAGS+=" $(cuda_gccdir -f)"
-	fi
+	NVCCFLAGS+=" $(cuda_gccdir -f)"
 
 	# Tell nvcc which flags should be used for underlying C compiler
 	NVCCFLAGS+=" --compiler-options=\"${CXXFLAGS}\" --linker-options=\"${rawldflags// /,}\""
