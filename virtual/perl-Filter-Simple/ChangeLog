@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Filter-Simple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Filter-Simple/ChangeLog,v 1.4 2014/07/28 16:44:48 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Filter-Simple/ChangeLog,v 1.5 2014/09/17 13:41:54 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org>
+  perl-Filter-Simple-0.890.0-r1.ebuild:
+  Stable for HPPA (bug #504786).
 
   28 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   perl-Filter-Simple-0.890.0-r1.ebuild:

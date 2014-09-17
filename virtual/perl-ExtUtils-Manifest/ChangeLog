@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Manifest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.44 2014/08/31 16:52:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.45 2014/09/17 13:40:15 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org>
+  perl-ExtUtils-Manifest-1.630.0-r1.ebuild:
+  Stable for HPPA (bug #504786).
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   perl-ExtUtils-Manifest-1.630.0-r1.ebuild:

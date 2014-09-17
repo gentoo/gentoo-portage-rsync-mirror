@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Pod-Simple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.73 2014/08/31 17:28:12 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.74 2014/09/17 13:52:26 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org>
+  perl-Pod-Simple-3.280.0-r1.ebuild:
+  Stable for HPPA (bug #504786).
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   perl-Pod-Simple-3.280.0-r1.ebuild:

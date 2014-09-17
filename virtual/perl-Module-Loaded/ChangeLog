@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Loaded
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Loaded/ChangeLog,v 1.13 2014/07/24 09:32:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Loaded/ChangeLog,v 1.14 2014/09/17 13:49:42 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org>
+  perl-Module-Loaded-0.80.0-r3.ebuild:
+  Stable for HPPA (bug #504786).
 
   24 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   perl-Module-Loaded-0.80.0-r3.ebuild:

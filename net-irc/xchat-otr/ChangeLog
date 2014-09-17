@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat-otr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/ChangeLog,v 1.7 2014/03/01 22:11:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/ChangeLog,v 1.8 2014/09/17 13:49:12 mrueg Exp $
+
+  17 Sep 2014; Manuel Rüger <mrueg@gentoo.org> xchat-otr-0.3.ebuild:
+  Restrict dependency to <net-libs/libotr-4
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> xchat-otr-0.3.ebuild:
   Update libgcrypt dep to use slot :0.

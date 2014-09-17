@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Pluggable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/ChangeLog,v 1.48 2014/08/31 17:22:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/ChangeLog,v 1.49 2014/09/17 13:50:23 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org>
+  perl-Module-Pluggable-4.700.0.ebuild:
+  Stable for HPPA (bug #504786).
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   perl-Module-Pluggable-4.700.0.ebuild:

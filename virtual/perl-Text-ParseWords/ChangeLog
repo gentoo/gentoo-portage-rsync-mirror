@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Text-ParseWords
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-ParseWords/ChangeLog,v 1.9 2014/08/30 15:06:00 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-ParseWords/ChangeLog,v 1.10 2014/09/17 13:56:17 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org>
+  perl-Text-ParseWords-3.280.0-r2.ebuild:
+  Stable for HPPA (bug #504786).
 
   30 Aug 2014; Chema Alonso <nimiux@gentoo.org>
   perl-Text-ParseWords-3.290.0-r1.ebuild:

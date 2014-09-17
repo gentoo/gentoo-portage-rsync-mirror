@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Thread-Queue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Queue/ChangeLog,v 1.10 2014/07/28 17:41:18 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Queue/ChangeLog,v 1.11 2014/09/17 13:58:46 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org>
+  perl-Thread-Queue-3.20.0-r1.ebuild:
+  Stable for HPPA (bug #504786).
 
   28 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   perl-Thread-Queue-3.20.0-r1.ebuild:

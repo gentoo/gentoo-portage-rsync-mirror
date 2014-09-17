@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Safe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Safe/ChangeLog,v 1.46 2014/07/28 17:20:50 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Safe/ChangeLog,v 1.47 2014/09/17 13:52:50 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org> perl-Safe-2.350.0-r2.ebuild:
+  Stable for HPPA (bug #504786).
 
   28 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> perl-Safe-2.350.0-r2.ebuild:
   amd64 stable wrt bug #381424

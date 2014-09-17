@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Install
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Install/ChangeLog,v 1.43 2014/08/31 16:50:04 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Install/ChangeLog,v 1.44 2014/09/17 13:39:31 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org>
+  perl-ExtUtils-Install-1.590.0-r1.ebuild:
+  Stable for HPPA (bug #504786).
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   perl-ExtUtils-Install-1.590.0-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.9.7.ebuild,v 1.1 2014/08/24 15:37:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.9.7.ebuild,v 1.2 2014/09/17 13:55:39 ssuominen Exp $
 
 EAPI=5
 inherit eutils flag-o-matic libtool multilib toolchain-funcs versionator
@@ -73,11 +73,16 @@ src_prepare() {
 
 	# For testsuite, see http://bugs.gentoo.org/show_bug.cgi?id=500580#c3
 	shopt -s nullglob
-	cards=$(echo -n /dev/dri/card* | sed 's/ /:/g')
-	if test -n "${cards}"; then
-		addpredict "${cards}"
+	mesa_cards=$(echo -n /dev/dri/card* | sed 's/ /:/g')
+	if test -n "${mesa_cards}"; then
+		addpredict "${mesa_cards}"
+	fi
+	ati_cards=$(echo -n /dev/ati/card* | sed 's/ /:/g')
+	if test -n "${ati_cards}"; then
+		addpredict "${ati_cards}"
 	fi
 	shopt -u nullglob
+	addpredict /dev/nvidiactl
 }
 
 src_configure() {
@@ -158,7 +163,7 @@ src_install() {
 
 	if use opencl; then
 		cat <<-EOF > "${T}"/99${PN}
-		SANDBOX_PREDICT="/dev/ati/card:/dev/dri/card"
+		SANDBOX_PREDICT="/dev/nvidiactl:/dev/ati/card:/dev/dri/card"
 		EOF
 
 		insinto /etc/sandbox.d

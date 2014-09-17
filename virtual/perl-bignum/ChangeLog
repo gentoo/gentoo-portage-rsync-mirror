@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-bignum
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-bignum/ChangeLog,v 1.4 2014/08/31 17:51:18 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-bignum/ChangeLog,v 1.5 2014/09/17 14:00:59 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org> perl-bignum-0.330.0.ebuild:
+  Stable for HPPA (bug #504786).
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> perl-bignum-0.330.0.ebuild:
   arm stable wrt bug #504786
