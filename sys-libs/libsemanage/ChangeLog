@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.75 2014/08/23 11:35:24 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.76 2014/09/16 23:07:40 dolsen Exp $
+
+  16 Sep 2014; Brian Dolbec <dolsen@gentoo.org> libsemanage-2.3-r3.ebuild:
+  Add python-3.4 target. Tested and confirmed working by perfinion.
 
 *libsemanage-2.3-r3 (23 Aug 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.129 2014/08/05 09:43:56 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.130 2014/09/16 23:03:43 dolsen Exp $
+
+  16 Sep 2014; Brian Dolbec <dolsen@gentoo.org> libselinux-2.3-r1.ebuild:
+  Add python-3.4 target, needed for dep of portage. Tested and 
+  confirmed working by perfinion.
 
   05 Aug 2014; Sven Vermeulen <swift@gentoo.org> -libselinux-2.2.2-r4.ebuild,
   -libselinux-2.3.ebuild, -libselinux-2.3_rc1-r1.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/lutris/lutris-0.3.2.ebuild,v 1.2 2013/12/27 15:15:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/lutris/lutris-0.3.5.ebuild,v 1.1 2014/09/16 22:02:30 hasufell Exp $
 
 EAPI=5
 
@@ -24,9 +24,7 @@ RDEPEND="dev-python/pygobject:3[${PYTHON_USEDEP}]
 	gnome-base/gvfs[http]"
 
 # INSTALL contains list of optional deps
-DOCS=( AUTHORS README INSTALL )
-# https://github.com/lutris/lutris/pull/16
-PATCHES=( "${FILESDIR}"/${P}-desktopfile.patch )
+DOCS=( AUTHORS README.rst INSTALL )
 
 python_install() {
 	distutils-r1_python_install --install-scripts="${GAMES_BINDIR}"

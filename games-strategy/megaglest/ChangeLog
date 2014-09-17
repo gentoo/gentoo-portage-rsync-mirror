@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/megaglest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.20 2014/09/12 20:59:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.21 2014/09/16 22:13:17 hasufell Exp $
+
+*megaglest-3.9.1-r1 (16 Sep 2014)
+
+  16 Sep 2014; Julian Ospald <hasufell@gentoo.org> -megaglest-3.9.1.ebuild,
+  +megaglest-3.9.1-r1.ebuild:
+  rm dev-libs/icu dep for USE=-static wrt #522730
 
   12 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   megaglest-3.9.0.4.ebuild, megaglest-3.9.1.ebuild:
