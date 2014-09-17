@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-parent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.33 2014/07/24 09:34:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.34 2014/09/17 14:01:53 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org> perl-parent-0.225.0-r4.ebuild:
+  Stable for HPPA (bug #504786).
 
   24 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   perl-parent-0.225.0-r4.ebuild:
