@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1023 2014/09/16 04:30:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1024 2014/09/17 22:53:43 vapier Exp $
+
+  17 Sep 2014; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit,
+  files/eblits/pkg_setup.eblit, files/eblits/src_test.eblit:
+  Use `nonfatal` with emake when we check the return value ourselves #522962 by
+  Manuel Lauss.
 
   16 Sep 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.20.ebuild:
   Move timezone-data dep to PDEPEND as it only loosely needs it at runtime

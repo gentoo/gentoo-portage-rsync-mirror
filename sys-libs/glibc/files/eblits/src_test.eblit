@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_test.eblit,v 1.8 2014/09/10 18:15:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_test.eblit,v 1.9 2014/09/17 22:53:43 vapier Exp $
 
 glibc_src_test() {
 	cd "$(builddir $1)"
-	emake -j1 check && return 0
+	nonfatal emake -j1 check && return 0
 	einfo "make check failed - re-running with --keep-going to get the rest of the results"
-	emake -j1 -k check
+	nonfatal emake -j1 -k check
 	ewarn "make check failed for ${ABI}-${CTARGET}-$1"
 	return 1
 }

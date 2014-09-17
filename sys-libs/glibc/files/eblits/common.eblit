@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.41 2014/09/10 19:15:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.42 2014/09/17 22:53:43 vapier Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -9,6 +9,9 @@ alt_prefix() {
 if [[ ${EAPI:-0} == [012] ]] ; then
 	: ${ED:=${D}}
 	: ${EROOT:=${ROOT}}
+fi
+if [[ ${EAPI:-0} == [0123] ]] ; then
+	nonfatal() { "$@" ; }
 fi
 
 # We need to be able to set alternative headers for
