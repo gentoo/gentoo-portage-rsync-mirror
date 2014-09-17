@@ -1,14 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.4.0.ebuild,v 1.1 2014/09/14 18:45:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.4.0.ebuild,v 1.2 2014/09/17 08:53:33 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 PYTHON_REQ_USE='tk?'
-
-VIRTUALX_REQUIRED="always"
 
 inherit distutils-r1 eutils flag-o-matic virtualx
 
@@ -210,8 +208,7 @@ wrap_setup() {
 }
 
 python_compile() {
-	VIRTUALX_COMMAND="wrap_setup distutils-r1_python_compile"
-	virtualmake
+	wrap_setup distutils-r1_python_compile
 }
 
 python_compile_all() {

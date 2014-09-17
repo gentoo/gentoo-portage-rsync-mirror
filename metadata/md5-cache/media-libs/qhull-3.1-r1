@@ -1,9 +1,0 @@
-DEFINED_PHASES=compile install unpack
-DESCRIPTION=Geometry library
-HOMEPAGE=http://www.qhull.org
-KEYWORDS=amd64 ppc x86
-LICENSE=BSD
-SLOT=0
-SRC_URI=http://www.geom.umn.edu/software/qhull/qhull3.1.tgz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=6a6393efc808b56b81be5f99e357c852
