@@ -1,7 +1,5 @@
-Index: pcitable
-===================================================================
---- pcitable	(revision 7)
-+++ pcitable	(working copy)
+--- a/pcitable
++++ b/pcitable
 @@ -3688,7 +3688,7 @@
  0x1106	0x3336	"unknown"	"VIA Technologies, Inc.|K8M890CE Host Bridge"
  0x1106	0x3337	"unknown"	"VIA Technologies Inc.|VT8237A PCI to ISA Bridge"
@@ -11,10 +9,8 @@ Index: pcitable
  0x1106	0x3349	"ahci"	"VIA Technologies Inc.|VT8251 AHCI/SATA 4-Port Controller"
  0x1106	0x3351	"unknown"	"VIA Technologies, Inc.|VT3351 Host Bridge"
  0x1106	0x3364	"unknown"	"VIA Technologies, Inc.|P4M900 Host Bridge"
-Index: Cards
-===================================================================
---- Cards	(revision 7)
-+++ Cards	(working copy)
+--- a/Cards
++++ b/Cards
 @@ -429,7 +429,7 @@
  DRIVER s3
  

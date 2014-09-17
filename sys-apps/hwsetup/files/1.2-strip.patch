@@ -1,5 +1,5 @@
---- hwsetup-1.2/Makefile.orig	2005-05-07 15:20:44.000000000 +0200
-+++ hwsetup-1.2/Makefile	2008-12-22 06:27:41.000000000 +0100
+--- a/Makefile
++++ b/Makefile
 @@ -3,7 +3,7 @@
  # define BLACKLIST to avoid loading potentially dangerous modules
  CFLAGS=-DBLACKLIST -Wall -fPIC

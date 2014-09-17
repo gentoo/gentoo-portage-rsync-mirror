@@ -1,7 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2-r2.ebuild,v 1.6 2013/02/01 13:20:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2-r2.ebuild,v 1.7 2014/09/17 09:21:12 jer Exp $
 
+EAPI=5
 inherit eutils toolchain-funcs flag-o-matic
 
 MY_PV=${PV}-7
@@ -15,12 +16,18 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 -mips ppc ppc64 sparc x86"
 IUSE="zlib"
 
-COMMON_DEPEND="zlib? ( sys-libs/zlib )
-	sys-apps/pciutils"
-DEPEND="${COMMON_DEPEND}
-	sys-libs/libkudzu"
-RDEPEND="${COMMON_DEPEND}
-	sys-apps/hwdata-gentoo"
+COMMON_DEPEND="
+	sys-apps/pciutils[zlib?]
+	zlib? ( sys-libs/zlib )
+"
+DEPEND="
+	${COMMON_DEPEND}
+	sys-libs/libkudzu
+"
+RDEPEND="
+	${COMMON_DEPEND}
+	sys-apps/hwdata-gentoo
+"
 
 pkg_setup() {
 	ewarn "This package is designed for use on the LiveCD only and will do "
@@ -28,8 +35,7 @@ pkg_setup() {
 	ewarn "YOU HAVE BEEN WARNED!!!"
 }
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${MY_PV}-dyn_blacklist.patch \
 		"${FILESDIR}"/${PV}-3-fastprobe.patch \
@@ -38,24 +44,25 @@ src_unpack() {
 		"${FILESDIR}"/${MY_PV}-openchrome.patch
 }
 
-src_compile() {
+src_configure() {
 	if use zlib ; then
 		sed -i \
 			-e '/^LIBS=/s,-lpci,-lz -lpci,g' \
 			Makefile
-	elif built_with_use --missing false sys-apps/pciutils zlib ; then
-		die "You need to build with USE=zlib to match sys-apps/pcituils"
 	fi
-	emake LDFLAGS="${LDFLAGS}" OPT="${CFLAGS}" CC="$(tc-getCC)" || die "emake failed"
+}
+
+src_compile() {
+	emake LDFLAGS="${LDFLAGS}" OPT="${CFLAGS}" CC="$(tc-getCC)"
 }
 
 src_install() {
-	einstall DESTDIR="${D}" PREFIX=/usr MANDIR=/usr/share/man || die "Install failed"
+	emake DESTDIR="${D}" PREFIX=/usr MANDIR=/usr/share/man
 	keepdir /etc/sysconfig
 }
 
 pkg_postinst() {
-	ewarn "This package is intended for usage on the Gentoo release media.  If"
+	ewarn "This package is intended for use on the Gentoo release media.  If"
 	ewarn "you are not building a CD, remove this package.  It will not work"
 	ewarn "properly on a running system, as Gentoo does not use any of the"
 	ewarn "Knoppix-style detection except for CD builds."

@@ -1,6 +1,5 @@
-diff -urN hwsetup-1.2.fastprobe/hwsetup.c hwsetup-1.2/hwsetup.c
---- hwsetup-1.2.fastprobe/hwsetup.c	2008-04-07 19:09:08.000000000 -0700
-+++ hwsetup-1.2/hwsetup.c	2008-04-07 19:07:55.000000000 -0700
+--- a/hwsetup.c
++++ b/hwsetup.c
 @@ -388,7 +388,7 @@
           sprintf(fullpath,"%.90s%.32s",xpath,server[i]);
           if(!exists(fullpath)) continue;

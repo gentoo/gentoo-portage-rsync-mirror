@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hwsetup
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.68 2013/02/01 13:20:13 gmsoft Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.69 2014/09/17 09:21:12 jer Exp $
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org> hwsetup-1.2-r2.ebuild,
+  -files/1.2-3-dyn_blacklist.patch, files/1.2-3-fastprobe.patch,
+  -files/1.2-3-gentoo.patch, files/1.2-7-dyn_blacklist.patch,
+  files/1.2-7-gentoo.patch, files/1.2-strip.patch,
+  files/1.2-7-openchrome.patch:
+  EAPI bump. Clean up patches.
 
   01 Feb 2013; Guy Martin <gmsoft@gentoo.org> hwsetup-1.2-r2.ebuild:
   hppa stable

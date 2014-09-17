@@ -1,7 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/hwdata-gentoo-0.4.ebuild,v 1.4 2013/02/01 13:17:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/hwdata-gentoo-0.4.ebuild,v 1.5 2014/09/17 09:02:09 jer Exp $
 
+EAPI=5
 inherit eutils
 
 DESCRIPTION="Data for the hwsetup program"
@@ -15,10 +16,11 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="!sys-apps/hwdata-redhat"
-RDEPEND=${DEPEND}
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-openchrome.patch
+
 	if use x86 || use amd64
 	then
 		if use opengl && use binary-drivers
@@ -30,8 +32,6 @@ src_unpack() {
 				-i "${S}"/Cards || die
 		fi
 	fi
-	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-openchrome.patch
 }
 
 src_install() {

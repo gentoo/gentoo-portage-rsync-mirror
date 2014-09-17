@@ -1,5 +1,5 @@
---- a/hwsetup-1.2/hwsetup.c
-+++ b/hwsetup-1.2/hwsetup.c
+--- a/hwsetup.c
++++ b/hwsetup.c
 @@ -456,7 +456,7 @@
       else if(strcasestr(xi.xdesc,"Newport")) strcpy(xi.xmodule,"newport");
       else if(strcasestr(xi.xdesc,"Siliconmotion")||strcasestr(xi.xdesc,"Silicon Motion")) strcpy(xi.xmodule,"siliconmotion");
