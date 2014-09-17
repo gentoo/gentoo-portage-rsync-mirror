@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<use>
-                <flag name='iterparse'>Enable support for the specific element properties</flag>
-        </use>
 	<upstream>
 		<remote-id type="pypi">supervisor</remote-id>
 	</upstream>

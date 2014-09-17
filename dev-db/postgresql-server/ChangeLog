@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.305 2014/09/13 17:37:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.306 2014/09/17 12:30:03 ago Exp $
+
+  17 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  postgresql-server-9.0.18.ebuild, postgresql-server-9.1.14.ebuild,
+  postgresql-server-9.2.9.ebuild, postgresql-server-9.3.5.ebuild:
+  Stable for sparc, wrt bug #522184
 
   13 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   postgresql-server-9.0.18.ebuild, postgresql-server-9.1.14.ebuild,
