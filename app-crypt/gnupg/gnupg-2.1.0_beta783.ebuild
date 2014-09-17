@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta783.ebuild,v 1.3 2014/09/15 17:15:24 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta783.ebuild,v 1.4 2014/09/17 18:11:19 alonbl Exp $
 
 EAPI="5"
 
@@ -111,20 +111,8 @@ src_compile() {
 src_install() {
 	default
 
-	if use tools; then
-		for f in \
-				convert-from-106 \
-				gpg-check-pattern \
-				gpg-zip \
-				gpgconf \
-				gpgsplit \
-				lspgpot \
-				mail-signed-keys \
-				make-dns-cert \
-				; do
-			dobin "tools/${f}" tools/gpg-zip
-		done
-	fi
+	use tools && dobin tools/{convert-from-106,gpg-check-pattern} \
+		tools/{gpg-zip,gpgconf,gpgsplit,lspgpot,mail-signed-keys,make-dns-cert}
 
 	emake DESTDIR="${D}" -f doc/Makefile uninstall-nobase_dist_docDATA
 	rm "${ED}"/usr/share/gnupg/help* || die

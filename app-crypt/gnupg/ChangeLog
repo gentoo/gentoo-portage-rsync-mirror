@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.549 2014/09/15 17:15:24 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.550 2014/09/17 18:11:19 alonbl Exp $
+
+  17 Sep 2014; Alon Bar-Lev <alonbl@gentoo.org> gnupg-2.0.26-r2.ebuild,
+  gnupg-2.1.0_beta783.ebuild:
+  Cleanup tools installation, by  Arfrever Frehtes Taifersar Arahesis
 
 *gnupg-2.0.26-r2 (15 Sep 2014)
 
