@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.195 2014/06/18 19:46:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.197 2014/09/17 10:41:50 lu_zero Exp $
+
+  17 Sep 2014; Luca Barbato <lu_zero@gentoo.org> libquicktime-1.2.4-r1.ebuild:
+  Amend previous commit
+
+  17 Sep 2014; Luca Barbato <lu_zero@gentoo.org> libquicktime-1.2.4-r1.ebuild:
+  Fix bug #509300, use a sed expression to spare 24k, thanks to Simone Scanzoni
+  for the help.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libquicktime-1.2.4-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

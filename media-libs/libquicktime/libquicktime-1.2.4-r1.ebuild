@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.4-r1.ebuild,v 1.2 2014/06/18 19:46:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.4-r1.ebuild,v 1.4 2014/09/17 10:41:50 lu_zero Exp $
 
 EAPI=5
 inherit libtool eutils multilib-minimal
@@ -53,6 +53,9 @@ DOCS="ChangeLog README TODO"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}+libav-9.patch \
 		"${FILESDIR}"/${P}-ffmpeg2.patch
+
+	sed -i -e "s:CODEC_ID_:AV_&:g" "${S}/plugins/ffmpeg/lqt_ffmpeg.c" || die
+
 	elibtoolize # Required for .so versioning on g/fbsd
 }
 
