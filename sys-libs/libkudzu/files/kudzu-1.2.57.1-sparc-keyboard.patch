@@ -1,5 +1,5 @@
---- kudzu-1.2.57.1/keyboard.c.BAD	2006-12-10 11:36:40.000000000 -0500
-+++ kudzu-1.2.57.1/keyboard.c	2006-12-10 11:44:58.000000000 -0500
+--- a/keyboard.c
++++ b/keyboard.c
 @@ -21,7 +21,6 @@
  #include "keyboard.h"
  

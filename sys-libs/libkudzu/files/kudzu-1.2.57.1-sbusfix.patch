@@ -1,5 +1,5 @@
---- kudzu-1.2.57.1/sbus.c.BAD	2006-12-10 11:28:07.000000000 -0500
-+++ kudzu-1.2.57.1/sbus.c	2006-12-10 11:32:42.000000000 -0500
+--- a/sbus.c
++++ b/sbus.c
 @@ -162,6 +162,7 @@
  		    	devClass = CLASS_NETWORK;
  		} else if (!strcmp(prop, "le")) {

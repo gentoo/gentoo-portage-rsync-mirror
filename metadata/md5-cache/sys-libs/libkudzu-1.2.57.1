@@ -1,12 +1,13 @@
-DEFINED_PHASES=compile install unpack
-DEPEND=dev-libs/popt zlib? ( sys-libs/zlib ) >=sys-apps/pciutils-2.2.4
+DEFINED_PHASES=compile configure install prepare
+DEPEND=dev-libs/popt >=sys-apps/pciutils-2.2.4[zlib?] zlib? ( sys-libs/zlib )
 DESCRIPTION=Red Hat Hardware detection tools
+EAPI=5
 HOMEPAGE=http://rhlinux.redhat.com/kudzu/
 IUSE=zlib
 KEYWORDS=alpha amd64 hppa ia64 -mips ppc ppc64 sparc x86
 LICENSE=GPL-2
-RDEPEND=dev-libs/popt zlib? ( sys-libs/zlib ) >=sys-apps/pciutils-2.2.4 sys-apps/hwdata-gentoo !sys-apps/kudzu
+RDEPEND=dev-libs/popt >=sys-apps/pciutils-2.2.4[zlib?] zlib? ( sys-libs/zlib ) sys-apps/hwdata-gentoo !sys-apps/kudzu
 SLOT=0
 SRC_URI=mirror://gentoo/kudzu-1.2.57.1.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f3b2f64c7edd6d0380a860aaa452a441
+_md5_=5be0930a869dfe506be4a6f504b6f8e3

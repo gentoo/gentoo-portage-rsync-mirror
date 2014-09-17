@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.8.ebuild,v 1.1 2014/09/16 05:44:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.8.ebuild,v 1.2 2014/09/17 09:56:39 jer Exp $
 
 EAPI=5
 
@@ -38,9 +38,9 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		$(use_enable debug) \
 		$(use_enable history) \
-		$(use_with xft) \
-		$(usex debug --enable-debug '')
+		$(use_with xft)
 }
 
 src_compile() {

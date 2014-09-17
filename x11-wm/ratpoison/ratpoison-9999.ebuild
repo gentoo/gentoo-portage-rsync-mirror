@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-9999.ebuild,v 1.5 2014/07/21 19:07:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-9999.ebuild,v 1.6 2014/09/17 09:56:39 jer Exp $
 
 EAPI=5
 
@@ -39,10 +39,10 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--without-electric-fence \
+		$(use_enable debug) \
 		$(use_enable history) \
 		$(use_with xft) \
-		$(usex debug --enable-debug '')
+		--without-electric-fence
 }
 
 src_compile() {
