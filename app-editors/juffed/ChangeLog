@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/juffed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.28 2014/06/23 08:15:48 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.29 2014/09/17 21:48:33 nimiux Exp $
+
+  17 Sep 2014; Chema Alonso <nimiux@gentoo.org> juffed-0.10.ebuild:
+  Stable for amd64 wrt bug #514902
 
   23 Jun 2014; Michael Palimaka <kensington@gentoo.org> juffed-0.10.ebuild:
   Add missing USE dependency wrt bug #514222.

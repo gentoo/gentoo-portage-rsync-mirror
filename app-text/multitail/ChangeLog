@@ -1,6 +1,9 @@
 # ChangeLog for app-text/multitail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.118 2014/08/15 08:04:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.119 2014/09/17 21:43:16 nimiux Exp $
+
+  17 Sep 2014; Chema Alonso <nimiux@gentoo.org> multitail-6.2.1.ebuild:
+  Stable for amd64 wrt bug #519882
 
   15 Aug 2014; Jeroen Roovers <jer@gentoo.org> multitail-6.2.1.ebuild:
   Stable for HPPA (bug #519882).
