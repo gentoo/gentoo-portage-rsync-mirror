@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/driftnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.47 2014/08/22 14:37:56 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.48 2014/09/17 15:51:34 ago Exp $
+
+  17 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  driftnet-0.1.6_p20090401.ebuild:
+  Stable for ppc, wrt bug #515876
 
   22 Aug 2014; Christopher Reffett <2011creffett@gentoo.org>
   -driftnet-0.1.6-r5.ebuild:

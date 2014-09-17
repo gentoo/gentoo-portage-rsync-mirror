@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6_p20090401.ebuild,v 1.11 2014/07/27 11:18:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6_p20090401.ebuild,v 1.12 2014/09/17 15:51:34 ago Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ex-parrot.com/~chris/driftnet/"
 SRC_URI="mirror://github/rbu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc -sparc x86"
+KEYWORDS="~amd64 ppc -sparc x86"
 SLOT="0"
 IUSE="gtk mp3 suid"
 
