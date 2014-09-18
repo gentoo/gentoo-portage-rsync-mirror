@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xvkbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.33 2014/05/18 04:50:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.34 2014/09/18 18:24:52 jer Exp $
+
+*xvkbd-3.5-r1 (18 Sep 2014)
+
+  18 Sep 2014; Jeroen Roovers <jer@gentoo.org> -xvkbd-3.5.ebuild,
+  +xvkbd-3.5-r1.ebuild:
+  Install app defaults into /usr/share/X11/app-defaults. Fix wrong libdir in
+  app-defaults removal (bug #496116).
 
 *xvkbd-3.5 (18 May 2014)
 

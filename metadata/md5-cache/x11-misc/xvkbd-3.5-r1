@@ -9,4 +9,4 @@ RDEPEND=x11-libs/libX11 x11-libs/libXaw x11-libs/libXaw3d x11-libs/libXmu x11-li
 SLOT=0
 SRC_URI=http://homepage3.nifty.com/tsato/xvkbd/xvkbd-3.5.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=0ac4da603cc402e192c3381d968f1c9f
+_md5_=6576ded7f48f2990cac9209c1099cb7e

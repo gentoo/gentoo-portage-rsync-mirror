@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/xvkbd-3.5.ebuild,v 1.1 2014/05/18 04:50:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/xvkbd-3.5-r1.ebuild,v 1.1 2014/09/18 18:24:52 jer Exp $
 
 EAPI=5
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="virtual keyboard for X window system"
 HOMEPAGE="http://homepage3.nifty.com/tsato/xvkbd/"
@@ -42,18 +42,18 @@ src_configure() {
 src_compile() {
 	emake \
 		CC=$(tc-getCC) LD=$(tc-getCC) \
-		XAPPLOADDIR="/etc/X11/app-defaults" \
+		XAPPLOADDIR="/usr/share/X11/app-defaults" \
 		LOCAL_LDFLAGS="${LDFLAGS}" \
 		CDEBUGFLAGS="${CFLAGS}"
 }
 
 src_install() {
 	emake \
-		XAPPLOADDIR="/etc/X11/app-defaults" \
+		XAPPLOADDIR="/usr/share/X11/app-defaults" \
 		DESTDIR="${D}" \
 		install
 
-	rm -rf "${D}"/usr/lib "${D}"/etc || die
+	rm -r "${D}"/usr/$(get_libdir) "${D}"/etc || die
 
 	dodoc README
 	newman ${PN}.man ${PN}.1
