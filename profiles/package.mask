@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16042 2014/09/17 00:17:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16043 2014/09/17 23:10:34 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -130,12 +130,6 @@ app-doc/djbdns-man
 # Dead upstream
 # Masked for removal in 30 days, bug #355797
 x11-plugins/pidgin-facebookchat
-
-# Michał Górny <mgorny@gentoo.org> (05 Sep 2014)
-# New version is built using C++11, and reverse dependencies may
-# require being switched to C++11 as well. Mask for testing.
-~sys-devel/clang-3.5.0
-~sys-devel/llvm-3.5.0
 
 # Sergey Popov <pinkbyte@gentoo.org> (04 Sep 2014)
 # Security mask, wrt bugs #488212, #498164, #500260,

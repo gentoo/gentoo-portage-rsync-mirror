@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.205 2014/09/16 14:33:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.206 2014/09/17 23:29:09 voyageur Exp $
+
+  17 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.4.2.ebuild:
+  Also disable troublesome test in 3.4.2, fixes bug #516496
 
   16 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.5.0.ebuild,
   +files/llvm-3.5.0-fix_LLVMExports_cmake.patch:

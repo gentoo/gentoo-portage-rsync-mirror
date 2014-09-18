@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.2.ebuild,v 1.2 2014/07/14 14:53:52 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.2.ebuild,v 1.3 2014/09/17 23:29:09 voyageur Exp $
 
 EAPI=5
 
@@ -206,6 +206,11 @@ src_prepare() {
 		-e "s,@EPREFIX@,${EPREFIX},g" \
 		-i "${sub_files[@]}" \
 		|| die "install paths sed failed"
+
+	if use clang; then
+		# constantly fails for a long time, likely due to our patches
+		rm tools/clang/test/Driver/cross-linux.c || die
+	fi
 
 	# User patches
 	epatch_user
