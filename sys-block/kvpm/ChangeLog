@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/kvpm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/kvpm/ChangeLog,v 1.3 2014/02/24 12:54:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/kvpm/ChangeLog,v 1.4 2014/09/18 17:31:48 mrueg Exp $
+
+*kvpm-0.9.9 (18 Sep 2014)
+
+  18 Sep 2014; Manuel Rüger <mrueg@gentoo.org> +kvpm-0.9.9.ebuild:
+  Version bump.
 
   24 Feb 2014; Michael Palimaka <kensington@gentoo.org> kvpm-0.9.8.ebuild:
   Move from SLOT 0 to 4.
