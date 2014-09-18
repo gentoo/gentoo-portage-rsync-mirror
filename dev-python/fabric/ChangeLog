@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.48 2014/09/18 09:17:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.49 2014/09/18 09:38:26 idella4 Exp $
+
+*fabric-1.10.0.ebuild
+
+  19 Sep 2014; Ian Delaney <idella4@gentoo.org> +fabric-1.10.0.ebuild,
+  -fabric-1.1.1.ebuild, -fabric-1.2.2.ebuild, -fabric-1.4.0.ebuild,
+  -fabric-1.4.1.ebuild, -fabric-1.4.2-r1.ebuild, -fabric-1.4.3.ebuild,
+  -fabric-1.5.1.ebuild, -fabric-1.5.2.ebuild, -fabric-1.5.3.ebuild,
+  -fabric-1.6.0-r1.ebuild, -fabric-1.6.1-r1.ebuild, -fabric-1.7.0.ebuild,
+  -fabric-1.8.0.ebuild, -fabric-1.8.2.ebuild, -fabric-1.8.2.ebuild,
+  -fabric-1.8.3.ebuild
+  bump; update deps, doc build, test phase, remove many old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fabric-1.1.1.ebuild,
   fabric-1.2.2.ebuild, fabric-1.4.0.ebuild, fabric-1.4.1.ebuild,
