@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xxkb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.26 2013/07/21 09:45:28 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.27 2014/09/18 18:40:50 jer Exp $
+
+*xxkb-1.11-r3 (18 Sep 2014)
+
+  18 Sep 2014; Jeroen Roovers <jer@gentoo.org> -xxkb-1.11-r1.ebuild,
+  +xxkb-1.11-r3.ebuild, files/svg-appdefaults.patch, files/svg-flags.patch:
+  EAPI bump. Remove /usr/$(get_libdir)/X11/app-defaults (bug #496116). Clean up
+  patches.
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #473480
