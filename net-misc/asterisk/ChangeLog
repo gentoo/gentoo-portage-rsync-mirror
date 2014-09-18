@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.491 2014/08/20 12:26:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.492 2014/09/18 10:29:46 chainsaw Exp $
+
+  18 Sep 2014; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.28.2.ebuild,
+  asterisk-1.8.29.0.ebuild, asterisk-11.10.2.ebuild, asterisk-11.11.0.ebuild,
+  asterisk-11.12.0.ebuild, asterisk-12.3.2.ebuild, asterisk-12.4.0.ebuild,
+  asterisk-12.5.0.ebuild:
+  Add missing build-time dependency on pkgconfig, as identified by cyberbat in
+  bug #522396.
 
 *asterisk-12.5.0 (20 Aug 2014)
 *asterisk-11.12.0 (20 Aug 2014)

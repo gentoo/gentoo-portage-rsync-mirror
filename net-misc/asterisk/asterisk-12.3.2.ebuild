@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-12.3.2.ebuild,v 1.1 2014/06/16 10:57:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-12.3.2.ebuild,v 1.2 2014/09/18 10:29:46 chainsaw Exp $
 
 EAPI=5
 inherit autotools base eutils linux-info multilib user
@@ -75,6 +75,7 @@ DEPEND="${RDEPEND}
 	!net-libs/openh323
 	!net-libs/pjsip
 	voicemail_storage_imap? ( virtual/imap-c-client )
+	virtual/pkgconfig
 "
 
 RDEPEND="${RDEPEND}

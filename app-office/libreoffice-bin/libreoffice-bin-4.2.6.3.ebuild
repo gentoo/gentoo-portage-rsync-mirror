@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.2.6.3.ebuild,v 1.10 2014/09/14 09:10:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.2.6.3.ebuild,v 1.11 2014/09/18 10:10:36 ago Exp $
 
 EAPI=5
 
@@ -55,7 +55,7 @@ SRC_URI="
 IUSE="gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 
 BIN_COMMON_DEPEND="
 	=app-text/libexttextcat-3.4*
