@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.140 2014/09/14 10:18:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.141 2014/09/18 12:26:22 floppym Exp $
 
 EAPI=5
 
@@ -332,6 +332,7 @@ multilib_src_install() {
 	fi
 
 	# install compat pkg-config files
+	# Change dbus to >=sys-apps/dbus-1.8.8 if/when this is dropped.
 	local pcfiles=( src/compat-libs/libsystemd-{daemon,id128,journal,login}.pc )
 	emake "${mymakeopts[@]}" install-pkgconfiglibDATA \
 		pkgconfiglib_DATA="${pcfiles[*]}"
