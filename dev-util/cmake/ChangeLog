@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.298 2014/09/15 22:43:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.299 2014/09/18 17:14:50 kensington Exp $
+
+  18 Sep 2014; Michael Palimaka <kensington@gentoo.org> cmake-3.0.2.ebuild:
+  Add doc USE flag to restore man pages and add other documentation wrt bug
+  #523148.
 
 *cmake-3.0.2 (15 Sep 2014)
 

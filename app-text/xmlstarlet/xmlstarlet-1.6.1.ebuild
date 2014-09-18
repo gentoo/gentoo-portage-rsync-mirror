@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.3.0.ebuild,v 1.2 2014/03/01 22:22:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.6.1.ebuild,v 1.1 2014/09/18 17:11:16 sping Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xmlstar/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.6.27
@@ -22,12 +22,19 @@ DEPEND="${RDEPEND}
 	sys-apps/sed"
 
 src_configure() {
-	econf --disable-static-libs
+	# NOTE: Fully built documentation is already shipped with the tarball:
+	# - doc/xmlstarlet-ug.{pdf,ps,html}
+	# - doc/xmlstarlet.txt
+	# - doc/xmlstarlet.1
+	econf \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		--disable-build-docs \
+		--disable-static-libs \
+		--disable-silent-rules
 }
 
 src_install() {
 	default
 
 	dosym xml /usr/bin/xmlstarlet
-	dohtml -r doc/*
 }
