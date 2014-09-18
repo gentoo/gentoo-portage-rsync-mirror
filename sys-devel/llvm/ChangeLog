@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.206 2014/09/17 23:29:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.207 2014/09/18 20:06:55 mgorny Exp $
+
+  18 Sep 2014; Michał Górny <mgorny@gentoo.org>
+  files/clang-3.5-gentoo-runtime-gcc-detection-v3.patch:
+  Use simpler llvm::sys::fs::exists() form in gcc version detection code since
+  the other one is deprecated. Bug #523082.
 
   17 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.4.2.ebuild:
   Also disable troublesome test in 3.4.2, fixes bug #516496

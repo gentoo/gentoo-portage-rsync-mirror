@@ -1,17 +1,17 @@
-From 699d0b958b4d8fb42348d324ef805345b0cbc06b Mon Sep 17 00:00:00 2001
+From 916572e1243633ddf913c8f32771a3a7f70fd853 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
 Date: Fri, 5 Sep 2014 16:49:35 +0200
 Subject: [PATCH] Support obtaining active toolchain from gcc-config.
 
 ---
- tools/clang/lib/Driver/ToolChains.cpp | 20 ++++++++++++++++++++
- 1 file changed, 20 insertions(+)
+ tools/clang/lib/Driver/ToolChains.cpp | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
 
 diff --git a/tools/clang/lib/Driver/ToolChains.cpp b/tools/clang/lib/Driver/ToolChains.cpp
-index b46f69d..f3e986c 100644
+index b46f69d..2d4374d 100644
 --- a/tools/clang/lib/Driver/ToolChains.cpp
 +++ b/tools/clang/lib/Driver/ToolChains.cpp
-@@ -1253,6 +1253,26 @@ Generic_GCC::GCCInstallationDetector::init(
+@@ -1253,6 +1253,25 @@ Generic_GCC::GCCInstallationDetector::init(
        Prefixes.push_back("/usr");
    }
  
@@ -20,10 +20,9 @@ index b46f69d..f3e986c 100644
 +        llvm::MemoryBuffer::getFile(D.SysRoot + "/etc/env.d/gcc/config-" + CandidateTripleAliases[k].str());
 +    if (File)
 +    {
-+      bool Exists;
 +      const std::string VersionText = File.get()->getBuffer().rsplit('-').second.substr(0,5).str();
 +      const std::string GentooPath = D.SysRoot + "/usr/lib/gcc/" + CandidateTripleAliases[k].str() + "/" + VersionText;
-+      if (!llvm::sys::fs::exists(GentooPath + "/crtbegin.o", Exists) && Exists)
++      if (llvm::sys::fs::exists(GentooPath + "/crtbegin.o"))
 +      {
 +        Version = GCCVersion::Parse(VersionText);
 +        GCCInstallPath = GentooPath;
