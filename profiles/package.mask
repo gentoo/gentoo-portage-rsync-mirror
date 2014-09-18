@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16044 2014/09/18 06:28:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16046 2014/09/18 06:39:26 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,21 +30,10 @@
 
 #--- END OF EXAMPLES ---
 
-# Ulrich Müller <ulm@gentoo.org> (18 Sep 2014)
-# QA: Avoid slot conflicts blocking world update, bug 523064.
-# Pending unmasking of app-office/libreoffice-4.3*
->=dev-libs/libixion-0.7
->=dev-libs/liborcus-0.7
-
 # Michael Orlitzky <mjo@gentoo.org> (16 Sep 2014)
 # Superseded by app-text/dos2unix, use that instead.
 # Masked for removal in 30 days (bug #522804).
 app-text/unix2dos
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (16 Sep 2014)
-# Masked for an inital (short) testing period
-=app-office/libreoffice-4.3*
-=app-office/libreoffice-l10n-4.3*
 
 # Michał Górny <mgorny@gentoo.org> (15 Sep 2014)
 # Causes undefined references few layers down (in mediastreamer),
