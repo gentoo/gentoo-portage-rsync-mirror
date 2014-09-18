@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.7.ebuild,v 1.1 2014/06/19 20:31:24 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.7.ebuild,v 1.2 2014/09/18 13:19:21 jlec Exp $
 
-EAPI=4
+EAPI=5
+
 inherit flag-o-matic eutils linux-info
 
 DESCRIPTION="Resource manager and queuing system based on OpenPBS"
@@ -10,13 +11,14 @@ HOMEPAGE="http://www.adaptivecomputing.com/products/open-source/torque"
 # TODO:  hopefully moving to github tags soon
 # http://www.supercluster.org/pipermail/torquedev/2013-May/004519.html
 SRC_URI="http://www.adaptivecomputing.com/index.php?wpfb_dl=1690 -> ${P}.tar.gz"
-LICENSE="torque-2.5"
 
+LICENSE="torque-2.5"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cpusets +crypt doc drmaa kernel_linux munge nvidia server +syslog tk"
 
-DEPEND_COMMON="sys-libs/ncurses
+DEPEND_COMMON="
+	sys-libs/ncurses
 	sys-libs/readline
 	cpusets? ( sys-apps/hwloc )
 	munge? ( sys-auth/munge )
@@ -33,7 +35,7 @@ RDEPEND="${DEPEND_COMMON}
 	!crypt? ( net-misc/netkit-rsh )"
 
 pkg_setup() {
-	PBS_SERVER_HOME="${PBS_SERVER_HOME:-/var/spool/torque}"
+	PBS_SERVER_HOME="${PBS_SERVER_HOME:-/var/spool/${PN}}"
 
 	# Find a Torque server to use.  Check environment, then
 	# current setup (if any), and fall back on current hostname.
@@ -74,7 +76,7 @@ src_prepare() {
 	# --without-loadlibfile is supposed to do this for us...
 	sed -i '/mk_default_ld_lib_file || return 1/d' buildutils/pbs_mkdirs.in || die
 
-	epatch "${FILESDIR}"/torque-4.1.5.1-tcl8.6.patch
+	epatch "${FILESDIR}"/${PN}-4.1.5.1-tcl8.6.patch
 
 	# 491270
 	epatch "${FILESDIR}"/CVE-2013-4495.4.1.patch
@@ -105,53 +107,53 @@ src_configure() {
 src_install() {
 	local dir
 
-	emake DESTDIR="${D}" install || die "make install failed"
+	DOCS=( CHANGELOG README.* Release_Notes )
+	use doc && DOCS+=( doc/admin_guide.ps doc/*.pdf )
 
-	dodoc CHANGELOG README.* Release_Notes || die "dodoc failed"
-	if use doc; then
-		dodoc doc/admin_guide.ps doc/*.pdf || die "dodoc failed"
-	fi
+	default
 
 	# The build script isn't alternative install location friendly,
 	# So we have to fix some hard-coded paths in tclIndex for xpbs* to work
-	for file in `find "${D}" -iname tclIndex`; do
-		sed -e "s/${D//\// }/ /" "${file}" > "${file}.new"
-		mv "${file}.new" "${file}" || die
+	for file in $(find "${ED}" -iname tclIndex); do
+		sed \
+			-e "s/${ED//\// }/ /" \
+			-i "${file}" || die
 	done
 
-	for dir in $(find "${D}/${PBS_SERVER_HOME}" -type d); do
-		keepdir "${dir#${D}}"
+	for dir in $(find "${ED}/${PBS_SERVER_HOME}" -type d); do
+		keepdir "${dir#${ED}}"
 	done
 
 	if use server; then
-		newinitd "${FILESDIR}"/pbs_server-init.d-munge pbs_server || die
-		newinitd "${FILESDIR}"/pbs_sched-init.d pbs_sched || die
+		newinitd "${FILESDIR}"/pbs_server-init.d-munge pbs_server
+		newinitd "${FILESDIR}"/pbs_sched-init.d pbs_sched
 	fi
-	newinitd "${FILESDIR}"/pbs_mom-init.d-munge pbs_mom || die
-	newconfd "${FILESDIR}"/torque-conf.d-munge torque || die
-	newinitd "${FILESDIR}"/trqauthd-init.d trqauthd || die
-	newenvd "${FILESDIR}"/torque-env.d 25torque || die
+	newinitd "${FILESDIR}"/pbs_mom-init.d-munge pbs_mom
+	newconfd "${FILESDIR}"/${PN}-conf.d-munge ${PN}
+	newinitd "${FILESDIR}"/trqauthd-init.d trqauthd
+	newenvd "${FILESDIR}"/${PN}-env.d 25${PN}
 }
 
 pkg_preinst() {
 	if [[ -f "${ROOT}etc/pbs_environment" ]]; then
-		cp "${ROOT}etc/pbs_environment" "${D}"/etc/pbs_environment || die
+		cp "${ROOT}etc/pbs_environment" "${ED}"/etc/pbs_environment || die
 	fi
 
 	if [[ -f "${ROOT}${PBS_SERVER_HOME}/server_priv/nodes" ]]; then
-		cp "${ROOT}${PBS_SERVER_HOME}/server_priv/nodes" \
-			"${D}"/${PBS_SERVER_HOME}/server_priv/nodes || die
+		cp \
+			"${EROOT}${PBS_SERVER_HOME}/server_priv/nodes" \
+			"${ED}/${PBS_SERVER_HOME}/server_priv/nodes" || die
 	fi
 
-	echo "${PBS_SERVER_NAME}" > "${D}${PBS_SERVER_HOME}/server_name" || die
+	echo "${PBS_SERVER_NAME}" > "${ED}${PBS_SERVER_HOME}/server_name" || die
 
 	# Fix up the env.d file to use our set server home.
-	sed -i \
-		"s:/var/spool/torque:${PBS_SERVER_HOME}:g" "${D}"/etc/env.d/25torque \
-		|| die
+	sed \
+		-e "s:/var/spool/${PN}:${PBS_SERVER_HOME}:g" \
+		-i "${ED}"/etc/env.d/25${PN} || die
 
 	if use munge; then
-		sed -i 's,\(PBS_USE_MUNGE=\).*,\11,' "${D}"etc/conf.d/torque || die
+		sed -i 's,\(PBS_USE_MUNGE=\).*,\11,' "${ED}"/etc/conf.d/${PN} || die
 	fi
 }
 
@@ -159,14 +161,16 @@ pkg_postinst() {
 	elog "    If this is the first time torque has been installed, then you are not"
 	elog "ready to start the server.  Please refer to the documentation located at:"
 	elog "http://www.clusterresources.com/wiki/doku.php?id=torque:torque_wiki"
-
+	echo ""
 	elog "    For a basic setup, you may use emerge --config ${PN}"
-
-	elog "Important 4.0+ updates"
-	elog "  - The on-wire protocol version has been changed."
-	elog "    Versions of Torque before 4.0.0 are no longer able to communicate."
-	elog "  - pbs_iff has been replaced by trqauthd, you will now need to add"
-	elog "    trqauthd to your default runlevel."
+	echo ""
+	if [[ -z "${REPLACING_VERSIONS}" ]] || [[ ${REPLACING_VERSIONS} < 4 ]]; then
+		elog "Important 4.0+ updates"
+		elog "  - The on-wire protocol version has been changed."
+		elog "    Versions of Torque before 4.0.0 are no longer able to communicate."
+		elog "  - pbs_iff has been replaced by trqauthd, you will now need to add"
+		elog "    trqauthd to your default runlevel."
+	fi
 }
 
 # root will be setup as the primary operator/manager, the local machine
@@ -193,9 +197,9 @@ pkg_config() {
 	echo "\$logevent 255" >> "${h}/mom_priv/config" || die
 
 	if use server; then
-		local qmgr="${ROOT}/usr/bin/qmgr -c"
+		local qmgr="${EROOT}/usr/bin/qmgr -c"
 		# pbs_server bails on repeated backslashes.
-		if ! "${ROOT}"/usr/sbin/pbs_server -f -d "${h}" -t create; then
+		if ! "${EROOT}"/usr/sbin/pbs_server -f -d "${h}" -t create; then
 			eerror "Failed to start pbs_server"
 			rc=1
 		else
@@ -209,7 +213,7 @@ pkg_config() {
 				&& ${qmgr} "set server scheduling = True" ${PBS_SERVER_NAME} \
 				|| die
 
-			"${ROOT}"/usr/bin/qterm -t quick ${PBS_SERVER_NAME} || rc=1
+			"${EROOT}"/usr/bin/qterm -t quick ${PBS_SERVER_NAME} || rc=1
 
 			# Add the local machine as a node.
 			echo "$(hostname -f) np=1" > "${h}/server_priv/nodes" || die
