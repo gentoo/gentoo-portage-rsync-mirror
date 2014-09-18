@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.42 2014/09/17 22:53:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.43 2014/09/18 16:48:15 vapier Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -169,7 +169,7 @@ setup_flags() {
 	filter-flags -frecord-gcc-switches
 
 	unset CBUILD_OPT CTARGET_OPT
-	if has_multilib_profile ; then
+	if use multilib ; then
 		CTARGET_OPT=$(get_abi_CTARGET)
 		[[ -z ${CTARGET_OPT} ]] && CTARGET_OPT=$(get_abi_CHOST)
 	fi
@@ -310,9 +310,9 @@ foreach_abi() {
 
 	local ret=0
 	local abilist=""
-	if has_multilib_profile ; then
+	if use multilib ; then
 		abilist=$(get_install_abis)
-	elif is_crosscompile || tc-is-cross-compiler ; then
+	else
 		abilist=${DEFAULT_ABI}
 	fi
 	evar_push ABI

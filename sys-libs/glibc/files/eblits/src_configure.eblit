@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_configure.eblit,v 1.1 2014/09/10 18:45:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_configure.eblit,v 1.2 2014/09/18 16:48:15 vapier Exp $
 
 dump_toolchain_settings() {
 	echo
@@ -78,7 +78,7 @@ glibc_do_configure() {
 	# 2. only for the primary ABI on multilib systems
 	# 3. Not a crosscompile
 	if ! is_crosscompile && use selinux ; then
-		if use multilib || has_multilib_profile ; then
+		if use multilib ; then
 			if is_final_abi ; then
 				myconf+=( --with-selinux )
 			else
