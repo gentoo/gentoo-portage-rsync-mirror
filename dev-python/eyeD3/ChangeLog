@@ -1,6 +1,25 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.75 2014/08/21 12:41:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.80 2014/09/18 15:21:16 ssuominen Exp $
+
+  18 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> eyeD3-0.7.5.ebuild:
+  Restore ~ppc/~ppc64 keywording which were removed for no reason at all.
+
+  18 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> -eyeD3-0.6.18-r1.ebuild,
+  -eyeD3-0.6.18-r2.ebuild, -eyeD3-0.6.18.ebuild, -eyeD3-0.7.1.ebuild,
+  -eyeD3-0.7.4-r1.ebuild, -eyeD3-0.7.4.ebuild, -files/eyeD3-build-task.patch:
+  old
+
+  18 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> eyeD3-0.7.4-r2.ebuild:
+  amd64/ppc/ppc64/x86 stable wrt #523136
+
+*eyeD3-0.7.5 (18 Sep 2014)
+
+  18 Sep 2014; Ian Delaney <idella4@gentoo.org> +eyeD3-0.7.5.ebuild:
+  bump
+
+  18 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> eyeD3-0.7.4-r2.ebuild:
+  Keyword ~ppc/~ppc64 wrt #454638
 
   21 Aug 2014; Raúl Porcel <armin76@gentoo.org> eyeD3-0.6.18-r1.ebuild,
   eyeD3-0.6.18-r2.ebuild, eyeD3-0.7.1.ebuild, eyeD3-0.7.4.ebuild,

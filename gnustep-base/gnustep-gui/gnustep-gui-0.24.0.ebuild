@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.24.0.ebuild,v 1.1 2014/01/29 15:12:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.24.0.ebuild,v 1.2 2014/09/18 15:17:30 voyageur Exp $
 
 EAPI=5
 inherit gnustep-base multilib
@@ -20,7 +20,7 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	media-libs/audiofile
 	>=media-libs/tiff-3
 	x11-libs/libXt
-	cups? ( >=net-print/cups-1.1 )
+	cups? ( >=net-print/cups-1.7.4 )
 	gif? ( >=media-libs/giflib-4.1 )
 	jpeg? ( virtual/jpeg )
 	png? ( >=media-libs/libpng-1.2 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.24.ebuild,v 1.1 2014/08/29 05:30:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.24.ebuild,v 1.2 2014/09/18 15:13:57 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -16,9 +16,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
+# TODO: Missing support for >=dev-python/eyeD3-0.7 API
+# test? ( >=dev-python/eyeD3-0.7 )
 DEPEND="
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( dev-python/eyeD3:0 )
 "
 
 python_compile_all() {

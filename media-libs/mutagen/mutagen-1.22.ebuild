@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.22.ebuild,v 1.10 2014/08/10 21:11:10 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.22.ebuild,v 1.11 2014/09/18 15:13:57 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -18,8 +18,9 @@ IUSE="doc test"
 
 DEPEND="
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( dev-python/eyeD3:0 )
 "
+
+RESTRICT="test" # Missing support for >=dev-python/eyeD3-0.7 API
 
 python_compile_all() {
 	use doc && emake -C docs
