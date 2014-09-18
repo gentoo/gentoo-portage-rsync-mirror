@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.use.mask,v 1.8 2014/09/17 13:08:03 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.use.mask,v 1.9 2014/09/18 02:32:09 patrick Exp $
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (23 Nov 2007)
 # Unmask when we get HAL 0.5.10 straightened out
@@ -12,3 +12,4 @@ sys-apps/portage python_targets_pypy
 app-portage/gentoolkit python_targets_pypy
 app-portage/layman python_targets_pypy
 app-admin/webapp-config python_targets_pypy
+app-portage/diffmask python_targets_pypy
