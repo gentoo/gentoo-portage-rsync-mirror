@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.419 2014/09/16 22:25:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.421 2014/09/18 19:04:41 williamh Exp $
+
+  18 Sep 2014; William Hubbs <williamh@gentoo.org> -dhcpcd-6.4.4.ebuild:
+  remove old
+
+*dhcpcd-6.4.4-r1 (18 Sep 2014)
+
+  18 Sep 2014; William Hubbs <williamh@gentoo.org> +dhcpcd-6.4.4-r1.ebuild,
+  +files/dhcpcd-6.4.4-fix-ipv6.patch:
+  import upstream patch to fix ipv6 related segmentation fault for bug #523128
 
 *dhcpcd-6.4.4 (16 Sep 2014)
 

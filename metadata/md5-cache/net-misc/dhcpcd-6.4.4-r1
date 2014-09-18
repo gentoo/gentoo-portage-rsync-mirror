@@ -10,4 +10,4 @@ RDEPEND=udev? ( virtual/udev )
 SLOT=0
 SRC_URI=http://roy.marples.name/downloads/dhcpcd/dhcpcd-6.4.4.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=3a526e366c89c4afb9711240eb680d51
+_md5_=7b067b94477ef765afb763e8ed45ca04

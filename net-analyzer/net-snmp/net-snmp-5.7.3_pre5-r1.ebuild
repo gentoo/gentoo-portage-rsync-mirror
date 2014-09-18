@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.3_pre5-r1.ebuild,v 1.9 2014/09/14 07:51:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.3_pre5-r1.ebuild,v 1.10 2014/09/18 19:04:09 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -41,7 +41,7 @@ COMMON="ssl? ( >=dev-libs/openssl-0.9.6d )
 	)
 	pci? ( sys-apps/pciutils )
 	lm_sensors? ( sys-apps/lm_sensors )
-	netlink? ( dev-libs/libnl:1.1 )
+	netlink? ( dev-libs/libnl:3 )
 	mysql? ( virtual/mysql )"
 
 RDEPEND="${COMMON}

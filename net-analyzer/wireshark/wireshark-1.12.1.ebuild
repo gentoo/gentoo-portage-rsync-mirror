@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.1.ebuild,v 1.4 2014/09/18 13:18:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.1.ebuild,v 1.5 2014/09/18 19:17:33 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user
@@ -126,7 +126,6 @@ src_configure() {
 		$(use_with gtk3) \
 		$(use_with kerberos krb5) \
 		$(use_with lua) \
-		$(use_with netlink libnl=3) \
 		$(use_with pcap dumpcap-group wireshark) \
 		$(use_with pcap) \
 		$(use_with portaudio) \
@@ -134,6 +133,7 @@ src_configure() {
 		$(use_with smi libsmi) \
 		$(use_with ssl gnutls) \
 		$(use_with zlib) \
+		$(usex netlink --with-libnl=3 --without-libnl) \
 		--disable-profile-build \
 		--disable-usr-local \
 		--sysconfdir="${EPREFIX}"/etc/wireshark \

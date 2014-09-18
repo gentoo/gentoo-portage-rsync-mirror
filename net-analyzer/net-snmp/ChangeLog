@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.300 2014/09/14 07:51:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.301 2014/09/18 19:04:09 jer Exp $
+
+  18 Sep 2014; Jeroen Roovers <jer@gentoo.org> net-snmp-5.7.3_pre5-r1.ebuild:
+  Fix dev-libs/libnl SLOT dependency.
 
   14 Sep 2014; Agostino Sarubbo <ago@gentoo.org> net-snmp-5.7.3_pre5-r1.ebuild:
   Stable for ppc, wrt bug #522062
