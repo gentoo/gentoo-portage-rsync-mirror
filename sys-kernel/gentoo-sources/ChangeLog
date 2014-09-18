@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1401 2014/09/09 22:41:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1402 2014/09/18 00:15:19 blueness Exp $
+
+*gentoo-sources-3.16.3 (18 Sep 2014)
+*gentoo-sources-3.14.19 (18 Sep 2014)
+*gentoo-sources-3.10.55 (18 Sep 2014)
+
+  18 Sep 2014; Anthony G. Basile <blueness@gentoo.org>
+  +gentoo-sources-3.10.55.ebuild, +gentoo-sources-3.14.19.ebuild,
+  +gentoo-sources-3.16.3.ebuild:
+  Linux patches 3.10.55 3.14.19 3.16.3
 
 *gentoo-sources-3.14.18 (09 Sep 2014)
 
