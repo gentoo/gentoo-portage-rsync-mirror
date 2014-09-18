@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.48 2014/09/05 08:58:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.49 2014/09/17 23:54:18 jer Exp $
+
+*lft-3.73 (17 Sep 2014)
+
+  17 Sep 2014; Jeroen Roovers <jer@gentoo.org> +lft-3.73.ebuild:
+  Version bump.
 
 *lft-3.72 (05 Sep 2014)
 
