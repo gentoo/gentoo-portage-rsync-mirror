@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.3.ebuild,v 1.3 2014/09/05 18:23:36 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.3.ebuild,v 1.4 2014/09/18 12:45:25 ryao Exp $
 
 EAPI="4"
 
@@ -84,6 +84,7 @@ src_prepare() {
 }
 
 src_configure() {
+	local SPL_PATH="$(basename $(echo "${EROOT}usr/src/spl-"*))"
 	use custom-cflags || strip-flags
 	filter-ldflags -Wl,*
 
@@ -94,18 +95,16 @@ src_configure() {
 		--with-config=kernel
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
+		--with-spl="${EROOT}usr/src/${SPL_PATH}"
+		--with-spl-obj="${EROOT}usr/src/${SPL_PATH}/${KV_FULL}"
 		$(use_enable debug)
 	)
-
-	SPL_PATH=$(basename $(echo "${EROOT}usr/src/spl-"*)) \
-			myeconfargs="${myeconfargs} --with-spl=${EROOT}usr/src/${SPL_PATH} \
-							--with-spl-obj=${EROOT}usr/src/${SPL_PATH}/${KV_FULL}"
 
 	autotools-utils_src_configure
 }
 
 src_install() {
-	autotools-utils_src_install INSTALL_MOD_PATH=${INSTALL_MOD_PATH:-$EROOT}
+	autotools-utils_src_install INSTALL_MOD_PATH="${INSTALL_MOD_PATH:-$EROOT}"
 	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
 }
 
