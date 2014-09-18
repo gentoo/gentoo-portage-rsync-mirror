@@ -2,7 +2,7 @@ DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-python/pexpect[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 DESCRIPTION=Framework for writing simple command-line applications
 EAPI=5
-HOMEPAGE=http://www.alittletooquiet.net/software/sclapp/
+HOMEPAGE=http://forestbond.com/media/docs/sclapp-0.5.3.html
 IUSE=python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://www.alittletooquiet.net/media/release/sclapp-0.5.3.tar.gz
 _eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	06133990e861be0fe60c2b428fd025d9	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=43aa668dd3cd8189e45898af80d669c4
+_md5_=c69995891e5ba85d6fd67657e1ddffb9

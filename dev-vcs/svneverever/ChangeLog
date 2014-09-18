@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/svneverever
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/ChangeLog,v 1.11 2014/07/06 12:52:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/ChangeLog,v 1.12 2014/09/18 16:07:39 sping Exp $
+
+*svneverever-1.2.2-r1 (18 Sep 2014)
+
+  18 Sep 2014; Sebastian Pipping <sping@gentoo.org>
+  +svneverever-1.2.2-r1.ebuild:
+  Migrate to distutils-r1 (bug #469510)
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> svneverever-1.2.2.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-

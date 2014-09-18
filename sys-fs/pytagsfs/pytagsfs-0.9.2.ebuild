@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/pytagsfs/pytagsfs-0.9.2.ebuild,v 1.4 2012/02/26 08:38:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/pytagsfs/pytagsfs-0.9.2.ebuild,v 1.5 2014/09/18 16:16:24 sping Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -14,7 +14,7 @@ inherit distutils
 MY_PV="${PV/_/}"
 MY_P="${PN}-${MY_PV}"
 DESCRIPTION="File system that arranges media files based their tags"
-HOMEPAGE="http://www.pytagsfs.org/"
+HOMEPAGE="https://launchpad.net/pytagsfs"
 SRC_URI="http://www.alittletooquiet.net/media/release/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
