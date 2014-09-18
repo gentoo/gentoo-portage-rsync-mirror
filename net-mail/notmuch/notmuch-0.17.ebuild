@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.17.ebuild,v 1.8 2014/09/01 07:55:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.17.ebuild,v 1.9 2014/09/18 19:47:19 aidecoe Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	doc? ( python? ( dev-python/sphinx[${PYTHON_USEDEP}] ) )
 	test? ( app-misc/dtach || ( >=app-editors/emacs-23[libxml2]
-		>=app-editors/emacs-vcs-23[libxml2] ) sys-devel/gdb )
+		>=app-editors/emacs-vcs-23[libxml2] ) <sys-devel/gdb-7.8 )
 	"
 RDEPEND="${CDEPEND}
 	crypt? ( app-crypt/gnupg )
