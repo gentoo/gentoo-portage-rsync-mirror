@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16043 2014/09/17 23:10:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16044 2014/09/18 06:28:57 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (18 Sep 2014)
+# QA: Avoid slot conflicts blocking world update, bug 523064.
+# Pending unmasking of app-office/libreoffice-4.3*
+>=dev-libs/libixion-0.7
+>=dev-libs/liborcus-0.7
 
 # Michael Orlitzky <mjo@gentoo.org> (16 Sep 2014)
 # Superseded by app-text/dos2unix, use that instead.
