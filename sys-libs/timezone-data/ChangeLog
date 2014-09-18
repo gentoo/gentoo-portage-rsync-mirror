@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.310 2014/09/02 13:53:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.311 2014/09/18 20:45:43 vapier Exp $
+
+  18 Sep 2014; Mike Frysinger <vapier@gentoo.org> timezone-data-2014g.ebuild:
+  Block glibc installs built with USE=vanilla #517694.
 
 *timezone-data-2014g (02 Sep 2014)
 
