@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libxtract
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxtract/ChangeLog,v 1.14 2014/03/07 21:33:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxtract/ChangeLog,v 1.15 2014/09/19 09:27:39 ago Exp $
+
+  19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> libxtract-0.6.6.ebuild:
+  Stable for ppc64, wrt bug #470516
 
   07 Mar 2014; Pacho Ramos <pacho@gentoo.org> libxtract-0.6.6.ebuild:
   amd64 stable, bug 470516

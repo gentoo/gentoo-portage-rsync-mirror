@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.109 2014/08/15 17:20:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.112 2014/09/19 09:29:27 mrueg Exp $
+
+  19 Sep 2014; Manuel Rüger <mrueg@gentoo.org> -rubyforge-2.0.4-r2.ebuild:
+  Cleanup old.
+
+  19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> rubyforge-2.0.4-r3.ebuild:
+  Stable for ppc64, wrt bug #503564
+
+  19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> rubyforge-2.0.4-r3.ebuild:
+  Stable for ppc, wrt bug #503564
 
   15 Aug 2014; Raúl Porcel <armin76@gentoo.org> rubyforge-2.0.4-r3.ebuild:
   sparc stable, bug #490180

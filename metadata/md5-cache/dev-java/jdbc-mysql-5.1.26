@@ -4,11 +4,11 @@ DESCRIPTION=MySQL JDBC driver
 EAPI=5
 HOMEPAGE=http://www.mysql.com/products/connector/j/
 IUSE=c3p0 log4j elibc_FreeBSD source elibc_FreeBSD
-KEYWORDS=amd64 ~ppc ~ppc64 x86
+KEYWORDS=amd64 ~ppc ppc64 x86
 LICENSE=GPL-2-with-MySQL-FLOSS-exception
 RDEPEND=>=virtual/jre-1.6 dev-java/slf4j-api:0 log4j? ( dev-java/log4j:0 ) c3p0? ( dev-java/c3p0:0 ) >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/gnu-classpath-0.98-r1:0.98
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://mysql/Downloads/Connector-J/mysql-connector-java-5.1.26.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=c87d1b9f9da9212d6dd3a4de5c51de27
+_md5_=902e342d236937dcac212fa638126804
