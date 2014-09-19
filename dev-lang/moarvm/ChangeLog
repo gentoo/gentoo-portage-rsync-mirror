@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/moarvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/ChangeLog,v 1.18 2014/08/25 04:30:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/ChangeLog,v 1.19 2014/09/19 05:59:56 patrick Exp $
+
+*moarvm-2014.09 (19 Sep 2014)
+
+  19 Sep 2014; Patrick Lauer <patrick@gentoo.org> +moarvm-2014.09.ebuild:
+  Bump
 
 *moarvm-2014.08 (25 Aug 2014)
 
