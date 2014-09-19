@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.650 2014/09/18 19:17:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.651 2014/09/19 10:30:46 ago Exp $
+
+  19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.12.1.ebuild:
+  Stable for sparc, wrt bug #522968
 
   18 Sep 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.12.1.ebuild:
   Fix configuring without libnl (bug #523154 by Stuart Shelton).

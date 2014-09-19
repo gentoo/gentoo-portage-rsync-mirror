@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.0.ebuild,v 1.11 2014/09/19 10:22:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.1.ebuild,v 1.1 2014/09/19 10:22:13 jlec Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://qwt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV/_/-}/${MY_P}.tar.bz2"
 
 LICENSE="qwt mathml? ( LGPL-2.1 Nokia-Qt-LGPL-Exception-1.1 )"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 SLOT="6"
 IUSE="doc examples mathml static-libs svg"
 
@@ -35,7 +35,7 @@ src_prepare() {
 		QWT_INSTALL_LIBS = "${EPREFIX}/usr/$(get_libdir)"
 		QWT_INSTALL_HEADERS = "${EPREFIX}/usr/include/qwt6"
 		QWT_INSTALL_DOCS = "${EPREFIX}/usr/share/doc/${PF}"
-		QWT_CONFIG += QwtPlot QwtWidgets QwtDesigner
+		QWT_CONFIG += QwtPlot QwtWidgets QwtDesigner QwtPkgConfig
 		VERSION = ${PV/_*}
 		QWT_VERSION = ${PV/_*}
 		QWT_INSTALL_PLUGINS   = "${EPREFIX}/usr/$(get_libdir)/qt4/plugins/designer"

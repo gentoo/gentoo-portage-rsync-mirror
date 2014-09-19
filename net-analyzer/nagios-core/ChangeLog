@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.198 2014/09/14 07:51:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.199 2014/09/19 10:30:51 ago Exp $
+
+  19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> nagios-core-3.5.1.ebuild:
+  Stable for sparc, wrt bug #501200
 
   14 Sep 2014; Agostino Sarubbo <ago@gentoo.org> nagios-core-3.5.1.ebuild:
   Stable for ppc, wrt bug #501200
