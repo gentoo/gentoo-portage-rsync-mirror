@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.3.0.ebuild,v 1.1 2014/08/29 05:12:58 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.3.1.ebuild,v 1.1 2014/09/19 13:21:57 pesa Exp $
 
 EAPI=5
 
@@ -54,6 +54,7 @@ src_prepare() {
 
 src_configure() {
 	local myqmakeargs=(
+		qbs.pro # bug 523218
 		-recursive
 		CONFIG+=disable_rpath
 		QBS_INSTALL_PREFIX="${EPREFIX}/usr"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmlife
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/ChangeLog,v 1.7 2014/08/10 20:07:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/ChangeLog,v 1.8 2014/09/19 13:22:43 voyageur Exp $
+
+  19 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> -wmlife-1.0.0.ebuild,
+  wmlife-1.0.1.ebuild, +files/wmlife-1.0.1-configure.patch:
+  Fix compilation, bug #515916. Remove old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmlife-1.0.0.ebuild,
   wmlife-1.0.1.ebuild:
