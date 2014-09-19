@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.113 2014/08/31 10:51:50 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.114 2014/09/19 16:36:30 jer Exp $
+
+  19 Sep 2014; Jeroen Roovers <jer@gentoo.org> mod_perl-2.0.7.ebuild:
+  Marked ~hppa (bug #512504).
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> mod_perl-2.0.8.ebuild:
   sparc stable wrt bug #512114

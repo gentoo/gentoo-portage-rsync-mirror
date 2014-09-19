@@ -1,10 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.603 2014/09/16 20:50:31 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.605 2014/09/19 16:51:09 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Samuli Suominen <ssuominen@gentoo.org> (19 Sep 2014)
+# No support non-systemd systems with >=sys-power/upower-0.99 and sys-power/pm-utils
+# Mask USE="upower" to prevent forced switch to sys-power/upower-pm-utils
+>=net-im/telepathy-mission-control-5.16 upower
 
 # Michał Górny <mgorny@gentoo.org> (15 Sep 2014)
 # Unsuccessful version bump of net-libs/libzrtpcpp, seems to cause

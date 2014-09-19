@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.7.ebuild,v 1.9 2014/08/05 18:34:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.7.ebuild,v 1.10 2014/09/19 16:50:54 jer Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="http://ekg.chmurka.net/${P/_/}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~mips ppc ~sparc x86"
 
 S="${WORKDIR}/${P/_/}"
 

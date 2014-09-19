@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.222 2014/08/17 09:04:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.223 2014/09/19 16:50:57 jer Exp $
+
+  19 Sep 2014; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask USE=gadu (>=net-libs/libgadu-1.12.0 (bug #519854) requires
+  dev-libs/protobuf-c (bug #519772)).
 
   17 Aug 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Remove USE=javascript mask for www-client/elinks.
