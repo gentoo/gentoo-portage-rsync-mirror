@@ -7,6 +7,7 @@
 		<name>Julian Ospald</name>
 	</maintainer>
 	<use>
+		<flag name="altgamma">Clearskies - X11-based gamma for Linux</flag>
 		<flag name="server">Build server target</flag>
 	</use>
 </pkgmetadata>
