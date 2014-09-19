@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.142 2014/09/19 10:54:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.143 2014/09/19 11:25:11 blueness Exp $
+
+  19 Sep 2014; Anthony G. Basile <blueness@gentoo.org> eudev-9999.ebuild:
+  Userland firmware loading is no longer supported
 
   19 Sep 2014; Anthony G. Basile <blueness@gentoo.org> eudev-1.10-r2.ebuild:
   Stable on ppc/ppc64, bug #522792
