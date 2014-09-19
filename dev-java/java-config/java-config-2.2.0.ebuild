@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.2.0.ebuild,v 1.9 2014/05/23 23:59:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.2.0.ebuild,v 1.11 2014/09/19 09:37:57 ago Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="http://dev.gentoo.org/~sera/distfiles/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 # baselayout-java is added as a dep till it can be added to eclass.

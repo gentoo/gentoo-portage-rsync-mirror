@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.42 2014/09/18 15:00:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.43 2014/09/19 09:32:02 jer Exp $
+
+  19 Sep 2014; Jeroen Roovers <jer@gentoo.org> paver-1.2.2.ebuild:
+  Stable for HPPA (bug #523136).
 
   18 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> paver-1.2.2.ebuild,
   paver-1.2.3.ebuild:
