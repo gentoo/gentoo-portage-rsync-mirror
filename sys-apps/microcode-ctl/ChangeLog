@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/microcode-ctl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.36 2014/01/14 13:58:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.37 2014/09/19 16:01:04 vapier Exp $
+
+*microcode-ctl-1.26 (19 Sep 2014)
+
+  19 Sep 2014; Mike Frysinger <vapier@gentoo.org> +microcode-ctl-1.26.ebuild:
+  Version bump #523130 by Perfect Gentleman.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> microcode-ctl-1.23.ebuild:
   Stable for x86, wrt bug #495926

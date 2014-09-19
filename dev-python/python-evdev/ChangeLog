@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/python-evdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-evdev/ChangeLog,v 1.2 2014/07/02 02:34:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-evdev/ChangeLog,v 1.4 2014/09/19 15:58:42 vapier Exp $
+
+*python-evdev-0.4.5 (19 Sep 2014)
+
+  19 Sep 2014; Mike Frysinger <vapier@gentoo.org> +python-evdev-0.4.5.ebuild:
+  Version bump.
+
+  19 Sep 2014; Mike Frysinger <vapier@gentoo.org> python-evdev-0.4.3.ebuild:
+  Update the HOMEPAGE #523008 by BT.
 
   02 Jul 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml,
   python-evdev-0.4.3.ebuild:
