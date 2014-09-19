@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.596 2014/09/15 08:18:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.597 2014/09/19 10:34:21 ago Exp $
+
+  19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8z_p2.ebuild,
+  openssl-1.0.1i.ebuild:
+  Stable for sparc, wrt bug #519264
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8z_p1-r2.ebuild,
   openssl-1.0.1h-r2.ebuild:

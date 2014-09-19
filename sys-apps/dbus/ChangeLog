@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.442 2014/09/17 12:08:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.444 2014/09/19 10:36:29 ago Exp $
+
+  19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> dbus-1.8.8.ebuild:
+  Stable for ppc64, wrt bug #522982
+
+  19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> dbus-1.8.8.ebuild:
+  Stable for sparc, wrt bug #522982
 
   17 Sep 2014; Agostino Sarubbo <ago@gentoo.org> dbus-1.8.8.ebuild:
   Stable for x86, wrt bug #522982
