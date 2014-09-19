@@ -1,6 +1,18 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.143 2014/09/19 11:25:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.147 2014/09/19 11:56:40 blueness Exp $
+
+  19 Sep 2014; Anthony G. Basile <blueness@gentoo.org> -eudev-1.9-r1.ebuild:
+  Remove older stable version
+
+  19 Sep 2014; Anthony G. Basile <blueness@gentoo.org> eudev-1.5.3-r1.ebuild:
+  Drop all keywords but alpha for 1.5.3-r1
+
+  19 Sep 2014; Anthony G. Basile <blueness@gentoo.org> eudev-1.10-r2.ebuild:
+  Stable on arm, bug #522792
+
+  19 Sep 2014; Anthony G. Basile <blueness@gentoo.org> eudev-9999.ebuild:
+  Hard depend on sys-fs/udev-init-scripts, bug #520224
 
   19 Sep 2014; Anthony G. Basile <blueness@gentoo.org> eudev-9999.ebuild:
   Userland firmware loading is no longer supported
