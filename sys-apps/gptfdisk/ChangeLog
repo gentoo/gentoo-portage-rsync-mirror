@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gptfdisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.53 2014/08/07 13:36:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.54 2014/09/19 08:57:22 ago Exp $
+
+  19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> gptfdisk-0.8.10.ebuild:
+  Stable for ppc64, wrt bug #510150
 
   07 Aug 2014; Jeroen Roovers <jer@gentoo.org> gptfdisk-0.8.10.ebuild:
   Do not inject configuration flags into build files.

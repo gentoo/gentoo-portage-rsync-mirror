@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.512 2014/08/29 20:51:04 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.513 2014/09/19 08:45:55 alonbl Exp $
+
+*gnutls-3.3.8 (19 Sep 2014)
+*gnutls-3.2.18 (19 Sep 2014)
+
+  19 Sep 2014; Alon Bar-Lev <alonbl@gentoo.org> +gnutls-3.2.18.ebuild,
+  +gnutls-3.3.8.ebuild:
+  Version bump, bug#523190, thanks to polynomial-c
 
 *gnutls-3.3.7-r1 (29 Aug 2014)
 

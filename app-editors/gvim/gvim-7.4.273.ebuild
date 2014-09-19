@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.4.273.ebuild,v 1.8 2014/08/27 12:25:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.4.273.ebuild,v 1.9 2014/09/19 08:59:31 ago Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -17,7 +17,7 @@ else
 
 	SRC_URI="ftp://ftp.vim.org/pub/vim/unix/vim-${VIM_VERSION}.tar.bz2
 		http://dev.gentoo.org/~radhermit/vim/${VIM_ORG_PATCHES}"
-	KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 fi
 
 DESCRIPTION="GUI version of the Vim text editor"

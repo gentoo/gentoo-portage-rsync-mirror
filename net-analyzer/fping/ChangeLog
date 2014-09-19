@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.66 2014/07/14 05:45:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.67 2014/09/19 08:57:05 ago Exp $
+
+  19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> fping-3.9.ebuild:
+  Stable for ppc64, wrt bug #507966
 
   14 Jul 2014; Patrick Lauer <patrick@gentoo.org>
   fping-2.4_beta2_p161-r2.ebuild:
