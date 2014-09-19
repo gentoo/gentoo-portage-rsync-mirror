@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/glassfish-deployment-api
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-deployment-api/ChangeLog,v 1.5 2011/03/23 20:04:02 betelgeuse Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-deployment-api/ChangeLog,v 1.6 2014/09/19 06:37:31 mgorny Exp $
+
+  19 Sep 2014; Michał Górny <mgorny@gentoo.org>
+  glassfish-deployment-api-1.2.ebuild:
+  Do not call non-existing default_src_prepare(), bug #523184.
 
   23 Mar 2011; Petteri Räty <betelgeuse@gentoo.org>
   glassfish-deployment-api-1.2.ebuild:
@@ -24,4 +28,3 @@
   +glassfish-deployment-api-1.2.ebuild,
   +files/glassfish-deployment-api-1.2-build.xml.patch, +metadata.xml:
   Add J2EE deployment-api built from Glassfish sources.
-
