@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/biosdevname-0.4.1.ebuild,v 1.5 2014/07/30 19:40:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/biosdevname-0.4.1.ebuild,v 1.6 2014/09/19 06:30:09 mgorny Exp $
 
 EAPI=4
 inherit udev
@@ -20,7 +20,6 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}"
 
 src_prepare() {
-	default
 	sed -i -e 's|/sbin/biosdevname|/usr\0|g' biosdevname.rules.in || die
 	sed -i -e "/RULEDEST/s:/lib/udev:$(get_udevdir):" configure{,.ac} || die
 }
