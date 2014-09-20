@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.267 2014/09/13 01:42:01 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.268 2014/09/20 20:05:06 pesa Exp $
+
+*PyQt4-4.11.2 (20 Sep 2014)
+
+  20 Sep 2014; Davide Pesavento <pesa@gentoo.org> +PyQt4-4.11.2.ebuild,
+  PyQt4-4.11.1.ebuild:
+  Version bump. Silence harmless repoman warning.
 
   13 Sep 2014; Davide Pesavento <pesa@gentoo.org> PyQt4-4.11.1.ebuild:
   Drop deprecated python versions.
