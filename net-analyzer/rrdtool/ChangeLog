@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.276 2014/09/14 07:28:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.277 2014/09/20 21:13:22 ago Exp $
+
+  20 Sep 2014; Agostino Sarubbo <ago@gentoo.org> rrdtool-1.4.8-r1.ebuild:
+  Stable for ppc, wrt bug #517234
 
   14 Sep 2014; Agostino Sarubbo <ago@gentoo.org> rrdtool-1.4.8-r1.ebuild:
   Stable for ppc64, wrt bug #517234

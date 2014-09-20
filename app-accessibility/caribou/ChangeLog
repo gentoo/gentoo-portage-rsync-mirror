@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/caribou
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.32 2014/09/04 09:41:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.33 2014/09/20 21:20:01 eva Exp $
+
+*caribou-0.4.15 (20 Sep 2014)
+
+  20 Sep 2014; Gilles Dartiguelongue <eva@gentoo.org> +caribou-0.4.15.ebuild:
+  Version bump.
 
 *caribou-0.4.14 (04 Sep 2014)
 
