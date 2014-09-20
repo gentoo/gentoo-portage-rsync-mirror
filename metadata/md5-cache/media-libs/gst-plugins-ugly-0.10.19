@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.24:2 >=media-libs/gstreamer-0.10.36:0.10 >=media-libs/gst-plugins-base-0.10.36:0.10 orc? ( >=dev-lang/orc-0.4.11 ) !<media-libs/gst-plugins-bad-0.10.13 >=dev-libs/glib-2.6:2 media-libs/gstreamer:0.10 >=dev-libs/glib-2.6:2 media-libs/gstreamer:0.10
 SLOT=0.10
 SRC_URI=http://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-0.10.19.tar.xz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gst-plugins-ugly	38386d6223cd1a0a60483db9cb177c31	gst-plugins10	120ff9188b4303d014826ecd020530ec	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gst-plugins-ugly	38386d6223cd1a0a60483db9cb177c31	gst-plugins10	120ff9188b4303d014826ecd020530ec	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=5d1b5370fa4452a41e3e1c8b6e7fe44d

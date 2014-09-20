@@ -8,5 +8,5 @@ LICENSE=HKSCS-2001
 RESTRICT=mirror strip binchecks
 SLOT=0
 SRC_URI=http://www.ogcio.gov.hk/en/business/tech_promotion/ccli/terms/doc/mandrake_setup.bin
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=6b8126baa5c4f8500650939ad76ef70f

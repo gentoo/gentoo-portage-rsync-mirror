@@ -11,5 +11,5 @@ REQUIRED_USE=doc? ( python )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/imageworks/OpenColorIO/archive/v1.0.9.tar.gz -> opencolorio-1.0.9.tar.gz http://dev.gentoo.org/~pinkbyte/distfiles/patches/opencolorio-1.0.9-yaml-0.5-compat.patch.bz2
-_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=b3898e8ff5cf4d91800e4d9a18076132

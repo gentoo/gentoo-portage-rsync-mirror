@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.422 2014/09/18 20:41:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.424 2014/09/20 16:44:51 williamh Exp $
+
+  20 Sep 2014; William Hubbs <williamh@gentoo.org> dhcpcd-6.4.3.ebuild,
+  dhcpcd-6.4.5.ebuild, dhcpcd-9999.ebuild:
+  Pass the value of CC as an argument to configure instead of using tc-export.
+
+  20 Sep 2014; William Hubbs <williamh@gentoo.org> dhcpcd-6.4.3.ebuild,
+  dhcpcd-6.4.5.ebuild, dhcpcd-9999.ebuild:
+  make sure we use the correct compiler by running tc-export CC
 
 *dhcpcd-6.4.5 (18 Sep 2014)
 

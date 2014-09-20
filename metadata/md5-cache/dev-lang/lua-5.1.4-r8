@@ -10,5 +10,5 @@ PDEPEND=emacs? ( app-emacs/lua-mode )
 RDEPEND=readline? ( sys-libs/readline )
 SLOT=0
 SRC_URI=http://www.lua.org/ftp/lua-5.1.4.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=32cbebe99b36e8ae379b71c8772831c4

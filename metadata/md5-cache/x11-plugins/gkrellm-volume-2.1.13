@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=alsa? ( media-libs/alsa-lib ) =app-admin/gkrellm-2*
 SLOT=2
 SRC_URI=http://gkrellm.luon.net/files/gkrellm-volume-2.1.13.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	gkrellm-plugin	4599c73f33aed9a9988a7031f60d2ed8	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	gkrellm-plugin	4599c73f33aed9a9988a7031f60d2ed8	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=9f913b558f8d31c61d9912b87a9c6d83

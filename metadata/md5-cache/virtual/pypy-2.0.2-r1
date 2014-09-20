@@ -5,5 +5,5 @@ IUSE=bzip2 ncurses sqlite
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 RDEPEND=|| ( >=dev-python/pypy-2.0.2:0/2.0[bzip2?,ncurses?,sqlite?,ssl(+)] >=dev-python/pypy-bin-2.0.2:0/2.0[sqlite?] )
 SLOT=0/2.0
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=b13c90c2f08b7d974da1b0cea5545dcc

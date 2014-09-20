@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.194 2014/09/14 11:25:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.195 2014/09/20 11:15:54 armin76 Exp $
+
+  20 Sep 2014; Raúl Porcel <armin76@gentoo.org> tigervnc-1.3.1-r1.ebuild,
+  tigervnc-1.3.1-r2.ebuild:
+  Update deps to follow the ones from xorg-server, bug #501000 and #505548
 
 *tigervnc-1.3.1-r2 (14 Sep 2014)
 

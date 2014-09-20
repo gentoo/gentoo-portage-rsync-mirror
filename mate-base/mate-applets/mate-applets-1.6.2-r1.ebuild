@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/mate-applets-1.6.2-r1.ebuild,v 1.5 2014/06/01 09:49:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/mate-applets-1.6.2-r1.ebuild,v 1.6 2014/09/19 17:09:31 ssuominen Exp $
 
 EAPI="5"
 
@@ -35,11 +35,8 @@ RDEPEND="${PYTHON_DEPS}
 	>=mate-base/mate-settings-daemon-1.6:0
 	>=mate-extra/mate-character-map-1.6:0
 	>=sys-apps/dbus-1.1.2:0
-	sys-power/cpupower:0
-	|| (
-		( >=sys-power/upower-0.9.4 <sys-power/upower-0.99 )
-		sys-power/upower-pm-utils
-	)
+	sys-power/cpupower
+	>=sys-power/upower-pm-utils-0.9.23
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.20:2
 	>=x11-libs/libmatewnck-1.6:0

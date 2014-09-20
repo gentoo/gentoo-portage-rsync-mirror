@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=app-text/ghostscript-gpl virtual/latex-base media-libs/netpbm dev-lang/perl gif? ( media-libs/giflib ) png? ( media-libs/libpng )
 SLOT=0
 SRC_URI=http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/latex2html-2008.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=49671f902bba1070f0fa048e17b9d3fe

@@ -10,5 +10,5 @@ RDEPEND=sys-libs/glibc dedicated? ( app-misc/screen ) amd64? ( app-emulation/emu
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://idsoftware/quake3/linux/linuxq3apoint-1.32b-3.x86.run mirror://idsoftware/quake3/quake3-1.32c.zip
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=c3953673d96156b4a94a211f2a59328c

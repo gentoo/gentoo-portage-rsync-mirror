@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=dev-libs/boost:=
 SLOT=0/0.5
 SRC_URI=http://kohei.us/files/ixion/src/libixion-0.5.0.tar.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=c639177f9bac6dd3b654c17168b8f79a

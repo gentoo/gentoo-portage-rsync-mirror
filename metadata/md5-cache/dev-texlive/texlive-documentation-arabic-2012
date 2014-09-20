@@ -9,5 +9,5 @@ LICENSE=GPL-2 public-domain
 RDEPEND=>=dev-texlive/texlive-documentation-base-2012 >=app-text/texlive-core-2012
 SLOT=0
 SRC_URI=mirror://gentoo/texlive-module-lshort-persian-2012.tar.xz mirror://gentoo/texlive-module-collection-documentation-arabic-2012.tar.xz mirror://gentoo/texlive-module-lshort-persian.doc-2012.tar.xz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	d2656dc15155203f2fa36efbef32c282	texlive-module	ac55527a81ebf0b2ba40fe5dbcb5d3be	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	d2656dc15155203f2fa36efbef32c282	texlive-module	ac55527a81ebf0b2ba40fe5dbcb5d3be	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=705c0285b298e2bb1a107e6e1098d723

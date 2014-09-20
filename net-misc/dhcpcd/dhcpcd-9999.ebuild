@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.15 2014/07/14 15:03:54 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.17 2014/09/20 16:44:51 williamh Exp $
 
 EAPI=5
 
@@ -70,6 +70,7 @@ src_configure()
 		${rundir} \
 		$(use_enable ipv6) \
 		${dev} \
+		CC="$(tc-getCC)" \
 		${hooks}
 }
 

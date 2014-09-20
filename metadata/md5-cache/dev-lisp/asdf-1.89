@@ -7,5 +7,5 @@ KEYWORDS=alpha amd64 ia64 ~mips ppc ppc64 s390 sparc x86 ~amd64-linux ~x86-linux
 LICENSE=MIT
 SLOT=0
 SRC_URI=mirror://gentoo/cl-asdf_1.89.orig.tar.gz mirror://gentoo/cl-asdf_1.89-1.diff.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=a1bdbbb3457db30a2f78615033c2499e

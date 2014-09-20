@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.436 2014/07/11 08:21:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.437 2014/09/19 17:09:05 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -489,7 +489,7 @@ epatch() {
 		fi
 
 		# Let people filter things dynamically
-		if [[ -n ${EPATCH_EXCLUDE} ]] ; then
+		if [[ -n ${EPATCH_EXCLUDE}${EPATCH_USER_EXCLUDE} ]] ; then
 			# let people use globs in the exclude
 			eshopts_push -o noglob
 

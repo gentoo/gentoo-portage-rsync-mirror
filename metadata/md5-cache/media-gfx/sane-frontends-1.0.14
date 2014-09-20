@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-gfx/sane-backends gimp? ( media-gfx/gimp )
 SLOT=0
 SRC_URI=ftp://ftp.sane-project.org/pub/sane/sane-frontends-1.0.14/sane-frontends-1.0.14.tar.gz ftp://ftp.sane-project.org/pub/sane/old-versions/sane-frontends-1.0.14/sane-frontends-1.0.14.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=c061c8e88cb5bfa80c81d1b6920e35fa

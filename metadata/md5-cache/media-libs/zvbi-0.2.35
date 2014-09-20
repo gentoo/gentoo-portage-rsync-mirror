@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2
 RDEPEND=>=media-libs/libpng-1.4 sys-libs/zlib nls? ( virtual/libintl ) X? ( x11-libs/libX11 )
 SLOT=0
 SRC_URI=mirror://sourceforge/zapping/zvbi-0.2.35.tar.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=32c1fbc2edea037758d1f09e5d876cba

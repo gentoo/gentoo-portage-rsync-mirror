@@ -9,5 +9,5 @@ LICENSE=GPL-2 CC-BY-SA-2.5
 RDEPEND==dev-lang/python-2* dev-python/pygame dev-python/numpy media-libs/sdl-mixer[vorbis] games-misc/games-envd
 SLOT=0
 SRC_URI=http://endgame-singularity.googlecode.com/files/singularity-0.30c-src.tar.gz music? ( http://endgame-singularity.googlecode.com/files/endgame-singularity-music-006.zip )
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=5cb875366ec4cb35cf3541b916e12bf6

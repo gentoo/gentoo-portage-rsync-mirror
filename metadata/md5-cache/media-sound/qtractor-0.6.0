@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-qt/qtcore-4.2:4 >=dev-qt/qtgui-4.7:4 media-libs/alsa-lib media-libs/libsndfile media-sound/jack-audio-connection-kit media-libs/ladspa-sdk media-libs/lilv media-libs/lv2 media-libs/suil dssi? ( media-libs/dssi ) mad? ( media-libs/libmad ) libsamplerate? ( media-libs/libsamplerate ) osc? ( media-libs/liblo ) rubberband? ( media-libs/rubberband ) vorbis? ( media-libs/libvorbis ) zlib? ( sys-libs/zlib )
 SLOT=0
 SRC_URI=mirror://sourceforge/qtractor/qtractor-0.6.0.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	40136c5fe0002a0d3937e869ae4ee0e2	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	40136c5fe0002a0d3937e869ae4ee0e2	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=9b9d9b91f8708cc6c5b72f99dce03ed1

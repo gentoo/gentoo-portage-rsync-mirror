@@ -8,5 +8,5 @@ LICENSE=glut molscript
 RDEPEND=dev-libs/glib:2 media-libs/freeglut media-libs/giflib >=media-libs/libpng-1.4 sci-libs/gts sys-libs/zlib virtual/glu virtual/jpeg virtual/opengl x11-libs/libX11
 SLOT=0
 SRC_URI=https://sites.google.com/site/timfenn/povscript/molscript-2.1.2pov2.19.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=bf33cb8ea42759c621a233d6ba695ab5

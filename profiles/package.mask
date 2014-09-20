@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16046 2014/09/18 06:39:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16047 2014/09/19 18:14:04 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -206,12 +206,6 @@ games-server/halflife-steam
 # Does not seem actively maintained
 # Masked for removal in 30 days
 media-sound/cowbell
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (24 Aug 2014)
-# Lack of maintainer, webapp with potential security problems
-# (bundles expat, bug 299104), other qa issues (bug 299103)
-# Masked for removal in 30 days
-www-apps/swish-e
 
 # Samuli Suominen <ssuominen@gentoo.org> (23 Aug 2014)
 # Some compile problems with media-libs/openexr >= 2.2.0

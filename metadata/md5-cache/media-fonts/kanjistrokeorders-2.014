@@ -8,5 +8,5 @@ LICENSE=BSD
 RESTRICT=strip binchecks
 SLOT=0
 SRC_URI=http://sites.google.com/site/nihilistorguk/Home/KanjiStrokeOrders_v2.014.zip
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=faa88cf73697bdd3fa70e07ab3f14600

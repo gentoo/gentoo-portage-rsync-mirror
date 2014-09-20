@@ -8,5 +8,5 @@ LICENSE=Emacs
 RDEPEND=>=sys-libs/ncurses-5.0 !dev-java/nailgun canna? ( app-i18n/canna )
 SLOT=0
 SRC_URI=http://tt.sakura.ne.jp/~amura/archives/ng/ng-1.5beta1.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=2191292f445b80a2b39985b874a4d9dc

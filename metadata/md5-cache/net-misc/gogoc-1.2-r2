@@ -9,5 +9,5 @@ LICENSE=MIT GPL-2
 RDEPEND=dev-libs/openssl sys-apps/iproute2 >=sys-apps/net-tools-1.60_p20120127084908
 SLOT=0
 SRC_URI=http://gogo6.com/downloads/gogoc-1_2-RELEASE.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=51977b83eeabd3ff2442f1c7e946ef95

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/otter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/otter/ChangeLog,v 1.2 2014/09/13 09:18:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/otter/ChangeLog,v 1.3 2014/09/19 17:01:43 jer Exp $
+
+  19 Sep 2014; Jeroen Roovers <jer@gentoo.org> otter-0.9.02.ebuild,
+  otter-9999.ebuild:
+  Add dev-qt/qtconcurrent:5 dependency (Helmut Jarausch in bug #499576).
 
 *otter-0.9.02 (13 Sep 2014)
 

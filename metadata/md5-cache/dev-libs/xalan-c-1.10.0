@@ -8,5 +8,5 @@ LICENSE=Apache-2.0
 RDEPEND=>=dev-libs/xerces-c-2.7.0
 SLOT=0
 SRC_URI=mirror://apache/xml/xalan-c/Xalan-C_1_10_0-src.tar.gz http://www.tux.org/pub/net/apache/dist/xml/xalan-c/Xalan-C_1_10_0-src.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=68f9beb8878995a4942b7c4dd366accf

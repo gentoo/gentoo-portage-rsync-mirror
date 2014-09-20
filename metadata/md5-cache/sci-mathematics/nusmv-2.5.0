@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-libs/expat
 SLOT=0
 SRC_URI=mirror://gentoo/NuSMV-2.5.0.tar.gz http://nusmv.irst.itc.it/distrib/NuSMV-2.5.0.tar.gz minisat? ( mirror://gentoo/MiniSat_v1.14_src.zip )
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=6b261f6214495ef9d4e725f31eb2a031

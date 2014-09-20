@@ -10,5 +10,5 @@ RDEPEND=app-text/dvisvgm virtual/tex-base office_implementation_libreoffice? ( |
 REQUIRED_USE=|| ( office_implementation_libreoffice office_implementation_openoffice )
 SLOT=0
 SRC_URI=mirror://sourceforge/texmaths/TexMaths-0.37.oxt
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	office-ext-r1	370fdf6c0ffd835405efe2e8e16d1771	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	office-ext-r1	370fdf6c0ffd835405efe2e8e16d1771	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=41d04fcd25905c4e43b7cd8fbfaa7cd0

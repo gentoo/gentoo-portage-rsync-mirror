@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-session/cinnamon-session-2.2.2.ebuild,v 1.3 2014/07/23 15:17:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-session/cinnamon-session-2.2.2.ebuild,v 1.4 2014/09/19 17:28:55 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -36,7 +36,7 @@ COMMON_DEPEND="
 	virtual/opengl
 	gconf? ( gnome-base/gconf:2 )
 	systemd? ( >=sys-apps/systemd-183 )
-	!systemd? ( || ( <sys-power/upower-0.99 sys-power/upower-pm-utils ) )
+	!systemd? ( >=sys-power/upower-pm-utils-0.9.23 )
 "
 RDEPEND="${COMMON_DEPEND}
 	!systemd? ( sys-auth/consolekit )

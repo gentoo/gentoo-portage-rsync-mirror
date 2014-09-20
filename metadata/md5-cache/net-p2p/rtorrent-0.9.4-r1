@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=~net-libs/libtorrent-0.13.4 >=dev-libs/libsigc++-2.2.2:2 >=net-misc/curl-7.19.1 sys-libs/ncurses selinux? ( sec-policy/selinux-rtorrent ) xmlrpc? ( dev-libs/xmlrpc-c ) daemon? ( app-misc/screen )
 SLOT=0
 SRC_URI=http://libtorrent.rakshasa.no/downloads/rtorrent-0.9.4.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=7dc6b1e9c3b6523cfb94d2197b76478a

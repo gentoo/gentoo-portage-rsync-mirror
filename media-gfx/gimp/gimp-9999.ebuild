@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.53 2014/07/24 18:05:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.54 2014/09/20 00:24:16 sping Exp $
 
-EAPI="3"
-PYTHON_DEPEND="python? 2:2.5"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit git-2 autotools eutils gnome2 fdo-mime multilib python
+inherit autotools eutils gnome2 fdo-mime multilib python-single-r1 git-r3
 
 EGIT_REPO_URI="git://git.gnome.org/gimp"
 
@@ -17,9 +17,14 @@ LICENSE="GPL-3 LGPL-3"
 SLOT="2"
 KEYWORDS=""
 
-IUSE="alsa aalib altivec aqua bzip2 curl dbus debug doc gnome openexr postscript jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
+LANGS="am ar ast az be bg br ca ca@valencia cs csb da de dz el en_CA en_GB eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km kn ko lt lv mk ml ms my nb nds ne nl nn oc pa pl pt pt_BR ro ru rw si sk sl sr sr@latin sv ta te th tr tt uk vi xh yi zh_CN zh_HK zh_TW"
+IUSE="alsa aalib altivec aqua bzip2 curl dbus debug doc exif gnome openexr postscript jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
 
-RDEPEND=">=dev-libs/glib-2.36.0:2
+for lang in ${LANGS}; do
+	IUSE+=" linguas_${lang}"
+done
+
+RDEPEND=">=dev-libs/glib-2.40.0:2
 	>=dev-libs/atk-2.2.0
 	>=x11-libs/gtk+-2.24.10:2
 	>=x11-libs/gdk-pixbuf-2.24.1:2
@@ -28,6 +33,8 @@ RDEPEND=">=dev-libs/glib-2.36.0:2
 	xpm? ( x11-libs/libXpm )
 	>=media-libs/freetype-2.1.7
 	>=media-libs/fontconfig-2.2.0
+	>=media-libs/freetype-2.1.7:2
+	>=media-libs/harfbuzz-0.9.19
 	sys-libs/zlib
 	dev-libs/libxml2
 	dev-libs/libxslt
@@ -36,6 +43,7 @@ RDEPEND=">=dev-libs/glib-2.36.0:2
 	>=media-libs/gegl-0.2.1
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
+	aqua? ( x11-libs/gtk-mac-integration )
 	curl? ( net-misc/curl )
 	dbus? ( dev-libs/dbus-glib )
 	gnome? ( gnome-base/gvfs )
@@ -47,21 +55,26 @@ RDEPEND=">=dev-libs/glib-2.36.0:2
 	mng? ( media-libs/libmng )
 	pdf? ( >=app-text/poppler-0.12.4[cairo] )
 	png? ( >=media-libs/libpng-1.2.37:0 )
-	python?	( >=dev-python/pygtk-2.10.4:2 )
+	python?	(
+		${PYTHON_DEPS}
+		>=dev-python/pygtk-2.10.4:2[${PYTHON_USEDEP}]
+	)
 	tiff? ( >=media-libs/tiff-3.5.7:0 )
-	svg? ( >=gnome-base/librsvg-2.34.2:2 )
+	svg? ( >=gnome-base/librsvg-2.36.0:2 )
 	wmf? ( >=media-libs/libwmf-0.2.8 )
 	x11-libs/libXcursor
 	sys-libs/zlib
 	>=app-arch/xz-utils-5.0.0
+	openexr? ( >=media-libs/openexr-1.6.1 )
+	>=app-text/poppler-data-0.4.7
 	bzip2? ( app-arch/bzip2 )
 	postscript? ( app-text/ghostscript-gpl )
-	udev? ( virtual/libgudev )"
+	udev? ( virtual/libgudev:= )"
 DEPEND="${RDEPEND}
 	sys-apps/findutils
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40.1
-	>=sys-devel/gettext-0.17
+	>=sys-devel/gettext-0.19
 	doc? ( >=dev-util/gtk-doc-1 )
 	>=sys-devel/libtool-2.2
 	>=sys-devel/autoconf-2.54
@@ -70,27 +83,22 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog* HACKING NEWS README*"
 
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
 pkg_setup() {
 	G2CONF="--enable-default-binary \
+		--disable-silent-rules \
 		$(use_with !aqua x) \
 		$(use_with aalib aa) \
 		$(use_with alsa) \
 		$(use_enable altivec) \
-		$(use_with bzip2) \
-		$(use_with curl libcurl) \
-		$(use_with dbus) \
-		$(use_with gnome gvfs) \
 		$(use_with openexr) \
 		$(use_with webkit) \
-		$(use_with jpeg libjpeg) \
 		$(use_with jpeg2k libjasper) \
-		$(use_with exif libexif) \
-		$(use_with lcms lcms lcms2) \
 		$(use_with postscript gs) \
 		$(use_enable mmx) \
 		$(use_with mng libmng) \
 		$(use_with pdf poppler) \
-		$(use_with png libpng) \
 		$(use_enable python) \
 		$(use_enable smp mp) \
 		$(use_enable sse) \
@@ -103,16 +111,13 @@ pkg_setup() {
 		--without-xvfb-run"
 
 	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
+		python-single-r1_pkg_setup
 	fi
 }
 
-src_unpack() {
-	git-2_src_unpack
-}
-
 src_prepare() {
+	sed -i -e 's/== "xquartz"/= "xquartz"/' configure.ac || die #494864
+
 	echo '#!/bin/sh' > py-compile
 	chmod a+x py-compile || die
 	sed -i -e 's:\$srcdir/configure:#:g' autogen.sh
@@ -129,31 +134,37 @@ src_prepare() {
 	gnome2_src_prepare
 }
 
+_clean_up_locales() {
+	einfo "Cleaning up locales..."
+	for lang in ${LANGS}; do
+		use "linguas_${lang}" && {
+			einfo "- keeping ${lang}"
+			continue
+		}
+		rm -Rf "${ED}"/usr/share/locale/"${lang}" || die
+	done
+}
+
 src_install() {
 	gnome2_src_install
 
 	if use python; then
-		python_convert_shebangs -r $(python_get_version) "${ED}"
-		python_need_rebuild
+		python_optimize
 	fi
 
 	# Workaround for bug #321111 to give GIMP the least
 	# precedence on PDF documents by default
 	mv "${ED}"/usr/share/applications/{,zzz-}gimp.desktop || die
 
-	find "${ED}" -name '*.la' -delete || die
+	prune_libtool_files --all
+
+	_clean_up_locales
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-
-	use python && python_mod_optimize /usr/$(get_libdir)/gimp/2.0/python \
-		/usr/$(get_libdir)/gimp/2.0/plug-ins
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-
-	use python && python_mod_cleanup /usr/$(get_libdir)/gimp/2.0/python \
-		/usr/$(get_libdir)/gimp/2.0/plug-ins
 }

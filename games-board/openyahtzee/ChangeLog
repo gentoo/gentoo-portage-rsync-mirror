@@ -1,6 +1,9 @@
 # ChangeLog for games-board/openyahtzee
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.21 2013/01/30 19:02:59 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.22 2014/09/20 06:48:53 mr_bones_ Exp $
+
+  20 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org> openyahtzee-1.9.1.ebuild:
+  EAPI=5; tidy
 
   30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/openyahtzee-1.9-gcc45.patch, -files/openyahtzee-1.9-underlink.patch,

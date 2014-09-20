@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-sound/jack-audio-connection-kit-0.109.2 >=media-libs/alsa-lib-0.9 media-libs/libsamplerate media-libs/libsndfile >=media-libs/phat-0.4 dev-libs/libxml2:2 x11-libs/gtk+:2 gnome-base/libgnomecanvas lash? ( media-sound/lash )
 SLOT=0
 SRC_URI=http://zhevny.com/specimen/files/specimen-0.5.2-rc3.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=f4153408dfa9d009e56d1550488ed67b

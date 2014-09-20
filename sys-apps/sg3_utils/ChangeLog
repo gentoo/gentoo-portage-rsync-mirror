@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.119 2014/08/16 21:14:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.120 2014/09/19 17:52:21 polynomial-c Exp $
+
+*sg3_utils-1.39-r1 (19 Sep 2014)
+
+  19 Sep 2014; Lars Wendler <polynomial-c@gentoo.org>
+  +sg3_utils-1.39-r1.ebuild:
+  Don't install scsi_* scripts twice in /usr/(s)bin (bug #506362).
 
 *sg3_utils-1.39 (16 Aug 2014)
 

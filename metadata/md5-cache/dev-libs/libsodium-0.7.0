@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~mips ~x86 ~amd64-linux ~x86-linux
 LICENSE=ISC
 SLOT=0/13
 SRC_URI=http://download.libsodium.org/libsodium/releases/libsodium-0.7.0.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=f7c4ceb8a335bb8609d932e931ed22e4

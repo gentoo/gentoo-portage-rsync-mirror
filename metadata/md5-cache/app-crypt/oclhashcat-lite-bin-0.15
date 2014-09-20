@@ -10,5 +10,5 @@ RDEPEND=sys-libs/zlib video_cards_nvidia? ( >=x11-drivers/nvidia-drivers-310.32 
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://hashcat.net/files/oclHashcat-lite-0.15.7z
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	8257582809714b788173511f975d767d	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	8257582809714b788173511f975d767d	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=89530c36ef61421d6edb1b6c0ff5f01c

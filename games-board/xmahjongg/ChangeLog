@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xmahjongg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmahjongg/ChangeLog,v 1.13 2010/01/03 11:46:07 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmahjongg/ChangeLog,v 1.14 2014/09/20 06:59:28 mr_bones_ Exp $
+
+  20 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org> xmahjongg-3.7.ebuild:
+  EAPI=5; tidy
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> xmahjongg-3.7.ebuild:
   Transfer Prefix keywords

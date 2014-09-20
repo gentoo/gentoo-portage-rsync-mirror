@@ -8,5 +8,5 @@ LICENSE=GPL-2 LPPL-1.3c FDL-1.2
 RDEPEND=dev-texlive/texlive-latexrecommended >=dev-tex/xcolor-2.11 virtual/latex-base
 SLOT=0
 SRC_URI=mirror://sourceforge/pgf/pgf_3.0.0.tds.zip
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=0b009f0b23ddefc79e07483b59b856d1

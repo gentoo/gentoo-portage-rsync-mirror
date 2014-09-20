@@ -1,6 +1,27 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.573 2014/09/16 13:25:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.577 2014/09/19 22:19:57 jer Exp $
+
+  19 Sep 2014; Jeroen Roovers <jer@gentoo.org> files/nvidia-persistenced.conf:
+  Remove username.
+
+*nvidia-drivers-343.22-r2 (19 Sep 2014)
+
+  19 Sep 2014; Jeroen Roovers <jer@gentoo.org>
+  -nvidia-drivers-343.22-r1.ebuild, +nvidia-drivers-343.22-r2.ebuild,
+  +files/nvidia-persistenced.conf, files/nvidia-persistenced.init:
+  Add /etc/conf.d/nvidia-persistenced too.
+
+*nvidia-drivers-343.22-r1 (19 Sep 2014)
+
+  19 Sep 2014; Jeroen Roovers <jer@gentoo.org>
+  +nvidia-drivers-343.22-r1.ebuild, +files/nvidia-persistenced.init:
+  Add /etc/init.d/nvidia-persistenced (bug #523254 by Marius Brehler).
+
+*nvidia-drivers-343.22 (19 Sep 2014)
+
+  19 Sep 2014; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-343.22.ebuild:
+  Version bump (bug #523252 by Marius Brehler).
 
   16 Sep 2014; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-340.24.ebuild:
   Old.

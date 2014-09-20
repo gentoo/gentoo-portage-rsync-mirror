@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=>=dev-libs/libxml2-2.4 >=net-misc/curl-7.10 >=net-analyzer/snort-2.0
 SLOT=0
 SRC_URI=mirror://sourceforge/quidscor/quidscor-1.2.48-src.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=40d3050a2c51dc73d5c55fc36001604b

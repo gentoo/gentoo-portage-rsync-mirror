@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-libs/newt ppp? ( net-dialup/ppp ) >=net-misc/dahdi-2.5.0 !net-misc/zaptel >=sys-kernel/linux-headers-2.6.35 virtual/libusb:0
 SLOT=0
 SRC_URI=http://downloads.asterisk.org/pub/telephony/dahdi-tools/releases/dahdi-tools-2.8.0.tar.gz mirror://gentoo/gentoo-dahdi-tools-patchset-0.4.tar.bz2
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=bf2237e2478b6ecab55ac9aaeb6e0c2a

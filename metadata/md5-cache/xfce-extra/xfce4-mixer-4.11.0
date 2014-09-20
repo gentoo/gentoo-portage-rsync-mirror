@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.24 dev-libs/libunique:1 media-libs/gst-plugins-base:0.10 >=x11-libs/gtk+-2.20:2 >=xfce-base/libxfce4ui-4.10 >=xfce-base/libxfce4util-4.10 >=xfce-base/xfce4-panel-4.10 >=xfce-base/xfconf-4.10 keybinder? ( dev-libs/keybinder:0 ) alsa? ( media-plugins/gst-plugins-alsa:0.10 ) oss? ( media-plugins/gst-plugins-oss:0.10 ) !alsa? ( !oss? ( media-plugins/gst-plugins-meta:0.10 ) )
 SLOT=0
 SRC_URI=mirror://xfce/src/apps/xfce4-mixer/4.11/xfce4-mixer-4.11.0.tar.bz2
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	xfconf	20671cc91311ca7e3446047c1175cf16
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	xfconf	20671cc91311ca7e3446047c1175cf16
 _md5_=3595065eff27ff16e184419aa5b6a59a

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.163 2014/08/10 20:48:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.164 2014/09/20 11:17:53 armin76 Exp $
+
+  20 Sep 2014; Raúl Porcel <armin76@gentoo.org> metadata.xml:
+  Update server USE-flag description, bug #501758
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tightvnc-1.3.10-r1.ebuild,
   tightvnc-1.3.10-r2.ebuild:

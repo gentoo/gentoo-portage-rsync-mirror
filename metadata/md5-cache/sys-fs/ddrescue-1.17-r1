@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~amd64-linux
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://gnu/ddrescue/ddrescue-1.17.tar.lz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=e38d5026e458345e434967a1f70c664a

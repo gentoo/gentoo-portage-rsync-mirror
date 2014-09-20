@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.4.1.ebuild,v 1.7 2014/05/15 16:55:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.4.1.ebuild,v 1.8 2014/09/19 19:04:20 mr_bones_ Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils versionator games
 
 MAJOR_PV=$(get_version_component_range 1-2)
@@ -36,12 +36,12 @@ src_prepare() {
 	# fix paths
 	sed -i \
 		-e '/libpath/s#datarootdir#datadir#' \
+		-e '/X_PRE_LIBS/s:-lSM -lICE::' \
 		configure || die
 
 	sed -i \
 		-e "/^.SILENT/d" \
-		mk/buildsys.mk.in \
-		|| dir "sed failed"
+		mk/buildsys.mk.in || die
 }
 
 src_configure() {

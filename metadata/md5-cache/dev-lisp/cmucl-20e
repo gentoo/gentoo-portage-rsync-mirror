@@ -9,5 +9,5 @@ LICENSE=public-domain
 RDEPEND=>=dev-lisp/asdf-2.33-r3:= x11-libs/motif:0
 SLOT=0
 SRC_URI=http://common-lisp.net/project/cmucl/downloads/release/20e/cmucl-src-20e.tar.bz2 http://common-lisp.net/project/cmucl/downloads/release/20e/cmucl-20e-x86-linux.tar.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=683a2d93a8b423905fbc6f63beef424d

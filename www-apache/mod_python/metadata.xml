@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
+	<maintainer>
+		<email>xmw@gentoo.org</email>
+		<name>Michael Weber</name>
+	</maintainer>
 	<longdescription>
 		Mod_python is an Apache module that embeds the Python interpreter within
 		the server. With mod_python you can write web-based applications in Python

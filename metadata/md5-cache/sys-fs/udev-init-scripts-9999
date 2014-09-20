@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=virtual/udev-180 !<sys-fs/udev-186 !<sys-apps/openrc-0.13
 RESTRICT=test
 SLOT=0
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=14e5311167d542d4d5969643c52764ee

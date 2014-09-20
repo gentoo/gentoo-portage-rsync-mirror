@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/php[pdo,postgres,xml] doc? ( dev-php/PEAR-PhpDocumentor ) =dev-lang/php-5* dev-lang/php
 SLOT=0
 SRC_URI=http://debian.mcmillan.net.nz/packages/awl/awl-0.52.tar.gz
-_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-lib-r1	d7318e400ae0d443613d286980877fd4	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-lib-r1	d7318e400ae0d443613d286980877fd4	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=3f00df2295feff22b0c75494883529cc

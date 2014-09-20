@@ -10,5 +10,5 @@ RDEPEND=sys-libs/glibc games-fps/ut2004-data games-fps/ut2004-bonuspack-ece game
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=mirror://3dgamers/unrealtourn2k4/ut2004-lnxpatch3369-2.tar.bz2 http://speculum.twistedgamer.com/pub/0day.icculus.org/ut2004/ut2004-lnxpatch3369-2.tar.bz2 http://treefort.icculus.org/ut2004/ut2004-lnxpatch3369-2.tar.bz2 http://sonic-lux.net/data/mirror/ut2004/ut2004-lnxpatch3369-2.tar.bz2 mirror://gentoo/ut2004-v3369-3-linux-dedicated.7z
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=dab6d492e11e0fef42478fd4e91e3f1c

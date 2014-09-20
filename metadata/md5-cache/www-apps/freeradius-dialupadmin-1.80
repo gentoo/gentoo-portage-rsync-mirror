@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/php dev-perl/DateManip >=net-dialup/freeradius-2.1.1 >=app-admin/webapp-config-1.50.15
 SLOT=1.80
 SRC_URI=ftp://ftp.freeradius.org/pub/radius/freeradius-server-2.1.1.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=ff129a107faad906347fd2b9c22279bd

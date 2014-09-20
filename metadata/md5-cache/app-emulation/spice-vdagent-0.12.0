@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=x11-libs/libXfixes x11-libs/libXrandr x11-libs/libX11 x11-libs/libXinerama >=x11-libs/libpciaccess-0.10 >=app-emulation/spice-protocol-0.10.1 consolekit? ( sys-auth/consolekit sys-apps/dbus ) selinux? ( sec-policy/selinux-vdagent )
 SLOT=0
 SRC_URI=http://spice-space.org/download/releases/spice-vdagent-0.12.0.tar.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=63c2fa0faff18585b4a6c7f192d4efe0

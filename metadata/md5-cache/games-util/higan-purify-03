@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-games/higan-ananke x11-libs/libX11 !qt4? ( x11-libs/gtk+:2 ) qt4? ( >=dev-qt/qtgui-4.5:4 )
 SLOT=0
 SRC_URI=http://higan.googlecode.com/files/purify_v03-source.tar.xz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=3569ac086ed4d83e0dd6e7d5c694c13c

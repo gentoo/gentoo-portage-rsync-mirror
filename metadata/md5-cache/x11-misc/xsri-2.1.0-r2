@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2
 SLOT=0
 SRC_URI=http://download.fedoraproject.org/pub/fedora/linux/releases/15/Everything/source/SRPMS/xsri-2.1.0-17.fc12.src.rpm
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=5801c8851a788ea6dcc6ec9191daeab1

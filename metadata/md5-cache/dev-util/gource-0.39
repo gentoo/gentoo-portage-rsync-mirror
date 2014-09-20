@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/boost-1.46:=[threads(+)] >=media-libs/glew-1.5 >=media-libs/libpng-1.2 >=media-libs/libsdl-1.2.10[video,opengl,X] >=media-libs/sdl-image-1.2[jpeg,png] dev-libs/libpcre:3 dev-libs/tinyxml media-fonts/freefont media-libs/freetype:2 media-libs/mesa virtual/glu virtual/jpeg
 SLOT=0
 SRC_URI=http://gource.googlecode.com/files/gource-0.39.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=c822f27c4143cac8f8c0fb6ce1a0f3d0

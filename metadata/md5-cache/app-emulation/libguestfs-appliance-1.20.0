@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2 LGPL-2
 SLOT=0
 SRC_URI=http://libguestfs.org/download/binaries/appliance/appliance-1.20.0.tar.xz
-_eclasses_=check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=04dae65dbfb3e3a1e1577d498d4ed1e5

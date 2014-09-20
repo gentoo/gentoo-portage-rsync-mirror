@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/jpeg media-libs/libpng x11-libs/libXpm x11-libs/libXrandr x11-libs/libXrender truetype? ( x11-libs/libXft ) xinerama? ( x11-libs/libXinerama )
 SLOT=0
 SRC_URI=http://pekwm.org/projects/pekwm/files/pekwm-0.1.16.tar.bz2 mirror://gentoo/pekwm-themes.tar.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=31064175b547a3b7ce69225dd41ed64e

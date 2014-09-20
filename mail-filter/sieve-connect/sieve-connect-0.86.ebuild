@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sieve-connect/sieve-connect-0.86.ebuild,v 1.3 2013/09/30 17:14:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sieve-connect/sieve-connect-0.86.ebuild,v 1.4 2014/09/19 22:00:47 ago Exp $
 
 EAPI=5
 
 DESCRIPTION="Sieve Command Line Interface"
-HOMEPAGE="http://people.spodhuis.org/phil.pennock/software"
+HOMEPAGE="http://people.spodhuis.org/phil.pennock/software/"
 SRC_URI="https://github.com/syscomet/sieve-connect/releases/download/v${PV}/${P}.tar.bz2"
 
 LICENSE="BSD"

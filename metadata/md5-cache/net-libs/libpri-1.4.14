@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~sparc ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://downloads.asterisk.org/pub/telephony/libpri/releases/libpri-1.4.14.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=f807c6f7ffeb211fc67256398be82dec

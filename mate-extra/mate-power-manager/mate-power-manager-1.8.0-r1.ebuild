@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-power-manager/mate-power-manager-1.8.0-r1.ebuild,v 1.6 2014/07/02 09:47:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-power-manager/mate-power-manager-1.8.0-r1.ebuild,v 1.7 2014/09/19 17:04:21 ssuominen Exp $
 
 EAPI="5"
 
@@ -28,7 +28,7 @@ COMMON_DEPEND="app-text/rarian:0
 	>=dev-libs/glib-2.13:2
 	>=media-libs/libcanberra-0.10:0[gtk]
 	>=sys-apps/dbus-1:0
-	|| ( >=sys-power/upower-0.9.1 sys-power/upower-pm-utils	)
+	|| ( >=sys-power/upower-0.9.23 >=sys-power/upower-pm-utils-0.9.23 )
 	>=x11-apps/xrandr-1.2:0
 	>=x11-libs/cairo-1:0
 	>=x11-libs/gdk-pixbuf-2.11:2
@@ -55,7 +55,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext:*
 	virtual/pkgconfig:*
 	man? ( app-text/docbook-sgml-utils:0
-			>=app-text/docbook-sgml-dtd-4.3 )"
+		>=app-text/docbook-sgml-dtd-4.3 )"
 
 src_prepare() {
 	# Upstreamed patches
