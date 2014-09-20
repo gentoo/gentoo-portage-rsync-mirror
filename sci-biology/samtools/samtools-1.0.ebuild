@@ -1,15 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.19-r2.ebuild,v 1.2 2014/09/20 19:39:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-1.0.ebuild,v 1.1 2014/09/20 19:39:21 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils multilib python-r1 toolchain-funcs
 
 DESCRIPTION="Utilities for SAM (Sequence Alignment/Map), a format for large nucleotide sequence alignments"
-HOMEPAGE="http://samtools.sourceforge.net/"
+HOMEPAGE="http://www.htslib.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="MIT"
@@ -20,39 +20,46 @@ IUSE="examples"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 CDEPEND="sys-libs/ncurses"
+
 RDEPEND="${CDEPEND}
 	dev-lang/lua
-	dev-lang/perl"
+	dev-lang/perl
+	sci-libs/htslib"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-buildsystem.patch
+	find htslib-1.0 -delete || die
 
 	sed -i 's~/software/bin/python~/usr/bin/env python~' "${S}"/misc/varfilter.py || die
 
 	tc-export CC AR
+
+	sed \
+		-e '/htslib.mk/d' \
+		-i Makefile || die
+
 }
 
 src_compile() {
-	local _ncurses="$($(tc-getPKG_CONFIG) --libs ncurses)"
-	emake dylib LIBCURSES="${_ncurses}"
-	emake LIBCURSES="${_ncurses}"
+	local mymakeargs=(
+		LIBCURSES="$($(tc-getPKG_CONFIG) --libs ncurses)"
+		CC="$(tc-getCC)"
+		LDFLAGS="${LDFLAGS}"
+		CFLAGS="${CFLAGS}"
+		HTSDIR="${EPREFIX}/usr/include"
+		HTSLIB=$($(tc-getPKG_CONFIG) --libs htslib)
+		)
+	emake "${mymakeargs[@]}"
 }
 
 src_install() {
-	dobin samtools $(find bcftools misc -type f -executable)
+	dobin samtools $(find misc -type f -executable)
 
 	python_replicate_script "${ED}"/usr/bin/varfilter.py
 
-	dolib.so libbam$(get_libname 1)
-	dosym libbam$(get_libname 1) /usr/$(get_libdir)/libbam$(get_libname)
-
-	insinto /usr/include/bam
-	doins *.h
-
 	doman ${PN}.1
-	dodoc AUTHORS NEWS
+	dodoc AUTHORS NEWS README
 
 	if use examples; then
 		insinto /usr/share/${PN}
