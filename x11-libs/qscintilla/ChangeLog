@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.102 2014/09/13 01:07:02 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.103 2014/09/21 13:39:23 pesa Exp $
+
+*qscintilla-2.8.4-r1 (21 Sep 2014)
+
+  21 Sep 2014; Davide Pesavento <pesa@gentoo.org> +qscintilla-2.8.4-r1.ebuild,
+  -files/qscintilla-2.8.4-designer.patch, -qscintilla-2.8.4.ebuild:
+  More complete fix for bug #466120. Thanks to Arfrever in comment #6.
 
 *qscintilla-2.8.4 (13 Sep 2014)
 

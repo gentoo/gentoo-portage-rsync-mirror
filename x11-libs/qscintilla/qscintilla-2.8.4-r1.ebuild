@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.8.4.ebuild,v 1.1 2014/09/13 01:07:02 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.8.4-r1.ebuild,v 1.1 2014/09/21 13:39:23 pesa Exp $
 
 EAPI=5
 
-inherit eutils qmake-utils
+inherit flag-o-matic qmake-utils
 
 MY_P=QScintilla-gpl-${PV}
 
@@ -26,10 +26,6 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=(
-	"${FILESDIR}/${PN}-2.8.4-designer.patch"
-)
-
 src_unpack() {
 	default
 
@@ -47,16 +43,16 @@ src_unpack() {
 	fi
 }
 
-src_prepare() {
-	[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
-}
-
 src_configure() {
 	pushd Qt4Qt5 > /dev/null
 	eqmake4
 	popd > /dev/null
 
 	if use designer; then
+		# prevent building against system version (bug 466120)
+		append-cxxflags -I../Qt4Qt5
+		append-ldflags -L../Qt4Qt5
+
 		pushd designer-Qt4Qt5 > /dev/null
 		eqmake4
 		popd > /dev/null
