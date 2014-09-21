@@ -1,0 +1,10 @@
+# ChangeLog for games-rpg/wasteland2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wasteland2/ChangeLog,v 1.1 2014/09/21 21:40:17 hasufell Exp $
+
+*wasteland2-1.0.0.4 (21 Sep 2014)
+
+  21 Sep 2014; Julian Ospald <hasufell@gentoo.org> +wasteland2-1.0.0.4.ebuild,
+  +metadata.xml:
+  initial import
+
