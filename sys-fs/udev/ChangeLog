@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1094 2014/09/21 10:28:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1095 2014/09/21 10:57:25 ssuominen Exp $
+
+  21 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> -udev-212-r1.ebuild,
+  -udev-214.ebuild, -udev-215-r1.ebuild, -udev-215.ebuild:
+  old
 
   21 Sep 2014; Agostino Sarubbo <ago@gentoo.org> udev-216.ebuild:
   Stable for sparc, wrt bug #522778

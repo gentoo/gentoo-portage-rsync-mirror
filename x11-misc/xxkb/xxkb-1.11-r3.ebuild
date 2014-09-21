@@ -1,13 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.11-r3.ebuild,v 1.1 2014/09/18 18:40:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.11-r3.ebuild,v 1.2 2014/09/21 10:53:26 jer Exp $
 
 EAPI=5
 inherit eutils multilib
 
 DESCRIPTION="eXtended XKB - assign different keymaps to different windows"
 HOMEPAGE="http://sourceforge.net/projects/xxkb/"
-SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
+SRC_URI="
+	mirror://sourceforge/${PN}/${P}-src.tar.gz
+	svg? ( https://dev.gentoo.org/~jer/${PN}-flags.tar.bz2 )
+"
 
 LICENSE="Artistic"
 SLOT="0"
@@ -34,9 +37,11 @@ DEPEND="
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-	mkdir flags
-	epatch "${FILESDIR}"/svg-flags.patch
-	use svg && epatch "${FILESDIR}"/svg-appdefaults.patch
+	if use svg; then
+		mv "${WORKDIR}"/flags . || die
+		epatch "${FILESDIR}"/svg-flags.patch
+	fi
+
 	epatch "${FILESDIR}"/missing_init.patch
 }
 
