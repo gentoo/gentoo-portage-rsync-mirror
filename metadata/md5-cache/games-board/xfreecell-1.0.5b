@@ -1,6 +1,7 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DEPEND=x11-libs/libXext x11-proto/xextproto
 DESCRIPTION=A freecell game for X
+EAPI=5
 HOMEPAGE=http://www2.giganet.net/~nakayama/
 KEYWORDS=amd64 ~ppc ppc64 x86
 LICENSE=HPND
@@ -8,4 +9,4 @@ RDEPEND=x11-libs/libXext games-misc/games-envd
 SLOT=0
 SRC_URI=http://www2.giganet.net/~nakayama/xfreecell-1.0.5b.tgz http://www2.giganet.net/~nakayama/MSNumbers.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=075f80064816311313282dfb8f7a55c4
+_md5_=5c2c6d3184497f02fc964b08d5f65193

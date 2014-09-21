@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.203 2014/08/19 11:19:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.204 2014/09/21 05:14:12 prometheanfire Exp $
+
+*puppet-3.7.1 (21 Sep 2014)
+
+  21 Sep 2014; Matthew Thode <prometheanfire@gentoo.org> +puppet-3.7.1.ebuild:
+  updating puppet to 3.7.1
 
   19 Aug 2014; Raúl Porcel <armin76@gentoo.org> puppet-3.6.2.ebuild:
   Add ~sparc wrt #513322
