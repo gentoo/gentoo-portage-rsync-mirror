@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.2.2.ebuild,v 1.3 2014/08/27 12:14:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.2.2.ebuild,v 1.4 2014/09/20 23:15:39 pesa Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
-inherit multilib cmake-utils python-r1
+inherit cmake-utils multilib python-r1
 
 DESCRIPTION="A tool for creating Python bindings for C++ libraries"
 HOMEPAGE="http://qt-project.org/wiki/PySide"
@@ -18,20 +18,21 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
-	>=dev-libs/libxml2-2.6.32
-	>=dev-libs/libxslt-1.1.19
-	>=dev-qt/qtcore-4.7.0:4
-	>=dev-qt/qtxmlpatterns-4.7.0:4
-	!dev-python/apiextractor
-	!dev-python/generatorrunner
+	dev-libs/libxml2
+	dev-libs/libxslt
+	dev-qt/qtcore:4
+	dev-qt/qtxmlpatterns:4
 "
 DEPEND="${RDEPEND}
 	test? (
-		>=dev-qt/qtgui-4.7.0:4
-		>=dev-qt/qttest-4.7.0:4
+		dev-qt/qtgui:4
+		dev-qt/qttest:4
 	)"
 
 DOCS=( AUTHORS ChangeLog )
+PATCHES=(
+	"${FILESDIR}/${PV}-Fix-tests-with-Python-3.patch"
+)
 
 src_prepare() {
 	# Fix inconsistent naming of libshiboken.so and ShibokenConfig.cmake,
@@ -43,6 +44,8 @@ src_prepare() {
 		cp "${FILESDIR}"/rpath.cmake . || die
 		sed -i -e '1iinclude(rpath.cmake)' CMakeLists.txt || die
 	fi
+
+	cmake-utils_src_prepare
 }
 
 src_configure() {
@@ -69,7 +72,7 @@ src_configure() {
 }
 
 src_compile() {
-	python_foreach_impl cmake-utils_src_make
+	python_foreach_impl cmake-utils_src_compile
 }
 
 src_test() {

@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.81 2014/09/15 15:31:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.82 2014/09/20 23:09:14 polynomial-c Exp $
+
+*xz-utils-5.0.7 (20 Sep 2014)
+
+  20 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> -xz-utils-5.0.6.ebuild,
+  +xz-utils-5.0.7.ebuild:
+  Version bump. Removed old.
 
 *xz-utils-5.1.4_beta (15 Sep 2014)
 *xz-utils-5.0.6 (15 Sep 2014)

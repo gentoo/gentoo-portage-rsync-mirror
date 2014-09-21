@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/shiboken
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.53 2014/08/27 12:14:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.54 2014/09/20 23:15:39 pesa Exp $
+
+  20 Sep 2014; Davide Pesavento <pesa@gentoo.org>
+  +files/1.2.2-Fix-tests-with-Python-3.patch, shiboken-1.2.2.ebuild:
+  Fix tests with python3, thanks to kensington for the patch (bug 502238). Drop
+  deprecated python targets. Simplify deps.
 
   27 Aug 2014; Anthony G. Basile <blueness@gentoo.org> shiboken-1.1.2-r1.ebuild,
   shiboken-1.2.1-r1.ebuild, shiboken-1.2.2.ebuild:
