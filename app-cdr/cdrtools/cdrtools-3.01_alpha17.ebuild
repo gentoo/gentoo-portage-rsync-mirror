@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha17.ebuild,v 1.17 2014/09/21 01:54:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha17.ebuild,v 1.18 2014/09/21 06:54:52 patrick Exp $
 
 EAPI=5
 
@@ -89,9 +89,9 @@ src_prepare() {
 		-e "s:bin:root:g" \
 		-e '/^DEFUMASK/s,002,022,g' \
 		Defaults.${os} || die "sed Schily make setup"
-    # re DEFUMASK above:
-    # bug 486680: grsec TPE will block the exec if the directory is
-    # group-writable. This is painful with cdrtools, because it makes a bunch of
+	# re DEFUMASK above:
+	# bug 486680: grsec TPE will block the exec if the directory is
+	# group-writable. This is painful with cdrtools, because it makes a bunch of
 	# group-writable directories during build. Change the umask on their
 	# creation to prevent this.
 }
