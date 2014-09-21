@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/prawn-table-0.1.0.ebuild,v 1.5 2014/08/19 12:16:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/prawn-table-0.1.2.ebuild,v 1.1 2014/09/21 16:23:39 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -26,6 +26,6 @@ ruby_add_bdepend "test? ( dev-ruby/mocha
 all_ruby_prepare() {
 	sed -i -e "/[Bb]undler/s/^/#/" spec/spec_helper.rb || die
 	# Remove failing test
-	# See https://github.com/prawnpdf/prawn/issues/612 
-	sed -i -e "/should not increase column width when rendering a subtable/,+17 s/^/#/" spec/table_spec.rb || die
+	# See https://github.com/prawnpdf/prawn-table/issues/10 
+	sed -i -e "/Prints table on one page when using subtable with colspan > 1/,+24 s/^/#/" spec/table_spec.rb || die
 }
