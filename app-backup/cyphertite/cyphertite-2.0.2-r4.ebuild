@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/cyphertite-2.0.2-r3.ebuild,v 1.1 2014/07/19 13:09:15 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/cyphertite-2.0.2-r4.ebuild,v 1.1 2014/09/21 20:04:39 grknight Exp $
 
 EAPI=5
 
@@ -45,7 +45,7 @@ src_install() {
 
 	# Fix up broken man symlinks
 	rm "${D}"usr/share/man/man1/ct*.1 || die
-	dosym /usr/share/man/man1/cyphertite.1.bz2 /usr/share/man/man1/ct.1.bz2
-	dosym /usr/share/man/man1/cyphertitectl.1.bz2 /usr/share/man/man1/ctctl.1.bz2
-	dosym /usr/share/man/man1/cyphertitefb.1.bz2 /usr/share/man/man1/ctfb.1.bz2
+	newman "${D}"usr/share/man/man1/cyphertite.1 ct.1
+	newman "${D}"usr/share/man/man1/cyphertitectl.1 ctctl.1
+	newman "${D}"usr/share/man/man1/cyphertitefb.1 ctfb.1
 }

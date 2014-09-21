@@ -1,6 +1,13 @@
 # ChangeLog for app-backup/cyphertite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/ChangeLog,v 1.5 2014/07/19 13:09:15 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/ChangeLog,v 1.6 2014/09/21 20:04:40 grknight Exp $
+
+*cyphertite-2.0.2-r4 (21 Sep 2014)
+
+  21 Sep 2014; Brian Evans <grknight@gentoo.org> +cyphertite-2.0.2-r4.ebuild,
+  -cyphertite-2.0.2-r3.ebuild:
+  Revision bump to fix man page installations when PORTAGE_COMPRESS is not
+  bzip2. Thanks to jlec for pointing this out
 
 *cyphertite-2.0.2-r3 (19 Jul 2014)
 

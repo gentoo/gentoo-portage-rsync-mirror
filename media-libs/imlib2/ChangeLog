@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.136 2014/09/15 08:21:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.137 2014/09/21 20:06:24 maekke Exp $
+
+  21 Sep 2014; Markus Meier <maekke@gentoo.org> imlib2-1.4.6-r2.ebuild:
+  arm stable, bug #522270
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> imlib2-1.4.6-r2.ebuild:
   Stable for sparc, wrt bug #512012
