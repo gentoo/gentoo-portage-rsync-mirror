@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/duke3d-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/ChangeLog,v 1.12 2014/06/01 20:23:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/ChangeLog,v 1.13 2014/09/21 11:42:42 hasufell Exp $
+
+*duke3d-data-1.0-r2 (21 Sep 2014)
+
+  21 Sep 2014; Julian Ospald <hasufell@gentoo.org> +duke3d-data-1.0-r2.ebuild:
+  update for new gog linux tarball
 
   01 Jun 2014; Julian Ospald <hasufell@gentoo.org> duke3d-data-1.0.ebuild:
   stable
