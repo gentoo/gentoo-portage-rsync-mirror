@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.343 2014/08/03 19:12:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.344 2014/09/21 01:54:22 robbat2 Exp $
+
+  21 Sep 2014; Robin H. Johnson <robbat2@gentoo.org>
+  cdrtools-3.01_alpha17.ebuild, cdrtools-3.01_alpha24.ebuild:
+  Bug #486680: do not create group-writable directories during build that would
+  fail under grsec TPE.
 
   03 Aug 2014;  <tgall@gentoo.org> cdrtools-3.01_alpha24.ebuild:
   arm64, initial support
