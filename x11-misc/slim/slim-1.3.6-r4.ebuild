@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.6-r4.ebuild,v 1.2 2014/02/28 15:52:09 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.6-r4.ebuild,v 1.3 2014/09/20 23:52:02 jer Exp $
 
 EAPI=5
 
@@ -8,8 +8,8 @@ CMAKE_MIN_VERSION="2.8.8"
 inherit cmake-utils pam eutils systemd versionator
 
 DESCRIPTION="Simple Login Manager"
-HOMEPAGE="http://slim.berlios.de"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/slim.berlios/"
+SRC_URI="mirror://sourceforge/project/${PN}.berlios/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

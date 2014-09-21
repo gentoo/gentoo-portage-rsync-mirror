@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.13 2014/06/30 05:39:48 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.14 2014/09/20 23:50:52 twitch153 Exp $
 
 EAPI=5
 
@@ -134,7 +134,7 @@ src_install() {
 		dodoc -r docs/ActionReplay docs/DSP docs/WiiMote
 	fi
 
-	doicon Source/Core/DolphinWX/resources/Dolphin.xpm
+	doicon Installer/dolphin-emu.xpm
 	make_desktop_entry "dolphin-emu" "Dolphin" "Dolphin" "Game;"
 
 	prepgamesdirs
