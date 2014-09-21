@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.2.ebuild,v 1.4 2011/01/24 21:53:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.2.ebuild,v 1.5 2014/09/21 05:57:28 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit gnome2
 
 DESCRIPTION="Gnome Risk Clone"

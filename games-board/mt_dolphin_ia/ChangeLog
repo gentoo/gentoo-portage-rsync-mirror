@@ -1,6 +1,10 @@
 # ChangeLog for games-board/mt_dolphin_ia
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_dolphin_ia/ChangeLog,v 1.6 2010/11/08 19:55:44 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_dolphin_ia/ChangeLog,v 1.7 2014/09/21 05:31:49 mr_bones_ Exp $
+
+  21 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  mt_dolphin_ia-0.1.98.ebuild:
+  EAPI=5
 
   08 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   mt_dolphin_ia-0.1.98.ebuild:
