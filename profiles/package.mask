@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16047 2014/09/19 18:14:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16048 2014/09/21 15:15:10 grknight Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -213,14 +213,6 @@ media-sound/cowbell
 >=media-libs/ilmbase-2.2.0
 >=media-libs/openexr-2.2.0
 >=media-gfx/openexr_viewers-2.2.0
-
-# Brian Evans <grknight@gentoo.org> (21 Aug 2014)
-# Old versions of dev-db/mariadb masked for removal in 30 days
-# Please upgrade to the 5.5 series
-=virtual/mysql-5.2
-=virtual/mysql-5.3
-=dev-db/mariadb-5.2.14
-=dev-db/mariadb-5.3.12
 
 # Sergey Popov <pinkbyte@gentoo.org> (14 Aug 2014)
 # Mask new version of Boost - it's known to cause breakages,

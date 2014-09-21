@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9392 2014/09/19 18:14:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9393 2014/09/21 15:15:09 grknight Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Sep 2014; Brian Evans <grknight@gentoo.org> package.mask:
+  Remove obsolete mask of virtual/mysql-5.{2,3} and dev-db/mariadb-5.{2,3}*
 
   19 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Remove obsolete mask of www-apps/swish-e

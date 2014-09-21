@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
+DEPEND=>=app-emulation/libvirt-0.10.0[sasl?] >=dev-libs/libxml2-2.6 x11-libs/gtk+:3 spice? ( >=net-misc/spice-gtk-0.22[sasl?,gtk3] ) vnc? ( >=net-libs/gtk-vnc-0.5.0[sasl?,gtk3] ) dev-lang/perl >=dev-util/intltool-0.35.0 virtual/pkgconfig spice? ( >=app-emulation/spice-protocol-0.10.1 ) app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=Graphical console client for connecting to virtual machines
+EAPI=5
+HOMEPAGE=http://virt-manager.org/
+IUSE=sasl +spice +vnc debug
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=>=app-emulation/libvirt-0.10.0[sasl?] >=dev-libs/libxml2-2.6 x11-libs/gtk+:3 spice? ( >=net-misc/spice-gtk-0.22[sasl?,gtk3] ) vnc? ( >=net-libs/gtk-vnc-0.5.0[sasl?,gtk3] )
+REQUIRED_USE=|| ( spice vnc )
+SLOT=0
+SRC_URI=http://virt-manager.org/download/sources/virt-viewer/virt-viewer-1.0.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=9f94d06d9f51ed8f147fa90e7128153f

@@ -1,6 +1,10 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.47 2014/08/31 21:44:50 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.48 2014/09/21 15:06:28 grknight Exp $
+
+  21 Sep 2014; Brian Evans <grknight@gentoo.org> -mysql-5.2.ebuild,
+  -mysql-5.3.ebuild:
+  Remove old mariadb versions and virtuals
 
 *mysql-5.6-r2 (31 Aug 2014)
 
