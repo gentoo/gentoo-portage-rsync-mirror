@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/Djblets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.25 2014/07/30 14:31:27 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.26 2014/09/21 08:23:51 idella4 Exp $
+
+*Djblets-0.7.31 (21 Sep 2014)
+
+  21 Sep 2014; Ian Delaney <idella4@gentoo.org> +Djblets-0.7.31.ebuild,
+  -Djblets-0.7.28.ebuild:
+  bump; ebuild based on graaf's verion in his overlay, see Bug 512668, remove
+  affected prior version
 
 *Djblets-0.7.30 (30 Jul 2014)
 
