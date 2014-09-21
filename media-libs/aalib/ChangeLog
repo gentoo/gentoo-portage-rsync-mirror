@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aalib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.52 2014/09/10 09:23:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.53 2014/09/21 19:55:40 maekke Exp $
+
+  21 Sep 2014; Markus Meier <maekke@gentoo.org> aalib-1.4_rc5-r6.ebuild:
+  arm stable, bug #522434
 
   10 Sep 2014; Jeroen Roovers <jer@gentoo.org> aalib-1.4_rc5-r6.ebuild:
   Stable for HPPA (bug #522434).
