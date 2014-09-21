@@ -1,9 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/reviewboard-1.7.7.1.ebuild,v 1.1 2013/06/16 16:02:06 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/reviewboard-1.7.28.ebuild,v 1.1 2014/09/21 09:24:45 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="sqlite"
 
 inherit distutils-r1
 
@@ -18,19 +19,21 @@ LICENSE="MIT"
 SLOT="0"
 S=${WORKDIR}/${MY_PN}-${PV}
 
-RDEPEND=">=dev-python/django-1.4.3[${PYTHON_USEDEP}]
-	<dev-python/django-1.5[${PYTHON_USEDEP}]
-	>=dev-python/django-evolution-0.6.7[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/django-1.4.14[${PYTHON_USEDEP},sqlite]
+	<dev-python/django-1.5[${PYTHON_USEDEP},sqlite]
+	>=dev-python/django-evolution-0.6.9[${PYTHON_USEDEP}]
+	<dev-python/django-evolution-0.7[${PYTHON_USEDEP}]
 	>=dev-python/django-pipeline-1.2.24[${PYTHON_USEDEP}]
-	>=dev-python/Djblets-0.7.7[${PYTHON_USEDEP}]
+	>=dev-python/Djblets-0.7.31[${PYTHON_USEDEP}]
+	<dev-python/Djblets-0.8[${PYTHON_USEDEP}]
 	>=dev-python/pygments-1.5[${PYTHON_USEDEP}]
 	dev-python/docutils[${PYTHON_USEDEP}]
 	>=dev-python/markdown-2.2.1[${PYTHON_USEDEP}]
-	>=dev-python/paramiko-1.7.6[${PYTHON_USEDEP}]
+	>=dev-python/paramiko-1.9.0[${PYTHON_USEDEP}]
 	>=dev-python/mimeparse-0.1.3[${PYTHON_USEDEP}]
-	dev-python/python-dateutil[${PYTHON_USEDEP}]
+	dev-python/python-dateutil:python-2
 	dev-python/python-memcached[${PYTHON_USEDEP}]
-	dev-python/pytz[${PYTHON_USEDEP}]
+	>=dev-python/pytz-2012h[${PYTHON_USEDEP}]
 	dev-python/recaptcha-client[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
@@ -41,15 +44,12 @@ REQUIRED_USE="doc? ( || ( codebase manual rnotes ) )"
 # Tests mostly access the inet and when run mostly fail
 RESTRICT=test
 
-PATCHES=( "${FILESDIR}"/docs.patch )
+PATCHES=( "${FILESDIR}"/${PV}-docs.patch )
 
 python_prepare_all() {
-	# Higher versions do not support python-2.5, while reviewboard upstream
-	# still does. We do not support python-2.5 for this package as it will
-	# prevent downgrades for some of our dependencies.
-	sed -i setup.py \
-		-e "s/python-dateutil==1.5/python-dateutil/" \
-		-e "s/django-pipeline>=1.2.24,<1.3/django-pipeline>=1.2.24/" || die
+	# Running uglify is a problem right now, so skip this step. Rather
+	# have newer versions that compacted javascript.
+	sed -e "s/'pipeline.compressors.uglifyjs.UglifyJSCompressor'/None/" -i reviewboard/settings.py || die
 
 	distutils-r1_python_prepare_all
 }
@@ -65,6 +65,7 @@ python_compile_all() {
 			einfo;einfo "$msg manual"
 			DJANGO_SETTINGS_MODULE="django.conf" emake -C docs/manual html
 		fi
+
 		if use codebase; then
 			pushd docs/codebase &> /dev/null
 			ln -sf ../../contrib/internal/conf/settings_local.py .

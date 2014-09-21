@@ -49,5 +49,4 @@ ReviewBoard-1.7.7.1/docs/releasenotes/conf.py
 -
 -
 -# Example configuration for intersphinx: refer to the Python standard library.
--intersphinx_mapping = {'http://www.reviewboard.org/docs/manual/dev': None}
-
+-intersphinx_mapping = {'https://www.reviewboard.org/docs/manual/dev': None}
