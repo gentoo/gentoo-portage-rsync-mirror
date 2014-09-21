@@ -5,5 +5,10 @@
 		<email>multilib@gentoo.org</email>
 		<name>Gentoo multilib project</name>
 	</maintainer>
-	<use><flag name="development">Install pkgconfig files</flag></use>
+	<use>
+		<flag name="development">Install pkgconfig files</flag>
+		<flag name="kerberos">Pull in <pkg>virtual/krb5</pkg> if using USE=abi_x86_32. Disabling it is unsupported, use on your own responsibility. Irrelevant when using USE=-abi_x86_32.</flag>
+		<flag name="ldap">Pull in <pkg>net-nds/openldap</pkg> if using USE=abi_x86_32. Disabling it is unsupported, use on your own responsibility. Irrelevant when using USE=-abi_x86_32.</flag>
+		<flag name="pam">Pull in <pkg>virtual/pam</pkg> if using USE=abi_x86_32. Disabling it is unsupported, use on your own responsibility. Irrelevant when using USE=-abi_x86_32.</flag>
+	</use>
 </pkgmetadata>

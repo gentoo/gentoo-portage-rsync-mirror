@@ -7,6 +7,6 @@
 	</maintainer>
 	<use>
 		<flag name="development">Install pkgconfig files</flag>
-		<flag name="pulseaudio">Pull in pulseaudio if using USE=abi_x86_32</flag>
+		<flag name="pulseaudio">Pull in <pkg>media-sound/pulseaudio</pkg> if using USE=abi_x86_32. Disabling it is unsupported, use on your own responsibility. Irrelevant when using USE=-abi_x86_32.</flag>
 	</use>
 </pkgmetadata>
