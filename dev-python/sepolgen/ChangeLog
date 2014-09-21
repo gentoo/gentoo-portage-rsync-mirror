@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.41 2014/05/10 14:07:32 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.42 2014/09/21 10:25:53 swift Exp $
+
+*sepolgen-1.2.2_rc2 (21 Sep 2014)
+
+  21 Sep 2014; Sven Vermeulen <swift@gentoo.org>
+  +files/0030-default-path-for-tests-also-needed-bug-467264.patch,
+  +files/0040-have-test-run-with-PYTHON-variable-python-bug-467264.patch,
+  +sepolgen-1.2.2_rc2.ebuild, sepolgen-1.2.1.ebuild:
+  Noved to github; also add in masked 2.4 series
 
   10 May 2014; Sven Vermeulen <swift@gentoo.org> -sepolgen-1.1.9.ebuild,
   -sepolgen-1.1.9-r1.ebuild, -sepolgen-1.1.9-r2.ebuild,

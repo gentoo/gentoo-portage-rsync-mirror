@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.78 2014/07/30 11:57:19 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.79 2014/09/21 10:13:51 swift Exp $
+
+  21 Sep 2014; Sven Vermeulen <swift@gentoo.org> checkpolicy-2.3.ebuild:
+  Moved to github
 
   30 Jul 2014; Sven Vermeulen <swift@gentoo.org> checkpolicy-2.3.ebuild:
   Fix bug #514194 - Stabilization of SELinux userspace 2.3

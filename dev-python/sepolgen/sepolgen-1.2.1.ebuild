@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.2.1.ebuild,v 1.2 2014/01/20 20:06:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.2.1.ebuild,v 1.3 2014/09/21 10:25:53 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -9,7 +9,7 @@ inherit python-r1 eutils
 
 DESCRIPTION="SELinux policy generation library"
 HOMEPAGE="http://userspace.selinuxproject.org"
-SRC_URI="http://userspace.selinuxproject.org/releases/20131030/${P}.tar.gz
+SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140506/${P}.tar.gz
 	http://dev.gentoo.org/~swift/patches/sepolgen/patchbundle-${P}-r1.tar.gz"
 
 LICENSE="GPL-2"

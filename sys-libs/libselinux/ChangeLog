@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.130 2014/09/16 23:03:43 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.131 2014/09/21 10:17:04 swift Exp $
+
+*libselinux-2.4_rc2 (21 Sep 2014)
+
+  21 Sep 2014; Sven Vermeulen <swift@gentoo.org>
+  +files/0005-use-ruby-include-with-rubylibver.patch,
+  +files/0006-build-related-fixes-bug-500674.patch, +libselinux-2.4_rc2.ebuild,
+  libselinux-2.3-r1.ebuild:
+  Noved to github; also add in masked 2.4 series
 
   16 Sep 2014; Brian Dolbec <dolsen@gentoo.org> libselinux-2.3-r1.ebuild:
   Add python-3.4 target, needed for dep of portage. Tested and 

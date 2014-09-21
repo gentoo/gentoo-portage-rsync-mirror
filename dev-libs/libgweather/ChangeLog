@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.112 2014/08/02 09:58:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.114 2014/09/21 10:26:47 pacho Exp $
+
+  21 Sep 2014; Pacho Ramos <pacho@gentoo.org> -libgweather-3.12.2.ebuild,
+  libgweather-3.12.2-r1.ebuild:
+  Fast stabilize as previous version stopped working due to Yr.no change
+
+*libgweather-3.12.2-r1 (21 Sep 2014)
+
+  21 Sep 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/libgweather-3.12.2-yr_no-api.patch, +libgweather-3.12.2-r1.ebuild:
+  Update api for Yr.no (#522718 by poncho and Evgeny Bobkin)
 
   02 Aug 2014; Pacho Ramos <pacho@gentoo.org> -libgweather-3.12.1.ebuild,
   libgweather-3.10.2.ebuild, libgweather-3.12.2.ebuild:

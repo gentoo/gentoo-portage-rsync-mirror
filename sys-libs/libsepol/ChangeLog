@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libsepol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.67 2014/08/05 09:41:56 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.68 2014/09/21 10:21:23 swift Exp $
+
+*libsepol-2.4_rc2 (21 Sep 2014)
+
+  21 Sep 2014; Sven Vermeulen <swift@gentoo.org> +libsepol-2.4_rc2.ebuild,
+  libsepol-2.3.ebuild:
+  Noved to github; also add in masked 2.4 series
 
   05 Aug 2014; Sven Vermeulen <swift@gentoo.org> -libsepol-2.1.9-r3.ebuild:
   Remove old ebuilds

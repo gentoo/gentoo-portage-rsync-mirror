@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.3-r2.ebuild,v 1.2 2014/07/30 11:58:46 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.3-r2.ebuild,v 1.3 2014/09/21 10:22:57 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -20,7 +20,7 @@ IUSE="audit pam dbus"
 
 DESCRIPTION="SELinux core utilities"
 HOMEPAGE="http://userspace.selinuxproject.org"
-SRC_URI="http://userspace.selinuxproject.org/releases/20140506/${MY_P}.tar.gz
+SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140506/${MY_P}.tar.gz
 http://dev.gentoo.org/~swift/patches/policycoreutils/patchbundle-${PN}-${PATCHBUNDLE}.tar.gz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
 
