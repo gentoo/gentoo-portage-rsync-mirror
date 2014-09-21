@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-9999.ebuild,v 1.11 2014/08/04 19:55:20 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-9999.ebuild,v 1.12 2014/09/21 21:26:32 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -54,7 +54,6 @@ RDEPEND=">=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]"
 
 PATCHES=(
-	"${FILESDIR}"/sphinx_mapping.patch
 )
 
 python_compile_all() {
