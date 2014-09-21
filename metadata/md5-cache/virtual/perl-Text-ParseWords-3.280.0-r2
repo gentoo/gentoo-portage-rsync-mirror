@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Text-ParseWords
 EAPI=5
-KEYWORDS=alpha amd64 ~arm hppa ~x86
+KEYWORDS=alpha amd64 ~arm hppa ppc ppc64 ~x86
 RDEPEND=|| ( =dev-lang/perl-5.18* ~perl-core/Text-ParseWords-3.280.0 ) !<perl-core/Text-ParseWords-3.280.0 !>perl-core/Text-ParseWords-3.280.0-r999
 SLOT=0
-_md5_=2327a0e5a6cb16d0adf0af12aa0f7146
+_md5_=6b470943dfc496620cc615b9e84df05e

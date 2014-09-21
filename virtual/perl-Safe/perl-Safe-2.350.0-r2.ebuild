@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Safe/perl-Safe-2.350.0-r2.ebuild,v 1.4 2014/09/17 13:52:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Safe/perl-Safe-2.350.0-r2.ebuild,v 1.6 2014/09/21 11:21:46 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="

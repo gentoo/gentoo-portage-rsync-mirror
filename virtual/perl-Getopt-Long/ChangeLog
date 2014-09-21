@@ -1,6 +1,14 @@
 # ChangeLog for virtual/perl-Getopt-Long
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.58 2014/09/17 13:42:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.60 2014/09/21 11:20:43 ago Exp $
+
+  21 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  perl-Getopt-Long-2.390.0-r1.ebuild:
+  Stable for ppc, wrt bug #504786
+
+  21 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  perl-Getopt-Long-2.390.0-r1.ebuild:
+  Stable for ppc64, wrt bug #504786
 
   17 Sep 2014; Jeroen Roovers <jer@gentoo.org>
   perl-Getopt-Long-2.390.0-r1.ebuild:

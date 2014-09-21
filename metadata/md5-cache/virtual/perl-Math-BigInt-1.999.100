@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Math-BigInt
 EAPI=5
-KEYWORDS=alpha amd64 arm hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86 ~ppc-aix ~ppc-macos ~x86-solaris
+KEYWORDS=alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~ppc-macos ~x86-solaris
 RDEPEND=|| ( =dev-lang/perl-5.18* ~perl-core/Math-BigInt-1.999.100 ) !<perl-core/Math-BigInt-1.999.100 !>perl-core/Math-BigInt-1.999.100-r999
 SLOT=0
-_md5_=9add611cfc3a21d1887f27118c0eafe8
+_md5_=0230ac77ef7e53da2a4f7b2bb1bcae06

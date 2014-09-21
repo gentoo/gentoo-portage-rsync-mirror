@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Filter-Simple/perl-Filter-Simple-0.890.0-r1.ebuild,v 1.4 2014/09/17 13:41:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Filter-Simple/perl-Filter-Simple-0.890.0-r1.ebuild,v 1.6 2014/09/21 11:20:39 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 ~x86"
 IUSE=""
 
 DEPEND=""
