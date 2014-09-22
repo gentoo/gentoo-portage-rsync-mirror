@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/lldpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.17 2014/07/08 23:17:39 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.18 2014/09/22 18:09:19 chutzpah Exp $
+
+*lldpd-0.7.10 (22 Sep 2014)
+
+  22 Sep 2014; Patrick McLean <chutzpah@gentoo.org> +lldpd-0.7.10.ebuild,
+  +files/lldpd-0.7.10-completions.patch,
+  +files/lldpd-0.7.10-handle-read-errors.patch,
+  +files/lldpd-0.7.10-only-use-physical-for-chassis-id.patch,
+  +files/lldpd-0.7.10-zsh-completion-dir.patch, metadata.xml:
+  Version bump, add json-c USE flag and rename json to jansson. Import bash and
+  zsh completions from upstream git. Import some bugfix patches from upstream.
 
 *lldpd-0.7.9-r3 (08 Jul 2014)
 

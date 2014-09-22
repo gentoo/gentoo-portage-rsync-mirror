@@ -1,26 +1,21 @@
 # ChangeLog for media-sound/pithos
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/ChangeLog,v 1.5 2014/04/06 10:45:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/ChangeLog,v 1.6 2014/09/22 18:20:08 chutzpah Exp $
 
-  06 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> pithos-20130710.ebuild,
-  pithos-20130808.ebuild, pithos-99999999.ebuild:
-  Pin gst-python to 0.10 slot.
+*pithos-1.0.0 (22 Sep 2014)
 
-  09 Aug 2013; Patrick McLean <chutz@gentoo.org> pithos-99999999.ebuild:
-  Update patch names in 99999999 so it actually works.
-
-*pithos-20130808 (08 Aug 2013)
-
-  08 Aug 2013; Patrick McLean <chutzpah@gentoo.org> pithos-20130710.ebuild,
-  +pithos-20130808.ebuild, pithos-99999999.ebuild,
-  +files/pithos-20130808-detect-datadir.patch,
-  +files/pithos-20130808-dont-notify-volume.patch:
-  Version bump, add PYTHON_USEDEP dependencies (bug #479930). Add patch to
-  disable annoying volume notifications (bug #480286).
+  22 Sep 2014; Patrick McLean <chutzpah@gentoo.org> +pithos-1.0.0.ebuild,
+  +pithos-9999.ebuild, -pithos-20130710.ebuild, -pithos-20130808.ebuild,
+  -pithos-99999999.ebuild, +files/pithos-1.0.0-icons.patch,
+  -files/pithos-20130808-detect-datadir.patch,
+  -files/pithos-20130808-dont-notify-volume.patch,
+  -files/pithos-detect-datadir.patch, -files/setup.py, metadata.xml:
+  Version bump to 1.0.0, remove all older (probably semi-broken) versions to
+  avoid version number confusion.
 
 *pithos-99999999 (11 Jul 2013)
 
-  11 Jul 2013; Patrick McLean <chutzpah@gentoo.org> -pithos-9999.ebuild,
+  11 Jul 2013; Patrick McLean <chutz@gentoo.org> -pithos-9999.ebuild,
   +pithos-99999999.ebuild:
   Rename pithos-9999 to pithos-99999999 so the live will have a higher version
   that the release.
@@ -28,7 +23,7 @@
 *pithos-20130710 (10 Jul 2013)
 *pithos-9999 (10 Jul 2013)
 
-  10 Jul 2013; Patrick McLean <chutzpah@gentoo.org> +pithos-9999.ebuild,
+  10 Jul 2013; Patrick McLean <chutz@gentoo.org> +pithos-9999.ebuild,
   +pithos-20130710.ebuild, +files/pithos-detect-datadir.patch, +files/setup.py,
   +metadata.xml:
   Initial import.

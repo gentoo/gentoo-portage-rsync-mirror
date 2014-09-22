@@ -1,0 +1,9 @@
+# ChangeLog for net-libs/libndp
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libndp/ChangeLog,v 1.1 2014/09/22 18:03:01 pacho Exp $
+
+*libndp-1.4 (22 Sep 2014)
+
+  22 Sep 2014; Pacho Ramos <pacho@gentoo.org> +libndp-1.4.ebuild, +metadata.xml:
+  New lib that will be required by NetworkManager soon (#520002 by Timo
+  Rothenpieler)
