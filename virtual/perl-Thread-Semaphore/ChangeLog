@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Thread-Semaphore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Semaphore/ChangeLog,v 1.9 2014/09/21 11:10:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Semaphore/ChangeLog,v 1.10 2014/09/22 09:59:02 ago Exp $
+
+  22 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  perl-Thread-Semaphore-2.120.0-r3.ebuild:
+  Stable for ia64, wrt bug #504786
 
   21 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   perl-Thread-Semaphore-2.120.0-r3.ebuild:

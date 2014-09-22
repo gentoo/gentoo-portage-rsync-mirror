@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-threads
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-threads/ChangeLog,v 1.25 2014/09/21 11:11:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-threads/ChangeLog,v 1.26 2014/09/22 09:59:18 ago Exp $
+
+  22 Sep 2014; Agostino Sarubbo <ago@gentoo.org> perl-threads-1.860.0-r3.ebuild:
+  Stable for ia64, wrt bug #504786
 
   21 Sep 2014; Agostino Sarubbo <ago@gentoo.org> perl-threads-1.860.0-r3.ebuild:
   Stable for ppc64, wrt bug #504786
