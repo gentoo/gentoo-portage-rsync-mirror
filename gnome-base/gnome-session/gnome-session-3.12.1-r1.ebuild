@@ -1,18 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.10.1.ebuild,v 1.8 2014/06/01 08:03:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.12.1-r1.ebuild,v 1.1 2014/09/22 13:10:12 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Gnome session manager"
 HOMEPAGE="https://git.gnome.org/browse/gnome-session"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="doc elibc_FreeBSD gconf ipv6 systemd"
 
 # x11-misc/xdg-user-dirs{,-gtk} are needed to create the various XDG_*_DIRs, and
@@ -20,13 +20,12 @@ IUSE="doc elibc_FreeBSD gconf ipv6 systemd"
 # xdg-user-dirs-update is run during login (see 10-user-dirs-update-gnome below).
 # gdk-pixbuf used in the inhibit dialog
 COMMON_DEPEND="
-	>=dev-libs/glib-2.35.0:2
+	>=dev-libs/glib-2.40.0:2
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.90.7:3
 	>=dev-libs/json-glib-0.10
 	>=dev-libs/dbus-glib-0.76
 	>=gnome-base/gnome-desktop-3.9.91:3=
-	|| ( <sys-power/upower-0.99 sys-power/upower-pm-utils )
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 
 	virtual/opengl
@@ -59,6 +58,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	>=dev-lang/perl-5
 	>=sys-devel/gettext-0.10.40
+	dev-libs/libxslt
 	>=dev-util/intltool-0.40.6
 	virtual/pkgconfig
 	!<gnome-base/gdm-2.20.4
@@ -69,25 +69,21 @@ DEPEND="${COMMON_DEPEND}
 # gnome-common needed for eautoreconf
 # gnome-base/gdm does not provide gnome.desktop anymore
 
-src_prepare() {
-	# Allow people to configure startup apps, bug #464968, upstream bug #663767
-	sed -i -e '/NoDisplay/d' data/gnome-session-properties.desktop.in.in || die
-
-	# Blacklist nv25 (from 'master')
-	epatch "${FILESDIR}"/${PN}-3.8.4-blacklist-nv25.patch
-
-	gnome2_src_prepare
-}
-
 src_configure() {
+	# 1. Avoid automagic on old upower releases
+	# 2. xsltproc is always checked due to man configure
+	#    switch, even if USE=-doc
 	gnome2_src_configure \
 		--disable-deprecation-flags \
-		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--enable-session-selector \
 		$(use_enable doc docbook-docs) \
 		$(use_enable gconf) \
 		$(use_enable ipv6) \
-		$(use_enable systemd)
+		$(use_enable systemd) \
+		UPOWER_CFLAGS="" \
+		UPOWER_LIBS=""
+		# gnome-session-selector pre-generated man page is missing
+		#$(usex !doc XSLTPROC=$(type -P true))
 }
 
 src_install() {
@@ -99,7 +95,7 @@ src_install() {
 
 	dodir /usr/share/gnome/applications/
 	insinto /usr/share/gnome/applications/
-	newins "${FILESDIR}/defaults.list-r1" defaults.list
+	newins "${FILESDIR}/defaults.list-r2" defaults.list
 
 	dodir /etc/X11/xinit/xinitrc.d/
 	exeinto /etc/X11/xinit/xinitrc.d/
