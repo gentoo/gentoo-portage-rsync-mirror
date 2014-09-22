@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/daemontools-encore
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-encore/ChangeLog,v 1.6 2013/10/18 09:26:46 chainsaw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-encore/ChangeLog,v 1.7 2014/09/22 08:36:38 polynomial-c Exp $
+
+*daemontools-encore-1.10 (22 Sep 2014)
+
+  22 Sep 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -daemontools-encore-1.05.ebuild, +daemontools-encore-1.10.ebuild,
+  +files/svscan.init-2:
+  Version bump. Removed old. Added rewritten init script.
 
 *daemontools-encore-1.06 (18 Oct 2013)
 
