@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.213 2014/07/16 22:27:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.214 2014/09/22 20:49:17 jer Exp $
+
+  22 Sep 2014; Jeroen Roovers <jer@gentoo.org> libnl-3.2.25.ebuild:
+  Restore KEYWORDS (bug #515132).
 
   16 Jul 2014; Jeroen Roovers <jer@gentoo.org> libnl-3.2.25.ebuild:
   Drop keywords again (bug #515132).
