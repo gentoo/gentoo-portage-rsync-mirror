@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/plink-1.90_pre140514.ebuild,v 1.1 2014/05/19 14:13:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/plink-1.90_pre140514.ebuild,v 1.2 2014/09/22 07:20:31 jlec Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://pngu.mgh.harvard.edu/~purcell/static/bin/plink140514/plink_src.z
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="lapack"
+IUSE="blas"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
@@ -20,7 +20,10 @@ DEPEND="
 	virtual/pkgconfig"
 RDEPEND="
 	sys-libs/zlib
-	lapack? ( virtual/lapack )"
+	blas? (
+		virtual/cblas
+		virtual/lapack
+		)"
 
 S="${WORKDIR}/"
 
@@ -28,7 +31,7 @@ S="${WORKDIR}/"
 # Package contains bytecode-only jar gPLINK.jar. Ignored, notified upstream.
 
 src_prepare() {
-	use lapack || sed -i '/NO_LAPACK =/s/$/1/' "${S}/Makefile" || die
+	use blas || sed -i '/NO_blas =/s/$/1/' "${S}/Makefile" || die
 
 	sed \
 		-e 's:zlib-1.2.8/zlib.h:zlib.h:g' \
@@ -48,7 +51,7 @@ src_compile() {
 		CXX=$(tc-getCXX) \
 		CFLAGS="${CFLAGS}" \
 		ZLIB="$($(tc-getPKG_CONFIG) --libs zlib)" \
-		BLASFLAGS="$(usex lapack "" "$($(tc-getPKG_CONFIG) --libs lapack)")"
+		BLASFLAGS="$(usex blas "$($(tc-getPKG_CONFIG) --libs lapack cblas)" "")"
 }
 
 src_install() {

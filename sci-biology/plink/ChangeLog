@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/plink
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.15 2014/05/19 14:13:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.16 2014/09/22 07:20:31 jlec Exp $
+
+  22 Sep 2014; Justin Lecher <jlec@gentoo.org> plink-1.90_pre140514.ebuild:
+  Rename USE lapack -> blas, fixing build problems, #514106
 
 *plink-1.90_pre140514 (19 May 2014)
 
