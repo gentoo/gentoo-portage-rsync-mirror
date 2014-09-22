@@ -20,3 +20,13 @@ Subject: fix build
      target_link_libraries(GsKit ${SDL_LIBRARY})
      target_link_libraries(GsKit ${SDLIMAGE_LIBRARY})
  endif(SDL2_FOUND)
+--- src/CMakeLists.txt.old
++++ src/CMakeLists.txt
+@@ -328,7 +328,6 @@
+ 
+ # Misc. Stuff I call it that way for now...
+ #LIBS = -lSDL_sound -lasound -lm -ldl -lpthread -L/usr/lib -lSDL -lpng -lz -lSDL_net -lX11 -lGL
+-target_link_libraries(CGeniusExe SDL_sound)
+ target_link_libraries(CGeniusExe asound)
+ target_link_libraries(CGeniusExe m)
+ target_link_libraries(CGeniusExe dl)
