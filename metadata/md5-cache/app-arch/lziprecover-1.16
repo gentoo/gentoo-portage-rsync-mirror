@@ -1,0 +1,10 @@
+DEFINED_PHASES=configure
+DESCRIPTION=Lziprecover is a data recovery tool and decompressor for files in the lzip compressed data format
+EAPI=5
+HOMEPAGE=http://www.nongnu.org/lzip/lziprecover.html
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+SLOT=0
+SRC_URI=http://download.savannah.gnu.org/releases-noredirect/lzip/lziprecover/lziprecover-1.16.tar.gz
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=3dda5081ba7608bbb9a6399a244f6cf8
