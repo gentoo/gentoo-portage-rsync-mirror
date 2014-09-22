@@ -1,6 +1,10 @@
 # ChangeLog for games-board/holdingnuts
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/ChangeLog,v 1.10 2013/06/29 17:17:47 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/ChangeLog,v 1.11 2014/09/21 23:31:05 mr_bones_ Exp $
+
+  21 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  holdingnuts-0.0.5-r1.ebuild:
+  EAPI=5; fix desktop file
 
   29 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org>
   holdingnuts-0.0.5-r1.ebuild:

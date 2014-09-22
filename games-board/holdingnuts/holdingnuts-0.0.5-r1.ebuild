@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/holdingnuts-0.0.5-r1.ebuild,v 1.5 2013/06/29 17:17:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/holdingnuts-0.0.5-r1.ebuild,v 1.6 2014/09/21 23:31:05 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils cmake-utils games
 
 DESCRIPTION="An open source poker client and server"
@@ -24,7 +24,10 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6.3"
 
-PATCHES=( "${FILESDIR}"/${P}-wheel.patch ) # upstream patch (bug #307901)
+src_prepare() {
+	sed -i -e '/^Path/d' holdingnuts.desktop || die
+	epatch "${FILESDIR}"/${P}-wheel.patch # upstream patch (bug #307901)
+}
 
 src_configure() {
 	local mycmakeargs="$(cmake-utils_use_enable alsa AUDIO)
