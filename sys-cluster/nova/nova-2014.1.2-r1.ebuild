@@ -1,19 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.18 2014/09/22 02:15:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1.2-r1.ebuild,v 1.1 2014/09/22 02:15:21 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils git-2 multilib user
+inherit distutils-r1 eutils multilib user
 
 DESCRIPTION="A cloud computing fabric controller (main part of an IaaS system) written in Python"
 HOMEPAGE="https://launchpad.net/nova"
-EGIT_REPO_URI="https://github.com/openstack/nova.git"
+SRC_URI="http://launchpad.net/${PN}/icehouse/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+compute +kvm +network +novncproxy sqlite mysql postgres xen"
 REQUIRED_USE="|| ( mysql postgres sqlite )
 			  compute? ( || ( kvm xen ) )"
@@ -28,7 +28,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 RDEPEND="sqlite? (
 			>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
 			!~dev-python/sqlalchemy-0.9.5[sqlite,${PYTHON_USEDEP}]
-			<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+	        <=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
 		)
 		mysql? (
 			dev-python/mysql-python
@@ -51,6 +51,7 @@ RDEPEND="sqlite? (
 		>=dev-python/kombu-2.4.8[${PYTHON_USEDEP}]
 		>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3-r1[${PYTHON_USEDEP}]
+		!~dev-python/routes-2.0[${PYTHON_USEDEP}]
 		>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
@@ -68,7 +69,7 @@ RDEPEND="sqlite? (
 		<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
 		>=dev-python/python-glanceclient-0.9.0[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.7.0[${PYTHON_USEDEP}]
-		>=dev-python/six-1.5.2[${PYTHON_USEDEP}]
+		>=dev-python/six-1.6.0[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]
 		>=dev-python/websockify-0.5.1[${PYTHON_USEDEP}]
 		<dev-python/websockify-0.6[${PYTHON_USEDEP}]
