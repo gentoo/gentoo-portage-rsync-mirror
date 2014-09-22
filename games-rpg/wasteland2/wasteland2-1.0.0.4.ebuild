@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wasteland2/wasteland2-1.0.0.4.ebuild,v 1.1 2014/09/21 21:40:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wasteland2/wasteland2-1.0.0.4.ebuild,v 1.2 2014/09/22 18:58:50 hasufell Exp $
 
 EAPI=5
 
@@ -79,9 +79,14 @@ CHECKREQS_DISK_USR="21600M"
 
 pkg_nofetch() {
 	einfo
-	einfo "Please buy & download \"${SRC_URI}\" from:"
-	einfo "  https://www.gog.com/"
+	einfo "Please buy Wasteland 2"
+	einfo "from https://www.gog.com/ and"
+	einfo "download \"${SRC_URI}\""
 	einfo "and move/link it to \"${DISTDIR}\""
+	einfo
+	einfo "This ebuild was tested with the CLASSICAL edition."
+	einfo "If it works with the deluxe edition too, please"
+	einfo "open a bug report. If not, open a bug report too."
 	einfo
 }
 

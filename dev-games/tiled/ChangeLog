@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/tiled
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/ChangeLog,v 1.6 2014/08/10 20:06:39 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/ChangeLog,v 1.7 2014/09/22 18:37:40 kensington Exp $
+
+*tiled-0.10.1 (22 Sep 2014)
+
+  22 Sep 2014; Michael Palimaka <kensington@gentoo.org> +tiled-0.10.1.ebuild,
+  -tiled-0.9.0.ebuild:
+  Version bump wrt bug #523464. Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tiled-0.9.0.ebuild,
   tiled-0.9.1.ebuild:
