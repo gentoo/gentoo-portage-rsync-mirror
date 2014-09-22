@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.785 2014/09/10 08:33:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.786 2014/09/22 16:47:38 floppym Exp $
+
+  22 Sep 2014; Mike Gilbert <floppym@gentoo.org> python-2.7.8.ebuild:
+  New patchset, should resolve bug 523072. Thanks for Arfrever for the updates.
 
   09 Sep 2014; Mike Frysinger <vapier@gentoo.org> python-2.7.7.ebuild,
   python-3.3.5-r1.ebuild:
