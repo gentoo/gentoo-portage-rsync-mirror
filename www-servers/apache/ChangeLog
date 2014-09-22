@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.290 2014/08/16 11:52:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.291 2014/09/22 07:48:28 polynomial-c Exp $
+
+*apache-2.2.29 (22 Sep 2014)
+
+  22 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> +apache-2.2.29.ebuild:
+  Version bump.
 
   16 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> -apache-2.2.27.ebuild,
   -apache-2.4.9-r3.ebuild, -files/00_systemd.conf,

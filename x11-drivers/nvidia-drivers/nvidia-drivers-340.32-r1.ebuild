@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-340.32.ebuild,v 1.2 2014/08/21 11:44:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-340.32-r1.ebuild,v 1.1 2014/09/22 07:44:07 jer Exp $
 
 EAPI=5
 
@@ -328,6 +328,8 @@ src_install() {
 		doman nvidia-modprobe.1.gz
 		doman nvidia-persistenced.1.gz
 		newinitd "${FILESDIR}/nvidia-smi.init" nvidia-smi
+		newconfd "${FILESDIR}/nvidia-persistenced.conf" nvidia-persistenced
+		newinitd "${FILESDIR}/nvidia-persistenced.init" nvidia-persistenced
 	fi
 
 	if use tools; then

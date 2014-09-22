@@ -4,10 +4,10 @@ DESCRIPTION=Tools for helping translation of documentation
 EAPI=4
 HOMEPAGE=http://po4a.alioth.debian.org
 IUSE=test
-KEYWORDS=~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris ~x86-solaris
+KEYWORDS=~alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris ~x86-solaris
 LICENSE=GPL-2
 RDEPEND=dev-perl/SGMLSpm >=sys-devel/gettext-0.13 app-text/openjade dev-libs/libxslt dev-perl/Locale-gettext dev-perl/TermReadKey dev-perl/Text-WrapI18N || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/p/po4a/po4a_0.45.orig.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-app	4c2027b6530baeab97482b706149e640	perl-module	2f552cb358a7a05346c910b39818c423	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=3957599cba65207b163779ee320d90b1
+_md5_=04f4865705a93925252c9abec64f9629

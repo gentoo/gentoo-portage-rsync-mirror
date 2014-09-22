@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/rsnapshot/rsnapshot-1.3.1-r2.ebuild,v 1.9 2014/09/21 12:35:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/rsnapshot/rsnapshot-1.3.1-r2.ebuild,v 1.10 2014/09/22 07:51:23 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.rsnapshot.org/downloads/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8.2
