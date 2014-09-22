@@ -2,12 +2,12 @@ DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpa
 DEPEND=~dev-qt/designer-4.8.5[aqua=,debug=] ~dev-qt/qtcore-4.8.5[aqua=,debug=,qt3support?] ~dev-qt/qtgui-4.8.5[aqua=,debug=,qt3support?] ~dev-qt/qthelp-4.8.5[aqua=,debug=] ~dev-qt/qtscript-4.8.5[aqua=,debug=] ~dev-qt/qtsql-4.8.5[aqua=,debug=,qt3support?] ~dev-qt/qtsvg-4.8.5[aqua=,debug=] ~dev-qt/qttest-4.8.5[aqua=,debug=] dbus? ( ~dev-qt/qtdbus-4.8.5[aqua=,debug=] ) declarative? ( ~dev-qt/qtdeclarative-4.8.5[aqua=,debug=,webkit?] ) multimedia? ( ~dev-qt/qtmultimedia-4.8.5[aqua=,debug=] ) opengl? ( ~dev-qt/qtopengl-4.8.5[aqua=,debug=,qt3support?] ) openvg? ( ~dev-qt/qtopenvg-4.8.5[aqua=,debug=,qt3support?] ) phonon? ( kde? ( media-libs/phonon[aqua=] ) !kde? ( || ( ~dev-qt/qtphonon-4.8.5[aqua=,debug=] media-libs/phonon[aqua=] ) ) ) qt3support? ( ~dev-qt/qt3support-4.8.5[aqua=,debug=] ) webkit? ( ~dev-qt/qtwebkit-4.8.5[aqua=,debug=] ) xmlpatterns? ( ~dev-qt/qtxmlpatterns-4.8.5[aqua=,debug=] ) virtual/pkgconfig
 DESCRIPTION=Demonstration module and examples for the Qt toolkit
 EAPI=4
-HOMEPAGE=http://qt-project.org/ http://qt.digia.com/
+HOMEPAGE=https://www.qt.io/ https://qt-project.org/
 IUSE=dbus declarative kde multimedia opengl openvg phonon qt3support webkit xmlpatterns aqua debug pch +exceptions
 KEYWORDS=amd64 ~arm ppc ppc64 x86 ~x64-macos
 LICENSE=|| ( LGPL-2.1 GPL-3 )
 RDEPEND=~dev-qt/designer-4.8.5[aqua=,debug=] ~dev-qt/qtcore-4.8.5[aqua=,debug=,qt3support?] ~dev-qt/qtgui-4.8.5[aqua=,debug=,qt3support?] ~dev-qt/qthelp-4.8.5[aqua=,debug=] ~dev-qt/qtscript-4.8.5[aqua=,debug=] ~dev-qt/qtsql-4.8.5[aqua=,debug=,qt3support?] ~dev-qt/qtsvg-4.8.5[aqua=,debug=] ~dev-qt/qttest-4.8.5[aqua=,debug=] dbus? ( ~dev-qt/qtdbus-4.8.5[aqua=,debug=] ) declarative? ( ~dev-qt/qtdeclarative-4.8.5[aqua=,debug=,webkit?] ) multimedia? ( ~dev-qt/qtmultimedia-4.8.5[aqua=,debug=] ) opengl? ( ~dev-qt/qtopengl-4.8.5[aqua=,debug=,qt3support?] ) openvg? ( ~dev-qt/qtopenvg-4.8.5[aqua=,debug=,qt3support?] ) phonon? ( kde? ( media-libs/phonon[aqua=] ) !kde? ( || ( ~dev-qt/qtphonon-4.8.5[aqua=,debug=] media-libs/phonon[aqua=] ) ) ) qt3support? ( ~dev-qt/qt3support-4.8.5[aqua=,debug=] ) webkit? ( ~dev-qt/qtwebkit-4.8.5[aqua=,debug=] ) xmlpatterns? ( ~dev-qt/qtxmlpatterns-4.8.5[aqua=,debug=] )
 SLOT=4
-SRC_URI=http://download.qt-project.org/official_releases/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qt4-build	4927837785b49df0ac77608f64dee4d4	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+SRC_URI=http://download.qt-project.org/archive/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qt4-build	e9899e352acaac459b02631fad448a15	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=b33b9ff44fe8859fbe92633a305a5ca7

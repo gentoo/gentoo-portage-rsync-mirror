@@ -2,12 +2,12 @@ DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpa
 DEPEND=~dev-qt/qtcore-4.8.5[aqua=,debug=] ~dev-qt/qtgui-4.8.5[aqua=,debug=] ~dev-qt/qtsql-4.8.5[aqua=,debug=,sqlite] compat? ( ~dev-qt/qtdbus-4.8.5[aqua=,debug=] sys-libs/zlib ) virtual/pkgconfig
 DESCRIPTION=The Help module for the Qt toolkit
 EAPI=5
-HOMEPAGE=http://qt-project.org/ http://qt.digia.com/
+HOMEPAGE=https://www.qt.io/ https://qt-project.org/
 IUSE=compat doc aqua debug pch +exceptions
 KEYWORDS=alpha amd64 arm ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos
 LICENSE=|| ( LGPL-2.1 GPL-3 )
 RDEPEND=~dev-qt/qtcore-4.8.5[aqua=,debug=] ~dev-qt/qtgui-4.8.5[aqua=,debug=] ~dev-qt/qtsql-4.8.5[aqua=,debug=,sqlite] compat? ( ~dev-qt/qtdbus-4.8.5[aqua=,debug=] sys-libs/zlib )
 SLOT=4
-SRC_URI=http://download.qt-project.org/official_releases/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.tar.gz compat? ( ftp://ftp.qt.nokia.com/qt/source/qt-assistant-qassistantclient-library-compat-src-4.6.3.tar.gz http://dev.gentoo.org/~pesa/distfiles/qt-assistant-compat-headers-4.7.tar.gz )
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qt4-build	4927837785b49df0ac77608f64dee4d4	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
+SRC_URI=http://download.qt-project.org/archive/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.tar.gz compat? ( ftp://ftp.qt.nokia.com/qt/source/qt-assistant-qassistantclient-library-compat-src-4.6.3.tar.gz http://dev.gentoo.org/~pesa/distfiles/qt-assistant-compat-headers-4.7.tar.gz )
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qt4-build	e9899e352acaac459b02631fad448a15	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=0ff3ff8d85c1f87fb1fd07b0e445a705

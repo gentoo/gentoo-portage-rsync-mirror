@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.67 2014/08/05 09:57:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.68 2014/09/22 00:05:39 radhermit Exp $
+
+*libbluray-0.6.2 (22 Sep 2014)
+
+  22 Sep 2014; Tim Harder <radhermit@gentoo.org> +libbluray-0.6.2.ebuild:
+  Version bump.
 
   05 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> libbluray-9999.ebuild:
   Adjusted live ebuild.
