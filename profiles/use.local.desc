@@ -299,6 +299,9 @@ app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinite b
 app-backup/dar:gcrypt - Enables strong encryption support
 app-backup/deja-dup:nautilus - Build gnome-base/nautilus extension
 app-backup/duplicity:s3 - Support for backing up to the Amazon S3 system
+app-backup/holland-backup-mysql-meta:lvm - Install Holland LVM Plugin
+app-backup/holland-backup-mysql-meta:mysqldump - Install Holland mysqldump Plugin
+app-backup/holland-backup-mysql-meta:mysqlhotcopy - Install Holland mysqlhotcopy Plugin
 app-backup/rear:udev - Have ReaR start backup when attaching your USB drive.
 app-backup/snapper:btrfs - Include Btrfs support sys-fs/btrfs-progs
 app-backup/snapper:ext4 - Include Ext4 support sys-fs/e2fsprogs
