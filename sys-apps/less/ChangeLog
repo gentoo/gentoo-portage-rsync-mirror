@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.188 2014/09/11 05:20:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.189 2014/09/22 08:01:45 polynomial-c Exp $
+
+*less-468 (22 Sep 2014)
+
+  22 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> -less-436.ebuild,
+  -less-441.ebuild, -less-444.ebuild, -less-451.ebuild, -less-457.ebuild,
+  -less-462.ebuild, +less-468.ebuild, -files/code2color.patch:
+  Version bump. Removed old.
 
   11 Sep 2014; Mike Frysinger <vapier@gentoo.org> less-458.ebuild:
   Mark stable for all #521952.

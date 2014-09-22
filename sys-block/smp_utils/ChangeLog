@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/smp_utils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/ChangeLog,v 1.9 2012/02/23 07:23:59 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/ChangeLog,v 1.10 2014/09/22 08:16:14 polynomial-c Exp $
+
+*smp_utils-0.98 (22 Sep 2014)
+
+  22 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> -smp_utils-0.96.ebuild,
+  +smp_utils-0.98.ebuild, -files/smp_utils-0.96-make.patch:
+  Version bump. Removed old.
 
   23 Feb 2012; Tim Harder <radhermit@gentoo.org> -smp_utils-0.91.ebuild,
   -smp_utils-0.93.ebuild, -smp_utils-0.94.ebuild:
