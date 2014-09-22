@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.202 2014/08/21 10:45:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.203 2014/09/22 19:19:19 pacho Exp $
+
+*networkmanager-0.9.10.0 (22 Sep 2014)
+
+  22 Sep 2014; Pacho Ramos <pacho@gentoo.org> +networkmanager-0.9.10.0.ebuild,
+  -networkmanager-0.9.8.8.ebuild, metadata.xml:
+  Version bump, default to dhclient instead of dhcpcd (#493732), set proper pppd
+  plugindir (#519986 by Clemente Aguiar, Sergey Popov, Agostino Sarubbo and
+  others), remove wimax support (#522822 by Dion Moult), drop old.
 
   21 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
   networkmanager-0.9.8.10-r1.ebuild:

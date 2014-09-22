@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wasteland2/wasteland2-1.0.0.4.ebuild,v 1.2 2014/09/22 18:58:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wasteland2/wasteland2-1.0.0.4.ebuild,v 1.3 2014/09/22 19:03:24 hasufell Exp $
 
 EAPI=5
 
@@ -84,7 +84,7 @@ pkg_nofetch() {
 	einfo "download \"${SRC_URI}\""
 	einfo "and move/link it to \"${DISTDIR}\""
 	einfo
-	einfo "This ebuild was tested with the CLASSICAL edition."
+	einfo "This ebuild was tested with the WASTELAND 2 DIGITAL CLASSIC EDITION."
 	einfo "If it works with the deluxe edition too, please"
 	einfo "open a bug report. If not, open a bug report too."
 	einfo

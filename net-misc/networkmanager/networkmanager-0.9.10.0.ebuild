@@ -1,22 +1,26 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.8.ebuild,v 1.13 2014/07/24 17:07:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.0.ebuild,v 1.1 2014/09/22 19:19:19 pacho Exp $
 
 EAPI="5"
+GCONF_DEBUG="no"
 GNOME_ORG_MODULE="NetworkManager"
+GNOME2_LA_PUNT="yes"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit bash-completion-r1 gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev eutils
+inherit bash-completion-r1 eutils gnome2 linux-info multilib systemd user readme.gentoo toolchain-funcs vala virtualx udev
 
 DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
-HOMEPAGE="http://projects.gnome.org/NetworkManager/"
+HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
 
 LICENSE="GPL-2+"
 SLOT="0" # add subslot if libnm-util.so.2 or libnm-glib.so.4 bumps soname version
-IUSE="avahi bluetooth connection-sharing consolekit dhclient +dhcpcd gnutls +introspection kernel_linux +nss +modemmanager +ppp resolvconf systemd test vala +wext +wifi" # wimax
+IUSE="avahi connection-sharing consolekit +dhclient dhcpcd gnutls +introspection \
+kernel_linux +nss +modemmanager ncurses +ppp resolvconf selinux systemd teamd test \
+vala +wext +wifi" # wimax
 
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64"
 
 REQUIRED_USE="
 	modemmanager? ( ppp )
@@ -29,13 +33,14 @@ REQUIRED_USE="
 # TODO: Qt support?
 COMMON_DEPEND="
 	>=sys-apps/dbus-1.2
-	>=dev-libs/dbus-glib-0.94
-	>=dev-libs/glib-2.30
-	>=dev-libs/libnl-3.2.7:3=
+	>=dev-libs/dbus-glib-0.100
+	>=dev-libs/glib-2.32:2
+	>=dev-libs/libnl-3.2.8:3=
 	>=sys-auth/polkit-0.106
+	net-libs/libndp
 	>=net-libs/libsoup-2.26:2.4=
-	virtual/libgudev:=
-	bluetooth? ( >=net-wireless/bluez-4.82 )
+	sys-libs/readline
+	>=virtual/libgudev-165:=
 	avahi? ( net-dns/avahi:=[autoipd] )
 	connection-sharing? (
 		net-dns/dnsmasq[dhcp]
@@ -44,17 +49,18 @@ COMMON_DEPEND="
 		dev-libs/libgcrypt:0=
 		net-libs/gnutls:= )
 	modemmanager? ( >=net-misc/modemmanager-0.7.991 )
+	ncurses? ( >=dev-libs/newt-0.52.15 )
 	nss? ( >=dev-libs/nss-3.11:= )
 	dhclient? ( =net-misc/dhcp-4*[client] )
 	dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.10.3 )
-	ppp? ( >=net-dialup/ppp-2.4.5[ipv6] )
+	ppp? ( >=net-dialup/ppp-2.4.5:=[ipv6] )
 	resolvconf? ( net-dns/openresolv )
 	systemd? ( >=sys-apps/systemd-183:0= )
+	teamd? ( >=net-misc/libteam-1.9 )
 	|| ( sys-power/upower sys-power/upower-pm-utils >=sys-apps/systemd-183 )
 "
 RDEPEND="${COMMON_DEPEND}
-	virtual/udev
 	consolekit? ( sys-auth/consolekit )
 	wifi? ( >=net-wireless/wpa_supplicant-0.7.3-r3[dbus] )
 "
@@ -105,30 +111,34 @@ src_prepare() {
 	DOC_CONTENTS="To modify system network connections without needing to enter the
 		root password, add your user account to the 'plugdev' group."
 
-	# Bug #402085, https://bugzilla.gnome.org/show_bug.cgi?id=387832
-	epatch "${FILESDIR}/${PN}-0.9.8.4-pre-sleep.patch"
-
 	# Use python2.7 shebangs for test scripts
 	sed -e 's@\(^#!.*python\)@\12.7@' \
 		-i */tests/*.py || die
 
-	# Fix completiondir, avoid eautoreconf, bug #465100
-	sed -i "s|^completiondir =.*|completiondir = $(get_bashcompdir)|" \
-		cli/completion/Makefile.in || die "sed completiondir failed"
-
-	## Force use of /run, avoid eautoreconf
+	# Force use of /run, avoid eautoreconf, upstream bug #737139
 	sed -e 's:$localstatedir/run/:/run/:' -i configure || die
 
 	use vala && vala_src_prepare
 
 	epatch_user # don't remove, users often want custom patches for NM
+
+	gnome2_src_prepare
 }
 
 src_configure() {
+	local myconf
+
+	# Same hack as net-dialup/pptpd to get proper plugin dir for ppp, bug #519986
+	if use ppp; then
+		local PPPD_VER=`best_version net-dialup/ppp`
+		PPPD_VER=${PPPD_VER#*/*-} #reduce it to ${PV}-${PR}
+		PPPD_VER=${PPPD_VER%%[_-]*} # main version without beta/pre/patch/revision
+		myconf="${myconf} --with-pppd-plugin-dir=/usr/$(get_libdir)/pppd/${PPPD_VER}"
+	fi
+
 	# TODO: enable wimax when we have a libnl:3 compatible revision of it
-	# We are not ready for bluez5 yet
-	econf \
-		--enable-bluez4 \
+	# wimax will be removed, bug #522822
+	gnome2_src_configure \
 		--disable-more-warnings \
 		--disable-static \
 		--localstatedir=/var \
@@ -147,21 +157,25 @@ src_configure() {
 		$(use_with dhclient) \
 		$(use_with dhcpcd) \
 		$(use_with modemmanager modem-manager-1) \
+		$(use_with ncurses nmtui) \
 		$(use_with resolvconf) \
+		$(use_with selinux) \
+		$(use_enable teamd teamdctl) \
 		$(use_enable test tests) \
 		$(use_enable vala) \
+		--without-valgrind \
 		$(use_with wext) \
-		"$(systemd_with_unitdir)"
+		"$(systemd_with_unitdir)" \
+		${myconf}
 }
 
 src_test() {
-	# bug #????
-	cp libnm-util/tests/certs/test_ca_cert.pem src/settings/plugins/ifnet/tests/ || die
 	Xemake check
 }
 
 src_install() {
-	default
+	# Install completions at proper place, bug #465100
+	gnome2_src_install completiondir="$(get_bashcompdir)"
 
 	readme.gentoo_create_doc
 
@@ -195,11 +209,10 @@ src_install() {
 	# Allow users in plugdev group to modify system connections
 	insinto /usr/share/polkit-1/rules.d/
 	doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.rules"
-
-	prune_libtool_files --modules
 }
 
 pkg_postinst() {
+	gnome2_pkg_postinst
 	readme.gentoo_print_elog
 
 	if [[ -e "${EROOT}etc/NetworkManager/nm-system-settings.conf" ]]; then
