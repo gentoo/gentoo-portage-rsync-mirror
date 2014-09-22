@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvswitch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.24 2014/08/22 04:28:25 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.25 2014/09/22 20:10:51 prometheanfire Exp $
+
+  22 Sep 2014; Matthew Thode <prometheanfire@gentoo.org>
+  openvswitch-2.3.0.ebuild:
+  fixing for python
 
 *openvswitch-2.1.3 (22 Aug 2014)
 *openvswitch-2.3.0 (22 Aug 2014)

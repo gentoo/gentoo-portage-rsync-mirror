@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.3.0.ebuild,v 1.1 2014/08/22 04:28:25 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.3.0.ebuild,v 1.2 2014/09/22 20:10:51 prometheanfire Exp $
 
 EAPI=5
 
@@ -64,7 +64,7 @@ src_configure() {
 	local linux_config
 	use modules && linux_config="--with-linux=${KV_OUT_DIR}"
 
-	econf ${linux_config} \
+	PYTHON=python2.7 econf ${linux_config} \
 		--with-rundir=/var/run/openvswitch \
 		--with-logdir=/var/log/openvswitch \
 		--with-pkidir=/etc/ssl/openvswitch \

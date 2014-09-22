@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.9-r1.ebuild,v 1.2 2014/09/14 21:57:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.9-r1.ebuild,v 1.3 2014/09/22 20:08:28 blueness Exp $
 
 EAPI="5"
 
@@ -144,11 +144,6 @@ multilib_src_configure() {
 	fi
 }
 
-multilib_src_compile() {
-	default
-	multilib_is_native_abi && use doc && emake docs
-}
-
 multilib_src_install() {
 	if multilib_is_native_abi && use savedconfig; then
 		save_config config/.config
@@ -160,7 +155,9 @@ multilib_src_install() {
 		rm -f "${ED}"/usr/$(get_libdir)/libaxtls.a || die
 	fi
 
+	# The build system needs to install before it builds docs
 	if use doc; then
+		emake docs
 		dodoc -r docsrc/html
 	fi
 }
