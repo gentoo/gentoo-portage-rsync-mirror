@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/netaddr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.24 2014/04/03 16:09:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.25 2014/09/22 21:15:25 prometheanfire Exp $
+
+*netaddr-0.7.12 (22 Sep 2014)
+
+  22 Sep 2014; Matthew Thode <prometheanfire@gentoo.org> +netaddr-0.7.12.ebuild:
+  bump of netaddr
 
   03 Apr 2014; Tim Harder <radhermit@gentoo.org> netaddr-0.7.11.ebuild:
   Drop python3_4 support until ipython has it.

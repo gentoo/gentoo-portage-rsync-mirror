@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/oslotest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslotest/ChangeLog,v 1.1 2014/08/01 05:21:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslotest/ChangeLog,v 1.2 2014/09/22 21:25:31 prometheanfire Exp $
+
+*oslotest-1.1.0 (22 Sep 2014)
+
+  22 Sep 2014; Matthew Thode <prometheanfire@gentoo.org> +oslotest-1.1.0.ebuild:
+  bup
 
 *oslotest-1.0.0 (01 Aug 2014)
 

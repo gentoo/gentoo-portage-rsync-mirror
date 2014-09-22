@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-Socket-SSL
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.209 2014/06/06 05:42:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.210 2014/09/22 21:08:07 monsieurp Exp $
+
+*IO-Socket-SSL-1.998.0 (22 Sep 2014)
+
+  22 Sep 2014;  <patrice@gentoo.org> +IO-Socket-SSL-1.998.0.ebuild:
+  Version bump to 1.998. See 519156.
 
   06 Jun 2014; Mike Frysinger <vapier@gentoo.org> IO-Socket-SSL-1.953.0.ebuild:
   Mark arm64/m68k/s390/sh stable.
