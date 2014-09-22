@@ -1,11 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.47.18.ebuild,v 1.1 2013/06/08 14:23:55 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.48.19.ebuild,v 1.1 2014/09/22 17:02:56 sping Exp $
 
 EAPI="4"
 
-AT_M4DIR='m4'
-inherit autotools eutils
+inherit eutils
 
 DESCRIPTION="HTTrack Website Copier, Open Source Offline Browser"
 HOMEPAGE="http://www.httrack.com/"
@@ -23,10 +22,7 @@ DEPEND="${RDEPEND}"
 DOCS=( AUTHORS README greetings.txt history.txt )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.44.1+zlib-1.2.5.1.patch
-	epatch "${FILESDIR}"/${PN}-3.45.4-htmldir.patch
-	epatch "${FILESDIR}"/${PN}-3.47.7-cflags.patch
-	eautoreconf
+	epatch "${FILESDIR}"/${PN}-3.48.13-minizip.patch
 }
 
 src_configure() {
