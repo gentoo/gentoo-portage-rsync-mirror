@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.8.0_pre2.ebuild,v 1.1 2014/09/02 09:53:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.8.0_rc3.ebuild,v 1.1 2014/09/22 10:25:19 jer Exp $
 
 EAPI=5
-inherit cmake-utils eutils user
+inherit cmake-utils eutils toolchain-funcs user
 
 DESCRIPTION="Yet another implementation of an HTTP proxy for Debian/Ubuntu software packages written in C++"
 HOMEPAGE="
@@ -15,16 +15,20 @@ SLOT="0"
 SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV/_/~}.orig.tar.xz"
 
 KEYWORDS=""
-IUSE="doc fuse tcpd"
+IUSE="doc fuse systemd tcpd"
 
 COMMON_DEPEND="
 	app-arch/bzip2
 	app-arch/xz-utils
 	sys-libs/zlib
+	systemd? (
+		sys-apps/systemd
+	)
 "
 DEPEND="
 	${COMMON_DEPEND}
 	dev-util/cmake
+	virtual/pkgconfig
 "
 RDEPEND="
 	${COMMON_DEPEND}
@@ -34,6 +38,16 @@ RDEPEND="
 "
 
 S=${WORKDIR}/${P/_}
+
+pkg_pretend() {
+	if [[ $(gcc-major-version) = 4 ]]; then
+		if [[ $(gcc-minor-version) -lt 8 ]]; then
+			die "GCC 4.8 or greater is required but you have $(gcc-major-version).$(gcc-minor-version)"
+		fi
+	else
+		die "GCC 4.8 or greater is required but you have $(gcc-major-version).$(gcc-minor-version)"
+	fi
+}
 
 pkg_setup() {
 	# add new user & group for daemon
