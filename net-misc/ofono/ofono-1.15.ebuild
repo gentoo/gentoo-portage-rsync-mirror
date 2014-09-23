@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-1.12.ebuild,v 1.6 2014/08/10 20:45:44 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-1.15.ebuild,v 1.1 2014/09/23 07:33:26 dlan Exp $
 
 EAPI=5
 
@@ -8,12 +8,12 @@ inherit eutils multilib systemd
 
 DESCRIPTION="Open Source mobile telephony (GSM/UMTS) daemon"
 HOMEPAGE="http://ofono.org/"
-SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm x86"
-IUSE="+atmodem bluetooth +cdmamodem +datafiles doc dundee examples +isimodem +phonesim +provision +qmimodem threads test tools +udev"
+KEYWORDS="~amd64 ~arm ~x86"
+IUSE="+atmodem bluetooth +cdmamodem +datafiles doc dundee examples +isimodem +phonesim +provision +qmimodem threads tools +udev"
 
 REQUIRED_USE="dundee? ( bluetooth )"
 
@@ -29,12 +29,6 @@ DEPEND="${RDEPEND}
 
 DOCS=( ChangeLog AUTHORS )
 
-src_prepare() {
-	default
-
-	epatch "${FILESDIR}"/${P}-sys-types.patch
-}
-
 src_configure() {
 	econf \
 		$(use_enable threads) \
@@ -49,7 +43,7 @@ src_configure() {
 		$(use_enable provision) \
 		$(use_enable qmimodem) \
 		$(use_enable tools) \
-		$(use_enable test) \
+		$(use_enable examples test) \
 		--disable-maintainer-mode \
 		--localstatedir=/var \
 		--with-systemdunitdir="$(systemd_get_unitdir)"
@@ -58,12 +52,14 @@ src_configure() {
 src_install() {
 	default
 
-	if ! use examples ; then
-		rm -rf "${D}/usr/$(get_libdir)/ofono/test" || die
-	fi
-
 	if use tools ; then
-		dobin tools/{auto-enable,huawei-audio}
+		dobin tools/auto-enable \
+			tools/huawei-audio \
+			tools/lookup-provider-name \
+			tools/lookup-apn \
+			tools/get-location \
+			tools/qmi \
+			tools/tty-redirector
 	fi
 
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}

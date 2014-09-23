@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ofono
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.61 2014/08/10 20:45:44 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.62 2014/09/23 07:33:26 dlan Exp $
+
+*ofono-1.15 (23 Sep 2014)
+
+  23 Sep 2014; Yixun Lan <dlan@gentoo.org> -ofono-1.12.ebuild,
+  +ofono-1.15.ebuild:
+  drop old, bump new, bug 523480, thanks Vadim Efimov
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ofono-1.12.ebuild,
   ofono-1.14.ebuild:
