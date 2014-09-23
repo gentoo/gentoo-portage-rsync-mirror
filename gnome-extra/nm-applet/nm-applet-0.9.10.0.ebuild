@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.8-r2.ebuild,v 1.2 2014/07/24 18:10:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.10.0.ebuild,v 1.1 2014/09/23 11:56:02 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 GNOME_ORG_MODULE="network-manager-applet"
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="GNOME applet for NetworkManager"
 HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
@@ -15,19 +15,19 @@ HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="bluetooth gconf +introspection modemmanager"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS=" ~amd64 ~x86"
 
 RDEPEND="
 	app-crypt/libsecret
-	>=dev-libs/glib-2.26:2
+	>=dev-libs/glib-2.32:2
 	>=dev-libs/dbus-glib-0.88
 	>=sys-apps/dbus-1.4.1
 	>=sys-auth/polkit-0.96-r1
-	>=x11-libs/gtk+-3:3[introspection?]
+	>=x11-libs/gtk+-3.4:3[introspection?]
 	>=x11-libs/libnotify-0.7.0
 
 	app-text/iso-codes
-	>=net-misc/networkmanager-0.9.8[introspection?]
+	>=net-misc/networkmanager-0.9.9.95[introspection?]
 	net-misc/mobile-broadband-provider-info
 
 	bluetooth? ( >=net-wireless/gnome-bluetooth-2.27.6:= )
@@ -47,7 +47,6 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	gnome2_src_configure \
-		--with-gtkver=3 \
 		--disable-more-warnings \
 		--disable-static \
 		--localstatedir=/var \
@@ -55,12 +54,4 @@ src_configure() {
 		$(use_enable gconf migration) \
 		$(use_enable introspection) \
 		$(use_with modemmanager modem-manager-1)
-}
-
-src_prepare() {
-	# Revert "libnm-gtk: default to system CA certificates for validation for new connections"
-	# bug #497296 (from 'master')
-	epatch "${FILESDIR}/${PN}-0.9.8.8-revert-ca-certificates.patch"
-
-	gnome2_src_prepare
 }
