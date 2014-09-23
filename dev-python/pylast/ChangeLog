@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylast
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylast/ChangeLog,v 1.6 2014/03/22 18:57:49 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylast/ChangeLog,v 1.7 2014/09/23 14:55:02 idella4 Exp $
+
+*pylast-1.0.0 (23 Sep 2014)
+
+  23 Sep 2014; Ian Delaney <idella4@gentoo.org> +pylast-1.0.0.ebuild:
+  bump; add py3.4 pypy support
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org> -pylast-0.5.11.ebuild:
   Remove old.
