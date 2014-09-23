@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.124 2014/09/22 22:13:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.125 2014/09/23 05:48:31 polynomial-c Exp $
+
+  23 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> Manifest:
+  Recreated source tarball without symlinks to auto* tools. Thanks to Mikael
+  Magnusson who reported this issue in bug #523496.
 
 *procps-3.3.10 (22 Sep 2014)
 
