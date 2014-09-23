@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9394 2014/09/21 21:39:04 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9396 2014/09/22 23:07:33 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Sep 2014; Julian Ospald <hasufell@gentoo.org> license_groups:
+  clean up obsolete ArxFatalis-EULA-GOG entry
+
+  22 Sep 2014; Julian Ospald <hasufell@gentoo.org> license_groups:
+  add GOG-EULA to EULA license group
 
   21 Sep 2014; Julian Ospald <hasufell@gentoo.org>
   hardened/linux/amd64/no-multilib/package.mask:

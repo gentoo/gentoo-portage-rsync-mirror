@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/arx-fatalis-data
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-data/ChangeLog,v 1.7 2013/07/06 21:40:22 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-data/ChangeLog,v 1.8 2014/09/22 23:05:00 hasufell Exp $
+
+  22 Sep 2014; Julian Ospald <hasufell@gentoo.org>
+  arx-fatalis-data-1.21-r2.ebuild:
+  update license to more generic GOG-EULA
 
   06 Jul 2013; Julian Ospald <hasufell@gentoo.org>
   arx-fatalis-data-1.21-r2.ebuild:

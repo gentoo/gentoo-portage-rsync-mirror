@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/duke3d-data-1.0-r1.ebuild,v 1.4 2014/04/18 12:27:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/duke3d-data-1.0-r1.ebuild,v 1.5 2014/09/22 23:10:20 hasufell Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ DESCRIPTION="Duke Nukem 3D data files"
 HOMEPAGE="http://www.3drealms.com/"
 SRC_URI="gog? ( setup_duke3d_2.0.0.84.exe )"
 
-LICENSE="DUKE3D"
+LICENSE="DUKE3D gog? ( GOG-EULA )"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="gog"

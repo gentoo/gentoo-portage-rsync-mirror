@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wasteland2/wasteland2-1.0.0.4.ebuild,v 1.3 2014/09/22 19:03:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wasteland2/wasteland2-1.0.0.4.ebuild,v 1.4 2014/09/22 23:11:55 hasufell Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="Direct sequel to 1988's Wasteland, the first-ever post-apocalyptic 
 HOMEPAGE="https://wasteland.inxile-entertainment.com/"
 SRC_URI="gog_wasteland_2_${PV}.tar.gz"
 
-LICENSE="all-rights-reserved"
+LICENSE="all-rights-reserved GOG-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

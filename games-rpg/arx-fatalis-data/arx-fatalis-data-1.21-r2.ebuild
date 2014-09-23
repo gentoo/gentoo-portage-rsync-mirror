@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-data/arx-fatalis-data-1.21-r2.ebuild,v 1.2 2013/07/06 21:40:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-data/arx-fatalis-data-1.21-r2.ebuild,v 1.3 2014/09/22 23:05:00 hasufell Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.arkane-studios.com/uk/arx.php"
 SRC_URI="cdinstall? ( http://download.zenimax.com/arxfatalis/patches/1.21/ArxFatalis_1.21_MULTILANG.exe )
 	gog? ( setup_arx_fatalis.exe )"
 
-LICENSE="cdinstall? ( ArxFatalis-EULA-JoWooD ) gog? ( ArxFatalis-EULA-GOG )"
+LICENSE="cdinstall? ( ArxFatalis-EULA-JoWooD ) gog? ( GOG-EULA )"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="gog"
