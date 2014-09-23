@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-BigRat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigRat/ChangeLog,v 1.9 2014/09/22 10:11:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigRat/ChangeLog,v 1.10 2014/09/23 09:57:51 ago Exp $
+
+  23 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  perl-Math-BigRat-0.260.400.ebuild:
+  Stable for sparc, wrt bug #504786
 
   22 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   perl-Math-BigRat-0.260.400.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-parent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.36 2014/09/22 09:59:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.37 2014/09/23 09:58:47 ago Exp $
+
+  23 Sep 2014; Agostino Sarubbo <ago@gentoo.org> perl-parent-0.225.0-r4.ebuild:
+  Stable for sparc, wrt bug #504786
 
   22 Sep 2014; Agostino Sarubbo <ago@gentoo.org> perl-parent-0.225.0-r4.ebuild:
   Stable for ia64, wrt bug #504786

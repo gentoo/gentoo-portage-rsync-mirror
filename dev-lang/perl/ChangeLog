@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.434 2014/09/22 10:10:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.435 2014/09/23 09:56:39 ago Exp $
+
+  23 Sep 2014; Agostino Sarubbo <ago@gentoo.org> perl-5.18.2-r1.ebuild:
+  Stable for sparc, wrt bug #504786
 
   22 Sep 2014; Agostino Sarubbo <ago@gentoo.org> perl-5.18.2-r1.ebuild:
   Stable for x86, wrt bug #504786

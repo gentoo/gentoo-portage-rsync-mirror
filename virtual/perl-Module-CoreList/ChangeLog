@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-CoreList
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.100 2014/09/22 10:11:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.101 2014/09/23 09:57:57 ago Exp $
+
+  23 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  perl-Module-CoreList-3.30.0.ebuild:
+  Stable for sparc, wrt bug #504786
 
   22 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   perl-Module-CoreList-3.30.0.ebuild:

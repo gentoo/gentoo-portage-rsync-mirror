@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Socket
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.19 2014/09/22 09:58:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.20 2014/09/23 09:58:21 ago Exp $
+
+  23 Sep 2014; Agostino Sarubbo <ago@gentoo.org> perl-Socket-2.9.0-r2.ebuild:
+  Stable for sparc, wrt bug #504786
 
   22 Sep 2014; Agostino Sarubbo <ago@gentoo.org> perl-Socket-2.9.0-r2.ebuild:
   Stable for ia64, wrt bug #504786

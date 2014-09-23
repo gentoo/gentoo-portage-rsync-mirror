@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Thread-Queue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Queue/ChangeLog,v 1.15 2014/09/22 10:12:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Queue/ChangeLog,v 1.16 2014/09/23 09:58:31 ago Exp $
+
+  23 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
+  perl-Thread-Queue-3.20.0-r1.ebuild:
+  Stable for sparc, wrt bug #504786
 
   22 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   perl-Thread-Queue-3.20.0-r1.ebuild:
