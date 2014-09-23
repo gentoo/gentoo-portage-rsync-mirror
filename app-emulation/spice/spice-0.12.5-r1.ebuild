@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.5-r1.ebuild,v 1.2 2014/08/11 20:57:06 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.5-r1.ebuild,v 1.3 2014/09/23 07:18:23 dev-zero Exp $
 
 EAPI=5
 
@@ -22,12 +22,12 @@ IUSE="client sasl smartcard static-libs" # static
 RDEPEND=">=x11-libs/pixman-0.17.7[static-libs(+)?]
 	>=dev-libs/glib-2.22:2[static-libs(+)?]
 	>=media-libs/celt-0.5.1.1:0.5.1[static-libs(+)?]
+	media-libs/opus[static-libs(+)?]
 	dev-libs/openssl[static-libs(+)?]
 	virtual/jpeg[static-libs(+)?]
 	sys-libs/zlib[static-libs(+)?]
 	sasl? ( dev-libs/cyrus-sasl[static-libs(+)?] )
 	client? (
-		media-libs/opus[static-libs(+)?]
 		media-libs/alsa-lib
 		>=x11-libs/libXrandr-1.2
 		x11-libs/libX11
