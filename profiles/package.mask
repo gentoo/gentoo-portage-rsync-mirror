@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16049 2014/09/23 11:51:30 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16050 2014/09/23 13:04:59 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -362,76 +362,6 @@ sci-physics/camfr
 # Vulnerable: IBM Java SE 5.0 SR12-FP5
 # URL:        http://www.securityfocus.com/bid/53959/
 dev-java/ibm-jdk-bin:1.5
-
-# Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
-# Masked for testing, will defenitely cause major breakage
-# Single modules with 5.20 versions added here too -dilfridge
-=dev-lang/perl-5.20*
-=virtual/perl-Archive-Tar-1.960.0
-=virtual/perl-Attribute-Handlers-0.960.0
-=virtual/perl-AutoLoader-5.740.0
-=virtual/perl-B-Debug-1.190.0
-=virtual/perl-CGI-3.650.0
-=virtual/perl-CPAN-2.0.5
-=virtual/perl-CPAN-Meta-2.140.640
-=virtual/perl-CPAN-Meta-YAML-0.12.0
-=virtual/perl-Carp-1.330.100
-=virtual/perl-Compress-Raw-Bzip2-2.64.0
-=virtual/perl-Compress-Raw-Zlib-2.65.0
-=virtual/perl-DB_File-1.831.0
-=virtual/perl-Data-Dumper-2.151.0
-=virtual/perl-Devel-PPPort-3.210.0
-=virtual/perl-Digest-SHA-5.880.0
-=virtual/perl-Encode-2.600.0
-=virtual/perl-Exporter-5.700.0
-=virtual/perl-Exporter-5.710.0
-=virtual/perl-ExtUtils-CBuilder-0.280.216
-=virtual/perl-ExtUtils-CBuilder-0.280.217
-=virtual/perl-ExtUtils-Install-1.670.0
-=virtual/perl-ExtUtils-MakeMaker-6.980.0
-=virtual/perl-ExtUtils-ParseXS-3.240.0
-=virtual/perl-File-Spec-3.470.0
-=virtual/perl-File-Spec-3.480.0
-=virtual/perl-Filter-Simple-0.910.0
-=virtual/perl-HTTP-Tiny-0.43.0
-=virtual/perl-IO-1.310.0
-=virtual/perl-IO-Compress-2.64.0
-=virtual/perl-IPC-Cmd-0.920.0
-=virtual/perl-JSON-PP-2.272.30
-=virtual/perl-Math-BigInt-FastCalc-0.310.0
-=virtual/perl-Math-BigRat-0.260.600
-=virtual/perl-Module-Build-0.420.500
-=virtual/perl-Module-CoreList-3.100.0
-=virtual/perl-Module-CoreList-5.20.1
-=virtual/perl-Module-Load-0.320.0
-=virtual/perl-Module-Load-Conditional-0.620.0
-=virtual/perl-Module-Metadata-1.0.19
-=virtual/perl-Package-Constants-0.40.0
-=virtual/perl-Parse-CPAN-Meta-1.441.400
-=virtual/perl-Perl-OSType-1.7.0
-=virtual/perl-Pod-Escapes-1.60.0
-=virtual/perl-Pod-Parser-1.620.0
-=virtual/perl-Safe-2.370.0
-=virtual/perl-Scalar-List-Utils-1.380.0
-=virtual/perl-Socket-2.13.0
-=virtual/perl-Storable-2.490.0
-=virtual/perl-Test-Harness-3.330.0
-=virtual/perl-Test-Simple-1.1.2
-=virtual/perl-Thread-Queue-3.50.0
-=virtual/perl-Time-Piece-1.270.0
-=virtual/perl-XSLoader-0.170.0
-=virtual/perl-autodie-2.230.0
-=virtual/perl-bignum-0.370.0
-=virtual/perl-i18n-langtags-0.400.0
-=virtual/perl-I18N-LangTags-0.400.0
-=virtual/perl-if-0.60.300
-=virtual/perl-locale-maketext-1.250.0
-=virtual/perl-Locale-Maketext-1.250.0
-=virtual/perl-net-ping-2.430.0
-=virtual/perl-Net-Ping-2.430.0
-=virtual/perl-threads-1.930.0
-=virtual/perl-threads-shared-1.460.0
-=virtual/perl-version-0.990.900
 
 # Ryan Hill <rhill@gentoo.org> (22 May 2014)
 # Big API break.  Masked until something needs it.

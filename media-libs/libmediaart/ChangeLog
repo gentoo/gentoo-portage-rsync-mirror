@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmediaart
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/ChangeLog,v 1.9 2014/09/15 08:21:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/ChangeLog,v 1.10 2014/09/23 13:17:52 pacho Exp $
+
+*libmediaart-0.7.0 (23 Sep 2014)
+
+  23 Sep 2014; Pacho Ramos <pacho@gentoo.org> +libmediaart-0.7.0.ebuild:
+  Version bump
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> libmediaart-0.4.0.ebuild:
   Stable for sparc, wrt bug #512012
