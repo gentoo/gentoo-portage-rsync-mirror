@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.9999.ebuild,v 1.6 2014/08/10 20:20:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.9999.ebuild,v 1.7 2014/09/23 00:54:59 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,8 +14,8 @@ EGIT_BRANCH="stable/icehouse"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
-IUSE="+dhcp doc +l3 +metadata +openvswitch +server test sqlite mysql postgres"
+KEYWORDS="~amd64 ~x86"
+IUSE="dhcp doc l3 metadata openvswitch linuxbridge server test sqlite mysql postgres"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 #the cliff dep is as below because it depends on pyparsing, which only has 2.7 OR 3.2, not both
@@ -84,7 +84,9 @@ RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		openvswitch? ( net-misc/openvswitch )
 		dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
 
-PATCHES=( "${FILESDIR}/sphinx_mapping.patch" )
+PATCHES=(
+	"${FILESDIR}/sphinx_mapping.patch"
+)
 
 pkg_setup() {
 	enewgroup neutron
@@ -123,39 +125,58 @@ python_test() {
 
 python_install() {
 	distutils-r1_python_install
-	newconfd "${FILESDIR}/neutron-confd" "neutron"
-	newinitd "${FILESDIR}/neutron-initd" "neutron"
-
-	use server && dosym /etc/init.d/neutron /etc/init.d/neutron-server
-	use dhcp && dosym /etc/init.d/neutron /etc/init.d/neutron-dhcp-agent
-	use l3 && dosym /etc/init.d/neutron /etc/init.d/neutron-l3-agent
-	use metadata && dosym /etc/init.d/neutron /etc/init.d/neutron-metadata-agent
-	use openvswitch && dosym /etc/init.d/neutron /etc/init.d/neutron-openvswitch-agent
-
-	diropts -m 750
-	dodir /var/log/neutron /var/log/neutron
-	fowners neutron:neutron /var/log/neutron
+	if use server; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-server"
+		newconfd "${FILESDIR}/neutron-server.confd" "neutron-server"
+		dosym /etc/neutron/plugin.ini /etc/neutron/plugins/ml2/ml2_conf.ini
+	fi
+	if use dhcp; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-dhcp-agent"
+		newconfd "${FILESDIR}/neutron-dhcp-agent.confd" "neutron-dhcp-agent"
+	fi
+	if use l3; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-l3-agent"
+		newconfd "${FILESDIR}/neutron-l3-agent.confd" "neutron-l3-agent"
+	fi
+	if use metadata; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-metadata-agent"
+		newconfd "${FILESDIR}/neutron-metadata-agent.confd" "neutron-metadata-agent"
+	fi
+	if use openvswitch; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-openvswitch-agent"
+		newconfd "${FILESDIR}/neutron-openvswitch-agent.confd" "neutron-openvswitch-agent"
+		newinitd "${FILESDIR}/neutron.initd" "neutron-ovs-cleanup"
+		newconfd "${FILESDIR}/neutron-openvswitch-agent.confd" "neutron-ovs-cleanup"
+	fi
+	if use linuxbridge; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-linuxbridge-agent"
+		newconfd "${FILESDIR}/neutron-linuxbridge-agent.confd" "neutron-linuxbridge-agent"
+	fi
+	diropts -m 755 -o neutron -g neutron
+	dodir /var/log/neutron /var/lib/neutron
 	keepdir /etc/neutron
 	insinto /etc/neutron
+	insopts -m 0640 -o neutron -g neutron
 
-	doins "etc/api-paste.ini"
-	doins "etc/dhcp_agent.ini"
-	doins "etc/l3_agent.ini"
-	doins "etc/policy.json"
-	doins "etc/neutron.conf"
+	doins etc/*
+	# stupid renames
+	rm "${D}etc/neutron/quantum"
+	insinto /etc/neutron
+	doins -r "etc/neutron/plugins"
+	insopts -m 0640 -o root -g root
 	doins "etc/rootwrap.conf"
-	insinto /etc
-	doins -r "etc/neutron/"
-
-	#remove the etc stuff from usr...
-	rm -R "${D}/usr/etc/"
+	doins -r "etc/neutron/rootwrap.d"
 
 	insinto "/usr/lib64/python2.7/site-packages/neutron/db/migration/alembic_migrations/"
 	doins -r "neutron/db/migration/alembic_migrations/versions"
 
 	#add sudoers definitions for user neutron
 	insinto /etc/sudoers.d/
-	doins "${FILESDIR}/neutron-sudoers"
+	insopts -m 0440 -o root -g root
+	newins "${FILESDIR}/neutron.sudoersd" neutron
+
+	#remove superfluous stuff 
+	rm -R "${D}/usr/etc/"
 }
 
 python_install_all() {

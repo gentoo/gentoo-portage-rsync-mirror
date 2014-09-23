@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.2.ebuild,v 1.1 2014/08/21 20:44:22 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.2-r1.ebuild,v 1.1 2014/09/23 00:54:59 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -156,18 +156,12 @@ python_install() {
 	keepdir /etc/neutron
 	insinto /etc/neutron
 	insopts -m 0640 -o neutron -g neutron
-	doins "etc/neutron.conf"
-	doins "etc/api-paste.ini"
-	doins "etc/dhcp_agent.ini"
-	doins "etc/fwaas_driver.ini"
-	doins "etc/l3_agent.ini"
-	doins "etc/lbaas_agent.ini"
-	doins "etc/metadata_agent.ini"
-	doins "etc/metering_agent.ini"
-	doins "etc/policy.json"
-	doins "etc/vpn_agent.ini"
-	doins -r "etc/neutron/plugins"
 
+	doins etc/*
+	# stupid renames
+	rm "${D}etc/neutron/quantum"
+	insinto /etc/neutron
+	doins -r "etc/neutron/plugins"
 	insopts -m 0640 -o root -g root
 	doins "etc/rootwrap.conf"
 	doins -r "etc/neutron/rootwrap.d"
