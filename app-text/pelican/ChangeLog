@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pelican
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.18 2014/08/10 18:28:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.19 2014/09/23 19:11:47 djc Exp $
+
+  23 Sep 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python, not a python library
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pelican-3.2.2.ebuild,
   pelican-3.3.ebuild, pelican-3.4.0.ebuild:

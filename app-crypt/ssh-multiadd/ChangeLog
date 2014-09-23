@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ssh-multiadd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ChangeLog,v 1.22 2013/01/22 17:25:07 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ChangeLog,v 1.23 2014/09/23 19:05:35 djc Exp $
+
+  23 Sep 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python, not a python library
 
   22 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ssh-multiadd-1.3.2.ebuild:
   Stable for x86, wrt bug #450182

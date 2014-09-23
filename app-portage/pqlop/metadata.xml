@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>proxy-maintainers</herd>
-<herd>python</herd>
 <maintainer>
 	<email>lk4d4@yandex.ru</email>
 	<name>Alexandr Morozov</name>

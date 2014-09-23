@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>tex</herd>
-<herd>python</herd>
 <longdescription lang='en'>
   Pybliographer is a tool for managing bibliographic databases, with
   the following features:

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/subliminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subliminal/ChangeLog,v 1.6 2014/07/06 12:53:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subliminal/ChangeLog,v 1.7 2014/09/23 19:30:00 floppym Exp $
+
+  23 Sep 2014; Mike Gilbert <floppym@gentoo.org> -subliminal-0.6.3.ebuild,
+  -subliminal-0.7.3.ebuild:
+  Remove old.
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> subliminal-0.6.3.ebuild,
   subliminal-0.7.3.ebuild, subliminal-0.7.4.ebuild, subliminal-9999.ebuild:

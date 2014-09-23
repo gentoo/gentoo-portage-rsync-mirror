@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pybookreader
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pybookreader/ChangeLog,v 1.4 2012/02/25 12:01:14 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pybookreader/ChangeLog,v 1.5 2014/09/23 19:14:58 djc Exp $
+
+  23 Sep 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python, not a python library
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> pybookreader-0.5.0.ebuild:
   Restricting python
@@ -18,4 +21,3 @@
   +metadata.xml:
   Initial import.
   Initially this package was requested in bug #102086.
-
