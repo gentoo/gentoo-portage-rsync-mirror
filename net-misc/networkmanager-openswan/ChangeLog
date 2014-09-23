@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/networkmanager-openswan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/ChangeLog,v 1.24 2014/06/24 01:26:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/ChangeLog,v 1.25 2014/09/23 12:53:56 pacho Exp $
+
+*networkmanager-openswan-0.9.8.4-r1 (23 Sep 2014)
+
+  23 Sep 2014; Pacho Ramos <pacho@gentoo.org>
+  +networkmanager-openswan-0.9.8.4-r1.ebuild:
+  Apply Fedora patches to keep this working (#517654 by Tiziano Müller)
 
   24 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   networkmanager-openswan-0.9.8.4.ebuild:
