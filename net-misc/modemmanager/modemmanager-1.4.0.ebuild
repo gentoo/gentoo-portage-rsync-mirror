@@ -1,9 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-1.0.0-r2.ebuild,v 1.8 2014/09/12 19:28:47 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-1.4.0.ebuild,v 1.1 2014/09/23 12:28:41 pacho Exp $
 
 EAPI="5"
-inherit autotools eutils user multilib readme.gentoo toolchain-funcs udev virtualx
+GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
+VALA_MIN_API_VERSION="0.18"
+VALA_USE_DEPEND="vapigen"
+
+inherit gnome2 user readme.gentoo udev vala
 
 DESCRIPTION="Modem and mobile broadband management libraries"
 HOMEPAGE="http://cgit.freedesktop.org/ModemManager/ModemManager/"
@@ -11,21 +16,27 @@ SRC_URI="http://www.freedesktop.org/software/ModemManager/ModemManager-${PV}.tar
 
 LICENSE="GPL-2+"
 SLOT="0/1" # subslot = dbus interface version, i.e. N in org.freedesktop.ModemManager${N}
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
-IUSE="policykit +qmi qmi-newest"
-REQUIRED_USE="qmi-newest? ( qmi )"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="+introspection mbim policykit +qmi qmi-newest vala"
+REQUIRED_USE="
+	qmi-newest? ( qmi )
+	vala? ( introspection )
+"
 
 RDEPEND="
 	>=dev-libs/glib-2.32:2
 	virtual/libgudev:=
+	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
+	mbim? ( >=net-libs/libmbim-1.10 )
 	policykit? ( >=sys-auth/polkit-0.106[introspection] )
-	qmi? ( >=net-libs/libqmi-1.4.0:= )
+	qmi? ( >=net-libs/libqmi-1.6.0:= )
 "
 DEPEND="${RDEPEND}
 	dev-util/gdbus-codegen
 	>=dev-util/intltool-0.40
 	sys-devel/gettext
 	virtual/pkgconfig
+	vala? ( $(vala_depend) )
 "
 
 S="${WORKDIR}/ModemManager-${PV}"
@@ -40,31 +51,26 @@ src_prepare() {
 			add your user account to the 'plugdev' group."
 	fi
 
-	# Fix dbus activation file generation, bug #477710
-	epatch "${FILESDIR}/${P}-dbus-generation.patch"
-
-	# Add logging to serial port open failures (from 1.0 branch)
-	epatch "${FILESDIR}/${P}-logging-serial.patch"
-
-	epatch_user
-	eautoreconf
+	use vala && vala_src_prepare
+	gnome2_src_prepare
 }
 
 src_configure() {
-	# We don't have mbim in the tree
-	econf \
+	gnome2_src_configure \
 		--disable-more-warnings \
 		--with-udev-base-dir="$(get_udevdir)" \
 		--disable-static \
 		--with-dist-version=${PVR} \
+		$(use_enable introspection) \
+		$(use_with mbim) \
 		$(use_with policykit polkit) \
 		$(use_with qmi) \
 		$(use_with qmi-newest newest-qmi-commands) \
-		--without-mbim
+		$(use_enable vala)
 }
 
 src_install() {
-	default
+	gnome2_src_install
 
 	# Allow users in plugdev group full control over their modem
 	if use policykit; then
@@ -72,12 +78,12 @@ src_install() {
 		doins "${FILESDIR}"/01-org.freedesktop.ModemManager1.rules
 	fi
 
-	prune_libtool_files --modules
-
 	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
+	gnome2_pkg_postinst
+
 	use policykit && enewgroup plugdev
 
 	# The polkit rules file moved to /usr/share
