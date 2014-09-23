@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.9-r1.ebuild,v 1.3 2014/09/22 20:08:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.9-r1.ebuild,v 1.4 2014/09/22 23:55:41 blueness Exp $
 
 EAPI="5"
 
@@ -156,7 +156,7 @@ multilib_src_install() {
 	fi
 
 	# The build system needs to install before it builds docs
-	if use doc; then
+	if multilib_is_native_abi && use doc; then
 		emake docs
 		dodoc -r docsrc/html
 	fi
