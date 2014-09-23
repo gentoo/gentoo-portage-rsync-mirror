@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libyui-qt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libyui-qt/ChangeLog,v 1.4 2013/03/02 23:44:58 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libyui-qt/ChangeLog,v 1.5 2014/09/23 17:14:47 pinkbyte Exp $
+
+*libyui-qt-2.44.0 (23 Sep 2014)
+
+  23 Sep 2014; Sergey Popov <pinkbyte@gentoo.org> -libyui-qt-2.21.1.ebuild,
+  +libyui-qt-2.44.0.ebuild:
+  QA: Version bump, drop old, wrt bug #470860
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> libyui-qt-2.21.1.ebuild:
   Move Qt dependencies to the new category
