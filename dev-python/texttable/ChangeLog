@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/texttable
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/texttable/ChangeLog,v 1.1 2014/09/23 00:08:32 alunduil Exp $
+
+*texttable-0.8.1 (23 Sep 2014)
+
+  23 Sep 2014; Alex Brandt <alunduil@gentoo.org> +texttable-0.8.1.ebuild,
+  +metadata.xml:
+  new ebuild for texttable written by me
+
