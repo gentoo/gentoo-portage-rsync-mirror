@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.182 2014/09/22 11:09:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.183 2014/09/23 19:37:14 blueness Exp $
+
+  23 Sep 2014; Anthony G. Basile <blueness@gentoo.org> stunnel-5.04.ebuild:
+  Add upstream mirrors, bug #523534
 
   22 Sep 2014; Anthony G. Basile <blueness@gentoo.org> stunnel-5.03.ebuild:
   Stable amd64 and x86, bug #519400

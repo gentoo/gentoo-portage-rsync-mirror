@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-5.04.ebuild,v 1.1 2014/09/22 11:07:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-5.04.ebuild,v 1.2 2014/09/23 19:37:14 blueness Exp $
 
 EAPI="5"
 
@@ -8,7 +8,13 @@ inherit ssl-cert eutils systemd user
 
 DESCRIPTION="TLS/SSL - Port Wrapper"
 HOMEPAGE="http://www.stunnel.org/index.html"
-SRC_URI="http://www.stunnel.org/downloads/${P}.tar.gz"
+SRC_URI="http://www.stunnel.org/downloads/${P}.tar.gz
+	http://www.usenix.org.uk/mirrors/stunnel/${P}.tar.gz
+	http://ftp.nluug.nl/pub/networking/stunnel/${P}.tar.gz
+	http://www.namesdir.com/mirrors/stunnel/${P}.tar.gz
+	http://stunnel.cybermirror.org/${P}.tar.gz
+	http://mirrors.zerg.biz/stunnel/${P}.tar.gz
+	ftp://mirrors.go-parts.com/stunnel/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.73 2014/09/23 18:40:46 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.74 2014/09/23 19:38:58 floppym Exp $
+
+  23 Sep 2014; Mike Gilbert <floppym@gentoo.org>
+  -files/requests-0.12.1-setup.py.patch, -files/requests-0.13-python2.6.patch,
+  -files/requests-0.14.1-system-cacerts.patch,
+  -files/requests-0.14.1-system-libs.patch,
+  -files/requests-1.0.4-system-libs.patch,
+  -files/requests-1.1.0-system-cacerts.patch,
+  -files/requests-1.1.0-system-libs.patch, -requests-0.13.1.ebuild,
+  -requests-0.14.2-r1.ebuild:
+  More cleanup.
 
   23 Sep 2014; Dirkjan Ochtman <djc@gentoo.org> -requests-1.2.2.ebuild,
   -requests-2.0.0.ebuild, -requests-2.0.1.ebuild, -requests-2.1.0.ebuild,

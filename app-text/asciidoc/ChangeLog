@@ -1,6 +1,14 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.93 2014/03/31 20:36:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.95 2014/09/23 19:32:57 djc Exp $
+
+  23 Sep 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Add myself as a maintainer
+
+*asciidoc-8.6.9 (23 Sep 2014)
+
+  23 Sep 2014; Dirkjan Ochtman <djc@gentoo.org> +asciidoc-8.6.9.ebuild:
+  Version bump asciidoc to 8.6.9 (bug 494250)
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> asciidoc-8.6.8-r1.ebuild,
   asciidoc-9999.ebuild:
