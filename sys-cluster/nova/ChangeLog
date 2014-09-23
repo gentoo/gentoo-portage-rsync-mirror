@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.75 2014/09/22 03:55:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.76 2014/09/23 04:54:13 prometheanfire Exp $
+
+*nova-2014.1.2-r3 (23 Sep 2014)
+
+  23 Sep 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +nova-2014.1.2-r3.ebuild, -nova-2014.1.2-r2.ebuild, -nova-2014.1.2.ebuild,
+  nova-2014.1.9999.ebuild:
+  fixing perms issue on dir
 
 *nova-2014.1.2-r2 (22 Sep 2014)
 

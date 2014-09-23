@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1.2.ebuild,v 1.1 2014/08/21 20:53:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1.2-r3.ebuild,v 1.1 2014/09/23 04:54:13 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -21,7 +21,9 @@ REQUIRED_USE="|| ( mysql postgres sqlite )
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/pbr-0.6[${PYTHON_USEDEP}]
 		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
-		app-admin/sudo"
+		app-admin/sudo
+		dev-python/mox[${PYTHON_USEDEP}]
+		dev-python/fixtures[${PYTHON_USEDEP}]"
 
 RDEPEND="sqlite? (
 			>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
@@ -82,6 +84,7 @@ RDEPEND="sqlite? (
 		net-misc/rabbitmq-server
 		sys-fs/sysfsutils
 		sys-fs/multipath-tools
+		net-misc/bridge-utils
 		kvm? ( app-emulation/qemu )
 		xen? ( app-emulation/xen
 			   app-emulation/xen-tools )"
@@ -108,8 +111,9 @@ python_install() {
 	use compute && newinitd "${FILESDIR}/nova.initd" "nova-compute"
 	use novncproxy && newinitd "${FILESDIR}/nova.initd" "nova-novncproxy"
 
-	diropts -m 0750 -o nova -g nova
+	diropts -m 0750 -o nova -g qemu
 	dodir /var/log/nova /var/lib/nova/instances
+	diropts -m 0750 -o nova -g nova
 
 	insinto /etc/nova
 	insopts -m 0640 -o nova -g nova

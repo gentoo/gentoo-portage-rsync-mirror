@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1.9999.ebuild,v 1.7 2014/09/22 03:55:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1.9999.ebuild,v 1.8 2014/09/23 04:54:13 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -111,8 +111,9 @@ python_install() {
 	use compute && newinitd "${FILESDIR}/nova.initd" "nova-compute"
 	use novncproxy && newinitd "${FILESDIR}/nova.initd" "nova-novncproxy"
 
-	diropts -m 0750 -o nova -g nova
+	diropts -m 0750 -o nova -g qemu
 	dodir /var/log/nova /var/lib/nova/instances
+	diropts -m 0750 -o nova -g nova
 
 	insinto /etc/nova
 	insopts -m 0640 -o nova -g nova
