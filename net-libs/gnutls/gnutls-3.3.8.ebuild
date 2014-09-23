@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.8.ebuild,v 1.1 2014/09/19 08:45:55 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.8.ebuild,v 1.2 2014/09/23 06:39:27 alonbl Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/libtasn1-3.4[${MULTILIB_USEDEP}]
 	dane? ( >=net-dns/unbound-1.4.20[${MULTILIB_USEDEP}] )
 	guile? ( >=dev-scheme/guile-1.8[networking] )
 	nls? ( >=virtual/libintl-0-r1[${MULTILIB_USEDEP}] )
-	pkcs11? ( >=app-crypt/p11-kit-0.19.3[${MULTILIB_USEDEP}] )
+	pkcs11? ( >=app-crypt/p11-kit-0.20.7[${MULTILIB_USEDEP}] )
 	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508
