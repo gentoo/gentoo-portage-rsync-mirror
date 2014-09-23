@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/mysql-5.1.67-init.d,v 1.1 2013/01/18 01:51:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/mysql-5.1.67-init.d,v 1.2 2014/09/23 01:23:27 grknight Exp $
 
 depend() {
 	use net.lo
@@ -59,8 +59,15 @@ start() {
 	fi
 
 	if [ ! -d "${datadir}"/mysql ] ; then
-		eerror "You don't appear to have the mysql database installed yet."
-		eerror "Please run /usr/bin/mysql_install_db to have this done..."
+		# find which package is installed to report an error
+		local EROOT=$(portageq envvar EROOT)
+		local DBPKG_P=$(portageq match ${EROOT} $(portageq expand_virtual ${EROOT} virtual/mysql))
+		if [ -z ${DBPKG_P} ] ; then
+			eerror "You don't appear to have a server package installed yet."
+		else
+			eerror "You don't appear to have the mysql database installed yet."
+			eerror "Please run \`emerge --config =${DBPKG_P}\` to have this done..."
+		fi
 		return 1
 	fi
 

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/init.d-2.0,v 1.2 2014/09/15 14:17:12 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/init.d-2.0,v 1.3 2014/09/23 01:23:27 grknight Exp $
 
 extra_commands="checkconfig"
 
@@ -73,7 +73,7 @@ start() {
 		# find which package is installed to report an error
 		local EROOT=$(portageq envvar EROOT)
 		local DBPKG_P=$(portageq match ${EROOT} $(portageq expand_virtual ${EROOT} virtual/mysql))
-		if [[ -z ${DBPKG_P} ]] ; then
+		if [ -z ${DBPKG_P} ] ; then
 			eerror "You don't appear to have a server package installed yet."
 		else
 			eerror "You don't appear to have the mysql database installed yet."
@@ -139,7 +139,7 @@ checkconfig() {
 	local svc_name=$(mysql_svcname)
 	ebegin "Checking mysqld configuration for ${svc_name}"
 
-	if [ ${RC_CMD} == "checkconfig" ] ; then
+	if [ ${RC_CMD} = "checkconfig" ] ; then
 		# We are calling checkconfig specifically.  Print warnings regardless.
 		"${basedir}"/sbin/mysqld --defaults-file="${my_cnf}" --help --verbose > /dev/null
 	else
