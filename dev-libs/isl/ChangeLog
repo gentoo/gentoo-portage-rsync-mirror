@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/isl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.21 2014/08/05 15:21:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.22 2014/09/24 10:27:37 blueness Exp $
+
+  24 Sep 2014; Anthony G. Basile <blueness@gentoo.org> isl-0.11.1.ebuild,
+  isl-0.12.2.ebuild, isl-0.13.ebuild:
+  Keyword ~ppc ~ppc64
 
   05 Aug 2014; Raúl Porcel <armin76@gentoo.org> isl-0.11.1.ebuild,
   isl-0.12.2.ebuild, isl-0.13.ebuild:

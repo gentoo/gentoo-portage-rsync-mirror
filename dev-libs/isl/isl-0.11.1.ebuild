@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.11.1.ebuild,v 1.10 2014/08/05 15:21:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.11.1.ebuild,v 1.11 2014/09/24 10:27:37 blueness Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.kotnet.org/~skimo/isl/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="static-libs"
 
 RDEPEND="dev-libs/gmp"
