@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.50 2014/09/02 11:25:14 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.51 2014/09/24 00:06:19 idella4 Exp $
+
+  23 Sep 2014; Ian Delaney <idella4@gentoo.org> tornado-4.0.1.ebuild:
+  add missed dep
 
   02 Sep 2014; Ian Delaney <idella4@gentoo.org> tornado-4.0.1.ebuild:
   correction to deps

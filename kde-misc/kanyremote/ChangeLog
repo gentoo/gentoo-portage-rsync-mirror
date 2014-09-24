@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kanyremote
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.42 2014/08/25 15:07:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.43 2014/09/24 00:04:01 mrueg Exp $
+
+*kanyremote-6.3.3 (24 Sep 2014)
+
+  24 Sep 2014; Manuel Rüger <mrueg@gentoo.org> +kanyremote-6.3.3.ebuild:
+  Version bump.
 
   25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -kanyremote-6.1.ebuild,
   -kanyremote-6.2.ebuild, -kanyremote-6.3.1.ebuild, kanyremote-6.3.2.ebuild:

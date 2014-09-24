@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/d3_rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/d3_rails/ChangeLog,v 1.5 2014/07/23 00:22:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/d3_rails/ChangeLog,v 1.6 2014/09/24 00:54:11 mrueg Exp $
+
+*d3_rails-3.4.11 (24 Sep 2014)
+
+  24 Sep 2014; Manuel Rüger <mrueg@gentoo.org> +d3_rails-3.4.11.ebuild,
+  -d3_rails-3.4.8.ebuild:
+  Version bump. Cleanup old.
 
 *d3_rails-3.4.10 (23 Jul 2014)
 
