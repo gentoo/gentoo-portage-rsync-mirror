@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/ndg-httpsclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ndg-httpsclient/ChangeLog,v 1.16 2014/09/03 17:12:02 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ndg-httpsclient/ChangeLog,v 1.19 2014/09/24 09:33:33 ago Exp $
+
+  24 Sep 2014; Agostino Sarubbo <ago@gentoo.org> ndg-httpsclient-0.3.2.ebuild:
+  Stable for x86, wrt bug #513278
+
+  24 Sep 2014; Agostino Sarubbo <ago@gentoo.org> ndg-httpsclient-0.3.2.ebuild:
+  Stable for ppc64, wrt bug #513278
+
+  24 Sep 2014; Agostino Sarubbo <ago@gentoo.org> ndg-httpsclient-0.3.2.ebuild:
+  Stable for ppc, wrt bug #513278
 
   03 Sep 2014; Christoph Junghans <ottxor@gentoo.org>
   ndg-httpsclient-0.3.2.ebuild:
