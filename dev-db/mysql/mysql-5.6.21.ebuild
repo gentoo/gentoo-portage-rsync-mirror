@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.6.20-r1.ebuild,v 1.1 2014/08/30 00:53:55 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.6.21.ebuild,v 1.1 2014/09/24 03:20:19 grknight Exp $
 
 EAPI="5"
 
@@ -77,7 +77,7 @@ multilib_src_test() {
 		# false positives:
 		#
 		# main.information_schema, binlog.binlog_statement_insert_delayed,
-		# main.mysqld--help-notwin, funcs_1.is_triggers funcs_1.is_tables_mysql,
+		# funcs_1.is_triggers funcs_1.is_tables_mysql,
 		# funcs_1.is_columns_mysql, binlog.binlog_mysqlbinlog_filter,
 		# perfschema.binlog_edge_mix, perfschema.binlog_edge_stmt,
 		# mysqld--help-notwin, funcs_1.is_triggers, funcs_1.is_tables_mysql, funcs_1.is_columns_mysql
@@ -99,7 +99,6 @@ multilib_src_test() {
 			main.information_schema \
 			main.mysql_client_test \
 			main.mysqld--help-notwinfuncs_1.is_triggers \
-			mysqld--help-notwin \
 			perfschema.binlog_edge_mix \
 			perfschema.binlog_edge_stmt \
 			rpl.rpl_plugin_load \
