@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ssm-1.1.ebuild,v 1.7 2012/05/21 19:14:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ssm-1.1.ebuild,v 1.8 2014/09/24 07:37:48 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
-DEPEND=">=sci-libs/mmdb-1.23"
+DEPEND=">=sci-libs/mmdb-1.23:0"
 RDEPEND="${DEPEND}
 	!<sci-libs/ccp4-libs-6.1.3-r10"
 

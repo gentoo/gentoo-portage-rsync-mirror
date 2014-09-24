@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.144 2014/04/28 18:11:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.145 2014/09/24 07:33:47 yngwin Exp $
+
+*smplayer-14.9.0 (24 Sep 2014)
+
+  24 Sep 2014; Ben de Groot <yngwin@gentoo.org> +smplayer-14.9.0.ebuild:
+  version bump
 
   28 Apr 2014; Fabian Groffen <grobian@gentoo.org> smplayer-14.3.0.ebuild:
   Fix for Prefix, by Matthias Maier in bug #507724

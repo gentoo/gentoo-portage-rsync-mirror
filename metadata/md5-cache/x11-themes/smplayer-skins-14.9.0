@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install
+DEFINED_PHASES=install
 DESCRIPTION=Skins for SMPlayer
 EAPI=5
 HOMEPAGE=http://smplayer.sourceforge.net/
@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd
 LICENSE=CC-BY-2.5 CC-BY-SA-2.5 CC-BY-SA-3.0 GPL-2 LGPL-3
 RDEPEND=media-video/smplayer
 SLOT=0
-SRC_URI=mirror://sourceforge/smplayer/smplayer-skins-20121029.tar.bz2
-_md5_=e95a6070a0b7dfc59b1585183a3c5e2f
+SRC_URI=mirror://sourceforge/smplayer/smplayer-skins-14.9.0.tar.bz2
+_md5_=de9d36a42e8f5e184b6800a27f0bae89
