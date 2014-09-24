@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r2.ebuild,v 1.2 2014/09/16 18:07:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r2.ebuild,v 1.3 2014/09/24 21:12:02 floppym Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ if [[ ${PV} != 9999 ]]; then
 			http://dev.gentoo.org/~floppym/dist/${P}.tar.xz"
 		S=${WORKDIR}/${P%_*}
 	fi
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 	PATCHES=()
 else
 	inherit git-r3
