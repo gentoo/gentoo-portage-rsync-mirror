@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.72 2014/09/13 15:18:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.73 2014/09/24 13:01:04 kensington Exp $
 
 EAPI=5
 
@@ -45,7 +45,7 @@ GUI_RDEPEND="
 			dev-qt/qtdbus:5
 		)
 		phonon? ( media-libs/phonon[qt5] )
-		webkit? ( dev-qt/qtwebkit:5[widgets] )
+		webkit? ( dev-qt/qtwebkit:5 )
 	)
 	!qt5? (
 		dev-qt/qtgui:4
