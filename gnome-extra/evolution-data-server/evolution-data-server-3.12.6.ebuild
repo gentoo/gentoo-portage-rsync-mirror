@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.3.ebuild,v 1.1 2014/06/12 18:25:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.6.ebuild,v 1.1 2014/09/24 13:09:36 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -62,6 +62,7 @@ DEPEND="${RDEPEND}
 #	>=gnome-base/gnome-common-2
 
 # Some tests fail due to missings locales.
+# Also, dbus tests are flacky, bugs #397975 #501834
 # It looks like a nightmare to disable those for now.
 RESTRICT="test"
 
@@ -77,7 +78,7 @@ src_prepare() {
 
 	gnome2_src_prepare
 
-	# FIXME: Fix compilation flags crazyness
+	# Fix compilation flags crazyness, upstream bug #653157
 	sed 's/^\(AM_CFLAGS="\)$WARNING_FLAGS/\1/' \
 		-i configure || die "sed failed"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/otter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/otter/ChangeLog,v 1.3 2014/09/19 17:01:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/otter/ChangeLog,v 1.4 2014/09/24 13:03:58 kensington Exp $
+
+  24 Sep 2014; Michael Palimaka <kensington@gentoo.org> otter-0.9.02.ebuild,
+  otter-9999.ebuild:
+  dev-qt/qtwebkit:5 no longer has a widgets USE flag.
 
   19 Sep 2014; Jeroen Roovers <jer@gentoo.org> otter-0.9.02.ebuild,
   otter-9999.ebuild:
@@ -16,4 +20,3 @@
   13 Sep 2014; Jeroen Roovers <jer@gentoo.org> +otter-9999.ebuild,
   +metadata.xml:
   Initial commit (bug #499576).
-

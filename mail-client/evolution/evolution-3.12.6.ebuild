@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.10.4-r1.ebuild,v 1.3 2014/03/18 21:53:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.12.6.ebuild,v 1.1 2014/09/24 13:25:05 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,8 +14,8 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Evolution"
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
 LICENSE="|| ( LGPL-2 LGPL-3 ) CC-BY-SA-3.0 FDL-1.3+ OPENLDAP"
 SLOT="2.0"
-IUSE="+bogofilter crypt gstreamer highlight kerberos ldap map spamassassin ssl +weather"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+IUSE="+bogofilter crypt highlight ldap map spamassassin spell ssl +weather"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 # We need a graphical pinentry frontend to be able to ask for the GPG
 # password from inside evolution, bug 160302
@@ -23,10 +23,13 @@ PINENTRY_DEPEND="|| ( app-crypt/pinentry[gtk] app-crypt/pinentry-qt app-crypt/pi
 
 # glade-3 support is for maintainers only per configure.ac
 # pst is not mature enough and changes API/ABI frequently
+# FIXME: You need to have gnome-icon-theme or adwaita-icon-theme installed
+# (last one not yet in the tree)
 COMMON_DEPEND="
-	>=dev-libs/glib-2.34:2
+	>=app-crypt/gcr-3.4
+	>=dev-libs/glib-2.36:2
 	>=x11-libs/cairo-1.9.15:=[glib]
-	>=x11-libs/gtk+-3.4.0:3
+	>=x11-libs/gtk+-3.8.0:3
 	>=x11-libs/gdk-pixbuf-2.24:2
 	>=gnome-base/gnome-desktop-2.91.3:3=
 	>=gnome-base/gsettings-desktop-schemas-2.91.92
@@ -37,7 +40,7 @@ COMMON_DEPEND="
 	dev-libs/atk
 	>=dev-libs/dbus-glib-0.6
 	>=dev-libs/libxml2-2.7.3:2
-	>=net-libs/libsoup-gnome-2.40.3:2.4
+	>=net-libs/libsoup-2.42:2.4
 	>=x11-misc/shared-mime-info-0.22
 	>=x11-themes/gnome-icon-theme-2.30.2.1
 	>=dev-libs/libgdata-0.10:=
@@ -56,10 +59,7 @@ COMMON_DEPEND="
 		>=media-libs/clutter-gtk-0.90:1.0
 		>=sci-geosciences/geocode-glib-3.10.0
 		x11-libs/mx:1.0 )
-	gstreamer? (
-		media-libs/gstreamer:1.0
-		media-libs/gst-plugins-base:1.0 )
-	kerberos? ( virtual/krb5:= )
+	spell? ( app-text/gtkspell:3 )
 	ldap? ( >=net-nds/openldap-2:= )
 	ssl? (
 		>=dev-libs/nspr-4.6.1:=
@@ -95,25 +95,14 @@ x-scheme-handler/https=firefox.desktop
 file from /usr/share/applications if you use a different browser)."
 
 src_prepare() {
-	# Reason?
+	# Fix relink issues in src_install
 	ELTCONF="--reverse-deps"
-
-	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
-
-	# Run EMailFormatter in the main/UI thread (from 3.8 branch)
-	epatch "${FILESDIR}/${P}-main-ui.patch"
-
-	# NNTP Messages are silently dropped from Outbox (from 3.8 branch)
-	epatch "${FILESDIR}/${P}-nntp-outbox.patch"
-
-	# Crash creating a new folder (from 3.8 branch)
-	epatch "${FILESDIR}/${P}-imap-crash.patch"
 
 	#eautoreconf # See https://bugzilla.gnome.org/701904
 
 	gnome2_src_prepare
 
-	# Fix compilation flags crazyness
+	# Fix compilation flags crazyness, upstream bug #653157
 	sed -e 's/\(AM_CPPFLAGS="\)$WARNING_FLAGS/\1/' \
 		-i configure || die "CPPFLAGS sed failed"
 }
@@ -126,14 +115,14 @@ src_configure() {
 		--disable-image-inline \
 		--disable-pst-import \
 		--enable-canberra \
+		--enable-gnome-desktop \
 		$(use_enable bogofilter) \
-		$(use_enable gstreamer audio-inline) \
 		$(use_enable highlight text-highlight) \
 		$(use_enable map contact-maps) \
 		$(use_enable spamassassin) \
+		$(use_enable spell gtkspell) \
 		$(use_enable ssl nss) \
 		$(use_enable ssl smime) \
-		$(use_with kerberos krb5 "${EPREFIX}"/usr) \
 		$(use_with ldap openldap) \
 		$(usex ssl --enable-nss=yes "--without-nspr-libs
 			--without-nspr-includes
@@ -144,7 +133,17 @@ src_configure() {
 }
 
 src_install() {
+	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
+
 	gnome2_src_install
+
+	# Problems with prelink:
+	# https://bugzilla.gnome.org/show_bug.cgi?id=731680
+	# https://bugzilla.gnome.org/show_bug.cgi?id=732148
+	# https://bugzilla.redhat.com/show_bug.cgi?id=1114538
+	echo PRELINK_PATH_MASK=/usr/bin/evolution > ${T}/99${PN}
+	doenvd "${T}"/99${PN}
+
 	readme.gentoo_create_doc
 }
 
