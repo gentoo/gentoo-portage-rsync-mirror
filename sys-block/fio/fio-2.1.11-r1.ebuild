@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.11-r1.ebuild,v 1.3 2014/09/07 17:42:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.11-r1.ebuild,v 1.4 2014/09/24 19:48:36 maekke Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,7 @@ SRC_URI="http://brick.kernel.dk/snaps/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="aio glusterfs gnuplot gtk numa rbd zlib"
 
 DEPEND="aio? ( dev-libs/libaio )

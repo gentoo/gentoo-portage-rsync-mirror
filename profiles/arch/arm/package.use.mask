@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.217 2014/09/13 12:14:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.218 2014/09/24 19:47:53 maekke Exp $
+
+# Markus Meier <maekke@gentoo.org> (24 Sep 2014)
+# Unkeyworded deps, bug #519618
+sys-block/fio glusterfs rbd
 
 # Rick Farina <zerochaos@gentoo.org> (27 Jul 2014)
 # net-misc/dahdi doesn't build

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r5.ebuild,v 1.9 2014/09/23 10:03:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r5.ebuild,v 1.10 2014/09/24 19:39:16 maekke Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://apache/spamassassin/source/${MY_P}.tar.bz2"
 
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 # need keyword request for Mail-SPF ppc ppc64
 IUSE="berkdb qmail ssl doc ldap mysql postgres sqlite ipv6"
 
