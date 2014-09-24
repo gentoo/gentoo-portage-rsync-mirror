@@ -1,6 +1,21 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.380 2014/09/09 15:59:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.381 2014/09/24 14:01:55 polynomial-c Exp $
+
+*bash-4.3_p24-r2 (24 Sep 2014)
+*bash-4.2_p47-r1 (24 Sep 2014)
+*bash-4.1_p11-r1 (24 Sep 2014)
+*bash-4.0_p38-r1 (24 Sep 2014)
+*bash-3.2_p51-r1 (24 Sep 2014)
+*bash-3.1_p17-r1 (24 Sep 2014)
+
+  24 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> +bash-3.1_p17-r1.ebuild,
+  +bash-3.2_p51-r1.ebuild, +bash-4.0_p38-r1.ebuild, +bash-4.1_p11-r1.ebuild,
+  +bash-4.2_p47-r1.ebuild, -bash-4.3_p24.ebuild, -bash-4.3_p24-r1.ebuild,
+  +bash-4.3_p24-r2.ebuild, +files/bash-3.1-funcdef-import.patch,
+  +files/bash-4.3-funcdef-import.patch:
+  Security bump (bug #523592). Fixed environment handling command injection
+  (CVE-2014-6271).
 
 *bash-4.3_p24-r1 (09 Sep 2014)
 
