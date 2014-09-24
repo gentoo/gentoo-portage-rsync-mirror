@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/samtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.18 2014/09/20 19:39:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.19 2014/09/24 08:12:27 jlec Exp $
+
+  24 Sep 2014; Justin Lecher <jlec@gentoo.org> samtools-1.0.ebuild:
+  Add missing build dep, #523586
 
 *samtools-1.0 (20 Sep 2014)
 
