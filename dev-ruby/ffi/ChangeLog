@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.74 2014/09/19 09:28:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.75 2014/09/24 06:47:06 graaff Exp $
+
+*ffi-1.9.4 (24 Sep 2014)
+
+  24 Sep 2014; Hans de Graaff <graaff@gentoo.org> +ffi-1.9.4.ebuild:
+  Version bump.
 
   19 Sep 2014; Jeroen Roovers <jer@gentoo.org> ffi-1.9.3.ebuild:
   Stable for HPPA (bug #523186).

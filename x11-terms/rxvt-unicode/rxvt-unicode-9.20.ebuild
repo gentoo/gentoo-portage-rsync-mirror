@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.20.ebuild,v 1.11 2014/06/28 13:18:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.20.ebuild,v 1.12 2014/09/24 07:00:49 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="rxvt clone with xft and unicode support"
@@ -22,7 +22,7 @@ RDEPEND="
 	>=sys-libs/ncurses-5.7-r6
 	kernel_Darwin? ( dev-perl/Mac-Pasteboard )
 	media-libs/fontconfig
-	perl? ( dev-lang/perl )
+	perl? ( dev-lang/perl:= )
 	pixbuf? ( x11-libs/gdk-pixbuf x11-libs/gtk+:2 )
 	startup-notification? ( x11-libs/startup-notification )
 	x11-libs/libX11
