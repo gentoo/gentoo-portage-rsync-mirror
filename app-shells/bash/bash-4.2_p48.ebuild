@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p47-r1.ebuild,v 1.2 2014/09/24 15:29:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p48.ebuild,v 1.1 2014/09/24 17:23:53 polynomial-c Exp $
 
 EAPI="4"
 
@@ -84,7 +84,6 @@ src_prepare() {
 	if ! use vanilla ; then
 		epatch "${FILESDIR}"/${PN}-4.2-speed-up-read-N.patch
 	fi
-	epatch "${FILESDIR}"/${PN}-3.1-funcdef-import.patch
 
 	epatch_user
 }
