@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.66 2014/07/11 08:50:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.67 2014/09/24 13:35:00 grozin Exp $
+
+*gcl-2.6.11 (24 Sep 2014)
+
+  24 Sep 2014; Andrey Grozin <grozin@gentoo.org> +gcl-2.6.11.ebuild:
+  Version bump
 
   11 Jul 2014; Patrick Lauer <patrick@gentoo.org> gcl-2.6.10.ebuild:
   Stable on amd64 #511170
