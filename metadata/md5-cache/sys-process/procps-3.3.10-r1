@@ -3,11 +3,11 @@ DEPEND=!<sys-apps/sysvinit-2.88-r6 ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?
 DESCRIPTION=standard informational utilities and process-handling tools
 EAPI=4
 HOMEPAGE=http://procps.sourceforge.net/ http://gitorious.org/procps
-IUSE=+ncurses nls selinux static-libs systemd test unicode
+IUSE=+ncurses modern-top nls selinux static-libs systemd test unicode
 KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=!<sys-apps/sysvinit-2.88-r6 ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?] ) selinux? ( sys-libs/libselinux ) systemd? ( >=sys-apps/systemd-209 )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~polynomial-c/procps-ng-3.3.10.tar.xz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=70d1f08532a3028b50d80f6c13655e9e
+_md5_=d11951abad854e1661e6abc8f47a1450
