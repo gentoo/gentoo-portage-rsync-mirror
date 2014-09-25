@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/sfc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/ChangeLog,v 1.18 2014/08/10 21:11:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/ChangeLog,v 1.21 2014/09/25 07:03:15 pinkbyte Exp $
+
+  25 Sep 2014; Sergey Popov <pinkbyte@gentoo.org> -sfc-0.016.ebuild:
+  Drop old
+
+  25 Sep 2014; Sergey Popov <pinkbyte@gentoo.org> sfc-0.018-r1.ebuild:
+  Stable on amd64 and x86, wrt bug #518778
+
+*sfc-0.018-r1 (25 Sep 2014)
+
+  25 Sep 2014; Sergey Popov <pinkbyte@gentoo.org> -sfc-0.018.ebuild,
+  +sfc-0.018-r1.ebuild:
+  Revision bump: EAPI 5, epatch_user, add missing die to sed call
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sfc-0.016.ebuild,
   sfc-0.018.ebuild:
