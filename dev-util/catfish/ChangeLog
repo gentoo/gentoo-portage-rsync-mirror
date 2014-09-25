@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/catfish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/ChangeLog,v 1.21 2014/08/24 07:52:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/ChangeLog,v 1.22 2014/09/25 11:33:37 jer Exp $
+
+*catfish-1.2.2 (25 Sep 2014)
+
+  25 Sep 2014; Jeroen Roovers <jer@gentoo.org> +catfish-1.2.2.ebuild:
+  Version bump.
 
   24 Aug 2014; Jeroen Roovers <jer@gentoo.org> catfish-1.0.2.ebuild,
   catfish-1.2.1.ebuild:
