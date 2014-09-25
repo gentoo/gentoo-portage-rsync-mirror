@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/treq
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/treq/ChangeLog,v 1.3 2014/09/25 20:00:35 ryao Exp $
+
+  25 Sep 2014; Richard Yao <ryao@gentoo.org> treq-0.2.1.ebuild:
+  Arfrever pointed out that we need setuptools in RDEPEND
+
+*treq-0.2.1 (25 Sep 2014)
+
+  25 Sep 2014; Richard Yao <ryao@gentoo.org> +metadata.xml, +treq-0.2.1.ebuild:
+  New package dev-python/treq; Thanks goes to Arfrever for doing ebuild review
