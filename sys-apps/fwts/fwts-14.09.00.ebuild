@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwts/fwts-14.05.00.ebuild,v 1.1 2014/05/07 22:05:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwts/fwts-14.09.00.ebuild,v 1.1 2014/09/25 00:29:23 mrueg Exp $
 
 EAPI=5
 
 inherit autotools
 DESCRIPTION="Firmware Test Suite"
 HOMEPAGE="https://wiki.ubuntu.com/Kernel/Reference/fwts"
-SRC_URI="http://launchpad.net/ubuntu/+archive/primary/+files/${PN}_${PV}.orig.tar.gz"
+SRC_URI="http://fwts.ubuntu.com/release/${PN}-V${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
