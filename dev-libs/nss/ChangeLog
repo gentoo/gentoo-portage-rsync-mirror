@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.380 2014/09/03 16:10:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.381 2014/09/25 06:00:12 polynomial-c Exp $
+
+*nss-3.17.1 (25 Sep 2014)
+*nss-3.16.5 (25 Sep 2014)
+
+  25 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> +nss-3.16.5.ebuild,
+  +nss-3.17.1.ebuild, +files/nss-3.17.1-gentoo-fixups.patch:
+  Security bump (bug #523652). RSA signature forgery attack (CVE-2014-1568).
 
 *nss-3.17 (03 Sep 2014)
 
