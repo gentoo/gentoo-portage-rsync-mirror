@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-5.3.2.ebuild,v 1.1 2014/09/16 14:47:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-5.3.2.ebuild,v 1.2 2014/09/25 11:15:09 kensington Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ fi
 
 # TODO: qttestlib, geolocation, orientation/sensors
 
-IUSE="gstreamer libxml2 multimedia opengl printsupport qml udev webp widgets xslt"
+IUSE="gstreamer libxml2 multimedia opengl printsupport qml udev webp xslt"
 
 RDEPEND="
 	dev-db/sqlite:3
@@ -27,6 +27,7 @@ RDEPEND="
 	>=dev-qt/qtgui-${PV}:5[debug=]
 	>=dev-qt/qtnetwork-${PV}:5[debug=]
 	>=dev-qt/qtsql-${PV}:5[debug=]
+	>=dev-qt/qtwidgets-${PV}:5[debug=]
 	media-libs/fontconfig:1.0
 	media-libs/libpng:0=
 	sys-libs/zlib
@@ -47,7 +48,6 @@ RDEPEND="
 	qml? ( >=dev-qt/qtdeclarative-${PV}:5[debug=] )
 	udev? ( virtual/udev )
 	webp? ( media-libs/libwebp:0= )
-	widgets? ( >=dev-qt/qtwidgets-${PV}:5[debug=] )
 	xslt? (
 		libxml2? ( dev-libs/libxslt )
 		!libxml2? ( >=dev-qt/qtxmlpatterns-${PV}:5[debug=] )
@@ -76,8 +76,6 @@ src_prepare() {
 		Tools/qmake/mkspecs/features/features.prf || die
 	use webp         || sed -i -e '/config_libwebp: WEBKIT_CONFIG += use_webp/d' \
 		Tools/qmake/mkspecs/features/features.prf || die
-	use widgets      || sed -i -e '/SUBDIRS += webkitwidgets/d' \
-		Source/QtWebKit.pro || die
 	use xslt         || sed -i -e '/config_libxslt: WEBKIT_CONFIG += xslt/d' \
 		Tools/qmake/mkspecs/features/features.prf || die
 

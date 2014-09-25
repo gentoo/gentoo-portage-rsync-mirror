@@ -11,8 +11,6 @@
 		<flag name="printsupport">Enable printing via <pkg>dev-qt/qtprintsupport</pkg></flag>
 		<flag name="qml">Build QML/QtQuick bindings</flag>
 		<flag name="webp">Add support for WebP image format</flag>
-		<flag name="widgets">Build various things that depend on <pkg>dev-qt/qtwidgets</pkg>,
-			e.g. the WebKitWidgets library</flag>
 		<flag name="xslt">Enable XSLT support</flag>
 	</use>
 	<upstream>

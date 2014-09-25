@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.387 2014/09/25 10:07:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.388 2014/09/25 11:02:20 armin76 Exp $
+
+  25 Sep 2014; Raúl Porcel <armin76@gentoo.org> bash-3.1_p18-r1.ebuild,
+  bash-3.2_p52-r1.ebuild, bash-4.0_p39-r1.ebuild, bash-4.1_p12-r1.ebuild,
+  bash-4.2_p48-r1.ebuild:
+  arm64/m68k/s390/sh stable
 
   25 Sep 2014; Jeroen Roovers <jer@gentoo.org> bash-3.1_p18-r1.ebuild,
   bash-3.2_p52-r1.ebuild, bash-4.0_p39-r1.ebuild, bash-4.1_p12-r1.ebuild,
