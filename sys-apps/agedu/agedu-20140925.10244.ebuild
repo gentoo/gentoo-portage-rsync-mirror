@@ -1,12 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/agedu/agedu-9723.ebuild,v 1.1 2013/01/08 03:37:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/agedu/agedu-20140925.10244.ebuild,v 1.1 2014/09/25 10:50:04 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit autotools eutils
+inherit autotools eutils versionator
 
-MY_P="${PN}-r${PV}"
+MY_COMP=( $(get_all_version_components) )
+MY_P="${PN}-${MY_COMP[0]}.r${MY_COMP[2]}"
 
 DESCRIPTION="A utility for tracking down wasted disk space"
 HOMEPAGE="http://www.chiark.greenend.org.uk/~sgtatham/agedu/"
