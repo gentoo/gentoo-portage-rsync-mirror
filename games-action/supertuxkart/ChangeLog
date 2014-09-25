@@ -1,6 +1,10 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.43 2014/04/29 23:31:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.44 2014/09/25 20:50:13 tupone Exp $
+
+  25 Sep 2014; Alfredo Tupone <tupone@gentoo.org> supertuxkart-0.8.1.ebuild,
+  +files/supertuxkart-0.8.1-jpeg9.patch:
+  Fix build with media-libs/jpeg-9 Bug #520726 by flameeyes@gentoo.org
 
   29 Apr 2014; Julian Ospald <hasufell@gentoo.org> supertuxkart-0.8.1.ebuild,
   +files/supertuxkart-0.8.1-mesa-10.x.patch:

@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/eliot
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eliot/ChangeLog,v 1.1 2014/09/25 20:35:42 ryao Exp $
+
+*eliot-0.4.0 (25 Sep 2014)
+
+  25 Sep 2014; Richard Yao <ryao@gentoo.org> +eliot-0.4.0.ebuild, +metadata.xml:
+  New package dev-python/eliot
