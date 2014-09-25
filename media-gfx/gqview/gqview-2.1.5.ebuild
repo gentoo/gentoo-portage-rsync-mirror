@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.17 2013/09/06 17:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.18 2014/09/25 21:35:42 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -29,8 +29,7 @@ src_prepare() {
 		-e '/^Encoding/d' \
 		-e '/^Icon/s/\.png//' \
 		-e '/^Categories/s/Application;//' \
-		gqview.desktop \
-		|| die
+		gqview.desktop || die
 	eautoreconf
 }
 
@@ -41,7 +40,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	# leave README uncompressed because the program reads it
 	dodoc AUTHORS ChangeLog TODO
 	rm -f "${D}/usr/share/doc/${PF}/COPYING"

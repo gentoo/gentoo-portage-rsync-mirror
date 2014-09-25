@@ -1,6 +1,6 @@
 DEFINED_PHASES=install prepare
 DESCRIPTION=Logos for vdr-skin*
-EAPI=2
+EAPI=5
 HOMEPAGE=http://www.vdrskins.org/
 KEYWORDS=~x86 ~amd64
 LICENSE=fairuse
@@ -8,4 +8,4 @@ RDEPEND=app-text/convmv
 SLOT=0
 SRC_URI=http://www.vdrskins.org/vdrskins/albums/userpics/10138/logos-0.2.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e58cf7aa1b25f5ca2bc392095ad97ed0
+_md5_=42dadabf6b56a9b037be6f152d73decc
