@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/easychem-0.6-r1.ebuild,v 1.4 2012/05/04 07:02:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/easychem-0.6-r1.ebuild,v 1.5 2014/09/25 09:50:53 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -29,12 +29,12 @@ src_prepare() {
 }
 
 src_compile() {
-	ln -s Makefile.linux Makefile
+	ln -s Makefile.linux Makefile || die
 	DGS_PATH="${EPREFIX}"/usr/bin DPSTOEDIT_PATH="${EPREFIX}"/usr/bin \
-		C_FLAGS="${CFLAGS}" emake -e || die
+		C_FLAGS="${CFLAGS}" emake -e
 }
 
 src_install () {
-	dobin easychem || die
-	dodoc TODO || die
+	dobin easychem
+	dodoc TODO
 }

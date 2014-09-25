@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=x11-libs/gtk+:2 app-text/ghostscript-gpl media-gfx/pstoedit dev-lang/perl virtual/pkgconfig
 DESCRIPTION=Chemical structure drawing program - focused on presentation
-EAPI=3
+EAPI=5
 HOMEPAGE=http://easychem.sourceforge.net/
 KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
@@ -9,4 +9,4 @@ RDEPEND=x11-libs/gtk+:2 app-text/ghostscript-gpl media-gfx/pstoedit
 SLOT=0
 SRC_URI=mirror://sourceforge/easychem/easychem-0.6.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=5c77d474a8d5ca3e63beda0f5142ca6d
+_md5_=c44b1aae00dfd3efec0fa5cc67a057b4

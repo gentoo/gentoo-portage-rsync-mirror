@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ssm-1.4.ebuild,v 1.1 2014/09/24 07:45:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ssm-1.4.ebuild,v 1.2 2014/09/25 09:53:13 jlec Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="+ccp4 static-libs"
 
 DEPEND="
-	>=sci-libs/mmdb-1.23:0
+	>=sci-libs/mmdb-1.23:2
 	ccp4? ( >=sci-libs/ccp4-libs-6.1.3-r10 )"
 RDEPEND="${DEPEND}"
 

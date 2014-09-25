@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-ews/evolution-ews-3.12.3.ebuild,v 1.1 2014/06/12 18:40:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-ews/evolution-ews-3.12.6.ebuild,v 1.1 2014/09/25 09:32:37 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"

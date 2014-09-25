@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst unpack
+DEPEND=app-arch/xz-utils
+DESCRIPTION=Debian/Ubuntu bootstrap scripts
+EAPI=5
+HOMEPAGE=http://packages.qa.debian.org/d/debootstrap.html
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux
+LICENSE=MIT
+RDEPEND=app-arch/dpkg net-misc/wget sys-devel/binutils
+SLOT=0
+SRC_URI=mirror://debian/pool/main/d/debootstrap/debootstrap_1.0.63.tar.xz mirror://gentoo/devices.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=19652ae6287aba0703b4706601e7cc3c
