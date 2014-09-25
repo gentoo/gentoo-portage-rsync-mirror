@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.217 2014/09/14 22:55:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.218 2014/09/25 09:11:55 pacho Exp $
+
+  25 Sep 2014; Pacho Ramos <pacho@gentoo.org> bluez-5.23.ebuild:
+  Install docs (#523660 by Mart Raudsepp)
 
   14 Sep 2014; Jeroen Roovers <jer@gentoo.org> bluez-4.101-r9.ebuild:
   Stable for HPPA (bug #522728).

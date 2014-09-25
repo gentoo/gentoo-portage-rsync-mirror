@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.23.ebuild,v 1.1 2014/09/13 12:27:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.23.ebuild,v 1.2 2014/09/25 09:11:55 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -180,6 +180,8 @@ multilib_src_install_all() {
 
 	newinitd "${FILESDIR}"/bluetooth-init.d-r3 bluetooth
 	newinitd "${FILESDIR}"/rfcomm-init.d-r2 rfcomm
+
+	einstalldocs
 
 	readme.gentoo_create_doc
 }
