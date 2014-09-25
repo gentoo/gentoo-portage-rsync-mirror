@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/capybara
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/ChangeLog,v 1.21 2014/08/05 16:00:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/ChangeLog,v 1.22 2014/09/25 07:00:27 graaff Exp $
+
+  25 Sep 2014; Hans de Graaff <graaff@gentoo.org> capybara-2.2.1.ebuild:
+  Add ruby21, fixing bug 523664.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> capybara-1.1.4.ebuild,
   capybara-2.2.1.ebuild:
