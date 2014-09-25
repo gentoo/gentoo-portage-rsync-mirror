@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.184 2014/09/23 20:11:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.185 2014/09/25 22:16:03 blueness Exp $
+
+  25 Sep 2014; Anthony G. Basile <blueness@gentoo.org> stunnel-5.02.ebuild,
+  stunnel-5.03.ebuild:
+  Backport updated SRC_URI, bug #523534
 
   23 Sep 2014; Anthony G. Basile <blueness@gentoo.org> stunnel-5.04.ebuild:
   Update SRC_URI to use the archives for older versions
