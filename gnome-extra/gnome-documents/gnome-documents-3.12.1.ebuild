@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/gnome-documents-3.12.1.ebuild,v 1.3 2014/07/23 15:18:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/gnome-documents-3.12.1.ebuild,v 1.4 2014/09/25 10:09:52 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ COMMON_DEPEND="
 	dev-libs/gjs
 	>=dev-libs/glib-2.37:2
 	>=dev-libs/gobject-introspection-1.31.6
-	>=dev-libs/libgdata-0.13.3[gnome,introspection]
+	>=dev-libs/libgdata-0.13.3:=[gnome,introspection]
 	gnome-base/gnome-desktop:3=
 	>=media-libs/clutter-1.10:1.0
 	>=media-libs/clutter-gtk-1.3.2:1.0[introspection]

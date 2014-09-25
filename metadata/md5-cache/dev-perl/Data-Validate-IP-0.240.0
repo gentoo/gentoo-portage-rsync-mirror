@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=dev-perl/NetAddr-IP-4.66.0 dev-perl/Test-Requires dev-lang/perl dev-lang/perl:=[-build(-)]
+DESCRIPTION=Lightweight IPv4 and IPv6 validation module.
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Data-Validate-IP/
+KEYWORDS=~amd64
+LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
+RDEPEND=dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/D/DR/DROLSKY/Data-Validate-IP-0.24.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	2f552cb358a7a05346c910b39818c423	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=8df54e6860651a56764382c700c891de

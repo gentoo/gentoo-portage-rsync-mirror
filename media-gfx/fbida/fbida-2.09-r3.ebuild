@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r2.ebuild,v 1.2 2014/08/10 21:14:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r3.ebuild,v 1.1 2014/09/25 10:09:28 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -59,6 +59,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/ida-desktop.patch
 	epatch "${FILESDIR}"/${PN}-2.09-make.patch
 	epatch "${FILESDIR}"/${P}-giflib-4.2.patch
+	epatch "${FILESDIR}"/${P}-giflib-5.patch
 
 	pushd jpeg/ >/dev/null
 	epatch -p2 "${WORKDIR}"/${P}-jpeg-9a.patch

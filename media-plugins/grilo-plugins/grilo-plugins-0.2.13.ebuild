@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.13.ebuild,v 1.1 2014/09/02 13:39:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.13.ebuild,v 1.2 2014/09/25 10:11:11 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -44,7 +44,7 @@ RDEPEND="
 		dev-libs/libxml2 )
 	tracker? ( >=app-misc/tracker-0.10.5:= )
 	youtube? (
-		>=dev-libs/libgdata-0.9.1
+		>=dev-libs/libgdata-0.9.1:=
 		dev-libs/totem-pl-parser )
 	upnp-av? ( net-libs/libsoup )
 	vimeo? (

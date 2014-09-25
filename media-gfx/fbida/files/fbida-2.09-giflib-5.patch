@@ -1,0 +1,50 @@
+--- a/rd/read-gif.c
++++ b/rd/read-gif.c
+@@ -25,7 +25,11 @@
+ 	if (GIF_ERROR == DGifGetRecordType(h->gif,&RecordType)) {
+ 	    if (debug)
+ 		fprintf(stderr,"gif: DGifGetRecordType failed\n");
++#if GIFLIB_MAJOR >= 5
++	    GifErrorString((NULL));
++#else
+ 	    GifErrorString();
++#endif
+ 	    return -1;
+ 	}
+ 	switch (RecordType) {
+@@ -42,7 +46,11 @@
+ 		if (rc == GIF_ERROR) {
+ 		    if (debug)
+ 			fprintf(stderr,"gif: DGifGetExtension failed\n");
++#if GIFLIB_MAJOR >= 5
++		    GifErrorString((NULL));
++#else
+ 		    GifErrorString();
++#endif
+ 		    return -1;
+ 		}
+ 		if (debug) {
+@@ -98,7 +106,11 @@
+     memset(h,0,sizeof(*h));
+ 
+     h->infile = fp;
++#if GIFLIB_MAJOR >= 5
++    h->gif = DGifOpenFileHandle(fileno(fp),NULL);
++#else
+     h->gif = DGifOpenFileHandle(fileno(fp));
++#endif
+     h->row = malloc(h->gif->SWidth * sizeof(GifPixelType));
+ 
+     while (0 == image) {
+@@ -108,7 +120,11 @@
+ 	    if (GIF_ERROR == DGifGetImageDesc(h->gif)) {
+ 		if (debug)
+ 		    fprintf(stderr,"gif: DGifGetImageDesc failed\n");
++#if GIFLIB_MAJOR >= 5
++		GifErrorString((NULL));
++#else
+ 		GifErrorString();
++#endif
+ 	    }
+ 	    if (NULL == h->gif->SColorMap &&
+ 		NULL == h->gif->Image.ColorMap) {
