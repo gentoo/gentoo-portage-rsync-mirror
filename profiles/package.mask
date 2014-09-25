@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16051 2014/09/24 18:49:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16052 2014/09/25 19:08:51 dolsen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Brian Dolbec <dolsen@gentoo.org> (25 Sep 2014)
+# Mask new setup.py based release due to regressions
+# A new fixed version is being released soon
+=sys-apps/portage-2.2.13
 
 # Michael Sterrett <mr_bones_@gentoo.org> (24 Sep 2014)
 # No updates since 2007 and games-board/scid is actively maintained.
