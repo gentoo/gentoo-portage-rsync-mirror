@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/nautilus-sendto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.75 2014/04/26 20:09:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.76 2014/09/25 13:52:11 pacho Exp $
+
+*nautilus-sendto-3.8.2 (25 Sep 2014)
+
+  25 Sep 2014; Pacho Ramos <pacho@gentoo.org> +nautilus-sendto-3.8.2.ebuild:
+  Version bump
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -nautilus-sendto-3.6.1.ebuild,
   -nautilus-sendto-3.8.0.ebuild:
