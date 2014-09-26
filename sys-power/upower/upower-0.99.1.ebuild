@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.99.1.ebuild,v 1.2 2014/09/19 16:38:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.99.1.ebuild,v 1.3 2014/09/26 11:41:26 klausman Exp $
 
 EAPI=5
 inherit eutils systemd
@@ -11,7 +11,7 @@ SRC_URI="http://${PN}.freedesktop.org/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0/3" # based on SONAME of libupower-glib.so
-KEYWORDS="~alpha amd64 arm ~ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="+introspection ios kernel_FreeBSD kernel_linux"
 
 RDEPEND=">=dev-libs/dbus-glib-0.100
