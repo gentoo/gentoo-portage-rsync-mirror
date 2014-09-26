@@ -1230,6 +1230,8 @@ dev-db/mariadb-galera:minimal - Install client programs only, no server
 dev-db/mariadb-galera:oqgraph - Add support for the Open Query GRAPH engine
 dev-db/mariadb-galera:profiling - Add support for statement profiling (requires USE=community).
 dev-db/mariadb-galera:sphinx - Add suport for the sphinx full-text search engine
+dev-db/mariadb-galera:sst-rsync - Add tools needed to support the rsync SST method
+dev-db/mariadb-galera:sst-xtrabackup - Add tools needed to support the xtrabackup and xtrabackup-v2 SST methods
 dev-db/mariadb-galera:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mariadb-galera:test - Install upstream testsuites for end use.
 dev-db/mariadb-galera:tokudb - Add support for TokuDB storage engine

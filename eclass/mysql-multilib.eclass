@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.7 2014/09/03 13:05:50 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.9 2014/09/26 17:56:29 grknight Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -188,7 +188,8 @@ IUSE="+community cluster debug embedded extraengine jemalloc latin1 max-idx-128 
 	+perl profiling selinux ssl systemtap static static-libs tcmalloc test"
 
 # This probably could be simplified, but the syntax would have to be just right
-if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
+if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] && \
+        mysql_check_version_range "5.5.37 to 10.0.13.99" ; then
 	IUSE="bindist ${IUSE}"
 elif [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && \
 	mysql_check_version_range "5.5.37 to 5.6.11.99" ; then
@@ -204,6 +205,10 @@ if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then
 	mysql_version_is_at_least "10.0.5" && IUSE="${IUSE} odbc xml" && \
 		REQUIRED_USE="odbc? ( extraengine !minimal ) xml? ( extraengine !minimal )"
 	REQUIRED_USE="${REQUIRED_USE} minimal? ( !oqgraph !sphinx ) tokudb? ( jemalloc )"
+fi
+
+if [[ ${PN} == "mariadb-galera" ]]; then
+	IUSE="${IUSE} +sst-rsync sst-xtrabackup"
 fi
 
 if [[ ${PN} == "percona-server" ]]; then
@@ -237,11 +242,15 @@ DEPEND="
 "
 
 # dev-db/mysql-5.6.12+ only works with dev-libs/libedit
+# mariadb 10.0.14 fixes libedit detection. changed to follow mysql
 # This probably could be simplified
 if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && \
 	mysql_version_is_at_least "5.6.12" ; then
 	DEPEND="${DEPEND} dev-libs/libedit:0=[${MULTILIB_USEDEP}]"
 elif [[ ${PN} == "mysql-cluster" ]] && mysql_version_is_at_least "7.3"; then
+	DEPEND="${DEPEND} dev-libs/libedit:0=[${MULTILIB_USEDEP}]"
+elif [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] && \
+	mysql_version_is_at_least "10.0.14" ; then
 	DEPEND="${DEPEND} dev-libs/libedit:0=[${MULTILIB_USEDEP}]"
 else
 	DEPEND="${DEPEND} !bindist? ( >=sys-libs/readline-4.1:0=[${MULTILIB_USEDEP}] )"
@@ -306,8 +315,13 @@ if [[ ${PN} == "mariadb-galera" ]] ; then
 	#
 	# lsof is required as of 5.5.38 and 10.0.11 for the rsync sst
 	RDEPEND="${RDEPEND}
+		sys-apps/iproute2
 		=sys-cluster/galera-${WSREP_REVISION}*
-		sys-process/lsof
+		sst-rsync? ( sys-process/lsof )
+		sst-xtrabackup? (
+			dev-db/xtrabackup-bin
+			net-misc/socat[ssl]
+		)
 	"
 fi
 

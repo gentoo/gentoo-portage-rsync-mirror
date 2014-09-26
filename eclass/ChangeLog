@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1374 2014/09/22 00:03:25 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1376 2014/09/26 17:56:29 grknight Exp $
+
+  26 Sep 2014; Brian Evans <grknight@gentoo.org> mysql-multilib.eclass:
+  Fix up invalid general IUSE with underscores
+
+  26 Sep 2014; Brian Evans <grknight@gentoo.org> mysql-multilib.eclass:
+  Adjust deps for >=mariadb-10.0.14 and add USE base deps for mariadb-galera
 
   22 Sep 2014; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass,
   qt5-build.eclass:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mariadb-galera
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/ChangeLog,v 1.2 2014/09/03 22:44:00 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/ChangeLog,v 1.3 2014/09/26 17:57:33 grknight Exp $
+
+  26 Sep 2014;  <grknight@gentoo.org> metadata.xml:
+  Add new USE descriptions for sst-*
 
 *mariadb-galera-10.0.13 (03 Sep 2014)
 
