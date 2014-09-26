@@ -1,39 +1,51 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.36.1.ebuild,v 1.6 2014/05/07 02:44:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.40.1-r1.ebuild,v 1.1 2014/09/26 10:39:22 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2 pax-utils virtualx
+inherit eutils gnome2 pax-utils virtualx
 
 DESCRIPTION="Javascript bindings for GNOME"
-HOMEPAGE="http://live.gnome.org/Gjs"
+HOMEPAGE="https://wiki.gnome.org/Projects/Gjs"
 
 LICENSE="MIT || ( MPL-1.1 LGPL-2+ GPL-2+ )"
 SLOT="0"
-IUSE="+cairo examples"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd"
+IUSE="+cairo examples gtk test"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="
-	>=dev-libs/glib-2.36.0:2
-	>=dev-libs/gobject-introspection-1.36.0
+	>=dev-libs/glib-2.36:2
+	>=dev-libs/gobject-introspection-1.39.3
 
-	dev-libs/dbus-glib
 	sys-libs/readline:0
-	>=dev-lang/spidermonkey-1.8.5:0
+	dev-lang/spidermonkey:24
 	virtual/libffi
 	cairo? ( x11-libs/cairo )
+	gtk? ( x11-libs/gtk+:3 )
 "
 DEPEND="${RDEPEND}
+	gnome-base/gnome-common
 	sys-devel/gettext
 	virtual/pkgconfig
+	test? ( sys-apps/dbus )
 "
 
-src_configure() {
-	# AUTHORS, ChangeLog are empty
-	DOCS="NEWS README"
+# Large amount of tests are broken even in master.
+RESTRICT="test"
 
+src_prepare() {
+	# Prevent gjs crashes, bug #523608 (from 'master')
+	epatch "${FILESDIR}/${PN}-1.40.1-ownership-transfer.patch"
+
+	# Ratelimit RSS-triggered GCs (from 'master')
+	epatch "${FILESDIR}/${PN}-1.40.1-ratelimit-rss.patch"
+
+	gnome2_src_prepare
+}
+
+src_configure() {
 	# FIXME: add systemtap/dtrace support, like in glib:2
 	# FIXME: --enable-systemtap installs files in ${D}/${D} for some reason
 	# XXX: Do NOT enable coverage, completely useless for portage installs
@@ -41,11 +53,11 @@ src_configure() {
 		--disable-systemtap \
 		--disable-dtrace \
 		--disable-coverage \
-		$(use_with cairo cairo)
+		$(use_with cairo cairo) \
+		$(use_with gtk)
 }
 
 src_test() {
-	# Tests need dbus
 	Xemake check
 }
 

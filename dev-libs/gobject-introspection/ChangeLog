@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.128 2014/09/15 08:18:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.129 2014/09/26 10:31:49 pacho Exp $
+
+*gobject-introspection-1.40.0-r2 (26 Sep 2014)
+
+  26 Sep 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/gobject-introspection-1.40.0-gjs-crash.patch,
+  +gobject-introspection-1.40.0-r2.ebuild:
+  Prevent gjs crashes, bug #523608 by Serge Gavrilov
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   gobject-introspection-1.40.0-r1.ebuild:

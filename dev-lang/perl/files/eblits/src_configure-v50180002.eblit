@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/src_configure-v50180002.eblit,v 1.2 2014/07/07 12:44:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/src_configure-v50180002.eblit,v 1.3 2014/09/26 11:00:50 grobian Exp $
 
 myconf() {
 	# the myconf array is declared in src_configure
@@ -73,6 +73,9 @@ eblit-perl-src_configure() {
 	fi
 
 	[[ ${ELIBC} == "FreeBSD" ]] && myconf "-Dlibc=/usr/$(get_libdir)/libc.a"
+
+	# Make sure we can do the final link #523730
+	[[ ${CHOST} == *-darwin* ]] && myconf "-Dld=$(tc-getCC)"
 
 	# Prefix: the host system needs not to follow Gentoo multilib stuff, and in
 	# Prefix itself we don't do multilib either, so make sure perl can find

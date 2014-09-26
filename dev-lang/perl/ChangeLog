@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.435 2014/09/23 09:56:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.436 2014/09/26 11:00:50 grobian Exp $
+
+  26 Sep 2014; Fabian Groffen <grobian@gentoo.org>
+  files/eblits/src_configure-v50180002.eblit:
+  Fix linking on Darwin, bug #523730
 
   23 Sep 2014; Agostino Sarubbo <ago@gentoo.org> perl-5.18.2-r1.ebuild:
   Stable for sparc, wrt bug #504786

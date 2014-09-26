@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.107 2014/07/13 14:12:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.108 2014/09/26 10:53:22 fordfrog Exp $
+
+*java-sdk-docs-1.8.0.20 (26 Sep 2014)
+
+  26 Sep 2014; Miroslav Šulc <fordfrog@gentoo.org>
+  +java-sdk-docs-1.8.0.20.ebuild:
+  version bump, download file was renamed
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> java-sdk-docs-1.7.0.60.ebuild:
   Stable for ppc64, wrt bug #511714
