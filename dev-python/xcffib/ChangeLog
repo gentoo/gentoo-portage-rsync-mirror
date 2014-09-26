@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/xcffib
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xcffib/ChangeLog,v 1.1 2014/09/26 13:44:28 idella4 Exp $
+
+*xcffib-0.1.5 (26 Sep 2014)
+
+  26 Sep 2014; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +xcffib-0.1.5.ebuild:
+  new minimal ebuild written by me, new dep to testsuite of new release
+  cairocffi-0.6
