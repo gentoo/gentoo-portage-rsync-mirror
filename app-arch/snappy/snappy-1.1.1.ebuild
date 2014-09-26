@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/snappy-1.1.1.ebuild,v 1.5 2014/08/11 22:07:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/snappy-1.1.1.ebuild,v 1.6 2014/09/26 03:58:07 patrick Exp $
 
 EAPI="5"
 
@@ -18,7 +18,6 @@ IUSE="static-libs"
 DOCS="AUTHORS ChangeLog README NEWS format_description.txt"
 
 src_prepare() {
-	default
 	# Avoid automagic lzop and gzip by not checking for it
 	sed -i -e '/^CHECK_EXT_COMPRESSION_LIB/d' "${S}/configure.ac" || die
 	eautoreconf

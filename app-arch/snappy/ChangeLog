@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/snappy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/ChangeLog,v 1.17 2014/08/11 22:07:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/ChangeLog,v 1.18 2014/09/26 03:58:07 patrick Exp $
+
+  26 Sep 2014; Patrick Lauer <patrick@gentoo.org> snappy-1.1.1.ebuild,
+  snappy-1.1.2-r1.ebuild, snappy-1.1.2.ebuild:
+  Fix broken default_src_prepare #523760
 
   11 Aug 2014; Anthony G. Basile <blueness@gentoo.org> snappy-1.1.1.ebuild,
   snappy-1.1.2-r1.ebuild, snappy-1.1.2.ebuild:
