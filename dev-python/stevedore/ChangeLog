@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/stevedore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.19 2014/07/06 12:50:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.20 2014/09/26 18:41:56 alunduil Exp $
+
+*stevedore-1.0.0 (26 Sep 2014)
+
+  26 Sep 2014; Alex Brandt <alunduil@gentoo.org> +stevedore-1.0.0.ebuild,
+  metadata.xml:
+  bump version and add python3* targets
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> stevedore-0.14.1.ebuild,
   stevedore-0.15-r1.ebuild, stevedore-0.15.ebuild:

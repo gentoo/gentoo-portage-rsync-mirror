@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1411 2014/09/26 17:04:07 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1412 2014/09/26 18:58:45 dolsen Exp $
+
+*portage-2.2.14_rc1 (26 Sep 2014)
+
+  26 Sep 2014; Brian Dolbec <dolsen@gentoo.org> -portage-2.1.6.7_p1.ebuild,
+  -portage-2.2.1.ebuild, -portage-2.2.7.ebuild, -portage-2.2.10.ebuild,
+  -portage-2.2.11-r1.ebuild, -portage-2.2.12-r1.ebuild, -portage-2.2.13.ebuild,
+  +portage-2.2.14_rc1.ebuild, portage-9999.ebuild:
+  Version bump, cleanout old. Move sbin relocation code from pkg_preinst() to
+  python_install_all() for 9999,
 
   26 Sep 2014; Brian Dolbec <dolsen@gentoo.org> portage-9999.ebuild:
   Move the admin scripts to /usr/sbin/ in pkg_preinst
