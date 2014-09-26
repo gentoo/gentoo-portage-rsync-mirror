@@ -4,10 +4,10 @@ DESCRIPTION=Standard Linux boot loader
 EAPI=5
 HOMEPAGE=https://alioth.debian.org/projects/lilo/
 IUSE=static minimal pxeserial device-mapper
-KEYWORDS=-* ~amd64 ~x86
+KEYWORDS=-* amd64 x86
 LICENSE=BSD GPL-2
 RDEPEND=device-mapper? ( >=sys-fs/lvm2-2.02.45 )
 SLOT=0
 SRC_URI=http://lilo.alioth.debian.org/ftp/sources/lilo-24.0.tar.gz mirror://gentoo/dolilo-0.6.tar.bz2
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=68691dbecad0cdc65c79c6ce726eea15
+_md5_=6157579624fb5cd8a41410880b6c706f
