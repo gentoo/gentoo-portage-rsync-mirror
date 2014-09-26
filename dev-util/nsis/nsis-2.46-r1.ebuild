@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.46-r1.ebuild,v 1.4 2014/01/26 11:02:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.46-r1.ebuild,v 1.5 2014/09/26 12:54:56 pacho Exp $
 
 EAPI="5"
 mingw32_variants=$(echo {,i{6,5,4,3}86-{,pc-,w32-,w64-}}mingw32)
@@ -49,6 +49,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc47.patch
 	epatch "${DISTDIR}/makensis_64bit.patch"
 	epatch "${DISTDIR}/nsis_w64-mingw.patch"
+
+	sed -i 's/SetDefault/Append/' "${S}/Source/exehead/SConscript" || die #505996
 
 	# a dirty but effective way of killing generated docs
 	use doc || echo > Docs/src/SConscript
