@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1410 2014/09/26 02:28:58 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1411 2014/09/26 17:04:07 dolsen Exp $
+
+  26 Sep 2014; Brian Dolbec <dolsen@gentoo.org> portage-9999.ebuild:
+  Move the admin scripts to /usr/sbin/ in pkg_preinst
 
   26 Sep 2014; Brian Dolbec <dolsen@gentoo.org> portage-9999.ebuild:
   Add the deprecation /usr/sbin/ symlinks. Comment out the preinst sanity check
