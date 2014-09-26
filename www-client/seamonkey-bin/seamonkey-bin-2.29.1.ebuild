@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.29.ebuild,v 1.1 2014/09/09 02:20:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.29.1.ebuild,v 1.1 2014/09/26 15:20:32 axs Exp $
 
 EAPI="4"
 
