@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/qhull
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.58 2014/09/17 08:52:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.59 2014/09/26 11:18:39 grobian Exp $
+
+  26 Sep 2014; Fabian Groffen <grobian@gentoo.org> qhull-2012.1-r3.ebuild:
+  Fix out of Prefix rm, bug #523422
 
 *qhull-2012.1-r3 (17 Sep 2014)
 

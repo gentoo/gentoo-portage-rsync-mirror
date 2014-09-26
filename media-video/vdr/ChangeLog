@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.180 2014/06/15 08:15:37 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.181 2014/09/26 11:03:09 hd_brummy Exp $
+
+*vdr-2.0.6 (26 Sep 2014)
+
+  26 Sep 2014; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-2.0.6.ebuild,
+  +files/vdr-2.0.6_gentoo.patch, metadata.xml:
+  bump; removed use-flag setup depends; extended patchset for vdr-permashift-1;
+  wrt bug 521570; wrt bug 499444
 
   15 Jun 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-1.6.0_p2-r7.ebuild,
   -vdr-1.6.0_p2-r11.ebuild, -files/vdr-1.6.0-extensions-72-gcc-4.4.diff,
