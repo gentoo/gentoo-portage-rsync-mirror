@@ -1,0 +1,23 @@
+--- a/configure.in
++++ b/configure.in
+@@ -26,6 +26,11 @@
+ dnl C99 support is required to define LLONG_MAX (at least on CentOS 5.7)
+ AC_PROG_CC_C99
+ 
++dnl mkdir_p / MKDIR_P
++AC_PROG_MKDIR_P
++mkdir_p="$MKDIR_P"
++AC_SUBST(mkdir_p)
++
+ # Report more warnings to improve code quality.
+ CFLAGS="${CFLAGS} -Wall -Wno-sign-compare"
+ 
+@@ -60,7 +65,7 @@
+ 
+ case "$host" in
+    *-solaris*)
+-   LDFLAGS="${LDFLAGS} -lsocket -lnsl"
++   LIBS="${LIBS} -lsocket -lnsl"
+    CFLAGS="-DSOLARIS ${CFLAGS}"
+    ;;
+ esac
