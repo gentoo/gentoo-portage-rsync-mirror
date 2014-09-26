@@ -57,7 +57,7 @@ index ef99954..563fcd0 100644
 --- a/display.h
 +++ b/display.h
 @@ -22,6 +22,16 @@
-  * $Id: 4.0.3-extend-d_termname-ng2.patch,v 1.2 2010/12/08 21:28:15 jlec Exp $ FAU
+  * $Id: display.h,v 1.9 1994/05/31 12:31:54 mlschroe Exp $ FAU
   */
  
 +#include <limits.h>

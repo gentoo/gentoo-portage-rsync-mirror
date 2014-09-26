@@ -6,8 +6,8 @@ Bug-Debian: http://bugs.debian.org/724058
 +++ b/Wnn/pubdicplus/Makefile.in	2013/11/08 18:54:44	1.8
 @@ -1,5 +1,5 @@
  #
--#   $Id: freewnn-1.1.1_alpha22-parallel-build.patch,v 1.1 2014/09/15 23:05:14 naota Exp $
-+#   $Id: freewnn-1.1.1_alpha22-parallel-build.patch,v 1.1 2014/09/15 23:05:14 naota Exp $
+-#   $Id: Makefile.in,v 1.7 2010/02/22 17:06:54 aonoto Exp $
++#   $Id: Makefile.in,v 1.8 2013/11/08 18:54:44 aonoto Exp $
  #
  
  #

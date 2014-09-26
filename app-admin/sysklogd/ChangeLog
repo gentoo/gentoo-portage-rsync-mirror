@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysklogd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.88 2013/08/24 09:41:56 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.89 2014/09/26 19:40:47 axs Exp $
+
+  26 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/sysklogd-1.5-debian-cron.patch:
+  fixed cvs sticky options on file(s) that should not have cvs keyword expansion
 
   24 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> sysklogd-1.5-r3.ebuild:
   Add ~mips keyword

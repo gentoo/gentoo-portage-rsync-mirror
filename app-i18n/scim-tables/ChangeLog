@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.74 2014/08/03 18:35:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.75 2014/09/26 19:51:50 axs Exp $
+
+  26 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/scim-tables-0.5.8+gcc-4.3.patch:
+  fixed cvs sticky options on file(s) that should not have cvs keyword expansion
 
   03 Aug 2014; Agostino Sarubbo <ago@gentoo.org> scim-tables-0.5.13.ebuild:
   Stable for ppc, wrt bug #509846

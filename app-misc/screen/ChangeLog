@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.199 2014/08/30 10:32:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.200 2014/09/26 19:56:10 axs Exp $
+
+  26 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/4.0.3-extend-d_termname-ng2.patch:
+  fixed cvs sticky options on file(s) that should not have cvs keyword expansion
 
   30 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> screen-4.0.3-r8.ebuild,
   screen-4.2.1-r2.ebuild, screen-9999.ebuild:

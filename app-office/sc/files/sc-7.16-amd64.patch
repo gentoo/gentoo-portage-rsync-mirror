@@ -2,7 +2,7 @@ diff -Naur sc-7.16-orig/xmalloc.c sc-7.16/xmalloc.c
 --- sc-7.16-orig/xmalloc.c	2002-04-25 17:37:58.000000000 -0600
 +++ sc-7.16/xmalloc.c	2008-01-17 14:41:31.000000000 -0600
 @@ -3,19 +3,12 @@
-  * $Revision: 1.2 $
+  * $Revision: 7.16 $
   */
  
 +#include <stdlib.h>

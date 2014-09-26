@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/epm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.35 2013/03/17 16:03:35 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.36 2014/09/26 19:59:40 axs Exp $
+
+  26 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/epm-1.33-prefix.patch, +files/epm-1.40-prefix.patch:
+  fixed cvs sticky options on file(s) that should not have cvs keyword expansion
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

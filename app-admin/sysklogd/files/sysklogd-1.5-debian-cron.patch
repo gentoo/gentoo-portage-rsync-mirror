@@ -2,7 +2,7 @@
 +++ debian/cron.daily
 @@ -20,10 +20,6 @@
  #		Written by Martin Schulze <joey@debian.org>.
- #		$Id: sysklogd-1.5-debian-cron.patch,v 1.1 2008/06/07 16:24:09 vapier Exp $
+ #		$Id: cron.daily,v 1.14 2007-05-28 16:33:34 joey Exp $
  
 -test -x /usr/sbin/syslogd-listfiles || exit 0
 -test -x /sbin/syslogd || exit 0
@@ -21,7 +21,7 @@
 +++ debian/cron.weekly
 @@ -19,10 +19,6 @@
  #		Written by Ian A. Murdock <imurdock@debian.org>.
- #		$Id: sysklogd-1.5-debian-cron.patch,v 1.1 2008/06/07 16:24:09 vapier Exp $
+ #		$Id: cron.weekly,v 1.11 2007-05-28 16:33:34 joey Exp $
  
 -test -x /usr/sbin/syslogd-listfiles || exit 0
 -test -x /sbin/syslogd || exit 0
