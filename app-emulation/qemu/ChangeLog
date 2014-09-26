@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.296 2014/09/13 17:11:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.297 2014/09/26 15:44:01 floppym Exp $
+
+  26 Sep 2014; Mike Gilbert <floppym@gentoo.org> qemu-2.1.1.ebuild,
+  qemu-9999.ebuild:
+  Utilize PYTHON_REQUIRED_USE unconditionally. We always need at least one
+  python version enabled for building.
 
   13 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   -files/qemu-2.0.0-CVE-2013-4541.patch, -files/qemu-2.0.0-CVE-2014-0222.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.1.1.ebuild,v 1.1 2014/09/12 07:01:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.1.1.ebuild,v 1.2 2014/09/26 15:44:01 floppym Exp $
 
 EAPI=5
 
@@ -52,7 +52,7 @@ IUSE+=" ${use_targets}"
 # Require at least one softmmu or user target.
 # Block USE flag configurations known to not work.
 REQUIRED_USE="|| ( ${use_targets} )
-	python? ( ${PYTHON_REQUIRED_USE} )
+	${PYTHON_REQUIRED_USE}
 	qemu_softmmu_targets_arm? ( fdt )
 	qemu_softmmu_targets_microblaze? ( fdt )
 	qemu_softmmu_targets_ppc? ( fdt )
