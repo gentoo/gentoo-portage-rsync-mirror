@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgrss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.17 2014/09/26 18:05:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.18 2014/09/26 19:22:37 pacho Exp $
+
+  26 Sep 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Co-maintain this
 
 *libgrss-0.5.0-r1 (26 Sep 2014)
 

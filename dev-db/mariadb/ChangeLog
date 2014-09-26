@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.52 2014/09/21 15:11:55 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.53 2014/09/26 19:07:01 grknight Exp $
+
+*mariadb-10.0.14 (26 Sep 2014)
+
+  26 Sep 2014;  <grknight@gentoo.org> +mariadb-10.0.14.ebuild,
+  -mariadb-10.0.13.ebuild:
+  Version bump; remove old
 
   21 Sep 2014; Brian Evans <grknight@gentoo.org> -mariadb-5.2.14.ebuild,
   -mariadb-5.3.12.ebuild, metadata.xml:

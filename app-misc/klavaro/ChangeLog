@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/klavaro
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.21 2014/01/29 15:02:17 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.22 2014/09/26 19:10:05 axs Exp $
+
+  26 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/klavaro-3.0.0-static.patch:
+  fixed cvs sticky options on file(s) that should not have cvs keyword expansion
 
   29 Jan 2014; Michael Palimaka <kensington@gentoo.org> klavaro-3.0.0.ebuild:
   Raise sys-devel/gettext dependency wrt bug #499686.
