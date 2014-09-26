@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-11.1.1.ebuild,v 1.1 2014/09/09 07:49:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-11.1.1-r1.ebuild,v 1.1 2014/09/26 09:01:58 jer Exp $
 
 EAPI=5
 inherit eutils multilib systemd toolchain-funcs
@@ -68,7 +68,7 @@ src_compile() {
 src_install() {
 	keepdir /var/log/sa
 
-	use cron && dodir /etc/cron.{daily,hourly}
+	use cron && dodir /etc/cron.d
 
 	emake \
 		DESTDIR="${D}" \

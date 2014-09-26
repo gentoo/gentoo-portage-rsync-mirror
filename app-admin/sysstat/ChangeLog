@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.271 2014/09/24 10:43:46 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.272 2014/09/26 09:01:58 jer Exp $
+
+*sysstat-11.1.1-r1 (26 Sep 2014)
+*sysstat-11.0.1-r1 (26 Sep 2014)
+
+  26 Sep 2014; Jeroen Roovers <jer@gentoo.org> -sysstat-11.0.1.ebuild,
+  +sysstat-11.0.1-r1.ebuild, -sysstat-11.1.1.ebuild, +sysstat-11.1.1-r1.ebuild:
+  Install alternative crontab file into /etc/cron.d instead of
+  /etc/cron.{daily,hourly} by shino (bug #523766).
 
   24 Sep 2014; Chema Alonso <nimiux@gentoo.org> sysstat-11.0.0.ebuild:
   Stable for amd64 wrt bug #520940

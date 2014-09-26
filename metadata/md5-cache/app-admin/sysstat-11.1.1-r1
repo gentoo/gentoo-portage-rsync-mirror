@@ -9,4 +9,4 @@ RDEPEND=cron? ( sys-process/cronbase ) isag? ( dev-lang/tk dev-vcs/rcs sci-visua
 SLOT=0
 SRC_URI=http://pagesperso-orange.fr/sebastien.godard/sysstat-11.1.1.tar.xz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=5477238537d851407d6bb966327285db
+_md5_=cafba8ba11f2c85e01e657507c21ff70
