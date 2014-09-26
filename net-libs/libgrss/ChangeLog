@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libgrss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.16 2014/01/15 13:04:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.17 2014/09/26 18:05:17 eva Exp $
+
+*libgrss-0.5.0-r1 (26 Sep 2014)
+
+  26 Sep 2014; Gilles Dartiguelongue <eva@gentoo.org> +libgrss-0.5.0-r1.ebuild,
+  +files/libgrss-0.5.0-headers.patch:
+  Fix build with newer glibc, bug #490722.
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libgrss-0.5.0.ebuild:
   Stable for arm, wrt bug #488764
