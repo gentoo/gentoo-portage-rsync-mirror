@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.157 2014/07/23 15:16:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.158 2014/09/26 20:33:12 pacho Exp $
+
+  26 Sep 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gnome-control-center-3.10.2-optional.patch,
+  -gnome-control-center-3.10.3.ebuild, -gnome-control-center-3.12.1.ebuild,
+  gnome-control-center-3.12.1-r1.ebuild, metadata.xml:
+  Needs to be rebuilt with upower-glib .so version updates, drop old
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-control-center-3.12.1-r1.ebuild:

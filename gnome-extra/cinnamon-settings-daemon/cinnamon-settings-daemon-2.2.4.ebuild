@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.2.4.ebuild,v 1.4 2014/07/24 17:49:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.2.4.ebuild,v 1.5 2014/09/26 20:36:16 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -29,7 +29,7 @@ RDEPEND="
 	>=media-sound/pulseaudio-0.9.16:0=
 	sys-apps/dbus
 	>=sys-auth/polkit-0.97
-	|| ( >=sys-power/upower-0.9.11 sys-power/upower-pm-utils )
+	|| ( >=sys-power/upower-0.9.11:= sys-power/upower-pm-utils )
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-3.7.8:3
 	>=x11-libs/libnotify-0.7.3:0=

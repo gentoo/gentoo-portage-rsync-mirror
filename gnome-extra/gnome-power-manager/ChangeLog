@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.196 2014/07/23 15:18:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.197 2014/09/26 20:38:15 pacho Exp $
+
+  26 Sep 2014; Pacho Ramos <pacho@gentoo.org>
+  -gnome-power-manager-3.10.1.ebuild, -gnome-power-manager-3.12.0.ebuild,
+  gnome-power-manager-3.12.2.ebuild:
+  Needs to be rebuilt with upower-glib .so version updates, drop old
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-power-manager-3.12.2.ebuild:

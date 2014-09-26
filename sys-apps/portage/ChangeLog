@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1412 2014/09/26 18:58:45 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1413 2014/09/26 20:32:03 dolsen Exp $
+
+*portage-2.2.8-r2 (26 Sep 2014)
+
+  26 Sep 2014; Brian Dolbec <dolsen@gentoo.org> -portage-2.1.12.2.ebuild,
+  -portage-2.2.8-r1.ebuild, +portage-2.2.8-r2.ebuild,
+  portage-2.2.14_rc1.ebuild, portage-9999.ebuild:
+  Update the bash dep bug # 523768, remove 1 more old version
 
 *portage-2.2.14_rc1 (26 Sep 2014)
 

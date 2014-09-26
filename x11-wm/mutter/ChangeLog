@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/mutter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.47 2014/09/19 17:35:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.48 2014/09/26 20:39:59 pacho Exp $
+
+  26 Sep 2014; Pacho Ramos <pacho@gentoo.org> -mutter-3.10.4.ebuild,
+  -mutter-3.12.1.ebuild, mutter-3.12.2.ebuild:
+  Needs to be rebuilt with upower-glib .so version updates, drop old
 
   19 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> mutter-3.10.4.ebuild:
   Remove dependency of <sys-power/upower-0.99 from || ( ) construct.

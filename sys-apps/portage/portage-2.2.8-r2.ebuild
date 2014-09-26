@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.8-r1.ebuild,v 1.11 2014/03/25 17:24:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.8-r2.ebuild,v 1.1 2014/09/26 20:32:03 dolsen Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -61,7 +61,7 @@ DEPEND="${python_dep}
 # For compgen, require bash[readline] (bug #445576).
 RDEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5
-		|| ( >=app-shells/bash-4.2_p37[readline] ( <app-shells/bash-4.2_p37 >=app-shells/bash-3.2_p17 ) )
+		app-shells/bash:0[readline]
 		>=app-admin/eselect-1.2
 		|| ( ${python_dep_ssl} dev-python/python-mhash )
 	)
@@ -74,7 +74,6 @@ RDEPEND="${python_dep}
 		$(for python_impl in python{2_6,2_7,3_2} pypy2_0; do
 			echo "python_targets_${python_impl}? ( dev-python/pyxattr[python_targets_${python_impl}] )"
 		done) ) )
-	!<app-shells/bash-3.2_p17
 	!<app-admin/logrotate-3.8.0"
 PDEPEND="
 	!build? (

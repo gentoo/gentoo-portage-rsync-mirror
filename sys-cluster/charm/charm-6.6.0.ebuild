@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.6.0.ebuild,v 1.1 2014/09/26 19:04:03 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.6.0.ebuild,v 1.2 2014/09/26 20:43:32 ottxor Exp $
 
 EAPI=5
 
@@ -166,23 +166,13 @@ src_install() {
 		doins "${i}"
 	done
 
-	# Install static libs. Charm has a lot of .o "libs" that it requires at
-	# runtime.
-	if use static-libs; then
-		for i in lib/*.{a,o}; do
-			if [[ -L ${i} ]]; then
-				i=$(readlink -e "${i}") || die
-			fi
-			dolib "${i}"
-		done
-	fi
-
-	# Install shared libs.
-	for i in lib_so/*; do
+	# Install libs incl. charm objects
+	for i in lib*/*.{so,o,a}; do
+		[[ ${i} = *.a ]] && use !static-libs && continue
 		if [[ -L ${i} ]]; then
 			i=$(readlink -e "${i}") || die
 		fi
-		dolib.so "${i}"
+		[[ ${i} = *.so ]] && dolib.so "${i}" || dolib "${i}"
 	done
 
 	# Basic docs.

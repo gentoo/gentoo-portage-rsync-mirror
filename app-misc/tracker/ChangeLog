@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.175 2014/09/05 09:30:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.176 2014/09/26 20:38:21 pacho Exp $
+
+  26 Sep 2014; Pacho Ramos <pacho@gentoo.org> tracker-1.0.4.ebuild:
+  Needs to be rebuilt with upower-glib .so version updates
 
 *tracker-1.0.4 (05 Sep 2014)
 

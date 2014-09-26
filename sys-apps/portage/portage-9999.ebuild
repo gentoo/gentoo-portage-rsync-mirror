@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.104 2014/09/26 18:58:45 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.105 2014/09/26 20:32:03 dolsen Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ RDEPEND="
 	dev-lang/python-exec:2
 	!build? (
 		>=sys-apps/sed-4.0.5
-		|| ( >=app-shells/bash-4.2_p37[readline] ( <app-shells/bash-4.2_p37 >=app-shells/bash-3.2_p17 ) )
+		app-shells/bash:0[readline]
 		>=app-admin/eselect-1.2
 	)
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
@@ -51,7 +51,6 @@ RDEPEND="
 		$(python_gen_cond_dep 'dev-python/pyxattr[${PYTHON_USEDEP}]' \
 			python{2_7,3_2} pypy)
 	) )
-	!<app-shells/bash-3.2_p17
 	!<app-admin/logrotate-3.8.0"
 PDEPEND="
 	!build? (
