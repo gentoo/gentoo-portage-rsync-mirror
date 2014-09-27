@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.272 2014/09/27 12:45:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.273 2014/09/27 14:55:43 hasufell Exp $
+
+*blender-2.71-r2 (27 Sep 2014)
+
+  27 Sep 2014; Julian Ospald <hasufell@gentoo.org> +blender-2.71-r2.ebuild,
+  +files/04-blender-2.71-r2-unbundle-glog.patch,
+  +files/09-blender-2.72-unbundle-minilzo.patch:
+  re-add 2.71 with fixed Manifest wrt #523328 and unbundle minilzo wrt #515266
 
   27 Sep 2014; Julian Ospald <hasufell@gentoo.org> -blender-2.66-r1.ebuild,
   -blender-2.67b-r1.ebuild, -blender-2.68.ebuild, -blender-2.68a.ebuild,
