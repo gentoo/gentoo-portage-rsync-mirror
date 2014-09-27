@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=!modperl? ( virtual/perl-CGI ) modperl? ( www-apache/libapreq2 >=www-apache/mod_perl-2 ) >=dev-perl/Params-Validate-0.7 >=dev-perl/Class-Container-0.08 >=dev-perl/Exception-Class-1.15 dev-perl/HTML-Parser virtual/perl-Scalar-List-Utils virtual/perl-File-Spec >=dev-perl/Cache-Cache-1.01 dev-perl/Log-Any modperl? ( =www-servers/apache-2* ) dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/J/JS/JSWARTZ/HTML-Mason-1.51.tar.gz
-_eclasses_=depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	2f552cb358a7a05346c910b39818c423	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f889e8437ffc64d766053d029c422c4e	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=2727a8bc8f5766a2c0ba3ad7a853177f
