@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/oslo-config-1.4.0.ebuild,v 1.1 2014/09/22 21:26:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/oslo-config-1.4.0.ebuild,v 1.2 2014/09/27 12:35:43 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_3} )
 
 inherit distutils-r1
 
@@ -37,12 +37,14 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			>=dev-python/oslo-sphinx-2.2.0[${PYTHON_USEDEP}]
 			>=dev-python/mock-1.0[${PYTHON_USEDEP}]
 		)"
+# mock appears to be hard imported in test files and keeps this form
+# upstream should arguably be poked to re-write the tests accordingly
 RDEPEND=">=dev-python/netaddr-0.7.12[${PYTHON_USEDEP}]
 		>=dev-python/six-1.7.0[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]"
 
-# This time half the doc files are missing; Do you want them?
-
 python_test() {
-	nosetests tests/ || die "test failed under ${EPYTHON}"
+	# https://bugs.launchpad.net/oslo.config/+bug/1374741
+	testr init || die "test failed under ${EPYTHON}"
+	testr run || die "test failed under ${EPYTHON}"
 }

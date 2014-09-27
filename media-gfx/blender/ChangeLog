@@ -1,6 +1,24 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.271 2014/09/27 12:10:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.272 2014/09/27 12:45:45 hasufell Exp $
+
+  27 Sep 2014; Julian Ospald <hasufell@gentoo.org> -blender-2.66-r1.ebuild,
+  -blender-2.67b-r1.ebuild, -blender-2.68.ebuild, -blender-2.68a.ebuild,
+  -blender-2.69.ebuild, -blender-2.70.ebuild, -blender-2.70-r1.ebuild,
+  -blender-2.70a-r3.ebuild, -blender-2.71.ebuild, -blender-2.71-r1.ebuild,
+  -files/blender-2.66-cmake.patch, -files/blender-2.66-doxyfile.patch,
+  -files/blender-2.66-sse2.patch, -files/blender-2.66-unbundle.patch,
+  -files/01-blender-2.67b-doxyfile.patch,
+  -files/06-blender-2.67b-fix-install-rules.patch,
+  -files/03-blender-2.67b-remove-binreloc.patch,
+  -files/07-blender-2.67b-sse2.patch,
+  -files/02-blender-2.67b-unbundle-colamd.patch,
+  -files/05-blender-2.67b-unbundle-eigen3.patch,
+  -files/04-blender-2.67b-unbundle-glog.patch,
+  -files/03-blender-2.68-remove-binreloc.patch,
+  -files/04-blender-2.70-unbundle-glog.patch,
+  -files/blender-2.70a-openmp.patch:
+  rm old
 
 *blender-2.72 (27 Sep 2014)
 
