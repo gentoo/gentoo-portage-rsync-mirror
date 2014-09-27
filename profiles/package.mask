@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16056 2014/09/26 23:48:42 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16057 2014/09/27 13:43:58 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (27 Sep 2014)
+# >=0.5 broke API, bug #523838, wait for next major tracker
+# version
+>=media-libs/libmediaart-0.7
 
 # Brian Dolbec <dolsen@gentoo.org> (25 Sep 2014)
 # Mask new setup.py based release due to regressions
