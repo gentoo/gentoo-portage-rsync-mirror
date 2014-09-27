@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/w_scan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.38 2014/04/30 11:54:15 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.39 2014/09/27 09:38:01 hd_brummy Exp $
+
+*w_scan-20140727 (27 Sep 2014)
+
+  27 Sep 2014; Joerg Bornkessel <hd_brummy@gentoo.org> +w_scan-20140727.ebuild:
+  bump, thx to BT on wrt bug 523272
 
   30 Apr 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -w_scan-20120415.ebuild,
   -w_scan-20120525.ebuild, w_scan-20130331.ebuild:
