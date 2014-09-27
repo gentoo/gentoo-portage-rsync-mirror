@@ -4,21 +4,24 @@ Subject: unbundle vulnerable minilzo version
 
 --- source/blender/blenkernel/intern/pointcache.c
 +++ source/blender/blenkernel/intern/pointcache.c
-@@ -84,10 +84,11 @@
+@@ -84,11 +84,14 @@
  #endif
  
  #ifdef WITH_LZO
 -#include "minilzo.h"
 -#else
--/* used for non-lzo cases */
 +#include <lzo/lzo1x.h>
- #define LZO_OUT_LEN(size)     ((size) + (size) / 16 + 64 + 3)
 +
 +#define LZO_HEAP_ALLOC(var,size) \
 +    lzo_align_t __LZO_MMODEL var [ ((size) + (sizeof(lzo_align_t) - 1)) / sizeof(lzo_align_t) ]
- #endif
++#endif
++
+ /* used for non-lzo cases */
+ #define LZO_OUT_LEN(size)     ((size) + (size) / 16 + 64 + 3)
+-#endif
  
  #ifdef WITH_LZMA
+ #include "LzmaLib.h"
 --- extern/CMakeLists.txt
 +++ extern/CMakeLists.txt
 @@ -62,10 +62,6 @@
