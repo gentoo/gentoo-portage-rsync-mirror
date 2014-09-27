@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Text-ParseWords
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-ParseWords/ChangeLog,v 1.8 2014/08/30 15:04:40 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-ParseWords/ChangeLog,v 1.9 2014/09/27 21:15:02 zlogene Exp $
+
+  27 Sep 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Text-ParseWords-3.290.0.ebuild:
+  x86 stable wrt bug #512092
 
   30 Aug 2014; Chema Alonso <nimiux@gentoo.org> Text-ParseWords-3.290.0.ebuild:
   Stable for amd64 wrt bug #512092

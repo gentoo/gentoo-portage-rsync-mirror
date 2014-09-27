@@ -4166,13 +4166,10 @@ media-tv/xbmc:vaapi - Enables VAAPI (Video Acceleration API) for hardware decodi
 media-tv/xbmc:webserver - Enable internal webserver
 media-tv/xbmc:xrandr - Support X randr extension
 media-tv/xmltv:ar - Argentina tv listing grabber
-media-tv/xmltv:be - Belgium and Luxemburg tv listing grabber
-media-tv/xmltv:brnet - Brazil cable tv listing grabber
 media-tv/xmltv:ch - Switzerland bluewin tv listing grabber
 media-tv/xmltv:dk - Denmark tv listing grabber
 media-tv/xmltv:dtvla - Latin America digital tv listing grabber
 media-tv/xmltv:ee - Estonia tv listing grabber
-media-tv/xmltv:es - Spain tv listing grabber
 media-tv/xmltv:es_laguiatv - Spain alternative grabber
 media-tv/xmltv:es_miguiatv - Spain alternative grabber
 media-tv/xmltv:eu_epg - EPG grabber for some European countries.
@@ -4184,14 +4181,10 @@ media-tv/xmltv:il - Israel tv listing grabber
 media-tv/xmltv:in - India tv listing grabber
 media-tv/xmltv:is - Iceland tv listing grabber
 media-tv/xmltv:it - Italy tv listing grabber
-media-tv/xmltv:jp - Japan tv listing grabber
 media-tv/xmltv:na_dd - North America tv listing grabber
 media-tv/xmltv:na_dtv - North America Direct TV grabber
 media-tv/xmltv:na_icons - option for na_dd to download icons
-media-tv/xmltv:nc - Caledonie Island tv listing grabber
 media-tv/xmltv:nl - Netherlands tv listing grabber
-media-tv/xmltv:nl_wolf - Netherlands alternative tv listing grabber
-media-tv/xmltv:no - Norway tv listing grabber
 media-tv/xmltv:no_gf - Norway Gfeed tv listing grabber
 media-tv/xmltv:pt - Portugal tv listing grabber
 media-tv/xmltv:re - Reunion Island (France) tv listing grabber

@@ -4,15 +4,12 @@
   <herd>media-tv</herd>
   <use>
     <flag name="ar">Argentina tv listing grabber</flag>
-    <flag name="be">Belgium and Luxemburg tv listing grabber</flag>
-    <flag name="brnet">Brazil cable tv listing grabber</flag>
     <flag name="ch">Switzerland bluewin tv listing grabber</flag>
     <flag name="dk">Denmark tv listing grabber</flag>
     <flag name="dtvla">Latin America digital tv listing grabber</flag>
     <flag name="ee">Estonia tv listing grabber</flag>
     <flag name="es_laguiatv">Spain alternative grabber</flag>
     <flag name="es_miguiatv">Spain alternative grabber</flag>
-    <flag name="es">Spain tv listing grabber</flag>
     <flag name="eu_epg">EPG grabber for some European countries.</flag>
     <flag name="fi">Finland tv listing grabber</flag>
     <flag name="fr">France tv listing grabber</flag>
@@ -22,15 +19,11 @@
     <flag name="il">Israel tv listing grabber</flag>
     <flag name="is">Iceland tv listing grabber</flag>
     <flag name="it">Italy tv listing grabber</flag>
-    <flag name="jp">Japan tv listing grabber</flag>
     <flag name="na_dd">North America tv listing grabber</flag>
     <flag name="na_dtv">North America Direct TV grabber</flag>
     <flag name="na_icons">option for na_dd to download icons</flag>
-    <flag name="nc">Caledonie Island tv listing grabber</flag>
     <flag name="nl">Netherlands tv listing grabber</flag>
-    <flag name="nl_wolf">Netherlands alternative tv listing grabber</flag>
     <flag name="no_gf">Norway Gfeed tv listing grabber</flag>
-    <flag name="no">Norway tv listing grabber</flag>
     <flag name="pt">Portugal tv listing grabber</flag>
     <flag name="re">Reunion Island (France) tv listing grabber</flag>
     <flag name="se_swedb">Sweden tv listing grabber</flag>

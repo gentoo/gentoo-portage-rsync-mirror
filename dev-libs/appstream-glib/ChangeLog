@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/appstream-glib
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/ChangeLog,v 1.1 2014/09/27 21:29:11 eva Exp $
+
+*appstream-glib-0.3.0 (27 Sep 2014)
+
+  27 Sep 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +appstream-glib-0.3.0.ebuild, +metadata.xml:
+  Initial commit, required by newer appdata-tools.
+
