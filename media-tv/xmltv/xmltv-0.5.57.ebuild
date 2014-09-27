@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.57.ebuild,v 1.1 2013/10/28 14:00:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.57.ebuild,v 1.2 2014/09/27 19:09:01 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xmltv/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~x86-linux"
 
 IUSE="ar ch dtvla uk_rt uk_bleb is it na_dd na_icons fi es_laguiatv es_miguiatv ee re huro dk se_swedb hr no_gf fr pt eu_epg tv_combiner tv_pick_cgi tv_check na_dtv
 za nl in il"

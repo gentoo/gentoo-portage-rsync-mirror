@@ -4,11 +4,11 @@ DESCRIPTION=Set of utilities to manage TV listings stored in the XMLTV format
 EAPI=5
 HOMEPAGE=http://xmltv.org
 IUSE=ar ch dtvla uk_rt uk_bleb is it na_dd na_icons fi es_laguiatv es_miguiatv ee re huro dk se_swedb hr no_gf fr pt eu_epg tv_combiner tv_pick_cgi tv_check na_dtv za nl in il
-KEYWORDS=~amd64 ~ppc ~x86 ~x86-linux
+KEYWORDS=amd64 ppc x86 ~x86-linux
 LICENSE=GPL-2
 RDEPEND=>=dev-perl/libwww-perl-5.65 >=dev-perl/XML-Parser-2.34 >=dev-perl/XML-Twig-3.10 >=dev-perl/DateManip-5.42 >=dev-perl/XML-Writer-0.6 virtual/perl-Memoize virtual/perl-Storable >=dev-perl/Lingua-Preferred-0.2.4 >=dev-perl/Term-ProgressBar-2.03 virtual/perl-IO-Compress dev-perl/Unicode-String dev-perl/TermReadKey dev-perl/File-Slurp >=dev-lang/perl-5.6.1 dev-perl/XML-LibXML dev-lang/perl:=[-build(-)]
 REQUIRED_USE=na_icons? ( na_dd )
 SLOT=0
 SRC_URI=mirror://sourceforge/xmltv/xmltv-0.5.57.tar.bz2
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	2f552cb358a7a05346c910b39818c423	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=224689a12f1f9bbd7fc23f5ef1ec8bbd
+_md5_=890425fecf292031ce9736811bc8b9de

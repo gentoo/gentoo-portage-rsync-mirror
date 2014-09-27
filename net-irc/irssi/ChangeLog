@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.196 2014/09/27 10:32:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.197 2014/09/27 19:18:38 jer Exp $
+
+  27 Sep 2014; Jeroen Roovers <jer@gentoo.org> irssi-0.8.16.ebuild:
+  Stable for HPPA (bug #519564).
 
   27 Sep 2014; Agostino Sarubbo <ago@gentoo.org> irssi-0.8.16.ebuild:
   Stable for x86, wrt bug #519564

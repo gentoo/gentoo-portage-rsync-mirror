@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.92 2014/08/10 21:03:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.93 2014/09/27 19:09:01 zlogene Exp $
+
+  27 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> -xmltv-0.5.50.ebuild,
+  -xmltv-0.5.55.ebuild, xmltv-0.5.57.ebuild:
+  Mark stable and drop old (bug #478714)
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xmltv-0.5.50.ebuild,
   xmltv-0.5.55.ebuild:
