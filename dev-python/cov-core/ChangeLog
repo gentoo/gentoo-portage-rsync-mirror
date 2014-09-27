@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cov-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.6 2014/08/27 08:21:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.7 2014/09/27 11:35:27 maekke Exp $
+
+  27 Sep 2014; Markus Meier <maekke@gentoo.org> cov-core-1.7.ebuild:
+  add ~arm, bug #521954
 
   27 Aug 2014; Ian Delaney <idella4@gentoo.org> cov-core-1.7.ebuild:
   add keyword ~x86, pypy support

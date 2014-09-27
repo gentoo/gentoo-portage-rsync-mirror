@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2014.0.0_rc4.ebuild,v 1.2 2014/06/09 08:19:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2014.0.0_rc4.ebuild,v 1.3 2014/09/27 11:33:09 maekke Exp $
 
 EAPI=5
 
@@ -57,7 +57,7 @@ pkg_setup() {
 		$(cmake-utils_use_enable lapack LAPACK)
 		$(cmake-utils_use_build python HSI)
 	)
-	python-single-r1_pkg_setup
+	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -71,7 +71,7 @@ src_prepare() {
 
 src_install() {
 	cmake-utils_src_install
-	python_optimize
+	use python && python_optimize
 
 	for lang in ${LANGS} ; do
 		case ${lang} in

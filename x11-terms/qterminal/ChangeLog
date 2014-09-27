@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/qterminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/qterminal/ChangeLog,v 1.5 2014/09/13 16:44:30 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/qterminal/ChangeLog,v 1.6 2014/09/27 11:38:55 maekke Exp $
+
+  27 Sep 2014; Markus Meier <maekke@gentoo.org>
+  qterminal-0.5.0_p20140913.ebuild:
+  add ~arm, bug #522746
 
 *qterminal-0.5.0_p20140913 (13 Sep 2014)
 

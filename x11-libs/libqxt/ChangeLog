@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libqxt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.29 2014/02/24 12:13:49 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.30 2014/09/27 11:38:23 maekke Exp $
+
+  27 Sep 2014; Markus Meier <maekke@gentoo.org> libqxt-0.6.2-r2.ebuild:
+  add ~arm, bug #522746
 
   24 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> -libqxt-0.6.2.ebuild:
   Drop old
