@@ -1,6 +1,18 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.72 2014/08/21 14:23:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.74 2014/09/27 00:15:37 radhermit Exp $
+
+  27 Sep 2014; Tim Harder <radhermit@gentoo.org> -unbound-1.4.16.ebuild,
+  -unbound-1.4.17-r1.ebuild, -unbound-1.4.18.ebuild, -unbound-1.4.19.ebuild,
+  -unbound-1.4.20.ebuild, -unbound-1.4.21.ebuild,
+  -files/unbound-1.4.17-gentoo.patch:
+  Remove old.
+
+*unbound-1.4.22-r1 (27 Sep 2014)
+
+  27 Sep 2014; Tim Harder <radhermit@gentoo.org> -unbound-1.4.22.ebuild,
+  +unbound-1.4.22-r1.ebuild:
+  Remove ldns dep since it's bundled and locally modified now.
 
   21 Aug 2014; Raúl Porcel <armin76@gentoo.org> unbound-1.4.19.ebuild,
   unbound-1.4.20.ebuild, unbound-1.4.21.ebuild, unbound-1.4.21-r1.ebuild,

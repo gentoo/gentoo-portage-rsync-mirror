@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.181 2014/09/26 11:03:09 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.182 2014/09/27 00:25:12 hd_brummy Exp $
+
+  27 Sep 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-2.0.6.ebuild:
+  fixed typo in patchset
 
 *vdr-2.0.6 (26 Sep 2014)
 
