@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.1_p12-r1.ebuild,v 1.4 2014/09/25 11:02:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p19.ebuild,v 1.1 2014/09/27 05:12:25 polynomial-c Exp $
 
 EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs
 
 # Official patchlevel
-# See ftp://ftp.cwru.edu/pub/bash/bash-4.1-patches/
+# See ftp://ftp.cwru.edu/pub/bash/bash-3.1-patches/
 PLEVEL=${PV##*_p}
 MY_PV=${PV/_p*}
 MY_PV=${MY_PV/_/-}
@@ -32,10 +32,10 @@ DESCRIPTION="The standard GNU Bourne again shell"
 HOMEPAGE="http://tiswww.case.edu/php/chet/bash/bashtop.html"
 SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz $(patches)"
 
-LICENSE="GPL-3"
+LICENSE="GPL-2"
 SLOT="${MY_PV}"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="afs mem-scramble +net nls +readline"
+IUSE="afs +net nls +readline"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
 	readline? ( >=sys-libs/readline-6.2 )
@@ -65,10 +65,13 @@ src_prepare() {
 	touch lib/{readline,termcap}/Makefile.in # for config.status
 	sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[[:alpha:]]*.h::g' Makefile.in || die
 
-	epatch "${FILESDIR}"/${PN}-4.1-fbsd-eaccess.patch #303411
-	sed -i '1i#define NEED_FPURGE_DECL' execute_cmd.c # needs fpurge() decl
-	epatch "${FILESDIR}"/${PN}-4.1-parallel-build.patch
-	epatch "${FILESDIR}"/bash-eol-pushback.patch #523592
+	epatch "${FILESDIR}"/${PN}-3.1-gentoo.patch
+	epatch "${FILESDIR}"/autoconf-mktime-2.53.patch #220040
+	epatch "${FILESDIR}"/${PN}-3.1-ulimit.patch
+	epatch "${FILESDIR}"/${PN}-3.0-read-memleak.patch
+	epatch "${FILESDIR}"/${PN}-3.0-trap-fg-signals.patch
+	epatch "${FILESDIR}"/bash-3.1-fix-dash-login-shell.patch #118257
+	epatch "${FILESDIR}"/bash-3.1-dev-fd-test-as-user.patch #131875
 
 	epatch_user
 }
@@ -76,7 +79,9 @@ src_prepare() {
 src_configure() {
 	local myconf=()
 
-	myconf+=( --without-lispdir ) #335896
+	# Force pgrp synchronization
+	# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=81653
+	export bash_cv_pgrp_pipe=yes
 
 	# For descriptions of these, see config-top.h
 	# bashrc/#26952 bash_logout/#90488 ssh/#24762
@@ -115,12 +120,15 @@ src_configure() {
 		$(use_with afs) \
 		$(use_enable net net-redirections) \
 		--disable-profiling \
-		$(use_enable mem-scramble) \
-		$(use_with mem-scramble bash-malloc) \
+		--without-gnu-malloc \
 		$(use_enable readline) \
 		$(use_enable readline history) \
 		$(use_enable readline bang-history) \
 		"${myconf[@]}"
+}
+
+src_compile() {
+	emake -j1 #102426
 }
 
 src_install() {

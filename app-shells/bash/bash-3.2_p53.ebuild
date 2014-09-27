@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p52-r1.ebuild,v 1.4 2014/09/25 11:02:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p53.ebuild,v 1.1 2014/09/27 05:12:25 polynomial-c Exp $
 
 EAPI="4"
 
@@ -76,7 +76,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2-ulimit.patch
 	epatch "${FILESDIR}"/${PN}-3.0-trap-fg-signals.patch
 	epatch "${FILESDIR}"/${PN}-3.2-dev-fd-test-as-user.patch #131875
-	epatch "${FILESDIR}"/bash-eol-pushback.patch #523592
 
 	epatch_user
 }
