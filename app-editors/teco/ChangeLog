@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/teco
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/ChangeLog,v 1.31 2014/05/24 10:13:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/ChangeLog,v 1.32 2014/09/27 22:33:42 ulm Exp $
+
+  27 Sep 2014; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  Not an Emacs, so it doesn't belong in the emacs herd. Taking maintainership.
 
   24 May 2014; Ulrich Müller <ulm@gentoo.org> -teco-1.00-r3.ebuild:
   Remove old.

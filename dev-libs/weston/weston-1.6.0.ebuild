@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/weston-1.6.0.ebuild,v 1.1 2014/09/26 20:43:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/weston-1.6.0.ebuild,v 1.2 2014/09/27 23:00:35 mattst88 Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=dev-libs/wayland-1.4.0
+	>=dev-libs/wayland-1.6.0
 	media-libs/lcms:2
 	media-libs/libpng:0=
 	media-libs/libwebp:0=

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/weston
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/ChangeLog,v 1.12 2014/09/26 20:43:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/ChangeLog,v 1.13 2014/09/27 23:00:35 mattst88 Exp $
+
+  27 Sep 2014; Matt Turner <mattst88@gentoo.org> weston-1.6.0.ebuild:
+  Depend on wayland-1.6.0, bug 523872.
 
 *weston-1.6.0 (26 Sep 2014)
 
