@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.81 2014/08/10 20:48:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.82 2014/09/27 16:06:31 eva Exp $
+
+*gnet-2.0.8-r2 (27 Sep 2014)
+
+  27 Sep 2014; Gilles Dartiguelongue <eva@gentoo.org> +gnet-2.0.8-r2.ebuild,
+  +files/gnet-2.0.8-fix-pkgconfig-abuse.patch,
+  +files/gnet-2.0.8-test-existing-domain.patch,
+  +files/gnet-2.0.8-unittest-build.patch,
+  +files/gnet-2.0.8-unittest-service.patch:
+  Fix build with recent check version, bug #498046. Apply a fix to pkgconfig
+  from Debian. Update to EAPI=5 and team guidelines.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gnet-2.0.8-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION
