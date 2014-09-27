@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/glew
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.105 2014/09/15 08:20:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.106 2014/09/26 23:39:58 radhermit Exp $
+
+*glew-1.11.0 (26 Sep 2014)
+
+  26 Sep 2014; Tim Harder <radhermit@gentoo.org> +glew-1.11.0.ebuild:
+  Version bump and support MinGW targets (bug #523444).
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> glew-1.10.0-r2.ebuild:
   Stable for sparc, wrt bug #512012

@@ -2295,6 +2295,7 @@ dev-qt/qtquick1:xml - Build the XmlListModel import for QtQuick1 (requires QtXml
 dev-qt/qtquickcontrols:widgets - Enable QtWidgets support
 dev-qt/qtscript:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtscript:scripttools - Build the QtScriptTools module (requires QtWidgets)
+dev-qt/qtsensors:qml - Build QML bindings
 dev-qt/qtsql:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtsql:qt3support - Enable the Qt3Support libraries for Qt4
 dev-qt/qtsvg:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
