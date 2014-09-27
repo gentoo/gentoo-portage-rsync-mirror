@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/perl-cleaner-9999.ebuild,v 1.4 2014/09/27 16:25:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/perl-cleaner-9999.ebuild,v 1.5 2014/09/27 20:18:22 dilfridge Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND="app-shells/bash
 	|| ( >=sys-apps/coreutils-8.15 app-misc/realpath sys-freebsd/freebsd-bin )
 	dev-lang/perl
 	|| (
-		( sys-apps/portage app-portage/gentoolkit )
+		( sys-apps/portage app-portage/portage-utils )
 		sys-apps/pkgcore
 		sys-apps/paludis
 	)

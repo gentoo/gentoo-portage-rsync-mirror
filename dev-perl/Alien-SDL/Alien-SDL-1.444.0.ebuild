@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/Alien-SDL-1.444.0.ebuild,v 1.2 2014/07/30 12:31:34 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/Alien-SDL-1.444.0.ebuild,v 1.3 2014/09/27 20:23:24 dilfridge Exp $
 
 EAPI=5
 
@@ -13,8 +13,9 @@ DESCRIPTION="building, finding and using SDL binaries"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
 
-# Archive::Extract, File::Fetch, File::Find, Test::More -> dev-lang/perl
-RDEPEND="dev-perl/Archive-Zip
+# File::Fetch, File::Find, Test::More -> dev-lang/perl
+RDEPEND="dev-perl/Archive-Extract
+	dev-perl/Archive-Zip
 	dev-perl/Capture-Tiny
 	dev-perl/File-ShareDir
 	dev-perl/File-Which
