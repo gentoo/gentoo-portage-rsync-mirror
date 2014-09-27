@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/tinc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.48 2014/07/17 05:47:19 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.50 2014/09/27 15:13:12 blueness Exp $
+
+  27 Sep 2014; Anthony G. Basile <blueness@gentoo.org> -files/tincd,
+  -files/tincd.lo, -tinc-1.0.23.ebuild, -tinc-1.0.24.ebuild:
+  Remove older versions with tincd/tincd.lo split openrc scripts
+
+*tinc-1.1_pre10-r1 (27 Sep 2014)
+*tinc-1.0.24-r2 (27 Sep 2014)
+
+  27 Sep 2014; Anthony G. Basile <blueness@gentoo.org> +tinc-1.0.24-r2.ebuild,
+  +tinc-1.1_pre10-r1.ebuild, -tinc-1.0.24-r1.ebuild, -tinc-1.1_pre10.ebuild,
+  files/tincd-r1:
+  Fix bashism, bug #523862
 
 *tinc-1.1_pre10 (17 Jul 2014)
 *tinc-1.0.24-r1 (17 Jul 2014)

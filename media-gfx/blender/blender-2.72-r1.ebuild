@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.72.ebuild,v 1.1 2014/09/27 12:10:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.72-r1.ebuild,v 1.1 2014/09/27 15:03:38 hasufell Exp $
 
 # TODO:
 #   bundled-deps: bullet is modified
@@ -41,6 +41,7 @@ RDEPEND="
 	${PYTHON_DEPS}
 	>=dev-cpp/gflags-2.1.1-r1
 	>=dev-cpp/glog-0.3.3-r1[gflags]
+	>=dev-libs/lzo-2.08:2
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	>=media-libs/freetype-2.0
@@ -113,7 +114,8 @@ src_prepare() {
 		"${FILESDIR}"/05-${PN}-2.72-unbundle-eigen3.patch \
 		"${FILESDIR}"/06-${PN}-2.68-fix-install-rules.patch \
 		"${FILESDIR}"/07-${PN}-2.70-sse2.patch \
-		"${FILESDIR}"/08-${PN}-2.71-gflags.patch
+		"${FILESDIR}"/08-${PN}-2.71-gflags.patch \
+		"${FILESDIR}"/09-${PN}-2.72-unbundle-minilzo.patch
 
 	epatch_user
 
@@ -123,6 +125,7 @@ src_prepare() {
 		extern/libopenjpeg \
 		extern/glew \
 		extern/colamd \
+		extern/lzo \
 		extern/libmv/third_party/{glog,gflags} \
 		|| die
 

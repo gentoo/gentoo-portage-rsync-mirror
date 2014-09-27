@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/files/tincd-r1,v 1.1 2014/07/17 05:47:19 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/files/tincd-r1,v 1.2 2014/09/27 15:02:09 blueness Exp $
 
 extra_started_commands="reload"
 
@@ -14,7 +14,7 @@ depend() {
 }
 
 checkconfig() {
-	if [ "${RC_SVCNAME}"  == "tincd" ] ; then
+	if [ "${RC_SVCNAME}" = "tincd" ] ; then
 		ALL_NETNAME="$(awk '/^ *NETWORK:/ { print $2 }' "${NETS}")"
 	else
 		ALL_NETNAME="${RC_SVCNAME#*.}"
@@ -39,7 +39,7 @@ start() {
 			eerror "Please set up ${CONFIG} !"
 		else
 			ebegin "Starting tinc network ${NETNAME}"
-			if [ "${SYSLOG}" == "yes" ]; then
+			if [ "${SYSLOG}" = "yes" ]; then
 				LOG=""
 			else
 				LOG="--logfile=/var/log/tinc.${NETNAME}.log"

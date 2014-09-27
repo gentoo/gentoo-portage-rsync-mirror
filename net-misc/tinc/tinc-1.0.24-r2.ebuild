@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.23.ebuild,v 1.1 2013/10/19 15:58:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.24-r2.ebuild,v 1.1 2014/09/27 15:02:09 blueness Exp $
 
 EAPI="5"
 inherit systemd
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+lzo uml vde +zlib"
 
-DEPEND=">=dev-libs/openssl-0.9.7
+DEPEND="dev-libs/openssl
 	lzo? ( dev-libs/lzo:2 )
-	zlib? ( >=sys-libs/zlib-1.1.4 )"
+	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	vde? ( net-misc/vde )"
 
@@ -34,10 +34,9 @@ src_install() {
 	emake DESTDIR="${D}" install
 	dodir /etc/tinc
 	dodoc AUTHORS NEWS README THANKS
-	doinitd "${FILESDIR}"/tincd
-	doinitd "${FILESDIR}"/tincd.lo
 	doconfd "${FILESDIR}"/tinc.networks
 	newconfd "${FILESDIR}"/tincd.conf tincd
+	newinitd "${FILESDIR}"/tincd-r1 tincd
 	systemd_newunit "${FILESDIR}"/tincd_at.service "tincd@.service"
 }
 
