@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Extract/Archive-Extract-0.720.0.ebuild,v 1.1 2014/09/27 16:52:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Extract/Archive-Extract-0.720.0.ebuild,v 1.2 2014/09/27 18:19:18 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Generic archive extracting mechanism"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 hppa ~x86"
 IUSE="test"
 
 RDEPEND="

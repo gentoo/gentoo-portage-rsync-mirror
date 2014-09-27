@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Extract
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Extract/ChangeLog,v 1.1 2014/09/27 16:52:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Extract/ChangeLog,v 1.2 2014/09/27 18:19:18 jer Exp $
+
+  27 Sep 2014; Jeroen Roovers <jer@gentoo.org> Archive-Extract-0.720.0.ebuild:
+  Stable for HPPA too.
 
 *Archive-Extract-0.720.0 (27 Sep 2014)
 
