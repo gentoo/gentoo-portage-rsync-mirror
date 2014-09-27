@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/net-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.84 2014/08/22 21:05:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.85 2014/09/27 21:59:08 zlogene Exp $
+
+*net-server-2.8.0 (27 Sep 2014)
+
+  27 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> +net-server-2.8.0.ebuild:
+  Version bump
 
 *net-server-2.7.0-r1 (22 Aug 2014)
 
