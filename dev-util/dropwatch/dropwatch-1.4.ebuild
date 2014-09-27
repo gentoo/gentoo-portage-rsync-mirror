@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dropwatch/dropwatch-1.4.ebuild,v 1.4 2014/03/04 08:29:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dropwatch/dropwatch-1.4.ebuild,v 1.5 2014/09/27 18:43:15 jer Exp $
 
 EAPI=5
 
 inherit linux-info toolchain-funcs
 
-DESCRIPTION="An utility to interface to the kernel to monitor for dropped network packets"
+DESCRIPTION="A utility to interface to the kernel to monitor for dropped network packets"
 HOMEPAGE="https://fedorahosted.org/dropwatch/"
 SRC_URI="https://fedorahosted.org/releases/d/r/dropwatch/${P}.tbz2"
 

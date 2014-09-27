@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dropwatch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dropwatch/ChangeLog,v 1.4 2014/03/04 08:29:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dropwatch/ChangeLog,v 1.5 2014/09/27 18:43:15 jer Exp $
+
+  27 Sep 2014; Jeroen Roovers <jer@gentoo.org> dropwatch-1.4.ebuild:
+  Spelling.
 
   04 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> dropwatch-1.4.ebuild:
   Bump EAPI to 5, add explicit dependency on sys-devel/binutils, thanks to
