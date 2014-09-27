@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/babelfish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/babelfish/ChangeLog,v 1.4 2014/04/09 10:03:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/babelfish/ChangeLog,v 1.6 2014/09/27 15:42:39 floppym Exp $
+
+*babelfish-0.5.3 (27 Sep 2014)
+
+  27 Sep 2014; Mike Gilbert <floppym@gentoo.org> +babelfish-0.5.3.ebuild:
+  Version bump.
+
+  27 Sep 2014; Mike Gilbert <floppym@gentoo.org> babelfish-0.5.1.ebuild,
+  babelfish-9999.ebuild:
+  Add python3.4.
 
   09 Apr 2014; Michał Górny <mgorny@gentoo.org> babelfish-0.5.1.ebuild,
   babelfish-9999.ebuild:
