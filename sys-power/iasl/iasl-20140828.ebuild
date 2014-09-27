@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20140325.ebuild,v 1.1 2014/04/12 18:43:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20140828.ebuild,v 1.1 2014/09/27 14:20:13 polynomial-c Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-20140214-locale.patch" \
+	epatch "${FILESDIR}/${PN}-20140828-locale.patch" \
 		"${FILESDIR}/${PN}-20140214-nostrip.patch"
 
 	find "${S}" -type f -name 'Makefile*' -print0 | \

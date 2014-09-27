@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/iasl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.48 2014/08/13 09:24:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.49 2014/09/27 14:20:13 polynomial-c Exp $
+
+*iasl-20140828 (27 Sep 2014)
+
+  27 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> -iasl-20140325.ebuild,
+  +iasl-20140828.ebuild, +files/iasl-20140828-locale.patch:
+  Version bump. Removed old.
 
   13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> iasl-20130117-r1.ebuild:
   Stable for ppc, wrt bug #505846
