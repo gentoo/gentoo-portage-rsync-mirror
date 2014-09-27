@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslotest/oslotest-1.1.0.ebuild,v 1.2 2014/09/27 04:51:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslotest/oslotest-1.1.0.ebuild,v 1.4 2014/09/27 08:55:34 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3} )
@@ -37,8 +37,6 @@ RDEPEND=">=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
 		>=dev-python/mock-1.0[${PYTHON_USEDEP}]
 		>=dev-python/mox3-0.7.0[${PYTHON_USEDEP}]"
 
-# This time half the doc files are missing; Do you want them?
-
 python_compile_all() {
 	use doc && esetup.py build_sphinx
 }
@@ -47,9 +45,15 @@ python_test() {
 	nosetests tests/ || die "test failed under ${EPYTHON}"
 }
 
-src_install() {
-	local HTML_DOCS=( doc/pyasn1-tutorial.html )
-	use doc && HTML_DOCS=( doc/build/html/. )
+python_install_all() {
+	if use doc; then
+		local HTML_DOCS=( doc/build/html/. )
+		doman doc/build/man/oslotest.1
+	fi
 
-	distutils-r1_src_install
+	distutils-r1_python_install_all
+}
+
+pkg_postinst() {
+	elog; elog "to acquire the man page, re-emerge with USE=doc"
 }
