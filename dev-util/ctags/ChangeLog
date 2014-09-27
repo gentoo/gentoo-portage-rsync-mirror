@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/ctags
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.86 2014/09/26 20:11:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.87 2014/09/26 23:10:11 radhermit Exp $
+
+  26 Sep 2014; Tim Harder <radhermit@gentoo.org> -ctags-5.5.4-r2.ebuild,
+  -ctags-5.6-r2.ebuild, -ctags-5.6-r3.ebuild, -ctags-5.7.ebuild,
+  -ctags-5.7-r1.ebuild, -ctags-5.7-r2.ebuild, -files/ctags-5.5.4-ebuilds.patch,
+  -files/ctags-5.5.4-ruby-classes.patch, -files/ctags-5.6-php5.patch,
+  -files/ctags-5.7-f95-pointers.patch,
+  -files/ctags-5.7-python-vars-starting-with-def.patch, -files/ctags-ada.patch:
+  Remove old.
 
 *ctags-5.8-r1 (26 Sep 2014)
 
