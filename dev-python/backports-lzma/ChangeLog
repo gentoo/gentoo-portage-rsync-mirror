@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/backports-lzma
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/backports-lzma/ChangeLog,v 1.9 2014/03/06 23:18:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/backports-lzma/ChangeLog,v 1.10 2014/09/27 23:53:56 radhermit Exp $
+
+*backports-lzma-0.0.3 (27 Sep 2014)
+
+  27 Sep 2014; Tim Harder <radhermit@gentoo.org> +backports-lzma-0.0.3.ebuild:
+  Version bump. Fix tests on initial install.
 
   06 Mar 2014; Tim Harder <radhermit@gentoo.org>
   backports-lzma-0.0.2-r1.ebuild:
