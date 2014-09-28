@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/mercator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.32 2014/08/10 20:06:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.33 2014/09/28 18:00:12 nimiux Exp $
+
+  28 Sep 2014; Chema Alonso <nimiux@gentoo.org> mercator-0.3.3.ebuild:
+  Stable for amd64 wrt bug #521520
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mercator-0.3.2.ebuild,
   mercator-0.3.3.ebuild:

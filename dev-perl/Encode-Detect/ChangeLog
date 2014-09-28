@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Encode-Detect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Detect/ChangeLog,v 1.17 2014/09/27 11:33:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Detect/ChangeLog,v 1.18 2014/09/28 17:58:31 zlogene Exp $
+
+  28 Sep 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Encode-Detect-1.10.0-r1.ebuild:
+  Add ~alpha keyword wrt bug #521400
 
   27 Sep 2014; Markus Meier <maekke@gentoo.org> Encode-Detect-1.10.0-r1.ebuild:
   add ~arm, bug #521400
