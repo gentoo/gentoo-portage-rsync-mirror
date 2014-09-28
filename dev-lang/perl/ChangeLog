@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.436 2014/09/26 11:00:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.437 2014/09/28 16:03:40 dilfridge Exp $
+
+  28 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-5.16.3.ebuild:
+  Make sure that an upgraded Locale::Maketext is installed, bug 446376
 
   26 Sep 2014; Fabian Groffen <grobian@gentoo.org>
   files/eblits/src_configure-v50180002.eblit:

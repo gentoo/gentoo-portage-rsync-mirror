@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.20.ebuild,v 1.1 2014/09/27 11:27:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.20.ebuild,v 1.2 2014/09/28 16:24:03 maekke Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils toolchain-funcs
@@ -16,7 +16,7 @@ IUSE="contrast fits gimp gnome gtk openmp timezone"
 
 RDEPEND="dev-libs/glib:2
 	>=media-gfx/exiv2-0.11:0=
-	media-libs/lcms:0
+	media-libs/lcms
 	>=media-libs/lensfun-0.2.5
 	media-libs/libpng:0=
 	media-libs/tiff

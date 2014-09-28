@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.1.1.ebuild,v 1.2 2014/08/10 01:54:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.1.8-r1.ebuild,v 1.1 2014/09/28 16:03:58 blueness Exp $
 
 EAPI="5"
 
@@ -17,24 +17,22 @@ RESTRICT="mirror strip"
 LICENSE="spideroak"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="dbus headless"
+IUSE="dbus"
 
 DEPEND="dev-util/patchelf"
 RDEPEND="
 	app-crypt/mit-krb5[keyutils]
 	dbus? ( sys-apps/dbus )
-	!headless? (
-		media-libs/fontconfig
-		media-libs/freetype:2
-		dev-libs/glib:2
-		x11-libs/libICE
-		x11-libs/libSM
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXmu
-		x11-libs/libXrender
-		x11-libs/libXt
-	)
+	media-libs/fontconfig
+	media-libs/freetype:2
+	dev-libs/glib:2
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXmu
+	x11-libs/libXrender
+	x11-libs/libXt
 "
 
 S=${WORKDIR}
@@ -42,8 +40,6 @@ S=${WORKDIR}
 QA_PREBUILT="*"
 
 src_prepare() {
-	use headless && epatch "${FILESDIR}"/${PN}-5.0.1-headless.patch
-
 	# Set RPATH for preserve-libs handling (bug #400979).
 	cd "${S}/opt/SpiderOak/lib" || die
 	local x
@@ -81,16 +77,6 @@ src_install() {
 	#install the manpage
 	doman usr/share/man/man1/SpiderOak.1.gz
 
-	if ! use headless ; then
-		domenu usr/share/applications/spideroak.desktop
-		doicon usr/share/pixmaps/SpiderOak.png
-	fi
-}
-
-pkg_postinst() {
-	if use headless; then
-		einfo "For instructions on running SpiderOak without a GUI, please read the FAQ:"
-		einfo "  https://spideroak.com/faq/questions/62/how_do_i_install_spideroak_on_a_headless_linux_server/"
-		einfo "  https://spideroak.com/faq/questions/67/how_can_i_use_spideroak_from_the_commandline/"
-	fi
+	domenu usr/share/applications/spideroak.desktop
+	doicon usr/share/pixmaps/SpiderOak.png
 }

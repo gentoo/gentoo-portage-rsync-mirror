@@ -1,6 +1,13 @@
 # ChangeLog for app-backup/cyphertite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/ChangeLog,v 1.6 2014/09/21 20:04:40 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/ChangeLog,v 1.7 2014/09/28 16:20:39 grknight Exp $
+
+*cyphertite-2.0.2-r5 (28 Sep 2014)
+
+  28 Sep 2014; Brian Evans <grknight@gentoo.org> +cyphertite-2.0.2-r5.ebuild,
+  -cyphertite-2.0.2-r4.ebuild:
+  Revbump to adjust dependency USE flags. Thanks to atomic_ on IRC for pointing
+  this out
 
 *cyphertite-2.0.2-r4 (21 Sep 2014)
 

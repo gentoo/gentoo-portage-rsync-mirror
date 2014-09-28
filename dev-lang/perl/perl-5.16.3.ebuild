@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.16.3.ebuild,v 1.15 2014/01/25 10:31:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.16.3.ebuild,v 1.16 2014/09/28 16:03:40 dilfridge Exp $
 
 EAPI=5
 
@@ -39,7 +39,12 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	!prefix? ( elibc_FreeBSD? ( sys-freebsd/freebsd-mk-defs ) )
 "
-PDEPEND=">=app-admin/perl-cleaner-2.5"
+
+# see bug 446376
+PDEPEND="
+	>=app-admin/perl-cleaner-2.5
+	>=virtual/perl-Locale-Maketext-1.230.0-r1
+"
 
 S="${WORKDIR}/${MY_P}"
 

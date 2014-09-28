@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/cyphertite-2.0.2-r4.ebuild,v 1.1 2014/09/21 20:04:39 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/cyphertite-2.0.2-r5.ebuild,v 1.1 2014/09/28 16:20:39 grknight Exp $
 
 EAPI=5
 
@@ -17,13 +17,13 @@ IUSE=""
 DEPEND="
 	app-arch/xz-utils:0=
 	dev-db/sqlite:3=
-	>=dev-libs/openssl-1.0.1g:0=
+	>=dev-libs/openssl-1.0.1g:0=[-bindist]
 	dev-libs/expat:0=
 	dev-libs/libbsd:0=
 	dev-libs/libedit:0=
 	dev-libs/libevent:0=
 	>=dev-libs/lzo-2.0:2=
-	>=net-misc/curl-7.15.1:0=
+	>=net-misc/curl-7.15.1:0=[ssl]
 	sys-libs/zlib:0=
 "
 RDEPEND="${DEPEND}"
