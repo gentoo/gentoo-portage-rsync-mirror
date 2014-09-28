@@ -1,6 +1,17 @@
 # ChangeLog for dev-qt/qtwebkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.17 2014/09/25 11:18:13 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.19 2014/09/28 18:27:38 pesa Exp $
+
+  28 Sep 2014; Davide Pesavento <pesa@gentoo.org>
+  +files/qtwebkit-5.3.2-use-gstreamer010.patch:
+  Add missing patch.
+
+*qtwebkit-5.3.2-r1 (28 Sep 2014)
+
+  28 Sep 2014; Davide Pesavento <pesa@gentoo.org> +qtwebkit-5.3.2-r1.ebuild,
+  -qtwebkit-5.3.2.ebuild, metadata.xml:
+  Build against gstreamer:1.0 with USE=gstreamer, and introduce USE=gstreamer010
+  to build against old gstreamer:0.10. Patch by Uwe L. Korn, fixes bug #523518.
 
   25 Sep 2014; Michael Palimaka <kensington@gentoo.org> metadata.xml:
   Remove unused USE flag.

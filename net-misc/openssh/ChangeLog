@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.524 2014/09/08 20:26:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.525 2014/09/28 18:18:48 polynomial-c Exp $
+
+*openssh-6.6.1_p1-r4 (28 Sep 2014)
+
+  28 Sep 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -openssh-6.6.1_p1-r2.ebuild, -openssh-6.6.1_p1-r3.ebuild,
+  +openssh-6.6.1_p1-r4.ebuild,
+  -files/openssh-6.6.1_p1-x509-hpn14v4-glue-p2.patch:
+  Fixed bug value assigned for SSH_BUG_LARGEWINDOW with
+  openssh-6.6.1p1-hpnssh14v5 patch (bug #523962).
 
 *openssh-6.6.1_p1-r3 (08 Sep 2014)
 

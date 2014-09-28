@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.250 2014/09/28 17:59:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.251 2014/09/28 18:01:23 zlogene Exp $
+
+  28 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> -spamassassin-3.3.2-r2.ebuild,
+  -spamassassin-3.3.2-r4.ebuild:
+  Drop old.
 
   28 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> spamassassin-3.4.0.ebuild:
   Add ~alpha keyword wrt bug #521400

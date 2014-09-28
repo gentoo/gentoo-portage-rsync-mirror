@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/openvas-scanner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/ChangeLog,v 1.6 2014/09/28 15:40:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/ChangeLog,v 1.7 2014/09/28 18:12:28 jlec Exp $
+
+*openvas-scanner-4.0.3-r1 (28 Sep 2014)
+
+  28 Sep 2014; Justin Lecher <jlec@gentoo.org> -openvas-scanner-4.0.3.ebuild,
+  +openvas-scanner-4.0.3-r1.ebuild,
+  +files/openvas-scanner-4.0.3-bsdsource.patch,
+  +files/openvas-scanner-4.0.3-mkcertclient.patch,
+  +files/openvas-scanner-4.0.3-rulesdir.patch, +files/openvas-nvt-sync-cron,
+  +files/openvassd.conf, files/openvassd.init, +files/openvassd.logrotate,
+  files/openvassd.service, +files/openvassd-daemon.conf:
+  Import fedora patches
 
 *openvas-scanner-4.0.3 (28 Sep 2014)
 

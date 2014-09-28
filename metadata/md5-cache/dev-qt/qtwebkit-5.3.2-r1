@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEPEND=dev-db/sqlite:3 dev-libs/icu:= >=dev-qt/qtcore-5.3.2:5[debug=,icu] >=dev-qt/qtgui-5.3.2:5[debug=] >=dev-qt/qtnetwork-5.3.2:5[debug=] >=dev-qt/qtsql-5.3.2:5[debug=] >=dev-qt/qtwidgets-5.3.2:5[debug=] media-libs/fontconfig:1.0 media-libs/libpng:0= sys-libs/zlib virtual/jpeg:0 virtual/opengl x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXrender gstreamer? ( dev-libs/glib:2 media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 ) gstreamer010? ( dev-libs/glib:2 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 ) libxml2? ( dev-libs/libxml2:2 ) multimedia? ( >=dev-qt/qtmultimedia-5.3.2:5[debug=,widgets] ) opengl? ( >=dev-qt/qtopengl-5.3.2:5[debug=] ) printsupport? ( >=dev-qt/qtprintsupport-5.3.2:5[debug=] ) qml? ( >=dev-qt/qtdeclarative-5.3.2:5[debug=] ) udev? ( virtual/udev ) webp? ( media-libs/libwebp:0= ) xslt? ( libxml2? ( dev-libs/libxslt ) !libxml2? ( >=dev-qt/qtxmlpatterns-5.3.2:5[debug=] ) ) || ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/ruby sys-devel/bison sys-devel/flex test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost ) dev-lang/perl virtual/pkgconfig test? ( >=dev-qt/qttest-5.3.2:5[debug=] )
+DESCRIPTION=WebKit rendering library for the Qt5 framework
+EAPI=5
+HOMEPAGE=https://www.qt.io/ https://qt-project.org/
+IUSE=gstreamer gstreamer010 libxml2 multimedia opengl printsupport qml udev webp xslt test debug test
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( LGPL-2.1 GPL-3 )
+RDEPEND=dev-db/sqlite:3 dev-libs/icu:= >=dev-qt/qtcore-5.3.2:5[debug=,icu] >=dev-qt/qtgui-5.3.2:5[debug=] >=dev-qt/qtnetwork-5.3.2:5[debug=] >=dev-qt/qtsql-5.3.2:5[debug=] >=dev-qt/qtwidgets-5.3.2:5[debug=] media-libs/fontconfig:1.0 media-libs/libpng:0= sys-libs/zlib virtual/jpeg:0 virtual/opengl x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXrender gstreamer? ( dev-libs/glib:2 media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 ) gstreamer010? ( dev-libs/glib:2 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 ) libxml2? ( dev-libs/libxml2:2 ) multimedia? ( >=dev-qt/qtmultimedia-5.3.2:5[debug=,widgets] ) opengl? ( >=dev-qt/qtopengl-5.3.2:5[debug=] ) printsupport? ( >=dev-qt/qtprintsupport-5.3.2:5[debug=] ) qml? ( >=dev-qt/qtdeclarative-5.3.2:5[debug=] ) udev? ( virtual/udev ) webp? ( media-libs/libwebp:0= ) xslt? ( libxml2? ( dev-libs/libxslt ) !libxml2? ( >=dev-qt/qtxmlpatterns-5.3.2:5[debug=] ) )
+REQUIRED_USE=?? ( gstreamer gstreamer010 multimedia )
+RESTRICT=test
+SLOT=5
+SRC_URI=http://download.qt-project.org/archive/qt/5.3/5.3.2/submodules/qtwebkit-opensource-src-5.3.2.tar.xz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	qt5-build	34226ac1a1fe3815692b071c6a69e0af	toolchain-funcs	0f1760274637a138b99bb649202ea402	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=88ca71712127a36a4366902678c5431a

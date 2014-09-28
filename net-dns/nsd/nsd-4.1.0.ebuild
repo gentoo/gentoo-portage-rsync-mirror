@@ -1,16 +1,16 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-4.0.0.ebuild,v 1.1 2013/10/30 10:51:57 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-4.1.0.ebuild,v 1.1 2014/09/28 18:12:51 floppym Exp $
 
-EAPI=4
+EAPI=5
 
-inherit user eutils
+inherit user eutils systemd
 
 DESCRIPTION="An authoritative only, high performance, open source name server"
 HOMEPAGE="http://www.nlnetlabs.nl/projects/nsd"
 # version voodoo needed only for non-release tarballs: 4.0.0_rc1 => 4.0.0rc1
 MY_PV=${PV/_rc/rc}
-MY_PV=${PV/_beta/b}
+MY_PV=${MY_PV/_beta/b}
 MY_P=${PN}-${MY_PV}
 S="${WORKDIR}/${MY_P}"
 SRC_URI="http://www.nlnetlabs.nl/downloads/${PN}/${MY_P}.tar.gz"
@@ -31,11 +31,6 @@ DEPEND="
 	${RDEPEND}
 	sys-devel/flex
 "
-
-pkg_setup() {
-	enewgroup nsd
-	enewuser nsd -1 -1 -1 nsd
-}
 
 src_prepare() {
 	# Fix the paths in the munin plugin to match our install
@@ -71,16 +66,6 @@ src_install() {
 
 	newinitd "${FILESDIR}"/nsd.initd nsd
 
-	# database directory, writable by nsd for database updates and zone transfers
-	dodir /var/db/nsd
-	fowners nsd:nsd /var/db/nsd
-	fperms 750 /var/db/nsd
-
-	# zones directory, writable by nsd for zone file updates (nsd-control write)
-	dodir /var/lib/nsd
-	fowners nsd:nsd /var/lib/nsd
-	fperms 750 /var/lib/nsd
-
 	# install munin plugin and config
 	if use munin; then
 		exeinto /usr/libexec/munin/plugins
@@ -89,7 +74,21 @@ src_install() {
 		newins "${FILESDIR}"/nsd.munin-conf nsd_munin
 	fi
 
+	systemd_dounit "${FILESDIR}"/nsd.service
+
 	# remove the /run directory that usually resides on tmpfs and is
 	# being taken care of by the nsd init script anyway (checkpath)
 	rm -rf "${D}"/run || die "Failed to remove /run"
+}
+
+pkg_postinst() {
+	# Do this in postinst to ensure the uid/gid is consistent for binpkgs
+	enewgroup nsd
+	enewuser nsd -1 -1 -1 nsd
+
+	# database directory, writable by nsd for database updates and zone transfers
+	install -d -m 750 -o nsd -g nsd "${EROOT%/}"/var/db/nsd
+
+	# zones directory, writable by nsd for zone file updates (nsd-control write)
+	install -d -m 750 -o nsd -g nsd "${EROOT%/}"/var/lib/nsd
 }

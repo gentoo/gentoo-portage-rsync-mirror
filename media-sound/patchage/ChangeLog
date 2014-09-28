@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/patchage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.16 2014/01/30 00:53:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.17 2014/09/28 18:03:37 nimiux Exp $
+
+  28 Sep 2014; Chema Alonso <nimiux@gentoo.org> patchage-0.5.0-r1.ebuild:
+  Stable for amd64 wrt bug #518782
 
   30 Jan 2014; Tim Harder <radhermit@gentoo.org> patchage-0.5.0-r1.ebuild:
   Move boost to DEPEND since it appears only headers are required.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-5.3.2.ebuild,v 1.2 2014/09/25 11:15:09 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-5.3.2-r1.ebuild,v 1.1 2014/09/28 18:24:38 pesa Exp $
 
 EAPI=5
 
@@ -18,7 +18,8 @@ fi
 
 # TODO: qttestlib, geolocation, orientation/sensors
 
-IUSE="gstreamer libxml2 multimedia opengl printsupport qml udev webp xslt"
+IUSE="gstreamer gstreamer010 libxml2 multimedia opengl printsupport qml udev webp xslt"
+REQUIRED_USE="?? ( gstreamer gstreamer010 multimedia )"
 
 RDEPEND="
 	dev-db/sqlite:3
@@ -38,11 +39,16 @@ RDEPEND="
 	x11-libs/libXrender
 	gstreamer? (
 		dev-libs/glib:2
-		>=media-libs/gstreamer-0.10.30:0.10
-		>=media-libs/gst-plugins-base-0.10.30:0.10
+		media-libs/gstreamer:1.0
+		media-libs/gst-plugins-base:1.0
+	)
+	gstreamer010? (
+		dev-libs/glib:2
+		media-libs/gstreamer:0.10
+		media-libs/gst-plugins-base:0.10
 	)
 	libxml2? ( dev-libs/libxml2:2 )
-	multimedia? ( >=dev-qt/qtmultimedia-${PV}:5[debug=] )
+	multimedia? ( >=dev-qt/qtmultimedia-${PV}:5[debug=,widgets] )
 	opengl? ( >=dev-qt/qtopengl-${PV}:5[debug=] )
 	printsupport? ( >=dev-qt/qtprintsupport-${PV}:5[debug=] )
 	qml? ( >=dev-qt/qtdeclarative-${PV}:5[debug=] )
@@ -61,7 +67,11 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	use gstreamer    || epatch "${FILESDIR}/${PN}-5.2.1-disable-gstreamer.patch"
+	if use gstreamer010; then
+		epatch "${FILESDIR}/${PN}-5.3.2-use-gstreamer010.patch"
+	elif ! use gstreamer; then
+		epatch "${FILESDIR}/${PN}-5.2.1-disable-gstreamer.patch"
+	fi
 	use libxml2      || sed -i -e '/config_libxml2: WEBKIT_CONFIG += use_libxml2/d' \
 		Tools/qmake/mkspecs/features/features.prf || die
 	use multimedia   || sed -i -e '/WEBKIT_CONFIG += video use_qt_multimedia/d' \

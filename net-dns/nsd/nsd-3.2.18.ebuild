@@ -1,14 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-3.2.17.ebuild,v 1.1 2014/03/25 22:29:20 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-3.2.18.ebuild,v 1.1 2014/09/28 18:12:51 floppym Exp $
 
-EAPI=4
+EAPI=5
 
 inherit user
 
 DESCRIPTION="An authoritative only, high performance, open source name server"
 HOMEPAGE="http://www.nlnetlabs.nl/projects/nsd"
-SRC_URI="http://www.nlnetlabs.nl/downloads/${PN}/${P}.tar.gz"
+MY_PV=${PV/_rc/rc}
+MY_PV=${MY_PV/_beta/b}
+MY_P=${PN}-${MY_PV}
+S="${WORKDIR}/${MY_P}"
+SRC_URI="http://www.nlnetlabs.nl/downloads/${PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -23,11 +27,6 @@ DEPEND="
 	${RDEPEND}
 	sys-devel/flex
 "
-
-pkg_setup() {
-	enewgroup nsd
-	enewuser nsd -1 -1 -1 nsd
-}
 
 src_configure() {
 	# ebuild.sh sets localstatedir to /var/lib, but nsd expects /var in several locations
@@ -61,17 +60,18 @@ src_install() {
 
 	newinitd "${FILESDIR}"/nsd3.initd-r1 nsd
 
-	# database directory, writable by nsd for database updates and zone transfers
-	dodir /var/db/nsd
-	fowners nsd:nsd /var/db/nsd
-	fperms 750 /var/db/nsd
-
-	# zones directory, writable by root for 'nsdc patch'
-	dodir /var/lib/nsd
-	fowners root:nsd /var/lib/nsd
-	fperms 750 /var/lib/nsd
-
 	# remove /var/run data created by Makefile, handled by initd script
 	rm -r "${D}"/var/run || die "could not remove /var/run/ directory"
 
+}
+
+pkg_postinst() {
+	enewgroup nsd
+	enewuser nsd -1 -1 -1 nsd
+
+	# database directory, writable by nsd for database updates and zone transfers
+	install -d -m 750 -o nsd -g nsd "${EROOT%/}"/var/db/nsd
+
+	# zones directory, writable by root for 'nsdc patch'
+	install -d -m 750 -o root -g nsd "${EROOT%/}"/var//nsd
 }
