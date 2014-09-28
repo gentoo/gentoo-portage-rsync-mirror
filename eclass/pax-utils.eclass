@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.23 2014/08/30 14:06:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.24 2014/09/28 20:11:05 blueness Exp $
 
 # @ECLASS: pax-utils.eclass
 # @MAINTAINER:
@@ -98,8 +98,6 @@ pax-mark() {
 
 			#Finally fall back on scanelf
 			if type -p scanelf > /dev/null && [[ ${PAX_MARKINGS} != "none" ]]; then
-				ewarn "Fallback PaX marking -${flags} with scanelf"
-				ewarn "Please check that PaX marking worked"
 				scanelf -Xxz ${flags} "$f"
 			#We failed to set PT_PAX flags
 			elif [[ ${PAX_MARKINGS} != "none" ]]; then
