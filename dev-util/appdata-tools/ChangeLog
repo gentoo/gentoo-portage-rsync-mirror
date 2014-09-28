@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/appdata-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.8 2014/09/27 21:34:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.9 2014/09/28 10:03:16 jer Exp $
+
+  28 Sep 2014; Jeroen Roovers <jer@gentoo.org> appdata-tools-0.1.8.ebuild:
+  Marked ~hppa too.
 
 *appdata-tools-0.1.8 (27 Sep 2014)
 

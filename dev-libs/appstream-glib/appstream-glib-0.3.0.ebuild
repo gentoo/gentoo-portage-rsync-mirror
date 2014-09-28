@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.0.ebuild,v 1.1 2014/09/27 21:29:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.0.ebuild,v 1.2 2014/09/28 10:03:11 jer Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/hughsie/${PN}/archive/${MY_P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0/7"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 IUSE="+introspection nls"
 
 # FIXME: yaml is optional but not properly handled in autofoo

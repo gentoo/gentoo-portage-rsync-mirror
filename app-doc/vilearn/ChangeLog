@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/vilearn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/ChangeLog,v 1.13 2014/08/10 10:58:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/ChangeLog,v 1.15 2014/09/28 10:06:37 hattya Exp $
+
+  28 Sep 2014; Akinori Hattori <hattya@gentoo.org> vilearn-1.0.ebuild:
+  update to EAPI 5
+
+  28 Sep 2014; Akinori Hattori <hattya@gentoo.org> vilearn-1.0.ebuild:
+  update HOMEPAGE and SRC_URI wrt bug #507898
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> vilearn-1.0.ebuild:
   Fix description for more repoman happy

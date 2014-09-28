@@ -4,10 +4,10 @@ DESCRIPTION=Provides GObjects and helper methods to read and write AppStream met
 EAPI=5
 HOMEPAGE=https://github.com/hughsie/appstream-glib
 IUSE=+introspection nls
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~hppa
 LICENSE=LGPL-2.1
 RDEPEND=app-arch/libarchive dev-db/sqlite:3 >=dev-libs/glib-2.16.1:2 media-libs/fontconfig >=media-libs/freetype-2.4:2 >=net-libs/libsoup-2.24:2.4 >=x11-libs/gdk-pixbuf-2.14:2 x11-libs/gtk+:3 x11-libs/pango dev-libs/libyaml introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
 SLOT=0/7
 SRC_URI=https://github.com/hughsie/appstream-glib/archive/appstream_glib_0_3_0.tar.gz -> appstream-glib-0.3.0.tar.gz
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=2dac290f7b9623149810c9b573285ae8
+_md5_=6aea08c10d55acd363ca45fda6029a7e
