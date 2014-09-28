@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77-r2.ebuild,v 1.7 2012/10/08 12:51:28 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77-r2.ebuild,v 1.9 2014/09/28 09:29:47 hattya Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils multilib toolchain-funcs
 
@@ -28,15 +28,15 @@ src_prepare() {
 
 src_compile() {
 	local targets="shared"
-	use static-libs && targets="${targets} staticlib piclib"
+	use static-libs && targets+=" staticlib piclib"
 
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} ${LDFLAGS}" ${targets}
 }
 
 src_install() {
 	local targets="install-sharedlib"
-	use static-libs && targets="${targets} install-piclib"
+	use static-libs && targets+=" install-piclib"
 
-	einstall ${targets}
+	emake DESTDIR="${D}" ${targets}
 	dodoc ChangeLog NEWS
 }
