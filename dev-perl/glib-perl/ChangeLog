@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.174 2014/07/26 14:35:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.175 2014/09/28 16:38:07 zlogene Exp $
+
+*glib-perl-1.305.0 (28 Sep 2014)
+
+  28 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> +glib-perl-1.305.0.ebuild:
+  Version bump
 
   26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -glib-perl-1.262.0.ebuild:
