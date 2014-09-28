@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9407 2014/09/28 14:20:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9408 2014/09/28 15:42:37 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Temporarily remove the Perl 5.16 mask again, so people have more time for
+  upgrading. Seems like the mask makes the upgrade even harder.
 
   28 Sep 2014; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add bh-luxi license to BINARY-REDISTRIBUTABLE group, bug 420025.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Moose
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.111 2014/08/24 01:47:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.112 2014/09/28 15:39:33 zlogene Exp $
+
+  28 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> Moose-2.60.400-r1.ebuild:
+  Switch to parallel testing, thanks to Kent Fredric (bug #523944)
 
 *Moose-2.60.400-r1 (24 Aug 2014)
 

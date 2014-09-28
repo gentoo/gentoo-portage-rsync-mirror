@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header:
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting openvassd (scanner)"
+	checkpath -d -q /var/cache/openvassd
+	start-stop-daemon --start --name openvassd \
+		--exec /usr/sbin/openvassd \
+		--pidfile /run/openvassd.pid
+	eend $?
+}
+
+stop() {
+	ebegin "Stop openvassd (scanner)"
+	start-stop-daemon --stop --name openvassd \
+		--pidfile /run/openvassd.pid
+	eend $?
+}

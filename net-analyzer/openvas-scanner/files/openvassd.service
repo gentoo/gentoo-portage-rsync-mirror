@@ -1,0 +1,6 @@
+[Unit]
+Description=OpenVAS Scanner
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/openvassd -f
