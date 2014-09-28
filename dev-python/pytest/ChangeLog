@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.97 2014/08/14 07:39:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.98 2014/09/27 23:19:24 radhermit Exp $
+
+*pytest-2.6.3 (27 Sep 2014)
+
+  27 Sep 2014; Tim Harder <radhermit@gentoo.org> +pytest-2.6.3.ebuild:
+  Version bump.
 
 *pytest-2.6.1 (14 Aug 2014)
 
