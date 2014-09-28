@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.69 2014/05/23 16:48:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.70 2014/09/28 11:00:41 jer Exp $
+
+  28 Sep 2014; Jeroen Roovers <jer@gentoo.org> imake-1.0.7.ebuild:
+  Stable for HPPA (bug #499166).
 
 *imake-1.0.7 (23 May 2014)
 
