@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-3.3.8.ebuild,v 1.3 2014/09/28 08:22:09 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-3.3.8.ebuild,v 1.4 2014/09/28 08:41:54 hattya Exp $
 
 EAPI="5"
 
@@ -87,6 +87,7 @@ src_configure() {
 	myeconfargs+=(--with-scrollbars="${scrollbars}")
 	myeconfargs+=(--with-tools="${tools}")
 
+	addpredict /dev/ptmx
 	autotools-utils_src_configure
 }
 
