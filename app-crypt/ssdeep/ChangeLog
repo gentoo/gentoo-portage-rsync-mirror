@@ -1,10 +1,14 @@
 # ChangeLog for app-crypt/ssdeep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssdeep/ChangeLog,v 1.1 2014/02/01 07:46:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssdeep/ChangeLog,v 1.2 2014/09/28 19:33:50 alonbl Exp $
+
+*ssdeep-2.11.1 (28 Sep 2014)
+
+  28 Sep 2014; Alon Bar-Lev <alonbl@gentoo.org> +ssdeep-2.11.1.ebuild:
+  Version bump, bug#523918
 
 *ssdeep-2.10 (01 Feb 2014)
 
   01 Feb 2014; Tim Harder <radhermit@gentoo.org> +ssdeep-2.10.ebuild,
   +files/ssdeep-2.10-shared.patch, +metadata.xml:
   Initial import (bug #430642 by Evan Teran).
-
