@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1018 2014/09/24 10:29:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1019 2014/09/28 11:01:41 jer Exp $
+
+  28 Sep 2014; Jeroen Roovers <jer@gentoo.org> gcc-4.8.3.ebuild:
+  Stable for HPPA (bug #516152).
 
   24 Sep 2014; Anthony G. Basile <blueness@gentoo.org> gcc-4.8.0.ebuild,
   gcc-4.8.1-r1.ebuild, gcc-4.8.2.ebuild, gcc-4.8.3.ebuild:

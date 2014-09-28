@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.106 2014/08/26 11:39:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.107 2014/09/28 11:02:46 blueness Exp $
+
+  28 Sep 2014; Anthony G. Basile <blueness@gentoo.org>
+  squashfs-tools-4.3.ebuild:
+  Keyword ~ppc ~ppc64, bug #499468
 
   26 Aug 2014; Raúl Porcel <armin76@gentoo.org> squashfs-tools-4.3.ebuild:
   Add ~m68k/~sh/~sparc wrt bug #499468
