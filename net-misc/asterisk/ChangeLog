@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.495 2014/09/20 17:55:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.496 2014/09/29 10:20:16 chainsaw Exp $
+
+*asterisk-11.13.0 (29 Sep 2014)
+
+  29 Sep 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.13.0.ebuild:
+  Additional resilience against invalid (ao2) object references. FORTIFY_SOURCE
+  fix now upstream. Modify permissions to suit a multi-daemon setup as per Jaco
+  Kroon in bug #507894.
+
+  22 Sep 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-11.10.2.ebuild:
+  Remove vulnerable ebuild for security bug #523216 as stabilisation is
+  complete. 1.8 branch not affected.
 
   20 Sep 2014; Agostino Sarubbo <ago@gentoo.org> asterisk-11.12.1.ebuild:
   Stable for x86, wrt bug #523216

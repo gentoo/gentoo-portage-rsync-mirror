@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.10.2.ebuild,v 1.4 2014/09/18 10:29:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.13.0.ebuild,v 1.1 2014/09/29 10:20:16 chainsaw Exp $
 
 EAPI=5
 inherit autotools base eutils linux-info multilib user
@@ -10,10 +10,10 @@ MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz
-	 mirror://gentoo/gentoo-asterisk-patchset-3.11.tar.bz2"
+	 mirror://gentoo/gentoo-asterisk-patchset-3.13.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE_VOICEMAIL_STORAGE="
 	+voicemail_storage_file
@@ -77,8 +77,7 @@ DEPEND="${RDEPEND}
 "
 
 RDEPEND="${RDEPEND}
-	syslog? ( virtual/logger )
-"
+	syslog? ( virtual/logger )"
 
 PDEPEND="net-misc/asterisk-core-sounds
 	net-misc/asterisk-extra-sounds
@@ -220,12 +219,14 @@ src_install() {
 		insinto /etc/radiusclient-ng/
 		doins contrib/dictionary.digium
 	fi
+	diropts -m 0750 -o root -g asterisk
+	keepdir	/etc/asterisk
 	if use samples; then
 		emake DESTDIR="${D}" samples
 		for conffile in "${D}"etc/asterisk/*.*
 		do
-			chown asterisk:asterisk $conffile
-			chmod 0660 $conffile
+			chown root:root $conffile
+			chmod 0644 $conffile
 		done
 		einfo "Sample files have been installed"
 	else
@@ -238,8 +239,7 @@ src_install() {
 	rm -rf "${D}"var/spool/asterisk/voicemail/default || die
 
 	# keep directories
-	diropts -m 0770 -o asterisk -g asterisk
-	keepdir	/etc/asterisk
+	diropts -m 0770 -o asterisk asterisk
 	keepdir /var/lib/asterisk
 	keepdir /var/spool/asterisk
 	keepdir /var/spool/asterisk/{system,tmp,meetme,monitor,dictate,voicemail}
