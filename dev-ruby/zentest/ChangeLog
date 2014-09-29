@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.147 2014/08/15 17:23:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.148 2014/09/29 06:23:45 graaff Exp $
+
+*zentest-4.11.0 (29 Sep 2014)
+
+  29 Sep 2014; Hans de Graaff <graaff@gentoo.org> +zentest-4.11.0.ebuild:
+  Version bump.
 
   15 Aug 2014; Raúl Porcel <armin76@gentoo.org> zentest-4.9.5.ebuild:
   sparc stable, bug #490180
