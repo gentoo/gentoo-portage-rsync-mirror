@@ -1,18 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.10.0.1-r1.ebuild,v 1.7 2014/05/10 19:37:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.12.2-r1.ebuild,v 1.1 2014/09/29 11:52:45 pacho Exp $
 
 EAPI="5"
+GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
 inherit autotools eutils gnome2 pam readme.gentoo systemd user
 
 DESCRIPTION="GNOME Display Manager for managing graphical display servers and user logins"
-HOMEPAGE="https://wiki.gnome.org/GDM"
+HOMEPAGE="https://wiki.gnome.org/Projects/GDM"
 
 SRC_URI="${SRC_URI}
 	branding? ( http://www.mail-archive.com/tango-artists@lists.freedesktop.org/msg00043/tango-gentoo-v1.1.tar.gz )
-	http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.xz
 "
 
 LICENSE="
@@ -21,8 +21,9 @@ LICENSE="
 "
 
 SLOT="0"
-IUSE="accessibility audit branding fprint +introspection ipv6 plymouth selinux smartcard +systemd tcpd test xinerama"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
+IUSE="accessibility audit branding fprint +introspection ipv6 plymouth selinux smartcard +systemd tcpd test wayland xinerama"
+REQUIRED_USE="wayland? ( systemd )"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 
 # NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug #295686
 # nspr used by smartcard extension
@@ -32,7 +33,7 @@ COMMON_DEPEND="
 	app-text/iso-codes
 	>=dev-libs/glib-2.36:2
 	>=x11-libs/gtk+-2.91.1:3
-	>=gnome-base/dconf-0.11.6
+	>=gnome-base/dconf-0.20
 	>=gnome-base/gnome-settings-daemon-3.1.4
 	gnome-base/gsettings-desktop-schemas
 	>=media-libs/fontconfig-2.5.0
@@ -90,7 +91,6 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	>=dev-util/intltool-0.40.0
-	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 	x11-proto/inputproto
 	x11-proto/randrproto
@@ -128,7 +128,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# make custom session work, bug #216984
+	# make custom session work, bug #216984, upstream bug #737578
 	epatch "${FILESDIR}/${PN}-3.2.1.1-custom-session.patch"
 
 	# ssh-agent handling must be done at xinitrc.d, bug #220603
@@ -140,8 +140,8 @@ src_prepare() {
 	# Show logo when branding is enabled
 	use branding && epatch "${FILESDIR}/${PN}-3.8.4-logo.patch"
 
-	# Allow many fixes from 3.10 branch and some from master
-	epatch "${WORKDIR}/${P}-patches"/*.patch
+	# Don't block SIGUSR1, bug #524008 (from 'master')
+	epatch "${FILESDIR}"/${PN}-3.12.2-SIGUSR1-blocking{,-1}.patch
 
 	eautoreconf
 
@@ -178,6 +178,7 @@ src_configure() {
 		$(use_enable systemd systemd-journal) \
 		$(systemd_with_unitdir) \
 		$(use_with tcpd tcp-wrappers) \
+		$(use_enable wayland wayland-support) \
 		$(use_with xinerama) \
 		ITSTOOL=$(type -P true) \
 		${myconf}
@@ -193,9 +194,6 @@ src_install() {
 	insinto /etc/X11/xinit/xinitrc.d
 	newins "${FILESDIR}/49-keychain-r1" 49-keychain
 	newins "${FILESDIR}/50-ssh-agent-r1" 50-ssh-agent
-
-	# log, etc.
-	keepdir /var/log/gdm
 
 	# gdm user's home directory
 	keepdir /var/lib/gdm
@@ -215,8 +213,6 @@ pkg_postinst() {
 
 	gnome2_pkg_postinst
 
-	dbus-launch dconf update || die "'dconf update' failed"
-
 	# bug #436456; gdm crashes if /var/lib/gdm subdirs are not owned by gdm:gdm
 	ret=0
 	ebegin "Fixing "${EROOT}"var/lib/gdm ownership"
@@ -227,10 +223,4 @@ pkg_postinst() {
 	eend ${ret}
 
 	readme.gentoo_print_elog
-
-	if [[ -f "/etc/X11/gdm/gdm.conf" ]]; then
-		elog "You had /etc/X11/gdm/gdm.conf which is the old configuration"
-		elog "file.  It has been moved to /etc/X11/gdm/gdm-pre-gnome-2.16"
-		mv /etc/X11/gdm/gdm.conf /etc/X11/gdm/gdm-pre-gnome-2.16
-	fi
 }
