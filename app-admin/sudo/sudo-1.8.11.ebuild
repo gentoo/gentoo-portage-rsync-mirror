@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.6_p8.ebuild,v 1.2 2013/05/27 21:35:20 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.11.ebuild,v 1.1 2014/09/29 21:29:13 flameeyes Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils pam multilib libtool
 
@@ -46,6 +46,10 @@ DEPEND="${DEPEND}
 S=${WORKDIR}/${MY_P}
 
 REQUIRED_USE="pam? ( !skey ) skey? ( !pam )"
+
+# The check_ttyname fails in the ebuild for various reasons.
+# See upstream http://www.sudo.ws/bugs/show_bug.cgi?id=643
+RESTRICT=test
 
 MAKEOPTS+=" SAMPLES="
 
@@ -118,7 +122,8 @@ src_configure() {
 		$(use_with sendmail) \
 		--without-opie \
 		--without-linux-audit \
-		--with-timedir="${EPREFIX}"/var/db/sudo \
+		--with-rundir="${EPREFIX}"/var/run/sudo \
+		--with-vardir="${EPREFIX}"/var/db/sudo \
 		--with-plugindir="${EPREFIX}"/usr/$(get_libdir)/sudo \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 }
@@ -148,6 +153,10 @@ src_install() {
 
 	keepdir /var/db/sudo
 	fperms 0700 /var/db/sudo
+
+	# Don't install into /var/run as that is a tmpfs most of the time
+	# (bug #504854)
+	rm -rf "${D}"/var/run
 }
 
 pkg_postinst() {
