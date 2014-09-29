@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-heatclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/ChangeLog,v 1.14 2014/09/28 23:00:16 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/ChangeLog,v 1.15 2014/09/28 23:16:33 alunduil Exp $
+
+  28 Sep 2014; Alex Brandt <alunduil@gentoo.org> python-heatclient-9999.ebuild:
+  add python3_3 target
 
 *python-heatclient-0.2.12 (28 Sep 2014)
 
