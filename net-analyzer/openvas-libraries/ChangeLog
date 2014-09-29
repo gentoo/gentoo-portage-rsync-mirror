@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/openvas-libraries
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/ChangeLog,v 1.19 2014/09/29 07:00:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/ChangeLog,v 1.20 2014/09/29 07:03:39 jlec Exp $
+
+  29 Sep 2014; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add myself as maintainer
 
   29 Sep 2014; Justin Lecher <jlec@gentoo.org> Manifest:
   Add myself as maintainer

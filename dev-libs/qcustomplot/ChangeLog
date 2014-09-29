@@ -1,0 +1,17 @@
+# ChangeLog for dev-libs/qcustomplot
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qcustomplot/ChangeLog,v 1.1 2014/09/29 07:17:26 jlec Exp $
+
+  29 Sep 2014; Justin Lecher <jlec@gentoo.org> +qcustomplot-1.2.1.ebuild,
+  +metadata.xml:
+  Move to new Cat
+
+  28 Sep 2014; Justin Lecher <jlec@gentoo.org> qcustomplot-1.2.1.ebuild:
+  Install header
+
+*qcustomplot-1.2.1 (28 Sep 2014)
+
+  28 Sep 2014; Justin Lecher <jlec@gentoo.org> +qcustomplot-1.2.1.ebuild,
+  +metadata.xml:
+  New addition, written by me
+
