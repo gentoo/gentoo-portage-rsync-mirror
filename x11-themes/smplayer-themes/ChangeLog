@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/smplayer-themes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/ChangeLog,v 1.37 2014/09/24 08:22:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/ChangeLog,v 1.38 2014/09/29 09:33:27 jer Exp $
+
+  29 Sep 2014; Jeroen Roovers <jer@gentoo.org> smplayer-themes-14.9.0.ebuild:
+  Stable for HPPA (bug #523402).
 
 *smplayer-themes-14.9.0 (24 Sep 2014)
 

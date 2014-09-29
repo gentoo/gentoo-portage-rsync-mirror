@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/smplayer-themes-14.9.0.ebuild,v 1.1 2014/09/24 08:22:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/smplayer-themes-14.9.0.ebuild,v 1.2 2014/09/29 09:33:27 jer Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/smplayer/${P}.tar.bz2"
 
 LICENSE="CC-BY-2.5 CC-BY-SA-2.5 CC-BY-SA-3.0 GPL-2 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
