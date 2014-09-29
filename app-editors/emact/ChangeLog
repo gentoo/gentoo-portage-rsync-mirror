@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emact
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/ChangeLog,v 1.24 2014/02/12 17:58:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/ChangeLog,v 1.25 2014/09/29 20:48:26 ulm Exp $
+
+  29 Sep 2014; Ulrich Müller <ulm@gentoo.org> emact-2.56.0.ebuild:
+  Clean up unused dependencies.
 
   12 Feb 2014; Ulrich Müller <ulm@gentoo.org> emact-2.56.0.ebuild:
   Specify LICENSE more precisely.
