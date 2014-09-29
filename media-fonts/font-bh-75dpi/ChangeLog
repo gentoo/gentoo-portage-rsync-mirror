@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-75dpi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-75dpi/ChangeLog,v 1.40 2014/09/14 17:28:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-75dpi/ChangeLog,v 1.41 2014/09/29 16:36:48 ulm Exp $
+
+  29 Sep 2014; Ulrich Müller <ulm@gentoo.org> font-bh-75dpi-1.0.3.ebuild:
+  Fix LICENSE, bitmap fonts are not copyrightable, bug 523678.
 
   14 Sep 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   font-bh-75dpi-1.0.3.ebuild:
