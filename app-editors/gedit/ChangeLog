@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.371 2014/07/23 15:13:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.372 2014/09/29 14:31:01 tetromino Exp $
+
+*gedit-3.12.2-r1 (29 Sep 2014)
+
+  29 Sep 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gedit-3.12.1.ebuild, +gedit-3.12.2-r1.ebuild:
+  Really allow multiple python targets for python plugins and install gi
+  overrides in the right place (bug #524018, thanks to Alexander Tsoy). Drop
+  old.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gedit-3.12.2.ebuild:
   Stable for x86, wrt bug #512012

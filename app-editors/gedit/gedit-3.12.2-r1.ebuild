@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.12.1.ebuild,v 1.1 2014/04/27 15:30:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.12.2-r1.ebuild,v 1.1 2014/09/29 14:31:01 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ PYTHON_COMPAT=( python3_{2,3} )
 inherit eutils gnome2 multilib python-r1 virtualx
 
 DESCRIPTION="A text editor for the GNOME desktop"
-HOMEPAGE="http://live.gnome.org/Gedit"
+HOMEPAGE="https://wiki.gnome.org/Apps/Gedit"
 
 LICENSE="GPL-2+ CC-BY-SA-3.0"
 SLOT="0"
@@ -50,6 +50,7 @@ COMMON_DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}
 	x11-themes/gnome-icon-theme-symbolic
+	python? ( dev-libs/libpeas[${PYTHON_USEDEP}] )
 "
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
@@ -72,15 +73,28 @@ src_prepare() {
 
 src_configure() {
 	DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
-	gnome2_src_configure \
-		--disable-deprecations \
-		--enable-updater \
-		--enable-gvfs-metadata \
-		$(use_enable introspection) \
-		$(use_enable python) \
-		$(use_enable spell) \
-		$(use_enable zeitgeist) \
-		ITSTOOL=$(type -P true)
+
+	gedit_configure() {
+		ECONF_SOURCE=${S} \
+		gnome2_src_configure \
+			--disable-deprecations \
+			--enable-updater \
+			--enable-gvfs-metadata \
+			$(use_enable introspection) \
+			$(use_enable spell) \
+			$(use_enable zeitgeist) \
+			ITSTOOL=$(type -P true) \
+			"$@"
+	}
+
+	gedit_py_configure() {
+		mkdir -p "${BUILD_DIR}" || die
+		run_in_build_dir gedit_configure --enable-python
+	}
+
+	# run gedit_py_configure first to avoid out-of-source build for C code
+	use python && python_parallel_foreach_impl gedit_py_configure
+	gedit_configure --disable-python
 }
 
 src_test() {
@@ -89,4 +103,16 @@ src_test() {
 
 	unset DBUS_SESSION_BUS_ADDRESS
 	GSETTINGS_SCHEMA_DIR="${S}/data" Xemake check
+}
+
+src_install() {
+	gedit_py_install() {
+		pushd "${BUILD_DIR}" > /dev/null || die
+		# manually set pyoverridesdir due to bug #524018 and AM_PATH_PYTHON limitations
+		emake DESTDIR="${D}" top_builddir="${S}" pyoverridesdir="$(python_get_sitedir)/gi/overrides" install
+		popd > /dev/null
+	}
+
+	gnome2_src_install
+	use python && python_foreach_impl gedit_py_install
 }
