@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.12.2-r1.ebuild,v 1.1 2014/09/29 11:52:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.12.2-r1.ebuild,v 1.2 2014/09/29 15:05:17 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -90,6 +90,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
+	dev-util/gdbus-codegen
 	>=dev-util/intltool-0.40.0
 	virtual/pkgconfig
 	x11-proto/inputproto
