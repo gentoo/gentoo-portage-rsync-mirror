@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/nikola
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.18 2014/03/21 10:14:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.19 2014/09/29 16:17:14 klausman Exp $
+
+  29 Sep 2014; Tobias Klausmann <klausman@gentoo.org> nikola-6.4.0.ebuild:
+  Loosen overly-specific configparser dep. dev-python/configparser-3.2.0.3
+  breaks llvm compilation so let's try to get rid of it
 
   21 Mar 2014; Ben de Groot <yngwin@gentoo.org> -nikola-6.2.1.ebuild,
   -nikola-6.3.0.ebuild:

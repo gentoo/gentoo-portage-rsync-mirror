@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/nikola-6.4.0.ebuild,v 1.1 2014/03/21 10:13:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/nikola-6.4.0.ebuild,v 1.2 2014/09/29 16:17:14 klausman Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 ) # 3_3 needs PyRSS2Gen update
@@ -26,7 +26,7 @@ RESTRICT="test" # needs freezegun, coveralls, and phpserialize
 
 DEPEND="dev-python/docutils[${PYTHON_USEDEP}]" # needs rst2man to build manpage
 RDEPEND="${DEPEND}
-	python_targets_python2_7? ( =dev-python/configparser-3.2.0*[${PYTHON_USEDEP}] )
+	python_targets_python2_7? ( dev-python/configparser[${PYTHON_USEDEP}] )
 	dev-python/blinker[${PYTHON_USEDEP}]
 	dev-python/colorama[${PYTHON_USEDEP}]
 	>=dev-python/doit-0.23.0[${PYTHON_USEDEP}]

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.207 2014/09/18 20:06:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.208 2014/09/29 16:03:23 mgorny Exp $
+
+  29 Sep 2014; Michał Górny <mgorny@gentoo.org> llvm-3.5.0.ebuild,
+  llvm-9999.ebuild:
+  Block configparser-3.2 since it is known to break the build.
 
   18 Sep 2014; Michał Górny <mgorny@gentoo.org>
   files/clang-3.5-gentoo-runtime-gcc-detection-v3.patch:

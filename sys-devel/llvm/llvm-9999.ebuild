@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.90 2014/09/07 11:12:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.91 2014/09/29 16:03:23 mgorny Exp $
 
 EAPI=5
 
@@ -37,6 +37,7 @@ COMMON_DEPEND="
 	libffi? ( >=virtual/libffi-3.0.13-r1:0=[${MULTILIB_USEDEP}] )
 	ncurses? ( >=sys-libs/ncurses-5.9-r3:5=[${MULTILIB_USEDEP}] )
 	ocaml? ( dev-lang/ocaml:0= )"
+# configparser-3.2 breaks the build (3.3 or none at all are fine)
 DEPEND="${COMMON_DEPEND}
 	dev-lang/perl
 	dev-python/sphinx
@@ -49,6 +50,7 @@ DEPEND="${COMMON_DEPEND}
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
 	clang? ( xml? ( virtual/pkgconfig ) )
 	libffi? ( virtual/pkgconfig )
+	!<dev-python/configparser-3.3.0.2
 	${PYTHON_DEPS}"
 RDEPEND="${COMMON_DEPEND}
 	clang? ( !<=sys-devel/clang-${PV}-r99 )
