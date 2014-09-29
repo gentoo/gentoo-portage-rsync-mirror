@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/zram-init/zram-init-2.7-r1.ebuild,v 1.1 2014/05/10 22:45:39 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/zram-init/zram-init-3.0.ebuild,v 1.1 2014/09/29 21:48:20 jauhien Exp $
 
 EAPI=5
 inherit eutils readme.gentoo systemd
