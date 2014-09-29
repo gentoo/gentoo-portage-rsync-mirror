@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-8.0_beta2.ebuild,v 1.1 2014/09/29 18:30:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-8.0_beta2.ebuild,v 1.2 2014/09/29 19:09:59 jlec Exp $
 
 EAPI=5
 
@@ -37,6 +37,7 @@ DOCS=( ChangeLog CHANGES README )
 PATCHES=(
 	"${FILESDIR}"/${PN}-7.0.4-libssh.patch
 	"${FILESDIR}"/${PN}-7.0.4-bsdsource.patch
+	"${FILESDIR}"/${P}-underlinking.patch
 	)
 
 src_configure() {

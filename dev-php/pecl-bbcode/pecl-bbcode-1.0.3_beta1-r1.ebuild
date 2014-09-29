@@ -1,15 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-bbcode/pecl-bbcode-1.0.3_beta1.ebuild,v 1.5 2014/08/10 21:01:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-bbcode/pecl-bbcode-1.0.3_beta1-r1.ebuild,v 1.1 2014/09/29 19:16:36 grknight Exp $
 
-EAPI="4"
+EAPI="5"
 
 PHP_EXT_NAME="bbcode"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS="TODO"
 
-USE_PHP="php5-3 php5-4"
+USE_PHP="php5-4 php5-5 php5-6"
 
 MY_PV="${PV/_beta/b}"
 PECL_PKG_V="${PECL_PKG}-${MY_PV}"

@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/pecl-bbcode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-bbcode/ChangeLog,v 1.5 2014/08/10 21:01:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-bbcode/ChangeLog,v 1.6 2014/09/29 19:16:36 grknight Exp $
+
+*pecl-bbcode-1.0.3_beta1-r1 (29 Sep 2014)
+
+  29 Sep 2014;  <grknight@gentoo.org> +pecl-bbcode-1.0.3_beta1-r1.ebuild,
+  -pecl-bbcode-1.0.3_beta1.ebuild:
+  Revbump for new PHP support; drop PHP 5.3. wrt bug 488984
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   pecl-bbcode-1.0.3_beta1.ebuild:
