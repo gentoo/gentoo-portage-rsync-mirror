@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1019 2014/09/28 11:01:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1020 2014/09/29 02:58:48 rhill Exp $
+
+  29 Sep 2014; Ryan Hill <rhill@gentoo.org> gcc-4.7.4.ebuild:
+  4.7.4 p1.2: Fix openssh build on alpha (bug #512586).
 
   28 Sep 2014; Jeroen Roovers <jer@gentoo.org> gcc-4.8.3.ebuild:
   Stable for HPPA (bug #516152).
