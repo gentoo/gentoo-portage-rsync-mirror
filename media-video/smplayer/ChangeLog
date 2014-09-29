@@ -1,6 +1,10 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.149 2014/09/29 10:05:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.150 2014/09/29 13:06:01 pesa Exp $
+
+  29 Sep 2014; Davide Pesavento <pesa@gentoo.org>
+  -files/smplayer-0.8.0-quazip.patch, -smplayer-0.8.5.ebuild:
+  old
 
   29 Sep 2014; Agostino Sarubbo <ago@gentoo.org> smplayer-14.3.0.ebuild:
   Stable for x86, wrt bug #523402

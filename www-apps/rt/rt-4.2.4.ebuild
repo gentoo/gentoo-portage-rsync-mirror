@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.4.ebuild,v 1.5 2014/07/23 00:07:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.4.ebuild,v 1.6 2014/09/29 13:27:03 titanofold Exp $
 
 EAPI=5
 
@@ -68,6 +68,7 @@ DEPEND="
 	dev-perl/Email-Address
 	dev-perl/Email-Address-List
 	dev-perl/File-ShareDir
+	dev-perl/File-Which
 	dev-perl/GD
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil
@@ -91,6 +92,7 @@ DEPEND="
 	dev-perl/Plack
 	dev-perl/Regexp-Common-net-CIDR
 	dev-perl/Regexp-IPv6
+	dev-perl/String-ShellQuote
 	dev-perl/Starlet
 	dev-perl/TermReadKey
 	dev-perl/Text-Password-Pronounceable

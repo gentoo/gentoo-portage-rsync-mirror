@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.86 2014/07/23 00:07:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.87 2014/09/29 13:27:03 titanofold Exp $
+
+  29 Sep 2014; Aaron W. Swenson <titanofold@gentoo.org> rt-4.2.4.ebuild:
+  Add missing dependencies fixing bug 523972
 
   23 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> rt-4.2.4.ebuild:
   locale-maketext becomes Locale-Maketext
