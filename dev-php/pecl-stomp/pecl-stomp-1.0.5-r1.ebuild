@@ -1,9 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-stomp/pecl-stomp-1.0.5.ebuild,v 1.1 2013/03/05 10:50:44 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-stomp/pecl-stomp-1.0.5-r1.ebuild,v 1.1 2014/09/29 18:24:58 grknight Exp $
 
 EAPI="5"
 
+USE_PHP="php5-4 php5-5 php5-6"
 PHP_EXT_NAME="stomp"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
