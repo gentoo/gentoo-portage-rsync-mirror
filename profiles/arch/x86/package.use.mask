@@ -1,8 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.138 2014/09/13 09:07:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.139 2014/09/29 14:35:12 jauhien Exp $
 
 # This file requires >=portage-2.1.1
+
+# Jauhien Piatlicki <jauhien@gentoo.org> (29 Sep 2014)
+# Unmask g-sorcery flag for arches on which app-portage/g-sorcery is keyworded
+app-portage/layman -g-sorcery
 
 # Mike Frysinger <vapier@gentoo.org> (04 Aug 2014)
 # Unmask flashrom drivers that only work on x86 due to in/out asm insns #454024

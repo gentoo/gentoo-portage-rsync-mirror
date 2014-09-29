@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gs-pypi/gs-pypi-0.1.ebuild,v 1.1 2014/08/29 13:11:56 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gs-pypi/gs-pypi-0.1.ebuild,v 1.2 2014/09/29 14:53:01 jauhien Exp $
 
 EAPI=5
 
@@ -14,8 +14,7 @@ SRC_URI="https://github.com/jauhien/gs-pypi/archive/v${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-#masked by keywords until new layman is released
-#KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-portage/g-sorcery
 		dev-python/beautifulsoup:4"

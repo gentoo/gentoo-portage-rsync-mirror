@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gs-pypi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gs-pypi/ChangeLog,v 1.1 2014/08/29 13:11:56 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gs-pypi/ChangeLog,v 1.2 2014/09/29 14:53:01 jauhien Exp $
+
+  29 Sep 2014; Jauhien Piatlicki <jauhien@gentoo.org> gs-pypi-0.1.ebuild:
+  keyword on adm64 and x86
 
 *gs-pypi-9999 (29 Aug 2014)
 *gs-pypi-0.1 (29 Aug 2014)

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/g-sorcery-0.1-r1.ebuild,v 1.2 2014/08/29 20:17:02 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/g-sorcery-0.1-r1.ebuild,v 1.3 2014/09/29 14:32:47 jauhien Exp $
 
 EAPI=5
 
@@ -14,10 +14,9 @@ SRC_URI="https://github.com/jauhien/g-sorcery/archive/v${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-#masked by keywords until new layman is released
-#KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 
-PDEPEND=">=app-portage/layman-9999[g-sorcery]"
+PDEPEND=">=app-portage/layman-2.2.0[g-sorcery]"
 
 python_install_all() {
 	distutils-r1_python_install_all
