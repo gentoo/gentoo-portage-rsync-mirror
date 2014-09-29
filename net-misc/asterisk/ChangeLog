@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.496 2014/09/29 10:20:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.497 2014/09/29 10:54:49 chainsaw Exp $
+
+*asterisk-12.6.0 (29 Sep 2014)
+
+  29 Sep 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-12.6.0.ebuild:
+  Additional resilience against invalid (ao2) object references. Now supports
+  empty passwords for PJSIP userpass authentication. Masquerade fixes for T38
+  between PJSIP and non-PJSIP chanels. FORTIFY_SOURCE fix now upstream. Modify
+  permissions to suit a multi-daemon setup as per Jaco Kroon in bug #507894.
 
 *asterisk-11.13.0 (29 Sep 2014)
 
