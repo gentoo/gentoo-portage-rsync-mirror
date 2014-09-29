@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pcsc-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.17 2014/01/26 16:54:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.18 2014/09/29 20:21:03 flameeyes Exp $
+
+*pcsc-tools-1.4.23 (29 Sep 2014)
+
+  29 Sep 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pcsc-tools-1.4.23.ebuild, -pcsc-tools-1.4.21.ebuild:
+  Version bump.
 
 *pcsc-tools-1.4.22 (26 Jan 2014)
 

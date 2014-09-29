@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.7-r1.ebuild,v 1.1 2014/09/28 17:21:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.7-r1.ebuild,v 1.2 2014/09/29 20:12:04 hd_brummy Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit vdr-plugin-2 flag-o-matic
 
@@ -59,6 +59,7 @@ src_prepare() {
 	# libav10 support, wrt bug 519448
 	sed -i \
 		-e "s:CODEC_ID_MPEG1VIDEO:AV_CODEC_ID_MPEG1VIDEO:" \
+		-e "s:avcodec_alloc_frame:av_frame_alloc:" \
 		imlibrenderer/dvbrenderer/mpeg2encoder.c || die
 
 	vdr-plugin-2_src_prepare

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.64 2013/05/10 15:57:02 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.65 2014/09/29 20:02:56 ulm Exp $
+
+  29 Sep 2014; Ulrich Müller <ulm@gentoo.org> jed-0.99.19.ebuild:
+  Fix LICENSE, clean up unused dependencies.
 
   10 May 2013; Markus Meier <maekke@gentoo.org> jed-0.99.19.ebuild:
   add ~arm, bug #466712

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.17.ebuild,v 1.1 2014/06/26 19:57:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.18.ebuild,v 1.1 2014/09/29 20:22:32 flameeyes Exp $
 
 EAPI=5
 
-STUPID_NUM="4091"
+STUPID_NUM="4111"
 
 inherit eutils toolchain-funcs udev autotools-utils
 
@@ -44,6 +44,6 @@ src_install() {
 		# ccid >=1.4.11 version changed the rules drastically in a minor
 		# release to no longer use the pcscd group. Using the old ones in
 		# the mean time.
-		udev_newrules "${FILESDIR}"/92_pcscd_ccid.rules 92-pcsc-ccid.rules
+		udev_newrules "${FILESDIR}"/92_pcscd_ccid-2.rules 92-pcsc-ccid.rules
 	fi
 }

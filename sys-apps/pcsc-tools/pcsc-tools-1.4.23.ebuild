@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.21.ebuild,v 1.1 2013/01/06 17:19:37 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.23.ebuild,v 1.1 2014/09/29 20:21:03 flameeyes Exp $
 
 EAPI="4"
 
@@ -8,8 +8,7 @@ inherit eutils fdo-mime multilib toolchain-funcs
 
 DESCRIPTION="PC/SC Architecture smartcard tools"
 HOMEPAGE="http://ludovic.rousseau.free.fr/softwares/pcsc-tools/"
-SRC_URI="http://ludovic.rousseau.free.fr/softwares/${PN}/${P}.tar.gz
-	${SC_REV:+http://anonscm.debian.org/viewvc/pcsclite/trunk/pcsc-tools/smartcard_list.txt?revision=${SC_REV}&view=co -> ${PN}-smartcard_list-${SC_REV}.txt}"
+SRC_URI="http://ludovic.rousseau.free.fr/softwares/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -54,11 +53,7 @@ src_install() {
 	fi
 
 	insinto /usr/share/pcsc
-	if [[ -n ${SC_REV} ]]; then
-		newins "${WORKDIR}"/${PN}-smartcard_list-${SC_REV}.txt smartcard_list.txt
-	else
-		doins smartcard_list.txt
-	fi
+	doins smartcard_list.txt
 }
 
 pkg_postinst() {

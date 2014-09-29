@@ -1,8 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.19.ebuild,v 1.9 2013/05/10 15:57:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.19.ebuild,v 1.10 2014/09/29 20:02:56 ulm Exp $
 
 EAPI=4
+
 inherit versionator
 
 MY_P=${PN}-$(replace_version_separator 2 '-')
@@ -11,7 +12,7 @@ DESCRIPTION="Console S-Lang-based editor"
 HOMEPAGE="http://www.jedsoft.org/jed/"
 SRC_URI="ftp://space.mit.edu/pub/davis/jed/v${PV%.*}/${MY_P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="X gpm xft"
@@ -22,16 +23,14 @@ RDEPEND=">=sys-libs/slang-2
 		x11-libs/libX11
 		xft? (
 			>=media-libs/freetype-2
-			x11-libs/libXext
 			x11-libs/libXft
-			x11-libs/libXrender
-			)
-		)"
+		)
+	)"
 DEPEND="${RDEPEND}
 	X? (
 		x11-libs/libXt
 		x11-proto/xproto
-		)"
+	)"
 
 S=${WORKDIR}/${MY_P}
 
