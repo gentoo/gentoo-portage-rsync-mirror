@@ -1,15 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.16.1-r1.ebuild,v 1.7 2014/08/25 15:01:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.16.1-r1.ebuild,v 1.8 2014/09/30 05:30:23 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
 inherit distutils-r1
 
 DESCRIPTION="Python binding to libudev"
-HOMEPAGE="http://packages.python.org/pyudev/ http://pypi.python.org/pypi/pyudev"
+HOMEPAGE="http://pyudev.readthedocs.org https://github.com/pyudev/pyudev"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
