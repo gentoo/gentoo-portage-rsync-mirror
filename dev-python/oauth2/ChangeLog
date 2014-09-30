@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/oauth2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2/ChangeLog,v 1.9 2013/09/05 18:47:16 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2/ChangeLog,v 1.10 2014/09/30 02:53:51 idella4 Exp $
+
+  30 Sep 2014; Ian Delaney <idella4@gentoo.org> oauth2-1.5.211-r1.ebuild:
+  drop py2.6 add pypy support, correct deps setup
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> oauth2-1.5.211-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
