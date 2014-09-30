@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/pecl-imagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-imagick/ChangeLog,v 1.11 2014/08/10 21:02:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-imagick/ChangeLog,v 1.12 2014/09/30 02:01:49 grknight Exp $
+
+  30 Sep 2014; Brian Evans <grknight@gentoo.org> -pecl-imagick-3.0.1-r1.ebuild,
+  pecl-imagick-3.2.0_rc1.ebuild:
+  Add PHP 5.6 support wrt bug 515100; Drop old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   pecl-imagick-3.0.1-r1.ebuild, pecl-imagick-3.1.0_rc2.ebuild,

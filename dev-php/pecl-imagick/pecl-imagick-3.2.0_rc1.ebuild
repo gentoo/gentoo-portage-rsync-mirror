@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-imagick/pecl-imagick-3.2.0_rc1.ebuild,v 1.2 2014/08/10 21:02:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-imagick/pecl-imagick-3.2.0_rc1.ebuild,v 1.3 2014/09/30 02:01:49 grknight Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ DOCS="TODO"
 
 MY_PV="${PV/rc/RC}"
 
-USE_PHP="php5-5 php5-4"
+USE_PHP="php5-6 php5-5 php5-4"
 
 inherit php-ext-pecl-r2
 
