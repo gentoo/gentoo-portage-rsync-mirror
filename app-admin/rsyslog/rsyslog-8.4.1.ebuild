@@ -1,130 +1,188 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.4.10.ebuild,v 1.2 2014/04/16 16:14:41 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-8.4.1.ebuild,v 1.1 2014/09/30 13:09:39 polynomial-c Exp $
 
 EAPI=5
-AUTOTOOLS_AUTORECONF=yes
+AUTOTOOLS_AUTORECONF=1
 
 inherit autotools-utils eutils systemd
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more"
 HOMEPAGE="http://www.rsyslog.com/"
-SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz"
+SRC_URI="
+	http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
+	doc? ( http://www.rsyslog.com/files/download/${PN}/${PN}-doc-${PV}.tar.gz )
+"
 
 LICENSE="GPL-3 LGPL-3 Apache-2.0"
 KEYWORDS="~amd64 ~arm ~hppa ~x86"
 SLOT="0"
-IUSE="dbi debug doc extras kerberos mongodb mysql oracle postgres relp snmp ssl static-libs systemd zeromq zlib"
+IUSE="dbi debug doc elasticsearch +gcrypt jemalloc kerberos mongodb mysql normalize omudpspoof oracle postgres rabbitmq redis relp rfc3195 rfc5424hmac snmp ssl systemd usertools zeromq"
 
 RDEPEND="
-	dev-libs/json-c:=
-	dev-libs/libee
+	>=dev-libs/json-c-0.11:=
 	>=dev-libs/libestr-0.1.9
-	dev-libs/libgcrypt:=
-	>=dev-libs/liblogging-1.0.1:=
-	<dev-libs/liblognorm-1.0.0:=
-	dbi? ( dev-db/libdbi )
-	extras? ( net-libs/libnet )
+	>=dev-libs/liblogging-1.0.1:=[stdlog]
+	>=sys-libs/zlib-1.2.5
+	dbi? ( >=dev-db/libdbi-0.8.3 )
+	elasticsearch? ( >=net-misc/curl-7.35.0 )
+	gcrypt? ( >=dev-libs/libgcrypt-1.5.3:= )
+	jemalloc? ( >=dev-libs/jemalloc-3.3.1 )
 	kerberos? ( virtual/krb5 )
-	mongodb? ( dev-libs/libmongo-client )
+	mongodb? ( >=dev-libs/libmongo-client-0.1.4 )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql-base )
-	oracle? ( dev-db/oracle-instantclient-basic )
-	relp? ( >=dev-libs/librelp-1.0.3 )
-	snmp? ( net-analyzer/net-snmp )
-	ssl? ( net-libs/gnutls )
-	systemd? ( sys-apps/systemd )
-	zeromq? ( >=net-libs/zeromq-3 <net-libs/czmq-2 )
-	zlib? ( sys-libs/zlib )"
+	normalize? (
+		>=dev-libs/libee-0.4.0
+		>=dev-libs/liblognorm-1.0.0:=
+	)
+	omudpspoof? ( >=net-libs/libnet-1.1.6 )
+	oracle? ( >=dev-db/oracle-instantclient-basic-10.2 )
+	postgres? ( >=dev-db/postgresql-base-8.4.20 )
+	rabbitmq? ( >=net-libs/rabbitmq-c-0.3.0 )
+	redis? ( >=dev-libs/hiredis-0.11.0 )
+	relp? ( >=dev-libs/librelp-1.2.5 )
+	rfc3195? ( >=dev-libs/liblogging-1.0.1:=[rfc3195] )
+	rfc5424hmac? ( >=dev-libs/openssl-0.9.8y )
+	snmp? ( >=net-analyzer/net-snmp-5.7.2 )
+	ssl? ( >=net-libs/gnutls-2.12.23 )
+	systemd? ( >=sys-apps/systemd-208 )
+	zeromq? ( >=net-libs/czmq-1.2.0 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-BRANCH="7-stable"
+BRANCH="8-stable"
 
-# need access to certain device nodes
+# Test suite requires a special setup or will always fail
 RESTRICT="test"
 
 # Maitainer note : open a bug to upstream
 # showing that building in a separate dir fails
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
-DOCS=(AUTHORS ChangeLog doc/rsyslog-example.conf)
+AUTOTOOLS_PRUNE_LIBTOOL_FILES="modules"
 
-src_prepare() {
-	epatch "$FILESDIR"/${BRANCH}/${PN}-7.x-mmjsonparse.patch
+DOCS=(
+	AUTHORS
+	ChangeLog
+	"${FILESDIR}"/${BRANCH}/README.gentoo
+)
+
+src_unpack() {
+	unpack ${P}.tar.gz
+
+	if use doc; then
+		local doc_tarball="${PN}-doc-${PV}.tar.gz"
+
+		cd "${S}" || die "Cannot change dir into '$S'"
+		mkdir docs || die "Failed to create docs directory"
+		cd docs || die "Failed to change dir into '${S}/docs'"
+		unpack ${doc_tarball}
+	fi
 }
 
 src_configure() {
 	# Maintainer notes:
-	# * rfc3195 needs a library and development of that library
-	#   is suspended, so we disable it
-	# * About the java GUI:
-	#   The maintainer says there is no real installation support
-	#   for the java GUI, so we disable it for now.
-	# * mongodb : doesnt work with mongo-c-driver ?
+	# * Guardtime support is missing because libgt isn't yet available
+	#   in portage.
+	# * Hadoop's HDFS file system output module is currently not
+	#   supported in Gentoo because nobody is able to test it
+	#   (JAVA dependency).
+	# * dev-libs/hiredis doesn't provide pkg-config (see #504614,
+	#   upstream PR 129 and 136) so we need to export HIREDIS_*
+	#   variables because rsyslog's build system depends on pkg-config.
+
+	if use redis; then
+		export HIREDIS_LIBS="-L${EPREFIX}/usr/$(get_libdir) -lhiredis"
+		export HIREDIS_CFLAGS="-I${EPREFIX}/usr/include"
+	fi
+
 	local myeconfargs=(
-		--enable-cached-man-pages
-		--disable-gui
-		--disable-rfc3195
-		--enable-imdiag
+		--disable-generate-man-pages
+		# Input Plugins without depedencies
 		--enable-imfile
 		--enable-impstats
 		--enable-imptcp
-		--enable-largefile
-		--enable-mail
-		--enable-mmnormalize
-		--enable-mmjsonparse
-		--enable-mmaudit
+		--enable-imttcp
+		# Message Modificiation Plugins without depedencies
 		--enable-mmanon
+		--enable-mmaudit
+		--enable-mmfields
+		--enable-mmjsonparse
+		--enable-mmpstrucdata
+		--enable-mmsequence
+		--enable-mmutf8fix
+		# Output Modification Plugins without dependencies
+		--enable-mail
 		--enable-omprog
+		--enable-omruleset
 		--enable-omstdout
 		--enable-omuxsock
+		# Misc
+		--enable-pmaixforwardedfrom
+		--enable-pmciscoios
+		--enable-pmcisconames
 		--enable-pmlastmsg
 		--enable-pmrfc3164sd
-		--enable-pmcisconames
-		--enable-pmaixforwardedfrom
 		--enable-pmsnare
-		--enable-sm_cust_bindcdr
-		--enable-unlimited-select
-		--enable-uuid
+		# DB
 		$(use_enable dbi libdbi)
-		$(use_enable debug)
-		$(use_enable debug rtinst)
-		$(use_enable debug diagtools)
-		$(use_enable debug memcheck)
-		$(use_enable debug valgrind)
-		$(use_enable extras omudpspoof)
-		$(use_enable kerberos gssapi-krb5)
 		$(use_enable mongodb ommongodb)
 		$(use_enable mysql)
 		$(use_enable oracle)
 		$(use_enable postgres pgsql)
+		$(use_enable redis omhiredis)
+		# Debug
+		$(use_enable debug)
+		$(use_enable debug diagtools)
+		$(use_enable debug imdiag)
+		$(use_enable debug memcheck)
+		$(use_enable debug rtinst)
+		$(use_enable debug valgrind)
+		# Misc
+		$(use_enable elasticsearch)
+		$(use_enable gcrypt libgcrypt)
+		$(use_enable jemalloc)
+		$(use_enable kerberos gssapi-krb5)
+		$(use_enable normalize mmnormalize)
+		$(use_enable omudpspoof)
+		$(use_enable rabbitmq omrabbitmq)
 		$(use_enable relp)
+		$(use_enable rfc3195)
+		$(use_enable rfc5424hmac mmrfc5424addhmac)
 		$(use_enable snmp)
 		$(use_enable snmp mmsnmptrapd)
 		$(use_enable ssl gnutls)
+		$(use_enable systemd imjournal)
 		$(use_enable systemd omjournal)
-		$(use_enable zlib)
+		$(use_enable usertools)
 		$(use_enable zeromq imzmq3)
 		$(use_enable zeromq omzmq3)
 		"$(systemd_with_unitdir)"
 	)
+
 	autotools-utils_src_configure
 }
 
 src_install() {
-	use doc && HTML_DOCS=(doc/)
+	use doc && HTML_DOCS=( "${S}/docs/build/" )
 	autotools-utils_src_install
 
-	insinto /etc
-	newins "${FILESDIR}/${BRANCH}/${PN}-gentoo.conf" ${PN}.conf
 	newconfd "${FILESDIR}/${BRANCH}/${PN}.confd" ${PN}
 	newinitd "${FILESDIR}/${BRANCH}/${PN}.initd" ${PN}
+
+	keepdir /var/empty/dev
 	keepdir /var/spool/${PN}
 	keepdir /etc/ssl/${PN}
 	keepdir /etc/${PN}.d
 
-	use static-libs || find "${D}" -name '*.la' -delete || die
+	insinto /etc
+	newins "${FILESDIR}/${BRANCH}/${PN}.conf" ${PN}.conf
+
+	insinto /etc/rsyslog.d/
+	doins "${FILESDIR}/${BRANCH}/50-default.conf"
+
+	insinto /etc/logrotate.d/
+	newins "${FILESDIR}/${BRANCH}/${PN}.logrotate" ${PN}
 
 	if use mysql; then
 		insinto /usr/share/doc/${PF}/scripts/mysql
@@ -135,14 +193,15 @@ src_install() {
 		insinto /usr/share/doc/${PF}/scripts/pgsql
 		doins plugins/ompgsql/createDB.sql
 	fi
-
-	insinto /etc/logrotate.d/
-	newins "${FILESDIR}/${BRANCH}/${PN}.logrotate" ${PN}
 }
 
 pkg_postinst() {
+	local advertise_readme=0
+
 	if [[ -z "${REPLACING_VERSIONS}" ]]; then
 		# This is a new installation
+
+		advertise_readme=1
 
 		if use mysql || use postgres; then
 			echo
@@ -159,6 +218,26 @@ pkg_postinst() {
 			elog "using the CA certificate generated during the first run."
 		fi
 	fi
+
+	if [[ -z "${REPLACING_VERSIONS}" ]] || [[ ${REPLACING_VERSIONS} < 8.0 ]]; then
+		# Show this message until rsyslog-8.x
+		echo
+		elog "Since ${PN}-7.6.3 we no longer use the catch-all log target"
+		elog "\"/var/log/syslog\" due to its redundancy to the other log targets."
+
+		advertise_readme=1
+	fi
+
+	if [[ ${advertise_readme} -gt 0 ]]; then
+		# We need to show the README file location
+
+		echo ""
+		elog "Please read"
+		elog ""
+		elog "  ${EPREFIX}/usr/share/doc/${PF}/README.gentoo*"
+		elog ""
+		elog "for more details."
+	fi
 }
 
 pkg_config() {
@@ -169,7 +248,7 @@ pkg_config() {
 	fi
 
 	# Make sure the certificates directory exists
-	CERTDIR="${ROOT}/etc/ssl/${PN}"
+	CERTDIR="${EROOT}/etc/ssl/${PN}"
 	if [ ! -d "${CERTDIR}" ]; then
 		mkdir "${CERTDIR}" || die
 	fi

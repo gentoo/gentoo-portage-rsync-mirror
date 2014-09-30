@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>ultrabug@gentoo.org</email>
 		<name>Ultrabug</name>
@@ -17,6 +16,7 @@
 		<flag name="elasticsearch">Build the Elasticsearch output module (requires <pkg>net-misc/curl</pkg>)</flag>
 		<flag name="extras">Add support for the UDP spoofing module (omudpspoof) using <pkg>net-libs/libnet</pkg></flag>
 		<flag name="gcrypt">Add support for encrypted log files using <pkg>dev-libs/libgcrypt</pkg></flag>
+		<flag name="jemalloc">Use <pkg>dev-libs/jemalloc</pkg> for allocations.</flag>
 		<flag name="kerberos">Build the GSSAPI input and output module (requires <pkg>virtual/krb5</pkg>)</flag>
 		<flag name="mongodb">Build the MongoDB output module (requires <pkg>dev-libs/libmongo-client</pkg>)</flag>
 		<flag name="mysql">Build the MySQL databse output module (requires <pkg>virtual/mysql</pkg>)</flag>

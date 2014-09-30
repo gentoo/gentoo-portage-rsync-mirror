@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.119 2014/08/20 15:36:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.120 2014/09/30 13:09:39 polynomial-c Exp $
+
+*rsyslog-8.4.1 (30 Sep 2014)
+
+  30 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> -rsyslog-7.2.7.ebuild,
+  -rsyslog-7.4.10.ebuild, -rsyslog-7.6.3-r1.ebuild, +rsyslog-8.4.1.ebuild,
+  -files/6-stable/rsyslog-6.6.0-fix-runtime.patch,
+  +files/8-stable/README.gentoo, +files/8-stable/rsyslog.confd,
+  -files/rsyslog-7.2.5-json-c-pkgconfig.patch, +files/8-stable/50-default.conf,
+  +files/8-stable/rsyslog.conf, +files/8-stable/rsyslog.initd,
+  +files/8-stable/rsyslog.logrotate, metadata.xml:
+  Security bump (bug #524058). Removed old. Remote syslog PRI vulnerability
+  (CVE-2014-3634).
 
   20 Aug 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add proxy-maint herd.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.286 2014/09/30 10:20:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.287 2014/09/30 13:03:22 klausman Exp $
+
+  30 Sep 2014; Tobias Klausmann <klausman@gentoo.org> git-2.0.4.ebuild:
+  Stable on alpha, bug 519736
 
   30 Sep 2014; Agostino Sarubbo <ago@gentoo.org> git-2.0.4.ebuild:
   Stable for x86, wrt bug #519736
