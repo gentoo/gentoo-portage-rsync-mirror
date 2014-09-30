@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.6.0.ebuild,v 1.1 2014/09/30 06:58:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.6.0.ebuild,v 1.2 2014/09/30 17:28:27 radhermit Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="source"
@@ -25,8 +25,6 @@ DEPEND="${CDEPEND}
 	java? ( >=virtual/jdk-1.5 )
 	python? (
 		dev-python/google-apputils[${PYTHON_USEDEP}]
-		dev-python/python-dateutil:python-2
-		dev-python/python-gflags[${PYTHON_USEDEP}]
 		dev-python/setuptools[${PYTHON_USEDEP}]
 	)"
 RDEPEND="${CDEPEND}

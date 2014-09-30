@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.63 2014/09/30 06:58:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.64 2014/09/30 17:28:27 radhermit Exp $
+
+  30 Sep 2014; Tim Harder <radhermit@gentoo.org> protobuf-2.6.0.ebuild:
+  Remove unused python-dateutil and python-gflags deps as pointed out by
+  Arfrever.
 
 *protobuf-2.6.0 (30 Sep 2014)
 

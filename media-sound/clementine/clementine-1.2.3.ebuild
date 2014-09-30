@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.2.3.ebuild,v 1.2 2014/07/24 11:52:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.2.3.ebuild,v 1.3 2014/09/30 17:22:50 maksbotan Exp $
 
 EAPI=5
 
@@ -89,6 +89,10 @@ RESTRICT="test"
 
 [[ ${PV} == *9999* ]] || \
 S="${WORKDIR}/${P^}"
+
+PATCHES=(
+	"${FILESDIR}"/clementine-1.2.3-namespaces.patch
+)
 
 src_prepare() {
 	cmake-utils_src_prepare

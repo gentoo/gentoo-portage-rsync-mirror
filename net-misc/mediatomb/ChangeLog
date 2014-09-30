@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.57 2014/08/29 10:30:26 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.58 2014/09/30 17:19:14 thev00d00 Exp $
+
+  30 Sep 2014; Ian Whyman <thev00d00@gentoo.org>
+  mediatomb-0.12.2_pre20140810.ebuild:
+  Add missing linux-info call, reported by BT in #522976
 
   29 Aug 2014; Chema Alonso <nimiux@gentoo.org> mediatomb-0.12.1-r8.ebuild:
   Stable for amd64 wrt bug #517850
