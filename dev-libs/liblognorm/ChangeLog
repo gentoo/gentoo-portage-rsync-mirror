@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/liblognorm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.26 2014/06/30 12:16:36 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.28 2014/09/30 12:46:59 polynomial-c Exp $
+
+  30 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> liblognorm-1.0.1.ebuild:
+  Readded CFLAGS patch.
+
+*liblognorm-1.0.1 (30 Sep 2014)
+
+  30 Sep 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -liblognorm-0.3.2-r1.ebuild, -liblognorm-0.3.3.ebuild,
+  -liblognorm-0.3.4.ebuild, -liblognorm-0.3.5.ebuild,
+  -liblognorm-0.3.6-r1.ebuild, +liblognorm-1.0.1.ebuild,
+  -files/do-not-include-private-in-public-headers.patch:
+  Non-maintainer commit! Version bump to add needed dependency for
+  app-admin/rsyslog security bump (bug #524058). Removed very old versions.
 
 *liblognorm-0.3.7 (30 Jun 2014)
 
