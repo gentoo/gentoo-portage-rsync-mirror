@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.287 2014/09/16 17:12:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.288 2014/09/30 20:04:26 blueness Exp $
+
+  30 Sep 2014; Anthony G. Basile <blueness@gentoo.org> use.mask:
+  sys-libs/libseccomp has not been ported to ppc/ppc64, bug #524148
 
   16 Sep 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:
