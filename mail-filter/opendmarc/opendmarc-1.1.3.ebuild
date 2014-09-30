@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/opendmarc-1.1.3.ebuild,v 1.8 2014/07/25 21:43:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/opendmarc-1.1.3.ebuild,v 1.9 2014/09/30 22:16:48 jer Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/opendmarc/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~x86-fbsd"
+KEYWORDS="~amd64 hppa ~ia64 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-perl/DBI

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Switch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Switch/ChangeLog,v 1.1 2014/07/25 21:41:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Switch/ChangeLog,v 1.2 2014/09/30 22:16:29 jer Exp $
+
+  30 Sep 2014; Jeroen Roovers <jer@gentoo.org> Switch-2.160.0-r1.ebuild:
+  Stable for HPPA (bug #524154).
 
   25 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   +Switch-2.160.0-r1.ebuild, +metadata.xml:

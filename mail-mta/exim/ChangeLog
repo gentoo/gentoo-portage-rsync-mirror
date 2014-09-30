@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.290 2014/09/30 19:10:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.291 2014/09/30 22:17:11 jer Exp $
+
+  30 Sep 2014; Jeroen Roovers <jer@gentoo.org> exim-4.84.ebuild:
+  Stable for HPPA (bug #524154).
 
   30 Sep 2014; Fabian Groffen <grobian@gentoo.org> exim-4.84.ebuild:
   Add back missing keywords, new deps have been masked to allow stabling
