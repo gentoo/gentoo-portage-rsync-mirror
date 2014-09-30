@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=sys-libs/zlib:= dev-libs/openssl:0=
+DESCRIPTION=Android platform tools (adb and fastboot)
+EAPI=5
+HOMEPAGE=https://android.googlesource.com/platform/system/core.git/
+KEYWORDS=~amd64 ~x86 ~arm-linux ~x86-linux
+LICENSE=Apache-2.0 BSD
+RDEPEND=sys-libs/zlib:= dev-libs/openssl:0=
+SLOT=0
+SRC_URI=https://launchpad.net/ubuntu/+archive/primary/+files/android-tools_4.2.2+git20130218.orig.tar.xz https://launchpad.net/ubuntu/+archive/primary/+files/android-tools_4.2.2+git20130218-3ubuntu36.debian.tar.gz https://github.com/android/platform_system_core/commit/e89e09dd2b9b42184973e3ade291186a2737bced.patch -> android-tools-e89e09dd2b9b42184973e3ade291186a2737bced.patch
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=605e9ec47c0427773403dbcff2664741
