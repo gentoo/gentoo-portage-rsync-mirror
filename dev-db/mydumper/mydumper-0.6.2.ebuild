@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/mydumper-0.5.1.ebuild,v 1.4 2013/12/24 11:26:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/mydumper-0.6.2.ebuild,v 1.1 2014/09/30 03:39:07 grknight Exp $
 
-EAPI=2
+EAPI=5
 inherit cmake-utils versionator
 
 DESCRIPTION="A high-performance multi-threaded backup (and restore) toolset for MySQL and Drizzle"
@@ -24,13 +24,9 @@ DOCS=( README )
 
 src_prepare() {
 	# respect user cflags; do not expand ${CMAKE_C_FLAGS} (!)
-	sed -i -e 's:-W.*-g:${CMAKE_C_FLAGS}:' CMakeLists.txt
+	sed -i -e 's:-Werror -O3 -g:${CMAKE_C_FLAGS}:' CMakeLists.txt
 	# fix doc install path
 	sed -i -e "s:share/doc/mydumper:share/doc/${PF}:" docs/CMakeLists.txt
-}
-
-src_compile() {
-	cp "${CMAKE_BUILD_DIR}/config.h" "${CMAKE_USE_DIR}" || die
 }
 
 src_configure() {
