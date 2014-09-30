@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/nikola
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.19 2014/09/29 16:17:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.20 2014/09/30 05:49:59 yngwin Exp $
+
+*nikola-6.4.0-r1 (30 Sep 2014)
+*nikola-7.1.0 (30 Sep 2014)
+
+  30 Sep 2014; Ben de Groot <yngwin@gentoo.org> +nikola-6.4.0-r1.ebuild,
+  +nikola-7.1.0.ebuild, -nikola-6.4.0.ebuild:
+  Add python3 support (bug #505642), update dependency requirements. Add ebuild
+  for 7.1.0 (bug #512242), but this still needs some dependencies to be version-
+  bumped.
 
   29 Sep 2014; Tobias Klausmann <klausman@gentoo.org> nikola-6.4.0.ebuild:
   Loosen overly-specific configparser dep. dev-python/configparser-3.2.0.3

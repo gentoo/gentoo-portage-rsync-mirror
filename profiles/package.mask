@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16061 2014/09/28 15:42:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16062 2014/09/30 05:34:00 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (30 Sep 2014)
+# WIP, needs version bumps of several dependencies
+>=www-apps/nikola-7.1.0
 
 # Pacho Ramos <pacho@gentoo.org> (27 Sep 2014)
 # >=0.5 broke API, bug #523838, wait for next major tracker
