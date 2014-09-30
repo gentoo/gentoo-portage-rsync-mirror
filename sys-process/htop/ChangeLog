@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.141 2014/05/02 23:05:38 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.142 2014/09/30 19:40:46 idl0r Exp $
+
+  30 Sep 2014; Christian Ruppert <idl0r@gentoo.org> htop-1.0.3.ebuild,
+  +files/htop-1.0.3-tinfo.patch:
+  Fix ncurses linking, bug 509452
 
 *htop-1.0.3 (02 May 2014)
 

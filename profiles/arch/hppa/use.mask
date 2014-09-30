@@ -1,8 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.82 2014/09/19 16:50:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.83 2014/09/30 19:31:44 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
-# Jeroen Roovers <jer@gentoo.org> <19 Sep 2014)
+# Jeroen Roovers <jer@gentoo.org> (30 Sep 2014)
+# sys-libs/libseccomp has not been ported to HPPA (bug #524148)
+seccomp
+
+# Jeroen Roovers <jer@gentoo.org> (19 Sep 2014)
 # >=net-libs/libgadu-1.12.0 (bug #519854) requires dev-libs/protobuf-c (bug #519772)
 gadu
 

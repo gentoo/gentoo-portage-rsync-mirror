@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.3.ebuild,v 1.1 2014/05/02 23:05:38 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.3.ebuild,v 1.2 2014/09/30 19:40:46 idl0r Exp $
 
 EAPI=5
 
@@ -28,6 +28,8 @@ CONFIG_CHECK="~TASKSTATS ~TASK_XACCT ~TASK_IO_ACCOUNTING ~CGROUPS"
 
 # config.h problems
 AUTOTOOLS_IN_SOURCE_BUILD=1
+
+PATCHES=("${FILESDIR}/${P}-tinfo.patch")
 
 pkg_setup() {
 	if use kernel_FreeBSD && ! [[ -f ${ROOT}/compat/linux/proc/stat && -f ${ROOT}/compat/linux/proc/meminfo ]]; then
