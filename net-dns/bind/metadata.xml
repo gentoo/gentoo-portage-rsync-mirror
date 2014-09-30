@@ -15,6 +15,7 @@
 		<flag name="nslint">Build and install the nslint util</flag>
 		<flag name="rpz">Enable response policy rewriting (rpz)</flag>
 		<flag name="rrl">Response Rate Limiting (RRL) - Experimental</flag>
+		<flag name="seccomp">Enable use of <pkg>sys-libs/libseccomp</pkg> for system call filtering</flag>
 		<flag name="sdb-ldap">Enables ldap-sdb backend</flag>
 		<flag name="urandom">Use /dev/urandom instead of /dev/random</flag>
 	</use>

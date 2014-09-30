@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/pecl-mysqlnd_ms
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_ms/ChangeLog,v 1.11 2014/08/10 21:02:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_ms/ChangeLog,v 1.12 2014/09/30 18:56:14 grknight Exp $
+
+*pecl-mysqlnd_ms-1.5.2-r1 (30 Sep 2014)
+
+  30 Sep 2014;  <grknight@gentoo.org> +pecl-mysqlnd_ms-1.5.2-r1.ebuild,
+  -pecl-mysqlnd_ms-1.4.1.ebuild, -pecl-mysqlnd_ms-1.5.2.ebuild:
+  Revbump to add 5.5 support; drop 5.3 support
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   pecl-mysqlnd_ms-1.4.1.ebuild, pecl-mysqlnd_ms-1.5.2.ebuild:

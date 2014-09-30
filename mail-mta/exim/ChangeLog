@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.288 2014/08/13 06:14:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.289 2014/09/30 18:39:58 grobian Exp $
+
+  30 Sep 2014; Fabian Groffen <grobian@gentoo.org> exim-4.80.1-r2.ebuild,
+  exim-4.80.1-r3.ebuild, exim-4.80.1.ebuild, exim-4.82.1.ebuild,
+  exim-4.84.ebuild:
+  Install patched config file, instead of original, bug #523892
 
 *exim-4.84 (13 Aug 2014)
 

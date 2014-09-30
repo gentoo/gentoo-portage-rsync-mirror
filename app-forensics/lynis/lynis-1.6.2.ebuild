@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.5.9.ebuild,v 1.1 2014/08/11 20:39:36 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.6.2.ebuild,v 1.1 2014/09/30 18:55:39 idl0r Exp $
 
 EAPI="5"
 
-inherit eutils
+inherit eutils bash-completion-r1
 
 DESCRIPTION="Security and system auditing tool"
 HOMEPAGE="http://cisofy.com/lynis/"
@@ -17,6 +17,8 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="app-shells/bash"
+
+S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	# Bug 507438
@@ -31,9 +33,11 @@ src_install() {
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}"/lynis.cron-new lynis
 
+	dobashcomp dev/bash_completion.d/lynis
+
 	# stricter default perms - bug 507436
-	diropts -m0750
-	insopts -m0640
+	diropts -m0700
+	insopts -m0600
 
 	insinto /usr/share/${PN}
 	doins -r db/ include/ plugins/
