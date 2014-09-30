@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/openvas-scanner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/ChangeLog,v 1.9 2014/09/29 18:39:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/ChangeLog,v 1.10 2014/09/30 16:03:10 jlec Exp $
+
+*openvas-scanner-4.0.3-r2 (30 Sep 2014)
+
+  30 Sep 2014; Justin Lecher <jlec@gentoo.org>
+  +openvas-scanner-4.0.3-r2.ebuild, +files/openvas-scanner-4.0.3-run.patch,
+  files/openvassd.init, files/openvassd.service, files/openvassd.tmpfiles.d,
+  files/openvassd-daemon.conf:
+  Correct pidfile location
 
 *openvas-scanner-5.0_beta2 (29 Sep 2014)
 

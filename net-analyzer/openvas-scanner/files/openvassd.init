@@ -5,8 +5,14 @@
 
 name="OpenVAS Scanner"
 command="/usr/sbin/openvassd"
-command_args="${SCANNER_LISTEN} ${SCANNER_PORT} ${SCANNER_SRCIP}"
+command_args="${SCANNER_LISTEN} ${SCANNER_PORT} ${SCANNER_SRCIP} ${SCANNER_EXTRA_ARGS}"
+pidfile="/run/openvassd.pid"
 
 depend() {
-	need net
+	after bootmisc
+	need localmount net
+}
+
+start_pre() {
+	checkpath --directory --mode 0775 --quiet /var/cache/openvas
 }

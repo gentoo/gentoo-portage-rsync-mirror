@@ -1,0 +1,30 @@
+ CMakeLists.txt           | 2 +-
+ tools/greenbone-nvt-sync | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c691100..d78ffa6 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -155,7 +155,7 @@ set (OPENVAS_DATA_DIR    "${DATADIR}/openvas")
+ set (OPENVAS_STATE_DIR   "${LOCALSTATEDIR}/lib/openvas")
+ set (OPENVAS_LOG_DIR     "${LOCALSTATEDIR}/log/openvas")
+ set (OPENVAS_CACHE_DIR   "${LOCALSTATEDIR}/cache/openvas")
+-set (OPENVAS_PID_DIR     "${LOCALSTATEDIR}/run")
++set (OPENVAS_PID_DIR     "/run")
+ set (OPENVAS_SYSCONF_DIR "${SYSCONFDIR}/openvas")
+ 
+ set (OPENVAS_NVT_DIR     "${OPENVAS_STATE_DIR}/plugins")
+diff --git a/tools/greenbone-nvt-sync b/tools/greenbone-nvt-sync
+index 50bce8c..d773e4c 100755
+--- a/tools/greenbone-nvt-sync
++++ b/tools/greenbone-nvt-sync
+@@ -78,7 +78,7 @@ SELFTEST_FAIL=0
+ PORT=24
+ 
+ # Directory where pidfiles are located
+-PIDFILEDIR="/var/run"
++PIDFILEDIR="/run"
+ 
+ # If ENABLED is set to 0, the sync script will not perform a synchronization.
+ ENABLED=1
