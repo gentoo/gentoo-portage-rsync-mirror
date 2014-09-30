@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.8.8.1-r2.ebuild,v 1.7 2014/09/19 17:11:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.2.16.ebuild,v 1.1 2014/09/30 13:53:09 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,60 +16,52 @@ HOMEPAGE="http://cinnamon.linuxmint.com/"
 MY_PV="${PV/_p/-UP}"
 MY_P="${PN}-${MY_PV}"
 
-SRC_URI="https://github.com/linuxmint/Cinnamon/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz
-	http://dev.gentoo.org/~pacho/gnome/cinnamon-1.8/gnome-3.8.patch"
+SRC_URI="https://github.com/linuxmint/Cinnamon/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="+bluetooth +networkmanager"
-KEYWORDS="amd64 x86"
+# bluetooth support dropped due bug #511648
+IUSE="+l10n +networkmanager" #+bluetooth
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-# gnome-desktop-2.91.2 is needed due to header changes, db82a33 in gnome-desktop
-# latest gsettings-desktop-schemas is needed due to commit 602fa1c6
-# latest g-c-c is needed due to https://bugs.gentoo.org/show_bug.cgi?id=360057
-# libXfixes-5.0 needed for pointer barriers
-# gnome-menus-3.2.0.1-r1 needed for new 10-xdg-menu-gnome
+KEYWORDS="~amd64 ~x86"
+
 COMMON_DEPEND="
+	app-misc/ca-certificates
+	dev-libs/dbus-glib
 	>=dev-libs/glib-2.29.10:2
-	>=dev-libs/gjs-1.29.18
 	>=dev-libs/gobject-introspection-0.10.1
-	x11-libs/gdk-pixbuf:2[introspection]
-	>=x11-libs/gtk+-3.0.0:3[introspection]
+	>=dev-libs/json-glib-0.13.2
+	>=dev-libs/libcroco-0.6.2:0.6
+	dev-libs/libxml2:2
+	gnome-base/gconf:2[introspection]
+	gnome-base/librsvg
+	>=gnome-extra/cinnamon-desktop-1.0:0=[introspection]
+	gnome-extra/cinnamon-menus[introspection]
+	>=gnome-extra/cjs-1.9.0
 	>=media-libs/clutter-1.7.5:1.0[introspection]
 	media-libs/cogl:1.0=[introspection]
-	app-misc/ca-certificates
-	>=dev-libs/json-glib-0.13.2
-	>=gnome-base/gnome-desktop-3.0.0:3=[introspection]
 	>=gnome-base/gsettings-desktop-schemas-2.91.91
-	>=media-libs/gstreamer-0.10.16:0.10
-	>=media-libs/gst-plugins-base-0.10.16:0.10
+	media-libs/gstreamer:1.0
+	media-libs/gst-plugins-base:1.0
+	media-libs/libcanberra
+	media-sound/pulseaudio:0=[glib]
 	net-libs/libsoup:2.4[introspection]
 	>=sys-auth/polkit-0.100[introspection]
-	>=x11-wm/muffin-1.7.4[introspection]
-
-	dev-libs/dbus-glib
-	dev-libs/libxml2:2
+	x11-libs/gdk-pixbuf:2[introspection]
+	>=x11-libs/gtk+-3.0.0:3[introspection]
 	x11-libs/pango[introspection]
-	>=dev-libs/libcroco-0.6.2:0.6
-
-	gnome-base/gconf:2[introspection]
-	>=gnome-base/gnome-menus-3.2.0.1-r1:3[introspection]
-	gnome-base/librsvg
-	media-libs/libcanberra
-	media-sound/pulseaudio
-
 	>=x11-libs/startup-notification-0.11
 	x11-libs/libX11
 	>=x11-libs/libXfixes-5.0
-	x11-apps/mesa-progs
-
+	>=x11-wm/muffin-1.9.1[introspection]
 	${PYTHON_DEPS}
-
-	bluetooth? ( >=net-wireless/gnome-bluetooth-3.4:=[introspection] )
 	networkmanager? (
 		gnome-base/libgnome-keyring
 		>=net-misc/networkmanager-0.8.999[introspection] )
 "
+#bluetooth? ( >=net-wireless/gnome-bluetooth-3.1:=[introspection] )
+
 # Runtime-only deps are probably incomplete and approximate.
 # Each block:
 # 2. Introspection stuff + dconf needed via imports.gi.*
@@ -83,49 +75,51 @@ COMMON_DEPEND="
 # 9. gnome-icon-theme-symbolic needed for various icons
 # 10. pygobject needed for menu editor
 # 11. nemo - default file manager, tightly integrated with cinnamon
-# 12. timedated or DateTimeMechanism implementation for cinnamon-settings
 # TODO(lxnay): fix error: libgnome-desktop/gnome-rr-labeler.h: No such file or directory
-# 	=gnome-extra/cinnamon-control-center-1.8*
+# note: needs gksu, not gksu-polkit, due to extensive use of --message/-m arg
 RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/dconf-0.4.1
 	>=gnome-base/libgnomekbd-2.91.4[introspection]
-	>=sys-power/upower-pm-utils-0.9.23[introspection]
+	|| ( sys-power/upower[introspection] sys-power/upower-pm-utils[introspection] )
 
-	>=gnome-base/gnome-session-3.8
+	gnome-extra/cinnamon-session
 
-	>=gnome-base/gnome-settings-daemon-2.91
+	gnome-extra/cinnamon-settings-daemon
 
 	>=sys-apps/accountsservice-0.6.14[introspection]
 
 	>=app-accessibility/caribou-0.3
 
+	x11-libs/gksu
 	x11-misc/xdg-utils
 
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/gconf-python:2
-	virtual/python-imaging
-	dev-python/lxml
+	dev-python/lxml[${PYTHON_USEDEP}]
+	dev-python/pexpect[${PYTHON_USEDEP}]
+	dev-python/pycairo[${PYTHON_USEDEP}]
+	dev-python/pygobject:3[${PYTHON_USEDEP}]
+	dev-python/pyinotify[${PYTHON_USEDEP}]
+	dev-python/pypam[${PYTHON_USEDEP}]
+	virtual/python-imaging[${PYTHON_USEDEP}]
 
+	x11-themes/gnome-themes-standard[gtk]
 	x11-themes/gnome-icon-theme-symbolic
 
-	dev-python/pygobject:3[${PYTHON_USEDEP}]
-
 	gnome-extra/nemo
-	gnome-extra/gnome-screensaver
+	gnome-extra/cinnamon-control-center
+	gnome-extra/cinnamon-screensaver
 
-	|| (
-		app-admin/openrc-settingsd
-		>=sys-apps/systemd-30
-		<gnome-base/gnome-settings-daemon-3.3.5 )
-
+	l10n? ( >=gnome-extra/cinnamon-translations-2.2 )
 	networkmanager? (
+		gnome-extra/nm-applet
 		net-misc/mobile-broadband-provider-info
 		sys-libs/timezone-data )
 "
-# gnome-extra/gnome-screensaver due screensaver patch, otherwise it uses
-# cinnamon-screensaver
+#bluetooth? ( net-wireless/cinnamon-bluetooth )
 
 DEPEND="${COMMON_DEPEND}
+	dev-python/polib[${PYTHON_USEDEP}]
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40
@@ -143,43 +137,32 @@ pkg_setup() {
 
 src_prepare() {
 	# Fix GNOME 3.8 support
-	epatch "${DISTDIR}/gnome-3.8.patch"
 	epatch "${FILESDIR}/background.patch"
-	epatch "${FILESDIR}/idle-dim.patch"
-	# https://github.com/linuxmint/Cinnamon/issues/1337
-	epatch "${FILESDIR}/keyboard_applet.patch"
-	epatch "${FILESDIR}/screensaver.patch"
-	epatch "${FILESDIR}/bluetooth_obex_transfer.patch"
-	epatch "${FILESDIR}/remove_GC.patch"
-	epatch "${FILESDIR}/menu_editor.patch"
 
 	# Fix automagic gnome-bluetooth dep, bug #398145
-	epatch "${FILESDIR}/${PN}-1.6.1-automagic-gnome-bluetooth.patch"
+	epatch "${FILESDIR}/${PN}-2.2.6-automagic-gnome-bluetooth.patch"
 
 	# Optional NetworkManager, bug #488684
-	epatch "${FILESDIR}/${PN}-1.8.8.1-optional-networkmanager.patch"
+	epatch "${FILESDIR}/${PN}-2.2.6-optional-networkmanager.patch"
 
-	# mozjs17 build failure, bug #499980
-	epatch "${FILESDIR}/${P}-mozjs17.patch"
-
-	# Gentoo uses /usr/libexec
-	sed -e "s:/usr/lib/gnome-session/gnome-session-check-accelerated:${EPREFIX}/usr/libexec/gnome-session-check-accelerated:" \
-		-i "files/usr/share/gnome-session/sessions/cinnamon.session" || die "sed 1 failed"
+	# Fix lspci path, https://github.com/linuxmint/Cinnamon/issues/3548
+	epatch "${FILESDIR}/${PN}-2.2.16-sbin-lspci.patch"
 
 	# Gentoo uses /usr/$(get_libdir), not /usr/lib even for python
 	sed -e "s:/usr/lib/:/usr/$(get_libdir)/:" \
 		-e 's:"/usr/lib":"/usr/'"$(get_libdir)"'":' \
-		-i files/usr/bin/cinnamon-menu-editor \
-		-i files/usr/bin/cinnamon-settings \
-		-i files/usr/lib/cinnamon-menu-editor/cme/config.py \
-		-i files/usr/lib/cinnamon-menu-editor/cme/MainWindow.py \
-		-i files/usr/lib/cinnamon-settings/cinnamon-settings.py || die "sed 2 failed"
+		-i files/usr/share/polkit-1/actions/org.cinnamon.settings-users.policy \
+		-i files/usr/lib/cinnamon-settings-users/cinnamon-settings-users.py \
+		-i files/usr/lib/cinnamon-screensaver-lock-dialog/cinnamon-screensaver-lock-dialog.py \
+		-i files/usr/lib/cinnamon-settings/cinnamon-settings.py \
+		-i files/usr/lib/cinnamon-settings/modules/cs_backgrounds.py \
+		-i files/usr/lib/cinnamon-settings/data/spices/applet-detail.html \
+		-i files/usr/lib/cinnamon-settings/bin/*.py \
+		-i files/usr/lib/cinnamon-desktop-editor/cinnamon-desktop-editor.py \
+		-i files/usr/lib/cinnamon-menu-editor/cme/*.py \
+		-i files/usr/bin/* || die "sed failed"
 	if [[ "$(get_libdir)" != lib ]]; then
 		mv files/usr/lib "files/usr/$(get_libdir)" || die "mv failed"
-	fi
-
-	if ! use bluetooth; then
-		rm -rv files/usr/share/cinnamon/applets/bluetooth@cinnamon.org || die
 	fi
 
 	if ! use networkmanager; then
@@ -194,23 +177,20 @@ src_configure() {
 	# Don't error out on warnings
 	gnome2_src_configure \
 		--disable-jhbuild-wrapper-script \
-		$(use_with bluetooth) \
 		$(use_enable networkmanager) \
 		--with-ca-certificates="${EPREFIX}/etc/ssl/certs/ca-certificates.crt" \
-		BROWSER_PLUGIN_DIR="${EPREFIX}/usr/$(get_libdir)/nsbrowser/plugins"
+		BROWSER_PLUGIN_DIR="${EPREFIX}/usr/$(get_libdir)/nsbrowser/plugins" \
+		--without-bluetooth
+		#$(use_with bluetooth)
 }
 
 src_install() {
 	gnome2_src_install
-	python_optimize "${ED}usr/$(get_libdir)/cinnamon-"{settings,menu-editor}
+	python_optimize "${ED}usr/$(get_libdir)/cinnamon-"{desktop-editor,json-makepot,launcher,looking-glass,menu-editor,screensaver-lock-dialog,settings,settings-users}
 	# Fix broken shebangs
 	sed -e "s%#!.*python%#!${PYTHON}%" \
-		-i "${ED}usr/bin/cinnamon-"{launcher,menu-editor,settings} \
+		-i "${ED}usr/bin/cinnamon-"{desktop-editor,json-makepot,launcher,looking-glass,menu-editor,screensaver-lock-dialog,settings,settings-users} \
 		-i "${ED}usr/$(get_libdir)/cinnamon-settings/cinnamon-settings.py" || die
-
-	domenu\
-		"${FILESDIR}/cinnamon-screensaver.desktop" \
-		"${FILESDIR}/cinnamon2d-screensaver.desktop"
 
 	# Required for gnome-shell on hardened/PaX, bug #398941
 	pax-mark mr "${ED}usr/bin/cinnamon"
@@ -222,11 +202,11 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	if ! has_version '>=media-libs/gst-plugins-good-0.10.23:0.10' || \
-	   ! has_version 'media-plugins/gst-plugins-vp8:0.10'; then
+	if ! has_version 'media-libs/gst-plugins-good:1.0' || \
+	   ! has_version 'media-plugins/gst-plugins-vpx:1.0'; then
 		ewarn "To make use of Cinnamon's built-in screen recording utility,"
-		ewarn "you need to either install >=media-libs/gst-plugins-good-0.10.23:0.10"
-		ewarn "and media-plugins/gst-plugins-vp8:0.10, or use dconf-editor to change"
+		ewarn "you need to either install media-libs/gst-plugins-good:1.0"
+		ewarn "and media-plugins/gst-plugins-vpx:1.0, or use dconf-editor to change"
 		ewarn "org.cinnamon.recorder/pipeline to what you want to use."
 	fi
 
@@ -242,7 +222,9 @@ pkg_postinst() {
 		ewarn "open-source drivers."
 	fi
 
-	if has_version "media-libs/mesa[video_cards_radeon]"; then
+	if has_version "media-libs/mesa[video_cards_radeon]" ||
+	   has_version "media-libs/mesa[video_cards_r300]" ||
+	   has_version "media-libs/mesa[video_cards_r600]"; then
 		elog "Cinnamon is unstable under classic-mode r300/r600 mesa drivers."
 		elog "Make sure that gallium architecture for r300 and r600 drivers is"
 		elog "selected using 'eselect mesa'."
