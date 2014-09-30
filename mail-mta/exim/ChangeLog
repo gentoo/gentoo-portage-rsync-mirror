@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.289 2014/09/30 18:39:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.290 2014/09/30 19:10:23 grobian Exp $
+
+  30 Sep 2014; Fabian Groffen <grobian@gentoo.org> exim-4.84.ebuild:
+  Add back missing keywords, new deps have been masked to allow stabling
 
   30 Sep 2014; Fabian Groffen <grobian@gentoo.org> exim-4.80.1-r2.ebuild,
   exim-4.80.1-r3.ebuild, exim-4.80.1.ebuild, exim-4.82.1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.5_p1.ebuild,v 1.1 2014/08/15 12:03:17 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.10.1.ebuild,v 1.1 2014/09/30 19:08:03 idl0r Exp $
 
 EAPI="5"
 
@@ -66,6 +66,7 @@ src_configure() {
 	econf \
 		--localstatedir=/var \
 		--without-python \
+		--disable-seccomp \
 		$(use_enable ipv6) \
 		$(use_with idn) \
 		$(use_with ssl openssl "${EPREFIX}"/usr) \
@@ -83,6 +84,7 @@ src_compile() {
 	local AR=$(tc-getAR)
 
 	emake AR=$AR -C lib/ || die "emake lib failed"
+	emake AR=$AR -C bin/delv/ || die "emake bin/delv failed"
 	emake AR=$AR -C bin/dig/ || die "emake bin/dig failed"
 	emake AR=$AR -C bin/nsupdate/ || die "emake bin/nsupdate failed"
 	emake AR=$AR -C bin/dnssec/ || die "emake bin/dnssec failed"
@@ -90,6 +92,10 @@ src_compile() {
 
 src_install() {
 	dodoc README CHANGES FAQ
+
+	cd "${S}"/bin/delv
+	dobin delv
+	doman delv.1
 
 	cd "${S}"/bin/dig
 	dobin dig host nslookup

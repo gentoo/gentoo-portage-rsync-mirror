@@ -1,6 +1,11 @@
 # ChangeLog for the default/linux profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/ChangeLog,v 1.4 2014/08/16 20:43:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/ChangeLog,v 1.5 2014/09/30 19:08:56 grobian Exp $
+
+  30 Sep 2014; Fabian Groffen <grobian@gentoo.org> +ia64/13.0/package.use.mask,
+  ia64/13.0/use.mask, powerpc/ppc32/13.0/package.use.mask,
+  powerpc/ppc64/13.0/package.use.mask, sparc/13.0/package.use.mask:
+  Mask redis for mail-mta/exim to allow stabling, bugs #489676, #517934
 
   16 Aug 2014; Anthony G. Basile <blueness@gentoo.org> +uclibc/amd64/eapi,
   +uclibc/amd64/make.defaults, +uclibc/amd64/package.mask,
