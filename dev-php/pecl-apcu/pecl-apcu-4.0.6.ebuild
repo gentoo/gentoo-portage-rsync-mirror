@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apcu/pecl-apcu-4.0.4.ebuild,v 1.2 2014/08/10 21:00:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apcu/pecl-apcu-4.0.6.ebuild,v 1.1 2014/09/30 15:33:28 grknight Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS="CHANGELOG INSTALL NOTICE TECHNOTES.txt TODO"
 
-USE_PHP="php5-5 php5-3 php5-4"
+USE_PHP="php5-6 php5-5 php5-4"
 
 S="${WORKDIR}/apcu-${PV}"
 PHP_EXT_S="${WORKDIR}/apcu-${PV}"

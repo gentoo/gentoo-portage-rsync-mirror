@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.55 2014/07/20 19:24:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.56 2014/09/30 15:32:18 maksbotan Exp $
 
 EAPI=5
 
@@ -47,12 +47,11 @@ RDEPEND+="
 		>=media-video/libav-10:=[encode?,threads,vaapi?,vdpau?]
 		>=media-video/ffmpeg-2.1.4:0=[encode?,threads,vaapi?,vdpau?]
 	)
-	sys-libs/ncurses
 	sys-libs/zlib
 	X? (
 		x11-libs/libX11
 		x11-libs/libXext
-		x11-libs/libXxf86vm
+		>=x11-libs/libXrandr-1.2.0
 		opengl? ( virtual/opengl )
 		lcms? ( >=media-libs/lcms-2.6:2 )
 		vaapi? ( >=x11-libs/libva-0.34.0[X(+)] )
@@ -111,7 +110,7 @@ RDEPEND+="
 	selinux? ( sec-policy/selinux-mplayer )
 	v4l? ( media-libs/libv4l )
 	wayland? (
-		>=dev-libs/wayland-1.3.0
+		>=dev-libs/wayland-1.6.0
 		media-libs/mesa[egl,wayland]
 		>=x11-libs/libxkbcommon-0.3.0
 	)
@@ -123,7 +122,6 @@ DEPEND="${RDEPEND}
 	doc-pdf? ( dev-python/rst2pdf )
 	X? (
 		x11-proto/videoproto
-		x11-proto/xf86vidmodeproto
 		xinerama? ( x11-proto/xineramaproto )
 		xscreensaver? ( x11-proto/scrnsaverproto )
 	)
@@ -207,6 +205,8 @@ src_configure() {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable shm) \
 		$(use_enable X x11) \
+		$(use_enable X xext) \
+		$(use_enable X xrandr) \
 		$(use_enable vaapi) \
 		$(use_enable vdpau) \
 		$(use_enable wayland) \
