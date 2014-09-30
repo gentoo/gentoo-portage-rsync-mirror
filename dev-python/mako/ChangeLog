@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.82 2014/06/18 16:00:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.83 2014/09/30 07:09:36 yngwin Exp $
+
+*mako-1.0.0 (30 Sep 2014)
+
+  30 Sep 2014; Ben de Groot <yngwin@gentoo.org> +mako-1.0.0.ebuild:
+  Version bump, thanks to eroen in bug #486158. As this is a major version bump,
+  it's masked for testing.
 
   18 Jun 2014; Tobias Klausmann <klausman@gentoo.org> mako-0.7.3-r1.ebuild:
   Stable on alpha, bug #450174
