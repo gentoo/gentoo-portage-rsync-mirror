@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/pecl-svn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-svn/ChangeLog,v 1.5 2014/08/10 21:03:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-svn/ChangeLog,v 1.6 2014/09/30 01:18:40 grknight Exp $
+
+*pecl-svn-1.0.2-r1 (30 Sep 2014)
+
+  30 Sep 2014; Brian Evans <grknight@gentoo.org> +pecl-svn-1.0.2-r1.ebuild,
+  -pecl-svn-1.0.2.ebuild:
+  Revbump to add 5.6 and drop 5.3 support wrt bug 515098
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pecl-svn-1.0.2.ebuild:
   QA: drop trailing '.' from DESCRIPTION
