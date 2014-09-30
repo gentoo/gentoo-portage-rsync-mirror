@@ -1,6 +1,16 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.398 2014/09/29 09:27:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.399 2014/09/30 20:34:29 polynomial-c Exp $
+
+*bash-4.3_p27-r1 (30 Sep 2014)
+*bash-4.2_p50-r1 (30 Sep 2014)
+*bash-4.1_p14-r1 (30 Sep 2014)
+
+  30 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> +bash-4.1_p14-r1.ebuild,
+  +bash-4.2_p50-r1.ebuild, -bash-4.3_p27.ebuild, +bash-4.3_p27-r1.ebuild,
+  +files/bash-redir-stack-overflow.patch:
+  Added an inofficial patch to finally fix CVE-2014-7186 and CVE-2014-7187 (bug
+  #523742).
 
   29 Sep 2014; Jeroen Roovers <jer@gentoo.org> bash-3.1_p20.ebuild,
   bash-3.2_p54.ebuild, bash-4.0_p41.ebuild, bash-4.1_p14.ebuild,
