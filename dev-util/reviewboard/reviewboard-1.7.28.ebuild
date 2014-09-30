@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/reviewboard-1.7.28.ebuild,v 1.1 2014/09/21 09:24:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/reviewboard-1.7.28.ebuild,v 1.2 2014/09/30 11:32:26 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -31,7 +31,7 @@ RDEPEND=">=dev-python/django-1.4.14[${PYTHON_USEDEP},sqlite]
 	>=dev-python/markdown-2.2.1[${PYTHON_USEDEP}]
 	>=dev-python/paramiko-1.9.0[${PYTHON_USEDEP}]
 	>=dev-python/mimeparse-0.1.3[${PYTHON_USEDEP}]
-	dev-python/python-dateutil:python-2
+	dev-python/python-dateutil[${PYTHON_USEDEP}]
 	dev-python/python-memcached[${PYTHON_USEDEP}]
 	>=dev-python/pytz-2012h[${PYTHON_USEDEP}]
 	dev-python/recaptcha-client[${PYTHON_USEDEP}]"
@@ -50,6 +50,10 @@ python_prepare_all() {
 	# Running uglify is a problem right now, so skip this step. Rather
 	# have newer versions that compacted javascript.
 	sed -e "s/'pipeline.compressors.uglifyjs.UglifyJSCompressor'/None/" -i reviewboard/settings.py || die
+
+	# https://github.com/reviewboard/reviewboard/commit/b1b8867deb7cd857003d8abbf16e85897b0cb4bf
+	# # The version bordering of python-dateutil is long out of date and wrong since end of March 2012!
+	sed -e 's:==1.5:>=1.5:' -i setup.py || die
 
 	distutils-r1_python_prepare_all
 }

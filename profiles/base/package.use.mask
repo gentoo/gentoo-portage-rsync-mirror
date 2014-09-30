@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.608 2014/09/29 15:49:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.609 2014/09/30 11:32:38 voyageur Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -332,6 +332,7 @@ gnustep-apps/cynthiune flac
 # Richard Freeman <rich0@gentoo.org> (24 Mar 2013)
 # Dependency is masked for buffer overflows for now
 app-text/yagf cuneiform
+dev-python/pyocr cuneiform
 
 # Michael Weber <xmw@gentoo.org> (23 Mar 2013)
 # Does not build.

@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.12.ebuild,v 1.1 2014/09/28 18:26:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.12-r1.ebuild,v 1.1 2014/09/30 11:33:39 alonbl Exp $
 
 EAPI="5"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils multilib systemd udev user autotools
+inherit autotools eutils python-single-r1 multilib systemd udev user
 
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://pcsclite.alioth.debian.org/"
@@ -27,7 +28,8 @@ IUSE="libusb policykit selinux +udev"
 
 REQUIRED_USE="^^ ( udev libusb )"
 
-CDEPEND="libusb? ( virtual/libusb:1 )
+CDEPEND="${PYTHON_DEPS}
+	libusb? ( virtual/libusb:1 )
 	selinux? ( sec-policy/selinux-pcscd )
 	udev? ( virtual/udev )
 	policykit? ( >=sys-auth/polkit-0.111 )"
@@ -39,6 +41,8 @@ RDEPEND="${CDEPEND}
 	!<sys-apps/openrc-0.11.8"
 
 pkg_setup() {
+	python-single-r1_pkg_setup
+
 	enewgroup openct # make sure it exists
 	enewgroup pcscd
 	enewuser pcscd -1 -1 /run/pcscd pcscd,openct
@@ -75,6 +79,8 @@ src_install() {
 		insinto "$(get_udevdir)"/rules.d
 		doins "${FILESDIR}"/99-pcscd-hotplug.rules
 	fi
+
+	python_fix_shebang "${ED}/usr/bin"
 }
 
 pkg_postinst() {

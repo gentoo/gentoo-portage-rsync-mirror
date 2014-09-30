@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-dateutil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.60 2014/09/27 15:39:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.61 2014/09/30 11:50:08 idella4 Exp $
+
+  30 Sep 2014; Ian Delaney <idella4@gentoo.org> -python-dateutil-1.5.ebuild,
+  -python-dateutil-2.1.ebuild, python-dateutil-2.2.ebuild:
+  remove old obsoleted py2 only version & version inheriting old eclass; 2.2,
+  clean old impls
 
   27 Sep 2014; Mike Gilbert <floppym@gentoo.org> python-dateutil-2.1-r1.ebuild:
   Add python3.4 to version 2.1.

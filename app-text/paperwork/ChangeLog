@@ -1,0 +1,10 @@
+# ChangeLog for app-text/paperwork
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/paperwork/ChangeLog,v 1.1 2014/09/30 11:45:41 voyageur Exp $
+
+*paperwork-0.2 (30 Sep 2014)
+
+  30 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> +paperwork-0.2.ebuild,
+  +metadata.xml:
+  Initial commit, based on lorelei overlay version
+
