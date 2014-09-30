@@ -1,6 +1,12 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.155 2014/09/02 10:16:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.156 2014/09/30 10:29:57 pacho Exp $
+
+*empathy-3.12.6 (30 Sep 2014)
+
+  30 Sep 2014; Pacho Ramos <pacho@gentoo.org> +empathy-3.12.6.ebuild,
+  -empathy-3.12.5.ebuild:
+  Version bump, drop old
 
 *empathy-3.12.5 (02 Sep 2014)
 
