@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9411 2014/09/30 06:47:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9412 2014/09/30 21:03:25 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Sep 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Mask app-emulation/emul-linux-x86-motif for removal.
 
   30 Sep 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Mask dev-libs/protobuf-2.6.0 for testing, bug #521406 .
