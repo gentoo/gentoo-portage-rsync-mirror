@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/google-apputils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/google-apputils/ChangeLog,v 1.2 2014/09/30 05:09:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/google-apputils/ChangeLog,v 1.3 2014/09/30 09:54:58 idella4 Exp $
+
+  30 Sep 2014; Ian Delaney <idella4@gentoo.org> google-apputils-0.4.0.ebuild:
+  update deps to current python-dateutil, versioning set in source wrong as it
+  was set 2.5 years ago at this point in time. Observed by and ack to Arfrever
+  for the archival search providing confirmation of the out of date state
 
 *google-apputils-0.4.0 (30 Sep 2014)
 

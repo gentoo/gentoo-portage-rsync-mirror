@@ -1,6 +1,6 @@
-# Copyright 1998-2014 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/mako-0.7.3-r2.ebuild,v 1.10 2014/05/01 03:26:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/mako-0.7.3-r2.ebuild,v 1.11 2014/09/30 09:52:08 jer Exp $
 
 EAPI=5
 

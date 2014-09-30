@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.83 2014/09/30 07:09:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.84 2014/09/30 09:52:08 jer Exp $
+
+  30 Sep 2014; Jeroen Roovers <jer@gentoo.org> mako-0.7.0.ebuild,
+  mako-0.7.3-r1.ebuild, mako-0.7.3-r2.ebuild, mako-1.0.0.ebuild:
+  Fix copyright notices.
 
 *mako-1.0.0 (30 Sep 2014)
 
