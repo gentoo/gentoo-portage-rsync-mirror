@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9410 2014/09/29 15:49:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9411 2014/09/30 06:47:12 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Sep 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Mask dev-libs/protobuf-2.6.0 for testing, bug #521406 .
 
   29 Sep 2014; Jeroen Roovers <jer@gentoo.org> arch/amd64/package.use.mask,
   arch/x86/package.use.mask, base/package.use.mask:

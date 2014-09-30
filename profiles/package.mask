@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16062 2014/09/30 05:34:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16063 2014/09/30 06:47:12 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (30 Sep 2014)
+# Reverse dependencies need to be tested and fixed, bug #521406.
+>=dev-libs/protobuf-2.6.0
 
 # Ben de Groot <yngwin@gentoo.org> (30 Sep 2014)
 # WIP, needs version bumps of several dependencies
