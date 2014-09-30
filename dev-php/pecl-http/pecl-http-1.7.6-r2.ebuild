@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/pecl-http-1.7.4.ebuild,v 1.4 2014/08/10 21:02:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/pecl-http-1.7.6-r2.ebuild,v 1.1 2014/09/30 17:58:19 grknight Exp $
 
-EAPI="4"
+EAPI="5"
 
 PHP_EXT_NAME="http"
 PHP_EXT_PECL_PKG="pecl_http"
@@ -10,21 +10,22 @@ PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS="docs/examples/tutorial.txt ThanksTo.txt KnownIssues.txt"
 
-USE_PHP="php5-3 php5-4"
+# Does not compile with php5-6
+USE_PHP="php5-5 php5-4"
 
 inherit php-ext-pecl-r2 php-ext-source-r2
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Extended HTTP Support for PHP"
 LICENSE="BSD-2 MIT"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=net-misc/curl-7.19.4
+DEPEND="net-misc/curl
 	sys-libs/zlib
 	dev-libs/libevent
-	>=dev-lang/php-5[hash,session,iconv]
+	dev-lang/php[hash,session,iconv]
 	"
 RDEPEND="${DEPEND}"
 

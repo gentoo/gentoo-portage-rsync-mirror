@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/pecl-http
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/ChangeLog,v 1.17 2014/08/10 21:02:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/ChangeLog,v 1.18 2014/09/30 17:58:19 grknight Exp $
+
+*pecl-http-1.7.6-r2 (30 Sep 2014)
+
+  30 Sep 2014;  <grknight@gentoo.org> +pecl-http-1.7.6-r2.ebuild,
+  -pecl-http-1.7.4.ebuild, -pecl-http-1.7.6-r1.ebuild, -pecl-http-1.7.6.ebuild:
+  Revision bump to drop 5.3 support; remove old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pecl-http-1.7.4.ebuild,
   pecl-http-1.7.5.ebuild, pecl-http-1.7.6-r1.ebuild, pecl-http-1.7.6.ebuild:
