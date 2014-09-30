@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/pecl-dbx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dbx/ChangeLog,v 1.4 2014/08/10 21:01:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dbx/ChangeLog,v 1.5 2014/09/30 16:32:24 grknight Exp $
+
+*pecl-dbx-1.1.2-r1 (30 Sep 2014)
+
+  30 Sep 2014;  <grknight@gentoo.org> +pecl-dbx-1.1.2-r1.ebuild,
+  -pecl-dbx-1.1.2.ebuild:
+  Revision bump to add 5.5 and 5.6 support; drop 5.3 support
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pecl-dbx-1.1.2.ebuild:
   QA: drop trailing '.' from DESCRIPTION
