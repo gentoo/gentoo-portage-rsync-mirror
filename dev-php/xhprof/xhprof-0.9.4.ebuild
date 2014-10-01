@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xhprof/xhprof-0.9.3.ebuild,v 1.1 2013/05/20 14:43:19 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xhprof/xhprof-0.9.4.ebuild,v 1.1 2014/10/01 00:44:13 grknight Exp $
 
 EAPI="5"
 
@@ -17,8 +17,3 @@ DESCRIPTION="A Hierarchical Profiler for PHP"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
-
-DEPEND=""
-RDEPEND="${DEPEND}
-		dev-lang/php
-		"
