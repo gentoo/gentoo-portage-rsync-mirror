@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.1.0-r1.ebuild,v 1.5 2014/09/01 16:43:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.1.0-r2.ebuild,v 1.1 2014/10/01 17:20:46 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils toolchain-funcs
@@ -16,6 +16,7 @@ IUSE="consolekit systemd +upower"
 REQUIRED_USE="?? ( upower systemd )"
 
 RDEPEND="sys-libs/pam
+	>=x11-base/xorg-server-1.15.1
 	x11-libs/libxcb[xkb(-)]
 	dev-qt/qtdeclarative:4
 	dev-qt/qtdbus:4

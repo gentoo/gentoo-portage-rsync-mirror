@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/sddm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.10 2014/09/21 20:07:45 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.11 2014/10/01 17:20:46 jauhien Exp $
+
+*sddm-0.1.0-r2 (01 Oct 2014)
+*sddm-0.9.0-r1 (01 Oct 2014)
+
+  01 Oct 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  +files/sddm-0.9.0-upower.patch, +sddm-0.1.0-r2.ebuild, +sddm-0.9.0-r1.ebuild,
+  -sddm-0.1.0-r1.ebuild, -sddm-0.9.0.ebuild:
+  fix bug 524072 and temporary fix bug 523630
 
 *sddm-0.9.0 (21 Sep 2014)
 

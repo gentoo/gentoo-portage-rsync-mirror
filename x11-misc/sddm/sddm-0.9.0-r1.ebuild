@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.9.0.ebuild,v 1.1 2014/09/21 20:07:45 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.9.0-r1.ebuild,v 1.1 2014/10/01 17:20:46 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils toolchain-funcs user
@@ -17,6 +17,7 @@ REQUIRED_USE="?? ( upower systemd )
 	^^ ( qt4 qt5 )"
 
 RDEPEND="sys-libs/pam
+	>=x11-base/xorg-server-1.15.1
 	x11-libs/libxcb[xkb(-)]
 	qt4? (
 		dev-qt/qtcore:4
@@ -44,6 +45,7 @@ pkg_pretend() {
 
 src_prepare() {
 	use consolekit && epatch "${FILESDIR}/${P}-consolekit.patch"
+	use upower && epatch "${FILESDIR}/${P}-upower.patch"
 
 	# respect user's cflags
 	sed -e 's|-Wall -march=native||' \
