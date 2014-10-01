@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16066 2014/10/01 11:47:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16067 2014/10/01 21:56:15 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,7 +32,7 @@
 
 # Ulrich Müller <ulm@gentoo.org> (30 Sep 2014)
 # Obsolete, superseded by multilib x11-libs/motif.
-# Masked for removal in 30 days, bug #461916.
+# Masked for removal in 60 days, bug #461916.
 app-emulation/emul-linux-x86-motif
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (30 Sep 2014)
