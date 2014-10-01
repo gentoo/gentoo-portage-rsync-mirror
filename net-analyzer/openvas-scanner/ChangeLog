@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/openvas-scanner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/ChangeLog,v 1.10 2014/09/30 16:03:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/ChangeLog,v 1.11 2014/10/01 11:02:39 jlec Exp $
+
+  01 Oct 2014; Justin Lecher <jlec@gentoo.org> openvas-scanner-4.0.3-r2.ebuild:
+  Drop unneeded dep on cmake; prefix love
 
 *openvas-scanner-4.0.3-r2 (30 Sep 2014)
 

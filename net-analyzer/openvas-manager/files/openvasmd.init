@@ -10,7 +10,7 @@ pidfile="/run/openvasmd.pid"
 
 depend() {
 	after bootmisc
-	need localmount net
+	need localmount net openvassd
 }
 
 start_pre() {
