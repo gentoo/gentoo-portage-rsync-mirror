@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/psutil-2.1.2.ebuild,v 1.1 2014/09/21 23:58:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/psutil-2.1.2.ebuild,v 1.2 2014/10/01 14:38:04 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
 inherit distutils-r1
 
 DESCRIPTION="Retrieve information on running processes and system utilization"
-HOMEPAGE="http://code.google.com/p/psutil/ https://pypi.python.org/pypi/psutil/"
+HOMEPAGE="https://github.com/giampaolo/psutil https://pypi.python.org/pypi/psutil/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
