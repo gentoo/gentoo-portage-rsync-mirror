@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.13-r1.ebuild,v 1.2 2014/09/29 22:43:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.13-r1.ebuild,v 1.4 2014/10/01 07:45:13 ago Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.squid-cache.org/pub/archive/3.3/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="caps ipv6 pam ldap samba sasl kerberos nis radius ssl snmp selinux logrotate test \
 	ecap icap-client ssl-crtd \
 	mysql postgres sqlite \
