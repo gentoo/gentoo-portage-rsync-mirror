@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p19.ebuild,v 1.1 2014/09/27 05:12:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p55.ebuild,v 1.1 2014/10/01 20:47:24 polynomial-c Exp $
 
 EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs
 
 # Official patchlevel
-# See ftp://ftp.cwru.edu/pub/bash/bash-3.1-patches/
+# See ftp://ftp.cwru.edu/pub/bash/bash-3.2-patches/
 PLEVEL=${PV##*_p}
 MY_PV=${PV/_p*}
 MY_PV=${MY_PV/_/-}
@@ -34,7 +34,7 @@ SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz $(patches)"
 
 LICENSE="GPL-2"
 SLOT="${MY_PV}"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="afs +net nls +readline"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
@@ -65,13 +65,17 @@ src_prepare() {
 	touch lib/{readline,termcap}/Makefile.in # for config.status
 	sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[[:alpha:]]*.h::g' Makefile.in || die
 
+	epatch "${FILESDIR}"/autoconf-mktime-2.59.patch #220040
 	epatch "${FILESDIR}"/${PN}-3.1-gentoo.patch
-	epatch "${FILESDIR}"/autoconf-mktime-2.53.patch #220040
-	epatch "${FILESDIR}"/${PN}-3.1-ulimit.patch
-	epatch "${FILESDIR}"/${PN}-3.0-read-memleak.patch
+	epatch "${FILESDIR}"/${PN}-3.2-loadables.patch
+	epatch "${FILESDIR}"/${PN}-3.2-protos.patch
+	epatch "${FILESDIR}"/${PN}-3.2-session-leader.patch #231775
+	epatch "${FILESDIR}"/${PN}-3.2-parallel-build.patch #189671
+	epatch "${FILESDIR}"/${PN}-3.2-ldflags-for-build.patch #211947
+	epatch "${FILESDIR}"/${PN}-3.2-process-subst.patch
+	epatch "${FILESDIR}"/${PN}-3.2-ulimit.patch
 	epatch "${FILESDIR}"/${PN}-3.0-trap-fg-signals.patch
-	epatch "${FILESDIR}"/bash-3.1-fix-dash-login-shell.patch #118257
-	epatch "${FILESDIR}"/bash-3.1-dev-fd-test-as-user.patch #131875
+	epatch "${FILESDIR}"/${PN}-3.2-dev-fd-test-as-user.patch #131875
 
 	epatch_user
 }
@@ -125,10 +129,6 @@ src_configure() {
 		$(use_enable readline history) \
 		$(use_enable readline bang-history) \
 		"${myconf[@]}"
-}
-
-src_compile() {
-	emake -j1 #102426
 }
 
 src_install() {

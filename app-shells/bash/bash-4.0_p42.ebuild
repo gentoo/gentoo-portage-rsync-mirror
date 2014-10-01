@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.1_p14-r1.ebuild,v 1.3 2014/10/01 16:06:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0_p42.ebuild,v 1.1 2014/10/01 20:47:24 polynomial-c Exp $
 
 EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs
 
 # Official patchlevel
-# See ftp://ftp.cwru.edu/pub/bash/bash-4.1-patches/
+# See ftp://ftp.cwru.edu/pub/bash/bash-4.0-patches/
 PLEVEL=${PV##*_p}
 MY_PV=${PV/_p*}
 MY_PV=${MY_PV/_/-}
@@ -34,7 +34,7 @@ SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz $(patches)"
 
 LICENSE="GPL-3"
 SLOT="${MY_PV}"
-KEYWORDS="alpha amd64 arm ~arm64 ~hppa ia64 ~m68k ~mips ppc ppc64 ~s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="afs mem-scramble +net nls +readline"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
@@ -65,18 +65,20 @@ src_prepare() {
 	touch lib/{readline,termcap}/Makefile.in # for config.status
 	sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[[:alpha:]]*.h::g' Makefile.in || die
 
-	epatch "${FILESDIR}"/${PN}-4.1-fbsd-eaccess.patch #303411
+	epatch "${FILESDIR}"/${PN}-4.0-configure.patch #304901
+	epatch "${FILESDIR}"/${PN}-4.x-deferred-heredocs.patch
 	sed -i '1i#define NEED_FPURGE_DECL' execute_cmd.c # needs fpurge() decl
-	epatch "${FILESDIR}"/${PN}-4.1-parallel-build.patch
-	epatch "${FILESDIR}"/${PN}-redir-stack-overflow.patch #523742
+	epatch "${FILESDIR}"/${PN}-3.2-parallel-build.patch #189671
+	epatch "${FILESDIR}"/${PN}-4.0-ldflags-for-build.patch #211947
+	epatch "${FILESDIR}"/${PN}-4.0-negative-return.patch
+	epatch "${FILESDIR}"/${PN}-4.0-parallel-build.patch #267613
+	sed -i '/\.o: .*shell\.h/s:$: pathnames.h:' Makefile.in #267613
 
 	epatch_user
 }
 
 src_configure() {
 	local myconf=()
-
-	myconf+=( --without-lispdir ) #335896
 
 	# For descriptions of these, see config-top.h
 	# bashrc/#26952 bash_logout/#90488 ssh/#24762
