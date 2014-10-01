@@ -3,10 +3,10 @@ DEPEND=>=net-mail/dovecot-2.1.16 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-deve
 DESCRIPTION=A dovecot antispam plugin supporting multiple backends
 EAPI=5
 HOMEPAGE=http://wiki2.dovecot.org/Plugins/Antispam/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2
 RDEPEND=>=net-mail/dovecot-2.1.16
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~radhermit/distfiles/dovecot-antispam-2.0_pre20130429.tar.bz2
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=6706f48ee259d81d39c96b332ca2ae9c
+_md5_=fd4822d65cb006f2e794912700d5b103

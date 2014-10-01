@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dovecot-antispam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/ChangeLog,v 1.30 2014/02/18 01:06:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/ChangeLog,v 1.31 2014/10/01 16:28:19 radhermit Exp $
+
+  01 Oct 2014; Tim Harder <radhermit@gentoo.org>
+  dovecot-antispam-2.0_pre20130429.ebuild:
+  Keyword ~arm for bug #523938.
 
   18 Feb 2014; Tim Harder <radhermit@gentoo.org>
   -dovecot-antispam-2.0_pre20120226.ebuild:

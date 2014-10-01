@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/openvas-7-r1.ebuild,v 1.2 2014/10/01 15:30:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/openvas-7-r1.ebuild,v 1.3 2014/10/01 16:04:07 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,10 @@ DEPEND="
 	>=net-analyzer/openvas-cli-1.3.0-r1
 	net-analyzer/openvas-tools
 	>=net-analyzer/greenbone-security-assistant-5.0.3-r1
-	pdf? ( dev-texlive/texlive-latex )"
+	pdf? (
+		virtual/latex-base
+		app-text/htmldoc
+	)"
 # greenbone-security-desktop is broken and unsupported upstream
 RDEPEND="${DEPEND}"
 
