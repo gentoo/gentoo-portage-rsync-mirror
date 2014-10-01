@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/openvas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.14 2014/09/29 06:54:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.16 2014/10/01 15:30:50 jlec Exp $
+
+  01 Oct 2014; Justin Lecher <jlec@gentoo.org> openvas-7-r1.ebuild,
+  metadata.xml:
+  Add USE for pdf generation
+
+*openvas-7-r1 (01 Oct 2014)
+
+  01 Oct 2014; Justin Lecher <jlec@gentoo.org> +openvas-7-r1.ebuild,
+  +files/README.gentoo:
+  Add README for Gentoo
 
   29 Sep 2014; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add myself as maintainer

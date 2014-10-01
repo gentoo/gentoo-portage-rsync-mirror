@@ -7,4 +7,7 @@
   <maintainer>
     <email>jlec@gentoo.org</email>
   </maintainer>
+  <use>
+    <flag name="pdf">Enable pdf report creation</flag>
+  </use>
 </pkgmetadata>
