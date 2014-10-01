@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.17.ebuild,v 1.1 2014/01/31 13:15:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.17.ebuild,v 1.2 2014/10/01 18:21:56 blueness Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_6,2_7,3_2} )
 PYTHON_REQ_USE="threads"
 USE_PYTHON='2.6 2.7'
 
-USE_PHP="php5-3 php5-4"
+USE_PHP="php5-4"
 
 PHP_EXT_NAME="xapian"
 PHP_EXT_INI="yes"
