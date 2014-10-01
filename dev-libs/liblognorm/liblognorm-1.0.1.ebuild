@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-1.0.1.ebuild,v 1.2 2014/09/30 12:46:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-1.0.1.ebuild,v 1.3 2014/10/01 10:55:19 jer Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.liblognorm.com/files/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0/1"
-KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-linux"
+KEYWORDS="~amd64 ~arm hppa ~x86 ~amd64-linux"
 #IUSE="debug static-libs" - "debug" USE flag disabled due to https://github.com/rsyslog/liblognorm/issues/5
 IUSE="static-libs"
 

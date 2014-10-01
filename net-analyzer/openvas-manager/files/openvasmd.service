@@ -5,7 +5,7 @@ After=openvassd.service
 
 [Service]
 EnvironmentFile=-/etc/openvas/openvasmd.conf
-ExecStart=/usr/sbin/openvasmd -f $MANAGER_LISTEN $MANAGER_PORT $SCANNER_LISTEN $SCANNER_PORT $MANAGER_OTP
+ExecStart=/usr/sbin/openvasmd -f ${MANAGER_LISTEN} ${MANAGER_PORT} ${SCANNER_LISTEN} ${SCANNER_PORT} ${MANAGER_EXTRA_ARGS}
 Restart=always
 RestartSec=1
 User=root

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblognorm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.28 2014/09/30 12:46:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.29 2014/10/01 10:55:19 jer Exp $
+
+  01 Oct 2014; Jeroen Roovers <jer@gentoo.org> liblognorm-1.0.1.ebuild:
+  Stable for HPPA (bug #524058).
 
   30 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> liblognorm-1.0.1.ebuild:
   Readded CFLAGS patch.

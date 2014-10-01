@@ -5,8 +5,14 @@
 
 name="OpenVAS Manager"
 command=/usr/sbin/openvasmd
-command_args="${MANAGER_LISTEN} ${MANAGER_PORT} ${SCANNER_LISTEN} ${SCANNER_PORT} ${MANAGER_OTP}"
+command_args="${MANAGER_LISTEN} ${MANAGER_PORT} ${SCANNER_LISTEN} ${SCANNER_PORT} ${MANAGER_EXTRA_ARGS}"
+pidfile="/run/openvasmd.pid"
 
 depend() {
-	need net openvassd
+	after bootmisc
+	need localmount net
+}
+
+start_pre() {
+	checkpath --directory --mode 0775 --quiet /var/cache/openvas
 }

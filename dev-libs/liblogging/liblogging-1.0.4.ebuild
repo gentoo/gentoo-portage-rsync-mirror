@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblogging/liblogging-1.0.4.ebuild,v 1.2 2014/08/10 20:36:02 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblogging/liblogging-1.0.4.ebuild,v 1.3 2014/10/01 10:56:16 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.rsyslog.com/liblogging/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0/0"
-KEYWORDS="~amd64 ~arm ~hppa ~x86"
+KEYWORDS="~amd64 ~arm hppa ~x86"
 IUSE="rfc3195 static-libs +stdlog systemd"
 
 RDEPEND="systemd? ( sys-apps/systemd )"

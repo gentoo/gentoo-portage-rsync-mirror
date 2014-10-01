@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rabbitmq-c/rabbitmq-c-0.5.0.ebuild,v 1.3 2014/06/16 02:26:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rabbitmq-c/rabbitmq-c-0.5.0.ebuild,v 1.4 2014/10/01 10:58:37 jer Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://github.com/alanxz/rabbitmq-c.git"
 else
 	SRC_URI="https://github.com/alanxz/rabbitmq-c/archive/v${PV}.zip -> ${PN}-v${PV}.zip"
-	KEYWORDS="~amd64 ~arm ~hppa ~x86"
+	KEYWORDS="~amd64 ~arm hppa ~x86"
 fi
 
 LICENSE="MIT"
