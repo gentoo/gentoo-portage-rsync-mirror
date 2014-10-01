@@ -1,6 +1,16 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.276 2014/07/23 15:13:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.278 2014/10/01 12:40:17 pacho Exp $
+
+  01 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gnumeric-1.12.11-missing-header.patch:
+  Drop obsolete patch
+
+*gnumeric-1.12.18 (01 Oct 2014)
+
+  01 Oct 2014; Pacho Ramos <pacho@gentoo.org> +gnumeric-1.12.18.ebuild,
+  -gnumeric-1.12.14.ebuild, -gnumeric-1.12.16.ebuild:
+  Version bump, drop old
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnumeric-1.12.17.ebuild:
   Stable for x86, wrt bug #512012

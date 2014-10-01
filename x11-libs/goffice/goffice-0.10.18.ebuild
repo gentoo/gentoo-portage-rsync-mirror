@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.10.16.ebuild,v 1.1 2014/05/31 09:38:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.10.18.ebuild,v 1.1 2014/10/01 12:36:08 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2 flag-o-matic
+inherit gnome2
 
 DESCRIPTION="A library of document-centric objects and utilities"
 HOMEPAGE="http://git.gnome.org/browse/goffice/"
@@ -44,7 +44,6 @@ DEPEND="${RDEPEND}
 # gnome-base/gnome-common
 
 src_configure() {
-	filter-flags -ffast-math
 	gnome2_src_configure \
 		--without-lasem \
 		--with-gtk \
