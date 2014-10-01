@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/pecl-uploadprogress
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-uploadprogress/ChangeLog,v 1.5 2014/08/10 21:04:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-uploadprogress/ChangeLog,v 1.6 2014/10/01 00:02:19 grknight Exp $
+
+  01 Oct 2014; Brian Evans <grknight@gentoo.org>
+  -pecl-uploadprogress-1.0.3.1.ebuild:
+  Cleanup old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   pecl-uploadprogress-1.0.3.1-r1.ebuild, pecl-uploadprogress-1.0.3.1.ebuild:
