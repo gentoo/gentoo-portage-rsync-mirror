@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/greenbone-security-assistant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/ChangeLog,v 1.8 2014/09/28 18:23:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/ChangeLog,v 1.9 2014/10/01 09:33:11 jlec Exp $
+
+*greenbone-security-assistant-5.0.3-r1 (01 Oct 2014)
+
+  01 Oct 2014; Justin Lecher <jlec@gentoo.org>
+  +greenbone-security-assistant-5.0.3-r1.ebuild,
+  +files/greenbone-security-assistant-5.0.3-run.patch, +files/gsad.init,
+  +files/gsad.logrotate, +files/gsad.service, +files/gsad.tmpfiles.d,
+  +files/gsad-daemon.conf:
+  Add systemd support
 
 *greenbone-security-assistant-5.0.3 (28 Sep 2014)
 
