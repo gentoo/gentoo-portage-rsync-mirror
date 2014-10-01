@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/futures
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/futures/ChangeLog,v 1.10 2014/05/05 04:51:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/futures/ChangeLog,v 1.11 2014/10/01 02:53:59 radhermit Exp $
+
+*futures-2.2.0 (01 Oct 2014)
+
+  01 Oct 2014; Tim Harder <radhermit@gentoo.org> +futures-2.2.0.ebuild:
+  Version bump.
 
   05 May 2014; Ian Delaney <idella4@gentoo.org> futures-2.1.6.ebuild:
   drop py2.6 add pypy support, upgrade test phase
