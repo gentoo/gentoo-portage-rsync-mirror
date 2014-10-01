@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9413 2014/09/30 21:42:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9414 2014/10/01 12:16:17 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Oct 2014; Ulrich Müller <ulm@gentoo.org> license_groups:
+  The IPAfont license has been approved by the FSF, so add it to the
+  FSF-APPROVED-OTHER group. Thanks to bernalex for pointing this out.
 
   30 Sep 2014; Ulrich Müller <ulm@gentoo.org>
   arch/amd64/no-multilib/package.mask, arch/amd64/package.use.stable.mask,
