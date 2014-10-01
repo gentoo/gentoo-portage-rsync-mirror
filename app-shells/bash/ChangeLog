@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.400 2014/10/01 07:58:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.401 2014/10/01 13:37:47 zlogene Exp $
+
+  01 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> bash-4.1_p14-r1.ebuild,
+  bash-4.2_p50-r1.ebuild:
+  amd64 stable wrt bug #523742
 
   01 Oct 2014; Raúl Porcel <armin76@gentoo.org> bash-3.1_p20.ebuild,
   bash-3.2_p54.ebuild, bash-4.0_p41.ebuild, bash-4.1_p14.ebuild,
