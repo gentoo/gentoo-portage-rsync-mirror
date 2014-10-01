@@ -1,6 +1,16 @@
 # ChangeLog for dev-perl/Module-Install
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.31 2014/08/31 16:17:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.33 2014/10/01 11:36:06 zlogene Exp $
+
+  01 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> Module-Install-1.120.0.ebuild,
+  Module-Install-1.60.0-r1.ebuild:
+  Add ~arm64 keyword
+
+*Module-Install-1.120.0 (01 Oct 2014)
+
+  01 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  +Module-Install-1.120.0.ebuild:
+  Version bump
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   Module-Install-1.60.0-r1.ebuild:
