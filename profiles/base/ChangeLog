@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.729 2014/09/30 11:32:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.730 2014/10/01 14:12:37 pinkbyte Exp $
+
+  01 Oct 2014; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Mask USE='multislot' in sys-devel/binutils as well, bug #507808
 
   30 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org> package.use.mask:
   Add dev-python/pyocr to the cuneiform USE flag mask

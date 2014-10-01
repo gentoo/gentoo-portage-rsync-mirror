@@ -1,10 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.609 2014/09/30 11:32:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.610 2014/10/01 14:12:37 pinkbyte Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Sergey Popov <pinkbyte@gentoo.org> (01 Oct 2014)
+# Mask multislot USE flag for packages, where it breaks
+# metadata cache consistency.
+# See bugs #507808, #507810 and #507814
+sys-devel/autoconf	multislot
+sys-devel/binutils	multislot
+sys-devel/gcc		multislot
 
 # Michał Górny <mgorny@gentoo.org> (15 Sep 2014)
 # Unsuccessful version bump of net-libs/libzrtpcpp, seems to cause
@@ -68,17 +76,9 @@ net-analyzer/wireshark libadns
 # Needs hardmasked lua-5.2
 www-servers/mongoose lua
 
-# Sergey Popov <pinkbyte@gentoo.org> (05 Jun 2014)
-# Mask multislot USE flag for packages, where it breaks
-# metadata cache consistency.
-# See bugs #507808, #507810 and #507814
-sys-devel/autoconf	multislot
-sys-devel/gcc		multislot
-
 # Manuel Rüger <mrueg@gentoo.org> (05 Jun 2014)
 # Fails to build with net-libs/libotr-4.0.0
 net-im/climm otr
-
 
 # Pacho Ramos <pacho@gentoo.org> (01 Jun 2014)
 # Needs hardmasked lua-5.2
