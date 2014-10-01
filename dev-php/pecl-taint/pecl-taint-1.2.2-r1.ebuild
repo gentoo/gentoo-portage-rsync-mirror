@@ -1,10 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-taint/pecl-taint-1.2.2.ebuild,v 1.1 2013/07/03 21:07:14 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-taint/pecl-taint-1.2.2-r1.ebuild,v 1.1 2014/09/30 23:45:58 grknight Exp $
 
-EAPI=4
+EAPI=5
 
-USE_PHP="php5-3 php5-4"
+# Fails to build with php5-5 and php5-6
+USE_PHP="php5-4"
 
 inherit php-ext-pecl-r2
 
