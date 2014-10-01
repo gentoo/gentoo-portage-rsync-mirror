@@ -7,6 +7,7 @@ name="OpenVAS Scanner"
 command="/usr/sbin/openvassd"
 command_args="${SCANNER_LISTEN} ${SCANNER_PORT} ${SCANNER_SRCIP} ${SCANNER_EXTRA_ARGS}"
 pidfile="/run/openvassd.pid"
+extra_stopped_commands="create_cache"
 
 depend() {
 	after bootmisc
@@ -15,4 +16,11 @@ depend() {
 
 start_pre() {
 	checkpath --directory --mode 0775 --quiet /var/cache/openvas
+}
+
+create_cache() {
+	checkpath --directory --mode 0775 --quiet /var/cache/openvas
+	ebegin "Generating initial Cache"
+	/usr/sbin/openvassd --foreground --only-cache
+	eend $?
 }
