@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37.ebuild,v 1.3 2014/08/30 17:27:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37.ebuild,v 1.4 2014/10/01 07:18:56 amynka Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="P2P Internet Telephony (VoiceIP) client"
 HOMEPAGE="http://www.skype.com/"
 SRC_URI="http://download.${PN}.com/linux/${P}.tar.bz2"
 
-LICENSE="skype-4.0.0.7-copyright skype-4.0.0.7-third-party_attributions.txt"
+LICENSE="skype-4.0.0.7-copyright BSD MIT RSA W3C regexp-UofT no-source-code"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="pax_kernel +pulseaudio selinux"
