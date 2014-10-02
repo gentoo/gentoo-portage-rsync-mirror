@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.155 2014/10/02 13:01:13 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.156 2014/10/02 22:22:16 mjo Exp $
+
+*djbdns-1.05-r30 (02 Oct 2014)
+
+  02 Oct 2014; Michael Orlitzky <mjo@gentoo.org> +djbdns-1.05-r30.ebuild,
+  +files/srv_record_support.patch:
+  Revbump to fix bugs #523754 and #523756.
 
   02 Oct 2014; Michael Orlitzky <mjo@gentoo.org>
   -files/CVE2008-4392_0001-dnscache-merge-similar-outgoing-queries-ipv6.patch,
