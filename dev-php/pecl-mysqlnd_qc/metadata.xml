@@ -10,4 +10,8 @@
 	  <email>pavel@senbonzakura.eu</email>
     <description>Proxied co-maintainer, CC on all bugs</description>
   </maintainer>
+  <use>
+    <flag name="memcached">Use <pkg>dev-libs/libmemcached</pkg> as a storage handler</flag>
+    <flag name="sqlite">Use <pkg>dev-db/sqlite</pkg> as a storage handler</flag>
+  </use>
 </pkgmetadata>
