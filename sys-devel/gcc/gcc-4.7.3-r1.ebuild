@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.7.3-r1.ebuild,v 1.17 2014/02/16 07:32:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.7.3-r1.ebuild,v 1.18 2014/10/02 00:10:29 rhill Exp $
 
 EAPI="2"
 
-PATCH_VER="1.4"
+PATCH_VER="1.5"
 UCLIBC_VER="1.0"
 
 # Hardened gcc 4 stuff
