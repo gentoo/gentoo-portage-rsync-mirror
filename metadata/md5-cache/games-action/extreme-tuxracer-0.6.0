@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
-DEPEND=virtual/opengl virtual/glu media-libs/libsdl[X,sound,video] media-libs/sdl-mixer[vorbis] media-libs/sdl-image[png] media-libs/freetype:2 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool >=sys-apps/sed-4
+DEPEND=virtual/opengl virtual/glu media-libs/libsdl[X,joystick,sound,video] media-libs/sdl-mixer[vorbis] media-libs/sdl-image[png] media-libs/freetype:2 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool >=sys-apps/sed-4
 DESCRIPTION=High speed arctic racing game based on Tux Racer
 EAPI=5
 HOMEPAGE=http://extremetuxracer.sourceforge.net/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2+
-RDEPEND=virtual/opengl virtual/glu media-libs/libsdl[X,sound,video] media-libs/sdl-mixer[vorbis] media-libs/sdl-image[png] media-libs/freetype:2 games-misc/games-envd
+RDEPEND=virtual/opengl virtual/glu media-libs/libsdl[X,joystick,sound,video] media-libs/sdl-mixer[vorbis] media-libs/sdl-image[png] media-libs/freetype:2 games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/extremetuxracer/etr-0.6.0.tar.xz
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=2654db7b9837c38f82cac7f66fcd2d57
+_md5_=8ffb595fba8874a5d8f89676731cee4b

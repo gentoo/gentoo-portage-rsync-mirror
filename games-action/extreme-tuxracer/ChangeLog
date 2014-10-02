@@ -1,6 +1,10 @@
 # ChangeLog for games-action/extreme-tuxracer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.20 2014/07/23 15:44:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.21 2014/10/02 15:09:48 mr_bones_ Exp $
+
+  02 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  extreme-tuxracer-0.6.0.ebuild:
+  fix libsdl use deps (bug #524272)
 
   23 Jul 2014; Alfredo Tupone <tupone@gentoo.org>
   extreme-tuxracer-0.6.0.ebuild:
