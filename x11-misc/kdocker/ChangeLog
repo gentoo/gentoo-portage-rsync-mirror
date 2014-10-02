@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/kdocker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/ChangeLog,v 1.9 2014/06/25 17:35:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/ChangeLog,v 1.10 2014/10/02 13:25:15 kensington Exp $
+
+  02 Oct 2014; Michael Palimaka <kensington@gentoo.org> kdocker-4.8-r2.ebuild:
+  Use bash-completion-r1 eclass to find bash completion directory instead of
+  hard coding it.
 
   25 Jun 2014; Michael Palimaka <kensington@gentoo.org> kdocker-4.8-r2.ebuild:
   Add missing USE dependency wrt bug #514334.
