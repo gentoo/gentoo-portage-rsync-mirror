@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-10.0.14.ebuild,v 1.1 2014/09/26 19:07:01 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-10.0.14.ebuild,v 1.2 2014/10/02 02:32:22 grknight Exp $
 
 EAPI="5"
 MY_EXTRAS_VER="20140924-1913Z"
@@ -88,9 +88,8 @@ multilib_src_test() {
 		pushd "${TESTDIR}"
 
 		# run mysql-test tests
-		# Skip all CONNECT engine tests until upstream respondes to how to reference data files
-		perl mysql-test-run.pl --force --vardir="${S}/mysql-test/var-tests" \
-			--skip-test=connect
+		perl mysql-test-run.pl --force --vardir="${S}/mysql-test/var-tests"
+
 		retstatus_tests=$?
 		[[ $retstatus_tests -eq 0 ]] || eerror "tests failed"
 		has usersandbox $FEATURES && eerror "Some tests may fail with FEATURES=usersandbox"
@@ -109,6 +108,8 @@ multilib_src_test() {
 		[[ -z "$failures" ]] || die "Test failures: $failures"
 		einfo "Tests successfully completed"
 
+		# Cleanup data files after tests
+		rm -r "${S}/mysql-test/var-tests" || die "Cleanup failed"
 	else
 
 		einfo "Skipping server tests due to minimal build."

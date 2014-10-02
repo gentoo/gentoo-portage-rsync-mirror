@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/mariadb-galera-10.0.12.ebuild,v 1.1 2014/07/30 06:26:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/mariadb-galera-10.0.12.ebuild,v 1.2 2014/10/02 02:33:56 grknight Exp $
 
 EAPI="5"
 MY_EXTRAS_VER="20140729-2200Z"
@@ -109,6 +109,8 @@ src_test() {
 		[[ -z "$failures" ]] || die "Test failures: $failures"
 		einfo "Tests successfully completed"
 
+		# Cleanup data files after tests
+		rm -r "${S}/mysql-test/var-tests" || die "Cleanup failed"
 	else
 
 		einfo "Skipping server tests due to minimal build."
