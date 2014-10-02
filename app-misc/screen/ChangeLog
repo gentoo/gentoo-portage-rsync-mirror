@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.200 2014/09/26 19:56:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.201 2014/10/02 18:41:59 grobian Exp $
+
+  02 Oct 2014; Fabian Groffen <grobian@gentoo.org> screen-4.2.1-r2.ebuild:
+  Extend Solaris fix to allow compilation
 
   26 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   +files/4.0.3-extend-d_termname-ng2.patch:

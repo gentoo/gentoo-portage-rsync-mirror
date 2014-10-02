@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.1-r2.ebuild,v 1.4 2014/08/30 10:32:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.1-r2.ebuild,v 1.5 2014/10/02 18:41:59 grobian Exp $
 
 EAPI=5
 
@@ -52,7 +52,13 @@ src_prepare() {
 src_configure() {
 	append-cppflags "-DMAXWIN=${MAX_SCREEN_WINDOWS:-100}"
 
-	[[ ${CHOST} == *-solaris* ]] && append-libs -lsocket -lnsl
+	if [[ ${CHOST} == *-solaris* ]] ; then
+		# https://lists.gnu.org/archive/html/screen-devel/2014-04/msg00095.html
+		append-cppflags -D_XOPEN_SOURCE \
+			-D_XOPEN_SOURCE_EXTENDED=1 \
+			-D__EXTENSIONS__
+		append-libs -lsocket -lnsl
+	fi
 
 	use nethack || append-cppflags "-DNONETHACK"
 	use debug && append-cppflags "-DDEBUG"
