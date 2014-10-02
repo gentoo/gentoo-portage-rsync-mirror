@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/amd64/package.mask,v 1.3 2014/09/30 21:42:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/amd64/package.mask,v 1.4 2014/10/02 10:29:31 ulm Exp $
 
 #
 # Anthony G. Basile <blueness@gentoo.org> (07 Oct 2012)
@@ -15,6 +15,7 @@ app-emulation/emul-linux-x86-gtkmmlibs
 app-emulation/emul-linux-x86-java
 app-emulation/emul-linux-x86-jna
 app-emulation/emul-linux-x86-medialibs
+app-emulation/emul-linux-x86-motif
 app-emulation/emul-linux-x86-opengl
 app-emulation/emul-linux-x86-qtlibs
 app-emulation/emul-linux-x86-sdl

@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/execnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.19 2014/03/31 20:33:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.20 2014/10/02 10:01:48 idella4 Exp $
+
+*execnet-1.2.0-r1 (02 Oct 2014)
+
+  02 Oct 2014; Ian Delaney <idella4@gentoo.org> +execnet-1.2.0-r1.ebuild,
+  -execnet-1.0.9.ebuild, -execnet-1.2.0.ebuild:
+  clean old python impls, add py3.3 3.4 support, add IUSE test and testrunner
+  dep, upgrade test phase, fixes bug #524246 by W. T. King requesting added py3
+  support, rm old
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> execnet-1.1-r1.ebuild,
   execnet-1.2.0.ebuild:

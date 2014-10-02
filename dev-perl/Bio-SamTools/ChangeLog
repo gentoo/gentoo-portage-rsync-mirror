@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Bio-SamTools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-SamTools/ChangeLog,v 1.15 2014/09/24 07:52:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-SamTools/ChangeLog,v 1.16 2014/10/02 10:25:34 jlec Exp $
+
+  02 Oct 2014; Justin Lecher <jlec@gentoo.org> Bio-SamTools-1.390.0-r1.ebuild,
+  +files/Bio-SamTools-1.390.0-samtools-1.patch:
+  Make it build with samtools-1, #523568
 
   24 Sep 2014; Justin Lecher <jlec@gentoo.org> -Bio-SamTools-1.330.0.ebuild,
   -Bio-SamTools-1.370.0-r1.ebuild, -Bio-SamTools-1.380.0.ebuild,

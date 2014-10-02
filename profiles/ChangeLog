@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9415 2014/10/02 03:04:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9416 2014/10/02 10:29:30 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Oct 2014; Ulrich Müller <ulm@gentoo.org>
+  arch/amd64/no-multilib/package.mask, arch/amd64/package.use.stable.mask,
+  default/linux/uclibc/amd64/package.mask, features/64bit-native/package.mask,
+  hardened/linux/amd64/no-multilib/package.mask,
+  hardened/linux/musl/amd64/package.mask, package.mask:
+  Revert masking of app-emulation/emul-linux-x86-motif, bug 461916.
 
   02 Oct 2014; Ben de Groot <yngwin@gentoo.org> desc/linguas.desc:
   Add hr_HR locale

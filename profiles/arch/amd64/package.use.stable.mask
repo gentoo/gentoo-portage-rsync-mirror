@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.65 2014/09/30 21:42:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.66 2014/10/02 10:29:30 ulm Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,6 +39,7 @@ app-emulation/emul-linux-x86-gtkmmlibs abi_x86_32
 app-emulation/emul-linux-x86-java abi_x86_32
 app-emulation/emul-linux-x86-jna abi_x86_32
 app-emulation/emul-linux-x86-medialibs abi_x86_32 pulseaudio
+app-emulation/emul-linux-x86-motif abi_x86_32
 app-emulation/emul-linux-x86-opengl abi_x86_32
 app-emulation/emul-linux-x86-qtlibs abi_x86_32
 app-emulation/emul-linux-x86-sdl abi_x86_32

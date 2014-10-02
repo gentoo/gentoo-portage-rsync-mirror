@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/execnet-1.2.0.ebuild,v 1.2 2014/03/31 20:33:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/execnet-1.2.0-r1.ebuild,v 1.1 2014/10/02 10:01:48 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -15,11 +15,19 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 RDEPEND=""
+
+python_prepare_all() {
+	# Remove doctest that access an i'net sire
+	rm doc/example/test_info.txt || die
+
+	distutils-r1_python_prepare_all
+}
 
 python_compile_all() {
 	use doc && emake -C doc html
@@ -27,9 +35,7 @@ python_compile_all() {
 
 src_test() {
 	# Tests are a bit fragile to failures in parallel.
-	# XXX: take a closer look, it may be easy to fix.
 	local DISTUTILS_NO_PARALLEL_BUILD=1
-
 	distutils-r1_src_test
 }
 
@@ -38,6 +44,7 @@ python_test() {
 	# https://bitbucket.org/hpk42/execnet/issue/10
 	unset PYTHONDONTWRITEBYTECODE
 
+	# https://bitbucket.org/hpk42/execnet/issue/35/test-failures-in-execnet-120
 	py.test || die "Tests fail with ${EPYTHON}"
 }
 
