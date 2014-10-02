@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16067 2014/10/01 21:56:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16068 2014/10/02 04:02:07 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -51,7 +51,7 @@ app-emulation/emul-linux-x86-motif
 
 # Michael Sterrett <mr_bones_@gentoo.org> (24 Sep 2014)
 # No updates since 2007 and games-board/scid is actively maintained.
-# masked for removal on 2014102
+# masked for removal on 20141024
 games-board/chessdb
 
 # Michael Orlitzky <mjo@gentoo.org> (16 Sep 2014)
