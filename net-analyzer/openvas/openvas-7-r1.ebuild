@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/openvas-7-r1.ebuild,v 1.3 2014/10/01 16:04:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/openvas-7-r1.ebuild,v 1.4 2014/10/02 07:41:56 jlec Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.openvas.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="pdf"
+IUSE="+pdf"
 
 DEPEND="
 	>=net-analyzer/openvas-libraries-7.0.4-r1
