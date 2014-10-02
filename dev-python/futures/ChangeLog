@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/futures
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/futures/ChangeLog,v 1.11 2014/10/01 02:53:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/futures/ChangeLog,v 1.12 2014/10/02 13:43:50 idella4 Exp $
+
+  02 Oct 2014; Ian Delaney <idella4@gentoo.org> futures-2.2.0.ebuild:
+  tidy
 
 *futures-2.2.0 (01 Oct 2014)
 

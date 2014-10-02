@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/libvirt-php-0.4.6.ebuild,v 1.3 2014/08/10 21:00:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/libvirt-php-0.4.8.ebuild,v 1.1 2014/10/02 13:50:42 grknight Exp $
 
-EAPI=4
+EAPI=5
 
 PHP_EXT_NAME="libvirt-php"
 PHP_EXT_SKIP_PHPIZE="yes"
-USE_PHP="php5-3 php5-4"
+USE_PHP="php5-6 php5-5 php5-4"
 
 inherit php-ext-source-r2 eutils
 
@@ -14,7 +14,7 @@ DESCRIPTION="PHP 5 bindings for libvirt"
 HOMEPAGE="http://libvirt.org/php/"
 SRC_URI="http://libvirt.org/sources/php/${P}.tar.gz"
 
-LICENSE="PHP-3.01"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="doc"
@@ -39,6 +39,7 @@ src_unpack() {
 }
 
 src_install() {
+	local slot
 	for slot in $(php_get_slots); do
 		php_init_slot_env ${slot}
 		insinto "${EXT_DIR}"

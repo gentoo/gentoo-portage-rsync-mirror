@@ -1,20 +1,22 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/libvirt-php-9999.ebuild,v 1.5 2014/08/10 21:00:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/libvirt-php-9999.ebuild,v 1.6 2014/10/02 13:50:42 grknight Exp $
 
-EAPI=4
+EAPI=5
 
 PHP_EXT_NAME="libvirt-php"
 PHP_EXT_SKIP_PHPIZE="yes"
-USE_PHP="php5-3 php5-4"
+USE_PHP="php5-6 php5-5 php5-4"
+# Automake 1.14 is broken.  Check this later
+WANT_AUTOMAKE="1.13"
 
-inherit php-ext-source-r2 git-2
+inherit php-ext-source-r2 git-r3 autotools
 
 DESCRIPTION="PHP 5 bindings for libvirt"
 HOMEPAGE="http://libvirt.org/php/"
 EGIT_REPO_URI="git://libvirt.org/libvirt-php.git"
 
-LICENSE="PHP-3.01"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
 IUSE="doc"
@@ -27,16 +29,23 @@ DEPEND="${RDEPEND}
 
 RESTRICT="test"
 
-EGIT_BOOTSTRAP="autogen.sh"
-
 src_unpack() {
-	git-2_src_unpack
+	git-r3_src_unpack
+
 	# create the default modules directory to be able
 	# to use the php-ext-source-r2 eclass to configure/build
 	ln -s src "${S}/modules"
 
 	for slot in $(php_get_slots); do
 		cp -r "${S}" "${WORKDIR}/${slot}"
+	done
+}
+
+src_prepare() {
+	local slot
+	for slot in $(php_get_slots); do
+		php_init_slot_env ${slot}
+		eautoreconf
 	done
 }
 
