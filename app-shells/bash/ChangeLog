@@ -1,6 +1,15 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.404 2014/10/01 20:47:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.406 2014/10/02 08:23:04 armin76 Exp $
+
+  02 Oct 2014; Raúl Porcel <armin76@gentoo.org> bash-4.1_p15.ebuild,
+  bash-4.2_p51.ebuild:
+  arm64/m68k stable
+
+  02 Oct 2014; Jeroen Roovers <jer@gentoo.org> bash-3.1_p21.ebuild,
+  bash-3.2_p55.ebuild, bash-4.0_p42.ebuild, bash-4.1_p15.ebuild,
+  bash-4.2_p51.ebuild:
+  Stable for HPPA (bug #523742).
 
 *bash-4.3_p28 (01 Oct 2014)
 *bash-4.2_p51 (01 Oct 2014)
