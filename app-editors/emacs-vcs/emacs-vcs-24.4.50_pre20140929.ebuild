@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.4.9999.ebuild,v 1.6 2014/05/16 20:10:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.4.50_pre20140929.ebuild,v 1.1 2014/10/02 07:08:50 ulm Exp $
 
 EAPI=5
 
@@ -23,7 +23,8 @@ else
 	# order to determine some path information correctly for copy/move
 	# operations later on
 	FULL_VERSION="${PV%%_*}"
-	S="${WORKDIR}/emacs-${FULL_VERSION}"
+	#S="${WORKDIR}/emacs-${FULL_VERSION}"
+	S="${WORKDIR}/emacs"
 fi
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
