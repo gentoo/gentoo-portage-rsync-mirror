@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/magickwand/magickwand-1.0.9.ebuild,v 1.3 2014/08/10 21:00:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/magickwand/magickwand-1.0.9-r1.ebuild,v 1.1 2014/10/02 15:36:13 grknight Exp $
 
-EAPI="4"
+EAPI=5
 
 PHP_EXT_NAME="magickwand"
 PHP_EXT_ZENDEXT="no"
@@ -12,7 +12,7 @@ DOCS="AUTHOR ChangeLog CREDITS README TODO"
 MY_PN="MagickWandForPHP"
 IUSE=""
 
-USE_PHP="php5-5 php5-3 php5-4"
+USE_PHP="php5-6 php5-5 php5-4"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 

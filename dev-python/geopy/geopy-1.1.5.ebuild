@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.1.5.ebuild,v 1.1 2014/09/19 00:56:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.1.5.ebuild,v 1.2 2014/10/02 15:40:03 idella4 Exp $
 
 EAPI=5
 
@@ -25,10 +25,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-# Usual; required for testsuite
-DISTUTILS_IN_SOURCE_BUILD=1
-
 python_test() {
-	# intermittent fails or errors caused by an apparent race condition. suite is fine
-	nosetests --processes=-1 || die "Tests failed under ${EPYTHON}"
+	nosetests || die "Tests failed under ${EPYTHON}"
 }
