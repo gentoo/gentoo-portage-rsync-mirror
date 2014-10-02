@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-5.1.3.ebuild,v 1.1 2014/05/28 14:12:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-5.2.0.ebuild,v 1.1 2014/10/02 09:26:09 polynomial-c Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.7.2-config-file.patch \
-		"${FILESDIR}"/${PN}-5.1.3-po_fixes.patch
+		"${FILESDIR}"/${PN}-5.1.5-po_fixes.patch
 
 	if use nls ; then
 		sed -i -e 's:#\(.*pos\):\1:' Makefile || die
