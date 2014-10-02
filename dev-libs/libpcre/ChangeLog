@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.244 2014/09/04 06:50:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.245 2014/10/02 08:54:24 polynomial-c Exp $
+
+*libpcre-8.36 (02 Oct 2014)
+
+  02 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> -libpcre-8.02.ebuild,
+  -libpcre-8.12.ebuild, -libpcre-8.13.ebuild, -libpcre-8.13-r1.ebuild,
+  -libpcre-8.20.ebuild, -libpcre-8.21.ebuild, -libpcre-8.30-r2.ebuild,
+  -libpcre-8.31.ebuild, -libpcre-8.32.ebuild, -libpcre-8.32-r1.ebuild,
+  -libpcre-8.33.ebuild, -libpcre-8.33-r1.ebuild, -libpcre-8.34.ebuild,
+  +libpcre-8.36.ebuild, -files/libpcre-8.13-posix-regex.patch,
+  -files/libpcre-8.21-static-build.patch, -files/libpcre-8.30-bzip2-typo.patch,
+  -files/libpcre-8.31-madvise.patch:
+  Version bump. Removed old.
 
   04 Sep 2014; Mike Frysinger <vapier@gentoo.org> libpcre-8.35.ebuild:
   Mark arm64/m68k/s390/sh/sparc stable.

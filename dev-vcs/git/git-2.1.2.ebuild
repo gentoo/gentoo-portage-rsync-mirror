@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.1.0.ebuild,v 1.5 2014/08/30 08:59:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.1.2.ebuild,v 1.1 2014/10/02 08:37:23 polynomial-c Exp $
 
 EAPI=5
 
@@ -110,8 +110,6 @@ REQUIRED_USE="
 	gtk? ( python )
 	python? ( ${PYTHON_REQUIRED_USE} )
 "
-
-RESTRICT="test" # 520270
 
 pkg_setup() {
 	if use subversion && has_version "dev-vcs/subversion[dso]"; then
@@ -516,7 +514,7 @@ src_install() {
 }
 
 src_test() {
-	local disabled=""
+	local disabled="t7004-tag.sh" #520270
 	local tests_cvs="t9200-git-cvsexportcommit.sh \
 					t9400-git-cvsserver-server.sh \
 					t9401-git-cvsserver-crlf.sh \

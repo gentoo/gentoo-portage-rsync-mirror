@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.32-r1.ebuild,v 1.2 2014/04/29 19:28:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.36.ebuild,v 1.1 2014/10/02 08:54:24 polynomial-c Exp $
 
 EAPI="4"
 
-inherit eutils multilib libtool flag-o-matic toolchain-funcs
+inherit eutils multilib libtool flag-o-matic toolchain-funcs multilib-minimal
 
 DESCRIPTION="Perl-compatible regular expression library"
 HOMEPAGE="http://www.pcre.org/"
@@ -19,8 +19,8 @@ fi
 
 LICENSE="BSD"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="bzip2 +cxx +jit libedit pcre16 +readline +recursion-limit static-libs unicode zlib"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+IUSE="bzip2 +cxx +jit libedit pcre16 pcre32 +readline +recursion-limit static-libs unicode zlib"
 REQUIRED_USE="readline? ( !libedit )
 	libedit? ( !readline )"
 
@@ -31,8 +31,17 @@ RDEPEND="bzip2? ( app-arch/bzip2 )
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	userland_GNU? ( >=sys-apps/findutils-4.4.0 )"
+RDEPEND="${RDEPEND}
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20131008-r2
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 
 S=${WORKDIR}/${MY_P}
+
+MULTILIB_CHOST_TOOLS=(
+	/usr/bin/pcre-config
+)
 
 src_prepare() {
 	local pc
@@ -43,27 +52,38 @@ src_prepare() {
 	elibtoolize
 }
 
-src_configure() {
-	econf \
+multilib_src_configure() {
+	ECONF_SOURCE="${S}" econf \
 		--with-match-limit-recursion=$(usex recursion-limit 8192 MATCH_LIMIT) \
-		$(use_enable bzip2 pcregrep-libbz2) \
+		$(multilib_native_use_enable bzip2 pcregrep-libbz2) \
 		$(use_enable cxx cpp) \
 		$(use_enable jit) $(use_enable jit pcregrep-jit) \
 		$(use_enable pcre16) \
-		$(use_enable libedit pcretest-libedit) \
-		$(use_enable readline pcretest-libreadline) \
+		$(use_enable pcre32) \
+		$(multilib_native_use_enable libedit pcretest-libedit) \
+		$(multilib_native_use_enable readline pcretest-libreadline) \
 		$(use_enable static-libs static) \
 		$(use_enable unicode utf) $(use_enable unicode unicode-properties) \
-		$(use_enable zlib pcregrep-libz) \
+		$(multilib_native_use_enable zlib pcregrep-libz) \
 		--enable-pcre8 \
 		--enable-shared \
 		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 }
 
-src_install() {
-	emake DESTDIR="${D}" install
-	gen_usr_ldscript -a pcre
+multilib_src_compile() {
+	emake V=1 $(multilib_is_native_abi || echo "bin_PROGRAMS=")
+}
+
+multilib_src_install() {
+	emake \
+		DESTDIR="${D}" \
+		$(multilib_is_native_abi || echo "bin_PROGRAMS= dist_html_DATA=") \
+		install
+	multilib_is_native_abi && gen_usr_ldscript -a pcre
+}
+
+multilib_src_install_all() {
 	prune_libtool_files
 }
 

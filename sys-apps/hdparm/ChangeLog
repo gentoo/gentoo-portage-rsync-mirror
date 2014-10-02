@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.242 2014/08/14 12:55:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.243 2014/10/02 08:44:59 polynomial-c Exp $
+
+*hdparm-9.45 (02 Oct 2014)
+
+  02 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> +hdparm-9.45.ebuild:
+  Version bump.
 
   14 Aug 2014; Mike Frysinger <vapier@gentoo.org> hdparm-9.43.ebuild:
   Add USE=static support #519868 by Guillermo A. Amaral.
