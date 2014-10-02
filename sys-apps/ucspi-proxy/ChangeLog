@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ucspi-proxy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.18 2014/08/10 20:25:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.19 2014/10/02 09:36:01 polynomial-c Exp $
+
+*ucspi-proxy-0.99 (02 Oct 2014)
+
+  02 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> +ucspi-proxy-0.99.ebuild:
+  Version bump. Converted ebuild to EAPI-5 and added ~amd64 keyword.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ucspi-proxy-0.97.ebuild:
   QA: drop trailing '.' from DESCRIPTION

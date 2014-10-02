@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.227 2014/09/09 05:15:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.228 2014/10/02 09:39:08 polynomial-c Exp $
+
+*man-pages-3.73 (02 Oct 2014)
+
+  02 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> +man-pages-3.73.ebuild:
+  Version bump.
 
 *man-pages-3.72 (09 Sep 2014)
 
