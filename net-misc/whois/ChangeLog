@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.203 2014/10/02 09:26:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.204 2014/10/02 21:00:26 jer Exp $
+
+  02 Oct 2014; Jeroen Roovers <jer@gentoo.org> whois-5.1.5.ebuild:
+  Stable for HPPA (bug #524264).
 
 *whois-5.2.0 (02 Oct 2014)
 
