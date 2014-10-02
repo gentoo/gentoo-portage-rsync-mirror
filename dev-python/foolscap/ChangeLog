@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.48 2014/08/19 12:09:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.49 2014/10/02 00:47:37 idella4 Exp $
+
+*foolscap-0.7.0 (02 Oct 2014)
+
+  02 Oct 2014; Ian Delaney <idella4@gentoo.org> +foolscap-0.7.0.ebuild,
+  foolscap-0.6.5.ebuild:
+  bump; re-add missed IUSE ssl in deps in prior version and set to + in bumped,
+  its use strongly encouraged (in source docs) by upstream
 
 *foolscap-0.6.5 (19 Aug 2014)
 
