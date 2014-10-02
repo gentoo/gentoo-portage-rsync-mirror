@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.154 2014/09/05 21:49:41 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.155 2014/10/02 13:01:13 mjo Exp $
+
+  02 Oct 2014; Michael Orlitzky <mjo@gentoo.org>
+  -files/CVE2008-4392_0001-dnscache-merge-similar-outgoing-queries-ipv6.patch,
+  -files/makefile-parallel.patch:
+  Remove two unused patches.
 
   05 Sep 2014; Michael Orlitzky <mjo@gentoo.org> -files/djbdns-setup,
   -files/dnscache-setup, -files/tinydns-setup:
