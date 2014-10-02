@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install postinst prepare test
+DEFINED_PHASES=compile configure install prepare test
 DEPEND=>=net-analyzer/openvas-libraries-7.0.4 !net-analyzer/openvas-plugins !net-analyzer/openvas-server virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/pkgconfig
 DESCRIPTION=A remote security scanner for Linux (OpenVAS-scanner)
 EAPI=5
@@ -9,4 +9,4 @@ RDEPEND=>=net-analyzer/openvas-libraries-7.0.4 !net-analyzer/openvas-plugins !ne
 SLOT=0
 SRC_URI=http://wald.intevation.org/frs/download.php/1726/openvas-scanner-4.0.3.tar.gz
 _eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=0eebaacbcd03240178f02b014100696d
+_md5_=1bbf73588831f6187f50f8aa29272220
