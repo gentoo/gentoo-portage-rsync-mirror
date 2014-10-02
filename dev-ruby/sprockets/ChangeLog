@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sprockets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.26 2014/09/04 03:40:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.27 2014/10/02 12:21:02 graaff Exp $
+
+*sprockets-2.12.2 (02 Oct 2014)
+
+  02 Oct 2014; Hans de Graaff <graaff@gentoo.org> +sprockets-2.12.2.ebuild:
+  Version bump.
 
   04 Sep 2014; Manuel Rüger <mrueg@gentoo.org> sprockets-2.2.2-r1.ebuild:
   Add ruby21 target. Simplify deps.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-4.0.10.ebuild,v 1.1 2014/09/12 05:56:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-4.0.10.ebuild,v 1.2 2014/10/02 12:29:38 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -31,7 +31,7 @@ ruby_add_rdepend "
 	~dev-ruby/activesupport-${PV}
 	~dev-ruby/railties-${PV}
 	>=dev-ruby/bundler-1.3 =dev-ruby/bundler-1*
-	>=dev-ruby/sprockets-rails-2.0.0:2.0
+	=dev-ruby/sprockets-rails-2*
 	asset-pipeline? (
 		dev-ruby/jquery-rails
 		>=dev-ruby/sass-rails-4.0.0:4.0
