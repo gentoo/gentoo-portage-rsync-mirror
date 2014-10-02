@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16069 2014/10/02 10:29:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16070 2014/10/02 18:11:10 grknight Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,23 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Brian Evans <grknight@gentoo.org> (2 Oct 2014)
+# Masked for removal in 30 days. (Bug #524310)
+# Broken on >=dev-lang/php-5.4. Replace with dev-php/xcache, 
+# dev-php/pecl-zendopcache, or dev-lang/php[opcache].
+# If you need pecl-apc's variable storage use dev-php/pecl-apcu.
+dev-php/eaccelerator
+dev-php/pecl-apc
+
+# Brian Evans <grknight@gentoo.org> (2 Oct 2014)
+# Masked for removal in 30 days. (Bug #524310)
+# Broken on >=dev-lang/php-5.4.  No replacements known.
+dev-php/adodb-ext
+dev-php/pecl-id3
+dev-php/pecl-mogilefs
+dev-php/pecl-sca_sdo
+dev-php/suhosin
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (30 Sep 2014)
 # Reverse dependencies need to be tested and fixed, bug #521406.
