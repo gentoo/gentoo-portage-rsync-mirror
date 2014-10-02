@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.122 2014/10/02 15:03:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.123 2014/10/02 21:04:38 jer Exp $
+
+  02 Oct 2014; Jeroen Roovers <jer@gentoo.org> rsyslog-8.4.2.ebuild:
+  Stable for HPPA (bug #524290).
 
 *rsyslog-8.4.2 (02 Oct 2014)
 
