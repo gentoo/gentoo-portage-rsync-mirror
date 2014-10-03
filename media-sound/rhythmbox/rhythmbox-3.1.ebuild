@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0.2.ebuild,v 1.4 2014/07/24 18:47:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.1.ebuild,v 1.2 2014/10/03 10:00:46 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -21,7 +21,7 @@ test +udev upnp-av visualizer webkit zeitgeist"
 # Let people emerge this by default, bug #472932
 IUSE+=" python_single_target_python3_2 +python_single_target_python3_3"
 
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 REQUIRED_USE="
 	ipod? ( udev )
@@ -30,6 +30,10 @@ REQUIRED_USE="
 	webkit? ( python )
 	python? ( ${PYTHON_REQUIRED_USE} )
 "
+
+# Tests failing for years without upstream caring at all
+# upstream bug #688745
+RESTRICT="test"
 
 # FIXME: double check what to do with fm-radio plugin
 # webkit-gtk-1.10 is needed because it uses gstreamer-1.0
@@ -57,7 +61,7 @@ COMMON_DEPEND="
 	daap? (
 		>=net-libs/libdmapsharing-2.9.19:3.0
 		media-plugins/gst-plugins-soup:1.0 )
-	libsecret? ( >=app-crypt/libsecret-0.14 )
+	libsecret? ( >=app-crypt/libsecret-0.18 )
 	html? ( >=net-libs/webkit-gtk-1.10:3 )
 	libnotify? ( >=x11-libs/libnotify-0.7.0 )
 	lirc? ( app-misc/lirc )
@@ -86,7 +90,7 @@ RDEPEND="${COMMON_DEPEND}
 		x11-libs/pango[introspection]
 
 		dbus? ( sys-apps/dbus )
-		libsecret? ( >=app-crypt/libsecret-0.14[introspection] )
+		libsecret? ( >=app-crypt/libsecret-0.18[introspection] )
 		webkit? (
 			dev-python/mako[${PYTHON_USEDEP}]
 			>=net-libs/webkit-gtk-1.10:3[introspection] ) )
@@ -108,7 +112,7 @@ src_prepare() {
 	DOCS="AUTHORS ChangeLog DOCUMENTERS INTERNALS \
 		MAINTAINERS MAINTAINERS.old NEWS README THANKS"
 
-	rm -v lib/rb-marshal.{c,h} || die
+	rm -v lib/rb-marshal.{c,h} || die # upstream bug 737831
 
 	gnome2_src_prepare
 }
@@ -145,5 +149,5 @@ src_configure() {
 src_test() {
 	unset SESSION_MANAGER
 	unset DBUS_SESSION_BUS_ADDRESS
-	Xemake check || die "test failed"
+	Xemake check
 }

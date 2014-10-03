@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9418 2014/10/02 18:11:10 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9419 2014/10/03 09:38:30 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Oct 2014; Pacho Ramos <pacho@gentoo.org> arch/powerpc/package.use.mask,
+  arch/sparc/package.use.mask:
+  use.mask due missing keywords (#524352)
 
   02 Oct 2014; Michael Palimaka <kensington@gentoo.org>
   Mask dev-php/{adodb-ext,eaccelerator,pecl-apc,pecl-id3,pecl-mogilefs,

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.419 2014/09/15 08:24:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.420 2014/10/03 09:47:29 pacho Exp $
+
+*pango-1.36.8 (03 Oct 2014)
+
+  03 Oct 2014; Pacho Ramos <pacho@gentoo.org> +pango-1.36.8.ebuild:
+  Version bump
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> pango-1.36.5.ebuild:
   Stable for sparc, wrt bug #512012

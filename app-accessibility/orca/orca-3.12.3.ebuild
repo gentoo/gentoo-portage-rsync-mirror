@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.10.3.ebuild,v 1.3 2014/05/04 12:09:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.12.3.ebuild,v 1.2 2014/10/03 09:42:02 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,8 +15,9 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Orca"
 
 LICENSE="LGPL-2.1+ CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
-IUSE=""
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+
+IUSE="+braille"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # liblouis is not in portage yet
@@ -29,6 +30,9 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.28:2
 	>=dev-python/pygobject-3.10:3[${PYTHON_USEDEP}]
 	>=x11-libs/gtk+-3.6.2:3[introspection]
+	braille? (
+		>=app-accessibility/brltty-5.0-r3[${PYTHON_USEDEP}]
+		dev-libs/liblouis[${PYTHON_USEDEP}] )
 	${PYTHON_DEPS}
 "
 RDEPEND="${COMMON_DEPEND}
@@ -52,7 +56,9 @@ src_prepare() {
 }
 
 src_configure() {
-	python_foreach_impl run_in_build_dir gnome2_src_configure ITSTOOL="$(type -P true)"
+	python_foreach_impl run_in_build_dir gnome2_src_configure \
+		ITSTOOL="$(type -P true)" \
+		$(use_with braille liblouis)
 }
 
 src_compile() {

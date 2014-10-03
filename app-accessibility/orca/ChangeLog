@@ -1,6 +1,15 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.134 2014/07/23 15:12:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.136 2014/10/03 09:42:02 pacho Exp $
+
+  03 Oct 2014; Pacho Ramos <pacho@gentoo.org> orca-3.12.3.ebuild:
+  Require at least the brltty version that finally worked for me
+
+*orca-3.12.3 (03 Oct 2014)
+
+  03 Oct 2014; Pacho Ramos <pacho@gentoo.org> +orca-3.12.3.ebuild,
+  -orca-3.10.3.ebuild, -orca-3.12.1.ebuild, metadata.xml:
+  Version bump, add braille support (#486794 by Chris Brannon), drop old.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> orca-3.12.2.ebuild:
   Stable for x86, wrt bug #512012
