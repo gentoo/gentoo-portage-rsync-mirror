@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.99.0.1975.ebuild,v 1.1 2014/10/02 12:17:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.99.0.1989.ebuild,v 1.1 2014/10/03 08:30:43 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user versionator
@@ -8,7 +8,7 @@ inherit autotools eutils fcaps qt4-r2 user versionator
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
 
-WS_GIT="0efa992"
+WS_GIT="6621b1f"
 WS_PV="$(version_format_string '$1.$2.$3-$4-g${WS_GIT}')"
 SRC_URI="${HOMEPAGE}download/automated/src/${PN}-${WS_PV}.tar.bz2"
 
@@ -83,12 +83,12 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
 		"${FILESDIR}"/${PN}-1.11.0-oldlibs.patch \
 		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch \
-		"${FILESDIR}"/${P}-gcc_option.patch \
-		"${FILESDIR}"/${P}-sse4_2.patch
+		"${FILESDIR}"/${PN}-1.99.0.1975-gcc_option.patch \
+		"${FILESDIR}"/${PN}-1.99.0.1975-sse4_2.patch
 
 	# Qt5 support is broken since the build system does not determine
 	# properly which `moc' it ought to use
-	sed -i -e 's|Qt5||g' acinclude.m4 || die
+	sed -i -e 's| Qt5||g' acinclude.m4 || die
 
 	epatch_user
 
@@ -152,7 +152,10 @@ src_configure() {
 
 src_compile() {
 	default
-	use doc && emake -j1 -C docbook
+	if use doc; then
+		use doc-pdf && addpredict "/root/.java"
+		emake -j1 -C docbook
+	fi
 }
 
 src_install() {

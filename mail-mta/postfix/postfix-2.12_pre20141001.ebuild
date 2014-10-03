@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.12_pre20140929.ebuild,v 1.1 2014/09/30 05:17:10 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.12_pre20141001.ebuild,v 1.1 2014/10/03 08:18:29 eras Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
@@ -20,7 +20,7 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 LICENSE="IBM"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
-IUSE="+berkdb cdb doc dovecot-sasl eai hardened ldap ldap-bind lmdb memcached mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
+IUSE="+berkdb cdb doc dovecot-sasl +eai hardened ldap ldap-bind lmdb memcached mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 DEPEND=">=dev-libs/libpcre-3.4
 	dev-lang/perl
@@ -284,6 +284,11 @@ src_install () {
 	# Remove unnecessary files
 	rm -f "${D}"/etc/postfix/{*LICENSE,access,aliases,canonical,generic}
 	rm -f "${D}"/etc/postfix/{header_checks,relocated,transport,virtual}
+
+	if has_version '<mail-mta/postfix-2.12_pre20141001'; then
+		# default to compatibility_level of zero
+		sed -i -e /^compatibility_level/"s/^/#/" "${D}"/etc/postfix/main.cf || die
+	fi
 
 	systemd_dounit "${FILESDIR}/${PN}.service"
 }
