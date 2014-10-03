@@ -2289,6 +2289,7 @@ dev-qt/qtnetwork:connman - Enable ConnMan-based bearer plugin
 dev-qt/qtnetwork:networkmanager - Enable NetworkManager-based bearer plugin
 dev-qt/qtopengl:egl - Use EGL instead of default GLX to manage OpenGL contexts on the desktop
 dev-qt/qtopengl:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/qtopengl:gles2 - Use OpenGL ES 2.0 instead of desktop OpenGL
 dev-qt/qtopengl:qt3support - Enable the Qt3Support libraries for Qt4
 dev-qt/qtopenvg:exceptions - Build with support for exceptions
 dev-qt/qtopenvg:qt3support - Enable the Qt3Support libraries for Qt4
