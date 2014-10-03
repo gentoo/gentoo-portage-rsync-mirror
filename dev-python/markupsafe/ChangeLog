@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markupsafe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.64 2014/05/26 07:52:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.65 2014/10/03 18:38:45 jer Exp $
+
+  03 Oct 2014; Jeroen Roovers <jer@gentoo.org> markupsafe-0.23.ebuild:
+  Stable for HPPA (bug #524302).
 
 *markupsafe-0.23 (26 May 2014)
 
