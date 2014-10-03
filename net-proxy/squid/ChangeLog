@@ -1,6 +1,18 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.483 2014/10/01 07:45:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.486 2014/10/03 05:21:27 eras Exp $
+
+*squid-3.4.8 (03 Oct 2014)
+
+  03 Oct 2014; Eray Aslan <eras@gentoo.org> +squid-3.4.8.ebuild:
+  Version bump
+
+  03 Oct 2014; Eray Aslan <eras@gentoo.org> squid-3.3.13-r1.ebuild,
+  squid-3.3.13.ebuild, squid-3.4.7-r1.ebuild:
+  Fix SRC_URI
+
+  03 Oct 2014; Eray Aslan <eras@gentoo.org> -squid-3.4.7.ebuild:
+  Remove vulnerable version
 
   01 Oct 2014; Agostino Sarubbo <ago@gentoo.org> squid-3.3.13-r1.ebuild:
   Stable for x86, wrt bug #522498

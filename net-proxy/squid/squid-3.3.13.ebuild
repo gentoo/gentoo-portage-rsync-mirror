@@ -1,13 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.13.ebuild,v 1.11 2014/09/19 10:34:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.13.ebuild,v 1.12 2014/10/03 05:19:56 eras Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
 
 DESCRIPTION="A full-featured web proxy cache"
 HOMEPAGE="http://www.squid-cache.org/"
-SRC_URI="ftp://ftp.squid-cache.org/pub/archive/3.3/${P}.tar.xz"
+SRC_URI="http://www.squid-cache.org/Versions/v3/3.3/${P}.tar.xz"
+
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/south
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/south/ChangeLog,v 1.16 2014/08/10 21:22:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/south/ChangeLog,v 1.17 2014/10/03 05:24:57 idella4 Exp $
+
+*south-1.0 (03 Oct 2014)
+
+  03 Oct 2014; Ian Delaney <idella4@gentoo.org>
+  +files/south-1.0-3753b49c-Replace-dict.iteritems-with-six.patch,
+  +south-1.0.ebuild:
+  bump; rm IUSE doc and related content due to absence of content in acquired
+  tarball, patch to match, tidy to test phase, ebuild adapted from submission in
+  bug #524228 by W. King, closes said bug
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> south-0.7.5-r1.ebuild,
   south-0.7.5.ebuild, south-0.8.1-r1.ebuild, south-0.8.4.ebuild:

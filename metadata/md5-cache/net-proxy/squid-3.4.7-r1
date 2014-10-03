@@ -9,6 +9,6 @@ LICENSE=GPL-2
 RDEPEND=caps? ( >=sys-libs/libcap-2.16 ) pam? ( virtual/pam ) ldap? ( net-nds/openldap ) kerberos? ( virtual/krb5 ) qos? ( net-libs/libnetfilter_conntrack ) ssl? ( dev-libs/openssl dev-libs/nettle ) sasl? ( dev-libs/cyrus-sasl ) ecap? ( net-libs/libecap:0.2 ) esi? ( dev-libs/expat dev-libs/libxml2 ) selinux? ( sec-policy/selinux-squid ) !x86-fbsd? ( logrotate? ( app-admin/logrotate ) ) >=sys-libs/db-4 sys-devel/libtool dev-lang/perl sys-devel/libtool samba? ( net-fs/samba ) mysql? ( dev-perl/DBD-mysql ) postgres? ( dev-perl/DBD-Pg ) sqlite? ( dev-perl/DBD-SQLite ) !<=sci-biology/meme-4.8.1-r1
 REQUIRED_USE=tproxy? ( caps ) qos? ( caps )
 SLOT=0
-SRC_URI=ftp://ftp.squid-cache.org/pub/archive/3.4/squid-3.4.7.tar.xz
+SRC_URI=http://www.squid-cache.org/Versions/v3/3.4/squid-3.4.7.tar.xz
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=d56f6c0fd8f7ee4c2acbeb7209e078b9
+_md5_=0e417c86db9ac64dcbd429fc870ca5b4
