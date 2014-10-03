@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libyui-ncurses/libyui-ncurses-2.46.4.ebuild,v 1.2 2014/09/25 12:43:34 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libyui-ncurses/libyui-ncurses-2.46.4.ebuild,v 1.3 2014/10/03 05:41:36 patrick Exp $
 
 EAPI=5
 
@@ -30,8 +30,8 @@ S="${WORKDIR}/${PN}-${PN}-master-${PV}"
 src_prepare() {
 	cp "${EPREFIX}/usr/share/libyui/buildtools/CMakeLists.common" CMakeLists.txt || die
 
-        # TODO: set proper docs deps and USE flag for building them
-        sed -i -e '/SET_AUTODOCS/d' CMakeLists.txt || die 'sed on CMakeLists.txt failed'
+	# TODO: set proper docs deps and USE flag for building them
+	sed -i -e '/SET_AUTODOCS/d' CMakeLists.txt || die 'sed on CMakeLists.txt failed'
 	sed -i -e 's/src examples/src/' PROJECTINFO.cmake || die 'sed on PROJECTINFO.cmake failed'
 
 	cmake-utils_src_prepare
