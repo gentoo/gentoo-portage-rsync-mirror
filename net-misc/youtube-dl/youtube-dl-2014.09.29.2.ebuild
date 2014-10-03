@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2014.09.29.2.ebuild,v 1.1 2014/09/29 16:04:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2014.09.29.2.ebuild,v 1.2 2014/10/03 11:53:39 jer Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=(python{2_6,2_7,3_3,3_4})
 DISTUTILS_SINGLE_IMPL=true
 inherit bash-completion-r1 distutils-r1 eutils
 
-DESCRIPTION="Download videos from YouTube.com (and mores sites...)"
+DESCRIPTION="Download videos from YouTube.com (and more sites...)"
 HOMEPAGE="http://rg3.github.com/youtube-dl/"
 SRC_URI="http://youtube-dl.org/downloads/${PV}/${P}.tar.gz"
 
