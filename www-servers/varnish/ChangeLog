@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.79 2014/06/25 12:46:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.80 2014/10/03 18:15:09 blueness Exp $
+
+*varnish-4.0.1-r1 (03 Oct 2014)
+
+  03 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/varnishncsa.initd-r1, +varnish-4.0.1-r1.ebuild, -varnish-4.0.1.ebuild:
+  Fix varnishncsa initd script, bug #524284
 
 *varnish-4.0.1 (25 Jun 2014)
 

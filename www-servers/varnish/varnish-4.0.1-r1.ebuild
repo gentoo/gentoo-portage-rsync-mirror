@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-4.0.1.ebuild,v 1.1 2014/06/25 12:46:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-4.0.1-r1.ebuild,v 1.1 2014/10/03 18:15:09 blueness Exp $
 
 EAPI="5"
 
@@ -80,7 +80,7 @@ src_install() {
 	newinitd "${FILESDIR}"/varnishlog.initd varnishlog
 	newconfd "${FILESDIR}"/varnishlog.confd varnishlog
 
-	newinitd "${FILESDIR}"/varnishncsa.initd varnishncsa
+	newinitd "${FILESDIR}"/varnishncsa.initd-r1 varnishncsa
 	newconfd "${FILESDIR}"/varnishncsa.confd varnishncsa
 
 	newinitd "${FILESDIR}"/varnishd.initd-r3 varnishd
@@ -96,7 +96,8 @@ src_install() {
 	systemd_dounit "${FILESDIR}/${PN}d.service"
 
 	insinto /etc/varnish/
-	doins  lib/libvmod_std/vmod.vcc
+	doins lib/libvmod_std/vmod.vcc
+	doins etc/example.vcl
 
 	fowners root:varnish /etc/varnish/
 	fowners varnish:varnish /var/lib/varnish/
