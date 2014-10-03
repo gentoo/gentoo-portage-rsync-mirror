@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.104 2014/09/18 06:59:59 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.105 2014/10/03 16:10:40 haubi Exp $
+
+  03 Oct 2014; Michael Haubenwallner <haubi@gentoo.org> tora-9999.ebuild,
+  -files/tora-9999-ext-loki.patch:
+  drop ext-loki patch, updated along bug#523262, thanks to Sergey S. Starikoff
 
   18 Sep 2014; Michael Haubenwallner <haubi@gentoo.org> -tora-2.1.3-r1.ebuild:
   drop old, bug#523014

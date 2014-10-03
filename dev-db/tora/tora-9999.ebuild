@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-9999.ebuild,v 1.3 2013/03/08 16:40:24 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-9999.ebuild,v 1.4 2014/10/03 16:10:40 haubi Exp $
 
-EAPI=2
+EAPI=5
 
 inherit cmake-utils eutils
 
@@ -15,7 +15,7 @@ else
 fi
 
 DESCRIPTION="TOra - Toolkit For Oracle"
-HOMEPAGE="http://tora.sourceforge.net"
+HOMEPAGE="http://torasql.com/"
 IUSE="debug mysql oracle oci8-instant-client postgres"
 
 SLOT="0"
@@ -23,16 +23,14 @@ LICENSE="GPL-2"
 KEYWORDS=""
 
 DEPEND="
+	virtual/pkgconfig
 	dev-libs/ferrisloki
 	x11-libs/qscintilla
 	dev-qt/qtgui:4
 	dev-qt/qtsql:4[mysql?,postgres?]
 	dev-qt/qtxmlpatterns:4
-	oci8-instant-client? (
-		dev-db/oracle-instantclient-basic
-		dev-db/oracle-instantclient-sqlplus
-	)
-	postgres? ( dev-db/postgresql-server )
+	oci8-instant-client? ( dev-db/oracle-instantclient-basic )
+	postgres? ( dev-db/postgresql-base )
 "
 RDEPEND="${DEPEND}"
 
@@ -46,13 +44,12 @@ pkg_setup() {
 		eerror "Otherwise specify -oracle in your USE variable."
 		eerror
 		eerror "You can download the Oracle software from"
-		eerror "http://www.oracle.com/technetwork/indexes/downloads/"
+		eerror "http://otn.oracle.com/software/content.html"
 		die
 	fi
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-ext-loki.patch #383109
 	sed -i \
 		-e "/COPYING/ d" \
 		CMakeLists.txt || die "Removal of COPYING file failed"
@@ -73,6 +70,8 @@ src_configure() {
 		-DWANT_BUNDLE_STANDALONE=OFF
 		-DWANT_INTERNAL_QSCINTILLA=OFF
 		-DWANT_INTERNAL_LOKI=OFF
+		-DLOKI_LIBRARY="$(pkg-config --variable=libdir ferrisloki)/libferrisloki.so"
+		-DLOKI_INCLUDE_DIR="$(pkg-config --variable=includedir ferrisloki)/FerrisLoki"
 		$(cmake-utils_use_enable postgres PGSQL)
 		$(cmake-utils_use_want debug)
 		# path variables
@@ -83,6 +82,6 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	doicon src/icons/${PN}.xpm || die
-	domenu debian/${PN}.desktop || die
+	doicon src/icons/${PN}.xpm
+	domenu src/${PN}.desktop
 }
