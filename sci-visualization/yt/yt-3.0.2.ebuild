@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/yt/yt-3.0.ebuild,v 1.1 2014/08/26 21:34:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/yt/yt-3.0.2.ebuild,v 1.1 2014/10/03 21:17:21 xarthisius Exp $
 
 EAPI=5
 
@@ -33,8 +33,6 @@ DEPEND="${CDEPEND}
 	test? ( ${RDEPEND}
 		dev-python/nose[${PYTHON_USEDEP}]
 	)"
-
-PATCHES=( "${FILESDIR}"/${P}-missing_package.patch )
 
 python_prepare_all() {
 	append-flags -fno-strict-aliasing

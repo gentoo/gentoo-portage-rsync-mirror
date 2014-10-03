@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/tevent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.70 2014/09/15 08:24:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.71 2014/10/03 21:02:14 polynomial-c Exp $
+
+*tevent-0.9.22 (03 Oct 2014)
+
+  03 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> -tevent-0.9.20.ebuild,
+  -tevent-0.9.21.ebuild, +tevent-0.9.22.ebuild,
+  -files/add-py-file-0.9.14.patch, -files/add-py-file.patch,
+  -files/tevent-version.patch:
+  Version bump. Removed old.
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> tevent-0.9.21-r1.ebuild:
   Stable for sparc, wrt bug #512012
