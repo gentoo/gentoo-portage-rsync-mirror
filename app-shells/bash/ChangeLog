@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.411 2014/10/03 09:56:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.412 2014/10/03 17:17:46 klausman Exp $
+
+  03 Oct 2014; Tobias Klausmann <klausman@gentoo.org> bash-3.1_p22.ebuild,
+  bash-3.2_p56.ebuild, bash-4.0_p43.ebuild, bash-4.1_p16.ebuild,
+  bash-4.2_p52.ebuild:
+  Stable on alpha for security bug 524256
 
 *bash-4.3_p29 (03 Oct 2014)
 *bash-4.2_p52 (03 Oct 2014)
