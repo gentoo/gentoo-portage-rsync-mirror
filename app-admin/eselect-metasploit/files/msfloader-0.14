@@ -21,7 +21,7 @@ cp /usr/lib/metasploit/Gemfile ~/.msf4/
 cp /usr/lib/metasploit/*.gemspec ~/.msf4/
 
 #ensure Gemfile.lock is up to date
-BUNDLE_GEMFILE=~/.msf4/Gemfile MSF_ROOT=/usr/lib/metasploit bundle check > /dev/null 2>&1
+BUNDLE_GEMFILE=~/.msf4/Gemfile bundle check > /dev/null 2>&1
 if [ "$?" != "0" ]; then
 	if [ -f ~/.msf4/Gemfile.lock ]; then
 		rm ~/.msf4/Gemfile.lock
@@ -31,5 +31,5 @@ if [ "$?" != "0" ]; then
 fi
 
 #ready to go
-BUNDLE_GEMFILE=~/.msf4/Gemfile MSF_ROOT=/usr/lib/metasploit bundle exec /usr/lib/metasploit/$(basename $0) "$@"
+BUNDLE_GEMFILE=~/.msf4/Gemfile bundle exec /usr/lib/metasploit/$(basename $0) "$@"
 #profit
