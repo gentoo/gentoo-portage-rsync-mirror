@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-50.ebuild,v 1.1 2014/07/01 04:05:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-50c.ebuild,v 1.1 2014/10/03 21:31:55 polynomial-c Exp $
 
 EAPI=5
 

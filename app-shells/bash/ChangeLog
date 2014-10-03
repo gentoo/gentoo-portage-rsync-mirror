@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.412 2014/10/03 17:17:46 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.413 2014/10/03 21:37:33 jer Exp $
+
+  03 Oct 2014; Jeroen Roovers <jer@gentoo.org> bash-3.1_p22.ebuild,
+  bash-3.2_p56.ebuild, bash-4.0_p43.ebuild, bash-4.1_p16.ebuild,
+  bash-4.2_p52.ebuild:
+  Stable for HPPA (bug #524256).
 
   03 Oct 2014; Tobias Klausmann <klausman@gentoo.org> bash-3.1_p22.ebuild,
   bash-3.2_p56.ebuild, bash-4.0_p43.ebuild, bash-4.1_p16.ebuild,
