@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.170 2014/09/21 10:59:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.171 2014/10/03 06:32:51 armin76 Exp $
+
+  03 Oct 2014; Raúl Porcel <armin76@gentoo.org> kmod-18-r1.ebuild:
+  m68k/s390/sh stable
 
   21 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> -files/kmod-static-nodes,
   -kmod-16.ebuild, -kmod-17.ebuild, -kmod-18.ebuild:
