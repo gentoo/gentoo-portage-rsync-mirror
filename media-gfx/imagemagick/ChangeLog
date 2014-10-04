@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.563 2014/09/27 07:00:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.564 2014/10/04 11:29:20 ssuominen Exp $
+
+*imagemagick-6.8.9.8 (04 Oct 2014)
+
+  04 Oct 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +imagemagick-6.8.9.8.ebuild:
+  Version bump because of "2014-09-16 6.8.9-8 Cristy
+  <quetzlzacatenango@image...> JPEG library version >= 80 is thread safe, ref.
+  http://www.imagemagick.org/discourse-server/viewtopic.php?f=2&t=25495
 
   27 Sep 2014; Fabian Groffen <grobian@gentoo.org> imagemagick-6.8.9.7.ebuild:
   force configure to use bash due to bashisms (x=${x/foo/})
