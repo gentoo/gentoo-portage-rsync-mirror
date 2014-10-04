@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20140613.ebuild,v 1.1 2014/06/14 00:06:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20141003.ebuild,v 1.1 2014/10/04 07:07:24 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
