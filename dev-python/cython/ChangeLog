@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.121 2014/09/21 10:28:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.122 2014/10/04 21:09:39 jer Exp $
+
+  04 Oct 2014; Jeroen Roovers <jer@gentoo.org> cython-0.21.ebuild:
+  Stable for HPPA (bug #524416).
 
   21 Sep 2014; Agostino Sarubbo <ago@gentoo.org> cython-0.19.1-r1.ebuild:
   Stable for sparc, wrt bug #517106

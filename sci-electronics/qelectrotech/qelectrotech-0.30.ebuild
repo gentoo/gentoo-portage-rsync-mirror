@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/qelectrotech-0.30.ebuild,v 1.1 2013/12/22 16:56:39 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/qelectrotech-0.30.ebuild,v 1.2 2014/10/04 21:30:32 pesa Exp $
 
 EAPI=5
 PLOCALES="cs de el en es fr it pl pt ro ru"
@@ -20,6 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="
+	dev-qt/designer:4
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtsql:4[sqlite]
@@ -50,6 +51,6 @@ src_install() {
 
 	if use doc; then
 		doxygen Doxyfile || die
-		dohtml -r doc/html/*
+		dodoc -r doc/html
 	fi
 }

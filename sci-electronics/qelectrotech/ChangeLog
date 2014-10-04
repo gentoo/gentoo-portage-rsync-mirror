@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/qelectrotech
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/ChangeLog,v 1.14 2013/12/22 17:08:04 pesa Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/ChangeLog,v 1.15 2014/10/04 21:30:32 pesa Exp $
+
+  04 Oct 2014; Davide Pesavento <pesa@gentoo.org> qelectrotech-0.30.ebuild,
+  qelectrotech-9999.ebuild:
+  Add missing dep on dev-qt/designer (bug 514214); stop using dohtml.
 
   22 Dec 2013; Davide Pesavento <pesa@gentoo.org> qelectrotech-9999.ebuild:
   Update live ebuild too.

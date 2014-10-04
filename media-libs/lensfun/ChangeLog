@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.76 2014/10/04 10:13:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.77 2014/10/04 21:16:40 jer Exp $
+
+  04 Oct 2014; Jeroen Roovers <jer@gentoo.org> lensfun-0.2.8-r1.ebuild:
+  Stable for HPPA (bug #524436).
 
 *lensfun-0.3.0 (04 Oct 2014)
 

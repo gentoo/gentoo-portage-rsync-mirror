@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install preinst prepare unpack
-DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsql:4[sqlite] dev-qt/qtsvg:4 doc? ( app-doc/doxygen ) || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DEPEND=dev-qt/designer:4 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsql:4[sqlite] dev-qt/qtsvg:4 doc? ( app-doc/doxygen ) || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 DESCRIPTION=Qt4 application to design electric diagrams
 EAPI=5
 HOMEPAGE=http://qelectrotech.org/
 IUSE=doc linguas_cs linguas_de linguas_el linguas_en linguas_es linguas_fr linguas_it linguas_pl linguas_pt linguas_ro linguas_ru
 LICENSE=GPL-3
-RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsql:4[sqlite] dev-qt/qtsvg:4
+RDEPEND=dev-qt/designer:4 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsql:4[sqlite] dev-qt/qtsvg:4
 SLOT=0
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	40136c5fe0002a0d3937e869ae4ee0e2	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=45e6dd87c0c3ec8c932bfbf221816357
+_md5_=be9ca918fe2e1180c63e1a36f92b4dcd

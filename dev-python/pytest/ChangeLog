@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.98 2014/09/27 23:19:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.99 2014/10/04 21:14:10 jer Exp $
+
+  04 Oct 2014; Jeroen Roovers <jer@gentoo.org> pytest-2.6.3.ebuild:
+  Stable for HPPA (bug #524416).
 
 *pytest-2.6.3 (27 Sep 2014)
 
