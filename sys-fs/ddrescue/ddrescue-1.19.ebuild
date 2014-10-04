@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.17-r1.ebuild,v 1.3 2014/02/27 21:08:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.19.ebuild,v 1.3 2014/10/04 20:58:23 polynomial-c Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="Copy data from one file or block device to another with read-error 
 HOMEPAGE="http://www.gnu.org/software/ddrescue/ddrescue.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.lz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~amd64-linux"
 IUSE="static"
@@ -24,6 +24,7 @@ src_configure() {
 	# not a normal configure script
 	econf \
 		--prefix="${EPREFIX}"/usr \
+		--enable-linux \
 		CC="$(tc-getCC)" \
 		CXX="$(tc-getCXX)" \
 		CPPFLAGS="${CPPFLAGS}" \

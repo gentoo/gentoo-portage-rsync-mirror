@@ -1,6 +1,18 @@
 # ChangeLog for sys-fs/ddrescue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.48 2014/06/11 06:31:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.51 2014/10/04 20:58:23 polynomial-c Exp $
+
+  04 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> ddrescue-1.19.ebuild:
+  Fixed license.
+
+  04 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> ddrescue-1.19.ebuild:
+  Enabled compilation of linux specific code.
+
+*ddrescue-1.19 (04 Oct 2014)
+
+  04 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> -ddrescue-1.17-r1.ebuild,
+  +ddrescue-1.19.ebuild:
+  Version bump. Removed old.
 
 *ddrescue-1.18.1 (11 Jun 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-panel/razorqt-panel-0.5.1-r1.ebuild,v 1.5 2013/01/20 19:33:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-panel/razorqt-panel-0.5.1-r1.ebuild,v 1.6 2014/10/04 20:54:45 pesa Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -21,9 +21,8 @@ fi
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-IUSE="+alsa +clock colorpicker cpuload +desktopswitch +mainmenu	+mount
-	networkmonitor pulseaudio +quicklaunch screensaver sensors +showdesktop
-	+taskbar +tray +volume"
+IUSE="+alsa +clock colorpicker cpuload +desktopswitch +mainmenu networkmonitor pulseaudio
+	+quicklaunch screensaver sensors +showdesktop +taskbar +tray +udisks +volume"
 REQUIRED_USE="volume? ( || ( alsa pulseaudio ) )"
 
 DEPEND="razorqt-base/razorqt-libs
@@ -34,7 +33,7 @@ DEPEND="razorqt-base/razorqt-libs
 		pulseaudio? ( media-sound/pulseaudio ) )"
 RDEPEND="${DEPEND}
 	razorqt-base/razorqt-data
-	mount? ( sys-fs/udisks )"
+	udisks? ( sys-fs/udisks )"
 
 PATCHES=( "${FILESDIR}/${P}-automagic.patch" )
 
@@ -45,15 +44,17 @@ src_configure() {
 	)
 
 	local i
-	for i in clock colorpicker cpuload desktopswitch mainmenu mount networkmonitor \
-			quicklaunch screensaver sensors showdesktop taskbar tray volume; do
+	for i in clock colorpicker cpuload desktopswitch mainmenu networkmonitor \
+		quicklaunch screensaver sensors showdesktop taskbar tray volume; do
 		use $i || mycmakeargs+=( -D${i^^}_PLUGIN=No )
 	done
+	use udisks || mycmakeargs+=( -DMOUNT_PLUGIN=No )
 
 	if use volume; then
 		for i in alsa pulseaudio; do
 			use $i || mycmakeargs+=( -DVOLUME_USE_${i^^}=No )
 		done
 	fi
+
 	cmake-utils_src_configure
 }

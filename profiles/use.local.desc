@@ -6074,7 +6074,6 @@ razorqt-base/razorqt-panel:colorpicker - Add colorpicker panel applet
 razorqt-base/razorqt-panel:cpuload - Add CPU load panel applet; depends on sys-libs/libstatgrab
 razorqt-base/razorqt-panel:desktopswitch - Add desktop switch panel applet
 razorqt-base/razorqt-panel:mainmenu - Add main menu panel applet
-razorqt-base/razorqt-panel:mount - Add external storage mounting panel applet; depends on sys-fs/udisks
 razorqt-base/razorqt-panel:networkmonitor - Add network monitor panel applet; depends on sys-libs/libstatgrab
 razorqt-base/razorqt-panel:quicklaunch - Add quicklaunch panel applet
 razorqt-base/razorqt-panel:screensaver - Add screensaver panel applet

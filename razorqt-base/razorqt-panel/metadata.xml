@@ -9,8 +9,6 @@
       <pkg>sys-libs/libstatgrab</pkg></flag>
     <flag name='desktopswitch'>Add desktop switch panel applet</flag>
     <flag name='mainmenu'>Add main menu panel applet</flag>
-    <flag name='mount'>Add external storage mounting panel applet; depends on
-      <pkg>sys-fs/udisks</pkg></flag>
     <flag name='networkmonitor'>Add network monitor panel applet; depends on
       <pkg>sys-libs/libstatgrab</pkg></flag>
     <flag name='quicklaunch'>Add quicklaunch panel applet</flag>
