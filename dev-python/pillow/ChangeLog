@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.38 2014/09/13 05:47:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.39 2014/10/04 12:15:02 maekke Exp $
+
+  04 Oct 2014; Markus Meier <maekke@gentoo.org> pillow-2.5.3.ebuild:
+  arm stable, bug #522426
 
   13 Sep 2014; Jeroen Roovers <jer@gentoo.org> pillow-2.5.3.ebuild:
   Stable for HPPA (bug #522426).
