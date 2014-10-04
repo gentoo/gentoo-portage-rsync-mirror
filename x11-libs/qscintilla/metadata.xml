@@ -6,4 +6,11 @@
 	<use>
 		<flag name="designer">Build plugin for Qt Designer</flag>
 	</use>
+	<upstream>
+		<maintainer status="active">
+			<email>phil@riverbankcomputing.com</email>
+			<name>Phil Thompson</name>
+		</maintainer>
+		<bugs-to>mailto:qscintilla@riverbankcomputing.com</bugs-to>
+	</upstream>
 </pkgmetadata>
