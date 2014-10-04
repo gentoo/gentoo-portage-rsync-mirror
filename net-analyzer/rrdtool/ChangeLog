@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.278 2014/09/21 00:03:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.279 2014/10/04 09:35:02 jer Exp $
+
+*rrdtool-1.4.9 (04 Oct 2014)
+
+  04 Oct 2014; Jeroen Roovers <jer@gentoo.org> +rrdtool-1.4.9.ebuild,
+  +files/rrdtool-1.4.9-disable-rrd_graph-cgi.patch,
+  +files/rrdtool-1.4.9-disable-rrd_graph-lua.patch,
+  +files/rrdtool-1.4.9-disable-rrd_graph-perl.patch,
+  +files/rrdtool-1.4.9-disable-rrd_graph-python.patch:
+  Version bump.
 
   21 Sep 2014; Jeroen Roovers <jer@gentoo.org> -rrdtool-1.4.8.ebuild,
   files/rrdtool-1.4.7-configure.ac.patch:

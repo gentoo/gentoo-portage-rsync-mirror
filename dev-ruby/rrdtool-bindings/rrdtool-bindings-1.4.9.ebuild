@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/rrdtool-bindings-1.4.8-r1.ebuild,v 1.2 2014/08/05 16:00:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/rrdtool-bindings-1.4.9.ebuild,v 1.1 2014/10/04 09:35:45 jer Exp $
 
 EAPI="5"
 
@@ -20,14 +20,25 @@ RUBY_S="$MY_P"/bindings/ruby
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos ~x86-solaris"
+IUSE="graph test"
+REQUIRED_USE="test? ( graph )"
 
 # Block on older versions of rrdtool that install the bindings themselves.
 # requires rrd_xport which requires rrd_graph 
-RDEPEND="${RDEPEND} net-analyzer/rrdtool[graph] !!<net-analyzer/rrdtool-1.4.8-r1"
-DEPEND="${DEPEND} net-analyzer/rrdtool[graph]"
+RDEPEND="
+	~net-analyzer/rrdtool-${PV}[graph=]
+"
+DEPEND="
+	test? ( ~net-analyzer/rrdtool-${PV}[graph] )
+"
+
+RUBY_PATCHES=(
+	"${FILESDIR}"/${PN}-1.4.8-graph-ruby.patch
+)
 
 each_ruby_configure() {
-	${RUBY} extconf.rb || die
+	${RUBY} extconf.rb \
+		--with-cflags="${CFLAGS} $(usex graph -DHAVE_RRD_GRAPH '')" || die
 }
 
 each_ruby_compile() {

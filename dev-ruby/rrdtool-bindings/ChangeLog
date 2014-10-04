@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/rrdtool-bindings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/ChangeLog,v 1.13 2014/09/20 21:13:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/ChangeLog,v 1.14 2014/10/04 09:35:45 jer Exp $
+
+*rrdtool-bindings-1.4.9 (04 Oct 2014)
+*rrdtool-bindings-1.4.8-r2 (04 Oct 2014)
+
+  04 Oct 2014; Jeroen Roovers <jer@gentoo.org>
+  -rrdtool-bindings-1.4.8-r1.ebuild, +rrdtool-bindings-1.4.8-r2.ebuild,
+  +rrdtool-bindings-1.4.9.ebuild,
+  +files/rrdtool-bindings-1.4.8-graph-ruby.patch, metadata.xml:
+  Version bump. Add USE=graph (bug #517238).
 
   20 Sep 2014; Agostino Sarubbo <ago@gentoo.org> rrdtool-bindings-1.4.8.ebuild:
   Stable for ppc, wrt bug #517234
