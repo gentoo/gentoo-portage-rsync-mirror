@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-5.20140306-r1.ebuild,v 1.3 2014/03/21 11:30:25 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-5.20140927.ebuild,v 1.1 2014/10/04 17:14:25 slyfox Exp $
 
 EAPI=5
 
@@ -17,10 +17,9 @@ RESTRICT="test"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
-IUSE="android androidsplice +assistant +cryptohash +dbus +dns doc ekg +feed +inotify +pairing tahoe +production +quvi +s3 +tdfa +testsuite +webapp +webdav +xmpp"
+IUSE="android androidsplice +assistant +cryptohash +dbus +dns doc +desktop-notify ekg +feed +inotify +pairing +production +quvi +s3 +tahoe +tdfa +testsuite +webapp +webapp-secure +webdav +xmpp"
 
 RDEPEND="dev-vcs/git
-	assistant? ( sys-process/lsof )
 "
 DEPEND="${RDEPEND}
 	dev-haskell/async
@@ -31,28 +30,30 @@ DEPEND="${RDEPEND}
 	dev-haskell/data-default
 	dev-haskell/dlist
 	dev-haskell/edit-distance
-	dev-haskell/extensible-exceptions
+	>=dev-haskell/exceptions-0.6
 	dev-haskell/hslogger
-	dev-haskell/http
+	dev-haskell/http-conduit
+	dev-haskell/http-types
 	dev-haskell/ifelse
 	dev-haskell/json[generic]
 	dev-haskell/missingh
 	dev-haskell/monad-control
-	dev-haskell/monadcatchio-transformers
 	>=dev-haskell/mtl-2
 	>=dev-haskell/network-2.0
-	>=dev-haskell/quickcheck-2.1
+	>=dev-haskell/quickcheck-2.1:2
 	dev-haskell/random
 	dev-haskell/safesemaphore
 	dev-haskell/sha
 	>=dev-haskell/stm-2.3
 	dev-haskell/text
+	dev-haskell/transformers
 	dev-haskell/unix-compat
 	dev-haskell/utf8-string
 	dev-haskell/uuid
 	>=dev-lang/ghc-7.4.1
 	android? ( dev-haskell/data-endian )
-	assistant? ( inotify? ( dev-haskell/hinotify ) )
+	assistant? ( >=dev-haskell/stm-2.3
+			inotify? ( dev-haskell/hinotify ) )
 	cryptohash? ( >=dev-haskell/cryptohash-0.10.0 )
 	dbus? ( >=dev-haskell/dbus-0.10.3 )
 	dns? ( dev-haskell/dns )
@@ -62,48 +63,48 @@ DEPEND="${RDEPEND}
 	feed? ( dev-haskell/feed )
 	pairing? ( dev-haskell/network-info
 			dev-haskell/network-multicast )
+	quvi? ( dev-haskell/aeson )
 	s3? ( dev-haskell/hs3 )
-	tahoe? ( dev-haskell/aeson )
 	tdfa? ( dev-haskell/regex-tdfa )
-	testsuite? ( dev-haskell/tasty
+	tahoe? ( dev-haskell/aeson )
+	testsuite? (
+			dev-haskell/crypto-api
+			>=dev-haskell/tasty-0.7
 			dev-haskell/tasty-hunit
 			dev-haskell/tasty-quickcheck
-			dev-haskell/tasty-rerun )
-	webapp? ( dev-haskell/aeson
-			dev-haskell/blaze-builder
+			dev-haskell/tasty-rerun
+			>=dev-haskell/optparse-applicative-0.9.1
+			)
+	webapp? ( dev-haskell/blaze-builder
+			dev-haskell/aeson
 			dev-haskell/clientsession
 			dev-haskell/crypto-api
 			dev-haskell/hamlet
 			dev-haskell/http-types
-			dev-haskell/network-conduit
+			dev-haskell/path-pieces
 			dev-haskell/transformers
+			dev-haskell/shakespeare
 			dev-haskell/wai
-			dev-haskell/wai-logger
+			dev-haskell/wai-extra
 			dev-haskell/warp
 			dev-haskell/warp-tls
 			dev-haskell/yesod
 			dev-haskell/yesod-core
 			dev-haskell/yesod-default
 			dev-haskell/yesod-form
-			dev-haskell/yesod-static )
-	webdav? ( >=dev-haskell/dav-0.3
-		    dev-haskell/http-client
-			dev-haskell/http-conduit
-			dev-haskell/http-types
-			dev-haskell/lifted-base )
+			dev-haskell/yesod-static
+			webapp-secure? ( dev-haskell/warp-tls
+					dev-haskell/securemem
+					dev-haskell/byteable ) )
+	webdav? ( >=dev-haskell/dav-1.0
+			dev-haskell/http-client
+			dev-haskell/xml-conduit )
 	xmpp? ( >=dev-haskell/gnutls-0.1.4
 		dev-haskell/network-protocol-xmpp
 		dev-haskell/xml-types )
 		dev-lang/perl
-		doc? ( www-apps/ikiwiki net-misc/rsync )
+	doc? ( www-apps/ikiwiki net-misc/rsync )
 "
-
-src_prepare() {
-	# at least USE="cryptohash dbus dns inotify pairing production quvi s3 tdfa testsuite -xmpp -webdav -webapp -feed -assistant"
-	# need STM via Remote.External
-	cabal_chdeps \
-		'MissingH, hslogger, directory, filepath,' 'MissingH, hslogger, directory, filepath, stm,'
-}
 
 src_configure() {
 	haskell-cabal_src_configure \
@@ -112,6 +113,7 @@ src_configure() {
 		$(cabal_flag assistant assistant) \
 		$(cabal_flag cryptohash cryptohash) \
 		$(cabal_flag dbus dbus) \
+		$(cabal_flag desktop-notify desktop-notify) \
 		$(cabal_flag dns dns) \
 		$(cabal_flag ekg ekg) \
 		$(cabal_flag feed feed) \
@@ -124,6 +126,7 @@ src_configure() {
 		$(cabal_flag tdfa tdfa) \
 		$(cabal_flag testsuite testsuite) \
 		$(cabal_flag webapp webapp) \
+		$(cabal_flag webapp-secure webapp-secure) \
 		$(cabal_flag webdav webdav) \
 		$(cabal_flag xmpp xmpp)
 }
@@ -154,6 +157,6 @@ src_install() {
 	dodoc CHANGELOG README
 	if use webapp ; then
 		doicon "${FILESDIR}"/${PN}.xpm
-		make_desktop_entry "${PN} webapp" "git-annex" ${PN}.xpm "Utility"
+		make_desktop_entry "${PN} webapp" "git-annex" ${PN}.xpm "Office"
 	fi
 }

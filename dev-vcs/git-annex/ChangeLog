@@ -1,6 +1,17 @@
 # ChangeLog for dev-vcs/git-annex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.30 2014/09/06 18:57:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.31 2014/10/04 17:14:25 slyfox Exp $
+
+*git-annex-5.20140927 (04 Oct 2014)
+
+  04 Oct 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +git-annex-5.20140927.ebuild, -files/git-annex-5.20140717-old-feed.patch,
+  -git-annex-3.20121211-r2.ebuild, -git-annex-4.20130815-r1.ebuild,
+  -git-annex-5.20140306-r1.ebuild, -git-annex-5.20140405.ebuild,
+  -git-annex-5.20140613.ebuild, -git-annex-5.20140709.ebuild,
+  -git-annex-5.20140717.ebuild, -git-annex-5.20140831.ebuild:
+  Version bump, drop old versions due to CVE-2014-6274 aka #523640: S3 and
+  Glacier remotes creds embedded in the git repo were not encrypted
 
 *git-annex-5.20140831 (06 Sep 2014)
 
