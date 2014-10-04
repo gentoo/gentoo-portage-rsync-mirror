@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.146 2014/09/16 17:12:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.147 2014/10/04 11:41:46 hwoarang Exp $
+
+  04 Oct 2014; Markos Chandras <hwoarang@gentoo.org> use.mask:
+  Drop qt4 mask. The package is keyworded on MIPS. Mask it again on a
+  subprofile if necessary
 
   16 Sep 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.75 2014/06/30 15:34:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.76 2014/10/04 11:41:46 hwoarang Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -76,10 +76,6 @@ clamav
 # Untested on mips, masking for now.
 cdb
 nextaw
-
-# Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
-# Not yet tested, and gets in the way for some KDE-related packages
-qt4
 
 # Until someone actually needs fuse, we'll mask it as
 # it holds up stablizing ntfsprogs

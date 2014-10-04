@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/transifex-client-0.11_beta.ebuild,v 1.1 2014/05/30 19:18:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/transifex-client-0.11_beta.ebuild,v 1.2 2014/10/04 11:40:44 hwoarang Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
