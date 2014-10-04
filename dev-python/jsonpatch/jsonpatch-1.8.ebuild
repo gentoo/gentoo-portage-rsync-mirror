@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpatch/jsonpatch-0.12.ebuild,v 1.3 2014/03/19 18:24:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpatch/jsonpatch-1.8.ebuild,v 1.1 2014/10/04 09:18:55 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
 
 inherit distutils-r1
 
 DESCRIPTION="Apply JSON-Patches according to
-http://tools.ietf.org/html/draft-pbryan-json-patch-04"
+	http://tools.ietf.org/html/draft-pbryan-json-patch-04"
 HOMEPAGE="https://github.com/stefankoegl/python-json-patch"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
@@ -18,4 +18,9 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND="dev-python/jsonpointer[${PYTHON_USEDEP}]"
+RDEPEND=">=dev-python/jsonpointer-1.3[${PYTHON_USEDEP}]"
+
+python_test() {
+	"${PYTHON}" tests.py || die "Tests fail with ${EPYTHON}"
+	"${PYTHON}" ext_tests.py || die "Tests fail with ${EPYTHON}"
+}

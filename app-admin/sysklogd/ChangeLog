@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.89 2014/09/26 19:40:47 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.90 2014/10/04 09:21:57 polynomial-c Exp $
+
+*sysklogd-1.5-r4 (04 Oct 2014)
+
+  04 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> -sysklogd-1.5.ebuild,
+  -sysklogd-1.5-r1.ebuild, +sysklogd-1.5-r4.ebuild,
+  +files/sysklogd-1.5_CVE-2014-3634.diff:
+  Security bump (bug #524058). Remote syslog PRI vulnerability (CVE-2014-3634).
+  Removed old.
 
   26 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   +files/sysklogd-1.5-debian-cron.patch:

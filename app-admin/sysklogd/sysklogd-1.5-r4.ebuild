@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.5-r1.ebuild,v 1.2 2011/04/07 07:51:22 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.5-r4.ebuild,v 1.1 2014/10/04 09:21:57 polynomial-c Exp $
+
+EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -12,18 +14,19 @@ SRC_URI="http://www.infodrom.org/projects/sysklogd/download/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="logrotate"
 RESTRICT="test"
 
 DEPEND=""
 RDEPEND="dev-lang/perl
 	sys-apps/debianutils"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
+	pushd "${WORKDIR}" >/dev/null
 	epatch "${WORKDIR}"/${PN}_${PV}-${DEB_VER}.diff
-	cd "${S}"
+	popd >/dev/null
+
 	epatch "${FILESDIR}"/${P}-debian-cron.patch
 	epatch "${FILESDIR}"/${P}-build.patch
 
@@ -33,25 +36,29 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.4.2-caen-owl-klogd-drop-root.diff
 
 	epatch "${FILESDIR}"/${P}-syslog-func-collision.patch #342601
-
-	append-lfs-flags
+	epatch "${FILESDIR}"/${P}_CVE-2014-3634.diff #524058
 }
 
-src_compile() {
+src_configure() {
+	append-lfs-flags
 	tc-export CC
-	emake || die
 }
 
 src_install() {
-	dosbin syslogd klogd debian/syslog-facility debian/syslogd-listfiles || die "dosbin"
+	dosbin syslogd klogd debian/syslog-facility debian/syslogd-listfiles
 	doman *.[1-9] debian/syslogd-listfiles.8
 	insinto /etc
-	doins debian/syslog.conf || die
-	exeinto /etc/cron.daily
-	newexe debian/cron.daily syslog || die
-	exeinto /etc/cron.weekly
-	newexe debian/cron.weekly syslog || die
+	doins debian/syslog.conf
+	if use logrotate ; then
+		insinto /etc/logrotate.d
+		newins "${FILESDIR}"/sysklogd.logrotate sysklogd
+	else
+		exeinto /etc/cron.daily
+		newexe debian/cron.daily syslog
+		exeinto /etc/cron.weekly
+		newexe debian/cron.weekly syslog
+	fi
 	dodoc ANNOUNCE CHANGES NEWS README.1st README.linux
-	newinitd "${FILESDIR}"/sysklogd.rc6 sysklogd
+	newinitd "${FILESDIR}"/sysklogd.rc7 sysklogd
 	newconfd "${FILESDIR}"/sysklogd.confd sysklogd
 }
