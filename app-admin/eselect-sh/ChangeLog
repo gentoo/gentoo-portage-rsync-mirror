@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-sh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/ChangeLog,v 1.29 2014/02/12 18:11:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/ChangeLog,v 1.30 2014/10/04 22:35:43 kumba Exp $
+
+  04 Oct 2014; Joshua Kinard <kumba@gentoo.org> eselect-sh-0.4-r1.ebuild:
+  Added ~mips to KEYWORDS.
 
 *eselect-sh-0.4-r1 (12 Feb 2014)
 
