@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-2.3.4.ebuild,v 1.6 2014/08/01 09:44:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-2.3.4.ebuild,v 1.7 2014/10/04 14:15:11 blueness Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="CNRI"
 SLOT="2"
-KEYWORDS="amd64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="examples"
 
 DEPEND="virtual/libiconv"

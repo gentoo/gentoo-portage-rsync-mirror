@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.209 2014/09/29 22:45:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.210 2014/10/04 14:07:05 blueness Exp $
+
+  04 Oct 2014; Anthony G. Basile <blueness@gentoo.org> layman-2.2.0.ebuild:
+  Keyworded ~ppc and ~ppc64, bug #524040
 
   29 Sep 2014; Jeroen Roovers <jer@gentoo.org> layman-2.2.0.ebuild:
   Marked ~hppa (bug #524040).

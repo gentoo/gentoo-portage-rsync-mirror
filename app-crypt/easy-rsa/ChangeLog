@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/easy-rsa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/ChangeLog,v 1.16 2014/08/10 02:26:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/ChangeLog,v 1.17 2014/10/04 14:11:22 blueness Exp $
+
+  04 Oct 2014; Anthony G. Basile <blueness@gentoo.org> easy-rsa-2.2.0-r1.ebuild,
+  easy-rsa-2.2.0.ebuild:
+  Keyword ~ppc64, bug #453782
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> easy-rsa-2.2.0-r1.ebuild,
   easy-rsa-2.2.0.ebuild:

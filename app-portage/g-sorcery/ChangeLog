@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/g-sorcery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/ChangeLog,v 1.4 2014/09/29 22:45:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/ChangeLog,v 1.5 2014/10/04 14:07:35 blueness Exp $
+
+  04 Oct 2014; Anthony G. Basile <blueness@gentoo.org> g-sorcery-0.1-r1.ebuild:
+  Keyworded ~ppc and ~ppc64, bug #524040
 
   29 Sep 2014; Jeroen Roovers <jer@gentoo.org> g-sorcery-0.1-r1.ebuild:
   Marked ~hppa (bug #524040).
