@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.185 2014/10/04 08:30:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.186 2014/10/04 10:18:26 pacho Exp $
+
+  04 Oct 2014; Pacho Ramos <pacho@gentoo.org> +files/meld-3.12.0-c-locale.patch:
+  Add forgotten patch (thanks to Gilles for noticing)
 
 *meld-3.12.0 (04 Oct 2014)
 
