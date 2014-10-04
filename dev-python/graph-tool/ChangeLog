@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/graph-tool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/ChangeLog,v 1.13 2014/04/01 07:41:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/ChangeLog,v 1.14 2014/10/04 07:46:18 idella4 Exp $
+
+*graph-tool-2.2.35 (04 Oct 2014)
+
+  04 Oct 2014; Ian Delaney <idella4@gentoo.org> +graph-tool-2.2.35.ebuild:
+  bump; add py3.4
 
 *graph-tool-2.2.31 (01 Apr 2014)
 
@@ -68,4 +73,3 @@
   04 Jan 2013; Tim Harder <radhermit@gentoo.org> +graph-tool-2.2.19.ebuild,
   +graph-tool-9999.ebuild, +metadata.xml:
   Initial import, ebuild by me.
-
