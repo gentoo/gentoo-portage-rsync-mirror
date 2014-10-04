@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/webmock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.30 2014/08/15 14:32:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.31 2014/10/04 06:58:47 graaff Exp $
+
+*webmock-1.19.0 (04 Oct 2014)
+
+  04 Oct 2014; Hans de Graaff <graaff@gentoo.org> +webmock-1.19.0.ebuild:
+  Version bump.
 
   15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> webmock-1.18.0.ebuild,
   webmock-1.7.4.ebuild:
