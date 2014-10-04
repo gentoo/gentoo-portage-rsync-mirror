@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.60.ebuild,v 1.1 2013/05/31 15:22:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.62.ebuild,v 1.1 2014/10/04 08:35:15 jer Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite"
 DISTUTILS_SINGLE_IMPL=1
 
@@ -27,10 +27,24 @@ DEPEND="${RDEPEND}
 		dev-vcs/git
 		dev-vcs/mercurial )"
 
-PATCHES=( "${FILESDIR}"/${P}-remove-ubuntu-theme.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.60-remove-ubuntu-theme.patch
+	"${FILESDIR}"/${P}-desktop.patch
+)
 
 python_prepare() {
 	sed -i -e "s/'USER'/'LOGNAME'/g" zim/__init__.py zim/fs.py || die
+
+	if [[ ${LINGUAS} ]]; then
+		local lingua
+		for lingua in translations/*.po; do
+			lingua=${lingua/.po}
+			lingua=${lingua/translations\/}
+			has ${lingua} ${LINGUAS} || \
+				{ rm translations/${lingua}.po || die; }
+		done
+	fi
+
 	distutils-r1_python_prepare
 }
 

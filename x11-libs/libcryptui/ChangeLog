@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libcryptui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/ChangeLog,v 1.19 2014/07/23 15:38:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/ChangeLog,v 1.20 2014/10/04 08:47:48 pacho Exp $
+
+  04 Oct 2014; Pacho Ramos <pacho@gentoo.org> -libcryptui-3.10.1.ebuild,
+  libcryptui-3.12.2.ebuild:
+  Fix dependency on libgnome-keyring (#524410 by plaes), drop old
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libcryptui-3.12.2.ebuild:
   Stable for x86, wrt bug #512012

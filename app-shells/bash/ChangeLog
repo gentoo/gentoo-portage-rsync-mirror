@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.413 2014/10/03 21:37:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.414 2014/10/04 08:53:10 ago Exp $
+
+  04 Oct 2014; Agostino Sarubbo <ago@gentoo.org> bash-3.1_p22.ebuild,
+  bash-3.2_p56.ebuild, bash-4.0_p43.ebuild, bash-4.1_p16.ebuild,
+  bash-4.2_p52.ebuild:
+  Stable for amd64/arm/ia64/ppc/ppc64/sparc/sh/x86 wrt the security bug #524256
 
   03 Oct 2014; Jeroen Roovers <jer@gentoo.org> bash-3.1_p22.ebuild,
   bash-3.2_p56.ebuild, bash-4.0_p43.ebuild, bash-4.1_p16.ebuild,
