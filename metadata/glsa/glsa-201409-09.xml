@@ -9,7 +9,7 @@
   </synopsis>
   <product type="ebuild">bash</product>
   <announced>September 24, 2014</announced>
-  <revised>September 24, 2014: 3</revised>
+  <revised>October 04, 2014: 4</revised>
   <bug>523592</bug>
   <access>local, remote</access>
   <affected>
@@ -43,28 +43,28 @@
     
     <code>
       # emerge --sync
-      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-3.1_p18"
+      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-3.1_p18:3.1"
     </code>
     
     <p>All Bash 3.2 users should upgrade to the latest version:</p>
     
     <code>
       # emerge --sync
-      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-3.2_p52"
+      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-3.2_p52:3.2"
     </code>
     
     <p>All Bash 4.0 users should upgrade to the latest version:</p>
     
     <code>
       # emerge --sync
-      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-4.0_p39"
+      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-4.0_p39:4.0"
     </code>
     
     <p>All Bash 4.1 users should upgrade to the latest version:</p>
     
     <code>
       # emerge --sync
-      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-4.1_p12"
+      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-4.1_p12:4.1"
     </code>
     
     <p>All Bash 4.2 users should upgrade to the latest version:</p>
@@ -79,5 +79,5 @@
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2014-6271">CVE-2014-6271</uri>
   </references>
   <metadata tag="requester" timestamp="Wed, 24 Sep 2014 16:00:19 +0000">a3li</metadata>
-  <metadata tag="submitter" timestamp="Wed, 24 Sep 2014 22:06:57 +0000">a3li</metadata>
+  <metadata tag="submitter" timestamp="Sat, 04 Oct 2014 22:25:14 +0000">a3li</metadata>
 </glsa>

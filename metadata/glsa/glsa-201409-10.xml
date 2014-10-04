@@ -10,7 +10,7 @@
   </synopsis>
   <product type="ebuild">bash</product>
   <announced>September 25, 2014</announced>
-  <revised>September 25, 2014: 1</revised>
+  <revised>October 04, 2014: 2</revised>
   <bug>523592</bug>
   <access>local, remote</access>
   <affected>
@@ -49,28 +49,28 @@
     
     <code>
       # emerge --sync
-      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-3.1_p18-r1"
+      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-3.1_p18-r1:3.1"
     </code>
     
     <p>All Bash 3.2 users should upgrade to the latest version:</p>
     
     <code>
       # emerge --sync
-      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-3.2_p52-r1"
+      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-3.2_p52-r1:3.2"
     </code>
     
     <p>All Bash 4.0 users should upgrade to the latest version:</p>
     
     <code>
       # emerge --sync
-      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-4.0_p39-r1"
+      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-4.0_p39-r1:4.0"
     </code>
     
     <p>All Bash 4.1 users should upgrade to the latest version:</p>
     
     <code>
       # emerge --sync
-      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-4.1_p12-r1"
+      # emerge --ask --oneshot --verbose "&gt;=app-shells/bash-4.1_p12-r1:4.1"
     </code>
     
     <p>All Bash 4.2 users should upgrade to the latest version:</p>
@@ -87,7 +87,7 @@
   <metadata tag="requester" timestamp="Thu, 25 Sep 2014 12:49:54 +0000">
     keytoaster
   </metadata>
-  <metadata tag="submitter" timestamp="Thu, 25 Sep 2014 13:36:56 +0000">
+  <metadata tag="submitter" timestamp="Sat, 04 Oct 2014 22:27:37 +0000">
     keytoaster
   </metadata>
 </glsa>
