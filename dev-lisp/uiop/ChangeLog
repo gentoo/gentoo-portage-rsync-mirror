@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/uiop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.10 2014/07/11 08:52:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.11 2014/10/04 16:46:35 blueness Exp $
+
+  04 Oct 2014; Anthony G. Basile <blueness@gentoo.org> uiop-3.0.1.ebuild,
+  uiop-3.0.2.1.ebuild, uiop-3.0.2.4.ebuild, uiop-3.0.3.ebuild:
+  Keyword ~ppc64, bug #506890
 
   11 Jul 2014; Patrick Lauer <patrick@gentoo.org> uiop-3.0.3.ebuild:
   Stable on amd64 #511170
