@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argcomplete/argcomplete-0.6.5.ebuild,v 1.6 2014/10/04 04:56:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argcomplete/argcomplete-0.6.5-r1.ebuild,v 1.1 2014/10/04 04:56:31 idella4 Exp $
 
 EAPI=5
 
@@ -20,3 +20,9 @@ IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
+
+python_prepare_all() {
+	# purge test folder to avoid file collisions
+	sed -e "s:find_packages():find_packages(exclude=['test','test.*']):" -i setup.py || die
+	distutils-r1_python_prepare_all
+}

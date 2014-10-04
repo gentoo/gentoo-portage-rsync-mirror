@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>qt</herd>
-<herd>video</herd>
+  <herd>qt</herd>
+  <herd>video</herd>
+  <use>
+    <flag name='autoshutdown'>
+      Enable the option to shutdown your computer after finishing the playlist.
+      This requires <pkg>dev-qt/qtdbus</pkg> as dependency.
+    </flag>
+  </use>
 </pkgmetadata>

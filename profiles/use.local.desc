@@ -4423,6 +4423,7 @@ media-video/plasma-mediacenter:nepomuk - Enable Nepomuk based semantic desktop s
 media-video/qgifer:imagemagick - Use imagemagick for image operations
 media-video/rtmpdump:gnutls - Use GnuTLS library instead of the default OpenSSL
 media-video/rtmpdump:polarssl - Use PolarSSL library instead of the default OpenSSL
+media-video/smplayer:autoshutdown - Enable the option to shutdown your computer after finishing the playlist. This requires dev-qt/qtdbus as dependency.
 media-video/smplayer2:download-subs - Enable subtitle downloader (requires QuaZip)
 media-video/totem:bluetooth - Enable support for user-presence detection via the user's bluetooth handset using net-wireless/bluez
 media-video/totem:flash - Install browser plugin for playing embedded Adobe Flash videos. Warning: breaks non-video Flash objects on many websites.

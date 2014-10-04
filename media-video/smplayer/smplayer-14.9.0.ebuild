@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-14.9.0.ebuild,v 1.1 2014/09/24 07:33:47 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-14.9.0.ebuild,v 1.2 2014/10/04 04:50:06 yngwin Exp $
 
 EAPI=5
 PLOCALES="ar_SY bg ca cs da de el_GR en_US es et eu fi fr gl he_IL hr hu it ja
@@ -17,10 +17,11 @@ HOMEPAGE="http://smplayer.sourceforge.net/"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux"
-IUSE="debug"
+IUSE="autoshutdown debug"
 
 DEPEND="dev-qt/qtcore:4
-	dev-qt/qtgui:4"
+	dev-qt/qtgui:4
+	autoshutdown? ( dev-qt/qtdbus:4 )"
 COMMON_USE="libass,png,X"
 RDEPEND="${DEPEND}
 	|| (
@@ -35,6 +36,12 @@ src_prepare() {
 		-e '/\.\/get_svn_revision\.sh/,+2c\
 	cd src && $(DEFS) $(MAKE)' \
 		"${S}"/Makefile || die "sed failed"
+
+	# Toggle autoshutdown option which pulls in dbus, bug #524392
+	if ! use autoshutdown ; then
+		sed -e 's:DEFINES += AUTO_SHUTDOWN_PC:#DEFINES += AUTO_SHUTDOWN_PC:' \
+			-i "${S}"/src/smplayer.pro || die "sed failed"
+	fi
 
 	# Turn debug message flooding off
 	if ! use debug ; then

@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/argcomplete
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argcomplete/ChangeLog,v 1.5 2014/07/06 12:36:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argcomplete/ChangeLog,v 1.6 2014/10/04 04:56:31 idella4 Exp $
+
+*argcomplete-0.6.5-r1 (04 Oct 2014)
+
+  04 Oct 2014; Ian Delaney <idella4@gentoo.org> +argcomplete-0.6.5-r1.ebuild,
+  argcomplete-0.6.5.ebuild:
+  drop py2.6 add py3.4 revbump; purge test folder from installed folders to
+  avoid file collisions wrt Bug #524348 by H. Jarausch
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> argcomplete-0.6.5.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
