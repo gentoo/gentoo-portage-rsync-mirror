@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.29-r1.ebuild,v 1.1 2014/09/11 11:01:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.29.1.ebuild,v 1.1 2014/10/04 20:04:02 polynomial-c Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -28,7 +28,7 @@ fi
 
 MOZCONFIG_OPTIONAL_WIFI=1
 MOZCONFIG_OPTIONAL_JIT="enabled"
-inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-v4.1 multilib pax-utils fdo-mime autotools mozextension nsplugins mozlinguas
+inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-v4.31 multilib pax-utils fdo-mime autotools mozextension nsplugins mozlinguas
 
 PATCHFF="firefox-31.0-patches-0.2"
 PATCH="${PN}-2.23-patches-01"
@@ -40,56 +40,40 @@ HOMEPAGE="http://www.seamonkey-project.org"
 if [[ ${PV} == *_pre* ]] ; then
 	# pre-releases. No need for arch teams to change KEYWORDS here.
 
-	KEYWORDS=""
+	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86"
 else
 	# This is where arch teams should change the KEYWORDS.
 
-	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86"
 fi
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+chatzilla +crypt gstreamer +ipc minimal pulseaudio +roaming selinux system-cairo system-icu system-jpeg system-sqlite test"
+IUSE="+chatzilla +crypt +ipc minimal pulseaudio +roaming selinux test"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MY_MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
-	http://dev.gentoo.org/~axs/distfiles/${PATCHFF}.tar.xz
+	http://dev.gentoo.org/~axs/mozilla/patchsets/${PATCHFF}.tar.xz
 	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.xz
 	crypt? ( http://www.enigmail.net/download/source/enigmail-${EMVER}.tar.gz )"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
-# Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND=">=dev-libs/nss-3.16.2
 	>=dev-libs/nspr-4.10.6
-	>=dev-libs/glib-2.26:2
-	>=media-libs/mesa-7.10
-	>=media-libs/libpng-1.6.7[apng]
-	>=x11-libs/pango-1.14.0
-	>=x11-libs/gtk+-2.14:2
-	virtual/libffi
-	gstreamer? ( media-plugins/gst-plugins-meta:1.0[ffmpeg] )
-	system-cairo? ( >=x11-libs/cairo-1.12[X] x11-libs/pixman )
-	system-icu? ( >=dev-libs/icu-51.1 )
-	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
-	system-sqlite? ( >=dev-db/sqlite-3.8.4.2:3[secure-delete,debug=] )
-	>=media-libs/libvpx-1.3.0
 	crypt? ( || (
-		( >=app-crypt/gnupg-2.0
-			|| (
-				app-crypt/pinentry[gtk]
-				app-crypt/pinentry[qt4]
+			( >=app-crypt/gnupg-2.0
+				|| (
+					app-crypt/pinentry[gtk]
+					app-crypt/pinentry[qt4]
+				)
 			)
-		)
-		=app-crypt/gnupg-1.4* ) )
-	kernel_linux? ( media-libs/alsa-lib )
-	pulseaudio? ( media-sound/pulseaudio )
+			=app-crypt/gnupg-1.4* ) )
 	selinux? ( sec-policy/selinux-mozilla )"
 
 DEPEND="${RDEPEND}
-	!elibc_glibc? ( !elibc_uclibc? ( dev-libs/libexecinfo ) )
-	>=sys-devel/binutils-2.16.1
-	virtual/pkgconfig
+	!elibc_glibc? ( !elibc_uclibc?  ( dev-libs/libexecinfo ) )
+	crypt? ( dev-lang/perl )
 	amd64? ( ${ASM_DEPEND}
 		virtual/opengl )
 	x86? ( ${ASM_DEPEND}
@@ -153,13 +137,6 @@ src_prepare() {
 		edos2unix "${file}"
 	done
 
-	if use crypt ; then
-		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
-		#pushd "${S}"/mailnews/extensions/enigmail &>/dev/null || die
-
-		#popd &>/dev/null || die
-	fi
-
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
 
@@ -221,44 +198,18 @@ src_configure() {
 		MEXTENSIONS+=",-sroaming"
 	fi
 
-	# We must force enable jemalloc 3 threw .mozconfig
-	echo "export MOZ_JEMALLOC=1" >> "${S}"/.mozconfig || die
-
 	# Setup api key for location services
 	echo -n "${_google_api_key}" > "${S}"/google-api-key
 	mozconfig_annotate '' --with-google-api-keyfile="${S}/google-api-key"
 
-	mozconfig_annotate '' --enable-jemalloc
-	mozconfig_annotate '' --enable-replace-malloc
-	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
-	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
-	mozconfig_annotate '' --disable-gconf
 	mozconfig_annotate '' --enable-jsd
 	mozconfig_annotate '' --enable-canvas
-	mozconfig_annotate '' --with-system-png
-	mozconfig_annotate '' --enable-system-ffi
-	mozconfig_annotate '' --disable-gold
 
 	# Other sm-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 
-	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
-	mozconfig_annotate '' --build="${CTARGET:-${CHOST}}"
 	mozconfig_annotate '' --enable-safe-browsing
-
-	# gstreamer now needs the version specified
-	if use gstreamer ; then
-		mozconfig_annotate '' --enable-gstreamer=1.0
-	else
-		mozconfig_annotate '' --disable-gstreamer
-	fi
-	mozconfig_use_enable pulseaudio
-	mozconfig_use_enable system-cairo
-	mozconfig_use_enable system-sqlite
-	mozconfig_use_with system-jpeg
-	mozconfig_use_with system-icu
-	mozconfig_use_enable system-icu intl-api
 
 	# Use an objdir to keep things organized.
 	echo "mk_add_options MOZ_OBJDIR=${BUILD_OBJ_DIR}" \
@@ -268,10 +219,11 @@ src_configure() {
 	mozconfig_final
 
 	if use crypt ; then
-		pushd "${S}"/mailnews/extensions/enigmail &>/dev/null || die
+		pushd "${WORKDIR}"/enigmail &>/dev/null || die
 		econf
 		popd &>/dev/null || die
 	fi
+
 
 	# Work around breakage in makeopts with --no-print-directory
 	MAKEOPTS="${MAKEOPTS/--no-print-directory/}"
@@ -295,9 +247,10 @@ src_compile() {
 	# Only build enigmail extension if conditions are met.
 	if use crypt ; then
 		einfo "Building enigmail"
-		cd "${S}"/mailnews/extensions/enigmail || die
+		pushd "${WORKDIR}"/enigmail &>/dev/null || die
 		emake -j1
 		emake xpi
+		popd &>/dev/null || die
 	fi
 }
 
@@ -321,12 +274,6 @@ src_install() {
 		>> "${BUILD_OBJ_DIR}/mozilla/dist/bin/defaults/pref/all-gentoo.js" \
 		|| die
 
-	#if ! use libnotify ; then
-	#	echo 'pref("browser.download.manager.showAlertOnComplete", false);' \
-	#		>> "${BUILD_OBJ_DIR}/mozilla/dist/bin/defaults/pref/all-gentoo.js" \
-	#		|| die
-	#fi
-
 	echo 'pref("extensions.autoDisableScopes", 3);' >> \
 		"${BUILD_OBJ_DIR}/mozilla/dist/bin/defaults/pref/all-gentoo.js" \
 		|| die
@@ -336,11 +283,11 @@ src_install() {
 	cp "${FILESDIR}"/icon/${PN}.desktop "${T}" || die
 
 	if use crypt ; then
-		local em_dir="${S}/mailnews/extensions/enigmail/build"
+		local em_dir="${WORKDIR}/enigmail/build"
 		pushd "${T}" &>/dev/null || die
 		unzip "${em_dir}"/enigmail*.xpi install.rdf || die
 		emid=$(sed -n '/<em:id>/!d; s/.*\({.*}\).*/\1/; p; q' install.rdf)
-
+		#'
 		dodir ${MOZILLA_FIVE_HOME}/extensions/${emid}
 		cd "${D}"${MOZILLA_FIVE_HOME}/extensions/${emid} || die
 		unzip "${em_dir}"/enigmail*.xpi || die
@@ -379,7 +326,7 @@ src_install() {
 
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
-	echo "SEARCH_DIRS_MASK=${MOZILLA_FIVE_HOME}" >> ${T}/11${PN}
+	echo "SEARCH_DIRS_MASK=${MOZILLA_FIVE_HOME}*" >> ${T}/11${PN}
 	doins "${T}"/11${PN}
 }
 
