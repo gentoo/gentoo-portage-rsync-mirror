@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16071 2014/10/05 08:49:36 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16072 2014/10/05 15:19:56 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (5 Oct 2014)
+# Fails to build with USE="-pam", bug 524074.
+# Masked by QA, waiting for fix by maintainer.
+=app-admin/sudo-1.8.11
 
 # Jauhien Piatlicki <jauhien@gentoo.org> (5 Oct 2014)
 # Masked because of bug 524390: privilege escalation

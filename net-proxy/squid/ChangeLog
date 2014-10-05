@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.487 2014/10/03 09:28:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.489 2014/10/05 15:06:11 ago Exp $
+
+  05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> squid-3.3.13-r1.ebuild:
+  Stable for ppc, wrt bug #522498
+
+  05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> squid-3.3.13-r1.ebuild:
+  Stable for alpha, wrt bug #522498
 
   03 Oct 2014; Patrick Lauer <patrick@gentoo.org> squid-3.3.13.ebuild:
   Whitespace
