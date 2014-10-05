@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37.ebuild,v 1.4 2014/10/01 07:18:56 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r1.ebuild,v 1.1 2014/10/05 09:45:54 jauhien Exp $
 
 EAPI=5
 
@@ -13,7 +13,8 @@ SRC_URI="http://download.${PN}.com/linux/${P}.tar.bz2"
 LICENSE="skype-4.0.0.7-copyright BSD MIT RSA W3C regexp-UofT no-source-code"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pax_kernel +pulseaudio selinux"
+IUSE="apulse pax_kernel +pulseaudio selinux"
+REQUIRED_USE="apulse? ( !pulseaudio )"
 
 QA_PREBUILT=opt/bin/${PN}
 RESTRICT="mirror bindist strip" #299368
@@ -30,14 +31,18 @@ RDEPEND="
 				dev-qt/qtgui:4[accessibility,abi_x86_32(-)]
 				dev-qt/qtwebkit:4[abi_x86_32(-)]
 			)
-			>=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER}
+			!apulse? (
+				>=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER}
+			)
 		)
 		|| (
 			(
 				media-libs/alsa-lib[abi_x86_32(-)]
 				pulseaudio? ( media-sound/pulseaudio[abi_x86_32(-)] )
 			)
-			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}
+			!apulse? (
+				>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}
+			)
 		)
 		|| (
 			(
@@ -46,7 +51,12 @@ RDEPEND="
 				x11-libs/libXScrnSaver[abi_x86_32(-)]
 				x11-libs/libXv[abi_x86_32(-)]
 			)
-			>=app-emulation/emul-linux-x86-xlibs-${EMUL_X86_VER}
+			!apulse? (
+				>=app-emulation/emul-linux-x86-xlibs-${EMUL_X86_VER}
+			)
+		)
+		apulse? (
+			media-sound/apulse[abi_x86_32(-)]
 		)
 	)
 	x86? (
@@ -59,6 +69,9 @@ RDEPEND="
 		dev-qt/qtdbus:4
 		dev-qt/qtgui:4[accessibility]
 		dev-qt/qtwebkit:4
+		apulse? (
+			media-sound/apulse
+		)
 	)
 	pulseaudio? ( media-sound/pulseaudio )
 	selinux? ( sec-policy/selinux-skype )"
@@ -124,10 +137,13 @@ pkg_postinst() {
 		elog "libraries from the media-libs/libv4l package."
 	fi
 
-	if ! use pulseaudio; then
+	if ! use pulseaudio && ! use apulse; then
 		ewarn "ALSA support was removed from Skype"
 		ewarn "consider installing media-sound/pulseaudio"
+		ewarn "or media-sound/apulse for pulseaudio emulation"
 		ewarn "otherwise sound will not work for you."
+		ewarn "These packages can be pulled in by setting"
+		ewarn "appropriate USE flags for net-im/skype."
 	fi
 }
 

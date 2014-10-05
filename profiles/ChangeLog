@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9421 2014/10/05 08:49:36 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9422 2014/10/05 09:51:23 zlogene Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> info_pkgs:
+  Add dev-lang/perl atom to the emerge --info output.
 
   05 Oct 2014; Jauhien Piatlicki <jauhien@gentoo.org> base/package.use.mask,
   package.mask:
