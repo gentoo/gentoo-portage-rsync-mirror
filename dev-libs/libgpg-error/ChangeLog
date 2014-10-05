@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.111 2014/09/19 13:22:41 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.112 2014/10/05 15:49:18 mrueg Exp $
+
+  05 Oct 2014; Manuel Rüger <mrueg@gentoo.org> libgpg-error-1.13.ebuild:
+  Mark stable on amd64. Bug #519432
 
 *libgpg-error-1.15 (19 Sep 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/quickplot
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.20 2013/11/27 19:56:54 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.21 2014/10/05 15:46:24 mrueg Exp $
+
+  05 Oct 2014; Manuel Rüger <mrueg@gentoo.org> quickplot-0.10.6.ebuild:
+  Mark stable on amd64. Bug #518164
 
 *quickplot-0.10.6 (27 Nov 2013)
 
