@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.278 2014/10/02 16:26:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.280 2014/10/05 07:25:12 ago Exp $
+
+  05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> mediawiki-1.19.20.ebuild,
+  mediawiki-1.22.12.ebuild, mediawiki-1.23.5.ebuild:
+  Stable for x86, wrt bug #523852
+
+  05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> mediawiki-1.19.20.ebuild,
+  mediawiki-1.22.12.ebuild, mediawiki-1.23.5.ebuild:
+  Stable for amd64, wrt bug #523852
 
 *mediawiki-1.23.5 (02 Oct 2014)
 *mediawiki-1.22.12 (02 Oct 2014)

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-8.4.2.ebuild,v 1.2 2014/10/02 21:04:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-8.4.2.ebuild,v 1.4 2014/10/05 07:24:51 ago Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -15,7 +15,7 @@ SRC_URI="
 "
 
 LICENSE="GPL-3 LGPL-3 Apache-2.0"
-KEYWORDS="~amd64 ~arm hppa ~x86"
+KEYWORDS="amd64 ~arm hppa x86"
 SLOT="0"
 IUSE="dbi debug doc elasticsearch +gcrypt jemalloc kerberos mongodb mysql normalize omudpspoof oracle postgres rabbitmq redis relp rfc3195 rfc5424hmac snmp ssl systemd usertools zeromq"
 

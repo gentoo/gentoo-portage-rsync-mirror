@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmongo-client/libmongo-client-0.1.7.ebuild,v 1.5 2014/10/01 10:57:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmongo-client/libmongo-client-0.1.7.ebuild,v 1.7 2014/10/05 07:24:57 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/algernon/${PN}/archive/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ~x86"
+KEYWORDS="amd64 ~arm hppa x86"
 IUSE="doc"
 
 DEPEND="${RDEPEND}

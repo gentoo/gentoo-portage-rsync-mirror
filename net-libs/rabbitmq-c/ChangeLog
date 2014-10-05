@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/rabbitmq-c
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rabbitmq-c/ChangeLog,v 1.5 2014/10/01 10:58:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rabbitmq-c/ChangeLog,v 1.7 2014/10/05 07:25:03 ago Exp $
+
+  05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> rabbitmq-c-0.5.0.ebuild:
+  Stable for x86, wrt bug #524290
+
+  05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> rabbitmq-c-0.5.0.ebuild:
+  Stable for amd64, wrt bug #524290
 
   01 Oct 2014; Jeroen Roovers <jer@gentoo.org> rabbitmq-c-0.5.0.ebuild:
   Stable for HPPA (bug #524058).
