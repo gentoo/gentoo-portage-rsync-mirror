@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.12.0.ebuild,v 1.1 2014/10/04 08:30:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.12.0.ebuild,v 1.2 2014/10/05 10:25:09 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
+PYTHON_REQ_USE="xml"
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=1
 
@@ -19,12 +20,12 @@ IUSE=""
 
 RDEPEND="
 	${PYTHON_DEPS}
-	>=dev-libs/glib-2.34.0:2[${PYTHON_USEDEP}]
+	>=dev-libs/glib-2.34:2
 	dev-python/dbus-python[${PYTHON_USEDEP}]
-	dev-python/pygobject[${PYTHON_USEDEP}]
+	>=dev-python/pygobject-3.8:3[cairo,${PYTHON_USEDEP}]
 	gnome-base/gsettings-desktop-schemas
-	>=x11-libs/gtk+-3.6.0:3
-	>=x11-libs/gtksourceview-3.6.0:3.0
+	>=x11-libs/gtk+-3.6:3[introspection]
+	>=x11-libs/gtksourceview-3.6:3.0[introspection]
 	x11-themes/hicolor-icon-theme
 "
 DEPEND="${RDEPEND}

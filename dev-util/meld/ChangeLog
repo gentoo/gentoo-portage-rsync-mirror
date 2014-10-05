@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/meld
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.186 2014/10/04 10:18:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.187 2014/10/05 10:25:09 eva Exp $
+
+  05 Oct 2014; Gilles Dartiguelongue <eva@gentoo.org> meld-3.12.0.ebuild:
+  Add PYTHON_REQ_USE, xml is used in svn support. Drop PYTHON_USEDEP on glib
+  dependency, it is only there for utilities that are not used here. Add
+  missing dependency on introspection USE flag and cairo.
 
   04 Oct 2014; Pacho Ramos <pacho@gentoo.org> +files/meld-3.12.0-c-locale.patch:
   Add forgotten patch (thanks to Gilles for noticing)
