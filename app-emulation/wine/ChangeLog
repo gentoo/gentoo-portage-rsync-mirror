@@ -1,6 +1,38 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.519 2014/07/24 11:02:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.520 2014/10/05 13:17:36 ryao Exp $
+
+*wine-1.7.28 (05 Oct 2014)
+*wine-1.7.22 (05 Oct 2014)
+
+  05 Oct 2014; Richard Yao <ryao@gentoo.org>
+  +files/wine-1.7.28-gstreamer-v4.patch, +wine-1.7.22.ebuild,
+  +wine-1.7.28.ebuild, metadata.xml:
+  Version bump, see http://www.winehq.org/announce/1.7.28 for the announcement,
+  bug #518792, #516006 Version bump, see http://www.winehq.org/announce/1.7.22
+  for the announcement.  I am updating app-emulation/wine after maintainer
+  timeout on bug #518792. It was trivial to do a bump to wine 1.7.22, so I am
+  taking the opportunity to provide both wine 1.7.22 and wine 1.7.28. The latter
+  of which is the latest. Newer versions require revised patch sets, so I have
+  opted to change our we apply patches by obtaining pulseaudio patches from the
+  compholio patchset, which includes them.  Previously, we bundled the gstreamer
+  patch in our pulseaudio patch set, but the compholio patches do not include
+  it. In addition, Andreas Sturmlechner points out that there is a gstreamer v4
+  patch. It is a small enough patch that is a small enough patch that I have
+  opted to add it to the files directory. This should simplify ebuild
+  maintenance because bumps will not require updating external tarballs. If time
+  shows that this assumption is wrong, we can always move the patch to an
+  external tarball later.  In addition, wine 1.7.25 (if I recall correctly)
+  introduced an optional dependency on libpcap. net-libs/libpcap is not multilib
+  capable and none of the app-emulation/emul-linux-x86-* packages appear to
+  include it. Adding USE=pcap requires making net-libs/libpcap multilib capable,
+  which is a task for which I do not have time. Since this should not block a
+  new wine ebuild, I have opted to add --without-pcap to the 1.7.28 ebuild.
+  Lastly, the wine 1.7.28 bump was initially written independently, but Andreas
+  Sturmlechner contributed his own changes in bug #518792 to provide a working
+  1.7.28 ebuild. Some of his changes were rather good, so I have adopted them in
+  the wine 1.7.28 bump to produce an ebuild better than what either of us had
+  created on our own.
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Remove description for USE="udisks" which is a global USE flag now.
