@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.71 2014/07/06 15:32:09 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.72 2014/10/05 22:10:31 caster Exp $
+
+*icedtea-bin-7.2.4.7-r1 (05 Oct 2014)
+*icedtea-bin-6.1.13.3-r4 (05 Oct 2014)
+
+  05 Oct 2014; Vlastimil Babka <caster@gentoo.org>
+  -icedtea-bin-6.1.13.3-r2.ebuild, +icedtea-bin-6.1.13.3-r4.ebuild,
+  +icedtea-bin-7.2.4.7-r1.ebuild:
+  Fix javaws symlinks, bug #504678.
 
   06 Jul 2014; Ralph Sennhauser <sera@gentoo.org>
   icedtea-bin-6.1.13.3-r3.ebuild:

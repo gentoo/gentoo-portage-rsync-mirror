@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.121 2014/05/17 15:22:54 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.122 2014/10/05 22:16:38 caster Exp $
+
+  05 Oct 2014; Vlastimil Babka <caster@gentoo.org> -icedtea-6.1.13.1.ebuild,
+  -icedtea-6.1.13.2.ebuild, icedtea-6.1.13.3.ebuild, -icedtea-7.2.4.5.ebuild,
+  -icedtea-7.2.4.6.ebuild, icedtea-7.2.4.7.ebuild:
+  Fix icedtea-web dependencies, bug #500264.
 
   17 May 2014; Sven Vermeulen <swift@gentoo.org> icedtea-6.1.12.7.ebuild,
   icedtea-6.1.13.1.ebuild, icedtea-6.1.13.2.ebuild, icedtea-6.1.13.3.ebuild,

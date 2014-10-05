@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.122 2014/10/05 21:39:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.123 2014/10/05 22:29:06 lu_zero Exp $
+
+*gpac-0.5.1_pre5456 (05 Oct 2014)
+
+  05 Oct 2014; Luca Barbato <lu_zero@gentoo.org> +gpac-0.5.1_pre5456.ebuild:
+  Add a snapshot compatible with recent libav.
 
 *gpac-9999 (05 Oct 2014)
 
