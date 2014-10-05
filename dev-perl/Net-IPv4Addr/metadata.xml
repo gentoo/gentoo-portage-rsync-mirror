@@ -5,4 +5,8 @@
   <maintainer>
     <email>mjo@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="cpan">Net-IPv4Addr</remote-id>
+    <remote-id type="cpan-module">Net::IPv4Addr</remote-id>
+  </upstream>
 </pkgmetadata>

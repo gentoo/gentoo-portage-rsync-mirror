@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.190 2014/09/22 14:08:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.191 2014/10/05 19:50:44 scarabeus Exp $
+
+  05 Oct 2014; Tomáš Chvátal <scarabeus@gentoo.org> rpm-4.12.0.1.ebuild:
+  Add missing dep over libarchive. Fixes bug#524538
 
 *rpm-4.12.0.1 (22 Sep 2014)
 
