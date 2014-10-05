@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.2-r1.ebuild,v 1.3 2014/10/05 15:18:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.2-r1.ebuild,v 1.4 2014/10/05 19:07:17 zerochaos Exp $
 
 EAPI=4
 
@@ -24,6 +24,7 @@ RDEPEND="dbus? ( sys-apps/dbus )
 	)
 	!kernel_linux? ( net-libs/libpcap )
 	qt4? (
+		dev-qt/qtcore:4
 		dev-qt/qtgui:4
 		dev-qt/qtsvg:4
 	)

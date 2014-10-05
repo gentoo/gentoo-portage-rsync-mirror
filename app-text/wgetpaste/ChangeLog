@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.144 2014/10/05 15:23:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.145 2014/10/05 19:09:22 zlogene Exp $
+
+  05 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> wgetpaste-2.25-r2.ebuild:
+  x86 stable wrt bug #523612
 
   05 Oct 2014; Manuel Rüger <mrueg@gentoo.org> wgetpaste-2.25-r2.ebuild:
   Mark stable on amd64. Bug #523612
