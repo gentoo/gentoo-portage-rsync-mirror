@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20140505.ebuild,v 1.2 2014/08/10 20:13:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20140929.ebuild,v 1.1 2014/10/05 16:41:02 jmbsvicetto Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit webapp depend.php
 

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=virtual/perl-ExtUtils-MakeMaker-6.300.0 virtual/perl-Exporter virtual/perl-Test-Simple virtual/perl-parent test? ( virtual/perl-File-Spec virtual/perl-Scalar-List-Utils virtual/perl-Test-Simple virtual/perl-if virtual/perl-version ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=Test for warnings and the lack of them
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Test-Warnings/
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
+RDEPEND=virtual/perl-Exporter virtual/perl-Test-Simple virtual/perl-parent dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/Test-Warnings-0.016.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f889e8437ffc64d766053d029c422c4e	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=762d8104a367b0af8ff2f0bc33af1077

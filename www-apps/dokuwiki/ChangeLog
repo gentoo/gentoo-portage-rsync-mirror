@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.66 2014/08/10 20:13:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.67 2014/10/05 16:41:02 jmbsvicetto Exp $
+
+*dokuwiki-20140929 (05 Oct 2014)
+*dokuwiki-20140505b (05 Oct 2014)
+
+  05 Oct 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +dokuwiki-20140505b.ebuild, +dokuwiki-20140929.ebuild,
+  -dokuwiki-20140505.ebuild:
+  Add 20140505b and 20140929 releases. Update to EAPI 5. Fixes bug 522146.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> dokuwiki-20120125.ebuild,
   dokuwiki-20120125a.ebuild, dokuwiki-20121013.ebuild,

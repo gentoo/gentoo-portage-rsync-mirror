@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Test-Warnings
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warnings/ChangeLog,v 1.1 2014/10/05 16:41:54 zlogene Exp $
+
+*Test-Warnings-0.16.0 (05 Oct 2014)
+
+  05 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> +Test-Warnings-0.16.0.ebuild,
+  +metadata.xml:
+  Initial commit
