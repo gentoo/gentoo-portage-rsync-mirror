@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.280 2014/10/04 08:20:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.281 2014/10/05 11:08:44 pacho Exp $
+
+  05 Oct 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.6-r200.ebuild,
+  webkit-gtk-2.4.6.ebuild:
+  geoloc support needs gdbus-codegen at build time (#524506 by Nils Holland)
 
 *webkit-gtk-2.4.6 (04 Oct 2014)
 *webkit-gtk-2.4.6-r200 (04 Oct 2014)
