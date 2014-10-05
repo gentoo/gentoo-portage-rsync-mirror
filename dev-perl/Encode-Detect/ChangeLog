@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Encode-Detect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Detect/ChangeLog,v 1.18 2014/09/28 17:58:31 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Detect/ChangeLog,v 1.19 2014/10/05 14:56:54 blueness Exp $
+
+  05 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  Encode-Detect-1.10.0-r1.ebuild:
+  Keyword ~ppc ~ppc64 for bug #521400
 
   28 Sep 2014; Mikle Kolyada <zlogene@gentoo.org>
   Encode-Detect-1.10.0-r1.ebuild:

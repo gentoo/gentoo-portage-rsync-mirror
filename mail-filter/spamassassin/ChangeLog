@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.251 2014/09/28 18:01:23 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.252 2014/10/05 14:58:11 blueness Exp $
+
+  05 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  spamassassin-3.4.0.ebuild:
+  Keyword ~ppc ~ppc64, bug #521400
 
   28 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> -spamassassin-3.3.2-r2.ebuild,
   -spamassassin-3.3.2-r4.ebuild:

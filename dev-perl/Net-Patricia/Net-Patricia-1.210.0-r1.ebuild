@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/Net-Patricia-1.210.0-r1.ebuild,v 1.5 2014/09/28 17:57:42 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/Net-Patricia-1.210.0-r1.ebuild,v 1.6 2014/10/05 14:55:54 blueness Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Patricia Trie perl module for fast IP address lookups"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ppc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="ipv6"
 
 RDEPEND="dev-perl/Net-CIDR-Lite

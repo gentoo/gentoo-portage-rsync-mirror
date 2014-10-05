@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.87 2014/10/04 08:53:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.88 2014/10/05 14:53:59 blueness Exp $
+
+  05 Oct 2014; Anthony G. Basile <blueness@gentoo.org> Geo-IP-1.420.0.ebuild,
+  Geo-IP-1.430.0.ebuild, Geo-IP-1.450.0.ebuild:
+  Keyword ~ppc64 for bug #521400
 
 *Geo-IP-1.450.0 (04 Oct 2014)
 
