@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/async_sinatra-1.1.0.ebuild,v 1.2 2014/05/15 01:22:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/async_sinatra-1.1.0.ebuild,v 1.3 2014/10/05 09:17:56 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.rdoc README.rdoc"
@@ -23,7 +23,6 @@ IUSE="test"
 ruby_add_bdepend "test? (
 	>=dev-ruby/hoe-2.9.1
 	>=dev-ruby/minitest-2.5.1
-	>=dev-ruby/rubyforge-2.0.4
 	>=dev-ruby/eventmachine-0.12.11
 	)"
 ruby_add_bdepend "doc? ( >=dev-ruby/hoe-2.9.1 )"
@@ -34,6 +33,9 @@ ruby_add_rdepend ">=dev-ruby/sinatra-1.3.2
 all_ruby_prepare() {
 	# Remove development dependencies that we don't have from the gemspec
 	sed -i -e '/\(hoe\|rdoc\|rubyforge\)/d' async_sinatra.gemspec || die
+
+	# Avoid obsolete rubyforge dependency.
+	sed -e '/rubyforge_name/ s:^:#:' -i Rakefile || die
 }
 
 all_ruby_install() {

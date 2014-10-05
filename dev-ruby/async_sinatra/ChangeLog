@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/async_sinatra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/ChangeLog,v 1.10 2014/05/15 01:22:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/ChangeLog,v 1.11 2014/10/05 09:17:56 graaff Exp $
+
+  05 Oct 2014; Hans de Graaff <graaff@gentoo.org> async_sinatra-1.1.0.ebuild:
+  Drop obsolete rubyforge dependency.
 
   15 May 2014; Manuel Rüger <mrueg@gentoo.org> async_sinatra-1.1.0.ebuild:
   Remove ruby18.
