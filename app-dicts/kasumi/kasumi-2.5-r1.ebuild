@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-2.5-r1.ebuild,v 1.2 2014/09/28 16:31:55 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-2.5-r1.ebuild,v 1.3 2014/10/05 11:51:07 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/41436/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~x86 ~x86-fbsd"
 IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2.6:2

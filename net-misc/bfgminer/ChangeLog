@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.70 2014/09/16 00:39:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.71 2014/10/05 11:56:10 blueness Exp $
+
+*bfgminer-4.7.2 (05 Oct 2014)
+*bfgminer-4.9.0 (05 Oct 2014)
+
+  05 Oct 2014; Anthony G. Basile <blueness@gentoo.org> +bfgminer-4.7.2.ebuild,
+  +bfgminer-4.9.0.ebuild:
+  Version bumps
 
 *bfgminer-4.7.1 (16 Sep 2014)
 *bfgminer-4.8.0 (16 Sep 2014)

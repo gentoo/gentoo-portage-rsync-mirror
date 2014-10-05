@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.30 2014/09/19 08:56:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.31 2014/10/05 11:50:06 ago Exp $
+
+  05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> cairo-0.12.5.0-r1.ebuild:
+  Stable for ppc, wrt bug #507390
 
   19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> cairo-0.12.5.0-r1.ebuild:
   Stable for ppc64, wrt bug #507390

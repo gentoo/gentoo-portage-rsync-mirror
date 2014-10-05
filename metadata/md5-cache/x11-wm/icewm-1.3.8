@@ -4,7 +4,7 @@ DESCRIPTION=Ice Window Manager with Themes
 EAPI=5
 HOMEPAGE=http://www.icewm.org/
 IUSE=bidi debug gnome minimal nls truetype uclibc xinerama python_targets_python2_7 python_single_target_python2_7
-KEYWORDS=~alpha amd64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha amd64 ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=x11-libs/gdk-pixbuf:2 x11-libs/libX11 x11-libs/libXrandr x11-libs/libXext x11-libs/libXpm x11-libs/libXrender x11-libs/libXft x11-libs/libSM x11-libs/libICE xinerama? ( x11-libs/libXinerama ) bidi? ( dev-libs/fribidi ) gnome? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/pyxdg gnome-base/gnome-desktop:2 gnome-base/gnome-menus gnome-base/libgnomeui ) nls? ( sys-devel/gettext ) truetype? ( >=media-libs/freetype-2.0.9 ) media-libs/giflib
 REQUIRED_USE=gnome? ( python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 ) )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/icewm/icewm-1.3.8.tar.gz
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=da6a7dd6f202b6ddca8dba699eb23519
+_md5_=cd4be2ad4ec6d4475a6a01b818965347
