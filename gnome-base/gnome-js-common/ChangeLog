@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-js-common
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-js-common/ChangeLog,v 1.11 2013/12/08 18:30:36 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-js-common/ChangeLog,v 1.12 2014/10/05 12:08:28 ago Exp $
+
+  05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> gnome-js-common-0.1.2.ebuild:
+  Stable for ppc, wrt bug #513396
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnome-js-common-0.1.2.ebuild:
   x86 stable, bug #478252

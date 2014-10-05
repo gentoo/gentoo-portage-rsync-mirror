@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/lockdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.23 2014/08/21 12:52:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.24 2014/10/05 12:26:59 blueness Exp $
+
+  05 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  lockdev-1.0.3.1.2-r2.ebuild, lockdev-1.0.3.1.2-r3.ebuild:
+  Keyword ~ppc and ~ppc64, bug #493156
 
   21 Aug 2014; Raúl Porcel <armin76@gentoo.org> lockdev-1.0.3.1.2-r2.ebuild,
   lockdev-1.0.3.1.2-r3.ebuild:

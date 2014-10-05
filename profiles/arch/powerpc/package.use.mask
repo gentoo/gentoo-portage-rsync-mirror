@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.215 2014/10/03 09:38:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.216 2014/10/05 12:29:41 blueness Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (03 Oct 2014)
 # Missing keywords, bug #524352
@@ -92,10 +92,6 @@ net-misc/modemmanager mbim
 
 # Pacho Ramos <pacho@gentoo.org> (11 Jan 2013)
 sys-kernel/dracut -dracut_modules_systemd
-
-# Pacho Ramos <pacho@gentoo.org> (02 Dec 2013)        
-# Missing keywords, bug #493156
-media-libs/libgphoto2 serial
 
 # Pacho Ramos <pacho@gentoo.org> (28 Nov 2013)
 # Missing keywords, bug #492820

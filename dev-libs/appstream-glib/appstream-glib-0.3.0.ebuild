@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.0.ebuild,v 1.2 2014/09/28 10:03:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.0.ebuild,v 1.3 2014/10/05 12:19:10 eva Exp $
 
 EAPI=5
 
@@ -31,9 +31,11 @@ RDEPEND="
 	dev-libs/libyaml
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
 "
+# gtk-doc required until package is released properly
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.3
 	dev-libs/libxslt
+	>=dev-util/gtk-doc-1.21
 	>=dev-util/gtk-doc-am-1.9
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17

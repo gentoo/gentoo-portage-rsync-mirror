@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.244 2014/07/27 11:34:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.245 2014/10/05 12:08:16 ago Exp $
+
+  05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> liferea-1.10.8.ebuild:
+  Stable for ppc, wrt bug #513396
 
   26 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> liferea-1.10.8.ebuild:
   x86 stable wrt bug #513396

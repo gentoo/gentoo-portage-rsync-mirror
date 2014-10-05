@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-js-common/gnome-js-common-0.1.2.ebuild,v 1.11 2013/12/08 18:30:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-js-common/gnome-js-common-0.1.2.ebuild,v 1.12 2014/10/05 12:08:28 ago Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ HOMEPAGE="http://gnome.org/"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-fbsd"
 IUSE=""
 
 RDEPEND=""

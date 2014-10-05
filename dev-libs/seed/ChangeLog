@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/seed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/ChangeLog,v 1.20 2014/04/26 07:00:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/ChangeLog,v 1.21 2014/10/05 12:08:24 ago Exp $
+
+  05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> seed-3.8.1.ebuild:
+  Stable for ppc, wrt bug #513396
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -seed-3.2.0-r1.ebuild:
   drop old
