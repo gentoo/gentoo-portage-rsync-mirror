@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.429 2014/08/24 07:14:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.430 2014/10/05 07:31:17 grobian Exp $
+
+  05 Oct 2014; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask portage-2.2.14_rc1 due to multiple breakages
 
   24 Aug 2014; Fabian Groffen <grobian@gentoo.org> package.mask:
   Mask bison-3.0.2 for it is not ready for general use yet
