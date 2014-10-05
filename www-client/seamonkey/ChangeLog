@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.496 2014/10/04 20:04:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.497 2014/10/05 18:08:51 polynomial-c Exp $
+
+  05 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.29.1.ebuild:
+  Removed QA warming (useless blank line).
 
 *seamonkey-2.29.1 (04 Oct 2014)
 
