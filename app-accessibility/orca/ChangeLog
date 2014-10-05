@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.137 2014/10/04 10:30:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.138 2014/10/05 12:35:09 eva Exp $
+
+  05 Oct 2014; Gilles Dartiguelongue <eva@gentoo.org> orca-3.12.3.ebuild:
+  Add missing dependency on python USE flag for brltty.
 
   04 Oct 2014; Pacho Ramos <pacho@gentoo.org> orca-3.12.3.ebuild:
   Needs python liblouis

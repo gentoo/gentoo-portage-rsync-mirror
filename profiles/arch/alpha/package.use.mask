@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.163 2014/08/20 12:16:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.164 2014/10/05 12:33:58 eva Exp $
+
+# Gilles Dartiguelongue <eva@gentoo.org> (05 Oct 2014
+# Missing keyword on app-accessibility/brltty
+app-accessibility/orca braille
 
 # Maciej Mrozowski <reavertm@gentoo.org> (13 Aug 2014)
 # Missing keywords on dev-libs/protobuf-c (bug 519772)

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.12.3.ebuild,v 1.3 2014/10/04 10:30:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.12.3.ebuild,v 1.4 2014/10/05 12:35:09 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -31,7 +31,7 @@ COMMON_DEPEND="
 	>=dev-python/pygobject-3.10:3[${PYTHON_USEDEP}]
 	>=x11-libs/gtk+-3.6.2:3[introspection]
 	braille? (
-		>=app-accessibility/brltty-5.0-r3[${PYTHON_USEDEP}]
+		>=app-accessibility/brltty-5.0-r3[python,${PYTHON_USEDEP}]
 		dev-libs/liblouis[python,${PYTHON_USEDEP}] )
 	${PYTHON_DEPS}
 "

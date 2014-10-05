@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.199 2014/09/01 14:26:52 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.200 2014/10/05 12:33:58 eva Exp $
+
+  05 Oct 2014; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
+  Add use.mask for app-accessibility/orca due to missing keywords, bug #524352.
 
   01 Sep 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
   mask >=media-video/mpv-0.4.2 explicitly wrt #521808
