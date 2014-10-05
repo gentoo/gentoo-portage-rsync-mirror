@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9420 2014/10/04 14:31:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9421 2014/10/05 08:49:36 jauhien Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Oct 2014; Jauhien Piatlicki <jauhien@gentoo.org> base/package.use.mask,
+  package.mask:
+  mask x11-misc/sddm because of bug 524390 until it is solved
 
   04 Oct 2014; Ulrich Müller <ulm@gentoo.org> license_groups:
   Remove skype-4.0.0.7-third-party_attributions.txt from MISC-FREE license

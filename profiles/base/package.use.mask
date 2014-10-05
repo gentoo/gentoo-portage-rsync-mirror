@@ -1,10 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.610 2014/10/01 14:12:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.611 2014/10/05 08:49:36 jauhien Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Jauhien Piatlicki <jauhien@gentoo.org> (5 Oct 2014)
+# Masked because of bug 524390: privilege escalation
+# until upstream fixes this security issue.
+# Use at your own risk
+lxqt-base/lxqt-meta sddm
 
 # Sergey Popov <pinkbyte@gentoo.org> (01 Oct 2014)
 # Mask multislot USE flag for packages, where it breaks
