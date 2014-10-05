@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.289 2014/10/05 12:29:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.290 2014/10/05 14:30:29 blueness Exp $
+
+  05 Oct 2014; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  Unmask braille USE flag, bug #524352
 
   05 Oct 2014; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Unmask media-libs/libgphoto2 serial, bug #493156

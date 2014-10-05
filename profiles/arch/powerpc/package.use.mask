@@ -1,10 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.216 2014/10/05 12:29:41 blueness Exp $
-
-# Pacho Ramos <pacho@gentoo.org> (03 Oct 2014)
-# Missing keywords, bug #524352
->=app-accessibility/orca-3.12.3 braille
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.217 2014/10/05 14:30:29 blueness Exp $
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (16 Sep 2014)
 # Needs libepoxy keywording, bug #510940
