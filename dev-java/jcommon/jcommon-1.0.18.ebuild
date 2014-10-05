@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-1.0.18.ebuild,v 1.4 2014/08/16 10:15:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-1.0.18.ebuild,v 1.5 2014/10/05 10:44:14 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/jfreechart/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="1.0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 RDEPEND="
