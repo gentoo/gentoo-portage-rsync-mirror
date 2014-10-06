@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare test
+DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
+DESCRIPTION=Utilities and libraries for NUMA systems
+EAPI=4
+HOMEPAGE=http://oss.sgi.com/projects/libnuma/
+KEYWORDS=~amd64 -arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=ftp://oss.sgi.com/www/projects/libnuma/download/numactl-2.0.10.tar.gz
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=efce40782c932433a40de85812b232db
