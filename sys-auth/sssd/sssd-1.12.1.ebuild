@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.12.1.ebuild,v 1.1 2014/09/14 10:20:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.12.1.ebuild,v 1.2 2014/10/06 19:00:55 ago Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="http://fedorahosted.org/released/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="acl augeas autofs +locator netlink nfsv4 nls +manpages python selinux sudo ssh test"
 
 COMMON_DEP="

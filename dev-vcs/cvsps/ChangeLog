@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cvsps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.24 2014/09/03 17:20:45 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.25 2014/10/06 18:38:36 grobian Exp $
+
+  06 Oct 2014; Fabian Groffen <grobian@gentoo.org> cvsps-3.13-r1.ebuild:
+  Fix out of Prefix, bug #521708
 
   03 Sep 2014; Christoph Junghans <ottxor@gentoo.org> cvsps-2.2_beta1.ebuild:
   added ~x64-macos (tested by me)
