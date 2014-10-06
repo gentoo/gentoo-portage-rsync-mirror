@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/elasticsearch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.6 2014/09/18 10:36:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.7 2014/10/06 14:36:26 chainsaw Exp $
+
+*elasticsearch-1.3.2-r1 (06 Oct 2014)
+
+  06 Oct 2014; Tony Vroon <chainsaw@gentoo.org> +elasticsearch-1.3.2-r1.ebuild,
+  +files/elasticsearch.init3, +files/elasticsearch.service2:
+  Much improved init script, systemd service file and user configuration
+  respect after a refactoring by Ferenc Erki. His work closes bug #523236 and
+  #523238.
 
   18 Sep 2014; Tony Vroon <chainsaw@gentoo.org> elasticsearch-1.3.2.ebuild:
   Version the JRE dependency as only Java 7 is acceptable. As suggested by

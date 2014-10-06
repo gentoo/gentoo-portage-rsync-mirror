@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmtime
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtime/ChangeLog,v 1.4 2012/05/11 09:43:13 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtime/ChangeLog,v 1.5 2014/10/06 14:44:22 voyageur Exp $
+
+*wmtime-1.1 (06 Oct 2014)
+
+  06 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org> +wmtime-1.1.ebuild:
+  Version bump with new homepage
 
 *wmtime-1.0_beta2_p10 (11 May 2012)
 
