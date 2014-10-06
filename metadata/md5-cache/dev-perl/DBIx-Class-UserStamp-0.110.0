@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/Class-Accessor-Grouped dev-perl/DBIx-Class-DynamicDefault dev-perl/DBIx-Class || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=dev-perl/Class-Accessor-Grouped dev-perl/DBIx-Class-DynamicDefault dev-perl/DBIx-Class dev-lang/perl:=[-build(-)]
 DESCRIPTION=Automatically set update and create user id fields
-EAPI=4
+EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/DBIx-Class-UserStamp/
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=dev-perl/Class-Accessor-Grouped dev-perl/DBIx-Class-DynamicDefault dev-perl/DBIx-Class || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=dev-perl/Class-Accessor-Grouped dev-perl/DBIx-Class-DynamicDefault dev-perl/DBIx-Class dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/J/JG/JGOULAH/DBIx-Class-UserStamp-0.11.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f889e8437ffc64d766053d029c422c4e	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=499cc17b1fb619c5fbc4b506b4819104
+_md5_=c307e3096f7b413f42bc6b41fea4e234
