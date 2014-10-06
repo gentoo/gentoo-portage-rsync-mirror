@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.10.3.ebuild,v 1.1 2014/02/12 13:46:58 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.10.3.ebuild,v 1.2 2014/10/06 03:26:42 gienah Exp $
 
 EAPI="5"
 
@@ -68,6 +68,7 @@ SRC_URI="!binary?
 (	https://github.com/scala/scala/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	${JURI[@]}
 	http://dev.gentoo.org/~gienah/snapshots/${P}-maven-deps.tar.gz
+	http://dev.gentoo.org/~gienah/snapshots/${P}-maven-deps-2.tar.gz
 )
 binary? ( http://dev.gentoo.org/~gienah/files/dist/${P}-gentoo-binary.tar.bz2 )"
 
@@ -78,9 +79,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="binary emacs"
 
 COMMON_DEP="dev-java/ant-core:0
-	dev-java/bndlib:0
-	dev-java/hawtjni-runtime:0
-	dev-java/junit:4"
+	dev-java/hawtjni-runtime:0"
 
 DEPEND="${COMMON_DEP}
 	>=virtual/jdk-1.6.0
@@ -130,7 +129,7 @@ src_unpack() {
 }
 
 java_prepare() {
-	java-pkg_getjars ant-core,bndlib,hawtjni-runtime,junit-4
+	java-pkg_getjars ant-core,hawtjni-runtime
 
 	if ! use binary; then
 		local j
@@ -149,63 +148,15 @@ java_prepare() {
 		fi
 		# Note: to bump scala, some things to try are:
 		# 1. update all the sha1s in JURI
-		# 2. comment out applying the maven-deps patch and all the stuff here up to and including the sed of build.xml
+		# 2. remove the http://dev.gentoo.org/~gienah/snapshots/${P}-maven-deps.tar.gz from SRC_URI
 		# 3. try emerge scala.  Check if it downloads more stuff in src_compile to ${WORDIR}/.m2
-		# 4. If it does download more stuff to ${WORDIR}/.m2, then tar up the stuff in ${WORDIR}/.m2 and add
-		# ${P}-maven-deps.tar.gz in SRC_URI to point to it.
-		# Add this stuff to ${P}-maven-deps.tar.gz as well (or to portage)
-		# tar cvf scala-2.10.3-maven-deps.tar .m2/repository/biz/aQute/bnd \
-		#   .m2/repository/com/googlecode/java-diff-utils/diffutils/ .m2/repository/org/ops4j/
-		# 5. uncomment the maven-deps patch apply and all the stuff up to and including the sed of build.xml
-		# 6. the hash in ${P}-no-git.patch should be updated by searching for hash matching the scala release
-		# tag, so that the source code hyper-links in the scala documentation will point to the correct version of
-		# the source code.
-		# Bug 482192
-		epatch "${FILESDIR}/${PN}-2.10.3-maven-deps.patch"
-		# we have $(java-config -p bndlib) in portage, but not bnd.
-		local bnd_classpath=""
-		for i in $(find "${WORKDIR}/.m2/repository/biz/aQute/bnd" -type f -name *.jar -print)
-		do
-			if [ -z "${bnd_classpath}" ]
-			then
-				bnd_classpath="${i}"
-			else
-				bnd_classpath="${bnd_classpath}:${i}"
-			fi
-		done
-		bnd_classpath="${bnd_classpath}:$(java-config -p bndlib)"
-
-		# pax runner appears to only be used in the tests
-		local paxrunner_classpath=""
-		for i in $(find "${WORKDIR}/.m2/repository/org/ops4j/" -type f -name *.jar -print)
-		do
-			if [ -z "${paxrunner_classpath}" ]
-			then
-				paxrunner_classpath="${i}"
-			else
-				paxrunner_classpath="${paxrunner_classpath}:${i}"
-			fi
-		done
-		paxrunner_classpath="${paxrunner_classpath}:$(java-config -p junit-4)"
-
-		# DiffUtils does not appear to be in portage.  It is placed in ${partest.extras.classpath} and
-		# copied to ${build-pack.dir}/lib in ${PN}-2.10.2-maven-deps.patch.
-		local diffutils_classpath=""
-		for i in $(find "${WORKDIR}/.m2/repository/com/googlecode/java-diff-utils" -type f -name *.jar -print)
-		do
-			if [ -z "${diffutils_classpath}" ]
-			then
-				diffutils_classpath="${i}"
-			else
-				diffutils_classpath="${diffutils_classpath}:${i}"
-			fi
-		done
-
-		sed -e "s@BNDLIB_CLASSPATH@${bnd_classpath}@" \
-			-e "s@PAX_RUNNER_CLASSPATH@${paxrunner_classpath}@" \
-			-e "s@DIFFUTILS_CLASSPATH@${diffutils_classpath}@" \
+		# or /var/tmp/portage/.m2 or /root/.m2
+		# 4. tar up all the .m2 junk into ${P}-maven-deps.tar.gz and add it to SRC_URI.
+		sed -e "s@\(<mkdir dir=\"\)\${user.home}\(/.m2/repository\"/>\)@\1${WORKDIR}\2\n      <artifact:localRepository id=\"localrepo\" path=\"${WORKDIR}/.m2/repository\" />@" \
+			-e "s@\${user.home}/.m2@${WORKDIR}/.m2@g" \
+			-e 's@\(<artifact:dependencies .*>\)@\1\n        <localRepository refid="localrepo" />@g' \
 			-i "${S}/build.xml" \
-			|| die "could not sed classpaths in build.xml"
+			|| die "Could not change location of .m2 maven download directory in ${S}/build.xml"
 
 		# Remove this test as it fails.
 		#   [partest] testing: [...]/files/run/parserJavaIdent.scala                        [FAILED]
