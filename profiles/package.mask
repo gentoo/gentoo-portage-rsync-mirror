@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16074 2014/10/06 16:31:08 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16075 2014/10/06 19:37:22 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,11 +34,6 @@
 # Mask texlive-2014
 =dev-libs/kpathsea-6.2.0_p20140523
 =dev-tex/luatex-0.79.1
-
-# Ulrich Müller <ulm@gentoo.org> (5 Oct 2014)
-# Fails to build with USE="-pam", bug 524074.
-# Masked by QA, waiting for fix by maintainer.
-=app-admin/sudo-1.8.11
 
 # Jauhien Piatlicki <jauhien@gentoo.org> (5 Oct 2014)
 # Masked because of bug 524390: privilege escalation

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.11.ebuild,v 1.1 2014/09/29 21:29:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.11.ebuild,v 1.2 2014/10/06 19:35:59 flameeyes Exp $
 
 EAPI=5
 
-inherit eutils pam multilib libtool
+inherit eutils pam multilib libtool autotools
 
 MY_P=${P/_/}
 MY_P=${MY_P/beta/b}
@@ -54,6 +54,13 @@ RESTRICT=test
 MAKEOPTS+=" SAMPLES="
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-1.8.11-shadow.patch"
+
+	# Fix the Makefile.in to use automake-style install-sh parameters.
+	sed -i -e '/INSTALL/ { s: -O : -o :; s: -G : -g :; }' \
+		**/Makefile.in || die
+
+	eautoreconf
 	elibtoolize
 }
 

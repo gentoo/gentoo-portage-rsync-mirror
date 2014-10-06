@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.365 2014/09/29 21:29:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.366 2014/10/06 19:35:59 flameeyes Exp $
+
+  06 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/sudo-1.8.11-shadow.patch, sudo-1.8.11.ebuild:
+  Add upstream patch for bug #524074.
 
 *sudo-1.8.11 (29 Sep 2014)
 
