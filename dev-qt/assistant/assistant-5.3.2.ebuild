@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/assistant/assistant-5.3.2.ebuild,v 1.1 2014/09/16 14:43:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/assistant/assistant-5.3.2.ebuild,v 1.2 2014/10/06 09:53:19 kensington Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ DEPEND="
 	>=dev-qt/qtprintsupport-${PV}:5[debug=]
 	>=dev-qt/qtsql-${PV}:5[debug=,sqlite]
 	>=dev-qt/qtwidgets-${PV}:5[debug=]
-	webkit? ( >=dev-qt/qtwebkit-${PV}:5[debug=,widgets] )
+	webkit? ( >=dev-qt/qtwebkit-${PV}:5[debug=] )
 "
 RDEPEND="${DEPEND}"
 

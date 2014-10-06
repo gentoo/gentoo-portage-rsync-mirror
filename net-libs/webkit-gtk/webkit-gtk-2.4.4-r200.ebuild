@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.4-r200.ebuild,v 1.10 2014/09/15 08:23:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.4-r200.ebuild,v 1.11 2014/10/06 09:42:42 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,6 +12,7 @@ MY_P="webkitgtk-${PV}"
 DESCRIPTION="Open source web browser engine"
 HOMEPAGE="http://www.webkitgtk.org/"
 SRC_URI="http://www.webkitgtk.org/releases/${MY_P}.tar.xz"
+RESTRICT="mirror" #524584
 
 LICENSE="LGPL-2+ BSD"
 SLOT="2" # no usable subslot

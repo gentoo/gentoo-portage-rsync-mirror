@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.281 2014/10/05 11:08:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.282 2014/10/06 09:42:42 pacho Exp $
+
+  06 Oct 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.6-r200.ebuild,
+  webkit-gtk-2.2.6.ebuild, webkit-gtk-2.4.4-r200.ebuild,
+  webkit-gtk-2.4.4.ebuild:
+  Restrict mirror for old versions due bug 524584
 
   05 Oct 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.6-r200.ebuild,
   webkit-gtk-2.4.6.ebuild:
