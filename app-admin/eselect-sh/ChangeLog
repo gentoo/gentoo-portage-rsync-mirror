@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/eselect-sh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/ChangeLog,v 1.30 2014/10/04 22:35:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/ChangeLog,v 1.32 2014/10/06 22:24:23 mgorny Exp $
+
+  06 Oct 2014; Michał Górny <mgorny@gentoo.org> -eselect-sh-0.4-r1.ebuild,
+  -files/sh.eselect-0.4, eselect-sh-0.4-r2.ebuild:
+  Transfer stable keywords (only broken implementation was removed) and remove
+  old.
+
+*eselect-sh-0.4-r2 (06 Oct 2014)
+
+  06 Oct 2014; Michał Górny <mgorny@gentoo.org> +eselect-sh-0.4-r2.ebuild,
+  +files/sh.eselect-0.4-r2, -files/sh.eselect-0.4-r1:
+  Remove zsh due to POSIX incompatibilities, bug #524572. Also remove busybox,
+  this time for real.
 
   04 Oct 2014; Joshua Kinard <kumba@gentoo.org> eselect-sh-0.4-r1.ebuild:
   Added ~mips to KEYWORDS.

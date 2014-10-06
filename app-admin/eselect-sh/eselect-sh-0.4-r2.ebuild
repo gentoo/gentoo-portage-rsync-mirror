@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/eselect-sh-0.4-r1.ebuild,v 1.2 2014/10/04 22:35:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/eselect-sh-0.4-r2.ebuild,v 1.2 2014/10/06 22:24:23 mgorny Exp $
 
 EAPI=5
 
@@ -19,5 +19,5 @@ S=${FILESDIR}
 
 src_install() {
 	insinto /usr/share/eselect/modules
-	newins sh.eselect-${PV} sh.eselect
+	newins sh.eselect-${PVR} sh.eselect
 }

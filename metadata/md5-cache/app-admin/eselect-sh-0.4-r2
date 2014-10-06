@@ -6,4 +6,4 @@ KEYWORDS=alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd6
 LICENSE=GPL-2
 RDEPEND=app-admin/eselect-lib-bin-symlink
 SLOT=0
-_md5_=cda1526bb8411f9cd3ed3a8f08d25878
+_md5_=276fe642f8e26b4fd354b854e12f8893
