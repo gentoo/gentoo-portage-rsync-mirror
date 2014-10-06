@@ -1,0 +1,14 @@
+# ChangeLog for x11-misc/rofi
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rofi/ChangeLog,v 1.2 2014/10/06 08:48:42 jer Exp $
+
+  06 Oct 2014; Jeroen Roovers <jer@gentoo.org> rofi-0.14.9.ebuild:
+  Setting --disable-gcov would of course enable it.
+
+*rofi-0.14.9 (06 Oct 2014)
+
+  06 Oct 2014; Jeroen Roovers <jer@gentoo.org> +rofi-0.14.9.ebuild,
+  +files/rofi-0.14.9-optional-i3.patch, +files/rofi-0.14.9-test.patch,
+  +metadata.xml:
+  Initial commit (bug #524596 by Alexander Berntsen).
+

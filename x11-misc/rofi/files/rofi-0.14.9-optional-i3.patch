@@ -1,0 +1,16 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -21,8 +21,11 @@
+ ##
+ # I3 check
+ ##
+-AC_CHECK_HEADERS([i3/ipc.h],
+-	[i3_header=yes; break;])
++AC_ARG_WITH(i3,
++        [  --with-i3               compile in support for the i3 window manager],
++		AS_IF([test "x$with_i3" != xno], 
++        AC_CHECK_HEADERS([i3/ipc.h],
++	    [i3_header=yes; break;])))
+ 
+ 
+ dnl ---------------------------------------------------------------------

@@ -1,0 +1,8 @@
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1,5 +1,3 @@
+-SUBDIRS=test
+-
+ ##
+ # Rofi the program
+ ##
