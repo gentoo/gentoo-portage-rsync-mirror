@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.4.ebuild,v 1.14 2014/10/06 10:37:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.4-r201.ebuild,v 1.1 2014/10/06 14:08:04 leio Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -11,12 +11,12 @@ inherit autotools check-reqs eutils flag-o-matic gnome2 pax-utils python-any-r1 
 MY_P="webkitgtk-${PV}"
 DESCRIPTION="Open source web browser engine"
 HOMEPAGE="http://www.webkitgtk.org/"
-SRC_URI="http://www.webkitgtk.org/releases/${MY_P}.tar.xz"
+SRC_URI="http://www.webkitgtk.org/releases/${MY_P}a.tar.xz"
 
 LICENSE="LGPL-2+ BSD"
-SLOT="3/25" # soname version of libwebkit2gtk-3.0
-KEYWORDS="alpha amd64 ~arm ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
-IUSE="aqua coverage debug +egl +geoloc gles2 +gstreamer +introspection +jit libsecret +opengl spell wayland +webgl +X"
+SLOT="2" # no usable subslot
+KEYWORDS="alpha amd64 ~arm ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
+IUSE="aqua coverage debug +egl +geoloc gles2 +gstreamer +introspection +jit libsecret +opengl spell +webgl +X"
 # bugs 372493, 416331
 REQUIRED_USE="
 	geoloc? ( introspection )
@@ -24,13 +24,10 @@ REQUIRED_USE="
 	gles2? ( egl )
 	webgl? ( ^^ ( gles2 opengl ) )
 	!webgl? ( ?? ( gles2 opengl ) )
-	|| ( aqua wayland X )
+	|| ( aqua X )
 "
 
 # use sqlite, svg by default
-# Aqua support in gtk3 is untested
-# gtk2 is needed for plugin process support
-# gtk3-3.10 required for wayland
 RDEPEND="
 	dev-libs/libxml2:2
 	dev-libs/libxslt
@@ -40,7 +37,6 @@ RDEPEND="
 	>=media-libs/libpng-1.4:0=
 	>=x11-libs/cairo-1.10:=[X]
 	>=dev-libs/glib-2.36.0:2
-	>=x11-libs/gtk+-3.6.0:3[aqua=,introspection?]
 	>=dev-libs/icu-3.8.1-r1:=
 	>=net-libs/libsoup-2.42.0:2.4[introspection?]
 	dev-db/sqlite:3=
@@ -59,7 +55,6 @@ RDEPEND="
 	libsecret? ( app-crypt/libsecret )
 	opengl? ( virtual/opengl )
 	spell? ( >=app-text/enchant-0.22:= )
-	wayland? ( >=x11-libs/gtk+-3.10:3[wayland] )
 	webgl? (
 		x11-libs/cairo[opengl]
 		x11-libs/libXcomposite
@@ -76,7 +71,6 @@ DEPEND="${RDEPEND}
 		virtual/rubygems[ruby_targets_ruby21]
 		virtual/rubygems[ruby_targets_ruby19]
 	)
-	>=app-accessibility/at-spi2-core-2.5.3
 	>=dev-libs/atk-2.8.0
 	>=dev-util/gtk-doc-am-1.10
 	dev-util/gperf
@@ -164,7 +158,7 @@ src_prepare() {
 	# bug #459978, upstream bug #113397
 	epatch "${FILESDIR}/${PN}-1.11.90-gtk-docize-fix.patch"
 
-	# FIXME: Needs updating, but probably unneeded in 2.4 as it has a 
+	# FIXME: Needs updating, but probably unneeded in 2.4 as it has a
 	# "developer mode" for this
 	# Do not build unittests unless requested, upstream bug #128163
 #	epatch "${FILESDIR}"/${PN}-2.2.4-unittests-build.patch
@@ -180,10 +174,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.2.5-{hppa,ia64}-platform.patch
 	# https://bugs.webkit.org/show_bug.cgi?id=129542
 	epatch "${FILESDIR}"/${PN}-2.4.1-ia64-malloc.patch
-
-	# Fix building on ppc (from OpenBSD, only needed on slot 3)
-	# https://bugs.webkit.org/show_bug.cgi?id=130837
-	epatch "${FILESDIR}"/${PN}-2.4.4-atomic-ppc.patch
 
 	epatch "${FILESDIR}"/${P}-jpeg-9a.patch #481688
 
@@ -230,7 +220,6 @@ src_configure() {
 	# TODO: Check Web Audio support
 	# should somehow let user select between them?
 	#
-	# * Aqua support in gtk3 is untested
 	# * dependency-tracking is required so parallel builds won't fail
 	gnome2_src_configure \
 		$(use_enable aqua quartz-target) \
@@ -248,9 +237,9 @@ src_configure() {
 		$(use_enable spell spellcheck) \
 		$(use_enable webgl) \
 		$(use_enable webgl accelerated-compositing) \
-		$(use_enable wayland wayland-target) \
 		$(use_enable X x11-target) \
-		--with-gtk=3.0 \
+		--with-gtk=2.0 \
+		--disable-webkit2 \
 		--enable-dependency-tracking \
 		--disable-gtk-doc \
 		${myconf}
@@ -261,6 +250,7 @@ src_compile() {
 	unset DISPLAY
 	gnome2_src_compile
 }
+
 src_test() {
 	# Tests expect an out-of-source build in WebKitBuild
 	ln -s . WebKitBuild || die "ln failed"
@@ -285,7 +275,11 @@ src_install() {
 	newdoc Source/WebCore/ChangeLog ChangeLog.WebCore
 
 	# Prevents crashes on PaX systems
-	use jit && pax-mark m "${ED}usr/bin/jsc-3"
+	use jit && pax-mark m "${ED}usr/bin/jsc-1"
+
+	# File collisions with slot 3
+	# bug #402699, https://bugs.webkit.org/show_bug.cgi?id=78134
+	rm -rf "${ED}usr/share/gtk-doc" || die
 }
 
 nvidia_check() {

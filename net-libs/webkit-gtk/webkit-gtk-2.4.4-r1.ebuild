@@ -1,22 +1,22 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.6.ebuild,v 1.12 2014/10/06 10:37:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.4-r1.ebuild,v 1.1 2014/10/06 14:08:04 leio Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} )
 GCONF_DEBUG="no"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit autotools check-reqs eutils flag-o-matic gnome2 pax-utils python-any-r1 toolchain-funcs versionator virtualx
 
 MY_P="webkitgtk-${PV}"
 DESCRIPTION="Open source web browser engine"
 HOMEPAGE="http://www.webkitgtk.org/"
-SRC_URI="http://www.webkitgtk.org/releases/${MY_P}.tar.xz"
+SRC_URI="http://www.webkitgtk.org/releases/${MY_P}a.tar.xz"
 
 LICENSE="LGPL-2+ BSD"
-SLOT="3/29" # soname version
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
-IUSE="aqua coverage debug +egl +geoloc gles2 +gstreamer +introspection +jit libsecret +opengl spell +webgl"
+SLOT="3/25" # soname version of libwebkit2gtk-3.0
+KEYWORDS="alpha amd64 ~arm ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
+IUSE="aqua coverage debug +egl +geoloc gles2 +gstreamer +introspection +jit libsecret +opengl spell wayland +webgl +X"
 # bugs 372493, 416331
 REQUIRED_USE="
 	geoloc? ( introspection )
@@ -24,6 +24,7 @@ REQUIRED_USE="
 	gles2? ( egl )
 	webgl? ( ^^ ( gles2 opengl ) )
 	!webgl? ( ?? ( gles2 opengl ) )
+	|| ( aqua wayland X )
 "
 
 # use sqlite, svg by default
@@ -49,7 +50,7 @@ RDEPEND="
 	>=x11-libs/gtk+-2.24.10:2
 
 	egl? ( media-libs/mesa[egl] )
-	geoloc? ( app-misc/geoclue:0 )
+	geoloc? ( >=app-misc/geoclue-2.1.5:2.0 )
 	gles2? ( media-libs/mesa[gles2] )
 	gstreamer? (
 		>=media-libs/gstreamer-1.2:1.0
@@ -58,6 +59,7 @@ RDEPEND="
 	libsecret? ( app-crypt/libsecret )
 	opengl? ( virtual/opengl )
 	spell? ( >=app-text/enchant-0.22:= )
+	wayland? ( >=x11-libs/gtk+-3.10:3[wayland] )
 	webgl? (
 		x11-libs/cairo[opengl]
 		x11-libs/libXcomposite
@@ -80,7 +82,7 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	>=sys-devel/bison-2.4.3
 	>=sys-devel/flex-2.5.33
-	|| ( >=sys-devel/gcc-4.7 >=sys-devel/clang-3.0 )
+	|| ( >=sys-devel/gcc-4.7 >=sys-devel/clang-3.3 )
 	sys-devel/gettext
 	>=sys-devel/make-3.82-r4
 	virtual/pkgconfig
@@ -98,17 +100,21 @@ S="${WORKDIR}/${MY_P}"
 CHECKREQS_DISK_BUILD="18G" # and even this might not be enough, bug #417307
 
 pkg_pretend() {
+	nvidia_check || die #463960
+
 	if [[ ${MERGE_TYPE} != "binary" ]] && is-flagq "-g*" && ! is-flagq "-g*0" ; then
 		einfo "Checking for sufficient disk space to build ${PN} with debugging CFLAGS"
 		check-reqs_pkg_pretend
 	fi
 
 	if ! test-flag-CXX -std=c++11; then
-		die "You need at least GCC 4.7.x or Clang >= 3.0 for C++11-specific compiler flags"
+		die "You need at least GCC 4.7.x or Clang >= 3.3 for C++11-specific compiler flags"
 	fi
 }
 
 pkg_setup() {
+	nvidia_check || die #463960
+
 	# Check whether any of the debugging flags is enabled
 	if [[ ${MERGE_TYPE} != "binary" ]] && is-flagq "-g*" && ! is-flagq "-g*0" ; then
 		if is-flagq "-ggdb" && [[ ${WEBKIT_GTK_GGDB} != "yes" ]]; then
@@ -132,14 +138,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	DOCS="ChangeLog NEWS" # other ChangeLog files handled by src_install
-
 	# intermediate MacPorts hack while upstream bug is not fixed properly
 	# https://bugs.webkit.org/show_bug.cgi?id=28727
 	use aqua && epatch "${FILESDIR}"/${PN}-1.6.1-darwin-quartz.patch
 
-	# Don't force -O2
-	sed -i 's/-O2//g' "${S}"/Source/autotools/SetupCompilerFlags.m4 || die
+	# Leave optimization level to user CFLAGS
+	# FORTIFY_SOURCE is enabled by default in Gentoo
+	sed -e 's/-O[012]//g' \
+		-e 's/-D_FORTIFY_SOURCE=2//g' \
+		-i Source/autotools/SetupCompilerFlags.m4 || die
 
 	# Failing tests
 	# * webinspector -> https://bugs.webkit.org/show_bug.cgi?id=50744
@@ -152,16 +159,15 @@ src_prepare() {
 		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testmimehandling/ d' \
 		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebdatasource/ d' \
 		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebplugindatabase/ d' \
-		-i Source/WebKit/gtk/GNUmakefile.am || die
-
-	# Respect CC, otherwise fails on prefix #395875
-	tc-export CC
+		-i Tools/TestWebKitAPI/GNUmakefile.am || die
 
 	# bug #459978, upstream bug #113397
 	epatch "${FILESDIR}/${PN}-1.11.90-gtk-docize-fix.patch"
 
+	# FIXME: Needs updating, but probably unneeded in 2.4 as it has a 
+	# "developer mode" for this
 	# Do not build unittests unless requested, upstream bug #128163
-	epatch "${FILESDIR}"/${PN}-2.2.4-unittests-build.patch
+#	epatch "${FILESDIR}"/${PN}-2.2.4-unittests-build.patch
 
 	# Deadlock causing infinite compilations with nvidia-drivers:
 	# https://bugs.gentoo.org/show_bug.cgi?id=463960
@@ -173,11 +179,13 @@ src_prepare() {
 	# https://bugs.webkit.org/show_bug.cgi?id=129540
 	epatch "${FILESDIR}"/${PN}-2.2.5-{hppa,ia64}-platform.patch
 	# https://bugs.webkit.org/show_bug.cgi?id=129542
-	epatch "${FILESDIR}"/${PN}-2.2.5-ia64-malloc.patch
+	epatch "${FILESDIR}"/${PN}-2.4.1-ia64-malloc.patch
 
-	# OpenBSD patches to fix support for some arches
-	# https://bugs.webkit.org/show_bug.cgi?id=86835
-	epatch "${FILESDIR}"/${PN}-2.2.5-sparc64-build.patch
+	# Fix building on ppc (from OpenBSD, only needed on slot 3)
+	# https://bugs.webkit.org/show_bug.cgi?id=130837
+	epatch "${FILESDIR}"/${PN}-2.4.4-atomic-ppc.patch
+
+	epatch "${FILESDIR}"/${P}-jpeg-9a.patch #481688
 
 	AT_M4DIR=Source/autotools eautoreconf
 
@@ -185,6 +193,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# Respect CC, otherwise fails on prefix #395875
+	tc-export CC
+
 	# Arches without JIT support also need this to really disable it in all places
 	use jit || append-cppflags -DENABLE_JIT=0 -DENABLE_YARR_JIT=0 -DENABLE_ASSEMBLER=0
 
@@ -222,6 +233,7 @@ src_configure() {
 	# * Aqua support in gtk3 is untested
 	# * dependency-tracking is required so parallel builds won't fail
 	gnome2_src_configure \
+		$(use_enable aqua quartz-target) \
 		$(use_enable coverage) \
 		$(use_enable debug) \
 		$(use_enable egl) \
@@ -236,13 +248,19 @@ src_configure() {
 		$(use_enable spell spellcheck) \
 		$(use_enable webgl) \
 		$(use_enable webgl accelerated-compositing) \
+		$(use_enable wayland wayland-target) \
+		$(use_enable X x11-target) \
 		--with-gtk=3.0 \
 		--enable-dependency-tracking \
 		--disable-gtk-doc \
-		$(usex aqua "--with-font-backend=pango --with-target=quartz" "")
 		${myconf}
 }
 
+src_compile() {
+	# Try to avoid issues like bug #463960
+	unset DISPLAY
+	gnome2_src_compile
+}
 src_test() {
 	# Tests expect an out-of-source build in WebKitBuild
 	ln -s . WebKitBuild || die "ln failed"
@@ -257,6 +275,8 @@ src_test() {
 }
 
 src_install() {
+	DOCS="ChangeLog NEWS" # other ChangeLog files handled by src_install
+
 	# https://bugs.webkit.org/show_bug.cgi?id=129242
 	MAKEOPTS="${MAKEOPTS} -j1" gnome2_src_install
 
@@ -266,4 +286,21 @@ src_install() {
 
 	# Prevents crashes on PaX systems
 	use jit && pax-mark m "${ED}usr/bin/jsc-3"
+}
+
+nvidia_check() {
+	if [[ ${MERGE_TYPE} != "binary" ]] &&
+	   use introspection &&
+	   has_version '=x11-drivers/nvidia-drivers-325*' &&
+	   [[ $(eselect opengl show 2> /dev/null) = "nvidia" ]]
+	then
+		eerror "${PN} freezes while compiling if x11-drivers/nvidia-drivers-325.* is"
+		eerror "used as the system OpenGL library."
+		eerror "You can either update to >=nvidia-drivers-331.13, or temporarily select"
+		eerror "Mesa as the system OpenGL library:"
+		eerror " # eselect opengl set xorg-x11"
+		eerror "See https://bugs.gentoo.org/463960 for more details."
+		eerror
+		return 1
+	fi
 }
