@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/rakudo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/ChangeLog,v 1.61 2014/09/19 06:41:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/ChangeLog,v 1.62 2014/10/06 01:09:57 patrick Exp $
+
+*rakudo-2014.09-r1 (06 Oct 2014)
+
+  06 Oct 2014; Patrick Lauer <patrick@gentoo.org> +rakudo-2014.09-r1.ebuild:
+  Fix parrot dep #524520
 
 *rakudo-2014.09 (19 Sep 2014)
 

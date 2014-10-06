@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.314 2014/05/23 08:21:26 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.315 2014/10/06 01:06:16 leio Exp $
+
+*wxGTK-3.0.1.1 (06 Oct 2014)
+
+  06 Oct 2014; Mart Raudsepp <leio@gentoo.org> +wxGTK-3.0.1.1.ebuild:
+  Version bump (bug #515120)
 
   23 May 2014; Ryan Hill <rhill@gentoo.org> -wxGTK-2.8.12.1.ebuild,
   wxGTK-2.8.12.1-r1.ebuild, wxGTK-3.0.0.0.ebuild:

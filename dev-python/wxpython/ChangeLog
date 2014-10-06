@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.207 2014/05/19 18:13:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.208 2014/10/06 01:09:03 leio Exp $
+
+*wxpython-3.0.1.1 (06 Oct 2014)
+
+  06 Oct 2014; Mart Raudsepp <leio@gentoo.org> +wxpython-3.0.1.1.ebuild:
+  Version bump
 
   19 May 2014; Michał Górny <mgorny@gentoo.org> -wxpython-2.8.12.1-r1.ebuild:
   Drop the old versions that required python-exec:0.
