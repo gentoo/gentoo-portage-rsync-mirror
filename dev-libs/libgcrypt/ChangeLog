@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.221 2014/08/24 10:44:39 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.222 2014/10/06 17:44:25 armin76 Exp $
+
+  06 Oct 2014; Raúl Porcel <armin76@gentoo.org> libgcrypt-1.5.4.ebuild:
+  arm64/m68k/s390/sh stable
 
   24 Aug 2014; Kristian Fiskerstrand <k_f@gentoo.org> -libgcrypt-1.5.3.ebuild:
   Cleanup vulnerable versions for security bug #519396

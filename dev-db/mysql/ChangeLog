@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.692 2014/10/02 02:25:51 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.693 2014/10/06 17:35:01 grknight Exp $
+
+  06 Oct 2014;  <grknight@gentoo.org> mysql-5.5.39.ebuild, mysql-5.5.40.ebuild,
+  mysql-5.6.21.ebuild:
+  Update test data locations wrt bug 524158
 
   02 Oct 2014; Brian Evans <grknight@gentoo.org> mysql-5.5.39.ebuild,
   mysql-5.5.40.ebuild, mysql-5.6.20.ebuild, mysql-5.6.21.ebuild:

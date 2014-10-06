@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.5.39.ebuild,v 1.11 2014/10/02 02:25:50 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.5.39.ebuild,v 1.12 2014/10/06 17:35:01 grknight Exp $
 
 EAPI="5"
 
@@ -65,7 +65,7 @@ src_test() {
 		export MTR_BUILD_THREAD="$((${RANDOM} % 100))"
 
 		# create directories because mysqladmin might right out of order
-		mkdir -p "${S}"/mysql-test/var-tests{,/log}
+		mkdir -p "${T}"/var-tests{,/log}
 
 		# create symlink for the tests to find mysql_tzinfo_to_sql
 		ln -s "${CMAKE_BUILD_DIR}/sql/mysql_tzinfo_to_sql" "${S}/sql/"
@@ -108,7 +108,7 @@ src_test() {
 		pushd "${TESTDIR}"
 
 		# run mysql-test tests
-		perl mysql-test-run.pl --force --vardir="${S}/mysql-test/var-tests" \
+		perl mysql-test-run.pl --force --vardir="${T}/var-tests" \
 			--testcase-timeout=30
 		retstatus_tests=$?
 		[[ $retstatus_tests -eq 0 ]] || eerror "tests failed"
@@ -128,8 +128,6 @@ src_test() {
 		[[ -z "$failures" ]] || die "Test failures: $failures"
 		einfo "Tests successfully completed"
 
-		# Cleanup data files after tests
-		rm -r "${S}/mysql-test/var-tests" || die "Cleanup failed"
 	else
 
 		einfo "Skipping server tests due to minimal build."
