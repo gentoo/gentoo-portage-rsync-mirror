@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.97 2014/06/11 12:52:01 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.98 2014/10/06 12:34:17 tomka Exp $
+
+  06 Oct 2014; Thomas Kahle <tomka@gentoo.org> metadata.xml:
+  Remove me from metadata.xml
 
 *offlineimap-6.5.6 (11 Jun 2014)
 
