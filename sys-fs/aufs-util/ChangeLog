@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/aufs-util
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.38 2014/08/21 12:03:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.39 2014/10/06 08:24:09 jlec Exp $
+
+*aufs-util-3.16_p20141006 (06 Oct 2014)
+
+  06 Oct 2014; Justin Lecher <jlec@gentoo.org>
+  +aufs-util-3.16_p20141006.ebuild:
+  Version BUmp
 
   21 Aug 2014; Justin Lecher <jlec@gentoo.org> aufs-util-3.16_p20140818.ebuild:
   Useless blank line on last line

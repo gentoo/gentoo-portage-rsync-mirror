@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pam_yubico
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_yubico/ChangeLog,v 1.4 2014/08/19 02:33:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_yubico/ChangeLog,v 1.5 2014/10/06 08:12:58 jlec Exp $
+
+*pam_yubico-2.17 (06 Oct 2014)
+
+  06 Oct 2014; Justin Lecher <jlec@gentoo.org> +pam_yubico-2.17.ebuild,
+  metadata.xml:
+  Version BUmp
 
 *pam_yubico-2.16 (19 Aug 2014)
 
