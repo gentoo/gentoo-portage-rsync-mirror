@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.11.1.ebuild,v 1.1 2014/07/08 15:17:10 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.11.1.ebuild,v 1.2 2014/10/06 05:51:40 gienah Exp $
 
 EAPI="5"
 
@@ -56,6 +56,7 @@ HOMEPAGE="http://www.scala-lang.org/"
 SRC_URI="!binary?
 (	https://github.com/scala/scala/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	${JURI[@]}
+	http://dev.gentoo.org/~gienah/snapshots/${P}-maven-deps.tar.gz
 )
 binary? ( http://dev.gentoo.org/~gienah/files/dist/${P}-gentoo-binary.tar.bz2 )"
 
@@ -66,9 +67,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="binary emacs"
 
 COMMON_DEP="dev-java/ant-core:0
-	dev-java/bndlib:0
-	dev-java/hawtjni-runtime:0
-	dev-java/junit:4"
+	dev-java/hawtjni-runtime:0"
 
 DEPEND="${COMMON_DEP}
 	java-virtuals/jdk-with-com-sun:0
@@ -118,7 +117,7 @@ src_unpack() {
 }
 
 java_prepare() {
-	java-pkg_getjars ant-core,bndlib,hawtjni-runtime,junit-4
+	java-pkg_getjars ant-core,hawtjni-runtime
 
 	if ! use binary; then
 		local a
@@ -135,9 +134,15 @@ java_prepare() {
 		epatch "${FILESDIR}/${P}-no-git.patch"
 		# Note: to bump scala, some things to try are:
 		# 1. update all the sha1s in JURI
-		# 2. try emerge scala.  Check if it downloads more stuff in src_compile to ${WORDIR}/.m2
-		# 3. If it does download more stuff to ${WORDIR}/.m2, then there was some stuff to handle that in
-		# the scala-2.10.3 ebuild.
+		# 2. remove the http://dev.gentoo.org/~gienah/snapshots/${P}-maven-deps.tar.gz from SRC_URI
+		# 3. try emerge scala.  Check if it downloads more stuff in src_compile to ${WORDIR}/.m2
+		# or /var/tmp/portage/.m2 or /root/.m2
+		# 4. tar up all the .m2 junk into ${P}-maven-deps.tar.gz and add it to SRC_URI.
+		sed -e "s@\(<mkdir dir=\"\)\${user.home}\(/.m2/repository\"/>\)@\1${WORKDIR}\2\n      <artifact:localRepository id=\"localrepo\" path=\"${WORKDIR}/.m2/repository\" />@" \
+			-e "s@\${user.home}/.m2@${WORKDIR}/.m2@g" \
+			-e 's@\(<artifact:dependencies .*>\)@\1\n        <localRepository refid="localrepo" />@g' \
+			-i "${S}/build.xml" \
+			|| die "Could not change location of .m2 maven download directory in ${S}/build.xml"
 	fi
 }
 

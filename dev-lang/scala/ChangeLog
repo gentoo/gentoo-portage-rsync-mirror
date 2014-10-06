@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.39 2014/10/06 03:26:42 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.40 2014/10/06 05:51:40 gienah Exp $
+
+  06 Oct 2014; Mark Wright <gienah@gentoo.org> scala-2.11.1.ebuild,
+  scala-2.11.2.ebuild:
+  Bug 517166 - dev-lang/scala-2.11.1 - Unable to resolve artifact: Missing:
+  biz.aQute:bnd:jar:1.50.0. Thanks to Christian Strahl for reporting, mkaama for
+  helping. sed the build.xml to add in a localRepository pointing to
+  $WORKDIR/.m2/repository, and sed all of the artifact:dependencies to configure
+  them to use this localRepository. The localRepository is provided with the ${P
+  }-maven-deps.tar.gz file.
 
   06 Oct 2014; Mark Wright <gienah@gentoo.org>
   -files/scala-2.10.3-maven-deps.patch, scala-2.10.3.ebuild,
