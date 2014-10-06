@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.5-r4.ebuild,v 1.1 2014/10/04 09:21:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.5.1.ebuild,v 1.1 2014/10/06 16:52:31 polynomial-c Exp $
 
 EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs
 
-DEB_VER="6"
+DEB_PV="1.5-6"
 DESCRIPTION="Standard log daemons"
 HOMEPAGE="http://www.infodrom.org/projects/sysklogd/"
 SRC_URI="http://www.infodrom.org/projects/sysklogd/download/${P}.tar.gz
-	mirror://debian/pool/main/s/sysklogd/${PN}_${PV}-${DEB_VER}.diff.gz"
+	mirror://debian/pool/main/s/sysklogd/${PN}_${DEB_PV}.diff.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -23,20 +23,17 @@ RDEPEND="dev-lang/perl
 	sys-apps/debianutils"
 
 src_prepare() {
-	pushd "${WORKDIR}" >/dev/null
-	epatch "${WORKDIR}"/${PN}_${PV}-${DEB_VER}.diff
-	popd >/dev/null
+	epatch "${WORKDIR}"/${PN}_${DEB_PV}.diff
 
-	epatch "${FILESDIR}"/${P}-debian-cron.patch
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${PN}-1.5-debian-cron.patch
+	epatch "${FILESDIR}"/${PN}-1.5-build.patch
 
 	# CAEN/OWL security patches
 	epatch "${FILESDIR}"/${PN}-1.4.2-caen-owl-syslogd-bind.diff
 	epatch "${FILESDIR}"/${PN}-1.4.2-caen-owl-syslogd-drop-root.diff
 	epatch "${FILESDIR}"/${PN}-1.4.2-caen-owl-klogd-drop-root.diff
 
-	epatch "${FILESDIR}"/${P}-syslog-func-collision.patch #342601
-	epatch "${FILESDIR}"/${P}_CVE-2014-3634.diff #524058
+	epatch "${FILESDIR}"/${PN}-1.5-syslog-func-collision.patch #342601
 }
 
 src_configure() {
