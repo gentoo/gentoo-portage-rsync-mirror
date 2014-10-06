@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.20 2014/08/10 20:12:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.21 2014/10/05 23:37:21 rafaelmartins Exp $
 
 EAPI=5
 
@@ -33,8 +33,8 @@ REQUIRED_USE="|| ( git mercurial )
 	test? ( git mercurial )"
 
 RDEPEND="
-	=dev-python/click-2.0
-	=dev-python/docutils-0.11*
+	>=dev-python/click-2.0
+	>=dev-python/docutils-0.11
 	>=dev-python/flask-0.10.1
 	>=dev-python/flask-babel-0.7
 	>=dev-python/frozen-flask-0.7
@@ -42,7 +42,7 @@ RDEPEND="
 	dev-python/pyyaml
 	dev-python/setuptools
 	dev-python/pygments
-	git? ( =dev-python/pygit2-0.20* )
+	git? ( =dev-python/pygit2-0.21* )
 	mercurial? ( >=dev-vcs/mercurial-1.6 )"
 
 DEPEND="${RDEPEND}

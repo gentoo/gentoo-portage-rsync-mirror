@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=media-libs/fontconfig-2.6.0 >=media-libs/freetype-2.3.9 sys-libs/zlib cairo? ( dev-libs/glib:2 >=x11-libs/cairo-1.10.0 introspection? ( >=dev-libs/gobject-introspection-1.32.1 ) ) curl? ( net-misc/curl ) jpeg? ( virtual/jpeg:0 ) jpeg2k? ( media-libs/openjpeg:0 ) lcms? ( media-libs/lcms:2 ) png? ( media-libs/libpng:0= ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtxml:5 ) tiff? ( media-libs/tiff:0 ) virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=PDF rendering library based on the xpdf-3.0 code base
+EAPI=5
+HOMEPAGE=http://poppler.freedesktop.org/
+IUSE=cairo cjk curl cxx debug doc +introspection +jpeg jpeg2k +lcms png qt4 qt5 tiff +utils
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+LICENSE=GPL-2
+RDEPEND=>=media-libs/fontconfig-2.6.0 >=media-libs/freetype-2.3.9 sys-libs/zlib cairo? ( dev-libs/glib:2 >=x11-libs/cairo-1.10.0 introspection? ( >=dev-libs/gobject-introspection-1.32.1 ) ) curl? ( net-misc/curl ) jpeg? ( virtual/jpeg:0 ) jpeg2k? ( media-libs/openjpeg:0 ) lcms? ( media-libs/lcms:2 ) png? ( media-libs/libpng:0= ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtxml:5 ) tiff? ( media-libs/tiff:0 ) cjk? ( >=app-text/poppler-data-0.4.4 )
+RESTRICT=test
+SLOT=0/46
+SRC_URI=http://poppler.freedesktop.org/poppler-0.26.5.tar.xz
+_eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=28e0d4395f6ccfe4a716bde44a223fcc

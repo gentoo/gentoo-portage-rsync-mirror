@@ -1,6 +1,11 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.430 2014/09/12 19:24:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.431 2014/10/05 23:50:56 mrueg Exp $
+
+*poppler-0.26.5 (05 Oct 2014)
+
+  05 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +poppler-0.26.5.ebuild:
+  Version bump.
 
   12 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -poppler-0.26.2.ebuild, -poppler-0.26.3.ebuild:
