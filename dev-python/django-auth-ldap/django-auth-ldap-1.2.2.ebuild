@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/django-auth-ldap-1.2.2.ebuild,v 1.1 2014/10/06 15:53:48 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/django-auth-ldap-1.2.2.ebuild,v 1.2 2014/10/06 16:08:04 ercpe Exp $
 
 EAPI=5
 # Although setup.py claims to support py3, python-ldap does not
@@ -35,7 +35,7 @@ python_compile_all() {
 }
 
 python_test() {
-	PYTHONPATH=. "${PYTHON}" test/manage.py test
+	PYTHONPATH=. "${PYTHON}" test/manage.py test || die
 }
 
 python_install_all() {
