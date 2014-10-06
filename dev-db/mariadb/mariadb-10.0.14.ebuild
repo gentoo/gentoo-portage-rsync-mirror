@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-10.0.14.ebuild,v 1.2 2014/10/02 02:32:22 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-10.0.14.ebuild,v 1.3 2014/10/06 17:28:40 grknight Exp $
 
 EAPI="5"
 MY_EXTRAS_VER="20140924-1913Z"
@@ -61,7 +61,7 @@ multilib_src_test() {
 		export MTR_PARALLEL="${MTR_PARALLEL:-auto}"
 
 		# create directories because mysqladmin might right out of order
-		mkdir -p "${S}"/mysql-test/var-tests{,/log}
+		mkdir -p "${T}"/var-tests{,/log}
 
 		# These are failing in MariaDB 10.0 for now and are believed to be
 		# false positives:
@@ -88,7 +88,7 @@ multilib_src_test() {
 		pushd "${TESTDIR}"
 
 		# run mysql-test tests
-		perl mysql-test-run.pl --force --vardir="${S}/mysql-test/var-tests"
+		perl mysql-test-run.pl --force --vardir="${T}/var-tests"
 
 		retstatus_tests=$?
 		[[ $retstatus_tests -eq 0 ]] || eerror "tests failed"
@@ -108,8 +108,6 @@ multilib_src_test() {
 		[[ -z "$failures" ]] || die "Test failures: $failures"
 		einfo "Tests successfully completed"
 
-		# Cleanup data files after tests
-		rm -r "${S}/mysql-test/var-tests" || die "Cleanup failed"
 	else
 
 		einfo "Skipping server tests due to minimal build."

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.54 2014/10/02 02:32:22 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.55 2014/10/06 17:28:40 grknight Exp $
+
+  06 Oct 2014;  <grknight@gentoo.org> mariadb-10.0.14.ebuild,
+  mariadb-5.5.39.ebuild:
+  Update test data locations wrt bug 524158
 
   02 Oct 2014; Brian Evans <grknight@gentoo.org> mariadb-10.0.12.ebuild,
   mariadb-10.0.14.ebuild, mariadb-5.5.39.ebuild:
