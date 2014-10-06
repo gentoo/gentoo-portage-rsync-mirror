@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmbutton
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.17 2014/08/10 20:05:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.18 2014/10/06 13:35:56 voyageur Exp $
+
+*wmbutton-0.7.0 (06 Oct 2014)
+
+  06 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org> +wmbutton-0.7.0.ebuild,
+  +files/wmbutton-0.7.0-Makefile.patch, -files/wmbutton.desktop,
+  -files/wmbutton-cflags.patch:
+  Version bump with new homepage (also fixes #515186), remove some unused files
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmbutton-0.6.1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

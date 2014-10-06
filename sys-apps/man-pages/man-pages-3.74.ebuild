@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.71.ebuild,v 1.1 2014/08/22 03:30:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.74.ebuild,v 1.1 2014/10/06 13:56:01 polynomial-c Exp $
 
 EAPI=4
 

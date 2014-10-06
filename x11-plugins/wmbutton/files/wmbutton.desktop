@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=WmButton
-Comment=Dockapp with up to nine configurable buttons
-Comment[pl]=Dockapp z max dzięwięcioma konfigurowalnymi przyciskami
-Exec=wmbutton
-Type=Application
-Encoding=UTF-8
-Terminal=0
-Categories=Application;Utility;
