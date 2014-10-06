@@ -1,6 +1,18 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.414 2014/10/04 08:53:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.415 2014/10/06 06:32:08 polynomial-c Exp $
+
+*bash-4.3_p30 (06 Oct 2014)
+*bash-4.2_p53 (06 Oct 2014)
+*bash-4.1_p17 (06 Oct 2014)
+*bash-4.0_p44 (06 Oct 2014)
+*bash-3.2_p57 (06 Oct 2014)
+*bash-3.1_p23 (06 Oct 2014)
+
+  06 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> +bash-3.1_p23.ebuild,
+  +bash-3.2_p57.ebuild, +bash-4.0_p44.ebuild, +bash-4.1_p17.ebuild,
+  +bash-4.2_p53.ebuild, -bash-4.3_p29.ebuild, +bash-4.3_p30.ebuild:
+  Security bump (bug #524256). Should fix CVE-2014-6278.
 
   04 Oct 2014; Agostino Sarubbo <ago@gentoo.org> bash-3.1_p22.ebuild,
   bash-3.2_p56.ebuild, bash-4.0_p43.ebuild, bash-4.1_p16.ebuild,

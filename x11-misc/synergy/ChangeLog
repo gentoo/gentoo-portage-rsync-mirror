@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.117 2014/08/09 09:23:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.118 2014/10/06 06:52:47 jer Exp $
+
+*synergy-1.5.1_p2398 (06 Oct 2014)
+
+  06 Oct 2014; Jeroen Roovers <jer@gentoo.org> +synergy-1.5.1_p2398.ebuild:
+  Version bump (bug #524566 by Thanh Ha).
 
   09 Aug 2014; Jeroen Roovers <jer@gentoo.org> -synergy-1.4.15.ebuild,
   synergy-1.4.16_p1969.ebuild, synergy-1.5.0_p2278.ebuild,

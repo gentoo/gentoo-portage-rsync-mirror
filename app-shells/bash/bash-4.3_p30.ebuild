@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p29.ebuild,v 1.1 2014/10/03 09:56:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p30.ebuild,v 1.1 2014/10/06 06:32:08 polynomial-c Exp $
 
 EAPI="4"
 
