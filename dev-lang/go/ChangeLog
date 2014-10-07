@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.46 2014/08/28 11:20:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.47 2014/10/07 14:34:24 williamh Exp $
+
+*go-1.3.3 (07 Oct 2014)
+
+  07 Oct 2014; William Hubbs <williamh@gentoo.org> +go-1.3.3.ebuild:
+  version bump
 
   28 Aug 2014; Michał Górny <mgorny@gentoo.org> go-1.3.1.ebuild:
   Remove USE=bash-completion, install the completion file unconditionally
