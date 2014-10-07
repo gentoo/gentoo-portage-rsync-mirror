@@ -1,6 +1,18 @@
 # ChangeLog for gnome-extra/cinnamon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.48 2014/10/02 10:18:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.49 2014/10/07 11:38:11 pacho Exp $
+
+*cinnamon-2.2.16-r2 (07 Oct 2014)
+
+  07 Oct 2014; Pacho Ramos <pacho@gentoo.org> +cinnamon-2.2.16-r2.ebuild,
+  +files/cinnamon-2.2.16-calendar-upower.patch,
+  +files/cinnamon-2.2.16-gnome-3.14.patch,
+  +files/cinnamon-2.2.16-set-wheel.patch,
+  +files/polkit-cinnamon-authentication-agent-1.desktop,
+  -cinnamon-2.2.16.ebuild:
+  Apply patches from Fedora and Arch to fix various bugs, fix compatibility with
+  gnome-3.14, ensure authentication-agent is run, stop using gksu, don't rely on
+  sudo, fix compat with latest upower.
 
 *cinnamon-2.2.16-r1 (02 Oct 2014)
 
