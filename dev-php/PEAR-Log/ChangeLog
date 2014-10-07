@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Log
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.103 2014/01/26 18:31:30 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.104 2014/10/07 02:59:25 grknight Exp $
+
+  07 Oct 2014; Brian Evans <grknight@gentoo.org> -PEAR-Log-1.12.7.ebuild:
+  Remove old
 
   26 Jan 2014; Ole Markus With <olemarkus@gentoo.org> PEAR-Log-1.12.7-r1.ebuild,
   PEAR-Log-1.12.7.ebuild:
