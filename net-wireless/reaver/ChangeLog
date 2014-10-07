@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/reaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/reaver/ChangeLog,v 1.4 2014/10/07 18:06:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/reaver/ChangeLog,v 1.5 2014/10/07 18:58:15 jer Exp $
+
+*reaver-1.4-r3 (07 Oct 2014)
+
+  07 Oct 2014; Jeroen Roovers <jer@gentoo.org> -reaver-1.4-r2.ebuild,
+  +reaver-1.4-r3.ebuild, +files/reaver-1.4_memset.patch,
+  +files/reaver-1.4_wps_registrar.patch:
+  Fix some compiler warnings.
 
 *reaver-1.4-r2 (07 Oct 2014)
 

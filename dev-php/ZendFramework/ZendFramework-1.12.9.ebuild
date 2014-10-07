@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ZendFramework-1.11.6.ebuild,v 1.9 2014/08/10 20:58:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ZendFramework-1.12.9.ebuild,v 1.1 2014/10/07 18:40:07 grknight Exp $
 
-EAPI="2"
+EAPI=5
 
 PHP_LIB_NAME="Zend"
 
 inherit php-lib-r1
 
-KEYWORDS="amd64 hppa x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 
 DESCRIPTION="Zend Framework is a high quality and open source framework for developing Web Applications"
 HOMEPAGE="http://framework.zend.com/"
@@ -19,11 +19,10 @@ SRC_URI="!minimal? ( http://framework.zend.com/releases/${P}/${P}.tar.gz )
 		http://framework.zend.com/releases/${P}/${P}-manual-en.tar.gz )"
 LICENSE="BSD"
 SLOT="0"
-IUSE="doc examples minimal cli"
+IUSE="cli doc examples minimal"
 
 DEPEND="cli? ( dev-lang/php[simplexml,tokenizer] )"
 RDEPEND="${DEPEND}"
-need_php_by_category
 
 src_prepare() {
 	if use minimal ; then
@@ -46,17 +45,13 @@ src_install() {
 	if ! use minimal ; then
 		insinto /usr/share/php
 		doins -r externals/dojo
-	fi
-
-	if use examples ; then
-		insinto /usr/share/doc/${PF}
-
-		if ! use minimal ; then
+		if use examples ; then
+			insinto /usr/share/doc/${PF}
 			doins -r demos
 		fi
 	fi
 
-	dodoc README.txt
+	dodoc README.md
 	if use doc ; then
 		dohtml -r documentation/*
 	fi

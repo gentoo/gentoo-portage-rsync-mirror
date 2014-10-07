@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/reaver/reaver-1.4-r2.ebuild,v 1.1 2014/10/07 18:06:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/reaver/reaver-1.4-r3.ebuild,v 1.1 2014/10/07 18:58:15 jer Exp $
 
-EAPI=4
+EAPI=5
 
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
@@ -15,18 +15,21 @@ SRC_URI="http://reaver-wps.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
-DEPEND="net-libs/libpcap
-		dev-db/sqlite:3"
+DEPEND="
+	net-libs/libpcap
+	dev-db/sqlite:3
+"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}/src"
 
 PATCHES=(
 	"${FILESDIR}"/${P}_cflags.patch
+	"${FILESDIR}"/${P}_memset.patch
 	"${FILESDIR}"/${P}_parallel-make.patch
 	"${FILESDIR}"/${P}_var_db.patch
+	"${FILESDIR}"/${P}_wps_registrar.patch
 )
 
 src_compile() {
