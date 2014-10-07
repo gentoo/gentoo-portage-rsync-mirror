@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.6.ebuild,v 1.1 2014/07/01 10:34:50 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.7.ebuild,v 1.1 2014/10/07 13:09:52 ultrabug Exp $
 
 EAPI="5"
 
@@ -123,7 +123,7 @@ want_apache2
 
 S="${WORKDIR}/${MY_P}"
 APXS2_S="${S}/apache2"
-APACHE2_MOD_CONF="42_mod_uwsgi-r1 42_mod_uwsgi"
+APACHE2_MOD_CONF="42_mod_uwsgi-r2 42_mod_uwsgi"
 
 src_unpack() {
 	default
@@ -326,7 +326,7 @@ pkg_postinst() {
 		elog "Therefore you can enable only one of them at a time."
 		elog "mod_uwsgi is commercially supported by Unbit and stable but a bit hacky."
 		elog "mod_Ruwsgi is newer and more Apache-API friendly but not commercially supported."
-		elog "mod_proxy_uwsgi is the newest and not considered ready for production yet."
+		elog "mod_proxy_uwsgi is a proxy module, considered stable and is now the recommended module."
 	fi
 
 	elog "Append the following options to the uwsgi call to load the respective language plugin:"
