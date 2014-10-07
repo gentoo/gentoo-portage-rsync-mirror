@@ -1,6 +1,12 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.151 2014/10/04 04:50:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.152 2014/10/07 19:51:37 sping Exp $
+
+*smplayer-14.9.0-r1 (07 Oct 2014)
+
+  07 Oct 2014; Sebastian Pipping <sping@gentoo.org> +smplayer-14.9.0-r1.ebuild,
+  +files/smplayer-14.9.0-zero-bidi.patch:
+  Guard passing -noflip-hebrew to mplayer 1.x by USE=bidi (bug #507588)
 
   04 Oct 2014; Ben de Groot <yngwin@gentoo.org> metadata.xml,
   smplayer-14.9.0.ebuild:
