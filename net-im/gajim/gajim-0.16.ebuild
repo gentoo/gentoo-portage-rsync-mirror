@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16.ebuild,v 1.1 2014/10/06 07:12:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16.ebuild,v 1.2 2014/10/07 08:16:14 jlec Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	dev-python/pyasn1[${PYTHON_USEDEP}]
 	>=dev-python/pyopenssl-0.14[${PYTHON_USEDEP}]
-	>=dev-python/python-nbxmpp-0.5[${PYTHON_USEDEP}]
+	>=dev-python/python-nbxmpp-0.5.1[${PYTHON_USEDEP}]
 	crypt? (
 		app-crypt/gnupg
 		dev-python/pycrypto[${PYTHON_USEDEP}]
@@ -76,6 +76,8 @@ RDEPEND="${COMMON_DEPEND}
 RESTRICT="test"
 
 S="${WORKDIR}"/${MY_P}
+
+PATCHES=( "${FILESDIR}"/${P}-desktop.patch )
 
 src_prepare() {
 	autotools-utils_src_prepare

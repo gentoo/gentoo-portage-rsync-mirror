@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/markdown-2.4.ebuild,v 1.1 2014/04/12 04:16:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/markdown-2.5.1.ebuild,v 1.1 2014/10/07 08:23:32 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -19,42 +19,27 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-linux ~x86-macos"
 IUSE="doc test pygments"
 
-DEPEND="test? ( dev-python/nose[${PYTHON_USEDEP}] )"
+DEPEND="test? ( dev-python/nose[${PYTHON_USEDEP}]
+		dev-python/pyyaml[${PYTHON_USEDEP}] )"
+# source cites pytidylib however from testruns it appears optional
 RDEPEND="pygments? ( dev-python/pygments[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
-
-python_prepare_all() {
-	# do not build docs over and over again
-	sed -i -e "/'build':/s:md_build:build:" setup.py || die
-
-	distutils-r1_python_prepare_all
-}
 
 python_compile_all() {
 	use doc && esetup.py build_docs
 }
 
-python_install_all() {
-	if use doc; then
-		local DOCS=( docs/. )
-
-		# templates which we don't want in docdir
-		rm -f docs/*.{html,css,png}
-	fi
-
-	distutils-r1_python_install_all
-}
-
 python_test() {
 	cp -r -l run-tests.py tests "${BUILD_DIR}"/ || die
 	pushd "${BUILD_DIR}" > /dev/null
-
-	if [[ ${EPYTHON} == python3* ]]; then
-		# don't use -n: it causes writes to hardlinked files
-		2to3 -w --no-diffs tests || die
-	fi
-
 	"${PYTHON}" run-tests.py || die "Tests fail with ${EPYTHON}"
 	popd > /dev/null
+}
+
+python_install_all() {
+	# make use doc do a doc build
+	use doc && local HTML_DOCS=( "${BUILD_DIR}"/docs/. )
+
+	distutils-r1_python_install_all
 }

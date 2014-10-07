@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.126 2014/10/04 21:13:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.127 2014/10/07 08:09:24 idella4 Exp $
+
+*pygments-1.6_p20140324-r1 (07 Oct 2014)
+
+  07 Oct 2014; Ian Delaney <idella4@gentoo.org>
+  +pygments-1.6_p20140324-r1.ebuild:
+  revbump; rename (data) file to pygmentize to effect bash-completion, fixes Bug
+  #521166
 
   04 Oct 2014; Jeroen Roovers <jer@gentoo.org> pygments-1.6_p20140324.ebuild:
   Stable for HPPA (bug #524416).

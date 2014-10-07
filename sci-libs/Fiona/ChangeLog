@@ -1,6 +1,17 @@
 # ChangeLog for sci-libs/Fiona
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/ChangeLog,v 1.2 2014/07/06 12:55:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/ChangeLog,v 1.4 2014/10/07 08:14:10 slis Exp $
+
+*Fiona-1.4.1 (07 Oct 2014)
+
+  07 Oct 2014; Sławek Lis <slis@gentoo.org> +Fiona-1.4.1.ebuild:
+  new slot added
+
+*Fiona-1.1.6 (07 Oct 2014)
+
+  07 Oct 2014; Sławek Lis <slis@gentoo.org> +Fiona-1.1.6.ebuild,
+  -Fiona-1.1.2.ebuild:
+  version bump, remove old
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> Fiona-1.1.2.ebuild,
   Fiona-9999.ebuild:

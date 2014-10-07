@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.53 2014/05/26 08:46:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.54 2014/10/07 08:23:32 idella4 Exp $
+
+*markdown-2.5.1 (07 Oct 2014)
+
+  07 Oct 2014; Ian Delaney <idella4@gentoo.org> +markdown-2.5.1.ebuild,
+  -markdown-2.1.0.ebuild, -markdown-2.2.0.ebuild, -markdown-2.2.1.ebuild,
+  -markdown-2.3.ebuild, -markdown-2.4.ebuild, markdown-2.4.1.ebuild:
+  clean old pypy impl for 2.4.1, bump; update deps, rm redundant phase
+  python_prepare_all, make use doc do an actual doc build, update test and
+  install phases
 
 *markdown-2.4.1 (26 May 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6_beta4.ebuild,v 1.2 2014/09/20 09:39:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6_beta5.ebuild,v 1.1 2014/10/07 08:17:57 jer Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils
