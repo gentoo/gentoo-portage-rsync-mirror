@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.253 2014/08/22 18:38:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.254 2014/10/07 01:01:47 chutzpah Exp $
+
+*dnsmasq-2.72 (07 Oct 2014)
+
+  07 Oct 2014; Patrick McLean <chutzpah@gentoo.org> +dnsmasq-2.72.ebuild,
+  +files/dnsmasq-init-dhcp-r1:
+  Version bump, move leases file creation to init script (bug #524036). Add
+  code to try to prevent leases file from being removed by portage.
 
 *dnsmasq-2.71-r1 (22 Aug 2014)
 
