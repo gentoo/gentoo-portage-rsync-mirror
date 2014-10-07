@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.123 2014/10/05 22:29:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.124 2014/10/07 22:17:32 lu_zero Exp $
+
+  07 Oct 2014; Luca Barbato <lu_zero@gentoo.org> gpac-0.5.1_pre5456.ebuild,
+  gpac-9999.ebuild:
+  Drop = from the --disable-foo=*) match, fix bug #524728
 
 *gpac-0.5.1_pre5456 (05 Oct 2014)
 

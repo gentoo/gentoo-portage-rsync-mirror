@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.71 2014/10/04 12:17:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.72 2014/10/07 22:11:24 blueness Exp $
+
+  07 Oct 2014; Anthony G. Basile <blueness@gentoo.org> imake-1.0.7.ebuild:
+  Stable for ppc and ppc64, bug #499166
 
   04 Oct 2014; Markus Meier <maekke@gentoo.org> imake-1.0.7.ebuild:
   arm stable, bug #499166

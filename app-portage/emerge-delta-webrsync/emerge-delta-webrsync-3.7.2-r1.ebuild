@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.7.2.ebuild,v 1.1 2014/09/27 20:26:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.7.2-r1.ebuild,v 1.1 2014/10/07 22:10:46 zmedico Exp $
 
-EAPI=4
+EAPI=5
 DESCRIPTION="emerge-webrsync using patches to minimize bandwidth"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 SRC_URI="https://raw.githubusercontent.com/gentoo/portage/779a9e686d89e31af43e33b1163b01aeff65d7ea/misc/emerge-delta-webrsync -> ${P}"
@@ -21,6 +21,11 @@ S=${WORKDIR}
 
 src_unpack() {
 	cp "${DISTDIR}/${P}" "${WORKDIR}/" || die
+}
+
+src_prepare() {
+	# Remove premature `rm -fr "${TMPDIR}"` for bug #506192.
+	sed -e '334,336d' -i ${P} || die
 }
 
 src_install() {

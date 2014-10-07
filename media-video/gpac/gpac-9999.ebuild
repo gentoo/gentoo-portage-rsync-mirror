@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-9999.ebuild,v 1.1 2014/10/05 21:39:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-9999.ebuild,v 1.2 2014/10/07 22:17:32 lu_zero Exp $
 
 EAPI=4
 
@@ -66,6 +66,7 @@ my_use() {
 src_prepare() {
 	epatch	"${FILESDIR}"/110_all_implicitdecls.patch \
 			"${FILESDIR}"/${PN}-0.5.1-build-fixes.patch
+	sed -i -e "s:\(--disable-.*\)=\*):\1):" configure || die
 }
 
 src_configure() {

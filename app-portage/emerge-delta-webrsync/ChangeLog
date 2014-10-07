@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/emerge-delta-webrsync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.45 2014/09/27 20:26:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.46 2014/10/07 22:10:46 zmedico Exp $
+
+*emerge-delta-webrsync-3.7.2-r1 (07 Oct 2014)
+
+  07 Oct 2014; Zac Medico <zmedico@gentoo.org>
+  +emerge-delta-webrsync-3.7.2-r1.ebuild, -emerge-delta-webrsync-3.7.2.ebuild:
+  3.7.2-r1 version bump to fix bug #506192 (failure when tarsync is not
+  installed).
 
 *emerge-delta-webrsync-3.7.2 (27 Sep 2014)
 
