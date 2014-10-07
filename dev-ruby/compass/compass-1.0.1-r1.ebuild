@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/compass/compass-1.0.1.ebuild,v 1.1 2014/10/05 07:06:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/compass/compass-1.0.1-r1.ebuild,v 1.1 2014/10/07 12:33:51 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -34,4 +34,8 @@ ruby_add_rdepend ">=dev-ruby/chunky_png-1.2
 
 all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/ s:^:#:' Rakefile || die
+
+	# Remove rb-fsevent dependency since it is not needed on Linux and
+	# not packaged.
+	sed -i -e '/rb-fsevent/,/^-/ s:^:#:' ../metadata || die
 }

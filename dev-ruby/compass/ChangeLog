@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/compass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/compass/ChangeLog,v 1.4 2014/10/05 07:06:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/compass/ChangeLog,v 1.5 2014/10/07 12:33:51 graaff Exp $
+
+*compass-1.0.1-r1 (07 Oct 2014)
+
+  07 Oct 2014; Hans de Graaff <graaff@gentoo.org> -compass-1.0.1.ebuild,
+  +compass-1.0.1-r1.ebuild:
+  Remove unpackaged and unneeded rb-fsevent dependency from gemspec file.
 
 *compass-1.0.1 (05 Oct 2014)
 *compass-0.12.7-r1 (05 Oct 2014)
