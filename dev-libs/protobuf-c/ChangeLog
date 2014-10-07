@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/protobuf-c
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.10 2014/08/13 17:37:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.11 2014/10/07 06:51:28 radhermit Exp $
+
+*protobuf-c-1.0.2 (07 Oct 2014)
+
+  07 Oct 2014; Tim Harder <radhermit@gentoo.org> +protobuf-c-1.0.2.ebuild:
+  Version bump.
 
   13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> protobuf-c-0.15.ebuild:
   Keyword ~ppc and ~ppc64, bug #519772

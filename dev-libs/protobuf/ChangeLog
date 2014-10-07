@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.65 2014/09/30 17:31:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.66 2014/10/07 06:47:27 radhermit Exp $
+
+  07 Oct 2014; Tim Harder <radhermit@gentoo.org> protobuf-2.6.0.ebuild:
+  Add github homepage.
 
   30 Sep 2014; Tim Harder <radhermit@gentoo.org> protobuf-2.6.0.ebuild:
   Drop python2_6 support and remove old dateutil comment.
