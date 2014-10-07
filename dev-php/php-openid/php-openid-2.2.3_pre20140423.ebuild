@@ -1,15 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/php-openid-2.2.2.ebuild,v 1.2 2012/01/28 14:08:19 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/php-openid-2.2.3_pre20140423.ebuild,v 1.1 2014/10/07 13:39:46 grknight Exp $
 
-EAPI="4"
-MY_P="openid-php-openid-2.2.2-0-ga287b2d"
-MY_P2="openid-php-openid-782224d"
+EAPI=5
+MY_PV="fff9217fb1acda132702730b66b10981ea9d4cac"
+MY_P="${PN}-${MY_PV}"
 
 PHP_LIB_NAME="Auth"
 DESCRIPTION="PHP OpenID implementation"
-HOMEPAGE="http://github.com/openid/php-openid"
-SRC_URI="http://download.github.com/${MY_P}.tar.gz"
+HOMEPAGE="https://github.com/openid/php-openid"
+SRC_URI="https://github.com/openid/${PN}/archive/${MY_PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -21,7 +21,7 @@ RDEPEND="|| ( dev-lang/php[gmp] dev-lang/php[bcmath] )
 	dev-lang/php[curl,xml,ssl]
 	net-misc/curl[ssl]"
 
-S="${WORKDIR}/${MY_P2}"
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	insinto "/usr/share/php/${PN}"

@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/php-openid
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/ChangeLog,v 1.4 2012/01/28 14:08:19 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/ChangeLog,v 1.5 2014/10/07 13:39:46 grknight Exp $
+
+*php-openid-2.2.3_pre20140423 (07 Oct 2014)
+
+  07 Oct 2014;  <grknight@gentoo.org> +php-openid-2.2.3_pre20140423.ebuild,
+  -php-openid-2.2.2.ebuild:
+  Bump to github snapshot from 2014-04-23 for security bug 482140
 
   26 Jan 2012; Matti Bickel <mabi@gentoo.org> php-openid-2.2.2.ebuild:
   remove unneeded php-lib-r1.php reference, EAPI bump
@@ -20,4 +26,3 @@
   +metadata.xml:
   Initial commit. Ebuild based on the one by Nathan Phillip Brink in his
   ohnobinki overlay.
-
