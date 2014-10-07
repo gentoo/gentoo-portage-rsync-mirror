@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.42 2014/09/21 10:25:53 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.43 2014/10/07 19:04:53 swift Exp $
+
+*sepolgen-1.2.2_rc4 (07 Oct 2014)
+
+  07 Oct 2014; Sven Vermeulen <swift@gentoo.org> +sepolgen-1.2.2_rc4.ebuild:
+  Bump to 2.4-rc4
 
 *sepolgen-1.2.2_rc2 (21 Sep 2014)
 

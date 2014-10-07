@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=>=sys-libs/libsepol-2.4_rc4 >=sys-libs/libsemanage-2.4_rc4 sys-devel/flex sys-devel/bison
+DESCRIPTION=SELinux policy compiler
+EAPI=5
+HOMEPAGE=http://userspace.selinuxproject.org
+IUSE=debug
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=sys-libs/libsemanage-2.4_rc4
+SLOT=0
+SRC_URI=https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140826/checkpolicy-2.4-rc4.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=9dd546d50e42f1a135640bdd4336c250

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.mask,v 1.53 2014/09/24 18:36:11 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.mask,v 1.54 2014/10/07 19:02:34 swift Exp $
 
 # Sven Vermeulen <swift@gentoo.org> (Aug 28 2014)
 # Masking these for heavy testing; downgrading might not be possible so
@@ -7,4 +7,5 @@
 >=sys-libs/libsemanage-2.4_rc2
 >=sys-libs/libsepol-2.4_rc2
 >=sys-apps/policycoreutils-2.4_rc2
+>=sys-apps/checkpolicy-2.4_rc2
 >=dev-python/sepolgen-1.2.2_rc2
