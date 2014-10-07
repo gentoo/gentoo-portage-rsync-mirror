@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/networkx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.27 2014/08/15 00:17:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.29 2014/10/07 16:58:51 idella4 Exp $
+
+*networkx-1.9.1 (07 Oct 2014)
+
+  07 Oct 2014; Ian Delaney <idella4@gentoo.org> +networkx-1.9.1.ebuild:
+  bump; extend HOMPAGE with github repo, tidy to deps syntax
 
   15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> networkx-1.9.ebuild:
   Keyword ~ppc, bug #517086
