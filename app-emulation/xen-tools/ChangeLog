@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.258 2014/09/12 02:26:42 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.259 2014/10/07 05:58:38 idella4 Exp $
+
+  07 Oct 2014; Ian Delaney <idella4@gentoo.org> xen-tools-4.3.2-r5.ebuild,
+  xen-tools-4.3.2-r6.ebuild, xen-tools-4.3.3.ebuild, xen-tools-4.4.1.ebuild:
+  correction to dep dev-python/markdown in all versions
 
   12 Sep 2014; Yixun Lan <dlan@gentoo.org> -files/xen-tools-4.2-pod-docs.patch,
   -files/xen-tools-4.2-pod-utf8-chars.patch, -files/xen-tools-4.2-pod-xl.patch,
