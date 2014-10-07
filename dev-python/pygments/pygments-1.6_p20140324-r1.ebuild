@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.6_p20140324-r1.ebuild,v 1.1 2014/10/07 08:09:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.6_p20140324-r1.ebuild,v 1.2 2014/10/07 15:15:51 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
@@ -60,9 +60,5 @@ python_install_all() {
 	use doc && local HTML_DOCS=( doc/_build/html/. )
 
 	distutils-r1_python_install_all
-	newbashcomp external/pygments.bashcomp ${PN}
-	# Bug 521166
-	pushd "${D}"usr/share/bash-completion/completions/ > /dev/null
-	mv ${PN} pygmentize || die
-	popd > /dev/null
+	newbashcomp external/pygments.bashcomp pygmentize
 }
