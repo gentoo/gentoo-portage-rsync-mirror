@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/c++-gtk-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/c++-gtk-utils/ChangeLog,v 1.22 2014/08/06 09:19:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/c++-gtk-utils/ChangeLog,v 1.23 2014/10/07 07:09:26 jer Exp $
+
+*c++-gtk-utils-2.2.9 (07 Oct 2014)
+
+  07 Oct 2014; Jeroen Roovers <jer@gentoo.org> +c++-gtk-utils-2.2.9.ebuild:
+  Version bump.
 
 *c++-gtk-utils-2.2.8 (06 Aug 2014)
 *c++-gtk-utils-2.0.25 (06 Aug 2014)
