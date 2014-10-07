@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.210 2014/10/07 09:18:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.211 2014/10/07 09:34:37 jer Exp $
+
+  07 Oct 2014; Jeroen Roovers <jer@gentoo.org> libpcap-1.6.2.ebuild,
+  libpcap-1.6.2-r1.ebuild, +files/libpcap-1.6.2-dbus.patch:
+  Fix USE=dbus (bug #524602).
 
 *libpcap-1.6.2-r1 (07 Oct 2014)
 

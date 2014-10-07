@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.6.2.ebuild,v 1.2 2014/09/16 21:58:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.6.2.ebuild,v 1.3 2014/10/07 09:34:37 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -33,6 +33,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.0-cross-linux.patch
 	epatch "${FILESDIR}"/${PN}-1.6.1-configure.patch
 	epatch "${FILESDIR}"/${PN}-1.6.1-prefix-solaris.patch
+	epatch "${FILESDIR}"/${PN}-1.6.2-dbus.patch
 
 	mkdir bluetooth || die
 	cp "${FILESDIR}"/mgmt.h bluetooth/ || die
