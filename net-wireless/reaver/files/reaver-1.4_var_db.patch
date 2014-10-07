@@ -1,6 +1,5 @@
-diff -rupN a/src/Makefile.in b/src/Makefile.in
---- a/src/Makefile.in	2012-01-18 11:02:40.000000000 +0200
-+++ b/src/Makefile.in	2013-10-13 19:21:19.248837817 +0300
+--- a/src/Makefile.in
++++ b/src/Makefile.in
 @@ -3,7 +3,7 @@ LIBWPS_DIR=libwps
  INC=-I$(LIBWPS_DIR)
  prefix=@prefix@
