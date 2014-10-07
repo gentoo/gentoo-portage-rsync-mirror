@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.209 2014/09/17 10:14:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.210 2014/10/07 09:18:26 jer Exp $
+
+*libpcap-1.6.2-r1 (07 Oct 2014)
+
+  07 Oct 2014; Jeroen Roovers <jer@gentoo.org> +libpcap-1.6.2-r1.ebuild:
+  Add multilib support (bug #524604 by Arfrever Frehtes Taifersar Arahesis).
 
   17 Sep 2014; Jeroen Roovers <jer@gentoo.org>
   files/libpcap-1.2.0-cross-linux.patch:
