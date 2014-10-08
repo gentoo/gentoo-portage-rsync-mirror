@@ -1,6 +1,14 @@
 # ChangeLog for app-officeext/ooofbtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ChangeLog,v 1.10 2014/10/08 09:52:20 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ChangeLog,v 1.12 2014/10/08 15:20:24 pinkbyte Exp $
+
+*ooofbtools-2.30 (08 Oct 2014)
+
+  08 Oct 2014; Sergey Popov <pinkbyte@gentoo.org> +ooofbtools-2.30.ebuild:
+  Version bump, wrt bug #508582
+
+  08 Oct 2014; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add proxy maintainers and new maintainer to metadata
 
   08 Oct 2014; Sergey Popov <pinkbyte@gentoo.org> -ooofbtools-2.12.ebuild:
   Drop old
