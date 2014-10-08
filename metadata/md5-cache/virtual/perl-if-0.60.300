@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for if
 EAPI=5
-KEYWORDS=~x86 ~amd64
+KEYWORDS=~amd64 ~arm ~x86 ~amd64-fbsd
 RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/if-0.60.300 ) !<perl-core/if-0.60.300 !>perl-core/if-0.60.300-r999
 SLOT=0
-_md5_=eaad403093e704acdff53e1d9c60df8a
+_md5_=6dfd9a5d6de5e6210899189b99d6c1e9
