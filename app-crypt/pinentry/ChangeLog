@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.151 2014/04/03 19:40:59 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.152 2014/10/08 06:39:06 alonbl Exp $
+
+*pinentry-0.8.4 (08 Oct 2014)
+
+  08 Oct 2014; Alon Bar-Lev <alonbl@gentoo.org> +pinentry-0.8.4.ebuild:
+  Version bump, bug#524742
 
   03 Apr 2014; Michael Haubenwallner <haubi@gentoo.org> pinentry-0.8.3.ebuild:
   Add ~ppc-aix keyword.
