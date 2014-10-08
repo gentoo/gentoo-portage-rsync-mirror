@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.84 2014/08/10 20:02:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.85 2014/10/08 09:46:26 ultrabug Exp $
+
+*redis-2.8.17 (08 Oct 2014)
+
+  08 Oct 2014; Ultrabug <ultrabug@gentoo.org> +redis-2.8.17.ebuild,
+  +files/redis.initd-4:
+  version bump fix #522118 thx to Tomas Mozes, Marcin Miroslaw and Johan
+  Bergstrom
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> redis-2.6.15-r1.ebuild,
   redis-2.6.16.ebuild, redis-2.8.11.ebuild, redis-2.8.8.ebuild,

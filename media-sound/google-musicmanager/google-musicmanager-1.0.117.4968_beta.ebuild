@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.117.4968_beta.ebuild,v 1.2 2014/08/10 21:06:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.117.4968_beta.ebuild,v 1.3 2014/10/08 09:53:44 ottxor Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="log"
 
-OBSOLETE="no"
+OBSOLETE="yes"
 [[ $OBSOLETE = yes ]] && RESTRICT="fetch strip" || RESTRICT="strip mirror"
 
 RDEPEND="

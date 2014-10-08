@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.6-r1.ebuild,v 1.1 2014/08/08 18:08:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.6-r2.ebuild,v 1.1 2014/10/08 09:34:08 ultrabug Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ USE_RUBY="ruby19 ruby20 ruby21"
 PHP_EXT_INI="no"
 PHP_EXT_NAME="dummy"
 PHP_EXT_OPTIONAL_USE="php"
-USE_PHP="php5-3 php5-4 php5-5" # deps must be registered separately below
+USE_PHP="php5-4 php5-5" # deps must be registered separately below
 
 MY_P="${P/_/-}"
 
@@ -107,7 +107,6 @@ CDEPEND="sys-libs/zlib
 	mono? ( =dev-lang/mono-2* )
 	perl? ( dev-lang/perl:= )
 	php? (
-		php_targets_php5-3? ( dev-lang/php:5.3[embed] )
 		php_targets_php5-4? ( dev-lang/php:5.4[embed] )
 		php_targets_php5-5? ( dev-lang/php:5.5[embed] )
 	)

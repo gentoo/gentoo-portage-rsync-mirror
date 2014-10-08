@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.7.ebuild,v 1.1 2014/10/07 13:09:52 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.7-r1.ebuild,v 1.1 2014/10/08 09:34:08 ultrabug Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ USE_RUBY="ruby19 ruby20 ruby21"
 PHP_EXT_INI="no"
 PHP_EXT_NAME="dummy"
 PHP_EXT_OPTIONAL_USE="php"
-USE_PHP="php5-3 php5-4 php5-5" # deps must be registered separately below
+USE_PHP="php5-4 php5-5" # deps must be registered separately below
 
 MY_P="${P/_/-}"
 
@@ -37,7 +37,7 @@ UWSGI_PLUGINS_STD=( ping cache carbon nagios rpc rrdtool
 UWSGI_PLUGINS_OPT=( alarm_{curl,xmpp} clock_{monotonic,realtime} curl_cron
 	dumbloop echo emperor_{amqp,pg,zeromq} forkptyrouter
 	geoip graylog2 legion_cache_fetch ldap log{crypto,pipe} notfound pam
-	router_{access,radius,spnego,xmldir}
+	rados router_{access,radius,spnego,xmldir}
 	sqlite ssi stats_pusher_statsd
 	systemd_logger transformation_toupper tuntap webdav xattr xslt zabbix )
 
@@ -97,6 +97,7 @@ CDEPEND="sys-libs/zlib
 	uwsgi_plugins_ldap? ( net-nds/openldap )
 	uwsgi_plugins_pam? ( virtual/pam )
 	uwsgi_plugins_sqlite? ( dev-db/sqlite:3 )
+	uwsgi_plugins_rados? ( sys-cluster/ceph )
 	uwsgi_plugins_router_access? ( sys-apps/tcp-wrappers )
 	uwsgi_plugins_router_spnego? ( virtual/krb5 )
 	uwsgi_plugins_rsyslog? ( app-admin/rsyslog )
@@ -107,7 +108,6 @@ CDEPEND="sys-libs/zlib
 	mono? ( =dev-lang/mono-2* )
 	perl? ( dev-lang/perl:= )
 	php? (
-		php_targets_php5-3? ( dev-lang/php:5.3[embed] )
 		php_targets_php5-4? ( dev-lang/php:5.4[embed] )
 		php_targets_php5-5? ( dev-lang/php:5.5[embed] )
 	)

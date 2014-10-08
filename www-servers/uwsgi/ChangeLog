@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.60 2014/10/07 13:09:52 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.61 2014/10/08 09:34:08 ultrabug Exp $
+
+*uwsgi-2.0.7-r1 (08 Oct 2014)
+*uwsgi-2.0.6-r2 (08 Oct 2014)
+*uwsgi-1.4.10-r1 (08 Oct 2014)
+
+  08 Oct 2014; Ultrabug <ultrabug@gentoo.org> -uwsgi-1.4.10.ebuild,
+  +uwsgi-1.4.10-r1.ebuild, -uwsgi-2.0.6-r1.ebuild, +uwsgi-2.0.6-r2.ebuild,
+  -uwsgi-2.0.7.ebuild, +uwsgi-2.0.7-r1.ebuild:
+  drop php 5.3 target fix #524232, add rados plugin fix #521826 thx to babykart
 
 *uwsgi-2.0.7 (07 Oct 2014)
 

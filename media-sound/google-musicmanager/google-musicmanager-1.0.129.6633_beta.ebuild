@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.84.1107_beta.ebuild,v 1.4 2014/08/10 21:06:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.129.6633_beta.ebuild,v 1.1 2014/10/08 09:50:12 ottxor Exp $
 
 EAPI=5
 
 inherit eutils unpacker
 
+#http://dl.google.com/linux/musicmanager/deb/dists/stable/main/binary-i386/Packages
 MY_URL="http://dl.google.com/linux/musicmanager/deb/pool/main/${P:0:1}/${PN}-beta"
 MY_PKG="${PN}-beta_${PV/_beta}-r0_i386.deb"
 
@@ -19,7 +20,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="log"
 
-OBSOLETE="yes"
+OBSOLETE="no"
 [[ $OBSOLETE = yes ]] && RESTRICT="fetch strip" || RESTRICT="strip mirror"
 
 RDEPEND="
