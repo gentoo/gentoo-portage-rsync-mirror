@@ -4,11 +4,11 @@ DESCRIPTION=The server part of Akonadi
 EAPI=5
 HOMEPAGE=http://pim.kde.org/akonadi
 IUSE=+mysql postgres +qt4 qt5 soprano sqlite test
-KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux
+KEYWORDS=amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=LGPL-2.1
 RDEPEND=dev-libs/boost:= x11-misc/shared-mime-info qt4? ( >=dev-qt/qtcore-4.8.5:4 >=dev-qt/qtdbus-4.8.5:4 >=dev-qt/qtgui-4.8.5:4 >=dev-qt/qtsql-4.8.5:4[mysql?,postgres?] >=dev-qt/qttest-4.8.5:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtsql:5[mysql?,postgres?] dev-qt/qttest:5 dev-qt/qtwidgets:5 dev-qt/qtxml:5 soprano? ( dev-libs/soprano[-qt4,qt5] ) ) soprano? ( dev-libs/soprano ) sqlite? ( dev-db/sqlite:3 ) postgres? ( dev-db/postgresql-server )
 REQUIRED_USE=^^ ( qt4 qt5 ) || ( sqlite mysql postgres )
 SLOT=0
 SRC_URI=mirror://kde/stable/akonadi/src/akonadi-1.12.1.tar.bz2
 _eclasses_=cmake-utils	da2974fcb060ec927e93a17c835afa67	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e38f9008a62d5a475336a8a778838686
+_md5_=7b8b9caf74a311b07467e43b0bf89d90

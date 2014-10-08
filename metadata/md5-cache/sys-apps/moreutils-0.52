@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=doc? ( dev-lang/perl >=app-text/docbook2X-0.8.8-r2 app-text/docbook-xml-dtd:4.4 )
+DESCRIPTION=a growing collection of the unix tools that nobody thought to write thirty years ago
+EAPI=5
+HOMEPAGE=http://joeyh.name/code/moreutils/
+IUSE=+doc +perl
+KEYWORDS=~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-linux
+LICENSE=GPL-2
+RDEPEND=perl? ( dev-lang/perl dev-perl/IPC-Run dev-perl/Time-Duration dev-perl/TimeDate )
+SLOT=0
+SRC_URI=mirror://debian/pool/main/m/moreutils/moreutils_0.52.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=71ef4e87a1fae51deedd17bb98fab9a5
