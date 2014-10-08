@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/sxhkd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sxhkd/ChangeLog,v 1.1 2014/01/24 07:16:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sxhkd/ChangeLog,v 1.2 2014/10/08 01:02:38 radhermit Exp $
+
+*sxhkd-0.5.4 (08 Oct 2014)
+
+  08 Oct 2014; Tim Harder <radhermit@gentoo.org> +sxhkd-0.5.4.ebuild:
+  Version bump.
 
 *sxhkd-0.5.3 (24 Jan 2014)
 

@@ -1,6 +1,17 @@
 # ChangeLog for sys-process/procenv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procenv/ChangeLog,v 1.25 2014/06/18 23:28:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procenv/ChangeLog,v 1.27 2014/10/08 01:05:01 radhermit Exp $
+
+  08 Oct 2014; Tim Harder <radhermit@gentoo.org> -procenv-0.25.ebuild,
+  -procenv-0.26.ebuild, -procenv-0.27.ebuild, -procenv-0.29.ebuild,
+  -procenv-0.30.ebuild, -procenv-0.32.ebuild, -procenv-0.33.ebuild,
+  -procenv-0.34.ebuild:
+  Remove old.
+
+*procenv-0.36 (08 Oct 2014)
+
+  08 Oct 2014; Tim Harder <radhermit@gentoo.org> +procenv-0.36.ebuild:
+  Version bump.
 
 *procenv-0.35 (18 Jun 2014)
 

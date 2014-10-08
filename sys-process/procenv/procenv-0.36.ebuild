@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procenv/procenv-0.34.ebuild,v 1.1 2014/03/27 04:21:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procenv/procenv-0.36.ebuild,v 1.1 2014/10/08 01:04:30 radhermit Exp $
 
 EAPI=5
 

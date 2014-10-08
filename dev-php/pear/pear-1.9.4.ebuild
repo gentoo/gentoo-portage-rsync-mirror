@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/pear-1.9.4.ebuild,v 1.9 2014/01/26 18:24:24 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/pear-1.9.4.ebuild,v 1.10 2014/10/08 01:25:40 grknight Exp $
+
+EAPI=5
 
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86"
 
@@ -10,6 +12,7 @@ SRC_URI=""
 LICENSE="MIT"
 SLOT="0"
 IUSE=""
+S="${WORKDIR}"
 
 DEPEND="!<dev-php/PEAR-PEAR-1.8.1
 	~dev-php/PEAR-PEAR-${PV}

@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/c-ares
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.91 2014/09/24 10:19:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.92 2014/10/08 01:07:23 mrueg Exp $
+
+  08 Oct 2014; Manuel Rüger <mrueg@gentoo.org> c-ares-1.10.0-r1.ebuild:
+  Mark stable on amd64. See bug #522820.
 
   24 Sep 2014; Anthony G. Basile <blueness@gentoo.org> c-ares-1.10.0-r1.ebuild:
   Stable on arm, bug #522820

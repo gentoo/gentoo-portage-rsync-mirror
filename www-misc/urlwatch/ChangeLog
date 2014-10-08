@@ -1,6 +1,15 @@
 # ChangeLog for www-misc/urlwatch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/urlwatch/ChangeLog,v 1.6 2014/04/03 02:09:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/urlwatch/ChangeLog,v 1.8 2014/10/08 01:20:23 radhermit Exp $
+
+  08 Oct 2014; Tim Harder <radhermit@gentoo.org> -urlwatch-1.14.ebuild,
+  -urlwatch-1.15.ebuild, -files/urlwatch-xmpp.patch:
+  Remove old.
+
+*urlwatch-1.17 (08 Oct 2014)
+
+  08 Oct 2014; Tim Harder <radhermit@gentoo.org> +urlwatch-1.17.ebuild:
+  Version bump.
 
   03 Apr 2014; Tim Harder <radhermit@gentoo.org> urlwatch-1.16.ebuild:
   Add python3_4 support.

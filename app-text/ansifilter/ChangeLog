@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ansifilter
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ansifilter/ChangeLog,v 1.6 2013/03/02 19:40:05 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ansifilter/ChangeLog,v 1.7 2014/10/08 01:27:48 radhermit Exp $
+
+*ansifilter-1.10 (08 Oct 2014)
+
+  08 Oct 2014; Tim Harder <radhermit@gentoo.org> +ansifilter-1.10.ebuild:
+  Version bump.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> ansifilter-1.7.ebuild:
   Move Qt dependencies to the new category
