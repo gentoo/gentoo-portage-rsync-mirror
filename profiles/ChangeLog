@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9429 2014/10/08 13:37:28 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9430 2014/10/08 18:49:51 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Oct 2014; Robin H. Johnson <robbat2@gentoo.org> license_groups:
+  Add LastPass to @EULA.
 
   08 Oct 2014; Brian Evans <grknight@gentoo.org> package.mask:
   Change mask message for dev-php/suhosin
