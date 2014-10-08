@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.4.1_p141008.ebuild,v 1.1 2014/10/08 06:39:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.4.1_p141008.ebuild,v 1.2 2014/10/08 07:29:07 jlec Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PYTHON_REQ_USE="ssl,tk"
 
 inherit eutils flag-o-matic multilib portability python-single-r1 toolchain-funcs versionator
 
-#PATCHSET="${PV##*_p}"
+PATCHSET="${PV##*_p}"
 MY_PN="${PN}mr"
 MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
 MY_MAJOR="$(get_version_component_range 1-3)"
