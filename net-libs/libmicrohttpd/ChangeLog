@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.73 2014/08/10 20:49:39 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.74 2014/10/08 11:54:30 blueness Exp $
+
+*libmicrohttpd-0.9.38 (08 Oct 2014)
+
+  08 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  +libmicrohttpd-0.9.38.ebuild:
+  Version bump
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   libmicrohttpd-0.9.32.ebuild, libmicrohttpd-0.9.33.ebuild,
