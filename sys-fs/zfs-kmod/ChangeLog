@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.53 2014/09/18 12:45:25 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.54 2014/10/08 21:27:48 ryao Exp $
+
+  08 Oct 2014; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.3.ebuild,
+  zfs-kmod-9999.ebuild:
+  CONFIG_PAX_USERCOPY_SLABS is incompatible with the ZFS kernel module as of
+  GrSecurity patch set for Linux 3.14 and later. A fix will come within a day or
+  two, but I am adding it to CHECK_CONFIG for the interim.
 
   18 Sep 2014; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.3.ebuild,
   zfs-kmod-9999.ebuild:
