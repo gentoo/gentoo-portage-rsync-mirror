@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ikiwiki-3.20140125.ebuild,v 1.1 2014/01/28 23:55:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ikiwiki-3.20140916.ebuild,v 1.1 2014/10/08 13:27:40 mrueg Exp $
 
 EAPI=5
 
