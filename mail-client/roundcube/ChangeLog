@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.141 2014/09/14 22:39:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.142 2014/10/08 21:43:49 radhermit Exp $
+
+*roundcube-1.0.3 (08 Oct 2014)
+
+  08 Oct 2014; Tim Harder <radhermit@gentoo.org> +roundcube-1.0.3.ebuild:
+  Version bump (bug #524068).
 
   14 Sep 2014; Jeroen Roovers <jer@gentoo.org> roundcube-1.0.2.ebuild:
   Remove obsolete USE dependency.

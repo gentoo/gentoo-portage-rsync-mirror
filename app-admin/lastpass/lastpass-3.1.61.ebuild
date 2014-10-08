@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lastpass/lastpass-3.1.61.ebuild,v 1.1 2014/10/08 17:25:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lastpass/lastpass-3.1.61.ebuild,v 1.2 2014/10/08 21:42:11 floppym Exp $
 
 EAPI=5
 inherit eutils
@@ -21,10 +21,10 @@ RESTRICT="strip mirror" # We can't mirror it, but we can fetch it
 
 DEPEND=""
 RDEPEND="
-	chrome? ( || ( 
+	chrome? ( || (
 		www-client/google-chrome
 		www-client/google-chrome-beta
-		www-client/google-chrome-unstable 
+		www-client/google-chrome-unstable
 	) )
 	chromium? ( >=www-client/chromium-32.0.1700.102 )
 	firefox? ( www-client/firefox )"
@@ -34,7 +34,7 @@ LASTPASS_EXEDIR=/opt/lastpass/
 
 QA_PREBUILT="
 ${LASTPASS_EXEDIR}/nplastpass*
-/usr/lib*/firefox/browser/extensions/support@lastpass.com/platform/Linux_x86_64-gcc3/components/lpxpcom_x86_64.so 
+/usr/lib*/firefox/browser/extensions/support@lastpass.com/platform/Linux_x86_64-gcc3/components/lpxpcom_x86_64.so
 /usr/lib*/firefox/browser/extensions/support@lastpass.com/platform/Linux_x86-gcc3/components/lpxpcom.so
 "
 
@@ -104,4 +104,3 @@ src_install() {
 pkg_postinst() {
 	einfo "Visit https://lastpass.com/dl/inline/?full=1 to finish installing for Chrome/Chromium/Firefox"
 }
-

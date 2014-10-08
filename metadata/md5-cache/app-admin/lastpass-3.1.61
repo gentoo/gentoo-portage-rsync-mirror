@@ -11,4 +11,4 @@ RESTRICT=strip mirror
 SLOT=0
 SRC_URI=https://lastpass.com/lplinux.tar.bz2 firefox? ( https://lastpass.com/lp_linux.xpi ) https://lastpass.com/lpchrome_linux.crx
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=162591365f4cc45b2ebb7c517dbe91b2
+_md5_=5ae276e7a9e160fd6d6edad525025555
