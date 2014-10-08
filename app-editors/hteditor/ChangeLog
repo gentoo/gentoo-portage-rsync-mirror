@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/hteditor
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.68 2013/09/05 19:23:58 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.70 2014/10/08 01:57:25 radhermit Exp $
+
+  08 Oct 2014; Tim Harder <radhermit@gentoo.org> -hteditor-2.0.20.ebuild,
+  -hteditor-2.0.21.ebuild:
+  Remove old.
+
+  08 Oct 2014; Tim Harder <radhermit@gentoo.org> hteditor-2.0.22.ebuild:
+  Add github homepage.
 
   05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> hteditor-2.0.22.ebuild:
   Stable for x86, wrt bug #482632

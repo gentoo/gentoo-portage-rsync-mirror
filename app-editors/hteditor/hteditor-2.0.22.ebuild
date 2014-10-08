@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0.22.ebuild,v 1.5 2013/09/05 19:23:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0.22.ebuild,v 1.6 2014/10/08 01:56:12 radhermit Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit toolchain-funcs
 MY_P=${P/editor}
 
 DESCRIPTION="A file viewer, editor and analyzer for text, binary, and executable files"
-HOMEPAGE="http://hte.sourceforge.net/"
+HOMEPAGE="http://hte.sourceforge.net/ https://github.com/sebastianbiallas/ht/"
 SRC_URI="mirror://sourceforge/hte/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"

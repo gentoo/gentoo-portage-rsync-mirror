@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Services_Weather
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Weather/ChangeLog,v 1.58 2014/01/26 18:39:06 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Weather/ChangeLog,v 1.59 2014/10/08 01:55:16 grknight Exp $
+
+  08 Oct 2014; Brian Evans <grknight@gentoo.org>
+  -PEAR-Services_Weather-1.4.5.ebuild:
+  Drop old
 
   26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
   PEAR-Services_Weather-1.4.6.ebuild:
