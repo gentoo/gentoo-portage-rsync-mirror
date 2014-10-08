@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16075 2014/10/06 19:37:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16076 2014/10/07 23:14:34 sping Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -56,6 +56,8 @@ dev-php/adodb-ext
 dev-php/pecl-id3
 dev-php/pecl-mogilefs
 dev-php/pecl-sca_sdo
+# Veto to removal by Sebastian Pipping <sping@gentoo.org>
+# Upstream version with >=5.4 support seems available (bug #520178)
 dev-php/suhosin
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (30 Sep 2014)
