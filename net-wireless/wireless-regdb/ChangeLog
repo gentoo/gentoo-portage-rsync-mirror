@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wireless-regdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.46 2014/05/30 16:36:58 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.47 2014/10/08 00:14:11 zerochaos Exp $
+
+*wireless-regdb-20141006 (08 Oct 2014)
+
+  08 Oct 2014; Rick Farina <zerochaos@gentoo.org>
+  +wireless-regdb-20141006.ebuild:
+  bump
 
 *wireless-regdb-20140529 (30 May 2014)
 
