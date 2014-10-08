@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.3.16.95972.ebuild,v 1.1 2014/09/10 05:33:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.3.16.95972.ebuild,v 1.2 2014/10/08 20:32:59 polynomial-c Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils multilib versionator
 
 MAIN_PV="$(get_version_component_range 1-3)"
 if [[ ${PV} = *_beta* ]] || [[ ${PV} = *_rc* ]] ; then
-	MY_PV="${MAIN_PV}_$(get_version_componen_range 5)"
+	MY_PV="${MAIN_PV}_$(get_version_component_range 5)"
 	MY_PV="${MY_PV/beta/BETA}"
 	MY_PV="${MY_PV/rc/RC}"
 else
