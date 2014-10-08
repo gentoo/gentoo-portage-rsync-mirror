@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.37.ebuild,v 1.1 2014/02/26 14:37:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.37.ebuild,v 1.2 2014/10/08 06:24:24 jer Exp $
 
 EAPI=5
 
@@ -62,7 +62,11 @@ src_prepare() {
 	rm_locale() { sed -i -e "/${1}/d" po/LINGUAS || die ;}
 	l10n_for_each_disabled_locale_do rm_locale
 
-	sed -i -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' configure.ac || die
+	sed -i \
+		-e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' \
+		-e 's|freetype/config/ftheader.h|ft2build.h|' \
+		configure.ac || die
+
 	eautoreconf
 }
 
