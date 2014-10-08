@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.74 2014/10/08 11:54:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.75 2014/10/08 12:12:43 blueness Exp $
+
+  08 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  libmicrohttpd-0.9.37.ebuild:
+  Stable on arm/ppc/ppc64, bug #524760
 
 *libmicrohttpd-0.9.38 (08 Oct 2014)
 

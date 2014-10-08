@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.322 2014/07/06 13:21:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.323 2014/10/08 12:08:00 aballier Exp $
+
+  08 Oct 2014; Alexis Ballier <aballier@gentoo.org> transcode-1.1.7-r3.ebuild,
+  +files/transcode-1.1.7-ffmpeg24.patch:
+  fix build with ffmpeg 2.4+; bug #520190, patch by jospezial and additional
+  guards by me
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> transcode-1.1.7-r1.ebuild,
   transcode-1.1.7-r2.ebuild, transcode-1.1.7-r3.ebuild:

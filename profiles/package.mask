@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16076 2014/10/07 23:14:34 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16077 2014/10/08 12:19:57 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -171,12 +171,6 @@ app-emulation/emul-linux-x86-compat
 # Masked for removal in 30 days (bug #522232).
 app-doc/djbdns-man
 
-# Bernard Cafarelli <voyageur@gentoo.org> (05 Sep 2014)
-# Does not connect anymore, does not work with current pidgin versions
-# Dead upstream
-# Masked for removal in 30 days, bug #355797
-x11-plugins/pidgin-facebookchat
-
 # Sergey Popov <pinkbyte@gentoo.org> (04 Sep 2014)
 # Security mask, wrt bugs #488212, #498164, #500260,
 # #507802 and #518718
@@ -193,11 +187,9 @@ x11-plugins/pidgin-facebookchat
 # You can still use your MSN account in net-im/skype
 # or switch to an open protocol instead
 # Masked for removal in 30 days
-# Added msn-pecan to the list (voyageur)
 net-im/kmess
 net-im/amsn
 x11-themes/amsn-skins
-x11-plugins/msn-pecan
 
 # Christian Faulhammer <fauli@gentoo.org> (02 Sep 2014)
 # website not working anymore and will stay like this,
