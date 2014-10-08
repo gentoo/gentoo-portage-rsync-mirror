@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.418 2014/10/08 06:21:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.419 2014/10/08 16:10:09 polynomial-c Exp $
+
+  08 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-3.1_p21.ebuild,
+  -bash-3.1_p22.ebuild, -bash-3.2_p55.ebuild, -bash-3.2_p56.ebuild,
+  -bash-4.0_p42.ebuild, -bash-4.0_p43.ebuild, -bash-4.1_p15.ebuild,
+  -bash-4.1_p16.ebuild, -bash-4.2_p51.ebuild, -bash-4.2_p52.ebuild:
+  Removed vulnerable versions.
 
   08 Oct 2014; Raúl Porcel <armin76@gentoo.org> bash-3.1_p22.ebuild,
   bash-3.1_p23.ebuild, bash-3.2_p56.ebuild, bash-3.2_p57.ebuild,
