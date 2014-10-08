@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-opengl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.67 2014/03/26 20:37:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.68 2014/10/08 05:41:32 graaff Exp $
+
+*ruby-opengl-0.9.1 (08 Oct 2014)
+
+  08 Oct 2014; Hans de Graaff <graaff@gentoo.org> +ruby-opengl-0.9.1.ebuild:
+  Version bump. Add ruby21.
 
 *ruby-opengl-0.9.0 (26 Mar 2014)
 
