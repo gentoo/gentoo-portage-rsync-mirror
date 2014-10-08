@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/lastpass
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lastpass/ChangeLog,v 1.1 2014/10/08 17:25:02 robbat2 Exp $
+
+*lastpass-3.1.61 (08 Oct 2014)
+
+  08 Oct 2014; Robin H. Johnson <robbat2@gentoo.org> +lastpass-3.1.61.ebuild,
+  +metadata.xml:
+  Initial commit, based on Andrew Udvare's GitHub overlay work at
+  https://github.com/Tatsh/tatsh-overlay

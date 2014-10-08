@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.24 2014/07/31 22:26:07 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.25 2014/10/08 17:25:46 grknight Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -272,6 +272,7 @@ mysql-cmake_src_prepare() {
 		# Don't build bundled xz-utils
 		rm -f "${S}/storage/tokudb/ft-index/cmake_modules/TokuThirdParty.cmake"
 		touch "${S}/storage/tokudb/ft-index/cmake_modules/TokuThirdParty.cmake"
+		sed -i 's/ build_lzma//' "${S}/storage/tokudb/ft-index/ft/CMakeLists.txt" || die
 	fi
 
 	epatch_user
@@ -414,11 +415,12 @@ mysql-cmake_src_install() {
 	# Configuration stuff
 	case ${MYSQL_PV_MAJOR} in
 		5.[1-4]*) mysql_mycnf_version="5.1" ;;
-		5.[5-9]|6*|7*|8*|9*|10*) mysql_mycnf_version="5.5" ;;
+		5.5) mysql_mycnf_version="5.5" ;;
+		5.[6-9]|6*|7*|8*|9*|10*) mysql_mycnf_version="5.6" ;;
 	esac
 	einfo "Building default my.cnf (${mysql_mycnf_version})"
 	insinto "${MY_SYSCONFDIR#${EPREFIX}}"
-	doins "${S}"/scripts/mysqlaccess.conf
+	[[ -f "${S}/scripts/mysqlaccess.conf" ]] && doins "${S}"/scripts/mysqlaccess.conf
 	mycnf_src="my.cnf-${mysql_mycnf_version}"
 	sed -e "s!@DATADIR@!${MY_DATADIR}!g" \
 		"${FILESDIR}/${mycnf_src}" \
