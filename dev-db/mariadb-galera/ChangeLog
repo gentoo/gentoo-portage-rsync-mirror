@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mariadb-galera
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/ChangeLog,v 1.6 2014/10/06 17:44:30 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/ChangeLog,v 1.7 2014/10/08 16:42:06 grknight Exp $
+
+  08 Oct 2014;  <grknight@gentoo.org> +files/my.cnf-5.6:
+  Add new 5.6 configs to better match upstream wrt bug 524768
 
   06 Oct 2014;  <grknight@gentoo.org> mariadb-galera-10.0.13.ebuild:
   Restore die that was taken out by accident
