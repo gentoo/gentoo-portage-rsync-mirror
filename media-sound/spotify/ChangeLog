@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/spotify
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.35 2014/07/25 21:15:19 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.36 2014/10/08 19:48:25 prometheanfire Exp $
+
+*spotify-0.9.11.27-r1 (08 Oct 2014)
+
+  08 Oct 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +spotify-0.9.11.27-r1.ebuild, -spotify-0.9.11.27.ebuild:
+  fixing missing use dep on glib for qt stuffs, fixes bug 524478
 
 *spotify-0.9.11.27 (25 Jul 2014)
 

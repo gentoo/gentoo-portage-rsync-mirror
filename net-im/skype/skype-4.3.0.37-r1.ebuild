@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r1.ebuild,v 1.1 2014/10/05 09:45:54 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r1.ebuild,v 1.2 2014/10/08 19:48:23 ulm Exp $
 
 EAPI=5
 
@@ -31,9 +31,7 @@ RDEPEND="
 				dev-qt/qtgui:4[accessibility,abi_x86_32(-)]
 				dev-qt/qtwebkit:4[abi_x86_32(-)]
 			)
-			!apulse? (
-				>=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER}
-			)
+			>=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER}
 		)
 		|| (
 			(
@@ -51,13 +49,9 @@ RDEPEND="
 				x11-libs/libXScrnSaver[abi_x86_32(-)]
 				x11-libs/libXv[abi_x86_32(-)]
 			)
-			!apulse? (
-				>=app-emulation/emul-linux-x86-xlibs-${EMUL_X86_VER}
-			)
+			>=app-emulation/emul-linux-x86-xlibs-${EMUL_X86_VER}
 		)
-		apulse? (
-			media-sound/apulse[abi_x86_32(-)]
-		)
+		apulse? ( media-sound/apulse[abi_x86_32(-)] )
 	)
 	x86? (
 		media-libs/alsa-lib
@@ -69,9 +63,7 @@ RDEPEND="
 		dev-qt/qtdbus:4
 		dev-qt/qtgui:4[accessibility]
 		dev-qt/qtwebkit:4
-		apulse? (
-			media-sound/apulse
-		)
+		apulse? ( media-sound/apulse )
 	)
 	pulseaudio? ( media-sound/pulseaudio )
 	selinux? ( sec-policy/selinux-skype )"

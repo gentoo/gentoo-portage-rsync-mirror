@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.11.27.ebuild,v 1.1 2014/07/25 21:15:19 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.11.27-r1.ebuild,v 1.1 2014/10/08 19:48:25 prometheanfire Exp $
 
 EAPI=5
 inherit eutils fdo-mime gnome2-utils pax-utils unpacker
@@ -34,9 +34,9 @@ RDEPEND="${DEPEND}
 		x11-libs/libXScrnSaver
 		x11-libs/libXrandr
 		x11-libs/libXrender
-		dev-qt/qtcore:4[qt3support]
+		dev-qt/qtcore:4[qt3support,glib]
 		dev-qt/qtdbus:4
-		dev-qt/qtgui:4[qt3support]
+		dev-qt/qtgui:4[qt3support,glib]
 		dev-qt/qtwebkit:4
 		x11-misc/xdg-utils
 		media-libs/alsa-lib

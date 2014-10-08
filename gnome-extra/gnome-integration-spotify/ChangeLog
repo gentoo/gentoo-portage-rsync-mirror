@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-integration-spotify
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-integration-spotify/ChangeLog,v 1.7 2013/10/14 03:15:22 prometheanfire Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-integration-spotify/ChangeLog,v 1.8 2014/10/08 19:43:38 prometheanfire Exp $
+
+*gnome-integration-spotify-20140907 (08 Oct 2014)
+
+  08 Oct 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +gnome-integration-spotify-20140907.ebuild,
+  -gnome-integration-spotify-20130119.ebuild,
+  -gnome-integration-spotify-20130304.ebuild:
+  updating for new release, fixes bug 522360
 
 *gnome-integration-spotify-20131013 (14 Oct 2013)
 
