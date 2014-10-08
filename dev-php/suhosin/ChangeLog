@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/suhosin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/ChangeLog,v 1.15 2014/08/10 21:06:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/ChangeLog,v 1.16 2014/10/08 13:39:30 grknight Exp $
+
+*suhosin-0.9.36 (08 Oct 2014)
+
+  08 Oct 2014;  <grknight@gentoo.org> +files/suhosin-0.9.36-libcrypt.patch,
+  +suhosin-0.9.36.ebuild, -files/suhosin-0.9.32.1-libcrypt.patch:
+  Version bump wrt bug 520178
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> suhosin-0.9.33.ebuild:
   QA: drop trailing '.' from DESCRIPTION
