@@ -1,28 +1,28 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-2.0.0.ebuild,v 1.2 2014/06/25 05:56:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-2.1.0.ebuild,v 1.1 2014/10/08 10:02:22 ultrabug Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
 AUTOTOOLS_AUTORECONF=true
+KEYWORDS=""
+SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/crmsh/crmsh"
 if [[ ${PV} == *9999 ]]; then
-	KEYWORDS=""
+	EGIT_REPO_URI="git://github.com/crmsh/crmsh"
+	inherit git-2
+	S="${WORKDIR}/${PN}-${MY_TREE}"
 else
-	EGIT_COMMIT="${PV}"
-	#KEYWORDS="~amd64 ~hppa ~x86"
-	# QA: No keywords for ebuilds that fetch from VCS
-	KEYWORDS=""
+	SRC_URI="https://github.com/crmsh/crmsh/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~hppa ~x86"
 fi
 
-inherit autotools-utils git-2 python-r1
+inherit autotools-utils python-r1
 
 DESCRIPTION="Pacemaker command line interface for management and configuration"
 HOMEPAGE="http://crmsh.github.io/"
-SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -34,8 +34,6 @@ DEPEND="${PYTHON_DEPS}
 	>=sys-cluster/pacemaker-1.1.8"
 RDEPEND="${DEPEND}
 	dev-python/lxml[${PYTHON_USEDEP}]"
-
-S="${WORKDIR}/${PN}-${MY_TREE}"
 
 src_prepare() {
 	sed \
