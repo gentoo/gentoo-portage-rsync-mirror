@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/mawk-1.3.4_p20121209.ebuild,v 1.1 2012/12/10 02:59:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/mawk-1.3.4_p20140914.ebuild,v 1.1 2014/10/08 02:39:31 radhermit Exp $
 
 EAPI="5"
 
@@ -14,7 +14,6 @@ SRC_URI="ftp://invisible-island.net/mawk/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
-IUSE=""
 
 RDEPEND="app-admin/eselect-awk"
 DEPEND="${RDEPEND}"
