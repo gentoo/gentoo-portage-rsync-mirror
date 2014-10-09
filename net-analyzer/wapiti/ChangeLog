@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/wapiti
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wapiti/ChangeLog,v 1.1 2013/11/14 10:18:17 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wapiti/ChangeLog,v 1.2 2014/10/09 08:39:54 voyageur Exp $
+
+*wapiti-9999 (09 Oct 2014)
+
+  09 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org> wapiti-2.3.0.ebuild,
+  +wapiti-9999.ebuild:
+  Add live ebuild (with shellshock module), tighten a dependency in 2.3.0
 
 *wapiti-2.3.0 (14 Nov 2013)
 
