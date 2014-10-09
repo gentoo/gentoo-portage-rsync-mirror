@@ -1,10 +1,10 @@
 # ChangeLog for dev-php/pecl-sphinx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-sphinx/ChangeLog,v 1.3 2014/09/30 14:31:33 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-sphinx/ChangeLog,v 1.4 2014/10/09 20:53:47 grknight Exp $
 
 *pecl-sphinx-1.3.2 (30 Sep 2014)
 
-  30 Sep 2014;  <grknight@gentoo.org> +pecl-sphinx-1.3.2.ebuild,
+  30 Sep 2014; Brian Evans <grknight@gentoo.org> +pecl-sphinx-1.3.2.ebuild,
   -pecl-sphinx-1.2.0.ebuild, -pecl-sphinx-1.3.0.ebuild:
   Version bump wrt bug 524108; Add PHP 5.6; Drop old
 

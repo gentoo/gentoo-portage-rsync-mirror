@@ -1,10 +1,10 @@
 # ChangeLog for dev-php/pecl-redis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-redis/ChangeLog,v 1.3 2014/09/29 19:32:13 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-redis/ChangeLog,v 1.4 2014/10/09 20:51:49 grknight Exp $
 
 *pecl-redis-2.2.5 (29 Sep 2014)
 
-  29 Sep 2014;  <grknight@gentoo.org> +pecl-redis-2.2.5.ebuild:
+  29 Sep 2014; Brian Evans <grknight@gentoo.org> +pecl-redis-2.2.5.ebuild:
   Version bump; add PHP 5.6 support; wrt bug 486732
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> pecl-redis-2.2.3.ebuild:

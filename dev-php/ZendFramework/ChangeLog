@@ -1,10 +1,10 @@
 # ChangeLog for dev-php/ZendFramework
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.21 2014/10/07 18:40:07 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.22 2014/10/09 20:55:39 grknight Exp $
 
 *ZendFramework-1.12.9 (07 Oct 2014)
 
-  07 Oct 2014;  <grknight@gentoo.org> +ZendFramework-1.12.9.ebuild,
+  07 Oct 2014; Brian Evans <grknight@gentoo.org> +ZendFramework-1.12.9.ebuild,
   -ZendFramework-1.11.6.ebuild:
   Version bump for wrt bug 448576 and security bugs 451060, 505276 and 523198
 

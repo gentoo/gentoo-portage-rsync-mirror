@@ -1,10 +1,10 @@
 # ChangeLog for dev-php/pecl-crack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-crack/ChangeLog,v 1.12 2014/09/30 16:25:06 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-crack/ChangeLog,v 1.13 2014/10/09 20:31:56 grknight Exp $
 
 *pecl-crack-0.4-r4 (30 Sep 2014)
 
-  30 Sep 2014;  <grknight@gentoo.org> +pecl-crack-0.4-r4.ebuild:
+  30 Sep 2014; Brian Evans <grknight@gentoo.org> +pecl-crack-0.4-r4.ebuild:
   Revision bump add 5.5 and 5.6 support drop 5.3
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pecl-crack-0.4-r2.ebuild,
