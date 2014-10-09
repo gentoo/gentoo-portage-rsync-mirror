@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.9-r3.ebuild,v 1.1 2014/07/08 23:17:39 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.9-r3.ebuild,v 1.2 2014/10/09 09:54:59 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://media.luffy.cx/files/${PN}/${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="cdp doc +dot1 +dot3 edp fdp graph json +lldpmed seccomp sonmp snmp static-libs readline xml"
 
 RDEPEND=">=dev-libs/libevent-2.0.5

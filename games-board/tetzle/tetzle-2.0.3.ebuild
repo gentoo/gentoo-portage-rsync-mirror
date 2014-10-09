@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/tetzle/tetzle-2.0.3.ebuild,v 1.1 2014/03/19 01:47:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/tetzle/tetzle-2.0.3.ebuild,v 1.2 2014/10/09 09:34:49 ago Exp $
 
 EAPI=5
 inherit qt4-r2 gnome2-utils games
@@ -11,7 +11,7 @@ SRC_URI="http://gottcode.org/${PN}/${P}-src.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-qt/qtgui-4.7:4

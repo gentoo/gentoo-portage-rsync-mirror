@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/stone-soup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.38 2014/09/25 20:35:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.39 2014/10/09 09:35:14 ago Exp $
+
+  09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> stone-soup-0.14.2.ebuild:
+  Stable for amd64, wrt bug #523530
 
 *stone-soup-0.15.1-r1 (25 Sep 2014)
 

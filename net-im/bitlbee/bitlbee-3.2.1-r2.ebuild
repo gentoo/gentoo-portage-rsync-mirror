@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.2.1-r1.ebuild,v 1.1 2014/10/07 07:09:23 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.2.1-r2.ebuild,v 1.1 2014/10/09 09:51:50 wired Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -161,7 +161,7 @@ src_install() {
 	fi
 
 	newinitd "${FILESDIR}"/bitlbee.initd-r1 bitlbee
-	newconfd "${FILESDIR}"/bitlbee.confd bitlbee
+	newconfd "${FILESDIR}"/bitlbee.confd-r1 bitlbee
 
 	exeinto /usr/share/bitlbee
 	cd utils
@@ -170,13 +170,15 @@ src_install() {
 
 pkg_postinst() {
 	chown -R bitlbee:bitlbee "${ROOT}"/var/lib/bitlbee
+	[[ -d "${ROOT}"/var/run/bitlbee ]] &&
+		chown -R bitlbee:bitlbee "${ROOT}"/var/run/bitlbee
 
 	einfo
-	elog "The utils included in bitlbee are now located in /usr/share/bitlbee"
+	elog "The bitlbee init script will now attempt to stop all processes owned by the"
+	elog "bitlbee user, including per-client forks."
 	elog
-	elog "NOTE: The IRSSI script is no longer provided by BitlBee."
-	elog
-	elog "The bitlbeed init script has been replaced by bitlbee."
-	elog "You must update your configuration."
+	elog "Tell the init script not to touch anything besides the main bitlbee process"
+	elog "by changing the BITLBEE_STOP_ALL variable in"
+	elog "	/etc/conf.d/bitlbee"
 	einfo
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/geoipupdate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/ChangeLog,v 1.22 2014/09/19 16:43:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/ChangeLog,v 1.23 2014/10/09 09:55:09 ago Exp $
+
+  09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> geoipupdate-2.0.2.ebuild:
+  Stable for amd64, wrt bug #523032
 
   19 Sep 2014; Jeroen Roovers <jer@gentoo.org> geoipupdate-2.0.2.ebuild:
   Stable for HPPA (bug #523032).

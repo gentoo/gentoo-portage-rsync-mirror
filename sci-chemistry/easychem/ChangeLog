@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/easychem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.22 2014/09/25 09:50:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.23 2014/10/09 09:34:38 ago Exp $
+
+  09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> easychem-0.6-r1.ebuild:
+  Stable for amd64, wrt bug #523628
 
   25 Sep 2014; Justin Lecher <jlec@gentoo.org> easychem-0.6-r1.ebuild,
   metadata.xml:
@@ -88,4 +91,3 @@
   Initial import. Thanks to Max Valdez <maxvalde@fis.unam.mx> and Olivier
   Fisette <ribosome@gentoo.org> for the ebuild this is based upon. Closes bug
   39806.
-

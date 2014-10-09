@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/e-uae
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.45 2013/02/16 12:21:12 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.46 2014/10/09 09:54:54 ago Exp $
+
+  09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> e-uae-0.8.29_rc4-r2.ebuild:
+  Stable for amd64, wrt bug #523042
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> -e-uae-0.8.29_rc4-r1.ebuild,
   metadata.xml:

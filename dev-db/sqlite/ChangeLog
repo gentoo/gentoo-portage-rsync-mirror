@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.531 2014/10/04 13:58:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.532 2014/10/09 09:35:09 ago Exp $
+
+  09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sqlite-3.8.6.ebuild:
+  Stable for amd64, wrt bug #523484
 
   04 Oct 2014; Anthony G. Basile <blueness@gentoo.org> sqlite-3.8.6.ebuild:
   Stable on ppc and ppc64, bug #523484

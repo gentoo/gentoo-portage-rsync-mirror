@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lldpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.18 2014/09/22 18:09:19 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.19 2014/10/09 09:54:59 ago Exp $
+
+  09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> lldpd-0.7.9-r3.ebuild:
+  Stable for amd64, wrt bug #522704
 
 *lldpd-0.7.10 (22 Sep 2014)
 
