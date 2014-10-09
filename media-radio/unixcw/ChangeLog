@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/unixcw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.14 2014/08/10 21:04:02 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.15 2014/10/09 15:18:23 ago Exp $
+
+  09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> unixcw-3.3.1.ebuild:
+  Stable for amd64, wrt bug #519628
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> unixcw-2.3-r6.ebuild,
   unixcw-3.0.2.ebuild, unixcw-3.1.1.ebuild, unixcw-3.2.0.ebuild,

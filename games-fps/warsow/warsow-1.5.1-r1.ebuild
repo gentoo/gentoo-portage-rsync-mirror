@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.5.1-r1.ebuild,v 1.2 2014/07/23 23:59:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.5.1-r1.ebuild,v 1.3 2014/10/09 15:26:25 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils check-reqs gnome2-utils flag-o-matic games
@@ -105,6 +105,7 @@ src_compile() {
 			BUILD_CIN=NO
 			BUILD_SERVER=YES
 			BUILD_TV_SERVER=YES
+			BUILD_REF_GL=NO
 		)
 	else
 		myconf=(
@@ -115,6 +116,7 @@ src_compile() {
 			BUILD_CIN=YES
 			BUILD_SERVER=$(yesno server)
 			BUILD_TV_SERVER=$(yesno server)
+			BUILD_REF_GL=YES
 		)
 	fi
 
