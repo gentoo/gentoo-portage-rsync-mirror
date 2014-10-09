@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chirp/chirp-0.4.0.ebuild,v 1.1 2014/03/26 02:39:15 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chirp/chirp-0.4.1.ebuild,v 1.1 2014/10/08 23:45:00 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -20,11 +20,11 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	KEYWORDS="~amd64 ~x86"
 	SRC_URI="http://chirp.danplanet.com/download/${PV}/${P}.tar.gz"
+	RESTRICT="test"
 fi
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-RESTRICT=test
 
 DEPEND="dev-python/pyserial
 	dev-libs/libxml2[python]"
@@ -34,4 +34,10 @@ RDEPEND="${DEPEND}
 src_prepare() {
 	sed -i -e "/share\/doc\/chirp/d" setup.py || die
 	distutils-r1_src_prepare
+}
+
+python_test() {
+	pushd tests > /dev/null
+	"${PYTHON}" run_tests || die
+	popd > /dev/null
 }
