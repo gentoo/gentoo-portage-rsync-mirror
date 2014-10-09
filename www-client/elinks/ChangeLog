@@ -1,6 +1,11 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.169 2014/05/31 04:14:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.170 2014/10/09 19:59:57 dilfridge Exp $
+
+  09 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  elinks-0.12_pre6.ebuild, elinks-9999.ebuild:
+  The libperl ebuild is only a dummy and will be removed; libperl is provided
+  by dev-lang/perl.
 
 *elinks-9999 (31 May 2014)
 

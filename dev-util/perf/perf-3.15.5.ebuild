@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.15.5.ebuild,v 1.1 2014/07/18 02:23:34 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.15.5.ebuild,v 1.2 2014/10/09 19:47:46 dilfridge Exp $
 
 EAPI="5"
 
@@ -45,7 +45,7 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 RDEPEND="audit? ( sys-process/audit )
 	demangle? ( sys-devel/binutils )
 	gtk? ( x11-libs/gtk+:2 )
-	perl? ( || ( >=dev-lang/perl-5.10 sys-devel/libperl ) )
+	perl? ( dev-lang/perl )
 	slang? ( dev-libs/newt )
 	unwind? ( sys-libs/libunwind )
 	dev-libs/elfutils"

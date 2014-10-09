@@ -2,5 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
-<longdescription>File transfer over OBEX for mobile phones.</longdescription>
 </pkgmetadata>

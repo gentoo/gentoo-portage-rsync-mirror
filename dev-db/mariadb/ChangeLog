@@ -1,16 +1,16 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.57 2014/10/09 18:57:17 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.58 2014/10/09 19:56:00 grknight Exp $
 
 *mariadb-5.5.40 (09 Oct 2014)
 
-  09 Oct 2014;  <grknight@gentoo.org> +mariadb-5.5.40.ebuild:
+  09 Oct 2014; Brian Evans <grknight@gentoo.org> +mariadb-5.5.40.ebuild:
   Version bump on 5.5 series
 
-  08 Oct 2014;  <grknight@gentoo.org> +files/my.cnf-5.6:
+  08 Oct 2014; Brian Evans <grknight@gentoo.org> +files/my.cnf-5.6:
   Add new 5.6 configs to better match upstream wrt bug 524768
 
-  06 Oct 2014;  <grknight@gentoo.org> mariadb-10.0.14.ebuild,
+  06 Oct 2014; Brian Evans <grknight@gentoo.org> mariadb-10.0.14.ebuild,
   mariadb-5.5.39.ebuild:
   Update test data locations wrt bug 524158
 
@@ -20,7 +20,7 @@
 
 *mariadb-10.0.14 (26 Sep 2014)
 
-  26 Sep 2014;  <grknight@gentoo.org> +mariadb-10.0.14.ebuild,
+  26 Sep 2014; Brian Evans <grknight@gentoo.org> +mariadb-10.0.14.ebuild,
   -mariadb-10.0.13.ebuild:
   Version bump; remove old
 
@@ -28,7 +28,7 @@
   -mariadb-5.3.12.ebuild, metadata.xml:
   Remove old mariadb versions and virtuals
 
-  21 Aug 2014;  <grknight@gentoo.org> -mariadb-5.1.67.ebuild:
+  21 Aug 2014; Brian Evans <grknight@gentoo.org> -mariadb-5.1.67.ebuild:
   Remove old 5.1 that has been masked for a long time
 
   17 Aug 2014; Jeroen Roovers <jer@gentoo.org> mariadb-5.5.39.ebuild,
@@ -45,7 +45,7 @@
 
 *mariadb-10.0.13 (12 Aug 2014)
 
-  12 Aug 2014;  <grknight@gentoo.org> +mariadb-10.0.13.ebuild:
+  12 Aug 2014; Brian Evans <grknight@gentoo.org> +mariadb-10.0.13.ebuild:
   Version bump
 
   08 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mariadb-5.5.39.ebuild:
@@ -54,12 +54,12 @@
   08 Aug 2014; Tobias Klausmann <klausman@gentoo.org> mariadb-5.5.39.ebuild:
   Stable on alpha, bug 518718
 
-  08 Aug 2014;  <grknight@gentoo.org> mariadb-5.5.39.ebuild:
+  08 Aug 2014; Brian Evans <grknight@gentoo.org> mariadb-5.5.39.ebuild:
   Stable for amd64 wrt bug 474800
 
 *mariadb-5.5.39 (05 Aug 2014)
 
-  05 Aug 2014;  <grknight@gentoo.org> +mariadb-5.5.39.ebuild,
+  05 Aug 2014; Brian Evans <grknight@gentoo.org> +mariadb-5.5.39.ebuild,
   -mariadb-5.5.38-r1.ebuild:
   Version update for security bug 518718. Drop old.
 

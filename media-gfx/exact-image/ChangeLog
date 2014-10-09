@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/exact-image
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/ChangeLog,v 1.9 2012/10/06 11:47:08 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/ChangeLog,v 1.10 2014/10/09 19:53:38 dilfridge Exp $
+
+  09 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  exact-image-0.8.1.ebuild, exact-image-0.8.1-r1.ebuild:
+  The libperl ebuild is only a dummy and will be removed; libperl is provided
+  by dev-lang/perl.
 
 *exact-image-0.8.1-r1 (06 Oct 2012)
 

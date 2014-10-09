@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/suck/suck-4.3.2.ebuild,v 1.2 2007/04/18 21:53:43 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/suck/suck-4.3.2.ebuild,v 1.3 2014/10/09 19:57:10 dilfridge Exp $
 
 DESCRIPTION="Grab news from a remote NNTP server and feed them to another"
 HOMEPAGE="http://home.comcast.net/~bobyetman/"
@@ -11,12 +11,12 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE="ssl perl"
 
 DEPEND="sys-libs/db
-	perl? ( sys-devel/libperl )
+	perl? ( dev-lang/perl )
 	ssl? ( dev-libs/openssl )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix paths to the locations in Gentoo
 	sed -i \

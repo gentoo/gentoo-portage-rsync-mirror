@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.8.1-r1.ebuild,v 1.1 2012/10/06 11:47:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.8.1-r1.ebuild,v 1.2 2014/10/09 19:53:38 dilfridge Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.5"
@@ -25,7 +25,7 @@ RDEPEND="x11-libs/agg[truetype]
 	lua? ( dev-lang/lua )
 	openexr? ( media-libs/openexr )
 	php? ( dev-lang/php )
-	perl? ( sys-devel/libperl )
+	perl? ( dev-lang/perl )
 	png? ( >=media-libs/libpng-1.2.43 )
 	ruby? ( dev-lang/ruby )
 	tiff? ( media-libs/tiff )

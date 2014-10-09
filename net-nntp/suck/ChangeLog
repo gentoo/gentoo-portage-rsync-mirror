@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/suck
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/suck/ChangeLog,v 1.4 2007/04/18 21:53:43 philantrop Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/suck/ChangeLog,v 1.5 2014/10/09 19:57:10 dilfridge Exp $
+
+  09 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> suck-4.3.2.ebuild:
+  The libperl ebuild is only a dummy and will be removed; libperl is provided
+  by dev-lang/perl.
 
   18 Apr 2007; Wulf C. Krueger <philantrop@gentoo.org> suck-4.3.2.ebuild:
   Added ~amd64 to KEYWORDS.

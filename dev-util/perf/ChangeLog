@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.32 2014/07/18 20:20:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.33 2014/10/09 19:47:46 dilfridge Exp $
+
+  09 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> perf-3.8-r1.ebuild,
+  perf-3.12.ebuild, perf-3.13.1-r1.ebuild, perf-3.15.5.ebuild:
+  The libperl ebuild is only a dummy and will be removed; libperl is provided
+  by dev-lang/perl.
 
   18 Jul 2014; Markos Chandras <hwoarang@gentoo.org> perf-3.13.1-r1.ebuild:
   Add ~mips. Bug #517294

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.61 2014/07/14 12:03:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.62 2014/10/09 19:44:34 dilfridge Exp $
+
+  09 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> collectd-5.2.2.ebuild,
+  collectd-5.3.0.ebuild, collectd-5.4.0.ebuild, collectd-5.4.1.ebuild:
+  The libperl ebuild is only a dummy and will be removed; libperl is provided
+  by dev-lang/perl.
 
   14 Jul 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Whitespace.

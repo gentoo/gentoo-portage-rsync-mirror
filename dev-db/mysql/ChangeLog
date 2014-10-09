@@ -1,11 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.694 2014/10/08 16:42:42 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.695 2014/10/09 19:57:59 grknight Exp $
 
-  08 Oct 2014;  <grknight@gentoo.org> +files/my.cnf-5.6:
+  08 Oct 2014; Brian Evans <grknight@gentoo.org> +files/my.cnf-5.6:
   Add new 5.6 configs to better match upstream wrt bug 524768
 
-  06 Oct 2014;  <grknight@gentoo.org> mysql-5.5.39.ebuild, mysql-5.5.40.ebuild,
+  06 Oct 2014; Brian Evans <grknight@gentoo.org> mysql-5.5.39.ebuild, mysql-5.5.40.ebuild,
   mysql-5.6.21.ebuild:
   Update test data locations wrt bug 524158
 
@@ -29,7 +29,7 @@
   30 Aug 2014; Brian Evans <grknight@gentoo.org> +mysql-5.6.20-r1.ebuild:
   Revision bump to enable multilib
 
-  28 Aug 2014;  <grknight@gentoo.org> -files/mysql-5.5.32-Werror.patch,
+  28 Aug 2014; Brian Evans <grknight@gentoo.org> -files/mysql-5.5.32-Werror.patch,
   files/my.cnf-5.5:
   Cleanup old patch and remove warning for bug 519630
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.73 2014/09/14 14:16:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.74 2014/10/09 19:43:37 jer Exp $
+
+  09 Oct 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove short <longdescription>.
 
   14 Sep 2014; Jeroen Roovers <jer@gentoo.org> obexftp-0.24.ebuild:
   Remove python 3.4 support.

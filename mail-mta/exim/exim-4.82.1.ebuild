@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82.1.ebuild,v 1.2 2014/09/30 18:39:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82.1.ebuild,v 1.3 2014/10/09 19:51:39 dilfridge Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ KEYWORDS="~amd64 ~hppa ~x86-fbsd ~x86-solaris"
 COMMON_DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/db-3.2
 	dev-libs/libpcre
-	perl? ( sys-devel/libperl )
+	perl? ( dev-lang/perl:= )
 	pam? ( virtual/pam )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( dev-libs/openssl )
