@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.131 2014/10/09 16:58:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.132 2014/10/09 19:12:49 zerochaos Exp $
+
+  09 Oct 2014; Rick Farina <zerochaos@gentoo.org> qwt-6.1.0.ebuild,
+  qwt-6.1.1.ebuild:
+  adding ~arm to :6, tested and seems good
 
   09 Oct 2014; Rick Farina <zerochaos@gentoo.org> qwt-6.1.0.ebuild,
   qwt-6.1.1.ebuild:

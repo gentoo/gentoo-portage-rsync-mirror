@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-38.0.2125.101_p1.ebuild,v 1.1 2014/10/07 23:10:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-38.0.2125.101_p1.ebuild,v 1.2 2014/10/09 19:27:12 floppym Exp $
 
 EAPI="5"
 
@@ -129,6 +129,7 @@ src_install() {
 	insinto /
 	doins -r opt usr
 
+	find "${ED}" -type d -empty -delete || die
 	chmod 755 "${ED}${CHROME_HOME}"/{chrome,${PN},nacl_helper{,_bootstrap},xdg-{mime,settings}} || die
 	chmod 4755 "${ED}${CHROME_HOME}/chrome-sandbox" || die
 	pax-mark m "${ED}${CHROME_HOME}/chrome"

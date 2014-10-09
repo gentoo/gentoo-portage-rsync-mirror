@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16080 2014/10/09 15:55:45 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16081 2014/10/09 19:18:14 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,22 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (9 Oct 2014)
+# Masked for removal in 30 days; see e.g. bug 446376
+# Please upgrade to stable Perl 5.18
+=dev-lang/perl-5.16.3
+=virtual/perl-ExtUtils-Install-1.580.0-r1
+=virtual/perl-File-Temp-0.220.0-r3
+=virtual/perl-I18N-LangTags-0.380.0
+=virtual/perl-Math-BigInt-1.998.0
+=virtual/perl-Math-BigRat-0.260.300
+=virtual/perl-Net-Ping-2.38
+=virtual/perl-Text-ParseWords-3.270.0-r1
+=virtual/perl-Thread-Queue-2.120.0-r3
+=virtual/perl-Version-Requirements-0.101.22
+=virtual/perl-threads-shared-1.400.0-r2
+perl-core/Version-Requirements
 
 # Brian Evans <grknight@gentoo.org> (8 Oct 2014)
 # Mask all versions of suhosin until upstream revival is sustained and tested
