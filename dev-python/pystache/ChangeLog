@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pystache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pystache/ChangeLog,v 1.4 2014/05/17 07:57:02 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pystache/ChangeLog,v 1.5 2014/10/09 09:13:50 ago Exp $
+
+  09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pystache-0.5.4.ebuild:
+  Stable for amd64, wrt bug #524298
 
 *pystache-0.5.4 (17 May 2014)
 

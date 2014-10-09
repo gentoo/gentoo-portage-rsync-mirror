@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.132 2014/10/01 19:59:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.133 2014/10/09 09:13:45 ago Exp $
+
+  09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> global-6.3.1.ebuild:
+  Stable for amd64, wrt bug #524248
 
   01 Oct 2014; Mike Gilbert <floppym@gentoo.org> global-6.3.1.ebuild:
   Fix installation with tex not available. Patch by Arfrever.

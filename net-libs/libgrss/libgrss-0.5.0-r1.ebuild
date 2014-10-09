@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/libgrss-0.5.0-r1.ebuild,v 1.1 2014/09/26 18:05:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/libgrss-0.5.0-r1.ebuild,v 1.2 2014/10/09 09:13:25 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ SRC_URI="http://gtk.mplat.es/libgrss/tarballs/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0.5"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples"
 
 RDEPEND="

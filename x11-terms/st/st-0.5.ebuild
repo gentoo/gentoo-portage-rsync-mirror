@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-0.5.ebuild,v 1.1 2014/04/06 15:20:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-0.5.ebuild,v 1.2 2014/10/09 09:13:35 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://dl.suckless.org/st/${P}.tar.gz"
 
 LICENSE="MIT-with-advertising"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa ~x86"
 IUSE="savedconfig"
 
 RDEPEND="media-libs/fontconfig

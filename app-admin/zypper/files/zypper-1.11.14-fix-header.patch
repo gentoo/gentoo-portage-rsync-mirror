@@ -1,0 +1,28 @@
+ src/Zypper.h       | 1 +
+ src/utils/colors.h | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/src/Zypper.h b/src/Zypper.h
+index d0474ec..6453193 100644
+--- a/src/Zypper.h
++++ b/src/Zypper.h
+@@ -34,6 +34,7 @@
+ using namespace zypp;
+ 
+ // Convenience
++#include <iostream>
+ using std::cout;
+ using std::cerr;
+ using std::endl;
+diff --git a/src/utils/colors.h b/src/utils/colors.h
+index 7639e70..245d0d6 100644
+--- a/src/utils/colors.h
++++ b/src/utils/colors.h
+@@ -10,6 +10,7 @@
+ 
+ #include <string>
+ #include <iosfwd>
++#include <iostream>
+ 
+ #define COLOR_BLACK             "\033[30m"
+ #define COLOR_GREY_DARK         "\033[1;30m"

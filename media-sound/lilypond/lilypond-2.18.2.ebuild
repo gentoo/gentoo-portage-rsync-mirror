@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.18.2.ebuild,v 1.2 2014/09/07 07:11:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.18.2.ebuild,v 1.3 2014/10/09 09:13:20 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -13,7 +13,7 @@ HOMEPAGE="http://lilypond.org/"
 
 LICENSE="GPL-3 FDL-1.3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa ~x86"
 LANGS=" ca cs da de el eo es fi fr it ja nl ru sv tr uk vi zh_TW"
 IUSE="debug emacs profile vim-syntax ${LANGS// / linguas_}"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

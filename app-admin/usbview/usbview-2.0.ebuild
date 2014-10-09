@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-2.0.ebuild,v 1.10 2013/02/12 22:01:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-2.0.ebuild,v 1.11 2014/10/09 09:29:27 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils linux-info
 
 DESCRIPTION="Display the topology of devices on the USB bus"
@@ -12,13 +12,18 @@ SRC_URI="http://www.kroah.com/linux-usb/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
-IUSE=""
 
-RDEPEND="x11-libs/gtk+:3"
-DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+RDEPEND="
+	dev-libs/glib:2
+	x11-libs/gdk-pixbuf:2
+	x11-libs/gtk+:3
+"
+DEPEND="
+	${RDEPEND}
+	virtual/pkgconfig
+"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
+DOCS=( AUTHORS ChangeLog README TODO )
 
 pkg_setup() {
 	CONFIG_CHECK="~DEBUG_FS"
