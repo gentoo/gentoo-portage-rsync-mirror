@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.3.0.ebuild,v 1.1 2014/10/04 10:13:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.3.0.ebuild,v 1.2 2014/10/09 02:47:31 grozin Exp $
 
 EAPI=5
 
@@ -24,6 +24,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+PATCHES=( "${FILESDIR}"/${P}-rst2man.patch )
 
 DOCS=( README docs/mounts.txt ChangeLog )
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.78 2014/10/08 00:52:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.79 2014/10/09 02:47:31 grozin Exp $
+
+  09 Oct 2014; Andrey Grozin <grozin@gentoo.org> lensfun-0.3.0.ebuild,
+  +files/lensfun-0.3.0-rst2man.patch:
+  Patching rst2man -> rst2man.py, closing #524474
 
   08 Oct 2014; Manuel Rüger <mrueg@gentoo.org> lensfun-0.2.8-r1.ebuild:
   Mark stable on amd64. See bug #524436.
