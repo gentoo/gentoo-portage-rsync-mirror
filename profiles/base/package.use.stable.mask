@@ -1,9 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.24 2014/08/29 12:53:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.25 2014/10/09 12:26:08 kensington Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Michael Palimaka <kensington@gentoo.org> (09 Oct 2014)
+# Requires net-libs/libotr-4.0.0 which just came out of
+# hard mask.
+>=kde-base/kopete-4.12.0 otr
 
 # Mikle Kolyada <zlogene@gentoo.org> (16 Aug 2014)
 # Not yet stabilized dependency, need more testing

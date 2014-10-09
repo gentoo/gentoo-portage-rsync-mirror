@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.611 2014/10/05 08:49:36 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.612 2014/10/09 12:26:08 kensington Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -202,11 +202,6 @@ dev-libs/boost context
 # Since this is new and unused yet, keep it masked for now and check
 # with upstream if there is something that can be done to fix the issue.
 media-libs/cogl gstreamer
-
-# Johannes Huber <johu@gentoo.org> (18 Dec 2013)
-# net-libs/libotr-4.0.0 is masked. Please remove the use mask if package mask
-# is lifted.
->=kde-base/kopete-4.12.0 otr
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (15 Dec 2013)
 # pulseaudio patchset breaks too often on live wine ebuild
