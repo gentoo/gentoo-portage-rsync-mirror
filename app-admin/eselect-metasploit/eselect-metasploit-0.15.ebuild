@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-metasploit/eselect-metasploit-0.14.ebuild,v 1.1 2014/10/03 03:39:09 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-metasploit/eselect-metasploit-0.15.ebuild,v 1.1 2014/10/09 03:29:11 zerochaos Exp $
 
 EAPI=5
 

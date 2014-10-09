@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/yoshimi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yoshimi/ChangeLog,v 1.15 2014/06/20 07:14:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yoshimi/ChangeLog,v 1.16 2014/10/09 03:31:01 radhermit Exp $
+
+*yoshimi-1.2.4 (09 Oct 2014)
+
+  09 Oct 2014; Tim Harder <radhermit@gentoo.org> +yoshimi-1.2.4.ebuild:
+  Version bump.
 
 *yoshimi-1.2.1 (20 Jun 2014)
 

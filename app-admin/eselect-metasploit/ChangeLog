@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/eselect-metasploit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-metasploit/ChangeLog,v 1.7 2014/10/03 04:02:56 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-metasploit/ChangeLog,v 1.8 2014/10/09 03:29:11 zerochaos Exp $
+
+*eselect-metasploit-0.15 (09 Oct 2014)
+
+  09 Oct 2014; Rick Farina <zerochaos@gentoo.org>
+  +eselect-metasploit-0.15.ebuild, +files/msfloader-0.15,
+  -eselect-metasploit-0.13.ebuild, -eselect-metasploit-0.14.ebuild,
+  -files/msfloader-0.13, -files/msfloader-0.14:
+  update to resolve issue trying to copy non-existant gemspec (older metasploit
+  versions)
 
   03 Oct 2014; Rick Farina <zerochaos@gentoo.org> files/91metasploit,
   files/msfloader-0.14:
