@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-1.0-r4.ebuild,v 1.2 2013/09/09 15:53:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-1.0-r4.ebuild,v 1.3 2014/10/09 14:48:11 ago Exp $
 
 # QA failiures reported in https://code.monotone.ca/p/monotone/issues/181/
 EAPI="4"
@@ -12,7 +12,7 @@ SRC_URI="http://monotone.ca/downloads/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 ~x86"
 IUSE="doc ipv6 nls test"
 
 RDEPEND="sys-libs/zlib
