@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lastpass/lastpass-3.1.61.ebuild,v 1.2 2014/10/08 21:42:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lastpass/lastpass-3.1.61.ebuild,v 1.3 2014/10/09 06:47:12 jlec Exp $
 
 EAPI=5
 inherit eutils
@@ -9,9 +9,10 @@ DESCRIPTION="Online password manager and form filler that makes web browsing eas
 HOMEPAGE="https://lastpass.com/misc_download2.php"
 # sadly, upstream has no versioned distfiles
 MAINDISTFILE=lplinux.tar.bz2
-SRC_URI="https://lastpass.com/$MAINDISTFILE
-		firefox? ( https://lastpass.com/lp_linux.xpi )
-		https://lastpass.com/lpchrome_linux.crx"
+SRC_URI="
+	https://lastpass.com/${MAINDISTFILE}
+	https://lastpass.com/lpchrome_linux.crx
+	firefox? ( https://lastpass.com/lp_linux.xpi )"
 
 LICENSE="LastPass"
 SLOT="0"
@@ -33,17 +34,18 @@ REQUIRED_USE="|| ( firefox chromium chrome )"
 LASTPASS_EXEDIR=/opt/lastpass/
 
 QA_PREBUILT="
-${LASTPASS_EXEDIR}/nplastpass*
-/usr/lib*/firefox/browser/extensions/support@lastpass.com/platform/Linux_x86_64-gcc3/components/lpxpcom_x86_64.so
-/usr/lib*/firefox/browser/extensions/support@lastpass.com/platform/Linux_x86-gcc3/components/lpxpcom.so
+	${LASTPASS_EXEDIR}nplastpass*
+	/usr/lib*/nsbrowser/plugins/libnplastpass*.so
+	/usr/lib*/firefox/browser/extensions/support@lastpass.com/platform/Linux_x86_64-gcc3/components/lpxpcom_x86_64.so
+	/usr/lib*/firefox/browser/extensions/support@lastpass.com/platform/Linux_x86-gcc3/components/lpxpcom.so
 "
 
 S="${WORKDIR}"
 
 src_unpack() {
-	unpack $MAINDISTFILE
-	mkdir -p "${S}"/crx
-	unzip -qq -o "${DISTDIR}/lpchrome_linux.crx" -d "${S}"/crx
+	unpack ${MAINDISTFILE}
+	mkdir -p "${S}"/crx || die
+	unzip -qq -o "${DISTDIR}/lpchrome_linux.crx" -d "${S}"/crx || die
 }
 
 src_install() {
@@ -58,25 +60,25 @@ src_install() {
 	doexe "${S}"/crx/lib${bin}.so
 
 	cat >"${T}"/lastpass_policy.json <<-EOF
-	{ 
+	{
 		"ExtensionInstallSources": [
-			"https://lastpass.com/*", 
-			"https://*.lastpass.com/*", 
+			"https://lastpass.com/*",
+			"https://*.lastpass.com/*",
 			"https://*.cloudfront.net/lastpass/*"
-		] 
+		]
 	}
 	EOF
 	cat >"${T}"/com.lastpass.nplastpass.json <<-EOF
-	{ 
-		"name": "com.lastpass.nplastpass", 
-		"description": "LastPass", 
-		"path": "${LASTPASS_EXEDIR}/$bin", 
-		"type": "stdio", 
-		"allowed_origins": [ 
-			"chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/", 
-			"chrome-extension://debgaelkhoipmbjnhpoblmbacnmmgbeg/", 
-			"chrome-extension://hnjalnkldgigidggphhmacmimbdlafdo/" 
-		] 
+	{
+		"name": "com.lastpass.nplastpass",
+		"description": "LastPass",
+		"path": "${LASTPASS_EXEDIR}/$bin",
+		"type": "stdio",
+		"allowed_origins": [
+			"chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/",
+			"chrome-extension://debgaelkhoipmbjnhpoblmbacnmmgbeg/",
+			"chrome-extension://hnjalnkldgigidggphhmacmimbdlafdo/"
+		]
 	}
 	EOF
 
@@ -95,8 +97,8 @@ src_install() {
 
 	if use firefox; then
 		d="$D/usr/$(get_libdir)/firefox/browser/extensions/support@lastpass.com"
-		mkdir -p $d
-		unzip -qq -o "${DISTDIR}/lp_linux.xpi" -d "$d"
+		mkdir -p $d || die
+		unzip -qq -o "${DISTDIR}/lp_linux.xpi" -d "$d" || die
 	fi
 
 }
