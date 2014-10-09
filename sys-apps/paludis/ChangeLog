@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.247 2014/08/30 03:53:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.248 2014/10/09 10:29:11 jdhore Exp $
+
+*paludis-2.2.0 (09 Oct 2014)
+
+  09 Oct 2014; Jeff Horelick <jdhore@gentoo.org> +paludis-2.2.0.ebuild:
+  Version bump
 
   30 Aug 2014; Jeff Horelick <jdhore@gentoo.org> paludis-2.0.0.ebuild:
   Mark amd64 wrt bug #520874
