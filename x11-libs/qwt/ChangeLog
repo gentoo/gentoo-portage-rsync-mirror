@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.130 2014/09/19 10:22:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.131 2014/10/09 16:58:37 zerochaos Exp $
+
+  09 Oct 2014; Rick Farina <zerochaos@gentoo.org> qwt-6.1.0.ebuild,
+  qwt-6.1.1.ebuild:
+  links to both qtgui and qtcore directly, adding deps per depcheck
 
 *qwt-6.1.1 (19 Sep 2014)
 

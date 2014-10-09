@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.270 2014/10/09 09:35:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.271 2014/10/09 16:39:52 pesa Exp $
+
+  09 Oct 2014; Davide Pesavento <pesa@gentoo.org> PyQt4-4.11.1.ebuild:
+  Revert to ~amd64, see bug #523322 comment #4.
 
   09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> PyQt4-4.11.1.ebuild:
   Stable for amd64, wrt bug #523322
