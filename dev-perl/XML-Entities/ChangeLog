@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/XML-Entities
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Entities/ChangeLog,v 1.1 2014/10/09 18:42:57 dilfridge Exp $
+
+*XML-Entities-1.0.100 (09 Oct 2014)
+
+  09 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +XML-Entities-1.0.100.ebuild, +metadata.xml:
+  New package, requested by jmbsvicetto for ocsinventory-ng
+
