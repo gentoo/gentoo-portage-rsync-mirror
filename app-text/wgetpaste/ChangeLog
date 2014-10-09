@@ -1,6 +1,13 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.145 2014/10/05 19:09:22 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.146 2014/10/09 15:45:45 maksbotan Exp $
+
+*wgetpaste-2.25-r3 (09 Oct 2014)
+
+  09 Oct 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/wgetpaste-2.25-pinnwand-raw.patch, +wgetpaste-2.25-r3.ebuild:
+  Fix raw URL for bpaste service, bug #524800. Thanks to Nuno Silva
+  <njsg@iki.fi> for patch.
 
   05 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> wgetpaste-2.25-r2.ebuild:
   x86 stable wrt bug #523612

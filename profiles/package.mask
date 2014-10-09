@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16079 2014/10/09 12:01:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16080 2014/10/09 15:55:45 maksbotan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -110,6 +110,7 @@ app-text/pastebin
 # agreed on #gentoo-dev by mgorny, patrick and others
 =media-video/mpv-0.4*
 =media-video/mpv-0.5*
+=media-video/mpv-0.6*
 
 # Patrick Lauer <patrick@gentoo.org> (11 Sep 2014)
 # Unsatisfiable dependencies after firebird removal
