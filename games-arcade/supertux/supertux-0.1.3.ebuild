@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.18 2014/08/10 21:22:46 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.19 2014/10/09 04:33:59 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils games
@@ -16,7 +16,7 @@ IUSE="opengl"
 
 DEPEND="media-libs/libsdl[joystick]
 	media-libs/sdl-image[png,jpeg]
-	media-libs/sdl-mixer[mikmod,vorbis]
+	media-libs/sdl-mixer[mod,vorbis]
 	x11-libs/libXt"
 RDEPEND="${DEPEND}"
 
