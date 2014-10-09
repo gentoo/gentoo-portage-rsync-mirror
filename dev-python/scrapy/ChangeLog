@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/scrapy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.27 2014/07/28 08:05:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.28 2014/10/09 01:54:48 idella4 Exp $
+
+  09 Oct 2014; Ian Delaney <idella4@gentoo.org> +files/0.25.1-setup.patch,
+  -files/scrapy-0.14.3-runtests.patch, -scrapy-0.19.0.ebuild,
+  -scrapy-0.20.0.ebuild, -scrapy-0.24.1.ebuild, scrapy-0.25.1.ebuild:
+  add patch from upstream, fixes version bordering issues added by them Aug 5,
+  remove old patch and old ebuilds
 
 *scrapy-0.25.1 (28 Jul 2014)
 

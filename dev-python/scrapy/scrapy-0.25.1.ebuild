@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.25.1.ebuild,v 1.1 2014/07/28 08:05:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.25.1.ebuild,v 1.2 2014/10/09 01:54:48 idella4 Exp $
 
 EAPI=5
 
@@ -46,6 +46,8 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 # Testsuite currently survives without it, so appears optional
 
 REQUIRED_USE="test? ( ssl boto )"
+
+PATCHES=( "${FILESDIR}"/${PV}-setup.patch )
 
 python_compile_all() {
 	if use doc; then
