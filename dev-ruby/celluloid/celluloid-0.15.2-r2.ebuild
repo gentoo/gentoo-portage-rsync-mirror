@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/celluloid-0.15.2-r2.ebuild,v 1.3 2014/08/27 23:06:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/celluloid-0.15.2-r2.ebuild,v 1.4 2014/10/08 23:18:55 mrueg Exp $
 
 EAPI=5
 # rbx or jruby recommended, but only in 1.9 mode.
@@ -23,7 +23,8 @@ SLOT="0"
 LICENSE="MIT"
 KEYWORDS="~amd64 ~ppc ~ppc64"
 
-ruby_add_rdepend ">=dev-ruby/timers-1.0.0"
+ruby_add_rdepend ">=dev-ruby/timers-1.0.0
+	<dev-ruby/timers-3"
 
 all_ruby_prepare() {
 	rm Gemfile .rspec || die
