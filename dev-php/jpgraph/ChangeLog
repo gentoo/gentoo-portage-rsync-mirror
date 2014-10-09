@@ -1,10 +1,10 @@
 # ChangeLog for dev-php/jpgraph
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.31 2014/10/07 19:36:16 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.32 2014/10/09 20:14:00 grknight Exp $
 
 *jpgraph-3.0.7-r2 (07 Oct 2014)
 
-  07 Oct 2014;  <grknight@gentoo.org> +jpgraph-3.0.7-r2.ebuild:
+  07 Oct 2014; Brian Evans <grknight@gentoo.org> +jpgraph-3.0.7-r2.ebuild:
   Revbump to fix truetype issues wrt bug 524120
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jpgraph-3.0.7-r1.ebuild:

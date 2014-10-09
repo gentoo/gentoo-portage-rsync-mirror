@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/myodbc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.38 2014/09/01 01:15:27 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.39 2014/10/09 20:08:57 grknight Exp $
 
 *myodbc-5.2.7-r1 (01 Sep 2014)
 
@@ -8,7 +8,7 @@
   +files/5.2.7-r1-cxxlinkage.patch, +myodbc-5.2.7-r1.ebuild:
   Revision bump to enable multilib
 
-  20 Aug 2014;  <grknight@gentoo.org> +files/5.2.7-cxxlinkage.patch,
+  20 Aug 2014; Brian Evans <grknight@gentoo.org> +files/5.2.7-cxxlinkage.patch,
   +files/5.2.7-mariadb-dynamic-array.patch, myodbc-5.2.7.ebuild:
   Fix build failures on >=dev-db/mariadb-10.0
 

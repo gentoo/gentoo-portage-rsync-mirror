@@ -1,6 +1,6 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.48 2014/09/21 15:06:28 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.49 2014/10/09 20:23:42 grknight Exp $
 
   21 Sep 2014; Brian Evans <grknight@gentoo.org> -mysql-5.2.ebuild,
   -mysql-5.3.ebuild:
@@ -13,7 +13,7 @@
 
 *mysql-5.6-r1 (14 Aug 2014)
 
-  14 Aug 2014;  <grknight@gentoo.org> +mysql-5.6-r1.ebuild, -mysql-5.6.ebuild:
+  14 Aug 2014; Brian Evans <grknight@gentoo.org> +mysql-5.6-r1.ebuild, -mysql-5.6.ebuild:
   Revbump for 5.6 to add subslot and remove mariadb-10.1 which should be in 5.7
 
   13 Aug 2014; Markus Meier <maekke@gentoo.org> mysql-5.5.ebuild:

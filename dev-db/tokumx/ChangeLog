@@ -1,10 +1,10 @@
 # ChangeLog for dev-db/tokumx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokumx/ChangeLog,v 1.2 2014/08/01 21:00:15 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokumx/ChangeLog,v 1.3 2014/10/09 20:24:59 grknight Exp $
 
 *tokumx-1.5.0-r1 (01 Aug 2014)
 
-  01 Aug 2014;  <grknight@gentoo.org> +files/tokumx-disable-bundled-libs.patch,
+  01 Aug 2014; Brian Evans <grknight@gentoo.org> +files/tokumx-disable-bundled-libs.patch,
   +tokumx-1.5.0-r1.ebuild:
   Revision bump to use less bundled libs and fix documentation install. Ack by
   chainsaw

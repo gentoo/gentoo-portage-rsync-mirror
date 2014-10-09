@@ -1,10 +1,10 @@
 # ChangeLog for sys-auth/pam_mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.24 2014/08/19 17:14:31 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.25 2014/10/09 20:22:41 grknight Exp $
 
 *pam_mysql-0.7_rc1-r5 (19 Aug 2014)
 
-  19 Aug 2014;  <grknight@gentoo.org> +pam_mysql-0.7_rc1-r5.ebuild:
+  19 Aug 2014; Brian Evans <grknight@gentoo.org> +pam_mysql-0.7_rc1-r5.ebuild:
   Fix deprecated autotools macros for bug 468750 and EAPI5 bump
 
   07 May 2014; Brian Evans <grknight@gentoo.org> -pam_mysql-0.7_rc1-r1.ebuild,

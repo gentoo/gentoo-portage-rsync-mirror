@@ -1,13 +1,13 @@
 # ChangeLog for dev-php/igbinary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/ChangeLog,v 1.11 2014/10/01 03:11:15 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/ChangeLog,v 1.12 2014/10/09 20:28:47 grknight Exp $
 
 *igbinary-1.2.1 (01 Oct 2014)
 
   01 Oct 2014; Brian Evans <grknight@gentoo.org> +igbinary-1.2.1.ebuild:
   Version bump; update HOMEPAGE; support 5.6; wrt bug 521926
 
-  30 Sep 2014;  <grknight@gentoo.org> -igbinary-1.1.1-r1.ebuild:
+  30 Sep 2014; Brian Evans <grknight@gentoo.org> -igbinary-1.1.1-r1.ebuild:
   Cleanup old
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> igbinary-1.1.1-r2.ebuild:

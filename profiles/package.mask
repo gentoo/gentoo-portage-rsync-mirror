@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16081 2014/10/09 19:18:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16082 2014/10/09 20:07:27 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (9 Oct 2014)
+# The sys-devel/libperl ebuild is only a dummy and will be removed
+# in 30 days; libperl is provided by dev-lang/perl.
+sys-devel/libperl
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (9 Oct 2014)
 # Masked for removal in 30 days; see e.g. bug 446376

@@ -1,11 +1,11 @@
 # ChangeLog for dev-db/percona-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-server/ChangeLog,v 1.5 2014/10/08 16:43:14 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-server/ChangeLog,v 1.6 2014/10/09 20:04:36 grknight Exp $
 
-  08 Oct 2014;  <grknight@gentoo.org> +files/my.cnf-5.6:
+  08 Oct 2014; Brian Evans <grknight@gentoo.org> +files/my.cnf-5.6:
   Add new 5.6 configs to better match upstream wrt bug 524768
 
-  06 Oct 2014;  <grknight@gentoo.org> percona-server-5.6.20.68.0.ebuild:
+  06 Oct 2014; Brian Evans <grknight@gentoo.org> percona-server-5.6.20.68.0.ebuild:
   Update test data locations wrt bug 524158
 
   02 Oct 2014; Brian Evans <grknight@gentoo.org>
