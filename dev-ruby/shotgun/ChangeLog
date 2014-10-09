@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shotgun
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shotgun/ChangeLog,v 1.10 2014/04/24 16:43:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shotgun/ChangeLog,v 1.11 2014/10/09 22:18:49 mrueg Exp $
+
+  09 Oct 2014; Manuel Rüger <mrueg@gentoo.org> shotgun-0.9-r1.ebuild:
+  Add ruby21 support.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> shotgun-0.9-r1.ebuild:
   Remove ruby18 support.

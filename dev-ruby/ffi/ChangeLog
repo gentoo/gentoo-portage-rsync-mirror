@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.77 2014/09/27 06:39:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.78 2014/10/09 22:10:13 mrueg Exp $
+
+*ffi-1.9.6 (09 Oct 2014)
+
+  09 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +ffi-1.9.6.ebuild:
+  Version bump.
 
 *ffi-1.9.4-r1 (27 Sep 2014)
 
