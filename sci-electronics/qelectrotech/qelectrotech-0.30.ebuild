@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/qelectrotech-0.30.ebuild,v 1.2 2014/10/04 21:30:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/qelectrotech-0.30.ebuild,v 1.3 2014/10/09 08:05:37 ago Exp $
 
 EAPI=5
 PLOCALES="cs de el en es fr it pl pt ro ru"
@@ -15,7 +15,7 @@ SRC_URI="http://download.tuxfamily.org/qet/tags/20130928/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 IUSE="doc"
 

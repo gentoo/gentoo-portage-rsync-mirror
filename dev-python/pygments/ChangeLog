@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.129 2014/10/07 15:31:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.130 2014/10/09 08:16:58 ago Exp $
+
+  09 Oct 2014; Agostino Sarubbo <ago@gentoo.org>
+  pygments-1.6_p20140324-r1.ebuild:
+  Stable for amd64, wrt bug #524416
 
   07 Oct 2014; Mike Gilbert <floppym@gentoo.org>
   pygments-1.6_p20140324-r1.ebuild:

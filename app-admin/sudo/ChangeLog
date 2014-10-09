@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.368 2014/10/08 16:18:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.369 2014/10/09 08:05:17 ago Exp $
+
+  09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sudo-1.8.11_p1.ebuild:
+  Stable for amd64, wrt bug #524752
 
   08 Oct 2014; Jeroen Roovers <jer@gentoo.org> sudo-1.8.11_p1.ebuild:
   Stable for HPPA (bug #524752).
