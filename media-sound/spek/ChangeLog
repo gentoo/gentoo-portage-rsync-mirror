@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/spek
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.12 2013/08/20 13:06:40 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.13 2014/10/09 05:58:49 xmw Exp $
+
+  09 Oct 2014; Michael Weber <xmw@gentoo.org> +files/spek-0.8.3-stdlib.patch,
+  spek-0.8.3.ebuild:
+  Include stdlib.h for malloc and free (bug 519450)
 
   20 Aug 2013; Jeroen Roovers <jer@gentoo.org> spek-0.8.3.ebuild:
   Escape newline.
