@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/kasumi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.50 2014/10/10 10:53:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.51 2014/10/10 13:29:28 mrueg Exp $
+
+  10 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -files/kasumi-2.3-gcc43.patch,
+  -kasumi-2.5.ebuild:
+  Cleanup old.
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> kasumi-2.5-r1.ebuild:
   Stable for x86, wrt bug #518170

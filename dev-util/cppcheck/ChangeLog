@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/cppcheck
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.55 2014/10/10 06:31:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.57 2014/10/10 13:23:54 xmw Exp $
+
+  10 Oct 2014; Michael Weber <xmw@gentoo.org> cppcheck-1.65-r1.ebuild:
+  Backport ebuild improvements (test, bug 511438), manpage.
+
+*cppcheck-1.66 (10 Oct 2014)
+
+  10 Oct 2014; Michael Weber <xmw@gentoo.org> +cppcheck-1.66.ebuild,
+  +files/cppcheck-1.66-tinyxml2.patch:
+  Version bump (bug 520242), fix test (bug 511438).
 
   10 Oct 2014; Jeroen Roovers <jer@gentoo.org> cppcheck-1.65-r1.ebuild,
   -files/cppcheck-1.64-tinyxml2.patch, -files/cppcheck-1.65-r1-tinyxml2.patch,

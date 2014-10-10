@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmacpi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.24 2008/06/28 06:36:16 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.25 2014/10/10 13:15:37 voyageur Exp $
+
+*wmacpi-2.2 (10 Oct 2014)
+
+  10 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org> +wmacpi-2.2.ebuild,
+  +files/wmacpi-2.2-makefile.patch:
+  Version bump with new homepage, update makefile patch
 
   28 Jun 2008; Markus Meier <maekke@gentoo.org> wmacpi-2.2_rc1.ebuild:
   x86 stable, bug #229545
