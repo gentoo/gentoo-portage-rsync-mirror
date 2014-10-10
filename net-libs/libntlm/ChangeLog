@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libntlm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.39 2012/10/20 15:31:53 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.40 2014/10/10 04:09:55 radhermit Exp $
+
+*libntlm-1.4 (10 Oct 2014)
+
+  10 Oct 2014; Tim Harder <radhermit@gentoo.org> +libntlm-1.4.ebuild:
+  Version bump, add static-libs use flag.
 
   20 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> libntlm-1.3.ebuild:
   Keyword ~amd64-linux
