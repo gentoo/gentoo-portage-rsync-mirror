@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-6.5.0.ebuild,v 1.1 2014/06/27 06:34:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-6.7.0-r1.ebuild,v 1.1 2014/10/10 08:24:14 patrick Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.parrot.org/"
 SRC_URI="ftp://ftp.parrot.org/pub/parrot/releases/all/${PV}/${P}.tar.gz"
 
 LICENSE="Artistic-2"
-SLOT="0/6.1.0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="opengl nls doc examples gdbm gmp ssl +unicode pcre"
 
