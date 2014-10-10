@@ -1,6 +1,6 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.9.3.ebuild,v 1.1 2014/10/02 10:11:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.9.3.ebuild,v 1.2 2014/10/10 11:37:31 blueness Exp $
 
 EAPI=4
 
@@ -23,10 +23,13 @@ SRC_URI="https://github.com/${MyPN}/${MyPN}/archive/v${MyPV}.tar.gz -> ${MyPN}-v
 LICENSE="MIT ISC GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="examples +ljr logrotate test upnp +wallet"
+IUSE="examples ljr ljr-antispam logrotate test upnp +wallet"
 
+REQUIRED_USE="
+	ljr-antispam? ( ljr )
+"
 RDEPEND="
-	>=dev-libs/boost-1.53.0[threads(+)]
+	>=dev-libs/boost-1.52.0[threads(+)]
 	dev-libs/openssl:0[-bindist]
 	logrotate? (
 		app-admin/logrotate
@@ -55,6 +58,7 @@ pkg_setup() {
 src_prepare() {
 	if use ljr; then
 		epatch "${WORKDIR}/${LJR_PATCH}"
+		use ljr-antispam || epatch "${FILESDIR}/0.9.x-ljr_noblacklist.patch"
 	else
 		epatch "${FILESDIR}/0.9.0-sys_leveldb.patch"
 	fi
