@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.48 2014/08/25 09:38:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.49 2014/10/10 13:50:49 xmw Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${PN}-1.3-CFLAGS.patch \
-		"${FILESDIR}"/${PN}-1.4-old-debian-files.patch \
+		"${FILESDIR}"/${PN}-1.5-old-debian-files.patch \
 		"${FILESDIR}"/${PN}-1.3-pkg-config.patch \
 		"${FILESDIR}"/${PN}-1.5-Makerules-openssl-curl.patch
 

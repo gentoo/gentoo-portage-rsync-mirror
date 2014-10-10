@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/execnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.20 2014/10/02 10:01:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.21 2014/10/10 13:34:07 idella4 Exp $
+
+*execnet-1.2.0-r2 (10 Oct 2014)
+
+  10 Oct 2014; Ian Delaney <idella4@gentoo.org> +execnet-1.2.0-r2.ebuild,
+  +files/1.2.0-tests.patch:
+  add patch from upstream, re-based, improving but not fixing testsute
+  completely
 
 *execnet-1.2.0-r1 (02 Oct 2014)
 

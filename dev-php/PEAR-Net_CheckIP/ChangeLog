@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Net_CheckIP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_CheckIP/ChangeLog,v 1.28 2014/08/10 20:51:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_CheckIP/ChangeLog,v 1.29 2014/10/10 13:58:29 grknight Exp $
+
+*PEAR-Net_CheckIP-1.2.2 (10 Oct 2014)
+
+  10 Oct 2014; Brian Evans <grknight@gentoo.org> +PEAR-Net_CheckIP-1.2.2.ebuild,
+  -PEAR-Net_CheckIP-1.1-r1.ebuild:
+  Version bump wrt bug 452520
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   PEAR-Net_CheckIP-1.1-r1.ebuild, PEAR-Net_CheckIP-1.2.1.ebuild:
