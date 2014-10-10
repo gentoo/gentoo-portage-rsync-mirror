@@ -1,11 +1,11 @@
 # ChangeLog for dev-php/php-openid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/ChangeLog,v 1.5 2014/10/07 13:39:46 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/ChangeLog,v 1.6 2014/10/10 02:04:19 grknight Exp $
 
 *php-openid-2.2.3_pre20140423 (07 Oct 2014)
 
-  07 Oct 2014;  <grknight@gentoo.org> +php-openid-2.2.3_pre20140423.ebuild,
-  -php-openid-2.2.2.ebuild:
+  07 Oct 2014; Brian Evans <grknight@gentoo.org>
+  +php-openid-2.2.3_pre20140423.ebuild, -php-openid-2.2.2.ebuild:
   Bump to github snapshot from 2014-04-23 for security bug 482140
 
   26 Jan 2012; Matti Bickel <mabi@gentoo.org> php-openid-2.2.2.ebuild:

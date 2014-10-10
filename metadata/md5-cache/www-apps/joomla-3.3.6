@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prerm setup
+DEPEND=|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) virtual/httpd-php app-arch/unzip >=app-admin/webapp-config-1.50.15
+DESCRIPTION=Joomla is a powerful Open Source Content Management System
+EAPI=5
+HOMEPAGE=http://www.joomla.org/
+IUSE=vhosts
+KEYWORDS=~amd64 ~ppc ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-lang/php-5.3.10[json,zlib,xml] || ( dev-lang/php[mysql] dev-lang/php[postgres] ) >=app-admin/webapp-config-1.50.15
+SLOT=3.3.6
+SRC_URI=http://joomlacode.org/gf/download/frsrelease/19822/161256/Joomla_3.3.6-Stable-Full_Package.zip
+_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	0f1760274637a138b99bb649202ea402	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_md5_=7d5c06d74b255d6df4654c6ddbe012b9

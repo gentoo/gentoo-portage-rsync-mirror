@@ -1,14 +1,14 @@
 # ChangeLog for dev-php/pecl-zendopcache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-zendopcache/ChangeLog,v 1.7 2014/10/03 15:15:47 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-zendopcache/ChangeLog,v 1.8 2014/10/10 02:20:45 grknight Exp $
 
-  03 Oct 2014;  <grknight@gentoo.org> -pecl-zendopcache-7.0.1.ebuild,
-  -pecl-zendopcache-7.0.2.ebuild:
+  03 Oct 2014; Brian Evans <grknight@gentoo.org>
+  -pecl-zendopcache-7.0.1.ebuild, -pecl-zendopcache-7.0.2.ebuild:
   Remove old
 
 *pecl-zendopcache-7.0.3 (29 Sep 2014)
 
-  29 Sep 2014;  <grknight@gentoo.org> +pecl-zendopcache-7.0.3.ebuild:
+  29 Sep 2014; Brian Evans <grknight@gentoo.org> +pecl-zendopcache-7.0.3.ebuild:
   Version bump. Drop PHP 5.3 support. wrt bug 513122
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>

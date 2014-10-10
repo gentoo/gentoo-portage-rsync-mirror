@@ -1,10 +1,10 @@
 # ChangeLog for dev-php/pecl-timezonedb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-timezonedb/ChangeLog,v 1.7 2014/09/29 19:41:06 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-timezonedb/ChangeLog,v 1.8 2014/10/10 02:03:02 grknight Exp $
 
 *pecl-timezonedb-2014.7 (29 Sep 2014)
 
-  29 Sep 2014;  <grknight@gentoo.org> +pecl-timezonedb-2014.7.ebuild,
+  29 Sep 2014; Brian Evans <grknight@gentoo.org> +pecl-timezonedb-2014.7.ebuild,
   -pecl-timezonedb-2013.2.ebuild:
   Version bump; Add new PHP version support; Drop PHP 5.3
 

@@ -5,5 +5,5 @@ HOMEPAGE=http://thread.gmane.org/gmane.comp.encryption.gpg.announce/179
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 SLOT=0
-SRC_URI=ftp://ftp.gnupg.org/gcrypt/npth/npth-0.91.tar.bz2
-_md5_=e8ea37474eb6ba558f17d9812804c26b
+SRC_URI=mirror://gnupg/npth/npth-0.91.tar.bz2
+_md5_=699f7f0b139e3d2debd28ee95620e316

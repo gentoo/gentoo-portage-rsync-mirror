@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.62 2014/09/05 16:54:18 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.63 2014/10/10 02:13:38 dlan Exp $
+
+*joomla-3.3.6 (10 Oct 2014)
+
+  10 Oct 2014; Yixun Lan <dlan@gentoo.org> +joomla-3.3.6.ebuild:
+  version bump, drop IUSE flags per discussion, bug 524818
 
   05 Sep 2014; William Hubbs <williamh@gentoo.org> joomla-3.3.3.ebuild:
   qa: after speaking with Brian from the db team, do not depend on a database

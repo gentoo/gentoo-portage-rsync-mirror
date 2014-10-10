@@ -1,10 +1,10 @@
 # ChangeLog for dev-php/libvirt-php
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/ChangeLog,v 1.9 2014/10/02 13:50:42 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/ChangeLog,v 1.10 2014/10/10 02:06:56 grknight Exp $
 
 *libvirt-php-0.4.8 (02 Oct 2014)
 
-  02 Oct 2014;  <grknight@gentoo.org> +libvirt-php-0.4.8.ebuild,
+  02 Oct 2014; Brian Evans <grknight@gentoo.org> +libvirt-php-0.4.8.ebuild,
   -libvirt-php-0.4.6.ebuild, -libvirt-php-0.4.7.ebuild, libvirt-php-9999.ebuild:
   Version bump; Drop 5.3 support; Fix LICENSE to LGPL-2.1; Block automake-1.14
   on live build

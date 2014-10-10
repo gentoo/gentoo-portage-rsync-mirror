@@ -1,6 +1,25 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1145 2014/10/09 13:26:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1146 2014/10/10 02:01:33 floppym Exp $
+
+  10 Oct 2014; Mike Gilbert <floppym@gentoo.org> -files/chromium-angle-r0.patch,
+  -files/chromium-angle-r1.patch, -files/chromium-arm-r0.patch,
+  -files/chromium-blink-crash-r0.patch, -files/chromium-build_ffmpeg-r0.patch,
+  -files/chromium-chromedriver-r0.patch, -files/chromium-cups-r0.patch,
+  -files/chromium-d8-r0.patch, -files/chromium-depot-tools-r0.patch,
+  -files/chromium-ffmpeg-r0.patch, -files/chromium-ffmpeg-r1.patch,
+  -files/chromium-ffmpeg-r2.patch, -files/chromium-ffmpeg-r3.patch,
+  -files/chromium-gn-r0.patch, -files/chromium-gn-r1.patch,
+  -files/chromium-gn-r2.patch, -files/chromium-gnome-keyring-r0.patch,
+  -files/chromium-gpsd-r0.patch, -files/chromium-libaddressinput-r0.patch,
+  -files/chromium-nacl-r0.patch, -files/chromium-pnacl-r0.patch,
+  -files/chromium-system-harfbuzz-r0.patch, -files/chromium-system-icu-r0.patch,
+  -files/chromium-system-jinja-r0.patch, -files/chromium-system-jinja-r1.patch,
+  -files/chromium-system-jinja-r2.patch, -files/chromium-system-jinja-r3.patch,
+  -files/chromium-system-jinja-r4.patch, -files/chromium-system-jinja-r5.patch,
+  -files/chromium-system-libjpeg-r0.patch, -files/chromium-system-ply-r0.patch,
+  -files/chromium-system-ply-r1.patch, -files/chromium-system-zlib-r0.patch:
+  Remvoe obsolete patches.
 
   09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> -chromium-37.0.2062.120.ebuild,
   -chromium-38.0.2125.77.ebuild:
