@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/ramspeed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ChangeLog,v 1.12 2014/10/09 09:54:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ChangeLog,v 1.14 2014/10/10 11:06:43 jlec Exp $
+
+  10 Oct 2014; Justin Lecher <jlec@gentoo.org> -ramspeed-2.6.0.ebuild,
+  -ramspeed-3.5.0-r1.ebuild:
+  Drop old
+
+  10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> ramspeed-3.5.0-r2.ebuild:
+  Stable for x86, wrt bug #522924
 
   09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> ramspeed-3.5.0-r2.ebuild:
   Stable for amd64, wrt bug #522924

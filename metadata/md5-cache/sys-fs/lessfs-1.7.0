@@ -4,10 +4,10 @@ DESCRIPTION=A high performance inline data deduplicating filesystem
 EAPI=5
 HOMEPAGE=http://www.lessfs.com
 IUSE=berkdb crypt debug filelog memtrace lzo snappy
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-3
 RDEPEND=berkdb? ( sys-libs/db ) crypt? ( dev-libs/openssl ) lzo? ( dev-libs/lzo ) snappy? ( app-arch/snappy ) >=dev-db/tokyocabinet-1.4.42 app-crypt/mhash >=sys-fs/fuse-2.8.0
 SLOT=0
 SRC_URI=mirror://sourceforge/lessfs/lessfs/lessfs-1.7.0/lessfs-1.7.0.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=3461697f07b1fe55364adaed0af28d3c
+_md5_=52a050276dcc2ee4054b5845fcfb8ce3

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.86 2014/10/02 10:21:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.87 2014/10/10 11:30:23 blueness Exp $
+
+  10 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/0.9.x-ljr_noblacklist.patch, bitcoin-qt-0.9.3.ebuild, metadata.xml:
+  Address anti-spam issue, bug #524512
 
 *bitcoin-qt-0.9.3 (02 Oct 2014)
 

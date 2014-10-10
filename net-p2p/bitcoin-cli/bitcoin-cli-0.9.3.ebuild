@@ -1,6 +1,6 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-cli/bitcoin-cli-0.9.3.ebuild,v 1.1 2014/10/02 10:32:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-cli/bitcoin-cli-0.9.3.ebuild,v 1.2 2014/10/10 11:12:50 blueness Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-libs/boost-1.53.0[threads(+)]
+	>=dev-libs/boost-1.52.0[threads(+)]
 	dev-libs/openssl:0[-bindist]
 "
 DEPEND="${RDEPEND}"

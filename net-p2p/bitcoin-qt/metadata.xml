@@ -13,6 +13,7 @@
 	<use>
 		<flag name='1stclassmsg'>Enable first-class Bitcoin message tools</flag>
 		<flag name='ljr'>Enable Luke Dashjr's patches</flag>
+		<flag name='ljr-antispam'>Enable Luke Dashjr's address-based spam filter</flag>
 		<flag name='qrcode'>Enable generation of QR Codes for receiving payments</flag>
 	</use>
 </pkgmetadata>

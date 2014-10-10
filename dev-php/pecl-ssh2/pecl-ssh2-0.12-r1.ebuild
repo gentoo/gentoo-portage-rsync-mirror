@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-ssh2/pecl-ssh2-0.12-r1.ebuild,v 1.3 2014/10/09 14:47:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-ssh2/pecl-ssh2-0.12-r1.ebuild,v 1.4 2014/10/10 11:06:20 ago Exp $
 
 EAPI=5
 
@@ -17,6 +17,6 @@ DESCRIPTION="Provides bindings to the functions of libssh2 which implements the 
 LICENSE="PHP-3"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND=">=net-libs/libssh2-1.2"
 RDEPEND="${DEPEND}"

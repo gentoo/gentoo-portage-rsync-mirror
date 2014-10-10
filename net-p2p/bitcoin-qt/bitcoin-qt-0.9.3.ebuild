@@ -1,6 +1,6 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.9.3.ebuild,v 1.1 2014/10/02 10:21:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.9.3.ebuild,v 1.2 2014/10/10 11:30:23 blueness Exp $
 
 EAPI=4
 
@@ -24,13 +24,14 @@ SRC_URI="https://github.com/${MyPN}/${MyPN}/archive/v${MyPV}.tar.gz -> ${MyPN}-v
 LICENSE="MIT ISC GPL-3 LGPL-2.1 public-domain || ( CC-BY-SA-3.0 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="$IUSE 1stclassmsg dbus kde +ljr +qrcode test upnp"
+IUSE="$IUSE 1stclassmsg dbus kde ljr ljr-antispam +qrcode test upnp"
 
 REQUIRED_USE="
 	1stclassmsg? ( ljr )
+	ljr-antispam? ( ljr )
 "
 RDEPEND="
-	>=dev-libs/boost-1.53.0[threads(+)]
+	>=dev-libs/boost-1.52.0[threads(+)]
 	dev-libs/openssl:0[-bindist]
 	dev-libs/protobuf
 	qrcode? (
@@ -55,6 +56,7 @@ S="${WORKDIR}/${MyP}"
 src_prepare() {
 	if use ljr; then
 		epatch "${WORKDIR}/${LJR_PATCH}"
+		use ljr-antispam || epatch "${FILESDIR}/0.9.x-ljr_noblacklist.patch"
 	else
 		epatch "${FILESDIR}/0.9.0-sys_leveldb.patch"
 	fi
@@ -94,7 +96,7 @@ src_configure() {
 		$(use_with upnp miniupnpc) $(use_enable upnp upnp-default) \
 		$(use_with qrcode qrencode)  \
 		$(use_enable test tests)  \
-		$(use_enable 1stclassmsg first-class-messaging)  \
+		$(usex ljr $(use_enable 1stclassmsg first-class-messaging))  \
 		--with-system-leveldb  \
 		--without-cli --without-daemon \
 		--with-gui
