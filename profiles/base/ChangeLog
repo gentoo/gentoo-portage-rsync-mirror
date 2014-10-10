@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.731 2014/10/09 12:26:08 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.732 2014/10/10 19:47:28 radhermit Exp $
+
+  10 Oct 2014; Tim Harder <radhermit@gentoo.org> package.use.mask,
+  package.use.stable.mask:
+  Move net-im/bitlbee skype use flag mask to package.use.stable.mask (bug
+  #523708).
 
   09 Oct 2014; Michael Palimaka <kensington@gentoo.org> package.use.stable.mask:
   Move kde-base/kopete[otr] from regular mask to stable mask.

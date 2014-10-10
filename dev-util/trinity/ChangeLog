@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/trinity
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/trinity/ChangeLog,v 1.8 2014/06/25 04:57:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/trinity/ChangeLog,v 1.9 2014/10/10 19:41:03 radhermit Exp $
+
+  10 Oct 2014; Tim Harder <radhermit@gentoo.org> trinity-9999.ebuild:
+  Update git repo location (bug #520068).
 
 *trinity-1.4 (25 Jun 2014)
 

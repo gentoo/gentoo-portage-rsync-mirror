@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.612 2014/10/09 12:26:08 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.613 2014/10/10 19:47:28 radhermit Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -506,10 +506,6 @@ media-sound/pulseaudio webrtc-aec xen
 # Requires libxkbcommon from the x11 overlay
 <dev-cpp/gtkmm-3.7 wayland
 <x11-libs/gtk+-3.7 egl wayland
-
-# Tim Harder <radhermit@gentoo.org> (22 Mar 2012)
-# Masked since skype isn't stable
-net-im/bitlbee skype
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 Mar 2012)
 # This is for udev-acl. Unmasked in default/linux/package.use.mask.
