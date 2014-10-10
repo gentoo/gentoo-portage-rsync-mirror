@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.65-r1.ebuild,v 1.1 2014/10/09 23:16:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.65-r1.ebuild,v 1.2 2014/10/10 06:31:14 jer Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Drop bundled libs, patch Makefile generator and re-run it
 	rm -r externals || die
-	epatch "${FILESDIR}"/${PF}-tinyxml2.patch
+	epatch "${FILESDIR}"/${P}-tinyxml2.patch
 	emake dmake \
 		CPPFLAGS="${CPPFLAGS}" \
 		CXX="$(tc-getCXX)" \

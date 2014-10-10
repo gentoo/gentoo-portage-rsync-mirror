@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/minfx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/minfx/ChangeLog,v 1.10 2014/09/15 11:25:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/minfx/ChangeLog,v 1.11 2014/10/10 06:50:50 jlec Exp $
+
+*minfx-1.0.11 (10 Oct 2014)
+
+  10 Oct 2014; Justin Lecher <jlec@gentoo.org> +minfx-1.0.11.ebuild:
+  Version BUmp
 
 *minfx-1.0.10 (15 Sep 2014)
 

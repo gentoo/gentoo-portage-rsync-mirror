@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/Numdifftools
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Numdifftools/ChangeLog,v 1.1 2014/10/10 06:42:53 jlec Exp $
+
+*Numdifftools-0.6.0 (10 Oct 2014)
+
+  10 Oct 2014; Justin Lecher <jlec@gentoo.org> +Numdifftools-0.6.0.ebuild,
+  +metadata.xml:
+  New package written by me
+
