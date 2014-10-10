@@ -1,0 +1,9 @@
+# ChangeLog for net-voip/vidyodesktop
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/vidyodesktop/ChangeLog,v 1.1 2014/10/10 16:16:37 prometheanfire Exp $
+
+*vidyodesktop-3.3.0.027 (10 Oct 2014)
+
+  10 Oct 2014; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +vidyodesktop-3.3.0.027.ebuild:
+  initial commit of vidyodesktop fixes bug 509104

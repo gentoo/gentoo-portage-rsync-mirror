@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.83 2014/07/06 13:04:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.84 2014/10/10 16:11:53 idella4 Exp $
+
+  10 Oct 2014; Ian Delaney <idella4@gentoo.org> webtest-2.0.15.ebuild:
+  add missing invisible rdep (not listed in setup.py) in latest or current
+  version for now wrt to Bug #524724 by wtking
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> webtest-1.4.3-r1.ebuild,
   webtest-2.0.11.ebuild, webtest-2.0.14.ebuild, webtest-2.0.15.ebuild:
