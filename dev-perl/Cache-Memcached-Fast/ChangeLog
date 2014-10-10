@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cache-Memcached-Fast
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached-Fast/ChangeLog,v 1.13 2014/08/21 20:24:15 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached-Fast/ChangeLog,v 1.14 2014/10/10 22:19:51 zlogene Exp $
+
+  10 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -Cache-Memcached-Fast-0.190.0.ebuild:
+  Drop old.
 
 *Cache-Memcached-Fast-0.210.0-r1 (21 Aug 2014)
 

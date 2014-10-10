@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/SQL-Translator dev-perl/Path-Class >=dev-perl/DBIx-Class-0.81.70 >=dev-perl/Contextual-Return-0.4.7 test? ( dev-perl/Test-Pod dev-perl/Test-Pod-Coverage ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=dev-perl/SQL-Translator dev-perl/Path-Class >=dev-perl/DBIx-Class-0.81.70 >=dev-perl/Contextual-Return-0.4.7 test? ( dev-perl/Test-Pod dev-perl/Test-Pod-Coverage ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Auto-create boolean objects from columns
-EAPI=4
+EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/DBIx-Class-InflateColumn-Boolean/
 IUSE=test
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=dev-perl/SQL-Translator dev-perl/Path-Class >=dev-perl/DBIx-Class-0.81.70 >=dev-perl/Contextual-Return-0.4.7 || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=dev-perl/SQL-Translator dev-perl/Path-Class >=dev-perl/DBIx-Class-0.81.70 >=dev-perl/Contextual-Return-0.4.7 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/G/GR/GRAF/DBIx-Class-InflateColumn-Boolean-0.002000.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f889e8437ffc64d766053d029c422c4e	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=0467362a0bedae3ac2c7b26f03c4a19b
+_md5_=b195ccfcb8086895df7db1d5cbb235f2

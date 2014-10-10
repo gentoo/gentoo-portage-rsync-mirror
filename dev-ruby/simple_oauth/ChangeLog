@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/simple_oauth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/ChangeLog,v 1.11 2014/08/05 16:00:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/ChangeLog,v 1.12 2014/10/10 22:06:17 mrueg Exp $
+
+*simple_oauth-0.3.0 (10 Oct 2014)
+
+  10 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +simple_oauth-0.3.0.ebuild:
+  Version bump.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> simple_oauth-0.2.0-r1.ebuild:
   Remove trailing '.' from DESCRIPTION.
