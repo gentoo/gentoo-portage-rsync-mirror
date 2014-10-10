@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.94 2014/08/03 16:30:14 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.95 2014/10/10 18:54:25 chutzpah Exp $
+
+*jython-2.7_beta2-r2 (10 Oct 2014)
+
+  10 Oct 2014; Patrick McLean <chutzpah@gentoo.org>
+  +jython-2.7_beta2-r2.ebuild:
+  Revision bump, update the jre/jdk dep to 1.7 since it fails to build on 1.6.
 
   03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -jython-2.5.1-r2.ebuild,
   -jython-2.5.2-r2.ebuild, -jython-2.5.3-r2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.2-r2.ebuild,v 1.1 2014/09/13 15:04:53 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.3.ebuild,v 1.1 2014/10/10 18:49:52 gurligebis Exp $
 
 EAPI="4"
 
