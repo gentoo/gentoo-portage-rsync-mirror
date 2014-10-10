@@ -4,12 +4,12 @@ Documentation=man:radvd(8)
 After=network.target
 
 [Service]
-Type=simple
+Type=forking
 ExecStart=/usr/sbin/radvd --username radvd --logmethod stderr --debug 1
 ExecReload=/usr/sbin/radvd --configtest ; \
            /bin/kill -HUP $MAINPID
 CPUSchedulingPolicy=idle
-LimitNOFSIZE=0
+PIDFile=/run/radvd/radvd.pid
 
 [Install]
 WantedBy=multi-user.target

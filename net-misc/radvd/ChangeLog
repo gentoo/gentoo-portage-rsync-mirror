@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.124 2014/08/22 04:36:54 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.125 2014/10/10 14:27:28 xmw Exp $
+
+*radvd-2.8 (10 Oct 2014)
+
+  10 Oct 2014; Michael Weber <xmw@gentoo.org> +files/radvd.tmpfilesd,
+  +radvd-2.8.ebuild, -radvd-2.3.ebuild, files/radvd.service:
+  Version bump (bug 524312), address systemd issues (bug 524000).
 
 *radvd-2.5 (22 Aug 2014)
 

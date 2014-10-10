@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-2.3.ebuild,v 1.1 2014/07/30 22:12:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-2.8.ebuild,v 1.1 2014/10/10 14:27:28 xmw Exp $
 
 EAPI=4
 
-inherit systemd user eutils
+inherit systemd user eutils readme.gentoo
 
 DESCRIPTION="Linux IPv6 Router Advertisement Daemon"
 HOMEPAGE="http://v6web.litech.org/radvd/"
@@ -47,20 +47,21 @@ src_install() {
 	newconfd "${FILESDIR}"/${PN}.conf ${PN}
 
 	systemd_dounit "${FILESDIR}"/${PN}.service
+	systemd_newtmpfilesd  "${FILESDIR}"/${PN}.tmpfilesd ${PN}.conf
 
 	if use kernel_FreeBSD ; then
 		sed -i -e \
 			's/^SYSCTL_FORWARD=.*$/SYSCTL_FORWARD=net.inet6.ip6.forwarding/g' \
 			"${D}"/etc/init.d/${PN} || die
 	fi
+
+	readme.gentoo_create_doc
 }
 
-pkg_postinst() {
-	einfo
-	elog "Please create a configuratoion ${ROOT}etc/radvd.conf."
-	elog "See ${ROOT}usr/share/doc/${PF} for an example."
-	einfo
-	elog "grsecurity users should allow a specific group to read /proc"
-	elog "and add the radvd user to that group, otherwise radvd may"
-	elog "segfault on startup."
-}
+DISABLE_AUTOFORMATTING=1
+DOC_CONTENTS="Please create a configuratoion ${ROOT}etc/radvd.conf.
+See ${ROOT}usr/share/doc/${PF} for an example.
+
+grsecurity users should allow a specific group to read /proc
+and add the radvd user to that group, otherwise radvd may
+segfault on startup."
