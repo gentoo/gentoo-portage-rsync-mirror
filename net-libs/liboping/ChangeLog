@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/liboping
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboping/ChangeLog,v 1.13 2014/10/09 19:55:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboping/ChangeLog,v 1.14 2014/10/10 01:47:32 dlan Exp $
+
+*liboping-1.7.0 (10 Oct 2014)
+
+  10 Oct 2014; Yixun Lan <dlan@gentoo.org> +liboping-1.7.0.ebuild:
+  bump per maintainer request, bug 524906
 
   09 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> liboping-1.6.1.ebuild,
   liboping-1.6.2.ebuild:
