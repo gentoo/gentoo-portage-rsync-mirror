@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flask
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.35 2014/09/29 03:30:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.36 2014/10/10 07:03:23 idella4 Exp $
+
+  10 Oct 2014; Ian Delaney <idella4@gentoo.org> flask-0.10.1-r1.ebuild,
+  flask-9999.ebuild:
+  update ebuilds re test phase; -9999, update test phase with new test runner,
+  tidy install of examples
 
   29 Sep 2014; Ian Delaney <idella4@gentoo.org>
   +files/flask-0.10.1-sort_json.patch,

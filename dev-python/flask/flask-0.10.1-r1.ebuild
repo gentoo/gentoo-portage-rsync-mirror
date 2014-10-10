@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/flask-0.10.1-r1.ebuild,v 1.10 2014/09/29 03:30:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/flask-0.10.1-r1.ebuild,v 1.11 2014/10/10 07:03:23 idella4 Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -16,7 +16,7 @@ HOMEPAGE="https://github.com/mitsuhiko/flask/"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
-IUSE="examples test"
+IUSE="examples"
 
 RDEPEND="dev-python/blinker[${PYTHON_USEDEP}]
 	>=dev-python/itsdangerous-0.21[${PYTHON_USEDEP}]
@@ -33,22 +33,7 @@ PATCHES=( "${FILESDIR}"/${P}-is_package.patch
 		"${FILESDIR}"/${P}-sort_json.patch
 		"${FILESDIR}"/${P}-test_appcontext.patch )
 
-python_prepare_all() {
-	# https://github.com/mitsuhiko/flask/issues/837
-	sed -e s':test_uninstalled_package_paths:_&:' \
-		-i flask/testsuite/config.py || die
-
-	distutils-r1_python_prepare_all
-}
-
 python_test() {
-	# https://github.com/mitsuhiko/flask/issues/837, 1047
-	if [[ "${EPYTHON}" == pypy ]]; then
-		sed -e s':test_build_error_handler:_&:' \
-			-i flask/testsuite/basic.py || die
-		sed -e s':test_session_transactions_no_null_sessions:_&:' \
-			-i flask/testsuite/testing.py || die
-	fi
 	"${PYTHON}" run-tests.py || die "Testing failed with ${EPYTHON}"
 }
 

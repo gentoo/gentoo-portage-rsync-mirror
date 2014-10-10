@@ -1,16 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/flask-9999.ebuild,v 1.8 2014/08/11 22:26:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/flask-9999.ebuild,v 1.9 2014/10/10 07:03:23 idella4 Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
-inherit distutils-r1
-#if LIVE
-inherit git-2
+inherit distutils-r1 git-2
+
 EGIT_REPO_URI="git://github.com/mitsuhiko/flask.git
 	https://github.com/mitsuhiko/flask.git"
-#endif
 
 DESCRIPTION="A microframework based on Werkzeug, Jinja2 and good intentions"
 MY_PN="Flask"
@@ -28,7 +26,8 @@ RDEPEND="dev-python/blinker[${PYTHON_USEDEP}]
 	>=dev-python/jinja-2.4[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/werkzeug-0.7[${PYTHON_USEDEP}]"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
 #if LIVE
@@ -37,13 +36,10 @@ KEYWORDS=
 #endif
 
 python_test() {
-	"${PYTHON}" run-tests.py || die "Testing failed with ${EPYTHON}"
+	py.test tests || die "Testing failed with ${EPYTHON}"
 }
 
 python_install_all() {
-	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples
-		docompress -x /usr/share/doc/${PF}/examples
-	fi
+	use examples && local EXAMPLES=( examples/. )
+	distutils-r1_python_install_all
 }
