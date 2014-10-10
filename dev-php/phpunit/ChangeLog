@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/phpunit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.18 2013/08/24 18:21:17 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.19 2014/10/10 14:45:40 grknight Exp $
+
+*phpunit-4.3.1 (10 Oct 2014)
+
+  10 Oct 2014; Brian Evans <grknight@gentoo.org> +phpunit-4.3.1.ebuild,
+  -files/channel.xml:
+  Version bump wrt bug 510470; remove old file since pear channel is defunct
 
   24 Aug 2013; Ole Markus With <olemarkus@gentoo.org> -phpunit-3.5.13.ebuild,
   -phpunit-3.6.0.ebuild, -phpunit-3.6.10.ebuild, -phpunit-3.6.11.ebuild,

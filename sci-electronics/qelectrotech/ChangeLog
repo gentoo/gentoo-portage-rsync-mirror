@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/qelectrotech
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/ChangeLog,v 1.17 2014/10/10 10:54:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/ChangeLog,v 1.18 2014/10/10 14:47:39 pesa Exp $
+
+  10 Oct 2014; Davide Pesavento <pesa@gentoo.org>
+  -files/qelectrotech-0.2-fix-paths.patch, -qelectrotech-0.22.ebuild:
+  old
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> qelectrotech-0.30.ebuild:
   Stable for x86, wrt bug #524476
