@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.9.4.ebuild,v 1.11 2014/01/26 18:38:39 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.9.4.ebuild,v 1.12 2014/10/10 16:59:08 grknight Exp $
 
 EAPI="4"
 
@@ -40,7 +40,7 @@ pkg_setup() {
 	elog
 	elog "If you want to change the above values, you need to set"
 	elog "PEAR_CACHEDIR, PEAR_DOWNLOADDIR and PEAR_TEMPDIR variable(s)"
-	elog "accordingly in /etc/make.conf and re-emerge ${PN}."
+	elog "accordingly in /etc/portage/make.conf and re-emerge ${PN}."
 	elog
 }
 

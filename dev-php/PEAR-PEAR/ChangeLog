@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.163 2014/10/08 01:29:47 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.164 2014/10/10 16:59:08 grknight Exp $
+
+  10 Oct 2014; Brian Evans <grknight@gentoo.org> PEAR-PEAR-1.9.4.ebuild:
+  elog update wrt bug 472012
 
   08 Oct 2014; Brian Evans <grknight@gentoo.org> -PEAR-PEAR-1.9.3.ebuild:
   Drop old
