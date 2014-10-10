@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.61 2014/08/21 09:19:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.62 2014/10/10 09:04:10 graaff Exp $
+
+  10 Oct 2014; Hans de Graaff <graaff@gentoo.org> -rubygems-2.ebuild:
+  Remove masked jruby 1.6 version.
 
   21 Aug 2014; Hans de Graaff <graaff@gentoo.org> rubygems-4.ebuild,
   rubygems-6.ebuild, rubygems-7.ebuild:

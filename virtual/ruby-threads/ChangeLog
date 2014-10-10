@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-threads
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.34 2014/08/10 20:11:50 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.35 2014/10/10 09:02:07 graaff Exp $
+
+  10 Oct 2014; Hans de Graaff <graaff@gentoo.org> -ruby-threads-2.ebuild:
+  Remove masked jruby 1.6 version.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ruby-threads-1.ebuild,
   ruby-threads-2.ebuild, ruby-threads-4.ebuild, ruby-threads-5.ebuild:

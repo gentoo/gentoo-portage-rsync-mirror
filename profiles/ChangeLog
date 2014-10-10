@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9435 2014/10/09 20:07:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9436 2014/10/10 09:07:39 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Oct 2014; Hans de Graaff <graaff@gentoo.org> base/use.mask, package.mask:
+  Remove jruby 1.6 mask now that the packages are removed.
 
   09 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask sys-devel/libperl for removal
