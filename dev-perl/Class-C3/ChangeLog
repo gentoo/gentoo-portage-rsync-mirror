@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-C3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.35 2014/08/22 18:56:04 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.36 2014/10/10 17:42:46 zlogene Exp $
+
+  10 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Class-C3-0.230.0.ebuild:
+  Drop old.
 
 *Class-C3-0.250.0-r1 (22 Aug 2014)
 

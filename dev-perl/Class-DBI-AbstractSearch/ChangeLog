@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-DBI-AbstractSearch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-AbstractSearch/ChangeLog,v 1.5 2012/11/18 11:10:24 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-AbstractSearch/ChangeLog,v 1.6 2014/10/10 17:49:54 zlogene Exp $
+
+  10 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Class-DBI-AbstractSearch-0.70.0.ebuild:
+  Bump to EAPI=5
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

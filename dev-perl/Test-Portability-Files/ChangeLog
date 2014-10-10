@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Portability-Files
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Portability-Files/ChangeLog,v 1.8 2014/08/26 17:32:57 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Portability-Files/ChangeLog,v 1.9 2014/10/10 17:51:38 zlogene Exp $
+
+  10 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -Test-Portability-Files-0.50.0.ebuild:
+  Drop old.
 
 *Test-Portability-Files-0.60.0-r1 (26 Aug 2014)
 
