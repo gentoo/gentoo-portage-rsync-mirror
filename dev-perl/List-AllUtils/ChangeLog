@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/List-AllUtils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-AllUtils/ChangeLog,v 1.5 2014/10/05 16:51:07 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-AllUtils/ChangeLog,v 1.6 2014/10/10 18:20:13 mrueg Exp $
+
+*List-AllUtils-0.90.0 (10 Oct 2014)
+
+  10 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +List-AllUtils-0.90.0.ebuild,
+  List-AllUtils-0.80.0.ebuild:
+  Raise dependency on virtual/perl-Scalar-List-Utils. Fixes bug #524882. Version
+  bump to 0.90.0
 
   05 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> List-AllUtils-0.80.0.ebuild:
   Dependencies fix

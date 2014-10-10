@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.32.ebuild,v 1.9 2014/08/26 09:37:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.32.ebuild,v 1.10 2014/10/10 18:04:18 grknight Exp $
 
 EAPI=5
 
@@ -778,7 +778,7 @@ pkg_postinst() {
 		fi
 	done
 
-	elog "Make sure that PHP_TARGETS in ${EPREFIX}/etc/make.conf includes php${SLOT/./-} in order"
+	elog "Make sure that PHP_TARGETS in ${EPREFIX}/etc/portage/make.conf includes php${SLOT/./-} in order"
 	elog "to compile extensions for the ${SLOT} ABI"
 	elog
 	if ! use readline && use cli ; then
@@ -788,7 +788,7 @@ pkg_postinst() {
 	elog
 	elog "This ebuild installed a version of php.ini based on php.ini-${PHP_INI_VERSION} version."
 	elog "You can chose which version of php.ini to install by default by setting PHP_INI_VERSION to either"
-	elog "'production' or 'development' in ${EPREFIX}/etc/make.conf"
+	elog "'production' or 'development' in ${EPREFIX}/etc/portage/make.conf"
 	elog "Both versions of php.ini can be found in ${EPREFIX}/usr/share/doc/${PF}"
 
 	elog

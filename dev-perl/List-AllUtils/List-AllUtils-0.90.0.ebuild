@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-AllUtils/List-AllUtils-0.80.0.ebuild,v 1.3 2014/10/10 18:20:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-AllUtils/List-AllUtils-0.90.0.ebuild,v 1.1 2014/10/10 18:20:13 mrueg Exp $
 
 EAPI=5
 
