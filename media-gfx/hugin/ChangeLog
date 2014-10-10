@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.149 2014/09/27 11:33:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.150 2014/10/10 20:12:04 maekke Exp $
+
+*hugin-2014.0.0 (10 Oct 2014)
+
+  10 Oct 2014; Markus Meier <maekke@gentoo.org> -hugin-2014.0.0_rc4.ebuild,
+  +hugin-2014.0.0.ebuild, +files/hugin-2014.0.0-lensfun-0.3.0.patch:
+  version bump, fix building with media-libs/lensfun-0.3.0 by Francesco Riosa
+  in bug #524700
 
   27 Sep 2014; Markus Meier <maekke@gentoo.org> hugin-2014.0.0_rc4.ebuild:
   call python eclass functions depending on USE=python, by Kent Fredric in bug

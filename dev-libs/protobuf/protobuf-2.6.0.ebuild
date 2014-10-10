@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.6.0.ebuild,v 1.4 2014/10/07 06:47:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.6.0.ebuild,v 1.5 2014/10/10 20:17:24 maekke Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="source"
@@ -15,7 +15,7 @@ SRC_URI="https://protobuf.googlecode.com/svn/rc/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0/9" # subslot = soname major version
-KEYWORDS="~amd64 -hppa ~mips -ppc -ppc64 ~x86 ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm -hppa ~mips -ppc -ppc64 ~x86 ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="emacs examples java python static-libs vim-syntax"
 
 CDEPEND="emacs? ( virtual/emacs )

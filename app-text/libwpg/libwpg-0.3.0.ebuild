@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/libwpg-0.3.0.ebuild,v 1.2 2014/09/07 13:41:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/libwpg-0.3.0.ebuild,v 1.3 2014/10/10 20:19:15 maekke Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="|| ( LGPL-2.1 MPL-2.0 )"
 SLOT="0.3"
-KEYWORDS="~amd64 ~hppa ~mips ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86"
 IUSE="doc static-libs"
 
 RDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libabw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libabw/ChangeLog,v 1.5 2014/09/07 12:32:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libabw/ChangeLog,v 1.6 2014/10/10 20:15:47 maekke Exp $
+
+  10 Oct 2014; Markus Meier <maekke@gentoo.org> libabw-0.1.0.ebuild:
+  add ~arm, bug #520692
 
 *libabw-0.1.0 (07 Sep 2014)
 

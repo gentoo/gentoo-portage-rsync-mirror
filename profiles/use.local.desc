@@ -1367,6 +1367,7 @@ dev-games/ogre:poco - when USE=threads, use poco for threading
 dev-games/ogre:tbb - when USE=threads, use tbb for threading
 dev-games/ogre:tools - build+install helper tools
 dev-games/ogre:zip - support zip archives
+dev-games/openscenegraph:asio - Enable support for dev-cpp/asio library
 dev-games/openscenegraph:fox - Build examples using x11-libs/fox library
 dev-games/openscenegraph:gdal - Enable support for sci-libs/gdal library
 dev-games/openscenegraph:openinventor - Build OpenInventor plugin

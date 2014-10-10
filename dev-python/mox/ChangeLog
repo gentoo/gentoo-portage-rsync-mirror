@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mox
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mox/ChangeLog,v 1.8 2013/09/05 18:47:01 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mox/ChangeLog,v 1.10 2014/10/10 20:16:44 maekke Exp $
+
+  10 Oct 2014; Markus Meier <maekke@gentoo.org> mox-0.5.3-r1.ebuild:
+  add ~arm, bug #524082
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> mox-0.5.3-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

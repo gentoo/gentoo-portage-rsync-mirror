@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libodfgen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/ChangeLog,v 1.13 2014/09/13 20:33:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/ChangeLog,v 1.14 2014/10/10 20:18:18 maekke Exp $
+
+  10 Oct 2014; Markus Meier <maekke@gentoo.org> libodfgen-0.1.1.ebuild:
+  add ~arm, bug #520692
 
 *libodfgen-0.1.1 (13 Sep 2014)
 

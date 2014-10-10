@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.218 2014/09/24 19:47:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.219 2014/10/10 20:27:30 maekke Exp $
 
 # Markus Meier <maekke@gentoo.org> (24 Sep 2014)
 # Unkeyworded deps, bug #519618
@@ -294,7 +294,7 @@ kde-base/perlqt qscintilla qwt
 
 # Markus Meier <maekke@gentoo.org> (08 Dec 2012)
 # mask app-office/libreoffice java extensions
-app-office/libreoffice libreoffice_extensions_scripting-beanshell libreoffice_extensions_scripting-javascript libreoffice_extensions_wiki-publisher
+app-office/libreoffice libreoffice_extensions_scripting-beanshell libreoffice_extensions_scripting-javascript libreoffice_extensions_wiki-publisher coinmp gltf
 
 # Markus Meier <maekke@gentoo.org> (17 Oct 2012)
 # spidermonkey is broken on arm see bug #420471

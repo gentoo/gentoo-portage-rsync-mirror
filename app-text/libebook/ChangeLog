@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libebook
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libebook/ChangeLog,v 1.7 2014/09/07 12:36:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libebook/ChangeLog,v 1.8 2014/10/10 20:16:15 maekke Exp $
+
+  10 Oct 2014; Markus Meier <maekke@gentoo.org> libebook-0.1.1.ebuild:
+  add ~arm, bug #520692
 
 *libebook-0.1.1 (07 Sep 2014)
 

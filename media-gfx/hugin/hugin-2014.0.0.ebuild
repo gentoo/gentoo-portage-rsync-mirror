@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2014.0.0_rc4.ebuild,v 1.3 2014/09/27 11:33:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2014.0.0.ebuild,v 1.1 2014/10/10 20:12:04 maekke Exp $
 
 EAPI=5
 
@@ -50,6 +50,8 @@ DEPEND="${CDEPEND}
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
+
+PATCHES=( "${FILESDIR}"/${P}-lensfun-0.3.0.patch )
 
 pkg_setup() {
 	DOCS="authors.txt README TODO"

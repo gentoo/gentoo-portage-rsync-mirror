@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.57 2014/08/20 23:47:19 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.58 2014/10/10 20:17:05 hasufell Exp $
+
+*openscenegraph-3.2.1 (10 Oct 2014)
+
+  10 Oct 2014; Julian Ospald <hasufell@gentoo.org>
+  +openscenegraph-3.2.1.ebuild, +files/openscenegraph-3.2.1-cmake.patch:
+  version bump wrt #520442, patch and ebuild from Émeric Maschino
 
   20 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org> metadata.xml,
   openscenegraph-3.0.1-r1.ebuild:

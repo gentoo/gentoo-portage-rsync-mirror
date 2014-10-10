@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.587 2014/09/19 09:00:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.588 2014/10/10 20:28:07 maekke Exp $
+
+  10 Oct 2014; Markus Meier <maekke@gentoo.org> libreoffice-4.3.1.2.ebuild:
+  add ~arm, bug #520692
 
   19 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -libreoffice-4.2.5.2.ebuild:

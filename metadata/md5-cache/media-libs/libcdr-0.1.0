@@ -4,10 +4,10 @@ DESCRIPTION=Library parsing the Corel cdr documents
 EAPI=5
 HOMEPAGE=https://wiki.documentfoundation.org/DLP/Libraries/libcdr
 IUSE=doc static-libs
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=MPL-2.0
 RDEPEND=dev-libs/icu:= dev-libs/librevenge media-libs/lcms:2 sys-libs/zlib
 SLOT=0
 SRC_URI=http://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.0.tar.xz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=37f3a98267cb221222c959deb391c423
+_md5_=ff9ef042144e77e6b1f99b8bda545ce1

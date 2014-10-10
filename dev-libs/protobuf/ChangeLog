@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.66 2014/10/07 06:47:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.67 2014/10/10 20:17:24 maekke Exp $
+
+  10 Oct 2014; Markus Meier <maekke@gentoo.org> protobuf-2.6.0.ebuild:
+  add ~arm, bug #524082
 
   07 Oct 2014; Tim Harder <radhermit@gentoo.org> protobuf-2.6.0.ebuild:
   Add github homepage.

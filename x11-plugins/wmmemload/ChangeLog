@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmmemload
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.21 2014/08/10 20:07:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.22 2014/10/10 20:23:43 voyageur Exp $
+
+*wmmemload-0.1.7 (10 Oct 2014)
+
+  10 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org> +wmmemload-0.1.7.ebuild:
+  Version bump with new homepage
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmmemload-0.1.6-r1.ebuild,
   wmmemload-0.1.6.ebuild:
