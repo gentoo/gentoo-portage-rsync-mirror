@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libkscreen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/ChangeLog,v 1.13 2014/10/09 09:12:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/ChangeLog,v 1.14 2014/10/10 10:57:40 ago Exp $
+
+  10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> libkscreen-1.0.5.ebuild:
+  Stable for x86, wrt bug #524288
 
   09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> libkscreen-1.0.5.ebuild:
   Stable for amd64, wrt bug #524288

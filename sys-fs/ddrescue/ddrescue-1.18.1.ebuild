@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.18.1.ebuild,v 1.2 2014/10/09 08:05:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.18.1.ebuild,v 1.3 2014/10/10 10:54:22 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.lz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~amd64-linux"
+KEYWORDS="amd64 ~arm ~ia64 ~ppc ~sparc x86 ~amd64-linux"
 IUSE="static"
 
 DEPEND="$(unpacker_src_uri_depends)"

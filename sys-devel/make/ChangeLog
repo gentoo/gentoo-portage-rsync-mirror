@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.122 2014/10/05 21:59:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.123 2014/10/10 10:53:26 ago Exp $
+
+  10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> make-4.0-r1.ebuild:
+  Stable for x86, wrt bug #524530
 
   05 Oct 2014; Jeroen Roovers <jer@gentoo.org> make-4.0-r1.ebuild:
   Stable for HPPA (bug #524530).

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.8.4.ebuild,v 1.3 2014/10/09 09:13:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.8.4.ebuild,v 1.4 2014/10/10 10:59:18 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://bitbucket.org/andrewgodwin/south/get/${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc test"
 
 RDEPEND="dev-python/django[${PYTHON_USEDEP}]"
