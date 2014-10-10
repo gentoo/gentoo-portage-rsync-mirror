@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/openmortal
 # Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.16 2014/09/02 21:50:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.17 2014/10/10 15:20:45 ago Exp $
+
+  10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> openmortal-0.7-r1.ebuild:
+  Stable for amd64, wrt bug #522006
 
 *openmortal-0.7-r1 (02 Sep 2014)
 

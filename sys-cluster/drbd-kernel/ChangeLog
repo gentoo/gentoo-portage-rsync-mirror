@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/drbd-kernel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/ChangeLog,v 1.27 2011/06/06 00:44:15 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/ChangeLog,v 1.28 2014/10/10 15:25:32 ago Exp $
+
+  10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> drbd-kernel-8.3.8.1.ebuild:
+  Stable for amd64, wrt bug #480506
 
   06 Jun 2011; Robin H. Johnson <robbat2@gentoo.org> drbd-kernel-8.0.16.ebuild,
   drbd-kernel-8.3.6.ebuild, drbd-kernel-8.3.8.1.ebuild:
@@ -146,4 +149,3 @@
   +files/drbd-kernel-8.0.0-scripts.adjust_drbd_config_h.sh.patch,
   +metadata.xml, +drbd-kernel-0.7.24.ebuild, +drbd-kernel-8.0.6.ebuild:
   DRDB package splitted in drbd + drbd-kernel, conversion to linux-mod.
-

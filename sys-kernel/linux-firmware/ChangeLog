@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.106 2014/09/14 20:00:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.107 2014/10/10 15:21:31 ago Exp $
+
+  10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> linux-firmware-20140603.ebuild:
+  Stable for amd64, wrt bug #521380
 
 *linux-firmware-20140902 (14 Sep 2014)
 

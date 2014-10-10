@@ -4,11 +4,11 @@ DESCRIPTION=Reimplementation of the SCUMM game engine used in Lucasarts adventur
 EAPI=5
 HOMEPAGE=http://scummvm.sourceforge.net/
 IUSE=aac alsa debug flac fluidsynth jpeg mpeg2 mp3 opengl png theora jpeg truetype vorbis zlib
-KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd
+KEYWORDS=amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd
 LICENSE=GPL-2 LGPL-2.1 BSD GPL-3-with-font-exception
 RDEPEND=>=media-libs/libsdl-1.2.2[sound,joystick,video] zlib? ( sys-libs/zlib ) jpeg? ( virtual/jpeg:0 ) png? ( media-libs/libpng:0 ) vorbis? ( media-libs/libogg media-libs/libvorbis ) theora? ( media-libs/libtheora ) aac? ( media-libs/faad2 ) alsa? ( media-libs/alsa-lib ) mp3? ( media-libs/libmad ) mpeg2? ( media-libs/libmpeg2 ) flac? ( media-libs/flac ) opengl? ( virtual/opengl ) truetype? ( media-libs/freetype:2 ) fluidsynth? ( media-sound/fluidsynth ) games-misc/games-envd
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/scummvm/scummvm-1.7.0.tar.bz2
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	games	e221fed675714bd5545b7488aed9f822	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=ad0f2893eb87fd4a1d14050986585018
+_md5_=576a4a74a12afdbffe93f54e3d9c4547

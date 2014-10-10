@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/fcgiwrap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.17 2014/07/04 19:36:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.18 2014/10/10 15:24:57 ago Exp $
+
+  10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> fcgiwrap-1.1.0-r1.ebuild:
+  Stable for amd64, wrt bug #508910
 
   04 Jul 2014; Julian Ospald <hasufell@gentoo.org> fcgiwrap-1.1.0-r1.ebuild,
   fcgiwrap-9999.ebuild:

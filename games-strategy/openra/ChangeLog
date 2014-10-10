@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/openra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.31 2014/08/13 02:10:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.32 2014/10/10 15:21:41 ago Exp $
+
+  10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> openra-20140722.ebuild:
+  Stable for amd64, wrt bug #521052
 
   13 Aug 2014; Julian Ospald <hasufell@gentoo.org> -openra-20121019.ebuild,
   -openra-20130915.ebuild, -files/openra-20130915-make.patch:

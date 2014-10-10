@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ccgo-0.3.6.4.ebuild,v 1.6 2014/09/12 07:31:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ccgo-0.3.6.4.ebuild,v 1.7 2014/10/10 15:20:30 ago Exp $
 
 EAPI=5
 inherit autotools toolchain-funcs games
@@ -11,7 +11,7 @@ SRC_URI="http://ccdw.org/~cjj/prog/ccgo/src/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="nls"
 
 RDEPEND=">=dev-cpp/gtkmm-2.4:2.4

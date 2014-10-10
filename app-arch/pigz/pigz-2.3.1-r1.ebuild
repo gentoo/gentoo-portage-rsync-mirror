@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/pigz-2.3.1-r1.ebuild,v 1.1 2014/01/23 00:16:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/pigz-2.3.1-r1.ebuild,v 1.2 2014/10/10 15:22:13 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.zlib.net/pigz/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~mips ~sparc ~x86 ~amd64-linux ~sparc64-solaris"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~mips ~sparc ~x86 ~amd64-linux ~sparc64-solaris"
 IUSE="static symlink test"
 
 LIB_DEPEND="sys-libs/zlib[static-libs(+)]"

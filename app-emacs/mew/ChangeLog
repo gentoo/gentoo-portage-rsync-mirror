@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mew
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.89 2014/09/06 08:14:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.90 2014/10/10 15:22:51 ago Exp $
+
+  10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> mew-6.6.ebuild:
+  Stable for amd64, wrt bug #522312
 
 *mew-6.6 (06 Sep 2014)
 

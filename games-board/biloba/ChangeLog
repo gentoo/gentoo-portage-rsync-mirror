@@ -1,6 +1,9 @@
 # ChangeLog for games-board/biloba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/ChangeLog,v 1.13 2014/09/12 07:00:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/ChangeLog,v 1.14 2014/10/10 15:25:42 ago Exp $
+
+  10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> biloba-0.9.3.ebuild:
+  Stable for amd64, wrt bug #522622
 
   12 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org> biloba-0.9.3.ebuild:
   EAPI=5; better icon install; tidy

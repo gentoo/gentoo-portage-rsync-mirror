@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.8.ebuild,v 1.6 2013/04/17 18:22:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.8.ebuild,v 1.7 2014/10/10 15:25:37 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ccrma-ftp.stanford.edu/pub/Lisp/${P}.tar.gz"
 
 LICENSE="Snd BSD-2 HPND GPL-2+ LGPL-2.1+ LGPL-3+ ruby? ( free-noncomm ) s7? ( free-noncomm )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="alsa doc fam fftw gmp gsl gtk jack ladspa motif opengl oss portaudio pulseaudio readline ruby +s7"
 
 RDEPEND="media-libs/audiofile

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbox-cli
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.11 2013/07/02 16:04:30 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.12 2014/10/10 15:20:26 ago Exp $
+
+  10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> dropbox-cli-1.6.0.ebuild:
+  Stable for amd64, wrt bug #495872
 
 *dropbox-cli-1.6.0 (02 Jul 2013)
 

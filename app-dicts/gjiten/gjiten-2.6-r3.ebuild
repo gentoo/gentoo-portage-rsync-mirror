@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6-r3.ebuild,v 1.1 2014/07/08 11:10:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6-r3.ebuild,v 1.2 2014/10/10 15:22:40 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ SRC_URI="http://gjiten.sourceforge.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RESTRICT="test"

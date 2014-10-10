@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/gnuchess-6.1.2.ebuild,v 1.1 2014/08/04 21:12:46 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/gnuchess-6.1.2.ebuild,v 1.2 2014/10/10 15:20:54 ago Exp $
 
 EAPI=5
 inherit flag-o-matic games
@@ -9,7 +9,7 @@ DESCRIPTION="Console based chess interface"
 HOMEPAGE="http://www.gnu.org/software/chess/chess.html"
 SRC_URI="mirror://gnu/chess/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""

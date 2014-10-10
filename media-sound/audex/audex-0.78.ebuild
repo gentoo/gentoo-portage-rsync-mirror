@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.78.ebuild,v 1.1 2014/06/14 11:41:12 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.78.ebuild,v 1.2 2014/10/10 15:20:40 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://kde.maniatek.com/${PN}/files/${PN}-${MY_PV}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 DEPEND="

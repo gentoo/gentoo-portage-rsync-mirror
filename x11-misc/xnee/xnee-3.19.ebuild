@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.19.ebuild,v 1.2 2014/08/10 20:05:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.19.ebuild,v 1.3 2014/10/10 15:23:25 ago Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="gnome static-libs xosd"
 
 RDEPEND="

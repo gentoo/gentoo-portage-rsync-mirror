@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qcheckers/qcheckers-20091230.ebuild,v 1.5 2014/09/12 03:18:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qcheckers/qcheckers-20091230.ebuild,v 1.6 2014/10/10 15:25:11 ago Exp $
 
 EAPI=5
 inherit eutils qt4-r2 games
@@ -13,7 +13,7 @@ SRC_URI="http://qcheckers.googlecode.com/files/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-qt/qtgui:4"
