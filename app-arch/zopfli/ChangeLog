@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/zopfli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/ChangeLog,v 1.10 2014/08/14 12:24:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/ChangeLog,v 1.11 2014/10/10 06:28:16 dlan Exp $
+
+*zopfli-1.0.0_p20141006 (10 Oct 2014)
+
+  10 Oct 2014; Yixun Lan <dlan@gentoo.org> +zopfli-1.0.0_p20141006.ebuild:
+  bump as maintainer request, bug 524766
 
   14 Aug 2014; Sergey Popov <pinkbyte@gentoo.org>
   -zopfli-1.0.0_p20131216.ebuild, -zopfli-1.0.0_p20140623.ebuild:
