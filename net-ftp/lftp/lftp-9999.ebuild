@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.5.5.20141003.ebuild,v 1.2 2014/10/10 15:31:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-9999.ebuild,v 1.1 2014/10/10 15:31:40 jer Exp $
 
 EAPI=5
-inherit autotools eutils libtool
+inherit autotools eutils git-r3 libtool
 
 DESCRIPTION="A sophisticated ftp/sftp/http/https/torrent client and file transfer program"
 HOMEPAGE="http://lftp.yar.ru/"
-SRC_URI="${HOMEPAGE}/ftp/devel/${P}.tar.gz"
+EGIT_REPO_URI="https://github.com/lavv17/lftp"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -43,6 +43,7 @@ RDEPEND="
 
 DEPEND="
 	${RDEPEND}
+	dev-libs/gnulib
 	=sys-devel/libtool-2*
 	app-arch/xz-utils
 	nls? ( sys-devel/gettext )
@@ -57,11 +58,11 @@ DOCS=(
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-4.0.2.91-lafile.patch \
-		"${FILESDIR}"/${PN}-4.3.8-gets.patch \
 		"${FILESDIR}"/${PN}-4.5.3-autopoint.patch \
-		"${FILESDIR}"/${PN}-4.5.5-nls-socks.patch
+		"${FILESDIR}"/${PN}-4.5.5-am_config_header.patch
 
-	sed -i configure.ac -e 's|^AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
+	gnulib-tool --update || die
+
 	eautoreconf
 	elibtoolize # for Darwin bundles
 }

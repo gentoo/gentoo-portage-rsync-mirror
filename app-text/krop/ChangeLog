@@ -1,0 +1,10 @@
+# ChangeLog for app-text/krop
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/krop/ChangeLog,v 1.1 2014/10/10 15:45:09 dilfridge Exp $
+
+*krop-0.4.6 (10 Oct 2014)
+
+  10 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> +krop-0.4.6.ebuild,
+  +metadata.xml:
+  New package. Based on the ebuild by Armin Straub (upstream author).
+

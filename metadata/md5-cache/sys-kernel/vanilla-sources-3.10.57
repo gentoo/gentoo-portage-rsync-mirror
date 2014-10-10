@@ -9,7 +9,7 @@ LICENSE=GPL-2 !deblob? ( freedist )
 PDEPEND=!build? ( virtual/dev-manager )
 RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
 RESTRICT=binchecks strip
-SLOT=3.16.4
-SRC_URI=mirror://kernel/linux/kernel/v3.x/patch-3.16.4.xz mirror://kernel/linux/kernel/v3.x/linux-3.16.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.16.N/deblob-3.16 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.16.N/deblob-check -> deblob-check-3.16 )
+SLOT=3.10.57
+SRC_URI=mirror://kernel/linux/kernel/v3.x/patch-3.10.57.xz mirror://kernel/linux/kernel/v3.x/linux-3.10.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.10.N/deblob-3.10 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.10.N/deblob-check -> deblob-check-3.10 )
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	kernel-2	6fb31411472936acc8287129d3df7f43	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=178c5b700f4cfa78803fb55a489d7689
+_md5_=00b38d8e42d86a250e1ddd4a105af6b1
