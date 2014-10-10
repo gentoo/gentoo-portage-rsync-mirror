@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/phing
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phing/ChangeLog,v 1.13 2014/01/04 19:52:17 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phing/ChangeLog,v 1.14 2014/10/10 20:46:25 grknight Exp $
+
+*phing-2.8.2 (10 Oct 2014)
+
+  10 Oct 2014; Brian Evans <grknight@gentoo.org> +phing-2.8.2.ebuild:
+  Version bump and use phar archive wrt bug 489244
 
 *phing-2.6.1 (04 Jan 2014)
 
