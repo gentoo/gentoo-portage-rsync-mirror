@@ -1,12 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/wmix-3.1-r2.ebuild,v 1.1 2010/02/23 11:01:31 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/wmix-3.2.ebuild,v 1.1 2014/10/10 12:29:31 voyageur Exp $
 
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Dockapp mixer for OSS or ALSA"
-HOMEPAGE="http://www.ne.jp/asahi/linux/timecop/"
-SRC_URI="http://www.ne.jp/asahi/linux/timecop/software/${P}.tar.gz"
+HOMEPAGE="http://windowmaker.org/dockapps/?name=wmix"
+SRC_URI="http://windowmaker.org/dockapps/?download=${P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,16 +21,11 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/fix-wmix-3.1-version-number.patch
-	epatch "${FILESDIR}"/wmix-fix-free.patch
-}
+S=${WORKDIR}/dockapps
 
 src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" \
-		LDFLAGS="${LDFLAGS}" || die "emake failed."
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {

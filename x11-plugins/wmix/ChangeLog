@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmix
-# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/ChangeLog,v 1.20 2010/02/23 11:01:31 s4t4n Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/ChangeLog,v 1.21 2014/10/10 12:29:31 voyageur Exp $
+
+*wmix-3.2 (10 Oct 2014)
+
+  10 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org> -wmix-3.1-r2.ebuild,
+  +wmix-3.2.ebuild:
+  Version bump with new homepage
 
 *wmix-3.1-r1 (19 Jul 2004)
 
