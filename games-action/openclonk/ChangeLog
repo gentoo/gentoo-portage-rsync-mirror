@@ -1,6 +1,13 @@
 # ChangeLog for games-action/openclonk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.17 2014/07/04 19:29:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.18 2014/10/10 19:18:22 hasufell Exp $
+
+*openclonk-5.5.1 (10 Oct 2014)
+
+  10 Oct 2014; Julian Ospald <hasufell@gentoo.org> +openclonk-5.5.1.ebuild,
+  +files/openclonk-5.5.1-paths.patch,
+  +files/openclonk-5.5.1-tinyxml-shared.patch:
+  version bump
 
   04 Jul 2014; Julian Ospald <hasufell@gentoo.org> openclonk-5.3.3-r1.ebuild:
   stable wrt #503930
