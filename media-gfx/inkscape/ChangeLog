@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.210 2014/07/04 19:35:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.211 2014/10/11 12:46:04 jer Exp $
+
+  11 Oct 2014; Jeroen Roovers <jer@gentoo.org> inkscape-0.48.5.ebuild:
+  Stable for HPPA (bug #523384).
 
   04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> inkscape-0.48.4-r1.ebuild:
   Stable for ppc64, wrt bug #492244

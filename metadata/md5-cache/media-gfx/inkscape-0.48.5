@@ -4,7 +4,7 @@ DESCRIPTION=A SVG based generic vector-drawing program
 EAPI=5
 HOMEPAGE=http://www.inkscape.org/
 IUSE=dia gnome postscript inkjar lcms nls spell wmf python_targets_python2_7 python_single_target_python2_7
-KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris
+KEYWORDS=~amd64 ~arm hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris
 LICENSE=GPL-2 LGPL-2.1
 RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] app-text/libwpd:0.9 app-text/libwpg:0.2 >=app-text/poppler-0.12.3-r3:=[cairo,xpdf-headers(+)] dev-cpp/glibmm >=dev-cpp/gtkmm-2.18.0:2.4 >=dev-libs/boehm-gc-6.4 >=dev-libs/glib-2.6.5 >=dev-libs/libsigc++-2.0.12 >=dev-libs/libxml2-2.6.20 >=dev-libs/libxslt-1.0.15 dev-libs/popt dev-python/lxml[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] media-gfx/imagemagick[cxx] media-libs/fontconfig media-libs/freetype:2 media-libs/libpng:0 sci-libs/gsl x11-libs/libX11 >=x11-libs/gtk+-2.10.7:2 >=x11-libs/pango-1.4.0 gnome? ( >=gnome-base/gnome-vfs-2.0 ) lcms? ( media-libs/lcms:2 ) spell? ( app-text/aspell app-text/gtkspell:2 ) dev-python/numpy[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] media-gfx/uniconvertor dia? ( app-office/dia ) postscript? ( app-text/ghostscript-gpl ) wmf? ( media-libs/libwmf )
 REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/inkscape/inkscape-0.48.5.tar.bz2
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=9cbf1b0a70d4dbe4f4fd5e439f52ad35
+_md5_=df880597801b264ba4107e260b74a404
