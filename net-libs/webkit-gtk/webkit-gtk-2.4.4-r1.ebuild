@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.4-r1.ebuild,v 1.1 2014/10/06 14:08:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.4-r1.ebuild,v 1.2 2014/10/11 11:50:48 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -87,6 +87,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/make-3.82-r4
 	virtual/pkgconfig
 
+	geoloc? ( dev-util/gdbus-codegen )
 	introspection? ( jit? ( sys-apps/paxctl ) )
 	test? (
 		dev-lang/python:2.7

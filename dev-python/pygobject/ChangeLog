@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.261 2014/09/15 08:19:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.262 2014/10/11 11:54:32 maekke Exp $
+
+  11 Oct 2014; Markus Meier <maekke@gentoo.org> pygobject-3.12.2.ebuild:
+  arm stable, bug #512012
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> pygobject-3.12.2.ebuild:
   Stable for sparc, wrt bug #512012

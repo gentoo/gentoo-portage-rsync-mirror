@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/libgrss-0.5.0-r1.ebuild,v 1.3 2014/10/10 10:56:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/libgrss-0.5.0-r1.ebuild,v 1.4 2014/10/11 11:41:05 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ SRC_URI="http://gtk.mplat.es/libgrss/tarballs/${P}.tar.gz"
 LICENSE="LGPL-3"
 SLOT="0.5"
 KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
-IUSE="examples"
+IUSE=""
 
 RDEPEND="
 	>=dev-libs/glib-2.30.2:2
@@ -38,13 +38,4 @@ src_prepare() {
 
 	eautoreconf
 	gnome2_src_prepare
-}
-
-src_install() {
-	gnome2_src_install
-
-	if use examples ; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples
-	fi
 }

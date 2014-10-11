@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-desktop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.335 2014/09/29 11:59:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.336 2014/10/11 11:59:45 maekke Exp $
+
+  11 Oct 2014; Markus Meier <maekke@gentoo.org> gnome-desktop-2.32.1-r2.ebuild:
+  arm stable, bug #512012
 
   29 Sep 2014; Pacho Ramos <pacho@gentoo.org> -gnome-desktop-3.10.2.ebuild,
   -gnome-desktop-3.12.1.ebuild, gnome-desktop-3.12.2.ebuild:

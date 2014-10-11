@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/ChangeLog,v 1.51 2014/09/15 08:19:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/ChangeLog,v 1.52 2014/10/11 11:48:21 maekke Exp $
+
+  11 Oct 2014; Markus Meier <maekke@gentoo.org>
+  gnome-python-base-2.28.1-r1.ebuild:
+  arm stable, bug #512012
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-python-base-2.28.1-r1.ebuild:

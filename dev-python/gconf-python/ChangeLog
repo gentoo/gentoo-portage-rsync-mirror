@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gconf-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gconf-python/ChangeLog,v 1.49 2014/09/15 08:18:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gconf-python/ChangeLog,v 1.50 2014/10/11 11:47:04 maekke Exp $
+
+  11 Oct 2014; Markus Meier <maekke@gentoo.org> gconf-python-2.28.1-r1.ebuild:
+  arm stable, bug #512012
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> gconf-python-2.28.1-r1.ebuild:
   Stable for sparc, wrt bug #512012

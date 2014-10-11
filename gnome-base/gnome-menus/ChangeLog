@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-menus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.212 2014/09/15 08:20:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.213 2014/10/11 12:00:52 maekke Exp $
+
+  11 Oct 2014; Markus Meier <maekke@gentoo.org> gnome-menus-3.10.1-r1.ebuild:
+  arm stable, bug #512012
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> gnome-menus-3.10.1-r1.ebuild:
   Stable for sparc, wrt bug #512012

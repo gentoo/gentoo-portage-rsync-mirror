@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.8 2014/03/10 20:27:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.9 2014/10/11 11:43:31 blueness Exp $
 
 EAPI=5
 
@@ -53,7 +53,8 @@ pkg_setup() {
 }
 
 src_configure() {
-	tc-export CC
+	tc-getCC ${CTARGET}
+	just_headers && export CC=true
 
 	./configure \
 		--target="${CTARGET}" \

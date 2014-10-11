@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.3.0.ebuild,v 1.2 2014/10/09 02:47:31 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.3.0.ebuild,v 1.3 2014/10/11 11:46:42 maekke Exp $
 
 EAPI=5
 
@@ -21,7 +21,10 @@ RDEPEND=">=dev-libs/glib-2.28
 	media-libs/libpng:0=
 	sys-libs/zlib:="
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+	doc? (
+		app-doc/doxygen
+		dev-python/docutils
+	)"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
