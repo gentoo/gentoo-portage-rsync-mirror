@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.214 2014/03/09 11:39:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.215 2014/10/11 10:04:11 aballier Exp $
+
+  11 Oct 2014; Alexis Ballier <aballier@gentoo.org>
+  texlive-core-2013-r1.ebuild:
+  add subslot dep on icu, bug #522664 by Andreas K. Hüttel
 
   09 Mar 2014; Alexis Ballier <aballier@gentoo.org>
   texlive-core-2013-r1.ebuild:

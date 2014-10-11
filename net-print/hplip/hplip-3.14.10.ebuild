@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.4.ebuild,v 1.5 2014/08/10 20:36:06 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.10.ebuild,v 1.1 2014/10/11 10:23:12 billie Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit eutils fdo-mime linux-info python-single-r1 udev autotools toolchain-fun
 DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools"
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
 SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
-		http://dev.gentoo.org/~billie/distfiles/${PN}-3.14.3-patches-1.tar.xz"
+		http://dev.gentoo.org/~billie/distfiles/${PN}-3.14.10-patches-1.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -242,7 +242,7 @@ src_install() {
 	# Remove hal fdi files
 	rm -rf "${D}"/usr/share/hal || die
 
-	find "${D}" -name '*.la' -exec rm -rf {} + || die
+	prune_libtool_files --all
 
 	if use !minimal ; then
 		python_export EPYTHON PYTHON

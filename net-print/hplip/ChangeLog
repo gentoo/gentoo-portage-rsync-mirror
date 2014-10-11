@@ -1,6 +1,15 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.307 2014/08/10 20:36:06 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.309 2014/10/11 10:23:12 billie Exp $
+
+*hplip-3.14.10 (11 Oct 2014)
+
+  11 Oct 2014; Daniel Pielmeier <billie@gentoo.org> +hplip-3.14.10.ebuild:
+  Version bump. Add patch to fix hp-systray for kde5. This fixes bug #525028.
+  Thanks to Manual Rüger for the report.
+
+  11 Oct 2014; Daniel Pielmeier <billie@gentoo.org> -hplip-3.14.4.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> hplip-3.14.1.ebuild,
   hplip-3.14.4.ebuild, hplip-3.14.6.ebuild:

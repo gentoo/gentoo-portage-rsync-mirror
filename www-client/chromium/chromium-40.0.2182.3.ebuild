@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-39.0.2171.2.ebuild,v 1.1 2014/09/30 16:31:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-40.0.2182.3.ebuild,v 1.1 2014/10/11 10:25:22 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -252,6 +252,7 @@ src_prepare() {
 		'third_party/trace-viewer' \
 		'third_party/trace-viewer/third_party/jszip' \
 		'third_party/trace-viewer/third_party/tvcm' \
+		'third_party/trace-viewer/third_party/tvcm/third_party/beautifulsoup/polymer_soup.py' \
 		'third_party/trace-viewer/third_party/tvcm/third_party/d3' \
 		'third_party/trace-viewer/third_party/tvcm/third_party/gl-matrix' \
 		'third_party/trace-viewer/third_party/tvcm/third_party/polymer' \

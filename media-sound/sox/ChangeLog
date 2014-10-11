@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.155 2014/02/03 16:06:22 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.156 2014/10/11 10:22:49 aballier Exp $
+
+  11 Oct 2014; Alexis Ballier <aballier@gentoo.org> sox-14.4.1.ebuild,
+  +files/sox-14.4.1-ffmpeg24.patch:
+  fix build with ffmpeg 2.4+, bug #520188
 
   03 Feb 2014; Akinori Hattori <hattya@gentoo.org> sox-14.4.1.ebuild:
   ia64 stable wrt bug #494346
