@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.121 2014/10/10 21:50:56 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.122 2014/10/11 06:47:12 jer Exp $
+
+  11 Oct 2014; Jeroen Roovers <jer@gentoo.org> help2man-1.45.1.ebuild:
+  Stable for HPPA (bug #524988).
 
   10 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> help2man-1.45.1.ebuild:
   amd64 stable wrt bug #524988

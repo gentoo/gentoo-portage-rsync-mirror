@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xnee
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.35 2014/10/10 15:23:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.36 2014/10/11 06:38:28 jer Exp $
+
+  11 Oct 2014; Jeroen Roovers <jer@gentoo.org> -xnee-3.17.ebuild,
+  -xnee-3.18.ebuild:
+  Old.
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> xnee-3.19.ebuild:
   Stable for amd64, wrt bug #521810
