@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-File_Gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Gettext/ChangeLog,v 1.39 2014/08/10 20:47:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Gettext/ChangeLog,v 1.40 2014/10/11 17:25:35 grknight Exp $
+
+  11 Oct 2014; Brian Evans <grknight@gentoo.org>
+  -PEAR-File_Gettext-0.4.1-r1.ebuild:
+  Drop old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   PEAR-File_Gettext-0.4.1-r1.ebuild, PEAR-File_Gettext-0.4.2.ebuild:
