@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.91 2014/09/14 07:27:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.92 2014/10/11 06:27:33 idella4 Exp $
+
+  11 Oct 2014; Ian Delaney <idella4@gentoo.org> dnspython-1.12.0.ebuild:
+  tidy / fix to test phase, prompt from Arfrever
 
   14 Sep 2014; Agostino Sarubbo <ago@gentoo.org> dnspython-1.11.1.ebuild:
   Stable for ppc64, wrt bug #513558

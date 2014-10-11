@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.12.0.ebuild,v 1.1 2014/09/04 15:29:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.12.0.ebuild,v 1.2 2014/10/11 06:27:33 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -24,15 +24,9 @@ DISTUTILS_IN_SOURCE_BUILD=1
 
 python_test() {
 	pushd "${BUILD_DIR}"/../tests &> /dev/null
-	local test
-	for test in *.py; do
-		if ! "${PYTHON}" ${test}; then
-			die "test $test failed under ${EPYTHON}"
-		else
-			einfo "test $test"
-		fi
-	done
+	"${PYTHON}" utest.py || die "tests failed under ${EPYTHON}"
 	einfo "Testsuite passed under ${EPYTHON}"
+	popd &> /dev/null
 }
 
 python_install_all() {
