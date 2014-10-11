@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1.2.ebuild,v 1.1 2014/08/21 20:50:05 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1.3.ebuild,v 1.1 2014/10/11 22:33:53 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -33,7 +33,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				dev-python/mysql-python[${PYTHON_USEDEP}]
 				dev-python/psycopg[${PYTHON_USEDEP}]
 				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-				<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
+				<dev-python/sphinx-1.1.9999[${PYTHON_USEDEP}]
 				>=dev-python/subunit-0.0.18[${PYTHON_USEDEP}]
 				>=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
@@ -83,11 +83,12 @@ RDEPEND=">=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 		)
 		>=dev-python/sqlalchemy-migrate-0.9[${PYTHON_USEDEP}]
+		!~dev-python/sqlalchemy-migrate-0.9.2[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]
 		>=dev-python/suds-0.4[${PYTHON_USEDEP}]
 		>=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 		iscsi? (
-			>=sys-block/iscsitarget-1.4.20.2_p20130821
+			|| ( >=sys-block/iscsitarget-1.4.20.2_p20130821 sys-block/tgt )
 			sys-block/open-iscsi )
 		lvm? ( sys-fs/lvm2 )
 		sys-fs/sysfsutils"
