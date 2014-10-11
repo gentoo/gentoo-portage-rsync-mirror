@@ -10,4 +10,4 @@ RDEPEND=sys-apps/iproute2
 SLOT=0
 SRC_URI=mirror://sourceforge/htbinit/htb.init-v0.8.5
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=6e46ee075320af49e516e13c5f6cc845
+_md5_=cdabe8717c8bdaf2046f1f835ca6e3d1

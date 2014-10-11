@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/htbinit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.26 2014/03/22 19:33:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.27 2014/10/11 12:19:04 pacho Exp $
+
+  11 Oct 2014; Pacho Ramos <pacho@gentoo.org> htbinit-0.8.5-r6.ebuild:
+  Check for proper config option (#524952 by Vladimir Varlamov)
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
   -htbinit-0.8.5-r5.ebuild:

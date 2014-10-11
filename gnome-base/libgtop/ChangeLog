@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.277 2014/09/15 08:20:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.278 2014/10/11 12:13:51 maekke Exp $
+
+  11 Oct 2014; Markus Meier <maekke@gentoo.org> libgtop-2.30.0.ebuild:
+  arm stable, bug #512012
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> libgtop-2.30.0.ebuild:
   Stable for sparc, wrt bug #512012

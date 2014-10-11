@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.5-r6.ebuild,v 1.3 2014/01/14 13:56:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.5-r6.ebuild,v 1.4 2014/10/11 12:19:04 pacho Exp $
 
 EAPI=5
 inherit eutils linux-info
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}
 
 pkg_setup() {
-	for i in NET_SCH_HTB NET_SCH_SFQ NET_CLS_FW NET_CLS_U32 NET_CLS_ROUTE ; do
+	for i in NET_SCH_HTB NET_SCH_SFQ NET_CLS_FW NET_CLS_U32 NET_CLS_ROUTE4 ; do
 		CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
 	done
 	use esfq && CONFIG_CHECK="${CONFIG_CHECK} ~NET_SCH_ESFQ"
