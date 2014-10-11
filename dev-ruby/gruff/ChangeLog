@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gruff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.50 2014/08/25 16:16:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.51 2014/10/11 00:35:55 mrueg Exp $
+
+*gruff-0.5.1-r1 (11 Oct 2014)
+
+  11 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +gruff-0.5.1-r1.ebuild:
+  Add ruby21 target.
 
   25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> gruff-0.5.1.ebuild:
   Mark amd64 stable. Bug #512180.

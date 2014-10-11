@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coolio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coolio/ChangeLog,v 1.9 2014/05/13 20:36:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coolio/ChangeLog,v 1.10 2014/10/11 00:39:27 mrueg Exp $
+
+  11 Oct 2014; Manuel Rüger <mrueg@gentoo.org> coolio-1.2.1.ebuild:
+  Add ruby21 target.
 
   13 May 2014; Manuel Rüger <mrueg@gentoo.org> -coolio-1.2.0-r1.ebuild,
   coolio-1.2.1.ebuild:

@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=dev-libs/libev test? ( ruby_targets_ruby19? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby20] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby19? ( doc? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( doc? ( dev-ruby/rake[ruby_targets_ruby20] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby20] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) )
+DEPEND=dev-libs/libev test? ( ruby_targets_ruby19? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby20] ) ruby_targets_ruby21? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby21] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby19? ( doc? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( doc? ( dev-ruby/rake[ruby_targets_ruby20] ) ) ruby_targets_ruby21? ( doc? ( dev-ruby/rake[ruby_targets_ruby21] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby20] ) ) ruby_targets_ruby21? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby21] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) )
 DESCRIPTION=A high performance event framework for Ruby which uses the libev C library
 EAPI=5
 HOMEPAGE=http://coolio.github.com/
-IUSE=test elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 doc test test
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 doc test test
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
-RDEPEND=dev-libs/libev ruby_targets_ruby19? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby20] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] )
-REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 )
+RDEPEND=dev-libs/libev ruby_targets_ruby19? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby20] ) ruby_targets_ruby21? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby21] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 )
 SLOT=0
 SRC_URI=mirror://rubygems/cool.io-1.2.1.gem
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=84998bcb4cd653bdab896ae78ca4d9f5
+_md5_=dd58d743c2c6348fcbfbc81b5fd54f55
