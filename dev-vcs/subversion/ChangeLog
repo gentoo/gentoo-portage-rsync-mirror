@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.199 2014/09/18 17:09:01 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.200 2014/10/11 09:07:40 mgorny Exp $
+
+*subversion-1.8.10-r1 (11 Oct 2014)
+
+  11 Oct 2014; Michał Górny <mgorny@gentoo.org> +subversion-1.8.10-r1.ebuild:
+  Fix compatibility with bash-completion autoloading, bug #477830.
 
   18 Sep 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   -subversion-1.7.17.ebuild:

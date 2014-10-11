@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16084 2014/10/11 01:43:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16085 2014/10/11 09:05:41 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -244,11 +244,13 @@ app-admin/hwreport
 # a news item and till at least some of the blockers are fixed.
 # Bug #521146 for a tracker.
 #
-# Mask relevant gentoo-bashcomp too, since pretty much all it does is
-# splitting the completions. Upgrading before switching to -r90 would
-# mean that users have to re-enable all the completions.
+# Mask also all relevant packages and revbumps, to avoid premature
+# upgrade and rebuilds for users. In some cases, the upgrade would
+# require users to re-enable some of the completions, so it's better to
+# do that along with bash-completion upgrade.
 >=app-shells/bash-completion-2.1-r90
 >=app-shells/gentoo-bashcomp-20140911
+=dev-vcs/subversion-1.8.10-r1
 
 # Sergey Popov <pinkbyte@gentoo.org> (27 Aug 2014)
 # Does not work since late 2013, due to update servers shutdown
