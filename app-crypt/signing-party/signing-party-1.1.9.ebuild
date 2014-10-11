@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.9.ebuild,v 1.1 2014/10/05 21:32:50 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.9.ebuild,v 1.2 2014/10/11 08:15:14 dilfridge Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/s/signing-party/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}
 	dev-perl/MIME-tools
 	net-mail/qprint
 	>=dev-perl/MailTools-1.62
+	dev-perl/Net-IDN-Encode
 	virtual/mailx
 	virtual/mta
 	|| (

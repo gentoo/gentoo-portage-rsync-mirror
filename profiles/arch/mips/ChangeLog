@@ -1,6 +1,16 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.147 2014/10/04 11:41:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.148 2014/10/11 08:22:41 blueness Exp $
+
+  11 Oct 2014; Anthony G. Basile <blueness@gentoo.org> make.defaults,
+  mips64/make.defaults, mips64/n32/use.mask, mips64/n64/use.mask,
+  -mips64/use.force, -mips64/use.mask, -mipsel/eapi, -mipsel/make.defaults,
+  mipsel/mips64el/n32/use.mask, mipsel/mips64el/n64/use.mask,
+  -mipsel/mips64el/use.force, -mipsel/mips64el/use.mask, +mipsel/o32/eapi,
+  +mipsel/o32/make.defaults, +mipsel/o32/parent, +mipsel/o32/use.force,
+  +mipsel/o32/use.mask, +o32/eapi, +o32/make.defaults, +o32/parent,
+  +o32/use.force, +o32/use.mask, use.force, use.mask:
+  Restructure to accomodate new multilib scheme
 
   04 Oct 2014; Markos Chandras <hwoarang@gentoo.org> use.mask:
   Drop qt4 mask. The package is keyworded on MIPS. Mask it again on a
