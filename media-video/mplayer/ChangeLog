@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.924 2014/09/01 16:47:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.925 2014/10/11 10:32:09 aballier Exp $
+
+  11 Oct 2014; Alexis Ballier <aballier@gentoo.org> files/dump_ffmpeg.sh:
+  dump_ffmpeg.sh: no need for x86_cpu.h nor lavf/internal.h anymore
 
   01 Sep 2014; Michał Górny <mgorny@gentoo.org> mplayer-1.2_pre20130729.ebuild,
   mplayer-9999.ebuild:

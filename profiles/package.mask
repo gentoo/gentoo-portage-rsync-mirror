@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16085 2014/10/11 09:05:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16086 2014/10/11 10:36:53 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (11 Oct 2014)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-40
 
 # Manuel Rüger <mrueg@gentoo.org> (11 Oct 2014)
 # Dead upstream use kde-misc/kcm-touchpad instead
@@ -222,11 +227,6 @@ x11-themes/amsn-skins
 # website not working anymore and will stay like this,
 # tool is useless. See bug 504734
 app-admin/hwreport
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (29 Aug 2014)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-39
 
 # Brian Dolbec <dolsen@gentoo.org> (1 sept 2014)
 # Mask NON-MAINTAINER commit, due lack of testing portage team, releng
