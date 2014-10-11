@@ -1,8 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.164 2014/10/05 12:33:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.165 2014/10/11 15:53:34 klausman Exp $
 
-# Gilles Dartiguelongue <eva@gentoo.org> (05 Oct 2014
+# Tobias Klausmann <klausman@gentoo.org> (11 Oct 2014)
+# app-emulation/qemu is not keyworded on alpha, masking flag that triggers
+# dependency
+net-misc/spice-gtk smartcard
+
+# Gilles Dartiguelongue <eva@gentoo.org> (05 Oct 2014)
 # Missing keyword on app-accessibility/brltty
 app-accessibility/orca braille
 
