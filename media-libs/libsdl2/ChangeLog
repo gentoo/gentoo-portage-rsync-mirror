@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.25 2014/09/04 08:09:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.26 2014/10/11 09:49:43 klausman Exp $
+
+  11 Oct 2014; Tobias Klausmann <klausman@gentoo.org>
+  libsdl2-2.0.3-r200.ebuild:
+  Keyworded on alpha, bug 508226
 
   04 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/libsdl2-2.0.1-static-libs.patch,
