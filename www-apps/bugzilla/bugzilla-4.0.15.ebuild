@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.2.9.ebuild,v 1.3 2014/05/18 10:16:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.0.15.ebuild,v 1.1 2014/10/11 22:09:48 creffett Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
 HOMEPAGE="http://www.bugzilla.org"
 
 LICENSE="MPL-1.1"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="modperl extras graphviz mysql postgres sqlite test"
 
@@ -39,7 +39,7 @@ COMMON_DEPS="
 	>=virtual/perl-File-Spec-3.27.01
 	>=virtual/perl-MIME-Base64-3.07
 
-	dev-perl/Math-Random-ISAAC
+	dev-perl/Math-Random-Secure
 "
 
 DEPEND="test? ( ${COMMON_DEPS} )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.0.13.ebuild,v 1.1 2014/04/23 04:42:23 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.2.10.ebuild,v 1.1 2014/10/11 22:09:48 creffett Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ COMMON_DEPS="
 	>=virtual/perl-File-Spec-3.27.01
 	>=virtual/perl-MIME-Base64-3.07
 
-	dev-perl/Math-Random-Secure
+	dev-perl/Math-Random-ISAAC
 "
 
 DEPEND="test? ( ${COMMON_DEPS} )"

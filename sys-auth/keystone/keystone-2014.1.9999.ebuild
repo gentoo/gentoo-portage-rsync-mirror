@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.9999.ebuild,v 1.5 2014/08/10 20:21:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.9999.ebuild,v 1.6 2014/10/11 22:07:23 prometheanfire Exp $
 
 EAPI=5
 
@@ -29,13 +29,13 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			dev-lang/python[sqlite]
 			>=dev-python/python-memcached-1.48[${PYTHON_USEDEP}]
 			>=dev-python/pymongo-2.4[${PYTHON_USEDEP}]
-			ldap? ( ~dev-python/python-ldap-2.3.13 )
+			ldap? ( dev-python/python-ldap )
 			>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
 			>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
 			>=dev-python/mock-1.0[${PYTHON_USEDEP}]
 			>=dev-python/mox-0.5.3[${PYTHON_USEDEP}]
 			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-			<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
+			<dev-python/sphinx-1.1.9999[${PYTHON_USEDEP}]
 			>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
 			>=dev-python/subunit-0.0.18[${PYTHON_USEDEP}]
 			>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
@@ -56,6 +56,7 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	>=dev-python/pastedeploy-1.5.0[${PYTHON_USEDEP}]
 	dev-python/paste[${PYTHON_USEDEP}]
 	>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
+	!~dev-python/routes-2.0[${PYTHON_USEDEP}]
 	>=dev-python/six-1.6.0[${PYTHON_USEDEP}]
 	sqlite? (
 		>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
@@ -75,6 +76,7 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 	)
 	>=dev-python/sqlalchemy-migrate-0.9[${PYTHON_USEDEP}]
+	!~dev-python/sqlalchemy-migrate-0.9.2[${PYTHON_USEDEP}]
 	dev-python/passlib[${PYTHON_USEDEP}]
 	>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
 	>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]

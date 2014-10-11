@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.2.1.ebuild,v 1.1 2014/08/19 02:39:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.3.ebuild,v 1.1 2014/10/11 22:07:23 prometheanfire Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit distutils-r1 user
 DESCRIPTION="The Openstack authentication, authorization, and service catalog written in Python"
 HOMEPAGE="https://launchpad.net/keystone"
 #SRC_URI="http://launchpad.net/${PN}/icehouse/${PV}/+download/${P}.tar.gz"
-SRC_URI="http://launchpad.net/${PN}/icehouse/2014.1.2/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/icehouse/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -20,7 +20,6 @@ IUSE="+sqlite mysql postgres ldap test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 #todo, seperate out rdepend via use flags
-# python-ldap needs to be relaxed...
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/pbr-0.6[${PYTHON_USEDEP}]
 	<dev-python/pbr-1.0[${PYTHON_USEDEP}]
@@ -36,7 +35,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			>=dev-python/mock-1.0[${PYTHON_USEDEP}]
 			>=dev-python/mox-0.5.3[${PYTHON_USEDEP}]
 			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-			<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
+			<dev-python/sphinx-1.1.9999[${PYTHON_USEDEP}]
 			>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
 			>=dev-python/subunit-0.0.18[${PYTHON_USEDEP}]
 			>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
@@ -57,6 +56,7 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	>=dev-python/pastedeploy-1.5.0[${PYTHON_USEDEP}]
 	dev-python/paste[${PYTHON_USEDEP}]
 	>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
+	!~dev-python/routes-2.0[${PYTHON_USEDEP}]
 	>=dev-python/six-1.6.0[${PYTHON_USEDEP}]
 	sqlite? (
 		>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
@@ -76,6 +76,7 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 	)
 	>=dev-python/sqlalchemy-migrate-0.9[${PYTHON_USEDEP}]
+	!~dev-python/sqlalchemy-migrate-0.9.2[${PYTHON_USEDEP}]
 	dev-python/passlib[${PYTHON_USEDEP}]
 	>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
 	>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
