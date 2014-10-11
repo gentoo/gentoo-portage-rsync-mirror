@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.6.ebuild,v 1.2 2014/10/05 11:08:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.6.ebuild,v 1.3 2014/10/11 14:48:43 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -187,6 +187,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.4.4-atomic-ppc.patch
 
 	epatch "${FILESDIR}"/${PN}-2.4.4-jpeg-9a.patch #481688
+
+	# Fix building with USE -gstreamer, bug #524518
+	# https://bugs.webkit.org/show_bug.cgi?id=137445
+	epatch "${FILESDIR}"/${PN}-2.4.6-gstreamer-check.patch
 
 	AT_M4DIR=Source/autotools eautoreconf
 
