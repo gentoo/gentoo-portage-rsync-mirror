@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-perl/Moose-0.94 dev-perl/namespace-autoclean >=virtual/perl-ExtUtils-MakeMaker-6.31 test? ( dev-perl/Test-Fatal ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=>=dev-perl/Moose-0.94 dev-perl/namespace-autoclean >=virtual/perl-ExtUtils-MakeMaker-6.31 test? ( dev-perl/Test-Fatal ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Make your object constructors blow up on unknown attributes
-EAPI=4
+EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/MooseX-StrictConstructor/
 IUSE=test
 KEYWORDS=~amd64 ~x86
 LICENSE=Artistic-2
-RDEPEND=>=dev-perl/Moose-0.94 dev-perl/namespace-autoclean || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=>=dev-perl/Moose-0.94 dev-perl/namespace-autoclean dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DR/DROLSKY/MooseX-StrictConstructor-0.19.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f889e8437ffc64d766053d029c422c4e	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=40f0b1dfc6c2ce79cedb648c8fb76440
+_md5_=2bbdc8597a21655c4d928f79921c8866

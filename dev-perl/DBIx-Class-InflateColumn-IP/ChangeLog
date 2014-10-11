@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBIx-Class-InflateColumn-IP
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class-InflateColumn-IP/ChangeLog,v 1.9 2013/01/08 18:24:37 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class-InflateColumn-IP/ChangeLog,v 1.10 2014/10/11 20:45:16 zlogene Exp $
+
+  11 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  DBIx-Class-InflateColumn-IP-0.20.30.ebuild:
+  Bump to EAPI=5
 
   08 Jan 2013; Torsten Veller <tove@gentoo.org>
   -DBIx-Class-InflateColumn-IP-0.20.20.ebuild:

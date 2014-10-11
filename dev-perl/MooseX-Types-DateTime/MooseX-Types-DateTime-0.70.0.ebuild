@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime/MooseX-Types-DateTime-0.70.0.ebuild,v 1.1 2012/02/13 15:36:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime/MooseX-Types-DateTime-0.70.0.ebuild,v 1.2 2014/10/11 20:53:02 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=ILMARI
 MODULE_VERSION=0.07
