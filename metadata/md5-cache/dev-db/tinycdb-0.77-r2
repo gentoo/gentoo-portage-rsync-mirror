@@ -10,4 +10,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://www.corpit.ru/mjt/tinycdb/tinycdb_0.77.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e528cbee3ceadc89b59f3122f188b8cc
+_md5_=1d0fa584125b3318de0956fccd461e9b

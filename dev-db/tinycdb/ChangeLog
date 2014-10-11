@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tinycdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.42 2014/09/28 09:29:47 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.43 2014/10/11 05:36:02 hattya Exp $
+
+  11 Oct 2014; Akinori Hattori <hattya@gentoo.org> tinycdb-0.77-r2.ebuild:
+  fixes bug #524954
 
   28 Sep 2014; Akinori Hattori <hattya@gentoo.org> tinycdb-0.77-r2.ebuild:
   update to EAPI 5

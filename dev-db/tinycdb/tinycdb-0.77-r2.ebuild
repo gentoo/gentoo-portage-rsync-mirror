@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77-r2.ebuild,v 1.9 2014/09/28 09:29:47 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77-r2.ebuild,v 1.10 2014/10/11 05:36:02 hattya Exp $
 
 EAPI="5"
 
@@ -30,13 +30,20 @@ src_compile() {
 	local targets="shared"
 	use static-libs && targets+=" staticlib piclib"
 
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} ${LDFLAGS}" ${targets}
+	emake \
+		CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS} ${LDFLAGS}" \
+		${targets}
 }
 
 src_install() {
-	local targets="install-sharedlib"
+	local targets="install install-sharedlib"
 	use static-libs && targets+=" install-piclib"
 
-	emake DESTDIR="${D}" ${targets}
+	emake \
+		prefix="/usr" \
+		mandir="/usr/share/man" \
+		DESTDIR="${D}" \
+		${targets}
 	dodoc ChangeLog NEWS
 }
