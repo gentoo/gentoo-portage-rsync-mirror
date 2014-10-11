@@ -1,9 +1,12 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.153 2014/10/11 15:50:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.155 2014/10/11 16:12:26 idella4 Exp $
 
-  11 Oct 2014; Ian Delaney <idella4@gentoo.org> scons-2.3.2.ebuild:
-  bump
+*scons-2.3.4 (11 Oct 2014)
+
+  11 Oct 2014; Ian Delaney <idella4@gentoo.org> +scons-2.3.4.ebuild,
+  scons-2.3.2.ebuild:
+  drop py2.6 add pypy, bump
 
 *scons-2.3.2 (09 Jul 2014)
 
