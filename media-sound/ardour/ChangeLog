@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.130 2014/05/19 09:58:30 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.131 2014/10/11 13:02:51 nativemad Exp $
+
+  11 Oct 2014; Andreas Schuerch <nativemad@gentoo.org> ardour-3.5.380.ebuild,
+  ardour-9999.ebuild:
+  depending on glibmm-2.32.0 as of bug 524326
 
   19 May 2014; Andreas Schuerch <nativemad@gentoo.org> ardour-3.5.380.ebuild:
   added boost_system flag. See Bug 510630

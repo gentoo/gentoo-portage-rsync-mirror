@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.4.0.ebuild,v 1.9 2014/10/09 12:36:17 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.4.0.ebuild,v 1.10 2014/10/11 13:16:20 dilfridge Exp $
 
 EAPI=5
 
@@ -58,7 +58,7 @@ DEPEND=">=dev-lang/perl-5.8.8-r8
 	)
 	ipv6? (
 		|| ( dev-perl/IO-Socket-INET6
-			dev-perl/IO-Socket-IP )
+			virtual/perl-IO-Socket-IP )
 	)"
 RDEPEND="${DEPEND}"
 

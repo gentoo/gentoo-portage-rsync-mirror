@@ -1,0 +1,13 @@
+# ChangeLog for virtual/perl-IO-Socket-IP
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Socket-IP/ChangeLog,v 1.1 2014/10/11 13:12:57 dilfridge Exp $
+
+*perl-IO-Socket-IP-0.290.0 (11 Oct 2014)
+*perl-IO-Socket-IP-0.280.0 (11 Oct 2014)
+*perl-IO-Socket-IP-0.230.0 (11 Oct 2014)
+
+  11 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +perl-IO-Socket-IP-0.230.0.ebuild, +perl-IO-Socket-IP-0.280.0.ebuild,
+  +perl-IO-Socket-IP-0.290.0.ebuild, +metadata.xml:
+  New virtual, in core Perl since 5.20
+

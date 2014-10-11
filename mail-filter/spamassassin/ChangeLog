@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.254 2014/10/09 12:36:17 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.255 2014/10/11 13:16:20 dilfridge Exp $
+
+  11 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  spamassassin-3.4.0.ebuild:
+  IO::Socket::IP gets a virtual. Wheee...
 
   09 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> spamassassin-3.4.0.ebuild:
   Add ~ia64 keyword wrt bug #521400
