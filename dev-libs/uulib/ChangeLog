@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/uulib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.22 2014/10/11 18:30:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.23 2014/10/11 20:19:46 zlogene Exp $
+
+  11 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> uulib-0.5.20-r1.ebuild:
+  Add ~ppc64 keyword wrt bug #268307
 
 *uulib-0.5.20-r1 (11 Oct 2014)
 

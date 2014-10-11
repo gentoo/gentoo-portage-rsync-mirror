@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/feedparser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.53 2014/05/12 08:55:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.54 2014/10/11 20:20:29 jer Exp $
+
+  11 Oct 2014; Jeroen Roovers <jer@gentoo.org> feedparser-5.1.3-r2.ebuild:
+  Stable for HPPA (bug #525038).
 
   12 May 2014; Ian Delaney <idella4@gentoo.org> feedparser-5.1.3-r2.ebuild:
   drop py2.6 pypy2_0 add py3.4 support
