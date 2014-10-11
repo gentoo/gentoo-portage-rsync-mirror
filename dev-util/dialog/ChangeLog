@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.212 2014/08/01 02:28:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.213 2014/10/11 07:09:31 jer Exp $
+
+*dialog-1.2.20140911 (11 Oct 2014)
+
+  11 Oct 2014; Jeroen Roovers <jer@gentoo.org> dialog-1.2.20140219.ebuild,
+  +dialog-1.2.20140911.ebuild:
+  Version bump.
 
   01 Aug 2014;  <tgall@gentoo.org> dialog-1.2.20140219.ebuild:
   Initial arm64 support
