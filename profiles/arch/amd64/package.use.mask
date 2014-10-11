@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.189 2014/10/08 19:55:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.190 2014/10/11 05:11:15 radhermit Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (11 Oct 2014)
+# Unmask skype support for unstable keywords
+net-im/bitlbee -skype
 
 # Mike Frysinger <vapier@gentoo.org> (04 Aug 2014)
 # Unmask flashrom drivers that only work on x86 due to in/out asm insns #454024

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.276 2014/10/08 19:55:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.277 2014/10/11 05:11:15 radhermit Exp $
+
+  11 Oct 2014; Tim Harder <radhermit@gentoo.org> package.use.mask,
+  package.use.stable.mask:
+  Unmask skype use flag for net-im/bitlbee on unstable systems.
 
   08 Oct 2014; Ulrich Müller <ulm@gentoo.org> package.use.mask:
   Unmask apulse, bug 524164.

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.175 2014/09/13 09:07:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.176 2014/10/11 05:11:54 radhermit Exp $
+
+  11 Oct 2014; Tim Harder <radhermit@gentoo.org> package.use.mask,
+  package.use.stable.mask:
+  Unmask skype use flag for net-im/bitlbee on unstable systems.
 
   13 Sep 2014; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
   midori[jit] works on x86

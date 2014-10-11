@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/log4r
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/ChangeLog,v 1.44 2014/08/05 16:00:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/ChangeLog,v 1.45 2014/10/11 05:18:18 mrueg Exp $
+
+  11 Oct 2014; Manuel Rüger <mrueg@gentoo.org> log4r-1.1.10-r1.ebuild:
+  Add ruby21 target.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> log4r-1.1.10-r1.ebuild,
   log4r-1.1.10.ebuild:

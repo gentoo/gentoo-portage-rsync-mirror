@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.613 2014/10/10 19:47:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.614 2014/10/11 05:03:35 radhermit Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Tim Harder <radhermit@gentoo.org> (10 Oct 2014)
+# Masked since skype isn't stable
+net-im/bitlbee skype
 
 # Jauhien Piatlicki <jauhien@gentoo.org> (5 Oct 2014)
 # Masked because of bug 524390: privilege escalation

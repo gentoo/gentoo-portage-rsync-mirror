@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.stable.mask,v 1.4 2014/06/29 16:32:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.stable.mask,v 1.5 2014/10/11 05:11:54 radhermit Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (11 Oct 2014)
+# Masked since skype isn't stable
+net-im/bitlbee skype
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
 # Not yet stabilized dependencies blocking sec bug 514886

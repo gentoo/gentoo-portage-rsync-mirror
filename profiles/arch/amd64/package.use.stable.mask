@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.66 2014/10/02 10:29:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.67 2014/10/11 05:11:15 radhermit Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (11 Oct 2014)
+# Masked since skype isn't stable
+net-im/bitlbee skype
 
 # Michał Górny <mgorny@gentoo.org> (30 Mar 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>

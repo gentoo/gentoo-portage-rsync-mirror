@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mixlib-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-config/ChangeLog,v 1.8 2014/07/22 06:10:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-config/ChangeLog,v 1.9 2014/10/11 05:27:04 mrueg Exp $
+
+  11 Oct 2014; Manuel Rüger <mrueg@gentoo.org> mixlib-config-1.1.2.ebuild,
+  mixlib-config-2.1.0.ebuild:
+  Add ruby20, ruby21 targets.
 
 *mixlib-config-2.1.0 (22 Jul 2014)
 

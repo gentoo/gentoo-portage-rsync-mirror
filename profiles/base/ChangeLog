@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.732 2014/10/10 19:47:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.733 2014/10/11 05:03:35 radhermit Exp $
+
+  11 Oct 2014; Tim Harder <radhermit@gentoo.org> package.use.mask,
+  package.use.stable.mask:
+  Move net-im/bitlbee skype use flag mask back to package.use.mask and unmask
+  in specific profiles (bug #525006).
 
   10 Oct 2014; Tim Harder <radhermit@gentoo.org> package.use.mask,
   package.use.stable.mask:
