@@ -1,11 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sdoc/sdoc-0.3.20.ebuild,v 1.2 2013/12/25 18:09:51 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sdoc/sdoc-0.3.20.ebuild,v 1.3 2014/10/11 00:29:46 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
-inherit multilib ruby-fakegem
+inherit ruby-fakegem
+
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
+RUBY_FAKEGEM_RECIPE_TEST=""
 
 DESCRIPTION="rdoc generator html with javascript search index"
 HOMEPAGE="https://rubygems.org/gems/sdoc"

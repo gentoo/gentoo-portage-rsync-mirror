@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-xslt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.40 2014/04/24 16:50:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.41 2014/10/11 00:12:14 mrueg Exp $
+
+*ruby-xslt-0.9.9-r3 (11 Oct 2014)
+
+  11 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +ruby-xslt-0.9.9-r3.ebuild:
+  Add ruby21 target.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-xslt-0.9.9-r2.ebuild:
   Remove ruby18 support.

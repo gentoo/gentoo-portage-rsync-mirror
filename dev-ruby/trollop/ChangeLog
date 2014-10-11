@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/trollop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.24 2014/08/27 15:34:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.25 2014/10/11 00:03:21 mrueg Exp $
+
+  11 Oct 2014; Manuel Rüger <mrueg@gentoo.org> trollop-1.16.2-r4.ebuild,
+  trollop-2.0.ebuild:
+  Add ruby21 target.
 
   27 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -trollop-1.16.2-r3.ebuild:
   Cleanup old.
