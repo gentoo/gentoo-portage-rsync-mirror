@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16087 2014/10/11 16:36:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16088 2014/10/11 19:02:35 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (11 Oct 2014)
+# Outdated and unused; masked for removal in 30 days
+dev-perl/Template-Latex
 
 # Pacho Ramos <pacho@gentoo.org> (11 Oct 2014)
 # Masked for removal in a month.
