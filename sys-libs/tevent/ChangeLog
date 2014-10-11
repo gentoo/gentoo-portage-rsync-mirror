@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tevent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.71 2014/10/03 21:02:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.72 2014/10/11 13:38:57 maekke Exp $
+
+  11 Oct 2014; Markus Meier <maekke@gentoo.org> tevent-0.9.21-r1.ebuild:
+  arm stable, bug #512012
 
 *tevent-0.9.22 (03 Oct 2014)
 

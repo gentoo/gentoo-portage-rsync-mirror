@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/orbit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.215 2014/09/15 08:20:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.216 2014/10/11 13:35:50 maekke Exp $
+
+  11 Oct 2014; Markus Meier <maekke@gentoo.org> orbit-2.14.19-r4.ebuild:
+  arm stable, bug #512012
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> orbit-2.14.19-r4.ebuild:
   Stable for sparc, wrt bug #512012

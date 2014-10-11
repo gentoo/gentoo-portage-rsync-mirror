@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geoclue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.37 2014/10/09 09:19:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.38 2014/10/11 13:47:00 maekke Exp $
+
+  11 Oct 2014; Markus Meier <maekke@gentoo.org> geoclue-2.1.9.ebuild:
+  arm stable, bug #512012
 
 *geoclue-2.1.10 (09 Oct 2014)
 

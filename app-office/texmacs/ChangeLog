@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.117 2014/08/10 17:35:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.118 2014/10/11 13:34:53 klausman Exp $
+
+  11 Oct 2014; Tobias Klausmann <klausman@gentoo.org> texmacs-1.99.1.ebuild:
+  Stable on alpha, bug 512486
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> texmacs-1.0.7.21.ebuild:
   Stable for x86, wrt bug #512486

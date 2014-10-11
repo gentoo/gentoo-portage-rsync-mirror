@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-resindvd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.89 2014/09/15 08:22:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.90 2014/10/11 13:46:23 maekke Exp $
+
+  11 Oct 2014; Markus Meier <maekke@gentoo.org>
+  gst-plugins-resindvd-0.10.23-r1.ebuild:
+  arm stable, bug #512012
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-resindvd-0.10.23-r1.ebuild, gst-plugins-resindvd-1.2.4-r1.ebuild:
