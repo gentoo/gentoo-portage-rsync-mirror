@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Convert-UUlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.67 2014/08/22 19:07:36 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.68 2014/10/11 18:36:17 dilfridge Exp $
+
+*Convert-UUlib-1.400.0-r2 (11 Oct 2014)
+
+  11 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Convert-UUlib-1.400.0-r2.ebuild,
+  +files/Convert-UUlib-1.400.0-unbundle.patch:
+  Unbundle uulib, bug 268307
 
 *Convert-UUlib-1.400.0-r1 (22 Aug 2014)
 

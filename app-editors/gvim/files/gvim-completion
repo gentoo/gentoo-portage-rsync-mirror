@@ -35,6 +35,6 @@ _gvim()
     fi
 }
 
-complete -o filenames -F _gvim gvim gview rgview rgview
+complete -o filenames -F _gvim gvim evim eview gview gvimdiff rgvim rgview
 
 # vim: set ft=sh sw=4 et sts=4 :

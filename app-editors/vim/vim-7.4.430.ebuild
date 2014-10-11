@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.430.ebuild,v 1.2 2014/09/06 17:52:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.430.ebuild,v 1.3 2014/10/11 18:34:46 mgorny Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -333,6 +333,8 @@ src_install() {
 	fi
 
 	newbashcomp "${FILESDIR}"/${PN}-completion ${PN}
+	# keep in sync with 'complete ... -F' list
+	bashcomp_alias vim ex vi view rvim rview vimdiff
 
 	# We shouldn't be installing the ex or view man page symlinks, as they
 	# are managed by eselect-vi
