@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/pius
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pius/ChangeLog,v 1.5 2014/08/10 02:27:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pius/ChangeLog,v 1.6 2014/10/11 21:02:18 radhermit Exp $
+
+*pius-2.0.11 (11 Oct 2014)
+
+  11 Oct 2014; Tim Harder <radhermit@gentoo.org> +pius-2.0.11.ebuild:
+  Version bump, migrate to python-r1.
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> pius-2.0.10.ebuild,
   pius-2.0.8.ebuild, pius-2.0.9.ebuild:

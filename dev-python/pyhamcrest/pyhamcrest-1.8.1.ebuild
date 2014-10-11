@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyhamcrest/pyhamcrest-1.8.1.ebuild,v 1.1 2014/10/11 15:39:46 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyhamcrest/pyhamcrest-1.8.1.ebuild,v 1.2 2014/10/11 21:14:04 alunduil Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 pypy )
@@ -20,13 +20,15 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="doc examples numpy test"
 
-CDEPEND="$(python_gen_cond_dep 'numpy? ( dev-python/numpy[${PYTHON_USEDEP}] )' 'python*')"
+CDEPEND="
+	dev-python/six[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep 'numpy? ( dev-python/numpy[${PYTHON_USEDEP}] )' 'python*')
+"
 DEPEND="
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
 		${CDEPEND}
 		dev-python/pytest[${PYTHON_USEDEP}]
-		dev-python/six[${PYTHON_USEDEP}]
 	)
 "
 RDEPEND="${CDEPEND}"

@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/apngdis
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngdis/ChangeLog,v 1.7 2013/12/17 10:24:12 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngdis/ChangeLog,v 1.8 2014/10/11 21:07:20 radhermit Exp $
+
+*apngdis-2.7 (11 Oct 2014)
+
+  11 Oct 2014; Tim Harder <radhermit@gentoo.org> +apngdis-2.7.ebuild:
+  Version bump.
 
   17 Dec 2013; Tim Harder <radhermit@gentoo.org> apngdis-2.6.ebuild:
   Add dep on libpng.

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/moe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/ChangeLog,v 1.6 2014/07/15 14:54:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/ChangeLog,v 1.7 2014/10/11 21:13:41 zlogene Exp $
+
+  11 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> moe-1.6.ebuild:
+  Stable for all
 
 *moe-1.6 (15 Jul 2014)
 

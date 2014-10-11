@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DEPEND=app-crypt/gnupg python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=A tool for signing and email all UIDs on a set of PGP keys
+EAPI=5
+HOMEPAGE=http://www.phildev.net/pius/
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=app-crypt/gnupg python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-lang/perl
+SLOT=0
+SRC_URI=mirror://sourceforge/pgpius/pius-2.0.11.tar.bz2
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=8ce5a3c139a4f684ab6d8a9f5b5e2487

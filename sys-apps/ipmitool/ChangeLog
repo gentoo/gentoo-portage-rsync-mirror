@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ipmitool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.26 2014/08/10 20:24:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.27 2014/10/11 21:21:18 robbat2 Exp $
+
+*ipmitool-1.8.14-r1 (11 Oct 2014)
+
+  11 Oct 2014; Robin H. Johnson <robbat2@gentoo.org> +ipmitool-1.8.14-r1.ebuild:
+  Bump Debian patchset for new Dell server support, also add optional static
+  build for infra use.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ipmitool-1.8.11-r1.ebuild,
   ipmitool-1.8.11.ebuild, ipmitool-1.8.14.ebuild:

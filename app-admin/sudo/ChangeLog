@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.370 2014/10/10 10:54:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.371 2014/10/11 21:10:12 zlogene Exp $
+
+  11 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> sudo-1.8.11_p1.ebuild:
+  arm stable wrt bug #524752
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sudo-1.8.11_p1.ebuild:
   Stable for x86, wrt bug #524752
