@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtmultimedia/qtmultimedia-5.3.2.ebuild,v 1.1 2014/09/16 14:46:01 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtmultimedia/qtmultimedia-5.3.2.ebuild,v 1.2 2014/10/11 02:58:05 pesa Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-IUSE="+alsa +gstreamer openal +opengl pulseaudio qml widgets"
+IUSE="alsa +gstreamer openal +opengl pulseaudio qml widgets"
 REQUIRED_USE="?? ( alsa pulseaudio )"
 
 # "widgets? ( qtgui[opengl=] )" because of bug 518542 comment 2
@@ -35,7 +35,7 @@ RDEPEND="
 	)
 	widgets? (
 		>=dev-qt/qtgui-${PV}:5[debug=,opengl=]
-		>=dev-qt/qtwidgets-${PV}:5[debug=]
+		>=dev-qt/qtwidgets-${PV}:5[debug=,opengl=]
 		opengl? ( >=dev-qt/qtopengl-${PV}:5[debug=] )
 	)
 "
