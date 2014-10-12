@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kompare
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.316 2014/09/16 18:17:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.317 2014/10/12 13:31:12 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> kompare-4.13.3.ebuild,
+  kompare-4.14.1.ebuild:
+  Add ~ppc64 keyword wrt bug #507896
 
 *kompare-4.14.1 (16 Sep 2014)
 
