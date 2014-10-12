@@ -1,28 +1,30 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.35-r1.ebuild,v 1.14 2014/10/12 06:26:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40.ebuild,v 1.2 2014/10/12 06:30:47 robbat2 Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs autotools user systemd
+inherit db-use eutils flag-o-matic multilib multilib-minimal ssl-cert versionator toolchain-funcs autotools user systemd
 
 BIS_PN=rfc2307bis.schema
-BIS_PV=20120525
+BIS_PV=20140524
 BIS_P="${BIS_PN}-${BIS_PV}"
 
 DESCRIPTION="LDAP suite of application and development tools"
 HOMEPAGE="http://www.OpenLDAP.org/"
-SRC_URI="mirror://openldap/openldap-release/${P}.tgz
+
+# mirrors are mostly not working, using canonical URI
+SRC_URI="ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/${P}.tgz
 		 mirror://gentoo/${BIS_P}"
 
 LICENSE="OPENLDAP GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 IUSE_DAEMON="crypt icu samba slp tcpd experimental minimal"
 IUSE_BACKEND="+berkdb"
 IUSE_OVERLAY="overlays perl"
-IUSE_OPTIONAL="gnutls iodbc sasl ssl odbc debug ipv6 +syslog selinux"
+IUSE_OPTIONAL="gnutls iodbc sasl ssl odbc debug ipv6 +syslog selinux static-libs"
 IUSE_CONTRIB="smbkrb5passwd kerberos"
 IUSE_CONTRIB="${IUSE_CONTRIB} -cxx"
 IUSE="${IUSE_DAEMON} ${IUSE_BACKEND} ${IUSE_OVERLAY} ${IUSE_OPTIONAL} ${IUSE_CONTRIB}"
@@ -30,12 +32,13 @@ IUSE="${IUSE_DAEMON} ${IUSE_BACKEND} ${IUSE_OVERLAY} ${IUSE_OPTIONAL} ${IUSE_CON
 REQUIRED_USE="cxx? ( sasl )"
 
 # openssl is needed to generate lanman-passwords required by samba
-RDEPEND="icu? ( dev-libs/icu )
-	ssl? ( !gnutls? ( dev-libs/openssl )
-		gnutls? ( net-libs/gnutls dev-libs/libgcrypt:0 ) )
-	sasl? ( dev-libs/cyrus-sasl )
+RDEPEND="icu? ( dev-libs/icu:= )
+	ssl? ( !gnutls? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
+		gnutls? ( >=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}] >=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}] ) )
+	sasl? ( dev-libs/cyrus-sasl:= )
 	!minimal? (
 		sys-devel/libtool
+		sys-libs/e2fsprogs-libs 
 		tcpd? ( sys-apps/tcp-wrappers )
 		odbc? ( !iodbc? ( dev-db/unixODBC )
 			iodbc? ( dev-db/libiodbc ) )
@@ -45,17 +48,60 @@ RDEPEND="icu? ( dev-libs/icu )
 		berkdb? ( sys-libs/db )
 		smbkrb5passwd? (
 			dev-libs/openssl
-			app-crypt/heimdal )
+			kerberos? ( app-crypt/heimdal )
+			)
 		kerberos? ( virtual/krb5 )
-		cxx? ( dev-libs/cyrus-sasl )
+		cxx? ( dev-libs/cyrus-sasl:= )
 	)
-	selinux? ( sec-policy/selinux-ldap )"
+	selinux? ( sec-policy/selinux-ldap )
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20140508-r3
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 DEPEND="${RDEPEND}
 	sys-apps/groff"
 
 # for tracking versions
 OPENLDAP_VERSIONTAG=".version-tag"
 OPENLDAP_DEFAULTDIR_VERSIONTAG="/var/lib/openldap-data"
+
+MULTILIB_WRAPPED_HEADERS=(
+	# USE=cxx
+	/usr/include/LDAPAsynConnection.h
+	/usr/include/LDAPAttrType.h
+	/usr/include/LDAPAttribute.h
+	/usr/include/LDAPAttributeList.h
+	/usr/include/LDAPConnection.h
+	/usr/include/LDAPConstraints.h
+	/usr/include/LDAPControl.h
+	/usr/include/LDAPControlSet.h
+	/usr/include/LDAPEntry.h
+	/usr/include/LDAPEntryList.h
+	/usr/include/LDAPException.h
+	/usr/include/LDAPExtResult.h
+	/usr/include/LDAPMessage.h
+	/usr/include/LDAPMessageQueue.h
+	/usr/include/LDAPModList.h
+	/usr/include/LDAPModification.h
+	/usr/include/LDAPObjClass.h
+	/usr/include/LDAPRebind.h
+	/usr/include/LDAPRebindAuth.h
+	/usr/include/LDAPReferenceList.h
+	/usr/include/LDAPResult.h
+	/usr/include/LDAPSaslBindResult.h
+	/usr/include/LDAPSchema.h
+	/usr/include/LDAPSearchReference.h
+	/usr/include/LDAPSearchResult.h
+	/usr/include/LDAPSearchResults.h
+	/usr/include/LDAPUrl.h
+	/usr/include/LDAPUrlList.h
+	/usr/include/LdifReader.h
+	/usr/include/LdifWriter.h
+	/usr/include/SaslInteraction.h
+	/usr/include/SaslInteractionHandler.h
+	/usr/include/StringList.h
+	/usr/include/TlsOptions.h
+)
 
 openldap_filecount() {
 	local dir="$1"
@@ -263,9 +309,15 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.4.31-gcc47.patch
 
 	# bug #421463
-	epatch "${FILESDIR}"/${PN}-2.4.33-gnutls.patch
+	#epatch "${FILESDIR}"/${PN}-2.4.33-gnutls.patch # merged upstream
 
-	cd "${S}"/build
+	sed -i.orig \
+		-e '/IDOCS.*DESTDIR/s,/man/man1,/share/man/man1,g' \
+		-e '/ILIBS.*DESTDIR/s,/lib,/$(LIBDIR),g' \
+		"${S}"/libraries/liblmdb/Makefile \
+		|| die "Failed to fix LMDB manpage install location"
+
+	cd "${S}"/build || die
 	einfo "Making sure upstream build strip does not do stripping too early"
 	sed -i.orig \
 		-e '/^STRIP/s,-s,,g' \
@@ -276,20 +328,20 @@ src_prepare() {
 		-e 's|/bin/sh|/bin/bash|g' \
 		"${S}"/tests/scripts/* || die "sed failed"
 
-	cd "${S}"
+	cd "${S}" || die
 	AT_NOEAUTOMAKE=yes eautoreconf
 }
 
 build_contrib_module() {
-	lt="${S}/libtool"
 	# <dir> <sources> <outputname>
-	cd "${S}/contrib/slapd-modules/$1"
+	cd "${S}/contrib/slapd-modules/$1" || die
 	einfo "Compiling contrib-module: $3"
 	# Make sure it's uppercase
 	local define_name="$(echo "SLAPD_OVER_${1}" | LC_ALL=C tr '[:lower:]' '[:upper:]')"
 	"${lt}" --mode=compile --tag=CC \
 		"${CC}" \
 		-D${define_name}=SLAPD_MOD_DYNAMIC \
+		-I"${BUILD_DIR}"/include \
 		-I../../../include -I../../../servers/slapd ${CFLAGS} \
 		-o ${2%.c}.lo -c $2 || die "compiling $3 failed"
 	einfo "Linking contrib-module: $3"
@@ -302,167 +354,204 @@ build_contrib_module() {
 }
 
 src_configure() {
-	local myconf
-
 	#Fix for glibc-2.8 and ucred. Bug 228457.
-	append-flags -D_GNU_SOURCE
+	append-cppflags -D_GNU_SOURCE
 
 	# Bug 408001
-	use elibc_FreeBSD && append-flags -DMDB_DSYNC=O_SYNC -DMDB_FDATASYNC=fsync
+	use elibc_FreeBSD && append-cppflags -DMDB_DSYNC=O_SYNC -DMDB_FDATASYNC=fsync
 
-	use debug && myconf="${myconf} $(use_enable debug)"
+	# connectionless ldap per bug #342439
+	append-cppflags -DLDAP_CONNECTIONLESS
+
+	multilib-minimal_src_configure
+}
+
+multilib_src_configure() {
+	local myconf=()
+
+	use debug && myconf+=( $(use_enable debug) )
 
 	# ICU usage is not configurable
-	export ac_cv_header_unicode_utypes_h="$(use icu && echo yes || echo no)"
+	export ac_cv_header_unicode_utypes_h="$(multilib_is_native_abi && use icu && echo yes || echo no)"
 
-	if ! use minimal ; then
+	if ! use minimal && multilib_is_native_abi; then
+		local CPPFLAGS=${CPPFLAGS}
+
 		# re-enable serverside overlay chains per bug #296567
 		# see ldap docs chaper 12.3.1 for details
-		myconf="${myconf} --enable-ldap"
+		myconf+=( --enable-ldap )
 
 		# backends
-		myconf="${myconf} --enable-slapd"
+		myconf+=( --enable-slapd )
 		if use berkdb ; then
 			einfo "Using Berkeley DB for local backend"
-			myconf="${myconf} --enable-bdb --enable-hdb"
+			myconf+=( --enable-bdb --enable-hdb )
 			# We need to include the slotted db.h dir for FreeBSD
 			append-cppflags -I$(db_includedir)
 		else
 			ewarn
 			ewarn "Note: if you disable berkdb, you can only use remote-backends!"
 			ewarn
-			ebeep 5
-			myconf="${myconf} --disable-bdb --disable-hdb"
+			myconf+=( --disable-bdb --disable-hdb )
 		fi
-		for backend in dnssrv ldap meta monitor null passwd relay shell sock; do
-			myconf="${myconf} --enable-${backend}=mod"
+		for backend in dnssrv ldap mdb meta monitor null passwd relay shell sock; do
+			myconf+=( --enable-${backend}=mod )
 		done
 
-		myconf="${myconf} $(use_enable perl perl mod)"
+		myconf+=( $(use_enable perl perl mod) )
 
-		myconf="${myconf} $(use_enable odbc sql mod)"
+		myconf+=( $(use_enable odbc sql mod) )
 		if use odbc ; then
 			local odbc_lib="unixodbc"
 			if use iodbc ; then
 				odbc_lib="iodbc"
 				append-cppflags -I"${EPREFIX}"/usr/include/iodbc
 			fi
-			myconf="${myconf} --with-odbc=${odbc_lib}"
+			myconf+=( --with-odbc=${odbc_lib} )
 		fi
 
 		# slapd options
-		myconf="${myconf} $(use_enable crypt) $(use_enable slp)"
-		myconf="${myconf} $(use_enable samba lmpasswd) $(use_enable syslog)"
+		myconf+=(
+			$(use_enable crypt)
+			$(use_enable slp)
+			$(use_enable samba lmpasswd)
+			$(use_enable syslog)
+		)
 		if use experimental ; then
-			myconf="${myconf} --enable-dynacl"
-			myconf="${myconf} --enable-aci=mod"
+			myconf+=(
+				--enable-dynacl
+				--enable-aci=mod
+			)
 		fi
 		for option in aci cleartext modules rewrite rlookups slapi; do
-			myconf="${myconf} --enable-${option}"
+			myconf+=( --enable-${option} )
 		done
 
 		# slapd overlay options
 		# Compile-in the syncprov, the others as module
-		myconf="${myconf} --enable-syncprov=yes"
-		use overlays && myconf="${myconf} --enable-overlays=mod"
+		myconf+=( --enable-syncprov=yes )
+		use overlays && myconf+=( --enable-overlays=mod )
 
 	else
-		myconf="${myconf} --disable-slapd --disable-bdb --disable-hdb"
-		myconf="${myconf} --disable-overlays --disable-syslog"
+		myconf+=(
+		    --disable-backends
+			--disable-slapd
+			--disable-bdb
+			--disable-hdb
+			--disable-mdb
+			--disable-overlays
+			--disable-syslog
+		)
 	fi
 
 	# basic functionality stuff
-	myconf="${myconf} $(use_enable ipv6)"
-	myconf="${myconf} $(use_with sasl cyrus-sasl) $(use_enable sasl spasswd)"
-	myconf="${myconf} $(use_enable tcpd wrappers)"
+	myconf+=(
+		$(use_enable ipv6)
+		$(multilib_native_use_with sasl cyrus-sasl)
+		$(multilib_native_use_enable sasl spasswd)
+		$(use_enable tcpd wrappers)
+	)
 
 	local ssl_lib="no"
-	if use ssl || ( use ! minimal && use samba ) ; then
+	if use ssl || ( ! use minimal && use samba ) ; then
 		ssl_lib="openssl"
 		use gnutls && ssl_lib="gnutls"
 	fi
 
-	myconf="${myconf} --with-tls=${ssl_lib}"
+	myconf+=( --with-tls=${ssl_lib} )
 
-	for basicflag in dynamic local proctitle shared static; do
-		myconf="${myconf} --enable-${basicflag}"
+	for basicflag in dynamic local proctitle shared; do
+		myconf+=( --enable-${basicflag} )
 	done
 
-	# connectionless ldap per bug #342439
-	append-cppflags -DLDAP_CONNECTIONLESS
-
-	tc-export CC AR CXX
+	tc-export AR CC CXX
+	ECONF_SOURCE=${S} \
 	STRIP=/bin/true \
 	econf \
 		--libexecdir="${EPREFIX}"/usr/$(get_libdir)/openldap \
-		${myconf} || die "econf failed"
+		$(use_enable static-libs static) \
+		"${myconf[@]}"
+	emake depend
 }
 
 src_configure_cxx() {
 	# This needs the libraries built by the first build run.
 	# So we have to run it AFTER the main build, not just after the main
 	# configure.
-	if ! use minimal ; then
-		 if use cxx ; then
-			local myconf_ldapcpp
-			myconf_ldapcpp="${myconf_ldapcpp} --with-ldap-includes=../../include"
-			cd "${S}/contrib/ldapc++"
-			OLD_LDFLAGS="$LDFLAGS"
-			OLD_CPPFLAGS="$CPPFLAGS"
-			append-ldflags -L../../libraries/liblber/.libs -L../../libraries/libldap/.libs
-			append-ldflags -L../../../libraries/liblber/.libs -L../../../libraries/libldap/.libs
-			append-cppflags -I../../../include
-			econf ${myconf_ldapcpp} \
-				CC="${CC}" \
-				CXX="${CXX}" \
-				|| die "econf ldapc++ failed"
-			CPPFLAGS="$OLD_CPPFLAGS"
-			LDFLAGS="${OLD_LDFLAGS}"
-		 fi
-	fi
+	local myconf_ldapcpp=(
+		--with-ldap-includes="${S}"/include
+	)
+
+	mkdir -p "${BUILD_DIR}"/contrib/ldapc++ || die
+	cd "${BUILD_DIR}/contrib/ldapc++" || die
+
+	local LDFLAGS=${LDFLAGS} CPPFLAGS=${CPPFLAGS}
+	append-ldflags -L"${BUILD_DIR}"/libraries/liblber/.libs \
+		-L"${BUILD_DIR}"/libraries/libldap/.libs
+	append-cppflags -I"${BUILD_DIR}"/include
+	ECONF_SOURCE=${S}/contrib/ldapc++ \
+	econf "${myconf_ldapcpp[@]}" \
+		CC="${CC}" \
+		CXX="${CXX}"
 }
 
-src_compile() {
-	emake depend || die "emake depend failed"
-	emake CC="${CC}" AR="${AR}" SHELL="${EPREFIX}"/bin/bash || die "emake failed"
-	lt="${S}/libtool"
+multilib_src_compile() {
+	tc-export AR CC CXX
+	emake CC="${CC}" AR="${AR}" SHELL="${EPREFIX}"/bin/bash
+	local lt="${BUILD_DIR}/libtool"
 	export echo="echo"
 
-	if ! use minimal ; then
-		 if use cxx ; then
+	if ! use minimal && multilib_is_native_abi ; then
+		if use cxx ; then
 			einfo "Building contrib library: ldapc++"
 			src_configure_cxx
-			cd "${S}/contrib/ldapc++"
+			cd "${BUILD_DIR}/contrib/ldapc++" || die
 			emake \
-				CC="${CC}" CXX="${CXX}" \
-				|| die "emake ldapc++ failed"
-		 fi
+				CC="${CC}" CXX="${CXX}"
+		fi
+
+		# LMDB tools
+		cp -ral "${S}"/libraries/liblmdb "${BUILD_DIR}"/libraries/liblmdb || die
+		cd "${BUILD_DIR}"/libraries/liblmdb || die
+		emake CC="${CC}" CXX="${CXX}" OPT="${CFLAGS}" prefix="${EPREFIX}/usr" DESTDIR="${D}" SHELL="${EPREFIX}"/bin/bash LIBDIR="$(get_libdir)"
 
 		if use smbkrb5passwd ; then
 			einfo "Building contrib-module: smbk5pwd"
-			cd "${S}/contrib/slapd-modules/smbk5pwd"
+			cd "${S}/contrib/slapd-modules/smbk5pwd" || die
+
+			MY_DEFS="-DDO_SHADOW"
+			if use samba ; then
+				MY_DEFS="${MY_DEFS} -DDO_SAMBA"
+				MY_KRB5_INC=""
+			fi
+			if use kerberos ; then
+				MY_DEFS="${MY_DEFS} -DDO_KRB5"
+				MY_KRB5_INC="$(krb5-config --cflags)"
+			fi
 
 			emake \
-				DEFS="-DDO_SAMBA -DDO_KRB5 -DDO_SHADOW" \
-				KRB5_INC="$(krb5-config --cflags)" \
-				CC="${CC}" libexecdir="${EPREFIX}/usr/$(get_libdir)/openldap" \
-				|| die "emake smbk5pwd failed"
+				DEFS="${MY_DEFS}" \
+				KRB5_INC="${MY_KRB5_INC}" \
+				LDAP_BUILD="${BUILD_DIR}" \
+				CC="${CC}" libexecdir="${EPREFIX}/usr/$(get_libdir)/openldap"
 		fi
 
 		if use overlays ; then
 			einfo "Building contrib-module: samba4"
-			cd "${S}/contrib/slapd-modules/samba4"
+			cd "${S}/contrib/slapd-modules/samba4" || die
 
 			emake \
-				CC="${CC}" libexecdir="/usr/$(get_libdir)/openldap" \
-				|| die "emake samba4 failed"
+				LDAP_BUILD="${BUILD_DIR}" \
+				CC="${CC}" libexecdir="/usr/$(get_libdir)/openldap"
 		fi
 
 		if use kerberos ; then
-			cd "${S}/contrib/slapd-modules/passwd"
+			build_contrib_module "kinit" "kinit.c" "kinit"
+			cd "${S}/contrib/slapd-modules/passwd" || die
 			einfo "Compiling contrib-module: pw-kerberos"
 			"${lt}" --mode=compile --tag=CC \
 				"${CC}" \
+				-I"${BUILD_DIR}"/include \
 				-I../../../include \
 				${CFLAGS} \
 				$(krb5-config --cflags) \
@@ -479,10 +568,11 @@ src_compile() {
 				kerberos.lo || die "linking pw-kerberos failed"
 		fi
 		# We could build pw-radius if GNURadius would install radlib.h
-		cd "${S}/contrib/slapd-modules/passwd"
+		cd "${S}/contrib/slapd-modules/passwd" || die
 		einfo "Compiling contrib-module: pw-netscape"
 		"${lt}" --mode=compile --tag=CC \
 			"${CC}" \
+			-I"${BUILD_DIR}"/include \
 			-I../../../include \
 			${CFLAGS} \
 			-o netscape.lo \
@@ -496,20 +586,29 @@ src_compile() {
 			-o pw-netscape.la \
 			netscape.lo || die "linking pw-netscape failed"
 
+		#build_contrib_module "acl" "posixgroup.c" "posixGroup" # example code only
+		#build_contrib_module "acl" "gssacl.c" "gss" # example code only, also needs kerberos
 		build_contrib_module "addpartial" "addpartial-overlay.c" "addpartial-overlay"
 		build_contrib_module "allop" "allop.c" "overlay-allop"
 		build_contrib_module "allowed" "allowed.c" "allowed"
 		build_contrib_module "autogroup" "autogroup.c" "autogroup"
+		build_contrib_module "cloak" "cloak.c" "cloak"
+		# build_contrib_module "comp_match" "comp_match.c" "comp_match" # really complex, adds new external deps, questionable demand
 		build_contrib_module "denyop" "denyop.c" "denyop-overlay"
 		build_contrib_module "dsaschema" "dsaschema.c" "dsaschema-plugin"
+		build_contrib_module "dupent" "dupent.c" "dupent"
+		build_contrib_module "lastbind" "lastbind.c" "lastbind"
 		# lastmod may not play well with other overlays
 		build_contrib_module "lastmod" "lastmod.c" "lastmod"
+		build_contrib_module "noopsrch" "noopsrch.c" "noopsrch"
 		build_contrib_module "nops" "nops.c" "nops-overlay"
+		#build_contrib_module "nssov" "nssov.c" "nssov-overlay" RESO:LATER
 		build_contrib_module "trace" "trace.c" "trace"
 		# build slapi-plugins
-		cd "${S}/contrib/slapi-plugins/addrdnvalues"
+		cd "${S}/contrib/slapi-plugins/addrdnvalues" || die
 		einfo "Building contrib-module: addrdnvalues plugin"
 		"${CC}" -shared \
+			-I"${BUILD_DIR}"/include \
 			-I../../../include \
 			${CFLAGS} \
 			-fPIC \
@@ -520,18 +619,24 @@ src_compile() {
 	fi
 }
 
-src_test() {
-	cd tests ; make tests || die "make tests failed"
+multilib_src_test() {
+	if multilib_is_native_abi; then
+		cd tests || die
+		make tests || die "make tests failed"
+	fi
 }
 
-src_install() {
-	lt="${S}/libtool"
-	emake DESTDIR="${D}" SHELL="${EPREFIX}"/bin/bash install || die "make install failed"
+multilib_src_install() {
+	local lt="${BUILD_DIR}/libtool"
+	emake DESTDIR="${D}" SHELL="${EPREFIX}"/bin/bash install
+	use static-libs || prune_libtool_files --all
 
-	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README "${FILESDIR}"/DB_CONFIG.fast.example
-	docinto rfc ; dodoc doc/rfc/*.txt
+	if ! use minimal && multilib_is_native_abi; then
+		# LMDB tools
+		cd "${BUILD_DIR}"/libraries/liblmdb || die
+		dodir /usr/include /usr/lib /usr/bin /usr/share/man/man1 # otherwise this will make them files :-(
+		emake CC="${CC}" CXX="${CXX}" OPT="${CFLAGS}" prefix="${EPREFIX}/usr" DESTDIR="${D}" SHELL="${EPREFIX}"/bin/bash LIBDIR="$(get_libdir)" install
 
-	if ! use minimal; then
 		# openldap modules go here
 		# TODO: write some code to populate slapd.conf with moduleload statements
 		keepdir /usr/$(get_libdir)/openldap/openldap/
@@ -548,13 +653,13 @@ src_install() {
 		# use our config
 		rm "${ED}"etc/openldap/slapd.conf
 		insinto /etc/openldap
-		newins "${FILESDIR}"/${PN}-2.3.34-slapd-conf slapd.conf
+		newins "${FILESDIR}"/${PN}-2.4.40-slapd-conf slapd.conf
 		configfile="${ED}"etc/openldap/slapd.conf
 
 		# populate with built backends
 		ebegin "populate config with built backends"
 		for x in "${ED}"usr/$(get_libdir)/openldap/openldap/back_*.so; do
-			elog "Adding $(basename ${x})"
+			einfo "Adding $(basename ${x})"
 			sed -e "/###INSERTDYNAMICMODULESHERE###$/a# moduleload\t$(basename ${x})" -i "${configfile}"
 		done
 		sed -e "s:###INSERTDYNAMICMODULESHERE###$:# modulepath\t${EPREFIX}/usr/$(get_libdir)/openldap/openldap:" -i "${configfile}"
@@ -564,13 +669,15 @@ src_install() {
 		eend
 
 		# install our own init scripts and systemd unit files
-		newinitd "${FILESDIR}"/slapd-initd-2.4.28-r1 slapd
+		einfo "Install init scripts"
+		newinitd "${FILESDIR}"/slapd-initd-2.4.40 slapd
 		newconfd "${FILESDIR}"/slapd-confd-2.4.28-r1 slapd
+		einfo "Install systemd service"
 		systemd_dounit "${FILESDIR}"/slapd.service
 		systemd_install_serviced "${FILESDIR}"/slapd.service.conf
 		systemd_newtmpfilesd "${FILESDIR}"/slapd.tmpfilesd slapd.conf
 
-		if [ $(get_libdir) != lib ]; then
+		if [[ $(get_libdir) != lib ]]; then
 			sed -e "s,/usr/lib/,/usr/$(get_libdir)/," -i \
 				"${ED}"/etc/init.d/slapd \
 				"${ED}"/usr/lib/systemd/system/slapd.service || die
@@ -583,43 +690,49 @@ src_install() {
 
 		if use cxx ; then
 			einfo "Install the ldapc++ library"
-			cd "${S}/contrib/ldapc++"
-			emake DESTDIR="${D}" libexecdir="${EPREFIX}/usr/$(get_libdir)/openldap" install || die "emake install ldapc++ failed"
+			cd "${BUILD_DIR}/contrib/ldapc++" || die
+			emake DESTDIR="${D}" libexecdir="${EPREFIX}/usr/$(get_libdir)/openldap" install
+			cd "${S}"/contrib/ldapc++ || die
 			newdoc README ldapc++-README
 		fi
 
 		if use smbkrb5passwd ; then
 			einfo "Install the smbk5pwd module"
-			cd "${S}/contrib/slapd-modules/smbk5pwd"
-			emake DESTDIR="${D}" libexecdir="${EPREFIX}/usr/$(get_libdir)/openldap" install || die "emake install smbk5pwd failed"
+			cd "${S}/contrib/slapd-modules/smbk5pwd" || die
+			emake DESTDIR="${D}" \
+				LDAP_BUILD="${BUILD_DIR}" \
+				libexecdir="${EPREFIX}/usr/$(get_libdir)/openldap" install
 			newdoc README smbk5pwd-README
 		fi
 
 		if use overlays ; then
 			einfo "Install the samba4 module"
-			cd "${S}/contrib/slapd-modules/samba4"
-			emake DESTDIR="${D}" libexecdir="/usr/$(get_libdir)/openldap" install || die "emake install samba4 failed"
+			cd "${S}/contrib/slapd-modules/samba4" || die
+			emake DESTDIR="${D}" \
+				LDAP_BUILD="${BUILD_DIR}" \
+				libexecdir="/usr/$(get_libdir)/openldap" install
 			newdoc README samba4-README
 		fi
 
 		einfo "Installing contrib modules"
-		cd "${S}/contrib/slapd-modules"
+		cd "${S}/contrib/slapd-modules" || die
 		for l in */*.la; do
 			"${lt}" --mode=install cp ${l} \
 				"${ED}"usr/$(get_libdir)/openldap/openldap || \
 				die "installing ${l} failed"
 		done
+
+		dodoc "${FILESDIR}"/DB_CONFIG.fast.example
 		docinto contrib
+		doman */*.5
+		#newdoc acl/README*
 		newdoc addpartial/README addpartial-README
 		newdoc allop/README allop-README
-		doman allop/slapo-allop.5
+		newdoc allowed/README  allowed-README
 		newdoc autogroup/README autogroup-README
-		newdoc denyop/denyop.c denyop-denyop.c
 		newdoc dsaschema/README dsaschema-README
-		doman lastmod/slapo-lastmod.5
-		doman nops/slapo-nops.5
 		newdoc passwd/README passwd-README
-		cd "${S}/contrib/slapi-plugins"
+		cd "${S}/contrib/slapi-plugins" || die
 		insinto /usr/$(get_libdir)/openldap/openldap
 		doins  */*.so
 		docinto contrib
@@ -627,7 +740,22 @@ src_install() {
 
 		insinto /etc/openldap/schema
 		newins "${DISTDIR}"/${BIS_P} ${BIS_PN}
+
+		docinto back-sock ; dodoc "${S}"/servers/slapd/back-sock/searchexample*
+		docinto back-shell ; dodoc "${S}"/servers/slapd/back-shell/searchexample*
+		docinto back-perl ; dodoc "${S}"/servers/slapd/back-perl/SampleLDAP.pm
+
+		docinto liblmdb ; dodoc "${S}"/libraries/liblmdb/{sample*txt,CHANGES,COPYRIGHT,LICENSE}
+		doman "${S}"/libraries/liblmdb/*.1
+
+		dosbin "${S}"/contrib/slapd-tools/statslog
+		newdoc "${S}"/contrib/slapd-tools/README README.statslog
 	fi
+}
+
+multilib_src_install_all() {
+	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README 
+	docinto rfc ; dodoc doc/rfc/*.txt
 }
 
 pkg_preinst() {
@@ -645,7 +773,7 @@ pkg_postinst() {
 			use prefix || chown ldap:ldap "${EROOT}"etc/openldap/ssl/ldap.*
 			ewarn "Self-signed SSL certificates are treated harshly by OpenLDAP 2.[12]"
 			ewarn "Self-signed SSL certificates are treated harshly by OpenLDAP 2.[12]"
-			ewarn "add 'TLS_REQCERT never' if you want to use them."
+			ewarn "add 'TLS_REQCERT allow' if you want to use them."
 		fi
 
 		if use prefix; then
@@ -664,12 +792,14 @@ pkg_postinst() {
 		use prefix || chown ldap:ldap "${EROOT}"var/lib/openldap-data
 	fi
 
+	if ! has_version 'net-nds/openldap'; then
 	elog "Getting started using OpenLDAP? There is some documentation available:"
 	elog "Gentoo Guide to OpenLDAP Authentication"
 	elog "(http://www.gentoo.org/doc/en/ldap-howto.xml)"
 	elog "---"
 	elog "An example file for tuning BDB backends with openldap is"
 	elog "DB_CONFIG.fast.example in /usr/share/doc/${PF}/"
+	fi
 
 	preserve_old_lib_notify /usr/$(get_libdir)/{liblber,libldap,libldap_r}-2.3$(get_libname 0)
 }

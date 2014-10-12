@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.24.ebuild,v 1.17 2014/07/25 18:29:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.24.ebuild,v 1.18 2014/10/12 06:26:40 robbat2 Exp $
 
 EAPI="2"
 WANT_AUTOMAKE=1.9
@@ -10,7 +10,7 @@ DESCRIPTION="LDAP suite of application and development tools"
 HOMEPAGE="http://www.OpenLDAP.org/"
 SRC_URI="mirror://openldap/openldap-release/${P}.tgz"
 
-LICENSE="OPENLDAP"
+LICENSE="OPENLDAP GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd"
 

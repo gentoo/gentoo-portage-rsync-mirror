@@ -1,6 +1,27 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.476 2014/09/19 06:27:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.478 2014/10/12 06:30:47 robbat2 Exp $
+
+  12 Oct 2014; Robin H. Johnson <robbat2@gentoo.org> openldap-2.4.40.ebuild:
+  Bug #415915: smbkrb5password has a non-kerb mode.
+
+*openldap-2.4.40 (12 Oct 2014)
+
+  12 Oct 2014; Robin H. Johnson <robbat2@gentoo.org>
+  +files/openldap-2.4.40-slapd-conf, +files/slapd-initd-2.4.40,
+  +openldap-2.4.40.ebuild, files/slapd.service, files/slapd.tmpfilesd,
+  openldap-2.3.43-r3.ebuild, openldap-2.3.43-r4.ebuild,
+  openldap-2.4.19-r1.ebuild, openldap-2.4.23.ebuild, openldap-2.4.24.ebuild,
+  openldap-2.4.28-r1.ebuild, openldap-2.4.30.ebuild, openldap-2.4.35-r1.ebuild,
+  openldap-2.4.35.ebuild, openldap-2.4.38-r1.ebuild, openldap-2.4.38-r2.ebuild,
+  openldap-2.4.39.ebuild:
+  Version bump for bug #524694; Bug #520234: Improve TLS_REQCERT advice; Bug
+  #502948: Improve datadir sanity checks; Bug #405167: USE=static-libs support;
+  Bug #486424: cleanup QA warning re append-flags; Bug #426100: fix LICENSE; Bug
+  #450948: Better smbkrb5passwd support; Bug #466992: backend example scripts;
+  Bug #421017: fix automagic dep; Bug #444912: use /run instead of /var/run,
+  ensure it exists; Bug #497590: install LMDB tools; Bug #449776: install mdb
+  backend
 
 *openldap-2.4.39 (19 Sep 2014)
 
