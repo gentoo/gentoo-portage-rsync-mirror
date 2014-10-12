@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/novnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/ChangeLog,v 1.6 2014/08/10 20:14:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/ChangeLog,v 1.7 2014/10/12 19:28:51 zmedico Exp $
+
+*novnc-0.5 (12 Oct 2014)
+
+  12 Oct 2014; Zac Medico <zmedico@gentoo.org> +novnc-0.5.ebuild:
+  0.5 version bump, now installs /usr/share/novnc/utils/launch.sh.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> novnc-0.4.ebuild,
   novnc-9999.ebuild:
