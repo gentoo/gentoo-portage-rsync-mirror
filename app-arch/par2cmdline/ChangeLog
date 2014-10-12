@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/par2cmdline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.34 2014/09/05 00:18:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.35 2014/10/12 18:22:32 radhermit Exp $
+
+*par2cmdline-0.6.10 (12 Oct 2014)
+
+  12 Oct 2014; Tim Harder <radhermit@gentoo.org> +par2cmdline-0.6.10.ebuild:
+  Version bump (bug #525178).
 
 *par2cmdline-0.6.9 (05 Sep 2014)
 
