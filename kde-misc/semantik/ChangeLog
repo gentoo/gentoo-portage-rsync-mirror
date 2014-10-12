@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/semantik
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.14 2014/08/05 16:31:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.15 2014/10/12 15:06:31 kensington Exp $
+
+  12 Oct 2014; Michael Palimaka <kensington@gentoo.org>
+  -files/semantik-0.8.3-wscript_ldconfig.patch, -semantik-0.8.4.ebuild,
+  -semantik-0.9.0.ebuild:
+  Remove old.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> semantik-0.8.4.ebuild,
   semantik-0.9.0.ebuild, semantik-0.9.1.ebuild:

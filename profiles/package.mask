@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16090 2014/10/12 07:59:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16091 2014/10/12 15:03:57 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,10 +34,6 @@
 # Beta package not yet ready for production.
 =dev-db/postgresql-9.4_beta2
 =virtual/postgresql-9.4
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (11 Oct 2014)
-# Outdated and unused; masked for removal in 30 days
-dev-perl/Template-Latex
 
 # Pacho Ramos <pacho@gentoo.org> (11 Oct 2014)
 # Masked for removal in a month.

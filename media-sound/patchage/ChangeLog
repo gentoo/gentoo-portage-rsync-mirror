@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/patchage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.18 2014/10/12 09:00:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.19 2014/10/12 15:14:16 mrueg Exp $
+
+  12 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -patchage-0.4.2.ebuild:
+  Cleanup old EAPI1
 
   12 Oct 2014; Agostino Sarubbo <ago@gentoo.org> patchage-0.5.0-r1.ebuild:
   Stable for x86, wrt bug #518782
