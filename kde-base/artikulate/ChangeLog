@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artikulate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artikulate/ChangeLog,v 1.11 2014/09/16 18:17:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artikulate/ChangeLog,v 1.12 2014/10/12 10:49:37 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> artikulate-4.13.3.ebuild,
+  artikulate-4.14.1.ebuild:
+  Add ~ppc keyword wrt bug #507896
 
 *artikulate-4.14.1 (16 Sep 2014)
 

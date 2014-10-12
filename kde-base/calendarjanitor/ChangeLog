@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/calendarjanitor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/calendarjanitor/ChangeLog,v 1.29 2014/09/16 18:17:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/calendarjanitor/ChangeLog,v 1.30 2014/10/12 10:55:42 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> calendarjanitor-4.13.3.ebuild,
+  calendarjanitor-4.14.1.ebuild:
+  Add ~ppc keyword wrt bug #507896
 
 *calendarjanitor-4.14.1 (16 Sep 2014)
 

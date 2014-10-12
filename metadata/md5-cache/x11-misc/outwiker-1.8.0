@@ -1,0 +1,14 @@
+DEFINED_PHASES=prepare
+DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=The tree notes organizer
+EAPI=5
+HOMEPAGE=http://jenyay.net/Outwiker/English
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pywebkitgtk[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/wxpython[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] virtual/python-imaging[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] x11-misc/xdg-utils x11-themes/hicolor-icon-theme
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=https://github.com/Jenyay/outwiker/archive/stable_1.8.0.tar.gz -> outwiker-1.8.0.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=ffadbafece8438bd6ee49448c40ab8d4

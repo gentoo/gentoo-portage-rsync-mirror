@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artikulate/artikulate-4.13.3.ebuild,v 1.2 2014/07/29 18:22:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artikulate/artikulate-4.13.3.ebuild,v 1.3 2014/10/12 10:49:37 zlogene Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit kde4-base multilib
 
 DESCRIPTION="Language learning application that helps improving pronunciation skills"
 HOMEPAGE="http://edu.kde.org/applications/language/artikulate"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug gstreamer"
 
 DEPEND="

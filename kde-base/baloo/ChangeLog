@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/baloo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/ChangeLog,v 1.19 2014/09/16 18:17:27 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/ChangeLog,v 1.20 2014/10/12 10:35:01 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> baloo-4.13.3.ebuild,
+  baloo-4.14.1.ebuild:
+  Add ~ppc keyword wrt bug #507896
 
 *baloo-4.14.1 (16 Sep 2014)
 

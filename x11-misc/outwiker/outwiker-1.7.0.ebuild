@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/outwiker-1.7.0.ebuild,v 1.2 2013/08/14 11:31:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/outwiker-1.7.0.ebuild,v 1.3 2014/10/12 10:41:40 pinkbyte Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.7"
@@ -17,8 +17,7 @@ IUSE=""
 
 RDEPEND="dev-python/pywebkitgtk
 	dev-python/wxpython"
-DEPEND="${RDEPEND}
-	app-arch/p7zip"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/baloo-4.13.3.ebuild,v 1.2 2014/08/11 22:53:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/baloo-4.13.3.ebuild,v 1.3 2014/10/12 10:35:01 zlogene Exp $
 
 EAPI=5
 
 inherit kde4-base
 
 DESCRIPTION="Next generation of the Nepomuk project"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug minimal"
 
 DEPEND="
