@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/qmf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/ChangeLog,v 1.13 2014/10/12 10:22:56 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/ChangeLog,v 1.14 2014/10/12 13:01:32 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> qmf-4.0.3.ebuild:
+  Add ~ppc64 keyword wrt bug #507896
 
   12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> qmf-4.0.3.ebuild:
   Add ~ppc keyword wrt bug #507896

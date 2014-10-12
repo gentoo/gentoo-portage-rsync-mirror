@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/qt-gstreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.15 2014/10/12 10:25:02 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.16 2014/10/12 13:03:50 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> qt-gstreamer-0.10.3.ebuild,
+  qt-gstreamer-1.2.0.ebuild:
+  Add ~ppc64 keyword wrt bug #507896
 
   12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> qt-gstreamer-0.10.3.ebuild,
   qt-gstreamer-1.2.0.ebuild:
