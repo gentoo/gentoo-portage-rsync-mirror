@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/ccp4-libs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.59 2013/07/26 11:27:05 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.60 2014/10/12 14:46:08 jlec Exp $
+
+  12 Oct 2014; Justin Lecher <jlec@gentoo.org> ccp4-libs-6.1.3-r11.ebuild,
+  ccp4-libs-6.1.3-r12.ebuild, ccp4-libs-6.1.3-r13.ebuild,
+  ccp4-libs-6.1.3-r14.ebuild, ccp4-libs-6.1.3-r15.ebuild:
+  Fix SLOT for sci-libs/mmdb, #523780
 
 *ccp4-libs-6.1.3-r15 (26 Jul 2013)
 

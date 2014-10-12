@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libkolab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/ChangeLog,v 1.21 2014/07/20 17:18:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/ChangeLog,v 1.22 2014/10/12 14:56:38 kensington Exp $
+
+  12 Oct 2014; Michael Palimaka <kensington@gentoo.org> -libkolab-0.4.2.ebuild,
+  -libkolab-0.5.0.ebuild:
+  Remove old.
 
 *libkolab-0.5.2 (20 Jul 2014)
 
