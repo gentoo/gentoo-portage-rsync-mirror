@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.423 2014/09/16 18:17:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.424 2014/10/12 11:03:10 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> kmail-4.13.3.ebuild,
+  kmail-4.14.1.ebuild:
+  Add ~ppc keyword wrt bug #507896
 
 *kmail-4.14.1 (16 Sep 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/contactthemeeditor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/contactthemeeditor/ChangeLog,v 1.28 2014/07/23 16:53:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/contactthemeeditor/ChangeLog,v 1.29 2014/10/12 11:03:59 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  contactthemeeditor-4.13.3.ebuild:
+  Add ~ppc keyword wrt bug #507896
 
   23 Jul 2014; Johannes Huber <johu@gentoo.org>
   -contactthemeeditor-4.13.2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.330 2014/09/16 18:17:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.331 2014/10/12 11:08:31 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> kalarm-4.13.3.ebuild,
+  kalarm-4.14.1.ebuild:
+  Add ~ppc keyword wrt bug #507896
 
 *kalarm-4.14.1 (16 Sep 2014)
 

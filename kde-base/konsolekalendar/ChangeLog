@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konsolekalendar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.304 2014/09/16 18:17:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.305 2014/10/12 11:25:33 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> konsolekalendar-4.13.3.ebuild,
+  konsolekalendar-4.14.1.ebuild:
+  Add ~ppc keyword wrt bug #507896
 
 *konsolekalendar-4.14.1 (16 Sep 2014)
 
