@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/snd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.69 2014/10/10 15:25:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.70 2014/10/12 09:01:17 ago Exp $
+
+  12 Oct 2014; Agostino Sarubbo <ago@gentoo.org> snd-12.8.ebuild:
+  Stable for x86, wrt bug #518780
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> snd-12.8.ebuild:
   Stable for amd64, wrt bug #518780

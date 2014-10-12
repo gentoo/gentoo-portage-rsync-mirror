@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/virtualenvwrapper-4.3.ebuild,v 1.4 2014/10/12 09:05:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/virtualenvwrapper-4.3.1.ebuild,v 1.1 2014/10/12 09:05:15 idella4 Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="test"
 RESTRICT=test
 
 RDEPEND="dev-python/virtualenv[${PYTHON_USEDEP}]
-	dev-python/stevedore[${PYTHON_USEDEP}]
+	>=dev-python/stevedore-0.15-r1[${PYTHON_USEDEP}]
 	dev-python/virtualenv-clone[${PYTHON_USEDEP}]"
 DEPEND="${DEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
@@ -32,5 +32,5 @@ src_prepare() {
 }
 
 python_test() {
-	tox tests/test_cp.sh || die "Tests failed under ${EPYTHON}"
+	bash ./tests/run_tests || die "Tests failed under ${EPYTHON}"
 }

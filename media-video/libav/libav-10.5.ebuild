@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.3.ebuild,v 1.3 2014/09/13 09:34:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.5.ebuild,v 1.1 2014/10/12 09:13:48 scarabeus Exp $
 
 EAPI=5
 
@@ -129,6 +129,9 @@ REQUIRED_USE="bindist? ( !faac !openssl !fdk )
 	amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) cdio? ( gpl )
 	test? ( encode zlib )
 "
+
+# Test on live ebuild are not possible as they require trunk fate
+RESTRICT="test"
 
 MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/libavutil/avconfig.h
@@ -305,7 +308,6 @@ multilib_src_compile() {
 
 multilib_src_install() {
 	emake DESTDIR="${D}" install install-man
-	use doc && dodoc doc/*.html
 
 	if use tools; then
 		dobin ${TOOLS[@]/#/tools/}
@@ -314,6 +316,8 @@ multilib_src_install() {
 
 multilib_src_install_all() {
 	dodoc Changelog README INSTALL
+	dodoc doc/*.txt
+	use doc && dodoc doc/*.html
 }
 
 multilib_src_test() {

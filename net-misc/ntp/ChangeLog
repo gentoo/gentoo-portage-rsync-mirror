@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.219 2014/07/01 16:54:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.220 2014/10/12 09:19:24 pacho Exp $
+
+*ntp-4.2.6_p5-r11 (12 Oct 2014)
+
+  12 Oct 2014; Pacho Ramos <pacho@gentoo.org> +files/ntpd.service-r2,
+  +files/ntpdate.service-r1, +files/sntp.service-r2, +ntp-4.2.6_p5-r11.ebuild,
+  -ntp-4.2.6_p5-r8.ebuild:
+  Conflicts=systemd-timesyncd.service will be needed for systemd-216 (#521804),
+  drop old version committed by me long time ago.
 
   01 Jul 2014; Pacho Ramos <pacho@gentoo.org> files/ntpdate.service,
   ntp-4.2.6_p5-r10.ebuild:

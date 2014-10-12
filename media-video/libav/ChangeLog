@@ -1,6 +1,18 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.223 2014/09/17 00:19:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.224 2014/10/12 09:13:48 scarabeus Exp $
+
+*libav-10.5 (12 Oct 2014)
+*libav-11.9999 (12 Oct 2014)
+*libav-9.17 (12 Oct 2014)
+
+  12 Oct 2014; Tomáš Chvátal <scarabeus@gentoo.org> +libav-10.5.ebuild,
+  +libav-11.9999.ebuild, +libav-9.17.ebuild,
+  -files/libav-0.8.5-support-libcdio-paranoia.patch, -libav-10.1-r1.ebuild,
+  -libav-10.1.ebuild, -libav-10.2.ebuild, -libav-10.3.ebuild, -libav-10.ebuild,
+  -libav-9.16.ebuild, -libav-9.9999.ebuild:
+  Version bump to latest releases. Provide git ebuild for 11 branch. Remove git
+  for 9 branch. Remove overshadowed stuff. Force due to not-update cvs
 
 *libav-11 (17 Sep 2014)
 

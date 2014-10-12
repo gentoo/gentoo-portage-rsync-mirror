@@ -1,20 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.8_rc6.ebuild,v 1.1 2014/07/10 19:02:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.8.ebuild,v 1.1 2014/10/12 09:17:23 jer Exp $
 
 EAPI=5
 inherit autotools eutils user
 
 DESCRIPTION="network Audit Record Generation and Utilization System"
 HOMEPAGE="http://www.qosient.com/argus/"
-SRC_URI="http://qosient.com/argus/dev/${P/_rc*}.rc.${PV/*_rc}.tar.gz"
+SRC_URI="http://qosient.com/argus/src/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug sasl tcpd"
-
-S=${WORKDIR}/${P/_rc*}.rc.${PV/*_rc}
 
 RDEPEND="
 	net-libs/libpcap
