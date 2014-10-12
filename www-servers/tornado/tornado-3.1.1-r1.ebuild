@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-3.1.1-r1.ebuild,v 1.4 2014/08/13 18:24:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-3.1.1-r1.ebuild,v 1.5 2014/10/12 14:14:36 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="curl test"
 
-RDEPEND="curl? ( dev-python/pycurl[$(python_gen_usedep 'python2*')] )"
+RDEPEND="curl? ( dev-python/pycurl[$(python_gen_usedep python2_7)] )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	)
 "
 
-REQUIRED_USE="curl? ( || ( $(python_gen_useflags python2*) ) )"
+REQUIRED_USE="curl? ( || ( $(python_gen_useflags python2_7) ) )"
 
 PATCHES=(
 	"${FILESDIR}/unittest2-import-issue-1005.patch"

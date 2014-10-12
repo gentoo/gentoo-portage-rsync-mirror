@@ -1,0 +1,10 @@
+DEFINED_PHASES=prepare
+DESCRIPTION=General-purpose command-line pipe buffer
+EAPI=5
+HOMEPAGE=http://www.glines.org/software/bfr
+KEYWORDS=~amd64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=http://www.glines.org/bin/pk/bfr-1.6.tar.bz2
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=e923ae0be7c575def9400357dc1a3770
