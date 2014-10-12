@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.56 2014/09/30 15:32:18 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.57 2014/10/12 08:24:20 maksbotan Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
 inherit eutils waf-utils pax-utils fdo-mime gnome2-utils
 [[ ${PV} == *9999* ]] && inherit git-r3
 
-WAF_V="1.7.16"
+WAF_V="1.8.1"
 
 DESCRIPTION="Video player based on MPlayer/mplayer2"
 HOMEPAGE="http://mpv.io/"
@@ -217,7 +217,9 @@ src_configure() {
 		$(use_enable xscreensaver xss) \
 		--confdir="${EPREFIX}"/etc/${PN} \
 		--mandir="${EPREFIX}"/usr/share/man \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		--enable-zsh-comp \
+		--zshdir="${EPREFIX}"/usr/share/zsh/site-functions
 }
 
 src_install() {
