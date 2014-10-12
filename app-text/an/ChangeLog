@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.49 2014/10/05 10:44:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.50 2014/10/12 08:55:53 ago Exp $
+
+  12 Oct 2014; Agostino Sarubbo <ago@gentoo.org> an-1.2.ebuild:
+  Stable for x86, wrt bug #519410
 
   05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> an-1.2.ebuild:
   Stable for ppc, wrt bug #519410

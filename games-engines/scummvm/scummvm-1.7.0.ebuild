@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.7.0.ebuild,v 1.3 2014/10/10 15:21:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.7.0.ebuild,v 1.4 2014/10/12 08:50:23 ago Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils toolchain-funcs games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scummvm/${P/_/}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1 BSD GPL-3-with-font-exception"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="aac alsa debug flac fluidsynth jpeg mpeg2 mp3 opengl png theora jpeg truetype vorbis zlib"
 RESTRICT="test"  # it only looks like there's a test there #77507
 

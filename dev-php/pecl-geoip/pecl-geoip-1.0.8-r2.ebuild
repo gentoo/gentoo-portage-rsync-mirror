@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-geoip/pecl-geoip-1.0.8-r2.ebuild,v 1.2 2014/01/18 18:48:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-geoip/pecl-geoip-1.0.8-r2.ebuild,v 1.3 2014/10/12 08:59:26 ago Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ USE_PHP="php5-5 php5-4"
 
 inherit php-ext-pecl-r2
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="PHP extension to map IP address to geographic places"
 LICENSE="PHP-3"

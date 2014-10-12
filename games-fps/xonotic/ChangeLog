@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/xonotic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/ChangeLog,v 1.14 2014/10/10 15:25:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/ChangeLog,v 1.15 2014/10/12 08:46:57 ago Exp $
+
+  12 Oct 2014; Agostino Sarubbo <ago@gentoo.org> xonotic-0.7.0.ebuild:
+  Stable for x86, wrt bug #503928
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> xonotic-0.7.0.ebuild:
   Stable for amd64, wrt bug #503928

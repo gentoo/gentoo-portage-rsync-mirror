@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.177 2014/10/10 15:24:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.178 2014/10/12 08:57:37 ago Exp $
+
+  12 Oct 2014; Agostino Sarubbo <ago@gentoo.org> libtorrent-0.13.3.ebuild:
+  Stable for x86, wrt bug #499474
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> libtorrent-0.13.3.ebuild:
   Stable for amd64, wrt bug #499474

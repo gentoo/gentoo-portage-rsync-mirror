@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.189 2014/10/10 15:24:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.190 2014/10/12 08:57:34 ago Exp $
+
+  12 Oct 2014; Agostino Sarubbo <ago@gentoo.org> rtorrent-0.9.3.ebuild:
+  Stable for x86, wrt bug #499474
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> rtorrent-0.9.3.ebuild:
   Stable for amd64, wrt bug #499474

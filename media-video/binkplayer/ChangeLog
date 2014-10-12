@@ -1,6 +1,9 @@
 # ChangeLog for media-video/binkplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.28 2014/10/10 15:25:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.29 2014/10/12 08:51:31 ago Exp $
+
+  12 Oct 2014; Agostino Sarubbo <ago@gentoo.org> binkplayer-1.99w.ebuild:
+  Stable for x86, wrt bug #522096
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> binkplayer-1.99w.ebuild:
   Stable for amd64, wrt bug #522096
