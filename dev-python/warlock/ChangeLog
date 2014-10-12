@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/warlock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/warlock/ChangeLog,v 1.6 2014/07/06 12:50:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/warlock/ChangeLog,v 1.7 2014/10/12 19:52:28 floppym Exp $
+
+  12 Oct 2014; Mike Gilbert <floppym@gentoo.org> -warlock-0.7.0-r1.ebuild,
+  -warlock-0.7.0.ebuild:
+  Remove old.
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> warlock-0.7.0-r1.ebuild,
   warlock-0.7.0.ebuild, warlock-1.0.1.ebuild:
