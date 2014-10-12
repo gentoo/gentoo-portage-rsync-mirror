@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.51 2014/10/12 21:55:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.52 2014/10/12 22:12:23 jer Exp $
+
+  12 Oct 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove short <longdescription>.
 
   12 Oct 2014; Jeroen Roovers <jer@gentoo.org> -an-1.1.ebuild:
   Old.

@@ -5,8 +5,5 @@
   <email>jer@gentoo.org</email>
   <name>Jeroen Roovers</name>
 </maintainer>
-<longdescription lang="en">
-A fast and versatile anagram generator with dictionary support
-</longdescription>
 </pkgmetadata>
 
