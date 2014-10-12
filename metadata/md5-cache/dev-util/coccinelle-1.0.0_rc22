@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-lang/ocaml-3.10:=[ocamlopt?] dev-ml/sexplib:= emacs? ( virtual/emacs ) ocaml? ( dev-ml/findlib:= ) pcre? ( dev-ml/pcre-ocaml:= ) python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) virtual/pkgconfig doc? ( virtual/latex-base dev-texlive/texlive-latexextra dev-texlive/texlive-fontsextra ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
+DESCRIPTION=Program matching and transformation engine
+EAPI=5
+HOMEPAGE=http://coccinelle.lip6.fr/
+IUSE=doc emacs ocaml +ocamlopt pcre python test vim-syntax python_targets_python2_7 python_single_target_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-lang/ocaml-3.10:=[ocamlopt?] dev-ml/sexplib:= emacs? ( virtual/emacs ) ocaml? ( dev-ml/findlib:= ) pcre? ( dev-ml/pcre-ocaml:= ) python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
+REQUIRED_USE=test? ( ocaml python )
+SLOT=0
+SRC_URI=http://coccinelle.lip6.fr/distrib/coccinelle-1.0.0-rc22.tgz
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=c6e07f46971074adfefa48dc57f8f97f

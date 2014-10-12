@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/install-xattr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.22 2014/08/30 17:10:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.23 2014/10/12 18:49:57 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> install-xattr-0.3.ebuild:
+  Add ~arm64 and ~m68k keywords
 
   30 Aug 2014; Anthony G. Basile <blueness@gentoo.org> install-xattr-0.3.ebuild:
   Stable on x86, bug #511984
