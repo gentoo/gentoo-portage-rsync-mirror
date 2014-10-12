@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.789 2014/10/12 09:00:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.790 2014/10/12 12:37:07 djc Exp $
+
+  12 Oct 2014; Dirkjan Ochtman <djc@gentoo.org> files/pydoc.init:
+  Remove net dependency from pydoc init scripts (fixes bug 439662)
 
   12 Oct 2014; Agostino Sarubbo <ago@gentoo.org> python-3.4.1.ebuild:
   Stable for x86, wrt bug #522322
