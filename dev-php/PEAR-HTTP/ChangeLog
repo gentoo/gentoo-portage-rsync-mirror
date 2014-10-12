@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-HTTP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.45 2014/08/10 20:49:50 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.46 2014/10/12 02:24:46 grknight Exp $
+
+*PEAR-HTTP-1.4.1-r2 (12 Oct 2014)
+
+  12 Oct 2014; Brian Evans <grknight@gentoo.org> +PEAR-HTTP-1.4.1-r2.ebuild,
+  -files/PEAR-HTTP-1.4.0-trailingslash-redirect-bug12672.patch:
+  Revbump for EAPI5 and QA; cleanup old patch file
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> PEAR-HTTP-1.4.1-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION
