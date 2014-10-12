@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9445 2014/10/11 20:02:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9446 2014/10/12 07:59:34 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Oct 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask newest mplayer for bug #525070 along with newest ffmpeg: it is needed
+  for latest ffmpeg but doesnt build with libav...
 
   11 Oct 2014; Pacho Ramos <pacho@gentoo.org> arch/arm/package.use.stable.mask:
   webkit-gtk will be moved to testing on arm (#524386)
