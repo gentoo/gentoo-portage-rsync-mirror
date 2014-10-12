@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2014.0.0.ebuild,v 1.2 2014/10/12 17:57:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2014.0.0-r1.ebuild,v 1.1 2014/10/12 17:57:08 maekke Exp $
 
 EAPI=5
 
-WX_GTK_VER="2.8"
+WX_GTK_VER="3.0"
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
 inherit base python-single-r1 wxwidgets versionator cmake-utils
@@ -37,7 +37,7 @@ CDEPEND="
 	media-libs/tiff
 	sys-libs/zlib
 	virtual/jpeg
-	x11-libs/wxGTK:2.8=[X,opengl,-odbc]
+	x11-libs/wxGTK:3.0=[X,opengl]
 	lapack? ( virtual/lapack )
 	sift? ( media-gfx/autopano-sift-C )"
 RDEPEND="${CDEPEND}

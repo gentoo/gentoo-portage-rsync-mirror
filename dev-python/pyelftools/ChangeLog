@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyelftools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.19 2014/06/04 22:06:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.21 2014/10/12 17:57:17 radhermit Exp $
+
+  12 Oct 2014; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Update repo metadata.
+
+  12 Oct 2014; Tim Harder <radhermit@gentoo.org> -pyelftools-0.21-r2.ebuild,
+  pyelftools-0.21-r4.ebuild, pyelftools-0.22.ebuild:
+  Update HOMEPAGE, repo moved from bitbucket to github.
 
 *pyelftools-0.22 (04 Jun 2014)
 

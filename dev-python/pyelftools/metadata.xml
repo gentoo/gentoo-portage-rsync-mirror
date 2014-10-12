@@ -7,6 +7,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="pypi">pyelftools</remote-id>
-		<remote-id type="bitbucket">eliben/pyelftools</remote-id>
+		<remote-id type="github">eliben/pyelftools</remote-id>
 	</upstream>
 </pkgmetadata>
