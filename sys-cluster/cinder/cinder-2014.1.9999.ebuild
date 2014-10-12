@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1.9999.ebuild,v 1.6 2014/10/11 22:33:53 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1.9999.ebuild,v 1.7 2014/10/11 23:11:57 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils git-2 user
+inherit distutils-r1 eutils git-2 linux-info user
 
 DESCRIPTION="Cinder is the OpenStack Block storage service, a spin out of nova-volumes"
 HOMEPAGE="https://launchpad.net/cinder"
@@ -97,6 +97,13 @@ RDEPEND=">=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 PATCHES=( )
 
 pkg_setup() {
+	linux-info_pkg_setup
+	CONFIG_CHECK_MODULES="ISCSI_TCP"
+	if linux_config_exists; then
+		for module in ${CONFIG_CHECK_MODULES}; do
+			linux_chkconfig_present ${module} || ewarn "${module} needs to be built as module (builtin doesn't work)"
+		done
+	fi
 	enewgroup cinder
 	enewuser cinder -1 -1 /var/lib/cinder cinder
 }

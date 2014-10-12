@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1.2-r1.ebuild,v 1.2 2014/09/22 03:55:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1.3.ebuild,v 1.1 2014/10/11 23:28:30 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils multilib user
+inherit distutils-r1 eutils linux-info multilib user
 
 DESCRIPTION="A cloud computing fabric controller (main part of an IaaS system) written in Python"
 HOMEPAGE="https://launchpad.net/nova"
@@ -56,8 +56,8 @@ RDEPEND="sqlite? (
 		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-migrate-0.8.2[${PYTHON_USEDEP}]
-		!~dev-python/sqlalchemy-migrate-0.8.4[${PYTHON_USEDEP}]
+		>=dev-python/sqlalchemy-migrate-0.9[${PYTHON_USEDEP}]
+		!~dev-python/sqlalchemy-migrate-0.9.2[${PYTHON_USEDEP}]
 		>=dev-python/netaddr-0.7.6[${PYTHON_USEDEP}]
 		>=dev-python/suds-0.4[${PYTHON_USEDEP}]
 		>=dev-python/paramiko-1.9.0[${PYTHON_USEDEP}]
@@ -93,6 +93,16 @@ PATCHES=(
 )
 
 pkg_setup() {
+	linux-info_pkg_setup
+	CONFIG_CHECK_MODULES="NBD VHOST_NET IP6TABLE_FILTER IP6_TABLES IPT_REJECT \
+	IPTABLE_MANGLE IPT_MASQUERADE IPTABLE_NAT IPTABLE_FILTER IP_TABLES \
+	NF_CONNTRACK_IPV4 NF_DEFRAG_IPV4 NF_NAT_IPV4 NF_NAT NF_CONNTRACK X_TABLES \
+	ISCSI_TCP SCSI_DH DM_MULTIPATH DM_SNAPSHOT"
+	if linux_config_exists; then
+		for module in ${CONFIG_CHECK_MODULES}; do
+			linux_chkconfig_present ${module} || ewarn "${module} needs to be built as module (builtin doesn't work)"
+		done
+	fi
 	enewgroup nova
 	enewuser nova -1 -1 /var/lib/nova nova
 }
@@ -111,8 +121,9 @@ python_install() {
 	use compute && newinitd "${FILESDIR}/nova.initd" "nova-compute"
 	use novncproxy && newinitd "${FILESDIR}/nova.initd" "nova-novncproxy"
 
-	diropts -m 0750 -o nova -g nova
+	diropts -m 0750 -o nova -g qemu
 	dodir /var/log/nova /var/lib/nova/instances
+	diropts -m 0750 -o nova -g nova
 
 	insinto /etc/nova
 	insopts -m 0640 -o nova -g nova

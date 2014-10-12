@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.9999.ebuild,v 1.7 2014/09/23 00:54:59 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.9999.ebuild,v 1.9 2014/10/11 23:14:35 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 git-2 user
+inherit distutils-r1 git-2 linux-info user
 
 DESCRIPTION="A virtual network service for Openstack"
 HOMEPAGE="https://launchpad.net/neutron"
@@ -14,7 +14,7 @@ EGIT_BRANCH="stable/icehouse"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="dhcp doc l3 metadata openvswitch linuxbridge server test sqlite mysql postgres"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
@@ -31,7 +31,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				>=dev-python/mock-1.0[${PYTHON_USEDEP}]
 				>=dev-python/subunit-0.0.18[${PYTHON_USEDEP}]
 				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-				<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
+				<dev-python/sphinx-1.1.9999[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
 				>=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
 				>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
@@ -40,7 +40,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
-		>=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
+		!~dev-python/routes-2.0[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
 		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
@@ -74,7 +74,7 @@ RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.7.0[${PYTHON_USEDEP}]
 		>=dev-python/alembic-0.4.1[${PYTHON_USEDEP}]
-		>=dev-python/six-1.5.2[${PYTHON_USEDEP}]
+		>=dev-python/six-1.6.0[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
 		dev-python/oslo-rootwrap[${PYTHON_USEDEP}]
@@ -89,6 +89,15 @@ PATCHES=(
 )
 
 pkg_setup() {
+	linux-info_pkg_setup
+	CONFIG_CHECK_MODULES="8021Q IP6TABLE_FILTER IP6_TABLES IPT_REJECT \
+	IPTABLE_MANGLE IPT_MASQUERADE IPTABLE_NAT NF_CONNTRACK_IPV4 NF_DEFRAG_IPV4 \
+	NF_NAT_IPV4 NF_NAT NF_CONNTRACK IPTABLE_FILTER IP_TABLES X_TABLES"
+	if linux_config_exists; then
+		for module in ${CONFIG_CHECK_MODULES}; do
+			linux_chkconfig_present ${module} || ewarn "${module} needs to be built as module (builtin doesn't work)"
+		done
+	fi
 	enewgroup neutron
 	enewuser neutron -1 -1 /var/lib/neutron neutron
 }
