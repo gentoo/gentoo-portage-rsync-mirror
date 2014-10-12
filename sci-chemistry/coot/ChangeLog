@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.64 2014/09/17 10:32:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.65 2014/10/12 11:33:45 jlec Exp $
+
+  12 Oct 2014; Justin Lecher <jlec@gentoo.org> coot-0.7.ebuild,
+  coot-0.7.1-r1.ebuild, coot-0.7.2.ebuild:
+  Fix Slot of mmdb dep
 
   17 Sep 2014; Justin Lecher <jlec@gentoo.org> coot-0.7.2.ebuild:
   Drop py2.6 support; fix shebang fixing problems
