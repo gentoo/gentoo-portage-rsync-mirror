@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.87 2014/07/18 15:38:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.88 2014/10/12 10:14:34 jer Exp $
+
+  12 Oct 2014; Jeroen Roovers <jer@gentoo.org> libssh2-1.4.3-r1.ebuild:
+  Do not run mansyntax.sh test (bug #449328).
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -libssh2-1.4.2.ebuild,
   files/libssh2-1.4.2-pkgconfig.patch:

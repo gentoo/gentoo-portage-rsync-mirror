@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-bin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.17 2012/10/06 17:35:27 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.18 2014/10/12 10:27:17 jer Exp $
+
+  12 Oct 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove short <longdescription>.
 
 *nessus-bin-5.0.1 (06 Oct 2012)
 

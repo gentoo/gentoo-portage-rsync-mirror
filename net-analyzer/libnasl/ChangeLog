@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.94 2014/07/13 13:10:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.95 2014/10/12 10:21:12 jer Exp $
+
+  12 Oct 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove short <longdescription>.
 
   13 Jul 2014; Jeroen Roovers <jer@gentoo.org> libnasl-2.2.9-r1.ebuild,
   files/libnasl-2.2.9-gentoo.patch, files/libnasl-2.2.9-openssl-1.patch:

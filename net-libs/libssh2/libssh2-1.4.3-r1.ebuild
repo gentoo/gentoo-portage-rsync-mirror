@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.4.3-r1.ebuild,v 1.2 2014/06/18 20:38:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.4.3-r1.ebuild,v 1.3 2014/10/12 10:14:34 jer Exp $
 
 EAPI="5"
 
@@ -23,6 +23,12 @@ RDEPEND="${DEPEND}"
 DOCS=( README )
 
 PATCHES=( "${FILESDIR}"/${PN}-1.4.2-pkgconfig.patch )
+
+src_prepare() {
+	sed -i -e 's|mansyntax.sh||g' tests/Makefile.am || die
+	eautomake
+	multilib_src_prepare
+}
 
 multilib_src_configure() {
 	# Disable tests that require extra permissions (bug #333319)

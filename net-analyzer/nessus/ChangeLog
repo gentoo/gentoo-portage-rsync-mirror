@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.90 2011/04/20 11:20:20 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.91 2014/10/12 10:23:54 jer Exp $
+
+  12 Oct 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove short <longdescription>.
 
   20 Apr 2011; Justin Lecher <jlec@gentoo.org> -nessus-2.3.1.ebuild:
   Dropped due to pending removal request, #169466
