@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblastfm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.32 2014/10/05 23:53:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.33 2014/10/12 16:54:16 kensington Exp $
+
+  12 Oct 2014; Michael Palimaka <kensington@gentoo.org> liblastfm-1.0.9.ebuild:
+  Import Qt5 support from KDE overlay.
 
 *liblastfm-1.0.9 (05 Oct 2014)
 

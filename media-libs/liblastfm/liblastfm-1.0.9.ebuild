@@ -1,32 +1,43 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-1.0.9.ebuild,v 1.1 2014/10/05 23:53:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-1.0.9.ebuild,v 1.2 2014/10/12 16:54:16 kensington Exp $
 
 EAPI=5
 
-QT_MINIMAL="4.8.0"
-inherit cmake-utils
+inherit cmake-utils multibuild
 
-DESCRIPTION="A Qt C++ library for the Last.fm webservices"
+DESCRIPTION="Collection of libraries to integrate Last.fm services"
 HOMEPAGE="https://github.com/lastfm/liblastfm"
 SRC_URI="https://github.com/lastfm/liblastfm/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
-SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="fingerprint test"
+SLOT="0/0"
+IUSE="fingerprint test +qt4 qt5"
 
 COMMON_DEPEND="
-	>=dev-qt/qtcore-${QT_MINIMAL}:4
-	>=dev-qt/qtdbus-${QT_MINIMAL}:4
+	qt4? (
+		dev-qt/qtcore:4
+		dev-qt/qtdbus:4
+	)
+	qt5? (
+		dev-qt/qtcore:5
+		dev-qt/qtdbus:5
+		dev-qt/qtnetwork:5
+		dev-qt/qtxml:5
+	)
 	fingerprint? (
 		media-libs/libsamplerate
 		sci-libs/fftw:3.0
-		>=dev-qt/qtsql-${QT_MINIMAL}:4
+		qt4? ( dev-qt/qtsql:4 )
+		qt5? ( dev-qt/qtsql:5 )
 	)
 "
 DEPEND="${COMMON_DEPEND}
-	test? ( >=dev-qt/qttest-${QT_MINIMAL}:4 )
+	test? (
+		qt4? ( dev-qt/qttest:4 )
+		qt5? ( dev-qt/qttest:5 )
+	)
 "
 RDEPEND="${COMMON_DEPEND}
 	!<media-libs/lastfmlib-0.4.0
@@ -35,16 +46,44 @@ RDEPEND="${COMMON_DEPEND}
 # 1 of 2 (UrlBuilderTest) is failing, last checked version 1.0.9
 RESTRICT="test"
 
-src_configure() {
-	# demos not working
-	# qt5 support broken
-	local mycmakeargs=(
-		-DBUILD_DEMOS=OFF
-		-DCMAKE_DISABLE_FIND_PACKAGE_Qt5Core=ON
-		-DBUILD_WITH_QT4=ON
-		$(cmake-utils_use_build fingerprint)
-		$(cmake-utils_use_build test TESTS)
-	)
+pkg_setup() {
+	MULTIBUILD_VARIANTS=()
+	if use qt4; then
+		MULTIBUILD_VARIANTS+=(qt4)
+	fi
+	if use qt5; then
+		MULTIBUILD_VARIANTS+=(qt5)
+	fi
+}
 
-	cmake-utils_src_configure
+src_configure() {
+	myconfigure() {
+		# demos not working
+		local mycmakeargs=(
+			-DBUILD_DEMOS=OFF
+			$(cmake-utils_use_build fingerprint)
+			$(cmake-utils_use_build test TESTS)
+		)
+		if [[ ${MULTIBUILD_VARIANT} = qt4 ]]; then
+			mycmakeargs+=(-DBUILD_WITH_QT4=ON)
+		fi
+		if [[ ${MULTIBUILD_VARIANT} = qt5 ]]; then
+			mycmakeargs+=(-DBUILD_WITH_OT4=OFF)
+		fi
+		cmake-utils_src_configure
+	}
+
+	multibuild_foreach_variant myconfigure
+}
+
+src_compile() {
+	multibuild_foreach_variant cmake-utils_src_compile
+}
+
+src_test() {
+	multibuild_foreach_variant cmake-utils_src_test
+}
+
+src_install() {
+	multibuild_foreach_variant cmake-utils_src_install
 }

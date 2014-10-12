@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Table
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Table/ChangeLog,v 1.18 2014/08/26 18:15:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Table/ChangeLog,v 1.19 2014/10/12 16:41:43 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Text-Table-1.126.0.ebuild:
+  Drop old.
 
 *Text-Table-1.127.0-r1 (26 Aug 2014)
 

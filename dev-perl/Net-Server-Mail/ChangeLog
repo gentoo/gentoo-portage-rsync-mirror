@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-Server-Mail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Server-Mail/ChangeLog,v 1.10 2014/08/23 00:19:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Server-Mail/ChangeLog,v 1.11 2014/10/12 16:39:13 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -Net-Server-Mail-0.170.0.ebuild, -Net-Server-Mail-0.180.0.ebuild,
+  -Net-Server-Mail-0.200.0.ebuild:
+  Drop old.
 
 *Net-Server-Mail-0.210.0-r1 (23 Aug 2014)
 
