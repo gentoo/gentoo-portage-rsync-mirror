@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd-ui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/ChangeLog,v 1.10 2014/05/04 08:07:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/ChangeLog,v 1.11 2014/10/12 04:34:41 zmedico Exp $
+
+  12 Oct 2014; Zac Medico <zmedico@gentoo.org> systemd-ui-3.ebuild,
+  systemd-ui-9999.ebuild:
+  Bump gtk+:2 deps to gtk+:3, since that's what is required now.
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org>
   +files/systemd-ui-3-vala-0.24.patch, systemd-ui-3.ebuild:

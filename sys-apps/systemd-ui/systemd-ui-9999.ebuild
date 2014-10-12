@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/systemd-ui-9999.ebuild,v 1.5 2014/01/07 09:58:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/systemd-ui-9999.ebuild,v 1.6 2014/10/12 04:34:41 zmedico Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ RDEPEND="!sys-apps/systemd[gtk]
 	>=dev-libs/glib-2.26
 	dev-libs/libgee:0.8
 	sys-apps/dbus
-	x11-libs/gtk+:2
+	x11-libs/gtk+:3
 	>=x11-libs/libnotify-0.7"
 
 DEPEND="${RDEPEND}

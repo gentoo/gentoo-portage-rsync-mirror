@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/systemd-ui-3.ebuild,v 1.2 2014/05/04 08:07:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/systemd-ui-3.ebuild,v 1.3 2014/10/12 04:34:41 zmedico Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-libs/glib-2.26:2
 	dev-libs/libgee:0.8
 	sys-apps/dbus
-	x11-libs/gtk+:2
+	x11-libs/gtk+:3
 	>=x11-libs/libnotify-0.7
 "
 DEPEND="${RDEPEND}
