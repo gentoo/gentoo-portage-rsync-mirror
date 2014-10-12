@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/DateTime virtual/perl-Module-Build || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=dev-perl/DateTime virtual/perl-Module-Build dev-lang/perl:=[-build(-)]
 DESCRIPTION=Create DateTime objects with sub-second current time resolution
-EAPI=4
+EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/DateTime-HiRes/
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=dev-perl/DateTime || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=dev-perl/DateTime dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/J/JH/JHOBLITT/DateTime-HiRes-0.01.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f889e8437ffc64d766053d029c422c4e	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=352d9f1bc6c2cca1dbefc828d05f6f78
+_md5_=b367250735829a889a8e754b5410956b
