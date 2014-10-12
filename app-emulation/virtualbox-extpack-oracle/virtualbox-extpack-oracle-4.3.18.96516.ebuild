@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.3.14.95030.ebuild,v 1.2 2014/10/08 20:32:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.3.18.96516.ebuild,v 1.1 2014/10/12 17:03:09 polynomial-c Exp $
 
 EAPI=5
 

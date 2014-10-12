@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r1.ebuild,v 1.12 2014/07/30 19:29:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r3.ebuild,v 1.1 2014/10/12 17:26:12 pacho Exp $
 
 EAPI="5"
-inherit autotools eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
+inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
 
 DESCRIPTION="A networked sound server with an advanced plugin system"
 HOMEPAGE="http://www.pulseaudio.org/"
@@ -16,11 +16,11 @@ SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.xz"
 LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
 
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~sh sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 
-IUSE="+alsa +asyncns avahi bluetooth +caps dbus doc equalizer +gdbm +glib gnome
+IUSE="+alsa +asyncns bluetooth +caps dbus doc equalizer +gdbm +glib gnome
 gtk ipv6 jack libsamplerate lirc neon +orc oss qt4 realtime ssl systemd
-system-wide tcpd test +udev +webrtc-aec +X xen"
+system-wide tcpd test +udev +webrtc-aec +X xen zeroconf"
 
 # See "*** BLUEZ support not found (requires D-Bus)" in configure.ac
 REQUIRED_USE="bluetooth? ( dbus )"
@@ -40,11 +40,11 @@ RDEPEND="
 		x11-libs/libICE[${MULTILIB_USEDEP}]
 		x11-libs/libXtst[${MULTILIB_USEDEP}]
 	)
-	caps? ( sys-libs/libcap[${MULTILIB_USEDEP}] )
+	caps? ( >=sys-libs/libcap-2.22-r2[${MULTILIB_USEDEP}] )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.1-r1 )
 	alsa? ( >=media-libs/alsa-lib-1.0.19 )
 	glib? ( >=dev-libs/glib-2.4.0[${MULTILIB_USEDEP}] )
-	avahi? ( >=net-dns/avahi-0.6.12[dbus] )
+	zeroconf? ( >=net-dns/avahi-0.6.12[dbus] )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.117 )
 	tcpd? ( sys-apps/tcp-wrappers[${MULTILIB_USEDEP}] )
 	lirc? ( app-misc/lirc )
@@ -132,6 +132,15 @@ src_prepare() {
 	# Skip test that cannot work with sandbox, bug #501846
 	sed -i -e '/lock-autospawn-test/d' src/Makefile.am || die
 
+	# Fix CVE-2014-3970, bug #512516 (from 'master')
+	epatch "${FILESDIR}/${P}-crash-udp.patch"
+
+	# module-switch-on-port-available: Don't switch profiles on uninitialized cards (from 'master')
+	epatch "${FILESDIR}/${P}-module-switch.patch"
+
+	# Fix module-zeroconf-publish crashes, bug #504612 (from 'master')
+	epatch "${FILESDIR}"/${P}-zeroconf-crash-{1,2,3}.patch
+
 	epatch_user
 	eautoreconf
 }
@@ -168,7 +177,7 @@ multilib_src_configure() {
 		$(use_enable neon neon-opt)
 		$(use_enable tcpd tcpwrap)
 		$(use_enable jack)
-		$(use_enable avahi)
+		$(use_enable zeroconf avahi)
 		$(use_enable dbus)
 		$(use_enable gnome gconf)
 		$(use_enable gtk gtk3)
@@ -232,7 +241,7 @@ multilib_src_compile() {
 	if multilib_is_native_abi; then
 		emake
 	else
-		emake -C src libpulse{,-simple,-mainloop-glib}.la
+		emake -C src libpulse{,dsp,-simple,-mainloop-glib}.la
 	fi
 }
 
@@ -257,11 +266,12 @@ multilib_src_test() {
 
 multilib_src_install() {
 	if multilib_is_native_abi; then
-		emake -j1 DESTDIR="${D}" install
+		emake -j1 DESTDIR="${D}" bashcompletiondir="$(get_bashcompdir)" install
 	else
 		emake DESTDIR="${D}" install-pkgconfigDATA
 		emake DESTDIR="${D}" -C src \
 			install-libLTLIBRARIES \
+			install-padsplibLTLIBRARIES \
 			lib_LTLIBRARIES="libpulse.la libpulse-simple.la libpulse-mainloop-glib.la" \
 			install-pulseincludeHEADERS
 	fi
@@ -292,7 +302,7 @@ multilib_src_install_all() {
 		systemd_dounit "${FILESDIR}/${PN}.service"
 	fi
 
-	use avahi && sed -i -e '/module-zeroconf-publish/s:^#::' "${ED}/etc/pulse/default.pa"
+	use zeroconf && sed -i -e '/module-zeroconf-publish/s:^#::' "${ED}/etc/pulse/default.pa"
 
 	dodoc NEWS README todo
 

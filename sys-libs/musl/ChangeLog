@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.32 2014/10/11 20:14:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.33 2014/10/12 17:19:54 blueness Exp $
+
+*musl-1.1.4-r1 (12 Oct 2014)
+
+  12 Oct 2014; Anthony G. Basile <blueness@gentoo.org> +musl-1.1.4-r1.ebuild:
+  Migrate from gettext providing libintl to musl providing it.
 
   11 Oct 2014; Anthony G. Basile <blueness@gentoo.org> musl-9999.ebuild:
   Use musl's builtin libintl.so, bug #524982

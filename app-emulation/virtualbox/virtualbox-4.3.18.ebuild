@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.14.ebuild,v 1.5 2014/08/14 12:48:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.18.ebuild,v 1.1 2014/10/12 17:03:56 polynomial-c Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ MY_PV="${PV/beta/BETA}"
 MY_PV="${MY_PV/rc/RC}"
 MY_P=VirtualBox-${MY_PV}
 SRC_URI="http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2
-	http://dev.gentoo.org/~polynomial-c/${PN}/patchsets/${PN}-4.3.14-patches-03.tar.xz"
+	http://dev.gentoo.org/~polynomial-c/${PN}/patchsets/${PN}-4.3.16-patches-01.tar.xz"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"

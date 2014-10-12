@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.3.14-r1.ebuild,v 1.1 2014/09/03 16:27:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.3.18.ebuild,v 1.1 2014/10/12 17:02:04 polynomial-c Exp $
 
 # XXX: the tarball here is just the kernel modules split out of the binary
 #      package that comes from virtualbox-bin
@@ -43,9 +43,6 @@ src_prepare() {
 	if use pax_kernel && kernel_is -ge 3 0 0 ; then
 		epatch "${FILESDIR}"/${PN}-4.1.4-pax-const.patch
 	fi
-	if kernel_is -ge 3 17 ; then
-		epatch "${FILESDIR}"/${PN}-3.17.patch
-	fi
 }
 
 src_install() {
@@ -56,7 +53,7 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	elog "If you are using openRC, please add \"vboxdrv\", \"vboxnetflt\""
+	elog "If you are using sys-apps/openrc, please add \"vboxdrv\", \"vboxnetflt\""
 	elog "and \"vboxnetadp\" to:"
-	elog "/etc/conf.d/modules"
+	elog "  /etc/conf.d/modules"
 }
