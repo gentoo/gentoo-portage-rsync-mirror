@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-Path-Class/MooseX-Types-Path-Class-0.60.0.ebuild,v 1.2 2013/06/29 18:30:34 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-Path-Class/MooseX-Types-Path-Class-0.60.0.ebuild,v 1.3 2014/10/12 15:32:49 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=THEPLER
 MODULE_VERSION=0.06

@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-SQLite/DateTime-Format-SQLite-0.110.0.ebuild,v 1.1 2011/08/31 12:33:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-SQLite/DateTime-Format-SQLite-0.110.0.ebuild,v 1.2 2014/10/12 15:43:13 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=CFAERBER
 MODULE_VERSION=0.11

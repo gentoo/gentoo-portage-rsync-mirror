@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perl-ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.122 2014/08/04 09:31:05 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.123 2014/10/12 15:37:17 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -perl-ldap-0.440.0.ebuild,
+  -perl-ldap-0.520.0.ebuild:
+  Drop old.
 
   04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> perl-ldap-0.440.0.ebuild,
   perl-ldap-0.520.0.ebuild, perl-ldap-0.530.0.ebuild, perl-ldap-0.570.0.ebuild,

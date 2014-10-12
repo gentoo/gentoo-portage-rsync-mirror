@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Moo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moo/ChangeLog,v 1.29 2014/02/23 19:08:42 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moo/ChangeLog,v 1.30 2014/10/12 15:39:00 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Moo-1.0.6.ebuild:
+  Drop old.
 
 *Moo-1.4.2 (23 Feb 2014)
 

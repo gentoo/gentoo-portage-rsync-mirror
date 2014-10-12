@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBIx-Class-DynamicDefault
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class-DynamicDefault/ChangeLog,v 1.9 2012/11/18 11:14:53 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class-DynamicDefault/ChangeLog,v 1.10 2014/10/12 15:31:29 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  DBIx-Class-DynamicDefault-0.40.0.ebuild:
+  Bump to EAPI=5
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

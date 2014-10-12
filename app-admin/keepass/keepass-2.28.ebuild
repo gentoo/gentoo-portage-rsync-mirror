@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.26.ebuild,v 1.1 2014/04/19 19:31:45 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.28.ebuild,v 1.1 2014/10/12 15:36:10 kensington Exp $
 
 EAPI=5
 
@@ -93,6 +93,9 @@ pkg_postinst() {
 		elog "Optional dependencies:"
 		elog "	x11-misc/xdotool (enables autotype)"
 	fi
+
+	elog "Some systems may experience issues with copy and paste operations."
+	elog "If you encounter this, please install x11-misc/xsel."
 }
 
 pkg_postrm() {

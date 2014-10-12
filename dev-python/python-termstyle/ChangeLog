@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/python-termstyle
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-termstyle/ChangeLog,v 1.1 2014/10/12 15:44:02 alunduil Exp $
+
+*python-termstyle-0.1.10 (12 Oct 2014)
+
+  12 Oct 2014; Alex Brandt <alunduil@gentoo.org> +files/tests-unicode.patch,
+  +metadata.xml, +python-termstyle-0.1.10.ebuild:
+  add ebuild for python-termstyle
