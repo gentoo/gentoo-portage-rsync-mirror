@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.62 2014/10/12 09:11:44 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.63 2014/10/12 09:53:43 zlogene Exp $
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> phonon-4.7.2.ebuild:
+  x86 stable wrt bug #519592
 
   12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> phonon-4.7.2.ebuild:
   amd64 stable wrt bug #519592

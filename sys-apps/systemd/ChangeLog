@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.309 2014/09/14 10:18:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.311 2014/10/12 09:58:35 pacho Exp $
+
+  12 Oct 2014; Pacho Ramos <pacho@gentoo.org> systemd-216-r1.ebuild:
+  Readd sparc keyword as I don't see when/why was it dropped
+
+*systemd-216-r1 (12 Oct 2014)
+
+  12 Oct 2014; Pacho Ramos <pacho@gentoo.org> +systemd-216-r1.ebuild,
+  -systemd-216.ebuild:
+  revbump due bug #520662
 
   14 Sep 2014; Pacho Ramos <pacho@gentoo.org> systemd-212-r5.ebuild,
   systemd-215-r3.ebuild, systemd-216.ebuild, systemd-9999.ebuild:
