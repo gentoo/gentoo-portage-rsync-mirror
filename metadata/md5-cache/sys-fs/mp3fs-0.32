@@ -6,5 +6,5 @@ KEYWORDS=amd64 x86
 LICENSE=GPL-3
 RDEPEND=sys-fs/fuse media-libs/libid3tag media-libs/flac media-sound/lame media-libs/libogg
 SLOT=0
-SRC_URI=https://github.com/downloads/khenriks/mp3fs/mp3fs-0.32.tar.gz
-_md5_=66ec660c9e9adca4bfce4c4843125060
+SRC_URI=mirror://github/khenriks/mp3fs/mp3fs-0.32.tar.gz
+_md5_=dbe98645a2c78b7e9213d506729c0359

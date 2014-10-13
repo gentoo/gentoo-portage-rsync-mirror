@@ -1,8 +1,0 @@
---- src/Makefile.am.orig	2009-01-03 17:07:09.000000000 +1100
-+++ src/Makefile.am	2009-01-03 17:10:35.000000000 +1100
-@@ -1,4 +1,4 @@
- bin_PROGRAMS	= mp3fs
- mp3fs_SOURCES	= mp3fs.c transcode.c transcode.h class.c class.h stringio.c stringio.h talloc.c talloc.h
- mp3fs_CFLAGS	= $(fuse_CFLAGS) $(id3tag_CFLAGS)
--mp3fs_LDFLAGS	= -lFLAC -logg -lmp3lame $(fuse_LIBS) $(id3tag_LIBS)
-+mp3fs_LDADD		= -lFLAC -logg -lmp3lame $(fuse_LIBS) $(id3tag_LIBS)

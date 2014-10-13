@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16092 2014/10/13 00:54:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16093 2014/10/13 21:48:13 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (13 Oct 2014)
+# Does not build with current CLucene (bug 420195); dead upstream.
+# No consumers in the tree. Masked for removal in 30 days.
+dev-perl/Lucene
 
 # Aaron W. Swenson <titanofold@gentoo.org> (11 Oct 2014)
 # Beta package not yet ready for production.
