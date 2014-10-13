@@ -8,4 +8,4 @@ RDEPEND=|| ( >=app-shells/bash-4.1 app-shells/zsh ) sys-apps/miscfiles !app-admi
 SLOT=0
 SRC_URI=http://bash-completion.alioth.debian.org/files/bash-completion-2.1.tar.bz2 http://dev.gentoo.org/~mgorny/dist/bashcomp2-pre1.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=ee2b604baa1d5e3c6fef7cefe0efa560
+_md5_=f796cc37db90cb4c829085970950c79f

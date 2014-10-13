@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r90.ebuild,v 1.1 2014/08/27 17:31:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r90.ebuild,v 1.2 2014/10/13 09:40:07 mgorny Exp $
 
 EAPI=5
 
@@ -60,6 +60,10 @@ pkg_postinst() {
 			ewarn "location. You can do this using:"
 			ewarn
 			ewarn "$ find ${EPREFIX}/usr/share/bash-completion -maxdepth 1 -type f '!' -name 'bash_completion' -exec emerge -1v {} +"
+			ewarn
+			ewarn "After the rebuild, you should remove the old setup symlinks:"
+			ewarn
+			ewarn "$ find ${EPREFIX}/etc/bash_completion.d -type l -delete"
 		fi
 	done
 
