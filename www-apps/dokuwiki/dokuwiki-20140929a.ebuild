@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20120125.ebuild,v 1.3 2014/08/10 20:13:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20140929a.ebuild,v 1.1 2014/10/13 15:55:32 jmbsvicetto Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit webapp depend.php
 
@@ -12,18 +12,22 @@ MY_PV="${MY_BASE_PV}${PV:8:1}"
 
 DESCRIPTION="DokuWiki is a simple to use Wiki aimed at a small company's documentation needs"
 HOMEPAGE="http://wiki.splitbrain.org/wiki:dokuwiki"
-SRC_URI="http://www.splitbrain.org/_media/projects/${PN}/${PN}-${MY_PV}.tgz"
+SRC_URI="http://download.dokuwiki.org/src/${PN}/${PN}-${MY_PV}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="gd"
 
 DEPEND=""
 RDEPEND="
 	>=dev-lang/php-5.3[xml]
-	gd? ( || ( dev-lang/php[gd]
-		media-gfx/imagemagick )
-	)"
+	gd? ( ||
+		(
+			dev-lang/php[gd]
+			media-gfx/imagemagick
+		)
+	)
+"
 
 need_httpd_cgi
 need_php_httpd

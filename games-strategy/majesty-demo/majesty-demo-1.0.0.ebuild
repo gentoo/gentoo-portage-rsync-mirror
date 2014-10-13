@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.15 2014/08/10 21:21:00 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.16 2014/10/13 15:44:00 mgorny Exp $
 
 EAPI=4
 inherit eutils unpacker games
@@ -16,19 +16,24 @@ IUSE=""
 RESTRICT="mirror bindist strip"
 
 RDEPEND="sys-libs/glibc
-	x86? (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXau
-		x11-libs/libXdmcp )
-	ppc? (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXau
-		x11-libs/libXdmcp )
-	amd64? (
-		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-xlibs )"
+	|| (
+		ppc? (
+			x11-libs/libX11
+			x11-libs/libXext
+			x11-libs/libXau
+			x11-libs/libXdmcp
+		)
+		!ppc? (
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+			x11-libs/libXau[abi_x86_32(-)]
+			x11-libs/libXdmcp[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)"
 
 S=${WORKDIR}
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/shiki-colors
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/shiki-colors/ChangeLog,v 1.4 2012/01/04 18:04:36 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/shiki-colors/ChangeLog,v 1.5 2014/10/13 15:34:52 pacho Exp $
+
+  13 Oct 2014; Pacho Ramos <pacho@gentoo.org> shiki-colors-4.6.ebuild:
+  mutter and muffin are also compatible with this themes
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> shiki-colors-4.6.ebuild:
   x86 stable wrt bug #394439
@@ -17,4 +20,3 @@
   14 Mar 2010; Pacho Ramos <pacho@gentoo.org> +shiki-colors-4.6.ebuild,
   +metadata.xml:
   Initial import of Shiki-Colors themes including a Gentoo one
-
