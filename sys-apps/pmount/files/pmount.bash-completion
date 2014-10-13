@@ -19,7 +19,6 @@
 # Output:
 #   COMPREPLY array variable contains possible completions
 
-have pmount &&
 _pmount() {
 
    local cur prev options devices fslist
@@ -67,7 +66,6 @@ _pmount() {
 }
 
 
-have pumount &&
 _pumount() {
 
    local cur prev options devices mdir
@@ -91,6 +89,6 @@ _pumount() {
    return 0
 }
 
-[ "$have" ] && complete -F _pmount $filenames pmount
-[ "$have" ] && complete -F _pumount $filenames pumount
+complete -F _pmount $filenames pmount
+complete -F _pumount $filenames pumount
 

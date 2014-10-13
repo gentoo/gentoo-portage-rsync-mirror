@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.111 2014/04/18 18:19:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.112 2014/10/13 08:28:56 mgorny Exp $
+
+*pmount-0.9.99_alpha-r5 (13 Oct 2014)
+
+  13 Oct 2014; Michał Górny <mgorny@gentoo.org> +pmount-0.9.99_alpha-r5.ebuild,
+  -pmount-0.9.99_alpha-r4.ebuild, files/pmount.bash-completion:
+  Remove use of deprecated "have" and alias pumount for new bash-completion, bug
+  #521158.
 
 *pmount-0.9.99_alpha-r4 (18 Apr 2014)
 

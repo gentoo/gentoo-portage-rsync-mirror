@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.14.3702-r1.ebuild,v 1.2 2014/08/15 22:02:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.14.3702-r1.ebuild,v 1.3 2014/10/13 08:30:09 xmw Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ COMMON_DEPEND="dev-cpp/eigen:3
 	dev-libs/libspnav[X]
 	dev-libs/xerces-c[icu]
 	dev-python/matplotlib
-	dev-python/pyside
+	dev-python/pyside[X]
 	dev-python/shiboken
 	dev-qt/designer:4
 	dev-qt/qtgui:4
