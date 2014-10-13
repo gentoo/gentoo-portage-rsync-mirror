@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/install-xattr-9999.ebuild,v 1.5 2014/10/13 02:29:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/install-xattr-0.4.ebuild,v 1.1 2014/10/13 02:29:36 blueness Exp $
 
 EAPI=5
 DESCRIPTION="Wrapper to coreutil's install to preserve Filesystem Extended Attributes"

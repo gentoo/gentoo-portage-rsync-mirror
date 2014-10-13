@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.2.0.ebuild,v 1.4 2014/10/04 14:07:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.2.0-r2.ebuild,v 1.1 2014/10/13 02:29:35 twitch153 Exp $
 
 EAPI="5"
 
@@ -38,8 +38,18 @@ RDEPEND="
 	>=dev-python/ssl-fetch-0.2[${PYTHON_USEDEP}]
 	"
 
+layman_check_kernel_config() {
+	local CONFIG_CHECK
+	use squashfs && CONFIG_CHECK+=" ~BLK_DEV_LOOP ~SQUASHFS"
+	[[ -n ${CONFIG_CHECK} ]] && check_extra_config
+}
+
 pkg_pretend() {
-	use squashfs && local CONFIG_CHECK="BLK_DEV_LOOP SQUASHFS"
+	layman_check_kernel_config
+}
+
+python_pkg_setup() {
+	layman_check_kernel_config
 }
 
 python_prepare_all()  {
