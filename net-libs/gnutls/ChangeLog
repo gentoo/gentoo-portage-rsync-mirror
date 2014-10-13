@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.514 2014/09/23 06:39:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.515 2014/10/13 13:03:42 alonbl Exp $
+
+*gnutls-3.3.9 (13 Oct 2014)
+
+  13 Oct 2014; Alon Bar-Lev <alonbl@gentoo.org> +gnutls-3.3.9.ebuild,
+  -files/gnutls-3.3.7-build.patch, -gnutls-3.2.16.ebuild, -gnutls-3.2.17.ebuild,
+  -gnutls-3.3.6.ebuild, -gnutls-3.3.7-r1.ebuild, -gnutls-3.3.7.ebuild:
+  Version bump, cleanup
 
   23 Sep 2014; Alon Bar-Lev <alonbl@gentoo.org> gnutls-3.3.8.ebuild:
   Bump p11-kit dependency, bug#523472, thanks to Marcin Mirosław

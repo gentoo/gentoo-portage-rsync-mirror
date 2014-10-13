@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.16.ebuild,v 1.1 2014/08/08 08:40:50 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.9.ebuild,v 1.1 2014/10/13 13:03:42 alonbl Exp $
 
 EAPI=5
 
-inherit autotools libtool eutils versionator
+inherit autotools libtool eutils multilib-minimal versionator
 
 DESCRIPTION="A TLS 1.2 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -21,34 +21,33 @@ IUSE="+cxx +crywrap dane doc examples guile nls pkcs11 static-libs test zlib ${I
 
 # NOTICE: sys-devel/autogen is required at runtime as we
 # use system libopts
-RDEPEND=">=dev-libs/libtasn1-2.14
-	>=dev-libs/nettle-2.7[gmp]
-	dev-libs/gmp
+RDEPEND=">=dev-libs/libtasn1-3.4[${MULTILIB_USEDEP}]
+	>=dev-libs/nettle-2.7[gmp,${MULTILIB_USEDEP}]
+	>=dev-libs/gmp-5.1.3-r1[${MULTILIB_USEDEP}]
 	sys-devel/autogen
 	crywrap? ( net-dns/libidn )
-	dane? ( net-dns/unbound )
+	dane? ( >=net-dns/unbound-1.4.20[${MULTILIB_USEDEP}] )
 	guile? ( >=dev-scheme/guile-1.8[networking] )
-	nls? ( virtual/libintl )
-	pkcs11? ( >=app-crypt/p11-kit-0.19.2 )
-	zlib? ( >=sys-libs/zlib-1.2.3.1 )"
+	nls? ( >=virtual/libintl-0-r1[${MULTILIB_USEDEP}] )
+	pkcs11? ( >=app-crypt/p11-kit-0.20.7[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20140508
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.11.6
-	virtual/pkgconfig
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
+	>=sys-apps/texinfo-5.2
 	doc? ( dev-util/gtk-doc )
 	nls? ( sys-devel/gettext )
 	test? ( app-misc/datefudge )"
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS doc/TODO )
 
-S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
+S="${WORKDIR}/${PN}-$(get_version_component_range 1-3)"
 
 src_prepare() {
-	# tests/suite directory is not distributed
-	sed -i \
-		-e ':AC_CONFIG_FILES(\[tests/suite/Makefile\]):d' \
-		-e '/^AM_INIT_AUTOMAKE/s/-Werror//' \
-		configure.ac || die
-
 	sed -i \
 		-e 's/imagesdir = $(infodir)/imagesdir = $(htmldir)/' \
 		doc/Makefile.am || die
@@ -59,7 +58,12 @@ src_prepare() {
 		rm src/$(basename ${file} .c).{c,h} || die
 	done
 
-	epatch "${FILESDIR}/${PN}-2.12.23-gl-tests-getaddrinfo-skip-if-no-network.patch"
+	# force regeneration of makeinfo files
+	# have no idea why on some system these files are not
+	# accepted as-is, see bug#520818
+	for file in $(grep -l "produced by makeinfo" doc/*.info) ; do
+		rm "${file}" || die
+	done
 
 	# support user patches
 	epatch_user
@@ -73,46 +77,84 @@ src_prepare() {
 	use cxx || epunt_cxx
 }
 
-src_configure() {
+multilib_src_configure() {
 	LINGUAS="${LINGUAS//en/en@boldquot en@quot}"
 
 	# TPM needs to be tested before being enabled
 	# hardware-accell is disabled on OSX because the asm files force
 	#   GNU-stack (as doesn't support that) and when that's removed ld
 	#   complains about duplicate symbols
+	ECONF_SOURCE=${S} \
 	econf \
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--disable-valgrind-tests \
 		--enable-heartbeat-support \
 		$(use_enable cxx) \
 		$(use_enable dane libdane) \
-		$(use_enable doc gtk-doc) \
-		$(use_enable doc gtk-doc-pdf) \
-		$(use_enable guile) \
-		$(use_enable crywrap) \
+		$(multilib_native_use_enable doc gtk-doc) \
+		$(multilib_native_use_enable doc gtk-doc-pdf) \
+		$(multilib_native_use_enable guile) \
+		$(multilib_native_use_enable crywrap) \
 		$(use_enable nls) \
 		$(use_enable static-libs static) \
 		$(use_with pkcs11 p11-kit) \
 		$(use_with zlib) \
 		--without-tpm \
+		--with-unbound-root-key-file=/etc/dnssec/root-anchors.txt \
 		$([[ ${CHOST} == *-darwin* ]] && echo --disable-hardware-acceleration)
 }
 
-src_test() {
-	# parallel testing often fails
-	emake -j1 check
+multilib_src_compile() {
+	if multilib_is_native_abi; then
+		default
+
+		# symlink certtool for use in other ABIs
+		if use test; then
+			ln -s "${BUILD_DIR}"/src "${T}"/native-tools || die
+		fi
+	else
+		emake -C gl
+		emake -C lib
+		emake -C extra
+		use dane && emake -C libdane
+	fi
 }
 
-src_install() {
-	default
+multilib_src_test() {
+	if multilib_is_native_abi; then
+		# parallel testing often fails
+		emake -j1 check
+	else
+		# use native ABI tools
+		ln -s "${T}"/native-tools/{certtool,gnutls-{serv,cli}} \
+			"${BUILD_DIR}"/src/ || die
 
-	find "${ED}" -name '*.la' -delete
+		emake -C gl -j1 check
+		emake -C tests -j1 check
+	fi
+}
+
+multilib_src_install() {
+	if multilib_is_native_abi; then
+		emake DESTDIR="${D}" install
+	else
+		emake -C lib DESTDIR="${D}" install
+		emake -C extra DESTDIR="${D}" install
+		use dane && emake -C libdane DESTDIR="${D}" install
+	fi
+}
+
+multilib_src_install_all() {
+	einstalldocs
+	prune_libtool_files --all
 
 	dodoc doc/certtool.cfg
 
 	if use doc; then
 		dodoc doc/gnutls.pdf
 		dohtml doc/gnutls.html
+	else
+		rm -fr "${ED}/usr/share/doc/${PF}/html"
 	fi
 
 	if use examples; then
