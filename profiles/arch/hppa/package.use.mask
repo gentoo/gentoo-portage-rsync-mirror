@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.146 2014/08/17 09:04:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.147 2014/10/13 20:08:36 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -10,8 +10,9 @@ net-libs/libgadu gg11
 
 # Jeroen Roovers <jer@gentoo.org> (29 Jul 2014)
 # Test phase requires dev-db/mongodb which requires dev-util/google-perftools
-# which has not been ported to HPPA (bug #517880)
+# which has not been ported to HPPA (bug #517880, bug #525246)
 dev-libs/mongo-c-driver test
+dev-python/pymongo test
 
 # Jeroen Roovers <jer@gentoo.org> (6 Mar 2014)
 # USE=gui requires x11-libs/qscintilla,
