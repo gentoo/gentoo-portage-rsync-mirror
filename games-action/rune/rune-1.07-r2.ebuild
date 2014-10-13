@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.12 2014/09/07 09:14:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.13 2014/10/13 10:36:57 mgorny Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils cdrom games
 
 DESCRIPTION="Viking hack and slay game"
@@ -15,15 +15,20 @@ KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
-RDEPEND="virtual/opengl
-		dev-util/xdelta:0
-	x86? (
-		x11-libs/libX11
-		x11-libs/libXext
-		>=media-libs/libsdl-1.2.9-r1 )
-	amd64? (
-		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-sdl )"
+RDEPEND="dev-util/xdelta:0
+	|| (
+		(
+			>=media-libs/libsdl-1.2.9-r1[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)"
 
 DEPEND=""
 
@@ -43,7 +48,7 @@ src_unpack() {
 	elif [[ ${CDROM_SET} -eq 1 ]]
 	then
 		# unpack the runelinuxfiles.tar.gz
-		unpack ${A} || die "Could not unpack rune-all-0.1.tar.bz2"
+		unpack ${A}
 	fi
 }
 
@@ -56,28 +61,25 @@ src_install() {
 	0)
 		for x in Help Maps Meshes Sounds System Textures Web
 		do
-			doins -r $x || die "copying $x"
+			doins -r $x
 		done
 
 		# copy linux specific files
-		doins -r "${CDROM_ROOT}"/System \
-			|| die "Could not copy Linux specific files"
+		doins -r "${CDROM_ROOT}"/System
 
 		# the most important things: rune and ucc :)
-		doexe "${CDROM_ROOT}"/bin/x86/rune \
-			|| die "Could not install rune executable"
-		fperms 750 "${dir}"/System/{ucc{,-bin},rune-bin} \
-			|| die "Could not make executables executable"
+		doexe "${CDROM_ROOT}"/bin/x86/rune
+		fperms 750 "${dir}"/System/{ucc{,-bin},rune-bin}
 
 		# installing documentation/icon
-		dodoc "${CDROM_ROOT}"/{README,CREDITS} || die "Could not dodoc README.linux"
-		newicon "${CDROM_ROOT}"/icon.xpm rune.xpm || die "Could not copy pixmap"
+		dodoc "${CDROM_ROOT}"/{README,CREDITS}
+		newicon "${CDROM_ROOT}"/icon.xpm rune.xpm
 	;;
 	1)
 		# copying Maps Sounds and Web
 		for x in Maps Sounds Web
 		do
-			doins -r "${CDROM_ROOT}"/$x || die "copying $x"
+			doins -r "${CDROM_ROOT}"/$x
 		done
 
 		# copying the texture files
@@ -89,21 +91,21 @@ src_install() {
 				|| die "modifying and copying $x"
 		done
 
-		doins -r "${S}"/System || die "Could not copy Linux specific files"
-		doins -r "${S}"/Help || die "Could not copy Help data"
+		doins -r "${S}"/System
+		doins -r "${S}"/Help
 		sed -e "s:.*\(\w+/\w+\)\w:\1:"
 		for x in $(ls "${S}"/patch/{System,Maps,Meshes} |sed -e \
 			"s:.*/\([^/]\+/[^/]\+\).patch$:\1:")
 		do
 			xdelta patch "${S}"/patch/${x}.patch "${CDROM_ROOT}"/${x} "${S}"/patch/${x}
-			doins "${S}"/patch/${x} || die "Could not copy Patch data"
+			doins "${S}"/patch/${x}
 		done
 
 		insinto "${dir}"/System
 
 		# copying system files from the Windows CD
 		for x in "${CDROM_ROOT}"/System/*.{int,u,url}; do
-			doins $x || die "copying $x"
+			doins $x
 		done
 
 		# modify the files
@@ -120,13 +122,12 @@ src_install() {
 		rm "${Ddir}"/System/{Setup.int,SGLDrv.int,MeTaLDrv.int,Manifest.int,D3DDrv.int,Galaxy.int,SoftDrv.int,WinDrv.int,Window.int} || die "Could not delete not needed System files"
 
 		# the most important things: rune and ucc :)
-		doexe "${S}"/bin/x86/rune || die "Could not install rune executable"
-		fperms 750 "${dir}"/System/{ucc,ucc-bin,rune-bin} \
-			|| die "Could not make executables executable"
+		doexe "${S}"/bin/x86/rune
+		fperms 750 "${dir}"/System/{ucc,ucc-bin,rune-bin}
 
 		# installing documentation/icon
-		dodoc "${S}"/{README,CREDITS} || die "Could not dodoc README.linux"
-		doicon "${S}"/rune.xpm rune.xpm || die "Could not copy pixmap"
+		dodoc "${S}"/{README,CREDITS}
+		doicon "${S}"/rune.xpm rune.xpm
 	;;
 	esac
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/zinc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/ChangeLog,v 1.12 2014/08/01 22:10:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/ChangeLog,v 1.13 2014/10/13 10:42:32 mgorny Exp $
+
+  13 Oct 2014; Michał Górny <mgorny@gentoo.org> zinc-1.1.ebuild:
+  Support multilib providers for deps.
 
   01 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> zinc-1.1.ebuild:
   EAPI=5; update HOMEPAGE/SRC_URI
