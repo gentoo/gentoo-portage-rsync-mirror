@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.41 2014/10/10 11:07:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.42 2014/10/13 11:36:18 blueness Exp $
+
+  13 Oct 2014; Anthony G. Basile <blueness@gentoo.org> pillow-2.5.3.ebuild:
+  Stable on ppc and ppc64, bug #522426
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pillow-2.5.3.ebuild:
   Stable for x86, wrt bug #522426
