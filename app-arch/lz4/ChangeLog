@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.31 2014/08/26 11:31:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.32 2014/10/13 12:22:56 aballier Exp $
+
+  13 Oct 2014; Alexis Ballier <aballier@gentoo.org> lz4-0_p120.ebuild,
+  lz4-9999.ebuild:
+  export CC & AR for cross-compilation
 
   26 Aug 2014; Raúl Porcel <armin76@gentoo.org> lz4-0_p106-r1.ebuild,
   lz4-0_p120.ebuild, lz4-9999.ebuild:
