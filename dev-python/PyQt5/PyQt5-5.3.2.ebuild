@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/PyQt5-5.3.2.ebuild,v 1.1 2014/10/13 17:26:10 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/PyQt5-5.3.2.ebuild,v 1.2 2014/10/13 17:50:20 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -28,23 +28,12 @@ IUSE="dbus debug declarative designer doc examples +gui help multimedia network 
 	printsupport sensors serialport sql svg testlib webkit websockets widgets x11extras xmlpatterns"
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
-	declarative? ( gui )
-	designer? ( gui )
-	help? ( gui )
-	multimedia? ( gui )
-	opengl? ( gui )
 	positioning? ( gui )
-	printsupport? ( gui )
 	sensors? ( gui )
 	serialport? ( gui )
-	sql? ( gui widgets )
-	svg? ( gui )
-	testlib? ( gui widgets )
-	webkit? ( gui network )
+	sql? ( widgets )
+	testlib? ( widgets )
 	websockets? ( gui )
-	widgets? ( gui )
-	x11extras? ( gui )
-	xmlpatterns? ( network )
 "
 
 # Minimal supported version of Qt.
@@ -73,7 +62,7 @@ RDEPEND="
 	sql? ( >=dev-qt/qtsql-${QT_PV} )
 	svg? ( >=dev-qt/qtsvg-${QT_PV} )
 	testlib? ( >=dev-qt/qttest-${QT_PV} )
-	webkit? ( >=dev-qt/qtwebkit-${QT_PV} )
+	webkit? ( >=dev-qt/qtwebkit-${QT_PV}[printsupport] )
 	websockets? ( >=dev-qt/qtwebsockets-${QT_PV} )
 	widgets? ( >=dev-qt/qtwidgets-${QT_PV} )
 	x11extras? ( >=dev-qt/qtx11extras-${QT_PV} )

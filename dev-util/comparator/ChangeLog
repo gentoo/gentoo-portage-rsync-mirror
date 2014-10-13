@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/comparator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/ChangeLog,v 1.29 2014/10/13 14:22:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/ChangeLog,v 1.30 2014/10/13 17:56:14 blueness Exp $
+
+*comparator-2.10 (13 Oct 2014)
+
+  13 Oct 2014; Anthony G. Basile <blueness@gentoo.org> +comparator-2.10.ebuild:
+  Version bump
 
   13 Oct 2014; Anthony G. Basile <blueness@gentoo.org> -comparator-2.8.ebuild,
   comparator-2.5.ebuild:
