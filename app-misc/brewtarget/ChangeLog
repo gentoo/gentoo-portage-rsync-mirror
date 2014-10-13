@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/brewtarget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/ChangeLog,v 1.6 2014/05/24 20:48:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/ChangeLog,v 1.7 2014/10/13 00:30:33 pesa Exp $
+
+*brewtarget-2.1.0 (13 Oct 2014)
+
+  13 Oct 2014; Davide Pesavento <pesa@gentoo.org> +brewtarget-2.1.0.ebuild:
+  Version bump.
 
 *brewtarget-2.0.2 (24 May 2014)
 
