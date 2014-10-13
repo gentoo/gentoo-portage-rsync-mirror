@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.19 2014/09/07 17:41:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.20 2014/10/13 16:44:47 mgorny Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils unpacker games
 
 DESCRIPTION="Return to Castle Wolfenstein - Long awaited sequel to Wolfenstein 3D"
@@ -17,14 +17,20 @@ KEYWORDS="~amd64 ~x86"
 IUSE="opengl dedicated"
 RESTRICT="strip mirror"
 
-UIDEPEND="virtual/opengl
-	x86? (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXau
-		x11-libs/libXdmcp
-	)
-	amd64? ( app-emulation/emul-linux-x86-xlibs )"
+UIDEPEND="
+	|| (
+		(
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXau[abi_x86_32(-)]
+			x11-libs/libXdmcp[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)"
 RDEPEND="sys-libs/glibc
 	sys-libs/lib-compat
 	dedicated? ( app-misc/screen )
@@ -42,7 +48,7 @@ src_install() {
 	doins -r main Docs pb
 
 	exeinto "${dir}"
-	doexe bin/Linux/x86/*.x86 openurl.sh || die "copying exe"
+	doexe bin/Linux/x86/*.x86 openurl.sh
 
 	games_make_wrapper rtcwmp ./wolf.x86 "${dir}" "${dir}"
 	games_make_wrapper rtcwsp ./wolfsp.x86 "${dir}" "${dir}"
