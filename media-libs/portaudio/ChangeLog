@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.106 2014/08/08 21:24:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.107 2014/10/13 07:31:25 mgorny Exp $
+
+  13 Oct 2014; Michał Górny <mgorny@gentoo.org>
+  portaudio-19_pre20111121-r1.ebuild, portaudio-19_pre20140130.ebuild:
+  Set safe minimal versions of multilib dependencies, bug #513790.
 
   08 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
   portaudio-19_pre20140130.ebuild:

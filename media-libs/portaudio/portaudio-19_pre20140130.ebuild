@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-19_pre20140130.ebuild,v 1.10 2014/08/08 21:24:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-19_pre20140130.ebuild,v 1.11 2014/10/13 07:31:25 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
@@ -17,8 +17,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 IUSE="alsa +cxx debug jack oss static-libs"
 
-RDEPEND="alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
-	jack? ( media-sound/jack-audio-connection-kit[${MULTILIB_USEDEP}] )
+RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.121.3-r1[${MULTILIB_USEDEP}] )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r8
 					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
