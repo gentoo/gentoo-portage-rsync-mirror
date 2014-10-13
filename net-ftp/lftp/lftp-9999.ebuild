@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-9999.ebuild,v 1.1 2014/10/10 15:31:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-9999.ebuild,v 1.2 2014/10/13 19:28:18 jer Exp $
 
 EAPI=5
 inherit autotools eutils git-r3 libtool
@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
 
-IUSE="convert-mozilla-cookies +gnutls nls openssl socks5 +ssl verify-file"
+IUSE="convert-mozilla-cookies +gnutls idn nls openssl socks5 +ssl verify-file"
 LFTP_LINGUAS=( cs de es fr it ja ko pl pt_BR ru uk zh_CN zh_HK zh_TW )
 IUSE+=" ${LFTP_LINGUAS[@]/#/linguas_}"
 
@@ -27,6 +27,7 @@ RDEPEND="
 	dev-libs/expat
 	sys-libs/zlib
 	convert-mozilla-cookies? ( dev-perl/DBI )
+	idn? ( net-dns/libidn )
 	socks5? (
 		>=net-proxy/dante-1.1.12
 		virtual/pam
@@ -71,6 +72,7 @@ src_configure() {
 	econf \
 		$(use_enable nls) \
 		$(use_with gnutls) \
+		$(use_with idn libidn) \
 		$(use_with openssl openssl "${EPREFIX}"/usr) \
 		$(use_with socks5 socksdante "${EPREFIX}"/usr) \
 		--enable-packager-mode \

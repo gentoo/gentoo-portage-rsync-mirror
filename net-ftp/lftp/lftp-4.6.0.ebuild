@@ -1,19 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.5.5.20141003.ebuild,v 1.2 2014/10/10 15:31:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.6.0.ebuild,v 1.1 2014/10/13 19:28:18 jer Exp $
 
 EAPI=5
 inherit autotools eutils libtool
 
 DESCRIPTION="A sophisticated ftp/sftp/http/https/torrent client and file transfer program"
 HOMEPAGE="http://lftp.yar.ru/"
-SRC_URI="${HOMEPAGE}/ftp/devel/${P}.tar.gz"
+SRC_URI="${HOMEPAGE}/ftp/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 
-IUSE="convert-mozilla-cookies +gnutls nls openssl socks5 +ssl verify-file"
+IUSE="convert-mozilla-cookies +gnutls idn nls openssl socks5 +ssl verify-file"
 LFTP_LINGUAS=( cs de es fr it ja ko pl pt_BR ru uk zh_CN zh_HK zh_TW )
 IUSE+=" ${LFTP_LINGUAS[@]/#/linguas_}"
 
@@ -27,6 +27,7 @@ RDEPEND="
 	dev-libs/expat
 	sys-libs/zlib
 	convert-mozilla-cookies? ( dev-perl/DBI )
+	idn? ( net-dns/libidn )
 	socks5? (
 		>=net-proxy/dante-1.1.12
 		virtual/pam
@@ -59,9 +60,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-4.0.2.91-lafile.patch \
 		"${FILESDIR}"/${PN}-4.3.8-gets.patch \
 		"${FILESDIR}"/${PN}-4.5.3-autopoint.patch \
-		"${FILESDIR}"/${PN}-4.5.5-nls-socks.patch
+		"${FILESDIR}"/${PN}-4.5.5-am_config_header.patch
 
-	sed -i configure.ac -e 's|^AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
 	eautoreconf
 	elibtoolize # for Darwin bundles
 }
@@ -70,6 +70,7 @@ src_configure() {
 	econf \
 		$(use_enable nls) \
 		$(use_with gnutls) \
+		$(use_with idn libidn) \
 		$(use_with openssl openssl "${EPREFIX}"/usr) \
 		$(use_with socks5 socksdante "${EPREFIX}"/usr) \
 		--enable-packager-mode \

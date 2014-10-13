@@ -2052,20 +2052,22 @@ dev-php/smarty-docs:pdf - Install the documentation in PDF format
 dev-python/Kivy:camera - Install libraries needed to support camera
 dev-python/Kivy:garden - Install garden tool to manage user maintained widgets
 dev-python/PyFoam:extras - Enable optional dependencies
-dev-python/PyQt4:X - Build QtGui and QtTest modules
-dev-python/PyQt4:declarative - Build QtDeclarative module
-dev-python/PyQt4:designer - Build QtDesigner module
-dev-python/PyQt4:help - Build QtHelp module
+dev-python/PyQt4:X - Build bindings for the QtGui module
+dev-python/PyQt4:dbus - Build bindings for the QtDBus module
+dev-python/PyQt4:declarative - Build bindings for the QtDeclarative module
+dev-python/PyQt4:designer - Build bindings for the QtDesigner module and enable the designer plugin
+dev-python/PyQt4:help - Build bindings for the QtHelp module
 dev-python/PyQt4:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
-dev-python/PyQt4:multimedia - Build QtMultimedia module
-dev-python/PyQt4:opengl - Build QtOpenGL module
-dev-python/PyQt4:phonon - Build phonon module
-dev-python/PyQt4:script - Build QtScript module
-dev-python/PyQt4:scripttools - Build QtScriptTools module
-dev-python/PyQt4:sql - Build QtSql module
-dev-python/PyQt4:svg - Build QtSvg module
-dev-python/PyQt4:webkit - Build QtWebKit module
-dev-python/PyQt4:xmlpatterns - Build QtXmlPatterns module
+dev-python/PyQt4:multimedia - Build bindings for the QtMultimedia module
+dev-python/PyQt4:opengl - Build bindings for the QtOpenGL module
+dev-python/PyQt4:phonon - Build bindings for the phonon module
+dev-python/PyQt4:script - Build bindings for the QtScript module
+dev-python/PyQt4:scripttools - Build bindings for the QtScriptTools module
+dev-python/PyQt4:sql - Build bindings for the QtSql module
+dev-python/PyQt4:svg - Build bindings for the QtSvg module
+dev-python/PyQt4:testlib - Build bindings for the QtTest module
+dev-python/PyQt4:webkit - Build bindings for the QtWebKit module
+dev-python/PyQt4:xmlpatterns - Build bindings for the QtXmlPatterns module
 dev-python/PyQt5:dbus - Build bindings for the QtDBus module
 dev-python/PyQt5:declarative - Build bindings for the QtQml/QtQuick modules and enable the qmlscene plugin
 dev-python/PyQt5:designer - Build bindings for the QtDesigner module and enable the designer plugin
