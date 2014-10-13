@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.199 2014/09/21 19:51:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.200 2014/10/13 11:21:31 mgorny Exp $
+
+  13 Oct 2014; Michał Górny <mgorny@gentoo.org> alsa-plugins-1.0.28.ebuild:
+  Re-enable USE=ffmpeg for multilib, bug #513002.
 
   21 Sep 2014; Markus Meier <maekke@gentoo.org> alsa-plugins-1.0.28.ebuild:
   arm stable, bug #522038

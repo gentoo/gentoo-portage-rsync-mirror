@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.20.2-r1.ebuild,v 1.11 2014/10/11 12:38:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.20.2-r1.ebuild,v 1.12 2014/10/13 11:17:37 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x
 IUSE="accessibility lua"
 
 RDEPEND=">=x11-libs/gtk+-2.24.23:2[${MULTILIB_USEDEP}]
-	lua? ( dev-lang/lua )
+	lua? ( dev-lang/lua[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-gtklibs-20140508
 		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
@@ -38,8 +38,8 @@ multilib_src_configure() {
 	ECONF_SOURCE=${S} \
 	gnome2_src_configure \
 		--enable-animation \
-		$(multilib_native_use_enable lua) \
-		$(multilib_native_use_with lua system-lua) \
+		$(use_enable lua) \
+		$(use_with lua system-lua) \
 		$(use_enable accessibility hc)
 }
 

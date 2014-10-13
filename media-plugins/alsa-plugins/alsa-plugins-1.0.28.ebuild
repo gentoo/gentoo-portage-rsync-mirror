@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.28.ebuild,v 1.3 2014/09/21 19:51:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.28.ebuild,v 1.4 2014/10/13 11:21:31 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib multilib-minimal
@@ -14,10 +14,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux"
 IUSE="debug ffmpeg jack libsamplerate pulseaudio speex"
 
-# TODO: handle USE=ffmpeg once it is converted
-
 RDEPEND=">=media-libs/alsa-lib-${PV}:=[${MULTILIB_USEDEP}]
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg[${MULTILIB_USEDEP}] )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.121.3-r1[${MULTILIB_USEDEP}] )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.8-r1:=[${MULTILIB_USEDEP}] )
 	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1[${MULTILIB_USEDEP}] )
@@ -52,7 +50,7 @@ multilib_src_configure() {
 
 	ECONF_SOURCE=${S} \
 	econf \
-		$(multilib_native_use_enable ffmpeg avcodec) \
+		$(use_enable ffmpeg avcodec) \
 		$(use_enable jack) \
 		$(use_enable libsamplerate samplerate) \
 		$(use_enable pulseaudio) \
