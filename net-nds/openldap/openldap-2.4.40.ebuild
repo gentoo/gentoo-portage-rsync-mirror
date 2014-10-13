@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40.ebuild,v 1.2 2014/10/12 06:30:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40.ebuild,v 1.3 2014/10/13 09:30:56 mgorny Exp $
 
 EAPI="5"
 
@@ -101,6 +101,9 @@ MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/SaslInteractionHandler.h
 	/usr/include/StringList.h
 	/usr/include/TlsOptions.h
+
+	# USE=-minimal
+	/usr/include/lmdb.h
 )
 
 openldap_filecount() {
