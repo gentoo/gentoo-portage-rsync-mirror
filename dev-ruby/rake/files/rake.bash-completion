@@ -1,4 +1,3 @@
-have rake &&
 _rake()
 {
     local cur prev rakef i
