@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.15.10.ebuild,v 1.1 2013/07/26 14:25:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.15.10.ebuild,v 1.2 2014/10/13 01:23:15 idella4 Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ RDEPEND="dev-python/lxml[${PYTHON_USEDEP}]
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	app-arch/unzip
-	doc? ( dev-python/sphinx )"
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 
 # TODO: requires ploticus to generate timelines
 
