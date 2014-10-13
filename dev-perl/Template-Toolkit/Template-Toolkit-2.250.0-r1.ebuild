@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.250.0-r1.ebuild,v 1.1 2014/08/21 19:45:50 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.250.0-r1.ebuild,v 1.2 2014/10/13 22:40:57 dilfridge Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ PDEPEND="dev-perl/text-autoformat
 	xml? ( dev-perl/Template-XML )
 	gd? ( dev-perl/Template-GD )
 	mysql? ( dev-perl/Template-DBI )
-	latex? ( dev-perl/Template-Latex )
+	latex? ( dev-perl/Template-Plugin-Latex )
 	postgres? ( dev-perl/Template-DBI )"
 
 myconf=(
