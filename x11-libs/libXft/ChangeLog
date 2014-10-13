@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXft
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.99 2014/06/13 13:27:50 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.100 2014/10/13 07:17:22 mgorny Exp $
+
+  13 Oct 2014; Michał Górny <mgorny@gentoo.org> libXft-2.3.1-r1.ebuild,
+  libXft-2.3.2.ebuild:
+  Set safe minimal versions of multilib dependencies, bug #513770.
 
 *libXft-2.3.2 (13 Jun 2014)
 

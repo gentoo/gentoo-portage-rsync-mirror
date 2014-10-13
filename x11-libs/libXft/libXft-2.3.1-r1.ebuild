@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/libXft-2.3.1-r1.ebuild,v 1.11 2013/12/23 17:49:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/libXft-2.3.1-r1.ebuild,v 1.12 2014/10/13 07:17:22 mgorny Exp $
 
 EAPI=5
 
@@ -12,12 +12,12 @@ DESCRIPTION="X.Org Xft library"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE=""
 
-RDEPEND=">=x11-libs/libXrender-0.8.2[${MULTILIB_USEDEP}]
-	x11-libs/libX11[${MULTILIB_USEDEP}]
-	x11-libs/libXext[${MULTILIB_USEDEP}]
-	media-libs/freetype[${MULTILIB_USEDEP}]
-	media-libs/fontconfig[${MULTILIB_USEDEP}]
-	x11-proto/xproto[${MULTILIB_USEDEP}]
+RDEPEND=">=x11-libs/libXrender-0.9.8[${MULTILIB_USEDEP}]
+	>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+	>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+	>=media-libs/freetype-2.5.0.1[${MULTILIB_USEDEP}]
+	>=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}]
+	>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
 	virtual/ttf-fonts"
 DEPEND="${RDEPEND}"
 

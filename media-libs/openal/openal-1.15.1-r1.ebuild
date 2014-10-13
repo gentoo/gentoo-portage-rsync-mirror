@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r1.ebuild,v 1.8 2014/04/28 17:47:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r1.ebuild,v 1.9 2014/10/13 07:25:21 mgorny Exp $
 
 EAPI=5
 inherit cmake-multilib
@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="alsa alstream coreaudio debug neon oss portaudio pulseaudio sse"
 
-RDEPEND="alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
+RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
 	alstream? ( virtual/ffmpeg )
-	portaudio? ( >=media-libs/portaudio-19_pre[${MULTILIB_USEDEP}] )
-	pulseaudio? ( media-sound/pulseaudio[${MULTILIB_USEDEP}] )
+	portaudio? ( >=media-libs/portaudio-19_pre20111121-r1[${MULTILIB_USEDEP}] )
+	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<app-emulation/emul-linux-x86-sdl-20131008-r1
 		!app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]

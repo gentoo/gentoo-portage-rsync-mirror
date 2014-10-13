@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.11.1.ebuild,v 1.3 2014/06/10 00:44:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.11.1.ebuild,v 1.4 2014/10/13 07:22:24 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
@@ -19,8 +19,8 @@ IUSE="doc static-libs"
 # Purposefully dropped the xml USE flag and libxml2 support.  Expat is the
 # default and used by every distro.  See bug #283191.
 
-RDEPEND=">=dev-libs/expat-1.95.3[${MULTILIB_USEDEP}]
-	>=media-libs/freetype-2.2.1[${MULTILIB_USEDEP}]
+RDEPEND=">=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]
+	>=media-libs/freetype-2.5.3-r1[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
