@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.29 2014/07/23 08:48:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.30 2014/10/13 12:44:36 chainsaw Exp $
+
+*bird-1.4.5 (13 Oct 2014)
+
+  13 Oct 2014; Tony Vroon <chainsaw@gentoo.org> +bird-1.4.5.ebuild:
+  Adds support for "show route noexport", a port option for BGP sessions,
+  better constant handling in set literals and better rate filtering of log
+  messages. There is also mention of several minor bugfixes. As requested by
+  Moyaze Shivji in the LINX engineering team.
 
 *bird-1.4.4 (23 Jul 2014)
 
