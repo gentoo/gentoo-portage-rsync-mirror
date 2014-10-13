@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.205 2014/10/11 12:30:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.206 2014/10/13 20:47:33 pacho Exp $
+
+*networkmanager-0.9.10.0-r1 (13 Oct 2014)
+
+  13 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/networkmanager-0.9.10.0-arpingpath.patch,
+  +networkmanager-0.9.10.0-r1.ebuild:
+  Ifnet plugin is now disabled because of it being unattended and unmaintained
+  for a long time, leading to some unfixed bugs and new problems appearing
+  (#443596, #458274, #493370, #498372, #523700). If some day somebody volunteers
+  for fixing/maintaining that plugin and forwarding all that fixes to upstream
+  it could be re-enabled of course. Append configure option regarding systemd
+  unit files install path only when systemd support is enabled to prevent
+  HAVE_SYSTEMD to be true (#524534 by Konstantin Ivanov). Ensure arping is found
+  (#523632 by Kobboi).
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org>
   networkmanager-0.9.8.10-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20110605.ebuild,v 1.4 2014/08/10 20:29:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20110605.ebuild,v 1.5 2014/10/13 20:56:41 tamiko Exp $
 
 EAPI="2"
 
@@ -10,7 +10,8 @@ DESCRIPTION="Donald Knuth's MMIX Assembler and Simulator"
 HOMEPAGE="http://www-cs-faculty.stanford.edu/~knuth/mmix.html"
 SRC_URI="http://www-cs-faculty.stanford.edu/~knuth/programs/${P}.tar.gz"
 
-DEPEND="|| ( >=dev-util/cweb-3.63 virtual/tex-base )"
+DEPEND="virtual/tex-base
+	doc? ( dev-texlive/texlive-genericrecommended )"
 RDEPEND=""
 
 SLOT="0"

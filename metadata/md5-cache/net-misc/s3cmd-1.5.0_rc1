@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm prepare setup
+DEPEND==dev-lang/python-2* =dev-lang/python-2*[xml]
+DESCRIPTION=Command line client for Amazon S3
+EAPI=3
+HOMEPAGE=http://s3tools.org/s3cmd
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND==dev-lang/python-2* =dev-lang/python-2*[xml]
+SLOT=0
+SRC_URI=mirror://sourceforge/s3tools/s3cmd-1.5.0-rc1.tar.gz
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=0ccf23bb5ad505caad0b5098ff3a9da9
