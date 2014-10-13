@@ -1,6 +1,12 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.37 2014/08/05 18:34:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.38 2014/10/13 17:30:50 klausman Exp $
+
+*prosody-0.9.5 (13 Oct 2014)
+
+  13 Oct 2014; Tobias Klausmann <klausman@gentoo.org> -prosody-0.9.1-r1.ebuild,
+  -prosody-0.9.2.ebuild, -prosody-0.9.3.ebuild, +prosody-0.9.5.ebuild:
+  Version bump and cleanup of old versions
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> prosody-0.8.2-r1.ebuild,
   prosody-0.8.2.ebuild, prosody-0.9.1-r1.ebuild, prosody-0.9.2.ebuild,

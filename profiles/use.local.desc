@@ -2066,6 +2066,26 @@ dev-python/PyQt4:sql - Build QtSql module
 dev-python/PyQt4:svg - Build QtSvg module
 dev-python/PyQt4:webkit - Build QtWebKit module
 dev-python/PyQt4:xmlpatterns - Build QtXmlPatterns module
+dev-python/PyQt5:dbus - Build bindings for the QtDBus module
+dev-python/PyQt5:declarative - Build bindings for the QtQml/QtQuick modules and enable the qmlscene plugin
+dev-python/PyQt5:designer - Build bindings for the QtDesigner module and enable the designer plugin
+dev-python/PyQt5:gui - Build bindings for the QtGui module
+dev-python/PyQt5:help - Build bindings for the QtHelp module
+dev-python/PyQt5:multimedia - Build bindings for the QtMultimedia module
+dev-python/PyQt5:network - Build bindings for the QtNetwork module
+dev-python/PyQt5:opengl - Build bindings for the QtOpenGL module
+dev-python/PyQt5:positioning - Build bindings for the QtPositioning module
+dev-python/PyQt5:printsupport - Build bindings for the QtPrintSupport module
+dev-python/PyQt5:sensors - Build bindings for the QtSensors module
+dev-python/PyQt5:serialport - Build bindings for the QtSerialPort module
+dev-python/PyQt5:sql - Build bindings for the QtSql module
+dev-python/PyQt5:svg - Build bindings for the QtSvg module
+dev-python/PyQt5:testlib - Build bindings for the QtTest module
+dev-python/PyQt5:webkit - Build bindings for the QtWebKit module
+dev-python/PyQt5:websockets - Build bindings for the QtWebSockets module
+dev-python/PyQt5:widgets - Build bindings for the QtWidgets module
+dev-python/PyQt5:x11extras - Build bindings for the QtX11Extras module
+dev-python/PyQt5:xmlpatterns - Build bindings for the QtXmlPatterns module
 dev-python/PyQtMobility:contacts - Build bindings for the QtContacts module
 dev-python/PyQtMobility:feedback - Build bindings for the QtFeedback module
 dev-python/PyQtMobility:gallery - Build bindings for the QtGallery module
