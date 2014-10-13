@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9447 2014/10/12 15:03:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9448 2014/10/13 00:54:59 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Oct 2014; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Add PyQt5 to Qt5 mask.
 
   12 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Seems like Template::Latex is still needed, unmask it again (bump and pkgmove
