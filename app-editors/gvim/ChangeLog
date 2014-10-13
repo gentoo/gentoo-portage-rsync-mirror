@@ -1,6 +1,17 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.440 2014/10/12 09:01:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.442 2014/10/13 21:15:17 radhermit Exp $
+
+  13 Oct 2014; Tim Harder <radhermit@gentoo.org> -gvim-7.4.52.ebuild,
+  -gvim-7.4.155.ebuild, -gvim-7.4.169.ebuild, -gvim-7.4.193.ebuild,
+  -gvim-7.4.326.ebuild, -gvim-7.4.417.ebuild:
+  Remove old.
+
+*gvim-7.4.475 (13 Oct 2014)
+
+  13 Oct 2014; Tim Harder <radhermit@gentoo.org> +gvim-7.4.475.ebuild,
+  gvim-9999.ebuild:
+  Version bump.
 
   12 Oct 2014; Agostino Sarubbo <ago@gentoo.org> gvim-7.4.273.ebuild:
   Stable for x86, wrt bug #511190

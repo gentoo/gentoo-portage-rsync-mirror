@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/zram-init/zram-init-3.0.ebuild,v 1.1 2014/09/29 21:48:20 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/zram-init/zram-init-3.0.ebuild,v 1.2 2014/10/13 21:19:54 jauhien Exp $
 
 EAPI=5
-inherit eutils readme.gentoo systemd
+inherit eutils linux-info readme.gentoo systemd
 
 DESCRIPTION="Scripts to support compressed swap devices or ramdisks with zram"
 HOMEPAGE="https://github.com/vaeth/zram-init/"
@@ -36,4 +36,14 @@ src_install() {
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
 	readme.gentoo_create_doc
+}
+
+pkg_postinst() {
+	if kernel_is -lt 3 15 ; then
+		ewarn "Your kernel version is ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
+		ewarn "sys-block/zram-init default config starting from version 3.0"
+		ewarn "requires a kernel >= 3.15.0."
+		ewarn "Make sure you have edited it, so it uses only functions"
+		ewarn "available for your kernel version (bug 525302)."
+	fi
 }

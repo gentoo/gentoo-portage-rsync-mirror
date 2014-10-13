@@ -1,6 +1,10 @@
 # ChangeLog for games-server/etqw-ded
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/etqw-ded/ChangeLog,v 1.2 2011/12/14 17:31:07 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/etqw-ded/ChangeLog,v 1.3 2014/10/13 21:11:16 mgorny Exp $
+
+  13 Oct 2014; Michał Górny <mgorny@gentoo.org> etqw-ded-1.5.ebuild:
+  Remove the emul-linux-x86 dependency since the package lists no extra native
+  packages.
 
   14 Dec 2011; Mike Frysinger <vapier@gentoo.org> etqw-ded-1.5.ebuild:
   The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
@@ -11,4 +15,3 @@
   03 Sep 2008; Tristan Heaven <nyhm@gentoo.org> +metadata.xml,
   +etqw-ded-1.5.ebuild:
   Initial commit, bug #194428
-

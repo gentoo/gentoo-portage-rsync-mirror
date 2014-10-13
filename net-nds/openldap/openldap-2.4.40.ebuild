@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40.ebuild,v 1.3 2014/10/13 09:30:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40.ebuild,v 1.4 2014/10/13 21:03:06 robbat2 Exp $
 
 EAPI="5"
 
@@ -764,6 +764,10 @@ multilib_src_install_all() {
 pkg_preinst() {
 	# keep old libs if any
 	preserve_old_lib /usr/$(get_libdir)/{liblber,libldap_r,liblber}-2.3$(get_libname 0)
+	# bug 440470, only display the getting started help there was no openldap before, 
+	# or we are going to a non-minimal build
+	! has_version net-nds/openldap || has_version 'net-nds/openldap[minimal]'
+	OPENLDAP_PRINT_MESSAGES=$((! $?))
 }
 
 pkg_postinst() {
@@ -795,13 +799,13 @@ pkg_postinst() {
 		use prefix || chown ldap:ldap "${EROOT}"var/lib/openldap-data
 	fi
 
-	if ! has_version 'net-nds/openldap'; then
-	elog "Getting started using OpenLDAP? There is some documentation available:"
-	elog "Gentoo Guide to OpenLDAP Authentication"
-	elog "(http://www.gentoo.org/doc/en/ldap-howto.xml)"
-	elog "---"
-	elog "An example file for tuning BDB backends with openldap is"
-	elog "DB_CONFIG.fast.example in /usr/share/doc/${PF}/"
+	if has_version 'net-nds/openldap[-minimal]' && ((${OPENLDAP_PRINT_MESSAGES})); then
+		elog "Getting started using OpenLDAP? There is some documentation available:"
+		elog "Gentoo Guide to OpenLDAP Authentication"
+		elog "(http://www.gentoo.org/doc/en/ldap-howto.xml)"
+		elog "---"
+		elog "An example file for tuning BDB backends with openldap is"
+		elog "DB_CONFIG.fast.example in /usr/share/doc/${PF}/"
 	fi
 
 	preserve_old_lib_notify /usr/$(get_libdir)/{liblber,libldap,libldap_r}-2.3$(get_libname 0)

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.326.ebuild,v 1.1 2014/06/16 05:59:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.475.ebuild,v 1.2 2014/10/13 21:13:29 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE=threads
 inherit eutils vim-doc flag-o-matic fdo-mime versionator bash-completion-r1 python-single-r1
 
@@ -14,9 +14,9 @@ if [[ ${PV} == 9999* ]] ; then
 	EHG_PROJECT="vim"
 else
 	VIM_ORG_PATCHES="vim-patches-${PV}.patch.bz2"
-
 	SRC_URI="ftp://ftp.vim.org/pub/vim/unix/vim-${VIM_VERSION}.tar.bz2
-		http://dev.gentoo.org/~radhermit/vim/${VIM_ORG_PATCHES}"
+		http://dev.gentoo.org/~radhermit/vim/${VIM_ORG_PATCHES}
+		http://dev.gentoo.org/~radhermit/vim/vim-${VIM_VERSION}-gentoo-patches.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 fi
 
@@ -49,7 +49,7 @@ RDEPEND="
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
 	racket? ( dev-scheme/racket )
-	ruby? ( || ( dev-lang/ruby:2.1 dev-lang/ruby:2.0 dev-lang/ruby:1.9 dev-lang/ruby:1.8 ) )
+	ruby? ( || ( dev-lang/ruby:2.1 dev-lang/ruby:2.0 dev-lang/ruby:1.9 ) )
 	selinux? ( sys-libs/libselinux )
 	tcl? ( dev-lang/tcl )
 	X? ( x11-libs/libXt )
@@ -80,6 +80,12 @@ src_prepare() {
 		if [[ -f "${WORKDIR}"/${VIM_ORG_PATCHES%.bz2} ]] ; then
 			# Apply any patches available from vim.org for this version
 			epatch "${WORKDIR}"/${VIM_ORG_PATCHES%.bz2}
+		fi
+
+		if [[ -d "${WORKDIR}"/patches/ ]]; then
+			# Gentoo patches to fix runtime issues, cross-compile errors, etc
+			EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
+				epatch "${WORKDIR}"/patches/
 		fi
 	fi
 
@@ -327,6 +333,8 @@ src_install() {
 	fi
 
 	newbashcomp "${FILESDIR}"/${PN}-completion ${PN}
+	# keep in sync with 'complete ... -F' list
+	bashcomp_alias vim ex vi view rvim rview vimdiff
 
 	# We shouldn't be installing the ex or view man page symlinks, as they
 	# are managed by eselect-vi

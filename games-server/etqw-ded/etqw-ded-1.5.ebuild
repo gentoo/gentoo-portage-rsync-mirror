@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/etqw-ded/etqw-ded-1.5.ebuild,v 1.3 2011/12/14 17:31:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/etqw-ded/etqw-ded-1.5.ebuild,v 1.4 2014/10/13 21:11:16 mgorny Exp $
 
 inherit games
 
@@ -15,8 +15,7 @@ IUSE=""
 RESTRICT="fetch strip"
 
 DEPEND="app-arch/unzip"
-RDEPEND="sys-libs/glibc
-	amd64? ( app-emulation/emul-linux-x86-baselibs )"
+RDEPEND="sys-libs/glibc"
 
 S=${WORKDIR}/data
 dir=${GAMES_PREFIX_OPT}/${PN}
