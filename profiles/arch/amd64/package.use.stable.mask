@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.69 2014/10/13 13:18:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.71 2014/10/13 18:52:35 klausman Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -64,6 +64,7 @@ dev-db/sqlite abi_x86_32
 dev-db/unixODBC abi_x86_32
 dev-games/physfs abi_x86_32
 dev-java/jna abi_x86_32
+dev-lang/lua abi_x86_32
 dev-lang/orc abi_x86_32
 dev-lang/perl abi_x86_32
 dev-lang/python abi_x86_32
@@ -116,6 +117,7 @@ dev-libs/nsgenbind abi_x86_32
 dev-libs/nspr abi_x86_32
 dev-libs/nss abi_x86_32
 dev-libs/openssl abi_x86_32
+dev-lua/luaexpat abi_x86_32
 dev-util/pkgconfig abi_x86_32
 dev-libs/re2 abi_x86_32
 dev-libs/udis86 abi_x86_32
