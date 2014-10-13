@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/dominions2-demo-2.08-r1.ebuild,v 1.5 2014/05/07 16:20:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/dominions2-demo-2.08-r1.ebuild,v 1.6 2014/10/13 16:18:40 mgorny Exp $
 
 EAPI=4
 
@@ -17,15 +17,24 @@ KEYWORDS="-* ~amd64 ~ppc ~x86"
 IUSE=""
 RESTRICT="mirror bindist strip"
 
-DEPEND="!amd64? (
-		virtual/glu
-		virtual/opengl
-		x11-libs/libXext
-		x11-libs/libX11
-	)
-	amd64? (
-		app-emulation/emul-linux-x86-opengl
-		app-emulation/emul-linux-x86-xlibs
+DEPEND="
+	|| (
+		ppc? (
+			virtual/glu
+			virtual/opengl
+			x11-libs/libXext
+			x11-libs/libX11
+		)
+		!ppc? (
+			virtual/glu[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
 	)"
 RDEPEND="${DEPEND}"
 

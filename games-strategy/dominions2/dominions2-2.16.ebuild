@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.11 2014/05/04 18:40:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.12 2014/10/13 16:22:19 mgorny Exp $
+
+EAPI=5
 
 inherit eutils cdrom games
 
@@ -24,12 +26,24 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 RESTRICT="bindist strip"
 
-DEPEND="virtual/opengl
-	virtual/glu
-	x86? ( media-libs/libsdl )
-	ppc? ( media-libs/libsdl )
-	amd64? ( app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-sdl )"
+DEPEND="
+	|| (
+		ppc? (
+			media-libs/libsdl
+			virtual/opengl
+			virtual/glu
+		)
+		!ppc? (
+			media-libs/libsdl[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+			virtual/glu[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)"
 RDEPEND="${DEPEND}"
 
 dir=${GAMES_PREFIX_OPT}/${PN}
@@ -54,23 +68,22 @@ src_install() {
 	exeinto "${dir}"
 	if use amd64 || use x86
 	then
-		doexe "${CDROM_ROOT}"/bin_lin/x86/dom2* || die "doexe failed"
+		doexe "${CDROM_ROOT}"/bin_lin/x86/dom2*
 	elif use ppc
 	then
-		doexe "${CDROM_ROOT}"/bin_lin/ppc/dom2* || die "doexe failed"
+		doexe "${CDROM_ROOT}"/bin_lin/ppc/dom2*
 	fi
 	insinto "${dir}"
-	doins -r "${CDROM_ROOT}"/dominions2.app/Contents/Resources/* || \
-		die "doins failed"
-	dodoc "${CDROM_ROOT}"/doc/* || die "dodoc failed"
+	doins -r "${CDROM_ROOT}"/dominions2.app/Contents/Resources/*
+	dodoc "${CDROM_ROOT}"/doc/*
 
 	# applying the official patches just means overwriting some important
 	# files with their more recent versions:
 	einfo "Applying patch for version ${PV}..."
-	dodoc "${S}"/patch/doc/* || die "dodoc failed"
-	doexe "${S}"/patch/dom2 || die "doexe failed"
+	dodoc "${S}"/patch/doc/*
+	doexe "${S}"/patch/dom2
 	rm -rf "${S}"/patch/doc/ "${S}"/patch/dom2 || die "rm failed"
-	doins -r "${S}"/patch/* || die "doins failed"
+	doins -r "${S}"/patch/*
 
 	if use doc; then
 		elog ""

@@ -1,12 +1,13 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DEPEND=games-util/loki_patch
 DESCRIPTION=turn-based 2D medieval combat
+EAPI=5
 HOMEPAGE=http://www.lokigames.com/products/heroes3/
 KEYWORDS=~amd64 ~x86
 LICENSE=all-rights-reserved
-RDEPEND=>=sys-libs/lib-compat-loki-0.2 x86? ( x11-libs/libX11 ) ppc? ( x11-libs/libX11 ) amd64? ( app-emulation/emul-linux-x86-xlibs ) games-misc/games-envd
+RDEPEND=>=sys-libs/lib-compat-loki-0.2 || ( ppc? ( x11-libs/libX11 ) !ppc? ( x11-libs/libX11[abi_x86_32(-)] ) amd64? ( app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) ) games-misc/games-envd
 RESTRICT=mirror bindist strip
 SLOT=0
 SRC_URI=mirror://lokigames/loki_demos/heroes3-demo.run
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=f2f4cbee37670783edd5d7457e1b5d41
+_md5_=1c63cb5a1ca97d8aa110528cf922508d

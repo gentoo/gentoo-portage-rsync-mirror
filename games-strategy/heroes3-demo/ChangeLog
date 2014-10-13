@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/heroes3-demo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/ChangeLog,v 1.8 2014/09/07 17:45:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/ChangeLog,v 1.9 2014/10/13 16:12:03 mgorny Exp $
+
+  13 Oct 2014; Michał Górny <mgorny@gentoo.org> heroes3-demo-1.3.1a.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   07 Sep 2014; Ulrich Müller <ulm@gentoo.org> heroes3-demo-1.3.1a.ebuild:
   Drop reverse dependencies of sys-libs/lib-compat to unstable, bug 517932.
@@ -29,4 +32,3 @@
   +heroes3-demo-1.3.1a.ebuild:
   Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
   #141746.
-
