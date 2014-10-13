@@ -1,23 +1,21 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.63_p20140416.ebuild,v 1.2 2014/10/13 18:29:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-9999.ebuild,v 1.1 2014/10/13 18:10:43 jer Exp $
 
 EAPI=5
-inherit autotools eutils gnome2-utils toolchain-funcs
+inherit autotools eutils gnome2-utils subversion toolchain-funcs
 
 DESCRIPTION="A Free Telnet/SSH Client"
 HOMEPAGE="http://www.chiark.greenend.org.uk/~sgtatham/putty/"
+ESVN_REPO_URI="svn://svn.tartarus.org/sgt/putty"
 SRC_URI="
-	http://dev.gentoo.org/~jer/${P/_p*/}-2014-04-16.tar.gz
 	http://dev.gentoo.org/~jer/${PN}-icons.tar.bz2
 "
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS=""
 IUSE="doc +gtk ipv6 kerberos"
-
-S=${WORKDIR}/${P/_p*/}-2014-04-16
 
 RDEPEND="
 	!net-misc/pssh
@@ -30,15 +28,23 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
+	app-doc/halibut
 	dev-lang/perl
 	virtual/pkgconfig
 "
+
+src_unpack() {
+	subversion_src_unpack
+	default
+}
 
 src_prepare() {
 	sed -i \
 		-e '/AM_PATH_GTK(/d' \
 		-e 's|-Werror||g' \
 		configure.ac || die
+
+	./mkfiles.pl || die
 
 	eautoreconf
 }
@@ -51,8 +57,8 @@ src_configure() {
 }
 
 src_compile() {
-	cd "${S}"/unix || die
-	emake AR=$(tc-getAR) $(usex ipv6 '' COMPAT=-DNO_IPV6)
+	emake -C "${S}"/doc
+	emake -C "${S}"/unix AR=$(tc-getAR) $(usex ipv6 '' COMPAT=-DNO_IPV6)
 }
 
 src_install() {

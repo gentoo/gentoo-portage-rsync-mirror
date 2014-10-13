@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.63-r1.ebuild,v 1.7 2014/01/18 20:04:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.63-r1.ebuild,v 1.8 2014/10/13 18:29:18 jer Exp $
 
 EAPI=5
 
-inherit autotools eutils gnome2-utils toolchain-funcs versionator
+inherit autotools eutils gnome2-utils toolchain-funcs
 
 DESCRIPTION="A Free Telnet/SSH Client"
 HOMEPAGE="http://www.chiark.greenend.org.uk/~sgtatham/putty/"

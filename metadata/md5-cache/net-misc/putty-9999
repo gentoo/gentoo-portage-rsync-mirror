@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=!net-misc/pssh kerberos? ( virtual/krb5 ) gtk? ( x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango dev-libs/glib ) app-doc/halibut dev-lang/perl virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool >=sys-apps/sed-4 || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DESCRIPTION=A Free Telnet/SSH Client
+EAPI=5
+HOMEPAGE=http://www.chiark.greenend.org.uk/~sgtatham/putty/
+IUSE=doc +gtk ipv6 kerberos
+LICENSE=MIT
+RDEPEND=!net-misc/pssh kerberos? ( virtual/krb5 ) gtk? ( x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango dev-libs/glib )
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~jer/putty-icons.tar.bz2
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=3485abcae9fc835938457266ea8b369d

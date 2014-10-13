@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/lldpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.21 2014/10/10 11:02:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.22 2014/10/13 18:06:06 chutzpah Exp $
+
+*lldpd-0.7.11-r1 (13 Oct 2014)
+
+  13 Oct 2014; Patrick McLean <chutzpah@gentoo.org> -lldpd-0.7.1.ebuild,
+  -lldpd-0.7.6.ebuild, -lldpd-0.7.7.ebuild, -lldpd-0.7.10.ebuild,
+  -lldpd-0.7.11.ebuild, +lldpd-0.7.11-r1.ebuild,
+  -files/lldpd-0.7.6-include-unistd.patch,
+  -files/lldpd-0.7.7-fix-readline-wrapper.patch,
+  -files/lldpd-0.7.10-completions.patch,
+  -files/lldpd-0.7.10-handle-read-errors.patch,
+  -files/lldpd-0.7.10-only-use-physical-for-chassis-id.patch,
+  -files/lldpd-0.7.10-zsh-completion-dir.patch, -files/lldpd-initd-1,
+  +files/lldpd-initd-4:
+  Revision bump, make sure to pass LLDPD_OPTS to the command line (bug
+  #525190). Remove old.
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> lldpd-0.7.9-r3.ebuild:
   Stable for x86, wrt bug #522704

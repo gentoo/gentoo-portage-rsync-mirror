@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/putty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.95 2014/08/20 23:06:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.97 2014/10/13 18:29:18 jer Exp $
+
+*putty-0.63_p20141002 (13 Oct 2014)
+
+  13 Oct 2014; Jeroen Roovers <jer@gentoo.org> putty-0.63-r1.ebuild,
+  putty-0.63_p20140416.ebuild, putty-0.63_p20140820.ebuild,
+  +putty-0.63_p20141002.ebuild:
+  Version bump. Remove unused eclass.
+
+*putty-9999 (13 Oct 2014)
+
+  13 Oct 2014; Jeroen Roovers <jer@gentoo.org> +putty-9999.ebuild:
+  Add live ebuild.
 
 *putty-0.63_p20140820 (20 Aug 2014)
 
