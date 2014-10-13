@@ -1,6 +1,16 @@
 # ChangeLog for app-vim/command-t
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/ChangeLog,v 1.19 2014/08/14 13:51:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/ChangeLog,v 1.21 2014/10/12 23:24:19 radhermit Exp $
+
+  12 Oct 2014; Tim Harder <radhermit@gentoo.org> -command-t-1.5.1.ebuild,
+  -command-t-1.6.ebuild, -command-t-1.6.1.ebuild, -command-t-1.7.ebuild,
+  -command-t-1.8.ebuild, -command-t-1.9.ebuild:
+  Remove old.
+
+*command-t-1.11.3 (12 Oct 2014)
+
+  12 Oct 2014; Tim Harder <radhermit@gentoo.org> +command-t-1.11.3.ebuild:
+  Version bump.
 
   14 Aug 2014; Manuel Rüger <mrueg@gentoo.org> command-t-1.5.1.ebuild,
   command-t-1.6.1.ebuild, command-t-1.6.ebuild, command-t-1.7.ebuild,
