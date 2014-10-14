@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.17.1.ebuild,v 1.1 2014/09/25 06:00:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.17.1.ebuild,v 1.2 2014/10/14 21:10:22 axs Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
@@ -131,7 +131,10 @@ multilib_src_compile() {
 		n32) mybits="USE_N32=1";;
 		x32) mybits="USE_X32=1";;
 		s390x|*64) mybits="USE_64=1";;
-		default) mybits=$(nssbits);;
+		${DEFAULT_ABI})
+			einfo "Running compilation test to determine bit'ness"
+			mybits=$(nssbits)
+			;;
 	esac
 	# bitness of host may differ from target
 	if tc-is-cross-compiler; then
@@ -148,7 +151,6 @@ multilib_src_compile() {
 
 	# Take care of nspr settings #436216
 	local myCPPFLAGS="${CPPFLAGS} $($(tc-getPKG_CONFIG) nspr --cflags)"
-	local myLDFLAGS="${LDFLAGS} $($(tc-getPKG_CONFIG) nspr --libs-only-L)"
 	unset NSPR_INCLUDE_DIR
 
 	# Do not let `uname` be used.
@@ -172,7 +174,7 @@ multilib_src_compile() {
 	# Build the host tools first.
 	LDFLAGS="${BUILD_LDFLAGS}" \
 	XCFLAGS="${BUILD_CFLAGS}" \
-	NSPR_LIB_DIR="${T}/fake-dir" \
+	NSPR_LIB_DIR="${T}/fakedir" \
 	emake -j1 -C coreconf \
 		CC="$(tc-getBUILD_CC)" \
 		${buildbits:-${mybits}}
@@ -181,9 +183,8 @@ multilib_src_compile() {
 	# Then build the target tools.
 	for d in . lib/dbm ; do
 		CPPFLAGS="${myCPPFLAGS}" \
-		LDFLAGS="${myLDFLAGS}" \
 		XCFLAGS="${CFLAGS} ${CPPFLAGS}" \
-		NSPR_LIB_DIR="${T}/${ABI}-fake-dir" \
+		NSPR_LIB_DIR="${T}/fakedir" \
 		emake -j1 "${makeargs[@]}" -C ${d}
 	done
 }

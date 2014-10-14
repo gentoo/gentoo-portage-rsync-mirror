@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.385 2014/10/14 15:57:26 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.386 2014/10/14 21:10:22 axs Exp $
+
+*nss-3.16.6 (14 Oct 2014)
+*nss-3.17.2 (14 Oct 2014)
+
+  14 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +nss-3.16.6.ebuild,
+  +nss-3.17.2.ebuild, -nss-3.16.2.1.ebuild, nss-3.16.5.ebuild,
+  nss-3.17.1.ebuild:
+  fixed configuration for 64bit non-multilib targets like alpha on 3.16.5 and
+  above, fixed occasional linking-to-system-libs issue on 3.16.6 and above,
+  added new versions, removed unnecessary and buggy 3.16.2.1
 
 *nss-3.16.2.1 (14 Oct 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.16.5.ebuild,v 1.5 2014/10/14 21:10:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.17.2.ebuild,v 1.1 2014/10/14 21:10:22 axs Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
 NSPR_VER="4.10.6-r1"
 RTM_NAME="NSS_${PV//./_}_RTM"
 # Rev of https://git.fedorahosted.org/cgit/nss-pem.git
-PEM_GIT_REV="3ade37c5c4ca5a6094e3f4b2e4591405db1867dd"
+PEM_GIT_REV="015ae754dd9f6fbcd7e52030ec9732eb27fc06a8"
 PEM_P="${PN}-pem-${PEM_GIT_REV}"
 
 DESCRIPTION="Mozilla's Network Security Services library that implements PKI support"
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+cacert +nss-pem utils"
 
 DEPEND=">=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
@@ -49,7 +49,7 @@ src_unpack() {
 
 src_prepare() {
 	# Custom changes for gentoo
-	epatch "${FILESDIR}/${PN}-3.15-gentoo-fixups.patch"
+	epatch "${FILESDIR}/${PN}-3.17.1-gentoo-fixups.patch"
 	epatch "${FILESDIR}/${PN}-3.15-gentoo-fixup-warnings.patch"
 	use cacert && epatch "${DISTDIR}/${PN}-3.14.1-add_spi+cacerts_ca_certs.patch"
 	use nss-pem && epatch "${FILESDIR}/${PN}-3.15.4-enable-pem.patch"
@@ -151,7 +151,6 @@ multilib_src_compile() {
 
 	# Take care of nspr settings #436216
 	local myCPPFLAGS="${CPPFLAGS} $($(tc-getPKG_CONFIG) nspr --cflags)"
-	local myLDFLAGS="${LDFLAGS} $($(tc-getPKG_CONFIG) nspr --libs-only-L)"
 	unset NSPR_INCLUDE_DIR
 
 	# Do not let `uname` be used.
@@ -175,7 +174,7 @@ multilib_src_compile() {
 	# Build the host tools first.
 	LDFLAGS="${BUILD_LDFLAGS}" \
 	XCFLAGS="${BUILD_CFLAGS}" \
-	NSPR_LIB_DIR="${T}/fake-dir" \
+	NSPR_LIB_DIR="${T}/fakedir" \
 	emake -j1 -C coreconf \
 		CC="$(tc-getBUILD_CC)" \
 		${buildbits:-${mybits}}
@@ -184,9 +183,8 @@ multilib_src_compile() {
 	# Then build the target tools.
 	for d in . lib/dbm ; do
 		CPPFLAGS="${myCPPFLAGS}" \
-		LDFLAGS="${myLDFLAGS}" \
 		XCFLAGS="${CFLAGS} ${CPPFLAGS}" \
-		NSPR_LIB_DIR="${T}/${ABI}-fake-dir" \
+		NSPR_LIB_DIR="${T}/fakedir" \
 		emake -j1 "${makeargs[@]}" -C ${d}
 	done
 }
