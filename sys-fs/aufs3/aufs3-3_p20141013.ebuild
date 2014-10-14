@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20141013.ebuild,v 1.1 2014/10/12 16:53:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20141013.ebuild,v 1.2 2014/10/14 07:10:53 jlec Exp $
 
 EAPI=5
 
@@ -61,7 +61,7 @@ pkg_setup() {
 	elif [[ "${KV_MINOR}" == "12" ]]; then
 		PATCH_BRANCH="${KV_MINOR}".x
 	elif [[ "${KV_MINOR}" == "14" ]]; then
-		PATCH_BRANCH="${KV_MINOR}".21
+		PATCH_BRANCH="${KV_MINOR}".21+
 	else
 		PATCH_BRANCH="${KV_MINOR}"
 	fi
