@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-5.10.ebuild,v 1.2 2013/09/23 11:56:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-5.10.ebuild,v 1.3 2014/10/14 12:08:35 chithanh Exp $
 
 EAPI=4
 
@@ -73,7 +73,7 @@ src_install() {
 
 pkg_postinst() {
 	# print warning for users upgrading from the previous stable version
-	if has 4.06 ${REPLACING_VERSIONS}; then
+	if has 4.07 ${REPLACING_VERSIONS}; then
 		ewarn "syslinux now uses dynamically linked ELF executables. Before you reboot,"
 		ewarn "ensure that needed dependencies are fulfilled. For example, run from your"
 		ewarn "syslinux directory:"

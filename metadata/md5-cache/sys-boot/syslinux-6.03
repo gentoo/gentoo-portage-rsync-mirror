@@ -10,4 +10,4 @@ RDEPEND=sys-fs/mtools dev-perl/Crypt-PasswdMD5 dev-perl/Digest-SHA1
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/boot/syslinux/6.xx/syslinux-6.03.tar.xz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ff4fd089c0f494dad347a6d9fb5e88e0
+_md5_=70dfc0334f70de06bd310305a41fd157

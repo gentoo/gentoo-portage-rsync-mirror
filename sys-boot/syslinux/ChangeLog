@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.111 2014/10/13 22:35:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.113 2014/10/14 12:10:05 chithanh Exp $
+
+  14 Oct 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -files/syslinux-6.03_pre1-add-fno-stack-protector.patch,
+  -syslinux-6.03_pre1.ebuild, -syslinux-6.03_pre18.ebuild:
+  Drop old prereleases.
+
+  14 Oct 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  syslinux-5.10.ebuild, syslinux-6.03.ebuild:
+  Adjust upgrade check for current stable version.
 
 *syslinux-6.03 (13 Oct 2014)
 
