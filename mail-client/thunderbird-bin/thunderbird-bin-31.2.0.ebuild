@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-17.0.10.ebuild,v 1.2 2014/08/10 14:29:24 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-31.2.0.ebuild,v 1.1 2014/10/14 16:26:23 axs Exp $
 
 EAPI="5"
-MOZ_ESR="1"
+MOZ_ESR="0"
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
 MOZ_LANGS=(ar ast be bg bn-BD br ca cs da de el en en-GB en-US es-AR es-ES et eu
@@ -44,9 +44,7 @@ DEPEND="app-arch/unzip
 	selinux? ( sec-policy/selinux-thunderbird )"
 RDEPEND="virtual/freedesktop-icon-theme
 	dev-libs/dbus-glib
-	gnome-base/gconf
-	gnome-base/orbit
-	=media-libs/libpng-1.5*
+	=media-libs/libpng-1.6*
 	x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libXmu
@@ -54,8 +52,6 @@ RDEPEND="virtual/freedesktop-icon-theme
 	>=media-libs/alsa-lib-1.0.16
 	crashreporter? ( net-misc/curl )
 	selinux? ( sec-policy/selinux-thunderbird )
-
-	!net-libs/libproxy[spidermonkey]
 "
 
 QA_PREBUILT="
@@ -80,17 +76,19 @@ src_unpack() {
 src_install() {
 	declare MOZILLA_FIVE_HOME="/opt/${MOZ_PN}"
 
-	local size sizes icon_path name
+	local size sizes icon_path icon name
 	sizes="16 22 24 32 48 256"
 	icon_path="${S}/chrome/icons/default"
+	icon="${PN}-icon"
 	name="Thunderbird"
 
 	# Install icons and .desktop for menu entry
 	for size in ${sizes}; do
-		newicon -s ${size} "${icon_path}/default${size}.png" "${PN}-icon.png"
+		insinto "/usr/share/icons/hicolor/${size}x${size}/apps"
+		newins "${icon_path}/default${size}.png" "${icon}.png"
 	done
 	# Install a 48x48 icon into /usr/share/pixmaps for legacy DEs
-	newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
+	newicon "${S}"/chrome/icons/default/default48.png "${icon}.png"
 	domenu "${FILESDIR}"/icon/${PN}.desktop
 
 	# Install thunderbird in /opt

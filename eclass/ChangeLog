@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1382 2014/10/09 16:55:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1383 2014/10/14 16:10:36 axs Exp $
+
+  14 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  -mozconfig-v4.1.eclass, +mozconfig-v5.31.eclass, +mozconfig-v5.33.eclass,
+  +mozcoreconf-v3.eclass:
+  added bumps to mozilla config eclasses and removed old
 
   09 Oct 2014; Davide Pesavento <pesa@gentoo.org> qt5-build.eclass:
   Fix assignments to RESTRICT.

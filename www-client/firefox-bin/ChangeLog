@@ -1,6 +1,13 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.206 2014/10/06 19:01:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.207 2014/10/14 16:15:31 axs Exp $
+
+*firefox-bin-33.0 (14 Oct 2014)
+
+  14 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-bin-33.0.ebuild, -firefox-bin-24.8.0.ebuild,
+  -firefox-bin-31.1.1.ebuild, -firefox-bin-32.0.3.ebuild:
+  version bump, remove old
 
   06 Oct 2014; Agostino Sarubbo <ago@gentoo.org> firefox-bin-24.8.1.ebuild:
   Stable for x86, wrt bug #523652
