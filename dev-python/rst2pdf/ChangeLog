@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.35 2014/08/13 18:39:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.36 2014/10/14 14:58:17 klausman Exp $
+
+  14 Oct 2014; Tobias Klausmann <klausman@gentoo.org> rst2pdf-0.93-r2.ebuild:
+  Keyworded on alpha, bug 515222
 
   13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> rst2pdf-0.93-r2.ebuild:
   Keyword ~ppc and ~ppc64, bug #515222
