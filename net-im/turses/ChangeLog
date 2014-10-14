@@ -1,6 +1,9 @@
 # ChangeLog for net-im/turses
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/turses/ChangeLog,v 1.8 2014/08/05 18:34:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/turses/ChangeLog,v 1.9 2014/10/14 01:54:06 idella4 Exp $
+
+  14 Oct 2014; Ian Delaney <idella4@gentoo.org> -turses-0.2.13.ebuild:
+  remove old
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> turses-0.2.13-r1.ebuild,
   turses-0.2.13.ebuild:
