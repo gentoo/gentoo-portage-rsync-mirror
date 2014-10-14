@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.77 2014/09/24 09:33:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.78 2014/10/14 03:37:35 radhermit Exp $
+
+*requests-2.4.3 (14 Oct 2014)
+
+  14 Oct 2014; Tim Harder <radhermit@gentoo.org> +requests-2.4.3.ebuild:
+  Version bump.
 
   24 Sep 2014; Agostino Sarubbo <ago@gentoo.org> requests-2.3.0.ebuild:
   Stable for x86, wrt bug #513278
