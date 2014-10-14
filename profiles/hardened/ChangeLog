@@ -1,9 +1,13 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.69 2014/10/12 07:40:21 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.70 2014/10/14 17:06:17 blueness Exp $
 
   12 Oct 2014; Magnus Granberg <zorry@gentoo.org> linux/amd64/package.use:
   Add pic for media-libs/libpostpros needed for the x86 part #523736
+
+  14 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/make.defaults:
+  BOOTSTRAP_USE=-nls to avoid a clash between musl and gettext in stage2
 
   11 Oct 2014; Tim Harder <radhermit@gentoo.org> linux/package.use.mask:
   Mask skype use flag for net-im/bitlbee since skype doesn't work under

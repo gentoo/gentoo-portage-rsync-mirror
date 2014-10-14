@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/lldpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.22 2014/10/13 18:06:06 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.23 2014/10/14 17:16:53 chutzpah Exp $
+
+*lldpd-0.7.11-r2 (14 Oct 2014)
+
+  14 Oct 2014; Patrick McLean <chutzpah@gentoo.org> +lldpd-0.7.11-r2.ebuild,
+  +files/lldpd-0.7.11-bash-completion-dir.patch:
+  Revision bump, make sure the bash-completion script installs to the right
+  place.
 
 *lldpd-0.7.11-r1 (13 Oct 2014)
 
