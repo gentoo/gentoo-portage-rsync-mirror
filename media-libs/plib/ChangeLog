@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/plib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.41 2014/10/10 22:12:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.42 2014/10/14 11:30:17 tupone Exp $
+
+  14 Oct 2014; Alfredo Tupone <tupone@gentoo.org> plib-1.8.5.ebuild,
+  +files/plib-1.8.5-X11.patch:
+  Fix configure error. Bug #524992 by Piotr Szymaniak
 
   10 Oct 2014; Jeroen Roovers <jer@gentoo.org> plib-1.8.5.ebuild:
   EAPI bump. Clean up eclasses.
