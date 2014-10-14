@@ -1,10 +1,12 @@
 DEFINED_PHASES=compile configure install postinst prepare unpack
-DEPEND=dev-qt/qtgui:4 dev-qt/qtmultimedia:4 dev-vcs/git
+DEPEND=dev-libs/openssl sys-libs/zlib qt4? ( dev-qt/qtgui:4 dev-qt/qtmultimedia:4 dev-qt/qtscript:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtscript:5 dev-qt/qtwidgets:5 dev-qt/qtmultimedia:5 ) dev-vcs/git
 DESCRIPTION=Mt.Gox and BTC-e Bitcoin Trading Client
 EAPI=5
 HOMEPAGE=https://github.com/JulyIGHOR/QtBitcoinTrader
+IUSE=qt4 qt5
 LICENSE=GPL-3
-RDEPEND=dev-qt/qtgui:4 dev-qt/qtmultimedia:4
+RDEPEND=dev-libs/openssl sys-libs/zlib qt4? ( dev-qt/qtgui:4 dev-qt/qtmultimedia:4 dev-qt/qtscript:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtscript:5 dev-qt/qtwidgets:5 dev-qt/qtmultimedia:5 )
+REQUIRED_USE=^^ ( qt4 qt5 )
 SLOT=0
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	40136c5fe0002a0d3937e869ae4ee0e2	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=d09e824ef284e56d5123da5f4368b566
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	40136c5fe0002a0d3937e869ae4ee0e2	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=1f8733a9634da664e46f3e0c4abd1a89

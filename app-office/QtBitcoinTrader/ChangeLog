@@ -1,6 +1,13 @@
 # ChangeLog for app-office/QtBitcoinTrader
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/QtBitcoinTrader/ChangeLog,v 1.6 2013/12/14 03:28:27 alexxy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/QtBitcoinTrader/ChangeLog,v 1.7 2014/10/14 19:34:24 alexxy Exp $
+
+*QtBitcoinTrader-1.08.01 (14 Oct 2014)
+
+  14 Oct 2014; Alexey Shvetsov <alexxy@gentoo.org>
+  +QtBitcoinTrader-1.08.01.ebuild, -QtBitcoinTrader-1.07.96.4.ebuild,
+  QtBitcoinTrader-9999.ebuild:
+  Update ebuilds and version bump
 
 *QtBitcoinTrader-1.07.96.4 (14 Dec 2013)
 
