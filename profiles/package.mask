@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16093 2014/10/13 21:48:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16094 2014/10/14 06:38:21 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -388,11 +388,6 @@ dev-php/PEAR-MDB2_Driver_ibase
 =dev-qt/qtxmlpatterns-5.3.2*
 dev-python/PyQt5
 www-client/otter
-
-# Ulrich Müller <ulm@gentoo.org> (10 Sep 2014)
-# Multiple security vulnerabilities, bug #510960.
-# Masked for removal in 30 days, bug #517932.
-app-emulation/emul-linux-x86-compat
 
 # Michael Orlitzky <mjo@gentoo.org> (05 Sep 2014)
 # No reverse dependencies, and the equivalent is now installed

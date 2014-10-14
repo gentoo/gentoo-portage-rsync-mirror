@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9450 2014/10/13 22:42:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9451 2014/10/14 06:38:21 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Oct 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Remove mask for app-emulation/emul-linux-x86-compat, package has been
+  removed.
 
   13 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> updates/4Q-2014:
   Follow upstream rename from dev-perl/Template-Latex to

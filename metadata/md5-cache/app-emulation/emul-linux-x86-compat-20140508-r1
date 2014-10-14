@@ -1,9 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=32 bit lib-compat and libstdc++-v3 (compatibility metapackage)
-EAPI=5
-HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
-KEYWORDS=-* ~amd64
-LICENSE=metapackage
-RDEPEND=sys-libs/lib-compat sys-libs/libstdc++-v3[multilib]
-SLOT=0
-_md5_=98dc202c924be0893b76260391a9427b
