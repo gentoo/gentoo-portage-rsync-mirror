@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.109 2014/08/22 14:33:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.110 2014/10/14 08:23:21 pacho Exp $
+
+*libcanberra-0.30-r2 (14 Oct 2014)
+
+  14 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/libcanberra-0.30-wayland.patch, +files/libcanberra-gtk-module.sh,
+  +libcanberra-0.30-r2.ebuild, -files/gconf-2.m4,
+  -files/libcanberra-0.28-underlinking.patch,
+  -files/libcanberra-0.28-workaround-hang.patch:
+  Desktops different than GNOME need a xinit.d file (#520550 by ssuominen), add
+  a fix from upstream for wayland, drop old
 
   22 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
   libcanberra-0.30-r1.ebuild:
