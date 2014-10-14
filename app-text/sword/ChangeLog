@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sword
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.72 2014/08/10 18:34:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.73 2014/10/14 18:37:32 creffett Exp $
+
+*sword-1.7.3 (14 Oct 2014)
+
+  14 Oct 2014; Chris Reffett <creffett@gentoo.org> +sword-1.7.3.ebuild:
+  Version bump wrt bug 525426
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sword-1.6.2.ebuild,
   sword-1.7.2.ebuild:
