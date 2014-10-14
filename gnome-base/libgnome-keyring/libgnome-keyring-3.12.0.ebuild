@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-3.12.0.ebuild,v 1.9 2014/10/11 12:09:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-3.12.0.ebuild,v 1.10 2014/10/14 07:51:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 inherit gnome2 python-any-r1 vala
 
 DESCRIPTION="Compatibility library for accessing secrets"
-HOMEPAGE="http://live.gnome.org/GnomeKeyring"
+HOMEPAGE="https://wiki.gnome.org/Projects/GnomeKeyring"
 
 LICENSE="LGPL-2+ GPL-2+" # tests are GPL-2
 SLOT="0"
@@ -21,6 +21,8 @@ REQUIRED_USE="vala? ( introspection )"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris"
 
 RDEPEND="
+	>=dev-libs/glib-2.16.0:2
+	>=dev-libs/libgcrypt-1.2.2:0=
 	>=sys-apps/dbus-1
 	>=gnome-base/gnome-keyring-3.1.92
 	introspection? ( >=dev-libs/gobject-introspection-1.30.0 )
