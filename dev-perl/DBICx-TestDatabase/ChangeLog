@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBICx-TestDatabase
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBICx-TestDatabase/ChangeLog,v 1.8 2012/11/18 11:14:32 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBICx-TestDatabase/ChangeLog,v 1.9 2014/10/14 11:49:39 zlogene Exp $
+
+  14 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  DBICx-TestDatabase-0.40.0.ebuild:
+  Bump to EAPI=5
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

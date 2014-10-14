@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=virtual/perl-File-Temp >=dev-perl/DBD-SQLite-1.29 dev-perl/SQL-Translator test? ( dev-perl/DBIx-Class virtual/perl-Test-Simple dev-perl/Test-use-ok ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=virtual/perl-File-Temp >=dev-perl/DBD-SQLite-1.29 dev-perl/SQL-Translator test? ( dev-perl/DBIx-Class virtual/perl-Test-Simple dev-perl/Test-use-ok ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=create a temporary database from a DBIx::Class::Schema
-EAPI=4
+EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/DBICx-TestDatabase/
 IUSE=test
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=virtual/perl-File-Temp >=dev-perl/DBD-SQLite-1.29 dev-perl/SQL-Translator || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=virtual/perl-File-Temp >=dev-perl/DBD-SQLite-1.29 dev-perl/SQL-Translator dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/J/JR/JROCKWAY/DBICx-TestDatabase-0.04.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f889e8437ffc64d766053d029c422c4e	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=82bf3213d585a3b157a98a2a81842db1
+_md5_=872eddc05a9db65e1853a3dad322f9d2

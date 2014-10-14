@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.270 2014/10/13 09:40:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.271 2014/10/14 11:38:16 klausman Exp $
+
+  14 Oct 2014; Tobias Klausmann <klausman@gentoo.org>
+  bash-completion-2.1.ebuild:
+  Stable on alpha, bug 517718
 
   13 Oct 2014; Michał Górny <mgorny@gentoo.org> bash-completion-2.1-r90.ebuild:
   Suggest removing old setup symlinks as well.

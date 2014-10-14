@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.6.1.ebuild,v 1.8 2014/03/09 11:54:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.6.4.ebuild,v 1.1 2014/10/14 11:40:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit autotools gnome2 python-single-r1 eutils
+inherit autotools eutils gnome2 python-single-r1
 
 DESCRIPTION="A personal finance manager"
 HOMEPAGE="http://www.gnucash.org/"
@@ -14,12 +14,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="chipcard debug +doc hbci mysql ofx postgres python quotes sqlite"
 
 # FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.ac)
 # libdbi version requirement for sqlite taken from bug #455134
 RDEPEND="
+	>=app-crypt/libsecret-0.18
 	>=dev-libs/glib-2.32.0:2
 	>=dev-libs/popt-1.5
 	>=dev-libs/libxml2-2.5.10:2
@@ -28,7 +29,6 @@ RDEPEND="
 	dev-scheme/guile-www
 	>=dev-scheme/slib-3.1.4
 	gnome-base/libgnomecanvas
-	gnome-base/libgnome-keyring
 	>=net-libs/webkit-gtk-1.2:2
 	>=sys-libs/zlib-1.1.4
 	>=x11-libs/gtk+-2.24:2
@@ -63,6 +63,12 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Fix build with guile-1 (from 'master')
+	epatch "${FILESDIR}"/${PN}-2.6.4-guile1.patch
+
+	# Skip test that needs some locales to be present
+	sed -i -e '/test_suite_gnc_date/d' src/libqof/qof/test/test-qof.c || die
+
 	eautoreconf
 	gnome2_src_prepare
 }

@@ -1,0 +1,13 @@
+--- gnucash-2.6.4/configure.ac	2014-09-28 02:11:31.000000000 +0200
++++ gnucash-2.6.4.patche/configure.ac	2014-10-01 23:55:11.095602881 +0200
+@@ -463,7 +463,9 @@
+                   [guile-1.8 >= 1.8.5],
+                   [m4_ifdef([GUILE1_8_PROGS],
+                             [ GUILE1_8_PROGS ],
+-                            [ GUILE_PROGS ])
++                            [ m4_ifdef([GUILE1_PROGS],
++				       [ GUILE1_PROGS ],
++				       [ GUILE_PROGS ])])
+                   ], [
+   PKG_CHECK_MODULES(GUILE,
+                   [guile-2.0 >= 2.0.0],
