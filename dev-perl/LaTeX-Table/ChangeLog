@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/LaTeX-Table
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LaTeX-Table/ChangeLog,v 1.1 2014/10/14 21:37:04 dilfridge Exp $
+
+*LaTeX-Table-1.0.6 (14 Oct 2014)
+
+  14 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +LaTeX-Table-1.0.6.ebuild, +metadata.xml:
+  New package, dependency of dev-perl/Template-Plugin-Latex
+

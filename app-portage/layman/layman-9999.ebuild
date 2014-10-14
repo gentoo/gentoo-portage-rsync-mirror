@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.38 2014/10/13 02:24:42 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.39 2014/10/14 21:41:25 twitch153 Exp $
 
 EAPI="5"
 
@@ -51,7 +51,7 @@ pkg_pretend() {
 	layman_check_kernel_config
 }
 
-python_pkg_setup() {
+pkg_setup() {
 	layman_check_kernel_config
 }
 

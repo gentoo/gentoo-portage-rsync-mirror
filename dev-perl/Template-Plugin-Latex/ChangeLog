@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Template-Plugin-Latex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Plugin-Latex/ChangeLog,v 1.1 2014/10/13 22:39:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Plugin-Latex/ChangeLog,v 1.2 2014/10/14 21:41:55 dilfridge Exp $
+
+*Template-Plugin-Latex-3.60.0 (14 Oct 2014)
+
+  14 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Template-Plugin-Latex-3.60.0.ebuild:
+  Version bump, bug 358465
 
 *Template-Plugin-Latex-2.170.0-r1 (13 Oct 2014)
 

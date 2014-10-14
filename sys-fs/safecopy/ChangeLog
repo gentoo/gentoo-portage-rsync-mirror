@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/safecopy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.15 2014/08/10 20:20:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.16 2014/10/14 21:49:25 tamiko Exp $
+
+  14 Oct 2014; Matthias Maier <tamiko@gentoo.org> metadata.xml:
+  take over maintainership
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> safecopy-1.7.ebuild:
   QA: drop trailing '.' from DESCRIPTION
