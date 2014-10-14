@@ -1,6 +1,13 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.39 2014/10/13 18:56:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.40 2014/10/14 10:53:36 klausman Exp $
+
+*prosody-0.9.5-r1 (14 Oct 2014)
+
+  14 Oct 2014; Tobias Klausmann <klausman@gentoo.org> +prosody-0.9.5-r1.ebuild,
+  +files/prosody.initd-r1:
+  Update initd file to check for file permissions, re-add systemd files and
+  clean up init script a bit
 
   13 Oct 2014; Tobias Klausmann <klausman@gentoo.org> prosody-0.9.4.ebuild:
   Stable on amd64, bug 511532
