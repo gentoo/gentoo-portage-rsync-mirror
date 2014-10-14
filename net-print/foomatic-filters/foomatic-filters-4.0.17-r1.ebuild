@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-4.0.17-r1.ebuild,v 1.14 2014/08/25 15:10:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-4.0.17-r1.ebuild,v 1.15 2014/10/14 17:00:27 mrueg Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND="
 	!=net-print/cups-filters-1.0.43
 	!>=net-print/cups-filters-1.0.43-r1[foomatic]
 	cups? (
-		>=net-print/cups-1.6.0 net-print/cups-filters 
+		>=net-print/cups-1.6.0 net-print/cups-filters
 	)
 	!cups? (
 		|| (
