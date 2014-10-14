@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup
+DEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=app-text/sword-1.7.3 >=dev-libs/glib-2 dev-libs/libxml2 gnome-base/gconf gnome-extra/gtkhtml:4.0 >=gnome-extra/libgsf-1.14 x11-libs/gtk+:3 dbus? ( dev-libs/dbus-glib ) webkit? ( net-libs/webkit-gtk:3 ) app-text/docbook2X app-text/gnome-doc-utils app-text/rarian dev-libs/libxslt dev-util/intltool virtual/pkgconfig sys-devel/gettext >=sys-apps/sed-4
+DESCRIPTION=A bible study frontend for Sword (formerly known as GnomeSword)
+EAPI=5
+HOMEPAGE=http://xiphos.org/
+IUSE=dbus debug webkit python_targets_python2_7 python_single_target_python2_7
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2 FDL-1.1 LGPL-2 MIT MPL-1.1
+RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=app-text/sword-1.7.3 >=dev-libs/glib-2 dev-libs/libxml2 gnome-base/gconf gnome-extra/gtkhtml:4.0 >=gnome-extra/libgsf-1.14 x11-libs/gtk+:3 dbus? ( dev-libs/dbus-glib ) webkit? ( net-libs/webkit-gtk:3 )
+REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
+SLOT=0
+SRC_URI=mirror://sourceforge/gnomesword/xiphos-3.2.2.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=b298d54036a41759eb7d09d5f1d7407b

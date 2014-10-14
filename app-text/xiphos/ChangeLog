@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xiphos
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.16 2014/02/04 23:59:22 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.17 2014/10/14 19:01:57 creffett Exp $
+
+*xiphos-3.2.2 (14 Oct 2014)
+
+  14 Oct 2014; Chris Reffett <creffett@gentoo.org> +xiphos-3.2.2.ebuild:
+  Version bump wrt bug 525424
 
 *xiphos-3.1.6 (04 Feb 2014)
 
