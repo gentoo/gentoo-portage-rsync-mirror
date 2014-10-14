@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/pcgen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/ChangeLog,v 1.32 2013/01/30 18:49:10 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/ChangeLog,v 1.33 2014/10/14 05:16:13 mr_bones_ Exp $
+
+*pcgen-6.04.00 (14 Oct 2014)
+
+  14 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> +pcgen-6.04.00.ebuild:
+  version bump (bug #525210)
 
   30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -pcgen-5.16.4.ebuild:
   old
