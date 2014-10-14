@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/stride
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/ChangeLog,v 1.14 2013/04/14 14:03:08 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/ChangeLog,v 1.15 2014/10/14 06:08:08 jlec Exp $
+
+  14 Oct 2014; Justin Lecher <jlec@gentoo.org> -stride-20011129.ebuild,
+  stride-20011129-r1.ebuild:
+  Put patches in my devspace, #525346
 
   14 Apr 2013; Justin Lecher <jlec@gentoo.org> stride-20011129.ebuild,
   stride-20011129-r1.ebuild, metadata.xml:
