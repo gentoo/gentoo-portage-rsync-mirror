@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.10-r2.ebuild,v 1.2 2014/06/18 20:45:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.10-r2.ebuild,v 1.3 2014/10/14 09:39:51 pacho Exp $
 
 EAPI="5"
 inherit autotools eutils multilib-minimal
@@ -11,7 +11,7 @@ SRC_URI="http://0pointer.de/lennart/projects/nss-mdns/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~x86"
+KEYWORDS="amd64 ~hppa ~mips ~ppc ~x86"
 IUSE="search-domains"
 
 RDEPEND=">=net-dns/avahi-0.6.31-r2[${MULTILIB_USEDEP}]"

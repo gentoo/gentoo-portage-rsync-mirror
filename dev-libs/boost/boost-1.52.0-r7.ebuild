@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.52.0-r7.ebuild,v 1.11 2014/08/19 10:37:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.52.0-r7.ebuild,v 1.12 2014/10/14 09:57:35 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
@@ -29,7 +29,9 @@ RDEPEND="icu? ( >=dev-libs/icu-3.6:= )
 DEPEND="${RDEPEND}
 	=dev-util/boost-build-1.52.0*"
 
-S=${WORKDIR}/${MY_P}
+REQUIRED_USE="mpi? ( threads )"
+
+S="${WORKDIR}/${MY_P}"
 
 create_user-config.jam() {
 	local compiler compiler_version compiler_executable

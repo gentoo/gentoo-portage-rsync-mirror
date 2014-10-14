@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.114 2014/09/21 10:26:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.115 2014/10/14 09:54:34 pacho Exp $
+
+*libgweather-3.12.3 (14 Oct 2014)
+
+  14 Oct 2014; Pacho Ramos <pacho@gentoo.org> +libgweather-3.12.3.ebuild,
+  -libgweather-3.10.2.ebuild:
+  Version bump, drop old
 
   21 Sep 2014; Pacho Ramos <pacho@gentoo.org> -libgweather-3.12.2.ebuild,
   libgweather-3.12.2-r1.ebuild:

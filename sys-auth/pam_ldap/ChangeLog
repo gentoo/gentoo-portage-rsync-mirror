@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.46 2014/06/18 20:47:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.47 2014/10/14 09:43:06 pacho Exp $
+
+  14 Oct 2014; Pacho Ramos <pacho@gentoo.org> pam_ldap-186-r1.ebuild:
+  amd64 stable, bug #525280
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> pam_ldap-186-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
