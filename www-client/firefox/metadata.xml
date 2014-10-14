@@ -13,14 +13,15 @@
 	<flag name="pgo">Add support for profile-guided optimization using gcc-4.5,
 		for faster binaries. This option will double the compile time.</flag>
 	<flag name="system-cairo">Use the system-wide <pkg>x11-libs/cairo</pkg>
-		Use system cairo instead of bundled.</flag>
+		instead of bundled.</flag>
 	<flag name="system-icu">Use the system-wide <pkg>dev-libs/icu</pkg>
-		Use system icu instead of bundled.</flag>
+		instead of bundled.</flag>
 	<flag name="system-jpeg">Use the system-wide <pkg>media-libs/libjpeg-turbo</pkg>
-		Use system jpeg instead of bundled.</flag>
+		instead of bundled.</flag>
+	<flag name="system-libvpx">Use the system-wide <pkg>media-libs/libvpx</pkg>
+		instead of bundled.</flag>
 	<flag name="system-sqlite">Use the system-wide <pkg>dev-db/sqlite</pkg>
 		installation with secure-delete enabled</flag>
-	<flag name="webm">Use system <pkg>media-libs/libvpx</pkg> for HTML5 WebM
-		video support.</flag>
+	<flag name="webm">Support HTML5 WebM with <pkg>media-libs/libvpx</pkg> on firefox-10.</flag>
 </use>
 </pkgmetadata>

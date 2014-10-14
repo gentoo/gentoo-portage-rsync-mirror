@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install nofetch prepare
+DEPEND=virtual/jpeg media-libs/libpng media-libs/gd media-libs/freeglut || ( x11-libs/libXmu x11-libs/libXext x11-libs/libX11 )
+DESCRIPTION=Display molecular 3D structures, such as proteins, in both schematic and detailed representations
+EAPI=5
+HOMEPAGE=http://www.avatar.se/molscript/
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
+LICENSE=glut molscript
+RDEPEND=virtual/jpeg media-libs/libpng media-libs/gd media-libs/freeglut || ( x11-libs/libXmu x11-libs/libXext x11-libs/libX11 )
+RESTRICT=fetch
+SLOT=0
+SRC_URI=molscript-2.1.2.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=605045b506c7da36c75e6fe5e031f1c7
