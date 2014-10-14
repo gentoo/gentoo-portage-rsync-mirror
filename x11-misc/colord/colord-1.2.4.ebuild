@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.2.ebuild,v 1.1 2014/09/07 14:05:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.4.ebuild,v 1.1 2014/10/14 08:37:24 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -73,6 +73,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Adapt to Gentoo paths
+	sed -i -e 's/spotread/argyll-spotread/' src/sensors/cd-sensor-argyll.c || die
+
 	use vala && vala_src_prepare
 	gnome2_src_prepare
 }

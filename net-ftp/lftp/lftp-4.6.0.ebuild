@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.6.0.ebuild,v 1.1 2014/10/13 19:28:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.6.0.ebuild,v 1.2 2014/10/14 08:56:58 jer Exp $
 
 EAPI=5
 inherit autotools eutils libtool
@@ -60,7 +60,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-4.0.2.91-lafile.patch \
 		"${FILESDIR}"/${PN}-4.3.8-gets.patch \
 		"${FILESDIR}"/${PN}-4.5.3-autopoint.patch \
-		"${FILESDIR}"/${PN}-4.5.5-am_config_header.patch
+		"${FILESDIR}"/${PN}-4.5.5-am_config_header.patch \
+		"${FILESDIR}"/${PN}-4.6.0-gnutls-2-compat.patch
 
 	eautoreconf
 	elibtoolize # for Darwin bundles

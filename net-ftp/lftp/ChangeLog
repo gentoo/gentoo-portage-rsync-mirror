@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.488 2014/10/13 19:28:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.489 2014/10/14 08:56:58 jer Exp $
+
+  14 Oct 2014; Jeroen Roovers <jer@gentoo.org> lftp-4.6.0.ebuild,
+  +files/lftp-4.6.0-gnutls-2-compat.patch:
+  Fix building against <net-libs/gnutls-3.
 
 *lftp-4.6.0 (13 Oct 2014)
 

@@ -10,6 +10,6 @@ PDEPEND=>=sys-fs/aufs-util-3.9 !build? ( virtual/dev-manager )
 RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
 RESTRICT=binchecks strip
 SLOT=3.17.0
-SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.17.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.17.N/deblob-3.17 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.17.N/deblob-check -> deblob-check-3.17 ) http://dev.gentoo.org/~jlec/distfiles/aufs-sources-3.16_p20141013.tar.xz !vanilla? ( mirror://gentoo/genpatches-3.17-1.base.tar.xz mirror://gentoo/genpatches-3.17-1.extras.tar.xz experimental? ( mirror://gentoo/genpatches-3.17-1.experimental.tar.xz ) )
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.17.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.17.N/deblob-3.17 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.17.N/deblob-check -> deblob-check-3.17 ) http://dev.gentoo.org/~jlec/distfiles/aufs-sources-3.17_p20141013.tar.xz !vanilla? ( mirror://gentoo/genpatches-3.17-1.base.tar.xz mirror://gentoo/genpatches-3.17-1.extras.tar.xz experimental? ( mirror://gentoo/genpatches-3.17-1.experimental.tar.xz ) )
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	kernel-2	6fb31411472936acc8287129d3df7f43	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=23ad8b9910b39c76c8d9e1c96e1ea981
+_md5_=a9029decea30cfb0b5850aa8c216f95b

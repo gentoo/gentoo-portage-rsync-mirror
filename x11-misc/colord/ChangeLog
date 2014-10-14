@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.85 2014/10/02 10:01:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.86 2014/10/14 08:37:24 pacho Exp $
+
+*colord-1.2.4 (14 Oct 2014)
+
+  14 Oct 2014; Pacho Ramos <pacho@gentoo.org> +colord-1.2.4.ebuild,
+  -colord-1.2.2.ebuild:
+  Adapt to spotread path in Gentoo, bug #520846 by Alexander E. Patrakov, drop
+  old.
 
 *colord-1.2.3 (02 Oct 2014)
 
