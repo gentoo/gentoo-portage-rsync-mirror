@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.61 2014/09/15 08:19:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.62 2014/10/14 15:07:56 klausman Exp $
+
+  14 Oct 2014; Tobias Klausmann <klausman@gentoo.org> soappy-0.12.22.ebuild:
+  Keyworded on alpha, bug 516442
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> soappy-0.12.5-r2.ebuild:
   Stable for sparc, wrt bug #512012
