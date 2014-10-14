@@ -4,5 +4,5 @@
 # IFACE=eth0
 IFACE=eth0
 
-# OPTS (see ipguard(8)
-OPTS="-u 300 -xz"
+# OPTS - command line options (see ipguard(8)
+OPTS="-u 300 -xz -r"
