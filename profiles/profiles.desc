@@ -24,6 +24,7 @@ amd64           default/linux/amd64/13.0/desktop/gnome/systemd  stable
 amd64           default/linux/amd64/13.0/desktop/kde            stable
 amd64           default/linux/amd64/13.0/desktop/kde/systemd    stable
 amd64           default/linux/amd64/13.0/developer              stable
+amd64           default/linux/amd64/13.0/no-emul-linux-x86      dev
 amd64           default/linux/amd64/13.0/no-multilib            dev
 amd64           default/linux/amd64/13.0/x32                    dev
 

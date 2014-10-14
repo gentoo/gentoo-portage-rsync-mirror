@@ -1,6 +1,10 @@
 # ChangeLog for the default/linux/amd64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.18 2014/03/30 21:44:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.19 2014/10/14 20:54:35 mgorny Exp $
+
+  14 Oct 2014; Michał Górny <mgorny@gentoo.org> +13.0/no-emul-linux-x86/eapi,
+  +13.0/no-emul-linux-x86/parent:
+  Add a no-emul-linux-x86 subprofile for testing emul-linux-x86-free system.
 
   30 Mar 2014; Michał Górny <mgorny@gentoo.org> 13.0/package.use.stable.mask:
   Move abi_x86_32 package stable-mask to arch profile since it is EAPI=5 now.

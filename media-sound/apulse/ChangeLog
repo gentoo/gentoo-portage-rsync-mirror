@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/apulse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/ChangeLog,v 1.1 2014/10/05 09:08:44 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/ChangeLog,v 1.2 2014/10/14 20:40:51 jauhien Exp $
+
+*apulse-0.1.2 (14 Oct 2014)
+
+  14 Oct 2014; Jauhien Piatlicki <jauhien@gentoo.org> +apulse-0.1.2.ebuild:
+  version bump
 
 *apulse-0.1.1 (05 Oct 2014)
 

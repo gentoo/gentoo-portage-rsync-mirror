@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.71 2014/10/13 18:52:35 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.72 2014/10/14 20:54:06 mgorny Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -27,6 +27,7 @@ net-im/bitlbee skype
 # Mask abi_x86_32 on stable until emul-* packages are made
 # fully redundant and end-user experience in resolving
 # flag changes and blockages is generally smooth.
+# Please update no-emul-linux-x86/package.use.stable.mask as well.
 app-accessibility/flite abi_x86_32
 app-admin/fam abi_x86_32
 app-admin/gamin abi_x86_32
