@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/graph-tool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/ChangeLog,v 1.16 2014/10/09 17:09:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/ChangeLog,v 1.19 2014/10/14 02:57:16 idella4 Exp $
+
+  14 Oct 2014; Ian Delaney <idella4@gentoo.org> graph-tool-2.2.35.ebuild,
+  graph-tool-9999.ebuild:
+  reset border version of dev-libs/boost, fixes Bug #524524
 
   09 Oct 2014; Tim Harder <radhermit@gentoo.org> graph-tool-9999.ebuild:
   Add python-3.4 support.

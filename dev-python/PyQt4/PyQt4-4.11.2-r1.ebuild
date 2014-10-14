@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.2-r1.ebuild,v 1.1 2014/10/13 19:27:07 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.2-r1.ebuild,v 1.2 2014/10/14 02:49:02 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -49,8 +49,8 @@ RDEPEND="
 	multimedia? ( >=dev-qt/qtmultimedia-${QT_PV} )
 	opengl? ( >=dev-qt/qtopengl-${QT_PV} )
 	phonon? (
-		kde? ( media-libs/phonon )
-		!kde? ( || ( >=dev-qt/qtphonon-${QT_PV} media-libs/phonon ) )
+		kde? ( >=media-libs/phonon-4.7[qt4] )
+		!kde? ( || ( >=dev-qt/qtphonon-${QT_PV} >=media-libs/phonon-4.7[qt4] ) )
 	)
 	script? ( >=dev-qt/qtscript-${QT_PV} )
 	scripttools? ( >=dev-qt/qtgui-${QT_PV} )
@@ -69,6 +69,9 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	# Support qreal on arm architecture (bug 322349).
 	use arm && epatch "${FILESDIR}/${PN}-4.7.3-qreal_float_support.patch"
+
+	# Allow building against KDE's phonon (bug 525354).
+	epatch "${FILESDIR}/${PN}-4.11.2-phonon.patch"
 
 	if ! use dbus; then
 		sed -i -e '/^\s\+check_dbus(/d' configure-ng.py || die

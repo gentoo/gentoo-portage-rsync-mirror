@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/graph-tool-9999.ebuild,v 1.7 2014/10/09 17:09:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/graph-tool-9999.ebuild,v 1.8 2014/10/14 02:54:29 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -23,7 +23,7 @@ SLOT="0"
 IUSE="+cairo openmp"
 
 CDEPEND="${PYTHON_DEPS}
-	>=dev-libs/boost-1.46.0[python,${PYTHON_USEDEP}]
+	>=dev-libs/boost-1.54.0[python,${PYTHON_USEDEP}]
 	dev-libs/expat
 	dev-python/numpy[${PYTHON_USEDEP}]
 	sci-libs/scipy[${PYTHON_USEDEP}]
