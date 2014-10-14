@@ -3230,9 +3230,10 @@ mail-client/thunderbird:ipc - Use inter-process communication between tabs and p
 mail-client/thunderbird:lightning - Enable calendar support
 mail-client/thunderbird:minimal - Remove the software development kit and headers
 mail-client/thunderbird:mozdom - Enable Mozilla's DOM inspector
-mail-client/thunderbird:system-cairo - Use the system-wide x11-libs/cairo Use system cairo instead of bundled.
-mail-client/thunderbird:system-icu - Use the system-wide dev-libs/icu Use system icu instead of bundled.
-mail-client/thunderbird:system-jpeg - Use the system-wide media-libs/libjpeg-turbo Use system jpeg instead of bundled.
+mail-client/thunderbird:system-cairo - Use the system-wide x11-libs/cairo instead of bundled.
+mail-client/thunderbird:system-icu - Use the system-wide dev-libs/icu instead of bundled.
+mail-client/thunderbird:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
+mail-client/thunderbird:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
 mail-client/thunderbird:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 mail-client/thunderbird-bin:crashreporter - Enable crash reporter for bugs
 mail-client/trojita:password - Store passwords securely via dev-libs/qtkeychain

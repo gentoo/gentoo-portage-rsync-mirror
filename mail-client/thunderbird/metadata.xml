@@ -11,11 +11,13 @@
 	<flag name='custom-optimization'>Fine-tune custom compiler optimizations
 		(-Os, -O0, -O1, -O2, -O3)</flag>
 	<flag name="system-cairo">Use the system-wide <pkg>x11-libs/cairo</pkg>
-		Use system cairo instead of bundled.</flag>
+		instead of bundled.</flag>
 	<flag name="system-icu">Use the system-wide <pkg>dev-libs/icu</pkg>
-		Use system icu instead of bundled.</flag>
+		instead of bundled.</flag>
 	<flag name="system-jpeg">Use the system-wide <pkg>media-libs/libjpeg-turbo</pkg>
-		Use system jpeg instead of bundled.</flag>
+		instead of bundled.</flag>
+	<flag name="system-libvpx">Use the system-wide <pkg>media-libs/libvpx</pkg>
+		instead of bundled.</flag>
 	<flag name="system-sqlite">Use the system-wide <pkg>dev-db/sqlite</pkg>
 		installation with secure-delete enabled</flag>
 	<flag name="ipc">Use inter-process communication between tabs and plugins.
