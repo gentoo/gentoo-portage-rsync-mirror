@@ -1,15 +1,25 @@
+From 21823aa2b496509a7bc9bed2141d06df35d25b63 Mon Sep 17 00:00:00 2001
+From: "Alexander V. Lukyanov" <lavv17f@gmail.com>
+Date: Wed, 15 Oct 2014 08:50:19 +0400
+Subject: [PATCH] lftp_ssl.cc: fixed compilation with gnutls version < 3.0
+
+---
+ src/lftp_ssl.cc | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/src/lftp_ssl.cc b/src/lftp_ssl.cc
+index 100b90b..8ef8a8d 100644
 --- a/src/lftp_ssl.cc
 +++ b/src/lftp_ssl.cc
-@@ -560,7 +560,11 @@
-    {
-       if(res==GNUTLS_E_AGAIN || res==GNUTLS_E_INTERRUPTED)
- 	 return RETRY;
--      else if(res==GNUTLS_E_UNEXPECTED_PACKET_LENGTH || res==GNUTLS_E_PREMATURE_TERMINATION)
-+      else if(res==GNUTLS_E_UNEXPECTED_PACKET_LENGTH
-+#if LFTP_LIBGNUTLS_VERSION_CODE >= 0x030000
-+                 || res==GNUTLS_E_PREMATURE_TERMINATION
-+#endif /* LFTP_LIBGNUTLS_VERSION_CODE */
-+             )
-       {
- 	 Log::global->Format(7,"gnutls_record_recv: %s Assuming EOF.\n",gnutls_strerror(res));
- 	 return 0;
+@@ -547,6 +547,11 @@ int lftp_ssl_gnutls::do_handshake()
+ 
+    return DONE;
+ }
++
++#ifndef GNUTLS_E_PREMATURE_TERMINATION // for gnutls < 3.0
++# define GNUTLS_E_PREMATURE_TERMINATION GNUTLS_E_UNEXPECTED_PACKET_LENGTH
++#endif
++
+ int lftp_ssl_gnutls::read(char *buf,int size)
+ {
+    if(error)

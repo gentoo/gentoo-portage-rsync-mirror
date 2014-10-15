@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.489 2014/10/14 08:56:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.490 2014/10/15 14:28:25 jer Exp $
+
+  15 Oct 2014; Jeroen Roovers <jer@gentoo.org> lftp-4.6.0.ebuild,
+  lftp-9999.ebuild, files/lftp-4.6.0-gnutls-2-compat.patch,
+  +files/lftp-4.6.0-no-ssl.patch:
+  Fix building with USE=-ssl. Replace net-libs/gnutls-2 compatibility patch
+  with upstream patch. Remove patch that no longer applies -9999.
 
   14 Oct 2014; Jeroen Roovers <jer@gentoo.org> lftp-4.6.0.ebuild,
   +files/lftp-4.6.0-gnutls-2-compat.patch:
