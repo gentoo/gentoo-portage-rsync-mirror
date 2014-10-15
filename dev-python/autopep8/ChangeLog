@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/autopep8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.50 2014/09/17 05:31:39 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.51 2014/10/15 03:23:07 idella4 Exp $
+
+  15 Oct 2014; Ian Delaney <idella4@gentoo.org> autopep8-1.0.3.ebuild,
+  autopep8-1.0.4.ebuild:
+  return  to RDEPEND noted by Arfrever
 
 *autopep8-1.0.4 (17 Sep 2014)
 
