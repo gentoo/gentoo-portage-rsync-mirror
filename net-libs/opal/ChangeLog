@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.109 2014/08/21 09:59:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.110 2014/10/15 18:10:27 kensington Exp $
+
+  15 Oct 2014; Michael Palimaka <kensington@gentoo.org>
+  -files/opal-2.1.1-notrace.diff, -files/opal-3.6.4-jdkroot.patch,
+  -files/opal-3.6.8-build-fix.patch, -files/opal-3.6.8-ldflags.patch,
+  -files/opal-3.6.8-lid-plugins-ldflags.patch, -opal-3.10.10.ebuild,
+  -opal-3.6.8-r2.ebuild:
+  Remove old.
 
   21 Aug 2014; Agostino Sarubbo <ago@gentoo.org> opal-3.10.11.ebuild:
   Stable for ppc64, wrt bug #517960

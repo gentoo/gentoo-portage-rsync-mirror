@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-id
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-id/ChangeLog,v 1.20 2014/01/05 11:22:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-id/ChangeLog,v 1.21 2014/10/15 18:01:22 kensington Exp $
+
+*myspell-id-2.0 (15 Oct 2014)
+
+  15 Oct 2014; Michael Palimaka <kensington@gentoo.org> +myspell-id-2.0.ebuild:
+  Version bump.
 
   05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
