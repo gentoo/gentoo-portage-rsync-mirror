@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.641 2014/10/15 16:39:08 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.642 2014/10/15 19:01:24 floppym Exp $
+
+  15 Oct 2014; Mike Gilbert <floppym@gentoo.org> cups-1.7.5-r1.ebuild,
+  cups-2.0.0.ebuild, cups-9999.ebuild:
+  Also force CXX, bug 524340.
 
 *cups-1.7.5-r1 (15 Oct 2014)
 *cups-2.0.0 (15 Oct 2014)

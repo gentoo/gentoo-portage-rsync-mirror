@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-ro
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ro/ChangeLog,v 1.31 2014/01/05 11:28:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ro/ChangeLog,v 1.32 2014/10/15 19:07:37 kensington Exp $
+
+*myspell-ro-3.3.10 (15 Oct 2014)
+
+  15 Oct 2014; Michael Palimaka <kensington@gentoo.org>
+  +myspell-ro-3.3.10.ebuild:
+  Version bump.
 
   05 Jan 2014; Pacho Ramos <pacho@gentoo.org> -myspell-ro-3.3.7.ebuild,
   metadata.xml:

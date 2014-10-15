@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.64 2014/10/15 16:39:08 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.65 2014/10/15 19:01:24 floppym Exp $
 
 EAPI=5
 
@@ -180,6 +180,7 @@ multilib_src_configure() {
 	# https://www.cups.org/str.php?L4423
 	econf \
 		CC="$(tc-getCC)" \
+		CXX="$(tc-getCXX)" \
 		KRB5CONFIG="${EPREFIX}"/usr/bin/${CHOST}-krb5-config \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--localstatedir="${EPREFIX}"/var \
