@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/kdeconnect-0.7.3.ebuild,v 1.1 2014/10/15 17:46:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/kdeconnect-0.7.3.ebuild,v 1.2 2014/10/15 19:37:50 mrueg Exp $
 
 EAPI=5
 
@@ -29,6 +29,7 @@ IUSE="debug"
 DEPEND="
 	app-crypt/qca:2
 	dev-libs/qjson
+	x11-libs/libfakekey
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep plasma-workspace)

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12-r4.ebuild,v 1.4 2014/08/08 11:57:01 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12-r4.ebuild,v 1.5 2014/10/15 19:43:34 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -38,7 +38,7 @@ RDEPEND=">=media-libs/libsdl-1.2.15-r4[${MULTILIB_USEDEP}]
 	)
 	mod? (
 		modplug? ( >=media-libs/libmodplug-0.8.8.4-r1[${MULTILIB_USEDEP}] )
-		mikmod? ( >=media-libs/libmikmod-3.2.0[${MULTILIB_USEDEP}] )
+		mikmod? ( >=media-libs/libmikmod-3.3.6-r1[${MULTILIB_USEDEP}] )
 	)
 	vorbis? (
 		>=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}]
@@ -80,7 +80,8 @@ multilib_src_configure() {
 		$(use_enable smpeg music-mp3) \
 		$(use_enable mad music-mp3-mad-gpl) \
 		$(use_enable timidity music-timidity-midi) \
-		$(use_enable fluidsynth music-fluidsynth-midi)
+		$(use_enable fluidsynth music-fluidsynth-midi) \
+		LIBMIKMOD_CONFIG=${EPREFIX}/usr/bin/${CHOST}-libmikmod-config
 }
 
 multilib_src_install() {

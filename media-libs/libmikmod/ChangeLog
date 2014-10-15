@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.126 2014/08/13 09:21:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.127 2014/10/15 19:42:20 mgorny Exp $
+
+*libmikmod-3.3.6-r1 (15 Oct 2014)
+
+  15 Oct 2014; Michał Górny <mgorny@gentoo.org> +libmikmod-3.3.6-r1.ebuild,
+  -libmikmod-3.3.6.ebuild:
+  Revbump to be able to rely on ${CHOST}-libmikmod-config.
 
   13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libmikmod-3.3.5.ebuild:
   Stable for ppc, wrt bug #495798
