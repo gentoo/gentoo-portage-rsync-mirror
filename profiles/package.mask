@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16094 2014/10/14 06:38:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16095 2014/10/14 23:38:42 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -798,10 +798,6 @@ games-emulation/m64py
 # Tiziano Müller <dev-zero@gentoo.org> (24 Oct 2013)
 # Mask mainline version branch
 =www-servers/nginx-1.5*
-
-# Davide Pesavento <pesa@gentoo.org> (23 Oct 2013)
-# Some features require Qt 5.2, which is not in tree yet.
-=dev-qt/qt-creator-3*
 
 # Justin Lecher <jlec@gentoo.org> (14 Oct 2013)
 # Seems to break all deps - API change?

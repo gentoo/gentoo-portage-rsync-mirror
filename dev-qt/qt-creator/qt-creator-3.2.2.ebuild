@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.2.0.ebuild,v 1.1 2014/08/19 13:17:45 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.2.2.ebuild,v 1.1 2014/10/14 23:34:31 pesa Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit eutils l10n multilib qmake-utils
 
 DESCRIPTION="Lightweight IDE for C++/QML development centering around Qt"
 HOMEPAGE="http://qt-project.org/wiki/Category:Tools::QtCreator"
-LICENSE="LGPL-2.1"
+LICENSE="|| ( LGPL-2.1 LGPL-3 )"
 
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
