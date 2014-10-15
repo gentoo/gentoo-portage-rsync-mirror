@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/execjs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/ChangeLog,v 1.21 2014/09/04 02:53:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/ChangeLog,v 1.22 2014/10/15 05:44:17 graaff Exp $
+
+*execjs-2.2.2 (15 Oct 2014)
+
+  15 Oct 2014; Hans de Graaff <graaff@gentoo.org> +execjs-2.2.2.ebuild:
+  Version bump.
 
   04 Sep 2014; Manuel Rüger <mrueg@gentoo.org> execjs-1.4.0.ebuild:
   Drop failing test. Move execjs-1.4 to SLOT=1
