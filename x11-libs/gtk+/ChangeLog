@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.737 2014/10/14 10:11:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.738 2014/10/15 08:10:20 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> gtk+-2.24.25.ebuild:
+  dev-libs/gobject-introspection-common DEPEND needed again (#525448 by Andrei
+  Slavoiu)
 
 *gtk+-2.24.25 (14 Oct 2014)
 

@@ -1,6 +1,15 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.40 2014/10/14 10:53:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.42 2014/10/15 08:12:34 klausman Exp $
+
+  15 Oct 2014; Tobias Klausmann <klausman@gentoo.org> prosody-0.9.5-r2.ebuild:
+  Fix referencing old & broken init file
+
+*prosody-0.9.5-r2 (15 Oct 2014)
+
+  15 Oct 2014; Tobias Klausmann <klausman@gentoo.org> -prosody-0.9.5-r1.ebuild,
+  +prosody-0.9.5-r2.ebuild, -files/prosody.initd-r1, +files/prosody.initd-r2:
+  Fix checkpath call to make file, not directory. Bug 525402
 
 *prosody-0.9.5-r1 (14 Oct 2014)
 

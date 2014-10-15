@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.25.ebuild,v 1.1 2014/10/14 10:11:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.25.ebuild,v 1.2 2014/10/15 08:10:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -45,6 +45,7 @@ COMMON_DEPEND="
 	!<gnome-base/gail-1000
 "
 DEPEND="${COMMON_DEPEND}
+	dev-libs/gobject-introspection-common
 	sys-devel/gettext
 	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	!aqua? (

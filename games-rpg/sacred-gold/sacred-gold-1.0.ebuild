@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sacred-gold/sacred-gold-1.0.ebuild,v 1.3 2014/04/16 17:08:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sacred-gold/sacred-gold-1.0.ebuild,v 1.4 2014/10/15 08:28:29 pacho Exp $
+
+EAPI=5
 
 inherit eutils cdrom games
 
@@ -14,11 +16,20 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 RESTRICT="bindist strip"
 
-RDEPEND="virtual/opengl
-	x86? ( x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXi )
-	amd64? ( app-emulation/emul-linux-x86-xlibs )"
+RDEPEND="
+	|| (
+		(
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+			x11-libs/libXi[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)
+"
 DEPEND=""
 
 S=${WORKDIR}
@@ -42,7 +53,7 @@ src_install() {
 	mv * "${D}/${dir}" || die
 
 	games_make_wrapper ${PN} ./sacred "${dir}" "${dir}"/lib
-	newicon "${CDROM_ROOT}"/.data/icon.xpm ${PN}.xpm || die
+	newicon "${CDROM_ROOT}"/.data/icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Sacred - Gold" ${PN}
 
 	prepgamesdirs

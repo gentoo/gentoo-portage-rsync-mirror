@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.9.5-r1.ebuild,v 1.1 2014/10/14 10:53:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.9.5-r2.ebuild,v 1.2 2014/10/15 08:12:34 klausman Exp $
 
 EAPI=5
 
@@ -74,7 +74,7 @@ src_install() {
 	emake DESTDIR="${D}" install
 	systemd_dounit "${FILESDIR}/${PN}".service
 	systemd_newtmpfilesd "${FILESDIR}/${PN}".tmpfilesd "${PN}".conf
-	newinitd "${FILESDIR}/${PN}".initd-r1 ${PN}
+	newinitd "${FILESDIR}/${PN}".initd-r2 ${PN}
 }
 
 src_test() {
