@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mariadb-galera
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/ChangeLog,v 1.8 2014/10/09 20:03:25 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/ChangeLog,v 1.9 2014/10/15 16:53:02 grknight Exp $
+
+  15 Oct 2014; Brian Evans <grknight@gentoo.org> -mariadb-galera-10.0.12.ebuild:
+  Drop old
 
   08 Oct 2014; Brian Evans <grknight@gentoo.org> +files/my.cnf-5.6:
   Add new 5.6 configs to better match upstream wrt bug 524768

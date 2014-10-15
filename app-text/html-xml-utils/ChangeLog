@@ -1,6 +1,12 @@
 # ChangeLog for app-text/html-xml-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.45 2014/08/10 18:23:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.46 2014/10/15 16:58:25 kensington Exp $
+
+*html-xml-utils-6.8 (15 Oct 2014)
+
+  15 Oct 2014; Michael Palimaka <kensington@gentoo.org>
+  +html-xml-utils-6.8.ebuild:
+  Version bump.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> html-xml-utils-6.0.ebuild:
   QA: drop trailing '.' from DESCRIPTION

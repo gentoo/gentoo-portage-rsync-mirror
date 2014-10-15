@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.9999.ebuild,v 1.3 2014/09/07 20:48:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.9999.ebuild,v 1.4 2014/10/15 16:39:08 tamiko Exp $
 
 EAPI=5
 
@@ -151,6 +151,9 @@ src_prepare() {
 	base_src_prepare
 	use systemd && epatch "${FILESDIR}/${PN}-1.7.2-systemd-socket-2.patch"
 
+	# Remove ".SILENT" rule for verbose output (bug 524338).
+	sed 's#^.SILENT:##g' -i "${S}"/Makedefs.in || die "sed failed"
+
 	# Fix install-sh, posix sh does not have 'function'.
 	sed 's#function gzipcp#gzipcp()#g' -i "${S}/install-sh"
 
@@ -192,9 +195,12 @@ multilib_src_configure() {
 		)
 	fi
 
+	# explicitly specify compiler wrt bug 524340
+	#
 	# need to override KRB5CONFIG for proper flags
 	# https://www.cups.org/str.php?L4423
 	econf \
+		CC="$(tc-getCC)" \
 		KRB5CONFIG="${EPREFIX}"/usr/bin/${CHOST}-krb5-config \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--localstatedir="${EPREFIX}"/var \

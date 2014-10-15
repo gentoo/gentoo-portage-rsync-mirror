@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.64 2014/10/15 16:39:08 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.5-r1.ebuild,v 1.1 2014/10/15 16:39:08 tamiko Exp $
 
 EAPI=5
 
@@ -16,12 +16,12 @@ MY_PV=${PV/_rc/rc}
 MY_PV=${MY_PV/_beta/b}
 
 if [[ ${PV} == *9999 ]]; then
-	inherit git-r3
+	inherit git-2
 	EGIT_REPO_URI="http://www.cups.org/cups.git"
 	if [[ ${PV} != 9999 ]]; then
 		EGIT_BRANCH=branch-${PV/.9999}
 	fi
-	KEYWORDS=""
+	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 else
 	SRC_URI="http://www.cups.org/software/${MY_PV}/${MY_P}-source.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~m68k-mint"
@@ -32,7 +32,7 @@ HOMEPAGE="http://www.cups.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="acl dbus debug java kerberos lprng-compat pam
+IUSE="acl dbus debug gnutls java kerberos lprng-compat pam
 	python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf"
 
 LANGS="ca es fr it ja pt_BR ru"
@@ -56,8 +56,11 @@ RDEPEND="
 	python? ( ${PYTHON_DEPS} )
 	selinux? ( sec-policy/selinux-cups )
 	ssl? (
-		>=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}]
-		>=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}]
+		gnutls? (
+			>=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}]
+			>=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}]
+		)
+		!gnutls? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
 	)
 	usb? ( virtual/libusb:1 )
 	X? ( x11-misc/xdg-utils )
@@ -80,6 +83,7 @@ PDEPEND="
 "
 
 REQUIRED_USE="
+	gnutls? ( ssl )
 	python? ( ${PYTHON_REQUIRED_USE} )
 	usb? ( threads )
 "
@@ -93,7 +97,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.6.0-dont-compress-manpages.patch"
 	"${FILESDIR}/${PN}-1.6.0-fix-install-perms.patch"
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
-	"${FILESDIR}/${PN}-2.0.0-rename-systemd-service-files.patch"
 )
 
 MULTILIB_CHOST_TOOLS=(
@@ -146,6 +149,7 @@ pkg_setup() {
 
 src_prepare() {
 	base_src_prepare
+	use systemd && epatch "${FILESDIR}/${PN}-1.7.2-systemd-socket-2.patch"
 
 	# Remove ".SILENT" rule for verbose output (bug 524338).
 	sed 's#^.SILENT:##g' -i "${S}"/Makedefs.in || die "sed failed"
@@ -167,10 +171,27 @@ multilib_src_configure() {
 	einfo LINGUAS=\"${LINGUAS}\"
 
 	local myconf=()
+	if use ssl ; then
+		myconf+=(
+			$(use_enable gnutls)
+			$(use_enable !gnutls openssl)
+		)
+	else
+		myconf+=(
+			--disable-gnutls
+			--disable-openssl
+		)
+	fi
 
 	if tc-is-static-only; then
 		myconf+=(
 			--disable-shared
+		)
+	fi
+
+	if use systemd; then
+		myconf+=(
+			--with-systemdsystemunitdir="$(systemd_get_unitdir)"
 		)
 	fi
 
@@ -198,7 +219,6 @@ multilib_src_configure() {
 		$(multilib_native_use_enable pam) \
 		$(use_enable static-libs static) \
 		$(use_enable threads) \
-		$(use_enable ssl gnutls) \
 		$(multilib_native_use_enable usb libusb) \
 		--disable-dnssd \
 		$(multilib_native_use_with java) \

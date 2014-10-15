@@ -1,6 +1,14 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.640 2014/09/21 21:00:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.641 2014/10/15 16:39:08 tamiko Exp $
+
+*cups-1.7.5-r1 (15 Oct 2014)
+*cups-2.0.0 (15 Oct 2014)
+
+  15 Oct 2014; Matthias Maier <tamiko@gentoo.org> +cups-1.7.5-r1.ebuild,
+  +cups-2.0.0.ebuild, cups-1.7.9999.ebuild:
+  revbump; verbose build log and use correct compiler (bug 524338 524340); also
+  fix 1.7* live ebuild
 
   21 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org> -cups-1.7.1-r1.ebuild,
   -cups-1.7.3.ebuild, -cups-1.7.4.ebuild,
