@@ -1,0 +1,9 @@
+# ChangeLog for kde-base/oxygen-fonts
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-fonts/ChangeLog,v 1.1 2014/10/15 13:34:23 kensington Exp $
+
+*oxygen-fonts-5.1.0.1 (15 Oct 2014)
+
+  15 Oct 2014; Michael Palimaka <kensington@gentoo.org> +metadata.xml,
+  +oxygen-fonts-5.1.0.1.ebuild:
+  Import from KDE overlay.
