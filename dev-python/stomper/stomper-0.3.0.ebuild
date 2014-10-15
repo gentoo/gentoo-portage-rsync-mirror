@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/stomper-0.2.8.ebuild,v 1.2 2014/10/15 12:18:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/stomper-0.3.0.ebuild,v 1.1 2014/10/15 12:18:47 idella4 Exp $
 
 EAPI=5
+# Supports only py2 pypy
 PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
