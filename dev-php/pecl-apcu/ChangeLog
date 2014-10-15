@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pecl-apcu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apcu/ChangeLog,v 1.10 2014/10/10 02:11:50 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apcu/ChangeLog,v 1.11 2014/10/15 14:44:31 grknight Exp $
+
+*pecl-apcu-4.0.7 (15 Oct 2014)
+
+  15 Oct 2014; Brian Evans <grknight@gentoo.org> +pecl-apcu-4.0.7.ebuild:
+  Version bump
 
 *pecl-apcu-4.0.6 (30 Sep 2014)
 

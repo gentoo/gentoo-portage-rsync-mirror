@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.273 2014/10/14 02:49:02 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.274 2014/10/15 14:48:47 pesa Exp $
+
+  15 Oct 2014; Davide Pesavento <pesa@gentoo.org> PyQt4-4.11.2-r1.ebuild:
+  Fix bug #525392.
 
   14 Oct 2014; Davide Pesavento <pesa@gentoo.org>
   +files/PyQt4-4.11.2-phonon.patch, PyQt4-4.11.2-r1.ebuild:

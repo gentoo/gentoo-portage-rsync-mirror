@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-beta/opera-beta-25.0.1614.31.ebuild,v 1.1 2014/09/30 13:20:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-beta/opera-beta-25.0.1614.54.ebuild,v 1.1 2014/10/15 14:42:23 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="af ar az be bg bn ca cs da de el en_GB en_US es_LA es fi fr_CA
@@ -19,12 +19,14 @@ SRC_URI="
 KEYWORDS="~amd64"
 
 RDEPEND="
+	dev-libs/expat
 	dev-libs/glib:2
 	dev-libs/nspr
 	dev-libs/nss
 	>=dev-libs/openssl-1.0.1:0
 	gnome-base/gconf:2
 	media-libs/alsa-lib
+	media-libs/fontconfig
 	media-libs/freetype
 	net-misc/curl
 	net-print/cups
@@ -34,10 +36,12 @@ RDEPEND="
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
+	x11-libs/libX11
 	x11-libs/libXScrnSaver
 	x11-libs/libXcomposite
 	x11-libs/libXcursor
 	x11-libs/libXdamage
+	x11-libs/libXext
 	x11-libs/libXfixes
 	x11-libs/libXi
 	x11-libs/libXrandr
