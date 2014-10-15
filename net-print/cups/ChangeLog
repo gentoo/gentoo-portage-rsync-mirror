@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.642 2014/10/15 19:01:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.643 2014/10/15 21:36:37 tamiko Exp $
+
+  15 Oct 2014; Matthias Maier <tamiko@gentoo.org> cups-1.7.9999.ebuild:
+  Apply CXX fix to 1.7.999 as well
 
   15 Oct 2014; Mike Gilbert <floppym@gentoo.org> cups-1.7.5-r1.ebuild,
   cups-2.0.0.ebuild, cups-9999.ebuild:

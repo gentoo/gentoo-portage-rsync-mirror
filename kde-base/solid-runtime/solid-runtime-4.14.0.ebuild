@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/solid-runtime-4.14.0.ebuild,v 1.1 2014/08/20 16:02:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/solid-runtime-4.14.0.ebuild,v 1.2 2014/10/15 21:43:20 mrueg Exp $
 
 EAPI=5
 
@@ -24,5 +24,5 @@ KMEXTRA="
 DEPEND=""
 RDEPEND="${DEPEND}
 	bluetooth? ( net-wireless/bluedevil )
-	networkmanager? ( || ( kde-misc/plasma-nm kde-misc/networkmanagement ) )
+	networkmanager? ( || ( kde-misc/plasma-nm kde-misc/networkmanagement kde-base/plasma-nm ) )
 "
