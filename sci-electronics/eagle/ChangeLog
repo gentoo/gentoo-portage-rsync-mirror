@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.61 2014/08/11 20:18:31 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.62 2014/10/15 21:05:09 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> eagle-4.16_p2-r2.ebuild,
+  eagle-5.11.0.ebuild, eagle-5.12.0.ebuild, eagle-6.6.0.ebuild,
+  eagle-7.1.0.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
 *eagle-7.1.0 (11 Aug 2014)
 *eagle-6.6.0 (11 Aug 2014)

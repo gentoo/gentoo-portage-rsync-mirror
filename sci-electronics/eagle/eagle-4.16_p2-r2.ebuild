@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2-r2.ebuild,v 1.6 2012/09/24 00:47:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2-r2.ebuild,v 1.7 2014/10/15 21:05:09 pacho Exp $
+
+EAPI=5
 
 inherit eutils
 
@@ -29,13 +31,20 @@ SRC_URI="linguas_de? ( ftp://ftp.cadsoft.de/pub/program/${MY_PV}/${PN}-lin-ger-$
 	!linguas_de? ( ftp://ftp.cadsoft.de/pub/program/${MY_PV}/${PN}-lin-eng-${MY_PV}.tgz
 			doc? ( mirror://gentoo/${MANDOC}-eng-${MANVER}.pdf ) )"
 
-RDEPEND="sys-libs/glibc
-	x11-libs/libXext
-	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXdmcp
-	amd64? ( app-emulation/emul-linux-x86-baselibs
-		 app-emulation/emul-linux-x86-xlibs )"
+RDEPEND="
+	sys-libs/glibc
+	|| (
+		(
+			x11-libs/libXext[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXau[abi_x86_32(-)]
+			x11-libs/libXdmcp[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)
+"
 
 INSTALLDIR="/opt/eagle"
 case "${LINGUAS}" in
