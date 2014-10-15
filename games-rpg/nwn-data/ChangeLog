@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwn-data
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.49 2013/08/11 17:01:08 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.50 2014/10/15 09:05:52 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> nwn-data-1.29-r5.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   11 Aug 2013; Michael Sterrett <mr_bones_@gentoo.org> nwn-data-1.29-r5.ebuild:
   slot libsdl dep

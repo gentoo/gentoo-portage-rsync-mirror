@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r5.ebuild,v 1.4 2013/08/11 17:01:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r5.ebuild,v 1.5 2014/10/15 09:05:52 pacho Exp $
 
-EAPI=4
+EAPI=5
 
 CDROM_OPTIONAL="yes"
 inherit eutils cdrom games
@@ -46,16 +46,25 @@ KEYWORDS="amd64 x86"
 IUSE="cdinstall hou nowin sou videos ${LANGUAGES}"
 RESTRICT="strip mirror"
 
-RDEPEND="virtual/opengl
-	>=media-libs/libsdl-1.2.5:0
-	amd64? (
-		app-emulation/emul-linux-x86-baselibs )"
+RDEPEND="
+	|| (
+		(
+			>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+		)
+	)
+"
 DEPEND="${RDEPEND}
 	cdinstall? (
 		games-util/biounzip
 		app-arch/unshield )
 	app-arch/unzip
-	app-arch/p7zip"
+	app-arch/p7zip
+"
 
 QA_PREBUILT="${GAMES_PREFIX_OPT:1}/nwn/lib/libSDL-1.2.so.0.0.5
 	${GAMES_PREFIX_OPT:1}/nwn/miles/msssoft.m3d
