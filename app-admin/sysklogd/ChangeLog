@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.91 2014/10/06 16:52:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.92 2014/10/15 13:25:36 klausman Exp $
+
+  15 Oct 2014; Tobias Klausmann <klausman@gentoo.org> sysklogd-1.5.1.ebuild:
+  Stable on alpha, bug 524058
 
 *sysklogd-1.5.1 (06 Oct 2014)
 

@@ -3137,6 +3137,15 @@ kde-base/smokeqt:qwt - Compile bindings for x11-libs/qwt.
 kde-base/smokeqt:webkit - Compile bindings for dev-qt/qtwebkit.
 kde-base/step:qalculate - Enable the libqalculate library for unit conversion
 kde-base/systemsettings:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
+kde-frameworks/kdesignerplugin:designer - Build KF5 widgets plugin for QtDesigner
+kde-frameworks/kdesignerplugin:webkit - Build kdewebkit plugin for QtDesigner
+kde-frameworks/kimageformats:eps - Support the EPS graphics file format
+kde-frameworks/kinit:caps - Capabilities support for improved security and better OOM handling
+kde-frameworks/knotifyconfig:phonon - Add sound support via media-libs/phonon
+kde-frameworks/kxmlgui:attica - Enable support for kde-frameworks/attica
+kde-frameworks/plasma:egl - Enable EGL support
+kde-frameworks/sonnet:aspell - Enable the app-text/aspell spell-checking backend
+kde-frameworks/sonnet:hunspell - Enable the app-text/hunspell spell-checking backend
 kde-misc/kcm-grub2:hwinfo - Used to work out supported framebuffer resolutions
 kde-misc/kcm-grub2:imagemagick - Create splash images compatible with GRUB2
 kde-misc/kcm-grub2:packagekit - Add support for packagekit integration

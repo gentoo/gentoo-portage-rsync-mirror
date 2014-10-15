@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.386 2014/10/14 21:10:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.387 2014/10/15 13:18:21 klausman Exp $
+
+  15 Oct 2014; Tobias Klausmann <klausman@gentoo.org> nss-3.16.5.ebuild:
+  Stable on alpha, bug 523652
 
 *nss-3.16.6 (14 Oct 2014)
 *nss-3.17.2 (14 Oct 2014)

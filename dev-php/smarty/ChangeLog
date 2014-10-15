@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/smarty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.135 2014/08/10 21:05:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.136 2014/10/15 13:08:55 grknight Exp $
+
+*smarty-3.1.20 (15 Oct 2014)
+
+  15 Oct 2014; Brian Evans <grknight@gentoo.org> +smarty-3.1.20.ebuild:
+  Version bump
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> smarty-2.6.28.ebuild,
   smarty-3.1.12.ebuild, smarty-3.1.16.ebuild:

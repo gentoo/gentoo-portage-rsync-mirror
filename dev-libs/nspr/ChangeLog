@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.281 2014/09/03 16:10:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.282 2014/10/15 13:18:42 klausman Exp $
+
+  15 Oct 2014; Tobias Klausmann <klausman@gentoo.org> nspr-4.10.6-r1.ebuild:
+  Stable on alpha, bug 523652
 
 *nspr-4.10.7 (03 Sep 2014)
 
