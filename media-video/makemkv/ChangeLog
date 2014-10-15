@@ -1,6 +1,10 @@
 # ChangeLog for media-video/makemkv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.44 2014/08/22 23:06:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.45 2014/10/15 20:44:34 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> makemkv-1.8.10.ebuild,
+  makemkv-1.8.12-r2.ebuild:
+  Support multilib providers for deps (only relies on glibc)
 
 *makemkv-1.8.12-r2 (22 Aug 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.12-r2.ebuild,v 1.1 2014/08/22 23:06:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.12-r2.ebuild,v 1.2 2014/10/15 20:44:34 pacho Exp $
 
 EAPI=5
 inherit eutils gnome2-utils multilib flag-o-matic
@@ -20,7 +20,9 @@ IUSE="multilib qt4"
 
 QA_PREBUILT="opt/bin/makemkvcon opt/bin/mmdtsdec"
 
-RDEPEND="dev-libs/expat
+RDEPEND="
+	sys-libs/glibc[multilib?]
+	dev-libs/expat
 	dev-libs/openssl:0
 	sys-libs/zlib
 	qt4? (
@@ -31,7 +33,7 @@ RDEPEND="dev-libs/expat
 	)
 	>=sys-libs/glibc-2.12.0
 	|| ( >=media-video/ffmpeg-1.0.0 >=media-video/libav-0.8.9 )
-	amd64? ( multilib? ( app-emulation/emul-linux-x86-baselibs ) )"
+"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/makemkv-oss-${PV}

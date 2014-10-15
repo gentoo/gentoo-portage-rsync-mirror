@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r6.ebuild,v 1.2 2014/09/03 21:45:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r6.ebuild,v 1.3 2014/10/15 20:34:53 pacho Exp $
 
 EAPI=5
 inherit eutils games
@@ -51,17 +51,24 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE="sou hou ${LANGUAGES}"
 RESTRICT="mirror strip"
 
-RDEPEND=">=games-rpg/nwn-data-1.29-r3[sou?,hou?]
-	virtual/opengl
+RDEPEND="
+	>=games-rpg/nwn-data-1.29-r3
 	!<games-rpg/nwmouse-0.1-r1
-	x86? (
-		x11-libs/libXext
-		x11-libs/libX11
-		media-libs/libsdl )
-	amd64? (
-		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-sdl )"
+	|| (
+		(
+			x11-libs/libXext[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+			>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+		)
+	)
+"
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/nwn
