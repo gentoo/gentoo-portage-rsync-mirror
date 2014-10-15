@@ -1,6 +1,12 @@
 # ChangeLog for app-text/bibletime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.71 2014/08/06 07:09:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.72 2014/10/15 04:04:26 creffett Exp $
+
+*bibletime-2.10.1 (15 Oct 2014)
+
+  15 Oct 2014; Chris Reffett <creffett@gentoo.org> +bibletime-2.10.1.ebuild,
+  +files/bibletime-2.10.1-qt5-printsupport.patch:
+  Bump, add qt5 build option, fix build when qt5 is present
 
   06 Aug 2014; Patrick Lauer <patrick@gentoo.org> bibletime-2.10.0.ebuild,
   bibletime-2.9.1.ebuild:
