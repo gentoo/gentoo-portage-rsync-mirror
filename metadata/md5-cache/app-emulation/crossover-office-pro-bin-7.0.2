@@ -1,12 +1,13 @@
 DEFINED_PHASES=install nofetch postinst unpack
 DESCRIPTION=simplified/streamlined version of wine with commercial support
+EAPI=5
 HOMEPAGE=http://www.codeweavers.com/products/cxoffice/
 IUSE=nas
 KEYWORDS=-* amd64 x86
 LICENSE=CROSSOVER
-RDEPEND=sys-libs/glibc x11-libs/libXrandr x11-libs/libXi x11-libs/libXmu x11-libs/libXxf86dga x11-libs/libXxf86vm dev-util/desktop-file-utils nas? ( media-libs/nas ) amd64? ( app-emulation/emul-linux-x86-xlibs )
+RDEPEND=dev-util/desktop-file-utils sys-libs/glibc || ( ( x11-libs/libXrandr[abi_x86_32(-)] x11-libs/libXi[abi_x86_32(-)] x11-libs/libXmu[abi_x86_32(-)] x11-libs/libXxf86dga[abi_x86_32(-)] x11-libs/libXxf86vm[abi_x86_32(-)] nas? ( media-libs/nas[abi_x86_32(-)] ) ) amd64? ( app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) )
 RESTRICT=fetch strip
 SLOT=0
 SRC_URI=install-crossover-pro-7.0.2.sh
 _eclasses_=unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=07299a5ae858f526a4030b2f9602ed11
+_md5_=8a24a2d5660049b57682b784f6c21642

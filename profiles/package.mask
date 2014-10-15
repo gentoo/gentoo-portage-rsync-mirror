@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16096 2014/10/15 00:20:19 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16097 2014/10/15 12:57:06 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -387,6 +387,66 @@ dev-php/PEAR-MDB2_Driver_ibase
 =dev-qt/qtxml-5.3.2*
 =dev-qt/qtxmlpatterns-5.3.2*
 dev-python/PyQt5
+kde-frameworks/attica
+kde-frameworks/frameworkintegration
+kde-frameworks/kactivities
+kde-frameworks/kapidox
+kde-frameworks/karchive
+kde-frameworks/kauth
+kde-frameworks/kbookmarks
+kde-frameworks/kcmutils
+kde-frameworks/kcodecs
+kde-frameworks/kcompletion
+kde-frameworks/kconfig
+kde-frameworks/kconfigwidgets
+kde-frameworks/kcoreaddons
+kde-frameworks/kcrash
+kde-frameworks/kdbusaddons
+kde-frameworks/kdeclarative
+kde-frameworks/kded
+kde-frameworks/kdelibs4support
+kde-frameworks/kdesignerplugin
+kde-frameworks/kdesu
+kde-frameworks/kdewebkit
+kde-frameworks/kdnssd
+kde-frameworks/kdoctools
+kde-frameworks/kemoticons
+kde-frameworks/kf-env
+kde-frameworks/kglobalaccel
+kde-frameworks/kguiaddons
+kde-frameworks/khtml
+kde-frameworks/ki18n
+kde-frameworks/kiconthemes
+kde-frameworks/kidletime
+kde-frameworks/kimageformats
+kde-frameworks/kinit
+kde-frameworks/kio
+kde-frameworks/kitemmodels
+kde-frameworks/kitemviews
+kde-frameworks/kjobwidgets
+kde-frameworks/kjs
+kde-frameworks/kjsembed
+kde-frameworks/kmediaplayer
+kde-frameworks/knewstuff
+kde-frameworks/knotifications
+kde-frameworks/knotifyconfig
+kde-frameworks/kparts
+kde-frameworks/kplotting
+kde-frameworks/kpty
+kde-frameworks/kross
+kde-frameworks/krunner
+kde-frameworks/kservice
+kde-frameworks/ktexteditor
+kde-frameworks/ktextwidgets
+kde-frameworks/kunitconversion
+kde-frameworks/kwallet
+kde-frameworks/kwidgetsaddons
+kde-frameworks/kwindowsystem
+kde-frameworks/kxmlgui
+kde-frameworks/plasma
+kde-frameworks/solid
+kde-frameworks/sonnet
+kde-frameworks/threadweaver
 www-client/otter
 
 # Sergey Popov <pinkbyte@gentoo.org> (04 Sep 2014)

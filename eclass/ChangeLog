@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1383 2014/10/14 16:10:36 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1384 2014/10/15 12:48:57 kensington Exp $
+
+  15 Oct 2014; Michael Palimaka <kensington@gentoo.org> +kde5-functions.eclass,
+  +kde5.eclass:
+  Import from KDE overlay.
 
   14 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   -mozconfig-v4.1.eclass, +mozconfig-v5.31.eclass, +mozconfig-v5.33.eclass,
