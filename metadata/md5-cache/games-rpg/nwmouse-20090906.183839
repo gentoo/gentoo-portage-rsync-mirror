@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DESCRIPTION=Hardware mouse cursors for Neverwinter Nights
+EAPI=5
 HOMEPAGE=http://home.roadrunner.com/~nwmovies/
 KEYWORDS=amd64 x86
 LICENSE=nwmovies Artistic
-RDEPEND=sys-libs/glibc dev-libs/elfutils games-rpg/nwn-data amd64? ( app-emulation/emul-linux-x86-xlibs app-emulation/emul-linux-x86-sdl ) >=games-rpg/nwn-1.68-r4 x86? ( x11-libs/libXcursor x11-libs/libXext x11-libs/libX11 media-libs/libsdl ) games-misc/games-envd
+RDEPEND=>=games-rpg/nwn-1.68-r4 games-rpg/nwn-data sys-libs/glibc || ( ( >=dev-libs/elfutils-0.155-r1[abi_x86_32(-)] >=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] x11-libs/libXcursor[abi_x86_32(-)] x11-libs/libXext[abi_x86_32(-)] ) amd64? ( app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) ) games-misc/games-envd
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~calchan/distfiles/nwmouse-20090906.183839.tar.bz2 mirror://gentoo/nwmouse-20090906.183839.tar.bz2
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=b7b8fc1e76bf1c5f2c8fa35b2a4dee10
+_md5_=6988cb7842a3e339e03737bfec492575

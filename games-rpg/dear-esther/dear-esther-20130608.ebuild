@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dear-esther/dear-esther-20130608.ebuild,v 1.1 2013/07/16 15:23:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dear-esther/dear-esther-20130608.ebuild,v 1.2 2014/10/15 10:20:08 pacho Exp $
 
 # TODO: unbundle libSDL2
 
@@ -24,15 +24,22 @@ QA_PREBUILT="${MYGAMEDIR#/}/dearesther_linux
 	${MYGAMEDIR#/}/bin/*.so*"
 
 DEPEND="app-arch/unzip"
-RDEPEND="virtual/opengl
-	amd64? (
-		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-xlibs
+RDEPEND="
+	|| (
+		(
+			>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
+			>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
+			>=media-libs/openal-1.15.1[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
 	)
-	x86? (
-		media-libs/freetype
-		media-libs/openal
-	)"
+"
 
 S=${WORKDIR}/data
 

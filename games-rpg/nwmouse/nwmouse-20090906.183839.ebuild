@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-20090906.183839.ebuild,v 1.5 2014/05/25 11:21:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-20090906.183839.ebuild,v 1.6 2014/10/15 10:01:31 pacho Exp $
+
+EAPI=5
 
 inherit games
 
@@ -15,18 +17,26 @@ KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
-RDEPEND="sys-libs/glibc
-	dev-libs/elfutils
-	games-rpg/nwn-data
-	amd64? (
-		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-sdl )
+RDEPEND="
 	>=games-rpg/nwn-1.68-r4
-	x86? (
-		x11-libs/libXcursor
-		x11-libs/libXext
-		x11-libs/libX11
-		media-libs/libsdl )"
+	games-rpg/nwn-data
+	sys-libs/glibc
+	|| (
+		(
+			>=dev-libs/elfutils-0.155-r1[abi_x86_32(-)]
+			>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXcursor[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)
+"
+DEPEND=""
 
 # I've looked at this stuff, and I can't find the problem myself, so I'm just
 # removing the warnings.  If someone feels like finding the patch, that would be
@@ -43,11 +53,11 @@ pkg_setup() {
 src_install() {
 	# libelf moved to games-rpg/nwn, see bug #210562
 	exeinto "${dir}"
-	doexe "${PN}.so" || die "Installation failed"
+	doexe "${PN}.so"
 	exeinto "${dir}/${PN}/libdis"
-	doexe "libdisasm.so" || die "Installation failed"
+	doexe "libdisasm.so"
 	insinto "${dir}/${PN}/cursors"
-	doins -r cursors/* || die "Installation failed"
+	doins -r cursors/*
 	prepgamesdirs
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.491 2014/09/02 04:13:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.492 2014/10/15 10:28:18 eras Exp $
+
+*dovecot-2.2.14 (15 Oct 2014)
+
+  15 Oct 2014; Eray Aslan <eras@gentoo.org> +dovecot-2.2.14.ebuild:
+  Version bump
 
   02 Sep 2014; Patrick Lauer <patrick@gentoo.org> dovecot-2.2.13-r1.ebuild:
   Revert incomplete stable keywording for alpha #501600

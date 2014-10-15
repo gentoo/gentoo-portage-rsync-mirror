@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dungeon-defenders/dungeon-defenders-20130305.ebuild,v 1.5 2013/06/02 18:51:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dungeon-defenders/dungeon-defenders-20130305.ebuild,v 1.6 2014/10/15 10:14:11 pacho Exp $
 
 # TODO: unbundle SDL-2 when it gets released
 
@@ -30,25 +30,28 @@ CHECKREQS_DISK_BUILD="5916M"
 DEPEND="app-arch/unzip"
 RDEPEND="
 	x11-misc/xdg-utils
-	virtual/opengl
-	amd64? (
-		app-emulation/emul-linux-x86-soundlibs[alsa]
-		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-xlibs
+	|| (
+		(
+			>=media-libs/alsa-lib-1.0.27.2[abi_x86_32(-)]
+			>=media-sound/pulseaudio-5.0[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXScrnSaver[abi_x86_32(-)]
+			x11-libs/libXcursor[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+			x11-libs/libXi[abi_x86_32(-)]
+			x11-libs/libXinerama[abi_x86_32(-)]
+			x11-libs/libXrandr[abi_x86_32(-)]
+			x11-libs/libXxf86vm[abi_x86_32(-)]
+			!bundled-libs? ( >=media-libs/openal-1.15.1[abi_x86_32(-)] )
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-soundlibs[alsa,-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
 	)
-	x86? (
-		media-libs/alsa-lib
-		media-sound/pulseaudio
-		x11-libs/libX11
-		x11-libs/libXScrnSaver
-		x11-libs/libXcursor
-		x11-libs/libXext
-		x11-libs/libXi
-		x11-libs/libXinerama
-		x11-libs/libXrandr
-		x11-libs/libXxf86vm
-		!bundled-libs? ( media-libs/openal )
-	)"
+"
 
 S=${WORKDIR}/data
 

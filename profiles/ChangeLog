@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9456 2014/10/15 09:01:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9457 2014/10/15 10:27:20 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  arch/sparc/package.use.stable.mask:
+  webkit-gtk:2 is being moved to testing on sparc (#525232)
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org>
   arch/amd64/package.use.stable.mask:

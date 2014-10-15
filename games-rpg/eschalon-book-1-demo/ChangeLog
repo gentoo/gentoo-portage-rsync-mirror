@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/eschalon-book-1-demo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eschalon-book-1-demo/ChangeLog,v 1.7 2013/01/30 18:47:57 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eschalon-book-1-demo/ChangeLog,v 1.8 2014/10/15 10:08:02 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> eschalon-book-1-demo-106.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -eschalon-book-1-demo-105.ebuild:
