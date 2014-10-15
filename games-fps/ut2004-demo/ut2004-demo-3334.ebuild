@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.22 2014/05/07 16:08:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.23 2014/10/15 11:06:04 pacho Exp $
+
+EAPI=5
 
 inherit eutils unpacker games
 
@@ -16,13 +18,20 @@ RESTRICT="strip"
 IUSE=""
 
 DEPEND=""
-RDEPEND="virtual/opengl
-	=virtual/libstdc++-3.3
-	x86? (
-		x11-libs/libX11
-		x11-libs/libXext )
-	amd64? (
-		app-emulation/emul-linux-x86-xlibs )"
+RDEPEND="
+	virtual/libstdc++:3.3
+	|| (
+		(
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)
+"
 
 S=${WORKDIR}
 

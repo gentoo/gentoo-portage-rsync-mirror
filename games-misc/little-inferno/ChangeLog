@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/little-inferno
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/little-inferno/ChangeLog,v 1.3 2013/08/18 00:27:50 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/little-inferno/ChangeLog,v 1.4 2014/10/15 11:02:11 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> little-inferno-20130509.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   18 Aug 2013; Julian Ospald <hasufell@gentoo.org>
   little-inferno-20130509.ebuild:

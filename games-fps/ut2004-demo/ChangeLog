@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2004-demo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.48 2014/05/07 16:08:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.49 2014/10/15 11:06:04 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> ut2004-demo-3334.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   07 May 2014; Ulrich Müller <ulm@gentoo.org> ut2004-demo-3334.ebuild:
   Fix LICENSE, bug 506968.

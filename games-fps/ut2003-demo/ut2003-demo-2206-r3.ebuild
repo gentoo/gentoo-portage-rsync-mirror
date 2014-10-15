@@ -1,6 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.26 2013/11/14 22:00:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.27 2014/10/15 11:29:02 pacho Exp $
+
+EAPI=5
 
 inherit eutils unpacker games
 
@@ -17,14 +19,21 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND="app-arch/unzip"
-RDEPEND="virtual/opengl
-	~virtual/libstdc++-3.3
+RDEPEND="
 	sys-devel/bc
-	x86? (
-		x11-libs/libX11
-		x11-libs/libXext )
-	amd64? (
-		app-emulation/emul-linux-x86-xlibs )"
+	virtual/libstdc++:3.3
+	|| (
+		(
+			virtual/opengl[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)
+"
 
 S=${WORKDIR}
 
@@ -78,9 +87,9 @@ src_install() {
 	# Wrapper and benchmark-scripts
 	dogamesbin "${FILESDIR}"/ut2003-demo || die "dogamesbin failed"
 	exeinto "${dir}"/Benchmark
-	doexe "${FILESDIR}/"{benchmark,results.sh} || die "doexe failed"
-	dosed "s:GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" \
-		"${GAMES_BINDIR}"/${PN} "${dir}"/Benchmark/benchmark \
+	doexe "${FILESDIR}/"{benchmark,results.sh}
+	sed -i -e "s:GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" \
+		"${ED}/${GAMES_BINDIR}/${PN}" "${ED}/${dir}"/Benchmark/benchmark \
 		|| die "sed GAMES_PREFIX_OPT"
 
 	# Here we apply DrSiN's crash patch
