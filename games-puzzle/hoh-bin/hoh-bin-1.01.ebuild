@@ -1,6 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/hoh-bin-1.01.ebuild,v 1.14 2013/11/14 22:03:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/hoh-bin-1.01.ebuild,v 1.15 2014/10/15 10:33:55 pacho Exp $
+
+EAPI=5
 
 inherit eutils games
 
@@ -14,8 +16,17 @@ KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND="x11-libs/libX11
-	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
+RDEPEND="
+	|| (
+		(
+			x11-libs/libX11[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)
+"
+DEPEND=""
 
 S=${WORKDIR}/hoh-install-${PV}
 

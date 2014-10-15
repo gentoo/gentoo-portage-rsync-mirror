@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/adom
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/adom/ChangeLog,v 1.10 2012/09/24 00:37:02 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/adom/ChangeLog,v 1.11 2014/10/15 10:31:28 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> adom-1.1.1-r1.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> adom-1.1.1-r1.ebuild:
   QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).

@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/hoh-bin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/ChangeLog,v 1.13 2013/11/14 22:03:12 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/ChangeLog,v 1.14 2014/10/15 10:33:55 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> hoh-bin-1.01.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   14 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> hoh-bin-1.01.ebuild:
   tidy
