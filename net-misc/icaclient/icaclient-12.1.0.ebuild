@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.7 2014/06/18 20:40:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.8 2014/10/15 15:38:38 pacho Exp $
 
-EAPI=4
+EAPI=5
 
 inherit multilib eutils rpm
 
@@ -39,43 +39,31 @@ QA_TEXTRELS="opt/Citrix/ICAClient/VDSCARD.DLL
 QA_EXECSTACK="opt/Citrix/ICAClient/wfica
 	opt/Citrix/ICAClient/libctxssl.so"
 
-RDEPEND="x11-terms/xterm
+RDEPEND="
+	x11-terms/xterm
 	media-fonts/font-adobe-100dpi
 	media-fonts/font-misc-misc
 	media-fonts/font-cursor-misc
 	media-fonts/font-xfree86-type1
 	media-fonts/font-misc-ethiopic
-	x86? (
-		x11-libs/libXp
-		x11-libs/libXaw
-		x11-libs/libX11
-		x11-libs/libSM
-		x11-libs/libICE
-		x11-libs/libXinerama
-		>=x11-libs/motif-2.3.1:0
+	amd64? ( nsplugin? ( www-plugins/nspluginwrapper ) )
+	|| (
+		(
+			>=x11-libs/libXp-1.0.2[abi_x86_32(-)]
+			>=x11-libs/libXaw-1.0.11-r2[abi_x86_32(-)]
+			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+			>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
+			>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
+			>=x11-libs/libXinerama-1.1.3[abi_x86_32(-)]
+			>=x11-libs/motif-2.3.4-r1:0[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-motif[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
 	)
-	amd64? (
-		|| (
-			(
-				>=x11-libs/libXp-1.0.2[abi_x86_32]
-				>=x11-libs/libXaw-1.0.11-r2[abi_x86_32]
-				>=x11-libs/libX11-1.6.2[abi_x86_32]
-				>=x11-libs/libSM-1.2.1-r1[abi_x86_32]
-				>=x11-libs/libICE-1.0.8-r1[abi_x86_32]
-				>=x11-libs/libXinerama-1.1.3[abi_x86_32]
-			)
-			>=app-emulation/emul-linux-x86-xlibs-20110129
-		)
-		|| (
-			>=x11-libs/motif-2.3.4-r1:0[abi_x86_32]
-			>=app-emulation/emul-linux-x86-motif-20110129
-		)
-		>=app-emulation/emul-linux-x86-soundlibs-20110928
-		>=app-emulation/emul-linux-x86-gtklibs-20110928
-		nsplugin? (
-			www-plugins/nspluginwrapper
-		)
-	)"
+"
+
 DEPEND=""
 S="${WORKDIR}${ICAROOT}"
 

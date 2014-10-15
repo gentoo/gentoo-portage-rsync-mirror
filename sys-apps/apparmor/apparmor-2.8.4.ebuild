@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apparmor/apparmor-2.8.2.ebuild,v 1.1 2013/12/03 17:34:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apparmor/apparmor-2.8.4.ebuild,v 1.1 2014/10/15 15:34:32 kensington Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ DEPEND="dev-lang/perl
 S=${WORKDIR}/apparmor-${PV}/parser
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${PN}-2.8.2-makefile.patch
 
 	# remove warning about missing file that controls features
 	# we don't currently support
@@ -38,7 +38,7 @@ src_compile()  {
 src_install() {
 	default
 
-	dodir /etc/apparmor.d
+	dodir /etc/apparmor.d/disable
 
 	newinitd "${FILESDIR}"/${PN}-init ${PN}
 

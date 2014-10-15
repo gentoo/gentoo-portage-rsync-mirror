@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-memcache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcache/ChangeLog,v 1.16 2014/09/02 10:20:22 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcache/ChangeLog,v 1.17 2014/10/15 15:37:04 grknight Exp $
+
+  15 Oct 2014; Brian Evans <grknight@gentoo.org> pecl-memcache-2.2.7.ebuild:
+  EAPI bump; Drop 5.3 support
 
 *pecl-memcache-3.0.8-r1 (02 Sep 2014)
 

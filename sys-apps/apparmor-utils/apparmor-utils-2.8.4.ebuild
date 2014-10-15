@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apparmor-utils/apparmor-utils-2.8.2.ebuild,v 1.1 2013/12/03 17:36:14 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apparmor-utils/apparmor-utils-2.8.4.ebuild,v 1.1 2014/10/15 15:36:25 kensington Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )

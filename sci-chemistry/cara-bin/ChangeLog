@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/cara-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/ChangeLog,v 1.10 2014/10/14 07:53:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/ChangeLog,v 1.11 2014/10/15 15:43:28 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> cara-bin-1.8.4-r1.ebuild,
+  cara-bin-1.8.4.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
 *cara-bin-1.8.4-r1 (14 Oct 2014)
 

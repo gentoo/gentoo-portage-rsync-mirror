@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.294 2014/10/02 11:45:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.295 2014/10/15 15:46:18 leio Exp $
+
+*gtkhtml-4.8.5 (15 Oct 2014)
+
+  15 Oct 2014; Mart Raudsepp <leio@gentoo.org> +gtkhtml-4.8.5.ebuild:
+  Version bump for theming compatibility with gtk3.14 and bug fixes
 
 *gtkhtml-4.8.4 (02 Oct 2014)
 

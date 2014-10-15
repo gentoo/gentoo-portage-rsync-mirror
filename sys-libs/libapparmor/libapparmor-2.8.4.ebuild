@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libapparmor/libapparmor-2.8.2.ebuild,v 1.1 2013/12/03 17:30:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libapparmor/libapparmor-2.8.4.ebuild,v 1.1 2014/10/15 15:33:29 kensington Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
 DISTUTILS_OPTIONAL=1
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 GENTOO_DEPEND_ON_PERL="no"
 
 inherit autotools-utils distutils-r1 perl-module versionator
@@ -17,12 +17,12 @@ SRC_URI="http://launchpad.net/apparmor/$(get_version_component_range 1-2)/${PV}/
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc +perl python static-libs"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RDEPEND="perl? ( dev-lang/perl )
+RDEPEND="perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS} )"
 
 DEPEND="${RDEPEND}
