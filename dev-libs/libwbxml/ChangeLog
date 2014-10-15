@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libwbxml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/ChangeLog,v 1.28 2014/08/10 20:38:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/ChangeLog,v 1.29 2014/10/15 18:31:46 kensington Exp $
+
+*libwbxml-0.11.2 (15 Oct 2014)
+
+  15 Oct 2014; Michael Palimaka <kensington@gentoo.org> +libwbxml-0.11.2.ebuild:
+  Version bump.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libwbxml-0.10.9.ebuild,
   libwbxml-0.11.0.ebuild:

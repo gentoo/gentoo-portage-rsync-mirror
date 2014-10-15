@@ -1,0 +1,9 @@
+# ChangeLog for dev-db/etcdctl
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/etcdctl/ChangeLog,v 1.1 2014/10/15 18:42:19 zmedico Exp $
+
+*etcdctl-0.4.6 (15 Oct 2014)
+
+  15 Oct 2014; Zac Medico <zmedico@gentoo.org> +etcdctl-0.4.6.ebuild,
+  +metadata.xml:
+  Add dev-db/etcdctl.
