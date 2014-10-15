@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.7.3.ebuild,v 1.12 2014/08/19 23:31:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.7.3.ebuild,v 1.13 2014/10/15 15:27:05 idella4 Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="dev-python/markupsafe[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	!dev-python/jinja:compat"
 DEPEND="${RDEPEND}
-	doc? ( >=dev-python/sphinx-0.6 )"
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 
 # XXX: handle Babel better?
 

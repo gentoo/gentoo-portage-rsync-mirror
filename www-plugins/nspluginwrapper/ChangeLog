@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/nspluginwrapper
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.28 2012/08/04 09:44:23 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.30 2014/10/15 15:10:28 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> -nspluginwrapper-1.4.4-r1.ebuild,
+  -nspluginwrapper-1.4.4-r2.ebuild, -nspluginwrapper-1.4.4.ebuild:
+  Drop old
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> nspluginwrapper-1.4.4-r3.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
   nspluginwrapper-1.4.4-r3.ebuild:
@@ -330,4 +337,3 @@
   <herbs@gentoo.org>, also had contributions from Ahmed Ammar
   <b33fc0d3@gmail.com> and Matsuu Takuto matsuu@gentoo.org. Closes bug
   #138454.
-

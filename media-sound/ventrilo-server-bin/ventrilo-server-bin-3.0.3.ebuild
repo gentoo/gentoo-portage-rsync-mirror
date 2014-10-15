@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ventrilo-server-bin-3.0.3.ebuild,v 1.5 2012/06/09 23:25:48 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ventrilo-server-bin-3.0.3.ebuild,v 1.6 2014/10/15 15:24:07 pacho Exp $
 
 inherit eutils user
 
@@ -16,8 +16,8 @@ RESTRICT="fetch"
 
 S=${WORKDIR}
 
-DEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs )"
-RDEPEND="${DEPEND}"
+RDEPEND="sys-libs/glibc"
+DEPEND=""
 
 QA_PRESTRIPPED="opt/ventrilo-server/ventrilo_srv
 	opt/ventrilo-server/ventrilo_status"

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4-r3.ebuild,v 1.3 2012/08/04 09:44:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4-r3.ebuild,v 1.4 2014/10/15 15:09:20 pacho Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils multilib nsplugins flag-o-matic toolchain-funcs
 
@@ -17,9 +17,19 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2:2
 	net-misc/curl
-	app-emulation/emul-linux-x86-xlibs
-	app-emulation/emul-linux-x86-gtklibs
-	>=sys-apps/util-linux-2.13"
+	>=sys-apps/util-linux-2.13
+	|| (
+		(
+			>=dev-libs/glib-2.34.3[abi_x86_32(-)]
+			>=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)]
+			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+			>=x11-libs/libXt-1.1.4[abi_x86_32(-)]
+		)
+		(
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+		)
+	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -72,16 +82,15 @@ src_configure() {
 }
 
 src_compile() {
-	emake LDFLAGS_32="-m32 ${LDFLAGS}" || die "emake failed"
+	emake LDFLAGS_32="$(get_abi_CFLAGS x86) ${LDFLAGS}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
-	dosym "/usr/$(get_libdir)/${PN}/x86_64/linux/npconfig" "/usr/bin/${PN}" \
-		|| die "dosym failed"
+	dosym "/usr/$(get_libdir)/${PN}/x86_64/linux/npconfig" "/usr/bin/${PN}"
 
-	keepdir "/usr/$(get_libdir)/${PLUGINS_DIR}" || die "keepdir failed"
+	keepdir "/usr/$(get_libdir)/${PLUGINS_DIR}"
 
 	dodoc NEWS README TODO
 }

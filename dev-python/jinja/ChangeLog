@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.123 2014/08/19 23:31:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.124 2014/10/15 15:27:05 idella4 Exp $
+
+  15 Oct 2014; Ian Delaney <idella4@gentoo.org> jinja-2.7.3.ebuild:
+  add missing [] to a dep
 
   19 Aug 2014; Mike Gilbert <floppym@gentoo.org> jinja-2.7.3.ebuild:
   Add blocker on compat slot.
