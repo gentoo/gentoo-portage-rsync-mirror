@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-termstyle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-termstyle/ChangeLog,v 1.1 2014/10/12 15:44:02 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-termstyle/ChangeLog,v 1.2 2014/10/15 01:32:03 idella4 Exp $
+
+  15 Oct 2014; Ian Delaney <idella4@gentoo.org> python-termstyle-0.1.10.ebuild:
+  add py3.4 pypy support, keyword ~x86
 
 *python-termstyle-0.1.10 (12 Oct 2014)
 
