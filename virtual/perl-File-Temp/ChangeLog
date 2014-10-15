@@ -1,6 +1,18 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.78 2014/09/23 09:57:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.80 2014/10/15 22:14:58 dilfridge Exp $
+
+  15 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  perl-File-Temp-0.230.0-r1.ebuild:
+  Arrgh, drop stable keywords. Why didnt repoman notice this?
+
+*perl-File-Temp-0.230.400-r2 (15 Oct 2014)
+*perl-File-Temp-0.230.0-r1 (15 Oct 2014)
+
+  15 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +perl-File-Temp-0.230.0-r1.ebuild, -perl-File-Temp-0.230.400-r1.ebuild,
+  +perl-File-Temp-0.230.400-r2.ebuild:
+  Bump virtual for bug 390719
 
   23 Sep 2014; Agostino Sarubbo <ago@gentoo.org> perl-File-Temp-0.230.0.ebuild:
   Stable for sparc, wrt bug #504786

@@ -9,5 +9,5 @@ RDEPEND=!www-plugins/chrome-binary-plugins:0 !www-plugins/chrome-binary-plugins:
 RESTRICT=bindist mirror strip
 SLOT=unstable
 SRC_URI=amd64? ( https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_40.0.2188.2-1_amd64.deb ) x86? ( https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_40.0.2188.2-1_i386.deb )
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a2086fe40214c0722ce7ede6c180806b	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=ecaa67c209bf86d8cc1cd4368102c06c

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-analyzer/openvas-libraries-7.0.4 !net-analyzer/openvas-plugins !net-analyzer/openvas-server
 SLOT=0
 SRC_URI=http://wald.intevation.org/frs/download.php/1726/openvas-scanner-4.0.3.tar.gz
-_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	a2086fe40214c0722ce7ede6c180806b
 _md5_=fd46c2575fb5215913c0705b83632032

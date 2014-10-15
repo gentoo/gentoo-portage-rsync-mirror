@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/bglibs-1.106
 SLOT=0
 SRC_URI=http://untroubled.org/ucspi-proxy/archive/ucspi-proxy-0.98.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a2086fe40214c0722ce7ede6c180806b
 _md5_=03fd370ba1988bd4173f14d0421e5fe6

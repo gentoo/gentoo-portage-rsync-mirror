@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2
 SLOT=0
 SRC_URI=mirror://sourceforge/lxde/LXDE%20Icon%20Theme/lxde-icon-theme-0.5.0/lxde-icon-theme-0.5.0.tar.bz2
-_eclasses_=gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a2086fe40214c0722ce7ede6c180806b
 _md5_=a87d73b099a5d480caa3f9cf9ff10949

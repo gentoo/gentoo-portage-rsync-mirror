@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-scheme/gambit
 SLOT=0
 SRC_URI=http://termite.googlecode.com/files/termite.tar.gz -> termite-0.15.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a2086fe40214c0722ce7ede6c180806b
 _md5_=402ef9bd9ae60b628c73e17cf76a35f0
