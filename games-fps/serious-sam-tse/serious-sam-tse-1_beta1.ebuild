@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/serious-sam-tse/serious-sam-tse-1_beta1.ebuild,v 1.2 2014/05/15 16:46:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/serious-sam-tse/serious-sam-tse-1_beta1.ebuild,v 1.3 2014/10/15 11:59:21 pacho Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit cdrom eutils versionator games unpacker
 
@@ -22,19 +22,24 @@ RESTRICT="strip"
 IUSE="alsa"
 
 DEPEND=">=app-arch/unshield-0.6"
-RDEPEND="amd64? (
-		app-emulation/emul-linux-x86-opengl
-		app-emulation/emul-linux-x86-soundlibs
-		app-emulation/emul-linux-x86-sdl
-	)
-	x86? (
-		alsa? (
-			media-libs/libsdl[alsa,sound]
-			media-libs/libvorbis
+RDEPEND="
+	|| (
+		(
+			>=media-libs/libogg-1.3.1[abi_x86_32(-)]
+			>=media-libs/libsdl-1.2.15-r5[X,joystick,opengl,video,abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+			alsa? (
+				>=media-libs/libsdl-1.2.15-r5[alsa,sound,abi_x86_32(-)]
+				>=media-libs/libvorbis-1.3.3-r1[abi_x86_32(-)]
+			)
 		)
-		media-libs/libogg
-		media-libs/libsdl[X,joystick,opengl,video]
-	)"
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)]
+		)
+	)
+"
 
 S=${WORKDIR}
 
@@ -117,9 +122,9 @@ src_install() {
 
 	# Install bins last to ensure they are marked executable
 	exeinto "${dir}"
-	doexe bin/${MY_PN} || die
+	doexe bin/${MY_PN}
 	exeinto "${dir}"/Bin
-	doexe Bin/{ssam_lnx*,*.so} || die
+	doexe Bin/{ssam_lnx*,*.so}
 
 	# Remove useless Windows files
 	rm -rf "${D}/${dir}/Bin"/{*.exe,*.dll,*.DLL,GameSpy}
@@ -127,7 +132,7 @@ src_install() {
 
 	dodoc README.linux
 
-	newicon ssam.xpm ${MY_PN}.xpm || die
+	newicon ssam.xpm ${MY_PN}.xpm
 	games_make_wrapper ${MY_PN} ./${MY_PN} "${dir}" "${dir}"
 	make_desktop_entry ${MY_PN} "Serious Sam - Second Encounter" ${MY_PN}
 

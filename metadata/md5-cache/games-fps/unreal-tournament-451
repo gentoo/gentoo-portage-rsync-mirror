@@ -1,14 +1,15 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
-DEPEND=!amd64? ( x11-libs/libXext x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp =media-libs/libsdl-1.2* opengl? ( virtual/opengl ) ) amd64? ( app-emulation/emul-linux-x86-sdl app-emulation/emul-linux-x86-baselibs app-emulation/emul-linux-x86-xlibs ) !games-fps/unreal-tournament-goty
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=|| ( ( >=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] x11-libs/libXau[abi_x86_32(-)] x11-libs/libXdmcp[abi_x86_32(-)] x11-libs/libXext[abi_x86_32(-)] opengl? ( virtual/opengl[abi_x86_32(-)] ) ) amd64? ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] opengl? ( app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] ) ) ) !games-fps/unreal-tournament-goty
 DESCRIPTION=Futuristic FPS
+EAPI=5
 HOMEPAGE=http://www.unrealtournament.com/ http://utpg.org/
 IUSE=3dfx opengl
 KEYWORDS=-* amd64 x86
 LICENSE=all-rights-reserved
 PROPERTIES=interactive
-RDEPEND=!amd64? ( x11-libs/libXext x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp =media-libs/libsdl-1.2* opengl? ( virtual/opengl ) ) amd64? ( app-emulation/emul-linux-x86-sdl app-emulation/emul-linux-x86-baselibs app-emulation/emul-linux-x86-xlibs ) games-misc/games-envd
+RDEPEND=|| ( ( >=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] x11-libs/libXau[abi_x86_32(-)] x11-libs/libXdmcp[abi_x86_32(-)] x11-libs/libXext[abi_x86_32(-)] opengl? ( virtual/opengl[abi_x86_32(-)] ) ) amd64? ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] opengl? ( app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] ) ) ) games-misc/games-envd
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=ftp://ftp.lokigames.com/pub/patches/ut/ut-install-436.run http://utpg.org/patches/UTPGPatch451.tar.bz2
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cdrom	49b4b952fb5c83fac6c616b532723e60	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=b2ad9d3a67f9a282aa06c36df87f30f4
+_md5_=a89b788656c371de3c7719574d009ad7

@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.16 2014/05/01 13:58:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.17 2014/10/15 11:42:52 pacho Exp $
+
+EAPI=5
 
 inherit eutils unpacker cdrom games
 
@@ -16,12 +18,23 @@ IUSE="3dfx S3TC nls opengl"
 RESTRICT="mirror bindist"
 
 DEPEND="!games-fps/unreal-tournament
-	app-arch/unzip"
-RDEPEND="opengl? ( virtual/opengl )
-	x11-libs/libXext
-	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXdmcp"
+	app-arch/unzip
+"
+RDEPEND="
+	|| (
+		(
+			opengl? ( virtual/opengl[abi_x86_32(-)] )
+			x11-libs/libXext[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXau[abi_x86_32(-)]
+			x11-libs/libXdmcp[abi_x86_32(-)]
+		)
+		amd64? (
+			opengl? ( app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] )
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)
+"
 
 S=${WORKDIR}
 
@@ -49,7 +62,7 @@ src_install() {
 	# the most important things, ucc & ut :)
 	exeinto "${dir}"
 	doexe bin/x86/{ucc,ut} || die "install ucc/ut"
-	dosed "s:\`FindPath \$0\`:${dir}:" "${dir}"/ucc
+	sed -i -e "s:\`FindPath \$0\`:${dir}:" "${ED}/${dir}"/ucc || die
 
 	# export some symlinks so ppl can run
 	dodir "${GAMES_BINDIR}"

@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2003
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.49 2014/09/07 19:42:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.50 2014/10/15 11:34:01 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> ut2003-2225-r4.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   07 Sep 2014; Ulrich Müller <ulm@gentoo.org> ut2003-2225-r4.ebuild:
   QA: Remove unnecessary dependency on emul-linux-x86-compat, bug 522130.
@@ -191,4 +194,3 @@
   21 Jul 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild,
   files/ucc, files/ut2003:
   Initial import to portage.  Ebuild submitted by me.
-

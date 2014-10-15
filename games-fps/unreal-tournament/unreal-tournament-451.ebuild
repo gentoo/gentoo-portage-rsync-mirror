@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.30 2014/05/01 14:41:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.31 2014/10/15 11:47:05 pacho Exp $
+
+EAPI=5
 
 inherit eutils unpacker cdrom games
 
@@ -15,18 +17,26 @@ KEYWORDS="-* amd64 x86"
 IUSE="3dfx opengl"
 RESTRICT="mirror bindist"
 
-RDEPEND="!amd64? (
-	x11-libs/libXext
-	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXdmcp
-	=media-libs/libsdl-1.2*
-	opengl? ( virtual/opengl ) )
-	amd64? ( app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-xlibs )"
+RDEPEND="
+	|| (
+		(
+			>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXau[abi_x86_32(-)]
+			x11-libs/libXdmcp[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+			opengl? ( virtual/opengl[abi_x86_32(-)] )
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+			opengl? ( app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] )
+		)
+	)
+"
 DEPEND="${RDEPEND}
-	!games-fps/unreal-tournament-goty"
+	!games-fps/unreal-tournament-goty
+"
 
 S=${WORKDIR}
 
@@ -64,7 +74,7 @@ src_install() {
 	# the most important things, ucc & ut :)
 	exeinto "${dir}"
 	doexe bin/x86/{ucc,ut} || die "install ucc/ut"
-	dosed "s:\`FindPath \$0\`:${dir}:" "${dir}"/ucc
+	sed -i -e "s:\`FindPath \$0\`:${dir}:" "${ED}/${dir}"/ucc || die
 
 	# install a few random files
 	insinto "${dir}"
@@ -82,7 +92,7 @@ src_install() {
 	# finally, unleash the UTPG patch
 	cp -rf UTPG/* "${Ddir}/"
 	# fix a small bug until next official release
-	dosed "/^LoadClassMismatch/s:%s.%s:%s:" "${dir}"/System/Core.int
+	sed -i -e "/^LoadClassMismatch/s:%s.%s:%s:" "${ED}/${dir}"/System/Core.int || die
 
 	# now we uncompress the maps (GOTY edition installs maps as .uz)
 	einfo "Uncompressing Maps ... this may take some time"
