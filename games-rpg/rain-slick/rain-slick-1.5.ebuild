@@ -1,6 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-1.5.ebuild,v 1.5 2013/04/27 17:26:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-1.5.ebuild,v 1.6 2014/10/15 08:39:11 pacho Exp $
+
+EAPI=5
 
 inherit eutils games
 
@@ -18,14 +20,20 @@ IUSE=""
 RESTRICT="bindist mirror strip"
 
 RDEPEND="sys-libs/glibc
-	virtual/opengl
-	x11-libs/libXrandr
-	x11-libs/libX11
-	x11-libs/libXext
-	amd64? (
-		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-xlibs
-	)"
+	|| (
+		(
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+			x11-libs/libXrandr[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
+	)
+"
+DEPEND=""
 
 S=${WORKDIR}/rainslickep${EP}
 
@@ -33,8 +41,8 @@ src_install() {
 	local dir="${GAMES_PREFIX_OPT}/${PN}/ep${EP}"
 	dodir "${dir}"
 	cp -pPR * "${D}/${dir}/" || die
-	games_make_wrapper RainSlickEp${EP} "${dir}/RainSlickEp${EP}" || die
-	newicon rainslick.png ${PN}-${EP}.png || die
+	games_make_wrapper RainSlickEp${EP} "${dir}/RainSlickEp${EP}"
+	newicon rainslick.png ${PN}-${EP}.png
 	make_desktop_entry RainSlickEp${EP} "Rain-Slick Precipice of Darkness (Ep${EP})" ${PN}-${EP}
 	prepgamesdirs
 }

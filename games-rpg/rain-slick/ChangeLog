@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/rain-slick
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/ChangeLog,v 1.14 2013/04/27 17:26:33 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/ChangeLog,v 1.15 2014/10/15 08:39:11 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> rain-slick-1.5.ebuild,
+  rain-slick-2.3.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   27 Apr 2013; Ulrich Müller <ulm@gentoo.org> rain-slick-1.5.ebuild,
   rain-slick-2.3.ebuild:
