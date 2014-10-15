@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.345 2014/10/11 13:33:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.346 2014/10/15 20:01:18 pacho Exp $
+
+  15 Oct 2014; Pacho Ramos <pacho@gentoo.org> pidgin-2.10.9-r1.ebuild,
+  pidgin-2.10.9.ebuild:
+  net-libs/farsight2 is going to be removed
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> pidgin-2.10.9-r1.ebuild:
   arm stable, bug #512012

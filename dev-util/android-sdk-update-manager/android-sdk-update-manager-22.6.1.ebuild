@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-22.6.1.ebuild,v 1.2 2014/06/25 12:47:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-22.6.1.ebuild,v 1.3 2014/10/15 20:22:19 pacho Exp $
 
 EAPI="5"
 
@@ -23,13 +23,15 @@ DEPEND="app-arch/tar
 RDEPEND=">=virtual/jdk-1.5
 	>=dev-java/ant-core-1.6.5
 	|| ( dev-java/swt:3.7[cairo] dev-java/swt:3.6[cairo] )
-	amd64? (
-		|| (
-			app-emulation/emul-linux-x86-gtklibs:=[-abi_x86_32(-)]
-			x11-libs/gtk+:2=[abi_x86_32(-)]
+	|| (
+		(
+			>=x11-libs/gtk+-2.24.23-r2:2[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
 		)
 	)
-	x86? ( x11-libs/gtk+:2= )"
+"
 
 ANDROID_SDK_DIR="/opt/${PN}"
 QA_FLAGS_IGNORED_x86="
@@ -56,17 +58,17 @@ src_prepare(){
 }
 
 src_install(){
-	dodoc tools/NOTICE.txt "SDK Readme.txt" || die
+	dodoc tools/NOTICE.txt "SDK Readme.txt"
 	rm -f tools/NOTICE.txt "SDK Readme.txt"
 
 	dodir "${ANDROID_SDK_DIR}/tools"
 	cp -pPR tools/* "${ED}${ANDROID_SDK_DIR}/tools" || die "failed to install tools"
 
 	# Maybe this is needed for the tools directory too.
-	dodir "${ANDROID_SDK_DIR}"/{add-ons,build-tools,docs,extras,platforms,platform-tools,samples,sources,system-images,temp} || die "failed to dodir"
+	dodir "${ANDROID_SDK_DIR}"/{add-ons,build-tools,docs,extras,platforms,platform-tools,samples,sources,system-images,temp}
 
-	fowners root:android "${ANDROID_SDK_DIR}"/{.,add-ons,build-tools,docs,extras,platforms,platform-tools,samples,sources,system-images,temp,tools} || die
-	fperms 0775 "${ANDROID_SDK_DIR}"/{.,add-ons,build-tools,docs,extras,platforms,platform-tools,samples,sources,system-images,temp,tools} || die
+	fowners root:android "${ANDROID_SDK_DIR}"/{.,add-ons,build-tools,docs,extras,platforms,platform-tools,samples,sources,system-images,temp,tools}
+	fperms 0775 "${ANDROID_SDK_DIR}"/{.,add-ons,build-tools,docs,extras,platforms,platform-tools,samples,sources,system-images,temp,tools}
 
 	echo "PATH=\"${EPREFIX}${ANDROID_SDK_DIR}/tools:${EPREFIX}${ANDROID_SDK_DIR}/platform-tools\"" > "${T}/80${PN}" || die
 
@@ -85,14 +87,14 @@ src_install(){
 	echo "ANDROID_SWT=\"${SWT_PATH}\"" >> "${T}/80${PN}" || die
 	echo "ANDROID_HOME=\"${EPREFIX}${ANDROID_SDK_DIR}\"" >> "${T}/80${PN}" || die
 
-	doenvd "${T}/80${PN}" || die
+	doenvd "${T}/80${PN}"
 
 	echo "SEARCH_DIRS_MASK=\"${EPREFIX}${ANDROID_SDK_DIR}\"" > "${T}/80${PN}" || die
 
-	insinto "/etc/revdep-rebuild" && doins "${T}/80${PN}" || die
+	insinto "/etc/revdep-rebuild" && doins "${T}/80${PN}"
 
 	udev_dorules "${FILESDIR}"/80-android.rules || die
-	domenu "${FILESDIR}"/android-sdk-update-manager.desktop || die
+	domenu "${FILESDIR}"/android-sdk-update-manager.desktop
 }
 
 pkg_postinst() {
