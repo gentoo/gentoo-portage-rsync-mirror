@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.392 2014/10/15 10:19:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.393 2014/10/15 16:08:48 dev-zero Exp $
+
+  15 Oct 2014; Tiziano Müller <dev-zero@gentoo.org> nginx-1.7.6.ebuild:
+  Re-add keywords (accidentally dropped when merging from proxy-maintained
+  overlay).
 
 *nginx-1.7.6 (15 Oct 2014)
 

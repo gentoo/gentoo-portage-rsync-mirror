@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-3.6.4.ebuild,v 1.1 2014/10/07 06:42:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-3.6.4.ebuild,v 1.2 2014/10/15 16:20:14 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -20,7 +20,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 DOCS=( README.rst CHANGES.txt )
 
 python_compile() {
-	if [[ ${EPYTHON} == python2.7 ]]; then
+	if ! python_is_python3; then
 		local CFLAGS=${CFLAGS}
 		append-cflags -fno-strict-aliasing
 	fi

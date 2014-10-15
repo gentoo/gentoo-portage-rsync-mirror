@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.137 2014/10/07 06:42:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.138 2014/10/15 16:20:14 floppym Exp $
+
+  15 Oct 2014; Mike Gilbert <floppym@gentoo.org> simplejson-3.6.4.ebuild:
+  Use python_is_python3 function.
 
 *simplejson-3.6.4 (07 Oct 2014)
 

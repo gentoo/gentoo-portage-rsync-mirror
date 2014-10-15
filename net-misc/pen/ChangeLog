@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.20 2014/03/05 07:36:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.21 2014/10/15 16:07:07 kensington Exp $
+
+*pen-0.25.1 (15 Oct 2014)
+
+  15 Oct 2014; Michael Palimaka <kensington@gentoo.org> +pen-0.25.1.ebuild:
+  Version bump wrt bug #505168.
 
   05 Mar 2014; Michael Palimaka <kensington@gentoo.org> -pen-0.18.0-r1.ebuild:
   Remove old.

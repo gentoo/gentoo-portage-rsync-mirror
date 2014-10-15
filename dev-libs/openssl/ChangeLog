@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.598 2014/09/26 06:05:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.599 2014/10/15 16:27:02 polynomial-c Exp $
+
+*openssl-1.0.1j (15 Oct 2014)
+*openssl-1.0.0o (15 Oct 2014)
+*openssl-0.9.8z_p3 (15 Oct 2014)
+
+  15 Oct 2014; Lars Wendler <polynomial-c@gentoo.org>
+  +openssl-0.9.8z_p3.ebuild, -openssl-1.0.0m.ebuild, -openssl-1.0.0n.ebuild,
+  +openssl-1.0.0o.ebuild, +openssl-1.0.1j.ebuild, -openssl-1.0.2_beta2.ebuild,
+  -files/openssl-1.0.2_beta2-revert-alpha-perl-generation.patch:
+  Security bump (bug #525468). Fixes CVE-2014-{3513,3515,3566,3567,3568}.
 
 *openssl-1.0.2_beta3 (26 Sep 2014)
 *openssl-1.0.0n (26 Sep 2014)

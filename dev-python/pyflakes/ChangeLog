@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyflakes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.45 2014/07/20 11:05:53 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.46 2014/10/15 16:24:53 floppym Exp $
+
+  15 Oct 2014; Mike Gilbert <floppym@gentoo.org> pyflakes-0.8.1.ebuild:
+  Flatten PYHTON_COMPAT.
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> pyflakes-0.8.1.ebuild:
   Keyworded on alpha, bug #508282

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.321 2014/10/15 16:30:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-216-r1.ebuild,v 1.1 2014/10/15 16:30:03 ssuominen Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ if [[ ${PV} = 9999* ]]; then
 	inherit git-2
 	patchset=
 else
-	patchset=
+	patchset=4
 	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
 	if [[ -n "${patchset}" ]]; then
 				SRC_URI="${SRC_URI}
@@ -26,7 +26,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl doc gudev introspection +kmod selinux static-libs"
+IUSE="acl doc firmware-loader gudev introspection +kmod selinux static-libs"
 
 RESTRICT="test"
 
@@ -88,23 +88,26 @@ check_default_rules() {
 }
 
 pkg_setup() {
-	if [[ ${MERGE_TYPE} != buildonly ]]; then
-		CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD ~EPOLL ~FHANDLE ~NET ~!FW_LOADER_USER_HELPER"
-		linux-info_pkg_setup
+	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD ~EPOLL ~FHANDLE ~NET"
+	linux-info_pkg_setup
 
-		# CONFIG_FHANDLE was introduced by 2.6.39
-		local MINKV=2.6.39
+	# CONFIG_FHANDLE was introduced by 2.6.39
+	local MINKV=2.6.39
 
-		if kernel_is -lt ${MINKV//./ }; then
-			eerror "Your running kernel is too old to run this version of ${P}"
-			eerror "You need to upgrade kernel at least to ${MINKV}"
-		fi
+	if kernel_is -lt ${MINKV//./ }; then
+		eerror "Your running kernel is too old to run this version of ${P}"
+		eerror "You need to upgrade kernel at least to ${MINKV}"
+	fi
 
+	if ! use firmware-loader; then
 		if kernel_is -lt 3 7; then
 			ewarn "Your running kernel is too old to have firmware loader and"
 			ewarn "this version of ${P} doesn't have userspace firmware loader"
 			ewarn "If you need firmware support, you need to upgrade kernel at least to 3.7"
 		fi
+		ewarn "You have USE firmware-loader disabled, which means if you need an firmware loaded,"
+		ewarn "you have to configure kernel for it. Linux 3.7 is the first version with kernel"
+		ewarn "firmware loader."
 	fi
 }
 
@@ -200,6 +203,7 @@ multilib_src_configure() {
 		--with-html-dir=/usr/share/doc/${PF}/html
 		--without-python
 		--with-bashcompletiondir="$(get_bashcompdir)"
+		$(use firmware-loader && echo "--with-firmware-path=/lib/firmware/updates:/lib/firmware")
 		--with-rootprefix=
 		$(multilib_is_native_abi && echo "--with-rootlibdir=/$(get_libdir)")
 	)
