@@ -1,11 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.13 2013/12/29 21:39:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.14 2014/10/15 17:51:03 axs Exp $
 
 # Author: Michael Cummings <mcummings@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
 
-GENTOO_DEPEND_ON_PERL_SUBSLOT="no"
+# If the ebuild doesn't override this, ensure we do not depend on the perl subslot value
+: ${GENTOO_DEPEND_ON_PERL_SUBSLOT:="no"}
 inherit perl-module
 
 case "${EAPI:-0}" in

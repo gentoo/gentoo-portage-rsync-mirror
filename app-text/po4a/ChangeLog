@@ -1,6 +1,13 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.81 2014/09/23 10:03:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.82 2014/10/15 17:54:01 axs Exp $
+
+*po4a-0.45-r1 (15 Oct 2014)
+
+  15 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +po4a-0.45-r1.ebuild,
+  -po4a-0.45.ebuild:
+  bumped EAPI to 5; committed directly to stable as no other changes present and
+  revbump helps stable systems to keep from dieing on dev-lang/perl upgrades
 
   23 Sep 2014; Agostino Sarubbo <ago@gentoo.org> po4a-0.45.ebuild:
   Stable for alpha, wrt bug #520014

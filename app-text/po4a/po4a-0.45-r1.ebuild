@@ -1,9 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.45.ebuild,v 1.12 2014/09/23 10:03:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.45-r1.ebuild,v 1.1 2014/10/15 17:54:01 axs Exp $
 
-EAPI=4
+EAPI=5
 
+# Needed because this package also installs to vendor_perl
+GENTOO_DEPEND_ON_PERL_SUBSLOT="yes"
 inherit perl-app
 
 DESCRIPTION="Tools for helping translation of documentation"
