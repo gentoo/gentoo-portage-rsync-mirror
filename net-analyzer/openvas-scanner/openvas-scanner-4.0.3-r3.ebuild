@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/openvas-scanner-4.0.3-r3.ebuild,v 1.1 2014/10/01 13:03:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/openvas-scanner-4.0.3-r3.ebuild,v 1.2 2014/10/15 07:38:04 jlec Exp $
 
 EAPI=5
 
@@ -62,10 +62,4 @@ src_install() {
 
 	systemd_newtmpfilesd "${FILESDIR}"/${MY_PN}.tmpfiles.d ${MY_PN}.conf
 	systemd_dounit "${FILESDIR}"/${MY_PN}.service
-}
-
-pkg_postinst() {
-	elog "To use ${MY_PN}, you first need to:"
-	elog "1. Call 'openvas-nvt-sync' to download/update plugins"
-	elog "2. Call 'openvas-mkcert' to generate a server certificate"
 }

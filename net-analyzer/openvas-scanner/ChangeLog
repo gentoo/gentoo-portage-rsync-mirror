@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/openvas-scanner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/ChangeLog,v 1.13 2014/10/02 06:56:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/ChangeLog,v 1.14 2014/10/15 07:38:04 jlec Exp $
+
+  15 Oct 2014; Justin Lecher <jlec@gentoo.org> openvas-scanner-4.0.3-r3.ebuild:
+  Drop redundant post_inst message
 
   02 Oct 2014; Justin Lecher <jlec@gentoo.org> openvas-scanner-4.0.3-r2.ebuild:
   Drop postinst msg
