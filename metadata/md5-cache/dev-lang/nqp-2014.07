@@ -1,15 +1,15 @@
 DEFINED_PHASES=compile configure install test
-DEPEND=parrot? ( =dev-lang/parrot-6.2.0:=[unicode] ) java? ( >=virtual/jre-1.7 ) moar? ( =dev-lang/moarvm-2014.07 ) java? ( >=virtual/jdk-1.7 ) dev-lang/perl
+DEPEND=parrot? ( ~dev-lang/parrot-6.2.0:=[unicode] ) java? ( >=virtual/jre-1.7 ) moar? ( =dev-lang/moarvm-2014.07 ) java? ( >=virtual/jdk-1.7 ) dev-lang/perl
 DESCRIPTION=Not Quite Perl, a Perl 6 bootstrapping compiler
 EAPI=5
 HOMEPAGE=http://rakudo.org/
 IUSE=doc +parrot java moar
 KEYWORDS=~x86 ~amd64
 LICENSE=Artistic-2
-RDEPEND=parrot? ( =dev-lang/parrot-6.2.0:=[unicode] ) java? ( >=virtual/jre-1.7 ) moar? ( =dev-lang/moarvm-2014.07 )
+RDEPEND=parrot? ( ~dev-lang/parrot-6.2.0:=[unicode] ) java? ( >=virtual/jre-1.7 ) moar? ( =dev-lang/moarvm-2014.07 )
 REQUIRED_USE=|| ( parrot java moar )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://github.com/perl6/nqp/tarball/2014.07 -> nqp-2014.07.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=7eaf03b865d69eaecf60a063f48fcffc
+_md5_=6426ce652aa275ad14995fbd002778e1

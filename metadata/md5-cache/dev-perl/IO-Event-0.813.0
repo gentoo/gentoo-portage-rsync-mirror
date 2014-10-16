@@ -3,10 +3,10 @@ DEPEND=dev-perl/AnyEvent dev-perl/Event dev-perl/List-MoreUtils virtual/perl-Tim
 DESCRIPTION=Tied Filehandles for Nonblocking IO with Object Callbacks
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/IO-Event/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=dev-perl/AnyEvent dev-perl/Event dev-perl/List-MoreUtils virtual/perl-Time-HiRes dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MU/MUIR/modules/IO-Event-0.813.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f889e8437ffc64d766053d029c422c4e	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=d4bd384c3222912b38089e81803cd5b3
+_md5_=8b28c38602af85463f5127df4247c1de
