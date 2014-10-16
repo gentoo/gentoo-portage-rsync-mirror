@@ -1,0 +1,9 @@
+# ChangeLog for sys-fs/etcd-fs
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/etcd-fs/ChangeLog,v 1.1 2014/10/16 00:48:44 zmedico Exp $
+
+*etcd-fs-0_p20140620 (16 Oct 2014)
+
+  16 Oct 2014; Zac Medico <zmedico@gentoo.org> +etcd-fs-0_p20140620.ebuild,
+  +metadata.xml:
+  Add sys-fs/etcd-fs.
