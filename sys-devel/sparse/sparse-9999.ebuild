@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-9999.ebuild,v 1.13 2013/09/05 09:17:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-9999.ebuild,v 1.14 2014/10/16 19:25:30 vapier Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 	#KEYWORDS=""
 else
-	SRC_URI="mirror://kernel/software/devel/sparse/dist/${P}.tar.bz2"
+	SRC_URI="mirror://kernel/software/devel/sparse/dist/${P}.tar.xz"
 	KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
 

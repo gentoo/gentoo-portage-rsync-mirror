@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rename
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/ChangeLog,v 1.21 2013/10/21 13:30:22 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/ChangeLog,v 1.22 2014/10/16 19:14:08 vapier Exp $
+
+  16 Oct 2014; Mike Frysinger <vapier@gentoo.org> rename-1.3.ebuild:
+  Update HOMEPAGE #524206 by headcrabextra.
 
   21 Oct 2013; Fabian Groffen <grobian@gentoo.org> rename-1.3.ebuild:
   Marked ~x64-macos, bug #486818
