@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/icm-browser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm-browser/ChangeLog,v 1.6 2014/09/07 15:44:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm-browser/ChangeLog,v 1.7 2014/10/16 09:28:56 pacho Exp $
+
+  16 Oct 2014; Pacho Ramos <pacho@gentoo.org> icm-browser-3.6.1i.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   07 Sep 2014; Ulrich Müller <ulm@gentoo.org> icm-browser-3.6.1i.ebuild:
   Replace emul-linux-x86-compat dependency by virtual/libstdc++, bug 522218.
@@ -30,4 +33,3 @@
   05 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> +files/90icm-browser,
   +icm-browser-3.6.1g.ebuild, +files/icm-browser.png, +metadata.xml:
   Initial import
-
