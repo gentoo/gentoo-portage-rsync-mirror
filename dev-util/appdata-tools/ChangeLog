@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/appdata-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.10 2014/09/28 12:21:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.11 2014/10/16 02:44:19 blueness Exp $
+
+  16 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  appdata-tools-0.1.8.ebuild:
+  Keyword ~ppc ~ppc64, bug #523924
 
   28 Sep 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Help co-maintaining this as more and more gnome apps need this
