@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/etcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/etcd/ChangeLog,v 1.1 2014/10/15 11:36:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/etcd/ChangeLog,v 1.2 2014/10/16 22:05:03 zmedico Exp $
+
+  16 Oct 2014; Zac Medico <zmedico@gentoo.org> +files/etcd.tmpfiles.d.conf,
+  etcd-0.4.6.ebuild, files/etcd.conf:
+  Merge etcd.conf and USE=doc from steveeJ overlay.
 
 *etcd-0.4.6 (15 Oct 2014)
 

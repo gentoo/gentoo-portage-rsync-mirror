@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/etcd/etcd-0.4.6.ebuild,v 1.1 2014/10/15 11:36:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/etcd/etcd-0.4.6.ebuild,v 1.2 2014/10/16 22:05:03 zmedico Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ HOMEPAGE="https://github.com/coreos/etcd/"
 SRC_URI="https://github.com/coreos/etcd/archive/v${PV}.zip -> ${P}.zip"
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE=""
+IUSE="doc"
 DEPEND=">=dev-lang/go-1.2"
 
 pkg_setup() {
@@ -30,11 +30,14 @@ src_compile() {
 }
 
 src_install() {
+	insinto /etc/${PN}
+	doins "${FILESDIR}/${PN}.conf"
 	dobin bin/${PN}
 	newbin bin/bench ${PN}-bench
-	dodoc -r CHANGELOG Documentation README.md
+	dodoc CHANGELOG README.md
+	use doc && dodoc -r Documentation
 	systemd_dounit "${FILESDIR}/${PN}.service"
-	systemd_dotmpfilesd "${FILESDIR}/${PN}.conf"
+	systemd_newtmpfilesd "${FILESDIR}/${PN}.tmpfiles.d.conf" ${PN}.conf
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 	dodir /var/lib/${PN}
