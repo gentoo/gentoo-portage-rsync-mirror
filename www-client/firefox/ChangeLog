@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.361 2014/10/15 15:10:47 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.362 2014/10/16 21:12:28 axs Exp $
+
+  16 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/firefox-32.0-hppa-js-configure.patch,
+  +files/firefox-33.0-jemalloc-configure.patch, firefox-33.0.ebuild:
+  fixed bugs 524556 and 525522
 
 *firefox-31.2.0 (15 Oct 2014)
 
