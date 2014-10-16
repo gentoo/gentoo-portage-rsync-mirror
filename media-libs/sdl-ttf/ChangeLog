@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.69 2014/06/18 19:57:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.71 2014/10/16 10:20:59 pacho Exp $
+
+  16 Oct 2014; Pacho Ramos <pacho@gentoo.org> sdl-ttf-2.0.11-r1.ebuild:
+  amd64 stable, bug #525488
+
+  16 Oct 2014; Pacho Ramos <pacho@gentoo.org> sdl-ttf-2.0.11-r1.ebuild:
+  x86 stable, bug #525488
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> sdl-ttf-2.0.11-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

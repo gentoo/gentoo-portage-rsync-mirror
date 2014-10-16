@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.93 2014/10/15 15:57:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.95 2014/10/16 10:26:49 ago Exp $
+
+  16 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sysklogd-1.5.1.ebuild:
+  Stable for x86, wrt bug #524058
+
+  16 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sysklogd-1.5.1.ebuild:
+  Stable for amd64, wrt bug #524058
 
   15 Oct 2014; Jeroen Roovers <jer@gentoo.org> sysklogd-1.5.1.ebuild:
   Stable for HPPA (bug #524058).

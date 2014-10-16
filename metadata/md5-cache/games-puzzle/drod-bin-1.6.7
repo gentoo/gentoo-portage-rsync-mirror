@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DESCRIPTION=Deadly Rooms Of Death: face room upon room of deadly things, armed with only a sword and your wits
-EAPI=2
+EAPI=5
 HOMEPAGE=http://www.drod.net/
 KEYWORDS=-* ~amd64 x86
 LICENSE=MPL-1.1
-RDEPEND=virtual/libstdc++:3.3 x86? ( x11-libs/libX11 media-libs/freetype media-libs/libsdl media-libs/sdl-ttf ) amd64? ( app-emulation/emul-linux-x86-xlibs app-emulation/emul-linux-x86-sdl ) games-misc/games-envd
+RDEPEND=virtual/libstdc++:3.3 || ( ( >=media-libs/freetype-2.5.0.1[abi_x86_32(-)] >=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)] >=media-libs/sdl-ttf-2.0.11-r1[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] ) amd64? ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) ) games-misc/games-envd
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://sourceforge/drod/Linux%20Setup/Caravel%20DROD%201.6.7%20Setup/DRODAESetup-1.6.7.run
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=aa8654347d597647c1b9ab7177d3bb38
+_md5_=8f2bf6c1d739c40547b711aaefc4939c

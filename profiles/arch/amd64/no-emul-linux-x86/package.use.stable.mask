@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.1 2014/10/14 20:54:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.3 2014/10/16 10:15:13 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -123,6 +123,7 @@ gnome-base/orbit -abi_x86_32
 media-gfx/graphite2 -abi_x86_32
 media-gfx/sane-backends -abi_x86_32
 media-libs/a52dec -abi_x86_32
+media-libs/aalib -abi_x86_32
 media-libs/allegro -abi_x86_32
 media-libs/alsa-lib -abi_x86_32
 media-libs/alsa-oss -abi_x86_32
