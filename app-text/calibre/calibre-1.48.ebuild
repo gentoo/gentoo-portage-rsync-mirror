@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.48.ebuild,v 1.1 2014/08/12 05:17:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.48.ebuild,v 1.2 2014/10/16 20:49:55 zmedico Exp $
 
 EAPI=5
 
@@ -68,7 +68,8 @@ RDEPEND="${COMMON_DEPEND}
 	udisks? ( || ( sys-fs/udisks:2 sys-fs/udisks:0 ) )"
 
 DEPEND="${COMMON_DEPEND}
-	>=dev-python/setuptools-0.6_rc5"
+	>=dev-python/setuptools-0.6_rc5
+	>=virtual/podofo-build-0.8.2"
 
 S=${WORKDIR}/${PN}
 

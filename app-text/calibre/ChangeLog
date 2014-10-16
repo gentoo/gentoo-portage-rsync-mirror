@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.331 2014/08/12 05:17:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.332 2014/10/16 20:49:55 zmedico Exp $
+
+  16 Oct 2014; Zac Medico <zmedico@gentoo.org> calibre-1.2.ebuild,
+  calibre-1.20.ebuild, calibre-1.25.ebuild, calibre-1.29.ebuild,
+  calibre-1.43.ebuild, calibre-1.47.ebuild, calibre-1.48.ebuild:
+  Add virtual/podofo-build to DEPEND for bug #503802.
 
 *calibre-1.48 (12 Aug 2014)
 
