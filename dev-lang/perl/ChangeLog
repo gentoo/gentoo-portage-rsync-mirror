@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.441 2014/10/16 11:05:24 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.442 2014/10/16 13:42:33 vapier Exp $
+
+  16 Oct 2014; Mike Frysinger <vapier@gentoo.org> perl-5.18.2-r2.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   16 Oct 2014; Tobias Klausmann <klausman@gentoo.org> perl-5.18.2-r2.ebuild:
   Stable on alpha, bug 390719
