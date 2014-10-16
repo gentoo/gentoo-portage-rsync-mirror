@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.8.3.ebuild,v 1.1 2014/10/15 05:16:42 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.8.3.ebuild,v 1.2 2014/10/16 14:59:06 jsbronder Exp $
 
 EAPI=5
 
@@ -114,14 +114,9 @@ src_configure() {
 	fi
 
 	if use fortran; then
-		if [[ $(tc-getFC) =~ g77 ]]; then
-			myconf+=(--disable-mpi-f90)
-		elif [[ $(tc-getFC) =~ if ]]; then
-			# Enabled here as gfortran compile times are huge with this enabled.
-			myconf+=(--with-mpi-f90-size=medium)
-		fi
+		myconf+=(--enable-mpi-fortran=all)
 	else
-		myconf+=(--disable-mpi-f90 --disable-mpi-f77)
+		myconf+=(--enable-mpi-fortran=no)
 	fi
 
 	! use vt && myconf+=(--enable-contrib-no-build=vt)

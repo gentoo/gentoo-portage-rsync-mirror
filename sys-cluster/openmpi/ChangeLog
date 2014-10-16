@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.126 2014/10/15 05:16:42 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.127 2014/10/16 14:59:06 jsbronder Exp $
+
+  16 Oct 2014; Justin Bronder <jsbronder@gentoo.org> openmpi-1.8.ebuild,
+  openmpi-1.8.1.ebuild, openmpi-1.8.3.ebuild:
+  Properly disable fortran when requested, #525492. Thanks to Boris Bigott for
+  providing a solution.
 
 *openmpi-1.8.3 (15 Oct 2014)
 

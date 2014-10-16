@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.578 2014/09/27 23:07:39 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.579 2014/10/16 14:59:57 vapier Exp $
+
+  16 Oct 2014; Mike Frysinger <vapier@gentoo.org> mesa-10.3.0.ebuild:
+  Require newer llvm for radeonsi to match configure checks.
 
   27 Sep 2014; Matt Turner <mattst88@gentoo.org> mesa-10.3.0.ebuild:
   Depend on llvm/clang-3.4.2, bug 523740.
