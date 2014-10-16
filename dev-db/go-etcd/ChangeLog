@@ -1,0 +1,9 @@
+# ChangeLog for dev-db/go-etcd
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/go-etcd/ChangeLog,v 1.1 2014/10/16 00:13:51 zmedico Exp $
+
+*go-etcd-0_p20141013 (16 Oct 2014)
+
+  16 Oct 2014; Zac Medico <zmedico@gentoo.org> +go-etcd-0_p20141013.ebuild,
+  +metadata.xml:
+  Add dev-db/go-etcd.

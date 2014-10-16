@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/g-sorcery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/ChangeLog,v 1.5 2014/10/04 14:07:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/ChangeLog,v 1.6 2014/10/16 00:19:20 mrueg Exp $
+
+  16 Oct 2014; Manuel Rüger <mrueg@gentoo.org> g-sorcery-0.1-r1.ebuild:
+  Add ~arm keyword. Bug #524040.
 
   04 Oct 2014; Anthony G. Basile <blueness@gentoo.org> g-sorcery-0.1-r1.ebuild:
   Keyworded ~ppc and ~ppc64, bug #524040
