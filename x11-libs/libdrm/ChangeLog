@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.264 2014/09/22 19:12:47 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.265 2014/10/16 16:13:54 vapier Exp $
+
+*libdrm-2.4.58 (16 Oct 2014)
+
+  16 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/libdrm-2.4.58-solaris.patch, +libdrm-2.4.58.ebuild:
+  Version bump #524878 by jospezial.
 
 *libdrm-2.4.56 (22 Sep 2014)
 
