@@ -1,6 +1,6 @@
-n Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.129 2014/10/15 22:30:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.130 2014/10/15 22:52:25 blueness Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:

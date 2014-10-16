@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-libs/ncurses-5.4
 SLOT=0
 SRC_URI=http://home.hccnet.nl/paul.schuurmans/download/cdircmp-0.3.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a2086fe40214c0722ce7ede6c180806b
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
 _md5_=ff82951a29e4e743a259b964550097df

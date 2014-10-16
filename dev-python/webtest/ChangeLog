@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.85 2014/10/13 09:50:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.86 2014/10/15 23:15:54 blueness Exp $
+
+  15 Oct 2014; Anthony G. Basile <blueness@gentoo.org> webtest-2.0.11.ebuild,
+  webtest-2.0.14.ebuild, webtest-2.0.15.ebuild:
+  Keyworded ~ppc and ~ppc64, bug #525246
 
   13 Oct 2014; Ian Delaney <idella4@gentoo.org> webtest-2.0.15.ebuild:
   add py3.4, update 1 dep, remove superfluous removal of superfluous file @

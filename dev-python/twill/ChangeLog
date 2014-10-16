@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twill
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.15 2014/08/10 21:23:46 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.16 2014/10/15 23:05:15 blueness Exp $
+
+  15 Oct 2014; Anthony G. Basile <blueness@gentoo.org> twill-0.9-r1.ebuild,
+  twill-0.9.ebuild:
+  Keyworded ~ppc and ~ppc64, bug #525246
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> twill-0.9-r1.ebuild,
   twill-0.9.ebuild:

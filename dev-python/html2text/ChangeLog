@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/html2text
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/ChangeLog,v 1.16 2014/08/10 21:11:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/ChangeLog,v 1.17 2014/10/15 22:33:01 radhermit Exp $
+
+  15 Oct 2014; Tim Harder <radhermit@gentoo.org> html2text-2014.4.5-r1.ebuild:
+  Add python3_4 support and remove pypy2_0.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   html2text-2014.4.5-r1.ebuild, html2text-3.02.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-openid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.24 2014/08/10 21:19:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.25 2014/10/15 23:06:05 blueness Exp $
+
+  15 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  python-openid-2.2.5-r1.ebuild, python-openid-2.2.5.ebuild:
+  Keyworded ~ppc and ~ppc64, bug #525246
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   python-openid-2.2.5-r1.ebuild, python-openid-2.2.5.ebuild:

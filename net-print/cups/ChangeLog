@@ -1,6 +1,16 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.643 2014/10/15 21:36:37 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.645 2014/10/15 23:30:31 tamiko Exp $
+
+  15 Oct 2014; Matthias Maier <tamiko@gentoo.org>
+  files/cups-2.0.0-rename-systemd-service-files.patch:
+  make patch compatible with patch-2.6.1
+
+*cups-2.0.0-r1 (15 Oct 2014)
+
+  15 Oct 2014; Matthias Maier <tamiko@gentoo.org> +cups-2.0.0-r1.ebuild,
+  -cups-2.0.0.ebuild, files/cups-2.0.0-rename-systemd-service-files.patch:
+  fix systemd unit files
 
   15 Oct 2014; Matthias Maier <tamiko@gentoo.org> cups-1.7.9999.ebuild:
   Apply CXX fix to 1.7.999 as well

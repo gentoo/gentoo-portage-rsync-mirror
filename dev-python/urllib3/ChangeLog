@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/urllib3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.25 2014/10/13 08:20:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.26 2014/10/15 23:14:04 blueness Exp $
+
+  15 Oct 2014; Anthony G. Basile <blueness@gentoo.org> urllib3-1.8.3.ebuild,
+  urllib3-1.9.1.ebuild, urllib3-1.9.ebuild:
+  Keyworded ~ppc and ~ppc64, bug #525246
 
   13 Oct 2014; Ian Delaney <idella4@gentoo.org> -urllib3-1.5-r1.ebuild,
   -urllib3-1.5.ebuild, -urllib3-1.7.1.ebuild, -urllib3-1.7.ebuild:

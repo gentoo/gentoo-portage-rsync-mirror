@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/paste
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.24 2013/12/03 12:57:34 dev-zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.25 2014/10/15 23:08:08 blueness Exp $
+
+  15 Oct 2014; Anthony G. Basile <blueness@gentoo.org> paste-1.7.5.1-r1.ebuild,
+  paste-1.7.5.1-r2.ebuild, paste-1.7.5.1.ebuild:
+  Keyworded ~ppc and ~ppc64, bug #525246
 
 *paste-1.7.5.1-r2 (03 Dec 2013)
 

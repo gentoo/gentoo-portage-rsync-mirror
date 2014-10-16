@@ -1,7 +1,7 @@
-From a0b8fba42dc5ef7663f48a584e63b07a6d6597d6 Mon Sep 17 00:00:00 2001
+From caebb5eb5194b89da1ff08cca8d35ddfe6b293d3 Mon Sep 17 00:00:00 2001
 From: Matthias Maier <tamiko@kyomu.43-1.org>
-Date: Wed, 15 Oct 2014 17:32:40 +0200
-Subject: [PATCH] rename systemd unit files to gentoo default
+Date: Thu, 16 Oct 2014 01:25:23 +0200
+Subject: [PATCH] change systemd service files to gentoo naming scheme
 
 ---
  configure.ac                        |  6 +++---
@@ -21,7 +21,7 @@ Subject: [PATCH] rename systemd unit files to gentoo default
  delete mode 100644 scheduler/org.cups.cupsd.socket.in
 
 diff --git a/configure.ac b/configure.ac
-index 944a105..2299492 100644
+index 21d7f93..cb5db92 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -81,9 +81,9 @@ AC_OUTPUT(Makedefs
@@ -38,7 +38,7 @@ index 944a105..2299492 100644
            packaging/cups.list
  	  $LANGFILES)
 diff --git a/scheduler/Makefile b/scheduler/Makefile
-index ce1606b..0cce938 100644
+index c0c54a4..bf1ae32 100644
 --- a/scheduler/Makefile
 +++ b/scheduler/Makefile
 @@ -192,7 +192,7 @@ install-data:
@@ -78,7 +78,7 @@ index ce1606b..0cce938 100644
  		echo Uninstalling SMF manifest file...;\
 diff --git a/scheduler/cups.path.in b/scheduler/cups.path.in
 new file mode 100644
-index 0000000..1bccc6f
+index 0000000..4281d6a
 --- /dev/null
 +++ b/scheduler/cups.path.in
 @@ -0,0 +1,8 @@
@@ -86,13 +86,13 @@ index 0000000..1bccc6f
 +Description=CUPS Scheduler
 +
 +[Path]
-+PathExists=@CUPS_CACHEDIR@/org.cups.cupsd
++PathExistsGlob=@CUPS_CACHEDIR@/d*
 +
 +[Install]
 +WantedBy=multi-user.target
 diff --git a/scheduler/cups.service.in b/scheduler/cups.service.in
 new file mode 100644
-index 0000000..4390016
+index 0000000..f8912eb
 --- /dev/null
 +++ b/scheduler/cups.service.in
 @@ -0,0 +1,10 @@
@@ -104,7 +104,7 @@ index 0000000..4390016
 +Type=simple
 +
 +[Install]
-+Also=org.cups.cupsd.socket org.cups.cupsd.path
++Also=cups.socket cups.path
 +WantedBy=printer.target
 diff --git a/scheduler/cups.socket.in b/scheduler/cups.socket.in
 new file mode 100644

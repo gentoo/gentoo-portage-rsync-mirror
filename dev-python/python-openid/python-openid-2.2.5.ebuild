@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.2.5.ebuild,v 1.8 2014/08/10 21:19:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.2.5.ebuild,v 1.9 2014/10/15 23:06:05 blueness Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
 IUSE="examples mysql postgres sqlite test"
 
 RDEPEND="mysql? ( >=dev-python/mysql-python-1.2.2 )
