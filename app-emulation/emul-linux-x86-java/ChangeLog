@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.139 2014/09/28 16:07:47 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.140 2014/10/16 12:10:19 pacho Exp $
+
+  16 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-java-1.7.0.51.ebuild, emul-linux-x86-java-1.7.0.55.ebuild,
+  emul-linux-x86-java-1.7.0.67.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
 *emul-linux-x86-java-1.7.0.67 (28 Sep 2014)
 

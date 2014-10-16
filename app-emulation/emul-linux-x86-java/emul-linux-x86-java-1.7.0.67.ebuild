@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.7.0.67.ebuild,v 1.1 2014/09/28 16:07:47 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.7.0.67.ebuild,v 1.2 2014/10/16 12:10:19 pacho Exp $
 
 EAPI="5"
 
@@ -27,8 +27,23 @@ RESTRICT="fetch strip"
 QA_PREBUILT="*"
 
 RDEPEND="
-	X? ( app-emulation/emul-linux-x86-xlibs )
-	alsa? ( app-emulation/emul-linux-x86-soundlibs )"
+	|| (
+		(
+			X? (
+				x11-libs/libXext[abi_x86_32(-)]
+				x11-libs/libXi[abi_x86_32(-)]
+				x11-libs/libXrender[abi_x86_32(-)]
+				x11-libs/libXtst[abi_x86_32(-)]
+				x11-libs/libX11[abi_x86_32(-)] )
+			alsa? (	>=media-libs/alsa-lib-1.0.27.2[abi_x86_32(-)] )
+		)
+		(
+			X? ( app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] )
+			alsa? ( app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )
+		)
+	)
+"
+
 # scanelf won't create a PaX header, so depend on paxctl to avoid fallback
 # marking. #427642
 DEPEND="

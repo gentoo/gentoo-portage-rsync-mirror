@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.124 2014/10/16 10:23:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.125 2014/10/16 12:05:38 klausman Exp $
+
+  16 Oct 2014; Tobias Klausmann <klausman@gentoo.org> pyxdg-0.25-r1.ebuild:
+  Stable on alpha, bug 498934
 
   16 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pyxdg-0.25-r1.ebuild:
   Stable for x86, wrt bug #498934

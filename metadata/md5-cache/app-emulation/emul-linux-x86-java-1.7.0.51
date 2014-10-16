@@ -6,9 +6,9 @@ HOMEPAGE=http://www.oracle.com/technetwork/java/javase/
 IUSE=+X alsa nsplugin pax_kernel
 KEYWORDS=-* amd64
 LICENSE=Oracle-BCLA-JavaSE
-RDEPEND=X? ( app-emulation/emul-linux-x86-xlibs ) alsa? ( app-emulation/emul-linux-x86-soundlibs ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+RDEPEND=|| ( ( X? ( x11-libs/libXext[abi_x86_32(-)] x11-libs/libXi[abi_x86_32(-)] x11-libs/libXrender[abi_x86_32(-)] x11-libs/libXtst[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] ) alsa? ( >=media-libs/alsa-lib-1.0.27.2[abi_x86_32(-)] ) ) ( X? ( app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) alsa? ( app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] ) ) ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 RESTRICT=fetch strip
 SLOT=1.7
 SRC_URI=jre-7u51-linux-i586.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	834752b84da3c4deea95f5b186aada54	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=5e59ea05541627840df4c169aeffa2fc
+_md5_=de303f476d651df564df30d76ae4b447
