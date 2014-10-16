@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/i2c-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/ChangeLog,v 1.19 2014/03/12 03:15:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/ChangeLog,v 1.20 2014/10/16 19:00:31 vapier Exp $
+
+*i2c-tools-3.1.1 (16 Oct 2014)
+
+  16 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/i2c-tools-3.1.1-python-3.patch, +i2c-tools-3.1.1.ebuild:
+  Version bump & port to distutils-r1 #524722 by Paul Zander.  Port to
+  python-3.x #492632 by Marcel Greter.
 
   12 Mar 2014; Patrick Lauer <patrick@gentoo.org> i2c-tools-3.0.2.ebuild,
   i2c-tools-3.1.0.ebuild:
