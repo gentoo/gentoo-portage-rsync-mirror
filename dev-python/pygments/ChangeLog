@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.130 2014/10/09 08:16:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.131 2014/10/16 18:27:28 maekke Exp $
+
+  16 Oct 2014; Markus Meier <maekke@gentoo.org> pygments-1.6_p20140324.ebuild:
+  arm stable, bug #524416
 
   09 Oct 2014; Agostino Sarubbo <ago@gentoo.org>
   pygments-1.6_p20140324-r1.ebuild:
