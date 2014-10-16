@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.297 2014/09/26 15:44:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.298 2014/10/16 13:21:59 vapier Exp $
+
+*qemu-2.1.2 (16 Oct 2014)
+
+  16 Oct 2014; Mike Frysinger <vapier@gentoo.org> +qemu-2.1.2.ebuild:
+  Version bump #523428 by Agostino Sarubbo.
 
   26 Sep 2014; Mike Gilbert <floppym@gentoo.org> qemu-2.1.1.ebuild,
   qemu-9999.ebuild:
