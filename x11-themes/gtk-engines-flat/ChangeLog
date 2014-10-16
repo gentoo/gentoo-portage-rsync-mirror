@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines-flat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/ChangeLog,v 1.28 2012/05/05 04:10:07 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/ChangeLog,v 1.29 2014/10/16 08:12:17 pacho Exp $
+
+*gtk-engines-flat-2.0-r3 (16 Oct 2014)
+
+  16 Oct 2014; Pacho Ramos <pacho@gentoo.org> +gtk-engines-flat-2.0-r3.ebuild,
+  -gtk-engines-flat-2.0-r2.ebuild:
+  Bump eapi, drop .la files, update HOMEPAGE (as original is dead), keep stable
+  only on amd64/x86 for now to drop load for other arch teams (thanks to Mathieu
+  Zouaoua for caring about this).
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   gtk-engines-flat-2.0-r2.ebuild:
