@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-shout
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.23 2014/04/24 16:54:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.24 2014/10/16 19:38:13 mrueg Exp $
+
+  16 Oct 2014; Manuel Rüger <mrueg@gentoo.org> ruby-shout-2.2.1-r1.ebuild:
+  Add ruby21. Update Homepage.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-shout-2.2.1-r1.ebuild,
   ruby-shout-2.2.1.ebuild:
