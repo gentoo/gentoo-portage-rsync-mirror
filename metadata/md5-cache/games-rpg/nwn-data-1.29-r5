@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=|| ( ( >=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)] virtual/opengl[abi_x86_32(-)] ) amd64? ( app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] ) ) cdinstall? ( games-util/biounzip app-arch/unshield ) app-arch/unzip app-arch/p7zip
+DEPEND=cdinstall? ( games-util/biounzip app-arch/unshield ) app-arch/unzip app-arch/p7zip
 DESCRIPTION=Neverwinter Nights Data Files
 EAPI=5
 HOMEPAGE=http://nwn.bioware.com/downloads/linuxclient.html
@@ -7,9 +7,9 @@ IUSE=cdinstall hou nowin sou videos linguas_fr linguas_it linguas_es linguas_de 
 KEYWORDS=amd64 x86
 LICENSE=NWN-EULA
 PROPERTIES=cdinstall? ( interactive )
-RDEPEND=|| ( ( >=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)] virtual/opengl[abi_x86_32(-)] ) amd64? ( app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] ) ) games-misc/games-envd
+RDEPEND=games-misc/games-envd
 RESTRICT=strip mirror
 SLOT=0
 SRC_URI=http://nwdownloads.bioware.com/neverwinternights/linux/129/nwclient129.tar.gz nowin? ( http://files.bioware.com/neverwinternights/updates/linux/nwresources129.tar.gz http://bsd.mikulas.com/nwresources129.tar.gz http://163.22.12.40/FreeBSD/distfiles/nwresources129.tar.gz linguas_fr? ( http://files.bioware.com/neverwinternights/updates/linux/nwfrench129.tar.gz ) linguas_it? ( http://files.bioware.com/neverwinternights/updates/linux/nwitalian129.tar.gz ) linguas_es? ( http://files.bioware.com/neverwinternights/updates/linux/nwspanish129.tar.gz ) linguas_de? ( http://files.bioware.com/neverwinternights/updates/linux/nwgerman129.tar.gz ) ) !nowin? ( cdinstall? ( linguas_fr? ( http://files.bioware.com/neverwinternights/updates/linux/nwfrench129.tar.gz ) linguas_it? ( http://files.bioware.com/neverwinternights/updates/linux/nwitalian129.tar.gz ) linguas_es? ( http://files.bioware.com/neverwinternights/updates/linux/nwspanish129.tar.gz ) linguas_de? ( http://files.bioware.com/neverwinternights/updates/linux/nwgerman129.tar.gz ) ) ) mirror://gentoo/nwn.png
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cdrom	49b4b952fb5c83fac6c616b532723e60	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=bfc67730f315ea93c4a6a90cfc1d524a
+_md5_=b7aac1b69c806679a14f9754a8e8f205

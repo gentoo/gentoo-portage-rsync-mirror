@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwn-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.50 2014/10/15 09:05:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.51 2014/10/16 22:56:26 calchan Exp $
+
+  16 Oct 2014; Denis Dupeyron <calchan@gentoo.org> nwn-data-1.29-r5.ebuild:
+  Removed redundant RDEPENDs, thanks to Michael Sterrett.
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org> nwn-data-1.29-r5.ebuild:
   Support multilib providers for deps. Bump to EAPI=5.

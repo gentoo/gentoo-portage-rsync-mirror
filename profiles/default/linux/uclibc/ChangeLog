@@ -1,6 +1,10 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/ChangeLog,v 1.1 2014/08/17 12:27:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/ChangeLog,v 1.2 2014/10/16 22:35:53 tamiko Exp $
+
+  17 Oct 2014; Matthias Maier <tamiko@gentoo.org> +arm/package.use.mask,
+  mips/package.use.mask:
+  Add net-print/cups java due to missing keyword for virtual/jre
 
   17 Aug 2014; Anthony G. Basile <blueness@gentoo.org> +mips/package.use,
   ppc/package.mask:

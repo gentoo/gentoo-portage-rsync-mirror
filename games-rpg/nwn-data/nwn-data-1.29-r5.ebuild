@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r5.ebuild,v 1.5 2014/10/15 09:05:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r5.ebuild,v 1.6 2014/10/16 22:56:26 calchan Exp $
 
 EAPI=5
 
@@ -46,20 +46,8 @@ KEYWORDS="amd64 x86"
 IUSE="cdinstall hou nowin sou videos ${LANGUAGES}"
 RESTRICT="strip mirror"
 
-RDEPEND="
-	|| (
-		(
-			>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-		)
-	)
-"
-DEPEND="${RDEPEND}
-	cdinstall? (
+RDEPEND=""
+DEPEND="cdinstall? (
 		games-util/biounzip
 		app-arch/unshield )
 	app-arch/unzip

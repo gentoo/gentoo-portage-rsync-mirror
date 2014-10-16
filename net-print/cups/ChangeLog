@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.646 2014/10/16 19:31:03 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.647 2014/10/16 22:39:19 tamiko Exp $
+
+  16 Oct 2014; Matthias Maier <tamiko@gentoo.org> cups-1.7.5-r2.ebuild,
+  cups-2.0.0-r2.ebuild:
+  rekeyword cups-2.0.0-r2; drop ~x86-fbsd due to missing cups-filters dep
 
 *cups-1.7.5-r2 (16 Oct 2014)
 *cups-2.0.0-r2 (16 Oct 2014)
