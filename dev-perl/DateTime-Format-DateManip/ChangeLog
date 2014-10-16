@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-DateManip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-DateManip/ChangeLog,v 1.6 2012/06/24 12:59:59 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-DateManip/ChangeLog,v 1.7 2014/10/16 10:51:50 zlogene Exp $
+
+  16 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  DateTime-Format-DateManip-0.40.0.ebuild:
+  Bump to EAPI=5
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
