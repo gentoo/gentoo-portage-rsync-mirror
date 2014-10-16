@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/requests-cache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/ChangeLog,v 1.9 2014/09/02 04:17:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/ChangeLog,v 1.10 2014/10/16 11:22:55 idella4 Exp $
+
+*requests-cache-0.4.6 (16 Oct 2014)
+
+  16 Oct 2014; Ian Delaney <idella4@gentoo.org> +requests-cache-0.4.6.ebuild,
+  -requests-cache-0.3.0.ebuild, -requests-cache-0.4.0.ebuild,
+  -requests-cache-0.4.2.ebuild, -requests-cache-0.4.3.ebuild,
+  -requests-cache-0.4.4.ebuild, requests-cache-0.4.5.ebuild:
+  bump; tidy to deps, rm old
 
   02 Sep 2014; Patrick Lauer <patrick@gentoo.org> requests-cache-0.4.5.ebuild:
   Whitespace
