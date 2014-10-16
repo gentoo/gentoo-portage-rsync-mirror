@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.67 2014/08/10 20:37:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.68 2014/10/16 17:54:16 vapier Exp $
+
+*libp11-0.2.8-r2 (16 Oct 2014)
+
+  16 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/libp11-0.2.8-variable-buffer-size.patch, +libp11-0.2.8-r2.ebuild:
+  Fix from Chromium OS for handling of large certificates.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libp11-0.2.8-r1.ebuild,
   libp11-0.2.8.ebuild:
