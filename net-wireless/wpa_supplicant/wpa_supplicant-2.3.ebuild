@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.3.ebuild,v 1.1 2014/10/10 18:55:49 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.3.ebuild,v 1.2 2014/10/16 17:24:30 gurligebis Exp $
 
 EAPI=4
 
@@ -230,7 +230,7 @@ src_configure() {
 
 src_compile() {
 	einfo "Building wpa_supplicant"
-	emake V=1
+	emake V=1 BINDIR=/usr/sbin
 
 	if use wimax; then
 		emake -C ../src/eap_peer clean
@@ -289,8 +289,7 @@ src_install() {
 	fi
 
 	# systemd stuff
-	systemd_dounit "${FILESDIR}"/wpa_supplicant.service
-	systemd_newunit "${FILESDIR}"/wpa_supplicant_at.service 'wpa_supplicant@.service'
+	systemd_dounit systemd/*.service
 }
 
 pkg_postinst() {

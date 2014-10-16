@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.218 2014/10/10 18:55:49 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.219 2014/10/16 17:24:30 gurligebis Exp $
+
+  16 Oct 2014; <gurligebis@gentoo.org> wpa_supplicant-2.3.ebuild:
+  Changing to using upstream supplied systemd files, fixing bug #525436
 
 *wpa_supplicant-2.3 (10 Oct 2014)
 
