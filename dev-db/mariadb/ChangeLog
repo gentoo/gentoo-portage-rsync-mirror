@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.62 2014/10/16 15:14:18 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.63 2014/10/17 06:46:47 jer Exp $
+
+  17 Oct 2014; Jeroen Roovers <jer@gentoo.org> mariadb-5.5.40.ebuild:
+  Stable for HPPA (bug #525504).
 
   16 Oct 2014; Tobias Klausmann <klausman@gentoo.org> mariadb-5.5.40.ebuild:
   Stable on alpha, bug 525504

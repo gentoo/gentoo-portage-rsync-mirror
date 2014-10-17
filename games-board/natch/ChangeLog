@@ -1,6 +1,10 @@
 # ChangeLog for games-board/natch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/natch/ChangeLog,v 1.6 2014/10/10 15:25:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/natch/ChangeLog,v 1.7 2014/10/17 06:48:11 tupone Exp $
+
+  17 Oct 2014; Alfredo Tupone <tupone@gentoo.org> natch-2.4.ebuild,
+  +files/natch-2.4-format.patch:
+  Fix format-security warning. Bug #524934 by Agostino Sarubbo
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> natch-2.4.ebuild:
   Stable for amd64, wrt bug #522558
