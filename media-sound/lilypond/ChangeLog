@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.192 2014/10/10 10:56:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.193 2014/10/17 22:55:40 radhermit Exp $
+
+  17 Oct 2014; Tim Harder <radhermit@gentoo.org> -lilypond-2.16.2.ebuild,
+  -lilypond-2.19.13.ebuild, -lilypond-2.19.14.ebuild,
+  -files/lilypond-2.16.0-tex-docs.patch:
+  Remove old.
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> lilypond-2.18.2.ebuild:
   Stable for x86, wrt bug #523818
