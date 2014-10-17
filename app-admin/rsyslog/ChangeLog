@@ -1,6 +1,21 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.127 2014/10/16 10:26:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.128 2014/10/17 06:07:57 polynomial-c Exp $
+
+  17 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> -rsyslog-7.4.4.ebuild,
+  -rsyslog-8.4.1.ebuild, -files/7-stable/50-default.conf,
+  -files/7-stable/rsyslog.conf,
+  -files/7-stable/rsyslog-7.4.3-fix-runtime.patch,
+  -files/7-stable/README.gentoo, -files/7-stable/rsyslog.confd,
+  -files/7-stable/rsyslog-7.4.3-json-c-pkgconfig.patch,
+  -files/7-stable/bugfix_52.patch, -files/7-stable/rsyslog.confd-r1,
+  -files/7-stable/rsyslog-7.x-mmjsonparse.patch,
+  -files/7-stable/bugfix_73.patch,
+  -files/7-stable/fix-omruleset-default-value.patch,
+  -files/7-stable/rsyslog.initd, -files/7-stable/rsyslog.initd-r1,
+  -files/7-stable/rsyslog.logrotate, -files/7-stable/rsyslog.logrotate-r1,
+  -files/7-stable/rsyslog-gentoo.conf, metadata.xml:
+  Removed old vulnerable versions.
 
   16 Oct 2014; Agostino Sarubbo <ago@gentoo.org> rsyslog-8.4.1.ebuild:
   Stable for x86, wrt bug #524058

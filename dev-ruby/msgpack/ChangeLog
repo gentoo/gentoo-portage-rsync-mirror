@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/msgpack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/ChangeLog,v 1.26 2014/08/02 01:41:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/ChangeLog,v 1.27 2014/10/17 06:04:02 graaff Exp $
+
+*msgpack-0.5.9 (17 Oct 2014)
+
+  17 Oct 2014; Hans de Graaff <graaff@gentoo.org> +msgpack-0.5.9.ebuild:
+  Version bump.
 
   02 Aug 2014; Manuel Rüger <mrueg@gentoo.org> msgpack-0.5.8.ebuild:
   Add ruby21 support.
