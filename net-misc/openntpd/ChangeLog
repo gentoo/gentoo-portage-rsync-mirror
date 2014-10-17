@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.123 2014/10/17 19:52:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.125 2014/10/17 20:11:57 ottxor Exp $
+
+  17 Oct 2014; Christoph Junghans <ottxor@gentoo.org>
+  -files/openntpd.service-20080406-r3, -openntpd-20080406-r7.ebuild,
+  -openntpd-20080406-r8.ebuild:
+  remove old
+
+  17 Oct 2014; Christoph Junghans <ottxor@gentoo.org>
+  openntpd-20080406-r9.ebuild:
+  all stable (bug #525118)
 
   17 Oct 2014; Jeroen Roovers <jer@gentoo.org> openntpd-20080406-r9.ebuild:
   Stable for HPPA (bug #525118).

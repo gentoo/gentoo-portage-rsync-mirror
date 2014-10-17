@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTimeX-Easy/DateTimeX-Easy-0.89.0.ebuild,v 1.2 2014/10/12 16:46:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTimeX-Easy/DateTimeX-Easy-0.89.0.ebuild,v 1.3 2014/10/17 20:18:24 zlogene Exp $
 
 EAPI=5
 
@@ -16,7 +16,6 @@ IUSE="test"
 
 RDEPEND="dev-perl/DateTime
 	dev-perl/TimeDate
-	dev-perl/DateTime-Format-DateManip
 	dev-perl/DateTime-Format-Flexible
 	dev-perl/DateTime-Format-ICal
 	dev-perl/DateTime-Format-Natural

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.mask,v 1.1 2014/10/14 20:54:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.mask,v 1.2 2014/10/17 20:28:26 mgorny Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -20,3 +20,15 @@ app-emulation/emul-linux-x86-qtlibs
 app-emulation/emul-linux-x86-sdl
 app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
+
+# Michał Górny <mgorny@gentoo.org> (17 Sep 2014)
+# on behalf of gx86-multilib project <multilib@gentoo.org>
+# Old version of packages that do not fully support multilib deps. Those
+# versions will be removed along with emul-linux-x86 packages.
+<=app-emulation/wine-1.7.18
+
+# Michał Górny <mgorny@gentoo.org> (17 Sep 2014)
+# on behalf of gx86-multilib project <multilib@gentoo.org>
+# Packages that do not support multilib deps at all. Those packages will
+# need to be updated before emul-linux-x86 packages are removed.
+app-emulation/crossover-bin

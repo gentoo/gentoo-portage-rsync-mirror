@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.282 2014/10/14 20:54:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.283 2014/10/17 20:28:26 mgorny Exp $
+
+  17 Oct 2014; Michał Górny <mgorny@gentoo.org>
+  no-emul-linux-x86/package.mask:
+  Start masking packages that cause repoman failures due to unmigrated deps.
 
   14 Oct 2014; Michał Górny <mgorny@gentoo.org> +no-emul-linux-x86/eapi,
   +no-emul-linux-x86/package.mask, +no-emul-linux-x86/package.use.stable.mask,

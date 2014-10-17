@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Want
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.55 2014/08/22 18:30:50 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.56 2014/10/17 20:29:43 zlogene Exp $
+
+*Want-0.230.0 (17 Oct 2014)
+
+  17 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> +Want-0.230.0.ebuild:
+  Version bump
 
 *Want-0.210.0-r1 (22 Aug 2014)
 
