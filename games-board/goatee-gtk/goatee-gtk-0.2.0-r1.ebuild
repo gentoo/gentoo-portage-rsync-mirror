@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/goatee-gtk/goatee-gtk-0.2.0.ebuild,v 1.1 2014/10/16 21:51:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/goatee-gtk/goatee-gtk-0.2.0-r1.ebuild,v 1.1 2014/10/17 19:13:18 hasufell Exp $
 
 EAPI=5
 
@@ -16,18 +16,18 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-games/goatee-0.2:=[profile?]
-	>=dev-haskell/cairo-0.12:=[profile?]
-	>=dev-haskell/gtk-0.12:2=[profile?]
-	>=dev-haskell/mtl-2.1:=[profile?]
-	>=dev-haskell/parsec-3.1:=[profile?]
+RDEPEND=">=dev-games/goatee-0.2:=[profile?] <dev-games/goatee-0.3:=[profile?]
+	>=dev-haskell/cairo-0.12:=[profile?] <dev-haskell/cairo-0.13:=[profile?]
+	>=dev-haskell/gtk-0.12:2=[profile?] <dev-haskell/gtk-0.13:2=[profile?]
+	>=dev-haskell/mtl-2.1:=[profile?] <dev-haskell/mtl-2.3:=[profile?]
+	>=dev-haskell/parsec-3.1:=[profile?] <dev-haskell/parsec-3.2:=[profile?]
 	>=dev-libs/gmp-5:=
 	virtual/libffi:=
 "
 DEPEND="${RDEPEND}
 	>=dev-lang/ghc-7.4.1:=
 	>=dev-haskell/cabal-1.8
-	test? ( >=dev-haskell/hunit-1.2 )
+	test? ( >=dev-haskell/hunit-1.2 <dev-haskell/hunit-1.3 )
 "
 
 pkg_setup() {

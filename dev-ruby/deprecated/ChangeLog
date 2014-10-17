@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/deprecated
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.32 2014/07/18 07:43:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.33 2014/10/17 19:27:07 mrueg Exp $
+
+  17 Oct 2014; Manuel Rüger <mrueg@gentoo.org> deprecated-3.0.1-r1.ebuild:
+  Add ruby21 target.
 
   18 Jul 2014; Hans de Graaff <graaff@gentoo.org> -deprecated-2.0.1-r2.ebuild,
   -deprecated-2.0.1-r4.ebuild:
