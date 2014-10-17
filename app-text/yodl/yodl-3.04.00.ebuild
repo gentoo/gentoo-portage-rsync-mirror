@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/yodl-3.04.00.ebuild,v 1.1 2014/10/08 02:06:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/yodl-3.04.00.ebuild,v 1.2 2014/10/17 03:54:39 radhermit Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ DEPEND="dev-util/icmake"
 src_prepare() {
 	sed -e "/DOC.* =/s/yodl\(-doc\)\?/${PF}/" \
 		-e "/COMPILER =/s/gcc/$(tc-getCC)/" \
+		-e "/CXX =/s/g++/$(tc-getCXX)/" \
 		-i INSTALL.im || die
 
 	sed -e "s/ar ru/$(tc-getAR) ru/" \

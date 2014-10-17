@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.7.ebuild,v 1.3 2014/10/17 02:54:02 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.7.ebuild,v 1.4 2014/10/17 03:59:14 jsbronder Exp $
 
 EAPI=5
 
@@ -145,7 +145,7 @@ pkg_preinst() {
 		cp "${ROOT}etc/pbs_environment" "${ED}"/etc/pbs_environment || die
 	fi
 
-	if [[ -f "${ROOT}${PBS_SERVER_HOME}/server_priv/nodes" ]]; then
+	if use server && [[ -f "${ROOT}${PBS_SERVER_HOME}/server_priv/nodes" ]]; then
 		cp \
 			"${EROOT}${PBS_SERVER_HOME}/server_priv/nodes" \
 			"${ED}/${PBS_SERVER_HOME}/server_priv/nodes" || die

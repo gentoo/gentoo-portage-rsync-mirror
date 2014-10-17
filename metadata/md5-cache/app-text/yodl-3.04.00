@@ -9,4 +9,4 @@ LICENSE=GPL-3
 SLOT=0
 SRC_URI=mirror://sourceforge/yodl/yodl_3.04.00.orig.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=6bc9c7c6403cd03055f2bb31c6eaaa3b
+_md5_=64065dcd07e4431233f8c42d38f0d4a2
