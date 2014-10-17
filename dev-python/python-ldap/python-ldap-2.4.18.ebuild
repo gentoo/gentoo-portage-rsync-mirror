@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.18.ebuild,v 1.1 2014/10/17 07:31:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.18.ebuild,v 1.2 2014/10/17 11:17:34 idella4 Exp $
 
 EAPI=5
 
@@ -21,13 +21,14 @@ IUSE="doc examples sasl ssl"
 # If you need support for openldap-2.3.x, please use python-ldap-2.3.9.
 # python team: Please do not remove python-ldap-2.3.9 from the tree.
 # OpenSSL is an optional runtime dep.
+# setup.py's install_requires entry is a debacle.
 RDEPEND=">net-nds/openldap-2.4.11
 	dev-python/pyasn1[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/sphinx[${PYTHON_USEDEP}]
+	dev-python/pyasn1-modules[${PYTHON_USEDEP}]
 	sasl? ( >=dev-libs/cyrus-sasl-2.1 )"
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
-		dev-python/pyasn1-modules[${PYTHON_USEDEP}] )"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_prepare_all() {
 	sed -e "s:^library_dirs =.*:library_dirs = /usr/$(get_libdir) /usr/$(get_libdir)/sasl2:" \
@@ -66,7 +67,7 @@ python_test() {
 }
 
 python_install_all() {
-	use examples && local EXAMPLES=( Demo/. )
+.	use examples && local EXAMPLES=( Demo/. )
 	use doc && local HTML_DOCS=( Doc/.build/html/. )
 
 	distutils-r1_python_install_all

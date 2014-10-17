@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.2.0.ebuild,v 1.1 2014/10/15 15:10:47 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.2.0.ebuild,v 1.2 2014/10/17 11:30:25 jer Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -144,6 +144,8 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
+
+	epatch "${FILESDIR}"/${PN}-32.0-hppa-js-configure.patch # bug 524556
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
