@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.104 2014/06/10 00:34:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.105 2014/10/17 09:18:30 pacho Exp $
+
+  17 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/guile-1.8.8-gtexinfo-5.patch, guile-1.8.8-r1.ebuild:
+  Fix building with texinfo-5 (#464044)
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> guile-1.8.8-r1.ebuild:
   Add arm64/m68k love.

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/openvas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.18 2014/10/02 07:41:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.19 2014/10/17 09:09:08 jlec Exp $
+
+  17 Oct 2014; Justin Lecher <jlec@gentoo.org> openvas-7-r1.ebuild:
+  Add missing dependency on dev-texlive/texlive-latexextra, #525498
 
   02 Oct 2014; Justin Lecher <jlec@gentoo.org> openvas-7.ebuild,
   openvas-7-r1.ebuild:

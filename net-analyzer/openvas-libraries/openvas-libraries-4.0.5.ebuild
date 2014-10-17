@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-4.0.5.ebuild,v 1.3 2012/05/04 06:08:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-4.0.5.ebuild,v 1.4 2014/10/17 09:12:09 jlec Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.12
-	net-libs/gnutls
+	=net-libs/gnutls-2*
 	net-libs/libpcap
 	app-crypt/gpgme
 	!net-analyzer/openvas-libnasl"

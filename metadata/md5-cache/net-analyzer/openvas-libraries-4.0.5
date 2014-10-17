@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=dev-libs/glib-2.12 net-libs/gnutls net-libs/libpcap app-crypt/gpgme !net-analyzer/openvas-libnasl sys-devel/bison sys-devel/flex virtual/pkgconfig dev-util/cmake sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=>=dev-libs/glib-2.12 =net-libs/gnutls-2* net-libs/libpcap app-crypt/gpgme !net-analyzer/openvas-libnasl sys-devel/bison sys-devel/flex virtual/pkgconfig dev-util/cmake sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=A remote security scanner for Linux (openvas-libraries)
 EAPI=4
 HOMEPAGE=http://www.openvas.org/
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/glib-2.12 net-libs/gnutls net-libs/libpcap app-crypt/gpgme !net-analyzer/openvas-libnasl
+RDEPEND=>=dev-libs/glib-2.12 =net-libs/gnutls-2* net-libs/libpcap app-crypt/gpgme !net-analyzer/openvas-libnasl
 SLOT=0
 SRC_URI=http://wald.intevation.org/frs/download.php/872/openvas-libraries-4.0.5.tar.gz
 _eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=5be4a6825ca09234da2f8c6dd076bda7
+_md5_=95c3ea41c92e8baff299a4e828eda969

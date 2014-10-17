@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8-r1.ebuild,v 1.17 2014/06/10 00:34:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8-r1.ebuild,v 1.18 2014/10/17 09:18:30 pacho Exp $
 
-EAPI=3
+EAPI=5
 inherit eutils autotools flag-o-matic elisp-common
 
 DESCRIPTION="Scheme interpreter"
@@ -30,7 +30,8 @@ MAJOR="1.8"
 src_prepare() {
 	epatch "${FILESDIR}/${P}-fix_guile-config.patch" \
 		"${FILESDIR}/${P}-gcc46.patch" \
-		"${FILESDIR}/${P}-makeinfo-5.patch"
+		"${FILESDIR}/${P}-makeinfo-5.patch" \
+		"${FILESDIR}/${P}-gtexinfo-5.patch"
 	sed \
 		-e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g" \
 		-e "/AM_PROG_CC_STDC/d" \
@@ -63,7 +64,7 @@ src_configure() {
 }
 
 src_compile()  {
-	emake || die "make failed"
+	emake
 
 	# Above we have disabled the build system's Emacs support;
 	# for USE=emacs we compile (and install) the files manually
@@ -74,9 +75,9 @@ src_compile()  {
 }
 
 src_install() {
-	einstall || die "install failed"
+	einstall
 
-	dodoc AUTHORS ChangeLog GUILE-VERSION HACKING NEWS README THANKS || die
+	dodoc AUTHORS ChangeLog GUILE-VERSION HACKING NEWS README THANKS
 
 	# texmacs needs this, closing bug #23493
 	dodir /etc/env.d
