@@ -42,7 +42,7 @@ index 0c9ec8a..6bc0bb5 100644
 -		install -D -m 0644 raid-check.cron $(DESTDIR)$(D_CNF)/cron.d/raid-check ; \
 -	fi
 +	install -D raid-check.conf $(DESTDIR)$(D_CNF)/raid-check.conf
-+	install -D raid-check.cron $(DESTDIR)$(D_CNF)/cron.d/raid-check
++	install -D -m 0644 raid-check.cron $(DESTDIR)$(D_CNF)/cron.d/raid-check
  
  uninstall:
  	rm -f $(DESTDIR)$(D_BIN)/$(PROJECT)

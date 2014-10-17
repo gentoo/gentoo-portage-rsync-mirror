@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/print-manager-4.14.1.ebuild,v 1.1 2014/09/16 18:17:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/print-manager-4.14.1.ebuild,v 1.2 2014/10/17 18:50:30 dilfridge Exp $
 
 EAPI=5
 
@@ -19,3 +19,5 @@ RDEPEND="${DEPEND}
 	!kde-misc/print-manager
 	app-admin/system-config-printer-gnome
 "
+
+PATCHES=( "${FILESDIR}/${PN}-4.14.1-cups20.patch" )

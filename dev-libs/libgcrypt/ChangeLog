@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.222 2014/10/06 17:44:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.223 2014/10/17 18:49:52 mgorny Exp $
+
+*libgcrypt-1.5.4-r1 (17 Oct 2014)
+
+  17 Oct 2014; Michał Górny <mgorny@gentoo.org> +libgcrypt-1.5.4-r1.ebuild:
+  Backport multilib support into 1.5.4:0, for stabilization bug #524308.
 
   06 Oct 2014; Raúl Porcel <armin76@gentoo.org> libgcrypt-1.5.4.ebuild:
   arm64/m68k/s390/sh stable

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/print-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/ChangeLog,v 1.84 2014/09/16 18:17:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/ChangeLog,v 1.85 2014/10/17 18:50:30 dilfridge Exp $
+
+  17 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  print-manager-4.14.1.ebuild, +files/print-manager-4.14.1-cups20.patch:
+  Fix build with cups-2.0, bug 525598
 
 *print-manager-4.14.1 (16 Sep 2014)
 
