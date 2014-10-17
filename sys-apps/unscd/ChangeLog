@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/unscd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/ChangeLog,v 1.18 2014/10/09 13:43:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/ChangeLog,v 1.19 2014/10/17 20:51:31 radhermit Exp $
+
+  17 Oct 2014; Tim Harder <radhermit@gentoo.org> -unscd-0.39.ebuild,
+  -unscd-0.45.ebuild, -unscd-0.47.ebuild, -unscd-0.48.ebuild,
+  -unscd-0.49.ebuild, -unscd-0.52.ebuild:
+  Remove old.
 
 *unscd-0.52-r1 (09 Oct 2014)
 
