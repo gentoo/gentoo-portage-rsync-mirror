@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.165 2014/10/11 15:53:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.166 2014/10/17 15:18:26 ottxor Exp $
 
 # Tobias Klausmann <klausman@gentoo.org> (11 Oct 2014)
 # app-emulation/qemu is not keyworded on alpha, masking flag that triggers
@@ -18,10 +18,6 @@ app-accessibility/orca braille
 # Tobias Klausmann <klausman@gentoo.org>
 # media-libs/x265 doesn't work on alpha (bug 519046)
 media-video/ffmpeg x265
-
-# Christoph Junghans <ottxor@gentoo.org> (21 Jul 2014)
-# Missing keywords on sci-libs/libcerf (bug 517726)
-sci-visualization/gnuplot libcerf
 
 # Tobias Klausmann <klausman@gentoo.org (16 Jul 2014)
 # neither dietlibc nor klibc will likely ever build/work on alpha, bug #487672
