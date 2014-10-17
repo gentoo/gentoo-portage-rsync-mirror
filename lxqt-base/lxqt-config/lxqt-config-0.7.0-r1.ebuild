@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-config/lxqt-config-0.7.0-r1.ebuild,v 1.2 2014/05/29 08:02:34 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-config/lxqt-config-0.7.0-r1.ebuild,v 1.3 2014/10/17 10:06:57 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -27,7 +27,8 @@ DEPEND="dev-qt/qtcore:4
 	sys-libs/zlib
 	x11-libs/libXcursor
 	x11-libs/libXfixes"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	x11-apps/setxkbmap"
 
 src_install(){
 	cmake-utils_src_install
