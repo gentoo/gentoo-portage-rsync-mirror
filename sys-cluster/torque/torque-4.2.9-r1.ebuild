@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.2.9.ebuild,v 1.2 2014/10/17 02:54:02 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.2.9-r1.ebuild,v 1.1 2014/10/17 03:23:11 jsbronder Exp $
 
 EAPI=5
 
@@ -83,6 +83,9 @@ src_prepare() {
 	sed -i '/mk_default_ld_lib_file || return 1/d' buildutils/pbs_mkdirs.in || die
 
 	epatch "${FILESDIR}"/${P}-tcl8.6.patch
+
+	# 524362
+	epatch "${FILESDIR}"/TRQ-2885-limit-tm_adopt-to-only-adopt-a-session-id-t.patch
 }
 
 src_configure() {

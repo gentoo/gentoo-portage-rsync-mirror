@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.171 2014/10/17 02:54:02 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.172 2014/10/17 03:23:11 jsbronder Exp $
+
+*torque-4.2.9-r1 (17 Oct 2014)
+
+  17 Oct 2014; Justin Bronder <jsbronder@gentoo.org> -torque-4.2.9.ebuild,
+  +torque-4.2.9-r1.ebuild,
+  +files/TRQ-2885-limit-tm_adopt-to-only-adopt-a-session-id-t.patch:
+  Apply upstream fixes for TRQ-2885. #524362
 
   17 Oct 2014; Justin Bronder <jsbronder@gentoo.org> torque-4.1.5.1-r1.ebuild,
   torque-4.1.7.ebuild, torque-4.2.9.ebuild:
