@@ -1,10 +1,10 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.334 2014/10/14 09:57:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.335 2014/10/17 07:47:48 pinkbyte Exp $
 
   14 Oct 2014; Sergey Popov <pinkbyte@gentoo.org> boost-1.52.0-r7.ebuild,
   boost-1.53.0-r1.ebuild, boost-1.54.0-r1.ebuild, boost-1.55.0-r1.ebuild,
-  boost-1.56.0.ebuild:
+  boost-1.55.0-r2.ebuild, boost-1.56.0.ebuild:
   Building with MPI support requires threads, add REQUIRED_USE for that
 
   26 Sep 2014; Sergey Popov <pinkbyte@gentoo.org> boost-1.56.0.ebuild:

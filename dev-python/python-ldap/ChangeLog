@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.135 2014/10/10 15:21:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.136 2014/10/17 07:31:18 idella4 Exp $
+
+*python-ldap-2.4.18 (17 Oct 2014)
+
+  17 Oct 2014; Ian Delaney <idella4@gentoo.org> +python-ldap-2.4.18.ebuild,
+  -python-ldap-2.3.13.ebuild, -python-ldap-2.4.12.ebuild,
+  -python-ldap-2.4.13.ebuild, -python-ldap-2.4.14.ebuild,
+  python-ldap-2.4.15.ebuild, python-ldap-9999.ebuild:
+  bump; update deps, re-add IUSE doc, doc build, fix to failing test, rm old
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> python-ldap-2.4.10-r1.ebuild:
   Stable for amd64, wrt bug #506258
