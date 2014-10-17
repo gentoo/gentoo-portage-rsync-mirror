@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/etcd-fs/etcd-fs-0_p20140620.ebuild,v 1.1 2014/10/16 00:48:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/etcd-fs/etcd-fs-0_p20140620.ebuild,v 1.2 2014/10/17 05:03:58 zmedico Exp $
 
 EAPI=5
 
 KEYWORDS="~amd64"
 DESCRIPTION="Use etcd as a FUSE filesystem"
-HOMEPAGE="https://${GO_PN}"
+HOMEPAGE="https://github.com/xetorthio/${PN}"
 EGIT_COMMIT="395eacbaebccccc5f03ed11dc887ea2f1af300a0"
-SRC_URI="https://github.com/xetorthio/${PN}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
@@ -27,7 +27,6 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe etcdfs
+	dobin etcdfs
 	dodoc README.md
 }
