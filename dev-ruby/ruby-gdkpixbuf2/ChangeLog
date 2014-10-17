@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.94 2014/05/21 01:42:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.95 2014/10/17 00:59:40 mrueg Exp $
+
+*ruby-gdkpixbuf2-2.2.2 (17 Oct 2014)
+
+  17 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +ruby-gdkpixbuf2-2.2.2.ebuild:
+  Version bump. Add ruby21.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> ruby-gdkpixbuf2-1.1.8.ebuild,
   ruby-gdkpixbuf2-1.2.6.ebuild:
