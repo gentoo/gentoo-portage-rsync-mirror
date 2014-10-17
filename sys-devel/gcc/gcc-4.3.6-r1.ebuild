@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.6-r1.ebuild,v 1.15 2014/01/19 01:51:34 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.6-r1.ebuild,v 1.17 2014/10/17 17:49:53 vapier Exp $
 
 EAPI="2"
 
@@ -39,8 +39,4 @@ src_prepare() {
 	use vanilla && return 0
 
 	sed -i 's/use_fixproto=yes/:/' gcc/config.gcc #PR33200
-
-	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
-
-	[[ ${CTARGET} == *-softfloat-* ]] && epatch "${FILESDIR}"/4.3.2/gcc-4.3.2-softfloat.patch
 }

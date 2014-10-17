@@ -1,6 +1,24 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1021 2014/10/02 00:10:29 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1024 2014/10/17 17:49:53 vapier Exp $
+
+  17 Oct 2014; Mike Frysinger <vapier@gentoo.org> gcc-3.3.6-r1.ebuild,
+  gcc-3.4.6-r2.ebuild, gcc-4.1.2.ebuild, gcc-4.2.4-r1.ebuild,
+  gcc-4.3.6-r1.ebuild:
+  Drop $GCC_SPECS support in older versions.
+
+  17 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  -files/3.4.4/gcc-3.4.4-softfloat.patch,
+  -files/4.0.2/gcc-4.0.2-softfloat.patch,
+  -files/4.3.2/gcc-4.3.2-softfloat.patch,
+  -files/4.4.0/gcc-4.4.0-softfloat.patch, gcc-3.4.6-r2.ebuild, gcc-4.1.2.ebuild,
+  gcc-4.2.4-r1.ebuild, gcc-4.3.6-r1.ebuild, gcc-4.4.7.ebuild,
+  gcc-4.5.1-r1.ebuild, gcc-4.5.2.ebuild:
+  Drop softfloat support in older versions.
+
+  17 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  -files/4.0.2/gcc-4.0.2-cross-compile.patch, gcc-4.0.4.ebuild:
+  Push out queued patches and move stuff from FILESDIR to the patchset.
 
   02 Oct 2014; Ryan Hill <rhill@gentoo.org> gcc-4.7.3-r1.ebuild:
   4.7.3 p1.5: Backport PR60155 fix to stable (bug #512586).
