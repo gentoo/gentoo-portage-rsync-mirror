@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openvswitch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.25 2014/09/22 20:10:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.26 2014/10/17 02:24:57 prometheanfire Exp $
+
+*openvswitch-2.3.0-r1 (17 Oct 2014)
+
+  17 Oct 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +openvswitch-2.3.0-r1.ebuild:
+  fixing bug 525144
 
   22 Sep 2014; Matthew Thode <prometheanfire@gentoo.org>
   openvswitch-2.3.0.ebuild:
