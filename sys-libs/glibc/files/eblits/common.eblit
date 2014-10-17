@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.43 2014/09/18 16:48:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.44 2014/10/17 17:30:04 vapier Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -12,7 +12,10 @@ if [[ ${EAPI:-0} == [012] ]] ; then
 fi
 if [[ ${EAPI:-0} == [0123] ]] ; then
 	nonfatal() { "$@" ; }
+	_nonfatal() { "$@" ; }
 fi
+# This indirection is for binpkgs. #523332
+_nonfatal() { nonfatal "$@" ; }
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.5.ebuild,v 1.3 2013/11/01 13:48:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.5.ebuild,v 1.4 2014/10/17 17:04:42 kensington Exp $
 
 EAPI=5
 KDE_LINGUAS="cs es ja"
@@ -8,7 +8,7 @@ KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="A MIDI monitor for ALSA sequencer"
-HOMEPAGE="http://kmetronome.sourceforge.net/kmidimon/"
+HOMEPAGE="http://kmidimon.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
