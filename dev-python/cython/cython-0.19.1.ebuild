@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.19.1.ebuild,v 1.12 2014/09/13 20:33:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.19.1.ebuild,v 1.13 2014/10/17 02:31:20 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
@@ -36,7 +36,7 @@ python_compile() {
 	fi
 
 	# Python gets confused when it is in sys.path before build.
-	local PYTHONPATH
+	local PYTHONPATH=
 	export PYTHONPATH
 
 	distutils-r1_python_compile

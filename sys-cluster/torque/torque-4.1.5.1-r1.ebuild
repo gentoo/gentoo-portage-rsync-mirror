@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.5.1-r1.ebuild,v 1.9 2014/01/19 13:46:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.5.1-r1.ebuild,v 1.10 2014/10/17 02:54:02 jsbronder Exp $
 
 EAPI=4
 inherit flag-o-matic eutils linux-info
@@ -30,7 +30,13 @@ DEPEND="${DEPEND_COMMON}
 
 RDEPEND="${DEPEND_COMMON}
 	crypt? ( net-misc/openssh )
-	!crypt? ( net-misc/netkit-rsh )"
+	!crypt? ( net-misc/netkit-rsh )
+	!dev-libs/uthash"
+
+# Torque should depend on dev-libs/uthash but that's pretty much impossible
+# to patch in as they ship with a broken configure such that files referenced
+# by the configure.ac and Makefile.am are missing.
+# http://www.supercluster.org/pipermail/torquedev/2014-October/004773.html
 
 pkg_setup() {
 	PBS_SERVER_HOME="${PBS_SERVER_HOME:-/var/spool/torque}"

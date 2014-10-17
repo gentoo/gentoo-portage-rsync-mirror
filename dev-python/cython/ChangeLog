@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.125 2014/10/17 01:57:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.126 2014/10/17 02:31:20 floppym Exp $
+
+  17 Oct 2014; Mike Gilbert <floppym@gentoo.org> -cython-0.16.ebuild,
+  -cython-0.17.1.ebuild, -cython-0.17.2.ebuild, -cython-0.17.4.ebuild,
+  -cython-0.18-r1.ebuild, -cython-0.18.ebuild, -cython-0.19.2.ebuild,
+  -cython-0.20.1.ebuild, -cython-0.20.2.ebuild, -cython-0.20.ebuild,
+  -files/0.15.1-test.patch, cython-0.19.1-r1.ebuild, cython-0.19.1.ebuild,
+  cython-0.21.ebuild:
+  Work around bug in 'local' built-in for bash-4.3, bug 525608. Remove old
+  ebuilds.
 
   17 Oct 2014; Mike Gilbert <floppym@gentoo.org> cython-0.21.ebuild:
   Depend on setuptools.

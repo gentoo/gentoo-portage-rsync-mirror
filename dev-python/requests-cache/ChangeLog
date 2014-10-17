@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/requests-cache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/ChangeLog,v 1.10 2014/10/16 11:22:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/ChangeLog,v 1.11 2014/10/17 02:47:33 floppym Exp $
+
+  17 Oct 2014; Mike Gilbert <floppym@gentoo.org> requests-cache-0.4.5.ebuild,
+  requests-cache-0.4.6.ebuild:
+  Restore minimum version to requests dep.
 
 *requests-cache-0.4.6 (16 Oct 2014)
 

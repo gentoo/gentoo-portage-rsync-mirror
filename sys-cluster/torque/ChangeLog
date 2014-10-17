@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.170 2014/09/19 06:46:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.171 2014/10/17 02:54:02 jsbronder Exp $
+
+  17 Oct 2014; Justin Bronder <jsbronder@gentoo.org> torque-4.1.5.1-r1.ebuild,
+  torque-4.1.7.ebuild, torque-4.2.9.ebuild:
+  Add blocker on dev-libs/uthash. Note that we should be just depending on it,
+  but do to how upstream ships the tarfile, we cannot patch the build system.
+  http://www.supercluster.org/pipermail/torquedev/2014-October/004773.html.
+  #490000
 
 *torque-4.2.9 (19 Sep 2014)
 

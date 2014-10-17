@@ -6,8 +6,8 @@ HOMEPAGE=http://www.adaptivecomputing.com/products/open-source/torque
 IUSE=cpusets +crypt doc drmaa kernel_linux munge nvidia server +syslog tk
 KEYWORDS=alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86
 LICENSE=torque-2.5
-RDEPEND=sys-libs/ncurses sys-libs/readline cpusets? ( sys-apps/hwloc ) munge? ( sys-auth/munge ) nvidia? ( >=x11-drivers/nvidia-drivers-275 ) tk? ( dev-lang/tk ) syslog? ( virtual/logger ) !games-util/qstat crypt? ( net-misc/openssh ) !crypt? ( net-misc/netkit-rsh )
+RDEPEND=sys-libs/ncurses sys-libs/readline cpusets? ( sys-apps/hwloc ) munge? ( sys-auth/munge ) nvidia? ( >=x11-drivers/nvidia-drivers-275 ) tk? ( dev-lang/tk ) syslog? ( virtual/logger ) !games-util/qstat crypt? ( net-misc/openssh ) !crypt? ( net-misc/netkit-rsh ) !dev-libs/uthash
 SLOT=0
 SRC_URI=http://www.adaptivecomputing.com/index.php?wpfb_dl=1058 -> torque-4.1.5.1.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=0a93206935b707d31d7b5dabbf38a641
+_md5_=de13a3f3d675f5f26ed533fceb0852f1
