@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:3 >=dev-libs/glib-2.31.18:2 >=net-libs/libvncserver-0.9.8.2 x11-libs/libxkbfile x11-themes/gnome-icon-theme avahi? ( net-dns/avahi[gtk3] ) ayatana? ( dev-libs/libappindicator ) crypt? ( dev-libs/libgcrypt:0 ) freerdp? ( >=net-misc/freerdp-1.1.0_beta1_p20130710 ) gnome-keyring? ( gnome-base/libgnome-keyring ) ssh? ( net-libs/libssh[sftp] ) telepathy? ( net-libs/telepathy-glib ) vte? ( x11-libs/vte:2.90 ) !net-misc/remmina-plugins
 SLOT=0
 _eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=d8ce18c683770b3a00ad046577dd2698
+_md5_=66c74df814ccbab2401186846ab671a1
