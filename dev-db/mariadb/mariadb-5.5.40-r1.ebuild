@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.5.40.ebuild,v 1.7 2014/10/17 13:26:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.5.40-r1.ebuild,v 1.1 2014/10/17 14:35:12 grknight Exp $
 
 EAPI="5"
-MY_EXTRAS_VER="20141009-1450Z"
+MY_EXTRAS_VER="20141017-1419Z"
 
 # Build system
 BUILD="cmake"

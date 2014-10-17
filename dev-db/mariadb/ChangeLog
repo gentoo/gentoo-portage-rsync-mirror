@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.65 2014/10/17 13:26:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.66 2014/10/17 14:35:12 grknight Exp $
+
+*mariadb-5.5.40-r1 (17 Oct 2014)
+
+  17 Oct 2014; Brian Evans <grknight@gentoo.org> +mariadb-5.5.40-r1.ebuild,
+  -mariadb-5.5.40.ebuild:
+  Revbump to fix bug 525644. Committed directly to stable as this was a header
+  only change for security bug 525504
 
   17 Oct 2014; Agostino Sarubbo <ago@gentoo.org> mariadb-5.5.40.ebuild:
   Stable for ppc64, wrt bug #525504
