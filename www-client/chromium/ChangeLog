@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1149 2014/10/17 06:57:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1150 2014/10/17 16:21:48 phajdan.jr Exp $
+
+  17 Oct 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-39.0.2171.19.ebuild:
+  Fix build with gcc-4.7, bug #525374 by Mark Dominik Burkle.
 
 *chromium-40.0.2188.2 (17 Oct 2014)
 
