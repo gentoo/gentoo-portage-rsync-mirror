@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.636 2014/10/17 02:48:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.637 2014/10/17 04:02:50 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -77,17 +77,19 @@ GCCMICRO=$(get_version_component_range 3 ${GCC_PV})
 GCC_CONFIG_VER=${GCC_CONFIG_VER:-$(replace_version_separator 3 '-' ${GCC_PV})}
 
 # Pre-release support
-if [[ ${GCC_PV} != ${GCC_PV/_pre/-} ]] ; then
+if [[ ${GCC_PV} == *_pre* ]] ; then
 	PRERELEASE=${GCC_PV/_pre/-}
-fi
-
-# make _alpha and _beta ebuilds automatically use a snapshot
-if [[ ${GCC_PV} == *_alpha* ]] ; then
+elif [[ ${GCC_PV} == *_alpha* ]] ; then
 	SNAPSHOT=${GCC_BRANCH_VER}-${GCC_PV##*_alpha}
 elif [[ ${GCC_PV} == *_beta* ]] ; then
 	SNAPSHOT=${GCC_BRANCH_VER}-${GCC_PV##*_beta}
 elif [[ ${GCC_PV} == *_rc* ]] ; then
 	SNAPSHOT=${GCC_PV%_rc*}-RC-${GCC_PV##*_rc}
+fi
+
+if [[ ${SNAPSHOT} == 5.0.0-* ]] ; then
+	# The gcc-5 release has dropped the .0 for some reason.
+	SNAPSHOT=${SNAPSHOT/5.0.0/5}
 fi
 
 export GCC_FILESDIR=${GCC_FILESDIR:-${FILESDIR}}
