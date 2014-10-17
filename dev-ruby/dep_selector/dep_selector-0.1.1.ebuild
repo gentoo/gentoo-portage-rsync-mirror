@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dep_selector/dep_selector-0.1.1.ebuild,v 1.1 2014/03/26 20:15:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dep_selector/dep_selector-0.1.1.ebuild,v 1.2 2014/10/17 19:37:37 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_RECIPE_TEST="rspec"

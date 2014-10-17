@@ -1,16 +1,16 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json_pure/json_pure-1.8.1.ebuild,v 1.1 2013/12/27 01:13:22 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json_pure/json_pure-1.8.1.ebuild,v 1.2 2014/10/17 19:43:34 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 RUBY_FAKEGEM_RECIPE_TEST="rake"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 
 inherit multilib ruby-fakegem
 
-DESCRIPTION="a JSON implementation in pure Ruby"
+DESCRIPTION="A JSON implementation in pure Ruby"
 HOMEPAGE="http://flori.github.com/json"
 
 LICENSE="Ruby-BSD"

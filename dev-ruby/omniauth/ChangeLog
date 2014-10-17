@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/omniauth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/omniauth/ChangeLog,v 1.6 2014/07/23 00:25:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/omniauth/ChangeLog,v 1.7 2014/10/17 19:46:58 mrueg Exp $
+
+  17 Oct 2014; Manuel Rüger <mrueg@gentoo.org> omniauth-1.2.2.ebuild:
+  Add ruby21 target.
 
 *omniauth-1.2.2 (23 Jul 2014)
 
