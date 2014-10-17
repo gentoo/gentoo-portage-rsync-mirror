@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libstatgrab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.29 2014/08/10 20:12:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.30 2014/10/17 09:41:51 idella4 Exp $
+
+*libstatgrab-0.91 (17 Oct 2014)
+
+  17 Oct 2014; Ian Delaney <idella4@gentoo.org> +libstatgrab-0.91.ebuild:
+  bump; add IUSE examples and their install, permission to bump by maintainer
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libstatgrab-0.16.ebuild,
   libstatgrab-0.17.ebuild:
