@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.10-r1.ebuild,v 1.3 2014/05/26 11:08:23 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.12.ebuild,v 1.1 2014/10/17 11:57:29 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -40,7 +40,7 @@ pkg_setup() {
 	enewgroup mongodb
 	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
 
-	scons_opts="  --cc=$(tc-getCC) --cxx=$(tc-getCXX)"
+	scons_opts="  --disable-warnings-as-errors --cc=$(tc-getCC) --cxx=$(tc-getCXX)"
 	scons_opts+=" --use-system-tcmalloc"
 	scons_opts+=" --use-system-pcre"
 	scons_opts+=" --use-system-snappy"
@@ -71,7 +71,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-2.4.5-fix-scons.patch"
+	epatch "${FILESDIR}/${PN}-2.4.11-fix-scons.patch"
 	epatch "${FILESDIR}/${PN}-2.2-r1-fix-boost.patch"
 	epatch "${FILESDIR}/${PN}-2.4-fix-v8-pythonpath.patch"
 
