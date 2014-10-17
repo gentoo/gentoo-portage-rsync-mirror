@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.78 2014/01/14 23:36:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.79 2014/10/17 01:43:23 vapier Exp $
+
+  17 Oct 2014; Mike Frysinger <vapier@gentoo.org> sdparm-1.08-r1.ebuild:
+  Drop redundant install of sas_disk_blink #523406 by Michał Bartoszkiewicz.
 
   14 Jan 2014; Mike Frysinger <vapier@gentoo.org> sdparm-1.08-r1.ebuild:
   Add s390 love.

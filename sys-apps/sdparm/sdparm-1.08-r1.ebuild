@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/sdparm-1.08-r1.ebuild,v 1.2 2014/01/14 23:36:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/sdparm-1.08-r1.ebuild,v 1.3 2014/10/17 01:43:23 vapier Exp $
 
 EAPI="4"
 
@@ -28,7 +28,6 @@ src_configure() {
 
 src_install() {
 	default
-	dosbin scripts/sas*
 
 	# These don't exist yet. Someone wanna copy hdparm's and make them work? :)
 	#newinitd ${FILESDIR}/sdparm-init-7 sdparm

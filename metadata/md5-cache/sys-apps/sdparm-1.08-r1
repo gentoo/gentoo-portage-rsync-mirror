@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=>=sys-apps/sg3_utils-1.28
 SLOT=0
 SRC_URI=http://sg.danny.cz/sg/p/sdparm-1.08.tgz
-_md5_=0e75ea0cde5617723d1c74a08b615e6f
+_md5_=6cf960d87919edd01b7685ce8b74b84a
