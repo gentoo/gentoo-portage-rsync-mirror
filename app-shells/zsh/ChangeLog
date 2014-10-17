@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.245 2014/10/17 05:29:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.246 2014/10/17 05:39:06 radhermit Exp $
+
+  17 Oct 2014; Tim Harder <radhermit@gentoo.org> -zsh-5.0.2-r3.ebuild,
+  -zsh-5.0.4.ebuild, -zsh-5.0.6.ebuild, -zsh-5.0.7.ebuild,
+  -files/zsh-5.0.2-texinfo-5.1.patch,
+  -files/zsh-fix-parameter-modifier-crash.patch:
+  Remove old.
 
 *zsh-9999 (17 Oct 2014)
 
