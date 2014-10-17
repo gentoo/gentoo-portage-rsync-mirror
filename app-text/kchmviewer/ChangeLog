@@ -1,6 +1,14 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.58 2014/08/10 18:25:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.60 2014/10/17 16:51:59 kensington Exp $
+
+  17 Oct 2014; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Add upstream metadata.
+
+*kchmviewer-7.1 (17 Oct 2014)
+
+  17 Oct 2014; Michael Palimaka <kensington@gentoo.org> +kchmviewer-7.1.ebuild:
+  Version bump.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> kchmviewer-6.0-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

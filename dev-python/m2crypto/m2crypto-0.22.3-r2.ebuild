@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r1.ebuild,v 1.1 2014/07/23 16:38:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r2.ebuild,v 1.1 2014/10/17 16:50:52 floppym Exp $
 
 EAPI=5
 
@@ -20,9 +20,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
-RDEPEND=">=dev-libs/openssl-0.9.8"
+RDEPEND=">=dev-libs/openssl-0.9.8:0="
 DEPEND="${RDEPEND}
-	>=dev-lang/swig-1.3.28
+	>=dev-lang/swig-1.3.28:0
 	dev-python/setuptools[${PYTHON_USEDEP}]
 "
 
@@ -39,7 +39,7 @@ python_prepare_all() {
 }
 
 python_configure_all() {
-	set -- swig -python -includeall -I/usr/include \
+	set -- swig -python -includeall -I"${EPREFIX}"/usr/include \
 		-o SWIG/_m2crypto_wrap.c SWIG/_m2crypto.i
 
 	echo "${@}"

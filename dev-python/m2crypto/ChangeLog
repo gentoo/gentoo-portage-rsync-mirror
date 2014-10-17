@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.80 2014/07/23 16:38:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.81 2014/10/17 16:50:52 floppym Exp $
+
+*m2crypto-0.22.3-r2 (17 Oct 2014)
+
+  17 Oct 2014; Mike Gilbert <floppym@gentoo.org> +m2crypto-0.22.3-r2.ebuild,
+  -m2crypto-0.22.3-r1.ebuild:
+  Fix include path on prefix, bug 525660 by Jean-Michel Smith. Add slots to
+  openssl and swig dependencies.
 
 *m2crypto-0.22.3-r1 (23 Jul 2014)
 *m2crypto-0.21.1-r2 (23 Jul 2014)

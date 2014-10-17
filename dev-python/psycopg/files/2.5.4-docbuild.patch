@@ -1,0 +1,11 @@
+diff -ur psycopg2-2.5.4.orig/doc/src/conf.py psycopg2-2.5.4/doc/src/conf.py
+--- doc/src/conf.py	2014-08-31 01:55:25.000000000 +0800
++++ doc/src/conf.py	2014-10-17 23:15:38.907243293 +0800
+@@ -64,7 +64,6 @@
+ 
+ intersphinx_mapping = {
+     'py': ('http://docs.python.org/', None),
+-    'py3': ('http://docs.python.org/3.2', None),
+     }
+ 
+ # Pattern to generate links to the bug tracker

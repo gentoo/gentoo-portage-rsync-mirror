@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.174 2014/05/26 08:43:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.175 2014/10/17 16:47:06 idella4 Exp $
+
+*psycopg-2.5.4 (17 Oct 2014)
+
+  17 Oct 2014; Ian Delaney <idella4@gentoo.org> +files/2.5.4-docbuild.patch,
+  +psycopg-2.5.4.ebuild, psycopg-2.5.3.ebuild:
+  bump; drop py2.6, patch to remove py3.2's objects.inv from doc build, upgrade
+  doc build and install
 
 *psycopg-2.5.3 (26 May 2014)
 
