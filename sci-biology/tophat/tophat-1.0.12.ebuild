@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/tophat-1.0.12.ebuild,v 1.5 2012/04/25 16:39:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/tophat-1.0.12.ebuild,v 1.6 2014/10/17 08:07:31 pinkbyte Exp $
 
 EAPI="2"
 
@@ -19,8 +19,12 @@ DEPEND=""
 RDEPEND="sci-biology/bowtie"
 
 src_prepare() {
-	# fix gcc-4.4 missing include
+	# fix missing includes
 	sed -i '/#include <string>/ a #include <stdio.h>' "${S}/src/gff_juncs.cpp" || die
+	sed -i \
+		-e '/#include <stdio.h>/ a #include <unistd.h>' \
+		"${S}/src/prep_reads.cpp" \
+		"${S}/src/extract_reads.cpp" || die
 	# fix parallel make race
 	sed -i -e 's/\$(top_builddir)\/src\///g' src/Makefile.am || die
 	# remove broken arch-dependent CFLAGS setting
