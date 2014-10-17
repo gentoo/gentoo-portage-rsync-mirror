@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1386 2014/10/15 17:51:03 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1387 2014/10/17 21:07:08 axs Exp $
+
+  17 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  mozconfig-v5.33.eclass:
+  added some missing deps, dropped unnecessary expat dep and redundant
+  --with-system-zlib; deps already brought in by mesa so need for end users to
+  update vdb
 
   15 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> perl-app.eclass:
   Allow ebuild to override GENTOO_DEPEND_ON_PERL_SUBSLOT in perl-app.eclass if

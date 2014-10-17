@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-v5.33.eclass,v 1.1 2014/10/14 16:10:36 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-v5.33.eclass,v 1.2 2014/10/17 21:07:08 axs Exp $
 #
 # @ECLASS: mozconfig-v5.33.eclass
 # @MAINTAINER:
@@ -53,7 +53,6 @@ IUSE="${IUSE} dbus debug gstreamer pulseaudio startup-notification system-cairo 
 
 RDEPEND=">=app-text/hunspell-1.2
 	dev-libs/atk
-	dev-libs/expat
 	>=dev-libs/libevent-1.4.7
 	>=x11-libs/cairo-1.10[X]
 	>=x11-libs/gtk+-2.14:2
@@ -79,6 +78,9 @@ RDEPEND=">=app-text/hunspell-1.2
 		>=media-plugins/gst-plugins-libav-1.1.0_pre20130128-r1:1.0
 	)
 	x11-libs/libX11
+	x11-libs/libXcomposite
+	x11-libs/libXdamage
+	x11-libs/libXfixes
 	x11-libs/libXext
 	x11-libs/libXrender
 	x11-libs/libXt
@@ -194,9 +196,9 @@ mozconfig_config() {
 	mozconfig_annotate '' --enable-system-ffi
 	mozconfig_annotate 'Gentoo default to honor system linker' --disable-gold
 	mozconfig_annotate '' --disable-gconf
-	mozconfig_annotate 'Gentoo default' --with-system-zlib
 
 	# We must force-enable jemalloc 3 via .mozconfig
+	# Except this doesn't actually enable jemalloc3.
 	echo "export MOZ_JEMALLOC=1" >> "${S}"/.mozconfig || die
 	mozconfig_annotate '' --enable-jemalloc
 	mozconfig_annotate '' --enable-replace-malloc
