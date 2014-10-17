@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-3.13.9.ebuild,v 1.1 2014/04/14 14:39:00 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-3.10.58.ebuild,v 1.1 2014/10/17 13:15:09 mpagano Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -55,6 +55,9 @@ src_install() {
 	make installmandocs || die "make installmandocs failed"
 
 	if use html; then
+		# There is no subdirectory named "index"
+		dohtml Documentation/DocBook/index.html
+		rm Documentation/DocBook/index.html
 		for file in Documentation/DocBook/*.html; do
 			dohtml -r ${file/\.html/}
 		done

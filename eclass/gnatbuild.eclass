@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.62 2014/10/15 09:52:21 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.63 2014/10/17 13:17:30 george Exp $
 #
 # Authors: George Shapovalov <george@gentoo.org>
 #          Steve Arnold <nerdboy@gentoo.org>
@@ -309,6 +309,7 @@ gnatbuild_pkg_postinst() {
 	elog
 	. ${GnatCommon} || die "failed to source common code"
 	if [[ ! -f ${PRIMELIST} ]] || [[ ! -s ${PRIMELIST} ]]; then
+		mkdir -p ${SETTINGSDIR}
 		echo "${gnat_profile}" > ${PRIMELIST}
 		elog "The list of primary compilers was empty and got assigned ${gnat_profile}."
 	fi

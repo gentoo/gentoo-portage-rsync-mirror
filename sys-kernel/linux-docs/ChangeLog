@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/linux-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.48 2014/04/14 14:39:00 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.49 2014/10/17 13:15:09 mpagano Exp $
+
+*linux-docs-3.17.1 (17 Oct 2014)
+*linux-docs-3.16.6 (17 Oct 2014)
+*linux-docs-3.14.22 (17 Oct 2014)
+*linux-docs-3.12.30 (17 Oct 2014)
+*linux-docs-3.10.58 (17 Oct 2014)
+*linux-docs-3.4.104 (17 Oct 2014)
+
+  17 Oct 2014; Mike Pagano <mpagano@gentoo.org> -linux-docs-3.2.55.ebuild,
+  -linux-docs-3.4.82.ebuild, +linux-docs-3.4.104.ebuild,
+  -linux-docs-3.10.32.ebuild, +linux-docs-3.10.58.ebuild,
+  -linux-docs-3.12.16.ebuild, +linux-docs-3.12.30.ebuild,
+  -linux-docs-3.13.9.ebuild, +linux-docs-3.14.22.ebuild,
+  +linux-docs-3.16.6.ebuild, +linux-docs-3.17.1.ebuild:
+  Version bumps. Remove old and fix bug in install for USE=html. Thanks to Ted
+  Marston. See bug #515520
 
 *linux-docs-3.13.9 (14 Apr 2014)
 

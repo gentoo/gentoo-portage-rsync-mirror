@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mikmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.37 2014/08/13 09:21:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.39 2014/10/17 13:17:00 ssuominen Exp $
+
+  17 Oct 2014; Samuli Suominen <ssuominen@gentoo.org> -mikmod-3.2.2.ebuild:
+  old
+
+*mikmod-3.2.6 (17 Oct 2014)
+
+  17 Oct 2014; Samuli Suominen <ssuominen@gentoo.org> +mikmod-3.2.6.ebuild:
+  Version bump.
 
   13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mikmod-3.2.5.ebuild:
   Stable for ppc, wrt bug #495798

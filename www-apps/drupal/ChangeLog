@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.108 2014/08/14 12:59:01 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.109 2014/10/17 13:02:55 jmbsvicetto Exp $
+
+*drupal-7.32 (17 Oct 2014)
+
+  17 Oct 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +drupal-7.32.ebuild, -drupal-7.31.ebuild:
+  Bump to release 7.32 - fixes bug 525514 (CVE-2014-3704).
 
 *drupal-6.33 (14 Aug 2014)
 *drupal-7.31 (14 Aug 2014)
