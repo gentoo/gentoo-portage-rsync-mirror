@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.49 2014/10/12 19:53:39 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.51 2014/10/17 18:06:19 williamh Exp $
+
+  17 Oct 2014; William Hubbs <williamh@gentoo.org> -go-1.3.1.ebuild,
+  -go-1.3.ebuild:
+  remove old versions wrt bug #523848
+
+  17 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> go-1.3.3.ebuild:
+  arm stable wrt bug #523848
 
   12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> go-1.3.3.ebuild:
   x86 stable wrt bug #523848
