@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.84.ebuild,v 1.9 2014/10/09 19:51:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.84.ebuild,v 1.10 2014/10/17 13:38:36 ago Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-solaris"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-solaris"
 
 COMMON_DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/db-3.2
