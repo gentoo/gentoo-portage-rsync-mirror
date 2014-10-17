@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-31.2.0.ebuild,v 1.1 2014/10/15 13:43:02 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-31.2.0-r1.ebuild,v 1.2 2014/10/17 21:40:15 axs Exp $
 
 EAPI="5"
 MOZ_ESR="1"
@@ -43,15 +43,23 @@ IUSE="selinux startup-notification"
 
 DEPEND="app-arch/unzip
 	selinux? ( sec-policy/selinux-mozilla )"
-RDEPEND="dev-libs/dbus-glib
-	virtual/freedesktop-icon-theme
+RDEPEND="dev-libs/atk
+	>=dev-libs/dbus-glib-0.72
+	dev-libs/glib:2
+	>=media-libs/alsa-lib-1.0.16
+	media-libs/fontconfig
+	>=media-libs/freetype-2.4.10:2
+	>=sys-apps/dbus-0.60
+	>=x11-libs/cairo-1.10[X]
+	x11-libs/gdk-pixbuf:2
+	>=x11-libs/gtk+-2.14:2
+	x11-libs/libX11
+	x11-libs/libXext
 	x11-libs/libXrender
 	x11-libs/libXt
-	x11-libs/libXmu
-
+	>=x11-libs/pango-1.22.0
+	virtual/freedesktop-icon-theme
 	selinux? ( sec-policy/selinux-mozilla )
-	>=x11-libs/gtk+-2.2:2
-	>=media-libs/alsa-lib-1.0.16
 "
 
 QA_PREBUILT="

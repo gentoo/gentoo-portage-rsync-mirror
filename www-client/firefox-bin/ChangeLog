@@ -1,6 +1,18 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.208 2014/10/15 13:43:02 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.210 2014/10/17 21:40:15 axs Exp $
+
+  17 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  firefox-bin-31.2.0-r1.ebuild:
+  fixed cairo dep in line with actual
+
+*firefox-bin-31.2.0-r1 (17 Oct 2014)
+
+  17 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-bin-31.2.0-r1.ebuild, -firefox-bin-31.2.0.ebuild,
+  firefox-bin-33.0.ebuild:
+  added missing deps to firefox-31 and 33 ; revbumped firefox-31 for stable
+  candidate
 
 *firefox-bin-31.2.0 (15 Oct 2014)
 
