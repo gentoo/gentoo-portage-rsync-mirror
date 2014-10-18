@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.152 2014/10/16 17:57:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.153 2014/10/18 14:23:47 ago Exp $
+
+  18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> hwids-20141010.ebuild:
+  Stable for ppc, wrt bug #524976
 
   16 Oct 2014; Mike Frysinger <vapier@gentoo.org> hwids-20141010.ebuild:
   Mark arm/arm64/ia64/m68k/s390/sh stable.

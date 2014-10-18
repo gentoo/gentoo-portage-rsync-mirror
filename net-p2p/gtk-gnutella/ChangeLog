@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.164 2014/10/10 10:53:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.165 2014/10/18 14:22:04 ago Exp $
+
+  18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> gtk-gnutella-1.1.1.ebuild:
+  Stable for ppc, wrt bug #524424
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> gtk-gnutella-1.1.1.ebuild:
   Stable for x86, wrt bug #524424

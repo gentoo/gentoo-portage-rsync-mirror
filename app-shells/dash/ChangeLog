@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.120 2014/10/10 20:10:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.121 2014/10/18 14:20:51 ago Exp $
+
+  18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> dash-0.5.7.4.ebuild:
+  Stable for ppc, wrt bug #524262
 
   10 Oct 2014; Markus Meier <maekke@gentoo.org> dash-0.5.7.4.ebuild:
   arm stable, bug #524262

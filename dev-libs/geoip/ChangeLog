@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.225 2014/10/10 11:04:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.226 2014/10/18 14:17:22 ago Exp $
+
+  18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> geoip-1.6.2.ebuild:
+  Stable for ppc, wrt bug #523034
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> geoip-1.6.2.ebuild:
   Stable for x86, wrt bug #523034

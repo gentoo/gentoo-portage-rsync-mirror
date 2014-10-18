@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/waitress/waitress-0.8.9.ebuild,v 1.3 2014/10/10 23:53:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/waitress/waitress-0.8.9.ebuild,v 1.4 2014/10/18 14:01:42 idella4 Exp $
 
 EAPI=5
 
@@ -29,6 +29,10 @@ python_prepare_all() {
 		einfo "doc patch applied"
 		mv "${WORKDIR}"/_themes ./docs/ || die
 	fi
+
+	# Fix generation of documentation with Waitress not installed. Bug #525384
+	sed -e "s/^version = pkg_resources.get_distribution('waitress').version$/version = '${PV}'/" -i docs/conf.py
+
 	distutils-r1_python_prepare_all
 }
 

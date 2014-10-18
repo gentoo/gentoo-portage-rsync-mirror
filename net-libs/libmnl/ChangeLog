@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.37 2014/10/17 14:22:27 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.38 2014/10/18 14:29:10 ago Exp $
+
+  18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> libmnl-1.0.3-r1.ebuild:
+  Stable for ppc, wrt bug #517418
 
   17 Oct 2014; Tobias Klausmann <klausman@gentoo.org> libmnl-1.0.3-r1.ebuild:
   Stable on alpha, bug 517418

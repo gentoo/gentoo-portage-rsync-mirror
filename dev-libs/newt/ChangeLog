@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.94 2014/10/17 15:05:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.95 2014/10/18 14:29:34 ago Exp $
+
+  18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> newt-0.52.15.ebuild:
+  Stable for ppc, wrt bug #517822
 
   17 Oct 2014; Tobias Klausmann <klausman@gentoo.org> newt-0.52.15.ebuild:
   Stable on alpha, bug 517822

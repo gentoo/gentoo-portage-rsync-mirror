@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.212 2014/10/16 08:26:30 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.213 2014/10/18 14:18:39 ago Exp $
+
+  18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> inkscape-0.48.5.ebuild:
+  Stable for ppc, wrt bug #523384
 
   16 Oct 2014; Chema Alonso <nimiux@gentoo.org> inkscape-0.48.5.ebuild:
   Stable for amd64 wrt bug #523384
