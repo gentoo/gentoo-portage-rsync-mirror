@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.135 2014/09/04 20:44:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.136 2014/10/18 21:11:07 vapier Exp $
+
+  18 Oct 2014; Mike Frysinger <vapier@gentoo.org> DirectFB-1.7.1.ebuild:
+  Hard disable xine vdpau support #499740 by Silvio.
 
   04 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
   move dev-libs/DirectFB to graphics herd
