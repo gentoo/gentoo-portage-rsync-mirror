@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/penumbra-collection-1.1.ebuild,v 1.8 2014/05/15 16:58:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/penumbra-collection-1.1.ebuild,v 1.9 2014/10/18 18:03:40 pacho Exp $
 
 EAPI=5
 
@@ -19,30 +19,33 @@ IUSE=""
 RESTRICT="fetch"
 
 RDEPEND="
-	virtual/glu
-	virtual/opengl
-	x86? (
-		media-libs/fontconfig
-		media-libs/freealut
-		media-libs/freetype
-		media-libs/libogg
-		media-libs/libsdl[X,sound,video,opengl]
-		media-libs/libvorbis
-		media-libs/sdl-image[gif,jpeg,png]
-		media-libs/sdl-ttf
-		media-gfx/nvidia-cg-toolkit
-		x11-libs/fltk:1
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXft
-		x11-libs/libXrender
+	x11-libs/fltk:1
+	|| (
+		(
+			media-gfx/nvidia-cg-toolkit[abi_x86_32(-)]
+			>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
+			>=media-libs/freealut-1.1.0-r3[abi_x86_32(-)]
+			>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
+			>=media-libs/libogg-1.3.1[abi_x86_32(-)]
+			>=media-libs/libsdl-1.2.15-r5[X,sound,video,opengl,abi_x86_32(-)]
+			>=media-libs/libvorbis-1.3.3-r1[abi_x86_32(-)]
+			>=media-libs/sdl-image-1.2.12-r1[gif,jpeg,png,abi_x86_32(-)]
+			>=media-libs/sdl-ttf-2.0.11-r1[abi_x86_32(-)]
+			virtual/glu[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+			x11-libs/libXft[abi_x86_32(-)]
+			x11-libs/libXrender[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
 	)
-	amd64? (
-		app-emulation/emul-linux-x86-opengl
-		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-soundlibs
-		app-emulation/emul-linux-x86-xlibs
-	)"
+"
 DEPEND="app-arch/xz-utils"
 
 gamedir=${GAMES_PREFIX_OPT}/${MY_PN}

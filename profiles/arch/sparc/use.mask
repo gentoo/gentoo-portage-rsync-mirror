@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.119 2014/08/25 12:25:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.120 2014/10/18 18:14:52 vapier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -348,5 +348,8 @@ unwind
 llvm
 
 # Pacho Ramos <pacho@gentoo.org> (19 Jan 2014)
-# Unmask systemd since it is keyworded here.  
+# Unmask systemd since it is keyworded here.
 -systemd
+
+# sys-libs/libseccomp has not been ported to this arch yet #524148
+seccomp

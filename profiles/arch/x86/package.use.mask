@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.141 2014/10/11 05:11:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.142 2014/10/18 18:15:58 vapier Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -19,10 +19,6 @@ sys-cluster/ceph zfs
 # Lars Wendler <polynomial-c@gentoo.org (23 Apr 2014)
 # Works on 32bit x86
 media-sound/lmms -vst
-
-# Mike Gilbert <floppym@gentoo.org> (27 Mar 2014)
-# sys-libs/libseccomp is not keyworded on many archs.
-sys-apps/systemd -seccomp
 
 # Matt Turner <mattst88@gentoo.org> (07 Mar 2014)
 # media-libs/libomxil-bellagio keyworded on amd64/x86

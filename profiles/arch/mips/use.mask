@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.77 2014/10/11 08:22:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.78 2014/10/18 18:14:29 vapier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -381,3 +381,6 @@ opencl
 
 # Unmask once sys-libs/libunwind gets keyworded.
 unwind
+
+# sys-libs/libseccomp has not been ported to this arch yet #524148
+seccomp
