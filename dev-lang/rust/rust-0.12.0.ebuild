@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-0.11.0-r1.ebuild,v 1.1 2014/08/29 14:12:27 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-0.12.0.ebuild,v 1.1 2014/10/18 12:48:43 jauhien Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit elisp-common eutils python-any-r1
+inherit eutils python-any-r1
 
 DESCRIPTION="Systems programming language from Mozilla"
 HOMEPAGE="http://www.rust-lang.org/"
@@ -17,27 +17,32 @@ ARCH_SRC_URI="amd64? ( http://static.rust-lang.org/dist/${P}-x86_64-unknown-linu
 SRC_URI="http://static.rust-lang.org/dist/${P}.tar.gz ${ARCH_SRC_URI}"
 
 LICENSE="|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA"
-SLOT="0.11"
+SLOT="0.12"
 KEYWORDS="~amd64 ~x86"
 
 IUSE="clang debug emacs libcxx vim-syntax zsh-completion"
 REQUIRED_USE="libcxx? ( clang )"
 
-RDEPEND="vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
-	zsh-completion? ( app-shells/zsh )"
-DEPEND="${RDEPEND}
+CDEPEND="libcxx? ( sys-libs/libcxx )
+	>=app-admin/eselect-rust-0.2_pre20141011
+	!dev-lang/rust:0
+"
+DEPEND="${CDEPEND}
 	${PYTHON_DEPS}
-	app-admin/eselect-rust
 	>=dev-lang/perl-5.0
 	clang? ( sys-devel/clang )
-	emacs? ( virtual/emacs )
-	libcxx? ( sys-libs/libcxx )
-	!dev-lang/rust:0"
-
-SITEFILE="50${PN}-mode-gentoo.el"
+"
+RDEPEND="${CDEPEND}
+	emacs? ( >=app-emacs/rust-mode-${PV} )
+	vim-syntax? ( >=app-vim/rust-mode-${PV} )
+	zsh-completion? ( >=app-shells/rust-zshcomp-${PV} )
+"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-stage0.patch" "${FILESDIR}/${P}-libdir.patch"
+	epatch "${FILESDIR}/${P}-stage0.patch" "${FILESDIR}/${P}-no-ldconfig.patch" "${FILESDIR}/${P}-libdir.patch"
+
+	local postfix="gentoo-${SLOT}"
+	sed -i -e "s/CFG_FILENAME_EXTRA=.*/CFG_FILENAME_EXTRA=${postfix}/" mk/main.mk || die
 }
 
 src_configure() {
@@ -61,44 +66,16 @@ src_configure() {
 		--local-rust-root="${LOCAL_RUST_PATH}" \
 		--disable-manage-submodules \
 		--disable-verify-install \
+		--disable-docs \
 		|| die
 }
 
 src_compile() {
 	emake VERBOSE=1
-
-	if use emacs; then
-		cd src/etc/emacs || die
-		elisp-compile *.el
-		elisp-make-autoload-file "${PN}-mode-autoloads.el" .
-	fi
 }
 
 src_install() {
 	default
-
-	if use emacs; then
-		local sf="${T}/${SITEFILE}"
-		local my_elisp_pn=${PN}-mode
-
-		insinto "/usr/share/${P}/emacs/site-lisp/${my_elisp_pn}"
-		doins -r src/etc/emacs/*.el src/etc/emacs/*.elc
-
-		cp "${FILESDIR}/${SITEFILE}" "${sf}" || die
-		sed -i -e "s:@SITELISP@:${EPREFIX}${SITELISP}/${my_elisp_pn}:g" "${sf}" || die
-		insinto "/usr/share/${P}/emacs/site-lisp/site-gentoo.d/"
-		doins "${sf}"
-	fi
-
-	if use vim-syntax; then
-		insinto /usr/share/${P}/vim/vimfiles
-		doins -r src/etc/vim/*
-	fi
-
-	if use zsh-completion; then
-		insinto "/usr/share/${P}/zsh/site-functions"
-		doins src/etc/zsh/_rust
-	fi
 
 	mv "${D}/usr/bin/rustc" "${D}/usr/bin/rustc-${PV}" || die
 	mv "${D}/usr/bin/rustdoc" "${D}/usr/bin/rustdoc-${PV}" || die
@@ -108,6 +85,9 @@ src_install() {
 	MANPATH="/usr/share/${P}/man"
 	EOF
 	doenvd "${T}"/50${P}
+
+	dodir /etc/env.d/rust
+	touch "${D}/etc/env.d/rust/provider-${P}" || die
 }
 
 pkg_postinst() {

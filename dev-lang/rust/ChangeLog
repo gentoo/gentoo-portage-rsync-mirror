@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/rust
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.4 2014/08/29 14:12:27 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.5 2014/10/18 12:48:43 jauhien Exp $
+
+*rust-0.12.0 (18 Oct 2014)
+*rust-999-r1 (18 Oct 2014)
+*rust-9999-r3 (18 Oct 2014)
+*rust-0.11.0-r2 (18 Oct 2014)
+
+  18 Oct 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  +files/rust-0.12.0-libdir.patch, +files/rust-0.12.0-stage0.patch,
+  +rust-0.11.0-r2.ebuild, +rust-0.12.0.ebuild, +rust-999-r1.ebuild,
+  +rust-9999-r3.ebuild, -files/rust-9999-libdir.patch, -rust-0.11.0-r1.ebuild,
+  -rust-999.ebuild, -rust-9999-r2.ebuild:
+  version bump, switch to new eselect version
 
 *rust-0.11.0-r1 (29 Aug 2014)
 *rust-999 (29 Aug 2014)
