@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=app-shells/bash || ( >=sys-apps/coreutils-8.15 app-misc/realpath sys-freebsd/freebsd-bin ) dev-lang/perl || ( ( sys-apps/portage app-portage/portage-utils ) sys-apps/pkgcore sys-apps/paludis )
 SLOT=0
 SRC_URI=mirror://gentoo/perl-cleaner-2.17.tar.bz2 http://dev.gentoo.org/~dilfridge/distfiles/perl-cleaner-2.17.tar.bz2
-_md5_=4c7c495bfd285fc987286ceddb3b3ba8
+_md5_=4daacefbf58a35f91ec5f4fdfcff62c5

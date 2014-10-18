@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.109 2014/09/27 20:18:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.111 2014/10/18 19:18:02 vapier Exp $
+
+  18 Oct 2014; Mike Frysinger <vapier@gentoo.org> perl-cleaner-2.16.ebuild:
+  Mark m68k/sh stable.
+
+  18 Oct 2014; Mike Frysinger <vapier@gentoo.org> perl-cleaner-2.16.ebuild,
+  perl-cleaner-2.17.ebuild, perl-cleaner-9999.ebuild:
+  Drop empty KEYWORDS.
 
   27 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   perl-cleaner-2.17.ebuild, perl-cleaner-9999.ebuild:
