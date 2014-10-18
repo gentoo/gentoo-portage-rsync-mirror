@@ -1,14 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-9999.ebuild,v 1.7 2014/10/18 15:19:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.9-r1.ebuild,v 1.1 2014/10/18 15:19:24 hwoarang Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite"
 
-EGIT_REPO_URI="https://github.com/buildbot/${PN}.git"
-
-[[ ${PV} = 9999 ]] && inherit git-2
 inherit distutils-r1 readme.gentoo systemd user
 
 MY_PV="${PV/_p/p}"
@@ -16,15 +13,11 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="BuildBot build automation system"
 HOMEPAGE="http://trac.buildbot.net/ http://code.google.com/p/buildbot/ http://pypi.python.org/pypi/buildbot"
-[[ ${PV} = 9999 ]] || SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-if [[ ${PV} == 9999 ]]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
-fi
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
 IUSE="doc examples irc mail manhole test"
 
 RDEPEND=">=dev-python/jinja-2.1[${PYTHON_USEDEP}]
@@ -60,7 +53,6 @@ pkg_setup() {
 }
 
 src_compile() {
-	[[ ${PV} = 9999 ]] && cd master/
 	distutils-r1_src_compile
 
 	if use doc; then
@@ -73,7 +65,6 @@ src_compile() {
 }
 
 src_install() {
-	[[ ${PV} = 9999 ]] && cd master/
 	distutils-r1_src_install
 
 	doman docs/buildbot.1
@@ -109,7 +100,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	[[ ${PV} = 9999 ]] && cd master/
 	readme.gentoo_print_elog
 	elog
 	elog "Upstream recommends the following when upgrading:"

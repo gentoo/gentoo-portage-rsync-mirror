@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.71 2014/10/18 14:18:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.72 2014/10/18 15:20:19 ago Exp $
+
+  18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> fping-2.4_beta2_p161-r2.ebuild:
+  really stable for amd64 now
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> fping-2.4_beta2_p161-r2.ebuild,
   fping-3.10.ebuild:

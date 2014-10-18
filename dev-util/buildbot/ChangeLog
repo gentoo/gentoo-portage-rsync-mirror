@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.157 2014/10/02 20:29:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.158 2014/10/18 15:19:24 hwoarang Exp $
+
+*buildbot-0.8.9-r1 (18 Oct 2014)
+
+  18 Oct 2014; Markos Chandras <hwoarang@gentoo.org> +buildbot-0.8.9-r1.ebuild,
+  buildbot-9999.ebuild:
+  Migrate to distutils-r1. Bug #522654 thanks to Ian Delaney
 
   02 Oct 2014; Markos Chandras <hwoarang@gentoo.org> buildbot-0.8.9.ebuild:
   amd64/x86 stable. Bug #521732

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/snd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.71 2014/10/18 14:31:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.72 2014/10/18 15:04:25 mrueg Exp $
+
+  18 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -snd-12.7.ebuild,
+  -snd-9.11.ebuild:
+  Cleanup old EAPI1 and superseded ebuilds.
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> snd-12.8.ebuild:
   Stable for ppc, wrt bug #518780

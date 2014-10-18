@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.533 2014/10/10 11:00:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.534 2014/10/18 15:09:26 floppym Exp $
+
+*sqlite-3.8.7 (18 Oct 2014)
+
+  18 Oct 2014; Mike Gilbert <floppym@gentoo.org> +sqlite-3.8.7.ebuild:
+  Version bump. Ebuild by Arfrever.
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sqlite-3.8.6.ebuild:
   Stable for x86, wrt bug #523484
