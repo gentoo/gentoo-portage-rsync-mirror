@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/cryptography-0.6.1.ebuild,v 1.1 2014/10/18 18:34:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/cryptography-0.6.1.ebuild,v 1.2 2014/10/18 19:48:04 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -16,18 +16,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="test"
 
-RDEPEND="dev-libs/openssl:0
-	>=dev-python/six-1.4.1[${PYTHON_USEDEP}]
-	$(python_gen_cond_dep '>=dev-python/cffi-0.8:=[${PYTHON_USEDEP}]' python*)"
-DEPEND="${RDEPEND}
+RDEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-libs/openssl:0
+	>=dev-python/six-1.4.1[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep '>=dev-python/cffi-0.8:=[${PYTHON_USEDEP}]' python*)
+"
+DEPEND="${RDEPEND}
 	test? (
 		~dev-python/cryptography-vectors-${PV}[${PYTHON_USEDEP}]
 		dev-python/iso8601[${PYTHON_USEDEP}]
 		dev-python/pretend[${PYTHON_USEDEP}]
 		dev-python/pyasn1[${PYTHON_USEDEP}]
 		>=dev-python/pytest-2.4.2[${PYTHON_USEDEP}]
-	)"
+	)
+"
 
 DOCS=( AUTHORS.rst CONTRIBUTING.rst README.rst )
 
