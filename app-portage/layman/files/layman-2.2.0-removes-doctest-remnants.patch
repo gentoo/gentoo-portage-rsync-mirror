@@ -1,0 +1,369 @@
+From 78b27932cc4916696bb436b7670fa38ac2671751 Mon Sep 17 00:00:00 2001
+From: Devan Franchini <twitch153@gentoo.org>
+Date: Fri, 17 Oct 2014 23:00:42 -0400
+Subject: [PATCH] Removes doctest remnants
+
+---
+ layman/api.py                                | 12 ----
+ layman/argsparser.py                         | 11 ----
+ layman/cli.py                                | 12 ----
+ layman/config.py                             | 10 ---
+ layman/db.py                                 | 18 ------
+ layman/dbbase.py                             | 18 ------
+ layman/overlays/archive.py                   | 12 ----
+ layman/overlays/modules/squashfs/squashfs.py | 11 ----
+ layman/overlays/modules/tar/tar.py           | 11 ----
+ layman/overlays/overlay.py                   | 11 ----
+ layman/remotedb.py                           | 12 ----
+ layman/tests/dtest.py                        | 93 ----------------------------
+ layman/utils.py                              | 11 ----
+ 13 files changed, 242 deletions(-)
+ delete mode 100755 layman/tests/dtest.py
+
+diff --git a/layman/api.py b/layman/api.py
+index 60bcbe0..82436fc 100755
+--- a/layman/api.py
++++ b/layman/api.py
+@@ -714,15 +714,3 @@ def create_fd():
+     write = os.fdopen(fd_w, 'w')
+     read = os.fdopen(fd_r, 'r')
+     return (read, write, fd_r, fd_w)
+-
+-
+-if __name__ == '__main__':
+-    import doctest, sys
+-
+-    # Ignore warnings here. We are just testing
+-    from warnings     import filterwarnings, resetwarnings
+-    filterwarnings('ignore')
+-
+-    doctest.testmod(sys.modules[__name__])
+-
+-    resetwarnings()
+diff --git a/layman/argsparser.py b/layman/argsparser.py
+index 6aeda44..43497a9 100644
+--- a/layman/argsparser.py
++++ b/layman/argsparser.py
+@@ -404,14 +404,3 @@ class ArgsParser(BareConfig):
+         self.output.debug('ARGSPARSER: Returning keys', 9)
+ 
+         return keys
+-
+-
+-#===============================================================================
+-#
+-# Testing
+-#
+-#-------------------------------------------------------------------------------
+-
+-if __name__ == '__main__':
+-    import doctest
+-    doctest.testmod(sys.modules[__name__])
+diff --git a/layman/cli.py b/layman/cli.py
+index 47824b8..81b10cd 100644
+--- a/layman/cli.py
++++ b/layman/cli.py
+@@ -397,15 +397,3 @@ class Main(object):
+         # blank newline  -- no " *"
+         self.output.notice('')
+         return info != {}
+-
+-
+-if __name__ == '__main__':
+-    import doctest
+-
+-    # Ignore warnings here. We are just testing
+-    from warnings     import filterwarnings, resetwarnings
+-    filterwarnings('ignore')
+-
+-    doctest.testmod(sys.modules[__name__])
+-
+-    resetwarnings()
+diff --git a/layman/config.py b/layman/config.py
+index 3e13899..8ce0074 100644
+--- a/layman/config.py
++++ b/layman/config.py
+@@ -348,13 +348,3 @@ class OptionConfig(BareConfig):
+         if new_defaults is not None:
+             self._defaults.update(new_defaults)
+         return
+-
+-#===============================================================================
+-#
+-# Testing
+-#
+-#-------------------------------------------------------------------------------
+-
+-if __name__ == '__main__':
+-    import doctest
+-    doctest.testmod(sys.modules[__name__])
+diff --git a/layman/db.py b/layman/db.py
+index b874fe8..4edf465 100644
+--- a/layman/db.py
++++ b/layman/db.py
+@@ -315,21 +315,3 @@ class DB(DbBase):
+             raise Exception('Syncing overlay "' + overlay_name +
+                             '" returned status ' + str(result) + '!' +
+                             '\ndb.sync()')
+-
+-
+-#===============================================================================
+-#
+-# Testing
+-#
+-#-------------------------------------------------------------------------------
+-
+-if __name__ == '__main__':
+-    import doctest, sys
+-
+-    # Ignore warnings here. We are just testing
+-    from warnings     import filterwarnings, resetwarnings
+-    filterwarnings('ignore')
+-
+-    doctest.testmod(sys.modules[__name__])
+-
+-    resetwarnings()
+diff --git a/layman/dbbase.py b/layman/dbbase.py
+index a106af4..aff48b8 100644
+--- a/layman/dbbase.py
++++ b/layman/dbbase.py
+@@ -252,21 +252,3 @@ class DbBase(object):
+         """returns a list of the overlay names
+         """
+         return sorted(self.overlays)
+-
+-
+-#===============================================================================
+-#
+-# Testing
+-#
+-#-------------------------------------------------------------------------------
+-
+-if __name__ == '__main__':
+-    import doctest
+-
+-    # Ignore warnings here. We are just testing
+-    from warnings     import filterwarnings, resetwarnings
+-    filterwarnings('ignore')
+-
+-    doctest.testmod(sys.modules[__name__])
+-
+-    resetwarnings()
+diff --git a/layman/overlays/archive.py b/layman/overlays/archive.py
+index b1907ee..5dca6a7 100644
+--- a/layman/overlays/archive.py
++++ b/layman/overlays/archive.py
+@@ -188,15 +188,3 @@ class ArchiveOverlay(OverlaySource):
+         '''
+ 
+         return self.is_supported()
+-
+-
+-if __name__ == '__main__':
+-    import doctest
+-
+-    # Ignore warnings here. We are just testing.
+-    from warnings    import filterwarnings, resetwarnings
+-    filterwarnings('ignore')
+-
+-    doctest.testmod(sys.modules[__name__])
+-
+-    resetwarnings()
+diff --git a/layman/overlays/modules/squashfs/squashfs.py b/layman/overlays/modules/squashfs/squashfs.py
+index 912bd62..d0f3464 100644
+--- a/layman/overlays/modules/squashfs/squashfs.py
++++ b/layman/overlays/modules/squashfs/squashfs.py
+@@ -132,14 +132,3 @@ class SquashfsOverlay(ArchiveOverlay):
+         @rtype bool
+         '''
+         return True
+-
+-if __name__ == '__main__':
+-    import doctest
+-
+-    # Ignore warnings here. We are just testing
+-    from warnings     import filterwarnings, resetwarnings
+-    filterwarnings('ignore')
+-
+-    doctest.testmod(sys.modules[__name__])
+-
+-    resetwarnings()
+diff --git a/layman/overlays/modules/tar/tar.py b/layman/overlays/modules/tar/tar.py
+index 9920dd8..7be11de 100644
+--- a/layman/overlays/modules/tar/tar.py
++++ b/layman/overlays/modules/tar/tar.py
+@@ -94,14 +94,3 @@ class TarOverlay(ArchiveOverlay):
+         return require_supported(
+             [(self.command(),  'tar', 'app-arch/tar'), ],
+             self.output.warn)
+-
+-if __name__ == '__main__':
+-    import doctest
+-
+-    # Ignore warnings here. We are just testing
+-    from warnings     import filterwarnings, resetwarnings
+-    filterwarnings('ignore')
+-
+-    doctest.testmod(sys.modules[__name__])
+-
+-    resetwarnings()
+diff --git a/layman/overlays/overlay.py b/layman/overlays/overlay.py
+index bc57e2e..55ef8a8 100755
+--- a/layman/overlays/overlay.py
++++ b/layman/overlays/overlay.py
+@@ -546,14 +546,3 @@ class Overlay(object):
+     def source_types(self):
+         for i in self.sources:
+             yield i.type
+-
+-
+-#==============================================================================
+-#
+-# Testing
+-#
+-#------------------------------------------------------------------------------
+-
+-if __name__ == '__main__':
+-    import doctest
+-    doctest.testmod(sys.modules[__name__])
+diff --git a/layman/remotedb.py b/layman/remotedb.py
+index e3b6075..f0f7ea9 100644
+--- a/layman/remotedb.py
++++ b/layman/remotedb.py
+@@ -379,15 +379,3 @@ class RemoteDB(DbBase):
+ 
+         self.signed_urls = [i.strip()
+             for i in self.config['gpg_signed_lists'].split('\n') if len(i)]
+-
+-
+-if __name__ == '__main__':
+-    import doctest
+-
+-    # Ignore warnings here. We are just testing
+-    from warnings     import filterwarnings, resetwarnings
+-    filterwarnings('ignore')
+-
+-    doctest.testmod(sys.modules[__name__])
+-
+-    resetwarnings()
+diff --git a/layman/tests/dtest.py b/layman/tests/dtest.py
+deleted file mode 100755
+index fe973d9..0000000
+--- a/layman/tests/dtest.py
++++ /dev/null
+@@ -1,93 +0,0 @@
+-#!/usr/bin/python
+-# -*- coding: utf-8 -*-
+-#################################################################################
+-# LAYMAN DOCTEST AGGREGATOR
+-#################################################################################
+-# File:       dtest.py
+-#
+-#             Combines the doctests that are available for the different modules
+-#
+-# Copyright:
+-#             (c) 2005 - 2008 Gunnar Wrobel
+-#             Distributed under the terms of the GNU General Public License v2
+-#
+-# Author(s):
+-#             Gunnar Wrobel <wrobel@gentoo.org>
+-#
+-'''Aggregates doctests from all modules that provide such tests.'''
+-
+-__version__ = '$Id: layman-2.2.0-removes-doctest-remnants.patch,v 1.1 2014/10/18 03:37:18 twitch153 Exp $'
+-
+-#===============================================================================
+-#
+-# Dependencies
+-#
+-#-------------------------------------------------------------------------------
+-
+-import unittest, doctest
+-
+-# On module creation:
+-
+-# 1.) Check header section (copyright notice)
+-# 2.) Add module doc string
+-# 3.) Add version string
+-# 4.) Add testing handler at bottom of module
+-# 5.) Add module into tests/dtest.py. Check that tests run through
+-# 6.) Run pylint over the code. Fix any reasonable complaints.
+-# 7.) Whitespace clean the buffer.
+-# 8.) Add svn:keywords "Id" to file.
+-
+-# On module change:
+-
+-# 1.) Check header section (copyright notice)
+-# 5.) Check that tests run through
+-# 6.) Run pylint over the code. Fix any reasonable complaints.
+-# 7.) Whitespace clean the buffer.
+-
+-# clean modules         : CT
+-# not yet clean         : UT
+-# clean but no testing  : CN
+-# unclean but no testing: UN
+-
+-import layman.api                #CT
+-import layman.argsparser         #CT
+-import layman.cli                #CT
+-import layman.config             #CT
+-import layman.db                 #CT
+-import layman.dbbase             #CT
+-import layman.utils              #CT
+-import layman.overlays.overlay   #CT
+-import layman.overlays.tar       #CT
+-
+-#===============================================================================
+-#
+-# Test Suite
+-#
+-#-------------------------------------------------------------------------------
+-
+-def test_suite():
+-    return unittest.TestSuite((
+-        doctest.DocTestSuite(layman.api),
+-        doctest.DocTestSuite(layman.config),
+-        doctest.DocTestSuite(layman.argsparser),
+-        doctest.DocTestSuite(layman.db),
+-        doctest.DocTestSuite(layman.dbbase),
+-        doctest.DocTestSuite(layman.utils),
+-        doctest.DocTestSuite(layman.overlays.overlay),
+-        doctest.DocTestSuite(layman.overlays.tar),
+-        ))
+-
+-#===============================================================================
+-#
+-# Run Testing
+-#
+-#-------------------------------------------------------------------------------
+-
+-if __name__ == '__main__':
+-    # Ignore warnings here. We are just testing
+-    from warnings     import filterwarnings, resetwarnings
+-    filterwarnings('ignore')
+-
+-    unittest.main(defaultTest='test_suite')
+-
+-    resetwarnings()
+diff --git a/layman/utils.py b/layman/utils.py
+index b769302..b522759 100644
+--- a/layman/utils.py
++++ b/layman/utils.py
+@@ -347,14 +347,3 @@ def create_overlay_dict(**kwargs):
+     for key in kwargs:
+         result[key] = kwargs[key]
+     return result
+-
+-
+-#===============================================================================
+-#
+-# Testing
+-#
+-#-------------------------------------------------------------------------------
+-
+-if __name__ == '__main__':
+-    import doctest
+-    doctest.testmod(sys.modules[__name__])
+-- 
+2.0.4
+

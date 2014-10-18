@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/voom
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/voom/ChangeLog,v 1.4 2013/11/28 05:19:43 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/voom/ChangeLog,v 1.5 2014/10/18 03:45:21 radhermit Exp $
+
+*voom-5.1 (18 Oct 2014)
+
+  18 Oct 2014; Tim Harder <radhermit@gentoo.org> +voom-5.1.ebuild:
+  Version bump.
 
 *voom-5.0 (28 Nov 2013)
 
