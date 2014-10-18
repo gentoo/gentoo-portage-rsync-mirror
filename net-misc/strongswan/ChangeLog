@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.145 2014/09/13 14:17:42 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.146 2014/10/18 05:59:01 vapier Exp $
+
+  18 Oct 2014; Mike Frysinger <vapier@gentoo.org> strongswan-5.2.0-r1.ebuild:
+  Add USE=gmp to control the gmp plugin #504942 by Enrico Tagliavini.
 
 *strongswan-5.2.0-r1 (13 Sep 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.2.0-r1.ebuild,v 1.1 2014/09/13 14:17:42 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.2.0-r1.ebuild,v 1.2 2014/10/18 05:59:01 vapier Exp $
 
 EAPI=5
 inherit eutils linux-info systemd user
@@ -12,7 +12,7 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 LICENSE="GPL-2 RSA DES"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
-IUSE="+caps curl +constraints debug dhcp eap farp gcrypt ldap mysql networkmanager +non-root +openssl sqlite pam pkcs11"
+IUSE="+caps curl +constraints debug dhcp eap farp gcrypt +gmp ldap mysql networkmanager +non-root +openssl sqlite pam pkcs11"
 
 STRONGSWAN_PLUGINS_STD="led lookip systime-fix unity vici"
 STRONGSWAN_PLUGINS_OPT="blowfish ccm ctr gcm ha ipseckey ntru padlock rdrand unbound whitelist"
@@ -25,7 +25,7 @@ for mod in $STRONGSWAN_PLUGINS_OPT; do
 done
 
 COMMON_DEPEND="!net-misc/openswan
-	>=dev-libs/gmp-4.1.5
+	gmp? ( >=dev-libs/gmp-4.1.5 )
 	gcrypt? ( dev-libs/libgcrypt:0 )
 	caps? ( sys-libs/libcap )
 	curl? ( net-misc/curl )
@@ -161,6 +161,7 @@ src_configure() {
 		$(use_enable eap eap-tls) \
 		$(use_enable eap xauth-eap) \
 		$(use_enable farp) \
+		$(use_enable gmp) \
 		$(use_enable gcrypt) \
 		$(use_enable mysql) \
 		$(use_enable networkmanager nm) \
