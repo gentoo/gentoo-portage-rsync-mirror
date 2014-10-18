@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.60 2014/05/08 19:40:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.62 2014/10/18 17:41:47 vapier Exp $
+
+*suite3270-3.3.15_p4 (18 Oct 2014)
+
+  18 Oct 2014; Mike Frysinger <vapier@gentoo.org> +suite3270-3.3.15_p4.ebuild:
+  Version bump.
+
+  18 Oct 2014; Mike Frysinger <vapier@gentoo.org> suite3270-3.3.14_p11.ebuild:
+  Stabilize for all.
 
 *suite3270-3.3.14_p11 (08 May 2014)
 

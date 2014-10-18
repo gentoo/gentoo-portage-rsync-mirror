@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16101 2014/10/16 12:57:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16102 2014/10/18 17:42:10 jauhien Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jauhien Piatlicki <jauhien@gentoo.org> (18 Oct 2014)
+# Mask until Qt-5 is unmasked in the tree
+>=x11-misc/sddm-0.10.0
 
 # Mike Pagano <mpagano@gentoo.org> (16 Oct 2014)
 # A regression in kernels 3.17.0 lead to file system corruption
@@ -281,7 +285,7 @@ dev-php/suhosin
 # Masked because of bug 524390: privilege escalation
 # until upstream fixes this security issue.
 # Use at your own risk
-x11-misc/sddm
+<x11-misc/sddm-0.10.0
 
 # Brian Evans <grknight@gentoo.org> (2 Oct 2014)
 # Masked for removal in 30 days. (Bug #524310)

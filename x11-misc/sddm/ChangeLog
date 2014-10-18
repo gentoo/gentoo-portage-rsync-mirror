@@ -1,6 +1,20 @@
 # ChangeLog for x11-misc/sddm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.12 2014/10/06 22:04:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.14 2014/10/18 17:53:57 jauhien Exp $
+
+  18 Oct 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  -files/sddm-0.9.0-consolekit.patch, -files/sddm-0.9.0-upower.patch,
+  sddm-0.10.0.ebuild:
+  fix ebuild (some fixes were lost during version bump as I used old ebuild)
+
+*sddm-0.10.0 (18 Oct 2014)
+
+  18 Oct 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  +files/sddm-0.10.0-consolekit.patch, +files/sddm-0.10.0-upower.patch,
+  +sddm-0.10.0.ebuild, -files/sddm-0.1.0-clang.patch,
+  -files/sddm-0.1.0-cmake.patch, -files/sddm-0.1.0-consolekit.patch,
+  -sddm-0.1.0-r2.ebuild, -sddm-0.9.0-r1.ebuild:
+  version bump that fixes security issues, bug 524390
 
   06 Oct 2014; Manuel Rüger <mrueg@gentoo.org> sddm-0.9.0-r1.ebuild:
   Add ~arm keyword. Tested on armv7. See bug #524408.

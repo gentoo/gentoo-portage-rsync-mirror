@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.1.0-r2.ebuild,v 1.1 2014/10/01 17:20:46 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.10.0.ebuild,v 1.2 2014/10/18 17:53:57 jauhien Exp $
 
 EAPI=5
-inherit cmake-utils toolchain-funcs
+inherit cmake-utils toolchain-funcs user
 
 DESCRIPTION="Simple Desktop Display Manager"
 HOMEPAGE="https://github.com/sddm/sddm"
-SRC_URI="http://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="~amd64 ~arm ~x86"
+SRC_URI="http://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-2+ MIT CC-BY-3.0 public-domain"
 SLOT="0"
@@ -18,9 +18,11 @@ REQUIRED_USE="?? ( upower systemd )"
 RDEPEND="sys-libs/pam
 	>=x11-base/xorg-server-1.15.1
 	x11-libs/libxcb[xkb(-)]
-	dev-qt/qtdeclarative:4
-	dev-qt/qtdbus:4
-	consolekit? ( sys-auth/consolekit )
+	dev-qt/qtcore:5
+	dev-qt/qtdbus:5
+	dev-qt/qtdeclarative:5
+	dev-qt/linguist-tools:5
+	dev-qt/qttest:5
 	systemd? ( sys-apps/systemd:= )
 	upower? ( || ( sys-power/upower sys-power/upower-pm-utils ) )"
 DEPEND="${RDEPEND}
@@ -35,16 +37,18 @@ pkg_pretend() {
 }
 
 src_prepare() {
-	default
-
-	epatch "${FILESDIR}/${P}-cmake.patch" "${FILESDIR}/${P}-clang.patch"
 	use consolekit && epatch "${FILESDIR}/${P}-consolekit.patch"
+	use upower && epatch "${FILESDIR}/${P}-upower.patch"
+
+	# respect user's cflags
+	sed -e 's|-Wall -march=native||' \
+		-e 's|-O2||' \
+		-i CMakeLists.txt || die 'sed failed'
 }
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_use systemd)
-		$(cmake-utils_use_use upower)
+		$(cmake-utils_use_no systemd SYSTEMD)
 	)
 	cmake-utils_src_configure
 }
@@ -56,4 +60,12 @@ pkg_postinst() {
 		ewarn "you should remove the \"nox11\" parameter from pm_ck_connector.so"
 		ewarn "line in /etc/pam.d/system-login"
 	fi
+	ewarn "Add the sddm user manually to the video group"
+	ewarn "if you experience flickering or other rendering issues of sddm-greeter"
+	ewarn "see https://github.com/gentoo/qt/pull/52"
+}
+
+pkg_setup() {
+	enewgroup ${PN}
+	enewuser ${PN} -1 -1 /var/lib/sddm ${PN}
 }
