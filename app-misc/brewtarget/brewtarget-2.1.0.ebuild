@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/brewtarget-2.1.0.ebuild,v 1.1 2014/10/13 00:30:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/brewtarget-2.1.0.ebuild,v 1.2 2014/10/17 23:53:12 pesa Exp $
 
 EAPI=5
 
@@ -39,6 +39,9 @@ src_prepare() {
 	# Check for new locales, respect LINGUAS
 	l10n_find_plocales_changes "${S}/translations" bt_ .ts
 	l10n_for_each_disabled_locale_do remove_locale
+
+	# Tests are bogus, don't build them
+	sed -i -e '/=Tests=/,/=Installs=/d' src/CMakeLists.txt || die
 
 	cmake-utils_src_prepare
 }

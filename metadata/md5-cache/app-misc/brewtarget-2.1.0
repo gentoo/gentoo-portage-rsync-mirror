@@ -10,4 +10,4 @@ RDEPEND=>=dev-qt/qtcore-4.8:4 >=dev-qt/qtgui-4.8:4 >=dev-qt/qtsql-4.8:4[sqlite] 
 SLOT=0
 SRC_URI=https://launchpad.net/brewtarget/trunk/2.1.0/+download/brewtarget_2.1.0.orig.tar.xz
 _eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=6c34ba534ab40c8e4916a38249703ead
+_md5_=b95691373c2e82cdc754ba133c9b30a2
