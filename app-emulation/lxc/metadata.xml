@@ -13,12 +13,5 @@
   </maintainer>
   <use>
     <flag name="seccomp">Use seccomp syscall filters using <pkg>sys-libs/libseccomp</pkg></flag>
-    <flag name="vanilla">
-      Avoid adding Gentoo Linux-specific modifications, which include
-      the custom init script. This is present as a flag to avoid
-      forcing dependencies over users that might not want have them
-      around as they use LXC in contexts where the init script is not
-      useful.
-    </flag>
   </use>
 </pkgmetadata>

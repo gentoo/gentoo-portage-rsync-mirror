@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.5.3.ebuild,v 1.2 2014/08/10 21:22:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.5.3.ebuild,v 1.3 2014/10/18 17:29:33 vapier Exp $
 
 EAPI=4
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999 ]] ; then
 	EGIT_REPO_URI="https://code.google.com/p/snakeoil/"
 	inherit git-r3
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 	SRC_URI="http://snakeoil.googlecode.com/files/${P}.tar.bz2"
 fi
 
