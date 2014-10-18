@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.427 2014/09/03 09:51:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.428 2014/10/18 08:23:48 pacho Exp $
+
+*libxml2-2.9.2 (18 Oct 2014)
+
+  18 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/libxml2-2.9.2-icu-pkgconfig.patch,
+  +files/libxml2-2.9.2-revert-missing-initialization.patch,
+  +libxml2-2.9.2.ebuild:
+  Version bump
 
 *libxml2-2.9.1-r5 (03 Sep 2014)
 
