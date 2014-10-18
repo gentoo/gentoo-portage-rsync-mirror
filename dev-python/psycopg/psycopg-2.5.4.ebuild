@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.5.4.ebuild,v 1.1 2014/10/17 16:47:06 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.5.4.ebuild,v 1.2 2014/10/18 13:34:53 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -21,7 +21,8 @@ IUSE="debug doc examples"
 
 RDEPEND=">=dev-db/postgresql-base-8.1"
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
+	doc? (  dev-python/sphinx[${PYTHON_USEDEP}]
+		>=dev-python/python-docs-2.7.6-r1:2.7 )"
 
 RESTRICT="test"
 # Remove py3.2 entry from intersphinx setting
