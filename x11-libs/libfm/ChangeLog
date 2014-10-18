@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.101 2014/09/06 08:41:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.102 2014/10/18 20:31:52 hwoarang Exp $
+
+*libfm-1.2.3 (18 Oct 2014)
+
+  18 Oct 2014; Markos Chandras <hwoarang@gentoo.org> +libfm-1.2.3.ebuild,
+  -libfm-1.2.0.ebuild, libfm-9999.ebuild:
+  Version bump. Bug #525516. Add gtk useflag per #517690. Rework gvfs deps
 
 *libfm-1.2.2.1 (06 Sep 2014)
 

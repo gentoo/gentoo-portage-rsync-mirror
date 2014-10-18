@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-1.2.0.ebuild,v 1.1 2014/03/06 20:35:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-1.2.3.ebuild,v 1.1 2014/10/18 20:32:05 hwoarang Exp $
 
 EAPI="5"
 inherit eutils fdo-mime readme.gentoo
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
 	>=lxde-base/menu-cache-0.3.2
 	x11-misc/shared-mime-info
-	>=x11-libs/libfm-${PV}:=
+	>=x11-libs/libfm-${PV}:=[gtk(+)]
 	virtual/eject"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.41 2014/09/06 08:41:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.42 2014/10/18 20:31:52 hwoarang Exp $
 
 EAPI=5
 
@@ -13,21 +13,18 @@ DESCRIPTION="A library for file management"
 HOMEPAGE="http://pcmanfm.sourceforge.net/"
 
 LICENSE="GPL-2"
-SLOT="0/4.2.0" #copy ABI_VERSION because it seems upstream change it randomly
-IUSE="+automount debug doc examples exif udisks vala"
+SLOT="0/4.3.0" #copy ABI_VERSION because it seems upstream change it randomly
+IUSE="+automount debug doc examples exif gtk udisks vala"
 KEYWORDS=""
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
-	>=x11-libs/gtk+-2.16:2
+	gtk? ( >=x11-libs/gtk+-2.16:2 )
 	>=lxde-base/menu-cache-0.3.2:="
 RDEPEND="${COMMON_DEPEND}
 	!lxde-base/lxshortcut
 	x11-misc/shared-mime-info
 	automount? (
-		udisks? ( || (
-			gnome-base/gvfs[udev,udisks]
-			gnome-base/gvfs[udev,gdu]
-		) )
+		udisks? ( gnome-base/gvfs[udev,udisks] )
 		!udisks? ( gnome-base/gvfs[udev] )
 	)
 	exif? ( media-libs/libexif )"
@@ -42,7 +39,7 @@ DEPEND="${COMMON_DEPEND}
 
 DOCS=( AUTHORS TODO )
 
-REQUIRED_USE="udisks? ( automount )"
+REQUIRED_USE="udisks? ( automount ) doc? ( gtk )"
 
 src_prepare() {
 	if ! use doc; then
@@ -90,6 +87,7 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable udisks) \
 		$(use_enable vala actions) \
+		$(use_with gtk) \
 		$(use_enable doc gtk-doc) \
 		--with-html-dir=/usr/share/doc/${PF}/html
 }
