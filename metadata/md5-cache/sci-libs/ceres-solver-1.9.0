@@ -10,5 +10,5 @@ RDEPEND=dev-cpp/glog[gflags?] cxsparse? ( sci-libs/cxsparse:0= ) lapack? ( virtu
 REQUIRED_USE=test? ( gflags ) sparse? ( lapack ) doc? ( )
 SLOT=0/1
 SRC_URI=http://ceres-solver.org//ceres-solver-1.9.0.tar.gz
-_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
 _md5_=83bbefe917d24c4871ce11446abf0ad3

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.368 2014/07/10 13:33:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.369 2014/10/18 22:57:51 vapier Exp $
+
+*busybox-1.22.1-r1 (18 Oct 2014)
+
+  18 Oct 2014; Mike Frysinger <vapier@gentoo.org> +busybox-1.22.1-r1.ebuild,
+  +files/busybox-1.22.1-lzop.patch, +files/busybox-1.22.1-nc.patch:
+  Add lzop fix from upstream #515254 by Kristian Fiskerstrand.  Add USE=debug to
+  control build debug options and switch to defconfig #525586 by emil karlson.
 
   10 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> busybox-1.22.1.ebuild:
   Add ~arm64 keyword

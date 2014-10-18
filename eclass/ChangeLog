@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1387 2014/10/17 21:07:08 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1388 2014/10/18 22:36:17 floppym Exp $
+
+  18 Oct 2014; Mike Gilbert <floppym@gentoo.org> python-utils-r1.eclass:
+  Improve error messaging when python_export is called without a defined python
+  implementation.
 
   17 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   mozconfig-v5.33.eclass:

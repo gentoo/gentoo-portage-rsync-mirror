@@ -10,5 +10,5 @@ RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite]
 REQUIRED_USE=pvr? ( mysql ) rsxs? ( X ) X? ( sdl ) xrandr? ( X )
 SLOT=0
 SRC_URI=http://mirrors.xbmc.org/releases/source/xbmc-12.2.tar.gz mirror://gentoo/xbmc_backports-12-1.tar.bz2
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
 _md5_=241ff7cef84a9ae3d5ce814ab7a229f0

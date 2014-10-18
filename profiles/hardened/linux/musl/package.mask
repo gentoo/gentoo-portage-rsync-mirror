@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/package.mask,v 1.3 2014/08/13 11:13:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/package.mask,v 1.4 2014/10/18 22:53:00 blueness Exp $
 
 sys-libs/uclibc
 sys-libs/glibc
@@ -11,3 +11,6 @@ sys-fs/udev
 #
 dev-libs/elfutils
 sys-libs/pam
+
+# bug #525816
+>sys-apps/file-5.17

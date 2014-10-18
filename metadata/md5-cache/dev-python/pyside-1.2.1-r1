@@ -10,5 +10,5 @@ RDEPEND=>=dev-python/shiboken-1.2.1[python_targets_python2_7(-)?,python_targets_
 REQUIRED_USE=declarative? ( X ) designer? ( X ) help? ( X ) multimedia? ( X ) opengl? ( X ) phonon? ( X ) scripttools? ( X script ) sql? ( X ) svg? ( X ) test? ( X ) webkit? ( X )
 SLOT=0
 SRC_URI=http://download.qt-project.org/official_releases/pyside/pyside-qt4.8+1.2.1.tar.bz2
-_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=fe0795b79b8e13d7fabe5b855acc93e7

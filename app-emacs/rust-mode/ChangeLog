@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/rust-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rust-mode/ChangeLog,v 1.2 2014/10/18 12:42:52 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rust-mode/ChangeLog,v 1.3 2014/10/18 22:54:52 jauhien Exp $
+
+  18 Oct 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  files/50rust-mode-gentoo.el, metadata.xml:
+  add emacs herd and fix site-init file, thanks to Ulrich Müller (ulm)
 
 *rust-mode-9999 (18 Oct 2014)
 

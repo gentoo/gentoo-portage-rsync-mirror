@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=3.9.11-r1
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.9.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.9.N/deblob-3.9 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.9.N/deblob-check -> deblob-check-3.9 ) mirror://gentoo/genpatches-3.9-17.base.tar.xz mirror://gentoo/genpatches-3.9-17.extras.tar.xz !bfsonly? ( http://ck.kolivas.org/patches/3.0/3.9/3.9-ck1/patch-3.9-ck1.bz2 ) bfsonly? ( http://ck.kolivas.org/patches/3.0/3.9/3.9-ck1/patches/3.9-sched-bfs-430.patch )
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	kernel-2	6fb31411472936acc8287129d3df7f43	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	kernel-2	6fb31411472936acc8287129d3df7f43	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=b4d5b56fbf15b1fe544a368421b48036

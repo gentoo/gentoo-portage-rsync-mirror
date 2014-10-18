@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=dev-vcs/git dev-vcs/mercurial python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 SLOT=0
 SRC_URI=https://github.com/frej/fast-export/archive/779e2f6da887729fc513f5efceaa3a3083858c9b.tar.gz -> hg-fast-export-20140328.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=090bb4cf5039dc5e75e7d99c9d78695c

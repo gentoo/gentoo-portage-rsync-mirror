@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=emacs? ( virtual/emacs ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) ) zsh-completion? ( app-shells/zsh ) !<net-irc/ninja-1.5.9_pre14-r1
 SLOT=0
 SRC_URI=https://github.com/martine/ninja/archive/v1.4.0.tar.gz -> ninja-1.4.0.tar.gz
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
 _md5_=6f38e36a09cb9a45154d3b6859cff8cb

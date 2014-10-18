@@ -9,5 +9,5 @@ LICENSE=AZARA
 RDEPEND=x11-libs/libX11 x11-libs/motif:0 xpm? ( x11-libs/libXpm )
 SLOT=0
 SRC_URI=http://www.bio.cam.ac.uk/ccpn/download/azara/azara-2.8-src.tgz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	47dda904cf91c61f45b564d9f834fde1	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
 _md5_=9ff7368fda12970de7f3ac4f9a95fb29

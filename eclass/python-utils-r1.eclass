@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.61 2014/09/04 14:52:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.62 2014/10/18 22:36:17 floppym Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -241,7 +241,9 @@ python_export() {
 			;;
 		*)
 			impl=${EPYTHON}
-			[[ ${impl} ]] || die "python_export: no impl nor EPYTHON"
+			if [[ -z ${impl} ]]; then
+				die "python_export called without a python implementation and EPYTHON is unset"
+			fi
 			;;
 	esac
 	debug-print "${FUNCNAME}: implementation: ${impl}"
