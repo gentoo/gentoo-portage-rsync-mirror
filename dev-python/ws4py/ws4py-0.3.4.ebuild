@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ws4py-0.3.4.ebuild,v 1.1 2014/05/24 04:26:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ws4py-0.3.4.ebuild,v 1.2 2014/10/18 16:20:51 floppym Exp $
 
 # We could depend on dev-python/cherrypy when USE=server, but
 # that is an optional component ...
@@ -30,7 +30,7 @@ IUSE="+client +server test +threads"
 # doc build requires sphinxcontrib ext packages absent from portage
 
 RDEPEND=">=dev-python/greenlet-0.4.1[${PYTHON_USEDEP}]
-		dev-python/gevent[$(python_gen_usedep python2_7)]
+		$(python_gen_cond_dep 'dev-python/gevent[${PYTHON_USEDEP}]' python2_7)
 		>=dev-python/cython-0.19.1[${PYTHON_USEDEP}]
 		client? ( >=www-servers/tornado-3.1[${PYTHON_USEDEP}] )
 		server? ( >=dev-python/cherrypy-3.2.4[${PYTHON_USEDEP}] )"
@@ -45,8 +45,8 @@ python_test() {
 	"${PYTHON}" -m unittest discover || die "Tests failed under ${EPYTHON}"
 }
 
-src_install() {
-	distutils-r1_src_install
-	use client || rm -rf "${ED}$(python_get_sitedir)"/ws4py/client
-	use server || rm -rf "${ED}$(python_get_sitedir)"/ws4py/server
+python_install() {
+	distutils-r1_python_install
+	use client || rm -rf "${D}$(python_get_sitedir)"/ws4py/client
+	use server || rm -rf "${D}$(python_get_sitedir)"/ws4py/server
 }
