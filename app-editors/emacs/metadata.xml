@@ -22,6 +22,8 @@
   <flag name='games'>Support shared score files for games</flag>
   <flag name='gconf'>Use <pkg>gnome-base/gconf</pkg> to read the system
     font name</flag>
+  <flag name='gfile'>Use gfile (<pkg>dev-libs/glib</pkg>) for file
+    notification</flag>
   <flag name='gsettings'>Use gsettings (<pkg>dev-libs/glib</pkg>) to read the
     system font name</flag>
   <flag name='gtk3'>Link against version 3 of the GIMP Toolkit instead of

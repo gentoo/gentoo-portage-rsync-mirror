@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/eventlet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/ChangeLog,v 1.7 2013/09/05 19:35:48 prometheanfire Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/ChangeLog,v 1.8 2014/10/18 09:53:18 idella4 Exp $
+
+*eventlet-0.15.2 (18 Oct 2014)
+
+  18 Oct 2014; Ian Delaney <idella4@gentoo.org> +eventlet-0.15.2.ebuild:
+  bump; drop py2.6, fix doc build, fix file collisions by tests folder, bugs
+  filed upstream and entered in commented text
 
 *eventlet-0.13.0 (05 Sep 2013)
 

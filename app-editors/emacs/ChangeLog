@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.640 2014/07/02 07:21:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.641 2014/10/18 09:43:07 ulm Exp $
+
+*emacs-24.4_rc1 (18 Oct 2014)
+
+  18 Oct 2014; Ulrich Müller <ulm@gentoo.org> +emacs-24.4_rc1.ebuild,
+  metadata.xml:
+  Version bump, release candidate for Emacs 24.4.
 
   02 Jul 2014; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r10.ebuild:
   Get rid of the abi_x86_32 USE flag, it is redundant. Remove REQUIRED_USE.
