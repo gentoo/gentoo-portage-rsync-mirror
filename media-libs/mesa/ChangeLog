@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.579 2014/10/16 14:59:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.580 2014/10/18 21:48:04 mattst88 Exp $
+
+*mesa-10.3.1 (18 Oct 2014)
+
+  18 Oct 2014; Matt Turner <mattst88@gentoo.org> +mesa-10.3.1.ebuild:
+  Version bump to 10.3.1.
 
   16 Oct 2014; Mike Frysinger <vapier@gentoo.org> mesa-10.3.0.ebuild:
   Require newer llvm for radeonsi to match configure checks.

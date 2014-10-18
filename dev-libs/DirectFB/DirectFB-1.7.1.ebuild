@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.7.1.ebuild,v 1.3 2014/10/18 21:11:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.7.1.ebuild,v 1.4 2014/10/18 21:59:36 vapier Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -78,6 +78,9 @@ src_prepare() {
 		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${PN}-1.6.3-setregion.patch \
 		"${FILESDIR}"/${PN}-1.6.3-atomic-fix-compiler-error-when-building-for-thumb2.patch
+	sed -i \
+		-e '/#define RASPBERRY_PI/d' \
+		systems/egl/egl_system.c || die #497124
 
 	mv configure.{in,ac} || die
 	eautoreconf
