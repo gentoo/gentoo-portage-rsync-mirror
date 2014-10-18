@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.168 2014/10/17 14:10:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.169 2014/10/18 16:37:29 ulm Exp $
+
+  18 Oct 2014; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.4.9999-r1.ebuild:
+  Block against emacs-24.4, because the emacs-24 branch also installs with the
+  24.4 version number.
 
 *emacs-vcs-24.4.9999-r1 (17 Oct 2014)
 
