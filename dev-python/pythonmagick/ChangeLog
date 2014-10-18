@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.46 2014/04/27 16:14:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.47 2014/10/18 02:39:10 radhermit Exp $
+
+*pythonmagick-0.9.11 (18 Oct 2014)
+
+  18 Oct 2014; Tim Harder <radhermit@gentoo.org> +pythonmagick-0.9.11.ebuild:
+  Version bump.
 
   27 Apr 2014; Mike Gilbert <floppym@gentoo.org> pythonmagick-0.9.10.ebuild:
   Add missing deps.

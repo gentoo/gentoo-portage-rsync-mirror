@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ijson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ijson/ChangeLog,v 1.6 2014/10/18 02:08:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ijson/ChangeLog,v 1.7 2014/10/18 02:57:57 radhermit Exp $
+
+  18 Oct 2014; Tim Harder <radhermit@gentoo.org> ijson-2.0.ebuild:
+  Add setuptools dep.
 
   18 Oct 2014; Tim Harder <radhermit@gentoo.org> -ijson-1.0.ebuild,
   -ijson-1.0-r1.ebuild:
