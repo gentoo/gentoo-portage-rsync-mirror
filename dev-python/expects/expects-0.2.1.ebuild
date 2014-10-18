@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/expects/expects-0.2.1.ebuild,v 1.1 2014/10/17 23:17:15 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/expects/expects-0.2.1.ebuild,v 1.2 2014/10/18 14:45:35 alunduil Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 )
@@ -17,6 +17,7 @@ KEYWORDS="~amd64"
 IUSE="doc test"
 
 DEPEND="
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( ~dev-python/mamba-0.6[${PYTHON_USEDEP}] )
 "

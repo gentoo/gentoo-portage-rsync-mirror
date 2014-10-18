@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.7.2.ebuild,v 1.3 2014/10/12 09:54:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.7.2.ebuild,v 1.5 2014/10/18 14:53:57 ago Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ LICENSE="LGPL-2.1"
 
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-fbsd"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-fbsd"
 
 SLOT="0"
 IUSE="debug +qt4 qt5"

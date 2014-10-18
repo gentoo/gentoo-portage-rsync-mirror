@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/peppercorn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/peppercorn/ChangeLog,v 1.6 2014/10/18 12:08:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/peppercorn/ChangeLog,v 1.7 2014/10/18 14:57:34 idella4 Exp $
+
+  18 Oct 2014; Ian Delaney <idella4@gentoo.org> peppercorn-0.5.ebuild:
+  take out un-needed IUSE test flag, dep nose
 
 *peppercorn-0.5 (18 Oct 2014)
 

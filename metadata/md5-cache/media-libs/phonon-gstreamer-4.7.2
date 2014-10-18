@@ -4,11 +4,11 @@ DESCRIPTION=Phonon GStreamer backend
 EAPI=5
 HOMEPAGE=https://projects.kde.org/projects/kdesupport/phonon/phonon-gstreamer
 IUSE=alsa debug +network +qt4 qt5
-KEYWORDS=amd64 arm hppa ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x64-macos
+KEYWORDS=amd64 arm hppa ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x64-macos
 LICENSE=LGPL-2.1
 RDEPEND=dev-libs/glib:2 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.7.0[qt4?,qt5?] qt4? ( dev-qt/qtcore:4[glib] dev-qt/qtgui:4[glib] dev-qt/qtopengl:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 ) virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 )
 REQUIRED_USE=|| ( qt4 qt5 )
 SLOT=0
 SRC_URI=mirror://kde/stable/phonon/phonon-backend-gstreamer/4.7.2/src/phonon-backend-gstreamer-4.7.2.tar.xz
 _eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=ea1358819bcb74cc997941157918353c
+_md5_=6cfbd265acc8aece192dbe41a3f1eaa9

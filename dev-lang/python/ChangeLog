@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.791 2014/10/12 15:18:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.792 2014/10/18 14:56:10 ago Exp $
+
+  18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> python-3.4.1.ebuild:
+  Stable for ppc, wrt bug #522322
 
 *python-3.4.2 (12 Oct 2014)
 

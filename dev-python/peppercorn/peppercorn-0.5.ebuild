@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/peppercorn/peppercorn-0.5.ebuild,v 1.1 2014/10/18 12:08:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/peppercorn/peppercorn-0.5.ebuild,v 1.2 2014/10/18 14:57:34 idella4 Exp $
 
 EAPI=5
 
@@ -15,11 +15,10 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="repoze"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc test"
+IUSE="doc"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
 # Include COPYRIGHT.txt because the license seems to require it

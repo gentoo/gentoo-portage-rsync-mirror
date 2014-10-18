@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.48 2014/10/18 14:17:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.49 2014/10/18 14:46:58 kensington Exp $
+
+  18 Oct 2014; Michael Palimaka <kensington@gentoo.org> -e-uae-0.8.28-r3.ebuild,
+  -files/e-uae-0.8.28-fix-JIT-cache-on-NX-cpu.patch,
+  -files/e-uae-0.8.28-fix-atoscroll-screen-support.patch,
+  -files/e-uae-0.8.28-fix-joystick-conflicts.patch,
+  -files/e-uae-0.8.28-gtkui_64bit_fix.diff, -files/e-uae-0.8.28-shm-crash.patch,
+  -files/e-uae-0.8.28-themes_rendering_fix.diff:
+  Remove old.
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> e-uae-0.8.29_rc4-r2.ebuild:
   Stable for ppc, wrt bug #523042
