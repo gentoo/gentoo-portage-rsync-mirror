@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hprofile
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hprofile/ChangeLog,v 1.4 2007/04/28 17:07:55 swegener Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hprofile/ChangeLog,v 1.5 2014/10/19 05:28:00 vapier Exp $
+
+*hprofile-3.0.5 (19 Oct 2014)
+
+  19 Oct 2014; Mike Frysinger <vapier@gentoo.org> +hprofile-3.0.5.ebuild:
+  Version bump #523448 by tokiclover.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> hprofile-2.0_beta2.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)
