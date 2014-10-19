@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ICal/DateTime-Format-ICal-0.90.0.ebuild,v 1.1 2011/08/31 12:34:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ICal/DateTime-Format-ICal-0.90.0.ebuild,v 1.2 2014/10/19 08:07:46 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=DROLSKY
 MODULE_VERSION=0.09

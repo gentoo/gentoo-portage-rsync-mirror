@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/go-fuse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/ChangeLog,v 1.6 2014/10/15 23:28:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/ChangeLog,v 1.7 2014/10/19 08:02:14 zmedico Exp $
+
+  19 Oct 2014; Zac Medico <zmedico@gentoo.org> go-fuse-0_p20140812.ebuild:
+  Use tar.gz instead of zip, so there's no need for app-arch/unzip in DEPEND.
 
 *go-fuse-0_p20140812 (15 Oct 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/go-fuse-0_p20140812.ebuild,v 1.1 2014/10/15 23:28:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/go-fuse-0_p20140812.ebuild,v 1.2 2014/10/19 08:02:14 zmedico Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="FUSE bindings for Go"
 GO_PN=github.com/hanwen/${PN}
 HOMEPAGE="https://${GO_PN}"
 EGIT_COMMIT="8c85ded140ac1889372a0e22d8d21e3d10a303bd"
-SRC_URI="https://${GO_PN}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://${GO_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 IUSE=""
