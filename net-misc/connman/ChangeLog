@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.87 2014/09/23 09:52:09 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.88 2014/10/19 13:59:21 dlan Exp $
+
+*connman-1.26 (19 Oct 2014)
+
+  19 Oct 2014; Yixun Lan <dlan@gentoo.org> +connman-1.26.ebuild:
+  version bump, bug 525756
 
 *connman-1.25 (23 Sep 2014)
 
