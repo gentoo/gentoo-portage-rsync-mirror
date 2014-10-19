@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-UTF8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8/ChangeLog,v 1.7 2014/10/12 07:43:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8/ChangeLog,v 1.8 2014/10/19 03:55:22 patrick Exp $
+
+  19 Oct 2014; Patrick Lauer <patrick@gentoo.org> Unicode-UTF8-0.600.0.ebuild:
+  Fix header
 
   12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> Unicode-UTF8-0.600.0.ebuild:
   Restore ~arm and ~ppc

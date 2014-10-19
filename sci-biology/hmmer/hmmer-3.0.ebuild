@@ -1,6 +1,6 @@
-## Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-3.0.ebuild,v 1.6 2012/06/28 16:50:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-3.0.ebuild,v 1.7 2014/10/19 03:59:06 patrick Exp $
 
 EAPI=4
 

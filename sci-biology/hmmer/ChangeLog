@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/hmmer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.36 2012/06/28 16:50:49 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.37 2014/10/19 03:59:06 patrick Exp $
+
+  19 Oct 2014; Patrick Lauer <patrick@gentoo.org> hmmer-3.0.ebuild:
+  Fix header
 
   28 Jun 2012; Justin Lecher <jlec@gentoo.org> hmmer-3.0.ebuild,
   -files/hmmer-3.0-perl-5.16.patch:
