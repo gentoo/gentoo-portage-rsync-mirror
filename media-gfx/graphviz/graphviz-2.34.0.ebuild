@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.34.0.ebuild,v 1.2 2014/02/06 12:19:14 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.34.0.ebuild,v 1.3 2014/10/19 21:21:48 dilfridge Exp $
 
 EAPI=5
 
@@ -49,6 +49,7 @@ RDEPEND="
 	gts?	( sci-libs/gts )
 	lasi?	( media-libs/lasi )
 	pdf?    ( app-text/poppler )
+	perl?   ( dev-lang/perl:= )
 	python?	( ${PYTHON_DEPS} )
 	qt4?	(
 		dev-qt/qtcore:4

@@ -1,8 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.147 2014/10/13 20:08:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.148 2014/10/19 21:04:42 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (19 Oct 2014)
+# requires dev-python/restkit which requires
+# dev-python/socketpool which requires dev-python/gevent which requires
+# dev-python/greenlet which has not been ported to HPPA (bug #525246)
+dev-python/wsgiproxy2 test
 
 # Jeroen Roovers <jer@gentoo.org> (13 Aug 2014)
 # Needs dev-libs/protobuf{-c} which has not been ported to HPPA (bug #519772)

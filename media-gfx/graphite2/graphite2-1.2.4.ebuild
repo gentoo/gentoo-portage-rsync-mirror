@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4.ebuild,v 1.1 2014/01/25 21:55:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4.ebuild,v 1.2 2014/10/19 21:15:25 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 IUSE="perl test"
 
 RDEPEND="
-	perl? ( dev-lang/perl )
+	perl? ( dev-lang/perl:= )
 "
 DEPEND="${RDEPEND}
 	perl? ( virtual/perl-Module-Build )
