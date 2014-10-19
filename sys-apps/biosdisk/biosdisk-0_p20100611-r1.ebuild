@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/biosdisk-0_p20100611-r1.ebuild,v 1.1 2013/07/30 01:24:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/biosdisk-0_p20100611-r1.ebuild,v 1.2 2014/10/19 11:49:14 pacho Exp $
 
 EAPI="5"
 
@@ -23,9 +23,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND="|| ( app-text/unix2dos >=app-text/dos2unix-5.0 )
+RDEPEND="
+	>=app-text/dos2unix-5.0
 	sys-boot/syslinux
-	${PYTHON_DEPS}"
+	${PYTHON_DEPS}
+"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_install() {
