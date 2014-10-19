@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netkit-talk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.40 2012/10/02 06:20:20 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.41 2014/10/19 07:38:55 jer Exp $
+
+  19 Oct 2014; Jeroen Roovers <jer@gentoo.org> netkit-talk-0.17-r5.ebuild,
+  files/netkit-talk-0.17-ipv6.diff:
+  EAPI bump. Fix building against sys-libs/ncurses[tinfo] (bug #525796 by
+  Reuben Martin).
 
   02 Oct 2012; Michael Palimaka <kensington@gentoo.org>
   -netkit-talk-0.17-r4.ebuild:

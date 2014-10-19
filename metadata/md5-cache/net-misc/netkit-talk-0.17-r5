@@ -1,13 +1,13 @@
-DEFINED_PHASES=configure install prepare
-DEPEND=>=sys-libs/ncurses-5.2
+DEFINED_PHASES=compile configure install prepare
+DEPEND=>=sys-libs/ncurses-5.2 virtual/pkgconfig
 DESCRIPTION=Netkit - talkd
-EAPI=2
+EAPI=5
 HOMEPAGE=ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
 IUSE=ipv6
 KEYWORDS=alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86
 LICENSE=BSD
-RDEPEND=virtual/inetd
+RDEPEND=>=sys-libs/ncurses-5.2 virtual/inetd
 SLOT=0
 SRC_URI=ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-ntalk-0.17.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=1ef76d550ff3e1975201095c5ae7f4bd
+_md5_=1462f385444afbb11cb39df5462668f2

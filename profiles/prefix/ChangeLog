@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.430 2014/10/05 07:31:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.431 2014/10/19 07:52:14 grobian Exp $
+
+  19 Oct 2014; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Mask sys-apps/coreutils-8.23 on Darwin for multiple reasons
 
   05 Oct 2014; Fabian Groffen <grobian@gentoo.org> package.mask:
   Mask portage-2.2.14_rc1 due to multiple breakages

@@ -1,6 +1,5 @@
-diff -ur netkit-ntalk-0.17-orig/talkd/talkd.c netkit-ntalk-0.17/talkd/talkd.c
---- netkit-ntalk-0.17-orig/talkd/talkd.c	Wed Sep 29 02:04:15 1999
-+++ netkit-ntalk-0.17/talkd/talkd.c	Sun Feb 24 16:37:26 2002
+--- a/talkd/talkd.c
++++ b/talkd/talkd.c
 @@ -164,13 +164,14 @@
  	const char *theirip;
  
