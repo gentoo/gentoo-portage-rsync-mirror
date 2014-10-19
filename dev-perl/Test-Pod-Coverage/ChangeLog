@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Pod-Coverage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod-Coverage/ChangeLog,v 1.47 2014/10/14 11:54:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod-Coverage/ChangeLog,v 1.48 2014/10/19 07:24:37 zlogene Exp $
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -Test-Pod-Coverage-1.80.0.ebuild:
+  Drop old.
 
   14 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
   -Test-Pod-Coverage-1.100.0.ebuild:
