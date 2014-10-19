@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.153 2014/10/18 14:23:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.154 2014/10/19 04:49:06 vapier Exp $
+
+  19 Oct 2014; Mike Frysinger <vapier@gentoo.org> hwids-20141010.ebuild:
+  Mark alpha/ppc64/sparc stable #524976.
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> hwids-20141010.ebuild:
   Stable for ppc, wrt bug #524976
