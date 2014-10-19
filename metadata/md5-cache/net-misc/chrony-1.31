@@ -4,11 +4,11 @@ DESCRIPTION=NTP client and server programs
 EAPI=5
 HOMEPAGE=http://chrony.tuxfamily.org/
 IUSE=caps ipv6 +readline +rtc selinux
-KEYWORDS=~amd64 ~arm hppa ~mips ~ppc ~sparc ~x86
+KEYWORDS=amd64 ~arm hppa ~mips ~ppc ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=caps? ( sys-libs/libcap ) readline? ( >=sys-libs/readline-4.1-r4 ) selinux? ( sec-policy/selinux-chronyd )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://download.tuxfamily.org/chrony/chrony-1.31.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=f39ecb60a8085670d7766fc3fe2f66d9
+_md5_=c451df5b98feefd1cc4b69e7927b729b

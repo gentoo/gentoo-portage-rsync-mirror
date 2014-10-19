@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.24 2013/08/24 23:35:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.25 2014/10/19 18:34:09 hwoarang Exp $
 
 EAPI="5"
 
@@ -63,7 +63,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.5.2-gnome-session.patch
 	sed -i \
 		-e "s:-O0 -ggdb ::" \
-		-e 's/-fno-strict-aliasing//' \
 		"${S}"/m4/openbox.m4 || die
 	epatch_user
 	eautoreconf
