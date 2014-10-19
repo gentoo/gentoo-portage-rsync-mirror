@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.142 2014/09/30 19:40:46 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.143 2014/10/19 14:35:47 blueness Exp $
+
+  19 Oct 2014; Anthony G. Basile <blueness@gentoo.org> htop-1.0.3.ebuild:
+  Stable on arm, ppc and ppc64, bug #525450
 
   30 Sep 2014; Christian Ruppert <idl0r@gentoo.org> htop-1.0.3.ebuild,
   +files/htop-1.0.3-tinfo.patch:
