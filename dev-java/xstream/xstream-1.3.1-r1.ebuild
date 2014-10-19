@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.3.1-r1.ebuild,v 1.8 2014/08/10 20:28:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.3.1-r1.ebuild,v 1.9 2014/10/19 04:08:35 patrick Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -27,6 +27,11 @@ COMMON_DEPS="
 	dev-java/xml-commons-external:1.3
 	dev-java/jettison:0
 	java-virtuals/stax-api
+	"
+
+DEPEND="
+	>=virtual/jdk-1.5
+	app-arch/unzip
 	test? (
 		dev-java/ant-junit
 		dev-java/ant-trax
@@ -37,11 +42,7 @@ COMMON_DEPS="
 		dev-java/jakarta-oro:2.0
 		dev-java/stax:0
 		dev-java/wstx:3.2
-	)"
-
-DEPEND="
-	>=virtual/jdk-1.5
-	app-arch/unzip
+	)
 	${COMMON_DEPS}"
 RDEPEND="
 	>=virtual/jre-1.5
