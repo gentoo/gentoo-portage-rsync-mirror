@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.584 2014/10/15 21:32:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.585 2014/10/19 14:28:58 jer Exp $
+
+  19 Oct 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-331.104.ebuild,
+  nvidia-drivers-334.21-r3.ebuild, nvidia-drivers-337.25.ebuild,
+  nvidia-drivers-340.46.ebuild, nvidia-drivers-343.22-r2.ebuild,
+  +files/nvidia-drivers-337.12-pax-constify.patch:
+  Add new constify patch (bug #482784).
 
   15 Oct 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-340.46.ebuild:
   Stable for AMD64 x86 too.
