@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.240 2014/08/28 06:10:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.241 2014/10/19 10:26:34 patrick Exp $
+
+*numpy-1.9.0 (19 Oct 2014)
+
+  19 Oct 2014; Patrick Lauer <patrick@gentoo.org>
+  +files/numpy-1.9.0-no-hardcode-blas.patch, +numpy-1.9.0.ebuild:
+  Bump
 
   28 Aug 2014; Ian Delaney <idella4@gentoo.org> numpy-1.8.2.ebuild:
   tidy SRC_URI
