@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.616 2014/10/18 18:15:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.617 2014/10/19 12:04:14 pacho Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Pacho Ramos <pacho@gentoo.org> (19 Oct 2014)
+# swfdec is masked for removal, bug #525834
+dev-libs/DirectFB swfdec
 
 # Tim Harder <radhermit@gentoo.org> (10 Oct 2014)
 # Masked since skype isn't stable
