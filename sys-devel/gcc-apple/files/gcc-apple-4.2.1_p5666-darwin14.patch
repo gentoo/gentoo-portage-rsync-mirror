@@ -1,0 +1,57 @@
+Darwin 14 is 10.10, but the encoding scheme doesn't allow this, so
+encode everything from Darwin 14 and up as 10.9.
+
+Darwin 14 has some newer preprocessor stuff in its headers, work around
+that.
+
+Lift some seemingly arbitrary restriction for Darwin 14 and up.
+
+--- gcc/config/darwin-c.c
++++ gcc/config/darwin-c.c
+@@ -945,6 +945,10 @@
+   result[2] = darwin_macosx_version_min[3];
+   if (darwin_macosx_version_min[4] != '\0')
+     {
++      if (ISDIGIT(darwin_macosx_version_min[4]))
++	  {
++		  result[2] = '9';  /* latest version we can encode */
++	  } else {
+       if (darwin_macosx_version_min[4] != '.')
+ 	goto fail;
+       if (! ISDIGIT (darwin_macosx_version_min[5]))
+@@ -952,6 +956,7 @@
+       if (darwin_macosx_version_min[6] != '\0')
+ 	goto fail;
+       result[3] = darwin_macosx_version_min[5];
++	  }
+     }
+   else
+     result[3] = '0';
+--- gcc/libgcov.c
++++ gcc/libgcov.c
+@@ -34,6 +34,14 @@
+ #include "coretypes.h"
+ #include "tm.h"
+ 
++/* to deal with XBC headers from 10.10 */
++#ifndef __has_extension
++#define __has_extension(x) 0
++#endif
++#ifndef __has_feature
++#define __has_feature(x) 0
++#endif
++
+ /* APPLE LOCAL begin instant off 6414141 */
+ #if defined(__APPLE__) && !defined(__STATIC__) && !defined(__ppc__) && !defined(__ppc64__) && !defined(__arm__)
+ #include <vproc.h>
+--- gcc/config/darwin-driver.c
++++ gcc/config/darwin-driver.c
+@@ -174,8 +174,6 @@
+   version_p = osversion + 1;
+   if (ISDIGIT (*version_p))
+     major_vers = major_vers * 10 + (*version_p++ - '0');
+-  if (major_vers > 4 + 9)
+-    goto parse_failed;
+   if (*version_p++ != '.')
+     goto parse_failed;
+   version_pend = strchr(version_p, '.');
