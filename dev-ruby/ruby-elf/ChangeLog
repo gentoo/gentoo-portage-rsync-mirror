@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-elf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-elf/ChangeLog,v 1.11 2014/10/11 06:37:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-elf/ChangeLog,v 1.12 2014/10/19 20:55:31 flameeyes Exp $
+
+  19 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org> ruby-elf-1.0.8.ebuild,
+  ruby-elf-9999.ebuild:
+  Make both live and release to work with ruby20 and not jruby.
 
   11 Oct 2014; Hans de Graaff <graaff@gentoo.org> ruby-elf-9999.ebuild:
   Remove jruby now that it is no longer in the tree. It now triggers a repoman

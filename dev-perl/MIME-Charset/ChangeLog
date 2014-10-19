@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Charset
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Charset/ChangeLog,v 1.19 2013/03/25 20:36:52 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Charset/ChangeLog,v 1.20 2014/10/19 20:51:26 zlogene Exp $
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -MIME-Charset-1.9.2.ebuild:
+  Drop old.
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> MIME-Charset-1.9.3.ebuild:
   Stable for x86, wrt bug #457306

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-LibXML-Simple
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-Simple/ChangeLog,v 1.5 2013/03/17 17:18:52 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-Simple/ChangeLog,v 1.6 2014/10/19 20:35:10 zlogene Exp $
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -XML-LibXML-Simple-0.920.0.ebuild:
+  Drop old.
 
 *XML-LibXML-Simple-0.930.0 (17 Mar 2013)
 

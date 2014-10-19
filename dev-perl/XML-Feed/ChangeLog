@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Feed
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Feed/ChangeLog,v 1.28 2013/03/17 17:24:44 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Feed/ChangeLog,v 1.29 2014/10/19 20:40:18 zlogene Exp $
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -XML-Feed-0.500.0.ebuild:
+  Drop old.
 
 *XML-Feed-0.520.0 (17 Mar 2013)
 

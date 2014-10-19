@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-powermanagement/lxqt-powermanagement-0.7.0.ebuild,v 1.4 2014/10/17 10:11:55 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-powermanagement/lxqt-powermanagement-0.7.0.ebuild,v 1.5 2014/10/19 20:36:26 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -31,4 +31,4 @@ CDEPEND="dev-qt/qtcore:4
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
-	sys-power/upower"
+	|| ( sys-power/upower sys-power/upower-pm-utils )"

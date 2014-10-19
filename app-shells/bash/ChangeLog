@@ -1,6 +1,29 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.421 2014/10/19 20:30:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.423 2014/10/19 20:32:47 vapier Exp $
+
+  19 Oct 2014; Mike Frysinger <vapier@gentoo.org> bash-4.3_p30.ebuild:
+  Move bash-4.3 into ~arch.
+
+*bash-3.0_p22 (19 Oct 2014)
+*bash-2.05b_p13 (19 Oct 2014)
+
+  19 Oct 2014; Mike Frysinger <vapier@gentoo.org> +bash-2.05b_p13.ebuild,
+  +bash-3.0_p22.ebuild, bash-3.1_p23.ebuild, +files/bash-2.05b-destdir.patch,
+  +files/bash-2.05b-empty-herestring.patch,
+  +files/bash-2.05b-fix-job-warning.patch, +files/bash-2.05b-jobs.patch,
+  +files/bash-2.05b-protos.patch, +files/bash-2.05b-rbash.patch,
+  +files/bash-3.0-afs.patch, +files/bash-3.0-configs.patch,
+  +files/bash-3.0-crash.patch, +files/bash-3.0-darwin-conn.patch,
+  +files/bash-3.0-histtimeformat.patch, +files/bash-3.0-jobs.patch,
+  +files/bash-3.0-locale.patch, +files/bash-3.0-manpage.patch,
+  +files/bash-3.0-multibyteifs.patch, +files/bash-3.0-pgrp-pipe-fix.patch,
+  +files/bash-3.0-protos.patch, +files/bash-3.0-pwd.patch,
+  +files/bash-3.0-rbash.patch, +files/bash-3.0-read-builtin-pipe.patch,
+  +files/bash-3.0-read-e-segfault.patch, +files/bash-3.0-strnlen.patch,
+  +files/bash-3.0-subshell.patch, +files/bash-3.0-ulimit.patch,
+  +files/bash-3.0-volatile-command.patch:
+  Restore SLOTed bash-2.05b and bash-3.0 for devs.
 
   19 Oct 2014; Mike Frysinger <vapier@gentoo.org>
   +files/bash-2.05b-parallel-build.patch, +files/bash-3.1-protos.patch,
