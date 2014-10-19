@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MooseX-GlobRef
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-GlobRef/ChangeLog,v 1.9 2012/11/18 11:28:32 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-GlobRef/ChangeLog,v 1.10 2014/10/19 15:36:52 zlogene Exp $
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  MooseX-GlobRef-0.70.100.ebuild:
+  Bump to EAPI=5
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

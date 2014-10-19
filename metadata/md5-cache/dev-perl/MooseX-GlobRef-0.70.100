@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-perl/Moose-0.96 virtual/perl-Module-Build test? ( >=dev-perl/Test-Unit-Lite-0.12 dev-perl/Test-Assert virtual/perl-parent ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=>=dev-perl/Moose-0.96 virtual/perl-Module-Build test? ( >=dev-perl/Test-Unit-Lite-0.12 dev-perl/Test-Assert virtual/perl-parent ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Store a Moose object in glob reference
-EAPI=4
+EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/MooseX-GlobRef/
 IUSE=test
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=>=dev-perl/Moose-0.96 || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=>=dev-perl/Moose-0.96 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DE/DEXTER/MooseX-GlobRef-0.0701.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f889e8437ffc64d766053d029c422c4e	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=fce57353ce329fab6e51b307eebbfa89
+_md5_=b42b8762eefd3e59fb86671a746c719b
