@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/B-Hooks-Parser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Hooks-Parser/ChangeLog,v 1.12 2014/08/26 17:15:46 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Hooks-Parser/ChangeLog,v 1.13 2014/10/19 16:23:39 zlogene Exp $
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -B-Hooks-Parser-0.110.0.ebuild:
+  Drop old
 
 *B-Hooks-Parser-0.120.0-r1 (26 Aug 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBIx-Migration
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Migration/ChangeLog,v 1.8 2012/09/02 17:26:41 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Migration/ChangeLog,v 1.9 2014/10/19 16:10:34 zlogene Exp $
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> DBIx-Migration-0.70.0.ebuild:
+  Bump to EAPI=5
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -DBIx-Migration-0.60.0.ebuild:
   Cleanup

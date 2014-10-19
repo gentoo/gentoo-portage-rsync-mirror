@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Algorithm-C3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-C3/ChangeLog,v 1.8 2014/07/28 21:08:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-C3/ChangeLog,v 1.9 2014/10/19 16:28:56 zlogene Exp $
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Algorithm-C3-0.80.0.ebuild:
+  Drop old
 
 *Algorithm-C3-0.90.0 (28 Jul 2014)
 

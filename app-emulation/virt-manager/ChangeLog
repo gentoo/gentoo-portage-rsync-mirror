@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.107 2014/08/27 07:57:29 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.108 2014/10/19 16:19:15 thev00d00 Exp $
+
+*virt-manager-1.1.0 (19 Oct 2014)
+
+  19 Oct 2014; Ian Whyman <thev00d00@gentoo.org> +virt-manager-1.1.0.ebuild:
+  Version bump, fixes #522628
 
   27 Aug 2014; Sergey Popov <pinkbyte@gentoo.org>
   virt-manager-0.10.0-r2.ebuild:
