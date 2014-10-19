@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9469 2014/10/18 21:52:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9470 2014/10/19 00:03:09 mjo Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Oct 2014; Michael Orlitzky <mjo@gentoo.org> package.mask:
+  Remove package.mask for app-text/unix2dos (removed from tree).
 
   18 Oct 2014; Mike Frysinger <vapier@gentoo.org> package.mask:
   Drop DirectFB mask.

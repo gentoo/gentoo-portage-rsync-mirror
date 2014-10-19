@@ -1,0 +1,10 @@
+# ChangeLog for sys-process/xjobs
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/xjobs/ChangeLog,v 1.1 2014/10/19 00:19:49 mjo Exp $
+
+*xjobs-20140125 (19 Oct 2014)
+
+  19 Oct 2014; Michael Orlitzky <mjo@gentoo.org> +metadata.xml,
+  +xjobs-20140125.ebuild:
+  New package: sys-process/xjobs fixing bug #418211. Original ebuild contributed
+  by Andrej Gelenberg.
