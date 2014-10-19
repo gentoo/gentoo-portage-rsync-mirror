@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Cwd-Guard
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cwd-Guard/ChangeLog,v 1.1 2014/10/19 19:40:46 dilfridge Exp $
+
+*Cwd-Guard-0.40.0 (19 Oct 2014)
+
+  19 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Cwd-Guard-0.40.0.ebuild, +metadata.xml:
+  New ebuild, dependency of dev-perl/Mouse. Ebuild by Kent Fredric.
+

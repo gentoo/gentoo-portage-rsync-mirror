@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-0_pre20131115.ebuild,v 1.1 2013/11/17 18:39:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-0_pre20131115.ebuild,v 1.2 2014/10/19 19:50:03 blueness Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="dev-qt/qtcore:4
 	media-libs/libpng
 	media-libs/cimg
 	media-libs/lcms:2
-	media-libs/lensfun
+	>=media-libs/lensfun-0.2.8-r1
 	sci-libs/fftw:3.0
 	media-libs/liblqr
 	media-gfx/graphicsmagick[q16,-lcms]
@@ -33,11 +33,14 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${PN}-${PV/0_pre/}
 
 src_prepare() {
-	# remove ccache dependency
+	# remove ccache dependency and fix lensfun header path
 	local File
 	for File in $(find "${S}" -type f); do
 		if grep -sq ccache ${File}; then
 			sed -e 's/ccache//' -i "${File}"
+		fi
+		if grep -sq "lensfun.h" ${File}; then
+		   	sed -e 's/lensfun\.h/lensfun\/lensfun.h/' -i ${File}
 		fi
 	done
 

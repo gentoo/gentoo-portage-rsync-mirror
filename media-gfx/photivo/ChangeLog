@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/photivo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/ChangeLog,v 1.8 2013/12/17 21:13:39 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/ChangeLog,v 1.9 2014/10/19 19:50:03 blueness Exp $
+
+  19 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  photivo-0_pre20131115.ebuild:
+  Fix compile error, bug #521204
 
   17 Dec 2013; Markos Chandras <hwoarang@gentoo.org> photivo-9999.ebuild:
   Drop EHG_REVISION so it can be overridden by command line. Bug #494474 by

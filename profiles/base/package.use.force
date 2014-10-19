@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.50 2014/09/06 10:27:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.51 2014/10/19 19:47:29 vapier Exp $
 
 # Justin Lecher <jlec@gentoo.org> (10 Aug 2014)
 # Doesn't work without acl support
@@ -20,7 +20,7 @@ www-client/chromium pic
 # Zac Medico <zmedico@gentoo.org> (4 Dec 2012)
 # Force app-shells/bash[readline] in stage1 builds, so that compgen is
 # available for sys-apps/portage (see bug #445576).
-app-shells/bash readline
+app-shells/bash:0 readline
 
 # Michał Górny <mgorny@gentoo.org> (14 Oct 2012)
 # Force-enable all PYTHON_TARGETS for python-exec to avoid using private
