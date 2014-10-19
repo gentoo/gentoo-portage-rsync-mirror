@@ -1,6 +1,21 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.431 2014/10/19 07:52:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.432 2014/10/19 17:42:22 grobian Exp $
+
+  19 Oct 2014; Fabian Groffen <grobian@gentoo.org> +darwin/macos/10.10/eapi,
+  +darwin/macos/10.10/make.defaults, +darwin/macos/10.10/package.mask,
+  +darwin/macos/10.10/package.provided, +darwin/macos/10.10/package.use.mask,
+  +darwin/macos/10.10/parent, +darwin/macos/10.10/profile.bashrc,
+  +darwin/macos/10.10/x64/eapi, +darwin/macos/10.10/x64/make.defaults,
+  +darwin/macos/10.10/x64/package.mask,
+  +darwin/macos/10.10/x64/package.use.force,
+  +darwin/macos/10.10/x64/package.use.mask, +darwin/macos/10.10/x64/parent,
+  +darwin/macos/10.10/x64/use.mask, +darwin/macos/10.10/x86/eapi,
+  +darwin/macos/10.10/x86/make.defaults, +darwin/macos/10.10/x86/package.mask,
+  +darwin/macos/10.10/x86/package.use.force,
+  +darwin/macos/10.10/x86/package.use.mask, +darwin/macos/10.10/x86/parent,
+  +darwin/macos/10.10/x86/use.mask:
+  Add profile for OS X Yosemite (10.10) a.k.a. Darwin 14
 
   19 Oct 2014; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Mask sys-apps/coreutils-8.23 on Darwin for multiple reasons

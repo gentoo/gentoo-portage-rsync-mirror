@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-DES
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.41 2013/12/07 16:29:52 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.42 2014/10/19 17:32:27 zlogene Exp $
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Crypt-DES-2.50.0.ebuild:
+  Drop old.
 
   07 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> Crypt-DES-2.70.0.ebuild:
   ppc64 stable wrt bug #492106

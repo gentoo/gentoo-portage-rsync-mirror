@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Reply
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Reply/ChangeLog,v 1.26 2014/08/24 01:43:21 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Reply/ChangeLog,v 1.27 2014/10/19 17:34:25 zlogene Exp $
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Email-Reply-1.202.0.ebuild:
+  Drop old.
 
 *Email-Reply-1.203.0-r1 (24 Aug 2014)
 
