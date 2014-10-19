@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16105 2014/10/19 00:03:09 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16106 2014/10/19 16:31:56 zerochaos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rick Farina <zerochaos@gentoo.org> (19 Oct 2014)
+# Masked for removal on 19 Nov 2014, use sys-apps/hwids instead.
+net-misc/ieee-oui
 
 # Markos Chandras <18 Oct 2014>
 # Not quite ready yet. Reverse deps seem to be broken

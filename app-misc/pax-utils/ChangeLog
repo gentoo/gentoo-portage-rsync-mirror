@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.159 2014/10/19 12:36:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.160 2014/10/19 16:35:33 floppym Exp $
+
+*pax-utils-0.9-r1 (19 Oct 2014)
+
+  19 Oct 2014; Mike Gilbert <floppym@gentoo.org> +pax-utils-0.9-r1.ebuild,
+  -pax-utils-0.9.ebuild:
+  Temporary fix for file collison on /usr/bin/autogen, bug 525852.
 
   19 Oct 2014; Anthony G. Basile <blueness@gentoo.org> pax-utils-0.8.1.ebuild:
   Stable on arm, ppc and ppc64.  Bug #525842
