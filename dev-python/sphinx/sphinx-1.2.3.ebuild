@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.2.3.ebuild,v 1.1 2014/10/16 05:08:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.2.3.ebuild,v 1.2 2014/10/19 01:20:42 idella4 Exp $
 
 EAPI=5
 
@@ -54,7 +54,7 @@ python_compile_all() {
 
 python_test() {
 	cp -r -l tests "${BUILD_DIR}"/ || die
-	# Would you believe?
+
 	if $(python_is_python3); then
 		2to3 -w --no-diffs "${BUILD_DIR}"/tests || die
 	fi
