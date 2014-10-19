@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.125 2014/10/06 06:44:54 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.126 2014/10/19 06:46:41 caster Exp $
+
+*icedtea-6.1.13.5 (18 Oct 2014)
+
+  18 Oct 2014; Vlastimil Babka <caster@gentoo.org> +icedtea-6.1.13.5.ebuild,
+  icedtea-7.2.4.8.ebuild:
+  Version bump, security bug #524560. Use check-reqs for disk space, bug
+  #508728, also use multiprocessing.eclass for passing the number of jobs to
+  build system and some more cleanups - thanks to Arfrever Frehtes Taifersar
+  Arahesis <arfrever.fta@gmail.com> for the patch. Use the HotSpot ARM32 JIT on
+  arm rather than CACAO in 6.1.13.5.
 
 *icedtea-7.2.4.8 (06 Oct 2014)
 *icedtea-6.1.13.4 (06 Oct 2014)

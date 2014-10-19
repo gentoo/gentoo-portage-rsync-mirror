@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lastpass/lastpass-3.1.61.ebuild,v 1.3 2014/10/09 06:47:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lastpass/lastpass-3.1.61.ebuild,v 1.4 2014/10/19 06:41:17 robbat2 Exp $
 
 EAPI=5
 inherit eutils
@@ -45,7 +45,10 @@ S="${WORKDIR}"
 src_unpack() {
 	unpack ${MAINDISTFILE}
 	mkdir -p "${S}"/crx || die
-	unzip -qq -o "${DISTDIR}/lpchrome_linux.crx" -d "${S}"/crx || die
+	# bug #524864: strip Chrome CRX header
+	# otherwise the unzip warning can be fatal in some cases
+	dd bs=306 skip=1 if="${DISTDIR}"/lpchrome_linux.crx of="${T}"/lpchrome_linux.zip 2>/dev/null || die
+	unzip -qq -o "${T}"/lpchrome_linux.zip -d "${S}"/crx || die
 }
 
 src_install() {
