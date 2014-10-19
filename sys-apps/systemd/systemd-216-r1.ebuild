@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-216-r1.ebuild,v 1.2 2014/10/12 09:58:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-216-r1.ebuild,v 1.3 2014/10/19 20:13:19 floppym Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acl audit cryptsetup curl doc elfutils +firmware-loader gcrypt gudev http
+IUSE="acl apparmor audit cryptsetup curl doc elfutils +firmware-loader gcrypt gudev http
 	idn introspection kdbus +kmod lz4 lzma pam policykit python qrcode +seccomp
 	selinux ssl test vanilla"
 
@@ -26,6 +26,7 @@ MINKV="3.8"
 COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	sys-libs/libcap:0=
 	acl? ( sys-apps/acl:0= )
+	apparmor? ( sys-libs/libapparmor:0= )
 	audit? ( >=sys-process/audit-2:0= )
 	cryptsetup? ( >=sys-fs/cryptsetup-1.6:0= )
 	curl? ( net-misc/curl:0= )
@@ -182,6 +183,7 @@ multilib_src_configure() {
 
 		# Optional components/dependencies
 		$(multilib_native_use_enable acl)
+		$(multilib_native_use_enable apparmor)
 		$(multilib_native_use_enable audit)
 		$(multilib_native_use_enable cryptsetup libcryptsetup)
 		$(multilib_native_use_enable curl libcurl)
@@ -230,7 +232,6 @@ multilib_src_configure() {
 		$(multilib_native_enable vconsole)
 
 		# not supported (avoid automagic deps in the future)
-		--disable-apparmor
 		--disable-chkconfig
 
 		# hardcode a few paths to spare some deps

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Template
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/ChangeLog,v 1.53 2013/05/16 13:16:14 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/ChangeLog,v 1.54 2014/10/19 20:16:13 dilfridge Exp $
+
+  19 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -HTML-Template-2.910.0.ebuild:
+  Remove old
 
   16 May 2013; Agostino Sarubbo <ago@gentoo.org> HTML-Template-2.940.0.ebuild:
   Stable for ppc, wrt bug #461122

@@ -1,9 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.66 2014/09/02 11:51:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.67 2014/10/19 20:08:32 floppym Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
+
+# Mike Gilbert <floppym@gentoo.org (19 Oct 2014)
+# sys-libs/libapparmor
+-apparmor
 
 # Alexey Shvetsov <alexxy@gentoo.org> (08 Apr 2014)
 # Cuda works here

@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/grutatxt/grutatxt-2.0.16.ebuild,v 1.7 2012/08/20 01:33:56 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/grutatxt/grutatxt-2.0.16-r1.ebuild,v 1.1 2014/10/19 20:08:39 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
+GENTOO_DEPEND_ON_PERL_SUBSLOT=yes
 inherit perl-app
 
 MY_PN="Grutatxt"

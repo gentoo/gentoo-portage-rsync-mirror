@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p57.ebuild,v 1.4 2014/10/08 06:21:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p57.ebuild,v 1.5 2014/10/19 20:16:14 vapier Exp $
 
 EAPI="4"
 
@@ -66,11 +66,10 @@ src_prepare() {
 	sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[[:alpha:]]*.h::g' Makefile.in || die
 
 	epatch "${FILESDIR}"/autoconf-mktime-2.59.patch #220040
-	epatch "${FILESDIR}"/${PN}-3.1-gentoo.patch
 	epatch "${FILESDIR}"/${PN}-3.2-loadables.patch
+	epatch "${FILESDIR}"/${PN}-2.05b-parallel-build.patch #41002
 	epatch "${FILESDIR}"/${PN}-3.2-protos.patch
 	epatch "${FILESDIR}"/${PN}-3.2-session-leader.patch #231775
-	epatch "${FILESDIR}"/${PN}-3.2-parallel-build.patch #189671
 	epatch "${FILESDIR}"/${PN}-3.2-ldflags-for-build.patch #211947
 	epatch "${FILESDIR}"/${PN}-3.2-process-subst.patch
 	epatch "${FILESDIR}"/${PN}-3.2-ulimit.patch

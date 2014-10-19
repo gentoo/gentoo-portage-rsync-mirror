@@ -32,17 +32,27 @@ move prototypes around so they show up when needed
  #endif
  
  #endif /* _STRMATCH_H */
---- a/quit.h
-+++ b/quit.h
-@@ -21,6 +21,8 @@
- #if !defined (_QUIT_H_)
- #define _QUIT_H_
+--- a/builtins/echo.def
++++ b/builtins/echo.def
+@@ -31,6 +31,8 @@
+ #include <stdio.h>
+ #include "../shell.h"
  
-+#include "sig.h"
++#include "common.h"
 +
- /* Non-zero means SIGINT has already ocurred. */
- extern volatile int interrupt_state;
- extern volatile int terminating_signal;
+ $BUILTIN echo
+ $FUNCTION echo_builtin
+ $DEPENDS_ON V9_ECHO
+--- a/lib/sh/winsize.c
++++ b/lib/sh/winsize.c
+@@ -55,6 +55,7 @@
+ #if defined (READLINE)
+ extern void rl_set_screen_size __P((int, int));
+ #endif
++extern void sh_set_lines_and_columns __P((int, int));
+ 
+ void
+ get_new_window_size (from_sig, rp, cp)
 --- a/support/bashversion.c
 +++ b/support/bashversion.c
 @@ -47,6 +47,9 @@

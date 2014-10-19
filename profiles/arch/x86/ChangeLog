@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.177 2014/10/18 18:15:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.178 2014/10/19 20:08:32 floppym Exp $
+
+  19 Oct 2014; Mike Gilbert <floppym@gentoo.org> use.mask, use.stable.mask:
+  Unmask/stable-mask apparmor.
 
   18 Oct 2014; Mike Frysinger <vapier@gentoo.org> package.use.mask:
   Drop systemd-specific seccomp mask since the USE flag itself is handled

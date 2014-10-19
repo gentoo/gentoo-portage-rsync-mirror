@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.419 2014/10/08 16:10:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.421 2014/10/19 20:30:15 vapier Exp $
+
+  19 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/bash-2.05b-parallel-build.patch, +files/bash-3.1-protos.patch,
+  -files/bash-3.1-gentoo.patch, -files/bash-3.2-parallel-build.patch,
+  bash-3.1_p23.ebuild, bash-3.2_p57.ebuild, files/bash-3.2-protos.patch,
+  bash-4.0_p44.ebuild:
+  Update prototype headers, drop Mandrake/readline patches that are not needed,
+  and pull back in the old version.h parallel build fix.
 
   08 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-3.1_p21.ebuild,
   -bash-3.1_p22.ebuild, -bash-3.2_p55.ebuild, -bash-3.2_p56.ebuild,

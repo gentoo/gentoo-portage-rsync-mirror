@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/App-Nopaste
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/ChangeLog,v 1.42 2013/08/25 06:34:18 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/ChangeLog,v 1.43 2014/10/19 20:21:13 zlogene Exp $
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -App-Nopaste-0.900.0.ebuild:
+  Drop old.
 
 *App-Nopaste-0.920.0 (25 Aug 2013)
 

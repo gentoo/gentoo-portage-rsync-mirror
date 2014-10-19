@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0_p44.ebuild,v 1.4 2014/10/08 06:21:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0_p44.ebuild,v 1.5 2014/10/19 20:30:15 vapier Exp $
 
 EAPI="4"
 
@@ -68,7 +68,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.0-configure.patch #304901
 	epatch "${FILESDIR}"/${PN}-4.x-deferred-heredocs.patch
 	sed -i '1i#define NEED_FPURGE_DECL' execute_cmd.c # needs fpurge() decl
-	epatch "${FILESDIR}"/${PN}-3.2-parallel-build.patch #189671
+	epatch "${FILESDIR}"/${PN}-2.05b-parallel-build.patch #41002
 	epatch "${FILESDIR}"/${PN}-4.0-ldflags-for-build.patch #211947
 	epatch "${FILESDIR}"/${PN}-4.0-negative-return.patch
 	epatch "${FILESDIR}"/${PN}-4.0-parallel-build.patch #267613

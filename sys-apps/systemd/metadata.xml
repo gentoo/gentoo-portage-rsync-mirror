@@ -6,9 +6,9 @@
 		<name>Gentoo systemd team</name>
 	</maintainer>
 	<use>
-		<!-- XXX: describe those two better -->
+		<flag name='apparmor'>Enable AppArmor support</flag>
 		<flag name='audit'>Enable support for <pkg>sys-process/audit</pkg></flag>
-		<flag name='cryptsetup'>Use libcryptsetup</flag>
+		<flag name='cryptsetup'>Enable cryptsetup tools (includes unit generator for crypttab)</flag>
 		<flag name='firmware-loader'>Enable user-space firmware loader (for kernels prior to 3.8)</flag>
 		<flag name='elfutils'>Enable coredump stacktraces in the journal</flag>
 		<flag name='gcrypt'>Enable sealing of journal files using gcrypt</flag>
