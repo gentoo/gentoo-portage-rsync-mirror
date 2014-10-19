@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.83 2014/09/30 19:31:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.84 2014/10/19 21:35:39 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (19 Oct 2014)
+# sys-devel/gcc says it has not been ported to HPPA (bug #504200)
+sanitize
 
 # Jeroen Roovers <jer@gentoo.org> (30 Sep 2014)
 # sys-libs/libseccomp has not been ported to HPPA (bug #524148)

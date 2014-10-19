@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Test-CheckDeps
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-CheckDeps/ChangeLog,v 1.4 2013/09/09 11:48:13 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-CheckDeps/ChangeLog,v 1.5 2014/10/19 21:37:27 zlogene Exp $
+
+*Test-CheckDeps-0.10.0 (19 Oct 2014)
+
+  19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> +Test-CheckDeps-0.10.0.ebuild:
+  Version bump
 
   09 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> Test-CheckDeps-0.2.0.ebuild:
   Add ~arm keyword, wrt bug #449762

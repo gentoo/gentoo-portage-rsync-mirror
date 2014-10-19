@@ -8,6 +8,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1 MPL-1.1 MakeMKV-EULA openssl
 RDEPEND=sys-libs/glibc[multilib?] dev-libs/expat dev-libs/openssl:0 sys-libs/zlib qt4? ( virtual/opengl dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 ) >=sys-libs/glibc-2.12.0 || ( >=media-video/ffmpeg-1.0.0 >=media-video/libav-0.8.9 )
 SLOT=0
-SRC_URI=http://www.makemkv.com/download/makemkv-oss-1.8.12.tar.gz http://www.makemkv.com/download/makemkv-bin-1.8.12.tar.gz
+SRC_URI=http://www.makemkv.com/download/old/makemkv-oss-1.8.12.tar.gz http://www.makemkv.com/download/old/makemkv-bin-1.8.12.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=367503ffa9a976c8d420c1e79322d0bb
+_md5_=430593d01ad824d7a1960e70391780f2
