@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.9-r1.ebuild,v 1.1 2014/10/19 16:35:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.9.1.ebuild,v 1.1 2014/10/19 17:13:37 vapier Exp $
 
 EAPI="4"
 
@@ -50,5 +50,4 @@ src_test() {
 
 src_install() {
 	_emake DESTDIR="${ED}" PKGDOCDIR='$(DOCDIR)'/${PF} install
-	rm "${ED}usr/bin/autogen" || die
 }
