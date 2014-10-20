@@ -1,12 +1,46 @@
-diff -urN OpenCTM-1.0.3.old/doc/Makefile.linux OpenCTM-1.0.3/doc/Makefile.linux
---- OpenCTM-1.0.3.old/doc/Makefile.linux	1970-01-01 01:00:00.000000000 +0100
-+++ OpenCTM-1.0.3/doc/Makefile.linux	2014-08-10 13:56:45.821979758 +0200
-@@ -0,0 +1,2 @@
-+%:
-+	true
-diff -urN OpenCTM-1.0.3.old/lib/Makefile.linux OpenCTM-1.0.3/lib/Makefile.linux
---- OpenCTM-1.0.3.old/lib/Makefile.linux	2014-08-10 13:55:34.090983462 +0200
-+++ OpenCTM-1.0.3/lib/Makefile.linux	2014-08-10 13:59:03.312971874 +0200
+ Makefile.linux       | 18 ++++++++-------
+ lib/Makefile.linux   | 23 ++++++++++++-------
+ tools/Makefile.linux | 64 ++++++++++++++++++++--------------------------------
+ 3 files changed, 50 insertions(+), 55 deletions(-)
+
+diff --git a/Makefile.linux b/Makefile.linux
+index 24ca137..51fc88c 100644
+--- a/Makefile.linux
++++ b/Makefile.linux
+@@ -47,19 +47,21 @@ documentation:
+ 
+ 
+ # Installation settings
+-LIBDIR  = /usr/lib/
+-INCDIR  = /usr/local/include/
+-BINDIR  = /usr/local/bin/
+-MAN1DIR = /usr/local/share/man/man1/
+-CP = cp
++LIBDIR  = $(DESTDIR)/usr/@GENTOO_LIBDIR@/$(DEB_HOST_MULTIARCH)
++INCDIR  = $(DESTDIR)/usr/include/
++BINDIR  = $(DESTDIR)/usr/bin/
++MAN1DIR = $(DESTDIR)/usr/share/man/man1/
++CP = cp -P
+ MKDIR = mkdir -p
+ 
+-install:
+-	$(CP) lib/libopenctm.so $(LIBDIR)
++$(LIBDIR) $(INCDIR) $(BINDIR) $(MAN1DIR):
++	mkdir -p "$@"
++
++install: $(LIBDIR) $(INCDIR) $(BINDIR) $(MAN1DIR)
++	$(CP) lib/libopenctm.so* $(LIBDIR)
+ 	$(CP) lib/openctm.h $(INCDIR)
+ 	$(CP) lib/openctmpp.h $(INCDIR)
+ 	$(CP) tools/ctmconv $(BINDIR)
+ 	$(CP) tools/ctmviewer $(BINDIR)
+-	$(MKDIR) $(MAN1DIR)
+ 	$(CP) doc/ctmconv.1 $(MAN1DIR)
+ 	$(CP) doc/ctmviewer.1 $(MAN1DIR)
+diff --git a/lib/Makefile.linux b/lib/Makefile.linux
+index 7643127..1e622ec 100644
+--- a/lib/Makefile.linux
++++ b/lib/Makefile.linux
 @@ -27,13 +27,18 @@
  ###############################################################################
  
@@ -30,7 +64,7 @@ diff -urN OpenCTM-1.0.3.old/lib/Makefile.linux OpenCTM-1.0.3/lib/Makefile.linux
  
  OBJS = openctm.o \
         stream.o \
-@@ -64,16 +69,18 @@
+@@ -64,16 +69,18 @@ LZMA_SRCS = $(LZMADIR)/Alloc.c \
  all: $(DYNAMICLIB)
  
  clean:
@@ -53,42 +87,10 @@ diff -urN OpenCTM-1.0.3.old/lib/Makefile.linux OpenCTM-1.0.3/lib/Makefile.linux
  
  depend:
  	$(DEPEND) $(SRCS) $(LZMA_SRCS) > make.depend
-diff -urN OpenCTM-1.0.3.old/Makefile.linux OpenCTM-1.0.3/Makefile.linux
---- OpenCTM-1.0.3.old/Makefile.linux	2014-08-10 13:55:34.096983462 +0200
-+++ OpenCTM-1.0.3/Makefile.linux	2014-08-10 13:56:45.821979758 +0200
-@@ -47,19 +47,21 @@
- 
- 
- # Installation settings
--LIBDIR  = /usr/lib/
--INCDIR  = /usr/local/include/
--BINDIR  = /usr/local/bin/
--MAN1DIR = /usr/local/share/man/man1/
--CP = cp
-+LIBDIR  = $(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH)
-+INCDIR  = $(DESTDIR)/usr/include/
-+BINDIR  = $(DESTDIR)/usr/bin/
-+MAN1DIR = $(DESTDIR)/usr/share/man/man1/
-+CP = cp -P
- MKDIR = mkdir -p
- 
--install:
--	$(CP) lib/libopenctm.so $(LIBDIR)
-+$(LIBDIR) $(INCDIR) $(BINDIR) $(MAN1DIR):
-+	mkdir -p "$@"
-+
-+install: $(LIBDIR) $(INCDIR) $(BINDIR) $(MAN1DIR)
-+	$(CP) lib/libopenctm.so* $(LIBDIR)
- 	$(CP) lib/openctm.h $(INCDIR)
- 	$(CP) lib/openctmpp.h $(INCDIR)
- 	$(CP) tools/ctmconv $(BINDIR)
- 	$(CP) tools/ctmviewer $(BINDIR)
--	$(MKDIR) $(MAN1DIR)
- 	$(CP) doc/ctmconv.1 $(MAN1DIR)
- 	$(CP) doc/ctmviewer.1 $(MAN1DIR)
-diff -urN OpenCTM-1.0.3.old/tools/Makefile.linux OpenCTM-1.0.3/tools/Makefile.linux
---- OpenCTM-1.0.3.old/tools/Makefile.linux	2014-08-10 13:55:34.094983462 +0200
-+++ OpenCTM-1.0.3/tools/Makefile.linux	2014-08-10 14:00:52.484964897 +0200
+diff --git a/tools/Makefile.linux b/tools/Makefile.linux
+index fa3e6e5..46276d1 100644
+--- a/tools/Makefile.linux
++++ b/tools/Makefile.linux
 @@ -26,49 +26,50 @@
  ###############################################################################
  
@@ -103,15 +105,14 @@ diff -urN OpenCTM-1.0.3.old/tools/Makefile.linux OpenCTM-1.0.3/tools/Makefile.li
 -TINYXMLDIR = tinyxml
 -ZLIBDIR = zlib
 -PNGLITEDIR = pnglite
--
--CPP = g++
--CPPFLAGS = -c -O3 -W -Wall `pkg-config --cflags gtk+-2.0` -I$(OPENCTMDIR) -I$(RPLYDIR) -I$(JPEGDIR) -I$(TINYXMLDIR) -I$(GLEWDIR) -I$(ZLIBDIR) -I$(PNGLITEDIR)
 +# rply in libvxl1-dev is version 1.1, we need v. 1.01
 +#RPLYDIR = /usr/include/vxl/rply
 +#TINYXMLDIR = tinyxml
 +#ZLIBDIR = zlib
 +#PNGLITEDIR = pnglite
-+
+ 
+-CPP = g++
+-CPPFLAGS = -c -O3 -W -Wall `pkg-config --cflags gtk+-2.0` -I$(OPENCTMDIR) -I$(RPLYDIR) -I$(JPEGDIR) -I$(TINYXMLDIR) -I$(GLEWDIR) -I$(ZLIBDIR) -I$(PNGLITEDIR)
 +CXX ?= g++
 +CC ?= gcc
 +CXXFLAGS += -W -Wall `pkg-config --cflags gtk+-2.0` -I$(OPENCTMDIR) -I$(RPLYDIR) -I$(GLEWDIR)
@@ -129,22 +130,22 @@ diff -urN OpenCTM-1.0.3.old/tools/Makefile.linux OpenCTM-1.0.3/tools/Makefile.li
 -	cd $(JPEGDIR) && $(MAKE) -f makefile.linux clean
 -	cd $(TINYXMLDIR) && $(MAKE) -f Makefile.linux clean
 -	cd $(ZLIBDIR) && $(MAKE) -f Makefile.linux clean
--
+ 
 -libopenctm.so: $(OPENCTMDIR)/libopenctm.so
 -	cp $< $@
- 
--ctmconv: $(CTMCONVOBJS) $(TINYXMLDIR)/libtinyxml.a libopenctm.so
--	$(CPP) -s -o $@ -L$(OPENCTMDIR) -L$(TINYXMLDIR) $(CTMCONVOBJS) -Wl,-rpath,. -lopenctm -ltinyxml
 +ctmconv: $(CTMCONVOBJS)
 +	$(CXX) $(LDFLAGS) -s -o $@ -L$(OPENCTMDIR) $(CTMCONVOBJS) -lopenctm -ltinyxml
  
--ctmviewer: $(CTMVIEWEROBJS) $(JPEGDIR)/libjpeg.a $(TINYXMLDIR)/libtinyxml.a $(ZLIBDIR)/libz.a libopenctm.so
--	$(CPP) -s -o $@ -L$(OPENCTMDIR) -L$(TINYXMLDIR) -L$(JPEGDIR) -L$(ZLIBDIR) $(CTMVIEWEROBJS) -Wl,-rpath,. -lopenctm -ltinyxml -ljpeg -lz -lglut `pkg-config --libs gtk+-2.0`
+-ctmconv: $(CTMCONVOBJS) $(TINYXMLDIR)/libtinyxml.a libopenctm.so
+-	$(CPP) -s -o $@ -L$(OPENCTMDIR) -L$(TINYXMLDIR) $(CTMCONVOBJS) -Wl,-rpath,. -lopenctm -ltinyxml
 +ctmviewer: $(CTMVIEWEROBJS)
 +	$(CXX) $(LDFLAGS) -s -o $@ -L$(OPENCTMDIR) $(CTMVIEWEROBJS) -lopenctm \
 +	-ltinyxml -ljpeg -lpnglite -lz -lGL -lglut -lGLU -lGLEW \
 +	-lgtk-x11-2.0 -lgobject-2.0 -lglib-2.0
  
+-ctmviewer: $(CTMVIEWEROBJS) $(JPEGDIR)/libjpeg.a $(TINYXMLDIR)/libtinyxml.a $(ZLIBDIR)/libz.a libopenctm.so
+-	$(CPP) -s -o $@ -L$(OPENCTMDIR) -L$(TINYXMLDIR) -L$(JPEGDIR) -L$(ZLIBDIR) $(CTMVIEWEROBJS) -Wl,-rpath,. -lopenctm -ltinyxml -ljpeg -lz -lglut `pkg-config --libs gtk+-2.0`
+-
 -ctmbench: $(CTMBENCHOBJS) libopenctm.so
 -	$(CPP) -s -o $@ -L$(OPENCTMDIR) $(CTMBENCHOBJS) -Wl,-rpath,. -lopenctm
 +ctmbench: $(CTMBENCHOBJS)
@@ -163,7 +164,7 @@ diff -urN OpenCTM-1.0.3.old/tools/Makefile.linux OpenCTM-1.0.3/tools/Makefile.li
  systimer.o: systimer.cpp systimer.h
  sysdialog_gtk.o: sysdialog_gtk.cpp sysdialog.h
  convoptions.o: convoptions.cpp convoptions.h
-@@ -91,22 +92,7 @@
+@@ -91,22 +92,7 @@ phong_frag.h: phong.frag bin2c
  	./bin2c phong.frag phongFragSrc > $@
  
  bin2c: bin2c.cpp

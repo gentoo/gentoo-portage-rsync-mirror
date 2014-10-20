@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/openctm-1.0.3.ebuild,v 1.5 2014/08/20 10:58:35 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/openctm-1.0.3.ebuild,v 1.6 2014/10/20 08:02:33 jlec Exp $
 
 EAPI=5
 
@@ -27,9 +27,13 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_PF}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/openctm-fix-makefiles.patch \
+	epatch \
+		"${FILESDIR}"/openctm-fix-makefiles.patch \
 		"${FILESDIR}"/openctm-no-strip.patch
-	mv Makefile.linux Makefile
+	mv Makefile.linux Makefile || die
+	sed \
+		-e "s:@GENTOO_LIBDIR@:$(get_libdir):g" \
+		-i Makefile || die
 }
 
 src_compile() {
