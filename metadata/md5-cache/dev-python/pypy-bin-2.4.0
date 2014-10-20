@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare setup unpack
+DEPEND=app-arch/xz-utils doc? ( || ( >=dev-lang/python-2.7.5-r2:2.7 virtual/pypy:0= ) dev-python/sphinx ) test? ( app-arch/bzip2:0 dev-libs/expat:0 dev-libs/libffi:0 dev-libs/openssl:0 sys-libs/glibc:2.2 sys-libs/ncurses:5 sys-libs/zlib:0 sqlite? ( dev-db/sqlite:3 ) tk? ( dev-lang/tk:0 dev-tcltk/tix ) !dev-python/pypy:0 )
+DESCRIPTION=A fast, compliant alternative implementation of the Python language (binary package)
+EAPI=5
+HOMEPAGE=http://pypy.org/
+IUSE=doc +jit shadowstack sqlite sse2 test tk
+LICENSE=MIT
+PDEPEND=app-admin/python-updater
+RDEPEND=app-arch/bzip2:0 dev-libs/expat:0 dev-libs/libffi:0 dev-libs/openssl:0 sys-libs/glibc:2.2 sys-libs/ncurses:5 sys-libs/zlib:0 sqlite? ( dev-db/sqlite:3 ) tk? ( dev-lang/tk:0 dev-tcltk/tix ) !dev-python/pypy:0
+REQUIRED_USE=!jit? ( !shadowstack ) x86? ( !sse2? ( !jit !shadowstack ) )
+SLOT=0/2.4
+SRC_URI=https://www.bitbucket.org/pypy/pypy/downloads/pypy-2.4.0-src.tar.bz2 amd64? ( jit? ( shadowstack? ( http://packages.gentooexperimental.org/pypy//pypy-bin-2.4.0-amd64+bzip2+jit+ncurses+shadowstack.tar.xz -> pypy-bin-2.4.0-r1-amd64+bzip2+jit+ncurses+shadowstack.tar.xz ) ) jit? ( !shadowstack? ( http://packages.gentooexperimental.org/pypy//pypy-bin-2.4.0-amd64+bzip2+jit+ncurses.tar.xz -> pypy-bin-2.4.0-r1-amd64+bzip2+jit+ncurses.tar.xz ) ) !jit? ( !shadowstack? ( http://packages.gentooexperimental.org/pypy//pypy-bin-2.4.0-amd64+bzip2+ncurses.tar.xz -> pypy-bin-2.4.0-r1-amd64+bzip2+ncurses.tar.xz ) ) )
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=822c6b9976f7b8cc2d4245a61a110b65
