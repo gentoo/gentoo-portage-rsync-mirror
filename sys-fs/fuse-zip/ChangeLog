@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse-zip
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/ChangeLog,v 1.6 2013/08/13 18:40:16 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/ChangeLog,v 1.7 2014/10/20 01:38:32 zmedico Exp $
+
+*fuse-zip-0.4.0 (20 Oct 2014)
+
+  20 Oct 2014; Zac Medico <zmedico@gentoo.org> +fuse-zip-0.4.0.ebuild:
+  0.4.0 version bump.
 
 *fuse-zip-0.3.0 (13 Aug 2013)
 
