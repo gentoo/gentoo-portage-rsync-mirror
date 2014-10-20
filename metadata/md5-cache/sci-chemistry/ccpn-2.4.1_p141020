@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install prepare setup
+DEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ssl,tk] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-lang/tk[threads] dev-python/numpy[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-tcltk/tix =sci-libs/ccpn-data-2.4.1*[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-biology/psipred x11-libs/libXext x11-libs/libX11 opengl? ( media-libs/freeglut dev-python/pyglet[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] )
+DESCRIPTION=The Collaborative Computing Project for NMR
+EAPI=5
+HOMEPAGE=http://www.ccpn.ac.uk/ccpn
+IUSE=+opengl python_targets_python2_7 python_single_target_python2_7
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=|| ( CCPN LGPL-2.1 )
+RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ssl,tk] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-lang/tk[threads] dev-python/numpy[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-tcltk/tix =sci-libs/ccpn-data-2.4.1*[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-biology/psipred x11-libs/libXext x11-libs/libX11 opengl? ( media-libs/freeglut dev-python/pyglet[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] )
+REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=http://www-old.ccpn.ac.uk/download/ccpnmr/analysis2.4.1.tar.gz http://dev.gentoo.org/~jlec/distfiles/ccpn-update-2.4.1-141020.patch.xz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=ebafff58423ba9395dd05f47054ece25
