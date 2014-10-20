@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xautolock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.30 2014/08/10 20:04:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.31 2014/10/20 17:34:43 jer Exp $
+
+  20 Oct 2014; Jeroen Roovers <jer@gentoo.org> xautolock-2.2.ebuild:
+  Add alternative dependency on x11-misc/slim (remove x11-misc/slimlock) by
+  eroen (bug #489018). EAPI bump.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xautolock-2.2.ebuild:
   QA: drop trailing '.' from DESCRIPTION

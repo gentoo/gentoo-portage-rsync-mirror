@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-9999.ebuild,v 1.6 2014/04/07 20:11:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-9999.ebuild,v 1.7 2014/10/20 17:42:08 vapier Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://net-tools.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="nls old-output selinux static"
+IUSE="nls selinux static"
 
 RDEPEND="!<sys-apps/openrc-0.9.9.3
 	selinux? ( sys-libs/libselinux )"
@@ -66,7 +66,6 @@ set_opt() {
 
 src_prepare() {
 	if [[ -n ${PATCH_VER} ]] ; then
-		use old-output || EPATCH_EXCLUDE="0001-revert-621a2f376334f8097604b9fee5783e0f1141e66d-for-.patch"
 		EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch "${WORKDIR}"/${P}-patches-${PATCH_VER}
 	fi
 }

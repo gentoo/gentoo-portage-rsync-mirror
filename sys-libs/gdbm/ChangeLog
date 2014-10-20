@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.80 2014/08/26 11:02:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.81 2014/10/20 17:43:50 vapier Exp $
+
+  20 Oct 2014; Mike Frysinger <vapier@gentoo.org> gdbm-1.11.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   26 Aug 2014; Michał Górny <mgorny@gentoo.org> gdbm-1.10-r1.ebuild,
   gdbm-1.11.ebuild:

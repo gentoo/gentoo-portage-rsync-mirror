@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-31.2.0.ebuild,v 1.1 2014/10/14 20:05:59 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-31.2.0-r1.ebuild,v 1.1 2014/10/20 17:53:11 axs Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -106,6 +106,13 @@ pkg_pretend() {
 	# Ensure we have enough disk space to compile
 	CHECKREQS_DISK_BUILD="4G"
 	check-reqs_pkg_setup
+
+	if use jit && [[ -n ${PROFILE_IS_HARDENED} ]]; then
+		ewarn "You are emerging this package on a hardened profile with USE=jit enabled."
+		ewarn "This is horribly insecure as it disables all PAGEEXEC restrictions."
+		ewarn "Please ensure you know what you are doing.  If you don't, please consider"
+		ewarn "emerging the package with USE=-jit"
+	fi
 }
 
 src_unpack() {
@@ -350,6 +357,8 @@ src_install() {
 	fi
 
 	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{thunderbird-bin,thunderbird}
+	# Required in order for jit to work on hardened, for mozilla-31
+	use jit && pax-mark p "${ED}"${MOZILLA_FIVE_HOME}/{thunderbird,thunderbird-bin}
 
 	# Plugin-container needs to be pax-marked for hardened to ensure plugins such as flash
 	# continue to work as expected.
