@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.17.ebuild,v 1.5 2014/08/05 12:47:08 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.2.4.ebuild,v 1.1 2014/10/20 14:51:55 grozin Exp $
 
 EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
 
 #same order as http://www.sbcl.org/platform-table.html
 BV_X86=1.0.58
-BV_AMD64=1.1.17
+BV_AMD64=1.2.4
 BV_PPC=1.0.28
 BV_SPARC=1.0.28
 BV_ALPHA=1.0.28
@@ -26,7 +26,7 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="debug doc source +threads +unicode pax_kernel zlib"
 
-CDEPEND=">=dev-lisp/asdf-2.33-r3:="
+CDEPEND=">=dev-lisp/asdf-3.1:="
 DEPEND="${CDEPEND}
 		doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )
 		pax_kernel? ( sys-apps/paxctl sys-apps/elfix )"
@@ -84,7 +84,7 @@ src_prepare() {
 	# bug #468482
 	epatch "${FILESDIR}"/concurrency-test.patch
 	# bug #486552
-	epatch "${FILESDIR}"/bsd-sockets-test.patch
+	epatch "${FILESDIR}"/bsd-sockets-test-1.2.patch
 
 	# To make the hardened compiler NOT compile with -fPIE -pie
 	if gcc-specs-pie ; then
@@ -125,7 +125,7 @@ src_compile() {
 		pax-mark -mr "${bindir}"/src/runtime/sbcl
 
 		# Hack to disable PaX on second GENESIS stage
-		sed -i -e '/^echo \/\/doing warm init - compilation phase$/a\paxmark.sh -mr \.\/src\/runtime\/sbcl' \
+		sed -i -e '/^[ \t]*echo \/\/doing warm init - compilation phase$/a\    paxmark.sh -mr \.\/src\/runtime\/sbcl' \
 			"${S}"/make-target-2.sh || die "Cannot disable PaX on second GENESIS runtime"
 	fi
 

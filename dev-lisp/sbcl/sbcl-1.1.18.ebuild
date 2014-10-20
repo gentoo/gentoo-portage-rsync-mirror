@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.18.ebuild,v 1.4 2014/08/05 12:47:08 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.18.ebuild,v 1.5 2014/10/20 14:51:55 grozin Exp $
 
 EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
@@ -26,7 +26,7 @@ SLOT="0/${PV}"
 KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="debug doc source +threads +unicode pax_kernel zlib"
 
-CDEPEND=">=dev-lisp/asdf-2.33-r3:="
+CDEPEND="=dev-lisp/asdf-3.0*:="
 DEPEND="${CDEPEND}
 		doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )
 		pax_kernel? ( sys-apps/paxctl sys-apps/elfix )"

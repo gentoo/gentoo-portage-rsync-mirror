@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-3.0.2.4.ebuild,v 1.3 2013/12/12 09:52:38 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-3.1.4.ebuild,v 1.1 2014/10/20 14:50:25 grozin Exp $
 
 EAPI=5
 inherit eutils
@@ -34,9 +34,10 @@ src_compile() {
 src_install() {
 	insinto /usr/share/common-lisp/source/${PN}
 	doins -r build version.lisp-expr
-	dodoc README TODO
+	dodoc README.md TODO
 	dohtml doc/*.{html,css,ico,png}
 	if use doc; then
+		dohtml -r doc/${PN}
 		insinto /usr/share/doc/${PF}
 		doins doc/${PN}.pdf
 	fi

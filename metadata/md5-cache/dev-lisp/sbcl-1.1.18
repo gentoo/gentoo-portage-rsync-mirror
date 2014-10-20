@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-lisp/asdf-2.33-r3:= doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 ) pax_kernel? ( sys-apps/paxctl sys-apps/elfix )
+DEPEND==dev-lisp/asdf-3.0*:= doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 ) pax_kernel? ( sys-apps/paxctl sys-apps/elfix )
 DESCRIPTION=Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp
 EAPI=5
 HOMEPAGE=http://sbcl.sourceforge.net/
 IUSE=debug doc source +threads +unicode pax_kernel zlib
 KEYWORDS=amd64 ~ppc ~sparc ~x86
 LICENSE=MIT
-RDEPEND=>=dev-lisp/asdf-2.33-r3:= elibc_glibc? ( >=sys-libs/glibc-2.3 || ( <sys-libs/glibc-2.6[nptl] >=sys-libs/glibc-2.6 ) )
+RDEPEND==dev-lisp/asdf-3.0*:= elibc_glibc? ( >=sys-libs/glibc-2.3 || ( <sys-libs/glibc-2.6[nptl] >=sys-libs/glibc-2.6 ) )
 SLOT=0/1.1.18
 SRC_URI=mirror://sourceforge/sbcl/sbcl-1.1.18-source.tar.bz2 x86? ( mirror://sourceforge/sbcl/sbcl-1.0.58-x86-linux-binary.tar.bz2 ) amd64? ( mirror://sourceforge/sbcl/sbcl-1.1.18-x86-64-linux-binary.tar.bz2 ) ppc? ( mirror://sourceforge/sbcl/sbcl-1.0.28-powerpc-linux-binary.tar.bz2 ) sparc? ( mirror://sourceforge/sbcl/sbcl-1.0.28-sparc-linux-binary.tar.bz2 ) alpha? ( mirror://sourceforge/sbcl/sbcl-1.0.28-alpha-linux-binary.tar.bz2 )
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=b95ca4ee60c9337a3a573686d9aadf0f
+_md5_=c877d6895f068817b4fb7067465239e4

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/uiop-3.0.2.1.ebuild,v 1.3 2014/10/05 00:03:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/uiop-3.1.4.ebuild,v 1.1 2014/10/20 14:51:08 grozin Exp $
 
 EAPI=5
 inherit eutils
