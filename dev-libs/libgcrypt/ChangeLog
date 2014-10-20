@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.223 2014/10/17 18:49:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.224 2014/10/20 22:21:19 jer Exp $
+
+  20 Oct 2014; Jeroen Roovers <jer@gentoo.org> libgcrypt-1.5.4-r1.ebuild:
+  Stable for HPPA (bug #524308).
 
 *libgcrypt-1.5.4-r1 (17 Oct 2014)
 

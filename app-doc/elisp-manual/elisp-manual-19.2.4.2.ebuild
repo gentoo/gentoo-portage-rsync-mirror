@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-19.2.4.2.ebuild,v 1.6 2013/04/01 23:27:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-19.2.4.2.ebuild,v 1.7 2014/10/20 22:23:44 ulm Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_P=${PN}-${PV/./-}
 DESCRIPTION="The GNU Emacs Lisp Reference Manual"
 HOMEPAGE="http://www.gnu.org/software/emacs/manual/"
 SRC_URI="ftp://ftp.gnu.org/old-gnu/emacs/${MY_P}.tar.gz
-	mirror://gentoo/${P}-patches.tar.gz"
+	http://dev.gentoo.org/~ulm/emacs/${P}-patches.tar.gz"
 
 LICENSE="Texinfo-manual"
 SLOT="19"

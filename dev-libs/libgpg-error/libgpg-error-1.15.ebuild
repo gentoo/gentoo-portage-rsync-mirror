@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.15.ebuild,v 1.1 2014/09/19 13:22:41 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.15.ebuild,v 1.2 2014/10/20 22:12:21 alonbl Exp $
 
 EAPI=5
 
-inherit eutils libtool multilib-minimal
+inherit eutils libtool multilib-minimal toolchain-funcs
 
 DESCRIPTION="Contains error handling functions used by GnuPG software"
 HOMEPAGE="http://www.gnupg.org/related_software/libgpg-error"
@@ -37,6 +37,7 @@ src_prepare() {
 
 multilib_src_configure() {
 	local myeconfargs=(
+		CC_FOR_BUILD=$(tc-getBUILD_CC)
 		$(use_enable nls)
 		$(use_enable static-libs static)
 		$(use_enable common-lisp languages)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liboil
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.93 2013/08/10 20:36:54 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.94 2014/10/20 22:19:49 jer Exp $
+
+  20 Oct 2014; Jeroen Roovers <jer@gentoo.org> liboil-0.3.17-r2.ebuild:
+  Stable for HPPA (bug #525748).
 
 *liboil-0.3.17-r2 (10 Aug 2013)
 
