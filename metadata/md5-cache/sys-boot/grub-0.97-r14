@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile config configure install postinst postrm preinst prepare prerm setup test
+DEPEND=!static? ( ncurses? ( >=sys-libs/ncurses-5.9-r3 amd64? ( || ( >=sys-libs/ncurses-5.9-r3[abi_x86_32(-)] app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] ) ) ) ) static? ( ncurses? ( >=sys-libs/ncurses-5.9-r3[static-libs(+)] amd64? ( || ( >=sys-libs/ncurses-5.9-r3[abi_x86_32(-)] app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] ) ) ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
+DESCRIPTION=GNU GRUB Legacy boot loader
+EAPI=4
+HOMEPAGE=http://www.gnu.org/software/grub/
+IUSE=custom-cflags ncurses netboot static
+KEYWORDS=~amd64 ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=!static? ( ncurses? ( >=sys-libs/ncurses-5.9-r3 amd64? ( || ( >=sys-libs/ncurses-5.9-r3[abi_x86_32(-)] app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] ) ) ) )
+SLOT=0
+SRC_URI=mirror://gentoo/grub-0.97.tar.gz mirror://gnu-alpha/grub/grub-0.97.tar.gz mirror://gentoo/splash.xpm.gz mirror://gentoo/grub-0.97-patches-1.14.tar.bz2
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	mount-boot	02dd3bb4c5f025fef0fc3ade0f27c217	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=725a5034ee785c6facf616554ede4d7a

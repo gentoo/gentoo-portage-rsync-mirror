@@ -1,0 +1,12 @@
+--- configure.ac	2014-10-20 12:48:18.680041136 -0400
++++ configure.ac.new	2014-10-20 12:52:11.950045394 -0400
+@@ -54,6 +54,9 @@
+   CFLAGS="-m32 $CFLAGS"
+ fi
+ 
++# Force linking with ld.bfd
++CFLAGS="$CFLAGS -fuse-ld=bfd"
++
+ #
+ # Programs
+ #
