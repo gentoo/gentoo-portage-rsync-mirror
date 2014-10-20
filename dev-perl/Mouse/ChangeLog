@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mouse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.41 2014/10/19 20:14:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.42 2014/10/20 02:11:51 patrick Exp $
+
+  20 Oct 2014; Patrick Lauer <patrick@gentoo.org> Mouse-2.4.1.ebuild:
+  Fix header
 
 *Mouse-2.4.1 (19 Oct 2014)
 

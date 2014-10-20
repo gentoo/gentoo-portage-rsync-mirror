@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare pretend setup test unpack
+DEPEND=>=sys-libs/zlib-1.1.3 virtual/libffi virtual/libintl dev-libs/expat dev-libs/openssl bzip2? ( app-arch/bzip2 ) ncurses? ( sys-libs/ncurses ) sqlite? ( dev-db/sqlite:3 ) tk? ( dev-lang/tk:0 dev-tcltk/tix ) !dev-python/pypy-bin:0 doc? ( dev-python/sphinx ) || ( >=dev-lang/python-2.7.5-r2:2.7 virtual/pypy:0= )
+DESCRIPTION=A fast, compliant alternative implementation of the Python language
+EAPI=5
+HOMEPAGE=http://pypy.org/
+IUSE=bzip2 doc +jit ncurses sandbox shadowstack sqlite sse2 tk
+LICENSE=MIT
+PDEPEND=app-admin/python-updater
+RDEPEND=>=sys-libs/zlib-1.1.3 virtual/libffi virtual/libintl dev-libs/expat dev-libs/openssl bzip2? ( app-arch/bzip2 ) ncurses? ( sys-libs/ncurses ) sqlite? ( dev-db/sqlite:3 ) tk? ( dev-lang/tk:0 dev-tcltk/tix ) !dev-python/pypy-bin:0
+SLOT=0/2.4
+SRC_URI=https://bitbucket.org/pypy/pypy/get/release-2.4.0.tar.bz2 -> pypy-2.4.0-src.tar.bz2
+_eclasses_=check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pax-utils	dfe060cb70d89757fde5c1ff8405e950	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=38cbd33343b45b93a24c7268c78e9170
