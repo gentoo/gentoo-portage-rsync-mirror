@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2.3.ebuild,v 1.5 2014/05/15 17:05:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2.3.ebuild,v 1.6 2014/10/20 07:00:23 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils autotools games
 
 MY_P="${P/_/}"
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-format.patch
 	sed -i \
 		-e '/desktop_DATA/d' \
 		-e '/icon_DATA/d' \
@@ -53,29 +54,25 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
-		$(use_enable nls) \
-		|| die
+		$(use_enable nls)
 
 	# Build the temporary lgc-pg:
 	cd "${WORKDIR}"/tmp-build
 	egamesconf \
-		--disable-dependency-tracking \
 		--disable-nls \
-		--datadir="${D}/${GAMES_DATADIR}" \
-		|| die
+		--datadir="${D}/${GAMES_DATADIR}"
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 
 	# Build the temporary lgc-pg:
 	cd "${WORKDIR}"/tmp-build
-	emake || die "emake failed (tmp)"
+	emake
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	keepdir "${GAMES_DATADIR}"/${PN}/{ai_modules,music,terrain}
 
 	# Generate scenario data:
@@ -85,7 +82,6 @@ src_install() {
 		-d "${D}/${GAMES_DATADIR}"/${PN} \
 		|| die "Failed to generate scenario data"
 
-	dodoc AUTHORS ChangeLog README.lgeneral README.lgc-pg TODO
 	newicon lgeneral48.png ${PN}.png
 	make_desktop_entry ${PN} LGeneral
 	prepgamesdirs

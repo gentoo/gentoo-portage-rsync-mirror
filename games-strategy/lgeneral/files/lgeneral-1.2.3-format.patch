@@ -1,0 +1,40 @@
+--- lgc-pg/units.c.old	2014-10-20 08:42:12.389153753 +0200
++++ lgc-pg/units.c	2014-10-20 08:42:41.412883009 +0200
+@@ -552,7 +552,7 @@
+             }
+         }
+         /* get flags */
+-        sprintf( flags, unit_classes[entry.class * 3 + 2] );
++        sprintf( flags, "%s", unit_classes[entry.class * 3 + 2] );
+         if ( apply_unit_mods ) {
+             i = 0;
+             while ( add_flags[i*2][0] != 'X' ) {
+--- src/engine.c.old	2014-10-20 08:44:21.867947804 +0200
++++ src/engine.c	2014-10-20 08:45:19.299413602 +0200
+@@ -2311,7 +2311,7 @@
+                 if ( gui->module_dlg->subdir[0] != 0 )
+                     sprintf( path, "%s/%s", gui->module_dlg->subdir, (char*)gui->module_dlg->lbox->cur_item );
+                 else
+-                    sprintf( path, (char*)gui->module_dlg->lbox->cur_item );
++                    sprintf( path, "%s", (char*)gui->module_dlg->lbox->cur_item );
+                 free( setup.modules[gui->setup->sel_id] );
+                 setup.modules[gui->setup->sel_id] = strdup( path );
+                 gui_handle_player_select( gui->setup->list->cur_item );
+@@ -2756,7 +2756,7 @@
+                      result = gui_get_message_pane_selection(camp_pane);
+                      if (result && strcmp(result, "nextscen") == 0) {
+                          /* start scenario */
+-                         sprintf( setup.fname, camp_cur_scen->scen );
++                         sprintf( setup.fname, "%s", camp_cur_scen->scen );
+                          setup.type = SETUP_DEFAULT_SCEN;
+                          end_scen = 1;
+                          *reinit = 1;
+@@ -4243,7 +4243,7 @@
+                 }
+                 else {
+                     /* next scenario */
+-                    sprintf( setup.fname, camp_cur_scen->scen );
++                    sprintf( setup.fname, "%s", camp_cur_scen->scen );
+                     setup.type = SETUP_CAMP_BRIEFING;
+                     reinit = 1;
+                 }
