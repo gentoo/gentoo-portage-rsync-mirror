@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.6.3.ebuild,v 1.1 2014/10/19 09:16:23 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.6.3.ebuild,v 1.2 2014/10/20 20:46:25 slyfox Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ src_prepare() {
 
 src_install() {
 	doman lynis.8
-	dodoc CHANGELOG FAQ README dev/TODO
+	dodoc CHANGELOG FAQ README
 
 	# Remove the old one during the next stabilize progress
 	exeinto /etc/cron.daily
