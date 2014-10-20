@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/jenkins-bin
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/ChangeLog,v 1.1 2014/10/20 21:24:10 mrueg Exp $
+
+*jenkins-bin-1.584 (20 Oct 2014)
+
+  20 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +files/jenkins-bin.confd,
+  +files/jenkins-bin.init, +jenkins-bin-1.584.ebuild, +metadata.xml:
+  Initial commit. Original ebuild and initfiles from godin-overlay. Added some
+  minor fixes.
