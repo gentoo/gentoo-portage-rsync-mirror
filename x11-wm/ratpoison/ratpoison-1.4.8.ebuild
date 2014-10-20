@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.8.ebuild,v 1.2 2014/09/17 09:56:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.8.ebuild,v 1.3 2014/10/20 15:11:09 jer Exp $
 
 EAPI=5
 
 inherit elisp-common eutils toolchain-funcs
 
-DESCRIPTION="Ratpoison is an extremely light-weight and barebones wm modelled after screen"
+DESCRIPTION="an extremely light-weight and barebones wm modelled after screen"
 HOMEPAGE="http://www.nongnu.org/ratpoison/"
 SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.xz"
 

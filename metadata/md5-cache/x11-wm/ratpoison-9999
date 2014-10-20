@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare unpack
 DEPEND=emacs? ( virtual/emacs ) history? ( sys-libs/readline ) virtual/perl-Pod-Parser x11-libs/libXinerama x11-libs/libXtst xft? ( x11-libs/libXft ) app-arch/xz-utils virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool >=dev-vcs/git-1.8.2.1
-DESCRIPTION=Ratpoison is an extremely light-weight and barebones wm modelled after screen
+DESCRIPTION=an extremely light-weight and barebones wm modelled after screen
 EAPI=5
 HOMEPAGE=http://www.nongnu.org/ratpoison/
 IUSE=debug emacs +history sloppy +xft
@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=emacs? ( virtual/emacs ) history? ( sys-libs/readline ) virtual/perl-Pod-Parser x11-libs/libXinerama x11-libs/libXtst xft? ( x11-libs/libXft )
 SLOT=0
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	32548a82e42dc26e3312581476d2f20c	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=049113b2d078eb0114b129e7f101ff01
+_md5_=b343bbe53286235847937b411fcb77c0
