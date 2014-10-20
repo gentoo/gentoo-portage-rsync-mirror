@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libgnomecanvas-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomecanvas-python/ChangeLog,v 1.48 2014/10/11 11:51:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomecanvas-python/ChangeLog,v 1.49 2014/10/20 09:54:17 pacho Exp $
+
+  20 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  -libgnomecanvas-python-2.28.1.ebuild:
+  Drop old
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org>
   libgnomecanvas-python-2.28.1-r1.ebuild:
