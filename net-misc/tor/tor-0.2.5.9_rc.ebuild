@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.8_rc.ebuild,v 1.1 2014/09/23 11:15:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.9_rc.ebuild,v 1.1 2014/10/20 16:48:46 blueness Exp $
 
 EAPI="5"
 
@@ -68,7 +68,7 @@ src_install() {
 	readme.gentoo_create_doc
 
 	newconfd "${FILESDIR}"/tor.confd tor
-	newinitd "${FILESDIR}"/tor.initd-r6 tor
+	newinitd "${FILESDIR}"/tor.initd-r7 tor
 	systemd_dounit "${FILESDIR}/${PN}.service"
 	systemd_dotmpfilesd "${FILESDIR}/${PN}.conf"
 
