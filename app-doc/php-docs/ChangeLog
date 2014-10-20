@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/php-docs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.58 2012/05/29 16:55:57 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.59 2014/10/20 07:32:12 olemarkus Exp $
+
+  20 Oct 2014; Ole Markus With <olemarkus@gentoo.org>
+  -php-docs-20071125-r2.ebuild, -php-docs-20100730.ebuild,
+  -php-docs-20101029.ebuild:
+  Remove older versions
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org>
   php-docs-20101029-r1.ebuild:
