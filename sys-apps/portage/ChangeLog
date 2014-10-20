@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1414 2014/10/19 04:03:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1415 2014/10/20 04:09:52 dolsen Exp $
+
+*portage-2.2.14 (20 Oct 2014)
+
+  20 Oct 2014; Brian Dolbec <dolsen@gentoo.org> +portage-2.2.14.ebuild:
+  Version bump. Fixes bugs 508364, 524964, 524328, 523684, 506192.
 
   19 Oct 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml
@@ -19,7 +24,8 @@
   -portage-2.2.11-r1.ebuild, -portage-2.2.12-r1.ebuild, -portage-2.2.13.ebuild,
   +portage-2.2.14_rc1.ebuild, portage-9999.ebuild:
   Version bump, cleanout old. Move sbin relocation code from pkg_preinst() to
-  python_install_all() for 9999,
+  python_install_all() for 9999.  Fixes bugs 508364, 523182, 517310, 481578,
+  523494, 523532, 523152, 522084, 523048, 521990.
 
   26 Sep 2014; Brian Dolbec <dolsen@gentoo.org> portage-9999.ebuild:
   Move the admin scripts to /usr/sbin/ in pkg_preinst
