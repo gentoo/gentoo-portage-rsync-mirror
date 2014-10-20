@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Size
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/ChangeLog,v 1.44 2014/08/22 19:10:43 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/ChangeLog,v 1.45 2014/10/20 12:27:42 zlogene Exp $
+
+  20 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Devel-Size-0.780.0.ebuild:
+  Drop old.
 
 *Devel-Size-0.790.0-r1 (22 Aug 2014)
 

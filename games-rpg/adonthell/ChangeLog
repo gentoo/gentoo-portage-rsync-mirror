@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/adonthell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.30 2014/07/29 07:19:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.31 2014/10/20 12:26:24 tupone Exp $
+
+  20 Oct 2014; Alfredo Tupone <tupone@gentoo.org> adonthell-0.3.5-r1.ebuild,
+  +files/adonthell-0.3.5-format.patch:
+  Fix compile with format-security. Bug #520470 by Agostino Sarubbo
 
   29 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> -adonthell-0.3.5.ebuild:
   old

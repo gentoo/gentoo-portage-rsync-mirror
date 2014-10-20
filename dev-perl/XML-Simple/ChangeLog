@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Simple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.86 2014/08/20 17:31:36 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.87 2014/10/20 12:21:10 zlogene Exp $
+
+  20 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -XML-Simple-2.180.0.ebuild:
+  Drop old.
 
 *XML-Simple-2.200.0-r1 (20 Aug 2014)
 

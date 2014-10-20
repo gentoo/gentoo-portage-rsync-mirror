@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MooseX-Types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types/ChangeLog,v 1.34 2014/04/02 12:26:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types/ChangeLog,v 1.35 2014/10/20 12:23:19 zlogene Exp $
+
+  20 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> MooseX-Types-0.350.0.ebuild,
+  MooseX-Types-0.360.0.ebuild:
+  Bump to EAPI=5
 
   02 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> MooseX-Types-0.360.0.ebuild:
   Add mising test dependency wrt bug #506536
