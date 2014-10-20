@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-4.1.ebuild,v 1.1 2014/10/05 18:36:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-4.1-r1.ebuild,v 1.1 2014/10/20 20:28:28 polynomial-c Exp $
 
 EAPI=4
 
@@ -23,7 +23,8 @@ RDEPEND="${CDEPEND}
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-3.82-darwin-library_search-dylib.patch
+		"${FILESDIR}"/${PN}-3.82-darwin-library_search-dylib.patch \
+		"${FILESDIR}"/${P}-fix_null_returns_from_ttyname.patch
 }
 
 src_configure() {
