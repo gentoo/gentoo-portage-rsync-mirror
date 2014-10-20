@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.112 2014/10/04 18:57:05 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.113 2014/10/19 23:57:24 pesa Exp $
+
+*qscintilla-python-2.8.4-r1 (19 Oct 2014)
+
+  19 Oct 2014; Davide Pesavento <pesa@gentoo.org>
+  +qscintilla-python-2.8.4-r1.ebuild:
+  Use default sipdir for compatibility with new PyQt4 buildsystem. Fixes bug
+  #525688.
 
   04 Oct 2014; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   qt is the primary herd.
