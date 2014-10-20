@@ -1,9 +1,12 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.71 2014/10/18 22:53:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.72 2014/10/20 11:39:45 blueness Exp $
+
+  20 Oct 2014; Anthony G. Basile <blueness@gentoo.org> linux/musl/package.mask:
+  Mask >app-misc/pax-utils-0.7 on musl for bug #526048
 
   18 Oct 2014; Anthony G. Basile <blueness@gentoo.org> linux/musl/package.mask:
-  Maske >sys-apps/file-5.17 on musl for bug #525816
+  Mask >sys-apps/file-5.17 on musl for bug #525816
 
   12 Oct 2014; Magnus Granberg <zorry@gentoo.org> linux/amd64/package.use:
   Add pic for media-libs/libpostpros needed for the x86 part #523736
