@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16106 2014/10/19 16:31:56 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16107 2014/10/20 00:26:50 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Davide Pesavento <pesa@gentoo.org> (20 Oct 2014)
+# Does not build with any in-tree version of cmake since 20140713 (bug 506614).
+# Jabber plugin is broken (bug 464690). Masked for removal in 30 days.
+net-im/qutim
 
 # Rick Farina <zerochaos@gentoo.org> (19 Oct 2014)
 # Masked for removal on 19 Nov 2014, use sys-apps/hwids instead.
