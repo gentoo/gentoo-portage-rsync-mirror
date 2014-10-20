@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.128 2014/08/10 21:18:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.129 2014/10/20 13:16:57 voyageur Exp $
+
+*gnustep-base-1.24.7 (20 Oct 2014)
+
+  20 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  +gnustep-base-1.24.7.ebuild:
+  Version bump, bugfix release with TLS and other security improvements, latest
+  timezone data
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   gnustep-base-1.24.6-r1.ebuild:
