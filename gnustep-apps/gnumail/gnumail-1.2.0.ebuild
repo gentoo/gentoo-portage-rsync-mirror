@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.ebuild,v 1.4 2012/08/24 07:15:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.ebuild,v 1.5 2014/10/20 13:33:58 voyageur Exp $
 
 EAPI=4
 inherit gnustep-2
@@ -17,9 +17,9 @@ LICENSE="GPL-2"
 SLOT="0"
 
 IUSE="crypt +emoticon +xface"
-DEPEND="~gnustep-libs/pantomime-${PV}
-	>=gnustep-base/gnustep-gui-0.11.0
-	|| ( gnustep-apps/addresses gnustep-libs/addresseskit )"
+DEPEND=">=gnustep-base/gnustep-gui-0.11.0
+	=gnustep-libs/pantomime-1.2*
+	gnustep-apps/addresses"
 RDEPEND="crypt? ( app-crypt/gnupg )"
 
 src_prepare() {

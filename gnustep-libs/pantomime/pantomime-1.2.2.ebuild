@@ -1,17 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.0_pre3-r1.ebuild,v 1.3 2014/08/10 21:18:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.2.ebuild,v 1.1 2014/10/20 13:36:43 voyageur Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils gnustep-2
 
-MY_PN=${PN/p/P}
+MY_P=${P/p/P}
 
-S=${WORKDIR}/${MY_PN}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A set of Objective-C classes that model a mail system"
 HOMEPAGE="http://www.collaboration-world.com/pantomime/"
-SRC_URI="http://www.collaboration-world.com/pantomime.data/releases/Stable/${MY_PN}-${PV/_/}.tar.gz"
+SRC_URI="http://download.gna.org/gnustep-nonfsf/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1 Elm"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
@@ -22,7 +22,6 @@ DEPEND="dev-libs/openssl"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gscategories.patch
 	sed -i -e "s|ADDITIONAL_LDFLAGS|LIBRARIES_DEPEND_UPON|" \
 		Framework/Pantomime/GNUmakefile || die "as-needed sed failed"
 }

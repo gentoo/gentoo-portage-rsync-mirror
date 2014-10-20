@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-libs/pantomime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.30 2014/08/10 21:18:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.31 2014/10/20 13:36:43 voyageur Exp $
+
+*pantomime-1.2.2 (20 Oct 2014)
+
+  20 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  -pantomime-1.2.0_pre3.ebuild, -pantomime-1.2.0_pre3-r1.ebuild,
+  +pantomime-1.2.2.ebuild, -files/pantomime-1.2.0_pre3-gscategories.patch:
+  Version bump, mostly portability and bug fixes
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pantomime-1.2.0.ebuild,
   pantomime-1.2.0_pre3-r1.ebuild, pantomime-1.2.0_pre3.ebuild:

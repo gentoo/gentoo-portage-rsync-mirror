@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libelf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.45 2014/10/18 15:33:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.46 2014/10/20 13:42:34 jer Exp $
+
+  20 Oct 2014; Jeroen Roovers <jer@gentoo.org> libelf-0.8.13-r2.ebuild:
+  Stable for HPPA (bug #525746).
 
   18 Oct 2014; Anthony G. Basile <blueness@gentoo.org> libelf-0.8.13-r2.ebuild:
   Stable on arm, ppc and ppc64.  Bug #525746
