@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/lash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.41 2014/07/09 18:25:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.43 2014/10/20 10:19:34 pacho Exp $
+
+  20 Oct 2014; Pacho Ramos <pacho@gentoo.org> lash-0.5.4-r2.ebuild:
+  x86 stable, bug #525804
+
+  20 Oct 2014; Pacho Ramos <pacho@gentoo.org> lash-0.5.4-r2.ebuild:
+  amd64 stable, bug #525804
 
   09 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
   +files/lash-0.5.4-strcmp.patch, +files/lash-0.5.4-underlinking.patch,
