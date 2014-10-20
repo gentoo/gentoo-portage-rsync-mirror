@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p30.ebuild,v 1.2 2014/10/19 20:32:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p30.ebuild,v 1.3 2014/10/20 05:14:35 vapier Exp $
 
 EAPI="4"
 
@@ -204,7 +204,7 @@ src_install() {
 	fi
 
 	if use examples ; then
-		for d in examples/{functions,misc,scripts,scripts.noah,scripts.v2} ; do
+		for d in examples/{functions,misc,scripts,startup-files} ; do
 			exeinto /usr/share/doc/${PF}/${d}
 			insinto /usr/share/doc/${PF}/${d}
 			for f in ${d}/* ; do

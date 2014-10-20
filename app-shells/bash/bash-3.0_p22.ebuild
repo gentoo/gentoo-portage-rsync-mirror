@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0_p22.ebuild,v 1.1 2014/10/19 20:31:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0_p22.ebuild,v 1.2 2014/10/20 05:02:36 vapier Exp $
 
 EAPI="4"
 
@@ -80,7 +80,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0-read-builtin-pipe.patch #87093
 	epatch "${FILESDIR}"/${PN}-3.0-trap-fg-signals.patch
 	epatch "${FILESDIR}"/${PN}-3.0-pgrp-pipe-fix.patch #92349
-	epatch "${FILESDIR}"/${PN}-3.0-configs.patch
 	epatch "${FILESDIR}"/${PN}-3.0-strnlen.patch
 
 	epatch_user
