@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/uriparser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.47 2014/03/24 15:09:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.48 2014/10/20 15:56:31 sping Exp $
+
+*uriparser-0.8.1 (20 Oct 2014)
+
+  20 Oct 2014; Sebastian Pipping <sping@gentoo.org> +uriparser-0.8.1.ebuild:
+  Bump to 0.8.1
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> uriparser-0.8.0.ebuild:
   Stable for ppc, wrt bug #502726

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.5 2014/10/20 10:15:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.6 2014/10/20 15:45:51 axs Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -316,7 +316,7 @@ media-sound/fluidsynth -abi_x86_32
 media-sound/gsm -abi_x86_32
 media-sound/jack-audio-connection-kit -abi_x86_32
 media-sound/lame -abi_x86_32
-media-sound/lame -abi_x86_32
+media-sound/lash -abi_x86_32
 media-sound/mpg123 -abi_x86_32
 media-sound/musepack-tools -abi_x86_32
 media-sound/pulseaudio -abi_x86_32
