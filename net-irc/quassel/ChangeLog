@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.178 2014/09/24 16:36:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.179 2014/10/20 02:53:10 patrick Exp $
+
+  20 Oct 2014; Patrick Lauer <patrick@gentoo.org> quassel-0.11.0.ebuild:
+  Add phonon to kde required use to fix build failure #523668
 
 *quassel-0.11.0 (24 Sep 2014)
 
