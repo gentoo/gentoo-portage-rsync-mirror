@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/libnfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/ChangeLog,v 1.14 2014/08/20 10:44:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/ChangeLog,v 1.15 2014/10/20 09:27:10 jer Exp $
+
+  20 Oct 2014; Jeroen Roovers <jer@gentoo.org> libnfs-1.9.5.ebuild:
+  Marked ~hppa (bug #525846).
 
   20 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libnfs-1.9.5.ebuild:
   Stable for x86, wrt bug #510208
