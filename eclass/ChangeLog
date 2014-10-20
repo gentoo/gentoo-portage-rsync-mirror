@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1389 2014/10/19 20:59:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1390 2014/10/20 12:47:32 dilfridge Exp $
+
+  20 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  Output which ebuild actually has bad EAPI
 
   19 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
   Move EAPI=0,1,2,3 warning into global scope to become ultra-annoying. Add QA

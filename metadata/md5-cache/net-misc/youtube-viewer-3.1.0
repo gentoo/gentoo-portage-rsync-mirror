@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-lang/perl-5.16.0 dev-perl/Data-Dump dev-perl/libwww-perl || ( media-video/mplayer[X,network] media-video/mplayer2[X,network] media-video/mpv[X] ) virtual/perl-File-Spec virtual/perl-Getopt-Long virtual/perl-Term-ANSIColor virtual/perl-Text-ParseWords virtual/perl-Text-Tabs+Wrap gtk? ( dev-perl/File-ShareDir >=dev-perl/gtk2-perl-1.244.0 virtual/freedesktop-icon-theme x11-libs/gdk-pixbuf:2[X,jpeg] ) dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=https://github.com/trizen/youtube-viewer/tarball/3.1.0 -> youtube-viewer-3.1.0.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	54c8129437c6bc8fbaa4ee5d955384ba	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	e22596c870f09911db9a237ca79ee872	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=0f7b34fb709659741ac0d10f887785c6

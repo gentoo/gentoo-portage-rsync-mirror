@@ -8,5 +8,5 @@ LICENSE=GPL-2 OFL-1.1
 RDEPEND=>=dev-perl/Alien-SDL-1.434 dev-perl/Capture-Tiny dev-perl/File-ShareDir dev-perl/Test-Most dev-perl/Tie-Simple media-libs/libpng:0 media-libs/libsdl media-libs/sdl-gfx media-libs/sdl-image media-libs/sdl-mixer media-libs/sdl-pango media-libs/sdl-ttf media-libs/smpeg media-libs/tiff:0 virtual/glu virtual/jpeg virtual/opengl virtual/perl-ExtUtils-CBuilder >=virtual/perl-Module-Build-0.400.0 virtual/perl-Scalar-List-Utils virtual/perl-Test-Simple dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/F/FR/FROGGS/SDL-2.544.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	54c8129437c6bc8fbaa4ee5d955384ba	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	e22596c870f09911db9a237ca79ee872	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=94f44aa29b68783532ea00b7932afdbf

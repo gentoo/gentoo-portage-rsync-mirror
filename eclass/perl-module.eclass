@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.142 2014/10/19 20:59:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.143 2014/10/20 12:47:32 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -58,6 +58,7 @@ case "${EAPI:-0}" in
 	*)
 		ewarn
 		ewarn "******************************************************************"
+		ewarn "${EBUILD}:"
 		ewarn "Support for EAPI=${EAPI:-0} in perl-module.eclass will be removed"
 		ewarn "on 1/Nov/2014. Please fix your overlay ebuilds to use EAPI=5."
 		ewarn "******************************************************************"
