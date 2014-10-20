@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.16.3.ebuild,v 1.1 2014/09/12 21:47:29 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.16.3.ebuild,v 1.3 2014/10/19 23:28:02 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -8,8 +8,8 @@ PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 inherit eutils python-r1 toolchain-funcs
 
 DESCRIPTION="Python extension module generator for C and C++ libraries"
-HOMEPAGE="http://www.riverbankcomputing.co.uk/software/sip/intro http://pypi.python.org/pypi/SIP"
-LICENSE="|| ( GPL-2 GPL-3 sip )"
+HOMEPAGE="http://www.riverbankcomputing.co.uk/software/sip/intro https://pypi.python.org/pypi/SIP"
+LICENSE="|| ( GPL-2 GPL-3 SIP )"
 
 if [[ ${PV} == *9999* ]]; then
 	# live version from mercurial repo
@@ -72,10 +72,8 @@ src_configure() {
 	configuration() {
 		local myconf=(
 			"${PYTHON}" configure.py
-			--bindir="${EPREFIX}/usr/bin"
 			--destdir="$(python_get_sitedir)"
 			--incdir="$(python_get_includedir)"
-			--sipdir="${EPREFIX}/usr/share/sip"
 			$(use debug && echo --debug)
 			AR="$(tc-getAR) cqs"
 			CC="$(tc-getCC)"
