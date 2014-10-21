@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.432 2014/10/19 17:42:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.433 2014/10/21 18:56:28 grobian Exp $
+
+  21 Oct 2014; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/10.10/profile.bashrc:
+  Force older deployment target on Yosemite for gcc-apple
 
   19 Oct 2014; Fabian Groffen <grobian@gentoo.org> +darwin/macos/10.10/eapi,
   +darwin/macos/10.10/make.defaults, +darwin/macos/10.10/package.mask,

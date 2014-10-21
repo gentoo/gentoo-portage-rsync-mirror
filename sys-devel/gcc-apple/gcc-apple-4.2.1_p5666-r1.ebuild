@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5666-r1.ebuild,v 1.5 2014/10/19 19:03:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5666-r1.ebuild,v 1.6 2014/10/21 18:55:02 grobian Exp $
 
 EAPI="3"
 
@@ -112,7 +112,8 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-${GCC_VERS}-dsymutil.patch
 
 	# Pseudo-support OS X 10.10
-	epatch "${FILESDIR}"/${P}-darwin14.patch
+	[[ ${CHOST} == *-darwin14 ]] && \
+		epatch "${FILESDIR}"/${P}-darwin14.patch
 
 	# bootstrapping might fail with host provided gcc on 10.4/x86
 	if ! is_crosscompile && ! echo "int main(){return 0;}" | gcc -o "${T}"/foo \
