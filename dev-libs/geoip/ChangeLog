@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.226 2014/10/18 14:17:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.227 2014/10/21 09:09:38 jer Exp $
+
+*geoip-1.6.2-r1 (21 Oct 2014)
+
+  21 Oct 2014; Jeroen Roovers <jer@gentoo.org> geoip-1.6.2.ebuild,
+  +geoip-1.6.2-r1.ebuild, -files/geoipupdate-r4.sh, +files/geoipupdate-r5.sh:
+  Set symlinks for GeoLite* -> GeoIP* in geoipupdate.sh (bug #525924).
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> geoip-1.6.2.ebuild:
   Stable for ppc, wrt bug #523034

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.0-r1.ebuild,v 1.2 2014/10/16 08:58:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.0-r1.ebuild,v 1.3 2014/10/21 09:12:21 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -273,7 +273,7 @@ pkg_postinst() {
 
 	# NM doesn't fallback to the second listed plugin, upstream bug #738611
 	if [[ -e "${EROOT}etc/NetworkManager/NetworkManager.conf" ]]; then
-		if grep -q plugins "${EROOT}etc/NetworkManager/NetworkManager.conf" | grep -q ifnet; then
+		if grep plugins "${EROOT}etc/NetworkManager/NetworkManager.conf" | grep -q ifnet; then
 			ewarn
 			ewarn "You seem to use 'ifnet' plugin in ${EROOT}etc/NetworkManager/NetworkManager.conf"
 			ewarn "Since it won't be used when running under Systemd, you will need to stop setting"

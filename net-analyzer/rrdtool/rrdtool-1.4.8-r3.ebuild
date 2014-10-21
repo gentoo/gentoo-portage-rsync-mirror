@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8-r3.ebuild,v 1.3 2014/08/15 09:19:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8-r3.ebuild,v 1.4 2014/10/21 09:20:58 dilfridge Exp $
 
 EAPI="5"
 
@@ -28,7 +28,7 @@ CDEPEND="
 		>=x11-libs/pango-1.28
 	)
 	lua? ( dev-lang/lua[deprecated] )
-	perl? ( dev-lang/perl )
+	perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS} )
 	tcl? ( dev-lang/tcl )
 	tcpd? ( sys-apps/tcp-wrappers )

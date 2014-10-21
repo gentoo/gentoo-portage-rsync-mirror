@@ -35,6 +35,9 @@ if [ -d "${GEOIPDIR}" ]; then
 					gunzip -fdc "${TMPDIR}/${fname}.dat.gz" > "${TMPDIR}/${fname}.dat"
 					mv "${TMPDIR}/${fname}.dat" "${GEOIPDIR}/${fname}.dat"
 					chmod 0644 "${GEOIPDIR}/${fname}.dat"
+					case ${fname} in
+						GeoLite*) ln -sf ${fname}.dat `echo ${fname} | sed 's/GeoLite/GeoIP/'`.dat ;;
+					esac
 				fi
 			fi
 		done

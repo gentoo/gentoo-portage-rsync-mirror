@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-4.0.11.ebuild,v 1.1 2014/05/06 21:31:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-4.0.11.ebuild,v 1.2 2014/10/21 09:14:59 dilfridge Exp $
 
 EAPI=5
 
+GENTOO_DEPEND_ON_PERL_SUBSLOT=yes
 inherit eutils perl-app versionator
 
 DESCRIPTION="Generates ppds out of xml foomatic printer description files"

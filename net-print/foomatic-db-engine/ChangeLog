@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.81 2014/05/06 21:31:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.82 2014/10/21 09:14:59 dilfridge Exp $
+
+  21 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  foomatic-db-engine-4.0.11.ebuild:
+  Use slot operator on perl
 
 *foomatic-db-engine-4.0.11 (06 May 2014)
 
