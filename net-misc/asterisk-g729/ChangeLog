@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk-g729
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.10 2014/02/10 10:44:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.11 2014/10/21 13:25:48 chainsaw Exp $
+
+  21 Oct 2014; Tony Vroon <chainsaw@gentoo.org>
+  -asterisk-g729-1.8.4.3.1.5-r2.ebuild, -asterisk-g729-1.8.4.3.1.6.ebuild:
+  Remove ebuilds corresponding to Asterisk 1.8 branch which is no longer in
+  portage. As flagged up by Patrick "bonsaikitten" Lauer on #gentoo-dev.
 
 *asterisk-g729-11.0.3.1.6 (10 Feb 2014)
 *asterisk-g729-1.8.4.3.1.6 (10 Feb 2014)
