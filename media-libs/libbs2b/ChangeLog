@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libbs2b
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/ChangeLog,v 1.20 2014/07/27 08:26:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/ChangeLog,v 1.21 2014/10/21 17:50:12 jer Exp $
+
+  21 Oct 2014; Jeroen Roovers <jer@gentoo.org> libbs2b-3.1.0-r1.ebuild:
+  Stable for HPPA (bug #526006).
 
 *libbs2b-3.1.0-r1 (27 Jul 2014)
 

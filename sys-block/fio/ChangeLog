@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/fio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.55 2014/09/24 19:48:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.56 2014/10/21 17:55:52 vapier Exp $
+
+*fio-2.1.13 (21 Oct 2014)
+
+  21 Oct 2014; Mike Frysinger <vapier@gentoo.org> +fio-2.1.13.ebuild:
+  Version bump.
 
   24 Sep 2014; Markus Meier <maekke@gentoo.org> fio-2.1.11-r1.ebuild:
   add ~arm, bug #519618

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-net
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.49 2014/06/18 19:56:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.50 2014/10/21 17:51:43 jer Exp $
+
+  21 Oct 2014; Jeroen Roovers <jer@gentoo.org> sdl-net-1.2.8-r1.ebuild:
+  Stable for HPPA (bug #525762).
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> sdl-net-1.2.8-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

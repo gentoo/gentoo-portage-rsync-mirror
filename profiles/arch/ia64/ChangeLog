@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.213 2014/10/18 18:14:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.214 2014/10/21 17:49:22 vapier Exp $
+
+  21 Oct 2014; Mike Frysinger <vapier@gentoo.org> use.mask:
+  Mask glusterfs/rbd USE flags #519618.
 
   18 Oct 2014; Mike Frysinger <vapier@gentoo.org> use.mask:
   Mask USE=seccomp until the kernel/library gets support #524148 by Christian

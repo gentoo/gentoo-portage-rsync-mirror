@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.72 2014/10/18 14:26:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.73 2014/10/21 17:51:14 jer Exp $
+
+  21 Oct 2014; Jeroen Roovers <jer@gentoo.org> sdl-ttf-2.0.11-r1.ebuild:
+  Stable for HPPA (bug #525488).
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sdl-ttf-2.0.11-r1.ebuild:
   Stable for ppc, wrt bug #525488

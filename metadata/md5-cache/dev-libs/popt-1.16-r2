@@ -4,10 +4,10 @@ DESCRIPTION=Parse Options - Command line parser
 EAPI=5
 HOMEPAGE=http://rpm5.org/
 IUSE=nls static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
-KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux
 LICENSE=MIT
 RDEPEND=nls? ( >=virtual/libintl-0-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] )
 SLOT=0
 SRC_URI=http://rpm5.org/files/popt/popt-1.16.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	9eb4b5fb858228316d8bb32ada51f6a5	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=9ee46cf92ff37c3b2006b5be8e9cdd29
+_md5_=6b40db139e825c03c4abc9628c29331d
