@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-7.1.22.ebuild,v 1.1 2014/09/18 09:50:34 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-7.1.24.ebuild,v 1.1 2014/10/21 08:32:27 keri Exp $
 
 EAPI=4
 
@@ -98,6 +98,7 @@ src_compile() {
 	if ! use minimal ; then
 		cd "${S}/packages" || die
 		emake
+		./report-failed || die "Cannot report failed packages"
 	fi
 }
 
@@ -108,6 +109,7 @@ src_test() {
 	if ! use minimal ; then
 		cd "${S}/packages" || die
 		emake check
+		./report-failed || die "Cannot report failed packages"
 	fi
 }
 
@@ -119,6 +121,7 @@ src_install() {
 		if use doc ; then
 			emake -C packages DESTDIR="${D}" html-install
 		fi
+		./packages/report-failed || die "Cannot report failed packages"
 	fi
 
 	dodoc ReleaseNotes/relnotes-5.10 INSTALL README VERSION
