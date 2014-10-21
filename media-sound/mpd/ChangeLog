@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.359 2014/10/20 09:27:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.360 2014/10/21 15:19:39 angelos Exp $
+
+  21 Oct 2014; Christoph Mende <angelos@gentoo.org> mpd-0.19.1.ebuild:
+  USE=upnp depends on USE=expat (bug #526190)
 
   20 Oct 2014; Jeroen Roovers <jer@gentoo.org> mpd-0.19.1.ebuild:
   Marked ~hppa (bug #525846).
