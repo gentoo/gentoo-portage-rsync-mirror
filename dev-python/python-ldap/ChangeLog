@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.138 2014/10/17 15:49:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.139 2014/10/21 12:22:48 jer Exp $
+
+  21 Oct 2014; Jeroen Roovers <jer@gentoo.org> python-ldap-2.4.15.ebuild:
+  Stable for HPPA (bug #525636).
 
   17 Oct 2014; Ian Delaney <idella4@gentoo.org> python-ldap-2.4.18.ebuild:
   set sphinx back behind use doc, fix typo

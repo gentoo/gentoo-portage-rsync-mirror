@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Install
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.31 2014/10/19 21:26:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.32 2014/10/21 12:23:45 jer Exp $
+
+  21 Oct 2014; Jeroen Roovers <jer@gentoo.org> Sub-Install-0.926.0-r1.ebuild:
+  Stable for HPPA (bug #525906).
 
   19 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   +Sub-Install-0.925.0.ebuild:

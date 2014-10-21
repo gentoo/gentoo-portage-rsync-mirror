@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.178 2014/10/20 05:43:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.179 2014/10/21 12:07:37 jer Exp $
+
+  21 Oct 2014; Jeroen Roovers <jer@gentoo.org> psycopg-2.5.3.ebuild:
+  Stable for HPPA (bug #525508).
 
   20 Oct 2014; Ian Delaney <idella4@gentoo.org>
   -files/psycopg-2.0.12-setup.py.patch, -psycopg-1.1.21-r1.ebuild,

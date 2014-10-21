@@ -1,10 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.617 2014/10/19 12:04:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.618 2014/10/21 12:14:05 vapier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
-#
+
+# Mike Frysinger <vapier@gentoo.org> (21 Oct 2014)
+# Most targets do not support ASAN/etc... #504200.
+sys-devel/gcc sanitize
 
 # Pacho Ramos <pacho@gentoo.org> (19 Oct 2014)
 # swfdec is masked for removal, bug #525834

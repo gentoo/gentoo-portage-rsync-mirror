@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.736 2014/10/19 20:08:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.737 2014/10/21 12:14:05 vapier Exp $
+
+  21 Oct 2014; Mike Frysinger <vapier@gentoo.org> package.use.mask:
+  Mask sys-devel/gcc[sanitize] #504200.
 
   19 Oct 2014; Mike Gilbert <floppym@gentoo.org> use.mask:
   Mask apparmor.
