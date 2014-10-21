@@ -1,6 +1,9 @@
 # ChangeLog for media-video/binkplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.30 2014/10/18 22:11:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.31 2014/10/21 21:44:50 pacho Exp $
+
+  21 Oct 2014; Pacho Ramos <pacho@gentoo.org> binkplayer-1.99w.ebuild:
+  Support multilib providers for deps. Bump to EAPI=5.
 
   18 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> -binkplayer-1.9p.ebuild:
   old

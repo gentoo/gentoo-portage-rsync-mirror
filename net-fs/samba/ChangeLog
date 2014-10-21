@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.688 2014/10/11 12:06:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.689 2014/10/21 21:59:36 polynomial-c Exp $
+
+*samba-4.1.13 (21 Oct 2014)
+
+  21 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> -samba-4.1.11.ebuild,
+  +samba-4.1.13.ebuild:
+  Version bump. Removed old.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> samba-3.6.23-r1.ebuild:
   arm stable, bug #512012

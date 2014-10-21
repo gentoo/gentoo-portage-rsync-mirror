@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.11.ebuild,v 1.2 2014/08/06 10:59:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.13.ebuild,v 1.1 2014/10/21 21:59:36 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -67,7 +67,6 @@ CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 
 # sys-apps/dmapi is an automagic dependency (see bug #474492)
 PATCHES=(
-	"${FILESDIR}/${PN}-4.1.0-remove-dmapi-automagic.patch"
 	"${FILESDIR}/named.conf.dlz.patch"
 	"${FILESDIR}/${PN}-4.0.19-automagic_aio_fix.patch"
 )
