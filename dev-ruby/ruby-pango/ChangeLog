@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.90 2014/10/17 00:57:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.91 2014/10/21 00:03:40 mrueg Exp $
+
+  21 Oct 2014; Manuel Rüger <mrueg@gentoo.org> ruby-pango-2.2.2.ebuild:
+  Whitespace.
 
 *ruby-pango-2.2.2 (17 Oct 2014)
 
