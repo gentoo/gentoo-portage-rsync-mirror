@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/quilt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.60 2013/06/10 19:37:35 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.61 2014/10/21 22:37:19 mpagano Exp $
+
+*quilt-0.63 (21 Oct 2014)
+
+  21 Oct 2014; Mike Pagano <mpagano@gentoo.org> -quilt-0.60.ebuild,
+  +quilt-0.63.ebuild, -files/quilt-0.60-no-graphviz.patch,
+  +files/quilt-0.63-bash-completion.patch, +files/quilt-0.63-no-graphviz.patch:
+  Version bump to 0.63. Remove old version. Fix bash completion bug. See bug
+  #526294
 
   10 Jun 2013; Markos Chandras <hwoarang@gentoo.org> quilt-0.60.ebuild,
   quilt-9999.ebuild:
