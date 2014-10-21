@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.497 2014/09/29 10:54:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.498 2014/10/21 09:41:28 chainsaw Exp $
+
+*asterisk-12.6.1 (21 Oct 2014)
+*asterisk-11.13.1 (21 Oct 2014)
+
+  21 Oct 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.28.2.ebuild,
+  -asterisk-1.8.29.0.ebuild, -asterisk-11.13.0.ebuild,
+  +asterisk-11.13.1.ebuild, -asterisk-12.5.1.ebuild, -asterisk-12.6.0.ebuild,
+  +asterisk-12.6.1.ebuild, -files/1.6.0/asterisk.confd,
+  -files/1.8.0/asterisk.initd4, -files/1.8.0/asterisk.initd5,
+  -files/1.8.0/asterisk.initd6:
+  New releases on the 11 & 12 branches to address the POODLE (AST-2014-011) SSL
+  3.0 vulnerability. The 1.8 branch is hereby removed from portage as
+  previously announced. 11 is low-churn and ideal to target for production
+  environments. Our patch sets against 1.8 cost significant effort to maintain
+  and essentially add 11-branch features to it.
 
 *asterisk-12.6.0 (29 Sep 2014)
 

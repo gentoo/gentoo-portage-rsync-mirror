@@ -12,7 +12,6 @@
     <flag name="samples">Install sample sound and configuration files (default: on)</flag>
     <flag name="srtp">Enable support for encrypted voice transmission (secure RTP)</flag>
     <flag name="gtalk">Enable support for Google Talk services</flag>
-    <flag name="ais">Support clustering using the Application Interface Specification framework</flag>
     <flag name="osplookup">Support secure peering using the Open Settlement Protocol</flag>
     <flag name="http">Enable embedded web server</flag>
     <flag name="cluster">Enable high-availability support through the Corosync Cluster Engine</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.28.2.ebuild,v 1.4 2014/09/18 10:29:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.13.1.ebuild,v 1.1 2014/10/21 09:41:28 chainsaw Exp $
 
 EAPI=5
 inherit autotools base eutils linux-info multilib user
@@ -10,22 +10,19 @@ MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz
-	 mirror://gentoo/gentoo-asterisk-patchset-1.20.tar.bz2"
+	 mirror://gentoo/gentoo-asterisk-patchset-3.13.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE_VOICEMAIL_STORAGE="
 	+voicemail_storage_file
 	voicemail_storage_odbc
 	voicemail_storage_imap
 "
-IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius selinux snmp span speex sqlite sqlite3 srtp static syslog vorbis"
-
+IUSE="${IUSE_VOICEMAIL_STORAGE} alsa bluetooth calendar +caps cluster curl dahdi debug doc freetds gtalk http iconv ilbc jabber ldap libedit lua mysql newt +samples odbc osplookup oss portaudio postgres radius selinux snmp span speex srtp static syslog vorbis"
 IUSE_EXPAND="VOICEMAIL_STORAGE"
-
-REQUIRED_USE="
-	gtalk? ( jabber )
+REQUIRED_USE="gtalk? ( jabber )
 	^^ ( ${IUSE_VOICEMAIL_STORAGE/+/} )
 	voicemail_storage_odbc? ( odbc )
 "
@@ -33,18 +30,19 @@ REQUIRED_USE="
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/asterisk-patchset" )
 
-RDEPEND="dev-libs/popt
+RDEPEND="dev-db/sqlite:3
+	dev-libs/popt
 	dev-libs/libxml2
 	dev-libs/openssl
 	sys-libs/ncurses
 	sys-libs/zlib
-	ais? ( sys-cluster/openais )
 	alsa? ( media-libs/alsa-lib )
 	bluetooth? ( net-wireless/bluez )
 	calendar? ( net-libs/neon
 		 dev-libs/libical
 		 dev-libs/iksemel )
 	caps? ( sys-libs/libcap )
+	cluster? ( sys-cluster/corosync )
 	curl? ( net-misc/curl )
 	dahdi? ( >=net-libs/libpri-1.4.12_beta2
 		net-misc/dahdi-tools )
@@ -52,9 +50,10 @@ RDEPEND="dev-libs/popt
 	gtalk? ( dev-libs/iksemel )
 	http? ( dev-libs/gmime:2.6 )
 	iconv? ( virtual/libiconv )
+	ilbc? ( dev-libs/ilbc-rfc3951 )
 	jabber? ( dev-libs/iksemel )
-	jingle? ( dev-libs/iksemel )
 	ldap? ( net-nds/openldap )
+	libedit? ( dev-libs/libedit )
 	lua? ( dev-lang/lua )
 	mysql? ( virtual/mysql )
 	newt? ( dev-libs/newt )
@@ -67,16 +66,15 @@ RDEPEND="dev-libs/popt
 	snmp? ( net-analyzer/net-snmp )
 	span? ( media-libs/spandsp )
 	speex? ( media-libs/speex )
-	sqlite? ( dev-db/sqlite:0 )
-	sqlite3? ( dev-db/sqlite:3 )
 	srtp? ( net-libs/libsrtp )
 	vorbis? ( media-libs/libvorbis )"
 
 DEPEND="${RDEPEND}
-	voicemail_storage_imap? ( virtual/imap-c-client )
 	!net-libs/openh323
 	!net-libs/pjsip
-	virtual/pkgconfig"
+	voicemail_storage_imap? ( virtual/imap-c-client )
+	virtual/pkgconfig
+"
 
 RDEPEND="${RDEPEND}
 	syslog? ( virtual/logger )"
@@ -152,6 +150,10 @@ src_configure() {
 	menuselect/menuselect --enable func_aes menuselect.makeopts
 	menuselect/menuselect --enable chan_iax2 menuselect.makeopts
 
+	# SQlite3 is now the main database backend, enable related features
+	menuselect/menuselect --enable cdr_sqlite3_custom menuselect.makeopts
+	menuselect/menuselect --enable cel_sqlite3_custom menuselect.makeopts
+
 	# The others are based on USE-flag settings
 	use_select() {
 		local state=$(use "$1" && echo enable || echo disable)
@@ -163,31 +165,29 @@ src_configure() {
 		done
 	}
 
-	use_select ais			res_ais
 	use_select alsa			chan_alsa
-	use_select bluetooth	chan_mobile
+	use_select bluetooth		chan_mobile
 	use_select calendar		res_calendar res_calendar_{caldav,ews,exchange,icalendar}
+	use_select cluster		res_corosync
 	use_select curl			func_curl res_config_curl res_curl
 	use_select dahdi		app_dahdibarge app_dahdiras chan_dahdi codec_dahdi res_timing_dahdi
 	use_select freetds		{cdr,cel}_tds
-	use_select gtalk		chan_gtalk
+	use_select gtalk		chan_motif
 	use_select http			res_http_post
 	use_select iconv		func_iconv
-	use_select jabber		res_jabber
-	use_select jingle		chan_jingle
+	use_select jabber		res_xmpp
+	use_select ilbc                 codec_ilbc format_ilbc
 	use_select ldap			res_config_ldap
 	use_select lua			pbx_lua
 	use_select mysql		app_mysql cdr_mysql res_config_mysql
 	use_select odbc			cdr_adaptive_odbc res_config_odbc {cdr,cel,res,func}_odbc
-	use_select osplookup	app_osplookup
+	use_select osplookup		app_osplookup
 	use_select oss			chan_oss
 	use_select postgres		{cdr,cel}_pgsql res_config_pgsql
 	use_select radius		{cdr,cel}_radius
 	use_select snmp			res_snmp
 	use_select span			res_fax_spandsp
 	use_select speex		{codec,func}_speex
-	use_select sqlite		cdr_sqlite
-	use_select sqlite3		{cdr,cel}_sqlite3_custom
 	use_select srtp			res_srtp
 	use_select syslog		cdr_syslog
 	use_select vorbis		format_ogg_vorbis
@@ -198,6 +198,12 @@ src_configure() {
 			menuselect/menuselect --enable $(echo ${vmst##*_} | tr '[:lower:]' '[:upper:]')_STORAGE menuselect.makeopts
 		fi
 	done
+
+	if use debug; then
+		for o in DONT_OPTIMIZE DEBUG_THREADS BETTER_BACKTRACES; do
+			menuselect/menuselect --enable $o menuselect.makeopts
+		done
+	fi
 }
 
 src_compile() {
@@ -213,12 +219,14 @@ src_install() {
 		insinto /etc/radiusclient-ng/
 		doins contrib/dictionary.digium
 	fi
+	diropts -m 0750 -o root -g asterisk
+	keepdir	/etc/asterisk
 	if use samples; then
 		emake DESTDIR="${D}" samples
 		for conffile in "${D}"etc/asterisk/*.*
 		do
-			chown asterisk:asterisk $conffile
-			chmod 0660 $conffile
+			chown root:root $conffile
+			chmod 0644 $conffile
 		done
 		einfo "Sample files have been installed"
 	else
@@ -231,8 +239,7 @@ src_install() {
 	rm -rf "${D}"var/spool/asterisk/voicemail/default || die
 
 	# keep directories
-	diropts -m 0770 -o asterisk -g asterisk
-	keepdir	/etc/asterisk
+	diropts -m 0770 -o asterisk asterisk
 	keepdir /var/lib/asterisk
 	keepdir /var/spool/asterisk
 	keepdir /var/spool/asterisk/{system,tmp,meetme,monitor,dictate,voicemail}
@@ -254,7 +261,7 @@ src_install() {
 		dodoc doc/*.pdf
 	fi
 
-	# install SIP scripts; bugs #300832 & #414585
+	# install SIP scripts; bug #300832
 	#
 	dodoc "${FILESDIR}/1.6.2/sip_calc_auth"
 	dodoc "${FILESDIR}/1.8.0/find_call_sip_trace.sh"
@@ -283,9 +290,8 @@ pkg_postinst() {
 	elog "#gentoo-voip @ irc.freenode.net"
 	echo
 	echo
-	elog "1.6 -> 1.8 changes that you may care about:"
-	elog "http://svn.asterisk.org/svn/${PN}/tags/${PV}/UPGRADE.txt"
-	elog "or: bzless ${ROOT}usr/share/doc/${PF}/UPGRADE.txt.bz2"
+	elog "Please read the Asterisk 11 upgrade document:"
+	elog "https://wiki.asterisk.org/wiki/display/AST/Upgrading+to+Asterisk+11"
 }
 
 pkg_config() {
