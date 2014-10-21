@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.369 2014/10/18 22:57:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.370 2014/10/21 19:15:29 vapier Exp $
+
+  21 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/busybox-1.22.1-zcat-no-ext.patch:
+  Add zcat fix from upstream.
 
 *busybox-1.22.1-r1 (18 Oct 2014)
 

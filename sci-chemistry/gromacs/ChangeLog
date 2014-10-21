@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.146 2014/10/02 15:34:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.147 2014/10/21 19:10:08 ottxor Exp $
+
+*gromacs-5.0.2-r1 (21 Oct 2014)
+
+  21 Oct 2014; Christoph Junghans <ottxor@gentoo.org> +gromacs-5.0.2-r1.ebuild:
+  fix bash completion (bug #526318)
 
 *gromacs-5.0.2 (02 Oct 2014)
 
