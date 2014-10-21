@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/jekyll-sitemap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-sitemap/ChangeLog,v 1.2 2014/09/08 21:09:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-sitemap/ChangeLog,v 1.3 2014/10/21 13:41:11 mrueg Exp $
+
+*jekyll-sitemap-0.6.1 (21 Oct 2014)
+
+  21 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +jekyll-sitemap-0.6.1.ebuild:
+  Version bump.
 
 *jekyll-sitemap-0.6.0 (08 Sep 2014)
 
