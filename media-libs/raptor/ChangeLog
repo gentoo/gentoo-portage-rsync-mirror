@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.157 2014/03/04 22:30:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.159 2014/10/21 04:29:28 ssuominen Exp $
+
+  21 Oct 2014; Samuli Suominen <ssuominen@gentoo.org> raptor-2.0.14.ebuild:
+  Raise sys-devel/flex DEPEND to 2.5.36
+
+*raptor-2.0.14 (21 Oct 2014)
+
+  21 Oct 2014; Samuli Suominen <ssuominen@gentoo.org> +raptor-2.0.14.ebuild:
+  Version bump wrt #513528 by "RAPHEAD". Don't pass --with-xml2-config=no or
+  --with-curl-config=no because upstream changed configure.ac and they break the
+  configure now.
 
   04 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> -raptor-2.0.8.ebuild:
   Remove old so we can close bug 468042
