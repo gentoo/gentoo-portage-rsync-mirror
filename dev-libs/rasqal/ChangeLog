@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.90 2014/03/01 22:12:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.92 2014/10/21 04:46:02 ssuominen Exp $
+
+  21 Oct 2014; Samuli Suominen <ssuominen@gentoo.org> -rasqal-0.9.28.ebuild,
+  -rasqal-0.9.30.ebuild:
+  old
+
+*rasqal-0.9.32 (21 Oct 2014)
+
+  21 Oct 2014; Samuli Suominen <ssuominen@gentoo.org> +rasqal-0.9.32.ebuild:
+  Version bump wrt #526156 by Arfrever Frehtes Taifersar Arahesis. Still missing
+  handling of --with-random-approach since .28. Punt useless USE="doc", use
+  FEATURES="nodoc" or INSTALL_MASK if you don't want the prebuilt documentation.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> rasqal-0.9.28.ebuild,
   rasqal-0.9.29.ebuild, rasqal-0.9.30.ebuild:
