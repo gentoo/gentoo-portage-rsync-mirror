@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install postinst setup test unpack
+DEPEND=dev-vcs/git
+DESCRIPTION=C library for developing embedded Linux systems
+HOMEPAGE=http://www.uclibc.org/
+IUSE=debug hardened iconv ipv6 nptl rpc ssp uclibc-compat wordexp crosscompile_opts_headers-only savedconfig
+LICENSE=LGPL-2
+RESTRICT=strip
+SLOT=0
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=ca468eae4c43f64c89176101336199fc
