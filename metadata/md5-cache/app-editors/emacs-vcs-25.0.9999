@@ -9,4 +9,4 @@ RDEPEND=sys-libs/ncurses >=app-admin/eselect-emacs-1.16 >=app-emacs/emacs-common
 REQUIRED_USE=?? ( aqua X )
 SLOT=25
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	bzr	8b59c16d7183cb93649d7abe70dc4c85	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=0fb6609b2640050100f4a1fc7335abcf
+_md5_=d7694427f59e6fb59f968971261a2b51
