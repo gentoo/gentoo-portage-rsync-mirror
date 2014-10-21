@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.35 2014/10/20 17:21:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.36 2014/10/21 06:57:33 jlec Exp $
+
+  21 Oct 2014; Justin Lecher <jlec@gentoo.org> files/README.gentoo:
+  Fix typo, #526096; thanks Coacher spotting this
 
   20 Oct 2014; Justin Lecher <jlec@gentoo.org> files/README.gentoo:
   Fix borked README, #526096
