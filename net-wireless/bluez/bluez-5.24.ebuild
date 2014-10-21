@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.24.ebuild,v 1.1 2014/10/11 11:00:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.24.ebuild,v 1.2 2014/10/21 14:30:27 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -149,8 +149,9 @@ multilib_src_install() {
 	if multilib_is_native_abi; then
 		emake DESTDIR="${D}" install
 
-		# Upstream don't install this for unknown reasons, bug #524640
+		# Upstream don't install this, bug #524640
 		# http://permalink.gmane.org/gmane.linux.bluez.kernel/53115
+		# http://comments.gmane.org/gmane.linux.bluez.kernel/54564
 		dobin attrib/gatttool
 		dobin tools/hex2hcd
 

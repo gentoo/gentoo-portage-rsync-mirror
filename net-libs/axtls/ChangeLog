@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/axtls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.34 2014/10/18 14:16:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.35 2014/10/21 14:20:59 blueness Exp $
+
+  21 Oct 2014; Anthony G. Basile <blueness@gentoo.org> axtls-1.4.9-r1.ebuild:
+  Stable for ppc64, bug #522818
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> axtls-1.4.9-r1.ebuild:
   Stable for ppc, wrt bug #522818
