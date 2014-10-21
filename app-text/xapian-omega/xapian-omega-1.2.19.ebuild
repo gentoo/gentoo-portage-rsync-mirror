@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/xapian-omega-1.2.16.ebuild,v 1.1 2014/01/31 12:35:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/xapian-omega-1.2.19.ebuild,v 1.1 2014/10/21 20:49:51 blueness Exp $
 
 EAPI="5"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-2.5_rc1.ebuild,v 1.1 2014/09/23 11:54:24 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-2.5_rc3.ebuild,v 1.1 2014/10/21 21:00:54 hd_brummy Exp $
 
 EAPI=5
 
@@ -111,7 +111,7 @@ pkg_postinst() {
 
 	einfo "Up from this version systemd is supported by gentoo-vdr-scripts"
 	einfo "Please see for detailed info on this:"
-	einfo "Also please report problems with sytemd on gentoo-vdr-scripts direct in this bug"
+	einfo "Also please report problems with systemd on gentoo-vdr-scripts direct in this bug"
 	einfo "https://bugs.gentoo.org/show_bug.cgi?id=353492"
 
 }
