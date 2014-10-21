@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.8.0_rc4.ebuild,v 1.1 2014/10/04 07:02:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.8.0.ebuild,v 1.1 2014/10/21 07:55:48 jer Exp $
 
 EAPI=5
 inherit cmake-utils eutils toolchain-funcs user
@@ -12,9 +12,9 @@ HOMEPAGE="
 "
 LICENSE="BSD-4 ZLIB public-domain"
 SLOT="0"
-SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV/_/~}.orig.tar.xz"
+SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV}.orig.tar.xz"
 
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="doc fuse systemd tcpd"
 
 COMMON_DEPEND="
