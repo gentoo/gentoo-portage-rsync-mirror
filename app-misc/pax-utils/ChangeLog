@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.163 2014/10/19 17:21:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.164 2014/10/21 05:04:59 vapier Exp $
+
+  21 Oct 2014; Mike Frysinger <vapier@gentoo.org> pax-utils-0.8.1.ebuild:
+  Mark arm64/ia64/m68k/s390/sh stable.
 
   19 Oct 2014; Jeroen Roovers <jer@gentoo.org> pax-utils-0.8.1.ebuild:
   Stable for HPPA (bug #525842).

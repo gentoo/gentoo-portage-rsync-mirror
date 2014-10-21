@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.122 2014/08/04 20:50:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.123 2014/10/21 05:02:11 ssuominen Exp $
+
+*redland-1.0.17 (21 Oct 2014)
+
+  21 Oct 2014; Samuli Suominen <ssuominen@gentoo.org> +redland-1.0.17.ebuild:
+  Version bump wrt #526158 by Arfrever Frehtes Taifersar Arahesis. Pass global
+  MAKEOPTS="-j1" wrt #500574 pending on a proper patch for parallel building and
+  install.
 
   04 Aug 2014; Michał Górny <mgorny@gentoo.org> redland-1.0.16.ebuild:
   Utilize db-use.eclass to obtain proper include path & library for berkdb. Bugs
