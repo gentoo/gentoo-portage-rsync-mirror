@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.86 2014/10/20 01:54:25 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.87 2014/10/21 00:45:27 zerochaos Exp $
+
+  21 Oct 2014; Rick Farina <zerochaos@gentoo.org> jasper-1.900.1-r6.ebuild:
+  use virtual instead of direct dep
 
   20 Oct 2014; Rick Farina <zerochaos@gentoo.org> jasper-1.900.1-r6.ebuild:
   adding dep on media-libs/glu per bug 525926

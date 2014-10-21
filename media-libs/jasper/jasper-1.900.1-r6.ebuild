@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.900.1-r6.ebuild,v 1.10 2014/10/20 01:54:25 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.900.1-r6.ebuild,v 1.11 2014/10/21 00:45:27 zerochaos Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND="
 	opengl? (
 		>=virtual/opengl-7.0-r1:0[${MULTILIB_USEDEP}]
 		>=media-libs/freeglut-2.8.1:0[${MULTILIB_USEDEP}]
-		media-libs/glu
+		virtual/glu
 		)"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
