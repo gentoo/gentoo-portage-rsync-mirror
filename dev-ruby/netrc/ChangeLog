@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/netrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/netrc/ChangeLog,v 1.1 2014/06/09 18:08:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/netrc/ChangeLog,v 1.2 2014/10/21 05:35:48 graaff Exp $
+
+*netrc-0.8.0 (21 Oct 2014)
+
+  21 Oct 2014; Hans de Graaff <graaff@gentoo.org> +netrc-0.8.0.ebuild:
+  Version bump.
 
 *netrc-0.7.7 (09 Jun 2014)
 
