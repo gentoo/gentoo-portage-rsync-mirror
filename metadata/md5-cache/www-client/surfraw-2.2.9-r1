@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install postinst preinst prepare
+DESCRIPTION=A fast unix command line interface to WWW
+EAPI=5
+HOMEPAGE=http://surfraw.alioth.debian.org/
+KEYWORDS=~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris
+LICENSE=public-domain
+RDEPEND=dev-lang/perl
+RESTRICT=test
+SLOT=0
+SRC_URI=http://surfraw.alioth.debian.org/dist/surfraw-2.2.9.tar.gz
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=36b2f164709add9614a30b96e579d4fc
