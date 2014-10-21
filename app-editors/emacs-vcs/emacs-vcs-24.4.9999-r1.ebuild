@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.4.9999-r1.ebuild,v 1.3 2014/10/20 23:16:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.4.9999-r1.ebuild,v 1.4 2014/10/21 18:17:25 ulm Exp $
 
 EAPI=5
 
@@ -98,9 +98,6 @@ if [[ ${PV##*.} = 9999 ]]; then
 	DEPEND="${DEPEND}
 	sys-apps/texinfo"
 fi
-
-RDEPEND="${RDEPEND}
-	!=app-editors/emacs-24.4*"
 
 EMACS_SUFFIX="${PN/emacs/emacs-${SLOT}}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.6.ebuild,v 1.3 2014/08/06 03:22:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.6.ebuild,v 1.4 2014/10/21 18:30:17 tamiko Exp $
 
 EAPI=5
 
@@ -94,7 +94,7 @@ RDEPEND="sys-libs/readline
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
 	xen? ( app-emulation/xen-tools app-emulation/xen )
 	udev? ( virtual/udev >=x11-libs/libpciaccess-0.10.9 )
-	virt-network? ( net-dns/dnsmasq
+	virt-network? ( net-dns/dnsmasq[script]
 		>=net-firewall/iptables-1.4.10
 		net-misc/radvd
 		net-firewall/ebtables

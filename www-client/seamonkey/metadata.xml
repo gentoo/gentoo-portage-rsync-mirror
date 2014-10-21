@@ -19,6 +19,8 @@
 		Use system icu indead of bundled.</flag>
 	<flag name="system-jpeg">Use the system-wide <pkg>media-libs/libjpeg-turbo</pkg>
 		Use system jpeg instead of bundled.</flag>
+	<flag name="system-libvpx">Use the system-wide <pkg>media-libs/libvpx</pkg>
+		instead of bundled.</flag>
 	<flag name='system-sqlite'>Use the system-wide <pkg>dev-db/sqlite</pkg>
 		installation with secure-delete enabled</flag>
 </use>

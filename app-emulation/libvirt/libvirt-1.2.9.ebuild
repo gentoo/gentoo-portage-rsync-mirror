@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.58 2014/10/21 18:27:48 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.9.ebuild,v 1.1 2014/10/21 18:27:48 tamiko Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ S="${WORKDIR}/${P%_rc*}"
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="0/${PV}"
 IUSE="audit avahi +caps firewalld fuse iscsi +libvirtd lvm lxc +macvtap nfs \
 	nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network xen elibc_glibc \
@@ -53,7 +53,7 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
-	dev-libs/libgcrypt:0
+	dev-libs/libgcrypt
 	>=dev-libs/libxml2-2.7.6
 	dev-libs/libnl:3
 	>=net-libs/gnutls-1.0.25

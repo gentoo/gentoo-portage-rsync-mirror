@@ -1,0 +1,20 @@
+--- comm-beta/mozilla/configure.in
++++ comm-beta/mozilla/configure.in
+@@ -5489,17 +5489,6 @@
+ dnl = Disable PulseAudio
+ dnl ========================================================
+ 
+-dnl If using Linux, ensure that the PA library is available
+-case "$OS_TARGET" in
+-WINNT|Darwin|Android|OpenBSD)
+-    ;;
+-*)
+-    if test -z "$MOZ_B2G"; then
+-        MOZ_PULSEAUDIO=1
+-    fi
+-    ;;
+-esac
+-
+ MOZ_ARG_DISABLE_BOOL(pulseaudio,
+ [  --disable-pulseaudio          Disable PulseAudio support],
+    MOZ_PULSEAUDIO=,

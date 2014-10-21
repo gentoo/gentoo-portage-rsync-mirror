@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.8.0.ebuild,v 1.1 2014/10/21 07:55:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.8.0.ebuild,v 1.2 2014/10/21 18:05:26 jer Exp $
 
 EAPI=5
 inherit cmake-utils eutils toolchain-funcs user
@@ -28,6 +28,7 @@ COMMON_DEPEND="
 DEPEND="
 	${COMMON_DEPEND}
 	dev-util/cmake
+	>sys-devel/gcc-4.8
 	virtual/pkgconfig
 "
 RDEPEND="

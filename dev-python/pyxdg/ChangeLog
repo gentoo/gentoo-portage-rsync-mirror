@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.129 2014/10/18 14:09:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.130 2014/10/21 18:18:53 maekke Exp $
+
+  21 Oct 2014; Markus Meier <maekke@gentoo.org> pyxdg-0.25-r1.ebuild:
+  arm stable, bug #498934
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pyxdg-0.25-r1.ebuild:
   Stable for sparc, wrt bug #498934

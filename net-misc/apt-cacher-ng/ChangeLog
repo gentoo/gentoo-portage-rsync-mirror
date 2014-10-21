@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/apt-cacher-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.48 2014/10/21 07:55:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.49 2014/10/21 18:05:26 jer Exp $
+
+  21 Oct 2014; Jeroen Roovers <jer@gentoo.org> apt-cacher-ng-0.8.0.ebuild:
+  Add >sys-devel/gcc-4.8 dependency.
 
 *apt-cacher-ng-0.8.0 (21 Oct 2014)
 
