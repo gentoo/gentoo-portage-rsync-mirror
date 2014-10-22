@@ -166,6 +166,8 @@ app-admin/keepass:aot - Generate native code at build time, rather than runtime.
 app-admin/lastpass:chrome - Support for www-client/chrome
 app-admin/lastpass:chromium - Support for www-client/chromium
 app-admin/lastpass:firefox - Support for www-client/firefox
+app-admin/lastpass-cli:X - Use x11-misc/xclip or x11-misc/xsel to copy passwords to the clipboard.
+app-admin/lastpass-cli:pinentry - Use app-crypt/pinentry to prompt for passwords.
 app-admin/logrotate:acl - Installs acl support
 app-admin/logrotate:selinux - Installs Security Enhanced Linux support
 app-admin/mate-system-tools:caja - Adds support for the Caja file manager

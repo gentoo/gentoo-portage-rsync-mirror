@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1153 2014/10/22 16:23:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1154 2014/10/22 20:12:56 floppym Exp $
+
+  22 Oct 2014; Mike Gilbert <floppym@gentoo.org> chromium-40.0.2194.2.ebuild:
+  Restrict bindist if bindist use flag is set.
 
 *chromium-40.0.2194.2 (22 Oct 2014)
 
