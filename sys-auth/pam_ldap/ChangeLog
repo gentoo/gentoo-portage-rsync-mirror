@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.48 2014/10/18 14:25:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.49 2014/10/22 08:00:42 jer Exp $
+
+  22 Oct 2014; Jeroen Roovers <jer@gentoo.org> pam_ldap-186-r1.ebuild:
+  Stable for HPPA (bug #525280).
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pam_ldap-186-r1.ebuild:
   Stable for ppc, wrt bug #525280

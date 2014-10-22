@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/glib-2.12 =net-libs/gnutls-2* net-libs/libpcap app-crypt/gpgm
 SLOT=0
 SRC_URI=http://wald.intevation.org/frs/download.php/1722/openvas-libraries-7.0.4.tar.gz
 _eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=cbc09fccfbeb5b40a119461234b05b36
+_md5_=740584908ea53257c96c4ee063968707

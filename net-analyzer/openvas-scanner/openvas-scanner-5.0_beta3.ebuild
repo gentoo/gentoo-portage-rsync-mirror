@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/openvas-scanner-4.0.3-r2.ebuild,v 1.3 2014/10/02 06:56:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/openvas-scanner-5.0_beta3.ebuild,v 1.1 2014/10/22 07:55:55 jlec Exp $
 
 EAPI=5
 
@@ -8,27 +8,31 @@ inherit cmake-utils systemd
 
 MY_PN=openvassd
 
+DL_ID=1767
+
 DESCRIPTION="A remote security scanner for Linux (OpenVAS-scanner)"
 HOMEPAGE="http://www.openvas.org/"
-SRC_URI="http://wald.intevation.org/frs/download.php/1726/${P}.tar.gz"
+SRC_URI="http://wald.intevation.org/frs/download.php/${DL_ID}/${P/_beta/+beta}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="
-	>=net-analyzer/openvas-libraries-7.0.4
+	>=net-analyzer/openvas-libraries-8_beta3
 	!net-analyzer/openvas-plugins
 	!net-analyzer/openvas-server"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
+S="${WORKDIR}"/${P/_beta/+beta}
+
 PATCHES=(
-	"${FILESDIR}"/${P}-bsdsource.patch
-	"${FILESDIR}"/${P}-mkcertclient.patch
-	"${FILESDIR}"/${P}-rulesdir.patch
-	"${FILESDIR}"/${P}-run.patch
+	"${FILESDIR}"/${PN}-4.0.3-bsdsource.patch
+	"${FILESDIR}"/${PN}-4.0.3-mkcertclient.patch
+	"${FILESDIR}"/${PN}-4.0.3-rulesdir.patch
+	"${FILESDIR}"/${PN}-4.0.3-run.patch
 	)
 
 src_prepare() {
