@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.323 2014/10/20 17:29:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.324 2014/10/22 16:59:39 axs Exp $
+
+  22 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> grub-0.97-r14.ebuild:
+  grub:0 - Only apply -fuse-ld=bfd when gcc is new enough to support it, bug
+  526348
 
   20 Oct 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> grub-0.97-r14.ebuild:
   A quick fix regarding amd64 static building without ncurses
