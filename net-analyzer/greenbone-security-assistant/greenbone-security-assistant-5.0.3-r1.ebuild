@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/greenbone-security-assistant-5.0.3-r1.ebuild,v 1.1 2014/10/01 09:33:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/greenbone-security-assistant-5.0.3-r1.ebuild,v 1.2 2014/10/22 08:19:17 jlec Exp $
 
 EAPI=5
 
@@ -8,9 +8,11 @@ inherit cmake-utils systemd
 
 MY_PN=gsad
 
+DL_ID=1734
+
 DESCRIPTION="Greenbone Security Assistant for openvas"
 HOMEPAGE="http://www.openvas.org/"
-SRC_URI="http://wald.intevation.org/frs/download.php/1734/${P}.tar.gz"
+SRC_URI="http://wald.intevation.org/frs/download.php/${DL_ID}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -37,8 +39,8 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		"-DLOCALSTATEDIR=${EPREFIX}/var"
-		"-DSYSCONFDIR=${EPREFIX}/etc"
+		-DLOCALSTATEDIR="${EPREFIX}/var"
+		-DSYSCONFDIR="${EPREFIX}/etc"
 	)
 	cmake-utils_src_configure
 }
@@ -56,10 +58,4 @@ src_install() {
 
 	systemd_newtmpfilesd "${FILESDIR}"/${MY_PN}.tmpfiles.d ${MY_PN}.conf
 	systemd_dounit "${FILESDIR}"/${MY_PN}.service
-}
-
-pkg_postinst() {
-	elog "To use ${MY_PN}, you first need to:"
-	elog "1. Call 'openvas-nvt-sync' to download/update plugins"
-	elog "2. Call 'openvas-mkcert' to generate a server certificate"
 }
