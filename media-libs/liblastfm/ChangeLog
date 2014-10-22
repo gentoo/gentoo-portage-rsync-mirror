@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblastfm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.33 2014/10/12 16:54:16 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.34 2014/10/22 14:00:57 kensington Exp $
+
+  22 Oct 2014; Michael Palimaka <kensington@gentoo.org> liblastfm-1.0.9.ebuild:
+  Ensure build against at least one Qt version wrt bug #526472.
 
   12 Oct 2014; Michael Palimaka <kensington@gentoo.org> liblastfm-1.0.9.ebuild:
   Import Qt5 support from KDE overlay.

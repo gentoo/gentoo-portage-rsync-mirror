@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.737 2014/10/21 12:14:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.738 2014/10/22 13:47:02 grknight Exp $
+
+  22 Oct 2014; Brian Evans <grknight@gentoo.org> use.stable.mask:
+  Mask php_targets_php5-6 until it is stable.
 
   21 Oct 2014; Mike Frysinger <vapier@gentoo.org> package.use.mask:
   Mask sys-devel/gcc[sanitize] #504200.
