@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/isl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.22 2014/09/24 10:27:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.23 2014/10/22 19:10:40 maekke Exp $
+
+  22 Oct 2014; Markus Meier <maekke@gentoo.org> isl-0.12.2.ebuild:
+  arm stable, bug #516152
 
   24 Sep 2014; Anthony G. Basile <blueness@gentoo.org> isl-0.11.1.ebuild,
   isl-0.12.2.ebuild, isl-0.13.ebuild:

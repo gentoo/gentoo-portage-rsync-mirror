@@ -4,11 +4,11 @@ DESCRIPTION=Larry Wall's Practical Extraction and Report Language
 EAPI=5
 HOMEPAGE=http://www.perl.org/
 IUSE=berkdb debug doc gdbm ithreads
-KEYWORDS=alpha amd64 ~arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=|| ( Artistic GPL-1+ )
 PDEPEND=>=app-admin/perl-cleaner-2.5 >=virtual/perl-File-Temp-0.230.0 !=perl-core/File-Temp-0.230.400
 RDEPEND=berkdb? ( sys-libs/db ) gdbm? ( >=sys-libs/gdbm-1.8.3 ) app-arch/bzip2 sys-libs/zlib
 SLOT=0/5.18
 SRC_URI=mirror://cpan/src/5.0/perl-5.18.2.tar.bz2 mirror://cpan/authors/id/R/RJ/RJBS/perl-5.18.2.tar.bz2 mirror://gentoo/perl-5.18.2-patches-2.tar.bz2 http://dev.gentoo.org/~civil/distfiles/dev-lang/perl/perl-5.18.2-patches-2.tar.bz2
 _eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=fc78dec013b9f2af3b84cb47d5c234f3
+_md5_=bb3d59a5c15eff68318e235c7f0ff4c5

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.449 2014/10/21 21:23:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.450 2014/10/22 19:16:16 maekke Exp $
+
+  22 Oct 2014; Markus Meier <maekke@gentoo.org> perl-5.18.2-r2.ebuild:
+  arm stable, bug #390719
 
   21 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   +perl-5.18.2-r1.ebuild:
