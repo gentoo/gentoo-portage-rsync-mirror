@@ -1,6 +1,22 @@
 # ChangeLog for x11-misc/wbar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.33 2014/08/10 20:04:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.35 2014/10/22 07:18:13 jer Exp $
+
+  22 Oct 2014; Jeroen Roovers <jer@gentoo.org> -wbar-1.3.3.ebuild,
+  -wbar-2.2.2.ebuild, -wbar-2.3.0.ebuild, -wbar-2.3.1.ebuild,
+  -wbar-2.3.3.ebuild, wbar-2.3.4-r1.ebuild, wbar-2.3.4-r2.ebuild,
+  -files/wbar-1.3.3-Makefile.patch, -files/wbar-1.3.3-gcc43.patch,
+  -files/wbar-2.3.0-cfg.patch, -files/wbar-2.3.1-desktopfile.patch,
+  -files/wbar-2.3.1-nowerror.patch, -files/wbar-2.3.1-version.patch,
+  files/wbar-2.3.3-cfg.patch, files/wbar-2.3.3-nowerror.patch,
+  files/wbar-2.3.3-test.patch, files/wbar-2.3.4-automake-1.13.patch:
+  Remove old. Clean up some patches.
+
+*wbar-2.3.4-r2 (22 Oct 2014)
+
+  22 Oct 2014; Jeroen Roovers <jer@gentoo.org> +wbar-2.3.4-r2.ebuild,
+  +files/wbar-2.3.4-completion.patch:
+  Fix completion (bug #526344).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wbar-1.3.3.ebuild,
   wbar-2.2.2.ebuild:

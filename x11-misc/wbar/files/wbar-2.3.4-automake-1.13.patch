@@ -1,5 +1,5 @@
---- wbar-2.3.4/configure.ac
-+++ wbar-2.3.4/configure.ac
+--- a/configure.ac
++++ b/configure.ac
 @@ -3,7 +3,7 @@
  AC_INIT([wbar], [2.3.4])
  AM_INIT_AUTOMAKE([ filename-length-max=256 tar-ustar ])

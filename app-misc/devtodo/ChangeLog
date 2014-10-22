@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.97 2014/03/19 16:40:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.98 2014/10/22 07:27:04 jlec Exp $
+
+*devtodo-0.1.20-r2 (22 Oct 2014)
+
+  22 Oct 2014; Justin Lecher <jlec@gentoo.org> devtodo-0.1.20-r1.ebuild,
+  +devtodo-0.1.20-r2.ebuild:
+  Correctly install bashcompletions, #526250
 
   19 Mar 2014; Justin Lecher <jlec@gentoo.org> -devtodo-0.1.20.ebuild:
   Drop old
