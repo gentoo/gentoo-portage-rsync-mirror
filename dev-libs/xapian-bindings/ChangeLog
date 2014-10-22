@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.82 2014/10/21 21:25:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.83 2014/10/22 21:28:51 blueness Exp $
+
+  22 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  xapian-bindings-1.2.19.ebuild:
+  Fix multiple PHP_TARGETS, thanks Arfrever
 
   21 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   xapian-bindings-1.2.19.ebuild:
