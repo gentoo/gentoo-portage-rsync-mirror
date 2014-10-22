@@ -6,6 +6,9 @@
 		<email>vdr@gentoo.org</email>
 		<name>Gentoo VDR Project</name>
 	</maintainer>
+	<use>
+		<flag name="libmpeg2">Support for libmpeg2 library</flag>
+	</use>
 	<longdescription lang="en">
 		Mark commercial Breaks in VDR records. 
 	</longdescription>
