@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-5.3.2-r1.ebuild,v 1.1 2014/09/28 18:24:38 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-5.3.2-r1.ebuild,v 1.2 2014/10/22 17:39:37 kensington Exp $
 
 EAPI=5
 
@@ -18,12 +18,14 @@ fi
 
 # TODO: qttestlib, geolocation, orientation/sensors
 
-IUSE="gstreamer gstreamer010 libxml2 multimedia opengl printsupport qml udev webp xslt"
+IUSE="gstreamer gstreamer010 multimedia opengl printsupport qml udev webp"
 REQUIRED_USE="?? ( gstreamer gstreamer010 multimedia )"
 
 RDEPEND="
 	dev-db/sqlite:3
 	dev-libs/icu:=
+	dev-libs/libxml2:2
+	dev-libs/libxslt
 	>=dev-qt/qtcore-${PV}:5[debug=,icu]
 	>=dev-qt/qtgui-${PV}:5[debug=]
 	>=dev-qt/qtnetwork-${PV}:5[debug=]
@@ -47,17 +49,12 @@ RDEPEND="
 		media-libs/gstreamer:0.10
 		media-libs/gst-plugins-base:0.10
 	)
-	libxml2? ( dev-libs/libxml2:2 )
 	multimedia? ( >=dev-qt/qtmultimedia-${PV}:5[debug=,widgets] )
 	opengl? ( >=dev-qt/qtopengl-${PV}:5[debug=] )
 	printsupport? ( >=dev-qt/qtprintsupport-${PV}:5[debug=] )
 	qml? ( >=dev-qt/qtdeclarative-${PV}:5[debug=] )
 	udev? ( virtual/udev )
 	webp? ( media-libs/libwebp:0= )
-	xslt? (
-		libxml2? ( dev-libs/libxslt )
-		!libxml2? ( >=dev-qt/qtxmlpatterns-${PV}:5[debug=] )
-	)
 "
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
@@ -72,8 +69,6 @@ src_prepare() {
 	elif ! use gstreamer; then
 		epatch "${FILESDIR}/${PN}-5.2.1-disable-gstreamer.patch"
 	fi
-	use libxml2      || sed -i -e '/config_libxml2: WEBKIT_CONFIG += use_libxml2/d' \
-		Tools/qmake/mkspecs/features/features.prf || die
 	use multimedia   || sed -i -e '/WEBKIT_CONFIG += video use_qt_multimedia/d' \
 		Tools/qmake/mkspecs/features/features.prf || die
 	use opengl       || sed -i -e '/contains(QT_CONFIG, opengl): WEBKIT_CONFIG += use_3d_graphics/d' \
@@ -85,8 +80,6 @@ src_prepare() {
 	use udev         || sed -i -e '/linux: WEBKIT_CONFIG += gamepad/d' \
 		Tools/qmake/mkspecs/features/features.prf || die
 	use webp         || sed -i -e '/config_libwebp: WEBKIT_CONFIG += use_webp/d' \
-		Tools/qmake/mkspecs/features/features.prf || die
-	use xslt         || sed -i -e '/config_libxslt: WEBKIT_CONFIG += xslt/d' \
 		Tools/qmake/mkspecs/features/features.prf || die
 
 	# bug 458222

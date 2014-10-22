@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtwebkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.19 2014/09/28 18:27:38 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.20 2014/10/22 17:39:37 kensington Exp $
+
+  22 Oct 2014; Michael Palimaka <kensington@gentoo.org> metadata.xml,
+  qtwebkit-5.3.2-r1.ebuild:
+  Remove libxml2 and xslt USE flags wrt bug #511594.
 
   28 Sep 2014; Davide Pesavento <pesa@gentoo.org>
   +files/qtwebkit-5.3.2-use-gstreamer010.patch:
