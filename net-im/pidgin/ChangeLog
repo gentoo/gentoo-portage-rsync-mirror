@@ -1,6 +1,13 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.346 2014/10/15 20:01:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.347 2014/10/22 20:40:25 polynomial-c Exp $
+
+*pidgin-2.10.10 (22 Oct 2014)
+
+  22 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> pidgin-2.10.9.ebuild,
+  pidgin-2.10.9-r1.ebuild, +pidgin-2.10.10.ebuild:
+  Security bump (bug #526502). Fixes CVE-2014-3694. Adjusted perl dep in all
+  ebuilds.
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org> pidgin-2.10.9-r1.ebuild,
   pidgin-2.10.9.ebuild:

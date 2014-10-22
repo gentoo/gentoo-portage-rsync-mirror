@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.9.ebuild,v 1.12 2014/10/15 20:01:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.9.ebuild,v 1.13 2014/10/22 20:40:25 polynomial-c Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ RDEPEND="
 	dbus? ( >=dev-libs/dbus-glib-0.71
 		>=sys-apps/dbus-0.90
 		dev-python/dbus-python )
-	perl? ( || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] ) )
+	perl? ( >=dev-lang/perl-5.16 )
 	gadu? ( || ( >=net-libs/libgadu-1.11.0[ssl,gnutls]
 		>=net-libs/libgadu-1.11.0[-ssl] ) )
 	gnutls? ( net-libs/gnutls )
