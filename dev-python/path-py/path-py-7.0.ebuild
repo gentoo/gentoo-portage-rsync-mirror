@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/path-py/path-py-7.0.ebuild,v 1.1 2014/10/21 09:24:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/path-py/path-py-7.0.ebuild,v 1.2 2014/10/22 04:52:38 idella4 Exp $
 
 EAPI=5
 
@@ -23,10 +23,6 @@ DEPEND="
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
-
-python_compile_all() {
-	use doc && emake -C docs html
-}
 
 python_test() {
 	py.test || die "Testing failed with ${EPYTHON}"
