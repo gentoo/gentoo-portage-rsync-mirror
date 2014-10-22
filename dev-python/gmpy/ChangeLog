@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.43 2014/08/27 12:06:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.44 2014/10/22 10:03:39 idella4 Exp $
+
+*gmpy-2.0.4 (22 Oct 2014)
+
+  22 Oct 2014; Ian Delaney <idella4@gentoo.org> +gmpy-2.0.4.ebuild,
+  -gmpy-1.17.ebuild:
+  bump; clean old python impls, update SRC_URI and deps, add IUSE doc and all
+  that goes with doc build, fix issue re fno-strict-aliasing under py2, rm old
 
   27 Aug 2014; Anthony G. Basile <blueness@gentoo.org> gmpy-1.16.ebuild,
   gmpy-1.17.ebuild, gmpy-2.0.0.ebuild, gmpy-2.0.3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.86 2014/10/15 23:15:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.87 2014/10/22 10:01:53 jer Exp $
+
+  22 Oct 2014; Jeroen Roovers <jer@gentoo.org> webtest-2.0.15.ebuild:
+  Marked ~hppa (bug #525246).
 
   15 Oct 2014; Anthony G. Basile <blueness@gentoo.org> webtest-2.0.11.ebuild,
   webtest-2.0.14.ebuild, webtest-2.0.15.ebuild:
