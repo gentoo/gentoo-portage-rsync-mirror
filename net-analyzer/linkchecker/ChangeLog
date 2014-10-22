@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.93 2014/04/30 10:08:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.94 2014/10/22 08:34:11 jlec Exp $
+
+  22 Oct 2014; Justin Lecher <jlec@gentoo.org> linkchecker-9.2.ebuild:
+  Add lower bound for dev-python/requests, #513514
 
 *linkchecker-9.2 (30 Apr 2014)
 

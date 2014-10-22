@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.283 2014/10/14 11:40:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.284 2014/10/22 08:38:40 pacho Exp $
+
+  22 Oct 2014; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.4.ebuild:
+  slib dependency is not needed (#526404 by Ooblick)
 
 *gnucash-2.6.4 (14 Oct 2014)
 

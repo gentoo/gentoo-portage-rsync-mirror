@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/epix
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.50 2013/07/16 16:42:15 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.51 2014/10/22 08:46:45 jlec Exp $
+
+*epix-1.2.11-r1 (22 Oct 2014)
+
+  22 Oct 2014; Justin Lecher <jlec@gentoo.org> epix-1.2.10.ebuild,
+  epix-1.2.11.ebuild, +epix-1.2.11-r1.ebuild, metadata.xml:
+  Fix bashcomp installation, #526322
 
 *epix-1.2.11 (16 Jul 2013)
 

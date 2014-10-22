@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.10.ebuild,v 1.8 2012/12/04 15:38:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.10.ebuild,v 1.9 2014/10/22 08:46:45 jlec Exp $
 
 EAPI=4
 
@@ -46,6 +46,7 @@ src_install() {
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 	newbashcomp bash_completions epix
+	bashcomp_alias epix flix elaps laps
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins doc/*gz
