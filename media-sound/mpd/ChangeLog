@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.360 2014/10/21 15:19:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.361 2014/10/22 16:29:14 angelos Exp $
+
+  22 Oct 2014; Christoph Mende <angelos@gentoo.org> mpd-0.19.1.ebuild:
+  Remove unconditional glib dependency and add USE dependencies for flags
+  depending on glib (bug #526452)
 
   21 Oct 2014; Christoph Mende <angelos@gentoo.org> mpd-0.19.1.ebuild:
   USE=upnp depends on USE=expat (bug #526190)

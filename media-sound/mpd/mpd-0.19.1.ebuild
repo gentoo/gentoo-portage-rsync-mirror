@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.19.1.ebuild,v 1.3 2014/10/21 15:19:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.19.1.ebuild,v 1.4 2014/10/22 16:29:14 angelos Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
@@ -26,14 +26,22 @@ ENCODER_PLUGINS="audiofile flac lame twolame vorbis"
 
 REQUIRED_USE="|| ( ${OUTPUT_PLUGINS} )
 	|| ( ${DECODER_PLUGINS} )
+	ao? ( glib )
+	gme? ( glib )
+	jack? ( glib )
 	mp4v2? ( faad )
-	network? ( || ( ${ENCODER_PLUGINS} ) )
+	network? ( || ( ${ENCODER_PLUGINS} )
+		glib )
 	recorder? ( || ( ${ENCODER_PLUGINS} ) )
+	sid? ( glib )
+	soundcloud? ( glib )
+	sqlite? ( glib )
 	opus? ( ogg )
-	upnp? ( expat )"
+	upnp? ( expat )
+	vorbis? ( glib )
+	wavpack? ( glib )"
 
 RDEPEND="!<sys-cluster/mpich2-1.4_rc2
-	dev-libs/glib:2
 	adplug? ( media-libs/adplug )
 	alsa? ( media-sound/alsa-utils
 		media-libs/alsa-lib )
