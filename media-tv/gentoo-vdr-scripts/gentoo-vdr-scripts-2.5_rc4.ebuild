@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-2.5_rc3.ebuild,v 1.1 2014/10/21 21:00:54 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-2.5_rc4.ebuild,v 1.1 2014/10/22 10:59:08 hd_brummy Exp $
 
 EAPI=5
 
