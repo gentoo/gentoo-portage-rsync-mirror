@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/starcluster
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/ChangeLog,v 1.9 2014/08/28 11:16:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/ChangeLog,v 1.10 2014/10/22 15:20:34 idella4 Exp $
+
+*starcluster-0.93.3-r2 (22 Oct 2014)
+
+  22 Oct 2014; Ian Delaney <idella4@gentoo.org> +starcluster-0.93.3-r2.ebuild,
+  -starcluster-0.93.3-r1.ebuild, -starcluster-0.93.3.ebuild:
+  revbump; substitute dobashcomp with newbashcomp, fixes Bug #526274, rm prior
+  ebuilds
 
   28 Aug 2014; Michał Górny <mgorny@gentoo.org> starcluster-0.93.3-r1.ebuild,
   starcluster-0.93.3.ebuild:

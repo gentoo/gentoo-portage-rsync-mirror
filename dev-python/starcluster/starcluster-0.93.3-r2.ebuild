@@ -1,11 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3-r1.ebuild,v 1.2 2014/08/28 11:16:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3-r2.ebuild,v 1.1 2014/10/22 15:20:34 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
-DISTUTILS_SRC_TEST="nosetests"
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 bash-completion-r1
 MY_PN=StarCluster
@@ -49,9 +48,10 @@ python_compile_all() {
 	}
 	use epydoc && mkdocs
 }
-python_install() {
-	dobashcomp "${S}"/completion/${PN}-completion.sh ${PN}
 
+python_install() {
+	distutils-r1_python_install
+	newbashcomp "${S}"/completion/${PN}-completion.sh ${PN}
 	use doc && dohtml -r docs/sphinx/_build/html/
 	if use epydoc; then
 		docompress -x usr/share/doc/${PF}/apidocs/api-objects.txt

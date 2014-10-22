@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.316 2014/10/20 22:00:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.317 2014/10/22 15:02:44 floppym Exp $
+
+  22 Oct 2014; Mike Gilbert <floppym@gentoo.org> systemd-216-r1.ebuild,
+  systemd-9999.ebuild:
+  Use keepdir /var/log/journal/remote instead of removing it.
 
   20 Oct 2014; Mike Gilbert <floppym@gentoo.org> systemd-216-r1.ebuild,
   systemd-9999.ebuild:
