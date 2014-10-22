@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.139 2014/10/19 18:09:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.140 2014/10/22 05:26:13 vapier Exp $
+
+  22 Oct 2014; Mike Frysinger <vapier@gentoo.org> DirectFB-1.7.6.ebuild:
+  Drop broken CXXFLAGS munging from configure #526196 by Octave Berry.
 
 *DirectFB-1.7.6 (19 Oct 2014)
 

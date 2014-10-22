@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.7.6.ebuild,v 1.1 2014/10/19 18:09:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.7.6.ebuild,v 1.2 2014/10/22 05:26:13 vapier Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -81,6 +81,9 @@ src_prepare() {
 	sed -i \
 		-e '/#define RASPBERRY_PI/d' \
 		systems/egl/egl_system.c || die #497124
+	sed -i \
+		-e '/^CXXFLAGS=.*-Werror-implicit-function-declaration/d' \
+		configure.in || die #526196
 
 	mv configure.{in,ac} || die
 	eautoreconf
