@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/backports
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/backports/ChangeLog,v 1.6 2014/08/13 18:22:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/backports/ChangeLog,v 1.7 2014/10/22 09:52:28 jer Exp $
+
+  22 Oct 2014; Jeroen Roovers <jer@gentoo.org> backports-1.0.ebuild:
+  Marked ~hppa (bug #525246).
 
   13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> backports-1.0.ebuild:
   Keyword ~ppc and ~ppc64, bug #486272

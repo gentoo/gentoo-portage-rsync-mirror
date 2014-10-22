@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urllib3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.26 2014/10/15 23:14:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.27 2014/10/22 09:59:22 jer Exp $
+
+  22 Oct 2014; Jeroen Roovers <jer@gentoo.org> urllib3-1.9.1.ebuild:
+  Marked ~hppa (bug #525246).
 
   15 Oct 2014; Anthony G. Basile <blueness@gentoo.org> urllib3-1.8.3.ebuild,
   urllib3-1.9.1.ebuild, urllib3-1.9.ebuild:

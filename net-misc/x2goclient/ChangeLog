@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/x2goclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.32 2014/08/05 09:17:04 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.33 2014/10/22 09:33:26 voyageur Exp $
+
+*x2goclient-4.0.3.0 (22 Oct 2014)
+
+  22 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  -x2goclient-4.0.1.0.ebuild, -x2goclient-4.0.1.3-r1.ebuild,
+  -x2goclient-4.0.1.3-r2.ebuild, +x2goclient-4.0.3.0.ebuild,
+  -files/x2goclient-4.0.1.3-password_connection.patch,
+  -files/x2goclient-4.0.1.3-timeout.patch:
+  Version bump, drop old 4.0.1 versions
 
 *x2goclient-4.0.2.1 (05 Aug 2014)
 
