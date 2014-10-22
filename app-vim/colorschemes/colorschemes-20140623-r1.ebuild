@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20140623.ebuild,v 1.1 2014/10/12 23:26:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20140623-r1.ebuild,v 1.1 2014/10/22 05:44:25 radhermit Exp $
 
 EAPI=5
 
@@ -24,4 +24,7 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch
 	rm -rf patches/
+
+	# fix line endings
+	edos2unix colors/*
 }
