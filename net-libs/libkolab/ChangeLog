@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libkolab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/ChangeLog,v 1.22 2014/10/12 14:56:38 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/ChangeLog,v 1.23 2014/10/22 15:50:01 kensington Exp $
+
+  22 Oct 2014; Michael Palimaka <kensington@gentoo.org> libkolab-0.4.1.ebuild:
+  Pass correct option for toggling tests wrt bug #526396.
 
   12 Oct 2014; Michael Palimaka <kensington@gentoo.org> -libkolab-0.4.2.ebuild,
   -libkolab-0.5.0.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/libkolab-0.4.1.ebuild,v 1.7 2013/05/30 11:48:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/libkolab-0.4.1.ebuild,v 1.8 2014/10/22 15:50:01 kensington Exp $
 
 EAPI=5
 
@@ -30,8 +30,8 @@ RDEPEND="${DEPEND}"
 
 src_configure() {
 	local mycmakeargs=(
+		-DBUILD_TESTS=$(usex test)
 		-DLIB_INSTALL_DIR=$(get_libdir)
-		$(cmake-utils_use_with test BUILD_TESTS)
 		$(cmake-utils_use python PYTHON_BINDINGS)
 		$(cmake-utils_use php PHP_BINDINGS)
 	)
