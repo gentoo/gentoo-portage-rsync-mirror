@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-geode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.26 2014/04/06 10:11:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.27 2014/10/22 17:17:58 chithanh Exp $
+
+*xf86-video-geode-2.11.16 (22 Oct 2014)
+
+  22 Oct 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-geode-2.11.16.ebuild,
+  -files/xf86-video-geode-2.11.14-remove-mibstore_h.patch,
+  -xf86-video-geode-2.11.14-r1.ebuild, -xf86-video-geode-2.11.14.ebuild:
+  Version bump. Remove old.
 
   06 Apr 2014; Agostino Sarubbo <ago@gentoo.org>
   xf86-video-geode-2.11.15.ebuild:

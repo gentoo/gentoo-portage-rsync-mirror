@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrandr/xrandr-1.4.0.ebuild,v 1.2 2013/02/23 02:18:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrandr/xrandr-1.4.3.ebuild,v 1.1 2014/10/22 17:25:10 chithanh Exp $
 
 EAPI=5
 

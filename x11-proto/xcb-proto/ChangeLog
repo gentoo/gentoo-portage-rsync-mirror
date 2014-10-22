@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.141 2014/07/04 13:20:35 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.142 2014/10/22 17:26:35 chithanh Exp $
+
+*xcb-proto-1.11 (22 Oct 2014)
+
+  22 Oct 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xcb-proto-1.11.ebuild:
+  Version bump.
 
   04 Jul 2014; Michael Haubenwallner <haubi@gentoo.org> xcb-proto-1.10.ebuild:
   add ~ppc-aix keyword
