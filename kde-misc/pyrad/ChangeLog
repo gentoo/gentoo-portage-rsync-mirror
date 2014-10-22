@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/pyrad
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pyrad/ChangeLog,v 1.6 2013/03/17 17:45:00 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pyrad/ChangeLog,v 1.7 2014/10/22 14:20:11 mrueg Exp $
+
+*pyrad-0.6.2-r1 (22 Oct 2014)
+
+  22 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +pyrad-0.6.2-r1.ebuild:
+  Convert to distutils-r1.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

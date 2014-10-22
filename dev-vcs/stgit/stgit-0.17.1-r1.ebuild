@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.17.1-r1.ebuild,v 1.1 2014/05/10 20:01:09 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.17.1-r1.ebuild,v 1.2 2014/10/22 14:28:10 dlan Exp $
 
 EAPI="5"
 
@@ -80,5 +80,5 @@ python_install_all() {
 
 	distutils-r1_python_install_all
 
-	newbashcomp stgit-completion.bash ${PN}
+	newbashcomp stgit-completion.bash 'stg'
 }

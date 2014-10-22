@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.90 2014/10/21 20:25:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.91 2014/10/22 14:10:00 dilfridge Exp $
+
+*perl-File-Temp-0.230.0 (22 Oct 2014)
+
+  22 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +perl-File-Temp-0.230.0.ebuild:
+  Temporarily restore
 
   21 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -perl-File-Temp-0.230.0.ebuild:

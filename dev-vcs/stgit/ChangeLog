@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/stgit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.28 2014/08/03 14:27:38 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.29 2014/10/22 14:28:10 dlan Exp $
+
+  22 Oct 2014; Yixun Lan <dlan@gentoo.org> stgit-0.16-r2.ebuild,
+  stgit-0.17.1-r1.ebuild:
+  fix bashcomp, bug 526282. thanks Necoro
 
   03 Aug 2014; Yixun Lan <dlan@gentoo.org> stgit-0.16-r2.ebuild:
   Stable for arm, bug #505796
