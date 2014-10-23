@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.94 2014/10/20 22:19:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.95 2014/10/23 11:45:05 pacho Exp $
+
+  23 Oct 2014; Pacho Ramos <pacho@gentoo.org> liboil-0.3.17-r2.ebuild:
+  amd64/x86 stable, bug #525748
 
   20 Oct 2014; Jeroen Roovers <jer@gentoo.org> liboil-0.3.17-r2.ebuild:
   Stable for HPPA (bug #525748).
@@ -355,4 +358,3 @@
   16 Nov 2004; Don Seiler <rizzo@gentoo.org> +metadata.xml,
   +liboil-0.2.0.ebuild:
   Initial add.  Closes bug #71270.
-
