@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.364 2014/09/01 14:57:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.365 2014/10/23 14:09:03 chithanh Exp $
+
+*ati-drivers-14.9 (23 Oct 2014)
+
+  23 Oct 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +ati-drivers-14.9.ebuild, +files/fix-the-linux-3.17-no_hotplug-error.patch:
+  Version bump. Import of Emil Karlson's ebuild from the x11 overlay.
 
 *ati-drivers-14.6_beta2 (01 Sep 2014)
 

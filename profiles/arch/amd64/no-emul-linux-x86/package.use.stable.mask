@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.13 2014/10/23 13:54:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.16 2014/10/23 14:29:14 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -342,13 +342,16 @@ net-libs/glib-networking -abi_x86_32
 net-libs/gnutls -abi_x86_32
 net-libs/gssdp -abi_x86_32
 net-libs/gupnp -abi_x86_32
+net-libs/gupnp-igd -abi_x86_32
 net-libs/libdom -abi_x86_32
 net-libs/libgssglue -abi_x86_32
 net-libs/libhubbub -abi_x86_32
 net-libs/libnice -abi_x86_32
+net-libs/libpcap -abi_x86_32
 net-libs/libproxy -abi_x86_32
 net-libs/libsoup -abi_x86_32
 net-libs/libtirpc -abi_x86_32
+net-libs/libvncserver -abi_x86_32
 net-libs/nacl -abi_x86_32
 net-libs/neon -abi_x86_32
 net-libs/polarssl -abi_x86_32
