@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.72 2014/10/20 11:39:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.73 2014/10/23 11:15:51 blueness Exp $
+
+  23 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
+  +linux/musl/package.use.mask:
+  Mask USE=sanitize on musl profiles, bug #504200
 
   20 Oct 2014; Anthony G. Basile <blueness@gentoo.org> linux/musl/package.mask:
   Mask >app-misc/pax-utils-0.7 on musl for bug #526048

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/xrdp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/ChangeLog,v 1.10 2014/10/23 10:23:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/ChangeLog,v 1.11 2014/10/23 11:12:09 mgorny Exp $
+
+  23 Oct 2014; Michał Górny <mgorny@gentoo.org> xrdp-0.6.1.ebuild,
+  xrdp-0.8.0.ebuild:
+  Warn about use of bundled rsakeys.ini, in case someone installed xrdp manually
+  or using a bad ebuild before.
 
   23 Oct 2014; Michał Górny <mgorny@gentoo.org> files/xrdp-initd,
   xrdp-0.6.1.ebuild, xrdp-0.8.0.ebuild:

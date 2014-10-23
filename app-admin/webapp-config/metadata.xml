@@ -3,12 +3,12 @@
 <pkgmetadata>
 	<herd>web-apps</herd>
 	<maintainer>
-		<email>blueness@gentoo.org</email>
-		<name>Anthony G. Basile</name>
-	</maintainer>
-	<maintainer>
 		<email>twitch153@gentoo.org</email>
 		<name>Devan Franchini</name>
+	</maintainer>
+	<maintainer>
+		<email>blueness@gentoo.org</email>
+		<name>Anthony G. Basile</name>
 	</maintainer>
 	<use>
 		<flag name="portage">Propagete python_targets dependencies to sys-apps/portage</flag>

@@ -1,6 +1,18 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.96 2014/10/23 10:54:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.98 2014/10/23 11:22:38 swegener Exp $
+
+  23 Oct 2014; Sven Wegener <swegener@gentoo.org> -pdns-3.0.1.ebuild,
+  -pdns-3.1.ebuild, -pdns-3.2.ebuild, -files/pdns-3.0-lua-config.patch,
+  -files/pdns-3.0-verbose-logging.patch, -files/pdns-3.2-fix-autoconf.patch,
+  -files/pdns-3.2-fix-conditional-polarssl.patch,
+  -files/pdns-3.2-fix-curl-link.patch, -files/pdns-3.2-lib_lua.patch:
+  Cleanup.
+
+*pdns-3.4.0 (23 Oct 2014)
+
+  23 Oct 2014; Sven Wegener <swegener@gentoo.org> +pdns-3.4.0.ebuild:
+  Version bump, bug #518930 by James Taylor.
 
   23 Oct 2014; Sven Wegener <swegener@gentoo.org> pdns-3.3.1.ebuild:
   Stop automake from invoking yacc, bug #504244 and bug #504246.

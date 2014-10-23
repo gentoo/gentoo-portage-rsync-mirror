@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-186-r1.ebuild,v 1.6 2014/10/22 08:00:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-186-r1.ebuild,v 1.7 2014/10/23 11:27:17 pacho Exp $
 
 EAPI=5
 inherit eutils multilib-minimal pam
@@ -11,7 +11,7 @@ SRC_URI="http://www.padl.com/download/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="ssl sasl"
 
 DEPEND="|| ( >=sys-libs/glibc-2.1.3 >=sys-freebsd/freebsd-lib-9.1 )

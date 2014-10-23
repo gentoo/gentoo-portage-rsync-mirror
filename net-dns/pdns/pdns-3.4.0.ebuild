@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.2.ebuild,v 1.4 2014/10/23 10:24:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.4.0.ebuild,v 1.1 2014/10/23 11:15:39 swegener Exp $
 
 EAPI=5
 
-inherit autotools eutils multilib systemd user toolchain-funcs versionator
+inherit eutils multilib systemd user toolchain-funcs versionator
 
 DESCRIPTION="The PowerDNS Daemon"
 HOMEPAGE="http://www.powerdns.com/"
-SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
+SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,8 +19,7 @@ KEYWORDS="~amd64 ~x86"
 # oracle: dito (need Oracle Client Libraries)
 # xdb: (almost) dead, surely not supported
 
-IUSE="botan cryptopp debug doc ldap lua mydns mysql odbc opendbx postgres remote
-remote-http sqlite static tinydns"
+IUSE="botan cryptopp debug doc ldap lua mydns mysql odbc opendbx postgres remote sqlite static tools tinydns test"
 
 REQUIRED_USE="mydns? ( mysql )"
 
@@ -36,12 +35,11 @@ RDEPEND="!static? (
 		sqlite? ( dev-db/sqlite:3 )
 		odbc? ( dev-db/unixODBC )
 		opendbx? ( dev-db/opendbx )
-		remote-http? ( net-misc/curl )
 		tinydns? ( dev-db/cdb ) )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	static? (
-		net-libs/polarssl[static-libs(+)]
+		>=net-libs/polarssl-1.3.0[static-libs(+)]
 		>=dev-libs/boost-1.34[static-libs(+)]
 		botan? ( =dev-libs/botan-1.10*[static-libs(+)] )
 		cryptopp? ( dev-libs/crypto++[static-libs(+)] )
@@ -52,18 +50,8 @@ DEPEND="${RDEPEND}
 		sqlite? ( dev-db/sqlite:3[static-libs(+)] )
 		odbc? ( dev-db/unixODBC[static-libs(+)] )
 		opendbx? ( dev-db/opendbx[static-libs(+)] )
-		remote-http? ( net-misc/curl[static-libs(+)] )
 		tinydns? ( dev-db/cdb ) )
 	doc? ( app-doc/doxygen )"
-
-src_prepare() {
-	epatch \
-		"${FILESDIR}/${P}-fix-autoconf.patch" \
-		"${FILESDIR}/${P}-fix-curl-link.patch" \
-		"${FILESDIR}/${P}-fix-conditional-polarssl.patch" \
-		"${FILESDIR}/${P}-lib_lua.patch"
-	eautoreconf
-}
 
 src_configure() {
 	local dynmodules="pipe geo" # the default backends, always enabled
@@ -91,20 +79,21 @@ src_configure() {
 	use botan && myconf+=" --enable-botan1.10"
 	use cryptopp && myconf+=" --enable-cryptopp"
 	use debug && myconf+=" --enable-verbose-logging"
-	use remote-http && myconf+=" --enable-remotebackend-http"
 
 	econf \
+		--with-system-polarssl \
 		--disable-static \
 		--sysconfdir=/etc/powerdns \
 		--libdir=/usr/$(get_libdir)/powerdns \
-		--disable-recursor \
 		--with-modules="${modules}" \
 		--with-dynmodules="${dynmodules}" \
 		--with-pgsql-includes=/usr/include \
 		--with-pgsql-lib=/usr/$(get_libdir) \
 		--with-mysql-lib=/usr/$(get_libdir) \
+		$(use_enable test unit-tests) \
 		$(use_with lua) \
 		$(use_enable static static-binaries) \
+		$(use_enable tools) \
 		${myconf}
 }
 
