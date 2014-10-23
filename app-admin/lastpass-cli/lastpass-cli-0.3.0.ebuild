@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lastpass-cli/lastpass-cli-0.3.0.ebuild,v 1.2 2014/10/22 20:43:50 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lastpass-cli/lastpass-cli-0.3.0.ebuild,v 1.3 2014/10/23 01:20:08 zerochaos Exp $
 
 EAPI=5
 
@@ -35,4 +35,3 @@ src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install-doc
 }
-
