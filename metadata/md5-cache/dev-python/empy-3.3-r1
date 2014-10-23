@@ -4,11 +4,11 @@ DESCRIPTION=A powerful and robust templating system for Python
 EAPI=5
 HOMEPAGE=http://www.alcyone.com/software/empy/
 IUSE=doc python_targets_python2_7 python_targets_pypy
-KEYWORDS=amd64 ia64 ppc x86
+KEYWORDS=amd64 ~arm ia64 ppc x86
 LICENSE=LGPL-2.1
 RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_pypy? ( virtual/pypy:0= ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_pypy(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_pypy )
 SLOT=0
 SRC_URI=http://www.alcyone.com/software/empy/empy-3.3.tar.gz
 _eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	32548a82e42dc26e3312581476d2f20c	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=6c034026289b9d9054db78d120551445
+_md5_=46a7a5ce50eafb6364ae3374a0959a5e
