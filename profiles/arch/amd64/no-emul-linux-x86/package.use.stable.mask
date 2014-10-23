@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.16 2014/10/23 14:29:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.18 2014/10/23 14:34:43 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -108,6 +108,7 @@ dev-libs/udis86 -abi_x86_32
 dev-libs/wayland -abi_x86_32
 dev-libs/weston -abi_x86_32
 dev-libs/yajl -abi_x86_32
+dev-python/subunit -abi_x86_32
 dev-qt/qtcore -abi_x86_32
 dev-qt/qtdbus -abi_x86_32
 dev-qt/qtgui -abi_x86_32
@@ -168,6 +169,7 @@ media-libs/libaacplus -abi_x86_32
 media-libs/libao -abi_x86_32
 media-libs/libass -abi_x86_32
 media-libs/libart_lgpl -abi_x86_32
+media-libs/libbs2b -abi_x86_32
 media-libs/libcaca -abi_x86_32
 media-libs/libcddb -abi_x86_32
 media-libs/libcuefile -abi_x86_32
