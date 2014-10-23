@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9477 2014/10/23 10:51:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9478 2014/10/23 15:09:41 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Oct 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Remove mask on recent xf86-input-synaptics and xf86-input-evdev, bug #487944.
 
   23 Oct 2014; Pacho Ramos <pacho@gentoo.org>
   arch/amd64/no-emul-linux-x86/package.use.stable.mask,

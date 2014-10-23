@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-video-nouveau
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.74 2014/08/06 05:28:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.75 2014/10/23 15:01:49 chithanh Exp $
+
+*xf86-video-nouveau-1.0.11 (23 Oct 2014)
+
+  23 Oct 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-nouveau-1.0.11-glamor-automagic.patch,
+  +xf86-video-nouveau-1.0.11.ebuild,
+  -files/xf86-video-nouveau-1.0.9-immintrin-include.patch,
+  -xf86-video-nouveau-1.0.9.ebuild, metadata.xml:
+  Version bump, bug #523682.
 
 *xf86-video-nouveau-1.0.10-r1 (06 Aug 2014)
 

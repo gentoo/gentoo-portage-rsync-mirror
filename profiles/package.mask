@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16107 2014/10/20 00:26:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16108 2014/10/23 15:09:04 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -693,11 +693,6 @@ dev-java/ibm-jdk-bin:1.5
 # patching from upstream to be added to this version.
 # Masked until py3.4 support is added to media-gfx/cairosvg
 =dev-python/weasyprint-0.22
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (14 May 2014)
-# Depends on libevdev which still needs keywording, bug #487944
->=x11-drivers/xf86-input-evdev-2.8.99
->=x11-drivers/xf86-input-synaptics-1.7.99
 
 # Justin Lecher <jlec@gentoo.org> (07 May 2014)
 # Still doesn't work as expected

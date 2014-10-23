@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.8.4-r1.ebuild,v 1.1 2013/12/07 19:10:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.8.4-r1.ebuild,v 1.2 2014/10/23 15:31:09 aballier Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="cuda doc examples mpi openmp octave static-libs test"
 
 RDEPEND="

@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.226 2014/06/08 09:15:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.227 2014/10/23 15:07:26 chithanh Exp $
+
+  23 Oct 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-input-evdev-2.9.0.ebuild:
+  Drop sh/sparc keywords, bug #487944.
 
   08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> xf86-input-evdev-2.8.2.ebuild:
   Stable for arm, wrt bug #500368
