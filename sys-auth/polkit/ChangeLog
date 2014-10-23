@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.179 2014/10/16 15:33:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.180 2014/10/23 19:24:01 maekke Exp $
+
+  23 Oct 2014; Markus Meier <maekke@gentoo.org> polkit-0.112-r2.ebuild:
+  arm stable, bug #525252
 
   16 Oct 2014; Jeroen Roovers <jer@gentoo.org> polkit-0.112-r2.ebuild:
   Stable for HPPA (bug #525252).
