@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.136 2014/08/09 09:36:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.137 2014/10/23 09:26:58 jer Exp $
+
+  23 Oct 2014; Jeroen Roovers <jer@gentoo.org> smartmontools-6.3.ebuild:
+  Stable for HPPA (bug #526444).
 
 *smartmontools-6.3 (09 Aug 2014)
 
