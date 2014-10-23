@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-3.2.ebuild,v 1.1 2014/08/25 23:14:55 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-3.2.ebuild,v 1.2 2014/10/23 20:35:12 jsbronder Exp $
 
 EAPI="5"
 inherit eutils cmake-utils
@@ -16,11 +16,15 @@ SRC_URI="http://openmesh.org/media/Releases/${MY_PV/-RC/RC}/${MY_PN}-${MY_PV}.ta
 LICENSE="LGPL-3-with-linking-exception"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86"
-IUSE="qt4 static-libs"
+IUSE="qt4 qt5 static-libs"
 
-RDEPEND="qt4? ( dev-qt/qtgui:4
-	dev-qt/qtopengl:4
-	media-libs/freeglut )"
+RDEPEND="
+	qt4? ( dev-qt/qtgui:4
+		dev-qt/qtopengl:4
+		media-libs/freeglut )
+	qt5? ( dev-qt/qtgui:5
+		dev-qt/qtopengl:5
+		media-libs/freeglut )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
@@ -42,7 +46,16 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs="$(cmake-utils_use_build "qt4" "APPS")"
+	mycmakeargs=""
+
+	if use qt4 || use qt5; then
+		mycmakeargs="${mycmakeargs} -DBUILD_APPS=ON"
+	fi
+
+	if use qt4 && ! use qt5; then
+		mycmakeargs="${mycmakeargs} -DFORCE_QT4"
+	fi
+
 	cmake-utils_src_configure
 }
 
