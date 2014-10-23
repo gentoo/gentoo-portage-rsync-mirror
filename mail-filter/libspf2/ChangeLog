@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libspf2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.61 2014/10/23 03:55:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.62 2014/10/23 04:02:54 radhermit Exp $
+
+  23 Oct 2014; Tim Harder <radhermit@gentoo.org> libspf2-1.2.10.ebuild:
+  Fix automake-1.13 build issue (bug #468754).
 
 *libspf2-1.2.10 (23 Oct 2014)
 

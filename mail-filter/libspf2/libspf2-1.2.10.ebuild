@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/libspf2-1.2.10.ebuild,v 1.1 2014/10/23 03:55:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/libspf2-1.2.10.ebuild,v 1.2 2014/10/23 04:02:54 radhermit Exp $
 
 EAPI=5
 inherit autotools
@@ -25,8 +25,11 @@ src_prepare() {
 			-e '/bin_PROGRAMS/s/spfd_static//' src/spfd/Makefile.am \
 			-e '/bin_PROGRAMS/s/spf_example_static//' src/spf_example/Makefile.am \
 			|| die
-		eautoreconf
+		#eautoreconf
 	fi
+
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac || die
+	eautoreconf
 }
 
 src_configure() {
