@@ -1,6 +1,11 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.45 2014/10/02 03:09:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.46 2014/10/23 13:22:23 yngwin Exp $
+
+*qupzilla-1.8.3 (23 Oct 2014)
+
+  23 Oct 2014; Ben de Groot <yngwin@gentoo.org> +qupzilla-1.8.3.ebuild:
+  version bump, bug #525284
 
 *qupzilla-1.8.0 (02 Oct 2014)
 
