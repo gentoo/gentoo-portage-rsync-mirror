@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9476 2014/10/22 20:20:51 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9477 2014/10/23 10:51:37 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  arch/amd64/no-emul-linux-x86/package.use.stable.mask,
+  arch/amd64/package.use.stable.mask:
+  update abi_x86_32 masks
 
   22 Oct 2014; Ian Stakenvicius <axs@gentoo.org>
   default/linux/uclibc/amd64/package.mask:

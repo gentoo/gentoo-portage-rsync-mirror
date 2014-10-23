@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-6.11.ebuild,v 1.4 2013/12/24 12:41:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-6.11.ebuild,v 1.5 2014/10/23 10:37:36 aballier Exp $
 
 EAPI="5"
 
@@ -8,8 +8,8 @@ inherit multilib findlib eutils
 
 MY_P=${P%_p*}
 DESCRIPTION="A preprocessor-pretty-printer of ocaml"
-HOMEPAGE="http://pauillac.inria.fr/~ddr/camlp5/"
-SRC_URI="http://pauillac.inria.fr/~ddr/camlp5/distrib/src/${MY_P}.tgz"
+HOMEPAGE="http://camlp5.gforge.inria.fr/"
+SRC_URI="http://camlp5.gforge.inria.fr/distrib/src/${MY_P}.tgz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"

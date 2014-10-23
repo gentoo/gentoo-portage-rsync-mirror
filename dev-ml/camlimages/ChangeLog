@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/camlimages
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.37 2013/10/22 20:45:45 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.38 2014/10/23 10:57:44 aballier Exp $
+
+*camlimages-4.1.2 (23 Oct 2014)
+
+  23 Oct 2014; Alexis Ballier <aballier@gentoo.org> +camlimages-4.1.2.ebuild:
+  version bump & fix build without postscript
 
 *camlimages-4.1.1 (22 Oct 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.95 2014/10/23 10:24:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.96 2014/10/23 10:54:17 swegener Exp $
+
+  23 Oct 2014; Sven Wegener <swegener@gentoo.org> pdns-3.3.1.ebuild:
+  Stop automake from invoking yacc, bug #504244 and bug #504246.
 
   23 Oct 2014; Sven Wegener <swegener@gentoo.org> pdns-3.2.ebuild,
   pdns-3.3.1.ebuild:

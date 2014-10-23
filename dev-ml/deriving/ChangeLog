@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/deriving
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/deriving/ChangeLog,v 1.2 2014/04/13 17:39:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/deriving/ChangeLog,v 1.4 2014/10/23 10:51:37 aballier Exp $
+
+  23 Oct 2014; Alexis Ballier <aballier@gentoo.org> deriving-0.6.2.ebuild:
+  add missing oasis dep
+
+  23 Oct 2014; Alexis Ballier <aballier@gentoo.org> -deriving-0.6.ebuild:
+  remove old
 
 *deriving-0.6.2 (13 Apr 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.3.1.ebuild,v 1.5 2014/10/23 10:24:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.3.1.ebuild,v 1.6 2014/10/23 10:54:17 swegener Exp $
 
 EAPI=5
 
@@ -60,6 +60,9 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}/${P}-fix-curl-link.patch"
 	eautoreconf
+
+	# fix for automake now generating .hh instead of .h, bug #504244 and #504246
+	cp -a pdns/backends/bind/{bindparser.h,bindparser.hh}
 }
 
 src_configure() {
