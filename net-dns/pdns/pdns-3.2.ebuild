@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.2.ebuild,v 1.3 2013/09/22 10:31:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.2.ebuild,v 1.4 2014/10/23 10:24:52 swegener Exp $
 
 EAPI=5
 
-inherit autotools eutils multilib systemd user toolchain-funcs
+inherit autotools eutils multilib systemd user toolchain-funcs versionator
 
 DESCRIPTION="The PowerDNS Daemon"
 HOMEPAGE="http://www.powerdns.com/"

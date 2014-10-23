@@ -1,17 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/squaremap/squaremap-1.0.1.ebuild,v 1.1 2013/02/24 10:02:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/squaremap/squaremap-1.0.4.ebuild,v 1.1 2014/10/23 10:23:10 swegener Exp $
 
-EAPI="4"
-
-SUPPORT_PYTHON_ABIS="1"
-PYTHON_DEPEND="2:2.4"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI="5"
 
 MY_PN="SquareMap"
 MY_P="${MY_PN}-${PV/_beta/b}"
 
-inherit distutils
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit distutils-r1
 
 DESCRIPTION="Hierarchic data-visualisation control for wxPython"
 HOMEPAGE="http://pypi.python.org/pypi/SquareMap"
@@ -22,7 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}"
+DEPEND="${PYTHON_DEPS}"
+RDEPEND="${DEPEND}
+	dev-python/wxpython"
 
 S="${WORKDIR}"/${MY_P}

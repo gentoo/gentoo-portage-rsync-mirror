@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ldns-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.31 2014/08/21 14:24:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.32 2014/10/23 10:18:21 jer Exp $
+
+  23 Oct 2014; Jeroen Roovers <jer@gentoo.org> ldns-utils-1.6.17.ebuild:
+  Stable for HPPA (bug #525270).
 
   21 Aug 2014; Raúl Porcel <armin76@gentoo.org> ldns-utils-1.6.16.ebuild,
   ldns-utils-1.6.17.ebuild:

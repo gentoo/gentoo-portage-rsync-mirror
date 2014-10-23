@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/squaremap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/squaremap/ChangeLog,v 1.2 2014/03/05 21:29:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/squaremap/ChangeLog,v 1.5 2014/10/23 10:23:10 swegener Exp $
+
+*squaremap-1.0.4 (23 Oct 2014)
+
+  23 Oct 2014; Sven Wegener <swegener@gentoo.org> +squaremap-1.0.4.ebuild:
+  Version bump, bug #522440.
+
+  23 Oct 2014; Sven Wegener <swegener@gentoo.org> squaremap-1.0.3.ebuild:
+  Add dev-python/wxpython dependency, bug #522440.
+
+  23 Oct 2014; Sven Wegener <swegener@gentoo.org> -squaremap-1.0.1.ebuild:
+  Cleanup.
 
 *squaremap-1.0.3 (05 Mar 2014)
 
