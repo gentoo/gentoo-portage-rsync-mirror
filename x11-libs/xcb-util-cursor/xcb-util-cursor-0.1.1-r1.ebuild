@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-cursor/xcb-util-cursor-0.1.1-r1.ebuild,v 1.2 2014/06/18 21:15:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-cursor/xcb-util-cursor-0.1.1-r1.ebuild,v 1.3 2014/10/23 19:39:58 mgorny Exp $
 
 EAPI=5
 
@@ -19,9 +19,11 @@ HOMEPAGE="http://xcb.freedesktop.org/"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris"
 IUSE="test"
 
-RDEPEND=">=x11-libs/xcb-util-${PV}[${MULTILIB_USEDEP}]
-	>=x11-proto/xcb-proto-1.8-r3[${MULTILIB_USEDEP}]
-	>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]"
+RDEPEND=">=x11-libs/libxcb-1.9.1[${MULTILIB_USEDEP}]
+	>=x11-libs/xcb-util-image-0.3.9-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/xcb-util-renderutil-0.3.9[${MULTILIB_USEDEP}]
+	>=x11-proto/xcb-proto-1.8-r3:=[${MULTILIB_USEDEP}]
+	>=x11-proto/xproto-7.0.24:=[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.1
 	test? ( >=dev-libs/check-0.9.11[${MULTILIB_USEDEP}] )"

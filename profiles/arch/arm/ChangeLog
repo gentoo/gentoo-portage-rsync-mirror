@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.318 2014/10/18 18:15:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.319 2014/10/23 19:38:40 maekke Exp $
+
+  23 Oct 2014; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask net-misc/networkmanager[teamd], bug #523468
 
   18 Oct 2014; Mike Frysinger <vapier@gentoo.org> package.use.mask:
   Drop systemd-specific seccomp mask since the USE flag itself is handled

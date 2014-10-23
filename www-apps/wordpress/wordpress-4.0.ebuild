@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-4.0.ebuild,v 1.1 2014/10/02 15:49:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-4.0.ebuild,v 1.2 2014/10/23 19:44:00 maekke Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://wordpress.org/"
 SRC_URI="http://wordpress.org/${P/_rc/-RC}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="virtual/httpd-php
 	|| ( dev-lang/php[mysql] dev-lang/php[mysqli] )"

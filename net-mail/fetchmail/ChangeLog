@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.271 2014/01/25 19:03:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.272 2014/10/23 19:56:28 vapier Exp $
+
+  23 Oct 2014; Mike Frysinger <vapier@gentoo.org> fetchmail-6.3.26-r2.ebuild:
+  Update HOMEPAGE.
 
   25 Jan 2014; Tim Harder <radhermit@gentoo.org> -fetchmail-6.3.24.ebuild,
   -fetchmail-6.3.26.ebuild, -fetchmail-6.3.26-r1.ebuild:

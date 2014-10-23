@@ -3,10 +3,10 @@ DEPEND=virtual/perl-Pod-Parser virtual/perl-if virtual/perl-Module-Build dev-lan
 DESCRIPTION=Convert Pod data to formatted LaTeX
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Pod-LaTeX/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=|| ( GPL-1+ Artistic )
 RDEPEND=virtual/perl-Pod-Parser virtual/perl-if dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TJ/TJENNESS/Pod-LaTeX-0.61.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	e22596c870f09911db9a237ca79ee872	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=51275c197442c60a2f617ee95002b428
+_md5_=0bdcb4bdbbecb6c7d177f3a4579cfaeb

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.0-r1.ebuild,v 1.3 2014/10/21 09:12:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.0-r1.ebuild,v 1.4 2014/10/23 19:37:59 maekke Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ IUSE="avahi connection-sharing consolekit +dhclient dhcpcd gnutls +introspection
 kernel_linux +nss +modemmanager ncurses +ppp resolvconf selinux systemd teamd test \
 vala +wext +wifi" # wimax
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 
 REQUIRED_USE="
 	modemmanager? ( ppp )

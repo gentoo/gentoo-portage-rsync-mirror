@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-1.1.0-r1.ebuild,v 1.4 2014/10/12 08:58:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-1.1.0-r1.ebuild,v 1.5 2014/10/23 19:46:50 maekke Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="https://github.com/gnosek/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="amd64 x86"
+	KEYWORDS="amd64 ~arm x86"
 fi
 
 RDEPEND="dev-libs/fcgi"

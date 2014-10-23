@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.220 2014/10/18 18:15:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.221 2014/10/23 19:38:40 maekke Exp $
+
+# Markus Meier <maekke@gentoo.org> (23 Oct 2014)
+# Unkeyworded deps, bug #523468
+net-misc/networkmanager teamd
 
 # Markus Meier <maekke@gentoo.org> (24 Sep 2014)
 # Unkeyworded deps, bug #519618

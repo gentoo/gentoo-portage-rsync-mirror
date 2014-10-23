@@ -4,10 +4,10 @@ DESCRIPTION=LaTeX support for the Template Toolkit
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Template-Plugin-Latex/
 IUSE=test
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=|| ( Artistic GPL-2 )
 RDEPEND=dev-perl/LaTeX-Driver dev-perl/LaTeX-Encode dev-perl/LaTeX-Table >=dev-perl/Template-Toolkit-2.16 virtual/latex-base dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/EI/EINHVERFR/Template-Plugin-Latex-3.06.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	e22596c870f09911db9a237ca79ee872	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=80cd5291ff6179bc0193d0b1dffb9254
+_md5_=a9d96502f324b5039df2922ae958521c

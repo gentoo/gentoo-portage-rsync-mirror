@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Accessor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor/ChangeLog,v 1.72 2014/08/20 18:05:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor/ChangeLog,v 1.73 2014/10/23 19:38:59 maekke Exp $
+
+  23 Oct 2014; Markus Meier <maekke@gentoo.org>
+  Class-Accessor-0.340.0-r1.ebuild:
+  add ~arm, bug #358465
 
 *Class-Accessor-0.340.0-r1 (20 Aug 2014)
 

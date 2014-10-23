@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.66 2014/10/21 21:36:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.67 2014/10/23 19:32:29 maekke Exp $
+
+  23 Oct 2014; Markus Meier <maekke@gentoo.org> smpeg-0.4.4-r10.ebuild:
+  arm stable, bug #525766
 
   21 Oct 2014; Pacho Ramos <pacho@gentoo.org> smpeg-0.4.4-r10.ebuild:
   amd64/x86 stable, bug #525766

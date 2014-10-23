@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xcb-util-wm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-wm/ChangeLog,v 1.32 2014/10/23 14:02:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-wm/ChangeLog,v 1.33 2014/10/23 19:46:47 mgorny Exp $
+
+  23 Oct 2014; Michał Górny <mgorny@gentoo.org> xcb-util-wm-0.4.1-r1.ebuild:
+  Update dependencies.
 
   23 Oct 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -xcb-util-wm-0.3.8.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss-mdns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.40 2014/10/23 11:26:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.41 2014/10/23 19:46:17 maekke Exp $
+
+  23 Oct 2014; Markus Meier <maekke@gentoo.org> nss-mdns-0.10-r2.ebuild:
+  add ~arm, bug #525062
 
   23 Oct 2014; Pacho Ramos <pacho@gentoo.org> nss-mdns-0.10-r2.ebuild:
   x86 stable, bug #525274

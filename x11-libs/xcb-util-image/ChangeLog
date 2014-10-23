@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xcb-util-image
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-image/ChangeLog,v 1.22 2014/10/23 14:00:08 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-image/ChangeLog,v 1.23 2014/10/23 19:50:01 mgorny Exp $
+
+  23 Oct 2014; Michał Górny <mgorny@gentoo.org> xcb-util-image-0.4.0.ebuild:
+  Update dependencies.
 
 *xcb-util-image-0.4.0 (23 Oct 2014)
 
