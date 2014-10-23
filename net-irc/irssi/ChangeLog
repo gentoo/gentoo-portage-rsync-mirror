@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.200 2014/10/15 04:29:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.201 2014/10/23 09:48:00 swegener Exp $
+
+  23 Oct 2014; Sven Wegener <swegener@gentoo.org> -irssi-0.8.16_rc1.ebuild,
+  -irssi-0.8.17_rc1.ebuild, -irssi-0.8.17_rc2.ebuild:
+  Cleanup.
 
 *irssi-0.8.17 (15 Oct 2014)
 

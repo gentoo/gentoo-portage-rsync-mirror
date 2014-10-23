@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.30.ebuild,v 1.1 2014/10/09 12:12:17 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.30.ebuild,v 1.2 2014/10/23 09:37:00 joker Exp $
 
 EAPI=5
 
@@ -20,10 +20,12 @@ IUSE="+pm-utils qt4 systemd +udev"
 RDEPEND="qt4? ( >=dev-python/pyside-1.2.1[${PYTHON_USEDEP}] )
 	systemd? ( sys-apps/systemd )
 	udev? ( virtual/udev )
-	pm-utils? ( sys-power/pm-utils )"
+	pm-utils? ( sys-power/pm-utils )
+	virtual/libusb:1"
 
 DEPEND="virtual/pkgconfig
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	virtual/libusb:1"
 
 src_prepare() {
 	sed -i \

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst prepare setup test
-DEPEND=virtual/pkgconfig dev-python/setuptools[python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_single_target_python3_2(+)?,python_single_target_python3_3(+)?] sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/pkgconfig
+DEPEND=virtual/pkgconfig dev-python/setuptools[python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_single_target_python3_2(+)?,python_single_target_python3_3(+)?] virtual/libusb:1 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/pkgconfig
 DESCRIPTION=Utility for advanced configuration of Razer mice (DeathAdder, Krait, Lachesis)
 EAPI=5
 HOMEPAGE=http://bues.ch/cms/hacking/razercfg.html
 IUSE=+pm-utils qt4 systemd +udev python_targets_python3_2 python_targets_python3_3 python_single_target_python3_2 python_single_target_python3_3
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=qt4? ( >=dev-python/pyside-1.2.1[python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_single_target_python3_2(+)?,python_single_target_python3_3(+)?] ) systemd? ( sys-apps/systemd ) udev? ( virtual/udev ) pm-utils? ( sys-power/pm-utils )
+RDEPEND=qt4? ( >=dev-python/pyside-1.2.1[python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_single_target_python3_2(+)?,python_single_target_python3_3(+)?] ) systemd? ( sys-apps/systemd ) udev? ( virtual/udev ) pm-utils? ( sys-power/pm-utils ) virtual/libusb:1
 SLOT=0
 SRC_URI=http://bues.ch/razercfg/razercfg-0.30.tar.bz2
 _eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	udev	da001465a2e939c93f7ae16947ce3438
-_md5_=d63555d0ce3f5593b34dbe4bb0324bee
+_md5_=c0bf43cae887e24ad40334f0ca9ed667
