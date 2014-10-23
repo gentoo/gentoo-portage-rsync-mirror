@@ -1,9 +1,0 @@
-DEFINED_PHASES=install test unpack
-DESCRIPTION=A tar post-processor
-HOMEPAGE=http://tardy.sourceforge.net/
-KEYWORDS=amd64 ppc x86
-LICENSE=GPL-2
-SLOT=0
-SRC_URI=mirror://sourceforge/tardy/tardy-1.12.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=5e6b68cd75c65633ac5bc122a5a03fab

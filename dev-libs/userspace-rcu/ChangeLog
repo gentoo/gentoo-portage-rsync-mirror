@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/userspace-rcu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/userspace-rcu/ChangeLog,v 1.16 2014/07/31 22:31:01 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/userspace-rcu/ChangeLog,v 1.17 2014/10/23 03:41:58 radhermit Exp $
+
+*userspace-rcu-0.8.5 (23 Oct 2014)
+*userspace-rcu-0.7.13 (23 Oct 2014)
+
+  23 Oct 2014; Tim Harder <radhermit@gentoo.org> +userspace-rcu-0.7.13.ebuild,
+  +userspace-rcu-0.8.5.ebuild:
+  Version bumps.
 
   31 Jul 2014; Yixun Lan <dlan@gentoo.org> -userspace-rcu-0.7.8.ebuild,
   -userspace-rcu-0.7.9.ebuild, -userspace-rcu-0.7.10.ebuild,
