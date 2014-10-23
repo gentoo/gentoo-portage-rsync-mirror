@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.78 2014/10/23 10:51:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.82 2014/10/23 13:54:04 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -52,9 +52,12 @@ app-emulation/emul-linux-x86-soundlibs abi_x86_32 pulseaudio
 app-emulation/emul-linux-x86-xlibs abi_x86_32
 app-misc/lirc abi_x86_32
 app-text/libpaper abi_x86_32
+dev-db/libiodbc abi_x86_32
 dev-cpp/atkmm abi_x86_32
 dev-cpp/cairomm abi_x86_32
 dev-cpp/glibmm abi_x86_32
+dev-cpp/glog abi_x86_32
+dev-cpp/gmock abi_x86_32
 dev-cpp/gtest abi_x86_32
 dev-cpp/gtkmm abi_x86_32
 dev-cpp/libglademm abi_x86_32
@@ -120,6 +123,7 @@ dev-libs/nspr abi_x86_32
 dev-libs/nss abi_x86_32
 dev-libs/openssl abi_x86_32
 dev-lua/luaexpat abi_x86_32
+dev-lua/luasocket abi_x86_32
 dev-util/pkgconfig abi_x86_32
 dev-libs/re2 abi_x86_32
 dev-libs/udis86 abi_x86_32

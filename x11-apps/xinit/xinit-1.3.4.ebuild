@@ -1,15 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.3.2.ebuild,v 1.12 2013/02/27 06:12:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.3.4.ebuild,v 1.1 2014/10/23 13:39:48 chithanh Exp $
 
-EAPI=4
+EAPI=5
 
 inherit xorg-2
 
 DESCRIPTION="X Window System initializer"
 
 LICENSE="${LICENSE} GPL-2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="+minimal"
 
 RDEPEND="
@@ -28,15 +28,14 @@ PDEPEND="x11-apps/xrdb
 "
 
 PATCHES=(
-	"${FILESDIR}/0001-Gentoo-customizations.patch"
+	"${FILESDIR}/${PN}-1.3.3-gentoo-customizations.patch"
 )
 
-pkg_setup() {
-	xorg-2_pkg_setup
-
+src_configure() {
 	XORG_CONFIGURE_OPTIONS=(
-		--with-xinitdir="${EPREFIX}"/etc/X11/xinit
+		--with-xinitdir=/etc/X11/xinit
 	)
+	xorg-2_src_configure
 }
 
 src_install() {
@@ -47,12 +46,12 @@ src_install() {
 	exeinto /etc/X11/Sessions
 	doexe "${FILESDIR}"/Xsession
 	exeinto /etc/X11/xinit
-	doexe "${FILESDIR}"/xserverrc
+	newexe "${FILESDIR}"/xserverrc.1 xserverrc
 	exeinto /etc/X11/xinit/xinitrc.d/
-	doexe "${FILESDIR}/00-xhost"
+	doexe "${FILESDIR}"/00-xhost
 
 	insinto /usr/share/xsessions
-	doins "${FILESDIR}/Xsession.desktop"
+	doins "${FILESDIR}"/Xsession.desktop
 }
 
 pkg_postinst() {

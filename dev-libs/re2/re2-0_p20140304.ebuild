@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20140304.ebuild,v 1.1 2014/05/04 17:39:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20140304.ebuild,v 1.2 2014/10/23 13:47:06 pacho Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ LICENSE="BSD"
 # http://upstream-tracker.org/compat_reports/re2/20131024_to_20140110/abi_compat_report.html
 # https://code.google.com/p/re2/issues/detail?id=111
 SLOT="0/0.20140110"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE=""
 
 # TODO: the directory in the tarball should really be versioned.
