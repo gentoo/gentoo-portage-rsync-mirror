@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/stfl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.40 2012/10/26 16:07:24 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.41 2014/10/23 03:24:37 radhermit Exp $
+
+*stfl-0.23 (23 Oct 2014)
+
+  23 Oct 2014; Tim Harder <radhermit@gentoo.org> +stfl-0.23.ebuild:
+  Version bump, update to python-r1 (bug #521522 by Ian Stakenvicius).
 
 *stfl-0.22-r1 (26 Oct 2012)
 
