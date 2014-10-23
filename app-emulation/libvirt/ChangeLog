@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.371 2014/10/21 18:30:17 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.372 2014/10/23 05:17:14 idella4 Exp $
+
+  23 Oct 2014; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  adding as maintainer for now
 
   21 Oct 2014; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.6.ebuild:
   fix dependency wrt bug 519316
