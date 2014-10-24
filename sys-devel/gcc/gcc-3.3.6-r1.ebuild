@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6-r1.ebuild,v 1.26 2014/10/17 17:49:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6-r1.ebuild,v 1.27 2014/10/23 23:48:17 vapier Exp $
 
 EAPI="2"
 
@@ -9,8 +9,6 @@ UCLIBC_VER="1.0"
 HTB_VER="1.00-r2"
 
 inherit eutils toolchain
-
-DESCRIPTION="The GNU Compiler Collection"
 
 # ia64 - broken static handling; USE=static emerge busybox
 KEYWORDS="~amd64 ~x86"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.9.0.ebuild,v 1.1 2014/05/18 08:33:52 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.9.0.ebuild,v 1.2 2014/10/23 23:48:17 vapier Exp $
 
 EAPI="4"
 
@@ -22,10 +22,7 @@ SSP_UCLIBC_STABLE="x86 amd64 mips ppc ppc64 arm"
 
 inherit eutils toolchain
 
-DESCRIPTION="The GNU Compiler Collection"
-
 LICENSE="GPL-3+ LGPL-3+ || ( GPL-3+ libgcc libstdc++ gcc-runtime-library-exception-3.1 ) FDL-1.3+"
-
 KEYWORDS=""
 
 RDEPEND=""
