@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.14 2014/10/24 19:23:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.15 2014/10/24 21:20:38 vapier Exp $
 
 EAPI="4"
 
@@ -22,12 +22,13 @@ DESCRIPTION="Used to create autoconfiguration files"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 
 LICENSE="GPL-3"
-SLOT=$(usex multislot "${PV}" "2.5")
-IUSE="emacs multislot"
+SLOT="${PV}"
+IUSE="emacs"
 
 DEPEND=">=sys-devel/m4-1.4.16
 	>=dev-lang/perl-5.6"
 RDEPEND="${DEPEND}
+	!~sys-devel/${P}:0
 	>=sys-devel/autoconf-wrapper-13"
 [[ ${PV} == "9999" ]] && DEPEND+=" >=sys-apps/texinfo-4.3"
 PDEPEND="emacs? ( app-emacs/autoconf-mode )"
@@ -36,7 +37,7 @@ src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
 		autoreconf -f -i || die
 	fi
-	use multislot && find -name Makefile.in -exec sed -i '/^pkgdatadir/s:$:-@VERSION@:' {} +
+	find -name Makefile.in -exec sed -i '/^pkgdatadir/s:$:-@VERSION@:' {} +
 }
 
 src_configure() {
@@ -51,10 +52,8 @@ src_configure() {
 src_install() {
 	default
 
-	if use multislot ; then
-		local f
-		for f in "${D}"/usr/share/info/*.info* ; do
-			mv "${f}" "${f/.info/-${SLOT}.info}" || die
-		done
-	fi
+	local f
+	for f in "${D}"/usr/share/info/*.info* ; do
+		mv "${f}" "${f/.info/-${SLOT}.info}" || die
+	done
 }

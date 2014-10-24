@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.660 2014/10/14 13:52:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.661 2014/10/24 21:30:54 jer Exp $
+
+*wireshark-1.99.0-r1 (24 Oct 2014)
+
+  24 Oct 2014; Jeroen Roovers <jer@gentoo.org> +wireshark-1.99.0-r1.ebuild,
+  +files/wireshark-1.99.0-qt5.patch:
+  Add USE=qt5 (bug #488640).
 
   14 Oct 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.12.1.ebuild,
   wireshark-1.99.0.ebuild:

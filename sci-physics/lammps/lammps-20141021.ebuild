@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20140214-r1.ebuild,v 1.2 2014/02/19 22:49:50 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20141021.ebuild,v 1.1 2014/10/24 21:04:00 nicolasbock Exp $
 
 EAPI=5
 
-inherit eutils fortran-2 multilib
+inherit eutils flag-o-matic fortran-2 multilib
 
 convert_month() {
 	case $1 in
@@ -45,10 +45,17 @@ SRC_URI="http://lammps.sandia.gov/tars/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc examples gzip lammps-memalign mpi static-libs"
 
-DEPEND="mpi? ( virtual/mpi )"
+DEPEND="
+	mpi? (
+		virtual/blas
+		virtual/lapack
+		virtual/mpi
+	)
+	sci-libs/voro++
+	"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -71,14 +78,16 @@ lmp_emake() {
 		MPI_INC=$(usex mpi '' "-I../STUBS") \
 		MPI_PATH=$(usex mpi '' '-L../STUBS') \
 		MPI_LIB=$(usex mpi '' '-lmpi_stubs') \
+		user-atc_SYSLIB="$(usex mpi "$($(tc-getPKG_CONFIG) --libs blas) $($(tc-getPKG_CONFIG) --libs lapack)" '')"\
 		"$@"
 }
 
 src_prepare() {
 	# Fix inconsistent use of SHFLAGS.
-	sed -i -e 's:$(CCFLAGS):$(CCFLAGS) -fPIC:' src/STUBS/Makefile || die
-	sed -i -e 's:$(F90FLAGS):$(F90FLAGS) -fPIC:' lib/meam/Makefile.gfortran || die
-	sed -i -e 's:$(F90FLAGS):$(F90FLAGS) -fPIC:' lib/reax/Makefile.gfortran || die
+	sed -i \
+		-e 's:voronoi_SYSINC\s\+=.*$:voronoi_SYSINC = -I/usr/include/voro++:' \
+		-e 's:voronoi_SYSPATH\s\+=.*$:voronoi_SYSPATH =:' \
+		src/VORONOI/Makefile.lammps || die
 
 	# Fix missing .so name.
 	sed -i \
@@ -94,21 +103,51 @@ src_prepare() {
 }
 
 src_compile() {
+	# Prepare compiler flags.
+	append-cxxflags -fPIC -I../../src
+	append-fflags -fPIC
+
 	# Compile stubs for serial version.
 	use mpi || lmp_emake -C src stubs
 
 	# Build packages
+	emake -C src yes-asphere
+	emake -C src yes-body
+	emake -C src yes-class2
+	emake -C src yes-colloid
 	emake -C src yes-dipole
+	emake -C src yes-fld
+	#emake -C src yes-gpu
+	emake -C src yes-granular
+	# Need OpenKIM external dependency.
+	#emake -C src yes-kim
+	# Need Kokkos external dependency.
+	#emake -C src yes-kokkos
 	emake -C src yes-kspace
+	emake -C src yes-manybody
 	emake -C src yes-mc
 	lmp_emake -C src yes-meam
 	lmp_emake -j1 -C lib/meam -f Makefile.gfortran
+	emake -C src yes-misc
+	emake -C src yes-molecule
+	#emake -C src yes-mpiio
+	emake -C src yes-opt
+	emake -C src yes-peri
+	emake -C src yes-poems
+	lmp_emake -C lib/poems -f Makefile.g++
 	emake -C src yes-reax
-	emake -C src yes-replica
 	lmp_emake -j1 -C lib/reax -f Makefile.gfortran
+	emake -C src yes-replica
 	emake -C src yes-rigid
 	emake -C src yes-shock
+	emake -C src yes-srd
+	emake -C src yes-voronoi
 	emake -C src yes-xtc
+
+	if use mpi; then
+		emake -C src yes-user-atc
+		lmp_emake -C lib/atc -f Makefile.g++
+	fi
 
 	if use static-libs; then
 		# Build static library.
@@ -124,7 +163,7 @@ src_compile() {
 	lmp_emake -C src serial
 
 	# Compile tools.
-	emake -C tools binary2txt
+	emake -C tools binary2txt chain micelle2d data2xmovie
 }
 
 src_install() {

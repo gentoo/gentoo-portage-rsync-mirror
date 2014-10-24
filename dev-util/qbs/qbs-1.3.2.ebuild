@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.3.2.ebuild,v 1.1 2014/10/24 18:07:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.3.2.ebuild,v 1.2 2014/10/24 21:11:06 pesa Exp $
 
 EAPI=5
 
-inherit multilib qmake-utils
+inherit multilib pax-utils qmake-utils
 
 DESCRIPTION="Qt Build Suite"
 HOMEPAGE="http://qt-project.org/wiki/qbs"
@@ -68,18 +68,29 @@ src_configure() {
 	fi
 }
 
+src_compile() {
+	default
+
+	# disable mprotect wrt bug 526664
+	pax-mark m "${S}"/bin/qbs{,-config,-config-ui}
+}
+
 src_test() {
+	# disable mprotect wrt bug 526664
+	pax-mark m "${S}"/bin/tst_*
+
+	einfo "Setting up test environment in ${T}"
+
 	export HOME=${T}
 	export LD_LIBRARY_PATH=${S}/$(get_libdir)
 
 	local qmakepath=${EROOT}usr/$(get_libdir)/$(usev qt4 || usev qt5)/bin/qmake
 	[[ -x ${qmakepath} ]] || qmakepath=${EROOT}usr/bin/qmake
 
-	einfo "Setting up test environment in ${T}"
-
 	"${S}"/bin/qbs-setup-toolchains --detect || die
 	"${S}"/bin/qbs-setup-qt "${qmakepath}" qbs_autotests || die
 
+	einfo "Running autotests"
 	default
 }
 
@@ -89,8 +100,8 @@ src_install() {
 	# install documentation
 	if use doc; then
 		emake docs
+		dodoc -r doc/html
 		dodoc doc/qbs.qch
 		docompress -x /usr/share/doc/${PF}/qbs.qch
-		dohtml -r doc/html/*
 	fi
 }
