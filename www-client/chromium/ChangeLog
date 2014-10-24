@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1155 2014/10/23 03:00:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1156 2014/10/24 00:47:17 floppym Exp $
+
+*chromium-39.0.2171.36 (24 Oct 2014)
+
+  24 Oct 2014; Mike Gilbert <floppym@gentoo.org> +chromium-39.0.2171.36.ebuild,
+  -chromium-39.0.2171.19.ebuild:
+  Beta channel bump.
 
   23 Oct 2014; Mike Gilbert <floppym@gentoo.org> chromium-40.0.2194.2.ebuild:
   Invert bindist logic.
