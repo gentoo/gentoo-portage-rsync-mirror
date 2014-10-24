@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.23-r2.ebuild,v 1.1 2014/04/08 20:37:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.23-r2.ebuild,v 1.2 2014/10/24 17:30:36 grobian Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ PATCHSET_REV="-r2"
 DESCRIPTION="A small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-	https://bitbucket.org/${PN}/${PN}/downloads/${P}.tar.gz
+	mirror://bitbucket/${PN}/${PN}/downloads/${P}.tar.gz
 	ftp://ftp.mutt.org/mutt/devel/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo-patches${PATCHSET_REV}.tar.bz2
 	http://dev.gentoo.org/~grobian/distfiles/${P}-gentoo-patches${PATCHSET_REV}.tar.bz2"
@@ -142,7 +142,6 @@ src_configure() {
 		$(use slang && echo --with-slang) \
 		--enable-compressed \
 		--enable-external-dotlock \
-		--enable-mixmaster \
 		--enable-nfs-fix \
 		--sysconfdir=${EPREFIX}/etc/${PN} \
 		--with-curses \

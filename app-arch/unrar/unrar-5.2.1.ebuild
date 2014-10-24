@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-5.1.5.ebuild,v 1.2 2014/06/10 00:08:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-5.2.1.ebuild,v 1.1 2014/10/24 17:25:10 ssuominen Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs
