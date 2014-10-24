@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.4.1.ebuild,v 1.2 2014/08/21 08:50:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.4.1.ebuild,v 1.4 2014/10/24 11:38:49 jlec Exp $
 
 EAPI=5
 
@@ -20,7 +20,9 @@ LICENSE="BSD"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc examples fast +fetk mpi openmp python tools"
 
-REQUIRED_USE="mpi? ( !python )"
+REQUIRED_USE="
+	mpi? ( !python )
+	${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
 	dev-cpp/eigen:3
@@ -55,11 +57,12 @@ src_prepare() {
 	sed \
 		-e "s:-lblas:$($(tc-getPKG_CONFIG) --libs blas):g" \
 		-i CMakeLists.txt || die
+	use doc && MAKEOPTS+=" -j1"
 }
 
 src_configure() {
 	local mycmakeargs=(
-	-DSYS_LIBPATHS="${EPREFIX}"/usr/$(get_libdir)
+		-DSYS_LIBPATHS="${EPREFIX}"/usr/$(get_libdir)
 		-DLIBRARY_INSTALL_PATH=$(get_libdir)
 		-DFETK_PATH="${EPREFIX}"/usr/
 		-DBUILD_SHARED_LIBS=ON

@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.65 2014/08/21 08:50:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.67 2014/10/24 11:38:49 jlec Exp $
+
+  24 Oct 2014; Justin Lecher <jlec@gentoo.org> apbs-1.4.1.ebuild:
+  Add missing requiered use
+
+  24 Oct 2014; Justin Lecher <jlec@gentoo.org> apbs-1.4.1.ebuild:
+  Add workaround for parallel build issue, #526210
 
   21 Aug 2014; Justin Lecher <jlec@gentoo.org> apbs-1.4.1.ebuild,
   +files/apbs-1.4.1-manip.patch, files/apbs-1.4.1-multilib.patch:
