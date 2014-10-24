@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/configliere
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/configliere/ChangeLog,v 1.5 2014/08/06 07:52:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/configliere/ChangeLog,v 1.6 2014/10/24 14:51:47 mrueg Exp $
+
+*configliere-0.4.22 (24 Oct 2014)
+
+  24 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +configliere-0.4.22.ebuild:
+  Version bump.
 
   06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> configliere-0.4.18-r1.ebuild:
   Add ruby21 target.

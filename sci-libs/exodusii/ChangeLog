@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/exodusii
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/exodusii/ChangeLog,v 1.7 2014/01/01 14:35:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/exodusii/ChangeLog,v 1.8 2014/10/24 14:35:26 aballier Exp $
+
+  24 Oct 2014; Alexis Ballier <aballier@gentoo.org> exodusii-6.02.ebuild:
+  keyword ~arm
 
 *exodusii-6.02 (01 Jan 2014)
 *exodusii-5.26 (01 Jan 2014)

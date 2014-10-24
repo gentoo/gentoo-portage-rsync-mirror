@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cov-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.9 2014/10/20 17:19:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.10 2014/10/24 14:36:34 blueness Exp $
+
+  24 Oct 2014; Anthony G. Basile <blueness@gentoo.org> cov-core-1.7.ebuild:
+  Keyword ~ppc ~ppc64, bug #525562
 
   20 Oct 2014; Jeroen Roovers <jer@gentoo.org> cov-core-1.7.ebuild:
   Marked ~hppa (bug #525562).
