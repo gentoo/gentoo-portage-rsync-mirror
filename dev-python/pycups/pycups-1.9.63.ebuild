@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.63.ebuild,v 1.14 2014/03/31 21:06:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.63.ebuild,v 1.15 2014/10/23 23:18:26 tamiko Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 IUSE="doc examples"
 
 RDEPEND="
-	net-print/cups
+	<net-print/cups-2.0.0
 "
 
 # epydoc kinda sucks and supports python2 only (it's dead too),
