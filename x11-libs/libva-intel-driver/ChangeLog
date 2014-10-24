@@ -1,6 +1,20 @@
 # ChangeLog for x11-libs/libva-intel-driver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.32 2014/07/15 15:47:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.34 2014/10/24 07:05:21 aballier Exp $
+
+*libva-intel-driver-1.4.0 (24 Oct 2014)
+
+  24 Oct 2014; Alexis Ballier <aballier@gentoo.org>
+  +libva-intel-driver-1.4.0.ebuild, libva-intel-driver-9999.ebuild:
+  version bump & update libva deps, bug #524736
+
+  24 Oct 2014; Alexis Ballier <aballier@gentoo.org>
+  -libva-intel-driver-1.0.17.ebuild, -libva-intel-driver-1.0.19.ebuild,
+  -libva-intel-driver-1.0.20.ebuild, -libva-intel-driver-1.0.20-r1.ebuild,
+  -libva-intel-driver-1.2.0.ebuild, -libva-intel-driver-1.2.1.ebuild,
+  -libva-intel-driver-1.2.2.ebuild, -libva-intel-driver-1.2.2-r1.ebuild,
+  -files/libm.patch:
+  remove old
 
   15 Jul 2014; Pacho Ramos <pacho@gentoo.org> libva-intel-driver-1.3.0.ebuild:
   amd64/x86 stable, bug #516318

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/custom_printf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/custom_printf/ChangeLog,v 1.4 2014/01/19 13:42:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/custom_printf/ChangeLog,v 1.5 2014/10/24 07:30:15 aballier Exp $
+
+  24 Oct 2014; Alexis Ballier <aballier@gentoo.org>
+  custom_printf-109.60.00.ebuild:
+  add missing sexplib & pa_ounit deps, bug #522276
 
 *custom_printf-109.60.00 (19 Jan 2014)
 
