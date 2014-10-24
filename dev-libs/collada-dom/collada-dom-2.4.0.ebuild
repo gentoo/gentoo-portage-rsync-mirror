@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/collada-dom/collada-dom-2.4.0.ebuild,v 1.2 2014/10/23 15:40:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/collada-dom/collada-dom-2.4.0.ebuild,v 1.3 2014/10/24 09:19:49 aballier Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/collada-dom/${P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE=""
 
 RDEPEND="
