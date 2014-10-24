@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.8.0.ebuild,v 1.2 2014/10/24 11:04:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.8.0-r1.ebuild,v 1.1 2014/10/24 12:06:42 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit autotools eutils fortran-2 flag-o-matic python-r1 toolchain-funcs versionator
+inherit autotools eutils fortran-2 flag-o-matic python-single-r1 toolchain-funcs versionator
 
 MY_PV=$(get_version_component_range 1-2)
 MY_P="${PN}-${MY_PV}"
@@ -20,11 +20,13 @@ SLOT="0"
 IUSE="doc examples opal +pdb2pka"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
-RDEPEND="
-	dev-python/numpy
-	sci-chemistry/openbabel
-	opal? ( dev-python/zsi )
-	pdb2pka? ( sci-chemistry/apbs[python,-mpi] )"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="${PYTHON_DEPS}
+	dev-python/numpy[${PYTHON_USEDEP}]
+	sci-chemistry/openbabel[python]
+	opal? ( dev-python/zsi[${PYTHON_USEDEP}] )
+	pdb2pka? ( sci-chemistry/apbs[${PYTHON_USEDEP},-mpi] )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -37,7 +39,7 @@ pkg_setup() {
 		einfo "Allow usage of ${MAXATOMS} during calculations"
 	fi
 	fortran-2_pkg_setup
-	python_export_best
+	python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -61,6 +63,7 @@ src_configure() {
 	FFLAGS="${FFLAGS} -fPIC"
 	econf \
 		--with-max-atoms=${MAXATOMS:-10000} \
+		--with-python="${PYTHON}" \
 		$(usex pdb2pka "" --disable-pdb2pka) \
 		$(use_with opal) \
 		NUMPY="${EPREFIX}/$(python_get_sitedir)" \
@@ -88,11 +91,11 @@ src_install() {
 		PREFIX="" install
 		INPATH="$(python_get_sitedir)/${PN}"
 
-	python_newscript "${ED}"/$(python_get_sitedir)/${PN}/${PN}.py ${PN}
-	python_newscript "${ED}"/$(python_get_sitedir)/${PN}/pdb2pka/pka.py pdb2pka
+	make_wrapper ${PN} "${PYTHON} /$(python_get_sitedir)/${PN}/${PN}.py"
+	make_wrapper pdb2pka "${PYTHON} /$(python_get_sitedir)/${PN}/pdb2pka/pka.py"
 
 	for lib in _apbs.so apbslib.py{,c,o}; do
-		dosym ../../apbs/${lib} $(python_get_sitedir)/${PN}/pdb2pka/${lib}
+		dosym /usr/share/apbs/tools/python/${lib} $(python_get_sitedir)/${PN}/pdb2pka/${lib}
 	done
 
 	if use doc; then
