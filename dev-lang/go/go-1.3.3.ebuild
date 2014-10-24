@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.3.3.ebuild,v 1.4 2014/10/17 18:02:04 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.3.3.ebuild,v 1.5 2014/10/24 17:40:55 mgorny Exp $
 
 EAPI=5
 
@@ -89,6 +89,7 @@ src_install()
 	doins -r doc include lib pkg src
 
 	dobashcomp misc/bash/go
+	bashcomp_alias go {5,6,8}{g,l} gccgo gofmt
 
 	if use emacs; then
 		elisp-install ${PN} misc/emacs/*.el misc/emacs/*.elc

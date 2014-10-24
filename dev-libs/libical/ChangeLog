@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libical
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.86 2014/05/19 12:55:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.87 2014/10/24 17:51:34 ssuominen Exp $
+
+*libical-1.0.1 (24 Oct 2014)
+
+  24 Oct 2014; Samuli Suominen <ssuominen@gentoo.org> +libical-1.0.1.ebuild:
+  Version bump. Stop building static archives (.a) with USE="-static-libs"
+  uselessly.
 
   19 May 2014; Johannes Huber <johu@gentoo.org> -libical-0.48.ebuild:
   Remove old.

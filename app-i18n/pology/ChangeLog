@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/pology
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/ChangeLog,v 1.6 2014/08/10 17:52:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/ChangeLog,v 1.7 2014/10/24 17:43:00 mgorny Exp $
+
+*pology-0.11-r1 (24 Oct 2014)
+
+  24 Oct 2014; Michał Górny <mgorny@gentoo.org> +pology-0.11-r1.ebuild,
+  pology-9999.ebuild:
+  Alias additional commands for bash-completion, bug #526240.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pology-0.11.ebuild,
   pology-9999.ebuild:
