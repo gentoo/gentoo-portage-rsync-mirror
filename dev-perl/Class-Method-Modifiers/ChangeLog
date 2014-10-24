@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Method-Modifiers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Method-Modifiers/ChangeLog,v 1.14 2014/08/31 15:42:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Method-Modifiers/ChangeLog,v 1.15 2014/10/24 18:48:20 dilfridge Exp $
+
+  24 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Class-Method-Modifiers-2.0.0.ebuild, -Class-Method-Modifiers-2.10.0.ebuild:
+  Remove old
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   -Class-Method-Modifiers-1.120.0.ebuild, -Class-Method-Modifiers-1.90.0.ebuild:

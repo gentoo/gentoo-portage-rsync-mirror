@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/zathura-cb-9999.ebuild,v 1.3 2014/10/24 18:35:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/zathura-djvu-0.2.4.ebuild,v 1.1 2014/10/24 18:31:19 ssuominen Exp $
 
 EAPI=5
 
 inherit eutils toolchain-funcs
 [[ ${PV} == 9999* ]] && inherit git-2
 
-DESCRIPTION="Comic book plug-in for zathura with 7zip, rar, tar and zip support"
+DESCRIPTION="DjVu plug-in for zathura"
 HOMEPAGE="http://pwmt.org/projects/zathura/"
 if ! [[ ${PV} == 9999* ]]; then
 SRC_URI="http://pwmt.org/projects/zathura/plugins/download/${P}.tar.gz"
@@ -24,17 +24,11 @@ KEYWORDS=""
 fi
 IUSE=""
 
-COMMON_DEPEND=">=app-text/zathura-0.3.1
+RDEPEND=">=app-text/djvu-3.5.24-r1:=
+	>=app-text/zathura-0.3.1
 	dev-libs/glib:2=
-	app-arch/libarchive:=
-	x11-libs/cairo:=
-	x11-libs/gdk-pixbuf:="
-RDEPEND="${COMMON_DEPEND}
-	app-arch/p7zip
-	app-arch/tar
-	app-arch/unrar
-	app-arch/unzip"
-DEPEND="${COMMON_DEPEND}
+	x11-libs/cairo:="
+DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {

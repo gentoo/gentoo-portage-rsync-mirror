@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/isl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.24 2014/10/22 20:47:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.25 2014/10/24 18:50:47 zlogene Exp $
+
+  24 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> isl-0.12.2.ebuild:
+  amd64 stable wrt bug #516152
 
   22 Oct 2014; Anthony G. Basile <blueness@gentoo.org> isl-0.12.2.ebuild:
   Stable on ppc and ppc64, bug #516152
