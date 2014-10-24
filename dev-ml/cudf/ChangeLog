@@ -1,0 +1,13 @@
+# ChangeLog for dev-ml/cudf
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cudf/ChangeLog,v 1.2 2014/10/24 08:35:05 aballier Exp $
+
+  24 Oct 2014; Alexis Ballier <aballier@gentoo.org> cudf-0.7.ebuild:
+  add sublot
+
+*cudf-0.7 (24 Oct 2014)
+
+  24 Oct 2014; Alexis Ballier <aballier@gentoo.org> +cudf-0.7.ebuild,
+  +metadata.xml:
+  initial import, ebuild by me
+
