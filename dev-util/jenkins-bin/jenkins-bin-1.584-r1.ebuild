@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.584-r1.ebuild,v 1.1 2014/10/21 08:38:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.584-r1.ebuild,v 1.2 2014/10/24 10:42:46 chainsaw Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ S=${WORKDIR}
 
 pkg_setup() {
 	enewgroup jenkins
-	enewuser jenkins -1 /sbin/nologin /var/lib/jenkins jenkins
+	enewuser jenkins -1 -1 /var/lib/jenkins jenkins
 }
 
 src_install() {
