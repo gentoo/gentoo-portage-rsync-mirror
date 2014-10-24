@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.135 2014/08/20 21:30:38 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.136 2014/10/24 19:51:52 dilfridge Exp $
+
+*DBD-Pg-3.4.2 (24 Oct 2014)
+
+  24 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> +DBD-Pg-3.4.2.ebuild:
+  Version bump
 
 *DBD-Pg-2.19.3-r1 (20 Aug 2014)
 

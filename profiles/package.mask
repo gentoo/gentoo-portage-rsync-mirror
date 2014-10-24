@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16110 2014/10/24 18:02:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16112 2014/10/24 19:56:58 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (24 Oct 2014)
+# Fails tests (bug 421797), no reverse deps in tree, VERY dead
+# upstream, last release 10 years ago. Masked for removal in 30 days.
+dev-perl/DateTime-Format-DateManip
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (24 Oct 2014)
+# Fails tests (bug 277407), no reverse deps in tree, no releases
+# since many years, unlikely to work with uptodate subversion
+# Masked for removal in 30 days
+dev-perl/SVN-Mirror
 
 # Davide Pesavento <pesa@gentoo.org> (20 Oct 2014)
 # Does not build with any in-tree version of cmake since 20140713 (bug 506614).
