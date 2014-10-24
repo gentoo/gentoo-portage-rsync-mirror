@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pdb2pqr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.38 2014/10/24 10:54:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.39 2014/10/24 11:04:35 jlec Exp $
+
+  24 Oct 2014; Justin Lecher <jlec@gentoo.org> pdb2pqr-1.8.0.ebuild:
+  optimize py code
 
 *pdb2pqr-1.8.0 (24 Oct 2014)
 

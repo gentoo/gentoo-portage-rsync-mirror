@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.8.0.ebuild,v 1.1 2014/10/24 10:54:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.8.0.ebuild,v 1.2 2014/10/24 11:04:35 jlec Exp $
 
 EAPI=5
 
@@ -106,12 +106,6 @@ src_install() {
 		doins -r examples
 
 	dodoc ChangeLog NEWS README AUTHORS
-}
 
-pkg_postinst() {
-	python_mod_optimize ${PN}
-}
-
-pkg_postrm() {
-	python_mod_cleanup ${PN}
+	python_optimize
 }
