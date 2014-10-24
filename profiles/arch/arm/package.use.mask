@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.221 2014/10/23 19:38:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.222 2014/10/24 14:19:13 aballier Exp $
+
+# Alexis Ballier <aballier@gentoo.org> (24 Oct 2014)
+# sci-libs/hdf is not supported on arm
+sci-libs/netcdf hdf
 
 # Markus Meier <maekke@gentoo.org> (23 Oct 2014)
 # Unkeyworded deps, bug #523468
