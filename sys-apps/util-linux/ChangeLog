@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.485 2014/10/16 17:47:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.486 2014/10/24 16:27:07 vapier Exp $
+
+*util-linux-2.25.2 (24 Oct 2014)
+
+  24 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.25.2-runuser-bash-completion.patch,
+  +util-linux-2.25.2.ebuild:
+  Version bump. Fix runuser bash-completion install #522288 by William Throwe.
 
 *util-linux-2.25.1-r1 (16 Oct 2014)
 

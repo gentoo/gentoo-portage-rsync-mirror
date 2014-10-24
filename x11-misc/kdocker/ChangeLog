@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/kdocker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/ChangeLog,v 1.12 2014/10/24 15:28:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/ChangeLog,v 1.13 2014/10/24 16:22:52 mrueg Exp $
+
+  24 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -kdocker-4.8.ebuild:
+  Cleanup old.
 
   24 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> kdocker-4.8-r2.ebuild:
   x86 stable wrt bug #524286
