@@ -1,15 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/pology-0.11-r1.ebuild,v 1.1 2014/10/24 17:43:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/pology-0.11-r1.ebuild,v 1.2 2014/10/24 18:18:22 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 ESVN_REPO_URI="svn://anonsvn.kde.org/home/kde/trunk/l10n-support/pology"
-PYTHON_DEPEND="2:2.7"
+PYTHON_COMPAT=( python2_7 )
 
 [[ ${PV} == 9999 ]] && VCS_ECLASS="subversion"
 
-inherit python cmake-utils bash-completion-r1 ${VCS_ECLASS}
+inherit python-single-r1 cmake-utils bash-completion-r1 ${VCS_ECLASS}
 unset VCS_ECLASS
 
 DESCRIPTION="A framework for custom processing of PO files"
@@ -28,31 +28,29 @@ IUSE=""
 RDEPEND="
 	dev-libs/libxslt
 	dev-libs/libxml2
-	dev-python/dbus-python
+	dev-python/dbus-python[${PYTHON_USEDEP}]
 	sys-devel/gettext
+	${PYTHON_DEPS}
 "
 DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
 	app-text/docbook-xml-dtd:4.5
-	dev-python/epydoc
+	dev-python/epydoc[${PYTHON_USEDEP}]
 "
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # Magic on python parsing makes it impossible to make it parallel safe
 MAKEOPTS+=" -j1"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
 src_prepare() {
-	python_convert_shebangs -r 2 .
+	python_fix_shebang .
 }
 
 src_install() {
 	cmake-utils_src_install
 
-	dosym /usr/share/pology/syntax/kate/synder.xml /usr/share/apps/katepart/syntax/synder.xml
+	dosym ../../../pology/syntax/kate/synder.xml /usr/share/apps/katepart/syntax/synder.xml
 
 	newbashcomp "${ED}"/usr/share/pology/completion/bash/pology posieve
 	bashcomp_alias {posieve,poediff}{,.py}

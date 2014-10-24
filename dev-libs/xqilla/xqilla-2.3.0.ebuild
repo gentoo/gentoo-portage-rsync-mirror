@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.3.0.ebuild,v 1.2 2014/08/10 20:40:44 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.3.0.ebuild,v 1.3 2014/10/24 18:28:22 grobian Exp $
 
 EAPI="4"
 
@@ -40,7 +40,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-xerces=/usr \
+		--with-xerces="${EPREFIX}"/usr \
 		$(use_enable debug) \
 		$(use_with htmltidy tidy /usr) \
 		$(use_with faxpp faxpp /usr) \
@@ -59,7 +59,7 @@ src_compile() {
 src_install () {
 	default
 
-	use static-libs || rm -rf "${D}"/usr/lib*/*.la
+	use static-libs || rm -rf "${ED}"/usr/lib*/*.la
 
 	if use doc; then
 		cd docs

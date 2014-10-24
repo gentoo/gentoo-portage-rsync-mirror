@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/booh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.33 2014/05/07 19:05:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.34 2014/10/24 18:10:52 mgorny Exp $
+
+*booh-0.9.4-r1 (24 Oct 2014)
+
+  24 Oct 2014; Michał Górny <mgorny@gentoo.org> +booh-0.9.4-r1.ebuild:
+  Re-name and alias completion file to match commands, bug #526246.
 
   07 May 2014; Manuel Rüger <mrueg@gentoo.org> booh-0.9.4.ebuild:
   Remove ruby18 target.

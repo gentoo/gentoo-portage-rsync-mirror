@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xqilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/ChangeLog,v 1.15 2014/08/10 20:40:44 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/ChangeLog,v 1.16 2014/10/24 18:28:22 grobian Exp $
+
+  24 Oct 2014; Fabian Groffen <grobian@gentoo.org> xqilla-2.3.0.ebuild:
+  Look for xerces in EPREFIX, bug #526568
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xqilla-2.2.4.ebuild,
   xqilla-2.3.0.ebuild:

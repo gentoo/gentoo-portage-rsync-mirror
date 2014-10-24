@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/pology
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/ChangeLog,v 1.7 2014/10/24 17:43:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/ChangeLog,v 1.8 2014/10/24 18:18:22 mgorny Exp $
+
+  24 Oct 2014; Michał Górny <mgorny@gentoo.org> pology-0.11-r1.ebuild,
+  pology-9999.ebuild:
+  Convert to new Python eclasses. Use relative symlink for synder.xml.
 
 *pology-0.11-r1 (24 Oct 2014)
 

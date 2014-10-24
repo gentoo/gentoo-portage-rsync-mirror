@@ -1,10 +1,12 @@
 DEFINED_PHASES=compile configure install preinst prepare setup test unpack
-DEPEND=dev-libs/libxslt dev-libs/libxml2 dev-python/dbus-python sys-devel/gettext app-text/docbook-xsl-stylesheets app-text/docbook-xml-dtd:4.5 dev-python/epydoc =dev-lang/python-2.7* sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DEPEND=dev-libs/libxslt dev-libs/libxml2 dev-python/dbus-python[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sys-devel/gettext python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] app-text/docbook-xsl-stylesheets app-text/docbook-xml-dtd:4.5 dev-python/epydoc[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 DESCRIPTION=A framework for custom processing of PO files
-EAPI=4
+EAPI=5
 HOMEPAGE=http://pology.nedohodnik.net
+IUSE=python_targets_python2_7 python_single_target_python2_7
 LICENSE=GPL-3
-RDEPEND=dev-libs/libxslt dev-libs/libxml2 dev-python/dbus-python sys-devel/gettext =dev-lang/python-2.7*
+RDEPEND=dev-libs/libxslt dev-libs/libxml2 dev-python/dbus-python[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sys-devel/gettext python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?]
+REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
 SLOT=0
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=5f71fb7b13d52f13e951821635cd75f5
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=be6659b52a31cf2e24d4d4bcd65f05a4
