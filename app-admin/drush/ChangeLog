@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/drush
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/drush/ChangeLog,v 1.9 2014/03/20 17:19:31 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/drush/ChangeLog,v 1.10 2014/10/24 16:34:31 mjo Exp $
+
+*drush-6.4.0 (24 Oct 2014)
+
+  24 Oct 2014; Michael Orlitzky <mjo@gentoo.org> +drush-6.4.0.ebuild,
+  +files/update-bash-completion-script-for-2.1.patch, metadata.xml:
+  Version bump to fix bug #526222, take over as maintainer.
 
 *drush-6.2.0 (20 Mar 2014)
 

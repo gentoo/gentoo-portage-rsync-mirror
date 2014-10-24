@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/PyQt5-5.3.2.ebuild,v 1.3 2014/10/15 15:26:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/PyQt5-5.3.2.ebuild,v 1.4 2014/10/24 16:37:59 axs Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
-inherit multibuild multilib python-r1 qmake-utils
+inherit eutils multibuild multilib python-r1 qmake-utils
 
 DESCRIPTION="Python bindings for the Qt framework"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/ https://pypi.python.org/pypi/PyQt5"
@@ -79,6 +79,7 @@ src_prepare() {
 		sed -i -e '/^\s\+check_dbus(/d' configure.py || die
 	fi
 
+	epatch "${FILESDIR}"/${P}-add-dep-to-QtWebKitWidgets.patch
 	python_copy_sources
 
 	preparation() {
