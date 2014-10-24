@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.2.0-r1.ebuild,v 1.2 2014/06/18 21:02:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.4.0.ebuild,v 1.1 2014/10/24 07:00:48 aballier Exp $
 
 EAPI=5
 
@@ -58,7 +58,7 @@ PDEPEND="video_cards_nvidia? ( >=x11-libs/libva-vdpau-driver-0.7.4-r1[${MULTILIB
 
 REQUIRED_USE="opengl? ( X )"
 
-PATCHES=( "${FILESDIR}/${P}-autotools-out-of-source-build.patch" )
+PATCHES=( "${FILESDIR}/${PN}-1.2.0-autotools-out-of-source-build.patch" )
 DOCS=( NEWS )
 
 MULTILIB_WRAPPED_HEADERS=(
@@ -80,10 +80,4 @@ multilib_src_configure() {
 		$(use_enable drm)
 	)
 	autotools-utils_src_configure
-}
-
-src_install() {
-	autotools-multilib_src_install
-	# collision with media-video/mjpegtools
-	mv "${ED}"/usr/bin/{mpeg2enc,mpeg2enc_libva} || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/assimp/assimp-3.1.1.ebuild,v 1.2 2014/10/23 11:14:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/assimp/assimp-3.1.1.ebuild,v 1.3 2014/10/24 06:53:30 aballier Exp $
 
 EAPI=5
 
@@ -21,6 +21,11 @@ DEPEND="
 	sys-libs/zlib
 "
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	sed -i -e 's/ASSIMP_LIB_INSTALL_DIR "lib"/ASSIMP_LIB_INSTALL_DIR ${CMAKE_INSTALL_LIBDIR}/' CMakeLists.txt || die
+	cmake-utils_src_prepare
+}
 
 src_configure() {
 	mycmakeargs=(

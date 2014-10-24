@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/seqan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/ChangeLog,v 1.5 2014/10/17 13:51:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/ChangeLog,v 1.6 2014/10/24 06:44:20 jlec Exp $
+
+  24 Oct 2014; Justin Lecher <jlec@gentoo.org> seqan-1.4.2.ebuild:
+  Fix file collision, #526586
 
 *seqan-1.4.2 (17 Oct 2014)
 

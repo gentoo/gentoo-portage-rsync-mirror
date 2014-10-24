@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/seqan-1.4.2.ebuild,v 1.1 2014/10/17 13:51:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/seqan-1.4.2.ebuild,v 1.2 2014/10/24 06:44:20 jlec Exp $
 
 EAPI=5
 
@@ -52,4 +52,10 @@ src_install() {
 	mkdir -p "${BUILD_DIR}"/docs/html || die
 	cmake-utils_src_install
 	chmod 755 "${ED}"/usr/bin/*sh || die
+
+	mv "${ED}"/usr/bin/{,seqan-}join || die
+}
+
+pkg_postinst() {
+	elog "Due to filecollision the 'join' binary has been renamed to seqan-join"
 }

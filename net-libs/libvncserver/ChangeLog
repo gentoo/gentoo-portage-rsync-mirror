@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.82 2014/10/23 14:25:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.83 2014/10/24 06:50:18 jer Exp $
+
+  24 Oct 2014; Jeroen Roovers <jer@gentoo.org> libvncserver-0.9.9-r3.ebuild:
+  Stable for HPPA (bug #526032).
 
   23 Oct 2014; Pacho Ramos <pacho@gentoo.org> libvncserver-0.9.9-r3.ebuild:
   amd64/x86 stable, bug #526032
