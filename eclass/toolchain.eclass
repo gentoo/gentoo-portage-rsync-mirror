@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.642 2014/10/24 00:29:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.643 2014/10/24 05:32:14 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -86,9 +86,9 @@ elif [[ ${GCC_PV} == *_rc* ]] ; then
 	SNAPSHOT=${GCC_PV%_rc*}-RC-${GCC_PV##*_rc}
 fi
 
-if [[ ${SNAPSHOT} == 5.0.0-* ]] ; then
+if [[ ${SNAPSHOT} == 5.0-* ]] ; then
 	# The gcc-5 release has dropped the .0 for some reason.
-	SNAPSHOT=${SNAPSHOT/5.0.0/5}
+	SNAPSHOT=${SNAPSHOT/5.0/5}
 fi
 
 export GCC_FILESDIR=${GCC_FILESDIR:-${FILESDIR}}
@@ -314,11 +314,14 @@ get_gcc_src_uri() {
 
 	# Set where to download gcc itself depending on whether we're using a
 	# prerelease, snapshot, or release tarball.
-	if [[ -n ${PRERELEASE} ]] ; then
+	if [[ ${PV} == *9999* ]] ; then
+		# Nothing to do w/git snapshots.
+		:
+	elif [[ -n ${PRERELEASE} ]] ; then
 		GCC_SRC_URI="ftp://gcc.gnu.org/pub/gcc/prerelease-${PRERELEASE}/gcc-${PRERELEASE}.tar.bz2"
 	elif [[ -n ${SNAPSHOT} ]] ; then
 		GCC_SRC_URI="ftp://gcc.gnu.org/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT}.tar.bz2"
-	elif [[ ${PV} != *9999* ]] ; then
+	else
 		GCC_SRC_URI="mirror://gnu/gcc/gcc-${GCC_PV}/gcc-${GCC_RELEASE_VER}.tar.bz2"
 		# we want all branch updates to be against the main release
 		[[ -n ${BRANCH_UPDATE} ]] && \
