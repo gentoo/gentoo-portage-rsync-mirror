@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/mmtk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/ChangeLog,v 1.12 2013/06/16 15:39:08 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/ChangeLog,v 1.13 2014/10/24 10:13:26 jlec Exp $
+
+  24 Oct 2014; Justin Lecher <jlec@gentoo.org> mmtk-2.7.3.ebuild,
+  mmtk-2.7.5.ebuild, mmtk-2.7.9.ebuild:
+  Mask newer numpy
 
 *mmtk-2.7.9 (16 Jun 2013)
 

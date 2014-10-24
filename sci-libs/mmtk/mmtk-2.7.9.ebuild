@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.9.ebuild,v 1.1 2013/06/16 15:39:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.9.ebuild,v 1.2 2014/10/24 10:13:26 jlec Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ IUSE="examples"
 
 RDEPEND="
 	dev-python/cython[${PYTHON_USEDEP}]
-	dev-python/numpy[${PYTHON_USEDEP}]
+	<dev-python/numpy-1.9[${PYTHON_USEDEP}]
 	dev-python/scientificpython[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
