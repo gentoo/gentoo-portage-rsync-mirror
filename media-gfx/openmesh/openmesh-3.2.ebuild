@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-3.2.ebuild,v 1.2 2014/10/23 20:35:12 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-3.2.ebuild,v 1.3 2014/10/24 15:14:07 jsbronder Exp $
 
 EAPI="5"
 inherit eutils cmake-utils
@@ -48,12 +48,12 @@ src_prepare() {
 src_configure() {
 	mycmakeargs=""
 
-	if use qt4 || use qt5; then
-		mycmakeargs="${mycmakeargs} -DBUILD_APPS=ON"
+	if ! use qt4 && ! use qt5; then
+		mycmakeargs="${mycmakeargs} -DBUILD_APPS=OFF"
 	fi
 
 	if use qt4 && ! use qt5; then
-		mycmakeargs="${mycmakeargs} -DFORCE_QT4"
+		mycmakeargs="${mycmakeargs} -DFORCE_QT4=ON"
 	fi
 
 	cmake-utils_src_configure

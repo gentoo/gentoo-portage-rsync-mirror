@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.135 2014/10/05 15:34:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.136 2014/10/24 15:26:14 zlogene Exp $
+
+  24 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> smb4k-1.1.3.ebuild:
+  x86 stable wrt bug #524296
 
   05 Oct 2014; Manuel Rüger <mrueg@gentoo.org> smb4k-1.1.3.ebuild:
   Mark stable on amd64. Bug #524296
