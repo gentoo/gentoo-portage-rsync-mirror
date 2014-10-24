@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.77 2014/02/09 08:22:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.78 2014/10/24 13:01:01 jer Exp $
+
+  24 Oct 2014; Jeroen Roovers <jer@gentoo.org> libdnet-1.12.ebuild:
+  Drop dev-lang/python-2.6 support.
 
   09 Feb 2014; Joshua Kinard <kumba@gentoo.org> libdnet-1.12.ebuild:
   Added ~mips.
