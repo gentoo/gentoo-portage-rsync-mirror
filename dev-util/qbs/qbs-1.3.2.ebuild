@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.3.2.ebuild,v 1.2 2014/10/24 21:11:06 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.3.2.ebuild,v 1.3 2014/10/24 21:42:13 pesa Exp $
 
 EAPI=5
 
@@ -87,7 +87,7 @@ src_test() {
 	local qmakepath=${EROOT}usr/$(get_libdir)/$(usev qt4 || usev qt5)/bin/qmake
 	[[ -x ${qmakepath} ]] || qmakepath=${EROOT}usr/bin/qmake
 
-	"${S}"/bin/qbs-setup-toolchains --detect || die
+	"${S}"/bin/qbs-setup-toolchains "${EROOT}usr/bin/gcc" gcc || die
 	"${S}"/bin/qbs-setup-qt "${qmakepath}" qbs_autotests || die
 
 	einfo "Running autotests"
