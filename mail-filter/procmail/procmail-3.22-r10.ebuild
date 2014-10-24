@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r10.ebuild,v 1.13 2014/04/22 05:48:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r10.ebuild,v 1.14 2014/10/24 19:03:15 grobian Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs prefix
 
 DESCRIPTION="Mail delivery agent/filter"
 HOMEPAGE="http://www.procmail.org/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.procmail.org/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x64-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 IUSE="mbox selinux"
 
 DEPEND="virtual/mta"
@@ -33,11 +33,13 @@ src_unpack() {
 		epatch "${FILESDIR}/gentoo-maildir3.diff"
 	else
 		echo '# Use mbox-style mailbox in /var/spool/mail' > "${S}"/procmailrc
-		echo 'DEFAULT=/var/spool/mail/$LOGNAME' >> "${S}"/procmailrc
+		echo 'DEFAULT=${EPREFIX}/var/spool/mail/$LOGNAME' >> "${S}"/procmailrc
 	fi
 
 	# Do not use lazy bindings on lockfile and procmail
-	epatch "${FILESDIR}/${PN}-lazy-bindings.diff"
+	if [[ ${CHOST} != *-darwin* && ${CHOST} != *-interix* ]]; then
+		epatch "${FILESDIR}/${PN}-lazy-bindings.diff"
+	fi
 
 	# Fix for bug #102340
 	epatch "${FILESDIR}/${PN}-comsat-segfault.diff"
@@ -45,11 +47,18 @@ src_unpack() {
 	# Fix for bug #119890
 	epatch "${FILESDIR}/${PN}-maxprocs-fix.diff"
 
+	# Prefixify config.h
+	epatch "${FILESDIR}"/${PN}-prefix.patch
+	eprefixify config.h Makefile src/autoconf src/recommend.c
+
 	# Fix for bug #200006
 	epatch "${FILESDIR}/${PN}-pipealloc.diff"
 
 	# Fix for bug #270551
 	epatch "${FILESDIR}/${PN}-3.22-glibc-2.10.patch"
+
+	# Fix for x86-interix - doesn't have initgroups
+	epatch "${FILESDIR}"/${P}-interix.patch
 }
 
 src_compile() {

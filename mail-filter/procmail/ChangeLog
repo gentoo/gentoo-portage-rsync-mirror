@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/procmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.49 2014/04/22 05:48:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.50 2014/10/24 19:03:15 grobian Exp $
+
+  24 Oct 2014; Fabian Groffen <grobian@gentoo.org>
+  +files/procmail-3.22-interix.patch, +files/procmail-prefix.patch,
+  procmail-3.22-r10.ebuild:
+  Add Prefix changes
 
   22 Apr 2014; Fabian Groffen <grobian@gentoo.org> procmail-3.22-r10.ebuild:
   Fix build using GCC 4.7, thanks Denis Kaganovich in bug #466552

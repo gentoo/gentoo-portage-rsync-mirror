@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-9999.ebuild,v 1.10 2014/10/23 18:13:02 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-9999.ebuild,v 1.11 2014/10/24 19:14:34 nativemad Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils toolchain-funcs flag-o-matic waf-utils
 
 DESCRIPTION="Digital Audio Workstation"
@@ -68,18 +68,22 @@ DEPEND="${RDEPEND}
 		DEPEND="${DEPEND}"
 	fi
 
-pkg_pretend() {
-	MARCH=$(get-flag march)
-	if ! gcc -march=${MARCH} -Q --help=target | grep "msse" | grep "enabled" >/dev/null; then
-		die "Ardour fails to build with an march that is not sse capable!"
-	fi
-}
-
 src_unpack() {
 	if [ ${PV} = 9999 ]; then
 		git-2_src_unpack
 	else
 		unpack ${A}
+	fi
+}
+
+pkg_pretend() {
+	if use sse; then
+		MARCH=$(get-flag march)
+		for ARCHWOSSE in i686 i486; do
+			if [[ ${MARCH} = ${ARCHWOSSE} ]]; then
+				is-flag -msse || is-flag -msse2 || die "Ardour fails to build with USE=sse and an march that is not sse capable, unless the -msse or -msse2 cflag are set also!"
+			fi
+		done
 	fi
 }
 
@@ -89,11 +93,10 @@ src_prepare(){
 		sed -e '/cmd = "git describe HEAD/,/utf-8/{s:cmd = \"git describe HEAD\":rev = \"'${PVTEMP}-gentoo'\":p;d}' -i "${S}"/wscript
 		sed -e 's/'os.getcwd\(\),\ \'.git'/'os.getcwd\(\),\ \'libs/'' -i "${S}"/wscript
 		sed -e 's/'os.path.exists\(\'.git'/'os.path.exists\(\'wscript/'' -i "${S}"/wscript
-
 	fi
 	epatch "${FILESDIR}"/${PN}-3.5.7-syslibs.patch
+	epatch "${FILESDIR}"/${PN}-3.5.403-sse.patch
 	sed 's/python/python2/' -i waf
-#	sed 's/'FLAGS\'\,\ optimization_flags'/'FLAGS\'\,\ \'\''/g' -i "${S}"/wscript
 	sed 's/'FLAGS\'\,\ compiler_flags'/'FLAGS\'\,\ \'\''/g' -i "${S}"/wscript
 	append-flags "-lboost_system"
 }

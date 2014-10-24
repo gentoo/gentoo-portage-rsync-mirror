@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=virtual/perl-ExtUtils-MakeMaker-6.110.0 virtual/perl-File-Spec virtual/perl-IO dev-lang/perl:=[-build(-)]
+DESCRIPTION=Install shared files
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/File-ShareDir-Install/
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
+RDEPEND=>=virtual/perl-ExtUtils-MakeMaker-6.110.0 virtual/perl-File-Spec virtual/perl-IO dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/G/GW/GWYN/File-ShareDir-Install-0.09.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	e22596c870f09911db9a237ca79ee872	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=bbd83048b011ecb696548c99c0aee692

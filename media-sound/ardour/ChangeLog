@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.133 2014/10/23 18:15:30 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.135 2014/10/24 19:14:34 nativemad Exp $
+
+  24 Oct 2014; Andreas Schuerch <nativemad@gentoo.org> ardour-9999.ebuild:
+  update 9999 to 3.5.403 again
+
+  24 Oct 2014; Andreas Schuerch <nativemad@gentoo.org> ardour-3.5.403.ebuild,
+  +files/ardour-3.5.403-sse.patch:
+  add a patch for sse and another src_pretend. See bug 526608
 
   23 Oct 2014; Andreas Schuerch <nativemad@gentoo.org> ChangeLog:
   forgot to sign..

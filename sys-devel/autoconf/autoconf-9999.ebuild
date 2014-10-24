@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.13 2014/02/14 21:54:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.14 2014/10/24 19:23:59 vapier Exp $
 
 EAPI="4"
 
@@ -12,8 +12,6 @@ if [[ ${PV} == "9999" ]] ; then
 	# We need all the tags in order to figure out the right version.
 	# The git-r3 eclass doesn't support that, so have to stick to 2.
 	inherit git-2
-	SRC_URI=""
-	#KEYWORDS=""
 else
 	SRC_URI="mirror://gnu/${PN}/${P}.tar.xz
 		ftp://alpha.gnu.org/pub/gnu/${PN}/${P}.tar.xz"

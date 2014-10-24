@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.180 2014/10/23 20:52:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.181 2014/10/24 19:03:34 tamiko Exp $
+
+*lcms-2.6-r1 (24 Oct 2014)
+
+  24 Oct 2014; Matthias Maier <tamiko@gentoo.org>
+  +files/lcms-2.6-cve-2014-0459.patch, +lcms-2.6-r1.ebuild, lcms-2.6.ebuild:
+  apply upstream fix related to CVE-2014-0459
 
   23 Oct 2014; Jeroen Roovers <jer@gentoo.org> lcms-1.19-r3.ebuild,
   lcms-2.6.ebuild:
