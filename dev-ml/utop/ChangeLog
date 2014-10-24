@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/utop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/utop/ChangeLog,v 1.9 2014/02/12 11:37:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/utop/ChangeLog,v 1.10 2014/10/24 07:31:21 aballier Exp $
+
+  24 Oct 2014; Alexis Ballier <aballier@gentoo.org> -utop-1.5.ebuild,
+  -utop-1.8.ebuild, -utop-1.10.ebuild:
+  remove old
 
 *utop-1.11 (12 Feb 2014)
 
