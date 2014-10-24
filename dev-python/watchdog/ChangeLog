@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/watchdog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/watchdog/ChangeLog,v 1.5 2014/10/10 15:24:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/watchdog/ChangeLog,v 1.6 2014/10/24 02:37:33 idella4 Exp $
+
+  24 Oct 2014; Ian Delaney <idella4@gentoo.org> watchdog-0.8.1.ebuild:
+  add py3.4 support
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> watchdog-0.8.0.ebuild:
   Stable for amd64, wrt bug #518240
