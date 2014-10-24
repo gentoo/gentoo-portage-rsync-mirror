@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.4.ebuild,v 1.1 2014/08/31 23:41:37 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.4-r1.ebuild,v 1.1 2014/10/24 03:33:23 ottxor Exp $
 
 EAPI=5
 
@@ -65,8 +65,12 @@ src_configure() {
 }
 
 src_install() {
-	newbashcomp scripts/csg-completion.bash ${PN}
 	cmake-utils_src_install
+	newbashcomp scripts/csg-completion.bash csg_call
+	for i in "${ED}"/usr/bin/csg_*; do
+		[[ ${i} = *csg_call ]] && continue
+		bashcomp_alias csg_call "${i##*/}"
+	done
 	if use doc; then
 		if [ -n "${PV##*9999}" ]; then
 			dodoc "${DISTDIR}/${PN}-manual-${PV}.pdf"
