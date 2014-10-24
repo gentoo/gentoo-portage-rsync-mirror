@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.640 2014/10/20 17:16:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.642 2014/10/24 00:29:34 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
 DESCRIPTION="The GNU Compiler Collection"
 HOMEPAGE="http://gcc.gnu.org/"
-LICENSE="GPL-2 LGPL-2.1"
 RESTRICT="strip" # cross-compilers need controlled stripping
 
 inherit eutils fixheadtails flag-o-matic gnuconfig libtool multilib pax-utils toolchain-funcs versionator
@@ -115,7 +114,21 @@ DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/gcc-data/${CTARGET}/${GCC_CONFIG_
 # We will handle /usr/include/g++-v3/ with gcc-config ...
 STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VER/\.*/}}
 
-#---->> SLOT+IUSE logic <<----
+#---->> LICENSE+SLOT+IUSE logic <<----
+
+if tc_version_is_at_least 4.6 ; then
+	LICENSE="GPL-3+ LGPL-3+ || ( GPL-3+ libgcc libstdc++ gcc-runtime-library-exception-3.1 ) FDL-1.3+"
+elif tc_version_is_at_least 4.4 ; then
+	LICENSE="GPL-3+ LGPL-3+ || ( GPL-3+ libgcc libstdc++ gcc-runtime-library-exception-3.1 ) FDL-1.2+"
+elif tc_version_is_at_least 4.3 ; then
+	LICENSE="GPL-3+ LGPL-3+ || ( GPL-3+ libgcc libstdc++ ) FDL-1.2+"
+elif tc_version_is_at_least 4.2 ; then
+	LICENSE="GPL-3+ LGPL-2.1+ || ( GPL-3+ libgcc libstdc++ ) FDL-1.2+"
+elif tc_version_is_at_least 3.3 ; then
+	LICENSE="GPL-2+ LGPL-2.1+ FDL-1.2+"
+else
+	LICENSE="GPL-2+ LGPL-2.1+ FDL-1.1+"
+fi
 
 IUSE="multislot regression-test vanilla"
 IUSE_DEF=( nls nptl )
@@ -1955,6 +1968,12 @@ toolchain_pkg_postinst() {
 	if use regression-test ; then
 		elog "Testsuite results have been installed into /usr/share/doc/${PF}/testsuite"
 		echo
+	fi
+
+	if [[ -n ${PRERELEASE}${SNAPSHOT} ]] ; then
+		einfo "This GCC ebuild is provided for your convenience, and the use"
+		einfo "of this compiler is not supported by the Gentoo Developers."
+		einfo "Please report bugs to upstream at http://gcc.gnu.org/bugzilla/"
 	fi
 }
 
