@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dee
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.23 2013/12/08 20:00:03 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.24 2014/10/25 10:43:03 pacho Exp $
+
+  25 Oct 2014; Pacho Ramos <pacho@gentoo.org> -dee-1.0.14-r1.ebuild,
+  -dee-1.0.14.ebuild:
+  Drop old ebuilds that are using a non-available vapigen version
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> dee-1.0.14-r2.ebuild:
   x86 stable, bug #478252
