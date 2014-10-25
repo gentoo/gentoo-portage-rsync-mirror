@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Types-Serialiser
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Types-Serialiser/ChangeLog,v 1.1 2014/10/25 19:00:37 dilfridge Exp $
+
+*Types-Serialiser-1.0.0 (25 Oct 2014)
+
+  25 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Types-Serialiser-1.0.0.ebuild, +metadata.xml:
+  New package
+

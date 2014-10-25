@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=dev-perl/Try-Tiny test? ( virtual/perl-Digest-SHA dev-perl/IO-String virtual/perl-IPC-Cmd dev-perl/Test-Deep dev-perl/Test-Fatal virtual/perl-Test-Simple ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=Perl binding for the Redis database
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Redis/
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
+RDEPEND=dev-perl/Try-Tiny dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/M/ME/MELO/Redis-1.961.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	e22596c870f09911db9a237ca79ee872	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=1ecaeef7bd1ee082ee12693dab47e63e
