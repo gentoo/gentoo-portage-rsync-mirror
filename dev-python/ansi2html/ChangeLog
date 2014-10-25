@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/ansi2html
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.16 2014/03/31 20:48:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.18 2014/10/25 06:48:44 idella4 Exp $
+
+*ansi2html-1.0.7 (25 Oct 2014)
+
+  25 Oct 2014; Ian Delaney <idella4@gentoo.org> +ansi2html-1.0.7.ebuild,
+  -ansi2html-0.10.0.ebuild, -ansi2html-0.9.1-r1.ebuild,
+  -ansi2html-0.9.3-r1.ebuild, -ansi2html-0.9.4.ebuild, -ansi2html-1.0.2.ebuild,
+  -ansi2html-1.0.5.ebuild:
+  bump; clean old impls, add py3.4, tidy deps, add man page to install, upgrade
+  DOCS, rm old
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> ansi2html-0.10.0.ebuild,
   ansi2html-0.9.3-r1.ebuild, ansi2html-0.9.4.ebuild, ansi2html-1.0.2.ebuild,

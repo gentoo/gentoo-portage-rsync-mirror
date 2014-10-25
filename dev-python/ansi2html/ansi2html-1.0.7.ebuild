@@ -1,11 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-0.10.0.ebuild,v 1.2 2014/03/31 20:48:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-1.0.7.ebuild,v 1.1 2014/10/25 06:45:32 idella4 Exp $
 
 EAPI=5
 
-# ordereddict is need for < 2.7, but it's not packaged (yet)
-PYTHON_COMPAT=( python{2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -15,18 +14,22 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="test"
 
 RDEPEND="dev-python/six[${PYTHON_USEDEP}]"
-DEPEND="${RDEPEND}
-	test? (
+DEPEND="test? ( ${RDEPEND}
 		dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/mock[${PYTHON_USEDEP}]
+		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7 pypy)
 	)
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_test() {
-	nosetests -w tests \
-		|| die "Tests fail with ${EPYTHON}"
+	nosetests -w tests || die "Tests fail with ${EPYTHON}"
+}
+
+python_install_all() {
+	doman man/ansi2html.1
+	DOCS=(  README.rst man/ansi2html.1.txt )
+	distutils-r1_python_install_all
 }
