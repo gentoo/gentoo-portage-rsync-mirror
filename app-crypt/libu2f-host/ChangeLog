@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/libu2f-host
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.2 2014/10/25 11:59:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.3 2014/10/25 15:57:52 flameeyes Exp $
+
+*libu2f-host-0.0-r1 (25 Oct 2014)
+
+  25 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libu2f-host-0.0-r1.ebuild, -libu2f-host-0.0.ebuild:
+  Apply fix to udev rules so that it matches U2F+CCID correctly.
 
   25 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org> libu2f-host-0.0.ebuild,
   metadata.xml:

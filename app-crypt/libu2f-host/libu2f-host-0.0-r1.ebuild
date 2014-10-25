@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/libu2f-host-0.0.ebuild,v 1.2 2014/10/25 11:59:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/libu2f-host-0.0-r1.ebuild,v 1.1 2014/10/25 15:57:52 flameeyes Exp $
 
 EAPI=5
 
@@ -19,6 +19,11 @@ RDEPEND="dev-libs/hidapi
 	dev-libs/json-c"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_prepare() {
+	autotools-utils_src_prepare
+	sed -i -e 's:|\([^0]\):|0\1:g' 70-u2f.rules || die
+}
 
 src_install() {
 	autotools-utils_src_install

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/yubikey-neo-manager/yubikey-neo-manager-0.2.3.ebuild,v 1.1 2014/10/25 13:00:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/yubikey-neo-manager/yubikey-neo-manager-0.2.3.ebuild,v 1.2 2014/10/25 15:58:41 flameeyes Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-CDEPEND="dev-python/pyside[${PYTHON_USEDEP}]
+CDEPEND="dev-python/pyside[webkit,${PYTHON_USEDEP}]
 	app-crypt/libu2f-host
 	app-crypt/libykneomgr
 	sys-auth/ykpers"

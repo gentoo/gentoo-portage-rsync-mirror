@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/yubikey-neo-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/yubikey-neo-manager/ChangeLog,v 1.1 2014/10/25 13:00:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/yubikey-neo-manager/ChangeLog,v 1.2 2014/10/25 15:58:41 flameeyes Exp $
+
+  25 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  yubikey-neo-manager-0.2.3.ebuild:
+  Add a dependency on pyside[webkit] as otherwise it'll fail to start.
 
 *yubikey-neo-manager-0.2.3 (25 Oct 2014)
 
