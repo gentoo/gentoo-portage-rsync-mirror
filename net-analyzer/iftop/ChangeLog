@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.71 2014/10/22 23:02:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.72 2014/10/25 09:25:30 jer Exp $
+
+*iftop-1.0_pre4-r1 (25 Oct 2014)
+
+  25 Oct 2014; Jeroen Roovers <jer@gentoo.org> +iftop-1.0_pre4-r1.ebuild,
+  +files/iftop-1.0_pre4-ac_check_sizeof.patch:
+  Replace broken sizeof checks.
 
   22 Oct 2014; Jeroen Roovers <jer@gentoo.org> -iftop-0.17.ebuild,
   -iftop-1.0_pre2.ebuild, -iftop-1.0_pre3.ebuild,
