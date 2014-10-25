@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/ktexteditor/ktexteditor-5.3.0.ebuild,v 1.1 2014/10/15 13:29:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/ktexteditor/ktexteditor-5.3.0.ebuild,v 1.2 2014/10/25 15:12:47 mrueg Exp $
 
 EAPI=5
 
@@ -38,6 +38,7 @@ RDEPEND="
 	git? ( dev-libs/libgit2 )
 "
 DEPEND="${RDEPEND}
+	dev-qt/qtxmlpatterns:5
 	test? ( $(add_frameworks_dep kservice) )
 "
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-frameworks/ktexteditor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/ktexteditor/ChangeLog,v 1.1 2014/10/15 13:29:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/ktexteditor/ChangeLog,v 1.2 2014/10/25 15:12:47 mrueg Exp $
+
+  25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> ktexteditor-5.3.0.ebuild:
+  Add missing dependency.
 
 *ktexteditor-5.3.0 (15 Oct 2014)
 
