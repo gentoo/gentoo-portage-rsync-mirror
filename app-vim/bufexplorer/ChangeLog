@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/bufexplorer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/bufexplorer/ChangeLog,v 1.8 2014/10/25 08:25:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/bufexplorer/ChangeLog,v 1.9 2014/10/25 19:04:50 radhermit Exp $
+
+*bufexplorer-7.4.5-r1 (25 Oct 2014)
+
+  25 Oct 2014; Tim Harder <radhermit@gentoo.org> -bufexplorer-7.4.5.ebuild,
+  +bufexplorer-7.4.5-r1.ebuild:
+  Fix line endings (bug #526786).
 
   25 Oct 2014; Tim Harder <radhermit@gentoo.org> -bufexplorer-7.3.5.ebuild,
   -bufexplorer-7.3.6.ebuild, -bufexplorer-7.4.1.ebuild:

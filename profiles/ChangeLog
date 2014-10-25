@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9489 2014/10/25 16:08:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9490 2014/10/25 19:29:52 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Oct 2014; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Unmask pinpoint (#508854#c58 by Ferenc Erki)
 
   25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> package.mask:
   Mask net-print/foomatic-filters-ppds
