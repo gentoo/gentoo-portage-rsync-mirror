@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/tomenet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/ChangeLog,v 1.20 2014/08/13 17:48:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/ChangeLog,v 1.21 2014/10/25 13:06:42 jer Exp $
+
+  25 Oct 2014; Jeroen Roovers <jer@gentoo.org> tomenet-4.5.5.ebuild,
+  files/tomenet-4.5.5-makefile.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #526714).
 
   13 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/tomenet-4.5.3a-makefile.patch, -files/tomenet-4.5.3b-makefile.patch,
