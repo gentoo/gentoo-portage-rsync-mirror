@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3-r2.ebuild,v 1.1 2014/10/22 15:20:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3-r2.ebuild,v 1.2 2014/10/25 12:08:13 idella4 Exp $
 
 EAPI=5
 
@@ -49,8 +49,8 @@ python_compile_all() {
 	use epydoc && mkdocs
 }
 
-python_install() {
-	distutils-r1_python_install
+python_install_all() {
+	distutils-r1_python_install_all
 	newbashcomp "${S}"/completion/${PN}-completion.sh ${PN}
 	use doc && dohtml -r docs/sphinx/_build/html/
 	if use epydoc; then

@@ -1,13 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.2.2-r1.ebuild,v 1.1 2014/10/25 11:50:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.2.2-r1.ebuild,v 1.2 2014/10/25 12:09:09 jer Exp $
 
 EAPI=5
 inherit autotools eutils user
 
 DESCRIPTION="Nepenthes is a low interaction honeypot that captures worms by emulating known vulnerabilities"
 HOMEPAGE="http://nepenthes.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="
+	mirror://sourceforge/${PN}/${P}.tar.bz2
+	https://dev.gentoo.org/~jer/${P}-gcc44.patch.bz2
+"
+# The gcc44 patch includes CVS headers so we do not put it in the tree
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -32,9 +36,9 @@ src_prepare() {
 		"${FILESDIR}"/${P}-cachedir.patch \
 		"${FILESDIR}"/${P}-curl_types_h.patch \
 		"${FILESDIR}"/${P}-gcc4.patch \
-		"${FILESDIR}"/${P}-gcc44.patch \
 		"${FILESDIR}"/${P}-libdir.patch \
-		"${FILESDIR}"/${P}-sysconfdir.patch
+		"${FILESDIR}"/${P}-sysconfdir.patch \
+		"${WORKDIR}"/${P}-gcc44.patch
 
 	eautoreconf
 }

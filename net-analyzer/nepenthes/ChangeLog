@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nepenthes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.25 2014/10/25 11:50:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.26 2014/10/25 12:09:09 jer Exp $
+
+  25 Oct 2014; Jeroen Roovers <jer@gentoo.org> nepenthes-0.2.2-r1.ebuild,
+  -files/nepenthes-0.2.2-gcc44.patch:
+  Use a remote patch to work around CVS header changes.
 
 *nepenthes-0.2.2-r1 (25 Oct 2014)
 

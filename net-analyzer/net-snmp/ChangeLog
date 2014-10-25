@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.303 2014/09/19 12:38:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.304 2014/10/25 12:13:20 jer Exp $
+
+*net-snmp-5.7.3_pre5-r2 (25 Oct 2014)
+
+  25 Oct 2014; Jeroen Roovers <jer@gentoo.org> +net-snmp-5.7.3_pre5-r2.ebuild:
+  Add etherlike-mib/dot3StatsTable (bug #520836 by Oleg Gawriloff).
 
   19 Sep 2014; Jeroen Roovers <jer@gentoo.org> -net-snmp-5.7.3_pre3.ebuild,
   -files/net-snmp-5.7.2.1-phony.patch:

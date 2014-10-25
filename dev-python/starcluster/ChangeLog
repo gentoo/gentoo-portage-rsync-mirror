@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/starcluster
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/ChangeLog,v 1.10 2014/10/22 15:20:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/ChangeLog,v 1.11 2014/10/25 12:08:13 idella4 Exp $
+
+  25 Oct 2014; Ian Delaney <idella4@gentoo.org> starcluster-0.93.3-r2.ebuild:
+  correct install phase
 
 *starcluster-0.93.3-r2 (22 Oct 2014)
 

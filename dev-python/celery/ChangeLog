@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.44 2014/09/21 00:31:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.45 2014/10/25 12:19:15 idella4 Exp $
+
+*celery-3.1.16 (25 Oct 2014)
+
+  25 Oct 2014; Ian Delaney <idella4@gentoo.org> +celery-3.1.16.ebuild:
+  bump; add bash completion at install, inherit required eclass, reduce & refine
+  Description, restrict test phase due to mass failure on testing, cite filed
+  bug in comment
 
 *celery-3.1.15-r1 (21 Sep 2014)
 
