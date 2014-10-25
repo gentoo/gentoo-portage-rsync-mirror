@@ -1,6 +1,11 @@
 # ChangeLog for app-text/wdiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.95 2014/03/13 20:16:46 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.96 2014/10/25 18:29:33 jer Exp $
+
+*wdiff-1.2.2 (25 Oct 2014)
+
+  25 Oct 2014; Jeroen Roovers <jer@gentoo.org> +wdiff-1.2.2.ebuild:
+  Version bump.
 
   13 Mar 2014; Christoph Junghans <ottxor@gentoo.org> wdiff-1.2.1.ebuild:
   added ~x64-macos (tested by me)
