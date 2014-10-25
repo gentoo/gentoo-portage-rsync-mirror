@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.6.ebuild,v 1.9 2014/07/24 17:21:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.10.ebuild,v 1.1 2014/10/25 10:21:40 pacho Exp $
 
-EAPI=4
-
+EAPI=5
 inherit eutils udev
 
 DESCRIPTION="Library for identifying Wacom tablets and their model-specific features"
@@ -15,15 +14,18 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc static-libs"
 
-RDEPEND="dev-libs/glib:2
-	virtual/libgudev"
+RDEPEND="
+	dev-libs/glib:2
+	virtual/libgudev:=
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+"
 
 src_prepare() {
 	if ! use doc; then
-		sed -e 's:^\(SUBDIRS = .* \)doc:\1:' -i Makefile.in || die "sed failed"
+		sed -e 's:^\(SUBDIRS = .* \)doc:\1:' -i Makefile.in || die
 	fi
 }
 

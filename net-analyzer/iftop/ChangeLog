@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.72 2014/10/25 09:25:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.73 2014/10/25 10:04:41 jer Exp $
+
+  25 Oct 2014; Jeroen Roovers <jer@gentoo.org> iftop-1.0_pre4-r1.ebuild,
+  +files/iftop-1.0_pre4-tsent-set-but-not-used.patch:
+  Remove unused variable.
 
 *iftop-1.0_pre4-r1 (25 Oct 2014)
 
