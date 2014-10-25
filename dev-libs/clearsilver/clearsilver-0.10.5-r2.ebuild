@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r1.ebuild,v 1.8 2014/08/10 20:32:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r2.ebuild,v 1.1 2014/10/25 22:08:39 dilfridge Exp $
 
 # Please note: apache, java, mono and ruby support disabled for now.
 # Fill a bug if you need it.
 #
 # dju@gentoo.org, 4th July 2005
 
-EAPI="4"
+EAPI=5
 GENTOO_DEPEND_ON_PERL="no"
 PYTHON_DEPEND="python? 2"
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="perl python zlib"
 
-DEPEND="perl? ( dev-lang/perl )
+DEPEND="perl? ( dev-lang/perl:= )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 

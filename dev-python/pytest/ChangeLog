@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.103 2014/10/18 14:41:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.104 2014/10/25 22:11:51 radhermit Exp $
+
+*pytest-2.6.4 (25 Oct 2014)
+
+  25 Oct 2014; Tim Harder <radhermit@gentoo.org> +pytest-2.6.4.ebuild:
+  Version bump, drop python3_2 support.
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pytest-2.6.3.ebuild:
   Stable for x86, wrt bug #524416

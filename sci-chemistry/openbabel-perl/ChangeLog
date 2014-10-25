@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/openbabel-perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-perl/ChangeLog,v 1.11 2014/07/15 11:51:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-perl/ChangeLog,v 1.12 2014/10/25 22:12:27 dilfridge Exp $
+
+  25 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -openbabel-perl-2.3.1.ebuild, openbabel-perl-2.3.2.ebuild:
+  Cleanup due to old EAPI; add slot operator on Perl dependency
 
   15 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -openbabel-perl-2.3.0.ebuild:
   Cleanup due to old EAPI

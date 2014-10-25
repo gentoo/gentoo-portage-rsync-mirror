@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.180 2014/10/25 19:50:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.181 2014/10/25 22:08:20 jer Exp $
+
+  25 Oct 2014; Jeroen Roovers <jer@gentoo.org> DBI-1.628.0.ebuild:
+  Stable for HPPA (bug #520928).
 
 *DBI-1.631.0 (25 Oct 2014)
 

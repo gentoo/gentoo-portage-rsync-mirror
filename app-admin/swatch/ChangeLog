@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/swatch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.34 2013/04/05 21:45:55 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.35 2014/10/25 22:16:00 dilfridge Exp $
+
+  25 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -swatch-3.2.3-r1.ebuild, swatch-3.2.3-r2.ebuild:
+  Remove old due to old EAPI; depend on Perl subslot since modules are
+  installed in vendor_perl
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> swatch-3.2.3-r2.ebuild:
   Stable for x86, wrt bug #464410
