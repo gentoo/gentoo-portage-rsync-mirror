@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/libu2f-host
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.3 2014/10/25 15:57:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.4 2014/10/25 16:45:48 flameeyes Exp $
+
+  25 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  libu2f-host-0.0-r1.ebuild, metadata.xml:
+  Add a systemd USE flag to use acls rather than the plugdev group to give
+  access to the hidraw device.
 
 *libu2f-host-0.0-r1 (25 Oct 2014)
 
