@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/votca-csgapps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csgapps/ChangeLog,v 1.13 2014/08/31 23:45:49 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csgapps/ChangeLog,v 1.14 2014/10/25 01:09:18 patrick Exp $
+
+  25 Oct 2014; Patrick Lauer <patrick@gentoo.org> votca-csgapps-1.2.4.ebuild:
+  Adjust dependencies to be a bit more tolerant since votca-csg now only has a
+  -r1 ebuild
 
 *votca-csgapps-1.2.4 (31 Aug 2014)
 
