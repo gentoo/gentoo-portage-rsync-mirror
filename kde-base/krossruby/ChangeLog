@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krossruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.184 2014/10/25 19:58:33 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.185 2014/10/25 20:40:50 mrueg Exp $
+
+  25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -krossruby-4.14.0.ebuild:
+  Cleanup KDE SC 4.14.0
 
 *krossruby-4.14.2 (25 Oct 2014)
 

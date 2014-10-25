@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.81 2014/10/24 23:10:53 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.82 2014/10/25 20:58:45 sping Exp $
+
+*elogv-0.7.6.3 (25 Oct 2014)
+
+  25 Oct 2014; Sebastian Pipping <sping@gentoo.org> +elogv-0.7.6.3.ebuild:
+  Bump to 0.7.6.3, fixes ja_JP locale issue (bug #464962)
 
   24 Oct 2014; Sebastian Pipping <sping@gentoo.org> elogv-0.7.4.ebuild,
   elogv-0.7.4-r1.ebuild, -elogv-0.7.5.ebuild, -elogv-0.7.5-r1.ebuild,

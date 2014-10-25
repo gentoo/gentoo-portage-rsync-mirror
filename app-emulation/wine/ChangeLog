@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.520 2014/10/05 13:17:36 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.521 2014/10/25 20:37:44 ryao Exp $
+
+*wine-1.7.29 (25 Oct 2014)
+
+  25 Oct 2014; Richard Yao <ryao@gentoo.org> +wine-1.7.29.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.29 for the announcement.
+  The wine-compholio repository has renamed itself to the wine-staging
+  repository. The patch tarballs now have a different name, although not much
+  else has changed.
 
 *wine-1.7.28 (05 Oct 2014)
 *wine-1.7.22 (05 Oct 2014)
