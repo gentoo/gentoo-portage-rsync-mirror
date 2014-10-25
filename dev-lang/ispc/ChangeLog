@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ispc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ChangeLog,v 1.17 2014/06/26 05:53:00 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ChangeLog,v 1.18 2014/10/25 03:58:50 ottxor Exp $
+
+*ispc-1.8.0 (25 Oct 2014)
+
+  25 Oct 2014; Christoph Junghans <ottxor@gentoo.org> +ispc-1.8.0.ebuild:
+  version bump
 
   26 Jun 2014; Christoph Junghans <ottxor@gentoo.org>
   +files/ispc-1.7.0-llvm-version.patch, ispc-1.7.0.ebuild:
