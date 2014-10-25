@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.291 2014/10/15 10:28:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.292 2014/10/25 16:14:58 pacho Exp $
+
+*webkit-gtk-2.4.7 (25 Oct 2014)
+*webkit-gtk-2.4.7-r200 (25 Oct 2014)
+
+  25 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/webkit-gtk-2.4.7-disable-accelerated-compositing.patch,
+  +files/webkit-gtk-2.4.7-disable-webgl.patch, +webkit-gtk-2.4.7-r200.ebuild,
+  +webkit-gtk-2.4.7.ebuild:
+  Version bump, fix building when disabling accelerated compositing and webgl
+  (#525072 and #500966 by Alexander Tsoy)
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.6-r1.ebuild,
   webkit-gtk-2.2.6-r201.ebuild, webkit-gtk-2.4.4-r1.ebuild,
