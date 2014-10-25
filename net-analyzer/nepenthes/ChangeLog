@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/nepenthes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.24 2012/10/02 13:26:00 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.25 2014/10/25 11:50:22 jer Exp $
+
+*nepenthes-0.2.2-r1 (25 Oct 2014)
+
+  25 Oct 2014; Jeroen Roovers <jer@gentoo.org> +nepenthes-0.2.2-r1.ebuild,
+  +files/nepenthes-0.2.2-Werror.patch, +files/nepenthes-0.2.2-cachedir.patch,
+  +files/nepenthes-0.2.2-curl_types_h.patch, files/nepenthes-0.2.2-gcc4.patch,
+  +files/nepenthes-0.2.2-gcc44.patch, +files/nepenthes-0.2.2-libdir.patch,
+  +files/nepenthes-0.2.2-sysconfdir.patch:
+  EAPI bump. einstall -> default (bug #521574). Replace sed scripts with
+  patches. Do not install static plugins. Bring sub-20k patch into the tree.
 
   02 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> nepenthes-0.2.2.ebuild:
   Fix for building with newer curl wrt bug #426482

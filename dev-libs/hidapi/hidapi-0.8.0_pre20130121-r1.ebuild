@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/hidapi-0.8.0_pre20130121-r1.ebuild,v 1.2 2014/05/27 15:26:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/hidapi-0.8.0_pre20130121-r1.ebuild,v 1.3 2014/10/25 11:36:57 flameeyes Exp $
 
 EAPI=5
 
@@ -24,7 +24,8 @@ IUSE="doc static-libs X"
 
 # S is only needed for the pre_package
 S=${WORKDIR}/${PN}
-RDEPEND="virtual/libusb:0"
+RDEPEND="virtual/libusb:1
+	virtual/udev:0"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig
@@ -35,6 +36,10 @@ src_prepare() {
 		sed -i -e 's:PKG_CHECK_MODULES(\[fox\], \[fox\]):PKG_CHECK_MODULES(\[fox\], \[fox17\]):' \
 			configure.ac || die
 	fi
+
+	# Fix bashisms in the configure.ac file.
+	sed -i -e 's:\([A-Z_]\+\)+="\(.*\)":\1="${\1}\2":g' \
+		-e 's:\([A-Z_]\+\)+=`\(.*\)`:\1="${\1}\2":g' configure.ac || die
 
 	eautoreconf
 }

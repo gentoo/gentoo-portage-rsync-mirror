@@ -1,0 +1,326 @@
+--- a/modules/download-creceive/CReceiveDialogue.cpp
++++ b/modules/download-creceive/CReceiveDialogue.cpp
+@@ -51,10 +51,12 @@
+ #include "DownloadUrl.cpp"
+ #include "DownloadBuffer.cpp"
+ 
+ #include "SubmitManager.hpp"
+ 
++#include <cstdio>
++
+ #ifdef STDTAGS 
+ #undef STDTAGS 
+ #endif
+ #define STDTAGS l_dl | l_dia | l_hlr
+ 
+--- a/modules/download-http/HTTPDialogue.cpp
++++ b/modules/download-http/HTTPDialogue.cpp
+@@ -27,10 +27,11 @@
+ 
+  /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+ 
+ #include "HTTPDialogue.hpp"
+ 
++#include <cstdio>
+ 
+ #include "Message.hpp"
+ #include "Nepenthes.hpp"
+ #include "LogManager.hpp"
+ 
+--- a/modules/shellcode-generic/sch_generic_connect_trans.cpp
++++ b/modules/shellcode-generic/sch_generic_connect_trans.cpp
+@@ -29,10 +29,11 @@
+ 
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
++#include <cstdio>
+ 
+ #include "LogManager.hpp"
+ #include "Message.hpp"
+ #include "sch_generic_connect_trans.hpp"
+ #include "Socket.hpp"
+--- a/modules/shellcode-generic/sch_generic_createprocess.cpp
++++ b/modules/shellcode-generic/sch_generic_createprocess.cpp
+@@ -36,11 +36,11 @@
+  *
+  */
+ 
+ /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+ 
+-
++#include <cstdio>
+ 
+ #include "sch_generic_createprocess.hpp"
+ 
+ #include "Nepenthes.hpp"
+ #include "Message.hpp"
+--- a/modules/shellcode-generic/sch_generic_link_bind_trans.cpp
++++ b/modules/shellcode-generic/sch_generic_link_bind_trans.cpp
+@@ -25,10 +25,12 @@
+  *
+  *******************************************************************************/
+ 
+  /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+ 
++#include <cstdio>
++
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ 
+--- a/modules/shellcode-generic/sch_generic_link_trans.cpp
++++ b/modules/shellcode-generic/sch_generic_link_trans.cpp
+@@ -25,10 +25,11 @@
+  *
+  *******************************************************************************/
+ 
+  /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+ 
++#include <cstdio>
+ 
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+--- a/modules/shellcode-generic/sch_generic_stuttgart.cpp
++++ b/modules/shellcode-generic/sch_generic_stuttgart.cpp
+@@ -24,11 +24,13 @@
+  *             contact nepenthesdev@users.sourceforge.net  
+  *
+  *******************************************************************************/
+ 
+  /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+- 
++
++#include <cstdio>
++
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ 
+--- a/modules/shellcode-generic/sch_generic_url.cpp
++++ b/modules/shellcode-generic/sch_generic_url.cpp
+@@ -36,11 +36,11 @@
+  * wikipedia states bsd code can be relicensed on to gpl, but we got no information what has to be done
+  * 
+  *
+  */
+ 
+-
++#include <cstdio>
+  
+ #include "sch_generic_url.hpp"
+ #include "LogManager.hpp"
+ #include "Message.hpp"
+ #include "DownloadManager.hpp"
+--- a/modules/shellcode-generic/sch_generic_wuerzburg.cpp
++++ b/modules/shellcode-generic/sch_generic_wuerzburg.cpp
+@@ -25,10 +25,12 @@
+  *
+  *******************************************************************************/
+ 
+  /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+ 
++#include <cstdio>
++
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ 
+--- a/modules/shellcode-generic/sch_generic_xor.cpp
++++ b/modules/shellcode-generic/sch_generic_xor.cpp
+@@ -40,10 +40,12 @@
+ 
+ 
+ 
+ #include "sch_generic_xor.hpp"
+ 
++#include <cstdio>
++
+ #include "Nepenthes.hpp"
+ #include "Message.hpp"
+ #include "Message.cpp"
+ #include "LogManager.hpp"
+ #include "Utilities.hpp"
+--- a/modules/shellcode-signatures/sch_namespace_bindfiletransfer.cpp
++++ b/modules/shellcode-signatures/sch_namespace_bindfiletransfer.cpp
+@@ -25,10 +25,12 @@
+  *
+  *******************************************************************************/
+ 
+ /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+ 
++#include <cstdio>
++
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ 
+--- a/modules/shellcode-signatures/sch_namespace_connectbackfiletransfer.cpp
++++ b/modules/shellcode-signatures/sch_namespace_connectbackfiletransfer.cpp
+@@ -25,10 +25,12 @@
+  *
+  *******************************************************************************/
+ 
+ /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+ 
++#include <cstdio>
++
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ 
+--- a/modules/shellemu-winnt/VFS.cpp
++++ b/modules/shellemu-winnt/VFS.cpp
+@@ -20,10 +20,11 @@
+  *
+  *******************************************************************************/
+ 
+ 
+ #include <ctype.h>
++#include <cstdio>
+ 
+ #include "VFS.hpp"
+ #include "VFSNode.hpp"
+ #include "VFSDir.hpp"
+ #include "VFSFile.hpp"
+--- a/modules/shellemu-winnt/VFSCommand.hpp
++++ b/modules/shellemu-winnt/VFSCommand.hpp
+@@ -28,10 +28,11 @@
+  /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+ 
+ #ifndef HAVE_VFSCOMMANDECHO
+ #define HAVE_VFSCOMMANDECHO
+ 
++#include <stdint.h>
+ #include <list>
+ #include <string>
+ #include <vector>
+ 
+ #include "VFSNode.hpp"
+--- a/modules/shellemu-winnt/VFSCommandRCP.cpp
++++ b/modules/shellemu-winnt/VFSCommandRCP.cpp
+@@ -24,11 +24,13 @@
+  *             contact nepenthesdev@users.sourceforge.net  
+  *
+  *******************************************************************************/
+ 
+ /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+- 
++
++#include <cstdio>
++
+ #include "VFSCommandRCP.hpp"
+ #include "VFSNode.hpp"
+ #include "VFSDir.hpp"
+ #include "VFSFile.hpp"
+ #include "Nepenthes.hpp"
+--- a/modules/submit-file/submit-file.cpp
++++ b/modules/submit-file/submit-file.cpp
+@@ -28,10 +28,11 @@
+  /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include <errno.h>
++#include <cstdio>
+ 
+ #include "submit-file.hpp"
+ #include "Download.hpp"
+ #include "DownloadBuffer.hpp"
+ #include "Utilities.hpp"
+--- a/modules/submit-postgres/PGDownloadContext.cpp
++++ b/modules/submit-postgres/PGDownloadContext.cpp
+@@ -25,10 +25,11 @@
+  *
+  *******************************************************************************/
+ 
+ /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+ 
++#include <cstdio> 
+ 
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+--- a/nepenthes-core/src/DownloadManager.cpp
++++ b/nepenthes-core/src/DownloadManager.cpp
+@@ -40,10 +40,12 @@
+ #include "Config.hpp"
+ 
+ #include "SubmitEvent.hpp"
+ #include "EventManager.hpp"
+ 
++#include <cstdio>
++
+ using namespace std;
+ using namespace nepenthes;
+ 
+ #ifdef STDTAGS 
+ #undef STDTAGS 
+--- a/nepenthes-core/src/ModuleManager.cpp
++++ b/nepenthes-core/src/ModuleManager.cpp
+@@ -33,10 +33,12 @@
+ #include "Module.hpp"
+ #include "Config.hpp"
+ #include "Nepenthes.hpp"
+ #include "LogManager.hpp"
+ 
++#include <cstdio>
++
+ using namespace nepenthes;
+ using namespace std;
+ 
+ #ifdef STDTAGS 
+ #undef STDTAGS 
+--- a/nepenthes-core/src/ShellcodeManager.cpp
++++ b/nepenthes-core/src/ShellcodeManager.cpp
+@@ -33,10 +33,12 @@
+ #include "LogManager.hpp"
+ #include "Message.hpp"
+ #include "SocketEvent.hpp"
+ #include "EventManager.hpp"
+ 
++#include <cstdio>
++
+ using namespace nepenthes;
+ 
+ #ifdef STDTAGS 
+ #undef STDTAGS 
+ #endif
+--- a/nepenthes-core/src/Socket.cpp
++++ b/nepenthes-core/src/Socket.cpp
+@@ -27,10 +27,11 @@
+ 
+ /* $Id: nepenthes-0.2.2-gcc44.patch,v 1.3 2014/10/25 11:50:22 jer Exp $ */
+ 
+ #include <string>
+ #include <sstream>
++#include <cstdio>
+ 
+ #include <time.h>
+ 
+ #include <sys/types.h>
+ #include <sys/socket.h>
+--- a/nepenthes-core/src/Utilities.cpp
++++ b/nepenthes-core/src/Utilities.cpp
+@@ -36,10 +36,12 @@
+ #include <string.h>
+ #include <sys/types.h>
+ #include <inttypes.h>
+ #include <ctype.h>
+ 
++#include <cstdio>
++
+ #include "Utilities.hpp"
+ #include "LogManager.hpp"
+ #include "Config.hpp"
+ 
+ using namespace nepenthes;

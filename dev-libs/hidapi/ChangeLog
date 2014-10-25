@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/hidapi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/ChangeLog,v 1.7 2014/05/27 15:26:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/ChangeLog,v 1.8 2014/10/25 11:36:57 flameeyes Exp $
+
+  25 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  hidapi-0.8.0_pre20130121-r1.ebuild:
+  Fix bashisms in configure.ac file; add missing udev dependency; update libusb
+  dependency as it requires libusb-1, not libusb-compat.
 
   27 May 2014; Anthony G. Basile <blueness@gentoo.org>
   hidapi-0.8.0_pre20130121-r1.ebuild:

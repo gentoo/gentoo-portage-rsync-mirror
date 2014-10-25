@@ -1,0 +1,9 @@
+# ChangeLog for app-crypt/libu2f-host
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libykneomgr/ChangeLog,v 1.1 2014/10/25 11:58:43 flameeyes Exp $
+
+*libu2f-host-0.0 (25 Oct 2014)
+
+  25 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org> +libu2f-host-0.0.ebuild,
+  +metadata.xml:
+  Initial import of Yubico's libu2f-host, needed for the yubikey-neo-manager.
