@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-0.9.36.ebuild,v 1.3 2014/10/21 12:08:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-0.9.36.ebuild,v 1.4 2014/10/25 13:59:52 maekke Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="http://launchpad.net/${PN}/${SERIES}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 RDEPEND="dev-python/mimeparse[${PYTHON_USEDEP}]
