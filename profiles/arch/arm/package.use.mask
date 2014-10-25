@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.222 2014/10/24 14:19:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.224 2014/10/25 17:23:15 kensington Exp $
+
+# Michael Palimaka <kensington@gentoo.org> (25 Oct 2014)
+# Unkeyworded deps, bug #525558
+kde-base/systemsettings kscreen
 
 # Alexis Ballier <aballier@gentoo.org> (24 Oct 2014)
 # sci-libs/hdf is not supported on arm
@@ -41,10 +45,6 @@ mail-filter/opendkim opendbx
 # Markus Meier <maekke@gentoo.org> (04 May 2014)
 # Unkeyworded deps, bug #507896
 dev-qt/qt-mobility messaging
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (3 May 2014)
-# Missing keywords, should only be a transitionary problem
-kde-base/baloo alternatekcm
 
 # Julian Ospald <hasufell@gentoo.org> (20 Apr 2014)
 # Missing keywords, bug #508226
@@ -287,7 +287,6 @@ kde-base/okular ebook chm
 kde-base/kstars indi
 kde-base/kdeutils-meta floppy
 kde-base/kdenetwork-meta ppp
-kde-base/kdesdk-misc extras
 kde-base/smokeqt qscintilla qwt
 kde-base/qtruby qscintilla qwt
 kde-base/perlqt qscintilla qwt

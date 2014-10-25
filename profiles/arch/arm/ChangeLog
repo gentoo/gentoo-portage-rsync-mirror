@@ -1,6 +1,13 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.320 2014/10/24 14:19:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.322 2014/10/25 17:23:15 kensington Exp $
+
+  25 Oct 2014; Michael Palimaka <kensington@gentoo.org> package.use.mask:
+  Remove obsolete mask for USE flag & package no longer in the tree.
+
+  25 Oct 2014; Michael Palimaka <kensington@gentoo.org> package.use.mask:
+  Mask kde-base/systemsettings[kscreen] due to unkeyworded dependencies (bug
+  #525558).
 
   24 Oct 2014; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask hdf useflag on sci-libs/netcdf since sci-libs/hdf does not support arm
