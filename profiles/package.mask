@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16113 2014/10/24 20:52:45 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16114 2014/10/24 23:01:51 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -537,6 +537,7 @@ app-admin/hwreport
 =dev-vcs/subversion-1.8.10-r1
 =app-i18n/pology-0.11-r1
 =app-misc/booh-0.9.4-r1
+>=sys-apps/pacman-4.0.3-r1
 
 # Sergey Popov <pinkbyte@gentoo.org> (27 Aug 2014)
 # Does not work since late 2013, due to update servers shutdown

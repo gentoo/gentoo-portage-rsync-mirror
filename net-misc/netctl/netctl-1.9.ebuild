@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-1.9.ebuild,v 1.1 2014/08/07 19:44:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-1.9.ebuild,v 1.2 2014/10/24 23:06:13 mgorny Exp $
 
 EAPI=5
 
@@ -49,6 +49,7 @@ src_install() {
 	emake DESTDIR="${D%/}" SHELL=bash install
 	dodoc AUTHORS NEWS README
 	newbashcomp contrib/bash-completion netctl
+	bashcomp_alias netctl netctl-auto wifi-menu
 	insinto /usr/share/zsh/site-functions
 	newins contrib/zsh-completion _netctl
 }

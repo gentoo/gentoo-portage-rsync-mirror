@@ -1,7 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.12.ebuild,v 1.5 2014/07/26 21:21:47 zlogene Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.12.ebuild,v 1.6 2014/10/24 23:21:23 monsieurp Exp $
 EAPI=5
 
 MODULE_AUTHOR=KENTNL
@@ -9,8 +8,7 @@ MODULE_VERSION=0.2.12
 inherit perl-module eutils prefix
 
 DESCRIPTION="Portage abstraction layer for perl"
-
-HOMEPAGE="http://download.mpsna.de/opensource/PortageXS/ ${HOMEPAGE}"
+HOMEPAGE="http://search.cpan.org/~kentnl/PortageXS-0.2.12/"
 
 SLOT="0"
 LICENSE="GPL-2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r90.ebuild,v 1.2 2014/10/13 09:40:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r91.ebuild,v 1.1 2014/10/24 23:03:19 mgorny Exp $
 
 EAPI=5
 
@@ -20,6 +20,19 @@ RDEPEND="|| ( >=app-shells/bash-4.1 app-shells/zsh )
 	sys-apps/miscfiles
 	!app-admin/eselect-bashcomp"
 
+# Remove unwanted completions.
+STRIP_COMPLETIONS=(
+	# Included in util-linux, bug #468544
+	cal dmesg eject hd hexdump hwclock ionice look ncal renice rtcwake
+
+	# Slackware package stuff, quite generic names cause collisions
+	# (e.g. with sys-apps/pacman)
+	explodepkg installpkg makepkg pkgtool removepkg upgradepkg
+
+	# Debian/Red Hat network stuff
+	ifdown ifup ifstatus
+)
+
 src_prepare() {
 	epatch "${WORKDIR}"/bashcomp2-pre1/*.patch
 }
@@ -32,7 +45,7 @@ src_install() {
 	# use the copies from >=sys-apps/util-linux-2.23 wrt #468544 -> hd and ncal
 	# becomes dead symlinks as a result
 	local file
-	for file in cal dmesg eject hd hexdump hwclock ionice look ncal renice rtcwake; do
+	for file in "${STRIP_COMPLETIONS[@]}"; do
 		rm "${ED}"/usr/share/bash-completion/completions/${file} || die
 	done
 

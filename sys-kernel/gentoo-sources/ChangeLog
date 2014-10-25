@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1426 2014/10/23 17:12:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1427 2014/10/24 23:14:59 mpagano Exp $
+
+*gentoo-sources-3.12.31 (24 Oct 2014)
+
+  24 Oct 2014; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.12.31.ebuild:
+  Linux patch 3.12.31
 
   23 Oct 2014; Pacho Ramos <pacho@gentoo.org> gentoo-sources-3.16.5.ebuild:
   amd64/x86 stable, bug #525314

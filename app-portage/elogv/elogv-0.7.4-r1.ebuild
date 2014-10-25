@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.7.4-r1.ebuild,v 1.4 2011/01/12 15:31:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.7.4-r1.ebuild,v 1.5 2014/10/24 23:10:53 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -49,7 +49,7 @@ pkg_postinst() {
 	elog "and at least one out of "
 	elog "		 PORTAGE_ELOG_CLASSES=\"warn error info log qa\""
 	elog "More information on the elog system can be found"
-	elog "in ${EPREFIX}/etc/make.conf.example"
+	elog "in ${EPREFIX}/usr/share/portage/config/make.conf.example"
 	elog
 	elog "To operate properly this software needs the directory"
 	elog "${PORT_LOGDIR:-${EPREFIX}/var/log/portage}/elog created, belonging to group portage."
