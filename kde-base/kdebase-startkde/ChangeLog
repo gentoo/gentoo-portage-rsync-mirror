@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.376 2014/09/16 18:17:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.377 2014/10/25 20:03:17 mrueg Exp $
+
+*kdebase-startkde-4.11.13 (25 Oct 2014)
+
+  25 Oct 2014; Manuel Rüger <mrueg@gentoo.org>
+  +kdebase-startkde-4.11.13.ebuild, +files/kdebase-startkde-kscreen.patch:
+  Version bump KDE SC 4.11.13
 
 *kdebase-startkde-4.11.12 (16 Sep 2014)
 

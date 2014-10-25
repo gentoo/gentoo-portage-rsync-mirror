@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/liboxygenstyle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.154 2014/09/16 18:17:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.155 2014/10/25 20:03:17 mrueg Exp $
+
+*liboxygenstyle-4.11.13 (25 Oct 2014)
+
+  25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +liboxygenstyle-4.11.13.ebuild:
+  Version bump KDE SC 4.11.13
 
 *liboxygenstyle-4.11.12 (16 Sep 2014)
 
