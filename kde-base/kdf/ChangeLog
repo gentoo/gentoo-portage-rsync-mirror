@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.312 2014/09/16 18:17:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.313 2014/10/25 19:58:27 kensington Exp $
+
+*kdf-4.14.2 (25 Oct 2014)
+
+  25 Oct 2014; Michael Palimaka <kensington@gentoo.org> +kdf-4.14.2.ebuild:
+  Version bump KDE SC 4.14.2
 
 *kdf-4.14.1 (16 Sep 2014)
 

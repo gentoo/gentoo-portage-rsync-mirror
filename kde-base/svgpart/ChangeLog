@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/svgpart
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/svgpart/ChangeLog,v 1.225 2014/09/16 18:17:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/svgpart/ChangeLog,v 1.226 2014/10/25 19:58:33 kensington Exp $
+
+*svgpart-4.14.2 (25 Oct 2014)
+
+  25 Oct 2014; Michael Palimaka <kensington@gentoo.org> +svgpart-4.14.2.ebuild:
+  Version bump KDE SC 4.14.2
 
 *svgpart-4.14.1 (16 Sep 2014)
 

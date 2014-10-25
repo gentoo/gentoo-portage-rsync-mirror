@@ -3082,6 +3082,7 @@ kde-base/kwin:gles - Enable support for GLES.
 kde-base/libplasmaclock:kdepim - KDE PIM integration via kde-base/kdepimlibs
 kde-base/lokalize:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/marble:designer-plugin - Enable designer plugin
+kde-base/marble:phonon - Enable sound support via media-libs/phonon
 kde-base/marble:shapefile - Enable support for ESRI shapefiles
 kde-base/marble:zip - Enable support for reading and displaying .kmz files
 kde-base/nepomuk-core:epub - Adds support for reading EPUB ebook metadata

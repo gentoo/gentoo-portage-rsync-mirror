@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kimono
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/ChangeLog,v 1.129 2014/09/16 18:17:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/ChangeLog,v 1.130 2014/10/25 19:58:30 kensington Exp $
+
+*kimono-4.14.2 (25 Oct 2014)
+
+  25 Oct 2014; Michael Palimaka <kensington@gentoo.org> +kimono-4.14.2.ebuild:
+  Version bump KDE SC 4.14.2
 
 *kimono-4.14.1 (16 Sep 2014)
 
