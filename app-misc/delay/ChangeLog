@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/delay
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/ChangeLog,v 1.29 2012/03/19 08:04:13 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/ChangeLog,v 1.30 2014/10/25 12:50:52 jer Exp $
+
+*delay-1.6-r2 (25 Oct 2014)
+
+  25 Oct 2014; Jeroen Roovers <jer@gentoo.org> +delay-1.6-r2.ebuild,
+  +files/delay-1.6-headers.patch, +files/delay-1.6-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #526738).
 
   19 Mar 2012; Justin Lecher <jlec@gentoo.org> -delay-1.6.ebuild:
   Cleaned old

@@ -1,0 +1,9 @@
+# ChangeLog for app-crypt/yubikey-neo-manager
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/yubikey-neo-manager/ChangeLog,v 1.1 2014/10/25 13:00:23 flameeyes Exp $
+
+*yubikey-neo-manager-0.2.3 (25 Oct 2014)
+
+  25 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +yubikey-neo-manager-0.2.3.ebuild:
+  Initial import of the YubiKey NEO Manager.
