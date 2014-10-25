@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyquery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.47 2014/10/15 23:17:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.48 2014/10/25 14:02:41 maekke Exp $
+
+  25 Oct 2014; Markus Meier <maekke@gentoo.org> pyquery-1.2.9.ebuild:
+  add ~arm, bug #525246
 
   15 Oct 2014; Anthony G. Basile <blueness@gentoo.org> pyquery-1.2.9.ebuild:
   Keyworded ~ppc and ~ppc64, bug #525246

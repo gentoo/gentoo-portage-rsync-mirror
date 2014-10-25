@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.110.ebuild,v 1.3 2014/10/23 13:48:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.110.ebuild,v 1.4 2014/10/25 14:09:38 maekke Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://fedorahosted.org/releases/${PN:0:1}/${PN:1:1}/${PN}/${P}.tar.gz
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs test"
 
 src_prepare() {

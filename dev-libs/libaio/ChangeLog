@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.89 2014/10/23 13:48:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.90 2014/10/25 14:09:38 maekke Exp $
+
+  25 Oct 2014; Markus Meier <maekke@gentoo.org> libaio-0.3.110.ebuild:
+  arm stable, bug #525980
 
   23 Oct 2014; Pacho Ramos <pacho@gentoo.org> libaio-0.3.110.ebuild:
   amd64/x86 stable, bug #525980
