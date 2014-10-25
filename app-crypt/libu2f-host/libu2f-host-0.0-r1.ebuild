@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/libu2f-host-0.0-r1.ebuild,v 1.2 2014/10/25 16:45:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/libu2f-host-0.0-r1.ebuild,v 1.3 2014/10/25 17:36:45 flameeyes Exp $
 
 EAPI=5
 
-inherit autotools-utils udev
+inherit autotools-utils linux-info udev
 
 DESCRIPTION="Yubico Universal 2nd Factor (U2F) Host C Library"
 HOMEPAGE="https://developers.yubico.com/libu2f-host/"
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${RDEPEND}
 	systemd? ( sys-apps/systemd[acl] )"
+
+CONFIG_CHECK="~HIDRAW"
 
 src_prepare() {
 	autotools-utils_src_prepare
