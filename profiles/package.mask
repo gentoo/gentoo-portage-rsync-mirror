@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16120 2014/10/25 19:29:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16121 2014/10/26 04:10:13 leio Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -208,7 +208,7 @@ gnome-extra/tasks
 <gnome-extra/zenity-3.8
 <media-gfx/eog-3.10
 media-gfx/shared-color-profiles
-<media-libs/clutter-gst-2.0.10
+#<media-libs/clutter-gst-2.0.10
 net-libs/gupnp-vala
 <media-libs/gupnp-dlna-0.10.2
 media-libs/swfdec

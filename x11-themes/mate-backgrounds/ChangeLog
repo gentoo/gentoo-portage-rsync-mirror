@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/mate-backgrounds
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mate-backgrounds/ChangeLog,v 1.6 2014/07/02 09:49:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mate-backgrounds/ChangeLog,v 1.7 2014/10/26 04:19:32 leio Exp $
+
+  26 Oct 2014; Mart Raudsepp <leio@gentoo.org> mate-backgrounds-1.8.0.ebuild:
+  Add ~arm keyword, bug 508072
 
   02 Jul 2014; Pacho Ramos <pacho@gentoo.org> mate-backgrounds-1.8.0.ebuild:
   x86 stable, bug 513714

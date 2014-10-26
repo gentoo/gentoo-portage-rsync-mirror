@@ -4,11 +4,11 @@ DESCRIPTION=The MATE image viewer
 EAPI=5
 HOMEPAGE=http://mate-desktop.org
 IUSE=X dbus exif jpeg lcms python svg tiff xmp debug python_targets_python2_7 python_single_target_python2_7
-KEYWORDS=amd64 x86
+KEYWORDS=amd64 ~arm x86
 LICENSE=GPL-2
 RDEPEND=dev-libs/atk:0 >=dev-libs/glib-2.25.9:2 >=dev-libs/libxml2-2:2 gnome-base/dconf:0 >=mate-base/mate-desktop-1.6:0 sys-libs/zlib:0 x11-libs/cairo:0 >=x11-libs/gdk-pixbuf-2.4:2[jpeg?,tiff?] >=x11-libs/gtk+-2.18:2 x11-libs/libX11:0 >=x11-misc/shared-mime-info-0.20:0 >=x11-themes/mate-icon-theme-1.6:0 virtual/libintl:0 dbus? ( >=dev-libs/dbus-glib-0.71:0 ) exif? ( >=media-libs/libexif-0.6.14:0 virtual/jpeg:0 ) jpeg? ( virtual/jpeg:0 ) lcms? ( media-libs/lcms:2 ) python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=dev-python/pygobject-2.15.1:2[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=dev-python/pygtk-2.13:2[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) svg? ( >=gnome-base/librsvg-2.26:2 ) xmp? ( >=media-libs/exempi-1.99.5:2 ) !!media-gfx/mate-image-viewer
 REQUIRED_USE=python? ( python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 ) )
 SLOT=0
 SRC_URI=http://pub.mate-desktop.org/releases/1.8/eom-1.8.0.tar.xz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=5eebbdef442bcf8acd84abd3bf235842
+_md5_=3734ce10eb7f7d5751a345d55b86714c
