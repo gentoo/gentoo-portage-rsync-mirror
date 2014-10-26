@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/rawtherapee
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.16 2014/06/11 08:30:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.17 2014/10/26 17:15:39 radhermit Exp $
+
+*rawtherapee-4.2 (26 Oct 2014)
+
+  26 Oct 2014; Tim Harder <radhermit@gentoo.org> +rawtherapee-4.2.ebuild:
+  Version bump, define CACHE_NAME_SUFFIX to use a static config location (bug
+  #523022).
 
 *rawtherapee-4.1 (11 Jun 2014)
 
