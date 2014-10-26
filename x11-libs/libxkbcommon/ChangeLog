@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libxkbcommon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/ChangeLog,v 1.9 2014/06/18 21:07:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/ChangeLog,v 1.10 2014/10/26 14:45:09 remi Exp $
+
+*libxkbcommon-0.5.0 (26 Oct 2014)
+
+  26 Oct 2014; Rémi Cardona <remi@gentoo.org> +libxkbcommon-0.5.0.ebuild:
+  Bump to 0.5.0, add test USE flag (see bug #526914)
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libxkbcommon-0.4.1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

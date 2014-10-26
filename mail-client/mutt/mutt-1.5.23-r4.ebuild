@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.23-r3.ebuild,v 1.1 2014/10/24 18:24:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.23-r4.ebuild,v 1.1 2014/10/26 14:49:52 grobian Exp $
 
 EAPI="5"
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r3"
+PATCHSET_REV="-r4"
 
 DESCRIPTION="A small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org/"
@@ -100,6 +100,8 @@ src_prepare() {
 	# impact on the code
 	if use sidebar ; then
 		epatch "${PATCHDIR}"/sidebar-20140412.patch
+		epatch "${PATCHDIR}"/sidebar-dotpathsep.patch
+		epatch "${PATCHDIR}"/sidebar-counts.patch
 	fi
 
 	local upatches=

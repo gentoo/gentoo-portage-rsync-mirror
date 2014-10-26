@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/dataplot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.18 2012/10/16 19:13:05 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.19 2014/10/26 14:40:18 jlec Exp $
+
+  26 Oct 2014; Justin Lecher <jlec@gentoo.org> dataplot-20090821.ebuild,
+  files/configure.ac.20090821, metadata.xml:
+  Drop bashisms from configure.ac, #526888
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org> dataplot-20090821.ebuild,
   metadata.xml:

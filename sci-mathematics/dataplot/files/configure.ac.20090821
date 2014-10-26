@@ -9,7 +9,7 @@ AC_PROG_CC
 AC_PROG_F77
 AC_F77_LIBRARY_LDFLAGS
 case $F77 in
-    *gfortran*) FFLAGS+=" -w -fno-range-check" ;;
+    *gfortran*) FFLAGS="${FFLAGS} -w -fno-range-check" ;;
     *) ;;
 esac
 
