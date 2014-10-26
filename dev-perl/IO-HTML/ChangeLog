@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-HTML
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-HTML/ChangeLog,v 1.13 2014/02/14 07:07:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-HTML/ChangeLog,v 1.14 2014/10/26 15:45:56 dilfridge Exp $
+
+  26 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -IO-HTML-0.40.0.ebuild:
+  Drop old
 
 *IO-HTML-1.00.0 (14 Feb 2014)
 

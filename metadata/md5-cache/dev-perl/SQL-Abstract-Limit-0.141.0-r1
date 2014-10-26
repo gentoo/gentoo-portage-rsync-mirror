@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/SQL-Abstract dev-perl/DBI virtual/perl-Module-Build test? ( dev-perl/Test-Deep dev-perl/Test-Exception ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=dev-perl/SQL-Abstract dev-perl/DBI virtual/perl-Module-Build test? ( dev-perl/Test-Deep dev-perl/Test-Exception ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Portable LIMIT emulation
-EAPI=4
+EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/SQL-Abstract-Limit/
 IUSE=test
 KEYWORDS=~amd64 ~ppc ~x86 ~x86-solaris
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=dev-perl/SQL-Abstract dev-perl/DBI || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=dev-perl/SQL-Abstract dev-perl/DBI dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DA/DAVEBAIRD/SQL-Abstract-Limit-0.141.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	e22596c870f09911db9a237ca79ee872	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=337926fc8b8f4f773638fd86ff51460b
+_md5_=fa76a0d3c1eb6d38de64a9a15907551b

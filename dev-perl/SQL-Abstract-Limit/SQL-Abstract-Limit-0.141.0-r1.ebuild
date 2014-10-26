@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract-Limit/SQL-Abstract-Limit-0.141.0.ebuild,v 1.1 2011/08/29 09:38:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract-Limit/SQL-Abstract-Limit-0.141.0-r1.ebuild,v 1.1 2014/10/26 15:48:35 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=DAVEBAIRD
 MODULE_VERSION=0.141
