@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.38 2014/08/13 17:19:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.39 2014/10/26 19:08:47 grobian Exp $
+
+  26 Oct 2014; Fabian Groffen <grobian@gentoo.org> cffi-0.8.6.ebuild:
+  Added Prefix keywords, bug #503094
 
   13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> cffi-0.8.1.ebuild,
   cffi-0.8.2.ebuild, cffi-0.8.6.ebuild:

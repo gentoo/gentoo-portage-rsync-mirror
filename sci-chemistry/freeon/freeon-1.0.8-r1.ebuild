@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/freeon/freeon-1.0.8-r1.ebuild,v 1.2 2014/08/10 20:28:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/freeon/freeon-1.0.8-r1.ebuild,v 1.3 2014/10/26 19:12:07 jlec Exp $
 
 EAPI=5
 
@@ -25,3 +25,5 @@ RDEPEND="
 	virtual/lapack"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}"
+
+PATCHES=( "${FILESDIR}"/${P}-blas.patch )
