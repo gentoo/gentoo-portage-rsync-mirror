@@ -49,9 +49,9 @@
  
 -cc=		cc
 -CC=		$(cc) -DTZDIR=\"$(TZDIR)\"
-+CC+=		-DTZDIR=\"$(TZDIR)\"
++CPPFLAGS+=		-DTZDIR=\"$(TZDIR)\"
 +ifeq ($(NLS),1)
-+CC+= -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\"
++CPPFLAGS+= -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\"
 +endif
  
  AR=		ar

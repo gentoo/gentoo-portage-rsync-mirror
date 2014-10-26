@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mate-terminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mate-terminal/ChangeLog,v 1.6 2014/07/02 09:49:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mate-terminal/ChangeLog,v 1.7 2014/10/26 03:15:23 leio Exp $
+
+  26 Oct 2014; Mart Raudsepp <leio@gentoo.org> mate-terminal-1.8.0.ebuild:
+  Add ~arm keyword for bug 508072 and me
 
   02 Jul 2014; Pacho Ramos <pacho@gentoo.org> mate-terminal-1.8.0.ebuild:
   x86 stable, bug 513714

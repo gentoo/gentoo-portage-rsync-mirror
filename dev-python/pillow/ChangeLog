@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.42 2014/10/13 11:36:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.43 2014/10/26 03:08:24 floppym Exp $
+
+*pillow-2.4.0-r1 (26 Oct 2014)
+*pillow-2.5.3-r1 (26 Oct 2014)
+
+  26 Oct 2014; Mike Gilbert <floppym@gentoo.org> +pillow-2.4.0-r1.ebuild,
+  +pillow-2.5.3-r1.ebuild, -pillow-2.3.1.ebuild, -pillow-2.4.0.ebuild,
+  -pillow-2.5.3.ebuild:
+  Recent versions of pillow use lcms:2. Bug 526810.
 
   13 Oct 2014; Anthony G. Basile <blueness@gentoo.org> pillow-2.5.3.ebuild:
   Stable on ppc and ppc64, bug #522426

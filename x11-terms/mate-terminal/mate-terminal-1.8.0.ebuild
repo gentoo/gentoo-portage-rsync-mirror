@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mate-terminal/mate-terminal-1.8.0.ebuild,v 1.4 2014/07/02 09:49:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mate-terminal/mate-terminal-1.8.0.ebuild,v 1.5 2014/10/26 03:15:23 leio Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~arm x86"
 
 RDEPEND="app-text/rarian:0
 	dev-libs/atk:0
