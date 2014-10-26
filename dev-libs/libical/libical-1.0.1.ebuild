@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-1.0.1.ebuild,v 1.1 2014/10/24 17:51:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-1.0.1.ebuild,v 1.2 2014/10/26 12:54:47 ssuominen Exp $
 
 EAPI=5
 inherit cmake-utils
 
-DESCRIPTION="An implementation of basic iCAL protocols from citadel, previously known as aurore"
+DESCRIPTION="An implementation of basic iCAL protocols"
 HOMEPAGE="http://github.com/libical/libical"
 SRC_URI="http://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
@@ -19,16 +19,16 @@ RDEPEND="introspection? ( dev-libs/gobject-introspection )"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 
+DOCS=(
+	AUTHORS ReadMe.txt ReleaseNotes.txt TEST THANKS TODO
+	doc/{AddingOrModifyingComponents,UsingLibical}.txt
+)
+
 src_configure() {
 	local mycmakeargs=( $(cmake-utils_use introspection GOBJECT_INTROSPECTION) )
 	use static-libs || mycmakeargs+=( -DSHARED_ONLY=ON )
 	cmake-utils_src_configure
 }
-
-DOCS=(
-	AUTHORS ReadMe.txt ReleaseNotes.txt TEST THANKS TODO
-	doc/{AddingOrModifyingComponents,UsingLibical}.txt
-)
 
 src_compile() {
 	cmake-utils_src_compile -j1
