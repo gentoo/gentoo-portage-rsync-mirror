@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/overlint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.13 2014/10/25 23:29:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.14 2014/10/25 23:31:53 sping Exp $
+
+  25 Oct 2014; Sebastian Pipping <sping@gentoo.org> overlint-0.5.2.ebuild:
+  Sync 0.5.2 with 0.5.3
 
 *overlint-0.5.3 (25 Oct 2014)
 
