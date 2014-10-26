@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libchewing
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/ChangeLog,v 1.28 2012/10/04 22:35:30 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/ChangeLog,v 1.29 2014/10/26 11:37:50 jer Exp $
+
+*libchewing-0.3.3-r1 (26 Oct 2014)
+
+  26 Oct 2014; Jeroen Roovers <jer@gentoo.org> +libchewing-0.3.3-r1.ebuild,
+  -files/0.3.2-fix-chewing-zuin-String.patch,
+  -files/0.3.2-fix-crosscompile.patch, +files/0.3.3-cflags.patch,
+  +files/0.3.3-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #526902). EAPI bump. Remove
+  pointless USE=debug.
 
   04 Oct 2012;  <naota@gentoo.org> +files/0.3.3-strncat-fix.patch,
   libchewing-0.3.3.ebuild:
