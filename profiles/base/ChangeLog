@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.738 2014/10/22 13:47:02 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.739 2014/10/26 22:22:41 chithanh Exp $
+
+  26 Oct 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Move xinit mask to base/ in order to be able to properly unmask in systemd
+  target.
 
   22 Oct 2014; Brian Evans <grknight@gentoo.org> use.stable.mask:
   Mask php_targets_php5-6 until it is stable.
