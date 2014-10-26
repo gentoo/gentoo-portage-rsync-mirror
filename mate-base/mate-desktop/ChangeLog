@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/mate-desktop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/ChangeLog,v 1.13 2014/07/02 09:46:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/ChangeLog,v 1.14 2014/10/26 01:54:09 leio Exp $
+
+  26 Oct 2014; Mart Raudsepp <leio@gentoo.org> mate-desktop-1.8.1-r1.ebuild:
+  Add ~arm keyword for bug 508072 and me
 
   02 Jul 2014; Pacho Ramos <pacho@gentoo.org> mate-desktop-1.8.1-r1.ebuild:
   x86 stable, bug 513714
