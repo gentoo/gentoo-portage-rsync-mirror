@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gevent-zeromq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-zeromq/ChangeLog,v 1.4 2014/04/11 08:20:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-zeromq/ChangeLog,v 1.5 2014/10/26 13:47:05 idella4 Exp $
+
+  26 Oct 2014; Ian Delaney <idella4@gentoo.org> -gevent-zeromq-0.2.5.ebuild:
+  rm old
 
   11 Apr 2014; Ian Delaney <idella4@gentoo.org> gevent-zeromq-0.2.5-r1.ebuild:
   set dep pyzmq to required version, thx to report in Bug #507296 by W. King

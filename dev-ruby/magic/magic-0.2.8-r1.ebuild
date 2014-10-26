@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/magic/magic-0.2.8-r1.ebuild,v 1.1 2014/06/15 15:36:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/magic/magic-0.2.8-r1.ebuild,v 1.2 2014/10/26 13:49:46 graaff Exp $
 
 EAPI=5
 
@@ -20,6 +20,9 @@ IUSE="test"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
+
+RDEPEND+="sys-apps/file"
+DEPEND+="test? ( sys-apps/file )"
 
 ruby_add_bdepend "test? ( dev-ruby/test-unit:2 )"
 ruby_add_rdepend "virtual/ruby-ffi"
