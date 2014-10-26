@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.78 2014/10/18 14:41:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.79 2014/10/26 18:03:08 jlec Exp $
+
+  26 Oct 2014; Justin Lecher <jlec@gentoo.org> pexpect-3.3.ebuild:
+  add pypy support, #491404
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pexpect-3.3.ebuild:
   Stable for x86, wrt bug #524416
