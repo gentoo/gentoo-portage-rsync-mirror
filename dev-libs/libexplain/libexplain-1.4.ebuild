@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-1.4.ebuild,v 1.1 2014/03/08 23:55:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-1.4.ebuild,v 1.2 2014/10/26 13:22:06 jlec Exp $
 
 EAPI=5
 
@@ -29,6 +29,10 @@ DEPEND="${RDEPEND}
 		sys-apps/groff
 	)
 "
+# Test fails with:
+# This is not a bug, but it does indicate where libexplain's ioctl support
+# could be improved.
+RESTRICT="test"
 
 DOCS=( README )
 

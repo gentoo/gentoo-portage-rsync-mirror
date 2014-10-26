@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libexplain
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.31 2014/06/08 11:03:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.32 2014/10/26 13:22:06 jlec Exp $
+
+  26 Oct 2014; Justin Lecher <jlec@gentoo.org> libexplain-1.4.ebuild:
+  Restrict test as they are suggestions for improvements, #526896
 
   08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> libexplain-1.3.ebuild:
   Stable for ppc, wrt bug #499534
@@ -16,7 +19,7 @@
 *libexplain-1.4 (08 Mar 2014)
 
   08 Mar 2014; Tim Harder <radhermit@gentoo.org> +libexplain-1.4.ebuild:
-  Version bump.
+  Version Bump.
 
   27 Feb 2014; Chema Alonso <nimiux@gentoo.org> libexplain-1.3.ebuild:
   Stable for amd64 wrt bug #499534
@@ -24,12 +27,12 @@
 *libexplain-1.3 (30 Nov 2013)
 
   30 Nov 2013; Tim Harder <radhermit@gentoo.org> +libexplain-1.3.ebuild:
-  Version bump.
+  Version Bump.
 
 *libexplain-1.2 (10 May 2013)
 
   10 May 2013; Tim Harder <radhermit@gentoo.org> +libexplain-1.2.ebuild:
-  Version bump.
+  Version Bump.
 
   31 Jan 2013; Justin Lecher <jlec@gentoo.org> libexplain-1.1.ebuild:
   Handle docs correctly
@@ -43,7 +46,7 @@
   31 Jan 2013; Justin Lecher <jlec@gentoo.org> +libexplain-1.1.ebuild,
   +files/libexplain-1.1-v4l2.patch, +files/libexplain-1.1-yacc.patch,
   metadata.xml:
-  Version BUmp; add fix for bison-2.6, #429552; backport fix for recent changes
+  Version Bump; add fix for bison-2.6, #429552; backport fix for recent changes
   in linux-header regarding v4l2, #438486
 
   30 May 2012; Tim Harder <radhermit@gentoo.org> -libexplain-0.51.ebuild:
@@ -52,7 +55,7 @@
 *libexplain-1.0 (30 May 2012)
 
   30 May 2012; Tim Harder <radhermit@gentoo.org> +libexplain-1.0.ebuild:
-  Version bump.
+  Version Bump.
 
   04 Mar 2012; Tim Harder <radhermit@gentoo.org> -libexplain-0.50.ebuild:
   Remove old.
@@ -60,7 +63,7 @@
 *libexplain-0.52 (04 Mar 2012)
 
   04 Mar 2012; Tim Harder <radhermit@gentoo.org> +libexplain-0.52.ebuild:
-  Version bump.
+  Version Bump.
 
   23 Feb 2012; Tim Harder <radhermit@gentoo.org> libexplain-0.51.ebuild:
   Set autotools-utils autoreconf variable instead of calling eautoreconf.
@@ -71,7 +74,7 @@
 *libexplain-0.51 (26 Jan 2012)
 
   26 Jan 2012; Tim Harder <radhermit@gentoo.org> +libexplain-0.51.ebuild:
-  Version bump.
+  Version Bump.
 
   16 Jan 2012; Tim Harder <radhermit@gentoo.org> -libexplain-0.40.ebuild,
   -libexplain-0.42.ebuild, -libexplain-0.45.ebuild, -libexplain-0.46.ebuild,
@@ -81,7 +84,7 @@
 *libexplain-0.50 (16 Jan 2012)
 
   16 Jan 2012; Tim Harder <radhermit@gentoo.org> +libexplain-0.50.ebuild:
-  Version bump.
+  Version Bump.
 
   28 Nov 2011; Tim Harder <radhermit@gentoo.org> libexplain-0.49.ebuild:
   Re-add the eautoreconf call and other minor fixes.
@@ -97,27 +100,27 @@
 *libexplain-0.49 (10 Nov 2011)
 
   10 Nov 2011; Tim Harder <radhermit@gentoo.org> +libexplain-0.49.ebuild:
-  Version bump.
+  Version Bump.
 
 *libexplain-0.47 (28 Sep 2011)
 
   28 Sep 2011; Tim Harder <radhermit@gentoo.org> +libexplain-0.47.ebuild:
-  Version bump.
+  Version Bump.
 
 *libexplain-0.46 (31 Aug 2011)
 
   31 Aug 2011; Tim Harder <radhermit@gentoo.org> +libexplain-0.46.ebuild:
-  Version bump.
+  Version Bump.
 
 *libexplain-0.45 (24 Aug 2011)
 
   24 Aug 2011; Tim Harder <radhermit@gentoo.org> +libexplain-0.45.ebuild,
   +files/libexplain-0.45-configure.patch:
-  Version bump.
+  Version Bump.
 
   28 Jun 2011; Justin Lecher <jlec@gentoo.org> libexplain-0.40.ebuild,
   libexplain-0.42.ebuild, metadata.xml:
-  ADded missing dependency on sys-libs/libcap, #372633; EAPI bump
+  ADded missing dependency on sys-libs/libcap, #372633; EAPI Bump
 
 *libexplain-0.42 (13 Jun 2011)
 
