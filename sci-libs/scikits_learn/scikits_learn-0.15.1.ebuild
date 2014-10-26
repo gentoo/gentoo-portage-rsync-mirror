@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.15.1.ebuild,v 1.1 2014/10/26 17:58:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.15.1.ebuild,v 1.2 2014/10/26 18:33:23 jlec Exp $
 
 EAPI=5
 
@@ -33,8 +33,10 @@ DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	sci-libs/scipy[${PYTHON_USEDEP}]
 	doc? (
+		dev-python/joblib[${PYTHON_USEDEP}]
+		dev-python/matplotlib[${PYTHON_USEDEP}]
 		dev-python/sphinx[${PYTHON_USEDEP}]
-		dev-python/matplotlib[${PYTHON_USEDEP}] )
+		)
 	test? (
 		dev-python/joblib[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}] )"

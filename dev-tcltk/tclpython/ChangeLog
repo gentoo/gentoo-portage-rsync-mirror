@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tclpython
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.17 2011/05/23 07:17:52 tomka Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.18 2014/10/26 18:45:17 jlec Exp $
+
+*tclpython-4.1-r3 (26 Oct 2014)
+
+  26 Oct 2014; Justin Lecher <jlec@gentoo.org> +tclpython-4.1-r3.ebuild,
+  metadata.xml:
+  Bump to EAPI=5 and new python eclasses; add py3 support, #509738
 
   23 May 2011; Thomas Kahle <tomka@gentoo.org> tclpython-4.1-r2.ebuild:
   x86 stable per bug 364825
