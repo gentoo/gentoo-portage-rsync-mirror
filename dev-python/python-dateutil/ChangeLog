@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-dateutil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.61 2014/09/30 11:50:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.62 2014/10/26 16:15:17 radhermit Exp $
+
+  26 Oct 2014; Tim Harder <radhermit@gentoo.org> python-dateutil-2.2.ebuild:
+  Add pypi page to HOMEPAGE.
 
   30 Sep 2014; Ian Delaney <idella4@gentoo.org> -python-dateutil-1.5.ebuild,
   -python-dateutil-2.1.ebuild, python-dateutil-2.2.ebuild:

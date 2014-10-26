@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flake8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.17 2014/09/23 20:11:23 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.18 2014/10/26 16:02:49 radhermit Exp $
+
+*flake8-2.2.5 (26 Oct 2014)
+
+  26 Oct 2014; Tim Harder <radhermit@gentoo.org> +flake8-2.2.5.ebuild:
+  Version bump, drop python3_2 support.
 
 *flake8-2.0-r1 (23 Sep 2014)
 

@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/consed
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/consed/ChangeLog,v 1.7 2013/03/11 15:00:03 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/consed/ChangeLog,v 1.8 2014/10/26 16:13:23 jlec Exp $
+
+*consed-27 (26 Oct 2014)
+
+  26 Oct 2014; Justin Lecher <jlec@gentoo.org> -consed-19-r1.ebuild,
+  +consed-27.ebuild:
+  Import to tree; drop old EPAI=1 version, #526742
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
