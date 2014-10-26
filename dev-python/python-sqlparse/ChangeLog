@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-sqlparse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/ChangeLog,v 1.35 2014/10/24 14:38:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/ChangeLog,v 1.37 2014/10/26 07:29:34 idella4 Exp $
+
+*python-sqlparse-0.1.13 (26 Oct 2014)
+
+  26 Oct 2014; Ian Delaney <idella4@gentoo.org> +python-sqlparse-0.1.13.ebuild:
+  bump
 
   24 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
   python-sqlparse-0.1.12.ebuild:
@@ -12,8 +17,8 @@
 *python-sqlparse-0.1.12 (16 Oct 2014)
 
   16 Oct 2014; Ian Delaney <idella4@gentoo.org> +python-sqlparse-0.1.12.ebuild:
-  bump; keywords alpha ia64 ppc ppc64 sparc to support added dep of pytest-cov
-  for testsuite, add IUSE examples, doc, doc build, adjust install phase
+  bump; keywords alpha ia64 hppa ppc ppc64 sparc dropped to support added dep of
+  pytest-cov for testsuite, add IUSE examples, doc, doc build, adjust install phase
   accordingly
 
   27 Aug 2014; Maxim Koltsov <maksbotan@gentoo.org>
