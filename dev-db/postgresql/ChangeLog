@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.389 2014/10/11 19:35:08 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.390 2014/10/26 02:22:46 patrick Exp $
+
+*postgresql-9.4_beta3 (26 Oct 2014)
+
+  26 Oct 2014; Patrick Lauer <patrick@gentoo.org> +postgresql-9.4_beta3.ebuild:
+  Bump 9.4_beta3
 
 *postgresql-9999 (11 Oct 2014)
 *postgresql-9.4_beta2 (11 Oct 2014)
@@ -14,4 +19,3 @@
   +postgresql-9.2.9.ebuild, +postgresql-9.3.5.ebuild,
   +postgresql-9.4_beta2.ebuild, +postgresql-9999.ebuild, +metadata.xml:
   Initial commit.
-
