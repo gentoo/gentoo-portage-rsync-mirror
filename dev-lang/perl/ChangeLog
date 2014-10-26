@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.452 2014/10/25 18:19:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.453 2014/10/26 21:46:28 dilfridge Exp $
+
+  26 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-5.20.1-r1.ebuild:
+  Drop old
 
 *perl-5.20.1-r2 (25 Oct 2014)
 

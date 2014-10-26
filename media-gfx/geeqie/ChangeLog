@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/geeqie
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.26 2012/09/23 07:59:30 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.27 2014/10/26 21:55:20 voyageur Exp $
+
+*geeqie-1.2 (26 Oct 2014)
+
+  26 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org> -geeqie-1.0-r2.ebuild,
+  geeqie-1.0-r4.ebuild, geeqie-1.1.ebuild, +geeqie-1.2.ebuild,
+  +files/geeqie-1.2-fix_version.patch:
+  Version bump with lcms:2 support and other bugfixes. Drop lcms:0 support from
+  older versions, bug #526820
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> geeqie-1.0-r4.ebuild:
   x86 stable wrt bug #429116
