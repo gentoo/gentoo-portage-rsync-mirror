@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-util/dialog python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
+DESCRIPTION=A Python module for making simple text/console-mode user interfaces
+EAPI=5
+HOMEPAGE=http://pythondialog.sourceforge.net/
+IUSE=examples python_targets_python3_3 python_targets_python3_4
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86
+LICENSE=LGPL-2
+RDEPEND=dev-util/dialog python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
+REQUIRED_USE=|| ( python_targets_python3_3 python_targets_python3_4 )
+SLOT=0
+SRC_URI=mirror://sourceforge/pythondialog//3.2.0/python3-pythondialog-3.2.0.tar.bz2
+_eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	32548a82e42dc26e3312581476d2f20c	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=c703b897bb11aacd216335c24b78210e
