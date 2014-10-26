@@ -1,6 +1,9 @@
 # ChangeLog for net-im/jabber-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/ChangeLog,v 1.19 2014/08/05 18:34:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/ChangeLog,v 1.20 2014/10/26 20:30:35 mrueg Exp $
+
+  26 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -jabber-base-0.00.ebuild:
+  Cleanup old.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> jabber-base-0.00.ebuild,
   jabber-base-0.01.ebuild:
