@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/overlint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.12 2014/07/06 12:36:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.13 2014/10/25 23:29:19 sping Exp $
+
+*overlint-0.5.3 (25 Oct 2014)
+
+  25 Oct 2014; Sebastian Pipping <sping@gentoo.org> +overlint-0.5.3.ebuild:
+  Bump to 0.5.3 (should fix bug #526776)
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> overlint-0.5.2.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
