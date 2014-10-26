@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.92 2014/07/01 06:22:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.93 2014/10/26 00:25:21 radhermit Exp $
+
+*dcraw-9.22-r1 (26 Oct 2014)
+
+  26 Oct 2014; Tim Harder <radhermit@gentoo.org> +dcraw-9.22-r1.ebuild:
+  Force lcms2 usage (bug #526812).
 
 *dcraw-9.22 (01 Jul 2014)
 
