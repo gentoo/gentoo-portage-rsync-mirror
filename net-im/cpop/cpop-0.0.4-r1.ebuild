@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/cpop/cpop-0.0.4.ebuild,v 1.8 2014/08/05 18:34:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/cpop/cpop-0.0.4-r1.ebuild,v 1.1 2014/10/26 19:57:41 mrueg Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils
 
 DESCRIPTION="GTK+ network popup message client. Compatible with the jpop protocol"
@@ -23,6 +23,6 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc README
 }

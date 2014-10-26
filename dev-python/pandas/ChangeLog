@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.30 2014/08/25 06:23:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.31 2014/10/26 19:41:19 jlec Exp $
+
+*pandas-0.15.0 (26 Oct 2014)
+
+  26 Oct 2014; Justin Lecher <jlec@gentoo.org> +pandas-0.15.0.ebuild:
+  Verison Bump
 
   25 Aug 2014; Ian Delaney <idella4@gentoo.org> metadata.xml:
   add remote-ids to metadata.xml
