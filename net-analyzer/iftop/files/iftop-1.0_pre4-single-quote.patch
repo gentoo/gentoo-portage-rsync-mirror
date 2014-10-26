@@ -68,7 +68,7 @@
      if test x$resolver = xguess ; then
          if test x$specified_resolver = xguess ; then
 -           AC_MSG_RESULT([gethostbyaddr_r doesn't work, so we'll try something else])
-+           AC_MSG_RESULT([gethostbyaddr_r does not work, so we'll try something else])
++           AC_MSG_RESULT([gethostbyaddr_r does not work, so we will try something else])
          else
 -           dnl They wanted gethostbyaddr_r, but it doesn't work, so stop.
 -           AC_MSG_ERROR([gethostbyaddr_r doesn't work])
@@ -92,31 +92,35 @@
  if test x$resolver = xguess ; then
     resolver=netdb_1thread
  fi
-@@ -290,7 +290,7 @@
+@@ -290,16 +290,16 @@
  
  if test $foundpcaph = 0 ; then
      AC_MSG_RESULT([no idea])
 -    AC_MSG_ERROR([can't find pcap.h
+-  You're not going to get very far without libpcap.])
 +    AC_MSG_ERROR([cannot find pcap.h
-   You're not going to get very far without libpcap.])
++  You are not going to get very far without libpcap.])
  else
      dnl assume that -lpcap is under $test_prefix/lib
-@@ -298,7 +298,7 @@
+     if test x$test_prefix != x ; then
          LDFLAGS="$LDFLAGS -L$test_prefix/lib"
      fi
      AC_CHECK_LIB(pcap, pcap_open_live, , [
 -            AC_MSG_ERROR([can't find libpcap
+-  You're not going to get very far without libpcap.])
 +            AC_MSG_ERROR([cannot find libpcap
-   You're not going to get very far without libpcap.])
++  You are not going to get very far without libpcap.])
          ])
  fi
+ 
 @@ -310,14 +310,14 @@
      ])
  
  if test $foundpcap = 0 ; then
 -    AC_MSG_ERROR([can't find pcap.h
+-  You're not going to get very far without libpcap.])
 +    AC_MSG_ERROR([cannot find pcap.h
-   You're not going to get very far without libpcap.])
++  You are not going to get very far without libpcap.])
  fi
  
  dnl
