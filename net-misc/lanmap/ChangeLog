@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/lanmap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.8 2014/07/18 17:01:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.9 2014/10/26 10:58:53 jer Exp $
+
+*lanmap-81-r2 (26 Oct 2014)
+
+  26 Oct 2014; Jeroen Roovers <jer@gentoo.org> +lanmap-81-r2.ebuild,
+  +files/lanmap-81-printf-format.patch:
+  Fix one format security warning.
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> lanmap-81-r1.ebuild,
   +files/lanmap-81-make.patch, -files/makefile.patch:
