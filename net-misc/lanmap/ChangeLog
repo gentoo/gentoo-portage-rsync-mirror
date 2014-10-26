@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lanmap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.9 2014/10/26 10:58:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.10 2014/10/26 11:07:31 jer Exp $
+
+  26 Oct 2014; Jeroen Roovers <jer@gentoo.org> files/lanmap-81-make.patch:
+  Fix bashism in Makefile.in (bug #526906).
 
 *lanmap-81-r2 (26 Oct 2014)
 

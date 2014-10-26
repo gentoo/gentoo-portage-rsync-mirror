@@ -1,7 +1,7 @@
 --- a/src/Makefile.in
 +++ b/src/Makefile.in
 @@ -2,8 +2,8 @@
- # $Id: lanmap-81-make.patch,v 1.1 2014/07/18 17:01:09 jer Exp $
+ # $Id: lanmap-81-make.patch,v 1.2 2014/10/26 11:07:31 jer Exp $
  
  # complation
 -CFLAGS = -W -Wall -Wno-unused -DLINUX -DLANMAP_DATADIR=$(LANMAP_DATADIR)
@@ -30,7 +30,7 @@
  os_classify: os_classify.c misc.c
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -10,16 +10,16 @@
+@@ -10,18 +10,18 @@
  DATADEST = ${prefix}/share/lanmap/
  
  all:
@@ -48,8 +48,11 @@
 -	install -m 0644 -d $(DATADEST)graph
 +	install -m 0755 -d $(DATADEST)graph
  	install -m 0644 ./graph/lanmap.header $(DATADEST)graph/
- 	for f in ./graph/img/*.{png,gif,svg}; do install -m 0644 $$f $(DATADEST)graph/img/; done
+-	for f in ./graph/img/*.{png,gif,svg}; do install -m 0644 $$f $(DATADEST)graph/img/; done
++	for f in ./graph/img/*.gif ./graph/img/*.png ./graph/img/*.svg; do install -m 0644 $$f $(DATADEST)graph/img/; done
  	
+ uninstall:
+ 	rm $(BINDEST)$(BINARY)
 @@ -29,11 +29,11 @@
  
  clean:

@@ -1,14 +1,12 @@
-Extended version of this patch was sent to mail address in bsod-0.1/readme.txt
-
---- Makefile
-+++ Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -1,15 +1,15 @@
  VERSION=0.1
  
  DEBUG=-g -pedantic #-pg #-fprofile-arcs
 -LDFLAGS=-lncurses $(DEBUG)
 -CFLAGS+=-O2 -Wall -DVERSION=\"$(VERSION)\" $(DEBUG)
-+LDLIBS=-lncurses
++LDLIBS=$(shell ${PKG_CONFIG} --libs ncurses)
 +CFLAGS+=-Wall -DVERSION=\"$(VERSION)\"
  
  OBJS=bsod.o
