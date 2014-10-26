@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-9999.ebuild,v 1.17 2014/10/26 17:51:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.488.ebuild,v 1.1 2014/10/26 17:51:35 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"

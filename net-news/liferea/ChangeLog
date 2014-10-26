@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.245 2014/10/05 12:08:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.246 2014/10/26 17:49:22 vostorga Exp $
+
+*liferea-1.10.12 (26 Oct 2014)
+
+  26 Oct 2014; Victor Ostorga <vostorga@gentoo.org> +liferea-1.10.12.ebuild:
+  Version bump, bug #518626
 
   05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> liferea-1.10.8.ebuild:
   Stable for ppc, wrt bug #513396

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.19 2014/10/13 21:11:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.20 2014/10/26 17:52:52 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -167,7 +167,7 @@ src_configure() {
 	# (2) Rebuild auto/configure
 	# (3) Notice auto/configure is newer than auto/config.mk
 	# (4) Run ./configure (with wrong args) to remake auto/config.mk
-	sed -i 's/ auto.config.mk:/:/' src/Makefile || die "Makefile sed failed"
+	sed -i 's# auto/config\.mk:#:#' src/Makefile || die "Makefile sed failed"
 	rm -f src/auto/configure
 	emake -j1 -C src autoconf
 

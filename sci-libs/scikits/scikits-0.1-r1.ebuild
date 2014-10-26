@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/scikits-0.1-r1.ebuild,v 1.4 2014/03/31 21:19:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/scikits-0.1-r1.ebuild,v 1.5 2014/10/26 17:56:53 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
 
 inherit python-r1
 

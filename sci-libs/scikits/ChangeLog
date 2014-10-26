@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scikits
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/ChangeLog,v 1.7 2014/03/31 21:19:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/ChangeLog,v 1.8 2014/10/26 17:56:53 jlec Exp $
+
+  26 Oct 2014; Justin Lecher <jlec@gentoo.org> -scikits-0.1.ebuild,
+  scikits-0.1-r1.ebuild:
+  Add python 3_4 support; drop old
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> scikits-0.1-r1.ebuild:
   Add support for the new PyPy slotting.

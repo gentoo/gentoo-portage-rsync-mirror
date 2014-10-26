@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.643 2014/10/24 05:32:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.644 2014/10/26 17:39:52 ulm Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -910,15 +910,15 @@ toolchain_src_configure() {
 		confgcc+=( --enable-libstdcxx-time )
 	fi
 
-	# Turn on the -Wl,--build-id flag by default for ELF targets. #525942
-	# This helps with locating debug files.
-	case ${CTARGET} in
-	*-linux-*|*-elf|*-eabi)
-		tc_version_is_at_least 4.5 && confgcc+=(
-			--enable-linker-build-id
-		)
-		;;
-	esac
+	# # Turn on the -Wl,--build-id flag by default for ELF targets. #525942
+	# # This helps with locating debug files.
+	# case ${CTARGET} in
+	# *-linux-*|*-elf|*-eabi)
+	# 	tc_version_is_at_least 4.5 && confgcc+=(
+	# 		--enable-linker-build-id
+	# 	)
+	# 	;;
+	# esac
 
 	# newer gcc versions like to bootstrap themselves with C++,
 	# so we need to manually disable it ourselves

@@ -8,4 +8,4 @@ LICENSE=vim
 PDEPEND=!minimal? ( app-vim/gentoo-syntax )
 SLOT=0
 _eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	mercurial	2fbda5894dda6392b71334ee9a92de0b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f	vim-doc	1c18baeec98cec3287524cbf2fee2bd2
-_md5_=af4e1dfbfaa84d075393dae1ab0b2d57
+_md5_=b52ae7fd26259ae40f953c8598ebe724

@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.442 2014/10/13 21:15:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.443 2014/10/26 17:52:52 radhermit Exp $
+
+*gvim-7.4.488 (26 Oct 2014)
+
+  26 Oct 2014; Tim Harder <radhermit@gentoo.org> +gvim-7.4.488.ebuild,
+  gvim-9999.ebuild:
+  Version bump, make sed regex stricter (fixes bug #526682).
 
   13 Oct 2014; Tim Harder <radhermit@gentoo.org> -gvim-7.4.52.ebuild,
   -gvim-7.4.155.ebuild, -gvim-7.4.169.ebuild, -gvim-7.4.193.ebuild,
