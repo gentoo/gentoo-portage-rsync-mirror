@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/prawn-layout
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/ChangeLog,v 1.19 2014/04/25 00:56:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/ChangeLog,v 1.20 2014/10/26 14:07:03 graaff Exp $
+
+  26 Oct 2014; Hans de Graaff <graaff@gentoo.org> prawn-layout-0.8.4-r2.ebuild:
+  Fix use of obsolete rake tasks, bug 526488.
 
   25 Apr 2014; Manuel Rüger <mrueg@gentoo.org> prawn-layout-0.8.4-r2.ebuild:
   EAPI bump.

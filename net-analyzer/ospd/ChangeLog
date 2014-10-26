@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/ospd
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ospd/ChangeLog,v 1.1 2014/10/26 14:21:24 jlec Exp $
+
+*ospd-1.0_beta3 (26 Oct 2014)
+
+  26 Oct 2014; Justin Lecher <jlec@gentoo.org> +ospd-1.0_beta3.ebuild,
+  +files/ospd-1.0_beta3-description.patch, +metadata.xml:
+  Initial commit, written by me
+
