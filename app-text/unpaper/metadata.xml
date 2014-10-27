@@ -4,4 +4,8 @@
   <maintainer>
     <email>flameeyes@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="github">Flameeyes/unpaper</remote-id>
+    <bugs-to>https://github.com/Flameeyes/unpaper/issues</bugs-to>
+  </upstream>
 </pkgmetadata>

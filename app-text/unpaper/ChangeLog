@@ -1,6 +1,13 @@
 # ChangeLog for app-text/unpaper
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.12 2013/07/08 09:20:43 flameeyes Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.13 2014/10/26 23:07:48 flameeyes Exp $
+
+*unpaper-6.1 (26 Oct 2014)
+
+  26 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org> +unpaper-6.1.ebuild,
+  -unpaper-0.4.2.ebuild, metadata.xml, unpaper-5.1.ebuild, unpaper-9999.ebuild:
+  Version bump to unpaper-6.2, which uses libav/ffmpeg. Also update live ebuild
+  for the new deps. Use autotools-utils for kicks.
 
 *unpaper-5.1 (08 Jul 2013)
 
