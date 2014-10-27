@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.99.0-r1.ebuild,v 1.1 2014/10/24 21:30:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.99.0-r1.ebuild,v 1.2 2014/10/27 22:34:58 vapier Exp $
 
 EAPI=5
 inherit autotools eutils fcaps multilib qt4-r2 user
@@ -59,8 +59,13 @@ RDEPEND="
 	ssl? ( net-libs/gnutls )
 	zlib? ( sys-libs/zlib !=sys-libs/zlib-1.2.4 )
 "
+# We need perl for `pod2html`.  The rest of the perl stuff is to block older
+# and broken installs. #455122
 DEPEND="
 	${RDEPEND}
+	dev-lang/perl
+	!<virtual/perl-Pod-Simple-3.170
+	!<perl-core/Pod-Simple-3.170
 	doc? (
 		app-doc/doxygen
 		app-text/asciidoc
@@ -69,11 +74,8 @@ DEPEND="
 		doc-pdf? ( dev-java/fop )
 		www-client/lynx
 	)
-	>=virtual/perl-Pod-Simple-3.170.0
 	sys-devel/bison
 	sys-devel/flex
-	virtual/perl-Getopt-Long
-	virtual/perl-Time-Local
 	virtual/pkgconfig
 "
 
