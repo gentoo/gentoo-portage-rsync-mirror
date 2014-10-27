@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta/perl-CPAN-Meta-2.140.640.ebuild,v 1.3 2014/10/18 19:24:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta/perl-CPAN-Meta-2.140.640.ebuild,v 1.4 2014/10/27 20:25:50 dilfridge Exp $
 
 EAPI=5
 
@@ -17,4 +17,7 @@ RDEPEND="
 	|| ( =dev-lang/perl-5.20* ~perl-core/${PN#perl-}-${PV} )
 	!<perl-core/${PN#perl-}-${PV}
 	!>perl-core/${PN#perl-}-${PV}-r999
+	>=virtual/perl-CPAN-Meta-YAML-0.11.0
+	>=virtual/perl-JSON-PP-2.271.30
 "
+# see bug 519974

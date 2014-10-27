@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ucommon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.21 2014/09/13 14:15:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.22 2014/10/27 20:03:03 maksbotan Exp $
+
+  27 Oct 2014; Maxim Koltsov <maksbotan@gentoo.org> ucommon-6.1.10.ebuild:
+  Enable in source build, fixes bug #526726.
 
 *ucommon-6.1.10 (13 Sep 2014)
 
