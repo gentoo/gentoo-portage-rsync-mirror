@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/YAML-LibYAML
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-LibYAML/ChangeLog,v 1.5 2014/08/31 10:46:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-LibYAML/ChangeLog,v 1.6 2014/10/27 20:41:25 dilfridge Exp $
+
+*YAML-LibYAML-0.520.0 (27 Oct 2014)
+
+  27 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +YAML-LibYAML-0.520.0.ebuild:
+  Version bump
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   -YAML-LibYAML-0.380.0-r1.ebuild:

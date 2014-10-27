@@ -1,0 +1,53 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Sat Sep 27 13:35:35 UTC 2014
+Subject: unbundle vulnerable minilzo version
+
+--- source/blender/blenkernel/intern/pointcache.c
++++ source/blender/blenkernel/intern/pointcache.c
+@@ -84,7 +84,7 @@
+ #endif
+ 
+ #ifdef WITH_LZO
+-#include "minilzo.h"
++#include <lzo/lzo1x.h>
+ #define LZO_HEAP_ALLOC(var,size) \
+ 	lzo_align_t __LZO_MMODEL var [ ((size) + (sizeof(lzo_align_t) - 1)) / sizeof(lzo_align_t) ]
+ #endif
+--- extern/CMakeLists.txt
++++ extern/CMakeLists.txt
+@@ -62,10 +62,6 @@
+ 	add_subdirectory(libredcode)
+ endif()
+ 
+-if(WITH_LZO)
+-	add_subdirectory(lzo)
+-endif()
+-
+ if(WITH_LZMA)
+ 	add_subdirectory(lzma)
+ endif()
+--- source/blender/blenkernel/CMakeLists.txt
++++ source/blender/blenkernel/CMakeLists.txt
+@@ -397,9 +397,6 @@
+ endif()
+ 
+ if(WITH_LZO)
+-	list(APPEND INC_SYS
+-		../../../extern/lzo/minilzo
+-	)
+ 	add_definitions(-DWITH_LZO)
+ endif()
+ 
+--- build_files/cmake/macros.cmake
++++ build_files/cmake/macros.cmake
+@@ -304,6 +304,10 @@
+ 		endif()
+ 	endif()
+ 
++	if(WITH_LZO)
++		target_link_libraries(${target} liblzo2.so)
++	endif()
++
+ 	if(WITH_SYSTEM_GLEW)
+ 		target_link_libraries(${target} ${GLEW_LIBRARY})
+ 	endif() 
