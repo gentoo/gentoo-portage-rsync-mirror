@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=dev-libs/glib:2 dev-qt/qtcore:4[glib] dev-qt/qtdbus:4 dev-qt/qtgui:4[glib] >=sys-auth/polkit-0.103
 SLOT=0
 SRC_URI=mirror://kde/stable/apps/KDE4.x/admin/polkit-qt-1-0.103.0.tar.bz2
-_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
 _md5_=10d4d259da02ff071b25093fc4f6696d

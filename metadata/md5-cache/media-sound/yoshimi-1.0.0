@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/zlib media-libs/fontconfig x11-libs/fltk:1[opengl] sci-libs/fftw:3.0 >=dev-libs/mini-xml-2.5 >=media-libs/alsa-lib-1.0.17 >=media-sound/jack-audio-connection-kit-0.115.6 media-libs/libsndfile
 SLOT=0
 SRC_URI=mirror://sourceforge/yoshimi/yoshimi-1.0.0.tar.bz2
-_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
 _md5_=997c5b312ed3584f7e28dd7b9693c392

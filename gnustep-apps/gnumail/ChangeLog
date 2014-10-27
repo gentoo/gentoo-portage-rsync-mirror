@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/gnumail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.38 2014/10/20 13:33:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.39 2014/10/27 09:57:22 voyageur Exp $
+
+*gnumail-1.2.2 (27 Oct 2014)
+
+  27 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org> +gnumail-1.2.2.ebuild:
+  Version bump, clean ebuild
 
   20 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org>
   -gnumail-1.2.0_pre3-r1.ebuild, gnumail-1.2.0.ebuild,

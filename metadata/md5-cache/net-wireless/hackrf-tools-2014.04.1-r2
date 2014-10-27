@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=virtual/libusb:1 =net-libs/libhackrf-2014.04.1:=
 SLOT=0
 SRC_URI=mirror://sourceforge/hackrf/hackrf-2014.04.1.tar.xz
-_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	udev	da001465a2e939c93f7ae16947ce3438
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=fb56bf46685446b284031824ee90e4f7

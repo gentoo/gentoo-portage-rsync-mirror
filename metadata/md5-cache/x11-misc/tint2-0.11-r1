@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 x11-libs/cairo x11-libs/pango[X] x11-libs/libX11 x11-libs/libXinerama x11-libs/libXdamage x11-libs/libXcomposite x11-libs/libXrender x11-libs/libXrandr media-libs/imlib2[X] tint2conf? ( x11-misc/tintwizard )
 SLOT=0
 SRC_URI=http://tint2.googlecode.com/files/tint2-0.11.tar.bz2
-_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
 _md5_=4cec6b95891c421cb30ce947c9eb93c8

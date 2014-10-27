@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1392 2014/10/26 17:39:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1393 2014/10/27 09:49:05 aballier Exp $
+
+  27 Oct 2014; Alexis Ballier <aballier@gentoo.org> cmake-utils.eclass:
+  improve/fix cross-compilation support, bug #503216 by James Le Cuirot and
+  myself
 
   26 Oct 2014; Ulrich Müller <ulm@gentoo.org> toolchain.eclass:
   [QA] Code from revisions 1.636 and 1.640 commented out. This causes several

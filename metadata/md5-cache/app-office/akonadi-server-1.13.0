@@ -11,5 +11,5 @@ REQUIRED_USE=^^ ( qt4 qt5 ) || ( sqlite mysql postgres )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://kde/stable/akonadi/src/akonadi-1.13.0.tar.bz2
-_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
 _md5_=f5a14fecdfe2f9962cd4087626cb058a

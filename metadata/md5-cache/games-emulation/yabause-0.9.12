@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=openal? ( media-libs/openal ) opengl? ( media-libs/freeglut virtual/glu virtual/opengl ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 opengl? ( dev-qt/qtopengl:4 ) ) !qt4? ( dev-libs/glib:2 x11-libs/gtk+:2 x11-libs/gtkglext ) sdl? ( media-libs/libsdl[opengl?,video] ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/yabause/yabause-0.9.12.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=2e67f1f988b90366c46191e7e6190f7d

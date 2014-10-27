@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/taglib-1.7.0 >=media-sound/mpg123-1.13.0 >=media-sound/qmmp-0.8.0 dev-qt/qtgui:4
 SLOT=0
 SRC_URI=http://qmmp.ylsoftware.com/files/plugins/qmmp-plugin-pack-0.8.0.tar.bz2
-_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
 _md5_=8138bee1d17460e175709dddf5b3d524

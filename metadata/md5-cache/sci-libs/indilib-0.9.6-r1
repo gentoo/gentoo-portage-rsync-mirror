@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=>=sci-libs/cfitsio-3.140 sys-libs/zlib virtual/libusb:0 nova? ( >=sci-libs/libnova-0.12.1 )
 SLOT=0
 SRC_URI=mirror://sourceforge/indi/libindi_0.9.6.tar.gz
-_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	udev	da001465a2e939c93f7ae16947ce3438
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=55809f11c98f45df704d61f624670011

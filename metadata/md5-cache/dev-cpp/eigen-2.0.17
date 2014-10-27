@@ -10,5 +10,5 @@ RDEPEND=examples? ( dev-qt/qtgui:4 dev-qt/qtopengl:4 ) !dev-cpp/eigen:0
 RESTRICT=test
 SLOT=2
 SRC_URI=https://bitbucket.org/eigen/eigen/get/2.0.17.tar.bz2 -> eigen-2.0.17.tar.bz2
-_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
 _md5_=0af487b49e3001a84f8360e83b8d600f
