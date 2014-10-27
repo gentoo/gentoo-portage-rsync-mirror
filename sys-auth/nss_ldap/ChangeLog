@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.93 2014/10/23 11:25:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.94 2014/10/27 16:10:27 ago Exp $
+
+  27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> nss_ldap-265-r5.ebuild:
+  Stable for ppc64, wrt bug #525278
 
   23 Oct 2014; Pacho Ramos <pacho@gentoo.org> nss_ldap-265-r5.ebuild:
   x86 stable, bug #525278

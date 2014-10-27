@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.101 2014/10/25 13:59:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.102 2014/10/27 16:10:07 ago Exp $
+
+  27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> testtools-0.9.34.ebuild:
+  Stable for ppc64, wrt bug #506620
 
   25 Oct 2014; Markus Meier <maekke@gentoo.org> testtools-0.9.36.ebuild:
   arm stable, bug #525508

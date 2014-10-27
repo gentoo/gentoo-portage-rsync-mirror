@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qrcode/qrcode-5.1.ebuild,v 1.1 2014/10/27 07:24:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qrcode/qrcode-5.1.ebuild,v 1.2 2014/10/27 16:23:59 idella4 Exp $
 
 EAPI=5
 
@@ -17,9 +17,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-# Tests pass run from source, but a few fail run from the ebuild. For now,
-# RESTRICT=test
-
 # optional deps:
 # - pillow and lxml for svg backend, set as hard deps
 RDEPEND="
@@ -29,10 +26,10 @@ RDEPEND="
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( ${RDEPEND}
-		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python{2_7) )"
+		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7) )"
 
 python_test() {
-	"${PYTHON}" -m unittest dicover || die "Testing failed with ${EPYTHON}"
+	"${PYTHON}" -m unittest discover > /dev/tty | less || die "Testing failed with ${EPYTHON}"
 }
 
 src_install() {

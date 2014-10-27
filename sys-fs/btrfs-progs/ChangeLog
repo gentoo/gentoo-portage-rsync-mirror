@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.91 2014/10/20 20:59:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.92 2014/10/27 16:04:35 ago Exp $
+
+  27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-3.14.2.ebuild:
+  Stable for ppc64, wrt bug #520466
 
 *btrfs-progs-3.17 (20 Oct 2014)
 

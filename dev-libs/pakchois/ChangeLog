@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pakchois
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pakchois/ChangeLog,v 1.22 2014/10/18 14:30:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pakchois/ChangeLog,v 1.23 2014/10/27 16:03:59 ago Exp $
+
+  27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pakchois-0.4-r2.ebuild:
+  Stable for ppc64, wrt bug #518614
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pakchois-0.4-r2.ebuild:
   Stable for ppc, wrt bug #518614

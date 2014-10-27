@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.201 2014/10/23 09:48:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.202 2014/10/27 16:15:23 ago Exp $
+
+  27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> irssi-0.8.16.ebuild:
+  Stable for ppc64, wrt bug #519564
 
   23 Oct 2014; Sven Wegener <swegener@gentoo.org> -irssi-0.8.16_rc1.ebuild,
   -irssi-0.8.17_rc1.ebuild, -irssi-0.8.17_rc2.ebuild:
