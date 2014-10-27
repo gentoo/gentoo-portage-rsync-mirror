@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.7 2014/01/19 09:38:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.8 2014/10/27 16:48:10 jlec Exp $
 
 EAPI=5
 
@@ -73,6 +73,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-crasher_without_internet.patch
 	"${FILESDIR}"/${P}-private.patch
 	"${FILESDIR}"/${P}-sip-4.15.patch
+	"${FILESDIR}"/${P}-PyQt4-4.10.patch
 	)
 
 pkg_setup() {

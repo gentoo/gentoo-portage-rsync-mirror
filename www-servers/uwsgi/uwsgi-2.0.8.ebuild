@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.6-r2.ebuild,v 1.1 2014/10/08 09:34:08 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.8.ebuild,v 1.1 2014/10/27 16:40:14 ultrabug Exp $
 
 EAPI="5"
 
@@ -37,7 +37,7 @@ UWSGI_PLUGINS_STD=( ping cache carbon nagios rpc rrdtool
 UWSGI_PLUGINS_OPT=( alarm_{curl,xmpp} clock_{monotonic,realtime} curl_cron
 	dumbloop echo emperor_{amqp,pg,zeromq} forkptyrouter
 	geoip graylog2 legion_cache_fetch ldap log{crypto,pipe} notfound pam
-	router_{access,radius,spnego,xmldir}
+	rados router_{access,radius,spnego,xmldir}
 	sqlite ssi stats_pusher_statsd
 	systemd_logger transformation_toupper tuntap webdav xattr xslt zabbix )
 
@@ -97,6 +97,7 @@ CDEPEND="sys-libs/zlib
 	uwsgi_plugins_ldap? ( net-nds/openldap )
 	uwsgi_plugins_pam? ( virtual/pam )
 	uwsgi_plugins_sqlite? ( dev-db/sqlite:3 )
+	uwsgi_plugins_rados? ( sys-cluster/ceph )
 	uwsgi_plugins_router_access? ( sys-apps/tcp-wrappers )
 	uwsgi_plugins_router_spnego? ( virtual/krb5 )
 	uwsgi_plugins_rsyslog? ( app-admin/rsyslog )
@@ -136,7 +137,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/1.1.2-threaded-php.patch"
+		"${FILESDIR}/2.0.8-threaded-php.patch"
 
 	sed -i \
 		-e "s|'-O2', ||" \

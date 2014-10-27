@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.105 2014/01/19 09:38:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.107 2014/10/27 16:49:07 jlec Exp $
+
+  27 Oct 2014; Justin Lecher <jlec@gentoo.org>
+  files/qtiplot-0.9.8.9-PyQt4-4.10.patch:
+  Cleaned patch
+
+  27 Oct 2014; Justin Lecher <jlec@gentoo.org> qtiplot-0.9.8.9-r2.ebuild,
+  +files/qtiplot-0.9.8.9-PyQt4-4.10.patch:
+  Add fix for >PyQt4-4.10
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> qtiplot-0.9.8.9-r2.ebuild:
   amd64 stable, bug 490036

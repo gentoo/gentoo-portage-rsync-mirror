@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.8.6.ebuild,v 1.1 2014/06/15 17:30:37 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.8.6.ebuild,v 1.2 2014/10/27 16:57:11 hd_brummy Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs confutils
@@ -21,6 +21,8 @@ RDEPEND="
 	!media-plugins/vdr-markad"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+REQUIRED_USE="|| ( ffmpeg libmpeg2 )"
 
 src_prepare() {
 	if has_version '>=media-video/vdr-1.7.15'; then

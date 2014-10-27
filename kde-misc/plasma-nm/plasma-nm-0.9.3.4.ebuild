@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.4.ebuild,v 1.2 2014/08/17 09:27:44 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.4.ebuild,v 1.4 2014/10/27 16:43:51 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ DECLARATIVE_REQUIRED="always"
 inherit kde4-base
 
 if [[ ${KDE_BUILD_TYPE} != live ]]; then
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 	SRC_URI="mirror://kde/stable/${PN}/${P}.tar.xz"
 else
 	KEYWORDS=""

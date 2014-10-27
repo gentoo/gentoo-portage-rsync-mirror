@@ -7,7 +7,8 @@ IUSE=+ffmpeg imagemagick libmpeg2
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=libmpeg2? ( media-libs/libmpeg2:= ) ffmpeg? ( virtual/ffmpeg ) imagemagick? ( media-gfx/imagemagick ) !media-plugins/vdr-markad
+REQUIRED_USE=|| ( ffmpeg libmpeg2 )
 SLOT=0
 SRC_URI=http://noad.net23.net/noad-0.8.6.tar.bz2
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=bd62ad503f3a2407ae81fd9e56fe8081
+_md5_=fb2168a616d0a447a9b826ba6d0c7d1d
