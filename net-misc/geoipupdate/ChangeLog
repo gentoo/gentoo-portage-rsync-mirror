@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/geoipupdate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/ChangeLog,v 1.25 2014/10/18 14:16:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/ChangeLog,v 1.26 2014/10/27 16:00:15 ago Exp $
+
+  27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> geoipupdate-2.0.2.ebuild:
+  Stable for ppc64, wrt bug #523032
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> geoipupdate-2.0.2.ebuild:
   Stable for ppc, wrt bug #523032

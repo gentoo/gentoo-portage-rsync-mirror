@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.88 2014/10/10 22:08:48 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.89 2014/10/27 15:58:24 ago Exp $
+
+  27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> genlop-0.30.9-r1.ebuild:
+  Stable for ppc64, wrt bug #521284
 
   10 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> genlop-0.30.9-r1.ebuild:
   alpha stable wrt bug #521284

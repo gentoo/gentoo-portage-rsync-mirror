@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/bsod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsod/ChangeLog,v 1.4 2014/10/26 11:16:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsod/ChangeLog,v 1.5 2014/10/27 15:46:54 mr_bones_ Exp $
+
+  27 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> bsod-0.1.ebuild:
+  tidy
 
   26 Oct 2014; Jeroen Roovers <jer@gentoo.org> bsod-0.1.ebuild,
   files/bsod-0.1-Makefile.patch:

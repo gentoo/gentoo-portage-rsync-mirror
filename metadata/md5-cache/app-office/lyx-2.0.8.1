@@ -4,11 +4,11 @@ DESCRIPTION=WYSIWYM frontend for LaTeX, DocBook, etc.
 EAPI=5
 HOMEPAGE=http://www.lyx.org/
 IUSE=cups debug nls +latex monolithic-build html rtf dot docbook dia subversion rcs svg gnumeric +hunspell aspell enchant linguas_ar linguas_ca linguas_cs linguas_de linguas_da linguas_el linguas_en linguas_es linguas_eu linguas_fi linguas_fr linguas_gl linguas_he linguas_hu linguas_ia linguas_id linguas_it linguas_ja linguas_nb linguas_nn linguas_pl linguas_pt linguas_ro linguas_ru linguas_sk linguas_sr linguas_sv linguas_tr linguas_uk linguas_zh_CN linguas_zh_TW X python_targets_python2_7 python_single_target_python2_7
-KEYWORDS=~alpha amd64 hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x64-macos ~x86-macos
+KEYWORDS=~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x64-macos ~x86-macos
 LICENSE=GPL-2
 RDEPEND=dev-qt/qtgui:4 dev-qt/qtcore:4 >=dev-libs/boost-1.34 python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-texlive/texlive-fontsextra || ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[png] ) cups? ( net-print/cups ) latex? ( app-text/texlive app-text/ghostscript-gpl app-text/noweb app-text/dvipng dev-tex/dvipost dev-tex/chktex app-text/ps2eps dev-texlive/texlive-latexextra dev-texlive/texlive-pictures dev-texlive/texlive-science dev-texlive/texlive-genericextra dev-texlive/texlive-fontsrecommended || ( dev-tex/latex2html dev-tex/tth dev-tex/hevea dev-tex/tex4ht[java] ) ) html? ( dev-tex/html2latex ) rtf? ( dev-tex/latex2rtf app-text/unrtf dev-tex/html2latex ) linguas_he? ( dev-tex/culmus-latex ) docbook? ( app-text/sgmltools-lite ) dot? ( media-gfx/graphviz ) dia? ( app-office/dia ) subversion? ( <dev-vcs/subversion-1.7.0 ) rcs? ( dev-vcs/rcs ) svg? ( || ( media-gfx/imagemagick[svg] media-gfx/graphicsmagick[svg] ) || ( gnome-base/librsvg media-gfx/inkscape ) ) gnumeric? ( app-office/gnumeric ) hunspell? ( app-text/hunspell ) aspell? ( app-text/aspell ) enchant? ( app-text/enchant )
 REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=ftp://ftp.lyx.org/pub/lyx/stable/2.0.x/lyx-2.0.8.1.tar.xz ftp://ftp.lyx.org/pub/lyx/devel/lyx-2.0/2.0.8.1/lyx-2.0.8.1.tar.xz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	font	37271e0911f39dd15a28adcaf94f6956	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=260c7589b4bbc03da69d0162aea42461
+_md5_=d7059e15d452eacde420186c908f962a

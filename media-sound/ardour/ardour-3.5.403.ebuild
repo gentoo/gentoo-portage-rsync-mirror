@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.403.ebuild,v 1.2 2014/10/24 19:07:19 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.403.ebuild,v 1.3 2014/10/27 15:58:35 nativemad Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs flag-o-matic waf-utils
@@ -76,17 +76,6 @@ src_unpack() {
 	fi
 }
 
-pkg_pretend() {
-	if use sse; then
-		MARCH=$(get-flag march)
-		for ARCHWOSSE in i686 i486; do
-			if [[ ${MARCH} = ${ARCHWOSSE} ]]; then
-				is-flag -msse || is-flag -msse2 || die "Ardour fails to build with USE=sse and an march that is not sse capable, unless the -msse or -msse2 cflag are set also!"
-			fi
-		done
-	fi
-}
-
 src_prepare(){
 	if ! [ ${PV} = 9999 ]; then
 		PVTEMP=$(echo "${PV}" | sed "s/\./-/2")
@@ -102,6 +91,21 @@ src_prepare(){
 }
 
 src_configure() {
+	if use sse; then
+		MARCH=$(get-flag march)
+		for ARCHWOSSE in i686 i486; do
+			if [[ ${MARCH} = ${ARCHWOSSE} ]]; then
+				for SSEOPT in -msse -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2; do
+					is-flag ${SSEOPT} && SSEON="yes"
+				done
+				if [ -z ${SSEON} ]; then
+					append-flags -msse
+					elog "You enabled sse but use an march that does not support sse!"
+					elog "We add -msse to the cflags now, but please consider switching your march in make.conf!"
+				fi
+			fi
+		done
+	fi
 	tc-export CC CXX
 	mkdir -p "${D}"
 	waf-utils_src_configure \
@@ -111,7 +115,7 @@ src_configure() {
 		$(use lv2 && echo "--lv2" || echo "--no-lv2") \
 		$(use nls && echo "--nls" || echo "--no-nls") \
 		$(use debug && echo "--stl-debug" || echo "--optimize") \
-		$((use altivec || use sse) && echo "--fpu-optimization" || echo "--no-fpu-optimization") \
+		$({ use altivec || use sse; } && echo "--fpu-optimization" || echo "--no-fpu-optimization") \
 		$(use doc && echo "--docs")
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.291 2014/10/11 20:32:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.292 2014/10/27 15:56:41 ago Exp $
+
+  27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> git-2.0.4.ebuild:
+  Stable for ppc64, wrt bug #519736
 
   11 Oct 2014; Michał Górny <mgorny@gentoo.org> git-2.1.2.ebuild,
   git-9999-r1.ebuild, git-9999-r2.ebuild, git-9999-r3.ebuild, git-9999.ebuild:
