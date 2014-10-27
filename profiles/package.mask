@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16123 2014/10/26 22:22:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16124 2014/10/27 10:38:13 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -464,7 +464,6 @@ kde-frameworks/kdewebkit
 kde-frameworks/kdnssd
 kde-frameworks/kdoctools
 kde-frameworks/kemoticons
-kde-frameworks/kf-env
 kde-frameworks/kglobalaccel
 kde-frameworks/kguiaddons
 kde-frameworks/khtml

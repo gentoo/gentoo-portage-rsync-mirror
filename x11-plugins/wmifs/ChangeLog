@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmifs
-# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/ChangeLog,v 1.21 2010/09/09 10:01:48 s4t4n Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/ChangeLog,v 1.22 2014/10/27 10:49:52 voyageur Exp $
+
+*wmifs-1.4 (27 Oct 2014)
+
+  27 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org> +wmifs-1.4.ebuild:
+  Version bump with new homepage, ebuild cleanup
 
   09 Sep 2010; Michele Noberasco <s4t4n@gentoo.org>; wmifs-1.3_beta1-r2.ebuild:
   Honour Gentoo LDFLAGS, see bug #336537.
