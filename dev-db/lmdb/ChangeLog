@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/lmdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.11 2014/10/23 11:57:40 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.12 2014/10/27 05:29:53 robbat2 Exp $
+
+  27 Oct 2014; Robin H. Johnson <robbat2@gentoo.org> lmdb-0.9.14.ebuild:
+  Copy keywords from openldap, because this code came from there.
 
 *lmdb-0.9.14 (23 Oct 2014)
 

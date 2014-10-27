@@ -1,6 +1,17 @@
 # ChangeLog for app-text/catdoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.31 2014/09/13 17:07:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.33 2014/10/27 05:27:08 radhermit Exp $
+
+*catdoc-0.94.4-r1 (27 Oct 2014)
+
+  27 Oct 2014; Tim Harder <radhermit@gentoo.org> +catdoc-0.94.4-r1.ebuild,
+  metadata.xml:
+  Only install wordview.desktop when tk support is enabled (bug #522766), add
+  myself as maintainer.
+
+  27 Oct 2014; Tim Harder <radhermit@gentoo.org> -catdoc-0.94.2.ebuild,
+  -catdoc-0.94.2-r2.ebuild:
+  Remove old.
 
   13 Sep 2014; Agostino Sarubbo <ago@gentoo.org> catdoc-0.94.4.ebuild:
   Stable for x86, wrt bug #440942
