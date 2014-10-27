@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1-r2.ebuild,v 1.1 2014/10/23 16:00:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1-r2.ebuild,v 1.2 2014/10/27 14:32:32 idella4 Exp $
 EAPI=5
 
 # The selftests fail with pypy, and urlgrabber segfaults for me.
@@ -38,10 +38,10 @@ DISTUTILS_IN_SOURCE_BUILD=1
 
 PATCHES=( "${FILESDIR}"/${P}-ssl-test.patch )
 
-#python_prepare_all() {
-#	sed -e "/setup_args\['data_files'\] = /d" -i setup.py || die
-#	distutils-r1_python_prepare_all
-#}
+python_prepare_all() {
+	sed -e "/setup_args\['data_files'\] = /d" -i setup.py || die
+	distutils-r1_python_prepare_all
+}
 
 src_configure() {
 	# Override faulty detection in setup.py, bug 510974.

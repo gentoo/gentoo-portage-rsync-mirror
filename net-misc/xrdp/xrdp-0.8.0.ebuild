@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/xrdp-0.8.0.ebuild,v 1.3 2014/10/23 11:12:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/xrdp-0.8.0.ebuild,v 1.4 2014/10/27 14:33:09 mgorny Exp $
 
 EAPI=5
 
@@ -25,7 +25,13 @@ RDEPEND="dev-libs/openssl:0=
 	kerberos? ( virtual/krb5:0= )
 	pam? ( virtual/pam:0= )
 	pulseaudio? ( media-sound/pulseaudio:0= )"
-DEPEND="app-arch/xz-utils"
+DEPEND="${RDEPEND}
+	app-arch/xz-utils"
+RDEPEND="${RDEPEND}
+	|| (
+		net-misc/tigervnc:0=[server,xorgmodule]
+		net-misc/x11rdp:0=
+	)"
 
 # does not work with gentoo version of freerdp
 #	neutrinordp? ( net-misc/freerdp:0= )
@@ -134,5 +140,10 @@ pkg_postinst() {
 		ewarn "consider regenerating rsakeys.ini using the following command:"
 		ewarn
 		ewarn "  ${EROOT}/usr/bin/xrdp-keygen xrdp ${EROOT}/etc/xrdp/rsakeys.ini"
+		ewarn
 	fi
+
+	elog "Various session types require different backend implementations:"
+	elog "- sesman-Xvnc requires net-misc/tigervnc[server,xorgmodule]"
+	elog "- sesman-X11rdp requires net-misc/x11rdp"
 }

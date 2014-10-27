@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install postinst preinst prepare
-DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool virtual/pkgconfig
+DEPEND=dev-libs/openssl:0= x11-libs/libX11:0= x11-libs/libXfixes:0= kerberos? ( virtual/krb5:0= ) pam? ( virtual/pam:0= ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool virtual/pkgconfig
 DESCRIPTION=An open source Remote Desktop Protocol server
 EAPI=5
 HOMEPAGE=http://www.xrdp.org/
 IUSE=debug kerberos pam
 KEYWORDS=~amd64 ~x86
 LICENSE=Apache-2.0
-RDEPEND=dev-libs/openssl:0= x11-libs/libX11:0= x11-libs/libXfixes:0= kerberos? ( virtual/krb5:0= ) pam? ( virtual/pam:0= )
+RDEPEND=dev-libs/openssl:0= x11-libs/libX11:0= x11-libs/libXfixes:0= kerberos? ( virtual/krb5:0= ) pam? ( virtual/pam:0= ) || ( net-misc/tigervnc:0=[server,xorgmodule] net-misc/x11rdp:0= )
 SLOT=0
 SRC_URI=mirror://sourceforge/xrdp/0.6.1/xrdp-v0.6.1.tar.gz
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=ce703a9066bcd49e69765178edd232c0
+_md5_=eff7fbdfdd8479ea9de49d8e20d86ae5

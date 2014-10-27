@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.1.ebuild,v 1.3 2013/04/13 21:04:01 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.1-r1.ebuild,v 1.1 2014/10/27 14:45:48 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MY_P="${PN}-${PV/_/-}"
 
@@ -52,7 +52,7 @@ RDEPEND="
 		media-libs/ftgl
 		media-libs/mesa
 	)
-	perl? ( dev-lang/perl )
+	perl? ( dev-lang/perl:= )
 	postgis? ( dev-db/postgis )
 	proj? ( sci-libs/proj net-misc/curl )
 	tiff? (
