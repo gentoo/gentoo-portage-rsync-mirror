@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1393 2014/10/27 09:49:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1394 2014/10/27 19:48:35 graaff Exp $
+
+  27 Oct 2014; Hans de Graaff <graaff@gentoo.org> ruby-ng-gnome2.eclass:
+  Enable verbose compilation output for the ruby gnome packages.
 
   27 Oct 2014; Alexis Ballier <aballier@gentoo.org> cmake-utils.eclass:
   improve/fix cross-compilation support, bug #503216 by James Le Cuirot and

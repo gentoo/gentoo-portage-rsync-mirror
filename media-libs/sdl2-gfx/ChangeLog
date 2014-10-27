@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl2-gfx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-gfx/ChangeLog,v 1.4 2014/08/24 23:33:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-gfx/ChangeLog,v 1.5 2014/10/27 19:55:40 mr_bones_ Exp $
+
+  27 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -sdl2-gfx-1.0.0-r1.ebuild, -sdl2-gfx-1.0.0.ebuild:
+  old
 
 *sdl2-gfx-1.0.1 (24 Aug 2014)
 
