@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-4.1-r3.ebuild,v 1.1 2014/10/26 18:45:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-4.1-r4.ebuild,v 1.1 2014/10/27 14:22:43 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
-inherit multilib python-single-r1 toolchain-funcs
+inherit eutils multilib python-single-r1 toolchain-funcs
 
 DESCRIPTION="Python package for Tcl"
 HOMEPAGE="http://jfontain.free.fr/tclpython.htm"
@@ -22,6 +22,14 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 DEPEND="${PYTHON_DEPS}
 	dev-lang/tcl"
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-python-3.patch
+)
+
+src_prepare() {
+	epatch ${PATCHES[@]}
+}
 
 src_compile() {
 	local cfile="tclpython tclthread"

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup
-DEPEND=>=dev-lang/tk-8.3 >=dev-tcltk/blt-2.4 dev-tcltk/iwidgets dev-tcltk/itcl dev-tcltk/itk >=dev-tcltk/tdom-0.8 dev-tcltk/tktreectrl ~sci-libs/ccp4-libs-6.1.3 >=sci-libs/ccp4-libs-6.1.3-r7 sci-libs/clipper sci-libs/fftw:2.1 sci-libs/mmdb sci-libs/ssm virtual/blas virtual/lapack app-shells/tcsh dev-python/pyxml dev-libs/libxml2:2 dev-libs/libjwc_c dev-libs/libjwc_f dev-libs/boehm-gc !app-office/sc !<sci-chemistry/ccp4-6.1.3 X? ( x11-libs/libX11 x11-libs/libXaw x11-libs/libXt x11-libs/libxdl_view ) X? ( x11-misc/imake x11-proto/inputproto x11-proto/xextproto ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool virtual/fortran sys-devel/gnuconfig =dev-lang/python-2*
+DEPEND=>=dev-lang/tk-8.3 >=dev-tcltk/blt-2.4 dev-tcltk/iwidgets dev-tcltk/itcl dev-tcltk/itk >=dev-tcltk/tdom-0.8 dev-tcltk/tktreectrl ~sci-libs/ccp4-libs-6.1.3 >=sci-libs/ccp4-libs-6.1.3-r7 sci-libs/clipper sci-libs/fftw:2.1 sci-libs/mmdb:0 sci-libs/ssm virtual/blas virtual/lapack app-shells/tcsh dev-python/pyxml dev-libs/libxml2:2 dev-libs/libjwc_c dev-libs/libjwc_f dev-libs/boehm-gc !app-office/sc !<sci-chemistry/ccp4-6.1.3 X? ( x11-libs/libX11 x11-libs/libXaw x11-libs/libXt x11-libs/libxdl_view ) X? ( x11-misc/imake x11-proto/inputproto x11-proto/xextproto ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool virtual/fortran sys-devel/gnuconfig =dev-lang/python-2*
 DESCRIPTION=Protein X-ray crystallography toolkit
 EAPI=3
 HOMEPAGE=http://www.ccp4.ac.uk/
@@ -7,9 +7,9 @@ IUSE=examples X
 KEYWORDS=amd64 ~ppc x86 ~amd64-linux ~x86-linux
 LICENSE=ccp4
 PDEPEND=sci-chemistry/pdb-extract sci-chemistry/pymol sci-chemistry/rasmol >=sci-chemistry/oasis-4.0-r1
-RDEPEND=>=dev-lang/tk-8.3 >=dev-tcltk/blt-2.4 dev-tcltk/iwidgets dev-tcltk/itcl dev-tcltk/itk >=dev-tcltk/tdom-0.8 dev-tcltk/tktreectrl ~sci-libs/ccp4-libs-6.1.3 >=sci-libs/ccp4-libs-6.1.3-r7 sci-libs/clipper sci-libs/fftw:2.1 sci-libs/mmdb sci-libs/ssm virtual/blas virtual/lapack app-shells/tcsh dev-python/pyxml dev-libs/libxml2:2 dev-libs/libjwc_c dev-libs/libjwc_f dev-libs/boehm-gc !app-office/sc !<sci-chemistry/ccp4-6.1.3 X? ( x11-libs/libX11 x11-libs/libXaw x11-libs/libXt x11-libs/libxdl_view ) virtual/fortran =dev-lang/python-2*
+RDEPEND=>=dev-lang/tk-8.3 >=dev-tcltk/blt-2.4 dev-tcltk/iwidgets dev-tcltk/itcl dev-tcltk/itk >=dev-tcltk/tdom-0.8 dev-tcltk/tktreectrl ~sci-libs/ccp4-libs-6.1.3 >=sci-libs/ccp4-libs-6.1.3-r7 sci-libs/clipper sci-libs/fftw:2.1 sci-libs/mmdb:0 sci-libs/ssm virtual/blas virtual/lapack app-shells/tcsh dev-python/pyxml dev-libs/libxml2:2 dev-libs/libjwc_c dev-libs/libjwc_f dev-libs/boehm-gc !app-office/sc !<sci-chemistry/ccp4-6.1.3 X? ( x11-libs/libX11 x11-libs/libXaw x11-libs/libXt x11-libs/libxdl_view ) virtual/fortran =dev-lang/python-2*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=ftp://ftp.ccp4.ac.uk/ccp4/6.1.3/ccp4-6.1.3-core-src.tar.gz http://dev.gentooexperimental.org/~jlec/distfiles/6.1.3-oasis4.0.patch.bz2
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=934945428a0a7668fc9d25f6f48b7b48
+_md5_=e762e8200829f3bbefc1492d61bd9b1d
