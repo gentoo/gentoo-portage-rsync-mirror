@@ -5,7 +5,8 @@ HOMEPAGE=http://symas.com/mdb/
 IUSE=static-libs
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=OPENLDAP
+RDEPEND=!=net-nds/openldap-2.4.40
 SLOT=0
 SRC_URI=mirror://openldap/openldap-release/openldap-2.4.38.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=386b065eaba642388673e84d460129ba
+_md5_=d6527273b3ce98b85daf5fc3b7e02507

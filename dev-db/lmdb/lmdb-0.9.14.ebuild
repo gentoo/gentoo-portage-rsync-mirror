@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/lmdb-0.9.14.ebuild,v 1.2 2014/10/27 05:29:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/lmdb-0.9.14.ebuild,v 1.3 2014/10/27 21:28:47 robbat2 Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -16,7 +16,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~ppc-aix ~a
 IUSE="static-libs"
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+# =net-nds/openldap-2.4.40 installs lmdb files.
+RDEPEND="!=net-nds/openldap-2.4.40"
 
 S="${WORKDIR}/mdb-mdb/libraries/liblmdb"
 
