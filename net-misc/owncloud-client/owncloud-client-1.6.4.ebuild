@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.5.4.ebuild,v 1.1 2014/04/22 12:07:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.6.4.ebuild,v 1.1 2014/10/27 09:07:41 voyageur Exp $
 
 EAPI=5
 
@@ -15,16 +15,30 @@ SRC_URI="http://download.owncloud.com/desktop/stable/${MY_P}.tar.bz2"
 LICENSE="CC-BY-3.0 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc samba +sftp test"
+IUSE="doc samba +sftp test +qt4 qt5"
+
+REQUIRED_USE="^^ ( qt4 qt5 )"
 
 RDEPEND=">=dev-db/sqlite-3.4:3
-	dev-libs/qtkeychain
-	dev-qt/qtcore:4
-	dev-qt/qtdbus:4
-	dev-qt/qtgui:4
-	dev-qt/qtsql:4
-	dev-qt/qttest:4
-	dev-qt/qtwebkit:4
+	qt4? (
+		dev-libs/qtkeychain[qt4]
+		dev-qt/qtcore:4
+		dev-qt/qtdbus:4
+		dev-qt/qtgui:4
+		dev-qt/qtsql:4
+		dev-qt/qttest:4
+		dev-qt/qtwebkit:4
+	)
+	qt5? (
+		dev-libs/qtkeychain[qt5]
+		dev-qt/linguist-tools:5
+		dev-qt/qtcore:5
+		dev-qt/qtdbus:5
+		dev-qt/qtgui:5
+		dev-qt/qtsql:5
+		dev-qt/qttest:5
+		dev-qt/qtwebkit:5[printsupport]
+	)
 	net-libs/neon[ssl]
 	sys-fs/inotify-tools
 	virtual/libiconv
@@ -41,8 +55,6 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${FILESDIR}"/${PN}-1.5.3-man-page-location-fix.patch )
-
 src_configure() {
 	local mycmakeargs=(
 		-DSYSCONF_INSTALL_DIR="${EPREFIX}"/etc
@@ -52,6 +64,7 @@ src_configure() {
 		$(cmake-utils_use test UNIT_TESTING)
 		$(cmake-utils_use_find_package samba Libsmbclient)
 		$(cmake-utils_use_find_package sftp LibSSH)
+		$(cmake-utils_use_build qt4 WITH_QT4)
 	)
 
 	cmake-utils_src_configure
@@ -62,4 +75,11 @@ src_test() {
 	mkdir "${T}"/.config
 	export HOME="${T}"
 	cmake-utils_src_test
+}
+
+pkg_postinst() {
+	if ! use doc ; then
+		elog "Documentation and man pages not installed"
+		elog "Enable doc USE-flag to generate them"
+	fi
 }
