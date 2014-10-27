@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mysql-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.99 2014/08/20 07:14:41 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.100 2014/10/27 18:08:56 jer Exp $
+
+  27 Oct 2014; Jeroen Roovers <jer@gentoo.org> mysql-python-1.2.5.ebuild:
+  Stable for HPPA (bug #520298).
 
   20 Aug 2014; Dirkjan Ochtman <djc@gentoo.org> -mysql-python-1.2.3.ebuild:
   Remove old version

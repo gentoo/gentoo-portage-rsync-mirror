@@ -5,9 +5,9 @@ EAPI=5
 HOMEPAGE=http://jenkins-ci.org/
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
-RDEPEND=media-fonts/dejavu !dev-util/jenkins-bin:lts >=virtual/jdk-1.5
+RDEPEND=media-fonts/dejavu !dev-utils/jenkins-bin:0 >=virtual/jdk-1.5
 RESTRICT=mirror
-SLOT=0
-SRC_URI=http://mirrors.jenkins-ci.org/war/1.585/jenkins.war -> jenkins-bin-1.585.war
+SLOT=lts
+SRC_URI=http://mirrors.jenkins-ci.org/war-stable/1.565.3/jenkins.war -> jenkins-bin-1.565.3.war
 _eclasses_=user	f54e098dd38ba1c0847a13e685b87747
-_md5_=adbf876665b60e4f2f356c5f1ba696d2
+_md5_=2ec010f520d78e6b1ff150e4ddb619aa

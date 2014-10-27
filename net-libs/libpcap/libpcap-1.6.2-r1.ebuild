@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.6.2-r1.ebuild,v 1.5 2014/10/25 14:13:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.6.2-r1.ebuild,v 1.6 2014/10/27 18:03:11 jer Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -26,8 +26,6 @@ DEPEND="${RDEPEND}
 	virtual/yacc
 	dbus? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
 "
-
-DOCS=( CREDITS CHANGES VERSION TODO README{,.dag,.linux,.macosx,.septel} )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.0-cross-linux.patch
@@ -56,6 +54,8 @@ multilib_src_compile() {
 }
 
 multilib_src_install_all() {
+	dodoc CREDITS CHANGES VERSION TODO README{,.dag,.linux,.macosx,.septel}
+
 	# remove static libraries (--disable-static does not work)
 	if ! use static-libs; then
 		find "${ED}" -name '*.a' -exec rm {} + || die
