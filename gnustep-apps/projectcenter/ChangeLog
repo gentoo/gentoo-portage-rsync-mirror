@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-apps/projectcenter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.28 2014/08/10 21:20:15 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.29 2014/10/27 10:03:56 voyageur Exp $
+
+*projectcenter-0.6.2 (27 Oct 2014)
+
+  27 Oct 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  -projectcenter-0.6.0.ebuild, +projectcenter-0.6.2.ebuild,
+  -files/projectcenter-0.6.0-32788+33818.patch:
+  Version bump, better compiler output parser and fixes for current GNUstep.
+  Remove old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   projectcenter-0.6.0.ebuild, projectcenter-0.6.1.ebuild:
