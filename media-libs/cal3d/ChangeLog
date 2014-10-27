@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/cal3d
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.35 2012/06/29 11:48:28 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.36 2014/10/27 11:25:23 tupone Exp $
+
+  27 Oct 2014; Alfredo Tupone <tupone@gentoo.org> cal3d-0.11.0-r1.ebuild,
+  +files/cal3d-0.11.0-tests.patch:
+  Fix test. Bug #526558 by flameeyes@gentoo.org
+  Migrating to EAPI 5
+  removing base eclass usage
 
   29 Jun 2012; Tupone Alfredo <tupone@gentoo.org> cal3d-0.11.0-r1.ebuild,
   +files/cal3d-0.11.0-verbose.patch:
