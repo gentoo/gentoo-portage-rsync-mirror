@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.480 2014/10/13 21:03:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.481 2014/10/27 05:33:58 robbat2 Exp $
+
+*openldap-2.4.40-r1 (27 Oct 2014)
+
+  27 Oct 2014; Robin H. Johnson <robbat2@gentoo.org>
+  +files/openldap-2.4.40-db-6.patch, +files/slapd-initd-2.4.40-r1,
+  +openldap-2.4.40-r1.ebuild, metadata.xml:
+  Bug #525110: Improve handling for DB-6; Bug #525408: fix init script; Bug
+  #525126: use external lmdb
 
   13 Oct 2014; Robin H. Johnson <robbat2@gentoo.org> openldap-2.4.40.ebuild:
   Bug #440470: Clean up elog stuff with Arfrever's suggestion.

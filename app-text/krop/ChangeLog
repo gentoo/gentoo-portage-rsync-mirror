@@ -1,10 +1,13 @@
 # ChangeLog for app-text/krop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/krop/ChangeLog,v 1.1 2014/10/10 15:45:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/krop/ChangeLog,v 1.2 2014/10/27 05:46:07 ssuominen Exp $
+
+  27 Oct 2014; Samuli Suominen <ssuominen@gentoo.org> krop-0.4.6.ebuild:
+  Remove obsolete python2_6 support in favour of python2_7, mimicing what's
+  being done in dev-python/python-poppler-qt4.
 
 *krop-0.4.6 (10 Oct 2014)
 
   10 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> +krop-0.4.6.ebuild,
   +metadata.xml:
   New package. Based on the ebuild by Armin Straub (upstream author).
-
