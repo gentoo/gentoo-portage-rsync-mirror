@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/stone-soup-0.14.2.ebuild,v 1.3 2014/10/10 11:01:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/stone-soup-0.14.2.ebuild,v 1.4 2014/10/27 02:58:21 patrick Exp $
 
 ## TODO
 # add sound support (no build switch, no sound files)
@@ -14,7 +14,7 @@ VIRTUALX_REQUIRED="manual"
 inherit eutils gnome2-utils virtualx toolchain-funcs games
 
 MY_P="stone_soup-${PV}"
-DESCRIPTION="Dungeon Crawl Stone Soup is a role-playing roguelike game of exploration and treasure-hunting in dungeons"
+DESCRIPTION="A role-playing roguelike game of exploration and treasure-hunting in dungeons"
 HOMEPAGE="http://crawl.develz.org/wordpress/"
 SRC_URI="mirror://sourceforge/crawl-ref/Stone%20Soup/${PV}/${MY_P}-nodeps.tar.xz
 	http://dev.gentoo.org/~hasufell/distfiles/${PN}.png
