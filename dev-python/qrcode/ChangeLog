@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/qrcode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qrcode/ChangeLog,v 1.5 2014/06/21 22:55:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qrcode/ChangeLog,v 1.6 2014/10/27 07:24:52 idella4 Exp $
+
+*qrcode-5.1 (27 Oct 2014)
+
+  27 Oct 2014; Ian Delaney <idella4@gentoo.org> +qrcode-5.1.ebuild:
+  bump; updrade deps & install phase, retrict test phase for now due to failures
 
 *qrcode-5.0.1 (21 Jun 2014)
 
