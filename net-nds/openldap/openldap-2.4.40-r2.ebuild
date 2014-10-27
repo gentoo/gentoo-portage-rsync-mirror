@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40-r1.ebuild,v 1.1 2014/10/27 05:33:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40-r2.ebuild,v 1.1 2014/10/27 19:15:09 robbat2 Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 IUSE_DAEMON="crypt icu samba slp tcpd experimental minimal"
-IUSE_BACKEND="+berkdb +bindist"
+IUSE_BACKEND="+berkdb"
 IUSE_OVERLAY="overlays perl"
 IUSE_OPTIONAL="gnutls iodbc sasl ssl odbc debug ipv6 +syslog selinux static-libs"
 IUSE_CONTRIB="smbkrb5passwd kerberos"
@@ -31,10 +31,11 @@ IUSE="${IUSE_DAEMON} ${IUSE_BACKEND} ${IUSE_OVERLAY} ${IUSE_OPTIONAL} ${IUSE_CON
 
 REQUIRED_USE="cxx? ( sasl )"
 # This is only actually applicable if linking against db-6
-RESTRICT="!minimal? ( !bindist? ( berkdb? ( bindist ) ) )"
 
 # always list newer first
-BDB_SLOTS='6.1 6.0 5.3 5.1 4.8 4.7 4.6 4.5 4.4'
+# Do not add any AGPL-3 BDB here!
+# See bug 525110, comment 15.
+BDB_SLOTS='5.3 5.1 4.8 4.7 4.6 4.5 4.4'
 
 # openssl is needed to generate lanman-passwords required by samba
 RDEPEND="icu? ( dev-libs/icu:= )
@@ -53,7 +54,7 @@ RDEPEND="icu? ( dev-libs/icu:= )
 		samba? ( dev-libs/openssl )
 		berkdb? ( 
 			>=sys-libs/db-4.4
-			bindist? ( <sys-libs/db-6 ) 
+			<sys-libs/db-6
 			)
 		smbkrb5passwd? (
 			dev-libs/openssl
@@ -199,8 +200,6 @@ openldap_find_versiontags() {
 		OLDVER="$(/usr/bin/ldd ${SLAPD_PATH} \
 			| awk '/libdb-/{gsub("^libdb-","",$1);gsub(".so$","",$1);print $1}')"
 		if use berkdb; then
-			# If USE=bindist, then >=DB-6 is not permitted
-			use bindist && BDB_SLOTS=${BDB_SLOTS/6.0} && BDB_SLOTS=${BDB_SLOTS/6.1}
 			# find which one would be used
 			for bdb_slot in $BDB_SLOTS ; do
 				NEWVER="$(db_findver "=sys-libs/db-${bdb_slot}*")"
@@ -328,10 +327,6 @@ src_prepare() {
 	# bug #421463
 	#epatch "${FILESDIR}"/${PN}-2.4.33-gnutls.patch # merged upstream
 
-	# bug #525110: allow compiling with db-6 against
-	# but RESTRICT=bindist now applies
-	use bindist || epatch "${FILESDIR}"/${PN}-2.4.40-db-6.patch
-
 	# unbundle lmdb
 	epatch "${FILESDIR}"/${P}-mdb-unbundle.patch
 	rm -rf "${S}"/libraries/liblmdb
@@ -406,8 +401,6 @@ multilib_src_configure() {
 		if use berkdb ; then
 			einfo "Using Berkeley DB for local backend"
 			myconf+=( --enable-bdb --enable-hdb )
-			# >=db-6 is probibited for bindist
-			use bindist && BDB_SLOTS=${BDB_SLOTS/6.0} && BDB_SLOTS=${BDB_SLOTS/6.1}
 			DBINCLUDE=$(db_includedir $BDB_SLOTS)
 			einfo "Using $DBINCLUDE for sys-libs/db version"
 			# We need to include the slotted db.h dir for FreeBSD

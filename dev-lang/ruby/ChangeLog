@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.669 2014/09/20 21:11:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.670 2014/10/27 19:15:55 graaff Exp $
+
+*ruby-2.1.4 (27 Oct 2014)
+*ruby-2.0.0_p594 (27 Oct 2014)
+*ruby-1.9.3_p550 (27 Oct 2014)
+
+  27 Oct 2014; Hans de Graaff <graaff@gentoo.org> +ruby-1.9.3_p550.ebuild,
+  +ruby-2.0.0_p594.ebuild, +ruby-2.1.4.ebuild:
+  Version bump for security bug 527084. Note that OpenSSL defaults have changed
+  in these versions which may lead to incompatibilities:
+  https://www.ruby-lang.org/en/news/2014/10/27/changing-default-settings-of-ext
+  -openssl/
 
   20 Sep 2014; Agostino Sarubbo <ago@gentoo.org> ruby-1.9.3_p547.ebuild,
   ruby-2.0.0_p481.ebuild:

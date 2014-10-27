@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.57 2014/10/12 08:24:20 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.58 2014/10/27 19:04:44 maksbotan Exp $
 
 EAPI=5
 
@@ -23,8 +23,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b cdio -doc-pdf dvb +dvd dvdnav +enca encode +iconv jack -joystick
 jpeg ladspa lcms +libass libcaca libguess libmpv lirc lua luajit +mpg123 -openal +opengl
-oss portaudio postproc pulseaudio pvr +quvi samba sdl selinux +shm v4l vaapi vdpau
-vf-dlopen wayland +X xinerama +xscreensaver +xv"
+oss portaudio postproc pulseaudio pvr samba sdl selinux +shm v4l vaapi vdpau vf-dlopen
+wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
 	dvdnav? ( dvd )
@@ -98,13 +98,6 @@ RDEPEND+="
 		)
 	)
 	pulseaudio? ( media-sound/pulseaudio )
-	quvi? (
-		>=media-libs/libquvi-0.4.1:=
-		|| (
-			>=media-video/libav-10[network]
-			>=media-video/ffmpeg-2.1.4:0[network]
-		)
-	)
 	samba? ( net-fs/samba )
 	sdl? ( media-libs/libsdl2[threads] )
 	selinux? ( sec-policy/selinux-mplayer )
@@ -171,7 +164,6 @@ src_configure() {
 		$(use_enable encode encoding) \
 		$(use_enable joystick) \
 		$(use_enable bluray libbluray) \
-		$(use_enable quvi libquvi) \
 		$(use_enable samba libsmbclient) \
 		$(use_enable lirc) \
 		$(use_enable lua) \
