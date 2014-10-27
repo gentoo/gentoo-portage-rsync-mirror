@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.2.4-r1.ebuild,v 1.9 2014/07/20 09:16:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.2.4-r1.ebuild,v 1.10 2014/10/27 08:51:51 jer Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit autotools eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/"
@@ -29,6 +29,11 @@ RESTRICT="test"
 DOCS=(
 	BUGREPORTS CHANGES DEVELOPMENT EXAMPLES FAQ FILES PORTING README SECURITY
 )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-linux-3.17.patch
+	eautoreconf
+}
 
 src_configure() {
 	filter-flags '-Wno-error*' #293324

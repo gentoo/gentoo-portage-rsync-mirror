@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.143 2014/07/20 11:53:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.144 2014/10/27 08:51:51 jer Exp $
+
+  27 Oct 2014; Jeroen Roovers <jer@gentoo.org> socat-1.7.2.4-r1.ebuild,
+  +files/socat-1.7.2.4-linux-3.17.patch:
+  Fix building against sys-kernel/linux-headers-3.17 (bug #526946 by Gangræna
+  Gorgeous).
 
   20 Jul 2014; Jeroen Roovers <jer@gentoo.org> -socat-1.7.2.3.ebuild:
   Old.

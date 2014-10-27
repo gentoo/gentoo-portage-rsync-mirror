@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocaml-ssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.25 2014/08/10 20:43:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.26 2014/10/27 08:34:19 aballier Exp $
+
+*ocaml-ssl-0.4.7 (27 Oct 2014)
+
+  27 Oct 2014; Alexis Ballier <aballier@gentoo.org> +ocaml-ssl-0.4.7.ebuild:
+  version bump
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ocaml-ssl-0.4.6.ebuild:
   QA: drop trailing '.' from DESCRIPTION

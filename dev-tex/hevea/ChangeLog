@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/hevea
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.49 2013/06/14 20:12:18 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.50 2014/10/27 08:31:15 aballier Exp $
+
+*hevea-2.18 (27 Oct 2014)
+
+  27 Oct 2014; Alexis Ballier <aballier@gentoo.org> +hevea-2.18.ebuild:
+  version bump
 
   14 Jun 2013; Alexis Ballier <aballier@gentoo.org> hevea-2.03.ebuild:
   rdepend on tl-latexextra for comment.sty by Alexey Shmalko, bug #472660
