@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/bwmon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/ChangeLog,v 1.28 2014/07/10 19:51:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/ChangeLog,v 1.29 2014/10/27 12:22:12 jer Exp $
+
+  27 Oct 2014; Jeroen Roovers <jer@gentoo.org> bwmon-1.3-r2.ebuild,
+  +files/bwmon-1.3-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #527046).
 
   10 Jul 2014; Jeroen Roovers <jer@gentoo.org> -bwmon-1.3.ebuild,
   -bwmon-1.3-r1.ebuild, bwmon-1.3-r2.ebuild, files/bwmon-1.3-build.patch,

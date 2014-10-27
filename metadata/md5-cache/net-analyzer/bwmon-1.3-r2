@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=sys-libs/ncurses
+DEPEND=sys-libs/ncurses virtual/pkgconfig
 DESCRIPTION=Simple ncurses bandwidth monitor
 EAPI=5
 HOMEPAGE=http://bwmon.sourceforge.net/
@@ -9,4 +9,4 @@ RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=mirror://sourceforge/bwmon/bwmon-1.3.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=d1a5786b1bbe7d74610308cf022986ce
+_md5_=8a620297dfb7162b7d017f434fd7ffe3
