@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=test? ( ruby_targets_ruby19? ( dev-ruby/rcairo[ruby_targets_ruby19] >=dev-ruby/ruby-glib2-2.2.0[ruby_targets_ruby19] ) ruby_targets_ruby20? ( dev-ruby/rcairo[ruby_targets_ruby20] >=dev-ruby/ruby-glib2-2.2.0[ruby_targets_ruby20] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ) virtual/pkgconfig ruby_targets_ruby19? ( dev-ruby/pkg-config[ruby_targets_ruby19] ) ruby_targets_ruby20? ( dev-ruby/pkg-config[ruby_targets_ruby20] )
+DEPEND=x11-libs/cairo test? ( ruby_targets_ruby19? ( dev-ruby/rcairo[ruby_targets_ruby19] >=dev-ruby/ruby-glib2-2.2.0[ruby_targets_ruby19] ) ruby_targets_ruby20? ( dev-ruby/rcairo[ruby_targets_ruby20] >=dev-ruby/ruby-glib2-2.2.0[ruby_targets_ruby20] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ) virtual/pkgconfig ruby_targets_ruby19? ( dev-ruby/pkg-config[ruby_targets_ruby19] ) ruby_targets_ruby20? ( dev-ruby/pkg-config[ruby_targets_ruby20] )
 DESCRIPTION=Ruby cairo-gobject bindings
 EAPI=5
 HOMEPAGE=http://ruby-gnome2.sourceforge.jp/
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 )
 SLOT=0
 SRC_URI=mirror://sourceforge/ruby-gnome2/ruby-gnome2-all-2.2.0.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	ruby-ng-gnome2	e4cff284a3481220aed757f422ae56c7	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=f88b56763ef7c208cd05f4e217c69bf6
+_md5_=82228bf9741fc75fbedc9b7430be0c6e

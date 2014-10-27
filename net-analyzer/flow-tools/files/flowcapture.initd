@@ -3,7 +3,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 depend() {
-	need net
+	use net
 }
 
 start() {
@@ -11,7 +11,7 @@ start() {
 	checkpath -d -o flows /run/flows
 	start-stop-daemon --start --user ${USER} --exec /usr/bin/flow-capture \
 		--pidfile /run/flows/flowcapture.pid.${PORT} \
-		-- ${FLOW_OPTS} >/dev/null 2>&1
+		-- -D ${FLOW_OPTS} >/dev/null 2>&1
 	eend $?
 }
 
