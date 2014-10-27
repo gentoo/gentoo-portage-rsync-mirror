@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.586.ebuild,v 1.1 2014/10/27 18:08:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.586-r1.ebuild,v 1.1 2014/10/27 21:37:17 mrueg Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="media-fonts/dejavu"
 RDEPEND="${DEPEND}
-	!dev-utils/jenkins-bin:lts
+	!dev-util/jenkins-bin:lts
 	>=virtual/jdk-1.5"
 
 S=${WORKDIR}

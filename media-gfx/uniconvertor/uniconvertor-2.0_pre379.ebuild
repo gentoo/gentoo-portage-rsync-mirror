@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/uniconvertor-2.0_pre379.ebuild,v 1.1 2014/10/26 15:48:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/uniconvertor-2.0_pre379.ebuild,v 1.2 2014/10/27 21:32:15 sping Exp $
 
 EAPI=5
 
@@ -17,6 +17,8 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 IUSE=""
 
-DEPEND="media-libs/lcms:2"
+DEPEND="media-libs/lcms:2
+	virtual/python-imaging
+	dev-python/pycairo"
 RDEPEND="${DEPEND}
 	app-text/ghostscript-gpl"
