@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libintl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.26 2014/09/15 08:24:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.27 2014/10/27 01:47:27 vapier Exp $
+
+  27 Oct 2014; Mike Frysinger <vapier@gentoo.org> libintl-0-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> libintl-0-r1.ebuild:
   Stable for sparc, wrt bug #512012

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.297 2014/09/09 01:51:43 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.298 2014/10/27 01:38:27 vapier Exp $
+
+  27 Oct 2014; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.42.10.ebuild:
+  Mark s390/sh/m68k stable.
 
   09 Sep 2014; Jack Morgan <jmorgan@gentoo.org> e2fsprogs-1.42.10.ebuild:
   sparc stable for bz512012

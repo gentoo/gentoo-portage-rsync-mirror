@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.2-r1.ebuild,v 1.11 2014/09/15 08:24:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.2-r1.ebuild,v 1.12 2014/10/27 01:51:03 vapier Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
 else
 	SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
-	KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+	KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 fi
 
 DESCRIPTION="A shared library tool for developers"

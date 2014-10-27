@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.624 2014/10/11 11:35:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.625 2014/10/27 01:54:36 vapier Exp $
+
+  27 Oct 2014; Mike Frysinger <vapier@gentoo.org> glib-2.40.0-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> glib-2.40.0-r1.ebuild:
   arm stable, bug #512012

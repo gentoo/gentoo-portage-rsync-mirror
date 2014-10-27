@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.6.ebuild,v 1.10 2014/07/11 21:55:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.6.ebuild,v 1.11 2014/10/27 01:42:17 vapier Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://nongnu/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~arm-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~arm-linux ~x86-linux"
 IUSE="berkdb +gdbm nls selinux static-libs zlib"
 
 RDEPEND="dev-libs/libpipeline

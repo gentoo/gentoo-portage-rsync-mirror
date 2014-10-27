@@ -4,10 +4,10 @@ DESCRIPTION=e2fsprogs libraries (common error and subsystem)
 EAPI=4
 HOMEPAGE=http://e2fsprogs.sourceforge.net/
 IUSE=nls static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
-KEYWORDS=alpha amd64 arm arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~m68k-mint ~x86-solaris
+KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~m68k-mint ~x86-solaris
 LICENSE=GPL-2
 RDEPEND=!sys-libs/com_err !sys-libs/ss !<sys-fs/e2fsprogs-1.41.8 abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r12 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=mirror://sourceforge/e2fsprogs/e2fsprogs-libs-1.42.10.tar.gz
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	9eb4b5fb858228316d8bb32ada51f6a5	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=e73f2ecd94d887b4dff5495171776f64
+_md5_=a1a7cb9ae7435383e6a816857105082a

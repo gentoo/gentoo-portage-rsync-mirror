@@ -4,10 +4,10 @@ DESCRIPTION=Password Checking Library
 EAPI=4
 HOMEPAGE=http://sourceforge.net/projects/cracklib
 IUSE=nls python static-libs test zlib python_targets_python2_7 abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
-KEYWORDS=alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint
+KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint
 LICENSE=LGPL-2.1
 RDEPEND=zlib? ( >=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20140508-r6 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=mirror://sourceforge/cracklib/cracklib-2.9.1.tar.gz
 _eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	9eb4b5fb858228316d8bb32ada51f6a5	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=8a7cf0c7774070d56abd34fb0dd6ecbc
+_md5_=7e5003d82e2115aad5da3317f0fcce9b

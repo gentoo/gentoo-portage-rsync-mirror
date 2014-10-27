@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.2_p5-r1.ebuild,v 1.18 2014/09/15 08:24:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.2_p5-r1.ebuild,v 1.19 2014/10/27 01:53:06 vapier Exp $
 
 EAPI="4"
 
@@ -34,7 +34,7 @@ SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.gz $(patches)"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="static-libs"
 
 RDEPEND=">=sys-libs/ncurses-5.9-r3[${MULTILIB_USEDEP}]
