@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-1.0_pre4-r2.ebuild,v 1.1 2014/10/26 08:26:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-1.0_pre4-r2.ebuild,v 1.2 2014/10/27 18:47:26 jer Exp $
 
 EAPI=5
 
@@ -28,11 +28,9 @@ S="${WORKDIR}"/${P/_/}
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${P}-ac_check_sizeof.patch \
-		"${FILESDIR}"/${P}-pthread.patch \
-		"${FILESDIR}"/${P}-tinfo.patch \
-		"${FILESDIR}"/${P}-tsent-set-but-not-used.patch \
-		"${FILESDIR}"/${P}-single-quote.patch
+		"${FILESDIR}"/${P}-configure.ac.patch \
+		"${FILESDIR}"/${P}-Makefile.am.patch \
+		"${FILESDIR}"/${P}-tsent-set-but-not-used.patch
 
 	# bug 490168
 	cat "${FILESDIR}"/ax_pthread.m4 >> "${S}"/acinclude.m4 || die

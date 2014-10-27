@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/simutrans
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.36 2014/10/12 08:52:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.37 2014/10/27 18:51:36 mr_bones_ Exp $
+
+  27 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/simutrans-0.102.2.2-gcc46.patch,
+  -files/simutrans-0.102.2.2-gcc47.patch, -files/simutrans-0.102.2.2-zlib.patch,
+  -simutrans-0.102.2.2.ebuild:
+  old
 
   12 Oct 2014; Agostino Sarubbo <ago@gentoo.org> simutrans-0.112.3.ebuild:
   Stable for x86, wrt bug #522124

@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.183 2014/05/16 10:59:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.184 2014/10/27 18:55:59 vapier Exp $
+
+*wget-1.16 (27 Oct 2014)
+
+  27 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/wget-1.16-openssl-header.patch, +files/wget-1.16-pkg-config.patch,
+  +files/wget-1.16-tests-skip.patch, +wget-1.16.ebuild:
+  Version bump.
 
 *wget-1.15-r1 (16 May 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.75 2014/10/26 08:36:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.76 2014/10/27 18:47:26 jer Exp $
+
+  27 Oct 2014; Jeroen Roovers <jer@gentoo.org> iftop-1.0_pre4-r2.ebuild,
+  +files/iftop-1.0_pre4-Makefile.am.patch,
+  +files/iftop-1.0_pre4-configure.ac.patch:
+  Combine several configure.ac patches and add PKG_PROG_PKG_CONFIG().
 
   26 Oct 2014; Jeroen Roovers <jer@gentoo.org>
   files/iftop-1.0_pre4-single-quote.patch:
