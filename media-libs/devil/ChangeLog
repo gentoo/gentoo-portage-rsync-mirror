@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.61 2014/02/02 11:51:15 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.62 2014/10/27 07:59:46 mr_bones_ Exp $
+
+*devil-1.7.8-r2 (27 Oct 2014)
+
+  27 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> +devil-1.7.8-r2.ebuild:
+  drop lcms:0 support (bug #526836)
 
   02 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> devil-1.7.8-r1.ebuild:
   Add ~mips, wrt bug #499866
