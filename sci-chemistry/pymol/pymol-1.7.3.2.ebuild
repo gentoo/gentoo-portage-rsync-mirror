@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.7.3.2.ebuild,v 1.1 2014/10/20 18:05:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.7.3.2.ebuild,v 1.2 2014/10/27 17:18:52 jlec Exp $
 
 EAPI=5
 
@@ -34,8 +34,8 @@ DEPEND="
 	sys-libs/zlib
 	media-libs/freeglut
 	apbs? (
-		sci-chemistry/apbs
-		sci-chemistry/pdb2pqr
+		sci-chemistry/apbs[${PYTHON_USEDEP}]
+		sci-chemistry/pdb2pqr[${PYTHON_USEDEP}]
 		sci-chemistry/pymol-apbs-plugin[${PYTHON_USEDEP}]
 	)
 	web? ( !dev-python/webpy[${PYTHON_USEDEP}] )"

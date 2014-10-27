@@ -1,13 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vmaid/vmaid-2.2.0.ebuild,v 1.4 2013/05/16 19:24:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vmaid/vmaid-2.2.4.ebuild,v 1.1 2014/10/27 17:18:12 mrueg Exp $
 
-EAPI=1
+EAPI=5
 
 DESCRIPTION="Video maid is the AVI file editor"
 HOMEPAGE="http://vmaid.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/vmaid/33098/${P}.tar.gz"
-
+SRC_URI="mirror://sourceforge.jp/vmaid/48081/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -22,24 +21,15 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/scrollkeeper"
 
-src_compile() {
-	local myconf
-
-	if use ao ; then
-		myconf="${myconf} --with-ao=yes"
-	elif use alsa ; then
-		myconf="${myconf} --with-alsa=yes"
-	fi
-
+src_configure() {
 	econf \
 		$(use_enable mime) \
-		--without-w32 \
-		${myconf} || die
-	emake || die
+		--with-ao=$(usex ao) \
+		--with-alsa=$(usex alsa) \
+		--without-w32
 }
-
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	dodoc AUTHORS CONTRIBUTORS ChangeLog NEWS README
 	dohtml -r doc/{en,ja}

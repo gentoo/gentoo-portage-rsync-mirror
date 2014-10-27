@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare setup test
+DEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/numpy[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-chemistry/openbabel[python] sci-chemistry/openbabel-python[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] opal? ( dev-python/zsi[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) pdb2pka? ( sci-chemistry/apbs[python_targets_python2_7(-)?,python_single_target_python2_7(+)?,-mpi] ) dev-lang/swig:0 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool dev-util/scons virtual/fortran
+DESCRIPTION=An automated pipeline for performing Poisson-Boltzmann electrostatics calculations
+EAPI=5
+HOMEPAGE=http://www.poissonboltzmann.org/
+IUSE=doc examples opal +pdb2pka python_targets_python2_7 python_single_target_python2_7
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/numpy[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-chemistry/openbabel[python] sci-chemistry/openbabel-python[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] opal? ( dev-python/zsi[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) pdb2pka? ( sci-chemistry/apbs[python_targets_python2_7(-)?,python_single_target_python2_7(+)?,-mpi] ) virtual/fortran
+REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
+SLOT=0
+SRC_URI=https://github.com/Electrostatics/apbs-pdb2pqr/releases/download/pdb2pqr-1.9.0/pdb2pqr-src-1.9.0.tar.gz
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=e5e448570d1076642c44311f24dae876

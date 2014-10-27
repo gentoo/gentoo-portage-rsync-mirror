@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/saaj-api
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/saaj-api/ChangeLog,v 1.15 2014/07/14 21:05:05 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/saaj-api/ChangeLog,v 1.16 2014/10/27 17:27:54 mrueg Exp $
+
+  27 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -saaj-api-1.3-r1.ebuild:
+  Cleanup superseded EAPI1 ebuild.
 
 *saaj-api-1.3-r3 (14 Jul 2014)
 
@@ -58,4 +61,3 @@
   +saaj-api-1.3.ebuild:
   Add virtual for saaj-api (jsr67) so that dev-java/jsr101 can be compiled on
   1.5 JDKs.
-
