@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/rtpbreak
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/ChangeLog,v 1.8 2011/04/05 17:04:16 signals Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/ChangeLog,v 1.9 2014/10/27 17:39:47 mrueg Exp $
+
+*rtpbreak-1.3a-r1 (27 Oct 2014)
+
+  27 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +rtpbreak-1.3a-r1.ebuild,
+  -rtpbreak-1.3a.ebuild:
+  Cleanup superseded EAPI1 ebuild.
 
   05 Apr 2011; Kevin McCarthy <signals@gentoo.org> rtpbreak-1.3a.ebuild,
   +files/rtpbreak-1.3a-missing-headers.patch:
@@ -39,4 +45,3 @@
   28 May 2007; Timothy Redaelli <drizzt@gentoo.org>
   +files/rtpbreak-1.0-ldflags.patch, +rtpbreak-1.0.ebuild:
   New ebuild.
-

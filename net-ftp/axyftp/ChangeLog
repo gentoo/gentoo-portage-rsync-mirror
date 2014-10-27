@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/axyftp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/axyftp/ChangeLog,v 1.9 2012/10/24 19:21:00 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/axyftp/ChangeLog,v 1.10 2014/10/27 17:34:59 mrueg Exp $
+
+*axyftp-0.5.1-r2 (27 Oct 2014)
+
+  27 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +axyftp-0.5.1-r2.ebuild:
+  Cleanup superseded EAPI1 ebuild.
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> axyftp-0.5.1-r1.ebuild:
   Update dependency after package move from x11-libs/openmotif to
@@ -33,4 +38,3 @@
 
   27 Jan 2004; Martin Holzer <mholzer@gentoo.org> axyftp-0.5.1.ebuild:
   Initial ebuild. Submitted by Jan Schubert <Jan.Schubert@GMX.li> in #36856
-

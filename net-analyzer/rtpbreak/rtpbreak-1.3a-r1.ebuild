@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/rtpbreak-1.3a.ebuild,v 1.3 2011/04/05 17:04:16 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/rtpbreak-1.3a-r1.ebuild,v 1.1 2014/10/27 17:39:47 mrueg Exp $
 
-EAPI=1
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -18,21 +18,20 @@ IUSE=""
 DEPEND="net-libs/libnet:1.1
 	>=net-libs/libpcap-0.7"
 
-RDEPEND=$DEPEND
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	# Use limits.h PATH_MAX
 	epatch "${FILESDIR}"/${P}-limits.patch \
 		"${FILESDIR}"/${P}-missing-headers.patch
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	dobin src/rtpbreak || die "cannot install rtpbreak"
-	dodoc CHANGELOG THANKS || die "Failed to install documentation"
-	dohtml doc/* || die "Failed to install documentation"
+	dobin src/rtpbreak
+	dodoc CHANGELOG THANKS
+	dohtml -r doc
 }
