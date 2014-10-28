@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.16 2014/05/02 10:30:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.17 2014/10/27 23:16:30 blueness Exp $
 
 EAPI="4"
 
@@ -49,9 +49,9 @@ src_unpack() {
 src_prepare() {
 	use vanilla && return 0
 
-	cd libltdl/m4
+	cd m4
 	epatch "${FILESDIR}"/1.5.20/${PN}-1.5.20-use-linux-version-in-fbsd.patch #109105
-	cd ..
+	cd ../libltdl
 	AT_NOELIBTOOLIZE=yes eautoreconf
 	cd ..
 	AT_NOELIBTOOLIZE=yes eautoreconf
