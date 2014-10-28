@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.2.ebuild,v 1.1 2014/10/26 21:55:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.2-r1.ebuild,v 1.1 2014/10/28 09:14:56 voyageur Exp $
 
 EAPI=5
 inherit autotools base eutils
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-${PN}
 
 PATCHES=(
+	"${FILESDIR}"/${P}-fix-lcms2-integration.patch
 	"${FILESDIR}"/${P}-fix_version.patch
 )
 

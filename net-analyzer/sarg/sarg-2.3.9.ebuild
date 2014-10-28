@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.9.ebuild,v 1.1 2014/09/26 08:42:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.9.ebuild,v 1.2 2014/10/28 09:03:43 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -24,7 +24,9 @@ RDEPEND="${DEPEND}"
 DOCS=( BETA-TESTERS CONTRIBUTORS DONATIONS README ChangeLog htaccess )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-configure.patch
+	epatch \
+		"${FILESDIR}"/${P}-configure.patch \
+		"${FILESDIR}"/${P}-configure-bash.patch
 
 	sed -i \
 		-e 's:/usr/local/squid/var/logs/access.log:/var/log/squid/access.log:' \
