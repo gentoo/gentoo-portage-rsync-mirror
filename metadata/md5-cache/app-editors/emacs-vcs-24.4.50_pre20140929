@@ -11,4 +11,4 @@ REQUIRED_USE=?? ( aqua X )
 SLOT=24
 SRC_URI=http://dev.gentoo.org/~ulm/distfiles/emacs-24.4.50_pre20140929.tar.xz mirror://gnu-alpha/emacs/pretest/emacs-24.4.50_pre20140929.tar.xz
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=ac1c6c7b1e104c47b2324a19c6fb48a2
+_md5_=769c2f934a168b1a9bb34da57ee736f9

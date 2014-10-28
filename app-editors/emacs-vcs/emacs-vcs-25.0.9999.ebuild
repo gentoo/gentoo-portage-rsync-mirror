@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-25.0.9999.ebuild,v 1.2 2014/10/20 23:16:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-25.0.9999.ebuild,v 1.3 2014/10/28 13:08:27 ulm Exp $
 
 EAPI=5
 
@@ -125,6 +125,7 @@ src_prepare() {
 
 src_configure() {
 	strip-flags
+	filter-flags -pie					#526948
 
 	if use sh; then
 		replace-flags "-O[1-9]" -O0		#262359

@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.4.1.ebuild,v 1.4 2014/10/24 11:38:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.4.1-r1.ebuild,v 1.1 2014/10/28 13:10:30 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit cmake-utils flag-o-matic multilib python-single-r1 toolchain-funcs
+inherit cmake-utils distutils-r1 flag-o-matic multilib toolchain-funcs
 
 GITHUB_REV="74fcb8676de69ed04ddab8976a8b05a6caaf4d65"
 
@@ -22,7 +22,7 @@ IUSE="debug doc examples fast +fetk mpi openmp python tools"
 
 REQUIRED_USE="
 	mpi? ( !python )
-	${PYTHON_REQUIRED_USE}"
+	python? ( tools fetk ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	dev-cpp/eigen:3
@@ -48,6 +48,7 @@ S="${WORKDIR}"/${PN}-pdb2pqr-${GITHUB_REV}/${PN}
 PATCHES=(
 	"${FILESDIR}"/${P}-multilib.patch
 	"${FILESDIR}"/${P}-manip.patch
+	"${FILESDIR}"/${P}-python.patch
 )
 
 src_prepare() {
@@ -56,12 +57,19 @@ src_prepare() {
 
 	sed \
 		-e "s:-lblas:$($(tc-getPKG_CONFIG) --libs blas):g" \
+		-e "/TOOLS_PATH/d" \
 		-i CMakeLists.txt || die
 	use doc && MAKEOPTS+=" -j1"
+	if use python; then
+		unset PATCHES || die
+		cd tools/python && distutils-r1_src_prepare
+	fi
 }
 
 src_configure() {
 	local mycmakeargs=(
+		-DCMAKE_SKIP_RPATH=ON
+		-DTOOLS_PATH="${ED}"/usr
 		-DSYS_LIBPATHS="${EPREFIX}"/usr/$(get_libdir)
 		-DLIBRARY_INSTALL_PATH=$(get_libdir)
 		-DFETK_PATH="${EPREFIX}"/usr/
@@ -78,11 +86,21 @@ src_configure() {
 		$(cmake-utils_use_enable mpi MPI)
 		$(cmake-utils_use_enable python PYTHON)
 # ENABLE_TINKER: Enable TINKER support
-		$(cmake-utils_use_enable python PYTHON)
 # ENABLE_iAPBS: Enable iAPBS
+		-DENABLE_iAPBS=ON
 # MAX_MEMORY: Set the maximum memory (in MB) to be used for a job
 	)
 	cmake-utils_src_configure
+	if use python; then
+		cd tools/python && distutils-r1_src_configure
+	fi
+}
+
+src_compile(){
+	cmake-utils_src_compile
+	if use python; then
+		cd tools/python && distutils-r1_src_compile
+	fi
 }
 
 src_test() {
@@ -92,6 +110,15 @@ src_test() {
 }
 
 src_install() {
+	dodir /usr/bin
 	cmake-utils_src_install
-	python_optimize "${ED}"
+	local i
+	for i in "${ED}"/usr/bin/*; do
+		if [[ ! "${i}" =~ .*apbs$ ]]; then
+			mv "${i}" "${i}-apbs" || die
+		fi
+	done
+	if use python; then
+		cd tools/python && distutils-r1_src_install
+	fi
 }

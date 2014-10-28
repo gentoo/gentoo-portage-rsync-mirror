@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r11.ebuild,v 1.11 2014/06/19 18:14:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r11.ebuild,v 1.12 2014/10/28 13:03:48 ulm Exp $
 
 EAPI=5
 WANT_AUTOMAKE="none"
@@ -104,7 +104,7 @@ src_prepare() {
 
 src_configure() {
 	strip-flags
-	filter-flags -fstrict-aliasing
+	filter-flags -fstrict-aliasing -pie
 	append-flags $(test-flags -fno-strict-aliasing)
 
 	if use sh; then

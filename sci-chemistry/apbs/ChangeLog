@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.67 2014/10/24 11:38:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.68 2014/10/28 13:10:30 jlec Exp $
+
+*apbs-1.4.1-r1 (28 Oct 2014)
+
+  28 Oct 2014; Justin Lecher <jlec@gentoo.org> -apbs-1.4.1.ebuild,
+  +apbs-1.4.1-r1.ebuild, files/apbs-1.4.1-manip.patch,
+  +files/apbs-1.4.1-python.patch:
+  Link python libs completely
 
   24 Oct 2014; Justin Lecher <jlec@gentoo.org> apbs-1.4.1.ebuild:
   Add missing requiered use
