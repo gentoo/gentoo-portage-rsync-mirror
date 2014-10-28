@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.13.2.ebuild,v 1.2 2014/10/28 03:57:33 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.13.2.1.ebuild,v 1.1 2014/10/28 03:49:33 mjo Exp $
 
 EAPI=5
 
-CABAL_FEATURES="bin lib profile haddock hscolour nocabaldep"
+CABAL_FEATURES="bin lib profile haddock hscolour nocabaldep test-suite"
 inherit eutils haskell-cabal pax-utils
 
 DESCRIPTION="A documentation-generation tool for Haskell libraries"
@@ -25,17 +25,22 @@ RDEPEND="dev-haskell/ghc-paths:=[profile?]
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.14"
 
-RESTRICT="test" # avoid depends on QC
-
 CABAL_EXTRA_BUILD_FLAGS+=" --ghc-options=-rtsopts"
 
 src_prepare() {
 	# we would like to avoid happy and alex depends
 	epatch "${FILESDIR}"/${PN}-2.13.1-drop-tools.patch
+	# pick pregenerated files
+	for f in Lex Parse; do
+		rm "src/Haddock/$f."* || die
+		mv "dist/build/haddock/haddock-tmp/Haddock/$f.hs" src/Haddock/ || die
+	done
+	rm -r "dist/build/"* || die
+
 	# Fix: Ticket #213 Haddock fails when advanced typesystem features are used
 	# epatch "${FILESDIR}"/${PN}-2.13.1-renameType.patch
-	if use doc && [ ! -e "${S}/html" ]; then
-		ln -s "${S}/resources/html" "${S}/html" || die "Could not create symbolic link ${S}/html"
+	if [[ ! -e "${S}/html" ]]; then
+		ln -s resources/html "${S}/html" || die "Could not create symbolic link ${S}/html"
 	fi
 }
 

@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.113 2014/08/11 10:20:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.115 2014/10/28 03:57:33 mjo Exp $
+
+  28 Oct 2014; Michael Orlitzky <mjo@gentoo.org> haddock-2.13.2.ebuild:
+  Update GHC dependency for haddock-2.13.2 as part of bug #511004.
+
+*haddock-2.13.2.1 (28 Oct 2014)
+
+  28 Oct 2014; Michael Orlitzky <mjo@gentoo.org> +haddock-2.13.2.1.ebuild:
+  Version bump for the 2.13 series as part of bug #511004
 
 *haddock-2.14.3.0.7.8.3 (11 Aug 2014)
 
