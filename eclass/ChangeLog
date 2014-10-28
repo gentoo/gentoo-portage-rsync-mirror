@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1394 2014/10/27 19:48:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1395 2014/10/28 16:45:38 kensington Exp $
+
+  28 Oct 2014; Michael Palimaka <kensington@gentoo.org> kde5-functions.eclass:
+  Fix handling of frameworks version dependencies within kde-frameworks.
 
   27 Oct 2014; Hans de Graaff <graaff@gentoo.org> ruby-ng-gnome2.eclass:
   Enable verbose compilation output for the ruby gnome packages.

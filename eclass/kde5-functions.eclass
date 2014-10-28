@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde5-functions.eclass,v 1.1 2014/10/15 12:48:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde5-functions.eclass,v 1.2 2014/10/28 16:45:38 kensington Exp $
 
 # @ECLASS: kde5-functions.eclass
 # @MAINTAINER:
@@ -118,7 +118,7 @@ add_frameworks_dep() {
 	if [[ -n ${3} ]]; then
 		version=${3}
 	elif [[ ${CATEGORY} = kde-frameworks ]]; then
-		version=${PV}
+		version=$(get_version_component_range 1-2)
 	elif [[ ${CATEGORY} = kde-base ]]; then
 		case $(get_kde_version) in
 			5.1) version=5.3.0 ;;
