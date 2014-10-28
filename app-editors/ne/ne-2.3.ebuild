@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.3.ebuild,v 1.5 2012/08/21 06:00:49 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.3.ebuild,v 1.6 2014/10/28 22:43:09 jer Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="the nice editor, easy to use for the beginner and powerful for the wizard"
-HOMEPAGE="http://ne.dsi.unimi.it/"
-SRC_URI="http://ne.dsi.unimi.it/${P}.tar.gz"
+HOMEPAGE="http://ne.di.unimi.it/"
+SRC_URI="http://ne.di.unimi.it/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
