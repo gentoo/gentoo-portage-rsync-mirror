@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.309 2014/10/26 22:31:52 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.310 2014/10/28 17:27:35 williamh Exp $
+
+  28 Oct 2014; William Hubbs <williamh@gentoo.org> openrc-0.12.4.ebuild,
+  openrc-0.13.1.ebuild, openrc-0.13.2.ebuild, openrc-9999.ebuild:
+  repoman fix, convert dependency on baselayout to a blocker against older
+  versions.
 
 *openrc-0.13.2 (26 Oct 2014)
 

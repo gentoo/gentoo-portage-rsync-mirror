@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install
+DEPEND=>=dev-ml/findlib-1.0 pcre? ( >=dev-ml/pcre-ocaml-5:= ) >=dev-lang/ocaml-3.10.2:=[tk?,ocamlopt?] cryptokit? ( dev-ml/cryptokit:= ) gtk? ( >=dev-ml/lablgtk-2:= ) ssl? ( >=dev-ml/ocaml-ssl-0.4:= ) zip? ( dev-ml/camlzip:= ) >=dev-ml/findlib-1.0.4-r1
+DESCRIPTION=Modules for OCaml application-level Internet protocols
+EAPI=5
+HOMEPAGE=http://projects.camlcity.org/projects/ocamlnet.html
+IUSE=cryptokit gtk ssl tk httpd +ocamlopt +pcre zip
+KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
+LICENSE=ZLIB GPL-2+
+RDEPEND=>=dev-ml/findlib-1.0 pcre? ( >=dev-ml/pcre-ocaml-5:= ) >=dev-lang/ocaml-3.10.2:=[tk?,ocamlopt?] cryptokit? ( dev-ml/cryptokit:= ) gtk? ( >=dev-ml/lablgtk-2:= ) ssl? ( >=dev-ml/ocaml-ssl-0.4:= ) zip? ( dev-ml/camlzip:= )
+RESTRICT=installsources
+SLOT=0/3.7.7
+SRC_URI=http://download.camlcity.org/download/ocamlnet-3.7.7.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=8ab5d6e04773770d0d9f45105f84a381
