@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.8.ebuild,v 1.1 2014/10/27 16:40:14 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.8.ebuild,v 1.2 2014/10/28 13:43:14 ultrabug Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ inherit apache-module distutils-r1 eutils multilib pax-utils php-ext-source-r2 p
 
 DESCRIPTION="uWSGI server for Python web applications"
 HOMEPAGE="http://projects.unbit.it/uwsgi/"
-SRC_URI="http://projects.unbit.it/downloads/${MY_P}.tar.gz"
+SRC_URI="https://github.com/unbit/uwsgi/archive/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -137,7 +137,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/2.0.8-threaded-php.patch"
+		"${FILESDIR}/1.1.2-threaded-php.patch"
 
 	sed -i \
 		-e "s|'-O2', ||" \
