@@ -10,4 +10,4 @@ RDEPEND=dev-libs/expat dev-libs/glib:2 dev-libs/nspr dev-libs/nss >=dev-libs/ope
 SLOT=0
 SRC_URI=amd64? ( http://get.geo.opera.com/pub/opera-beta/25.0.1614.54/linux/opera-beta_25.0.1614.54_amd64.deb )
 _eclasses_=chromium	4a9f555199b35aa57f60b0e9b9627d2a	eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=b01e3ed7853e88f4295bf45b846ef428
+_md5_=0f5035eb953d4bf3b0a36cf12399cb56

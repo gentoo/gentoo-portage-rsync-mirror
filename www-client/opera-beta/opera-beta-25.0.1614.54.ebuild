@@ -1,11 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-beta/opera-beta-25.0.1614.54.ebuild,v 1.1 2014/10/15 14:42:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-beta/opera-beta-25.0.1614.54.ebuild,v 1.2 2014/10/28 16:07:53 jer Exp $
 
 EAPI=5
-CHROMIUM_LANGS="af ar az be bg bn ca cs da de el en_GB en_US es_LA es fi fr_CA
-	fr fy gd hi hr hu id it ja kk ko lt lv me mk ms nb nl nn pa pl pt_BR
-	pt_PT ro ru sk sr sv sw ta te th tl tr uk uz vi zh_CN zh_TW zu"
+CHROMIUM_LANGS="
+	af ar az be bg bn ca cs da de el en_GB en_US es_LA es fi fr_CA fr fy gd hi
+	hr hu id it ja kk ko lt lv me mk ms nb nl nn pa pl pt_BR pt_PT ro ru sk sr
+	sv sw ta te th tl tr uk uz vi zh_CN zh_TW zu
+"
 inherit chromium multilib unpacker
 
 DESCRIPTION="A fast and secure web browser"

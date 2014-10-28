@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/batrachians/batrachians-0.1.6.ebuild,v 1.3 2014/07/27 10:39:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/batrachians/batrachians-0.1.6.ebuild,v 1.4 2014/10/28 16:12:55 mr_bones_ Exp $
 
 EAPI=5
-inherit autotools gnome2-utils games
+inherit autotools eutils gnome2-utils games
 
 DESCRIPTION="A fly-eating frog video game"
 HOMEPAGE="http://perso.b2b2c.ca/sarrazip/dev/batrachians.html"
@@ -19,12 +19,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	sed -i \
-		-e "/^pkgsounddir/ s:sounds.*:\$(PACKAGE)/sounds:" \
-		-e "/^desktopentrydir/ s:=.*:=/usr/share/applications:" \
-		-e "/^pixmapdir/ s:=.*:=/usr/share/icons/hicolor/48x48/apps/:" \
-		src/Makefile.am \
-		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-makefile.patch
 	eautoreconf
 }
 

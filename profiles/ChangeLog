@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9497 2014/10/27 22:25:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9498 2014/10/28 16:05:45 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Oct 2014; Jeroen Roovers <jer@gentoo.org> desc/linguas.desc:
+  Add linguas_es_419. Keep it sorted.
 
   27 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask mail-filter/spamassassin-fuzzyocr for removal
