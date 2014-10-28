@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xscrabble
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/ChangeLog,v 1.13 2012/08/08 16:12:57 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/ChangeLog,v 1.14 2014/10/28 06:29:09 mr_bones_ Exp $
+
+  28 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> xscrabble-2.10-r1.ebuild:
+  EAPI=5
 
   08 Aug 2012; Julian Ospald <hasufell@gentoo.org> xscrabble-2.10-r1.ebuild,
   +files/xscrabble-2.10-build.patch, -files/xscrabble-2.10-ldflags.patch:

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10-r1.ebuild,v 1.10 2012/08/08 16:12:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10-r1.ebuild,v 1.11 2014/10/28 06:29:09 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils multilib games
 
 DESCRIPTION="An X11 clone of the well-known Scrabble"
