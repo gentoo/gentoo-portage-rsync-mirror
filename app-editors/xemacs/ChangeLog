@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.177 2014/10/21 16:49:26 matsl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.178 2014/10/28 18:54:41 matsl Exp $
+
+  28 Oct 2014; Mats Lidell <matsl@gentoo.org> xemacs-21.4.22-r4.ebuild,
+  xemacs-21.5.34-r2.ebuild:
+  Remove export on WANT_AUTOCONF to global scope. bug 527076
 
 *xemacs-21.4.22-r4 (20 Oct 2014)
 

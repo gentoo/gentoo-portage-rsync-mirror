@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.34-r2.ebuild,v 1.2 2014/04/03 22:17:32 matsl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.34-r2.ebuild,v 1.3 2014/10/28 18:54:41 matsl Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -8,7 +8,7 @@
 
 EAPI=4
 
-export WANT_AUTOCONF="2.5"
+WANT_AUTOCONF="2.5"
 inherit eutils flag-o-matic multilib
 
 DESCRIPTION="highly customizable open source text editor and application development system"
