@@ -1,5 +1,5 @@
---- pal-0.4.3/src/Makefile.defs
-+++ pal-0.4.3/src/Makefile.defs
+--- a/src/Makefile.defs
++++ b/src/Makefile.defs
 @@ -25,4 +25,4 @@
  
  CFLAGS   = ${OPT} 

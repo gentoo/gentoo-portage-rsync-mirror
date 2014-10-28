@@ -1,5 +1,5 @@
---- Makefile.defs~	2007-10-12 04:11:32 +0200
-+++ Makefile.defs	2007-10-12 04:11:59 +0200
+--- a/src/Makefile.defs
++++ b/src/Makefile.defs
 @@ -3,7 +3,7 @@
  
  # directory to install to. Depending on your distribution, you might
@@ -9,8 +9,8 @@
  CC      = gcc
  
  PAL_VERSION = 0.3.5_pre1
---- input.c~	2007-10-12 04:08:59 +0200
-+++ input.c	2007-10-12 04:17:45 +0200
+--- a/src/input.c
++++ b/src/input.c
 @@ -567,7 +567,7 @@
  	    }
  
@@ -29,8 +29,8 @@
  		pal_output_error(_("ERROR: Can't open file: " PREFIX "/share/pal/pal.conf\n"));
  		pal_output_error(_("ERROR: This indicates an improper installation.\n"));
  		return ht;
---- Makefile~	2007-10-12 04:23:38 +0200
-+++ Makefile	2007-10-12 04:24:23 +0200
+--- a/src/Makefile
++++ b/src/Makefile
 @@ -51,8 +51,8 @@
  	@echo " --- Installing global data --- "
  	@mkdir -p ${DESTDIR}${prefix}/share/pal;

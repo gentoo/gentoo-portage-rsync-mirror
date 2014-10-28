@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/pal
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.37 2012/11/21 13:25:13 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.38 2014/10/28 22:11:40 jer Exp $
+
+  28 Oct 2014; Jeroen Roovers <jer@gentoo.org> pal-0.4.3-r1.ebuild,
+  files/0.4.3-ldflags.patch, +files/pal-0.4.3-pkg_config.patch,
+  files/0.4.3-strip.patch, files/pal-0.4.3-prefix.patch:
+  Remove odd USE=unicode. Fix building against sys-libs/ncurses[tinfo] (bug
+  #483478).
 
   21 Nov 2012; Michael Palimaka <kensington@gentoo.org>
   -files/0.3.4-ldflags.patch, -files/0.3.4-strip.patch, -pal-0.4.3.ebuild:
