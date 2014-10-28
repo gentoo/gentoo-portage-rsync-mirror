@@ -1985,6 +1985,9 @@ dev-lua/luvit:bundled-libs - Use bundled versions of some libraries.
 dev-lua/luvit:system-libs - Use system version of dev-libs/yajl.
 dev-ml/cairo-ocaml:pango - Enable support for x11-libs/pango
 dev-ml/deriving-ocsigen:type-conv - Enable type-conv for the syntax extention.
+dev-ml/dose3:parmap - Adds multi-core CPU support via dev-ml/parmap.
+dev-ml/dose3:rpm4 - Adds support for handling rpm4 files.
+dev-ml/dose3:zip - Adds support for handling zip files.
 dev-ml/js_of_ocaml:deriving-ocsigen - Enable deriving-ocsigen for improving the type safety.
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/lablgtk:gnomecanvas - Enable libgnomecanvas bindings compilation.

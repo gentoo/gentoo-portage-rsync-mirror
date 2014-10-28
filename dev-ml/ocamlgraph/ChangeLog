@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/ocamlgraph
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ChangeLog,v 1.13 2013/08/19 13:46:39 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ChangeLog,v 1.14 2014/10/28 08:13:27 aballier Exp $
+
+*ocamlgraph-1.8.5 (28 Oct 2014)
+
+  28 Oct 2014; Alexis Ballier <aballier@gentoo.org> +ocamlgraph-1.8.5.ebuild,
+  +files/ocamlgraph-1.8.5-installfindlib.patch:
+  version bump
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> ocamlgraph-0.99b.ebuild:
   eapi5, define subslot and add := dep on ocaml
