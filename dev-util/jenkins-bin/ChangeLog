@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/jenkins-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/ChangeLog,v 1.8 2014/10/27 21:37:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/ChangeLog,v 1.9 2014/10/28 10:19:13 chainsaw Exp $
+
+  28 Oct 2014; Tony Vroon <chainsaw@gentoo.org> jenkins-bin-1.565.3-r1.ebuild,
+  jenkins-bin-1.586-r1.ebuild:
+  Relax JDK/JRE dependency as suggested by Tomas Mozes in bug #527184.
 
 *jenkins-bin-1.565.3-r1 (27 Oct 2014)
 *jenkins-bin-1.586-r1 (27 Oct 2014)
