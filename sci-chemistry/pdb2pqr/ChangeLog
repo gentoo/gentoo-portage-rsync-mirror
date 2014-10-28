@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/pdb2pqr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.42 2014/10/27 17:17:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.43 2014/10/28 09:00:32 jlec Exp $
+
+*pdb2pqr-1.9.0-r1 (28 Oct 2014)
+
+  28 Oct 2014; Justin Lecher <jlec@gentoo.org> +pdb2pqr-1.9.0-r1.ebuild,
+  +files/pdb2pka, +files/pdb2pqr-1.9.0-install-py.patch, +files/pdb2pqr:
+  Allow multi py ABI installations, clean installation
 
   27 Oct 2014; Justin Lecher <jlec@gentoo.org> pdb2pqr-1.9.0.ebuild:
   Add missing PYTHON_USEDEP
