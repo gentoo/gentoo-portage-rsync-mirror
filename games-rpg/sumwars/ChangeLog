@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/sumwars
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/ChangeLog,v 1.13 2014/05/12 15:24:03 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/ChangeLog,v 1.14 2014/10/28 19:26:16 jer Exp $
+
+  28 Oct 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix e-mail address.
 
 *sumwars-0.5.8 (12 May 2014)
 
