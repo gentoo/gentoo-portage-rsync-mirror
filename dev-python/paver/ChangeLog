@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.45 2014/10/11 09:38:10 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.46 2014/10/28 10:58:34 ago Exp $
+
+  28 Oct 2014; Agostino Sarubbo <ago@gentoo.org> paver-1.2.2.ebuild:
+  Stable for ia64, wrt bug #502788
 
   11 Oct 2014; Tobias Klausmann <klausman@gentoo.org> paver-1.2.2.ebuild:
   Stable on alpha, bug 502788
