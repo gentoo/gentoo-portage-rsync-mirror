@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.5.ebuild,v 1.4 2014/10/09 19:15:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.5.1.ebuild,v 1.1 2014/10/28 12:49:17 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
