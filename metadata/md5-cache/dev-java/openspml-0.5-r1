@@ -10,4 +10,4 @@ RDEPEND=>=dev-java/soap-2.3.1-r4:0 java-virtuals/javamail:0 >=virtual/jre-1.6 >=
 SLOT=0
 SRC_URI=http://www.openspml.org/Files/openspml_v0.5.zip
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-pkg-simple	d7cef87260947d4cce245c4f026377e2	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=261125d9fb81fe74546860b97b394ced
+_md5_=3d44821781459d6fa301ce47163a522c
