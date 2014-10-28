@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/rubyzip-1.1.3.ebuild,v 1.3 2014/10/28 18:08:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/rubyzip-1.1.6.ebuild,v 1.1 2014/10/28 18:10:09 graaff Exp $
 
 EAPI=5
 
