@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.12.1.ebuild,v 1.4 2014/07/23 15:38:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.12.1.ebuild,v 1.5 2014/10/28 19:42:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -46,13 +46,14 @@ RDEPEND="${COMMON_DEPEND}
 	!www-client/epiphany-extensions
 "
 # paxctl needed for bug #407085
-# eautoreconf requires gnome-common-3.5.5
+# eautoreconf requires gnome-common and yelp-tools
 DEPEND="${COMMON_DEPEND}
 	gnome-base/gnome-common
 	>=dev-util/intltool-0.50
 	sys-apps/paxctl
 	sys-devel/gettext
 	virtual/pkgconfig
+	app-text/yelp-tools
 "
 
 # Tests refuse to run with the gsettings trick for some reason

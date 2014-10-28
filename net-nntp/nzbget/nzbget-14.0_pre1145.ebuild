@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-14.0_pre1145.ebuild,v 1.1 2014/10/18 04:33:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-14.0_pre1145.ebuild,v 1.2 2014/10/28 19:36:21 jer Exp $
 
 EAPI=5
 
-inherit autotools user eutils
+inherit autotools eutils user
 
 MY_P=${P/_pre/-testing-r}
 
@@ -36,6 +36,8 @@ DOCS=( AUTHORS ChangeLog README nzbget.conf )
 S=${WORKDIR}/${P/_pre*/-testing}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-tinfo.patch
+
 	sed -i 's:^ScriptDir=.*:ScriptDir=/usr/share/nzbget/ppscripts:' nzbget.conf || die
 
 	sed \

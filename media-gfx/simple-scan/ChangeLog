@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/simple-scan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.44 2014/07/30 04:05:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.45 2014/10/28 19:37:56 pacho Exp $
+
+*simple-scan-3.12.2 (28 Oct 2014)
+
+  28 Oct 2014; Pacho Ramos <pacho@gentoo.org> +simple-scan-3.12.2.ebuild,
+  -simple-scan-3.10.2.ebuild:
+  Version bump, drop old
 
   30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
   -simple-scan-3.12.0.ebuild, -simple-scan-3.12.1.ebuild:

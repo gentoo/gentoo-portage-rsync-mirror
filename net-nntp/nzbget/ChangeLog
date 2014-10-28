@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.90 2014/10/18 04:33:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.91 2014/10/28 19:36:21 jer Exp $
+
+  28 Oct 2014; Jeroen Roovers <jer@gentoo.org>
+  +files/nzbget-14.0_pre1145-tinfo.patch, nzbget-14.0_pre1145.ebuild:
+  Fix building against sys-libs/ncurses[tinfo] (bug #527262).
 
 *nzbget-14.0_pre1145 (18 Oct 2014)
 
