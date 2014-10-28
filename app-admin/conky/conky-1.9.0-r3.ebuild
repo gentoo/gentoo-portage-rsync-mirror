@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0-r3.ebuild,v 1.10 2014/03/24 15:12:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0-r3.ebuild,v 1.11 2014/10/28 20:54:26 jer Exp $
 
 EAPI=5
 
@@ -59,17 +59,20 @@ DEPEND="
 	"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.8.1-utf8-scroll.patch" \
+	epatch \
+		"${FILESDIR}/${PN}-1.8.1-utf8-scroll.patch" \
 		"${FILESDIR}/${P}-ncurses.patch" \
 		"${FILESDIR}/${P}-lines-fix.patch" \
 		"${FILESDIR}/${P}-update-when-message-count-decreases.patch" \
 		"${FILESDIR}/${P}-apcupsd.patch" \
 		"${FILESDIR}/${P}-default-graph-size.patch" \
-		"${FILESDIR}/${P}-diskio-dmmajor.patch"
+		"${FILESDIR}/${P}-diskio-dmmajor.patch" \
+		"${FILESDIR}/${P}-tinfo.patch"
 
 	# Allow user patches #478482
-	# Only run autotools if user patched something
-	epatch_user && eautoreconf || elibtoolize
+	epatch_user
+
+	eautoreconf
 }
 
 src_configure() {

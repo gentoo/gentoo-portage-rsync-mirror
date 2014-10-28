@@ -10,4 +10,4 @@ RDEPEND=X? ( imlib? ( media-libs/imlib2[X] ) lua-cairo? ( >=dev-lua/toluapp-1.0.
 SLOT=0
 SRC_URI=mirror://sourceforge/conky/conky-1.9.0.tar.bz2
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=3f1759d879e5bee60ec7033400ebbdcc
+_md5_=0fc4867fdee57163d34974f67274eb4b
