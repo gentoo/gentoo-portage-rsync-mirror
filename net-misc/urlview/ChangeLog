@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/urlview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.23 2012/04/05 18:21:59 nimiux Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.24 2014/10/28 00:04:35 jer Exp $
+
+  28 Oct 2014; Jeroen Roovers <jer@gentoo.org> urlview-0.9.ebuild,
+  files/urlview-0.9-DESTDIR.patch, +files/urlview-0.9-tinfo.patch,
+  files/include-fix.patch, files/no-trailing-newline.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #526332).
 
   05 Apr 2012; Chema Alonso <nimiux@gentoo.org> metadata.xml:
   Added myself as maintainer
