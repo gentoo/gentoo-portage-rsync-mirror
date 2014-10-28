@@ -10,4 +10,4 @@ RDEPEND=>=dev-lisp/asdf-2.33-r3 virtual/libiconv >=dev-libs/libsigsegv-2.4 >=dev
 SLOT=2/2.49
 SRC_URI=mirror://sourceforge/clisp/clisp-2.49.tar.bz2
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=07b45f35725a2f7f6b4c5dc637a465e0
+_md5_=551e6ade4c8138a338748b728d124856
