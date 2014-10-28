@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.18 2014/10/28 01:01:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.3.ebuild,v 1.1 2014/10/28 01:01:00 vapier Exp $
 
 EAPI="4"
 
@@ -25,8 +25,9 @@ SLOT="2"
 IUSE="static-libs test vanilla"
 
 RDEPEND="sys-devel/gnuconfig
-	>=sys-devel/autoconf-2.65
-	>=sys-devel/automake-1.11.1
+	!<sys-devel/autoconf-2.62:2.5
+	!<sys-devel/automake-1.11.1:1.11
+	!=sys-devel/libtool-2*:1.5
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140406-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
