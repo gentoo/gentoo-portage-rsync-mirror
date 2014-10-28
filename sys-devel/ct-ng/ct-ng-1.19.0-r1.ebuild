@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.16.0.ebuild,v 1.2 2012/11/14 23:02:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.19.0-r1.ebuild,v 1.1 2014/10/28 11:29:22 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit autotools bash-completion-r1 eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://ymorin.is-a-geek.org/download/crosstool-ng/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bash-completion doc"
+IUSE="doc"
 
 RDEPEND="net-misc/curl
 	dev-util/gperf
@@ -30,9 +30,13 @@ src_prepare() {
 	eautoconf -Wall --force
 }
 
+src_configure () {
+	econf --with-install="/usr/bin/install"
+}
+
 src_install() {
 	emake DESTDIR="${D%/}" install
-	dobashcomp ${PN}.comp
+	newbashcomp ${PN}.comp ${PN}
 	dodoc README TODO
 	use doc && mv "${D}"/usr/share/doc/crosstool-ng/"${PN}.${PVR}"/* \
 		"${D}"/usr/share/doc/"${PF}"

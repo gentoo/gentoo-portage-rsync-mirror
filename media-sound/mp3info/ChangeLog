@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3info
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.27 2011/03/12 09:59:28 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.28 2014/10/28 11:28:20 jer Exp $
+
+  28 Oct 2014; Jeroen Roovers <jer@gentoo.org> mp3info-0.8.5a.ebuild,
+  files/mp3info-0.8.5a-ldflags.patch, +files/mp3info-0.8.5a-tinfo.patch:
+  EAPI bump. Fix building against sys-libs/ncurses[tinfo] (bug #464336).
 
   12 Mar 2011; Tim Harder <radhermit@gentoo.org> mp3info-0.8.5a.ebuild:
   Update to EAPI 2, use slot dep for gtk+, add explicit DEPEND, and use default

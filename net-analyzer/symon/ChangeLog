@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/symon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.16 2014/07/30 14:49:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.17 2014/10/28 11:09:21 jer Exp $
+
+*symon-2.87 (28 Oct 2014)
+
+  28 Oct 2014; Jeroen Roovers <jer@gentoo.org> +symon-2.87.ebuild:
+  Version bump.
 
   30 Jul 2014; Jeroen Roovers <jer@gentoo.org> symon-2.86-r1.ebuild,
   +files/symon-2.86-perl-5.18.patch:

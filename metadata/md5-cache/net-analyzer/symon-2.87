@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test unpack
+DEPEND=perl? ( dev-lang/perl ) symux? ( net-analyzer/rrdtool ) virtual/pmake dev-lang/perl:=[-build(-)]
+DESCRIPTION=Performance and information monitoring tool
+EAPI=5
+HOMEPAGE=http://www.xs4all.nl/~wpd/symon/
+IUSE=perl +symon symux
+KEYWORDS=~amd64 ~sparc ~x86
+LICENSE=BSD-2
+RDEPEND=perl? ( dev-lang/perl ) symux? ( net-analyzer/rrdtool ) dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=http://www.xs4all.nl/~wpd/symon/philes/symon-2.87.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	e22596c870f09911db9a237ca79ee872	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=c63c846e333e88dda83f0365c9d469db

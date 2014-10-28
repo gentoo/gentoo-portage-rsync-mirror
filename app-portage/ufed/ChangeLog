@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/ufed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.104 2014/10/19 14:44:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.105 2014/10/28 11:02:14 ago Exp $
+
+  28 Oct 2014; Agostino Sarubbo <ago@gentoo.org> ufed-0.91.ebuild:
+  Stable for ia64, wrt bug #524670
 
   19 Oct 2014; Anthony G. Basile <blueness@gentoo.org> ufed-0.91.ebuild:
   Stable on arm, ppc and ppc64.  Bug #524670

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.19.0.ebuild,v 1.2 2014/08/28 16:47:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.20.0-r1.ebuild,v 1.1 2014/10/28 11:29:22 blueness Exp $
 
 EAPI="5"
 
@@ -28,6 +28,10 @@ src_prepare() {
 	#Upstream provides ${S}/bootstrap which runs autoconf -Wall --force
 	#We'll use eautoconf to be portage friendly
 	eautoconf -Wall --force
+}
+
+src_configure () {
+	econf --with-install="/usr/bin/install"
 }
 
 src_install() {

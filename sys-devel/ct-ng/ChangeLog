@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/ct-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.49 2014/09/09 09:27:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.50 2014/10/28 11:29:22 blueness Exp $
+
+*ct-ng-1.19.0-r1 (28 Oct 2014)
+*ct-ng-1.20.0-r1 (28 Oct 2014)
+
+  28 Oct 2014; Anthony G. Basile <blueness@gentoo.org> +ct-ng-1.19.0-r1.ebuild,
+  +ct-ng-1.20.0-r1.ebuild, -ct-ng-1.16.0.ebuild, -ct-ng-1.17.0.ebuild,
+  -ct-ng-1.18.0.ebuild, -ct-ng-1.19.0.ebuild, -ct-ng-1.20.0.ebuild,
+  -files/ct-ng-1.18.0-parallel-fix.patch:
+  Remove older versions.  Fix bug #501678.
 
 *ct-ng-1.20.0 (09 Sep 2014)
 
