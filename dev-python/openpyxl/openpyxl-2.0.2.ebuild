@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/openpyxl/openpyxl-2.0.2.ebuild,v 1.1 2014/06/26 11:40:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/openpyxl/openpyxl-2.0.2.ebuild,v 1.2 2014/10/28 07:49:09 aballier Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://bitbucket.org/ericgazoni/openpyxl/get/${PV}.tar.bz2 -> ${P}.tar
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 RDEPEND="dev-python/jdcal[${PYTHON_USEDEP}]"

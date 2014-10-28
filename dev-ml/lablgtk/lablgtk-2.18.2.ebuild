@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.18.0.ebuild,v 1.2 2014/01/16 00:02:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.18.2.ebuild,v 1.1 2014/10/28 07:37:49 aballier Exp $
 
 EAPI=5
 
 inherit multilib findlib
 
-IUSE="debug examples glade gnome gnomecanvas sourceview +ocamlopt opengl spell svg"
+IUSE="debug examples glade gnomecanvas sourceview +ocamlopt opengl spell svg"
 
 DESCRIPTION="Objective CAML interface for Gtk+2"
 HOMEPAGE="http://lablgtk.forge.ocamlcore.org/"
-SRC_URI="https://forge.ocamlcore.org/frs/download.php/1261/${P}.tar.gz"
+SRC_URI="https://forge.ocamlcore.org/frs/download.php/1456/${P}.tar.gz"
 LICENSE="LGPL-2.1-with-linking-exception examples? ( lablgtk-examples )"
 
 RDEPEND=">=x11-libs/gtk+-2.10:2
@@ -18,11 +18,6 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 	svg? ( >=gnome-base/librsvg-2.2:2 )
 	glade? ( >=gnome-base/libglade-2.0.1 )
 	gnomecanvas? ( >=gnome-base/libgnomecanvas-2.2 )
-	gnome? (
-		|| ( >=gnome-base/gnome-panel-2.32[bonobo] <gnome-base/gnome-panel-2.32 )
-		>=gnome-base/gnome-panel-2.4.0
-		>=gnome-base/libgnomeui-2.4.0
-		)
 	opengl? ( >=dev-ml/lablgl-0.98:=
 		>=x11-libs/gtkglarea-1.9:2 )
 	spell? ( app-text/gtkspell:2 )
@@ -32,14 +27,14 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 SLOT="2/${PV}"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-fbsd ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 src_configure() {
 	econf $(use_enable debug) \
 		$(use_with svg rsvg) \
 		$(use_with glade) \
-		$(use_with gnome gnomeui) \
-		$(use_with gnome panel) \
+		--without-gnomeui \
+		--without-panel \
 		$(use_with opengl gl) \
 		$(use_with spell gtkspell) \
 		--without-gtksourceview \
@@ -64,7 +59,6 @@ install_examples() {
 	use glade && insinto /usr/share/doc/${PF}/examples/glade && doins examples/glade/*.ml examples/glade/*.glade*
 	use sourceview && insinto /usr/share/doc/${PF}/examples/sourceview && doins examples/sourceview/*.ml examples/sourceview/*.lang
 	use opengl && insinto /usr/share/doc/${PF}/examples/GL && doins examples/GL/*.ml
-	use gnome && insinto /usr/share/doc/${PF}/examples/panel && doins examples/panel/*
 
 	docompress -x /usr/share/doc/${PF}/examples
 }
