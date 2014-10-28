@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.567 2014/10/28 08:56:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.568 2014/10/28 11:50:30 jer Exp $
+
+  28 Oct 2014; Jeroen Roovers <jer@gentoo.org> imagemagick-6.8.9.9.ebuild:
+  Stable for HPPA (bug #527028).
 
   28 Oct 2014; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.8.9.9.ebuild:
   Stable for x86, wrt bug #527028
