@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/blaze
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/ChangeLog,v 1.6 2014/09/02 04:13:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/ChangeLog,v 1.7 2014/10/29 08:44:59 idella4 Exp $
+
+*blaze-0.6.5 (29 Oct 2014)
+
+  29 Oct 2014; Ian Delaney <idella4@gentoo.org> +blaze-0.6.5.ebuild,
+  blaze-0.6.0.ebuild:
+  bump; update deps, currently doc build also fails and my need purging, tidy
+  test & install phase, pmasked until dynd-python and the libs are bumped to
+  0.6.5 and a plan decided for the doc build
 
 *blaze-0.6.0 (02 Sep 2014)
 
