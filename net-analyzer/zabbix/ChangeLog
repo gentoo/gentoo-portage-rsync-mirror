@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.171 2014/10/29 22:06:50 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.172 2014/10/29 22:38:38 mattm Exp $
+
+*zabbix-2.4.1 (29 Oct 2014)
+
+  29 Oct 2014; Matthew Marlowe <mattm@gentoo.org>
+  +files/2.4/init.d/zabbix-agentd, +files/2.4/init.d/zabbix-proxy,
+  +files/2.4/init.d/zabbix-server, +files/2.4/patches/zbx7479.patch,
+  +files/2.4/patches/zbx8151.patch, +files/2.4/zabbix_agent.conf,
+  +files/2.4/zabbix_agentd.conf, +files/2.4/zabbix_proxy.conf,
+  +files/2.4/zabbix_server.conf, +zabbix-2.4.1.ebuild:
+  Major version bump 2.4.1, totally experimental, has not been tested.  Package
+  masked.  Do not install unless you are using a non-production system and can
+  contribute to improving gentoo support for 2.4 and comment on bug 524010.
 
 *zabbix-2.2.7 (29 Oct 2014)
 
