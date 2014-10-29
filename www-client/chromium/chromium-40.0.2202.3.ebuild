@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-40.0.2188.2.ebuild,v 1.1 2014/10/17 06:57:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-40.0.2202.3.ebuild,v 1.1 2014/10/29 20:22:51 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -20,6 +20,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="bindist cups gnome gnome-keyring kerberos neon pic pulseaudio selinux +tcmalloc"
+RESTRICT="!bindist? ( bindist )"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -251,12 +252,12 @@ src_prepare() {
 		'third_party/tcmalloc' \
 		'third_party/tlslite' \
 		'third_party/trace-viewer' \
+		'third_party/trace-viewer/third_party/components/polymer' \
+		'third_party/trace-viewer/third_party/d3' \
+		'third_party/trace-viewer/third_party/gl-matrix' \
 		'third_party/trace-viewer/third_party/jszip' \
 		'third_party/trace-viewer/third_party/tvcm' \
 		'third_party/trace-viewer/third_party/tvcm/third_party/beautifulsoup/polymer_soup.py' \
-		'third_party/trace-viewer/third_party/tvcm/third_party/d3' \
-		'third_party/trace-viewer/third_party/tvcm/third_party/gl-matrix' \
-		'third_party/trace-viewer/third_party/tvcm/third_party/polymer' \
 		'third_party/undoview' \
 		'third_party/usrsctp' \
 		'third_party/webdriver' \

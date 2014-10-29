@@ -1,6 +1,9 @@
 # ChangeLog for games-board/cgoban2
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/ChangeLog,v 1.29 2007/03/13 22:49:46 nyhm Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/ChangeLog,v 1.30 2014/10/29 20:16:04 mr_bones_ Exp $
+
+  29 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> cgoban2-2.6.12.ebuild:
+  EAPI=5
 
   13 Mar 2007; Tristan Heaven <nyhm@gentoo.org> cgoban2-2.6.12.ebuild:
   HOMEPAGE update
@@ -130,4 +133,3 @@
 
   10 Jul 2003; Michael Sterrett <msterret@gentoo.org> cgoban2-2.4.61.ebuild:
   initial commit.  ebuild based on one provided by TGL (bug 15840)
-
