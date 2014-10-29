@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.3.12.ebuild,v 1.2 2014/08/10 19:56:44 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.3.12.ebuild,v 1.3 2014/10/29 11:56:05 ago Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.bz2"
 
 LICENSE="MIT 9wm"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 
 RDEPEND="
 	dev-libs/glib:2

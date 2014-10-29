@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/qt4-fsarchiver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/qt4-fsarchiver/ChangeLog,v 1.4 2014/10/12 12:58:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/qt4-fsarchiver/ChangeLog,v 1.5 2014/10/29 11:56:10 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> qt4-fsarchiver-0.6.19.6.ebuild:
+  Stable for amd64, wrt bug #525142
 
 *qt4-fsarchiver-0.6.19.7 (12 Oct 2014)
 

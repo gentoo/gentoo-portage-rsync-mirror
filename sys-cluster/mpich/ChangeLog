@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpich
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/ChangeLog,v 1.43 2014/10/16 15:37:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/ChangeLog,v 1.44 2014/10/29 11:56:15 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> mpich-3.0.4.ebuild:
+  Stable for amd64, wrt bug #525532
 
   16 Oct 2014; Jeroen Roovers <jer@gentoo.org> mpich-3.0.4.ebuild:
   Stable for HPPA (bug #525532).
@@ -15,4 +18,3 @@
   09 Jul 2013; Justin Bronder <jsbronder@gentoo.org> +mpich-3.0.4.ebuild,
   +metadata.xml:
   version bump and upstream package rename from mpich2
-
