@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>robbat2@gentoo.org</email>
-	</maintainer>
-	<longdescription lang="en">
+  <maintainer>
+    <email>robbat2@gentoo.org</email>
+  </maintainer>
+  <longdescription lang="en">
 		From the zsync web page:
 
 		"zsync is a file transfer program. It allows you to download a file from a 
@@ -22,5 +22,4 @@
 		anyone can download the file, make a .zsync and provide it to other users (this 
 		is what I am doing for the moment)."
 	</longdescription>
-
 </pkgmetadata>
