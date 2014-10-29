@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.12-r1.ebuild,v 1.8 2013/01/11 02:06:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.12-r1.ebuild,v 1.9 2014/10/28 23:24:31 jer Exp $
 
-EAPI=3
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Snownews, a text-mode RSS/RDF newsreader"
@@ -14,36 +14,48 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="unicode"
 
-DEPEND=">=dev-libs/libxml2-2.5.6
+COMMON_DEPEND="
+	>=dev-libs/libxml2-2.5.6
 	>=sys-libs/ncurses-5.3[unicode?]
-	dev-libs/openssl"
-
-RDEPEND="${DEPEND}
+	dev-libs/openssl
+"
+RDEPEND="
+	${COMMON_DEPEND}
 	dev-perl/XML-LibXML
-	dev-perl/libwww-perl"
+	dev-perl/libwww-perl
+"
+
+DEPEND="
+	${COMMON_DEPEND}
+	virtual/pkgconfig
+"
 
 src_prepare() {
-	use unicode && sed -i -e "s/-lncurses/-lncursesw/" \
-		configure
-
-	sed -i -e "s/-O2//" \
-		configure
-
-	sed -i -e 's/$(INSTALL) -s/$(INSTALL)/' \
-		Makefile
+	sed -i -e "s|-O2||g" configure || die
+	sed -i -e 's|$(INSTALL) -s|$(INSTALL)|g' Makefile || die
 }
 
 src_configure() {
-	local conf="--prefix=${EPREFIX}/usr"
-	./configure ${conf} || die "configure failed"
+	tc-export PKG_CONFIG
+	if use unicode; then
+		sed -i -e 's|-lncurses|`\\$(PKG_CONFIG) --libs ncursesw`|' configure || die
+	else
+		sed -i -e 's|-lncurses|`\\$(PKG_CONFIG) --libs ncurses`|' configure || die
+	fi
+
+	# perl script, not autotools based
+	./configure --prefix="${EPREFIX}/usr" || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" EXTRA_CFLAGS="${CFLAGS}" EXTRA_LDFLAGS="${LDFLAGS}" || die "emake failed"
+	emake \
+		CC="$(tc-getCC)" \
+		EXTRA_CFLAGS="${CFLAGS}" \
+		EXTRA_LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	emake PREFIX="${ED}/usr" install || die "make install failed"
+	emake PREFIX="${ED}/usr" install
 
 	dodoc AUTHOR Changelog CREDITS README README.de README.patching
 }

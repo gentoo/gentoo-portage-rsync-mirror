@@ -1,6 +1,9 @@
 # ChangeLog for net-news/snownews
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.39 2013/06/01 12:24:26 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.40 2014/10/28 23:24:31 jer Exp $
+
+  28 Oct 2014; Jeroen Roovers <jer@gentoo.org> snownews-1.5.12-r1.ebuild:
+  Fix building against sys-libs/ncurses[tinfo] (bug #526264).
 
   01 Jun 2013; Pacho Ramos <pacho@gentoo.org> -snownews-1.5.10.ebuild,
   metadata.xml:
