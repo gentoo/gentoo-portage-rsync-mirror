@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.188 2014/10/29 12:02:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.189 2014/10/29 16:36:51 klausman Exp $
+
+  29 Oct 2014; Tobias Klausmann <klausman@gentoo.org> wget-1.16.ebuild:
+  Stable on alpha, bug 527056
 
   29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> wget-1.16.ebuild:
   Stable for sparc, wrt bug #527056

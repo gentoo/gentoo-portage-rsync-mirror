@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/uhd-3.7.1.ebuild,v 1.1 2014/04/25 12:50:37 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/uhd-3.8.0.ebuild,v 1.1 2014/10/29 16:54:24 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -11,9 +11,9 @@ HOMEPAGE="http://code.ettus.com/redmine/ettus/projects/uhd/wiki"
 
 image_version=uhd-images_00$(get_version_component_range 1).00$(get_version_component_range 2).00$(get_version_component_range 3)-release
 SRC_URI="https://github.com/EttusResearch/uhd/archive/release_00$(get_version_component_range 1)_00$(get_version_component_range 2)_00$(get_version_component_range 3).tar.gz -> EttusResearch-UHD-$(get_version_component_range 1).$(get_version_component_range 2).$(get_version_component_range 3).tar.gz \
-	http://files.ettus.com/binaries/maint_images/archive/${image_version}.tar.gz"
+	http://files.ettus.com/binaries/images/${image_version}.tar.gz"
 #https://github.com/EttusResearch/UHD-Mirror/tags
-#http://files.ettus.com/binaries/master_images/archive
+#http://files.ettus.com/binaries/images/
 KEYWORDS="~amd64 ~arm ~x86"
 S="${WORKDIR}"/uhd-release_00$(get_version_component_range 1)_00$(get_version_component_range 2)_00$(get_version_component_range 3)/host
 
@@ -21,13 +21,16 @@ LICENSE="GPL-3"
 SLOT="0/1"
 IUSE=""
 RDEPEND="virtual/libusb:1
-	dev-libs/boost:="
+	dev-lang/orc
+	dev-libs/boost:=
+	sys-libs/ncurses
+	"
 DEPEND="${RDEPEND}
 	dev-python/cheetah"
 
 src_prepare() {
 	#this may not be needed in 3.4.3 and above, please verify
-	sed -i 's#SET(PKG_LIB_DIR ${PKG_DATA_DIR})#SET(PKG_LIB_DIR ${LIBRARY_DIR}/uhd)#g' CMakeLists.txt
+	sed -i 's#SET(PKG_LIB_DIR ${PKG_DATA_DIR})#SET(PKG_LIB_DIR ${LIBRARY_DIR}/uhd)#g' CMakeLists.txt || die
 }
 
 src_install() {

@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/uhd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/ChangeLog,v 1.13 2014/08/22 16:42:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/ChangeLog,v 1.14 2014/10/29 16:54:24 zerochaos Exp $
+
+*uhd-3.8.0 (29 Oct 2014)
+
+  29 Oct 2014; Rick Farina <zerochaos@gentoo.org> +uhd-3.8.0.ebuild,
+  -uhd-3.7.1.ebuild:
+  version bump and new deps per depcheck
 
 *uhd-3.7.2 (22 Aug 2014)
 
