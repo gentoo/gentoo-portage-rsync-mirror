@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/ocaml-gettext
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-gettext/ChangeLog,v 1.4 2013/08/24 13:19:29 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-gettext/ChangeLog,v 1.5 2014/10/29 14:26:39 aballier Exp $
+
+*ocaml-gettext-0.3.5 (29 Oct 2014)
+
+  29 Oct 2014; Alexis Ballier <aballier@gentoo.org>
+  +ocaml-gettext-0.3.5.ebuild:
+  version bump
 
   24 Aug 2013; Markus Meier <maekke@gentoo.org> ocaml-gettext-0.3.4.ebuild:
   add ~x86, bug #462360
