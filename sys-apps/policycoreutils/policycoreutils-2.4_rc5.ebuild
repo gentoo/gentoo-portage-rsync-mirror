@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.4_rc4.ebuild,v 1.1 2014/10/07 19:04:20 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.4_rc5.ebuild,v 1.1 2014/10/29 17:33:11 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -34,7 +34,7 @@ COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}[python]
 	sys-libs/libcap-ng
 	>=sys-libs/libsepol-${SEPOL_VER}
 	sys-devel/gettext
-	dev-python/ipy
+	dev-python/ipy[${PYTHON_USEDEP}]
 	dbus? (
 		sys-apps/dbus
 		dev-libs/dbus-glib
@@ -150,4 +150,21 @@ src_install() {
 
 	dodir /usr/share/doc/${PF}/mcstrans/examples
 	cp -dR "${S1}"/mcstrans/share/examples/* "${D}/usr/share/doc/${PF}/mcstrans/examples"
+}
+
+pkg_postinst() {
+	# The selinux_gentoo init script is no longer needed with recent OpenRC
+	elog "The selinux_gentoo init script will be removed in future versions when OpenRC 0.13.x is stabilized."
+
+	# Migrate the SELinux semanage configuration store if not done already
+	local selinuxtype=$(awk -F'=' '/SELINUXTYPE=/ {print $2}' /etc/selinux/config);
+	if [ -n "${selinuxtype}" ] && [ ! -d /var/lib/selinux/${mcs}/active ] ; then
+		ewarn "Since the 2.4 SELinux userspace, the policy module store is moved"
+		ewarn "from /etc/selinux to /var/lib/selinux. In order to continue with"
+		ewarn "the 2.4 userspace, please migrate the necessary files by executing"
+		ewarn "/usr/libexec/selinux/semanage_migrate_store. Warnings about 'else'"
+		ewarn "blocks can be safely ignored."
+		ewarn "For more information, please see"
+		ewarn "- https://github.com/SELinuxProject/selinux/wiki/Policy-Store-Migration"
+	fi
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.94 2014/08/05 16:00:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.95 2014/10/29 17:53:28 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> libxml-2.7.0-r1.ebuild:
+  Stable for ppc, wrt bug #489854
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> libxml-2.4.0.ebuild,
   libxml-2.7.0-r1.ebuild, libxml-2.7.0-r2.ebuild:
