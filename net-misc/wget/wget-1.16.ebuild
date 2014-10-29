@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.16.ebuild,v 1.6 2014/10/29 16:36:51 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.16.ebuild,v 1.7 2014/10/29 19:57:54 vapier Exp $
 
 EAPI="4"
 
@@ -38,6 +38,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.16-pkg-config.patch
 	epatch "${FILESDIR}"/${PN}-1.16-openssl-header.patch
 	epatch "${FILESDIR}"/${PN}-1.16-tests-skip.patch
+	epatch "${FILESDIR}"/${P}-openssl-no-ssl3.patch
+	epatch "${FILESDIR}"/${P}-fix-proxy-test-race.patch
 	eautoreconf
 }
 

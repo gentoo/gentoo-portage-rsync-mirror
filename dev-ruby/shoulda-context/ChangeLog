@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shoulda-context
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/ChangeLog,v 1.9 2014/10/10 22:47:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/ChangeLog,v 1.10 2014/10/29 19:34:27 mrueg Exp $
+
+  29 Oct 2014; Manuel Rüger <mrueg@gentoo.org> shoulda-context-1.1.6.ebuild:
+  Drop jruby target.
 
   10 Oct 2014; Manuel Rüger <mrueg@gentoo.org> shoulda-context-1.1.6.ebuild:
   Whitespace
