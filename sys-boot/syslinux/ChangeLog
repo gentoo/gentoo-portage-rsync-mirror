@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.113 2014/10/14 12:10:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.114 2014/10/29 10:34:01 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> syslinux-5.10.ebuild:
+  Stable for amd64, wrt bug #523812
 
   14 Oct 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/syslinux-6.03_pre1-add-fno-stack-protector.patch,

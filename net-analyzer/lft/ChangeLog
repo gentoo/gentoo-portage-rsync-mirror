@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.49 2014/09/17 23:54:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.50 2014/10/29 10:34:27 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> lft-3.73.ebuild:
+  Stable for amd64, wrt bug #526678
 
 *lft-3.73 (17 Sep 2014)
 

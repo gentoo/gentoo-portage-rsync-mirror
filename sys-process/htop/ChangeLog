@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.144 2014/10/20 09:46:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.145 2014/10/29 10:34:48 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> htop-1.0.3.ebuild:
+  Stable for amd64, wrt bug #525450
 
   20 Oct 2014; Jeroen Roovers <jer@gentoo.org> htop-1.0.3.ebuild:
   Stable for HPPA (bug #525450).
