@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.11-r1.ebuild,v 1.1 2014/10/13 18:06:06 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.11-r3.ebuild,v 1.1 2014/10/29 00:20:07 chutzpah Exp $
 
 EAPI=5
 
@@ -34,6 +34,7 @@ REQUIRED_USE="graph? ( doc ) json-c? ( !jansson )"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-zsh-completion-dir.patch
+	"${FILESDIR}"/${P}-bash-completion-dir.patch
 )
 
 pkg_setup() {
