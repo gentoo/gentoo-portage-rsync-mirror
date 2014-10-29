@@ -1,12 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>ottxor@gentoo.org</email>
-		<name>Christoph Junghans</name>
-	</maintainer>
-	<longdescription>IBM ThinkPad Harddrive Active Protection disk head parking	daemon</longdescription>
-	<upstream>
-		<remote-id type="sourceforge">hdapsd</remote-id>
-	</upstream>
+  <maintainer>
+    <email>ottxor@gentoo.org</email>
+    <name>Christoph Junghans</name>
+  </maintainer>
+
+  <maintainer>
+    <email>mjo@gentoo.org</email>
+    <name>Michael Orlitzky</name>
+  </maintainer>
+
+  <use>
+    <flag name='libconfig'>
+      Require <pkg>dev-libs/libconfig</pkg> to allow the daemon to
+      read a configuration file at startup
+    </flag>
+  </use>
 </pkgmetadata>

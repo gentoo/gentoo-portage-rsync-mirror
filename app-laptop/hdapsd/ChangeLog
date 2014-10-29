@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/hdapsd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.28 2013/06/26 14:09:22 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.29 2014/10/29 02:12:52 mjo Exp $
+
+*hdapsd-20141024 (29 Oct 2014)
+
+  29 Oct 2014; Michael Orlitzky <mjo@gentoo.org> +files/hdapsd.conf-20141024,
+  +files/hdapsd.init-20141024, +hdapsd-20141024.ebuild, metadata.xml:
+  Add myself as co-maintainer and version bump.
 
   26 Jun 2013; Christoph Junghans <ottxor@gentoo.org> -files/hdapsd.conf,
   -files/hdapsd.init, -hdapsd-20090401.ebuild, files/hdapsd.init.3:

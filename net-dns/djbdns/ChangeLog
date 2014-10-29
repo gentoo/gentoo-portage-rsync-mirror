@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.156 2014/10/02 22:22:16 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.157 2014/10/29 02:06:06 mjo Exp $
+
+  29 Oct 2014; Michael Orlitzky <mjo@gentoo.org> djbdns-1.05-r30.ebuild:
+  Remove old upgrade wording from README.gentoo.
 
 *djbdns-1.05-r30 (02 Oct 2014)
 

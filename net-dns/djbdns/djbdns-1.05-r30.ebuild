@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r30.ebuild,v 1.1 2014/10/02 22:22:16 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r30.ebuild,v 1.2 2014/10/29 02:06:06 mjo Exp $
 
 EAPI=5
 inherit eutils flag-o-matic readme.gentoo toolchain-funcs user
@@ -123,9 +123,7 @@ pkg_preinst() {
 
 DISABLE_AUTOFORMATTING=1
 DOC_CONTENTS='
-The dnscache-setup, tinydns-setup, and djbdns-setup programs have
-been removed to follow upstream more closely. To configure djbdns,
-please follow the instructions at,
+To configure djbdns, please follow the instructions at,
 
 	http://cr.yp.to/djbdns.html
 
