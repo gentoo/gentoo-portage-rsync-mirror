@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/dose3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/dose3/ChangeLog,v 1.2 2014/10/29 08:08:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/dose3/ChangeLog,v 1.3 2014/10/29 09:11:11 aballier Exp $
+
+*dose3-3.3_beta2-r2 (29 Oct 2014)
+
+  29 Oct 2014; Alexis Ballier <aballier@gentoo.org> -dose3-3.3_beta2-r1.ebuild,
+  +dose3-3.3_beta2-r2.ebuild:
+  do not prestrip files
 
 *dose3-3.3_beta2-r1 (29 Oct 2014)
 

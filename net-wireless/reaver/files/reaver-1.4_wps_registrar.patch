@@ -1,21 +1,5 @@
 --- a/wps/wps_registrar.c
 +++ b/wps/wps_registrar.c
-@@ -2317,11 +2317,11 @@
- 	/* @@@ Save a copy of the network key and ssid directly to the wps_data structure @@@ */
- 	if(wps->cred.key_len > 0)
- 	{
--		wps->key = strdup(wps->cred.key);
-+		memcpy(wps->key, wps->cred.key, sizeof(wps->cred.key));
- 	}
- 	if(wps->cred.ssid_len > 0)
- 	{
--		wps->essid = strdup(wps->cred.ssid);
-+		memcpy(wps->essid, wps->cred.ssid, sizeof(wps->cred.ssid));
- 	}
- 
- 	if (wps->new_ap_settings) {
---- a/wps/wps_registrar.c
-+++ b/wps/wps_registrar.c
 @@ -1469,7 +1469,7 @@
  
  	wpa_printf(MSG_DEBUG, "WPS: Building Message M4");

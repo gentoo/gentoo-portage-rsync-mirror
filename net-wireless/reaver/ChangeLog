@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/reaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/reaver/ChangeLog,v 1.5 2014/10/07 18:58:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/reaver/ChangeLog,v 1.6 2014/10/29 09:11:55 jer Exp $
+
+  29 Oct 2014; Jeroen Roovers <jer@gentoo.org>
+  files/reaver-1.4_wps_registrar.patch:
+  Drop faulty patch (bug #527298 by Tom Li).
 
 *reaver-1.4-r3 (07 Oct 2014)
 

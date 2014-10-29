@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.74 2014/10/28 10:57:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.75 2014/10/29 09:22:20 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> fping-2.4_beta2_p161-r2.ebuild,
+  fping-3.10.ebuild:
+  Stable for sparc, wrt bug #523210
 
   28 Oct 2014; Agostino Sarubbo <ago@gentoo.org> fping-2.4_beta2_p161-r2.ebuild,
   fping-3.10.ebuild:

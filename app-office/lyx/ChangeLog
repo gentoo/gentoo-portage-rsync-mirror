@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.318 2014/10/28 10:50:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.319 2014/10/29 09:24:03 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> lyx-2.0.8.1.ebuild:
+  Stable for sparc, wrt bug #520258
 
   28 Oct 2014; Agostino Sarubbo <ago@gentoo.org> lyx-2.0.8.1.ebuild:
   Stable for ia64, wrt bug #520258

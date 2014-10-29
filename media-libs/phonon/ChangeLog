@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.67 2014/10/28 10:55:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.68 2014/10/29 09:29:55 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> phonon-4.7.2.ebuild:
+  Stable for sparc, wrt bug #519592
 
   28 Oct 2014; Agostino Sarubbo <ago@gentoo.org> phonon-4.7.2.ebuild:
   Stable for ia64, wrt bug #519592

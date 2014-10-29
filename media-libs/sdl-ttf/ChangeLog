@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.76 2014/10/28 10:53:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.77 2014/10/29 09:27:32 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sdl-ttf-2.0.11-r1.ebuild:
+  Stable for sparc, wrt bug #525488
 
   28 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sdl-ttf-2.0.11-r1.ebuild:
   Stable for ia64, wrt bug #525488

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.29.ebuild,v 1.8 2014/10/28 10:49:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.29.ebuild,v 1.9 2014/10/29 09:23:44 ago Exp $
 
 EAPI=5
 inherit elisp-common java-pkg-opt-2 mono-env multilib-minimal
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/libidn/${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3 LGPL-3 java? ( Apache-2.0 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc emacs java mono nls static-libs"
 
 DOCS=( AUTHORS ChangeLog FAQ NEWS README THANKS TODO )

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.374 2014/10/27 16:02:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.375 2014/10/29 09:25:12 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sudo-1.8.11_p1.ebuild:
+  Stable for sparc, wrt bug #524752
 
   27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sudo-1.8.11_p1.ebuild:
   Stable for ppc64, wrt bug #524752
