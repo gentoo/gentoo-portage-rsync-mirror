@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.9.0.ebuild,v 1.2 2014/10/27 17:17:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.9.0.ebuild,v 1.3 2014/10/29 02:42:21 patrick Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit autotools scons-utils fortran-2 flag-o-matic python-single-r1 toolchain-funcs
+inherit scons-utils fortran-2 flag-o-matic python-single-r1 toolchain-funcs
 
 DESCRIPTION="An automated pipeline for performing Poisson-Boltzmann electrostatics calculations"
 HOMEPAGE="http://www.poissonboltzmann.org/"
