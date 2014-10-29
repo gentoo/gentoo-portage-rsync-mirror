@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/afm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/afm/ChangeLog,v 1.10 2014/08/19 12:08:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/afm/ChangeLog,v 1.11 2014/10/29 19:29:26 mrueg Exp $
+
+  29 Oct 2014; Manuel Rüger <mrueg@gentoo.org> afm-0.2.2.ebuild:
+  Drop jruby target.
 
   19 Aug 2014; Raúl Porcel <armin76@gentoo.org> afm-0.2.2.ebuild:
   add ~alpha/~arm/~ia64/~sparc/~x86, bug #519170

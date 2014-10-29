@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/rr-1.0.4.ebuild,v 1.16 2014/04/05 15:01:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/rr-1.0.4.ebuild,v 1.17 2014/10/29 19:08:45 mrueg Exp $
 
 EAPI=4
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 

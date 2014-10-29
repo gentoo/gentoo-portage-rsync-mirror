@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.148 2014/09/29 06:23:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.149 2014/10/29 19:05:54 mrueg Exp $
+
+  29 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -zentest-4.10.0.ebuild,
+  -zentest-4.10.1.ebuild, zentest-4.11.0.ebuild, zentest-4.7.0.ebuild,
+  zentest-4.9.5.ebuild:
+  Drop jruby target. Cleanup old.
 
 *zentest-4.11.0 (29 Sep 2014)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-4.7.0.ebuild,v 1.12 2014/07/18 08:09:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-4.7.0.ebuild,v 1.13 2014/10/29 19:05:54 mrueg Exp $
 
 EAPI=2
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_NAME=ZenTest
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/syntax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.60 2014/08/14 14:08:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.61 2014/10/29 19:04:24 mrueg Exp $
+
+  29 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -syntax-1.0.0-r5.ebuild,
+  syntax-1.0.0-r4.ebuild, syntax-1.2.0.ebuild:
+  Drop jruby target. Cleanup old.
 
 *syntax-1.2.0 (14 Aug 2014)
 
