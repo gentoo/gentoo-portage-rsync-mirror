@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2013.2.ebuild,v 1.3 2014/06/23 08:41:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2013.2.ebuild,v 1.4 2014/10/29 03:47:06 patrick Exp $
 EAPI=4
 
-inherit autotools
+inherit autotools toolchain-funcs
 
 RESTRICT="test"
 
@@ -50,6 +50,8 @@ NAUGHTY_HEADERS=(
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
+	# configure autodetects clang and prefers it, #527108
+	sed -i -e 's/clang//' configure.ac || die
 	mkdir -p build-aux
 	elibtoolize && eaclocal || die "Fail"
 	automake --foreign --add-missing # this one dies wrongfully
@@ -76,6 +78,7 @@ src_configure() {
 	else
 		PATH=/opt/opendylan/bin:$PATH
 	fi
+
 	if use amd64; then
 		econf --prefix=/opt/opendylan || die
 	else

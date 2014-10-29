@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.19.1.ebuild,v 1.4 2014/10/22 16:29:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.19.1.ebuild,v 1.5 2014/10/29 03:48:14 zerochaos Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
@@ -94,6 +94,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	zeroconf? ( net-dns/avahi[dbus] )
 	zip? ( dev-libs/zziplib )"
 DEPEND="${RDEPEND}
+	dev-libs/boost
 	virtual/pkgconfig"
 
 pkg_setup() {

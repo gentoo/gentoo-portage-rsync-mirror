@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/opendylan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/ChangeLog,v 1.17 2014/06/23 08:41:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/ChangeLog,v 1.18 2014/10/29 03:47:06 patrick Exp $
+
+  29 Oct 2014; Patrick Lauer <patrick@gentoo.org> opendylan-2013.2.ebuild:
+  Fix cc detection #527108
 
   23 Jun 2014; Patrick Lauer <patrick@gentoo.org> opendylan-2013.2.ebuild:
   Fix dependencies #514630
