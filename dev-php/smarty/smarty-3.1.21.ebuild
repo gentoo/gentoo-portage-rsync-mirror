@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-3.1.20.ebuild,v 1.1 2014/10/15 13:08:55 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-3.1.21.ebuild,v 1.1 2014/10/29 13:56:37 grknight Exp $
 
 EAPI=5
 
