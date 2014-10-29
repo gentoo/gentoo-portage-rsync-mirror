@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9498 2014/10/28 16:05:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9499 2014/10/29 08:02:34 idella4 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Oct 2014; Ian Delaney <idella4@gentoo.org> (29 Oct 2014):
+  Mask dev-python/blaze-0.6.5 until dep is satisfied
 
   28 Oct 2014; Jeroen Roovers <jer@gentoo.org> desc/linguas.desc:
   Add linguas_es_419. Keep it sorted.

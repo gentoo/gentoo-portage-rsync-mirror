@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16126 2014/10/27 22:25:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16127 2014/10/29 08:02:34 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Delaney <idella4@gentoo.org> (29 Oct 2014)
+# Masked until dynd-python and dev-libs/libdynd are bumped to 0.6.5
+=dev-python/blaze-0.6.5
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (27 Oct 2014)
 # Multiple QA issues (#344187, #319433, #317575, #174466) 
