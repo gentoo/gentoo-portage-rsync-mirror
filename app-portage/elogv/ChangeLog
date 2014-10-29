@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.84 2014/10/26 20:05:14 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.85 2014/10/29 01:22:07 sping Exp $
+
+*elogv-0.7.6.6 (29 Oct 2014)
+
+  29 Oct 2014; Sebastian Pipping <sping@gentoo.org> +elogv-0.7.6.6.ebuild:
+  Bump to 0.7.6.6 (bug #527240)
 
 *elogv-0.7.6.5 (26 Oct 2014)
 
