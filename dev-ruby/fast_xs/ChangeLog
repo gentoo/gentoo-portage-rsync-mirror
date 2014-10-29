@@ -1,10 +1,10 @@
 # ChangeLog for dev-ruby/fast_xs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.34 2014/10/29 18:56:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.35 2014/10/29 21:03:03 mrueg Exp $
 
   29 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -fast_xs-0.8.0.ebuild,
   fast_xs-0.8.0-r1.ebuild, fast_xs-0.8.0-r2.ebuild:
-  Update Homagepage. Cleanup old.
+  Update Homepage. Cleanup old.
 
   15 Aug 2014; Raúl Porcel <armin76@gentoo.org> fast_xs-0.8.0-r1.ebuild:
   sparc stable wrt #497490

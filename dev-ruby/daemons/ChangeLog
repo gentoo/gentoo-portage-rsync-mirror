@@ -1,10 +1,10 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.87 2014/10/29 19:43:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.88 2014/10/29 21:01:49 mrueg Exp $
 
   29 Oct 2014; Manuel Rüger <mrueg@gentoo.org> daemons-1.1.8.ebuild,
   daemons-1.1.9-r1.ebuild:
-  Drop jruby target. Update Homagepage.
+  Drop jruby target. Update Homepage.
 
   10 Jul 2014; Hans de Graaff <graaff@gentoo.org> daemons-1.1.9-r1.ebuild:
   Add ruby21. Fix deprecated rake tasks.

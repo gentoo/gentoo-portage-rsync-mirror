@@ -1,10 +1,10 @@
 # ChangeLog for dev-ruby/ascii85
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.25 2014/10/29 18:53:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.26 2014/10/29 21:03:45 mrueg Exp $
 
   29 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -ascii85-1.0.2-r1.ebuild,
   ascii85-1.0.2-r2.ebuild:
-  Drop jruby target. Update Homagepage. Cleanup old.
+  Drop jruby target. Update Homepage. Cleanup old.
 
   19 Aug 2014; Raúl Porcel <armin76@gentoo.org> ascii85-1.0.2-r1.ebuild,
   ascii85-1.0.2-r2.ebuild:
