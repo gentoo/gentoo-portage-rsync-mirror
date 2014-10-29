@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.433 2014/10/17 21:54:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.434 2014/10/29 13:21:48 williamh Exp $
+
+*dhcpcd-6.6.0 (29 Oct 2014)
+
+  29 Oct 2014; William Hubbs <williamh@gentoo.org> +dhcpcd-6.6.0.ebuild:
+  version bump
 
 *dhcpcd-6.5.1 (17 Oct 2014)
 
