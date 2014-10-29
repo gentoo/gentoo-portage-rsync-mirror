@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.86 2014/08/10 07:04:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.87 2014/10/29 12:49:58 tupone Exp $
+
+  29 Oct 2014; Alfredo Tupone <tupone@gentoo.org> warzone2100-3.1.1.ebuild,
+  +files/warzone2100-3.1.1-openGL.patch:
+  Fix Bug #523876 by Lars Wendler (Polynomial-C)
 
   10 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> warzone2100-3.1.1.ebuild:
   tidy deps (bug #519486(

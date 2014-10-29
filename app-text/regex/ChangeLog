@@ -1,0 +1,9 @@
+# ChangeLog for app-text/regex
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/regex/ChangeLog,v 1.1 2014/10/29 12:39:39 idella4 Exp $
+
+*regex-2014.10.09 (29 Oct 2014)
+
+  29 Oct 2014; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +regex-2014.10.09.ebuild:
+  new ebuild written by me, new dep to testsuite of pytextile-2.2.1
