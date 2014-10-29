@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.8.1.ebuild,v 1.10 2013/03/02 21:12:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.8.1.ebuild,v 1.11 2014/10/29 05:27:52 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils qt4-r2 games
 
 DESCRIPTION="Qt version of the classic boardgame checkers"
@@ -19,11 +19,11 @@ DEPEND="dev-qt/qtgui:4"
 src_prepare() {
 	sed -i \
 		-e "s:/usr/local:${GAMES_DATADIR}:" \
-		common.h || die "sed common.h failed"
+		common.h || die
 
 	sed -i \
 		-e "s:PREFIX\"/share:\"${GAMES_DATADIR}:" \
-		main.cc toplevel.cc || die "sed failed"
+		main.cc toplevel.cc || die
 }
 
 src_configure() {
@@ -31,10 +31,10 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin kcheckers || die
+	dogamesbin kcheckers
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r i18n/* themes || die
+	doins -r i18n/* themes
 
 	newicon icons/biglogo.png ${PN}.png
 	make_desktop_entry ${PN} KCheckers
