@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lwt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/ChangeLog,v 1.29 2014/10/29 09:27:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/ChangeLog,v 1.30 2014/10/29 09:33:57 aballier Exp $
+
+  29 Oct 2014; Alexis Ballier <aballier@gentoo.org> lwt-2.4.6.ebuild,
+  metadata.xml:
+  add text & toplevel useflags, by Olivier Huber in bug #350057
 
   29 Oct 2014; Alexis Ballier <aballier@gentoo.org> lwt-2.4.6.ebuild:
   drop doc rebuilding as it fails

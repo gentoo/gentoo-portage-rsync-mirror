@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.135 2014/10/28 11:00:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.136 2014/10/29 09:35:08 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> libmikmod-3.3.6-r1.ebuild:
+  Stable for sparc, wrt bug #525550
 
   28 Oct 2014; Agostino Sarubbo <ago@gentoo.org> libmikmod-3.3.6-r1.ebuild:
   Stable for ia64, wrt bug #525550

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.184 2014/10/28 10:57:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.185 2014/10/29 09:32:21 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> DBI-1.628.0.ebuild:
+  Stable for sparc, wrt bug #520928
 
   28 Oct 2014; Agostino Sarubbo <ago@gentoo.org> DBI-1.628.0.ebuild:
   Stable for ia64, wrt bug #520928

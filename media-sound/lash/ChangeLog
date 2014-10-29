@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.45 2014/10/27 16:08:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.46 2014/10/29 09:32:56 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> lash-0.5.4-r2.ebuild:
+  Stable for sparc, wrt bug #525804
 
   27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> lash-0.5.4-r2.ebuild:
   Stable for ppc64, wrt bug #525804

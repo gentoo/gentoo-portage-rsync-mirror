@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.44 2014/10/28 10:59:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.45 2014/10/29 09:33:52 ago Exp $
+
+  29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pillow-2.5.3-r1.ebuild:
+  Stable for sparc, wrt bug #522426
 
   28 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pillow-2.5.3-r1.ebuild:
   Stable for ia64, wrt bug #522426
