@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.164 2014/10/04 15:37:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.165 2014/10/29 18:48:28 mrueg Exp $
+
+  29 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -files/hoe-2.10.0-test-fix.patch,
+  -files/hoe-2.5.0-tests.patch,
+  -files/hoe-2.6.0-rubyforge-without-account.patch,
+  -files/hoe-2.6.1-test-file-ordering.patch,
+  -files/hoe-2.8.0-test-file-ordering.patch, -hoe-3.11.0.ebuild,
+  -hoe-3.12.0.ebuild, hoe-2.13.0-r1.ebuild, hoe-3.13.0.ebuild:
+  Cleanup old. Drop jruby target.
 
 *hoe-3.13.0 (04 Oct 2014)
 

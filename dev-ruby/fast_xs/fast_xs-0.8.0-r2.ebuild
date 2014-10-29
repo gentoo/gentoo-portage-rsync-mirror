@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/fast_xs-0.8.0-r2.ebuild,v 1.2 2014/08/05 16:00:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/fast_xs-0.8.0-r2.ebuild,v 1.3 2014/10/29 18:56:24 mrueg Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_EXTRADOC="History.rdoc README.rdoc"
 inherit ruby-fakegem
 
 DESCRIPTION="fast_xs text escaping library ruby bindings"
-HOMEPAGE="http://fast-xs.rubyforge.org/"
+HOMEPAGE="https://github.com/brianmario/fast_xs"
 
 LICENSE="MIT"
 SLOT="0"

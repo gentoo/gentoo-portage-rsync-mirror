@@ -1,6 +1,9 @@
 # ChangeLog for games-board/phalanx
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/phalanx/ChangeLog,v 1.5 2008/12/05 18:37:50 nyhm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/phalanx/ChangeLog,v 1.6 2014/10/29 18:40:59 mr_bones_ Exp $
+
+  29 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> phalanx-22.ebuild:
+  EAPI=5; tidy
 
   05 Dec 2008; Tristan Heaven <nyhm@gentoo.org> phalanx-22.ebuild:
   Respect CC and LDFLAGS, bug #244068
@@ -19,4 +22,3 @@
   29 May 2007; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
   +phalanx-22.ebuild:
   New package. Bug #157264 by Ville Oikarinen
-

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ascii85-1.0.2-r2.ebuild,v 1.3 2014/08/19 12:09:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ascii85-1.0.2-r2.ebuild,v 1.4 2014/10/29 18:53:13 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.rdoc History.txt"
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_NAME="Ascii85"
 inherit ruby-fakegem
 
 DESCRIPTION="Methods for encoding/decoding Adobe's binary-to-text encoding of the same name"
-HOMEPAGE="http://ascii85.rubyforge.org/"
+HOMEPAGE="https://github.com/datawraith/ascii85gem"
 
 LICENSE="MIT"
 SLOT="0"

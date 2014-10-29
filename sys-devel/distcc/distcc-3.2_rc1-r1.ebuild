@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.2_rc1.ebuild,v 1.8 2014/05/21 06:38:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.2_rc1-r1.ebuild,v 1.1 2014/10/29 18:52:28 axs Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="avahi crossdev gnome gssapi gtk hardened ipv6 selinux xinetd"
 
 RESTRICT="test"
 
-RDEPEND="
+RDEPEND="${PYTHON_DEPS}
 	dev-libs/popt
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	gnome? (
@@ -38,6 +38,8 @@ RDEPEND="${RDEPEND}
 	>=sys-devel/gcc-config-1.4.1
 	selinux? ( sec-policy/selinux-distcc )
 	xinetd? ( sys-apps/xinetd )"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 S="${WORKDIR}/${MY_P}"
 

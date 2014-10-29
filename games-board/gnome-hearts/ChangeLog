@@ -1,6 +1,12 @@
 # ChangeLog for games-board/gnome-hearts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/ChangeLog,v 1.6 2012/05/04 04:30:11 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/ChangeLog,v 1.7 2014/10/29 18:35:18 mr_bones_ Exp $
+
+*gnome-hearts-0.3.1 (29 Oct 2014)
+
+  29 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +gnome-hearts-0.3.1.ebuild:
+  version bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-hearts-0.3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -26,4 +32,3 @@
   +metadata.xml:
   initial commit - ebuild work from Luca Marturana and Samuli Suominen via
   bug #155104
-

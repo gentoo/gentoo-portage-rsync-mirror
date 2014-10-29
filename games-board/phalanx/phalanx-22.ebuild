@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/phalanx/phalanx-22.ebuild,v 1.5 2008/12/05 18:37:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/phalanx/phalanx-22.ebuild,v 1.6 2014/10/29 18:40:59 mr_bones_ Exp $
 
+EAPI=5
 inherit toolchain-funcs games
 
 MY_PN="Phalanx"
@@ -30,14 +31,13 @@ src_compile() {
 		DEFINES="${define}" \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
-		LDFLAGS="${LDFLAGS}" \
-		|| die "emake failed"
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	dogamesbin phalanx || die "dogamesbin failed"
+	dogamesbin phalanx
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins pbook.phalanx sbook.phalanx learn.phalanx || die "doins failed"
+	doins pbook.phalanx sbook.phalanx learn.phalanx
 	dodoc HISTORY README
 	prepgamesdirs
 }

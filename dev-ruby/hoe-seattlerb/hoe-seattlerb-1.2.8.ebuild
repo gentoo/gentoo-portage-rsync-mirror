@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/hoe-seattlerb-1.2.8.ebuild,v 1.12 2014/04/05 15:17:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/hoe-seattlerb-1.2.8.ebuild,v 1.13 2014/10/29 18:49:53 mrueg Exp $
 
 EAPI=2
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 # no tests present
 RUBY_FAKEGEM_TASK_TEST=""
