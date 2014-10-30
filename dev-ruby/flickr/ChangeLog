@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/flickr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.18 2014/08/05 16:01:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.19 2014/10/30 14:04:21 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> flickr-1.0.2-r5.ebuild:
+  Drop jruby target.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> flickr-1.0.2-r5.ebuild:
   Remove trailing '.' from DESCRIPTION.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/addressable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.44 2014/08/20 13:32:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.45 2014/10/30 14:03:51 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> addressable-2.3.5.ebuild,
+  addressable-2.3.6.ebuild:
+  Drop jruby target.
 
   20 Aug 2014; Manuel Rüger <mrueg@gentoo.org> addressable-2.3.5.ebuild,
   addressable-2.3.6.ebuild:

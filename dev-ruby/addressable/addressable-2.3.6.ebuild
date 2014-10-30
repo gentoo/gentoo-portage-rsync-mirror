@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/addressable-2.3.6.ebuild,v 1.4 2014/08/20 13:32:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/addressable-2.3.6.ebuild,v 1.5 2014/10/30 14:03:51 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC="doc:yard"
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
@@ -36,13 +36,4 @@ all_ruby_prepare() {
 
 	# Remove specs requiring network connectivity
 	rm spec/addressable/net_http_compat_spec.rb || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# Remove specs with ruby19-syntax.
-			rm spec/addressable/template_spec.rb || die
-			;;
-	esac
 }

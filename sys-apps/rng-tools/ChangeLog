@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.50 2014/08/10 20:25:06 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.51 2014/10/30 14:05:21 ago Exp $
+
+  30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> rng-tools-4-r7.ebuild:
+  Stable for amd64, wrt bug #516838
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> rng-tools-2-r1.ebuild,
   rng-tools-3-r1.ebuild, rng-tools-3.ebuild:

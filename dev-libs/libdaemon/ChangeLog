@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.77 2014/10/25 14:11:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.78 2014/10/30 14:04:14 ago Exp $
+
+  30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> libdaemon-0.14-r2.ebuild:
+  Stable for amd64, wrt bug #525982
 
   25 Oct 2014; Markus Meier <maekke@gentoo.org> libdaemon-0.14-r2.ebuild:
   arm stable, bug #525982

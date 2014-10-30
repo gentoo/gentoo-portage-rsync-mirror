@@ -3,9 +3,9 @@ DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys
 DESCRIPTION=Partial/differential file download client over HTTP which uses the rsync algorithm
 EAPI=5
 HOMEPAGE=http://zsync.moria.org.uk/
-KEYWORDS=~amd64 ~arm ~x86
+KEYWORDS=amd64 ~arm ~x86
 LICENSE=Artistic-2
 SLOT=0
 SRC_URI=http://zsync.moria.org.uk/download/zsync-0.6.2.tar.bz2 http://www.gzip.org/zlib/zlib-1.2.3.tar.bz2 http://www.zlib.net/zlib-1.2.3.tar.bz2
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=73314820636b3b3f1d7ac5ab46bcce35
+_md5_=960485334267a25452dece11bbcdeae0

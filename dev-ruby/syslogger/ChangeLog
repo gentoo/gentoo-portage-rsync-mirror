@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/syslogger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syslogger/ChangeLog,v 1.12 2014/07/09 05:22:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syslogger/ChangeLog,v 1.13 2014/10/30 14:01:20 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -syslogger-1.5.1-r1.ebuild,
+  syslogger-1.6.0.ebuild:
+  Cleanup old.
 
 *syslogger-1.6.0 (09 Jul 2014)
 

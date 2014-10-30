@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-commander/gnome-commander-1.4.2.ebuild,v 1.1 2014/05/24 12:17:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-commander/gnome-commander-1.4.2.ebuild,v 1.2 2014/10/30 14:03:44 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://gcmd.github.io/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="chm doc exif gsf pdf python taglib"
 
 RDEPEND="app-text/gnome-doc-utils

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tdiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tdiff/ChangeLog,v 1.5 2014/08/15 13:56:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tdiff/ChangeLog,v 1.6 2014/10/30 14:01:37 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> tdiff-0.3.3.ebuild:
+  Drop jruby target.
 
   15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> tdiff-0.3.3.ebuild:
   Keyword ~ppc ~ppc64, bug #511424

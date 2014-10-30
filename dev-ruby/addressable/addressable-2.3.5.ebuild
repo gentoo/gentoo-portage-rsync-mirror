@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/addressable-2.3.5.ebuild,v 1.8 2014/08/20 13:32:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/addressable-2.3.5.ebuild,v 1.9 2014/10/30 14:03:51 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_DOC="doc:yard"
 RUBY_FAKEGEM_RECIPE_TEST="rspec"

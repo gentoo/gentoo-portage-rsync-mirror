@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-commander
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-commander/ChangeLog,v 1.3 2014/05/24 12:17:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-commander/ChangeLog,v 1.4 2014/10/30 14:03:44 ago Exp $
+
+  30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> gnome-commander-1.4.2.ebuild:
+  Stable for amd64, wrt bug #524672
 
 *gnome-commander-1.4.2 (24 May 2014)
 
