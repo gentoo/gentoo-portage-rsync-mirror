@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/zpaq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.16 2014/06/17 15:14:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.17 2014/10/30 15:47:22 mgorny Exp $
+
+  30 Oct 2014; Michał Górny <mgorny@gentoo.org> zpaq-6.49.ebuild,
+  zpaq-6.53.ebuild:
+  Add missing flag-o-matic inherit, bug #527470.
 
 *zpaq-6.53 (17 Jun 2014)
 

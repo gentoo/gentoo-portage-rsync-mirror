@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/samuel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.23 2014/08/05 16:00:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.24 2014/10/30 15:57:38 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -samuel-0.3.3.ebuild,
+  samuel-0.3.3-r1.ebuild:
+  Drop jruby target. Cleanup old.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> samuel-0.3.3-r1.ebuild,
   samuel-0.3.3.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/senken
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/ChangeLog,v 1.10 2009/02/11 13:05:34 tupone Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/ChangeLog,v 1.11 2014/10/30 15:31:43 mr_bones_ Exp $
+
+  30 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/senken-0.3.0-warnings.patch, files/senken-0.3.0-as-needed.patch,
+  senken-0.3.0.ebuild:
+  EAPI=5; tidy; fix underlinking again (bug #527462)
 
   11 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/senken-0.3.0-as-needed.patch, senken-0.3.0.ebuild:

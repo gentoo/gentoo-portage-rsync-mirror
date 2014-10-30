@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.12.7.ebuild,v 1.14 2014/04/22 03:29:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.12.7.ebuild,v 1.15 2014/10/30 15:53:52 mrueg Exp $
 
 EAPI=4
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19 "
 
 RUBY_FAKEGEM_TASK_TEST="test:units"
 

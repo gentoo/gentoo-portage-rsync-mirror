@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/zpaq-6.49.ebuild,v 1.1 2014/02/19 17:32:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/zpaq-6.49.ebuild,v 1.2 2014/10/30 15:47:22 mgorny Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
-inherit autotools-utils eutils
+inherit autotools-utils eutils flag-o-matic
 
 MY_P=${PN}${PV/./}
 DESCRIPTION="Journaling incremental deduplicating archiving compressor"
