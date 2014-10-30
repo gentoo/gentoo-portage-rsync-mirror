@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.6.3.ebuild,v 1.1 2014/10/30 00:39:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.6.3.ebuild,v 1.2 2014/10/30 19:00:55 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -45,7 +45,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Don't forget to run the included geoipupdate.sh or geoipupdate (from"
+	ewarn "WARNING: Databases are no longer installed by this ebuild."
+	elog "Don't forget to run the included geoipupdate.sh (or geoipupdate from"
 	elog "net-misc/geoipupdate) regularly to populate ${ROOT}/usr/share/GeoIP/"
 	elog "with geo-located IP address databases."
 }

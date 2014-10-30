@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libnih
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnih/ChangeLog,v 1.4 2012/05/24 05:13:29 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnih/ChangeLog,v 1.5 2014/10/30 18:45:56 vapier Exp $
+
+*libnih-1.0.3-r1 (30 Oct 2014)
+
+  30 Oct 2014; Mike Frysinger <vapier@gentoo.org> +libnih-1.0.3-r1.ebuild:
+  Migrate to EAPI=4.
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> libnih-1.0.3.ebuild:
   Inherit toolchain-funcs for gen_usr_ldscript.
@@ -18,4 +23,3 @@
   +files/libnih-1.0.3-pkg-config.patch, +metadata.xml:
   Initial ebuild merging the ChromeOS version, dev-zero, Bruno Tarquini, and my
   work #310093.
-
