@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-cpp/eigen:3 test? ( dev-util/cppunit ) doc? ( app-doc/doxygen ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Kinematics and Dynamics Library (KDL)
+EAPI=5
+HOMEPAGE=http://www.orocos.org/kdl
+IUSE=doc test examples models
+KEYWORDS=~amd64
+LICENSE=LGPL-2.1
+RDEPEND=dev-cpp/eigen:3
+REQUIRED_USE=examples? ( models )
+SLOT=0
+SRC_URI=http://github.com/orocos/orocos_kinematics_dynamics/archive/v1.3.0.tar.gz -> orocos_kinematics_dynamics-1.3.0.tar.gz
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=db08cb506fcbbfa3cd9bd9fbede7f347
