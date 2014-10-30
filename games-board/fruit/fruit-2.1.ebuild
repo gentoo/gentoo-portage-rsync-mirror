@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/fruit/fruit-2.1.ebuild,v 1.6 2009/11/25 14:02:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/fruit/fruit-2.1.ebuild,v 1.7 2014/10/30 05:49:25 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils versionator games
 
 MY_PV=$(replace_all_version_separators '')
@@ -25,19 +25,17 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}"-gentoo.patch
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
-		option.cpp \
-		|| die "sed option.cpp failed"
+		option.cpp || die
 	sed -i \
 		-e '/^CXX/d' \
 		-e '/^LDFLAGS/d' \
-		Makefile \
-		|| die "sed Makefile failed"
+		Makefile || die
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins ../book_small.bin || die "doins failed"
+	doins ../book_small.bin
 	dodoc ../readme.txt ../technical_10.txt
 	prepgamesdirs
 }

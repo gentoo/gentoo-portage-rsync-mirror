@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-18-r1.ebuild,v 1.13 2014/10/30 05:39:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-18-r2.ebuild,v 1.1 2014/10/30 05:39:20 ssuominen Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ if [[ ${PV} == 9999* ]]; then
 	inherit autotools git-2
 else
 	SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
-	KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 	inherit libtool
 fi
 
@@ -30,13 +30,13 @@ IUSE="debug doc lzma python static-libs +tools zlib"
 # See bug #408915.
 RESTRICT="test"
 
-# Block everything above and including 217 for -static-nodes-indicate-that-creation-of-static-nodes-.patch
+# Block everything below 217 for -static-nodes-indicate-that-creation-of-static-nodes-.patch
 RDEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
 	!<sys-apps/openrc-0.12
-	!>=sys-fs/udev-217
-	!>=sys-fs/eudev-2.1
-	!>=sys-apps/systemd-217
+	!<sys-fs/udev-217
+	!<sys-fs/eudev-2.1
+	!<sys-apps/systemd-217
 	lzma? ( >=app-arch/xz-utils-5.0.4-r1 )
 	python? ( ${PYTHON_DEPS} )
 	zlib? ( >=sys-libs/zlib-1.2.6 )" #427130
@@ -69,6 +69,8 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-15-dynamic-kmod.patch #493630
 		elibtoolize
 	fi
+
+	epatch "${FILESDIR}"/${P}-static-nodes-indicate-that-creation-of-static-nodes-.patch
 
 	# Restore possibility of running --enable-static wrt #472608
 	sed -i \
