@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/dose3/dose3-3.3_beta2-r2.ebuild,v 1.1 2014/10/29 09:11:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/dose3/dose3-3.3_beta2-r2.ebuild,v 1.2 2014/10/30 16:20:37 aballier Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	zip? ( dev-ml/camlzip:= )
 	bzip2? ( dev-ml/camlbz2:= )
 	>=dev-ml/ocamlgraph-1.8.5:=
-	xml? ( || ( dev-ml/ocaml-expat:= dev-ml/xml-light:= ) )
+	xml? ( dev-ml/ocaml-expat:= dev-ml/xml-light:= )
 	curl? ( dev-ml/ocurl:= )
 	rpm4? ( app-arch/rpm )
 "
