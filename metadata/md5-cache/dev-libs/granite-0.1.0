@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-libs/glib:2 dev-libs/gobject-introspection dev-libs/libgee:0 x11-libs/gtk+:3 || ( dev-lang/vala:0.24 dev-lang/vala:0.22 dev-lang/vala:0.20 dev-lang/vala:0.18 dev-lang/vala:0.16 dev-lang/vala:0.14 ) virtual/pkgconfig sys-devel/gettext sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-libs/glib:2 dev-libs/gobject-introspection dev-libs/libgee:0 x11-libs/gtk+:3 || ( dev-lang/vala:0.24 dev-lang/vala:0.22 dev-lang/vala:0.20 dev-lang/vala:0.18 ) virtual/pkgconfig sys-devel/gettext sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=A development library for elementary development
 EAPI=4
 HOMEPAGE=http://launchpad.net/granite
@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/glib:2 dev-libs/gobject-introspection dev-libs/libgee:0 x11-libs/gtk+:3
 SLOT=0
 SRC_URI=http://launchpad.net/granite/0.x/0.1/+download/granite-0.1.0.tar.gz
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	vala	d8f392783fdc2395fc64af046f2ca961
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	vala	98e71281616291d457e8bb8f70e123bf
 _md5_=e0db87b206979d1f4818e4faa010ebf9
