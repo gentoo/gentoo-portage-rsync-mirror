@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/faillib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/faillib/ChangeLog,v 1.1 2014/01/19 16:29:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/faillib/ChangeLog,v 1.2 2014/10/30 17:20:17 aballier Exp $
+
+*faillib-111.17.00 (30 Oct 2014)
+
+  30 Oct 2014; Alexis Ballier <aballier@gentoo.org> +faillib-111.17.00.ebuild:
+  version bump
 
 *faillib-109.60.00 (19 Jan 2014)
 

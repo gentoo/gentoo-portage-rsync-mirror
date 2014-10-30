@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=dev-ml/type-conv-109.20.00:= dev-ml/sexplib:= dev-ml/pa_ounit:= >=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12:=[ocamlopt?]
+DESCRIPTION=Syntax extension for printf format strings
+EAPI=5
+HOMEPAGE=http://bitbucket.org/yminsky/ocaml-core/wiki/Home
+IUSE=+ocamlopt debug
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=>=dev-ml/type-conv-109.20.00:= dev-ml/sexplib:= dev-ml/pa_ounit:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
+SLOT=0/111.25.00
+SRC_URI=http://ocaml.janestreet.com/ocaml-core/111.25.00/individual/custom_printf-111.25.00.tar.gz http://dev.gentoo.org/~aballier/distfiles/custom_printf-111.25.00.tar.gz
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=7ce04b38b1115893199d99f12adbb626

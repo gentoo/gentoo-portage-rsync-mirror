@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gamazons/gamazons-0.83.ebuild,v 1.4 2012/11/18 20:51:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gamazons/gamazons-0.83.ebuild,v 1.5 2014/10/30 17:30:11 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit gnome2
 
 DESCRIPTION="A chess/go hybrid"
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=gnome-base/libgnomeui-2"
+RDEPEND=${DEPEND}
 
 src_prepare() {
 	gnome2_src_prepare
