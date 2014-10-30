@@ -1,6 +1,9 @@
 # ChangeLog for games-board/cgoban
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/ChangeLog,v 1.13 2012/09/05 16:49:24 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/ChangeLog,v 1.14 2014/10/30 16:52:52 mr_bones_ Exp $
+
+  30 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> cgoban-1.9.14.ebuild:
+  EAPI=5
 
   05 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> cgoban-1.9.14.ebuild:
   tidy

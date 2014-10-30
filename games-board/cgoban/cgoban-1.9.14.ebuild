@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/cgoban-1.9.14.ebuild,v 1.11 2012/09/05 16:49:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/cgoban-1.9.14.ebuild,v 1.12 2014/10/30 16:52:52 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils autotools games
 
 DESCRIPTION="A Go-frontend"
@@ -32,8 +32,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	default
 	doicon ${PN}.png
 	make_desktop_entry cgoban Cgoban
 	prepgamesdirs

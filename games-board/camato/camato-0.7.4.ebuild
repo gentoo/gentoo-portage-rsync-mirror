@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/camato/camato-0.7.4.ebuild,v 1.5 2010/01/22 20:04:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/camato/camato-0.7.4.ebuild,v 1.6 2014/10/30 16:50:32 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit versionator games
 
 MY_PV=$(replace_all_version_separators _)
@@ -16,18 +16,17 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-ruby/ruby-gtk2"
+RDEPEND=${DEPEND}
 
 src_prepare() {
 	rm -f Makefile
-	sed -i \
-		-e "s:/usr/share:${GAMES_DATADIR}:" \
-		${PN} || die "sed failed"
+	sed -i -e "s:/usr/share:${GAMES_DATADIR}:" ${PN} || die
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r *.rb img || die "doins failed"
+	doins -r *.rb img
 	dodoc ChangeLog README
 	prepgamesdirs
 }

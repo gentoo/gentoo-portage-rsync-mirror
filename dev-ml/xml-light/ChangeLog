@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/xml-light
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/ChangeLog,v 1.10 2014/03/03 23:38:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/ChangeLog,v 1.11 2014/10/30 16:34:02 aballier Exp $
+
+*xml-light-2.2-r3 (30 Oct 2014)
+
+  30 Oct 2014; Alexis Ballier <aballier@gentoo.org> +xml-light-2.2-r3.ebuild:
+  build & install native binaries if wanted, bug #520100 by José Romildo
+  Malaquias
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> xml-light-2.2-r2.ebuild:
   amd64 stable, bug #492064

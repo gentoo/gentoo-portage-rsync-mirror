@@ -1,6 +1,9 @@
 # ChangeLog for games-board/camato
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/camato/ChangeLog,v 1.7 2010/01/22 20:04:11 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/camato/ChangeLog,v 1.8 2014/10/30 16:50:32 mr_bones_ Exp $
+
+  30 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> camato-0.7.4.ebuild:
+  EAPI=5
 
   22 Jan 2010; Brent Baude <ranger@gentoo.org> camato-0.7.4.ebuild:
   stable ppc, bug 294345
@@ -27,4 +30,3 @@
   10 Sep 2004; Don Seiler <rizzo@gentoo.org> +metadata.xml,
   +camato-0.6.2.ebuild:
   Initial import
-

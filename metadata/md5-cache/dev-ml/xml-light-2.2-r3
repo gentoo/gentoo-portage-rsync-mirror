@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare test
+DEPEND=app-arch/unzip dev-lang/ocaml:=[ocamlopt?]
+DESCRIPTION=Minimal Xml parser and printer for OCaml
+EAPI=5
+HOMEPAGE=http://tech.motion-twin.com/xmllight.html
+IUSE=doc +ocamlopt
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=dev-lang/ocaml:=[ocamlopt?]
+SLOT=0/2.2
+SRC_URI=http://tech.motion-twin.com/zip/xml-light-2.2.zip
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=369d1009c31f1d063bf9a95e9fc23987
