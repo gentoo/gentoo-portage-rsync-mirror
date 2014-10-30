@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1431 2014/10/29 14:15:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1432 2014/10/30 19:07:53 mpagano Exp $
+
+*gentoo-sources-3.17.2 (30 Oct 2014)
+
+  30 Oct 2014; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.17.2.ebuild:
+  Linux patch 3.17.2. Removal of redundant patch. Budget Fair Queueing (BFQ)
+  Storage-I/O Scheduler patch.
 
   29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> gentoo-sources-3.12.30.ebuild:
   Stable for x86, wrt bug #525310
