@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.173 2014/10/30 05:49:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.174 2014/10/30 08:49:05 ssuominen Exp $
+
+  30 Oct 2014; Samuli Suominen <ssuominen@gentoo.org> kmod-18-r1.ebuild,
+  kmod-18-r2.ebuild, kmod-9999.ebuild:
+  Adjusting blockers again and dropping udev and eudev references because it's
+  the tmpfiles generator in systemd that's affected. Thanks to floppym for
+  information.
 
 *kmod-18-r2 (30 Oct 2014)
 

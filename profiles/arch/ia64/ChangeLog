@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.214 2014/10/21 17:49:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.215 2014/10/30 08:40:17 mgorny Exp $
+
+  30 Oct 2014; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Temporarily mask sys-apps/systemd[terminal] due to non-keyworded deps.
 
   21 Oct 2014; Mike Frysinger <vapier@gentoo.org> use.mask:
   Mask glusterfs/rbd USE flags #519618.

@@ -19,6 +19,7 @@
 		<flag name='lz4'>Enable lz4 compression for the journal</flag>
 		<flag name='qrcode'>Enable qrcode output support in journal</flag>
 		<flag name='seccomp'>Enable system call filtering via seccomp</flag>
+		<flag name='terminal'>Enable experimental userspace virtual terminal support</flag>
 		<flag name='vanilla'>Disable Gentoo-specific behavior and compatibility quirks</flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.291 2014/10/25 17:14:49 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.292 2014/10/30 08:41:51 mgorny Exp $
+
+  30 Oct 2014; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Temporarily mask sys-apps/systemd[terminal] due to non-keyworded deps.
 
   25 Oct 2014; Michael Palimaka <kensington@gentoo.org> package.use.mask:
   Mask kde-base/systemsettings[kscreen] due to unkeyworded dependencies (bug
