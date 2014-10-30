@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd-sysv-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/ChangeLog,v 1.9 2014/09/15 07:29:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/ChangeLog,v 1.10 2014/10/30 09:07:44 mgorny Exp $
+
+*systemd-sysv-utils-216 (30 Oct 2014)
+*systemd-sysv-utils-217 (30 Oct 2014)
+
+  30 Oct 2014; Michał Górny <mgorny@gentoo.org> +systemd-sysv-utils-216.ebuild,
+  +systemd-sysv-utils-217.ebuild:
+  Bump for new systemd versions to avoid keeping two distfiles.
 
 *systemd-sysv-utils-215 (15 Sep 2014)
 

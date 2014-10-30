@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.83 2014/10/30 08:49:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.84 2014/10/30 09:13:27 ssuominen Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ RESTRICT="test"
 # Block systemd below 217 for -static-nodes-indicate-that-creation-of-static-nodes-.patch
 RDEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
-	!<sys-apps/openrc-0.12
+	!<sys-apps/openrc-0.13
 	!<sys-apps/systemd-217
 	lzma? ( >=app-arch/xz-utils-5.0.4-r1 )
 	python? ( ${PYTHON_DEPS} )
