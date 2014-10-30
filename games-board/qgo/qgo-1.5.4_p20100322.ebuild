@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p20100322.ebuild,v 1.9 2013/03/02 21:13:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p20100322.ebuild,v 1.10 2014/10/30 03:53:36 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils qt4-r2 games
 
 DESCRIPTION="An ancient boardgame, very common in Japan, China and Korea"
@@ -18,6 +18,7 @@ DEPEND="media-libs/alsa-lib
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qttest:4"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i \
@@ -32,7 +33,8 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${P}-gcc45.patch \
-		"${FILESDIR}"/${P}-qt47.patch
+		"${FILESDIR}"/${P}-qt47.patch \
+		"${FILESDIR}"/${P}-buffer.patch
 }
 
 src_configure() {
@@ -45,7 +47,7 @@ src_install() {
 	dodoc AUTHORS
 
 	insinto "${GAMES_DATADIR}"/qgo/languages
-	doins src/translations/*.qm || die
+	doins src/translations/*.qm
 
 	prepgamesdirs
 }

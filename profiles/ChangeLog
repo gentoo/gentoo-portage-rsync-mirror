@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9499 2014/10/29 08:02:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9500 2014/10/30 03:41:59 idella4 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Oct 2014; Ian Delaney <idella4@gentoo.org> (30 Oct 2014):
+  Unmask dev-python/blaze-0.6.5, dep is satisfied
 
   29 Oct 2014; Ian Delaney <idella4@gentoo.org> (29 Oct 2014):
   Mask dev-python/blaze-0.6.5 until dep is satisfied

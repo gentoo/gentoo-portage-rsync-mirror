@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/awl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/awl/ChangeLog,v 1.7 2013/10/21 17:16:29 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/awl/ChangeLog,v 1.8 2014/10/30 03:51:16 grknight Exp $
+
+  30 Oct 2014; Brian Evans <grknight@gentoo.org> -awl-0.51-r1.ebuild,
+  -awl-0.51.ebuild, -awl-0.52.ebuild, -awl-0.53.ebuild:
+  Drop old
 
   21 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Removed François from metadata.xml per his request.

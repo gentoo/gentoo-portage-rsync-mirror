@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.136 2014/10/17 04:07:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.137 2014/10/30 03:56:32 patrick Exp $
+
+*sqlalchemy-0.9.8 (30 Oct 2014)
+
+  30 Oct 2014; Patrick Lauer <patrick@gentoo.org> +sqlalchemy-0.9.8.ebuild:
+  Bump
 
   17 Oct 2014; Michał Górny <mgorny@gentoo.org> sqlalchemy-0.9.2.ebuild:
   Backport the requirement of python[sqlite] from newer versions, bug #525594.
