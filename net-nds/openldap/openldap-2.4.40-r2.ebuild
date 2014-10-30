@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40-r2.ebuild,v 1.1 2014/10/27 19:15:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40-r2.ebuild,v 1.2 2014/10/30 02:22:07 patrick Exp $
 
 EAPI="5"
 
@@ -52,7 +52,7 @@ RDEPEND="icu? ( dev-libs/icu:= )
 		slp? ( net-libs/openslp )
 		perl? ( dev-lang/perl[-build(-)] )
 		samba? ( dev-libs/openssl )
-		berkdb? ( 
+		berkdb? (
 			>=sys-libs/db-4.4
 			<sys-libs/db-6
 			)

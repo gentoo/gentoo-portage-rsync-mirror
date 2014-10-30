@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.483 2014/10/27 19:15:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.484 2014/10/30 02:22:07 patrick Exp $
+
+  30 Oct 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml,
+  openldap-2.4.40-r2.ebuild, openldap-2.4.40.ebuild:
+  Whitespace, remove unused useflag description from metadata.xml
 
 *openldap-2.4.40-r2 (27 Oct 2014)
 

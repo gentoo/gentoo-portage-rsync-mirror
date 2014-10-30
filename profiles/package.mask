@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16127 2014/10/29 08:02:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16128 2014/10/30 02:22:51 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (29 Oct 2014)
+# Merged with games-engines/scummvm
+# masked for removal on 20141128
+games-engines/sarien
 
 # Ian Delaney <idella4@gentoo.org> (29 Oct 2014)
 # Masked until dynd-python and dev-libs/libdynd are bumped to 0.6.5
