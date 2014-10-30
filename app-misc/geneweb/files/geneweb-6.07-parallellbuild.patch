@@ -55,3 +55,14 @@
  ged2gwb.cmx: ../src/adef.cmx ../src/ansel.cmx ../src/argl.cmx \
      ../src/buff.cmx ../src/calendar.cmx ../src/check.cmx \
      ../src/checkItem.cmx ../src/dbdisk.cmi ../src/def.cmi ../src/gwdb.cmx \
+--- Makefile.old	2014-10-30 08:36:50.308668062 +0100
++++ Makefile	2014-10-30 08:37:13.204451602 +0100
+@@ -65,7 +65,7 @@
+ 
+ distrib: new_distrib wrappers
+ 
+-wrappers:
++wrappers: new_distrib
+ 	if test "$(CAMLP5F)" = "-DWIN95"; then \
+ 	  echo -ne 'setlocal enableextensions\r\n' > $(DESTDIR)/gwd.bat; \
+ 	  echo -ne 'md bases\r\n' >> $(DESTDIR)/gwd.bat; \

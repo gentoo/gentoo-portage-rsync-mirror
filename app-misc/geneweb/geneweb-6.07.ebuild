@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-6.07.ebuild,v 1.7 2014/08/10 18:04:27 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-6.07.ebuild,v 1.8 2014/10/30 07:46:34 tupone Exp $
 
 EAPI=4
 inherit eutils user
@@ -46,7 +46,7 @@ src_compile() {
 
 src_install() {
 	dodoc ICHANGES
-	make distrib
+	emake distrib
 	# Install doc
 	cd distribution
 	dodoc CHANGES.txt

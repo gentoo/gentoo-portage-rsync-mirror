@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/geneweb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.33 2014/08/10 18:04:27 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.34 2014/10/30 07:46:34 tupone Exp $
+
+  30 Oct 2014; Alfredo Tupone <tupone@gentoo.org> geneweb-6.07.ebuild,
+  files/geneweb-6.07-parallellbuild.patch:
+  Fix parallel install. Bug #527382 by flameeyes@gentoo.org
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> geneweb-6.07.ebuild:
   QA: drop trailing '.' from DESCRIPTION
