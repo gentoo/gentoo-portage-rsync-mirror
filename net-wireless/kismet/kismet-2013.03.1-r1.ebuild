@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2013.03.1-r1.ebuild,v 1.7 2013/12/06 17:55:58 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2013.03.1-r1.ebuild,v 1.8 2014/10/30 23:00:42 jer Exp $
 
 EAPI=5
 
-inherit eutils multilib user
+inherit autotools eutils multilib user
 
 MY_P=${P/\./-}
 MY_P=${MY_P/./-R}
@@ -48,12 +48,16 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-tinfo.patch
+
 	sed -i -e "s:^\(logtemplate\)=\(.*\):\1=/tmp/\2:" \
-		conf/kismet.conf.in
+		conf/kismet.conf.in || die
 
 	# Don't strip and set correct mangrp
 	sed -i -e 's| -s||g' \
-		-e 's|@mangrp@|root|g' Makefile.in
+		-e 's|@mangrp@|root|g' Makefile.in || die
+
+	eautoreconf
 }
 
 src_configure() {
