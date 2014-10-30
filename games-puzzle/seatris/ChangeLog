@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/seatris
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/ChangeLog,v 1.8 2009/02/10 11:55:04 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/ChangeLog,v 1.10 2014/10/30 22:20:24 jer Exp $
+
+  30 Oct 2014; Jeroen Roovers <jer@gentoo.org> seatris-0.0.14.ebuild:
+  Add virtual/pkgconfig dependency.
+
+  30 Oct 2014; Jeroen Roovers <jer@gentoo.org>
+  files/seatris-0.0.14-as-needed.patch, seatris-0.0.14.ebuild:
+  Fix building against sys-libs/ncurses[tinfo] (bug #526582).
 
   10 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/seatris-0.0.14-as-needed.patch, seatris-0.0.14.ebuild:
@@ -30,4 +37,3 @@
   11 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +seatris-0.0.14.ebuild:
   initial commit - in response to bug #54939
-
