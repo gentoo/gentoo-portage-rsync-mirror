@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kraft
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kraft/ChangeLog,v 1.14 2014/10/30 10:04:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kraft/ChangeLog,v 1.15 2014/10/30 11:27:21 kensington Exp $
+
+  30 Oct 2014; Michael Palimaka <kensington@gentoo.org> -kraft-0.53.ebuild,
+  -kraft-0.54.ebuild:
+  Remove old.
 
   30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> kraft-0.55.ebuild:
   Stable for x86, wrt bug #525164

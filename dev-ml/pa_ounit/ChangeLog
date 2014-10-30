@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pa_ounit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pa_ounit/ChangeLog,v 1.17 2014/01/19 15:42:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pa_ounit/ChangeLog,v 1.18 2014/10/30 11:31:05 aballier Exp $
+
+*pa_ounit-111.28.00 (30 Oct 2014)
+
+  30 Oct 2014; Alexis Ballier <aballier@gentoo.org> +pa_ounit-111.28.00.ebuild:
+  version bump
 
 *pa_ounit-109.53.02 (19 Jan 2014)
 
