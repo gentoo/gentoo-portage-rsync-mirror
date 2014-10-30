@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/ChangeLog,v 1.43 2014/09/21 16:20:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/ChangeLog,v 1.44 2014/10/30 13:58:53 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> tins-0.13.1.ebuild:
+  Drop jruby target.
 
 *tins-1.3.3 (21 Sep 2014)
 

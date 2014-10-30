@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/drydock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/drydock/ChangeLog,v 1.4 2014/08/05 16:00:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/drydock/ChangeLog,v 1.5 2014/10/30 13:52:46 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> drydock-0.6.9.ebuild:
+  Drop jruby target.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> drydock-0.6.9.ebuild:
   Remove trailing '.' from DESCRIPTION.

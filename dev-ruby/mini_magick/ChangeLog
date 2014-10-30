@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mini_magick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/ChangeLog,v 1.24 2014/10/28 06:46:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/ChangeLog,v 1.25 2014/10/30 13:46:15 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -mini_magick-3.7.0-r1.ebuild,
+  -mini_magick-3.8.0.ebuild, mini_magick-3.8.1.ebuild:
+  Cleanup old.
 
 *mini_magick-3.8.1 (28 Oct 2014)
 

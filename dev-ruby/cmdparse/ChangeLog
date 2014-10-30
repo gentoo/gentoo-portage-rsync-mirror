@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/cmdparse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/ChangeLog,v 1.36 2014/08/28 02:38:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/ChangeLog,v 1.37 2014/10/30 13:49:44 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> cmdparse-2.0.5-r1.ebuild,
+  cmdparse-2.0.6.ebuild:
+  Drop jruby target.
 
   28 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -cmdparse-2.0.5-r2.ebuild,
   cmdparse-2.0.5-r1.ebuild, cmdparse-2.0.6.ebuild:

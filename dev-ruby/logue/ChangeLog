@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/logue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.13 2014/08/05 15:48:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.14 2014/10/30 13:57:09 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> logue-1.0.1.ebuild:
+  Drop jruby target.
 
   05 Aug 2014; Raúl Porcel <armin76@gentoo.org> logue-1.0.1.ebuild:
   sparc stable, bug #505100

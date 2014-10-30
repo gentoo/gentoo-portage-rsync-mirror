@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/crack-0.3.2.ebuild,v 1.5 2014/08/05 16:00:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/crack-0.3.2.ebuild,v 1.6 2014/10/30 13:45:08 mrueg Exp $
 
 EAPI="2"
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 # workaround for ruby 1.9.2, sent upstream after 0.1.8
 RUBY_FAKEGEM_TASK_TEST="-Ilib test"

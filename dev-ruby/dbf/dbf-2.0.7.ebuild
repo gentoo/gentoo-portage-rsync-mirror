@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/dbf-2.0.7.ebuild,v 1.5 2014/03/16 00:27:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/dbf-2.0.7.ebuild,v 1.6 2014/10/30 13:52:31 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 

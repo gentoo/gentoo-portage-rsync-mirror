@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ipaddress
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ipaddress/ChangeLog,v 1.5 2014/05/06 06:03:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ipaddress/ChangeLog,v 1.6 2014/10/30 13:55:54 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> ipaddress-0.8.0.ebuild:
+  Drop jruby target.
 
   06 May 2014; Hans de Graaff <graaff@gentoo.org> ipaddress-0.8.0.ebuild:
   Fix deprecated rake rdoc invocation.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/litc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/litc/ChangeLog,v 1.8 2014/05/21 02:21:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/litc/ChangeLog,v 1.9 2014/10/30 13:56:21 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> litc-1.0.3-r1.ebuild:
+  Drop jruby target.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> litc-1.0.3-r1.ebuild:
   Remove ruby18 target.

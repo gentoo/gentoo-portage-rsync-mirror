@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/countdownlatch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/countdownlatch/ChangeLog,v 1.5 2014/05/21 01:50:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/countdownlatch/ChangeLog,v 1.6 2014/10/30 13:50:54 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -countdownlatch-1.0.0.ebuild,
+  countdownlatch-1.0.0-r1.ebuild:
+  Drop jruby target. Cleanup old.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> countdownlatch-1.0.0-r1.ebuild,
   countdownlatch-1.0.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bones
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.24 2014/05/15 01:27:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.25 2014/10/30 13:47:47 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -bones-3.8.1.ebuild,
+  bones-3.8.1-r1.ebuild:
+  Drop jruby target. Cleanup old.
 
   15 May 2014; Manuel Rüger <mrueg@gentoo.org> bones-3.8.1.ebuild:
   Remove ruby18.

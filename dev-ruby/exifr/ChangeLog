@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/exifr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/exifr/ChangeLog,v 1.35 2014/10/01 05:39:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/exifr/ChangeLog,v 1.36 2014/10/30 13:43:56 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -exifr-1.1.3-r1.ebuild,
+  exifr-1.2.0.ebuild:
+  Drop jruby target. Cleanup old.
 
 *exifr-1.2.0 (01 Oct 2014)
 

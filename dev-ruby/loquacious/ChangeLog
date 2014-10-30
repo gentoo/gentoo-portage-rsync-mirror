@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/loquacious
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.22 2014/05/21 02:04:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.23 2014/10/30 13:56:48 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -loquacious-1.9.1-r1.ebuild,
+  loquacious-1.9.1-r2.ebuild:
+  Drop jruby target. Cleanup old.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> loquacious-1.9.1-r1.ebuild:
   Remove ruby18 target.

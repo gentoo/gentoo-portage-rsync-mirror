@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/cri
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/ChangeLog,v 1.14 2014/06/18 06:05:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/ChangeLog,v 1.15 2014/10/30 13:41:47 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -cri-2.4.1.ebuild,
+  -cri-2.5.0.ebuild, cri-2.6.1.ebuild:
+  Drop jruby target. Cleanup old.
 
 *cri-2.6.1 (18 Jun 2014)
 
