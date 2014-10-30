@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/parmap/parmap-1.0_rc5.ebuild,v 1.1 2014/10/27 09:25:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/parmap/parmap-1.0_rc5.ebuild,v 1.2 2014/10/30 15:09:45 aballier Exp $
 
 EAPI=5
 
@@ -22,6 +22,12 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_test() {
+	mkdir "${WORKDIR}/tmpinstall" || die
+	emake \
+		OCAMLLIBDIR="ocaml" \
+		DESTDIR="${WORKDIR}/tmpinstall" \
+		install
+	export OCAMLPATH="${WORKDIR}/tmpinstall/ocaml"
 	emake tests
 	cd _build/tests || die
 	for i in $(find . -type f -executable) ; do
