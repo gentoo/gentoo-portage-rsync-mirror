@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/doctrine/doctrine-1.2.4.ebuild,v 1.1 2011/03/21 07:17:24 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/doctrine/doctrine-1.2.5.ebuild,v 1.1 2014/10/30 04:27:21 grknight Exp $
 
-EAPI="2"
+EAPI=5
 
-MY_P="Doctrine-${PV}"
+MY_P="${PN}1-${PV}"
 DESCRIPTION="An object relational mapper for PHP5"
 HOMEPAGE="http://www.doctrine-project.org/"
-SRC_URI="http://www.doctrine-project.org/downloads/${MY_P}.tgz"
+SRC_URI="https://github.com/${PN}/${PN}1/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1 MIT BSD"
 SLOT="0"
@@ -21,6 +21,6 @@ S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	insinto /usr/share/php
-	doins -r Doctrine
-	doins Doctrine.php
+	doins -r lib/Doctrine
+	doins lib/Doctrine.php
 }

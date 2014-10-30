@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/doctrine
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/doctrine/ChangeLog,v 1.3 2011/03/21 07:17:24 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/doctrine/ChangeLog,v 1.4 2014/10/30 04:27:21 grknight Exp $
+
+*doctrine-1.2.5 (30 Oct 2014)
+
+  30 Oct 2014; Brian Evans <grknight@gentoo.org> +doctrine-1.2.5.ebuild,
+  -doctrine-1.2.1.ebuild, -doctrine-1.2.2.ebuild, -doctrine-1.2.3.ebuild,
+  -doctrine-1.2.4.ebuild:
+  Version bump to final doctrine1; Drop old
 
 *doctrine-1.2.4 (21 Mar 2011)
 
@@ -22,4 +29,3 @@
   02 Jan 2010; Ben de Groot <yngwin@gentoo.org> +doctrine-1.2.1.ebuild,
   +metadata.xml:
   Initial import. Ebuild by me.
-
