@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-24.0.ebuild,v 1.1 2014/09/12 08:03:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-24.1.ebuild,v 1.1 2014/10/30 07:29:52 mr_bones_ Exp $
 
 EAPI=5
 inherit flag-o-matic toolchain-funcs eutils games
