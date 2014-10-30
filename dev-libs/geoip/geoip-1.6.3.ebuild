@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.6.2-r1.ebuild,v 1.1 2014/10/21 09:09:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.6.3.ebuild,v 1.1 2014/10/30 00:39:12 jer Exp $
 
 EAPI=5
 inherit autotools eutils
