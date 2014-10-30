@@ -1,6 +1,11 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.353 2014/10/30 18:52:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.354 2014/10/30 20:48:35 polynomial-c Exp $
+
+  30 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> pidgin-2.10.10.ebuild,
+  +files/pidgin-2.10.10-eds-3.6-configure.ac.patch:
+  Fixed detection of evolution data server with USE=eds reported by Juergen
+  Rose in bug #526644 and patch provided by Alexander Tsoy.
 
   30 Oct 2014; Markus Meier <maekke@gentoo.org> pidgin-2.10.10.ebuild:
   arm stable, bug #526502
