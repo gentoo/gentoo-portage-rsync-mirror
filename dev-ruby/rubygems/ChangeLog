@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.240 2014/10/30 14:22:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.241 2014/10/30 14:31:14 mrueg Exp $
+
+  30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -rubygems-2.0.3.ebuild:
+  Cleanup old.
 
   30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> rubygems-2.0.14.ebuild:
   Stable for ppc64, wrt bug #508996

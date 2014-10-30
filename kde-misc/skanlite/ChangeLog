@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/skanlite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.32 2014/01/30 11:52:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.33 2014/10/30 14:49:59 ago Exp $
+
+  30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> skanlite-1.1-r1.ebuild:
+  Stable for amd64, wrt bug #527440
 
 *skanlite-1.1-r1 (30 Jan 2014)
 

@@ -4,11 +4,11 @@ DESCRIPTION=A collection of algorithms and sample code for various computer visi
 EAPI=5
 HOMEPAGE=http://opencv.willowgarage.com
 IUSE=cuda doc +eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k opencl openexr opengl openmp pch png +python qt4 testprograms threads tiff v4l vtk xine python_targets_python2_7 python_single_target_python2_7 elibc_FreeBSD java elibc_FreeBSD
-KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux
+KEYWORDS=~amd64 ~arm ~ppc ~x86 ~amd64-linux
 LICENSE=BSD
 RDEPEND=app-arch/bzip2 sys-libs/zlib cuda? ( >=dev-util/nvidia-cuda-toolkit-5.5 ) ffmpeg? ( virtual/ffmpeg ) gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 ) gtk? ( dev-libs/glib:2 x11-libs/gtk+:2 opengl? ( x11-libs/gtkglext ) ) java? ( >=virtual/jre-1.6 ) jpeg? ( virtual/jpeg ) jpeg2k? ( media-libs/jasper ) ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 ) ipp? ( sci-libs/ipp ) opencl? ( virtual/opencl ) openexr? ( media-libs/openexr ) opengl? ( virtual/opengl virtual/glu ) png? ( media-libs/libpng:0= ) python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/numpy[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) qt4? ( dev-qt/qtgui:4 dev-qt/qttest:4 opengl? ( dev-qt/qtopengl:4 ) ) threads? ( dev-cpp/tbb ) tiff? ( media-libs/tiff ) v4l? ( >=media-libs/libv4l-0.8.3 ) vtk? ( sci-libs/vtk ) xine? ( media-libs/xine-lib ) java? ( >=dev-java/java-config-2.1.9-r1 )
 REQUIRED_USE=python? ( python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 ) )
 SLOT=0/2.4
 SRC_URI=mirror://sourceforge/opencvlibrary/opencv-unix/2.4.9/opencv-2.4.9.zip
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=315febf1c55e90f18d01978f36d952bf
+_md5_=0dad8e093fc5e27a0a2c659b8a0859a3
