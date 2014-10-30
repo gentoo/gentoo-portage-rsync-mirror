@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kraft/kraft-0.55.ebuild,v 1.2 2014/10/29 11:55:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kraft/kraft-0.55.ebuild,v 1.3 2014/10/30 10:04:44 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/kraft/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="

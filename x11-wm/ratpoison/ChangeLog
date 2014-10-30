@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.111 2014/10/29 11:56:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.112 2014/10/30 10:03:49 ago Exp $
+
+  30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> ratpoison-1.4.8.ebuild:
+  Stable for x86, wrt bug #526098
 
   29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> ratpoison-1.4.8.ebuild:
   Stable for amd64, wrt bug #526098
