@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.6.ebuild,v 1.1 2014/05/15 18:33:27 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.8.ebuild,v 1.1 2014/10/30 21:34:30 tgurr Exp $
 
 EAPI="5"
 

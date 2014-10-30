@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-9999.ebuild,v 1.2 2013/09/17 12:30:09 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-9999.ebuild,v 1.3 2014/10/30 21:37:30 idl0r Exp $
 
 EAPI="5"
 
@@ -15,9 +15,11 @@ EGIT_REPO_URI="http://master.formilux.org/git/people/willy/haproxy.git"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="+crypt examples +pcre ssl tools vim-syntax +zlib"
+IUSE="+crypt examples +pcre pcre-jit ssl tools vim-syntax +zlib"
 
-DEPEND="pcre? ( dev-libs/libpcre )
+DEPEND="pcre? ( dev-libs/libpcre
+				pcre-jit? ( dev-libs/libpcre[jit] )
+				)
 	ssl? ( dev-libs/openssl[zlib?] )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
@@ -30,15 +32,22 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -e 's:@SBINDIR@:'/usr/sbin':' contrib/systemd/haproxy.service.in \
-	> contrib/systemd/haproxy.service || die
+	sed -e 's:@SBINDIR@:'/usr/bin':' contrib/systemd/haproxy.service.in \
+		> contrib/systemd/haproxy.service || die
+
+	sed -ie 's:/usr/sbin/haproxy:/usr/bin/haproxy:' src/haproxy-systemd-wrapper.c || die
 }
 
 src_compile() {
 	local args="TARGET=linux2628 USE_GETADDRINFO=1"
 
 	if use pcre ; then
-		args="${args} USE_PCRE=1 USE_PCRE_JIT=1"
+		args="${args} USE_PCRE=1"
+		if use pcre-jit; then
+			args="${args} USE_PCRE_JIT=1"
+		else
+			args="${args} USE_PCRE_JIT="
+		fi
 	else
 		args="${args} USE_PCRE= USE_PCRE_JIT="
 	fi
@@ -68,14 +77,14 @@ src_compile() {
 	fi
 
 	# For now, until the strict-aliasing breakage will be fixed
-#	append-cflags -fno-strict-aliasing
+	append-cflags -fno-strict-aliasing
 
 	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC=$(tc-getCC) ${args}
 
 	if use tools ; then
 		for contrib in halog iprange ; do
 			emake -C contrib/${contrib} \
-				CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC=$(tc-getCC) ${args}
+				CFLAGS="${CFLAGS}" OPTIMIZE="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC=$(tc-getCC) ${args}
 		done
 	fi
 }
@@ -88,10 +97,10 @@ src_install() {
 	# Don't install useless files
 #	rm examples/build.cfg doc/*gpl.txt
 
-	dodoc CHANGELOG ROADMAP TODO doc/{configuration,haproxy-en}.txt
+	dodoc CHANGELOG ROADMAP doc/{configuration,haproxy-en}.txt
 	doman doc/haproxy.1
 
-	dosbin haproxy-systemd-wrapper
+	dobin haproxy-systemd-wrapper
 	systemd_dounit contrib/systemd/haproxy.service
 
 	if use tools ; then

@@ -5988,7 +5988,8 @@ net-proxy/dansguardian:logrotate - Use app-admin/logrotate for rotating logs.
 net-proxy/dansguardian:ntlm - Enable support for the NTLM auth plugin.
 net-proxy/dansguardian:orig-ip - Enable support for checking the client's original destination IP address against HTTP request details when deployed as a transparent proxy (US-CERT VU#435052).
 net-proxy/dansguardian:trickledm - Enable support for the trickle download manager.
-net-proxy/haproxy:tools - Install additional tools (halog, iprange).
+net-proxy/haproxy:pcre-jit - Use JIT support for PCRE
+net-proxy/haproxy:tools - Install additional tools (halog, iprange)
 net-proxy/rejik:banlists - Install upstream provided simple banlists
 net-proxy/squid:ecap - Adds support for loadable content adaptation modules (http://www.e-cap.org)
 net-proxy/squid:esi - Enable ESI for accelerators, will cause squid reverse proxies to be capable of the Edge Acceleration Specification (www.esi.org)

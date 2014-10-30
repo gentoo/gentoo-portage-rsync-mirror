@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/haproxy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.108 2014/10/19 09:11:44 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.109 2014/10/30 21:37:30 idl0r Exp $
+
+  30 Oct 2014; Christian Ruppert <idl0r@gentoo.org> haproxy-1.5.6.ebuild,
+  haproxy-9999.ebuild, metadata.xml:
+  Fix live ebuild. Add separate USE-flag for JIT and also fix the libpcre
+  depend
 
 *haproxy-1.5.6 (19 Oct 2014)
 

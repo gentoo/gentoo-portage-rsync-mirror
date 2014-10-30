@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.124 2014/10/30 21:23:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.125 2014/10/30 21:32:38 vapier Exp $
+
+*gpsd-3.11 (30 Oct 2014)
+
+  30 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/gpsd-3.11-no-ntpshm.patch, +gpsd-3.11.ebuild:
+  Version bump.
 
   30 Oct 2014; Mike Frysinger <vapier@gentoo.org>
   +files/gpsd-3.10-nmea-disabled.patch, gpsd-3.10.ebuild:

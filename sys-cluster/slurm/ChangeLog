@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/slurm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.27 2014/07/30 01:03:14 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.28 2014/10/30 21:40:42 dilfridge Exp $
+
+  30 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> -slurm-2.4.5.ebuild,
+  -slurm-2.5.4.ebuild, -slurm-2.5.6.ebuild, -slurm-2.5.7.ebuild:
+  Drop old, acked by alexxy
 
   30 Jul 2014; Brian Evans <grknight@gentoo.org> slurm-2.4.5.ebuild,
   slurm-2.5.4.ebuild, slurm-2.5.6.ebuild, slurm-2.5.7.ebuild,

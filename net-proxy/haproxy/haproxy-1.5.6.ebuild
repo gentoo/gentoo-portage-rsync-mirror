@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5.6.ebuild,v 1.1 2014/10/19 09:11:44 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5.6.ebuild,v 1.2 2014/10/30 21:37:30 idl0r Exp $
 
 EAPI="5"
 
@@ -15,9 +15,11 @@ SRC_URI="http://haproxy.1wt.eu/download/$(get_version_component_range 1-2)/src/$
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="+crypt examples +pcre ssl tools vim-syntax +zlib"
+IUSE="+crypt examples +pcre pcre-jit ssl tools vim-syntax +zlib"
 
-DEPEND="pcre? ( dev-libs/libpcre )
+DEPEND="pcre? ( dev-libs/libpcre
+				pcre-jit? ( dev-libs/libpcre[jit] )
+				)
 	ssl? ( dev-libs/openssl[zlib?] )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
@@ -31,7 +33,7 @@ pkg_setup() {
 
 src_prepare() {
 	sed -e 's:@SBINDIR@:'/usr/bin':' contrib/systemd/haproxy.service.in \
-	> contrib/systemd/haproxy.service || die
+		> contrib/systemd/haproxy.service || die
 
 	sed -ie 's:/usr/sbin/haproxy:/usr/bin/haproxy:' src/haproxy-systemd-wrapper.c || die
 }
@@ -40,7 +42,12 @@ src_compile() {
 	local args="TARGET=linux2628 USE_GETADDRINFO=1"
 
 	if use pcre ; then
-		args="${args} USE_PCRE=1 USE_PCRE_JIT=1"
+		args="${args} USE_PCRE=1"
+		if use pcre-jit; then
+			args="${args} USE_PCRE_JIT=1"
+		else
+			args="${args} USE_PCRE_JIT="
+		fi
 	else
 		args="${args} USE_PCRE= USE_PCRE_JIT="
 	fi

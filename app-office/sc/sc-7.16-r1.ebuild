@@ -1,7 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.16-r1.ebuild,v 1.8 2014/08/10 18:17:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.16-r1.ebuild,v 1.9 2014/10/30 21:59:57 jer Exp $
 
+EAPI=5
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="sc is a free curses-based spreadsheet program that uses key bindings similar to vi and less"
@@ -11,31 +12,36 @@ HOMEPAGE="http://ibiblio.org/pub/Linux/apps/financial/spreadsheet/"
 SLOT="0"
 LICENSE="public-domain"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE=""
 
-DEPEND=">=sys-libs/ncurses-5.2"
-RDEPEND="${DEPEND}
+COMMON_DEPEND=">=sys-libs/ncurses-5.2"
+DEPEND="virtual/pkgconfig"
+RDEPEND="
+	${COMMON_DEPEND}
 	!dev-lang/stratego
-	!<sci-chemistry/ccp4-apps-6.1.3-r4"
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	!<sci-chemistry/ccp4-apps-6.1.3-r4
+"
 
-	sed -i	-e "/^prefix=/ s:/usr:${D}/usr:" \
-			-e "/^MANDIR=/ s:${prefix}/man:${prefix}/share/man:" \
-			-e "/^LIBDIR=/ s:${prefix}/lib:${prefix}/$(get_libdir):" \
-			-e "/^CC=/ s:gcc:$(tc-getCC):" \
-			-e "/^CFLAGS/ s:=-DSYSV3 -O2 -pipe:+=-DSYSV3:" \
-			-e "/strip/ s:^:#:g" \
-			Makefile
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-amd64.patch \
+		"${FILESDIR}"/${P}-lex-syntax.patch
 
-	epatch "${FILESDIR}"/${P}-amd64.patch
-	epatch "${FILESDIR}"/${P}-lex-syntax.patch
+	sed -i \
+		-e "/^prefix=/ s:/usr:${D}/usr:" \
+		-e "/^MANDIR=/ s:${prefix}/man:${prefix}/share/man:" \
+		-e "/^LIBDIR=/ s:${prefix}/lib:${prefix}/$(get_libdir):" \
+		-e '/^LIB=/s|-lncurses|$(shell ${PKG_CONFIG} --libs ncurses)|g' \
+		-e "/^CC=/ s:gcc:$(tc-getCC):" \
+		-e "/^CFLAGS/ s:=-DSYSV3 -O2 -pipe:+=-DSYSV3:" \
+		-e "/strip/ s:^:#:g" \
+		Makefile || die
+
 }
 
 src_compile() {
+	tc-export PKG_CONFIG
 	# no autoconf
-	emake prefix="${D}"/usr || die "emake failed"
+	emake prefix="${D}"/usr || die
 }
 
 src_install () {
@@ -43,9 +49,9 @@ src_install () {
 	dodir /usr/bin
 	dodir /usr/$(get_libdir)/sc
 	dodir /usr/share/man/man1
-	emake install || die
+	emake install
 
-	sed -i "s:${D}::g" sc.1
+	sed -i -e "s:${D}::g" sc.1 || die
 	doman sc.1 psc.1
 
 	dodoc CHANGES README sc.doc psc.doc tutorial.sc
