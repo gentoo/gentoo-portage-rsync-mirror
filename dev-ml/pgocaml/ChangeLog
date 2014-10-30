@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pgocaml
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pgocaml/ChangeLog,v 1.4 2013/08/19 13:57:46 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pgocaml/ChangeLog,v 1.5 2014/10/30 08:09:19 aballier Exp $
+
+*pgocaml-2.1 (30 Oct 2014)
+
+  30 Oct 2014; Alexis Ballier <aballier@gentoo.org> +pgocaml-2.1.ebuild:
+  version bump
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> -pgocaml-1.6.ebuild,
   -files/pgocaml-1.6-makefile.patch, -files/pgocaml-1.6-parallel-make.patch,

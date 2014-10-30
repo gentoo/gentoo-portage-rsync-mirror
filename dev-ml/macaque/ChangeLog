@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/macaque
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/macaque/ChangeLog,v 1.1 2013/02/07 20:43:32 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/macaque/ChangeLog,v 1.2 2014/10/30 08:11:53 aballier Exp $
+
+*macaque-0.7.1 (30 Oct 2014)
+
+  30 Oct 2014; Alexis Ballier <aballier@gentoo.org> +macaque-0.7.1.ebuild:
+  version bump
 
 *macaque-0.6.1 (07 Feb 2013)
 
