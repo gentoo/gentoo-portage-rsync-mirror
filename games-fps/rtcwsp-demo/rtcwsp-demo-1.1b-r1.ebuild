@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwsp-demo/rtcwsp-demo-1.1b-r1.ebuild,v 1.2 2014/10/17 09:14:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwsp-demo/rtcwsp-demo-1.1b-r1.ebuild,v 1.3 2014/10/30 09:54:27 ago Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -14,7 +14,7 @@ SRC_URI="mirror://idsoftware/wolf/linux/old/${MY_P}
 
 LICENSE="RTCW"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="strip mirror"
 

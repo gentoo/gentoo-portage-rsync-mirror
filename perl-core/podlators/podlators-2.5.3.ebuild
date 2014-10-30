@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/podlators-2.5.3.ebuild,v 1.3 2014/10/29 10:33:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/podlators-2.5.3.ebuild,v 1.4 2014/10/30 09:58:19 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Format POD source into various output formats"
 
 SLOT="0"
-KEYWORDS="amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8.8-r8

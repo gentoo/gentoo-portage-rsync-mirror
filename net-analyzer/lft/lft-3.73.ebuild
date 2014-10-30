@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-3.73.ebuild,v 1.2 2014/10/29 10:34:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-3.73.ebuild,v 1.3 2014/10/30 09:57:39 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~jer/${P}.tar.gz"
 
 LICENSE="VOSTROM"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
 DEPEND="net-libs/libpcap"
 RDEPEND="${DEPEND}"

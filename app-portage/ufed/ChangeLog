@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/ufed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.106 2014/10/29 09:37:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.107 2014/10/30 09:56:31 ago Exp $
+
+  30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> ufed-0.91.ebuild:
+  Stable for x86, wrt bug #524670
 
   29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> ufed-0.91.ebuild:
   Stable for sparc, wrt bug #524670

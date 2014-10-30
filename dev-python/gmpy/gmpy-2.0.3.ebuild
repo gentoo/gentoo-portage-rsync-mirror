@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-2.0.3.ebuild,v 1.6 2014/10/29 10:34:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-2.0.3.ebuild,v 1.7 2014/10/30 09:59:16 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="http://gmpy.googlecode.com/files/${MY_P}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~arm ~ia64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="mpir"
 
 RDEPEND="

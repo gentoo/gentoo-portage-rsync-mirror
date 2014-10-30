@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-50d.ebuild,v 1.3 2014/10/18 14:14:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-50d.ebuild,v 1.4 2014/10/30 09:54:45 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mirbsd.de/mksh"
 SRC_URI="http://www.mirbsd.org/MirOS/dist/mir/mksh/${PN}-R${PV}.tgz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="static"
 DEPEND="static? ( dev-libs/klibc )"
 RDEPEND=""
