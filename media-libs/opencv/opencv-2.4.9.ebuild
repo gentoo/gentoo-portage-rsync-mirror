@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.9.ebuild,v 1.4 2014/10/30 14:41:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.9.ebuild,v 1.5 2014/10/30 20:11:27 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -61,7 +61,7 @@ RDEPEND="
 	threads? ( dev-cpp/tbb )
 	tiff? ( media-libs/tiff )
 	v4l? ( >=media-libs/libv4l-0.8.3 )
-	vtk? ( sci-libs/vtk )
+	vtk? ( sci-libs/vtk[rendering] )
 	xine? ( media-libs/xine-lib )
 "
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.2.0.ebuild,v 1.3 2014/10/30 20:08:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.4.0.ebuild,v 1.1 2014/10/30 20:06:36 dilfridge Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="addressbook debug doc gphoto2 mysql nepomuk test themedesigner +thumbnails video"
+IUSE="addressbook debug doc gphoto2 mysql nepomuk semantic-desktop themedesigner +thumbnails video"
 
 CDEPEND="
 	$(add_kdebase_dep kdebase-kioslaves)
@@ -37,12 +37,13 @@ CDEPEND="
 	kde-base/marble:4=[plasma]
 	media-libs/jasper
 	media-libs/lcms:2
-	<media-libs/lensfun-0.3.0
+	media-libs/lensfun
 	>=media-libs/libkface-3.3.0
 	media-libs/libkgeomap
 	media-libs/liblqr
 	>=media-libs/libpgf-6.12.27
 	media-libs/libpng:0=
+	>=media-libs/opencv-2.4.9
 	media-libs/tiff
 	virtual/jpeg
 	dev-qt/qtgui:4
@@ -55,6 +56,9 @@ CDEPEND="
 		dev-libs/soprano
 		$(add_kdebase_dep kdelibs 'semantic-desktop(+)')
 		$(add_kdebase_dep nepomuk-core)
+	)
+	semantic-desktop? (
+		$(add_kdebase_dep baloo)
 	)
 "
 RDEPEND="${CDEPEND}
@@ -72,13 +76,14 @@ DEPEND="${CDEPEND}
 	dev-libs/boost
 	sys-devel/gettext
 	doc? ( app-doc/doxygen )
-	test? ( media-libs/opencv )
 "
 
 S="${WORKDIR}/${MY_P}/core"
 
 RESTRICT=test
 # bug 366505
+
+PATCHES=( "${FILESDIR}/${P}-libkexiv2.patch" )
 
 src_prepare() {
 	# just to make absolutely sure
@@ -125,6 +130,7 @@ src_configure() {
 		$(cmake-utils_use_enable mysql INTERNALMYSQL)
 		$(cmake-utils_use_enable debug DEBUG_MESSAGES)
 		$(cmake-utils_use_enable nepomuk NEPOMUKSUPPORT)
+		$(cmake-utils_use_enable semantic-desktop BALOOSUPPORT)
 	)
 
 	kde4-base_src_configure
