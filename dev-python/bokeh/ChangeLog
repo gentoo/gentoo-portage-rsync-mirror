@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bokeh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/ChangeLog,v 1.9 2014/10/29 15:11:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/ChangeLog,v 1.10 2014/10/30 10:59:05 idella4 Exp $
+
+  30 Oct 2014; Ian Delaney <idella4@gentoo.org> +files/0.5.0-setup.patch,
+  bokeh-0.5.0.ebuild:
+  add patch to purge check for previous install from setup.py, fixes Bug #527336
 
   29 Oct 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Drop python herd after discussion in IRC.

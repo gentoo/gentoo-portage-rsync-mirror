@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.117 2014/02/03 12:30:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.118 2014/10/30 10:55:32 aballier Exp $
+
+  30 Oct 2014; Alexis Ballier <aballier@gentoo.org> vtk-6.0.0.ebuild:
+  keyword ~arm
 
   03 Feb 2014; Justin Lecher <jlec@gentoo.org> vtk-6.0.0.ebuild:
   Be a ninja

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.1.9999.ebuild,v 1.3 2014/07/15 16:45:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.1.9999.ebuild,v 1.4 2014/10/30 10:54:43 jer Exp $
 
 EAPI=5
 
@@ -185,7 +185,7 @@ CONFIG_PROTECT=/var/spool/munin-async/.ssh
 EOF
 	newenvd "${T}"/munin.env 50munin
 
-	dodoc README ChangeLog INSTALL
+	dodoc README.rst ChangeLog INSTALL
 	if use doc; then
 		cd "${S}"/doc/_build/html
 		dohtml -r *

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/bokeh-0.5.0.ebuild,v 1.1 2014/10/29 06:40:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/bokeh-0.5.0.ebuild,v 1.2 2014/10/30 10:59:05 idella4 Exp $
 
 EAPI=5
 
@@ -54,6 +54,8 @@ DEPEND="
 		>=dev-python/colorama-0.2.7[${PYTHON_USEDEP}] )
 	"
 DOCS=( CHANGELOG QUICKSTART.md README.md )
+
+PATCHES=( "${FILESDIR}"/${PV}-setup.patch )
 
 DISTUTILS_NO_PARALLEL_BUILD=1
 
