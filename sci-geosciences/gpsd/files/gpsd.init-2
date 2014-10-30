@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/files/gpsd.init-2,v 1.2 2010/09/30 23:07:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/files/gpsd.init-2,v 1.3 2014/10/30 21:20:36 vapier Exp $
 
 depend() {
 	after dbus
@@ -12,6 +12,7 @@ PIDFILE=/var/run/${SVCNAME}.pid
 DAEMON=/usr/sbin/gpsd
 
 checkconfig() {
+	# Note: these GPSD_xxx var names should be kept in sync with the udev rules.
 	if [ -z "${GPSD_SOCKET}" ] && [ -z "${DEVICES}" ]; then
 		GPSD_SOCKET="/var/run/gpsd.sock"
 	fi

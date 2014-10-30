@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.10.ebuild,v 1.2 2014/07/30 19:41:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.10.ebuild,v 1.3 2014/10/30 21:23:08 vapier Exp $
 
 EAPI="5"
 
@@ -73,6 +73,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.10-rpath.patch
 	epatch "${FILESDIR}"/${PN}-3.10-dbus.patch
 	epatch "${FILESDIR}"/${PN}-3.10-udev-install.patch
+	epatch "${FILESDIR}"/${PN}-3.10-nmea-disabled.patch #493022
 
 	# Avoid useless -L paths to the install dir
 	sed -i \

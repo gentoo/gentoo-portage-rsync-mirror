@@ -1,9 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.27 2014/10/11 05:03:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.28 2014/10/30 21:01:49 dilfridge Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (30 Oct 2014)
+# Pulls in sci-libs/vtk with a lot of new dependencies; stabilizing
+# that will take some more time
+media-libs/opencv vtk
 
 # Michael Palimaka <kensington@gentoo.org> (09 Oct 2014)
 # Requires net-libs/libotr-4.0.0 which just came out of

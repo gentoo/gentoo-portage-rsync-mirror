@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.16 2014/07/30 19:41:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.18 2014/10/30 21:20:36 vapier Exp $
 
 EAPI="5"
 
@@ -26,7 +26,7 @@ SLOT="0"
 
 GPSD_PROTOCOLS=(
 	aivdm ashtech earthmate evermore fury fv18 garmin garmintxt
-	geostar gpsclock itrax mtk3301 navcom nmea nmea2000 ntrip
+	geostar gpsclock itrax mtk3301 navcom nmea0183 nmea2000 ntrip
 	oceanserver oncore rtcm104v2 rtcm104v3 sirf superstar2 tnt
 	tripmate tsip ublox
 )
@@ -61,7 +61,7 @@ fi
 src_prepare() {
 	# Make sure our list matches the source.
 	local src_protocols=$(echo $(
-		sed -n '/GPS protocols/,/Time service/{s:#.*::;s:[(",]::g;p}' "${S}"/SConstruct | awk '{print $1}' | LC_ALL=C sort
+		sed -n '/# GPS protocols/,/# Time service/{s:#.*::;s:[(",]::g;p}' "${S}"/SConstruct | awk '{print $1}' | LC_ALL=C sort
 	) )
 	if [[ ${src_protocols} != ${GPSD_PROTOCOLS[*]} ]] ; then
 		eerror "Detected protocols: ${src_protocols}"
@@ -70,7 +70,8 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-3.8-ldflags.patch
-	epatch "${FILESDIR}"/${PN}-3.10-rpath.patch
+	epatch "${FILESDIR}"/${PN}-3.11-rpath.patch
+	epatch "${FILESDIR}"/${PN}-3.11-hotplug-config.patch #511584
 
 	# Avoid useless -L paths to the install dir
 	sed -i \

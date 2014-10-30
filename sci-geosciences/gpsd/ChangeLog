@@ -1,6 +1,19 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.121 2014/08/10 20:27:43 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.124 2014/10/30 21:23:08 vapier Exp $
+
+  30 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/gpsd-3.10-nmea-disabled.patch, gpsd-3.10.ebuild:
+  Add fix from upstream for building w/nmea driver disabled #493022 by
+  n1ghtmare.
+
+  30 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/gpsd-3.11-hotplug-config.patch, files/gpsd.init-2, gpsd-9999.ebuild:
+  Source /etc/conf.d/gpsd in hotplug rules #511584 by Mark Wagner.
+
+  30 Oct 2014; Mike Frysinger <vapier@gentoo.org> +files/gpsd-3.11-rpath.patch,
+  gpsd-9999.ebuild:
+  Update ebuild to match latest git source #527000 by Michal Privoznik.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gpsd-2.95-r1.ebuild,
   gpsd-2.96-r1.ebuild:
