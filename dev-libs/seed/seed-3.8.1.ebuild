@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/seed-3.8.1.ebuild,v 1.6 2014/10/05 12:08:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/seed-3.8.1.ebuild,v 1.7 2014/10/31 14:38:30 pacho Exp $
 
 EAPI=5
 GNOME2_LA_PUNT="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/Seed"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd"
 IUSE="debug profile test"
 REQUIRED_USE="profile? ( debug )"
 
