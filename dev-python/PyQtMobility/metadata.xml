@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>qt</herd>
-	<herd>python</herd>
 	<use>
 		<flag name="contacts">Build bindings for the QtContacts module</flag>
 		<flag name="feedback">Build bindings for the QtFeedback module</flag>
