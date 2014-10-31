@@ -1,5 +1,5 @@
---- Makefile
-+++ Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -2,12 +2,12 @@
  
  # You need an ANSI C compiler. gcc is probably best.
@@ -26,7 +26,7 @@
 +gtk1: all
 +
 +# GTK+2 stuff: "make gtk2"
-+gtk2: GTKCONFIG:=pkg-config gtk+-2.0
++gtk2: GTKCONFIG:=$(PKG_CONFIG) gtk+-2.0
 +gtk2: GTKFLAGS:=-DGTK2 $(shell \
 +			 $(GTKCONFIG) --modversion | \
 +			 awk 'BEGIN { FS="." } \
@@ -40,16 +40,16 @@
  
  xaylet: $(XOBJS)
 -	$(CC) -o xaylet $(XOBJS) `gtk-config --libs`
-+	$(CC) $(LDFLAGS) $(CFLAGS) -o xaylet $(XOBJS) `$(GTKCONFIG) --libs`
++	$(CC) $(LDFLAGS) $(CFLAGS) -o xaylet $(XOBJS) $(shell $(GTKCONFIG) --libs)
  
  uigtk.o: uigtk.c
 -	$(CC) $(CFLAGS) `gtk-config --cflags` -c uigtk.c -o uigtk.o
-+	$(CC) $(CFLAGS) $(GTKFLAGS) `$(GTKCONFIG) --cflags` -c uigtk.c -o uigtk.o
++	$(CC) $(CFLAGS) $(GTKFLAGS) $(shell $(GTKCONFIG) --cflags) -c uigtk.c -o uigtk.o
  
  installdirs:
  	/bin/sh ./mkinstalldirs $(BINDIR) $(XBINDIR) $(MANDIR)
---- ui.c
-+++ ui.c
+--- a/ui.c
++++ b/ui.c
 @@ -5,7 +5,9 @@
   */
  
@@ -71,8 +71,8 @@
    }
  
  /* update time display */
---- uigtk.c
-+++ uigtk.c
+--- a/uigtk.c
++++ b/uigtk.c
 @@ -14,11 +14,13 @@
  #include "ui.h"
  

@@ -5822,7 +5822,8 @@ net-misc/tlsdate:seccomp - Use seccomp syscall filters to improve security
 net-misc/tor:bufferevents - Use libevent's buffered IO implementation (unstable, buggy)
 net-misc/tor:ecc - Enable Elliptical Curve Cyptography
 net-misc/tor:nat-pmp - Enable NAT Port Mapping Protocol
-net-misc/tor:stats - Enable to keep track of how much of each kind of resource we download
+net-misc/tor:seccomp - Enable seccomp for system call filtering
+net-misc/tor:stats - Enable tracking of how much of each kind of resource we download
 net-misc/tor:tor-hardening - Compile tor with hardening on vanilla compilers/linkers
 net-misc/tor:transparent-proxy - Enable transparent proxying
 net-misc/tor:web - Build a tor2web service instead of a tor client

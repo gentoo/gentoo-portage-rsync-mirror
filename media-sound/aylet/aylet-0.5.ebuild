@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.5.ebuild,v 1.10 2014/08/10 21:04:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.5.ebuild,v 1.11 2014/10/31 11:37:20 jer Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Aylet plays music files in the .ay format"
@@ -24,15 +24,15 @@ src_prepare() {
 }
 
 src_compile() {
-	tc-export CC
+	tc-export CC PKG_CONFIG
 
-	emake ${PN} || die
-	use gtk && { emake gtk2 || die; }
+	emake ${PN} CURSES_LIB="$( ${PKG_CONFIG} --libs ncurses)"
+	use gtk && emake gtk2
 }
 
 src_install() {
-	dobin ${PN} || die
-	use gtk && { dobin x${PN} || die; }
+	dobin ${PN}
+	use gtk && dobin x${PN}
 
 	doman ${PN}.1
 	use gtk && echo '.so aylet.1' > "${D}"/usr/share/man/man1/xaylet.1

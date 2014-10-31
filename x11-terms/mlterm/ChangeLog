@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.101 2014/09/28 08:41:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.102 2014/10/31 11:48:26 hattya Exp $
+
+*mlterm-3.4.0 (31 Oct 2014)
+
+  31 Oct 2014; Akinori Hattori <hattya@gentoo.org> +mlterm-3.4.0.ebuild:
+  new upstream release
 
   28 Sep 2014; Akinori Hattori <hattya@gentoo.org> mlterm-3.3.8.ebuild:
   addpredict /dev/ptmx wrt bug #523112

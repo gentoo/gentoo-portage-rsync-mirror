@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1434 2014/10/30 23:23:54 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1436 2014/10/31 11:45:34 mpagano Exp $
+
+  31 Oct 2014; Mike Pagano <mpagano@gentoo.org> -gentoo-sources-3.10.57.ebuild,
+  -gentoo-sources-3.12.29.ebuild, -gentoo-sources-3.14.16.ebuild,
+  -gentoo-sources-3.14.20.ebuild, -gentoo-sources-3.14.22.ebuild,
+  -gentoo-sources-3.16.4.ebuild, -gentoo-sources-3.16.6.ebuild,
+  -gentoo-sources-3.17.1.ebuild, -gentoo-sources-3.17.1-r1.ebuild,
+  gentoo-sources-3.17.2.ebuild:
+  Remove old, unsupported versions
+
+*gentoo-sources-3.10.59 (31 Oct 2014)
+
+  31 Oct 2014; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.10.59.ebuild:
+  Linux patch 3.10.59
+
+  30 Oct 2014; Mike Pagano <mpagano@gentoo.org> gentoo-sources-3.17.2.ebuild:
+  Fix BFQ IO patch for use=experimental. Bug #527534
 
 *gentoo-sources-3.14.23 (30 Oct 2014)
 

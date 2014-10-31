@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aylet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.18 2014/08/10 21:04:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.19 2014/10/31 11:37:20 jer Exp $
+
+  31 Oct 2014; Jeroen Roovers <jer@gentoo.org> aylet-0.5.ebuild,
+  files/aylet-0.5-gtk.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #526498).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> aylet-0.5.ebuild:
   QA: drop trailing '.' from DESCRIPTION
