@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/freesweep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/freesweep/ChangeLog,v 1.6 2014/10/30 22:34:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/freesweep/ChangeLog,v 1.7 2014/10/31 02:01:18 mr_bones_ Exp $
+
+  31 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> freesweep-0.92.ebuild:
+  tidy
 
   30 Oct 2014; Jeroen Roovers <jer@gentoo.org> freesweep-0.92.ebuild:
   Fix building against sys-libs/ncurses[tinfo] (bug #526710).

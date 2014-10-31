@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/freesweep/freesweep-0.92.ebuild,v 1.6 2014/10/30 22:34:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/freesweep/freesweep-0.92.ebuild,v 1.7 2014/10/31 02:01:18 mr_bones_ Exp $
 
 EAPI=5
-inherit games toolchain-funcs
+inherit toolchain-funcs games
 
 DESCRIPTION="Console Minesweeper"
 HOMEPAGE="http://freshmeat.net/projects/freesweep"
@@ -14,10 +14,8 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~ppc-macos"
 
 RDEPEND="sys-libs/ncurses"
-DEPEND="
-	${RDEPEND}
-	virtual/pkgconfig
-"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_compile() {
 	emake LIBS="$( $(tc-getPKG_CONFIG) --libs ncurses)"
