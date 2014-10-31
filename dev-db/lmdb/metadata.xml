@@ -4,6 +4,7 @@
 <longdescription lang="en">
 	An ultra-fast, ultra-compact key-value embedded data store
 </longdescription>
+<herd>ldap</herd>
 <maintainer>
 	<email>eras@gentoo.org</email>
 	<name>Eray Aslan</name>

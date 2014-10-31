@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.439 2014/10/25 17:37:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.440 2014/10/31 10:31:36 blueness Exp $
+
+  31 Oct 2014; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.5.9_rc.ebuild:
+  Remove older RC
 
 *tor-0.2.5.10 (25 Oct 2014)
 
