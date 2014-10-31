@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9502 2014/10/30 16:40:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9503 2014/10/31 02:37:25 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Oct 2014; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask the msp430 toolchain for removal.
 
   30 Oct 2014; Alexis Ballier <aballier@gentoo.org> updates/4Q-2014:
   move dev-ml/async_core dev-ml/async_kernel; it was actually a rename

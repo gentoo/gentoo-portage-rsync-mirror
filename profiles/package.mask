@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16131 2014/10/30 14:45:28 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16132 2014/10/31 02:37:25 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (31 Oct 2014)
+# Deprecated, use >=sys-devel/crossdev-20141030 to build an msp430
+# toolchain using the standard binutils/gcc/newlib/gdb packages.
+# Masked for removal in 30 days.
+dev-embedded/msp430-binutils
+dev-embedded/msp430-gcc
+dev-embedded/msp430-gdb
+dev-embedded/msp430-libc
+dev-embedded/msp430mcu
 
 # Jauhien Piatlicki <jauhien@gentoo.org> (30 Oct 2014)
 # Mask LXQt-0.8.0 release for testing
