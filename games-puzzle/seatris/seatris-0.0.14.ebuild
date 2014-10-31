@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.12 2014/10/30 22:20:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.13 2014/10/31 02:00:21 mr_bones_ Exp $
 
 EAPI=5
-inherit eutils games toolchain-funcs
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="A color ncurses tetris clone"
 HOMEPAGE="http://www.earth.li/projectpurple/progs/seatris.html"
@@ -14,10 +14,8 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 x86"
 
 RDEPEND="sys-libs/ncurses"
-DEPEND="
-	${DEPEND}
-	virtual/pkgconfig
-"
+DEPEND="${DEPEND}
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \
@@ -32,7 +30,7 @@ src_compile() {
 }
 
 src_install () {
-	dogamesbin seatris || die
+	dogamesbin seatris
 	doman seatris.6
 	dodoc ACKNOWLEDGEMENTS HISTORY README TODO example.seatrisrc
 	dodir "${GAMES_STATEDIR}"

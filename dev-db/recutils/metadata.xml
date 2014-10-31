@@ -6,7 +6,8 @@
 		<name>Tim Harder</name>
 	</maintainer>
 	<use>
-		<flag name="mdb">Build the mdb2rec utility</flag>
 		<flag name="curl">Enable support for remote descriptors using libcurl</flag>
+		<flag name="mdb">Build the mdb2rec utility</flag>
+		<flag name="uuid">Enable support for uuid types</flag>
 	</use>
 </pkgmetadata>

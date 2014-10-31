@@ -1298,6 +1298,7 @@ dev-db/postgresql-server:uuid - Enable server side UUID generation (via dev-libs
 dev-db/psqlodbc:iodbc - Use dev-db/libiodbc. Disable to use dev-db/unixODBC.
 dev-db/recutils:curl - Enable support for remote descriptors using libcurl
 dev-db/recutils:mdb - Build the mdb2rec utility
+dev-db/recutils:uuid - Enable support for uuid types
 dev-db/redis:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/redis:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
 dev-db/soci:boost - Enable boost support
