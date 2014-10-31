@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.144 2014/07/06 12:44:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.145 2014/10/31 11:29:53 idella4 Exp $
+
+*logilab-common-0.62.1 (31 Oct 2014)
+
+  31 Oct 2014; Ian Delaney <idella4@gentoo.org> +logilab-common-0.62.1.ebuild:
+  bump; (0.62.0 never added due to test fails) update test phase, known test
+  fails filed and cited in bug upstream
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> logilab-common-0.61.0.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-

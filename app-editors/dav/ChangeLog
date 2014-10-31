@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/dav
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/dav/ChangeLog,v 1.19 2012/05/09 14:33:52 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/dav/ChangeLog,v 1.20 2014/10/31 11:20:24 jer Exp $
+
+  31 Oct 2014; Jeroen Roovers <jer@gentoo.org> dav-0.8.5-r1.ebuild:
+  Fix building against sys-libs/ncurses[tinfo] (bug #526356).
 
   09 May 2012; Agostino Sarubbo <ago@gentoo.org> -dav-0.8.5.ebuild:
   Remove old

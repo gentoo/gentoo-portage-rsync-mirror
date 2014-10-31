@@ -1,6 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/shmux-1.0.2.ebuild,v 1.6 2013/04/17 07:59:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/shmux-1.0.2.ebuild,v 1.7 2014/10/31 11:11:02 jer Exp $
+
+EAPI="5"
+inherit autotools eutils
 
 DESCRIPTION="Program for executing the same command on many hosts in parallel"
 HOMEPAGE="http://web.taranis.org/shmux/"
@@ -19,13 +22,17 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/awk"
 
-src_compile() {
-	econf $(use_with pcre) || die "econf failed"
-	emake || die "emake failed"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-tinfo.patch
+	eautoreconf
+}
+
+src_configure() {
+	econf $(use_with pcre)
 }
 
 src_install() {
-	dobin src/shmux || die "dobin failed"
-	doman shmux.1 || die "doman failed"
-	dodoc CHANGES || die "dodoc failed"
+	dobin src/shmux
+	doman shmux.1
+	dodoc CHANGES
 }
