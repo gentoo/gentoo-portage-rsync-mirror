@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/cavezofphear
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/ChangeLog,v 1.17 2014/08/25 20:48:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/ChangeLog,v 1.18 2014/10/31 20:51:02 mr_bones_ Exp $
+
+  31 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  cavezofphear-0.5.1.ebuild, files/cavezofphear-0.5.1-gentoo.patch:
+  build with ncurses[tinfo] (bug #527606)
 
   25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -cavezofphear-0.5.ebuild,
   -files/cavezofphear-0.5-gentoo.patch:

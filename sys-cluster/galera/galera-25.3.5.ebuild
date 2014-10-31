@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/galera-25.3.5.ebuild,v 1.1 2014/07/30 06:26:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/galera-25.3.5.ebuild,v 1.2 2014/10/31 20:33:34 grknight Exp $
 
 EAPI=5
 
 MY_P="${PN}-${PV}-src"
 
-inherit scons-utils multilib toolchain-funcs base versionator eutils
+inherit scons-utils multilib toolchain-funcs base versionator eutils user
 DESCRIPTION="Synchronous multi-master replication engine that provides its service through wsrep API"
 HOMEPAGE="http://www.codership.org/"
 SRC_URI="https://launchpad.net/${PN}/$(get_version_component_range 2).x/${PV}/+download/${MY_P}.tar.gz"
