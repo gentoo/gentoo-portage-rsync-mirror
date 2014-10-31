@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.300 2014/10/23 14:53:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.301 2014/10/31 00:17:46 vapier Exp $
+
+*qemu-2.1.2-r1 (31 Oct 2014)
+
+  31 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/qemu-2.1.2-vnc-sanitize-bits.patch, +qemu-2.1.2-r1.ebuild:
+  Add fix from upstream for vnc arg sanitizing #527088 by Agostino Sarubbo.
 
   23 Oct 2014; Agostino Sarubbo <ago@gentoo.org> qemu-2.1.1.ebuild:
   Stable for x86, wrt bug #522364

@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/vigra
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.63 2013/09/16 09:42:55 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.65 2014/10/31 00:26:30 tamiko Exp $
+
+  31 Oct 2014; Matthias Maier <tamiko@gentoo.org> vigra-1.10.0.ebuild:
+  install documentation into correct folder, aka fix typo
+
+*vigra-1.10.0 (31 Oct 2014)
+
+  31 Oct 2014; Matthias Maier <tamiko@gentoo.org>
+  +files/vigra-1.10.0-automagicness.patch,
+  +files/vigra-1.10.0-cmake-scripts.patch, +files/vigra-1.10.0-mpi-fixes.patch,
+  +vigra-1.10.0.ebuild, vigra-1.9.0.ebuild:
+  version bump, bug 494214 ; original patches and ebuild modifications by J. M.
+  Gottfried
 
   16 Sep 2013; Tomáš Chvátal <scarabeus@gentoo.org> vigra-1.9.0.ebuild:
   Subslot dep on boost is must to trigger rebuilds properly.
