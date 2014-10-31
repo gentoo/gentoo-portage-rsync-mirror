@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/argh-0.23.1.ebuild,v 1.4 2014/07/06 12:36:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/argh-0.26.0.ebuild,v 1.1 2014/10/31 03:30:32 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -21,11 +21,10 @@ RDEPEND=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		dev-python/pytest[${PYTHON_USEDEP}]
-		dev-python/mock[${PYTHON_USEDEP}]
+		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7 pypy)
 		${RDEPEND}
 	)"
 
 python_test() {
-	# setup.py tries to install argparse for some reason...
 	py.test || die "Tests fail with ${EPYTHON}"
 }
