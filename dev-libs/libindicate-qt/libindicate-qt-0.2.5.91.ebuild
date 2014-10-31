@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/libindicate-qt-0.2.5.91.ebuild,v 1.5 2013/03/02 20:01:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/libindicate-qt-0.2.5.91.ebuild,v 1.6 2014/10/31 13:37:03 kensington Exp $
 
 EAPI=4
 inherit eutils virtualx cmake-utils
@@ -22,6 +22,9 @@ RDEPEND=">=dev-libs/libindicate-12.10.0
 DEPEND="${RDEPEND}
 	test? ( dev-qt/qttest:4 )
 	virtual/pkgconfig"
+
+# bug #440042
+RESTRICT="test"
 
 src_prepare() {
 	EPATCH_FORCE=yes EPATCH_SUFFIX=diff epatch "${WORKDIR}"/debian/patches
