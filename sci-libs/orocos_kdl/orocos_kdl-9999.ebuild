@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/orocos_kdl/orocos_kdl-9999.ebuild,v 1.1 2014/10/30 18:19:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/orocos_kdl/orocos_kdl-9999.ebuild,v 1.2 2014/10/31 10:17:51 aballier Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ if [ "${PV#9999}" != "${PV}" ] ; then
 	KEYWORDS=""
 	SRC_URI=""
 else
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm"
 	SRC_URI="http://github.com/orocos/orocos_kinematics_dynamics/archive/v${PV}.tar.gz -> orocos_kinematics_dynamics-${PV}.tar.gz"
 fi
 
