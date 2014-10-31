@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-7.1.ebuild,v 1.1 2014/10/17 16:48:02 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-7.1.ebuild,v 1.2 2014/10/31 12:57:02 kensington Exp $
 
 EAPI=5
 
@@ -42,6 +42,9 @@ src_prepare() {
 			rm po/${PN}_${lang}.po
 		fi
 	done
+
+	# fix parallel build wrt bug #527192
+	echo "src.depends = lib" >> ${PN}.pro || die
 }
 
 src_configure() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.60 2014/10/17 16:51:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.61 2014/10/31 12:57:02 kensington Exp $
+
+  31 Oct 2014; Michael Palimaka <kensington@gentoo.org> kchmviewer-7.1.ebuild:
+  Solve parallel build failure wrt bug #527192.
 
   17 Oct 2014; Michael Palimaka <kensington@gentoo.org> metadata.xml:
   Add upstream metadata.

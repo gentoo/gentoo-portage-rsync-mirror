@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitinspector
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitinspector/ChangeLog,v 1.2 2014/06/23 06:59:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitinspector/ChangeLog,v 1.3 2014/10/31 12:39:29 jlec Exp $
+
+  31 Oct 2014; Justin Lecher <jlec@gentoo.org> gitinspector-0.3.2.ebuild:
+  Fix for unknown LC_ALL, #527340
 
 *gitinspector-0.3.2 (23 Jun 2014)
 

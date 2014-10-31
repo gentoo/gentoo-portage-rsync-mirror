@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pytables
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.53 2014/09/17 07:21:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.54 2014/10/31 12:52:06 jlec Exp $
+
+*pytables-3.1.1-r1 (31 Oct 2014)
+
+  31 Oct 2014; Justin Lecher <jlec@gentoo.org> pytables-3.1.1.ebuild,
+  +pytables-3.1.1-r1.ebuild, +files/pytables-3.1.1-numpy19-backport.patch:
+  Backport fix for numpy-1.9, #527366
 
   17 Sep 2014; Justin Lecher <jlec@gentoo.org> pytables-3.1.1.ebuild,
   +files/pytables-3.1.1-cython-backport.patch, metadata.xml:
