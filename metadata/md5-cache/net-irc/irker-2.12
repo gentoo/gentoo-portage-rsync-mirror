@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare setup
+DEPEND=app-text/docbook-xml-dtd:4.1.2 app-text/xmlto
+DESCRIPTION=Submission tools for IRC notifications
+EAPI=5
+HOMEPAGE=http://www.catb.org/esr/irker/
+IUSE=python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_single_target_python2_7 python_single_target_python3_2 python_single_target_python3_3
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+SLOT=0
+SRC_URI=http://www.catb.org/esr/irker/irker-2.12.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=c66d9d2382f56e5ecfecead7025d9beb

@@ -1,13 +1,13 @@
 # ChangeLog for dev-python/argh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/ChangeLog,v 1.22 2014/10/31 03:30:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/ChangeLog,v 1.23 2014/10/31 03:36:49 idella4 Exp $
 
 *argh-0.26.0 (31 Oct 2014)
 
   31 Oct 2014; Ian Delaney <idella4@gentoo.org> +argh-0.26.0.ebuild,
   -argh-0.23.0-r1.ebuild, -argh-0.23.1.ebuild, -argh-0.23.2.ebuild,
   -argh-0.23.3.ebuild, -argh-0.24.1.ebuild:
-  bump
+  bump, remove old
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> argh-0.25.0.ebuild:
   Stable for amd64, wrt bug #518240
