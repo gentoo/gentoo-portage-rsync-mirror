@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129-r1.ebuild,v 1.7 2014/10/14 06:08:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129-r1.ebuild,v 1.8 2014/10/31 16:33:19 jlec Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="Protein secondary structure assignment from atomic coordinates"
 HOMEPAGE="http://webclu.bio.wzw.tum.de/stride/"
 SRC_URI="
 	ftp://ftp.ebi.ac.uk/pub/software/unix/${PN}/src/${PN}.tar.gz
-	http://dev.gentoo.org/~jlec/${PN}-20060723-update.patch.bz2"
+	http://dev.gentoo.org/~jlec/distfiles/${PN}-20060723-update.patch.bz2"
 
 SLOT="0"
 LICENSE="STRIDE"

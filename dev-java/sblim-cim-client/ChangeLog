@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/sblim-cim-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sblim-cim-client/ChangeLog,v 1.5 2014/05/23 15:20:07 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sblim-cim-client/ChangeLog,v 1.6 2014/10/31 16:39:12 ercpe Exp $
+
+*sblim-cim-client-2.2.1-r1 (31 Oct 2014)
+
+  31 Oct 2014; Johann Schmitz <ercpe@gentoo.org>
+  +files/2.2.1-no-network-tests.patch, +sblim-cim-client-2.2.1-r1.ebuild,
+  -files/sblim-cim-client-1.3.5-java-doc-without-clean.patch:
+  Dropped useless patch file; removed network tests (bug #526656)
 
   23 May 2014; Tom Wijsman <TomWij@gentoo.org> -sblim-cim-client-1.3.5.ebuild,
   -sblim-cim-client-2.0.5.ebuild:
