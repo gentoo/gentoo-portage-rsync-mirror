@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.227 2014/10/28 01:01:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.228 2014/10/31 21:08:12 vapier Exp $
+
+*libtool-2.4.3-r1 (31 Oct 2014)
+
+  31 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/libtool-2.4.3-no-clean-gnulib.patch, +libtool-2.4.3-r1.ebuild:
+  Do not delete headers installed by gnulib #527200 by Jorge Nerin.
 
 *libtool-2.4.3 (28 Oct 2014)
 

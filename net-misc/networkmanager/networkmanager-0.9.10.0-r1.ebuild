@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.0-r1.ebuild,v 1.4 2014/10/23 19:37:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.0-r1.ebuild,v 1.5 2014/10/31 21:05:46 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -121,7 +121,7 @@ src_prepare() {
 	# Find arping at proper place, bug #523632
 	epatch "${FILESDIR}/${PN}-0.9.10.0-arpingpath.patch"
 
-	# Use python2.7 shebangs for test scripts
+	# Use python2.7 shebangs for test scripts, upstream bug #739448
 	sed -e 's@\(^#!.*python\)@\12.7@' \
 		-i */tests/*.py || die
 
