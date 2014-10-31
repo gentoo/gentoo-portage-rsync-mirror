@@ -1,23 +1,24 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.99.0.ebuild,v 1.3 2014/10/27 22:34:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-99999999.ebuild,v 1.1 2014/10/30 23:53:12 jer Exp $
 
 EAPI=5
-inherit autotools eutils fcaps qt4-r2 user
+inherit autotools eutils fcaps git-r3 multilib qt4-r2 user
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
-SRC_URI="${HOMEPAGE}download/src/all-versions/${P}.tar.bz2"
+EGIT_REPO_URI="https://code.wireshark.org/review/wireshark"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="
 	adns +caps crypt doc doc-pdf geoip +gtk3 ipv6 kerberos lua +netlink +pcap
-	portaudio +qt4 selinux smi sse4_2 ssl zlib
+	portaudio +qt4 qt5 selinux smi sse4_2 ssl zlib
 "
 REQUIRED_USE="
 	ssl? ( crypt )
+	?? ( qt4 qt5 )
 "
 
 GTK_COMMON_DEPEND="
@@ -46,12 +47,18 @@ RDEPEND="
 		dev-qt/qtgui:4
 		x11-misc/xdg-utils
 		)
+	qt5? (
+		dev-qt/qtcore:5
+		dev-qt/qtgui:5
+		dev-qt/qtprintsupport:5
+		dev-qt/qtwidgets:5
+		x11-misc/xdg-utils
+	)
 	selinux? ( sec-policy/selinux-wireshark )
 	smi? ( net-libs/libsmi )
 	ssl? ( net-libs/gnutls )
 	zlib? ( sys-libs/zlib !=sys-libs/zlib-1.2.4 )
 "
-
 # We need perl for `pod2html`.  The rest of the perl stuff is to block older
 # and broken installs. #455122
 DEPEND="
@@ -76,17 +83,18 @@ pkg_setup() {
 	enewgroup wireshark
 }
 
+src_unpack() {
+	git-r3_src_unpack
+}
+
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
 		"${FILESDIR}"/${PN}-1.11.0-oldlibs.patch \
 		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch \
 		"${FILESDIR}"/${PN}-1.99.0.1975-gcc_option.patch \
-		"${FILESDIR}"/${PN}-1.99.0.1975-sse4_2.patch
-
-	# Qt5 support is broken since the build system does not determine
-	# properly which `moc' it ought to use
-	sed -i -e 's| Qt5||g' acinclude.m4 || die
+		"${FILESDIR}"/${PN}-1.99.0.1975-sse4_2.patch \
+		"${FILESDIR}"/${PN}-1.99.0-qt5.patch
 
 	epatch_user
 
@@ -110,11 +118,14 @@ src_configure() {
 	fi
 
 	# Enable wireshark binary with any supported GUI toolkit (bug #473188)
-	if use gtk3 || use qt4 ; then
+	if use gtk3 || use qt4 || use qt5; then
 		myconf+=( "--enable-wireshark" )
 	else
 		myconf+=( "--disable-wireshark" )
 	fi
+
+	use qt4 && export QT_MIN_VERSION=4.6.0
+	use qt5 && export QT_MIN_VERSION=5.3.0
 
 	# Hack around inability to disable doxygen/fop doc generation
 	use doc || export ac_cv_prog_HAVE_DOXYGEN=false
@@ -134,7 +145,10 @@ src_configure() {
 		$(use_with pcap dumpcap-group wireshark) \
 		$(use_with pcap) \
 		$(use_with portaudio) \
-		$(use_with qt4 qt) \
+		$(use_with qt4) \
+		$(use_with qt5) \
+		$(usex qt5 MOC=/usr/$(get_libdir)/qt5/bin/moc '') \
+		$(usex qt5 UIC=/usr/$(get_libdir)/qt5/bin/uic '') \
 		$(use_with smi libsmi) \
 		$(use_with ssl gnutls) \
 		$(use_with zlib) \

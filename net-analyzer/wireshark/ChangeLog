@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.662 2014/10/27 22:34:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.663 2014/10/30 23:53:12 jer Exp $
+
+*wireshark-99999999 (30 Oct 2014)
+
+  30 Oct 2014; Jeroen Roovers <jer@gentoo.org> -wireshark-1.99.0.ebuild,
+  +wireshark-99999999.ebuild:
+  Add live ebuild.
 
   27 Oct 2014; Mike Frysinger <vapier@gentoo.org> wireshark-1.12.1.ebuild,
   wireshark-1.99.0-r1.ebuild, wireshark-1.99.0.ebuild:
