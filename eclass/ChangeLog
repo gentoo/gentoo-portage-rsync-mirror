@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1396 2014/10/30 13:21:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1397 2014/10/31 00:57:49 pesa Exp $
+
+  31 Oct 2014; Davide Pesavento <pesa@gentoo.org> multibuild.eclass:
+  Make sure BUILD_DIR exists before pushd'ing into it.
 
   30 Oct 2014; Pacho Ramos <pacho@gentoo.org> vala.eclass:
   Fix repoman warnings (#521980 by Arfrever Frehtes Taifersar Arahesis)
