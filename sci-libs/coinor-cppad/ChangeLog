@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/coinor-cppad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-cppad/ChangeLog,v 1.4 2014/05/21 18:25:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-cppad/ChangeLog,v 1.5 2014/10/31 09:08:43 jlec Exp $
+
+*coinor-cppad-20140519-r1 (31 Oct 2014)
+
+  31 Oct 2014; Justin Lecher <jlec@gentoo.org>
+  +coinor-cppad-20140519-r1.ebuild, +files/coinor-cppad-20140519-boost.patch,
+  +files/coinor-cppad-20140519-dash.patch:
+  Fix incomptibility with /bin/sh -> dash; #527496; fix boost detection
 
 *coinor-cppad-20140519 (21 May 2014)
 
