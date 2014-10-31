@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.441 2014/10/31 11:48:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.442 2014/10/31 15:41:05 blueness Exp $
+
+  31 Oct 2014; Anthony G. Basile <blueness@gentoo.org> metadata.xml,
+  tor-0.2.6.1_alpha.ebuild:
+  Add USE=scrypt for tor-0.2.6.x
 
 *tor-0.2.6.1_alpha (31 Oct 2014)
 

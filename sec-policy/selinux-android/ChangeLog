@@ -1,0 +1,9 @@
+# ChangeLog for sec-policy/selinux-android
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-android/ChangeLog,v 1.1 2014/10/31 15:31:42 swift Exp $
+
+*selinux-android-9999 (31 Oct 2014)
+
+  31 Oct 2014; Sven Vermeulen <swift@gentoo.org> +selinux-android-9999.ebuild:
+  Adding SELinux policy for Android tools
+

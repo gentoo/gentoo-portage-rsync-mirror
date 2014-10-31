@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.1_alpha.ebuild,v 1.1 2014/10/31 11:48:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.1_alpha.ebuild,v 1.2 2014/10/31 15:41:05 blueness Exp $
 
 EAPI="5"
 
@@ -16,14 +16,15 @@ S="${WORKDIR}/${MY_PF}"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="-bufferevents nat-pmp seccomp selinux stats tor-hardening transparent-proxy test upnp web"
+KEYWORDS="~amd64"
+IUSE="-bufferevents nat-pmp scrypt seccomp selinux stats tor-hardening transparent-proxy test upnp web"
 
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
 	dev-libs/libevent
 	bufferevents? ( dev-libs/libevent[ssl] )
 	nat-pmp? ( net-libs/libnatpmp )
+	scrypt? ( app-crypt/libscrypt )
 	seccomp? ( sys-libs/libseccomp )
 	upnp? ( net-libs/miniupnpc )
 	selinux? ( sec-policy/selinux-tor )"
@@ -47,13 +48,13 @@ src_configure() {
 	# We disable libscrypt until I get it in the tree
 	econf \
 		--disable-buf-freelists \
-		--disable-libscrypt \
 		--enable-asciidoc \
 		--enable-mempools \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable stats instrument-downloads) \
 		$(use_enable bufferevents) \
 		$(use_enable nat-pmp) \
+		$(use_enable scrypt libscrypt) \
 		$(use_enable seccomp) \
 		$(use_enable tor-hardening gcc-hardening) \
 		$(use_enable tor-hardening linker-hardening) \

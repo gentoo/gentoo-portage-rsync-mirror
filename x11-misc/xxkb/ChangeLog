@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xxkb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.30 2014/09/21 10:56:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.31 2014/10/31 15:47:08 nimiux Exp $
+
+  31 Oct 2014; Chema Alonso <nimiux@gentoo.org> xxkb-1.11-r3.ebuild:
+  Stable for amd64 wrt bug #523158
 
   21 Sep 2014; Jeroen Roovers <jer@gentoo.org> files/missing_init.patch:
   Clean up one more patch.

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-de
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.33 2014/10/30 14:04:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.34 2014/10/31 15:58:36 ago Exp $
+
+  31 Oct 2014; Agostino Sarubbo <ago@gentoo.org> man-pages-de-1.7.ebuild:
+  Stable for ppc64, wrt bug #523440
 
   30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> man-pages-de-1.7.ebuild:
   Stable for amd64, wrt bug #523440
