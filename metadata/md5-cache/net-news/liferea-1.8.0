@@ -4,10 +4,10 @@ DESCRIPTION=News Aggregator for RDF/RSS/CDF/Atom/Echo feeds
 EAPI=4
 HOMEPAGE=http://liferea.sourceforge.net/
 IUSE=ayatana libnotify
-KEYWORDS=amd64 ppc ppc64 x86
+KEYWORDS=amd64 ~ppc ~ppc64 x86
 LICENSE=GPL-2
 RDEPEND=>=x11-libs/gtk+-2.18.0:2 >=dev-libs/glib-2.24.0:2 >=x11-libs/pango-1.4.0 >=gnome-base/gconf-1.1.9:2 dev-libs/json-glib dev-libs/libunique:1 >=dev-libs/libxml2-2.6.27:2 >=dev-libs/libxslt-1.1.19 >=dev-db/sqlite-3.6.10:3 >=net-libs/libsoup-2.28.2:2.4 >=net-libs/webkit-gtk-1.2.2:2 ayatana? ( dev-libs/libindicate ) libnotify? ( >=x11-libs/libnotify-0.3.2 )
 SLOT=0
 SRC_URI=mirror://sourceforge/liferea/liferea-1.8.0.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=9906f5fe68fa3eac03e8abd3075e7f6e
+_md5_=060ac1ca1886cde1f6bf2039478a6c73

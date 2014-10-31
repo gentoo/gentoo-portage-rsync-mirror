@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/gphpedit-0.9.98_rc1.ebuild,v 1.4 2012/10/16 04:03:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/gphpedit-0.9.98_rc1.ebuild,v 1.5 2014/10/31 08:42:15 pacho Exp $
 
 EAPI="4"
 inherit gnome2 autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.gphpedit.org/sites/default/files/${P/_rc/RC}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0:2

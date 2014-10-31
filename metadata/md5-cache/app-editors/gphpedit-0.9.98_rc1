@@ -4,10 +4,10 @@ DESCRIPTION=A Gnome2 PHP/HTML source editor
 EAPI=4
 HOMEPAGE=http://www.gphpedit.org/
 IUSE=debug
-KEYWORDS=amd64 ppc x86
+KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=>=x11-libs/gtk+-2.0:2 >=dev-libs/glib-2.0:2 gnome-base/gconf:2 >=gnome-base/libgnomeui-2.0 net-libs/webkit-gtk:2
 SLOT=0
 SRC_URI=http://www.gphpedit.org/sites/default/files/gphpedit-0.9.98RC1.tar.gz
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=9667a1ef8aaada2d590953aa82735794
+_md5_=9642e88dd7379912bf268918c76bbfa2

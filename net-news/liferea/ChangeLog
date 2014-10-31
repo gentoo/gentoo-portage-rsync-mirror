@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.246 2014/10/26 17:49:22 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.247 2014/10/31 08:41:27 pacho Exp $
+
+  31 Oct 2014; Pacho Ramos <pacho@gentoo.org> liferea-1.10.8.ebuild,
+  liferea-1.8.0.ebuild, liferea-1.8.5.ebuild, liferea-1.8.8.ebuild:
+  Move to testing on ppc* as webkit-gtk was also moved to testing (#525236
+  #525258)
 
 *liferea-1.10.12 (26 Oct 2014)
 

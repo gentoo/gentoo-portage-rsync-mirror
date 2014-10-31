@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pywebkitgtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.35 2014/10/15 10:24:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.36 2014/10/31 08:47:05 pacho Exp $
+
+  31 Oct 2014; Pacho Ramos <pacho@gentoo.org> pywebkitgtk-1.1.8.ebuild:
+  Move to ~ppc due bug #525258
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org> pywebkitgtk-1.1.8-r1.ebuild,
   pywebkitgtk-1.1.8.ebuild:

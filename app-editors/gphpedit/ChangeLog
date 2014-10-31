@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gphpedit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.30 2013/12/27 22:01:31 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.31 2014/10/31 08:42:15 pacho Exp $
+
+  31 Oct 2014; Pacho Ramos <pacho@gentoo.org> gphpedit-0.9.98_rc1.ebuild:
+  Move to testing on ppc as webkit-gtk was also moved to testing (#525236)
 
   27 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
   -files/gphpedit-0.9.91-empty-apply-prefs.patch,

@@ -3,10 +3,10 @@ DEPEND=>=dev-lang/mono-2 >=net-libs/webkit-gtk-1.4:2 dev-dotnet/gtk-sharp:2
 DESCRIPTION=WebKit-gtk bindings for Mono
 EAPI=4
 HOMEPAGE=http://www.mono-project.com/
-KEYWORDS=amd64 ppc x86
+KEYWORDS=amd64 ~ppc x86
 LICENSE=MIT
 RDEPEND=>=dev-lang/mono-2 >=net-libs/webkit-gtk-1.4:2 dev-dotnet/gtk-sharp:2
 SLOT=0
 SRC_URI=http://mono.ximian.com/monobuild/preview/sources/webkit-sharp/webkit-sharp-0.3.tar.bz2
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
-_md5_=771dc19653d9c2f36b5e0fbc35ca9c93
+_md5_=653b3aff2fe76e6145d305677e9322a0
