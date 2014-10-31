@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile
+DESCRIPTION=Shared library to impliment the scrypt algorithm. See http://www.tarsnap.com/scrypt.html.
+EAPI=5
+HOMEPAGE=https://github.com/technion/libscrypt
+KEYWORDS=~amd64
+LICENSE=BSD-2
+SLOT=0
+SRC_URI=https://github.com/technion/libscrypt/archive/v1.19.tar.gz -> libscrypt-1.19.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=bed155a633051b4a343aeda3d0c6d983
