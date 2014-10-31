@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/sprockets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.27 2014/10/02 12:21:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.28 2014/10/31 07:08:13 graaff Exp $
+
+*sprockets-2.12.3 (31 Oct 2014)
+*sprockets-2.2.3 (31 Oct 2014)
+*sprockets-2.1.4 (31 Oct 2014)
+
+  31 Oct 2014; Hans de Graaff <graaff@gentoo.org> +sprockets-2.1.4.ebuild,
+  +sprockets-2.2.3.ebuild, +sprockets-2.12.3.ebuild:
+  Version bump for security issue CVE-2014-7819.
 
 *sprockets-2.12.2 (02 Oct 2014)
 
