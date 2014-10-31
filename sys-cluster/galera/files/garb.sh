@@ -25,13 +25,13 @@ start() {
 	for ADDRESS in ${GALERA_NODES} 0; do
 		HOST=$(echo $ADDRESS | cut -d \: -f 1 )
 		PORT=$(echo $ADDRESS | cut -d \: -f 2 )
-		if [[ "${HOST}" == "${PORT}" ]]; then
+		if [ "x${HOST}" = "x${PORT}" ]; then
 			PORT=${GALERA_PORT}
 		fi
 		PORT=${PORT:-$GALERA_PORT}
 		nc -z ${HOST} ${PORT} > /dev/null &&  break
 	done
-	if [ ${ADDRESS} == "0" ]; then
+	if [ ${ADDRESS} = "0" ]; then
 		eerror "None of the nodes in GALERA_NODES is accessible"
 		return 1
 	fi

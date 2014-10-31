@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/galera-25.3.5.ebuild,v 1.2 2014/10/31 20:33:34 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/galera-25.3.5.ebuild,v 1.3 2014/10/31 22:06:10 grknight Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ S="${WORKDIR}/${MY_P}"
 pkg_preinst() {
 	if use garbd ; then
 		enewgroup garbd
-		enewuser garbd
+		enewuser garbd -1 -1 -1 garbd
 	fi
 }
 
