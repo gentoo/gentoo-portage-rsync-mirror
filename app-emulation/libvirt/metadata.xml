@@ -3,12 +3,13 @@
 <pkgmetadata>
   <herd>virtualization</herd>
   <maintainer>
-    <email>cardoe@gentoo.org</email>
-    <name>Doug Goldstein</name>
+    <email>tamiko@gentoo.org</email>
+    <name>Matthias Maier</name>
+	<description>Substitute, please assign bugs to me</description>
   </maintainer>
   <maintainer>
-    <email>idella4@gentoo.org</email>
-    <name>Ian Delaney</name>
+    <email>cardoe@gentoo.org</email>
+    <name>Doug Goldstein</name>
   </maintainer>
   <use>
     <!-- Pool backend flags -->

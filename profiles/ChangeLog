@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9503 2014/10/31 02:37:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9505 2014/10/31 08:30:18 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  arch/alpha/package.use.stable.mask:
+  package.use.stable.mask updated for #525196
+
+  31 Oct 2014; Pacho Ramos <pacho@gentoo.org>
+  arch/alpha/package.use.stable.mask,
+  arch/powerpc/ppc32/package.use.stable.mask:
+  package.use.stable.mask updated for #524382
 
   31 Oct 2014; Tim Harder <radhermit@gentoo.org> package.mask:
   Mask the msp430 toolchain for removal.

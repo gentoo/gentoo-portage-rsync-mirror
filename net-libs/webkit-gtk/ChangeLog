@@ -1,6 +1,19 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.292 2014/10/25 16:14:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.295 2014/10/31 08:30:54 pacho Exp $
+
+  31 Oct 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.6-r201.ebuild,
+  webkit-gtk-2.4.4-r201.ebuild, webkit-gtk-2.4.6.ebuild,
+  webkit-gtk-2.4.7.ebuild:
+  Move to ~alpha, bug #525196
+
+  31 Oct 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.6-r1.ebuild,
+  webkit-gtk-2.4.4-r1.ebuild, webkit-gtk-2.4.6.ebuild, webkit-gtk-2.4.7.ebuild:
+  Move to ~alpha ~ppc, bug #524382
+
+  31 Oct 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.6-r1.ebuild,
+  webkit-gtk-2.4.4-r1.ebuild, webkit-gtk-2.4.6.ebuild, webkit-gtk-2.4.7.ebuild:
+  Move to ~ppc64 (#524378)
 
 *webkit-gtk-2.4.7 (25 Oct 2014)
 *webkit-gtk-2.4.7-r200 (25 Oct 2014)

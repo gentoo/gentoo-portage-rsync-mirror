@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/adolc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/ChangeLog,v 1.9 2014/06/17 19:57:50 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/ChangeLog,v 1.10 2014/10/31 08:22:10 jlec Exp $
+
+*adolc-2.5.2 (31 Oct 2014)
+
+  31 Oct 2014; Justin Lecher <jlec@gentoo.org> +adolc-2.5.2.ebuild,
+  files/adolc-2.5.0-no-colpack.patch, +files/adolc-2.5.2-dash.patch,
+  metadata.xml:
+  Version BUmp; fix installation with /bin/sh -> dash; #527492
 
   17 Jun 2014; Jauhien Piatlicki <jauhien@gentoo.org> adolc-2.5.0.ebuild:
   fix MPI support, thanks to  Erik Zeek, see bug #511456
