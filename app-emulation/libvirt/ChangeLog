@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.377 2014/10/31 08:29:29 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.378 2014/10/31 12:15:03 tamiko Exp $
+
+  31 Oct 2014; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.9.ebuild,
+  libvirt-9999.ebuild:
+  revert use dependency on app-emulation/qemu[usb,usbredir], this was a bad
+  idea, thanks to ago for pointing this out
 
   31 Oct 2014; Matthias Maier <tamiko@gentoo.org> metadata.xml:
   take over maintainership as substitute
