@@ -1,14 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supernova/supernova-1.0.3-r1.ebuild,v 1.2 2014/08/27 18:02:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supernova/supernova-1.0.7.ebuild,v 1.1 2014/11/01 20:29:55 alunduil Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
-DISTUTILS_SINGLE_IMPL=TRUE
 
 inherit bash-completion-r1 distutils-r1 vcs-snapshot
 
-DESCRIPTION="Use novaclient with multiple OpenStack nova environments the easy way"
+DESCRIPTION="novaclient wrapper for multiple nova environments"
 HOMEPAGE="https://github.com/rackerhacker/supernova"
 SRC_URI="https://github.com/major/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 

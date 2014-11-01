@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r25.ebuild,v 1.3 2014/07/05 08:21:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r25.ebuild,v 1.4 2014/11/01 20:12:03 aidecoe Exp $
 
 EAPI=5
 inherit eutils autotools readme.gentoo systemd
@@ -17,8 +17,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="network-cron nls selinux"
 
-DEPEND="selinux? ( sec-policy/selinux-hddtemp )"
-RDEPEND="${DEPEND}"
+DEPEND=""
+RDEPEND="selinux? ( sec-policy/selinux-hddtemp )"
 
 S="${WORKDIR}/${MY_P}"
 
