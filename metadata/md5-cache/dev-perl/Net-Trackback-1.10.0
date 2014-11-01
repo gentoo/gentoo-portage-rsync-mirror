@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=dev-perl/libwww-perl-5.831 >=dev-perl/Class-ErrorHandler-0.01 dev-lang/perl:=[-build(-)]
+DESCRIPTION=Object-oriented interface for developing Trackback clients and servers
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Net-Trackback/
+KEYWORDS=~amd64
+LICENSE=|| ( Artistic GPL-2 )
+RDEPEND=>=dev-perl/libwww-perl-5.831 >=dev-perl/Class-ErrorHandler-0.01 dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/T/TI/TIMA/Net-Trackback-1.01.tar.gz
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	abef64b3b0c5decdac8eafe06b9a94c7	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=c22552f7df3e5e4a20e6558351642fa8

@@ -1,6 +1,44 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.175 2014/08/05 18:02:57 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.176 2014/11/01 21:52:11 aidecoe Exp $
+
+*dracut-040 (01 Nov 2014)
+
+  01 Nov 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-040.ebuild,
+  +files/040-0001-dracut-functions.sh-support-for-altern.patch,
+  +files/040-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/040-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/040-0004-Install-dracut-install-into-libexec-di.patch,
+  +files/040-0005-NEWS-add-040-entry.patch,
+  +files/040-0006-Don-t-pass-rsyncable-option-to-gzip-Ge.patch:
+  Version bump.
+
+  NEWS
+  ~~~~
+  (since 038)
+
+  - DRACUT_PATH can now be used to specify the PATH used by dracut
+    to search for binaries instead of the default
+      /usr/sbin:/sbin:/usr/bin:/bin
+    This should be set in the distribution config file
+      /usr/lib/dracut/dracut.conf.d/01-dist.conf
+  - add "--loginstall <DIR>" and loginstall="<DIR>" options
+    to record all files, which are installed from the host fs
+  - "rd.writable.fsimg" - support for read/write filesystem images
+  - "rd.route" kernel command line parameter added
+  - "--install-optional" and install_optional_items added
+  - torrent support for live images
+      root=live:torrent://example.com/liveboot.img.torrent
+    and generally added as a download handler
+  - disable microcode, if the kernel does not support it
+  - speed up ldconfig_paths()
+  - more ARM modules
+  - fixed inst*() functions and "-H" handling
+  - fixed bridge setup
+  - added --force-drivers parameter and force_drivers=+ config option
+    to enforce driver loading at early boot time
+  - documented "iso-scan/filename" usage in grub
+  - various bugfixes
 
   05 Aug 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r4.ebuild,
   dracut-036-r4.ebuild, dracut-037-r3.ebuild, dracut-038-r2.ebuild:
