@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.188 2014/10/29 09:24:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.189 2014/11/01 00:58:08 vapier Exp $
+
+  01 Nov 2014; Mike Frysinger <vapier@gentoo.org> cryptsetup-1.6.6.ebuild:
+  Warn USE=gcrypt users about broken whirlpool hashes #525208 by Francisco Blas
+  Izquierdo Riera.
 
   29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> cryptsetup-1.6.5.ebuild:
   Stable for sparc, wrt bug #510342
