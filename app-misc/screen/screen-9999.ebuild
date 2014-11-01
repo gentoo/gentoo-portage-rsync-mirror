@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-9999.ebuild,v 1.4 2014/08/30 10:32:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-9999.ebuild,v 1.5 2014/11/01 11:47:25 swegener Exp $
 
 EAPI=5
 
@@ -20,12 +20,12 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug nethack pam selinux multiuser"
 
-RDEPEND=">=sys-libs/ncurses-5.2
-	pam? ( virtual/pam )
+CDEPEND=">=sys-libs/ncurses-5.2
+	pam? ( virtual/pam )"
+RDEPEND="${CDEPEND}
 	selinux? ( sec-policy/selinux-screen )"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	sys-apps/texinfo"
-RDEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${P}/src
 

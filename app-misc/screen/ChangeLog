@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.201 2014/10/02 18:41:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.202 2014/11/01 11:47:25 swegener Exp $
+
+  01 Nov 2014; Sven Wegener <swegener@gentoo.org> screen-4.0.3-r6.ebuild,
+  screen-4.0.3-r7.ebuild, screen-4.0.3-r8.ebuild, screen-4.2.1-r2.ebuild,
+  screen-9999.ebuild:
+  Move selinux policy to RDEPEND, bug #527730.
 
   02 Oct 2014; Fabian Groffen <grobian@gentoo.org> screen-4.2.1-r2.ebuild:
   Extend Solaris fix to allow compilation
