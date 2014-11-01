@@ -1,4 +1,10 @@
 
+*selinux-pan-2.20140311-r7 (01 Nov 2014)
+
+  01 Nov 2014; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20140311-r7.ebuild:
+  Bump revision r7 of SELinux policies
+
   01 Nov 2014; Sven Vermeulen <swift@gentoo.org> selinux-pan-9999.ebuild:
   Add KEYWORDS logic in -9999 ebuilds for ease of copying
 

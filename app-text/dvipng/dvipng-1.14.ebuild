@@ -1,15 +1,16 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.14.ebuild,v 1.12 2013/08/15 10:30:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.14.ebuild,v 1.13 2014/11/01 17:07:08 ulm Exp $
 
-EAPI="2"
+EAPI=5
+
 inherit eutils
 
 DESCRIPTION="Translate DVI files into PNG or GIF graphics"
 HOMEPAGE="http://dvipng.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="LGPL-3"
+LICENSE="LGPL-3+ Texinfo-manual"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="t1lib truetype test"
@@ -25,6 +26,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/texi2dvi
 	test? ( dev-texlive/texlive-fontsrecommended )"
+
+DOCS="ChangeLog README RELEASE"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-wait.patch
@@ -43,9 +46,4 @@ src_configure() {
 
 	export VARTEXFONTS="${T}/fonts"
 	econf
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog README RELEASE || die "dodoc failed"
 }

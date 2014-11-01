@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-apache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.75 2014/11/01 16:13:33 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.76 2014/11/01 17:26:14 swift Exp $
+
+*selinux-apache-2.20140311-r7 (01 Nov 2014)
+
+  01 Nov 2014; Sven Vermeulen <swift@gentoo.org>
+  +selinux-apache-2.20140311-r7.ebuild:
+  Bump revision r7 of SELinux policies
 
   01 Nov 2014; Sven Vermeulen <swift@gentoo.org> selinux-apache-9999.ebuild:
   Add KEYWORDS logic in -9999 ebuilds for ease of copying
