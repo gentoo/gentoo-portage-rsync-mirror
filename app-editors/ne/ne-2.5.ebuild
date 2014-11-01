@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.5.ebuild,v 1.6 2014/10/31 15:54:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.5.ebuild,v 1.7 2014/11/01 17:50:27 ago Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=tinfo
 
 DEPEND="

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.8.ebuild,v 1.6 2014/10/30 10:03:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.8.ebuild,v 1.7 2014/11/01 17:48:18 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 hppa ppc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="debug emacs +history sloppy +xft"
 
 RDEPEND="

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/rawdog-2.19.ebuild,v 1.6 2014/10/30 09:58:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/rawdog-2.19.ebuild,v 1.7 2014/11/01 17:53:11 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy )
@@ -13,7 +13,7 @@ SRC_URI="http://offog.org/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~s390 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~s390 ~sparc x86"
 IUSE=""
 
 DEPEND="dev-python/feedparser[${PYTHON_USEDEP}]"

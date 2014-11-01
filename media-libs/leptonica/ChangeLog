@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/leptonica
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.28 2014/10/31 16:04:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.29 2014/11/01 17:55:48 ago Exp $
+
+  01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> leptonica-1.71.ebuild:
+  Stable for ppc, wrt bug #524542
 
   31 Oct 2014; Agostino Sarubbo <ago@gentoo.org> leptonica-1.71.ebuild:
   Stable for ppc64, wrt bug #524542

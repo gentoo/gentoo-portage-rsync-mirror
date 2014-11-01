@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.63_p20141002.ebuild,v 1.4 2014/10/30 10:03:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.63_p20141002.ebuild,v 1.5 2014/11/01 17:47:36 ago Exp $
 
 EAPI=5
 inherit autotools eutils gnome2-utils toolchain-funcs
@@ -15,7 +15,7 @@ SRC_URI="
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc ~sparc x86"
 IUSE="doc +gtk ipv6 kerberos"
 
 S=${WORKDIR}/${P/_p*/}-2014-10-02

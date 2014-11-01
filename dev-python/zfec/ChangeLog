@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/zfec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zfec/ChangeLog,v 1.4 2014/08/14 16:35:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zfec/ChangeLog,v 1.5 2014/11/01 17:38:07 nimiux Exp $
+
+  01 Nov 2014; Chema Alonso <nimiux@gentoo.org> zfec-1.4.24.ebuild:
+  Stable for amd64 wrt bug #518242
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> zfec-1.4.24.ebuild:
   x86 stable wrt bug #518242

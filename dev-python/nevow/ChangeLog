@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nevow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.54 2014/08/14 16:36:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.55 2014/11/01 17:36:36 nimiux Exp $
+
+  01 Nov 2014; Chema Alonso <nimiux@gentoo.org> nevow-0.11.1.ebuild:
+  Stable for amd64 wrt bug #518242
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> nevow-0.11.1.ebuild:
   x86 stable wrt bug #518242

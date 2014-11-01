@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.12-r1.ebuild,v 1.9 2014/10/29 09:27:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.12-r1.ebuild,v 1.10 2014/11/01 17:45:28 ago Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -12,7 +12,7 @@ SRC_URI="http://www.libsdl.org/projects/SDL_image/release/${MY_P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="gif jpeg png static-libs tiff webp"
 
 RDEPEND="

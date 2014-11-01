@@ -1,4 +1,8 @@
 
+  01 Nov 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-pan-2.20140311-r6.ebuild:
+  Stabilize rev 6
+
 *selinux-pan-2.20140311-r7 (01 Nov 2014)
 
   01 Nov 2014; Sven Vermeulen <swift@gentoo.org>

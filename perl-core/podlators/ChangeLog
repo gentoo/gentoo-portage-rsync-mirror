@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/podlators
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/ChangeLog,v 1.17 2014/10/31 15:54:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/ChangeLog,v 1.18 2014/11/01 17:51:56 ago Exp $
+
+  01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> podlators-2.5.3.ebuild:
+  Stable for ppc, wrt bug #525678
 
   31 Oct 2014; Agostino Sarubbo <ago@gentoo.org> podlators-2.5.3.ebuild:
   Stable for ppc64, wrt bug #525678

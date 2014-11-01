@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.126 2014/10/19 06:46:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.127 2014/11/01 17:59:37 caster Exp $
+
+*icedtea-6.1.13.5-r1 (01 Nov 2014)
+
+  01 Nov 2014; Vlastimil Babka <caster@gentoo.org> +icedtea-6.1.13.5-r1.ebuild:
+  Bump the openjdk tarball; switch to icedtea-web:0 unconditionally and block
+  icedtea-web:6, which allows creating missing javaws/itweb-setting symlinks
+  for bug #504678 without file conflicts. Had to drop keywords temporarily.
 
 *icedtea-6.1.13.5 (18 Oct 2014)
 

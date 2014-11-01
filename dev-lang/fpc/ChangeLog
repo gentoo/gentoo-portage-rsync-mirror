@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.72 2014/10/30 09:56:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.73 2014/11/01 17:49:45 ago Exp $
+
+  01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> fpc-2.6.4.ebuild:
+  Stable for ppc, wrt bug #525416
 
   30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> fpc-2.6.4.ebuild:
   Stable for x86, wrt bug #525416

@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/tahoe-lafs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/ChangeLog,v 1.8 2014/08/14 16:37:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/ChangeLog,v 1.9 2014/11/01 17:38:44 nimiux Exp $
+
+  01 Nov 2014; Chema Alonso <nimiux@gentoo.org> tahoe-lafs-1.10.0-r2.ebuild:
+  Stable for amd64 wrt bug #518242
 
   14 Aug 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   tahoe-lafs-1.10.0-r2.ebuild:

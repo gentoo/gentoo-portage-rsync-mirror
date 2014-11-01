@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1397 2014/10/31 00:57:49 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1398 2014/11/01 17:34:28 dilfridge Exp $
+
+  01 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  Drop EAPI=0,1,2,3 support in perl-module.eclass, this time for real. Further
+  cleanups will follow.
 
   31 Oct 2014; Davide Pesavento <pesa@gentoo.org> multibuild.eclass:
   Make sure BUILD_DIR exists before pushd'ing into it.
