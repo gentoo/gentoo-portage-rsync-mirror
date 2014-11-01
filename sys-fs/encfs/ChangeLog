@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/encfs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.63 2012/10/31 23:14:20 flameeyes Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.64 2014/11/01 18:26:23 blueness Exp $
+
+*encfs-1.7.5 (01 Nov 2014)
+
+  01 Nov 2014; Anthony G. Basile <blueness@gentoo.org> +encfs-1.7.5.ebuild,
+  +files/encfs-1.7.5-fix-pod.patch:
+  Version bump, bug #510290
 
   31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> encfs-1.7.2.ebuild,
   encfs-1.7.4.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.125 2014/10/31 19:25:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.126 2014/11/01 18:08:16 vapier Exp $
+
+  01 Nov 2014; Mike Frysinger <vapier@gentoo.org> dash-0.5.7.4.ebuild:
+  Mark alpha/arm64/s390/sh stable #524262.
 
 *dash-0.5.8.1-r1 (31 Oct 2014)
 

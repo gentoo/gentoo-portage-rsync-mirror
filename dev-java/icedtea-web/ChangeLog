@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.42 2014/07/01 05:36:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.43 2014/11/01 18:01:59 caster Exp $
+
+  01 Nov 2014; Vlastimil Babka <caster@gentoo.org> icedtea-web-1.3.2.ebuild:
+  Block >=icedtea-6.1.13.5-r1 to make the block mutual.
 
   01 Jul 2014; Agostino Sarubbo <ago@gentoo.org> icedtea-web-1.4.2.ebuild:
   Stable for x86, wrt bug #501472
