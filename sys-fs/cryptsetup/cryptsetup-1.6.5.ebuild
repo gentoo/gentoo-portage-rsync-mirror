@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.5.ebuild,v 1.13 2014/10/29 09:24:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.5.ebuild,v 1.16 2014/11/01 01:08:12 vapier Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -14,7 +14,7 @@ SRC_URI="mirror://kernel/linux/utils/${PN}/v$(get_version_component_range 1-2)/$
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 CRYPTO_BACKENDS="+gcrypt kernel nettle openssl"
 # we don't support nss since it doesn't allow cryptsetup to be built statically
 # and it's missing ripemd160 support so it can't provide full backward compatibility
@@ -30,7 +30,6 @@ LIB_DEPEND="dev-libs/libgpg-error[static-libs(+)]
 	nettle? ( >=dev-libs/nettle-2.4[static-libs(+)] )
 	openssl? ( dev-libs/openssl[static-libs(+)] )
 	sys-fs/lvm2[static-libs(+)]
-	sys-libs/e2fsprogs-libs[static-libs(+)]
 	udev? ( virtual/libudev[static-libs(+)] )"
 # We have to always depend on ${LIB_DEPEND} rather than put behind
 # !static? () because we provide a shared library which links against
@@ -54,7 +53,7 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i '/^LOOPDEV=/s:$: || exit 0:' tests/{compat,mode}-test || die
-	eautoreconf
+	epatch_user && eautoreconf
 }
 
 src_configure() {

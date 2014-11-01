@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.115 2014/08/05 11:53:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.116 2014/11/01 01:30:40 idella4 Exp $
+
+*paramiko-1.15.1 (01 Nov 2014)
+
+  01 Nov 2014; Ian Delaney <idella4@gentoo.org> +paramiko-1.15.1.ebuild,
+  -paramiko-1.11.0.ebuild, -paramiko-1.12.0.ebuild, paramiko-1.13.0.ebuild:
+  clean old impl, bump; add py3.4, rm old
 
   05 Aug 2014; Raúl Porcel <armin76@gentoo.org> paramiko-1.12.2.ebuild,
   paramiko-1.13.0.ebuild:

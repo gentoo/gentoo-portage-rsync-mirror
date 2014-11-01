@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.2.ebuild,v 1.14 2014/09/10 18:05:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.2.ebuild,v 1.15 2014/11/01 01:03:37 vapier Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -29,7 +29,6 @@ LIB_DEPEND="dev-libs/libgpg-error[static-libs(+)]
 	nettle? ( >=dev-libs/nettle-2.4[static-libs(+)] )
 	openssl? ( dev-libs/openssl[static-libs(+)] )
 	sys-fs/lvm2[static-libs(+)]
-	sys-libs/e2fsprogs-libs[static-libs(+)]
 	udev? ( virtual/libudev[static-libs(+)] )"
 # We have to always depend on ${LIB_DEPEND} rather than put behind
 # !static? () because we provide a shared library which links against
