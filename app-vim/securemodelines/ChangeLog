@@ -1,6 +1,16 @@
 # ChangeLog for app-vim/securemodelines
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.16 2014/08/10 18:40:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.18 2014/11/01 09:41:52 radhermit Exp $
+
+  01 Nov 2014; Tim Harder <radhermit@gentoo.org>
+  securemodelines-20140926.ebuild:
+  Set EAPI=5.
+
+*securemodelines-20140926 (01 Nov 2014)
+
+  01 Nov 2014; Tim Harder <radhermit@gentoo.org>
+  +securemodelines-20140926.ebuild:
+  Version bump.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   securemodelines-20080424.ebuild:
