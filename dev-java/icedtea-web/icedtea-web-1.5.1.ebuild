@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.4.1.ebuild,v 1.3 2013/11/11 07:05:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.5.1.ebuild,v 1.1 2014/11/01 22:47:10 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="5"
@@ -15,7 +15,7 @@ LICENSE="GPL-2 GPL-2-with-linking-exception LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="doc +icedtea7 javascript +nsplugin test"
+IUSE="doc +icedtea7 javascript +nsplugin tagsoup test"
 
 COMMON_DEP="
 	icedtea7? ( || (
@@ -26,6 +26,7 @@ COMMON_DEP="
 		dev-java/icedtea:6 dev-java/icedtea-bin:6
 	) )
 	app-admin/eselect-java
+	tagsoup? ( dev-java/tagsoup )
 	nsplugin? (
 		>=dev-libs/glib-2.16
 	)"
@@ -33,6 +34,7 @@ RDEPEND="${COMMON_DEP}"
 # Need system junit 4.8+. Bug #389795
 DEPEND="${COMMON_DEP}
 	virtual/pkgconfig
+	app-arch/zip
 	javascript? ( dev-java/rhino:1.6 )
 	nsplugin? ( net-misc/npapi-sdk )
 	test? (	>=dev-java/junit-4.8:4 )"
@@ -51,8 +53,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/0001-Fix-parallel-install.-BGO-440906.patch
-	epatch "${FILESDIR}"/0002-Respect-LDFLAGS.patch # bug #356645
+	epatch "${FILESDIR}"/${PN}-1.5-respect-ldflags.patch # bug #356645
 	eautoreconf
 }
 
@@ -65,6 +66,7 @@ src_configure() {
 		$(use_enable doc docs)
 		$(use_enable nsplugin plugin)
 		$(use_with javascript rhino)
+		$(use_with tagsoup tagsoup $(java-pkg_getjars tagsoup))
 	)
 
 	unset JAVA_HOME JDK_HOME CLASSPATH JAVAC JAVACFLAGS

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.4.2-r1.ebuild,v 1.1 2014/06/27 14:39:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.4.2-r1.ebuild,v 1.2 2014/11/01 22:47:10 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="5"
@@ -33,6 +33,7 @@ RDEPEND="${COMMON_DEP}"
 # Need system junit 4.8+. Bug #389795
 DEPEND="${COMMON_DEP}
 	virtual/pkgconfig
+	app-arch/zip
 	javascript? ( dev-java/rhino:1.6 )
 	nsplugin? ( net-misc/npapi-sdk )
 	test? (	>=dev-java/junit-4.8:4 )"

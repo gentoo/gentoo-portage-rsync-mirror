@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.44 2014/11/01 22:05:04 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.45 2014/11/01 22:47:10 caster Exp $
+
+*icedtea-web-1.5.1 (01 Nov 2014)
+
+  01 Nov 2014; Vlastimil Babka <caster@gentoo.org> -icedtea-web-1.4.1.ebuild,
+  icedtea-web-1.4.2-r1.ebuild, +icedtea-web-1.5.1.ebuild,
+  +files/icedtea-web-1.5-respect-ldflags.patch, metadata.xml:
+  Version bump, bug #512094. Adds optional USE=tagsoup which should allow
+  parsing malformed .jnlp files, at the cost of 35 java packages in
+  build-deptree. Depend on app-arch/zip, bug #516696.
 
   01 Nov 2014; Vlastimil Babka <caster@gentoo.org> icedtea-web-1.3.2-r7.ebuild:
   Block >=icedtea-7.2.5.3 to make the block mutual.
