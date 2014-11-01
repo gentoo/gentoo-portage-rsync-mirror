@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cloog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.21 2014/10/24 18:52:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.22 2014/11/01 15:43:55 blueness Exp $
+
+*cloog-9999 (01 Nov 2014)
+
+  01 Nov 2014; Anthony G. Basile <blueness@gentoo.org> +cloog-9999.ebuild:
+  Add live ebuild for testing
 
   24 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> cloog-0.18.1.ebuild:
   amd64 stable wrt bug #516152

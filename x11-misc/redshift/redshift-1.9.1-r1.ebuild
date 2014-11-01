@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.8.ebuild,v 1.2 2014/01/21 22:45:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.9.1-r1.ebuild,v 1.1 2014/11/01 15:57:17 sping Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{3_2,3_3,3_4} )
 
 inherit autotools eutils gnome2-utils python-r1
 
@@ -14,17 +14,17 @@ SRC_URI="https://github.com/jonls/redshift/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="geoclue gnome gtk nls"
+IUSE="geoclue gtk nls"
 
 COMMON_DEPEND=">=x11-libs/libX11-1.4
 	x11-libs/libXxf86vm
 	x11-libs/libxcb
-	geoclue? ( app-misc/geoclue:0 )
-	gnome? ( dev-libs/glib:2
-		>=gnome-base/gconf-2 )
+	x11-libs/libdrm
+	geoclue? ( app-misc/geoclue:0 dev-libs/glib:2 )
 	gtk? ( ${PYTHON_DEPS} )"
 RDEPEND="${COMMON_DEPEND}
-	gtk? ( >=dev-python/pygtk-2[${PYTHON_USEDEP}]
+	gtk? ( dev-python/pygobject[${PYTHON_USEDEP}]
+		x11-libs/gtk+:3[introspection]
 		dev-python/pyxdg[${PYTHON_USEDEP}] )"
 DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )"
@@ -40,10 +40,10 @@ src_configure() {
 	econf \
 		--disable-silent-rules \
 		$(use_enable nls) \
+		--enable-drm \
 		--enable-randr \
 		--enable-vidmode \
 		--disable-wingdi \
-		$(use_enable gnome gnome-clock) \
 		$(use_enable geoclue) \
 		$(use_enable gtk gui) \
 		--disable-ubuntu
@@ -55,14 +55,13 @@ _impl_specific_src_install() {
 }
 
 src_install() {
-	default
+	emake DESTDIR="${D}" UPDATE_ICON_CACHE=/bin/true install
 
 	if use gtk; then
 		python_foreach_impl _impl_specific_src_install
 		python_replicate_script "${D}"/usr/bin/redshift-gtk
+		dosym redshift-gtk /usr/bin/gtk-redshift
 	fi
-
-	dosym redshift-gtk /usr/bin/gtk-redshift
 }
 
 pkg_preinst() {

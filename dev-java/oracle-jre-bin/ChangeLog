@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/oracle-jre-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.66 2014/11/01 13:06:36 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.67 2014/11/01 15:43:52 ercpe Exp $
+
+  01 Nov 2014; Johann Schmitz <ercpe@gentoo.org> oracle-jre-bin-1.8.0.25.ebuild:
+  Updated ebuild to include link to te java archive download page.
 
 *oracle-jre-bin-1.8.0.25 (01 Nov 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.74 2014/11/01 07:09:35 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.75 2014/11/01 15:44:11 ercpe Exp $
+
+  01 Nov 2014; Johann Schmitz <ercpe@gentoo.org> oracle-jdk-bin-1.7.0.71.ebuild,
+  oracle-jdk-bin-1.8.0.25.ebuild:
+  Updated ebuild to include link to te java archive download page.
 
 *oracle-jdk-bin-1.7.0.71 (01 Nov 2014)
 

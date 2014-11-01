@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.311 2014/09/05 21:00:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.312 2014/11/01 15:55:26 slyfox Exp $
+
+  01 Nov 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/mc-4.8.13-tinfo.patch, mc-4.8.13.ebuild:
+  Fix tinfo underlinking (bug #527118 by Michael Vasiliev and fix by Jeroen).
 
 *mc-4.8.13 (05 Sep 2014)
 

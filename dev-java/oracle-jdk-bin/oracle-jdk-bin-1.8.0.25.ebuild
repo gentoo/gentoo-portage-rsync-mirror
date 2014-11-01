@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.25.ebuild,v 1.1 2014/10/21 12:35:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.25.ebuild,v 1.2 2014/11/01 15:44:11 ercpe Exp $
 
 EAPI="5"
 
@@ -110,6 +110,11 @@ check_tarballs_available() {
 		done
 		einfo "at '${uri}'"
 		einfo "and move them to '${DISTDIR}'"
+		einfo
+		einfo "If the above mentioned urls do not point to the correct version anymore,"
+		einfo "please download the files from Oracle's java download archive:"
+		einfo
+		einfo "   http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html#jdk-${MY_PV}-oth-JPR"
 		einfo
 	fi
 }

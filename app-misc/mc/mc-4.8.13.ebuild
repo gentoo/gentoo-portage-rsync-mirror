@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.13.ebuild,v 1.1 2014/09/05 21:00:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.13.ebuild,v 1.2 2014/11/01 15:55:26 slyfox Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic
+inherit autotools eutils flag-o-matic
 
 MY_P=${P/_/-}
 
@@ -43,6 +43,9 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	[[ -n ${LIVE_EBUILD} ]] && ./autogen.sh
+
+	epatch "${FILESDIR}"/${P}-tinfo.patch
+	eautoreconf
 }
 
 S=${WORKDIR}/${MY_P}

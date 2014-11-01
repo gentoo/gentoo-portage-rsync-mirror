@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.141 2014/11/01 13:15:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.142 2014/11/01 15:43:24 ercpe Exp $
+
+  01 Nov 2014; Johann Schmitz <ercpe@gentoo.org>
+  emul-linux-x86-java-1.7.0.71.ebuild:
+  Updated emul-linux-x86-java pkg_nofetch() to include link to Oracle's java
+  download archive.
 
 *emul-linux-x86-java-1.7.0.71 (01 Nov 2014)
 

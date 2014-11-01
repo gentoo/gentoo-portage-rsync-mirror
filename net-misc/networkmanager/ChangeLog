@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.210 2014/10/31 21:05:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.211 2014/11/01 15:50:50 pacho Exp $
+
+*networkmanager-0.9.10.1_pre20141101 (01 Nov 2014)
+
+  01 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  +networkmanager-0.9.10.1_pre20141101.ebuild:
+  Add new snapshot including a ton of bugfixes, also this won't fail to start if
+  ifnet plugin is not found and, then, migration will be less painful.
 
   31 Oct 2014; Pacho Ramos <pacho@gentoo.org> networkmanager-0.9.10.0-r1.ebuild:
   Add reference to upstream bug report

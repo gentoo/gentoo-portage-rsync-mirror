@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.27 2014/10/05 15:11:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.29 2014/11/01 15:57:17 sping Exp $
+
+*redshift-1.9.1-r1 (01 Nov 2014)
+
+  01 Nov 2014; Sebastian Pipping <sping@gentoo.org> +redshift-1.9.1-r1.ebuild:
+  Require GTK+ 3.x with introspection (bug #527540)
+
+  01 Nov 2014; Sebastian Pipping <sping@gentoo.org> -redshift-1.4.1.ebuild,
+  -redshift-1.6-r1.ebuild, -redshift-1.8.ebuild, -redshift-1.9-r1.ebuild:
+  Remove old versions
 
   05 Oct 2014; Manuel Rüger <mrueg@gentoo.org> redshift-1.9.1.ebuild:
   Mark stable on amd64. Bug #521320
