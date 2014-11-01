@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/extlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extlib/ChangeLog,v 1.12 2014/10/30 13:53:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extlib/ChangeLog,v 1.13 2014/11/01 09:26:59 graaff Exp $
+
+  01 Nov 2014; Hans de Graaff <graaff@gentoo.org> extlib-0.9.16-r1.ebuild:
+  Indicate ruby21 status.
 
   30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> extlib-0.9.16-r1.ebuild:
   Drop jruby target.

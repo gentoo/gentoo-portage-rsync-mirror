@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-core/merb-core-1.1.3-r1.ebuild,v 1.2 2014/05/21 02:02:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-core/merb-core-1.1.3-r1.ebuild,v 1.3 2014/11/01 09:29:33 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -38,4 +38,7 @@ all_ruby_prepare() {
 	# Remove unpackaged tool so that we can use the Rakefile.
 	sed -i -e '/annotation_extract/d' -e 's#spec/rake/spectask#rspec/core/rake_task#'\
 		-e 's#Spec::Rake::SpecTask#RSpec::Core::RakeTask#' Rakefile || die
+
+	# Avoid obsolete rake task.
+	sed -i -e 's:rake/rdoctask:rdoc/task:' Rakefile || die
 }
