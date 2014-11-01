@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.139 2014/10/22 05:04:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.140 2014/11/01 07:54:34 vapier Exp $
+
+  01 Nov 2014; Mike Frysinger <vapier@gentoo.org> files/ccache-config:
+  Trim empty ccache dirs automatically #517242 by Arfrever Frehtes Taifersar
+  Arahesis.
 
 *ccache-3.1.10 (22 Oct 2014)
 

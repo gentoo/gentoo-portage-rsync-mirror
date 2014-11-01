@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1030 2014/10/24 18:27:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1031 2014/11/01 07:56:35 vapier Exp $
+
+*gcc-4.9.2 (01 Nov 2014)
+
+  01 Nov 2014; Mike Frysinger <vapier@gentoo.org> +gcc-4.9.2.ebuild:
+  Version bump #527480 by Markus.
 
   24 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> gcc-4.8.3.ebuild:
   amd64 stable wrt bug #516152
