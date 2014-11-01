@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.283 2014/09/12 19:13:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.284 2014/11/01 00:26:22 jer Exp $
+
+  01 Nov 2014; Jeroen Roovers <jer@gentoo.org> icu-53.1.ebuild:
+  Stable for HPPA (bug #523164).
 
   12 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org> -icu-51.2-r1.ebuild,
   -icu-51.2-r2.ebuild, -files/icu-51.1-CVE-2013-2924.patch:

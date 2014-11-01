@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.254 2014/10/07 01:01:47 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.255 2014/11/01 00:12:22 jer Exp $
+
+  01 Nov 2014; Jeroen Roovers <jer@gentoo.org> dnsmasq-2.72.ebuild:
+  Stable for HPPA (bug #527536).
 
 *dnsmasq-2.72 (07 Oct 2014)
 

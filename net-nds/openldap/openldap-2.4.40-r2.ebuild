@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40-r2.ebuild,v 1.2 2014/10/30 02:22:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40-r2.ebuild,v 1.3 2014/11/01 00:29:02 robbat2 Exp $
 
 EAPI="5"
 
@@ -30,12 +30,13 @@ IUSE_CONTRIB="${IUSE_CONTRIB} -cxx"
 IUSE="${IUSE_DAEMON} ${IUSE_BACKEND} ${IUSE_OVERLAY} ${IUSE_OPTIONAL} ${IUSE_CONTRIB}"
 
 REQUIRED_USE="cxx? ( sasl )"
-# This is only actually applicable if linking against db-6
 
 # always list newer first
 # Do not add any AGPL-3 BDB here!
 # See bug 525110, comment 15.
 BDB_SLOTS='5.3 5.1 4.8 4.7 4.6 4.5 4.4'
+BDB_PKGS=''
+for _slot in $BDB_SLOTS; do BDB_PKGS="${BDB_PKGS} sys-libs/db:${_slot}" ; done
 
 # openssl is needed to generate lanman-passwords required by samba
 RDEPEND="icu? ( dev-libs/icu:= )
@@ -53,8 +54,8 @@ RDEPEND="icu? ( dev-libs/icu:= )
 		perl? ( dev-lang/perl[-build(-)] )
 		samba? ( dev-libs/openssl )
 		berkdb? (
-			>=sys-libs/db-4.4
-			<sys-libs/db-6
+			<sys-libs/db-6.0:=
+			|| ( ${BDB_PKGS} )
 			)
 		smbkrb5passwd? (
 			dev-libs/openssl
