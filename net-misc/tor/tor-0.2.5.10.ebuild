@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.10.ebuild,v 1.1 2014/10/25 17:37:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.10.ebuild,v 1.2 2014/11/01 12:31:00 blueness Exp $
 
 EAPI="5"
 
@@ -24,9 +24,9 @@ DEPEND="dev-libs/openssl
 	dev-libs/libevent
 	bufferevents? ( dev-libs/libevent[ssl] )
 	nat-pmp? ( net-libs/libnatpmp )
-	upnp? ( net-libs/miniupnpc )
+	upnp? ( net-libs/miniupnpc )"
+RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-tor )"
-RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	enewgroup tor

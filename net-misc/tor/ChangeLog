@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.442 2014/10/31 15:41:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.443 2014/11/01 12:31:00 blueness Exp $
+
+  01 Nov 2014; Anthony G. Basile <blueness@gentoo.org> tor-0.2.5.10.ebuild,
+  tor-0.2.6.1_alpha.ebuild:
+  Move selinux dep to RDEPEND, bug #527810
 
   31 Oct 2014; Anthony G. Basile <blueness@gentoo.org> metadata.xml,
   tor-0.2.6.1_alpha.ebuild:
