@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.5-r1.ebuild,v 1.3 2014/10/14 13:15:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.5-r1.ebuild,v 1.4 2014/11/01 14:54:13 dlan Exp $
 
 EAPI=5
 
@@ -199,9 +199,10 @@ src_prepare() {
 	ln -s seabios-dir-remote seabios-dir || die
 	popd > /dev/null
 
-	# Bug 472438
-	sed -e 's:^BASH_COMPLETION_DIR ?= $(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(SHARE_DIR)/bash-completion:' \
+	# Reset bash completion dir; Bug 472438
+	sed -e "s:^BASH_COMPLETION_DIR ?= \$(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(get_bashcompdir):" \
 		-i Config.mk || die
+	sed -i -e "/bash-completion/s/xl\.sh/xl/g" tools/libxl/Makefile || die
 
 	# Bug 445986
 	sed -e 's:$(MAKE) PYTHON=$(PYTHON) subdirs-$@:LC_ALL=C "$(MAKE)" PYTHON=$(PYTHON) subdirs-$@:' -i tools/firmware/Makefile || die
@@ -264,9 +265,6 @@ src_install() {
 		-e 's:^#lockfile="/var/lock/xl":lockfile="/var/lock/xl":' \
 		-e 's:^#vifscript="vif-bridge":vifscript="vif-bridge":' \
 		-i tools/examples/xl.conf  || die
-
-	# Reset bash completion dir; Bug 472438
-	mv "${D}"bash-completion "${D}"usr/share/ || die
 
 	if use doc; then
 		emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" install-docs

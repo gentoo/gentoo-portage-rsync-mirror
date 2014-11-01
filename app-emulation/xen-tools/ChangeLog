@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.264 2014/10/15 05:46:30 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.265 2014/11/01 14:54:13 dlan Exp $
+
+*xen-tools-4.4.1-r2 (01 Nov 2014)
+
+  01 Nov 2014; Yixun Lan <dlan@gentoo.org> xen-tools-4.2.5-r1.ebuild,
+  xen-tools-4.3.3-r1.ebuild, -xen-tools-4.4.1.ebuild,
+  +xen-tools-4.4.1-r2.ebuild, files/gentoo-patches.conf:
+  fix bashcomp problem, bug 472438, fix ncurses[tinfo] build failure, bug
+  526526
 
   15 Oct 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
   drop USE xend

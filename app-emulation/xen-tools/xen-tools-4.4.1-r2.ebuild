@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.1.ebuild,v 1.3 2014/10/07 05:58:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.1-r2.ebuild,v 1.1 2014/11/01 14:54:13 dlan Exp $
 
 EAPI=5
 
@@ -17,11 +17,11 @@ if [[ $PV == *9999 ]]; then
 	live_eclass="mercurial"
 else
 	KEYWORDS="~amd64 ~arm -x86"
-	UPSTREAM_VER=
+	UPSTREAM_VER=1
 	# xen-tools's gentoo patches tarball
-	GENTOO_VER=0
+	GENTOO_VER=1
 	# xen-tools's gentoo patches version which apply to this specific ebuild
-	GENTOO_GPV=0
+	GENTOO_GPV=1
 	SEABIOS_VER=1.7.3.1
 
 	[[ -n ${UPSTREAM_VER} ]] && \
@@ -121,6 +121,9 @@ pkg_setup() {
 	python-single-r1_pkg_setup
 	export "CONFIG_LOMOUNT=y"
 
+	#bug 522642, disable compile tools/tests
+	export "CONFIG_TESTS=n"
+
 	if has_version dev-libs/libgcrypt:0; then
 		export "CONFIG_GCRYPT=y"
 	fi
@@ -138,8 +141,6 @@ pkg_setup() {
 			die "Unsupported architecture!"
 		fi
 	fi
-	#bug 472438
-	export BASH_COMPLETION_DIR=/usr/share/bash-completion
 }
 
 src_prepare() {
@@ -216,9 +217,10 @@ src_prepare() {
 		sed -e "s:install-tools\: tools/qemu-xen-traditional-dir:install-tools\: :g" -i Makefile || die
 	fi
 
-	# Bug 472438
-	sed -e 's:^BASH_COMPLETION_DIR ?= $(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(SHARE_DIR)/bash-completion:' \
+	# Reset bash completion dir; Bug 472438
+	sed -e "s:^BASH_COMPLETION_DIR ?= \$(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(get_bashcompdir):" \
 		-i Config.mk || die
+	sed -i -e "/bash-completion/s/xl\.sh/xl/g" tools/libxl/Makefile || die
 
 	# xencommons, Bug #492332, sed lighter weight than patching
 	sed -e 's:\$QEMU_XEN -xen-domid:test -e "\$QEMU_XEN" \&\& &:' \
@@ -259,7 +261,7 @@ src_configure() {
 		--disable-xen \
 		--enable-tools \
 		--enable-docs \
-		--disable-qemu-traditional \
+		--enable-qemu-traditional \
 		$(use_with system-qemu) \
 		$(use_enable pam) \
 		$(use_enable api xenapi) \
@@ -311,9 +313,6 @@ src_install() {
 		-e 's:^#lockfile="/var/lock/xl":lockfile="/var/lock/xl":' \
 		-e 's:^#vifscript="vif-bridge":vifscript="vif-bridge":' \
 		-i tools/examples/xl.conf  || die
-
-	# Reset bash completion dir; Bug 472438
-	mv "${D}"bash-completion "${D}"usr/share/ || die
 
 	if use doc; then
 		emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" install-docs
