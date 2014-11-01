@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/nio4r
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nio4r/ChangeLog,v 1.3 2014/08/12 22:46:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nio4r/ChangeLog,v 1.5 2014/11/01 08:27:06 graaff Exp $
+
+  01 Nov 2014; Hans de Graaff <graaff@gentoo.org> -nio4r-1.0.0.ebuild:
+  Cleanup broken version.
+
+*nio4r-1.0.1 (01 Nov 2014)
+
+  01 Nov 2014; Hans de Graaff <graaff@gentoo.org> +nio4r-1.0.1.ebuild:
+  Version bump. Use bundled and patched libev, fixing bug 527330.
 
   12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> nio4r-1.0.0.ebuild:
   Keyword ~ppc and ~ppc64, bug #519596

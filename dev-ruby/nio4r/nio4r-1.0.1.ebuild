@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nio4r/nio4r-1.0.0.ebuild,v 1.3 2014/08/12 22:46:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nio4r/nio4r-1.0.1.ebuild,v 1.1 2014/11/01 08:26:41 graaff Exp $
 
 EAPI=5
 
@@ -21,17 +21,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE=""
 
-RDEPEND+=" dev-libs/libev"
-
-ruby_add_bdepend "test? ( dev-ruby/rake-compiler )"
-
-RUBY_PATCHES=( "${FILESDIR}"/${P}-extconf.patch )
+# Note that nio4r bundles a patched copy of libev, and without these
+# patches the tests fail: https://github.com/celluloid/nio4r/issues/15
 
 all_ruby_prepare() {
-	rm -rf ext/libev
-	sed -i -e 's#"../libev/ev.h"#<ev.h>#' ext/${PN}/libev.h || die
-	sed -i -e '/ev.c/d' ext/${PN}/nio4r_ext.c || die
 	sed -i -e '/[Cc]overalls/d' -e '/[Bb]undler/d' spec/spec_helper.rb || die
+	sed -e '/extension/ s:^:#:' -i Rakefile || die
 }
 
 each_ruby_configure() {

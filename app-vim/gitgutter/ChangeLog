@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gitgutter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gitgutter/ChangeLog,v 1.1 2014/05/25 21:41:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gitgutter/ChangeLog,v 1.2 2014/11/01 08:30:26 radhermit Exp $
+
+*gitgutter-20141101 (01 Nov 2014)
+
+  01 Nov 2014; Tim Harder <radhermit@gentoo.org> +gitgutter-20141101.ebuild:
+  Version bump.
 
 *gitgutter-99999999 (25 May 2014)
 *gitgutter-20140525 (25 May 2014)
