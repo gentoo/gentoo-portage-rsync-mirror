@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9.4_beta3.ebuild,v 1.1 2014/10/26 02:22:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9.4_beta3-r1.ebuild,v 1.1 2014/11/01 11:29:06 titanofold Exp $
 
 EAPI="5"
 
@@ -17,8 +17,7 @@ S="${WORKDIR}/postgresql-${MY_PV}"
 SRC_URI="mirror://postgresql/source/v${MY_PV}/postgresql-${MY_PV}.tar.bz2"
 
 # Add patch and initscript source.
-SRC_URI+=" http://dev.gentoo.org/~patrick/postgresql-patches-${SLOT}-r1.tbz2
-		   http://dev.gentoo.org/~floppym/dist/postgresql-initscript-2.7.tbz2"
+SRC_URI+=" http://dev.gentoo.org/~floppym/dist/postgresql-initscript-2.7.tbz2"
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL RDBMS"
@@ -92,7 +91,7 @@ src_prepare() {
 		-i "${WORKDIR}"/postgresql{.{init,confd,service},-check-db-dir} || \
 		die "SLOT/LIBDIR sed failed"
 
-	use server || epatch "${WORKDIR}/base.patch"
+	use server || epatch "${FILESDIR}/${PN}-${SLOT}-no-server.patch"
 
 	if use pam ; then
 		sed -e "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
@@ -225,7 +224,7 @@ pkg_postinst() {
 }
 
 pkg_prerm() {
-	if [[ $(use server) && -z ${REPLACED_BY_VERSION} ]] ; then
+	if use server && [[ -z ${REPLACED_BY_VERSION} ]] ; then
 		ewarn "Have you dumped and/or migrated the ${SLOT} database cluster?"
 		ewarn "\thttp://www.gentoo.org/doc/en/postgres-howto.xml#doc_chap5"
 
@@ -389,7 +388,7 @@ pkg_config() {
 src_test() {
 	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
 
-	if [[ $(use server) -eq 0 && ${UID} -ne 0 ]] ; then
+	if use server && [[ ${UID} -ne 0 ]] ; then
 		emake check
 
 		einfo "If you think other tests besides the regression tests are necessary, please"

@@ -1,6 +1,28 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.390 2014/10/26 02:22:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.391 2014/11/01 11:29:06 titanofold Exp $
+
+*postgresql-9.4_beta3-r1 (01 Nov 2014)
+*postgresql-9.3.5-r1 (01 Nov 2014)
+*postgresql-9.2.9-r1 (01 Nov 2014)
+*postgresql-9.1.14-r1 (01 Nov 2014)
+*postgresql-9.0.18-r1 (01 Nov 2014)
+
+  01 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  -postgresql-9.0.18.ebuild, +postgresql-9.0.18-r1.ebuild,
+  -postgresql-9.1.14.ebuild, +postgresql-9.1.14-r1.ebuild,
+  -postgresql-9.2.9.ebuild, +postgresql-9.2.9-r1.ebuild,
+  -postgresql-9.3.5.ebuild, +postgresql-9.3.5-r1.ebuild,
+  -postgresql-9.4_beta2.ebuild, -postgresql-9.4_beta3.ebuild,
+  +postgresql-9.4_beta3-r1.ebuild, postgresql-9999.ebuild,
+  +files/postgresql-9.0-no-server.patch, +files/postgresql-9.1-no-server.patch,
+  +files/postgresql-9.2-no-server.patch, +files/postgresql-9.3-no-server.patch,
+  +files/postgresql-9.4-no-server.patch, +files/postgresql-9.5-no-server.patch,
+  +files/pg_ctl-exit-status.patch:
+  Removed source dependency on patch collection now that the majority only
+  require their respective no-server.patch if the server isn't going to be
+  built. Removed ebuilds with conditionals that always evaluate to false in
+  src_test() and pkg_prerm().
 
 *postgresql-9.4_beta3 (26 Oct 2014)
 
