@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.417 2014/10/17 01:11:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.418 2014/11/01 02:11:59 vapier Exp $
+
+*linux-headers-3.17-r1 (01 Nov 2014)
+
+  01 Nov 2014; Mike Frysinger <vapier@gentoo.org> +linux-headers-3.17-r1.ebuild:
+  Fix mips asm/ptrace.h #527642 by Matt Turner.
 
 *linux-headers-3.17 (17 Oct 2014)
 
