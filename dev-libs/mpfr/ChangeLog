@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.184 2014/06/06 19:58:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.185 2014/11/01 07:24:34 vapier Exp $
+
+*mpfr-3.1.2_p10 (01 Nov 2014)
+
+  01 Nov 2014; Mike Frysinger <vapier@gentoo.org> +files/3.1.2/patch06,
+  +files/3.1.2/patch07, +files/3.1.2/patch08, +files/3.1.2/patch09,
+  +files/3.1.2/patch10, +mpfr-3.1.2_p10.ebuild:
+  Version bump.  Add multilib support #510248 by Thibaud CANALE.
 
   06 Jun 2014; Mike Frysinger <vapier@gentoo.org> -mpfr-2.4.2_p3.ebuild,
   mpfr-2.4.2_p3-r1.ebuild:

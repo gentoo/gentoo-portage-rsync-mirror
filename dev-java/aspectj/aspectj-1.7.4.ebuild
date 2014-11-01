@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.7.4.ebuild,v 1.1 2014/01/25 04:56:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.7.4.ebuild,v 1.2 2014/11/01 07:19:12 ercpe Exp $
 
 EAPI="5"
 JAVA_PKG_IUSE="doc source"
@@ -27,6 +27,7 @@ S=${WORKDIR}
 
 JAVA_SRC_DIR="${S}/src"
 JAVA_GENTOO_CLASSPATH="commons-logging,asm-4"
+JAVA_ENCODING="iso8859-1"
 
 src_unpack() {
 	default
