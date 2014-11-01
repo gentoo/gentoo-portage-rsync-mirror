@@ -10,5 +10,5 @@ RDEPEND=media-libs/fontconfig cups? ( net-print/cups ) x86? ( dev-libs/openssl:0
 RESTRICT=strip mirror
 SLOT=0
 SRC_URI=http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i486linux_enu.tar.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=68ed33605193efff70d66c4f31ed393f

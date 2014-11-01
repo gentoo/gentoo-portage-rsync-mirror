@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=cron? ( sys-process/cronbase ) isag? ( dev-lang/tk dev-vcs/rcs sci-visualization/gnuplot ) nls? ( virtual/libintl ) lm_sensors? ( sys-apps/lm_sensors ) selinux? ( sec-policy/selinux-sysstat )
 SLOT=0
 SRC_URI=http://pagesperso-orange.fr/sebastien.godard/sysstat-11.0.0.tar.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=521ae83f9b1fee46e0479d07a858ca7b

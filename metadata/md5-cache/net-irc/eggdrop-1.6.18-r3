@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/tcl !vanilla? ( mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-server ) ssl? ( dev-libs/openssl ) )
 SLOT=0
 SRC_URI=ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/eggdrop1.6.18.tar.bz2 mirror://gentoo/eggdrop-1.6.18-patches-1.3.tar.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=8a4a270a96fa7a5c0d778e28ea24bcba

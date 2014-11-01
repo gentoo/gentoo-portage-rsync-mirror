@@ -8,5 +8,5 @@ LICENSE=Apache-2.0
 RDEPEND=dev-lang/mono
 SLOT=0
 SRC_URI=https://github.com/fsharp/fsharp/archive/3.1.1.26.tar.gz -> fsharp-3.1.1.26.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	autotools-utils	3727db64c7b960903d5033280f108080	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	autotools-utils	3727db64c7b960903d5033280f108080	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=66be745fad45229f33e3166836e371fb

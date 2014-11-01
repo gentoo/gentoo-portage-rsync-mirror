@@ -10,5 +10,5 @@ RDEPEND=care? ( app-arch/libarchive:0= ) sys-libs/talloc
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/cedric-vincent/PRoot/archive/v3.2.2.tar.gz -> proot-3.2.2.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1f5b83abf412ef50adfb3561a222cad4

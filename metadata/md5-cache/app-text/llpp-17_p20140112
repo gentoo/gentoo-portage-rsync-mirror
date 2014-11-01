@@ -10,5 +10,5 @@ RDEPEND=x11-misc/xsel !static? ( ~app-text/mupdf-1.3_p20140118:= media-libs/open
 RESTRICT=!ocamlopt? ( strip )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~xmw/llpp-17_p20140112.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=e78ae8525e074e72852c0a55ada5b87b

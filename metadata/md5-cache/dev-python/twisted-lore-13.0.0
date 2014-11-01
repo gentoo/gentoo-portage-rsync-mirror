@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND==dev-python/twisted-core-13.0* =dev-python/twisted-web-13.0* || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://twistedmatrix.com/Releases/Lore/13.0/TwistedLore-13.0.0.tar.bz2
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	twisted	fcb518bd0ad842f8f6ed16168341f5d4	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	twisted	fcb518bd0ad842f8f6ed16168341f5d4	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=0c62e90d3c94644d104e6ea3c9b6fd64

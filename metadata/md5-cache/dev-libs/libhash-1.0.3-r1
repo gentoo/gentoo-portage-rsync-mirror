@@ -6,5 +6,5 @@ KEYWORDS=amd64 arm hppa ppc x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=ftp://ftp.ugh.net.au/pub/unix/libhash/libhash-1.0.3.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=6d5c5b4a5ffc419e8eb17cab400ea46c

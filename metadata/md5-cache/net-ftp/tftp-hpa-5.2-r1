@@ -9,5 +9,5 @@ LICENSE=BSD-4
 RDEPEND=selinux? ( sec-policy/selinux-tftp ) readline? ( sys-libs/readline ) tcpd? ( sys-apps/tcp-wrappers ) !net-ftp/atftp !net-ftp/netkit-tftp
 SLOT=0
 SRC_URI=mirror://kernel/software/network/tftp/tftp-hpa/tftp-hpa-5.2.tar.xz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=58222000d7a11f3962c7f18d977b89d8

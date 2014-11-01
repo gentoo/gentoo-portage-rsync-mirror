@@ -8,5 +8,5 @@ LICENSE=GPL-2 BSD
 RDEPEND=~net-p2p/vuze-4.5.1.0
 SLOT=0
 SRC_URI=http://azureus.sourceforge.net/plugins/azplugins_2.1.6.jar http://azureus.sourceforge.net/plugins/azrating_1.3.1.jar http://azureus.sourceforge.net/plugins/azupdater_1.8.17.zip http://azureus.sourceforge.net/plugins/azupnpav_0.2.30.zip
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b5d1bb86d5cdf3edbf9c4c6d4003a7bc

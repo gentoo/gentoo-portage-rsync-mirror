@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=doc? ( media-gfx/transfig dev-texlive/texlive-metapost virtual/latex-base )
 SLOT=0
 SRC_URI=ftp://ohnopublishing.net/mirror/liblist-2.3.1.tar.bz2
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=47c50faad4f104322dcf630047b60ff5

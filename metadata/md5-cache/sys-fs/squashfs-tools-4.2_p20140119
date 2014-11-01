@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=xattr? ( sys-apps/attr ) sys-libs/zlib !xz? ( !lzo? ( sys-libs/zlib ) ) lzma? ( app-arch/xz-utils ) lzo? ( dev-libs/lzo ) xz? ( app-arch/xz-utils )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jer/squashfs-tools-4.2_p20140119.tar.xz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=73364b7264b13cf9d558e5740a86e639

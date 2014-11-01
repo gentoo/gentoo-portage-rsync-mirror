@@ -8,5 +8,5 @@ LICENSE=OPENLDAP
 RDEPEND=!=net-nds/openldap-2.4.40
 SLOT=0
 SRC_URI=https://gitorious.org/mdb/mdb/archive/2f587ae081d076e3707360c5db086520c219d3ea.tar.gz -> lmdb-0.9.14.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cad359ca63ff33a588ef133b1a8edbd3

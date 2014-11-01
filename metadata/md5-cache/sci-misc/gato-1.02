@@ -8,5 +8,5 @@ LICENSE=LGPL-2
 RDEPEND==dev-lang/python-2* =dev-lang/python-2*[tk]
 SLOT=0
 SRC_URI=http://gato.sourceforge.net/Download/Gato-1.02.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=91b3acbfd54f44a466cbf07cd921ac1d

@@ -9,5 +9,5 @@ LICENSE=public-domain
 RDEPEND=>=dev-lisp/common-lisp-controller-4 doc? ( virtual/latex-base ) >=x11-libs/motif-2.3:0 sys-devel/bc
 SLOT=0
 SRC_URI=mirror://gentoo/cmucl_19c-release-20051115.orig.tar.gz mirror://gentoo/cmucl_19c-release-20051115-1.diff.gz mirror://gentoo/cmucl-19c-x86-linux.tar.bz2
-_eclasses_=common-lisp-common-2	fc84d1c8b8f834395bffa96a494aabe4	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=common-lisp-common-2	fc84d1c8b8f834395bffa96a494aabe4	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=fbe5761e438153006408d17800b15d84

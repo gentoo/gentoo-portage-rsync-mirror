@@ -8,5 +8,5 @@ LICENSE=GPL-3 public-domain
 RDEPEND=dev-libs/glib:2 x11-libs/gtk+:3 x11-libs/pango
 SLOT=0
 SRC_URI=mirror://gnu/gxmessage/gxmessage-3.4.0.tar.gz http://homepages.ihug.co.nz/~trmusson/stuff/gxmessage-3.4.0.tar.gz
-_eclasses_=gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=289beba07d79a49267d4d783671a9f74

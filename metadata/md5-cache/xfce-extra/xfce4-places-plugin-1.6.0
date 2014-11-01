@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.28 >=x11-libs/gtk+-2.20:2 x11-libs/libX11 >=xfce-base/exo-0.6 >=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8 >=xfce-base/xfconf-4.8 libnotify? ( >=x11-libs/libnotify-0.7 )
 SLOT=0
 SRC_URI=mirror://xfce/src/panel-plugins/xfce4-places-plugin/1.6/xfce4-places-plugin-1.6.0.tar.bz2
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	xfconf	20671cc91311ca7e3446047c1175cf16
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	xfconf	20671cc91311ca7e3446047c1175cf16
 _md5_=91495fd9a5c32b33517f42a8b26e7ac3

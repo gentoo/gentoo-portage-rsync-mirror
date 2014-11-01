@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/ladspa-sdk
 SLOT=0
 SRC_URI=http://www.kokkinizita.net/linuxaudio/downloads/FIL-plugins-0.1.0.tar.bz2
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ae1147194c9f003d75364dc295e3f594

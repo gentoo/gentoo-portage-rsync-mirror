@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/boost-1.34.1 >=dev-libs/icu-3.8.0:= >=dev-libs/libxml2-2.6.0 >=dev-libs/openssl-0.9.8 >=net-misc/curl-7.16.0[ssl] x11-libs/gtk+:2 >=net-misc/rdesktop-1.4.1
 SLOT=0
 SRC_URI=http://vmware-view-open-client.googlecode.com/files/VMware-view-open-client-source-4.5.0-297975.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=de4ab5e0da5635e866bfa3d67f3b25e9

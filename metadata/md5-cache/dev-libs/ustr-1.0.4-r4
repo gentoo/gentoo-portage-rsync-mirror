@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~arm ~mips ~x86
 LICENSE=|| ( BSD-2 MIT LGPL-2 )
 SLOT=0
 SRC_URI=ftp://ftp.and.org/pub/james/ustr/1.0.4/ustr-1.0.4.tar.bz2
-_eclasses_=multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	9eb4b5fb858228316d8bb32ada51f6a5	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	9eb4b5fb858228316d8bb32ada51f6a5	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=4e1e51aeec842742450330ad717dc65d

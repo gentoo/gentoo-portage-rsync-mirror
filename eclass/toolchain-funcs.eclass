@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.130 2014/10/15 22:52:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.131 2014/11/01 05:19:20 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -415,6 +415,7 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 				echo ppc
 			fi
 			;;
+		riscv*)		echo riscv;;
 		s390*)		echo s390;;
 		score)		echo score;;
 		sh64*)		ninj sh64 sh;;

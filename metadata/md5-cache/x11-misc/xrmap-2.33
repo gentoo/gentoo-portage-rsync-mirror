@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXpm
 SLOT=0
 SRC_URI=ftp://ftp.ac-grenoble.fr/ge/geosciences/xrmap/xrmap-2.10.tgz ftp://ftp.ac-grenoble.fr/ge/geosciences/xrmap/xrmap-2.33.tar.bz2 ftp://ftp.ac-grenoble.fr/ge/geosciences/CIA_WDB2.jpd.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ef90c63c33ec5b566f34a1a00027d409

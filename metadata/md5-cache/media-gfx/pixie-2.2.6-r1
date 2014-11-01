@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/jpeg media-libs/tiff media-libs/libpng x11-libs/fltk:1[opengl] media-libs/openexr virtual/opengl sys-libs/zlib X? ( x11-libs/libXext x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXau x11-libs/libxcb x11-libs/libXdmcp x11-libs/libXi x11-libs/libXmu x11-libs/libXt )
 SLOT=0
 SRC_URI=mirror://sourceforge/pixie/Pixie-src-2.2.6.tgz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b7463c06791809a28a587bcb5d06a803

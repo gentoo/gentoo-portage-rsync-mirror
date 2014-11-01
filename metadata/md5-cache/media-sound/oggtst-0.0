@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/libao-0.8.0 >=media-libs/libvorbis-1.0_rc2
 SLOT=0
 SRC_URI=http://gnometoaster.rulez.org/archive/oggtst.tgz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=25ea0587095a9d1a8997d76d1eee1429

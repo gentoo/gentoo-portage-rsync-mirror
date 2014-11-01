@@ -9,5 +9,5 @@ LICENSE=GPL-2 FDL-1.2 NTED_FONT
 RDEPEND=>=dev-libs/glib-2 media-libs/alsa-lib >=media-libs/freetype-2 x11-libs/cairo >=x11-libs/gdk-pixbuf-2 x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango
 SLOT=0
 SRC_URI=http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/sources/nted-1.10.18.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=4a50c3fb7e0ca8782e6481562a3d6ac7

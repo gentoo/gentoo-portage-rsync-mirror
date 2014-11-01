@@ -11,5 +11,5 @@ REQUIRED_USE=!bindist
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~aballier/libaacplus-2.0.2.tar.gz http://tipok.ath.cx/downloads/media/aac+/libaacplus/libaacplus-2.0.2.tar.gz http://217.20.164.161/~tipok/aacplus/libaacplus-2.0.2.tar.gz http://www.3gpp.org/ftp/Specs/archive/26_series/26.410/26410-800.zip
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	autotools-utils	3727db64c7b960903d5033280f108080	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	autotools-utils	3727db64c7b960903d5033280f108080	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=0de9d0ba3e209c382589478b9b22f52c

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=!app-text/odt2txt virtual/ooo =dev-lang/python-2*
 SLOT=0
 SRC_URI=https://github.com/dagwieers/unoconv/tarball/a2c7b2f06d799453666639382951142e0bcaad43 -> unoconv-0.6.20131229-git.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=134e7765e48e5cbe97731450ee3b6878

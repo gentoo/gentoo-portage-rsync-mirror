@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-libs/ncurses-5.7-r7 magic? ( sys-apps/file ) gtk? ( x11-libs/gtk+:2 ) X? ( x11-libs/libX11 ) vim? ( || ( app-editors/vim app-editors/gvim ) ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/vifm/vifm-0.7.4b.tar.bz2
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	vim-doc	1c18baeec98cec3287524cbf2fee2bd2
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vim-doc	1c18baeec98cec3287524cbf2fee2bd2
 _md5_=4d8babeddf9f061daa8c236dadfb4010

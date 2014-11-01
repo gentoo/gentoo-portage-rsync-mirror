@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=media-libs/libmpd net-misc/curl
 SLOT=0
 SRC_URI=http://50hz.ws/mpdas/mpdas-0.3.0.tar.bz2
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=def802bf2cb69a8599b7e0478b097cba

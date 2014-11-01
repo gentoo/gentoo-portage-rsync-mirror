@@ -8,5 +8,5 @@ LICENSE=Apache-2.0
 RDEPEND=>=dev-lang/mono-2.0
 SLOT=0
 SRC_URI=mirror://apache/logging/log4net/source/log4net-1.2.11-src.zip http://dev.gentoo.org/~pacho/dotnet/log4net.snk
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=f1c084509a1d963ab60b19fada2fa72d

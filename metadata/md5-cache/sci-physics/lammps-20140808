@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=mpi? ( virtual/mpi ) sci-libs/voro++ virtual/fortran
 SLOT=0
 SRC_URI=http://lammps.sandia.gov/tars/lammps-8Aug14.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ecea00a3b4e24c78d43450c60653c7c2

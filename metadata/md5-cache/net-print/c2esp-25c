@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/jbigkit-2.0-r1 >=net-print/cups-1.4
 SLOT=0
 SRC_URI=mirror://sourceforge/cupsdriverkodak/files/c2esp25c.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=6805242b8e688966f00a55b5752a9e54

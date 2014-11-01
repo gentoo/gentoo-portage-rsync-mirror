@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-libs/protobuf-c-1.0.0_rc2 dev-libs/libconfig polarssl? ( >=net-libs/polarssl-1.0.0 ) !polarssl? ( dev-libs/openssl:0 )
 SLOT=0
 SRC_URI=https://github.com/fatbob313/umurmur/archive/0.2.15.tar.gz -> umurmur-0.2.15.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	readme.gentoo	106edea5533517715013de909a333abd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	readme.gentoo	106edea5533517715013de909a333abd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=031e7b08e4101bf24d82b1a1e5f2e32f

@@ -6,5 +6,5 @@ HOMEPAGE=https://github.com/majutsushi/urxvt-font-size/
 LICENSE=MIT
 RDEPEND=x11-apps/xlsfonts x11-terms/rxvt-unicode[perl]
 SLOT=0
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=002808d29919ca6c9d1638fe53ea768f

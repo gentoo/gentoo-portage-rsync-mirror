@@ -9,5 +9,5 @@ LICENSE=GPL-3 LGPL-2
 RDEPEND=app-arch/bzip2 sys-libs/zlib
 SLOT=0
 SRC_URI=mirror://sourceforge/project/advancemame/advancecomp/1.17/advancecomp-1.17.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=9a3aa53c3dee13f812eceadda0eb4a21

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/libusb:0
 SLOT=0
 SRC_URI=http://www.codon.org.uk/~mjg59/gobi_loader/download/gobi_loader-0.7.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	udev	da001465a2e939c93f7ae16947ce3438
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=cb3ca27a0fffa284ba77138a4dd25dab

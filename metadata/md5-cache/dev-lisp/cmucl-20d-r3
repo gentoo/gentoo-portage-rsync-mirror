@@ -10,5 +10,5 @@ RDEPEND=>=dev-lisp/asdf-2.33-r3:= x11-libs/motif:0
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://common-lisp.net/project/cmucl/downloads/release/20d/cmucl-src-20d.tar.bz2 http://common-lisp.net/project/cmucl/downloads/release/20d/cmucl-20d-x86-linux.tar.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=f1e8faff69c92cd41ded3d71725d9ecf

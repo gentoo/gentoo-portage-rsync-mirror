@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=app-i18n/scim-1.2.0 >=app-i18n/libtomoe-gtk-0.6.0[gucharmap=] gucharmap? ( >=gnome-extra/gucharmap-1.4 ) >=x11-libs/gtk+-2.4:2
 SLOT=0
 SRC_URI=mirror://sourceforge/tomoe/scim-tomoe-0.6.0.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=8c047b79b343acf57774275de02088d2

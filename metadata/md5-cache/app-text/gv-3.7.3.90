@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=app-text/ghostscript-gpl x11-libs/libICE x11-libs/libSM x11-libs/libX11 >=x11-libs/libXaw3d-1.6-r1[unicode] x11-libs/libXext x11-libs/libXmu x11-libs/libXpm x11-libs/libXt xinerama? ( x11-libs/libXinerama )
 SLOT=0
 SRC_URI=mirror://gnu-alpha/gv/gv-3.7.3.90.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=2c52b7459d946c111a321c9e55ebb455

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-fs/udisks:2 >=x11-libs/gtk+-3.8.0:3 gnome-keyring? ( gnome-base/libgnome-keyring ) libnotify? ( >=x11-libs/libnotify-0.7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/wmudmount/wmudmount-2.0.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=8ceb25dc017386d920fea2d9c6a641c6

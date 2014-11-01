@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=alsa? ( media-libs/alsa-lib ) mad? ( media-sound/madplay ) vorbis? ( media-libs/libvorbis ) sox? ( media-sound/sox media-sound/mpg123 ) >=x11-libs/gtk+-2.2:2 >=dev-libs/glib-2.2:2 x11-libs/libXi x11-libs/libXxf86dga dev-libs/libxml2 media-libs/audiofile media-libs/ladspa-sdk media-libs/ladspa-cmt app-text/scrollkeeper media-libs/liblrdf
 SLOT=0
 SRC_URI=http://www.terminatorx.org/dist/terminatorX-3.83.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=fae1758f219589a41f4a74c1c0448e28

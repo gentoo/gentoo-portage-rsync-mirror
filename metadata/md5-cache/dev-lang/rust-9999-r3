@@ -8,5 +8,5 @@ LICENSE=|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA
 RDEPEND=libcxx? ( sys-libs/libcxx ) >=app-admin/eselect-rust-0.2_pre20141011 !dev-lang/rust:0 emacs? ( >=app-emacs/rust-mode-9999 ) vim-syntax? ( >=app-vim/rust-mode-9999 ) zsh-completion? ( >=app-shells/rust-zshcomp-9999 )
 REQUIRED_USE=libcxx? ( clang )
 SLOT=git
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=af7a40d9106a17b4147c442af60e45e9

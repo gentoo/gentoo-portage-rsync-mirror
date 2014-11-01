@@ -9,5 +9,5 @@ LICENSE=GPL-3 LGPL-3
 RDEPEND=>=dev-libs/libtasn1-2.14 >=dev-libs/nettle-2.7[gmp] dev-libs/gmp sys-devel/autogen crywrap? ( net-dns/libidn ) dane? ( net-dns/unbound ) guile? ( >=dev-scheme/guile-1.8[networking] ) nls? ( virtual/libintl ) pkcs11? ( >=app-crypt/p11-kit-0.19.2 ) zlib? ( >=sys-libs/zlib-1.2.3.1 )
 SLOT=0
 SRC_URI=mirror://gnupg/gnutls/v3.2/gnutls-3.2.18.tar.xz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=e5e9d5bb3cfdffb403df09e4db2b50b0

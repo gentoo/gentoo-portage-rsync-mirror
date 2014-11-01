@@ -8,5 +8,5 @@ LICENSE=YDSLA
 RDEPEND=sys-libs/zlib
 SLOT=0
 SRC_URI=amd64? ( http://repo.yandex.ru/yandex-disk/rpm/stable/x86_64/yandex-disk-0.1.4.504-1.fedora.x86_64.rpm ) x86? ( http://repo.yandex.ru/yandex-disk/rpm/stable/i386/yandex-disk-0.1.4.504-1.fedora.i386.rpm )
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e959feb3b31b8c31f88a886263e1d40f

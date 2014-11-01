@@ -9,5 +9,5 @@ LICENSE=GPL-2 free-noncomm
 RDEPEND=!dedicated? ( virtual/jpeg media-libs/openal media-libs/libvorbis media-libs/freetype:2 virtual/glu virtual/opengl dga? ( x11-libs/libXxf86dga ) vidmode? ( x11-libs/libXxf86vm ) zlib? ( sys-libs/zlib ) net-misc/curl ) games-misc/games-envd
 SLOT=0
 SRC_URI=http://icculus.org/alienarena/Files/alienarena-7.65-linux20130207.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=9248542c23b53952d2ef88d1b8d0b7d3

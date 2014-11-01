@@ -8,5 +8,5 @@ KEYWORDS=amd64 hppa ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=LGPL-3
 SLOT=0
 SRC_URI=http://download.zeromq.org/zeromq-2.2.0.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=790b112e0834aed7a961c979afcc3201

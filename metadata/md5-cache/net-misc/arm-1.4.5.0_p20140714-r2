@@ -10,5 +10,5 @@ RDEPEND=>=net-libs/stem-1.2.2_p20140718[python_targets_python2_7(-)?,-python_sin
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=https://gitweb.torproject.org/arm.git/snapshot/ac7923e31f52d3cf51b538ddf799162d67c04ecc.tar.gz -> arm-1.4.5.0_p20140714.tar.gz
-_eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	32548a82e42dc26e3312581476d2f20c	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	32548a82e42dc26e3312581476d2f20c	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=129949ec218f4aa04050c9d9fe025d2a

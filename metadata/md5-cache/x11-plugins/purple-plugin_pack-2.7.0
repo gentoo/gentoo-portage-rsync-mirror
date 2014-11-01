@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=net-im/pidgin[gtk?,ncurses?] talkfilters? ( app-text/talkfilters ) spell? ( app-text/gtkspell:2 )
 SLOT=0
 SRC_URI=https://www.guifications.org/attachments/download/201/purple-plugin-pack-2.7.0.tar.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e42279c1359e4bf39549b15e2beb3e26

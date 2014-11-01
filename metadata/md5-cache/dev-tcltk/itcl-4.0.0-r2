@@ -9,5 +9,5 @@ RDEPEND=>=dev-lang/tcl-8.6
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/project/tcl/Tcl/8.6.0/itcl4.0.0.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=15a022801112b9c374fb60ae16f3cbc3

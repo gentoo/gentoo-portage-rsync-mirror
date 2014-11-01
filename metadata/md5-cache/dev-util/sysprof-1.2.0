@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=dev-libs/atk >=dev-libs/glib-2.6:2 >=gnome-base/libglade-2:2.0 x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-2.6:2 x11-libs/pango
 SLOT=0
 SRC_URI=http://sysprof.com/sysprof-1.2.0.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	udev	da001465a2e939c93f7ae16947ce3438	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=9a6da254e86ef60256652b0cae58f811

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=vorbis? ( media-sound/vorbis-tools ) mp3? ( || ( media-sound/mpg123 media-sound/mpg321 media-sound/madplay media-sound/splay ) ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://mask.tf.hut.fi/~flu/cplay/cplay-1.49.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ca7f90d936d8831f6e168a11917fdb91

@@ -10,5 +10,5 @@ RDEPEND=app-admin/eselect-opencl sys-process/numactl !bundled_libs? ( dev-cpp/tb
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://registrationcenter.intel.com/irc_nas/4181/intel_sdk_for_ocl_applications_2014_ubuntu_4.4.0.117_x64.tgz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=335e7b3c3087958f33ec6bd2b4a2c3fc

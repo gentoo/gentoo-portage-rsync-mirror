@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sci-libs/netcdf sci-libs/gdal data? ( sci-geosciences/gshhs-data )
 SLOT=0
 SRC_URI=ftp://ftp.soest.hawaii.edu/pwessel/gshhs/gshhs_1.13_src.zip
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b5833278257ed251afe9c7db4fb12b58

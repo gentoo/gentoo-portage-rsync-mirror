@@ -7,5 +7,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=media-libs/libvorbis-1 media-libs/libogg
 SLOT=0
 SRC_URI=http://sjeng.org/ftp/vorbis/vorbisgain-0.37.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e412a574e4baba92f232378d1345de3c

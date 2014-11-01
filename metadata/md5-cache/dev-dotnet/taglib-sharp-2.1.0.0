@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-lang/mono
 SLOT=0
 SRC_URI=http://download.banshee-project.org/taglib-sharp/2.1.0.0/taglib-sharp-2.1.0.0.tar.bz2
-_eclasses_=mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=a8ed14664793d2ef61d7c66fa7fcde03

@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=>=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.24 >=x11-libs/cairo-1 >=x11-libs/gtk+-2.20:2 >=x11-libs/gtk+-3.2:3 x11-libs/libX11 >=x11-libs/libwnck-2.31:1 >=xfce-base/exo-0.8 >=xfce-base/garcon-0.3 >=xfce-base/libxfce4ui-4.11 >=xfce-base/libxfce4util-4.11 >=xfce-base/xfconf-4.10
 SLOT=0
 SRC_URI=mirror://xfce/src/xfce/xfce4-panel/4.11/xfce4-panel-4.11.0.tar.bz2
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	xfconf	20671cc91311ca7e3446047c1175cf16
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	xfconf	20671cc91311ca7e3446047c1175cf16
 _md5_=f1616980ff110abc83cbf71b00ccfe4d

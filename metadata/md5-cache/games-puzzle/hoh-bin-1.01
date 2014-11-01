@@ -8,5 +8,5 @@ RDEPEND=|| ( ( x11-libs/libX11[abi_x86_32(-)] ) amd64? ( app-emulation/emul-linu
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://retrospec.sgn.net/download.php?id=63\&path=games/hoh/bin/hohlin-101.tar.bz2
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=89a70756bfbb83d1e6b2820ceb13e7c0

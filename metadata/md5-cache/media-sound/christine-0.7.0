@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND==dev-python/gst-python-0.10* dev-python/pycairo dev-python/pygobject:2 =dev-python/pygtk-2* media-libs/mutagen libnotify? ( dev-python/notify-python ) readline? ( sys-libs/readline ) =media-plugins/gst-plugins-meta-0.10* =dev-lang/python-2.7* =dev-lang/python-2.7*[sqlite]
 SLOT=0
 SRC_URI=mirror://sourceforge/christine/christine-0.7.0.tar.bz2
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=68b08f404d4ee721b7354316c59831c5

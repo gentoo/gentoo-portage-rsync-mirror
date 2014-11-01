@@ -8,5 +8,5 @@ LICENSE=GPL-3+
 RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ncurses] ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2[ncurses] ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[ncurses] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~radhermit/distfiles/terminal-colors-2.0.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	75e5c82b55dcb208a0a8f4ab8847e731	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=8a67e2f046ee040c1302fde02244b897

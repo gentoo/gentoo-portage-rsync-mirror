@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=adminserver? ( net-nds/389-admin ) dev-libs/nspr dev-libs/nss dev-libs/cyrus-sasl dev-libs/icu:= dev-libs/389-adminutil net-nds/openldap dev-perl/perl-mozldap virtual/perl-CGI
 SLOT=0
 SRC_URI=http://directory.fedoraproject.org/sources/389-dsgw-1.1.10.tar.bz2
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=672d51fedc290b91df3c7deda97636d8

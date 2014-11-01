@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=app-admin/eselect-mpg123 >=sys-devel/libtool-2.2.6b alsa? ( media-libs/alsa-lib ) jack? ( media-sound/jack-audio-connection-kit ) nas? ( media-libs/nas ) portaudio? ( media-libs/portaudio ) pulseaudio? ( media-sound/pulseaudio ) sdl? ( media-libs/libsdl ) abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r9 !app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=http://www.mpg123.org/download/mpg123-1.19.0.tar.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	9eb4b5fb858228316d8bb32ada51f6a5	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	9eb4b5fb858228316d8bb32ada51f6a5	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=5f388149731793d6c0eb96a33c2c67ca

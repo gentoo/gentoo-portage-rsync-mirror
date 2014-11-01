@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-fs/fuse-2.3:= >=net-fs/samba-3.2:=[smbclient] gnome? ( gnome-base/gnome-keyring:= )
 SLOT=0
 SRC_URI=mirror://sourceforge/smbnetfs/smbnetfs-0.5.3b.tar.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=57b02440edfe75f72f57b424aa377d7a

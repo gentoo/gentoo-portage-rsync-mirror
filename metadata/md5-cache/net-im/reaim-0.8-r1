@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=net-firewall/iptables
 SLOT=0
 SRC_URI=mirror://sourceforge/reaim/reaim-0.8.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=48ae283b15bfa197d4cd530b663f7a6b
