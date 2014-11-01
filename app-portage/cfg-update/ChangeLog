@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/cfg-update
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.40 2014/10/13 01:02:00 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.41 2014/11/01 14:30:10 rich0 Exp $
+
+  01 Nov 2014; Richard Freeman <rich0@gentoo.org> cfg-update-1.8.9.ebuild:
+  x86 stable based on dwfreed report, and current stable is broken anyway...
 
   13 Oct 2014; Richard Freeman <rich0@gentoo.org> -cfg-update-1.8.8.ebuild:
   No longer works after bash security fixes.
