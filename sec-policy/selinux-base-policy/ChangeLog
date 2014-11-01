@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.154 2014/08/30 20:20:47 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.155 2014/11/01 16:13:37 swift Exp $
+
+  01 Nov 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-base-policy-9999.ebuild:
+  Add KEYWORDS logic in -9999 ebuilds for ease of copying
 
   30 Aug 2014; Sven Vermeulen <swift@gentoo.org>
   selinux-base-policy-9999.ebuild:

@@ -1,9 +1,11 @@
 # ChangeLog for sec-policy/selinux-android
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-android/ChangeLog,v 1.1 2014/10/31 15:31:42 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-android/ChangeLog,v 1.2 2014/11/01 16:13:35 swift Exp $
+
+  01 Nov 2014; Sven Vermeulen <swift@gentoo.org> selinux-android-9999.ebuild:
+  Add KEYWORDS logic in -9999 ebuilds for ease of copying
 
 *selinux-android-9999 (31 Oct 2014)
 
   31 Oct 2014; Sven Vermeulen <swift@gentoo.org> +selinux-android-9999.ebuild:
   Adding SELinux policy for Android tools
-
