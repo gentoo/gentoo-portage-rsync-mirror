@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/mockldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mockldap/ChangeLog,v 1.12 2014/07/27 03:13:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mockldap/ChangeLog,v 1.13 2014/11/01 08:45:30 idella4 Exp $
+
+*mockldap-0.2.3 (01 Nov 2014)
+
+  01 Nov 2014; Ian Delaney <idella4@gentoo.org> +mockldap-0.2.3.ebuild,
+  -mockldap-0.1.4.ebuild, -mockldap-0.1.5.ebuild, -mockldap-0.1.7.ebuild,
+  -mockldap-0.2.0.ebuild, -mockldap-0.2.1.ebuild:
+  bump; rm old
 
 *mockldap-0.2.2 (27 Jul 2014)
 

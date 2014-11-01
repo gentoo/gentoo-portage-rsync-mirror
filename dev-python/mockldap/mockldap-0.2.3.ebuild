@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mockldap/mockldap-0.1.5.ebuild,v 1.1 2014/02/21 08:52:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mockldap/mockldap-0.2.3.ebuild,v 1.1 2014/11/01 08:45:30 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 
@@ -15,17 +15,17 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc test"
+IUSE="doc"
 
-RDEPEND="dev-python/funcparserlib[${PYTHON_USEDEP}]
+RDEPEND="~dev-python/funcparserlib-0.3.6[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/python-ldap[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( dev-python/passlib[${PYTHON_USEDEP}] )"
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 
-PATCHES=( "${FILESDIR}"/${P}-modify_s-backport.patch )
+# Disable un-needed d'loading during doc build
+PATCHES=( "${FILESDIR}"/mapping.patch )
 
 python_compile_all() {
 	use doc && emake -C docs html

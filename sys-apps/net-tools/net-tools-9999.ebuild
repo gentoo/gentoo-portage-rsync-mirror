@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-9999.ebuild,v 1.7 2014/10/20 17:42:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-9999.ebuild,v 1.8 2014/11/01 08:44:30 swift Exp $
 
 EAPI="3"
 
@@ -75,7 +75,7 @@ src_configure() {
 	set_opt HAVE_HWIB has_version '>=sys-kernel/linux-headers-2.6'
 	set_opt HAVE_HWTR has_version '<sys-kernel/linux-headers-3.5'
 	set_opt HAVE_HWSTRIP has_version '<sys-kernel/linux-headers-3.6'
-	set_opt SELINUX use selinux
+	set_opt HAVE_SELINUX use selinux
 	if use static ; then
 		append-flags -static
 		append-ldflags -static
