@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.143 2014/08/27 17:21:14 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.144 2014/11/01 18:34:24 dilfridge Exp $
+
+  01 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  dvdrip-0.98.11-r2.ebuild:
+  Require new enough podlators, fixes bug 442492
 
 *dvdrip-0.98.11-r2 (27 Aug 2014)
 
