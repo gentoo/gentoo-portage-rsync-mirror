@@ -1,9 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.5.2-r1.ebuild,v 1.5 2013/01/13 11:29:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.5.2-r2.ebuild,v 1.1 2014/11/01 20:54:14 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
+GENTOO_DEPEND_ON_PERL_SUBSLOT=yes
 inherit perl-app
 
 MY_P="${P/bw/}"

@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/bwwhois
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.38 2013/06/06 07:22:53 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.39 2014/11/01 20:54:14 dilfridge Exp $
+
+*bwwhois-5.5.2-r2 (01 Nov 2014)
+
+  01 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +bwwhois-5.5.2-r2.ebuild, -bwwhois-5.5.2-r1.ebuild:
+  EAPI bump
 
   06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> -bwwhois-5.5.2.ebuild:
   Drop old revision
