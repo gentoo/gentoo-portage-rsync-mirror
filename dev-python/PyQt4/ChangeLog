@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.274 2014/10/15 14:48:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.275 2014/11/01 02:58:19 pesa Exp $
+
+*PyQt4-4.11.3_pre20141024 (01 Nov 2014)
+
+  01 Nov 2014; Davide Pesavento <pesa@gentoo.org>
+  +PyQt4-4.11.3_pre20141024.ebuild, -PyQt4-4.11.2-r1.ebuild:
+  Bump to 4.11.3 prerelease, which contains upstream fixes for bugs #525392 and
+  #525470. Also switch to out-of-source builds.
 
   15 Oct 2014; Davide Pesavento <pesa@gentoo.org> PyQt4-4.11.2-r1.ebuild:
   Fix bug #525392.

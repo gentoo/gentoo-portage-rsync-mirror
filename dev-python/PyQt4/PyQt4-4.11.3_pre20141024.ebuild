@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.2-r1.ebuild,v 1.3 2014/10/15 14:48:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.3_pre20141024.ebuild,v 1.1 2014/11/01 02:58:19 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -12,8 +12,9 @@ HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/ https://pypi.
 
 MY_PN="PyQt-x11-gpl"
 if [[ ${PV} == *_pre* ]]; then
+	REVISION=adb94530c076
 	MY_P=${MY_PN}-${PV%_pre*}-snapshot-${REVISION}
-	SRC_URI="http://dev.gentoo.org/~pesa/distfiles/${MY_P}.tar.gz"
+	SRC_URI="http://dev.gentoo.org/~pesa/distfiles/${MY_P}.tar.xz"
 else
 	MY_P=${MY_PN}-${PV}
 	SRC_URI="mirror://sourceforge/pyqt/${MY_P}.tar.gz"
@@ -36,7 +37,7 @@ QT_PV="4.8.5:4"
 
 RDEPEND="
 	${PYTHON_DEPS}
-	>=dev-python/sip-4.16:=[${PYTHON_USEDEP}]
+	>=dev-python/sip-4.16.4:=[${PYTHON_USEDEP}]
 	>=dev-qt/qtcore-${QT_PV}
 	X? ( >=dev-qt/qtgui-${QT_PV} )
 	dbus? (
@@ -73,20 +74,8 @@ src_prepare() {
 	# Allow building against KDE's phonon (bug 525354).
 	epatch "${FILESDIR}/${PN}-4.11.2-phonon.patch"
 
-	if ! use dbus; then
-		sed -i -e '/^\s\+check_dbus(/d' configure-ng.py || die
-	fi
-
-	python_copy_sources
-
-	preparation() {
-		if [[ ${EPYTHON} == python3.* ]]; then
-			rm -fr pyuic/uic/port_v2
-		else
-			rm -fr pyuic/uic/port_v3
-		fi
-	}
-	python_foreach_impl run_in_build_dir preparation
+	# Avoid automagic dependency.
+	use dbus || rm -fr dbus
 }
 
 pyqt_use_enable() {
@@ -94,11 +83,15 @@ pyqt_use_enable() {
 }
 
 src_configure() {
+	local qmake_path=${EPREFIX}/usr/$(get_libdir)/qt4/bin/qmake
+	[[ ! -x ${qmake_path} ]] && qmake_path=${EPREFIX}/usr/bin/qmake
+
 	configuration() {
 		local myconf=(
-			"${PYTHON}" configure-ng.py
+			"${PYTHON}"
+			"${S}"/configure-ng.py
 			--confirm-license
-			--qmake="${EPREFIX}/usr/bin/qmake"
+			--qmake="${qmake_path}"
 			--destdir="$(python_get_sitedir)"
 			--assume-shared
 			--no-timestamp
@@ -127,13 +120,6 @@ src_configure() {
 		echo "${myconf[@]}"
 		"${myconf[@]}" || die
 
-		# We need to specify the .pro file name when it doesn't follow
-		# the subdirs naming convention or recursive qmake won't work.
-		sed -i -e '/^SUBDIRS/ {
-			s:designer:designer/python.pro:
-			s:pylupdate:pylupdate/pylupdate4.pro:
-			s:pyrcc:pyrcc/pyrcc4.pro:
-			}' ${PN}.pro || die
 		eqmake4 -recursive ${PN}.pro
 	}
 	python_parallel_foreach_impl run_in_build_dir configuration
@@ -146,9 +132,14 @@ src_compile() {
 src_install() {
 	installation() {
 		local tmp_root=${D%/}/tmp
+		emake INSTALL_ROOT="${tmp_root}" install
 
-		# INSTALL_ROOT is used by designer/Makefile, other Makefiles use DESTDIR.
-		emake DESTDIR="${tmp_root}" INSTALL_ROOT="${tmp_root}" install
+		local uic_dir=${tmp_root}$(python_get_sitedir)/${PN}/uic
+		if python_is_python3; then
+			rm -r "${uic_dir}"/port_v2 || die
+		else
+			rm -r "${uic_dir}"/port_v3 || die
+		fi
 
 		python_doexe "${tmp_root}${EPREFIX}"/usr/bin/pyuic4
 		rm "${tmp_root}${EPREFIX}"/usr/bin/pyuic4 || die
