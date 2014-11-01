@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.87-r1.ebuild,v 1.7 2014/11/01 16:33:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.88.ebuild,v 1.1 2014/11/01 16:45:58 ulm Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3+ FDL-1.3+"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="preview-latex"
 
 DEPEND="virtual/latex-base
@@ -22,7 +22,6 @@ DEPEND="virtual/latex-base
 	)"
 RDEPEND="${DEPEND}"
 
-ELISP_PATCHES="${P}-jit-lock.patch"
 TEXMF="/usr/share/texmf-site"
 
 src_prepare() {
@@ -47,11 +46,11 @@ src_compile() {
 
 src_install() {
 	emake -j1 DESTDIR="${D}" install
-	elisp-site-file-install "${FILESDIR}/50${PN}-gentoo.el" || die
+	elisp-site-file-install "${FILESDIR}/50${PN}-gentoo.el"
 	if use preview-latex; then
-		elisp-site-file-install "${FILESDIR}/60${PN}-gentoo.el" || die
+		elisp-site-file-install "${FILESDIR}/60${PN}-gentoo.el"
 	fi
-	dodoc ChangeLog CHANGES FAQ INSTALL README RELEASE TODO
+	dodoc ChangeLog CHANGES FAQ INSTALL PROBLEMS.preview README RELEASE TODO
 }
 
 pkg_postinst() {

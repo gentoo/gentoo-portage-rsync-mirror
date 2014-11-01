@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.126 2014/09/13 11:43:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.128 2014/11/01 16:45:58 ulm Exp $
+
+*auctex-11.88 (01 Nov 2014)
+
+  01 Nov 2014; Ulrich Müller <ulm@gentoo.org> +auctex-11.88.ebuild:
+  Version bump.
+
+  01 Nov 2014; Ulrich Müller <ulm@gentoo.org> auctex-11.87-r1.ebuild:
+  Fix typo in src_configure, EMACS_FLAVOR instead of EMACS_FLAVOUR.
 
   13 Sep 2014; Markus Meier <maekke@gentoo.org> auctex-11.87-r1.ebuild:
   add ~arm, bug #510480
