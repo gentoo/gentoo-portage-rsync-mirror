@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1399 2014/11/01 23:39:05 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1400 2014/11/02 00:45:43 dilfridge Exp $
+
+  02 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-app.eclass:
+  Remove handling of EAPI=0,1,2 since that codepath cannot run anymore anyway
 
   01 Nov 2014; Davide Pesavento <pesa@gentoo.org> qmake-utils.eclass:
   eqmake4(): support new qmake install location (patch by mgorny).

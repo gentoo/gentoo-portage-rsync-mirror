@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pfm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pfm/ChangeLog,v 1.2 2014/04/11 02:15:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pfm/ChangeLog,v 1.3 2014/11/02 00:33:28 radhermit Exp $
+
+  02 Nov 2014; Tim Harder <radhermit@gentoo.org> -pfm-2.12.0.ebuild:
+  Remove old.
 
 *pfm-2.12.3 (11 Apr 2014)
 

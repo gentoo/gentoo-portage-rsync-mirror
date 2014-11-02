@@ -1,19 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ranger-1.6.1.ebuild,v 1.4 2014/10/30 14:04:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ranger-1.6.1.ebuild,v 1.6 2014/11/02 00:55:09 radhermit Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE="ncurses"
 
 inherit distutils-r1
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.savannah.nongnu.org/ranger.git"
-	inherit git-2
+	inherit git-r3
 else
 	SRC_URI="http://nongnu.org/${PN}/${P}.tar.gz"
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="A vim-inspired file manager for the console"

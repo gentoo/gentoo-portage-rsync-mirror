@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/ranger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.30 2014/10/30 14:04:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.32 2014/11/02 00:55:09 radhermit Exp $
+
+  02 Nov 2014; Tim Harder <radhermit@gentoo.org> ranger-1.6.1.ebuild,
+  ranger-9999.ebuild:
+  Bump to git-r3 eclass and drop masked python support (2.6 and 3.2).
+
+  02 Nov 2014; Tim Harder <radhermit@gentoo.org> ranger-1.6.1.ebuild:
+  Stabilize for x86 as well.
 
   30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> ranger-1.6.1.ebuild:
   Stable for amd64, wrt bug #525602
