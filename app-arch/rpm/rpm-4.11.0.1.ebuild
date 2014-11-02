@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.11.0.1.ebuild,v 1.13 2013/06/30 18:04:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.11.0.1.ebuild,v 1.14 2014/11/02 07:57:12 swift Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-lin
 
 IUSE="nls python doc caps lua acl selinux"
 
-RDEPEND="!app-arch/rpm5
+CDEPEND="!app-arch/rpm5
 	>=sys-libs/db-4.5
 	>=sys-libs/zlib-1.2.3-r1
 	>=app-arch/bzip2-1.0.1
@@ -32,13 +32,13 @@ RDEPEND="!app-arch/rpm5
 	nls? ( virtual/libintl )
 	lua? ( >=dev-lang/lua-5.1.0[deprecated] )
 	acl? ( virtual/acl )
-	caps? ( >=sys-libs/libcap-2.0 )
-	selinux? ( sec-policy/selinux-rpm )"
+	caps? ( >=sys-libs/libcap-2.0 )"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
-
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-rpm )"
 REQUIRED_USE="
 	python? ( ${PYTHON_REQUIRED_USE} )
 "

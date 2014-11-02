@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.7.ebuild,v 1.13 2014/06/10 00:06:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.7.ebuild,v 1.14 2014/11/02 07:47:21 swift Exp $
 
 EAPI=5
 
@@ -15,17 +15,19 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="acl selinux"
 
-RDEPEND="
+CDEPEND="
 	>=dev-libs/popt-1.5
 	selinux? (
 		sys-libs/libselinux
-		sec-policy/selinux-logrotate
 	)
 	acl? ( virtual/acl )"
 
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
-
+DEPEND="${CDEPEND}
+	>=sys-apps/sed-4
+"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-logrotate )
+"
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-datehack.patch \

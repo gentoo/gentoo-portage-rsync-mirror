@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-11.0.0.ebuild,v 1.6 2014/10/29 09:29:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-11.0.0.ebuild,v 1.7 2014/11/02 07:50:36 swift Exp $
 
 EAPI=5
 inherit eutils multilib systemd toolchain-funcs
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~arm64 hppa ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~x86"
 IUSE="cron debug +doc isag nls lm_sensors selinux"
 
-RDEPEND="
+CDEPEND="
 	cron? ( sys-process/cronbase )
 	isag? (
 		dev-lang/tk
@@ -23,13 +23,15 @@ RDEPEND="
 	)
 	nls? ( virtual/libintl )
 	lm_sensors? ( sys-apps/lm_sensors )
-	selinux? ( sec-policy/selinux-sysstat )
 "
 DEPEND="
-	${RDEPEND}
+	${CDEPEND}
 	nls? ( sys-devel/gettext )
 "
-
+RDEPEND="
+	${CDEPEND}
+	selinux? ( sec-policy/selinux-sysstat )
+"
 src_prepare() {
 	if use nls; then
 		strip-linguas -i nls/

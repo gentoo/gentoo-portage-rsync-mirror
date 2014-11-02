@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.12.2.ebuild,v 1.10 2014/09/19 10:34:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.12.2.ebuild,v 1.11 2014/11/02 08:00:17 swift Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="doc +keyutils openldap +pkinit selinux +threads test xinetd"
 
-RDEPEND="!!app-crypt/heimdal
+CDEPEND="!!app-crypt/heimdal
 	>=sys-libs/e2fsprogs-libs-1.42.9[${MULTILIB_USEDEP}]
 	|| ( >=dev-libs/libverto-0.2.5[libev,${MULTILIB_USEDEP}]
 		>=dev-libs/libverto-0.2.5[libevent,${MULTILIB_USEDEP}]
@@ -26,19 +26,20 @@ RDEPEND="!!app-crypt/heimdal
 	keyutils? ( >=sys-apps/keyutils-1.5.8[${MULTILIB_USEDEP}] )
 	openldap? ( >=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}] )
 	pkinit? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
-	selinux? ( sec-policy/selinux-kerberos )
 	xinetd? ( sys-apps/xinetd )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r1
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	${PYTHON_DEPS}
 	virtual/yacc
 	doc? ( virtual/latex-base )
 	test? ( ${PYTHON_DEPS}
 			dev-lang/tcl
 			dev-util/dejagnu )"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-kerberos )"
 
 S=${WORKDIR}/${MY_P}/src
 

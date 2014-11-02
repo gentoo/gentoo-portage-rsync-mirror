@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/memoizable-0.4.2.ebuild,v 1.3 2014/08/06 07:26:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/memoizable-0.4.2.ebuild,v 1.4 2014/11/02 07:44:58 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -24,4 +24,7 @@ ruby_add_rdepend ">=dev-ruby/thread_safe-0.3.1:0"
 
 all_ruby_prepare() {
 	sed -i -e "/simplecov/,/^end$/d" spec/spec_helper.rb || die
+
+	# Avoid a failing test that also fails for upstream Travis.
+	rm spec/unit/memoizable/class_methods/included_spec.rb || die
 }

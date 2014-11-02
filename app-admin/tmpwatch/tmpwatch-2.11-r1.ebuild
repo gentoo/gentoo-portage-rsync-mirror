@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.11-r1.ebuild,v 1.1 2013/05/08 04:30:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.11-r1.ebuild,v 1.2 2014/11/02 07:52:25 swift Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="selinux"
 
 RDEPEND="selinux? ( sec-policy/selinux-tmpreaper )"
-DEPEND="${RDEPEND}"
+DEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-boottime.patch"

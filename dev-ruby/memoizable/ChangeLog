@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/memoizable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/ChangeLog,v 1.12 2014/08/06 07:26:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/ChangeLog,v 1.13 2014/11/02 07:44:58 graaff Exp $
+
+  02 Nov 2014; Hans de Graaff <graaff@gentoo.org> memoizable-0.4.2.ebuild:
+  Avoid failing spec that also fails for upstream Travis.
 
   06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> memoizable-0.4.2.ebuild:
   Add ruby21 target.
