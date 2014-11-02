@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/pip-1.2-r1.ebuild,v 1.4 2012/12/03 21:04:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/pip-1.2-r2.ebuild,v 1.1 2014/11/02 13:43:04 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils perl-app
 
