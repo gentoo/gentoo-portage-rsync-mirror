@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/moe-1.6.ebuild,v 1.2 2014/10/11 21:13:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/moe-1.6.ebuild,v 1.3 2014/11/02 22:08:35 zlogene Exp $
 
 EAPI=5
 
@@ -28,4 +28,6 @@ src_prepare() {
 		configure || die "sed on configure failed"
 
 	epatch_user
+
+	epatch "${FILESDIR}/${P}-tinfo.patch"
 }

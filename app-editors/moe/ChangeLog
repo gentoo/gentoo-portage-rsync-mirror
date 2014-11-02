@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/moe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/ChangeLog,v 1.7 2014/10/11 21:13:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/ChangeLog,v 1.8 2014/11/02 22:08:35 zlogene Exp $
+
+  02 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> +files/moe-1.6-tinfo.patch,
+  -moe-1.5.ebuild, moe-1.6.ebuild:
+  Fix build against sys-libs/ncurses[tinfo] (bug #527590); Drop old.
 
   11 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> moe-1.6.ebuild:
   Stable for all
