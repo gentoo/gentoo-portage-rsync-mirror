@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.1_alpha.ebuild,v 1.3 2014/11/01 12:31:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.1_alpha.ebuild,v 1.4 2014/11/02 20:20:05 blueness Exp $
 
 EAPI="5"
 
@@ -45,7 +45,6 @@ src_configure() {
 	# We'll filter-flags them here as we encounter them.
 	filter-flags -fstrict-aliasing
 
-	# We disable libscrypt until I get it in the tree
 	econf \
 		--disable-buf-freelists \
 		--enable-asciidoc \
