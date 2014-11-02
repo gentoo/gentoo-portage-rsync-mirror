@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/accountsservice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.48 2014/11/02 09:41:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.49 2014/11/02 16:04:21 eva Exp $
+
+*accountsservice-0.6.39 (02 Nov 2014)
+
+  02 Nov 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +accountsservice-0.6.39.ebuild:
+  Version bump.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> accountsservice-0.6.37.ebuild:
   Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
