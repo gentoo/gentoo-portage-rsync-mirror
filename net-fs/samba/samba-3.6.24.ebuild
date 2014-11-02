@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.24.ebuild,v 1.1 2014/07/11 13:07:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.24.ebuild,v 1.2 2014/11/02 12:33:27 swift Exp $
 
 EAPI=5
 
@@ -41,12 +41,13 @@ DEPEND="dev-libs/popt
 		winbind? ( >=dev-libs/iniparser-3.1-r1[${MULTILIB_USEDEP}] )
 	)
 	readline? ( >=sys-libs/readline-5.2 )
-	selinux? ( sec-policy/selinux-samba )
 	syslog? ( virtual/logger )"
 
 RDEPEND="${DEPEND}
 	kernel_linux? ( ads? ( net-fs/cifs-utils[ads] )
-			client? ( net-fs/cifs-utils ) )"
+			client? ( net-fs/cifs-utils ) )
+	selinux? ( sec-policy/selinux-samba )
+"
 
 # Disable tests since we don't want to build that much here
 RESTRICT="test"

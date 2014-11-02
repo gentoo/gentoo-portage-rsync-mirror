@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DEPEND=|| ( ( dev-db/postgresql-base:9.2[kerberos=,ldap=,threads=] server? ( dev-db/postgresql-server:9.2 ) ) dev-db/postgresql:9.2[kerberos=,ldap=,server=,threads=] )
+DESCRIPTION=Virtual package to ease the transition to unified PostgreSQL ebuilds
+EAPI=5
+IUSE=kerberos ldap server threads
+KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris
+RDEPEND=|| ( ( dev-db/postgresql-base:9.2[kerberos=,ldap=,threads=] server? ( dev-db/postgresql-server:9.2 ) ) dev-db/postgresql:9.2[kerberos=,ldap=,server=,threads=] )
+SLOT=9.2
+_md5_=53ef179140da465ccd1a6964c3fc24d5

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.9999.ebuild,v 1.6 2014/10/16 19:31:03 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.9999.ebuild,v 1.7 2014/11/02 12:42:26 swift Exp $
 
 EAPI=5
 
@@ -40,7 +40,7 @@ for X in ${LANGS} ; do
 	IUSE="${IUSE} +linguas_${X}"
 done
 
-RDEPEND="
+CDEPEND="
 	app-text/libpaper
 	acl? (
 		kernel_linux? (
@@ -54,7 +54,6 @@ RDEPEND="
 	!lprng-compat? ( !net-print/lprng )
 	pam? ( virtual/pam )
 	python? ( ${PYTHON_DEPS} )
-	selinux? ( sec-policy/selinux-cups )
 	ssl? (
 		gnutls? (
 			>=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}]
@@ -72,8 +71,12 @@ RDEPEND="
 	)
 "
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
+"
+
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-cups )
 "
 
 PDEPEND="

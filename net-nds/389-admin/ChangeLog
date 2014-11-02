@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/389-admin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/ChangeLog,v 1.13 2014/06/22 20:35:46 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/ChangeLog,v 1.14 2014/11/02 12:39:54 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> 389-admin-1.1.31.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   22 Jun 2014; Fabio Erculiani <lxnay@gentoo.org> metadata.xml:
   reset to maintainer-needed@
@@ -75,4 +79,3 @@
   +metadata.xml:
   new ebuild, part of 389 Directory Server (http://port389.org), closes bug
   #309575
-

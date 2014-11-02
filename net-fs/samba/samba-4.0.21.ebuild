@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.21.ebuild,v 1.1 2014/08/01 23:30:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.21.ebuild,v 1.2 2014/11/02 12:33:27 swift Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -54,12 +54,13 @@ CDEPEND="${PYTHON_DEPS}
 	fam? ( virtual/fam )
 	gnutls? ( dev-libs/libgcrypt:0
 		>=net-libs/gnutls-1.4.0 )
-	ldap? ( net-nds/openldap )
-	selinux? ( sec-policy/selinux-samba )"
+	ldap? ( net-nds/openldap )"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
-	client? ( net-fs/cifs-utils[ads?] )"
+	client? ( net-fs/cifs-utils[ads?] )
+	selinux? ( sec-policy/selinux-samba )
+"
 
 REQUIRED_USE="ads? ( acl ldap )"
 

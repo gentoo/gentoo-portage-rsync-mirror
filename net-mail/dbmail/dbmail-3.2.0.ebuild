@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.1.9.ebuild,v 1.4 2014/08/10 20:44:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.2.0.ebuild,v 1.1 2014/11/02 12:50:17 lordvan Exp $
 
 EAPI="4"
 inherit eutils multilib versionator user
@@ -11,7 +11,7 @@ SRC_URI="http://www.dbmail.org/download/$(get_version_component_range 1-2)/${P}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="ldap sieve +sqlite ssl static"
 
 DEPEND="dev-db/libzdb
@@ -21,7 +21,7 @@ DEPEND="dev-db/libzdb
 	app-text/xmlto
 	app-crypt/mhash
 	sys-libs/zlib
-	>=dev-libs/gmime-2.4.6:2.4
+	|| ( dev-libs/gmime:2.6 dev-libs/gmime:2.4 )
 	>=dev-libs/glib-2.16
 	dev-libs/libevent
 	ssl? ( dev-libs/openssl )"
@@ -53,6 +53,7 @@ src_install() {
 
 	dodoc AUTHORS BUGS ChangeLog README* INSTALL NEWS THANKS UPGRADING
 
+	docompress -x /usr/share/doc/${PF}/sql
 	dodoc -r sql
 	dodoc -r test-scripts
 	dodoc -r contrib
@@ -68,10 +69,15 @@ src_install() {
 
 	# change config path to our default and use the conf.d and init.d files from the contrib dir
 	sed -i -e "s:/etc/dbmail.conf:/etc/dbmail/dbmail.conf:" contrib/startup-scripts/gentoo/init.d-dbmail
-	sed -i -e "s:exit 0:return 1:" contrib/startup-scripts/gentoo/init.d-dbmail
-	sed -i -e "s:/var/run:/var/run/dbmail:" contrib/startup-scripts/gentoo/init.d-dbmail
-	newconfd contrib/startup-scripts/gentoo/conf.d-dbmail dbmail
-	newinitd contrib/startup-scripts/gentoo/init.d-dbmail dbmail
+	#sed -i -e "s:exit 0:return 1:" contrib/startup-scripts/gentoo/init.d-dbmail
+	#sed -i -e "s:/var/run:/var/run/dbmail:" contrib/startup-scripts/gentoo/init.d-dbmail
+	#newconfd contrib/startup-scripts/gentoo/conf.d-dbmail dbmail
+	#newinitd contrib/startup-scripts/gentoo/init.d-dbmail dbmail
+	# use custom init scripts until updated in upstream contrib
+	newinitd "${FILESDIR}/dbmail-imapd.initd" dbmail-imapd
+	newinitd "${FILESDIR}/dbmail-lmtpd.initd" dbmail-lmtpd
+	newinitd "${FILESDIR}/dbmail-pop3d.initd" dbmail-pop3d
+	newinitd "${FILESDIR}/dbmail-timsieved.initd" dbmail-timsieved
 
 	dobin contrib/mailbox2dbmail/mailbox2dbmail
 	doman contrib/mailbox2dbmail/mailbox2dbmail.1
@@ -86,8 +92,9 @@ src_install() {
 	keepdir /var/lib/dbmail
 	fperms 750 /var/lib/dbmail
 	fowners dbmail:dbmail /var/lib/dbmail
-	keepdir /var/run/dbmail
-	fowners dbmail:dbmail /var/run/dbmail
+	# create this through init-scripts instead of at installt ime (bug #455002)
+	#keepdir /var/run/dbmail
+	#fowners dbmail:dbmail /var/run/dbmail
 }
 
 pkg_postinst() {
@@ -125,5 +132,10 @@ pkg_postinst() {
 	echo
 	ewarn "The database schema has changed since 3.0.x make sure"
 	ewarn "to run the migration script"
+	echo
+	ewarn "Please be aware, that the single init-script for all services"
+	ewarn "has been replaced with seperate init scripts for the individual services."
+	ewarn "Make sure to add dbmail-(imapd|lmtpd|pop3d|timsieved) using rc-update"
+	ewarn "and remove dbmail if you want to take advantage of this change."
 	echo
 }

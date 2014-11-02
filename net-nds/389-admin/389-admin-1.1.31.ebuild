@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.31.ebuild,v 1.2 2014/03/04 21:46:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.31.ebuild,v 1.3 2014/11/02 12:39:54 swift Exp $
 
 EAPI=5
 
@@ -36,14 +36,17 @@ COMMON_DEPEND=">=app-admin/389-admin-console-1.1.0
 	selinux? (
 		sys-apps/checkpolicy
 		sys-apps/policycoreutils
-		sec-policy/selinux-base-policy
 	)
 	>=sys-libs/db-4.2.52
 	sys-libs/pam
 	sys-apps/tcp-wrappers[ipv6?]
 	www-apache/mod_nss
 	www-servers/apache:2[apache2_modules_actions,apache2_modules_alias,apache2_modules_auth_basic,apache2_modules_authz_default,apache2_modules_cgi,apache2_modules_mime_magic,apache2_modules_rewrite,apache2_modules_setenvif,suexec,threads]"
-RDEPEND="${COMMON_DEPEND} www-client/lynx"
+RDEPEND="
+	${COMMON_DEPEND}
+	www-client/lynx
+	selinux? ( sec-policy/selinux-base-policy )
+"
 DEPEND="sys-apps/sed ${COMMON_DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"

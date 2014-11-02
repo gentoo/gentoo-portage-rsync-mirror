@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.2.14.ebuild,v 1.1 2014/10/15 10:28:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.2.14.ebuild,v 1.2 2014/11/02 12:35:44 swift Exp $
 
 EAPI=5
 inherit eutils multilib ssl-cert systemd user versionator
@@ -44,7 +44,6 @@ DEPEND="bzip2? ( app-arch/bzip2 )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
 	postgres? ( dev-db/postgresql-base !dev-db/postgresql-base[ldap,threads] )
-	selinux? ( sec-policy/selinux-dovecot )
 	solr? ( net-misc/curl dev-libs/expat )
 	sqlite? ( dev-db/sqlite )
 	ssl? ( dev-libs/openssl )
@@ -54,7 +53,9 @@ DEPEND="bzip2? ( app-arch/bzip2 )
 	virtual/libiconv"
 
 RDEPEND="${DEPEND}
-	net-mail/mailbase"
+	net-mail/mailbase
+	selinux? ( sec-policy/selinux-dovecot )
+"
 
 S=${WORKDIR}/${MY_P}
 
