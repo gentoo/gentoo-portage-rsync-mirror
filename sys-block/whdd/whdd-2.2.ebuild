@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/whdd/whdd-2.0.ebuild,v 1.2 2013/06/30 10:34:53 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/whdd/whdd-2.2.ebuild,v 1.1 2014/11/02 15:39:08 maksbotan Exp $
 
 EAPI=4
 
