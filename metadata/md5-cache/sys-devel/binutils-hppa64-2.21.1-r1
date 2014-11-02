@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install postinst postrm test unpack
-DEPEND=sys-devel/gnuconfig >=sys-devel/binutils-config-1.9 zlib? ( sys-libs/zlib ) test? ( dev-util/dejagnu ) nls? ( sys-devel/gettext ) sys-devel/flex virtual/yacc
+DEPEND=sys-devel/gnuconfig >=sys-devel/binutils-config-3 zlib? ( sys-libs/zlib ) test? ( dev-util/dejagnu ) nls? ( sys-devel/gettext ) sys-devel/flex virtual/yacc
 DESCRIPTION=binutils package for building 64bit kernels on HPPA
 HOMEPAGE=http://sourceware.org/binutils/
 IUSE=cxx multislot multitarget nls static-libs test vanilla zlib
 KEYWORDS=-* ~hppa
 LICENSE=|| ( GPL-3 LGPL-3 )
-RDEPEND=>=sys-devel/binutils-config-1.9 zlib? ( sys-libs/zlib )
-SLOT=0
+RDEPEND=>=sys-devel/binutils-config-3 zlib? ( sys-libs/zlib )
+SLOT=2.21.1
 SRC_URI=mirror://gnu/binutils/binutils-2.21.1.tar.bz2 mirror://gentoo/binutils-2.21.1-patches-1.1.tar.bz2 http://dev.gentoo.org/~vapier/dist/binutils-2.21.1-patches-1.1.tar.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-binutils	19b1a99507102595bf8c1d9a6fda518a	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-binutils	573eeab475d3282a00c2bbdd219b1e3d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=5ed288fb163337bba176460b85975e2a
