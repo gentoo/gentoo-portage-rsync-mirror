@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.801 2014/09/21 22:11:24 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.802 2014/11/02 10:35:21 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> xorg-server-1.14.5.ebuild,
+  xorg-server-1.14.7.ebuild, xorg-server-1.15.0.ebuild,
+  xorg-server-1.15.1.ebuild, xorg-server-1.15.2.ebuild,
+  xorg-server-1.16.0.ebuild, xorg-server-1.16.1.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *xorg-server-1.16.1 (21 Sep 2014)
 

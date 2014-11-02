@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.67 2014/11/02 08:58:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.68 2014/11/02 10:41:07 mrueg Exp $
+
+  02 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -xli-1.17.0-r4.ebuild:
+  Cleanup superseded EAPI1 ebuild.
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> xli-1.17.0-r5.ebuild:
   Stable for alpha, wrt bug #518168

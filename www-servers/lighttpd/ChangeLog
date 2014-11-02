@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.334 2014/06/06 12:26:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.335 2014/11/02 10:31:29 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> lighttpd-1.4.35-r1.ebuild,
+  lighttpd-1.4.35.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   06 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> -lighttpd-1.4.32-r3.ebuild,
   -lighttpd-1.4.34.ebuild:

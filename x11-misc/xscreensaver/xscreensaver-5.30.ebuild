@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.30.ebuild,v 1.7 2014/11/02 08:57:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.30.ebuild,v 1.8 2014/11/02 10:36:58 swift Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib pam
@@ -38,7 +38,6 @@ COMMON_DEPEND="
 		)
 	opengl? ( virtual/opengl )
 	pam? ( virtual/pam )
-	selinux? ( sec-policy/selinux-xscreensaver )
 	xinerama? ( x11-libs/libXinerama )
 "
 # For USE="perl" see output of `qlist xscreensaver | grep bin | xargs grep '::'`
@@ -49,6 +48,7 @@ RDEPEND="
 		dev-perl/libwww-perl
 		virtual/perl-Digest-MD5
 	)
+	selinux? ( sec-policy/selinux-xscreensaver )
 "
 DEPEND="
 	${COMMON_DEPEND}

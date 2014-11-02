@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.16.0.ebuild,v 1.2 2014/07/26 09:31:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.16.0.ebuild,v 1.3 2014/11/02 10:35:21 swift Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE_SERVERS="dmx kdrive xnest xorg xvfb"
 IUSE="${IUSE_SERVERS} glamor ipv6 minimal nptl selinux +suid systemd tslib +udev unwind wayland"
 
-RDEPEND=">=app-admin/eselect-opengl-1.0.8
+CDEPEND=">=app-admin/eselect-opengl-1.0.8
 	dev-libs/openssl
 	media-libs/freetype
 	>=x11-apps/iceauth-1.0.2
@@ -68,13 +68,12 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 		media-libs/libepoxy
 	)
 	>=x11-apps/xinit-1.3
-	selinux? ( sec-policy/selinux-xserver )
 	systemd? (
 		sys-apps/dbus
 		sys-apps/systemd
 	)"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	sys-devel/flex
 	>=x11-proto/bigreqsproto-1.1.0
 	>=x11-proto/compositeproto-0.4
@@ -114,6 +113,10 @@ DEPEND="${RDEPEND}
 		>=x11-proto/xf86driproto-2.1.0
 		>=x11-proto/dri2proto-2.8
 	)"
+
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-xserver )
+"
 
 PDEPEND="
 	xorg? ( >=x11-base/xorg-drivers-$(get_version_component_range 1-2) )"

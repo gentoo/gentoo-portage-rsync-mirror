@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.35-r1.ebuild,v 1.1 2014/05/02 10:57:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.35-r1.ebuild,v 1.2 2014/11/02 10:31:29 swift Exp $
 
 EAPI="5"
 inherit base autotools eutils depend.php readme.gentoo user systemd
@@ -16,7 +16,7 @@ IUSE="bzip2 doc fam gdbm ipv6 kerberos ldap libev lua minimal mmap memcache mysq
 
 REQUIRED_USE="kerberos? ( ssl )"
 
-RDEPEND="
+CDEPEND="
 	bzip2?    ( app-arch/bzip2 )
 	fam?      ( virtual/fam )
 	gdbm?     ( sys-libs/gdbm )
@@ -28,7 +28,6 @@ RDEPEND="
 	pcre?     ( >=dev-libs/libpcre-3.1 )
 	php?      ( dev-lang/php[cgi] )
 	rrdtool?  ( net-analyzer/rrdtool )
-	selinux? ( sec-policy/selinux-apache )
 	ssl?    ( >=dev-libs/openssl-0.9.7[kerberos?] )
 	webdav? (
 		dev-libs/libxml2
@@ -38,13 +37,17 @@ RDEPEND="
 	xattr? ( kernel_linux? ( sys-apps/attr ) )
 	zlib? (	>=sys-libs/zlib-1.1 )"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	doc?  ( dev-python/docutils )
 	test? (
 		virtual/perl-Test-Harness
 		dev-libs/fcgi
 	)"
+
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-apache )
+"
 
 # update certain parts of lighttpd.conf based on conditionals
 update_config() {
