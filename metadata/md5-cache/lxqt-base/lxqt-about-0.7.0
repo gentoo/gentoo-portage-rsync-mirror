@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-qt/qtgui:4 lxqt-base/liblxqt sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-qt/qtgui:4 ~lxqt-base/liblxqt-0.7.0 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=LXQt about dialog
 EAPI=5
 HOMEPAGE=http://www.lxqt.org/
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2 LGPL-2.1+
-RDEPEND=dev-qt/qtgui:4 lxqt-base/liblxqt
+RDEPEND=dev-qt/qtgui:4 ~lxqt-base/liblxqt-0.7.0
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/0.7.0/lxqt-about-0.7.0.tar.xz
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=209df182b6ed563c585d4af71eac4efe
+_md5_=737340fcb4b65487fee49ae24a625740

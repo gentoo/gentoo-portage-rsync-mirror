@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-about/lxqt-about-0.7.0.ebuild,v 1.2 2014/05/29 08:01:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-about/lxqt-about-0.7.0.ebuild,v 1.3 2014/11/02 21:21:02 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -21,5 +21,5 @@ LICENSE="GPL-2 LGPL-2.1+"
 SLOT="0"
 
 DEPEND="dev-qt/qtgui:4
-	lxqt-base/liblxqt"
+	~lxqt-base/liblxqt-${PV}"
 RDEPEND="${DEPEND}"

@@ -1,6 +1,10 @@
 # ChangeLog for lxqt-base/lxqt-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-config/ChangeLog,v 1.4 2014/10/17 10:06:57 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-config/ChangeLog,v 1.5 2014/11/02 21:24:02 jauhien Exp $
+
+  02 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  lxqt-config-0.7.0-r1.ebuild:
+  make dependencies more precise (preparation for LXQt 0.8.0 release)
 
   17 Oct 2014; Jauhien Piatlicki <jauhien@gentoo.org>
   lxqt-config-0.7.0-r1.ebuild:

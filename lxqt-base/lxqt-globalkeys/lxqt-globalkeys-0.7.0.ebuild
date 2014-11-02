@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-globalkeys/lxqt-globalkeys-0.7.0.ebuild,v 1.2 2014/05/29 08:19:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-globalkeys/lxqt-globalkeys-0.7.0.ebuild,v 1.3 2014/11/02 21:25:23 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -23,6 +23,6 @@ SLOT="0"
 DEPEND="dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
-	lxqt-base/liblxqt
+	~lxqt-base/liblxqt-${PV}
 	x11-libs/libX11"
 RDEPEND="${DEPEND}"

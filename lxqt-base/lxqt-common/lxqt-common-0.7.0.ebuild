@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-common/lxqt-common-0.7.0.ebuild,v 1.2 2014/05/29 13:18:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-common/lxqt-common-0.7.0.ebuild,v 1.3 2014/11/02 21:22:14 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -21,12 +21,12 @@ SLOT="0"
 
 S=${WORKDIR}
 
-DEPEND="lxqt-base/liblxqt
+DEPEND="~lxqt-base/liblxqt-${PV}
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtsvg:4"
 RDEPEND="${DEPEND}"
-PDEPEND="lxqt-base/lxqt-session"
+PDEPEND="~lxqt-base/lxqt-session-${PV}"
 
 src_install() {
 	cmake-utils_src_install

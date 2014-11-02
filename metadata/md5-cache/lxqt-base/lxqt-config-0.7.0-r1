@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 lxqt-base/liblxqt razorqt-base/libqtxdg sys-libs/zlib x11-libs/libXcursor x11-libs/libXfixes sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 ~lxqt-base/liblxqt-0.7.0 ~razorqt-base/libqtxdg-0.5.3 sys-libs/zlib x11-libs/libXcursor x11-libs/libXfixes sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=LXQt system configuration control center
 EAPI=5
 HOMEPAGE=http://www.lxqt.org/
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2 LGPL-2.1+
-RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 lxqt-base/liblxqt razorqt-base/libqtxdg sys-libs/zlib x11-libs/libXcursor x11-libs/libXfixes x11-apps/setxkbmap
+RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 ~lxqt-base/liblxqt-0.7.0 ~razorqt-base/libqtxdg-0.5.3 sys-libs/zlib x11-libs/libXcursor x11-libs/libXfixes x11-apps/setxkbmap
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/0.7.0/lxqt-config-0.7.0.tar.xz
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=3d93c0137c8c2011a7dccb34a6f52b30
+_md5_=4ba97a8b492aa406bd405771a6ba3ed7
