@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-1.17.0.ebuild,v 1.5 2013/09/05 19:44:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-1.17.0.ebuild,v 1.7 2014/11/02 01:03:12 radhermit Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite"
 
 inherit distutils-r1 vcs-snapshot
@@ -18,7 +18,7 @@ else
 fi
 
 DESCRIPTION="package management tool for OpenEmbedded"
-HOMEPAGE="http://developer.berlios.de/projects/bitbake/"
+HOMEPAGE="http://git.openembedded.org/bitbake/"
 
 LICENSE="GPL-2"
 SLOT="0"
