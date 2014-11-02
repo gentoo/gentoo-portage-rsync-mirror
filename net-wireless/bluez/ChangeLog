@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.222 2014/10/21 14:30:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.223 2014/11/02 09:36:26 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> bluez-5.21-r1.ebuild,
+  bluez-5.24.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   21 Oct 2014; Pacho Ramos <pacho@gentoo.org> -bluez-4.101-r8.ebuild,
   -bluez-5.18.ebuild, -bluez-5.23.ebuild, bluez-5.24.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.26-r1.ebuild,v 1.1 2014/05/05 06:42:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.26-r1.ebuild,v 1.2 2014/11/02 09:50:19 swift Exp $
 
 EAPI=4
 inherit eutils user toolchain-funcs
@@ -19,7 +19,7 @@ RDEPEND="!sys-apps/slocate
 	selinux? ( sec-policy/selinux-slocate )"
 DEPEND="app-arch/xz-utils
 	nls? ( sys-devel/gettext )
-	selinux? ( sec-policy/selinux-slocate )"
+"
 
 pkg_setup() {
 	enewgroup locate

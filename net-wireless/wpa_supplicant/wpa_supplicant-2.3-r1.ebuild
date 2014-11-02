@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.3-r1.ebuild,v 1.1 2014/10/27 19:33:46 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.3-r1.ebuild,v 1.2 2014/11/02 09:40:03 swift Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SLOT="0"
 IUSE="ap dbus gnutls eap-sim fasteap +hs2.0 p2p ps3 qt4 readline selinux smartcard ssl tdls uncommon-eap-types wimax wps kernel_linux kernel_FreeBSD"
 REQUIRED_USE="fasteap? ( !gnutls !ssl ) smartcard? ( ssl )"
 
-RDEPEND="dbus? ( sys-apps/dbus )
+CDEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
 		eap-sim? ( sys-apps/pcsc-lite )
 		dev-libs/libnl:3
@@ -35,9 +35,13 @@ RDEPEND="dbus? ( sys-apps/dbus )
 	ssl? ( dev-libs/openssl )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
 	!ssl? ( !gnutls? ( dev-libs/libtommath ) )
-	selinux? ( sec-policy/selinux-networkmanager )"
-DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+"
+DEPEND="${CDEPEND}
+	virtual/pkgconfig
+"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-networkmanager )
+"
 
 S="${WORKDIR}/${P}/${PN}"
 

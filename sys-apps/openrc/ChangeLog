@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.310 2014/10/28 17:27:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.311 2014/11/02 09:54:49 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> metadata.xml,
+  openrc-0.12.4.ebuild, openrc-0.13.1.ebuild, openrc-9999.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   28 Oct 2014; William Hubbs <williamh@gentoo.org> openrc-0.12.4.ebuild,
   openrc-0.13.1.ebuild, openrc-0.13.2.ebuild, openrc-9999.ebuild:

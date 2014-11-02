@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.37.ebuild,v 1.5 2014/09/05 11:52:43 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.37.ebuild,v 1.6 2014/11/02 09:41:08 swift Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,15 +17,14 @@ KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 ~sparc x86"
 
 IUSE="doc +introspection selinux systemd"
 
-RDEPEND="
+CDEPEND="
 	>=dev-libs/glib-2.37.3:2
 	sys-auth/polkit
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
-	selinux? ( sec-policy/selinux-accountsd )
 	systemd? ( >=sys-apps/systemd-186:0= )
 	!systemd? ( sys-auth/consolekit )
 "
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	dev-libs/libxslt
 	dev-util/gdbus-codegen
 	>=dev-util/gtk-doc-am-1.15
@@ -35,6 +34,9 @@ DEPEND="${RDEPEND}
 	doc? (
 		app-text/docbook-xml-dtd:4.1.2
 		app-text/xmlto )
+"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-accountsd )
 "
 
 src_prepare() {

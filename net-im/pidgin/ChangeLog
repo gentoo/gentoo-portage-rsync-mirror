@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.354 2014/10/30 20:48:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.355 2014/11/02 09:42:33 ago Exp $
+
+  02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pidgin-2.10.10.ebuild:
+  Stable for ia64, wrt bug #526502
 
   30 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> pidgin-2.10.10.ebuild,
   +files/pidgin-2.10.10-eds-3.6-configure.ac.patch:

@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.142 2014/10/30 23:00:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.143 2014/11/02 09:38:04 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> kismet-2013.03.1-r1.ebuild,
+  kismet-9999.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   30 Oct 2014; Jeroen Roovers <jer@gentoo.org>
   +files/kismet-2013.03.1-tinfo.patch, kismet-2013.03.1-r1.ebuild:

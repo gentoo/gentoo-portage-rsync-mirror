@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.494 2014/10/31 15:54:43 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.495 2014/11/02 09:34:49 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> squid-3.3.13-r1.ebuild,
+  squid-3.4.8.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   31 Oct 2014; Eray Aslan <eras@gentoo.org> -files/squid-13173_13171.patch,
   -squid-3.3.13.ebuild, -squid-3.4.7-r1.ebuild:

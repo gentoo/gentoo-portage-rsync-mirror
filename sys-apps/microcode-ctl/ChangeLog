@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/microcode-ctl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.37 2014/09/19 16:01:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.38 2014/11/02 09:49:37 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> microcode-ctl-1.23.ebuild,
+  microcode-ctl-1.26.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *microcode-ctl-1.26 (19 Sep 2014)
 

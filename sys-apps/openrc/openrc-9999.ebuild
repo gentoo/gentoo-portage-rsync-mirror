@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.140 2014/10/28 17:27:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.141 2014/11/02 09:54:49 swift Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="debug elibc_glibc ncurses pam newnet prefix +netifrc selinux static-libs
+IUSE="audit debug elibc_glibc ncurses pam newnet prefix +netifrc selinux static-libs
 	tools unicode kernel_linux kernel_FreeBSD"
 
 COMMON_DEPEND="kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd ) )
@@ -27,13 +27,15 @@ COMMON_DEPEND="kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-proc
 	ncurses? ( sys-libs/ncurses )
 	pam? ( sys-auth/pambase )
 	tools? ( dev-lang/perl )
+	audit? ( sys-process/audit )
 	kernel_linux? (
 		sys-process/psmisc
 		!<sys-process/procps-3.3.9-r2
 	)
-	selinux? ( sec-policy/selinux-base-policy
-		sec-policy/selinux-openrc
-		sys-libs/libselinux )
+	selinux? (
+		sys-apps/policycoreutils
+		sys-libs/libselinux
+	)
 	!<sys-apps/baselayout-2.1-r1
 	!<sys-fs/udev-init-scripts-27"
 DEPEND="${COMMON_DEPEND}
@@ -43,7 +45,12 @@ RDEPEND="${COMMON_DEPEND}
 	!prefix? (
 		kernel_linux? ( || ( >=sys-apps/sysvinit-2.86-r6 sys-process/runit ) )
 		kernel_FreeBSD? ( sys-freebsd/freebsd-sbin )
-	)"
+	)
+	selinux? (
+		sec-policy/selinux-base-policy
+		sec-policy/selinux-openrc
+	)
+"
 
 PDEPEND="netifrc? ( net-misc/netifrc )"
 
@@ -67,8 +74,10 @@ src_compile() {
 		LIBEXECDIR=${EPREFIX}/$(get_libdir)/rc
 		MKNET=$(usex newnet)
 		MKSELINUX=$(usex selinux)
+		MKAUDIT=$(usex audit)
+		MKPAM=$(usev pam)
 		MKSTATICLIBS=$(usex static-libs)
-	MKTOOLS=$(usex tools)"
+		MKTOOLS=$(usex tools)"
 
 	local brand="Unknown"
 	if use kernel_linux ; then
@@ -81,7 +90,6 @@ src_compile() {
 	export BRANDING="Gentoo ${brand}"
 	use prefix && MAKE_ARGS="${MAKE_ARGS} MKPREFIX=yes PREFIX=${EPREFIX}"
 	export DEBUG=$(usev debug)
-	export MKPAM=$(usev pam)
 	export MKTERMCAP=$(usev ncurses)
 
 	tc-export CC AR RANLIB

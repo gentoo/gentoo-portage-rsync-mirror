@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.177 2014/01/16 18:19:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.178 2014/11/02 09:47:12 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> man-1.6g.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   16 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-1.6f-r4.ebuild,
   man-1.6g.ebuild:

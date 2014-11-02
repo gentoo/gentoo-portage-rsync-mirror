@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.13-r1.ebuild,v 1.11 2014/10/18 14:09:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.13-r1.ebuild,v 1.12 2014/11/02 09:34:49 swift Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
@@ -27,7 +27,6 @@ COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	ssl? ( dev-libs/openssl )
 	sasl? ( dev-libs/cyrus-sasl )
 	ecap? ( net-libs/libecap:0.2 )
-	selinux? ( sec-policy/selinux-squid )
 	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
 	>=sys-libs/db-4
 	sys-devel/libtool
@@ -40,6 +39,7 @@ RDEPEND="${COMMON_DEPEND}
 	samba? ( net-fs/samba )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
+	selinux? ( sec-policy/selinux-squid )
 	sqlite? ( dev-perl/DBD-SQLite )
 	!<=sci-biology/meme-4.8.1-r1"
 

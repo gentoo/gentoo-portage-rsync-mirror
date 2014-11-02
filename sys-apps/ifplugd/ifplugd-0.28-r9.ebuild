@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r9.ebuild,v 1.9 2014/05/16 19:00:58 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r9.ebuild,v 1.10 2014/11/02 09:45:40 swift Exp $
 
 EAPI=4
 
@@ -17,7 +17,6 @@ IUSE="doc selinux"
 
 DEPEND="virtual/pkgconfig
 	doc? ( www-client/lynx )
-	selinux? ( sec-policy/selinux-ifplugd )
 	>=dev-libs/libdaemon-0.5"
 RDEPEND=">=dev-libs/libdaemon-0.5
 	>=sys-apps/baselayout-1.12

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.16 2014/08/09 09:36:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.17 2014/11/02 10:00:18 swift Exp $
 
 EAPI="4"
 
@@ -24,10 +24,11 @@ IUSE="caps minimal selinux static"
 DEPEND="caps? ( sys-libs/libcap-ng )
 	selinux? (
 		sys-libs/libselinux
-		sec-policy/selinux-smartmon
 	)"
 RDEPEND="${DEPEND}
-	!minimal? ( virtual/mailx )"
+	!minimal? ( virtual/mailx )
+	selinux? ( sec-policy/selinux-smartmon )
+"
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then

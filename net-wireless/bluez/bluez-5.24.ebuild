@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.24.ebuild,v 1.2 2014/10/21 14:30:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.24.ebuild,v 1.3 2014/11/02 09:36:26 swift Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -17,14 +17,13 @@ KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="cups debug +obex +readline selinux systemd test +udev"
 REQUIRED_USE="test? ( ${PYTHON_REQUIRED_USE} )"
 
-RDEPEND="
+CDEPEND="
 	>=dev-libs/glib-2.28:2
 	>=sys-apps/dbus-1.6:=
 	>=sys-apps/hwids-20121202.2
 	cups? ( net-print/cups:= )
 	obex? ( dev-libs/libical )
 	readline? ( sys-libs/readline:= )
-	selinux? ( sec-policy/selinux-bluetooth )
 	systemd? ( sys-apps/systemd )
 	udev? ( >=virtual/udev-172 )
 	abi_x86_32? (
@@ -32,7 +31,7 @@ RDEPEND="
 		!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32]
 	)
 "
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	test? (
 		${PYTHON_DEPS}
@@ -41,7 +40,9 @@ DEPEND="${RDEPEND}
 		dev-python/pygobject:3
 	)
 "
-
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-bluetooth )
+"
 DOC_CONTENTS="
 	If you want to use rfcomm as a normal user, you need to add the user
 	to the uucp group.

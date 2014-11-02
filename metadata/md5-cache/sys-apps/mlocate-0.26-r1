@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst setup
-DEPEND=app-arch/xz-utils nls? ( sys-devel/gettext ) selinux? ( sec-policy/selinux-slocate )
+DEPEND=app-arch/xz-utils nls? ( sys-devel/gettext )
 DESCRIPTION=Merging locate is an utility to index and quickly search for files
 EAPI=4
 HOMEPAGE=https://fedorahosted.org/mlocate/
@@ -10,4 +10,4 @@ RDEPEND=!sys-apps/slocate !sys-apps/rlocate selinux? ( sec-policy/selinux-slocat
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/m/l/mlocate/mlocate-0.26.tar.xz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=68f3776c5103e851450c7ca15af4800a
+_md5_=d9066d7c23019dadf0df90eea9b7281d

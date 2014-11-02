@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-6.3.ebuild,v 1.6 2014/11/02 08:52:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-6.3.ebuild,v 1.7 2014/11/02 10:00:18 swift Exp $
 
 EAPI="4"
 
@@ -28,10 +28,11 @@ DEPEND="
 	)
 	selinux? (
 		sys-libs/libselinux
-		sec-policy/selinux-smartmon
 	)"
 RDEPEND="${DEPEND}
-	!minimal? ( virtual/mailx )"
+	!minimal? ( virtual/mailx )
+	selinux? ( sec-policy/selinux-smartmon )
+"
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then

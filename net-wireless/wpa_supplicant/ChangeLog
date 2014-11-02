@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.220 2014/10/27 19:33:46 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.221 2014/11/02 09:40:03 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> wpa_supplicant-2.2-r1.ebuild,
+  wpa_supplicant-2.3-r1.ebuild, wpa_supplicant-2.3.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *wpa_supplicant-2.3-r1 (27 Oct 2014)
 

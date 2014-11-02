@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.12-r1.ebuild,v 1.1 2014/09/30 11:33:39 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.12-r1.ebuild,v 1.2 2014/11/02 09:56:06 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -30,7 +30,6 @@ REQUIRED_USE="^^ ( udev libusb )"
 
 CDEPEND="${PYTHON_DEPS}
 	libusb? ( virtual/libusb:1 )
-	selinux? ( sec-policy/selinux-pcscd )
 	udev? ( virtual/udev )
 	policykit? ( >=sys-auth/polkit-0.111 )"
 DEPEND="${CDEPEND}
@@ -38,7 +37,9 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	!<app-crypt/ccid-1.4.1-r1
 	!<sys-apps/baselayout-2
-	!<sys-apps/openrc-0.11.8"
+	!<sys-apps/openrc-0.11.8
+	selinux? ( sec-policy/selinux-pcscd )
+"
 
 pkg_setup() {
 	python-single-r1_pkg_setup

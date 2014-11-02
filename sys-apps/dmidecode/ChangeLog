@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dmidecode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.45 2014/05/06 13:29:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.46 2014/11/02 09:44:50 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> dmidecode-2.11.ebuild,
+  dmidecode-2.12-r1.ebuild, dmidecode-2.12.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *dmidecode-2.12-r1 (06 May 2014)
 

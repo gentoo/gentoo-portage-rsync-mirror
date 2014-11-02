@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.8-r1.ebuild,v 1.12 2014/07/30 19:32:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.8-r1.ebuild,v 1.13 2014/11/02 09:56:06 swift Exp $
 
 EAPI="4"
 
@@ -28,14 +28,15 @@ IUSE="libusb selinux +udev"
 REQUIRED_USE="^^ ( udev libusb )"
 
 CDEPEND="libusb? ( virtual/libusb:1 )
-	selinux? ( sec-policy/selinux-pcscd )
 	udev? ( virtual/udev )"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	!<app-crypt/ccid-1.4.1-r1
 	!<sys-apps/baselayout-2
-	!<sys-apps/openrc-0.11.8"
+	!<sys-apps/openrc-0.11.8
+	selinux? ( sec-policy/selinux-pcscd )
+"
 
 pkg_setup() {
 	enewgroup openct # make sure it exists

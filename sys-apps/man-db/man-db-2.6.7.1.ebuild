@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.7.1.ebuild,v 1.1 2014/04/15 04:39:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.7.1.ebuild,v 1.2 2014/11/02 09:48:46 swift Exp $
 
 EAPI="4"
 
@@ -15,21 +15,23 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~arm-linux ~x86-linux"
 IUSE="berkdb +gdbm nls selinux static-libs zlib"
 
-RDEPEND=">=dev-libs/libpipeline-1.3.0
+CDEPEND=">=dev-libs/libpipeline-1.3.0
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
 	!berkdb? ( !gdbm? ( sys-libs/gdbm ) )
 	sys-apps/groff
-	selinux? ( sec-policy/selinux-mandb )
 	zlib? ( sys-libs/zlib )
 	!sys-apps/man"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig
 	nls? (
 		app-text/po4a
 		sys-devel/gettext
 	)"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-mandb )
+"
 
 pkg_setup() {
 	# Create user now as Makefile in src_install does setuid/chown

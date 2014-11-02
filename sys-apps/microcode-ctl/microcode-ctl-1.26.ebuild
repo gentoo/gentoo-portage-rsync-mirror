@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.26.ebuild,v 1.1 2014/09/19 16:01:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.26.ebuild,v 1.2 2014/11/02 09:49:37 swift Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="selinux"
 
-DEPEND="selinux? ( sec-policy/selinux-cpucontrol )"
+DEPEND=""
 RDEPEND=">=sys-apps/microcode-data-20090330
 	selinux? ( sec-policy/selinux-cpucontrol )"
 

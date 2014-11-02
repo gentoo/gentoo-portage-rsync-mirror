@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.119 2014/05/05 06:42:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.120 2014/11/02 09:50:19 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> mlocate-0.26-r1.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *mlocate-0.26-r1 (05 May 2014)
 
