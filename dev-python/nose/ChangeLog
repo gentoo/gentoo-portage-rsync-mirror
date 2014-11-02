@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.134 2014/10/31 16:08:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.135 2014/11/02 09:18:34 ago Exp $
+
+  02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> nose-1.3.4.ebuild:
+  Stable for alpha, wrt bug #524416
 
   31 Oct 2014; Agostino Sarubbo <ago@gentoo.org> nose-1.3.4.ebuild:
   Stable for ppc64, wrt bug #524416

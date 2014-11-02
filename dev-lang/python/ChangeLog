@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.795 2014/10/29 09:33:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.796 2014/11/02 09:04:21 ago Exp $
+
+  02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> python-3.4.1.ebuild:
+  Stable for alpha, wrt bug #522322
 
   29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> python-3.4.1.ebuild:
   Stable for sparc, wrt bug #522322

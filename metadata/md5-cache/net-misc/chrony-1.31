@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=caps? ( sys-libs/libcap ) readline? ( >=sys-libs/readline-4.1-r4 ) selinux? ( sec-policy/selinux-chronyd ) sys-apps/texinfo virtual/pkgconfig
+DEPEND=caps? ( sys-libs/libcap ) readline? ( >=sys-libs/readline-4.1-r4 ) sys-apps/texinfo virtual/pkgconfig
 DESCRIPTION=NTP client and server programs
 EAPI=5
 HOMEPAGE=http://chrony.tuxfamily.org/
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://download.tuxfamily.org/chrony/chrony-1.31.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=6d89ce49a4a8f2b38111d61e40cf519b
+_md5_=e97b7c6cd11569baa7d7f78c4adf5e7e

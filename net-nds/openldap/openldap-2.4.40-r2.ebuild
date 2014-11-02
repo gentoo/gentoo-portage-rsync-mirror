@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40-r2.ebuild,v 1.3 2014/11/01 00:29:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40-r2.ebuild,v 1.4 2014/11/02 09:23:40 swift Exp $
 
 EAPI="5"
 
@@ -39,7 +39,7 @@ BDB_PKGS=''
 for _slot in $BDB_SLOTS; do BDB_PKGS="${BDB_PKGS} sys-libs/db:${_slot}" ; done
 
 # openssl is needed to generate lanman-passwords required by samba
-RDEPEND="icu? ( dev-libs/icu:= )
+CDEPEND="icu? ( dev-libs/icu:= )
 	ssl? ( !gnutls? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
 		gnutls? ( >=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}] >=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}] ) )
 	sasl? ( dev-libs/cyrus-sasl:= )
@@ -64,14 +64,15 @@ RDEPEND="icu? ( dev-libs/icu:= )
 		kerberos? ( virtual/krb5 )
 		cxx? ( dev-libs/cyrus-sasl:= )
 	)
-	selinux? ( sec-policy/selinux-ldap )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r3
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	sys-apps/groff"
-
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-ldap )
+"
 # for tracking versions
 OPENLDAP_VERSIONTAG=".version-tag"
 OPENLDAP_DEFAULTDIR_VERSIONTAG="/var/lib/openldap-data"

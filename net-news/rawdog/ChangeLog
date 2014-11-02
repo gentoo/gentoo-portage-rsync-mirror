@@ -1,6 +1,9 @@
 # ChangeLog for net-news/rawdog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.59 2014/11/01 17:53:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.60 2014/11/02 09:05:23 ago Exp $
+
+  02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> rawdog-2.19.ebuild:
+  Stable for alpha, wrt bug #525038
 
   01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> rawdog-2.19.ebuild:
   Stable for ppc, wrt bug #525038

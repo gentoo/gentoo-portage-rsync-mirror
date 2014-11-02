@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-12.6.1.ebuild,v 1.1 2014/10/21 09:41:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-12.6.1.ebuild,v 1.2 2014/11/02 09:04:31 swift Exp $
 
 EAPI=5
 inherit autotools base eutils linux-info multilib user
@@ -30,7 +30,7 @@ REQUIRED_USE="gtalk? ( jabber )
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/asterisk-patchset" )
 
-RDEPEND="dev-db/sqlite:3
+CDEPEND="dev-db/sqlite:3
 	dev-libs/popt
 	dev-libs/jansson
 	dev-libs/libxml2
@@ -63,21 +63,21 @@ RDEPEND="dev-db/sqlite:3
 	portaudio? ( media-libs/portaudio )
 	postgres? ( dev-db/postgresql-base )
 	radius? ( net-dialup/radiusclient-ng )
-	selinux? ( sec-policy/selinux-asterisk )
 	snmp? ( net-analyzer/net-snmp )
 	span? ( media-libs/spandsp )
 	speex? ( media-libs/speex )
 	srtp? ( net-libs/libsrtp )
 	vorbis? ( media-libs/libvorbis )"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	!net-libs/openh323
 	!net-libs/pjsip
 	voicemail_storage_imap? ( virtual/imap-c-client )
 	virtual/pkgconfig
 "
 
-RDEPEND="${RDEPEND}
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-asterisk )
 	syslog? ( virtual/logger )"
 
 PDEPEND="net-misc/asterisk-core-sounds

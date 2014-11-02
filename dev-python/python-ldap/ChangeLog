@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.143 2014/11/01 17:56:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.144 2014/11/02 09:09:56 ago Exp $
+
+  02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> python-ldap-2.4.15.ebuild:
+  Stable for alpha, wrt bug #525636
 
   01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> python-ldap-2.4.15.ebuild:
   Stable for ppc, wrt bug #525636

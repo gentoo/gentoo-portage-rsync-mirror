@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5-r11.ebuild,v 1.1 2014/10/12 09:19:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5-r11.ebuild,v 1.2 2014/11/02 09:09:15 swift Exp $
 
 EAPI="4"
 
@@ -24,9 +24,9 @@ DEPEND=">=sys-libs/ncurses-5.2
 	!openntpd? ( !net-misc/openntpd )
 	snmp? ( net-analyzer/net-snmp )
 	ssl? ( dev-libs/openssl )
-	selinux? ( sec-policy/selinux-ntp )
 	parse-clocks? ( net-misc/pps-tools )"
 RDEPEND="${DEPEND}
+	selinux? ( sec-policy/selinux-ntp )
 	vim-syntax? ( app-vim/ntp-syntax )"
 PDEPEND="openntpd? ( net-misc/openntpd )"
 

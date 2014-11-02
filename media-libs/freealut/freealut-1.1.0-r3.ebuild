@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/freealut-1.1.0-r3.ebuild,v 1.9 2014/10/29 09:35:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/freealut-1.1.0-r3.ebuild,v 1.10 2014/11/02 09:06:49 ago Exp $
 
 EAPI=5
 inherit eutils autotools multilib-minimal
@@ -11,7 +11,7 @@ SRC_URI="http://connect.creativelabs.com/openal/Downloads/ALUT/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 RDEPEND="

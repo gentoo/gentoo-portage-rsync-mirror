@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.9.3.ebuild,v 1.7 2014/10/27 16:06:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.9.3.ebuild,v 1.8 2014/11/02 09:28:15 swift Exp $
 
 EAPI=4
 
@@ -19,10 +19,11 @@ COMMON_DEPEND="~net-libs/libtorrent-0.13.${PV##*.}
 	>=dev-libs/libsigc++-2.2.2:2
 	>=net-misc/curl-7.19.1
 	sys-libs/ncurses
-	selinux? ( sec-policy/selinux-rtorrent )
 	xmlrpc? ( dev-libs/xmlrpc-c )"
 RDEPEND="${COMMON_DEPEND}
-	daemon? ( app-misc/screen )"
+	daemon? ( app-misc/screen )
+	selinux? ( sec-policy/selinux-rtorrent )
+"
 DEPEND="${COMMON_DEPEND}
 	test? ( dev-util/cppunit )
 	virtual/pkgconfig"

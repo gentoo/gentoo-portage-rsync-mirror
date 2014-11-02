@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.90 2014/06/04 10:46:06 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.91 2014/11/02 09:02:43 ercpe Exp $
+
+*eclipse-ecj-4.4.1 (02 Nov 2014)
+
+  02 Nov 2014; Johann Schmitz <ercpe@gentoo.org> +eclipse-ecj-4.4.1.ebuild:
+  Version bump for www-servers/tomcat
 
   04 Jun 2014; Chema Alonso <nimiux@gentoo.org> eclipse-ecj-3.7.2-r1.ebuild:
   Stable for amd64 wrt bug #503890

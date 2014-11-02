@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.3.0.2-r1.ebuild,v 1.2 2014/03/04 21:44:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.3.0.2-r1.ebuild,v 1.3 2014/11/02 09:20:03 swift Exp $
 
 EAPI=5
 
@@ -33,8 +33,7 @@ ALL_DEPEND="!>=sys-libs/db-5.0
 	>=sys-libs/db-4.5
 	sys-libs/pam
 	sys-libs/zlib
-	kerberos? ( >=app-crypt/mit-krb5-1.7-r100[openldap] )
-	selinux? ( sec-policy/selinux-dirsrv )"
+	kerberos? ( >=app-crypt/mit-krb5-1.7-r100[openldap] )"
 
 DEPEND="${ALL_DEPEND}
 	virtual/pkgconfig
@@ -42,6 +41,7 @@ DEPEND="${ALL_DEPEND}
 	doc? ( app-doc/doxygen )
 	sys-apps/sed"
 RDEPEND="${ALL_DEPEND}
+	selinux? ( sec-policy/selinux-dirsrv )
 	virtual/perl-Time-Local
 	virtual/perl-MIME-Base64"
 

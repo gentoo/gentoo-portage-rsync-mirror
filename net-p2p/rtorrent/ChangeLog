@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.192 2014/10/27 16:06:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.193 2014/11/02 09:28:15 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> rtorrent-0.9.3.ebuild,
+  rtorrent-0.9.4-r1.ebuild, rtorrent-0.9.4.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> rtorrent-0.9.3.ebuild:
   Stable for ppc64, wrt bug #499474

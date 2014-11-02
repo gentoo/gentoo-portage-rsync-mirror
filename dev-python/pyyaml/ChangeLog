@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyyaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/ChangeLog,v 1.49 2014/10/31 16:09:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/ChangeLog,v 1.50 2014/11/02 09:18:51 ago Exp $
+
+  02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pyyaml-3.11.ebuild:
+  Stable for alpha, wrt bug #524416
 
   31 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pyyaml-3.11.ebuild:
   Stable for ppc64, wrt bug #524416

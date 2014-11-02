@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-6.0.ebuild,v 1.17 2012/12/09 12:34:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-6.0.ebuild,v 1.18 2014/11/02 09:25:14 swift Exp $
 
 inherit eutils toolchain-funcs user
 
@@ -13,8 +13,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="selinux tcpd"
 
-DEPEND="selinux? ( sec-policy/selinux-portmap )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r7 )"
+DEPEND="
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r7 )
+"
+
+RDEPEND="
+	selinux? ( sec-policy/selinux-portmap )
+"
 
 S=${WORKDIR}/${PN}_${PV}
 

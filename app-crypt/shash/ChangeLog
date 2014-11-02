@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/shash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.34 2014/11/01 17:55:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.35 2014/11/02 09:07:24 ago Exp $
+
+  02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> shash-0.2.6-r2.ebuild:
+  Stable for alpha, wrt bug #524820
 
   01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> shash-0.2.6-r2.ebuild:
   Stable for ppc, wrt bug #524820

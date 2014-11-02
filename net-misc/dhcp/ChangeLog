@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.255 2014/07/05 15:55:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.256 2014/11/02 09:07:17 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> dhcp-4.2.5_p1-r2.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   05 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> dhcp-4.2.5_p1-r2.ebuild:
   ia64/ppc64/ppc/sparc stable wrt bug #499324

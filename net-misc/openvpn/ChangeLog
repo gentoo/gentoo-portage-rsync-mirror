@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.300 2014/10/05 15:30:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.301 2014/11/02 09:13:00 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> openvpn-2.3.4-r1.ebuild,
+  openvpn-9999.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   05 Oct 2014; Manuel Rüger <mrueg@gentoo.org> openvpn-2.3.4-r1.ebuild:
   Mark stable on amd64. Bug #522168

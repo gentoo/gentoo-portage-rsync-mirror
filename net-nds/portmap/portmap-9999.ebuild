@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-9999.ebuild,v 1.5 2012/12/09 12:34:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-9999.ebuild,v 1.6 2014/11/02 09:25:14 swift Exp $
 
 EGIT_REPO_URI="git://neil.brown.name/portmap"
 inherit toolchain-funcs user git-2
@@ -14,8 +14,13 @@ SLOT="0"
 KEYWORDS=""
 IUSE="selinux tcpd"
 
-DEPEND="selinux? ( sec-policy/selinux-portmap )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r7 )"
+DEPEND="
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r7 )
+"
+
+RDEPEND="
+	selinux? ( sec-policy/selinux-portmap )
+"
 
 pkg_setup() {
 	enewgroup rpc 111

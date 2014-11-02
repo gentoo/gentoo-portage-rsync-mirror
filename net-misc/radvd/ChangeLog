@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.125 2014/10/10 14:27:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.126 2014/11/02 09:16:28 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> radvd-1.15.ebuild,
+  radvd-1.9.8.ebuild, radvd-2.5.ebuild, radvd-2.8.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *radvd-2.8 (10 Oct 2014)
 

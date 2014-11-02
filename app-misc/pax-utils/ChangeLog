@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.166 2014/10/30 09:56:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.167 2014/11/02 09:09:21 ago Exp $
+
+  02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pax-utils-0.8.1.ebuild:
+  Stable for alpha, wrt bug #525842
 
   30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> pax-utils-0.8.1.ebuild:
   Stable for x86, wrt bug #525842

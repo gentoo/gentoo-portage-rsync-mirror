@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r9.ebuild,v 1.3 2014/10/17 20:09:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r9.ebuild,v 1.4 2014/11/02 09:10:58 swift Exp $
 
 EAPI=5
 
@@ -18,12 +18,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="ssl selinux"
 
-RDEPEND="ssl? ( dev-libs/openssl )
-	selinux? ( sec-policy/selinux-ntp )
+CDEPEND="ssl? ( dev-libs/openssl )
 	!<=net-misc/ntp-4.2.0-r2
 	!net-misc/ntp[-openntpd]"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	virtual/yacc"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-ntp )
+"
 
 S="${WORKDIR}/${MY_P/_/-}"
 

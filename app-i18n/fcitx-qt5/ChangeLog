@@ -1,0 +1,9 @@
+# ChangeLog for app-i18n/fcitx-qt5
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-qt5/ChangeLog,v 1.1 2014/11/02 09:03:54 yngwin Exp $
+
+*fcitx-qt5-0.1.2 (02 Nov 2014)
+
+  02 Nov 2014; Ben de Groot <yngwin@gentoo.org> +fcitx-qt5-0.1.2.ebuild,
+  +metadata.xml:
+  Initial commit of Fcitx Qt5 input module
