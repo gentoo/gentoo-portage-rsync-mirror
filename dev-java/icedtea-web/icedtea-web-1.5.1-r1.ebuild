@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.5.1-r1.ebuild,v 1.1 2014/11/02 08:50:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.5.1-r1.ebuild,v 1.2 2014/11/02 11:07:03 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="5"
@@ -15,7 +15,7 @@ LICENSE="GPL-2 GPL-2-with-linking-exception LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="doc +icedtea7 javascript +nsplugin test"
+IUSE="doc +icedtea7 javascript +nsplugin tagsoup test"
 
 COMMON_DEP="
 	icedtea7? ( || (
@@ -26,7 +26,7 @@ COMMON_DEP="
 		dev-java/icedtea:6 dev-java/icedtea-bin:6
 	) )
 	app-admin/eselect-java
-	dev-java/tagsoup
+	tagsoup? ( dev-java/tagsoup )
 	nsplugin? (
 		>=dev-libs/glib-2.16
 	)"
@@ -58,7 +58,13 @@ src_prepare() {
 }
 
 src_configure() {
-	local config=(
+	local tagsoup_jar
+	local config
+
+	# bug #527962
+	use tagsoup && tagsoup_jar="$(java-pkg_getjars tagsoup)"
+
+	config=(
 		# javaws is managed by eselect java-vm and symlinked to by icedtea so
 		# move it out of the way and symlink itweb-settings back to bin
 		--bindir="${EPREFIX}"/usr/libexec/${PN}
@@ -66,6 +72,7 @@ src_configure() {
 		$(use_enable doc docs)
 		$(use_enable nsplugin plugin)
 		$(use_with javascript rhino)
+		$(use_with tagsoup tagsoup ${tagsoup_jar})
 	)
 
 	unset JAVA_HOME JDK_HOME CLASSPATH JAVAC JAVACFLAGS

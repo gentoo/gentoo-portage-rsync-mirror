@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.46 2014/11/02 08:50:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.47 2014/11/02 11:07:03 caster Exp $
+
+  02 Nov 2014; Vlastimil Babka <caster@gentoo.org> -icedtea-web-1.5.1.ebuild,
+  icedtea-web-1.5.1-r1.ebuild:
+  Reintroduce USE=tagsoup and fix building with USE="-tagsoup" properly, bug
+  #527962.
 
 *icedtea-web-1.5.1-r1 (02 Nov 2014)
 

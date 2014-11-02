@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.78 2014/11/02 09:20:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.79 2014/11/02 11:14:03 caster Exp $
+
+  02 Nov 2014; Vlastimil Babka <caster@gentoo.org>
+  -oracle-jdk-bin-1.7.0.65.ebuild, -oracle-jdk-bin-1.7.0.67.ebuild,
+  -oracle-jdk-bin-1.8.0.11.ebuild, -oracle-jdk-bin-1.8.0.20.ebuild:
+  Remove old.
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> oracle-jdk-bin-1.7.0.71.ebuild:
   Stable for x86, wrt bug #525464

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/epspdf-0.6.0.ebuild,v 1.12 2013/04/25 21:25:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/epspdf-0.6.0.ebuild,v 1.13 2014/11/02 11:01:11 aballier Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="doc tk"
 
 DEPEND=""
 RDEPEND="!<dev-texlive/texlive-pictures-2011-r1
-	dev-tex/luatex
+	>=dev-texlive/texlive-basic-2011
 	app-text/ghostscript-gpl
 	tk? ( dev-lang/tk )"
 
