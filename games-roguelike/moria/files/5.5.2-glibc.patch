@@ -9,7 +9,7 @@ diff -Naur common-orig/Makefile umoria/unix/Makefile
 +# CURSES = -lcurses -ltermcap
  # For SYS V Systems
 -# CURSES = -lcurses
-+CURSES = -lcurses
++CURSES = `pkg-config ncurses --libs`
  # For XENIX, some XENIX systems may need -ltinfo
  # CURSES = -ltcap -ltermcap -lx
  

@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/moria
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/ChangeLog,v 1.9 2010/05/05 20:28:21 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/ChangeLog,v 1.10 2014/11/02 01:50:49 mr_bones_ Exp $
+
+  02 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/5.5.2-warnings.patch, files/5.5.2-glibc.patch, moria-5.5.2.ebuild:
+  EAPI=5; build with ncurses[tinfo] (bug #527654)
 
   05 May 2010; Michael Sterrett <mr_bones_@gentoo.org>
   +files/5.5.2-hours.patch, moria-5.5.2.ebuild:
