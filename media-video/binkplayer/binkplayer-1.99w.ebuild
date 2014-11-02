@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.99w.ebuild,v 1.8 2014/11/02 04:28:18 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.99w.ebuild,v 1.9 2014/11/02 04:35:53 jcallen Exp $
 
 EAPI=5
 DESCRIPTION="Bink Video! Player"
@@ -21,7 +21,6 @@ RDEPEND="
 		(
 			>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
 			>=media-libs/openal-1.15.1-r1[abi_x86_32(-)]
-			>=media-libs/sdl-mixer-1.2.12-r4[abi_x86_32(-)]
 		)
 		amd64? (
 			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]

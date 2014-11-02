@@ -1,6 +1,9 @@
 # ChangeLog for media-video/binkplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.32 2014/11/02 04:28:18 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.33 2014/11/02 04:35:53 jcallen Exp $
+
+  02 Nov 2014; Jonathan Callen <jcallen@gentoo.org> binkplayer-1.99w.ebuild:
+  Also drop sdl_mixer dep as unused
 
   02 Nov 2014; Jonathan Callen <jcallen@gentoo.org> binkplayer-1.99w.ebuild:
   Update deps to match libraries actually used (add openal, drop libstdc++.so.5)
