@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.111 2014/11/01 17:00:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.112 2014/11/02 13:18:15 caster Exp $
+
+  02 Nov 2014; Vlastimil Babka <caster@gentoo.org>
+  -java-sdk-docs-1.6.0.25.ebuild, -java-sdk-docs-1.7.0.25.ebuild,
+  -java-sdk-docs-1.7.0.51.ebuild, -java-sdk-docs-1.7.0.55.ebuild,
+  -java-sdk-docs-1.7.0.60.ebuild, -java-sdk-docs-1.7.0.67.ebuild,
+  java-sdk-docs-1.7.0.71.ebuild, -java-sdk-docs-1.8.0.0.ebuild,
+  -java-sdk-docs-1.8.0.5.ebuild:
+  Add mising x86 keyword per ago's permission. Cleanup including ppc/pp64
+  stable keywords, bug #525464.
 
   01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> java-sdk-docs-1.7.0.71.ebuild:
   Stable for amd64, wrt bug #525464
