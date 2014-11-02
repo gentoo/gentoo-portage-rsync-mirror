@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/lilv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/ChangeLog,v 1.12 2014/01/18 12:22:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/ChangeLog,v 1.14 2014/11/02 18:48:26 aballier Exp $
+
+*lilv-0.20.0 (02 Nov 2014)
+
+  02 Nov 2014; Alexis Ballier <aballier@gentoo.org> +lilv-0.20.0.ebuild:
+  version bump
+
+  02 Nov 2014; Alexis Ballier <aballier@gentoo.org> -lilv-0.5.0.ebuild,
+  -lilv-0.14.2.ebuild, -lilv-0.14.4.ebuild, -lilv-0.16.0.ebuild,
+  -files/ldconfig.patch:
+  remove old
 
 *lilv-0.18.0 (18 Jan 2014)
 

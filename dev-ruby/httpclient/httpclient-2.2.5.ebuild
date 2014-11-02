@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.2.5.ebuild,v 1.7 2014/04/05 13:56:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.2.5.ebuild,v 1.8 2014/11/02 18:51:28 mrueg Exp $
 
 EAPI=4
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_TEST="-Ilib test"
 RUBY_FAKEGEM_TASK_DOC="doc"

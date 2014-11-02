@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/lv2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/ChangeLog,v 1.7 2014/01/18 12:16:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/ChangeLog,v 1.9 2014/11/02 18:53:46 aballier Exp $
+
+*lv2-1.10.0 (02 Nov 2014)
+
+  02 Nov 2014; Alexis Ballier <aballier@gentoo.org> +lv2-1.10.0.ebuild:
+  version bump
+
+  02 Nov 2014; Alexis Ballier <aballier@gentoo.org> -lv2-1.0.0.ebuild,
+  -lv2-1.2.0.ebuild, -lv2-1.4.0.ebuild:
+  remove old
 
 *lv2-1.8.0 (18 Jan 2014)
 

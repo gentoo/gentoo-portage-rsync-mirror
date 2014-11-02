@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.4.2.201406192306_p1.ebuild,v 1.1 2014/06/29 19:46:18 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.4.2.201406192306_p1.ebuild,v 1.2 2014/11/02 18:39:44 robbat2 Exp $
 
 EAPI=5
 
@@ -26,6 +26,7 @@ DEPEND="dev-libs/openssl
 		sqlite? ( dev-db/sqlite:3 )
 		dev-libs/libevent
 		app-misc/ca-certificates
+		net-mail/mailbase
 		!mail-mta/courier
 		!mail-mta/esmtp
 		!mail-mta/exim
