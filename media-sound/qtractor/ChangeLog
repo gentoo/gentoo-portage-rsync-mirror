@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/qtractor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.56 2014/08/10 21:10:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.57 2014/11/02 17:55:28 aballier Exp $
+
+*qtractor-0.6.3 (02 Nov 2014)
+
+  02 Nov 2014; Alexis Ballier <aballier@gentoo.org> +qtractor-0.6.3.ebuild:
+  version bump
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> qtractor-0.5.10.ebuild,
   qtractor-0.5.12.ebuild, qtractor-0.5.9.ebuild, qtractor-0.6.0.ebuild:

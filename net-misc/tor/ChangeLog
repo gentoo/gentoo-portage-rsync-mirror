@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.444 2014/11/02 09:18:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.445 2014/11/02 17:49:35 slyfox Exp $
+
+  02 Nov 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Fix USE typo noticed by Marco Ziebell.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> tor-0.2.4.25.ebuild:
   Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
