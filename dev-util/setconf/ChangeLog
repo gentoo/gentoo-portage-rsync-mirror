@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/setconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/ChangeLog,v 1.6 2014/03/29 15:08:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/ChangeLog,v 1.7 2014/11/02 04:17:33 idella4 Exp $
+
+*setconf-0.6.3 (02 Nov 2014)
+
+  02 Nov 2014; Ian Delaney <idella4@gentoo.org> +setconf-0.6.3.ebuild:
+  bump; drop py3.2
 
   29 Mar 2014; Mike Gilbert <floppym@gentoo.org> setconf-0.6.2.ebuild:
   Add python2.7.

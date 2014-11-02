@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/glances
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.22 2014/11/02 03:59:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.23 2014/11/02 04:03:09 idella4 Exp $
+
+  02 Nov 2014; Ian Delaney <idella4@gentoo.org> -glances-2.0.1.ebuild,
+  -glances-2.0.ebuild:
+  rm (missed) old
 
 *glances-2.1.2 (02 Nov 2014)
 
