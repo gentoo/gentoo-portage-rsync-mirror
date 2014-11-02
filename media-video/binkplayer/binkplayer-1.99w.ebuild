@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.99w.ebuild,v 1.9 2014/11/02 04:35:53 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.99w.ebuild,v 1.10 2014/11/02 05:38:52 mr_bones_ Exp $
 
 EAPI=5
 DESCRIPTION="Bink Video! Player"
@@ -30,9 +30,7 @@ RDEPEND="
 
 S=${WORKDIR}
 
-QA_FLAGS_IGNORED="opt/bin/BinkPlayer"
-QA_PRESTRIPPED="opt/bin/BinkPlayer"
-QA_EXECSTACK="opt/bin/BinkPlayer"
+QA_PREBUILT="opt/bin/BinkPlayer"
 
 src_install() {
 	into /opt

@@ -8,4 +8,4 @@ LICENSE=freedist
 RDEPEND=|| ( ( >=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)] >=media-libs/openal-1.15.1-r1[abi_x86_32(-)] ) amd64? ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] ) )
 SLOT=0
 SRC_URI=mirror://gentoo/binkplayer-1.99w.zip
-_md5_=6f901550b54fd3d41b08e383878df49c
+_md5_=16253a26acc300511999f2c22c6fe3ce
