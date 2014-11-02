@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/lxqt-panel-0.7.0-r1.ebuild,v 1.3 2014/05/29 18:01:43 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/lxqt-panel-0.7.0-r1.ebuild,v 1.5 2014/11/02 21:53:23 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -28,16 +28,15 @@ DEPEND="dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
 	>=lxde-base/menu-cache-0.3.3
-	lxqt-base/liblxqt
-	lxqt-base/liblxqt-mount
-	lxqt-base/libsysstat
-	lxqt-base/lxqt-globalkeys
-	razorqt-base/libqtxdg
+	~lxqt-base/liblxqt-${PV}
+	~lxqt-base/liblxqt-mount-${PV}
+	~lxqt-base/lxqt-globalkeys-${PV}
+	~razorqt-base/libqtxdg-0.5.3
 	x11-libs/libX11
 	cpuload? ( sys-libs/libstatgrab )
 	networkmonitor? ( sys-libs/libstatgrab )
 	sensors? ( sys-apps/lm_sensors )
-	sysstat? ( lxqt-base/libsysstat )
+	sysstat? ( ~lxqt-base/libsysstat-0.1.0 )
 	volume? ( alsa? ( media-libs/alsa-lib )
 		pulseaudio? ( media-sound/pulseaudio ) )
 	worldclock? ( dev-libs/icu:= )"

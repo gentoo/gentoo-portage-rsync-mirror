@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/lxqt-session-0.7.0-r1.ebuild,v 1.3 2014/06/16 15:46:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/lxqt-session-0.7.0-r1.ebuild,v 1.4 2014/11/02 21:41:58 jauhien Exp $
 
 EAPI=5
 
@@ -25,15 +25,15 @@ S=${WORKDIR}
 CDEPEND="dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
-	lxqt-base/liblxqt
-	razorqt-base/libqtxdg
+	~lxqt-base/liblxqt-${PV}
+	~razorqt-base/libqtxdg-0.5.3
 	x11-libs/libX11"
 DEPEND="${CDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
-	lxqt-base/lxqt-common"
+	~lxqt-base/lxqt-common-${PV}"
 
 src_install(){
 	cmake-utils_src_install

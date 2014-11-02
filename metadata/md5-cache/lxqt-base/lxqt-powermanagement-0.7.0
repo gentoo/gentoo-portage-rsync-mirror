@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtsvg:4 =lxqt-base/liblxqt-0.7.0 razorqt-base/libqtxdg x11-libs/libX11 x11-libs/libxcb virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtsvg:4 ~lxqt-base/liblxqt-0.7.0 ~razorqt-base/libqtxdg-0.5.3 x11-libs/libX11 x11-libs/libxcb virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=LXQt daemon for power management and auto-suspend
 EAPI=5
 HOMEPAGE=http://www.lxqt.org/
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2 LGPL-2.1+
-RDEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtsvg:4 =lxqt-base/liblxqt-0.7.0 razorqt-base/libqtxdg x11-libs/libX11 x11-libs/libxcb || ( sys-power/upower sys-power/upower-pm-utils )
+RDEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtsvg:4 ~lxqt-base/liblxqt-0.7.0 ~razorqt-base/libqtxdg-0.5.3 x11-libs/libX11 x11-libs/libxcb || ( sys-power/upower sys-power/upower-pm-utils )
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/lxqt/0.7.0/lxqt-powermanagement-0.7.0.tar.xz
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=58ae73f64d35dc2613939d2acddfaa6a
+_md5_=11651bdbbc3a671df9cdb51dff7f82b2

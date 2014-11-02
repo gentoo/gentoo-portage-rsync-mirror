@@ -1,6 +1,10 @@
 # ChangeLog for lxqt-base/lxqt-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/ChangeLog,v 1.4 2014/06/16 15:46:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/ChangeLog,v 1.5 2014/11/02 21:41:58 jauhien Exp $
+
+  02 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  lxqt-session-0.7.0-r1.ebuild:
+  make dependencies more precise (preparation for LXQt 0.8.0 release)
 
   16 Jun 2014; Michael Palimaka <kensington@gentoo.org>
   lxqt-session-0.7.0-r1.ebuild:
