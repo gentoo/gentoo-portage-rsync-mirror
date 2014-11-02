@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130428-r1.ebuild,v 1.16 2014/10/29 09:32:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130428-r1.ebuild,v 1.17 2014/11/02 12:03:50 swift Exp $
 
 EAPI=5
 
@@ -105,7 +105,6 @@ RDEPEND+="
 	pulseaudio? ( media-sound/pulseaudio )
 	quvi? ( >=media-libs/libquvi-0.4.1 <media-libs/libquvi-0.9 )
 	samba? ( net-fs/samba )
-	selinux? ( sec-policy/selinux-mplayer )
 	>=virtual/ffmpeg-9[threads?,vdpau?]
 	symlink? ( !media-video/mplayer )
 "
@@ -124,6 +123,9 @@ DEPEND="${RDEPEND}
 		app-text/docbook-xml-dtd
 		app-text/docbook-xsl-stylesheets
 	)
+"
+RDEPEND+="
+	selinux? ( sec-policy/selinux-mplayer )
 "
 DOCS=( AUTHORS Copyright README etc/example.conf etc/input.conf etc/codecs.conf )
 

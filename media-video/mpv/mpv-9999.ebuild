@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.58 2014/10/27 19:04:44 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.59 2014/11/02 12:07:03 swift Exp $
 
 EAPI=5
 
@@ -100,7 +100,6 @@ RDEPEND+="
 	pulseaudio? ( media-sound/pulseaudio )
 	samba? ( net-fs/samba )
 	sdl? ( media-libs/libsdl2[threads] )
-	selinux? ( sec-policy/selinux-mplayer )
 	v4l? ( media-libs/libv4l )
 	wayland? (
 		>=dev-libs/wayland-1.6.0
@@ -118,6 +117,9 @@ DEPEND="${RDEPEND}
 		xinerama? ( x11-proto/xineramaproto )
 		xscreensaver? ( x11-proto/scrnsaverproto )
 	)
+"
+RDEPEND+="
+	selinux? ( sec-policy/selinux-mplayer )
 "
 DOCS=( Copyright README.md etc/example.conf etc/input.conf )
 

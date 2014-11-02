@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.663 2014/10/30 23:53:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.664 2014/11/02 12:09:02 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> wireshark-1.12.1.ebuild,
+  wireshark-1.99.0-r1.ebuild, wireshark-99999999.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *wireshark-99999999 (30 Oct 2014)
 

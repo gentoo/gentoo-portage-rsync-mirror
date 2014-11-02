@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.102 2014/10/27 19:04:44 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.103 2014/11/02 12:07:03 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> mpv-0.3.10.ebuild,
+  mpv-0.3.11.ebuild, mpv-0.4.2.ebuild, mpv-0.5.4.ebuild, mpv-0.6.0.ebuild,
+  mpv-0.6.1.ebuild, mpv-9999.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   27 Oct 2014; Maxim Koltsov <maksbotan@gentoo.org> mpv-9999.ebuild:
   Remove quvi support from live ebuild, bug #527008. Thanks to Dan Douglas and

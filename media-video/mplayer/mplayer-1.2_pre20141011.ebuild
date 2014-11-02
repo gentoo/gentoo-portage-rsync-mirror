@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.2_pre20141011.ebuild,v 1.2 2014/10/12 08:01:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.2_pre20141011.ebuild,v 1.3 2014/11/02 12:02:09 swift Exp $
 
 EAPI=5
 
@@ -118,7 +118,6 @@ RDEPEND+="
 	)
 	rtmp? ( media-video/rtmpdump )
 	samba? ( net-fs/samba )
-	selinux? ( sec-policy/selinux-mplayer )
 	sdl? ( media-libs/libsdl )
 	speex? ( media-libs/speex )
 	theora? ( media-libs/libtheora[encode?] )
@@ -152,6 +151,9 @@ DEPEND="${RDEPEND}
 	)
 	x86? ( ${ASM_DEP} )
 	x86-fbsd? ( ${ASM_DEP} )
+"
+RDEPEND+="
+	selinux? ( sec-policy/selinux-mplayer )
 "
 
 SLOT="0"
