@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.144 2014/07/09 18:53:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.145 2014/11/02 10:03:50 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> sysvinit-2.88-r7.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   09 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> sysvinit-2.88-r7.ebuild:
   ppc stable wrt bug #506592

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.22.ebuild,v 1.2 2014/07/21 19:38:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.22.ebuild,v 1.3 2014/11/02 10:16:59 swift Exp $
 
 EAPI=5
 inherit linux-info systemd
@@ -15,8 +15,7 @@ KEYWORDS="~amd64 ~ia64 -ppc ~x86"
 IUSE="selinux"
 
 RDEPEND="selinux? ( sec-policy/selinux-apm )"
-DEPEND="${RDEPEND}
-	    >=sys-kernel/linux-headers-3"
+DEPEND=">=sys-kernel/linux-headers-3"
 
 pkg_pretend() {
 	local CONFIG_CHECK="~INPUT_EVDEV"

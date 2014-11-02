@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1159 2014/10/30 09:02:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1160 2014/11/02 10:23:10 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> chromium-38.0.2125.101.ebuild,
+  chromium-38.0.2125.104.ebuild, chromium-38.0.2125.111.ebuild,
+  chromium-39.0.2171.36.ebuild, chromium-39.0.2171.42.ebuild,
+  chromium-40.0.2194.2.ebuild, chromium-40.0.2202.3.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *chromium-39.0.2171.42 (30 Oct 2014)
 

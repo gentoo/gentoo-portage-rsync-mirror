@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.184 2014/11/02 08:57:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.185 2014/11/02 10:06:23 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> polkit-0.112-r2.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> polkit-0.112-r2.ebuild:
   Stable for alpha, wrt bug #525252

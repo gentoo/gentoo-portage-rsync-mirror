@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/google-talkplugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.82 2014/08/12 15:01:07 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.83 2014/11/02 10:30:09 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org>
+  google-talkplugin-5.4.2.0.ebuild, google-talkplugin-9999.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   12 Aug 2014; Christoph Junghans <ottxor@gentoo.org>
   -google-talkplugin-4.4.2.0.ebuild, -google-talkplugin-5.4.1.0.ebuild,

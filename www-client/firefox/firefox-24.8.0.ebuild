@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-24.8.0.ebuild,v 1.6 2014/09/07 13:27:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-24.8.0.ebuild,v 1.7 2014/11/02 10:25:40 swift Exp $
 
 EAPI=5
 VIRTUALX_REQUIRED="pgo"
@@ -49,7 +49,7 @@ SRC_URI="${SRC_URI}
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 # Mesa 7.10 needed for WebGL + bugfixes
-RDEPEND="
+CDEPEND="
 	>=dev-libs/nss-3.16.2
 	>=dev-libs/nspr-4.10.4
 	>=dev-libs/glib-2.26:2
@@ -63,10 +63,9 @@ RDEPEND="
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-sqlite? ( >=dev-db/sqlite-3.7.17:3[secure-delete,debug=] )
 	>=media-libs/libvpx-1.0.0
-	kernel_linux? ( media-libs/alsa-lib )
-	selinux? ( sec-policy/selinux-mozilla )"
+	kernel_linux? ( media-libs/alsa-lib )"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	>=sys-devel/binutils-2.16.1
 	virtual/pkgconfig
 	pgo? (
@@ -75,6 +74,10 @@ DEPEND="${RDEPEND}
 		virtual/opengl )
 	x86? ( ${ASM_DEPEND}
 		virtual/opengl )"
+
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-mozilla )
+"
 
 # No source releases for alpha|beta
 if [[ ${PV} =~ alpha ]]; then

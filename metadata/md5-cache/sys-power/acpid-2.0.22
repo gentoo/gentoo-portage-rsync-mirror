@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst pretend setup
-DEPEND=selinux? ( sec-policy/selinux-apm ) >=sys-kernel/linux-headers-3 virtual/pkgconfig
+DEPEND=>=sys-kernel/linux-headers-3 virtual/pkgconfig
 DESCRIPTION=Daemon for Advanced Configuration and Power Interface
 EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/acpid2
@@ -10,4 +10,4 @@ RDEPEND=selinux? ( sec-policy/selinux-apm )
 SLOT=0
 SRC_URI=mirror://sourceforge/acpid2/acpid-2.0.22.tar.xz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=08391fadea9ebf1f9010c9e6d82c0acc
+_md5_=42444a6740cb349f004b3947e0b3bbcd

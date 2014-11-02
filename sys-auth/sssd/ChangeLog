@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.59 2014/10/06 19:02:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.60 2014/11/02 10:08:25 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> sssd-1.12.1.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   06 Oct 2014; Agostino Sarubbo <ago@gentoo.org> sssd-1.12.1.ebuild:
   Stable for x86, wrt bug #511670

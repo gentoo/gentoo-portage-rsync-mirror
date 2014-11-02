@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/cachefilesd-0.10.5-r2.ebuild,v 1.4 2014/04/18 19:57:51 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/cachefilesd-0.10.5-r2.ebuild,v 1.5 2014/11/02 10:11:03 swift Exp $
 
 EAPI=5
 
@@ -15,8 +15,8 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
 IUSE="doc selinux"
 
-DEPEND="selinux? ( sec-policy/selinux-cachefilesd )"
-RDEPEND="${DEPEND}"
+RDEPEND="selinux? ( sec-policy/selinux-cachefilesd )"
+DEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/0.10.4-makefile.patch

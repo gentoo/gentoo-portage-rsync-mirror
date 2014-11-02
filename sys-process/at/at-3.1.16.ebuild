@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.16.ebuild,v 1.1 2014/10/02 09:56:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.16.ebuild,v 1.2 2014/11/02 10:19:19 swift Exp $
 
 EAPI=5
 
@@ -19,8 +19,7 @@ DEPEND="virtual/mta
 	>=sys-devel/autoconf-2.64
 	sys-devel/bison
 	>=sys-devel/flex-2.5.4a
-	pam? ( virtual/pam )
-	selinux? ( sec-policy/selinux-at )"
+	pam? ( virtual/pam )"
 RDEPEND="virtual/mta
 	virtual/logger
 	selinux? ( sec-policy/selinux-at )"

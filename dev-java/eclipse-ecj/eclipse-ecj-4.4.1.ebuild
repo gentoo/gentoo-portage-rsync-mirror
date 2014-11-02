@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-4.4.1.ebuild,v 1.1 2014/11/02 09:02:43 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-4.4.1.ebuild,v 1.2 2014/11/02 10:16:18 ercpe Exp $
 
 EAPI="4"
 
@@ -46,7 +46,8 @@ java_prepare() {
 
 src_compile() {
 	java-pkg-simple_src_compile
-	find -name "*.properties" | xargs jar uvf "${S}/${PN}.jar" || die "jar update failed"
+	find -name "*.properties" -or -name "*.rsc" -or -name "*.props" \
+		 -or -wholename "*/META-INF/*" | xargs jar uvf "${S}/${PN}.jar" || die "jar update failed"
 }
 
 src_install() {

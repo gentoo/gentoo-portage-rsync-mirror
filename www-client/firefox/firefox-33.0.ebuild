@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-33.0.ebuild,v 1.2 2014/10/16 21:12:28 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-33.0.ebuild,v 1.3 2014/11/02 10:25:40 swift Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -52,18 +52,22 @@ SRC_URI="${SRC_URI}
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 # Mesa 7.10 needed for WebGL + bugfixes
-RDEPEND="
+CDEPEND="
 	>=dev-libs/nss-3.17.1
 	>=dev-libs/nspr-4.10.6
-	selinux? ( sec-policy/selinux-mozilla )"
+"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	pgo? (
 		>=sys-devel/gcc-4.5 )
 	amd64? ( ${ASM_DEPEND}
 		virtual/opengl )
 	x86? ( ${ASM_DEPEND}
 		virtual/opengl )"
+
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-mozilla )
+"
 
 # No source releases for alpha|beta
 if [[ ${PV} =~ alpha ]]; then

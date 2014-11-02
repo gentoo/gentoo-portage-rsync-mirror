@@ -1,5 +1,5 @@
 DEFINED_PHASES=install nofetch unpack
-DEPEND=selinux? ( sec-policy/selinux-googletalk ) app-arch/unzip
+DEPEND=app-arch/unzip
 DESCRIPTION=Video chat browser plug-in for Google Talk
 EAPI=5
 HOMEPAGE=http://www.google.com/chat/video
@@ -11,4 +11,4 @@ RESTRICT=strip mirror
 SLOT=0
 SRC_URI=x86? ( http://dl.google.com/linux/talkplugin/deb/pool/main/g/google-talkplugin/google-talkplugin_5.4.2.0-1_i386.deb ) amd64? ( http://dl.google.com/linux/talkplugin/deb/pool/main/g/google-talkplugin/google-talkplugin_5.4.2.0-1_amd64.deb )
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=cacc3733e7a280ffa7421b6093be6c06
+_md5_=64f824a52fe3f8c5724ea7af4041854b

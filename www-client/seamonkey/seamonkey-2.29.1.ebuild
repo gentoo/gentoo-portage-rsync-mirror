@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.29.1.ebuild,v 1.2 2014/10/05 18:08:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.29.1.ebuild,v 1.3 2014/11/02 10:28:35 swift Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -59,7 +59,7 @@ SRC_URI="${SRC_URI}
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
-RDEPEND=">=dev-libs/nss-3.16.2
+CDEPEND=">=dev-libs/nss-3.16.2
 	>=dev-libs/nspr-4.10.6
 	crypt? ( || (
 			( >=app-crypt/gnupg-2.0
@@ -69,15 +69,19 @@ RDEPEND=">=dev-libs/nss-3.16.2
 				)
 			)
 			=app-crypt/gnupg-1.4* ) )
-	selinux? ( sec-policy/selinux-mozilla )"
+"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	!elibc_glibc? ( !elibc_uclibc?  ( dev-libs/libexecinfo ) )
 	crypt? ( dev-lang/perl )
 	amd64? ( ${ASM_DEPEND}
 		virtual/opengl )
 	x86? ( ${ASM_DEPEND}
 		virtual/opengl )"
+
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-mozilla )
+"
 
 if [[ ${PV} == *beta* ]] ; then
 	S="${WORKDIR}/comm-beta"

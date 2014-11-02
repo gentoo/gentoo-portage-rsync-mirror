@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-38.0.2125.104.ebuild,v 1.1 2014/10/18 04:03:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-38.0.2125.104.ebuild,v 1.2 2014/11/02 10:23:10 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -81,8 +81,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	x11-libs/libXScrnSaver:=
 	x11-libs/libXtst:=
 	x11-libs/pango:=
-	kerberos? ( virtual/krb5 )
-	selinux? ( sec-policy/selinux-chromium )"
+	kerberos? ( virtual/krb5 )"
 DEPEND="${RDEPEND}
 	!arm? (
 		dev-lang/yasm
@@ -102,6 +101,7 @@ RDEPEND+="
 	x11-misc/xdg-utils
 	virtual/opengl
 	virtual/ttf-fonts
+	selinux? ( sec-policy/selinux-chromium )
 	tcmalloc? ( !<x11-drivers/nvidia-drivers-331.20 )"
 
 # Python dependencies. The DEPEND part needs to be kept in sync

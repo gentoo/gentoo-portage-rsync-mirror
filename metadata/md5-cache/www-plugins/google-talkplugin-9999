@@ -1,5 +1,5 @@
 DEFINED_PHASES=install nofetch unpack
-DEPEND=selinux? ( sec-policy/selinux-googletalk ) app-arch/unzip dev-vcs/cvs
+DEPEND=app-arch/unzip dev-vcs/cvs
 DESCRIPTION=Video chat browser plug-in for Google Talk
 EAPI=5
 HOMEPAGE=http://www.google.com/chat/video
@@ -10,4 +10,4 @@ RDEPEND=|| ( media-sound/pulseaudio media-libs/alsa-lib ) dev-libs/glib:2 sys-li
 RESTRICT=strip mirror
 SLOT=0
 _eclasses_=cvs	a4cb8da1bb586b224ade5b54f1d2fda0	eutils	32548a82e42dc26e3312581476d2f20c	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=ad45758ec5845f5cf9d9aa8b8164f95a
+_md5_=e1204bb14d29ca153344fd2226e8d620

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.21 2014/05/23 02:36:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.22 2014/11/02 10:30:09 swift Exp $
 
 EAPI=5
 
@@ -49,7 +49,7 @@ RDEPEND="|| ( media-sound/pulseaudio media-libs/alsa-lib )
 	selinux? ( sec-policy/selinux-googletalk )
 	libnotify? ( x11-libs/libnotify )"
 
-DEPEND="selinux? ( sec-policy/selinux-googletalk )"
+DEPEND=""
 
 INSTALL_BASE="opt/google/talkplugin"
 

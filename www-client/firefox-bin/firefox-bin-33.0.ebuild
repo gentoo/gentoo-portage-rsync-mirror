@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-33.0.ebuild,v 1.2 2014/10/17 21:35:04 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-33.0.ebuild,v 1.3 2014/11/02 10:26:31 swift Exp $
 
 EAPI="5"
 
@@ -36,8 +36,7 @@ SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="selinux startup-notification"
 
-DEPEND="app-arch/unzip
-	selinux? ( sec-policy/selinux-mozilla )"
+DEPEND="app-arch/unzip"
 RDEPEND="dev-libs/atk
 	>=sys-apps/dbus-0.60
 	>=dev-libs/dbus-glib-0.72

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r2.ebuild,v 1.10 2014/11/02 08:57:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r2.ebuild,v 1.11 2014/11/02 10:06:23 swift Exp $
 
 EAPI=5
 inherit eutils multilib pam pax-utils systemd user
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="examples gtk +introspection jit kde nls pam selinux systemd"
 
-RDEPEND="
+CDEPEND="
 	ia64? ( =dev-lang/spidermonkey-1.8.5*[-debug] )
 	hppa? ( =dev-lang/spidermonkey-1.8.5*[-debug] )
 	mips? ( =dev-lang/spidermonkey-1.8.5*[-debug] )
@@ -26,14 +26,16 @@ RDEPEND="
 		sys-auth/pambase
 		virtual/pam
 		)
-	selinux? ( sec-policy/selinux-policykit )
 	systemd? ( sys-apps/systemd:0= )"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	dev-util/intltool
 	virtual/pkgconfig"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-policykit )
+"
 PDEPEND="
 	gtk? ( || (
 		>=gnome-extra/polkit-gnome-0.105

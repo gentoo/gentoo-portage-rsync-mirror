@@ -1,6 +1,11 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.173 2014/10/11 11:31:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.174 2014/11/02 10:16:40 eva Exp $
+
+*iso-codes-3.57 (02 Nov 2014)
+
+  02 Nov 2014; Gilles Dartiguelongue <eva@gentoo.org> +iso-codes-3.57.ebuild:
+  Version bump.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> iso-codes-3.55.ebuild:
   arm stable, bug #512012

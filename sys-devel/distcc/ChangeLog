@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.237 2014/10/29 18:52:28 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.238 2014/11/02 10:10:01 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> distcc-3.1-r10.ebuild,
+  distcc-3.2_rc1-r1.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *distcc-3.2_rc1-r1 (29 Oct 2014)
 *distcc-3.1-r10 (29 Oct 2014)

@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/cachefilesd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/ChangeLog,v 1.13 2014/08/22 13:41:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/ChangeLog,v 1.14 2014/11/02 10:11:03 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> cachefilesd-0.10.5-r2.ebuild,
+  cachefilesd-0.10.5-r3.ebuild, cachefilesd-0.10.5-r4.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *cachefilesd-0.10.5-r4 (22 Aug 2014)
 

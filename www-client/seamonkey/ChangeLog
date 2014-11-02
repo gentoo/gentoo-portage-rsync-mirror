@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.498 2014/10/21 18:29:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.499 2014/11/02 10:28:35 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> seamonkey-2.26.1.ebuild,
+  seamonkey-2.29.1.ebuild, seamonkey-2.30.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *seamonkey-2.30 (21 Oct 2014)
 

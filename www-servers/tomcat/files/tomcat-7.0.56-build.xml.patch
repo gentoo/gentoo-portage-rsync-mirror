@@ -1,0 +1,126 @@
+diff --git a/apache-tomcat-7.0.56-src/build.xml b/apache-tomcat-7.0.56-src/build.xml
+index 166f45e..cb82a5f 100644
+--- a/apache-tomcat-7.0.56-src/build.xml
++++ b/apache-tomcat-7.0.56-src/build.xml
+@@ -686,7 +686,8 @@
+       filesId="files.annotations-api"
+       manifest="${tomcat.manifests}/annotations-api.jar.manifest" />
+ 
+-    <!-- Servlet 3.0 Implementation JAR File -->
++<!--
++    Servlet 3.0 Implementation JAR File
+     <jarIt jarfile="${servlet-api.jar}"
+       filesDir="${tomcat.classes}"
+       filesId="files.servlet-api"
+@@ -694,7 +695,7 @@
+       notice="${tomcat.manifests}/servlet-api.jar.notice"
+       license="${tomcat.manifests}/servlet-api.jar.license" />
+ 
+-    <!-- JSP 2.2 Implementation JAR File -->
++    JSP 2.2 Implementation JAR File
+     <jarIt jarfile="${jsp-api.jar}"
+       filesDir="${tomcat.classes}"
+       filesId="files.jsp-api"
+@@ -702,11 +703,12 @@
+       notice="${tomcat.manifests}/jsp-api.jar.notice"
+       license="${tomcat.manifests}/jsp-api.jar.license" />
+ 
+-    <!-- JSP 2.2 EL Implementation JAR File -->
++    JSP 2.2 EL Implementation JAR File 
+     <jarIt jarfile="${el-api.jar}"
+       filesDir="${tomcat.classes}"
+       filesId="files.el-api"
+       manifest="${tomcat.manifests}/el-api.jar.manifest" />
++-->
+ 
+     <!-- Bootstrap JAR File -->
+     <jarIt jarfile="${bootstrap.jar}"
+@@ -801,16 +803,19 @@
+   <target name="package-java7" depends="compile,build-manifests"
+           if="java.7.home">
+     <!-- WebSocket 1.0 API JAR File -->
++<!--
+     <jarIt jarfile="${websocket-api.jar}"
+       filesDir="${tomcat.classes}"
+       filesId="files.websocket-api"
+       manifest="${tomcat.manifests}/websocket-api.jar.manifest" />
+-
++-->
+     <!-- WebSocket 1.0 implementation JAR File -->
++<!--
+     <jarIt jarfile="${tomcat7-websocket.jar}"
+       filesDir="${tomcat.classes}"
+       filesId="files.tomcat7-websocket"
+       meta-inf="${tomcat.manifests}/tomcat7-websocket.jar"/>
++-->
+   </target>
+ 
+   <target name="build-docs" depends="compile-prepare" description="Builds all documentation from XML sources">
+@@ -952,13 +957,14 @@
+   <target name="deploy" depends="package,build-docs,compile-webapp-examples"
+           description="Default. Builds a working Tomcat instance">
+ 
++<!--
+     <copy tofile="${tomcat.build}/bin/tomcat-native.tar.gz"
+             file="${tomcat-native.tar.gz}" />
+     <copy tofile="${tomcat.build}/bin/commons-daemon-native.tar.gz"
+             file="${commons-daemon.native.src.tgz}" />
+ 
+     <copy tofile="${tomcat.build}/bin/commons-daemon.jar" file="${commons-daemon.jar}" />
+-
++-->
+     <!-- Copy scripts -->
+     <copy todir="${tomcat.build}/bin">
+       <fileset dir="bin">
+@@ -1011,9 +1017,11 @@
+     <!-- Add sources for examples -->
+     <antcall target="examples-sources" />
+ 
++<!--
+     <copy file="${tomcat-dbcp.jar}" todir="${tomcat.build}/lib"
+       failonerror="false"/>
+     <copy file="${jdt.jar}" todir="${tomcat.build}/lib" />
++-->
+ 
+     <!-- build the jdbc-pool jar and source jar-->
+     <echo message="Building Tomcat JDBC pool libraries"/>
+@@ -1606,7 +1614,8 @@
+ 
+   <target name="extras-webservices-prepare"
+           depends="extras-prepare"
+-          description="Prepare to build web services extras package">
++          description="Prepare to build web services extras package"
++          unless="noget">
+ 
+     <antcall target="downloadfile">
+       <param name="sourcefile" value="${jaxrpc-lib.loc}"/>
+@@ -2651,7 +2660,8 @@ Apache Tomcat ${version} native binaries for Win64 AMD64/EMT64 platform.
+   </target>
+ 
+   <target name="download-compile"
+-          description="Download (and build) components necessary to compile" >
++          description="Download (and build) components necessary to compile"
++          unless="noget">
+ 
+     <antcall target="downloadfile-2">
+       <param name="sourcefile.1" value="${tomcat-native.loc.1}"/>
+@@ -2708,7 +2718,8 @@ Apache Tomcat ${version} native binaries for Win64 AMD64/EMT64 platform.
+   </target>
+ 
+   <target name="download-test-compile"
+-          description="Download additional components for the tests" >
++          description="Download additional components for the tests"
++          unless="noget">
+ 
+     <antcall target="downloadfile">
+       <param name="sourcefile" value="${junit.loc}"/>
+@@ -2736,7 +2747,8 @@ Apache Tomcat ${version} native binaries for Win64 AMD64/EMT64 platform.
+   </target>
+ 
+   <target name="download-dist"
+-          description="Download additional components for a distribution" >
++          description="Download additional components for a distribution"
++          unless="noget">
+ 
+     <antcall target="downloadzip-2">
+       <param name="sourcefile.1" value="${tomcat-native.win.1}"/>

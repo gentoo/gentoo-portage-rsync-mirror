@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.172 2014/10/15 14:34:22 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.173 2014/11/02 10:13:22 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> udisks-2.1.3.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   15 Oct 2014; Tobias Klausmann <klausman@gentoo.org> udisks-1.0.5-r1.ebuild:
   Stable on alpha, bug 516766

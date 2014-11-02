@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.12.1.ebuild,v 1.3 2014/10/06 19:02:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.12.1.ebuild,v 1.4 2014/11/02 10:08:25 swift Exp $
 
 EAPI=5
 
@@ -39,7 +39,6 @@ COMMON_DEP="
 	selinux? (
 		>=sys-libs/libselinux-2.1.9
 		>=sys-libs/libsemanage-2.1
-		>=sec-policy/selinux-sssd-2.20120725-r9
 	)
 	>=net-dns/bind-tools-9.9[gssapi]
 	>=dev-libs/cyrus-sasl-2.1.25-r3[kerberos]
@@ -54,6 +53,7 @@ COMMON_DEP="
 
 RDEPEND="${COMMON_DEP}
 	>=sys-libs/glibc-2.17[nscd]
+	selinux? ( >=sec-policy/selinux-sssd-2.20120725-r9 )
 	"
 DEPEND="${COMMON_DEP}
 	test? ( dev-libs/check )

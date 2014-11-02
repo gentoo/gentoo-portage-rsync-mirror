@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.7.2-r2.ebuild,v 1.1 2014/09/08 04:55:35 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.7.2-r2.ebuild,v 1.2 2014/11/02 10:18:14 swift Exp $
 
 EAPI=5
 inherit autotools bash-completion-r1 eutils fixheadtails multilib user systemd flag-o-matic toolchain-funcs
@@ -18,19 +18,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
 IUSE="avahi cgi ipmi snmp +usb selinux ssl tcpd xml"
-RDEPEND="avahi? ( net-dns/avahi )
+CDEPEND="avahi? ( net-dns/avahi )
 	cgi? ( >=media-libs/gd-2[png] )
 	snmp? ( net-analyzer/net-snmp )
 	usb? ( virtual/libusb:0 )
-	selinux? ( sec-policy/selinux-nut )
 	ssl? ( >=dev-libs/openssl-1 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	xml? ( >=net-libs/neon-0.25.0 )
 	ipmi? ( sys-libs/freeipmi )
 	virtual/udev"
-DEPEND="$RDEPEND
+DEPEND="$CDEPEND
 	>=sys-apps/sed-4
 	virtual/pkgconfig"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-nut )
+"
 
 S=${WORKDIR}/${MY_P}
 
