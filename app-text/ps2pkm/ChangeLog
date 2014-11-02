@@ -1,6 +1,12 @@
 # ChangeLog for app-text/ps2pkm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.40 2013/06/25 21:37:37 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.41 2014/11/02 08:48:54 aballier Exp $
+
+*ps2pkm-1.5_p20140525 (02 Nov 2014)
+
+  02 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  +ps2pkm-1.5_p20140525.ebuild:
+  bump to texlive 2014 version
 
   25 Jun 2013; Alexis Ballier <aballier@gentoo.org>
   -ps2pkm-1.5_p20110705.ebuild:

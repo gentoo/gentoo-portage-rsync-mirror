@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.220 2014/08/11 22:24:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.221 2014/11/02 08:59:20 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> courier-imap-4.15-r1.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   11 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -courier-imap-4.8.0-r1.ebuild,
   -files/courier-authdaemond.service,

@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.255 2014/11/01 00:12:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.256 2014/11/02 08:48:02 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> dnsmasq-2.66.ebuild,
+  dnsmasq-2.71-r1.ebuild, dnsmasq-2.71.ebuild, dnsmasq-2.72.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   01 Nov 2014; Jeroen Roovers <jer@gentoo.org> dnsmasq-2.72.ebuild:
   Stable for HPPA (bug #527536).

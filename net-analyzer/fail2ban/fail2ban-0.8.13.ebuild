@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.13.ebuild,v 1.6 2014/05/11 08:12:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.13.ebuild,v 1.7 2014/11/02 08:44:31 swift Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="selinux"
 
-DEPEND="selinux? ( sec-policy/selinux-fail2ban )"
+DEPEND=""
 RDEPEND="net-misc/whois
 	virtual/mta
 	virtual/logger

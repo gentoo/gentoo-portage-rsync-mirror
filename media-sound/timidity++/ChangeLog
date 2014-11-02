@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.162 2014/05/17 15:13:39 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.163 2014/11/02 08:42:58 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> timidity++-2.14.0-r1.ebuild,
+  timidity++-2.14.0-r2.ebuild, timidity++-2.14.0.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   17 May 2014; Sven Vermeulen <swift@gentoo.org> timidity++-2.13.2-r13.ebuild,
   timidity++-2.13.2-r14.ebuild, timidity++-2.14.0-r1.ebuild,

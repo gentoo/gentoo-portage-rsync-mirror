@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-31.2.0-r1.ebuild,v 1.1 2014/10/20 17:53:11 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-31.2.0-r1.ebuild,v 1.2 2014/11/02 08:33:52 swift Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -59,10 +59,9 @@ SRC_URI="${SRC_URI}
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
-RDEPEND="
+CDEPEND="
 	>=dev-libs/nss-3.16.5
 	>=dev-libs/nspr-4.10.6
-	selinux? ( sec-policy/selinux-thunderbird )
 	!x11-plugins/enigmail
 	crypt?  ( || (
 		( >=app-crypt/gnupg-2.0
@@ -74,11 +73,15 @@ RDEPEND="
 		=app-crypt/gnupg-1.4*
 	) )"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	amd64? ( ${ASM_DEPEND}
 		virtual/opengl )
 	x86? ( ${ASM_DEPEND}
 		virtual/opengl )"
+
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-thunderbird )
+"
 
 if [[ ${PV} =~ beta ]]; then
 	S="${WORKDIR}/comm-beta"

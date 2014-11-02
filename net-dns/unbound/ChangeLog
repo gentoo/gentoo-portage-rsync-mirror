@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.75 2014/10/23 17:05:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.76 2014/11/02 08:49:46 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> unbound-1.4.22-r1.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   23 Oct 2014; Pacho Ramos <pacho@gentoo.org> unbound-1.4.22-r1.ebuild:
   amd64/x86 stable, bug #525264

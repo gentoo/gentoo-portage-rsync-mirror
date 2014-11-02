@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.71-r1.ebuild,v 1.1 2014/08/22 18:38:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.71-r1.ebuild,v 1.2 2014/11/02 08:48:02 swift Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ CDEPEND="dbus? ( sys-apps/dbus )
 		sys-devel/gettext
 		net-dns/libidn
 	)
-	selinux? ( sec-policy/selinux-dnsmasq )"
+"
 
 DEPEND="${CDEPEND}
 	app-arch/xz-utils
@@ -44,7 +44,9 @@ RDEPEND="${CDEPEND}
 		!static? (
 			dev-libs/nettle[gmp]
 		)
-	)"
+	)
+	selinux? ( sec-policy/selinux-dnsmasq )
+"
 
 REQUIRED_USE="dhcp-tools? ( dhcp )
 	lua? ( script )

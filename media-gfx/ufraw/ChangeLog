@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.125 2014/11/01 17:46:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.126 2014/11/02 08:58:59 ago Exp $
+
+  02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ufraw-0.20.ebuild:
+  Stable for alpha, wrt bug #526918
 
   01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ufraw-0.20.ebuild:
   Stable for ppc, wrt bug #526918

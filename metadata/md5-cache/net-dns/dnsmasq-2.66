@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup
-DEPEND=dbus? ( sys-apps/dbus ) idn? ( net-dns/libidn ) lua? ( dev-lang/lua ) conntrack? ( !s390? ( net-libs/libnetfilter_conntrack ) ) nls? ( sys-devel/gettext net-dns/libidn ) selinux? ( sec-policy/selinux-dnsmasq ) virtual/pkgconfig app-arch/xz-utils virtual/pkgconfig
+DEPEND=dbus? ( sys-apps/dbus ) idn? ( net-dns/libidn ) lua? ( dev-lang/lua ) conntrack? ( !s390? ( net-libs/libnetfilter_conntrack ) ) nls? ( sys-devel/gettext net-dns/libidn ) virtual/pkgconfig app-arch/xz-utils virtual/pkgconfig
 DESCRIPTION=Small forwarding DNS server
 EAPI=5
 HOMEPAGE=http://www.thekelleys.org.uk/dnsmasq/
@@ -11,4 +11,4 @@ REQUIRED_USE=dhcp-tools? ( dhcp ) lua? ( script ) s390? ( !conntrack )
 SLOT=0
 SRC_URI=http://www.thekelleys.org.uk/dnsmasq/dnsmasq-2.66.tar.xz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=2e00c04374765dff25bc704d8e9ebe0b
+_md5_=a3e286b5866d9951b37a27c74a1785b7

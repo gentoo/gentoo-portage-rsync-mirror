@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.5.1.ebuild,v 1.6 2014/10/31 15:59:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.5.1.ebuild,v 1.7 2014/11/02 08:56:15 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [ "${PV}" = "999999" ]; then
 	KEYWORDS=""
 else
 	SRC_URI="https://github.com/martine/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~alpha amd64 arm ~arm64 ~m68k ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+	KEYWORDS="alpha amd64 arm ~arm64 ~m68k ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 fi
 
 DESCRIPTION="A small build system similar to make"

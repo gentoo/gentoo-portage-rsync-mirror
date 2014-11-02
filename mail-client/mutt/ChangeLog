@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.271 2014/10/26 14:49:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.272 2014/11/02 08:31:58 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> mutt-1.5.22-r3.ebuild,
+  mutt-1.5.23-r2.ebuild, mutt-1.5.23-r4.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *mutt-1.5.23-r4 (26 Oct 2014)
 

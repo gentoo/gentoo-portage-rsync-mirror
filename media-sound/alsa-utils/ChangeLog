@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.375 2014/10/23 10:46:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.376 2014/11/02 08:41:51 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> alsa-utils-1.0.27.2.ebuild,
+  alsa-utils-1.0.28.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   23 Oct 2014; Pacho Ramos <pacho@gentoo.org> alsa-utils-1.0.28.ebuild:
   amd64/x86 stable, bug #522038

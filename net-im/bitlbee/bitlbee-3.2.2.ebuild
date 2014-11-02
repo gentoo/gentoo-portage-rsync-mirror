@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.2.2.ebuild,v 1.1 2014/10/10 08:50:07 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.2.2.ebuild,v 1.2 2014/11/02 08:58:11 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -27,9 +27,10 @@ COMMON_DEPEND="
 		nss? ( dev-libs/nss )
 		!nss? ( ssl? ( dev-libs/openssl ) )
 	)
-	selinux? ( sec-policy/selinux-bitlbee )"
+	"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
+	selinux? ( sec-policy/selinux-bitlbee )
 	skype? ( app-text/asciidoc )
 	test? ( dev-libs/check )"
 

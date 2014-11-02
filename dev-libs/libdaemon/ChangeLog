@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.80 2014/11/01 17:44:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.81 2014/11/02 08:57:27 ago Exp $
+
+  02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> libdaemon-0.14-r2.ebuild:
+  Stable for alpha, wrt bug #525982
 
   01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> libdaemon-0.14-r2.ebuild:
   Stable for ppc, wrt bug #525982

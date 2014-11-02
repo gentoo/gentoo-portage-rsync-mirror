@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.143 2014/08/13 09:29:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.144 2014/11/02 09:00:17 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> mailman-2.1.17.ebuild,
+  mailman-2.1.18_p1.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mailman-2.1.17.ebuild:
   Stable for ppc, wrt bug #510138

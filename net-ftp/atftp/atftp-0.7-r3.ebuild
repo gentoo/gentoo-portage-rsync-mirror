@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7-r3.ebuild,v 1.6 2014/01/26 12:19:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7-r3.ebuild,v 1.7 2014/11/02 08:55:24 swift Exp $
 
 EAPI=5
 inherit eutils flag-o-matic systemd
@@ -19,12 +19,12 @@ KEYWORDS="amd64 arm ppc ppc64 ~s390 sparc x86"
 IUSE="selinux tcpd readline pcre"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
-	selinux? ( sec-policy/selinux-tftp )
 	readline? ( sys-libs/readline )
 	pcre? ( dev-libs/libpcre )"
 RDEPEND="${DEPEND}
 	!net-ftp/netkit-tftp
-	!net-ftp/tftp-hpa"
+	!net-ftp/tftp-hpa
+	selinux? ( sec-policy/selinux-tftp )"
 
 src_prepare() {
 	epatch "${DISTDIR}"/${DEBIAN_A}

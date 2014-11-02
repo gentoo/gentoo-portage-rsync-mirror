@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.17.ebuild,v 1.4 2014/08/13 09:29:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.17.ebuild,v 1.5 2014/11/02 09:00:17 swift Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -18,9 +18,9 @@ IUSE="selinux"
 
 DEPEND="virtual/mta
 	virtual/cron
-	virtual/httpd-cgi
+	virtual/httpd-cgi"
+RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-mailman )"
-RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	python_set_active_version 2

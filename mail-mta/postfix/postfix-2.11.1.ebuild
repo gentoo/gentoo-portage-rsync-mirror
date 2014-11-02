@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11.1.ebuild,v 1.5 2014/08/19 20:47:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11.1.ebuild,v 1.6 2014/11/02 08:40:21 swift Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
@@ -33,7 +33,6 @@ DEPEND=">=dev-libs/libpcre-3.4
 	pam? ( virtual/pam )
 	postgres? ( dev-db/postgresql-base )
 	sasl? (  >=dev-libs/cyrus-sasl-2 )
-	selinux? ( sec-policy/selinux-postfix )
 	sqlite? ( dev-db/sqlite:3 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
@@ -53,7 +52,8 @@ RDEPEND="${DEPEND}
 	!mail-mta/opensmtpd
 	!<mail-mta/ssmtp-2.64-r2
 	!>=mail-mta/ssmtp-2.64-r2[mta]
-	!net-mail/fastforward"
+	!net-mail/fastforward
+	selinux? ( sec-policy/selinux-postfix )"
 
 REQUIRED_USE="ldap-bind? ( ldap sasl )"
 

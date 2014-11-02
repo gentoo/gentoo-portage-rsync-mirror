@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/shorewall-core-4.5.21.9.ebuild,v 1.8 2014/09/19 09:17:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/shorewall-core-4.5.21.9.ebuild,v 1.9 2014/11/02 08:52:21 swift Exp $
 
 EAPI="5"
 
@@ -34,7 +34,6 @@ DEPEND="
 	>=dev-lang/perl-5.10
 	virtual/perl-Digest-SHA
 	!<net-firewall/shorewall-4.5.0.1
-	selinux? ( >=sec-policy/selinux-shorewall-2.20130424-r2 )
 "
 RDEPEND="
 	${DEPEND}
@@ -42,6 +41,7 @@ RDEPEND="
 	>=sys-apps/iproute2-3.8.0[-minimal]
 	>=sys-devel/bc-1.06.95
 	>=sys-apps/coreutils-8.20
+	selinux? ( >=sec-policy/selinux-shorewall-2.20130424-r2 )
 "
 
 DOCS=( changelog.txt releasenotes.txt )

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.9.2-r1.ebuild,v 1.5 2014/08/14 16:17:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.9.2-r1.ebuild,v 1.6 2014/11/02 08:36:29 swift Exp $
 
 EAPI=5
 inherit autotools db-use eutils systemd user
@@ -29,13 +29,14 @@ DEPEND="|| ( mail-filter/libmilter mail-mta/sendmail )
 	lmdb? ( dev-db/lmdb )
 	memcached? ( dev-libs/libmemcached )
 	sasl? ( dev-libs/cyrus-sasl )
-	selinux? ( sec-policy/selinux-dkim )
 	unbound? ( >=net-dns/unbound-1.4.1 net-dns/dnssec-root )
 	!unbound? ( net-libs/ldns )
 	gnutls? ( >=net-libs/gnutls-2.11.7 )"
 
 RDEPEND="${DEPEND}
-	sys-process/psmisc"
+	sys-process/psmisc
+	selinux? ( sec-policy/selinux-dkim )
+"
 
 REQUIRED_USE="sasl? ( ldap )"
 

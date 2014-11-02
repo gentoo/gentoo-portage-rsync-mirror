@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.66.ebuild,v 1.14 2014/08/03 16:59:53 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.66.ebuild,v 1.15 2014/11/02 08:48:02 swift Exp $
 
 EAPI=5
 
@@ -19,19 +19,21 @@ for dm_lingua in ${DM_LINGUAS}; do
 	IUSE+=" linguas_${dm_lingua}"
 done
 
-RDEPEND="dbus? ( sys-apps/dbus )
+CDEPEND="dbus? ( sys-apps/dbus )
 		idn? ( net-dns/libidn )
 		lua? ( dev-lang/lua )
 		conntrack? ( !s390? ( net-libs/libnetfilter_conntrack ) )
 		nls? (
 			sys-devel/gettext
 			net-dns/libidn
-		)
-		selinux? ( sec-policy/selinux-dnsmasq )"
+		)"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 		virtual/pkgconfig
 		app-arch/xz-utils"
+
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-dnsmasq )"
 
 REQUIRED_USE="dhcp-tools? ( dhcp )
 			  lua? ( script )

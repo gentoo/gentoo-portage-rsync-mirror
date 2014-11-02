@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=>=dev-lang/perl-5.10 virtual/perl-Digest-SHA !<net-firewall/shorewall-4.5.0.1 selinux? ( >=sec-policy/selinux-shorewall-2.20130424-r2 )
+DEPEND=>=dev-lang/perl-5.10 virtual/perl-Digest-SHA !<net-firewall/shorewall-4.5.0.1
 DESCRIPTION=Core libraries of shorewall / shorewall(6)-lite
 EAPI=5
 HOMEPAGE=http://www.shorewall.net/
 IUSE=selinux
 KEYWORDS=~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
-RDEPEND=>=dev-lang/perl-5.10 virtual/perl-Digest-SHA !<net-firewall/shorewall-4.5.0.1 selinux? ( >=sec-policy/selinux-shorewall-2.20130424-r2 ) >=net-firewall/iptables-1.4.20 >=sys-apps/iproute2-3.8.0[-minimal] >=sys-devel/bc-1.06.95 >=sys-apps/coreutils-8.20
+RDEPEND=>=dev-lang/perl-5.10 virtual/perl-Digest-SHA !<net-firewall/shorewall-4.5.0.1 >=net-firewall/iptables-1.4.20 >=sys-apps/iproute2-3.8.0[-minimal] >=sys-devel/bc-1.06.95 >=sys-apps/coreutils-8.20 selinux? ( >=sec-policy/selinux-shorewall-2.20130424-r2 )
 SLOT=0
 SRC_URI=http://www1.shorewall.net/pub/shorewall/4.5/shorewall-4.5.21/shorewall-core-4.5.21.10.tar.bz2
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=a44d46e6b647c44fdf065a3c2ffa4703
+_md5_=3de5940d7823239eb0e3dfdd875d1e81

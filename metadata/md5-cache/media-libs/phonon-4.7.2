@@ -4,7 +4,7 @@ DESCRIPTION=KDE multimedia API
 EAPI=5
 HOMEPAGE=https://projects.kde.org/projects/kdesupport/phonon
 IUSE=aqua debug designer gstreamer pulseaudio +qt4 qt5 +vlc zeitgeist
-KEYWORDS=~alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=LGPL-2.1
 PDEPEND=aqua? ( media-libs/phonon-qt7 ) gstreamer? ( >=media-libs/phonon-gstreamer-4.7.0[qt4?,qt5?] ) vlc? ( >=media-libs/phonon-vlc-0.7.0[qt4?,qt5?] )
 RDEPEND=!!dev-qt/qtphonon:4 qt4? ( dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 designer? ( dev-qt/designer:4 ) ) qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 designer? ( dev-qt/designer:5 ) ) pulseaudio? ( dev-libs/glib:2 >=media-sound/pulseaudio-0.9.21[glib] ) zeitgeist? ( dev-libs/libqzeitgeist )
@@ -12,4 +12,4 @@ REQUIRED_USE=|| ( aqua gstreamer vlc ) || ( qt4 qt5 ) zeitgeist? ( qt4 )
 SLOT=0
 SRC_URI=mirror://kde/stable/phonon/4.7.2/phonon-4.7.2.tar.xz
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=6f93fc0a7ddfdd10e30cb0b905980160
+_md5_=698307e830d2d367b42f3dbc49456f9c

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.14.0.ebuild,v 1.11 2014/05/17 15:13:39 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.14.0.ebuild,v 1.12 2014/11/02 08:42:58 swift Exp $
 
 EAPI=4
 inherit autotools eutils elisp-common user systemd
@@ -28,14 +28,14 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	vorbis? ( media-libs/libvorbis )
 	flac? ( media-libs/flac )
-	selinux? ( sec-policy/selinux-timidity )
 	speex? ( media-libs/speex )
 	ao? ( >=media-libs/libao-0.8.5 )
 	motif? ( >=x11-libs/motif-2.3:0 )
 	X? ( x11-libs/libXaw x11-libs/libXext >=media-libs/libpng-1.4.2 )"
 RDEPEND="${DEPEND}
 	alsa? ( media-sound/alsa-utils )
-	app-admin/eselect-timidity"
+	app-admin/eselect-timidity
+	selinux? ( sec-policy/selinux-timidity )"
 
 PDEPEND="|| ( media-sound/timidity-eawpatches media-sound/timidity-freepats )"
 

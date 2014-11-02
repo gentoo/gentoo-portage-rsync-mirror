@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16132 2014/10/31 02:37:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16134 2014/11/02 08:59:22 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -71,13 +71,13 @@ dev-embedded/msp430mcu
 games-engines/sarien
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (27 Oct 2014)
-# Multiple QA issues (#344187, #319433, #317575, #174466) 
-# no upstream releases for a long time. 
+# Multiple QA issues (#344187, #319433, #317575, #174466)
+# no upstream releases for a long time.
 # Masked for removal in 30 days
 mail-filter/spamassassin-fuzzyocr
 
 # Mikle Kolyada <zlogene@gentoo.org> (27 Oct 2014)
-# Fails tests (bug #442480), 
+# Fails tests (bug #442480),
 # fails to build with multiple make jobs (bug #264666).
 # Dead upstream (last release 5 years ago).
 # No reverse deps in the tree. Masked for removal in 30 days.
@@ -132,7 +132,7 @@ net-misc/ieee-oui
 
 # Mike Pagano <mpagano@gentoo.org> (16 Oct 2014)
 # A regression in kernels 3.17.0 lead to file system corruption
-# for affected systems. This has been fixed in >= 3.17.1 
+# for affected systems. This has been fixed in >= 3.17.1
 # See Bug #525548.
 =sys-kernel/vanilla-sources-3.17.0
 =sys-kernel/gentoo-sources-3.17.0
@@ -373,7 +373,6 @@ dev-php/suhosin
 
 # Manuel Rüger <mrueg@gentoo.org> (6 Oct 2014)
 # Mask texlive-2014
-=dev-libs/kpathsea-6.2.0_p20140523
 =dev-tex/luatex-0.79.1
 
 # Jauhien Piatlicki <jauhien@gentoo.org> (5 Oct 2014)
@@ -549,6 +548,7 @@ kde-frameworks/sonnet
 kde-frameworks/threadweaver
 www-client/otter
 =app-text/calibre-2*
+app-i18n/fcitx-qt5
 
 # Sergey Popov <pinkbyte@gentoo.org> (04 Sep 2014)
 # Security mask, wrt bugs #488212, #498164, #500260,

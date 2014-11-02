@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.77 2014/08/11 04:36:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.78 2014/11/02 08:56:39 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> tftp-hpa-5.2-r1.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   11 Aug 2014; Mike Frysinger <vapier@gentoo.org> tftp-hpa-5.2-r1.ebuild:
   Do not create an empty /tftproot #519338 by Michael Jones.

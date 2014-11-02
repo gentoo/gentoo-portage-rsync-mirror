@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.300 2014/10/18 18:25:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.301 2014/11/02 08:38:01 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> exim-4.84.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   18 Oct 2014; Fabian Groffen <grobian@gentoo.org> -exim-4.80.1-r2.ebuild,
   -exim-4.80.1-r3.ebuild, -exim-4.80.1.ebuild, -exim-4.82.1.ebuild:

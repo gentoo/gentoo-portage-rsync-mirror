@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.2-r1.ebuild,v 1.12 2014/08/11 04:36:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.2-r1.ebuild,v 1.13 2014/11/02 08:56:39 swift Exp $
 
 EAPI="4"
 
@@ -15,14 +15,16 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~ppc-macos"
 IUSE="ipv6 readline selinux tcpd"
 
-RDEPEND="selinux? ( sec-policy/selinux-tftp )
+CDEPEND="
 	readline? ( sys-libs/readline )
 	tcpd? ( sys-apps/tcp-wrappers )
 	!net-ftp/atftp
 	!net-ftp/netkit-tftp"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	app-arch/xz-utils"
-
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-tftp )
+"
 src_prepare() {
 	epatch_user
 

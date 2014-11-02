@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.23-r2.ebuild,v 1.2 2014/10/24 17:30:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.23-r2.ebuild,v 1.3 2014/11/02 08:31:58 swift Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ IUSE="berkdb crypt debug doc gdbm gnutls gpg idn imap kerberos mbox nls nntp pop
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-RDEPEND="
+CDEPEND="
 	app-misc/mime-types
 	nls? ( virtual/libintl )
 	tokyocabinet?  ( dev-db/tokyocabinet )
@@ -49,11 +49,10 @@ RDEPEND="
 	idn?     ( net-dns/libidn )
 	gpg?     ( >=app-crypt/gpgme-0.9.0 )
 	smime?   ( >=dev-libs/openssl-0.9.6 )
-	selinux? ( sec-policy/selinux-mutt )
 	slang? ( sys-libs/slang )
 	!slang? ( >=sys-libs/ncurses-5.2 )
 "
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	net-mail/mailbase
 	doc? (
 		dev-libs/libxml2
@@ -61,7 +60,9 @@ DEPEND="${RDEPEND}
 		app-text/docbook-xsl-stylesheets
 		|| ( www-client/lynx www-client/w3m www-client/elinks )
 	)"
-
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-mutt )
+"
 PATCHDIR="${WORKDIR}"/${P}-gentoo-patches${PATCHSET_REV}
 
 src_prepare() {
