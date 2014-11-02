@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.6.0.ebuild,v 1.3 2014/08/10 19:57:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.6.0.ebuild,v 1.4 2014/11/02 08:12:10 swift Exp $
 
 EAPI=5
 
@@ -15,14 +15,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="selinux test"
 
-RDEPEND=">=dev-libs/icu-4.3.1:=
+CDEPEND=">=dev-libs/icu-4.3.1:=
 		dev-lang/erlang[ssl]
 		>=dev-libs/openssl-0.9.8j:0
 		>=net-misc/curl-7.18.2
-		<dev-lang/spidermonkey-1.8.7
-		selinux? ( sec-policy/selinux-couchdb )"
+		<dev-lang/spidermonkey-1.8.7"
 
-DEPEND="${RDEPEND}"
+DEPEND="${CDEPEND}"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-couchdb )"
 RESTRICT=test
 
 S="${WORKDIR}/apache-${P}"

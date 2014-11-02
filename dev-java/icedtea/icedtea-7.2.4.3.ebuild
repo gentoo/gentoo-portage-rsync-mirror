@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.4.3.ebuild,v 1.7 2014/10/05 22:45:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.4.3.ebuild,v 1.8 2014/11/02 08:28:40 swift Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -102,7 +102,6 @@ COMMON_DEP="
 	javascript? ( dev-java/rhino:1.6 )
 	nss? ( >=dev-libs/nss-3.12.5-r1 )
 	pulseaudio?  ( >=media-sound/pulseaudio-0.9.11 )
-	selinux? ( sec-policy/selinux-java )
 	kerberos? ( virtual/krb5 )
 	systemtap? ( >=dev-util/systemtap-1 )"
 
@@ -122,7 +121,8 @@ RDEPEND="${COMMON_DEP}
 		)
 	)
 	alsa? ( ${ALSA_COMMON_DEP} )
-	cups? ( ${CUPS_COMMON_DEP} )"
+	cups? ( ${CUPS_COMMON_DEP} )
+	selinux? ( sec-policy/selinux-java )"
 
 # Require >=ant-core-1.8.2 so no additional ant tasks are needed. #466558
 # ca-certificates, perl and openssl are used for the cacerts keystore generation

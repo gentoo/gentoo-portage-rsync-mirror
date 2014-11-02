@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.14.2.ebuild,v 1.9 2014/03/01 23:07:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.14.2.ebuild,v 1.10 2014/11/02 08:06:56 swift Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
 IUSE="acl audit curl mhash nls postgres prelink selinux static xattr zlib"
 
-DEPEND="acl? ( virtual/acl )
+CDEPEND="acl? ( virtual/acl )
 	audit? ( sys-process/audit )
 	curl? ( net-misc/curl )
 	mhash? ( >=app-crypt/mhash-0.9.2 )
@@ -25,14 +25,14 @@ DEPEND="acl? ( virtual/acl )
 	prelink? ( sys-devel/prelink )
 	selinux? (
 		sys-libs/libselinux
-		sec-policy/selinux-aide
 	)
 	xattr? ( sys-apps/attr )
 	zlib? ( sys-libs/zlib )"
 
-RDEPEND="!static? ( ${DEPEND} )"
+RDEPEND="!static? ( ${CDEPEND} )
+	selinux? ( sec-policy/selinux-aide )"
 
-DEPEND="${DEPEND}
+DEPEND="${CDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-devel/bison
 	sys-devel/flex"

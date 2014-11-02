@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.328 2014/02/19 13:16:49 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.329 2014/11/02 08:05:27 ercpe Exp $
+
+*tomcat-6.0.41 (02 Nov 2014)
+
+  02 Nov 2014; Johann Schmitz <ercpe@gentoo.org>
+  +files/tomcat-6.0.41-build.xml.patch, +files/tomcat-instance-manager-r1.bash,
+  +tomcat-6.0.41.ebuild:
+  Version bump of www-server/tomcat to 6.0.41
 
 *tomcat-7.0.52 (19 Feb 2014)
 *tomcat-6.0.39 (19 Feb 2014)

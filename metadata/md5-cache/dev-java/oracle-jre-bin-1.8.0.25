@@ -1,14 +1,14 @@
 DEFINED_PHASES=install nofetch postinst postrm prepare prerm setup unpack
-DEPEND=selinux? ( sec-policy/selinux-java ) jce? ( app-arch/unzip ) pax_kernel? ( sys-apps/paxctl ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+DEPEND=jce? ( app-arch/unzip ) pax_kernel? ( sys-apps/paxctl ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 DESCRIPTION=Oracle's Java SE Runtime Environment
 EAPI=5
 HOMEPAGE=http://www.oracle.com/technetwork/java/javase/
 IUSE=X alsa fontconfig jce nsplugin pax_kernel selinux
 KEYWORDS=~amd64 ~x86
 LICENSE=Oracle-BCLA-JavaSE
-RDEPEND=selinux? ( sec-policy/selinux-java ) X? ( x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXtst x11-libs/libX11 ) alsa? ( media-libs/alsa-lib ) fontconfig? ( media-libs/fontconfig ) !prefix? ( sys-libs/glibc ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+RDEPEND=X? ( x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXtst x11-libs/libX11 ) alsa? ( media-libs/alsa-lib ) fontconfig? ( media-libs/fontconfig ) !prefix? ( sys-libs/glibc ) selinux? ( sec-policy/selinux-java ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 RESTRICT=fetch strip
 SLOT=1.8
 SRC_URI=x86? ( jre-8u25-linux-i586.tar.gz ) amd64? ( jre-8u25-linux-x64.tar.gz ) jce? ( jce_policy-8.zip )
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	834752b84da3c4deea95f5b186aada54	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=41ca58ac535b28cafed2c1eb8c3af87a
+_md5_=fd26774a64458aadb799dc98673caa06

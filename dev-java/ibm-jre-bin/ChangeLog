@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.175 2014/05/16 19:09:24 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.176 2014/11/02 08:19:39 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org>
+  ibm-jre-bin-1.6.0.9_p2-r1.ebuild, ibm-jre-bin-1.6.0.9_p2.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   16 May 2014; Sven Vermeulen <swift@gentoo.org> ibm-jre-bin-1.6.0.9_p1.ebuild,
   ibm-jre-bin-1.6.0.9_p2-r1.ebuild, ibm-jre-bin-1.6.0.9_p2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ovaldi-5.10.1.2.ebuild,v 1.2 2014/03/01 22:12:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ovaldi-5.10.1.2.ebuild,v 1.3 2014/11/02 08:08:56 swift Exp $
 
 EAPI=3
 
@@ -20,9 +20,9 @@ DEPEND="rpm? ( app-arch/rpm )
 	dev-libs/libpcre
 	dev-libs/xalan-c
 	dev-libs/xerces-c
-	ldap? ( net-nds/openldap )
+	ldap? ( net-nds/openldap )"
+RDEPEND="${DEPEND}
 	selinux? ( sys-libs/libselinux )"
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}-src"
 

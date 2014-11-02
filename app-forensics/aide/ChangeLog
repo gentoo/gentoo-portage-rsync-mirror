@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/aide
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.61 2014/03/01 23:07:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.62 2014/11/02 08:06:56 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> aide-0.14.2.ebuild,
+  aide-0.15.1.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> aide-0.14.2.ebuild,
   aide-0.15.1.ebuild:

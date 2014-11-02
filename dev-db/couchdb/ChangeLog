@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.102 2014/08/10 19:57:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.103 2014/11/02 08:12:10 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> couchdb-1.5.1.ebuild,
+  couchdb-1.6.0.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> couchdb-1.5.1.ebuild,
   couchdb-1.6.0.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/ovaldi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.6 2014/03/01 22:12:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.7 2014/11/02 08:08:56 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> ovaldi-5.10.1.2.ebuild,
+  ovaldi-5.10.1.4.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> ovaldi-5.10.1.2.ebuild,
   ovaldi-5.10.1.4.ebuild, ovaldi-5.9.1.ebuild:

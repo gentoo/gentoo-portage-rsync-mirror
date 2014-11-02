@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/twitter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.45 2014/10/10 22:12:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.46 2014/11/02 08:04:37 graaff Exp $
+
+*twitter-5.12.0 (02 Nov 2014)
+
+  02 Nov 2014; Hans de Graaff <graaff@gentoo.org> +twitter-5.12.0.ebuild:
+  Version bump.
 
   10 Oct 2014; Manuel Rüger <mrueg@gentoo.org> twitter-5.11.0.ebuild:
   Add ruby21 support.

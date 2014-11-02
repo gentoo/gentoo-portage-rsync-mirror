@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.12 2014/05/17 14:54:47 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.13 2014/11/02 08:10:31 swift Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=true
@@ -19,11 +19,11 @@ IUSE="debug selinux vim-syntax"
 
 COMMON_DEPEND="
 	>=dev-libs/libevent-2.0.10
-	sys-libs/ncurses
-	selinux? ( sec-policy/selinux-screen )"
+	sys-libs/ncurses"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}
+	selinux? ( sec-policy/selinux-screen )
 	vim-syntax? ( || (
 		app-editors/vim
 		app-editors/gvim ) )"

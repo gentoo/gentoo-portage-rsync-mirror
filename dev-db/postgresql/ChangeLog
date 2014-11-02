@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.391 2014/11/01 11:29:06 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.392 2014/11/02 08:14:43 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> postgresql-9.3.5-r1.ebuild,
+  postgresql-9.4_beta3-r1.ebuild, postgresql-9999.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *postgresql-9.4_beta3-r1 (01 Nov 2014)
 *postgresql-9.3.5-r1 (01 Nov 2014)

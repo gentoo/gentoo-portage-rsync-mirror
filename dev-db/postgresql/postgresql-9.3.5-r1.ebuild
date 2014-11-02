@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9.3.5-r1.ebuild,v 1.1 2014/11/01 11:29:06 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9.3.5-r1.ebuild,v 1.2 2014/11/02 08:14:43 swift Exp $
 
 EAPI="5"
 
@@ -39,7 +39,7 @@ wanted_languages() {
 	echo -n ${enable_langs}
 }
 
-RDEPEND="
+CDEPEND="
 >=app-admin/eselect-postgresql-1.2.0
 sys-apps/less
 virtual/libintl
@@ -49,7 +49,6 @@ pam? ( virtual/pam )
 perl? ( >=dev-lang/perl-5.8 )
 python? ( ${PYTHON_DEPS} )
 readline? ( sys-libs/readline )
-selinux? ( sec-policy/selinux-postgresql )
 ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 tcl? ( >=dev-lang/tcl-8 )
 uuid? ( dev-libs/ossp-uuid )
@@ -57,7 +56,7 @@ xml? ( dev-libs/libxml2 dev-libs/libxslt )
 zlib? ( sys-libs/zlib )
 "
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 !!dev-db/postgresql-docs:${SLOT}
 !!dev-db/postgresql-base:${SLOT}
 !!dev-db/postgresql-server:${SLOT}
@@ -66,6 +65,10 @@ sys-devel/bison
 sys-devel/flex
 nls? ( sys-devel/gettext )
 xml? ( virtual/pkgconfig )
+"
+
+RDEPEND="${CDEPEND}
+selinux? ( sec-policy/selinux-postgresql )
 "
 
 pkg_setup() {

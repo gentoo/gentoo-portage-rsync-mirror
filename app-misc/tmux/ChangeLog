@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.113 2014/10/12 15:59:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.114 2014/11/02 08:10:31 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> tmux-1.9a.ebuild,
+  tmux-9999.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   12 Oct 2014; Justin Lecher <jlec@gentoo.org> -tmux-1.8.ebuild:
   Drop old

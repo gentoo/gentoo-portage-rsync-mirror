@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.4.7-r1.ebuild,v 1.1 2014/10/05 22:10:31 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.4.7-r1.ebuild,v 1.2 2014/11/02 08:22:25 swift Exp $
 
 EAPI="5"
 
@@ -58,8 +58,7 @@ COMMON_DEP="
 	>=sys-devel/gcc-4.5.4
 	>=sys-libs/glibc-2.15
 	>=sys-libs/zlib-1.2.3-r1
-	|| ( virtual/jpeg:62 media-libs/jpeg:62 )
-	selinux? ( sec-policy/selinux-java )"
+	|| ( virtual/jpeg:62 media-libs/jpeg:62 )"
 
 # cups is needed for X. #390945 #390975
 RDEPEND="${COMMON_DEP}
@@ -76,7 +75,8 @@ RDEPEND="${COMMON_DEP}
 		)
 	)
 	alsa? ( ${ALSA_COMMON_DEP} )
-	cups? ( ${CUPS_COMMON_DEP} )"
+	cups? ( ${CUPS_COMMON_DEP} )
+	selinux? ( sec-policy/selinux-java )"
 
 PDEPEND="webstart? ( dev-java/icedtea-web:0[icedtea7] )
 	nsplugin? ( dev-java/icedtea-web:0[icedtea7,nsplugin] )"

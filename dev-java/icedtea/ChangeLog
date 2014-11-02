@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.128 2014/11/01 21:43:06 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.129 2014/11/02 08:28:40 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> icedtea-6.1.12.7.ebuild,
+  icedtea-6.1.13.3.ebuild, icedtea-6.1.13.4.ebuild, icedtea-6.1.13.5-r1.ebuild,
+  icedtea-6.1.13.5.ebuild, icedtea-7.2.4.3.ebuild, icedtea-7.2.4.7.ebuild,
+  icedtea-7.2.4.8.ebuild, icedtea-7.2.5.3.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
 *icedtea-7.2.5.3 (01 Nov 2014)
 

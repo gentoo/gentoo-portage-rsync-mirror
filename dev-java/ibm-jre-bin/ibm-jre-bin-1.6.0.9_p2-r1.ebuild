@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.9_p2-r1.ebuild,v 1.4 2014/05/16 19:09:24 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.9_p2-r1.ebuild,v 1.5 2014/11/02 08:19:39 swift Exp $
 
 EAPI="4"
 
@@ -57,7 +57,7 @@ RDEPEND="
 	odbc? ( dev-db/unixODBC )
 	selinux? ( sec-policy/selinux-java )"
 
-DEPEND="selinux? ( sec-policy/selinux-java )"
+DEPEND=""
 
 QA_TEXTRELS_x86="opt/${P}/lib/i386/libj9jvmti24.so
 opt/${P}/lib/i386/libj9vm24.so

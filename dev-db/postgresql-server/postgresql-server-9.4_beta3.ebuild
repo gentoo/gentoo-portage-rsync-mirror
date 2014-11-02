@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.4_beta3.ebuild,v 1.1 2014/10/10 04:26:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.4_beta3.ebuild,v 1.2 2014/11/02 08:16:59 swift Exp $
 
 EAPI="5"
 
@@ -43,19 +43,22 @@ wanted_languages() {
 	echo -n ${enable_langs}
 }
 
-RDEPEND="
+CDEPEND="
 ~dev-db/postgresql-base-${PV}[kerberos?,pam?,pg_legacytimestamp=,python=,nls=]
 perl? ( >=dev-lang/perl-5.8 )
 python? ( ${PYTHON_DEPS} )
-selinux? ( sec-policy/selinux-postgresql )
 tcl? ( >=dev-lang/tcl-8 )
 uuid? ( dev-libs/ossp-uuid )
 xml? ( dev-libs/libxml2 dev-libs/libxslt )
 "
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 sys-devel/flex
 xml? ( virtual/pkgconfig )
+"
+
+RDEPEND="${CDEPEND}
+selinux? ( sec-policy/selinux-postgresql )
 "
 
 PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"

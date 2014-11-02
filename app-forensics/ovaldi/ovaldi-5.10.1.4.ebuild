@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ovaldi-5.10.1.4.ebuild,v 1.2 2014/03/01 22:12:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ovaldi-5.10.1.4.ebuild,v 1.3 2014/11/02 08:08:56 swift Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="acl ldap rpm selinux"
 
-RDEPEND="dev-libs/libgcrypt:0
+CDEPEND="dev-libs/libgcrypt:0
 	dev-libs/libpcre
 	dev-libs/xalan-c
 	dev-libs/xerces-c
@@ -23,10 +23,11 @@ RDEPEND="dev-libs/libgcrypt:0
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
 	ldap? ( net-nds/openldap )
-	rpm? ( app-arch/rpm )
-	selinux? ( sys-libs/libselinux )"
-DEPEND="${RDEPEND}
+	rpm? ( app-arch/rpm )"
+DEPEND="${CDEPEND}
 	sys-apps/sed"
+RDEPEND="${CDEPEND}
+	selinux? ( sys-libs/libselinux )"
 
 S="${WORKDIR}/${P}-src"
 
