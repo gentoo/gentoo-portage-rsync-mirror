@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.19.1.ebuild,v 1.5 2014/10/29 03:48:14 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.19.1.ebuild,v 1.6 2014/11/02 11:59:44 swift Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
@@ -41,7 +41,7 @@ REQUIRED_USE="|| ( ${OUTPUT_PLUGINS} )
 	vorbis? ( glib )
 	wavpack? ( glib )"
 
-RDEPEND="!<sys-cluster/mpich2-1.4_rc2
+CDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	adplug? ( media-libs/adplug )
 	alsa? ( media-sound/alsa-utils
 		media-libs/alsa-lib )
@@ -78,7 +78,6 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	opus? ( media-libs/opus )
 	pulseaudio? ( media-sound/pulseaudio )
 	samba? ( net-fs/samba[smbclient] )
-	selinux? ( sec-policy/selinux-mpd )
 	sid? ( media-libs/libsidplay:2 )
 	sndfile? ( media-libs/libsndfile )
 	soundcloud? ( >=dev-libs/yajl-2 )
@@ -93,9 +92,12 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	wildmidi? ( media-sound/wildmidi )
 	zeroconf? ( net-dns/avahi[dbus] )
 	zip? ( dev-libs/zziplib )"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	dev-libs/boost
 	virtual/pkgconfig"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-mpd )
+"
 
 pkg_setup() {
 	use network || ewarn "Icecast and Shoutcast streaming needs networking."

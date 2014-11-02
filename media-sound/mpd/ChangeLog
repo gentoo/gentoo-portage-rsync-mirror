@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.365 2014/11/01 17:42:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.366 2014/11/02 11:59:44 swift Exp $
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org> mpd-0.18.16.ebuild,
+  mpd-0.19.1.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
 
   01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> mpd-0.18.16.ebuild:
   Stable for ppc, wrt bug #525736
