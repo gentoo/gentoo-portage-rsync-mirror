@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.740 2014/10/30 21:01:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.741 2014/11/02 18:17:04 vapier Exp $
+
+  02 Nov 2014; Mike Frysinger <vapier@gentoo.org> packages:
+  Drop texinfo @system #471192 by Alexis Ballier.
 
   30 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   package.use.stable.mask:

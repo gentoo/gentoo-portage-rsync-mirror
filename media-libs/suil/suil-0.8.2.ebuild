@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/suil-0.6.10.ebuild,v 1.2 2013/03/02 21:49:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/suil-0.8.2.ebuild,v 1.1 2014/11/02 18:22:08 aballier Exp $
 
 EAPI=4
 
@@ -29,11 +29,10 @@ src_prepare() {
 }
 
 src_configure() {
-	# otherwise automagic
-	use gtk || sed -i -e 's/gtk+-2.0/DiSaBlEd/' wscript
-	use qt4 || sed -i -e 's/QtGui/DiSaBlEd/' wscript
 	waf-utils_src_configure \
 		"--mandir=${EPREFIX}/usr/share/man" \
 		"--docdir=${EPREFIX}/usr/share/doc/${PF}" \
+		$(use gtk || echo "--no-gtk") \
+		$(use qt4 || echo "--no-qt") \
 		$(use doc && echo "--docs")
 }

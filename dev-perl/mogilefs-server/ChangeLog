@@ -1,6 +1,18 @@
 # ChangeLog for dev-perl/mogilefs-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.47 2014/08/26 19:11:46 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.48 2014/11/02 18:01:24 robbat2 Exp $
+
+  02 Nov 2014; Robin H. Johnson <robbat2@gentoo.org>
+  -files/mogilefsd-init.d-2.16, -files/mogstored-init.d-2.30,
+  -files/mogstored-init.d-2.50, -mogilefs-server-2.530.0.ebuild,
+  -mogilefs-server-2.540.0.ebuild, -mogilefs-server-2.550.0.ebuild,
+  -mogilefs-server-2.560.0.ebuild, -mogilefs-server-2.570.0.ebuild,
+  -mogilefs-server-2.580.0.ebuild, -mogilefs-server-2.590.0.ebuild,
+  -mogilefs-server-2.600.0.ebuild, -mogilefs-server-2.610.0.ebuild,
+  -mogilefs-server-2.620.0.ebuild, -mogilefs-server-2.630.0.ebuild,
+  -mogilefs-server-2.640.0.ebuild, -mogilefs-server-2.650.0.ebuild,
+  -mogilefs-server-2.670.0.ebuild, -mogilefs-server-2.680.0.ebuild:
+  Bug #527888: cleanup old versions.
 
 *mogilefs-server-2.700.0-r2 (26 Aug 2014)
 

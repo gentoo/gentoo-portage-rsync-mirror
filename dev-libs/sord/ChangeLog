@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/sord
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/ChangeLog,v 1.11 2013/02/21 10:12:33 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/ChangeLog,v 1.13 2014/11/02 18:25:33 aballier Exp $
+
+*sord-0.12.2 (02 Nov 2014)
+
+  02 Nov 2014; Alexis Ballier <aballier@gentoo.org> +sord-0.12.2.ebuild:
+  version bump
+
+  02 Nov 2014; Alexis Ballier <aballier@gentoo.org> -sord-0.5.0.ebuild,
+  -sord-0.8.0.ebuild, -files/ldconfig.patch:
+  remove old
 
 *sord-0.12.0 (21 Feb 2013)
 

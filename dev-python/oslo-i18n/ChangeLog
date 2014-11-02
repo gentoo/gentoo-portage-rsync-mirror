@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/oslo-i18n
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-i18n/ChangeLog,v 1.1 2014/11/02 18:29:45 alunduil Exp $
+
+*oslo-i18n-1.0.0 (02 Nov 2014)
+
+  02 Nov 2014; Alex Brandt <alunduil@gentoo.org> +oslo-i18n-1.0.0.ebuild,
+  +metadata.xml:
+  add ebuild written by me
+
