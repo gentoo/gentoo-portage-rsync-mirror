@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-fontsextra
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/ChangeLog,v 1.74 2013/06/28 16:10:03 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/ChangeLog,v 1.75 2014/11/03 06:47:01 aballier Exp $
+
+*texlive-fontsextra-2014 (03 Nov 2014)
+
+  03 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  +texlive-fontsextra-2014.ebuild:
+  bump to texlive 2014
 
 *texlive-fontsextra-2013 (28 Jun 2013)
 

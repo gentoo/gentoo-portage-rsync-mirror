@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-fontsrecommended
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsrecommended/ChangeLog,v 1.69 2013/06/28 16:11:06 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsrecommended/ChangeLog,v 1.70 2014/11/03 06:47:26 aballier Exp $
+
+*texlive-fontsrecommended-2014 (03 Nov 2014)
+
+  03 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  +texlive-fontsrecommended-2014.ebuild:
+  bump to texlive 2014
 
 *texlive-fontsrecommended-2013 (28 Jun 2013)
 

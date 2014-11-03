@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-metapost
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-metapost/ChangeLog,v 1.69 2013/06/28 16:39:25 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-metapost/ChangeLog,v 1.70 2014/11/03 06:58:16 aballier Exp $
+
+*texlive-metapost-2014 (03 Nov 2014)
+
+  03 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  +texlive-metapost-2014.ebuild:
+  bump to texlive 2014
 
 *texlive-metapost-2013 (28 Jun 2013)
 

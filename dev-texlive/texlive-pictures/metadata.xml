@@ -7,6 +7,6 @@
 		<name>Alexis Ballier</name>
 	</maintainer>
 <longdescription lang="en">
-Including TikZ, pict, etc.; MetaPost and PStricks are separate.
+Including TikZ, pict, etc., but MetaPost and PStricks are separate.
 </longdescription>
 </pkgmetadata>

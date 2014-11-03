@@ -8,7 +8,7 @@
 	</maintainer>
 <longdescription lang="en">
 Collected TeX `formats', i.e., large-scale macro packages
-designed to be dumped into .fmt files, other than most common
-ones, such as latex and context.
+designed to be dumped into .fmt files -- excluding the most common
+ones, such as latex and context, which have their own package(s).
 </longdescription>
 </pkgmetadata>

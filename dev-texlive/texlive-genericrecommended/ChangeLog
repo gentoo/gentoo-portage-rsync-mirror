@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-genericrecommended
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-genericrecommended/ChangeLog,v 1.67 2013/06/28 16:16:07 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-genericrecommended/ChangeLog,v 1.68 2014/11/03 06:49:00 aballier Exp $
+
+*texlive-genericrecommended-2014 (03 Nov 2014)
+
+  03 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  +texlive-genericrecommended-2014.ebuild:
+  bump to texlive 2014
 
 *texlive-genericrecommended-2013 (28 Jun 2013)
 

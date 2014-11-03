@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-langeuropean
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langeuropean/ChangeLog,v 1.7 2014/08/08 13:37:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langeuropean/ChangeLog,v 1.8 2014/11/03 06:51:48 aballier Exp $
+
+*texlive-langeuropean-2014 (03 Nov 2014)
+
+  03 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  +texlive-langeuropean-2014.ebuild:
+  bump to texlive 2014
 
   08 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
   texlive-langeuropean-2013.ebuild:

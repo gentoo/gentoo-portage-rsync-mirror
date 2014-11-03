@@ -7,7 +7,7 @@
 		<name>Alexis Ballier</name>
 	</maintainer>
 <longdescription lang="en">
-These packages are mandated by the core LaTeX team, or
-at least very strongly recommended.
+These packages are either mandated by the core LaTeX team,
+or very widely used and strongly recommended in practice.
 </longdescription>
 </pkgmetadata>
