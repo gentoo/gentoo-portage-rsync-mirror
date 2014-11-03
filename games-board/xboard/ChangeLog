@@ -1,6 +1,13 @@
 # ChangeLog for games-board/xboard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.66 2014/11/03 09:38:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.67 2014/11/03 19:31:16 sping Exp $
+
+*xboard-4.8.0 (03 Nov 2014)
+
+  03 Nov 2014; Sebastian Pipping <sping@gentoo.org> +xboard-4.8.0.ebuild,
+  +files/xboard-4.8.0-gettext.patch,
+  +files/xboard-4.8.0-gnuchess-default.patch:
+  Bump to 4.8.0
 
   03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> xboard-4.7.3.ebuild:
   Stable for x86, wrt bug #525728

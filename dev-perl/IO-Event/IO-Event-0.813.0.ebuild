@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Event/IO-Event-0.813.0.ebuild,v 1.3 2014/11/03 11:48:03 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Event/IO-Event-0.813.0.ebuild,v 1.5 2014/11/03 19:58:22 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="Tied Filehandles for Nonblocking IO with Object Callbacks"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="
