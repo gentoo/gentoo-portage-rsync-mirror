@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.6.0.ebuild,v 1.5 2014/03/01 22:26:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.6.0.ebuild,v 1.6 2014/11/03 12:44:01 titanofold Exp $
 
 EAPI=5
 PYTHON_DEPEND=2
@@ -25,7 +25,7 @@ RDEPEND=">=media-libs/skstream-0.3.9
 	sys-libs/readline
 	=media-libs/atlas-c++-0.6*
 	>=media-libs/varconf-0.6.4
-	dev-db/postgresql-base"
+	virtual/postgresql"
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.40
 	dev-libs/libxml2

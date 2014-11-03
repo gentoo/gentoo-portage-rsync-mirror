@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.74 2014/06/18 13:07:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.75 2014/11/03 12:43:17 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> pg-0.14.1.ebuild,
+  pg-0.17.1.ebuild, pg-0.17.1-r1.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
 *pg-0.17.1-r1 (18 Jun 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.13.ebuild,v 1.10 2012/12/17 08:01:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.13.ebuild,v 1.11 2014/11/03 12:46:44 titanofold Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -41,7 +41,7 @@ RDEPEND="
 	ldap?	( net-nds/openldap )
 	mdb?	( >app-office/mdbtools-0.5 )
 	mysql?	( virtual/mysql )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	ssl?	( dev-libs/openssl )"
 
 DEPEND="${RDEPEND}

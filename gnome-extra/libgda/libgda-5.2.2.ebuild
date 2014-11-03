@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.2.2.ebuild,v 1.3 2014/03/09 12:00:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.2.2.ebuild,v 1.4 2014/11/03 12:46:44 titanofold Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -51,7 +51,7 @@ RDEPEND="
 	libsecret? ( app-crypt/libsecret )
 	mdb?      ( >app-office/mdbtools-0.5:= )
 	mysql?    ( virtual/mysql:= )
-	postgres? ( dev-db/postgresql-base:= )
+	postgres? ( virtual/postgresql:= )
 	reports? (
 		${PYTHON_DEPS}
 		dev-java/fop

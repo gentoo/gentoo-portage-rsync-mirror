@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.542 2014/11/02 08:40:21 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.543 2014/11/03 12:53:10 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> postfix-2.10.2.ebuild,
+  postfix-2.10.3.ebuild, postfix-2.10.4.ebuild, postfix-2.10.5.ebuild,
+  postfix-2.11.1.ebuild, postfix-2.11.1-r1.ebuild, postfix-2.11.2.ebuild,
+  postfix-2.11.3.ebuild, postfix-2.12_pre20141020.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> postfix-2.11.1-r1.ebuild,
   postfix-2.11.1.ebuild, postfix-2.11.2.ebuild, postfix-2.11.3.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/gld
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.53 2012/11/27 20:24:00 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.54 2014/11/03 12:50:00 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> gld-1.7-r2.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   27 Nov 2012; Eray Aslan <eras@gentoo.org> -gld-1.7-r1.ebuild:
   Remove old

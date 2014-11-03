@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.301 2014/11/02 08:38:01 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.302 2014/11/03 12:52:00 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> exim-4.84.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> exim-4.84.ebuild:
   Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug

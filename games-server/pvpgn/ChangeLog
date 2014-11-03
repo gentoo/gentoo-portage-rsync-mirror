@@ -1,6 +1,9 @@
 # ChangeLog for games-server/pvpgn
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.23 2011/12/04 10:27:13 swegener Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.24 2014/11/03 12:44:50 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> pvpgn-1.8.5.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/pvpgn.rc:
   reload is extra_started_commands

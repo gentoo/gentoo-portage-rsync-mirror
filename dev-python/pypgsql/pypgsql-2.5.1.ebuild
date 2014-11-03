@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/pypgsql-2.5.1.ebuild,v 1.8 2012/02/23 10:22:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/pypgsql-2.5.1.ebuild,v 1.9 2014/11/03 12:41:17 titanofold Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="amd64 ia64 x86"
 IUSE=""
 
-DEPEND="dev-db/postgresql-base"
+DEPEND="virtual/postgresql"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

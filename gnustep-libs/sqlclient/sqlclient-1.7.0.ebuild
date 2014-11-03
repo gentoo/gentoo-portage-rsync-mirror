@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/sqlclient/sqlclient-1.7.0.ebuild,v 1.1 2014/01/30 00:07:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/sqlclient/sqlclient-1.7.0.ebuild,v 1.2 2014/11/03 12:47:33 titanofold Exp $
 
 EAPI=5
 inherit java-pkg-opt-2 gnustep-2
@@ -18,7 +18,7 @@ IUSE="java mysql postgres +sqlite"
 
 RDEPEND=">=gnustep-libs/performance-0.3.2
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	sqlite? ( >=dev-db/sqlite-3 )"
 DEPEND="${RDEPEND}"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.7-r2.ebuild,v 1.4 2012/11/20 19:53:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.7-r2.ebuild,v 1.5 2014/11/03 12:50:00 titanofold Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE="postgres"
 # Not adding a mysql USE flag. The package defaults to it, so we will too.
 DEPEND="sys-libs/zlib
 	>=dev-libs/openssl-0.9.6
-	postgres? ( dev-db/postgresql-server )
+	postgres? ( virtual/postgresql[server] )
 	!postgres? ( virtual/mysql )"
 RDEPEND="${DEPEND}"
 

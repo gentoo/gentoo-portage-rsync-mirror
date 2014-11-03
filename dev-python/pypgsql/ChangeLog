@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypgsql
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.26 2013/03/28 22:25:27 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.27 2014/11/03 12:41:17 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> pypgsql-2.5.1.ebuild,
+  pypgsql-2.5.1-r1.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pypgsql-2.5.1-r1.ebuild:
   Stable for ia64, wrt bug #456608

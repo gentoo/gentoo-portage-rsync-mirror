@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/openbox-menu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openbox-menu/ChangeLog,v 1.11 2014/11/03 09:36:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openbox-menu/ChangeLog,v 1.12 2014/11/03 12:47:22 jer Exp $
+
+  03 Nov 2014; Jeroen Roovers <jer@gentoo.org> -openbox-menu-0.3.6.8.ebuild,
+  -openbox-menu-0.5.0.ebuild, -files/openbox-menu-0.3.6.8-build.patch:
+  Old.
 
   03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> openbox-menu-0.5.1.ebuild:
   Stable for x86, wrt bug #527212

@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.155 2014/10/27 18:52:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.156 2014/11/03 12:45:42 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> freeciv-2.4.3.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   27 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/freeciv-2.4.2-as-needed.patch, -freeciv-2.4.2.ebuild:

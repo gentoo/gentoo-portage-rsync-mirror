@@ -1,6 +1,10 @@
 # ChangeLog for games-server/cyphesis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.36 2014/08/29 18:31:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.37 2014/11/03 12:44:01 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> cyphesis-0.6.0.ebuild,
+  cyphesis-0.6.2.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   29 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -cyphesis-0.6.1.ebuild,
   -files/cyphesis-0.6.1-gentoo.patch, -files/cyphesis-0.6.1-makefile.patch:
