@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.10.ebuild,v 1.5 2014/11/03 16:11:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.11.ebuild,v 1.1 2014/11/03 16:15:48 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/linuxmint/cinnamon-control-center/archive/${PV}.tar.
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="+colord +cups input_devices_wacom socialweb"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 # False positives caused by nested configure scripts
 QA_CONFIGURE_OPTIONS=".*"
@@ -86,7 +86,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.2.5-optional.patch
 	# fix wrong nm-applet dependency
 	epatch "${FILESDIR}"/${PN}-2.2.5-nm-applet.patch
+
 	epatch_user
+
 	eautoreconf
 	gnome2_src_prepare
 }
