@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-1.4.1.ebuild,v 1.1 2014/10/27 11:05:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-1.4.1.ebuild,v 1.2 2014/11/03 14:21:03 aballier Exp $
 
 EAPI=5
 
@@ -41,6 +41,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 DOCS=( AUTHORS NEWS README )
+
+src_prepare() {
+	sed -e 's/intel-gen4asm/\0diSaBlEd/g' -i configure.ac || die
+	autotools-multilib_src_prepare
+}
 
 multilib_src_configure() {
 	local myeconfargs=(

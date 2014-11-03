@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_auth_pgsql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/ChangeLog,v 1.10 2014/08/10 20:14:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/ChangeLog,v 1.11 2014/11/03 14:04:00 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  mod_auth_pgsql-2.0.3-r1.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   mod_auth_pgsql-2.0.3-r1.ebuild:

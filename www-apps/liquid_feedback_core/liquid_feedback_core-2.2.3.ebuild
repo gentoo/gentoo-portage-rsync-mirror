@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/liquid_feedback_core/liquid_feedback_core-2.2.3.ebuild,v 1.1 2013/04/28 12:47:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/liquid_feedback_core/liquid_feedback_core-2.2.3.ebuild,v 1.2 2014/11/03 14:04:37 titanofold Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="dev-db/postgresql-base"
+RDEPEND="virtual/postgresql"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/webmcp/webmcp-1.2.5.ebuild,v 1.1 2013/04/24 08:15:15 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/webmcp/webmcp-1.2.5.ebuild,v 1.2 2014/11/03 14:05:14 titanofold Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SLOT=0
 IUSE=""
 
 RDEPEND="dev-lang/lua
-	dev-db/postgresql-base"
+	virtual/postgresql"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_P}

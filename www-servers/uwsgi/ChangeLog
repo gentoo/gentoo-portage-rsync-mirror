@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.64 2014/10/29 13:20:26 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.65 2014/11/03 14:05:57 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> uwsgi-1.4.10-r1.ebuild,
+  uwsgi-2.0.7-r1.ebuild, uwsgi-2.0.8.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   29 Oct 2014; Ultrabug <ultrabug@gentoo.org> uwsgi-2.0.8.ebuild:
   fix SRC_URI thx to @grknight

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libva-intel-driver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.35 2014/10/27 11:05:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.36 2014/11/03 14:21:03 aballier Exp $
+
+  03 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  libva-intel-driver-1.4.1.ebuild, libva-intel-driver-9999.ebuild:
+  Disable regenerating shaders; it is not needed and causes problems: bugs
+  #473408 and #515632
 
 *libva-intel-driver-1.4.1 (27 Oct 2014)
 

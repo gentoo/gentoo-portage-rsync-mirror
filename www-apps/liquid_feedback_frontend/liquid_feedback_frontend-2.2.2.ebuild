@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/liquid_feedback_frontend/liquid_feedback_frontend-2.2.2.ebuild,v 1.2 2014/06/24 18:41:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/liquid_feedback_frontend/liquid_feedback_frontend-2.2.2.ebuild,v 1.3 2014/11/03 14:06:07 tupone Exp $
 
 EAPI=4
 
@@ -51,9 +51,11 @@ src_install() {
 	insinto /var/lib/${PN}/locale
 	doins locale/*.lua
 	insinto /var/lib/${PN}/locale/help
+	eshopts_push -s nullglob
 	for helpFile in locale/help/*.html ; do
 		doins $helpFile
 	done
+	eshopts_pop
 
 	insinto /etc/${PN}
 	doins "${FILESDIR}"/myconfig.lua config/*

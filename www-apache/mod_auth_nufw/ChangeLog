@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_auth_nufw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/ChangeLog,v 1.13 2014/08/10 20:14:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/ChangeLog,v 1.14 2014/11/03 14:03:13 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  mod_auth_nufw-2.2.2.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   mod_auth_nufw-2.2.2.ebuild:

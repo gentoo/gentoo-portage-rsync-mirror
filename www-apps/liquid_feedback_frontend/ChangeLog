@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/liquid_feedback_frontend
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/liquid_feedback_frontend/ChangeLog,v 1.2 2014/06/24 18:41:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/liquid_feedback_frontend/ChangeLog,v 1.3 2014/11/03 14:06:07 tupone Exp $
+
+  03 Nov 2014; Alfredo Tupone <tupone@gentoo.org>
+  liquid_feedback_frontend-2.2.2.ebuild:
+  Better fix against bug #513922
 
   24 Jun 2014; Tupone Alfredo <tupone@gentoo.org>
   liquid_feedback_frontend-2.2.2.ebuild:
