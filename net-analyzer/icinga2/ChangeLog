@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/icinga2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.9 2014/09/01 21:03:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.10 2014/11/03 13:24:18 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> icinga2-2.0.2.ebuild,
+  icinga2-2.1.0-r3.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
 *icinga2-2.1.0-r3 (01 Sep 2014)
 

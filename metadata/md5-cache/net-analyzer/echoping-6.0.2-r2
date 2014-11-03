@@ -1,15 +1,15 @@
 DEFINED_PHASES=configure prepare
-DEPEND=idn? ( net-dns/libidn ) postgres? ( dev-db/postgresql-base ) ldap? ( net-nds/openldap ) ssl? ( gnutls? ( >=net-libs/gnutls-1.0.17 ) !gnutls? ( >=dev-libs/openssl-0.9.7d ) ) >=sys-devel/libtool-2 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
+DEPEND=idn? ( net-dns/libidn ) postgres? ( virtual/postgresql ) ldap? ( net-nds/openldap ) ssl? ( gnutls? ( >=net-libs/gnutls-1.0.17 ) !gnutls? ( >=dev-libs/openssl-0.9.7d ) ) >=sys-devel/libtool-2 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
 DESCRIPTION=Small program to test performances of remote servers
 EAPI=4
 HOMEPAGE=http://echoping.sourceforge.net/
 IUSE=gnutls http icp idn priority smtp ssl tos postgres ldap
 KEYWORDS=amd64 ~hppa x86
 LICENSE=GPL-2
-RDEPEND=idn? ( net-dns/libidn ) postgres? ( dev-db/postgresql-base ) ldap? ( net-nds/openldap ) ssl? ( gnutls? ( >=net-libs/gnutls-1.0.17 ) !gnutls? ( >=dev-libs/openssl-0.9.7d ) )
+RDEPEND=idn? ( net-dns/libidn ) postgres? ( virtual/postgresql ) ldap? ( net-nds/openldap ) ssl? ( gnutls? ( >=net-libs/gnutls-1.0.17 ) !gnutls? ( >=dev-libs/openssl-0.9.7d ) )
 REQUIRED_USE=gnutls? ( ssl )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/echoping/echoping-6.0.2.tar.gz
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=91790fde7ec08b48c6869d36d6ca0c32
+_md5_=62d6e6f24a861ef028dee297db0dde25

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.2.5.ebuild,v 1.5 2014/05/18 10:16:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.2.5.ebuild,v 1.6 2014/11/03 13:29:59 titanofold Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ RDEPEND="!net-dialup/cistronradius
 	readline? ( sys-libs/readline )
 	pcap? ( net-libs/libpcap )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	firebird? ( dev-db/firebird )
 	pam? ( virtual/pam )
 	ssl? ( dev-libs/openssl )

@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/elfix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/ChangeLog,v 1.86 2014/09/09 02:38:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/ChangeLog,v 1.88 2014/11/03 13:13:26 blueness Exp $
+
+  03 Nov 2014; Anthony G. Basile <blueness@gentoo.org> -elfix-0.8.6.ebuild:
+  Remove older unstable
+
+*elfix-0.9.0 (03 Nov 2014)
+
+  03 Nov 2014; Anthony G. Basile <blueness@gentoo.org> +elfix-0.9.0.ebuild:
+  Version bump, fixes bug #525240
 
   09 Sep 2014; Patrick Lauer <patrick@gentoo.org> -elfix-0.8.1.ebuild,
   -elfix-0.8.3.ebuild, -elfix-0.8.5.ebuild:

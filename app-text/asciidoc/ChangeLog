@@ -1,6 +1,11 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.95 2014/09/23 19:32:57 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.96 2014/11/03 13:04:32 djc Exp $
+
+*asciidoc-8.6.9-r1 (03 Nov 2014)
+
+  03 Nov 2014; Dirkjan Ochtman <djc@gentoo.org> +asciidoc-8.6.9-r1.ebuild:
+  Add asciidoc-8.6.9-r1 with fixes from Calchan (fixes bug 483336)
 
   23 Sep 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Add myself as a maintainer

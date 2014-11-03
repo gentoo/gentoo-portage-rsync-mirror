@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.87 2014/09/09 18:58:11 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.88 2014/11/03 13:23:38 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> hydra-7.4.2.ebuild,
+  hydra-7.5.ebuild, hydra-7.6.ebuild, hydra-8.0.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   09 Sep 2014; Chema Alonso <nimiux@gentoo.org> hydra-8.0.ebuild:
   Stable for amd64 wrt bug #516966

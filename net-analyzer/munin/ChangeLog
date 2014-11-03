@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.160 2014/10/30 10:54:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.161 2014/11/03 13:25:57 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> munin-2.0.19.ebuild,
+  munin-2.0.19-r1.ebuild, munin-2.1.9999.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   30 Oct 2014; Jeroen Roovers <jer@gentoo.org> munin-2.1.9999.ebuild:
   Install README.rst not README (bug #527412 by Philipp Riegger).

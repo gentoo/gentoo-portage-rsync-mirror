@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/gnuradius
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/ChangeLog,v 1.23 2014/05/24 10:25:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/ChangeLog,v 1.24 2014/11/03 13:30:41 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> gnuradius-1.5.ebuild,
+  gnuradius-1.6.1.ebuild, gnuradius-1.6.1-r1.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
 *gnuradius-1.6.1-r1 (24 May 2014)
 

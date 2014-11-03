@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.6.1-r1.ebuild,v 1.1 2014/05/24 10:25:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.6.1-r1.ebuild,v 1.2 2014/11/03 13:30:41 titanofold Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ DEPEND="
 	guile? ( >=dev-scheme/guile-1.4 )
 	mysql? ( virtual/mysql )
 	odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) )
-	postgres? ( dev-db/postgresql-server )
+	postgres? ( virtual/postgresql[server] )
 	readline? ( sys-libs/readline )
 	snmp? ( net-analyzer/net-snmp )
 	virtual/pam

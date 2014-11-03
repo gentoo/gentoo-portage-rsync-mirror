@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2_p434-r1.ebuild,v 1.1 2013/09/04 12:30:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2_p434-r1.ebuild,v 1.2 2014/11/03 13:21:58 titanofold Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -16,7 +16,7 @@ IUSE="gnutls http icp idn priority smtp ssl tos postgres ldap"
 RESTRICT="test"
 
 RDEPEND="idn? ( net-dns/libidn )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	ldap? ( net-nds/openldap )
 	ssl? (
 		gnutls? ( >=net-libs/gnutls-1.0.17 )

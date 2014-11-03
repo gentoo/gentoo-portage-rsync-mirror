@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.8.6.ebuild,v 1.2 2014/08/10 20:23:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.9.0.ebuild,v 1.1 2014/11/03 13:01:42 blueness Exp $
 
 EAPI="5"
 

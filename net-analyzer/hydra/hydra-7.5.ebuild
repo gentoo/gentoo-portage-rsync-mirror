@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-7.5.ebuild,v 1.2 2013/11/20 01:18:04 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-7.5.ebuild,v 1.3 2014/11/03 13:23:38 titanofold Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -28,7 +28,7 @@ RDEPEND="
 	ncp? ( net-fs/ncpfs )
 	oracle? ( dev-db/oracle-instantclient-basic )
 	pcre? ( dev-libs/libpcre )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	ssl? ( >=net-libs/libssh-0.4.0 )
 	subversion? ( dev-vcs/subversion )
 "

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.4.1.ebuild,v 1.1 2014/10/29 22:38:38 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.4.1.ebuild,v 1.2 2014/11/03 13:28:23 titanofold Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	)
 	mysql? ( >=virtual/mysql-5.0.3 )
 	sqlite? ( >=dev-db/sqlite-3.3.5 )
-	postgres? ( >=dev-db/postgresql-base-8.3.0 )
+	postgres? ( >=virtual/postgresql-8.3.0 )
 	oracle? ( >=dev-db/oracle-instantclient-basic-10.0.0.0 )
 	jabber? ( dev-libs/iksemel )
 	libxml2? ( dev-libs/libxml2 )

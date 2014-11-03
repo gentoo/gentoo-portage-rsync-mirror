@@ -1,14 +1,14 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=!net-dialup/freeradius !net-dialup/cistronradius guile? ( >=dev-scheme/guile-1.4 ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-server ) odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) ) readline? ( sys-libs/readline ) dbm? ( sys-libs/gdbm ) snmp? ( net-analyzer/net-snmp ) pam? ( virtual/pam )
+DEPEND=!net-dialup/freeradius !net-dialup/cistronradius guile? ( >=dev-scheme/guile-1.4 ) mysql? ( virtual/mysql ) postgres? ( virtual/postgresql[server] ) odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) ) readline? ( sys-libs/readline ) dbm? ( sys-libs/gdbm ) snmp? ( net-analyzer/net-snmp ) pam? ( virtual/pam )
 DESCRIPTION=GNU radius authentication server
 EAPI=2
 HOMEPAGE=http://www.gnu.org/software/radius/radius.html
 IUSE=guile mysql postgres odbc dbm nls snmp pam static debug readline
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=!net-dialup/freeradius !net-dialup/cistronradius guile? ( >=dev-scheme/guile-1.4 ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-server ) odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) ) readline? ( sys-libs/readline ) dbm? ( sys-libs/gdbm ) snmp? ( net-analyzer/net-snmp ) pam? ( virtual/pam )
+RDEPEND=!net-dialup/freeradius !net-dialup/cistronradius guile? ( >=dev-scheme/guile-1.4 ) mysql? ( virtual/mysql ) postgres? ( virtual/postgresql[server] ) odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) ) readline? ( sys-libs/readline ) dbm? ( sys-libs/gdbm ) snmp? ( net-analyzer/net-snmp ) pam? ( virtual/pam )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gnu/radius/radius-1.6.1.tar.gz
 _eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=2d072c23d5e41dbe6d1d3f160a31d08c
+_md5_=8b9ab88ddf1c07104607ffbe1e7481d3

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.128 2014/06/07 13:49:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.129 2014/11/03 13:29:59 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  freeradius-2.2.5.ebuild, freeradius-3.0.3.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
 *freeradius-3.0.3 (07 Jun 2014)
 

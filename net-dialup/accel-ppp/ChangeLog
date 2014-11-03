@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/accel-ppp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/ChangeLog,v 1.8 2014/06/06 09:09:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/ChangeLog,v 1.9 2014/11/03 13:29:06 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> accel-ppp-1.7.3.ebuild,
+  accel-ppp-1.7.4.ebuild, accel-ppp-1.7.9999.ebuild, accel-ppp-1.8.0.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
 *accel-ppp-1.8.0 (06 Jun 2014)
 
