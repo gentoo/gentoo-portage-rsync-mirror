@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-9999.ebuild,v 1.1 2014/10/17 05:29:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-9999.ebuild,v 1.2 2014/11/03 00:57:46 mattst88 Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3 autotools
 	EGIT_REPO_URI="git://git.code.sf.net/p/zsh/code"
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 	SRC_URI="http://www.zsh.org/pub/${P}.tar.bz2
 		doc? ( http://www.zsh.org/pub/${P}-doc.tar.bz2 )"
 fi

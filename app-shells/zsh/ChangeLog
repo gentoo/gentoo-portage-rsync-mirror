@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.246 2014/10/17 05:39:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.247 2014/11/03 00:57:46 mattst88 Exp $
+
+  03 Nov 2014; Matt Turner <mattst88@gentoo.org> zsh-5.0.7-r1.ebuild,
+  zsh-9999.ebuild:
+  Added ~mips, bug 522722.
 
   17 Oct 2014; Tim Harder <radhermit@gentoo.org> -zsh-5.0.2-r3.ebuild,
   -zsh-5.0.4.ebuild, -zsh-5.0.6.ebuild, -zsh-5.0.7.ebuild,
