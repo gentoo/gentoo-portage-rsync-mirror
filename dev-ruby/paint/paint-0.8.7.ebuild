@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/paint/paint-0.8.7.ebuild,v 1.3 2014/08/06 07:41:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/paint/paint-0.8.7.ebuild,v 1.4 2014/11/03 15:43:13 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 

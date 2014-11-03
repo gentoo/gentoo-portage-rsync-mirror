@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/method_source-0.8.2-r3.ebuild,v 1.1 2014/07/25 01:17:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/method_source-0.8.2-r3.ebuild,v 1.2 2014/11/03 15:44:28 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 RUBY_FAKEGEM_TASK_DOC=""

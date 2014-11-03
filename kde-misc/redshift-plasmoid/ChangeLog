@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/redshift-plasmoid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/redshift-plasmoid/ChangeLog,v 1.3 2014/08/05 16:31:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/redshift-plasmoid/ChangeLog,v 1.4 2014/11/03 15:51:03 mrueg Exp $
+
+  03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -redshift-plasmoid-0.6.2.ebuild:
+  Cleanup old.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> redshift-plasmoid-0.6.2.ebuild,
   redshift-plasmoid-1.0.ebuild:
