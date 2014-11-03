@@ -1,6 +1,11 @@
 # ChangeLog for app-text/texlive
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.135 2013/07/06 00:56:58 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.136 2014/11/03 07:01:53 aballier Exp $
+
+*texlive-2014 (03 Nov 2014)
+
+  03 Nov 2014; Alexis Ballier <aballier@gentoo.org> +texlive-2014.ebuild:
+  bump to texlive 2014
 
   06 Jul 2013; Alexis Ballier <aballier@gentoo.org> texlive-2013.ebuild:
   bump cjk-latex dep as older versions install files in /usr/share/texmf/
