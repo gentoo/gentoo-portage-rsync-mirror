@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.1.1.ebuild,v 1.2 2014/09/16 07:06:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.1.3.ebuild,v 1.1 2014/11/03 07:51:49 idella4 Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ IUSE="doc test"
 RDEPEND="dev-python/meld3[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	test? ( $(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7) )
+	test? ( dev-python/mock[${PYTHON_USEDEP}] )
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${PN}-${MY_PV}"

@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/supervisor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.18 2014/09/17 12:10:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.19 2014/11/03 07:51:49 idella4 Exp $
+
+*supervisor-3.1.3 (03 Nov 2014)
+
+  03 Nov 2014; Ian Delaney <idella4@gentoo.org> +supervisor-3.1.3.ebuild,
+  -supervisor-3.1.1.ebuild, -supervisor-3.1.2.ebuild:
+  bump, rm old
 
   17 Sep 2014; Ian Delaney <idella4@gentoo.org> metadata.xml,
   supervisor-3.1.2.ebuild:
