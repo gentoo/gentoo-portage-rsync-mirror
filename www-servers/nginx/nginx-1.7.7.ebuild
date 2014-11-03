@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.7.6.ebuild,v 1.6 2014/11/03 09:10:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.7.7.ebuild,v 1.1 2014/11/03 09:10:15 maksbotan Exp $
 
 EAPI="5"
 
@@ -66,7 +66,7 @@ HTTP_AUTH_PAM_MODULE_URI="http://web.iti.upv.es/~sto/nginx/ngx_http_auth_pam_mod
 HTTP_AUTH_PAM_MODULE_WD="${WORKDIR}/ngx_http_auth_pam_module-${HTTP_AUTH_PAM_MODULE_PV}"
 
 # http_upstream_check (https://github.com/yaoweibin/nginx_upstream_check_module, BSD license)
-HTTP_UPSTREAM_CHECK_MODULE_PV="0.1.9"
+HTTP_UPSTREAM_CHECK_MODULE_PV="0.3.0"
 HTTP_UPSTREAM_CHECK_MODULE_P="ngx_http_upstream_check-${HTTP_UPSTREAM_CHECK_MODULE_PV}"
 HTTP_UPSTREAM_CHECK_MODULE_URI="https://github.com/yaoweibin/nginx_upstream_check_module/archive/v${HTTP_UPSTREAM_CHECK_MODULE_PV}.tar.gz"
 HTTP_UPSTREAM_CHECK_MODULE_WD="${WORKDIR}/nginx_upstream_check_module-${HTTP_UPSTREAM_CHECK_MODULE_PV}"
@@ -162,7 +162,7 @@ LICENSE="BSD-2 BSD SSLeay MIT GPL-2 GPL-2+
 	nginx_modules_http_push_stream? ( GPL-3 )"
 
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 NGINX_MODULES_STD="access auth_basic autoindex browser charset empty_gif fastcgi
 geo gzip limit_req limit_conn map memcached proxy referer rewrite scgi ssi
@@ -283,7 +283,7 @@ src_prepare() {
 		sed -i -e 's/-llua5.1/-llua/' "${HTTP_LUA_MODULE_WD}/config"
 		# fix for nginx 1.7.5
 		cd "${HTTP_LUA_MODULE_WD}"
-		epatch "${FILESDIR}/lua-${P}.patch"
+		epatch "${FILESDIR}/lua-${PN}-1.7.6.patch"
 		cd "${S}"
 	fi
 

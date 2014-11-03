@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.156 2014/10/12 12:20:49 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.157 2014/11/03 09:16:46 djc Exp $
+
+*mercurial-3.2 (03 Nov 2014)
+
+  03 Nov 2014; Dirkjan Ochtman <djc@gentoo.org> +mercurial-3.2.ebuild:
+  Version bump mercurial to 3.2
 
   12 Oct 2014; Dirkjan Ochtman <djc@gentoo.org> -mercurial-2.9.2.ebuild,
   -mercurial-3.0.2.ebuild, -mercurial-3.1.ebuild:
