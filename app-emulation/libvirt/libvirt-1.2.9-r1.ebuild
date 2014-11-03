@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.9-r1.ebuild,v 1.1 2014/11/03 01:30:36 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.9-r1.ebuild,v 1.2 2014/11/03 01:38:09 tamiko Exp $
 
 EAPI=5
 
@@ -437,7 +437,7 @@ pkg_postinst() {
 		elog "Ensure any resources your VMs use are accessible by qemu:qemu"
 	fi
 
-	if [[ -z "${REPLACING_VERSIONS}" ]]; then
+	if [[ -n "${REPLACING_VERSIONS}" ]]; then
 		elog ""
 		elog "The systemd service-file configuration under /etc/sysconfig has"
 		elog "been removed. Please use"
