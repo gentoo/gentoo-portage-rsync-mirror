@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2014-11-02 23:19:58.714707465 +0300
++++ Makefile.in	2014-11-02 23:20:20.482706904 +0300
+@@ -37,7 +37,7 @@
+ 
+ CC=@CC@
+ CFLAGS=@CFLAGS@ -fno-strict-aliasing -Wall
+-LIBS=@LIBS@
++LIBS=@LIBS@ -ltinfo
+ LDFLAGS=@LDFLAGS@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@

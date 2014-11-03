@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/trac
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.142 2014/08/10 20:15:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.144 2014/11/03 09:44:04 djc Exp $
+
+  03 Nov 2014; Dirkjan Ochtman <djc@gentoo.org> -trac-0.12.3.ebuild,
+  -trac-1.0.ebuild:
+  Remove old versions
+
+*trac-1.0.2 (03 Nov 2014)
+
+  03 Nov 2014; Dirkjan Ochtman <djc@gentoo.org> +trac-1.0.2.ebuild:
+  Version bump trac to 1.0.2
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> trac-0.12.3.ebuild,
   trac-1.0.1.ebuild, trac-1.0.ebuild:

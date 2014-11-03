@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/rng-tools-4-r7.ebuild,v 1.5 2014/11/02 09:57:52 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/rng-tools-4-r7.ebuild,v 1.6 2014/11/03 09:35:06 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gkernel/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc ~x86"
+KEYWORDS="alpha amd64 ~ia64 ppc x86"
 IUSE="selinux"
 
 RDEPEND="selinux? ( sec-policy/selinux-rngd )"

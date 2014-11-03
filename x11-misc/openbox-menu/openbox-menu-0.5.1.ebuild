@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openbox-menu/openbox-menu-0.5.1.ebuild,v 1.2 2014/10/30 14:03:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openbox-menu/openbox-menu-0.5.1.ebuild,v 1.3 2014/11/03 09:36:58 ago Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="https://bitbucket.org/fabriceT/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+icons svg"
 REQUIRED_USE="svg? ( icons )"
 

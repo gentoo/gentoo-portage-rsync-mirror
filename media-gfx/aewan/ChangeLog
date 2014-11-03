@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/aewan
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aewan/ChangeLog,v 1.9 2013/06/06 07:12:01 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aewan/ChangeLog,v 1.10 2014/11/03 09:58:28 zlogene Exp $
+
+  03 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
+  +files/aewan-1.0.01-tinfo.patch, aewan-1.0.01-r1.ebuild:
+  Fix build against sys-libs/ncurses[tinfo] (bug #527838)
 
   06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers

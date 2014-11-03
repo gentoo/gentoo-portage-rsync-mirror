@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.78 2014/11/02 08:52:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.79 2014/11/03 09:33:48 ago Exp $
+
+  03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> bzr-2.5.1-r1.ebuild:
+  Stable for x86, wrt bug #526684
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> bzr-2.5.1-r1.ebuild:
   Stable for alpha, wrt bug #526684
