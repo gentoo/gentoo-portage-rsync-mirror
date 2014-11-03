@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/re2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/re2/ChangeLog,v 1.2 2014/02/12 11:53:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/re2/ChangeLog,v 1.3 2014/11/03 08:28:04 aballier Exp $
+
+*re2-111.08.00 (03 Nov 2014)
+
+  03 Nov 2014; Alexis Ballier <aballier@gentoo.org> +re2-111.08.00.ebuild:
+  version bump
 
 *re2-109.55.04 (12 Feb 2014)
 
