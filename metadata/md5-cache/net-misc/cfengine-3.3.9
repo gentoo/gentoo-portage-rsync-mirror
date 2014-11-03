@@ -1,5 +1,5 @@
 DEFINED_PHASES=config configure install postinst
-DEPEND=>=sys-libs/db-4 mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) selinux? ( sys-libs/libselinux ) tokyocabinet? ( dev-db/tokyocabinet ) qdbm? ( dev-db/qdbm ) libvirt? ( app-emulation/libvirt ) >=dev-libs/openssl-0.9.7 dev-libs/libpcre
+DEPEND=>=sys-libs/db-4 mysql? ( virtual/mysql ) postgres? ( virtual/postgresql ) selinux? ( sys-libs/libselinux ) tokyocabinet? ( dev-db/tokyocabinet ) qdbm? ( dev-db/qdbm ) libvirt? ( app-emulation/libvirt ) >=dev-libs/openssl-0.9.7 dev-libs/libpcre
 DESCRIPTION=An automated suite of programs for configuring and maintaining Unix-like computers
 EAPI=4
 HOMEPAGE=http://www.cfengine.org/
@@ -7,8 +7,8 @@ IUSE=examples html libvirt mysql postgres +qdbm selinux tests tokyocabinet vim-s
 KEYWORDS=~amd64 ~arm ~ppc ~s390 ~sparc ~x86
 LICENSE=GPL-3
 PDEPEND=vim-syntax? ( app-vim/cfengine-syntax )
-RDEPEND=>=sys-libs/db-4 mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) selinux? ( sys-libs/libselinux ) tokyocabinet? ( dev-db/tokyocabinet ) qdbm? ( dev-db/qdbm ) libvirt? ( app-emulation/libvirt ) >=dev-libs/openssl-0.9.7 dev-libs/libpcre
+RDEPEND=>=sys-libs/db-4 mysql? ( virtual/mysql ) postgres? ( virtual/postgresql ) selinux? ( sys-libs/libselinux ) tokyocabinet? ( dev-db/tokyocabinet ) qdbm? ( dev-db/qdbm ) libvirt? ( app-emulation/libvirt ) >=dev-libs/openssl-0.9.7 dev-libs/libpcre
 REQUIRED_USE=qdbm? ( !tokyocabinet ) tokyocabinet? ( !qdbm ) !tokyocabinet? ( qdbm ) !qdbm? ( tokyocabinet )
 SLOT=3
 SRC_URI=http://cfengine.com/source-code/download?file=cfengine-3.3.9.tar.gz -> cfengine-3.3.9.tar.gz
-_md5_=bd02f801848e7499e66bf178ab08541f
+_md5_=7d5101701fc1ac19f3302b4e4fc76395

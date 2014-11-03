@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-0.84.0.ebuild,v 1.1 2014/01/29 00:06:26 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-0.84.0.ebuild,v 1.2 2014/11/03 13:56:03 titanofold Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="+lua +pbf"
 
 DEPEND="
 	app-arch/bzip2
-	dev-db/postgresql-base
+	virtual/postgresql
 	dev-libs/libxml2:2
 	sci-libs/geos
 	sci-libs/proj

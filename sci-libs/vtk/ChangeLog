@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.118 2014/10/30 10:55:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.119 2014/11/03 13:58:24 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> vtk-5.10.0.ebuild,
+  vtk-5.10.1.ebuild, vtk-6.0.0.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   30 Oct 2014; Alexis Ballier <aballier@gentoo.org> vtk-6.0.0.ebuild:
   keyword ~arm

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1-r1.ebuild,v 1.6 2014/08/10 20:50:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1-r1.ebuild,v 1.7 2014/11/03 13:40:50 titanofold Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	>=dev-libs/boost-1.36
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	pdf? ( media-libs/libharu )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	sqlite? ( dev-db/sqlite:3 )
 	fcgi? (
 		dev-libs/fcgi

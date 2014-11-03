@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.17.ebuild,v 1.11 2014/08/10 20:44:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.17.ebuild,v 1.12 2014/11/03 13:41:47 titanofold Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND="sys-libs/zlib
 			virtual/pam
 			>=net-mail/mailbase-1
 		)
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	snmp? ( >=net-analyzer/net-snmp-5.2.2-r1 )
 	sqlite? ( dev-db/sqlite )
 	ssl? ( >=dev-libs/openssl-0.9.6 )

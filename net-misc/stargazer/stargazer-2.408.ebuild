@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stargazer/stargazer-2.408.ebuild,v 1.4 2014/04/26 22:24:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stargazer/stargazer-2.408.ebuild,v 1.5 2014/11/03 13:50:48 titanofold Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ RDEPEND="module_config_rpcconfig? ( dev-libs/xmlrpc-c[abyss] sys-libs/zlib )
 	module_config_sgconfig? ( dev-libs/expat )
 	module_store_firebird? ( >=dev-db/firebird-2.0.3.12981.0-r6 )
 	module_store_mysql? ( virtual/mysql )
-	module_store_postgres? ( dev-db/postgresql-base dev-libs/openssl sys-libs/zlib )
+	module_store_postgres? ( virtual/postgresql dev-libs/openssl sys-libs/zlib )
 	sgconf? ( dev-libs/expat )
 	sgconf_xml? ( dev-libs/expat )"
 

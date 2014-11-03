@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.132 2014/09/01 16:40:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.133 2014/11/03 13:59:51 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> root-5.32.03-r2.ebuild,
+  root-5.34.18.ebuild, root-5.34.18-r1.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   01 Sep 2014; Michał Górny <mgorny@gentoo.org> root-5.34.18-r1.ebuild,
   root-5.34.18.ebuild:

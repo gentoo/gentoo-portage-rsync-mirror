@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.2.0.ebuild,v 1.3 2014/08/10 20:28:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.2.0.ebuild,v 1.4 2014/11/03 13:55:21 titanofold Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ RDEPEND="
 		dev-cpp/cairomm
 		python? ( dev-python/pycairo[${PYTHON_USEDEP}] )
 	)
-	postgres? ( >=dev-db/postgresql-base-8.3 )
+	postgres? ( >=virtual/postgresql-8.3 )
 	gdal? ( sci-libs/gdal )
 	sqlite? ( dev-db/sqlite:3 )
 	python_single_target_python3_2? ( >=dev-libs/boost-1.53[${PYTHON_USEDEP}] )

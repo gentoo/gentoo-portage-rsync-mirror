@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.213 2014/08/10 20:44:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.214 2014/11/03 13:41:47 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  cyrus-imapd-2.4.16.ebuild, cyrus-imapd-2.4.17.ebuild,
+  cyrus-imapd-2.4.17-r1.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cyrus-imapd-2.4.16.ebuild,
   cyrus-imapd-2.4.17-r1.ebuild, cyrus-imapd-2.4.17.ebuild:

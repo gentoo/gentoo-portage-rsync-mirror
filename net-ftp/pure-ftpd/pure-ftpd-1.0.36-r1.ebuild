@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.36-r1.ebuild,v 1.2 2014/08/10 20:54:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.36-r1.ebuild,v 1.3 2014/11/03 13:35:55 titanofold Exp $
 
 EAPI=5
 inherit eutils confutils flag-o-matic
@@ -24,7 +24,7 @@ DEPEND="caps? ( sys-libs/libcap )
 	ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sysquota? ( sys-fs/quota[-rpc] )
 	xinetd? ( virtual/inetd )"

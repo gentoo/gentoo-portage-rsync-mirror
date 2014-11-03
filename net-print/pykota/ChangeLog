@@ -1,6 +1,9 @@
 # ChangeLog for net-print/pykota
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.32 2014/08/10 20:36:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.33 2014/11/03 13:51:28 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> pykota-1.26.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pykota-1.26.ebuild:
   QA: drop trailing '.' from DESCRIPTION

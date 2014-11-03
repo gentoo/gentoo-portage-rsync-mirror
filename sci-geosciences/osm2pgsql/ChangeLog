@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/osm2pgsql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.13 2014/05/28 14:19:16 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.14 2014/11/03 13:56:03 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  osm2pgsql-0.84.0.ebuild, osm2pgsql-99999999.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   28 May 2014; Aaron W. Swenson <titanofold@gentoo.org>
   -osm2pgsql-20100413.ebuild:

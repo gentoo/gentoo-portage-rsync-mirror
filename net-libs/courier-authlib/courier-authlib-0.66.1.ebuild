@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.66.1.ebuild,v 1.3 2014/08/25 12:56:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.66.1.ebuild,v 1.4 2014/11/03 13:39:19 titanofold Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib user
@@ -24,7 +24,7 @@ DEPEND="net-mail/mailbase
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		mysql? ( virtual/mysql )
 		pam? ( virtual/pam )
-		postgres? ( >=dev-db/postgresql-base-8.4 )
+		postgres? ( >=virtual/postgresql-8.4 )
 		sqlite? ( dev-db/sqlite:3 )"
 
 RDEPEND="${DEPEND}"

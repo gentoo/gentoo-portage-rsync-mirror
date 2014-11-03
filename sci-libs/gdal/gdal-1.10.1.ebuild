@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.1.ebuild,v 1.8 2014/07/11 19:38:23 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.1.ebuild,v 1.9 2014/11/03 13:57:38 titanofold Exp $
 
 EAPI=5
 
@@ -47,7 +47,7 @@ RDEPEND="
 	pdf? ( >=app-text/poppler-0.24.3:= )
 	perl? ( dev-lang/perl:= )
 	png? ( media-libs/libpng )
-	postgres? ( >=dev-db/postgresql-base-8.4 )
+	postgres? ( >=virtual/postgresql-8.4 )
 	python? (
 		${PYTHON_DEPS}
 		dev-python/setuptools[${PYTHON_USEDEP}]

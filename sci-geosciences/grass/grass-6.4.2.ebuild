@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.11 2014/01/06 15:37:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.12 2014/11/03 13:54:31 titanofold Exp $
 
 EAPI=4
 
@@ -48,7 +48,7 @@ RDEPEND="
 		${TCL_DEPS}
 	)
 	png? ( media-libs/libpng )
-	postgres? ( >=dev-db/postgresql-base-8.4 )
+	postgres? ( >=virtual/postgresql-8.4 )
 	readline? ( sys-libs/readline )
 	sqlite? ( dev-db/sqlite:3 )
 	tiff? ( media-libs/tiff )

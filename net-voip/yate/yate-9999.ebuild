@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-9999.ebuild,v 1.5 2014/07/27 21:41:21 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-9999.ebuild,v 1.6 2014/11/03 13:52:55 titanofold Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE="doc sse2 sctp dahdi zaptel wpcard tdmcard wanpipe +ilbc +ilbc-webrtc +isac-float isac-fixed postgres mysql +gsm +speex h323 spandsp +ssl qt4 +zlib amrnb"
 
 RDEPEND="
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	mysql? ( virtual/mysql )
 	gsm? ( media-sound/gsm )
 	speex? ( media-libs/speex )

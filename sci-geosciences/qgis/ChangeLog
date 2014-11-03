@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/qgis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.32 2014/01/06 14:52:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.33 2014/11/03 13:56:44 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> qgis-1.7.0.ebuild,
+  qgis-1.8.0.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> qgis-1.7.0.ebuild:
   Punt base.eclass

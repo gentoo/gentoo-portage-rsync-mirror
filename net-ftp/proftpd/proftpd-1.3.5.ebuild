@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.5.ebuild,v 1.7 2014/08/13 09:29:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.5.ebuild,v 1.8 2014/11/03 13:34:57 titanofold Exp $
 
 EAPI=5
 inherit eutils multilib systemd
@@ -51,7 +51,7 @@ CDEPEND="acl? ( virtual/acl )
 	openssl? ( dev-libs/openssl )
 	pam? ( virtual/pam )
 	pcre? ( dev-libs/libpcre )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	sqlite? ( dev-db/sqlite:3 )
 	xinetd? ( virtual/inetd )"
 DEPEND="${CDEPEND}

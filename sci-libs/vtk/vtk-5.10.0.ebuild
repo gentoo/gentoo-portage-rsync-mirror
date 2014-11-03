@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.10.0.ebuild,v 1.5 2013/07/23 14:12:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.10.0.ebuild,v 1.6 2014/11/03 13:58:24 titanofold Exp $
 
 EAPI=3
 
@@ -47,7 +47,7 @@ RDEPEND="
 	mpi? ( virtual/mpi[cxx,romio] )
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	python? ( dev-python/sip )
 	qt4? (
 		dev-qt/qtcore:4

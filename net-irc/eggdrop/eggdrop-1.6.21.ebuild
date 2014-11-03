@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.21.ebuild,v 1.4 2012/10/08 16:59:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.21.ebuild,v 1.5 2014/11/03 13:37:41 titanofold Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ REQUIRED_USE="vanilla? ( !mysql !postgres !ssl )"
 DEPEND="dev-lang/tcl
 	!vanilla? (
 		mysql? ( virtual/mysql )
-		postgres? ( dev-db/postgresql-server )
+		postgres? ( virtual/postgresql[server] )
 		ssl? ( dev-libs/openssl )
 	)"
 RDEPEND="${DEPEND}"

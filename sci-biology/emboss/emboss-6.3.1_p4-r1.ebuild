@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.3.1_p4-r1.ebuild,v 1.2 2014/07/30 01:12:51 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.3.1_p4-r1.ebuild,v 1.3 2014/11/03 13:53:41 titanofold Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ DEPEND="
 		media-libs/libpng
 		media-libs/gd
 		)
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	!minimal? (
 		sci-biology/primer3
 		sci-biology/clustalw

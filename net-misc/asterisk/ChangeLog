@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.502 2014/11/02 09:04:31 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.503 2014/11/03 13:47:30 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  asterisk-11.13.1.ebuild, asterisk-12.6.1.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> asterisk-11.13.1.ebuild,
   asterisk-12.6.1.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.21.ebuild,v 1.4 2014/03/01 22:49:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.21.ebuild,v 1.5 2014/11/03 13:33:58 titanofold Exp $
 
-EAPI=1
+EAPI=2
 
 inherit autotools ssl-cert eutils pam
 
@@ -25,7 +25,7 @@ DEPEND=">=dev-libs/glib-2
 	mysql? ( virtual/mysql )
 	pam? ( sys-libs/pam )
 	pam_nuauth? ( sys-libs/pam )
-	postgres? ( dev-db/postgresql-server )
+	postgres? ( virtual/postgresql[server] )
 	nfqueue? ( net-libs/libnfnetlink
 		net-libs/libnetfilter_queue )
 	nfconntrack? ( net-libs/libnetfilter_conntrack )

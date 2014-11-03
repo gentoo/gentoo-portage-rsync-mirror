@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.495 2014/11/02 12:35:44 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.496 2014/11/03 13:42:49 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> dovecot-2.2.9.ebuild,
+  dovecot-2.2.13.ebuild, dovecot-2.2.13-r1.ebuild, dovecot-2.2.14.ebuild,
+  dovecot-2.2.14-r1.ebuild, dovecot-2.2.15.ebuild, dovecot-2.2.15-r1.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> dovecot-2.2.13-r1.ebuild,
   dovecot-2.2.13.ebuild, dovecot-2.2.14-r1.ebuild, dovecot-2.2.14.ebuild,

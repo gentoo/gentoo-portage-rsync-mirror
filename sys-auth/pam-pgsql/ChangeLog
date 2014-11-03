@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam-pgsql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/ChangeLog,v 1.7 2014/03/01 22:38:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/ChangeLog,v 1.8 2014/11/03 14:01:14 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> pam-pgsql-0.7.3.ebuild,
+  pam-pgsql-0.7.3.1.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> pam-pgsql-0.7.3.1.ebuild,
   pam-pgsql-0.7.3.ebuild:
