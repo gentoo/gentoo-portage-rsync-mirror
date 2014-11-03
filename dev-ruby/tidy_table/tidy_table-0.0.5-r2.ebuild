@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/tidy_table-0.0.5-r2.ebuild,v 1.6 2014/08/05 16:00:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/tidy_table-0.0.5-r2.ebuild,v 1.7 2014/11/03 15:06:59 mrueg Exp $
 
 EAPI=4
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 

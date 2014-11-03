@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.3.26.ebuild,v 1.1 2014/11/03 09:34:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.3.26.ebuild,v 1.2 2014/11/03 15:07:01 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -28,6 +28,8 @@ DEPEND="
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( ${RDEPEND}
 		dev-python/mock[${PYTHON_USEDEP}] )"
+
+PATCHES=( "${FILESDIR}"/${PV}-tests.patch )
 
 # As usual for test phase
 DISTUTILS_IN_SOURCE_BUILD=1

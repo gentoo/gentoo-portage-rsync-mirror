@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/bladerf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/ChangeLog,v 1.5 2014/07/25 18:54:46 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/ChangeLog,v 1.7 2014/11/03 15:26:43 zerochaos Exp $
+
+  03 Nov 2014; Rick Farina <zerochaos@gentoo.org> bladerf-2014.11_rc3.ebuild:
+  fix broken S and adjust deps per upstream
+
+*bladerf-2014.11_rc3 (03 Nov 2014)
+
+  03 Nov 2014; Rick Farina <zerochaos@gentoo.org> +bladerf-2014.11_rc3.ebuild:
+  version bump
 
   25 Jul 2014; Rick Farina <zerochaos@gentoo.org> bladerf-2014.09_rc2.ebuild,
   bladerf-9999.ebuild:

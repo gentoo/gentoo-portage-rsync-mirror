@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16135 2014/11/02 22:49:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16136 2014/11/03 15:26:55 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -147,11 +147,6 @@ app-dicts/gnuvd
 # Does not build with current CLucene (bug 420195); dead upstream.
 # No consumers in the tree. Masked for removal in 30 days.
 dev-perl/Lucene
-
-# Aaron W. Swenson <titanofold@gentoo.org> (11 Oct 2014)
-# Beta package not yet ready for production.
-=dev-db/postgresql-9.4_beta2
-=virtual/postgresql-9.4
 
 # Pacho Ramos <pacho@gentoo.org> (11 Oct 2014)
 # Masked for removal in a month.
@@ -627,13 +622,6 @@ sys-apps/usleep
 # Mikle Kolyada <zlogene@gentoo.org>
 # Masked due to upstream QA issues.
 =dev-perl/Alien-SDL-1.444.0
-
-# Patrick Lauer <patrick@gentoo.org> (25 Jul 2014)
-# Upstream has declared it EOL, please migrate to
-# newer versions
-=dev-db/postgresql-base-8.4*
-=dev-db/postgresql-server-8.4*
-=dev-db/postgresql-docs-8.4*
 
 # Pacho Ramos <pacho@gentoo.org> (24 Jul 2014)
 # It's a development version that was included without

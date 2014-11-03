@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/uhd-3.8.0.ebuild,v 1.2 2014/11/03 02:19:50 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/uhd-3.8.0.ebuild,v 1.3 2014/11/03 15:05:03 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -11,10 +11,10 @@ HOMEPAGE="http://code.ettus.com/redmine/ettus/projects/uhd/wiki"
 
 image_version=uhd-images_00$(get_version_component_range 1).00$(get_version_component_range 2).00$(get_version_component_range 3)-release
 SRC_URI="https://github.com/EttusResearch/uhd/archive/release_00$(get_version_component_range 1)_00$(get_version_component_range 2)_00$(get_version_component_range 3).tar.gz -> EttusResearch-UHD-$(get_version_component_range 1).$(get_version_component_range 2).$(get_version_component_range 3).tar.gz \
-	http://files.ettus.com/binaries/images/${image_version}.tar.gz"
+	http://files.ettus.com/binaries/images/${image_version}.zip"
 #https://github.com/EttusResearch/UHD-Mirror/tags
 #http://files.ettus.com/binaries/images/
-#KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 S="${WORKDIR}"/uhd-release_00$(get_version_component_range 1)_00$(get_version_component_range 2)_00$(get_version_component_range 3)/host
 
 LICENSE="GPL-3"
@@ -26,7 +26,8 @@ RDEPEND="virtual/libusb:1
 	sys-libs/ncurses
 	"
 DEPEND="${RDEPEND}
-	dev-python/cheetah"
+	dev-python/cheetah
+	app-arch/unzip"
 
 src_prepare() {
 	#this may not be needed in 3.4.3 and above, please verify

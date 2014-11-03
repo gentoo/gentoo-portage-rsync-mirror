@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.310 2014/11/02 08:16:59 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.311 2014/11/03 15:19:28 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  -postgresql-server-8.4.20.ebuild, -postgresql-server-8.4.21.ebuild,
+  -postgresql-server-8.4.22.ebuild:
+  Remove EOL versions.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> postgresql-server-9.3.5.ebuild,
   postgresql-server-9.4_beta3.ebuild, postgresql-server-9999.ebuild:

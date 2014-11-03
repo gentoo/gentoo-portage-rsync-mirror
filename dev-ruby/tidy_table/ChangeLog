@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tidy_table
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/ChangeLog,v 1.19 2014/09/23 05:41:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/ChangeLog,v 1.20 2014/11/03 15:06:59 mrueg Exp $
+
+  03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> tidy_table-0.0.5-r2.ebuild,
+  tidy_table-0.0.5-r3.ebuild, tidy_table-0.0.5-r4.ebuild:
+  Drop jruby.
 
 *tidy_table-0.0.5-r4 (23 Sep 2014)
 

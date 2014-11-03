@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django-pipeline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/ChangeLog,v 1.27 2014/11/03 09:34:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/ChangeLog,v 1.28 2014/11/03 15:07:01 idella4 Exp $
+
+  03 Nov 2014; Ian Delaney <idella4@gentoo.org> +files/1.3.26-tests.patch,
+  django-pipeline-1.3.26.ebuild:
+  add patch, acquired from master since last release, fixes test failures
 
 *django-pipeline-1.3.26 (03 Nov 2014)
 

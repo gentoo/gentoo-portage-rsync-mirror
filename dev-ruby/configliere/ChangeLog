@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/configliere
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/configliere/ChangeLog,v 1.7 2014/10/24 17:53:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/configliere/ChangeLog,v 1.8 2014/11/03 15:09:09 mrueg Exp $
+
+  03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> configliere-0.4.18-r1.ebuild,
+  configliere-0.4.22.ebuild:
+  Drop jruby.
 
   24 Oct 2014; Manuel Rüger <mrueg@gentoo.org> configliere-0.4.22.ebuild:
   Drop blank line.

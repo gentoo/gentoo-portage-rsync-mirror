@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mercenary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mercenary/ChangeLog,v 1.8 2014/07/25 14:59:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mercenary/ChangeLog,v 1.9 2014/11/03 15:11:28 mrueg Exp $
+
+  03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> mercenary-0.3.4.ebuild:
+  Drop jruby.
 
   25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> -mercenary-0.3.2.ebuild,
   -mercenary-0.3.3.ebuild:

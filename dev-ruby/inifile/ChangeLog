@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/inifile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/inifile/ChangeLog,v 1.10 2014/08/24 05:04:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/inifile/ChangeLog,v 1.11 2014/11/03 15:07:44 mrueg Exp $
+
+  03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> inifile-2.0.2-r1.ebuild,
+  inifile-3.0.0.ebuild:
+  Drop jruby.
 
 *inifile-3.0.0 (24 Aug 2014)
 
