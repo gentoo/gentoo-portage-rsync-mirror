@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.381 2014/11/03 05:26:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.382 2014/11/03 18:04:30 tamiko Exp $
+
+  03 Nov 2014; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.9-r1.ebuild,
+  libvirt-9999.ebuild:
+  prevent systemd autodetection, bug 508374
 
   03 Nov 2014; Patrick Lauer <patrick@gentoo.org> libvirt-1.2.9-r1.ebuild,
   libvirt-9999.ebuild:

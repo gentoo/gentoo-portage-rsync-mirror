@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.9-r1.ebuild,v 1.3 2014/11/03 05:26:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.9-r1.ebuild,v 1.4 2014/11/03 18:04:30 tamiko Exp $
 
 EAPI=5
 
@@ -333,6 +333,7 @@ src_configure() {
 	myconf="${myconf} --without-sanlock"
 
 	# systemd unit files
+	myconf="${myconf} $(use_with systemd systemd-daemon)"
 	use systemd && myconf="${myconf} --with-init-script=systemd"
 
 	# this is a nasty trick to work around the problem in bug
@@ -390,7 +391,8 @@ src_install() {
 	use libvirtd || return 0
 	# From here, only libvirtd-related instructions, be warned!
 
-	systemd_install_serviced "${FILESDIR}"/libvirtd.service.conf libvirtd
+	use systemd && \
+		systemd_install_serviced "${FILESDIR}"/libvirtd.service.conf libvirtd
 
 	newinitd "${S}/libvirtd.init" libvirtd || die
 	newconfd "${FILESDIR}/libvirtd.confd-r4" libvirtd || die
