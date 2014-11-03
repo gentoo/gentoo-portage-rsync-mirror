@@ -1,0 +1,12 @@
+# ChangeLog for dev-libs/libltdl
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.1 2014/11/03 05:31:48 vapier Exp $
+
+*libltdl-2.4.3 (03 Nov 2014)
+*libltdl-1.5.26 (03 Nov 2014)
+*libltdl-1.3.5 (03 Nov 2014)
+
+  03 Nov 2014; Mike Frysinger <vapier@gentoo.org> +libltdl-1.3.5.ebuild,
+  +libltdl-1.5.26.ebuild, +libltdl-2.4.3.ebuild, +metadata.xml:
+  Split libltdl out of main libtool package per upstream recommendations.
+

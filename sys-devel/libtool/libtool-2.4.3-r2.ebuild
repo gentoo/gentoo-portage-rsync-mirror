@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.19 2014/11/03 05:32:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.3-r2.ebuild,v 1.1 2014/11/03 05:32:23 vapier Exp $
 
 EAPI="4"
 
@@ -24,9 +24,11 @@ LICENSE="GPL-2"
 SLOT="2"
 IUSE="vanilla"
 
+# Pull in libltdl directly until we convert packages to the new dep.
 RDEPEND="sys-devel/gnuconfig
 	>=sys-devel/autoconf-2.69
-	>=sys-devel/automake-1.13"
+	>=sys-devel/automake-1.13
+	dev-libs/libltdl:0"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 [[ ${PV} == "9999" ]] && DEPEND+=" sys-apps/help2man"
@@ -45,6 +47,8 @@ src_prepare() {
 	use vanilla && return 0
 
 	epatch "${FILESDIR}"/${PN}-2.4.3-use-linux-version-in-fbsd.patch #109105
+	epatch "${FILESDIR}"/${PN}-2.4.3-no-clean-gnulib.patch #527200
+	epatch "${FILESDIR}"/${PN}-2.4.3-test-cmdline_wrap.patch #384731
 	pushd libltdl >/dev/null
 	AT_NOELIBTOOLIZE=yes eautoreconf
 	popd >/dev/null

@@ -1,9 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.193 2014/11/02 22:14:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.194 2014/11/03 05:57:52 vapier Exp $
 
   02 Nov 2014; Mike Frysinger <vapier@gentoo.org> wget-1.16.ebuild:
-  Mark sh stable.
+  Mark arm64/m68k/s390/sh stable.
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> wget-1.16.ebuild:
   Stable for ia64, wrt bug #527056
