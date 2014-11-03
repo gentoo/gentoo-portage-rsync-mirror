@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-2.7.5.ebuild,v 1.5 2014/08/28 03:00:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-2.7.5.ebuild,v 1.6 2014/11/03 10:39:19 mrueg Exp $
 
 EAPI=5
 
@@ -26,8 +26,6 @@ IUSE=""
 ruby_add_rdepend ">=dev-ruby/rb-inotify-0.9.0
 	>=dev-ruby/celluloid-0.15.2"
 ruby_add_bdepend "test? ( dev-ruby/celluloid-io )"
-# Tests take more than one hour per ruby target
-RESTRICT="test"
 
 all_ruby_prepare() {
 	sed -i -e "/git/d" -e "/rb-fsevent/d" -e "/bundler/d" -e "/rspec-retry/d" ${PN}.gemspec || die

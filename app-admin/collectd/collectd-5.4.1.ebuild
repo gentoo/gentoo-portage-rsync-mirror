@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.4.1.ebuild,v 1.4 2014/11/02 07:44:26 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.4.1.ebuild,v 1.5 2014/11/03 11:00:51 titanofold Exp $
 
 EAPI="5"
 
@@ -81,7 +81,7 @@ COMMON_DEPEND="
 	collectd_plugins_oracle?		( dev-db/oracle-instantclient-basic )
 	collectd_plugins_perl?			( dev-lang/perl:=[ithreads] )
 	collectd_plugins_ping?			( net-libs/liboping )
-	collectd_plugins_postgresql?		( dev-db/postgresql-base )
+	collectd_plugins_postgresql?		( virtual/postgresql )
 	collectd_plugins_python?		( =dev-lang/python-2* )
 	collectd_plugins_routeros?		( net-libs/librouteros )
 	collectd_plugins_rrdcached?		( net-analyzer/rrdtool )

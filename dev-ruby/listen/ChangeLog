@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/listen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.36 2014/09/19 05:38:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.37 2014/11/03 10:39:19 mrueg Exp $
+
+  03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> listen-2.7.5.ebuild:
+  Unrestrict tests.
 
 *listen-0.7.3-r2 (19 Sep 2014)
 
