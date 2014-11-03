@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/launchy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/launchy/ChangeLog,v 1.4 2014/09/29 18:15:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/launchy/ChangeLog,v 1.5 2014/11/03 10:30:49 mrueg Exp $
+
+*launchy-2.4.3 (03 Nov 2014)
+
+  03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +launchy-2.4.3.ebuild:
+  Version bump.
 
 *launchy-2.4.2 (29 Sep 2014)
 

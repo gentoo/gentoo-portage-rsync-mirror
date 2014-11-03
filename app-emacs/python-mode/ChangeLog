@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.86 2014/11/01 00:14:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.87 2014/11/03 10:25:44 ago Exp $
+
+  03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> python-mode-6.1.2.ebuild:
+  Stable for amd64, wrt bug #527502
 
   01 Nov 2014; Jeroen Roovers <jer@gentoo.org> python-mode-6.1.2.ebuild:
   Stable for HPPA (bug #527502).

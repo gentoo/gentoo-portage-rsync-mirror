@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/wacomtablet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/wacomtablet/ChangeLog,v 1.23 2014/11/03 09:42:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/wacomtablet/ChangeLog,v 1.24 2014/11/03 10:21:55 mrueg Exp $
+
+  03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -wacomtablet-2.0.1.ebuild,
+  -wacomtablet-2.0.ebuild:
+  Cleanup old.
 
   03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> wacomtablet-2.0.2.ebuild:
   Stable for x86, wrt bug #527444

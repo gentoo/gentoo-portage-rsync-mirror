@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vigra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.65 2014/10/31 00:26:30 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.66 2014/11/03 10:25:18 ago Exp $
+
+  03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> vigra-1.9.0.ebuild:
+  Stable for amd64, wrt bug #526352
 
   31 Oct 2014; Matthias Maier <tamiko@gentoo.org> vigra-1.10.0.ebuild:
   install documentation into correct folder, aka fix typo
