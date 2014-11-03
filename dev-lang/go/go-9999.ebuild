@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.19 2014/08/15 00:33:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.20 2014/11/03 20:22:56 grobian Exp $
 
 EAPI=5
 
 export CTARGET=${CTARGET:-${CHOST}}
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 if [[ ${PV} = 9999 ]]; then
 	EHG_REPO_URI="https://go.googlecode.com/hg"
@@ -32,7 +32,7 @@ QA_MULTILIB_PATHS="usr/lib/go/pkg/tool/.*/.*"
 
 # The go language uses *.a files which are _NOT_ libraries and should not be
 # stripped.
-STRIP_MASK="/usr/lib/go/pkg/linux*/*.a /usr/lib/go/pkg/freebsd*/*.a"
+STRIP_MASK="/usr/lib/go/pkg/linux*/*.a /usr/lib/go/pkg/freebsd*/*.a /usr/lib/go/pkg/darwin*/*.a"
 
 if [[ ${PV} != 9999 ]]; then
 	S="${WORKDIR}"/go
@@ -55,6 +55,7 @@ src_compile()
 	then
 		export GOARM=5
 	fi
+	tc-export CC
 
 	cd src
 	./make.bash || die "build failed"

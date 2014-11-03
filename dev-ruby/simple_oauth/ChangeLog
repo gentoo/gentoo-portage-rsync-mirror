@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/simple_oauth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/ChangeLog,v 1.14 2014/10/31 07:06:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/ChangeLog,v 1.15 2014/11/03 20:12:45 mrueg Exp $
+
+  03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> simple_oauth-0.2.0-r1.ebuild,
+  simple_oauth-0.3.0.ebuild:
+  Drop jruby.
 
   31 Oct 2014; Hans de Graaff <graaff@gentoo.org>
   +simple_oauth-0.2.0-r1.ebuild:

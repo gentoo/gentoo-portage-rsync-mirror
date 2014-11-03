@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-2.7.0-r1.ebuild,v 1.2 2013/12/22 18:41:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-2.7.0-r1.ebuild,v 1.3 2014/11/03 20:09:00 mrueg Exp $
 
 EAPI=5
 # no longer compatible with ruby 1.8.

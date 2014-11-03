@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/net-http-digest_auth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-digest_auth/ChangeLog,v 1.13 2014/08/06 07:44:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-digest_auth/ChangeLog,v 1.14 2014/11/03 20:09:20 mrueg Exp $
+
+  03 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  net-http-digest_auth-1.4-r1.ebuild, net-http-digest_auth-1.4.ebuild:
+  Drop jruby.
 
   06 Aug 2014; Manuel Rüger <mrueg@gentoo.org>
   net-http-digest_auth-1.4-r1.ebuild:
