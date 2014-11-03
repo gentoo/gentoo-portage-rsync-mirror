@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.61 2014/11/03 01:30:36 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.9-r1.ebuild,v 1.1 2014/11/03 01:30:36 tamiko Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ S="${WORKDIR}/${P%_rc*}"
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="0/${PV}"
 IUSE="audit avahi +caps firewalld fuse iscsi +libvirtd lvm lxc +macvtap nfs \
 	nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network wireshark-plugins xen \
@@ -435,5 +435,18 @@ pkg_postinst() {
 	if use caps && use qemu; then
 		elog "libvirt will now start qemu/kvm VMs with non-root privileges."
 		elog "Ensure any resources your VMs use are accessible by qemu:qemu"
+	fi
+
+	if [[ -z "${REPLACING_VERSIONS}" ]]; then
+		elog ""
+		elog "The systemd service-file configuration under /etc/sysconfig has"
+		elog "been removed. Please use"
+		elog "    /etc/systemd/system/libvirt.d/00gentoo.conf"
+		elog "to control the '--listen' parameter for libvirtd. The configuration"
+		elog "for the libvirt-guests.service is now found under"
+		elog "    /etc/libvirt/libvirt-guests.conf"
+		elog "The openrc configuration has not been changed. Thus no action is"
+		elog "required for the openrc service manager."
+		elog ""
 	fi
 }

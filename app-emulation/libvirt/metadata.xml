@@ -87,5 +87,8 @@
 	</flag>
     <flag name="firewalld">DBus interface to iptables/ebtables allowing
 		for better runtime management of your firewall.</flag>
+	<flag name="wireshark-plugins">
+		Build the <pkg>net-analyzer/wireshark</pkg> plugin for the Libvirt RPC protocol
+	</flag>
   </use>
 </pkgmetadata>
