@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.9-r1.ebuild,v 1.2 2014/11/03 01:38:09 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.9-r1.ebuild,v 1.3 2014/11/03 05:26:47 patrick Exp $
 
 EAPI=5
 
@@ -420,7 +420,6 @@ pkg_postinst() {
 	if [[ -e "${ROOT}"/etc/libvirt/qemu/networks/default.xml ]]; then
 		touch "${ROOT}"/etc/libvirt/qemu/networks/default.xml
 	fi
-
 
 	if ! use policykit; then
 		elog "To allow normal users to connect to libvirtd you must change the"
