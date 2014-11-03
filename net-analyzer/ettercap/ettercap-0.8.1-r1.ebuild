@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.8.1-r1.ebuild,v 1.2 2014/11/02 03:46:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.8.1-r1.ebuild,v 1.3 2014/11/03 20:50:07 zerochaos Exp $
 
 EAPI=5
 
@@ -15,7 +15,6 @@ SRC_URI="https://github.com/Ettercap/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~sparc ~x86 ~x86-fbsd"
-#IUSE="doc gtk ipv6 ncurses +plugins test"
 IUSE="gtk ipv6 ncurses +plugins"
 
 RDEPEND="dev-libs/libbsd
@@ -42,8 +41,6 @@ RDEPEND="dev-libs/libbsd
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	virtual/yacc"
-	#doc? ( app-text/ghostscript-gpl
-	#	sys-apps/groff )
 
 src_prepare() {
 	sed -i "s:Release:Release Gentoo:" CMakeLists.txt || die
@@ -61,10 +58,6 @@ src_configure() {
 	)
 		#right now we only support gtk2, but ettercap also supports gtk3
 		#do we care? do we want to support both?
-
-		#we can build the pdf docs, but they don't actually get installed
-		#plus, does anyone need this at all???
-		#$(cmake-utils_use_enable doc PDF_DOCS)
 
 		#we want to enable testing but it fails right now
 		#we want to disable the bundled crap, but we are missing at least "libcheck"
