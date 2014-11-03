@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.128 2014/10/17 06:07:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.129 2014/11/03 11:01:46 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> rsyslog-8.4.2.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   17 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> -rsyslog-7.4.4.ebuild,
   -rsyslog-8.4.1.ebuild, -files/7-stable/50-default.conf,

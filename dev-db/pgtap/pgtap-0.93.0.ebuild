@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgtap/pgtap-0.93.0.ebuild,v 1.2 2013/05/01 10:32:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgtap/pgtap-0.93.0.ebuild,v 1.3 2014/11/03 11:29:51 titanofold Exp $
 
 EAPI=5
 inherit eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
-DEPEND=">=dev-db/postgresql-base-8.4
+DEPEND=">=virtual/postgresql-8.4
 		dev-perl/TAP-Parser-SourceHandler-pgTAP
 "
 RDEPEND="${DEPEND}"

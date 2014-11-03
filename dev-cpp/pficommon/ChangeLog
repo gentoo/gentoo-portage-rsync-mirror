@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/pficommon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pficommon/ChangeLog,v 1.2 2012/07/08 19:56:24 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pficommon/ChangeLog,v 1.3 2014/11/03 11:19:22 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  pficommon-1.3.1.0.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   08 Jul 2012; Naohiro Aota <naota@gentoo.org>
   +files/pficommon-1.3.1.0-gcc-4.7.patch, pficommon-1.3.1.0.ebuild:

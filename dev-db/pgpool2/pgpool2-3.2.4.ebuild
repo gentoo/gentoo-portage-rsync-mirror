@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.2.4.ebuild,v 1.2 2013/05/10 08:21:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.2.4.ebuild,v 1.3 2014/11/03 11:29:08 titanofold Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="memcached pam ssl static-libs"
 
 RDEPEND="
-	dev-db/postgresql-base
+	virtual/postgresql
 	memcached? ( dev-libs/libmemcached )
 	pam? ( sys-auth/pambase )
 	ssl? ( dev-libs/openssl )

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/texlive-formatsextra-2014.ebuild,v 1.1 2014/11/03 06:48:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/texlive-formatsextra-2014.ebuild,v 1.2 2014/11/03 11:08:40 aballier Exp $
 
 EAPI="5"
 
@@ -17,5 +17,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~x86 ~amd64-fbsd 
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2014
 >=dev-texlive/texlive-latex-2008
+>=app-text/texlive-core-2014[xetex]
 "
 RDEPEND="${DEPEND} "

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.5.0.ebuild,v 1.1 2013/08/25 19:54:39 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.5.0.ebuild,v 1.2 2014/11/03 11:13:23 titanofold Exp $
 
 EAPI=5
 WANT_AUTOMAKE=none
@@ -25,7 +25,7 @@ RDEPEND="sys-libs/e2fsprogs-libs
 	ssl? ( dev-libs/openssl )
 	mysql? ( virtual/mysql )
 	sqlite? ( dev-db/sqlite:3 )
-	postgres? ( dev-db/postgresql-server )
+	postgres? ( virtual/postgresql[server] )
 	pcre? ( dev-libs/libpcre )
 	pam? ( virtual/pam )
 "

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.146 2014/10/12 14:56:00 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.147 2014/11/03 11:14:37 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  akonadi-server-1.11.0.ebuild, akonadi-server-1.12.1-r1.ebuild,
+  akonadi-server-1.13.0.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
   akonadi-server-1.12.1-r1.ebuild:

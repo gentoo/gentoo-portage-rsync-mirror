@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1031 2014/11/01 07:56:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1032 2014/11/03 11:22:07 ago Exp $
+
+  03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> gcc-4.8.3.ebuild:
+  Stable for x86, wrt bug #516152
 
 *gcc-4.9.2 (01 Nov 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sagan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.26 2014/02/24 01:39:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.27 2014/11/03 11:02:34 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  sagan-0.2.2_p2-r2.ebuild, sagan-0.2.3.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> sagan-0.2.3.ebuild:
   x86 stable wrt bug #496260

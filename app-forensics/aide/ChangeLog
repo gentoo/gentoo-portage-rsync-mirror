@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/aide
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.62 2014/11/02 08:06:56 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.63 2014/11/03 11:09:03 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> aide-0.13.1.ebuild,
+  aide-0.13.1-r3.ebuild, aide-0.13.1-r5.ebuild, aide-0.14.2.ebuild,
+  aide-0.15.1.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> aide-0.14.2.ebuild,
   aide-0.15.1.ebuild:

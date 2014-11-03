@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/opendbx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.39 2014/03/15 13:51:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.40 2014/11/03 11:24:56 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> opendbx-1.4.5.ebuild,
+  opendbx-1.4.6.ebuild, opendbx-1.5.0.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   15 Mar 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
   Add Alice Ferrazzi as maintainer. Proxied by me.

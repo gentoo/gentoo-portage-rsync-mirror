@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pgmemcache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmemcache/ChangeLog,v 1.7 2014/09/16 02:53:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmemcache/ChangeLog,v 1.8 2014/11/03 11:28:17 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  pgmemcache-2.0.4.ebuild, pgmemcache-2.0.6.ebuild, pgmemcache-2.1.1.ebuild,
+  pgmemcache-2.1.2.ebuild, pgmemcache-2.2.0.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
 *pgmemcache-2.2.0 (16 Sep 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.12.ebuild,v 1.9 2013/05/20 14:20:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.12.ebuild,v 1.10 2014/11/03 11:04:55 titanofold Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -24,7 +24,7 @@ IUSE="acl bacula-clientonly bacula-nodir bacula-nosd ipv6 logwatch mysql postgre
 DEPEND="
 	dev-libs/gmp
 	!bacula-clientonly? (
-		postgres? ( dev-db/postgresql-base[threads] )
+		postgres? ( virtual/postgresql[threads] )
 		mysql? ( virtual/mysql )
 		sqlite3? ( dev-db/sqlite:3 )
 		!bacula-nodir? ( virtual/mta )

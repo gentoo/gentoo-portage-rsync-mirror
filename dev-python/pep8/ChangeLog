@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pep8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/ChangeLog,v 1.34 2014/07/24 13:20:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/ChangeLog,v 1.36 2014/11/03 11:21:01 ago Exp $
+
+  03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pep8-1.5.7.ebuild:
+  Stable for x86, wrt bug #525508
+
+  03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pep8-1.5.7.ebuild:
+  Stable for amd64, wrt bug #525508
 
   24 Jul 2014; Ian Delaney <idella4@gentoo.org> pep8-1.4.5.ebuild:
   drop py2.6 add py3.4 support

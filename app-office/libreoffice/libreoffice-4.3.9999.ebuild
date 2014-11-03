@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.9999.ebuild,v 1.3 2014/10/24 21:05:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.9999.ebuild,v 1.4 2014/11/03 11:16:53 titanofold Exp $
 
 EAPI=5
 
@@ -176,7 +176,7 @@ COMMON_DEPEND="
 		virtual/glu
 		virtual/opengl
 	)
-	postgres? ( >=dev-db/postgresql-base-9.0[kerberos] )
+	postgres? ( >=virtual/postgresql-9.0[kerberos] )
 	telepathy? (
 		dev-libs/glib:2
 		>=net-libs/telepathy-glib-0.18.0
@@ -281,7 +281,7 @@ pkg_pretend() {
 
 	# Ensure pg version but we have to be sure the pg is installed (first
 	# install on clean system)
-	if use postgres && has_version dev-db/postgresql-base; then
+	if use postgres && has_version virtual/postgresql; then
 		 pgslot=$(postgresql-config show)
 		 if [[ ${pgslot//.} < 90 ]] ; then
 			eerror "PostgreSQL slot must be set to 9.0 or higher."

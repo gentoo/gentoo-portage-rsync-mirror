@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pgpool2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.23 2014/05/06 09:31:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.24 2014/11/03 11:29:08 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> pgpool2-3.2.3.ebuild,
+  pgpool2-3.2.4.ebuild, pgpool2-3.2.5.ebuild, pgpool2-3.3.1.ebuild,
+  pgpool2-3.3.2.ebuild, pgpool2-3.3.3.ebuild, pgpool2-9999.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
 *pgpool2-3.3.3 (06 May 2014)
 

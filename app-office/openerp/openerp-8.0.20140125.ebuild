@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-8.0.20140125.ebuild,v 1.1 2014/01/25 14:16:09 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-8.0.20140125.ebuild,v 1.2 2014/11/03 11:17:51 titanofold Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ KEYWORDS=""
 IUSE="+postgres ldap ssl"
 
 CDEPEND="!app-office/openerp-web
-	postgres? ( dev-db/postgresql-server )
+	postgres? ( virtual/postgresql[server] )
 	dev-python/psutil[${PYTHON_USEDEP}]
 	dev-python/docutils[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]

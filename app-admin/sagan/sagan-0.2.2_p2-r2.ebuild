@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.2_p2-r2.ebuild,v 1.4 2013/03/30 14:57:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.2_p2-r2.ebuild,v 1.5 2014/11/03 11:02:34 titanofold Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=1
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/libpcre
 	smtp? ( net-libs/libesmtp )
 	pcap? ( net-libs/libpcap )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	prelude? ( dev-libs/libprelude )
 	lognorm? ( dev-libs/liblognorm )
 	libdnet? ( dev-libs/libdnet )

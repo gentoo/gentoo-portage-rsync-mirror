@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22-r3.ebuild,v 1.7 2014/08/01 11:25:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22-r3.ebuild,v 1.8 2014/11/03 11:08:09 titanofold Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -30,7 +30,7 @@ RDEPEND="
 	>=dev-libs/openssl-0.9.6
 	>=media-libs/audiofile-0.2.3
 	gpm? ( >=sys-libs/gpm-1.19.6 )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	ldap? ( net-nds/openldap )
 	nas? ( media-libs/nas )
 	X? ( $X_DEPEND !Xaw3d? ( !neXt? ( x11-libs/libXaw ) ) )

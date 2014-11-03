@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.4.5.ebuild,v 1.6 2012/11/25 14:27:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.4.5.ebuild,v 1.7 2014/11/03 11:24:56 titanofold Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 x86"
 IUSE="bindist firebird +mysql oracle postgres sqlite sqlite3"
 
 DEPEND="mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	sqlite? ( <dev-db/sqlite-3 )
 	sqlite3? ( =dev-db/sqlite-3* )
 	oracle? ( dev-db/oracle-instantclient-basic )

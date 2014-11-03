@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/libzdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/ChangeLog,v 1.19 2014/06/07 19:13:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/ChangeLog,v 1.20 2014/11/03 11:23:10 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> libzdb-2.11.1.ebuild,
+  libzdb-2.11.2.ebuild, libzdb-2.11.3.ebuild, libzdb-2.12.ebuild,
+  libzdb-3.0.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> libzdb-2.12.ebuild:
   Stable for x86, wrt bug #507682

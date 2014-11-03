@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-super-smack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/ChangeLog,v 1.21 2014/08/10 20:01:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/ChangeLog,v 1.22 2014/11/03 11:24:08 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  mysql-super-smack-1.3-r2.ebuild, mysql-super-smack-1.3-r3.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   mysql-super-smack-1.3-r2.ebuild, mysql-super-smack-1.3-r3.ebuild:

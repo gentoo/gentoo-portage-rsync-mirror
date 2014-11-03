@@ -1,6 +1,10 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.112 2014/07/25 19:29:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.113 2014/11/03 11:15:35 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> calligra-2.7.5.ebuild,
+  calligra-2.8.3.ebuild, calligra-2.8.5.ebuild, calligra-9999.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
 *calligra-2.8.5 (25 Jul 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/onak/onak-0.4.0.ebuild,v 1.1 2011/11/07 23:33:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/onak/onak-0.4.0.ebuild,v 1.2 2014/11/03 11:06:41 titanofold Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="berkdb postgres"
 
 DEPEND="berkdb? ( >=sys-libs/db-4 )
-	postgres? ( dev-db/postgresql-server )"
+	postgres? ( virtual/postgresql[server] )"
 
 src_prepare() {
 	# Merged upstream

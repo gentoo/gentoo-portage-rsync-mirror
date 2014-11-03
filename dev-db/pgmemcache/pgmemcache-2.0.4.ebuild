@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmemcache/pgmemcache-2.0.4.ebuild,v 1.2 2010/11/30 09:25:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmemcache/pgmemcache-2.0.4.ebuild,v 1.3 2014/11/03 11:28:17 titanofold Exp $
 
 DESCRIPTION="A PostgreSQL API based on libmemcached to interface with memcached"
 HOMEPAGE="http://pgfoundry.org/projects/pgmemcache"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-db/postgresql-base-8.4
+DEPEND=">=virtual/postgresql-8.4
 	>=dev-libs/libmemcached-0.39"
 RDEPEND="${DEPEND}"
 

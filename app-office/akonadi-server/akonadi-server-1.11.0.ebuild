@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.11.0.ebuild,v 1.6 2014/04/20 11:18:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.11.0.ebuild,v 1.7 2014/11/03 11:14:37 titanofold Exp $
 
 EAPI=5
 
@@ -56,7 +56,7 @@ DEPEND="${CDEPEND}
 	test? ( sys-apps/dbus )
 "
 RDEPEND="${CDEPEND}
-	postgres? ( dev-db/postgresql-server )
+	postgres? ( virtual/postgresql[server] )
 "
 
 pkg_setup() {

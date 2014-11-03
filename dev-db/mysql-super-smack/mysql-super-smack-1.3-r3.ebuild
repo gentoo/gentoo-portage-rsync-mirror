@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.3-r3.ebuild,v 1.2 2014/08/10 20:01:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.3-r3.ebuild,v 1.3 2014/11/03 11:24:08 titanofold Exp $
 
 EAPI=5
 WANT_AUTOMAKE="1.13"
@@ -22,7 +22,7 @@ IUSE="+mysql postgres"
 REQUIRED_USE="|| ( mysql postgres )"
 
 DEPEND="mysql? ( virtual/mysql )
-		postgres? ( dev-db/postgresql-server )"
+		postgres? ( virtual/postgresql[server] )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

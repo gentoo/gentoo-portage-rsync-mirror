@@ -1,11 +1,12 @@
 DEFINED_PHASES=compile install
-DEPEND=berkdb? ( =sys-libs/db-4* ) postgres? ( dev-db/postgresql-server )
+DEPEND=berkdb? ( =sys-libs/db-4* ) postgres? ( virtual/postgresql[server] )
 DESCRIPTION=onak is an OpenPGP keyserver
+EAPI=2
 HOMEPAGE=http://www.earth.li/projectpurple/progs/onak.html
 IUSE=berkdb postgres
 KEYWORDS=~x86
 LICENSE=GPL-2
-RDEPEND=berkdb? ( =sys-libs/db-4* ) postgres? ( dev-db/postgresql-server )
+RDEPEND=berkdb? ( =sys-libs/db-4* ) postgres? ( virtual/postgresql[server] )
 SLOT=0
 SRC_URI=http://www.earth.li/projectpurple/files/onak-0.3.3.tar.gz
-_md5_=0c373291787dcf0b29bf290c726ae14b
+_md5_=49b998c1160566cdb673b185f0d42302

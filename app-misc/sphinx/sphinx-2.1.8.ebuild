@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-2.1.8.ebuild,v 1.2 2014/07/21 19:24:15 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-2.1.8.ebuild,v 1.3 2014/11/03 11:10:26 titanofold Exp $
 
 EAPI=5
 inherit eutils autotools toolchain-funcs
@@ -18,7 +18,7 @@ KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-lin
 IUSE="debug id64 mysql odbc postgres stemmer syslog test xml"
 
 RDEPEND="mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	odbc? ( dev-db/unixODBC )
 	stemmer? ( dev-libs/snowball-stemmer )
 	xml? ( dev-libs/expat )
