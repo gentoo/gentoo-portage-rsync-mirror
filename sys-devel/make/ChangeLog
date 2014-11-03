@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.125 2014/10/20 20:28:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.127 2014/11/03 06:05:56 vapier Exp $
+
+  03 Nov 2014; Mike Frysinger <vapier@gentoo.org> make-4.0-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
+
+  03 Nov 2014; Mike Frysinger <vapier@gentoo.org> make-3.80-r4.ebuild:
+  Update SRC_URI to use GNU mirror.
+
+  03 Nov 2014; Mike Frysinger <vapier@gentoo.org> make-3.80-r4.ebuild:
+  Update SRC_URI to use GNU mirror.
 
 *make-4.1-r1 (20 Oct 2014)
 
