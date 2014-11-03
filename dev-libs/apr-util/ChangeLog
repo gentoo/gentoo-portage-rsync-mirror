@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.211 2014/09/22 07:05:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.212 2014/11/03 11:41:44 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> apr-util-1.5.2.ebuild,
+  apr-util-1.5.3-r2.ebuild, apr-util-1.5.4.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
 *apr-util-1.5.4 (22 Sep 2014)
 

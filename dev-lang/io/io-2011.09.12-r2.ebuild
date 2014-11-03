@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2011.09.12-r2.ebuild,v 1.3 2014/08/10 20:28:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2011.09.12-r2.ebuild,v 1.4 2014/11/03 11:38:33 titanofold Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ DEPEND="clutter? ( media-libs/clutter )
 		ogg? ( media-libs/libogg )
 		opengl? ( virtual/opengl )
 		pcre? ( dev-libs/libpcre )
-		postgres? ( dev-db/postgresql-server )
+		postgres? ( virtual/postgresql[server] )
 		readline? ( sys-libs/readline )
 		sndfile? ( media-libs/libsndfile )
 		sqlite3? ( >=dev-db/sqlite-3.0.0 )

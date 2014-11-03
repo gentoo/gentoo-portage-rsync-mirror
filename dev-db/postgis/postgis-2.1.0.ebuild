@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.1.0.ebuild,v 1.1 2013/08/18 19:18:15 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.1.0.ebuild,v 1.2 2014/11/03 11:32:12 titanofold Exp $
 
 EAPI="5"
 POSTGRES_COMPAT=( 9.{0,1,2,3} )
@@ -21,10 +21,10 @@ IUSE="doc gtk"
 
 RDEPEND="
 		|| (
-			dev-db/postgresql-server:9.3
-			dev-db/postgresql-server:9.2
-			dev-db/postgresql-server:9.1
-			dev-db/postgresql-server:9.0
+			virtual/postgresql:9.3[server]
+			virtual/postgresql:9.2[server]
+			virtual/postgresql:9.1[server]
+			virtual/postgresql:9.0[server]
 		)
 		dev-libs/json-c
 		dev-libs/libxml2:2

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.29.ebuild,v 1.11 2014/10/10 18:04:18 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.29.ebuild,v 1.12 2014/11/03 11:40:17 titanofold Exp $
 
 EAPI=5
 
@@ -124,7 +124,7 @@ DEPEND="
 	nls? ( sys-devel/gettext )
 	oci8-instant-client? ( dev-db/oracle-instantclient-basic )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	qdbm? ( dev-db/qdbm )
 	readline? ( sys-libs/readline )
 	recode? ( app-text/recode )
@@ -793,7 +793,7 @@ pkg_postinst() {
 		fi
 	done
 
-	elog "Make sure that PHP_TARGETS in /etc/portage/make.conf includes php${SLOT/./-} in order"
+	elog "Make sure that PHP_TARGETS in /etc/make.conf includes php${SLOT/./-} in order"
 	elog "to compile extensions for the ${SLOT} ABI"
 	elog
 	if ! use readline && use cli ; then
@@ -803,7 +803,7 @@ pkg_postinst() {
 	elog
 	elog "This ebuild installed a version of php.ini based on php.ini-${PHP_INI_VERSION} version."
 	elog "You can chose which version of php.ini to install by default by setting PHP_INI_VERSION to either"
-	elog "'production' or 'development' in /etc/portage/make.conf"
+	elog "'production' or 'development' in /etc/make.conf"
 	ewarn "Both versions of php.ini can be found in /usr/share/doc/${PF}"
 
 	elog

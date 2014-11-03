@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/psqlodbc/psqlodbc-09.01.0200.ebuild,v 1.1 2012/11/28 20:55:25 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/psqlodbc/psqlodbc-09.01.0200.ebuild,v 1.2 2014/11/03 11:33:01 titanofold Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ LICENSE="LGPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc iodbc ssl threads unicode"
 
-DEPEND="dev-db/postgresql-base:${PGSLOT}
+DEPEND="virtual/postgresql:${PGSLOT}
 		!iodbc? ( dev-db/unixODBC )
 		iodbc? ( dev-db/libiodbc )
 		ssl? ( dev-libs/openssl )

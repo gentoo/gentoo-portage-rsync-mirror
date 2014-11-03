@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.107 2014/10/13 08:05:53 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.108 2014/11/03 11:37:46 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> tora-2.1.3-r3.ebuild,
+  tora-9999.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   13 Oct 2014; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Add new maintainer and proxy maintainers herd

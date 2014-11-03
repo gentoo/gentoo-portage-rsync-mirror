@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libexplain
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.32 2014/10/26 13:22:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.33 2014/11/03 11:57:10 jlec Exp $
+
+  03 Nov 2014; Justin Lecher <jlec@gentoo.org> libexplain-1.4.ebuild:
+  Always build docs, #527992
 
   26 Oct 2014; Justin Lecher <jlec@gentoo.org> libexplain-1.4.ebuild:
   Restrict test as they are suggestions for improvements, #526896

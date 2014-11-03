@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libhome
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.14 2012/12/15 18:05:13 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.15 2014/11/03 11:44:13 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> libhome-0.10.2.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   15 Dec 2012; Julian Ospald <hasufell@gentoo.org>
   -files/libhome-0.10.1-Makefile.patch, files/libhome-0.10.2-Makefile.patch:

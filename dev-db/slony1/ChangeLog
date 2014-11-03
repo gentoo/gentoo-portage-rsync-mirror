@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/slony1
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.49 2014/07/24 06:29:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.50 2014/11/03 11:35:19 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> slony1-2.1.3.ebuild,
+  slony1-2.1.4.ebuild, slony1-2.2.0.ebuild, slony1-2.2.1.ebuild,
+  slony1-2.2.2.ebuild, slony1-2.2.3.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
 *slony1-2.2.3 (24 Jul 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-4.0.1.ebuild,v 1.11 2014/08/10 20:37:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-4.0.1.ebuild,v 1.12 2014/11/03 11:45:32 titanofold Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="doc static-libs"
 
-RDEPEND="dev-db/postgresql-base"
+RDEPEND="virtual/postgresql"
 DEPEND="${PYTHON_DEPS}
 		${RDEPEND}
 "

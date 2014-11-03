@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-4.1.1-r1.ebuild,v 1.2 2014/08/10 20:02:22 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-4.1.1-r1.ebuild,v 1.3 2014/11/03 11:34:15 titanofold Exp $
 
 EAPI=5
 
@@ -21,10 +21,10 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 DEPEND="|| (
-	dev-db/postgresql-base:9.3
-	dev-db/postgresql-base:9.2
-	dev-db/postgresql-base:9.1
-	dev-db/postgresql-base:9.0
+	virtual/postgresql:9.3
+	virtual/postgresql:9.2
+	virtual/postgresql:9.1
+	virtual/postgresql:9.0
 )"
 
 RDEPEND="${DEPEND}"

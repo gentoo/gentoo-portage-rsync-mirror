@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r5.ebuild,v 1.3 2014/03/12 05:25:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r5.ebuild,v 1.4 2014/11/03 11:49:44 titanofold Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 RDEPEND=">=dev-lang/lua-5.1
 		mysql? ( virtual/mysql )
-		postgres? ( dev-db/postgresql-base )
+		postgres? ( virtual/postgresql )
 		sqlite? ( >=dev-db/sqlite-3 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

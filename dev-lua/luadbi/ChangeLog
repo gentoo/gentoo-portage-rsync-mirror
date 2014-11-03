@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luadbi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.24 2014/03/18 02:55:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.25 2014/11/03 11:49:44 titanofold Exp $
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> luadbi-0.5-r5.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
   18 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -files/0.5-postgres-path.patch,
   -luadbi-0.5-r3.ebuild:

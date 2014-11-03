@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flock/File-Flock-2014.10.0.ebuild,v 1.3 2014/10/16 01:31:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flock/File-Flock-2014.10.0.ebuild,v 1.4 2014/11/03 11:49:32 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="flock() wrapper.  Auto-create locks"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="test"
 
 SRC_TEST="do"
