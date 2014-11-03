@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.3.2.ebuild,v 1.3 2014/10/24 21:42:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.3.2.ebuild,v 1.4 2014/11/03 02:59:50 pesa Exp $
 
 EAPI=5
 
@@ -43,8 +43,13 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="^^ ( qt4 qt5 )"
 
 src_prepare() {
+	# fix plugins libdir
 	sed -i -e "/destdirPrefix/ s:/lib:/$(get_libdir):" \
 		src/plugins/plugins.pri || die
+
+	# disable tests that require nodejs (bug 527652)
+	sed -i -e 's/!haveNodeJs()/true/' \
+		tests/auto/blackbox/tst_blackbox.cpp || die
 
 	if ! use test; then
 		sed -i -e '/SUBDIRS = auto/d' \
