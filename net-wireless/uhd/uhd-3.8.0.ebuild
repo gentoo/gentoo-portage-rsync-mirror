@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/uhd-3.8.0.ebuild,v 1.1 2014/10/29 16:54:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/uhd-3.8.0.ebuild,v 1.2 2014/11/03 02:19:50 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/EttusResearch/uhd/archive/release_00$(get_version_co
 	http://files.ettus.com/binaries/images/${image_version}.tar.gz"
 #https://github.com/EttusResearch/UHD-Mirror/tags
 #http://files.ettus.com/binaries/images/
-KEYWORDS="~amd64 ~arm ~x86"
+#KEYWORDS="~amd64 ~arm ~x86"
 S="${WORKDIR}"/uhd-release_00$(get_version_component_range 1)_00$(get_version_component_range 2)_00$(get_version_component_range 3)/host
 
 LICENSE="GPL-3"

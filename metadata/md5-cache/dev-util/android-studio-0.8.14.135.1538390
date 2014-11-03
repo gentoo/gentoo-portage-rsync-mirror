@@ -1,0 +1,14 @@
+DEFINED_PHASES=install
+DEPEND=app-arch/zip
+DESCRIPTION=A new Android development environment based on IntelliJ IDEA
+EAPI=5
+HOMEPAGE=http://developer.android.com/sdk/installing/studio.html
+IUSE=selinux
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=>=virtual/jdk-1.7 selinux? ( sec-policy/selinux-android )
+RESTRICT=strip
+SLOT=0
+SRC_URI=http://dl.google.com/dl/android/studio/ide-zips/0.8.14/android-studio-ide-135.1538390-linux.zip
+_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=e352eeae7a5ae16fecbc554d99f9c94e
