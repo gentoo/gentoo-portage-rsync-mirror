@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.4.0.ebuild,v 1.1 2014/10/20 02:15:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.4.0.ebuild,v 1.2 2014/11/04 15:04:44 mgorny Exp $
 
 EAPI=5
 
@@ -19,19 +19,20 @@ SLOT="0/$(get_version_component_range 1-2 ${PV})"
 #KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 KEYWORDS=""
 
-IUSE="bzip2 doc +jit ncurses sandbox shadowstack sqlite sse2 tk"
+IUSE="bzip2 doc gdbm +jit ncurses sandbox shadowstack sqlite sse2 tk"
 
-RDEPEND=">=sys-libs/zlib-1.1.3
-	virtual/libffi
-	virtual/libintl
-	dev-libs/expat
-	dev-libs/openssl
-	bzip2? ( app-arch/bzip2 )
-	ncurses? ( sys-libs/ncurses )
-	sqlite? ( dev-db/sqlite:3 )
+RDEPEND=">=sys-libs/zlib-1.1.3:0=
+	virtual/libffi:0=
+	virtual/libintl:0=
+	dev-libs/expat:0=
+	dev-libs/openssl:0=
+	bzip2? ( app-arch/bzip2:0= )
+	gdbm? ( sys-libs/gdbm:0= )
+	ncurses? ( sys-libs/ncurses:5= )
+	sqlite? ( dev-db/sqlite:3= )
 	tk? (
-		dev-lang/tk:0
-		dev-tcltk/tix
+		dev-lang/tk:0=
+		dev-tcltk/tix:0=
 	)
 	!dev-python/pypy-bin:0"
 DEPEND="${RDEPEND}
@@ -139,6 +140,10 @@ src_install() {
 	dosym ../$(get_libdir)/pypy/pypy-c /usr/bin/pypy
 	dodoc README.rst
 
+	if ! use gdbm; then
+		rm -r "${ED%/}${INSDESTTREE}"/lib_pypy/gdbm.py \
+			"${ED%/}${INSDESTTREE}"/lib-python/*2.7/test/test_gdbm.py || die
+	fi
 	if ! use sqlite; then
 		rm -r "${ED%/}${INSDESTTREE}"/lib-python/*2.7/sqlite3 \
 			"${ED%/}${INSDESTTREE}"/lib_pypy/_sqlite3.py \
@@ -167,8 +172,12 @@ src_install() {
 		|| die "Generation of Grammar and PatternGrammar pickles failed"
 
 	# Generate cffi cache
+# Please keep in sync with pypy/tool/release/package.py!
 	"${PYTHON}" -c "import _curses" || die "Failed to import _curses (cffi)"
 	"${PYTHON}" -c "import syslog" || die "Failed to import syslog (cffi)"
+	if use gdbm; then
+		"${PYTHON}" -c "import gdbm" || die "Failed to import gdbm (cffi)"
+	fi
 	if use sqlite; then
 		"${PYTHON}" -c "import _sqlite3" || die "Failed to import _sqlite3 (cffi)"
 	fi
