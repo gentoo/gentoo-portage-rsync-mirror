@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.92 2014/11/03 13:37:41 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.93 2014/11/04 04:14:08 patrick Exp $
+
+  04 Nov 2014; Patrick Lauer <patrick@gentoo.org> -eggdrop-1.6.18-r3.ebuild,
+  -eggdrop-1.6.19.ebuild:
+  Drop old for more repoman happy
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   eggdrop-1.6.18-r3.ebuild, eggdrop-1.6.19.ebuild, eggdrop-1.6.21.ebuild:

@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.214 2014/04/06 14:59:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.216 2014/11/04 04:02:55 radhermit Exp $
+
+  04 Nov 2014; Tim Harder <radhermit@gentoo.org> -swig-1.3.40-r1.ebuild,
+  -swig-2.0.4-r1.ebuild, -swig-2.0.8.ebuild, -swig-2.0.10.ebuild,
+  -swig-2.0.11.ebuild, -files/swig-2.0.4-typedef.patch:
+  Remove old.
+
+*swig-3.0.2 (04 Nov 2014)
+
+  04 Nov 2014; Tim Harder <radhermit@gentoo.org> +swig-3.0.2.ebuild:
+  Version bump (bug #508254).
 
   06 Apr 2014; Mike Frysinger <vapier@gentoo.org> swig-2.0.10.ebuild,
   swig-2.0.11.ebuild, swig-2.0.12.ebuild, swig-2.0.9.ebuild:
