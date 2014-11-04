@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-9999.ebuild,v 1.2 2014/11/04 03:23:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-9999.ebuild,v 1.3 2014/11/04 03:36:19 vapier Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ else
 fi
 
 DESCRIPTION="A loop generator for scanning polyhedra"
-HOMEPAGE="http://www.bastoul.net/cloog/index.php"
+HOMEPAGE="http://www.bastoul.net/cloog/"
 
 LICENSE="LGPL-2.1"
 SLOT="0/4"

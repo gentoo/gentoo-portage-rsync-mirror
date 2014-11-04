@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.1.ebuild,v 1.11 2014/11/04 03:23:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.1.ebuild,v 1.12 2014/11/04 03:36:19 vapier Exp $
 
 EAPI="5"
 
 inherit eutils multilib-minimal
 
 DESCRIPTION="A loop generator for scanning polyhedra"
-HOMEPAGE="http://www.bastoul.net/cloog/index.php"
+HOMEPAGE="http://www.bastoul.net/cloog/"
 SRC_URI="http://www.bastoul.net/cloog/pages/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
