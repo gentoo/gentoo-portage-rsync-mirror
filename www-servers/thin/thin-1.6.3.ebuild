@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.6.3.ebuild,v 1.1 2014/10/06 15:33:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.6.3.ebuild,v 1.2 2014/11/04 18:51:01 graaff Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="https://github.com/macournoyer/thin/archive/v${PV}.tar.gz -> ${P}.tar.g
 LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE=""
+IUSE="doc test"
 
 DEPEND="${DEPEND}
 	dev-util/ragel"
@@ -59,6 +59,7 @@ all_ruby_prepare() {
 		spec/daemonizing_spec.rb || die
 
 	# nasty but too complex to fix up for now :(
+	use doc || rm tasks/rdoc.rake
 	use test || rm tasks/spec.rake
 }
 

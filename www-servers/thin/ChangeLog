@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.32 2014/10/06 15:33:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.33 2014/11/04 18:51:01 graaff Exp $
+
+  04 Nov 2014; Hans de Graaff <graaff@gentoo.org> thin-1.6.3.ebuild:
+  Avoid a dependency on rdoc with USE=-doc, fixing 528046.
 
 *thin-1.6.3 (06 Oct 2014)
 
