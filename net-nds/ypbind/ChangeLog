@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.93 2014/11/02 09:01:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.94 2014/11/04 09:21:47 ago Exp $
+
+  04 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ypbind-1.37.2.ebuild:
+  Stable for sparc, wrt bug #525064
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ypbind-1.37.2.ebuild:
   Stable for alpha, wrt bug #525064

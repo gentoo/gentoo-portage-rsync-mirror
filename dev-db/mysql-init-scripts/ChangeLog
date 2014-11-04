@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-init-scripts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.45 2014/11/03 10:25:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.46 2014/11/04 09:28:09 ago Exp $
+
+  04 Nov 2014; Agostino Sarubbo <ago@gentoo.org>
+  mysql-init-scripts-2.0-r1.ebuild:
+  Stable for sparc, wrt bug #527842
 
   03 Nov 2014; Agostino Sarubbo <ago@gentoo.org>
   mysql-init-scripts-2.0-r1.ebuild:

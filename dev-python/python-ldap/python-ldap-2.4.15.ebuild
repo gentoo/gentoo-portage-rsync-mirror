@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.15.ebuild,v 1.10 2014/11/02 09:09:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.15.ebuild,v 1.11 2014/11/04 09:23:35 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="PSF-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-solaris"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-solaris"
 # doc flag dropped due to absence of the docs
 IUSE="examples sasl ssl"
 

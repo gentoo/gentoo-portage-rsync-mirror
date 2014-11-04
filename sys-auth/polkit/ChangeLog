@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.186 2014/11/03 09:37:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.187 2014/11/04 09:22:21 ago Exp $
+
+  04 Nov 2014; Agostino Sarubbo <ago@gentoo.org> polkit-0.112-r2.ebuild:
+  Stable for sparc, wrt bug #525252
 
   03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> polkit-0.112-r2.ebuild:
   Stable for x86, wrt bug #525252

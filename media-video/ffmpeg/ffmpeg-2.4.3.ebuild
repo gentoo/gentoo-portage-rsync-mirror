@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.4.3.ebuild,v 1.1 2014/11/02 06:15:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.4.3.ebuild,v 1.2 2014/11/04 09:20:04 aballier Exp $
 
 EAPI="5"
 
@@ -167,7 +167,7 @@ DEPEND="${RDEPEND}
 	mmx? ( >=dev-lang/yasm-1.2 )
 	rtmp? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	schroedinger? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
-	test? ( net-misc/wget )
+	test? ( net-misc/wget sys-devel/bc )
 	truetype? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	v4l? ( sys-kernel/linux-headers )
 "
