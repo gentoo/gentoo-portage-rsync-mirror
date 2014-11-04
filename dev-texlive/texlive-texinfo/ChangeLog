@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-texinfo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-texinfo/ChangeLog,v 1.67 2013/04/25 21:29:44 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-texinfo/ChangeLog,v 1.68 2014/11/04 10:46:19 aballier Exp $
+
+  04 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  -texlive-texinfo-2011.ebuild:
+  remove texlive 2011
 
   25 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-texinfo-2012.ebuild:
   Stable for sh, wrt bug #449298

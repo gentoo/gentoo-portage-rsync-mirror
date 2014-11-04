@@ -9,5 +9,5 @@ LICENSE=GPL-2 GPL-1
 RDEPEND=>=dev-texlive/texlive-documentation-base-2012 >=app-text/texlive-core-2012
 SLOT=0
 SRC_URI=mirror://gentoo/texlive-module-lshort-dutch-2012.tar.xz mirror://gentoo/texlive-module-collection-documentation-dutch-2012.tar.xz mirror://gentoo/texlive-module-lshort-dutch.doc-2012.tar.xz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	8bd0f2143e4bb5fa3bb0bb56aa08006f	texlive-module	ac55527a81ebf0b2ba40fe5dbcb5d3be	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	8bd0f2143e4bb5fa3bb0bb56aa08006f	texlive-module	12c5ffd805581a3e724ff87014ac8919	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=25ced9d2fe0d5d57ce219465cda686b6

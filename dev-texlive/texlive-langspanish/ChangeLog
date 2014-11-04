@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langspanish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langspanish/ChangeLog,v 1.63 2014/11/03 06:55:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langspanish/ChangeLog,v 1.64 2014/11/04 10:39:08 aballier Exp $
+
+  04 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  -texlive-langspanish-2011.ebuild:
+  remove texlive 2011
 
 *texlive-langspanish-2014 (03 Nov 2014)
 

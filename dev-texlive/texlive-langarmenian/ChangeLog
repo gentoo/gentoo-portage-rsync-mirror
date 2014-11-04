@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langarmenian
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarmenian/ChangeLog,v 1.61 2013/04/25 21:27:44 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarmenian/ChangeLog,v 1.62 2014/11/04 10:31:32 aballier Exp $
+
+  04 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  -texlive-langarmenian-2011.ebuild:
+  remove texlive 2011
 
   25 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   texlive-langarmenian-2012.ebuild:

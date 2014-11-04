@@ -2,8 +2,8 @@ Fixing as-needed issue
 
 http://bugs.gentoo.org/313837
 
---- src/PixelCity/Makefile.am
-+++ src/PixelCity/Makefile.am
+--- a/src/PixelCity/Makefile.am
++++ b/src/PixelCity/Makefile.am
 @@ -23,3 +23,5 @@
  	Texture.cpp \
  	Visible.cpp \

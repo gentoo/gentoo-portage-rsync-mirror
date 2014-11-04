@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/charlock_holmes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/charlock_holmes/ChangeLog,v 1.6 2014/09/12 20:48:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/charlock_holmes/ChangeLog,v 1.7 2014/11/04 10:38:50 mrueg Exp $
+
+  04 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -charlock_holmes-0.7.2.ebuild:
+  Cleanup old.
 
   12 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   charlock_holmes-0.7.2.ebuild, charlock_holmes-0.7.3.ebuild:

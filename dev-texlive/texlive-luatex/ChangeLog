@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-luatex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/ChangeLog,v 1.48 2014/11/03 06:57:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/ChangeLog,v 1.49 2014/11/04 10:42:38 aballier Exp $
+
+  04 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  -texlive-luatex-2011.ebuild:
+  remove texlive 2011
 
 *texlive-luatex-2014 (03 Nov 2014)
 
