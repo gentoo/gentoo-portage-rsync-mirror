@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libhome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.15 2014/11/03 11:44:13 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.17 2014/11/04 02:58:51 patrick Exp $
+
+  04 Nov 2014; Patrick Lauer <patrick@gentoo.org> libhome-0.10.2-r1.ebuild:
+  More cleanups
+
+*libhome-0.10.2-r1 (04 Nov 2014)
+
+  04 Nov 2014; Patrick Lauer <patrick@gentoo.org> +libhome-0.10.2-r1.ebuild,
+  -libhome-0.10.2.ebuild:
+  Fix repoman warnings and upgrade EAPI to something sane
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> libhome-0.10.2.ebuild:
   Update PostgreSQL dependencies and/or checks to virtual/postgresql.

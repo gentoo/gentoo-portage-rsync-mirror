@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/libhome-0.10.2.ebuild,v 1.4 2014/11/03 11:44:13 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/libhome-0.10.2-r1.ebuild,v 1.2 2014/11/04 02:58:51 patrick Exp $
 
-EAPI=2
+EAPI=5
 
 inherit autotools db-use eutils
 
@@ -22,9 +22,7 @@ DEPEND="berkdb? ( >=sys-libs/db-4 )
 	postgres? ( virtual/postgresql[server] )"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm -f aclocal.m4
 
 	epatch "${FILESDIR}"/${PN}-0.10.2-Makefile.patch
@@ -39,7 +37,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf --without-db3 \
 		$(use_with berkdb db4 $(db_includedir)) \
 		$(use_with ldap) \
@@ -47,6 +45,9 @@ src_compile() {
 		$(use_with pam) \
 		$(use_with postgres pgsql) \
 	|| die "econf failed"
+}
+
+src_compile() {
 	emake || die "emake failed"
 }
 
