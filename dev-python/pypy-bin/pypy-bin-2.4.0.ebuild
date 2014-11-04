@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.4.0.ebuild,v 1.2 2014/11/04 15:08:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.4.0.ebuild,v 1.3 2014/11/04 22:22:27 mgorny Exp $
 
 EAPI=5
 
@@ -107,6 +107,7 @@ src_compile() {
 	mv "${WORKDIR}"/${P}*/{libpypy-c.so,pypy-c} . || die
 	mv "${WORKDIR}"/${P}*/include/*.h include/ || die
 	mv pypy/module/cpyext/include/*.h include/ || die
+	mv pypy/module/cpyext/include/numpy include/ || die
 
 	use doc && emake -C pypy/doc/ html
 	#needed even without jit :( also needed in both compile and install phases
@@ -161,6 +162,9 @@ src_install() {
 	# Generate Grammar and PatternGrammar pickles.
 	"${PYTHON}" -c "import lib2to3.pygram, lib2to3.patcomp; lib2to3.patcomp.PatternCompiler()" \
 		|| die "Generation of Grammar and PatternGrammar pickles failed"
+
+	# ctypes config cache
+	"${PYTHON}" -m ctypes_config_cache.rebuild || die "Failed to rebuild ctypes config cache"
 
 	# Generate cffi cache
 	# Please keep in sync with pypy/tool/release/package.py!

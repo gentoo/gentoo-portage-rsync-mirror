@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.20.5.ebuild,v 1.1 2014/08/27 07:51:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.20.5.ebuild,v 1.2 2014/11/04 22:04:26 mr_bones_ Exp $
 
 # TODO: when physfs-2.1.0 hits the tree, set
 # -DPHYSFS_SYSTEM=ON
@@ -41,6 +41,10 @@ RDEPEND="${RDEPEND}
 	>=media-fonts/dejavu-2.28"
 
 S=${WORKDIR}/${PN}-src-0.9.20
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cmake3.patch
+}
 
 src_configure() {
 	local mycmakeargs=(

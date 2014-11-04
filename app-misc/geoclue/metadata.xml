@@ -12,7 +12,6 @@
     <flag name="modemmanager">Enable geolocation through 3G or GPS enabled hardware through <pkg>net-misc/modemmanager</pkg>.</flag>
     <flag name="nominatim">Install openstreetmap.org provider</flag>
     <flag name="plazes">Install plazes.com provider</flag>
-    <flag name="server">Install geoip server</flag>
     <flag name="skyhook">Install skyhookwireless.com provider</flag>
     <flag name="yahoo-geo">Install Yahoo geolocation provider</flag>
   </use>

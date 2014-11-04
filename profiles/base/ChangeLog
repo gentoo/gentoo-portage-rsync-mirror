@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.741 2014/11/02 18:17:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.742 2014/11/04 22:26:54 floppym Exp $
+
+  04 Nov 2014; Mike Gilbert <floppym@gentoo.org> package.use.stable.mask:
+  Stable mask python3_4 on dev-python/pyudev.
 
   02 Nov 2014; Mike Frysinger <vapier@gentoo.org> packages:
   Drop texinfo @system #471192 by Alexis Ballier.
