@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/iprutils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.39 2013/07/21 08:27:44 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.40 2014/11/04 09:31:35 zlogene Exp $
+
+  04 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> iprutils-2.3.0.ebuild,
+  iprutils-2.3.13.ebuild, iprutils-2.3.9.ebuild:
+  QA: drop LICENSE from dodoc
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #88306
