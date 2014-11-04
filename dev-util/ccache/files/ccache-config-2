@@ -48,6 +48,13 @@ cc_remove_link() {
 		c_ebegin "Removing ${t}"
 		rm -f "${t}"
 		c_eend
+
+		# Trim the empty dir if possible. #517242
+		t=${t%/*}
+		if rmdir "${t}" 2>/dev/null; then
+			rmdir "${t%/*}" 2>/dev/null
+		fi
+		:
 	fi
 }
 cc_install_link() {
@@ -70,7 +77,7 @@ cc_install_link() {
 cc_links() {
 	local a
 	for a in gcc cc c++ g++ icc icpc clang clang++ ; do
-		eval "cc_${1}_link" "${2}${2:+-}${a}"
+		"cc_${1}_link" "${2}${2:+-}${a}"
 	done
 }
 
