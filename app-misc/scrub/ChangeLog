@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/scrub
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/scrub/ChangeLog,v 1.12 2012/12/26 17:18:54 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/scrub/ChangeLog,v 1.13 2014/11/04 10:13:29 mgorny Exp $
+
+*scrub-2.6.1 (04 Nov 2014)
+
+  04 Nov 2014; Michał Górny <mgorny@gentoo.org> +scrub-2.6.1.ebuild:
+  Version bump. Contains a fix for bug #520194.
 
   26 Dec 2012; Agostino Sarubbo <ago@gentoo.org> scrub-2.5.2.ebuild:
   Stable for amd64, wrt bug #448664

@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-fontutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/ChangeLog,v 1.52 2014/11/03 06:47:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/ChangeLog,v 1.53 2014/11/04 10:28:39 aballier Exp $
+
+  04 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  -texlive-fontutils-2011.ebuild:
+  remove texlive 2011
 
 *texlive-fontutils-2014 (03 Nov 2014)
 

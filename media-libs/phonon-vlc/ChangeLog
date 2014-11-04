@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/phonon-vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.50 2014/10/18 14:53:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.51 2014/11/04 10:16:03 mrueg Exp $
+
+*phonon-vlc-0.8.1 (04 Nov 2014)
+
+  04 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +phonon-vlc-0.8.1.ebuild:
+  Version bump.
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> phonon-vlc-0.7.2.ebuild:
   Stable for ppc64, wrt bug #519592
