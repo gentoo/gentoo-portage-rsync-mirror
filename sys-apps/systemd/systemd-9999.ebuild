@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.145 2014/10/30 08:47:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.146 2014/11/04 19:24:27 floppym Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ IUSE="acl apparmor audit cryptsetup curl doc elfutils gcrypt gudev http
 
 MINKV="3.8"
 
-COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
+COMMON_DEPEND=">=sys-apps/util-linux-2.25:0=
 	sys-libs/libcap:0=
 	acl? ( sys-apps/acl:0= )
 	apparmor? ( sys-libs/libapparmor:0= )
@@ -64,10 +64,6 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 # baselayout-2.2 has /run
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/baselayout-2.2
-	|| (
-		>=sys-apps/util-linux-2.22
-		<sys-apps/sysvinit-2.88-r4
-	)
 	!sys-auth/nss-myhostname
 	!<sys-libs/glibc-2.14
 	!sys-fs/udev"

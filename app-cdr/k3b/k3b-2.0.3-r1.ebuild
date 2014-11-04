@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.3.ebuild,v 1.2 2014/11/04 11:10:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.3-r1.ebuild,v 1.1 2014/11/04 19:09:35 mrueg Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ ga gl he hi hne hr hu is it ja kk km ko ku lt lv mai mr ms nb nds nl nn oc pa pl
 pt pt_BR ro ru se sk sl sr sr@ijekavian sr@ijekavianlatin sr@latin sv th tr ug uk
 zh_CN zh_TW"
 
-SRC_URI="mirror://kde/stable/${PN}/${P}.tar.xz"
+SRC_URI="mirror://kde/stable/${PN}/${P}a.tar.xz"
 DOCS=( FAQ PERMISSIONS README )
 
 inherit kde4-base
