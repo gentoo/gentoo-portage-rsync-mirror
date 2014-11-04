@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-9.2_p1004.ebuild,v 1.1 2014/01/24 18:04:34 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-9.2_p1004.ebuild,v 1.2 2014/11/04 00:19:23 titanofold Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ DEPEND="
 	)
 	test? (
 		dev-java/ant-junit
-		dev-db/postgresql-server
+		virtual/postgresql[server]
 	)"
 RDEPEND=">=virtual/jre-1.6"
 

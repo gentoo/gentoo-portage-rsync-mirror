@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hdbc-postgresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/ChangeLog,v 1.25 2014/07/03 12:04:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/ChangeLog,v 1.26 2014/11/04 00:06:42 titanofold Exp $
+
+  04 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  hdbc-postgresql-2.3.2.1.ebuild, hdbc-postgresql-2.3.2.2-r1.ebuild,
+  hdbc-postgresql-2.3.2.2-r2.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
 
 *hdbc-postgresql-2.3.2.2-r2 (03 Jul 2014)
 

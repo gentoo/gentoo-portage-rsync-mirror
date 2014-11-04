@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/postgresql-ocaml-2.0.6.ebuild,v 1.2 2014/08/10 20:43:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/postgresql-ocaml-2.0.6.ebuild,v 1.3 2014/11/04 00:28:18 titanofold Exp $
 
 EAPI=5
 
@@ -13,8 +13,7 @@ SRC_URI="http://bitbucket.org/mmottl/postgresql-ocaml/downloads/${P}.tar.gz"
 HOMEPAGE="http://bitbucket.org/mmottl/postgresql-ocaml"
 IUSE="examples"
 
-DEPEND="dev-db/postgresql-base
-	dev-db/postgresql-server"
+DEPEND="virtual/postgresql[server]"
 RDEPEND="${DEPEND}"
 
 SLOT="0/${PV}"

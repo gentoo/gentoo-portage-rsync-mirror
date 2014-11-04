@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/postgresql-ocaml-2.1.1.ebuild,v 1.1 2014/10/29 13:51:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/postgresql-ocaml-2.1.1.ebuild,v 1.2 2014/11/04 00:28:18 titanofold Exp $
 
 EAPI=5
 
@@ -14,8 +14,7 @@ HOMEPAGE="http://mmottl.github.io/postgresql-ocaml/"
 IUSE="examples"
 
 RDEPEND="
-	dev-db/postgresql-base
-	dev-db/postgresql-server
+	virtual/postgresql[server]
 "
 DEPEND="${RDEPEND}
 	>=dev-ml/findlib-1.5"
