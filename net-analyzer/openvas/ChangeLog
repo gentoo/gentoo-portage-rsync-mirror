@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/openvas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.21 2014/10/22 08:19:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.22 2014/11/04 12:36:33 jlec Exp $
+
+*openvas-7.0.5 (04 Nov 2014)
+
+  04 Nov 2014; Justin Lecher <jlec@gentoo.org> +openvas-7.0.5.ebuild:
+  Version Bump
 
   22 Oct 2014; Justin Lecher <jlec@gentoo.org> openvas-8_beta3.ebuild:
   Update dependency versions
