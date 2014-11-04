@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.51 2014/08/17 15:31:06 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.52 2014/11/04 08:15:56 jlec Exp $
+
+*ansible-1.7.2 (04 Nov 2014)
+
+  04 Nov 2014; Justin Lecher <jlec@gentoo.org> +ansible-1.7.2.ebuild:
+  Version BUmp, #528174
 
 *ansible-1.7.1 (17 Aug 2014)
 

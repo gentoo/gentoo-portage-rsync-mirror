@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16136 2014/11/03 15:26:55 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16137 2014/11/04 08:25:36 tamiko Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matthias Maier <tamiko@gentoo.org> (4 Nov 2014)
+# Masked for removal in 30 days. The package has multiple open bugs
+# (bug #482472, bug #501818, bug #528190) and is superseded by
+# app-emulation/virt-manager[-gtk]
+app-emulation/virtinst
 
 # Tim Harder <radhermit@gentoo.org> (31 Oct 2014)
 # Deprecated, use >=sys-devel/crossdev-20141030 to build an msp430

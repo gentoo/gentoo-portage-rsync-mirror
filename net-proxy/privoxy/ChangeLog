@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.93 2014/01/18 19:49:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.94 2014/11/04 08:30:57 jer Exp $
+
+  04 Nov 2014; Jeroen Roovers <jer@gentoo.org>
+  -files/privoxy-3.0.12-gentoo.patch, -files/privoxy-3.0.13_beta-gentoo.patch,
+  -files/privoxy-3.0.14_beta-gentoo.patch,
+  -files/privoxy-3.0.15_beta-gentoo.patch, -files/privoxy-3.0.16-gentoo.patch,
+  -files/privoxy-3.0.17-gentoo.patch, metadata.xml:
+  Remove short <longdescription>. Remove old.
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> privoxy-3.0.21-r2.ebuild:
   Stable for alpha, wrt bug #485236
