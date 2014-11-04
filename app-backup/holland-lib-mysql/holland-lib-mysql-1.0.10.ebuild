@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/holland-lib-mysql/holland-lib-mysql-1.0.10.ebuild,v 1.1 2014/09/21 23:38:12 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/holland-lib-mysql/holland-lib-mysql-1.0.10.ebuild,v 1.2 2014/11/04 15:52:11 alunduil Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -22,7 +22,7 @@ IUSE="doc"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="
 	~app-backup/holland-lib-common-${PV}[${PYTHON_USEDEP}]
-	dev-python/mysql-python[${PYTHON_USEDEP}]
+	<dev-python/mysql-python-1.2.5[${PYTHON_USEDEP}]
 "
 PDEPEND="~app-backup/holland-${PV}[${PYTHON_USEDEP}]"
 
