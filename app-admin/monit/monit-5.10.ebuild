@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.6.ebuild,v 1.2 2014/08/10 01:37:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.10.ebuild,v 1.1 2014/11/04 05:47:52 patrick Exp $
 
-EAPI="2"
+EAPI="5"
+inherit systemd
 
 DESCRIPTION="a utility for monitoring and managing daemons or similar programs running on a Unix system"
 HOMEPAGE="http://mmonit.com/monit/"
@@ -39,6 +40,7 @@ src_install() {
 
 	insinto /etc; insopts -m600; doins monitrc || die "doins monitrc failed"
 	newinitd "${FILESDIR}"/monit.initd-5.0-r1 monit || die "newinitd failed"
+	systemd_dounit "${FILESDIR}"/${PN}.service || die
 }
 
 pkg_postinst() {
