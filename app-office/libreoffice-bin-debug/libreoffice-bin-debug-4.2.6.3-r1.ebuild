@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/libreoffice-bin-debug-4.2.6.3-r1.ebuild,v 1.1 2014/09/18 21:14:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/libreoffice-bin-debug-4.2.6.3-r1.ebuild,v 1.2 2014/11/04 08:58:00 zlogene Exp $
 
 EAPI=5
 
@@ -47,7 +47,7 @@ SRC_URI="
 IUSE="gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 
 RDEPEND="=app-office/${PN/-debug}-${PVR}[gnome=,java=,kde=]"
 
