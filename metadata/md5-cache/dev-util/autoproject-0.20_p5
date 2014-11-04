@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-devel/automake sys-devel/autoconf
 SLOT=0
 SRC_URI=mirror://debian/pool/main/a/autoproject/autoproject_0.20.orig.tar.gz mirror://debian/pool/main/a/autoproject/autoproject_0.20-5.diff.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=27c434b4ca5fe81fa7c0b3d2903e46d9

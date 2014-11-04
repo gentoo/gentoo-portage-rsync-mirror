@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=>=dev-lang/ocaml-4.00.0:= >=dev-ml/bin-prot-109.15.00:= >=dev-ml/comparelib-109.27.00:= >=dev-ml/herelib-109.15.00:= >=dev-ml/pa_ounit-109.27.00:= >=dev-ml/pipebang-109.15.00:= >=dev-ml/core-110.01.00:= >=dev-ml/async_kernel-110.01.00:= >=dev-ml/sexplib-109.20.00:= >=dev-ml/fieldslib-109.20.00:= dev-ml/pa_test:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/110.01.00
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/110.01.00/individual/async_unix-110.01.00.tar.gz http://dev.gentoo.org/~aballier/distfiles/async_unix-110.01.00.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	c91a1ac3fefc6b077094fb2e82c65af4	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=972f232bb73ca0cd0715455b46a6f752

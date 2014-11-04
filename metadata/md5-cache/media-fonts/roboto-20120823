@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos
 LICENSE=Apache-2.0
 SLOT=0
 SRC_URI=http://developer.android.com/downloads/design/Roboto_Hinted_20120823.zip
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cd51c4e13426885cf1d5707b3089a65d

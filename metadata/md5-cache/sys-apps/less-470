@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-3 BSD-2 )
 RDEPEND=>=app-misc/editor-wrapper-3 >=sys-libs/ncurses-5.2 pcre? ( dev-libs/libpcre )
 SLOT=0
 SRC_URI=http://www.greenwoodsoftware.com/less/less-470.tar.gz http://www-zeuthen.desy.de/~friebel/unix/less/code2color -> code2color-0.2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=69616288d197b1c12139355b0dd870b2

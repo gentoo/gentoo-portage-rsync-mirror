@@ -10,5 +10,5 @@ PDEPEND=>=net-wireless/bladerf-firmware-1.7.1 >=net-wireless/bladerf-fpga-0.0.6
 RDEPEND=>=dev-libs/libusb-1.0.16
 SLOT=0/2014.09_rc2
 SRC_URI=https://github.com/Nuand/bladeRF/archive/bladeRF-2014.09-rc2.tar.gz
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=504a2d066fbbdfe2ccdd576f6cf67d34

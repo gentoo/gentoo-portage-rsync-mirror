@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.437 2014/09/19 17:09:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.438 2014/11/03 22:55:20 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -231,7 +231,7 @@ evar_pop() {
 # A common example is to disable shell globbing so that special meaning/care
 # may be used with variables/arguments to custom functions.  That would be:
 # @CODE
-#		eshopts_push -s noglob
+#		eshopts_push -o noglob
 #		for x in ${foo} ; do
 #			if ...some check... ; then
 #				eshopts_pop

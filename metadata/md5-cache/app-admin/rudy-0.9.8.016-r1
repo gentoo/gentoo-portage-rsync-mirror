@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( ruby_targets_ruby19 )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://github.com/solutious/rudy/tarball/v0.9.8.016 -> rudy-git-0.9.8.016.tgz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=caf843f66d24da68d35e16a0d338fad1

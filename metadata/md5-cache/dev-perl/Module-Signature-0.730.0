@@ -9,5 +9,5 @@ LICENSE=CC0-1.0
 RDEPEND=virtual/perl-MIME-Base64 dev-perl/PAR-Dist virtual/perl-IO-Compress dev-perl/crypt-cbc dev-perl/Crypt-DES dev-perl/Crypt-Blowfish dev-perl/Crypt-RIPEMD160 dev-perl/class-loader dev-perl/tie-encryptedhash dev-perl/convert-ascii-armour dev-perl/data-buffer dev-perl/digest-md2 >=dev-perl/math-pari-2.010603 dev-perl/crypt-random dev-perl/crypt-primes dev-perl/crypt-des-ede3 dev-perl/crypt-dsa dev-perl/crypt-rsa dev-perl/Convert-ASN1 dev-perl/convert-pem dev-perl/Crypt-OpenPGP app-crypt/gnupg dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/A/AU/AUDREYT/Module-Signature-0.73.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	8e3b7f854d863165b566eee429e1a9bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	8e3b7f854d863165b566eee429e1a9bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=63f73d938e4129ccba850ff2455c6114

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=X? ( x11-libs/libXt x11-libs/libxkbfile x11-libs/libXext x11-misc/xkeyboard-config dga? ( x11-libs/libXxf86dga x11-libs/libXxf86vm ) ) !X? ( sdl? ( media-libs/libsdl ) !sdl? ( sys-libs/ncurses ) ) alsa? ( media-libs/alsa-lib ) !alsa? ( sdl-sound? ( media-libs/sdl-sound ) ) capslib? ( >=games-emulation/caps-20060612 ) sys-libs/zlib virtual/cdrtools
 SLOT=0
 SRC_URI=http://www.rcdrummond.net/uae/e-uae-0.8.29-WIP4/e-uae-0.8.29-WIP4.tar.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=bb537e5d4f4b864d0be78d40f9711d02

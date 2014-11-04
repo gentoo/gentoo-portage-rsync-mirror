@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libpcre dev-libs/uulib gpg? ( app-crypt/gnupg ) idn? ( net-dns/libidn ) mime? ( net-mail/metamail ) net-misc/urlview nls? ( sys-devel/gettext ) sasl? ( virtual/gsasl ) socks5? ( net-proxy/dante ) sys-libs/ncurses[unicode?] unicode? ( dev-libs/icu:= )
 SLOT=0
 SRC_URI=ftp://ftp.tin.org/pub/news/clients/tin/v2.0/tin-2.0.1.tar.bz2
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	c91a1ac3fefc6b077094fb2e82c65af4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=b88e01ead5c5d30b24b9f3b8c964e344

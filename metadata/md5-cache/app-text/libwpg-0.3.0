@@ -9,5 +9,5 @@ LICENSE=|| ( LGPL-2.1 MPL-2.0 )
 RDEPEND=app-text/libwpd:0.10[tools] dev-libs/librevenge
 SLOT=0.3
 SRC_URI=mirror://sourceforge/libwpg/libwpg-0.3.0.tar.xz
-_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=4d3b1fac92224c9594e1996bda99d4c7

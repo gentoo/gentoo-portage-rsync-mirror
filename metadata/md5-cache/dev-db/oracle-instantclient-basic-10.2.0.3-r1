@@ -8,5 +8,5 @@ RDEPEND=~virtual/libstdc++-3.3
 RESTRICT=fetch
 SLOT=0
 SRC_URI=amd64? ( instantclient-basic-linux-x86-64-10.2.0.3-20070103.zip instantclient-sdk-linux-x86-64-10.2.0.3-20070103.zip ) x86? ( instantclient-basic-linux32-10.2.0.3-20061115.zip instantclient-sdk-linux32-10.2.0.3-20061115.zip )
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cabcf50ca07323da9f301321e1c3f03a

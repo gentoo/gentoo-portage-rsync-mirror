@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/libpng-1.2.43-r2:0 media-libs/libsdl[sound,video,X] timidity? ( >=media-sound/timidity++-2 ) zlib? ( sys-libs/zlib ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/exult/exult-1.4.9rc1.tar.gz mirror://sourceforge/exult/U7MusicOGG_1of2.zip mirror://sourceforge/exult/U7MusicOGG_2of2.zip mirror://sourceforge/exult/jmsfx.zip mirror://sourceforge/exult/jmsfxsi.zip
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	c91a1ac3fefc6b077094fb2e82c65af4	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=e53d2b045d766174483ab7d180d95cc2

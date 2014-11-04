@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sci-libs/cfitsio:0= sci-astronomy/wcslib:0= sys-libs/readline:0= virtual/blas virtual/lapack data? ( sci-astronomy/casa-data ) fftw? ( sci-libs/fftw:3.0= ) hdf5? ( sci-libs/hdf5:0= ) virtual/fortran
 SLOT=0
 SRC_URI=http://casacore.googlecode.com/files/casacore-1.5.0.tar.bz2
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e8e7247a6a12bb4054e2b6a17afdce2e

@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=sys-libs/readline gui? ( dev-python/pygtk:2 kde? ( kde-base/kdesu ) !kde? ( x11-libs/gksu ) ) gui? ( =dev-lang/python-2* )
 SLOT=0
 SRC_URI=http://scanmem.googlecode.com/files/scanmem-0.13.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	c91a1ac3fefc6b077094fb2e82c65af4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=20d886d26cc38120267327bbb6598d3b

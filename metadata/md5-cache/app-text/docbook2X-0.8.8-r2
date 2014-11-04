@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=dev-lang/perl dev-libs/libxslt dev-perl/XML-NamespaceSupport dev-perl/XML-SAX dev-perl/XML-LibXML app-text/docbook-xsl-stylesheets =app-text/docbook-xml-dtd-4.2*
 SLOT=0
 SRC_URI=mirror://sourceforge/docbook2x/docbook2X-0.8.8.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	32548a82e42dc26e3312581476d2f20c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	c91a1ac3fefc6b077094fb2e82c65af4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=348847b4d79143391517e8475a3b2e77

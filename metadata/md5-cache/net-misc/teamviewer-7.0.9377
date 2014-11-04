@@ -10,5 +10,5 @@ RDEPEND=x11-misc/xdg-utils !system-wine? ( amd64? ( app-emulation/emul-linux-x86
 RESTRICT=mirror
 SLOT=7
 SRC_URI=https://www.teamviewer.com/download/version_7x/teamviewer_linux.tar.gz -> teamviewer-7.0.9377.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=05d9344e45431ce8bfbb0dfce71a2632

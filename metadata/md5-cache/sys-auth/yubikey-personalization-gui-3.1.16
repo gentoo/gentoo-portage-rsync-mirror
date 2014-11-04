@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=>=sys-auth/ykpers-1.14.0 >=sys-auth/libyubikey-1.6 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-libs/glib:2 virtual/libusb:1
 SLOT=0
 SRC_URI=http://yubico.github.io/yubikey-personalization-gui/releases/yubikey-personalization-gui-3.1.16.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=6d7064c710ce7a36a30fa32165df0633

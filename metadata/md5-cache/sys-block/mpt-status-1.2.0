@@ -5,5 +5,5 @@ KEYWORDS=amd64 x86 ~ppc
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.drugphish.ch/~ratz/mpt-status/mpt-status-1.2.0.tar.bz2 mirror://gentoo/mpt-status-1.2.0-linux-sources.tar.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=9dff1508f9a49dcf4ff34665eff71955

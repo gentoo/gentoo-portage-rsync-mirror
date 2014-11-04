@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-apps/portage-2.1 >=dev-python/pygtk-2.0 =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://sourceforge/elogviewer/elogviewer-0.5.2.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=559565f19627eb9a267681fd7f447e5a

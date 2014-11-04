@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=python? ( dev-lang/python ) jack? ( media-sound/jack-audio-connection-kit ) media-libs/ladspa-sdk audiofile? ( media-libs/audiofile ) alsa? ( media-libs/alsa-lib ) vorbis? ( media-libs/libvorbis ) libsamplerate? ( media-libs/libsamplerate ) mikmod? ( media-libs/libmikmod:0 ) ruby? ( dev-lang/ruby ) python? ( dev-lang/python ) ncurses? ( sys-libs/ncurses ) sndfile? ( media-libs/libsndfile ) sys-libs/readline
 SLOT=1
 SRC_URI=http://ecasound.seul.org/download/ecasound-2.6.0.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b06cd1024e2f106cf4a4cdef601df4c0

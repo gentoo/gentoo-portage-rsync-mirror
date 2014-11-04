@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.36.0:2 x11-libs/gdk-pixbuf:2 >=net-dns/avahi-0.6 >=net-libs/libsoup-2.32:2.4 media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 sys-libs/zlib
 SLOT=3.0
 SRC_URI=http://www.flyn.org/projects/libdmapsharing/libdmapsharing-2.9.23.tar.gz
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=73bea37e79eeded654f1294c2623989f

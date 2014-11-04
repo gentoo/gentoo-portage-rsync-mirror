@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-lang/tk >=dev-tcltk/tcllib-1.11 media-libs/tiff:0= >=media-libs/libpng-1.6:0= >=sys-libs/zlib-1.2.7:= x11-libs/libX11 virtual/jpeg
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/tkimg-1.4-patchset-1.tar.xz mirror://sourceforge/tkimg/1.4/tkimg1.4.tar.bz2
-_eclasses_=eutils	32548a82e42dc26e3312581476d2f20c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=203f01f5baa39dd6612ddd0ec1085418
