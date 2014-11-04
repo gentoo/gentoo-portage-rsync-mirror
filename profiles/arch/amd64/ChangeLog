@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.286 2014/10/24 18:37:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.287 2014/11/04 22:33:20 floppym Exp $
+
+  04 Nov 2014; Mike Gilbert <floppym@gentoo.org> package.use.stable.mask,
+  use.stable.mask:
+  Negate python3_4 stable mask.
 
   24 Oct 2014; Michał Górny <mgorny@gentoo.org>
   no-emul-linux-x86/package.use.stable.mask, package.use.stable.mask:

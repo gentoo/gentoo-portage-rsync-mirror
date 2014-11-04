@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.89 2014/10/24 18:37:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.90 2014/11/04 22:33:20 floppym Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,11 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (04 Nov 2014)
+# Awaiting PyQt4 stabilization (bug 523322).
+dev-python/pyudev python_targets_python3_4
+
 
 # Tim Harder <radhermit@gentoo.org> (11 Oct 2014)
 # Masked since skype isn't stable

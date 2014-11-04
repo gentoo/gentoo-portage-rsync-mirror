@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.344 2014/10/11 12:25:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.345 2014/11/04 22:37:28 eva Exp $
+
+  04 Nov 2014; Gilles Dartiguelongue <eva@gentoo.org> -libsoup-2.46.0.ebuild,
+  libsoup-2.46.0-r1.ebuild:
+  Fix unittest failure due to wrong glib requirement, bug #512240.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> libsoup-2.46.0-r1.ebuild:
   arm stable, bug #512012
