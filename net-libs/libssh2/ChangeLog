@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.89 2014/10/26 07:40:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.90 2014/11/04 20:20:02 maekke Exp $
+
+  04 Nov 2014; Markus Meier <maekke@gentoo.org> libssh2-1.4.3-r1.ebuild:
+  arm stable, bug #526056
 
   26 Oct 2014; Jeroen Roovers <jer@gentoo.org> libssh2-1.4.3-r1.ebuild:
   Stable for HPPA (bug #526056).

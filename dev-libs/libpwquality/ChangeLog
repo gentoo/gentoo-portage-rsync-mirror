@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpwquality
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpwquality/ChangeLog,v 1.17 2014/11/02 10:33:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpwquality/ChangeLog,v 1.18 2014/11/04 20:25:46 maekke Exp $
+
+  04 Nov 2014; Markus Meier <maekke@gentoo.org> libpwquality-1.2.3.ebuild:
+  arm stable, bug #527672
 
 *libpwquality-1.2.4 (02 Nov 2014)
 
