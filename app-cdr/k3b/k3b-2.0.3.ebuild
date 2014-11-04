@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.3.ebuild,v 1.1 2014/11/04 10:24:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.3.ebuild,v 1.2 2014/11/04 11:10:30 mrueg Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ KDE_SCM="git"
 # Translations are not available, since this is a snapshot
 KDE_LINGUAS="ast be bg bs ca ca@valencia cs csb da de el en_GB eo es et eu fi fr
 ga gl he hi hne hr hu is it ja kk km ko ku lt lv mai mr ms nb nds nl nn oc pa pl
-pt pt_BR ro ru se sk sl sr sr@Latn sr@ijekavian sr@ijekavianlatin sv th tr ug uk
+pt pt_BR ro ru se sk sl sr sr@ijekavian sr@ijekavianlatin sr@latin sv th tr ug uk
 zh_CN zh_TW"
 
 SRC_URI="mirror://kde/stable/${PN}/${P}.tar.xz"
