@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.11.ebuild,v 1.1 2014/09/24 13:35:00 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.11.ebuild,v 1.2 2014/11/04 17:25:51 grozin Exp $
 
 EAPI=5
 inherit elisp-common eutils flag-o-matic
 
 DESCRIPTION="GNU Common Lisp"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
-SRC_URI="ftp://ftp.gnu.org/gnu/gcl/${P}.tar.gz http://dev.gentoo.org/~grozin/${P}-fedora.tar.bz2"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz http://dev.gentoo.org/~grozin/${P}-fedora.tar.bz2"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"

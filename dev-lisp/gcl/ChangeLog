@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.67 2014/09/24 13:35:00 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.68 2014/11/04 17:25:51 grozin Exp $
+
+*gcl-2.6.12 (04 Nov 2014)
+
+  04 Nov 2014; Andrey Grozin <grozin@gentoo.org> gcl-2.6.10.ebuild,
+  gcl-2.6.11.ebuild, +gcl-2.6.12.ebuild:
+  Version bump; mirror://gnu is used in SRC_URI
 
 *gcl-2.6.11 (24 Sep 2014)
 

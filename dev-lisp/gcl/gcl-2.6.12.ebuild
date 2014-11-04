@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.10.ebuild,v 1.5 2014/11/04 17:25:51 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.12.ebuild,v 1.1 2014/11/04 17:25:51 grozin Exp $
 
 EAPI=5
 inherit elisp-common eutils flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz http://dev.gentoo.org/~grozin/${P}-fedor
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+ansi athena emacs +readline tk X"
 
 # See bug #205803
@@ -44,24 +44,19 @@ src_prepare() {
 	epatch "${WORKDIR}"/fedora/latex.patch
 	epatch "${WORKDIR}"/fedora/texinfo.patch
 	epatch "${WORKDIR}"/fedora/elisp.patch
+	epatch "${WORKDIR}"/fedora/selinux.patch
 	epatch "${WORKDIR}"/fedora/rename.patch
 	epatch "${WORKDIR}"/fedora/getcwd.patch
+	epatch "${WORKDIR}"/fedora/plt.patch
+	epatch "${WORKDIR}"/fedora/ellipsis.patch
 	epatch "${WORKDIR}"/fedora/infrastructure.patch
 	epatch "${WORKDIR}"/fedora/extension.patch
 	epatch "${WORKDIR}"/fedora/unrandomize.patch
 	epatch "${WORKDIR}"/fedora/asm-signal-h.patch
-	epatch "${WORKDIR}"/fedora/plt.patch
-	epatch "${WORKDIR}"/fedora/ellipsis.patch
-	epatch "${WORKDIR}"/fedora/man.patch
-	epatch "${WORKDIR}"/fedora/reloc-type.patch
 	epatch "${WORKDIR}"/fedora/largefile.patch
-
-	epatch "${FILESDIR}"/${PN}-tcl-8.6.patch
-	epatch "${FILESDIR}"/${PN}-gmp-6.patch
-	epatch "${FILESDIR}"/${PN}-readline-6.3.patch
+	epatch "${WORKDIR}"/fedora/arm.patch
 
 	sed -e 's|"-fomit-frame-pointer"|""|' -i configure
-	sed -e 's|@EXT@||g' debian/in.gcl.1 > gcl.1
 }
 
 src_configure() {
@@ -118,14 +113,12 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	mv "${D}"usr/share/doc/*.dvi .
 	rm -rf "${D}"usr/share/doc
 	rm -rf "${D}"usr/share/emacs
-	rm -rf "${D}"usr/lib/gcl-*/info
 
-	rm doc/makefile elisp/add-defaults.el
+	rm elisp/add-defaults.el
 	dodoc readme* RELEASE* ChangeLog* doc/*
-	doman gcl.1
+	doman man/man1/gcl.1
 	doinfo info/*.info*
 	dohtml -r info/gcl-si info/gcl-tk
 
@@ -135,7 +128,7 @@ src_install() {
 	fi
 
 	insinto /usr/share/doc/${PF}
-	doins *.dvi
+	doins info/*.pdf
 	if use athena; then
 		pushd xgcl-2 > /dev/null
 		insinto /usr/share/doc/${PF}
