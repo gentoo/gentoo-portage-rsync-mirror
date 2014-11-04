@@ -1,6 +1,22 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.392 2014/11/02 08:14:43 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.393 2014/11/04 01:01:12 titanofold Exp $
+
+*postgresql-9.4_beta3-r2 (04 Nov 2014)
+*postgresql-9.3.5-r2 (04 Nov 2014)
+*postgresql-9.2.9-r2 (04 Nov 2014)
+*postgresql-9.1.14-r2 (04 Nov 2014)
+*postgresql-9.0.18-r2 (04 Nov 2014)
+
+  04 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  -postgresql-9.0.18-r1.ebuild, +postgresql-9.0.18-r2.ebuild,
+  -postgresql-9.1.14-r1.ebuild, +postgresql-9.1.14-r2.ebuild,
+  -postgresql-9.2.9-r1.ebuild, +postgresql-9.2.9-r2.ebuild,
+  -postgresql-9.3.5-r1.ebuild, +postgresql-9.3.5-r2.ebuild,
+  -postgresql-9.4_beta3-r1.ebuild, +postgresql-9.4_beta3-r2.ebuild,
+  postgresql-9999.ebuild:
+  Fix bug 456778. Use a soft block against dev-db/postgesql-{docs,base,server}
+  to ease transition.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> postgresql-9.3.5-r1.ebuild,
   postgresql-9.4_beta3-r1.ebuild, postgresql-9999.ebuild:
