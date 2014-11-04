@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.180 2014/11/02 07:47:21 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.181 2014/11/04 19:55:09 nimiux Exp $
+
+*logrotate-3.8.8 (04 Nov 2014)
+
+  04 Nov 2014; Chema Alonso <nimiux@gentoo.org> +logrotate-3.8.8.ebuild,
+  +files/logrotate-3.8.8-atomic-create.patch,
+  +files/logrotate-3.8.8-fbsd.patch,
+  +files/logrotate-3.8.8-ignore-hidden.patch,
+  +files/logrotate-3.8.8-noasprintf.patch:
+  Version bump. (bug #528036)
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> logrotate-3.8.7.ebuild:
   Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug

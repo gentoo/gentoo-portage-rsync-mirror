@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.391 2014/10/18 14:09:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.392 2014/11/04 20:00:54 maekke Exp $
+
+  04 Nov 2014; Markus Meier <maekke@gentoo.org> nss-3.16.5.ebuild:
+  arm stable, bug #523652
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> nss-3.16.5.ebuild:
   Stable for sparc, wrt bug #523652
