@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.67 2014/05/27 04:57:28 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.68 2014/11/04 03:24:24 vapier Exp $
+
+  04 Nov 2014; Mike Frysinger <vapier@gentoo.org> ppl-0.12.1-r1.ebuild:
+  Add arm64 love.
 
   27 May 2014; Ryan Hill <rhill@gentoo.org> -ppl-0.10.2-r1.ebuild,
   -ppl-0.11.2-r1.ebuild, -ppl-0.12.ebuild, -ppl-0.12.1.ebuild, metadata.xml:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.6.1-r1.ebuild,v 1.2 2014/11/03 13:30:41 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.6.1-r1.ebuild,v 1.3 2014/11/04 03:20:09 patrick Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/radius/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="
 	dbm debug guile mysql nls odbc postgres readline snmp static-libs
 "

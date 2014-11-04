@@ -4,11 +4,11 @@ DESCRIPTION=GNU radius authentication server
 EAPI=5
 HOMEPAGE=http://www.gnu.org/software/radius/radius.html
 IUSE=dbm debug guile mysql nls odbc postgres readline snmp static-libs
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 x86
 LICENSE=GPL-3
 RDEPEND=!net-dialup/cistronradius !net-dialup/freeradius dbm? ( sys-libs/gdbm ) guile? ( >=dev-scheme/guile-1.4 ) mysql? ( virtual/mysql ) odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) ) postgres? ( virtual/postgresql[server] ) readline? ( sys-libs/readline ) snmp? ( net-analyzer/net-snmp ) virtual/pam
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gnu/radius/radius-1.6.1.tar.gz
 _eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=95623208b3dc467d7d14d33b85bec761
+_md5_=286c5ed8edcf1b4d6998847847d9e978
