@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>bsd</herd>
-	<maintainer><email>the_paya@gentoo.org</email></maintainer>
 	<use>
 		<flag name="altq">Enable altq(4) support — alternate queuing of network packets.</flag>
 	</use>

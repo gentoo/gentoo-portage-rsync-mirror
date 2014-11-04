@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1122 2014/10/19 08:54:14 tamiko Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1124 2014/11/04 12:22:57 pacho Exp $
 
 -->
 <herds>
@@ -551,11 +551,6 @@
   <email>hardened@gentoo.org</email>
   <description>Hardened Gentoo project packages and policy</description>
   <maintainer>
-    <email>solar@gentoo.org</email>
-    <name>Ned Ludd</name>
-    <role>PaX/Grsecurity project lead</role>
-  </maintainer>
-  <maintainer>
     <email>gengor@gentoo.org</email>
     <name>Gordon Malm</name>
     <role>hardened-sources</role>
@@ -564,11 +559,6 @@
     <email>chainsaw@gentoo.org</email>
     <name>Tony Vroon</name>
     <role>AMD64 arch team liaison</role>
-  </maintainer>
-  <maintainer>
-    <email>nixnut@gentoo.org</email>
-    <name>Gysbert Wassenaar</name>
-    <role>PPC arch team liaison</role>
   </maintainer>
   <maintainer>
     <email>zorry@gentoo.org</email>
@@ -1400,10 +1390,6 @@
     <name>Robin H. Johnson</name>
   </maintainer>
   <maintainer>
-    <email>solar@gentoo.org</email>
-    <name>Ned Ludd</name>
-  </maintainer>
-  <maintainer>
     <email>radhermit@gentoo.org</email>
     <name>Tim Harder</name>
   </maintainer>
@@ -1571,10 +1557,6 @@
   <email>embedded@gentoo.org</email>
   <description>Embedded systems packages</description>
   <!-- Either maintainers or a maintaining project is allowed, not both -->
-  <maintainer>
-    <email>solar@gentoo.org</email>
-    <name>Ned Ludd</name>
-  </maintainer>
   <maintainer>
     <email>blueness@gentoo.org</email>
     <name>Anthony G. Basile</name>
@@ -1924,10 +1906,6 @@
   <maintainer>
     <email>lu_zero@gentoo.org</email>
     <name>Luca Barbato</name>
-  </maintainer>
-  <maintainer>
-    <email>solar@gentoo.org</email>
-    <name>Ned Ludd</name>
   </maintainer>
   <maintainer>
     <email>vapier@gentoo.org</email>

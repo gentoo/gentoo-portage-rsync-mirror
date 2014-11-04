@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/comical
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/ChangeLog,v 1.20 2012/06/18 18:45:48 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/ChangeLog,v 1.21 2014/11/04 12:26:30 pacho Exp $
+
+  04 Nov 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #131845
 
   18 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> -comical-0.8-r2.ebuild:
   old
@@ -78,4 +81,3 @@
   18 Jul 2006; Javier Villavicencio <the_paya@gentoo.org> +metadata.xml,
   +comical-0.8.ebuild:
   Add comical ebuild. Thanks to Graeme Humphries and Daniel Lin. in bug #42899
-

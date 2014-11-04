@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>solar@gentoo.org</email>
-    <description>Maintainer</description>
-  </maintainer>
-  <maintainer>
     <email>vapier@gentoo.org</email>
     <description>Maintainer</description>
   </maintainer>

@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>graphics</herd>
-<maintainer>
-<email>the_paya@gentoo.org</email>
-<name>Javier Villavicencio</name>
-</maintainer>
 </pkgmetadata>

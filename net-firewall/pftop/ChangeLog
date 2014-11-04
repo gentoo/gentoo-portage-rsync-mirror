@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/pftop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pftop/ChangeLog,v 1.9 2012/07/22 00:01:31 the_paya Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pftop/ChangeLog,v 1.10 2014/11/04 12:26:49 pacho Exp $
+
+  04 Nov 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #131845
 
 *pftop-0.7-r2 (21 Jul 2012)
 
@@ -47,4 +50,3 @@
   +pftop-0.5.ebuild:
   Add pftop ebuild based on the one contributed by Javier Villavicencio in bug
   #110722.
-
