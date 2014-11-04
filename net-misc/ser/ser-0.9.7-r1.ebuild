@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.7.ebuild,v 1.7 2014/11/03 13:50:08 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.7-r1.ebuild,v 1.1 2014/11/04 05:20:48 patrick Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils flag-o-matic toolchain-funcs multilib user
 
@@ -45,13 +45,8 @@ pkg_setup() {
 	enewuser  ser -1 -1 /dev/null ser
 }
 
-src_unpack() {
+src_prepare() {
 	local modules extmodules MY_A MY_PATCH_A x
-
-	# unpack ser source
-	unpack ${P}_src.tar.gz
-
-	cd "${S}"
 	use ipv6 || \
 		sed -i -e "s/-DUSE_IPV6//g" Makefile.defs || die
 	sed -i -e 's/\(CFLAGS+=-mcpu=ultrasparc\) -minline-all-stringops/\1/g' \
