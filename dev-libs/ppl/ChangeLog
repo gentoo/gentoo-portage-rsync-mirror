@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.69 2014/11/04 04:14:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.70 2014/11/04 17:41:16 vapier Exp $
+
+  04 Nov 2014; Mike Frysinger <vapier@gentoo.org> ppl-1.1.ebuild:
+  Drop old glpk requirement #473334 by Jeremy Murphy.
 
 *ppl-1.1 (04 Nov 2014)
 
