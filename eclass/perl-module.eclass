@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.145 2014/11/01 22:08:54 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.146 2014/11/05 00:24:33 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -141,7 +141,6 @@ perl-module_src_prep() {
 	SRC_PREP="yes"
 
 	perl_set_version
-	perl_set_eprefix
 
 	[[ -z ${pm_echovar} ]] && export PERL_MM_USE_DEFAULT=1
 	# Disable ExtUtils::AutoInstall from prompting
@@ -257,7 +256,6 @@ perl-module_src_install() {
 	debug-print-function $FUNCNAME "$@"
 
 	perl_set_version
-	perl_set_eprefix
 
 	local f
 
@@ -371,8 +369,6 @@ perl_fix_osx_extra() {
 perl_delete_module_manpages() {
 	debug-print-function $FUNCNAME "$@"
 
-	perl_set_eprefix
-
 	if [[ -d "${ED}"/usr/share/man ]] ; then
 #		einfo "Cleaning out stray man files"
 		find "${ED}"/usr/share/man -type f -name "*.3pm" -delete
@@ -444,8 +440,6 @@ perl_link_duallife_scripts() {
 		return 0
 	fi
 
-	perl_set_eprefix
-
 	local i ff
 	if has "${EBUILD_PHASE:-none}" "postinst" "postrm" ; then
 		for i in "${DUALLIFESCRIPTS[@]}" ; do
@@ -469,8 +463,4 @@ perl_link_duallife_scripts() {
 		done
 		popd > /dev/null
 	fi
-}
-
-perl_set_eprefix() {
-	debug-print-function $FUNCNAME "$@"
 }
