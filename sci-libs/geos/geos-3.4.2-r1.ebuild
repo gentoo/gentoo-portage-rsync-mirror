@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.4.2.ebuild,v 1.1 2013/10/21 00:26:42 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.4.2-r1.ebuild,v 1.1 2014/11/05 12:28:48 titanofold Exp $
 
 EAPI="5"
 
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	epatch "${FILESDIR}"/3.4.2-solaris-isnan.patch
+	epatch "${FILESDIR}"/3.4.2-solaris-isnan.patch \
+		"${FILESDIR}"/3.4.2-ruby_so_name.patch
 	eautoreconf
 	echo "#!${EPREFIX}/bin/bash" > py-compile
 }
