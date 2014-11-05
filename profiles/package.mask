@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16137 2014/11/04 08:25:36 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16138 2014/11/05 09:30:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (05 Nov 2014)
+# ConsoleKit2 from github by Eric Koegel, auth of xfce4-power-manager
+# The ConsoleKit in freedesktop.org git won't be continued anymore,
+# making this the new official release
+# Masked for testing
+>=sys-auth/consolekit-0.9.2
 
 # Matthias Maier <tamiko@gentoo.org> (4 Nov 2014)
 # Masked for removal in 30 days. The package has multiple open bugs
