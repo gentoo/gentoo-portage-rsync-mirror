@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.147 2014/11/02 09:06:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.148 2014/11/05 11:24:29 jer Exp $
+
+  05 Nov 2014; Jeroen Roovers <jer@gentoo.org> -chrony-1.30-r1.ebuild,
+  -files/chronyd.service, -files/chronyd.service-r1:
+  Old.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> chrony-1.31.ebuild:
   Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug

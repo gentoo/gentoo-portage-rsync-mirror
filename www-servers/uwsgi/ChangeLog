@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.65 2014/11/03 14:05:57 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.66 2014/11/05 11:06:56 ultrabug Exp $
+
+*uwsgi-2.0.8-r1 (05 Nov 2014)
+
+  05 Nov 2014; Ultrabug <ultrabug@gentoo.org> +uwsgi-2.0.8-r1.ebuild,
+  +files/uwsgi.initd-r4:
+  init script enable emperor in app mode thx to Stefan Talpalaru fix #528136,
+  remove bashism thx to Philipp Riegger fix #527566
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> uwsgi-1.4.10-r1.ebuild,
   uwsgi-2.0.7-r1.ebuild, uwsgi-2.0.8.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/ne
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.56 2014/11/01 17:50:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.57 2014/11/05 11:28:53 jer Exp $
+
+  05 Nov 2014; Jeroen Roovers <jer@gentoo.org> -ne-2.3.ebuild,
+  -files/ne-2.1-asneeded.patch:
+  Old.
 
   01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ne-2.5.ebuild:
   Stable for ppc, wrt bug #527284

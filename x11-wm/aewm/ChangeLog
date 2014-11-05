@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/aewm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.35 2014/11/01 17:48:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.36 2014/11/05 11:28:27 jer Exp $
+
+  05 Nov 2014; Jeroen Roovers <jer@gentoo.org> -aewm-1.2.7.ebuild,
+  -files/aewm-1.2.7-ldflags.patch:
+  Old.
 
   01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> aewm-1.3.12.ebuild:
   Stable for ppc, wrt bug #526740
