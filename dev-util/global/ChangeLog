@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.136 2014/10/18 15:10:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.137 2014/11/05 19:14:18 floppym Exp $
+
+  05 Nov 2014; Mike Gilbert <floppym@gentoo.org> global-6.3.1.ebuild:
+  Adjust libtool dep for new libltdl package.
 
   18 Oct 2014; Mike Gilbert <floppym@gentoo.org> -global-6.2.10.ebuild,
   -global-6.2.11.ebuild, -global-6.2.12.ebuild, -global-6.3.ebuild:

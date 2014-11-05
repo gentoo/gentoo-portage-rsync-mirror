@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-6.3.1.ebuild,v 1.5 2014/10/18 14:20:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-6.3.1.ebuild,v 1.6 2014/11/05 19:14:18 floppym Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="doc emacs vim"
 
-RDEPEND="sys-devel/libtool
+RDEPEND="|| ( dev-libs/libltdl:0 sys-devel/libtool:2 )
 	sys-libs/ncurses
 	emacs? ( virtual/emacs )
 	vim? ( || ( app-editors/vim app-editors/gvim ) )"
