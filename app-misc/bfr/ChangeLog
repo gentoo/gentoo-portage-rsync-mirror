@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bfr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.21 2014/10/12 14:23:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.22 2014/11/05 12:41:46 jer Exp $
+
+  05 Nov 2014; Jeroen Roovers <jer@gentoo.org> bfr-1.6-r2.ebuild:
+  Add dev-lang/perl to DEPEND.
 
 *bfr-1.6-r2 (12 Oct 2014)
 
