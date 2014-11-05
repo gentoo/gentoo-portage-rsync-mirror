@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.74 2014/11/05 18:13:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.75 2014/11/05 21:18:08 mgorny Exp $
+
+  05 Nov 2014; Michał Górny <mgorny@gentoo.org> pypy-2.3.1-r2.ebuild,
+  pypy-2.4.0.ebuild:
+  Revert the gdbm change. I was wrong, and _gdbm is only in PyPy 3.
 
   05 Nov 2014; Michał Górny <mgorny@gentoo.org> pypy-2.3.1-r2.ebuild,
   pypy-2.4.0.ebuild:
