@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.3.1-r2.ebuild,v 1.1 2014/11/04 15:04:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.3.1-r2.ebuild,v 1.2 2014/11/04 23:51:08 mgorny Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="https://bitbucket.org/${PN}/${PN}/get/release-${PV}.tar.bz2 -> ${P}-src
 LICENSE="MIT"
 SLOT="0/$(get_version_component_range 1-2 ${PV})"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="bzip2 doc gdbm +jit ncurses sandbox shadowstack sqlite sse2 tk"
+IUSE="bzip2 doc gdbm +jit low-memory ncurses sandbox shadowstack sqlite sse2 tk"
 
 RDEPEND=">=sys-libs/zlib-1.1.3:0=
 	virtual/libffi:0=
@@ -39,14 +39,53 @@ PDEPEND="app-admin/python-updater"
 S="${WORKDIR}/${P}-src"
 
 pkg_pretend() {
-	CHECKREQS_MEMORY="2G"
-	use amd64 && CHECKREQS_MEMORY="4G"
+	if use low-memory; then
+		if ! has_version dev-python/pypy && ! has_version dev-python/pypy-bin
+		then
+			eerror "USE=low-memory requires a (possibly old) version of dev-python/pypy"
+			eerror "or dev-python/pypy-bin being installed. Please install it using e.g.:"
+			eerror
+			eerror "  $ emerge -1v dev-python/pypy-bin"
+			eerror
+			eerror "before attempting to build dev-python/pypy[low-memory]."
+			die "dev-python/pypy-bin (or dev-python/pypy) needs to be installed for USE=low-memory"
+		fi
+
+		CHECKREQS_MEMORY="1750M"
+		use amd64 && CHECKREQS_MEMORY="3500M"
+	else
+		CHECKREQS_MEMORY="3G"
+		use amd64 && CHECKREQS_MEMORY="6G"
+	fi
+
 	check-reqs_pkg_pretend
 }
 
 pkg_setup() {
+	local force_pypy
+
 	pkg_pretend
-	python-any-r1_pkg_setup
+
+	if has_version dev-python/pypy || has_version dev-python/pypy-bin
+	then
+		if [[ ! ${EPYTHON} ]] || use low-memory; then
+			einfo "Using already-installed PyPy to perform the translation."
+			force_pypy=1
+		else
+			einfo "Using ${EPYTHON} to perform the translation. Please note that upstream"
+			einfo "recommends using PyPy for that. If you wish to do so, please unset"
+			einfo "the EPYTHON variable."
+		fi
+	fi
+
+	if [[ ${force_pypy} ]]; then
+		# set manually since python_setup needs virtual/pypy
+		# and we don't force the dep
+		python_export pypy EPYTHON PYTHON
+		python_wrapper_setup
+	else
+		python-any-r1_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -112,7 +151,13 @@ src_compile() {
 		)
 	done
 
-	set -- "${PYTHON}" rpython/bin/rpython --batch "${args[@]}"
+	local interp=( "${PYTHON}" )
+	if use low-memory; then
+		interp=( env PYPY_GC_MAX_DELTA=200MB
+			"${PYTHON}" --jit loop_longevity=300 )
+	fi
+
+	set -- "${interp[@]}" rpython/bin/rpython --batch "${args[@]}"
 	echo -e "\033[1m${@}\033[0m"
 	"${@}" || die "compile error"
 
