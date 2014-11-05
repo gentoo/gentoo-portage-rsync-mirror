@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=dev-libs/tinyxml media-libs/freetype:2 virtual/opengl virtual/glu x11-libs/libX11 x11-libs/libXaw x11-libs/libXrandr x11-libs/libXt boost? ( dev-libs/boost ) cg? ( media-gfx/nvidia-cg-toolkit ) freeimage? ( media-libs/freeimage ) gles2? ( >=media-libs/mesa-9.0.0[gles2] ) gles3? ( >=media-libs/mesa-10.0.0[gles2] ) gl3plus? ( >=media-libs/mesa-9.2.5 ) ois? ( dev-games/ois ) threads? ( poco? ( dev-libs/poco ) tbb? ( dev-cpp/tbb ) ) zip? ( sys-libs/zlib dev-libs/zziplib ) x11-proto/xf86vidmodeproto virtual/pkgconfig doc? ( app-doc/doxygen ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Object-oriented Graphics Rendering Engine
+EAPI=5
+HOMEPAGE=http://www.ogre3d.org/
+IUSE=+boost cg doc double-precision examples +freeimage gl3plus gles2 gles3 ois +opengl poco profile tbb threads tools +zip
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT public-domain
+RDEPEND=dev-libs/tinyxml media-libs/freetype:2 virtual/opengl virtual/glu x11-libs/libX11 x11-libs/libXaw x11-libs/libXrandr x11-libs/libXt boost? ( dev-libs/boost ) cg? ( media-gfx/nvidia-cg-toolkit ) freeimage? ( media-libs/freeimage ) gles2? ( >=media-libs/mesa-9.0.0[gles2] ) gles3? ( >=media-libs/mesa-10.0.0[gles2] ) gl3plus? ( >=media-libs/mesa-9.2.5 ) ois? ( dev-games/ois ) threads? ( poco? ( dev-libs/poco ) tbb? ( dev-cpp/tbb ) ) zip? ( sys-libs/zlib dev-libs/zziplib )
+REQUIRED_USE=threads? ( ^^ ( boost poco tbb ) ) poco? ( threads ) tbb? ( threads ) ?? ( gl3plus ( || ( gles2 gles3 ) ) ) gles3? ( gles2 ) gl3plus? ( opengl )
+RESTRICT=test
+SLOT=0/1.9.0
+SRC_URI=https://bitbucket.org/sinbad/ogre/get/v1-9-0.tar.bz2 -> ogre-1.9.0.tar.bz2
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_md5_=6a30227b11c59b8d04f8953d1c07a590

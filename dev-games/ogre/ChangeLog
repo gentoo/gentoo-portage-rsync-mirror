@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.97 2014/03/08 23:22:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.98 2014/11/05 19:37:37 hasufell Exp $
+
+*ogre-1.9.0-r1 (05 Nov 2014)
+
+  05 Nov 2014; Julian Ospald <hasufell@gentoo.org> +ogre-1.9.0-r1.ebuild,
+  +files/ogre-1.9.0-remove_media_path_to_bindir.patch,
+  +files/ogre-1.9.0-remove_resource_path_to_bindir.patch, metadata.xml:
+  fix bug #506058, thanks to Sven Eden
 
   08 Mar 2014; Julian Ospald <hasufell@gentoo.org> ogre-1.8.1.ebuild,
   ogre-1.9.0.ebuild:
