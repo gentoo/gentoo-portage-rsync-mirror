@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.39 2014/10/26 19:08:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.40 2014/11/05 02:42:17 patrick Exp $
+
+  05 Nov 2014; Patrick Lauer <patrick@gentoo.org> cffi-0.8.6.ebuild:
+  Stable for x86 and amd64 to make bcrypt happy
 
   26 Oct 2014; Fabian Groffen <grobian@gentoo.org> cffi-0.8.6.ebuild:
   Added Prefix keywords, bug #503094
