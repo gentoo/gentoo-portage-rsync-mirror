@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-ptrace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/ChangeLog,v 1.15 2014/10/17 04:15:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/ChangeLog,v 1.16 2014/11/05 05:32:30 patrick Exp $
+
+*python-ptrace-0.8.1 (05 Nov 2014)
+
+  05 Nov 2014; Patrick Lauer <patrick@gentoo.org> +python-ptrace-0.8.1.ebuild:
+  Bump
 
 *python-ptrace-0.8 (17 Oct 2014)
 
