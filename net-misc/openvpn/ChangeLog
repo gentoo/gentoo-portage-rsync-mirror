@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.301 2014/11/02 09:13:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.302 2014/11/05 04:00:27 floppym Exp $
+
+  05 Nov 2014; Mike Gilbert <floppym@gentoo.org> files/openvpn.service:
+  Use unescaped instance name for PIDFile and config file, bug 527614.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> openvpn-2.3.4-r1.ebuild,
   openvpn-9999.ebuild:

@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/ltunify
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ltunify/ChangeLog,v 1.1 2014/11/05 03:52:41 radhermit Exp $
+
+*ltunify-0.2 (05 Nov 2014)
+
+  05 Nov 2014; Tim Harder <radhermit@gentoo.org> +ltunify-0.2.ebuild,
+  +metadata.xml:
+  Initial import.
+
