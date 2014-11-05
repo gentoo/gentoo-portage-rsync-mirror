@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/plasma-nm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/ChangeLog,v 1.15 2014/10/27 16:48:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/ChangeLog,v 1.17 2014/11/05 15:27:47 mrueg Exp $
+
+  05 Nov 2014; Manuel Rüger <mrueg@gentoo.org> plasma-nm-0.9.3.5.ebuild:
+  Whitespace.
+
+*plasma-nm-0.9.3.5 (05 Nov 2014)
+
+  05 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +plasma-nm-0.9.3.5.ebuild:
+  Version bump.
 
   27 Oct 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/plasma-nm-0.9.3.3-openconnect-build.patch, -plasma-nm-0.9.3.3.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.91 2014/11/04 05:37:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.92 2014/11/05 15:17:22 jlec Exp $
+
+  05 Nov 2014; Justin Lecher <jlec@gentoo.org>
+  nvidia-cuda-toolkit-6.5.14.ebuild:
+  Test for presents of deprecated.3 before moving, #525226
 
 *nvidia-cuda-toolkit-4.2.9-r2 (04 Nov 2014)
 

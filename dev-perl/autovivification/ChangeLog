@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/autovivification
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/autovivification/ChangeLog,v 1.4 2014/10/07 21:59:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/autovivification/ChangeLog,v 1.5 2014/11/05 15:08:56 mrueg Exp $
+
+*autovivification-0.140.0 (05 Nov 2014)
+
+  05 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +autovivification-0.140.0.ebuild,
+  -autovivification-0.120.0.ebuild:
+  Version bump. Cleanup old.
 
 *autovivification-0.130.0 (07 Oct 2014)
 
