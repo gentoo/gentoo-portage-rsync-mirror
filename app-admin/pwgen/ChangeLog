@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/pwgen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.66 2013/04/04 13:46:28 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.67 2014/11/05 16:17:07 jer Exp $
+
+*pwgen-2.07 (05 Nov 2014)
+
+  05 Nov 2014; Jeroen Roovers <jer@gentoo.org> -pwgen-2.06-r2.ebuild,
+  +pwgen-2.07.ebuild:
+  Version bump.
 
 *pwgen-2.06-r2 (04 Apr 2013)
 

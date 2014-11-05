@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/serf-1.3.8.ebuild,v 1.1 2014/11/05 15:40:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/serf-1.3.8.ebuild,v 1.2 2014/11/05 16:18:43 floppym Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3.8-tests.patch"
 
 	# https://code.google.com/p/serf/issues/detail?id=133
-	sed -e "/env.Append(CCFLAGS='-O2')/d" -i SConstruct
+	sed -e "/env.Append(CCFLAGS=\['-O2'\])/d" -i SConstruct
 }
 
 src_compile() {

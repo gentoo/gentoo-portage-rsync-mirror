@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.112 2014/08/08 08:00:56 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.113 2014/11/05 16:12:11 vapier Exp $
+
+*openct-0.6.20-r4 (05 Nov 2014)
+
+  05 Nov 2014; Mike Frysinger <vapier@gentoo.org> +openct-0.6.20-r4.ebuild:
+  Depend on libltdl rather than libtool #528294 by Pacho Ramos.
 
   08 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> -openct-0.6.20.ebuild,
   openct-0.6.20-r3.ebuild:

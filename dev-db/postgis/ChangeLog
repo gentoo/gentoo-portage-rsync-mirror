@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.93 2014/11/03 11:32:12 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.94 2014/11/05 16:09:12 titanofold Exp $
+
+*postgis-2.1.4 (05 Nov 2014)
+*postgis-2.0.6 (05 Nov 2014)
+
+  05 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> +postgis-2.0.6.ebuild,
+  +postgis-2.1.4.ebuild, +files/postgis-2.1.4-pkgconfig-json.patch:
+  Version bump. Fixes bugs 464392, 507708, and 520694.
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> postgis-2.0.3.ebuild,
   postgis-2.1.0.ebuild, postgis-2.1.1.ebuild:

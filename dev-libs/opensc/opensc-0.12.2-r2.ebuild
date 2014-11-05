@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.2-r2.ebuild,v 1.8 2012/09/30 17:20:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.2-r2.ebuild,v 1.9 2014/11/05 16:13:26 vapier Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc x86"
 IUSE="doc libtool +pcsc-lite openct readline ssl zlib"
 
-RDEPEND="libtool? ( sys-devel/libtool )
+RDEPEND="libtool? ( dev-libs/libltdl )
 	zlib? ( sys-libs/zlib )
 	readline? ( sys-libs/readline )
 	ssl? ( dev-libs/openssl )

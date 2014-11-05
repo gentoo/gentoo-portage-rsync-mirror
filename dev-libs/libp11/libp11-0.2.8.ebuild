@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.8.ebuild,v 1.13 2014/08/10 20:37:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.8.ebuild,v 1.14 2014/11/05 16:11:54 vapier Exp $
 
 EAPI="4"
 inherit libtool
@@ -14,9 +14,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 IUSE="doc"
 
-# libtool is required at runtime as it uses libltdl.
 RDEPEND="dev-libs/openssl
-	sys-devel/libtool"
+	dev-libs/libltdl"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"

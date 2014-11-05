@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-9999.ebuild,v 1.8 2014/11/03 20:50:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-9999.ebuild,v 1.9 2014/11/05 16:20:52 vapier Exp $
 
 EAPI=5
 
@@ -40,11 +40,7 @@ RDEPEND="dev-libs/libbsd
 		>=x11-libs/pango-1.2.3
 	)
 	ncurses? ( >=sys-libs/ncurses-5.3 )
-	plugins? (
-		>=net-misc/curl-7.26.0
-		sys-devel/libtool
-	)"
-
+	plugins? ( >=net-misc/curl-7.26.0 )"
 DEPEND="${RDEPEND}
 	doc? ( app-text/ghostscript-gpl
 		sys-apps/groff )
