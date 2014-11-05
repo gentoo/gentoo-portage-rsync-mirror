@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/hpx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpx/ChangeLog,v 1.1 2014/07/31 12:26:11 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpx/ChangeLog,v 1.2 2014/11/05 05:30:37 slis Exp $
+
+*hpx-0.9.9 (05 Nov 2014)
+
+  05 Nov 2014; Sławek Lis <slis@gentoo.org> +hpx-0.9.9.ebuild:
+  version bump
 
 *hpx-0.9.8 (31 Jul 2014)
 

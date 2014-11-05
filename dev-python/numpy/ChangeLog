@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.242 2014/10/21 08:03:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.243 2014/11/05 05:23:13 patrick Exp $
+
+*numpy-1.9.1 (05 Nov 2014)
+
+  05 Nov 2014; Patrick Lauer <patrick@gentoo.org> +numpy-1.9.1.ebuild:
+  Bump
 
 *numpy-1.9.0-r1 (21 Oct 2014)
 
