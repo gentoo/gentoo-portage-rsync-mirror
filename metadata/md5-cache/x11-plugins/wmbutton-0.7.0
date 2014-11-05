@@ -8,6 +8,6 @@ KEYWORDS=~amd64 ~ppc ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXpm x11-libs/libXext
 SLOT=0
-SRC_URI=http://windowmaker.org/dockapps/?download=wmbutton-0.7.0.tar.gz -> wmbutton-0.7.0.tar.gz branding? ( mirror://gentoo/wmbutton-buttons.xpm )
+SRC_URI=http://dev.gentoo.org/~voyageur/distfiles/wmbutton-0.7.0.tar.gz branding? ( mirror://gentoo/wmbutton-buttons.xpm )
 _eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=060a519e42d6eaed8a0917de3013172e
+_md5_=3964eba55d9f197572deb91f0428e7bb

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmacpi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.25 2014/10/10 13:15:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.26 2014/11/05 13:04:39 voyageur Exp $
+
+  05 Nov 2014; Bernard Cafarelli <voyageur@gentoo.org> wmacpi-2.2.ebuild:
+  Host tarball on my devspace, bug #527610
 
 *wmacpi-2.2 (10 Oct 2014)
 

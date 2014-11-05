@@ -1,13 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/wmmemload-0.1.7.ebuild,v 1.1 2014/10/10 20:23:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/wmmemload-0.1.7.ebuild,v 1.2 2014/11/05 13:12:25 voyageur Exp $
 
 EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="dockapp that displays memory and swap space usage"
 HOMEPAGE="http://windowmaker.org/dockapps/?name=wmmemload"
-SRC_URI="http://windowmaker.org/dockapps/?download=${P}.tar.gz -> ${P}.tar.gz"
+# Grab from http://windowmaker.org/dockapps/?download=${P}.tar.gz
+SRC_URI="http://dev.gentoo.org/~voyageur/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

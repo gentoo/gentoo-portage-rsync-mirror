@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbattery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.34 2014/10/10 13:51:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.35 2014/11/05 13:05:51 voyageur Exp $
+
+  05 Nov 2014; Bernard Cafarelli <voyageur@gentoo.org> wmbattery-2.45.ebuild:
+  Host tarball on my devspace, bug #527610
 
 *wmbattery-2.45 (10 Oct 2014)
 

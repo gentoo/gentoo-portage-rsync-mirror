@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtime/ChangeLog,v 1.5 2014/10/06 14:44:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtime/ChangeLog,v 1.6 2014/11/05 13:13:24 voyageur Exp $
+
+  05 Nov 2014; Bernard Cafarelli <voyageur@gentoo.org> wmtime-1.1.ebuild:
+  Host tarball on my devspace, bug #527610
 
 *wmtime-1.1 (06 Oct 2014)
 
