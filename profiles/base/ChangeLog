@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.743 2014/11/04 22:34:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.744 2014/11/05 14:28:21 titanofold Exp $
+
+  05 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> package.use.mask:
+  sci-libs/gdal|sci-libs/ogdi visibility issue fixed. Removing mask.
 
   04 Nov 2014; Mike Gilbert <floppym@gentoo.org> package.use.stable.mask:
   Revert last change.

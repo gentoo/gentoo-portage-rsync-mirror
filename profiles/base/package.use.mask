@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.620 2014/11/04 17:48:05 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.621 2014/11/05 14:28:21 titanofold Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -76,10 +76,6 @@ dev-db/percona-server embedded
 # Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
 # Mask due bug #414903
 media-video/mplayer dxr3
-
-# Rick Farina <zerochaos@gentoo.org> (11 July 2014)
-# Mask ogdi use flag for sci-libs/gdal due to broken visibility rules
-sci-libs/gdal ogdi
 
 # Thomas Sachau <tommy@gentoo.org> (30 Jun 2014)
 # Mask pixman USE flag of dev-libs/efl for future removal, bug 501074

@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/percona-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-server/ChangeLog,v 1.8 2014/10/21 18:13:07 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-server/ChangeLog,v 1.9 2014/11/05 14:14:42 grknight Exp $
+
+*percona-server-5.6.21.70.0 (05 Nov 2014)
+
+  05 Nov 2014; Brian Evans <grknight@gentoo.org>
+  +percona-server-5.6.21.70.0.ebuild:
+  Version bump
 
 *percona-server-5.6.21.69.0 (21 Oct 2014)
 
