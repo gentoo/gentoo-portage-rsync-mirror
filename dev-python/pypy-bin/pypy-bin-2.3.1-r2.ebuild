@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.3.1-r2.ebuild,v 1.1 2014/11/04 22:22:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.3.1-r2.ebuild,v 1.2 2014/11/05 18:13:43 mgorny Exp $
 
 EAPI=5
 
@@ -165,7 +165,7 @@ src_install() {
 	"${PYTHON}" -c "import _curses" || die "Failed to import _curses (cffi)"
 	"${PYTHON}" -c "import syslog" || die "Failed to import syslog (cffi)"
 	if use gdbm; then
-		"${PYTHON}" -c "import gdbm" || die "Failed to import gdbm (cffi)"
+		"${PYTHON}" -c "import _gdbm" || die "Failed to import gdbm (cffi)"
 	fi
 	if use sqlite; then
 		"${PYTHON}" -c "import _sqlite3" || die "Failed to import _sqlite3 (cffi)"

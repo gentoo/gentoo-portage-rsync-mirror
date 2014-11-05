@@ -10,4 +10,4 @@ RDEPEND=dev-libs/glib:2 >=media-gfx/exiv2-0.11:0= media-libs/lcms >=media-libs/l
 SLOT=0
 SRC_URI=mirror://sourceforge/ufraw/ufraw-0.20.tar.gz
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	c91a1ac3fefc6b077094fb2e82c65af4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=9bd579d044b342f90f50d6e0fdc48e36
+_md5_=633669505dcdc8d24b17ff763a0e8c49

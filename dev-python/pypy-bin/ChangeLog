@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pypy-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.24 2014/11/04 22:22:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.25 2014/11/05 18:13:43 mgorny Exp $
+
+  05 Nov 2014; Michał Górny <mgorny@gentoo.org> pypy-bin-2.3.1-r2.ebuild,
+  pypy-bin-2.4.0.ebuild:
+  Import _gdbm directly to generate cffi cache instead of gdbm. This avoids
+  unnecessary middle-imports and makes the block consistent with PyPy3.
 
 *pypy-bin-2.3.1-r2 (04 Nov 2014)
 
