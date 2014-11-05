@@ -1,22 +1,22 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.6.ebuild,v 1.18 2014/11/05 09:53:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.9.2.ebuild,v 1.2 2014/11/05 09:53:30 ssuominen Exp $
 
 EAPI=5
-inherit autotools eutils linux-info pam systemd
+inherit eutils linux-info pam
 
-MY_PN=ConsoleKit
+MY_PN=ConsoleKit2
 MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Framework for defining and tracking users, login sessions and seats"
-HOMEPAGE="http://www.freedesktop.org/wiki/Software/ConsoleKit"
-SRC_URI="http://www.freedesktop.org/software/${MY_PN}/dist/${MY_P}.tar.xz
-	mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}-4.debian.tar.gz" # for logrotate file
+HOMEPAGE="http://github.com/ConsoleKit2/ConsoleKit2 http://www.freedesktop.org/wiki/Software/ConsoleKit"
+SRC_URI="http://github.com/${MY_PN}/${MY_PN}/releases/download/${PV}/${MY_P}.tar.bz2
+	mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_0.4.6-4.debian.tar.gz" # for logrotate file"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
-IUSE="acl debug doc kernel_linux pam policykit selinux systemd-units test"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
+IUSE="acl debug doc kernel_linux pam policykit selinux test"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100:=
 	>=dev-libs/glib-2.38.2-r1:2=
@@ -55,30 +55,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-cleanup_console_tags.patch \
-		"${FILESDIR}"/${PN}-shutdown-reboot-without-policies.patch \
-		"${FILESDIR}"/${PN}-udev-acl-install_to_usr.patch \
-		"${FILESDIR}"/${PN}-0.4.5-polkit-automagic.patch
-
-	if ! use systemd-units; then
-		sed -i -e '/SystemdService/d' data/org.freedesktop.ConsoleKit.service.in || die
-	fi
-
-	eautoreconf
+	sed -i -e '/SystemdService/d' data/org.freedesktop.ConsoleKit.service.in || die
 }
 
 src_configure() {
-	local myconf
-	if use systemd-units; then
-		myconf="$(systemd_with_unitdir)"
-	else
-		myconf="--with-systemdsystemunitdir=/tmp"
-	fi
-
 	econf \
 		XMLTO_FLAGS='--skip-validation' \
-		--libexecdir="${EPREFIX}"/usr/lib/${MY_PN} \
+		--libexecdir="${EPREFIX}"/usr/lib/ConsoleKit \
 		--localstatedir="${EPREFIX}"/var \
 		$(use_enable pam pam-module) \
 		$(use_enable doc docbook-docs) \
@@ -88,7 +71,9 @@ src_configure() {
 		$(use_enable acl udev-acl) \
 		--with-dbus-services="${EPREFIX}"/usr/share/dbus-1/services \
 		--with-pam-module-dir="$(getpam_mod_dir)" \
-		${myconf}
+		--with-logrotate-dir=/etc/logrotate.d \
+		--with-xinitrc-dir=/etc/X11/xinit/xinitrc.d \
+		--without-systemdsystemunitdir
 }
 
 src_install() {
@@ -97,7 +82,7 @@ src_install() {
 		htmldocdir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		install
 
-	dosym /usr/lib/${MY_PN} /usr/lib/${PN}
+	dosym /usr/lib/ConsoleKit /usr/lib/${PN}
 
 	dodoc AUTHORS HACKING NEWS README TODO
 
@@ -111,12 +96,7 @@ src_install() {
 	exeinto /etc/X11/xinit/xinitrc.d
 	newexe "${FILESDIR}"/90-consolekit-3 90-consolekit
 
-	exeinto /usr/lib/ConsoleKit/run-session.d
-	doexe "${FILESDIR}"/pam-foreground-compat.ck
-
 	prune_libtool_files --all # --all for pam_ck_connector.la
-
-	use systemd-units || rm -rf "${ED}"/tmp
 
 	rm -rf "${ED}"/var/run # let the init script create the directory
 
