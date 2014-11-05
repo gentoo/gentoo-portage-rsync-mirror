@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.319 2014/11/04 19:24:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.320 2014/11/05 22:09:52 floppym Exp $
+
+*systemd-217-r2 (05 Nov 2014)
+
+  05 Nov 2014; Mike Gilbert <floppym@gentoo.org> +systemd-217-r2.ebuild:
+  Backport several patches. Resolves bugs 527832, 527894.
 
 *systemd-217-r1 (04 Nov 2014)
 
