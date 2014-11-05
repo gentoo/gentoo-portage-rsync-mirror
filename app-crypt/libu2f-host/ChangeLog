@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/libu2f-host
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.5 2014/10/25 17:36:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.6 2014/11/05 16:57:17 zerochaos Exp $
+
+*libu2f-host-0.0.1 (05 Nov 2014)
+
+  05 Nov 2014; Rick Farina <zerochaos@gentoo.org> +libu2f-host-0.0.1.ebuild:
+  bump per bug #528280, adding USE=static-libs to disable building static-libs
 
   25 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org>
   libu2f-host-0.0-r1.ebuild:
