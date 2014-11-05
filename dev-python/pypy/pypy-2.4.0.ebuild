@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.4.0.ebuild,v 1.7 2014/11/05 22:18:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.4.0.ebuild,v 1.8 2014/11/05 22:58:22 mgorny Exp $
 
 EAPI=5
 
@@ -217,7 +217,7 @@ src_install() {
 		|| die "Generation of Grammar and PatternGrammar pickles failed"
 
 	# Generate cffi cache
-# Please keep in sync with pypy/tool/release/package.py!
+	# Please keep in sync with pypy/tool/release/package.py!
 	"${PYTHON}" -c "import _curses" || die "Failed to import _curses (cffi)"
 	"${PYTHON}" -c "import syslog" || die "Failed to import syslog (cffi)"
 	if use gdbm; then

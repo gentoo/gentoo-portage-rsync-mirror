@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.77 2014/11/05 22:18:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.78 2014/11/05 22:58:22 mgorny Exp $
+
+  05 Nov 2014; Michał Górny <mgorny@gentoo.org> pypy-2.4.0.ebuild:
+  Fix whitespace.
 
   05 Nov 2014; Michał Górny <mgorny@gentoo.org> pypy-2.4.0.ebuild:
   Remove unnecessary vcs-snapshot use.
