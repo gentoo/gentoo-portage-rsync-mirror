@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1.ebuild,v 1.2 2014/11/03 13:57:38 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r1.ebuild,v 1.1 2014/11/05 15:58:23 titanofold Exp $
 
 EAPI=5
 
@@ -172,6 +172,7 @@ gdal_src_configure() {
 	# podofo - we use poppler instead they are exclusive for each other
 	# tiff is a hard dep
 	ECONF_SOURCE="${S}" econf \
+		--includedir="${EPREFIX}/usr/include/${PN}" \
 		--disable-static \
 		--enable-shared \
 		--with-expat \

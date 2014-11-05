@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.147 2014/08/30 17:02:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.148 2014/11/05 15:40:37 floppym Exp $
+
+*serf-1.3.8 (05 Nov 2014)
+
+  05 Nov 2014; Mike Gilbert <floppym@gentoo.org>
+  +files/serf-1.3.8-scons_variables.patch, +files/serf-1.3.8-tests.patch,
+  +serf-1.3.8.ebuild:
+  Version bump. Ebuild by Arfrever. Fix RUNPATH (bug #509242). Usage of SSL 2
+  and 3 disabled.
 
   30 Aug 2014; Agostino Sarubbo <ago@gentoo.org> serf-1.3.7.ebuild:
   Stable for ppc64, wrt bug #519202
