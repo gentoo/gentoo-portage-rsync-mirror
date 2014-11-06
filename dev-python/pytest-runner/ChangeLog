@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest-runner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-runner/ChangeLog,v 1.7 2014/08/10 21:18:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-runner/ChangeLog,v 1.8 2014/11/06 08:25:52 idella4 Exp $
+
+  06 Nov 2014; Ian Delaney <idella4@gentoo.org> pytest-runner-1.1-r1.ebuild:
+  clean old impls, add py3.4 support
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pytest-runner-1.1.ebuild:
   QA: drop trailing '.' from DESCRIPTION
