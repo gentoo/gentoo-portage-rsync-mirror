@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10-r1.ebuild,v 1.7 2014/11/05 16:22:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10-r1.ebuild,v 1.8 2014/11/06 05:41:10 vapier Exp $
 
 EAPI=5
 inherit eutils flag-o-matic libtool multilib toolchain-funcs versionator
@@ -18,7 +18,8 @@ IUSE="autotrace bzip2 corefonts cxx djvu fftw fontconfig fpx graphviz hdri jbig 
 
 RESTRICT="perl? ( userpriv )"
 
-RDEPEND="dev-libs/libltdl
+# Drop the libtool dep once libltdl goes stable.
+RDEPEND="|| ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 )
 	autotrace? ( >=media-gfx/autotrace-0.31.1 )
 	bzip2? ( app-arch/bzip2 )
 	corefonts? ( media-fonts/corefonts )

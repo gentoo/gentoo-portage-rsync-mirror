@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.47 2014/10/16 04:07:07 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.48 2014/11/06 05:48:50 vapier Exp $
+
+*hwloc-1.10.0-r1 (06 Nov 2014)
+
+  06 Nov 2014; Mike Frysinger <vapier@gentoo.org> +hwloc-1.10.0-r1.ebuild:
+  Depend on libltdl rather than libtool #528294 by Pacho Ramos.
 
 *hwloc-1.10.0 (16 Oct 2014)
 

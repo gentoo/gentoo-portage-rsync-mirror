@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare test
-DEPEND=dev-libs/libltdl mysql? ( virtual/mysql ) sqlite? ( =dev-db/sqlite-3* ) berkdb? ( sys-libs/db ) xml? ( dev-libs/libxml2 ) !xml? ( >=dev-libs/expat-2 ) ssl? ( dev-libs/openssl:0 ) >=media-libs/raptor-2.0.7 >=dev-libs/rasqal-0.9.28 postgres? ( virtual/postgresql ) iodbc? ( dev-db/libiodbc ) odbc? ( dev-db/unixODBC ) virtual/pkgconfig
+DEPEND=|| ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 ) mysql? ( virtual/mysql ) sqlite? ( =dev-db/sqlite-3* ) berkdb? ( sys-libs/db ) xml? ( dev-libs/libxml2 ) !xml? ( >=dev-libs/expat-2 ) ssl? ( dev-libs/openssl:0 ) >=media-libs/raptor-2.0.7 >=dev-libs/rasqal-0.9.28 postgres? ( virtual/postgresql ) iodbc? ( dev-db/libiodbc ) odbc? ( dev-db/unixODBC ) virtual/pkgconfig
 DESCRIPTION=High-level interface for the Resource Description Framework
 EAPI=4
 HOMEPAGE=http://librdf.org/
 IUSE=berkdb iodbc mysql odbc postgres sqlite ssl static-libs +xml
 KEYWORDS=~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos
 LICENSE=Apache-2.0 GPL-2 LGPL-2.1
-RDEPEND=dev-libs/libltdl mysql? ( virtual/mysql ) sqlite? ( =dev-db/sqlite-3* ) berkdb? ( sys-libs/db ) xml? ( dev-libs/libxml2 ) !xml? ( >=dev-libs/expat-2 ) ssl? ( dev-libs/openssl:0 ) >=media-libs/raptor-2.0.7 >=dev-libs/rasqal-0.9.28 postgres? ( virtual/postgresql ) iodbc? ( dev-db/libiodbc ) odbc? ( dev-db/unixODBC )
+RDEPEND=|| ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 ) mysql? ( virtual/mysql ) sqlite? ( =dev-db/sqlite-3* ) berkdb? ( sys-libs/db ) xml? ( dev-libs/libxml2 ) !xml? ( >=dev-libs/expat-2 ) ssl? ( dev-libs/openssl:0 ) >=media-libs/raptor-2.0.7 >=dev-libs/rasqal-0.9.28 postgres? ( virtual/postgresql ) iodbc? ( dev-db/libiodbc ) odbc? ( dev-db/unixODBC )
 SLOT=0
 SRC_URI=http://download.librdf.org/source/redland-1.0.15.tar.gz
 _eclasses_=libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=2f84104e3a12ba8775fa26f48e662f97
+_md5_=ee197decb97ac8d07a6d40cb9cbfc6a1

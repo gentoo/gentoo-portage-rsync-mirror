@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/liquidwar6-0.4.3681.ebuild,v 1.5 2014/10/10 15:24:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/liquidwar6-0.4.3681.ebuild,v 1.6 2014/11/06 05:55:34 vapier Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ KEYWORDS="amd64 x86"
 IUSE="doc gles2 gtk libcaca +maps nls +ogg openmp readline test"
 
 # yes, cunit is rdep
+# Drop the libtool dep once libltdl goes stable.
 RDEPEND="dev-db/sqlite:3
 	dev-libs/expat
 	dev-scheme/guile
@@ -30,7 +31,7 @@ RDEPEND="dev-db/sqlite:3
 	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-ttf
 	net-misc/curl
-	sys-devel/libtool:2
+	|| ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 )
 	sys-libs/zlib
 	virtual/glu
 	virtual/jpeg

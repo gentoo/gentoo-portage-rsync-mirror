@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r4.ebuild,v 1.1 2014/11/05 16:12:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r4.ebuild,v 1.2 2014/11/06 05:36:49 vapier Exp $
 
 EAPI=5
 
@@ -16,9 +16,10 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="doc pcsc-lite usb debug +udev"
 
+# Drop the libtool dep once libltdl goes stable.
 RDEPEND="pcsc-lite? ( >=sys-apps/pcsc-lite-1.7.2-r1 )
 	usb? ( virtual/libusb:0 )
-	dev-libs/libltdl"
+	|| ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 )"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"

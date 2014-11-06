@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/liquidwar6
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/ChangeLog,v 1.8 2014/10/10 15:24:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/ChangeLog,v 1.9 2014/11/06 05:55:34 vapier Exp $
+
+  06 Nov 2014; Mike Frysinger <vapier@gentoo.org> liquidwar6-0.2.3551.ebuild,
+  liquidwar6-0.4.3681.ebuild:
+  Depend on libltdl rather than libtool by default #528294 by Pacho Ramos.
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> liquidwar6-0.4.3681.ebuild:
   Stable for amd64, wrt bug #518252

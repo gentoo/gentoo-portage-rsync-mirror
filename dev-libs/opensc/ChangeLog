@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.138 2014/11/05 16:13:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.139 2014/11/06 05:38:04 vapier Exp $
+
+  06 Nov 2014; Mike Frysinger <vapier@gentoo.org> opensc-0.12.2-r2.ebuild:
+  Require libltdl:0 specifically, and allow older libtool for stable ebuilds
+  #528294 by Pacho Ramos.
 
   05 Nov 2014; Mike Frysinger <vapier@gentoo.org> opensc-0.12.2-r2.ebuild:
   Depend on libltdl rather than libtool #528294 by Pacho Ramos.

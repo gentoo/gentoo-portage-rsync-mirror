@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=sys-libs/ncurses cairo? ( x11-libs/cairo[X?,svg?] ) cuda? ( dev-util/nvidia-cuda-toolkit ) gl? ( media-video/nvidia-settings ) opencl? ( x11-drivers/ati-drivers ) pci? ( sys-apps/pciutils x11-libs/libpciaccess ) plugins? ( dev-libs/libltdl:0 ) numa? ( sys-process/numactl ) xml? ( dev-libs/libxml2 ) virtual/pkgconfig
+DESCRIPTION=displays the hardware topology in convenient formats
+EAPI=5
+HOMEPAGE=http://www.open-mpi.org/projects/hwloc/
+IUSE=cairo cuda debug gl +numa opencl +pci plugins svg static-libs xml X
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=sys-libs/ncurses cairo? ( x11-libs/cairo[X?,svg?] ) cuda? ( dev-util/nvidia-cuda-toolkit ) gl? ( media-video/nvidia-settings ) opencl? ( x11-drivers/ati-drivers ) pci? ( sys-apps/pciutils x11-libs/libpciaccess ) plugins? ( dev-libs/libltdl:0 ) numa? ( sys-process/numactl ) xml? ( dev-libs/libxml2 )
+SLOT=0/5
+SRC_URI=http://www.open-mpi.org/software/hwloc/v1.10/downloads/hwloc-1.10.0.tar.bz2
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	autotools-utils	3727db64c7b960903d5033280f108080	cuda	4a1af424313a3b30f00f3c918de4f772	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=17817718f7b31231229415efef9dfe4b

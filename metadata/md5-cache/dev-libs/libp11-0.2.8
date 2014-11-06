@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=dev-libs/openssl dev-libs/libltdl virtual/pkgconfig doc? ( app-doc/doxygen )
+DEPEND=dev-libs/openssl || ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 ) virtual/pkgconfig doc? ( app-doc/doxygen )
 DESCRIPTION=A library implementing a layer on top of PKCS#11 API to make using PKCS#11 implementations easier
 EAPI=4
 HOMEPAGE=https://github.com/opensc/libp11/wiki
 IUSE=doc
 KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86
 LICENSE=LGPL-2.1
-RDEPEND=dev-libs/openssl dev-libs/libltdl
+RDEPEND=dev-libs/openssl || ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 )
 SLOT=0
 SRC_URI=mirror://sourceforge/opensc/libp11/libp11-0.2.8.tar.gz
 _eclasses_=libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=7e6bc402cd05b09cb7de01a7601e02fe
+_md5_=5eff3959ba1226075ed87df793b36d6a

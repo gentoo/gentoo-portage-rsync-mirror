@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.98.ebuild,v 1.7 2014/11/03 13:44:32 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.98.ebuild,v 1.8 2014/11/06 05:51:45 vapier Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -11,20 +11,21 @@ DESCRIPTION="A useful collection of mail servers, clients, and filters"
 HOMEPAGE="http://www.gnu.org/software/mailutils/mailutils.html"
 #SRC_URI="mirror://gnu/mailutils/${P}.tar.xz"
 SRC_URI="mirror://gnu-alpha/mailutils/${P}.tar.xz"
+
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-
 KEYWORDS="amd64 arm64 ~hppa ~ppc x86 ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="berkdb bidi +clients gdbm sasl guile ipv6 kerberos ldap mysql nls pam postgres
 python servers ssl static-libs +threads tcpd tokyocabinet"
 
+# Drop the libtool dep once libltdl goes stable.
 RDEPEND="!mail-client/nmh
 	!mail-filter/libsieve
 	!mail-client/mailx
 	!mail-client/nail
 	sys-libs/ncurses
 	sys-libs/readline
-	sys-devel/libtool
+	|| ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 )
 	virtual/mta
 	berkdb? ( sys-libs/db )
 	bidi? ( dev-libs/fribidi )

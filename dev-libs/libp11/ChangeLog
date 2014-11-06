@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.69 2014/11/05 16:11:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.70 2014/11/06 05:36:45 vapier Exp $
+
+  06 Nov 2014; Mike Frysinger <vapier@gentoo.org> libp11-0.2.8.ebuild:
+  Require libltdl:0 specifically, and allow older libtool for stable ebuilds
+  #528294 by Pacho Ramos.
 
   05 Nov 2014; Mike Frysinger <vapier@gentoo.org> libp11-0.2.8.ebuild:
   Depend on libltdl rather than libtool #528294 by Pacho Ramos.

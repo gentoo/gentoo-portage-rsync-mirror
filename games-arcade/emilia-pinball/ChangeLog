@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/emilia-pinball
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.24 2012/12/18 19:59:10 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.25 2014/11/06 05:54:05 vapier Exp $
+
+  06 Nov 2014; Mike Frysinger <vapier@gentoo.org>
+  emilia-pinball-0.3.1-r1.ebuild:
+  Depend on libltdl rather than libtool by default #528294 by Pacho Ramos.
 
   18 Dec 2012; Michael Sterrett <mr_bones_@gentoo.org>
   emilia-pinball-0.3.1-r1.ebuild:
