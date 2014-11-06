@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/openmw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/openmw/ChangeLog,v 1.1 2014/11/06 20:15:00 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/openmw/ChangeLog,v 1.2 2014/11/06 21:23:18 hasufell Exp $
+
+  06 Nov 2014; Julian Ospald <hasufell@gentoo.org> openmw-0.33.0.ebuild,
+  -files/openmw-0.33.0-build.patch, files/openmw-0.33.0-cfg.patch:
+  rm obsolete patch, tweak cfg patch to be more upstream compatible, fix
+  libsdl2 USE flag deps
 
 *openmw-0.33.0 (06 Nov 2014)
 

@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-System_Command/PEAR-System_Command-1.0.7.ebuild,v 1.1 2011/03/31 12:49:46 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-System_Command/PEAR-System_Command-1.0.8.ebuild,v 1.1 2014/11/06 21:28:07 grknight Exp $
+
+EAPI=5
 
 inherit php-pear-r1
 

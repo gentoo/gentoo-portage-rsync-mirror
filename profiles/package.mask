@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16142 2014/11/06 20:58:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16144 2014/11/06 21:02:10 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,16 @@
 #--- END OF EXAMPLES ---
 
 # Manuel Rüger <mrueg@gentoo.org> (6 Nov 2014)
+# Unmaintained slot, move on to dev-ruby/prawn:1
+# Masked for removal in 30 days
+dev-ruby/prawn:0
+dev-ruby/prawn-security
+dev-ruby/prawn-layout
+dev-ruby/prawn-core
+
+# Manuel Rüger <mrueg@gentoo.org> (6 Nov 2014)
 # Use kde-base/oxygen-fonts instead
+# Masked for removal in 30 days
 media-fonts/oxygen-fonts
 
 # Ulrich Müller <ulm@gentoo.org> (5 Nov 2014)

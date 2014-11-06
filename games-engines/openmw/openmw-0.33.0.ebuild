@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/openmw/openmw-0.33.0.ebuild,v 1.1 2014/11/06 20:15:00 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/openmw/openmw-0.33.0.ebuild,v 1.2 2014/11/06 21:23:18 hasufell Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-games/mygui-3.2.1
 	>=dev-qt/qtcore-4.7.0:4
 	>=dev-qt/qtgui-4.7.0:4
 	media-libs/freetype:2
-	media-libs/libsdl2
+	media-libs/libsdl2[X,video]
 	media-libs/openal
 	>=sci-physics/bullet-2.80
 	virtual/ffmpeg
@@ -38,7 +38,6 @@ S=${WORKDIR}/${PN}-${P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-cfg.patch \
-		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-opencs.patch
 }
 
