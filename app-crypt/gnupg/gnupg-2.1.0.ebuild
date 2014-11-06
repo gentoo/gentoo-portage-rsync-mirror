@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta864.ebuild,v 1.1 2014/10/05 19:32:53 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0.ebuild,v 1.1 2014/11/06 16:44:04 k_f Exp $
 
 EAPI="5"
 
@@ -9,12 +9,12 @@ inherit eutils flag-o-matic toolchain-funcs
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 MY_P="${P/_/-}"
-SRC_URI="mirror://gnupg/gnupg/unstable/${MY_P}.tar.bz2"
+SRC_URI="mirror://gnupg/gnupg/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="bzip2 doc nls readline static selinux smartcard tools usb"
+IUSE="bzip2 doc +gnutls ldap nls readline static selinux smartcard tools usb"
 
 COMMON_DEPEND_LIBS="
 	dev-libs/npth
@@ -23,9 +23,9 @@ COMMON_DEPEND_LIBS="
 	>=dev-libs/libgpg-error-1.15
 	>=dev-libs/libksba-1.0.7
 	>=net-misc/curl-7.10
-	>=net-libs/gnutls-3.0
+	gnutls? ( >=net-libs/gnutls-3.0 )
 	sys-libs/zlib
-	net-nds/openldap
+	ldap? ( net-nds/openldap )
 	bzip2? ( app-arch/bzip2 )
 	readline? ( sys-libs/readline )
 	smartcard? ( usb? ( virtual/libusb:0 ) )
@@ -94,6 +94,8 @@ src_configure() {
 		--without-adns \
 		"${myconf[@]}" \
 		$(use_enable bzip2) \
+		$(use_enable gnutls) \
+		$(use_with ldap) \
 		$(use_enable nls) \
 		$(use_with readline) \
 		CC_FOR_BUILD="$(tc-getBUILD_CC)"
