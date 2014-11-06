@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9517 2014/11/06 14:10:07 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9518 2014/11/06 15:08:02 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Nov 2014; Michał Górny <mgorny@gentoo.org>
+  desc/python_single_target.desc, desc/python_targets.desc:
+  Describe flags for PyPy3.
 
   06 Nov 2014; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Unmask net-im/qutim, it builds now.

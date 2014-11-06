@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.744 2014/11/05 14:28:21 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.745 2014/11/06 15:05:41 mgorny Exp $
+
+  06 Nov 2014; Michał Górny <mgorny@gentoo.org> package.use.force,
+  package.use.mask, use.mask:
+  Update the USE masks, forces and defaults for PyPy3.
 
   05 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> package.use.mask:
   sci-libs/gdal|sci-libs/ogdi visibility issue fixed. Removing mask.

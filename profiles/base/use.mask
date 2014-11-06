@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.212 2014/10/19 20:08:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.213 2014/11/06 15:05:41 mgorny Exp $
 
 # CURL_SSL=winssl is for prefix/windows/winnt only
 curl_ssl_winssl
@@ -335,6 +335,8 @@ orc
 # please switch to one of the testing 13.0 profiles to get it.
 python_targets_pypy
 python_single_target_pypy
+python_targets_pypy3
+python_single_target_pypy3
 
 # Michał Górny <mgorny@gentoo.org> (26 Jan 2013)
 # Mask the multilib flags globally. Unmasked in specific arches.

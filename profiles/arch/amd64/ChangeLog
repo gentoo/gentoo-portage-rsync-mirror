@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.287 2014/11/04 22:33:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.288 2014/11/06 15:07:05 mgorny Exp $
+
+  06 Nov 2014; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Update USE=sse2 flag to extend to all PyPy variants.
 
   04 Nov 2014; Mike Gilbert <floppym@gentoo.org> package.use.stable.mask,
   use.stable.mask:

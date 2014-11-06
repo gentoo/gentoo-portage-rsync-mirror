@@ -1,11 +1,12 @@
 DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
-DESCRIPTION=This Class allows you to easily use ANSI console colors in your application.
-HOMEPAGE=http://pear.php.net/Console_Color
+DESCRIPTION=Calculates RFC 2104 compliant hashes
+EAPI=5
+HOMEPAGE=http://pear.php.net/Crypt_HMAC
 KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
-LICENSE=MIT
+LICENSE=PHP-3
 RDEPEND=dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
-SRC_URI=http://pear.php.net/get/Console_Color-1.0.2.tgz
+SRC_URI=http://pear.php.net/get/Crypt_HMAC-1.0.1.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=5c4794432651a27f65e79f352dc6de8e
+_md5_=25803e50a120ab0bad1f0eb6775894aa
