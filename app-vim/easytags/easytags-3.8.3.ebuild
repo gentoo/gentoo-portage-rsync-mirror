@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/easytags/easytags-3.4.4.ebuild,v 1.1 2014/06/26 06:26:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/easytags/easytags-3.8.3.ebuild,v 1.1 2014/11/06 04:49:50 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
-	>=app-vim/vim-misc-1.8.5
+	>=app-vim/vim-misc-1.16.1
 	dev-util/ctags"
 
 VIM_PLUGIN_HELPFILES="${PN}.txt"
