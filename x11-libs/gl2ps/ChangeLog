@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gl2ps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/ChangeLog,v 1.26 2014/03/06 15:50:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/ChangeLog,v 1.27 2014/11/06 10:59:15 jer Exp $
+
+  06 Nov 2014; Jeroen Roovers <jer@gentoo.org> gl2ps-1.3.8.ebuild:
+  Stable for HPPA (bug #528002).
 
   06 Mar 2014; Jeroen Roovers <jer@gentoo.org> gl2ps-1.3.8.ebuild:
   Marked ~hppa (bug #5035945).
