@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/gsnmp-0.3.0.ebuild,v 1.10 2014/07/16 23:08:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/gsnmp-0.3.0.ebuild,v 1.11 2014/11/06 00:28:58 jer Exp $
 
 EAPI=5
-inherit autotools-utils
+inherit autotools eutils
 
 DESCRIPTION="An SNMP library based on glib and gnet"
 HOMEPAGE="http://cnds.eecs.jacobs-university.de/users/schoenw/articles/software/index.html"
@@ -20,11 +20,23 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-g_access.patch
-	"${FILESDIR}"/${P}-underquoting.patch
-)
+DOCS="README"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-g_access.patch \
+		"${FILESDIR}"/${P}-pkg_config.patch \
+		"${FILESDIR}"/${P}-underquoting.patch
 
-DOCS=( README )
+	eautoreconf
+}
+
+src_configure() {
+	econf $(use_enable static-libs static)
+}
+
+src_install() {
+	default
+
+	prune_libtool_files
+}

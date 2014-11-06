@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gsnmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.10 2014/07/16 23:08:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.11 2014/11/06 00:28:58 jer Exp $
+
+  06 Nov 2014; Jeroen Roovers <jer@gentoo.org> gsnmp-0.3.0.ebuild,
+  +files/gsnmp-0.3.0-pkg_config.patch:
+  Fix building against =net-libs/gnet-2.0.8-r2 (bug #528378).
 
   16 Jul 2014; Jeroen Roovers <jer@gentoo.org> gsnmp-0.3.0.ebuild:
   EAPI bump. New HOMEPAGE.
