@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.64 2014/11/06 22:36:08 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.9-r2.ebuild,v 1.1 2014/11/06 22:36:08 tamiko Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ S="${WORKDIR}/${P%_rc*}"
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="0/${PV}"
 IUSE="audit avahi +caps firewalld fuse iscsi +libvirtd lvm lxc +macvtap nfs \
 	nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network wireshark-plugins xen \
@@ -223,7 +223,8 @@ src_prepare() {
 	fi
 
 	epatch \
-		"${FILESDIR}"/libvirt-1.2.9-do_not_use_sysconf.patch
+		"${FILESDIR}"/${P}-do_not_use_sysconf.patch \
+		"${FILESDIR}"/${P}-cve-2014-7823.patch
 
 	epatch_user
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/morrowind-data/morrowind-data-2.ebuild,v 1.1 2014/11/06 20:02:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/morrowind-data/morrowind-data-2.ebuild,v 1.2 2014/11/06 22:51:26 hasufell Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RESTRICT="bindist mirror"
 RDEPEND="games-engines/openmw"
 DEPEND="app-arch/unshield"
 
-QA_PREBUILT="${GAMES_DATADIR}/${PN}/*"
+QA_PREBUILT="${GAMES_DATADIR#/}/${PN}/*"
 
 S=${WORKDIR}
 

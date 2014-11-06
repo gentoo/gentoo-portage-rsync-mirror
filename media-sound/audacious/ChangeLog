@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.297 2014/07/31 21:32:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.298 2014/11/06 22:49:53 dilfridge Exp $
+
+  06 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -audacious-2.4.4.ebuild:
+  Drop old EAPI=1 version
 
 *audacious-3.5.1 (31 Jul 2014)
 

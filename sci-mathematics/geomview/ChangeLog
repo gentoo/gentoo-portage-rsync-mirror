@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/geomview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.19 2014/03/25 05:49:23 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.20 2014/11/06 22:58:42 dilfridge Exp $
+
+  06 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -geomview-1.9.4.ebuild:
+  Drop old EAPI=1 version
 
 *geomview-1.9.5 (25 Mar 2014)
 

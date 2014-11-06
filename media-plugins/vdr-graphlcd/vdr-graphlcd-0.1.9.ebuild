@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.9.ebuild,v 1.4 2014/02/23 21:17:45 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.9.ebuild,v 1.5 2014/11/06 22:35:57 hd_brummy Exp $
 
 EAPI=5
 
@@ -48,9 +48,7 @@ src_prepare() {
 
 	sed -i "s:i18n.c:i18n.h:g" Makefile
 
-	if ! has_version ">=media-video/vdr-1.7.13"; then
-		sed -i "s:include \$(VDRDIR)/Make.global:#include \$(VDRDIR)/Make.global:" Makefile
-	fi
+		sed -i "s:include \$(VDRDIR)/Make.global:-include \$(VDRDIR)/Make.global:" Makefile
 }
 
 src_install() {
