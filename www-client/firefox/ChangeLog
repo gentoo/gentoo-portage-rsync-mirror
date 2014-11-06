@@ -1,6 +1,15 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.364 2014/11/02 10:25:40 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.365 2014/11/05 23:18:28 axs Exp $
+
+*firefox-33.0-r1 (05 Nov 2014)
+*firefox-31.2.0-r1 (05 Nov 2014)
+
+  05 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/firefox-31.0-webm-disallow-negative-samples.patch,
+  +firefox-31.2.0-r1.ebuild, +firefox-33.0-r1.ebuild, -firefox-31.2.0.ebuild,
+  -firefox-33.0.ebuild:
+  fixed bugs 528062, 527010; moved IUSE=selinux to the eclass
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> firefox-24.8.0.ebuild,
   firefox-31.2.0.ebuild, firefox-33.0.ebuild:

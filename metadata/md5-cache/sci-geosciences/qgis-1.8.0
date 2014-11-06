@@ -10,5 +10,5 @@ RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite]
 REQUIRED_USE=python? ( python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 ) )
 SLOT=0
 SRC_URI=http://qgis.org/downloads/qgis-1.8.0.tar.bz2 examples? ( http://download.osgeo.org/qgis/data/qgis_sample_data.tar.gz )
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	38b54b08ee43ba478e97f7c89066eed5	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=5a4869470f9ec4d065f6289d8541feee

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.2.0.ebuild,v 1.3 2014/11/02 10:25:40 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.2.0-r1.ebuild,v 1.1 2014/11/05 23:18:28 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -150,6 +150,7 @@ src_prepare() {
 	epatch "${WORKDIR}/firefox"
 
 	epatch "${FILESDIR}"/${PN}-32.0-hppa-js-configure.patch # bug 524556
+	epatch "${FILESDIR}"/${PN}-31.0-webm-disallow-negative-samples.patch # bug 527010
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user

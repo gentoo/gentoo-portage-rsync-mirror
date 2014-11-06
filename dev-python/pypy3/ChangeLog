@@ -1,0 +1,16 @@
+# ChangeLog for dev-python/pypy3
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3/ChangeLog,v 1.2 2014/11/05 23:04:23 mgorny Exp $
+
+  05 Nov 2014; Michał Górny <mgorny@gentoo.org> +files/1.9-distutils.unixccompil
+  er.UnixCCompiler.runtime_library_dir_option.patch,
+  +files/1.9-scripts-location.patch, +files/2.3.1-shared-lib.patch:
+  Introduce initial ebuilds for PyPy3.
+
+*pypy3-2.4.0 (05 Nov 2014)
+
+  05 Nov 2014; Michał Górny <mgorny@gentoo.org> +files/1.9-distutils.unixccompil
+  er.UnixCCompiler.runtime_library_dir_option.patch,
+  +files/1.9-scripts-location.patch, +files/2.3.1-shared-lib.patch,
+  +metadata.xml, +pypy3-2.4.0.ebuild:
+  Introduce initial ebuilds for PyPy3.

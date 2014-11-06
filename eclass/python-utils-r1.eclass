@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.62 2014/10/18 22:36:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.63 2014/11/05 23:03:01 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -41,7 +41,7 @@ inherit eutils multilib toolchain-funcs
 # All supported Python implementations, most preferred last.
 _PYTHON_ALL_IMPLS=(
 	jython2_5 jython2_7
-	pypy
+	pypy pypy3
 	python3_2 python3_3 python3_4
 	python2_7
 )
@@ -72,7 +72,7 @@ _python_impl_supported() {
 		pypy1_[89]|pypy2_0|python2_[56]|python3_1)
 			return 1
 			;;
-		pypy)
+		pypy|pypy3)
 			if [[ ${EAPI:-0} == [01234] ]]; then
 				die "PyPy is supported in EAPI 5 and newer only."
 			fi
@@ -235,7 +235,7 @@ python_export() {
 			impl=${1/_/.}
 			shift
 			;;
-		pypy)
+		pypy|pypy3)
 			impl=${1}
 			shift
 			;;
@@ -261,7 +261,7 @@ python_export() {
 			PYTHON_SITEDIR)
 				local dir
 				case "${impl}" in
-					python*|pypy)
+					python*|pypy|pypy3)
 						dir=/usr/$(get_libdir)/${impl}
 						;;
 					jython*)
@@ -278,7 +278,7 @@ python_export() {
 					python*)
 						dir=/usr/include/${impl}
 						;;
-					pypy)
+					pypy|pypy3)
 						dir=/usr/$(get_libdir)/${impl}/include
 						;;
 					*)
@@ -350,6 +350,8 @@ python_export() {
 						PYTHON_PKG_DEP="dev-lang/python:${impl#python}";;
 					pypy)
 						PYTHON_PKG_DEP='virtual/pypy:0=';;
+					pypy3)
+						PYTHON_PKG_DEP='virtual/pypy3:0=';;
 					jython2.5)
 						PYTHON_PKG_DEP='>=dev-java/jython-2.5.3-r2:2.5';;
 					jython2.7)
@@ -914,7 +916,7 @@ python_is_python3() {
 	local impl=${1:-${EPYTHON}}
 	[[ ${impl} ]] || die "python_is_python3: no impl nor EPYTHON"
 
-	[[ ${impl} == python3* ]]
+	[[ ${impl} == python3* || ${impl} == pypy3 ]]
 }
 
 # @FUNCTION: python_fix_shebang
@@ -1001,7 +1003,7 @@ python_fix_shebang() {
 							fi
 							break
 							;;
-						*python[23].[0123456789]|*pypy|*jython[23].[0123456789])
+						*python[23].[0123456789]|*pypy|*pypy3|*jython[23].[0123456789])
 							# Explicit mismatch.
 							if [[ ! ${force} ]]; then
 								error=1
@@ -1011,6 +1013,8 @@ python_fix_shebang() {
 										from="python[23].[0123456789]";;
 									*pypy)
 										from="pypy";;
+									*pypy3)
+										from="pypy3";;
 									*jython[23].[0123456789])
 										from="jython[23].[0123456789]";;
 									*)

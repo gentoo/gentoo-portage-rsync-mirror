@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1402 2014/11/05 00:24:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1404 2014/11/05 23:18:07 axs Exp $
+
+  05 Nov 2014; Ian Stakenvicius <axs@gentoo.org> mozconfig-v5.33.eclass:
+  Move IUSE=selinux to the eclass
+
+  05 Nov 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass,
+  python-utils-r1.eclass, tests/python-utils-r1.sh:
+  Add support for PyPy3.
 
   05 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
   Remove unused function perl_set_eprefix

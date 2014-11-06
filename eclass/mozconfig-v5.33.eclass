@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-v5.33.eclass,v 1.2 2014/10/17 21:07:08 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-v5.33.eclass,v 1.3 2014/11/05 23:18:07 axs Exp $
 #
 # @ECLASS: mozconfig-v5.33.eclass
 # @MAINTAINER:
@@ -45,7 +45,7 @@ esac
 # Set the variable to any value if the use flag should exist but not be default-enabled.
 
 # use-flags common among all mozilla ebuilds
-IUSE="${IUSE} dbus debug gstreamer pulseaudio startup-notification system-cairo system-icu system-jpeg system-sqlite +system-libvpx"
+IUSE="${IUSE} dbus debug gstreamer pulseaudio selinux startup-notification system-cairo system-icu system-jpeg system-sqlite system-libvpx"
 
 # some notes on deps:
 # gtk:2 minimum is technically 2.10 but gio support (enabled by default) needs 2.14
@@ -88,7 +88,7 @@ RDEPEND=">=app-text/hunspell-1.2
 	system-icu? ( >=dev-libs/icu-51.1 )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-sqlite? ( >=dev-db/sqlite-3.8.5:3[secure-delete,debug=] )
-	system-libvpx? ( =media-libs/libvpx-1.3.0* )
+	system-libvpx? ( =media-libs/libvpx-1.3.0*[postproc] )
 "
 
 if [[ -n ${MOZCONFIG_OPTIONAL_WIFI} ]]; then
@@ -114,6 +114,9 @@ DEPEND="app-arch/zip
 	app-arch/unzip
 	>=sys-devel/binutils-2.16.1
 	${RDEPEND}"
+
+RDEPEND+="
+	selinux? ( sec-policy/selinux-mozilla )"
 
 # @FUNCTION: mozconfig_config
 # @DESCRIPTION:

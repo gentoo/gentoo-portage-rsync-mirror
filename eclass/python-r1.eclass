@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.76 2014/08/18 08:56:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.77 2014/11/05 23:03:01 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -565,7 +565,7 @@ _python_check_USE_PYTHON() {
 
 			local abi
 			case "${impl}" in
-				pypy|python3_4)
+				pypy|pypy3|python3_4)
 					# unsupported in python.eclass
 					continue
 					;;

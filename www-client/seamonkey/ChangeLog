@@ -1,6 +1,13 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.499 2014/11/02 10:28:35 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.500 2014/11/05 23:18:24 axs Exp $
+
+*seamonkey-2.30-r1 (05 Nov 2014)
+
+  05 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/seamonkey-2.30-webm-disallow-negative-samples.patch,
+  +seamonkey-2.30-r1.ebuild, -seamonkey-2.30.ebuild:
+  fixed bugs 528062, 527010; moved IUSE=selinux to the eclass
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> seamonkey-2.26.1.ebuild,
   seamonkey-2.29.1.ebuild, seamonkey-2.30.ebuild:

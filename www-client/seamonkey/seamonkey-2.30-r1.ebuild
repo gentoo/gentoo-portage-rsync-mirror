@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.30.ebuild,v 1.2 2014/11/02 10:28:35 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.30-r1.ebuild,v 1.1 2014/11/05 23:18:24 axs Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -49,7 +49,7 @@ fi
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+chatzilla +crypt +ipc minimal pulseaudio +roaming selinux test"
+IUSE="+chatzilla +crypt +ipc minimal pulseaudio +roaming test"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MY_MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
@@ -59,7 +59,7 @@ SRC_URI="${SRC_URI}
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
-CDEPEND=">=dev-libs/nss-3.17.1
+RDEPEND=">=dev-libs/nss-3.17.1
 	>=dev-libs/nspr-4.10.6
 	crypt? ( || (
 			( >=app-crypt/gnupg-2.0
@@ -71,7 +71,7 @@ CDEPEND=">=dev-libs/nss-3.17.1
 			=app-crypt/gnupg-1.4* ) )
 	system-sqlite? ( >=dev-db/sqlite-3.8.5:3[secure-delete,debug=] )"
 
-DEPEND="${CDEPEND}
+DEPEND="${RDEPEND}
 	!elibc_glibc? ( !elibc_uclibc?  ( dev-libs/libexecinfo ) )
 	crypt? ( dev-lang/perl )
 	amd64? ( ${ASM_DEPEND}
@@ -79,17 +79,13 @@ DEPEND="${CDEPEND}
 	x86? ( ${ASM_DEPEND}
 		virtual/opengl )"
 
-RDEPEND="${CDEPEND}
-	selinux? ( sec-policy/selinux-mozilla )
-"
-
 if [[ ${PV} == *beta* ]] ; then
 	S="${WORKDIR}/comm-beta"
 else
 	S="${WORKDIR}/comm-release"
 fi
 
-BUILD_OBJ_DIR="${WORKDIR}/seamonk"
+BUILD_OBJ_DIR="${S}/seamonk"
 
 pkg_setup() {
 	if [[ ${PV} == *_pre* ]] ; then
@@ -125,7 +121,8 @@ src_prepare() {
 	epatch "${WORKDIR}/seamonkey"
 
 	epatch "${FILESDIR}"/${PN}-2.30-pulseaudio_configure_switch_fix.patch \
-		"${FILESDIR}"/${PN}-2.30-jemalloc-configure.patch
+		"${FILESDIR}"/${PN}-2.30-jemalloc-configure.patch \
+		"${FILESDIR}"/${PN}-2.30-webm-disallow-negative-samples.patch
 
 	# browser patches go here
 	pushd "${S}"/mozilla &>/dev/null || die
@@ -223,9 +220,6 @@ src_configure() {
 	# Use an objdir to keep things organized.
 	echo "mk_add_options MOZ_OBJDIR=${BUILD_OBJ_DIR}" \
 		>> "${S}"/.mozconfig
-	# Add a TOPSRCDIR too just in case
-	echo "mk_add_options TOPSRCDIR=${S}" \
-		>> "${S}"/.mozconfig
 
 	# Finalize and report settings
 	mozconfig_final
@@ -246,23 +240,12 @@ src_configure() {
 			append-flags -mno-avx
 		fi
 	fi
-
-	mkdir -p "${BUILD_OBJ_DIR}" && cd "${BUILD_OBJ_DIR}" || die
-	# run configure twice to get it to prepare the objdir and then actually set up properly
-	# apparently necessary due to build system b0rkage on mozilla-33
-	_moz_src_configure() {
-		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
-		MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL}" \
-		emake V=1 -f "${S}"/client.mk configure
-	}
-	_moz_src_configure
-	_moz_src_configure
 }
 
 src_compile() {
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL}" \
-	emake V=1 -f "${S}"/client.mk
+	emake V=1 -f client.mk
 
 	# Only build enigmail extension if conditions are met.
 	if use crypt ; then

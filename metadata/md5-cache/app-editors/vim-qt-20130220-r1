@@ -10,5 +10,5 @@ RDEPEND=app-admin/eselect-vi >=app-editors/vim-core-7.3.762[acl?] sys-libs/ncurs
 REQUIRED_USE=python? ( python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 ) )
 SLOT=0
 SRC_URI=https://github.com/equalsraf/vim-qt/archive/package-20130220.tar.gz -> vim-qt-20130220.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	14f70a8c0d896d1b016d17f108a6de74	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	38b54b08ee43ba478e97f7c89066eed5	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=37b15c3e0bb8fc2aadec74eb8d10e75b

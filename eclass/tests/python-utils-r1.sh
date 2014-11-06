@@ -87,15 +87,24 @@ test_var PYTHON_INCLUDEDIR pypy /usr/lib/pypy/include
 test_var PYTHON_PKG_DEP pypy '*virtual/pypy*:0='
 test_var PYTHON_SCRIPTDIR pypy /usr/lib/python-exec/pypy
 
+test_var EPYTHON pypy3 pypy3
+test_var PYTHON pypy3 /usr/bin/pypy3
+test_var PYTHON_SITEDIR pypy3 /usr/lib/pypy3/site-packages
+test_var PYTHON_INCLUDEDIR pypy3 /usr/lib/pypy3/include
+test_var PYTHON_PKG_DEP pypy3 '*virtual/pypy3*:0='
+test_var PYTHON_SCRIPTDIR pypy3 /usr/lib/python-exec/pypy3
+
 test_is "python_is_python3 python2.7" 1
 test_is "python_is_python3 python3.2" 0
 test_is "python_is_python3 jython2.7" 1
 test_is "python_is_python3 pypy" 1
+test_is "python_is_python3 pypy3" 0
 
 # generic shebangs
 test_fix_shebang '#!/usr/bin/python' python2.7 '#!/usr/bin/python2.7'
 test_fix_shebang '#!/usr/bin/python' python3.4 '#!/usr/bin/python3.4'
 test_fix_shebang '#!/usr/bin/python' pypy '#!/usr/bin/pypy'
+test_fix_shebang '#!/usr/bin/python' pypy3 '#!/usr/bin/pypy3'
 test_fix_shebang '#!/usr/bin/python' jython2.7 '#!/usr/bin/jython2.7'
 
 # python2/python3 matching
@@ -149,6 +158,7 @@ test_is "_python_impl_supported pypy1_8" 1
 test_is "_python_impl_supported pypy1_9" 1
 test_is "_python_impl_supported pypy2_0" 1
 test_is "_python_impl_supported pypy" 0
+test_is "_python_impl_supported pypy3" 0
 test_is "_python_impl_supported jython2_5" 0
 test_is "_python_impl_supported jython2_7" 0
 
