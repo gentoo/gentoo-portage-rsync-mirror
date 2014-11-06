@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Math_Stats
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Math_Stats/ChangeLog,v 1.30 2014/08/10 20:51:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Math_Stats/ChangeLog,v 1.31 2014/11/06 18:00:23 grknight Exp $
+
+  06 Nov 2014; Brian Evans <grknight@gentoo.org>
+  -PEAR-Math_Stats-0.9.0_beta3-r1.ebuild:
+  Drop old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   PEAR-Math_Stats-0.9.0_beta3-r1.ebuild, PEAR-Math_Stats-0.9.1.ebuild:

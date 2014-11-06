@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Mail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/ChangeLog,v 1.50 2014/01/26 18:31:56 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/ChangeLog,v 1.51 2014/11/06 17:51:06 grknight Exp $
+
+  06 Nov 2014; Brian Evans <grknight@gentoo.org> -PEAR-Mail-1.1.14.ebuild,
+  -PEAR-Mail-1.1.9.ebuild:
+  Drop old
 
   26 Jan 2014; Ole Markus With <olemarkus@gentoo.org> PEAR-Mail-1.1.14.ebuild,
   PEAR-Mail-1.1.9.ebuild, PEAR-Mail-1.2.0.ebuild:
