@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/scli-0.4.0-r1.ebuild,v 1.5 2014/07/16 23:21:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/scli-0.4.0-r1.ebuild,v 1.6 2014/11/06 01:08:43 jer Exp $
 
 EAPI=5
-inherit autotools eutils flag-o-matic
+inherit autotools eutils
 
 DESCRIPTION="SNMP Command Line Interface"
 HOMEPAGE="http://cnds.eecs.jacobs-university.de/users/schoenw/articles/software/index.html"
@@ -30,11 +30,7 @@ DEPEND="
 DOCS=( AUTHORS ChangeLog NEWS PORTING README TODO )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-tinfo.patch
+	epatch "${FILESDIR}"/${P}-configure.patch
 
 	eautoreconf
-}
-
-src_configure() {
-	econf --disable-malloc --enable-warnings
 }
