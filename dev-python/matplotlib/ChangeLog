@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.171 2014/09/17 08:53:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.172 2014/11/06 04:00:05 patrick Exp $
+
+*matplotlib-1.4.2 (06 Nov 2014)
+
+  06 Nov 2014; Patrick Lauer <patrick@gentoo.org> +matplotlib-1.4.2.ebuild:
+  Bump
 
   17 Sep 2014; Justin Lecher <jlec@gentoo.org> matplotlib-1.4.0.ebuild:
   Reduce usage of virtualx, #498028
