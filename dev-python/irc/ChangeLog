@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/irc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.26 2014/08/10 21:12:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.27 2014/11/06 08:51:53 idella4 Exp $
+
+*irc-10.0 (06 Nov 2014)
+
+  06 Nov 2014; Ian Delaney <idella4@gentoo.org> +irc-10.0.ebuild,
+  files/irc-8.5.1-setup_requires.patch:
+  bump; minor re-write; deps upgraded, tidied, redundant patch and sed
+  statements dropped
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> irc-8.9.1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

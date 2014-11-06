@@ -1,6 +1,6 @@
 --- a/setup.py
 +++ b/setup.py
-@@ -34,10 +33,6 @@
+@@ -35,10 +35,6 @@
      install_requires=[
          'six',
      ] + importlib_req + argparse_req,
