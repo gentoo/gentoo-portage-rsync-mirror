@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.230 2014/08/05 16:09:26 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.231 2014/11/06 19:30:09 mrueg Exp $
+
+  06 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -files/ncurses-5.6-build.patch,
+  -files/ncurses-5.6-gfbsd.patch, -files/ncurses-5.7-emacs.patch,
+  -files/ncurses-5.7-hashdb-open.patch,
+  -files/ncurses-5.7-rxvt-unicode-9.09.patch,
+  -files/ncurses-5.7-rxvt-unicode.patch,
+  -files/ncurses-5.7-tic-cross-detection.patch,
+  -files/ncurses-5.8-rxvt-unicode.patch, -ncurses-5.7-r7.ebuild,
+  -ncurses-5.9-r1.ebuild, -ncurses-5.9-r2.ebuild, -ncurses-5.9.ebuild:
+  Cleanup old superseded EAPI1 ebuilds. Fixes bug #525020.
 
   05 Aug 2014; Christoph Junghans <ottxor@gentoo.org> ncurses-5.9-r3.ebuild:
   added parts of the prefix changes (bug #519052)

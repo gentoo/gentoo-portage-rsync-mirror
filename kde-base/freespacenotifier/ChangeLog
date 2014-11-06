@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/freespacenotifier
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/freespacenotifier/ChangeLog,v 1.154 2014/10/25 20:03:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/freespacenotifier/ChangeLog,v 1.155 2014/11/06 19:18:46 mrueg Exp $
+
+  06 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -freespacenotifier-4.11.11.ebuild, -freespacenotifier-4.11.12.ebuild:
+  Cleanup old.
 
 *freespacenotifier-4.11.13 (25 Oct 2014)
 

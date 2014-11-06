@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.266 2014/11/06 18:29:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.268 2014/11/06 19:22:14 mrueg Exp $
+
+  06 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -systemsettings-4.11.13.ebuild:
+  Cleanup old.
+
+  06 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -systemsettings-4.11.11.ebuild,
+  -systemsettings-4.11.12.ebuild:
+  Cleanup old.
 
 *systemsettings-4.11.13-r1 (06 Nov 2014)
 

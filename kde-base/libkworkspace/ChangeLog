@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.236 2014/10/25 20:03:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.237 2014/11/06 19:18:47 mrueg Exp $
+
+  06 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -libkworkspace-4.11.11.ebuild,
+  -libkworkspace-4.11.12.ebuild:
+  Cleanup old.
 
 *libkworkspace-4.11.13 (25 Oct 2014)
 

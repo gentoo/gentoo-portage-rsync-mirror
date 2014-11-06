@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.354 2014/10/12 17:26:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.355 2014/11/06 19:22:25 axs Exp $
+
+*pulseaudio-5.0-r5 (06 Nov 2014)
+*pulseaudio-5.0-r4 (06 Nov 2014)
+
+  06 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +pulseaudio-5.0-r4.ebuild, +pulseaudio-5.0-r5.ebuild,
+  -pulseaudio-5.0-r2.ebuild, -pulseaudio-5.0-r3.ebuild:
+  Depend on a multilib libltdl, whether from libtool or dev-libs/libltdl (see
+  bug 528294)
 
 *pulseaudio-5.0-r3 (12 Oct 2014)
 

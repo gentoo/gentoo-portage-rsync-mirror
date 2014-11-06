@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qguiplatformplugin_kde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qguiplatformplugin_kde/ChangeLog,v 1.168 2014/10/25 20:03:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qguiplatformplugin_kde/ChangeLog,v 1.169 2014/11/06 19:18:47 mrueg Exp $
+
+  06 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -qguiplatformplugin_kde-4.11.11.ebuild,
+  -qguiplatformplugin_kde-4.11.12.ebuild:
+  Cleanup old.
 
 *qguiplatformplugin_kde-4.11.13 (25 Oct 2014)
 

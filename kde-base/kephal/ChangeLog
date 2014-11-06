@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kephal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.204 2014/10/25 20:03:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.205 2014/11/06 19:18:46 mrueg Exp $
+
+  06 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -kephal-4.11.11.ebuild,
+  -kephal-4.11.12.ebuild:
+  Cleanup old.
 
 *kephal-4.11.13 (25 Oct 2014)
 

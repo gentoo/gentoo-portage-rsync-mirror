@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.229 2014/10/25 20:03:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.230 2014/11/06 19:18:47 mrueg Exp $
+
+  06 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -krunner-4.11.11.ebuild,
+  -krunner-4.11.12.ebuild:
+  Cleanup old.
 
 *krunner-4.11.13 (25 Oct 2014)
 
