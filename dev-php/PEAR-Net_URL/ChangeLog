@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_URL
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL/ChangeLog,v 1.33 2014/01/26 18:37:48 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL/ChangeLog,v 1.34 2014/11/06 19:00:44 grknight Exp $
+
+  06 Nov 2014; Brian Evans <grknight@gentoo.org> -PEAR-Net_URL-1.0.14-r1.ebuild:
+  Drop old
 
   26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
   PEAR-Net_URL-1.0.14-r1.ebuild, PEAR-Net_URL-1.0.15.ebuild:

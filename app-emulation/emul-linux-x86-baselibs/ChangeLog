@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.233 2014/09/21 16:41:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.234 2014/11/06 18:56:40 axs Exp $
+
+  06 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  emul-linux-x86-baselibs-20140406-r4.ebuild,
+  emul-linux-x86-baselibs-20140508-r12.ebuild,
+  emul-linux-x86-baselibs-20140508-r13.ebuild,
+  emul-linux-x86-baselibs-20140508-r14.ebuild,
+  emul-linux-x86-baselibs-20140508-r9.ebuild:
+  Fixed multilib deps related to libtool / libltdl split, bug 528294
 
   21 Sep 2014; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Explain the use of USE=kerberos,ldap,pam. Bug #523318.

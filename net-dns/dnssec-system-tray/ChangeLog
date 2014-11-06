@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/dnssec-system-tray
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-system-tray/ChangeLog,v 1.7 2013/03/13 11:09:30 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-system-tray/ChangeLog,v 1.8 2014/11/06 18:47:04 xmw Exp $
+
+*dnssec-system-tray-2.1 (06 Nov 2014)
+
+  06 Nov 2014; Michael Weber <xmw@gentoo.org> +dnssec-system-tray-2.1.ebuild,
+  dnssec-system-tray-2.0.ebuild:
+  Fix deps (bug 514396, thanks Patrick Lauer), version bump.
 
 *dnssec-system-tray-2.0 (13 Mar 2013)
 
