@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.53 2014/08/10 20:47:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.54 2014/11/06 15:55:40 grknight Exp $
+
+  06 Nov 2014; Brian Evans <grknight@gentoo.org> -PEAR-HTML_Common-1.2.2.ebuild,
+  -PEAR-HTML_Common-1.2.4.ebuild:
+  Drop old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   PEAR-HTML_Common-1.2.2.ebuild, PEAR-HTML_Common-1.2.4.ebuild,

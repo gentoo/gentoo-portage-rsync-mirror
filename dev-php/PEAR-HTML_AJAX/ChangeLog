@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-HTML_AJAX
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_AJAX/ChangeLog,v 1.5 2014/08/10 20:47:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_AJAX/ChangeLog,v 1.6 2014/11/06 15:46:36 grknight Exp $
+
+*PEAR-HTML_AJAX-0.5.7 (06 Nov 2014)
+
+  06 Nov 2014; Brian Evans <grknight@gentoo.org> +PEAR-HTML_AJAX-0.5.7.ebuild,
+  -PEAR-HTML_AJAX-0.5.2.ebuild, -PEAR-HTML_AJAX-0.5.6.ebuild:
+  Version bump wrt security bug 528450; Drop old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   PEAR-HTML_AJAX-0.5.2.ebuild, PEAR-HTML_AJAX-0.5.6.ebuild:
