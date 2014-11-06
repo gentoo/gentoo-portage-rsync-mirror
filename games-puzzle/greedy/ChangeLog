@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/greedy
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/ChangeLog,v 1.9 2009/05/31 23:40:39 ranger Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/ChangeLog,v 1.10 2014/11/06 00:46:52 mr_bones_ Exp $
+
+  06 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org> greedy-0.2.0-r1.ebuild:
+  EAPI=5; build with ncurses[tinfo] (bug #528390)
 
   31 May 2009; Brent Baude <ranger@gentoo.org> greedy-0.2.0-r1.ebuild:
   Marking greedy-0.2.0-r1 ~ppc64 for bug 269147

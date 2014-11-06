@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/greedy-0.2.0-r1.ebuild,v 1.10 2009/05/31 23:40:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/greedy-0.2.0-r1.ebuild,v 1.11 2014/11/06 00:46:52 mr_bones_ Exp $
 
+EAPI=5
 inherit toolchain-funcs games
 
 DESCRIPTION="fun little ncurses puzzle game"
@@ -13,28 +14,28 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE=""
 
-DEPEND="sys-libs/ncurses"
+RDEPEND="sys-libs/ncurses"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm -f Makefile
+	# It wants a scores file.  We need to touch one and install it.
+	touch greedy.scores
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" LDLIBS=-lncurses ${PN} || die "emake failed"
+	emake CC="$(tc-getCC)" LDLIBS="$($(tc-getPKG_CONFIG) ncurses --libs)" ${PN}
 }
 
 src_install() {
-	# It wants a scores file.  We need to touch one and install it.
-	touch greedy.scores
 	insinto "${GAMES_STATEDIR}"
-	doins greedy.scores || die "doins failed"
+	doins greedy.scores
 
-	dogamesbin greedy || die "dogamesbin failed"
+	dogamesbin greedy
 	dodoc CHANGES README TODO
 
 	prepgamesdirs
 	# We need to set the permissions correctly
-	fperms 664 "${GAMES_STATEDIR}/greedy.scores" || die "fperms failed"
+	fperms 664 "${GAMES_STATEDIR}/greedy.scores"
 }
