@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libhubbub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhubbub/ChangeLog,v 1.5 2014/06/18 20:36:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhubbub/ChangeLog,v 1.6 2014/11/06 18:17:34 xmw Exp $
+
+*libhubbub-0.3.0 (06 Nov 2014)
+
+  06 Nov 2014; Michael Weber <xmw@gentoo.org> +libhubbub-0.3.0.ebuild:
+  Version bump
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libhubbub-0.2.0.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

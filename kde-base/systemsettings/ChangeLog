@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.265 2014/10/25 20:03:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.266 2014/11/06 18:29:06 mrueg Exp $
+
+*systemsettings-4.11.13-r1 (06 Nov 2014)
+
+  06 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  +files/systemsettings-4.11.13-kcm-dateandtime.patch,
+  +systemsettings-4.11.13-r1.ebuild:
+  Fix security vulnerability.
 
 *systemsettings-4.11.13 (25 Oct 2014)
 
