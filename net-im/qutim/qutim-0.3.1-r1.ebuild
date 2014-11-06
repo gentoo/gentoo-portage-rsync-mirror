@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1.ebuild,v 1.8 2014/04/02 16:09:09 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1-r1.ebuild,v 1.1 2014/11/06 11:47:38 pinkbyte Exp $
 
-EAPI=4
+EAPI=5
 
 LANGS="ar be bg cs de en_GB ru sk uk zh_CN"
 
@@ -75,6 +75,12 @@ RDEPEND="${CDEPEND}
 "
 
 DOCS=( AUTHORS ChangeLog )
+
+# bug #506614
+PATCHES=(
+	"${FILESDIR}/${P}-cmake-2.8.12-qt-build.patch"
+	"${FILESDIR}/${P}-cmake-2.8.12-kde-build.patch"
+)
 
 src_prepare() {
 	cmake-utils_src_prepare

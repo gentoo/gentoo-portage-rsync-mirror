@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16139 2014/11/05 20:46:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16140 2014/11/06 11:51:29 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -129,11 +129,6 @@ dev-perl/DateTime-Format-DateManip
 # since many years, unlikely to work with uptodate subversion
 # Masked for removal in 30 days
 dev-perl/SVN-Mirror
-
-# Davide Pesavento <pesa@gentoo.org> (20 Oct 2014)
-# Does not build with any in-tree version of cmake since 20140713 (bug 506614).
-# Jabber plugin is broken (bug 464690). Masked for removal in 30 days.
-net-im/qutim
 
 # Rick Farina <zerochaos@gentoo.org> (19 Oct 2014)
 # Masked for removal on 19 Nov 2014, use sys-apps/hwids instead.
