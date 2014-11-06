@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.30-r1.ebuild,v 1.1 2014/11/05 23:18:24 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.30-r1.ebuild,v 1.2 2014/11/06 07:51:42 polynomial-c Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -120,8 +120,7 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/seamonkey"
 
-	epatch "${FILESDIR}"/${PN}-2.30-pulseaudio_configure_switch_fix.patch \
-		"${FILESDIR}"/${PN}-2.30-jemalloc-configure.patch \
+	epatch"${FILESDIR}"/${PN}-2.30-jemalloc-configure.patch \
 		"${FILESDIR}"/${PN}-2.30-webm-disallow-negative-samples.patch
 
 	# browser patches go here
@@ -240,6 +239,8 @@ src_configure() {
 			append-flags -mno-avx
 		fi
 	fi
+
+	emake V=1 -f client.mk configure
 }
 
 src_compile() {
