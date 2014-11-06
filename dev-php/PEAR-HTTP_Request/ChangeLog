@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTTP_Request
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request/ChangeLog,v 1.51 2014/01/26 18:31:04 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request/ChangeLog,v 1.52 2014/11/06 17:27:34 grknight Exp $
+
+  06 Nov 2014; Brian Evans <grknight@gentoo.org>
+  -PEAR-HTTP_Request-1.4.1.ebuild, -PEAR-HTTP_Request-1.4.2.ebuild:
+  Drop old
 
   26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
   PEAR-HTTP_Request-1.4.1.ebuild, PEAR-HTTP_Request-1.4.2.ebuild,

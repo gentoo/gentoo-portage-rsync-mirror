@@ -1,6 +1,7 @@
 DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
 DESCRIPTION=Wraps PHP's session_* functions, providing extras like db storage for session data
+EAPI=5
 HOMEPAGE=http://pear.php.net/HTTP_Session2
 IUSE=minimal
 KEYWORDS=~amd64 ~x86
@@ -9,4 +10,4 @@ RDEPEND=!minimal? ( >=dev-php/PEAR-MDB2-2.4.1 >=dev-php/PEAR-DB-1.7.11 ) dev-lan
 SLOT=0
 SRC_URI=http://pear.php.net/get/HTTP_Session2-0.7.3.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=2dcf8a91aef0b59e9bbd954c9bdcd086
+_md5_=8e5a0b64abafb88f744c7d77c6c8d90a
