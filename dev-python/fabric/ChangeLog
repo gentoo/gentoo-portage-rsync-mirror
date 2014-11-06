@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.50 2014/10/08 08:54:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.51 2014/11/06 03:27:54 idella4 Exp $
+
+  06 Nov 2014; Ian Delaney <idella4@gentoo.org> fabric-1.9.1.ebuild:
+  Set required bordering to dep paramiko, fixes Bug #528154
 
   08 Oct 2014; Ian Delaney <idella4@gentoo.org> fabric-1.10.0.ebuild:
   remove erronoeous test bug from test phase
