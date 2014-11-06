@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.71 2014/06/10 23:56:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.72 2014/11/06 06:16:31 radhermit Exp $
+
+*apsw-3.8.7.1_p1 (06 Nov 2014)
+
+  06 Nov 2014; Tim Harder <radhermit@gentoo.org> +apsw-3.8.7.1_p1.ebuild:
+  Version bump.
 
 *apsw-3.8.5_p1 (10 Jun 2014)
 
