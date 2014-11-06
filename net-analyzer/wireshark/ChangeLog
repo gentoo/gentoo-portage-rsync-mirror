@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.664 2014/11/02 12:09:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.665 2014/11/06 21:43:21 jer Exp $
+
+*wireshark-1.12.1-r1 (06 Nov 2014)
+
+  06 Nov 2014; Jeroen Roovers <jer@gentoo.org> +wireshark-1.12.1-r1.ebuild:
+  Add Qt 5 support to the stable branch (bug #488640).
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> wireshark-1.12.1.ebuild,
   wireshark-1.99.0-r1.ebuild, wireshark-99999999.ebuild:

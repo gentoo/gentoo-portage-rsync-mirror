@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r4.ebuild,v 1.1 2014/11/06 19:22:25 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r4.ebuild,v 1.2 2014/11/06 21:32:53 axs Exp $
 
 EAPI="5"
 inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -71,11 +71,11 @@ RDEPEND="
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20131008-r1
 		!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )
 	|| (
-		dev-libs/libltdl:0[${MULTILIB_USEDEP}]
-		>=sys-devel/libtool-2.4.2[${MULTILIB_USEDEP}]
+		dev-libs/libltdl:0
+		( >=sys-devel/libtool-2.4.2 <sys-devel/libtool-2.4.3-r2 )
 	)
 "
-# it's a valid RDEPEND, libltdl.so is used
+# it's a valid RDEPEND, libltdl.so is used for native abi
 
 DEPEND="${RDEPEND}
 	sys-devel/m4
@@ -241,7 +241,9 @@ multilib_src_compile() {
 	if multilib_is_native_abi; then
 		emake
 	else
-		emake -C src libpulse{,-simple,-mainloop-glib}.la
+		local targets=( libpulse.la libpulse-simple.la )
+		use glib && targets+=( libpulse-mainloop-glib.la )
+		emake -C src ${targets[@]}
 	fi
 }
 
@@ -268,10 +270,12 @@ multilib_src_install() {
 	if multilib_is_native_abi; then
 		emake -j1 DESTDIR="${D}" bashcompletiondir="$(get_bashcompdir)" install
 	else
+		local targets=( libpulse.la libpulse-simple.la )
+		use glib && targets+=( libpulse-mainloop-glib.la )
 		emake DESTDIR="${D}" install-pkgconfigDATA
 		emake DESTDIR="${D}" -C src \
 			install-libLTLIBRARIES \
-			lib_LTLIBRARIES="libpulse.la libpulse-simple.la libpulse-mainloop-glib.la" \
+			lib_LTLIBRARIES="${targets[*]}" \
 			install-pulseincludeHEADERS
 	fi
 }

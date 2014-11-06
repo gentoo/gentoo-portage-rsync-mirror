@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.127 2014/09/21 16:41:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.128 2014/11/06 21:52:12 axs Exp $
+
+  06 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  emul-linux-x86-soundlibs-20131008-r2.ebuild,
+  emul-linux-x86-soundlibs-20140406-r1.ebuild,
+  emul-linux-x86-soundlibs-20140508.ebuild:
+  pulseaudio needs to be built with glib support to provide the same files that
+  this package provides, adjusted deps accordingly
 
   21 Sep 2014; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Explicitly note in metadata.xml that setting USE=-pulseaudio is unsupported.

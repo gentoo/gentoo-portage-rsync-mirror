@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/openmw/openmw-0.33.0.ebuild,v 1.2 2014/11/06 21:23:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/openmw/openmw-0.33.0.ebuild,v 1.3 2014/11/06 21:59:28 hasufell Exp $
 
 EAPI=5
 
@@ -95,6 +95,15 @@ pkg_preinst() {
 pkg_postinst() {
 	games_pkg_postinst
 	gnome2_icon_cache_update
+
+	if use !cdinstall ; then
+		elog "You need the original Morrowind Data files. If you haven't"
+		elog "installed them yet, you can install them straight via the"
+		elog "game launcher (launcher USE flag) which is the officially"
+		elog "supported method or by using the"
+		elog "games-rpg/morrowind-data (cdinstall USE flag) package"
+		elog "(this might not work for all morrowind releases out there)."
+	fi
 }
 
 pkg_postrm() {

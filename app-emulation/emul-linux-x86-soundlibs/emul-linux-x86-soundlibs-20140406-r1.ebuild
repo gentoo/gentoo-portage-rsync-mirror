@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20140406-r1.ebuild,v 1.5 2014/06/18 19:02:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20140406-r1.ebuild,v 1.6 2014/11/06 21:52:12 axs Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -44,7 +44,7 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}[abi_x86_32=]
 			>=net-wireless/bluez-5.18-r1[abi_x86_32(-)]
 			=net-wireless/bluez-4.101-r9[abi_x86_32(-)]
 		)
-		pulseaudio? ( >=media-sound/pulseaudio-5.0[abi_x86_32(-)] )
+		pulseaudio? ( >=media-sound/pulseaudio-5.0[glib,abi_x86_32(-)] )
 	)"
 
 pkg_pretend() {
