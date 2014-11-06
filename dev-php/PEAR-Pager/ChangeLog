@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Pager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.41 2014/08/10 20:54:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.42 2014/11/06 20:10:02 grknight Exp $
+
+*PEAR-Pager-2.4.9 (06 Nov 2014)
+
+  06 Nov 2014; Brian Evans <grknight@gentoo.org> +PEAR-Pager-2.4.9.ebuild,
+  -PEAR-Pager-2.4.4.ebuild, -PEAR-Pager-2.4.5.ebuild:
+  Version bump; Drop old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> PEAR-Pager-2.4.4.ebuild,
   PEAR-Pager-2.4.5.ebuild, PEAR-Pager-2.4.8.ebuild:

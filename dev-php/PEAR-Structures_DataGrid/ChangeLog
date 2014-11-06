@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-Structures_DataGrid
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_DataGrid/ChangeLog,v 1.35 2008/03/29 00:19:13 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_DataGrid/ChangeLog,v 1.36 2014/11/06 20:27:32 grknight Exp $
+
+*PEAR-Structures_DataGrid-0.9.3 (06 Nov 2014)
+
+  06 Nov 2014; Brian Evans <grknight@gentoo.org>
+  +PEAR-Structures_DataGrid-0.9.3.ebuild,
+  -PEAR-Structures_DataGrid-0.8.3.ebuild:
+  Version bump; Drop old
 
   29 Mar 2008; Markus Meier <maekke@gentoo.org>
   PEAR-Structures_DataGrid-0.9.0.ebuild:
@@ -158,4 +165,3 @@
   21 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Structures_DataGrid-0.6.2.ebuild:
   Initial ebuild.
-

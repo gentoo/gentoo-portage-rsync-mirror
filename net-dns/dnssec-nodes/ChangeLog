@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnssec-nodes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-nodes/ChangeLog,v 1.7 2014/11/06 20:00:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-nodes/ChangeLog,v 1.8 2014/11/06 20:08:05 xmw Exp $
+
+  06 Nov 2014; Michael Weber <xmw@gentoo.org> dnssec-nodes-2.1.ebuild:
+  Add qtcore as dependency (thanks Patrick Lauer, bug 514404)
 
 *dnssec-nodes-2.1 (06 Nov 2014)
 

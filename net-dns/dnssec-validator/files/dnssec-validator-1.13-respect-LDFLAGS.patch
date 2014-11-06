@@ -5,7 +5,7 @@
  
  $(LIBRES): $(LOBJ)
 -	$(LIBTOOLLD) -o $@ $(LOBJ) 
-+	$(LIBTOOLLD) -o $@ $(LOBJ) $(LDFLAGS)
++	$(LIBTOOLLD) -o $@ $(LOBJ) $(LDFLAGS) -lssl
  
  install:
  	$(MKPATH) $(DESTDIR)$(libdir)
@@ -16,7 +16,7 @@
  
  $(LIBVAL): $(LOBJ)
 -	$(LIBTOOLLD) -o $@ $(LOBJ)
-+	$(LIBTOOLLD) -o $@ $(LOBJ) $(LDFLAGS)
++	$(LIBTOOLLD) -o $@ $(LOBJ) $(LDFLAGS) -lssl -lpthread
  
  install:
  	$(MKPATH) $(DESTDIR)$(libdir)

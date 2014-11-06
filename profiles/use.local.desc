@@ -2681,6 +2681,8 @@ games-engines/odamex:master - Build master server target (advertises odamex serv
 games-engines/odamex:odalaunch - Build the wxwidgets based launcher.
 games-engines/odamex:portmidi - Enable portmidi support.
 games-engines/odamex:server - Build server target.
+games-engines/openmw:devtools - Install development tools like bsatool, esmtool and opencs.
+games-engines/openmw:launcher - Install the launcher for configuring OpenMW.
 games-engines/renpy:development - Install IDE for game developers and an empty game template
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
 games-engines/scummvm:mpeg2 - enable mpeg2 codec for cutscenes
