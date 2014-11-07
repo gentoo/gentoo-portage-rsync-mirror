@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1404 2014/11/05 23:18:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1405 2014/11/07 15:48:01 axs Exp $
+
+  06 Nov 2014; Ian Stakenvicius <axs@gentoo.org> python-single-r1.eclass:
+  When only one supported python implementation can satisfy an ebuild, do
+  not provide python_single_target_* flags in IUSE -- effectively, rely
+  only on PYTHON_TARGETS rather than the value specified in PYTHON_SINGLE_TARGET.
 
   05 Nov 2014; Ian Stakenvicius <axs@gentoo.org> mozconfig-v5.33.eclass:
   Move IUSE=selinux to the eclass
