@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zc-buildout/zc-buildout-2.2.1.ebuild,v 1.1 2014/05/25 11:27:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zc-buildout/zc-buildout-2.2.4.ebuild,v 1.1 2014/11/07 09:32:09 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -23,12 +23,12 @@ RDEPEND=">=dev-python/setuptools-0.7[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_P}
+
 DOCS=( README.rst doc/tutorial.txt )
 # Tests require zope packages absent from portage
 
-src_install() {
-	distutils-r1_src_install
-
-	# Remove README.txt installed in incorrect location.
-	rm -f "${D}usr/README.txt"
+# Prevent incorrect installation of data file
+python_prepare_all() {
+	sed -e '/^    include_package_data/d' -i setup.py || die
+	distutils-r1_python_prepare_all
 }
