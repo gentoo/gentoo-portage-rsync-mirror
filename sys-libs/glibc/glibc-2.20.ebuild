@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.20.ebuild,v 1.3 2014/09/16 04:30:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.20.ebuild,v 1.4 2014/11/07 02:12:32 vapier Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 LICENSE="LGPL-2.1+ BSD HPND ISC inner-net rc PCRE"
-#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 -hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 RESTRICT="strip" # strip ourself #46186
 EMULTILIB_PKG="true"
 
@@ -76,13 +76,13 @@ RDEPEND="!sys-kernel/ps3-sources
 
 if [[ ${CATEGORY} == cross-* ]] ; then
 	DEPEND+=" !crosscompile_opts_headers-only? (
-		>=${CATEGORY}/binutils-2.20
+		>=${CATEGORY}/binutils-2.24
 		>=${CATEGORY}/gcc-4.4
 	)"
 	[[ ${CATEGORY} == *-linux* ]] && DEPEND+=" ${CATEGORY}/linux-headers"
 else
 	DEPEND+="
-		>=sys-devel/binutils-2.20
+		>=sys-devel/binutils-2.24
 		>=sys-devel/gcc-4.4
 		virtual/os-headers"
 	RDEPEND+=" vanilla? ( !sys-libs/timezone-data )"
