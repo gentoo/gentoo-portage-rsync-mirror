@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.3.ebuild,v 1.1 2014/11/06 21:43:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.3-r1.ebuild,v 1.1 2014/11/07 22:26:09 hwoarang Exp $
 
 EAPI=5
 PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr he_IL hr hu
@@ -31,6 +31,7 @@ DEPEND=">=dev-qt/qtgui-4.8:4[accessibility]
 		media-plugins/gst-plugins-faad:0.10
 		media-plugins/gst-plugins-theora
 	)
+	dev-qt/qtsingleapplication[X]
 "
 RDEPEND="${DEPEND}"
 
@@ -52,9 +53,9 @@ src_prepare() {
 	if [[ -n ${trans} ]]; then
 		sed -i -e "/^TRANSLATIONS/s/+=.*/+=${trans}/" locale/locale.pri || die
 	fi
-	# gcc-4.7. Bug #422977. Will probably be fixed
-	# once ubuntu moves to gcc-4.7
-	epatch "${FILESDIR}"/${PN}-1.9-gcc47.patch
+	sed -i \
+		's|include(src/qtsingleapplication/qtsingleapplication.pri)|CONFIG += qtsingleapplication|g' \
+		${PN}.pro || die "Failed to unbundle qtsingleapplication"
 	# Enable video downloads. Bug #491344
 	use download && { echo "DEFINES += APP_DOWNLOADS" >> ${PN}.pro; }
 }
