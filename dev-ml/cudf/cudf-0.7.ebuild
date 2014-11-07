@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cudf/cudf-0.7.ebuild,v 1.2 2014/10/24 08:35:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cudf/cudf-0.7.ebuild,v 1.3 2014/11/07 01:08:13 jer Exp $
 
 EAPI=5
 
-inherit multilib
+inherit multilib toolchain-funcs
 
 DESCRIPTION="Library to parse, pretty print, and evaluate CUDF documents"
 HOMEPAGE="http://www.mancoosi.org/cudf/"
@@ -25,6 +25,24 @@ DEPEND="${RDEPEND}
 	dev-ml/findlib
 	dev-lang/perl
 "
+
+src_prepare() {
+	sed -i \
+		-e 's|make|$(MAKE)|g' \
+		Makefile || die
+	sed -i \
+		-e 's|-lncurses|$(shell ${PKG_CONFIG} --libs ncurses glib-2.0)|g' \
+		c-lib/Makefile || die
+	sed -i \
+		-e 's|-lcurses|$(shell ${PKG_CONFIG} --libs ncurses glib-2.0)|g' \
+		c-lib/Makefile.variants || die
+
+	tc-export CC PKG_CONFIG
+
+	sed -i \
+		-e "s|-lncurses|$( $(tc-getPKG_CONFIG) --libs ncurses)|g" \
+		c-lib/cudf.pc.in || die
+}
 
 src_compile() {
 	emake -j1 all

@@ -1,10 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linkers-and-loaders/linkers-and-loaders-1.ebuild,v 1.6 2013/04/01 13:03:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linkers-and-loaders/linkers-and-loaders-1.ebuild,v 1.7 2014/11/07 01:21:41 vapier Exp $
+
+EAPI="4"
 
 DESCRIPTION="the Linkers and Loaders book"
 HOMEPAGE="http://linker.iecc.com/"
-SRC_URI="http://wh0rd.org/${P}.tar.lzma"
+SRC_URI="http://wh0rd.org/books/${P}.tar.lzma"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
@@ -18,7 +20,7 @@ DEPEND="app-arch/xz-utils"
 S=${WORKDIR}
 
 src_install() {
-	dohtml *.html *.jpg || die
+	dohtml *.html *.jpg
 	dodoc *.pdf
 	use doc && dodoc *.txt *.rtf
 }

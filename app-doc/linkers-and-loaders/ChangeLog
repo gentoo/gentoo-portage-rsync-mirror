@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/linkers-and-loaders
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linkers-and-loaders/ChangeLog,v 1.10 2013/04/01 13:03:54 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linkers-and-loaders/ChangeLog,v 1.11 2014/11/07 01:21:41 vapier Exp $
+
+  07 Nov 2014; Mike Frysinger <vapier@gentoo.org> linkers-and-loaders-1.ebuild:
+  Update SRC_URI/EAPI #528502 by Toralf Förster.
 
   01 Apr 2013; Ulrich Müller <ulm@gentoo.org> linkers-and-loaders-1.ebuild:
   Fix LICENSE, bug 463874. Remove lzma-utils from DEPEND.
