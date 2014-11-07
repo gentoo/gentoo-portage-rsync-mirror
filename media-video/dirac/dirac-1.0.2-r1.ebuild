@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-1.0.2-r1.ebuild,v 1.2 2013/10/14 18:16:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-1.0.2-r1.ebuild,v 1.3 2014/11/07 07:34:55 aballier Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -20,7 +20,7 @@ DEPEND="
 		app-doc/doxygen
 		virtual/latex-base
 		media-gfx/graphviz
-		app-text/dvipdfm
+		|| ( >=app-text/texlive-core-2014 app-text/dvipdfm )
 	)"
 DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
