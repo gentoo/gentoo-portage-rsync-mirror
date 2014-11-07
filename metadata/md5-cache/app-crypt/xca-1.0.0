@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=>=dev-libs/openssl-0.9.8[-bindist] dev-qt/qtgui:4 doc? ( app-text/linuxdoc-tools )
+DEPEND=>=dev-libs/openssl-0.9.8[bindist=] dev-qt/qtgui:4 doc? ( app-text/linuxdoc-tools )
 DESCRIPTION=A GUI to OpenSSL, RSA public keys, certificates, signing requests and revokation lists
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.hohnstaedt.de/xca.html
-IUSE=doc
+IUSE=doc bindist
 KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=BSD
-RDEPEND=>=dev-libs/openssl-0.9.8[-bindist] dev-qt/qtgui:4
+RDEPEND=>=dev-libs/openssl-0.9.8[bindist=] dev-qt/qtgui:4
 SLOT=0
-SRC_URI=mirror://sourceforge/xca/xca-0.9.1.tar.gz
+SRC_URI=mirror://sourceforge/xca/xca-1.0.0.tar.gz
 _eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=2943a873fb9898477822839ce6b4b96d
+_md5_=6f96d350e875d90d6744ad440fe506ed

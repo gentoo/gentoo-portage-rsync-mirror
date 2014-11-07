@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.9.1.ebuild,v 1.2 2013/03/02 19:16:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-1.0.0.ebuild,v 1.1 2014/11/07 07:15:28 alonbl Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils toolchain-funcs
 
@@ -13,9 +13,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="doc"
+IUSE="doc bindist"
 
-RDEPEND=">=dev-libs/openssl-0.9.8[-bindist]
+RDEPEND=">=dev-libs/openssl-0.9.8[bindist=]
 	dev-qt/qtgui:4"
 DEPEND="${RDEPEND}
 	doc? ( app-text/linuxdoc-tools )"
@@ -23,7 +23,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# http://sourceforge.net/tracker/index.php?func=detail&aid=1800298&group_id=62274&atid=500028
 	epatch "${FILESDIR}"/${PN}-0.9.0-qt_detection.patch
-	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${PN}-0.9.1-ldflags.patch
+	epatch "${FILESDIR}"/${P}-desktop.patch
 }
 
 src_configure() {
