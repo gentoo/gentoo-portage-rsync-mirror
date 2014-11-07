@@ -1,6 +1,12 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.204 2014/10/22 20:17:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.205 2014/11/07 21:54:05 axs Exp $
+
+*acroread-9.5.5-r2 (07 Nov 2014)
+
+  07 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +acroread-9.5.5-r2.ebuild, -acroread-9.5.5-r1.ebuild:
+  cleaned up RDEPEND again, added missing deps as per bug 520696
 
 *acroread-9.5.5-r1 (22 Oct 2014)
 

@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst postrm preinst prepare setup unpack
+DEPEND=dev-util/bsdiff >=sys-apps/sed-4 app-arch/unzip
+DESCRIPTION=Adobe's PDF reader
+EAPI=5
+HOMEPAGE=http://www.adobe.com/products/reader/
+IUSE=html ldap nsplugin linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko
+KEYWORDS=-* ~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=Adobe
+RDEPEND=|| ( ( dev-libs/atk[abi_x86_32(-)] dev-libs/glib:2[abi_x86_32(-)] dev-libs/libxml2[abi_x86_32(-)] dev-libs/openssl:0.9.8[abi_x86_32(-)] media-libs/fontconfig[abi_x86_32(-)] virtual/glu[abi_x86_32(-)] >=net-dns/libidn-1.28[abi_x86_32(-)] sys-libs/zlib[abi_x86_32(-)] x11-libs/gdk-pixbuf:2[abi_x86_32(-)] >=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] x11-libs/libXext[abi_x86_32(-)] x11-libs/pango[abi_x86_32(-)] || ( >=x11-libs/pangox-compat-0.0.2[abi_x86_32(-)] <x11-libs/pango-1.31[X] ) ) ( app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)] app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] ) ) nsplugin? ( || ( x11-libs/libXt[abi_x86_32(-)] app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) ) ldap? ( || ( >=net-nds/openldap-2.4.38-r1[abi_x86_32(-)] app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] ) ) x86? ( html? ( || ( www-client/firefox-bin www-client/firefox www-client/seamonkey-bin www-client/seamonkey ) ) ) linguas_zh_CN? ( media-fonts/acroread-asianfonts[linguas_zh_CN] ) linguas_ja? ( media-fonts/acroread-asianfonts[linguas_ja] ) linguas_zh_TW? ( media-fonts/acroread-asianfonts[linguas_zh_TW] ) linguas_ko? ( media-fonts/acroread-asianfonts[linguas_ko] )
+RESTRICT=strip mirror
+SLOT=0
+SRC_URI=http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i486linux_enu.tar.bz2
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=ec2b8e3637ed03f00cd8ebdbd70be572

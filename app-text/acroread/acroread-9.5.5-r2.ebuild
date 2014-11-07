@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5-r1.ebuild,v 1.1 2014/10/22 20:17:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5-r2.ebuild,v 1.1 2014/11/07 21:54:05 axs Exp $
 
 EAPI=5
 
@@ -13,39 +13,51 @@ HOMEPAGE="http://www.adobe.com/products/reader/"
 LICENSE="Adobe"
 KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
-IUSE="cups html ldap nsplugin"
+IUSE="html ldap nsplugin"
 # asian fonts from separate package:
 IUSE+=" linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
 RESTRICT="strip mirror"
 
-CORE_RDEPEND="dev-libs/openssl:0.9.8[abi_x86_32(-)]
+DEPEND="dev-util/bsdiff"
+RDEPEND="|| ( (
+	dev-libs/atk[abi_x86_32(-)]
+	dev-libs/glib:2[abi_x86_32(-)]
 	dev-libs/libxml2[abi_x86_32(-)]
+	dev-libs/openssl:0.9.8[abi_x86_32(-)]
+	media-libs/fontconfig[abi_x86_32(-)]
+	virtual/glu[abi_x86_32(-)]
 	>=net-dns/libidn-1.28[abi_x86_32(-)]
-	ldap? ( >=net-nds/openldap-2.4.38-r1[abi_x86_32(-)] )
+	sys-libs/zlib[abi_x86_32(-)]
+	x11-libs/gdk-pixbuf:2[abi_x86_32(-)]
 	>=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]
+	x11-libs/pango[abi_x86_32(-)]
 	|| (
 		>=x11-libs/pangox-compat-0.0.2[abi_x86_32(-)]
-		( <x11-libs/pango-1.31[X] x11-libs/pango[abi_x86_32(-)] )
+		<x11-libs/pango-1.31[X]
 	)
-"
-
-DEPEND="dev-util/bsdiff"
-RDEPEND="media-libs/fontconfig
-	cups? ( net-print/cups )
-	x86? (
-		${CORE_RDEPEND/\[abi_x86_32(-)\]/}
-		html? ( || (
-			www-client/firefox
+	) (
+		app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+		app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+		app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	) )
+	nsplugin? ( || (
+		x11-libs/libXt[abi_x86_32(-)]
+		app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+	) )
+	ldap? ( || (
+		>=net-nds/openldap-2.4.38-r1[abi_x86_32(-)]
+		app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	) )
+	x86? ( html? (
+		|| (
 			www-client/firefox-bin
+			www-client/firefox
+			www-client/seamonkey-bin
 			www-client/seamonkey
-		) )
-	)
-	amd64? ( || (
-		( ${CORE_RDEPEND} )
-		(
-			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 		)
 	) )
 	linguas_zh_CN? ( media-fonts/acroread-asianfonts[linguas_zh_CN] )
@@ -157,19 +169,20 @@ src_install() {
 	doman Adobe/Reader9/Resource/Shell/acroread.1.gz
 
 	if use nsplugin; then
-		exeinto /opt/netscape/plugins
-		doexe Adobe/Reader9/Browser/intellinux/nppdf.so
-		inst_plugin /opt/netscape/plugins/nppdf.so
+		inst_plugin /opt/Adobe/Reader9/Browser/intellinux/nppdf.so
+	else
+		rm -v "${ED}"/opt/Adobe/Reader9/Browser/intellinux/nppdf.so
 	fi
 
 	dodir /opt/bin
 	dosym /opt/${LAUNCHER} /opt/bin/${LAUNCHER/*bin\/}
 
+	# NOTE -- this is likely old and broken and should be removed...
 	# We need to set a MOZILLA_COMP_PATH for seamonkey and firefox since
 	# they don't install a configuration file for libgtkembedmoz.so
 	# detection in /etc/gre.d/ like xulrunner did.
 	if use x86 && use html; then
-		for lib in /opt/seamonkey /usr/lib/seamonkey /usr/lib/mozilla-firefox; do
+		for lib in /opt/{seamonkey,firefox} /usr/lib/{seamonkey,firefox,mozilla-firefox}; do
 			if [[ -f ${lib}/libgtkembedmoz.so ]] ; then
 				echo "MOZILLA_COMP_PATH=${lib}" >> "${ED}"${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config
 				elog "Adobe Reader depends on libgtkembedmoz.so, which I've found on"
