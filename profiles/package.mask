@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16144 2014/11/06 21:02:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16145 2014/11/07 13:19:12 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,28 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (7 Nov 2014)
+# Unmaintained, no longer supported, and starting to throw compilation
+# errors (bug #513906, bug #528372). Masked for removal in 30 days.
+# Update to lxqt-base/* packages.
+razorqt-base/libqtxdg
+razorqt-base/razorqt-appswitcher
+razorqt-base/razorqt-autosuspend
+razorqt-base/razorqt-config
+razorqt-base/razorqt-data
+razorqt-base/razorqt-desktop
+razorqt-base/razorqt-kbshortcuts
+razorqt-base/razorqt-libs
+razorqt-base/razorqt-lightdm-greeter
+razorqt-base/razorqt-meta
+razorqt-base/razorqt-notifications
+razorqt-base/razorqt-openssh-askpass
+razorqt-base/razorqt-panel
+razorqt-base/razorqt-policykit
+razorqt-base/razorqt-power
+razorqt-base/razorqt-runner
+razorqt-base/razorqt-session
 
 # Manuel Rüger <mrueg@gentoo.org> (6 Nov 2014)
 # Unmaintained slot, move on to dev-ruby/prawn:1
