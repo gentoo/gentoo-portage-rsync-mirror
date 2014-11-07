@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.16.ebuild,v 1.12 2014/11/06 15:49:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.16.ebuild,v 1.13 2014/11/06 23:39:12 vapier Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{3_3,3_4} )
@@ -29,7 +29,13 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig
 	static? ( ${LIB_DEPEND} )
-	test? ( ${PYTHON_DEPS} )
+	test? (
+		${PYTHON_DEPS}
+		dev-lang/perl
+		dev-perl/HTTP-Daemon
+		dev-perl/HTTP-Message
+		dev-perl/IO-Socket-SSL
+	)
 	nls? ( sys-devel/gettext )"
 
 REQUIRED_USE="ntlm? ( !gnutls ssl ) gnutls? ( ssl )"

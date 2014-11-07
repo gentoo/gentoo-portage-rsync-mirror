@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.2-r1.ebuild,v 1.1 2014/11/06 01:34:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.2-r1.ebuild,v 1.2 2014/11/06 23:56:00 zmedico Exp $
 
 EAPI=5
 
@@ -39,8 +39,8 @@ src_prepare() {
 		# Use \x7fELF header to separate ELF executables and libraries
 		[[ $(od -t x1 -N 4 "${x}") == *"7f 45 4c 46"* ]] || continue
 		patchelf --set-rpath \
-			"${EPREFIX}${GAMES_PREFIX_OPT}/${PN}/lib" "${x}" || \
-			die "patchelf failed on ${x}"
+			"${EPREFIX}${GAMES_PREFIX_OPT}/${PN}/lib/linux-x86/lib" \
+			"${x}" || die "patchelf failed on ${x}"
 	done < <(find . -type f)
 }
 
