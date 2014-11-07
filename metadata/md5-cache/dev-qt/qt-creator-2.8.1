@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND==dev-libs/botan-1.10*[threads] >=dev-qt/qtcore-4.8.0:4[ssl] >=dev-qt/qtdeclarative-4.8.0:4 || ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) ( >=dev-qt/qtgui-4.8.0:4 <dev-qt/qtgui-4.8.5:4 ) ) >=dev-qt/qthelp-4.8.0:4[doc?] >=dev-qt/qtscript-4.8.0:4 >=dev-qt/qtsql-4.8.0:4 >=dev-qt/qtsvg-4.8.0:4 virtual/pkgconfig test? ( >=dev-qt/qttest-4.8.0:4 )
+DEPEND==dev-libs/botan-1.10*[threads] >=dev-qt/designer-4.8.5:4 >=dev-qt/qtcore-4.8.5:4[ssl] >=dev-qt/qtdeclarative-4.8.5:4[accessibility] >=dev-qt/qtgui-4.8.5:4[accessibility] >=dev-qt/qthelp-4.8.5:4[doc?] >=dev-qt/qtscript-4.8.5:4 >=dev-qt/qtsql-4.8.5:4 >=dev-qt/qtsvg-4.8.5:4[accessibility] virtual/pkgconfig test? ( >=dev-qt/qttest-4.8.5:4 )
 DESCRIPTION=Lightweight IDE for C++/QML development centering around Qt
 EAPI=5
 HOMEPAGE=http://qt-project.org/wiki/Category:Tools::QtCreator
@@ -7,8 +7,8 @@ IUSE=debug doc examples test android autotools bazaar clearcase cmake cvs fakevi
 KEYWORDS=amd64 ~arm ppc x86
 LICENSE=LGPL-2.1
 PDEPEND=autotools? ( sys-devel/autoconf ) bazaar? ( dev-vcs/bzr ) cmake? ( dev-util/cmake ) cvs? ( dev-vcs/cvs ) git? ( dev-vcs/git ) mercurial? ( dev-vcs/mercurial ) subversion? ( dev-vcs/subversion ) valgrind? ( dev-util/valgrind )
-RDEPEND==dev-libs/botan-1.10*[threads] >=dev-qt/qtcore-4.8.0:4[ssl] >=dev-qt/qtdeclarative-4.8.0:4 || ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) ( >=dev-qt/qtgui-4.8.0:4 <dev-qt/qtgui-4.8.5:4 ) ) >=dev-qt/qthelp-4.8.0:4[doc?] >=dev-qt/qtscript-4.8.0:4 >=dev-qt/qtsql-4.8.0:4 >=dev-qt/qtsvg-4.8.0:4 >=sys-devel/gdb-7.2[python] examples? ( >=dev-qt/qtdemo-4.8.0:4 )
+RDEPEND==dev-libs/botan-1.10*[threads] >=dev-qt/designer-4.8.5:4 >=dev-qt/qtcore-4.8.5:4[ssl] >=dev-qt/qtdeclarative-4.8.5:4[accessibility] >=dev-qt/qtgui-4.8.5:4[accessibility] >=dev-qt/qthelp-4.8.5:4[doc?] >=dev-qt/qtscript-4.8.5:4 >=dev-qt/qtsql-4.8.5:4 >=dev-qt/qtsvg-4.8.5:4[accessibility] >=sys-devel/gdb-7.2[python] examples? ( >=dev-qt/qtdemo-4.8.5:4 )
 SLOT=0
 SRC_URI=http://download.qt-project.org/official_releases/qtcreator/2.8/2.8.1/qt-creator-2.8.1-src.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	c91a1ac3fefc6b077094fb2e82c65af4	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=48683f2a360cc2c66f1155af8b8e5352
+_md5_=afc22c4cb1f16edbe88a31064967ddd2

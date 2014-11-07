@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.2.2.ebuild,v 1.1 2014/10/14 23:34:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.2.2.ebuild,v 1.2 2014/11/07 01:59:17 pesa Exp $
 
 EAPI=5
 
@@ -42,12 +42,12 @@ CDEPEND="
 	=dev-libs/botan-1.10*[threads]
 	>=dev-qt/designer-${QT_PV}
 	>=dev-qt/qtcore-${QT_PV}[ssl]
-	>=dev-qt/qtdeclarative-${QT_PV}
-	>=dev-qt/qtgui-${QT_PV}
+	>=dev-qt/qtdeclarative-${QT_PV}[accessibility]
+	>=dev-qt/qtgui-${QT_PV}[accessibility]
 	>=dev-qt/qthelp-${QT_PV}[doc?]
 	>=dev-qt/qtscript-${QT_PV}
 	>=dev-qt/qtsql-${QT_PV}
-	>=dev-qt/qtsvg-${QT_PV}
+	>=dev-qt/qtsvg-${QT_PV}[accessibility]
 	clang? ( >=sys-devel/clang-3.2:= )
 "
 DEPEND="${CDEPEND}

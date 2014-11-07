@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.8.1.ebuild,v 1.4 2013/12/21 17:17:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.8.1.ebuild,v 1.5 2014/11/07 01:59:17 pesa Exp $
 
 EAPI=5
 
@@ -33,20 +33,18 @@ QTC_PLUGINS=(android autotools:autotoolsprojectmanager bazaar
 IUSE="debug doc examples test ${QTC_PLUGINS[@]%:*}"
 
 # minimum Qt version required
-QT_PV="4.8.0:4"
+QT_PV="4.8.5:4"
 
 CDEPEND="
 	=dev-libs/botan-1.10*[threads]
+	>=dev-qt/designer-${QT_PV}
 	>=dev-qt/qtcore-${QT_PV}[ssl]
-	>=dev-qt/qtdeclarative-${QT_PV}
-	|| (
-		( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 )
-		( >=dev-qt/qtgui-${QT_PV} <dev-qt/qtgui-4.8.5:4 )
-	)
+	>=dev-qt/qtdeclarative-${QT_PV}[accessibility]
+	>=dev-qt/qtgui-${QT_PV}[accessibility]
 	>=dev-qt/qthelp-${QT_PV}[doc?]
 	>=dev-qt/qtscript-${QT_PV}
 	>=dev-qt/qtsql-${QT_PV}
-	>=dev-qt/qtsvg-${QT_PV}
+	>=dev-qt/qtsvg-${QT_PV}[accessibility]
 "
 DEPEND="${CDEPEND}
 	virtual/pkgconfig
@@ -83,8 +81,7 @@ src_prepare() {
 	sed -i -e "/^LANGUAGES =/ s:=.*:= $(l10n_get_locales):" \
 		share/qtcreator/translations/translations.pro || die
 
-	# remove bundled qbs for now
-	# TODO: package it and re-enable the plugin
+	# remove bundled qbs
 	rm -rf src/shared/qbs || die
 }
 
