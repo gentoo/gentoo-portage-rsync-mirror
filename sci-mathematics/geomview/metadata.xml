@@ -4,9 +4,6 @@
 <herd>sci-mathematics</herd>
 <longdescription>Geomview is an interactive geometry viewer and Object Oriented Graphics Library (OOGL).</longdescription>
 <use>
-  <flag name='avg'>Enable experimental motion averaging technique</flag>
-  <flag name='motionaveraging'>Enable experimental motion averaging technique</flag>
-  <flag name='netpbm'>Add <pkg>media-libs/netpbm</pkg> support for external
-    modules</flag>
+	<flag name='motionaveraging'>Enable experimental motion averaging technique</flag>
 </use>
 </pkgmetadata>

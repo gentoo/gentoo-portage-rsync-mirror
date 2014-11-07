@@ -6465,9 +6465,7 @@ sci-mathematics/fricas:cmucl - Add support for CMU Common Lisp (dev-lisp/cmucl)
 sci-mathematics/fricas:ecls - Add support for Embeddable Common Lisp (dev-lisp/ecls)
 sci-mathematics/fricas:gcl - Add support for GNU Common Lisp (dev-lisp/gcl)
 sci-mathematics/fricas:sbcl - Add support for Steel Bank Common Lisp (dev-lisp/sbcl)
-sci-mathematics/geomview:avg - Enable experimental motion averaging technique
 sci-mathematics/geomview:motionaveraging - Enable experimental motion averaging technique
-sci-mathematics/geomview:netpbm - Add media-libs/netpbm support for external modules
 sci-mathematics/gmp-ecm:custom-tune - Improve performance of some operations by selecting machine-specific defaults
 sci-mathematics/gmp-ecm:gwnum - Use GWNum lib where possible
 sci-mathematics/gretl:R - Enable support for dev-lang/R

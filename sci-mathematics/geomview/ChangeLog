@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/geomview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.20 2014/11/06 22:58:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.21 2014/11/07 03:33:51 patrick Exp $
+
+  07 Nov 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag descriptions from metadata.xml
 
   06 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -geomview-1.9.4.ebuild:
