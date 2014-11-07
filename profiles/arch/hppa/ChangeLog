@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.228 2014/10/22 09:58:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.229 2014/11/07 11:46:16 jer Exp $
+
+  07 Nov 2014; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask USE=luajit.
 
   22 Oct 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask USE=test for dev-python/urllib3.
