@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.2-r1.ebuild,v 1.2 2014/11/06 23:56:00 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.2-r2.ebuild,v 1.1 2014/11/07 22:59:53 hasufell Exp $
 
 EAPI=5
 
@@ -51,6 +51,7 @@ src_install() {
 		games_make_wrapper ${PN} "renpy '${GAMES_DATADIR}/${PN}'"
 	else
 		insinto "${GAMES_PREFIX_OPT}"/${PN}
+		rm "lib/linux-x86/lib/python2.5/pygame/mixer.so" || die # bug #528086
 		doins -r common game lib renpy "Katawa Shoujo.py" "Katawa Shoujo.sh"
 		games_make_wrapper ${PN} "./Katawa\ Shoujo.sh" "${GAMES_PREFIX_OPT}/${PN}"
 		fperms +x "${GAMES_PREFIX_OPT}/${PN}"/lib/{python,linux-x86/python.real} \

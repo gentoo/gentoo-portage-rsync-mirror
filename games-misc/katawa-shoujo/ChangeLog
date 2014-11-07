@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/katawa-shoujo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/ChangeLog,v 1.10 2014/11/06 23:56:00 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/ChangeLog,v 1.11 2014/11/07 22:59:53 hasufell Exp $
+
+*katawa-shoujo-1.2-r2 (07 Nov 2014)
+
+  07 Nov 2014; Julian Ospald <hasufell@gentoo.org>
+  -katawa-shoujo-1.2-r1.ebuild, +katawa-shoujo-1.2-r2.ebuild:
+  rm unused lib and fix bug #528086
 
   06 Nov 2014; Zac Medico <zmedico@gentoo.org> katawa-shoujo-1.2-r1.ebuild:
   Adjust rpath for bug #528086.
