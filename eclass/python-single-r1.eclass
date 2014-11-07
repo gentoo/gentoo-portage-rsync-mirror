@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.28 2014/11/07 16:17:46 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.29 2014/11/07 18:11:58 axs Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -159,12 +159,14 @@ fi
 
 _python_single_set_globals() {
 	local impls=()
+	local unimpls=()
 
 	PYTHON_DEPS=
 	local i PYTHON_PKG_DEP
-	for i in "${PYTHON_COMPAT[@]}"; do
-		_python_impl_supported "${i}" || continue
-		impls+=( "${i}" )
+	for i in "${_PYTHON_ALL_IMPLS[@]}"; do
+		has "${i}" "${PYTHON_COMPAT[@]}" \
+			&& impls+=( "${i}" ) \
+			|| unimpls+=( "${i}" )
 	done
 
 	if [[ ${#impls[@]} -eq 0 ]]; then
@@ -173,8 +175,9 @@ _python_single_set_globals() {
 
 	local flags_mt=( "${impls[@]/#/python_targets_}" )
 	local flags=( "${impls[@]/#/python_single_target_}" )
+	local unflags=( "${unimpls[@]/#/-python_single_target_}" )
 
-	local optflags=${flags_mt[@]/%/(-)?}
+	local optflags=${flags_mt[@]/%/(-)?},${unflags[@]/%/(-)}
 
 	IUSE="${flags_mt[*]}"
 
@@ -195,7 +198,7 @@ _python_single_set_globals() {
 		PYTHON_REQUIRED_USE="^^ ( ${flags[*]} )"
 		# Ensure deps honor the same python_single_target_* flag as is set
 		# on this package.
-	optflags+=,${flags[@]/%/(+)?}
+		optflags+=,${flags[@]/%/(+)?}
 
 		for i in "${impls[@]}"; do
 			# The chosen targets need to be in PYTHON_TARGETS as well.
