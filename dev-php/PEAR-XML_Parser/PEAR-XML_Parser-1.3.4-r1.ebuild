@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Parser/PEAR-XML_Parser-1.3.2.ebuild,v 1.3 2010/03/27 23:12:29 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Parser/PEAR-XML_Parser-1.3.4-r1.ebuild,v 1.1 2014/11/07 14:51:41 grknight Exp $
+
+EAPI=5
 
 inherit php-pear-r1
 
