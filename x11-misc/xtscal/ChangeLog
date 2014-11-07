@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xtscal
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtscal/ChangeLog,v 1.8 2010/10/21 01:22:52 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtscal/ChangeLog,v 1.9 2014/11/07 15:01:56 chithanh Exp $
+
+  07 Nov 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xtscal-0.6.3.ebuild:
+  Add missing libXft dependency, bug #514262.
 
   21 Oct 2010; Brent Baude <ranger@gentoo.org> xtscal-0.6.3.ebuild:
   Marking xtscal-0.6.3 ppc stable for bug 239063
@@ -27,4 +31,3 @@
 
   15 Mar 2009; <solar@gentoo.org> +metadata.xml, +xtscal-0.6.3.ebuild:
   - initial commit of xtscal-0.6.3
-
