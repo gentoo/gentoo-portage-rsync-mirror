@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.72.ebuild,v 1.1 2014/11/04 18:13:01 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.72.ebuild,v 1.2 2014/11/07 06:03:49 ercpe Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ AT_AVAILABLE=( amd64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris x
 # Sometimes some or all of the demos are missing, this is to not have to rewrite half
 # the ebuild when it happens.
 DEMOS_AVAILABLE=( amd64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris x86-macos x64-macos )
-FX_VERSION="2_2_71"
+FX_VERSION="2_2_$(get_version_component_range 4)"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"

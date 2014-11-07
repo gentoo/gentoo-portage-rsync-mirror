@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libgxim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgxim/ChangeLog,v 1.4 2014/04/08 07:04:07 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgxim/ChangeLog,v 1.5 2014/11/07 06:25:35 naota Exp $
+
+  07 Nov 2014; Naohiro Aota <naota@gentoo.org> libgxim-0.5.0.ebuild:
+  Add missing dependency
 
 *libgxim-0.5.0 (08 Apr 2014)
 
