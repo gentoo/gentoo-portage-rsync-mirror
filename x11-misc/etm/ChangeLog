@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/etm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/etm/ChangeLog,v 1.6 2013/06/01 11:23:42 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/etm/ChangeLog,v 1.7 2014/11/07 08:03:29 idella4 Exp $
+
+*etm-696-r1 (07 Nov 2014)
+
+  07 Nov 2014; Ian Delaney <idella4@gentoo.org> +etm-696-r1.ebuild,
+  -etm-696.ebuild:
+  revbump; converted to -r1, rm old
 
   01 Jun 2013; Pacho Ramos <pacho@gentoo.org> -etm-648.ebuild, -etm-655.ebuild,
   metadata.xml:

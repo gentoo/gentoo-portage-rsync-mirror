@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.9.ebuild,v 1.1 2014/11/02 19:13:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.9.ebuild,v 1.2 2014/11/07 08:09:14 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -24,6 +24,7 @@ RESTRICT="test"
 S=${WORKDIR}/${P/_}
 
 RDEPEND="
+	media-libs/fontconfig
 	x11-libs/gdk-pixbuf:2
 	x11-libs/libX11
 	x11-libs/libXrandr
@@ -41,16 +42,15 @@ RDEPEND="
 		gnome-base/gnome-desktop:2
 		gnome-base/gnome-menus
 		gnome-base/libgnomeui )
-	nls? ( sys-devel/gettext )
-	truetype? ( >=media-libs/freetype-2.0.9 )
-	media-libs/giflib
 "
 DEPEND="${RDEPEND}
-	doc? ( app-text/linuxdoc-tools )
+	>=sys-apps/sed-4
 	x11-proto/xproto
 	x11-proto/xextproto
+	doc? ( app-text/linuxdoc-tools )
+	nls? ( >=sys-devel/gettext-0.19.2 )
+	truetype? ( >=media-libs/freetype-2.0.9 )
 	xinerama? ( x11-proto/xineramaproto )
-	>=sys-apps/sed-4
 "
 
 pkg_setup() {
@@ -65,7 +65,6 @@ PATCHES=(
 	# Fedora patches
 	"${FILESDIR}"/${PN}-1.3.8-menu.patch
 	"${FILESDIR}"/${PN}-1.3.9-fribidi.patch
-	#"${FILESDIR}"/${PN}-1.3.7-dso.patch
 	"${FILESDIR}"/${PN}-1.3.8-deprecated.patch
 
 	# Debian patch fixing multiple build issues, like bug #470148
