@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.27 2014/11/07 15:48:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.28 2014/11/07 16:17:46 axs Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -249,28 +249,28 @@ python_setup() {
 	else
 		for impl in "${impls[@]}"; do
 			if use "python_single_target_${impl}"; then
-			if [[ ${EPYTHON} ]]; then
-				eerror "Your PYTHON_SINGLE_TARGET setting lists more than a single Python"
-				eerror "implementation. Please set it to just one value. If you need"
-				eerror "to override the value for a single package, please use package.env"
-				eerror "or an equivalent solution (man 5 portage)."
-				echo
-				die "More than one implementation in PYTHON_SINGLE_TARGET."
-			fi
+				if [[ ${EPYTHON} ]]; then
+					eerror "Your PYTHON_SINGLE_TARGET setting lists more than a single Python"
+					eerror "implementation. Please set it to just one value. If you need"
+					eerror "to override the value for a single package, please use package.env"
+					eerror "or an equivalent solution (man 5 portage)."
+					echo
+					die "More than one implementation in PYTHON_SINGLE_TARGET."
+				fi
 
-			if ! use "python_targets_${impl}"; then
-				eerror "The implementation chosen as PYTHON_SINGLE_TARGET must be added"
-				eerror "to PYTHON_TARGETS as well. This is in order to ensure that"
-				eerror "dependencies are satisfied correctly. We're sorry"
-				eerror "for the inconvenience."
-				echo
-				die "Build target (${impl}) not in PYTHON_TARGETS."
-			fi
+				if ! use "python_targets_${impl}"; then
+					eerror "The implementation chosen as PYTHON_SINGLE_TARGET must be added"
+					eerror "to PYTHON_TARGETS as well. This is in order to ensure that"
+					eerror "dependencies are satisfied correctly. We're sorry"
+					eerror "for the inconvenience."
+					echo
+					die "Build target (${impl}) not in PYTHON_TARGETS."
+				fi
 
-			python_export "${impl}" EPYTHON PYTHON
-			python_wrapper_setup
-		fi
-	done
+				python_export "${impl}" EPYTHON PYTHON
+				python_wrapper_setup
+			fi
+		done
 	fi
 
 	if [[ ! ${EPYTHON} ]]; then
@@ -278,7 +278,7 @@ python_setup() {
 		if [[ ${#impls[@]} -eq 1 ]]; then
 			eerror "the PYTHON_TARGETS variable in your make.conf to include one"
 		else
-		eerror "the PYTHON_SINGLE_TARGET variable in your make.conf to one"
+			eerror "the PYTHON_SINGLE_TARGET variable in your make.conf to one"
 		fi
 		eerror "of the following values:"
 		eerror

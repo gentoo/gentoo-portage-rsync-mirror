@@ -16,17 +16,18 @@ alpha           default/linux/alpha/13.0/desktop/kde/systemd    stable
 alpha           default/linux/alpha/13.0/developer              stable
 
 # AMD64 Profiles
-amd64           default/linux/amd64/13.0                        stable
-amd64           default/linux/amd64/13.0/selinux                dev
-amd64           default/linux/amd64/13.0/desktop                stable
-amd64           default/linux/amd64/13.0/desktop/gnome          stable
-amd64           default/linux/amd64/13.0/desktop/gnome/systemd  stable
-amd64           default/linux/amd64/13.0/desktop/kde            stable
-amd64           default/linux/amd64/13.0/desktop/kde/systemd    stable
-amd64           default/linux/amd64/13.0/developer              stable
-amd64           default/linux/amd64/13.0/no-emul-linux-x86      dev
-amd64           default/linux/amd64/13.0/no-multilib            dev
-amd64           default/linux/amd64/13.0/x32                    dev
+amd64           default/linux/amd64/13.0                           stable
+amd64           default/linux/amd64/13.0/selinux                   dev
+amd64           default/linux/amd64/13.0/desktop                   stable
+amd64           default/linux/amd64/13.0/desktop/gnome             stable
+amd64           default/linux/amd64/13.0/desktop/gnome/systemd     stable
+amd64           default/linux/amd64/13.0/desktop/kde               stable
+amd64           default/linux/amd64/13.0/desktop/kde/systemd       stable
+amd64           default/linux/amd64/13.0/developer                 stable
+amd64           default/linux/amd64/13.0/no-emul-linux-x86         dev
+amd64           default/linux/amd64/13.0/no-emul-linux-x86/desktop dev
+amd64           default/linux/amd64/13.0/no-multilib               dev
+amd64           default/linux/amd64/13.0/x32                       dev
 
 # ARM Profiles
 arm             default/linux/arm/13.0                          stable
