@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/aseprite/aseprite-0.9.5-r1.ebuild,v 1.1 2013/08/10 15:00:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/aseprite/aseprite-0.9.5-r1.ebuild,v 1.2 2014/11/07 00:58:13 hasufell Exp $
 
 EAPI="5"
 
@@ -27,7 +27,8 @@ RDEPEND="dev-libs/tinyxml
 DEPEND="${RDEPEND}
 	test? ( dev-cpp/gtest )"
 
-PATCHES=( "${FILESDIR}"/aseprite-0.9.5-as-needed.patch )
+PATCHES=( "${FILESDIR}"/aseprite-0.9.5-as-needed.patch
+			"${FILESDIR}"/aseprite-0.9.5-underlinking.patch )
 
 DOCS=( docs/quickref.odt
 	docs/files/ase.txt

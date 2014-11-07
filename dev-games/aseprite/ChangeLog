@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/aseprite
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/aseprite/ChangeLog,v 1.5 2013/08/10 15:00:11 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/aseprite/ChangeLog,v 1.6 2014/11/07 00:58:13 hasufell Exp $
+
+  07 Nov 2014; Julian Ospald <hasufell@gentoo.org> aseprite-0.9.5-r1.ebuild,
+  +files/aseprite-0.9.5-underlinking.patch:
+  fix underlinking wrt #520672
 
 *aseprite-0.9.5-r1 (10 Aug 2013)
 
