@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Exporter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Exporter/ChangeLog,v 1.17 2014/09/23 09:57:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Exporter/ChangeLog,v 1.18 2014/11/08 14:35:20 dilfridge Exp $
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Exporter-5.700.0.ebuild:
+  Remove old (Perl 5.20.0 cleanup)
 
   23 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   perl-Exporter-5.680.0-r2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-File-Spec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Spec/ChangeLog,v 1.90 2014/09/16 08:20:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Spec/ChangeLog,v 1.91 2014/11/08 14:40:50 dilfridge Exp $
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-File-Spec-3.470.0.ebuild:
+  Remove old (Perl 5.20.0 cleanup)
 
 *perl-File-Spec-3.480.0 (16 Sep 2014)
 
