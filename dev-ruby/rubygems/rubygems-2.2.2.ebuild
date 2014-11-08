@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.2.2.ebuild,v 1.1 2014/09/09 05:18:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.2.2.ebuild,v 1.2 2014/11/08 07:50:48 graaff Exp $
 
 EAPI=5
 
@@ -51,6 +51,9 @@ all_ruby_prepare() {
 	# Avoid tests playing tricks with ruby engine that don't seem to
 	# work for us.
 	rm test/rubygems/test_gem_request_set_gem_dependency_api.rb || die
+
+	# Avoid test requiring network access
+	sed -i -e '/test_download_to_cache/askip "requires network access"' test/rubygems/test_gem_remote_fetcher.rb || die
 }
 
 each_ruby_compile() {
