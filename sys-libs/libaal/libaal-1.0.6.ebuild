@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.6.ebuild,v 1.2 2014/11/03 11:02:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.6.ebuild,v 1.3 2014/11/08 11:48:48 maekke Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/reiser4/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 -sparc ~x86"
+KEYWORDS="amd64 arm ~ppc ~ppc64 -sparc ~x86"
 IUSE="static-libs"
 
 DEPEND="virtual/os-headers"

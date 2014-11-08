@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-5.3.3.ebuild,v 1.10 2014/08/15 17:23:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-5.3.3.ebuild,v 1.12 2014/11/08 11:44:20 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 jruby"
@@ -17,7 +17,7 @@ HOMEPAGE="https://github.com/seattlerb/minitest"
 
 LICENSE="MIT"
 SLOT="5"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc test"
 
 each_ruby_prepare() {
