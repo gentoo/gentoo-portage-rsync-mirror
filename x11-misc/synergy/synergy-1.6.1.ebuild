@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.6.1.ebuild,v 1.1 2014/11/08 12:22:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.6.1.ebuild,v 1.2 2014/11/08 20:40:48 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils cmake-utils qt4-r2
 
 DESCRIPTION="Lets you easily share a single mouse and keyboard between multiple computers"
-HOMEPAGE="http://synergy-project.org/"
+HOMEPAGE="http://synergy-project.org/ https://github.com/synergy/synergy"
 SRC_URI="
 	https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
 	http://dev.gentoo.org/~hasufell/distfiles/${PN}.png
