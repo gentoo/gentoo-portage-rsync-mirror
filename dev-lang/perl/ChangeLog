@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.455 2014/11/08 14:42:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.456 2014/11/08 22:43:08 dilfridge Exp $
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/eblits/src_configure-v50160001.eblit,
+  -files/eblits/src_prepare-v50180002.eblit:
+  Remove unused eblits
 
   08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -perl-5.20.0-r2.ebuild:
