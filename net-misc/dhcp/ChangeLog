@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.256 2014/11/02 09:07:17 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.258 2014/11/08 18:24:47 vapier Exp $
+
+*dhcp-4.3.1 (08 Nov 2014)
+
+  08 Nov 2014; Mike Frysinger <vapier@gentoo.org> +dhcp-4.3.1.ebuild,
+  +files/dhcp-4.3.1-dhclient-resolvconf.patch:
+  Version bump #510006 by cilly.
+
+  08 Nov 2014; Mike Frysinger <vapier@gentoo.org> files/dhcrelay.conf:
+  Add suggestion to set rc_need for specific network interfaces when IFACE is
+  set #309133 by Milan Dadok.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> dhcp-4.2.5_p1-r2.ebuild:
   Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.49.1.ebuild,v 1.10 2013/08/27 21:00:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.49.1.ebuild,v 1.11 2014/11/08 18:31:08 vapier Exp $
 
 EAPI=4
 inherit autotools eutils toolchain-funcs
@@ -23,7 +23,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-0.45-fbsd.patch \
 		"${FILESDIR}"/${PN}-0.49.1-build.patch \
-		"${FILESDIR}"/${PN}-0.49.1-gcc48.patch
+		"${FILESDIR}"/${PN}-0.49.1-gcc48.patch \
+		"${FILESDIR}"/${PN}-0.49-glibc-2.20.patch
 	eautoreconf
 	tc-export CXX
 }

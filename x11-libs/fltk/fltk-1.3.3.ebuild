@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.3.ebuild,v 1.1 2014/11/08 14:15:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.3.ebuild,v 1.2 2014/11/08 18:17:25 jer Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://fltk.org/pub/${PN}/${PV}/${P}-source.tar.gz"
 SLOT="1"
 LICENSE="FLTK LGPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
-IUSE="cairo debug doc examples games opengl pdf threads xft xinerama"
+IUSE="cairo debug doc examples games opengl pdf static-libs threads xft xinerama"
 
 RDEPEND="
 	>=media-libs/libpng-1.2:0
@@ -150,6 +150,12 @@ src_install() {
 	echo "LDPATH=${FLTK_LIBDIR}" > 99fltk
 	echo "FLTK_DOCDIR=${EPREFIX}/usr/share/doc/${PF}/html" >> 99fltk
 	doenvd 99fltk
+
+	# FIXME: This is bad, but building only shared libraries is hardly supported
+	# FIXME: The executables in test/ are linking statically against libfltk
+	if ! use static-libs; then
+		rm "${ED}"/usr/lib*/fltk/*.a || die
+	fi
 
 	prune_libtool_files
 }
