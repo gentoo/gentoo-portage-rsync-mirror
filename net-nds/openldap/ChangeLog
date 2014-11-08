@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.486 2014/11/02 09:23:40 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.487 2014/11/08 05:09:25 robbat2 Exp $
+
+  08 Nov 2014; Robin H. Johnson <robbat2@gentoo.org> openldap-2.3.43-r3.ebuild,
+  openldap-2.3.43-r4.ebuild, openldap-2.4.19-r1.ebuild, openldap-2.4.23.ebuild,
+  openldap-2.4.24.ebuild, openldap-2.4.28-r1.ebuild, openldap-2.4.30.ebuild,
+  openldap-2.4.35-r1.ebuild, openldap-2.4.35.ebuild, openldap-2.4.38-r1.ebuild:
+  Bug #485166: borrow the dev-lang/perl[-build] workaround from the eclass,
+  thanks to dilfridge.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> openldap-2.4.38-r2.ebuild,
   openldap-2.4.39.ebuild, openldap-2.4.40-r2.ebuild, openldap-2.4.40.ebuild:

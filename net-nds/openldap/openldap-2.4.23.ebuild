@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.23.ebuild,v 1.19 2014/10/12 06:26:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.23.ebuild,v 1.20 2014/11/08 05:09:25 robbat2 Exp $
 
 EAPI="2"
 WANT_AUTOMAKE=1.9
@@ -34,7 +34,7 @@ RDEPEND="sys-libs/ncurses
 		odbc? ( !iodbc? ( dev-db/unixODBC )
 			iodbc? ( dev-db/libiodbc ) )
 		slp? ( net-libs/openslp )
-		perl? ( dev-lang/perl[-build] )
+		perl? ( || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] ) )
 		samba? ( dev-libs/openssl )
 		berkdb? ( sys-libs/db )
 		smbkrb5passwd? (
