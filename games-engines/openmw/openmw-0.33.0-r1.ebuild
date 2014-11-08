@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/openmw/openmw-0.33.0.ebuild,v 1.3 2014/11/06 21:59:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/openmw/openmw-0.33.0-r1.ebuild,v 1.1 2014/11/07 23:24:33 hasufell Exp $
 
 EAPI=5
 
@@ -56,7 +56,7 @@ src_configure() {
 		-DLIBDIR="$(games_get_libdir)"
 		-DMORROWIND_DATA_FILES="${GAMES_DATADIR}"/morrowind-data
 		-DOPENMW_RESOURCE_FILES="${GAMES_DATADIR}"/${PN}/resources
-		-DSYSCONFDIR="${GAMES_SYSCONFDIR}"/${PN}
+		-DGLOBAL_CONFIG_PATH="${GAMES_SYSCONFDIR}"
 		-DUSE_SYSTEM_TINYXML=ON
 	)
 
