@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.242 2014/11/08 07:50:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.243 2014/11/08 08:38:55 graaff Exp $
+
+*rubygems-2.4.2 (08 Nov 2014)
+
+  08 Nov 2014; Hans de Graaff <graaff@gentoo.org> +rubygems-2.4.2.ebuild:
+  Version bump.
 
   08 Nov 2014; Hans de Graaff <graaff@gentoo.org> rubygems-2.2.2.ebuild:
   Avoid a test that requires a network connection.
