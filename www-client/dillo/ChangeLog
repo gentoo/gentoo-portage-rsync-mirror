@@ -1,6 +1,13 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.138 2014/11/05 11:34:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.140 2014/11/08 19:20:21 ssuominen Exp $
+
+  08 Nov 2014; Samuli Suominen <ssuominen@gentoo.org> dillo-3.0.4.ebuild:
+  Pull in correct SLOT of libjpeg to ensure headers and .so symlink are present.
+
+  08 Nov 2014; Jeroen Roovers <jer@gentoo.org> dillo-3.0.4.ebuild:
+  Remove USE=cairo restriction on x11-libs/fltk. Remove unneeded appendage to
+  LDFLAGS.
 
   05 Nov 2014; Jeroen Roovers <jer@gentoo.org> -dillo-3.0.3.ebuild:
   Old.
