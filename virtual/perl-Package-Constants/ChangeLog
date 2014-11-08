@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Package-Constants
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Package-Constants/ChangeLog,v 1.32 2014/07/10 23:07:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Package-Constants/ChangeLog,v 1.33 2014/11/08 16:25:38 dilfridge Exp $
+
+*perl-Package-Constants-0.20.0-r5 (08 Nov 2014)
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Package-Constants-0.20.0-r4.ebuild,
+  +perl-Package-Constants-0.20.0-r5.ebuild:
+  Remove Perl 5.16 as provider
 
 *perl-Package-Constants-0.40.0 (10 Jul 2014)
 *perl-Package-Constants-0.20.0-r4 (10 Jul 2014)

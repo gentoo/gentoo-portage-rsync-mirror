@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Math-BigRat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.46 2014/07/10 22:06:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.47 2014/11/08 16:05:06 dilfridge Exp $
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  Math-BigRat-0.260.200-r1.ebuild:
+  Drop all keywords
 
 *Math-BigRat-0.260.200-r1 (10 Jul 2014)
 

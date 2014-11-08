@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/mini_magick-3.8.1.ebuild,v 1.1 2014/10/28 06:46:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/mini_magick-3.8.1-r1.ebuild,v 1.1 2014/11/08 16:20:14 graaff Exp $
 
 EAPI=5
 
@@ -11,6 +11,8 @@ RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_EXTRADOC="README.md"
 
 RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
+
+RUBY_FAKEGEM_BINWRAP=""
 
 inherit ruby-fakegem eutils
 

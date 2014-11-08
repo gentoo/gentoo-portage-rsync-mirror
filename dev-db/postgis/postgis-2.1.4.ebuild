@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.1.4.ebuild,v 1.2 2014/11/08 12:51:46 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.1.4.ebuild,v 1.3 2014/11/08 16:13:19 titanofold Exp $
 
 EAPI="5"
 POSTGRES_COMPAT=( 9.{0,1,2,3,4} )
@@ -55,6 +55,8 @@ REQUIRED_USE="test? ( doc )"
 
 # Needs a running psql instance, doesn't work out of the box
 RESTRICT="test"
+
+MAKEOPTS+=' -j1'
 
 # These modules are built using the same *FLAGS that were used to build
 # dev-db/postgresql. The right thing to do is to ignore the current

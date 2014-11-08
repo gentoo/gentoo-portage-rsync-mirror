@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.95 2014/11/08 12:51:46 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.96 2014/11/08 16:13:19 titanofold Exp $
+
+  08 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> postgis-2.1.4.ebuild:
+  Fix bug 528576. Force serial compilation.
 
   08 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> postgis-2.0.6.ebuild,
   postgis-2.1.4.ebuild:
