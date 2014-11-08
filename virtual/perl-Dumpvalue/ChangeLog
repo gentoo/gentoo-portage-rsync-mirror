@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Dumpvalue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Dumpvalue/ChangeLog,v 1.22 2014/09/23 09:57:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Dumpvalue/ChangeLog,v 1.23 2014/11/08 15:10:18 dilfridge Exp $
+
+*perl-Dumpvalue-1.170.0-r4 (08 Nov 2014)
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Dumpvalue-1.170.0-r3.ebuild, +perl-Dumpvalue-1.170.0-r4.ebuild:
+  Remove Perl 5.16 as provider
 
   23 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   perl-Dumpvalue-1.170.0-r3.ebuild:

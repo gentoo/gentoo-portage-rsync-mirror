@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-ExtUtils-Command
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Command/ChangeLog,v 1.43 2014/10/18 19:27:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Command/ChangeLog,v 1.44 2014/11/08 15:19:32 dilfridge Exp $
+
+*perl-ExtUtils-Command-1.170.0-r6 (08 Nov 2014)
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-ExtUtils-Command-1.170.0-r5.ebuild,
+  +perl-ExtUtils-Command-1.170.0-r6.ebuild:
+  Remove Perl 5.16 as provider
 
   18 Oct 2014; Mike Frysinger <vapier@gentoo.org>
   perl-ExtUtils-Command-1.170.0-r5.ebuild,

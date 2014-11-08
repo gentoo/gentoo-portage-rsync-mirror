@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-ExtUtils-Constant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Constant/ChangeLog,v 1.15 2014/09/23 09:57:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Constant/ChangeLog,v 1.16 2014/11/08 15:21:26 dilfridge Exp $
+
+*perl-ExtUtils-Constant-0.230.0-r6 (08 Nov 2014)
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-ExtUtils-Constant-0.230.0-r5.ebuild,
+  +perl-ExtUtils-Constant-0.230.0-r6.ebuild:
+  Remove Perl 5.16 as provider
 
   23 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   perl-ExtUtils-Constant-0.230.0-r5.ebuild:

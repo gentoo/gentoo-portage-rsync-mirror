@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-Install
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Install/ChangeLog,v 1.35 2014/07/25 21:00:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Install/ChangeLog,v 1.36 2014/11/08 15:23:08 dilfridge Exp $
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  ExtUtils-Install-1.540.0-r1.ebuild:
+  Drop all keywords
 
 *ExtUtils-Install-1.540.0-r1 (25 Jul 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Manifest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.52 2014/10/18 19:30:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.53 2014/11/08 15:28:17 dilfridge Exp $
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-ExtUtils-Manifest-1.610.0.ebuild:
+  Remove old
 
   18 Oct 2014; Mike Frysinger <vapier@gentoo.org>
   perl-ExtUtils-Manifest-1.610.0.ebuild,
