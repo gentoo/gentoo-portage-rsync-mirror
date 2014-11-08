@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.115 2014/11/08 11:48:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.116 2014/11/08 12:08:55 ago Exp $
+
+  08 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ccid-1.4.18.ebuild:
+  Stable for ppc/ppc64, wrt bug #526758
 
   08 Nov 2014; Markus Meier <maekke@gentoo.org> ccid-1.4.18.ebuild:
   arm stable, bug #526758

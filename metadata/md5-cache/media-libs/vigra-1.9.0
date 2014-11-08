@@ -4,11 +4,11 @@ DESCRIPTION=a C++ computer vision library with emphasis on customizability of al
 EAPI=5
 HOMEPAGE=http://hci.iwr.uni-heidelberg.de/vigra/
 IUSE=doc +fftw +hdf5 +jpeg openexr +png +python test +tiff python_targets_python2_7
-KEYWORDS=amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=amd64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=MIT
 RDEPEND=dev-lang/python:2.7 >=dev-libs/boost-1.52.0-r6:=[python?,python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] fftw? ( sci-libs/fftw:3.0 ) hdf5? ( sci-libs/hdf5 ) jpeg? ( virtual/jpeg ) openexr? ( media-libs/openexr:= ) png? ( media-libs/libpng:0= ) python? ( >=dev-lang/python-2.7.5-r2:2.7[threads,xml] dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] ) tiff? ( media-libs/tiff:0= )
 REQUIRED_USE=doc? ( hdf5 fftw ) python? ( hdf5 python_targets_python2_7 ) test? ( hdf5 python fftw )
 SLOT=0
 SRC_URI=http://hci.iwr.uni-heidelberg.de/vigra/vigra-1.9.0-src.tar.gz
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	38b54b08ee43ba478e97f7c89066eed5	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e9871eb91b9d6e6ebbfaf33732b25a7c
+_md5_=5679de03372be14f17da2f359aa2af2b
