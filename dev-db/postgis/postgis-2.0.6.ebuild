@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.0.6.ebuild,v 1.1 2014/11/05 16:09:12 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.0.6.ebuild,v 1.2 2014/11/08 12:51:46 titanofold Exp $
 
 EAPI="4"
 
@@ -140,13 +140,11 @@ pkg_config(){
 	fi
 
 	# The server we work with must be the same slot we built against.
-	local server_version
-	server_version=$(psql -U ${pguser} -d postgres -p ${PGPORT} \
-		-Aqwtc 'SELECT version()' 2> /dev/null)
+	local server_match
+	server_match=$(psql -U ${pguser} -d postgres -p ${PGPORT} \
+		-Aqwtc 'SELECT version()' 2> /dev/null | grep -c "PostgreSQL ${PGSLOT}")
 	if [[ $? = 0 ]] ; then
-		server_version=$(echo ${server_version} | cut -d " " -f 2 | \
-			cut -d "." -f -2 | tr -d .)
-		if [[ $server_version != ${PGSLOT//.} ]] ; then
+		if [[ $server_match -ne 1 ]] ; then
 			unset PGPASSWORD
 			eerror "Server version must be ${PGSLOT}.x"
 			die "Server version isn't ${PGSLOT}.x"
@@ -260,8 +258,5 @@ pkg_config(){
 	sed -e 's/\(configured\)/#\1/' -i "${EROOT%/}/etc/postgis_dbs"
 	einfo "PostgreSQL ${PGSLOT} is now PostGIS enabled."
 	einfo
-	einfo "To enable other databases, change the default slot:"
-	einfo "    postgresql-config set <slot>"
-	einfo "Then, emerge this package again:"
-	einfo "    emerge -av =${CATEGORY}/${PF}"
+	einfo "Currently, only one PostgreSQL slot at a time can be PostGIS enabled."
 }
