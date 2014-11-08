@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/irc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.27 2014/11/06 08:51:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.28 2014/11/08 04:40:35 idella4 Exp $
+
+*irc-10.0-r1 (08 Nov 2014)
+
+  08 Nov 2014; Ian Delaney <idella4@gentoo.org> +irc-10.0-r1.ebuild,
+  -irc-10.0.ebuild:
+  revbump; add sed st'mnt to fix broken test (acquired upstream), tidy, remove
+  the -10.0.
 
 *irc-10.0 (06 Nov 2014)
 

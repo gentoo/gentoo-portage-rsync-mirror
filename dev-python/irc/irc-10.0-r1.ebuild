@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/irc-10.0.ebuild,v 1.1 2014/11/06 08:51:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/irc-10.0-r1.ebuild,v 1.1 2014/11/08 04:40:35 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -29,9 +29,14 @@ DEPEND="app-arch/unzip
 		dev-python/pytest[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7) )"
 
-# A doc folder is present however it has no makefile; will require a manual rst or epydoc build
+# A doc folder is present however it appears to be used for doctests
+python_prepare_all() {
+	# https://bitbucket.org/jaraco/irc/commits/2074d84fa635. sed lighter weight than a full patch
+	sed -e 's:key_transform(key):transform_key(key):' -i irc/dict.py || die
+	distutils-r1_python_prepare_all
+}
+
 python_test() {
-	# https://bitbucket.org/jaraco/irc/issue/47/testchanneltest_has_user-fails-in-release
 	py.test irc/tests || die "Tests failed under ${EPYTHON}"
 }
 
