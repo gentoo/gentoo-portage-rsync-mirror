@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Math-BigInt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.91 2014/08/02 20:03:46 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.92 2014/11/08 15:55:09 dilfridge Exp $
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Math-BigInt-1.997.0-r2.ebuild:
+  Remove old
 
   02 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> Math-BigInt-1.999.300.ebuild:
   Stable for all

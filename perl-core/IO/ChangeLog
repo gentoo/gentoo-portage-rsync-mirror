@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IO
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/ChangeLog,v 1.35 2014/07/24 22:18:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/ChangeLog,v 1.36 2014/11/08 15:37:45 dilfridge Exp $
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> IO-1.25-r1.ebuild:
+  Drop all keywords
 
 *IO-1.25-r1 (24 Jul 2014)
 

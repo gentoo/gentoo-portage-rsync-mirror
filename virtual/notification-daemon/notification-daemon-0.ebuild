@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/notification-daemon-0.ebuild,v 1.13 2014/06/02 04:50:52 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/notification-daemon-0.ebuild,v 1.14 2014/11/08 15:44:09 jauhien Exp $
 
 EAPI=5
 
@@ -26,6 +26,5 @@ RDEPEND="
 		x11-wm/enlightenment[e_modules_notification]
 		kde-base/knotify
 		x11-misc/mate-notification-daemon
-		razorqt-base/razorqt-notifications
 		lxqt-base/lxqt-notificationd ) )"
 DEPEND=""
