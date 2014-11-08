@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/msp430-binutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-binutils/ChangeLog,v 1.15 2012/12/13 21:06:16 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-binutils/ChangeLog,v 1.16 2014/11/08 17:09:22 vapier Exp $
+
+  08 Nov 2014; Mike Frysinger <vapier@gentoo.org>
+  msp430-binutils-2.21.1_p20120406.ebuild,
+  msp430-binutils-2.22_p20120911.ebuild:
+  Migrate to EAPI=4.
 
   13 Dec 2012; Tim Harder <radhermit@gentoo.org>
   -msp430-binutils-2.22_p20120514.ebuild,
@@ -80,4 +85,3 @@
   10 Dec 2011; Tim Harder <radhermit@gentoo.org>
   +msp430-binutils-2.21.1_p20111205.ebuild, +metadata.xml:
   Initial import. Ebuild by me.
-

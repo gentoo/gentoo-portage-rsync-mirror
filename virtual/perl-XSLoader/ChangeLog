@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-XSLoader
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.32 2014/07/15 18:30:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.33 2014/11/08 17:04:08 dilfridge Exp $
+
+*perl-XSLoader-0.160.0-r2 (08 Nov 2014)
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-XSLoader-0.160.0-r1.ebuild, +perl-XSLoader-0.160.0-r2.ebuild:
+  Remove Perl 5.16 as provider
 
 *perl-XSLoader-0.170.0 (15 Jul 2014)
 *perl-XSLoader-0.160.0-r1 (15 Jul 2014)

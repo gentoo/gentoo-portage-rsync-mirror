@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-binutils/msp430-binutils-2.22_p20120911.ebuild,v 1.1 2012/09/14 04:12:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-binutils/msp430-binutils-2.22_p20120911.ebuild,v 1.2 2014/11/08 17:09:22 vapier Exp $
+
+EAPI="4"
 
 PATCHVER="1.5"
 

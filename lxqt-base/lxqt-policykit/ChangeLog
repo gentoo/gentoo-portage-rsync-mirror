@@ -1,6 +1,12 @@
 # ChangeLog for lxqt-base/lxqt-policykit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-policykit/ChangeLog,v 1.5 2014/11/08 06:47:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-policykit/ChangeLog,v 1.6 2014/11/08 17:26:40 jauhien Exp $
+
+*lxqt-policykit-0.8.0 (08 Nov 2014)
+
+  08 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  +lxqt-policykit-0.8.0.ebuild:
+  version bump
 
   08 Nov 2014; Ben de Groot <yngwin@gentoo.org> lxqt-policykit-0.7.0-r1.ebuild:
   Move libqtxdg to new category

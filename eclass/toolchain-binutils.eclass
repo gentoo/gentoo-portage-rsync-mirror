@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.136 2014/11/02 19:36:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.137 2014/11/08 17:12:09 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -220,6 +220,15 @@ _eprefix_init() {
 	has "${EAPI:-0}" 0 1 2 && ED=${D} EPREFIX= EROOT=${ROOT}
 }
 
+# Intended for ebuilds to override to set their own versioning information.
+toolchain-binutils_bugurl() {
+	printf "http://bugs.gentoo.org/"
+}
+toolchain-binutils_pkgversion() {
+	printf "Gentoo ${BVER}"
+	[[ -n ${PATCHVER} ]] && printf " p${PATCHVER}"
+}
+
 toolchain-binutils_src_configure() {
 	_eprefix_init
 
@@ -281,8 +290,6 @@ toolchain-binutils_src_configure() {
 	has_version ">=${CATEGORY}/glibc-2.5" && myconf+=( --enable-secureplt )
 	has_version ">=sys-libs/glibc-2.5" && myconf+=( --enable-secureplt )
 
-	local pkgver="Gentoo ${BVER}"
-	[[ -n ${PATCHVER} ]] && pkgver+=" p${PATCHVER}"
 	myconf+=(
 		--prefix="${EPREFIX}"/usr
 		--host=${CHOST}
@@ -300,8 +307,8 @@ toolchain-binutils_src_configure() {
 		# Newer versions (>=2.24) make this an explicit option. #497268
 		--enable-install-libiberty
 		--disable-werror
-		--with-bugurl=http://bugs.gentoo.org/
-		--with-pkgversion="${pkgver}"
+		--with-bugurl="$(toolchain-binutils_bugurl)"
+		--with-pkgversion="$(toolchain-binutils_pkgversion)"
 		$(use_enable static-libs static)
 		${EXTRA_ECONF}
 		# Disable modules that are in a combined binutils/gdb tree. #490566

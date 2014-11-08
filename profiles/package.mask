@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16152 2014/11/08 16:29:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16154 2014/11/08 17:13:21 jauhien Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -97,9 +97,10 @@ dev-embedded/msp430mcu
 # Mask LXQt-0.8.0 release for testing
 # and until Qt5 is unmasked (bug #525410).
 =app-admin/lxqt-admin-0.8.0*
+=dev-libs/libqtxdg-1.0.0*
 =lxqt-base/liblxqt-0.8.0*
 =lxqt-base/liblxqt-mount-0.8.0*
-=lxqt-base/libsysstat-0.8.0*
+=lxqt-base/libsysstat-0.2.0*
 =lxqt-base/lxqt-about-0.8.0*
 =lxqt-base/lxqt-common-0.8.0*
 =lxqt-base/lxqt-config-0.8.0*
@@ -114,7 +115,6 @@ dev-embedded/msp430mcu
 =lxqt-base/lxqt-session-0.8.0*
 =media-gfx/lximage-qt-0.3.0*
 =net-misc/lxqt-openssh-askpass-0.8.0*
-=razorqt-base/libqtxdg-1.0.0*
 =x11-misc/obconf-qt-0.1.0_p20141029
 =x11-misc/pcmanfm-qt-0.8.0*
 

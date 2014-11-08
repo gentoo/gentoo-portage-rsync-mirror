@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-bignum
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-bignum/ChangeLog,v 1.10 2014/09/23 09:58:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-bignum/ChangeLog,v 1.11 2014/11/08 17:10:17 dilfridge Exp $
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-bignum-0.300.0.ebuild, perl-bignum-0.330.0.ebuild:
+  Copy stable keywords from dev-lang/perl-5.18 provider, remove old
 
   23 Sep 2014; Agostino Sarubbo <ago@gentoo.org> perl-bignum-0.330.0.ebuild:
   Stable for sparc, wrt bug #504786
