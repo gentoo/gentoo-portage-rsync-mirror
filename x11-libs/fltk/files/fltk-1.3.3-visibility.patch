@@ -1,0 +1,11 @@
+--- a/src/Fl.cxx
++++ b/src/Fl.cxx
+@@ -928,7 +928,7 @@
+ 
+ ////////////////////////////////////////////////////////////////
+ 
+-Fl_Widget* fl_oldfocus; // kludge for Fl_Group...
++FL_EXPORT Fl_Widget* fl_oldfocus; // kludge for Fl_Group...
+ 
+ /**
+     Sets the widget that will receive FL_KEYBOARD events.

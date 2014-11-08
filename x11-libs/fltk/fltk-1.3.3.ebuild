@@ -1,22 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.2_p10088.ebuild,v 1.2 2014/08/21 11:25:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.3.ebuild,v 1.1 2014/11/08 14:15:15 jer Exp $
 
 EAPI=5
 
-inherit autotools eutils fdo-mime flag-o-matic versionator
-
-MY_PV_MAJOR=$( get_version_component_range 1-2 )
-MY_PV_REV=$( get_version_component_range 4 )
+inherit autotools eutils fdo-mime flag-o-matic
 
 DESCRIPTION="C++ user interface toolkit for X and OpenGL"
 HOMEPAGE="http://www.fltk.org/"
-SRC_URI="http://${PN}.org/pub/${PN}/snapshots/${PN}-${MY_PV_MAJOR}.x-${MY_PV_REV/p/r}.tar.bz2 -> ${P}.tar.bz2"
+SRC_URI="http://fltk.org/pub/${PN}/${PV}/${P}-source.tar.gz"
 
 SLOT="1"
 LICENSE="FLTK LGPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
-IUSE="cairo debug doc examples games opengl pdf static-libs threads xft xinerama"
+IUSE="cairo debug doc examples games opengl pdf threads xft xinerama"
 
 RDEPEND="
 	>=media-libs/libpng-1.2:0
@@ -38,21 +35,20 @@ DEPEND="${RDEPEND}
 	)
 	xinerama? ( x11-proto/xineramaproto )"
 
-INCDIR=${EPREFIX}/usr/include/fltk-${SLOT}
-LIBDIR=${EPREFIX}/usr/$(get_libdir)/fltk-${SLOT}
-
-S=${WORKDIR}/${PN}-${MY_PV_MAJOR}.x-${MY_PV_REV/p/r}
+FLTK_INCDIR=${EPREFIX}/usr/include/fltk
+FLTK_LIBDIR=${EPREFIX}/usr/$(get_libdir)/fltk
 
 src_prepare() {
 	rm -rf zlib jpeg png || die
 	epatch \
-		"${FILESDIR}"/${PN}-1.3.1-as-needed.patch \
 		"${FILESDIR}"/${PN}-1.3.2-desktop.patch \
 		"${FILESDIR}"/${PN}-1.3.0-share.patch \
 		"${FILESDIR}"/${PN}-1.3.2-conf-tests.patch \
-		"${FILESDIR}"/${PN}-1.3.2-jpeg-9a.patch
-	sed \
-		-e 's:@HLINKS@::g' -i FL/Makefile.in || die
+		"${FILESDIR}"/${PN}-1.3.2-jpeg-9a.patch \
+		"${FILESDIR}"/${PN}-1.3.3-visibility.patch
+
+	sed -i \
+		-e 's:@HLINKS@::g' FL/Makefile.in || die
 	sed -i \
 		-e '/C\(XX\)\?FLAGS=/s:@C\(XX\)\?FLAGS@::' \
 		-e '/^LDFLAGS=/d' \
@@ -66,10 +62,12 @@ src_prepare() {
 		-e "/^docdir/s:fltk:${PF}/html:" \
 		-e "/SILENT:/d" \
 		makeinclude.in || die
-	sed -e "s/7/$(get_version_component_range 3)/" \
-		"${FILESDIR}"/FLTKConfig.cmake > CMake/FLTKConfig.cmake
+	sed -e "s/7/${PV}/" \
+		< "${FILESDIR}"/FLTKConfig.cmake \
+		> CMake/FLTKConfig.cmake || die
 	sed -e 's:-Os::g' -i configure.in || die
-	use prefix && append-ldflags -Wl,-rpath -Wl,"${LIBDIR}"
+
+	use prefix && append-ldflags -Wl,-rpath -Wl,"${FLTK_LIBDIR}"
 
 	# also in Makefile:config.guess config.sub:
 	cp misc/config.{guess,sub} . || die
@@ -79,8 +77,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--includedir=${INCDIR}\
-		--libdir=${LIBDIR} \
+		--includedir=${FLTK_INCDIR}\
+		--libdir=${FLTK_LIBDIR} \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--enable-largefile \
 		--enable-shared \
@@ -117,12 +115,14 @@ src_test() {
 
 src_install() {
 	default
+
 	emake -C fluid \
 			DESTDIR="${D}" install-linux
 	if use doc; then
 		emake -C documentation \
 			DESTDIR="${D}" install
 	fi
+
 	local apps="fluid"
 	if use games; then
 		emake -C test \
@@ -131,10 +131,12 @@ src_install() {
 			DESTDIR="${D}" install-linux
 		apps+=" sudoku blocks checkers"
 	fi
+
 	for app in ${apps}; do
 		dosym /usr/share/icons/hicolor/32x32/apps/${app}.png \
 			/usr/share/pixmaps/${app}.png
 	done
+
 	dodoc CHANGES README CREDITS ANNOUNCEMENT
 
 	if use examples; then
@@ -145,9 +147,9 @@ src_install() {
 	insinto /usr/share/cmake/Modules
 	doins CMake/FLTK*.cmake
 
-	echo "LDPATH=${LIBDIR}" > 99fltk-${SLOT}
-	echo "FLTK_DOCDIR=${EPREFIX}/usr/share/doc/${PF}/html" >> 99fltk-${SLOT}
-	doenvd 99fltk-${SLOT}
+	echo "LDPATH=${FLTK_LIBDIR}" > 99fltk
+	echo "FLTK_DOCDIR=${EPREFIX}/usr/share/doc/${PF}/html" >> 99fltk
+	doenvd 99fltk
 
 	prune_libtool_files
 }

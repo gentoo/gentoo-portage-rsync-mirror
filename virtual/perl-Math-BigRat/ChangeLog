@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-BigRat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigRat/ChangeLog,v 1.10 2014/09/23 09:57:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigRat/ChangeLog,v 1.11 2014/11/08 14:18:39 dilfridge Exp $
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Math-BigRat-0.260.300.ebuild:
+  Remove old (Perl 5.16 cleanup)
 
   23 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   perl-Math-BigRat-0.260.400.ebuild:

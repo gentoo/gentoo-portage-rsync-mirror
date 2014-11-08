@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.5.ebuild,v 1.2 2014/10/17 18:36:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.5.ebuild,v 1.3 2014/11/08 14:11:07 blueness Exp $
 
 EAPI=5
 
@@ -49,6 +49,8 @@ pkg_setup() {
 		*) die "Use sys-devel/crossdev to build a musl toolchain" ;;
 		esac
 	fi
+
+	epatch_user
 }
 
 src_configure() {
