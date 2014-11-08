@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.133 2014/10/23 10:45:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.134 2014/11/08 18:52:04 ssuominen Exp $
+
+  08 Nov 2014; Samuli Suominen <ssuominen@gentoo.org> alsa-oss-1.0.28.ebuild:
+  ppc/ppc64 stable wrt #522038
 
   23 Oct 2014; Pacho Ramos <pacho@gentoo.org> alsa-oss-1.0.28.ebuild:
   amd64/x86 stable, bug #522038

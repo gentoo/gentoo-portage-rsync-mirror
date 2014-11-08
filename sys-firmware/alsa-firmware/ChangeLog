@@ -1,6 +1,14 @@
 # ChangeLog for sys-firmware/alsa-firmware
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/ChangeLog,v 1.10 2014/10/23 10:47:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/ChangeLog,v 1.12 2014/11/08 18:54:43 ssuominen Exp $
+
+  08 Nov 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -alsa-firmware-1.0.27.ebuild:
+  old
+
+  08 Nov 2014; Samuli Suominen <ssuominen@gentoo.org>
+  alsa-firmware-1.0.28.ebuild:
+  ppc/ppc64 stable wrt #522038
 
   23 Oct 2014; Pacho Ramos <pacho@gentoo.org> alsa-firmware-1.0.28.ebuild:
   amd64/x86 stable, bug #522038
