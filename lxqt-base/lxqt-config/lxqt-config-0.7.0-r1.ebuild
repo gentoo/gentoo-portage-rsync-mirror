@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-config/lxqt-config-0.7.0-r1.ebuild,v 1.4 2014/11/02 21:24:02 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-config/lxqt-config-0.7.0-r1.ebuild,v 1.5 2014/11/08 06:40:18 yngwin Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -23,7 +23,7 @@ SLOT="0"
 DEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	~lxqt-base/liblxqt-${PV}
-	~razorqt-base/libqtxdg-0.5.3
+	~dev-libs/libqtxdg-0.5.3
 	sys-libs/zlib
 	x11-libs/libXcursor
 	x11-libs/libXfixes"

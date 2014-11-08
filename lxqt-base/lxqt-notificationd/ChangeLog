@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-notificationd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-notificationd/ChangeLog,v 1.3 2014/11/02 21:33:52 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-notificationd/ChangeLog,v 1.4 2014/11/08 06:41:55 yngwin Exp $
+
+  08 Nov 2014; Ben de Groot <yngwin@gentoo.org> lxqt-notificationd-0.7.0.ebuild:
+  Move libqtxdg to new category
 
   02 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org>
   lxqt-notificationd-0.7.0.ebuild:

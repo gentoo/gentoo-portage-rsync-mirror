@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-config/ChangeLog,v 1.5 2014/11/02 21:24:02 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-config/ChangeLog,v 1.6 2014/11/08 06:40:18 yngwin Exp $
+
+  08 Nov 2014; Ben de Groot <yngwin@gentoo.org> lxqt-config-0.7.0-r1.ebuild:
+  Move libqtxdg to new category
 
   02 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org>
   lxqt-config-0.7.0-r1.ebuild:

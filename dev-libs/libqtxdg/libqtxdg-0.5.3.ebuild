@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/libqtxdg/libqtxdg-0.5.3.ebuild,v 1.3 2014/05/29 07:53:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libqtxdg/libqtxdg-0.5.3.ebuild,v 1.1 2014/11/08 06:34:24 yngwin Exp $
 
 EAPI=5
 inherit cmake-utils

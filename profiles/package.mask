@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16148 2014/11/08 00:51:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16149 2014/11/08 06:51:50 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,7 +34,6 @@
 # Unmaintained, no longer supported, and starting to throw compilation
 # errors (bug #513906, bug #528372). Masked for removal in 30 days.
 # Update to lxqt-base/* packages.
-#razorqt-base/libqtxdg needed by lxqt
 razorqt-base/razorqt-appswitcher
 razorqt-base/razorqt-autosuspend
 razorqt-base/razorqt-config

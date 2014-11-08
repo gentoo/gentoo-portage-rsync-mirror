@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/liblxqt/liblxqt-0.7.0.ebuild,v 1.4 2014/11/02 21:18:07 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/liblxqt/liblxqt-0.7.0.ebuild,v 1.5 2014/11/08 06:38:00 yngwin Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -21,8 +21,7 @@ SLOT="0"
 
 S=${WORKDIR}
 
-DEPEND=">=razorqt-base/libqtxdg-0.5.3
-	<razorqt-base/libqtxdg-1.0.0
+DEPEND="~dev-libs/libqtxdg-0.5.3
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXcursor

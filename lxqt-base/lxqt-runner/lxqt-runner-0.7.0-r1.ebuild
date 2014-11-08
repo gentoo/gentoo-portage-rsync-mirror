@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-runner/lxqt-runner-0.7.0-r1.ebuild,v 1.3 2014/11/02 21:40:41 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-runner/lxqt-runner-0.7.0-r1.ebuild,v 1.4 2014/11/08 06:48:09 yngwin Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -27,7 +27,7 @@ RDEPEND="dev-qt/qtcore:4
 	~lxqt-base/liblxqt-${PV}
 	~lxqt-base/lxqt-globalkeys-${PV}
 	>=lxde-base/menu-cache-0.5.1
-	~razorqt-base/libqtxdg-0.5.3
+	~dev-libs/libqtxdg-0.5.3
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
