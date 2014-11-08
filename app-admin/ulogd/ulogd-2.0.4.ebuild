@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.4.ebuild,v 1.3 2014/11/03 11:03:38 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.4.ebuild,v 1.4 2014/11/08 11:08:12 hwoarang Exp $
 
 EAPI="5"
 
@@ -10,7 +10,8 @@ inherit autotools-utils eutils linux-info readme.gentoo user
 
 DESCRIPTION="A userspace logging daemon for netfilter/iptables related logging"
 HOMEPAGE="http://netfilter.org/projects/ulogd/index.html"
-SRC_URI="http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
+SRC_URI="ftp://ftp.netfilter.org/pub/${PN}/${P}.tar.bz2
+		http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,6 +34,7 @@ RDEPEND="net-firewall/iptables
 	sqlite? ( dev-db/sqlite:3 )"
 
 DEPEND="${RDEPEND}
+	<sys-kernel/linux-headers-3.17
 	doc? (
 		app-text/linuxdoc-tools
 		app-text/texlive-core
@@ -62,6 +64,11 @@ pkg_setup() {
 
 	if use nfacct && kernel_is lt 3 3 0; then
 		ewarn "NFACCT input plugin requires kernel newer than 3.3.0"
+	fi
+
+	if ! use nfacct && ! use nfct && ! use nflog && kernel_is gt 3 17 0; then
+		ewarn "ULOG target was removed since 3.17.0 kernel release"
+		ewarn "Consider enabling NFACCT, NFCT or NFLOG support"
 	fi
 }
 

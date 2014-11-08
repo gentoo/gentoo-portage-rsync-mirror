@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.91 2014/11/03 11:03:38 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.92 2014/11/08 11:08:12 hwoarang Exp $
+
+  08 Nov 2014; Markos Chandras <hwoarang@gentoo.org> ulogd-2.0.4.ebuild:
+  Add dependency to <linux-headers-3.17. Print warnings >for kernel-3.17. Patch
+  by Coacher <itumaykin@gmail.com>. Bug #528310
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> ulogd-2.0.3.ebuild,
   ulogd-2.0.4.ebuild:
