@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.4.3.ebuild,v 1.3 2014/04/20 10:17:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.10.3.ebuild,v 1.1 2014/11/08 13:50:08 hwoarang Exp $
 
 EAPI=5
 inherit autotools eutils pam readme.gentoo systemd
 
-TRUNK_VERSION="1.4"
+TRUNK_VERSION="1.10"
 DESCRIPTION="A lightweight display manager"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/LightDM"
-SRC_URI="http://launchpad.net/${PN}/${TRUNK_VERSION}/${PV}/+download/${P}.tar.gz
+SRC_URI="http://launchpad.net/${PN}/${TRUNK_VERSION}/${PV}/+download/${P}.tar.xz
 	mirror://gentoo/introspection-20110205.m4.tar.bz2"
 
 LICENSE="GPL-3 LGPL-3"
@@ -23,7 +23,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.32.3:2
 	virtual/pam
 	x11-libs/libX11
 	>=x11-libs/libxklavier-5
-	introspection? ( <dev-libs/gobject-introspection-1.36.0 )
+	introspection? ( >=dev-libs/gobject-introspection-1 )
 	qt4? (
 		dev-qt/qtcore:4
 		dev-qt/qtdbus:4
@@ -42,13 +42,17 @@ PDEPEND="gtk? ( x11-misc/lightdm-gtk-greeter )
 	razor? ( razorqt-base/razorqt-lightdm-greeter )"
 
 DOCS=( NEWS )
+RESTRICT="test"
 
 src_prepare() {
 	sed -i -e 's:getgroups:lightdm_&:' tests/src/libsystem.c || die #412369
 	sed -i -e '/minimum-uid/s:500:1000:' data/users.conf || die
 
-	epatch "${FILESDIR}"/session-wrapper-${PN}.patch
-	epatch "${FILESDIR}"/${PN}-1.2.0-fix-configure.patch
+	einfo "Fixing the session-wrapper variable in lightdm.conf"
+	sed -i -e \
+		"/session-wrapper/s@^.*@session-wrapper=/etc/${PN}/Xsession@" \
+		data/lightdm.conf || die "Failed to fix lightdm.conf"
+
 	epatch_user
 
 	# Remove bogus Makefile statement. This needs to go upstream
@@ -72,11 +76,15 @@ src_configure() {
 	einfo "Default session: ${_session}"
 	einfo "Greeter user: ${_user}"
 
+	# also disable tests because libsystem.c does not build. Tests are
+	# restricted so it does not matter anyway.
 	econf \
 		--localstatedir=/var \
 		--disable-static \
+		--disable-tests \
 		$(use_enable introspection) \
 		$(use_enable qt4 liblightdm-qt) \
+		--disable-liblightdm-qt5 \
 		--with-user-session=${_session} \
 		--with-greeter-session=${_greeter} \
 		--with-greeter-user=${_user} \
@@ -85,6 +93,13 @@ src_configure() {
 
 src_install() {
 	default
+
+	# Delete apparmor profiles because they only work with Ubuntu's
+	# apparmor package. Bug #494426
+	if [[ -d ${D}/etc/apparmor.d ]]; then
+		rm -r "${D}/etc/apparmor.d" || die \
+			"Failed to remove apparmor profiles"
+	fi
 
 	insinto /etc/${PN}
 	doins data/{${PN},keys}.conf
