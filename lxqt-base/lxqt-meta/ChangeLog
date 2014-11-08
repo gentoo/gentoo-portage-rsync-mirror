@@ -1,6 +1,12 @@
 # ChangeLog for lxqt-base/lxqt-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/ChangeLog,v 1.4 2014/11/02 21:32:19 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/ChangeLog,v 1.5 2014/11/08 17:54:51 jauhien Exp $
+
+*lxqt-meta-0.8.0 (08 Nov 2014)
+
+  08 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org> +lxqt-meta-0.8.0.ebuild,
+  metadata.xml:
+  version bump
 
   02 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org> lxqt-meta-0.7.0-r1.ebuild:
   make dependencies more precise (preparation for LXQt 0.8.0 release)

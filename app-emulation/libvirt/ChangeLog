@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.384 2014/11/08 17:24:40 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.385 2014/11/08 18:00:44 tamiko Exp $
+
+  08 Nov 2014; Matthias Maier <tamiko@gentoo.org> libvirt-9999.ebuild:
+  switch to git-r3; cleanup
 
   08 Nov 2014; Matthias Maier <tamiko@gentoo.org> libvirt-9999.ebuild:
   disable -Werror for live builds; minor cleanup

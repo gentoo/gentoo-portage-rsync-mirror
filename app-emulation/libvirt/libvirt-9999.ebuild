@@ -1,10 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.65 2014/11/08 17:24:40 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.66 2014/11/08 18:00:44 tamiko Exp $
 
 EAPI=5
 
-#BACKPORTS=062ad8b2
 AUTOTOOLIZE=yes
 
 MY_P="${P/_rc/-rc}"
@@ -12,16 +11,13 @@ MY_P="${P/_rc/-rc}"
 inherit eutils user autotools linux-info systemd readme.gentoo
 
 if [[ ${PV} = *9999* ]]; then
-	inherit git-2
+	inherit git-r3
 	EGIT_REPO_URI="git://libvirt.org/libvirt.git"
-	AUTOTOOLIZE=yes
 	SRC_URI=""
 	KEYWORDS=""
 else
 	SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
-		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
-		${BACKPORTS:+
-			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
+		ftp://libvirt.org/libvirt/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 S="${WORKDIR}/${P%_rc*}"
@@ -103,7 +99,7 @@ RDEPEND="sys-libs/readline
 		firewalld? ( net-firewall/firewalld )
 	)
 	elibc_glibc? ( || ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 ) )"
-# one? ( dev-libs/xmlrpc-c )
+
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/xhtml1
@@ -116,8 +112,8 @@ including but not limited to NATed network, you can enable the
 'virt-network' USE flag.\n\n
 If you are using dnsmasq on your system, you will have
 to configure /etc/dnsmasq.conf to enable the following settings:\n\n
- bind-interfaces\n
- interface or except-interface\n\n
+	bind-interfaces\n
+	interface or except-interface\n\n
 Otherwise you might have issues with your existing DNS server."
 
 LXC_CONFIG_CHECK="
@@ -206,12 +202,8 @@ pkg_setup() {
 
 src_prepare() {
 	touch "${S}/.mailmap"
-	[[ -n ${BACKPORTS} ]] && \
-		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
-			epatch
 
 	if [[ ${PV} = *9999* ]]; then
-
 		# git checkouts require bootstrapping to create the configure script.
 		# Additionally the submodules must be cloned to the right locations
 		# bug #377279
@@ -222,8 +214,7 @@ src_prepare() {
 		) >.git-module-status
 	fi
 
-	epatch \
-		"${FILESDIR}"/libvirt-1.2.9-do_not_use_sysconf.patch
+	epatch "${FILESDIR}"/libvirt-1.2.9-do_not_use_sysconf.patch
 
 	epatch_user
 
@@ -292,6 +283,7 @@ src_configure() {
 
 	# udev for device support details
 	myconf+=" $(use_with udev)"
+	myconf+=" --without-hal"
 
 	# linux capability support so we don't need privileged accounts
 	myconf+=" $(use_with caps capng)"
@@ -326,9 +318,6 @@ src_configure() {
 
 	## stuff we don't yet support
 	myconf+=" --without-netcf"
-
-	# we use udev over hal
-	myconf+=" --without-hal"
 
 	# locking support
 	myconf+=" --without-sanlock"

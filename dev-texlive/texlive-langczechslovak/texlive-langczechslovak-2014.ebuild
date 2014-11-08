@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langczechslovak/texlive-langczechslovak-2014.ebuild,v 1.1 2014/11/03 06:51:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langczechslovak/texlive-langczechslovak-2014.ebuild,v 1.2 2014/11/08 17:57:03 aballier Exp $
 
 EAPI="5"
 
@@ -18,5 +18,6 @@ IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2014
 >=dev-texlive/texlive-latex-2014
 !dev-texlive/texlive-documentation-czechslovak
+>=app-text/texlive-core-2014[xetex]
 "
 RDEPEND="${DEPEND} "
