@@ -1,7 +1,7 @@
 Kludge to find >=freetyp2.5.1
 
---- xlockmore-5.43/configure.in
-+++ xlockmore-5.43/configure.in
+--- a/configure.in
++++ b/configure.in
 @@ -1983,6 +1983,13 @@
      fi
    done

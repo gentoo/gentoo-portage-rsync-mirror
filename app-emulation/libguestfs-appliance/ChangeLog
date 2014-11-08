@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libguestfs-appliance
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs-appliance/ChangeLog,v 1.2 2014/05/01 19:57:02 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs-appliance/ChangeLog,v 1.3 2014/11/08 20:22:22 vapier Exp $
+
+*libguestfs-appliance-1.26.0-r1 (08 Nov 2014)
+
+  08 Nov 2014; Mike Frysinger <vapier@gentoo.org>
+  +libguestfs-appliance-1.26.0-r1.ebuild:
+  Unpack directly into $D to speed the install up.  Add a blocker against older
+  libguestfs versions #501588 by Ernest CHIARELLO.
 
 *libguestfs-appliance-1.24.8 (01 May 2014)
 *libguestfs-appliance-1.26.0 (01 May 2014)

@@ -3,14 +3,14 @@ DEPEND=>=dev-libs/glib-2.32.3:2 dev-libs/libxml2 sys-apps/accountsservice virtua
 DESCRIPTION=A lightweight display manager
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/LightDM
-IUSE=+gtk +introspection kde qt4 razor
+IUSE=+gtk +introspection kde qt4
 KEYWORDS=~amd64 ~arm ~ppc ~x86
 LICENSE=GPL-3 LGPL-3
-PDEPEND=gtk? ( x11-misc/lightdm-gtk-greeter ) kde? ( x11-misc/lightdm-kde ) razor? ( razorqt-base/razorqt-lightdm-greeter )
+PDEPEND=gtk? ( x11-misc/lightdm-gtk-greeter ) kde? ( x11-misc/lightdm-kde )
 RDEPEND=>=dev-libs/glib-2.32.3:2 dev-libs/libxml2 sys-apps/accountsservice virtual/pam x11-libs/libX11 >=x11-libs/libxklavier-5 introspection? ( >=dev-libs/gobject-introspection-1 ) qt4? ( dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 ) >=sys-auth/pambase-20101024-r2
-REQUIRED_USE=|| ( gtk kde razor )
+REQUIRED_USE=|| ( gtk kde )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://launchpad.net/lightdm/1.11/1.11.9/+download/lightdm-1.11.9.tar.xz mirror://gentoo/introspection-20110205.m4.tar.bz2
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	readme.gentoo	106edea5533517715013de909a333abd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=888e005ece97e6279a5fddd79a2c0e95
+_md5_=dc2ff8e369c9e9010921567af5eab480
