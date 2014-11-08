@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Time-Piece
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.31 2014/07/15 18:19:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.32 2014/11/08 17:00:48 dilfridge Exp $
+
+*perl-Time-Piece-1.20-r2 (08 Nov 2014)
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Time-Piece-1.20-r1.ebuild, +perl-Time-Piece-1.20-r2.ebuild:
+  Remove Perl 5.16 as provider
 
 *perl-Time-Piece-1.270.0 (15 Jul 2014)
 *perl-Time-Piece-1.20-r1 (15 Jul 2014)

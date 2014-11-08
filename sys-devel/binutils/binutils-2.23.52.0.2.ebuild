@@ -1,6 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.23.52.0.2.ebuild,v 1.1 2013/05/05 04:17:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.23.52.0.2.ebuild,v 1.2 2014/11/08 16:54:29 vapier Exp $
+
+EAPI="4"
 
 PATCHVER="1.0"
 ELF2FLT_VER=""

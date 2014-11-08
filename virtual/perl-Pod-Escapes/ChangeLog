@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Pod-Escapes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Escapes/ChangeLog,v 1.21 2014/07/11 23:06:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Escapes/ChangeLog,v 1.22 2014/11/08 16:31:19 dilfridge Exp $
+
+*perl-Pod-Escapes-1.40.0-r5 (08 Nov 2014)
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Pod-Escapes-1.40.0-r4.ebuild, +perl-Pod-Escapes-1.40.0-r5.ebuild:
+  Remove Perl 5.16 as provider
 
 *perl-Pod-Escapes-1.60.0 (11 Jul 2014)
 *perl-Pod-Escapes-1.40.0-r4 (11 Jul 2014)

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/irqbalance
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.59 2014/03/19 16:58:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.60 2014/11/08 16:32:15 swift Exp $
+
+*irqbalance-1.0.7-r1 (08 Nov 2014)
+
+  08 Nov 2014; Sven Vermeulen <swift@gentoo.org> +irqbalance-1.0.7-r1.ebuild:
+  Fix bug #525724 - Add USE=selinux dependency to selinux-irqbalance
 
 *irqbalance-1.0.7 (19 Mar 2014)
 

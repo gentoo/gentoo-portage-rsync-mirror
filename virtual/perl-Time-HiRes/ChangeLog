@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Time-HiRes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.94 2014/07/15 18:10:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.95 2014/11/08 16:58:14 dilfridge Exp $
+
+*perl-Time-HiRes-1.972.500-r3 (08 Nov 2014)
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Time-HiRes-1.972.500-r2.ebuild, +perl-Time-HiRes-1.972.500-r3.ebuild:
+  Remove Perl 5.16 as provider
 
 *perl-Time-HiRes-1.972.600-r1 (15 Jul 2014)
 

@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.523 2014/11/04 09:26:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.524 2014/11/08 16:54:29 vapier Exp $
+
+  08 Nov 2014; Mike Frysinger <vapier@gentoo.org> binutils-2.19.1-r1.ebuild,
+  binutils-2.20.1-r1.ebuild, binutils-2.21.1-r1.ebuild, binutils-2.22-r1.ebuild,
+  binutils-2.22.52.0.4.ebuild, binutils-2.22.90.ebuild, binutils-2.23.1.ebuild,
+  binutils-2.23.2.ebuild, binutils-2.23.51.0.1.ebuild,
+  binutils-2.23.51.0.2.ebuild, binutils-2.23.51.0.3.ebuild,
+  binutils-2.23.51.0.5.ebuild, binutils-2.23.51.0.6.ebuild,
+  binutils-2.23.51.0.7.ebuild, binutils-2.23.51.0.8.ebuild,
+  binutils-2.23.51.0.9.ebuild, binutils-2.23.52.0.1.ebuild,
+  binutils-2.23.52.0.2.ebuild, binutils-2.23.ebuild, binutils-2.24-r2.ebuild,
+  binutils-2.24.51.0.1.ebuild, binutils-2.24.51.0.2.ebuild:
+  Migrate older ebuilds to EAPI=4.
 
   04 Nov 2014; Agostino Sarubbo <ago@gentoo.org> binutils-2.24-r3.ebuild:
   Stable for sparc, wrt bug #526482
