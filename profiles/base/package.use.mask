@@ -1,9 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.622 2014/11/06 15:05:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.623 2014/11/08 01:14:18 patrick Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Patrick Lauer <patrick@gentoo.org> (08 Nov 2014)
+# razorqt has been masked for removal
+x11-misc/lightdm razor
 
 # Mike Frysinger <vapier@gentoo.org> (21 Oct 2014)
 # Most targets do not support ASAN/etc... #504200.
