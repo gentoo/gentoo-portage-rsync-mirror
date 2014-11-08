@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/metromap/metromap-0.1.4-r1.ebuild,v 1.5 2014/08/10 18:07:43 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/metromap/metromap-0.1.4-r1.ebuild,v 1.6 2014/11/08 13:11:06 maksbotan Exp $
 
 EAPI="5"
 
@@ -23,7 +23,9 @@ RDEPEND="${PYTHON_DEPS}
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	>=dev-python/pygtk-2.8:2[${PYTHON_USEDEP}]
 "
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/gettext
+"
 
 src_prepare() {
 	python_fix_shebang .
