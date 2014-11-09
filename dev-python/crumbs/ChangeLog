@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/crumbs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/crumbs/ChangeLog,v 1.4 2014/09/21 15:22:41 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/crumbs/ChangeLog,v 1.5 2014/11/09 04:15:50 alunduil Exp $
+
+*crumbs-2.0.1 (09 Nov 2014)
+
+  09 Nov 2014; Alex Brandt <alunduil@gentoo.org> +crumbs-2.0.1.ebuild,
+  crumbs-9999.ebuild:
+  add version 2.0.1
 
   21 Sep 2014; Alex Brandt <alunduil@gentoo.org> -crumbs-1.2.2.ebuild:
   remove old version
