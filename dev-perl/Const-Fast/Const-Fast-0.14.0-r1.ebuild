@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Const-Fast/Const-Fast-0.14.0-r1.ebuild,v 1.1 2014/10/25 19:43:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Const-Fast/Const-Fast-0.14.0-r1.ebuild,v 1.2 2014/11/09 10:37:51 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Facility for creating read-only scalars, arrays, and hashes"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="

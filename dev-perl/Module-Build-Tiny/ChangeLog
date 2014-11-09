@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Build-Tiny
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Build-Tiny/ChangeLog,v 1.1 2014/07/31 13:23:00 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Build-Tiny/ChangeLog,v 1.2 2014/11/09 10:37:51 zlogene Exp $
+
+  09 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Module-Build-Tiny-0.37.0.ebuild:
+  Add ~ppc keyword wrt bug #518644
 
 *Module-Build-Tiny-0.37.0 (31 Jul 2014)
 

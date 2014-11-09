@@ -4,10 +4,10 @@ DESCRIPTION=Facility for creating read-only scalars, arrays, and hashes
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Const-Fast/
 IUSE=test
-KEYWORDS=~amd64 ~arm ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=virtual/perl-Scalar-List-Utils virtual/perl-Storable >=dev-perl/Sub-Exporter-Progressive-0.1.7 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/L/LE/LEONT/Const-Fast-0.014.tar.gz
 _eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	8f07545bdf1c7c3454ae8b04ebff2a5f	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=b86a626955e2fa33f8553656248a7a6c
+_md5_=79836de6c34a043f252b5af57c84a23f

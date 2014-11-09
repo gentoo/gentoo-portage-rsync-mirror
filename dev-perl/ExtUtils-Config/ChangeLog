@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ExtUtils-Config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-Config/ChangeLog,v 1.1 2014/07/31 11:16:14 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-Config/ChangeLog,v 1.2 2014/11/09 10:37:52 zlogene Exp $
+
+  09 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> ExtUtils-Config-0.7.0.ebuild:
+  Add ~ppc keyword wrt bug #518644
 
 *ExtUtils-Config-0.7.0 (31 Jul 2014)
 

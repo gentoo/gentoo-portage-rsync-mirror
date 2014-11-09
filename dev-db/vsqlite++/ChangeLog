@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/vsqlite++
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/vsqlite++/ChangeLog,v 1.1 2013/10/19 13:30:00 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/vsqlite++/ChangeLog,v 1.2 2014/11/09 10:34:45 graaff Exp $
+
+*vsqlite++-0.3.13 (09 Nov 2014)
+
+  09 Nov 2014; Hans de Graaff <graaff@gentoo.org> +vsqlite++-0.3.13.ebuild:
+  Version bump.
 
 *vsqlite++-0.3.12 (19 Oct 2013)
 

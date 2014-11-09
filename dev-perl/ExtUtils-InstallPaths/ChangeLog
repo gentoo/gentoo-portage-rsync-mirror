@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-InstallPaths
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-InstallPaths/ChangeLog,v 1.2 2014/07/31 13:10:30 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-InstallPaths/ChangeLog,v 1.3 2014/11/09 10:37:51 zlogene Exp $
+
+  09 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
+  ExtUtils-InstallPaths-0.10.0.ebuild:
+  Add ~ppc keyword wrt bug #518644
 
   31 Jul 2014; Vladimir Smirnov ExtUtils-InstallPaths-0.10.0.ebuild:
   Keyword for ~arm.

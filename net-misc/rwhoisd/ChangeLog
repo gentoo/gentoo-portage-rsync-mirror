@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/rwhoisd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/ChangeLog,v 1.5 2014/11/09 10:09:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/ChangeLog,v 1.7 2014/11/09 10:43:38 jer Exp $
+
+  09 Nov 2014; Jeroen Roovers <jer@gentoo.org> rwhoisd-1.5.9.5-r2.ebuild:
+  Add -DNEW_STYLE_BIN_SORT by Joshua Coombs (bug #501924).
+
+  09 Nov 2014; Jeroen Roovers <jer@gentoo.org> rwhoisd-1.5.9.5-r2.ebuild:
+  Set build dependencies. Address parallel make.
 
 *rwhoisd-1.5.9.5-r2 (09 Nov 2014)
 
