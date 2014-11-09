@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Mouse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.42 2014/10/20 02:11:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.43 2014/11/09 17:28:51 dilfridge Exp $
+
+*Mouse-0.970.0-r1 (09 Nov 2014)
+
+  09 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> -Mouse-0.970.0.ebuild,
+  +Mouse-0.970.0-r1.ebuild:
+  EAPI bump
 
   20 Oct 2014; Patrick Lauer <patrick@gentoo.org> Mouse-2.4.1.ebuild:
   Fix header
