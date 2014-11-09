@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.194 2014/11/01 02:56:03 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.195 2014/11/09 05:48:12 zerochaos Exp $
+
+  09 Nov 2014; Rick Farina <zerochaos@gentoo.org> cryptsetup-1.6.6.ebuild:
+  fix bug 525208 per klondike's testing
 
   01 Nov 2014; Rick Farina <zerochaos@gentoo.org> cryptsetup-1.6.6.ebuild:
   fixed my own typo this time
