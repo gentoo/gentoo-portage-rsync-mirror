@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1409 2014/11/09 15:10:32 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1410 2014/11/09 18:10:24 dilfridge Exp $
+
+  09 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  All in-tree ebuilds with EAPI=4 using perl-module.eclass are gone. Switch
+  deprecation message to super-annoying mode.
 
   09 Nov 2014; Sebastian Pipping <sping@gentoo.org> python-r1.eclass:
   Use python 3.4 rather than dead 3.2 in python-r1 examples

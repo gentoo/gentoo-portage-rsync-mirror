@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.146 2014/11/05 00:24:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.147 2014/11/09 18:10:24 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -49,21 +49,19 @@ case "${EAPI:-0}" in
 		;;
 esac
 
-# we will need this again soon
-#
-#case "${EAPI:-0}" in
-#	5)
-#		;;
-#	*)
-#		ewarn
-#		ewarn "******************************************************************"
-#		ewarn "${EBUILD}:"
-#		ewarn "Support for EAPI=${EAPI:-0} in perl-module.eclass will be removed"
-#		ewarn "on XX/XX/2015. Please fix your overlay ebuilds to use EAPI=5."
-#		ewarn "******************************************************************"
-#		ewarn
-#		;;
-#esac
+case "${EAPI:-0}" in
+	5)
+		;;
+	*)
+		ewarn
+		ewarn "******************************************************************"
+		ewarn "${EBUILD}:"
+		ewarn "Support for EAPI=${EAPI:-0} in perl-module.eclass will be removed"
+		ewarn "on 1/Feb/2015. Please fix your overlay ebuilds to use EAPI=5."
+		ewarn "******************************************************************"
+		ewarn
+		;;
+esac
 
 case "${PERL_EXPORT_PHASE_FUNCTIONS:-yes}" in
 	yes)
@@ -100,17 +98,6 @@ perlinfo_done=false
 
 perl-module_src_unpack() {
 	debug-print-function $FUNCNAME "$@"
-
-	case "${EAPI:-0}" in
-		5)
-			;;
-		4)
-			eqawarn "Support for EAPI=${EAPI:-0} in perl-module.eclass is deprecated."
-			eqawarn "Please fix your ebuilds to use EAPI=5."
-			;;
-		*)
-			;;
-	esac
 
 	unpacker_src_unpack
 	has src_prepare ${PERL_EXPF} || perl-module_src_prepare
