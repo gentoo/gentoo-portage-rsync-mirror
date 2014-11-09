@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.stable.mask,v 1.6 2014/11/04 22:33:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.stable.mask,v 1.7 2014/11/09 08:29:34 mgorny Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in use.mask
@@ -23,3 +23,5 @@ gcl
 # PyPy is unstable on this arch.
 python_targets_pypy
 python_single_target_pypy
+python_targets_pypy3
+python_single_target_pypy3

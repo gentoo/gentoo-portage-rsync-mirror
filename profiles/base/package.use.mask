@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.623 2014/11/08 01:14:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.624 2014/11/09 08:02:26 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -58,7 +58,6 @@ sys-apps/portage python_targets_pypy2_0 python_targets_python2_6 python_targets_
 # (on behalf of Python team)
 # Keep 3.2 enabled to ease the migration.
 dev-lang/python-exec -python_targets_python3_2 -python_single_target_python3_2
-dev-python/python-exec -python_targets_python3_2 -python_single_target_python3_2
 
 # Rick Farina <zerochaos@gentoo.org> (26 Aug 2014)
 # mirisdr does not seem to like making releases

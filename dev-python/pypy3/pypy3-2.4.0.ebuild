@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3/pypy3-2.4.0.ebuild,v 1.1 2014/11/05 23:03:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3/pypy3-2.4.0.ebuild,v 1.2 2014/11/09 08:29:14 mgorny Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="https://bitbucket.org/pypy/pypy/downloads/${P}-src.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0/$(get_version_component_range 1-2 ${PV})"
-#KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="bzip2 gdbm +jit low-memory ncurses sandbox shadowstack sqlite sse2 tk"
 
 RDEPEND=">=sys-libs/zlib-1.1.3:0=

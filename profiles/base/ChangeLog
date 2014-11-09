@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.746 2014/11/08 01:14:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.747 2014/11/09 08:02:26 mgorny Exp $
+
+  09 Nov 2014; Michał Górny <mgorny@gentoo.org> package.use.force,
+  package.use.mask:
+  Remove stale masks on dev-python/python-exec.
 
   08 Nov 2014; Patrick Lauer <patrick@gentoo.org> package.use.mask:
   Mask razor useflag for lightdm as razorqt is masked

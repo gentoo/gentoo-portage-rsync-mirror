@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-9999.ebuild,v 1.5 2012/05/17 00:48:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-9999.ebuild,v 1.6 2014/11/09 08:02:06 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 inherit git-2 user eutils flag-o-matic perl-module
 

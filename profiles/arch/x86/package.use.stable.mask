@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.stable.mask,v 1.6 2014/11/04 22:33:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.stable.mask,v 1.8 2014/11/09 08:29:40 mgorny Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,8 +36,8 @@ app-office/libreoffice firebird
 # impl there anyway. Please keep this in sync with use.stable.mask.
 dev-lang/python-exec -python_targets_pypy
 dev-lang/python-exec -python_single_target_pypy
-dev-python/python-exec -python_targets_pypy
-dev-python/python-exec -python_single_target_pypy
+dev-lang/python-exec -python_targets_pypy3
+dev-lang/python-exec -python_single_target_pypy3
 
 # Tom Wijsman <TomWij@gentoo.org (16 Mar 2014)
 # Mask unstable USE flags on media-video/vlc, see security bug #499806.

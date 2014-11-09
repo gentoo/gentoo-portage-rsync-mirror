@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-6.0.11.ebuild,v 1.4 2014/01/08 06:36:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-6.0.11-r1.ebuild,v 1.1 2014/11/09 08:02:06 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils flag-o-matic perl-module prefix user
 

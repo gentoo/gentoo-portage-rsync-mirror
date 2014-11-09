@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pypy3-bin
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3-bin/ChangeLog,v 1.1 2014/11/09 08:29:03 mgorny Exp $
+
+*pypy3-bin-2.4.0 (09 Nov 2014)
+
+  09 Nov 2014; Michał Górny <mgorny@gentoo.org> +files/1.9-distutils.unixccompil
+  er.UnixCCompiler.runtime_library_dir_option.patch,
+  +files/1.9-scripts-location.patch, +files/2.3.1-shared-lib.patch,
+  +metadata.xml, +pypy3-bin-2.4.0.ebuild:
+  Introduce the binary packages for PyPy3.
