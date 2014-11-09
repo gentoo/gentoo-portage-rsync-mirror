@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.9-r1.ebuild,v 1.1 2014/10/18 15:19:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.9-r1.ebuild,v 1.2 2014/11/09 10:12:20 hwoarang Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -82,19 +82,6 @@ src_install() {
 	newconfd "${FILESDIR}/buildmaster.confd" buildmaster
 	newinitd "${FILESDIR}/buildmaster.initd" buildmaster
 	systemd_dounit "${FILESDIR}"/${PN}.service
-
-	# In case of multiple masters, it's possible to edit web files
-	# so all master can share the changes. So protect them!
-	# If something else need to be protected, please open a bug
-	# on http://bugs.gentoo.org
-	local cp
-	add_config_protect() {
-		cp+=" $(python_get_sitedir)/${PN}/status/web"
-	}
-	python_execute_function -q add_config_protect
-	echo "CONFIG_PROTECT=\"${cp}\"" \
-		> 85${PN} || die
-	doenvd 85${PN}
 
 	readme.gentoo_create_doc
 }

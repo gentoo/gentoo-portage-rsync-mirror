@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.158 2014/10/18 15:19:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.159 2014/11/09 10:12:20 hwoarang Exp $
+
+  09 Nov 2014; Markos Chandras <hwoarang@gentoo.org> buildbot-0.8.9-r1.ebuild,
+  buildbot-9999.ebuild:
+  Stop protecting files in /usr/lib/python. This is getting rather painful on
+  upgrades and administrators should be able to do it themselves if needed
 
 *buildbot-0.8.9-r1 (18 Oct 2014)
 

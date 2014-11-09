@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/rwhoisd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/ChangeLog,v 1.4 2014/11/04 12:20:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/ChangeLog,v 1.5 2014/11/09 10:09:35 jer Exp $
+
+*rwhoisd-1.5.9.5-r2 (09 Nov 2014)
+
+  09 Nov 2014; Jeroen Roovers <jer@gentoo.org> +rwhoisd-1.5.9.5-r2.ebuild,
+  files/rwhoisd-destdir-1.5.9.5.patch, files/rwhoisd, files/rwhoisd.conf,
+  -files/rwhoisd-destdir.patch:
+  Separate s-s-d arguments from rwhoisd arguments by Joshua Coombs (bug
+  #501924). Various.
 
   04 Nov 2014; Pacho Ramos <pacho@gentoo.org> -rwhoisd-1.5.9.5.ebuild,
   metadata.xml:

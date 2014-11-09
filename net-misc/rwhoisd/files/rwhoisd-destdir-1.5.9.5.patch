@@ -1,5 +1,5 @@
---- tools/rwhois_repack/Makefile.in.orig	2009-10-16 11:30:40.000000000 -0700
-+++ tools/rwhois_repack/Makefile.in		2009-10-16 11:31:20.000000000 -0700
+--- a/tools/rwhois_repack/Makefile.in
++++ b/tools/rwhois_repack/Makefile.in
 @@ -52,9 +52,9 @@
  # procedural
  
@@ -14,8 +14,8 @@
  uninstall:
 	$(RM) $(bindir)/rwhois_repack
 
---- sample.data/Makefile.in.orig	2009-10-16 11:37:54.000000000 -0700
-+++ sample.data/Makefile.in		2009-10-16 11:38:22.000000000 -0700
+--- a/sample.data/Makefile.in
++++ b/sample.data/Makefile.in
 @@ -10,7 +10,7 @@
  prefix      = @prefix@
  exec_prefix = @exec_prefix@
@@ -26,8 +26,8 @@
  srcdir	    = @srcdir@
  VPATH       = @srcdir@
 
---- sample.data/Makefile.in.orig	2009-10-21 14:27:42.000000000 -0700
-+++ sample.data/Makefile.in	2009-10-21 14:33:00.000000000 -0700
+--- a/sample.data/Makefile.in
++++ b/sample.data/Makefile.in
 @@ -17,7 +17,7 @@
  
  DESTDIR =
