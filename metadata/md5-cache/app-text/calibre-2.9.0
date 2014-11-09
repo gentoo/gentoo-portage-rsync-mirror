@@ -10,4 +10,4 @@ RDEPEND=>=app-text/podofo-0.8.2:= >=dev-lang/python-2.7.1:2.7[sqlite,ssl] >=dev-
 SLOT=0
 SRC_URI=http://sourceforge.net/projects/calibre/files/2.9.0/calibre-2.9.0.tar.xz
 _eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	c91a1ac3fefc6b077094fb2e82c65af4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=6ba7b3bb1ebbd75b03d60808648ae65b
+_md5_=cb1b04f71a8674b2f4615db4d1fdfa7a

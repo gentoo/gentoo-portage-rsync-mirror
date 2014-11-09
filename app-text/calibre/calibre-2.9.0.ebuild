@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-2.9.0.ebuild,v 1.1 2014/11/09 12:28:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-2.9.0.ebuild,v 1.2 2014/11/09 13:18:44 yngwin Exp $
 
 EAPI=5
 
@@ -111,14 +111,20 @@ src_prepare() {
 		-i setup/extensions.py || die "sed failed to patch extensions.py"
 
 	# use system beautifulsoup, instead of bundled
-	rm -f "${S}"/src/calibre/ebooks/BeautifulSoup.py || die "could not remove bundled beautifulsoup"
+	rm -f "${S}"/src/calibre/ebooks/BeautifulSoup.py \
+		|| die "could not remove bundled beautifulsoup"
 	find "${S}" -type f -name \*.py -exec \
 		sed -e 's/calibre.ebooks.BeautifulSoup/BeautifulSoup/' -i {} + \
 		|| die "could not sed bundled beautifulsoup out of the source tree"
 
+	# avoid failure of xdg tools to recognize vendor prefix
+	sed -e "s|xdg-icon-resource install|xdg-icon-resource install --novendor|" \
+		-e "s|'xdg-mime', 'install'|'xdg-mime', 'install', '--novendor'|" \
+		-e "s|'xdg-desktop-menu', 'install'|'xdg-desktop-menu', 'install', '--novendor'|" \
+		-i "${S}"/src/calibre/linux.py || die 'sed failed'
+
 	# no_updates: do not annoy user with "new version is availible all the time
 	# disable_plugins: walking sec-hole, wait for upstream to use GHNS interface
-	# C locale: if LC_ALL=C do not raise an exception when locale cannot be canonicalized
 	epatch \
 		"${FILESDIR}/${PN}-2.9.0-no_updates_dialog.patch" \
 		"${FILESDIR}/${PN}-disable_plugins.patch"
