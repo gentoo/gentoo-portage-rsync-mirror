@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0.ebuild,v 1.2 2014/11/08 23:19:32 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0.ebuild,v 1.3 2014/11/09 01:07:33 k_f Exp $
 
 EAPI="5"
 
@@ -124,9 +124,6 @@ src_install() {
 
 	dosym gpg2 /usr/bin/gpg
 	dosym gpgv2 /usr/bin/gpgv
-	dosym gpg2keys_hkp /usr/libexec/gpgkeys_hkp
-	dosym gpg2keys_finger /usr/libexec/gpgkeys_finger
-	dosym gpg2keys_curl /usr/libexec/gpgkeys_curl
 	echo ".so man1/gpg2.1" > "${ED}"/usr/share/man/man1/gpg.1
 	echo ".so man1/gpgv2.1" > "${ED}"/usr/share/man/man1/gpgv.1
 
@@ -160,4 +157,11 @@ pkg_postinst() {
 	ewarn "of the agent is currently used. If you are unsure of the gpg"
 	ewarn "agent you are using please run 'killall gpg-agent',"
 	ewarn "and to start a fresh daemon just run 'gpg-agent --daemon'."
+
+	if [[ -n ${REPLACING_VERSIONS} ]]; then
+		elog "If upgrading from a version prior than 2.1 you will have to re-import"
+		elog "secret keys after restarting the gpg-agent as the new version is using"
+		elog "a new storage mechanism."
+		elog "You can migrate the keys using gpg --import $HOME/.gnupg/secring.gpg"
+	fi
 }
