@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.22-r1.ebuild,v 1.1 2012/10/26 16:07:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.22-r2.ebuild,v 1.1 2014/11/09 17:53:47 zlogene Exp $
 
-EAPI="4"
+EAPI="5"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.7.2.ebuild,v 1.1 2013/07/15 12:12:45 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.7.2.ebuild,v 1.2 2014/11/09 17:38:09 keri Exp $
 
 EAPI=3
 
@@ -31,6 +31,7 @@ EANT_GENTOO_CLASSPATH="javassist-3"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-javadocs.patch
+	epatch "${FILESDIR}"/${P}-no-ikvm.patch
 
 	cp "${FILESDIR}"/build.xml "${S}" || die
 	sed -i -e "s|test/unit|test|" "${S}"/build.xml \

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SVN-Simple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.32 2014/08/24 12:55:29 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.33 2014/11/09 17:41:32 dilfridge Exp $
+
+  09 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -SVN-Simple-0.270.0.ebuild:
+  Remove old
 
 *SVN-Simple-0.280.0-r1 (24 Aug 2014)
 

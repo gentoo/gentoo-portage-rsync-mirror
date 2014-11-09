@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.4.ebuild,v 1.13 2014/08/10 21:10:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.4-r1.ebuild,v 1.1 2014/11/09 17:58:40 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 PHP_EXT_NAME=ming
 PHP_EXT_OPTIONAL_USE=php

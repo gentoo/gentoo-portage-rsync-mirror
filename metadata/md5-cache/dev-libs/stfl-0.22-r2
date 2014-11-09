@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=sys-libs/ncurses[unicode] perl? ( dev-lang/perl ) ruby? ( dev-lang/ruby ) python? ( dev-lang/python ) perl? ( dev-lang/swig ) python? ( >=dev-lang/swig-1.3.40 ) ruby? ( dev-lang/swig ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=sys-libs/ncurses[unicode] perl? ( dev-lang/perl ) ruby? ( dev-lang/ruby ) python? ( dev-lang/python ) perl? ( dev-lang/swig ) python? ( >=dev-lang/swig-1.3.40 ) ruby? ( dev-lang/swig ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=A library which implements a curses-based widget set for text terminals
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.clifford.at/stfl/
 IUSE=examples perl python ruby static-libs
 KEYWORDS=amd64 ~ppc x86
 LICENSE=LGPL-3
-RDEPEND=sys-libs/ncurses[unicode] perl? ( dev-lang/perl ) ruby? ( dev-lang/ruby ) python? ( dev-lang/python ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=sys-libs/ncurses[unicode] perl? ( dev-lang/perl ) ruby? ( dev-lang/ruby ) python? ( dev-lang/python ) dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=http://www.clifford.at/stfl/stfl-0.22.tar.gz
 _eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	8f07545bdf1c7c3454ae8b04ebff2a5f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=d05352eccc9c1062754bac8830ab1c3d
+_md5_=7c66fa75e127a49c2daf2f02179cc9ff
