@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/turbolinks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/turbolinks/ChangeLog,v 1.4 2014/08/20 13:07:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/turbolinks/ChangeLog,v 1.6 2014/11/09 07:46:59 graaff Exp $
+
+  09 Nov 2014; Hans de Graaff <graaff@gentoo.org> turbolinks-2.5.1.ebuild:
+  Fix HOMEPAGE.
+
+*turbolinks-2.5.1 (09 Nov 2014)
+
+  09 Nov 2014; Hans de Graaff <graaff@gentoo.org> +turbolinks-2.5.1.ebuild:
+  Version bump.
 
 *turbolinks-2.2.3 (20 Aug 2014)
 
