@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=php? ( >=dev-lang/php-5.3[-threads] ) ruby? ( dev-lang/ruby )
 SLOT=0
 SRC_URI=http://download.osgeo.org/geos/geos-3.4.2.tar.bz2
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	c91a1ac3fefc6b077094fb2e82c65af4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	38b54b08ee43ba478e97f7c89066eed5	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	c91a1ac3fefc6b077094fb2e82c65af4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=6e11d2be1f20bb61cd0d1c868570b9b9

@@ -10,5 +10,5 @@ RDEPEND=>=dev-python/pygtk-2:2 >=dev-python/pygobject-2:2 >=gnome-base/gconf-2.2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://launchpad.net/blogtk/2.0/2.0/+download/blogtk-2.0.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	38b54b08ee43ba478e97f7c89066eed5	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ce80d237a6ffbe314c0dc5edf2b07913

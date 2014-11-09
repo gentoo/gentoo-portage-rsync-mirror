@@ -10,5 +10,5 @@ RDEPEND=purple? ( net-im/pidgin ) libevent? ( dev-libs/libevent ) !libevent? ( >
 REQUIRED_USE=^^ ( purple || ( jabber msn oscar yahoo ) ) msn? ( || ( gnutls nss ssl ) ) jabber? ( !nss )
 SLOT=0
 SRC_URI=http://get.bitlbee.org/src/bitlbee-3.2.1.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	38b54b08ee43ba478e97f7c89066eed5	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=f731e9b0a316a6de9e307b67ba338006

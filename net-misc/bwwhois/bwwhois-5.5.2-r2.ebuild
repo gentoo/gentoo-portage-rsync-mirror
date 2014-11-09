@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.5.2-r2.ebuild,v 1.1 2014/11/01 20:54:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.5.2-r2.ebuild,v 1.2 2014/11/09 22:21:00 dilfridge Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ src_install() {
 	insinto /etc/whois
 	doins whois.conf tld.conf sd.conf
 
-	perlinfo
+	perl_set_version
 	insinto "${VENDOR_LIB}"
 	doins bwInclude.pm
 

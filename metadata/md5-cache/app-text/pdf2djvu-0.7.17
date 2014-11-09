@@ -10,5 +10,5 @@ RDEPEND=>=app-text/djvu-3.5.21:= >=app-text/poppler-0.16.7:= dev-libs/libxml2:= 
 REQUIRED_USE=test? ( graphicsmagick python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://pdf2djvu.googlecode.com/files/pdf2djvu_0.7.17.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	38b54b08ee43ba478e97f7c89066eed5	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=5a5ebeed67a7c701f6604e1e263b1644

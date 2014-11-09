@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/bwwhois
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.39 2014/11/01 20:54:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.40 2014/11/09 22:21:00 dilfridge Exp $
+
+  09 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  bwwhois-5.5.2-r2.ebuild:
+  Replace perlinfo with perl_set_version
 
 *bwwhois-5.5.2-r2 (01 Nov 2014)
 

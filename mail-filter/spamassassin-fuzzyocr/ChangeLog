@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin-fuzzyocr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.28 2014/08/04 20:37:02 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.29 2014/11/09 22:20:01 dilfridge Exp $
+
+  09 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  spamassassin-fuzzyocr-3.6.0-r2.ebuild:
+  Replace perlinfo with perl_set_version
 
   04 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   spamassassin-fuzzyocr-3.6.0-r2.ebuild:

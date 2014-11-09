@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/apparmor-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apparmor-utils/ChangeLog,v 1.4 2014/10/15 15:36:25 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apparmor-utils/ChangeLog,v 1.5 2014/11/09 22:18:12 dilfridge Exp $
+
+  09 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  apparmor-utils-2.8.3.ebuild, apparmor-utils-2.8.4.ebuild:
+  Replace perlinfo with perl_set_version
 
 *apparmor-utils-2.8.4 (15 Oct 2014)
 

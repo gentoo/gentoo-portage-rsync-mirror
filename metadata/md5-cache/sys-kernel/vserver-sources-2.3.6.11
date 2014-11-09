@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=2.3.6.11
 SRC_URI=mirror://kernel/linux/kernel/v3.x/patch-3.13.11.xz mirror://kernel/linux/kernel/v3.x/linux-3.13.tar.xz http://vserver.13thfloor.at/Experimental/patch-3.13.11-vs2.3.6.11.diff
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	kernel-2	6fb31411472936acc8287129d3df7f43	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	38b54b08ee43ba478e97f7c89066eed5	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	kernel-2	6fb31411472936acc8287129d3df7f43	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=4316b79e25eb15f66706acd1503ee2fc

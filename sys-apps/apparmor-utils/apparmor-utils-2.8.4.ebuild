@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apparmor-utils/apparmor-utils-2.8.4.ebuild,v 1.1 2014/10/15 15:36:25 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apparmor-utils/apparmor-utils-2.8.4.ebuild,v 1.2 2014/11/09 22:18:12 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	perlinfo
+	perl_set_version
 	emake DESTDIR="${D}" PERLDIR="${D}/${VENDOR_LIB}/Immunix" \
 		VIM_INSTALL_PATH="${D}/usr/share/vim/vimfiles/syntax" install
 

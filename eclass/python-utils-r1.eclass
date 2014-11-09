@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.63 2014/11/05 23:03:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.64 2014/11/09 22:27:58 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -917,6 +917,38 @@ python_is_python3() {
 	[[ ${impl} ]] || die "python_is_python3: no impl nor EPYTHON"
 
 	[[ ${impl} == python3* || ${impl} == pypy3 ]]
+}
+
+# @FUNCTION: python_is_installed
+# @USAGE: [<impl>]
+# @DESCRIPTION:
+# Check whether the interpreter for <impl> (or ${EPYTHON}) is installed.
+# Uses has_version with a proper dependency string.
+#
+# Returns 0 (true) if it is, 1 (false) otherwise.
+python_is_installed() {
+	local impl=${1:-${EPYTHON}}
+	[[ ${impl} ]] || die "${FUNCNAME}: no impl nor EPYTHON"
+
+	# for has_version
+	local -x ROOT=/
+	case "${impl}" in
+		pypy|pypy3)
+			local append=
+			if [[ ${PYTHON_REQ_USE} ]]; then
+				append=[${PYTHON_REQ_USE}]
+			fi
+
+			# be happy with just the interpeter, no need for the virtual
+			has_version "dev-python/${impl}${append}" \
+				|| has_version "dev-python/${impl}-bin${append}"
+			;;
+		*)
+			local PYTHON_PKG_DEP
+			python_export "${impl}" PYTHON_PKG_DEP
+			has_version "${PYTHON_PKG_DEP}"
+			;;
+	esac
 }
 
 # @FUNCTION: python_fix_shebang
