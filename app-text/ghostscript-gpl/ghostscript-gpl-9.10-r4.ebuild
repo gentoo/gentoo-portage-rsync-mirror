@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.15.ebuild,v 1.2 2014/10/23 17:37:26 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.10-r4.ebuild,v 1.1 2014/11/09 13:51:18 tamiko Exp $
 
 EAPI=5
 
@@ -13,8 +13,8 @@ MY_P=${P/-gpl}
 GSDJVU_PV=1.6
 PVM=$(get_version_component_range 1-2)
 SRC_URI="
-	http://downloads.ghostscript.com/public/${MY_P}.tar.bz2
-	mirror://gentoo/${PN}-9.12-patchset-1.tar.bz2
+	mirror://sourceforge/ghostscript/${MY_P}.tar.bz2
+	mirror://gentoo/${PN}-9.10-patchset-1.tar.bz2
 	!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )"
 
 LICENSE="AGPL-3 CPL-1.0"
@@ -27,7 +27,7 @@ COMMON_DEPEND="
 	media-libs/fontconfig
 	>=media-libs/freetype-2.4.9:2=
 	media-libs/jbig2dec
-	>=media-libs/lcms-2.6:2
+	>=media-libs/lcms-2.5:2
 	>=media-libs/libpng-1.6.2:0=
 	>=media-libs/tiff-4.0.1:0=
 	>=sys-libs/zlib-1.2.7:=
@@ -81,13 +81,11 @@ src_prepare() {
 	rm -rf "${S}"/libpng
 	rm -rf "${S}"/tiff
 	rm -rf "${S}"/zlib
-	# remove internal urw-fonts
-	rm -rf "${S}"/Resource/Font
 	# remove internal CMaps (CMaps from poppler-data are used instead)
 	rm -rf "${S}"/Resource/CMap
 
 	# apply various patches, many borrowed from Fedora
-	# http://pkgs.fedoraproject.org/cgit/ghostscript.git
+	# http://pkgs.fedoraproject.org/gitweb/?p=ghostscript.git
 	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes"
 	EPATCH_SOURCE="${WORKDIR}/patches/"
 	epatch

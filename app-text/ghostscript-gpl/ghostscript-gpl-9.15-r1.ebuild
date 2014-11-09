@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.14.ebuild,v 1.2 2014/06/10 01:04:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.15-r1.ebuild,v 1.1 2014/11/09 13:51:18 tamiko Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ COMMON_DEPEND="
 	media-libs/fontconfig
 	>=media-libs/freetype-2.4.9:2=
 	media-libs/jbig2dec
-	>=media-libs/lcms-2.5:2
+	>=media-libs/lcms-2.6:2
 	>=media-libs/libpng-1.6.2:0=
 	>=media-libs/tiff-4.0.1:0=
 	>=sys-libs/zlib-1.2.7:=
@@ -81,8 +81,6 @@ src_prepare() {
 	rm -rf "${S}"/libpng
 	rm -rf "${S}"/tiff
 	rm -rf "${S}"/zlib
-	# remove internal urw-fonts
-	rm -rf "${S}"/Resource/Font
 	# remove internal CMaps (CMaps from poppler-data are used instead)
 	rm -rf "${S}"/Resource/CMap
 
@@ -177,16 +175,15 @@ src_configure() {
 }
 
 src_compile() {
-	# workaround: -j1 -> see bug #234378
-	emake -j1 so all
+
+	emake so all
 
 	cd "${S}/ijs"
 	emake
 }
 
 src_install() {
-	# workaround: -j1 -> see bug #356303
-	emake -j1 DESTDIR="${D}" install-so install
+	emake DESTDIR="${D}" install-so install
 
 	if ! use bindist && use djvu ; then
 		dobin gsdjvu
