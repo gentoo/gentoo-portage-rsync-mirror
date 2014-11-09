@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.77 2014/11/05 23:03:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.78 2014/11/09 15:10:32 sping Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -262,7 +262,7 @@ _python_validate_useflags() {
 #
 # Example:
 # @CODE
-# PYTHON_COMPAT=( python{2_7,3_2} )
+# PYTHON_COMPAT=( python{2_7,3_4} )
 # DEPEND="doc? ( dev-python/epydoc[$(python_gen_usedep 'python2*')] )"
 # @CODE
 #
@@ -305,7 +305,7 @@ python_gen_usedep() {
 #
 # Example:
 # @CODE
-# PYTHON_COMPAT=( python{2_7,3_2} )
+# PYTHON_COMPAT=( python{2_7,3_4} )
 # REQUIRED_USE="doc? ( || ( $(python_gen_useflags python2*) ) )"
 # @CODE
 #

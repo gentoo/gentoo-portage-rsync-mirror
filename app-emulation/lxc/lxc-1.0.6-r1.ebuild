@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.0.6-r1.ebuild,v 1.1 2014/10/30 08:50:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.0.6-r1.ebuild,v 1.2 2014/11/09 15:28:25 jlec Exp $
 
 EAPI="5"
 
@@ -128,7 +128,7 @@ src_compile() {
 src_install() {
 	default
 
-	mv "${ED}"/$(get_bashcompdir)/${PN} "${ED}"/$(get_bashcompdir)/${PN}-start || die
+	mv "${ED}"/usr/share/bash-completion/completions/${PN} "${ED}"/$(get_bashcompdir)/${PN}-start || die
 	bashcomp_alias ${PN}-start \
 		${PN}-{attach,cgroup,clone,console,create,destroy,device,execute,freeze,info,monitor,snapshot,start-ephemeral,stop,unfreeze,wait}
 
@@ -153,7 +153,7 @@ src_install() {
 	doexe config/init/systemd/${PN}-devsetup
 	# Use that script with the systemd service (Similar to upstream
 	# Makefile.am
-	cp "${FILESDIR}"/${PN}_at.service ${PN}_at.service
+	cp "${FILESDIR}"/${PN}_at.service ${PN}_at.service || die
 	sed -i \
 		"/Restart=always/a ExecStartPre=/usr/libexec/${PN}/${PN}-devsetup" \
 		${PN}_at.service \
