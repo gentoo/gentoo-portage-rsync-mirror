@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.913 2014/09/17 21:39:20 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.914 2014/11/09 12:44:10 dlan Exp $
+
+  09 Nov 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
+  add Paweł Stankowski as maintainer, granted by TomWij
 
 *vlc-2.1.5 (17 Sep 2014)
 

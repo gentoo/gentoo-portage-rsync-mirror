@@ -2,9 +2,16 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>video</herd>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>aambitny@gmail.com</email>
+		<name>Paweł Stankowski</name>
+		<description>Active Maintainer, Assign bugs</description>
+	</maintainer>
 	<maintainer>
 		<email>TomWij@gentoo.org</email>
 		<name>Tom Wijsman</name>
+		<description>Previous Maintainer, CC bugs</description>
 	</maintainer>
 	<use>
 		<flag name="atmo">Enables support for AtmoLight (homebrew Ambient Lighting Technology)</flag>
