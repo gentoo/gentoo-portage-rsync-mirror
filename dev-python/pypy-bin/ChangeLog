@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypy-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.28 2014/11/08 23:08:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.29 2014/11/09 08:33:11 mgorny Exp $
+
+  09 Nov 2014; Michał Górny <mgorny@gentoo.org> pypy-bin-2.4.0.ebuild:
+  Generate ctypes cache in src_compile() to diverge less from the remaining
+  ebuilds.
 
   08 Nov 2014; Michał Górny <mgorny@gentoo.org>
   -files/2.0.2-distutils-fix_handling_of_executables_and_flags.patch,

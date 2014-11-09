@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-036-r4.ebuild,v 1.6 2014/08/05 18:02:57 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-036-r4.ebuild,v 1.7 2014/11/09 08:44:21 aidecoe Exp $
 
 EAPI=4
 
@@ -254,7 +254,7 @@ pkg_postinst() {
 	optfeature "Support NFS" net-fs/nfs-utils net-nds/rpcbind
 	optfeature \
 		"Install ssh and scp along with config files and specified keys" \
-		dev-libs/openssl
+		net-misc/openssh
 	optfeature "Enable logging with syslog-ng or rsyslog" app-admin/syslog-ng \
 		app-admin/rsyslog
 }

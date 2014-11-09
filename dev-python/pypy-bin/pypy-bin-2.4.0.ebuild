@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.4.0.ebuild,v 1.6 2014/11/08 23:04:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.4.0.ebuild,v 1.7 2014/11/09 08:33:11 mgorny Exp $
 
 EAPI=5
 
@@ -100,6 +100,11 @@ src_compile() {
 	use doc && emake -C pypy/doc/ html
 	#needed even without jit :( also needed in both compile and install phases
 	pax-mark m pypy-c
+
+	# ctypes config cache
+	# this one we need to do with python2 too...
+	./pypy-c lib_pypy/ctypes_config_cache/rebuild.py \
+		|| die "Failed to rebuild ctypes config cache"
 }
 
 # Doesn't work - pypy missing its own libs
@@ -149,9 +154,6 @@ src_install() {
 	# Generate Grammar and PatternGrammar pickles.
 	"${PYTHON}" -c "import lib2to3.pygram, lib2to3.patcomp; lib2to3.patcomp.PatternCompiler()" \
 		|| die "Generation of Grammar and PatternGrammar pickles failed"
-
-	# ctypes config cache
-	"${PYTHON}" -m ctypes_config_cache.rebuild || die "Failed to rebuild ctypes config cache"
 
 	# Generate cffi cache
 	# Please keep in sync with pypy/tool/release/package.py!
