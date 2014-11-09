@@ -1,0 +1,14 @@
+# ChangeLog for net-misc/gns3-server
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-server/ChangeLog,v 1.2 2014/11/09 07:26:15 idella4 Exp $
+
+  09 Nov 2014; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  edit to metadata.xml
+
+*gns3-server-1.1 (09 Nov 2014)
+
+  09 Nov 2014; Ian Delaney <idella4@gentoo.org> +gns3-server-1.1.ebuild,
+  +metadata.xml:
+  new ebuild, written by B-Man, developed in his overlay under mentorship.
+  Package is proxy maintained by him. Supersedes package gns3. Closes Bug
+  #527690
