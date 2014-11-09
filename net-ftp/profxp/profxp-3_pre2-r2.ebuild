@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/profxp-3_pre2-r2.ebuild,v 1.1 2014/01/29 01:18:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/profxp-3_pre2-r2.ebuild,v 1.2 2014/11/09 21:49:54 dilfridge Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	perlinfo
+	perl_set_version
 	newbin profxpv3.pl profxp.pl
 	dosym profxp.pl /usr/bin/profxp
 	insinto ${ARCH_LIB}/Net

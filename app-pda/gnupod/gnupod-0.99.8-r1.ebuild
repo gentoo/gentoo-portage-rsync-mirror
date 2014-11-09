@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.99.8-r1.ebuild,v 1.2 2014/02/07 19:46:24 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.99.8-r1.ebuild,v 1.3 2014/11/09 21:50:54 dilfridge Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ src_configure() {
 }
 
 src_install() {
-	perlinfo
+	perl_set_version
 	sed -i -e "s:\$INC\[0\]/\$modi:${D}${VENDOR_ARCH}/\$modi:g" \
 		tools/gnupod_install.pl || die
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.52-r1.ebuild,v 1.6 2013/08/26 16:59:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.52-r1.ebuild,v 1.7 2014/11/09 21:45:42 dilfridge Exp $
 
 EAPI="5"
 
@@ -30,7 +30,7 @@ src_install() {
 	doins -r Config/*
 	dosym /etc/${PN} /usr/share/${PN}/Config
 
-	perlinfo
+	perl_set_version
 	insinto ${VENDOR_LIB}
 	doins -r Modules/NaturalDocs
 	dodir /usr/share/${PN}/Modules

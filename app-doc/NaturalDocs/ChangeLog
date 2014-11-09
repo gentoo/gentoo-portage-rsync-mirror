@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/NaturalDocs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.48 2013/08/27 10:58:00 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.49 2014/11/09 21:45:42 dilfridge Exp $
+
+  09 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  NaturalDocs-1.52-r1.ebuild:
+  Replace perlinfo with perl_set_version
 
   27 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> -NaturalDocs-1.35.ebuild,
   -NaturalDocs-1.40-r1.ebuild, -NaturalDocs-1.40.ebuild,

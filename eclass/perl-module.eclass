@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.147 2014/11/09 18:10:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.148 2014/11/09 21:34:29 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -305,9 +305,20 @@ perl-module_pkg_postrm() {
 
 perlinfo() {
 	debug-print-function $FUNCNAME "$@"
+	eqawarn "perl-modules.eclass: perlinfo is deprecated and will be removed. Please use perl_set_version instead."
 	perl_set_version
 }
 
+# @FUNCTION: perl_set_version
+# @USAGE: perl_set_version
+# @DESCRIPTION:
+# Extract version information and installation paths from the current Perl 
+# interpreter. 
+#
+# This sets the following variables: PERL_VERSION, SITE_ARCH, SITE_LIB, 
+# ARCH_LIB, VENDOR_LIB, VENDOR_ARCH
+#
+# This function used to be called perlinfo as well.
 perl_set_version() {
 	debug-print-function $FUNCNAME "$@"
 	debug-print "$FUNCNAME: perlinfo_done=${perlinfo_done}"
@@ -326,9 +337,16 @@ perl_set_version() {
 
 fixlocalpod() {
 	debug-print-function $FUNCNAME "$@"
+	eqawarn "perl-modules.eclass: fixlocalpod is deprecated and will be removed. Please use perl_delete_localpod instead."
 	perl_delete_localpod
 }
 
+# @FUNCTION: perl_delete_localpod
+# @USAGE: perl_delete_localpod
+# @DESCRIPTION:
+# Remove stray perllocal.pod files in the temporary install directory D.
+#
+# This function used to be called fixlocalpod as well.
 perl_delete_localpod() {
 	debug-print-function $FUNCNAME "$@"
 

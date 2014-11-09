@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/conmux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/conmux/ChangeLog,v 1.8 2014/07/24 19:42:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/conmux/ChangeLog,v 1.9 2014/11/09 21:37:29 dilfridge Exp $
+
+  09 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  conmux-0.15.1-r3.ebuild:
+  Replace perlinfo with perl_set_version
 
   24 Jul 2014; Markos Chandras <hwoarang@gentoo.org> conmux-0.15.1-r3.ebuild:
   amd64/x86 stable
