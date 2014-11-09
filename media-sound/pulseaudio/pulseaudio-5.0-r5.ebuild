@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r5.ebuild,v 1.2 2014/11/06 21:32:53 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r5.ebuild,v 1.3 2014/11/09 14:58:59 maksbotan Exp $
 
 EAPI="5"
 inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -294,7 +294,7 @@ multilib_src_install_all() {
 			use "$1" && echo "-D$define" || echo "-U$define"
 		}
 
-		unifdef $(use_define avahi) \
+		unifdef $(use_define zeroconf AVAHI) \
 			$(use_define alsa) \
 			$(use_define bluetooth) \
 			$(use_define udev) \
