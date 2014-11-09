@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gprof2dot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.9 2014/11/09 14:53:57 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.10 2014/11/09 20:49:34 sping Exp $
+
+  09 Nov 2014; Sebastian Pipping <sping@gentoo.org>
+  gprof2dot-0_p20130517.ebuild:
+  Remove Python 2.6 target, add Python 3.4 (bug #528714)
 
   09 Nov 2014; Sebastian Pipping <sping@gentoo.org>
   gprof2dot-0_p20130517.ebuild:

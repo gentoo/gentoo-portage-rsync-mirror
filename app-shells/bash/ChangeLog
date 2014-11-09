@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.425 2014/10/20 05:14:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.426 2014/11/09 20:41:28 mgorny Exp $
+
+*bash-4.3_p30-r1 (09 Nov 2014)
+
+  09 Nov 2014; Michał Górny <mgorny@gentoo.org> +bash-4.3_p30-r1.ebuild,
+  +files/bashrc-r1:
+  Introduce support for bashrc.d directory that is sourced in bashrc by default,
+  bug #468094.
 
   20 Oct 2014; Mike Frysinger <vapier@gentoo.org> bash-4.3_p30.ebuild:
   Fix install of examples #525930 by Erik Zeek.
