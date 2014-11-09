@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/waitress/waitress-0.8.9.ebuild,v 1.4 2014/10/18 14:01:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/waitress/waitress-0.8.9.ebuild,v 1.5 2014/11/09 19:37:14 floppym Exp $
 
 EAPI=5
 
@@ -21,12 +21,12 @@ IUSE="doc test"
 RDEPEND=""
 DEPEND="${RDEPEND}
 	app-arch/unzip
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 python_prepare_all() {
 	if use doc; then
 		local PATCHES=( "${FILESDIR}"/${P}-doc.patch )
-		einfo "doc patch applied"
 		mv "${WORKDIR}"/_themes ./docs/ || die
 	fi
 
