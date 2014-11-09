@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.13.0.ebuild,v 1.2 2014/11/03 11:14:37 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.13.0.ebuild,v 1.3 2014/11/09 16:48:12 mrueg Exp $
 
 EAPI=5
 
@@ -60,6 +60,14 @@ RDEPEND="${CDEPEND}
 "
 
 RESTRICT="test"
+
+pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		[[ $(gcc-major-version) -lt 4 ]] || \
+			( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 7 ]] ) \
+			&& die "Sorry, but gcc-4.7 and earlier won't work (see bug #520102)."
+	fi
+}
 
 pkg_setup() {
 	# Set default storage backend in order: MySQL, SQLite PostgreSQL
