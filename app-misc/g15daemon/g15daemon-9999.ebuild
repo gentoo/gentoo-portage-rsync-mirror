@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-9999.ebuild,v 1.2 2013/03/01 23:16:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-9999.ebuild,v 1.3 2014/11/09 11:49:18 zlogene Exp $
 
-EAPI=4
+EAPI=5
 GENTOO_DEPEND_ON_PERL="no"
 PYTHON_DEPEND="python? *"
 SUPPORT_PYTHON_ABIS="1"

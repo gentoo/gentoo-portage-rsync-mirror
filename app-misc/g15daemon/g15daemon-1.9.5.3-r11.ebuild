@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r10.ebuild,v 1.1 2014/08/03 11:23:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r11.ebuild,v 1.1 2014/11/09 11:49:18 zlogene Exp $
 
-EAPI=4
+EAPI=5
 GENTOO_DEPEND_ON_PERL="no"
 PYTHON_DEPEND="python? *"
 SUPPORT_PYTHON_ABIS="1"
@@ -15,11 +15,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="perl python static-libs"
 
 DEPEND="virtual/libusb:0
-	>=dev-libs/libg15-9999
+	>=dev-libs/libg15-1.2.4
 	>=dev-libs/libg15render-1.2
 	perl? (
 		dev-lang/perl
@@ -31,9 +31,7 @@ RDEPEND="${DEPEND}"
 PATCHES=(
 	"${FILESDIR}/${P}-forgotten-open-mode.patch"
 	"${FILESDIR}/${P}-overflow-fix.patch"
-	"${FILESDIR}/${P}-g510-keys.patch"
 )
-
 uinput_check() {
 	ebegin "Checking for uinput support"
 	local rc=1

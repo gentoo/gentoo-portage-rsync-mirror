@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.52 2014/08/03 11:23:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.53 2014/11/09 11:49:18 zlogene Exp $
+
+*g15daemon-1.9.5.3-r11 (09 Nov 2014)
+*g15daemon-1.9.5.3-r12 (09 Nov 2014)
+
+  09 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> +g15daemon-1.9.5.3-r11.ebuild,
+  +g15daemon-1.9.5.3-r12.ebuild, -g15daemon-1.9.5.3-r10.ebuild,
+  -g15daemon-1.9.5.3-r9.ebuild, g15daemon-9999.ebuild:
+  Bump to EAPI=5 (bug #527914)
 
 *g15daemon-1.9.5.3-r10 (03 Aug 2014)
 *g15daemon-1.9.5.3-r9 (03 Aug 2014)
