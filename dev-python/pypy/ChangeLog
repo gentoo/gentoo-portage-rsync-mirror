@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.78 2014/11/05 22:58:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.80 2014/11/08 23:10:10 mgorny Exp $
+
+  08 Nov 2014; Michał Górny <mgorny@gentoo.org>
+  -files/2.0.2-distutils-fix_handling_of_executables_and_flags.patch,
+  -files/2.1-distutils-fix_handling_of_executables_and_flags.patch,
+  -pypy-2.0.2-r1.ebuild, -pypy-2.2.1.ebuild:
+  Drop old.
+
+  08 Nov 2014; Michał Górny <mgorny@gentoo.org> pypy-2.4.0.ebuild:
+  Restore keywords now that pypy-bin packages are built.
 
   05 Nov 2014; Michał Górny <mgorny@gentoo.org> pypy-2.4.0.ebuild:
   Fix whitespace.

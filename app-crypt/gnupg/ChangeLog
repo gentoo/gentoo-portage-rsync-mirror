@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.555 2014/11/06 16:44:04 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.556 2014/11/08 23:19:32 k_f Exp $
+
+  08 Nov 2014; Kristian Fiskerstrand <k_f@gentoo.org> gnupg-2.1.0.ebuild:
+  Bump min requirement to 1.6.2 as a precautionary measure as some users of
+  other distributions have reported issues using Ed25519 with 1.6.1
 
 *gnupg-2.1.0 (06 Nov 2014)
 

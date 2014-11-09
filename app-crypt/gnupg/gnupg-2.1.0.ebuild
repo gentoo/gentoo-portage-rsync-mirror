@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0.ebuild,v 1.1 2014/11/06 16:44:04 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0.ebuild,v 1.2 2014/11/08 23:19:32 k_f Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ IUSE="bzip2 doc +gnutls ldap nls readline static selinux smartcard tools usb"
 COMMON_DEPEND_LIBS="
 	dev-libs/npth
 	>=dev-libs/libassuan-2
-	>=dev-libs/libgcrypt-1.6.1
+	>=dev-libs/libgcrypt-1.6.2
 	>=dev-libs/libgpg-error-1.15
 	>=dev-libs/libksba-1.0.7
 	>=net-misc/curl-7.10
