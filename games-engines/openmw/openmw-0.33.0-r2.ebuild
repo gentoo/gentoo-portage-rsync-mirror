@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/openmw/openmw-0.33.0-r1.ebuild,v 1.1 2014/11/07 23:24:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/openmw/openmw-0.33.0-r2.ebuild,v 1.1 2014/11/08 23:33:48 hasufell Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="doc cdinstall devtools +launcher"
 
 # XXX static build
 RDEPEND=">=dev-games/mygui-3.2.1
-	>=dev-games/ogre-1.9.0[cg,freeimage,ois,opengl,zip]
+	>=dev-games/ogre-1.9.0[freeimage,ois,opengl,zip]
 	>=dev-libs/boost-1.46.0
 	dev-libs/tinyxml
 	>=dev-qt/qtcore-4.7.0:4
