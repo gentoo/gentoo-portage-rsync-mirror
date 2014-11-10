@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pysaml2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysaml2/ChangeLog,v 1.1 2014/11/10 06:09:43 prometheanfire Exp $
+
+*pysaml2-2.1.0 (10 Nov 2014)
+
+  10 Nov 2014; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +pysaml2-2.1.0.ebuild:
+  adding as a dep for openstack
