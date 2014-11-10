@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.4.9999-r1.ebuild,v 1.5 2014/10/28 13:08:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.4.9999-r1.ebuild,v 1.6 2014/11/10 18:09:48 ulm Exp $
 
 EAPI=5
 
@@ -253,6 +253,9 @@ src_install () {
 
 	# remove unused <version>/site-lisp dir
 	rm -rf "${ED}"/usr/share/emacs/${FULL_VERSION}/site-lisp
+
+	# remove COPYING file (except for etc/COPYING used by describe-copying)
+	rm "${ED}"/usr/share/emacs/${FULL_VERSION}/lisp/COPYING
 
 	if use gzip-el; then
 		# compress .el files when a corresponding .elc exists
