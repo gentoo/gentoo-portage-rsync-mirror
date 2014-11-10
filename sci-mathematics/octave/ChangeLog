@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.170 2014/11/06 10:59:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.171 2014/11/10 10:56:54 ago Exp $
+
+  10 Nov 2014; Agostino Sarubbo <ago@gentoo.org> octave-3.8.2.ebuild:
+  Stable for ppc, wrt bug #528002
 
   06 Nov 2014; Jeroen Roovers <jer@gentoo.org> octave-3.8.2.ebuild:
   Stable for HPPA (bug #528002).

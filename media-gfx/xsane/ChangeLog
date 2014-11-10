@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.115 2014/11/04 09:26:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.116 2014/11/10 10:54:01 ago Exp $
+
+  10 Nov 2014; Agostino Sarubbo <ago@gentoo.org> xsane-0.999-r1.ebuild:
+  Stable for ppc, wrt bug #526922
 
   04 Nov 2014; Agostino Sarubbo <ago@gentoo.org> xsane-0.999-r1.ebuild:
   Stable for sparc, wrt bug #526922

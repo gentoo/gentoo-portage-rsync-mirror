@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/ftop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/ftop/ChangeLog,v 1.1 2014/01/30 00:21:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/ftop/ChangeLog,v 1.2 2014/11/10 10:48:17 jer Exp $
+
+  10 Nov 2014; Jeroen Roovers <jer@gentoo.org> +files/ftop-1.0-tinfo.patch,
+  ftop-1.0.ebuild:
+  Fix building against sys-libs/ncurses[tinfo] (bug #528578).
 
 *ftop-1.0 (30 Jan 2014)
 
