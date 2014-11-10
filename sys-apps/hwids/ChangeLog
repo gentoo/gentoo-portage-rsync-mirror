@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.154 2014/10/19 04:49:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.155 2014/11/10 17:00:24 flameeyes Exp $
+
+*hwids-20141110 (10 Nov 2014)
+
+  10 Nov 2014; Diego E. Pettenò <flameeyes@gentoo.org> +hwids-20141110.ebuild,
+  -hwids-20140317.ebuild:
+  Version bump; remove old.
 
   19 Oct 2014; Mike Frysinger <vapier@gentoo.org> hwids-20141010.ebuild:
   Mark alpha/ppc64/sparc stable #524976.
