@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.92 2014/10/20 07:08:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.93 2014/11/10 20:37:57 grobian Exp $
 
 EAPI=5
 
@@ -155,8 +155,8 @@ src_prepare() {
 	fi
 
 	if use prefix && use clang; then
-		sed -e "/^CFLAGS /s@-Werror@-I${EPREFIX}/usr/include@" \
-				-i 'projects/compiler-rt/make/platform/clang_linux.mk' || die
+		sed -i -e "/^CFLAGS /s@-Werror@-I${EPREFIX}/usr/include@" \
+			projects/compiler-rt/make/platform/clang_*.mk || die
 	fi
 
 	local sub_files=(

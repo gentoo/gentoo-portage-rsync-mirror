@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.2.ebuild,v 1.3 2014/09/17 23:29:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.2.ebuild,v 1.4 2014/11/10 20:37:57 grobian Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ PYTHON_COMPAT=( python2_7 pypy )
 WANT_CMAKE=cmake
 
 inherit cmake-utils eutils flag-o-matic multibuild multilib \
-	multilib-minimal python-r1 toolchain-funcs pax-utils check-reqs
+	multilib-minimal python-r1 toolchain-funcs pax-utils check-reqs prefix
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
@@ -22,7 +22,7 @@ SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz
 
 LICENSE="UoI-NCSA"
 SLOT="0/3.4"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="clang debug doc gold +libffi multitarget ncurses ocaml python
 	+static-analyzer test udis86 xml video_cards_radeon
 	kernel_Darwin kernel_FreeBSD"
@@ -179,11 +179,14 @@ src_prepare() {
 		epatch "${FILESDIR}"/clang-3.1-gentoo-runtime-gcc-detection-v3.patch
 
 		epatch "${FILESDIR}"/clang-3.4-gentoo-install.patch
+		epatch "${FILESDIR}"/clang-3.4-darwin_build_fix.patch
+		epatch "${FILESDIR}"/clang-3.4-darwin_prefix-include-paths.patch
+		eprefixify tools/clang/lib/Frontend/InitHeaderSearch.cpp
 	fi
 
 	if use prefix && use clang; then
-		sed -e "/^CFLAGS /s@-Werror@-I${EPREFIX}/usr/include@" \
-				-i 'projects/compiler-rt/make/platform/clang_linux.mk' || die
+		sed -i -e "/^CFLAGS /s@-Werror@-I${EPREFIX}/usr/include@" \
+			projects/compiler-rt/make/platform/clang_*.mk || die
 	fi
 
 	local sub_files=(
@@ -442,11 +445,11 @@ multilib_src_install() {
 
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
-	local lib= f= odylib= libpv=${PV}
+	local lib= f= odylib= ndylib= libpv=${PV}
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		eval $(grep PACKAGE_VERSION= configure)
 		[[ -n ${PACKAGE_VERSION} ]] && libpv=${PACKAGE_VERSION}
-		for lib in lib{EnhancedDisassembly,LLVM-${libpv},LTO,profile_rt,clang}.dylib LLVMHello.dylib ; do
+		for lib in lib{EnhancedDisassembly,LLVM-${libpv},LTO,profile_rt,clang}.dylib LLVMHello.dylib clang/${libpv}/lib/darwin/libclang_rt.asan_osx_dynamic.dylib; do
 			# libEnhancedDisassembly is Darwin10 only, so non-fatal
 			# + omit clang libs if not enabled
 			[[ -f ${ED}/usr/lib/${lib} ]] || continue
@@ -457,21 +460,32 @@ multilib_src_install() {
 				"${ED}"/usr/lib/${lib}
 			eend $?
 		done
-		for f in "${ED}"/usr/bin/* "${ED}"/usr/lib/lib{LTO,clang}.dylib ; do
+		for f in "${ED}"/usr/bin/* "${ED}"/usr/lib/lib*.dylib "${ED}"/usr/lib/clang/${libpv}/lib/darwin/*.dylib ; do
 			# omit clang libs if not enabled
 			[[ -f ${ED}/usr/lib/${lib} ]] || continue
 
-			odylib=$(scanmacho -BF'%n#f' "${f}" | tr ',' '\n' | grep libLLVM-${libpv}.dylib)
-			ebegin "fixing install_name reference to ${odylib} of ${f##*/}"
-			install_name_tool \
-				-change "${odylib}" \
-					"${EPREFIX}"/usr/lib/libLLVM-${libpv}.dylib \
-				-change "@rpath/libclang.dylib" \
-					"${EPREFIX}"/usr/lib/libclang.dylib \
-				-change "${S}"/Release/lib/libclang.dylib \
-					"${EPREFIX}"/usr/lib/libclang.dylib \
-				"${f}"
-			eend $?
+			scanmacho -BF'%n#f' "${f}" | tr ',' '\n' | \
+			while read odylib ; do
+				ndylib=
+				case ${odylib} in
+					*/libclang.dylib)
+						ndylib="${EPREFIX}"/usr/lib/libclang.dylib
+						;;
+					*/libLLVM-${libpv}.dylib)
+						ndylib="${EPREFIX}"/usr/lib/libLLVM-${libpv}.dylib
+						;;
+					*/libLTO.dylib)
+						ndylib="${EPREFIX}"/usr/lib/libLTO.dylib
+						;;
+				esac
+				if [[ -n ${ndylib} ]] ; then
+					ebegin "fixing install_name reference to ${odylib} of ${f##*/}"
+					install_name_tool \
+						-change "${odylib}" "${ndylib}" \
+						"${f}"
+					eend $?
+				fi
+			done
 		done
 	fi
 }

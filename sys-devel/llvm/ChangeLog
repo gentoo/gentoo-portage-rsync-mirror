@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.209 2014/10/20 07:08:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.210 2014/11/10 20:37:57 grobian Exp $
+
+  10 Nov 2014; Fabian Groffen <grobian@gentoo.org> llvm-3.4.2.ebuild,
+  llvm-3.5.0.ebuild, llvm-9999.ebuild, +files/clang-3.4-darwin_build_fix.patch,
+  +files/clang-3.4-darwin_prefix-include-paths.patch:
+  Make clang 3.4.2 find Prefix headers on Darwin
 
   20 Oct 2014; Michał Górny <mgorny@gentoo.org> llvm-3.5.0.ebuild,
   llvm-9999.ebuild:

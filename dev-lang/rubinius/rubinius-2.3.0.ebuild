@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-2.3.0.ebuild,v 1.1 2014/11/04 19:09:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-2.3.0.ebuild,v 1.2 2014/11/10 20:55:40 graaff Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib versionator
@@ -61,7 +61,7 @@ src_configure() {
 }
 
 src_compile() {
-	rake build || die "Compilation failed"
+	RBXOPT="-Xsystem.log=/dev/null" rake build || die "Compilation failed"
 }
 
 src_test() {
@@ -76,11 +76,11 @@ src_install() {
 	local minor_version=$(get_version_component_range 1-2)
 	local librbx="usr/$(get_libdir)/rubinius"
 
-	DESTDIR="${D}" rake install || die "Installation failed"
+	RBXOPT="-Xsystem.log=/dev/null" DESTDIR="${D}" rake install || die "Installation failed"
 
 	dosym /${librbx}/${minor_version}/bin/rbx /usr/bin/rbx || die "Couldn't make rbx symlink"
 
 	insinto /${librbx}/${minor_version}/site
 	doins "${FILESDIR}/auto_gem.rb" || die "Couldn't install rbx auto_gem.rb"
-	RBX_RUNTIME="${S}/runtime" RBX_LIB="${S}/lib" bin/rbx compile "${D}/${librbx}/${minor_version}/site/auto_gem.rb" || die "Couldn't bytecompile auto_gem.rb"
+	RBXOPT="-Xsystem.log=/dev/null" RBX_RUNTIME="${S}/runtime" RBX_LIB="${S}/lib" bin/rbx compile "${D}/${librbx}/${minor_version}/site/auto_gem.rb" || die "Couldn't bytecompile auto_gem.rb"
 }
