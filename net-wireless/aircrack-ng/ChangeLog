@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.88 2014/11/03 17:53:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.89 2014/11/10 13:44:01 ago Exp $
+
+  10 Nov 2014; Agostino Sarubbo <ago@gentoo.org> aircrack-ng-1.2_rc1.ebuild:
+  Stable for ppc, wrt bug #528132
 
   03 Nov 2014; Rick Farina <zerochaos@gentoo.org> aircrack-ng-1.2_rc1.ebuild:
   Stable for arm, wrt bug #528132

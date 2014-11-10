@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_rc1.ebuild,v 1.4 2014/11/03 17:53:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_rc1.ebuild,v 1.5 2014/11/10 13:44:01 ago Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_PV=${PV/_/-}
 	SRC_URI="http://download.${PN}.org/${PN}-${MY_PV}.tar.gz"
-	KEYWORDS="amd64 arm ~ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 arm ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 	S="${WORKDIR}/${PN}-${MY_PV}"
 fi
 

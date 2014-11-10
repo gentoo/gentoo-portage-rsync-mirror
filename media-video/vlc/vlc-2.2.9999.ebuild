@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.9999.ebuild,v 1.1 2014/11/10 08:42:52 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.9999.ebuild,v 1.2 2014/11/10 13:44:44 dlan Exp $
 
 EAPI="5"
 
@@ -156,7 +156,7 @@ RDEPEND="${RDEPEND}
 		vpx? ( media-libs/libvpx:0 )
 		X? ( x11-libs/libX11:0 )
 		x264? ( >=media-libs/x264-0.0.20090923:0= )
-		x264? ( media-libs/x265:0= )
+		x265? ( media-libs/x265:0= )
 		xcb? ( >=x11-libs/libxcb-1.6:0 >=x11-libs/xcb-util-0.3.4:0 >=x11-libs/xcb-util-keysyms-0.3.4:0 )
 		xml? ( >=dev-libs/libxml2-2.5:2 )
 		zvbi? ( >=media-libs/zvbi-0.2.25:0 )

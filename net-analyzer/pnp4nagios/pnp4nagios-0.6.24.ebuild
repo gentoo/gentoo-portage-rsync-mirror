@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.24.ebuild,v 1.3 2014/10/27 14:17:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.24.ebuild,v 1.5 2014/11/10 13:51:44 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/PNP-0.6/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 
 DEPEND="
 	dev-lang/php[json,simplexml,zlib,xml,filter]

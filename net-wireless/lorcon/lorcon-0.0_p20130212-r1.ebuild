@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/lorcon/lorcon-0.0_p20130212-r1.ebuild,v 1.4 2014/11/03 17:53:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/lorcon/lorcon-0.0_p20130212-r1.ebuild,v 1.5 2014/11/10 13:44:06 ago Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://dev.gentoo.org/~zerochaos/distfiles/${P}.tar.xz"
-	KEYWORDS="amd64 arm ~ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 arm ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 fi
 
 LICENSE="GPL-2"
