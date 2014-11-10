@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pa_bench
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pa_bench/ChangeLog,v 1.2 2014/01/19 13:56:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pa_bench/ChangeLog,v 1.3 2014/11/10 07:31:05 aballier Exp $
+
+*pa_bench-111.28.00 (10 Nov 2014)
+
+  10 Nov 2014; Alexis Ballier <aballier@gentoo.org> +pa_bench-111.28.00.ebuild:
+  version bump
 
   19 Jan 2014; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   drop copy/pasted longdesc in metadata.xml

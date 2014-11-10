@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/oslo-db
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-db/ChangeLog,v 1.1 2014/11/10 07:07:19 prometheanfire Exp $
+
+*oslo-db-1.0.2 (10 Nov 2014)
+
+  10 Nov 2014; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +oslo-db-1.0.2.ebuild:
+  adding for juno
