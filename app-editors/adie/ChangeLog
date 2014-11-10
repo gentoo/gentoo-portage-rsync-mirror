@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/adie
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.47 2014/07/04 21:03:25 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.48 2014/11/10 22:06:35 mabi Exp $
+
+*adie-1.6.49 (10 Nov 2014)
+
+  10 Nov 2014; Matti Bickel <mabi@gentoo.org> +adie-1.6.49.ebuild:
+  update to EAPI5, needs a revbump and since fox.eclass ties version numbers,
+  this also updates the fox package used to 1.6.49
 
 *adie-1.7.47 (04 Jul 2014)
 

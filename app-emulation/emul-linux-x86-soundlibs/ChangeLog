@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.128 2014/11/06 21:52:12 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.129 2014/11/10 22:23:12 axs Exp $
+
+*emul-linux-x86-soundlibs-20140508-r1 (10 Nov 2014)
+
+  10 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +emul-linux-x86-soundlibs-20140508-r1.ebuild:
+  ensure the ebuild does not install pulseaudio libs when USE=-pulseaudio
 
   06 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   emul-linux-x86-soundlibs-20131008-r2.ebuild,

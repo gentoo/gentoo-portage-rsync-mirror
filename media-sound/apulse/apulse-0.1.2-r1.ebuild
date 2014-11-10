@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/apulse-0.1.2.ebuild,v 1.1 2014/10/14 20:40:51 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/apulse-0.1.2-r1.ebuild,v 1.1 2014/11/10 22:26:38 axs Exp $
 
 EAPI=5
 
@@ -15,11 +15,20 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="
-	media-libs/alsa-lib[${MULTILIB_USEDEP}]
-	dev-libs/glib:2[${MULTILIB_USEDEP}]
-	!app-emulation/emul-linux-x86-soundlibs
+DEPEND="media-libs/alsa-lib
+	dev-libs/glib:2
+	!<app-emulation/emul-linux-x86-soundlibs-20140508-r1
+	!app-emulation/emul-linux-x86-soundlibs[pulseaudio]
 	!media-sound/pulseaudio
+	amd64? ( abi_x86_32? ( || (
+			media-libs/alsa-lib[abi_x86_32(-)]
+			>=app-emulation/emul-linux-x86-soundlibs-20140508-r1[-abi_x86_32(-),-pulseaudio]
+		)
+		|| (
+			dev-libs/glib:2[abi_x86_32(-)]
+			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+		)
+	) )
 "
 RDEPEND="${DEPEND}"
 
