@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/bashate
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bashate/ChangeLog,v 1.1 2014/11/10 05:22:44 prometheanfire Exp $
+
+*bashate-0.3.1 (10 Nov 2014)
+
+  10 Nov 2014; Matthew Thode <prometheanfire@gentoo.org> +bashate-0.3.1.ebuild,
+  +metadata.xml:
+  adding as a dep for openstack
