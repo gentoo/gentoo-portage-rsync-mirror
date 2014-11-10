@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ttfunk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.18 2014/10/10 21:57:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.19 2014/11/10 15:59:07 mrueg Exp $
+
+  10 Nov 2014; Manuel Rüger <mrueg@gentoo.org> ttfunk-1.0.3-r1.ebuild,
+  ttfunk-1.1.1.ebuild, ttfunk-1.2.0.ebuild, ttfunk-1.2.1.ebuild,
+  ttfunk-1.4.0.ebuild:
+  Drop jruby target.
 
   10 Oct 2014; Manuel Rüger <mrueg@gentoo.org> ttfunk-1.0.3-r1.ebuild,
   ttfunk-1.1.1.ebuild:

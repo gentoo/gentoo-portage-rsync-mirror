@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack-mount
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.31 2014/08/05 16:00:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.32 2014/11/10 15:55:20 mrueg Exp $
+
+  10 Nov 2014; Manuel Rüger <mrueg@gentoo.org> rack-mount-0.8.3-r1.ebuild,
+  rack-mount-0.8.3-r2.ebuild:
+  Drop jruby target.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> rack-mount-0.8.3-r1.ebuild,
   rack-mount-0.8.3-r2.ebuild:
