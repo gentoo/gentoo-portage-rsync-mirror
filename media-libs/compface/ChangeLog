@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/compface
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.49 2012/06/02 14:06:13 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.50 2014/11/10 08:28:07 jer Exp $
+
+  10 Nov 2014; Jeroen Roovers <jer@gentoo.org> compface-1.5.2.ebuild:
+  Stable for HPPA (bug #528710).
 
   02 Jun 2012; Alexis Ballier <aballier@gentoo.org> compface-1.5.2.ebuild:
   keyword ~amd64-fbsd

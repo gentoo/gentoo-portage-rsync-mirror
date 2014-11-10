@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/ecb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.55 2012/09/29 07:49:04 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.56 2014/11/10 08:21:22 ulm Exp $
+
+*ecb-2.41_pre20140215 (10 Nov 2014)
+
+  10 Nov 2014; Ulrich Müller <ulm@gentoo.org> +ecb-2.41_pre20140215.ebuild:
+  Git snapshot, fixes build failure with the CEDET included in Emacs 24.
+  For lack of activity of the official upstream, we add a snapshot of the fork
+  at https://github.com/alexott/ecb.git by Alex Ott. Bug 491720.
 
   29 Sep 2012; Ulrich Müller <ulm@gentoo.org> -ecb-2.40-r1.ebuild,
   ecb-2.40-r2.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/typerep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/typerep/ChangeLog,v 1.1 2014/01/19 13:57:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/typerep/ChangeLog,v 1.2 2014/11/10 08:29:07 aballier Exp $
+
+*typerep-111.17.00 (10 Nov 2014)
+
+  10 Nov 2014; Alexis Ballier <aballier@gentoo.org> +typerep-111.17.00.ebuild:
+  version bump
 
 *typerep-109.55.02 (19 Jan 2014)
 
