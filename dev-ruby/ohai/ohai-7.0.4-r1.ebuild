@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ohai-7.0.4.ebuild,v 1.1 2014/07/22 06:20:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ohai-7.0.4-r1.ebuild,v 1.1 2014/11/10 19:21:36 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -20,6 +20,8 @@ LICENSE="Apache-2.0"
 SLOT="$(get_version_component_range 1-2)"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+RDEPEND+="!!<dev-ruby/ohai-6.22.0-r1"
 
 ruby_add_rdepend "
 	>=dev-ruby/mime-types-1.16:0

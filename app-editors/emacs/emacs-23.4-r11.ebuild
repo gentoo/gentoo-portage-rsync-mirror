@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r11.ebuild,v 1.12 2014/10/28 13:03:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r11.ebuild,v 1.13 2014/11/10 19:15:00 ulm Exp $
 
 EAPI=5
 WANT_AUTOMAKE="none"
@@ -242,6 +242,9 @@ src_install () {
 
 	# remove unused <version>/site-lisp dir
 	rm -rf "${ED}"/usr/share/emacs/${FULL_VERSION}/site-lisp
+
+	# remove COPYING file (except for etc/COPYING used by describe-copying)
+	rm "${ED}"/usr/share/emacs/${FULL_VERSION}/lisp/COPYING
 
 	local cdir
 	if use source; then

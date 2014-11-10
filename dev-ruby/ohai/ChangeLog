@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/ohai
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.22 2014/07/22 06:20:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.24 2014/11/10 19:21:36 graaff Exp $
+
+*ohai-7.0.4-r1 (10 Nov 2014)
+*ohai-6.22.0-r1 (10 Nov 2014)
+
+  10 Nov 2014; Hans de Graaff <graaff@gentoo.org> +ohai-6.22.0-r1.ebuild,
+  -ohai-7.0.4.ebuild, +ohai-7.0.4-r1.ebuild:
+  Add new revisions to allow slot 0 and slot 7.0 to be installed at the same
+  time, fixing bug 527670.
+
+  10 Nov 2014; Hans de Graaff <graaff@gentoo.org> -ohai-6.18.0.ebuild:
+  Cleanup.
 
 *ohai-7.0.4 (22 Jul 2014)
 
