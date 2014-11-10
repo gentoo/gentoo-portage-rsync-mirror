@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-1.36.ebuild,v 1.6 2014/08/10 20:59:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-1.36.ebuild,v 1.7 2014/11/09 23:30:53 patrick Exp $
 
 DESCRIPTION="Web Server vulnerability scanner"
 HOMEPAGE="http://www.cirt.net/Nikto2"
@@ -29,7 +29,7 @@ src_compile() {
 		-i -e 's:# PLUGINDIR=/usr/local/nikto/plugins:PLUGINDIR=/usr/share/nikto/plugins:' \
 		 nikto.conf
 
-		 cp ${S}/docs/nikto-${PV}.man ${WORKDIR}/${PN}.1
+		 cp "${S}/docs/nikto-${PV}.man" "${WORKDIR}/${PN}.1"
 }
 
 src_install() {
@@ -47,5 +47,5 @@ src_install() {
 	cd docs
 	dodoc CHANGES.txt LICENSE.txt README_plugins.txt nikto_usage.txt
 	dohtml nikto_usage.html
-	doman ${WORKDIR}/${PN}.1
+	doman "${WORKDIR}/${PN}.1"
 }
