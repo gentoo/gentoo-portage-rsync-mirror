@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/libu2f-host
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.7 2014/11/10 02:24:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.8 2014/11/10 17:01:14 flameeyes Exp $
+
+*libu2f-host-0.0.1-r2 (10 Nov 2014)
+
+  10 Nov 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libu2f-host-0.0.1-r2.ebuild, -libu2f-host-0.0.1-r1.ebuild:
+  Thanks to BT to point out I broke the base rules, bug #528792.
 
 *libu2f-host-0.0.1-r1 (10 Nov 2014)
 

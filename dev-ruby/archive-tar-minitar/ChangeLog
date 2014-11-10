@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/archive-tar-minitar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.53 2014/08/05 16:00:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.54 2014/11/10 17:07:58 mrueg Exp $
+
+  10 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  archive-tar-minitar-0.5.4-r1.ebuild, archive-tar-minitar-0.5.4.ebuild:
+  Drop jruby target.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org>
   archive-tar-minitar-0.5.4-r1.ebuild, archive-tar-minitar-0.5.4.ebuild:

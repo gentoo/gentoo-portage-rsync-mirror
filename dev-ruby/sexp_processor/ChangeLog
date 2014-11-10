@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/sexp_processor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/ChangeLog,v 1.36 2014/08/20 13:04:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/ChangeLog,v 1.37 2014/11/10 17:10:24 mrueg Exp $
+
+  10 Nov 2014; Manuel Rüger <mrueg@gentoo.org> sexp_processor-3.2.0-r1.ebuild,
+  sexp_processor-3.2.0.ebuild, sexp_processor-4.2.1.ebuild,
+  sexp_processor-4.4.3-r1.ebuild, sexp_processor-4.4.3.ebuild,
+  sexp_processor-4.4.4.ebuild:
+  Drop jruby target.
 
 *sexp_processor-4.4.4 (20 Aug 2014)
 
