@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.65 2014/11/10 10:44:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.66 2014/11/10 13:10:39 mrueg Exp $
+
+  10 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -hoe-seattlerb-1.2.8.ebuild:
+  Cleanup old.
 
   10 Nov 2014; Agostino Sarubbo <ago@gentoo.org> hoe-seattlerb-1.3.2-r1.ebuild:
   Stable for ppc64, wrt bug #490180
