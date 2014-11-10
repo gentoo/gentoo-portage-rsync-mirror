@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/osm2pgsql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.14 2014/11/03 13:56:03 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.15 2014/11/10 09:49:26 patrick Exp $
+
+*osm2pgsql-0.86.0 (10 Nov 2014)
+
+  10 Nov 2014; Patrick Lauer <patrick@gentoo.org> +osm2pgsql-0.86.0.ebuild:
+  Bump
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   osm2pgsql-0.84.0.ebuild, osm2pgsql-99999999.ebuild:
@@ -68,4 +73,3 @@
   08 Jul 2009; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
   +osm2pgsql-20090707.ebuild:
   New package. Bug #261822 by : renato gallo
-
