@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.108 2014/06/10 00:41:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.109 2014/11/10 19:35:40 grobian Exp $
+
+  10 Nov 2014; Fabian Groffen <grobian@gentoo.org> nettle-2.7.1-r1.ebuild:
+  Fix for static-only platforms, such as FreeMiNT, bug #528794
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> nettle-2.7.1-r1.ebuild,
   nettle-2.7.1.ebuild:
