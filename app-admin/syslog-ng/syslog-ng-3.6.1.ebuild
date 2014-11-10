@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.6.1.ebuild,v 1.1 2014/11/09 08:10:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.6.1.ebuild,v 1.2 2014/11/10 16:06:09 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils multilib systemd versionator
@@ -88,7 +88,7 @@ src_install() {
 	# -j1 for bug #484470
 	emake -j1 DESTDIR="${D}" install
 
-	dodoc AUTHORS NEWS.md CONTRIBUTING.md contrib/syslog-ng.conf*
+	dodoc AUTHORS NEWS.md CONTRIBUTING.md contrib/syslog-ng.conf* \
 		contrib/syslog2ng "${FILESDIR}/${MY_PV_MM}/syslog-ng.conf.gentoo.hardened" \
 		"${TMPDIR}/syslog-ng.logrotate.hardened" "${FILESDIR}/README.hardened"
 
@@ -111,7 +111,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "For detailed documentation please see the upstream website:"
-	elog "http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/index.html"
+	elog "http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.6-guides/en/syslog-ng-ose-v3.6-guide-admin/html/index.html"
 
 	# bug #355257
 	if ! has_version app-admin/logrotate ; then
