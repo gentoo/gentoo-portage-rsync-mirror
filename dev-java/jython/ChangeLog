@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.95 2014/10/10 18:54:25 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.96 2014/11/10 04:27:09 patrick Exp $
+
+*jython-2.7_beta3 (10 Nov 2014)
+
+  10 Nov 2014; Patrick Lauer <patrick@gentoo.org> +jython-2.7_beta3.ebuild:
+  Bump
 
 *jython-2.7_beta2-r2 (10 Oct 2014)
 
