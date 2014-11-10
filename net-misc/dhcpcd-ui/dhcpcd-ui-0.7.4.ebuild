@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd-ui/dhcpcd-ui-0.7.4.ebuild,v 1.1 2014/11/09 11:20:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd-ui/dhcpcd-ui-0.7.4.ebuild,v 1.2 2014/11/10 20:09:55 hwoarang Exp $
 
 EAPI=5
 
@@ -46,6 +46,7 @@ src_configure()
 		$(usex gtk3 '--with-gtk=gtk+-3.0' '')
 		$(use_with qt4 qt)
 		$(use_enable libnotify notification)
+		$(use gtk || use gtk3 || echo '--without-gtk')
 	)
 	econf "${myeconfargs[@]}"
 }

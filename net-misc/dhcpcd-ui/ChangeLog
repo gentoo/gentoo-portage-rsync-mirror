@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd-ui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd-ui/ChangeLog,v 1.8 2014/11/09 11:20:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd-ui/ChangeLog,v 1.9 2014/11/10 20:09:55 hwoarang Exp $
+
+  10 Nov 2014; Markos Chandras <hwoarang@gentoo.org> dhcpcd-ui-0.7.4.ebuild:
+  Remove the gtk desktop file when compiled with Qt4 support. Bug #528728
 
 *dhcpcd-ui-0.7.4 (09 Nov 2014)
 
