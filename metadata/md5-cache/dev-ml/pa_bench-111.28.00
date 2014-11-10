@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=dev-ml/type-conv-109:= dev-ml/pa_ounit:= >=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12:=[ocamlopt?]
+DESCRIPTION=Syntax extension writing inline benchmarks
+EAPI=5
+HOMEPAGE=http://www.janestreet.com/ocaml
+IUSE=+ocamlopt debug
+KEYWORDS=~amd64
+LICENSE=LGPL-2.1-with-linking-exception
+RDEPEND=>=dev-ml/type-conv-109:= dev-ml/pa_ounit:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
+SLOT=0/111.28.00
+SRC_URI=http://ocaml.janestreet.com/ocaml-core/111.28.00/individual/pa_bench-111.28.00.tar.gz http://dev.gentoo.org/~aballier/distfiles/pa_bench-111.28.00.tar.gz
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	c91a1ac3fefc6b077094fb2e82c65af4	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=f34a954abe49d8f2d6b895cd954a10ef
