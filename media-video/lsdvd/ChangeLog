@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lsdvd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.48 2014/10/17 22:16:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.49 2014/11/10 11:18:58 ago Exp $
+
+  10 Nov 2014; Agostino Sarubbo <ago@gentoo.org> lsdvd-0.17.ebuild:
+  Stable for amd64, wrt bug #528262
 
 *lsdvd-0.17 (17 Oct 2014)
 
@@ -183,4 +186,3 @@
 
   05 Mar 2003; Graham Forest <vladimir@gentoo.org> lsdvd-0.6.ebuild:
   Initial import
-

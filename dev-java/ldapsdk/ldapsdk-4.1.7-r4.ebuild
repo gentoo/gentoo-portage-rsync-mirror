@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ldapsdk-4.1.7-r4.ebuild,v 1.1 2014/06/21 06:58:30 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ldapsdk-4.1.7-r4.ebuild,v 1.2 2014/11/10 11:19:18 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.mozilla.org/directory/${PN}_java_20020819.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="4.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc"
 
 RDEPEND=">=virtual/jre-1.4

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/blassic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.32 2014/07/04 08:29:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.33 2014/11/10 11:07:43 jer Exp $
+
+  10 Nov 2014; Jeroen Roovers <jer@gentoo.org> blassic-0.10.2.ebuild,
+  +files/blassic-0.10.2-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #527112).
 
   04 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> blassic-0.10.2.ebuild:
   EAPI=5; simplify
