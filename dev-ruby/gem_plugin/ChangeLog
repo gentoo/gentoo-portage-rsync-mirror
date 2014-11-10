@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gem_plugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/ChangeLog,v 1.43 2014/08/05 16:00:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/ChangeLog,v 1.44 2014/11/10 17:35:21 mrueg Exp $
+
+  10 Nov 2014; Manuel Rüger <mrueg@gentoo.org> gem_plugin-0.2.3-r2.ebuild,
+  gem_plugin-0.2.3-r3.ebuild:
+  Drop jruby target.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> gem_plugin-0.2.3-r2.ebuild,
   gem_plugin-0.2.3-r3.ebuild:

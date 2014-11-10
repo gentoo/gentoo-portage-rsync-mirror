@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/yubikey-neo-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/yubikey-neo-manager/ChangeLog,v 1.4 2014/11/05 16:23:58 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/yubikey-neo-manager/ChangeLog,v 1.5 2014/11/10 17:47:10 flameeyes Exp $
+
+*yubikey-neo-manager-0.2.5-r1 (10 Nov 2014)
+
+  10 Nov 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  +yubikey-neo-manager-0.2.5-r1.ebuild, -yubikey-neo-manager-0.2.3.ebuild,
+  -yubikey-neo-manager-0.2.4.ebuild, -yubikey-neo-manager-0.2.5.ebuild:
+  Install the .desktop file and icons. Thanks to BT in bug #528552.
 
 *yubikey-neo-manager-0.2.5 (05 Nov 2014)
 
