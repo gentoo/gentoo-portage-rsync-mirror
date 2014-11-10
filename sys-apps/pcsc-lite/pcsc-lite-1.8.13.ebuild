@@ -1,15 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.11-r1.ebuild,v 1.3 2014/11/02 09:56:06 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.13.ebuild,v 1.1 2014/11/10 01:59:01 flameeyes Exp $
 
 EAPI="5"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils multilib systemd udev user autotools
+inherit autotools eutils python-single-r1 multilib systemd udev user
 
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://pcsclite.alioth.debian.org/"
 
-STUPID_NUM="3991"
+STUPID_NUM="4126"
 MY_P="${PN}-${PV/_/-}"
 SRC_URI="http://alioth.debian.org/download.php/file/${STUPID_NUM}/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
@@ -27,7 +28,8 @@ IUSE="libusb policykit selinux +udev"
 
 REQUIRED_USE="^^ ( udev libusb )"
 
-CDEPEND="libusb? ( virtual/libusb:1 )
+CDEPEND="${PYTHON_DEPS}
+	libusb? ( virtual/libusb:1 )
 	udev? ( virtual/udev )
 	policykit? ( >=sys-auth/polkit-0.111 )"
 DEPEND="${CDEPEND}
@@ -40,14 +42,15 @@ RDEPEND="${CDEPEND}
 "
 
 pkg_setup() {
+	python-single-r1_pkg_setup
+
 	enewgroup openct # make sure it exists
 	enewgroup pcscd
 	enewuser pcscd -1 -1 /run/pcscd pcscd,openct
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-polkit-pcscd.patch
-	epatch "${FILESDIR}"/${P}-nopolkit.patch
+	epatch "${FILESDIR}"/${PN}-1.8.11-polkit-pcscd.patch
 
 	eautoreconf
 }
@@ -77,6 +80,8 @@ src_install() {
 		insinto "$(get_udevdir)"/rules.d
 		doins "${FILESDIR}"/99-pcscd-hotplug.rules
 	fi
+
+	python_fix_shebang "${ED}/usr/bin"
 }
 
 pkg_postinst() {
