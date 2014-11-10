@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.54 2014/11/09 08:02:06 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.55 2014/11/10 22:49:18 dilfridge Exp $
+
+  10 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  atheme-services-6.0.11-r1.ebuild, atheme-services-7.0.6-r1.ebuild,
+  atheme-services-9999.ebuild:
+  Replace perlinfo with perl_set_version
 
 *atheme-services-6.0.11-r1 (09 Nov 2014)
 *atheme-services-7.0.6-r1 (09 Nov 2014)

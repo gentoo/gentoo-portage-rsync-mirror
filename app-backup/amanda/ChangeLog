@@ -1,6 +1,10 @@
 # ChangeLog for app-backup/amanda
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.112 2014/06/23 15:49:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.113 2014/11/10 22:47:35 dilfridge Exp $
+
+  10 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> amanda-3.3.3.ebuild,
+  amanda-3.3.3-r1.ebuild, amanda-3.3.5.ebuild:
+  Replace perlinfo with perl_set_version
 
 *amanda-3.3.5 (23 Jun 2014)
 

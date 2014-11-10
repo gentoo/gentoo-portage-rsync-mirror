@@ -9,4 +9,4 @@ RDEPEND=dev-perl/Text-Iconv dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://sourceforge/pisg/pisg-0.73.tar.gz
 _eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f170b6d2685f45ea3efaef2ff5fb5384	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=701bf84f3e3085da19e63563f2af0994
+_md5_=5e2c2fe3966e6693b50d53d5f9d060b4

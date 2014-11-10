@@ -1,6 +1,13 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.164 2014/10/08 19:48:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.165 2014/11/10 22:39:17 axs Exp $
+
+*skype-4.3.0.37-r2 (10 Nov 2014)
+
+  10 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +skype-4.3.0.37-r2.ebuild, -skype-4.3.0.37-r1.ebuild:
+  adjusted deps related to emul-*-soundlibs and apulse for better amd64-stable
+  compatibility
 
   08 Oct 2014; Ulrich Müller <ulm@gentoo.org> skype-4.3.0.37-r1.ebuild:
   USE-conditional depend on apulse only for multilib soundlibs, bug 524164
