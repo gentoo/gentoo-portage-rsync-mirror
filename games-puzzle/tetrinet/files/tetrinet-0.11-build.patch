@@ -1,6 +1,5 @@
-diff -ru tetrinet-0.11.orig/Makefile tetrinet-0.11/Makefile
---- tetrinet-0.11.orig/Makefile	2003-09-07 12:29:29.000000000 -0400
-+++ tetrinet-0.11/Makefile	2010-07-14 13:23:52.526003482 -0400
+--- a/Makefile
++++ b/Makefile
 @@ -1,6 +1,4 @@
 -CC = cc
 -
@@ -14,7 +13,7 @@ diff -ru tetrinet-0.11.orig/Makefile tetrinet-0.11/Makefile
  
  tetrinet: $(OBJS)
 -	$(CC) -o $@ $(OBJS) -lncurses
-+	$(CC) $(LDFLAGS) -o $@ $(OBJS) -lncurses
++	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(shell ${PKG_CONFIG} --libs ncurses)
  
  tetrinet-server: server.c sockets.c tetrinet.c tetris.c server.h sockets.h tetrinet.h tetris.h
 -	$(CC) $(CFLAGS) -o $@ -DSERVER_ONLY server.c sockets.c tetrinet.c tetris.c
@@ -22,9 +21,8 @@ diff -ru tetrinet-0.11.orig/Makefile tetrinet-0.11/Makefile
  
  .c.o:
  	$(CC) $(CFLAGS) -c $<
-diff -ru tetrinet-0.11.orig/sockets.c tetrinet-0.11/sockets.c
---- tetrinet-0.11.orig/sockets.c	2003-09-09 15:15:04.000000000 -0400
-+++ tetrinet-0.11/sockets.c	2010-07-14 13:18:28.999213319 -0400
+--- a/sockets.c
++++ b/sockets.c
 @@ -66,7 +66,7 @@
      if (c == 0xFF)
  	ptr--;
@@ -43,9 +41,8 @@ diff -ru tetrinet-0.11.orig/sockets.c tetrinet-0.11/sockets.c
  	if (!logfile)
  	    logfile = fopen(logname, "a");
  	if (logfile) {
-diff -ru tetrinet-0.11.orig/tetrinet.c tetrinet-0.11/tetrinet.c
---- tetrinet-0.11.orig/tetrinet.c	2003-09-07 12:29:29.000000000 -0400
-+++ tetrinet-0.11/tetrinet.c	2010-07-14 13:22:33.529265565 -0400
+--- a/tetrinet.c
++++ b/tetrinet.c
 @@ -21,7 +21,7 @@
  /*************************************************************************/
  
@@ -74,9 +71,8 @@ diff -ru tetrinet-0.11.orig/tetrinet.c tetrinet-0.11/tetrinet.c
  		i++;
  		if (i >= ac) {
  		    fprintf(stderr, "Option -log requires an argument\n");
-diff -ru tetrinet-0.11.orig/tetrinet.h tetrinet-0.11/tetrinet.h
---- tetrinet-0.11.orig/tetrinet.h	2003-09-07 12:12:51.000000000 -0400
-+++ tetrinet-0.11/tetrinet.h	2010-07-14 13:18:20.061828023 -0400
+--- a/tetrinet.h
++++ b/tetrinet.h
 @@ -74,7 +74,7 @@
  /* Externs */
  

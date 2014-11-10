@@ -22,14 +22,11 @@
 		<flag name="chromaprint">Enables libchromaprint for Chromaprint based audio fingerprinter support.</flag>
 		<flag name="dc1394">Enables IIDC cameras support.</flag>
 		<flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
-		<flag name="direct2d">Enable Win7/VistaPU Direct2D support.</flag>
 		<flag name="directx">Enable Win32 DirectX support.</flag>
-		<flag name="dshow">Enables Win32 DirectShow support.</flag>
 		<flag name="dvbpsi">Enables support for Mpeg-TS files (.ts, .m2ts, .mts) via <pkg>media-libs/libdvbpsi</pkg>.</flag>
 		<flag name="dxva2">Enables Win32 DxVA2 support.</flag>
 		<flag name="egl">Enables EGL video output module.</flag>
 		<flag name="faad">Enable AAC audio decoding library support via media-libs/faad2.</flag>
-		<flag name="fbosd">Enables the framebuffer overlay plugin.</flag>
 		<flag name="fdk">Enables the Fraunhofer AAC codec library.</flag>
 		<flag name="fluidsynth">Enables Fluidsynth MIDI software synthesis (with external sound fonts).</flag>
 		<flag name="gcrypt">Enables cryptography support via libgcrypt.</flag>
@@ -39,7 +36,6 @@
 		<flag name="httpd">Enables a web based interface for vlc.</flag>
 		<flag name="ios-vout">Enables iPhone OS video output.</flag>
 		<flag name="kate">Adds support for Ogg Kate subtitles via libkate.</flag>
-		<flag name="libproxy">Enables support for proxy settings in the HTTP access module.</flag>
 		<flag name="libtar">Uses libtar instead of the built-in tar reader for reading custom skins.</flag>
 		<flag name="libtiger">Enables Ogg Kate subtitles rendering using libtiger.</flag>
 		<flag name="linsys">Enables support for Linux Linear Systems Ltd. SDI and HD-SDI input cards.</flag>
@@ -60,7 +56,6 @@
 		<flag name="opus">Support opus decoding via libopus.</flag>
 		<flag name="postproc">Enables image post-processing via libpostproc (part of FFmpeg).</flag>
 		<flag name="projectm">Enables the projectM visualization plugin.</flag>
-		<flag name="pvr">Enables PVR cards access module.</flag>
 		<flag name="qt4" restrict="&gt;=media-video/vlc-0.9">Builds a <pkg>x11-libs/qt</pkg> based frontend, a graphical interface.</flag>
 		<flag name="rdp">Enables freerdp for RDP/Remote Desktop client support</flag>
 		<flag name="rtsp">Enables real audio and RTSP modules.</flag>
@@ -69,24 +64,20 @@
 		<flag name="sid">Adds support for playing C64 SID files through <pkg>media-libs/libsidplay-2</pkg>.</flag>
 		<flag name="sdl-image">Enables sdl image video decoder (depends on sdl)</flag>
 		<flag name="sftp">Enables libssh2 to support SFTP file transfer.</flag>
-		<flag name="shine">Enables shine fixed point mp3 encoder.</flag>
 		<flag name="shout">Enables libshout output.</flag>
 		<flag name="skins">Enables support for the skins2 interface.</flag>
-		<flag name="switcher">Enables MPEG2 video switcher stream output module.</flag>
 		<flag name="swscale">Enables image scaling and conversion via libswscale (part of FFmpeg).</flag>
 		<flag name="tremor">Enables tremor, a fixed-point version of the Ogg Vorbis decoder.</flag>
 		<flag name="twolame">Enables twolame support (MPEG Audio Layer 2 encoder).</flag>
 		<flag name="upnp">Enables support for the Intel SDK stack based UPnP discovery module instead of CyberLink.</flag>
 		<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
 		<flag name="vcdx">Enables VCD with navigation via libvcdinfo (depends on cdio)</flag>
-		<flag name="visual">Enables a libvisual based visualization plugin.</flag>
 		<flag name="vlm">New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.</flag>
 		<flag name="vpx">Enables the decoder(s) from the WebM VP8 / VP9 Codec SDK.</flag>
-		<flag name="waveout">Enable win32 waveOut plugin.</flag>
-		<flag name="wingdi">Enable Win32 GDI module.</flag>
 		<flag name="wma-fixed">Enables fixed point WMA decoder.</flag>
 		<flag name="X">Enables support for, e.g., fullscreen mode via the X Window System. By itself, this flag does not build a graphical interface.</flag>
 		<flag name="xcb">Support the X C-language Binding, a replacement for Xlib; !!! you will need this option to be able to integrate video in the Qt interface, see bug #500678.</flag>
+		<flag name="x265">Support X265 Encoder.</flag>
 		<flag name="zvbi">Enables support for teletext subtitles via the zvbi library.</flag>
 	</use>
 </pkgmetadata>

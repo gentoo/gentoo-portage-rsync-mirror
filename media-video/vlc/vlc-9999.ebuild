@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.224 2014/09/10 22:06:30 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.225 2014/11/10 08:42:52 dlan Exp $
 
 EAPI="5"
 
@@ -52,7 +52,7 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	png +postproc projectm pulseaudio +qt4 qt5 rdp rtsp run-as-root samba
 	schroedinger sdl sdl-image sftp shout sid skins speex sse svg +swscale
 	taglib theora tremor truetype twolame udev upnp vaapi v4l vcdx vdpau
-	vlm vnc vorbis vpx wma-fixed +X x264 +xcb xml xv zvbi"
+	vlm vnc vorbis vpx wma-fixed +X x264 x265 +xcb xml xv zvbi"
 
 RDEPEND="
 		!<media-video/ffmpeg-1.2:0
@@ -75,7 +75,7 @@ RDEPEND="
 		directfb? ( dev-libs/DirectFB:0 sys-libs/zlib:0 )
 		dts? ( >=media-libs/libdca-0.0.5:0 )
 		dvbpsi? ( >=media-libs/libdvbpsi-0.2.1:0 )
-		dvd? ( >=media-libs/libdvdread-4.9:0 >=media-libs/libdvdnav-4.2.1:0 )
+		dvd? ( >=media-libs/libdvdread-4.9:0 >=media-libs/libdvdnav-4.9.0:0 )
 		elibc_glibc? ( >=sys-libs/glibc-2.8:2.2 )
 		faad? ( >=media-libs/faad2-2.6.1:0 )
 		fdk? ( media-libs/fdk-aac:0 )
@@ -156,6 +156,7 @@ RDEPEND="${RDEPEND}
 		vpx? ( media-libs/libvpx:0 )
 		X? ( x11-libs/libX11:0 )
 		x264? ( >=media-libs/x264-0.0.20090923:0= )
+		x265? ( media-libs/x265:0= )
 		xcb? ( >=x11-libs/libxcb-1.6:0 >=x11-libs/xcb-util-0.3.4:0 >=x11-libs/xcb-util-keysyms-0.3.4:0 )
 		xml? ( >=dev-libs/libxml2-2.5:2 )
 		zvbi? ( >=media-libs/zvbi-0.2.25:0 )
@@ -166,7 +167,7 @@ DEPEND="${RDEPEND}
 	xcb? ( x11-proto/xproto:0 )
 	app-arch/xz-utils:0
 	dev-lang/yasm:*
-	>=sys-devel/gettext-0.18.3:*
+	>=sys-devel/gettext-0.19.2:*
 	virtual/pkgconfig:*
 "
 
@@ -195,7 +196,7 @@ REQUIRED_USE="
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	if [[ "$(tc-getCC)" == *"gcc"* ]] ; then
+	if [[ "${MERGE_TYPE}" != "binary" && "$(tc-getCC)" == *"gcc"* ]] ; then
 		if [[ $(gcc-major-version) < 4 || ( $(gcc-major-version) == 4 && $(gcc-minor-version) < 5 ) ]] ; then
 			die "You need to have at least >=sys-devel/gcc-4.5 to build and/or have a working vlc, see bug #426754."
 		fi
@@ -246,7 +247,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.1.0-TomWij-bisected-PA-broken-underflow.patch
 
 	# Disable avcodec checks when avcodec is not used.
-	sed -i 's/^#if LIBAVCODEC_VERSION_CHECK(.*)$/#if 0/' modules/codec/avcodec/fourcc.c || die
+	if ! use avcodec; then
+		sed -i 's/^#if LIBAVCODEC_VERSION_CHECK(.*)$/#if 0/' modules/codec/avcodec/fourcc.c || die
+	fi
 
 	# Don't use --started-from-file when not using dbus.
 	if ! use dbus ; then
@@ -401,6 +404,7 @@ src_configure() {
 		$(use_enable xcb) \
 		$(use_enable xml libxml2) \
 		$(use_enable xv xvideo) \
+		$(use_enable x265) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
 		--disable-asdcp \
 		--disable-coverage \
@@ -423,7 +427,6 @@ src_configure() {
 		--disable-rpi-omxil \
 		--disable-shine \
 		--disable-sndio \
-		--disable-x265 \
 		--disable-vda \
 		--disable-vsxu \
 		--disable-wasapi

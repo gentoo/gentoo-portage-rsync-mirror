@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.147 2014/08/27 12:19:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.148 2014/11/10 08:36:27 patrick Exp $
+
+*ipython-2.3.0 (10 Nov 2014)
+
+  10 Nov 2014; Patrick Lauer <patrick@gentoo.org> +ipython-2.3.0.ebuild:
+  Bump
 
   27 Aug 2014; Anthony G. Basile <blueness@gentoo.org> ipython-1.0.0.ebuild,
   ipython-1.1.0-r1.ebuild, ipython-1.1.0-r2.ebuild, ipython-1.1.0.ebuild,

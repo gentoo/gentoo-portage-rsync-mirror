@@ -1,5 +1,5 @@
---- sockets.c
-+++ sockets.c
+--- a/sockets.c
++++ b/sockets.c
 @@ -188,7 +188,7 @@
  	return -1;
      }

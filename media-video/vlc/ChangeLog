@@ -1,6 +1,24 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.914 2014/11/09 12:44:10 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.915 2014/11/10 08:42:52 dlan Exp $
+
+*vlc-2.2.9999 (10 Nov 2014)
+
+  10 Nov 2014; Yixun Lan <dlan@gentoo.org> -vlc-2.0.5.ebuild,
+  -vlc-2.0.7.ebuild, -vlc-2.0.8.ebuild, -vlc-2.0.8a.ebuild, -vlc-2.0.9.ebuild,
+  -vlc-2.0.9999.ebuild, -vlc-2.1.0.ebuild, -vlc-2.1.1.ebuild, vlc-2.1.2.ebuild,
+  vlc-2.1.4.ebuild, vlc-2.1.5.ebuild, vlc-2.1.9999.ebuild,
+  +vlc-2.2.9999.ebuild, vlc-9999.ebuild,
+  -files/vlc-2.0.7-include-flac-1.3.x-support.patch,
+  -files/vlc-2.0.8-freetype-proper-default-font.patch,
+  -files/vlc-2.0.8-support-uclibc.patch,
+  -files/vlc-2.1.0-avcodec-check-update-buffered_time-earlier-so-we-sho.patch,
+  -files/vlc-2.1.0-transcode-don-t-check-drift-if-we-have-VLC_TS_INVALI.patch,
+  -files/vlc-2.1.1-freetype-2.5.1-support.patch, metadata.xml:
+  proxy commit for Paweł Stankowski, removed all <2.1.2 ebuilds affected by security bug 499806.
+  live ebuild for 2.2.0-git branch; fixes bug #513220, reported by Uwe L. Korn (uwelk).
+  gettext version bump, bug #524996; bump libdvdnav dependency, bug 519050
+  fix avcodec issue, hevc support, bug 506322; fix binpkgs support, bug 512650
 
   09 Nov 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
   add Paweł Stankowski as maintainer, granted by TomWij
