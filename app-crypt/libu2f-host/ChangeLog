@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/libu2f-host
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.6 2014/11/05 16:57:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.7 2014/11/10 02:24:20 flameeyes Exp $
+
+*libu2f-host-0.0.1-r1 (10 Nov 2014)
+
+  10 Nov 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libu2f-host-0.0.1-r1.ebuild, -libu2f-host-0.0-r1.ebuild,
+  -libu2f-host-0.0.1.ebuild:
+  Remove old versions; fix double-configure runs; fix udev/systemd rules. Thanks
+  to BT in bug #528280.
 
 *libu2f-host-0.0.1 (05 Nov 2014)
 

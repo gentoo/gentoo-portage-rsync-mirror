@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/libu2f-host-0.0.1.ebuild,v 1.1 2014/11/05 16:57:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/libu2f-host-0.0.1-r1.ebuild,v 1.1 2014/11/10 02:24:20 flameeyes Exp $
 
 EAPI=5
 
@@ -26,14 +26,16 @@ CONFIG_CHECK="~HIDRAW"
 
 src_prepare() {
 	autotools-utils_src_prepare
-	sed -i -e 's:|\([^0]\):|0\1:g' 70-u2f.rules || die
 
-	sed -e 's:GROUP="plugdev":TAG+="uaccess":g' 70-u2f.rules > 70-u2f-systemd.rules || die
+	sed -i -e 's:TAG+="uaccess":MODE="0664", GROUP="plugdev":g' \
+		70-u2f.rules > 70-u2f-udev.rules || die
 }
 
 src_configure() {
+	local myeconfargs=(
+		$(use_enable static-libs static)
+	)
 	autotools-utils_src_configure
-	econf $(use_enable static-libs static)
 }
 
 src_install() {
@@ -41,9 +43,9 @@ src_install() {
 
 	if use kernel_linux; then
 		if use systemd; then
-			udev_newrules 70-u2f-systemd.rules 70-u2f.rules
-		else
 			udev_dorules 70-u2f.rules
+		else
+			udev_newrules 70-u2f-udev.rules 70-u2f.rules
 		fi
 	fi
 }
