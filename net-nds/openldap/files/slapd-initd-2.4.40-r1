@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/files/slapd-initd-2.4.40-r1,v 1.1 2014/10/27 05:33:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/files/slapd-initd-2.4.40-r1,v 1.2 2014/11/10 00:51:21 robbat2 Exp $
 
 extra_commands="checkconfig"
 
@@ -48,7 +48,7 @@ checkconfig() {
 	# Fallback
 	CONF=${CONF-/etc/openldap/slapd.conf}
 	[ -d $CONF ] && CONF=${CONF}/*
-	DBDIRS=`eval awk '/^(directory|olcDbDirectory:)/{print $2}' $CONF`
+	DBDIRS=`eval awk '"/^(directory|olcDbDirectory:)/{print \$2}"' $CONF`
 	for d in $DBDIRS; do
 		if [ ! -d $d ]; then
 			eerror "Directory $d in config does not exist!"
