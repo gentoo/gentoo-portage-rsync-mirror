@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.8.0.ebuild,v 1.5 2014/11/03 13:56:44 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.8.0.ebuild,v 1.6 2014/11/10 15:21:40 pesa Exp $
 
 EAPI=5
 
@@ -53,12 +53,13 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
+PATCHES=(
+	"${FILESDIR}/${PN}-1.7.0-avoid-deprecated-pyqtconfig.patch"
+	"${FILESDIR}/${PN}-1.8.0-no-python-pyc.patch"
+)
+
 pkg_setup() {
 	python-single-r1_pkg_setup
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-no-python-pyc.patch
 }
 
 src_configure() {

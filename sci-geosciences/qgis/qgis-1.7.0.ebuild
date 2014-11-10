@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.7.0.ebuild,v 1.8 2014/11/03 13:56:44 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.7.0.ebuild,v 1.9 2014/11/10 15:21:40 pesa Exp $
 
 EAPI=3
 
@@ -44,6 +44,9 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 DOCS=( BUGS ChangeLog CODING.pdf README )
+PATCHES=(
+	"${FILESDIR}/${PN}-1.7.0-avoid-deprecated-pyqtconfig.patch"
+)
 
 # Does not find the test binaries at all
 RESTRICT="test"

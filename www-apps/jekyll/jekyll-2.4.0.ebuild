@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll/jekyll-2.4.0.ebuild,v 1.1 2014/09/10 14:15:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll/jekyll-2.4.0.ebuild,v 1.2 2014/11/10 15:11:49 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -41,7 +41,7 @@ ruby_add_bdepend "test? (
 		dev-ruby/mime-types:0
 		=dev-ruby/rdiscount-1.6*
 		dev-ruby/redcloth
-		dev-ruby/rouge
+		=dev-ruby/rouge-1.6*
 		dev-ruby/rr
 		>=dev-ruby/shoulda-3
 		dev-ruby/test-unit:2 )"

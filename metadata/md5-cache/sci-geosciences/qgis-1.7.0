@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://qgis.org/downloads/qgis-1.7.0.tar.bz2 examples? ( http://download.osgeo.org/qgis/data/qgis_sample_data.tar.gz )
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=256564df4e2873b91ee6ca3dbe2d4032
+_md5_=bef6e92fec7bb0364ccbad8467eb2b60
