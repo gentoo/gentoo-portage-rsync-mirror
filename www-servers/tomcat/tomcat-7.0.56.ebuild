@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.56.ebuild,v 1.2 2014/11/11 18:21:05 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.56.ebuild,v 1.3 2014/11/11 18:40:52 ercpe Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://apache/${PN}/tomcat-7/v${PV}/src/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="7"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="extra-webapps"
+IUSE="extra-webapps websockets"
 
 RESTRICT="test" # can we run them on a production system?
 
@@ -30,9 +30,11 @@ COMMON_DEP="
 	extra-webapps? ( dev-java/jakarta-jstl:0 )"
 RDEPEND="${COMMON_DEP}
 	!<dev-java/tomcat-native-1.1.24
-	>=virtual/jre-1.6"
+	websockets? ( >=virtual/jre-1.6 )
+	!websockets? ( >=virtual/jre-1.6 )"
 DEPEND="${COMMON_DEP}
-	>=virtual/jdk-1.6
+	websockets? ( >=virtual/jdk-1.6 )
+	!websockets? ( >=virtual/jdk-1.6 )
 	>=dev-java/ant-core-1.8.1:0
 	test? (
 		dev-java/ant-junit:0
@@ -49,7 +51,7 @@ pkg_setup() {
 
 java_prepare() {
 	find -type f -name '*.jar' -exec rm -frv {} + || die
-	epatch "${FILESDIR}/${P}-2-build.xml.patch"
+	epatch "${FILESDIR}/${P}-build.xml.patch"
 
 	# For use of catalina.sh in netbeans
 	sed -i -e "/^# ----- Execute The Requested Command/ a\
@@ -63,12 +65,13 @@ EANT_BUILD_TARGET="deploy"
 EANT_GENTOO_CLASSPATH="tomcat-servlet-api-${SAPI_SLOT},eclipse-ecj-${ECJ_SLOT}"
 EANT_GENTOO_CLASSPATH_EXTRA="${S}/output/classes"
 EANT_NEEDS_TOOLS="true"
-EANT_EXTRA_ARGS="-Dversion=${PV}-gentoo -Dversion.number=${PV} -Dcompile.debug=false -Djava.7.home=${JAVA_HOME}"
+EANT_EXTRA_ARGS="-Dversion=${PV}-gentoo -Dversion.number=${PV} -Dcompile.debug=false"
 
 # revision of the instance-manager script
 IM_REV="-r1"
 
 src_compile() {
+	use websockets && EANT_EXTRA_ARGS="-Djava.7.home=${JAVA_HOME}"
 	EANT_GENTOO_CLASSPATH_EXTRA+=":$(java-pkg_getjar --build-only ant-core ant.jar)"
 	java-pkg-2_src_compile
 }
