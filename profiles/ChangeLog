@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9530 2014/11/08 16:29:22 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9531 2014/11/10 23:07:06 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Mask poppler-0.28 for an initial testing period
 
   08 Nov 2014; William Hubbs <williamh@gentoo.org> package.mask:
   qa: removed testing mask from >=sys-devel/distcc-3.2_rc1 wrt #518884

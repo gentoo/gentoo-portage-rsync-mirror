@@ -8,4 +8,4 @@ LICENSE=MIT GPL-2
 RDEPEND=>=app-text/ghostscript-gpl-9.09 app-text/poppler:=[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)] >=app-text/qpdf-3.0.2:= media-libs/fontconfig media-libs/freetype:2 media-libs/lcms:2 >=net-print/cups-1.7.3 !<=net-print/cups-1.5.9999 sys-devel/bc sys-libs/zlib dbus? ( sys-apps/dbus ) foomatic? ( !net-print/foomatic-filters ) jpeg? ( virtual/jpeg:0 ) perl? ( dev-lang/perl:= ) png? ( media-libs/libpng:0= ) tiff? ( media-libs/tiff ) zeroconf? ( net-dns/avahi[dbus] )
 SLOT=0
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	base	87f7447ccfc06fd0729ff4684e11e0d6	bzr	8b59c16d7183cb93649d7abe70dc4c85	eutils	c91a1ac3fefc6b077094fb2e82c65af4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f170b6d2685f45ea3efaef2ff5fb5384	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=337b71b3c4cfc39e87f4e92e1630e53a
+_md5_=42addaa38b2fcafd77cb65067f0c6661
