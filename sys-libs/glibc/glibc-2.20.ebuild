@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.20.ebuild,v 1.4 2014/11/07 02:12:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.20.ebuild,v 1.6 2014/11/11 02:08:50 vapier Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ case ${PV} in
 esac
 GCC_BOOTSTRAP_VER="4.7.3-r1"
 PATCH_VER="1"                                  # Gentoo patchset
-NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.32"}       # min kernel version nptl requires
+: ${NPTL_KERN_VER:="2.6.32"}                   # min kernel version nptl requires
 
 IUSE="debug gd hardened multilib nscd selinux systemtap profile suid vanilla crosscompile_opts_headers-only"
 
@@ -53,8 +53,6 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 		export CTARGET=${CATEGORY#cross-}
 	fi
 fi
-
-[[ ${CTARGET} == hppa* ]] && NPTL_KERN_VER=${NPTL_KERN_VER/2.6.16/2.6.20}
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
@@ -158,13 +156,13 @@ eblit-src_unpack-pre() {
 	[[ -n ${GCC_BOOTSTRAP_VER} ]] && use multilib && unpack gcc-${GCC_BOOTSTRAP_VER}-multilib-bootstrap.tar.bz2
 }
 
-eblit-src_unpack-post() {
+eblit-src_prepare-post() {
 	cd "${S}"
 
 	if use hardened ; then
 		einfo "Patching to get working PIE binaries on PIE (hardened) platforms"
 		gcc-specs-pie && epatch "${FILESDIR}"/2.17/glibc-2.17-hardened-pie.patch
-		epatch "${FILESDIR}"/2.18/glibc-2.18-hardened-inittls-nosysenter.patch
+		epatch "${FILESDIR}"/2.20/glibc-2.20-hardened-inittls-nosysenter.patch
 
 		# We don't enable these for non-hardened as the output is very terse --
 		# it only states that a crash happened.  The default upstream behavior

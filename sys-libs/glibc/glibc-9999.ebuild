@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.25 2014/08/04 05:16:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.27 2014/11/11 02:08:50 vapier Exp $
+
+EAPI="4"
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
@@ -72,19 +74,17 @@ RDEPEND="!sys-kernel/ps3-sources
 
 if [[ ${CATEGORY} == cross-* ]] ; then
 	DEPEND+=" !crosscompile_opts_headers-only? (
-		>=${CATEGORY}/binutils-2.20
-		>=${CATEGORY}/gcc-4.3
+		>=${CATEGORY}/binutils-2.24
+		>=${CATEGORY}/gcc-4.4
 	)"
 	[[ ${CATEGORY} == *-linux* ]] && DEPEND+=" ${CATEGORY}/linux-headers"
 else
 	DEPEND+="
-		>=sys-devel/binutils-2.20
-		>=sys-devel/gcc-4.3
-		virtual/os-headers
-		!vanilla? ( >=sys-libs/timezone-data-2012c )"
-	RDEPEND+="
-		vanilla? ( !sys-libs/timezone-data )
-		!vanilla? ( sys-libs/timezone-data )"
+		>=sys-devel/binutils-2.24
+		>=sys-devel/gcc-4.4
+		virtual/os-headers"
+	RDEPEND+=" vanilla? ( !sys-libs/timezone-data )"
+	PDEPEND+=" !vanilla? ( sys-libs/timezone-data )"
 fi
 
 upstream_uris() {
@@ -136,10 +136,12 @@ eblit-run() {
 	eblit-run-maybe eblit-$1-post
 }
 
-src_unpack()  { eblit-run src_unpack  ; }
-src_compile() { eblit-run src_compile ; }
-src_test()    { eblit-run src_test    ; }
-src_install() { eblit-run src_install ; }
+src_unpack()    { eblit-run src_unpack    ; }
+src_prepare()   { eblit-run src_prepare   ; }
+src_configure() { eblit-run src_configure ; }
+src_compile()   { eblit-run src_compile   ; }
+src_test()      { eblit-run src_test      ; }
+src_install()   { eblit-run src_install   ; }
 
 # FILESDIR might not be available during binpkg install
 for x in setup {pre,post}inst ; do
@@ -154,54 +156,32 @@ eblit-src_unpack-pre() {
 	[[ -n ${GCC_BOOTSTRAP_VER} ]] && use multilib && unpack gcc-${GCC_BOOTSTRAP_VER}-multilib-bootstrap.tar.bz2
 }
 
-eblit-src_unpack-post() {
+eblit-src_prepare-post() {
+	cd "${S}"
+
 	if use hardened ; then
-		cd "${S}"
 		einfo "Patching to get working PIE binaries on PIE (hardened) platforms"
 		gcc-specs-pie && epatch "${FILESDIR}"/2.17/glibc-2.17-hardened-pie.patch
-		epatch "${FILESDIR}"/2.19/glibc-2.19-hardened-configure-picdefault.patch
-		epatch "${FILESDIR}"/2.18/glibc-2.18-hardened-inittls-nosysenter.patch
+		epatch "${FILESDIR}"/2.20/glibc-2.20-hardened-inittls-nosysenter.patch
 
+		# We don't enable these for non-hardened as the output is very terse --
+		# it only states that a crash happened.  The default upstream behavior
+		# includes backtraces and symbols.
 		einfo "Installing Hardened Gentoo SSP and FORTIFY_SOURCE handler"
-		cp -f "${FILESDIR}"/2.18/glibc-2.18-gentoo-stack_chk_fail.c \
-			debug/stack_chk_fail.c || die
-		cp -f "${FILESDIR}"/2.18/glibc-2.18-gentoo-chk_fail.c \
-			debug/chk_fail.c || die
+		cp "${FILESDIR}"/2.20/glibc-2.20-gentoo-stack_chk_fail.c debug/stack_chk_fail.c || die
+		cp "${FILESDIR}"/2.20/glibc-2.20-gentoo-chk_fail.c debug/chk_fail.c || die
 
 		if use debug ; then
-			# When using Hardened Gentoo stack handler, have smashes dump core for
-			# analysis - debug only, as core could be an information leak
-			# (paranoia).
+			# Allow SIGABRT to dump core on non-hardened systems, or when debug is requested.
 			sed -i \
-				-e '/^CFLAGS-backtrace.c/ iCFLAGS-stack_chk_fail.c = -DSSP_SMASH_DUMPS_CORE' \
-				debug/Makefile \
-				|| die "Failed to modify debug/Makefile for debug stack handler"
-			sed -i \
-				-e '/^CFLAGS-backtrace.c/ iCFLAGS-chk_fail.c = -DSSP_SMASH_DUMPS_CORE' \
-				debug/Makefile \
-				|| die "Failed to modify debug/Makefile for debug fortify handler"
+				-e '/^CFLAGS-backtrace.c/ iCPPFLAGS-stack_chk_fail.c = -DSSP_SMASH_DUMPS_CORE' \
+				-e '/^CFLAGS-backtrace.c/ iCPPFLAGS-chk_fail.c = -DSSP_SMASH_DUMPS_CORE' \
+				debug/Makefile || die
 		fi
 
-		# Build nscd with ssp-all
+		# Build various bits with ssp-all
 		sed -i \
 			-e 's:-fstack-protector$:-fstack-protector-all:' \
-			nscd/Makefile \
-			|| die "Failed to ensure nscd builds with ssp-all"
-	fi
-}
-
-eblit-pkg_preinst-post() {
-	if [[ ${CTARGET} == arm* ]] ; then
-		# Backwards compat support for renaming hardfp ldsos #417287
-		local oldso='/lib/ld-linux.so.3'
-		local nldso='/lib/ld-linux-armhf.so.3'
-		if [[ -e ${D}${nldso} ]] ; then
-			if scanelf -qRyi "${ROOT}$(alt_prefix)"/*bin/ | grep -s "^${oldso}" ; then
-				ewarn "Symlinking old ldso (${oldso}) to new ldso (${nldso})."
-				ewarn "Please rebuild all packages using this old ldso as compat"
-				ewarn "support will be dropped in the future."
-				ln -s "${nldso##*/}" "${D}$(alt_prefix)${oldso}"
-			fi
-		fi
+			*/Makefile || die
 	fi
 }

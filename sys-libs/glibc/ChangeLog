@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1029 2014/11/07 02:12:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1031 2014/11/11 02:08:50 vapier Exp $
+
+  11 Nov 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/2.20/glibc-2.20-hardened-inittls-nosysenter.patch, glibc-2.20.ebuild,
+  glibc-9999.ebuild:
+  Fix by Francisco Blas Izquierdo Riera for crash on hardened in early TLS init
+  code #528558 by Toralf Förster.
+
+  11 Nov 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.20.ebuild,
+  glibc-9999.ebuild:
+  Sync 2.20 & 9999 versions.
 
   07 Nov 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.20.ebuild:
   Move into unstable for all but hppa.  Require binutils-2.24 as some arches
