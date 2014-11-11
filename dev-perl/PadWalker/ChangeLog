@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PadWalker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PadWalker/ChangeLog,v 1.47 2014/08/22 19:46:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PadWalker/ChangeLog,v 1.48 2014/11/11 12:05:39 blueness Exp $
+
+  11 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  PadWalker-1.960.0-r1.ebuild:
+  Keyword ~ppc64 for bug #358465
 
 *PadWalker-1.960.0-r1 (22 Aug 2014)
 

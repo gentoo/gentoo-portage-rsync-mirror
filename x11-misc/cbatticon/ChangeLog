@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/cbatticon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/ChangeLog,v 1.13 2014/08/19 12:53:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/ChangeLog,v 1.14 2014/11/11 12:12:23 jer Exp $
+
+*cbatticon-1.4.1 (11 Nov 2014)
+
+  11 Nov 2014; Jeroen Roovers <jer@gentoo.org> +cbatticon-1.4.1.ebuild:
+  Version bump.
 
   19 Aug 2014; Jeroen Roovers <jer@gentoo.org> cbatticon-1.4.0.ebuild:
   Switch to x11-libs/gtk:3. Update DESCRIPTION.

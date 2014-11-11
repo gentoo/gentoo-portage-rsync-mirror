@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Eval-Closure
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eval-Closure/ChangeLog,v 1.17 2014/08/23 21:22:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eval-Closure/ChangeLog,v 1.18 2014/11/11 12:03:13 blueness Exp $
+
+  11 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  Eval-Closure-0.80.0-r1.ebuild:
+  Keyword ~ppc64 for bug #358465
 
 *Eval-Closure-0.80.0-r1 (23 Aug 2014)
 

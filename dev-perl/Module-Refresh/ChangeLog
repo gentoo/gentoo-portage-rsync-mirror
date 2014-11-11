@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Refresh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Refresh/ChangeLog,v 1.29 2014/08/22 19:37:26 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Refresh/ChangeLog,v 1.30 2014/11/11 12:06:54 blueness Exp $
+
+  11 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  Module-Refresh-0.170.0-r1.ebuild:
+  Keyword ~ppc64 for bug #358465
 
 *Module-Refresh-0.170.0-r1 (22 Aug 2014)
 

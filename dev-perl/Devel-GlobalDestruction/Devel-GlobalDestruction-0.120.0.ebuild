@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/Devel-GlobalDestruction-0.120.0.ebuild,v 1.1 2014/01/02 20:32:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/Devel-GlobalDestruction-0.120.0.ebuild,v 1.2 2014/11/11 12:02:01 blueness Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Expose PL_dirty, the flag which marks global destruction"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~ppc-aix ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~ppc-aix ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=dev-perl/Sub-Exporter-Progressive-0.1.11"
