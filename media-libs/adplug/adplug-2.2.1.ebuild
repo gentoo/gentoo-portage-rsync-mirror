@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-2.2.1.ebuild,v 1.12 2014/05/07 18:04:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-2.2.1.ebuild,v 1.13 2014/11/11 11:25:26 blueness Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc x86"
+KEYWORDS="amd64 arm hppa ppc ~ppc64 x86"
 IUSE="debug static-libs"
 
 RDEPEND=">=dev-cpp/libbinio-1.4"

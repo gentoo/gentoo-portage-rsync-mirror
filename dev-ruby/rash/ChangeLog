@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rash/ChangeLog,v 1.10 2014/08/06 07:06:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rash/ChangeLog,v 1.11 2014/11/11 11:05:41 mrueg Exp $
+
+  11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> rash-0.4.0-r1.ebuild:
+  Drop jruby target.
 
   06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> rash-0.4.0-r1.ebuild:
   Add ruby21 target.

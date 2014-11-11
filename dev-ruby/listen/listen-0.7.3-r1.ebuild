@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-0.7.3-r1.ebuild,v 1.3 2014/09/19 05:38:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-0.7.3-r1.ebuild,v 1.4 2014/11/11 11:04:34 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.175 2014/11/02 09:18:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.176 2014/11/11 11:14:58 ago Exp $
+
+  11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> sphinx-1.2.2.ebuild:
+  Stable for ia64, wrt bug #524416
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> sphinx-1.2.2.ebuild:
   Stable for alpha, wrt bug #524416
