@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r2.ebuild,v 1.1 2014/11/10 22:39:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r2.ebuild,v 1.2 2014/11/11 21:56:13 axs Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ RDEPEND="
 		)
 		pulseaudio? ( || (
 			media-sound/pulseaudio[abi_x86_32(-)]
-			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}[pulseaudio]
+			>=app-emulation/emul-linux-x86-soundlibs-20140508-r1[pulseaudio]
 		) )
 		apulse? ( media-sound/apulse[abi_x86_32(-)] )
 	)

@@ -1,6 +1,11 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.165 2014/11/10 22:39:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.166 2014/11/11 21:56:13 axs Exp $
+
+  11 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  skype-4.3.0.37-r2.ebuild:
+  bumped minimum version of emul-linux-x86-soundlibs for pulseaudio so that the
+  package gets keyworded ~amd64 on end-user systems along with skype
 
 *skype-4.3.0.37-r2 (10 Nov 2014)
 

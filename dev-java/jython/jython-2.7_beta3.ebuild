@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.7_beta3.ebuild,v 1.1 2014/11/10 04:27:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.7_beta3.ebuild,v 1.2 2014/11/11 21:56:08 chutzpah Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="doc examples source"
@@ -22,6 +22,7 @@ REQUIRED_USE="test? ( readline )"
 
 COMMON_DEP="
 	dev-java/antlr:3
+	dev-java/netty-transport:0
 	dev-java/asm:4
 	dev-java/commons-compress:0
 	dev-java/guava:13
@@ -52,7 +53,8 @@ RESTRICT="test"
 
 JAVA_ANT_REWRITE_CLASSPATH="yes"
 EANT_GENTOO_CLASSPATH="asm-4,commons-compress,guava-13,jffi-1.2,jline,jnr-constants"
-EANT_GENTOO_CLASSPATH+=",script-api,servlet-api-2.5,stringtemplate,xerces-2,icu4j-52"
+EANT_GENTOO_CLASSPATH+=",script-api,servlet-api-2.5,stringtemplate,xerces-2"
+EANT_GENTOO_CLASSPATH+=",icu4j-52,netty-transport"
 JAVA_ANT_CLASSPATH_TAGS+=" java"
 
 EANT_BUILD_TARGET="developer-build"

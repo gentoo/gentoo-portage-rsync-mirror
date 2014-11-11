@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47.ebuild,v 1.1 2014/08/28 10:07:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47.ebuild,v 1.3 2014/11/11 21:58:32 floppym Exp $
 
 EAPI=5
 
@@ -25,19 +25,21 @@ IUSE="ipv6 +lua ncat ndiff nls nmap-update nping ssl zenmap"
 NMAP_LINGUAS=( de es fr hr hu id it ja pl pt_BR pt_PT ro ru sk zh )
 IUSE+=" ${NMAP_LINGUAS[@]/#/linguas_}"
 
-NMAP_PYTHON_DEPEND="
-	|| ( ${PYTHON_DEPS} )
+REQUIRED_USE="
+	ndiff? ( ${PYTHON_REQUIRED_USE} )
+	zenmap ( ${PYTHON_REQUIRED_USE} )
 "
+
 RDEPEND="
 	dev-libs/liblinear
 	dev-libs/libpcre
 	net-libs/libpcap[ipv6?]
 	zenmap? (
 		dev-python/pygtk:2
-		${NMAP_PYTHON_DEPEND}
+		${PYTHON_DEPS}
 	)
 	lua? ( >=dev-lang/lua-5.2[deprecated] )
-	ndiff? ( ${NMAP_PYTHON_DEPEND} )
+	ndiff? ( ${PYTHON_DEPS} )
 	nls? ( virtual/libintl )
 	nmap-update? ( dev-libs/apr dev-vcs/subversion )
 	ssl? ( dev-libs/openssl )
@@ -48,6 +50,12 @@ DEPEND="
 "
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	if use ndiff || use zenmap; then
+		python-single-r1_pkg_setup
+	fi
+}
 
 src_unpack() {
 	# prevent unpacking the logo

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test
+DEPEND=dev-lang/luajit:2= dev-libs/jsoncpp:0= sys-libs/zlib:0= app-arch/xz-utils virtual/os-headers kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=A system exploration and troubleshooting tool
+EAPI=5
+HOMEPAGE=http://www.sysdig.org/
+IUSE=kernel_linux kernel_linux
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-lang/luajit:2= dev-libs/jsoncpp:0= sys-libs/zlib:0= kernel_linux? ( virtual/modutils )
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~mgorny/dist/sysdig-0.1.92.tar.xz
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	linux-info	2b8c53f6065bdee2d757472215a3088f	linux-mod	101302d4b7b694ea9622bbffb187d0de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=7d9fed6c848898790a0528533bca8a51

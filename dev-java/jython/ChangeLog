@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.96 2014/11/10 04:27:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.97 2014/11/11 21:56:08 chutzpah Exp $
+
+  11 Nov 2014; Patrick McLean <chutzpah@gentoo.org> jython-2.7_beta3.ebuild:
+  Add missing dependency on dev-java/netty-transport (see
+  http://fwierzbicki.blogspot.jp/2014/08/jython-27-beta3-released.html).
 
 *jython-2.7_beta3 (10 Nov 2014)
 
