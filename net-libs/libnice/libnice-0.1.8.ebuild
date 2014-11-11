@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.1.8.ebuild,v 1.1 2014/11/11 13:40:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.1.8.ebuild,v 1.2 2014/11/11 22:16:12 tetromino Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -34,7 +34,7 @@ multilib_src_configure() {
 	econf --disable-static \
 		--without-gstreamer \
 		--without-gstreamer-0.10 \
-		$(use_enable introspection) \
+		$(multilib_native_use_enable introspection) \
 		$(use_enable upnp gupnp)
 
 	if multilib_is_native_abi; then

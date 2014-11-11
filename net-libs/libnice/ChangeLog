@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.78 2014/11/11 13:40:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.79 2014/11/11 22:16:12 tetromino Exp $
+
+  11 Nov 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libnice-0.1.8.ebuild:
+  Fix USE=introspection multilib build (bug #528958, thanks to Alex Barker,
+  drhopfen et al.)
 
 *libnice-0.1.8 (11 Nov 2014)
 
