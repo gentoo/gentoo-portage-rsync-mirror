@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libkscreen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/ChangeLog,v 1.15 2014/10/10 13:27:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/ChangeLog,v 1.16 2014/11/11 20:51:50 maekke Exp $
+
+  11 Nov 2014; Markus Meier <maekke@gentoo.org> libkscreen-1.0.5.ebuild:
+  add ~arm, bug #525558
 
   10 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -libkscreen-1.0.2.ebuild,
   -libkscreen-1.0.4.ebuild:

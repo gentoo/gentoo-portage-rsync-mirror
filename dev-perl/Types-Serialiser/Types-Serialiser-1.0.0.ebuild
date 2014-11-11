@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Types-Serialiser/Types-Serialiser-1.0.0.ebuild,v 1.1 2014/10/25 19:00:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Types-Serialiser/Types-Serialiser-1.0.0.ebuild,v 1.2 2014/11/11 20:49:29 maekke Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="simple data types for common serialisation formats"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND="

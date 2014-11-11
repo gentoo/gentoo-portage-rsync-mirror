@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.131 2014/11/11 10:48:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.132 2014/11/11 20:47:56 maekke Exp $
+
+  11 Nov 2014; Markus Meier <maekke@gentoo.org> -ufraw-0.19.2.ebuild,
+  -files/ufraw-0.19.2-clang.patch:
+  remove old for bug #526856
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ufraw-0.20-r1.ebuild:
   Stable for ia64, wrt bug #526918

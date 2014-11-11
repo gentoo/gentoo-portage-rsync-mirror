@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/libkscreen-1.0.5.ebuild,v 1.3 2014/10/10 10:57:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/libkscreen-1.0.5.ebuild,v 1.4 2014/11/11 20:51:50 maekke Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="debug"
 
 RDEPEND="

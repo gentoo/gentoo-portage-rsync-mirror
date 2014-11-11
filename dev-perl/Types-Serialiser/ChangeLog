@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Types-Serialiser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Types-Serialiser/ChangeLog,v 1.1 2014/10/25 19:00:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Types-Serialiser/ChangeLog,v 1.2 2014/11/11 20:49:29 maekke Exp $
+
+  11 Nov 2014; Markus Meier <maekke@gentoo.org> Types-Serialiser-1.0.0.ebuild:
+  add ~arm, bug #523298
 
 *Types-Serialiser-1.0.0 (25 Oct 2014)
 
