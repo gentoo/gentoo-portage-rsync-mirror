@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.129 2014/11/10 10:52:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.130 2014/11/11 10:46:41 ago Exp $
+
+  11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> make-4.0-r1.ebuild:
+  Stable for ia64, wrt bug #524530
 
   10 Nov 2014; Agostino Sarubbo <ago@gentoo.org> make-4.0-r1.ebuild:
   Stable for ppc, wrt bug #524530

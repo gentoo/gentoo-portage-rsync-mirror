@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=!sys-apps/systemd[gtk] >=dev-libs/glib-2.26:2 dev-libs/libgee:0.8 sys-apps/dbus x11-libs/gtk+:3 >=x11-libs/libnotify-0.7
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/systemd/systemd-ui-3.tar.xz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	autotools-utils	3727db64c7b960903d5033280f108080	eutils	c91a1ac3fefc6b077094fb2e82c65af4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	98e71281616291d457e8bb8f70e123bf
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	autotools-utils	3727db64c7b960903d5033280f108080	eutils	c91a1ac3fefc6b077094fb2e82c65af4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	28e26c72b0f5257aa135444ffc6730b5
 _md5_=0498e1a5a08c36e22b8514fa081767f0

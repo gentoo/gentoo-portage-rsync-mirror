@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/domain_name
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/domain_name/ChangeLog,v 1.24 2014/08/20 13:01:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/domain_name/ChangeLog,v 1.25 2014/11/11 10:57:11 mrueg Exp $
+
+  11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> domain_name-0.5.13.ebuild,
+  domain_name-0.5.19.ebuild, domain_name-0.5.20.ebuild:
+  Drop jruby target.
 
 *domain_name-0.5.20 (20 Aug 2014)
 

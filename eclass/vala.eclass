@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vala.eclass,v 1.9 2014/10/30 13:21:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vala.eclass,v 1.10 2014/11/11 11:00:24 pacho Exp $
 
 # @ECLASS: vala.eclass
 # @MAINTAINER:
@@ -26,8 +26,8 @@ esac
 
 # @ECLASS-VARIABLE: VALA_MIN_API_VERSION
 # @DESCRIPTION:
-# Minimum vala API version (e.g. 0.18).
-VALA_MIN_API_VERSION=${VALA_MIN_API_VERSION:-0.18}
+# Minimum vala API version (e.g. 0.20).
+VALA_MIN_API_VERSION=${VALA_MIN_API_VERSION:-0.20}
 
 # @ECLASS-VARIABLE: VALA_MAX_API_VERSION
 # @DESCRIPTION:
@@ -50,7 +50,7 @@ vala_api_versions() {
 	local minimal_supported_minor_version minor_version
 
 	# Dependency atoms are not generated for Vala versions older than 0.${minimal_supported_minor_version}.
-	minimal_supported_minor_version="18"
+	minimal_supported_minor_version="20"
 
 	for ((minor_version = ${VALA_MAX_API_VERSION#*.}; minor_version >= ${VALA_MIN_API_VERSION#*.}; minor_version = minor_version - 2)); do
 		if ((minor_version >= minimal_supported_minor_version)); then

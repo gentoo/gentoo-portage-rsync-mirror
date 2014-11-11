@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.62 2014/07/25 03:08:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.63 2014/11/11 10:46:47 mrueg Exp $
+
+  11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> rdtool-0.6.38-r1.ebuild,
+  rdtool-0.6.38.ebuild:
+  Drop jruby target.
 
 *rdtool-0.6.38-r1 (25 Jul 2014)
 

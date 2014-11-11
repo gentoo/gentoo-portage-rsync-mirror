@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/ChangeLog,v 1.28 2014/04/05 15:02:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/ChangeLog,v 1.29 2014/11/11 10:54:36 mrueg Exp $
+
+  11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> tmail-1.2.7.1-r3.ebuild:
+  Drop jruby target.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> tmail-1.2.7.1-r3.ebuild:
   Remove ree18 and ruby18 target.
