@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.1.ebuild,v 1.13 2014/11/02 12:09:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.1.ebuild,v 1.14 2014/11/11 10:21:06 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user
@@ -43,7 +43,7 @@ CDEPEND="
 	portaudio? ( media-libs/portaudio )
 	qt4? (
 		dev-qt/qtcore:4
-		dev-qt/qtgui:4
+		dev-qt/qtgui:4[accessibility]
 		x11-misc/xdg-utils
 		)
 	smi? ( net-libs/libsmi )
