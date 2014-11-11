@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fig/fig-1.0.0.ebuild,v 1.2 2014/11/09 21:06:22 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fig/fig-1.0.0.ebuild,v 1.3 2014/11/11 01:00:18 alunduil Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -18,7 +18,6 @@ IUSE="test"
 
 CDEPEND="
 	>=dev-python/dockerpty-0.2.4[${PYTHON_USEDEP}]
-	<dev-python/dockerpty-0.3[${PYTHON_USEDEP}]
 	>=dev-python/docker-py-0.5[${PYTHON_USEDEP}]
 	<dev-python/docker-py-0.6[${PYTHON_USEDEP}]
 	>=dev-python/docopt-0.6.1[${PYTHON_USEDEP}]

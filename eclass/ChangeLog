@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1412 2014/11/09 22:27:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1413 2014/11/11 00:49:30 monsieurp Exp $
+
+  11 Nov 2014; Patrice Clement <monsieurp@gentoo.org> perl-module.eclass:
+  Added documentation to undocumented functions. 
 
   09 Nov 2014; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass,
   python-utils-r1.eclass:

@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=dev-lang/perl dev-perl/Tie-Cache >=mail-filter/spamassassin-3.2.0 gocr? ( >=app-text/gocr-0.43 ) ocrad? ( >=app-text/ocrad-0.14 ) tesseract? ( app-text/tesseract ) !gocr? ( !ocrad? ( !tesseract? ( >=app-text/ocrad-0.14 ) ) ) mysql? ( dev-perl/DBD-mysql dev-perl/DBI ) logrotate? ( app-admin/logrotate ) dbm? ( virtual/perl-DB_File dev-perl/MLDBM-Sync virtual/perl-Storable ) media-libs/netpbm[jpeg,png,tiff] media-libs/giflib dev-perl/String-Approx virtual/perl-Time-HiRes media-gfx/gifsicle dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=http://users.own-hero.net/~decoder/fuzzyocr/fuzzyocr-3.6.0.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	f170b6d2685f45ea3efaef2ff5fb5384	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	32ce14ce4574ee32c1cc1051d65b175c	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=8b08285dee6a0dd15f400070a0ea55ee

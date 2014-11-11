@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.148 2014/11/09 21:34:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.149 2014/11/11 00:49:30 monsieurp Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -303,12 +303,6 @@ perl-module_pkg_postrm() {
 	perl_link_duallife_scripts
 }
 
-perlinfo() {
-	debug-print-function $FUNCNAME "$@"
-	eqawarn "perl-modules.eclass: perlinfo is deprecated and will be removed. Please use perl_set_version instead."
-	perl_set_version
-}
-
 # @FUNCTION: perl_set_version
 # @USAGE: perl_set_version
 # @DESCRIPTION:
@@ -335,10 +329,16 @@ perl_set_version() {
 	VENDOR_ARCH=${installvendorarch}
 }
 
-fixlocalpod() {
+# @FUNCTION: perlinfo
+# @USAGE: perlinfo
+# @DESCRIPTION:
+# This function deprecated.
+# 
+# Please use the function above instead, perl_set_version.
+perlinfo() {
 	debug-print-function $FUNCNAME "$@"
-	eqawarn "perl-modules.eclass: fixlocalpod is deprecated and will be removed. Please use perl_delete_localpod instead."
-	perl_delete_localpod
+	eqawarn "perl-modules.eclass: perlinfo is deprecated and will be removed. Please use perl_set_version instead."
+	perl_set_version
 }
 
 # @FUNCTION: perl_delete_localpod
@@ -354,33 +354,48 @@ perl_delete_localpod() {
 	find "${D}" -depth -mindepth 1 -type d -empty -delete
 }
 
+# @FUNCTION: fixlocalpod
+# @USAGE: fixlocalpod
+# @DESCRIPTION:
+# This function is deprecated. 
+#
+# Please use the function above instead, perl_delete_localpod.
+fixlocalpod() {
+	debug-print-function $FUNCNAME "$@"
+	eqawarn "perl-modules.eclass: fixlocalpod is deprecated and will be removed. Please use perl_delete_localpod instead."
+	perl_delete_localpod
+}
+
+# @FUNCTION: perl_fix_osx_extra
+# @USAGE: perl_fix_osx_extra
+# @DESCRIPTION:
+# Look through ${S} (temporary build directory) for AppleDouble encoded files
+# and get rid of them.
 perl_fix_osx_extra() {
 	debug-print-function $FUNCNAME "$@"
 
-	# Remove "AppleDouble encoded Macintosh file"
 	local f
 	find "${S}" -type f -name "._*" -print0 | while read -rd '' f ; do
 		einfo "Removing AppleDouble encoded Macintosh file: ${f#${S}/}"
 		rm -f "${f}"
 		f=${f#${S}/}
-	#	f=${f//\//\/}
-	#	f=${f//\./\.}
-	#	sed -i "/${f}/d" "${S}"/MANIFEST || die
 		grep -q "${f}" "${S}"/MANIFEST && \
 			elog "AppleDouble encoded Macintosh file in MANIFEST: ${f#${S}/}"
 	done
 }
 
+# @FUNCTION: perl_delete_module_manpages
+# @USAGE: perl_delete_module_manpages
+# Bump off manpages installed by the current module such as *.3pm files as well
+# as empty directories.
 perl_delete_module_manpages() {
 	debug-print-function $FUNCNAME "$@"
 
 	if [[ -d "${ED}"/usr/share/man ]] ; then
-#		einfo "Cleaning out stray man files"
 		find "${ED}"/usr/share/man -type f -name "*.3pm" -delete
 		find "${ED}"/usr/share/man -depth -type d -empty -delete
 	fi
 }
-
 
 perl_delete_packlist() {
 	debug-print-function $FUNCNAME "$@"
