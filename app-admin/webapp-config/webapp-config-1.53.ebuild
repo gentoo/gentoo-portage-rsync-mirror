@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.53.ebuild,v 1.3 2014/05/03 20:57:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.53.ebuild,v 1.4 2014/11/10 23:54:20 blueness Exp $
 
 EAPI="5"
 
@@ -18,7 +18,8 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="+portage"
 
-DEPEND="app-text/xmlto"
+DEPEND="app-text/xmlto
+	!dev-python/configparser"
 RDEPEND="portage? ( sys-apps/portage[${PYTHON_USEDEP}] )"
 
 python_compile_all() {
