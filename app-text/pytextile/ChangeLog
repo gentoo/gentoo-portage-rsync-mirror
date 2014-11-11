@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pytextile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.40 2014/11/04 09:27:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.41 2014/11/11 01:07:46 idella4 Exp $
+
+  11 Nov 2014; Ian Delaney <idella4@gentoo.org> pytextile-2.2.1.ebuild:
+  update HOMEPAGE noted by Arfrever
 
   04 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pytextile-2.1.8.ebuild:
   Stable for sparc, wrt bug #527394
