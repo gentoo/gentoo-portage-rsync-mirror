@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.6.1.ebuild,v 1.2 2014/11/08 20:40:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.6.1.ebuild,v 1.3 2014/11/11 11:51:33 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils cmake-utils qt4-r2
@@ -19,7 +19,6 @@ IUSE="qt4 test"
 
 COMMON_DEPEND="
 	>=dev-libs/crypto++-5.6.2
-	net-dns/avahi[mdnsresponder-compat]
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
@@ -28,7 +27,11 @@ COMMON_DEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXtst
-	qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 )
+	qt4? (
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
+		net-dns/avahi[mdnsresponder-compat]
+	)
 "
 DEPEND="
 	${COMMON_DEPEND}

@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=dev-libs/libxml2:2 >=app-emulation/libvirt-0.9.10:= >=dev-libs/glib-2.38.0:2 introspection? ( >=dev-libs/gobject-introspection-0.10.8:= ) python? ( >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] ) dev-util/gtk-doc-am >=dev-util/intltool-0.35.0 virtual/pkgconfig vala? ( || ( dev-lang/vala:0.24 dev-lang/vala:0.22 dev-lang/vala:0.20 ) ) app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=GLib and GObject mappings for libvirt
+EAPI=5
+HOMEPAGE=http://libvirt.org/git/?p=libvirt-glib.git
+IUSE=+introspection python +vala python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=dev-libs/libxml2:2 >=app-emulation/libvirt-0.9.10:= >=dev-libs/glib-2.38.0:2 introspection? ( >=dev-libs/gobject-introspection-0.10.8:= ) python? ( >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] )
+REQUIRED_USE=python? ( python_targets_python2_7 ) vala? ( introspection )
+RESTRICT=test
+SLOT=0
+SRC_URI=ftp://libvirt.org/libvirt/glib/libvirt-glib-0.1.9.tar.gz
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	28e26c72b0f5257aa135444ffc6730b5	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=156e2bbd80e66eb2efb39a871bd944ba

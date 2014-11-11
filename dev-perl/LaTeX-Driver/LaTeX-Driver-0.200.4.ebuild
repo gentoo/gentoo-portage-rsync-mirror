@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LaTeX-Driver/LaTeX-Driver-0.200.4.ebuild,v 1.2 2014/10/23 19:42:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LaTeX-Driver/LaTeX-Driver-0.200.4.ebuild,v 1.3 2014/11/11 11:54:51 blueness Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Perl encapsulation of invoking the Latex programs"
 
 LICENSE="|| ( GPL-1+ Artistic )"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="test"
 
 RDEPEND="

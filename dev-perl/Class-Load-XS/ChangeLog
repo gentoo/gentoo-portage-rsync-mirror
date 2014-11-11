@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Load-XS
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load-XS/ChangeLog,v 1.16 2014/10/05 16:03:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load-XS/ChangeLog,v 1.17 2014/11/11 11:58:53 blueness Exp $
+
+  11 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  Class-Load-XS-0.60.0-r1.ebuild:
+  Keyword ~ppc64 for bug #358465
 
   05 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Class-Load-XS-0.40.0.ebuild:
   Drop old.

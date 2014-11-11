@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-LaTeX/Pod-LaTeX-0.610.0.ebuild,v 1.2 2014/10/23 19:40:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-LaTeX/Pod-LaTeX-0.610.0.ebuild,v 1.3 2014/11/11 11:50:55 blueness Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Convert Pod data to formatted LaTeX"
 
 LICENSE="|| ( GPL-1+ Artistic )"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="
