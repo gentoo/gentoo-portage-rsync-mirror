@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.56.ebuild,v 1.1 2014/11/02 10:19:15 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.56.ebuild,v 1.2 2014/11/11 18:21:05 ercpe Exp $
 
 EAPI=5
 
@@ -48,8 +48,8 @@ pkg_setup() {
 }
 
 java_prepare() {
-	find -name '*.jar' -exec rm -frv {} + || die
-	epatch "${FILESDIR}/${P}-build.xml.patch"
+	find -type f -name '*.jar' -exec rm -frv {} + || die
+	epatch "${FILESDIR}/${P}-2-build.xml.patch"
 
 	# For use of catalina.sh in netbeans
 	sed -i -e "/^# ----- Execute The Requested Command/ a\

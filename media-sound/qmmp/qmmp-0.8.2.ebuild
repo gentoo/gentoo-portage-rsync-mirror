@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.6.8.ebuild,v 1.6 2014/07/24 11:48:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.8.2.ebuild,v 1.1 2014/11/11 18:28:57 hwoarang Exp $
 
 EAPI="5"
 
@@ -8,10 +8,10 @@ inherit cmake-utils
 [ "$PV" == "9999" ] && inherit subversion
 
 DESCRIPTION="Qt4-based audio player with winamp/xmms skins support"
-HOMEPAGE="http://qmmp.ylsoftware.com/index_en.php"
+HOMEPAGE="http://qmmp.ylsoftware.com"
 if [ "$PV" != "9999" ]; then
 	SRC_URI="http://qmmp.ylsoftware.com/files/${P}.tar.bz2"
-	KEYWORDS="amd64 ~ppc x86"
+	KEYWORDS="~amd64 ~ppc ~x86"
 else
 	SRC_URI=""
 	ESVN_REPO_URI="http://qmmp.googlecode.com/svn/trunk/qmmp/"
@@ -22,11 +22,10 @@ LICENSE="GPL-2"
 SLOT="0"
 # KEYWORDS further up
 IUSE="aac +alsa +dbus bs2b cdda cover crossfade enca ffmpeg flac jack game kde ladspa
-libsamplerate lyrics +mad midi mms modplug mplayer mpris musepack notifier oss
+libsamplerate lyrics +mad midi mms modplug mplayer mpris musepack notifier opus oss
 projectm pulseaudio scrobbler sndfile stereo tray udisks +vorbis wavpack"
 
-RDEPEND="dev-qt/qt3support:4
-	media-libs/taglib
+RDEPEND="media-libs/taglib
 	alsa? ( media-libs/alsa-lib )
 	bs2b? ( media-libs/libbs2b )
 	cdda? ( dev-libs/libcdio-paranoia )
@@ -43,6 +42,7 @@ RDEPEND="dev-qt/qt3support:4
 	mplayer? ( || ( media-video/mplayer
 		media-video/mplayer2 )
 	)
+	mpris? ( dev-qt/qtdbus:4 )
 	musepack? ( >=media-sound/musepack-tools-444 )
 	modplug? ( >=media-libs/libmodplug-0.8.4 )
 	vorbis? ( media-libs/libvorbis
@@ -50,13 +50,14 @@ RDEPEND="dev-qt/qt3support:4
 	jack? ( media-sound/jack-audio-connection-kit
 		media-libs/libsamplerate )
 	ffmpeg? ( virtual/ffmpeg )
+	opus? ( media-libs/opusfile )
 	projectm? ( media-libs/libprojectm
 		dev-qt/qtopengl:4 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.9 )
 	wavpack? ( media-sound/wavpack )
 	scrobbler? ( net-misc/curl )
 	sndfile? ( media-libs/libsndfile )
-	udisks? ( sys-fs/udisks:0 )"
+	udisks? ( sys-fs/udisks:2 )"
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog README"
@@ -86,6 +87,7 @@ src_configure() {
 		$(cmake-utils_use_use dbus)
 		$(cmake-utils_use_use enca)
 		$(cmake-utils_use_use ffmpeg)
+		-DUSE_FFMPEG_LEGACY=OFF
 		$(cmake-utils_use_use flac)
 		$(cmake-utils_use_use game GME)
 		-DUSE_HAL=OFF
@@ -101,6 +103,7 @@ src_configure() {
 		$(cmake-utils_use_use mpris)
 		$(cmake-utils_use_use musepack MPC)
 		$(cmake-utils_use_use notifier)
+		$(cmake-utils_use_use opus)
 		$(cmake-utils_use_use oss)
 		$(cmake-utils_use_use projectm)
 		$(cmake-utils_use_use pulseaudio PULSE)
@@ -108,7 +111,7 @@ src_configure() {
 		$(cmake-utils_use_use sndfile)
 		$(cmake-utils_use_use stereo)
 		$(cmake-utils_use_use tray STATICON)
-		$(cmake-utils_use_use udisks UDISKS)
+		$(cmake-utils_use_use udisks UDISKS2)
 		$(cmake-utils_use_use libsamplerate SRC)
 		$(cmake-utils_use_use vorbis)
 		$(cmake-utils_use_use wavpack)

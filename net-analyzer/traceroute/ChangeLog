@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.99 2014/10/17 14:11:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.100 2014/11/11 18:03:55 armin76 Exp $
+
+  11 Nov 2014; Raúl Porcel <armin76@gentoo.org> traceroute-2.0.20.ebuild:
+  Revert to ~alpha
 
   17 Oct 2014; Tobias Klausmann <klausman@gentoo.org> traceroute-2.0.20.ebuild:
   Stable on alpha, bug 517380
