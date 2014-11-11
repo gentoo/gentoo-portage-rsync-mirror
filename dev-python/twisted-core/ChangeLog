@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/twisted-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/ChangeLog,v 1.35 2014/09/15 08:19:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/ChangeLog,v 1.36 2014/11/11 06:37:03 idella4 Exp $
+
+*twisted-core-14.0.1 (11 Nov 2014)
+
+  11 Nov 2014; Ian Delaney <idella4@gentoo.org> +twisted-core-14.0.1.ebuild:
+  bump; minor bump with no major changes, remove keywords alpha hppa ia64 mips
+  ppc ppc64 s390 sh sparc to accommadate new dep service_identity, fixes bug
+  #528738, minor edits to test phase
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> twisted-core-13.0.0-r3.ebuild:
   Stable for sparc, wrt bug #512012
