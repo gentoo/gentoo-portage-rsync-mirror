@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.187 2014/07/04 21:23:34 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.188 2014/11/11 21:07:26 mabi Exp $
+
+*fox-1.7.49 (11 Nov 2014)
+
+  11 Nov 2014; Matti Bickel <mabi@gentoo.org> +files/jpeg-9.patch,
+  +fox-1.7.49.ebuild:
+  version bump, includes jpeg-9 patch from jer@gentoo.org (bug #520674)
 
   04 Jul 2014; Matti Bickel <mabi@gentoo.org> -fox-1.7.44.ebuild:
   remove old

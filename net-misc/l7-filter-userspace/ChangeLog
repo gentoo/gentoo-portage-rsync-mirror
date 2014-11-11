@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/l7-filter-userspace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.17 2014/03/17 06:59:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.19 2014/11/11 21:20:25 bircoph Exp $
+
+  11 Nov 2014; Andrew Savchenko <bircoph@gmail.com> metadata.xml:
+  Update e-mail :/
+
+  11 Nov 2014; Andrew Savchenko <bircoph@gmail.com> metadata.xml:
+  Package is now directly maintained instead of proxy-maintaining.
 
   17 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Remove myself from metadata.xml

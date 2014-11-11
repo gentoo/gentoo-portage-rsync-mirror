@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>proxy-maintainers</herd>
-<maintainer>
-  <email>maq@maqibooy.com</email>
-  <name>Marcus Stjärnås</name>
-</maintainer>
-<maintainer>
-  <email>gurligebis@gentoo.org</email>
-  <name>Bjarke Istrup Pedersen</name>
-</maintainer>
+  <herd>proxy-maintainers</herd>
+  <maintainer>
+    <email>maq@maqibooy.com</email>
+    <name>Marcus Stjärnås</name>
+  </maintainer>
+  <maintainer>
+    <email>gurligebis@gentoo.org</email>
+    <name>Bjarke Istrup Pedersen</name>
+  </maintainer>
 </pkgmetadata>
