@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rexical
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.49 2014/11/11 10:41:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.50 2014/11/11 13:47:29 mrueg Exp $
+
+  11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> rexical-1.0.5-r2.ebuild,
+  rexical-1.0.5-r3.ebuild:
+  Drop jruby target.
 
   11 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/rexical-1.0.4-ruby187.patch, -rexical-1.0.5-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/gst-plugins-libnice-0.1.4-r101.ebuild,v 1.2 2014/06/18 20:11:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/gst-plugins-libnice-0.1.8-r100.ebuild,v 1.1 2014/11/11 13:40:54 pacho Exp $
 
 EAPI=5
 inherit eutils multilib-minimal toolchain-funcs
@@ -15,11 +15,14 @@ SLOT="1.0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
-RDEPEND="~net-libs/libnice-${PV}[${MULTILIB_USEDEP}]
+RDEPEND="
+	~net-libs/libnice-${PV}[${MULTILIB_USEDEP}]
 	media-libs/gstreamer:${SLOT}[${MULTILIB_USEDEP}]
-	media-libs/gst-plugins-base:${SLOT}[${MULTILIB_USEDEP}]"
+	media-libs/gst-plugins-base:${SLOT}[${MULTILIB_USEDEP}]
+"
 DEPEND="${RDEPEND}
-	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
+"
 
 S=${WORKDIR}/${MY_P}
 
@@ -35,6 +38,7 @@ multilib_src_configure() {
 		--disable-static \
 		--without-gstreamer-0.10 \
 		--with-gstreamer \
+		--disable-introspection \
 		--disable-gupnp
 }
 

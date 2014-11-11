@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.1.4-r1.ebuild,v 1.3 2014/06/24 22:16:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.1.8.ebuild,v 1.1 2014/11/11 13:40:42 pacho Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -12,13 +12,21 @@ SRC_URI="http://nice.freedesktop.org/releases/${P}.tar.gz"
 LICENSE="|| ( MPL-1.1 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="+upnp"
+IUSE="+introspection +upnp"
 
-RDEPEND=">=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
-	upnp? ( >=net-libs/gupnp-igd-0.2.2-r1:=[${MULTILIB_USEDEP}] )"
+RDEPEND="
+	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
+	introspection? ( >=dev-libs/gobject-introspection-1.30.0 )
+	upnp? ( >=net-libs/gupnp-igd-0.2.4:=[${MULTILIB_USEDEP}] )
+"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
-	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
+"
+
+# Many tests fail from time to time, for example:
+# https://bugs.freedesktop.org/show_bug.cgi?id=81691
+RESTRICT="test"
 
 multilib_src_configure() {
 	# gstreamer plugin split off into media-plugins/gst-plugins-libnice
@@ -26,6 +34,7 @@ multilib_src_configure() {
 	econf --disable-static \
 		--without-gstreamer \
 		--without-gstreamer-0.10 \
+		$(use_enable introspection) \
 		$(use_enable upnp gupnp)
 
 	if multilib_is_native_abi; then
