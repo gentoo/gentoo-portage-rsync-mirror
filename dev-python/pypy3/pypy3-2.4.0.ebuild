@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3/pypy3-2.4.0.ebuild,v 1.3 2014/11/09 22:47:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3/pypy3-2.4.0.ebuild,v 1.4 2014/11/11 12:32:39 mgorny Exp $
 
 EAPI=5
 
@@ -184,7 +184,7 @@ src_install() {
 
 	einfo "Generating caches and byte-compiling ..."
 
-	python_export pypy EPYTHON PYTHON PYTHON_SITEDIR
+	python_export pypy3 EPYTHON PYTHON PYTHON_SITEDIR
 	local PYTHON=${ED%/}${INSDESTTREE}/pypy-c
 	local -x LD_LIBRARY_PATH="${ED%/}${INSDESTTREE}"
 
