@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/singledispatch
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/singledispatch/ChangeLog,v 1.1 2014/11/12 01:11:14 idella4 Exp $
+
+*singledispatch-3.4.0.3 (12 Nov 2014)
+
+  12 Nov 2014; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +singledispatch-3.4.0.3.ebuild:
+  new package which backports functools.singledispatch to <py3.4, required now
+  by testsuite of >=rpy.2.5.0
