@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.433 2014/10/21 18:56:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.434 2014/11/12 18:16:40 grobian Exp $
+
+  12 Nov 2014; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Update portage mask to make sure people first upgrade to 2.2.10.1-r1
 
   21 Oct 2014; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.10/profile.bashrc:

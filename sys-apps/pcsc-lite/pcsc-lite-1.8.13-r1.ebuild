@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.13-r1.ebuild,v 1.3 2014/11/12 06:19:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.13-r1.ebuild,v 1.4 2014/11/12 18:11:30 flameeyes Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -55,7 +55,7 @@ pkg_setup() {
 	enewuser pcscd -1 -1 /run/pcscd pcscd,openct
 }
 
-src_configure() {
+multilib_src_configure() {
 	local myeconfargs=(
 		--disable-maintainer-mode
 		--docdir="${EPREFIX}/usr/share/doc/${PF}"
@@ -66,7 +66,7 @@ src_configure() {
 		$(multilib_native_use_enable policykit polkit)
 		"$(systemd_with_unitdir)"
 	)
-	autotools-multilib_src_configure
+	autotools-utils_src_configure
 }
 
 DOCS=( AUTHORS DRIVERS HELP README SECURITY ChangeLog )
