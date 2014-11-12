@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/super-hexagon/super-hexagon-16.ebuild,v 1.2 2013/08/18 00:30:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/super-hexagon/super-hexagon-20141027.ebuild,v 1.1 2014/11/12 15:29:07 hasufell Exp $
 
 # we use bundled glew, cause slotting 1.6 does not give us
 # much benefit for one consumer
@@ -11,11 +11,11 @@ inherit eutils unpacker games
 
 DESCRIPTION="A minimal action game by Terry Cavanagh, with music by Chipzel"
 HOMEPAGE="http://www.superhexagon.com/"
-SRC_URI="${PN}-linux-${PV}-bin-1366677959"
+SRC_URI="superhexagon-${PV:4:4}${PV:0:4}-bin"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="bundled-libs"
 RESTRICT="bindist fetch splitdebug"
 
@@ -72,7 +72,7 @@ src_install() {
 	local myarch=$(usex amd64 "x86_64" "x86")
 
 	insinto "${MYGAMEDIR}"
-	doins -r data ${myarch}
+	doins -r data ${myarch} SuperHexagon.png
 
 	dodoc Linux.README
 
