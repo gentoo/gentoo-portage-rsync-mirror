@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/hidapi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/ChangeLog,v 1.8 2014/10/25 11:36:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/ChangeLog,v 1.9 2014/11/12 21:49:26 flameeyes Exp $
+
+*hidapi-0.8.0_rc1_p20140201 (12 Nov 2014)
+
+  12 Nov 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  +hidapi-0.8.0_rc1_p20140201.ebuild:
+  Bump using the Debian snapshot/packaging, and add support for multilib.
+  Migrated to use virtual/libudev which was the correct dependency.
 
   25 Oct 2014; Diego E. Pettenò <flameeyes@gentoo.org>
   hidapi-0.8.0_pre20130121-r1.ebuild:

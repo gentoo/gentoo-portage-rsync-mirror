@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.58 2014/08/10 20:28:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.59 2014/11/12 21:46:23 dlan Exp $
+
+  12 Nov 2014; Yixun Lan <dlan@gentoo.org> -oregano-0.69.1.ebuild,
+  oregano-0.69.1-r1.ebuild, +files/oregano-0.69.1-fix-libm.patch:
+  drop old; fix unresolved symbol, missing -lm, bug 527828, thanks Fat-Zer
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> oregano-0.69.1-r1.ebuild,
   oregano-0.69.1.ebuild, oregano-0.82.ebuild:

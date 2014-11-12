@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1-r1.ebuild,v 1.8 2014/08/10 20:28:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1-r1.ebuild,v 1.9 2014/11/12 21:46:23 dlan Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils fdo-mime flag-o-matic scons-utils
 
@@ -33,6 +33,7 @@ src_prepare() {
 	# patches from debian
 	epatch "${FILESDIR}/${P}-desktop_file_update.patch"
 	epatch "${FILESDIR}/${P}-scons_env_flags.patch"
+	epatch "${FILESDIR}/${P}-fix-libm.patch"
 }
 
 src_compile() {
