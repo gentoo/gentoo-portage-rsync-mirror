@@ -7,8 +7,8 @@ IUSE=debug gtk gtk3 +icons qt4 libnotify
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD-2
 RDEPEND=>=net-misc/dhcpcd-6.4.4 !icons? ( x11-themes/hicolor-icon-theme )
-REQUIRED_USE=|| ( gtk gtk3 qt4 ) gtk3? ( !gtk ) gtk? ( !gtk3 ) qt4? ( icons )
+REQUIRED_USE=?? ( gtk gtk3 qt4 ) gtk3? ( !gtk ) gtk? ( !gtk3 ) icons? ( || ( gtk gtk3 qt4 ) )
 SLOT=0
 SRC_URI=http://roy.marples.name/downloads/dhcpcd/dhcpcd-ui-0.7.4.tar.bz2
 _eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=9bc76d47a2134ad180202bdc3cea5634
+_md5_=b37777fde60448034554bb8782663bb9
