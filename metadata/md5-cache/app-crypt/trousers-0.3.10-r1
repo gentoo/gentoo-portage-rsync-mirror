@@ -4,10 +4,10 @@ DESCRIPTION=An open-source TCG Software Stack (TSS) v1.1 implementation
 EAPI=5
 HOMEPAGE=http://trousers.sf.net
 IUSE=doc selinux
-KEYWORDS=amd64 arm arm64 ~m68k ~s390 ~sh x86
+KEYWORDS=amd64 arm arm64 ~m68k ~ppc ~ppc64 ~s390 ~sh x86
 LICENSE=CPL-1.0 GPL-2
 RDEPEND=>=dev-libs/glib-2 >=dev-libs/openssl-0.9.7:0 selinux? ( sec-policy/selinux-tcsd )
 SLOT=0
 SRC_URI=mirror://sourceforge/trousers/trousers-0.3.10.tar.gz
 _eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	c91a1ac3fefc6b077094fb2e82c65af4	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	readme.gentoo	106edea5533517715013de909a333abd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=06776d4a3284a49a66560152ec0edb08
+_md5_=babed04644df319ce86571cac364cf92

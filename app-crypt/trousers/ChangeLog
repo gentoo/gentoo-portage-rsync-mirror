@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.54 2014/11/02 08:01:48 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.55 2014/11/12 00:45:24 blueness Exp $
+
+  12 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  trousers-0.3.10-r1.ebuild:
+  Keyworded on ~ppc ~ppc64, bug #458196
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> trousers-0.3.10-r1.ebuild:
   Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug

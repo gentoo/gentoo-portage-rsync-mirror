@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.177 2014/11/10 01:59:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.179 2014/11/12 00:43:15 flameeyes Exp $
+
+  12 Nov 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  pcsc-lite-1.8.13-r1.ebuild:
+  Remove useless inherit of autotools.eclass.
+
+*pcsc-lite-1.8.13-r1 (12 Nov 2014)
+
+  12 Nov 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pcsc-lite-1.8.13-r1.ebuild:
+  First try to get a multilib-compatible pcsc-lite. It's tested to work for the
+  default case and please report if you have issues with the multilib one.
 
 *pcsc-lite-1.8.13 (10 Nov 2014)
 

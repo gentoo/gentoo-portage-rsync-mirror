@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.56 2014/03/01 22:40:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.57 2014/11/12 00:46:24 blueness Exp $
+
+  12 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  ecryptfs-utils-101.ebuild, ecryptfs-utils-103.ebuild,
+  ecryptfs-utils-104.ebuild:
+  Keyworded on ~ppc ~ppc64, bug #458196
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> ecryptfs-utils-101.ebuild,
   ecryptfs-utils-103.ebuild, ecryptfs-utils-104.ebuild:
