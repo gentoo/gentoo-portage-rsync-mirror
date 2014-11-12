@@ -1,6 +1,11 @@
 # ChangeLog for games-util/dfarc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/dfarc/ChangeLog,v 1.4 2013/09/14 20:13:45 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/dfarc/ChangeLog,v 1.5 2014/11/12 15:58:23 hasufell Exp $
+
+*dfarc-3.12 (12 Nov 2014)
+
+  12 Nov 2014; Julian Ospald <hasufell@gentoo.org> +dfarc-3.12.ebuild:
+  version bump
 
   14 Sep 2013; Julian Ospald <hasufell@gentoo.org> dfarc-3.10.ebuild:
   correct license info

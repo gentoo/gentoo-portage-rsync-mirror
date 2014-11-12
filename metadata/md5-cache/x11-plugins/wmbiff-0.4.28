@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure prepare
+DEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXpm crypt? ( >=dev-libs/libgcrypt-1.2.1:0 >=net-libs/gnutls-2.2.0 ) virtual/pkgconfig x11-proto/xextproto x11-proto/xproto !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
+DESCRIPTION=WMBiff is a dock applet for WindowMaker which can monitor up to 5 mailboxes
+EAPI=5
+HOMEPAGE=http://windowmaker.org/dockapps/?name=wmbiff
+IUSE=crypt
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXpm crypt? ( >=dev-libs/libgcrypt-1.2.1:0 >=net-libs/gnutls-2.2.0 )
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~voyageur/distfiles/wmbiff-0.4.28.tar.gz
+_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	c91a1ac3fefc6b077094fb2e82c65af4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=be9abbf58c5081a11d0159c190eb2f1a

@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmbiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.38 2014/08/12 00:08:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.39 2014/11/12 15:45:17 voyageur Exp $
+
+*wmbiff-0.4.28 (12 Nov 2014)
+
+  12 Nov 2014; Bernard Cafarelli <voyageur@gentoo.org> +wmbiff-0.4.28.ebuild:
+  Version bump with new homepage, also fixes bug #514220
 
   12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> wmbiff-0.4.27-r1.ebuild:
   Stable on ppc, bug #506914

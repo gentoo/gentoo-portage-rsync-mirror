@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/freedink
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedink/ChangeLog,v 1.6 2014/05/29 20:47:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedink/ChangeLog,v 1.7 2014/11/12 16:01:06 hasufell Exp $
+
+*freedink-108.4 (12 Nov 2014)
+
+  12 Nov 2014; Julian Ospald <hasufell@gentoo.org> +freedink-108.4.ebuild:
+  version bump
 
 *freedink-108.2 (29 May 2014)
 
