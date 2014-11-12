@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.5.ebuild,v 1.8 2014/11/12 14:31:12 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.9.ebuild,v 1.1 2014/11/12 14:31:12 dlan Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+
+PYTHON_COMPAT=( python2_7 )
 VALA_MIN_API_VERSION="0.20"
 VALA_USE_DEPEND="vapigen"
 # Vapigen is needed for the vala binding
@@ -13,11 +14,11 @@ inherit bash-completion-r1 eutils gnome2-utils multilib python-single-r1 readme.
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
-SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
+SRC_URI="https://github.com/ibus/ibus/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="deprecated gconf gtk +gtk3 +introspection nls +python test vala wayland +X"
 REQUIRED_USE="|| ( gtk gtk3 X )
 	deprecated? ( python )
@@ -96,10 +97,9 @@ pkg_setup() {
 
 src_prepare() {
 	# We run "dconf update" in pkg_postinst/postrm to avoid sandbox violations
-	sed -e 's/dconf update/$(NULL)/' \
+	sed -e 's/dconf update/:/' \
 		-i data/dconf/Makefile.{am,in} || die
 	use vala && vala_src_prepare
-	cp "${S}"/client/gtk2/ibusimcontext.c "${S}"/client/gtk3/ibusimcontext.c || die
 }
 
 src_configure() {

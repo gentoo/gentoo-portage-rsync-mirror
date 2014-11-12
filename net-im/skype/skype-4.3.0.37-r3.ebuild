@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r3.ebuild,v 1.1 2014/11/12 08:28:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r3.ebuild,v 1.2 2014/11/12 14:44:40 mgorny Exp $
 
 EAPI=5
 
@@ -31,11 +31,11 @@ RDEPEND="
 				dev-qt/qtgui:4[accessibility,abi_x86_32(-)]
 				dev-qt/qtwebkit:4[abi_x86_32(-)]
 			)
-			>=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER}
+			>=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER}[-abi_x86_32(-)]
 		)
 		|| (
 			media-libs/alsa-lib[abi_x86_32(-)]
-			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}
+			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}[-abi_x86_32(-)]
 		)
 		|| (
 			(
@@ -44,11 +44,11 @@ RDEPEND="
 				x11-libs/libXScrnSaver[abi_x86_32(-)]
 				x11-libs/libXv[abi_x86_32(-)]
 			)
-			>=app-emulation/emul-linux-x86-xlibs-${EMUL_X86_VER}
+			>=app-emulation/emul-linux-x86-xlibs-${EMUL_X86_VER}[-abi_x86_32(-)]
 		)
 		pulseaudio? ( || (
 			media-sound/pulseaudio[abi_x86_32(-)]
-			>=app-emulation/emul-linux-x86-soundlibs-20140508-r1[-abi_x86_32(-)]
+			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}[-abi_x86_32(-)]
 		) )
 		apulse? ( media-sound/apulse[abi_x86_32(-)] )
 	)

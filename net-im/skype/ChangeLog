@@ -1,6 +1,9 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.167 2014/11/12 08:28:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.168 2014/11/12 14:44:40 mgorny Exp $
+
+  12 Nov 2014; Michał Górny <mgorny@gentoo.org> skype-4.3.0.37-r3.ebuild:
+  Fix emul-linux-x86 deps. Bug #528956.
 
 *skype-4.3.0.37-r3 (12 Nov 2014)
 

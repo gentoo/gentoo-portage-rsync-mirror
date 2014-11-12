@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/numactl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.37 2014/10/06 16:35:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.38 2014/11/12 14:56:05 jlec Exp $
+
+  12 Nov 2014; Justin Lecher <jlec@gentoo.org> numactl-2.0.10.ebuild,
+  metadata.xml:
+  Fix double PREFIX installation
 
   06 Oct 2014; Lars Wendler <polynomial-c@gentoo.org> Manifest:
   Upstream re-released the source tarball.

@@ -1,6 +1,18 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.150 2014/08/18 08:33:51 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.151 2014/11/12 14:31:12 dlan Exp $
+
+*ibus-1.5.9 (12 Nov 2014)
+
+  12 Nov 2014; Yixun Lan <dlan@gentoo.org> -ibus-1.4.1.ebuild,
+  -ibus-1.4.2.ebuild, ibus-1.5.5.ebuild, ibus-1.5.8-r1.ebuild,
+  +ibus-1.5.9.ebuild, -files/ibus-1.4.0-machine-id-fallback.patch,
+  -files/ibus-1.4.1-gir.patch, -files/ibus-1.4.1-libxslt-1.1.27.patch,
+  -files/ibus-1.4.1-no-gconf.patch, -files/ibus-1.5.1-queue-events.patch,
+  -files/ibus-1.5.1-setup.patch,
+  -files/ibus-1.5.1-use-system-keyboard-layout.patch,
+  -files/ibus-gconf-2.m4.patch, metadata.xml:
+  drop old versions, bump 1.5.9; increase vala version to fix dep warning
 
   18 Aug 2014; Yixun Lan <dlan@gentoo.org> ibus-1.5.8-r1.ebuild:
   rework dconf sed operation

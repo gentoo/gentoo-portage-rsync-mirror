@@ -1,0 +1,9 @@
+# ChangeLog for dev-tex/biblatex-apa
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex-apa/ChangeLog,v 1.1 2014/11/12 14:39:26 mrueg Exp $
+
+*biblatex-apa-6.6 (12 Nov 2014)
+
+  12 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +biblatex-apa-6.6.ebuild,
+  +metadata.xml:
+  Initial version.

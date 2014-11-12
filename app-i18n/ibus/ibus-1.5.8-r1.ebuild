@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.8-r1.ebuild,v 1.2 2014/08/18 08:33:51 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.8-r1.ebuild,v 1.3 2014/11/12 14:31:12 dlan Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
-VALA_MIN_API_VERSION="0.18"
+VALA_MIN_API_VERSION="0.20"
 VALA_USE_DEPEND="vapigen"
 # Vapigen is needed for the vala binding
 # Valac is needed when building from git for the engine

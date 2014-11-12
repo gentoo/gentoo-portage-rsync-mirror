@@ -8,7 +8,6 @@ full featured and user friendly input method user interface. It also may help
 developers to develop input method easily.
 </longdescription>
   <use>
-    <flag name="dconf">Enable support for <pkg>gnome-base/dconf</pkg></flag>
     <flag name="gconf">Enable support for <pkg>gnome-base/gconf</pkg></flag>
     <flag name="gtk3">Enable support for gtk+3</flag>
     <flag name="vala">Enable support for <pkg>dev-lang/vala</pkg></flag>
