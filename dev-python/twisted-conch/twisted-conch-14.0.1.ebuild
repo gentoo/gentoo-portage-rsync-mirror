@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-14.0.1.ebuild,v 1.1 2014/11/11 09:44:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-14.0.1.ebuild,v 1.2 2014/11/12 03:31:41 idella4 Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -17,4 +17,3 @@ DEPEND="
 	dev-python/pyasn1[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
-# Delete edits to tests for now since there is no test phase, for now"

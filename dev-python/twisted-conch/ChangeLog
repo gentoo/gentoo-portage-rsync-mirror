@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.113 2014/11/11 09:44:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.114 2014/11/12 03:31:41 idella4 Exp $
+
+  12 Nov 2014; Ian Delaney <idella4@gentoo.org> twisted-conch-14.0.1.ebuild:
+  Delete redundant comment
 
 *twisted-conch-14.0.1 (11 Nov 2014)
 
