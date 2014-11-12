@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-libs/glib-2 virtual/pkgconfig >=dev-perl/extutils-pkgconfig-1.0.0 >=dev-perl/extutils-depends-0.300.0 dev-lang/perl:=[-build(-)]
+DEPEND=>=dev-libs/glib-2 virtual/pkgconfig >=dev-perl/extutils-pkgconfig-1.0.0 >=dev-perl/extutils-depends-0.300.0 dev-perl/Log-Agent dev-lang/perl:=[-build(-)]
 DESCRIPTION=Glib - Perl wrappers for the GLib utility and Object libraries
 EAPI=5
 HOMEPAGE=http://gtk2-perl.sf.net/ http://search.cpan.org/dist/Glib/
@@ -9,4 +9,4 @@ RDEPEND=>=dev-libs/glib-2 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TS/TSCH/Glib-1.280.tar.gz
 _eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	32ce14ce4574ee32c1cc1051d65b175c	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=3d5e0c58472b130b47c0b8f21517cc61
+_md5_=3c0a77846ec1cba8cf8c662b543a2da6

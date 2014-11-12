@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/activity-log-manager-0.9.7.ebuild,v 1.4 2014/05/04 05:02:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/activity-log-manager-0.9.7.ebuild,v 1.5 2014/11/12 21:20:08 jlec Exp $
 
 EAPI=5
 
@@ -40,7 +40,8 @@ src_prepare() {
 	rm src/${PN}.c || die
 
 	epatch \
-		"${FILESDIR}"/${PN}-0.9.0.1-gold.patch
+		"${FILESDIR}"/${PN}-0.9.0.1-gold.patch \
+		"${FILESDIR}"/${P}-gtk-icon_size.patch
 	sed \
 		-e "/^almdocdir/s:=.*$:= \${prefix}/share/doc/${PF}:g" \
 		-i Makefile.am || die
