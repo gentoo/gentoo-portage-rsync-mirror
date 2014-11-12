@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/mmdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.29 2014/09/23 13:28:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.30 2014/11/12 20:13:31 jlec Exp $
+
+*mmdb-1.25.5-r1 (12 Nov 2014)
+
+  12 Nov 2014; Justin Lecher <jlec@gentoo.org> +mmdb-1.25.5-r1.ebuild,
+  +files/mmdb-1.25.5-include-path.patch:
+  Fix broken pc includedir path
 
 *mmdb-2.0.1 (23 Sep 2014)
 *mmdb-1.25.5 (23 Sep 2014)

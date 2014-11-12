@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.418.ebuild,v 1.1 2014/11/12 20:01:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.418.ebuild,v 1.2 2014/11/12 20:18:17 axs Exp $
 
 EAPI=5
 inherit nsplugins toolchain-funcs versionator multilib multilib-minimal
@@ -87,7 +87,7 @@ RDEPEND="
 					>=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)]
 					>=x11-libs/pango-1.36.3[abi_x86_32(-)]
 				)
-				app-emulation/emul-linux-x86-gtklibs
+				app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
 			)
 			|| (
 				(
@@ -95,7 +95,7 @@ RDEPEND="
 					>=dev-libs/nspr-4.10.4[abi_x86_32(-)]
 					>=dev-libs/nss-3.15.4[abi_x86_32(-)]
 				)
-				app-emulation/emul-linux-x86-baselibs
+				app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 			)
 			|| (
 				(
@@ -107,7 +107,7 @@ RDEPEND="
 					>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
 					>=x11-libs/libXt-1.1.4[abi_x86_32(-)]
 				)
-				app-emulation/emul-linux-x86-xlibs
+				app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
 			)
 		)
 		x86? ( ${NATIVE_DEPS} )
