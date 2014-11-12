@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gnulib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/ChangeLog,v 1.14 2014/10/10 15:26:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/ChangeLog,v 1.15 2014/11/12 11:16:44 jer Exp $
+
+  12 Nov 2014; Jeroen Roovers <jer@gentoo.org> gnulib-9999-r1.ebuild:
+  Install tests/ too.
 
   10 Oct 2014; Jeroen Roovers <jer@gentoo.org> gnulib-9999-r1.ebuild:
   EAPI bump. Install doc/ even with USE=-doc so that gnulib-tool can use it.

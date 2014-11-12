@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-9999-r1.ebuild,v 1.7 2014/10/10 15:26:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-9999-r1.ebuild,v 1.8 2014/11/12 11:16:44 jer Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ src_install() {
 	doins -r lib
 	doins -r m4
 	doins -r modules
+	doins -r tests
 	doins -r top
 
 	# install the real script
