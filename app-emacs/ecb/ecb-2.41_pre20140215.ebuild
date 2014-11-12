@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.41_pre20140215.ebuild,v 1.1 2014/11/10 08:21:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.41_pre20140215.ebuild,v 1.2 2014/11/12 08:05:33 ulm Exp $
 
 EAPI=5
 
-inherit elisp eutils readme.gentoo
+inherit readme.gentoo elisp eutils
 
 DESCRIPTION="Source code browser for Emacs"
 HOMEPAGE="http://ecb.sourceforge.net/"

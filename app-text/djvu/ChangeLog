@@ -1,6 +1,10 @@
 # ChangeLog for app-text/djvu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.149 2014/06/10 01:03:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.150 2014/11/12 08:26:30 jlec Exp $
+
+  12 Nov 2014; Justin Lecher <jlec@gentoo.org> djvu-3.5.25.3.ebuild,
+  metadata.xml:
+  Add fix for newer libtool, #528638; thanks Maxim Mikityanskiy for the fix
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> djvu-3.5.25.3.ebuild:
   Add arm64 love.
