@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.179 2014/11/12 00:43:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.180 2014/11/12 06:19:20 flameeyes Exp $
+
+  12 Nov 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  pcsc-lite-1.8.13-r1.ebuild:
+  Multilib fixes from bug #528996, thanks to Arfrever; remove declaration for
+  Python 2.6 which is no longer supported.
 
   12 Nov 2014; Diego E. Pettenò <flameeyes@gentoo.org>
   pcsc-lite-1.8.13-r1.ebuild:

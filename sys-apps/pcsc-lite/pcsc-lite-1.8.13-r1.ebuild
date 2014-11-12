@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.13-r1.ebuild,v 1.2 2014/11/12 00:43:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.13-r1.ebuild,v 1.3 2014/11/12 06:19:20 flameeyes Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils python-single-r1 multilib systemd udev user autotools-multilib
 
@@ -61,9 +61,9 @@ src_configure() {
 		--docdir="${EPREFIX}/usr/share/doc/${PF}"
 		--enable-usbdropdir="${EPREFIX}/usr/$(get_libdir)/readers/usb"
 		--enable-ipcdir=/run/pcscd
-		$(use_enable udev libudev)
-		$(use_enable libusb)
-		$(use_enable policykit polkit)
+		$(multilib_native_use_enable udev libudev)
+		$(multilib_native_use_enable libusb)
+		$(multilib_native_use_enable policykit polkit)
 		"$(systemd_with_unitdir)"
 	)
 	autotools-multilib_src_configure
