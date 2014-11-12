@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20-r1.ebuild,v 1.12 2014/10/22 07:27:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20-r3.ebuild,v 1.1 2014/11/12 07:52:33 jlec Exp $
 
-EAPI="5"
+EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
+
 inherit autotools-utils bash-completion-r1 eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A nice command line todo list for developers"
@@ -14,7 +15,7 @@ SRC_URI="http://swapoff.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND="
@@ -23,9 +24,11 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 DOCS=( AUTHORS ChangeLog QuickStart README doc/scripts.sh doc/scripts.tcsh doc/todorc.example )
+
 PATCHES=(
-	"${FILESDIR}/${P}-gentoo.diff"
-	"${FILESDIR}/${P}-gcc43.patch"
+	"${FILESDIR}"/${P}-gentoo.diff
+	"${FILESDIR}"/${P}-gcc43.patch
+	"${FILESDIR}"/${P}-bashcom_spaces.patch
 )
 
 src_prepare() {
