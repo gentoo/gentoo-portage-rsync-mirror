@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.6.4.ebuild,v 1.1 2014/08/12 05:54:08 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.6.4-r1.ebuild,v 1.1 2014/11/12 10:22:35 ultrabug Exp $
 
 EAPI=5
 SCONS_MIN_VERSION="1.2.0"
@@ -8,7 +8,7 @@ CHECKREQS_DISK_BUILD="2400M"
 CHECKREQS_DISK_USR="512M"
 CHECKREQS_MEMORY="1024M"
 
-inherit eutils flag-o-matic multilib scons-utils systemd user versionator check-reqs
+inherit eutils flag-o-matic multilib pax-utils scons-utils systemd user versionator check-reqs
 
 MY_P=${PN}-src-r${PV/_rc/-rc}
 
@@ -111,6 +111,9 @@ src_install() {
 
 	insinto /etc/logrotate.d/
 	newins "${FILESDIR}/${PN}.logrotate" ${PN}
+
+	# see bug #526114
+	pax-mark emr "${ED}"/usr/bin/{mongo,mongod,mongos}
 
 	if use mms-agent; then
 		local MY_PN="mms-agent"
