@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/vdk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.31 2013/02/02 09:10:27 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.32 2014/11/12 14:10:45 mrueg Exp $
+
+  12 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -files/vdk-2.4-gcc3.4.patch,
+  -vdk-2.4.0.ebuild:
+  Cleanup old superseded EAPI1 ebuild.
 
 *vdk-2.5.1 (02 Feb 2013)
 

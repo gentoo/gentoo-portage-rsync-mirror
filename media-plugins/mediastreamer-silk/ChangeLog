@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mediastreamer-silk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-silk/ChangeLog,v 1.13 2013/10/27 10:38:23 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-silk/ChangeLog,v 1.14 2014/11/12 14:19:46 bircoph Exp $
+
+  12 Nov 2014; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
+  Package is now directly maintained instead of proxy-maintaining.
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Has a proxy maintainer
