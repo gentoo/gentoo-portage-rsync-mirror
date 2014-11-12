@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/porticron-0.6.ebuild,v 1.6 2013/01/10 07:46:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/porticron-0.6.ebuild,v 1.7 2014/11/12 20:31:56 sping Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ GITHUB_PROJECT="porticron"
 GITHUB_COMMIT="eaf2457"
 
 DESCRIPTION="porticron is a cron script to sync portage and send update mails to root"
-HOMEPAGE="http://github.com/hollow/porticron"
+HOMEPAGE="https://github.com/gentoo/porticron"
 SRC_URI="http://nodeload.github.com/${GITHUB_AUTHOR}/${GITHUB_PROJECT}/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"

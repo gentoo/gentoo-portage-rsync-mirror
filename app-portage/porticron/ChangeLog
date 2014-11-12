@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/porticron
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.38 2014/04/13 16:28:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.39 2014/11/12 20:31:56 sping Exp $
+
+  12 Nov 2014; Sebastian Pipping <sping@gentoo.org> porticron-0.6.ebuild,
+  porticron-0.7_p20131113.ebuild, porticron-0.7_p20140126.ebuild:
+  Update homepage
 
   13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> porticron-0.7_p20140126.ebuild:
   Stable for ppc, wrt bug #505148
