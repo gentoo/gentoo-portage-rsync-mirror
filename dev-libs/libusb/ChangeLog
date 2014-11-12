@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.169 2014/11/11 12:26:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.170 2014/11/12 05:30:36 ssuominen Exp $
+
+  12 Nov 2014; Samuli Suominen <ssuominen@gentoo.org> libusb-1.0.19.ebuild:
+  amd64/arm/ppc/ppc64/x86 stable wrt #528834
 
   11 Nov 2014; Jeroen Roovers <jer@gentoo.org> libusb-1.0.19.ebuild:
   Stable for HPPA (bug #528834).

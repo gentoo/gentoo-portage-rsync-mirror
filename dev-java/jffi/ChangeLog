@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.33 2014/04/13 16:16:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.34 2014/11/12 05:22:48 ercpe Exp $
+
+  12 Nov 2014; Johann Schmitz <ercpe@gentoo.org>
+  +files/jffi-1.2.7_no-werror.patch, jffi-1.2.7.ebuild:
+  Dropped -Werror and optimization flags from test build flags (bug #528778)
 
   13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> jffi-1.2.7.ebuild:
   Stable for ppc, wrt bug #492014

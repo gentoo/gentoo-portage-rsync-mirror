@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.7.ebuild,v 1.5 2014/04/13 16:16:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.7.ebuild,v 1.6 2014/11/12 05:22:48 ercpe Exp $
 
 EAPI="5"
 
@@ -31,7 +31,7 @@ DEPEND="${COMMON_DEP}
 
 java_prepare() {
 	cp "${FILESDIR}"/${PN}_maven-build.xml build.xml || die
-	epatch "${FILESDIR}"/${PN}-1.2.6_no-werror.patch
+	epatch "${FILESDIR}"/${P}_no-werror.patch
 	epatch "${FILESDIR}"/${P}-junit-4.11.patch
 
 	# misc fixes for Darwin
