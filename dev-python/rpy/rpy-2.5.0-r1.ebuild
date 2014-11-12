@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.5.0.ebuild,v 1.1 2014/11/11 04:43:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.5.0-r1.ebuild,v 1.1 2014/11/12 01:33:53 idella4 Exp $
 
 EAPI=5
 
@@ -20,14 +20,16 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="AGPL-3 GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
+IUSE="test"
 
 RDEPEND="
 	>=dev-lang/R-3
 	dev-python/numpy[${PYTHON_USEDEP}]
 	>=dev-python/pandas-0.13.1[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	test? ( $(python_gen_cond_dep 'dev-python/singledispatch[${PYTHON_USEDEP}]' python2_7 python3_3) )"
+
 # ggplot2 is an optional test dep but not in portage
 S="${WORKDIR}/${MY_P}"
 
@@ -44,7 +46,6 @@ python_compile() {
 }
 
 python_test() {
-	# https://bitbucket.org/lgautier/rpy2/issue/235/
 	cd "${BUILD_DIR}"/lib || die
-	${PYTHON} -m 'rpy2.tests' -v || die
+	${PYTHON} -m 'rpy2.tests' || die
 }
