@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/atokx3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.24 2014/06/25 06:34:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.25 2014/11/12 17:59:52 axs Exp $
+
+*atokx3-3.0.0-r11 (12 Nov 2014)
+
+  12 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +atokx3-3.0.0-r11.ebuild, -atokx3-3.0.0-r10.ebuild:
+  bumped EAPI to 5, adjusted multilib dependencies
 
   25 Jun 2014; Michał Górny <mgorny@gentoo.org> atokx3-3.0.0-r10.ebuild:
   Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for

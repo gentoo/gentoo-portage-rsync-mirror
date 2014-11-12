@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r10.ebuild,v 1.4 2014/06/25 06:34:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r11.ebuild,v 1.1 2014/11/12 17:59:52 axs Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit cdrom eutils gnome2-utils multilib
 
@@ -19,7 +19,7 @@ SRC_URI="http://www3.justsystem.co.jp/download/atok/up/lin/${MY_UPDATE_P}.tar.gz
 LICENSE="ATOK MIT"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="multilib"
 
 RESTRICT="strip mirror"
@@ -55,45 +55,45 @@ RDEPEND="!app-i18n/atokx2
 	x11-libs/pangox-compat
 	multilib? (
 		|| (
-			app-emulation/emul-linux-x86-baselibs
 			(
-				>=dev-libs/glib-2.34.3:2[abi_x86_32]
-				>=dev-libs/libxml2-2.9.1-r4:2[abi_x86_32]
-				>=media-libs/libpng-1.2.51[abi_x86_32]
-				>=sys-apps/tcp-wrappers-7.6.22-r1[abi_x86_32]
-				>=virtual/pam-0-r1[abi_x86_32]
+				>=dev-libs/glib-2.34.3:2[abi_x86_32(-)]
+				>=dev-libs/libxml2-2.9.1-r4:2[abi_x86_32(-)]
+				>=media-libs/libpng-1.2.51[abi_x86_32(-)]
+				>=sys-apps/tcp-wrappers-7.6.22-r1[abi_x86_32(-)]
+				>=virtual/pam-0-r1[abi_x86_32(-)]
 			)
+			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 		)
 		|| (
-			app-emulation/emul-linux-x86-gtklibs
 			(
 				>=dev-libs/atk-2.10.0[abi_x86_32]
 				>=x11-libs/cairo-1.12.14-r4[abi_x86_32]
 				>=x11-libs/gtk+-2.24.23:2[abi_x86_32]
 				>=x11-libs/pangox-compat-0.0.2[abi_x86_32]
 			)
+			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
 		)
 		|| (
-			app-emulation/emul-linux-x86-opengl
-			>=x11-libs/libdrm-2.4.46[abi_x86_32]
+			>=x11-libs/libdrm-2.4.46[abi_x86_32(-)]
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
 		)
 		|| (
-			app-emulation/emul-linux-x86-xlibs
 			(
-				>=media-libs/fontconfig-2.10.92[abi_x86_32]
-				>=x11-libs/libICE-1.0.8-r1[abi_x86_32]
-				>=x11-libs/libSM-1.2.1-r1[abi_x86_32]
-				>=x11-libs/libXcomposite-0.4.4-r1[abi_x86_32]
-				>=x11-libs/libXcursor-1.1.14[abi_x86_32]
-				>=x11-libs/libXdamage-1.1.4-r1[abi_x86_32]
-				>=x11-libs/libXext-1.3.2[abi_x86_32]
-				>=x11-libs/libXfixes-5.0.1[abi_x86_32]
-				>=x11-libs/libXft-2.3.1-r1[abi_x86_32]
-				>=x11-libs/libXi-1.7.2[abi_x86_32]
-				>=x11-libs/libXrandr-1.4.2[abi_x86_32]
-				>=x11-libs/libXrender-0.9.8[abi_x86_32]
-				>=x11-libs/libXxf86vm-1.1.3[abi_x86_32]
+				>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
+				>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
+				>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
+				>=x11-libs/libXcomposite-0.4.4-r1[abi_x86_32(-)]
+				>=x11-libs/libXcursor-1.1.14[abi_x86_32(-)]
+				>=x11-libs/libXdamage-1.1.4-r1[abi_x86_32(-)]
+				>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+				>=x11-libs/libXfixes-5.0.1[abi_x86_32(-)]
+				>=x11-libs/libXft-2.3.1-r1[abi_x86_32(-)]
+				>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
+				>=x11-libs/libXrandr-1.4.2[abi_x86_32(-)]
+				>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
+				>=x11-libs/libXxf86vm-1.1.3[abi_x86_32(-)]
 			)
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
 		)
 	)"
 
@@ -189,7 +189,7 @@ src_prepare() {
 }
 
 src_install() {
-	dodoc "${MY_UPDATE_P}/README_UP2.txt" || die
+	dodoc "${MY_UPDATE_P}/README_UP2.txt"
 	rm -rf "${MY_UPDATE_P}"
 
 	cp -dpR * "${ED}" || die
@@ -200,22 +200,22 @@ src_install() {
 		local lib64="$(get_libdir)"
 		if [ "${lib32}" != "${lib64}" ] ; then
 			for f in xiiimp.so xiiimp.a iiim-xbe xiiimp.so.2 xiiimp.so.2.0.0 iiimd-watchdog xiiimp.la ; do
-				dosym "${EPREFIX}/usr/${lib32}/iiim/${f}" "/usr/${lib64}/iiim/${f}" || die
+				dosym "${EPREFIX}/usr/${lib32}/iiim/${f}" "/usr/${lib64}/iiim/${f}"
 			done
 			for f in atokx3aux.so atokx3.so ; do
-				dosym "${EPREFIX}/usr/${lib32}/iiim/le/atokx3/${f}" "/usr/${lib64}/iiim/le/atokx3/${f}" || die
+				dosym "${EPREFIX}/usr/${lib32}/iiim/le/atokx3/${f}" "/usr/${lib64}/iiim/le/atokx3/${f}"
 			done
-			dosym "${EPREFIX}/usr/${lib64}/iiim/le/atokx3/64" /usr/"${lib32}"/iiim/le/atokx3/64 || die
-			dosym "${EPREFIX}/usr/${lib64}/iiim/le/atokx3/64" /usr/"${lib32}"/iiim/le/atokx3/amd64 || die
+			dosym "${EPREFIX}/usr/${lib64}/iiim/le/atokx3/64" /usr/"${lib32}"/iiim/le/atokx3/64
+			dosym "${EPREFIX}/usr/${lib64}/iiim/le/atokx3/64" /usr/"${lib32}"/iiim/le/atokx3/amd64
 		fi
 	fi
 
 	sed -e "s:@EPREFIX@:${EPREFIX}:" "${FILESDIR}/xinput-iiimf" > "${T}/iiimf.conf" || die
 	insinto /etc/X11/xinit/xinput.d
-	doins "${T}/iiimf.conf" || die
+	doins "${T}/iiimf.conf"
 
-	dodoc "${CDROM_ROOT}"/doc/atok.pdf || die
-	dohtml "${CDROM_ROOT}"/readme.html || die
+	dodoc "${CDROM_ROOT}"/doc/atok.pdf
+	dohtml "${CDROM_ROOT}"/readme.html
 }
 
 pkg_preinst() {

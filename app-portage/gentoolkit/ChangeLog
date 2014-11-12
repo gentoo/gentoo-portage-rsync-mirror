@@ -1,6 +1,18 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.314 2014/07/06 12:35:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.315 2014/11/12 17:45:13 fuzzyray Exp $
+
+*gentoolkit-0.3.0.9-r2 (12 Nov 2014)
+
+  12 Nov 2014; Paul Varner <fuzzyray@gentoo.org> +gentoolkit-0.3.0.9-r2.ebuild,
+  gentoolkit-9999.ebuild, +files/0.3.0.9-equery-508114.patch,
+  +files/0.3.0.9-revdep-rebuild-526400.patch,
+  +files/0.3.0.9-equery-strip-XXXFLAGS.patch:
+  Revision bump to add patches for the following:
+  revdep-rebuild: Fix gawk warning. Bug 526400
+  equery: strip leading '-' from CFLAGS, CXXFLAGS, LDFLAGS
+  equery: Don't always print license field. Bug 508114
+  Added Python 3.4 to PYTHON_COMPAT
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> gentoolkit-0.3.0.8-r2.ebuild,
   gentoolkit-0.3.0.9-r1.ebuild, gentoolkit-0.3.0.9.ebuild,
