@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>bircoph@gmail.com</email>
+		<email>bircoph@gentoo.org</email>
 		<name>Andrew Savchenko</name>
-		<description>Proxy maintainer. Assign bugs to him.</description>
 	</maintainer>
 	<use>
 		<flag name='assistant'>Turn on assistant compiling
