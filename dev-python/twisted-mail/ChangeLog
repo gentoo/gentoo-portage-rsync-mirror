@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-mail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.100 2014/09/15 08:19:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.101 2014/11/12 04:12:23 idella4 Exp $
+
+*twisted-mail-14.0.1 (12 Nov 2014)
+
+  12 Nov 2014; Ian Delaney <idella4@gentoo.org> +twisted-mail-14.0.1.ebuild:
+  bump, drop py2.6
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> twisted-mail-13.0.0-r1.ebuild:
   Stable for sparc, wrt bug #512012
