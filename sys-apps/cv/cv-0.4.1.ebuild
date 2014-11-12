@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cv/cv-0.4.1.ebuild,v 1.4 2014/08/06 20:17:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cv/cv-0.4.1.ebuild,v 1.5 2014/11/12 22:47:40 blueness Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="${HOMEPAGE}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 RDEPEND="sys-libs/ncurses"
 DEPEND="
