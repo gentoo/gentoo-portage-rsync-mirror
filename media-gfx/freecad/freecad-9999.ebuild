@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-9999.ebuild,v 1.3 2014/08/15 22:02:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-9999.ebuild,v 1.4 2014/11/12 16:52:51 floppym Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit cmake-utils eutils git-2 fortran-2 multilib python-single-r1
+inherit cmake-utils eutils git-r3 fortran-2 multilib python-single-r1
 
 DESCRIPTION="QT based Computer Aided Design application"
 HOMEPAGE="http://www.freecadweb.org/"

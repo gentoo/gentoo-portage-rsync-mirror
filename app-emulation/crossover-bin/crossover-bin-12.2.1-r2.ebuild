@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-13.1.0.ebuild,v 1.1 2014/08/23 21:13:56 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-12.2.1-r2.ebuild,v 1.1 2014/11/12 16:39:44 axs Exp $
 
-EAPI="5"
+EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE="threads"
 
 inherit python-single-r1 unpacker
 
-DESCRIPTION="Commercial version of app-emulation/wine with paid support."
+DESCRIPTION="Commercial version of app-emulation/wine with paid support"
 HOMEPAGE="http://www.codeweavers.com/products/crossover/"
 SRC_URI="install-crossover-${PV}.bin"
 
@@ -30,66 +30,51 @@ QA_PRESTRIPPED="opt/cxoffice/lib/.*
 	"
 S="${WORKDIR}"
 
-MLIB_DEPS="amd64? (
-	openal? ( app-emulation/emul-linux-x86-sdl )
-	opengl? ( app-emulation/emul-linux-x86-opengl )
-	scanner? ( app-emulation/emul-linux-x86-medialibs )
-	v4l? ( app-emulation/emul-linux-x86-medialibs )
-	app-emulation/emul-linux-x86-baselibs
-	app-emulation/emul-linux-x86-soundlibs
-	|| (
-		(
-			>=media-libs/freetype-2.5.0.1[abi_x86_32]
-			>=x11-libs/libICE-1.0.8-r1[abi_x86_32]
-			>=x11-libs/libSM-1.2.1-r1[abi_x86_32]
-			>=x11-libs/libX11-1.6.2[abi_x86_32]
-			>=x11-libs/libXau-1.0.7-r1[abi_x86_32]
-			>=x11-libs/libXdmcp-1.1.1-r1[abi_x86_32]
-			>=x11-libs/libXext-1.3.2[abi_x86_32]
-			>=x11-libs/libXi-1.7.2[abi_x86_32]
-			>=x11-libs/libXrandr-1.4.2[abi_x86_32]
-			>=x11-libs/libXxf86vm-1.1.3[abi_x86_32]
-			>=x11-libs/libxcb-1.9.1[abi_x86_32]
-		)
-		app-emulation/emul-linux-x86-xlibs
-	)
-)"
-
-X86_DEPS="x86? (
+REGULAR_DEPS="
 	capi? ( net-dialup/capi4k-utils )
-	cups? ( net-print/cups )
-	gsm? ( media-sound/gsm )
-	jpeg? ( virtual/jpeg )
+	cups? ( net-print/cups[abi_x86_32(-)] )
+	gsm? ( media-sound/gsm[abi_x86_32(-)] )
+	jpeg? ( virtual/jpeg[abi_x86_32(-)] )
 	lcms? ( media-libs/lcms:0 )
-	ldap? ( net-nds/openldap )
-	gphoto2? ( media-libs/libgphoto2 )
-	mp3? ( >=media-sound/mpg123-1.5.0 )
-	nls? ( sys-devel/gettext )
-	openal? ( media-libs/openal )
+	ldap? ( net-nds/openldap[abi_x86_32(-)] )
+	gphoto2? ( media-libs/libgphoto2[abi_x86_32(-)] )
+	mp3? ( >=media-sound/mpg123-1.5.0[abi_x86_32(-)] )
+	nls? ( sys-devel/gettext[abi_x86_32(-)] )
+	openal? ( media-libs/openal[abi_x86_32(-)] )
 	opengl? (
-		virtual/glu
-		virtual/opengl
+		virtual/glu[abi_x86_32(-)]
+		virtual/opengl[abi_x86_32(-)]
 	)
-	png? ( media-libs/libpng:0 )
-	scanner? ( media-gfx/sane-backends )
-	ssl? ( dev-libs/openssl:0 )
-	v4l? ( media-libs/libv4l )
-	media-libs/alsa-lib
-	>=media-libs/freetype-2.0.0
-	media-libs/mesa
-	sys-apps/util-linux
-	sys-libs/zlib
-	x11-libs/libICE
-	x11-libs/libSM
-	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXdmcp
-	x11-libs/libXext
-	x11-libs/libXi
-	x11-libs/libXrandr
-	x11-libs/libXxf86vm
-	x11-libs/libxcb
-	)"
+	png? ( media-libs/libpng:0[abi_x86_32(-)] )
+	scanner? ( media-gfx/sane-backends[abi_x86_32(-)] )
+	ssl? ( dev-libs/openssl:0[abi_x86_32(-)] )
+	v4l? ( media-libs/libv4l[abi_x86_32(-)] )
+	media-libs/alsa-lib[abi_x86_32(-)]
+	>=media-libs/freetype-2.0.0[abi_x86_32(-)]
+	media-libs/mesa[abi_x86_32(-)]
+	sys-apps/util-linux[abi_x86_32(-)]
+	sys-libs/zlib[abi_x86_32(-)]
+	x11-libs/libICE[abi_x86_32(-)]
+	x11-libs/libSM[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXau[abi_x86_32(-)]
+	x11-libs/libXdmcp[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]
+	x11-libs/libXi[abi_x86_32(-)]
+	x11-libs/libXrandr[abi_x86_32(-)]
+	x11-libs/libXxf86vm[abi_x86_32(-)]
+	x11-libs/libxcb[abi_x86_32(-)]
+"
+
+EMUL_DEPS="
+	app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)]
+	app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+	openal? ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] )
+	opengl? ( app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] )
+	scanner? ( app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
+	v4l? ( app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
+"
 
 DEPEND="dev-lang/perl
 	app-arch/unzip
@@ -102,8 +87,7 @@ RDEPEND="${DEPEND}
 	dev-util/desktop-file-utils
 	!app-emulation/crossover-office-pro-bin
 	!app-emulation/crossover-office-bin
-	${MLIB_DEPS}
-	${X86_DEPS}
+	|| ( ( ${REGULAR_DEPS} ) ( ${EMUL_DEPS} ) )
 	"
 
 pkg_nofetch() {

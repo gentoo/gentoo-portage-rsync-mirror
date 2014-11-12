@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/freecad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.24 2014/10/13 08:30:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.25 2014/11/12 16:52:51 floppym Exp $
+
+  12 Nov 2014; Mike Gilbert <floppym@gentoo.org> freecad-9999.ebuild:
+  Switch to git-r3, bug 527524.
 
   13 Oct 2014; Michael Weber <xmw@gentoo.org> freecad-0.14.3702-r1.ebuild:
   depend on dev-python/pyside[X] (bug 525206, thanks hakkikt@gmail.com)

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.135 2014/11/10 15:56:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.136 2014/11/12 16:58:15 ago Exp $
+
+  12 Nov 2014; Agostino Sarubbo <ago@gentoo.org> rack-1.4.5-r1.ebuild,
+  rack-1.5.2-r1.ebuild:
+  Stable for ppc, wrt bug #497490
 
   10 Nov 2014; Manuel Rüger <mrueg@gentoo.org> rack-1.4.5-r1.ebuild,
   rack-1.4.5-r2.ebuild, rack-1.4.5-r3.ebuild, rack-1.4.5.ebuild,

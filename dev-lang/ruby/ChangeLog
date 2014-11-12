@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.680 2014/11/11 10:35:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.681 2014/11/12 16:55:49 ago Exp $
+
+  12 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ruby-1.9.3_p550.ebuild,
+  ruby-2.0.0_p594.ebuild:
+  Stable for alpha, wrt bug #527084
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ruby-1.9.3_p550.ebuild,
   ruby-2.0.0_p594.ebuild:
