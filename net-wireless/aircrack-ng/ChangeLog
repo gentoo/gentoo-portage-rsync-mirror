@@ -1,6 +1,22 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.89 2014/11/10 13:44:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.90 2014/11/12 00:15:00 zerochaos Exp $
+
+  12 Nov 2014; Rick Farina <zerochaos@gentoo.org> -aircrack-ng-1.1-r2.ebuild,
+  -aircrack-ng-1.1-r4.ebuild, -aircrack-ng-1.2_beta3-r3.ebuild,
+  -files/aircrack-ng-1.0_rc3-respect_LDFLAGS.patch,
+  -files/aircrack-ng-1.0_rc4-fix_build.patch,
+  -files/aircrack-ng-1.1-CVE-2010-1159.patch,
+  -files/aircrack-ng-1.1-parallelmake.patch,
+  -files/aircrack-ng-1.1-respect_LDFLAGS.patch,
+  -files/aircrack-ng-1.1-sse-pic.patch,
+  -files/aircrack-ng-9999-fix-labels.patch,
+  -files/airodump-ng-oui-update-path-fix.patch,
+  -files/airodump-ng.ignore-negative-one.v4.patch,
+  -files/changeset_r1921_backport.diff,
+  -files/diff-wpa-migration-mode-aircrack-ng.diff, -files/eapol_fix.patch,
+  -files/ignore-channel-1-error.patch, -files/process-group-leader.c:
+  cleanup for security bug #528132
 
   10 Nov 2014; Agostino Sarubbo <ago@gentoo.org> aircrack-ng-1.2_rc1.ebuild:
   Stable for ppc, wrt bug #528132
