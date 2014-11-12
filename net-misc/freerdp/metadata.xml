@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>floppym@gentoo.org</email>
-		<name>Mike Gilbert</name>
-	</maintainer>
-	<use>
-		<flag name="channels">Build virtual channel plugins</flag>
-		<flag name="client">Build client binaries</flag>
-		<flag name="server">Build server binaries</flag>
-	</use>
+  <maintainer>
+    <email>floppym@gentoo.org</email>
+    <name>Mike Gilbert</name>
+  </maintainer>
+  <use>
+    <flag name="channels">Build virtual channel plugins</flag>
+    <flag name="client">Build client binaries</flag>
+    <flag name="server">Build server binaries</flag>
+  </use>
 </pkgmetadata>

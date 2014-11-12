@@ -10,4 +10,4 @@ RDEPEND=dev-libs/openssl sys-libs/zlib alsa? ( media-libs/alsa-lib ) cups? ( net
 SLOT=0
 SRC_URI=https://github.com/FreeRDP/FreeRDP/archive/780d451afad21a22d2af6bd030ee71311856f038.tar.gz -> freerdp-1.1.0_beta1_p20130710.tar.gz
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=a12e8bc18a92062c3e33ffab797b7af4
+_md5_=c34ec6ae5beb6a8a69bdddb0b6289e1e

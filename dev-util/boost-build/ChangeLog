@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.130 2014/11/11 20:50:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.131 2014/11/12 08:42:59 pinkbyte Exp $
+
+  12 Nov 2014; Sergey Popov <pinkbyte@gentoo.org> boost-build-1.55.0.ebuild:
+  Stable on amd64, wrt bug #525286
 
   11 Nov 2014; Markus Meier <maekke@gentoo.org> boost-build-1.55.0.ebuild:
   arm stable, bug #525286
