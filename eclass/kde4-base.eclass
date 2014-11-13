@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.142 2014/10/25 19:01:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.143 2014/11/13 04:19:51 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -451,6 +451,9 @@ _calculate_src_uri() {
 				4.11.13)
 					# Part of 4.14 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/4.14.2/src/${_kmname_pv}.tar.xz" ;;
+				4.11.14)
+					# Part of 4.14 actually, sigh. Not stable for next release!
+					SRC_URI="mirror://kde/stable/4.14.3/src/${_kmname_pv}.tar.xz" ;;
 				*)
 					# Stable KDE SC releases
 					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.xz" ;;
