@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/libnacl
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libnacl/ChangeLog,v 1.2 2014/11/13 00:16:02 chutzpah Exp $
+
+  13 Nov 2014; Patrick McLean <chutzpah@gentoo.org> libnacl-1.4.0.ebuild:
+  Remove extra space from HOMEPAGE
+
+*libnacl-1.4.0 (13 Nov 2014)
+
+  13 Nov 2014; Patrick McLean <chutzpah@gentoo.org> +libnacl-1.4.0.ebuild,
+  +metadata.xml:
+  New package, python ctypes wrapper for libsodium
