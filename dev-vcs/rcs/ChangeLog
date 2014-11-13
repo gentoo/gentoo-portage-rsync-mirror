@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/rcs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.28 2014/06/10 00:01:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.29 2014/11/13 01:13:52 idella4 Exp $
+
+*rcs-5.9.2 (13 Nov 2014)
+
+  13 Nov 2014; Ian Delaney <idella4@gentoo.org> +rcs-5.9.2.ebuild:
+  bump; add fix to break in configure, substitute dohtml in the doc install,
+  fixes Bug #474842
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> rcs-5.8.2.ebuild:
   Add arm64 love.

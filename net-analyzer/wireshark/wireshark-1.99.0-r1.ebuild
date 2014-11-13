@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.99.0-r1.ebuild,v 1.4 2014/11/11 10:21:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.99.0-r1.ebuild,v 1.5 2014/11/13 01:09:21 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps multilib qt4-r2 user
@@ -239,7 +239,7 @@ pkg_postinst() {
 			"${EROOT}"/usr/bin/dumpcap
 	fi
 
-	ewarn "NOTE: To run wireshark as normal user you have to add yourself to"
-	ewarn "the wireshark group. This security measure ensures that only trusted"
-	ewarn "users are allowed to sniff your traffic."
+	ewarn "NOTE: To capture traffic with wireshark as normal user you have to"
+	ewarn "add yourself to the wireshark group. This security measure ensures"
+	ewarn "that only trusted users are allowed to sniff your traffic."
 }
