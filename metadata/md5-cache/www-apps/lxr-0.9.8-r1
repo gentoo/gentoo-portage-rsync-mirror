@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-util/ctags dev-lang/perl dev-perl/DBI dev-perl/File-MMagic cvs? ( dev-vcs/rcs ) postgres? ( dev-perl/DBD-Pg ) mysql? ( dev-perl/DBD-mysql ) =www-servers/apache-2* dev-lang/perl:=[-build(-)] >=app-admin/webapp-config-1.50.15
 SLOT=0
 SRC_URI=mirror://sourceforge/lxr/lxr-0.9.8.tgz
-_eclasses_=depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	32ce14ce4574ee32c1cc1051d65b175c	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	d467f3b787cbc75c40990b80f3d6b931	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=32ba5ca25b0e406174ff6e9272f06df8

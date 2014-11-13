@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-7.0.9377.ebuild,v 1.4 2014/06/18 20:40:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-7.0.9377.ebuild,v 1.5 2014/11/12 23:18:50 axs Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ MV=${PV/\.*}
 MY_PN=${PN}-${MV}
 DESCRIPTION="All-In-One Solution for Remote Access and Support over the Internet"
 HOMEPAGE="http://www.teamviewer.com"
-SRC_URI="https://www.teamviewer.com/download/version_${MV}x/teamviewer_linux.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://download.teamviewer.com/download/version_${MV}x/teamviewer_linux.tar.gz -> ${P}.tar.gz"
 
 LICENSE="TeamViewer !system-wine? ( LGPL-2.1 )"
 SLOT=${MV}

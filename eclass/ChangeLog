@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1414 2014/11/11 11:00:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1415 2014/11/12 23:26:36 monsieurp Exp $
+
+  12 Nov 2014; Patrice Clement <monsieurp@gentoo.org> perl-module.eclass:
+  Documented nearly all functions.
 
   11 Nov 2014; Pacho Ramos <pacho@gentoo.org> vala.eclass:
   0.20 is our new lower version

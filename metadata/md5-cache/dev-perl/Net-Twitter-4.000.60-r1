@@ -8,5 +8,5 @@ LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=>=dev-perl/Moose-0.94 dev-perl/Crypt-SSLeay dev-perl/Data-Visitor >=dev-perl/DateTime-0.51 dev-perl/DateTime-Format-Strptime >=dev-perl/Devel-StackTrace-1.21 dev-perl/Digest-HMAC virtual/perl-Digest-SHA virtual/perl-File-Spec dev-perl/HTML-Parser dev-perl/libwww-perl dev-perl/JSON virtual/perl-Scalar-List-Utils >=dev-perl/Try-Tiny-0.03 dev-perl/MooseX-Aliases dev-perl/MooseX-Role-Parameterized >=dev-perl/Net-OAuth-0.25 dev-perl/namespace-autoclean >=dev-perl/URI-1.40 dev-perl/Carp-Clan dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MM/MMIMS/Net-Twitter-4.00006.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	32ce14ce4574ee32c1cc1051d65b175c	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	d467f3b787cbc75c40990b80f3d6b931	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=3bd72c9a9a6cd4c57ad96cb032e1c3f9

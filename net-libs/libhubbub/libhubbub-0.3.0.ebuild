@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhubbub/libhubbub-0.3.0.ebuild,v 1.1 2014/11/06 18:17:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhubbub/libhubbub-0.3.0.ebuild,v 1.2 2014/11/12 23:01:37 slyfox Exp $
 
 EAPI=5
 
@@ -24,3 +24,12 @@ DEPEND="${RDEPEND}
 DOCS=( README docs/{Architecture,Macros,Todo,Treebuilder,Updated} )
 
 RESTRICT=test
+
+src_prepare() {
+	# glibc-2.20 introduced a warning:
+	#    _BSD_SOURCE and _SVID_SOURCE are deprecated
+	sed -e 's/WARNFLAGS := $(WARNFLAGS) -Werror/# &/' \
+		-i Makefile || die
+
+	netsurf_src_prepare
+}

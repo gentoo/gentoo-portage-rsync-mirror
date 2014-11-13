@@ -25,7 +25,7 @@ index f643194..d8d1ef2 100755
 +	import PyQt4.pyqtconfig
 +	SIP_FLAGS = PyQt4.pyqtconfig.Configuration().pyqt_sip_flags
 +
-+PYQT_SIP_DIR = os.path.join(sipconfig.Configuration().default_sip_dir, 'PyQt4')
++PYQT_SIP_DIR = os.path.join(sipconfig.Configuration().default_sip_dir)
 +SIP_BIN = sipconfig.Configuration().sip_bin
 +SIP_INC_DIR = sipconfig.Configuration().sip_inc_dir
 +

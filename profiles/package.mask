@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16157 2014/11/12 17:45:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16159 2014/11/12 23:18:20 axs Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Ian Stakenvicius <axs@gentoo.org> (12 Nov 2014)
+# Masked for testing as I accidentally did a full version bump
+# while adjusting multilib deps.
+=net-misc/teamviewer-9.0.32150
+
 # Ulrich Müller <ulm@gentoo.org> (12 Nov 2014)
 # Temporary mask because of problems with upstream git repo;
 # fallback to live bzr ebuilds.
@@ -39,10 +44,6 @@
 # Eray Aslan <eras@gentoo.org> (11 Nov 2014)
 # Mask beta releases
 =net-proxy/squid-3.5*
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (11 Nov 2014)
-# Mask for an initial testing period
-=app-text/poppler-0.28*
 
 # Ben de Groot <yngwin@gentoo.org> (7 Nov 2014)
 # Unmaintained, no longer supported, and starting to throw compilation
