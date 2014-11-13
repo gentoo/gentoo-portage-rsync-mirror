@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.73 2014/11/11 10:37:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.74 2014/11/13 17:39:04 klausman Exp $
+
+  13 Nov 2014; Tobias Klausmann <klausman@gentoo.org> pwgen-2.07.ebuild:
+  Stable on alpha, bug 488300
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pwgen-2.07.ebuild:
   Stable for ia64, wrt bug #488300

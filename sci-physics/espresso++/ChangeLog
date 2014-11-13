@@ -1,6 +1,18 @@
 # ChangeLog for sci-physics/espresso++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/ChangeLog,v 1.11 2014/10/07 12:06:32 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/ChangeLog,v 1.14 2014/11/13 17:52:48 ottxor Exp $
+
+  13 Nov 2014; Christoph Junghans <ottxor@gentoo.org> espresso++-1.9.3.ebuild:
+  forgotten deps fix
+
+  13 Nov 2014; Christoph Junghans <ottxor@gentoo.org> -espresso++-1.6.0.ebuild,
+  -espresso++-1.9.ebuild, metadata.xml:
+  remove old
+
+*espresso++-1.9.3 (13 Nov 2014)
+
+  13 Nov 2014; Christoph Junghans <ottxor@gentoo.org> +espresso++-1.9.3.ebuild:
+  version bump
 
 *espresso++-1.9.2 (07 Oct 2014)
 
