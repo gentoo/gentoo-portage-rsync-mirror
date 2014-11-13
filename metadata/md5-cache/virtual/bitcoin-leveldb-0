@@ -2,6 +2,6 @@ DEFINED_PHASES=-
 DESCRIPTION=Virtual for LevelDB versions known to be compatible with Bitcoin Core 0.9+
 EAPI=5
 KEYWORDS=~amd64 ~arm ~x86
-RDEPEND=|| ( =dev-libs/leveldb-1.15.0-r1[-snappy] =dev-libs/leveldb-1.14.0-r1[-snappy] =dev-libs/leveldb-1.13.0-r1[-snappy] =dev-libs/leveldb-1.12.0-r1[-snappy] =dev-libs/leveldb-1.11.0-r1[-snappy] =dev-libs/leveldb-1.10.0-r1[-snappy] =dev-libs/leveldb-1.9.0-r6[-snappy] )
+RDEPEND=|| ( =dev-libs/leveldb-1.9.0-r6[-snappy] =dev-libs/leveldb-1.10.0-r1[-snappy] =dev-libs/leveldb-1.11.0-r1[-snappy] =dev-libs/leveldb-1.12.0-r1[-snappy] =dev-libs/leveldb-1.13.0-r1[-snappy] =dev-libs/leveldb-1.14.0-r1[-snappy] =dev-libs/leveldb-1.15.0-r1[-snappy] =dev-libs/leveldb-1.17[-snappy] )
 SLOT=0
-_md5_=93f8e28f2560cc457d8e2743cf7563c7
+_md5_=417b59c1b9998c0f8952bb16d454210d

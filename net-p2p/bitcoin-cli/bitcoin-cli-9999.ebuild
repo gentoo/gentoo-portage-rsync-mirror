@@ -1,26 +1,25 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-cli/bitcoin-cli-0.9.3.ebuild,v 1.3 2014/11/13 18:19:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-cli/bitcoin-cli-9999.ebuild,v 1.1 2014/11/13 18:19:42 blueness Exp $
 
 EAPI=4
 
-inherit autotools eutils
+inherit autotools eutils git-2
 
 MyPV="${PV/_/}"
 MyPN="bitcoin"
 MyP="${MyPN}-${MyPV}"
-LJR_PV="${PV}.ljr20141002"
-LJR_PATCH="bitcoin-${LJR_PV}.patch"
 
 DESCRIPTION="Command-line JSON-RPC client specifically designed for talking to Bitcoin Core Daemon"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="https://github.com/${MyPN}/${MyPN}/archive/v${MyPV}.tar.gz -> ${MyPN}-v${PV}.tgz
-	http://luke.dashjr.org/programs/bitcoin/files/bitcoind/luke-jr/0.9.x/${LJR_PV}/${LJR_PATCH}.xz
+SRC_URI="
 "
+EGIT_PROJECT='bitcoin'
+EGIT_REPO_URI="git://github.com/bitcoin/bitcoin.git https://github.com/bitcoin/bitcoin.git"
 
 LICENSE="MIT ISC"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="
@@ -29,11 +28,8 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MyP}"
-
 src_prepare() {
-	epatch "${WORKDIR}/${LJR_PATCH}"
-	rm -r src/leveldb
+	sed -i 's/bitcoin-tx//' src/Makefile.am
 	eautoreconf
 }
 
