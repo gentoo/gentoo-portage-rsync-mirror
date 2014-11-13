@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.4-r3.ebuild,v 1.1 2014/11/03 11:05:14 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.4-r3.ebuild,v 1.2 2014/11/13 20:54:56 axs Exp $
 
 EAPI="5"
 inherit perl-module
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}
 	perl? ( !dev-perl/Text-ChaSen )"
 PDEPEND=">=app-dicts/ipadic-2.7.0"
 
-src_preapre() {
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-cve-2011-4000.patch
 }
 
