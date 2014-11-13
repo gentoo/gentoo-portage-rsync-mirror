@@ -1,6 +1,12 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.157 2014/10/14 10:14:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.158 2014/11/13 12:28:02 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -empathy-2.34.0-r2.ebuild,
+  -empathy-3.12.6.ebuild, -files/empathy-2.34.0-CVE-2011-3635.patch,
+  -files/empathy-2.34.0-auth-dialog-crash-fix.patch,
+  -files/empathy-2.34.0-missing-include.patch, metadata.xml:
+  Drop old (#508854)
 
 *empathy-3.12.7 (14 Oct 2014)
 

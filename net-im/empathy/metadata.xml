@@ -10,9 +10,6 @@
 			for Google Talk)</flag>
 		<flag name="map">Enable world map support through
 			<pkg>media-libs/libchamplain</pkg></flag>
-		<flag name="nautilus">Enable nautilus-sendto support</flag>
-		<flag name="webkit">Build support for Adium-style HTML-based conversation
-			window themes using <pkg>net-libs/webkit-gtk</pkg></flag>
 	</use>
 	<longdescription>
 		Empathy consists of a rich set of reusable instant messaging widgets,

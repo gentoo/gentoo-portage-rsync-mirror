@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.128 2014/05/31 10:26:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.129 2014/11/13 12:26:09 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gnome-nettool-2.18.0-fbsd.patch,
+  -files/gnome-nettool-3.2.0-extra-path.patch, -gnome-nettool-2.32.0.ebuild:
+  Drop old (#508854)
 
   31 May 2014; Pacho Ramos <pacho@gentoo.org> gnome-nettool-3.8.1.ebuild:
   Needs to be rebuilt with libgtop soname bumps

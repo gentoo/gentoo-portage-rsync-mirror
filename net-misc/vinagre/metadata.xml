@@ -3,8 +3,6 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
-		<flag name="applet">Enable vinagre applet for
-			<pkg>gnome-base/gnome-panel</pkg></flag>
 		<flag name="rdp">Enable access to Windows RDP protocol using
 			<pkg>net-misc/rdesktop</pkg></flag>
 		<flag name="ssh">Enable ssh plugin using <pkg>x11-libs/vte</pkg></flag>

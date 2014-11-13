@@ -2,11 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>gnome</herd>
-	<use>
-		<flag name='gajim'>Enables support for <pkg>net-im/gajim</pkg></flag>
-		<flag name='mail'>Enables support for mailto using
-			<pkg>gnome-extra/evolution-data-server</pkg></flag>
-		<flag name='pidgin'>Enables support for <pkg>net-im/pidgin</pkg></flag>
-	</use>
 </pkgmetadata>
 

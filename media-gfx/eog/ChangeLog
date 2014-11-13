@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.316 2014/07/23 15:18:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.317 2014/11/13 12:17:18 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -eog-2.32.1.ebuild,
+  -eog-3.10.2.ebuild, -eog-3.12.1.ebuild, -files/eog-2.32.1-gmodule.patch:
+  Drop old (#508854)
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> eog-3.12.2.ebuild:
   Stable for x86, wrt bug #512012

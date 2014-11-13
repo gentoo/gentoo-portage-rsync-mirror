@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.357 2014/11/09 14:58:59 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.358 2014/11/13 12:21:33 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -pulseaudio-2.1-r1.ebuild,
+  -pulseaudio-4.0.ebuild:
+  Drop old (#508854)
 
   09 Nov 2014; Maxim Koltsov <maksbotan@gentoo.org> pulseaudio-5.0-r5.ebuild:
   Fix 'avahi not in IUSE' when system-wide is enabled, bug #525290.

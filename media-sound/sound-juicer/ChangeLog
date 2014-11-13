@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.237 2014/07/23 15:23:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.238 2014/11/13 12:22:46 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/sound-juicer-2.28.2-fix-pause-conflict.patch,
+  -files/sound-juicer-2.32.0-desktop-file.patch, -sound-juicer-2.32.0-r1.ebuild,
+  -sound-juicer-3.11.90.ebuild, -sound-juicer-3.5.1_pre20130826.ebuild:
+  Drop old (#508854)
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> sound-juicer-3.12.0.ebuild:
   Stable for x86, wrt bug #512012

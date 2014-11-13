@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.122 2014/03/01 22:19:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.123 2014/11/13 12:30:40 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -files/gtk-vnc-0.5.0-pod.patch,
+  -files/gtk-vnc-0.5.0-pulseaudio-automagic.patch, -gtk-vnc-0.5.2.ebuild:
+  Drop old (#508854)
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> gtk-vnc-0.5.2.ebuild,
   gtk-vnc-0.5.3.ebuild:

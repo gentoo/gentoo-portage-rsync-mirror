@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.223 2014/07/23 15:18:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.224 2014/11/13 12:15:50 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/zenity-2.32.1-libnotify-0.7.patch,
+  -files/zenity-3.8.0-broken-autoclose.patch,
+  -files/zenity-3.8.0-double-click.patch,
+  -files/zenity-3.8.0-listbox-expand.patch, -zenity-2.32.1.ebuild,
+  -zenity-3.8.0-r2.ebuild, metadata.xml:
+  Drop old (#508854)
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> zenity-3.12.1.ebuild:
   Stable for x86, wrt bug #512012
