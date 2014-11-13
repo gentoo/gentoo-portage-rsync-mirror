@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.92 2014/10/27 19:54:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.93 2014/11/13 22:02:38 mrueg Exp $
+
+*ruby-pango-2.2.3 (13 Nov 2014)
+
+  13 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +ruby-pango-2.2.3.ebuild:
+  Version bump.
 
   27 Oct 2014; Hans de Graaff <graaff@gentoo.org> ruby-pango-2.2.2.ebuild:
   Avoid a test depending on specific locales.

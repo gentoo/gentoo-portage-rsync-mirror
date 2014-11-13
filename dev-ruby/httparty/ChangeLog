@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/httparty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.33 2014/08/05 16:00:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.34 2014/11/13 22:07:24 mrueg Exp $
+
+*httparty-0.13.3 (13 Nov 2014)
+
+  13 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +httparty-0.13.3.ebuild:
+  Version bump.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> httparty-0.13.1.ebuild:
   Remove trailing '.' from DESCRIPTION.
