@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install test
+DEPEND=qt5? ( test? ( dev-qt/qtcore:5 dev-qt/qttest:5 ) )
+DESCRIPTION=Qt4/Qt5 version chooser
+EAPI=5
+HOMEPAGE=https://qt.gitorious.org/qt/qtchooser
+IUSE=qt5 test
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( LGPL-2.1 GPL-3 )
+RDEPEND=!<dev-qt/qtcore-4.8.6:4
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~pesa/distfiles/qtchooser-0_p20140613.tar.xz
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=a760d01b5df4098dfee80b4dc7914373

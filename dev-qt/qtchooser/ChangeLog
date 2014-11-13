@@ -1,0 +1,9 @@
+# ChangeLog for dev-qt/qtchooser
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/ChangeLog,v 1.1 2014/11/13 02:59:00 pesa Exp $
+
+*qtchooser-0_p20140613 (13 Nov 2014)
+
+  13 Nov 2014; Davide Pesavento <pesa@gentoo.org> +metadata.xml,
+  +qtchooser-0_p20140613.ebuild:
+  Import from qt overlay. Ebuild by me.
