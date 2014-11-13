@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.166 2014/11/13 10:45:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.167 2014/11/13 14:37:34 pacho Exp $
+
+*brasero-3.12.0 (13 Nov 2014)
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> +brasero-3.12.0.ebuild:
+  Version bump
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -brasero-2.32.1-r1.ebuild,
   -files/brasero-2.32.0-build-plugins-against-local-library.patch,
