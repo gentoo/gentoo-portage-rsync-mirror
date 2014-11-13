@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/libgnomekbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.107 2014/02/22 21:47:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.108 2014/11/13 11:37:33 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/libgnomekbd-2.32.0-gdkdisplay-usage.patch,
+  -files/libgnomekbd-2.32.0-gdkkeyname-replace.patch,
+  -files/libgnomekbd-2.32.0-unneeded-casts.patch, -libgnomekbd-2.32.0-r1.ebuild:
+  Drop old (#508854)
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> libgnomekbd-3.6.0.ebuild:
   Fix wrong commit, bug 502160

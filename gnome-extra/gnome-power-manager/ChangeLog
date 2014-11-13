@@ -1,6 +1,16 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.197 2014/09/26 20:38:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.198 2014/11/13 11:53:51 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gnome-power-manager-2.32.0-close-fd.patch,
+  -files/gnome-power-manager-2.32.0-convert-percentage.patch,
+  -files/gnome-power-manager-2.32.0-duplicated-battery.patch,
+  -files/gnome-power-manager-2.32.0-libnotify-0.7.patch,
+  -files/gnome-power-manager-2.32.0-no-xfce.patch,
+  -files/gnome-power-manager-2.32.0-xbacklight-crash.patch,
+  -gnome-power-manager-2.32.0-r3.ebuild, metadata.xml:
+  Drop old (#508854)
 
   26 Sep 2014; Pacho Ramos <pacho@gentoo.org>
   -gnome-power-manager-3.10.1.ebuild, -gnome-power-manager-3.12.0.ebuild,

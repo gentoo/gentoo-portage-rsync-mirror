@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.185 2014/04/26 19:00:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.186 2014/11/13 11:49:57 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gconf-editor-2.32.0.ebuild:
+  Drop old (#508854)
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gconf-editor-3.0.1.ebuild:
   drop old

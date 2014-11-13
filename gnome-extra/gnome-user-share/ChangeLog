@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-user-share
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.37 2014/05/27 06:51:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.38 2014/11/13 11:56:56 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gnome-user-share-2.30.1-libnotify-0.7.patch,
+  -gnome-user-share-2.30.1.ebuild:
+  Drop old (#508854)
 
   27 May 2014; Pacho Ramos <pacho@gentoo.org> -gnome-user-share-3.10.1.ebuild,
   gnome-user-share-3.10.2.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.295 2014/10/15 15:46:18 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.296 2014/11/13 11:59:18 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gtkhtml-3.32.2-g_thread_init.patch, -gtkhtml-3.32.2.ebuild,
+  -gtkhtml-4.8.4.ebuild:
+  Drop old (#508854)
 
 *gtkhtml-4.8.5 (15 Oct 2014)
 

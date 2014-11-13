@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.237 2014/02/22 22:00:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.238 2014/11/13 11:58:20 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gnome-utils-2.32.0-fix-uninitialized.patch,
+  -files/gnome-utils-2.32.0-new-icons.patch,
+  -files/gnome-utils-2.32.0-new-icons2.patch,
+  -files/gnome-utils-3.2.1-glib-2.32-gtk-3.4.patch,
+  -gnome-utils-2.32.0-r2.ebuild, metadata.xml:
+  Drop old (#508854)
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-utils-3.8.0.ebuild:
   Fix wrong commit, bug 502160

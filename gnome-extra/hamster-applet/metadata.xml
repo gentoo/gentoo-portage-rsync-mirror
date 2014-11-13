@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>gnome</herd>
-<longdescription lang="en">
-Project Hamster is time tracking for masses. It helps you to keep track on how much time you have spent during the day on activities you have set up.
-</longdescription>
-</pkgmetadata>
-

@@ -6,7 +6,4 @@
 		Power Manager daemon for the GNOME desktop environment that makes it
 		easy to manage your laptop or desktop system.
 	</longdescription>
-	<use>
-		<flag name='applet'>Build battery monitor applet</flag>
-	</use>
 </pkgmetadata>

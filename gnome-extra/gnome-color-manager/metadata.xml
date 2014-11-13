@@ -3,8 +3,6 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
-		<flag name="clutter">Use <pkg>media-libs/clutter</pkg> to render color
-			gamut representations</flag>
 		<flag name="packagekit">Enable support for the distro-neutral package
 			manager GUI <pkg>app-admin/packagekit</pkg></flag>
 	</use>

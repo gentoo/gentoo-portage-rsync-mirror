@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-user-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/ChangeLog,v 1.80 2014/07/23 15:18:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/ChangeLog,v 1.81 2014/11/13 11:56:24 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gnome-user-docs-2.32.0.ebuild,
+  -gnome-user-docs-3.10.3.ebuild:
+  Drop old (#508854)
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-user-docs-3.12.2.ebuild:
   Stable for x86, wrt bug #512012

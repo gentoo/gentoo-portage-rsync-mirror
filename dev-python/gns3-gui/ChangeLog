@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/gns3-gui
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gns3-gui/ChangeLog,v 1.3 2014/11/13 11:45:38 idella4 Exp $
+
+*gns3-gui-1.1 (13 Nov 2014)
+
+  13 Nov 2014; Ian Delaney <idella4@gentoo.org> +gns3-gui-1.1.ebuild,
+  +metadata.xml:
+  new ebuild, written by B-Man, developed in his overlay under mentorship.
+  Package is proxy maintained by him. Supersedes package gns3. Closes Bug 527688

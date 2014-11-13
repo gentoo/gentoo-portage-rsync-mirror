@@ -2915,7 +2915,6 @@ gnome-extra/evolution-data-server:weather - Enable optional weather calendar sup
 gnome-extra/file-browser-applet:gtkhotkey - Enable hotkey support via x11-libs/gtkhotkey
 gnome-extra/gdesklets-core:dbus - Enable gDesklets Controls to use DBus
 gnome-extra/gnome-boxes:usbredir - Use sys-apps/usbredir to redirect USB devices to another machine over TCP
-gnome-extra/gnome-color-manager:clutter - Use media-libs/clutter to render color gamut representations
 gnome-extra/gnome-color-manager:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 gnome-extra/gnome-commander:chm - Enable metadata support for Microsoft Compiled HTML Help files
 gnome-extra/gnome-commander:gsf - Add metadata support for OLE, OLE2 and ODF
@@ -2925,12 +2924,7 @@ gnome-extra/gnome-commander:taglib - Add metadata support for ID3, Vorbis, FLAC 
 gnome-extra/gnome-do-plugins:banshee - Enables the Banshee (media-sound/banshee) plugin
 gnome-extra/gnome-dvb-daemon:totem - Build a plugin for media-video/totem
 gnome-extra/gnome-dvb-daemon:vala - Add support for dev-lang/vala
-gnome-extra/gnome-games:artworkextra - Installs extra artwork for various games
-gnome-extra/gnome-media:twolame - Allow encoding MPEG Audio Layer 2 (MP2) files using twolame
-gnome-extra/gnome-power-manager:applet - Build battery monitor applet
-gnome-extra/gnome-screensaver:systemd - Support sys-apps/systemd's logind
 gnome-extra/gnome-system-monitor:systemd - Display sys-apps/systemd metadata, e.g. unit names, for running processes
-gnome-extra/gnome-utils:bonobo - Enable applets (gdict one) still not ported to DBUS, requiring deprecated bonobo support in gnome-panel.
 gnome-extra/gucharmap:vala - Enable bindings for dev-lang/vala
 gnome-extra/libgda:bindist - Disable support for dev-db/firebird database which is not GPL compatible.
 gnome-extra/libgda:canvas - Enable support for x11-libs/goocanvas
