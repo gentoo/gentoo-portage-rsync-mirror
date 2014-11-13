@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/giggle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.24 2014/07/07 14:51:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.25 2014/11/13 12:55:55 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/giggle-0.6.1-gmodule-explicit.patch, -giggle-0.6.2.ebuild,
+  -giggle-0.7.ebuild:
+  Drop old (#508854)
 
   07 Jul 2014; Pacho Ramos <pacho@gentoo.org> giggle-0.7-r1.ebuild:
   x86 stable, bug #514458

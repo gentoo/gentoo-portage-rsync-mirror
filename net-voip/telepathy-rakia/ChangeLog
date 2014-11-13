@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-rakia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-rakia/ChangeLog,v 1.20 2014/02/22 22:36:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-rakia/ChangeLog,v 1.21 2014/11/13 12:36:32 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/telepathy-rakia-0.7.4-gio-linking.patch, -telepathy-rakia-0.7.4.ebuild:
+  Drop old (#508854)
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> telepathy-rakia-0.8.0.ebuild:
   Fix wrong commit, bug 502160

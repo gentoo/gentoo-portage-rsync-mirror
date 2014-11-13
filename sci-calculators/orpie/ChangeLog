@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/orpie
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.21 2012/08/04 21:27:52 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.22 2014/11/13 12:55:45 jer Exp $
+
+  13 Nov 2014; Jeroen Roovers <jer@gentoo.org> +files/orpie-1.5.1-tinfo.patch,
+  orpie-1.5.1-r1.ebuild:
+  Fix building against sys-libs/ncurses[tinfo] (bug #456200).
 
   04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> orpie-1.5.1-r1.ebuild:
   keyword amd64-linux, x86-linux

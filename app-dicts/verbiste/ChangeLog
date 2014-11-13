@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/verbiste
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.46 2014/06/08 11:09:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.47 2014/11/13 12:49:14 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -verbiste-0.1.38.ebuild:
+  Drop old (#508854)
 
   08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> verbiste-0.1.38-r1.ebuild:
   Stable for ppc, wrt bug #510666

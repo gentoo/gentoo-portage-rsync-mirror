@@ -1,9 +1,0 @@
-diff --git a/po/LINGUAS b/po/LINGUAS
-index 4eb4f64..f85c7c7 100644
---- a/po/LINGUAS
-+++ b/po/LINGUAS
-@@ -1 +1,3 @@
--fr ja ko
-+fr
-+ja
-+ko

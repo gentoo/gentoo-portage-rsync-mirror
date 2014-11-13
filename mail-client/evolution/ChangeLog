@@ -1,6 +1,16 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.431 2014/11/11 11:42:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.432 2014/11/13 12:47:00 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -evolution-2.32.3-r1.ebuild,
+  -evolution-3.12.7.ebuild, -files/evolution-2.32.0-wrong-lafile-usage.patch,
+  -files/evolution-2.32.1-libnotify-0.7.patch,
+  -files/evolution-2.32.2-mime-handler.patch,
+  -files/evolution-2.32.2-smime-fix.patch,
+  -files/evolution-2.32.3-g_thread_init.patch,
+  -files/evolution-2.32.3-gmodule-explicit.patch,
+  -files/evolution-2.32.3-libxml2-2.9.patch, metadata.xml:
+  Drop old (#508854)
 
 *evolution-3.12.8 (11 Nov 2014)
 

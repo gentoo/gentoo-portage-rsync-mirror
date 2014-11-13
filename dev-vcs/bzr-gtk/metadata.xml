@@ -9,9 +9,7 @@
     is also part of bzr-gtk.
   </longdescription>
   <use>
-    <flag name="gconf">Enable GConf support</flag>
     <flag name="gpg">Support signing with GnuPG.</flag>
-    <flag name="sourceview">Enable GtkSourceView support</flag>
     <flag name="nautilus">Integrate with Nautilus file manager</flag>
   </use>
 </pkgmetadata>

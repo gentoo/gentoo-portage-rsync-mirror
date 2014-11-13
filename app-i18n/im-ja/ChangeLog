@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.73 2014/06/22 19:54:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.74 2014/11/13 12:53:23 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -im-ja-1.5-r2.ebuild:
+  Drop old (#508854)
 
   22 Jun 2014; Pacho Ramos <pacho@gentoo.org> im-ja-1.5-r3.ebuild:
   x86/ppc stable, bug #512066

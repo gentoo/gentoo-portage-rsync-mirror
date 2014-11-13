@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nautilus-python
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.20 2013/02/16 12:36:39 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.21 2014/11/13 12:59:59 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -nautilus-python-0.7.3.ebuild:
+  Drop old (#508854)
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #96436

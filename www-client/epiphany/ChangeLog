@@ -1,6 +1,14 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.311 2014/10/28 19:42:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.312 2014/11/13 12:39:54 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -epiphany-2.30.6-r1.ebuild,
+  -files/epiphany-2.30.6-clearing-passwd.patch,
+  -files/epiphany-2.30.6-dbus-fix.patch,
+  -files/epiphany-2.30.6-introspection-prefix.patch,
+  -files/epiphany-2.30.6-libnotify-0.7.patch,
+  -files/epiphany-2.30.6-mime-handler.patch, metadata.xml:
+  Drop old (#508854)
 
   28 Oct 2014; Pacho Ramos <pacho@gentoo.org> -epiphany-3.10.3.ebuild,
   -epiphany-3.12.0.ebuild, -files/epiphany-3.3.90-paxctl-introspection.patch,

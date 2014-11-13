@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <use>
-	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg> for introspection</flag>
 	<flag name="nss">Import passwords from older gecko based <pkg>www-client/epiphany</pkg> keyring.</flag>
 </use>
 </pkgmetadata>

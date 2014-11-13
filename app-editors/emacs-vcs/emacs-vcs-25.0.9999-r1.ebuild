@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-25.0.9999-r1.ebuild,v 1.1 2014/11/12 08:45:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-25.0.9999-r1.ebuild,v 1.2 2014/11/13 12:55:24 ulm Exp $
 
 EAPI=5
 
@@ -244,7 +244,7 @@ src_install () {
 
 	# avoid collision between slots, see bug #169033 e.g.
 	rm "${ED}"/usr/share/emacs/site-lisp/subdirs.el
-	rm -rf "${ED}"/usr/share/{applications,icons}
+	rm -rf "${ED}"/usr/share/{appdata,applications,icons}
 	rm -rf "${ED}"/var
 
 	# remove unused <version>/site-lisp dir
