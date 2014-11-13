@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.50 2014/10/18 01:49:25 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.51 2014/11/13 03:58:29 chutzpah Exp $
+
+*salt-2014.7.0 (13 Nov 2014)
+
+  13 Nov 2014; Patrick McLean <chutzpah@gentoo.org> -salt-2014.1.10.ebuild,
+  -salt-2014.1.11.ebuild, -salt-2014.1.12.ebuild, salt-2014.1.13.ebuild,
+  +salt-2014.7.0.ebuild, salt-9999.ebuild,
+  +files/salt-2014.7.0-remove-pydsl-includes-test.patch, metadata.xml:
+  Version bump (bug #528324), this version adds RAET support so fixes bug
+  #522600. Remove app-emulation/libvirt dependency, since it is replaced by
+  libvirt-python. Remove old versions.
 
 *salt-2014.1.13 (18 Oct 2014)
 

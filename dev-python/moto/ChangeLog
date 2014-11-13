@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/moto
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/moto/ChangeLog,v 1.1 2014/11/13 03:46:54 chutzpah Exp $
+
+*moto-0.3.8 (13 Nov 2014)
+
+  13 Nov 2014; Patrick McLean <chutzpah@gentoo.org> +moto-0.3.8.ebuild,
+  +metadata.xml:
+  New package, mock library for boto
+
