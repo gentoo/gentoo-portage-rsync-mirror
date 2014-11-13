@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/xdsstat-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsstat-bin/ChangeLog,v 1.3 2014/10/15 20:51:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsstat-bin/ChangeLog,v 1.4 2014/11/13 07:37:53 jlec Exp $
+
+  13 Nov 2014; Justin Lecher <jlec@gentoo.org> xdsstat-bin-140225.ebuild:
+  Drop glibc from deps
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org> xdsstat-bin-140225.ebuild:
   Support multilib providers for deps. Bump to EAPI=5.
