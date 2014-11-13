@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/ftop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/ftop/ChangeLog,v 1.2 2014/11/10 10:48:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/ftop/ChangeLog,v 1.3 2014/11/13 01:41:23 jer Exp $
+
+  13 Nov 2014; Jeroen Roovers <jer@gentoo.org> ftop-1.0.ebuild:
+  Marked ~hppa too.
 
   10 Nov 2014; Jeroen Roovers <jer@gentoo.org> +files/ftop-1.0-tinfo.patch,
   ftop-1.0.ebuild:
