@@ -1,6 +1,19 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.341 2014/09/22 13:10:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.342 2014/11/13 11:30:56 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -files/10-user-dirs-update-gnome,
+  -files/15-xdg-data-gnome, -files/defaults.list,
+  -files/gnome-session-2.32.0-session-saving-button.patch,
+  -files/gnome-session-2.32.1-dialog-size.patch,
+  -files/gnome-session-2.32.1-dialog-size2.patch,
+  -files/gnome-session-2.32.1-gnome3-conditions.patch,
+  -files/gnome-session-2.32.1-gsettings-conditions.patch,
+  -files/gnome-session-2.32.1-idle-transition.patch,
+  -files/gnome-session-3.8.4-blacklist-nv25.patch,
+  -files/gnome-session-3.8.4-presence-crash.patch,
+  -gnome-session-2.32.1-r3.ebuild:
+  Drop old (#508854)
 
 *gnome-session-3.12.1-r1 (22 Sep 2014)
 

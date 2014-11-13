@@ -1,6 +1,16 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.410 2014/09/29 15:05:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.411 2014/11/13 11:16:52 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -files/49-keychain,
+  -files/50-ssh-agent, -files/gdm-2.13.0.1-selinux-remove-attr.patch,
+  -files/gdm-2.20.10-custom-session.patch,
+  -files/gdm-2.20.10-desktop-session-dmrc-autologin.patch,
+  -files/gdm-2.20.10-gdmsetup-24hr-combo.patch,
+  -files/gdm-2.20.10-xinitrc-ssh-agent.patch,
+  -files/gdm-2.20.11-underlinking.patch, -files/gdm-2.20.2-gksu.patch,
+  -files/gdm-2.20.9-parallel-make.patch, -gdm-2.20.11-r1.ebuild, metadata.xml:
+  Drop old (#508854)
 
   29 Sep 2014; Alexandre Rostovtsev <tetromino@gentoo.org> gdm-3.12.2.ebuild,
   gdm-3.12.2-r1.ebuild:

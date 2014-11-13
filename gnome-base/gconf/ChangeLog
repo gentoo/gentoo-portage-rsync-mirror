@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.307 2014/10/11 11:58:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.308 2014/11/13 11:12:44 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gconf-2.32.4-r1.ebuild,
+  -gconf-3.2.6-r1.ebuild, -gconf-3.2.6-r2.ebuild, metadata.xml:
+  Drop old (#508854)
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> gconf-3.2.6-r3.ebuild:
   arm stable, bug #512012

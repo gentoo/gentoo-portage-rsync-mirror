@@ -4,13 +4,9 @@
 <herd>gnome</herd>
 <use>
 	<flag name="audit">Enable support for <pkg>sys-process/audit</pkg></flag>
-	<flag name="consolekit">Allow proper handling of removable media according
-		to who is actually present on the machine.</flag>
-	<flag name="dmx">Enables Distributed Multihead X (DMX) support</flag>
 	<flag name="fprint">Enables experimental fingerprint authentication using
 		<pkg>sys-auth/fprintd</pkg></flag>
 	<flag name="plymouth">Enable support for smooth transition from
 		<pkg>sys-boot/plymouth</pkg></flag>
-	<flag name="remote">Enables support for secure remote connections</flag>
 </use>
 </pkgmetadata>
