@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.178 2014/11/09 08:44:21 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.179 2014/11/13 18:45:40 maksbotan Exp $
+
+*dracut-040-r1 (13 Nov 2014)
+
+  13 Nov 2014; Maxim Koltsov <maksbotan@gentoo.org> +dracut-040-r1.ebuild:
+  Install skipcpio binary, bug #528998.
 
   09 Nov 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r4.ebuild,
   dracut-036-r4.ebuild, dracut-037-r3.ebuild, dracut-038-r2.ebuild,

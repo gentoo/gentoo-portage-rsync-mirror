@@ -1,33 +1,29 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.9.3.ebuild,v 1.3 2014/11/13 18:41:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-9999.ebuild,v 1.1 2014/11/13 18:41:27 blueness Exp $
 
 EAPI=4
 
 DB_VER="4.8"
 
-inherit autotools bash-completion-r1 db-use eutils user versionator systemd
+inherit autotools bash-completion-r1 db-use eutils git-2 user versionator systemd
 
 MyPV="${PV/_/}"
 MyPN="bitcoin"
 MyP="${MyPN}-${MyPV}"
-LJR_PV="${PV}.ljr20141002"
-LJR_PATCH="bitcoin-${LJR_PV}.patch"
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="https://github.com/${MyPN}/${MyPN}/archive/v${MyPV}.tar.gz -> ${MyPN}-v${PV}.tgz
-	ljr? ( http://luke.dashjr.org/programs/bitcoin/files/bitcoind/luke-jr/0.9.x/${LJR_PV}/${LJR_PATCH}.xz )
+SRC_URI="
 "
+EGIT_PROJECT='bitcoin'
+EGIT_REPO_URI="git://github.com/bitcoin/bitcoin.git https://github.com/bitcoin/bitcoin.git"
 
 LICENSE="MIT ISC GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
-IUSE="examples ljr ljr-antispam logrotate test upnp +wallet"
+KEYWORDS=""
+IUSE="examples logrotate test upnp +wallet"
 
-REQUIRED_USE="
-	ljr-antispam? ( ljr )
-"
 RDEPEND="
 	>=dev-libs/boost-1.52.0[threads(+)]
 	dev-libs/openssl:0[-bindist]
@@ -47,8 +43,6 @@ DEPEND="${RDEPEND}
 	sys-apps/sed
 "
 
-S="${WORKDIR}/${MyP}"
-
 pkg_setup() {
 	local UG='bitcoin'
 	enewgroup "${UG}"
@@ -56,12 +50,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if use ljr; then
-		epatch "${WORKDIR}/${LJR_PATCH}"
-		use ljr-antispam || epatch "${FILESDIR}/0.9.x-ljr_noblacklist.patch"
-	else
-		epatch "${FILESDIR}/0.9.0-sys_leveldb.patch"
-	fi
+	epatch "${FILESDIR}/0.9.0-sys_leveldb.patch"
 	rm -r src/leveldb
 	eautoreconf
 }
@@ -73,7 +62,7 @@ src_configure() {
 		$(use_enable test tests)  \
 		$(use_enable wallet)  \
 		--with-system-leveldb  \
-		--without-cli  \
+		--without-utils  \
 		--without-gui
 }
 
