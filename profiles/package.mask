@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16159 2014/11/12 23:18:20 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16160 2014/11/12 23:59:51 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,11 +29,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Ian Stakenvicius <axs@gentoo.org> (12 Nov 2014)
-# Masked for testing as I accidentally did a full version bump
-# while adjusting multilib deps.
-=net-misc/teamviewer-9.0.32150
 
 # Ulrich Müller <ulm@gentoo.org> (12 Nov 2014)
 # Temporary mask because of problems with upstream git repo;
