@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.7-r200.ebuild,v 1.1 2014/10/25 16:14:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.7-r200.ebuild,v 1.2 2014/11/13 09:25:19 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -294,7 +294,7 @@ src_install() {
 nvidia_check() {
 	if [[ ${MERGE_TYPE} != "binary" ]] &&
 	   use introspection &&
-	   has_version '=x11-drivers/nvidia-drivers-325*' &&
+	   has_version '>=x11-drivers/nvidia-drivers-304.123' &&
 	   [[ $(eselect opengl show 2> /dev/null) = "nvidia" ]]
 	then
 		eerror "${PN} freezes while compiling if x11-drivers/nvidia-drivers-325.* is"

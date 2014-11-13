@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libndp/libndp-1.4.ebuild,v 1.3 2014/10/23 19:33:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libndp/libndp-1.4.ebuild,v 1.4 2014/11/13 09:27:12 armin76 Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug"
 
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~sparc ~x86"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
