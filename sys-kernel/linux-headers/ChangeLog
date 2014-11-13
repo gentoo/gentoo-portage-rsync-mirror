@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.419 2014/11/12 08:35:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.420 2014/11/13 15:19:06 ago Exp $
+
+  13 Nov 2014; Agostino Sarubbo <ago@gentoo.org> linux-headers-3.16.ebuild:
+  Stable for amd64, wrt bug #528902
 
   12 Nov 2014; Jeroen Roovers <jer@gentoo.org> linux-headers-3.16.ebuild:
   Stable for HPPA (bug #528902).

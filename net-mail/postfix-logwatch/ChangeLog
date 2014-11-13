@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/postfix-logwatch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix-logwatch/ChangeLog,v 1.5 2014/09/05 21:31:39 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix-logwatch/ChangeLog,v 1.6 2014/11/13 15:18:50 ago Exp $
+
+  13 Nov 2014; Agostino Sarubbo <ago@gentoo.org>
+  postfix-logwatch-1.40.03.ebuild:
+  Stable for amd64, wrt bug #528866
 
 *postfix-logwatch-1.40.03 (05 Sep 2014)
 

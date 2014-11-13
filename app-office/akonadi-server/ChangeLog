@@ -1,6 +1,9 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.148 2014/11/09 16:48:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.149 2014/11/13 15:19:17 ago Exp $
+
+  13 Nov 2014; Agostino Sarubbo <ago@gentoo.org> akonadi-server-1.13.0.ebuild:
+  Stable for amd64, wrt bug #528754
 
   09 Nov 2014; Manuel Rüger <mrueg@gentoo.org> akonadi-server-1.13.0.ebuild:
   Apply gcc check. See bug #520102.

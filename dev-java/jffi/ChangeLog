@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.34 2014/11/12 05:22:48 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.35 2014/11/13 15:08:27 ercpe Exp $
+
+*jffi-1.2.7-r1 (13 Nov 2014)
+*jffi-1.0.11-r1 (13 Nov 2014)
+*jffi-1.0.0-r1 (13 Nov 2014)
+
+  13 Nov 2014; Johann Schmitz <ercpe@gentoo.org> +jffi-1.0.0-r1.ebuild,
+  +jffi-1.0.11-r1.ebuild, +jffi-1.2.7-r1.ebuild:
+  Fixed boot.properties generation
 
   12 Nov 2014; Johann Schmitz <ercpe@gentoo.org>
   +files/jffi-1.2.7_no-werror.patch, jffi-1.2.7.ebuild:
