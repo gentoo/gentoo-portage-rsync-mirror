@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/networkx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.29 2014/10/07 16:58:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.30 2014/11/13 08:13:42 jlec Exp $
+
+  13 Nov 2014; Justin Lecher <jlec@gentoo.org> networkx-1.9.1.ebuild,
+  metadata.xml:
+  Some Prefix love
 
 *networkx-1.9.1 (07 Oct 2014)
 

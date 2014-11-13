@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-1.9.1.ebuild,v 1.1 2014/10/07 16:53:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-1.9.1.ebuild,v 1.2 2014/11/13 08:13:42 jlec Exp $
 
 EAPI=5
 
@@ -62,7 +62,7 @@ python_test() {
 
 python_install_all() {
 	# Oh my.
-	rm -r "${D}"usr/share/doc/${P} || die
+	rm -r "${ED}"usr/share/doc/${P} || die
 
 	use doc && local HTML_DOCS=( doc/build/html/. )
 	use examples && local EXAMPLES=( examples/. )
