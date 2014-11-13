@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/konversation
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.116 2014/03/31 20:04:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.117 2014/11/13 08:40:49 kensington Exp $
+
+*konversation-1.5.1 (13 Nov 2014)
+
+  13 Nov 2014; Michael Palimaka <kensington@gentoo.org>
+  +konversation-1.5.1.ebuild:
+  Version bump wrt bug #528252. Fixes CVE-2014-8483.
 
   31 Mar 2014; Johannes Huber <johu@gentoo.org> -konversation-1.4.ebuild:
   Remove old.
