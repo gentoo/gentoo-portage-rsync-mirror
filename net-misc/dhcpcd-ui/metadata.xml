@@ -10,7 +10,5 @@
 	<flag name="gtk3">
 		Add support for <pkg>x11-libs/gtk+</pkg> (The GIMP Toolkit)
 	</flag>
-	<flag name="icons">
-	Install bundled-in user interface icons</flag>
 </use>
 </pkgmetadata>

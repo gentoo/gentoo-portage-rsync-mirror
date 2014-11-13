@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare
-DEPEND=media-libs/libpng media-libs/tiff virtual/opengl x11-libs/gtkglext x11-libs/gtkglarea:2 x11-libs/gtk+:2 x11-libs/libXmu truetype? ( media-libs/ftgl ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
+DEPEND=media-libs/libpng media-libs/tiff virtual/opengl x11-libs/gtkglext x11-libs/gtkglarea:2 x11-libs/gtk+:2 x11-libs/libXmu truetype? ( media-libs/ftgl ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=OpenGL interactive relativistic simulator
 EAPI=4
 HOMEPAGE=http://lightspeed.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=media-libs/libpng media-libs/tiff virtual/opengl x11-libs/gtkglext x11-libs/gtkglarea:2 x11-libs/gtk+:2 x11-libs/libXmu truetype? ( media-libs/ftgl )
 SLOT=0
 SRC_URI=mirror://sourceforge/lightspeed/lightspeed-1.2a.tar.gz mirror://sourceforge/lightspeed/objects-1.tar.gz mirror://debian/pool/main/l/lightspeed/lightspeed_1.2a-7.diff.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=404d1e124059b2291aa42ede5c3b245e

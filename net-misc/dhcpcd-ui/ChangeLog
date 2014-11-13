@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcpcd-ui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd-ui/ChangeLog,v 1.11 2014/11/12 19:28:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd-ui/ChangeLog,v 1.13 2014/11/13 17:11:35 hwoarang Exp $
+
+  13 Nov 2014; Markos Chandras <hwoarang@gentoo.org> dhcpcd-ui-0.7.4.ebuild:
+  Really disable Qt4 UI for IUSE=-qt4
+
+  13 Nov 2014; Markos Chandras <hwoarang@gentoo.org> dhcpcd-ui-0.7.4.ebuild,
+  metadata.xml:
+  Drop icons useflag and reword configure code
 
   12 Nov 2014; Markos Chandras <hwoarang@gentoo.org> dhcpcd-ui-0.7.4.ebuild:
   Allow building without gtk/gtk3/qt4 in order to get only the dhcpcd-online

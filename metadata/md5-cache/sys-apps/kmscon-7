@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=dev-libs/glib:2 >=virtual/udev-172 x11-libs/libxkbcommon dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm >=media-libs/mesa-8.0.3[egl,gbm] ) truetype? ( media-libs/freetype:2 ) gles2? ( >=media-libs/mesa-8.0.3[gles2] ) pango? ( x11-libs/pango ) systemd? ( sys-apps/systemd ) udev? ( virtual/udev ) cairo? ( x11-libs/cairo ) pixman? ( x11-libs/pixman ) wayland? ( dev-libs/wayland ) virtual/pkgconfig x11-proto/xproto doc? ( dev-util/gtk-doc ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool virtual/pkgconfig
+DEPEND=dev-libs/glib:2 >=virtual/udev-172 x11-libs/libxkbcommon dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm >=media-libs/mesa-8.0.3[egl,gbm] ) truetype? ( media-libs/freetype:2 ) gles2? ( >=media-libs/mesa-8.0.3[gles2] ) pango? ( x11-libs/pango ) systemd? ( sys-apps/systemd ) udev? ( virtual/udev ) cairo? ( x11-libs/cairo ) pixman? ( x11-libs/pixman ) wayland? ( dev-libs/wayland ) virtual/pkgconfig x11-proto/xproto doc? ( dev-util/gtk-doc ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
 DESCRIPTION=KMS/DRM based virtual Console Emulator
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/kmscon
@@ -10,5 +10,5 @@ RDEPEND=dev-libs/glib:2 >=virtual/udev-172 x11-libs/libxkbcommon dbus? ( sys-app
 REQUIRED_USE=gles2? ( drm ) multiseat? ( systemd )
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/kmscon/releases/kmscon-7.tar.bz2
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=bc40aa786a4586d82127b0e15edcf607

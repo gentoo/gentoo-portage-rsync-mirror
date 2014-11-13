@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=perl? ( dev-lang/perl:= ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php? ( php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-4? ( dev-lang/php:5.4 ) )
+DEPEND=perl? ( dev-lang/perl:= ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php? ( php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-4? ( dev-lang/php:5.4 ) )
 DESCRIPTION=An ISO-C:1999 API and corresponding CLI for the generation of DCE 1.1, ISO/IEC 11578:1996 and RFC 4122 compliant UUID
 EAPI=5
 HOMEPAGE=http://www.ossp.org/pkg/lib/uuid/
@@ -10,5 +10,5 @@ RDEPEND=perl? ( dev-lang/perl:= ) php? ( php_targets_php5-5? ( dev-lang/php:5.5 
 REQUIRED_USE=php? ( || ( php_targets_php5-5 php_targets_php5-4 ) )
 SLOT=0
 SRC_URI=ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	d467f3b787cbc75c40990b80f3d6b931	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	d467f3b787cbc75c40990b80f3d6b931	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=2c31403352d79de66557462f5e290dfe

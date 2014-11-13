@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=skey? ( >=sys-auth/skey-1.1.5-r1 ) tcpd? ( sys-apps/tcp-wrappers ) sys-libs/pam !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
+DEPEND=skey? ( >=sys-auth/skey-1.1.5-r1 ) tcpd? ( sys-apps/tcp-wrappers ) sys-libs/pam !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=An updated version of Cisco's TACACS+ server
 EAPI=4
 HOMEPAGE=http://www.shrubbery.net/tac_plus/
@@ -9,5 +9,5 @@ LICENSE=HPND RSA GPL-2
 RDEPEND=skey? ( >=sys-auth/skey-1.1.5-r1 ) tcpd? ( sys-apps/tcp-wrappers ) sys-libs/pam
 SLOT=0
 SRC_URI=ftp://ftp.shrubbery.net/pub/tac_plus/tacacs+-F4.0.4.19.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=2b0aa3aa95fbb357f62339f36da2cf9e

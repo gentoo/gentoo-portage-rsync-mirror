@@ -1,5 +1,5 @@
 DEFINED_PHASES=prepare
-DEPEND=dev-libs/json-c dev-libs/libpcre sys-apps/pciutils sys-power/iasl sys-power/pmtools sys-apps/dmidecode sys-devel/libtool !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
+DEPEND=dev-libs/json-c dev-libs/libpcre sys-apps/pciutils sys-power/iasl sys-power/pmtools sys-apps/dmidecode sys-devel/libtool !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Firmware Test Suite
 EAPI=5
 HOMEPAGE=https://wiki.ubuntu.com/Kernel/Reference/fwts
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/json-c dev-libs/libpcre sys-apps/pciutils sys-power/iasl sys-power/pmtools sys-apps/dmidecode
 SLOT=0
 SRC_URI=http://fwts.ubuntu.com/release/fwts-V14.09.00.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=c99ca782f2b6a7e5e21113dfc58e5969

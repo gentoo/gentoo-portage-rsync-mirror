@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.163 2014/08/12 12:15:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.164 2014/11/13 17:14:22 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -80,7 +80,7 @@ if [[ -n ${WANT_AUTOCONF} ]] ; then
 	export WANT_AUTOCONF
 fi
 
-_libtool_atom="sys-devel/libtool"
+_libtool_atom=">=sys-devel/libtool-2.4"
 if [[ -n ${WANT_LIBTOOL} ]] ; then
 	case ${WANT_LIBTOOL} in
 		none)   _libtool_atom="" ;;
@@ -301,17 +301,13 @@ eaclocal() {
 
 # @FUNCTION: _elibtoolize
 # @DESCRIPTION:
-# Runs libtoolize.  If --install is the first arg, automatically drop it if
-# the active libtool version doesn't support it.
+# Runs libtoolize.
 #
-# Note the '_' prefix .. to not collide with elibtoolize() from libtool.eclass.
+# Note the '_' prefix: avoid collision with elibtoolize() from libtool.eclass.
 _elibtoolize() {
 	local LIBTOOLIZE=${LIBTOOLIZE:-$(type -P glibtoolize > /dev/null && echo glibtoolize || echo libtoolize)}
 
 	[[ -f GNUmakefile.am || -f Makefile.am ]] && set -- "$@" --automake
-	if [[ $1 == "--install" ]] ; then
-		${LIBTOOLIZE} -n --install >& /dev/null || shift
-	fi
 
 	autotools_run_tool ${LIBTOOLIZE} "$@" ${opts}
 }

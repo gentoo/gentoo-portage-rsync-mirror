@@ -1,5 +1,5 @@
 DEFINED_PHASES=install prepare setup test
-DEPEND=app-arch/xz-utils test? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool
+DEPEND=app-arch/xz-utils test? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=a binary diff and differential compression tools. VCDIFF (RFC 3284) delta compression
 EAPI=5
 HOMEPAGE=http://xdelta.org/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-arch/xz-utils
 SLOT=3
 SRC_URI=http://xdelta.googlecode.com/files/xdelta3-3.0.5.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=576b41b58f95cdebc2ba94324f2e3b8f

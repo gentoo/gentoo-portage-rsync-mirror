@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=mpi? ( virtual/mpi ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 sys-devel/libtool fortran? ( virtual/fortran )
+DEPEND=mpi? ( virtual/mpi ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 fortran? ( virtual/fortran )
 DESCRIPTION=Fast C library for the Discrete Fourier Transform
 EAPI=4
 HOMEPAGE=http://www.fftw.org
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=mpi? ( virtual/mpi ) fortran? ( virtual/fortran )
 SLOT=2.1
 SRC_URI=http://www.fftw.org/fftw-2.1.5.tar.gz
-_eclasses_=autotools	ebea507d219855923e3438c953cf4ab8	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cdf91b44103884dd400049c814c0287a
