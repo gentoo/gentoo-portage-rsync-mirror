@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/runit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.50 2014/11/13 19:13:44 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.51 2014/11/13 19:32:15 williamh Exp $
+
+  13 Nov 2014; William Hubbs <williamh@gentoo.org> runit-2.1.2.ebuild:
+  Add reference to the debian bug report for the filter-flags call, Thanks to
+  Andrew M. for the information for this and the previous commit.
 
   13 Nov 2014; William Hubbs <williamh@gentoo.org> runit-2.1.2.ebuild:
   add a filter flags call for ppc if using dietlibc
