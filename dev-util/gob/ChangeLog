@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.103 2014/06/10 00:27:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.104 2014/11/13 13:08:54 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gob-2.0.19.ebuild:
+  Drop old (#508854)
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> gob-2.0.20.ebuild:
   Mark arm64/m68k/s390/sh stable.

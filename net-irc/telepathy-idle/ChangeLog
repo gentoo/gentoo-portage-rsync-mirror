@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/telepathy-idle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.66 2014/05/04 12:11:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.67 2014/11/13 13:09:45 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -telepathy-idle-0.1.16.ebuild:
+  Drop old (#508854)
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org> telepathy-idle-0.2.0.ebuild:
   x86 stable, bug 508862

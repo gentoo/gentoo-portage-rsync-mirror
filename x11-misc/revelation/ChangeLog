@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/revelation
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.35 2014/07/28 13:50:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.36 2014/11/13 13:04:09 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -revelation-0.4.14.ebuild,
+  metadata.xml:
+  Drop old (#508854)
 
   28 Jul 2014; Agostino Sarubbo <ago@gentoo.org> revelation-0.4.14-r1.ebuild:
   Stable for ppc, wrt bug #512012
