@@ -9,5 +9,5 @@ RDEPEND=!app-office/openerp-web postgres? ( virtual/postgresql[server] ) dev-pyt
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://nightly.openerp.com/trunk/nightly/src/openerp-8.0dev-20140125-000101.tar.gz
-_eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=8f9243edf1fea97576d2248017ddafc5

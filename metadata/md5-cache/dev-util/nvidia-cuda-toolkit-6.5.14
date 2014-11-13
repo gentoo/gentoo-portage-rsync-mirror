@@ -8,5 +8,5 @@ LICENSE=NVIDIA-CUDA
 RDEPEND=<sys-devel/gcc-4.9[cxx] >=x11-drivers/nvidia-drivers-340.32[uvm] debugger? ( sys-libs/libtermcap-compat sys-libs/ncurses[tinfo] ) eclipse? ( >=virtual/jre-1.6 ) profiler? ( >=virtual/jre-1.6 )
 SLOT=0/6.5.14
 SRC_URI=amd64? ( http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_6.5.14_linux_64.run ) x86? ( http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_6.5.14_linux_32.run )
-_eclasses_=check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	cuda	4a1af424313a3b30f00f3c918de4f772	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	cuda	4a1af424313a3b30f00f3c918de4f772	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=f41f7c0006776b009348b1bf8c2718ae

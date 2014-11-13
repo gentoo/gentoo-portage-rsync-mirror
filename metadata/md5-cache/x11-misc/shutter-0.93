@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-lang/perl drawing? ( dev-perl/Goo-Canvas ) webphoto? ( gnome-extra/gnome-web-photo ) || ( media-gfx/imagemagick[perl] media-gfx/graphicsmagick[imagemagick,perl] ) dev-perl/libxml-perl dev-perl/gnome2-wnck dev-perl/gnome2-canvas dev-perl/gnome2-perl dev-perl/Gtk2-Unique dev-perl/Gtk2-ImageView dev-perl/File-DesktopEntry dev-perl/File-HomeDir dev-perl/File-Which dev-perl/JSON dev-perl/File-Copy-Recursive dev-perl/File-MimeInfo dev-perl/Locale-gettext dev-perl/Net-DBus dev-perl/Proc-Simple dev-perl/Proc-ProcessTable dev-perl/Sort-Naturally dev-perl/WWW-Mechanize dev-perl/X11-Protocol dev-perl/XML-Simple dev-perl/libwww-perl
 SLOT=0
 SRC_URI=http://shutter-project.org/wp-content/uploads/releases/tars/shutter-0.93.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=de893ac0d03c62fc43c648f7a7a4a708

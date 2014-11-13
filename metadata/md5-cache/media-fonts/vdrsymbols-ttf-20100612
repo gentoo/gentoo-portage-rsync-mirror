@@ -7,5 +7,5 @@ KEYWORDS=~arm amd64 x86
 LICENSE=BitstreamVera
 SLOT=0
 SRC_URI=http://andreas.vdr-developer.org/fonts/download/vdrsymbols-ttf-20100612.tgz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=d2e9f2cadd3fdd4b3bc35b99c9050ba1

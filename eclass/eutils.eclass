@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.438 2014/11/03 22:55:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.439 2014/11/13 04:55:06 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1438,7 +1438,7 @@ make_wrapper() {
 	fi
 	# We don't want to quote ${bin} so that people can pass complex
 	# things as ${bin} ... "./someprog --args"
-	printf 'exec %s "$@"\n' "${bin/#\//${EPREFIX}\/}"
+	printf 'exec %s "$@"\n' "${bin/#\//${EPREFIX}/}"
 	) > "${tmpwrapper}"
 	chmod go+rx "${tmpwrapper}"
 

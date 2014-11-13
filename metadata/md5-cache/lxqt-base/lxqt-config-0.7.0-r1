@@ -8,5 +8,5 @@ LICENSE=GPL-2 LGPL-2.1+
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 ~lxqt-base/liblxqt-0.7.0 ~dev-libs/libqtxdg-0.5.3 sys-libs/zlib x11-libs/libXcursor x11-libs/libXfixes x11-apps/setxkbmap
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/0.7.0/lxqt-config-0.7.0.tar.xz
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=bae55b2b70e9a2dd57926715f886fd91

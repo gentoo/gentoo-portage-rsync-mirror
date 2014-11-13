@@ -8,5 +8,5 @@ LICENSE=kvirc
 RDEPEND=>=dev-qt/qtcore-4.6:4 >=dev-qt/qtgui-4.6:4 >=dev-qt/qtsql-4.6:4 sys-libs/zlib x11-libs/libX11 dcc_video? ( media-libs/libv4l theora? ( media-libs/libogg media-libs/libtheora ) ) kde? ( >=kde-base/kdelibs-4 ) oss? ( audiofile? ( media-libs/audiofile ) ) perl? ( dev-lang/perl ) phonon? ( || ( media-libs/phonon >=dev-qt/qtphonon-4.6:4 ) ) qt-dbus? ( >=dev-qt/qtdbus-4.6:4 ) ssl? ( dev-libs/openssl ) webkit? ( >=dev-qt/qtwebkit-4.6:4 ) gsm? ( media-sound/gsm ) python? ( =dev-lang/python-2* )
 REQUIRED_USE=audiofile? ( oss ) theora? ( dcc_video )
 SLOT=4
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=a9c4023a672e58fbdf9dd3ebf9aaf869

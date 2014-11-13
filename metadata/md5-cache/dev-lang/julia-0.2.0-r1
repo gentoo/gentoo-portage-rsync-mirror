@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=sys-libs/readline
 SLOT=0
 SRC_URI=http://gentooexperimental.org/~patrick/julia-0.2.0.tar.bz2 http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/SFMT/dSFMT-src-2.2.tar.gz -> dsfmt-2.2.tar.gz http://double-conversion.googlecode.com/files/double-conversion-1.1.1.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=3dca90b7ddec7b01ae422aec60acae49

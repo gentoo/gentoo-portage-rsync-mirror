@@ -6,8 +6,8 @@ HOMEPAGE=http://www.kde.org/
 IUSE=doc debug test
 KEYWORDS=~amd64
 LICENSE=MIT
-RDEPEND=>=kde-frameworks/karchive-5.3:5 app-text/docbook-xml-dtd:4.5 app-text/docbook-xsl-stylesheets dev-libs/libxml2:2 dev-libs/libxslt >=kde-frameworks/kf-env-2 >=dev-qt/qtcore-5.3.0:5
+RDEPEND=>=kde-frameworks/karchive-5.3:5 app-text/docbook-xml-dtd:4.5 app-text/docbook-xsl-stylesheets dev-libs/libxml2:2 dev-libs/libxslt >=kde-frameworks/kf-env-3 >=dev-qt/qtcore-5.3.0:5
 SLOT=5/5.3
 SRC_URI=mirror://kde/stable/frameworks/5.3.0/kdoctools-5.3.0.tar.xz
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	kde5	d56b4cb2b4895434cc802788aaee51ef	kde5-functions	5adb5ad8381330e8b7b99bf4a62a15f8	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	d6d771a6d82043f08b56b1ddebc16f78	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	kde5	a488263d3a8020761de6c098816e4ef7	kde5-functions	5adb5ad8381330e8b7b99bf4a62a15f8	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=9ee452b56ac1b55cf64ea02947be3c1d

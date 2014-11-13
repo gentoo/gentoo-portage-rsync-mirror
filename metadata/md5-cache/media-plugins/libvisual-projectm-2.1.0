@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=media-libs/libsdl =media-libs/libvisual-0.4* >=media-libs/libprojectm-2.1.0 virtual/opengl
 SLOT=0
 SRC_URI=mirror://sourceforge/projectm/projectM-complete-2.1.0-Source.tar.gz
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=6bdd9253b281421dc167ee0f7f6e4cc7

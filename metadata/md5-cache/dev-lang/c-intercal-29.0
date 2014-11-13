@@ -9,5 +9,5 @@ LICENSE=GPL-2 FDL-1.2
 RDEPEND=emacs? ( virtual/emacs )
 SLOT=0
 SRC_URI=http://overload.intercal.org.uk/c/intercal-0.29.pax.gz
-_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=400271b23d4a04deb18f442b6b64e5cd

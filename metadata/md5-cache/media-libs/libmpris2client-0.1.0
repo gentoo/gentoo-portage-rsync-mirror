@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2 x11-libs/gtk+:2
 SLOT=0
 SRC_URI=http://github.com/matiasdelellis/libmpris2client/releases/download/V0.1.0/libmpris2client-0.1.0.tar.bz2
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=69cef122e2263e0f54d178e592f36319

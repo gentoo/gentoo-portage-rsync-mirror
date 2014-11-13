@@ -10,5 +10,5 @@ RDEPEND=dev-libs/openssl avahi? ( net-dns/avahi ) dvb? ( virtual/linuxtv-dvb-hea
 REQUIRED_USE=dvbscan? ( dvb )
 SLOT=0
 SRC_URI=https://github.com/tvheadend/tvheadend/archive/3.4patch1.tar.gz -> tvheadend-3.4.27.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=4824e7d40186b3b8d9888ee86fb9b170

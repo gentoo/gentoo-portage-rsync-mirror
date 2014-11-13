@@ -9,5 +9,5 @@ LICENSE=GPL-2 BSD
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 autoshutdown? ( dev-qt/qtdbus:4 ) || ( media-video/mplayer[bidi,libass,png,X] media-video/mplayer2[libass,png,X] )
 SLOT=0
 SRC_URI=mirror://sourceforge/smplayer/smplayer-14.9.0.tar.bz2
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	c91a1ac3fefc6b077094fb2e82c65af4	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e6e860877b7fe5b9e35ed2ac9aa7467b

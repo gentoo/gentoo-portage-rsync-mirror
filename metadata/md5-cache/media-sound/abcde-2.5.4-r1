@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-sound/cd-discid net-misc/wget virtual/eject aac? ( media-libs/faac || ( media-video/atomicparsley media-video/atomicparsley-wez ) ) cdparanoia? ( || ( dev-libs/libcdio-paranoia media-sound/cdparanoia ) ) cdr? ( virtual/cdrtools ) flac? ( media-libs/flac ) id3tag? ( dev-python/eyeD3:0.7 >=media-sound/id3-0.12 media-sound/id3v2 ) lame? ( media-sound/lame ) musicbrainz? ( dev-perl/MusicBrainz-DiscID dev-perl/WebService-MusicBrainz virtual/perl-Digest-SHA virtual/perl-Getopt-Long ) normalize? ( >=media-sound/normalize-0.7.4 ) replaygain? ( vorbis? ( media-sound/vorbisgain ) lame? ( media-sound/mp3gain ) ) speex? ( media-libs/speex ) vorbis? ( media-sound/vorbis-tools )
 SLOT=0
 SRC_URI=http://abcde.googlecode.com/files/abcde-2.5.4.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=d0044f14b0d80dbe5fe9133bcfb6c0d2

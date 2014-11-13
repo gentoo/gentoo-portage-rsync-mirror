@@ -10,5 +10,5 @@ RDEPEND=|| ( >=media-video/libav-9.10:=[encode?,threads,vaapi?,vdpau?] >=media-v
 REQUIRED_USE=dvdnav? ( dvd ) enca? ( iconv ) lcms? ( opengl ) libguess? ( iconv ) luajit? ( lua ) opengl? ( || ( wayland X ) ) pvr? ( v4l ) radio? ( v4l || ( alsa oss ) ) vaapi? ( X ) vdpau? ( X ) wayland? ( opengl ) xinerama? ( X ) xscreensaver? ( X ) xv? ( X )
 SLOT=0
 SRC_URI=https://waf.googlecode.com/files/waf-1.7.15 https://github.com/mpv-player/mpv/archive/v0.3.10.tar.gz -> mpv-0.3.10.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	c91a1ac3fefc6b077094fb2e82c65af4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
 _md5_=10a837421e66afc0c6d256415a43574c

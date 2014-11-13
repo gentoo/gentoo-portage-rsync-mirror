@@ -8,5 +8,5 @@ LICENSE=ISC
 RDEPEND=dev-cpp/gtkmm:3.0 dev-libs/boost dev-libs/dbus-glib dev-libs/glib:2 x11-libs/libX11 x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libXtst
 SLOT=0
 SRC_URI=mirror://sourceforge/project/easystroke/easystroke/0.6.0/easystroke-0.6.0.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ce706ace8ed4dc5b74476f769b98cc4d

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2 gnome-base/libglade:2.0 dev-libs/libxml2:2 || ( >=dev-scheme/guile-1.8[deprecated] =dev-scheme/guile-1.6* )
 SLOT=0
 SRC_URI=mirror://sourceforge/ofset/drgeo-1.1.0.tar.gz mirror://sourceforge/ofset/drgeo-doc-1.5.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=139f3c85f892e71a02db384cf23f6ed1

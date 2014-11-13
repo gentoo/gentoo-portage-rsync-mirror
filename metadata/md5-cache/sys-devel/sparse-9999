@@ -7,5 +7,5 @@ IUSE=gtk llvm test xml
 LICENSE=OSL-1.1
 RDEPEND=gtk? ( x11-libs/gtk+:2 ) llvm? ( >=sys-devel/llvm-3.0 ) xml? ( dev-libs/libxml2 )
 SLOT=0
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=54790f9096680363d1c7d3f847993770

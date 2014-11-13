@@ -9,5 +9,5 @@ RDEPEND=>=dev-java/java-config-wrapper-0.15 !sys-apps/baselayout-java !app-admin
 RESTRICT=test
 SLOT=2
 SRC_URI=mirror://gentoo/java-config-2.1.11.tar.bz2
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	c91a1ac3fefc6b077094fb2e82c65af4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	d6d771a6d82043f08b56b1ddebc16f78	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=aed44d04a81a1b866987c8e00e05669f

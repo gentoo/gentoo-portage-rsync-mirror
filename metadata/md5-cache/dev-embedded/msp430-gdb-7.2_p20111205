@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2
 RDEPEND=>=sys-libs/ncurses-5.2-r2 sys-libs/readline expat? ( dev-libs/expat ) python? ( =dev-lang/python-2* )
 SLOT=0
 SRC_URI=mirror://gnu/gdb/gdb-7.2.tar.bz2 ftp://sources.redhat.com/pub/gdb/releases/gdb-7.2.tar.bz2 http://dev.gentoo.org/~radhermit/distfiles/msp430-gdb-7.2_p20111205.patch.bz2
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=57e6acec547735fc620db81f6e5259d4

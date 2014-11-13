@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=>=media-libs/alsa-lib-1.0.26
 SLOT=0
 SRC_URI=http://git.0pointer.de/?p=dbmeasure.git;a=snapshot;h=ed8105083ab72f9afac9d18b7563fbc3d6c1c925;sf=tgz -> dbmeasure-0.0.20100217-ed8105083ab72f9afac9d18b7563fbc3d6c1c925.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=c7763456d449eb243deb866e87d35120

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-python/celementtree ) curl? ( dev-python/pycurl ) sftp? ( dev-python/paramiko ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[threads,ssl] =dev-lang/python-2.6*[threads,ssl] )
 SLOT=0
 SRC_URI=http://launchpad.net/bzr/2.5/2.5.0/+download/bzr-2.5.0.tar.gz
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=11d8619a40966aae92e406fee7632a79

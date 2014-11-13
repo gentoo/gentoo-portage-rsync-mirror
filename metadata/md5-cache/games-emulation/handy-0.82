@@ -7,5 +7,5 @@ RDEPEND=media-libs/libsdl sys-libs/zlib sys-libs/lib-compat games-misc/games-env
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://sdlemu.ngemu.com/releases/Handy-SDL-0.82R1.i386.linux-glibc22.tar.bz2
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	c91a1ac3fefc6b077094fb2e82c65af4	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=eae0d7284739ac87212c5d4c545d87cc

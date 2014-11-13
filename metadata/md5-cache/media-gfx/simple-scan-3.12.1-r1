@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2.32:2 >=media-gfx/sane-backends-1.0.20:= >=sys-libs/zlib-1.2.3.1:= virtual/jpeg:0= virtual/libgudev:= x11-libs/cairo:= >=x11-libs/gtk+-3:3 || ( >=x11-misc/colord-0.1.24:=[udev] x11-misc/colord:=[scanner] ) x11-misc/xdg-utils x11-themes/gnome-icon-theme
 SLOT=0
 SRC_URI=http://launchpad.net/simple-scan/3.12/3.12.1/+download/simple-scan-3.12.1.tar.xz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=425a19b24f2be8cea7e913190e78c7ce

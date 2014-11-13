@@ -9,5 +9,5 @@ RDEPEND=zlib? ( sys-libs/zlib ) ident? ( net-libs/libident ) tcpd? ( sys-apps/tc
 RESTRICT=test
 SLOT=0
 SRC_URI=ftp://ftp.berlios.de/pub/ngircd/ngircd-13.tar.gz ftp://ngircd.barton.de/pub/ngircd/ngircd-13.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=c44c19addd9edbd7a89ec3c08a948c78

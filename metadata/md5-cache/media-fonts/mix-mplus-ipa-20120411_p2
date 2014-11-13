@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~x86 ~x86-fbsd
 LICENSE=mplus-fonts IPAfont
 SLOT=0
 SRC_URI=mirror://sourceforge.jp/mix-mplus-ipa/56155/migmix-1m-20120411-2.zip mirror://sourceforge.jp/mix-mplus-ipa/56155/migmix-1p-20120411-2.zip mirror://sourceforge.jp/mix-mplus-ipa/56155/migmix-2m-20120411-2.zip mirror://sourceforge.jp/mix-mplus-ipa/56155/migmix-2p-20120411-2.zip mirror://sourceforge.jp/mix-mplus-ipa/56156/migu-1p-20120411-2.zip mirror://sourceforge.jp/mix-mplus-ipa/56156/migu-1c-20120411-2.zip mirror://sourceforge.jp/mix-mplus-ipa/56156/migu-1m-20120411-2.zip mirror://sourceforge.jp/mix-mplus-ipa/56156/migu-2m-20120411-2.zip
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=d55fa724352c5696d0307ed42bbe80e8

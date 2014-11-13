@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.1 2014/10/15 12:48:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.2 2014/11/13 04:34:05 kensington Exp $
 
 # @ECLASS: kde5.eclass
 # @MAINTAINER:
@@ -109,7 +109,7 @@ case ${KDE_AUTODEPS} in
 		fi
 
 		DEPEND+=" >=dev-libs/extra-cmake-modules-${ecm_version}"
-		RDEPEND+=" >=kde-frameworks/kf-env-2"
+		RDEPEND+=" >=kde-frameworks/kf-env-3"
 		COMMONDEPEND+="	>=dev-qt/qtcore-${QT_MINIMAL}:5"
 
 		if [[ ${CATEGORY} = kde-base ]]; then
@@ -197,7 +197,12 @@ _calculate_src_uri() {
 
 	case ${CATEGORY} in
 		kde-frameworks)
-			SRC_URI="mirror://kde/stable/frameworks/${PV}/${_kmname}-${PV}.tar.xz"
+			case ${PV} in 
+				5.0.0|5.1.0|5.2.0|5.3.0)
+				SRC_URI="mirror://kde/stable/frameworks/${PV}/${_kmname}-${PV}.tar.xz" ;;
+				*)
+				SRC_URI="mirror://kde/stable/frameworks/${PV%.*}/${_kmname}-${PV}.tar.xz" ;;
+			esac
 			;;
 		kde-base)
 			case ${PV} in

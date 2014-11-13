@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/gstreamer-0.10.31:0.10 >=media-libs/gst-plugins-base-0.10.31:0.10 >=virtual/ffmpeg-0.10 || ( media-video/ffmpeg:0 media-libs/libpostproc ) orc? ( >=dev-lang/orc-0.4.6 )
 SLOT=0.10
 SRC_URI=http://dev.gentoo.org/~tetromino/distfiles/gst-plugins-ffmpeg/gst-ffmpeg-0.10.13_p201211.tar.xz http://dev.gentoo.org/~tetromino/distfiles/gst-plugins-ffmpeg/gst-ffmpeg-0.10.13_p201211-libav-9-patches.tar.xz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=db18fcf620154bab358c1d2cdf167d75

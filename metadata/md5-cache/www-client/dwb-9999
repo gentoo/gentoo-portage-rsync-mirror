@@ -7,5 +7,5 @@ IUSE=examples gtk3 libsecret
 LICENSE=GPL-3
 RDEPEND=>=net-libs/libsoup-2.38:2.4 dev-libs/json-c net-libs/gnutls !gtk3? ( >=net-libs/webkit-gtk-1.8.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.8.0:3 x11-libs/gtk+:3 ) libsecret? ( app-crypt/libsecret )
 SLOT=0
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=38f69f56b33b9dfe55d1eaece71e5a9e

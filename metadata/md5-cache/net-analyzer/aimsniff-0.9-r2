@@ -10,5 +10,5 @@ RDEPEND=dev-lang/perl[gdbm] dev-perl/Net-Pcap dev-perl/NetPacket dev-perl/Unicod
 RESTRICT=mirror
 SLOT=0.9-r2
 SRC_URI=mirror://sourceforge/aimsniff/aimsniff-0.9d.tar.gz http? ( mirror://sourceforge/aimsniff/was-0.1.2b.tar.gz )
-_eclasses_=depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	c91a1ac3fefc6b077094fb2e82c65af4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=f17ed66d5aa572f39b1aaf5670012fc5

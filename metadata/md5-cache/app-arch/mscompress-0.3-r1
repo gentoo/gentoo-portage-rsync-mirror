@@ -6,5 +6,5 @@ KEYWORDS=amd64 hppa ~ppc ~ppc64 x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-l
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=ftp://ftp.penguin.cz/pub/users/mhi/mscompress/mscompress-0.3.tar.bz2
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=0e4fe739a711ac9018135b3a333f3704

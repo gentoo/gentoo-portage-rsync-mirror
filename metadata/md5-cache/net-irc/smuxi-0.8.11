@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-2 GPL-3 )
 RDEPEND=>=dev-lang/mono-2.0 >=dev-dotnet/smartirc4net-0.4.5.1 >=dev-dotnet/nini-1.1.0-r2 >=dev-dotnet/log4net-1.2.10-r2 dbus? ( dev-dotnet/dbus-sharp dev-dotnet/dbus-sharp-glib dev-dotnet/ndesk-dbus dev-dotnet/ndesk-dbus-glib ) gtk? ( >=dev-dotnet/gtk-sharp-2.12 >=dev-dotnet/glade-sharp-2.12 >=dev-dotnet/glib-sharp-2.12 ) libnotify? ( dev-dotnet/notify-sharp ) spell? ( >=app-text/gtkspell-2.0.9:2 )
 SLOT=0
 SRC_URI=http://www.smuxi.org/jaws/data/files/smuxi-0.8.11.tar.gz
-_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=4b04a1d413e277929888025e3f9c91fc
