@@ -3,8 +3,6 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
-		<flag name="gnome">Enable the use of <pkg>gnome-base/gconf</pkg> to honour
-			lockdown settings</flag>
 		<flag name="dvi">Enable the built-in DVI viewer</flag>
 		<flag name="libsecret">Enable support for credentials store</flag>
 		<flag name="nautilus">Enable property page extension in <pkg>gnome-base/nautilus</pkg></flag>

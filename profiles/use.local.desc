@@ -15,8 +15,6 @@ app-accessibility/emacspeak:espeak - Adds support for the espeak tts engine
 app-accessibility/festival-it:mbrola - Adds support for mbrola voices
 app-accessibility/freetts:jsapi - build Java Speech API (JSAPI)
 app-accessibility/freetts:mbrola - Adds support for mbrola voices
-app-accessibility/gnome-speech:espeak - Adds support for the espeak speech driver (default)
-app-accessibility/gnome-speech:festival - Adds support for the festival speech driver
 app-accessibility/orca:braille - Enable braille support
 app-accessibility/simon:kdepim - Use kde-base/kdepimlibs
 app-accessibility/simon:opencv - Use media-libs/opencv
@@ -160,7 +158,6 @@ app-admin/gkrellm:lm_sensors - Enable monitoring sensors via sys-apps/lm_sensors
 app-admin/gkrellm:ntlm - Enable NTLM authentication for mail checking with net-libs/libntlm
 app-admin/gkrellm:ssl - Enable SSL support for mail checking with dev-libs/openssl
 app-admin/glance:swift - Adds swift storage support
-app-admin/gnome-system-tools:nfs - Adds support for NFS shares
 app-admin/hddtemp:network-cron - Monthly cronjob to update hddtemp.db.
 app-admin/keepass:aot - Generate native code at build time, rather than runtime.
 app-admin/lastpass:chrome - Support for www-client/chrome
@@ -383,9 +380,6 @@ app-crypt/ophcrack-tables:xpsmall - Installs the small free XP ophcrack tables
 app-crypt/p11-kit:asn1 - Enable ASN.1 certificate support
 app-crypt/p11-kit:trust - Build the trust policy module
 app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP server.
-app-crypt/seahorse-plugins:applet - Enable seahorse applet for gnome-base/gnome-panel
-app-crypt/seahorse-plugins:gedit - Enable text encryption plugin to integrate into app-editors/gedit
-app-crypt/seahorse-plugins:nautilus - Enable file encryption plugin to integrate into the gnome-base/nautilus context menu
 app-crypt/shishi:3des - Enable 3DES encryption/checksum type.
 app-crypt/shishi:aes - Enable AES encryption/checksum types.
 app-crypt/shishi:arcfour - Enable ARCFOUR encryption/checksum type.
@@ -1102,7 +1096,6 @@ app-text/enchant:aspell - Adds support for app-text/aspell spell checker
 app-text/enchant:hunspell - Adds support for app-text/hunspell spell checker
 app-text/enchant:zemberek - Adds support for app-text/zemberek-server spell checker server
 app-text/evince:dvi - Enable the built-in DVI viewer
-app-text/evince:gnome - Enable the use of gnome-base/gconf to honour lockdown settings
 app-text/evince:libsecret - Enable support for credentials store
 app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer (media-libs/t1lib)

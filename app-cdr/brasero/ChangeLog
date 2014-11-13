@@ -1,6 +1,15 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.165 2014/09/24 11:28:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.166 2014/11/13 10:45:26 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -brasero-2.32.1-r1.ebuild,
+  -files/brasero-2.32.0-build-plugins-against-local-library.patch,
+  -files/brasero-2.32.1-fix-size.patch,
+  -files/brasero-2.32.1-underlinking.patch,
+  -files/brasero-2.32.1-useless-dialog.patch,
+  -files/brasero-2.32.1-warning-silenced.patch,
+  -files/brasero-2.32.1-warning-silenced2.patch:
+  Drop old (#508854)
 
 *brasero-3.11.4 (24 Sep 2014)
 

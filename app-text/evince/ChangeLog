@@ -1,6 +1,19 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.274 2014/09/02 10:31:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.275 2014/11/13 10:54:17 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -evince-2.32.0-r4.ebuild,
+  -files/evince-0.7.1-display-menu.patch,
+  -files/evince-2.32.0-create_thumbnail_frame-null.patch,
+  -files/evince-2.32.0-desktop-categories.patch,
+  -files/evince-2.32.0-dvi-CVEs.patch, -files/evince-2.32.0-dvi-security.patch,
+  -files/evince-2.32.0-gold.patch,
+  -files/evince-2.32.0-libdocument-segfault.patch,
+  -files/evince-2.32.0-libview-crash.patch, -files/evince-2.32.0-pk-fonts.patch,
+  -files/evince-2.32.0-stop-spinner.patch,
+  -files/evince-2.32.0-update-poppler.patch,
+  -files/evince-2.32.0-use-popup.patch, -files/gconf-2.m4, metadata.xml:
+  Drop old (#508854)
 
 *evince-3.12.2 (02 Sep 2014)
 

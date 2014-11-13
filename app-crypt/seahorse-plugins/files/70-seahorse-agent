@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# launches a seahorse-agent instance
-
-seahorseagent=`which seahorse-agent 2> /dev/null`
-if [ -n "$seahorseagent" ] && [ -x "$seahorseagent" ] && [ -z "$GPG_AGENT_INFO" ] ;  then
-   command="$seahorseagent --execute $command"
-fi

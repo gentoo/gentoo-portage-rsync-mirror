@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.372 2014/09/29 14:31:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.373 2014/11/13 10:49:42 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gedit-2.30.2-tests-skip.patch, -files/gedit-2.30.4-underlinking.patch,
+  -gedit-2.30.4.ebuild, -gedit-3.10.4.ebuild:
+  Drop old (#508854)
 
 *gedit-3.12.2-r1 (29 Sep 2014)
 

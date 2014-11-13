@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon-gstreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.58 2014/10/18 14:53:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.59 2014/11/13 10:42:24 kensington Exp $
+
+  13 Nov 2014; Michael Palimaka <kensington@gentoo.org>
+  -phonon-gstreamer-4.6.3.ebuild:
+  Remove old.
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> phonon-gstreamer-4.7.2.ebuild:
   Stable for ppc64, wrt bug #519592

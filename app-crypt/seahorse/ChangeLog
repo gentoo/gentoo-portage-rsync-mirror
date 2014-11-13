@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.185 2014/07/23 15:13:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.186 2014/11/13 10:48:02 pacho Exp $
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/seahorse-2.32.0-libnotify-0.7.patch,
+  -files/seahorse-3.10.2-include-correct-headers-for-vala.patch,
+  -seahorse-2.32.0.ebuild, -seahorse-3.10.2-r1.ebuild, -seahorse-3.12.0.ebuild:
+  Drop old (#508854)
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> seahorse-3.12.2.ebuild:
   Stable for x86, wrt bug #512012

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.70 2014/11/04 10:13:39 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.71 2014/11/13 10:37:46 kensington Exp $
+
+  13 Nov 2014; Michael Palimaka <kensington@gentoo.org>
+  -files/phonon-4.5.1-qmakeworkaround.patch, -files/phonon-4.6.0-rpath.patch,
+  -phonon-4.6.0-r1.ebuild, -phonon-4.8.0.ebuild, -phonon-4.8.1.ebuild:
+  Remove old.
 
 *phonon-4.8.2 (04 Nov 2014)
 
