@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ezmlm-idx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.35 2014/11/03 13:43:44 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.36 2014/11/13 07:24:35 patrick Exp $
+
+  13 Nov 2014; Patrick Lauer <patrick@gentoo.org> -ezmlm-idx-0.40-r2.ebuild:
+  Really remove old for repoman happy
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   ezmlm-idx-0.40-r2.ebuild, ezmlm-idx-6.0.0.ebuild, ezmlm-idx-7.0.0.ebuild,

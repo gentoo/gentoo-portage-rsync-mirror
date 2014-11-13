@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1418 2014/11/13 04:34:05 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1419 2014/11/13 07:15:54 ulm Exp $
+
+  13 Nov 2014; Ulrich Müller <ulm@gentoo.org> bzr.eclass:
+  Remove Emacs team from maintainers of bzr.eclass.
 
   13 Nov 2014; Michael Palimaka <kensington@gentoo.org> kde5.eclass:
   Sync with KDE overlay. Raise kde-frameworks/kf-env dependency and update
