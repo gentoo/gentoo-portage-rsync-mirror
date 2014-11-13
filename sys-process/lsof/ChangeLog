@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/lsof
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.98 2014/01/20 06:40:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.99 2014/11/13 09:59:46 polynomial-c Exp $
+
+*lsof-4.88 (13 Nov 2014)
+
+  13 Nov 2014; Lars Wendler <polynomial-c@gentoo.org> +lsof-4.88.ebuild:
+  Version bump.
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> lsof-4.85-r2.ebuild,
   lsof-4.87-r1.ebuild:

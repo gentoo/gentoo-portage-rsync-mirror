@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.452 2014/11/12 09:12:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.454 2014/11/13 09:52:22 ago Exp $
+
+  13 Nov 2014; Agostino Sarubbo <ago@gentoo.org> dbus-1.8.10.ebuild:
+  Stable for x86, wrt bug #528900
+
+  13 Nov 2014; Agostino Sarubbo <ago@gentoo.org> dbus-1.8.10.ebuild:
+  Stable for amd64, wrt bug #528900
 
   12 Nov 2014; Jeroen Roovers <jer@gentoo.org> dbus-1.8.10.ebuild:
   Stable for HPPA (bug #528900).
