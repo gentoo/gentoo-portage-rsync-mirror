@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.223 2014/11/02 09:36:26 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.224 2014/11/13 10:24:29 pacho Exp $
+
+*bluez-5.25 (13 Nov 2014)
+
+  13 Nov 2014; Pacho Ramos <pacho@gentoo.org> +bluez-5.25.ebuild:
+  Version bump (#529060 by mrueg)
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> bluez-5.21-r1.ebuild,
   bluez-5.24.ebuild:

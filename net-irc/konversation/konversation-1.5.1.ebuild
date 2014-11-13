@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.5.1.ebuild,v 1.1 2014/11/13 08:40:49 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.5.1.ebuild,v 1.3 2014/11/13 10:03:24 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.xz"
 
 LICENSE="GPL-2 handbook? ( FDL-1.2 )"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+crypt debug"
 
 DEPEND="
