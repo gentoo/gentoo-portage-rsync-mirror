@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.9 2014/10/09 16:55:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.10 2014/11/14 02:49:57 pesa Exp $
 
 # @ECLASS: qt5-build.eclass
 # @MAINTAINER:
@@ -261,11 +261,13 @@ qt5-build_src_install() {
 	if [[ ${PN} == qtcore ]]; then
 		pushd "${QT5_BUILD_DIR}" >/dev/null || die
 
-		set -- emake INSTALL_ROOT="${D}" install_{mkspecs,qmake,syncqt}
+		set -- emake INSTALL_ROOT="${D}" install_{global_docs,mkspecs,qmake,syncqt}
 		einfo "Running $*"
 		"$@"
 
 		popd >/dev/null || die
+
+		docompress -x "${QT5_DOCDIR#${EPREFIX}}"/global
 
 		# install an empty Gentoo/gentoo-qconfig.h in ${D}
 		# so that it's placed under package manager control
@@ -276,9 +278,24 @@ qt5-build_src_install() {
 		)
 
 		# include gentoo-qconfig.h at the beginning of QtCore/qconfig.h
-		sed -i -e '1a#include <Gentoo/gentoo-qconfig.h>\n' \
+		sed -i -e '1i #include <Gentoo/gentoo-qconfig.h>\n' \
 			"${D}${QT5_HEADERDIR}"/QtCore/qconfig.h \
 			|| die "sed failed (qconfig.h)"
+
+		# install qtchooser configuration file
+		cat > "${T}/qt5-${CHOST}.conf" <<-_EOF_
+			${QT5_BINDIR}
+			${QT5_LIBDIR}
+		_EOF_
+
+		(
+			insinto /etc/xdg/qtchooser
+			doins "${T}/qt5-${CHOST}.conf"
+		)
+
+		# convenience symlinks
+		dosym qt5-"${CHOST}".conf /etc/xdg/qtchooser/5.conf
+		dosym qt5-"${CHOST}".conf /etc/xdg/qtchooser/qt5.conf
 	fi
 
 	qt5_install_module_qconfigs

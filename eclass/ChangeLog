@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1419 2014/11/13 07:15:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1420 2014/11/14 02:49:57 pesa Exp $
+
+  14 Nov 2014; Davide Pesavento <pesa@gentoo.org> qt5-build.eclass:
+  Install global docs (part of bug 457028). Generate and install qtchooser
+  configuration file.
 
   13 Nov 2014; Ulrich Müller <ulm@gentoo.org> bzr.eclass:
   Remove Emacs team from maintainers of bzr.eclass.
