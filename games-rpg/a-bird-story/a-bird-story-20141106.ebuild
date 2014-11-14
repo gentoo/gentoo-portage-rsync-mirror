@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/a-bird-story/a-bird-story-20141106.ebuild,v 1.1 2014/11/14 17:18:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/a-bird-story/a-bird-story-20141106.ebuild,v 1.2 2014/11/14 17:31:22 hasufell Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="${MY_PN}-${PV:0:4}-${PV:4:2}-${PV:6:2}.sh"
 # missing: SIL, Xiph
 # physfs ZLIB
 # sdl-sound LGPL-2.1
-LICENSE="all-rights-reserved LGPL-2.1 ZLIB bundled-libs? ( FTL GPL-2 MIT ( || ( Ruby-BSD BSD-2 ) ) )"
+LICENSE="all-rights-reserved BSD OFL-1.1 LGPL-2.1 ZLIB bundled-libs? ( FTL GPL-2 MIT ( || ( Ruby-BSD BSD-2 ) ) )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="bundled-libs"
