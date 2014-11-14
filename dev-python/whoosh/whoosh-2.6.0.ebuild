@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/whoosh-2.6.0.ebuild,v 1.1 2014/11/14 03:48:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/whoosh-2.6.0.ebuild,v 1.2 2014/11/14 04:13:19 idella4 Exp $
 
 EAPI="5"
 
@@ -36,6 +36,7 @@ python_prepare_all() {
 }
 
 python_compile_all() {
+	# https://bitbucket.org/mchaput/whoosh/issue/403/
 	use doc && sphinx-build -b html -c docs/source/ docs/source/ docs/source/build/html
 }
 
