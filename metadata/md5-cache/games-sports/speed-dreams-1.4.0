@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/opengl virtual/glu media-libs/freeglut media-libs/openal media-libs/freealut x11-libs/libX11 x11-libs/libXxf86vm xrandr? ( x11-libs/libXrandr ) sys-libs/zlib >=media-libs/libpng-1.2.40 games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/speed-dreams/speed-dreams-1.4.0-r2307-src.tar.bz2
-_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	games	e221fed675714bd5545b7488aed9f822	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	bcabc28910a7a601c6797c32d59d555e	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	games	e221fed675714bd5545b7488aed9f822	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=788926612f015885afdbb415d4030bcf

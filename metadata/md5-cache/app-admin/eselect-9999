@@ -8,5 +8,5 @@ LICENSE=GPL-2+ || ( GPL-2+ CC-BY-SA-2.5 )
 PDEPEND=emacs? ( app-emacs/eselect-mode ) vim-syntax? ( app-vim/eselect-syntax )
 RDEPEND=!app-admin/eselect-news sys-apps/sed || ( sys-apps/coreutils sys-freebsd/freebsd-bin app-misc/realpath ) sys-apps/file sys-libs/ncurses
 SLOT=0
-_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	d6d771a6d82043f08b56b1ddebc16f78	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	bcabc28910a7a601c6797c32d59d555e	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	d6d771a6d82043f08b56b1ddebc16f78	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ad1f77a9d42195b91f7bc6501efd1c24

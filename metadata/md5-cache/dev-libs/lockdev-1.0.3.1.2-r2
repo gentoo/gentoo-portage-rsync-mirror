@@ -8,5 +8,5 @@ KEYWORDS=~alpha ~amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc ~x86
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=mirror://debian/pool/main/l/lockdev/lockdev_1.0.3.orig.tar.gz mirror://debian/pool/main/l/lockdev/lockdev_1.0.3-1.2.diff.gz
-_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	d467f3b787cbc75c40990b80f3d6b931	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	bcabc28910a7a601c6797c32d59d555e	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	d467f3b787cbc75c40990b80f3d6b931	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=f5d8c5675d1ebfb91d2e79d49b63489d

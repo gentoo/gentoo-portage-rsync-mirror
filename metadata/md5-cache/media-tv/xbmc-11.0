@@ -10,5 +10,5 @@ RDEPEND=virtual/glu virtual/opengl app-arch/bzip2 app-arch/unzip app-arch/zip ap
 REQUIRED_USE=pvr? ( mysql )
 SLOT=0
 SRC_URI=http://mirrors.xbmc.org/releases/source/xbmc-11.0.tar.gz
-_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	bcabc28910a7a601c6797c32d59d555e	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=db8dc02551a27e19f3726e584921d2cd

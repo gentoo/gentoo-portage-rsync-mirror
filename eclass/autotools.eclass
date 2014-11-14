@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.164 2014/11/13 17:14:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.165 2014/11/14 01:31:01 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -309,7 +309,7 @@ _elibtoolize() {
 
 	[[ -f GNUmakefile.am || -f Makefile.am ]] && set -- "$@" --automake
 
-	autotools_run_tool ${LIBTOOLIZE} "$@" ${opts}
+	autotools_run_tool ${LIBTOOLIZE} "$@"
 }
 
 # @FUNCTION: eautoheader

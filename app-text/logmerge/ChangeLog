@@ -1,6 +1,9 @@
 # ChangeLog for app-text/logmerge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/logmerge/ChangeLog,v 1.3 2014/08/10 18:26:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/logmerge/ChangeLog,v 1.4 2014/11/14 01:21:25 tomwij Exp $
+
+  14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Maintainer needed.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> logmerge-0.4_beta.ebuild:
   QA: drop trailing '.' from DESCRIPTION

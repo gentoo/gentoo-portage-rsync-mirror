@@ -10,5 +10,5 @@ RDEPEND=dev-libs/gmp >=dev-libs/ntl-5.5.1 emacs? ( >=virtual/emacs-22 ) python? 
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.mathematik.uni-kl.de/ftp/pub/Math/Singular/SOURCES/3-1-4/Singular-3-1-4.tar.gz http://www.mathematik.uni-kl.de/ftp/pub/Math/Singular/SOURCES/3-1-4/Singular-3-1-4-share.tar.gz
-_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	prefix	21058c21ca48453d771df15500873ede	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	bcabc28910a7a601c6797c32d59d555e	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	prefix	21058c21ca48453d771df15500873ede	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=fb2d14d919b29e926d733e564e8cc7be

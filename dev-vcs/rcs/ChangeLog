@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/rcs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.30 2014/11/13 02:10:02 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.31 2014/11/14 01:12:48 idella4 Exp $
+
+*rcs-5.9.3 (14 Nov 2014)
+
+  14 Nov 2014; Ian Delaney <idella4@gentoo.org> +rcs-5.9.3.ebuild:
+  bump, add missed test phase
 
   13 Nov 2014; Ian Delaney <idella4@gentoo.org> rcs-5.9.2.ebuild:
   corrections to deps, rm un-needed workaround, courtesy of floppym

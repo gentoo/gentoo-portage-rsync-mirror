@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=dev-libs/libevent >=dev-libs/boost-1.39:=[threads(+)] || ( >=sys-apps/util-linux-2.16 <sys-libs/e2fsprogs-libs-1.41.8 ) tcmalloc? ( dev-util/google-perftools ) memcache? ( >=dev-libs/libmemcached-0.47 ) drizzle? ( dev-db/drizzle ) sqlite? ( dev-db/sqlite:3 ) tokyocabinet? ( dev-db/tokyocabinet ) postgres? ( >=virtual/postgresql-9.0 )
 SLOT=0
 SRC_URI=http://launchpad.net/gearmand/trunk/0.34/+download/gearmand-0.34.tar.gz
-_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	autotools-utils	3727db64c7b960903d5033280f108080	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=autotools	bcabc28910a7a601c6797c32d59d555e	autotools-utils	3727db64c7b960903d5033280f108080	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=0b182a9221540c2bc264aa352b09cfcf

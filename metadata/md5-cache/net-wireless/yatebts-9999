@@ -7,5 +7,5 @@ IUSE=rad1 usrp1 uhd bladerf sse3 sse4_1
 LICENSE=GPL-2
 RDEPEND=>=net-voip/yate-5.4.0[gsm] uhd? ( net-wireless/uhd ) virtual/libusb:1
 SLOT=0
-_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	bcabc28910a7a601c6797c32d59d555e	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=c04650480806e3f03f746df0a01b2838

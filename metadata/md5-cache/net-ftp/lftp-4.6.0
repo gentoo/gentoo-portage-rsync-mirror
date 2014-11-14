@@ -10,5 +10,5 @@ RDEPEND=>=sys-libs/ncurses-5.1 >=sys-libs/readline-5.1 dev-libs/expat sys-libs/z
 REQUIRED_USE=ssl? ( ^^ ( openssl gnutls ) )
 SLOT=0
 SRC_URI=http://lftp.yar.ru//ftp/lftp-4.6.0.tar.xz
-_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	bcabc28910a7a601c6797c32d59d555e	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cc847abbcae5f6068f959daef2231181

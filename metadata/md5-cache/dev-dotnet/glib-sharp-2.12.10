@@ -10,5 +10,5 @@ RDEPEND=!<=dev-dotnet/gtk-sharp-2.12.7:2 dev-libs/glib:2 >=dev-lang/mono-2.0.1
 RESTRICT=test
 SLOT=2
 SRC_URI=mirror://gentoo/gtk-sharp-2.12.7.patch.bz2 mirror://gnome/sources/gtk-sharp/2.12/gtk-sharp-2.12.10.tar.bz2
-_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	gtk-sharp-module	9d5728acf7e6ed14d6b1b13d1dc5fc9d	libtool	52d0e17251d04645ffaa61bfdd858944	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	bcabc28910a7a601c6797c32d59d555e	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	gtk-sharp-module	9d5728acf7e6ed14d6b1b13d1dc5fc9d	libtool	52d0e17251d04645ffaa61bfdd858944	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=3d177b2e6777a4fbe2119435147584f1

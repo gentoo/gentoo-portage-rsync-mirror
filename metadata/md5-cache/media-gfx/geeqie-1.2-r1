@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2 virtual/libintl doc? ( app-text/gnome-doc-utils ) jpeg? ( virtual/jpeg:0 ) lcms? ( media-libs/lcms:2 ) lirc? ( app-misc/lirc ) lua? ( >=dev-lang/lua-5.1 ) xmp? ( >=media-gfx/exiv2-0.17[xmp] ) !xmp? ( exif? ( >=media-gfx/exiv2-0.17 ) ) tiff? ( media-libs/tiff:0 )
 SLOT=0
 SRC_URI=https://gitorious.org/geeqie/geeqie/archive/v1.2.tar.gz -> geeqie-1.2.tar.gz
-_eclasses_=autotools	e18bb7de8d79126a59418cdfbbc167ef	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	bcabc28910a7a601c6797c32d59d555e	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=eda11b2a5772dbe7177dbab05b3cf6d0
