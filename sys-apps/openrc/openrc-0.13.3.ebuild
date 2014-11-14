@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.13.3.ebuild,v 1.1 2014/11/04 01:49:57 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.13.3.ebuild,v 1.2 2014/11/14 19:27:04 swift Exp $
 
 EAPI=5
 
@@ -31,9 +31,7 @@ COMMON_DEPEND="kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-proc
 		sys-process/psmisc
 		!<sys-process/procps-3.3.9-r2
 	)
-	selinux? ( sec-policy/selinux-base-policy
-		sec-policy/selinux-openrc
-		sys-libs/libselinux )
+	selinux? ( sys-libs/libselinux )
 	!<sys-apps/baselayout-2.1-r1
 	!<sys-fs/udev-init-scripts-27"
 DEPEND="${COMMON_DEPEND}
@@ -43,7 +41,12 @@ RDEPEND="${COMMON_DEPEND}
 	!prefix? (
 		kernel_linux? ( || ( >=sys-apps/sysvinit-2.86-r6 sys-process/runit ) )
 		kernel_FreeBSD? ( sys-freebsd/freebsd-sbin )
-	)"
+	)
+	selinux? (
+		sec-policy/selinux-base-policy
+		sec-policy/selinux-openrc
+	)
+"
 
 PDEPEND="netifrc? ( net-misc/netifrc )"
 

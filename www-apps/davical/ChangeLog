@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/davical
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/davical/ChangeLog,v 1.6 2013/10/21 17:15:00 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/davical/ChangeLog,v 1.7 2014/11/14 19:29:54 titanofold Exp $
+
+*davical-1.1.3.1 (14 Nov 2014)
+
+  14 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  +davical-1.1.3.1.ebuild, +files/awl-locations.patch:
+  Version bump fixes bug 523138. New patch fixes bug 481528. Somewhere along
+  the way bug 506558 was fixed.
 
   21 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Removed François from metadata.xml per his request.

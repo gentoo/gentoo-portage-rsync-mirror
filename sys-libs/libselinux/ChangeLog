@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.133 2014/10/29 17:30:23 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.134 2014/11/14 19:17:27 swift Exp $
+
+*libselinux-2.4_rc6 (14 Nov 2014)
+
+  14 Nov 2014; Sven Vermeulen <swift@gentoo.org> +libselinux-2.4_rc6.ebuild:
+  Bump to rc6, add python3_4 to PYTHON_COMPAT (fixes bug 529176); rc6 also fixes
+  unconfined issue when USE=-unconfined is set
 
 *libselinux-2.4_rc5 (29 Oct 2014)
 

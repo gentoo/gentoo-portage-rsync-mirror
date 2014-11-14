@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdetoys-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.319 2014/10/25 20:40:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.320 2014/11/14 19:26:22 mrueg Exp $
+
+  14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -kdetoys-meta-4.13.3.ebuild,
+  -kdetoys-meta-4.14.1.ebuild:
+  Cleanup old.
 
   25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -kdetoys-meta-4.14.0.ebuild:
   Cleanup KDE SC 4.14.0
