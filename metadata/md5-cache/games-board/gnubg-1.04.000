@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=dev-libs/glib:2 media-libs/freetype:2 media-libs/libpng:0 x11-libs/cairo x11-libs/pango dev-db/sqlite:3 media-libs/libcanberra dev-libs/libxml2 dev-libs/gmp:0 gtk? ( x11-libs/gtk+:2 ) opengl? ( x11-libs/gtk+:2 x11-libs/gtkglext virtual/glu ) sys-libs/readline python? ( >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] ) media-fonts/ttf-bitstream-vera virtual/libintl virtual/pkgconfig sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4
+DESCRIPTION=GNU BackGammon
+EAPI=5
+HOMEPAGE=http://www.gnubg.org/
+IUSE=avx gtk opengl python sqlite3 sse sse2 threads python_targets_python2_7
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd
+LICENSE=GPL-3
+RDEPEND=dev-libs/glib:2 media-libs/freetype:2 media-libs/libpng:0 x11-libs/cairo x11-libs/pango dev-db/sqlite:3 media-libs/libcanberra dev-libs/libxml2 dev-libs/gmp:0 gtk? ( x11-libs/gtk+:2 ) opengl? ( x11-libs/gtk+:2 x11-libs/gtkglext virtual/glu ) sys-libs/readline python? ( >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] ) media-fonts/ttf-bitstream-vera virtual/libintl games-misc/games-envd
+SLOT=0
+SRC_URI=http://gnubg.org/media/sources/gnubg-release-1.04.000-sources.tar.gz
+_eclasses_=autotools	bcabc28910a7a601c6797c32d59d555e	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	games	e221fed675714bd5545b7488aed9f822	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_md5_=dfb162cb6cee832c3b9bd1b3c05bbac4

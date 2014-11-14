@@ -1,6 +1,12 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.77 2014/03/18 01:18:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.78 2014/11/14 09:00:27 mr_bones_ Exp $
+
+*gnubg-1.04.000 (14 Nov 2014)
+
+  14 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org> +gnubg-1.04.000.ebuild,
+  gnubg-20130203.ebuild:
+  Bump to latest release away from snapshot
 
   18 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/gnubg-20121201-build.patch, -gnubg-20121201.ebuild:
