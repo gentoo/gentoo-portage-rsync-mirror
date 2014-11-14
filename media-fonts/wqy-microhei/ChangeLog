@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/wqy-microhei
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-microhei/ChangeLog,v 1.3 2013/02/05 00:55:05 heroxbd Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-microhei/ChangeLog,v 1.4 2014/11/14 03:23:05 dlan Exp $
+
+*wqy-microhei-0.2.0_beta-r1 (14 Nov 2014)
+
+  14 Nov 2014; Yixun Lan <dlan@gentoo.org> +wqy-microhei-0.2.0_beta-r1.ebuild:
+  fix wrong horizontal advance for Korean characters, bug 529104, patch borrow
+  from debian, thanks Hongjiu Zhang for reporting
 
   05 Feb 2013; Benda Xu <heroxbd@gentoo.org> wqy-microhei-0.2.0_beta.ebuild:
   keyword ~arm
