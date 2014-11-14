@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.106 2014/11/14 03:25:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.107 2014/11/14 07:01:24 aballier Exp $
+
+  14 Nov 2014; Alexis Ballier <aballier@gentoo.org> libv4l-1.6.0-r1.ebuild:
+  drop useless deps, bug #468684
 
 *libv4l-1.6.0-r1 (14 Nov 2014)
 
