@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/radeon-ucode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.40 2014/09/14 19:54:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.41 2014/11/14 13:43:14 chithanh Exp $
+
+  14 Nov 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  radeon-ucode-20140823.ebuild:
+  Stabilize latest.
 
 *radeon-ucode-20140823 (14 Sep 2014)
 

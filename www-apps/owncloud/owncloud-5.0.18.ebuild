@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-5.0.17.ebuild,v 1.1 2014/06/29 13:22:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-5.0.18.ebuild,v 1.1 2014/11/14 13:54:52 voyageur Exp $
 
 EAPI=5
 
