@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-4.1.3.ebuild,v 1.1 2014/07/18 15:24:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-4.1.3.ebuild,v 1.2 2014/11/14 07:35:41 jlec Exp $
 
-EAPI="5"
+EAPI=5
 
-PYTHON_COMPAT=( python3_3 )
+PYTHON_COMPAT=( python3_{3,4} )
+
 PLOCALES="ca cs cy da de es et eu fr it ja pl pt pt_BR ru sk uk zh_CN zh_TW"
 
 inherit distutils-r1 l10n
@@ -38,8 +39,12 @@ RDEPEND+="
 
 S="${WORKDIR}"/${MY_P}
 
-src_install() {
-	distutils-r1_src_install
+remove_locale() {
+	find "${ED}" -name "retext_${1}.qm" -delete || die "Failed to remove locale ${1}."
+}
+
+python_install_all() {
+	distutils-r1_python_install_all
 
 	newicon {icons/,}${PN}.png
 	newicon {icons/,}${PN}.svg
@@ -47,8 +52,4 @@ src_install() {
 	l10n_for_each_disabled_locale_do remove_locale
 
 	make_desktop_entry ${PN} "${MY_PN} Editor" ${PN} "Development;Utility;TextEditor"
-}
-
-remove_locale() {
-	find "${D}" -name "retext_${1}.qm" -delete || die "Failed to remove locale ${1}."
 }
