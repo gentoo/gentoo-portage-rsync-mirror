@@ -1,25 +1,31 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/unp-2.0_pre7.ebuild,v 1.4 2014/11/14 15:18:38 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/unp-2.0_pre7_p1.ebuild,v 1.1 2014/11/14 15:18:38 hanno Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils bash-completion-r1
 
 DESCRIPTION="Script for unpacking various file formats"
 HOMEPAGE="http://packages.qa.debian.org/u/unp.html"
-SRC_URI="mirror://debian/pool/main/u/unp/${PN}_${PV/_/$'\x7e'}.tar.bz2"
-S="${WORKDIR}/${PN}-${PV/_/$'\x7e'}"
+TEMP_PV="${PV/_pre/$'\x7e'pre}"
+MY_PV="${TEMP_PV/_p/+nmu}"
+SRC_URI="mirror://debian/pool/main/u/unp/${PN}_${MY_PV}.tar.bz2"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
 
 RDEPEND="${DEPEND}
 	dev-lang/perl"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-remove-deprecated-have.diff"
+}
 
 src_compile() {
 	if use nls; then
