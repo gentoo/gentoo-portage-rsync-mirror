@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logmon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.18 2014/07/31 11:02:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.19 2014/11/14 00:54:17 tomwij Exp $
+
+  14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Maintainer needed.
 
   31 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> logmon-0.4.4-r1.ebuild:
   QA: drop bogus dependency on glibc, package works with uClibc as well

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ec2-ami-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ChangeLog,v 1.17 2014/08/10 01:37:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ChangeLog,v 1.18 2014/11/14 00:49:32 tomwij Exp $
+
+  14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Maintainer needed.
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org>
   ec2-ami-tools-1.4.0.5-r3.ebuild:
