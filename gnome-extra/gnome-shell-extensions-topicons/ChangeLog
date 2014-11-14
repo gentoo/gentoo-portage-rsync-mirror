@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-shell-extensions-topicons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions-topicons/ChangeLog,v 1.14 2014/05/04 12:10:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions-topicons/ChangeLog,v 1.15 2014/11/14 13:27:47 pacho Exp $
+
+*gnome-shell-extensions-topicons-25 (14 Nov 2014)
+
+  14 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  +gnome-shell-extensions-topicons-25.ebuild,
+  -gnome-shell-extensions-topicons-20.ebuild:
+  Version bump, drop old
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org>
   gnome-shell-extensions-topicons-24.ebuild:
