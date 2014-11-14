@@ -1,6 +1,9 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.24 2014/09/17 00:29:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.25 2014/11/14 01:48:20 tomwij Exp $
+
+  14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Remove myself.
 
   17 Sep 2014; Luca Barbato <lu_zero@gentoo.org> handbrake-9999.ebuild:
   Update the live ebuild, it requires at least Libav11, x265 direct support

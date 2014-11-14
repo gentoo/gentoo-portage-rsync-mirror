@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>TomWij@gentoo.org</email>
-	<name>Tom Wijsman</name>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>Free, open-source, non-linear video editor to create and edit videos and movies</longdescription>
 </pkgmetadata>

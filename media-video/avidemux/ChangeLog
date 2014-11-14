@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.229 2014/08/10 20:57:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.230 2014/11/14 01:41:56 tomwij Exp $
+
+  14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Remove myself.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> avidemux-2.6.2-r1.ebuild,
   avidemux-2.6.3.ebuild, avidemux-2.6.4.ebuild, avidemux-2.6.5-r1.ebuild,
