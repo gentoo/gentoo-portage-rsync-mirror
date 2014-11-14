@@ -1,6 +1,11 @@
 # ChangeLog for kde-frameworks/kcoreaddons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kcoreaddons/ChangeLog,v 1.1 2014/10/15 13:29:45 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kcoreaddons/ChangeLog,v 1.2 2014/11/14 11:01:34 mrueg Exp $
+
+*kcoreaddons-5.4.0 (14 Nov 2014)
+
+  14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +kcoreaddons-5.4.0.ebuild:
+  Version bump.
 
 *kcoreaddons-5.3.0 (15 Oct 2014)
 
