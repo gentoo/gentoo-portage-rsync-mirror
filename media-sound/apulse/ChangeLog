@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/apulse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/ChangeLog,v 1.3 2014/11/10 22:26:38 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/ChangeLog,v 1.4 2014/11/14 20:48:46 axs Exp $
+
+*apulse-0.1.2-r2 (14 Nov 2014)
+
+  14 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +apulse-0.1.2-r2.ebuild:
+  adjusted multilib debs so that stable amd64 users need only set abi_x86_32 on
+  emul-linux-x86-soundlibs to install this package for abi_x86_32
 
 *apulse-0.1.2-r1 (10 Nov 2014)
 

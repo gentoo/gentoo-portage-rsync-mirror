@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.117 2014/07/22 17:47:47 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.118 2014/11/14 20:34:09 jlec Exp $
+
+*scipy-0.14.0-r1 (14 Nov 2014)
+
+  14 Nov 2014; Justin Lecher <jlec@gentoo.org> +scipy-0.14.0-r1.ebuild,
+  +files/scipy-0.14.0-lsqr-backport.patch, metadata.xml:
+  Backport fix for broken lsqr
 
   22 Jul 2014; Rick Farina <zerochaos@gentoo.org> scipy-0.12.1.ebuild,
   scipy-0.13.2.ebuild, scipy-0.13.3.ebuild, scipy-0.14.0.ebuild:
