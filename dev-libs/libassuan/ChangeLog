@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.121 2014/10/08 06:23:55 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.122 2014/11/14 20:29:08 grobian Exp $
+
+  14 Nov 2014; Fabian Groffen <grobian@gentoo.org> libassuan-2.1.2.ebuild:
+  Fix building shared libary on Solaris
 
 *libassuan-2.1.2 (08 Oct 2014)
 

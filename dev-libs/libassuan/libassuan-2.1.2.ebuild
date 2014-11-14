@@ -1,8 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/libassuan-2.1.2.ebuild,v 1.1 2014/10/08 06:23:55 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/libassuan-2.1.2.ebuild,v 1.2 2014/11/14 20:29:08 grobian Exp $
 
 EAPI=5
+
+inherit libtool
 
 DESCRIPTION="IPC library used by GnuPG and GPGME"
 HOMEPAGE="http://www.gnupg.org/related_software/libassuan/index.en.html"
@@ -17,6 +19,12 @@ RDEPEND=">=dev-libs/libgpg-error-1.8"
 DEPEND="${RDEPEND}"
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS TODO )
+
+src_prepare() {
+	default
+
+	elibtoolize  # for Solaris .so
+}
 
 src_configure() {
 	econf $(use_enable static-libs static)
