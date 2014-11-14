@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.591 2014/11/14 22:21:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.592 2014/11/14 22:42:41 jer Exp $
+
+  14 Nov 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-346.16.ebuild:
+  Set sub-SLOT dependency on x11-base/xorg-server. Install nvidia-drm-
+  outputclass.conf only when >x11-base/xorg-server-1.16 (bug #529254 by Oliver
+  Freyermuth).
 
   14 Nov 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-346.16.ebuild:
   Set MAKEOPTS=-j1 unconditionally (bug #529258 by thygreatswaggedone).

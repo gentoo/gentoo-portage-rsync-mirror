@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-346.16.ebuild,v 1.3 2014/11/14 22:21:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-346.16.ebuild,v 1.4 2014/11/14 22:42:41 jer Exp $
 
 EAPI=5
 
@@ -55,7 +55,7 @@ RDEPEND="
 		x11-libs/pango[X]
 	)
 	X? (
-		<x11-base/xorg-server-1.16.99
+		<x11-base/xorg-server-1.16.99:=
 		>=x11-libs/libvdpau-0.3-r1
 		multilib? (
 			|| (
@@ -287,8 +287,10 @@ src_install() {
 			/usr/$(get_libdir)/opengl/nvidia/extensions
 
 		# Xorg nvidia.conf
-		insinto /usr/share/X11/xorg.conf.d
-		newins {,50-}nvidia-drm-outputclass.conf
+		if has_version '>=x11-base/xorg-server-1.16'; then
+			insinto /usr/share/X11/xorg.conf.d
+			newins {,50-}nvidia-drm-outputclass.conf
+		fi
 	fi
 
 	# OpenCL ICD for NVIDIA
