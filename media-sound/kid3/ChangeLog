@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kid3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.85 2014/08/13 14:30:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.86 2014/11/14 18:16:18 mrueg Exp $
+
+*kid3-3.1.2 (14 Nov 2014)
+
+  14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +kid3-3.1.2.ebuild:
+  Version bump.
 
   13 Aug 2014; Johannes Huber <johu@gentoo.org> kid3-3.1.ebuild:
   Pin dev-qt/qtphonon to SLOT 4.
