@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/monitorix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.6 2014/05/23 15:58:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.7 2014/11/14 02:17:10 tomwij Exp $
+
+  14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Maintainer needed.
 
 *monitorix-3.5.1 (23 May 2014)
 

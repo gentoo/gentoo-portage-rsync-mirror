@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>TomWij@gentoo.org</email>
-    <name>Tom Wijsman</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription lang="en">
     Growl For Linux is Linux-compatible of Growl. Growl is a notification system for Mac OS X.

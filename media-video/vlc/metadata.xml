@@ -8,11 +8,6 @@
 		<name>Paweł Stankowski</name>
 		<description>Active Maintainer, Assign bugs</description>
 	</maintainer>
-	<maintainer>
-		<email>TomWij@gentoo.org</email>
-		<name>Tom Wijsman</name>
-		<description>Previous Maintainer, CC bugs</description>
-	</maintainer>
 	<use>
 		<flag name="atmo">Enables support for AtmoLight (homebrew Ambient Lighting Technology)</flag>
 		<flag name="audioqueue">Enables AudioQueue audio module for Mac OS X.</flag>

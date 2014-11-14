@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/radeontop/radeontop-9999.ebuild,v 1.1 2013/12/19 21:40:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/radeontop/radeontop-9999.ebuild,v 1.2 2014/11/14 02:16:03 dlan Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs git-r3
@@ -17,6 +17,7 @@ IUSE="nls"
 RDEPEND="
 	sys-libs/ncurses
 	x11-libs/libpciaccess
+	x11-libs/libdrm
 	nls? ( sys-libs/ncurses[unicode] virtual/libintl )
 "
 DEPEND="${RDEPEND}
