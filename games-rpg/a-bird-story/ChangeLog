@@ -1,0 +1,10 @@
+# ChangeLog for games-rpg/a-bird-story
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/a-bird-story/ChangeLog,v 1.1 2014/11/14 17:18:19 hasufell Exp $
+
+*a-bird-story-20141106 (14 Nov 2014)
+
+  14 Nov 2014; Julian Ospald <hasufell@gentoo.org>
+  +a-bird-story-20141106.ebuild, +metadata.xml:
+  intial import
+

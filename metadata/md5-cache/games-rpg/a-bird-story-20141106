@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install nofetch postinst postrm preinst prepare setup unpack
+DEPEND=>=sys-apps/sed-4
+DESCRIPTION=Indie adventure short of a boy's memories, dream, and imagination
+EAPI=5
+HOMEPAGE=http://freebirdgames.com/games/a-bird-story/
+IUSE=bundled-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=all-rights-reserved LGPL-2.1 ZLIB bundled-libs? ( FTL GPL-2 MIT ( || ( Ruby-BSD BSD-2 ) ) )
+RDEPEND=!bundled-libs? ( dev-games/physfs dev-lang/ruby:2.1 dev-libs/libsigc++:2 >=media-libs/libsdl2-2.0.1[X,joystick,opengl,sound,threads,video] media-libs/libvorbis media-libs/openal media-libs/sdl2-image[png] media-libs/sdl2-ttf sys-libs/zlib x11-libs/pixman ) virtual/opengl games-misc/games-envd
+RESTRICT=fetch bindist splitdebug
+SLOT=0
+SRC_URI=ABirdStory-2014-11-06.sh
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	games	e221fed675714bd5545b7488aed9f822	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
+_md5_=8e7de97646a7ce2cf14c9fcf4fc3c745
