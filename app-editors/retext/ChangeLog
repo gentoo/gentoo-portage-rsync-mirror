@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/retext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.14 2014/11/14 07:35:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.15 2014/11/14 09:48:17 mrueg Exp $
+
+  14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Add myself to metadata.xml
 
   14 Nov 2014; Justin Lecher <jlec@gentoo.org> -retext-4.0.1.ebuild,
   -retext-4.0.1-r1.ebuild, -retext-4.1.0.ebuild, -retext-4.1.1.ebuild,

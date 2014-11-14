@@ -4,4 +4,9 @@
   <maintainer>
     <email>jlec@gentoo.org</email>
   </maintainer>
+  <maintainer>
+    <email>mrueg@gentoo.org</email>
+    <name>Manuel Rüger</name>
+    <description>CC him on bugs</description>
+  </maintainer>
 </pkgmetadata>
