@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/scikits_learn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/ChangeLog,v 1.26 2014/10/26 18:33:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/ChangeLog,v 1.27 2014/11/14 21:53:42 jlec Exp $
+
+*scikits_learn-0.15.2 (14 Nov 2014)
+
+  14 Nov 2014; Justin Lecher <jlec@gentoo.org> scikits_learn-0.15.1.ebuild,
+  +scikits_learn-0.15.2.ebuild:
+  Version BUmp
 
   26 Oct 2014; Justin Lecher <jlec@gentoo.org> scikits_learn-0.15.1.ebuild:
   Add missing dep for doc building, #451834
