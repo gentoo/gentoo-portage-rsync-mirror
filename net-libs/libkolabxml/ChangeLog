@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libkolabxml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/ChangeLog,v 1.28 2014/02/21 18:00:14 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/ChangeLog,v 1.29 2014/11/14 18:39:25 mrueg Exp $
+
+*libkolabxml-1.0.3 (14 Nov 2014)
+
+  14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +libkolabxml-1.0.3.ebuild:
+  Version bump.
 
 *libkolabxml-1.0.1 (21 Feb 2014)
 
