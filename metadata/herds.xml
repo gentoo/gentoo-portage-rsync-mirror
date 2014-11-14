@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1125 2014/11/14 02:26:58 tomwij Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1126 2014/11/14 22:21:57 bircoph Exp $
 
 -->
 <herds>
@@ -741,6 +741,10 @@
     <email>tamiko@gentoo.org</email>
     <name>Matthias Maier</name>
   </maintainer>
+  <maintainer>
+    <email>bircoph@gentoo.org</email>
+    <name>Andrew Savchenko</name>
+  </maintainer>
 </herd>
 <herd>
   <name>sci-astronomy</name>
@@ -753,6 +757,10 @@
   <maintainer>
     <email>xarthisius@gentoo.org</email>
     <name>Kacper Kowalik</name>
+  </maintainer>
+  <maintainer>
+    <email>bircoph@gentoo.org</email>
+    <name>Andrew Savchenko</name>
   </maintainer>
 </herd>
 <herd>
@@ -840,6 +848,10 @@
     <email>tamiko@gentoo.org</email>
     <name>Matthias Maier</name>
   </maintainer>
+  <maintainer>
+    <email>bircoph@gentoo.org</email>
+    <name>Andrew Savchenko</name>
+  </maintainer>
 </herd>
 <herd>
   <name>sci-physics</name>
@@ -856,6 +868,11 @@
   <maintainer>
     <email>jauhien@gentoo.org</email>
     <name>Jauhien Piatlicki</name>
+  </maintainer>
+  <maintainer>
+    <email>bircoph@gentoo.org</email>
+    <name>Andrew Savchenko</name>
+    <role>HEP related packages</role>
   </maintainer>
 </herd>
 <herd>
