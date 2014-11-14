@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kremotecontrol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kremotecontrol/ChangeLog,v 1.159 2014/10/25 20:40:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kremotecontrol/ChangeLog,v 1.160 2014/11/14 19:33:09 mrueg Exp $
+
+  14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -kremotecontrol-4.13.3.ebuild,
+  -kremotecontrol-4.14.1.ebuild:
+  Cleanup old.
 
   25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -kremotecontrol-4.14.0.ebuild:
   Cleanup KDE SC 4.14.0

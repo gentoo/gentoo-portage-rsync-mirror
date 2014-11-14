@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkipi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/ChangeLog,v 1.221 2014/10/25 20:40:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/ChangeLog,v 1.222 2014/11/14 19:33:12 mrueg Exp $
+
+  14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -libkipi-4.13.3.ebuild,
+  -libkipi-4.14.1.ebuild:
+  Cleanup old.
 
   25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -libkipi-4.14.0.ebuild:
   Cleanup KDE SC 4.14.0

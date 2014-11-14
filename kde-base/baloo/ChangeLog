@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/baloo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/ChangeLog,v 1.23 2014/10/25 20:40:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/ChangeLog,v 1.24 2014/11/14 19:33:01 mrueg Exp $
+
+  14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -baloo-4.13.3.ebuild,
+  -baloo-4.14.1.ebuild:
+  Cleanup old.
 
   25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -baloo-4.14.0.ebuild:
   Cleanup KDE SC 4.14.0

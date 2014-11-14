@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksystemlog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.219 2014/10/25 20:40:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.220 2014/11/14 19:33:11 mrueg Exp $
+
+  14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -ksystemlog-4.13.3.ebuild,
+  -ksystemlog-4.14.1.ebuild:
+  Cleanup old.
 
   25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -ksystemlog-4.14.0.ebuild:
   Cleanup KDE SC 4.14.0

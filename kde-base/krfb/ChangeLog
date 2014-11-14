@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.328 2014/10/25 20:40:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.329 2014/11/14 19:33:09 mrueg Exp $
+
+  14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -krfb-4.13.3-r1.ebuild,
+  -krfb-4.14.1.ebuild:
+  Cleanup old.
 
   25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -krfb-4.14.0.ebuild:
   Cleanup KDE SC 4.14.0

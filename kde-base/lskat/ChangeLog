@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/lskat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lskat/ChangeLog,v 1.316 2014/10/25 20:40:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lskat/ChangeLog,v 1.317 2014/11/14 19:33:12 mrueg Exp $
+
+  14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -lskat-4.13.3.ebuild,
+  -lskat-4.14.1.ebuild:
+  Cleanup old.
 
   25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -lskat-4.14.0.ebuild:
   Cleanup KDE SC 4.14.0
