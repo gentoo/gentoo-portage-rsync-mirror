@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/qtchooser-0_p20140613.ebuild,v 1.1 2014/11/13 02:59:00 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/qtchooser-0_p20140613.ebuild,v 1.2 2014/11/15 17:13:08 pesa Exp $
 
 EAPI=5
 
@@ -19,7 +19,31 @@ DEPEND="qt5? ( test? (
 		dev-qt/qtcore:5
 		dev-qt/qttest:5
 	) )"
-RDEPEND="!<dev-qt/qtcore-4.8.6:4"
+RDEPEND="
+	!<dev-qt/assistant-4.8.6:4
+	!<dev-qt/designer-4.8.6:4
+	!<dev-qt/linguist-4.8.6:4
+	!<dev-qt/pixeltool-4.8.6:4
+	!<dev-qt/qdbusviewer-4.8.6:4
+	!<dev-qt/qt3support-4.8.6:4
+	!<dev-qt/qtbearer-4.8.6:4
+	!<dev-qt/qtcore-4.8.6:4
+	!<dev-qt/qtdbus-4.8.6:4
+	!<dev-qt/qtdeclarative-4.8.6:4
+	!<dev-qt/qtdemo-4.8.6:4
+	!<dev-qt/qtgui-4.8.6:4
+	!<dev-qt/qthelp-4.8.6:4
+	!<dev-qt/qtmultimedia-4.8.6:4
+	!<dev-qt/qtopengl-4.8.6:4
+	!<dev-qt/qtopenvg-4.8.6:4
+	!<dev-qt/qtphonon-4.8.6:4
+	!<dev-qt/qtscript-4.8.6:4
+	!<dev-qt/qtsql-4.8.6:4
+	!<dev-qt/qtsvg-4.8.6:4
+	!<dev-qt/qttest-4.8.6:4
+	!<dev-qt/qtwebkit-4.8.6:4
+	!<dev-qt/qtxmlpatterns-4.8.6:4
+"
 
 qtchooser_make() {
 	emake \
