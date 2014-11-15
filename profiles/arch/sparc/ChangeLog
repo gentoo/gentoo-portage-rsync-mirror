@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.232 2014/10/30 08:43:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.233 2014/11/15 21:23:39 floppym Exp $
+
+  15 Nov 2014; Mike Gilbert <floppym@gentoo.org> use.stable.mask:
+  Move python3_4 mask to arch profiles.
 
   30 Oct 2014; Michał Górny <mgorny@gentoo.org> package.use.mask:
   Temporarily mask sys-apps/systemd[terminal] due to non-keyworded deps.
