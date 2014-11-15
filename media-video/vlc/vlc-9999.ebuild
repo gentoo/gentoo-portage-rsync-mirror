@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.225 2014/11/10 08:42:52 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.226 2014/11/15 11:56:20 hwoarang Exp $
 
 EAPI="5"
 
@@ -138,7 +138,7 @@ RDEPEND="
 		udev? ( >=virtual/udev-142:0 )
 		upnp? ( net-libs/libupnp:0 )
 		v4l? ( media-libs/libv4l:0 )
-		vaapi? ( x11-libs/libva:0 virtual/ffmpeg[vaapi] )
+		vaapi? ( x11-libs/libva:0[X,drm] virtual/ffmpeg[vaapi] )
 		vcdx? ( >=dev-libs/libcdio-0.78.2:0 >=media-video/vcdimager-0.7.22:0 )"
 
 # Temporarily block non-live FFMPEG versions as they break vdpau, 9999 works;

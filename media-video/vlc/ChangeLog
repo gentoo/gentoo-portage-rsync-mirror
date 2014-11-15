@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.917 2014/11/14 02:13:20 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.918 2014/11/15 11:56:20 hwoarang Exp $
+
+  15 Nov 2014; Markos Chandras <hwoarang@gentoo.org> vlc-2.1.2.ebuild,
+  vlc-2.1.4.ebuild, vlc-2.1.5.ebuild, vlc-2.1.9999.ebuild, vlc-2.2.9999.ebuild,
+  vlc-9999.ebuild:
+  Add X usedep to libva dependency. Bug #529270. Thanks to aambitny@gmail.com
 
   14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Remove myself.
