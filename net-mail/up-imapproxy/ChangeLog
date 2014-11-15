@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/up-imapproxy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.30 2014/08/10 20:47:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.31 2014/11/15 00:42:13 jer Exp $
+
+  15 Nov 2014; Jeroen Roovers <jer@gentoo.org>
+  +files/up-imapproxy-1.2.7-tinfo.patch, up-imapproxy-1.2.7.ebuild:
+  Fix building against sys-libs/ncurses[tinfo] (bug #527570).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> up-imapproxy-1.2.7.ebuild:
   QA: drop trailing '.' from DESCRIPTION

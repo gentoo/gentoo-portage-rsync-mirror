@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.7.ebuild,v 1.4 2014/08/10 20:47:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.7.ebuild,v 1.5 2014/11/15 00:42:13 jer Exp $
 
-EAPI=4
+EAPI=5
 
-inherit eutils
+WANT_AUTOCONF="2.1"
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="Proxy IMAP transactions between an IMAP client and an IMAP server"
 HOMEPAGE="http://www.imapproxy.org/"
@@ -26,8 +27,11 @@ S=${WORKDIR}/squirrelmail-imap_proxy-${PV}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}"-ldflags.patch
-	sed -i -e 's:in\.imapproxyd:imapproxyd:g' \
-		README Makefile.in include/imapproxy.h || die "sed failed"
+	epatch "${FILESDIR}/${P}"-tinfo.patch
+
+	sed -i \
+		-e 's:in\.imapproxyd:imapproxyd:g' \
+		README Makefile.in include/imapproxy.h || die
 
 	#buffer oveflow
 	#http://lists.andrew.cmu.edu/pipermail/imapproxy-info/2010-June/000874.html
@@ -35,9 +39,12 @@ src_prepare() {
 		-e "/define BUFSIZE/s/4096/8192/" \
 		-e "/define MAXPASSWDLEN/s/64/8192/" \
 		include/imapproxy.h
+
+	eautoreconf
 }
 
 src_configure() {
+	tc-export CC
 	econf \
 		$(use_with kerberos krb5) \
 		$(use_with ssl openssl) \
