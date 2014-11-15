@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=sys-libs/ncurses
+DEPEND=sys-libs/ncurses !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Token's IRC client
-EAPI=4
+EAPI=5
 HOMEPAGE=http://home.mayn.de/jean-luc/alt/tirc/
 IUSE=debug
 KEYWORDS=~amd64 ~x86 ~ppc
@@ -9,4 +9,5 @@ LICENSE=BSD
 RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=mirror://debian/pool/main/t/tirc/tirc_1.2.orig.tar.gz
-_md5_=1913950bb907150bba96fa165222d63a
+_eclasses_=autotools	7bcca47e6ac6bbfa251fe7e9483fcf67	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=969f9fe7c1d953ba5142fddf1d5a3279

@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libnsgif
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnsgif/ChangeLog,v 1.6 2014/01/05 19:07:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnsgif/ChangeLog,v 1.7 2014/11/15 12:12:26 xmw Exp $
+
+*libnsgif-0.1.1 (15 Nov 2014)
+
+  15 Nov 2014; Michael Weber <xmw@gentoo.org>
+  +files/libnsgif-0.1.1-glibc2.20.patch, +libnsgif-0.1.1.ebuild:
+  Version bump, new build system, glibc2.20/werror issue (bug 528936)
 
   05 Jan 2014; Fabian Groffen <grobian@gentoo.org> libnsgif-0.1.0.ebuild:
   Marked ~m68k-mint, bug #494512

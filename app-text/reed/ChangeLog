@@ -1,6 +1,9 @@
 # ChangeLog for app-text/reed
 # Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/reed/ChangeLog,v 1.12 2014/08/10 18:31:27 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/reed/ChangeLog,v 1.13 2014/11/15 12:29:35 jer Exp $
+
+  15 Nov 2014; Jeroen Roovers <jer@gentoo.org> reed-5.4.ebuild:
+  Fix building against sys-libs/ncurses[tinfo] (bug #528382).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> reed-5.4.ebuild:
   QA: drop trailing '.' from DESCRIPTION

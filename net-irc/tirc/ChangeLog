@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/tirc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/tirc/ChangeLog,v 1.6 2013/03/30 14:43:52 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/tirc/ChangeLog,v 1.7 2014/11/15 12:13:28 jer Exp $
+
+  15 Nov 2014; Jeroen Roovers <jer@gentoo.org> +files/tirc-1.2-configure.patch,
+  -tirc-0.54_alpha.ebuild, tirc-1.2.ebuild:
+  Fix building against sys-libs/ncurses[tinfo] (bug #528360). Fix CFLAGS
+  mangling, resoect CC (bug #423835).
 
   30 Mar 2013; Ulrich Müller <ulm@gentoo.org> tirc-0.54_alpha.ebuild:
   Fix LICENSE, BSD according to COPYRIGHT file.
@@ -25,4 +30,3 @@
   16 Jul 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +tirc-0.54_alpha.ebuild:
   Initial import, ebuild written by me.
-

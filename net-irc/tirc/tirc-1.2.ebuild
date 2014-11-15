@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/tirc/tirc-1.2.ebuild,v 1.2 2011/05/16 16:38:38 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/tirc/tirc-1.2.ebuild,v 1.3 2014/11/15 12:13:28 jer Exp $
 
-EAPI=4
+EAPI=5
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="Token's IRC client"
 HOMEPAGE="http://home.mayn.de/jean-luc/alt/tirc/"
@@ -19,9 +20,13 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	# Don't call dodoc on a directory, bug #367505.
 	rm -rf doc/RCS || die
+
+	epatch "${FILESDIR}"/${P}-configure.patch
+	eautoreconf
 }
 
 src_configure() {
+	tc-export CC
 	econf \
 		$(use_enable debug)
 }
