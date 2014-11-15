@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.6.1_p1-r4.ebuild,v 1.1 2014/09/28 18:18:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.6.1_p1-r4.ebuild,v 1.2 2014/11/15 20:13:58 vapier Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -26,7 +26,8 @@ SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
-IUSE="bindist ${HPN_PATCH:++}hpn kerberos ldap ldns libedit pam selinux skey static tcpd X X509"
+IUSE="bindist ${HPN_PATCH:++}hpn kerberos ldap ldns libedit pam +pie selinux skey static tcpd X X509"
+REQUIRED_USE="pie? ( !static )"
 
 LIB_DEPEND="selinux? ( >=sys-libs/libselinux-1.28[static-libs(+)] )
 	skey? ( >=sys-auth/skey-1.1.5-r1[static-libs(+)] )
@@ -199,6 +200,7 @@ src_configure() {
 		${LDAP_PATCH:+$(use X509 || ( use ldap && use_with ldap ))} \
 		$(use_with ldns) \
 		$(use_with libedit) \
+		$(use_with pie) \
 		$(use_with selinux) \
 		$(use_with skey) \
 		$(use_with tcpd tcp-wrappers) \

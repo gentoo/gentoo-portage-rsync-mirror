@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9543 2014/11/15 16:07:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9544 2014/11/15 20:12:59 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Nov 2014; Mike Frysinger <vapier@gentoo.org> use.desc:
+  Start USE=pie for network/set*id programs to respect on non-hardened systems.
 
   15 Nov 2014; Pacho Ramos <pacho@gentoo.org> arch/amd64-fbsd/package.use.mask:
   package.use.mask due missing keywords (#523854)
