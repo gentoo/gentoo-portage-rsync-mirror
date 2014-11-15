@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.6.0.ebuild,v 1.11 2014/07/21 08:41:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.6.0.ebuild,v 1.12 2014/11/15 06:53:45 vapier Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ XORG_MODULE=driver/
 XORG_MODULE_REBUILD=yes
 S=${WORKDIR}/${PN}-egl-${PV}
 
-inherit autotools-utils xorg-2 toolchain-funcs
+inherit xorg-2 autotools-utils toolchain-funcs
 
 DESCRIPTION="OpenGL based 2D rendering acceleration library"
 SRC_URI="${XORG_BASE_INDIVIDUAL_URI}/${XORG_MODULE}${PN}-egl-${PV}.tar.bz2"

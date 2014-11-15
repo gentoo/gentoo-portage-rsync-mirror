@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.166 2014/11/15 05:10:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.167 2014/11/15 05:40:04 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -354,7 +354,8 @@ eautomake() {
 	done
 
 	_automake_version() {
-		autotools_run_tool automake --version 2>/dev/null | sed -n -e '1{s:.*(GNU automake) ::p;q}'
+		autotools_run_tool --at-output automake --version 2>/dev/null |
+			sed -n -e '1{s:.*(GNU automake) ::p;q}'
 	}
 
 	if [[ -z ${makefile_name} ]] ; then
@@ -369,8 +370,9 @@ eautomake() {
 			sed -e 's:.*by automake \(.*\) from .*:\1:')
 
 		if [[ ${installed_automake} != ${used_automake} ]]; then
-			einfo "Automake used for the package (${used_automake}) differs from"
-			einfo "the installed version (${installed_automake})."
+			ewarn "Automake used for the package (${used_automake}) differs from" \
+				"the installed version (${installed_automake})."
+			ewarn "Forcing a full rebuild of the autotools to workaround."
 			eautoreconf
 			return 0
 		fi
@@ -436,19 +438,20 @@ autotools_env_setup() {
 }
 
 # @FUNCTION: autotools_run_tool
-# @USAGE: [--at-no-fail] [--at-m4flags] [--at-missing] <autotool> [tool-specific flags]
+# @USAGE: [--at-no-fail] [--at-m4flags] [--at-missing] [--at-output] <autotool> [tool-specific flags]
 # @INTERNAL
 # @DESCRIPTION:
 # Run the specified autotool helper, but do logging and error checking
 # around it in the process.
 autotools_run_tool() {
 	# Process our own internal flags first
-	local autofail=true m4flags=false missing_ok=false
+	local autofail=true m4flags=false missing_ok=false return_output=false
 	while [[ -n $1 ]] ; do
 		case $1 in
 		--at-no-fail) autofail=false;;
 		--at-m4flags) m4flags=true;;
 		--at-missing) missing_ok=true;;
+		--at-output)  return_output=true;;
 		# whatever is left goes to the actual tool
 		*) break;;
 		esac
@@ -480,6 +483,12 @@ autotools_run_tool() {
 
 	if ${m4flags} ; then
 		set -- "${1}" $(autotools_m4dir_include) "${@:2}" $(autotools_m4sysdir_include)
+	fi
+
+	# If the caller wants to probe something, then let them do it directly.
+	if ${return_output} ; then
+		"$@"
+		return
 	fi
 
 	printf "***** $1 *****\n***** PWD: ${PWD}\n***** $*\n\n" > "${STDERR_TARGET}"

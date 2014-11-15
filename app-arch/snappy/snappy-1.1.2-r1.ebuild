@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/snappy-1.1.2-r1.ebuild,v 1.5 2014/10/30 18:45:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/snappy-1.1.2-r1.ebuild,v 1.6 2014/11/15 06:49:21 vapier Exp $
 
 EAPI="5"
 
+AUTOTOOLS_AUTO_DEPEND="yes"
 inherit eutils autotools-multilib
 
 DESCRIPTION="A high-speed compression/decompression library by Google"
