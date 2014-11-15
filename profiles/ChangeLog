@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9542 2014/11/15 10:51:17 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9543 2014/11/15 16:07:35 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Nov 2014; Pacho Ramos <pacho@gentoo.org> arch/amd64-fbsd/package.use.mask:
+  package.use.mask due missing keywords (#523854)
 
   15 Nov 2014; Rémi Cardona <remi@gentoo.org> package.mask:
   Mask upcoming xorg-server 1.16.2 release
