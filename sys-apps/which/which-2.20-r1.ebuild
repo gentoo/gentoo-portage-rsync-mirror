@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.20-r1.ebuild,v 1.15 2014/01/26 12:19:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.20-r1.ebuild,v 1.16 2014/11/15 08:08:56 vapier Exp $
 
 EAPI="4"
 
 inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Prints out location of specified executables that are in your path"
-HOMEPAGE="http://www.xs4all.nl/~carlo17/which/"
-SRC_URI="http://www.xs4all.nl/~carlo17/which/${P}.tar.gz"
+HOMEPAGE="https://carlowood.github.io/which/"
+SRC_URI="https://carlowood.github.io/which/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
