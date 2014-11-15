@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.65 2014/11/01 07:40:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.66 2014/11/15 07:35:14 graaff Exp $
+
+*sass-3.4.8 (15 Nov 2014)
+
+  15 Nov 2014; Hans de Graaff <graaff@gentoo.org> +sass-3.4.8.ebuild:
+  Version bump.
 
 *sass-3.4.7 (01 Nov 2014)
 

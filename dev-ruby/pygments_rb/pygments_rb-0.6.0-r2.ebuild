@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/pygments_rb-0.6.0-r2.ebuild,v 1.1 2014/09/10 12:15:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/pygments_rb-0.6.0-r2.ebuild,v 1.2 2014/11/15 07:42:45 graaff Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ pkg_setup() {
 
 all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/d' Rakefile || die
-	sed -i -e 's/~> 1.1.0/~> 1.1/' pygments.rb.gemspec || die
+	sed -i -e 's/~> 1.1.0/~> 1.1/' -e '/s.files/d' pygments.rb.gemspec || die
 	python_fix_shebang lib/pygments/mentos.py
 	# we are loosing a "custom github lexer here", no idea what it is,
 	# but if we need it, it should go into dev-python/pygments

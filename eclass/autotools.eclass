@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.168 2014/11/15 07:11:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.169 2014/11/15 07:50:02 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -12,6 +12,16 @@
 
 # Note: We require GNU m4, as does autoconf.  So feel free to use any features
 # from the GNU version of m4 without worrying about other variants (i.e. BSD).
+
+if [[ ${__AUTOTOOLS_AUTO_DEPEND+set} == "set" ]] ; then
+	# See if we were included already, but someone changed the value
+	# of AUTOTOOLS_AUTO_DEPEND on us.  We could reload the entire
+	# eclass at that point, but that adds overhead, and it's trivial
+	# to re-order inherit in eclasses/ebuilds instead.  #409611
+	if [[ ${__AUTOTOOLS_AUTO_DEPEND} != ${AUTOTOOLS_AUTO_DEPEND} ]] ; then
+		die "AUTOTOOLS_AUTO_DEPEND changed value between inherits; please inherit autotools.eclass first! ${__AUTOTOOLS_AUTO_DEPEND} -> ${AUTOTOOLS_AUTO_DEPEND}"
+	fi
+fi
 
 if [[ -z ${_AUTOTOOLS_ECLASS} ]]; then
 _AUTOTOOLS_ECLASS=1
@@ -107,6 +117,7 @@ RDEPEND=""
 if [[ ${AUTOTOOLS_AUTO_DEPEND} != "no" ]] ; then
 	DEPEND=${AUTOTOOLS_DEPEND}
 fi
+__AUTOTOOLS_AUTO_DEPEND=${AUTOTOOLS_AUTO_DEPEND} # See top of eclass
 
 unset _automake_atom _autoconf_atom
 
