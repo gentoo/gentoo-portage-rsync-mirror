@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.180 2014/10/18 19:35:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.181 2014/11/15 08:33:02 hwoarang Exp $
+
+*rb_libtorrent-0.16.17-r1 (15 Nov 2014)
+
+  15 Nov 2014; Markos Chandras <hwoarang@gentoo.org>
+  +rb_libtorrent-0.16.17-r1.ebuild, rb_libtorrent-0.16.10.ebuild,
+  rb_libtorrent-0.16.17.ebuild, rb_libtorrent-1.0.2.ebuild:
+  Revbump to EAPI=5 so we can add boost subslot dependencies in order to trigger
+  rebuilds on boost bumps. Bug #529034
 
 *rb_libtorrent-1.0.2 (18 Oct 2014)
 

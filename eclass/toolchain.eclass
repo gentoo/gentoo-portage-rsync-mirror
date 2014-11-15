@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.646 2014/11/04 08:04:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.647 2014/11/15 08:45:33 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1040,9 +1040,9 @@ toolchain_src_configure() {
 	*)
 		# If they've explicitly opt-ed in, do hardfloat,
 		# otherwise let the gcc default kick in.
-		[[ ${CTARGET//_/-} == *-hardfloat-* ]] \
-			&& confgcc+=( --with-float=hard )
-		;;
+		case ${CTARGET//_/-} in
+		*-hardfloat-*|*eabihf) confgcc+=( --with-float=hard ) ;;
+		esac
 	esac
 
 	local with_abi_map=()
