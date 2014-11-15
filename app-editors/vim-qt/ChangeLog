@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/vim-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/ChangeLog,v 1.7 2014/10/25 02:10:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/ChangeLog,v 1.8 2014/11/15 12:32:44 yngwin Exp $
+
+*vim-qt-20140827-r1 (15 Nov 2014)
+
+  15 Nov 2014; Ben de Groot <yngwin@gentoo.org> +files/vim-qt.desktop,
+  +vim-qt-20140827-r1.ebuild, -vim-qt-20130201-r1.ebuild,
+  -vim-qt-20130220-r1.ebuild, metadata.xml:
+  Add ebuild improvements from bug #526938. Remove old.
 
 *vim-qt-20140827 (25 Oct 2014)
 
