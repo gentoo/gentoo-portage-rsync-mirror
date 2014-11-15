@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.165 2014/11/14 01:31:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.166 2014/11/15 05:10:47 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -329,6 +329,11 @@ eautoconf() {
 		eerror "No configure.{ac,in} present in '${PWD}'!"
 		echo
 		die "No configure.{ac,in} present!"
+	fi
+	if [[ -e configure.in ]] ; then
+		eqawarn "This package has a configure.in file which has long been deprecated.  Please"
+		eqawarn "update it to use configure.ac instead as newer versions of autotools will die"
+		eqawarn "when it finds this file.  See https://bugs.gentoo.org/426262 for details."
 	fi
 
 	autotools_run_tool --at-m4flags autoconf "$@"
