@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16164 2014/11/15 10:51:17 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16165 2014/11/15 22:58:05 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -233,17 +233,9 @@ app-dicts/gnuvd
 # experimental features and accept a more unstable release.
 >=www-client/chromium-40
 
-# Manuel Rüger <mrueg@gentoo.org> (11 Oct 2014)
-# Dead upstream use kde-misc/kcm-touchpad instead
-kde-misc/kcm_touchpad
-
 # Brian Evans <grknight@gentoo.org> (8 Oct 2014)
 # Mask all versions of suhosin until upstream revival is sustained and tested
 dev-php/suhosin
-
-# Manuel Rüger <mrueg@gentoo.org> (6 Oct 2014)
-# Mask texlive-2014
-=dev-tex/luatex-0.79.1
 
 # Jauhien Piatlicki <jauhien@gentoo.org> (5 Oct 2014)
 # Masked because of bug 524390: privilege escalation

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9544 2014/11/15 20:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9545 2014/11/15 22:58:05 mrueg Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Nov 2014; Manuel Rüger <mrueg@gentoo.org> package.mask:
+  Cleanup old masks.
 
   15 Nov 2014; Mike Frysinger <vapier@gentoo.org> use.desc:
   Start USE=pie for network/set*id programs to respect on non-hardened systems.
