@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/escm-1.1.ebuild,v 1.8 2012/11/09 18:52:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/escm-1.1.ebuild,v 1.9 2014/11/15 13:53:37 hattya Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit autotools toolchain-funcs
 
@@ -22,7 +22,7 @@ RDEPEND="|| (
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-	sed -i -e "6s/scm, snow/scm gosh, gosh/" configure.in || die
+	sed -i -e "6s/scm, snow/scm gosh, gosh/" configure.in
 	eautoconf
 	tc-export CC
 }

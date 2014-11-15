@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.12.0.ebuild,v 1.1 2014/07/12 13:11:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.12.2.ebuild,v 1.1 2014/11/15 13:35:38 hwoarang Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="http://fedorahosted.org/released/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="acl augeas autofs +locator netlink nls +manpages python selinux sudo ssh test"
+IUSE="acl augeas autofs +locator netlink nfsv4 nls +manpages python selinux sudo ssh test"
 
 COMMON_DEP="
 	virtual/pam
@@ -39,13 +39,13 @@ COMMON_DEP="
 	selinux? (
 		>=sys-libs/libselinux-2.1.9
 		>=sys-libs/libsemanage-2.1
-		>=sec-policy/selinux-sssd-2.20120725-r9
 	)
 	>=net-dns/bind-tools-9.9[gssapi]
 	>=dev-libs/cyrus-sasl-2.1.25-r3[kerberos]
 	>=sys-apps/dbus-1.6
 	acl? ( net-fs/cifs-utils[acl] )
 	augeas? ( app-admin/augeas )
+	nfsv4? ( net-libs/libnfsidmap )
 	nls? ( >=sys-devel/gettext-0.18 )
 	virtual/libintl
 	netlink? ( dev-libs/libnl:3 )
@@ -53,6 +53,7 @@ COMMON_DEP="
 
 RDEPEND="${COMMON_DEP}
 	>=sys-libs/glibc-2.17[nscd]
+	selinux? ( >=sec-policy/selinux-sssd-2.20120725-r9 )
 	"
 DEPEND="${COMMON_DEP}
 	test? ( dev-libs/check )
@@ -94,6 +95,7 @@ src_configure(){
 		$(use_with selinux semanage)
 		$(use_with python python-bindings)
 		$(use_enable locator krb5-locator-plugin)
+		$(use_with nfsv4 nfsv4-idmapd-plugin)
 		$(use_enable nls )
 		$(use_with netlink libnl)
 		$(use_with manpages)

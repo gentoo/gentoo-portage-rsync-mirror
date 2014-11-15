@@ -1,6 +1,12 @@
 # ChangeLog for dev-scheme/gauche-gl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/ChangeLog,v 1.25 2012/07/10 12:35:03 hattya Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/ChangeLog,v 1.26 2014/11/15 13:59:15 hattya Exp $
+
+*gauche-gl-0.6 (15 Nov 2014)
+
+  15 Nov 2014; Akinori Hattori <hattya@gentoo.org>
+  +files/gauche-gl-0.6-simple.viewer.diff, +gauche-gl-0.6.ebuild:
+  new upstream release
 
   10 Jul 2012; Akinori Hattori <hattya@gentoo.org> metadata.xml:
   format metadata.xml
