@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.1-r1.ebuild,v 1.1 2014/04/28 13:26:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.1-r1.ebuild,v 1.2 2014/11/15 20:45:08 polynomial-c Exp $
 
 EAPI=5
 
@@ -31,6 +31,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.5.1-parallel_make_install.patch
 
 	epatch_user #449048
+
+	# kludge to fix compilation with >=libtool-2.4.3 until autotools.eclass
+	# got fixed (bug #527506)
+	_elibtoolize --install --copy --force
 
 	AT_M4DIR="build" eautoreconf
 	elibtoolize

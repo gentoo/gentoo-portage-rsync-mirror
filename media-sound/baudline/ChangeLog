@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/baudline
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.6 2012/12/04 17:00:55 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.7 2014/11/15 21:00:50 zerochaos Exp $
+
+  15 Nov 2014; Rick Farina <zerochaos@gentoo.org> baudline-1.08-r1.ebuild:
+  adjust restrictions per discussion with ulm and baudline license
 
   04 Dec 2012; Michael Weber <xmw@gentoo.org> baudline-1.08-r1.ebuild:
   Add baudline license (thanks ulm, bug 445942)
@@ -27,4 +30,3 @@
   Initial import, fixing bug 202845. Thanks to Ilya Kashirin
   <seclorum@seclorum.ru>, Pham Ngoc Hai <pngochai@yahoo.com> and Denis
   Pesotsky <obey@obey.su> for their ebuilds and testing on this bug.
-

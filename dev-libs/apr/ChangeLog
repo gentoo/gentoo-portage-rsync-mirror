@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.225 2014/05/17 13:55:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.226 2014/11/15 20:45:08 polynomial-c Exp $
+
+  15 Nov 2014; Lars Wendler <polynomial-c@gentoo.org> apr-1.5.1-r1.ebuild:
+  Added kludge to fix compilation with >=libtool-2.4.3 until autotools.eclass
+  got fixed (bug #527506).
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> apr-1.5.0-r2.ebuild:
   Stable for alpha, wrt bug #504300

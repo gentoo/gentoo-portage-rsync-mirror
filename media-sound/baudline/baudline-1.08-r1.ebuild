@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/baudline-1.08-r1.ebuild,v 1.3 2012/12/04 17:00:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/baudline-1.08-r1.ebuild,v 1.4 2014/11/15 21:00:50 zerochaos Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE="jack"
 
-RESTRICT="binchecks fetch"
+RESTRICT="binchecks mirror bindist"
 
 RDEPEND="media-fonts/font-adobe-75dpi
 	media-fonts/font-misc-misc
