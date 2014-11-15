@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.4.3-r1.ebuild,v 1.5 2014/11/04 20:20:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.4.3-r1.ebuild,v 1.6 2014/11/15 17:38:31 jer Exp $
 
 EAPI="5"
 
+AUTOTOOLS_AUTORECONF=true
 inherit autotools-multilib
 
 DESCRIPTION="Library implementing the SSH2 protocol"
@@ -26,8 +27,7 @@ PATCHES=( "${FILESDIR}"/${PN}-1.4.2-pkgconfig.patch )
 
 src_prepare() {
 	sed -i -e 's|mansyntax.sh||g' tests/Makefile.am || die
-	eautomake
-	multilib_src_prepare
+	autotools-multilib_src_prepare
 }
 
 multilib_src_configure() {

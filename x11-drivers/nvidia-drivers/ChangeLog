@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.592 2014/11/14 22:42:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.593 2014/11/15 17:44:35 jer Exp $
+
+  15 Nov 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-346.16.ebuild:
+  Change REQUIRED_USE X? ( || ( gtk2 gtk3 ) ) to tools? ( || ( gtk gtk3 ) )
+  (bug #529362 by bwcknr).
 
   14 Nov 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-346.16.ebuild:
   Set sub-SLOT dependency on x11-base/xorg-server. Install nvidia-drm-

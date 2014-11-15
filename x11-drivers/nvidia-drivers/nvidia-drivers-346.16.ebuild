@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-346.16.ebuild,v 1.4 2014/11/14 22:42:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-346.16.ebuild,v 1.5 2014/11/15 17:44:35 jer Exp $
 
 EAPI=5
 
@@ -25,9 +25,13 @@ SRC_URI="
 LICENSE="GPL-2 NVIDIA-r2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="acpi multilib kernel_FreeBSD kernel_linux pax_kernel +tools gtk2 gtk3 +X uvm"
 RESTRICT="bindist mirror strip"
 EMULTILIB_PKG="true"
+
+IUSE="acpi multilib kernel_FreeBSD kernel_linux pax_kernel +tools gtk2 gtk3 +X uvm"
+REQUIRED_USE="
+	tools? ( X || ( gtk2 gtk3 ) )
+"
 
 COMMON="
 	app-admin/eselect-opencl
@@ -67,11 +71,6 @@ RDEPEND="
 			)
 		)
 	)
-"
-
-REQUIRED_USE="
-	tools? ( X )
-	X? ( || ( gtk2 gtk3 ) )
 "
 
 QA_PREBUILT="opt/* usr/lib*"
