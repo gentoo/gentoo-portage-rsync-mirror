@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-5.2.1.ebuild,v 1.1 2014/10/24 17:25:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-5.2.1.ebuild,v 1.2 2014/11/15 04:16:16 vapier Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -22,6 +22,7 @@ S=${WORKDIR}/unrar
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.0.2-build.patch
+	epatch "${FILESDIR}"/${PN}-5.2.2-no-auto-clean.patch #528218
 	local sed_args=( -e "/libunrar/s:.so:$(get_libname ${PV%.*.*}):" )
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		sed_args+=( -e "s:-shared:-dynamiclib -install_name ${EPREFIX}/usr/$(get_libdir)/libunrar$(get_libname ${PV%.*.*}):" )

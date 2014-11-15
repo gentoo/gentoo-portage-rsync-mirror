@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-5.2.2.ebuild,v 1.1 2014/11/08 19:00:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-5.2.2.ebuild,v 1.3 2014/11/15 04:17:12 vapier Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -22,6 +22,7 @@ S=${WORKDIR}/unrar
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.0.2-build.patch
+	epatch "${FILESDIR}"/${PN}-5.2.2-no-auto-clean.patch #528218
 	local sed_args=( -e "/libunrar/s:.so:$(get_libname ${PV%.*.*}):" )
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		sed_args+=( -e "s:-shared:-dynamiclib -install_name ${EPREFIX}/usr/$(get_libdir)/libunrar$(get_libname ${PV%.*.*}):" )
@@ -31,27 +32,29 @@ src_prepare() {
 	sed -i "${sed_args[@]}" makefile
 }
 
+src_configure() {
+	mkdir -p build-{lib,bin}
+	printf 'VPATH = ..\ninclude ../makefile' > build-lib/Makefile || die
+	cp build-{lib,bin}/Makefile || die
+}
+
 src_compile() {
 	unrar_make() {
 		emake CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" STRIP=true "$@"
 	}
 
-	unrar_make CXXFLAGS+=" -fPIC" lib
-	ln -s libunrar$(get_libname ${PV%.*.*}) libunrar$(get_libname)
-	ln -s libunrar$(get_libname ${PV%.*.*}) libunrar$(get_libname ${PV})
+	unrar_make CXXFLAGS+=" -fPIC" -C build-lib lib
+	ln -s libunrar$(get_libname ${PV%.*.*}) build-lib/libunrar$(get_libname)
+	ln -s libunrar$(get_libname ${PV%.*.*}) build-lib/libunrar$(get_libname ${PV})
 
-	# The stupid code compiles a lot of objects differently if
-	# they're going into a lib (-DRARDLL) or into the main app.
-	# So for now, we can't link the main app against the lib.
-	unrar_make clean
-	unrar_make
+	unrar_make -C build-bin
 }
 
 src_install() {
-	dobin unrar
+	dobin build-bin/unrar
 	dodoc readme.txt
 
-	dolib.so libunrar*
+	dolib.so build-lib/libunrar*
 
 	insinto /usr/include/libunrar${PV%.*.*}
 	doins *.hpp

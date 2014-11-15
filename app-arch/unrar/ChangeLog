@@ -1,6 +1,17 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.235 2014/11/08 19:00:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.238 2014/11/15 04:17:12 vapier Exp $
+
+  15 Nov 2014; Mike Frysinger <vapier@gentoo.org> unrar-5.2.2.ebuild:
+  Build the lib & bin in diff subdirs so we can avoid the clean step.
+
+  15 Nov 2014; Mike Frysinger <vapier@gentoo.org> unrar-5.1.6.ebuild,
+  unrar-5.2.1.ebuild, unrar-5.2.2.ebuild,
+  +files/unrar-5.2.2-no-auto-clean.patch:
+  Fix parallel build #528218 by Alexander E. Patrakov.
+
+  15 Nov 2014; Mike Frysinger <vapier@gentoo.org> unrar-5.1.6.ebuild:
+  Stabilize for alpha/arm64/ia64/m68k/ppc/ppc64/s390/sh #518926.
 
 *unrar-5.2.2 (08 Nov 2014)
 

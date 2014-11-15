@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-5.1.6.ebuild,v 1.5 2014/09/13 11:54:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-5.1.6.ebuild,v 1.7 2014/11/15 04:16:16 vapier Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="http://www.rarlab.com/rar/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="unRAR"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 RDEPEND="!<=app-arch/unrar-gpl-0.0.1_p20080417"
@@ -22,6 +22,7 @@ S=${WORKDIR}/unrar
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.0.2-build.patch
+	epatch "${FILESDIR}"/${PN}-5.2.2-no-auto-clean.patch #528218
 	local sed_args=( -e "/libunrar/s:.so:$(get_libname ${PV%.*.*}):" )
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		sed_args+=( -e "s:-shared:-dynamiclib -install_name ${EPREFIX}/usr/$(get_libdir)/libunrar$(get_libname ${PV%.*.*}):" )
