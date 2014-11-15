@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.138 2014/01/15 15:29:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.139 2014/11/15 16:55:54 idl0r Exp $
+
+*nvidia-settings-343.22 (15 Nov 2014)
+*nvidia-settings-340.58 (15 Nov 2014)
+
+  15 Nov 2014; Christian Ruppert <idl0r@gentoo.org>
+  +nvidia-settings-340.58.ebuild, +nvidia-settings-343.22.ebuild,
+  -files/nvidia-settings-173.14.31-Makefile.patch:
+  Version bumps
 
   15 Jan 2014; Jeroen Roovers <jer@gentoo.org> nvidia-settings-331.20.ebuild:
   Revert USE dependency change (bug #498176).
