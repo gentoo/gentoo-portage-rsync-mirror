@@ -9,5 +9,5 @@ LICENSE=MIT ISC cryptopp GPL-3 LGPL-2.1 public-domain || ( CC-BY-SA-3.0 LGPL-2.1
 RDEPEND=dev-libs/boost[threads(+)] dev-libs/crypto++ dev-libs/openssl:0[-bindist] sys-libs/db:4.8[cxx] dev-qt/qtgui:4 dbus? ( dev-qt/qtdbus:4 )
 SLOT=0
 SRC_URI=https://github.com/namecoinq/namecoinq/archive/vQ.3.72.tar.gz -> namecoin-qt-0.3.72.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	d6d771a6d82043f08b56b1ddebc16f78	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	kde4-functions	492237eb2823bdc02bc769530501f0ea	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	kde4-functions	492237eb2823bdc02bc769530501f0ea	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=a573fb7abd4bd4c2638b5485efaf6ff0

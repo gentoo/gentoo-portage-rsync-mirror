@@ -8,5 +8,5 @@ LICENSE=FDL-1.2
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=html? ( mirror://gentoo/Linux-html-HOWTOs-20100701.tar.bz2 ) htmlsingle? ( mirror://gentoo/Linux-html-single-HOWTOs-20100701.tar.bz2 ) pdf? ( mirror://gentoo/Linux-pdf-HOWTOs-20100701.tar.bz2 ) text? ( mirror://gentoo/Linux-HOWTOs-20100701.tar.bz2 )
-_eclasses_=confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=03bd9620cba3f28cd09937d1d1f54d4d

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=kmod? ( sys-apps/kmod ) static-libs? ( zlib? ( sys-libs/zlib[static-libs(+)] ) ) !static-libs? ( zlib? ( sys-libs/zlib ) ) sys-apps/hwids
 SLOT=0
 SRC_URI=ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/pciutils-3.2.0.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e1f9b4842c2d64a6ab984bee748f0dc3

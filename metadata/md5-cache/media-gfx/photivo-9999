@@ -7,5 +7,5 @@ IUSE=gimp
 LICENSE=GPL-3
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 || ( virtual/jpeg:62 media-libs/jpeg:62 ) media-gfx/exiv2 media-libs/cimg media-libs/lcms:2 media-libs/lensfun sci-libs/fftw:3.0 media-libs/liblqr media-gfx/graphicsmagick[q16,-lcms] gimp? ( media-gfx/gimp )
 SLOT=0
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	mercurial	2fbda5894dda6392b71334ee9a92de0b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	mercurial	2fbda5894dda6392b71334ee9a92de0b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=734522bb10efe6f05c9ed308fc95be86

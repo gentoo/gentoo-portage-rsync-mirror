@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/popt dev-libs/elfutils
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~tester/debugedit-4.4.6.tar.bz2
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=5a4a0e81438bae55498be02ba6bbf6eb

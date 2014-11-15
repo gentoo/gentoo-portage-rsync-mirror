@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=>=dev-lang/mono-2.0 >=net-dns/avahi-0.6[mono]
 SLOT=0
 SRC_URI=http://banshee-project.org/files/mono-zeroconf/mono-zeroconf-0.9.0.tar.bz2
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b22116ef4e82e459087817ac41f27dff

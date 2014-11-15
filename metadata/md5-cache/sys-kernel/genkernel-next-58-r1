@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-text/asciidoc sys-fs/e2fsprogs !sys-fs/eudev[-kmod,modutils] selinux? ( sys-libs/libselinux ) !sys-kernel/genkernel cryptsetup? ( sys-fs/cryptsetup ) dmraid? ( >=sys-fs/dmraid-1.0.0_rc16 ) gpg? ( app-crypt/gnupg ) iscsi? ( sys-block/open-iscsi ) plymouth? ( sys-boot/plymouth ) app-portage/portage-utils app-arch/cpio >=app-misc/pax-utils-0.6 !<sys-apps/openrc-0.9.9 sys-apps/util-linux sys-block/thin-provisioning-tools sys-fs/lvm2
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~lxnay/genkernel-next/genkernel-next-58.tar.xz
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=4f2e863b2f9f2c4ec5546d4bf17ef893

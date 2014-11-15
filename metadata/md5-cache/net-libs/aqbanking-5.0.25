@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-misc/ktoblzcheck-1.39 >=dev-libs/gmp-5 >=sys-libs/gwenhywfar-4.3.3[gtk?] virtual/libintl ofx? ( >=dev-libs/libofx-0.9.5 ) chipcard? ( >=sys-libs/libchipcard-5.0.2 )
 SLOT=0
 SRC_URI=http://www.aquamaniac.de/sites/download/download.php?package=03&release=95&file=01&dummy=aqbanking-5.0.25.tar.gz -> aqbanking-5.0.25.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=96ab4d06a5becd323d7ac08a9cc2ffb2

@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/aubio-0.3.2 media-libs/vamp-plugin-sdk =sci-libs/fftw-3*
 SLOT=0
 SRC_URI=mirror://sourceforge/vamp/vamp-aubio-plugins-0.3.2c.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b93d92999765d5a0e54ed6c873504bce

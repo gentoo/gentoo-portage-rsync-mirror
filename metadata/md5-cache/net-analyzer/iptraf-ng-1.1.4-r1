@@ -10,5 +10,5 @@ RDEPEND=>=sys-libs/ncurses-5.7-r7
 RESTRICT=test
 SLOT=0
 SRC_URI=http://fedorahosted.org/releases/i/p/iptraf-ng/iptraf-ng-1.1.4.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=af64db5a2521ee952c16a27f017fea1c

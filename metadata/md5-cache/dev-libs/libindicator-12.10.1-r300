@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2.22 >=x11-libs/gtk+-3.2:3
 SLOT=3
 SRC_URI=http://launchpad.net/libindicator/12.10/12.10.1/+download/libindicator-12.10.1.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=34ac34e3bd809c11b39d6444d8e88311

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/dictionary
 # Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/ChangeLog,v 1.18 2014/04/13 16:42:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/ChangeLog,v 1.19 2014/11/15 10:20:11 ulm Exp $
+
+  15 Nov 2014; Ulrich Müller <ulm@gentoo.org> dictionary-1.10.ebuild,
+  -files/50dictionary-gentoo-1.10.el, +files/50dictionary-gentoo.el:
+  Supress load message in site-init file.
 
   13 Apr 2014; Ulrich Müller <ulm@gentoo.org> -dictionary-1.8.7.ebuild,
   -files/50dictionary-gentoo.el:

@@ -7,5 +7,5 @@ LICENSE=myspell-ru_RU-ALexanderLebedev
 RDEPEND=|| ( >=app-editors/vim-7_alpha >=app-editors/gvim-7_alpha )
 SLOT=0
 SRC_URI=mirror://gentoo/vim-spell-ru-20060506.tar.bz2
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vim-spell	931d44d9a5a1e08c9a8a1e3a1f9155e7
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vim-spell	931d44d9a5a1e08c9a8a1e3a1f9155e7
 _md5_=e32fe19e6921fe311dbd78150acafab1

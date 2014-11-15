@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/libdbusmenu-0.6.2:3[gtk] >=dev-libs/glib-2.22 >=dev-libs/libindicate-12.10.0:3 >=dev-libs/libindicator-12.10.0:3 net-libs/telepathy-glib >=x11-libs/gtk+-3.2:3
 SLOT=0
 SRC_URI=http://launchpad.net/indicator-messages/0.6/0.6.0/+download/indicator-messages-0.6.0.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=675b826d3b32ec2cf980ac8a4f0bc1b8

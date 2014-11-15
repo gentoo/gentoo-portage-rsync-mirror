@@ -9,5 +9,5 @@ LICENSE=Artistic
 RDEPEND=qt4? ( dev-qt/qtcore:4 ) dev-perl/DBI dev-perl/Statistics-Descriptive sci-biology/mummer
 SLOT=0
 SRC_URI=mirror://sourceforge/amos/amos-3.1.0.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	fef838277e0f17df29d4951b7183d1b4	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	fef838277e0f17df29d4951b7183d1b4	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=99c661e1a10ec23c4717d780378346b4

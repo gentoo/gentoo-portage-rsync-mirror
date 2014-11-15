@@ -9,5 +9,5 @@ LICENSE=BSD GPL-2
 RDEPEND=>=dev-python/pyside-1.1.0-r1[X] >=dev-python/shiboken-1.1.0-r1 >=dev-qt/qtcore-4.7.0:4 >=dev-qt/qtgui-4.7.0:4 || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://www.pyside.org/files/pyside-tools-0.2.14.tar.bz2
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=8188a4971906c006c982566a2c7464a4

@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-lang/perl dev-perl/gtk2-perl alsa? ( media-sound/alsa-utils )
 SLOT=0
 SRC_URI=http://olwtools.googlecode.com/files/volwheel-0.2.8.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=db03ad9c736fd7f54c4e6cafc82e715b

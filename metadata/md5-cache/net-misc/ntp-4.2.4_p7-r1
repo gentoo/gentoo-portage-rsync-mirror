@@ -10,5 +10,5 @@ PDEPEND=openntpd? ( net-misc/openntpd )
 RDEPEND=>=sys-libs/ncurses-5.2 >=sys-libs/readline-4.1 kernel_linux? ( caps? ( sys-libs/libcap ) ) zeroconf? ( || ( net-dns/avahi[mdnsresponder-compat] net-misc/mDNSResponder ) ) !openntpd? ( !net-misc/openntpd ) ssl? ( dev-libs/openssl ) selinux? ( sec-policy/selinux-ntp ) vim-syntax? ( app-vim/ntp-syntax )
 SLOT=0
 SRC_URI=http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.4p7.tar.gz mirror://gentoo/ntp-4.2.4p7-manpages.tar.bz2
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=ca296d53efe8f2dcec515be12eacdf43

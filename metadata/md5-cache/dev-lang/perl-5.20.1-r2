@@ -10,5 +10,5 @@ PDEPEND=>=app-admin/perl-cleaner-2.5 >=virtual/perl-File-Temp-0.230.400-r2
 RDEPEND=berkdb? ( sys-libs/db ) gdbm? ( >=sys-libs/gdbm-1.8.3 ) app-arch/bzip2 sys-libs/zlib
 SLOT=0/5.20
 SRC_URI=mirror://cpan/src/5.0/perl-5.20.1.tar.bz2 mirror://cpan/authors/id/R/RJ/RJBS/perl-5.20.1.tar.bz2 mirror://gentoo/perl-5.20.1-patches-1.tar.xz http://dev.gentoo.org/~civil/distfiles/dev-lang/perl/perl-5.20.1-patches-1.tar.xz
-_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=d2c08995f60b6cb80c7ef9014aae3704

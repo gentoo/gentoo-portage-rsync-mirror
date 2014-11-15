@@ -9,5 +9,5 @@ LICENSE=CC-BY-NC-ND-3.0
 RDEPEND=system-renpy? ( games-engines/renpy ) !system-renpy? ( amd64? ( >=sys-libs/zlib-1.2.8-r1[abi_x86_32] ) x86? ( sys-libs/zlib ) ) games-misc/games-envd
 SLOT=0
 SRC_URI=http://dl.katawa-shoujo.com/gold_1.1/%5B4ls%5D_katawa_shoujo_1.1-%5Blinux-x86%5D%5BB5C707D5%5D.tar.bz2 -> katawa-shoujo-1.1.tar.bz2 http://dev.gentoo.org/~hasufell/distfiles/katawa-shoujo-48.png http://dev.gentoo.org/~hasufell/distfiles/katawa-shoujo-256.png
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	games	e221fed675714bd5545b7488aed9f822	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	games	e221fed675714bd5545b7488aed9f822	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=97eddbb81e0e8a3b4f79007bc92fb613

@@ -10,5 +10,5 @@ RDEPEND=bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib )
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://sourceforge/nsis/nsis-2.46-src.tar.bz2 http://f0rt.users.sourceforge.net/makensis_64bit.patch http://f0rt.users.sourceforge.net/nsis_w64-mingw.patch
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b5c31a676ab9c971d8c787b3da3b19f0

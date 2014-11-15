@@ -8,5 +8,5 @@ LICENSE=DCC
 RDEPEND=dev-lang/perl rrdtool? ( net-analyzer/rrdtool ) || ( net-misc/wget www-client/fetch net-misc/curl net-ftp/ftp ) milter? ( mail-filter/libmilter )
 SLOT=0
 SRC_URI=http://www.rhyolite.com/anti-spam/dcc/source/old/dcc-1.3.102.tar.Z
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b895234ec46f9f4c6508a25aa64c4db7

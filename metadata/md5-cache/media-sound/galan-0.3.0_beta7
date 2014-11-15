@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2 vorbis? ( >=media-sound/vorbis-tools-1.0 ) alsa? ( >=media-libs/alsa-lib-0.9.0_rc1 ) opengl? ( >=x11-libs/gtkglarea-1.99.0:2 virtual/glu ) jack? ( >=media-sound/jack-audio-connection-kit-0.80.0 ) media-libs/liblrdf media-libs/ladspa-sdk media-libs/audiofile media-libs/libsndfile sci-libs/fftw:2.1
 SLOT=0
 SRC_URI=mirror://sourceforge/galan/galan-0.3.0_beta7.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e0ed3b6513ef4e78df7323a7a2324a6f

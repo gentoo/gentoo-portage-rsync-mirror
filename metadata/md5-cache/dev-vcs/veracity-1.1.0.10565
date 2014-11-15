@@ -10,5 +10,5 @@ RDEPEND=dev-libs/icu net-misc/curl dev-libs/nspr sys-apps/util-linux dev-db/sqli
 RESTRICT=test
 SLOT=0
 SRC_URI=http://download.sourcegear.com/Veracity/release/1.1.0.10565/veracity-source-1.1.0.10565.tar.gz ftp://ftp.mozilla.org/pub/mozilla.org/js/js-1.8.0-rc1.tar.gz http://ftp.mozilla.org/pub/mozilla.org/js/js-1.8.0-rc1.tar.gz
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=527943340705e0a22e9cd64c233ab691

@@ -9,5 +9,5 @@ LICENSE=GPL-2 LPPL-1.3
 RDEPEND=>=dev-texlive/texlive-basic-2012 >=app-text/texlive-core-2012
 SLOT=0
 SRC_URI=mirror://gentoo/texlive-module-lithuanian-2012.tar.xz mirror://gentoo/texlive-module-hyphen-lithuanian-2012.tar.xz mirror://gentoo/texlive-module-collection-langlithuanian-2012.tar.xz doc? ( mirror://gentoo/texlive-module-lithuanian.doc-2012.tar.xz )
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	8bd0f2143e4bb5fa3bb0bb56aa08006f	texlive-module	12c5ffd805581a3e724ff87014ac8919	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	8bd0f2143e4bb5fa3bb0bb56aa08006f	texlive-module	12c5ffd805581a3e724ff87014ac8919	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=3b9f89bd2ea2d7463280d16510c682ea

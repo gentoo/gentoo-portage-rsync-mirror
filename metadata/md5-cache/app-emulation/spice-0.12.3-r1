@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=x11-libs/pixman-0.17.7 >=dev-libs/glib-2.22:2 media-libs/alsa-lib >=media-libs/celt-0.5.1.1:0.5.1 dev-libs/openssl virtual/jpeg sys-libs/zlib sasl? ( dev-libs/cyrus-sasl ) smartcard? ( >=app-emulation/libcacard-0.1.2 ) client? ( gui? ( =dev-games/cegui-0.6*[opengl] ) >=x11-libs/libXrandr-1.2 x11-libs/libX11 x11-libs/libXext >=x11-libs/libXinerama-1.0 x11-libs/libXfixes x11-libs/libXrender )
 SLOT=0
 SRC_URI=http://spice-space.org/download/releases/spice-0.12.3.tar.bz2
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ec0432a82b290cd45b4a2008f9287b0a

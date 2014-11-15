@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=!mail-client/nmh !mail-filter/libsieve !mail-client/mailx !mail-client/nail sys-libs/ncurses sys-libs/readline || ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 ) virtual/mta berkdb? ( sys-libs/db ) bidi? ( dev-libs/fribidi ) gdbm? ( sys-libs/gdbm ) guile? ( dev-scheme/guile ) kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) nls? ( sys-devel/gettext ) pam? ( virtual/pam ) postgres? ( virtual/postgresql ) sasl? ( virtual/gsasl ) ssl? ( net-libs/gnutls ) tcpd? ( sys-apps/tcp-wrappers ) tokyocabinet? ( dev-db/tokyocabinet ) python? ( =dev-lang/python-2* )
 SLOT=0
 SRC_URI=mirror://gnu-alpha/mailutils/mailutils-2.99.98.tar.xz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=10ef44208aa8fe063ed2a7cd04dbaa41

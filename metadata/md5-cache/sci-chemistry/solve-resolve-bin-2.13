@@ -9,5 +9,5 @@ RDEPEND=sci-libs/ccp4-libs
 RESTRICT=mirror
 SLOT=0
 SRC_URI=x86? ( http://solve.lanl.gov/pub/solve/2.13/solve-2.13-linux.tar.gz ) amd64? ( http://solve.lanl.gov/pub/solve/2.13/solve-2.13-linux-64.tar.gz )
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=78f1ff2e98082c8dda1478f99ca5a5c8

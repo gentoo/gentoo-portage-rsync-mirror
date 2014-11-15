@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/flac-1.1.2 >=media-libs/libogg-1.1.2 media-libs/libsamplerate >=media-libs/libsndfile-1.0.12 >=media-libs/libvorbis-1.1.2 >=media-sound/wavpack-4.40.0 >=sci-libs/fftw-3 dev-qt/qtcore:4 dev-qt/qtgui:4 alsa? ( >=media-libs/alsa-lib-1.0.0 ) jack? ( >=media-sound/jack-audio-connection-kit-0.100 ) lame? ( media-sound/lame ) lv2? ( >=media-libs/slv2-0.6.1 ) mad? ( >=media-libs/libmad-0.15.0 ) pulseaudio? ( >=media-sound/pulseaudio-0.9 )
 SLOT=0
 SRC_URI=http://traverso-daw.org/download/releases/current/traverso-0.49.2.tar.gz
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=f6203323a07a6c11a63948d0c3f56f72

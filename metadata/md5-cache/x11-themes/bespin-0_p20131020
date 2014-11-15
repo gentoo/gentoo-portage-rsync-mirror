@@ -10,5 +10,5 @@ RDEPEND=kde? ( >=kde-base/oxygen-icons-4.4:4[aqua=] ) kde? ( dev-lang/perl >=dev
 REQUIRED_USE=windeco? ( kde ) plasma? ( kde )
 SLOT=4
 SRC_URI=http://sourceforge.net/code-snapshots/svn/c/cl/cloudcity/code/cloudcity-code-1688.zip
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	d6d771a6d82043f08b56b1ddebc16f78	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	kde4-base	43b17a554a1ca67f0eab47ca0e5ef709	kde4-functions	492237eb2823bdc02bc769530501f0ea	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	kde4-base	43b17a554a1ca67f0eab47ca0e5ef709	kde4-functions	492237eb2823bdc02bc769530501f0ea	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=6ee8e6226be96e9e3f0f3976e3d678a4

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=alsa? ( media-libs/alsa-lib ) >=dev-lang/tk-8.3 lash? ( media-sound/lash ) x11-libs/libX11
 SLOT=0
 SRC_URI=http://ftp.suse.com/pub/people/tiwai/vkeybd/vkeybd-0.1.18d.tar.bz2
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cd366f74701bae30ea952d403ac4bc3d

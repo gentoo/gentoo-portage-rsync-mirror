@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/multiple-cursors
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/multiple-cursors/ChangeLog,v 1.1 2014/11/12 21:17:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/multiple-cursors/ChangeLog,v 1.2 2014/11/15 10:05:22 ulm Exp $
+
+  15 Nov 2014; Ulrich Müller <ulm@gentoo.org>
+  files/50multiple-cursors-gentoo.el:
+  Supress load message in site-init file.
 
 *multiple-cursors-1.3.0 (12 Nov 2014)
 

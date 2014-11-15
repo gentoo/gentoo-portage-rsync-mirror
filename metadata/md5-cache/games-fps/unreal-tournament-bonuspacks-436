@@ -8,5 +8,5 @@ RDEPEND=|| ( games-fps/unreal-tournament games-fps/unreal-tournament-goty ) game
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://fileserver.talkware.net/ut/bonuspacks/UTBonusPack4.zip http://www.dices.de/dices/files/UTBonusPack4.zip
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=b8d35c326dcc109005a9bc8b3e1c3a52

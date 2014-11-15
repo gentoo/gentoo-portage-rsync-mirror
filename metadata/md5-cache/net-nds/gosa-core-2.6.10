@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-lang/php[iconv,imap,ldap,mysql,session,zip] sys-devel/gettext virtual/httpd-php dev-perl/Crypt-SmbHash media-gfx/imagemagick
 SLOT=0
 SRC_URI=ftp://oss.gonicus.de/pub/gosa/gosa-core-2.6.10.tar.bz2 http://oss.gonicus.de/pub/gosa/gosa-core-2.6.10.tar.bz2 ftp://oss.gonicus.de/pub/gosa/archive/gosa-core-2.6.10.tar.bz2 http://oss.gonicus.de/pub/gosa/archive/gosa-core-2.6.10.tar.bz2
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=f9bc184b03d22f623d2227dfa9d618cc

@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=>=sys-auth/libyubikey-1.6 virtual/libusb:1
 SLOT=0
 SRC_URI=http://yubikey-personalization.googlecode.com/files/ykpers-1.7.0.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b11f7a4cabf85f8b709b476c4e8030b4

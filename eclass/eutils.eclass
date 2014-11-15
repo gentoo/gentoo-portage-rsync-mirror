@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.439 2014/11/13 04:55:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.440 2014/11/15 09:49:10 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -903,10 +903,11 @@ make_desktop_entry() {
 				;;
 		esac
 	fi
-	if [ "${SLOT}" == "0" ] ; then
+	local slot=${SLOT%/*}
+	if [[ ${slot} == "0" ]] ; then
 		local desktop_name="${PN}"
 	else
-		local desktop_name="${PN}-${SLOT}"
+		local desktop_name="${PN}-${slot}"
 	fi
 	local desktop="${T}/$(echo ${exec} | sed 's:[[:space:]/:]:_:g')-${desktop_name}.desktop"
 	#local desktop=${T}/${exec%% *:-${desktop_name}}.desktop

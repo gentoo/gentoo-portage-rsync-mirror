@@ -9,5 +9,5 @@ PROPERTIES=interactive
 RDEPEND=>=x11-libs/gtk+-2.2:2 !dev-libs/libiiimcf !dev-libs/csconv !app-i18n/iiimgcf !dev-libs/libiiimp !app-i18n/iiimsf !app-i18n/iiimxcf
 RESTRICT=strip
 SLOT=0
-_eclasses_=cdrom	49b4b952fb5c83fac6c616b532723e60	eutils	d6d771a6d82043f08b56b1ddebc16f78	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cdrom	49b4b952fb5c83fac6c616b532723e60	eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=22cf595088133d482e78b3e93f13686e

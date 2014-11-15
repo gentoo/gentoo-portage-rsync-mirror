@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses dev-libs/openssl readline? ( sys-libs/readline ) X? ( x11-libs/libSM x11-libs/libICE x11-libs/libXmu x11-libs/libX11 )
 SLOT=0
 SRC_URI=http://nsd.dyndns.org/pwsafe/releases/pwsafe-0.2.0.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=d8497bd6dbccc75512656fe841205517

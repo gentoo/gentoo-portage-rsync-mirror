@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=!sys-cluster/cman-headers !sys-cluster/cman-kernel !=sys-cluster/cman-1*
 SLOT=0
 SRC_URI=ftp://sources.redhat.com/pub/cluster/releases/cluster-2.03.09.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=02658b30c9c2ff7a5804a6a49c0acf36

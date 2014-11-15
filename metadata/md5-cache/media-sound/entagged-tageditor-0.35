@@ -8,5 +8,5 @@ LICENSE=|| ( GPL-2 LGPL-2.1 )
 RDEPEND=>=virtual/jre-1.5 dev-java/squareness-jlf dev-db/hsqldb >=dev-java/java-config-2.1.9-r1
 SLOT=0
 SRC_URI=mirror://gentoo/entagged-tageditor-0.35.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=494d48cc2266652c5abb2f37ded0bf37

@@ -10,5 +10,5 @@ RDEPEND=dev-libs/openssl:0 gnome-keyring? ( gnome-base/gnome-keyring ) kde? ( kd
 REQUIRED_USE=^^ ( qt4 qt5 )
 SLOT=0
 SRC_URI=https://github.com/QupZilla/qupzilla/archive/v1.8.0.tar.gz -> qupzilla-1.8.0.tar.gz https://github.com/QupZilla/qupzilla-plugins/archive/bb52c82eeedae50ac33a8d10943998193491230b.tar.gz -> qupzilla-plugins-2014.10.02.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ff7bbc3348bb77814b5e2c227f9e4366	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=624cabb4496d7cd935b14a50897e3c98

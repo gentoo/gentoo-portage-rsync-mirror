@@ -10,5 +10,5 @@ RDEPEND=dev-db/sqlite:3 luajit? ( >=dev-lang/luajit-2.0.0 ) sys-libs/zlib !ncurs
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/crawl-ref/Stone%20Soup/0.15.1/stone_soup-0.15.1.tar.xz http://dev.gentoo.org/~hasufell/distfiles/stone-soup.png http://dev.gentoo.org/~hasufell/distfiles/stone-soup.svg
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	d6d771a6d82043f08b56b1ddebc16f78	games	e221fed675714bd5545b7488aed9f822	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	games	e221fed675714bd5545b7488aed9f822	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=dc923a0d9566194c656ee9df38f46820

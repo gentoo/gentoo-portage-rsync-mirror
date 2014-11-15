@@ -7,5 +7,5 @@ IUSE=geoip gtk libnotify setproctitle webinterface
 LICENSE=GPL-2
 RDEPEND=>=net-libs/rb_libtorrent-0.14.9[python] dev-python/setuptools dev-python/chardet dev-python/pyopenssl dev-python/pyxdg || ( dev-lang/python:2.7 dev-lang/python:2.6 dev-python/simplejson ) >=dev-python/twisted-core-8.1 >=dev-python/twisted-web-8.1 geoip? ( dev-libs/geoip ) gtk? ( dev-python/pygame dev-python/pygobject:2 >=dev-python/pygtk-2.12 gnome-base/librsvg libnotify? ( dev-python/notify-python ) ) setproctitle? ( dev-python/setproctitle ) webinterface? ( dev-python/mako ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	d6d771a6d82043f08b56b1ddebc16f78	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	6faef4c127028ccbba3a11400d24ae34	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=a1e4b145e084e7145b96b8116560d050

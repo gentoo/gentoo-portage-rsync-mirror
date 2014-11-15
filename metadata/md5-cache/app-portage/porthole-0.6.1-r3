@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-apps/portage-2.1 dev-python/pygtk:2 gnome-base/libglade:2.0 dev-python/pygtksourceview:2 nls? ( virtual/libintl ) =dev-lang/python-2* =dev-lang/python-2*[xml,threads]
 SLOT=0
 SRC_URI=mirror://sourceforge/porthole/porthole-0.6.1.tar.bz2
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=db6c0f16fbc6f1d2f329f9b9d71981d5

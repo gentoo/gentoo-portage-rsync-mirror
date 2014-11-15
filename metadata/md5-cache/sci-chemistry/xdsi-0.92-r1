@@ -7,5 +7,5 @@ LICENSE=all-rights-reserved
 RDEPEND=app-text/mupdf dev-lang/tk || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) sci-chemistry/mosflm sci-chemistry/pointless sci-chemistry/xds-bin[smp] sci-visualization/gnuplot sci-visualization/xds-viewer
 SLOT=0
 SRC_URI=ftp://turn5.biologie.uni-konstanz.de/pub/xdsi_0.92.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1043b17ec37161997733c4f379009835

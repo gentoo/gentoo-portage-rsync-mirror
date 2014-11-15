@@ -7,5 +7,5 @@ IUSE=X vanilla curl openssl static static-libs
 LICENSE=AGPL-3
 RDEPEND=dev-libs/openssl[static-libs?] media-libs/freetype:2[static-libs?] media-libs/jbig2dec[static-libs?] media-libs/openjpeg:2[static-libs?] net-misc/curl[static-libs?] virtual/jpeg[static-libs?] X? ( x11-libs/libX11[static-libs?] x11-libs/libXext[static-libs?] )
 SLOT=0/1.5
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=99dea73972f801743d021c91dff2b3d4

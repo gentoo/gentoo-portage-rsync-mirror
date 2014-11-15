@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=java? ( >=virtual/jre-1.4 ) tools? ( sci-visualization/gnuplot ) java? ( >=dev-java/java-config-2.1.9-r1 )
 SLOT=0
 SRC_URI=http://www.csie.ntu.edu.tw/~cjlin/libsvm/libsvm-3.17.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	fef838277e0f17df29d4951b7183d1b4	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	fef838277e0f17df29d4951b7183d1b4	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=bec41471a1b5d2f9fb1b121e4f0c8415

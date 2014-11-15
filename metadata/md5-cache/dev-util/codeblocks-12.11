@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=app-arch/zip x11-libs/wxGTK:2.8[X] contrib? ( app-text/hunspell dev-libs/boost:= dev-libs/libgamin )
 SLOT=0
 SRC_URI=mirror://berlios/codeblocks/codeblocks_12.11-1.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
 _md5_=316f6d454cc37cb919d99b0299ba7c2b

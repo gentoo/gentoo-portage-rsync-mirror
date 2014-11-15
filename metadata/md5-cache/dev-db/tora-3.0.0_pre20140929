@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/ferrisloki x11-libs/qscintilla dev-qt/qtgui:4 dev-qt/qtsql:4[mysql?,postgres?] dev-qt/qtxmlpatterns:4 =dev-db/oracle-instantclient-basic-11* postgres? ( dev-db/postgresql-base )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pinkbyte/distfiles/snapshots/tora-3.0.0_pre20140929.tar.xz
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	d6d771a6d82043f08b56b1ddebc16f78	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ee3f88a5a7e09e315ae8fdd9cfadd5dc

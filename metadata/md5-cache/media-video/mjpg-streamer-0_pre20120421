@@ -10,5 +10,5 @@ RDEPEND=virtual/jpeg v4l? ( input_uvc? ( media-libs/libv4l ) )
 REQUIRED_USE=|| ( input_testpicture input_control input_file input_uvc ) || ( output_file output_udp output_http output_autofocus output_rtsp ) v4l? ( input_uvc )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~aidecoe/distfiles/media-video/mjpg-streamer/mjpg-streamer-0_pre20120421.tar.bz2
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=22bba00cf786a443283acb67d874a0c1

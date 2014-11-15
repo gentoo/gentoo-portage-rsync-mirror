@@ -9,5 +9,5 @@ LICENSE=GPL-2+ Texinfo-manual
 RDEPEND=tex? ( virtual/tex-base ) >=virtual/emacs-23
 SLOT=0
 SRC_URI=http://bbdb.sourceforge.net/bbdb-2.35.tar.gz http://www.mit.edu/afs/athena/contrib/emacs-contrib/Fin/point-at.el http://www.mit.edu/afs/athena/contrib/emacs-contrib/Fin/dates.el
-_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=00c490c751320bdeb00ef66da81d14d3

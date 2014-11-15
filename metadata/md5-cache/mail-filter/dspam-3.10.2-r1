@@ -10,5 +10,5 @@ RDEPEND=net-mail/mailbase ldap? ( net-nds/openldap ) mysql? ( >=virtual/mysql-5.
 REQUIRED_USE=|| ( hash mysql postgres sqlite ) static-libs? ( ^^ ( hash mysql postgres sqlite ) ) ^^ ( small-scale domain-scale large-scale ) virtual-users? ( !user-homedirs )
 SLOT=0
 SRC_URI=mirror://sourceforge/dspam/dspam-3.10.2.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=1474884a197e58bd7f9de1c6b2a87f5a

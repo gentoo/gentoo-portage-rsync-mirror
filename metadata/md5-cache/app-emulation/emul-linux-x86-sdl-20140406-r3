@@ -10,5 +10,5 @@ RDEPEND=~app-emulation/emul-linux-x86-xlibs-20140406 ~app-emulation/emul-linux-x
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-sdl-20140406.tar.xz
-_eclasses_=emul-linux-x86	21b03579b81acf650f0077bfd9fc2586	eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=emul-linux-x86	21b03579b81acf650f0077bfd9fc2586	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=7e87333c320b3f5c0e9d2951452d7cbd

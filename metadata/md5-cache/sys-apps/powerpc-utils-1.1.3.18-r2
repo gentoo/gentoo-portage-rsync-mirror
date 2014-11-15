@@ -6,5 +6,5 @@ KEYWORDS=-* ppc ppc64
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://http.us.debian.org/debian/pool/main/p/powerpc-utils/powerpc-utils_1.1.3.orig.tar.gz http://http.us.debian.org/debian/pool/main/p/powerpc-utils/powerpc-utils_1.1.3-18.diff.gz mirror://gentoo/powerpc-utils-cleanup.patch.bz2
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=c073a503df59459492d72459607843cf

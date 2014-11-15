@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXScrnSaver x11-libs/libXext x11-libs/libXinerama
 SLOT=0
 SRC_URI=http://fredrik.hubbe.net/x2vnc/x2vnc-1.7.2.tar.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=7f29ef2da7bc3d8c060f39b802641c07

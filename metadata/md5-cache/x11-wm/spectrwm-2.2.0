@@ -8,5 +8,5 @@ LICENSE=ISC
 RDEPEND=x11-misc/dmenu
 SLOT=0
 SRC_URI=http://opensource.conformal.com/snapshots/spectrwm/spectrwm-2.2.0.tgz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ca4b25c01cf7892519b5cf121b2e6afc

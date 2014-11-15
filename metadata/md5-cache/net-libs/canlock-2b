@@ -7,5 +7,5 @@ KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux
 LICENSE=BSD MIT
 SLOT=0
 SRC_URI=mirror://debian/pool/main/c/canlock/canlock_2b.orig.tar.gz mirror://debian/pool/main/c/canlock/canlock_2b-6.diff.gz
-_eclasses_=eutils	d6d771a6d82043f08b56b1ddebc16f78	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=baba0c5316db84968f5078832a384992
