@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.74 2014/07/25 08:58:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.75 2014/11/15 18:15:35 slyfox Exp $
+
+*happy-1.19.4 (15 Nov 2014)
+
+  15 Nov 2014; Sergei Trofimovich <slyfox@gentoo.org> +happy-1.19.4.ebuild,
+  happy-1.19.3.ebuild:
+  Version bump.
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

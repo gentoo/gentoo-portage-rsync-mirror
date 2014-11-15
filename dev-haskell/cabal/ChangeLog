@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.105 2014/07/14 21:32:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.106 2014/11/15 18:19:29 slyfox Exp $
+
+*cabal-1.20.0.2 (15 Nov 2014)
+
+  15 Nov 2014; Sergei Trofimovich <slyfox@gentoo.org> +cabal-1.20.0.2.ebuild:
+  Version bump.
 
   14 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> cabal-1.18.1.3.ebuild:
   Mark as bundled with ghc-7.8.3 (bug #517066 by Adam Stylinski).

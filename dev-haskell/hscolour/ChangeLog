@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/hscolour
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.21 2014/07/25 09:16:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.22 2014/11/15 18:23:47 slyfox Exp $
+
+*hscolour-1.20.3-r1 (15 Nov 2014)
+
+  15 Nov 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +hscolour-1.20.3-r1.ebuild:
+  Version bump.
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> hscolour-1.17.ebuild,
   hscolour-1.19.ebuild:
