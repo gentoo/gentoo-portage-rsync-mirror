@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/stem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/stem/ChangeLog,v 1.6 2014/10/22 13:56:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/stem/ChangeLog,v 1.7 2014/11/15 19:26:54 blueness Exp $
+
+  15 Nov 2014; Anthony G. Basile <blueness@gentoo.org> stem-1.2.2.ebuild,
+  stem-1.2.2_p20140718.ebuild, stem-1.2.2_p20141018.ebuild:
+  Keyword ~x86, bug #517838
 
 *stem-1.2.2_p20141018 (22 Oct 2014)
 

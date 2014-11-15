@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/arm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.32 2014/10/09 09:32:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.33 2014/11/15 19:28:27 blueness Exp $
+
+  15 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  arm-1.4.5.0_p20140714-r2.ebuild:
+  Keyword ~x86, bug #517838
 
 *arm-1.4.5.0-r1 (09 Oct 2014)
 
