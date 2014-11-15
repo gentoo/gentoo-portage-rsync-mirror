@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.325 2014/11/14 21:25:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.326 2014/11/15 15:01:33 xmw Exp $
+
+  15 Nov 2014; Michael Weber <xmw@gentoo.org> package.use.mask:
+  p.use mask www-client/netsurf[pdf-writer] due missing keywords on libharu
 
   14 Nov 2014; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask net-im/prosody[libevent,mysql,postgres,sqlite], bug #511532
