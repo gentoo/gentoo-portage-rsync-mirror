@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsvgtiny
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/ChangeLog,v 1.9 2014/01/05 19:18:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/ChangeLog,v 1.10 2014/11/15 13:07:54 xmw Exp $
+
+*libsvgtiny-0.1.2 (15 Nov 2014)
+
+  15 Nov 2014; Michael Weber <xmw@gentoo.org>
+  +files/libsvgtiny-0.1.2-glibc2.20.patch, +libsvgtiny-0.1.2.ebuild:
+  Version bump, glibc-2.20 issue, new build system version
 
   05 Jan 2014; Fabian Groffen <grobian@gentoo.org> libsvgtiny-0.1.0.ebuild:
   Marked ~m68k-mint, bug #494512

@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nsgenbind
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nsgenbind/ChangeLog,v 1.2 2013/06/23 16:46:30 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nsgenbind/ChangeLog,v 1.3 2014/11/15 13:28:00 xmw Exp $
+
+*nsgenbind-0.1.1 (15 Nov 2014)
+
+  15 Nov 2014; Michael Weber <xmw@gentoo.org>
+  +files/nsgenbind-0.1.1-glibc2.20.patch, +nsgenbind-0.1.1.ebuild:
+  Version bump, buildsystem bump, glibc-2.20 issue, respect USE-flags (thanks
+  mgorny, bug 513598)
 
   23 Jun 2013; Michael Weber <xmw@gentoo.org> nsgenbind-0.0.1.ebuild:
   Migrate to netsurf.eclass
