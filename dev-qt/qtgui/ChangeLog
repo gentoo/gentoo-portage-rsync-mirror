@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.48 2014/10/16 18:58:37 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.49 2014/11/15 02:36:43 pesa Exp $
+
+*qtgui-4.8.6-r1 (15 Nov 2014)
+
+  15 Nov 2014; Davide Pesavento <pesa@gentoo.org> +qtgui-4.8.6-r1.ebuild:
+  Version bump (bug 510042). Add multilib support (bug 498010).
 
   16 Oct 2014; Davide Pesavento <pesa@gentoo.org> qtgui-5.3.2.ebuild:
   Add subslot operator to libxcb dependency.

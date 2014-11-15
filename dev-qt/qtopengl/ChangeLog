@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtopengl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.17 2014/10/03 00:53:01 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.18 2014/11/15 02:37:18 pesa Exp $
+
+*qtopengl-4.8.6-r1 (15 Nov 2014)
+
+  15 Nov 2014; Davide Pesavento <pesa@gentoo.org> +qtopengl-4.8.6-r1.ebuild:
+  Version bump (bug 510042). Add multilib support (bug 498010).
 
 *qtopengl-5.3.2-r1 (03 Oct 2014)
 

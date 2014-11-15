@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtmultimedia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtmultimedia/ChangeLog,v 1.15 2014/10/11 02:58:05 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtmultimedia/ChangeLog,v 1.16 2014/11/15 02:37:05 pesa Exp $
+
+*qtmultimedia-4.8.6-r1 (15 Nov 2014)
+
+  15 Nov 2014; Davide Pesavento <pesa@gentoo.org> +qtmultimedia-4.8.6-r1.ebuild:
+  Version bump (bug 510042). Add multilib support (bug 498010).
 
   11 Oct 2014; Davide Pesavento <pesa@gentoo.org> qtmultimedia-5.3.2.ebuild:
   No need to enable alsa by default.

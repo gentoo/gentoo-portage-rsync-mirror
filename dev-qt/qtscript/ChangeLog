@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtscript
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtscript/ChangeLog,v 1.18 2014/09/16 14:46:48 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtscript/ChangeLog,v 1.19 2014/11/15 02:37:51 pesa Exp $
+
+*qtscript-4.8.6-r1 (15 Nov 2014)
+
+  15 Nov 2014; Davide Pesavento <pesa@gentoo.org> +qtscript-4.8.6-r1.ebuild:
+  Version bump (bug 510042). Add multilib support (bug 498010).
 
 *qtscript-5.3.2 (16 Sep 2014)
 

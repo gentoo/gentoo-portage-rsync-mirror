@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qttranslations
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttranslations/ChangeLog,v 1.5 2014/09/16 14:47:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttranslations/ChangeLog,v 1.6 2014/11/15 02:38:42 pesa Exp $
+
+*qttranslations-4.8.6-r1 (15 Nov 2014)
+
+  15 Nov 2014; Davide Pesavento <pesa@gentoo.org>
+  +qttranslations-4.8.6-r1.ebuild:
+  Version bump (bug 510042). Add multilib support (bug 498010).
 
 *qttranslations-5.3.2 (16 Sep 2014)
 

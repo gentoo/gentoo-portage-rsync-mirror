@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qt3support
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt3support/ChangeLog,v 1.13 2014/01/26 17:45:45 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt3support/ChangeLog,v 1.14 2014/11/15 02:35:25 pesa Exp $
+
+*qt3support-4.8.6-r1 (15 Nov 2014)
+
+  15 Nov 2014; Davide Pesavento <pesa@gentoo.org> +qt3support-4.8.6-r1.ebuild:
+  Version bump (bug 510042). Add multilib support (bug 498010).
 
   26 Jan 2014; Davide Pesavento <pesa@gentoo.org> -qt3support-4.8.4.ebuild,
   metadata.xml:
