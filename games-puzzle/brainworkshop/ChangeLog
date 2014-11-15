@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/brainworkshop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainworkshop/ChangeLog,v 1.7 2014/11/03 09:38:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainworkshop/ChangeLog,v 1.8 2014/11/15 07:22:34 mr_bones_ Exp $
+
+  15 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -brainworkshop-4.8.1.ebuild, -files/brainworkshop-4.8.1-fix-paths.patch:
+  old
 
   03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> brainworkshop-4.8.4.ebuild:
   Stable for x86, wrt bug #527132

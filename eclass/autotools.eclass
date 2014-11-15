@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.167 2014/11/15 05:40:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.168 2014/11/15 07:11:41 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -432,7 +432,7 @@ autotools_env_setup() {
 			ROOT=/ has_version "=sys-devel/automake-${pv}*" && export WANT_AUTOMAKE="${pv}"
 		done
 		[[ ${WANT_AUTOMAKE} == "latest" ]] && \
-			die "Cannot find the latest automake! Tried ${_LATEST_AUTOMAKE}"
+			die "Cannot find the latest automake! Tried ${_LATEST_AUTOMAKE[*]}"
 	fi
 	[[ ${WANT_AUTOCONF} == "latest" ]] && export WANT_AUTOCONF=2.5
 }
