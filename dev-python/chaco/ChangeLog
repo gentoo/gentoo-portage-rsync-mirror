@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/chaco
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/ChangeLog,v 1.22 2014/01/29 17:39:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/ChangeLog,v 1.23 2014/11/15 04:39:30 idella4 Exp $
+
+*chaco-4.5.0 (15 Nov 2014)
+
+  15 Nov 2014; Ian Delaney <idella4@gentoo.org> +chaco-4.5.0.ebuild:
+  bump; update deps, add fix to qa issue in the build, correction to test phase
 
 *chaco-4.4.1 (29 Jan 2014)
 
