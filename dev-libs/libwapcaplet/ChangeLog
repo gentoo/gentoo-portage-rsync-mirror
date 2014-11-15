@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libwapcaplet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/ChangeLog,v 1.14 2014/11/06 17:40:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/ChangeLog,v 1.15 2014/11/15 11:22:25 xmw Exp $
+
+*libwapcaplet-0.2.1-r1 (15 Nov 2014)
+
+  15 Nov 2014; Michael Weber <xmw@gentoo.org> +libwapcaplet-0.2.1-r1.ebuild:
+  Revbump to new build system
 
 *libwapcaplet-0.2.1 (06 Nov 2014)
 
