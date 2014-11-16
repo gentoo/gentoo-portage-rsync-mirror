@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.4.ebuild,v 1.6 2014/09/29 13:27:03 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.9.ebuild,v 1.1 2014/11/16 16:37:12 titanofold Exp $
 
 EAPI=5
 
@@ -26,6 +26,7 @@ DEPEND="
 	>=dev-perl/DBI-1.37
 	>=dev-perl/Date-Extract-0.02
 	>=dev-perl/DateTime-Format-Natural-0.67
+	>=dev-perl/dbix-searchbuilder-1.660.0
 	>=dev-perl/Devel-StackTrace-1.19
 	>=dev-perl/HTML-FormatText-WithLinks-0.14
 	>=dev-perl/HTML-Mason-1.43
@@ -46,7 +47,7 @@ DEPEND="
 	>=dev-perl/locale-maketext-lexicon-0.32
 	>=dev-perl/log-dispatch-2.2.3
 	>=dev-perl/log-dispatch-2.23
-	>=virtual/perl-CGI-3.38
+	>=virtual/perl-CGI-4
 	>=virtual/perl-Digest-MD5-2.27
 	>=virtual/perl-File-Spec-0.8
 	>=virtual/perl-Getopt-Long-2.24

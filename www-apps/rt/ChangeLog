@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.87 2014/09/29 13:27:03 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.88 2014/11/16 16:37:12 titanofold Exp $
+
+*rt-4.2.9 (16 Nov 2014)
+
+  16 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> -rt-4.2.4.ebuild,
+  +rt-4.2.9.ebuild:
+  Version bump fixes bug 528444.
 
   29 Sep 2014; Aaron W. Swenson <titanofold@gentoo.org> rt-4.2.4.ebuild:
   Add missing dependencies fixing bug 523972
