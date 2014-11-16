@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.10.1.ebuild,v 1.4 2014/09/14 09:16:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.10.1.ebuild,v 1.5 2014/11/16 19:53:37 zlogene Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://dl.hexchat.org/hexchat/${P}.tar.xz"
 
 LICENSE="GPL-2 plugin-fishlim? ( MIT )"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux"
 IUSE="dbus +gtk ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python spell ssl theme-manager"
 REQUIRED_USE="plugins? ( python? ( ${PYTHON_REQUIRED_USE} ) )"
 
