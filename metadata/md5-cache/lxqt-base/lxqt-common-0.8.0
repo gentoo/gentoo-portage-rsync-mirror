@@ -2,7 +2,7 @@ DEFINED_PHASES=compile configure install prepare test
 DEPEND=~lxqt-base/liblxqt-0.8.0 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=LXQt common resources
 EAPI=5
-HOMEPAGE=http://www.lxqt.org/
+HOMEPAGE=http://lxqt.org/
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1+
 PDEPEND=~lxqt-base/lxqt-session-0.8.0
@@ -10,4 +10,4 @@ RDEPEND=~lxqt-base/liblxqt-0.8.0
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/lxqt/0.8.0/lxqt-common-0.8.0.tar.xz
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=8615e403fc1444d27a9c1b5f8ba15a32
+_md5_=bbd2acedf550159a286e6fae52fc9b74

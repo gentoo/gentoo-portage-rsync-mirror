@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/lximage-qt/lximage-qt-0.2.0.ebuild,v 1.3 2014/06/16 15:44:34 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/lximage-qt/lximage-qt-0.2.0.ebuild,v 1.4 2014/11/16 12:43:17 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
 
 DESCRIPTION="LXImage Image Viewer - GPicView replacement"
-HOMEPAGE="http://www.lxqt.org/"
+HOMEPAGE="http://lxqt.org/"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3

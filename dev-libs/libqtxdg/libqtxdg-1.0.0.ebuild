@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libqtxdg/libqtxdg-1.0.0.ebuild,v 1.1 2014/11/08 17:06:57 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libqtxdg/libqtxdg-1.0.0.ebuild,v 1.2 2014/11/16 12:40:04 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
 
 DESCRIPTION="A Qt implementation of XDG standards"
-HOMEPAGE="http://www.lxqt.org/"
+HOMEPAGE="http://lxqt.org/"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3

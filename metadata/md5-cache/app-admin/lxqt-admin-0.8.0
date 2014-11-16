@@ -2,11 +2,11 @@ DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-libs/glib:2 dev-libs/liboobs dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtx11extras:5 dev-qt/qtxml:5 ~lxqt-base/liblxqt-0.8.0 >=dev-libs/libqtxdg-1.0.0 x11-libs/libX11 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=LXQt system administration tool
 EAPI=5
-HOMEPAGE=http://www.lxqt.org/
+HOMEPAGE=http://lxqt.org/
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1+
 RDEPEND=dev-libs/glib:2 dev-libs/liboobs dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtx11extras:5 dev-qt/qtxml:5 ~lxqt-base/liblxqt-0.8.0 >=dev-libs/libqtxdg-1.0.0 x11-libs/libX11
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/lxqt/0.8.0/lxqt-admin-0.8.0.tar.xz
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=28a7af8a61263e72363e54c7cdb25df2
+_md5_=c8c0b9edb2889258850c954e86da7d8a

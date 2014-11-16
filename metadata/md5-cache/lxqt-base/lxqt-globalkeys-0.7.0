@@ -2,11 +2,11 @@ DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 ~lxqt-base/liblxqt-0.7.0 x11-libs/libX11 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Daemon and library for global keyboard shortcuts registration
 EAPI=5
-HOMEPAGE=http://www.lxqt.org/
+HOMEPAGE=http://lxqt.org/
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2 LGPL-2.1+
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 ~lxqt-base/liblxqt-0.7.0 x11-libs/libX11
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/0.7.0/lxqt-globalkeys-0.7.0.tar.xz
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=7cc373986e2724dc77c1692b3e7d947b
+_md5_=16ae6dc9f7ef9c7f665e87a14add20b3

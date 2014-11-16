@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.95 2014/11/14 01:26:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.96 2014/11/16 12:42:25 bircoph Exp $
+
+  16 Nov 2014; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
+  Add myself to maintainers
 
   14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Maintainer needed.

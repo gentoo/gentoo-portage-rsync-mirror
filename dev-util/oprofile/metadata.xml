@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
+    <email>bircoph@gentoo.org</email>
+    <name>Andrew Savchenko</name>
   </maintainer>
   <longdescription>A transparent low-overhead system-wide profiler</longdescription>
 </pkgmetadata>
