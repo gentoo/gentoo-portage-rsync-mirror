@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.10.ebuild,v 1.5 2014/11/14 21:28:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.10.ebuild,v 1.6 2014/11/16 21:25:10 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -131,6 +131,10 @@ multilib_src_configure() {
 			--disable-libaudit
 			--disable-systemd
 			--without-x
+
+			# expat is used for the daemon only
+			# fake the check for multilib library build
+			ac_cv_lib_expat_XML_ParserCreate_MM=yes
 		)
 	fi
 
@@ -138,8 +142,8 @@ multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf "${myconf[@]}" "${docconf[@]}"
 
 	if multilib_is_native_abi && use test; then
-		mkdir "${TBD}"
-		cd "${TBD}"
+		mkdir "${TBD}" || die
+		cd "${TBD}" || die
 		einfo "Running configure in ${TBD}"
 		ECONF_SOURCE="${S}" econf "${myconf[@]}" \
 			$(use_enable test asserts) \
@@ -158,10 +162,9 @@ multilib_src_compile() {
 		einfo "Running make in ${BUILD_DIR}"
 		emake
 
-		if multilib_is_native_abi && use test; then
-			cd "${TBD}"
+		if use test; then
 			einfo "Running make in ${TBD}"
-			emake
+			emake -C "${TBD}"
 		fi
 	else
 		emake -C dbus libdbus-1.la
@@ -169,8 +172,7 @@ multilib_src_compile() {
 }
 
 src_test() {
-	cd "${TBD}"
-	DBUS_VERBOSE=1 Xemake -j1 check
+	DBUS_VERBOSE=1 Xemake -j1 -C "${TBD}" check
 }
 
 multilib_src_install() {

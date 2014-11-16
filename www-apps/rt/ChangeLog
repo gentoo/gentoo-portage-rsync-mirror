@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.88 2014/11/16 16:37:12 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.89 2014/11/16 21:04:09 titanofold Exp $
+
+  16 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> rt-4.2.9.ebuild:
+  Add missing dependency. If we are not using Lighttpd and not FastCGI, we need
+  mod_perl
 
 *rt-4.2.9 (16 Nov 2014)
 

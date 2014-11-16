@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.9.ebuild,v 1.1 2014/11/16 16:37:12 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.9.ebuild,v 1.2 2014/11/16 21:04:09 titanofold Exp $
 
 EAPI=5
 
@@ -117,7 +117,10 @@ DEPEND="
 		dev-perl/FCGI
 		dev-perl/FCGI-ProcManager
 	)
-	!lighttpd? ( dev-perl/Apache-DBI )
+	!lighttpd? (
+		dev-perl/Apache-DBI
+		!fastcgi? ( >=www-apache/mod_perl-2 )
+	)
 	lighttpd? ( dev-perl/FCGI )
 	mysql? ( >=dev-perl/DBD-mysql-2.1018 )
 	postgres? ( >=dev-perl/DBD-Pg-1.43 )
