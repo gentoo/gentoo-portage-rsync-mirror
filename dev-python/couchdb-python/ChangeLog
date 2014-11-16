@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/couchdb-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.29 2014/07/24 09:57:18 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.30 2014/11/16 16:00:48 djc Exp $
+
+*couchdb-python-1.0 (16 Nov 2014)
+
+  16 Nov 2014; Dirkjan Ochtman <djc@gentoo.org> +couchdb-python-1.0.ebuild:
+  Version bump couchdb-python to 1.0 (fixes bug 528668)
 
   24 Jul 2014; Dirkjan Ochtman <djc@gentoo.org> +files/0.10-exec-compat.patch,
   couchdb-python-0.10.ebuild:

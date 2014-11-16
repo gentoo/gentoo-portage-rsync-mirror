@@ -1,21 +1,21 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.56.0.ebuild,v 1.2 2014/11/16 15:40:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.55.0-r1.ebuild,v 1.1 2014/11/16 15:40:30 mgorny Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_7 )
 inherit eutils flag-o-matic multilib python-single-r1 toolchain-funcs versionator
 
-MY_PV="$(replace_all_version_separators _)"
+MY_PV=$(replace_all_version_separators _)
 
 DESCRIPTION="A system for large project software construction, which is simple to use and powerful"
 HOMEPAGE="http://www.boost.org/doc/tools/build/index.html"
 SRC_URI="mirror://sourceforge/boost/boost_${MY_PV}.tar.bz2"
 
 LICENSE="Boost-1.0"
-SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~ppc-aix ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+SLOT=0
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="examples python test"
 
 RDEPEND="python? ( ${PYTHON_DEPS} )
@@ -27,14 +27,14 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )
 	test? ( python )"
 
-S="${WORKDIR}/boost_${MY_PV}/tools/build/src"
+S="${WORKDIR}/boost_${MY_PV}/tools/build/v2"
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
 
 src_unpack() {
-	tar xjpf "${DISTDIR}/${A}" boost_${MY_PV}/tools/build || die "unpacking tar failed"
+	tar xjpf "${DISTDIR}/${A}" boost_${MY_PV}/tools/build/v2 || die "unpacking tar failed"
 }
 
 src_prepare() {
@@ -43,11 +43,8 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.50.0-respect-c_ld-flags.patch" \
 		"${FILESDIR}/${PN}-1.49.0-darwin-gentoo-toolchain.patch" \
 		"${FILESDIR}/${PN}-1.52.0-darwin-no-python-framework.patch" \
+		"${FILESDIR}/${PN}-1.54.0-fix-test.patch" \
 		"${FILESDIR}/${PN}-1.54.0-support_dots_in_python-buildid.patch"
-
-	pushd ../ &>/dev/null || die
-	epatch "${FILESDIR}/${PN}-1.54.0-fix-test.patch"
-	popd &>/dev/null || die
 
 	# Remove stripping option
 	# Fix python components build on multilib systems, bug #496446
@@ -103,7 +100,7 @@ src_install() {
 
 	insinto /usr/share/boost-build
 	doins -r "${FILESDIR}/site-config.jam" \
-		../boost-build.jam bootstrap.jam build-system.jam ../example/user-config.jam *.py \
+		boost-build.jam bootstrap.jam build-system.jam user-config.jam *.py \
 		build kernel options tools util
 
 	rm "${ED}/usr/share/boost-build/build/project.ann.py" || die "removing faulty python file failed"
@@ -111,16 +108,17 @@ src_install() {
 		find "${ED}/usr/share/boost-build" -iname "*.py" -delete || die "removing experimental python files failed"
 	fi
 
-	dodoc ../notes/{changes,hacking,release_procedure,build_dir_option,relative_source_paths}.txt
+	dodoc changes.txt hacking.txt release_procedure.txt \
+		notes/build_dir_option.txt notes/relative_source_paths.txt
 
 	if use examples; then
-		dodoc -r ../example
+		dodoc -r example
 		docompress -x "/usr/share/doc/${PF}/example"
 	fi
 }
 
 src_test() {
-	cd ../test || die
+	cd test || die
 
 	export TMP="${T}"
 

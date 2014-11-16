@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.119 2014/10/08 22:35:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.120 2014/11/16 15:57:54 dilfridge Exp $
+
+*perl-CGI-4.90.0 (16 Nov 2014)
+
+  16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +perl-CGI-4.90.0.ebuild:
+  Version bump
 
 *perl-CGI-3.650.0-r1 (08 Oct 2014)
 

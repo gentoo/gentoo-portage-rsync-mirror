@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.131 2014/11/12 08:42:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.132 2014/11/16 15:40:30 mgorny Exp $
+
+*boost-build-1.55.0-r1 (16 Nov 2014)
+
+  16 Nov 2014; Michał Górny <mgorny@gentoo.org> +boost-build-1.55.0-r1.ebuild,
+  boost-build-1.56.0.ebuild:
+  Use python-single-r1 and a run-time dependency on Python since bjam links to
+  libpython. Backport the conversion into non-masked 1.55.0 branch.
 
   12 Nov 2014; Sergey Popov <pinkbyte@gentoo.org> boost-build-1.55.0.ebuild:
   Stable on amd64, wrt bug #525286

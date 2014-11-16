@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.4.ebuild,v 1.2 2014/07/21 09:29:28 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.5.ebuild,v 1.1 2014/11/16 15:32:34 djc Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://openvpn.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="examples down-root iproute2 pam passwordsave pkcs11 +plugins +polarssl selinux +ssl +lzo static userland_BSD"
+IUSE="examples down-root iproute2 pam passwordsave pkcs11 +plugins +polarssl selinux +ssl systemd +lzo static userland_BSD"
 
 REQUIRED_USE="static? ( !plugins !pkcs11 )
 			polarssl? ( ssl )
@@ -25,15 +25,18 @@ DEPEND="
 		iproute2? ( sys-apps/iproute2[-minimal] ) !iproute2? ( sys-apps/net-tools )
 	)
 	pam? ( virtual/pam )
-	selinux? ( sec-policy/selinux-openvpn )
 	ssl? (
 		!polarssl? ( >=dev-libs/openssl-0.9.7 ) polarssl? ( >=net-libs/polarssl-1.2.10 )
 	)
 	lzo? ( >=dev-libs/lzo-1.07 )
 	pkcs11? ( >=dev-libs/pkcs11-helper-1.05 )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	selinux? ( sec-policy/selinux-openvpn )
+"
 
 src_prepare() {
+	# Set correct pass to systemd-ask-password binary
+	sed -i "s:\(/bin/systemd-ask-password\):/usr\1:" ./src/openvpn/console.c || die
 	eautoreconf
 }
 
@@ -55,7 +58,8 @@ src_configure() {
 		$(use_enable plugins) \
 		$(use_enable iproute2) \
 		$(use_enable pam plugin-auth-pam) \
-		$(use_enable down-root plugin-down-root)
+		$(use_enable down-root plugin-down-root) \
+		$(use_enable systemd)
 }
 
 src_install() {
