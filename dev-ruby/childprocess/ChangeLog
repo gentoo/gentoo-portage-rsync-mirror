@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/childprocess
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.54 2014/10/30 13:51:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.56 2014/11/16 18:15:16 ago Exp $
+
+  16 Nov 2014; Agostino Sarubbo <ago@gentoo.org> childprocess-0.3.9.ebuild:
+  Stable for ppc64, wrt bug #493780
+
+  16 Nov 2014; Agostino Sarubbo <ago@gentoo.org> childprocess-0.3.9.ebuild:
+  Stable for ppc, wrt bug #493780
 
   30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -childprocess-0.5.3-r1.ebuild,
   childprocess-0.3.9.ebuild:

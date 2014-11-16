@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/aruba-0.5.3.ebuild,v 1.10 2014/08/15 17:43:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/aruba-0.5.3.ebuild,v 1.12 2014/11/16 18:15:24 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -17,7 +17,7 @@ DESCRIPTION="Cucumber steps for driving out command line applications"
 HOMEPAGE="https://github.com/cucumber/aruba"
 LICENSE="MIT"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 SLOT="0"
 IUSE=""
 
