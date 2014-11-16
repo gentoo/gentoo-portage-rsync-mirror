@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.55.0-r1.ebuild,v 1.1 2014/11/16 15:40:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.55.0-r1.ebuild,v 1.2 2014/11/16 16:01:22 mgorny Exp $
 
 EAPI="5"
 
@@ -22,15 +22,18 @@ RDEPEND="python? ( ${PYTHON_DEPS} )
 	!<dev-libs/boost-1.34.0
 	!<=dev-util/boost-build-1.35.0-r1"
 DEPEND="${RDEPEND}
-	test? ( sys-apps/diffutils )"
+	test? ( sys-apps/diffutils
+		${PYTHON_DEPS} )"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )
-	test? ( python )"
+	test? ( ${PYTHON_REQUIRED_USE} )"
 
 S="${WORKDIR}/boost_${MY_PV}/tools/build/v2"
 
 pkg_setup() {
-	use python && python-single-r1_pkg_setup
+	if use python || use test; then
+		python-single-r1_pkg_setup
+	fi
 }
 
 src_unpack() {
