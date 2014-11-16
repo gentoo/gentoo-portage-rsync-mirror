@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/pdfbox
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.27 2013/08/16 13:28:23 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.28 2014/11/16 13:51:34 mrueg Exp $
+
+  16 Nov 2014; Manuel Rüger <mrueg@gentoo.org> pdfbox-0.7.3-r3.ebuild:
+  Fix HOMEPAGE. See bug #501500.
 
   16 Aug 2013; Alexis Ballier <aballier@gentoo.org> -pdfbox-0.7.3-r2.ebuild:
   remove old

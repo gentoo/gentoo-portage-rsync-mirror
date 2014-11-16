@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r3.ebuild,v 1.2 2013/08/16 13:27:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r3.ebuild,v 1.3 2014/11/16 13:51:34 mrueg Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -10,7 +10,7 @@ inherit java-pkg-2 java-ant-2
 MY_PN="PDFBox"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Java library and utilities for working with PDF documents"
-HOMEPAGE="http://www.pdfbox.org"
+HOMEPAGE="http://www.pdfbox.apache.org"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 LICENSE="BSD"
 SLOT="0"
