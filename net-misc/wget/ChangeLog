@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.197 2014/11/09 09:19:05 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.198 2014/11/16 07:58:08 zlogene Exp $
+
+  16 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> -wget-1.14-r1.ebuild,
+  -wget-1.14.ebuild, -wget-1.15-r1.ebuild:
+  Drop old (bug #527056), acked by Chainsaw
 
   09 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> wget-1.16.ebuild:
   ppc/ppc64 stable wrt bug #527056
