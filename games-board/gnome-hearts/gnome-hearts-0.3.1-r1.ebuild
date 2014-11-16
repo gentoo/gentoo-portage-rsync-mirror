@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/gnome-hearts-0.3.1-r1.ebuild,v 1.1 2014/11/16 10:39:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/gnome-hearts-0.3.1-r1.ebuild,v 1.2 2014/11/16 13:04:01 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG=no
@@ -19,11 +19,14 @@ IUSE="nls"
 
 RDEPEND="x11-libs/gtk+:2
 	>=gnome-base/libglade-2
-	>=gnome-base/libgnomeui-2"
+	>=gnome-base/libgnomeui-2
+	${PYTHON_DEPS}"
 DEPEND="${RDEPEND}
 	app-text/rarian
 	dev-util/intltool
 	virtual/pkgconfig"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DOCS=( AUTHORS ChangeLog NEWS README TODO )
 

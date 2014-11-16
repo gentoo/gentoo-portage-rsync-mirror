@@ -1,0 +1,9 @@
+# ChangeLog for app-forensics/afl
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afl/ChangeLog,v 1.1 2014/11/16 13:19:08 hanno Exp $
+
+*afl-0.50b (16 Nov 2014)
+
+  16 Nov 2014; <hanno@gentoo.org> +afl-0.50b.ebuild, +metadata.xml:
+  Initial commit of american fuzzy lop.
+

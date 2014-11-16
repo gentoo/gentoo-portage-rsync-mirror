@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.6.2.ebuild,v 1.1 2014/09/30 18:55:39 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.6.4.ebuild,v 1.1 2014/11/16 13:23:33 idl0r Exp $
 
 EAPI="5"
 
@@ -27,13 +27,13 @@ src_prepare() {
 
 src_install() {
 	doman lynis.8
-	dodoc CHANGELOG FAQ README dev/TODO
+	dodoc CHANGELOG FAQ README
 
 	# Remove the old one during the next stabilize progress
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}"/lynis.cron-new lynis
 
-	dobashcomp dev/bash_completion.d/lynis
+	dobashcomp extras/bash_completion.d/lynis
 
 	# stricter default perms - bug 507436
 	diropts -m0700
