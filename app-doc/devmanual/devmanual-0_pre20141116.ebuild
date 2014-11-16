@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-0_pre20131109.ebuild,v 1.2 2013/11/12 18:36:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-0_pre20141116.ebuild,v 1.1 2014/11/16 10:49:33 hwoarang Exp $
 
 EAPI=5
 
