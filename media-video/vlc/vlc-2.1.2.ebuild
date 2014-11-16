@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.2.ebuild,v 1.15 2014/11/15 11:56:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.2.ebuild,v 1.16 2014/11/16 14:37:22 dlan Exp $
 
 EAPI="5"
 
@@ -49,7 +49,7 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opencv opengl optimisememory opus
-	png +postproc projectm pulseaudio +qt4 qt5 rdp rtsp run-as-root samba
+	png +postproc projectm pulseaudio +qt4 rdp rtsp run-as-root samba
 	schroedinger sdl sdl-image sftp shout sid skins speex sse svg +swscale
 	taglib theora tremor truetype twolame udev upnp vaapi v4l vcdx vdpau
 	vlm vorbis wma-fixed +X x264 +xcb xml xv zvbi"
@@ -119,7 +119,6 @@ RDEPEND="
 		projectm? ( media-libs/libprojectm:0 media-fonts/dejavu:0 )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22:0 )
 		qt4? ( >=dev-qt/qtgui-4.6.0:4 >=dev-qt/qtcore-4.6.0:4 )
-		qt5? ( >=dev-qt/qtgui-5.1.0:5 >=dev-qt/qtcore-5.1.0:5 dev-qt/qtwidgets:5 )
 		rdp? ( net-misc/freerdp:0= )
 		samba? ( || ( >=net-fs/samba-3.4.6:0[smbclient] >=net-fs/samba-4.0.0:0[client] ) )
 		schroedinger? ( >=media-libs/schroedinger-1.0.10:0 )
@@ -174,10 +173,9 @@ REQUIRED_USE="
 	libcaca? ( X )
 	libtar? ( skins )
 	libtiger? ( kate )
-	qt4? ( X !qt5 )
-	qt5? ( X !qt4 )
+	qt4? ( X )
 	sdl? ( X )
-	skins? ( truetype X ^^ ( qt4 qt5 ) )
+	skins? ( truetype X qt4 )
 	vaapi? ( avcodec X )
 	vlm? ( encode )
 	xv? ( xcb )
@@ -202,12 +200,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Support for Qt5.
-	if use qt5 ; then
-		export UIC="/usr/lib64/qt5/bin/uic"
-		export MOC="/usr/lib64/qt5/bin/moc"
-	fi
-
 	# Remove unnecessary warnings about unimplemented pragmas on gcc for now.
 	# Need to recheck this with gcc 4.9 and every subsequent minor bump of gcc.
 	#
@@ -260,6 +252,10 @@ src_configure() {
 	# Compatibility fix for Samba 4.
 	use samba && append-cppflags "-I/usr/include/samba-4.0"
 
+	# We need to disable -fstack-check if use >=gcc 4.8.0.
+	# See bug #499996
+	use x86 && append-cflags $(test-flags-CC -fno-stack-check)
+
 	# Needs libresid-builder from libsidplay:2 which is in another directory...
 	# FIXME!
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders/"
@@ -270,11 +266,6 @@ src_configure() {
 				--with-default-font-family=Sans \
 				--with-default-monospace-font=${dejavu}/DejaVuSansMono.ttf
 				--with-default-monospace-font-family=Monospace"
-	fi
-
-	local qt_flag=""
-	if use qt4 || use qt5 ; then
-		qt_flag="--enable-qt"
 	fi
 
 	econf \
@@ -363,7 +354,7 @@ src_configure() {
 		$(use_enable postproc) \
 		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
-		${qt_flag} \
+		$(use_enable qt4 qt) \
 		$(use_enable rdp libfreerdp) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable run-as-root) \

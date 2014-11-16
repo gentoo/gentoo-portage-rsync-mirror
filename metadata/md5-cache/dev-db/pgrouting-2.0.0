@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare pretend setup test
+DEPEND=doc? ( >=dev-python/sphinx-1.1 ) pdf? ( >=dev-python/sphinx-1.1[latex] ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=pgRouting extends PostGIS and PostgreSQL with geospatial routing functionality.
+EAPI=5
+HOMEPAGE=http://pgrouting.org/index.html
+IUSE=+drivingdistance doc pdf html
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 MIT Boost-1.0
+RDEPEND=|| ( virtual/postgresql:9.4[server] virtual/postgresql:9.3[server] virtual/postgresql:9.2[server] virtual/postgresql:9.1[server] virtual/postgresql:9.0[server] ) >=dev-db/postgis-2.0 dev-libs/boost drivingdistance? ( sci-mathematics/cgal )
+REQUIRED_USE=html? ( doc ) pdf? ( doc )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/pgRouting/pgrouting/archive/v2.0.0.tar.gz -> pgrouting-2.0.0.tar.gz
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=e238f6076eec2123194d11acaa52f833

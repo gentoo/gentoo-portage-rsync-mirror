@@ -1,6 +1,26 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.918 2014/11/15 11:56:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.919 2014/11/16 14:37:22 dlan Exp $
+
+  16 Nov 2014; Yixun Lan <dlan@gentoo.org> vlc-2.1.2.ebuild, vlc-2.1.4.ebuild,
+  vlc-2.1.5.ebuild, vlc-2.1.9999.ebuild, vlc-2.2.9999.ebuild, vlc-9999.ebuild,
+  metadata.xml:
+  proxy for maintainer, fix bug 525004, 506322, 489508, 499996
+  5) Add missing qtx11extras dependency for Qt5.
+  Fixes 525004 and unreported issue that VLC opens separate window for movie
+  when Qt5 X11 Extras are not found by configure script.
+  Although it is possible to use Qt5 with Wayland instead of X11, it is not
+  well supported by VLC, yet (WiP). Ebuild does not support wayland output, yet.
+  4) Removed workaround for avcodec use flag disabled.
+  It is not needed anymore starting with version 2.2
+  3) Corrected bugfix for bug 506322 - ebuild for version 2.1.5 was improperly fixed.
+  2) Drop support for Qt5 in VLC 2.1.x branch.
+  Fixes bug 489508. qt5 use flag was buggy, and this configuration was not very well
+  supported by upstream. Since Qt5 is still masked in portage tree, there is
+  a big chance that first VLC 2.2.x release will be before Qt5 is unmasked.
+  1) Disable fstack-check on x86 (enabled on hardened configurations by default)
+  because of registers shortage.
+  Fixes bug 499996 reported by Bertrand Jacquin and patch submitted by Anthony Basile.
 
   15 Nov 2014; Markos Chandras <hwoarang@gentoo.org> vlc-2.1.2.ebuild,
   vlc-2.1.4.ebuild, vlc-2.1.5.ebuild, vlc-2.1.9999.ebuild, vlc-2.2.9999.ebuild,
