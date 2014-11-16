@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20120731-r1.ebuild,v 1.1 2014/11/16 13:37:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20120731-r1.ebuild,v 1.2 2014/11/16 17:44:50 mgorny Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -49,7 +49,7 @@ RDEPEND="gif? ( >=media-libs/giflib-4.1.0-r1 )
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup

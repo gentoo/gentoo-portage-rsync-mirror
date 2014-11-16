@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.7_p1.ebuild,v 1.1 2014/11/15 22:21:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.7_p1.ebuild,v 1.2 2014/11/16 18:00:09 vapier Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -32,7 +32,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~s
 IUSE="bindist ${HPN_PATCH:++}hpn kerberos ldap ldns libedit pam +pie sctp selinux skey static X X509"
 REQUIRED_USE="pie? ( !static )"
 
-LIB_DEPEND="selinux? ( >=sys-libs/libselinux-1.28[static-libs(+)] )
+LIB_DEPEND="sctp? ( net-misc/lksctp-tools[static-libs(+)] )
+	selinux? ( >=sys-libs/libselinux-1.28[static-libs(+)] )
 	skey? ( >=sys-auth/skey-1.1.5-r1[static-libs(+)] )
 	libedit? ( dev-libs/libedit[static-libs(+)] )
 	>=dev-libs/openssl-0.9.6d:0[bindist=]
