@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.13.17-r1.ebuild,v 1.2 2014/07/27 17:07:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.13.17-r1.ebuild,v 1.3 2014/11/16 22:57:20 dilfridge Exp $
 
 EAPI=5
 
@@ -36,6 +36,6 @@ src_install() {
 	emake DESTDIR="${D}" LOCALES="${LINGUAS}" PREFIX=/usr SYSCONFDIR=/etc \
 		PERL_INSTALLDIRS=vendor MANDIR=/usr/share/man \
 		install install-doc install-man DOCDIR=/usr/share/doc/${PF}/html/
-	fixlocalpod
+	perl_delete_localpod
 	dodoc README llgalrc llgalrc.5
 }

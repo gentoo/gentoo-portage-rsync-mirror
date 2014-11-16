@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.8.ebuild,v 1.9 2014/11/09 21:47:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.8.ebuild,v 1.10 2014/11/16 22:52:08 dilfridge Exp $
 
 EAPI="5"
 
@@ -125,7 +125,7 @@ src_install() {
 
 	# rendhalver - fix the perllocal.pod that gets installed
 	# it seems to me that this has been getting installed for ages
-	fixlocalpod
+	perl_delete_localpod
 	# Remove empty .bs files as well
 	perl_delete_packlist
 

@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/libapreq2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.50 2014/08/28 18:48:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.51 2014/11/16 22:51:07 dilfridge Exp $
+
+  16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  libapreq2-2.13-r1.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
   28 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> -libapreq2-2.13.ebuild,
   libapreq2-2.13-r1.ebuild:

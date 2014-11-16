@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.76 2014/10/19 21:15:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.77 2014/11/16 22:56:34 dilfridge Exp $
+
+  16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  graphite2-1.2.1.ebuild, graphite2-1.2.4.ebuild, graphite2-1.2.4-r1.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
   19 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   graphite2-1.2.1.ebuild, graphite2-1.2.4.ebuild, graphite2-1.2.4-r1.ebuild:

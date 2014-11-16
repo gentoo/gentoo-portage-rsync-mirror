@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.200 2014/10/11 09:07:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.201 2014/11/16 22:53:24 dilfridge Exp $
+
+  16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  subversion-1.7.18.ebuild, subversion-1.8.9.ebuild, subversion-1.8.10.ebuild,
+  subversion-1.8.10-r1.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
 *subversion-1.8.10-r1 (11 Oct 2014)
 

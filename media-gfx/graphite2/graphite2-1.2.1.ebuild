@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.1.ebuild,v 1.16 2014/10/19 21:15:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.1.ebuild,v 1.17 2014/11/16 22:56:34 dilfridge Exp $
 
 EAPI=5
 
@@ -95,7 +95,7 @@ src_install() {
 	if use perl; then
 		cd contrib/perl
 		perl-module_src_install
-		fixlocalpod
+		perl_delete_localpod
 	fi
 
 	prune_libtool_files --all

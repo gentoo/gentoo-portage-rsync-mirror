@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lltag
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.24 2014/07/27 17:06:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.25 2014/11/16 22:50:14 dilfridge Exp $
+
+  16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  lltag-0.14.4-r1.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
   27 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
   -files/lltag-0.14.2-manpage.patch, -lltag-0.14.2.ebuild:

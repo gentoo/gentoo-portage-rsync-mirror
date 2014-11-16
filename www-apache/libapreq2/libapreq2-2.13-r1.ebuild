@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.13-r1.ebuild,v 1.2 2014/08/28 18:48:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.13-r1.ebuild,v 1.3 2014/11/16 22:51:07 dilfridge Exp $
 
 EAPI=5
 
@@ -54,7 +54,7 @@ src_install() {
 	make DESTDIR="${D}" INSTALLDIRS=vendor install || die "make install failed"
 	doman docs/man/man3/*.3
 
-	fixlocalpod
+	perl_delete_localpod
 
 	for i in $(find "${D}" -type f -not -name '*.so'); do
 		if file ${i} | grep -i " text"; then

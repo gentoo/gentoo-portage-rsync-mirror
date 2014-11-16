@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.9.ebuild,v 1.11 2014/09/15 08:20:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.9.ebuild,v 1.12 2014/11/16 22:53:24 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -340,7 +340,7 @@ src_install() {
 
 	if use perl ; then
 		emake DESTDIR="${D}" INSTALLDIRS="vendor" install-swig-pl
-		fixlocalpod
+		perl_delete_localpod
 		find "${ED}" "(" -name .packlist -o -name "*.bs" ")" -delete
 	fi
 

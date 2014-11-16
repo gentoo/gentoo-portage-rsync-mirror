@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.9.3.ebuild,v 1.4 2014/08/24 13:56:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.9.3.ebuild,v 1.5 2014/11/16 22:54:52 dilfridge Exp $
 
 EAPI=5
 
@@ -516,7 +516,7 @@ src_install() {
 		systemd_dounit "${FILESDIR}/git-daemon.socket"
 	fi
 
-	fixlocalpod
+	perl_delete_localpod
 }
 
 src_test() {
