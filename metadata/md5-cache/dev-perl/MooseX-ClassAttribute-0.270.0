@@ -9,5 +9,5 @@ LICENSE=Artistic-2
 RDEPEND=>=dev-perl/Moose-1.230 >=dev-perl/namespace-autoclean-0.11 >=dev-perl/namespace-clean-0.200 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DR/DROLSKY/MooseX-ClassAttribute-0.27.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	d467f3b787cbc75c40990b80f3d6b931	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a9fe311cc26fc6b81deff2ae61861a1b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=e70ab7523fe9d0b81e51d483f099a3dc

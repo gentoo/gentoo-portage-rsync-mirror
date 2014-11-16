@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.3_pre5-r1.ebuild,v 1.11 2014/09/19 10:31:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.3_pre5-r1.ebuild,v 1.12 2014/11/16 20:27:36 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -125,7 +125,7 @@ src_install () {
 	emake -j1 DESTDIR="${D}" install
 
 	if use perl ; then
-		fixlocalpod
+		perl_delete_localpod
 		use X || rm -f "${D}"/usr/bin/tkmib
 	else
 		rm -f "${D}"/usr/bin/mib2c "${D}"/usr/bin/snmpcheck "${D}"/usr/bin/tkmib

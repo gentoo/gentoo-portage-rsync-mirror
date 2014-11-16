@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-perl/Net-XMPP dev-perl/Authen-SASL virtual/perl-Getopt-Long dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://debian/pool/main/s/sendxmpp/sendxmpp_1.23.orig.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	d467f3b787cbc75c40990b80f3d6b931	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a9fe311cc26fc6b81deff2ae61861a1b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=4837cb69223ad0f10dd6e505a24dce20

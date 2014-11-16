@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.3.3.ebuild,v 1.3 2014/09/15 18:11:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.3.3-r1.ebuild,v 1.1 2014/11/16 20:17:27 blueness Exp $
 
 EAPI="5"
 
@@ -9,9 +9,9 @@ inherit eutils unpacker
 DESCRIPTION="Bittorrent client that does not require a website to discover content"
 HOMEPAGE="http://www.tribler.org/"
 SRC_URI="
-	https://github.com/Tribler/tribler/releases/download/v6.3.1/tribler_6.3.1_all.deb
-	x86?   ( https://github.com/Tribler/tribler/releases/download/v6.3.1/tribler-swift_6.3.1_i386.deb )
-	amd64? ( https://github.com/Tribler/tribler/releases/download/v6.3.1/tribler-swift_6.3.1_amd64.deb )"
+	https://github.com/Tribler/tribler/releases/download/v${PV}/tribler_${PV}_all.deb
+	x86?   ( https://github.com/Tribler/tribler/releases/download/v${PV}/tribler-swift_${PV}_i386.deb )
+	amd64? ( https://github.com/Tribler/tribler/releases/download/v${PV}/tribler-swift_${PV}_amd64.deb )"
 
 LICENSE="GPL-2 LGPL-2.1+ PSF-2.4 openssl wxWinLL-3.1"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1422 2014/11/16 01:57:02 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1423 2014/11/16 20:22:40 dilfridge Exp $
+
+  16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  Make calling perlinfo trigger a real warning
 
   16 Nov 2014; Patrice Clement <monsieurp@gentoo.org> perl-app.eclass:
   Documented all functions.

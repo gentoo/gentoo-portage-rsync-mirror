@@ -1,6 +1,13 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.48 2014/09/01 16:26:18 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.49 2014/11/16 20:19:17 maksbotan Exp $
+
+*quiterss-0.17.1 (16 Nov 2014)
+
+  16 Nov 2014; Maxim Koltsov <maksbotan@gentoo.org> +quiterss-0.17.1.ebuild,
+  -quiterss-0.13.3.ebuild, -quiterss-0.14.3.ebuild, -quiterss-0.15.3.ebuild,
+  -quiterss-0.16.1.ebuild:
+  Bump to 0.17.1, clean old. Thanks to Nikoli.
 
 *quiterss-0.16.2 (01 Sep 2014)
 

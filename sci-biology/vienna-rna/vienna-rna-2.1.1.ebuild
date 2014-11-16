@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-2.1.1.ebuild,v 1.6 2014/08/29 16:54:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-2.1.1.ebuild,v 1.7 2014/11/16 20:29:21 dilfridge Exp $
 
 EAPI=5
 
@@ -108,6 +108,6 @@ src_install() {
 	newdoc Readseq/Formats Formats.readseq
 
 	# remove perlocal.pod to avoid file collisions (see #240358)
-	fixlocalpod || die "Failed to remove perlocal.pod"
+	perl_delete_localpod || die "Failed to remove perlocal.pod"
 	use python && distutils-r1_src_install
 }

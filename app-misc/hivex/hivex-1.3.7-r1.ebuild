@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.7-r1.ebuild,v 1.1 2013/03/31 09:03:29 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.7-r1.ebuild,v 1.2 2014/11/16 20:25:35 dilfridge Exp $
 
 EAPI=5
 
@@ -109,7 +109,7 @@ src_install() {
 	autotools-utils_src_install "LINGUAS=""${LINGUAS}"""
 
 	if use perl; then
-		fixlocalpod
+		perl_delete_localpod
 	fi
 	if use python; then
 		compile_and_install() {
