@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.6-r1.ebuild,v 1.1 2014/11/15 02:36:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.6-r1.ebuild,v 1.2 2014/11/16 04:06:13 pesa Exp $
 
 EAPI=5
 
@@ -52,11 +52,8 @@ src_unpack() {
 	# compat version
 	# http://blog.qt.digia.com/blog/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
 	if use compat; then
-		unpack qt-assistant-qassistantclient-library-compat-src-4.6.3.tar.gz \
-			qt-assistant-compat-headers-4.7.tar.gz
 		mv "${WORKDIR}"/qt-assistant-qassistantclient-library-compat-version-4.6.3 \
 			"${S}"/tools/assistant/compat || die
-		mv "${WORKDIR}"/QtAssistant "${S}"/include/ || die
 	fi
 }
 
@@ -78,6 +75,11 @@ multilib_src_configure() {
 		-no-nas-sound -no-cups -no-nis -fontconfig
 	)
 	qt4_multilib_src_configure
+
+	if use compat; then
+		# syncqt knows nothing about these headers (bug 529398)
+		cp -pr "${WORKDIR}"/QtAssistant "${BUILD_DIR}"/include || die
+	fi
 }
 
 multilib_src_compile() {
@@ -95,16 +97,20 @@ multilib_src_compile() {
 multilib_src_install() {
 	qt4_multilib_src_install
 
-	if use compat; then
-		insinto "${QT4_DATADIR#${EPREFIX}}"/mkspecs/features
-		doins tools/assistant/compat/features/assistant.prf
-	fi
-
 	if multilib_is_native_abi; then
 		emake INSTALL_ROOT="${D}" install_qchdocs
 		use doc && emake INSTALL_ROOT="${D}" install_htmldocs
 
 		# do not compress .qch files
-		docompress -x "${QT4_DOCDIR}"/qch
+		docompress -x "${QT4_DOCDIR#${EPREFIX}}"/qch
+	fi
+}
+
+multilib_src_install_all() {
+	qt4_multilib_src_install_all
+
+	if use compat; then
+		insinto "${QT4_DATADIR#${EPREFIX}}"/mkspecs/features
+		doins tools/assistant/compat/features/assistant.prf
 	fi
 }
