@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.10.ebuild,v 1.11 2014/11/10 13:51:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.10.ebuild,v 1.12 2014/11/16 20:50:16 dilfridge Exp $
 
 EAPI=5
 
@@ -230,7 +230,7 @@ src_install() {
 			popd >/dev/null
 		done
 	fi
-	use perl && fixlocalpod
+	use perl && perl_delete_localpod
 
 	if use python || use dbus ; then
 		python_fix_shebang "${D}"

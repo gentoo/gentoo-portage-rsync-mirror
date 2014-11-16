@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.358 2014/11/13 13:03:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.359 2014/11/16 20:50:16 dilfridge Exp $
+
+  16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  pidgin-2.10.9-r1.ebuild, pidgin-2.10.10.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -pidgin-2.10.9.ebuild:
   Drop old (#508854)

@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.131 2014/11/10 23:03:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.132 2014/11/16 20:53:25 dilfridge Exp $
+
+  16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.53.ebuild, cups-filters-1.0.54.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
 *cups-filters-1.0.61 (10 Nov 2014)
 

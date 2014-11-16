@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.135 2014/11/03 20:11:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.136 2014/11/16 20:42:08 dilfridge Exp $
+
+  16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  cyrus-imap-admin-2.4.17-r1.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
 *cyrus-imap-admin-2.4.17-r1 (03 Nov 2014)
 

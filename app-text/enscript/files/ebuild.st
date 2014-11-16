@@ -111,7 +111,7 @@ state ebuild extends bash
 |perl-module_src_prep|perl-module_src_compile|perl-module_src_test\
 |perl-module_src_install|perl-module_pkg_setup|perl-module_pkg_preinst\
 |perl-module_pkg_postinst|perl-module_pkg_prerm|perl-module_pkg_postrm\
-|perl_set_version|fixlocalpod|updatepod\
+|perl_set_version|perl_delete_localpod|updatepod\
 |distutils_src_compile|distutils_src_install|distutils_pkg_postrm\
 |distutils_pkg_postinst|distutils_python_version|disutils_python_tkinter\
 |need_apache|need_apache1|need_apache2\
