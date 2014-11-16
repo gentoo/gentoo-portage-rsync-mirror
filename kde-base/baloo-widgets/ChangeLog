@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/baloo-widgets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo-widgets/ChangeLog,v 1.16 2014/11/14 19:33:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo-widgets/ChangeLog,v 1.17 2014/11/16 12:21:27 alexxy Exp $
+
+*baloo-widgets-4.14.3 (16 Nov 2014)
+
+  16 Nov 2014; Alexey Shvetsov <alexxy@gentoo.org>
+  +baloo-widgets-4.14.3.ebuild:
+  Version bump KDE SC 4.14.3
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -baloo-widgets-4.13.3.ebuild,
   -baloo-widgets-4.14.1.ebuild:

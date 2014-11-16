@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.347 2014/11/14 19:33:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.348 2014/11/16 12:21:25 alexxy Exp $
+
+*konsole-4.14.3 (16 Nov 2014)
+
+  16 Nov 2014; Alexey Shvetsov <alexxy@gentoo.org> +konsole-4.14.3.ebuild:
+  Version bump KDE SC 4.14.3
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -konsole-4.13.3.ebuild,
   -konsole-4.14.1.ebuild:

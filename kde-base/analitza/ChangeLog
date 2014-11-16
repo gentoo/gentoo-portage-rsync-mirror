@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/analitza
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/analitza/ChangeLog,v 1.124 2014/11/14 19:33:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/analitza/ChangeLog,v 1.125 2014/11/16 12:21:29 alexxy Exp $
+
+*analitza-4.14.3 (16 Nov 2014)
+
+  16 Nov 2014; Alexey Shvetsov <alexxy@gentoo.org> +analitza-4.14.3.ebuild:
+  Version bump KDE SC 4.14.3
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -analitza-4.13.3.ebuild,
   -analitza-4.14.1.ebuild:

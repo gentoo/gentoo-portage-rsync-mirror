@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmouth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmouth/ChangeLog,v 1.315 2014/11/14 19:33:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmouth/ChangeLog,v 1.316 2014/11/16 12:21:23 alexxy Exp $
+
+*kmouth-4.14.3 (16 Nov 2014)
+
+  16 Nov 2014; Alexey Shvetsov <alexxy@gentoo.org> +kmouth-4.14.3.ebuild:
+  Version bump KDE SC 4.14.3
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -kmouth-4.13.3.ebuild,
   -kmouth-4.14.1.ebuild:

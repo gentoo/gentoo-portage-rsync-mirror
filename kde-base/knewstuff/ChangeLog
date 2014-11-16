@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/knewstuff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knewstuff/ChangeLog,v 1.232 2014/11/14 19:33:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knewstuff/ChangeLog,v 1.233 2014/11/16 12:21:33 alexxy Exp $
+
+*knewstuff-4.14.3 (16 Nov 2014)
+
+  16 Nov 2014; Alexey Shvetsov <alexxy@gentoo.org> +knewstuff-4.14.3.ebuild:
+  Version bump KDE SC 4.14.3
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -knewstuff-4.13.3.ebuild,
   -knewstuff-4.14.1.ebuild:

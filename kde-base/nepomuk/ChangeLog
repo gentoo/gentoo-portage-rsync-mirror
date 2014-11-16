@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/nepomuk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.245 2014/11/14 19:33:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.246 2014/11/16 12:21:22 alexxy Exp $
+
+*nepomuk-4.14.3 (16 Nov 2014)
+
+  16 Nov 2014; Alexey Shvetsov <alexxy@gentoo.org> +nepomuk-4.14.3.ebuild:
+  Version bump KDE SC 4.14.3
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -nepomuk-4.13.3.ebuild,
   -nepomuk-4.14.1.ebuild:

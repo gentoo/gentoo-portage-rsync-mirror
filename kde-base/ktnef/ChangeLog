@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ktnef
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.161 2014/11/14 19:33:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.162 2014/11/16 12:21:29 alexxy Exp $
+
+*ktnef-4.14.3 (16 Nov 2014)
+
+  16 Nov 2014; Alexey Shvetsov <alexxy@gentoo.org> +ktnef-4.14.3.ebuild:
+  Version bump KDE SC 4.14.3
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -ktnef-4.13.3.ebuild,
   -ktnef-4.14.1.ebuild:

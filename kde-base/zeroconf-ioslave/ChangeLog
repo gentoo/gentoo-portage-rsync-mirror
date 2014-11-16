@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/zeroconf-ioslave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/zeroconf-ioslave/ChangeLog,v 1.20 2014/11/14 19:33:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/zeroconf-ioslave/ChangeLog,v 1.21 2014/11/16 12:21:26 alexxy Exp $
+
+*zeroconf-ioslave-4.14.3 (16 Nov 2014)
+
+  16 Nov 2014; Alexey Shvetsov <alexxy@gentoo.org>
+  +zeroconf-ioslave-4.14.3.ebuild:
+  Version bump KDE SC 4.14.3
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -zeroconf-ioslave-4.13.3.ebuild,
   -zeroconf-ioslave-4.14.1.ebuild:

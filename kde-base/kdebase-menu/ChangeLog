@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-menu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.209 2014/11/14 19:33:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.210 2014/11/16 12:21:34 alexxy Exp $
+
+*kdebase-menu-4.14.3 (16 Nov 2014)
+
+  16 Nov 2014; Alexey Shvetsov <alexxy@gentoo.org> +kdebase-menu-4.14.3.ebuild:
+  Version bump KDE SC 4.14.3
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -kdebase-menu-4.13.3.ebuild,
   -kdebase-menu-4.14.1.ebuild:
