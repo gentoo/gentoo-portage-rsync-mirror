@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/pyzy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/pyzy/ChangeLog,v 1.4 2014/01/17 07:02:15 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pyzy/ChangeLog,v 1.5 2014/11/15 23:20:39 pacho Exp $
+
+  15 Nov 2014; Pacho Ramos <pacho@gentoo.org> pyzy-0.1.0.ebuild:
+  amd64/x86 stable, bug #517722
 
   17 Jan 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
   update maintainer email

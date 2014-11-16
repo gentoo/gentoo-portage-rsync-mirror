@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-anthy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.47 2014/06/23 03:31:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.48 2014/11/15 23:20:10 pacho Exp $
+
+  15 Nov 2014; Pacho Ramos <pacho@gentoo.org> ibus-anthy-1.5.4.ebuild:
+  amd64/x86 stable, bug #517722
 
   23 Jun 2014; Naohiro Aota <naota@gentoo.org> -ibus-anthy-1.5.0.ebuild:
   Drop old version

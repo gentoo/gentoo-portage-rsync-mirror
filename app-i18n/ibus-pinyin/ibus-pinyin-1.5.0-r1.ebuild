@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.5.0-r1.ebuild,v 1.1 2014/06/19 15:19:47 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.5.0-r1.ebuild,v 1.2 2014/11/15 23:21:13 pacho Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="boost lua nls"
 
 RDEPEND=">=app-i18n/ibus-1.4
