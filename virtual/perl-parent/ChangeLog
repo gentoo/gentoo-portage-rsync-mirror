@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-parent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.38 2014/11/08 17:17:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.39 2014/11/16 15:27:36 dilfridge Exp $
+
+  16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  perl-parent-0.228-r1.ebuild:
+  Copy ~ keywords from dev-lang/perl-5.20 provider
 
 *perl-parent-0.225.0-r5 (08 Nov 2014)
 
