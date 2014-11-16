@@ -4,4 +4,5 @@
   <maintainer>
     <email>jlec@gentoo.org</email>
   </maintainer>
+  <herd>python</herd>
 </pkgmetadata>
