@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1421 2014/11/14 19:46:05 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1422 2014/11/16 01:57:02 monsieurp Exp $
+
+  16 Nov 2014; Patrice Clement <monsieurp@gentoo.org> perl-app.eclass:
+  Documented all functions.
 
   14 Nov 2014; Sven Vermeulen <swift@gentoo.org> selinux-policy-2.eclass:
   Using RDEPEND checks in SELinux eclass reverse dependency checking
