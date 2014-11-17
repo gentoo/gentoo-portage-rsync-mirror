@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.152 2014/10/22 08:52:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.153 2014/11/17 08:01:09 jlec Exp $
+
+*ccpn-2.4.1_p141117 (17 Nov 2014)
+
+  17 Nov 2014; Justin Lecher <jlec@gentoo.org> +ccpn-2.4.1_p141117.ebuild:
+  Todays python patches
 
 *ccpn-2.4.1_p141022 (22 Oct 2014)
 
