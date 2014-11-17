@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/openvas-administrator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-administrator/ChangeLog,v 1.7 2014/09/29 06:57:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-administrator/ChangeLog,v 1.8 2014/11/17 09:33:29 jlec Exp $
+
+  17 Nov 2014; Justin Lecher <jlec@gentoo.org>
+  openvas-administrator-1.3.2.ebuild:
+  Correct dependency information, #514780
 
   29 Sep 2014; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add myself as maintainer

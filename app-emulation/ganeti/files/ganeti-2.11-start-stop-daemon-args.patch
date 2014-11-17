@@ -26,11 +26,13 @@ index 4d1d7c5..3deeab7 100644
        --pidfile $pidfile
    else
      _ignore_error killproc -p $pidfile $name
-@@ -350,7 +350,7 @@
+@@ -348,8 +348,8 @@ rotate_logs() {
+   local daemonexec=$(_daemon_executable $name)
  
    if type -p start-stop-daemon >/dev/null; then
-     start-stop-daemon --stop --signal HUP --quiet \
+-    start-stop-daemon --stop --signal HUP --quiet \
 -      --oknodo --pidfile $pidfile
++    start-stop-daemon --signal HUP --quiet \
 +      --pidfile $pidfile
    else
      _ignore_error killproc \

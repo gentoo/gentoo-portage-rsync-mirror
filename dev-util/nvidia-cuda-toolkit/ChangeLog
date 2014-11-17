@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.94 2014/11/17 09:15:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.95 2014/11/17 09:56:21 jlec Exp $
+
+  17 Nov 2014; Justin Lecher <jlec@gentoo.org>
+  nvidia-cuda-toolkit-6.5.14.ebuild, nvidia-cuda-toolkit-6.5.19.ebuild:
+  Fix installation problems due to arch specific differences in tarballs
 
 *nvidia-cuda-toolkit-6.5.19 (17 Nov 2014)
 

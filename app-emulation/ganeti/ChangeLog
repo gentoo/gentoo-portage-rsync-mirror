@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.95 2014/11/10 17:51:36 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.96 2014/11/17 09:56:40 pinkbyte Exp $
+
+*ganeti-2.11.6-r1 (17 Nov 2014)
+
+  17 Nov 2014; Sergey Popov <pinkbyte@gentoo.org> -ganeti-2.11.6.ebuild,
+  +ganeti-2.11.6-r1.ebuild, files/ganeti-2.11-start-stop-daemon-args.patch:
+  QA: revision bump, fix warning during logs rotating by not sending --stop
+  through start-stop-daemon. Drop old revision
 
 *ganeti-2.11.6 (10 Nov 2014)
 

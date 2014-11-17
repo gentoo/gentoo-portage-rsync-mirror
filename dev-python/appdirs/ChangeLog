@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/appdirs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/appdirs/ChangeLog,v 1.6 2014/10/12 19:52:22 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/appdirs/ChangeLog,v 1.7 2014/11/17 09:38:11 jlec Exp $
+
+  17 Nov 2014; Justin Lecher <jlec@gentoo.org> appdirs-1.4.0.ebuild,
+  metadata.xml:
+  Add x86 and py3_4 support
 
 *appdirs-1.4.0 (12 Oct 2014)
 
