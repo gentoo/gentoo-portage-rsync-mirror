@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libnsfb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/ChangeLog,v 1.9 2014/06/18 19:13:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/ChangeLog,v 1.11 2014/11/17 03:44:00 patrick Exp $
+
+  17 Nov 2014; Patrick Lauer <patrick@gentoo.org> libnsfb-0.1.2.ebuild:
+  Remove keywords until weirdness is fixed #529594
+
+*libnsfb-0.1.2 (17 Nov 2014)
+
+  17 Nov 2014; Patrick Lauer <patrick@gentoo.org> +libnsfb-0.1.2.ebuild:
+  Bump for dependencies of www-client/netsurf
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libnsfb-0.1.0.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
