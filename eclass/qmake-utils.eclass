@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.4 2014/11/01 23:39:05 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.5 2014/11/17 02:15:42 pesa Exp $
 
 # @ECLASS: qmake-utils.eclass
 # @MAINTAINER:
@@ -164,7 +164,6 @@ eqmake4() {
 
 	"${qmake_path}" \
 		-makefile \
-		QTDIR="${EPREFIX}"/usr/$(get_libdir) \
 		QMAKE_AR="$(tc-getAR) cqs" \
 		QMAKE_CC="$(tc-getCC)" \
 		QMAKE_CXX="$(tc-getCXX)" \

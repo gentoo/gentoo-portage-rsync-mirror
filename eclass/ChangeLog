@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1424 2014/11/17 00:24:43 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1425 2014/11/17 02:15:42 pesa Exp $
+
+  17 Nov 2014; Davide Pesavento <pesa@gentoo.org> qmake-utils.eclass:
+  Stop setting QTDIR. It's only relevant when building qt itself, and in any
+  case qmake doesn't use it.
 
   17 Nov 2014; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
   Add blocker on emul-linux-x86-qtlibs wrt bug 529370.
