@@ -1,19 +1,20 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-9999.ebuild,v 1.1 2014/11/08 17:46:15 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-9999.ebuild,v 1.2 2014/11/17 20:12:56 tamiko Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
+
+AUTOTOOLIZE=yes
 
 MY_P="${P/_rc/-rc}"
 
-inherit distutils-r1
+inherit eutils distutils-r1
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="git://libvirt.org/libvirt-python.git"
-	AUTOTOOLIZE=yes
 	SRC_URI=""
 	KEYWORDS=""
 else

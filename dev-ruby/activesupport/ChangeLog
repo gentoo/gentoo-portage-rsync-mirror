@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.272 2014/11/07 10:15:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.273 2014/11/17 20:12:24 graaff Exp $
+
+*activesupport-4.1.8 (17 Nov 2014)
+*activesupport-4.0.12 (17 Nov 2014)
+*activesupport-3.2.21 (17 Nov 2014)
+
+  17 Nov 2014; Hans de Graaff <graaff@gentoo.org> +activesupport-3.2.21.ebuild,
+  +activesupport-4.0.12.ebuild, +activesupport-4.1.8.ebuild:
+  Version bump for security bug 529635.
 
   07 Nov 2014; Hans de Graaff <graaff@gentoo.org> -activesupport-3.2.19.ebuild,
   -activesupport-4.0.9.ebuild, -activesupport-4.0.10.ebuild,

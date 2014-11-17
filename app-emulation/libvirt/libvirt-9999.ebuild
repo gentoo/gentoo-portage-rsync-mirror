@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.66 2014/11/08 18:00:44 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.67 2014/11/17 20:02:58 tamiko Exp $
 
 EAPI=5
 
@@ -15,17 +15,22 @@ if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://libvirt.org/libvirt.git"
 	SRC_URI=""
 	KEYWORDS=""
+	SLOT="0/${PV}"
 else
-	SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
-		ftp://libvirt.org/libvirt/${MY_P}.tar.gz"
+	# Versions with 4 numbers are stable updates:
+	if [[ ${PV} =~ ^[0-9]+(\.[0-9]+){3} ]]; then
+		SRC_URI="http://libvirt.org/sources/stable_updates/${MY_P}.tar.gz"
+	else
+		SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz"
+	fi
 	KEYWORDS="~amd64 ~x86"
+	SLOT="0"
 fi
 S="${WORKDIR}/${P%_rc*}"
 
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
-SLOT="0"
 IUSE="audit avahi +caps firewalld fuse iscsi +libvirtd lvm lxc +macvtap nfs \
 	nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network wireshark-plugins xen \
@@ -214,7 +219,7 @@ src_prepare() {
 		) >.git-module-status
 	fi
 
-	epatch "${FILESDIR}"/libvirt-1.2.9-do_not_use_sysconf.patch
+	epatch "${FILESDIR}"/${PN}-1.2.9-do_not_use_sysconf.patch
 
 	epatch_user
 
