@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-2.0.4.ebuild,v 1.1 2014/10/22 10:03:39 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-2.0.4.ebuild,v 1.2 2014/11/17 14:13:22 idella4 Exp $
 
 EAPI=5
 
@@ -24,10 +24,10 @@ RDEPEND="
 	>=dev-libs/mpc-1.0.2
 	>=dev-libs/mpfr-3.1.2
 	!mpir? ( dev-libs/gmp )
-	mpir? ( sci-libs/mpir )
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
+	mpir? ( sci-libs/mpir )"
 DEPEND="${RDEPEND}
-	app-arch/unzip"
+	app-arch/unzip
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}"/${MY_P}
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.47 2014/11/01 17:53:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.48 2014/11/17 14:13:22 idella4 Exp $
+
+  17 Nov 2014; Ian Delaney <idella4@gentoo.org> gmpy-2.0.4.ebuild:
+  switch dep for doc build to DEPEND
 
   01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> gmpy-2.0.3.ebuild:
   Stable for ppc, wrt bug #526460
