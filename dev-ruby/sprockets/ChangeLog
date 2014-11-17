@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sprockets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.30 2014/11/17 15:47:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.31 2014/11/17 19:21:24 graaff Exp $
+
+  17 Nov 2014; Hans de Graaff <graaff@gentoo.org> sprockets-2.11.3.ebuild:
+  Don't install the bin script to avoid a file collision with later slots.
 
 *sprockets-2.11.3 (17 Nov 2014)
 

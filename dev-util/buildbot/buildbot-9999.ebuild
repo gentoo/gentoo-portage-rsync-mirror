@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-9999.ebuild,v 1.8 2014/11/09 10:12:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-9999.ebuild,v 1.9 2014/11/17 19:08:36 hwoarang Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -96,7 +96,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	[[ ${PV} = 9999 ]] && cd master/
 	readme.gentoo_print_elog
 	elog
 	elog "Upstream recommends the following when upgrading:"

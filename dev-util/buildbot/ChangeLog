@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.159 2014/11/09 10:12:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.160 2014/11/17 19:08:36 hwoarang Exp $
+
+  17 Nov 2014; Markos Chandras <hwoarang@gentoo.org> buildbot-9999.ebuild:
+  Do not try to enter the master directory on pkg_postinst.
 
   09 Nov 2014; Markos Chandras <hwoarang@gentoo.org> buildbot-0.8.9-r1.ebuild,
   buildbot-9999.ebuild:
