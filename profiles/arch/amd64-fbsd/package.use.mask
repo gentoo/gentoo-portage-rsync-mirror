@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.22 2014/11/15 16:07:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.23 2014/11/17 02:52:00 patrick Exp $
+
+# Patrick Lauer <patrick@gentoo.org> (17 Nov 2014)
+# Missing keywords
+net-misc/openssh sctp
 
 # Pacho Ramos <pacho@gentoo.org> (01 Jun 2014)
 # Missing keywords

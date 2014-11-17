@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.214 2014/11/17 02:27:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.215 2014/11/17 02:59:21 pesa Exp $
+
+*eric-5.5.0 (17 Nov 2014)
+
+  17 Nov 2014; Davide Pesavento <pesa@gentoo.org> +eric-5.5.0.ebuild:
+  Version bump.
 
   17 Nov 2014; Davide Pesavento <pesa@gentoo.org> -eric-4.5.24.ebuild,
   -eric-5.4.6.ebuild:
