@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.3.0.ebuild,v 1.1 2014/10/02 15:40:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.4.0.ebuild,v 1.1 2014/11/17 06:34:56 idella4 Exp $
 
 EAPI=5
 
@@ -35,7 +35,11 @@ python_prepare_all() {
 		local PYTHON_DOC_INVENTORY="${PYTHON_DOC}/objects.inv"
 		sed -i "s|'http://docs.python.org/': None|'${PYTHON_DOC}': '${PYTHON_DOC_INVENTORY}'|" docs/conf.py || die
 	fi
+
 	distutils-r1_python_prepare_all
+
+	# purge test folder to avoid file collisions
+	sed -e "s:find_packages():find_packages(exclude=['test','test.*']):" -i setup.py || die
 }
 
 python_test() {
