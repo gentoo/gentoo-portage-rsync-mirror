@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.1 2014/11/13 01:45:07 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.2 2014/11/17 00:24:43 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -52,6 +52,7 @@ DEPEND="
 "
 RDEPEND="
 	dev-qt/qtchooser
+	abi_x86_32? ( !app-emulation/emul-linux-x86-qtlibs[-abi_x86_32(-)] )
 "
 
 
