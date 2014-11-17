@@ -1,6 +1,9 @@
 # ChangeLog for the default/linux/sparc profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/sparc/ChangeLog,v 1.9 2014/10/21 12:13:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/sparc/ChangeLog,v 1.10 2014/11/17 11:47:00 armin76 Exp $
+
+  17 Nov 2014; Raúl Porcel <armin76@gentoo.org> 13.0/packages:
+  Remove sys-devel/kgcc64 since >=gcc-4.4 can compile 64bit kernels
 
   21 Oct 2014; Mike Frysinger <vapier@gentoo.org> +package.use.mask:
   Unmask sys-devel/gcc[sanitize] #504200.

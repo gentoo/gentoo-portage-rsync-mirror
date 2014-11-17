@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.35 2014/09/01 14:26:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.36 2014/11/17 11:48:32 armin76 Exp $
+
+# Raúl Porcel <armin76@gentoo.org> (17 Nov 2014)
+# Mask sys-devel/kgcc64 since >=gcc-4.4 can build 64bit kernels
+sys-devel/kgcc64
 
 # Julian Ospald <hasufell@gentoo.org> (01 Sep 2014)
 # Needs either hardmasked >=media-video/libav-10 or

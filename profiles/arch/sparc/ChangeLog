@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.233 2014/11/15 21:23:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.234 2014/11/17 11:48:32 armin76 Exp $
+
+  17 Nov 2014; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Mask sys-devel/kgcc64 since >=gcc-4.4 can compile 64bit kernels
 
   15 Nov 2014; Mike Gilbert <floppym@gentoo.org> use.stable.mask:
   Move python3_4 mask to arch profiles.
