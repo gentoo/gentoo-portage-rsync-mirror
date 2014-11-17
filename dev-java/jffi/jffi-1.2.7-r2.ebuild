@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.7-r1.ebuild,v 1.1 2014/11/13 15:08:27 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.7-r2.ebuild,v 1.1 2014/11/17 09:09:28 ercpe Exp $
 
 EAPI="5"
 
@@ -31,7 +31,7 @@ DEPEND="${COMMON_DEP}
 
 java_prepare() {
 	cp "${FILESDIR}"/${PN}_maven-build.xml build.xml || die
-	epatch "${FILESDIR}"/${P}_no-werror.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
 	epatch "${FILESDIR}"/${P}-junit-4.11.patch
 
 	# misc fixes for Darwin
@@ -54,7 +54,7 @@ java_prepare() {
 			jni/GNUmakefile || die
 	fi
 
-	find "${WORKDIR}" -iname '*.jar' -delete
+	find "${WORKDIR}" -iname '*.jar' -delete || die
 }
 
 JAVA_ANT_REWRITE_CLASSPATH="yes"
@@ -100,7 +100,7 @@ src_test() {
 	# build native test library
 	emake BUILD_DIR=build -f libtest/GNUmakefile
 
-	_JAVA_OPTIONS="-Djffi.boot.library.path=build/jni" \
+	_JAVA_OPTIONS="-Djffi.boot.library.path=${S}/build/jni" \
 		java-pkg-2_src_test
 }
 

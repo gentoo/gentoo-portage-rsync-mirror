@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.54 2014/09/19 09:14:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.56 2014/11/17 09:20:48 jlec Exp $
+
+  17 Nov 2014; Justin Lecher <jlec@gentoo.org> nvidia-cuda-sdk-6.5.19.ebuild:
+  Readd dropped keywords
+
+*nvidia-cuda-sdk-6.5.19 (17 Nov 2014)
+
+  17 Nov 2014; Justin Lecher <jlec@gentoo.org> +nvidia-cuda-sdk-6.5.19.ebuild:
+  Import Version Bump from sci overlay, thanks Marius Brehler for the work; Add
+  warning for reduced 32bit support, #529320
 
   19 Sep 2014; Justin Lecher <jlec@gentoo.org> nvidia-cuda-sdk-6.5.14.ebuild:
   Fix double definition of c++ compiler, #523142
