@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mdds
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.38 2014/06/29 16:43:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.39 2014/11/17 11:16:49 scarabeus Exp $
+
+*mdds-0.11.1 (17 Nov 2014)
+
+  17 Nov 2014; Tomáš Chvátal <scarabeus@gentoo.org> +mdds-0.11.1.ebuild:
+  Version bump to latest release.
 
   29 Jun 2014; Agostino Sarubbo <ago@gentoo.org> mdds-0.10.3.ebuild:
   Stable for x86, wrt bug #514886
