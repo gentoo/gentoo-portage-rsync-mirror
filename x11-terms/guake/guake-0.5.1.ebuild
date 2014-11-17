@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-9999.ebuild,v 1.2 2014/11/17 13:37:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.5.1.ebuild,v 1.1 2014/11/17 13:37:33 jer Exp $
 
 EAPI=5
 
@@ -8,17 +8,15 @@ GCONF_DEBUG=no
 GNOME2_LA_PUNT=yes
 PYTHON_COMPAT=( python2_7 )
 
-inherit autotools git-r3 gnome2 python-single-r1
+inherit autotools gnome2 python-single-r1
 
 DESCRIPTION="Drop-down terminal for GTK+ desktops"
 HOMEPAGE="https://github.com/Guake/guake"
-# override gnome.org.eclass SRC_URI
-SRC_URI=''
-EGIT_REPO_URI="https://github.com/Guake/guake.git"
+SRC_URI="https://github.com/${PN^}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~x86"
 
 RDEPEND="
 	dev-python/dbus-python
@@ -37,11 +35,6 @@ DEPEND="
 "
 
 DOCS=( AUTHORS ChangeLog NEWS README.rst )
-
-src_unpack() {
-	# override gnome2_src_unpack()
-	git-r3_src_unpack
-}
 
 src_prepare() {
 	eautoreconf

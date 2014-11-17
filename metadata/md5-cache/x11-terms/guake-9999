@@ -2,10 +2,10 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup u
 DEPEND=dev-python/dbus-python dev-python/gconf-python dev-python/notify-python dev-python/pygtk dev-python/pyxdg x11-libs/gtk+:2 x11-libs/libX11 x11-libs/vte:0[python] dev-util/intltool virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1 app-arch/xz-utils >=sys-apps/sed-4
 DESCRIPTION=Drop-down terminal for GTK+ desktops
 EAPI=5
-HOMEPAGE=http://guake.org/
+HOMEPAGE=https://github.com/Guake/guake
 IUSE=python_targets_python2_7
 LICENSE=GPL-2
 RDEPEND=dev-python/dbus-python dev-python/gconf-python dev-python/notify-python dev-python/pygtk dev-python/pyxdg x11-libs/gtk+:2 x11-libs/libX11 x11-libs/vte:0[python]
 SLOT=0
 _eclasses_=autotools	7bcca47e6ac6bbfa251fe7e9483fcf67	eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-r3	6ebae45064cb04482f3c702632dd9528	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=478d9a6a7715204997b942dfa7ae5da6
+_md5_=634bba18d4678eb41d69f66a542416e9
