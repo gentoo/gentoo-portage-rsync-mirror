@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.9.1-r1.ebuild,v 1.1 2014/11/01 15:57:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.9.1-r1.ebuild,v 1.2 2014/11/17 22:57:59 sping Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{3_2,3_3,3_4} )
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/jonls/redshift/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="geoclue gtk nls"
+IUSE="appindicator geoclue gtk nls"
 
 COMMON_DEPEND=">=x11-libs/libX11-1.4
 	x11-libs/libXxf86vm
@@ -27,7 +27,9 @@ RDEPEND="${COMMON_DEPEND}
 		x11-libs/gtk+:3[introspection]
 		dev-python/pyxdg[${PYTHON_USEDEP}] )"
 DEPEND="${COMMON_DEPEND}
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	appindicator? ( dev-libs/libappindicator )
+"
 
 src_prepare() {
 	epatch_user

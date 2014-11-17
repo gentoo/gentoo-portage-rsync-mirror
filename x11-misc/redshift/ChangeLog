@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.29 2014/11/01 15:57:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.30 2014/11/17 22:57:59 sping Exp $
+
+  17 Nov 2014; Sebastian Pipping <sping@gentoo.org> redshift-1.9.1-r1.ebuild,
+  metadata.xml:
+  Add appindicator use flag (patch by Marek Pikuła)
 
 *redshift-1.9.1-r1 (01 Nov 2014)
 
