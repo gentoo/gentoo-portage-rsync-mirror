@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.321 2014/11/18 14:18:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.324 2014/11/18 14:55:12 jer Exp $
+
+  18 Nov 2014; Jeroen Roovers <jer@gentoo.org>
+  files/nmap-6.47-no-FORTIFY_SOURCE.patch:
+  Oops, commented out one too many DEFS.
+
+  18 Nov 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Slightly reword USE=zenmap.
+
+  18 Nov 2014; Jeroen Roovers <jer@gentoo.org>
+  files/nmap-6.47-no-FORTIFY_SOURCE.patch:
+  Do not set FORTIFY_SOURCE anywhere else either.
 
   18 Nov 2014; Jeroen Roovers <jer@gentoo.org> nmap-6.47-r1.ebuild,
   +files/nmap-6.47-no-FORTIFY_SOURCE.patch, +files/nmap-6.47-no-libnl.patch:

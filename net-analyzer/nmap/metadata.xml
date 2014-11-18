@@ -9,6 +9,6 @@
 <flag name="ndiff">Install the ndiff utility</flag>
 <flag name="nmap-update">Install nmap-update, which uses <pkg>dev-vcs/subversion</pkg> to update nmap scripts in your home directory</flag>
 <flag name="nping">Install the nping utility</flag>
-<flag name="zenmap">Install the GTK+ based zenmap utility</flag>
+<flag name="zenmap">Install the GTK+ based nmap GUI, zenmap</flag>
 </use>
 </pkgmetadata>
