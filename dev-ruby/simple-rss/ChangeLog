@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/simple-rss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple-rss/ChangeLog,v 1.18 2014/10/30 14:00:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple-rss/ChangeLog,v 1.19 2014/11/18 13:36:13 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/simple-rss-1.2.3-utf8.patch:
+  Cleanup unused patches.
 
   30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -simple-rss-1.2.3-r2.ebuild,
   simple-rss-1.2.3-r1.ebuild, simple-rss-1.3.1.ebuild:

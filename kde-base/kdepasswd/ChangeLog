@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.333 2014/11/16 12:21:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.334 2014/11/18 13:43:11 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/kdepasswd-4.13.3-use-accountsservice.patch:
+  Cleanup unused patches.
 
 *kdepasswd-4.14.3 (16 Nov 2014)
 

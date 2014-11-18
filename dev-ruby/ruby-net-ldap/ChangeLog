@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-net-ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-net-ldap/ChangeLog,v 1.19 2014/11/05 07:00:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-net-ldap/ChangeLog,v 1.20 2014/11/18 13:50:28 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/ruby-net-ldap-0.6.1-fix-test.patch:
+  Cleanup unused patches.
 
   05 Nov 2014; Hans de Graaff <graaff@gentoo.org> -ruby-net-ldap-0.6.1.ebuild,
   -ruby-net-ldap-0.6.1-r1.ebuild:

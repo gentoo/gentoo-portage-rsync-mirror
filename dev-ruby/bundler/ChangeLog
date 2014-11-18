@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.68 2014/10/26 07:55:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.69 2014/11/18 13:52:30 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/bundler-1.0.3-gentoo.patch, -files/bundler-1.1.5-nouserpriv.patch:
+  Cleanup unused patches.
 
 *bundler-1.7.4 (26 Oct 2014)
 

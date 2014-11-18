@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.273 2014/11/17 20:12:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.274 2014/11/18 13:44:54 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/activesupport-2.3.14-unvendorize.patch,
+  -files/activesupport-2.3.15-unvendorize.patch,
+  -files/activesupport-2.3.16-unvendorize.patch,
+  -files/activesupport-2.3.5-mocha-0.9.5.patch,
+  -files/activesupport-3.0.3-mocha-0.9.5.patch:
+  Cleanup unused patches.
 
 *activesupport-4.1.8 (17 Nov 2014)
 *activesupport-4.0.12 (17 Nov 2014)

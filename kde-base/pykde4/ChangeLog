@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.305 2014/11/16 12:21:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.306 2014/11/18 13:39:00 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/pykde4-4.13.3-pyqt4-4.11.patch:
+  Cleanup unused patches.
 
 *pykde4-4.14.3 (16 Nov 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.103 2014/08/01 12:55:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.104 2014/11/18 13:35:33 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/test-unit-2.3.0-jruby-tests.patch,
+  -files/test-unit-2.3.0-ree18-tests.patch:
+  Cleanup unused patches.
 
   01 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -test-unit-2.5.3.ebuild:
   Cleanup old.

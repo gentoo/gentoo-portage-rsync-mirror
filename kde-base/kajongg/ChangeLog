@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.167 2014/11/16 12:21:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.168 2014/11/18 13:47:21 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/kajongg-4.13.0-cmake.patch:
+  Cleanup unused patches.
 
 *kajongg-4.14.3 (16 Nov 2014)
 

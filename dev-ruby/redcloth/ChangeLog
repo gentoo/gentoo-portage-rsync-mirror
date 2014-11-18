@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.93 2014/08/25 16:09:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.94 2014/11/18 13:36:55 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/redcloth-4.2.3-gentoo.patch:
+  Cleanup unused patches.
 
   25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> redcloth-4.2.9-r1.ebuild:
   Mark amd64 stable. Bug #513430.

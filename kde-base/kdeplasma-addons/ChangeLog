@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.266 2014/11/16 12:21:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.267 2014/11/18 13:54:42 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/kdeplasma-addons-4.13.2-comics.patch:
+  Cleanup unused patches.
 
 *kdeplasma-addons-4.14.3 (16 Nov 2014)
 

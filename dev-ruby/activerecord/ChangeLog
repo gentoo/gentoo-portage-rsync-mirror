@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.282 2014/11/17 20:20:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.283 2014/11/18 13:51:56 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/activerecord-2.3.10-rails3.patch,
+  -files/activerecord-2.3.14-dynamic-finder-injection.patch,
+  -files/activerecord-2.3.15-null-array-param.patch,
+  -files/activerecord-2.3.8-add-index-with-symbol.patch:
+  Cleanup unused patches.
 
 *activerecord-4.1.8 (17 Nov 2014)
 *activerecord-4.0.12 (17 Nov 2014)
