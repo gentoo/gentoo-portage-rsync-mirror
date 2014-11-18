@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/rexical-1.0.5-r3.ebuild,v 1.4 2014/11/11 13:47:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/rexical-1.0.5-r3.ebuild,v 1.5 2014/11/18 17:02:51 graaff Exp $
 
 EAPI=5
 
@@ -31,6 +31,8 @@ ruby_add_bdepend "
 
 all_ruby_prepare() {
 	sed -i -e '1igem "test-unit"' test/test_generator.rb || die
+
+	sed -i -e '/rubyforge_name/d' Rakefile || die
 }
 
 all_ruby_install() {
