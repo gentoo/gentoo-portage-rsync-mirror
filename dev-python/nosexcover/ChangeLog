@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/nosexcover
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nosexcover/ChangeLog,v 1.6 2014/03/31 21:22:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nosexcover/ChangeLog,v 1.7 2014/11/18 09:58:26 jlec Exp $
+
+*nosexcover-1.0.10 (18 Nov 2014)
+
+  18 Nov 2014; Justin Lecher <jlec@gentoo.org> +nosexcover-1.0.10.ebuild,
+  metadata.xml:
+  Version BUmp
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> nosexcover-1.0.7-r1.ebuild,
   nosexcover-1.0.8.ebuild:
