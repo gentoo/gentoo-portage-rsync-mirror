@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/jsonpatch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpatch/ChangeLog,v 1.7 2014/10/04 09:18:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpatch/ChangeLog,v 1.8 2014/11/18 07:50:24 idella4 Exp $
+
+*jsonpatch-1.9 (18 Nov 2014)
+
+  18 Nov 2014; Ian Delaney <idella4@gentoo.org> +jsonpatch-1.9.ebuild,
+  -jsonpatch-1.7.ebuild, -jsonpatch-1.8.ebuild:
+  bump, rm old
 
 *jsonpatch-1.8 (04 Oct 2014)
 
