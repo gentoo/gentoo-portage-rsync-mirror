@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/ChangeLog,v 1.65 2014/11/18 11:13:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/ChangeLog,v 1.66 2014/11/18 13:03:10 xmw Exp $
+
+  18 Nov 2014; Michael Weber <xmw@gentoo.org> -files/4.5.18-r1/shorewallrc_new,
+  -files/4.5.21.7/10-releasenotes.patch, -files/4.5.21.7/shorewallrc,
+  -shorewall-core-4.5.18-r1.ebuild, -shorewall-core-4.5.21.7.ebuild:
+  Drop old.
 
 *shorewall-core-4.5.21.10-r1 (18 Nov 2014)
 
