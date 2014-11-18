@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-4.1.2.ebuild,v 1.5 2014/08/13 17:47:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-4.1.2.ebuild,v 1.6 2014/11/18 05:02:42 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE="sqlite?"
 DISTUTILS_NO_PARALLEL_BUILD=true
 # The usual required for tests

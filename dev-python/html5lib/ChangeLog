@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/html5lib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.30 2014/08/13 17:43:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.31 2014/11/18 05:16:26 idella4 Exp $
+
+  18 Nov 2014; Ian Delaney <idella4@gentoo.org> html5lib-0.95-r1.ebuild:
+  Clean old python impls
 
   13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> html5lib-0.95-r1.ebuild,
   html5lib-0.999.ebuild:
