@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/path-py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/path-py/ChangeLog,v 1.3 2014/10/22 04:52:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/path-py/ChangeLog,v 1.4 2014/11/18 08:10:28 jlec Exp $
+
+  18 Nov 2014; Justin Lecher <jlec@gentoo.org> path-py-7.0.ebuild,
+  metadata.xml:
+  Add more content to HOMEPAGE
 
   22 Oct 2014; Ian Delaney <idella4@gentoo.org> path-py-7.0.ebuild:
   remove premature addition of doc build
