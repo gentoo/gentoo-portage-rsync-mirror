@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.320 2014/11/05 22:09:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.321 2014/11/18 19:15:03 mgorny Exp $
+
+  18 Nov 2014; Michał Górny <mgorny@gentoo.org> systemd-217-r2.ebuild,
+  systemd-9999.ebuild:
+  Add sys-fs/eudev blocker for completeness.
 
 *systemd-217-r2 (05 Nov 2014)
 

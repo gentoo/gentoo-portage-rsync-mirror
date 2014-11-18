@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-217-r2.ebuild,v 1.1 2014/11/05 22:09:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-217-r2.ebuild,v 1.2 2014/11/18 19:15:03 mgorny Exp $
 
 EAPI=5
 
@@ -59,6 +59,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/baselayout-2.2
 	!sys-auth/nss-myhostname
 	!<sys-libs/glibc-2.14
+	!sys-fs/eudev
 	!sys-fs/udev"
 
 # sys-apps/dbus: the daemon only (+ build-time lib dep for tests)
