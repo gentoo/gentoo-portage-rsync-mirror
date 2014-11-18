@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.315 2014/11/12 17:45:13 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.316 2014/11/18 08:40:28 mgorny Exp $
+
+  18 Nov 2014; Michał Górny <mgorny@gentoo.org> gentoolkit-9999.ebuild:
+  Switch to git-r3.
 
 *gentoolkit-0.3.0.9-r2 (12 Nov 2014)
 

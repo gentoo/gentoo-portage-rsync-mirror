@@ -1,18 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.36 2014/11/12 17:45:13 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.37 2014/11/18 08:40:28 mgorny Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=(python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0)
 PYTHON_REQ_USE="xml(+)"
 
-EGIT_MASTER="gentoolkit"
-EGIT_BRANCH="gentoolkit"
-
-inherit distutils-r1 git-2
+inherit distutils-r1 git-r3
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/gentoolkit.git"
+EGIT_BRANCH="gentoolkit"
 
 DESCRIPTION="Collection of administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
