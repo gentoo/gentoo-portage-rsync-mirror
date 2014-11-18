@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-pair
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/ChangeLog,v 1.32 2014/11/12 05:05:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/ChangeLog,v 1.33 2014/11/18 03:23:09 patrick Exp $
+
+*twisted-pair-14.0.2 (18 Nov 2014)
+
+  18 Nov 2014; Patrick Lauer <patrick@gentoo.org> +twisted-pair-14.0.2.ebuild:
+  Bump
 
 *twisted-pair-14.0.1 (12 Nov 2014)
 

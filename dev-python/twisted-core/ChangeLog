@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/ChangeLog,v 1.38 2014/11/12 12:19:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/ChangeLog,v 1.39 2014/11/18 03:19:34 patrick Exp $
+
+*twisted-core-14.0.2 (18 Nov 2014)
+
+  18 Nov 2014; Patrick Lauer <patrick@gentoo.org> +twisted-core-14.0.2.ebuild:
+  Bump
 
   12 Nov 2014; Jeroen Roovers <jer@gentoo.org> twisted-core-14.0.1.ebuild:
   Marked ~hppa (bug #528896).

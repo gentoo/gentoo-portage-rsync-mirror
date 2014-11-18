@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-news
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.83 2014/11/12 04:54:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.84 2014/11/18 03:22:34 patrick Exp $
+
+*twisted-news-14.0.2 (18 Nov 2014)
+
+  18 Nov 2014; Patrick Lauer <patrick@gentoo.org> +twisted-news-14.0.2.ebuild:
+  Bump
 
 *twisted-news-14.0.1 (12 Nov 2014)
 
