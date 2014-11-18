@@ -1,6 +1,23 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.146 2014/11/11 11:05:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.151 2014/11/18 12:00:22 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/ruby-gettext-rubygems-load-path.patch:
+  Cleanup patches.
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -ruby-gettext-2.3.3.ebuild,
+  -ruby-gettext-2.3.8.ebuild, -ruby-gettext-3.1.3.ebuild:
+  Cleanup old.
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ruby-gettext-3.1.1.ebuild:
+  Stable for sparc, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ruby-gettext-3.1.1.ebuild:
+  Stable for ppc64, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ruby-gettext-3.1.1.ebuild:
+  Stable for ppc, wrt bug #505920
 
   11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> ruby-gettext-2.3.3.ebuild,
   ruby-gettext-2.3.8.ebuild, ruby-gettext-3.1.1.ebuild,

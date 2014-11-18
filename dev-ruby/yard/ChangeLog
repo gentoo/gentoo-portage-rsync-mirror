@@ -1,6 +1,18 @@
 # ChangeLog for dev-ruby/yard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.91 2014/10/29 19:32:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.95 2014/11/18 11:49:50 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -yard-0.8.7.2.ebuild:
+  Cleanup old.
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> yard-0.8.7.3.ebuild:
+  Stable for sparc, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> yard-0.8.7.3.ebuild:
+  Stable for ppc64, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> yard-0.8.7.3.ebuild:
+  Stable for ppc, wrt bug #505920
 
   29 Oct 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/yard-0.8.2.1-test-failures.patch, -yard-0.8.7.3-r1.ebuild,

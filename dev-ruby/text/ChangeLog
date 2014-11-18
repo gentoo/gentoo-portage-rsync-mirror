@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/text
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text/ChangeLog,v 1.20 2014/11/10 16:10:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text/ChangeLog,v 1.23 2014/11/18 11:47:27 ago Exp $
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> text-1.2.3-r1.ebuild:
+  Stable for sparc, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> text-1.2.3-r1.ebuild:
+  Stable for ppc64, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> text-1.2.3-r1.ebuild:
+  Stable for ppc, wrt bug #505920
 
   10 Nov 2014; Manuel Rüger <mrueg@gentoo.org> text-1.2.3-r1.ebuild,
   text-1.2.3-r2.ebuild, text-1.3.0.ebuild:

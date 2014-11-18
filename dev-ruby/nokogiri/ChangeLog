@@ -1,6 +1,22 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.106 2014/11/08 07:39:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.111 2014/11/18 11:58:16 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/nokogiri-1.4.4-libxml-2.7.8.patch:
+  Cleanup patches.
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -nokogiri-1.5.5.ebuild:
+  Cleanup old.
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> nokogiri-1.5.10.ebuild:
+  Stable for sparc, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> nokogiri-1.5.10.ebuild:
+  Stable for ppc64, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> nokogiri-1.5.10.ebuild:
+  Stable for ppc, wrt bug #505920
 
 *nokogiri-1.6.4.1 (08 Nov 2014)
 

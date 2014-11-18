@@ -1,6 +1,22 @@
 # ChangeLog for dev-ruby/rspec-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.77 2014/08/25 16:03:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.82 2014/11/18 11:57:47 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/rspec-core-2.4.0-tests.patch:
+  Cleanup patches.
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -rspec-core-2.12.2.ebuild:
+  Cleanup old.
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> rspec-core-2.14.8.ebuild:
+  Stable for sparc, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> rspec-core-2.14.8.ebuild:
+  Stable for ppc64, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> rspec-core-2.14.8.ebuild:
+  Stable for ppc, wrt bug #505920
 
   25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> rspec-core-2.14.8.ebuild:
   Mark amd64 stable. Bug #505920.

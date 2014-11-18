@@ -1,6 +1,21 @@
 # ChangeLog for dev-ruby/session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.45 2014/07/21 14:56:23 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.50 2014/11/18 11:58:54 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -files/session-2.4.0-jruby.patch:
+  Cleanup patches.
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -session-3.1.0-r1.ebuild:
+  Cleanup old.
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> session-3.1.2.ebuild:
+  Stable for sparc, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> session-3.1.2.ebuild:
+  Stable for ppc64, wrt bug #505920
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> session-3.1.2.ebuild:
+  Stable for ppc, wrt bug #505920
 
   21 Jul 2014; Tobias Klausmann <klausman@gentoo.org> session-3.1.2.ebuild:
   Stable on alpha, bug #505920
