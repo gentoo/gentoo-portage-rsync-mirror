@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/splat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/ChangeLog,v 1.14 2014/08/10 20:28:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/ChangeLog,v 1.15 2014/11/18 06:50:41 slis Exp $
+
+*splat-1.4.1 (18 Nov 2014)
+
+  18 Nov 2014; Sławek Lis <slis@gentoo.org> +splat-1.4.1.ebuild:
+  version bump
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> splat-1.2.2-r2.ebuild,
   splat-1.3.0.ebuild, splat-1.4.0.ebuild:
