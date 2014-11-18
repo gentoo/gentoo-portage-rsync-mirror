@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.231 2014/11/03 11:16:53 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.232 2014/11/18 10:02:05 jlec Exp $
 
 EAPI=5
 
@@ -557,7 +557,10 @@ src_install() {
 
 	# Fix bash completion placement
 	newbashcomp "${ED}"/etc/bash_completion.d/libreoffice.sh ${PN}
-	rm -rf "${ED}"/etc/
+	bashcomp_alias \
+		libreoffice \
+		unopkg loimpress lobase localc lodraw lomath lowriter lofromtemplate loweb loffice
+	rm -rf "${ED}"/etc/ || die
 
 	if use branding; then
 		insinto /usr/$(get_libdir)/${PN}/program
