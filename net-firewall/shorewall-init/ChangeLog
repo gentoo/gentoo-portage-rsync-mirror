@@ -1,6 +1,22 @@
 # ChangeLog for net-firewall/shorewall-init
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-init/ChangeLog,v 1.12 2014/09/19 09:17:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-init/ChangeLog,v 1.13 2014/11/18 11:13:58 xmw Exp $
+
+*shorewall-init-4.5.21.10-r1 (18 Nov 2014)
+
+  18 Nov 2014; Michael Weber <xmw@gentoo.org>
+  +files/4.5.21.10-r1/01_Remove-ipset-functionality.patch,
+  +files/4.5.21.10-r1/README.Gentoo.txt,
+  +files/4.5.21.10-r1/shorewall-init.confd,
+  +files/4.5.21.10-r1/shorewall-init.initd,
+  +files/4.5.21.10-r1/shorewall-init.systemd, +files/4.5.21.10-r1/shorewallrc,
+  +shorewall-init-4.5.21.10-r1.ebuild,
+  -files/4.5.21.10/01_Remove-ipset-functionality.patch,
+  -files/4.5.21.10/README.Gentoo.txt, -files/4.5.21.10/shorewall-init.confd,
+  -files/4.5.21.10/shorewall-init.initd,
+  -files/4.5.21.10/shorewall-init.systemd, -files/4.5.21.10/shorewallrc,
+  -shorewall-init-4.5.21.10.ebuild:
+  Revbump (bug 520316, thanks whissi).
 
   19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> shorewall-init-4.5.21.9.ebuild:
   Stable for sparc, wrt bug #511620

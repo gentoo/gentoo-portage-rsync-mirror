@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/shorewall6-4.5.21.10.ebuild,v 1.1 2014/06/12 14:26:06 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/shorewall6-lite-4.5.21.10-r1.ebuild,v 1.1 2014/11/18 11:17:03 xmw Exp $
 
 EAPI="5"
 
@@ -22,8 +22,7 @@ MY_P_DOCS=shorewall-docs-html-${MY_PV}
 MY_MAJOR_RELEASE_NUMBER=$(get_version_component_range 1-2)
 MY_MAJORMINOR_RELEASE_NUMBER=$(get_version_component_range 1-3)
 
-DESCRIPTION='The Shoreline Firewall, commonly known as Shorewall,'
-DESCRIPTION+=' IPv6 component'
+DESCRIPTION="An iptables-based firewall whose config is handled by a normal Shorewall6"
 HOMEPAGE="http://www.shorewall.net/"
 SRC_URI="
 	http://www1.shorewall.net/pub/shorewall/${MY_URL_PREFIX}${MY_MAJOR_RELEASE_NUMBER}/shorewall-${MY_MAJORMINOR_RELEASE_NUMBER}/${MY_P}.tar.bz2
@@ -35,7 +34,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-DEPEND="=net-firewall/shorewall-${PVR}"
+DEPEND="=net-firewall/shorewall-core-${PVR}"
 RDEPEND="
 	${DEPEND}
 	>=net-firewall/iptables-1.4.20[ipv6]
@@ -48,11 +47,9 @@ S=${WORKDIR}/${MY_P}
 pkg_pretend() {
 	local CONFIG_CHECK="~NF_CONNTRACK ~NF_CONNTRACK_IPV6"
 
-	local WARNING_CONNTRACK="Without NF_CONNTRACK support, you will be unable"
-	local WARNING_CONNTRACK+=" to run ${PN} on the local system."
+	local ERROR_CONNTRACK="${PN} requires NF_CONNTRACK support."
 
-	local WARNING_CONNTRACK_IPV6="Without NF_CONNTRACK_IPV6 support, you will"
-	local WARNING_CONNTRACK_IPV6+=" be unable to run ${PN} on the local system."
+	local ERROR_CONNTRACK_IPV6="${PN} requires NF_CONNTRACK_IPV6 support."
 
 	check_extra_config
 }
@@ -83,8 +80,7 @@ src_install() {
 
 	dodoc changelog.txt releasenotes.txt
 	if use doc; then
-		dodoc -r Samples6
-		cd "${WORKDIR}"/${MY_P_DOCS}
+		cd "${WORKDIR}/${MY_P_DOCS}"
 		dohtml -r *
 	fi
 }
@@ -92,9 +88,8 @@ src_install() {
 pkg_postinst() {
 	if [[ -z "${REPLACING_VERSIONS}" ]]; then
 		# This is a new installation
-		elog "Before you can use ${PN}, you need to edit its configuration in:"
-		elog ""
-		elog "  ${EPREFIX}/etc/${PN}/${PN}.conf"
+		elog "Before you can use ${PN}, you need to provide a configuration, which you can"
+		elog "create using ${CATEGORY}/shorewall6 (the full version, including the compiler)."
 		elog ""
 		elog "To activate ${PN} on system start, please add ${PN} to your default runlevel:"
 		elog ""
@@ -103,7 +98,7 @@ pkg_postinst() {
 
 	if ! has_version ${CATEGORY}/shorewall-init; then
 		elog ""
-		elog "Starting with shorewall6-4.5.21.2, Gentoo also offers ${CATEGORY}/shorewall-init,"
+		elog "Starting with shorewall6-lite-4.5.21.2, Gentoo also offers ${CATEGORY}/shorewall-init,"
 		elog "which we recommend to install, to protect your firewall at system boot."
 		elog ""
 		elog "To read more about shorewall-init, please visit"
