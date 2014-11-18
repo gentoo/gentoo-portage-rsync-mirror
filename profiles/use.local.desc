@@ -4859,6 +4859,11 @@ net-firewall/nufw:plaintext - Add support for authentication with plaintext file
 net-firewall/pftop:altq - Enable altq(4) support — alternate queuing of network packets.
 net-firewall/pglinux:cron - Install cron script
 net-firewall/pglinux:logrotate - Install logrotate.d file
+net-firewall/shorewall:init - Adds the capability to place the firewall in a safe state prior to bringing up the network interfaces
+net-firewall/shorewall:ipv4 - Installs everything needed to create a full IPv4 firewall
+net-firewall/shorewall:ipv6 - Adds the capability to create a full IPv6 firewall (requires net-firewall/shorewall[ipv4])
+net-firewall/shorewall:lite4 - Installs everything needed to just *run* an IPv4 compiled firewall script created with net-firewall/shorewall[ipv4]
+net-firewall/shorewall:lite6 - Installs everything needed to just *run* an IPv6 compiled firewall script created with net-firewall/shorewall[ipv6]
 net-firewall/ufw-frontends:kde - Use kdesu to gain root privileges (note: the flag has lower priority than "policykit")
 net-firewall/ufw-frontends:policykit - Use pkexec to gain root privileges
 net-fs/autofs:dmalloc - Enable debugging with the dmalloc library

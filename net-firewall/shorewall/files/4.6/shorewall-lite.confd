@@ -1,15 +1,15 @@
 # Global start/restart/stop options
-# 
-OPTIONS=""
+#
+OPTIONS="-tvv"
 
 # Start options
-# 
+#
 STARTOPTIONS=""
 
 # Stop options
-# 
+#
 STOPOPTIONS=""
 
 # Restart options
-# 
+#
 RESTARTOPTIONS=""

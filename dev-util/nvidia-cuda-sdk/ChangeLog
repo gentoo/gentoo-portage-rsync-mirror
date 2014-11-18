@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.56 2014/11/17 09:20:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.57 2014/11/18 12:32:56 jlec Exp $
+
+  18 Nov 2014; Justin Lecher <jlec@gentoo.org> nvidia-cuda-sdk-6.5.14.ebuild,
+  nvidia-cuda-sdk-6.5.19.ebuild:
+  Readd x86; thanks mabre for the notice
 
   17 Nov 2014; Justin Lecher <jlec@gentoo.org> nvidia-cuda-sdk-6.5.19.ebuild:
   Readd dropped keywords

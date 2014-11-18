@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-6.5.14.ebuild,v 1.5 2014/09/19 09:14:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-6.5.14.ebuild,v 1.6 2014/11/18 12:32:56 jlec Exp $
 
 EAPI=5
 
@@ -11,7 +11,9 @@ MYD=$(get_version_component_range 1)_$(get_version_component_range 2)
 DESCRIPTION="NVIDIA CUDA Software Development Kit"
 HOMEPAGE="http://developer.nvidia.com/cuda"
 CURI="http://developer.download.nvidia.com/compute/cuda/${MYD}/rel/installers"
-SRC_URI="amd64? ( ${CURI}/cuda_${PV}_linux_64.run )"
+SRC_URI="
+	amd64? ( ${CURI}/cuda_${PV}_linux_64.run )
+	x86? ( ${CURI}/cuda_${PV}_linux_32.run )"
 
 LICENSE="CUDPP"
 SLOT="0"
@@ -48,6 +50,13 @@ src_unpack() {
 pkg_setup() {
 	if use cuda || use opencl; then
 		cuda_pkg_setup
+	fi
+
+	if use x86; then
+		ewarn "Starting with version 6.5 NVIDIA dropped more and more"
+		ewarn "the support for 32bit linux."
+		ewarn "Be aware that bugfixes and new features may not be available."
+		ewarn "http://dev.gentoo.org/~jlec/distfiles/CUDA_Toolkit_Release_Notes.pdf"
 	fi
 }
 

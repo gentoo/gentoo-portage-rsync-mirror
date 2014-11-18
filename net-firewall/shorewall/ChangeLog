@@ -1,6 +1,31 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.266 2014/11/18 11:12:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.268 2014/11/18 13:00:28 xmw Exp $
+
+  18 Nov 2014; Michael Weber <xmw@gentoo.org>
+  -files/4.5.18-r1/shorewall.conf-SUBSYSLOCK.patch,
+  -files/4.5.18-r1/shorewall.initd, -files/4.5.18-r1/shorewall.systemd,
+  -files/4.5.18-r1/shorewallrc_new, -files/4.5.21.7/10-releasenotes.patch,
+  -files/4.5.21.7/shorewall.confd, -files/4.5.21.7/shorewall.initd,
+  -files/4.5.21.7/shorewall.systemd, -files/4.5.21.7/shorewallrc,
+  -shorewall-4.5.18-r1.ebuild, -shorewall-4.5.21.7.ebuild:
+  Drop old.
+
+*shorewall-4.6.5.2 (18 Nov 2014)
+
+  18 Nov 2014; Michael Weber <xmw@gentoo.org>
+  +files/4.6/shorewall-init-01_remove-ipset-functionality.patch,
+  +files/4.6/shorewall-init.confd, +files/4.6/shorewall-init.initd,
+  +files/4.6/shorewall-init.readme, +files/4.6/shorewall-init.systemd,
+  +files/4.6/shorewall-lite.confd, +files/4.6/shorewall-lite.initd,
+  +files/4.6/shorewall-lite.systemd, +files/4.6/shorewall.confd,
+  +files/4.6/shorewall.initd, +files/4.6/shorewall.systemd,
+  +files/4.6/shorewall6-lite.confd, +files/4.6/shorewall6-lite.initd,
+  +files/4.6/shorewall6-lite.systemd, +files/4.6/shorewall6.confd,
+  +files/4.6/shorewall6.initd, +files/4.6/shorewall6.systemd,
+  +files/4.6/shorewallrc, +files/4.6/shorewallrc-r1, +shorewall-4.6.5.2.ebuild,
+  metadata.xml:
+  Version bump (big thanks to whissi, bug 522278).
 
 *shorewall-4.5.21.10-r1 (18 Nov 2014)
 
