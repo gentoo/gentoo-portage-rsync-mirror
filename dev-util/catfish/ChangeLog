@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/catfish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/ChangeLog,v 1.22 2014/09/25 11:33:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/ChangeLog,v 1.23 2014/11/18 15:58:39 axs Exp $
+
+  18 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> catfish-1.0.2.ebuild,
+  catfish-1.2.1.ebuild, catfish-1.2.2.ebuild:
+  added missing PYTHON_REQUIRED_USE as is necessary for proper python-single-r1
+  implementation
 
 *catfish-1.2.2 (25 Sep 2014)
 
