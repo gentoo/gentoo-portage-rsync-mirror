@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.302 2014/11/03 12:52:00 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.303 2014/11/18 21:35:15 grobian Exp $
+
+*exim-4.85_rc1 (18 Nov 2014)
+
+  18 Nov 2014; Fabian Groffen <grobian@gentoo.org> +exim-4.85_rc1.ebuild:
+  Version bump to first release candidate for 4.85
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> exim-4.84.ebuild:
   Update PostgreSQL dependencies and/or checks to virtual/postgresql.

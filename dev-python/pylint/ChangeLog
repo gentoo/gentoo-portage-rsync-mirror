@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.111 2014/09/10 13:23:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.112 2014/11/18 21:34:45 prometheanfire Exp $
+
+*pylint-0.25.2 (18 Nov 2014)
+
+  18 Nov 2014; Matthew Thode <prometheanfire@gentoo.org> +pylint-0.25.2.ebuild:
+  adding old version for openstack dep
 
 *pylint-1.3.1 (10 Sep 2014)
 
