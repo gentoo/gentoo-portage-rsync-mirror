@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/glance_store
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/glance_store/ChangeLog,v 1.1 2014/11/18 22:13:50 prometheanfire Exp $
+
+*glance_store-0.1.10 (18 Nov 2014)
+
+  18 Nov 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +glance_store-0.1.10.ebuild, +metadata.xml:
+  adding for glance

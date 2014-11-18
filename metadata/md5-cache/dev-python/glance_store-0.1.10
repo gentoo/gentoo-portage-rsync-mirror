@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/pbr-0.8.0[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] <dev-python/pbr-1.0[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=A connection pool for python-ldap
+EAPI=5
+HOMEPAGE=http://launchpad.net/oslo
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=>=dev-python/oslo-config-1.2.0[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/oslo-i18n-0.1.0[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/oslo-serialization-1.0.0[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/oslo-utils-1.0.0[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/stevedore-0.12[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/python-cinderclient-1.0.6[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/eventlet-0.13.0[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/iso8601-0.1.8[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/six-1.4.1[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=mirror://pypi/g/glance_store/glance_store-0.1.10.tar.gz
+_eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	fef838277e0f17df29d4951b7183d1b4	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=6d05bcfdf37eebe9c86854893118f5ae

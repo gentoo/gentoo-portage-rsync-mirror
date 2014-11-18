@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.73 2014/10/23 11:15:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.74 2014/11/18 22:08:00 blueness Exp $
+
+  18 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/ppc/make.defaults:
+  linux/musl/ppc/make.defaults: add mutlib ABI, thanks Felix Janda
 
   23 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
   +linux/musl/package.use.mask:
