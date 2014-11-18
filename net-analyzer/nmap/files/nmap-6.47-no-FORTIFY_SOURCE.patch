@@ -1,0 +1,11 @@
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -40,7 +40,7 @@
+ # http://gcc.gnu.org/ml/gcc-patches/2004-09/msg02055.html
+ # Level 1 only makes changes that don't affect "conforming" programs,
+ # while level 2 enforces additional restrictions.
+-DEFS += -D_FORTIFY_SOURCE=2
++#DEFS += -D_FORTIFY_SOURCE=2
+ # For mtrace debugging -- see MTRACE define in main.cc for instructions
+ # Should only be enabled during debugging and not in any real release.
+ # DEFS += -DMTRACE=1

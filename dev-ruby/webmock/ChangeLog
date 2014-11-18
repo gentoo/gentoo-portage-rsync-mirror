@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/webmock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.31 2014/10/04 06:58:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.32 2014/11/18 14:05:02 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/webmock-1.4.0-network-specs.patch, -files/webmock-1.4.0-tmpdir.patch:
+  Cleanup unused patches.
 
 *webmock-1.19.0 (04 Oct 2014)
 
