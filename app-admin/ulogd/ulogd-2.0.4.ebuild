@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.4.ebuild,v 1.4 2014/11/08 11:08:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.4.ebuild,v 1.5 2014/11/18 02:21:24 dlan Exp $
 
 EAPI="5"
 
@@ -34,7 +34,6 @@ RDEPEND="net-firewall/iptables
 	sqlite? ( dev-db/sqlite:3 )"
 
 DEPEND="${RDEPEND}
-	<sys-kernel/linux-headers-3.17
 	doc? (
 		app-text/linuxdoc-tools
 		app-text/texlive-core
@@ -73,6 +72,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-linux-headers-3.17-ipt_ulog.patch"
+
 	# - make all logs to be kept in a single dir /var/log/ulogd
 	# - place sockets in /run instead of /tmp
 	sed -i \

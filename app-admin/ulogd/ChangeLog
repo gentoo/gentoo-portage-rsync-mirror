@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.92 2014/11/08 11:08:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.93 2014/11/18 02:21:24 dlan Exp $
+
+  18 Nov 2014; Yixun Lan <dlan@gentoo.org> ulogd-2.0.4.ebuild,
+  +files/ulogd-2.0.4-linux-headers-3.17-ipt_ulog.patch:
+  fix compile err with >=linux-headers-3.17, bug 528310
 
   08 Nov 2014; Markos Chandras <hwoarang@gentoo.org> ulogd-2.0.4.ebuild:
   Add dependency to <linux-headers-3.17. Print warnings >for kernel-3.17. Patch
