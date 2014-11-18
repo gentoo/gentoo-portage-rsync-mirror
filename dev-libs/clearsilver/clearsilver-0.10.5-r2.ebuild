@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r2.ebuild,v 1.1 2014/10/25 22:08:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r2.ebuild,v 1.2 2014/11/17 23:26:59 dilfridge Exp $
 
 # Please note: apache, java, mono and ruby support disabled for now.
 # Fill a bug if you need it.
@@ -71,6 +71,6 @@ src_install () {
 	default
 
 	if use perl ; then
-		fixlocalpod || die "fixlocalpod failed"
+		perl_delete_localpod || die "perl_delete_localpod failed"
 	fi
 }

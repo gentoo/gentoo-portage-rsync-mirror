@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.36 2014/11/08 18:55:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.37 2014/11/17 23:30:21 dilfridge Exp $
+
+  17 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  libguestfs-1.24.0.ebuild, libguestfs-1.26.1.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
   08 Nov 2014; Mike Frysinger <vapier@gentoo.org>
   +files/1.26/0020_all_qemu_configure.patch:

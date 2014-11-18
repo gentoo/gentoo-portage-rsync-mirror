@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/libsolv-0.6.6.ebuild,v 1.1 2014/10/09 07:04:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/libsolv-0.6.6.ebuild,v 1.2 2014/11/17 23:26:00 dilfridge Exp $
 
 EAPI=5
 
@@ -88,5 +88,5 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 
-	use perl && fixlocalpod
+	use perl && perl_delete_localpod
 }

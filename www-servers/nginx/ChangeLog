@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.398 2014/11/03 09:10:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.399 2014/11/17 23:21:30 dilfridge Exp $
+
+  17 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> nginx-1.7.6.ebuild,
+  nginx-1.7.7.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
 *nginx-1.7.7 (03 Nov 2014)
 

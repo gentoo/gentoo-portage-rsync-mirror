@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r2.ebuild,v 1.8 2014/07/15 09:04:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r2.ebuild,v 1.9 2014/11/17 23:24:19 dilfridge Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
@@ -169,7 +169,7 @@ src_install() {
 	if use perl ; then
 		cd "${S}/src/perl"
 		emake DESTDIR="${D}" install || die "emake install perl module failed"
-		fixlocalpod
+		perl_delete_localpod
 	fi
 
 	if use examples ; then

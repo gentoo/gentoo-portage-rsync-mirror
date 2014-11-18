@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.65 2014/11/03 11:00:51 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.66 2014/11/17 23:29:28 dilfridge Exp $
+
+  17 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> collectd-5.4.0.ebuild,
+  collectd-5.4.1.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> collectd-5.4.0.ebuild,
   collectd-5.4.1.ebuild:

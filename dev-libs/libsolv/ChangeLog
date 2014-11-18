@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libsolv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/ChangeLog,v 1.5 2014/10/09 07:04:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/ChangeLog,v 1.6 2014/11/17 23:26:00 dilfridge Exp $
+
+  17 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> libsolv-0.3.0.ebuild,
+  libsolv-0.6.6.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
 *libsolv-0.6.6 (09 Oct 2014)
 

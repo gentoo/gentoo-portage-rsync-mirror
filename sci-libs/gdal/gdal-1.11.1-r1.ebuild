@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r1.ebuild,v 1.1 2014/11/05 15:58:23 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r1.ebuild,v 1.2 2014/11/17 23:22:48 dilfridge Exp $
 
 EAPI=5
 
@@ -311,7 +311,7 @@ src_install() {
 		popd > /dev/null
 	fi
 
-	use perl && fixlocalpod
+	use perl && perl_delete_localpod
 
 	dodoc Doxyfile HOWTO-RELEASE NEWS
 

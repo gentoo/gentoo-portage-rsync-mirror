@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.23.ebuild,v 1.1 2014/10/23 03:24:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.23.ebuild,v 1.2 2014/11/17 23:25:14 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -115,5 +115,5 @@ src_install() {
 		fi
 	fi
 
-	fixlocalpod
+	perl_delete_localpod
 }
