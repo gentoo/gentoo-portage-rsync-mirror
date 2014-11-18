@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-dns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-dns/ChangeLog,v 1.12 2014/04/24 16:54:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-dns/ChangeLog,v 1.13 2014/11/18 12:07:47 mrueg Exp $
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org> net-dns-0.8.0.ebuild:
+  Drop jruby target.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -net-dns-0.7.1.ebuild,
   net-dns-0.8.0.ebuild:

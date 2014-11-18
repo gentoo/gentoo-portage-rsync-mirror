@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-dns/net-dns-0.8.0.ebuild,v 1.2 2014/04/24 16:54:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-dns/net-dns-0.8.0.ebuild,v 1.3 2014/11/18 12:07:47 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_DOC="yardoc"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -23,21 +23,7 @@ IUSE="doc"
 ruby_add_bdepend "doc? ( dev-ruby/yard )"
 
 all_ruby_prepare() {
-	sed -i -e '/bundler/d' Rakefile || die
-
-	sed -i -e '/git ls-files/d' Rakefile || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# Avoid failing test due to a jruby bug
-			# https://github.com/jruby/jruby/issues/310
-			sed -i -e '67 s:^:#:' test/rr/aaaa_test.rb || die
-			;;
-		*)
-			;;
-	esac
+	sed -i -e '/bundler/d' -e '/git ls-files/d' Rakefile || die
 }
 
 all_ruby_install() {

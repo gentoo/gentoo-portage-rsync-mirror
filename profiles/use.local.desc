@@ -868,6 +868,7 @@ app-misc/lcdproc:lcd_devices_sdeclcd - Enable support for VLSYS M428 display
 app-misc/lcdproc:lcd_devices_vlsys_m428 - Enable support for VLSYS M428 display
 app-misc/lcdproc:nfs - Adds support for NFS file system
 app-misc/lcdproc:seamless-hbars - Try to avoid gaps in horizontal bars
+app-misc/linux-logo:nls - Add Native Language Support (using gettext - GNU locale utilities)
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
 app-misc/lirc:transmitter - Add transmitter support to some lirc-drivers (e.g. serial)
 app-misc/mc:edit - Compile and install the mcedit application
