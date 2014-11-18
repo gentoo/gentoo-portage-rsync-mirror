@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.8.3-r1.ebuild,v 1.16 2014/11/18 08:53:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.8.3-r1.ebuild,v 1.17 2014/11/18 18:17:28 mgorny Exp $
 
 EAPI="5"
 
@@ -47,5 +47,5 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
-	python_replicate_script "${ED}"/usr/bin/{ekeyword,imlate}
+	python_replicate_script "${ED}"/usr/bin/imlate
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.137 2014/11/18 08:53:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.138 2014/11/18 18:17:28 mgorny Exp $
+
+  18 Nov 2014; Michał Górny <mgorny@gentoo.org>
+  gentoolkit-dev-0.2.8.3-r1.ebuild:
+  Revert wrapping ekeyword, it is not a Python script yet.
 
   18 Nov 2014; Michał Górny <mgorny@gentoo.org>
   gentoolkit-dev-0.2.8.3-r1.ebuild, gentoolkit-dev-9999.ebuild:

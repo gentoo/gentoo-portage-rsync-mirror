@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.37 2014/11/08 14:13:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.39 2014/11/18 18:29:40 blueness Exp $
+
+  18 Nov 2014; Anthony G. Basile <blueness@gentoo.org> musl-1.1.5.ebuild:
+  Stable on ppc
+
+  18 Nov 2014; Anthony G. Basile <blueness@gentoo.org> musl-1.1.5.ebuild,
+  musl-9999.ebuild:
+  Keyword ~ppc
 
   08 Nov 2014; Anthony G. Basile <blueness@gentoo.org> -musl-1.1.4-r1.ebuild,
   -musl-1.1.4.ebuild, musl-9999.ebuild:
