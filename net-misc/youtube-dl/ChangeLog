@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.420 2014/11/17 20:35:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.421 2014/11/18 10:59:11 zlogene Exp $
+
+  18 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
+  youtube-dl-2014.11.02.1.ebuild:
+  x86 stable wrt bug #528208
 
 *youtube-dl-2014.11.16 (17 Nov 2014)
 
