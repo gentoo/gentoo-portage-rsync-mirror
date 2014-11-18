@@ -1,9 +1,0 @@
-# /etc/conf.d/rngd
-
-# Please see "/usr/sbin/rngd --help" and "man rngd" for more information
-
-# Random step (Number of bytes written to random-device at a time):
-STEP=64
-
-# Timeout (Interval written to random-device when the entropy pool is full):
-TIMEOUT=60

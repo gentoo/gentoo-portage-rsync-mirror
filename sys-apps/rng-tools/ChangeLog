@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.56 2014/11/11 10:46:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.57 2014/11/18 19:54:10 mrueg Exp $
+
+*rng-tools-5 (18 Nov 2014)
+
+  18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  +files/rng-tools-5-fix-textrels-on-PIC-x86.patch, +rng-tools-5.ebuild,
+  -files/2/rngd, -files/2/rngd-conf, -files/rngd-confd-3, -files/rngd-confd-4,
+  -files/rngd-initd-3, -files/rngd-initd-4, -rng-tools-2-r1.ebuild,
+  -rng-tools-3-r1.ebuild, -rng-tools-3.ebuild, -rng-tools-4-r1.ebuild,
+  -rng-tools-4-r5.ebuild, -rng-tools-4-r6.ebuild:
+  Version bump. Thanks to klondike for updating the textrel patch. Fixes bug
+  #518210. Cleanup old.
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> rng-tools-4-r7.ebuild:
   Stable for ia64, wrt bug #516838
