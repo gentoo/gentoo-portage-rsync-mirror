@@ -8,5 +8,5 @@ LICENSE=Artistic
 RDEPEND=>=dev-perl/TimeDate-1.16 dev-perl/XML-Elemental >=dev-perl/XML-RSS-Parser-4 dev-perl/Class-XPath dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TI/TIMA/XML-RAI-1.3031.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a9fe311cc26fc6b81deff2ae61861a1b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	647e704e21d89e228f3d85cea324d220	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=e1dcfa8931d2a70a6c223b666bd19029

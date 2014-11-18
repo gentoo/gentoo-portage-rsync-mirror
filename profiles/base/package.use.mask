@@ -1,9 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.625 2014/11/17 03:51:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.626 2014/11/17 23:49:40 jer Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Jeroen Roovers <jer@gentoo.org> (18 Nov 2014)
+# Requires dev-lang/lua-5.2 (bug #253269)
+net-analyzer/nmap external-lua
 
 # Patrick Lauer <patrick@gentoo.org> (17 Nov 2014)
 # libnsfb is temporarily broken, so mask useflag until things work

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16165 2014/11/15 22:58:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16166 2014/11/17 23:49:40 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -809,10 +809,6 @@ www-apache/mod_spdy
 # Dependencies are unable to satisfy current version,
 # broken; needs a version bump from bug #475552.
 dev-java/itext:5
-
-# Jeroen Roovers <jer@gentoo.org> (31 Jul 2013)
-# Needs >=dev-lang/lua-5.2
->net-analyzer/nmap-6.40
 
 # Julian Ospald <hasufell@gentoo.org> (21 Jul 2013)
 # Mask all unfetchable versions and those with tons of random

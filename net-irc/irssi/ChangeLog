@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.207 2014/11/02 09:38:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.208 2014/11/17 23:31:36 dilfridge Exp $
+
+  17 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> irssi-0.8.16.ebuild,
+  irssi-0.8.17.ebuild, irssi-9999.ebuild:
+  Replace fixlocalpod with perl_delete_localpod
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> -irssi-0.8.15-r1.ebuild,
   -irssi-0.8.15-r2.ebuild:

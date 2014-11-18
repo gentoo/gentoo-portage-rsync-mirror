@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.151 2014/11/16 20:22:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.152 2014/11/17 23:34:19 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -419,7 +419,7 @@ perl_delete_localpod() {
 # Please use the function above instead, perl_delete_localpod().
 fixlocalpod() {
 	debug-print-function $FUNCNAME "$@"
-	eqawarn "perl-modules.eclass: fixlocalpod is deprecated and will be removed. Please use perl_delete_localpod instead."
+	ewarn "perl-modules.eclass: fixlocalpod is deprecated and will be removed. Please use perl_delete_localpod instead."
 	perl_delete_localpod
 }
 

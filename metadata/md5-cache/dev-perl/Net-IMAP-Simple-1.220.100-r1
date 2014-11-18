@@ -8,5 +8,5 @@ LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=dev-perl/Class-Accessor dev-perl/Coro dev-perl/DateTime dev-perl/DateTime-Format-Mail dev-perl/DateTime-Format-Natural dev-perl/Email-Address dev-perl/Email-MIME dev-perl/Email-MIME-ContentType dev-perl/Email-Simple dev-perl/Encode-IMAPUTF7 virtual/perl-MIME-Base64 dev-perl/List-MoreUtils dev-perl/Net-SSLeay dev-perl/Net-Server-Coro dev-perl/regexp-common dev-perl/DateTime-Format-Strptime dev-perl/Parse-RecDescent dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/J/JE/JETTERO/Net-IMAP-Simple-1.2201.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	a9fe311cc26fc6b81deff2ae61861a1b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	647e704e21d89e228f3d85cea324d220	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=e1bad75ac2c7e572e5802e26d5d8e284

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.16.ebuild,v 1.12 2014/11/02 09:07:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.16.ebuild,v 1.13 2014/11/17 23:31:36 dilfridge Exp $
 
 EAPI=5
 
@@ -58,7 +58,7 @@ src_install() {
 		docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		install
 
-	use perl && fixlocalpod
+	use perl && perl_delete_localpod
 
 	prune_libtool_files --modules
 
