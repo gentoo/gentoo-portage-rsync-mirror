@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.179 2014/11/13 18:45:40 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.181 2014/11/18 20:12:34 aidecoe Exp $
+
+  18 Nov 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-040-r2.ebuild:
+  Fix repoman warning about whitespaces.
+
+*dracut-040-r2 (18 Nov 2014)
+
+  18 Nov 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-040-r2.ebuild:
+  Drop patch "Install dracut-install into libexec dir instead of lib"
+  and install skipcpio and dracut-install into /usr/lib/dracut/. Set
+  QA_MULTILIB_PATHS accordingly for these binaries.
+
+  Fix bug #528998.  Commit on behalf of Alexander Tsoy <alexander@tsoy.me>.
 
 *dracut-040-r1 (13 Nov 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.9.ebuild,v 1.2 2014/11/16 21:04:09 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.9-r1.ebuild,v 1.1 2014/11/18 20:25:29 titanofold Exp $
 
 EAPI=5
 
@@ -193,8 +193,10 @@ pkg_setup() {
 src_prepare() {
 	# add Gentoo-specific layout
 	cat "${FILESDIR}"/config.layout-gentoo >> config.layout
-	sed -e "s|PREFIX|${D}/${MY_HOSTROOTDIR}/${PF}|
-			s|HTMLDIR|${D}/${MY_HTDOCSDIR}|g" -i ./config.layout || die
+	sed -e "s|PREFIX|${D}/${MY_HOSTROOTDIR}/${PF}|g" \
+		-e "s|HTMLDIR|${D}/${MY_HTDOCSDIR}|g" \
+		-e 's|/\+|/|g' \
+		-i ./config.layout || die
 
 	# don't need to check dev dependencies
 	sed -e "s|\$args{'with-DEV'} =1;|#\$args{'with-DEV'} =1;|" -i sbin/rt-test-dependencies.in || die

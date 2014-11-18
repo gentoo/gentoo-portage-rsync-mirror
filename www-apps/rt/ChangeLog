@@ -1,6 +1,19 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.89 2014/11/16 21:04:09 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.90 2014/11/18 20:25:29 titanofold Exp $
+
+*rt-4.2.9-r1 (18 Nov 2014)
+
+  18 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> -rt-4.2.9.ebuild,
+  +rt-4.2.9-r1.ebuild, files/postinstall-en.txt, files/reconfig,
+  files/rt_apache2.conf:
+  Refresh rt_apache.conf so that it has a working example appropriate
+  for the only version in the tree. Added another sed statement in the
+  ebuild to remove excess slashes. Fixed reconfig so that it actually
+  does what it's supposed to do, and do so quietly so that the message
+  isn't lost. Cleaned up postinstall and have it point to our wiki page
+  instead of an outdated, flash heavy guide. This package now does
+  everything it promised, but didn't deliver.
 
   16 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> rt-4.2.9.ebuild:
   Add missing dependency. If we are not using Lighttpd and not FastCGI, we need

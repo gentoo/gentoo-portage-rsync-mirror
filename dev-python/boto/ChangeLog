@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.99 2014/07/10 23:52:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.100 2014/11/18 20:10:08 prometheanfire Exp $
+
+*boto-2.34.0 (18 Nov 2014)
+
+  18 Nov 2014; Matthew Thode <prometheanfire@gentoo.org> +boto-2.34.0.ebuild:
+  bup for glance
 
 *boto-2.31.1 (10 Jul 2014)
 
