@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/liblinear-196.ebuild,v 1.1 2014/11/17 14:06:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/liblinear-196-r1.ebuild,v 1.1 2014/11/18 16:29:38 jer Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
@@ -12,9 +12,6 @@ SRC_URI="https://github.com/cjlin1/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~s390 ~sh ~sparc ~x86"
-
-# /usr/bin/predict collision
-RDEPEND="!sci-astronomy/predict"
 
 src_prepare() {
 	sed -i \
@@ -44,7 +41,8 @@ src_install() {
 	dolib ${PN}.so.2
 	dosym ${PN}.so.2 /usr/$(get_libdir)/${PN}.so
 
-	dobin predict train
+	newbin predict ${PN}-predict
+	newbin train ${PN}-train
 
 	insinto /usr/include
 	doins linear.h

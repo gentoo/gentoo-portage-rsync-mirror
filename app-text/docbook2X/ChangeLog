@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.51 2014/09/14 09:10:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.52 2014/11/18 16:26:16 bircoph Exp $
+
+  18 Nov 2014; Andrew Savchenko <bircoph@gentoo.org> docbook2X-0.8.8-r4.ebuild:
+  Workaround autotools bug with cache going off sync sometimes, until
+  autotool.eclass is fixed. See bugs 479372, 529580, 527506.
 
   14 Sep 2014; Markus Meier <maekke@gentoo.org> docbook2X-0.8.8-r4.ebuild:
   arm stable, bug #520860

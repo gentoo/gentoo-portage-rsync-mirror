@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/liblinear
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/ChangeLog,v 1.9 2014/11/18 10:04:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/ChangeLog,v 1.11 2014/11/18 16:29:38 jer Exp $
+
+*liblinear-196-r1 (18 Nov 2014)
+*liblinear-194-r1 (18 Nov 2014)
+
+  18 Nov 2014; Jeroen Roovers <jer@gentoo.org> -liblinear-194.ebuild,
+  +liblinear-194-r1.ebuild, -liblinear-196.ebuild, +liblinear-196-r1.ebuild:
+  Add prefix to installed executables, drop blocker on sci-astronomy/predict
+  (bug #529704 by Andrew Savchenko).
+
+  18 Nov 2014; Jeroen Roovers <jer@gentoo.org> liblinear-194.ebuild:
+  Stable for HPPA (bug #480474).
 
   18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> liblinear-194.ebuild:
   Stable for x86, wrt bug #480474

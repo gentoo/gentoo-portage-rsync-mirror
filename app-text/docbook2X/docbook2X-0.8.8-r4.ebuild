@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r4.ebuild,v 1.4 2014/09/14 09:10:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r4.ebuild,v 1.5 2014/11/18 16:26:16 bircoph Exp $
 
 EAPI="5"
 
@@ -39,6 +39,13 @@ src_prepare() {
 	sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac || die 'sed on configure.ac failed'
 
 	autotools-utils_src_prepare
+
+	# Workaround floating autotools bug with invalid generated data
+	# see bugs 479372, 529580, 527506.
+	# Should be removed when 527506 is fixed.
+	eautoconf --force
+	eautoheader
+	eautomake
 }
 
 src_configure() {
