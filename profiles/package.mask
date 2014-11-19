@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16171 2014/11/19 05:32:53 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16172 2014/11/19 18:16:28 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -108,12 +108,6 @@ dev-ruby/prawn-core
 # Use kde-base/oxygen-fonts instead
 # Masked for removal in 30 days
 media-fonts/oxygen-fonts
-
-# Ulrich Müller <ulm@gentoo.org> (5 Nov 2014)
-# Does not build with Emacs 24.4.
-# Last visible upstream activity in 2011.
-# Masked for removal in 30 days, bug #528374.
-app-emacs/csharp-mode
 
 # Samuli Suominen <ssuominen@gentoo.org> (05 Nov 2014)
 # ConsoleKit2 from github by Eric Koegel, auth of xfce4-power-manager
