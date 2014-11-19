@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.128 2014/11/12 18:16:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.129 2014/11/19 21:38:10 redlizard Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -9,13 +9,6 @@
 # NOTE: Please add your entry at the top!
 #
 
-
-# Fabian Groffen <grobian@gentoo.org> (05 Oct 2014)
-# b0rks when installing on case-insensitive FS, needs patched
-# portage-2.2.10.1-r1 first, bug #524236
-# This mask should go in a few days/a week when hopefully most people
-# have upgraded to 2.2.10.1-r1
-=sys-apps/portage-2.2.14
 
 # Fabian Groffen <grobian@gentoo.org> (24 Aug 2014)
 # Not ready yet for general use, see tracker and bug #519884
