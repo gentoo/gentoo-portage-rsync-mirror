@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/lziprecover
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lziprecover/ChangeLog,v 1.5 2014/09/22 06:43:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lziprecover/ChangeLog,v 1.6 2014/11/19 06:45:32 polynomial-c Exp $
+
+*lziprecover-1.17_pre1 (19 Nov 2014)
+
+  19 Nov 2014; Lars Wendler <polynomial-c@gentoo.org>
+  +lziprecover-1.17_pre1.ebuild:
+  Version bump.
 
 *lziprecover-1.16 (22 Sep 2014)
 
