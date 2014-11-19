@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/blaze-0.6.5.ebuild,v 1.1 2014/10/29 08:44:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/blaze-0.6.5.ebuild,v 1.2 2014/11/19 03:35:28 patrick Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ IUSE="doc examples test"
 PY2_USEDEP=$(python_gen_usedep python2_7)
 RDEPEND="
 	>=dev-python/blz-0.6.2[${PYTHON_USEDEP}]
-	~dev-python/datashape-0.4.0[${PYTHON_USEDEP}]
+	=dev-python/datashape-0.4*[${PYTHON_USEDEP}]
 	>=dev-python/dynd-python-0.6.5[${PYTHON_USEDEP}]
 	>=dev-python/numpy-1.7[${PYTHON_USEDEP}]
 	dev-python/pyparsing[${PYTHON_USEDEP}]
