@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cov-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.10 2014/10/24 14:36:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.11 2014/11/19 15:25:59 idella4 Exp $
+
+  19 Nov 2014; Ian Delaney <idella4@gentoo.org> cov-core-1.7.ebuild:
+  clean old python impl, add pypy3 support
 
   24 Oct 2014; Anthony G. Basile <blueness@gentoo.org> cov-core-1.7.ebuild:
   Keyword ~ppc ~ppc64, bug #525562

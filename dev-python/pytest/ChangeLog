@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.109 2014/11/11 11:14:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.110 2014/11/19 15:10:46 idella4 Exp $
+
+  19 Nov 2014; Ian Delaney <idella4@gentoo.org> pytest-2.6.1.ebuild,
+  pytest-2.6.4.ebuild:
+  Add pypy3 support, dep for doc build
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pytest-2.6.3.ebuild:
   Stable for ia64, wrt bug #524416

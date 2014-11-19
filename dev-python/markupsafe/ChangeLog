@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markupsafe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.73 2014/11/02 09:05:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.74 2014/11/19 15:02:22 idella4 Exp $
+
+  19 Nov 2014; Ian Delaney <idella4@gentoo.org> markupsafe-0.23.ebuild:
+  Add pypy3 support
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> markupsafe-0.23.ebuild:
   Stable for alpha, wrt bug #524302

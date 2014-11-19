@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest-cov
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-cov/ChangeLog,v 1.9 2014/10/24 14:37:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-cov/ChangeLog,v 1.10 2014/11/19 15:28:42 idella4 Exp $
+
+  19 Nov 2014; Ian Delaney <idella4@gentoo.org> pytest-cov-1.6.ebuild:
+  clean old python impl, add pypy3 support
 
   24 Oct 2014; Anthony G. Basile <blueness@gentoo.org> pytest-cov-1.6.ebuild:
   Keyword ~ppc ~ppc64, bug #525562

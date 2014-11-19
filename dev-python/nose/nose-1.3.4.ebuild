@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.3.4.ebuild,v 1.9 2014/11/11 11:14:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.3.4.ebuild,v 1.10 2014/11/19 15:14:59 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy pypy3 )
 inherit distutils-r1
 
 DESCRIPTION="A unittest extension offering automatic test suite discovery and easy test authoring"
