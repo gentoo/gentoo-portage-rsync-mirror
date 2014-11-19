@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gnake
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnake/ChangeLog,v 1.8 2009/12/24 12:53:26 volkmar Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnake/ChangeLog,v 1.9 2014/11/19 06:12:36 mr_bones_ Exp $
+
+  19 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org> gnake-0.94b.ebuild:
+  build with ncurses[tinfo] (bug #529750)
 
   24 Dec 2009; Mounir Lamouri <volkmar@gentoo.org> gnake-0.94b.ebuild:
   Stable on ppc, fix bug 289156
@@ -30,4 +33,3 @@
   +gnake-0.94b.ebuild:
   Initial import. Ebuild by Adrian Fruehwirth <adrian.fruehwirth@gmx.at>.
   Closing bug #107178.
-
