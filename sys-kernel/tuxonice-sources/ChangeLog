@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.208 2014/11/09 03:46:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.209 2014/11/19 02:03:49 floppym Exp $
+
+*tuxonice-sources-3.10.60 (19 Nov 2014)
+*tuxonice-sources-3.14.24 (19 Nov 2014)
+
+  19 Nov 2014; Mike Gilbert <floppym@gentoo.org>
+  +tuxonice-sources-3.10.60.ebuild, +tuxonice-sources-3.14.24.ebuild:
+  Version bumps by Arfrever.
 
 *tuxonice-sources-3.16.7 (09 Nov 2014)
 *tuxonice-sources-3.10.59 (09 Nov 2014)
