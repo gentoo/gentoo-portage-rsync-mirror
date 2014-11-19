@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16170 2014/11/18 21:34:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16171 2014/11/19 05:32:53 zerochaos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -208,10 +208,6 @@ dev-perl/DateTime-Format-DateManip
 # since many years, unlikely to work with uptodate subversion
 # Masked for removal in 30 days
 dev-perl/SVN-Mirror
-
-# Rick Farina <zerochaos@gentoo.org> (19 Oct 2014)
-# Masked for removal on 19 Nov 2014, use sys-apps/hwids instead.
-net-misc/ieee-oui
 
 # Markos Chandras <18 Oct 2014>
 # Not quite ready yet. Reverse deps seem to be broken
