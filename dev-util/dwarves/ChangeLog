@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/dwarves
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.19 2013/09/05 18:40:36 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.20 2014/11/19 05:25:50 flameeyes Exp $
+
+*dwarves-1.10_p20140618 (19 Nov 2014)
+
+  19 Nov 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  +dwarves-1.10_p20140618.ebuild, -dwarves-1.10-r1.ebuild, -dwarves-1.9.ebuild,
+  dwarves-9999.ebuild:
+  Remove old versions that fail to build; add a new snapsot and update the live
+  ebuild to support Python properly and point to the right GIT repository.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> dwarves-1.10-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

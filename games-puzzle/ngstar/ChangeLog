@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/ngstar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ChangeLog,v 1.10 2012/07/21 20:33:46 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ChangeLog,v 1.11 2014/11/19 05:01:17 mr_bones_ Exp $
+
+  19 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  files/ngstar-2.1.8-ldflags.patch, ngstar-2.1.8-r2.ebuild:
+  build with ncurses[tinfo] (bug #529784)
 
   21 Jul 2012; Tupone Alfredo <tupone@gentoo.org> ngstar-2.1.8-r2.ebuild,
   +files/ngstar-2.1.8-gcc47.patch:
@@ -45,4 +49,3 @@
 
   11 Apr 2006; <Tupone@gentoo.org> +metadata.xml, +ngstar-2.1.8.ebuild:
   Initial import. Ebuild submitted by Alexandru Toma, bug #66294
-
