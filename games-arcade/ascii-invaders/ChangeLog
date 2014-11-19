@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/ascii-invaders
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ascii-invaders/ChangeLog,v 1.17 2009/12/19 21:10:23 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ascii-invaders/ChangeLog,v 1.18 2014/11/19 03:27:35 mr_bones_ Exp $
+
+  19 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  ascii-invaders-0.1b.ebuild:
+  build with ncurses[tinfo] (bug #529802)
 
   19 Dec 2009; Fabian Groffen <grobian@gentoo.org>
   ascii-invaders-0.1b.ebuild:
@@ -59,4 +63,3 @@
   23 Jul 2003; Tavis Ormandy <taviso@gentoo.org> ascii-invaders-0.1b.ebuild,
   metadata.xml:
   initial import
-

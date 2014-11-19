@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/stardork
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stardork/ChangeLog,v 1.12 2013/01/30 22:48:15 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stardork/ChangeLog,v 1.13 2014/11/19 03:06:58 mr_bones_ Exp $
+
+  19 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org> stardork-0.7.ebuild:
+  build with ncurses[tinfo] (bug #529738)
 
   30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -stardork-0.6.ebuild:
   old

@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.257 2014/11/18 14:54:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.258 2014/11/19 03:04:50 patrick Exp $
+
+  19 Nov 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflags from metadata.xml
 
   18 Nov 2014; Tim Harder <radhermit@gentoo.org> -nfs-utils-1.1.4-r1.ebuild,
   -nfs-utils-1.1.5.ebuild, -nfs-utils-1.2.1.ebuild, -nfs-utils-1.2.2-r2.ebuild,

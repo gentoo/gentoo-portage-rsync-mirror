@@ -3,7 +3,7 @@
 @@ -1,5 +1,5 @@
  
 -LDFLAGS = -lncurses
-+LDLIBS = -lncurses
++LDLIBS := $(shell pkg-config ncurses --libs)
  
  aop: aop.c
  
