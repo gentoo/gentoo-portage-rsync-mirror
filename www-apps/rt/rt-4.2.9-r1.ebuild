@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.9-r1.ebuild,v 1.1 2014/11/18 20:25:29 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.9-r1.ebuild,v 1.2 2014/11/19 15:40:10 titanofold Exp $
 
 EAPI=5
 
@@ -193,8 +193,8 @@ pkg_setup() {
 src_prepare() {
 	# add Gentoo-specific layout
 	cat "${FILESDIR}"/config.layout-gentoo >> config.layout
-	sed -e "s|PREFIX|${D}/${MY_HOSTROOTDIR}/${PF}|g" \
-		-e "s|HTMLDIR|${D}/${MY_HTDOCSDIR}|g" \
+	sed -e "s|PREFIX|${ED}/${MY_HOSTROOTDIR}/${PF}|g" \
+		-e "s|HTMLDIR|${ED}/${MY_HTDOCSDIR}|g" \
 		-e 's|/\+|/|g' \
 		-i ./config.layout || die
 
@@ -259,17 +259,15 @@ src_install() {
 	webapp_src_preinst
 	emake install
 
-	dodoc "${S}"/docs/UPGRADING*
-	dodoc "${S}"/docs/*.pod
-	dodoc "${S}"/docs/network-diagram.svg
-	cp -R "${S}"/docs/customizing/ "${D}"/usr/share/doc/"${P}"/
-	cp -R "${S}"/docs/extending/ "${D}"/usr/share/doc/"${P}"/
+	dodoc -r docs
+	# Disable compression because `perldoc` doesn't decompress transparently
+	docompress -x /usr/share/doc
 
 	# make sure we don't clobber existing site configuration
-	rm -f "${D}"/${MY_HOSTROOTDIR}/${PF}/etc/RT_SiteConfig.pm
+	rm -f "${ED}"/${MY_HOSTROOTDIR}/${PF}/etc/RT_SiteConfig.pm
 
 	# fix paths
-	find "${D}" -type f -print0 | xargs -0 sed -i -e "s:${D}::g"
+	find "${ED}" -type f -print0 | xargs -0 sed -i -e "s:${ED}::g"
 
 	# copy upgrade files
 	insinto "${MY_HOSTROOTDIR}/${PF}"
@@ -278,9 +276,9 @@ src_install() {
 	if use lighttpd ; then
 		newinitd "${FILESDIR}"/${PN}.init.d.2 ${PN}
 		newconfd "${FILESDIR}"/${PN}.conf.d.2 ${PN}
-		sed -i -e "s/@@PF@@/${PF}/g" "${D}"/etc/conf.d/${PN} || die
+		sed -i -e "s/@@PF@@/${PF}/g" "${ED}"/etc/conf.d/${PN} || die
 	else
-		doins "${FILESDIR}"/{rt_apache2_fcgi.conf,rt_apache2.conf}
+		doins "${FILESDIR}"/rt_apache2{,_fcgi}.conf
 	fi
 
 	# require the web server's permissions
