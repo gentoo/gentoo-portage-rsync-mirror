@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.528 2014/10/05 15:11:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.529 2014/11/19 09:59:50 polynomial-c Exp $
+
+  19 Nov 2014; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
+  Removed a3li as maintainer.
 
   05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> phpmyadmin-4.1.14.3.ebuild:
   Stable for ppc, wrt bug #520142

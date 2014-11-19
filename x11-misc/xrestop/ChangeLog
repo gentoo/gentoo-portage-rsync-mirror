@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xrestop
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.28 2007/05/30 16:58:19 armin76 Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.29 2014/11/19 09:54:39 jer Exp $
+
+  19 Nov 2014; Jeroen Roovers <jer@gentoo.org> xrestop-0.4.ebuild,
+  +files/xrestop-0.4-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #529782).
 
   30 May 2007; Raúl Porcel <armin76@gentoo.org> xrestop-0.4.ebuild:
   alpha stable wrt #157780

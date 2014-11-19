@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>web-apps</herd>
 	<maintainer>
-		<email>a3li@gentoo.org</email>
-		<name>Alex Legler</name>
-	</maintainer>
-	<maintainer>
 		<email>jmbsvicetto@gentoo.org</email>
 		<name>Jorge Manuel B. S. Vicetto</name>
 	</maintainer>

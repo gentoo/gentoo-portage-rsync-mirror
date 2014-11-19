@@ -6,6 +6,10 @@
 		<email>eric-f.garioud@wanadoo.fr</email>
 		<name>Eric F. GARIOUD</name>
 	</maintainer>
+	<maintainer>
+		<email>harold@alum.mit.edu</email>
+		<name>Harold Naparst</name>
+	</maintainer>
 	<use>
 		<flag name='bfsonly'>BFS by itslef vs The full ck patchset</flag>
 		<flag name='experimental'>Allow experimental code. Can break or degrade performances. (UNSUPPORTED)</flag>

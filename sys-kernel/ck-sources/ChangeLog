@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.237 2014/11/19 06:17:16 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.238 2014/11/19 09:39:02 dlan Exp $
+
+  19 Nov 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
+  add Harold Naparst as co-maintainer
 
 *ck-sources-3.17.3 (19 Nov 2014)
 

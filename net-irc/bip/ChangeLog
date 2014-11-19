@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.26 2012/01/29 16:50:45 a3li Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.27 2014/11/19 09:57:55 polynomial-c Exp $
+
+  19 Nov 2014; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
+  Moved package to maintainer-needed.
 
   29 Jan 2012; Alex Legler <a3li@gentoo.org> -bip-0.8.8.ebuild:
   removing vulnerable version
