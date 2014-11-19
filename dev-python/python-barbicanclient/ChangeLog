@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/python-barbicanclient
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-barbicanclient/ChangeLog,v 1.1 2014/11/18 23:10:02 prometheanfire Exp $
+
+*python-barbicanclient-3.0.1 (18 Nov 2014)
+
+  18 Nov 2014; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +python-barbicanclient-3.0.1.ebuild:
+  adding for cinder
