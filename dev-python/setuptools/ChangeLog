@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.244 2014/10/19 19:04:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.245 2014/11/19 15:00:09 idella4 Exp $
+
+  19 Nov 2014; Ian Delaney <idella4@gentoo.org> setuptools-7.0.ebuild:
+  Add pypy3 support
 
 *setuptools-7.0 (19 Oct 2014)
 
