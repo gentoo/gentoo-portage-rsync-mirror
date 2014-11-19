@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.40 2014/05/13 04:18:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.41 2014/11/19 11:20:08 jer Exp $
+
+  19 Nov 2014; Jeroen Roovers <jer@gentoo.org> metagen-0.6.2-r1.ebuild:
+  Stable for HPPA (bug #529556).
 
   13 May 2014; Mike Gilbert <floppym@gentoo.org> metagen-0.6.2-r1.ebuild,
   metagen-9999.ebuild:
