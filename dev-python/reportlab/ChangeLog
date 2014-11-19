@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.106 2014/08/10 21:20:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.107 2014/11/19 20:57:16 maekke Exp $
+
+  19 Nov 2014; Markus Meier <maekke@gentoo.org> reportlab-2.6.ebuild:
+  arm stable, bug #484698
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> reportlab-2.5-r1.ebuild,
   reportlab-2.5.ebuild, reportlab-2.6.ebuild, reportlab-2.7.ebuild,

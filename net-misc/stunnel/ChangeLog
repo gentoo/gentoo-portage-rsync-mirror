@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.188 2014/11/19 11:24:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.189 2014/11/19 20:59:08 maekke Exp $
+
+  19 Nov 2014; Markus Meier <maekke@gentoo.org> stunnel-5.07.ebuild:
+  arm stable, bug #528004
 
   19 Nov 2014; Jeroen Roovers <jer@gentoo.org> stunnel-5.07.ebuild:
   Stable for HPPA (bug #528004).

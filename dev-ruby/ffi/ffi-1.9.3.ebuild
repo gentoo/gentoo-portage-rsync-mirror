@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.9.3.ebuild,v 1.11 2014/09/19 09:28:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.9.3.ebuild,v 1.12 2014/11/19 21:00:09 maekke Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ SRC_URI="http://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${PN}-git-${PV}.t
 IUSE=""
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 
 RDEPEND+=" virtual/libffi"
 DEPEND+=" virtual/libffi"
