@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.143 2014/01/18 19:29:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.144 2014/11/19 10:32:20 polynomial-c Exp $
+
+*groff-1.22.3 (19 Nov 2014)
+
+  19 Nov 2014; Lars Wendler <polynomial-c@gentoo.org> +groff-1.22.3.ebuild,
+  +files/groff-1.22.3-parallel-mom.patch:
+  Version bump. Dropped linguas_ja support as it requires reworked patches.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> groff-1.22.2.ebuild:
   Add arm64 love.
