@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ecdsa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.24 2014/10/31 23:31:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.25 2014/11/19 08:57:47 mgorny Exp $
+
+*ecdsa-0.11-r1 (19 Nov 2014)
+
+  19 Nov 2014; Michał Górny <mgorny@gentoo.org> +ecdsa-0.11-r1.ebuild:
+  Use correct upstream-generated tarball, reported by mimi_vx.
 
   31 Oct 2014; Ian Delaney <idella4@gentoo.org> ecdsa-0.11.ebuild:
   add missed alpha keyword to -0.11
