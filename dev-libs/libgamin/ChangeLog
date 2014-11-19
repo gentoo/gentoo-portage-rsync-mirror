@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgamin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.52 2014/04/28 17:33:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.53 2014/11/19 11:34:06 jer Exp $
+
+  19 Nov 2014; Jeroen Roovers <jer@gentoo.org> libgamin-0.1.10-r5.ebuild:
+  Stable for HPPA (bug #529418).
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> libgamin-0.1.10-r5.ebuild:
   Replace multilib_build_binaries with multilib_is_native_abi. The two are

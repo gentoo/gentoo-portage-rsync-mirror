@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.40 2014/08/21 11:29:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.41 2014/11/19 11:33:11 ago Exp $
+
+  19 Nov 2014; Agostino Sarubbo <ago@gentoo.org> gtest-1.7.0.ebuild:
+  Stable for ppc64, wrt bug #529822
 
   21 Aug 2014; Raúl Porcel <armin76@gentoo.org> gtest-1.7.0.ebuild:
   alpha/ia64/sparc stable wrt bug #513804
