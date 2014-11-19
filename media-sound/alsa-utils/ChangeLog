@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.377 2014/11/08 18:52:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.378 2014/11/19 19:16:08 vapier Exp $
+
+*alsa-utils-1.0.28-r1 (19 Nov 2014)
+
+  19 Nov 2014; Mike Frysinger <vapier@gentoo.org> +alsa-utils-1.0.28-r1.ebuild,
+  +files/alsa-utils-1.0.28-aplay-return.patch,
+  +files/alsa-utils-1.0.28-mixer-proto.patch,
+  +files/alsa-utils-1.0.28-monitor-proto.patch,
+  +files/alsa-utils-1.0.28-va-end.patch:
+  Add various fixes from upstream.
 
   08 Nov 2014; Samuli Suominen <ssuominen@gentoo.org> alsa-utils-1.0.28.ebuild:
   ppc/ppc64 stable wrt #522038
