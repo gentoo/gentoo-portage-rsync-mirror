@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/csharp-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/ChangeLog,v 1.14 2014/06/07 11:07:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/ChangeLog,v 1.15 2014/11/19 17:27:02 ulm Exp $
+
+  19 Nov 2014; Ulrich Müller <ulm@gentoo.org> csharp-mode-0.7.0-r1.ebuild,
+  +files/csharp-mode-0.7.0-emacs-24.4.patch:
+  Fix build failure with Emacs 24.4, bug 528374.
 
   07 Jun 2014; Ulrich Müller <ulm@gentoo.org> csharp-mode-0.7.0-r1.ebuild:
   Remove redundant NEED_EMACS assignment.
