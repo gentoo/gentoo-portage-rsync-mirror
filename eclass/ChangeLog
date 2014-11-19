@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1429 2014/11/18 23:31:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1431 2014/11/19 19:52:06 dilfridge Exp $
+
+  19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  Make calling perl-module_pkg_preinst trigger a real warning
+
+  19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  Make calling perl-module_pkg_setup trigger a real warning
 
   18 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
   Deprecate perl-module_pkg_setup and perl-module_pkg_preinst

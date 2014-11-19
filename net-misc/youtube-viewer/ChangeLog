@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/youtube-viewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.36 2014/11/01 21:25:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.37 2014/11/19 19:50:33 dilfridge Exp $
+
+  19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  youtube-viewer-3.0.9-r2.ebuild, youtube-viewer-3.1.0.ebuild,
+  youtube-viewer-3.1.1.ebuild:
+  Replace perl-module_pkg_preinst with perl_set_version
 
   01 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -youtube-viewer-3.0.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r2.ebuild,v 1.9 2014/11/17 23:24:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r2.ebuild,v 1.10 2014/11/19 19:48:31 dilfridge Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
@@ -180,7 +180,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	perl-module_pkg_preinst
+	perl_set_version
 	java-pkg-opt-2_pkg_preinst
 }
 

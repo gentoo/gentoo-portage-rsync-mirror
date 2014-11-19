@@ -109,7 +109,7 @@ state ebuild extends bash
 |check_version_h|get_KV_info|is_2_4_kernel|is_2_5_kernel|is_2_6_kernel\
 |kernel_supports_modules\
 |perl-module_src_prep|perl-module_src_compile|perl-module_src_test\
-|perl-module_src_install|perl-module_pkg_preinst\
+|perl-module_src_install\
 |perl-module_pkg_postinst|perl-module_pkg_prerm|perl-module_pkg_postrm\
 |perl_set_version|perl_delete_localpod|updatepod\
 |distutils_src_compile|distutils_src_install|distutils_pkg_postrm\

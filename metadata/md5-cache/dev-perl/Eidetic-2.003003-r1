@@ -9,5 +9,5 @@ LICENSE=Artistic
 RDEPEND=dev-lang/perl:=[-build(-)] >=app-admin/webapp-config-1.50.15
 SLOT=2.003003-r1
 SRC_URI=mirror://sourceforge/eidetic/Eidetic-2.003003.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	68740c92d292a4f8c0ae2636565aa9ad	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	eb358bdf6de22dd7240bd3e17214bc56	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=363302c7458cde8a8deb7ff9252fd47f

@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/linux-gpib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.30 2014/03/12 12:04:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.32 2014/11/19 19:47:48 dilfridge Exp $
+
+  19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  linux-gpib-3.2.20-r1.ebuild:
+  Replace perl-module_pkg_preinst with perl_set_version
+
+  19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  linux-gpib-3.2.20-r1.ebuild:
+  Replace perl-module_pkg_setup with perl_set_version
 
   12 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -files/linux-gpib-3.2.16-kernel-3.4-asm-includes.patch,

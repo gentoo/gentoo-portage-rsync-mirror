@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.649 2014/11/02 12:42:26 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.650 2014/11/19 19:41:40 tamiko Exp $
+
+*cups-2.0.1 (19 Nov 2014)
+
+  19 Nov 2014; Matthias Maier <tamiko@gentoo.org> +cups-2.0.1.ebuild,
+  +files/cups-2.0.1-fix-compilation.patch,
+  +files/cups-2.0.1-rename-systemd-service-files.patch, cups-2.0.0-r2.ebuild:
+  version bump
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> cups-1.7.5-r2.ebuild,
   cups-1.7.5.ebuild, cups-1.7.9999.ebuild, cups-2.0.0-r2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/Apache-Test-1.380.0-r1.ebuild,v 1.1 2014/08/24 12:41:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/Apache-Test-1.380.0-r1.ebuild,v 1.2 2014/11/19 19:31:11 dilfridge Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_TEST="skip"
 need_apache
 
 pkg_setup() {
-	perl-module_pkg_setup
+	perl_set_version
 }
 
 src_install() {

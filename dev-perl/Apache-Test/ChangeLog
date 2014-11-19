@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.100 2014/08/24 12:41:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.101 2014/11/19 19:31:11 dilfridge Exp $
+
+  19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  Apache-Test-1.380.0-r1.ebuild:
+  Replace perl-module_pkg_setup with perl_set_version
 
 *Apache-Test-1.380.0-r1 (24 Aug 2014)
 

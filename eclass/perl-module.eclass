@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.153 2014/11/18 23:31:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.155 2014/11/19 19:52:06 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -323,7 +323,7 @@ perl-module_src_install() {
 # Deprecated, to be removed. Where it is called, place a call to perl_set_version instead.
 perl-module_pkg_setup() {
 	debug-print-function $FUNCNAME "$@"
-	eqawarn "perl-modules.eclass: perl-module_pkg_setup is deprecated and will be removed. Please use perl_set_version instead."
+	ewarn "perl-modules.eclass: perl-module_pkg_setup is deprecated and will be removed. Please use perl_set_version instead."
 	perl_set_version
 }
 
@@ -334,7 +334,7 @@ perl-module_pkg_setup() {
 # Deprecated, to be removed. Where it is called, place a call to perl_set_version instead.
 perl-module_pkg_preinst() {
 	debug-print-function $FUNCNAME "$@"
-	eqawarn "perl-modules.eclass: perl-module_pkg_preinst is deprecated and will be removed. Please use perl_set_version instead."
+	ewarn "perl-modules.eclass: perl-module_pkg_preinst is deprecated and will be removed. Please use perl_set_version instead."
 	perl_set_version
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/libsolv-0.3.0.ebuild,v 1.5 2014/11/17 23:26:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/libsolv-0.3.0.ebuild,v 1.6 2014/11/19 19:36:05 dilfridge Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ S="${WORKDIR}/${P}/"
 
 pkg_setup() {
 	use python && python-any-r1_pkg_setup
-	use perl && perl-module_pkg_setup
+	use perl && perl_set_version
 	use ruby && ruby-ng_pkg_setup
 }
 

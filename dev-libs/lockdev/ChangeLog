@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/lockdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.25 2014/10/06 01:36:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.27 2014/11/19 19:49:24 dilfridge Exp $
+
+  19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  lockdev-1.0.3.1.2-r2.ebuild, lockdev-1.0.3.1.2-r3.ebuild:
+  Replace perl-module_pkg_preinst with perl_set_version
+
+  19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  lockdev-1.0.3.1.2-r2.ebuild, lockdev-1.0.3.1.2-r3.ebuild:
+  Replace perl-module_pkg_setup with perl_set_version
 
   06 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
   lockdev-1.0.3.1.2-r2.ebuild:

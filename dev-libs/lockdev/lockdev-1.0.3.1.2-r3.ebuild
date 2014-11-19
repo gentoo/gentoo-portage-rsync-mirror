@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/lockdev-1.0.3.1.2-r3.ebuild,v 1.9 2014/10/05 12:26:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/lockdev-1.0.3.1.2-r3.ebuild,v 1.11 2014/11/19 19:49:24 dilfridge Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 PERL_S=./LockDev
 
 pkg_setup() {
-	use perl && perl-module_pkg_setup
+	use perl && perl_set_version
 }
 
 src_prepare() {
@@ -100,5 +100,5 @@ multilib_src_install_all() {
 }
 
 pkg_preinst() {
-	use perl && perl-module_pkg_preinst
+	use perl && perl_set_version
 }

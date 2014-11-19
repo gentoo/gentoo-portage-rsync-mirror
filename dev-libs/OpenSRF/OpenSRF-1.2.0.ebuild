@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-1.2.0.ebuild,v 1.1 2012/11/12 21:01:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-1.2.0.ebuild,v 1.2 2014/11/19 19:36:54 dilfridge Exp $
 
 EAPI=5
 inherit eutils multilib flag-o-matic apache-module autotools perl-module
@@ -41,7 +41,7 @@ need_apache2_2
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	perl-module_pkg_setup
+	perl_set_version
 }
 
 src_prepare() {
