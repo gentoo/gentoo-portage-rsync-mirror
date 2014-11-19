@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-13.2.2.ebuild,v 1.5 2014/11/03 11:05:51 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-13.2.4.ebuild,v 1.1 2014/11/19 00:38:54 mschiff Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ RESTRICT="mirror"
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="acl clientonly +director ipv6 logwatch mysql ndmp postgres python qt4
+IUSE="acl clientonly +director fastlz ipv6 logwatch mysql ndmp postgres python qt4
 		readline scsi-crypto sql-pooling +sqlite3 ssl static +storage-daemon tcpd
 		vim-syntax X"
 
@@ -34,6 +34,7 @@ DEPEND="
 		dev-qt/qtsvg:4
 		x11-libs/qwt:5
 	)
+	fastlz? ( dev-libs/bareos-fastlzlib )
 	logwatch? ( sys-apps/logwatch )
 	tcpd? ( sys-apps/tcp-wrappers )
 	readline? ( sys-libs/readline )
@@ -46,10 +47,10 @@ DEPEND="
 	)
 	!static? (
 		acl? ( virtual/acl )
-		sys-libs/zlib
 		dev-libs/lzo
-		sys-libs/ncurses
 		ssl? ( dev-libs/openssl )
+		sys-libs/ncurses
+		sys-libs/zlib
 	)
 	python? ( ${PYTHON_DEPS} )
 	"
@@ -155,6 +156,7 @@ src_configure() {
 		$(use_enable !readline conio) \
 		$(use_enable scsi-crypto) \
 		$(use_enable sql-pooling) \
+		$(use_with fastlz) \
 		$(use_with mysql) \
 		$(use_with postgres postgresql) \
 		$(use_with python) \

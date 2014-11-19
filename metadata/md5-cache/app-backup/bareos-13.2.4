@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst prepare setup unpack
+DEPEND=!app-backup/bacula dev-libs/gmp !clientonly? ( postgres? ( virtual/postgresql[threads] ) mysql? ( virtual/mysql ) sqlite3? ( dev-db/sqlite:3 ) director? ( virtual/mta ) ) qt4? ( dev-qt/qtsvg:4 x11-libs/qwt:5 ) fastlz? ( dev-libs/bareos-fastlzlib ) logwatch? ( sys-apps/logwatch ) tcpd? ( sys-apps/tcp-wrappers ) readline? ( sys-libs/readline ) static? ( acl? ( virtual/acl[static-libs] ) sys-libs/zlib[static-libs] dev-libs/lzo[static-libs] sys-libs/ncurses[static-libs] ssl? ( dev-libs/openssl[static-libs] ) ) !static? ( acl? ( virtual/acl ) dev-libs/lzo ssl? ( dev-libs/openssl ) sys-libs/ncurses sys-libs/zlib ) python? ( >=dev-lang/python-2.7.5-r2:2.7[threads] dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] )
+DESCRIPTION=Featureful client/server network backup suite
+EAPI=5
+HOMEPAGE=http://www.bareos.org/
+IUSE=acl clientonly +director fastlz ipv6 logwatch mysql ndmp postgres python qt4 readline scsi-crypto sql-pooling +sqlite3 ssl static +storage-daemon tcpd vim-syntax X python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=AGPL-3
+RDEPEND=!app-backup/bacula dev-libs/gmp !clientonly? ( postgres? ( virtual/postgresql[threads] ) mysql? ( virtual/mysql ) sqlite3? ( dev-db/sqlite:3 ) director? ( virtual/mta ) ) qt4? ( dev-qt/qtsvg:4 x11-libs/qwt:5 ) fastlz? ( dev-libs/bareos-fastlzlib ) logwatch? ( sys-apps/logwatch ) tcpd? ( sys-apps/tcp-wrappers ) readline? ( sys-libs/readline ) static? ( acl? ( virtual/acl[static-libs] ) sys-libs/zlib[static-libs] dev-libs/lzo[static-libs] sys-libs/ncurses[static-libs] ssl? ( dev-libs/openssl[static-libs] ) ) !static? ( acl? ( virtual/acl ) dev-libs/lzo ssl? ( dev-libs/openssl ) sys-libs/ncurses sys-libs/zlib ) python? ( >=dev-lang/python-2.7.5-r2:2.7[threads] dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] ) !clientonly? ( storage-daemon? ( sys-block/mtx app-arch/mt-st ) ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
+REQUIRED_USE=static? ( clientonly ) python? ( python_targets_python2_7 )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/bareos/bareos/archive/Release/13.2.4.tar.gz -> bareos-13.2.4.tar.gz
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	qmake-utils	9e0174de733aecba0a7e66b2b01841d2	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_md5_=80ce14dfcdd6626ccedcf94b8c642e66

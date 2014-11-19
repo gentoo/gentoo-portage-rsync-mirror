@@ -1,6 +1,15 @@
 # ChangeLog for app-backup/bareos
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/ChangeLog,v 1.12 2014/11/03 11:05:51 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/ChangeLog,v 1.13 2014/11/19 00:38:54 mschiff Exp $
+
+*bareos-14.2.1 (19 Nov 2014)
+*bareos-13.2.4 (19 Nov 2014)
+
+  19 Nov 2014; Marc Schiffbauer <mschiff@gentoo.org> -bareos-13.2.2.ebuild,
+  -bareos-13.2.3.ebuild, +bareos-13.2.4.ebuild, +bareos-14.2.1.ebuild,
+  metadata.xml:
+  Bumped stable (13.2.4), added beta ebuild (14.2.1), removed old version.
+  Fixes #528800.
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   bareos-12.4.5-r1.ebuild, bareos-13.2.2.ebuild, bareos-13.2.3.ebuild,

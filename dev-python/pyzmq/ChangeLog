@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.52 2014/10/30 09:36:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.53 2014/11/19 00:47:39 chutzpah Exp $
+
+*pyzmq-14.4.1 (19 Nov 2014)
+
+  19 Nov 2014; Patrick McLean <chutzpah@gentoo.org> +pyzmq-14.4.1.ebuild:
+  Version bump.
 
   30 Oct 2014; Ian Delaney <idella4@gentoo.org> pyzmq-14.4.0.ebuild:
   add dep for doc build, drop keywords ia64 mips accordingly, fixes Bug #527282
