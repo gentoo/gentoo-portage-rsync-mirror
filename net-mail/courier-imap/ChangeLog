@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.222 2014/11/18 13:42:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.223 2014/11/19 14:10:12 jer Exp $
+
+  19 Nov 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix e-mail address.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/courier-imap-4.0.6-r1-courier-imapd-ssl.rc6,
