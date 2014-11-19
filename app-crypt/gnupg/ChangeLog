@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.558 2014/11/09 01:42:34 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.559 2014/11/19 21:07:53 k_f Exp $
+
+  19 Nov 2014; Kristian Fiskerstrand <k_f@gentoo.org> gnupg-2.1.0.ebuild:
+  Update GnuPG 2.1 deps when static USE to match general requirements
 
   09 Nov 2014; Kristian Fiskerstrand <k_f@gentoo.org> gnupg-2.1.0.ebuild:
   Make sure to properly escape variables for elog messages
