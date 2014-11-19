@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/spew
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/spew/ChangeLog,v 1.8 2014/11/19 13:22:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/spew/ChangeLog,v 1.9 2014/11/19 13:40:03 blueness Exp $
+
+  19 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/fix-format-security.patch, spew-1.0.8-r1.ebuild:
+  Fix build with -Werror=format-security, bug #520984
 
 *spew-1.0.8-r1 (19 Nov 2014)
 
