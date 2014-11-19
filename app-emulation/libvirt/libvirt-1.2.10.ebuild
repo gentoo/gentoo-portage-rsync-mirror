@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.10.ebuild,v 1.2 2014/11/17 20:02:58 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.10.ebuild,v 1.3 2014/11/19 08:19:38 tamiko Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://libvirt.org/libvirt.git"
 	SRC_URI=""
 	KEYWORDS=""
-	SLOT="0/${PV}"
+	SLOT="0"
 else
 	# Versions with 4 numbers are stable updates:
 	if [[ ${PV} =~ ^[0-9]+(\.[0-9]+){3} ]]; then
@@ -24,7 +24,7 @@ else
 		SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz"
 	fi
 	KEYWORDS="~amd64 ~x86"
-	SLOT="0"
+	SLOT="0/${PV}"
 fi
 S="${WORKDIR}/${P%_rc*}"
 

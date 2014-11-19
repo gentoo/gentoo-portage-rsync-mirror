@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.389 2014/11/17 20:02:58 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.390 2014/11/19 08:19:38 tamiko Exp $
+
+  19 Nov 2014; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.10.ebuild,
+  libvirt-1.2.9.1.ebuild, libvirt-9999.ebuild:
+  fix subslots :-/
 
 *libvirt-1.2.9.1 (17 Nov 2014)
 
