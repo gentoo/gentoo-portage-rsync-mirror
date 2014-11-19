@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.144 2014/11/01 18:34:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.145 2014/11/18 23:39:33 dilfridge Exp $
+
+  18 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  dvdrip-0.98.11-r2.ebuild:
+  Replace perl-module_pkg_setup with perl_set_version
 
   01 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   dvdrip-0.98.11-r2.ebuild:

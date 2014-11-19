@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11-r2.ebuild,v 1.2 2014/11/01 18:34:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11-r2.ebuild,v 1.3 2014/11/18 23:39:33 dilfridge Exp $
 
 EAPI=5
 inherit eutils flag-o-matic perl-module
@@ -43,7 +43,7 @@ pkg_setup() {
 	filter-flags -ftracer
 	export SKIP_UNPACK_REQUIRED_MODULES=1 #255269
 
-	perl-module_pkg_setup
+	perl_set_version
 }
 
 src_prepare() {

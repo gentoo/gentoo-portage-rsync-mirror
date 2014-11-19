@@ -9,5 +9,5 @@ LICENSE=Artistic
 RDEPEND=>=dev-perl/data-buffer-0.04 virtual/perl-MIME-Base64 virtual/perl-Math-BigInt virtual/perl-IO-Compress dev-perl/libwww-perl dev-perl/URI dev-perl/crypt-dsa dev-perl/crypt-rsa dev-perl/File-HomeDir dev-perl/crypt-idea virtual/perl-Digest-MD5 dev-perl/crypt-des-ede3 dev-perl/Digest-SHA1 dev-perl/Crypt-Rijndael dev-perl/Crypt-CAST5_PP dev-perl/Crypt-RIPEMD160 dev-perl/Crypt-Blowfish >=dev-perl/Crypt-Twofish-2.00 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/B/BT/BTROTT/Crypt-OpenPGP-1.06.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	647e704e21d89e228f3d85cea324d220	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	68740c92d292a4f8c0ae2636565aa9ad	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=fec6cf4d87a8d8cff285feba61978d7a

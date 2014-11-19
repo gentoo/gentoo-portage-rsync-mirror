@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.7-r1.ebuild,v 1.2 2014/11/16 20:25:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.7-r1.ebuild,v 1.3 2014/11/18 23:36:10 dilfridge Exp $
 
 EAPI=5
 
@@ -57,7 +57,7 @@ pkg_setup() {
 		python_pkg_setup
 	fi
 	if use perl; then
-		perl-module_pkg_setup
+		perl_set_version
 	fi
 }
 

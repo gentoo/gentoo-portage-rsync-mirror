@@ -8,5 +8,5 @@ LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=app-misc/ca-certificates >=dev-perl/libwww-perl-6.20.0 >=dev-perl/Net-HTTP-6 >=dev-perl/IO-Socket-SSL-1.540.0 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MS/MSCHILLI/LWP-Protocol-https-6.06.tar.gz http://dev.gentoo.org/~tove/distfiles/dev-perl/LWP-Protocol-https/LWP-Protocol-https_ca-cert-r1.patch.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	647e704e21d89e228f3d85cea324d220	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	68740c92d292a4f8c0ae2636565aa9ad	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=6715e380fb9b818f07f87131719c6643

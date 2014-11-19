@@ -7,5 +7,5 @@ IUSE=postfix ipv6 syslog
 LICENSE=MIT
 RDEPEND=>=dev-lang/perl-5.8.0 >=dev-perl/Net-DNS-0.690.0 virtual/perl-MIME-Base64 dev-perl/MailTools dev-perl/IPC-Shareable dev-perl/Socket6 dev-perl/Danga-Socket dev-perl/ParaDNS dev-perl/UNIVERSAL-isa ipv6? ( dev-perl/IO-Socket-INET6 ) syslog? ( virtual/perl-Sys-Syslog ) virtual/inetd dev-lang/perl[-build(-)]
 SLOT=0
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-app	8886390eb1ac390b27350184fd3eb32f	perl-module	647e704e21d89e228f3d85cea324d220	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	git-2	2027b81a576527fa16bece425941e094	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-app	8886390eb1ac390b27350184fd3eb32f	perl-module	68740c92d292a4f8c0ae2636565aa9ad	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=185c1a055341e8e6f1eb3d8ef1bd13a6

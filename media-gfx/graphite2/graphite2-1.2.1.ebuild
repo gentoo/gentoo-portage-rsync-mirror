@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.1.ebuild,v 1.17 2014/11/16 22:56:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.1.ebuild,v 1.18 2014/11/18 23:41:35 dilfridge Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ PATCHES=(
 )
 
 pkg_setup() {
-	use perl && perl-module_pkg_setup
+	use perl && perl_set_version
 	use test && python-any-r1_pkg_setup
 }
 
