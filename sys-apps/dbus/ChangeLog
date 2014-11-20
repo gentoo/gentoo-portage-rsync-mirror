@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.456 2014/11/16 21:25:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.457 2014/11/20 14:28:30 klausman Exp $
+
+  20 Nov 2014; Tobias Klausmann <klausman@gentoo.org> dbus-1.8.10.ebuild:
+  Stable on alpha, bug 528900
 
   16 Nov 2014; Michał Górny <mgorny@gentoo.org> dbus-1.8.10.ebuild:
   Fake expat check for configure, bug #529546. Add missing ||die calls.

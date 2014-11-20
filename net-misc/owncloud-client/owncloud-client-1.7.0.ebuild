@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.7.0.ebuild,v 1.1 2014/11/12 13:58:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.7.0.ebuild,v 1.2 2014/11/20 14:03:38 voyageur Exp $
 
 EAPI=5
 
@@ -30,7 +30,6 @@ RDEPEND=">=dev-db/sqlite-3.4:3
 		dev-qt/qtdbus:4
 		dev-qt/qtgui:4
 		dev-qt/qtsql:4
-		dev-qt/qttest:4
 		dev-qt/qtwebkit:4
 	)
 	qt5? (
@@ -39,8 +38,8 @@ RDEPEND=">=dev-db/sqlite-3.4:3
 		dev-qt/qtcore:5
 		dev-qt/qtdbus:5
 		dev-qt/qtgui:5
+		dev-qt/qtquickcontrols:5
 		dev-qt/qtsql:5
-		dev-qt/qttest:5
 		dev-qt/qtwebkit:5[printsupport]
 	)
 	samba? ( >=net-fs/samba-3.5 )
@@ -52,7 +51,11 @@ DEPEND="${RDEPEND}
 		dev-texlive/texlive-latexextra
 		virtual/latex-base
 	)
-	test? ( dev-util/cmocka )"
+	test? (
+		dev-util/cmocka
+		qt4? ( dev-qt/qttest:4 )
+		qt5? ( dev-qt/qttest:5 )
+	)"
 
 S=${WORKDIR}/${MY_P}
 
