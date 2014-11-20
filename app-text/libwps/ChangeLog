@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.55 2014/10/10 20:19:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.56 2014/11/20 13:52:49 pacho Exp $
+
+  20 Nov 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  We are really not taking care about this for a long time
 
   10 Oct 2014; Markus Meier <maekke@gentoo.org> libwps-0.3.0.ebuild:
   add ~arm, bug #520692

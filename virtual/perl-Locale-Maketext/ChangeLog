@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Locale-Maketext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Locale-Maketext/ChangeLog,v 1.2 2014/09/21 11:09:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Locale-Maketext/ChangeLog,v 1.3 2014/11/20 13:55:02 blueness Exp $
+
+  20 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  perl-Locale-Maketext-1.230.0-r1.ebuild, perl-Locale-Maketext-1.250.0.ebuild:
+  Keyword ~mips ~ppc64, bug #529904
 
   21 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   perl-Locale-Maketext-1.230.0-r1.ebuild:

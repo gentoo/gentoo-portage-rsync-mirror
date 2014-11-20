@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/locale-maketext-lexicon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/ChangeLog,v 1.95 2014/11/20 13:01:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/ChangeLog,v 1.96 2014/11/20 13:52:15 blueness Exp $
+
+  20 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  locale-maketext-lexicon-0.960.0-r1.ebuild:
+  Keyword ~mips, bug #529904
 
   20 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
   locale-maketext-lexicon-0.960.0-r1.ebuild:

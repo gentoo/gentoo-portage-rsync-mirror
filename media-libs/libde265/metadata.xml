@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>video</herd>
+	<maintainer>
+		<email>dlan@gentoo.org</email>
+		<name>Yixun Lan</name>
+	</maintainer>
+	<maintainer>
+		<email>media-video@gentoo.org</email>
+	</maintainer>
+<longdescription lang="en">
+</longdescription>
+	<use>
+		<flag name='tools'>Install addtional tools, require USE=qt4 or qt5</flag>
+	</use>
+</pkgmetadata>

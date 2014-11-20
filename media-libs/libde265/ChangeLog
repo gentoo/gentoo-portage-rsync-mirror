@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libde265
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libde265/ChangeLog,v 1.1 2014/11/20 13:50:04 dlan Exp $
+
+*libde265-9999 (20 Nov 2014)
+*libde265-0.9 (20 Nov 2014)
+
+  20 Nov 2014; Yixun Lan <dlan@gentoo.org> +libde265-0.9.ebuild,
+  +libde265-9999.ebuild, +metadata.xml:
+  initial ebuild added by me, bug 528684
+

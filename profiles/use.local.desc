@@ -3617,6 +3617,7 @@ media-libs/libcanberra:sound - Install x11-themes/sound-theme-freedesktop to get
 media-libs/libcanberra:tdb - Enables Trivial Database support for caching purposes.
 media-libs/libchamplain:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/libchamplain:vala - Generate bindings for dev-lang/vala
+media-libs/libde265:tools - Install addtional tools, require USE=qt4 or qt5
 media-libs/libextractor:archive - Enable archive support using app-arch/libarchive
 media-libs/libextractor:gsf - Enable OLE2 (MS Office) plug-in support using gnome-base/libgsf
 media-libs/libextractor:magic - Enable magic support using sys-apps/file

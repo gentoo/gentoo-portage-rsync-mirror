@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Locale-Maketext
 EAPI=5
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86 ~amd64-fbsd
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd
 RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/Locale-Maketext-1.250.0 ) !<perl-core/Locale-Maketext-1.250.0 !>perl-core/Locale-Maketext-1.250.0-r999
 SLOT=0
-_md5_=aac6d193e8573ca5db9a24fc67d84135
+_md5_=04682cb7260de79e7006d50b507c2b6a
