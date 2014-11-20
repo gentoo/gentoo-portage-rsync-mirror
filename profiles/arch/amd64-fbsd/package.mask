@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.mask,v 1.33 2014/11/20 01:52:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.mask,v 1.3 2014/11/20 01:51:03 pesa Exp $
 
 # Davide Pesavento <pesa@gentoo.org> (20 Nov 2014)
 # Qt4 multilib ebuilds, masked until dev-qt/qtchooser
@@ -29,8 +29,3 @@
 =dev-qt/qttranslations-4.8.6*
 =dev-qt/qtwebkit-4.8.6*
 =dev-qt/qtxmlpatterns-4.8.6*
-
-# Zac Medico <zmedico@gentoo.org> (09 Aug 2011)
-# Bug #377907 - Use package.mask for compatibility with PMS section 5.2.7, and
-# future versions of sys-apps/portage.
-<sys-devel/gcc-3.2

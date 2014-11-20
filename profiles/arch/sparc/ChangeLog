@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.234 2014/11/17 11:48:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.235 2014/11/20 01:54:27 pesa Exp $
+
+  20 Nov 2014; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Move Qt 4.8.6 mask from global package.mask to arch profiles.
 
   17 Nov 2014; Raúl Porcel <armin76@gentoo.org> package.mask:
   Mask sys-devel/kgcc64 since >=gcc-4.4 can compile 64bit kernels

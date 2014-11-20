@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.294 2014/11/18 19:33:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.295 2014/11/20 01:55:07 pesa Exp $
+
+  20 Nov 2014; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Move Qt 4.8.6 mask from global package.mask to arch profiles.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org> package.use.stable.mask:
   Test dependencies for sys-block/thin-provisioning-tools are marked stable
