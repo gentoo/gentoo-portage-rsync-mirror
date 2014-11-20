@@ -1,5 +1,5 @@
 DEFINED_PHASES=prepare
-DEPEND=sys-libs/zlib >=sys-libs/ncurses-5.0
+DEPEND=sys-libs/zlib >=sys-libs/ncurses-5.0 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A curses-based ascii-art editor
 EAPI=5
 HOMEPAGE=http://aewan.sourceforge.net/
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/zlib >=sys-libs/ncurses-5.0
 SLOT=0
 SRC_URI=mirror://sourceforge/aewan/aewan-1.0.01.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=83be04ed281707d2966469ce4ae4af43
+_eclasses_=autotools	7bcca47e6ac6bbfa251fe7e9483fcf67	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=1dd4d6f0ad3ec4815d5cb2e76c7a0660

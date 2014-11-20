@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monkeystudio/monkeystudio-1.9.0.4.ebuild,v 1.3 2013/03/02 21:06:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monkeystudio/monkeystudio-1.9.0.4.ebuild,v 1.4 2014/11/20 00:27:01 pesa Exp $
 
 EAPI=5
 LANGS="be es fr ru"
@@ -18,14 +18,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc plugins"
 
-RDEPEND="plugins? ( >=dev-qt/qtwebkit-4.7.0:4 )
-	>=dev-qt/qthelp-4.7.0:4
-	>=dev-qt/qtcore-4.7.0:4
-	>=dev-qt/qtgui-4.7.0:4
-	>=dev-qt/qtsql-4.7.0:4
-	x11-libs/qscintilla:="
+RDEPEND="
+	dev-qt/designer:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qthelp:4
+	dev-qt/qtsql:4
+	x11-libs/qscintilla:=
+	plugins? ( dev-qt/qtwebkit:4 )
+"
 DEPEND="${RDEPEND}
-	doc? ( >=app-doc/doxygen-1.5.8 )"
+	doc? ( >=app-doc/doxygen-1.5.8 )
+"
 
 PATCHES=( "${FILESDIR}/${P}-install.patch" )
 DOCS=( ChangeLog readme.txt )

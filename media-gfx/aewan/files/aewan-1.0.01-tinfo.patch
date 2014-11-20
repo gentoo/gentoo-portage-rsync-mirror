@@ -1,11 +1,15 @@
---- Makefile.in.orig	2014-11-02 23:19:58.714707465 +0300
-+++ Makefile.in	2014-11-02 23:20:20.482706904 +0300
-@@ -37,7 +37,7 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -13,9 +13,10 @@
  
- CC=@CC@
- CFLAGS=@CFLAGS@ -fno-strict-aliasing -Wall
--LIBS=@LIBS@
-+LIBS=@LIBS@ -ltinfo
- LDFLAGS=@LDFLAGS@
- prefix=@prefix@
- exec_prefix=@exec_prefix@
+ # Checks for libraries.
+ AC_CHECK_LIB([ncurses], [initscr], [],
+-             AC_MSG_ERROR([Can't find ncurses library. Install it first.]))
++             AC_MSG_ERROR([Cannot find ncurses library. Install it first.]))
++AC_SEARCH_LIBS([define_key], [tinfo])
+ AC_CHECK_LIB([z], [gzopen], [],
+-             AC_MSG_ERROR([Can't find zlib library. Install it first.]))
++             AC_MSG_ERROR([Cannot find zlib library. Install it first.]))
+ 
+ # Checks for header files.
+ AC_HEADER_STDC

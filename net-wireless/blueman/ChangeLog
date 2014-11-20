@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.24 2014/08/14 21:43:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.25 2014/11/20 00:06:21 mgorny Exp $
+
+  20 Nov 2014; Michał Górny <mgorny@gentoo.org>
+  files/blueman-9999-set-codeset-for-gettext-to-UTF-8-always.patch:
+  Update the -9999 patch.
 
   14 Aug 2014; Rick Farina <zerochaos@gentoo.org> blueman-9999.ebuild:
   remove blocker, upstream doesn't use their own icons anymore
