@@ -1,24 +1,25 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.018.ebuild,v 1.4 2014/05/15 16:46:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.021.ebuild,v 1.1 2014/11/20 20:13:51 hasufell Exp $
 
 EAPI=5
 
 inherit check-reqs eutils gnome2-utils games
 
-ENGINE_PV=4.2.017
+ENGINE_PV=${PV}
 FULL_P=UrbanTerror42_full017
+UPDATE_PV=${PV:0:3}.${FULL_P#*full}
 DESCRIPTION="Hollywood tactical shooter based on the ioquake3 engine"
 HOMEPAGE="http://www.urbanterror.info/home/"
-SRC_URI="http://cdn.urbanterror.info/urt/42/zips/${FULL_P}.zip
+SRC_URI="http://up.barbatos.fr/urt/${FULL_P}.zip
 	https://github.com/Barbatos/ioq3-for-UrbanTerror-4/archive/release-${ENGINE_PV}.tar.gz -> ${PN}-${ENGINE_PV}.tar.gz
 	http://upload.wikimedia.org/wikipedia/en/5/56/Urbanterror.svg -> ${PN}.svg"
 
 # fetch updates
-if [[ ${FULL_P#*full} != ${PV##*.} ]] ; then
-	UPDATE_I=${ENGINE_PV:6:1}
-	while [[ ${UPDATE_I} -lt ${PV:6:1} ]] ; do
-		SRC_URI="${SRC_URI} http://cdn.urbanterror.info/urt/42/zips/UrbanTerror-${PV:0:6}${UPDATE_I}-to-${PV:0:6}$(( ${UPDATE_I} + 1)).zip"
+if [[ ${FULL_P#*full} != ${PV#*.} ]] ; then
+	UPDATE_I=${UPDATE_PV:5:2}
+	while [[ ${UPDATE_I} -lt ${PV:5:2} ]] ; do
+		SRC_URI="${SRC_URI} http://up.barbatos.fr/urt/UrbanTerror-${PV:0:5}${UPDATE_I}-to-${PV:0:5}$(( ${UPDATE_I} + 1)).zip"
 		UPDATE_I=$(( ${UPDATE_I} + 1))
 	done
 fi
@@ -26,8 +27,8 @@ unset UPDATE_I
 
 LICENSE="GPL-2 Q3AEULA-20000111 urbanterror-4.2-maps"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="+curl debug dedicated openal +sdl server smp vorbis"
+KEYWORDS="~amd64 ~x86"
+IUSE="+altgamma +curl debug dedicated openal +sdl server smp vorbis"
 RESTRICT="mirror"
 
 RDEPEND="
@@ -70,10 +71,10 @@ src_unpack() {
 	default
 	# apply updates
 	if [[ ${FULL_P#*full} != ${PV##*.} ]] ; then
-		UPDATE_I=${ENGINE_PV:6:1}
-		while [[ ${UPDATE_I} -lt ${PV:6:1} ]] ; do
+		UPDATE_I=${UPDATE_PV:5:2}
+		while [[ ${UPDATE_I} -lt ${PV:5:2} ]] ; do
 			cp -dRpf \
-				"${WORKDIR}"/UrbanTerror-${PV:0:6}${UPDATE_I}-to-${PV:0:6}$((${UPDATE_I} + 1))/* \
+				"${WORKDIR}"/UrbanTerror-${PV:0:5}${UPDATE_I}-to-${PV:0:5}$((${UPDATE_I} + 1))/* \
 				"${S_DATA}"/ || die
 			UPDATE_I=$(( ${UPDATE_I} + 1))
 		done
@@ -100,6 +101,7 @@ src_compile() {
 		USE_CURL=$(buildit curl) \
 		USE_CURL_DLOPEN=0 \
 		USE_CODEC_VORBIS=$(buildit vorbis) \
+		USE_ALTGAMMA=$(buildit altgamma) \
 		USE_LOCAL_HEADERS=0 \
 		Q="" \
 		$(usex debug "debug" "release")
