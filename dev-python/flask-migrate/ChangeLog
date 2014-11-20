@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/flask-migrate
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-migrate/ChangeLog,v 1.1 2014/11/20 06:58:01 patrick Exp $
+
+*flask-migrate-1.2.0 (20 Nov 2014)
+
+  20 Nov 2014; Patrick Lauer <patrick@gentoo.org> +flask-migrate-1.2.0.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me
