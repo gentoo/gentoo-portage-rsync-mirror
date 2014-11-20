@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.9.1.ebuild,v 1.2 2014/11/19 08:19:38 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.9.1-r1.ebuild,v 1.2 2014/11/20 11:56:40 tamiko Exp $
 
 EAPI=5
 
@@ -219,7 +219,9 @@ src_prepare() {
 		) >.git-module-status
 	fi
 
-	epatch "${FILESDIR}"/${PN}-1.2.9-do_not_use_sysconf.patch
+	epatch \
+		"${FILESDIR}"/${PN}-1.2.9-do_not_use_sysconf.patch \
+		"${FILESDIR}"/${PN}-1.2.9-fix-firewalld-configuration.patch
 
 	epatch_user
 

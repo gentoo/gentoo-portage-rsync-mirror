@@ -1,9 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.12 2013/02/06 15:19:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.13 2014/11/20 11:47:14 jer Exp $
 
-EAPI="4"
-
+EAPI=5
 inherit eutils savedconfig toolchain-funcs
 
 DESCRIPTION="a dynamic window manager for X11"
@@ -15,12 +14,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="xinerama"
 
-DEPEND="x11-libs/libX11
-	xinerama? (
-		x11-proto/xineramaproto
-		x11-libs/libXinerama
-		)"
-RDEPEND="${DEPEND}"
+RDEPEND="
+	x11-libs/libX11
+	xinerama? ( x11-libs/libXinerama )
+"
+DEPEND="
+	${RDEPEND}
+	xinerama? ( x11-proto/xineramaproto )
+"
 
 src_prepare() {
 	sed -i \

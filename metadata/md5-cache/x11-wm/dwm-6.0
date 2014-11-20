@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst prepare
-DEPEND=x11-libs/libX11 xinerama? ( x11-proto/xineramaproto x11-libs/libXinerama )
+DEPEND=x11-libs/libX11 xinerama? ( x11-libs/libXinerama ) xinerama? ( x11-proto/xineramaproto )
 DESCRIPTION=a dynamic window manager for X11
-EAPI=4
+EAPI=5
 HOMEPAGE=http://dwm.suckless.org/
 IUSE=xinerama savedconfig
 KEYWORDS=amd64 ppc ppc64 x86 ~x86-fbsd
 LICENSE=MIT
-RDEPEND=x11-libs/libX11 xinerama? ( x11-proto/xineramaproto x11-libs/libXinerama )
+RDEPEND=x11-libs/libX11 xinerama? ( x11-libs/libXinerama )
 SLOT=0
 SRC_URI=http://dl.suckless.org/dwm/dwm-6.0.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=86d6a0d752553fd0c6ea6b3bd645f7de
+_md5_=b5ccd61611ae3bbdc9a68080eb2964b4

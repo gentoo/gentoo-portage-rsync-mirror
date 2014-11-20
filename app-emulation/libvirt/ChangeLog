@@ -1,6 +1,19 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.390 2014/11/19 08:19:38 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.392 2014/11/20 11:56:40 tamiko Exp $
+
+  20 Nov 2014; Matthias Maier <tamiko@gentoo.org>
+  +files/libvirt-1.2.9-fix-firewalld-configuration.patch,
+  -files/libvirt-1.2.9-fix-firefwalld-configuration.patch,
+  libvirt-1.2.10.ebuild, libvirt-1.2.9.1-r1.ebuild:
+  fix typo
+
+*libvirt-1.2.9.1-r1 (20 Nov 2014)
+
+  20 Nov 2014; Matthias Maier <tamiko@gentoo.org>
+  +files/libvirt-1.2.9-fix-firefwalld-configuration.patch,
+  +libvirt-1.2.9.1-r1.ebuild, -libvirt-1.2.9.1.ebuild, libvirt-1.2.10.ebuild:
+  fix firewalld configuration wrt bug #529898
 
   19 Nov 2014; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.10.ebuild,
   libvirt-1.2.9.1.ebuild, libvirt-9999.ebuild:

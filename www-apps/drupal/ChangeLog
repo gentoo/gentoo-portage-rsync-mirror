@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.109 2014/10/17 13:02:55 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.110 2014/11/20 11:45:49 jmbsvicetto Exp $
+
+*drupal-6.34 (20 Nov 2014)
+*drupal-7.34 (20 Nov 2014)
+
+  20 Nov 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +drupal-6.34.ebuild, +drupal-7.34.ebuild, -drupal-6.33.ebuild,
+  -drupal-7.32.ebuild:
+  Version bump to address DRUPAL-SA-CORE-2014-006. Drop affected versions.
 
 *drupal-7.32 (17 Oct 2014)
 

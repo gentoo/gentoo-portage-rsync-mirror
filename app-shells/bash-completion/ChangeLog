@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.276 2014/11/10 17:59:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.277 2014/11/20 11:48:41 mgorny Exp $
+
+*bash-completion-2.1-r93 (20 Nov 2014)
+
+  20 Nov 2014; Michał Górny <mgorny@gentoo.org> +bash-completion-2.1-r93.ebuild:
+  Pull in a proper version of gentoo-bashcomp as extension of the bundled
+  default completion set.
 
   10 Nov 2014; Michał Górny <mgorny@gentoo.org> bash-completion-2.1-r92.ebuild:
   Remove the bash blocker, and just depend on bash. There is no point having ||
