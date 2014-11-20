@@ -1,6 +1,12 @@
 # ChangeLog for net-voip/vidyodesktop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/vidyodesktop/ChangeLog,v 1.1 2014/10/10 16:16:37 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/vidyodesktop/ChangeLog,v 1.2 2014/11/20 16:56:41 prometheanfire Exp $
+
+*vidyodesktop-3.3.0.027-r1 (20 Nov 2014)
+
+  20 Nov 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +vidyodesktop-3.3.0.027-r1.ebuild, -vidyodesktop-3.3.0.027.ebuild:
+  switch to using the deb since that seems to actually work
 
 *vidyodesktop-3.3.0.027 (10 Oct 2014)
 

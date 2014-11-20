@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/vidyodesktop/vidyodesktop-3.3.0.027.ebuild,v 1.1 2014/10/10 16:16:37 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/vidyodesktop/vidyodesktop-3.3.0.027-r1.ebuild,v 1.1 2014/11/20 16:56:41 prometheanfire Exp $
 
 EAPI=5
 
-inherit eutils versionator rpm
+inherit eutils versionator unpacker
 
 DESCRIPTION="Enterprise video conferencing platform"
 HOMEPAGE="http://www.vidyo.com/"
 SRC_URI="
-	amd64? ( https://demo.vidyo.com/upload/VidyoDesktopInstaller-sl564-TAG_VD_$(replace_all_version_separators _).rpm )
-	x86?   ( https://demo.vidyo.com/upload/VidyoDesktopInstaller-sl5-TAG_VD_$(replace_all_version_separators _).rpm )
+	amd64? ( https://demo.vidyo.com/upload/VidyoDesktopInstaller-ubuntu64-TAG_VD_$(replace_all_version_separators _).deb )
+	x86?   ( https://demo.vidyo.com/upload/VidyoDesktopInstaller-ubuntu-TAG_VD_$(replace_all_version_separators _).deb )
 "
 
 LICENSE="Vidyo-EULA"

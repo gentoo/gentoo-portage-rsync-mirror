@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/gjiten
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.28 2014/10/18 14:28:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.29 2014/11/20 16:55:29 pacho Exp $
+
+  20 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gjiten-2.3.ebuild,
+  -gjiten-2.6-r1.ebuild, -gjiten-2.6-r2.ebuild:
+  Drop old (to also drop one of the last eapi0 consumers for gnome2.eclass)
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> gjiten-2.6-r3.ebuild:
   Stable for ppc, wrt bug #516674

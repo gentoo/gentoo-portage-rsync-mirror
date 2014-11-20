@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sparql-wrapper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sparql-wrapper/ChangeLog,v 1.8 2014/10/15 12:29:02 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sparql-wrapper/ChangeLog,v 1.9 2014/11/20 16:59:06 klausman Exp $
+
+  20 Nov 2014; Tobias Klausmann <klausman@gentoo.org>
+  sparql-wrapper-1.6.1.ebuild:
+  Keyworded on alpha, bug 518436
 
 *sparql-wrapper-1.6.4 (15 Oct 2014)
 
