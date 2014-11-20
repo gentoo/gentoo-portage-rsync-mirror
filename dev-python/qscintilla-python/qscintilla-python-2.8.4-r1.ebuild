@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.8.4-r1.ebuild,v 1.1 2014/10/19 23:57:24 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.8.4-r1.ebuild,v 1.2 2014/11/20 00:41:25 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -21,7 +21,7 @@ IUSE="debug"
 DEPEND="
 	${PYTHON_DEPS}
 	>=dev-python/sip-4.16:=[${PYTHON_USEDEP}]
-	>=dev-python/PyQt4-4.11.2-r1[X,${PYTHON_USEDEP}]
+	>=dev-python/PyQt4-4.11.3[X,${PYTHON_USEDEP}]
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	~x11-libs/qscintilla-${PV}:=
