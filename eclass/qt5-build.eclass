@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.10 2014/11/14 02:49:57 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.11 2014/11/20 02:44:10 pesa Exp $
 
 # @ECLASS: qt5-build.eclass
 # @MAINTAINER:
@@ -85,8 +85,12 @@ if [[ ${PN} != qttest ]]; then
 		DEPEND+=" test? ( >=dev-qt/qttest-${PV}:5[debug=] )"
 	fi
 fi
+RDEPEND="
+	dev-qt/qtchooser
+"
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install src_test pkg_postinst pkg_postrm
+
 
 # @ECLASS-VARIABLE: PATCHES
 # @DEFAULT_UNSET

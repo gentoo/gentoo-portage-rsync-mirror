@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.58 2014/11/15 02:35:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.59 2014/11/20 02:48:33 pesa Exp $
+
+*qtcore-5.3.2-r1 (20 Nov 2014)
+
+  20 Nov 2014; Davide Pesavento <pesa@gentoo.org> +qtcore-5.3.2-r1.ebuild,
+  -qtcore-5.3.2.ebuild:
+  Revbump to ensure users have qtchooser profiles and global docs installed.
 
 *qtcore-4.8.6-r1 (15 Nov 2014)
 

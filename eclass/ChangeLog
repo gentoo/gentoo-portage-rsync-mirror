@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1431 2014/11/19 19:52:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1432 2014/11/20 02:44:10 pesa Exp $
+
+  20 Nov 2014; Davide Pesavento <pesa@gentoo.org> qt5-build.eclass:
+  Add RDEPEND on dev-qt/qtchooser.
 
   19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
   Make calling perl-module_pkg_preinst trigger a real warning
