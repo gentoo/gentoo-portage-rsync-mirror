@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpeas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.35 2014/10/05 12:08:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.36 2014/11/20 15:18:04 pacho Exp $
+
+  20 Nov 2014; Pacho Ramos <pacho@gentoo.org> libpeas-1.10.0.ebuild:
+  Looks like nothing need that slot on arm stable anymore (since webkit-gtk was
+  moved to testing too)
 
   05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> libpeas-1.10.0.ebuild:
   Stable for ppc, wrt bug #513396

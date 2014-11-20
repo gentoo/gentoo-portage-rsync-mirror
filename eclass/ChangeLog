@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1432 2014/11/20 02:44:10 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1433 2014/11/20 15:25:52 mgorny Exp $
+
+  20 Nov 2014; Michał Górny <mgorny@gentoo.org> git-2.eclass:
+  Remove the experimental git-r3 testing support. It is not needed anymore,
+  git-r3 has been proven to work and we can happily use it instead.
 
   20 Nov 2014; Davide Pesavento <pesa@gentoo.org> qt5-build.eclass:
   Add RDEPEND on dev-qt/qtchooser.
