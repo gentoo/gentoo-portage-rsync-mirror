@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pyqtgraph
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqtgraph/ChangeLog,v 1.1 2014/11/20 17:23:02 radhermit Exp $
+
+*pyqtgraph-0.9.8 (20 Nov 2014)
+
+  20 Nov 2014; Tim Harder <radhermit@gentoo.org> +pyqtgraph-0.9.8.ebuild,
+  +metadata.xml:
+  Initial import needed for newer app-misc/binwalk (bug #501920 by Azamat H.
+  Hackimov).
+
