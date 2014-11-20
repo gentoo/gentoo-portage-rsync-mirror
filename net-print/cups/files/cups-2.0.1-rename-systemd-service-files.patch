@@ -54,6 +54,20 @@ index 0a27c76..7a04248 100644
 -Also=org.cups.cupsd.socket org.cups.cupsd.path
 +Also=cups.socket cups.path
  WantedBy=printer.target
+diff --git a/scheduler/org.cups.cupsd.socket.in b/scheduler/org.cups.cupsd.socket.in
+--- a/scheduler/org.cups.cupsd.socket.in
++++ a/scheduler/org.cups.cupsd.socket.in
+@@ -3,6 +3,10 @@
+ 
+ [Socket]
+ ListenStream=@CUPS_DEFAULT_DOMAINSOCKET@
++ListenStream=[::1]:631
++ListenStream=127.0.0.1:631
++BindIPv6Only=ipv6-only
++ReusePort=true
+ 
+ [Install]
+ WantedBy=sockets.target
 -- 
 2.0.4
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-2.0.1.ebuild,v 1.1 2014/11/19 19:41:40 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-2.0.1-r1.ebuild,v 1.1 2014/11/19 23:05:43 tamiko Exp $
 
 EAPI=5
 
