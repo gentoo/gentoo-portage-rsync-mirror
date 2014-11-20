@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/liquid_feedback_frontend/liquid_feedback_frontend-2.2.2.ebuild,v 1.3 2014/11/03 14:06:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/liquid_feedback_frontend/liquid_feedback_frontend-2.2.2.ebuild,v 1.4 2014/11/20 08:02:05 tupone Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ IUSE="linguas_de linguas_el linguas_en linguas_eo linguas_it"
 
 RDEPEND=""
 DEPEND="www-apps/rocketwiki-lqfb
+	www-servers/apache
 	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
