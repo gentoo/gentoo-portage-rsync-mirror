@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.503 2014/11/03 13:47:30 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.504 2014/11/20 16:05:34 chainsaw Exp $
+
+*asterisk-12.7.0 (20 Nov 2014)
+*asterisk-11.14.0 (20 Nov 2014)
+
+  20 Nov 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.14.0.ebuild,
+  +asterisk-12.7.0.ebuild:
+  Resource leak fixes, particularly in error paths.
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   asterisk-11.13.1.ebuild, asterisk-12.6.1.ebuild:
