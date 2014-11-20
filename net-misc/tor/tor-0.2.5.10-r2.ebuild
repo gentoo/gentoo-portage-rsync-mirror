@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.1_alpha-r1.ebuild,v 1.1 2014/11/17 00:52:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.10-r2.ebuild,v 1.1 2014/11/20 14:41:41 blueness Exp $
 
 EAPI="5"
 
@@ -16,15 +16,14 @@ S="${WORKDIR}/${MY_PF}"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
-IUSE="-bufferevents nat-pmp scrypt seccomp selinux stats tor-hardening transparent-proxy test upnp web"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="-bufferevents +ecc nat-pmp seccomp selinux stats tor-hardening transparent-proxy threads test upnp web"
 
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
 	dev-libs/libevent
 	bufferevents? ( dev-libs/libevent[ssl] )
 	nat-pmp? ( net-libs/libnatpmp )
-	scrypt? ( app-crypt/libscrypt )
 	seccomp? ( sys-libs/libseccomp )
 	upnp? ( net-libs/miniupnpc )"
 RDEPEND="${DEPEND}
@@ -48,16 +47,16 @@ src_configure() {
 	econf \
 		--disable-buf-freelists \
 		--enable-asciidoc \
-		--enable-mempools \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable stats instrument-downloads) \
 		$(use_enable bufferevents) \
+		$(use_enable ecc curve25519) \
 		$(use_enable nat-pmp) \
-		$(use_enable scrypt libscrypt) \
 		$(use_enable seccomp) \
 		$(use_enable tor-hardening gcc-hardening) \
 		$(use_enable tor-hardening linker-hardening) \
 		$(use_enable transparent-proxy transparent) \
+		$(use_enable threads) \
 		$(use_enable upnp) \
 		$(use_enable web tor2web-mode) \
 		$(use_enable test unittests) \
@@ -69,7 +68,7 @@ src_install() {
 
 	newconfd "${FILESDIR}"/tor.confd tor
 	newinitd "${FILESDIR}"/tor.initd-r7 tor
-	systemd_dounit "contrib/dist/${PN}.service"
+	systemd_dounit "${FILESDIR}/${PN}.service"
 	systemd_dotmpfilesd "${FILESDIR}/${PN}.conf"
 
 	emake DESTDIR="${D}" install

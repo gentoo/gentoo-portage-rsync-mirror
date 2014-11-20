@@ -1,0 +1,14 @@
+[Unit]
+Description=The Onion Router
+
+[Service]
+ExecStartPre=/usr/bin/tor --verify-config -f /etc/tor/torrc
+ExecStart=/usr/bin/tor --runasdaemon 0 -f /etc/tor/torrc
+ExecStop=/bin/kill -INT $MAINPID
+ExecReload=/bin/kill -HUP $MAINPID
+TimeoutStopSec=32
+LimitNOFILE=30000
+Group=tor
+
+[Install]
+WantedBy=multi-user.target
