@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9553 2014/11/19 18:16:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9554 2014/11/20 02:15:08 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Nov 2014; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Move Qt 4.8.6 mask from global package.mask to arch profiles, except for
+  amd64/hppa/x86 which already keyworded qtchooser.
 
   19 Nov 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
   Remove mask for app-emacs/csharp-mode. Package is fixed and won't be removed.
