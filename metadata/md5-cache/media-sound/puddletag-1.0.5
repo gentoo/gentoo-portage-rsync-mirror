@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=Audio tag editor
+EAPI=5
+HOMEPAGE=http://puddletag.sourceforge.net/
+IUSE=acoustid cover musicbrainz quodlibet python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 GPL-3
+RDEPEND=>=dev-python/PyQt4-4.9.6-r2[python_targets_python2_7(-)?,-python_single_target_python2_7(-),svg] >=dev-python/pyparsing-1.5.1[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=media-libs/mutagen-1.21[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/configobj-4.7.2-r1[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] acoustid? ( >=media-libs/chromaprint-0.6 ) musicbrainz? ( >=dev-python/python-musicbrainz-0.7.4-r1[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) cover? ( virtual/python-imaging[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) quodlibet? ( >=media-sound/quodlibet-2.5[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) >=dev-python/sip-4.14.2-r1:0[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/lxml-3.0.1[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=mirror://sourceforge/puddletag/puddletag-1.0.5.tar.gz
+_eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	fef838277e0f17df29d4951b7183d1b4	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=da8a7a82928213149ec771df70d22a4a
