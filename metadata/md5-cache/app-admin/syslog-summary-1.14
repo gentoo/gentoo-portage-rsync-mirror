@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
 SRC_URI=mirror://github/dpaleino/syslog-summary/syslog-summary-1.14.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b819e5ae5d5df69e663f2776db61b850

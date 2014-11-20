@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-python/egenix-mx-base-2.0.3 virtual/postgresql =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=501a49b36e1a955c0fe082c8c8f09be9

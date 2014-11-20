@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-python/numpy sci-chemistry/openbabel opal? ( dev-python/zsi ) virtual/fortran || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
 SRC_URI=mirror://sourceforge/pdb2pqr/pdb2pqr-1.5.tar.gz
-_eclasses_=autotools	7bcca47e6ac6bbfa251fe7e9483fcf67	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	7bcca47e6ac6bbfa251fe7e9483fcf67	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=c452b1c979e799b09dfe883ca7d047b3

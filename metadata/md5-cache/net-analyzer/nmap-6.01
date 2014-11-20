@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/apr dev-libs/libpcre net-libs/libpcap gtk? ( >=x11-libs/gtk+-2.6:2 >=dev-python/pygtk-2.6 || ( dev-lang/python:2.7[sqlite] ) ) lua? ( >=dev-lang/lua-5.1.4-r1[deprecated] ) ndiff? ( || ( dev-lang/python:2.7[sqlite] ) ) nmap-update? ( dev-libs/apr dev-vcs/subversion ) ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=http://nmap.org/dist/nmap-6.01.tar.bz2 http://dev.gentoo.org/~jer/nmap-logo-64.png
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=c9f9bb4166b650cddd4826d6da820d7b

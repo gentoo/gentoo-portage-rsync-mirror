@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.10 2011/12/27 06:54:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.11 2014/11/20 15:32:09 mgorny Exp $
 
 # @ECLASS: twisted.eclass
 # @MAINTAINER:
@@ -8,10 +8,12 @@
 # @BLURB: Eclass for Twisted packages
 # @DESCRIPTION:
 # The twisted eclass defines phase functions for Twisted packages.
-
+#
 # The following variables can be set in dev-python/twisted* packages before inheriting this eclass:
 #   MY_PACKAGE - Package name suffix (required)
 #   MY_PV      - Package version (optional)
+#
+# This eclass is DEPRECATED. Please use twisted-r1 instead.
 
 inherit distutils versionator
 

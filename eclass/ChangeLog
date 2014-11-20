@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1433 2014/11/20 15:25:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1434 2014/11/20 15:32:09 mgorny Exp $
+
+  20 Nov 2014; Michał Górny <mgorny@gentoo.org> git-2.eclass,
+  distutils.eclass, python.eclass, twisted.eclass:
+  Deprecate the few eclasses.
 
   20 Nov 2014; Michał Górny <mgorny@gentoo.org> git-2.eclass:
   Remove the experimental git-r3 testing support. It is not needed anymore,

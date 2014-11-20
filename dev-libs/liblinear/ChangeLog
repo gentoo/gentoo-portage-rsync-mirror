@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblinear
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/ChangeLog,v 1.12 2014/11/20 13:08:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/ChangeLog,v 1.13 2014/11/20 15:47:54 ago Exp $
+
+  20 Nov 2014; Agostino Sarubbo <ago@gentoo.org> liblinear-194-r1.ebuild:
+  Stable for ia64, wrt bug #480474
 
   20 Nov 2014; Tobias Klausmann <klausman@gentoo.org> liblinear-194-r1.ebuild:
   Stable on alpha, bug 480474

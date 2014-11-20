@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=bluez? ( net-wireless/bluez:= ) >=net-libs/libbtbb-9999:= pcap? ( net-libs/libpcap:= ) specan? ( virtual/libusb:1 >=dev-qt/qtgui-4.7.2:4 >=dev-python/pyside-1.0.2 >=dev-python/numpy-1.3 >=dev-python/pyusb-1.0.0_alpha1 ) dfu? ( virtual/libusb:1 >=dev-python/pyusb-1.0.0_alpha1 ) udev? ( virtual/udev ) python? ( =dev-lang/python-2* )
 REQUIRED_USE=dfu? ( python ) specan? ( python ) ubertooth1-firmware? ( dfu ) python? ( || ( dfu specan ) )
 SLOT=0
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	distutils	92e738ea29389cb3f34778d7a349ac71	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1bfef6a0868885633c2751cbdbeeb286

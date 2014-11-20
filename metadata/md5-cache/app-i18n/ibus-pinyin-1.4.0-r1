@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-i18n/ibus-1.4 dev-python/pygtk sys-apps/util-linux boost? ( >=dev-libs/boost-1.39 ) lua? ( >=dev-lang/lua-5.1 <dev-lang/lua-5.2.0 ) nls? ( virtual/libintl ) opencc? ( app-i18n/opencc ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] =dev-lang/python-2.5*[sqlite] )
 SLOT=0
 SRC_URI=http://ibus.googlecode.com/files/ibus-pinyin-1.4.0.tar.gz http://ibus.googlecode.com/files/pinyin-database-1.2.99.tar.bz2
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=f402cb307bbb016f0a10aece9d97557f
