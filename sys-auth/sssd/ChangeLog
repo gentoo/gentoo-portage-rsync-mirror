@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.61 2014/11/15 13:35:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.62 2014/11/20 19:40:49 mgorny Exp $
+
+*sssd-1.12.2-r1 (20 Nov 2014)
+
+  20 Nov 2014; Michał Górny <mgorny@gentoo.org> +sssd-1.12.2-r1.ebuild:
+  Enable multilib support, bug #409701.
 
 *sssd-1.12.2 (15 Nov 2014)
 
