@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.123 2014/10/26 19:31:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.124 2014/11/20 09:29:25 idella4 Exp $
+
+  20 Nov 2014; Ian Delaney <idella4@gentoo.org> virtualenv-1.11.6.ebuild:
+  clean old python impl, add pypy3 support
 
   26 Oct 2014; Fabian Groffen <grobian@gentoo.org> virtualenv-1.11.6.ebuild:
   Added Prefix keywords, bug #503094
