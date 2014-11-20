@@ -1,10 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/fossil-20130216000435.ebuild,v 1.3 2013/07/04 12:16:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/fossil-20140612172556.ebuild,v 1.1 2014/11/20 18:52:26 titanofold Exp $
 
-EAPI="4"
+EAPI=5
+MY_P=${PN}-src-${PV}
 
-MY_P="${PN}-src-${PV}"
+inherit toolchain-funcs
 
 DESCRIPTION="Simple, high-reliability, source control management, and more"
 HOMEPAGE="http://www.fossil-scm.org/"
@@ -12,28 +13,32 @@ SRC_URI="http://www.fossil-scm.org/download/${MY_P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="json -sqlite +ssl tcl"
+KEYWORDS="~amd64 ~arm ~x86"
+IUSE="json +lineedit sqlite +ssl tcl"
 
 DEPEND="sys-libs/zlib
+		lineedit? ( || ( sys-libs/readline:0 dev-libs/libedit ) )
 		ssl? ( dev-libs/openssl )
 		sqlite? ( dev-db/sqlite:3 )
 		tcl? ( dev-lang/tcl )
 "
-
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_configure() {
+	# this is not an autotools situation so don't make it seem like one
 	# --with-tcl: works
 	# --without-tcl: dies
-	local myconf='--with-zlib --markdown'
+	local myconf='--with-zlib'
+
+	myconf+=" --lineedit=$(usex lineedit 1 0)"
+	myconf+=" --with-openssl=$(usex ssl auto none)"
 	use json   && myconf+=' --json'
 	use sqlite && myconf+=' --disable-internal-sqlite'
-	use ssl    && myconf+=' --with-openssl'
 	use tcl    && myconf+=' --with-tcl --with-tcl-stubs'
-	econf ${myconf}
+	tc-export CC
+	./configure ${myconf} || die
 }
 
 src_install() {

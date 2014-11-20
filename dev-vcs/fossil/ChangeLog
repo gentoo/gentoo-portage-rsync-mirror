@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/fossil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.20 2014/09/01 16:41:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.21 2014/11/20 18:52:26 titanofold Exp $
+
+*fossil-20140612172556 (20 Nov 2014)
+
+  20 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  -fossil-20130216000435.ebuild, +fossil-20140612172556.ebuild:
+  Version bump. Add ~arm. Clean out old. Fixes bug 521910. Thanks
+  David Flogeras.
 
   01 Sep 2014; Michał Górny <mgorny@gentoo.org> fossil-20130911114349.ebuild:
   Remove := subslot operator from || () block since it is meaningless and
