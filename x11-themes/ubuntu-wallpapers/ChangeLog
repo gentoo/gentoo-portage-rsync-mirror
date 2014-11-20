@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/ubuntu-wallpapers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.15 2014/06/01 17:48:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.16 2014/11/20 12:31:23 pacho Exp $
+
+*ubuntu-wallpapers-14.10.0 (20 Nov 2014)
+
+  20 Nov 2014; Pacho Ramos <pacho@gentoo.org> +ubuntu-wallpapers-14.10.0.ebuild,
+  -ubuntu-wallpapers-14.04.0.1.ebuild:
+  Version bump, drop old, stabilize directly as this is only providing
+  wallpapers (and looks to still work and look ok)
 
   01 Jun 2014; Pacho Ramos <pacho@gentoo.org> -ubuntu-wallpapers-13.10.ebuild,
   ubuntu-wallpapers-14.04.0.1.ebuild:

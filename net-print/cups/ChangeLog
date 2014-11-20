@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.651 2014/11/19 23:05:43 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.652 2014/11/20 12:53:26 tamiko Exp $
+
+  20 Nov 2014; Matthias Maier <tamiko@gentoo.org>
+  +files/cups-2.0.1-xinetd-installation-fix.patch, cups-2.0.1-r1.ebuild:
+  fix xinetd configuration wrt bug #529916
 
 *cups-2.0.1-r1 (19 Nov 2014)
 
