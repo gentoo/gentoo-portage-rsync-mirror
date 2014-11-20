@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.365 2014/10/23 14:09:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.366 2014/11/20 10:55:18 mrueg Exp $
+
+*ati-drivers-14.9-r1 (20 Nov 2014)
+
+  20 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +ati-drivers-14.9-r1.ebuild,
+  +files/use-kernel_fpu_begin.patch:
+  Proxy commit for Emil Karlson. Fix x86-32 build failure on linux-3.17. See bug
+  #526602.
 
 *ati-drivers-14.9 (23 Oct 2014)
 

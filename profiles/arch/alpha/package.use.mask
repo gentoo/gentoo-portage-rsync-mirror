@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.168 2014/11/11 11:17:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.169 2014/11/20 10:32:28 klausman Exp $
+
+# Tobias Klausmann <klausman@gentoo.org> (20 Nov 2014)
+# OpenCV likely will never work on Alpha
+media-video/vlc opencv
 
 # Pacho Ramos <pacho@gentoo.org> (11 Nov 2014)
 # Missing keywords, bug #523686

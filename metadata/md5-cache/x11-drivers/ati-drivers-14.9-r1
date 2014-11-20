@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install nofetch postinst postrm preinst prepare prerm pretend setup unpack
+DEPEND=<=x11-base/xorg-server-1.15.49[-minimal] >=app-admin/eselect-opengl-1.0.7 app-admin/eselect-opencl sys-power/acpid x11-apps/xauth x11-libs/libX11 x11-libs/libXext x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXrender virtual/glu abi_x86_32? ( || ( virtual/glu[abi_x86_32] app-emulation/emul-linux-x86-opengl ) || ( ( x11-libs/libX11[abi_x86_32] x11-libs/libXext[abi_x86_32] x11-libs/libXinerama[abi_x86_32] x11-libs/libXrandr[abi_x86_32] x11-libs/libXrender[abi_x86_32] ) app-emulation/emul-linux-x86-xlibs ) ) qt4? ( x11-libs/libICE x11-libs/libSM x11-libs/libXcursor x11-libs/libXfixes x11-libs/libXxf86vm dev-qt/qtcore:4 dev-qt/qtgui:4[accessibility] ) !x11-drivers/ati-drivers:legacy x11-proto/inputproto x11-proto/xf86miscproto x11-proto/xf86vidmodeproto x11-proto/xineramaproto x11-libs/libXtst sys-apps/findutils app-misc/pax-utils app-arch/unzip kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+DESCRIPTION=Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and newer chipsets
+EAPI=5
+HOMEPAGE=http://www.amd.com
+IUSE=debug +modules qt4 static-libs pax_kernel abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64 kernel_linux
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=AMD GPL-2 QPL-1.0
+RDEPEND=<=x11-base/xorg-server-1.15.49[-minimal] >=app-admin/eselect-opengl-1.0.7 app-admin/eselect-opencl sys-power/acpid x11-apps/xauth x11-libs/libX11 x11-libs/libXext x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXrender virtual/glu abi_x86_32? ( || ( virtual/glu[abi_x86_32] app-emulation/emul-linux-x86-opengl ) || ( ( x11-libs/libX11[abi_x86_32] x11-libs/libXext[abi_x86_32] x11-libs/libXinerama[abi_x86_32] x11-libs/libXrandr[abi_x86_32] x11-libs/libXrender[abi_x86_32] ) app-emulation/emul-linux-x86-xlibs ) ) qt4? ( x11-libs/libICE x11-libs/libSM x11-libs/libXcursor x11-libs/libXfixes x11-libs/libXxf86vm dev-qt/qtcore:4 dev-qt/qtgui:4[accessibility] ) !x11-drivers/ati-drivers:legacy kernel_linux? ( virtual/modutils )
+RESTRICT=bindist test fetch
+SLOT=1
+SRC_URI=mirror://gentoo/amd-catalyst-14-9-linux-x86-x86-64.zip http://developer.amd.com/wordpress/media/2012/10/xvba-sdk-0.74-404001.tar.gz
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	linux-info	2b8c53f6065bdee2d757472215a3088f	linux-mod	101302d4b7b694ea9622bbffb187d0de	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	9eb4b5fb858228316d8bb32ada51f6a5	multiprocessing	d7f2985a2c76c365ee20269db5261414	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=7c3ecda7a7d0a6f316691fdcfc3d42a5
