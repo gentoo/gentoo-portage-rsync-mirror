@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.47 2014/11/21 01:50:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.48 2014/11/21 19:53:43 floppym Exp $
+
+  21 Nov 2014; Mike Gilbert <floppym@gentoo.org> axiom-0.6.0-r1.ebuild:
+  Restore stable keywords. Place upper-bound on twisted core due to upstream
+  issue 41206.
 
   21 Nov 2014; Mike Gilbert <floppym@gentoo.org> -axiom-0.6.0.ebuild:
   Remove ebuilds using twisted.eclass.
