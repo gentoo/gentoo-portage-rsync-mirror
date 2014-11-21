@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/jekyll-watch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-watch/ChangeLog,v 1.3 2014/11/10 14:31:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-watch/ChangeLog,v 1.4 2014/11/20 23:05:49 mrueg Exp $
+
+  20 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -jekyll-watch-1.1.1.ebuild:
+  Cleanup old.
 
 *jekyll-watch-1.1.2 (10 Nov 2014)
 
