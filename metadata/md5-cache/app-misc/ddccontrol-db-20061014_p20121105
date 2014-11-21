@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=nls? ( sys-devel/gettext )
 SLOT=0
 SRC_URI=https://github.com/ddccontrol/ddccontrol-db/archive/130da80af5cd5d2897ffeed63362262262c6944f.tar.gz -> ddccontrol-db-20061014_p20121105.tar.gz
-_eclasses_=autotools	7bcca47e6ac6bbfa251fe7e9483fcf67	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1971c756d09d9b91f9f411637daa3ef6

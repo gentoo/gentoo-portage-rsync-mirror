@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnomecanvas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.159 2014/10/11 12:12:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.160 2014/11/21 09:19:46 pacho Exp $
+
+  21 Nov 2014; Pacho Ramos <pacho@gentoo.org> -libgnomecanvas-2.30.3.ebuild:
+  Drop old
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org>
   libgnomecanvas-2.30.3-r1.ebuild:

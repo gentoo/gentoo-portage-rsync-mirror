@@ -10,5 +10,5 @@ RDEPEND=media-libs/a52dec media-libs/libass media-libs/libbluray media-libs/libd
 REQUIRED_USE=!ffmpeg? ( gstreamer )
 SLOT=0
 SRC_URI=http://handbrake.fr/rotation.php?file=HandBrake-0.9.9.tar.bz2 -> handbrake-0.9.9.tar.bz2
-_eclasses_=autotools	7bcca47e6ac6bbfa251fe7e9483fcf67	eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=2d27eb9f72bac70db8911f388d91cc7f

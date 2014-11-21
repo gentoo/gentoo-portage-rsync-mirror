@@ -7,5 +7,5 @@ IUSE=clock curl outputs taglib unicode visualizer
 LICENSE=GPL-2
 RDEPEND=>=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) dev-libs/boost[nls] sys-libs/ncurses[unicode?] sys-libs/readline taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0 )
 SLOT=0
-_eclasses_=autotools	7bcca47e6ac6bbfa251fe7e9483fcf67	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	6faef4c127028ccbba3a11400d24ae34	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	6faef4c127028ccbba3a11400d24ae34	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=5a07034b2ce9a7acd9b26423974866fc

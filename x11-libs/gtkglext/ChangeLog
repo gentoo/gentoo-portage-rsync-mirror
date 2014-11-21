@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.95 2014/10/11 12:33:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.96 2014/11/21 09:31:00 pacho Exp $
+
+  21 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gtkglext-1.2.0-r1.ebuild:
+  Drop old
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> gtkglext-1.2.0-r2.ebuild:
   arm stable, bug #512012

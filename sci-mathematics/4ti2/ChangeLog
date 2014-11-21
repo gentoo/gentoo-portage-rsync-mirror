@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/4ti2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/ChangeLog,v 1.17 2014/11/14 09:58:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/ChangeLog,v 1.18 2014/11/21 09:26:09 vapier Exp $
+
+  21 Nov 2014; Mike Frysinger <vapier@gentoo.org> 4ti2-1.6.2.ebuild:
+  Clarify AT_NO_RECURSIVE usage.
 
   14 Nov 2014; Thomas Kahle <tomka@gentoo.org> -4ti2-1.6.ebuild,
   4ti2-1.6.2.ebuild:

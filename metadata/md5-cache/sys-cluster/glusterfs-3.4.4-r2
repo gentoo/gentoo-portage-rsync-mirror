@@ -10,5 +10,5 @@ RDEPEND=bd-xlator? ( sys-fs/lvm2 ) emacs? ( virtual/emacs ) fuse? ( >=sys-fs/fus
 REQUIRED_USE=georeplication? ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://download.gluster.org/pub/gluster/glusterfs/3.4/3.4.4/glusterfs-3.4.4.tar.gz
-_eclasses_=autotools	7bcca47e6ac6bbfa251fe7e9483fcf67	autotools-utils	3727db64c7b960903d5033280f108080	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=07d68fb9faec64d841cf3b71cc5f560a

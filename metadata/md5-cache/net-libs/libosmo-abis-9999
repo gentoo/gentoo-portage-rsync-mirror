@@ -6,5 +6,5 @@ HOMEPAGE=http://openbsc.osmocom.org/trac/wiki/libosmo-abis
 LICENSE=GPL-2 LGPL-3
 RDEPEND=net-libs/ortp
 SLOT=0
-_eclasses_=autotools	7bcca47e6ac6bbfa251fe7e9483fcf67	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cc96edee1b43a0ca2cdd45fc8bd8774f

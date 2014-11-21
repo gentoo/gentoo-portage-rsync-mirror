@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.361 2014/10/11 12:06:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.362 2014/11/21 09:20:25 pacho Exp $
+
+  21 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gnome-vfs-2.24.4-r1.ebuild:
+  Drop old
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> gnome-vfs-2.24.4-r2.ebuild:
   arm stable, bug #512012

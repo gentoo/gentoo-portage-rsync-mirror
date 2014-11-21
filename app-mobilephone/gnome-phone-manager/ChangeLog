@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gnome-phone-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.57 2014/07/23 15:13:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.58 2014/11/21 09:13:44 pacho Exp $
+
+  21 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gnome-phone-manager-0.69.ebuild:
+  Drop old
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-phone-manager-0.69-r1.ebuild:

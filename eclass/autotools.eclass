@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.169 2014/11/15 07:50:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.170 2014/11/21 09:17:07 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -26,7 +26,7 @@ fi
 if [[ -z ${_AUTOTOOLS_ECLASS} ]]; then
 _AUTOTOOLS_ECLASS=1
 
-inherit libtool multiprocessing
+inherit libtool
 
 # @ECLASS-VARIABLE: WANT_AUTOCONF
 # @DESCRIPTION:
@@ -163,26 +163,22 @@ unset _automake_atom _autoconf_atom
 # Should do a full autoreconf - normally what most people will be interested in.
 # Also should handle additional directories specified by AC_CONFIG_SUBDIRS.
 eautoreconf() {
-	local x g multitop
+	local x g
 
-	if [[ -z ${AT_TOPLEVEL_EAUTORECONF} ]] ; then
-		AT_TOPLEVEL_EAUTORECONF="yes"
-		multitop="yes"
-		multijob_init
-	fi
-
+	# Subdirs often share a common build dir #529404.  If so, we can't safely
+	# run in parallel because many tools clobber the content in there.  Libtool
+	# and automake both `rm && cp` while aclocal reads the output.  We might be
+	# able to handle this if we split the steps and grab locks on the dirs the
+	# tools actually write to.  Then we'd run all the common tools that use
+	# those inputs.  Doing this in bash does not scale easily.
+	# If we do re-enable parallel support, make sure #426512 is handled.
 	if [[ -z ${AT_NO_RECURSIVE} ]] ; then
 		# Take care of subdirs
 		for x in $(autotools_check_macro_val AC_CONFIG_SUBDIRS) ; do
 			if [[ -d ${x} ]] ; then
 				pushd "${x}" >/dev/null
-				if [[ -z ${PAST_TOPLEVEL_EAUTORECONF} ]] ; then
-					PAST_TOPLEVEL_EAUTORECONF="yes" AT_NOELIBTOOLIZE="yes" \
-						multijob_child_init eautoreconf || die
-				else
-					# Avoid unsafe nested multijob_finish_one for bug #426512.
-					AT_NOELIBTOOLIZE="yes" eautoreconf || die
-				fi
+				# Avoid unsafe nested multijob_finish_one for bug #426512.
+				AT_NOELIBTOOLIZE="yes" eautoreconf || die
 				popd >/dev/null
 			fi
 		done
@@ -234,11 +230,6 @@ eautoreconf() {
 		# Call it here to prevent failures due to elibtoolize called _before_
 		# eautoreconf.
 		elibtoolize --force "${PWD}"
-	fi
-
-	if [[ -n ${multitop} ]] ; then
-		unset AT_TOPLEVEL_EAUTORECONF
-		multijob_finish || die
 	fi
 
 	return 0

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnomeprint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.207 2014/10/11 12:12:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.208 2014/11/21 09:18:40 pacho Exp $
+
+  21 Nov 2014; Pacho Ramos <pacho@gentoo.org> -libgnomeprint-2.18.8.ebuild:
+  Drop old
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> libgnomeprint-2.18.8-r1.ebuild:
   arm stable, bug #512012

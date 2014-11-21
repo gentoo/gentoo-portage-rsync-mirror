@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/librsvg-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.58 2014/10/11 11:52:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.59 2014/11/21 09:26:59 pacho Exp $
+
+  21 Nov 2014; Pacho Ramos <pacho@gentoo.org> -librsvg-python-2.32.0.ebuild:
+  Drop old
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org>
   librsvg-python-2.32.0-r1.ebuild:

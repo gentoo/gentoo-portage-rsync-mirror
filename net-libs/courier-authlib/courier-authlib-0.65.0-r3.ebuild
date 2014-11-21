@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r3.ebuild,v 1.17 2014/11/03 13:39:19 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r3.ebuild,v 1.18 2014/11/21 09:23:53 vapier Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib user
@@ -48,7 +48,7 @@ src_prepare() {
 		m4/sysconftool.m4 || die
 	sed -i -e '/^SUBDIRS/i ACLOCAL_AMFLAGS = -I m4' "${S}"/Makefile.am || die
 	epatch "${FILESDIR}/${P}-sqlite.patch"
-	MAKEOPTS=-j1 eautoreconf
+	eautoreconf
 }
 
 src_configure() {

@@ -7,5 +7,5 @@ IUSE=altivec debug default-mempool mmx sse sse2 static-libs test valgrind mempoo
 LICENSE=LGPL-2.1
 RDEPEND=valgrind? ( dev-util/valgrind ) nls? ( sys-devel/gettext )
 SLOT=0
-_eclasses_=autotools	7bcca47e6ac6bbfa251fe7e9483fcf67	enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	6faef4c127028ccbba3a11400d24ae34	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	6faef4c127028ccbba3a11400d24ae34	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=146e6e718125528d7e44948e3326f811
