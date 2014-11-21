@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.121 2014/10/27 17:18:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.122 2014/11/21 08:57:47 jlec Exp $
+
+*pymol-1.7.3.4 (21 Nov 2014)
+
+  21 Nov 2014; Justin Lecher <jlec@gentoo.org> +pymol-1.7.3.4.ebuild:
+  Version Bump
 
   27 Oct 2014; Justin Lecher <jlec@gentoo.org> pymol-1.7.3.2.ebuild:
   Add missing PYTHON_USEDEP
