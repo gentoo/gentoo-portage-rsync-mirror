@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-5.0.5.ebuild,v 1.10 2014/08/29 06:07:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-5.0.5.ebuild,v 1.11 2014/11/21 09:58:51 radhermit Exp $
 
 EAPI=5
 
@@ -146,7 +146,7 @@ pkg_postinst() {
 		# should link to http://www.gentoo.org/doc/en/zsh.xml
 		echo
 		elog "If you want to enable Portage completions and Gentoo prompt,"
-		elog "emerge app-shells/zsh-completion and add"
+		elog "emerge app-shells/gentoo-zsh-completions and add"
 		elog "	autoload -U compinit promptinit"
 		elog "	compinit"
 		elog "	promptinit; prompt gentoo"

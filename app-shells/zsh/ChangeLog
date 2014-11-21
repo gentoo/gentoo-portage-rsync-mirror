@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.247 2014/11/03 00:57:46 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.248 2014/11/21 09:58:51 radhermit Exp $
+
+  21 Nov 2014; Tim Harder <radhermit@gentoo.org> zsh-5.0.5.ebuild,
+  zsh-5.0.7-r1.ebuild, zsh-9999.ebuild:
+  Rename zsh-completion to gentoo-zsh-completions.
 
   03 Nov 2014; Matt Turner <mattst88@gentoo.org> zsh-5.0.7-r1.ebuild,
   zsh-9999.ebuild:

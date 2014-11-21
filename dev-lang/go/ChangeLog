@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.53 2014/11/03 20:22:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.54 2014/11/21 09:55:17 radhermit Exp $
+
+  21 Nov 2014; Tim Harder <radhermit@gentoo.org> go-1.3.3.ebuild:
+  Rename zsh-completion to gentoo-zsh-completions.
 
   03 Nov 2014; Fabian Groffen <grobian@gentoo.org> go-1.3.3.ebuild,
   go-9999.ebuild:

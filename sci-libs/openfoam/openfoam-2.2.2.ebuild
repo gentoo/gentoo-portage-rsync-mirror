@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/openfoam-2.2.2.ebuild,v 1.1 2013/11/01 05:17:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/openfoam-2.2.2.ebuild,v 1.2 2014/11/21 09:54:26 vapier Exp $
 
 EAPI="5"
 
-inherit eutils versionator multilib toolchain-funcs
+inherit eutils versionator multilib toolchain-funcs multiprocessing
 
 MY_PN="OpenFOAM"
 MY_PV=$(get_version_component_range 1-2)
@@ -70,20 +70,13 @@ src_configure() {
 }
 
 src_compile() {
-
-	WM_NCOMPPROCS=`echo $MAKEOPTS | sed 's/-j\([0-9][0-9]*\)/\1/'`
-	if [ -n "$WM_NCOMPPROCS" ] ; then
-		export WM_NCOMPPROCS
-	else
-		export WM_NCOMPPROCS=1
-	fi
-	elog "Building on $WM_NCOMPPROCS cores"
+	export WM_NCOMPPROCS=$(makeopts_jobs)
 
 	export FOAM_INST_DIR=${WORKDIR}
 	source etc/bashrc
 
-	find wmake -name dirToString | xargs rm -rf
-	find wmake -name wmkdep | xargs rm -rf
+	find wmake -name dirToString -exec rm -rf {} +
+	find wmake -name wmkdep -exec rm -rf {}+
 
 	if use doc ; then
 		./Allwmake doc || die "could not build"

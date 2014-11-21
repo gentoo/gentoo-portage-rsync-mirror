@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3.ebuild,v 1.6 2012/05/04 06:33:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3.ebuild,v 1.7 2014/11/21 09:48:26 vapier Exp $
 
 EAPI="1"
 
+# TODO: This needs to use the escons eclass.
 inherit eutils
 
 DESCRIPTION="Direct connect client, looks and works like famous DC++"

@@ -1,6 +1,9 @@
 # ChangeLog for gpe-base/libtododb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libtododb/ChangeLog,v 1.4 2010/05/26 12:23:35 miknix Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libtododb/ChangeLog,v 1.5 2014/11/21 09:59:24 vapier Exp $
+
+  21 Nov 2014; Mike Frysinger <vapier@gentoo.org> libtododb-0.11.ebuild:
+  Append -j1 to MAKEOPTS rather than trying to inject by hand.
 
   26 May 2010; Angelo Arrifano <miknix@gentoo.org> libtododb-0.11.ebuild:
   Limit the number of make jobs to 1 when building doc. There is no
@@ -18,4 +21,3 @@
 
   01 Mar 2009; <solar@gentoo.org> +metadata.xml, +libtododb-0.11.ebuild:
   Initial commit
-

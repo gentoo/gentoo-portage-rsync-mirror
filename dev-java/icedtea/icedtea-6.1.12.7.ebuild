@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.12.7.ebuild,v 1.5 2014/11/02 08:28:40 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.12.7.ebuild,v 1.6 2014/11/21 09:52:17 vapier Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -9,7 +9,7 @@
 
 EAPI="5"
 
-inherit java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx
+inherit java-pkg-2 java-vm-2 multiprocessing pax-utils prefix versionator virtualx
 
 ICEDTEA_PKG=${PN}$(replace_version_separator 1 -)
 ICEDTEA_BRANCH=$(get_version_component_range 2-3)
@@ -188,12 +188,7 @@ src_configure() {
 		config="${config} --enable-cacao"
 	fi
 
-	# OpenJDK-specific parallelism support. Bug #389791, #337827
-	# Implementation modified from waf-utils.eclass
-	# Note that "-j" is converted to "-j1" as the system doesn't support --load-average
-	local procs=$(echo -j1 ${MAKEOPTS} | sed -r "s/.*(-j\s*|--jobs=)([0-9]+).*/\2/" )
-	config="${config} --with-parallel-jobs=${procs}";
-	einfo "Configuring using --with-parallel-jobs=${procs}"
+	config+=" --with-parallel-jobs=$(makeopts_jobs)"
 
 	if use javascript ; then
 		config="${config} --with-rhino=$(java-pkg_getjar rhino-1.6 js.jar)"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/e16menuedit2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/ChangeLog,v 1.9 2012/12/28 18:07:01 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/ChangeLog,v 1.10 2014/11/21 10:00:39 pacho Exp $
+
+  21 Nov 2014; Pacho Ramos <pacho@gentoo.org> e16menuedit2-0.0.3.ebuild:
+  Bump to latest eapi as this was one of the last eapi0 consumers of
+  gnome2.eclass (#530022 ACKed by vapier)
 
   28 Dec 2012; Ulrich Müller <ulm@gentoo.org> e16menuedit2-0.0.3.ebuild:
   Fix LICENSE, see COPYING file, bug 448652.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.3.3.ebuild,v 1.6 2014/11/03 20:22:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.3.3.ebuild,v 1.7 2014/11/21 09:55:17 radhermit Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ IUSE="emacs vim-syntax zsh-completion"
 DEPEND=""
 RDEPEND="emacs? ( virtual/emacs )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
-	zsh-completion? ( app-shells/zsh-completion )"
+	zsh-completion? ( app-shells/gentoo-zsh-completions )"
 
 # The tools in /usr/lib/go should not cause the multilib-strict check to fail.
 QA_MULTILIB_PATHS="usr/lib/go/pkg/tool/.*/.*"

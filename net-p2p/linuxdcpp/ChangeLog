@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/linuxdcpp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.44 2012/05/04 06:33:34 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.45 2014/11/21 09:48:26 vapier Exp $
+
+  21 Nov 2014; Mike Frysinger <vapier@gentoo.org> linuxdcpp-1.0.3-r1.ebuild,
+  linuxdcpp-1.0.3.ebuild, linuxdcpp-9999.ebuild:
+  Use makeopts_jobs instead of parsing MAKEOPTS by hand & note this needs
+  converting to escons.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> linuxdcpp-1.0.3.ebuild,
   linuxdcpp-1.0.3-r1.ebuild, linuxdcpp-9999.ebuild:
@@ -199,4 +204,3 @@
   17 Jan 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
   +linuxdcpp-20070117.ebuild:
   New ebuild, bug 102733
-

@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/openfoam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/ChangeLog,v 1.18 2014/02/27 06:19:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/ChangeLog,v 1.19 2014/11/21 09:54:26 vapier Exp $
+
+  21 Nov 2014; Mike Frysinger <vapier@gentoo.org> openfoam-2.2.1.ebuild,
+  openfoam-2.2.2.ebuild, openfoam-2.3.0.ebuild:
+  Use makeopts_jobs instead of parsing MAKEOPTS by hand and clean up find
+  deletion logic.
 
 *openfoam-2.3.0 (27 Feb 2014)
 

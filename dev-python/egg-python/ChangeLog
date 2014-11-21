@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egg-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.32 2014/09/15 08:18:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.33 2014/11/21 09:35:35 pacho Exp $
+
+  21 Nov 2014; Pacho Ramos <pacho@gentoo.org> -egg-python-2.25.3.ebuild:
+  Drop old
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> egg-python-2.25.3-r1.ebuild:
   Stable for sparc, wrt bug #512012

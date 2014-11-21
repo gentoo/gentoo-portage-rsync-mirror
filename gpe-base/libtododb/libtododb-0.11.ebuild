@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libtododb/libtododb-0.11.ebuild,v 1.4 2010/05/26 12:23:35 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libtododb/libtododb-0.11.ebuild,v 1.5 2014/11/21 09:59:24 vapier Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
-inherit gpe autotools
+inherit gpe autotools multiprocessing
 
 DESCRIPTION="Database access library for GPE to-do list"
 
@@ -39,8 +39,6 @@ src_unpack() {
 
 src_compile() {
 	# Parallel make only fails when building doc, see #320029 .
-	if use doc; then
-		export MAKEOPTS="$(echo "$MAKEOPTS" | sed -e "s/-j[0-9]*/-j1/g")"
-	fi
+	use doc && MAKEOPTS+=" -j1"
 	gpe_src_compile "$@"
 }

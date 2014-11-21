@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/plan9port
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.36 2014/03/27 12:40:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.37 2014/11/21 09:56:37 vapier Exp $
+
+  21 Nov 2014; Mike Frysinger <vapier@gentoo.org> plan9port-20130320.ebuild,
+  plan9port-20140304.ebuild, plan9port-20140306.ebuild:
+  Use makeopts_jobs instead of parsing MAKEOPTS by hand.
 
 *plan9port-20140306 (27 Mar 2014)
 

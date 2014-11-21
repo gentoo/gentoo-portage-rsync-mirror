@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20140304.ebuild,v 1.1 2014/03/06 15:17:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20140304.ebuild,v 1.2 2014/11/21 09:56:37 vapier Exp $
 
 EAPI="4"
 
-inherit eutils
+inherit eutils multiprocessing
 
 DESCRIPTION="Port of many Plan 9 programs and libraries"
 HOMEPAGE="http://swtch.com/plan9port/"
@@ -23,8 +23,7 @@ S="${WORKDIR}/${PN}"
 PLAN9=/usr/lib/plan9
 QA_MULTILIB_PATHS="${PLAN9}/.*/.*"
 
-src_prepare()
-{
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-"{noexecstack,cflags,builderr}".patch"
 
 	# Fix paths, done in place of ./INSTALL -c
@@ -40,8 +39,7 @@ src_configure() {
 }
 
 src_compile() {
-	# Convert -j5 to NPROC=5 for mk
-	export NPROC="$(echo "$MAKEOPTS" | sed -r -n 's/.*(^| )-j([0-9]*).*/\2/p')"
+	export NPROC=$(makeopts_jobs)
 
 	# The INSTALL script builds mk then [re]builds everything using that
 	einfo "Compiling Plan 9 from User Space can take a very long time"

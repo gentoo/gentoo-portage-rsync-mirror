@@ -1,10 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3-r1.ebuild,v 1.5 2012/05/04 06:33:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3-r1.ebuild,v 1.6 2014/11/21 09:48:26 vapier Exp $
 
 EAPI=2
 
-inherit eutils
+# TODO: This needs to use the escons eclass.
+inherit eutils multiprocessing
 
 DESCRIPTION="Direct connect client, looks and works like famous DC++"
 HOMEPAGE="https://launchpad.net/linuxdcpp"
@@ -29,12 +30,10 @@ src_prepare() {
 }
 
 src_compile() {
-	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
-
 	local myconf=""
 	use debug && myconf="${myconf} debug=1"
 
-	scons ${myconf} ${sconsopts} CXXFLAGS="${CXXFLAGS}" PREFIX=/usr || die "scons failed"
+	scons ${myconf} -j$(makeopts_jobs) CXXFLAGS="${CXXFLAGS}" PREFIX=/usr || die "scons failed"
 }
 
 src_install() {

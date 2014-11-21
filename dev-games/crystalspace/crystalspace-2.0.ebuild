@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-2.0.ebuild,v 1.2 2013/11/16 06:47:45 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-2.0.ebuild,v 1.3 2014/11/21 09:58:26 vapier Exp $
 
 EAPI=5
-inherit eutils flag-o-matic multilib java-pkg-opt-2 autotools wxwidgets versionator
+inherit eutils flag-o-matic multilib java-pkg-opt-2 autotools wxwidgets versionator multiprocessing
 
 MY_P=${PN}-src-${PV}
 PATH_P=${PN}-$(get_version_component_range 1-2)
@@ -100,8 +100,7 @@ src_configure() {
 }
 
 src_compile() {
-	local jamopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
-	jam -q -dx ${jamopts} || die "compile failed"
+	jam -q -dx -j$(makeopts_jobs) || die "compile failed"
 }
 
 src_install() {
