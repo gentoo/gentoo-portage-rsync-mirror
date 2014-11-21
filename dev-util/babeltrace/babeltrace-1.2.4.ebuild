@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/babeltrace/babeltrace-1.2.2.ebuild,v 1.1 2014/07/31 15:03:05 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/babeltrace/babeltrace-1.2.4.ebuild,v 1.1 2014/11/21 14:52:10 dlan Exp $
 
 EAPI=5
 

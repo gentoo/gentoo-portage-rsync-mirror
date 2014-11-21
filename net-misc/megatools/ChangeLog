@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/megatools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/ChangeLog,v 1.4 2014/09/12 04:15:03 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/ChangeLog,v 1.5 2014/11/21 14:56:08 dlan Exp $
+
+*megatools-1.9.93 (21 Nov 2014)
+
+  21 Nov 2014; Yixun Lan <dlan@gentoo.org> +megatools-1.9.93.ebuild:
+  version bump
 
   12 Sep 2014; Yixun Lan <dlan@gentoo.org> megatools-1.9.92-r2.ebuild:
   add arm keyword, bug 522574, thanks Andrius Štikonas
