@@ -1,0 +1,11 @@
+# ChangeLog for app-shells/zsh-completions
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completions/ChangeLog,v 1.1 2014/11/21 10:28:13 radhermit Exp $
+
+*zsh-completions-9999 (21 Nov 2014)
+*zsh-completions-0.12.0 (21 Nov 2014)
+
+  21 Nov 2014; Tim Harder <radhermit@gentoo.org>
+  +zsh-completions-0.12.0.ebuild, +zsh-completions-9999.ebuild, +metadata.xml:
+  Initial import (bug #432688).
+

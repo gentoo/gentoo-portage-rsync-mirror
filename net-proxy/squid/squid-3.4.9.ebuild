@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.9.ebuild,v 1.1 2014/11/05 09:56:56 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.9.ebuild,v 1.2 2014/11/21 10:04:59 vapier Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
@@ -104,9 +104,7 @@ src_prepare() {
 
 	epatch_user
 
-	# Bug #419685 - eautoreconf in src_prepare() fails in libltdl/
-	#               aclocal-1.11: `configure.ac' or `configure.in' is required
-	MAKEOPTS="${MAKEOPTS} -j1" eautoreconf
+	eautoreconf
 }
 
 src_configure() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.224 2014/11/20 10:25:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.225 2014/11/21 10:06:11 vapier Exp $
+
+  21 Nov 2014; Mike Frysinger <vapier@gentoo.org> courier-imap-4.15-r1.ebuild:
+  Drop MAKEOPTS=-j1 workaround now that eautoreconf is fixed #529404.
 
   20 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   +files/courier-imap-4.0.6-r1-courier-imapd-ssl.rc6,

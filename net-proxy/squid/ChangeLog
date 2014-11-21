@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.497 2014/11/11 09:55:06 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.498 2014/11/21 10:04:59 vapier Exp $
+
+  21 Nov 2014; Mike Frysinger <vapier@gentoo.org> squid-3.3.13-r1.ebuild,
+  squid-3.4.8.ebuild, squid-3.4.9.ebuild, squid-3.5.0.2.ebuild:
+  Drop MAKEOPTS=-j1 workaround now that eautoreconf is fixed #529404.
 
 *squid-3.5.0.2 (11 Nov 2014)
 

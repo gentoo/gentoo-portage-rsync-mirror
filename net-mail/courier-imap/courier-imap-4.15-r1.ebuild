@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.15-r1.ebuild,v 1.13 2014/11/02 08:59:20 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.15-r1.ebuild,v 1.14 2014/11/21 10:06:11 vapier Exp $
 
 EAPI=5
 inherit autotools eutils multilib libtool systemd
@@ -56,7 +56,7 @@ src_prepare() {
 			"${FILESDIR}"/${P}-db4-configure.ac.patch
 	fi
 
-	MAKEOPTS="-j1" eautoreconf # bug #389511#c13
+	eautoreconf
 }
 
 src_configure() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/systemd-sysv-utils-215.ebuild,v 1.1 2014/09/15 07:29:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/systemd-sysv-utils-215.ebuild,v 1.2 2014/11/21 10:18:44 klausman Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 # new enough util-linux to have tools that were provided by sysvinit
