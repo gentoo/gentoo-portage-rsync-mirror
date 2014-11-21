@@ -1,6 +1,25 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.238 2014/11/19 09:39:02 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.239 2014/11/21 07:21:37 dlan Exp $
+
+*ck-sources-3.14.24 (21 Nov 2014)
+*ck-sources-3.12.32 (21 Nov 2014)
+*ck-sources-3.4.104 (21 Nov 2014)
+
+  21 Nov 2014; Yixun Lan <dlan@gentoo.org> -ck-sources-3.4.74.ebuild,
+  -ck-sources-3.4.82.ebuild, -ck-sources-3.4.89.ebuild,
+  +ck-sources-3.4.104.ebuild, -ck-sources-3.5.7-r2.ebuild,
+  -ck-sources-3.6.11-r2.ebuild, -ck-sources-3.7.10-r1.ebuild,
+  -ck-sources-3.8.13.ebuild, -ck-sources-3.9.11-r1.ebuild,
+  -ck-sources-3.10.24.ebuild, -ck-sources-3.10.32.ebuild,
+  -ck-sources-3.11.10.ebuild, -ck-sources-3.12.5.ebuild,
+  -ck-sources-3.12.13.ebuild, -ck-sources-3.12.19.ebuild,
+  +ck-sources-3.12.32.ebuild, -ck-sources-3.13.5.ebuild,
+  -ck-sources-3.13.11.ebuild, -ck-sources-3.14.3.ebuild,
+  -ck-sources-3.14.4.ebuild, +ck-sources-3.14.24.ebuild,
+  -files/ck-sources-3.6-Fix_Boot_Issue_On_Kvm-aCOSwt_P6.patch,
+  -files/ck-sources-3.9-virt_cpu_accounting_gen-aCOSwt_P7.patch, metadata.xml:
+  drop old non-LTS kernel versions, bump latest LTS, thanks Harold Naparst
 
   19 Nov 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
   add Harold Naparst as co-maintainer

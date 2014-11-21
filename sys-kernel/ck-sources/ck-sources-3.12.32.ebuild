@@ -1,17 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.5.7-r2.ebuild,v 1.3 2014/08/10 20:18:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.12.32.ebuild,v 1.1 2014/11/21 07:21:37 dlan Exp $
 
 EAPI="5"
 ETYPE="sources"
 KEYWORDS="~amd64 ~x86"
-IUSE="bfsonly experimental urwlocks"
+IUSE="bfsonly"
 
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 	http://users.on.net/~ckolivas/kernel/"
 
-K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="8"
+K_WANT_GENPATCHES="base extras experimental"
+K_EXP_GENPATCHES_PULL="1"
+K_EXP_GENPATCHES_NOUSE="1"
+K_GENPATCHES_VER="34"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE="1"
 
@@ -30,20 +32,16 @@ XTRA_INCP_MAX=""
 
 #--
 
-CK_VERSION="1"
-BFS_VERSION="424"
+CK_VERSION="2"
+BFS_VERSION="444"
 
 CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.bz2"
 BFS_FILE="${K_BRANCH_ID}-sched-bfs-${BFS_VERSION}.patch"
-XPR_1_FILE="bfs${BFS_VERSION}-grq_urwlocks.patch"
-XPR_2_FILE="urw-locks.patch"
 
 CK_BASE_URL="http://ck.kolivas.org/patches/3.0"
 CK_LVER_URL="${CK_BASE_URL}/${K_BRANCH_ID}/${K_BRANCH_ID}-ck${CK_VERSION}"
 CK_URI="${CK_LVER_URL}/${CK_FILE}"
 BFS_URI="${CK_LVER_URL}/patches/${BFS_FILE}"
-XPR_1_URI="${CK_LVER_URL}/patches/${XPR_1_FILE}"
-XPR_2_URI="${CK_LVER_URL}/patches/${XPR_2_FILE}"
 
 #-- Build extra incremental patches list --------------------------------------
 
@@ -58,23 +56,21 @@ if [ -n "${XTRA_INCP_MIN}" ]; then
 	done
 fi
 
-#-- CK needs sometimes to patch itself... -------------------------------------
+#-- CK needs sometimes to patch itself... (3.7)--------------------------------
 
 CK_INCP_URI=""
 CK_INCP_LIST=""
 
-#-- Local patches needed for the ck-patches to apply smoothly -----------------
+#-- Local patches needed for the ck-patches to apply smoothly (3.4/3.5) -------
 
-PRE_CK_FIX="${FILESDIR}/${PN}-3.4-3.5-PreCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P4.patch"
-POST_CK_FIX="${FILESDIR}/${PN}-3.4-3.5-PostCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P5.patch"
+PRE_CK_FIX=""
+POST_CK_FIX=""
 
 #--
 
 SRC_URI="${KERNEL_URI} ${LX_INCP_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CK_INCP_URI}
 	!bfsonly? ( ${CK_URI} )
-	bfsonly? ( ${BFS_URI} )
-	experimental? (
-		urwlocks? ( ${XPR_1_URI} ${XPR_2_URI} ) )"
+	bfsonly? ( ${BFS_URI} )"
 
 UNIPATCH_LIST="${LX_INCP_LIST} ${PRE_CK_FIX} ${DISTDIR}"
 
@@ -86,13 +82,11 @@ fi
 
 UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_INCP_LIST} ${POST_CK_FIX}"
 
-if use experimental ; then
-	if use urwlocks ; then
-		UNIPATCH_LIST="${UNIPATCH_LIST} ${DISTDIR}/${XPR_1_FILE} ${DISTDIR}/${XPR_2_FILE}:1"
-	fi
-fi
-
 UNIPATCH_STRICTORDER="yes"
+
+#-- Since experimental genpatches && we want BFQ irrespective of experimental -
+
+K_EXP_GENPATCHES_LIST="50*_*.patch*"
 
 src_prepare() {
 
