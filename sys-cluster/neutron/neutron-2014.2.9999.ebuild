@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.9999.ebuild,v 1.2 2014/11/21 00:15:22 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.9999.ebuild,v 1.3 2014/11/21 01:48:57 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -114,7 +114,6 @@ RDEPEND="
 	dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
 
 PATCHES=(
-	"${FILESDIR}/sphinx_mapping.patch"
 )
 
 pkg_setup() {

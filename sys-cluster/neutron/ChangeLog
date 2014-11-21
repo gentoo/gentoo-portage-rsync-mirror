@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/neutron
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.45 2014/11/21 00:15:22 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.46 2014/11/21 01:48:57 prometheanfire Exp $
+
+  21 Nov 2014; Matthew Thode <prometheanfire@gentoo.org>
+  neutron-2014.2.9999.ebuild, neutron-2014.2.ebuild:
+  mapping patch is unneeded now
 
   21 Nov 2014; Matthew Thode <prometheanfire@gentoo.org>
   neutron-2014.2.9999.ebuild, neutron-2014.2.ebuild:

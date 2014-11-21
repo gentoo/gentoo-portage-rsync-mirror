@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1435 2014/11/21 01:21:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1436 2014/11/21 01:55:45 floppym Exp $
+
+  21 Nov 2014; Mike Gilbert <floppym@gentoo.org> -twisted.eclass:
+  Remove unused eclass.
 
   21 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
   Add usage warnings to pkg_postinst and pkg_postrm, deprecate pkg_prerm
