@@ -1,4 +1,4 @@
-DEFINED_PHASES=install postinst
+DEFINED_PHASES=install postinst prepare
 DESCRIPTION=Programmable Completion for zsh (includes emerge and ebuild commands)
 EAPI=5
 HOMEPAGE=http://git.overlays.gentoo.org/gitweb/?p=proj/zsh-completion.git
@@ -7,4 +7,5 @@ LICENSE=ZSH
 RDEPEND=>=app-shells/zsh-4.3.5
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~radhermit/dist/zsh-completion-20130808.tar.bz2
-_md5_=f116c56af43a2f6120c7adbf486e57c2
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=2dcf3bc6c0ee30688afa35dd3394d181

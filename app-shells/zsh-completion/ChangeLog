@@ -1,6 +1,17 @@
 # ChangeLog for app-shells/zsh-completion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.55 2014/10/15 13:50:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.57 2014/11/21 08:30:50 pinkbyte Exp $
+
+  21 Nov 2014; Sergey Popov <pinkbyte@gentoo.org>
+  -zsh-completion-20130808.ebuild, zsh-completion-20130808-r1.ebuild:
+  QA commit: transfer stable keywords from old revision and drop that revision
+
+*zsh-completion-20130808-r1 (21 Nov 2014)
+
+  21 Nov 2014; Sergey Popov <pinkbyte@gentoo.org>
+  +zsh-completion-20130808-r1.ebuild, zsh-completion-99999999.ebuild,
+  +files/zsh-completion-20130808-eselect.patch:
+  QA commit: revision bump, fix bug #491430, add epatch_user
 
   15 Oct 2014; Tobias Klausmann <klausman@gentoo.org>
   zsh-completion-20130808.ebuild:

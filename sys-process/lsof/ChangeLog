@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/lsof
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.102 2014/11/14 23:24:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.103 2014/11/21 08:11:37 vapier Exp $
+
+  21 Nov 2014; Mike Frysinger <vapier@gentoo.org> lsof-4.87-r1.ebuild,
+  lsof-4.88.ebuild:
+  Update SRC_URI #529643 by Łukasz Stelmach.
 
   14 Nov 2014; Jeroen Roovers <jer@gentoo.org> lsof-4.87-r1.ebuild:
   Stable for HPPA (bug #529126).

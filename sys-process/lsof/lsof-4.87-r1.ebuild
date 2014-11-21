@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.87-r1.ebuild,v 1.6 2014/11/14 23:24:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.87-r1.ebuild,v 1.7 2014/11/21 08:11:37 vapier Exp $
 
 EAPI="4"
 
@@ -10,8 +10,7 @@ MY_P=${P/-/_}
 DESCRIPTION="Lists open files for running Unix processes"
 HOMEPAGE="ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/"
 SRC_URI="ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.bz2
-	ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.bz2
-	ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/${MY_P}.tar.bz2"
+	ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/${MY_P}.tar.bz2"
 
 LICENSE="lsof"
 SLOT="0"
