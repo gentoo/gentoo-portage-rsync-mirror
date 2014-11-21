@@ -1,15 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-zsh-completions/gentoo-zsh-completions-99999999.ebuild,v 1.2 2014/11/21 09:50:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-zsh-completions/gentoo-zsh-completions-99999999.ebuild,v 1.3 2014/11/21 13:49:34 radhermit Exp $
 
 EAPI=5
 
 inherit git-r3
 
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/zsh-completion.git"
+EGIT_REPO_URI="https://github.com/radhermit/gentoo-zsh-completions.git"
 
-DESCRIPTION="Programmable Completion for zsh (includes emerge and ebuild commands)"
-HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/zsh-completion.git"
+DESCRIPTION="Gentoo specific zsh completion support (includes emerge and ebuild commands)"
+HOMEPAGE="https://github.com/radhermit/gentoo-zsh-completions"
 
 LICENSE="ZSH"
 SLOT="0"

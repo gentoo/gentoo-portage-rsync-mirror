@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/muine
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.71 2013/10/12 12:13:32 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.72 2014/11/21 13:37:10 pacho Exp $
+
+*muine-0.8.11-r3 (21 Nov 2014)
+
+  21 Nov 2014; Pacho Ramos <pacho@gentoo.org> +muine-0.8.11-r3.ebuild:
+  Stop using base.eclass and deprecated mono.eclass, bump eapi, stop installing
+  static files.
 
   12 Oct 2013; Pacho Ramos <pacho@gentoo.org> muine-0.8.11-r2.ebuild:
   Drop unneeded dep
