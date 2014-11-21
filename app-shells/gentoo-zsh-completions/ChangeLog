@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/gentoo-zsh-completions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-zsh-completions/ChangeLog,v 1.7 2014/11/21 13:49:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-zsh-completions/ChangeLog,v 1.8 2014/11/21 14:08:11 radhermit Exp $
+
+  21 Nov 2014; Tim Harder <radhermit@gentoo.org>
+  gentoo-zsh-completions-99999999.ebuild:
+  Update to match new location of completion scripts in upstream repo.
 
   21 Nov 2014; Tim Harder <radhermit@gentoo.org>
   gentoo-zsh-completions-20141115.ebuild,

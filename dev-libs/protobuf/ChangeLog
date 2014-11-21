@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.68 2014/10/31 00:43:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.70 2014/11/21 14:04:29 ago Exp $
+
+  21 Nov 2014; Agostino Sarubbo <ago@gentoo.org> protobuf-2.5.0-r1.ebuild:
+  Stable for amd64, wrt bug #529858
+
+  21 Nov 2014; Agostino Sarubbo <ago@gentoo.org> protobuf-2.5.0-r1.ebuild:
+  Stable for x86, wrt bug #529858
 
 *protobuf-2.6.1 (31 Oct 2014)
 
