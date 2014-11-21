@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.12 2013/11/25 22:15:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.13 2014/11/21 06:10:50 ulm Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ SRC_URI="http://dl.trem-servers.com/${PN}-gentoopatches-${PV}-r5.zip
 # src/qcommon/unzip.c: ZLIB
 # src/jpeg-6/* and src/renderer/jpeg_memsrc.c: IJG
 # src/client/snd_adpcm.c: HPND
-LICENSE="BSD CC-BY-NC-ND-1.0 CC-BY-SA-2.5 GPL-2 HPND IJG ZLIB"
+LICENSE="BSD CC-BY-ND-NC-1.0 CC-BY-SA-2.5 GPL-2 HPND IJG ZLIB"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="dedicated openal +opengl +vorbis"
