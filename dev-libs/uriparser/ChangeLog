@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/uriparser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.48 2014/10/20 15:56:31 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.49 2014/11/21 17:04:09 sping Exp $
+
+  21 Nov 2014; Sebastian Pipping <sping@gentoo.org> uriparser-0.8.1.ebuild,
+  +files/uriparser-0.8.1-doc-install.patch:
+  Fix doc installation and related Bash-ism (bug #527388)
 
 *uriparser-0.8.1 (20 Oct 2014)
 

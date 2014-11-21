@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/uriparser-0.8.1.ebuild,v 1.1 2014/10/20 15:56:31 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/uriparser-0.8.1.ebuild,v 1.2 2014/11/21 17:04:09 sping Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Uriparser is a strictly RFC 3986 compliant URI parsing library in C"
 HOMEPAGE="http://uriparser.sourceforge.net/"
@@ -22,6 +22,11 @@ DEPEND="virtual/pkgconfig
 	test? ( >=dev-util/cpptest-1.1.1 )"
 
 REQUIRED_USE="test? ( unicode )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-doc-install.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf \
