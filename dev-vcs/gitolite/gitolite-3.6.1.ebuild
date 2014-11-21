@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-3.6.1.ebuild,v 1.2 2014/11/15 21:02:43 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-3.6.1.ebuild,v 1.3 2014/11/21 02:15:03 robbat2 Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ DEPEND="dev-lang/perl
 	>=dev-vcs/git-1.6.6"
 RDEPEND="${DEPEND}
 	!dev-vcs/gitolite-gentoo
-	vim-syntax? ( app-vim/gitolite-syntax )"
+	vim-syntax? ( app-vim/gitolite-syntax )
+	dev-perl/JSON"
 
 pkg_setup() {
 	enewgroup git
