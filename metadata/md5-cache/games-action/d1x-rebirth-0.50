@@ -8,5 +8,5 @@ LICENSE=D1X GPL-2 public-domain
 RDEPEND=media-libs/alsa-lib >=media-libs/libsdl-1.2.9 >=media-libs/sdl-image-1.2.3-r1 mixer? ( media-libs/sdl-mixer ) >=dev-games/physfs-1.0.1 opengl? ( virtual/glu virtual/opengl ) x11-libs/libX11 demo? ( games-action/descent1-demodata ) games-misc/games-envd
 SLOT=0
 SRC_URI=http://www.dxx-rebirth.de/download/dxx/oss/src/d1x-rebirth_v0.50-src-20061025.tar.gz http://www.dxx-rebirth.de/download/dxx/res/dxx-rebirth_icons.zip http://www.dxx-rebirth.de/download/dxx/res/d1x-rebirth_hires-briefings.zip http://www.dxx-rebirth.de/download/dxx/res/d1x-rebirth_hires-fonts.zip
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=1b166d422b9e5b393dd6718664181982

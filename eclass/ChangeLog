@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1436 2014/11/21 01:55:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1437 2014/11/21 21:47:16 hasufell Exp $
+
+  21 Nov 2014; Julian Ospald <hasufell@gentoo.org> games.eclass:
+  add documentation for games.eclass, rm unnecessary exports
 
   21 Nov 2014; Mike Gilbert <floppym@gentoo.org> -twisted.eclass:
   Remove unused eclass.
