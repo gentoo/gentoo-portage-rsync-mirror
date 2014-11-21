@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16174 2014/11/21 15:14:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16175 2014/11/21 20:38:29 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (21 Nov 2014)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-41
 
 # Fabian Groffen <grobian@gentoo.org> (18 Nov 2014)
 # Mask Exim 4.85 release candidate
@@ -191,11 +196,6 @@ dev-perl/SVN-Mirror
 =sys-kernel/vanilla-sources-3.17.0
 =sys-kernel/gentoo-sources-3.17.0
 =sys-kernel/aufs-sources-3.17.0
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (11 Oct 2014)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-40
 
 # Brian Evans <grknight@gentoo.org> (8 Oct 2014)
 # Mask all versions of suhosin until upstream revival is sustained and tested
