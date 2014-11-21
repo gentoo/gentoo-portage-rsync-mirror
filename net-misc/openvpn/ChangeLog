@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.304 2014/11/16 15:36:26 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.305 2014/11/21 12:45:00 klausman Exp $
+
+  21 Nov 2014; Tobias Klausmann <klausman@gentoo.org> openvpn-2.3.4-r1.ebuild:
+  Stable on alpha, bug 522168
 
   16 Nov 2014; Dirkjan Ochtman <djc@gentoo.org> -openvpn-2.3.1.ebuild,
   -openvpn-2.3.4.ebuild:

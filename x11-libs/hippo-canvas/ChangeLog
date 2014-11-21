@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/hippo-canvas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/hippo-canvas/ChangeLog,v 1.10 2014/02/16 10:37:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/hippo-canvas/ChangeLog,v 1.11 2014/11/21 12:39:37 pacho Exp $
+
+*hippo-canvas-0.3.0-r2 (21 Nov 2014)
+
+  21 Nov 2014; Pacho Ramos <pacho@gentoo.org> +hippo-canvas-0.3.0-r2.ebuild:
+  Use new python eclasses, bump EAPI and comply with gnome2.eclass policies
 
   16 Feb 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #200380

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.82 2014/09/21 20:16:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.83 2014/11/21 12:55:03 klausman Exp $
+
+  21 Nov 2014; Tobias Klausmann <klausman@gentoo.org> eyeD3-0.7.4-r2.ebuild:
+  Stable on alpha, bug 523136
 
   21 Sep 2014; Markus Meier <maekke@gentoo.org> eyeD3-0.7.4-r2.ebuild:
   arm stable, bug #523136
