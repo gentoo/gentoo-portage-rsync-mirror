@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9555 2014/11/21 09:53:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9556 2014/11/21 15:14:03 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Nov 2014; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Cleanup obsolete masks
 
   21 Nov 2014; Tim Harder <radhermit@gentoo.org> updates/4Q-2014:
   Rename app-shells/zsh-completion to app-shells/gentoo-zsh-completions.

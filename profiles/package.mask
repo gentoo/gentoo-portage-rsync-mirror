@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16173 2014/11/20 02:15:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16174 2014/11/21 15:14:03 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -192,11 +192,6 @@ dev-perl/SVN-Mirror
 =sys-kernel/gentoo-sources-3.17.0
 =sys-kernel/aufs-sources-3.17.0
 
-# Michael Palimaka <kensington@gentoo.org> (15 Oct 2014)
-# No longer compatible with online service it depends on.
-# Dead upstream. Masked for removal in 30 days. Bug #451868.
-app-dicts/gnuvd
-
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (11 Oct 2014)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
@@ -211,22 +206,6 @@ dev-php/suhosin
 # until upstream fixes this security issue.
 # Use at your own risk
 <x11-misc/sddm-0.10.0
-
-# Brian Evans <grknight@gentoo.org> (2 Oct 2014)
-# Masked for removal in 30 days. (Bug #524310)
-# Broken on >=dev-lang/php-5.4. Replace with dev-php/xcache,
-# dev-php/pecl-zendopcache, or dev-lang/php[opcache].
-# If you need pecl-apc's variable storage use dev-php/pecl-apcu.
-dev-php/eaccelerator
-dev-php/pecl-apc
-
-# Brian Evans <grknight@gentoo.org> (2 Oct 2014)
-# Masked for removal in 30 days. (Bug #524310)
-# Broken on >=dev-lang/php-5.4.  No replacements known.
-dev-php/adodb-ext
-dev-php/pecl-id3
-dev-php/pecl-mogilefs
-dev-php/pecl-sca_sdo
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (30 Sep 2014)
 # Reverse dependencies need to be tested and fixed, bug #521406.
@@ -247,11 +226,6 @@ dev-php/pecl-sca_sdo
 # someone needs to investigate.
 >=net-libs/libzrtpcpp-4
 
-# Dion Moult <moult@gentoo.org> (15 Sep 2014)
-# Ancient and unmaintained (bug #515028)
-# Masked for removal in 30 days
-net-misc/netcomics-cvs
-
 # Maxim Koltsov <maksbotan@gentoo.org> (12 Sep 2014)
 # Requires masked libav-10
 # If you use media-video/ffmpeg, it's absolutely safe to unmask this package.
@@ -262,13 +236,6 @@ net-misc/netcomics-cvs
 =media-video/mpv-0.4*
 =media-video/mpv-0.5*
 =media-video/mpv-0.6*
-
-# Patrick Lauer <patrick@gentoo.org> (11 Sep 2014)
-# Unsatisfiable dependencies after firebird removal
-# Should be treecleaned #522344 #522348 #522346
-dev-python/kinterbasdb
-dev-libs/ibpp
-dev-php/PEAR-MDB2_Driver_ibase
 
 # Davide Pesavento <pesa@gentoo.org> (11 Sep 2014)
 # Mask Qt 5.3.x for wider testing to ensure that it does
@@ -391,7 +358,6 @@ app-i18n/fcitx-qt5
 # You can still use your MSN account in net-im/skype
 # or switch to an open protocol instead
 # Masked for removal in 30 days
-net-im/kmess
 net-im/amsn
 x11-themes/amsn-skins
 
@@ -411,11 +377,6 @@ app-admin/hwreport
 # please file a separate bug report
 <net-dialup/ppp-2.4.7
 
-# Sergey Popov <pinkbyte@gentoo.org> (27 Aug 2014)
-# Does not work since late 2013, due to update servers shutdown
-# See bug #520858, removal in a month
-games-server/halflife-steam
-
 # Samuli Suominen <ssuominen@gentoo.org> (23 Aug 2014)
 # Some compile problems with media-libs/openexr >= 2.2.0
 # See http://bugs.gentoo.org/520240 for more information
@@ -428,14 +389,6 @@ games-server/halflife-steam
 # according to it's ChangeLog
 ~dev-util/boost-build-1.56.0
 ~dev-libs/boost-1.56.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (09 Aug 2014)
-# usleep command is part of the app-admin/killproc package,
-# and adding this separate usleep package was a mistake
-# emerge -C sys-apps/usleep
-# emerge app-admin/killproc
-# removal in about 30 days wrt bug #467212
-sys-apps/usleep
 
 # Sergey Popov <pinkbyte@gentoo.org> (05 Aug 2014)
 # Lacks patch in FILESDIR => fails to build

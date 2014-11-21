@@ -5017,8 +5017,6 @@ net-im/kadu:mpd - Enables Music Player Daemon support
 net-im/kadu:phonon - Enables phonon audio plugin
 net-im/kadu:sdk - Install Kadu SDK (cmake module, API headers)
 net-im/kadu:speech - Enables speech module
-net-im/kmess:konqueror - Enable integration with konqueror
-net-im/kmess:libnotify - Enable desktop notifications using the knotify library
 net-im/ktp-accounts-kcm:modemmanager - Enable support for mobile broadband devices
 net-im/ktp-common-internals:otr - Enable support for encrypted conversations using Off-The-Records messaging
 net-im/licq:aosd - Build the advanced on screen display plugin.
