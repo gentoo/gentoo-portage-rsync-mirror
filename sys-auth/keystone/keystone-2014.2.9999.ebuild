@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.9999.ebuild,v 1.1 2014/11/10 07:07:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.9999.ebuild,v 1.2 2014/11/21 00:07:57 prometheanfire Exp $
 
 EAPI=5
 
@@ -68,24 +68,42 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	!~dev-python/routes-2.0[${PYTHON_USEDEP}]
 	>=dev-python/six-1.7.0[${PYTHON_USEDEP}]
 	sqlite? (
-		>=dev-python/sqlalchemy-0.8.4[sqlite,${PYTHON_USEDEP}]
-		<=dev-python/sqlalchemy-0.8.99[sqlite,${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
-		<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[sqlite,${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[sqlite,${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+			)
+		)
 	)
 	mysql? (
 		dev-python/mysql-python
-		>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
-		<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
-		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+			)
+		)
 	)
 	postgres? (
 		dev-python/psycopg:2
-		>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
-		<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
-		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+			)
+		)
 	)
 	>=dev-python/sqlalchemy-migrate-0.9.1[${PYTHON_USEDEP}]
 	!~dev-python/sqlalchemy-migrate-0.9.2[${PYTHON_USEDEP}]

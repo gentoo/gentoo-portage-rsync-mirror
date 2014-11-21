@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.ebuild,v 1.1 2014/11/18 23:48:53 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.ebuild,v 1.2 2014/11/21 00:15:22 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -40,58 +40,77 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
 				dev-python/configobj[${PYTHON_USEDEP}] )"
 
-RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
-		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
-		>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
-		!~dev-python/routes-2.0[${PYTHON_USEDEP}]
-		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
-		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
-		>=dev-python/eventlet-0.15.1[${PYTHON_USEDEP}]
-		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
-		>=dev-python/httplib2-0.7.5[${PYTHON_USEDEP}]
-		>=dev-python/requests-1.2.1[${PYTHON_USEDEP}]
-		!~dev-python/requests-2.4.0[${PYTHON_USEDEP}]
-		>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
-		dev-python/jsonrpclib[${PYTHON_USEDEP}]
-		dev-python/jinja[${PYTHON_USEDEP}]
-		>=dev-python/keystonemiddleware-1.0.0[${PYTHON_USEDEP}]
-		>=dev-python/netaddr-0.7.12[${PYTHON_USEDEP}]
-		>=dev-python/python-neutronclient-2.3.6[${PYTHON_USEDEP}]
-		<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
-		sqlite? (
-			>=dev-python/sqlalchemy-0.8.4[sqlite,${PYTHON_USEDEP}]
-	        <=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
-			>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
-	        <=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+RDEPEND="
+	dev-python/paste[${PYTHON_USEDEP}]
+	>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
+	>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
+	!~dev-python/routes-2.0[${PYTHON_USEDEP}]
+	>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
+	>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
+	>=dev-python/eventlet-0.15.1[${PYTHON_USEDEP}]
+	>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
+	>=dev-python/httplib2-0.7.5[${PYTHON_USEDEP}]
+	>=dev-python/requests-1.2.1[${PYTHON_USEDEP}]
+	!~dev-python/requests-2.4.0[${PYTHON_USEDEP}]
+	>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
+	dev-python/jsonrpclib[${PYTHON_USEDEP}]
+	dev-python/jinja[${PYTHON_USEDEP}]
+	>=dev-python/keystonemiddleware-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/netaddr-0.7.12[${PYTHON_USEDEP}]
+	>=dev-python/python-neutronclient-2.3.6[${PYTHON_USEDEP}]
+	<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
+	sqlite? (
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[sqlite,${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[sqlite,${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+			)
 		)
-		mysql? (
-			dev-python/mysql-python
-			>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
-	        <=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
-			>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
-	        <=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+	)
+	mysql? (
+		dev-python/mysql-python
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+			)
 		)
-		postgres? (
-			dev-python/psycopg:2
-			>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
-	        <=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
-			>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
-	        <=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+	)
+	postgres? (
+		dev-python/psycopg:2
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+			)
 		)
-		>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
-		>=dev-python/python-keystoneclient-0.10.0[${PYTHON_USEDEP}]
-		>=dev-python/alembic-0.6.4[${PYTHON_USEDEP}]
-		>=dev-python/six-1.7.0[${PYTHON_USEDEP}]
-		>=dev-python/stevedore-1.0.0[${PYTHON_USEDEP}]
-		>=dev-python/oslo-config-1.4.0[${PYTHON_USEDEP}]
-		>=dev-python/oslo-db-1.0.0[${PYTHON_USEDEP}]
-		>=dev-python/oslo-messaging-1.4.0[${PYTHON_USEDEP}]
-		>=dev-python/oslo-rootwrap-1.3.0[${PYTHON_USEDEP}]
-		>=dev-python/python-novaclient-2.18.0[${PYTHON_USEDEP}]
-		dev-python/pyudev[${PYTHON_USEDEP}]
-		sys-apps/iproute2
-		openvswitch? ( net-misc/openvswitch )
-		dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
+	)
+	>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
+	>=dev-python/python-keystoneclient-0.10.0[${PYTHON_USEDEP}]
+	>=dev-python/alembic-0.6.4[${PYTHON_USEDEP}]
+	>=dev-python/six-1.7.0[${PYTHON_USEDEP}]
+	>=dev-python/stevedore-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-config-1.4.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-db-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-messaging-1.4.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-rootwrap-1.3.0[${PYTHON_USEDEP}]
+	>=dev-python/python-novaclient-2.18.0[${PYTHON_USEDEP}]
+	dev-python/pyudev[${PYTHON_USEDEP}]
+	sys-apps/iproute2
+	openvswitch? ( net-misc/openvswitch )
+	dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
 
 PATCHES=(
 	"${FILESDIR}/sphinx_mapping.patch"

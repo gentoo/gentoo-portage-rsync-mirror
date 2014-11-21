@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.81 2014/11/10 07:07:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.82 2014/11/21 00:07:57 prometheanfire Exp $
+
+  21 Nov 2014; Matthew Thode <prometheanfire@gentoo.org>
+  keystone-2014.2.9999.ebuild, keystone-2014.2.ebuild:
+  fixing sqlalchemy deps
 
 *keystone-2014.2 (10 Nov 2014)
 *keystone-2014.2.9999 (10 Nov 2014)
