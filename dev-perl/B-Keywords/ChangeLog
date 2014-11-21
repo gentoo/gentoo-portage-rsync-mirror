@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/B-Keywords
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Keywords/ChangeLog,v 1.34 2014/10/11 20:54:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Keywords/ChangeLog,v 1.35 2014/11/21 12:12:30 klausman Exp $
+
+  21 Nov 2014; Tobias Klausmann <klausman@gentoo.org>
+  B-Keywords-1.130.0-r1.ebuild:
+  Keyworded on alpha, bug 520340
 
   11 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -B-Keywords-1.120.0.ebuild:
   Drop old.

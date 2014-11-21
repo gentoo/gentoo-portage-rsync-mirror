@@ -5,4 +5,9 @@
 		<email>radhermit@gentoo.org</email>
 		<name>Tim Harder</name>
 	</maintainer>
+	<maintainer>
+		<email>mrueg@gentoo.org</email>
+		<name>Manuel Rüger</name>
+		<description>CC on bugs</description>
+	</maintainer>
 </pkgmetadata>

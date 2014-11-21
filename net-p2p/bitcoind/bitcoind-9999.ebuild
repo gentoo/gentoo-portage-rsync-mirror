@@ -1,6 +1,6 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-9999.ebuild,v 1.1 2014/11/13 18:41:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-9999.ebuild,v 1.2 2014/11/21 12:14:47 blueness Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ RDEPEND="
 		sys-libs/db:$(db_ver_to_slot "${DB_VER}")[cxx]
 	)
 	virtual/bitcoin-leveldb
+	dev-libs/libsecp256k1
 "
 DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1
@@ -51,7 +52,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/0.9.0-sys_leveldb.patch"
-	rm -r src/leveldb
+	epatch "${FILESDIR}/${PV}-sys_libsecp256k1.patch"
+	rm -r src/leveldb src/secp256k1
 	eautoreconf
 }
 
@@ -62,6 +64,7 @@ src_configure() {
 		$(use_enable test tests)  \
 		$(use_enable wallet)  \
 		--with-system-leveldb  \
+		--without-libs \
 		--without-utils  \
 		--without-gui
 }
@@ -72,6 +75,8 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+
+	rm "${D}/usr/bin/test_bitcoin"
 
 	insinto /etc/bitcoin
 	newins "${FILESDIR}/bitcoin.conf" bitcoin.conf

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/PPIx-Regexp-0.33.0.ebuild,v 1.2 2013/07/20 11:39:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/PPIx-Regexp-0.33.0.ebuild,v 1.3 2014/11/21 12:12:15 klausman Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Represent a regular expression of some sort"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~alpha amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="
