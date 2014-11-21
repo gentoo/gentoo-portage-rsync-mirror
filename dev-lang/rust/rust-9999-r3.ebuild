@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-9999-r3.ebuild,v 1.1 2014/10/18 12:48:43 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-9999-r3.ebuild,v 1.2 2014/11/21 10:39:00 jauhien Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ LICENSE="|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA"
 SLOT="git"
 KEYWORDS=""
 
-IUSE="clang debug emacs libcxx vim-syntax zsh-completion"
+IUSE="clang debug emacs libcxx +system-llvm vim-syntax zsh-completion"
 REQUIRED_USE="libcxx? ( clang )"
 
 CDEPEND="libcxx? ( sys-libs/libcxx )
@@ -27,6 +27,7 @@ DEPEND="${CDEPEND}
 	${PYTHON_DEPS}
 	>=dev-lang/perl-5.0
 	clang? ( sys-devel/clang )
+	system-llvm? ( >=sys-devel/llvm-3.5.0[multitarget(-)] )
 "
 RDEPEND="${CDEPEND}
 	emacs? ( >=app-emacs/rust-mode-${PV} )
@@ -47,13 +48,16 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.12.0-no-ldconfig.patch" "${FILESDIR}/${PN}-0.12.0-libdir.patch"
+	epatch "${FILESDIR}/${PN}-0.12.0-no-ldconfig.patch"
 
 	local postfix="gentoo-${SLOT}"
 	sed -i -e "s/CFG_FILENAME_EXTRA=.*/CFG_FILENAME_EXTRA=${postfix}/" mk/main.mk || die
 }
 
 src_configure() {
+	local system_llvm
+	use system-llvm && system_llvm="--llvm-root=${EPREFIX}/usr"
+
 	"${ECONF_SOURCE:-.}"/configure \
 		--prefix="${EPREFIX}/usr" \
 		--libdir="${EPREFIX}/usr/lib/${P}" \
@@ -66,6 +70,7 @@ src_configure() {
 		$(use_enable !debug optimize-llvm) \
 		$(use_enable !debug optimize-tests) \
 		$(use_enable libcxx libcpp) \
+		${system_llvm} \
 		--disable-manage-submodules \
 		--disable-verify-install \
 		--disable-docs \

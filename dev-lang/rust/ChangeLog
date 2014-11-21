@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/rust
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.5 2014/10/18 12:48:43 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.7 2014/11/21 10:53:18 jauhien Exp $
+
+  21 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org> metadata.xml,
+  rust-999-r1.ebuild, rust-9999-r3.ebuild:
+  add system-llvm USE and make it default; remove rust-0.12.0-libdir.patch from
+  git, as it was merged into upstream
 
 *rust-0.12.0 (18 Oct 2014)
 *rust-999-r1 (18 Oct 2014)

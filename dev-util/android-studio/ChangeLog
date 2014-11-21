@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/android-studio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/ChangeLog,v 1.7 2014/11/03 02:22:16 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/ChangeLog,v 1.8 2014/11/21 10:53:28 perfinion Exp $
+
+  21 Nov 2014; Jason Zaman <perfinon@gentoo.org> metadata.xml:
+  Change maintainer email
 
 *android-studio-0.8.14.135.1538390 (03 Nov 2014)
 
