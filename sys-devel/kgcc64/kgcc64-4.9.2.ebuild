@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.9.2.ebuild,v 1.1 2014/11/06 11:15:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.9.2.ebuild,v 1.2 2014/11/22 13:21:32 jer Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ inherit eutils toolchain
 DESCRIPTION="64bit kernel compiler"
 
 # Works on mips and sparc; all other archs, refer to bug #228115
-KEYWORDS=""
+KEYWORDS="~hppa"
 
 RDEPEND=">=dev-libs/gmp-4.3.2
 	>=dev-libs/mpfr-2.4.2
