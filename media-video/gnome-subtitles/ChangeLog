@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gnome-subtitles
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.41 2014/04/25 17:39:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.42 2014/11/22 18:09:30 pacho Exp $
+
+  22 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gnome-subtitles-1.1.ebuild:
+  Drop old
 
   25 Apr 2014; Steve Dibb <beandog@gentoo.org>
   -files/gnome-subtitles-0.9.1-as-needed.patch:

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.109 2014/11/16 20:48:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.110 2014/11/22 18:21:43 dilfridge Exp $
+
+  22 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> ming-0.4.4-r1.ebuild,
+  ming-0.4.5.ebuild:
+  Remove call to perl-module_pkg_prerm, does not do anything
 
   16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> ming-0.4.4-r1.ebuild,
   ming-0.4.5.ebuild:

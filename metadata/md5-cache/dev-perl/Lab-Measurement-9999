@@ -7,5 +7,5 @@ IUSE=debug +xpression
 LICENSE=|| ( Artistic GPL-2 )
 RDEPEND=dev-perl/Class-ISA dev-perl/Clone dev-perl/Exception-Class dev-perl/Hook-LexWrap dev-perl/List-MoreUtils dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings dev-perl/yaml dev-perl/Switch sci-visualization/gnuplot virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools debug? ( dev-lang/perl[ithreads] dev-perl/wxperl ) xpression? ( dev-perl/wxperl ) dev-lang/perl:=[-build(-)]
 SLOT=0
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	60a04a40f0e1520f274c3f7f55219ef2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	ab36305de1a9fa8909c94f3f1e78eb62	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=3fb41bfa79464dee05785cb233b7a7cb

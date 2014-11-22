@@ -1,6 +1,9 @@
 # ChangeLog for media-video/camorama
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.27 2014/07/08 12:00:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.28 2014/11/22 18:12:21 pacho Exp $
+
+  22 Nov 2014; Pacho Ramos <pacho@gentoo.org> camorama-0.19-r2.ebuild:
+  Missing dependency on libgnome-keyring (#514822)
 
   08 Jul 2014; Pacho Ramos <pacho@gentoo.org> -camorama-0.19-r1.ebuild:
   Drop old

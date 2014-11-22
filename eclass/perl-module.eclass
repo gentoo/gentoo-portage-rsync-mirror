@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.156 2014/11/21 01:21:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.157 2014/11/22 18:24:17 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -362,7 +362,7 @@ perl-module_pkg_postinst() {
 # It does not do anything. Deprecated, to be removed.
 perl-module_pkg_prerm() {
 	debug-print-function $FUNCNAME "$@"
-	eqawarn "perl-module.eclass: perl-module_pkg_prerm does not do anything and will be removed. Please remove the call."
+	ewarn "perl-module.eclass: perl-module_pkg_prerm does not do anything and will be removed. Please remove the call."
 }
 
 # @FUNCTION: perl-module_pkg_postrm

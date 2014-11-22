@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-do-plugins
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/ChangeLog,v 1.24 2012/05/13 12:39:35 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/ChangeLog,v 1.25 2014/11/22 18:05:49 pacho Exp $
+
+*gnome-do-plugins-0.8.5 (22 Nov 2014)
+
+  22 Nov 2014; Pacho Ramos <pacho@gentoo.org> +gnome-do-plugins-0.8.5.ebuild,
+  -files/gnome-do-plugins-0.8.2-mono26.patch,
+  -files/gnome-do-plugins-0.8.2-mono28.patch, -gnome-do-plugins-0.8.4.ebuild:
+  Version bump, drop old
 
   13 May 2012; Agostino Sarubbo <ago@gentoo.org>
   -gnome-do-plugins-0.8.2-r1.ebuild, -gnome-do-plugins-0.8.3.ebuild:
@@ -137,4 +144,3 @@
   +files/do-plugins-optional-ext-dep.patch, +metadata.xml,
   +gnome-do-plugins-0.3.0.ebuild:
   Initial import, thanks to Arun Raghavan in #207396.
-

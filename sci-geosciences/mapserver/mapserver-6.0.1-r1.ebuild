@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.1-r1.ebuild,v 1.4 2014/11/19 19:42:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.1-r1.ebuild,v 1.5 2014/11/22 18:12:42 dilfridge Exp $
 
 EAPI=5
 
@@ -221,7 +221,6 @@ pkg_postinst() {
 
 pkg_prerm() {
 	webapp_pkg_prerm
-	use perl && perl-module_pkg_prerm
 }
 
 pkg_postrm() {
