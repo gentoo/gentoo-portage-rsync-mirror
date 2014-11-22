@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/XML-SAX-Expat-0.400.0.ebuild,v 1.2 2014/09/04 13:39:26 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/XML-SAX-Expat-0.400.0.ebuild,v 1.3 2014/11/22 18:41:29 dilfridge Exp $
 
 EAPI=5
 
@@ -35,7 +35,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	perl-module_pkg_postrm
 	pkg_update_parser remove XML::SAX::Expat
 }
 

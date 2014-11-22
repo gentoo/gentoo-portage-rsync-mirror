@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.74 2014/10/09 19:43:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.75 2014/11/22 18:37:15 dilfridge Exp $
+
+  22 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  obexftp-0.23-r2.ebuild:
+  Remove call to perl-module_pkg_postrm, does not do anything outside perl-core
+  category
 
   09 Oct 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove short <longdescription>.

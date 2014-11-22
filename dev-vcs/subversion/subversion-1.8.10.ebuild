@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.10.ebuild,v 1.9 2014/11/16 22:53:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.10.ebuild,v 1.10 2014/11/22 18:39:26 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -455,7 +455,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use perl && perl-module_pkg_postrm
+	:
 }
 
 pkg_config() {

@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.201 2014/11/16 22:53:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.202 2014/11/22 18:39:26 dilfridge Exp $
+
+  22 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  subversion-1.7.18.ebuild, subversion-1.8.9.ebuild, subversion-1.8.10.ebuild,
+  subversion-1.8.10-r1.ebuild:
+  Remove call to perl-module_pkg_postrm, does not do anything outside perl-core
+  category
 
   16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   subversion-1.7.18.ebuild, subversion-1.8.9.ebuild, subversion-1.8.10.ebuild,
