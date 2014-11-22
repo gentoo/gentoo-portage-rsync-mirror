@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.11-r3.ebuild,v 1.4 2014/11/22 11:24:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.11.1.ebuild,v 1.1 2014/11/22 11:24:59 jer Exp $
 
 EAPI=5
 inherit eutils multilib
@@ -12,9 +12,9 @@ SRC_URI="
 	svg? ( https://dev.gentoo.org/~jer/${PN}-flags.tar.bz2 )
 "
 
-LICENSE="Artistic"
+LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="svg"
 
 RDEPEND="
@@ -33,8 +33,6 @@ DEPEND="
 	svg? ( virtual/pkgconfig )
 	x11-misc/imake
 "
-
-S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	if use svg; then

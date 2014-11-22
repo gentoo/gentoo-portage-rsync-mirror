@@ -1,0 +1,11 @@
+DEFINED_PHASES=prepare
+DEPEND=sys-devel/gettext virtual/libintl
+DESCRIPTION=Diction and style checkers for english and german texts
+EAPI=5
+HOMEPAGE=http://www.gnu.org/software/diction/diction.html
+KEYWORDS=~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=http://www.moria.de/~michael/diction/diction-1.13.tar.gz
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=662009ffba96c5085a56f7cf810b44b1
