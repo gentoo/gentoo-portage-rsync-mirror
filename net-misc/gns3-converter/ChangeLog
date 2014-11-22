@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/gns3-converter
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-converter/ChangeLog,v 1.1 2014/11/22 08:17:39 idella4 Exp $
+
+*gns3-converter-1.1.0 (22 Nov 2014)
+
+  22 Nov 2014; Ian Delaney <idella4@gentoo.org> +gns3-converter-1.1.0.ebuild,
+  +metadata.xml:
+  New ebuild written by B-Man to support gns3-gui-1.2 and will be proxy-
+  maintained by him.  Closes bug #530098
