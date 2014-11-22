@@ -27,6 +27,7 @@
     browser.
   </longdescription>
   <use>
+    <flag name='classicui'>use the classic web theme</flag>
     <flag name='lighttpd'>install <pkg>www-servers/lighttpd</pkg> config</flag>
     <flag name='web'>enable web interface</flag>
   </use>

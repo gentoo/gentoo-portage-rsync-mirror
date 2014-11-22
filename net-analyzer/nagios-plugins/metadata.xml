@@ -35,6 +35,10 @@
       Install <pkg>net-misc/openssh</pkg> required for monitoring SSH
       servers. Disabling the flag does not remove any plugin file.
     </flag>
+    <flag name='ssh'>
+      Install <pkg>net-misc/openssh</pkg> required for monitoring SSH
+      servers. Disabling the flag does not remove any plugin file.
+    </flag>
     <flag name='ups'>
       Install <pkg>sys-power/nut</pkg> required for monitoring
       compatible UPS units. Disabling the flag does not remove any

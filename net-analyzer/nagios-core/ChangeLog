@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.199 2014/09/19 10:30:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.200 2014/11/22 21:29:34 mjo Exp $
+
+*nagios-core-4.0.8 (22 Nov 2014)
+
+  22 Nov 2014; Michael Orlitzky <mjo@gentoo.org> +files/99_nagios4.conf,
+  +files/lighttpd_nagios4.conf, +files/nagios4,
+  +files/use-INSTALL-to-install-themes.patch,
+  +files/use-MAKE-instead-of-bare-make.patch, +nagios-core-4.0.8.ebuild,
+  metadata.xml:
+  Version bump with permission from creffett, bug #485756. Thanks to Tomas Mozes
+  and others for testing.
 
   19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> nagios-core-3.5.1.ebuild:
   Stable for sparc, wrt bug #501200

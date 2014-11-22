@@ -4643,6 +4643,7 @@ net-analyzer/munin:minimal - Only install munin-node and its plugins. This exclu
 net-analyzer/munin:mysql - Install the packages required for monitoring MySQL. Disabling the flag does not remove any plugin files.
 net-analyzer/munin:postgres - Install the packages required for monitoring PostgreSQL. Disabling the flag does not remove any plugin files.
 net-analyzer/munin:syslog - Configure the node by default to log on syslog. This requires the presence of virtual/perl-Sys-Syslog. As of version 2.0.2, the master scripts only log to file, and not to syslog.
+net-analyzer/nagios-core:classicui - use the classic web theme
 net-analyzer/nagios-core:lighttpd - install www-servers/lighttpd config
 net-analyzer/nagios-core:web - enable web interface
 net-analyzer/nagios-plugins:jabber - Install the script for sending IM notifications over Jabber with Nagios.
@@ -4653,6 +4654,7 @@ net-analyzer/nagios-plugins:nagios-ping - Install net-analyzer/fping required fo
 net-analyzer/nagios-plugins:nagios-ssh - Install net-misc/openssh required for monitoring SSH servers. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins:smart - Install sys-apps/smartmontools required for S.M.A.R.T. disk monitoring. Disabling the flag removes the plugin file. This plugin also requires the sudo flag to be enable.
 net-analyzer/nagios-plugins:snmp - Install dev-perl/Net-SNMP required for monitoring SNMP values. Disabling the flag does not remove any plugin file.
+net-analyzer/nagios-plugins:ssh - Install net-misc/openssh required for monitoring SSH servers. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins:sudo - Install a file to allow the nagios user to execute some commands via app-admin/sudo, so that the scripts can access devices and features that wouldn't be otherwise allowed by nagios.
 net-analyzer/nagios-plugins:suid - Give root privileges to the ICMP, DHCP and IDE S.M.A.R.T. check binaries. This allows them to ignore the access controls that would disallow the nagios user from running the check.
 net-analyzer/nagios-plugins:ups - Install sys-power/nut required for monitoring compatible UPS units. Disabling the flag does not remove any plugin file.
