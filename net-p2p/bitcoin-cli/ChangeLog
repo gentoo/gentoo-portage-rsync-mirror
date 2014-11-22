@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoin-cli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-cli/ChangeLog,v 1.3 2014/11/13 18:19:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-cli/ChangeLog,v 1.4 2014/11/21 23:31:20 blueness Exp $
+
+  21 Nov 2014; Anthony G. Basile <blueness@gentoo.org> bitcoin-cli-9999.ebuild:
+  Update 9999
 
 *bitcoin-cli-9999 (13 Nov 2014)
 

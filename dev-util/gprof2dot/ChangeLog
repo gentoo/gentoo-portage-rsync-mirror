@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gprof2dot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.10 2014/11/09 20:49:34 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.11 2014/11/21 23:48:36 sping Exp $
+
+  21 Nov 2014; Sebastian Pipping <sping@gentoo.org>
+  gprof2dot-0_p20130517.ebuild:
+  Fix use of python-r1 eclass (bug #528714)
 
   09 Nov 2014; Sebastian Pipping <sping@gentoo.org>
   gprof2dot-0_p20130517.ebuild:

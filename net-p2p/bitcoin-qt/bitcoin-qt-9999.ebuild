@@ -1,6 +1,6 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-9999.ebuild,v 1.1 2014/11/13 18:31:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-9999.ebuild,v 1.2 2014/11/21 23:44:07 blueness Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ RDEPEND="
 	)
 	sys-libs/db:$(db_ver_to_slot "${DB_VER}")[cxx]
 	virtual/bitcoin-leveldb
+	dev-libs/libsecp256k1
 	dev-qt/qtgui:4
 	dbus? (
 		dev-qt/qtdbus:4
@@ -48,7 +49,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/0.9.0-sys_leveldb.patch"
-	rm -r src/leveldb
+	epatch "${FILESDIR}/${PV}-sys_libsecp256k1.patch"
+	rm -r src/leveldb src/secp256k1
 
 	local filt= yeslang= nolang=
 
@@ -87,6 +89,7 @@ src_configure() {
 		$(use_enable test tests)  \
 		--with-system-leveldb  \
 		--without-utils --without-daemon \
+		--without-libs \
 		--with-gui
 }
 
@@ -96,6 +99,8 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+
+	rm "${D}/usr/bin/test_bitcoin"
 
 	insinto /usr/share/pixmaps
 	newins "share/pixmaps/bitcoin.ico" "${PN}.ico"

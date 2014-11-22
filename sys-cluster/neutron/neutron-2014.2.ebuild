@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.ebuild,v 1.3 2014/11/21 01:48:57 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.ebuild,v 1.4 2014/11/22 00:00:53 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -109,6 +109,7 @@ RDEPEND="
 	>=dev-python/python-novaclient-2.18.0[${PYTHON_USEDEP}]
 	dev-python/pyudev[${PYTHON_USEDEP}]
 	sys-apps/iproute2
+	net-firewall/ipset
 	openvswitch? ( net-misc/openvswitch )
 	dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
 

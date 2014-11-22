@@ -1,6 +1,6 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-cli/bitcoin-cli-9999.ebuild,v 1.1 2014/11/13 18:19:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-cli/bitcoin-cli-9999.ebuild,v 1.2 2014/11/21 23:31:20 blueness Exp $
 
 EAPI=4
 
@@ -40,6 +40,7 @@ src_configure() {
 		--disable-tests  \
 		--disable-wallet  \
 		--without-daemon  \
+		--without-libs \
 		--without-gui
 }
 

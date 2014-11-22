@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.448 2014/11/20 14:41:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.449 2014/11/21 23:51:22 tamiko Exp $
+
+*tor-0.2.6.1_alpha-r3 (21 Nov 2014)
+*tor-0.2.5.10-r3 (21 Nov 2014)
+
+  21 Nov 2014; Matthias Maier <tamiko@gentoo.org> +tor-0.2.5.10-r3.ebuild,
+  +tor-0.2.6.1_alpha-r3.ebuild, -tor-0.2.5.10-r2.ebuild,
+  -tor-0.2.6.1_alpha-r2.ebuild, files/tor.service:
+  set additional hardening options for tor.service file, wrt bug #529212
 
 *tor-0.2.5.10-r2 (20 Nov 2014)
 *tor-0.2.6.1_alpha-r2 (20 Nov 2014)
