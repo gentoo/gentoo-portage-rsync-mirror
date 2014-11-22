@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.117 2014/09/06 15:36:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.118 2014/11/22 21:33:29 mjo Exp $
+
+*nagios-4.0.8 (22 Nov 2014)
+
+  22 Nov 2014; Michael Orlitzky <mjo@gentoo.org> +nagios-4.0.8.ebuild:
+  Version bump with permission from creffett, bug #485756.
 
   06 Sep 2014; Agostino Sarubbo <ago@gentoo.org> nagios-3.5.1.ebuild:
   Stable for x86, wrt bug #501200

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4-r1.ebuild,v 1.14 2014/11/18 23:41:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4-r1.ebuild,v 1.15 2014/11/22 21:59:13 dilfridge Exp $
 
 EAPI=5
 
@@ -22,7 +22,10 @@ RDEPEND="
 	perl? ( dev-lang/perl:= )
 "
 DEPEND="${RDEPEND}
-	perl? ( virtual/perl-Module-Build )
+	perl? (
+		virtual/perl-Module-Build
+		dev-perl/locale-maketext-lexicon
+		)
 	test? (
 		dev-libs/glib:2
 		media-libs/fontconfig
