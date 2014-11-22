@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/rest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.27 2014/09/04 15:21:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.28 2014/11/22 20:46:13 mgorny Exp $
+
+*rest-0.7.92-r1 (22 Nov 2014)
+
+  22 Nov 2014; Michał Górny <mgorny@gentoo.org> +rest-0.7.92-r1.ebuild:
+  Introduce multilib support as needed for x11-libs/gtk+:3.
 
 *rest-0.7.92 (04 Sep 2014)
 
