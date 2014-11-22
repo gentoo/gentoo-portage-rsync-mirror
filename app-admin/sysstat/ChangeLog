@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.278 2014/11/02 08:59:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.279 2014/11/22 10:56:04 jer Exp $
+
+  22 Nov 2014; Jeroen Roovers <jer@gentoo.org> sysstat-11.0.2.ebuild:
+  Stable for HPPA (bug #529920).
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> sysstat-11.0.0.ebuild:
   Stable for alpha, wrt bug #520940

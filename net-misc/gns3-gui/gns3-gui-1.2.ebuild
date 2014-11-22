@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-gui/gns3-gui-1.1.ebuild,v 1.1 2014/11/14 09:54:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-gui/gns3-gui-1.2.ebuild,v 1.1 2014/11/22 10:53:33 idella4 Exp $
 
 EAPI="5"
 
@@ -16,7 +16,6 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-#block dev-python/PyQt4-4.11.3_pre20141024 as it breaks runtime
 #net-misc/gns3-server version should always match gns3-gui version
 #block net-misc/gns3 as it conflicts
 
@@ -28,9 +27,9 @@ RDEPEND=">=dev-python/libcloud-0.15.1[${PYTHON_USEDEP}]
 	>=dev-python/PyQt4-4.11.2[X,svg,${PYTHON_USEDEP}]
 	dev-qt/qtgui:4
 	dev-qt/qtsvg:4
-	=net-misc/gns3-server-$PV
+	net-misc/gns3-converter[${PYTHON_USEDEP}]
+	=net-misc/gns3-server-$PV[${PYTHON_USEDEP}]
 	!!net-misc/gns3"
-
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_prepare_all() {
