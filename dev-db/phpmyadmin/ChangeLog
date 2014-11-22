@@ -1,6 +1,21 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.529 2014/11/19 09:59:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.530 2014/11/22 05:03:31 jmbsvicetto Exp $
+
+*phpmyadmin-4.2.12 (22 Nov 2014)
+*phpmyadmin-4.3.0_beta1 (22 Nov 2014)
+*phpmyadmin-4.0.10.6 (22 Nov 2014)
+*phpmyadmin-4.1.14.7 (22 Nov 2014)
+
+  22 Nov 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +phpmyadmin-4.0.10.6.ebuild, +phpmyadmin-4.1.14.7.ebuild,
+  +phpmyadmin-4.2.12.ebuild, +phpmyadmin-4.3.0_beta1.ebuild,
+  -phpmyadmin-4.0.10.3.ebuild, -phpmyadmin-4.0.10.4.ebuild,
+  -phpmyadmin-4.1.14.4.ebuild, -phpmyadmin-4.1.14.5.ebuild,
+  -phpmyadmin-4.1.7.ebuild, -phpmyadmin-4.2.8.1.ebuild,
+  -phpmyadmin-4.2.9.1.ebuild, -phpmyadmin-4.2.9.ebuild:
+  Version bumps to address PMASA-2014-{13,14,15,16} - fixes bug 530054. Add
+  unkeyworded 4.3.0-beta1 release - waiting for feedback.
 
   19 Nov 2014; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
   Removed a3li as maintainer.
