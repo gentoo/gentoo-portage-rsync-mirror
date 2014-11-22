@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.77 2014/11/22 13:37:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.78 2014/11/22 19:14:38 jer Exp $
+
+  22 Nov 2014; Jeroen Roovers <jer@gentoo.org> units-2.11a.ebuild:
+  Add python 3.4 support.
 
 *units-2.11a (22 Nov 2014)
 

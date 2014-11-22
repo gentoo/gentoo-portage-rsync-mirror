@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.85 2014/11/19 14:14:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.86 2014/11/22 19:20:23 zlogene Exp $
+
+  22 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> neon-0.30.1.ebuild:
+  amd64 stable wrt bug #529718
 
   19 Nov 2014; Jeroen Roovers <jer@gentoo.org> neon-0.30.1.ebuild:
   Stable for HPPA (bug #529718).
