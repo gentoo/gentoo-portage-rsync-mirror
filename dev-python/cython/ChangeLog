@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.135 2014/11/11 11:14:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.136 2014/11/22 12:17:03 jlec Exp $
+
+  22 Nov 2014; Justin Lecher <jlec@gentoo.org> cython-0.21.1.ebuild:
+  Add pypy3 support
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> cython-0.21.ebuild:
   Stable for ia64, wrt bug #524416

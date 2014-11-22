@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-999-r1.ebuild,v 1.2 2014/11/21 10:39:00 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-999-r1.ebuild,v 1.3 2014/11/22 12:20:44 jauhien Exp $
 
 EAPI="5"
 
@@ -54,7 +54,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.12.0-no-ldconfig.patch" "${FILESDIR}/${PN}-0.12.0-libdir.patch"
+	epatch "${FILESDIR}/${PN}-0.12.0-no-ldconfig.patch"
 
 	local postfix="gentoo-${SLOT}"
 	sed -i -e "s/CFG_FILENAME_EXTRA=.*/CFG_FILENAME_EXTRA=${postfix}/" mk/main.mk || die
