@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdeconnect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/ChangeLog,v 1.10 2014/10/15 19:37:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/ChangeLog,v 1.11 2014/11/22 15:54:50 mrueg Exp $
+
+  22 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -kdeconnect-0.7.2.ebuild:
+  Cleanup old.
 
   15 Oct 2014; Manuel Rüger <mrueg@gentoo.org> kdeconnect-0.7.3.ebuild:
   Add missing dep on libfakekey. Fixes bug #525518.
