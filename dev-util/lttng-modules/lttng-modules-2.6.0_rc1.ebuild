@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lttng-modules/lttng-modules-2.4.2.ebuild,v 1.1 2014/07/31 21:53:25 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lttng-modules/lttng-modules-2.6.0_rc1.ebuild,v 1.1 2014/11/22 00:27:57 dlan Exp $
 
 EAPI=5
 
@@ -40,5 +40,5 @@ src_install() {
 	MODULE_NAMES=${modules}
 
 	linux-mod_src_install
-	dodoc ChangeLog README TODO
+	dodoc ChangeLog README.md TODO
 }

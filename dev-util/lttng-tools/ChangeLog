@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/lttng-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lttng-tools/ChangeLog,v 1.3 2014/07/31 22:27:24 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lttng-tools/ChangeLog,v 1.4 2014/11/22 00:24:38 dlan Exp $
+
+*lttng-tools-2.6.0_rc3 (22 Nov 2014)
+*lttng-tools-2.5.2 (22 Nov 2014)
+
+  22 Nov 2014; Yixun Lan <dlan@gentoo.org> -lttng-tools-2.4.1.ebuild,
+  -lttng-tools-2.4.2.ebuild, +lttng-tools-2.5.2.ebuild,
+  +lttng-tools-2.6.0_rc3.ebuild:
+  bump new, drop old
 
 *lttng-tools-2.5.0 (31 Jul 2014)
 *lttng-tools-2.4.2 (31 Jul 2014)
