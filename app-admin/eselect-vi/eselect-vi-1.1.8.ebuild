@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/eselect-vi-1.1.8.ebuild,v 1.1 2014/11/22 07:13:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/eselect-vi-1.1.8.ebuild,v 1.2 2014/11/22 09:26:45 yngwin Exp $
 
 EAPI=5
 
 DESCRIPTION="Manages the /usr/bin/vi symlink"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="http://dev.gentoo.org/~yngwin/${P}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~yngwin/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
