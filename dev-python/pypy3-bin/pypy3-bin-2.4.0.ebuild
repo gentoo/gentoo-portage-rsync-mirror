@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3-bin/pypy3-bin-2.4.0.ebuild,v 1.1 2014/11/09 08:29:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3-bin/pypy3-bin-2.4.0.ebuild,v 1.2 2014/11/22 10:07:35 mgorny Exp $
 
 EAPI=5
 
@@ -67,7 +67,7 @@ RDEPEND="
 		dev-lang/tk:0=
 		dev-tcltk/tix:0=
 	)
-	!dev-python/pypy:0"
+	!dev-python/pypy3:0"
 DEPEND="app-arch/xz-utils
 	test? ( ${RDEPEND}
 		${PYTHON_DEPS} )"
