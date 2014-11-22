@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-GlobalDestruction
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.30 2014/11/11 12:02:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.31 2014/11/22 19:57:32 zlogene Exp $
+
+  22 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Devel-GlobalDestruction-0.120.0.ebuild:
+  amd64/ppc/x86 stable wrt bug #526674
 
   11 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
   Devel-GlobalDestruction-0.120.0.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gr-iqbal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/ChangeLog,v 1.7 2014/07/23 15:10:51 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/ChangeLog,v 1.8 2014/11/22 19:52:29 zerochaos Exp $
+
+  22 Nov 2014; Rick Farina <zerochaos@gentoo.org> gr-iqbal-0.36.0.ebuild,
+  gr-iqbal-0.37.2.ebuild, gr-iqbal-9999.ebuild:
+  missing dep on boost
 
 *gr-iqbal-0.37.2 (23 Jul 2014)
 

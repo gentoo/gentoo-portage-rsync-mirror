@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/gr-iqbal-9999.ebuild,v 1.4 2014/07/23 15:10:51 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/gr-iqbal-9999.ebuild,v 1.5 2014/11/22 19:52:29 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -26,6 +26,7 @@ IUSE=""
 
 RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[${PYTHON_USEDEP}]
 	net-libs/libosmo-dsp:=
+	dev-libs/boost:=
 	${PYTHON_DEPS}"
 DEPEND="${RDEPEND}"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

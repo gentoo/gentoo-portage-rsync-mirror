@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gr-fosphor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gr-fosphor/ChangeLog,v 1.4 2014/11/01 20:26:28 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gr-fosphor/ChangeLog,v 1.5 2014/11/22 19:48:41 zerochaos Exp $
+
+  22 Nov 2014; Rick Farina <zerochaos@gentoo.org> gr-fosphor-9999.ebuild:
+  slot dep on boost
 
   01 Nov 2014; Rick Farina <zerochaos@gentoo.org> gr-fosphor-9999.ebuild:
   fixing deps and REQUIRED_USE wrt python-r1 and depcheck
