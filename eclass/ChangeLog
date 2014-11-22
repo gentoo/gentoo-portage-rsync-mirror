@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1437 2014/11/21 21:47:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1438 2014/11/22 02:38:21 sping Exp $
+
+  22 Nov 2014; Sebastian Pipping <sping@gentoo.org> python-r1.eclass:
+  Fix docs about REQUIRED_USE in python-r1 (bug #530086)
 
   21 Nov 2014; Julian Ospald <hasufell@gentoo.org> games.eclass:
   add documentation for games.eclass, rm unnecessary exports
