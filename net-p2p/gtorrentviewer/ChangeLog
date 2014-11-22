@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/gtorrentviewer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/ChangeLog,v 1.14 2012/05/04 06:33:34 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/ChangeLog,v 1.15 2014/11/22 16:54:38 pacho Exp $
+
+  22 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/gtorrentviewer-0.2b-desktop.patch,
+  +files/gtorrentviewer-0.2b-underlinking.patch, gtorrentviewer-0.2b.ebuild:
+  Fix underlinking (#510586 by Ted Tanberry and Leonid Kopylov), prepare to
+  configure.in deprecation, fix tests, fix desktop file
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gtorrentviewer-0.2b.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -56,4 +62,3 @@
   +gtorrentviewer-0.2a.ebuild:
   Initial import. Thanks to Dionysius Wilson Almeida <dwilson@technolunatic.com>
   for the ebuild, #67795.
-

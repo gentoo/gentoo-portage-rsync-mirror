@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.477 2014/09/18 13:19:19 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.478 2014/11/22 16:59:28 zlogene Exp $
+
+  22 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> eix-0.30.4.ebuild:
+  amd64 stable wrt bug #529510
 
 *eix-0.30.4 (18 Sep 2014)
 
