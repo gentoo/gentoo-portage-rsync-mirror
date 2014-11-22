@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-3.9.1.ebuild,v 1.1 2014/05/11 02:54:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-3.9.3.ebuild,v 1.1 2014/11/22 02:00:49 radhermit Exp $
 
 EAPI="5"
 
