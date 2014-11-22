@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/eselect-vi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.48 2014/06/06 06:03:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.49 2014/11/22 07:13:41 yngwin Exp $
+
+*eselect-vi-1.1.8 (22 Nov 2014)
+
+  22 Nov 2014; Ben de Groot <yngwin@gentoo.org> +eselect-vi-1.1.8.ebuild,
+  -eselect-vi-1.1.4.ebuild, -eselect-vi-1.1.5.ebuild, -eselect-vi-1.1.6.ebuild,
+  -eselect-vi-1.1.7.ebuild:
+  Version bump, including patch from 1.1.7-r1 and adding qvim as option (bug
+  #529528). Remove old.
 
   06 Jun 2014; Mike Frysinger <vapier@gentoo.org> eselect-vi-1.1.7-r1.ebuild:
   Add arm64 love.
