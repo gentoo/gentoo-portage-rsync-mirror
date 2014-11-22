@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure prepare
+DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=An implementation of the IDNA2008 specifications (RFC 5890, RFC 5891, RFC 5892, RFC 5893)
+EAPI=5
+HOMEPAGE=http://www.gnu.org/software/libidn/#libidn2
+IUSE=static-libs
+KEYWORDS=~amd64
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=mirror://gnu-alpha/libidn2/libidn2-0.10.tar.gz
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=129071394f559b16893786d8e19ce48d

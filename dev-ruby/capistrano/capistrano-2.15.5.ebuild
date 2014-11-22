@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.15.5.ebuild,v 1.6 2014/05/15 01:07:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.15.5.ebuild,v 1.7 2014/11/22 20:14:33 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.md"
 inherit ruby-fakegem
 
 DESCRIPTION="A distributed application deployment system"
-HOMEPAGE="http://capify.org/"
+HOMEPAGE="http://capistranorb.com/"
 
 LICENSE="MIT"
 SLOT="2"

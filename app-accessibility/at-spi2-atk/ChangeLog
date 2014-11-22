@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/at-spi2-atk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.58 2014/10/11 11:29:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.59 2014/11/22 20:02:56 mgorny Exp $
+
+*at-spi2-atk-2.12.1-r1 (22 Nov 2014)
+
+  22 Nov 2014; Michał Górny <mgorny@gentoo.org> +at-spi2-atk-2.12.1-r1.ebuild:
+  Introduce multilib support as needed for x11-libs/gtk+:3.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> at-spi2-atk-2.12.1.ebuild:
   arm stable, bug #512012
