@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/goaccess-0.6.1.ebuild,v 1.1 2013/11/24 15:01:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/goaccess-0.6.1.ebuild,v 1.2 2014/11/22 12:34:41 jer Exp $
 
 EAPI=5
 
@@ -25,11 +25,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-src_prepare() {
-	# respect CFLAGS, bug #451806
-	sed -i -e '/AM_CFLAGS/s/-g//' Makefile.am || die 'sed failed'
-	autotools-utils_src_prepare
-}
+PATCHES=(
+	"${FILESDIR}"/${P}-CFLAGS.patch
+	"${FILESDIR}"/${P}-tinfo.patch
+)
 
 src_configure() {
 	# configure does not properly recognise '--disable-something'

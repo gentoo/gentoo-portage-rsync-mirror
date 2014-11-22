@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/goaccess
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/ChangeLog,v 1.6 2013/11/24 15:01:19 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/ChangeLog,v 1.7 2014/11/22 12:34:41 jer Exp $
+
+  22 Nov 2014; Jeroen Roovers <jer@gentoo.org> goaccess-0.6.1.ebuild,
+  +files/goaccess-0.6.1-CFLAGS.patch, +files/goaccess-0.6.1-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #528364).
 
 *goaccess-0.6.1 (24 Nov 2013)
 

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.145 2014/11/14 19:20:37 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.146 2014/11/22 12:59:49 perfinion Exp $
+
+*policycoreutils-2.4_rc6-r1 (22 Nov 2014)
+
+  22 Nov 2014; Jason Zaman <perfinon@gentoo.org>
+  +files/0001-policycoreutils-pp-add-roletype-statements-for-both-.patch,
+  +policycoreutils-2.4_rc6-r1.ebuild:
+  add patch from upstream to fix missing roletypes
 
 *policycoreutils-2.4_rc6 (14 Nov 2014)
 
