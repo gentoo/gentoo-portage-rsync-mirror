@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testrepository/testrepository-0.0.17-r2.ebuild,v 1.4 2014/08/20 20:33:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testrepository/testrepository-0.0.17-r2.ebuild,v 1.5 2014/11/23 17:10:41 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
@@ -18,8 +18,8 @@ IUSE="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		test? ( ${RDEPEND}
-			dev-python/testresources[$(python_gen_usedep python{2_7,3_2})]
-			dev-python/testscenarios[$(python_gen_usedep python{2_7,3_2})]
+			dev-python/testresources[${PYTHON_USEDEP}]
+			dev-python/testscenarios[${PYTHON_USEDEP}]
 			dev-python/pytz[${PYTHON_USEDEP}]
 		)"
 #>=dev-python/subunit-0.0.10[${PYTHON_USEDEP}]
@@ -30,7 +30,6 @@ RDEPEND=">=dev-python/subunit-0.0.10[${PYTHON_USEDEP}]
 		>=dev-python/testtools-0.9.30[${PYTHON_USEDEP}]
 		dev-python/fixtures[${PYTHON_USEDEP}]"
 
-REQUIRED_USE="test? ( $(python_gen_useflags python{2_7,3_2}) )"
 # Required for test phase
 DISTUTILS_IN_SOURCE_BUILD=1
 

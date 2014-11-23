@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-1.6.4-r1.ebuild,v 1.11 2014/06/18 16:00:38 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-1.6.4-r1.ebuild,v 1.12 2014/11/23 17:08:04 floppym Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ IUSE="test"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/mock[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/webtest[$(python_gen_usedep python{2_6,2_7,3_2,3_3})] )"
+		dev-python/webtest[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"

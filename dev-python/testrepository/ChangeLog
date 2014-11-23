@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/testrepository
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testrepository/ChangeLog,v 1.14 2014/08/20 20:33:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testrepository/ChangeLog,v 1.15 2014/11/23 17:10:41 floppym Exp $
+
+  23 Nov 2014; Mike Gilbert <floppym@gentoo.org>
+  testrepository-0.0.17-r2.ebuild:
+  Remove weird python_gen_usedep usage.
 
   20 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
   testrepository-0.0.17-r1.ebuild, testrepository-0.0.17-r2.ebuild,

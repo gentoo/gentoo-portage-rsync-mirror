@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/amavis-logwatch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis-logwatch/ChangeLog,v 1.3 2014/11/13 15:18:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis-logwatch/ChangeLog,v 1.4 2014/11/23 17:14:37 zlogene Exp $
+
+  23 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
+  amavis-logwatch-1.51.03.ebuild:
+  x86 stable wrt bug #528864
 
   13 Nov 2014; Agostino Sarubbo <ago@gentoo.org> amavis-logwatch-1.51.03.ebuild:
   Stable for amd64, wrt bug #528864

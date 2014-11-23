@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-9999.ebuild,v 1.4 2014/11/23 16:36:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-9999.ebuild,v 1.5 2014/11/23 17:05:08 floppym Exp $
 
 EAPI=5
 
@@ -79,7 +79,6 @@ RDEPEND="${COMMON_DEPEND}
 	qt4? ( dev-python/PyQt4[X,${PYTHON_USEDEP}] )"
 
 PY2_FLAGS="|| ( $(python_gen_useflags python2*) )"
-PY32_FLAGS="|| ( $(python_gen_useflags python3_2) )"
 REQUIRED_USE="
 	doc? ( ${PY2_FLAGS} )
 	excel? ( ${PY2_FLAGS} )
