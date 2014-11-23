@@ -1,5 +1,5 @@
---- ccze-0.2.1/src/Makefile.in.org	2010-01-22 17:06:57.000000000 +0100
-+++ ccze-0.2.1/src/Makefile.in	2010-01-22 18:00:28.000000000 +0100
+--- a/src/Makefile.in
++++ b/src/Makefile.in
 @@ -75,7 +75,7 @@
  ${PROGRAM}: ${OBJECTS} ${PLUGIN_SOBJS}
  	${CC} -rdynamic ${ALL_CFLAGS} -o $@ $^ ${ALL_LDFLAGS}

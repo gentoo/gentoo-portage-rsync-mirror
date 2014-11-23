@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ccze
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.32 2012/03/18 15:51:16 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.33 2014/11/23 10:01:06 jer Exp $
+
+  23 Nov 2014; Jeroen Roovers <jer@gentoo.org> -ccze-0.2.1-r2.ebuild,
+  ccze-0.2.1-r3.ebuild, +files/ccze-0.2.1-tinfo.patch, files/ccze-fbsd.patch,
+  files/ccze-ldflags.patch, files/ccze-segfault.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #529796).
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> ccze-0.2.1-r2.ebuild,
   ccze-0.2.1-r3.ebuild:
