@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/monster-masher
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.28 2012/06/30 22:17:34 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.29 2014/11/23 20:24:35 pacho Exp $
+
+*monster-masher-1.8.1-r2 (23 Nov 2014)
+
+  23 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/monster-masher-1.8.1-desktop.patch, +monster-masher-1.8.1-r2.ebuild,
+  -monster-masher-1.8.1-r1.ebuild:
+  Bump eapi, fix desktop file, amd64 stable
 
   30 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
   monster-masher-1.8.1-r1.ebuild:

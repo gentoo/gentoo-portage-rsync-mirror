@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/opendict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.29 2014/08/10 02:33:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.30 2014/11/23 20:15:44 pacho Exp $
+
+*opendict-0.6.3-r1 (23 Nov 2014)
+
+  23 Nov 2014; Pacho Ramos <pacho@gentoo.org> +opendict-0.6.3-r1.ebuild:
+  Port to new python eclasses
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> opendict-0.6.3.ebuild:
   Fix description for more repoman happy
