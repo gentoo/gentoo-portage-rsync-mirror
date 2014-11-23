@@ -1,6 +1,11 @@
 # ChangeLog for net-im/pyaim-t
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/ChangeLog,v 1.19 2014/11/23 16:28:10 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/ChangeLog,v 1.20 2014/11/23 16:51:53 mrueg Exp $
+
+  23 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -files/pyaim-t-0.8-initd,
+  -pyaim-t-0.8.0.1.ebuild, pyaim-t-0.8.0.1-r1.ebuild:
+  Mark stable on x86. Based on build testing by Myckel Habets. Add missing die.
+  Cleanup old. Fixes bug #471544
 
   23 Nov 2014; Chema Alonso <nimiux@gentoo.org> pyaim-t-0.8.0.1-r1.ebuild:
   Stable for amd64 wrt bug #471544

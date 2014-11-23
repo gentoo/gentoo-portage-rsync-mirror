@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.213 2014/11/06 15:05:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.214 2014/11/23 16:40:45 floppym Exp $
 
 # CURL_SSL=winssl is for prefix/windows/winnt only
 curl_ssl_winssl
@@ -378,15 +378,6 @@ qt5
 # Enabling this you will get a fully unsupported Gnome setup that
 # could suffer unexpected problem, don't expect support for it then.
 openrc-force
-
-# Michał Górny <mgorny@gentoo.org> (06 Sep 2014)
-# (on behalf of Python team)
-# Python 3.2 is no longer supported upstream and there are no new
-# releases planned. Packages are removing support for it in favor
-# of 3.3 and 3.4. The support for implementations will be disabled
-# in 30 days.
-python_targets_python3_2
-python_single_target_python3_2
 
 # Mike Gilbert <floppym@gentoo.org> (19 Oct 2014)
 # sys-libs/libapparmor

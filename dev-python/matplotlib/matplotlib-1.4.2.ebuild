@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.4.2.ebuild,v 1.1 2014/11/06 04:00:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.4.2.ebuild,v 1.2 2014/11/23 16:36:23 floppym Exp $
 
 EAPI=5
 
@@ -25,7 +25,6 @@ IUSE="cairo doc excel examples fltk gtk gtk3 latex pyside qt4 test tk wxwidgets"
 
 # #456704 -- a lot of py2-only deps
 PY2_USEDEP=$(python_gen_usedep python2_7)
-PY3_USEDEP=$(python_gen_usedep python3{_3,_4})
 COMMON_DEPEND="
 	>=dev-python/numpy-1.6[${PYTHON_USEDEP}]
 	dev-python/python-dateutil:0[${PYTHON_USEDEP}]
