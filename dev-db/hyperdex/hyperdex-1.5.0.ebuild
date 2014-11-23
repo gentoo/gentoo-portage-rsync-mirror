@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-1.5.0.ebuild,v 1.1 2014/11/23 13:23:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-1.5.0.ebuild,v 1.2 2014/11/23 13:52:45 patrick Exp $
 EAPI=5
 
-# depends on libmacaroons python bindings
+# Tests fail, again
 RESTRICT="test"
 
 PYTHON_COMPAT=( python2_7)
@@ -18,7 +18,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="+python"
+IUSE="test +python"
 # need to add ruby and java useflags too
 
 DEPEND="dev-cpp/glog
@@ -32,6 +32,8 @@ DEPEND="dev-cpp/glog
 	dev-libs/libmacaroons
 	dev-libs/json-c"
 RDEPEND="${DEPEND}"
+
+REQUIRED_USE="test? ( python )"
 
 src_prepare() {
 	cp "${WORKDIR}/"*.m4 m4/

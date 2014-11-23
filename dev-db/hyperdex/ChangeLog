@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hyperdex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/ChangeLog,v 1.27 2014/11/23 13:23:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/ChangeLog,v 1.28 2014/11/23 13:52:45 patrick Exp $
+
+  23 Nov 2014; Patrick Lauer <patrick@gentoo.org> hyperdex-1.5.0.ebuild:
+  Fixups for test phase, which still fails
 
 *hyperdex-1.5.0 (23 Nov 2014)
 

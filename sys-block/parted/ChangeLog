@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/parted
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.55 2014/11/11 10:49:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.56 2014/11/23 13:35:46 zlogene Exp $
+
+  23 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> parted-3.2.ebuild:
+  x86 stable wrt bug #527846
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> parted-3.2.ebuild:
   Stable for ia64, wrt bug #527846

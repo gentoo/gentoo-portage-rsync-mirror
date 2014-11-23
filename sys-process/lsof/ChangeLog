@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/lsof
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.103 2014/11/21 08:11:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.104 2014/11/23 13:44:59 zlogene Exp $
+
+  23 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> lsof-4.87-r1.ebuild:
+  x86 stable wrt bug #529126
 
   21 Nov 2014; Mike Frysinger <vapier@gentoo.org> lsof-4.87-r1.ebuild,
   lsof-4.88.ebuild:

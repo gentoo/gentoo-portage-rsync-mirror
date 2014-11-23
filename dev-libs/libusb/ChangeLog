@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.170 2014/11/12 05:30:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.171 2014/11/23 13:58:12 zlogene Exp $
+
+  23 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> libusb-1.0.19.ebuild:
+  alpha stable wrt bug #528834
 
   12 Nov 2014; Samuli Suominen <ssuominen@gentoo.org> libusb-1.0.19.ebuild:
   amd64/arm/ppc/ppc64/x86 stable wrt #528834
