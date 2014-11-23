@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.2.0.ebuild,v 1.16 2014/11/23 16:26:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.2.0-r1.ebuild,v 1.1 2014/11/23 17:47:50 floppym Exp $
 
 EAPI=5
 
