@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5666-r2.ebuild,v 1.1 2014/11/22 02:47:29 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5666-r2.ebuild,v 1.2 2014/11/23 15:37:36 redlizard Exp $
 
 EAPI="3"
 
@@ -42,7 +42,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	nls? ( sys-devel/gettext )
 	>=sys-devel/gcc-config-1.8-r1
 	sys-libs/csu
-	>=sys-apps/portage-2.2.14
+	!<sys-apps/portage-2.2.14
 	fortran? (
 		>=dev-libs/gmp-4.2.1
 		>=dev-libs/mpfr-2.2.0_p10

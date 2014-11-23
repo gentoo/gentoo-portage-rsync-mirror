@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.206 2014/11/20 01:49:38 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.207 2014/11/23 15:55:19 floppym Exp $
+
+  23 Nov 2014; Mike Gilbert <floppym@gentoo.org> make.defaults:
+  Disable python3_4 default for this arch.
 
   20 Nov 2014; Davide Pesavento <pesa@gentoo.org> package.mask:
   Move Qt 4.8.6 mask from global package.mask to arch profiles.
