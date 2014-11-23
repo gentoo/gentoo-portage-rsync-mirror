@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/ahem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ahem/ChangeLog,v 1.1 2014/05/23 02:05:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ahem/ChangeLog,v 1.2 2014/11/23 15:17:28 xmw Exp $
+
+  23 Nov 2014; Michael Weber <xmw@gentoo.org> ahem-1.0.ebuild:
+  Fix typo
 
 *ahem-1.0 (23 May 2014)
 

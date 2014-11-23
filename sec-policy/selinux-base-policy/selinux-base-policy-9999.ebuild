@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-9999.ebuild,v 1.16 2014/11/23 14:52:16 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-9999.ebuild,v 1.17 2014/11/23 15:09:36 swift Exp $
 EAPI="5"
 
 inherit eutils
@@ -108,7 +108,8 @@ src_prepare() {
 
 src_compile() {
 	for i in ${POLICY_TYPES}; do
-		emake NAME=$i -C "${S}"/${i} || die "${i} compile failed"
+	    # Parallel build is broken, see bug 530178
+		emake -j1 NAME=$i -C "${S}"/${i} || die "${i} compile failed"
 	done
 }
 

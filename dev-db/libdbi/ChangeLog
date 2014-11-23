@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/libdbi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.63 2014/08/10 20:00:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.64 2014/11/23 15:01:09 pacho Exp $
+
+  23 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/libdbi-0.8.1-pkg-config.patch, -files/libdbi-0.8.3-doc-build-fix.patch,
+  -files/libdbi-0.8.4-doc-build-fix.patch,
+  -files/libdbi-0.8.4-fix-ac-macro.patch, -libdbi-0.8.3.ebuild,
+  -libdbi-0.8.4.ebuild:
+  Drop old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libdbi-0.8.3.ebuild,
   libdbi-0.8.4.ebuild, libdbi-0.9.0.ebuild:

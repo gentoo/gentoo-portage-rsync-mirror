@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/libdbi-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.68 2014/11/03 11:22:20 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.69 2014/11/23 15:02:21 pacho Exp $
+
+  23 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/libdbi-drivers-0.8.3-doc-build-fix.patch,
+  -files/libdbi-drivers-0.8.3-firebird-fix.patch,
+  -files/libdbi-drivers-0.8.3-fix-ac-macro.patch,
+  -files/libdbi-drivers-0.8.3-oracle-build-fix.patch,
+  -libdbi-drivers-0.8.3-r2.ebuild, -libdbi-drivers-0.8.3.ebuild:
+  Drop old
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   libdbi-drivers-0.8.3.ebuild, libdbi-drivers-0.8.3-r2.ebuild,

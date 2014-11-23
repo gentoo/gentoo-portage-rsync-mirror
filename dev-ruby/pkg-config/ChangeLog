@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pkg-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.31 2014/11/23 14:37:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.32 2014/11/23 15:05:46 mrueg Exp $
+
+  23 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -pkg-config-1.1.3.ebuild:
+  Cleanup old.
 
   23 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pkg-config-1.1.5.ebuild:
   Stable for x86, wrt bug #521316

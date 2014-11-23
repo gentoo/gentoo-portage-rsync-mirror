@@ -1,8 +1,0 @@
---- configure.in.orig	2008-09-23 15:16:20.000000000 -0400
-+++ configure.in	2008-09-23 15:16:39.000000000 -0400
-@@ -149,4 +149,5 @@
- 	doc/Makefile
- 	include/Makefile
- 	include/dbi/Makefile
-+	dbi.pc
- 	])
