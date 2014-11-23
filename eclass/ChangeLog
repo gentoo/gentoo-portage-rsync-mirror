@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1442 2014/11/23 16:05:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1443 2014/11/23 19:56:53 pacho Exp $
+
+  23 Nov 2014; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
+  Deprecate eapis 0 and 1 for gnome2.eclass (#530046)
 
   23 Nov 2014; Mike Gilbert <floppym@gentoo.org> python-utils-r1.eclass:
   Adjust _python_impl_supported as well.
