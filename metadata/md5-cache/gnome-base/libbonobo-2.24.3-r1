@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
+DEPEND=>=dev-libs/glib-2.14:2 >=gnome-base/orbit-2.14.0 >=dev-libs/libxml2-2.4.20:2 >=sys-apps/dbus-1.0.0 >=dev-libs/dbus-glib-0.74 >=dev-libs/popt-1.5 !gnome-base/bonobo-activation dev-util/gtk-doc-am virtual/yacc sys-devel/flex x11-apps/xrdb virtual/pkgconfig >=dev-util/intltool-0.35 >=sys-apps/sed-4
+DESCRIPTION=GNOME CORBA framework
+EAPI=5
+HOMEPAGE=http://developer.gnome.org/libbonobo/stable/
+IUSE=debug examples test debug
+KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris
+LICENSE=LGPL-2.1 GPL-2
+RDEPEND=>=dev-libs/glib-2.14:2 >=gnome-base/orbit-2.14.0 >=dev-libs/libxml2-2.4.20:2 >=sys-apps/dbus-1.0.0 >=dev-libs/dbus-glib-0.74 >=dev-libs/popt-1.5 !gnome-base/bonobo-activation
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://gnome/sources/libbonobo/2.24/libbonobo-2.24.3.tar.bz2
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	45916e43d354f01469675d59c24f3a07	gnome2-utils	1512d2a8bf02bab5d250c083dc77f4f8	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=2eea303b231095bb2edfb22e0f7474f1
