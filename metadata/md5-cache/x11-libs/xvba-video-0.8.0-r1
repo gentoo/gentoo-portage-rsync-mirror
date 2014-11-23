@@ -9,5 +9,5 @@ LICENSE=GPL-2+ MIT
 RDEPEND=<x11-libs/libva-1.2[X(+),opengl?] x11-libs/libvdpau x11-drivers/ati-drivers
 SLOT=0
 SRC_URI=http://dev.gentooexperimental.org/~scarabeus/xvba-driver-0.8.0.tar.bz2
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=672075b153b3893fc9d833975df4144f

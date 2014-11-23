@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst prepare setup test
-DEPEND=mpi? ( virtual/mpi ) doc? ( >=app-text/poppler-0.12.3-r3[utils] dev-tex/latex2html virtual/tex-base || ( ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-python/beautifulsoup-4[python_targets_python2_7(-),python_single_target_python2_7(+)] dev-python/lxml[python_targets_python2_7(-),python_single_target_python2_7(+)] ) ( >=dev-lang/python-3.3.2-r2:3.3 >=dev-python/beautifulsoup-4[python_targets_python3_3(-),python_single_target_python3_3(+)] dev-python/lxml[python_targets_python3_3(-),python_single_target_python3_3(+)] ) ( >=dev-lang/python-3.2.5-r2:3.2 >=dev-python/beautifulsoup-4[python_targets_python3_2(-),python_single_target_python3_2(+)] dev-python/lxml[python_targets_python3_2(-),python_single_target_python3_2(+)] ) ) media-libs/netpbm || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-3.3.2-r2:3.3 >=dev-lang/python-3.2.5-r2:3.2 ) ) virtual/fortran
+DEPEND=mpi? ( virtual/mpi ) doc? ( >=app-text/poppler-0.12.3-r3[utils] dev-tex/latex2html virtual/tex-base || ( ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-python/beautifulsoup-4[python_targets_python2_7(-),python_single_target_python2_7(+)] dev-python/lxml[python_targets_python2_7(-),python_single_target_python2_7(+)] ) ( >=dev-lang/python-3.3.2-r2:3.3 >=dev-python/beautifulsoup-4[python_targets_python3_3(-),python_single_target_python3_3(+)] dev-python/lxml[python_targets_python3_3(-),python_single_target_python3_3(+)] ) ) media-libs/netpbm || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-3.3.2-r2:3.3 ) ) virtual/fortran
 DESCRIPTION=Message-passing parallel language and runtime system
 EAPI=5
 HOMEPAGE=http://charm.cs.uiuc.edu/
@@ -10,5 +10,5 @@ RDEPEND=mpi? ( virtual/mpi ) virtual/fortran
 REQUIRED_USE=doc? ( ) cmkopt? ( !charmdebug !charmtracing ) charmproduction? ( !charmdebug !charmtracing )
 SLOT=0
 SRC_URI=http://charm.cs.uiuc.edu/distrib/charm-6.6.0.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1f2c7ee420a6b421ab07eceaadcf3124

@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.2.0.ebuild,v 1.15 2014/06/20 16:05:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.2.0.ebuild,v 1.16 2014/11/23 16:26:09 floppym Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
-inherit eutils python-r1
+inherit autotools eutils python-r1
 
 DESCRIPTION="Python bindings for the D-Bus messagebus"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/DBusBindings http://dbus.freedesktop.org/doc/dbus-python/"
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/pygobject:3[${PYTHON_USEDEP}] )"
 
 src_prepare() {
+	# Update py-compile, bug 529502.
+	eautoreconf
 	python_copy_sources
 }
 

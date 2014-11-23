@@ -3,12 +3,12 @@ DEPEND=tbb? ( dev-cpp/tbb ) >=dev-libs/boost-1.49 papi? ( dev-libs/papi ) perfto
 DESCRIPTION=C++ runtime system for parallel and distributed applications
 EAPI=5
 HOMEPAGE=http://stellar.cct.lsu.edu/tag/hpx/
-IUSE=doc examples jemalloc papi +perftools tbb test python_targets_python3_2 python_targets_python3_3 python_targets_python3_4 python_targets_python2_7 python_single_target_python3_2 python_single_target_python3_3 python_single_target_python3_4 python_single_target_python2_7
+IUSE=doc examples jemalloc papi +perftools tbb test python_targets_python3_3 python_targets_python3_4 python_targets_python2_7 python_single_target_python3_3 python_single_target_python3_4 python_single_target_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=Boost-1.0
 RDEPEND=tbb? ( dev-cpp/tbb ) >=dev-libs/boost-1.49 papi? ( dev-libs/papi ) perftools? ( >=dev-util/google-perftools-1.7.1 ) >=sys-apps/hwloc-1.8 >=sys-libs/libunwind-1 sys-libs/zlib virtual/fortran
-REQUIRED_USE=test? ( ^^ ( python_single_target_python3_2 python_single_target_python3_3 python_single_target_python3_4 python_single_target_python2_7 ) python_single_target_python3_2? ( python_targets_python3_2 ) python_single_target_python3_3? ( python_targets_python3_3 ) python_single_target_python3_4? ( python_targets_python3_4 ) python_single_target_python2_7? ( python_targets_python2_7 ) ) jemalloc? ( !perftools !tbb ) perftools? ( !jemalloc !tbb ) tbb? ( !jemalloc !perftools )
+REQUIRED_USE=test? ( ^^ ( python_single_target_python3_3 python_single_target_python3_4 python_single_target_python2_7 ) python_single_target_python3_3? ( python_targets_python3_3 ) python_single_target_python3_4? ( python_targets_python3_4 ) python_single_target_python2_7? ( python_targets_python2_7 ) ) jemalloc? ( !perftools !tbb ) perftools? ( !jemalloc !tbb ) tbb? ( !jemalloc !perftools )
 SLOT=0
 SRC_URI=https://github.com/STEllAR-GROUP/hpx/archive/0.9.9.tar.gz -> hpx-0.9.9.tar.gz
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=cc21afc9c54671ba7e761ffa3e8bfc93

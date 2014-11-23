@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-notificationd/lxqt-notificationd-0.7.0.ebuild,v 1.5 2014/11/16 12:42:27 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-notificationd/lxqt-notificationd-0.7.0.ebuild,v 1.6 2014/11/23 16:21:10 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -20,9 +20,12 @@ fi
 LICENSE="GPL-2 LGPL-2.1+"
 SLOT="0"
 
-DEPEND="dev-qt/qtcore:4
+DEPEND="
+	~dev-libs/libqtxdg-0.5.3
+	dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
 	~lxqt-base/liblxqt-${PV}
-	~dev-libs/libqtxdg-0.5.3"
+	~lxqt-base/lxqt-common-${PV}
+"
 RDEPEND="${DEPEND}"

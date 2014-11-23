@@ -1,6 +1,10 @@
 # ChangeLog for lxqt-base/lxqt-notificationd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-notificationd/ChangeLog,v 1.5 2014/11/08 17:24:44 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-notificationd/ChangeLog,v 1.6 2014/11/23 16:21:10 jauhien Exp $
+
+  23 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  lxqt-notificationd-0.7.0.ebuild, lxqt-notificationd-0.8.0.ebuild:
+  fix bug #529866: add dependency on lxqt-base/lxqt-common, thanks to Kris Scott
 
 *lxqt-notificationd-0.8.0 (08 Nov 2014)
 

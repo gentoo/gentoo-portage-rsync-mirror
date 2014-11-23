@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=>=dev-python/pygtk-2.12 || ( x11-libs/gdk-pixbuf:2[jpeg] x11-libs/gtk+:2[jpeg] ) >=dev-python/python-mpd-0.2.1 dbus? ( dev-python/dbus-python ) lyrics? ( dev-python/zsi ) taglib? ( >=dev-python/tagpy-0.93 ) trayicon? ( dev-python/egg-python ) virtual/pkgconfig >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
+DEPEND=>=dev-python/pygtk-2.12 || ( x11-libs/gdk-pixbuf:2[jpeg] x11-libs/gtk+:2[jpeg] ) >=dev-python/python-mpd-0.2.1 dbus? ( dev-python/dbus-python ) lyrics? ( dev-python/zsi ) taglib? ( >=dev-python/tagpy-0.93 ) trayicon? ( dev-python/egg-python ) virtual/pkgconfig >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
 DESCRIPTION=an elegant GTK+ music client for the Music Player Daemon (MPD)
 EAPI=5
 HOMEPAGE=http://sonata.berlios.de/
 IUSE=dbus lyrics taglib +trayicon python_targets_python2_7
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-3
-RDEPEND=>=dev-python/pygtk-2.12 || ( x11-libs/gdk-pixbuf:2[jpeg] x11-libs/gtk+:2[jpeg] ) >=dev-python/python-mpd-0.2.1 dbus? ( dev-python/dbus-python ) lyrics? ( dev-python/zsi ) taglib? ( >=dev-python/tagpy-0.93 ) trayicon? ( dev-python/egg-python ) >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
+RDEPEND=>=dev-python/pygtk-2.12 || ( x11-libs/gdk-pixbuf:2[jpeg] x11-libs/gtk+:2[jpeg] ) >=dev-python/python-mpd-0.2.1 dbus? ( dev-python/dbus-python ) lyrics? ( dev-python/zsi ) taglib? ( >=dev-python/tagpy-0.93 ) trayicon? ( dev-python/egg-python ) >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://codingteam.net/project/sonata/download/file/sonata-1.6.2.1.tar.bz2
-_eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b466f5854bab94967ad76697ae8f9d0b

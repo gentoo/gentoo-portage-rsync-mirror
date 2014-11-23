@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-3.3.2-r2:3.3 >=dev-lang/python-3.2.5-r2:3.2 ) <net-libs/libotr-4 dev-libs/glib:2 dev-libs/libgcrypt:0 dev-libs/libgpg-error net-irc/irssi virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-3.3.2-r2:3.3 ) <net-libs/libotr-4 dev-libs/glib:2 dev-libs/libgcrypt:0 dev-libs/libgpg-error net-irc/irssi virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Off-The-Record messaging (OTR) for irssi
 EAPI=5
 HOMEPAGE=http://irssi-otr.tuxfamily.org
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=<net-libs/libotr-4 dev-libs/glib:2 dev-libs/libgcrypt:0 dev-libs/libgpg-error net-irc/irssi
 SLOT=0
 SRC_URI=ftp://download.tuxfamily.org/irssiotr/irssi-otr-0.3.tar.gz
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=971b5c523dbfda9968b72fb365e395d9

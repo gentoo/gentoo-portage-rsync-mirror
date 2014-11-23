@@ -2,11 +2,11 @@ DEFINED_PHASES=install prepare setup
 DESCRIPTION=report file access events from all running processes
 EAPI=5
 HOMEPAGE=https://launchpad.net/fatrace
-IUSE=powertop python_targets_python3_2 python_targets_python3_3 python_single_target_python3_2 python_single_target_python3_3
+IUSE=powertop python_targets_python3_3
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=powertop? ( python_single_target_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_single_target_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python2_7(-),python_single_target_python3_2(+)?,python_single_target_python3_3(+)?] )
+RDEPEND=powertop? ( >=dev-lang/python-3.3.2-r2:3.3 dev-lang/python-exec:=[python_targets_python3_3(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python2_7(-),python_single_target_python3_3(+)] )
 SLOT=0
 SRC_URI=https://launchpad.net/fatrace/trunk/0.5/+download/fatrace-0.5.tar.bz2
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=87bd401b0c9193c945472c87b0ab84a0

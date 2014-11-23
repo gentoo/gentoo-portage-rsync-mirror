@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=dev-libs/expat dev-libs/libevent >=dev-libs/openssl-0.9.8 >=net-libs/ldns-1.6.13[ecdsa,ssl,gost?] selinux? ( sec-policy/selinux-bind ) python? ( >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] dev-lang/swig ) test? ( net-dns/ldns-utils[examples] dev-util/splint app-text/wdiff ) virtual/pkgconfig
+DEPEND=dev-libs/expat dev-libs/libevent >=dev-libs/openssl-0.9.8 >=net-libs/ldns-1.6.13[ecdsa,ssl,gost?] selinux? ( sec-policy/selinux-bind ) python? ( >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] dev-lang/swig ) test? ( net-dns/ldns-utils[examples] dev-util/splint app-text/wdiff ) virtual/pkgconfig
 DESCRIPTION=A validating, recursive and caching DNS resolver
 EAPI=5
 HOMEPAGE=http://unbound.net/
@@ -10,5 +10,5 @@ RDEPEND=dev-libs/expat dev-libs/libevent >=dev-libs/openssl-0.9.8 >=net-libs/ldn
 REQUIRED_USE=python? ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://unbound.net/downloads/unbound-1.4.21.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=f9ee0c0edb9d304b82c2626c591668da

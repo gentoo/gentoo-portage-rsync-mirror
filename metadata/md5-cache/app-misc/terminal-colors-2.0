@@ -2,11 +2,11 @@ DEFINED_PHASES=install
 DESCRIPTION=A tool to display color charts for 8, 16, 88, and 256 color terminals
 EAPI=5
 HOMEPAGE=http://zhar.net/projects/shell/terminal-colors
-IUSE=python_targets_python2_7 python_targets_python3_2 python_targets_python3_3
+IUSE=python_targets_python2_7 python_targets_python3_3
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3+
-RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ncurses] ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2[ncurses] ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[ncurses] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ncurses] ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[ncurses] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-)]
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~radhermit/distfiles/terminal-colors-2.0.bz2
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	b63f5ef61876823ab0bd05d867697d75	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	b63f5ef61876823ab0bd05d867697d75	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=8a67e2f046ee040c1302fde02244b897

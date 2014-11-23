@@ -3,12 +3,12 @@ DEPEND=selinux? ( sys-libs/libselinux ) sys-apps/util-linux[static-libs?] sys-li
 DESCRIPTION=Userland utilities for ZFS Linux kernel module
 EAPI=5
 HOMEPAGE=http://zfsonlinux.org/
-IUSE=bash-completion custom-cflags debug kernel-builtin +rootfs selinux test-suite static-libs python_targets_python2_7 python_targets_python3_2 python_targets_python3_3
+IUSE=bash-completion custom-cflags debug kernel-builtin +rootfs selinux test-suite static-libs python_targets_python2_7 python_targets_python3_3
 KEYWORDS=~amd64
 LICENSE=BSD-2 CDDL bash-completion? ( MIT )
 RDEPEND=selinux? ( sys-libs/libselinux ) sys-apps/util-linux[static-libs?] sys-libs/zlib[static-libs(+)?] virtual/awk !=sys-apps/grep-2.13* !kernel-builtin? ( =sys-fs/zfs-kmod-0.6.2* ) !sys-fs/zfs-fuse !prefix? ( virtual/udev ) test-suite? ( sys-apps/util-linux sys-devel/bc sys-block/parted sys-fs/lsscsi sys-fs/mdadm sys-process/procps virtual/modutils ) rootfs? ( app-arch/cpio app-misc/pax-utils !<sys-boot/grub-2.00-r2:2 )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/zfsonlinux/zfs/archive/zfs-0.6.2.tar.gz http://dev.gentoo.org/~ryao/dist/zfs-kmod-0.6.2-p4.tar.xz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	b63f5ef61876823ab0bd05d867697d75	python-utils-r1	fa6c2a74651117877e00388c61d6ef99	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	b63f5ef61876823ab0bd05d867697d75	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=c55f3adb2954ac1128bc69a83e8a7570

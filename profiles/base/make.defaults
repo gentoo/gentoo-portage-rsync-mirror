@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.116 2014/04/29 13:19:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.117 2014/11/23 16:03:09 floppym Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -124,7 +124,7 @@ BOOTSTRAP_USE="cxx unicode internal-glib python_targets_python3_3 python_targets
 
 # Mike Gilbert <floppym@gentoo.org> (15 May 2012)
 # Default target(s) for python-r1.eclass
-PYTHON_TARGETS="python2_7 python3_3"
+PYTHON_TARGETS="python2_7 python3_4"
 PYTHON_SINGLE_TARGET="python2_7"
 
 # Michał Górny <mgorny@gentoo.org> (10 Aug 2013)
