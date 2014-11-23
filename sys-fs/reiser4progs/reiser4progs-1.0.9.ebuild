@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.9.ebuild,v 1.4 2014/11/10 10:56:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.9.ebuild,v 1.5 2014/11/23 14:13:42 zlogene Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/reiser4/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ~ppc64 -sparc ~x86"
+KEYWORDS="amd64 arm ppc ~ppc64 -sparc x86"
 IUSE="debug readline static static-libs"
 
 LIB_DEPEND="~sys-libs/libaal-1.0.6[static-libs(+)]
