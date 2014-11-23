@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.10.ebuild,v 1.1 2014/11/10 18:39:07 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.10-r1.ebuild,v 1.1 2014/11/23 18:56:21 alonbl Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ IUSE="+cxx +crywrap dane doc examples guile nls pkcs11 static-libs test zlib ${I
 
 # NOTICE: sys-devel/autogen is required at runtime as we
 # use system libopts
-RDEPEND=">=dev-libs/libtasn1-3.4[${MULTILIB_USEDEP}]
+RDEPEND=">=dev-libs/libtasn1-3.9[${MULTILIB_USEDEP}]
 	>=dev-libs/nettle-2.7[gmp,${MULTILIB_USEDEP}]
 	>=dev-libs/gmp-5.1.3-r1[${MULTILIB_USEDEP}]
 	sys-devel/autogen
@@ -88,6 +88,7 @@ multilib_src_configure() {
 	econf \
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--disable-valgrind-tests \
+		--without-included-libtasn1 \
 		--enable-heartbeat-support \
 		$(use_enable cxx) \
 		$(use_enable dane libdane) \

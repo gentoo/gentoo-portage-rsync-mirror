@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.435 2014/11/19 21:38:10 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.436 2014/11/23 18:41:16 redlizard Exp $
+
+  23 Nov 2014; Ruud Koolen <redlizard@gentoo.org> package.mask:
+  Remove obsolete bison-3.0.2 mask.
 
   19 Nov 2014; Ruud Koolen <redlizard@gentoo.org> package.mask:
   Lift portage-2.2.14 mask.
