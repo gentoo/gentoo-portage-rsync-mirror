@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.41 2014/11/19 15:56:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.42 2014/11/23 19:20:49 mrueg Exp $
+
+  23 Nov 2014; Manuel Rüger <mrueg@gentoo.org> pip-1.4.1.ebuild,
+  pip-1.5.6.ebuild:
+  Install zsh-completion files unconditionally.
 
   19 Nov 2014; Ian Delaney <idella4@gentoo.org> pip-1.5.6.ebuild:
   clean old python impl, add pypy3 support

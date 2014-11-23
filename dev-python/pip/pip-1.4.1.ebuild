@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/pip-1.4.1.ebuild,v 1.7 2014/08/20 20:36:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/pip-1.4.1.ebuild,v 1.8 2014/11/23 19:20:49 mrueg Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 KEYWORDS="~alpha amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 SLOT="0"
-IUSE="zsh-completion"
+IUSE=""
 
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
@@ -33,9 +33,7 @@ python_install_all() {
 	${EPYTHON} pip/runner.py completion --bash > "${COMPLETION}" || die
 	newbashcomp "${COMPLETION}" ${PN}
 
-	if use zsh-completion ; then
-		${EPYTHON} pip/runner.py completion --zsh > "${COMPLETION}" || die
-		insinto /usr/share/zsh/site-functions
-		newins "${COMPLETION}" _pip
-	fi
+	${EPYTHON} pip/runner.py completion --zsh > "${COMPLETION}" || die
+	insinto /usr/share/zsh/site-functions
+	newins "${COMPLETION}" _pip
 }

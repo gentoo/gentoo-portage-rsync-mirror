@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completions/zsh-completions-0.12.0.ebuild,v 1.1 2014/11/21 10:28:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completions/zsh-completions-0.12.0-r1.ebuild,v 1.1 2014/11/23 19:15:14 mrueg Exp $
 
 EAPI=5
 
@@ -19,6 +19,11 @@ LICENSE="BSD"
 SLOT="0"
 
 RDEPEND="app-shells/zsh"
+
+src_prepare() {
+	# File collision with dev-python/pip
+	rm src/_pip || die
+}
 
 src_install() {
 	insinto /usr/share/zsh/site-functions
