@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.176 2014/10/30 09:20:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.177 2014/11/23 06:51:01 williamh Exp $
+
+*kmod-19 (23 Nov 2014)
+
+  23 Nov 2014; William Hubbs <williamh@gentoo.org> +kmod-19.ebuild,
+  kmod-9999.ebuild:
+  version bump. Also, per Samuli, drop the dynamic-kmod patch since it broke
+  parallel builds and no longer applies cleanly.
 
   30 Oct 2014; Samuli Suominen <ssuominen@gentoo.org> kmod-18-r1.ebuild:
   Relax systemd blockers since the severity of impact is, at most, normal, not
