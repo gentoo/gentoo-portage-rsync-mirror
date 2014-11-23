@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.9.1-r1.ebuild,v 1.6 2014/11/23 07:27:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.11.1.ebuild,v 1.1 2014/11/23 07:27:21 jer Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ inherit autotools-utils multilib gnome2-utils eutils python-single-r1
 DESCRIPTION="An email client (and news reader) based on GTK+"
 HOMEPAGE="http://www.claws-mail.org/"
 
-SRC_URI="mirror://sourceforge/sylpheed-claws/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/Claws%20Mail/${PV}/${P}.tar.xz"
 
 SLOT="0"
 LICENSE="GPL-3"
@@ -83,6 +83,7 @@ COMMONDEPEND=">=sys-devel/gettext-0.12.1
 
 DEPEND="${PLUGINBLOCK}
 	${COMMONDEPEND}
+	app-arch/xz-utils
 	xface? ( >=media-libs/compface-1.4 )
 	virtual/pkgconfig"
 
@@ -97,11 +98,6 @@ RDEPEND="${COMMONDEPEND}
 		dev-libs/libxml2 )
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
-
-PATCHES=(
-	"${FILESDIR}/${P}_libsoup-check-fix.patch"
-	"${FILESDIR}/${P}_fix-nntp-segfault.patch"
-)
 
 src_configure() {
 	local myeconfargs=(
@@ -147,7 +143,6 @@ src_configure() {
 		--enable-newmail-plugin
 		--enable-tnef_parse-plugin
 		--disable-generic-umpc
-		--disable-maemo
 		--disable-bsfilter-plugin
 		--disable-geolocation-plugin
 	)
