@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16175 2014/11/21 20:38:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16176 2014/11/23 22:52:13 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -42,10 +42,6 @@
 # Markos Chandras <hwoarang@gentoo.org> (18 Nov 2014)
 # Mask latest development version for testing
 =x11-misc/lightdm-1.13*
-
-# Rémi Cardona <remi@gentoo.org> (15 Nov 2014)
-# Masked until decision is made about binary slot
-=x11-base/xorg-server-1.16.2
 
 # Eray Aslan <eras@gentoo.org> (11 Nov 2014)
 # Mask beta releases

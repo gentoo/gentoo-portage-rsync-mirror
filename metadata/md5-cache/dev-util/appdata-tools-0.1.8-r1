@@ -1,0 +1,10 @@
+DEFINED_PHASES=-
+DEPEND=>=dev-libs/appstream-glib-0.3.2
+DESCRIPTION=CLI designed to validate AppData descriptions for standards compliance and to the style guide
+EAPI=5
+HOMEPAGE=https://github.com/hughsie/appdata-tools/
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64
+LICENSE=metapackage
+SLOT=0
+SRC_URI=https://github.com/hughsie/appdata-tools/archive/.tar.gz -> appdata-tools-0.1.8.tar.gz
+_md5_=cdbee7dbab47c77bced363ebb1f62afb
