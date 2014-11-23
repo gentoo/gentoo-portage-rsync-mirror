@@ -12,4 +12,7 @@
 		<name>Sergey Popov</name>
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
+	<use>
+		<flag name='zmq'>Build witch <pkg>net-libs/zeromq</pkg> support</flag>
+	</use>
 </pkgmetadata>
