@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.36 2014/03/01 10:18:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.37 2014/11/23 15:00:44 mgorny Exp $
 
 # @ECLASS: gnome2-utils.eclass
 # @MAINTAINER:
@@ -479,7 +479,10 @@ gnome2_query_immodules_gtk2() {
 # @DESCRIPTION:
 # Updates gtk3 immodules/gdk-pixbuf loaders listing.
 gnome2_query_immodules_gtk3() {
-	"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
+	local updater=${EPREFIX}/usr/bin/${CHOST}-gtk-query-immodules-3.0
+	[[ ! -x ${updater} ]] && updater=${EPREFIX}/usr/bin/gtk-query-immodules-3.0
+
+	"${updater}" --update-cache
 }
 
 # @FUNCTION: gnome2_disable_deprecation_warning
