@@ -1,0 +1,9 @@
+# ChangeLog for app-emulation/vpcs
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vpcs/ChangeLog,v 1.1 2014/11/23 09:33:46 idella4 Exp $
+
+*vpcs-0.6 (23 Nov 2014)
+
+  23 Nov 2014; Ian Delaney <idella4@gentoo.org> +metadata.xml, +vpcs-0.6.ebuild:
+  New ebuild submitted by Tom (kundarsa@gmail.com) and updated by B-Man.
+  Supports PC virtualization in net-misc/gns3-server, closes bug #512562
