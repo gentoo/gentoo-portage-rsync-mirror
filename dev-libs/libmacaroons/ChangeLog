@@ -1,0 +1,12 @@
+# ChangeLog for dev-libs/libmacaroons
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmacaroons/ChangeLog,v 1.2 2014/11/23 13:30:44 patrick Exp $
+
+  23 Nov 2014; Patrick Lauer <patrick@gentoo.org> libmacaroons-0.2.0.ebuild:
+  Add python bindings and test phase
+
+*libmacaroons-0.2.0 (23 Nov 2014)
+
+  23 Nov 2014; Patrick Lauer <patrick@gentoo.org> +libmacaroons-0.2.0.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me
