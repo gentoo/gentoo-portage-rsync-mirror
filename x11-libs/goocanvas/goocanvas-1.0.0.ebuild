@@ -1,33 +1,31 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-1.0.0.ebuild,v 1.12 2013/08/12 04:06:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-1.0.0.ebuild,v 1.13 2014/11/23 22:12:48 pacho Exp $
 
-EAPI="3"
-
+EAPI="5"
 GCONF_DEBUG=no
 GNOME2_LA_PUNT=yes
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit eutils gnome2 libtool
 
 DESCRIPTION="Canvas widget for GTK+ using the cairo 2D library for drawing"
-HOMEPAGE="http://live.gnome.org/GooCanvas"
+HOMEPAGE="https://wiki.gnome.org/Projects/GooCanvas"
 
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="doc examples"
+IUSE="examples"
 
-RDEPEND=">=x11-libs/gtk+-2.12:2
+RDEPEND="
+	>=x11-libs/gtk+-2.12:2
 	>=dev-libs/glib-2.10:2
-	>=x11-libs/cairo-1.4"
+	>=x11-libs/cairo-1.4
+"
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.8 )"
-
-pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	G2CONF="${G2CONF} --disable-rebuilds --disable-static"
-}
+"
 
 src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=671766
@@ -41,8 +39,13 @@ src_prepare() {
 	sed -e 's/^\(SUBDIRS =.*\)demo\(.*\)$/\1\2/' \
 		-i Makefile.am Makefile.in || die "sed 2 failed"
 
-	# Needed for FreeBSD - Please do not remove
-	elibtoolize
+	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		--disable-rebuilds \
+		--disable-static
 }
 
 src_install() {

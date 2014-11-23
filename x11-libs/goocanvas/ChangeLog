@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.50 2014/04/27 09:16:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.51 2014/11/23 22:12:48 pacho Exp $
+
+  23 Nov 2014; Pacho Ramos <pacho@gentoo.org> goocanvas-1.0.0.ebuild:
+  Bump eapi, kill doc USE flag and follow current policies
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -goocanvas-2.0.1.ebuild:
   drop old

@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libgnomeui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.213 2014/06/24 01:12:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.214 2014/11/23 22:06:44 pacho Exp $
+
+*libgnomeui-2.24.5-r1 (23 Nov 2014)
+
+  23 Nov 2014; Pacho Ramos <pacho@gentoo.org> +libgnomeui-2.24.5-r1.ebuild:
+  Bump eapi, kill doc USE flag and follow current policies
 
   24 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   libgnomeui-2.24.5.ebuild:
@@ -825,4 +830,3 @@
 * libgnomeui-1.117.0 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org>   libgnomeui-1.117.0.ebuild:
   part of gnome2 . initial cvs commit
-
