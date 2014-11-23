@@ -1,6 +1,12 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.335 2014/11/09 13:18:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.336 2014/11/23 12:37:49 jlec Exp $
+
+*calibre-1.48-r1 (23 Nov 2014)
+
+  23 Nov 2014; Justin Lecher <jlec@gentoo.org> +calibre-1.48-r1.ebuild:
+  Add workaround for newer PyQt4, #526524; use distutils-r1.eclass, fix
+  installation of bash-completions
 
   09 Nov 2014; Ben de Groot <yngwin@gentoo.org> calibre-2.9.0.ebuild:
   Fix failure of xdg tools to recognize vendor prefix (see bug #521484)
