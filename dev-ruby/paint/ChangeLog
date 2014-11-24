@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/paint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/paint/ChangeLog,v 1.10 2014/11/20 22:22:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/paint/ChangeLog,v 1.11 2014/11/24 11:34:54 mrueg Exp $
+
+  24 Nov 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Drop hasufell from metadata as requested.
 
 *paint-0.9.0 (20 Nov 2014)
 

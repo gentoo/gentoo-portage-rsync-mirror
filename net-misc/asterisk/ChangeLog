@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.504 2014/11/20 16:05:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.505 2014/11/24 11:31:45 chainsaw Exp $
+
+*asterisk-12.7.1 (24 Nov 2014)
+*asterisk-11.14.1 (24 Nov 2014)
+
+  24 Nov 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-11.14.0.ebuild,
+  +asterisk-11.14.1.ebuild, -asterisk-12.6.1.ebuild, -asterisk-12.7.0.ebuild,
+  +asterisk-12.7.1.ebuild:
+  11 branch susceptible to AST-2014-012, AST-2014-014, AST-2014-017 &
+  AST-2014-018. 12 branch susceptible to AST-2014-012, AST-2014-013,
+  AST-2014-015, AST-2014-016, AST-2014-017 & AST-2014-018. Vulnerable
+  non-stable ebuilds removed. For security bug #530056.
 
 *asterisk-12.7.0 (20 Nov 2014)
 *asterisk-11.14.0 (20 Nov 2014)
