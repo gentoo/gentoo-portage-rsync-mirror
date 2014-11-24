@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.529 2014/11/24 11:29:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.531 2014/11/24 19:18:50 chutzpah Exp $
+
+*openssh-6.7_p1-r2 (24 Nov 2014)
+
+  24 Nov 2014; Patrick McLean <chutzpah@gentoo.org> +openssh-6.7_p1-r2.ebuild:
+  Revision bump, migrate /var/run to /run.
+
+*openssh-6.7_p1-r1 (24 Nov 2014)
+
+  24 Nov 2014; Patrick McLean <chutzpah@gentoo.org> +openssh-6.7_p1-r1.ebuild,
+  +files/openssh-6.7_p1-sctp-x509-glue.patch,
+  +files/openssh-6.7_p1-x509-glue.patch:
+  Revision bump, add the X509 version 8.2 patch.
 
   24 Nov 2014; Jeroen Roovers <jer@gentoo.org> openssh-6.7_p1.ebuild:
   Stable for HPPA (bug #505942).
