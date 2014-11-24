@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nqp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.54 2014/10/25 03:13:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.55 2014/11/24 00:18:23 patrick Exp $
+
+*nqp-2014.11 (24 Nov 2014)
+
+  24 Nov 2014; Patrick Lauer <patrick@gentoo.org> +nqp-2014.11.ebuild:
+  Bump, parrot backend is disabled as it doesn't work
 
 *nqp-2014.10 (25 Oct 2014)
 

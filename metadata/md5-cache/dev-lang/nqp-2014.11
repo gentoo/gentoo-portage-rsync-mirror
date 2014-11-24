@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install test
+DEPEND=java? ( >=virtual/jre-1.7 ) moar? ( =dev-lang/moarvm-2014.11 ) java? ( >=virtual/jdk-1.7 ) dev-lang/perl
+DESCRIPTION=Not Quite Perl, a Perl 6 bootstrapping compiler
+EAPI=5
+HOMEPAGE=http://rakudo.org/
+IUSE=doc java +moar
+KEYWORDS=~x86 ~amd64
+LICENSE=Artistic-2
+RDEPEND=java? ( >=virtual/jre-1.7 ) moar? ( =dev-lang/moarvm-2014.11 )
+REQUIRED_USE=|| ( java moar )
+SLOT=0
+SRC_URI=http://github.com/perl6/nqp/tarball/2014.11 -> nqp-2014.11.tar.gz
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=06233a0243ead2a175db2dc19fa45921

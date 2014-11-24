@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.10-r2.ebuild,v 1.1 2014/11/23 23:13:33 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.10-r2.ebuild,v 1.2 2014/11/24 00:20:07 mgorny Exp $
 
 EAPI=5
 
@@ -107,6 +107,10 @@ multilib_src_configure() {
 		--without-tpm \
 		--with-unbound-root-key-file=/etc/dnssec/root-anchors.txt \
 		$([[ ${CHOST} == *-darwin* ]] && echo --disable-hardware-acceleration)
+
+	if multilib_is_native_abi; then
+		ln -s "${S}"/doc/reference/html doc/reference/html || die
+	fi
 }
 
 multilib_src_compile() {
