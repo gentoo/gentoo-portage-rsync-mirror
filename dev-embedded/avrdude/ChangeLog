@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.59 2014/01/13 04:49:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.60 2014/11/24 07:08:46 dlan Exp $
+
+*avrdude-6.1 (24 Nov 2014)
+
+  24 Nov 2014; Yixun Lan <dlan@gentoo.org> +avrdude-6.1.ebuild:
+  version bump, requested and tested by @perfinion
 
 *avrdude-6.0.1 (13 Jan 2014)
 
