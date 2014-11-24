@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.12.2.1.ebuild,v 1.4 2014/11/24 10:09:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.12.2.1.ebuild,v 1.5 2014/11/24 10:43:57 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ LICENSE="GPL-2+"
 SLOT="0"
 IUSE=""
 # Let people emerge this by default, bug #472932
-IUSE+=" +python_single_target_python3_4"
+IUSE+=" +python_single_target_python3_3"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

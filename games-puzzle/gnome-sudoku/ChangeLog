@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/gnome-sudoku
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.20 2014/07/23 15:16:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.21 2014/11/24 10:45:06 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gnome-sudoku-3.8.1-fix-numberbox.patch, -gnome-sudoku-3.10.2.ebuild,
+  gnome-sudoku-3.12.3.ebuild:
+  Support python 3.4, drop old
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-sudoku-3.12.3.ebuild:
   Stable for x86, wrt bug #512012

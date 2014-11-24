@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.12.3.ebuild,v 1.3 2014/07/23 15:16:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.12.3.ebuild,v 1.4 2014/11/24 10:45:06 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python{3_2,3_3} )
+PYTHON_COMPAT=( python{3_2,3_3,3_4} )
 
 inherit eutils gnome-games python-single-r1
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ~arm x86"
 IUSE=""
 # Let people emerge this by default, bug #472932
-IUSE+=" python_single_target_python3_2 +python_single_target_python3_3"
+IUSE+=" +python_single_target_python3_3"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
