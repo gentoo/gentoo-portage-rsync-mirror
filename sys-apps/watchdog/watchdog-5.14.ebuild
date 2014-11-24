@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.13.ebuild,v 1.1 2013/02/08 08:18:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.14.ebuild,v 1.1 2014/11/24 02:16:00 radhermit Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs flag-o-matic
+inherit toolchain-funcs flag-o-matic systemd
 
 DESCRIPTION="A software watchdog and /dev/watchdog daemon"
 HOMEPAGE="http://sourceforge.net/projects/watchdog/"
@@ -34,4 +34,5 @@ src_install() {
 
 	newconfd "${FILESDIR}"/${PN}-conf.d ${PN}
 	newinitd "${FILESDIR}"/${PN}-init.d ${PN}
+	systemd_dounit "${FILESDIR}"/watchdog.service
 }

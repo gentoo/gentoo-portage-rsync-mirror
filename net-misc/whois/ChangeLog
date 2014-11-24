@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.207 2014/10/23 03:45:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.208 2014/11/24 02:08:31 radhermit Exp $
+
+*whois-5.2.2 (24 Nov 2014)
+
+  24 Nov 2014; Tim Harder <radhermit@gentoo.org> +whois-5.2.2.ebuild:
+  Version bump.
 
 *whois-5.2.1 (23 Oct 2014)
 
