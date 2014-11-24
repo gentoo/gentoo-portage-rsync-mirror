@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sexpdata
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexpdata/ChangeLog,v 1.1 2014/05/10 02:25:22 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexpdata/ChangeLog,v 1.2 2014/11/24 14:05:07 jauhien Exp $
+
+  24 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org> sexpdata-0.0.3.ebuild:
+  update PYTHON_COMPAT
 
 *sexpdata-0.0.3 (10 May 2014)
 

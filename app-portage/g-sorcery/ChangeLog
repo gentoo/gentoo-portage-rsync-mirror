@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/g-sorcery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/ChangeLog,v 1.9 2014/11/23 16:32:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/ChangeLog,v 1.10 2014/11/24 14:07:48 jauhien Exp $
+
+  24 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org> g-sorcery-0.1-r1.ebuild,
+  g-sorcery-9999-r1.ebuild:
+  update PYTHON_COMPAT, bug #530366
 
   23 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> g-sorcery-0.1-r1.ebuild:
   Add ~sparc keyword wrt bug #524040

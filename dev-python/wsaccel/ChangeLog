@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wsaccel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsaccel/ChangeLog,v 1.1 2014/01/27 16:34:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsaccel/ChangeLog,v 1.2 2014/11/24 14:16:40 jlec Exp $
+
+  24 Nov 2014; Justin Lecher <jlec@gentoo.org> wsaccel-0.6.2.ebuild:
+  Add support for python-3.4
 
 *wsaccel-0.6.2 (27 Jan 2014)
 
