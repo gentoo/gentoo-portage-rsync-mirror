@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.517 2014/11/23 18:56:21 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.518 2014/11/23 23:13:33 alonbl Exp $
+
+*gnutls-3.3.10-r2 (23 Nov 2014)
+
+  23 Nov 2014; Alon Bar-Lev <alonbl@gentoo.org> +gnutls-3.3.10-r2.ebuild:
+  drop textinfo and enforce UTC timezone, bug#520818
 
 *gnutls-3.3.10-r1 (23 Nov 2014)
 

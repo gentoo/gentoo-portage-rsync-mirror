@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/appdata-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.13 2014/11/23 22:57:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.14 2014/11/23 23:17:24 eva Exp $
+
+  23 Nov 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  appdata-tools-0.1.8-r1.ebuild:
+  Empty SRC_URI for dummy package.
 
 *appdata-tools-0.1.8-r1 (23 Nov 2014)
 

@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.15.3.ebuild,v 1.11 2014/10/19 23:09:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.15.3.ebuild,v 1.12 2014/11/23 23:16:02 floppym Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
 
 inherit eutils python-r1 toolchain-funcs
 
