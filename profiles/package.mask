@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16179 2014/11/24 03:18:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16180 2014/11/24 05:10:35 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -442,10 +442,6 @@ sys-block/afacli
 # Development has halted (see <http://www.perihel.at/sec/mz/index.html>)
 # See net-analyzer/netsniff-ng for a replacement (bug #515210)
 net-analyzer/mausezahn
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (22 Jun 2014)
-# Breaks gitg-0.3.2 (most recent released version), bug #514468
->=dev-libs/libgit2-glib-0.0.14
 
 # Robin H. Johnson <robbat2@gentoo.org> (21 Jun 2014)
 # Needs work, but infra needs it for new VM boxes

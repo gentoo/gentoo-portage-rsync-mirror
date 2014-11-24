@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.3.2.ebuild,v 1.4 2014/11/24 05:29:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-3.14.0.ebuild,v 1.1 2014/11/24 05:29:49 tetromino Exp $
 
 EAPI=5
 
@@ -28,12 +28,11 @@ RDEPEND="
 	>=dev-libs/glib-2.38:2
 	>=dev-libs/gobject-introspection-0.10.1
 	dev-libs/libgit2[threads]
-	>=dev-libs/libgit2-glib-0.0.10
-	<dev-libs/libgit2-glib-0.0.16
+	>=dev-libs/libgit2-glib-0.0.20
 	>=dev-libs/libpeas-1.5.0[gtk]
 	>=gnome-base/gsettings-desktop-schemas-0.1.1
 	>=net-libs/webkit-gtk-2.2:3[introspection]
-	>=x11-libs/gtk+-3.10.0:3
+	>=x11-libs/gtk+-3.12.0:3
 	>=x11-libs/gtksourceview-3.10:3.0
 	>=x11-themes/gnome-icon-theme-symbolic-3.10
 	glade? ( >=dev-util/glade-3.2:3.10 )
@@ -44,6 +43,7 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
+	dev-libs/libgit2-glib[vala]
 	gnome-base/gnome-common
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig

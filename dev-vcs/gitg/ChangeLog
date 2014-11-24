@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.29 2014/04/26 06:02:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.30 2014/11/24 05:29:49 tetromino Exp $
+
+*gitg-3.14.0 (24 Nov 2014)
+
+  24 Nov 2014; Alexandre Rostovtsev <tetromino@gentoo.org> gitg-0.3.2.ebuild,
+  +gitg-3.14.0.ebuild:
+  Non-maintainer version bump for compatibility with current versions of
+  libgit2-glib; see bug #514468.
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gitg-0.2.6.ebuild:
   drop old

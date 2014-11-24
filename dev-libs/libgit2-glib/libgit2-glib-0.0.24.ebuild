@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.0.24.ebuild,v 1.1 2014/11/24 04:59:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.0.24.ebuild,v 1.2 2014/11/24 05:25:02 tetromino Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Libgit2-glib"
 LICENSE="LGPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="python ssh vala"
+IUSE="python ssh +vala"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 

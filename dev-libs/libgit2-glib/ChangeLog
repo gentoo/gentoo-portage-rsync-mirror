@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgit2-glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/ChangeLog,v 1.19 2014/11/24 04:59:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/ChangeLog,v 1.20 2014/11/24 05:25:02 tetromino Exp $
+
+  24 Nov 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libgit2-glib-0.0.24.ebuild:
+  Enable vala by default for gitg
 
 *libgit2-glib-0.0.24 (24 Nov 2014)
 
