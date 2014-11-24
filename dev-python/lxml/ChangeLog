@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.204 2014/11/21 07:54:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.205 2014/11/24 15:22:10 zerochaos Exp $
+
+  24 Nov 2014; Rick Farina <zerochaos@gentoo.org> lxml-3.3.5.ebuild,
+  lxml-3.3.6.ebuild, lxml-3.4.0.ebuild:
+  remove references to python3_2 since it's no longer in IUSE
 
 *lxml-3.4.1 (21 Nov 2014)
 

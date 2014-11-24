@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/charade
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/charade/ChangeLog,v 1.13 2014/08/11 22:22:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/charade/ChangeLog,v 1.14 2014/11/24 15:07:10 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> charade-1.0.3.ebuild:
+  Support python 3.4
 
   11 Aug 2014; Anthony G. Basile <blueness@gentoo.org> charade-1.0.3.ebuild:
   Keyword ~ppc, ~ppc64 for bug #519618

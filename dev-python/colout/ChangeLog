@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/colout
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colout/ChangeLog,v 1.4 2014/08/10 21:08:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colout/ChangeLog,v 1.5 2014/11/24 15:18:04 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> colout-0.1.ebuild:
+  Support python 3.4
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> colout-0.1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

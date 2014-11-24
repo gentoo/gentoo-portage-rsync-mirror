@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101-r2.ebuild,v 1.10 2014/03/27 03:19:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101-r2.ebuild,v 1.11 2014/11/24 15:03:26 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
 DISTUTILS_IN_SOURCE_BUILD=1
 inherit flag-o-matic distutils-r1 virtualx
 

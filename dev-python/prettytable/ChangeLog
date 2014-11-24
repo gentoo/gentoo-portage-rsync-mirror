@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/prettytable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/prettytable/ChangeLog,v 1.11 2014/03/19 18:23:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/prettytable/ChangeLog,v 1.12 2014/11/24 15:16:16 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> prettytable-0.7.1-r1.ebuild:
+  Support python 3.4
 
   19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org>
   prettytable-0.7.1-r1.ebuild:

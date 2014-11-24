@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygame
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.102 2014/03/27 03:21:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.103 2014/11/24 15:03:26 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  pygame-1.9.2_pre20120101-r2.ebuild:
+  Support python 3.4
 
   27 Mar 2014; Ian Delaney <idella4@gentoo.org> -pygame-1.9.2_pre3082.ebuild,
   -pygame-1.9.2_pre3203.ebuild, pygame-1.9.2_pre20120101-r2.ebuild:

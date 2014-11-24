@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.3.5.ebuild,v 1.11 2014/05/17 13:50:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.3.5.ebuild,v 1.12 2014/11/24 15:22:10 zerochaos Exp $
 
 EAPI=5
 
@@ -22,7 +22,6 @@ RDEPEND="
 	>=dev-libs/libxslt-1.1.15
 	beautifulsoup3? (
 		python_targets_python2_7? ( dev-python/beautifulsoup:python-2[python_targets_python2_7] )
-		python_targets_python3_2? ( dev-python/beautifulsoup:python-3[python_targets_python3_2] )
 		python_targets_python3_3? ( dev-python/beautifulsoup:python-3[python_targets_python3_3] )
 	)"
 DEPEND="${RDEPEND}
