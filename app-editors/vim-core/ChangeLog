@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.453 2014/11/24 03:29:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.454 2014/11/24 03:50:08 radhermit Exp $
+
+  24 Nov 2014; Tim Harder <radhermit@gentoo.org> -vim-core-7.4.52.ebuild,
+  -vim-core-7.4.155.ebuild, -vim-core-7.4.169.ebuild, -vim-core-7.4.193.ebuild,
+  -vim-core-7.4.326.ebuild, -vim-core-7.4.417.ebuild:
+  Remove old.
 
 *vim-core-7.4.527 (24 Nov 2014)
 

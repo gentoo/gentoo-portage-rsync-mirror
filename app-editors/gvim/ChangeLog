@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.443 2014/10/26 17:52:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.444 2014/11/24 03:47:09 radhermit Exp $
+
+*gvim-7.4.527 (24 Nov 2014)
+
+  24 Nov 2014; Tim Harder <radhermit@gentoo.org> +gvim-7.4.527.ebuild:
+  Version bump.
 
 *gvim-7.4.488 (26 Oct 2014)
 
