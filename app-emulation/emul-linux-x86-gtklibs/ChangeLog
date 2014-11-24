@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.135 2014/11/24 01:39:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.136 2014/11/24 02:50:47 tetromino Exp $
+
+*emul-linux-x86-gtklibs-20140508-r5 (24 Nov 2014)
+
+  24 Nov 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -emul-linux-x86-gtklibs-20140508-r4.ebuild,
+  +emul-linux-x86-gtklibs-20140508-r5.ebuild, -files/remove-native-20140508-r4,
+  +files/remove-native-20140508-r5:
+  Add multilib libnotify
 
 *emul-linux-x86-gtklibs-20140508-r4 (24 Nov 2014)
 

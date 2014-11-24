@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libnotify
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.104 2013/09/08 15:24:31 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.105 2014/11/24 02:50:14 tetromino Exp $
+
+*libnotify-0.7.6-r1 (24 Nov 2014)
+
+  24 Nov 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libnotify-0.7.5.ebuild, libnotify-0.7.5-r1.ebuild, libnotify-0.7.6.ebuild,
+  +libnotify-0.7.6-r1.ebuild, metadata.xml:
+  Add multilib support, update license, drop old.
 
 *libnotify-0.7.6 (08 Sep 2013)
 

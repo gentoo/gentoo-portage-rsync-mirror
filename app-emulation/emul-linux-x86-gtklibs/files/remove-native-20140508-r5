@@ -216,3 +216,7 @@ usr/lib32/pkgconfig/gtk+-3.0.pc
 usr/lib32/pkgconfig/gtk+-unix-print-3.0.pc
 usr/lib32/pkgconfig/gtk+-x11-3.0.pc
 usr/lib32/pkgconfig/gail-3.0.pc
+usr/lib32/libnotify.so
+usr/lib32/libnotify.so.4
+usr/lib32/libnotify.so.4.0.0
+usr/lib32/pkgconfig/libnotify.pc

@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.6.ebuild,v 1.2 2014/11/24 02:50:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.6-r1.ebuild,v 1.1 2014/11/24 02:50:14 tetromino Exp $
 
 EAPI=5
-inherit autotools gnome.org
+inherit autotools eutils gnome.org multilib-minimal
 
 DESCRIPTION="A library for sending desktop notifications"
 HOMEPAGE="http://git.gnome.org/browse/libnotify"
@@ -13,15 +13,20 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="+introspection test"
 
-RDEPEND="app-admin/eselect-notify-send
-	>=dev-libs/glib-2.26
-	x11-libs/gdk-pixbuf:2
+COMMON_DEPEND="app-admin/eselect-notify-send
+	>=dev-libs/glib-2.26:2[${MULTILIB_USEDEP}]
+	x11-libs/gdk-pixbuf:2[${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-1.32 )"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-gtklibs-20140508-r4
+		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+	)"
+DEPEND="${COMMON_DEPEND}
 	>=dev-libs/gobject-introspection-common-1.32
 	>=dev-util/gtk-doc-am-1.14
 	virtual/pkgconfig
-	test? ( x11-libs/gtk+:3 )"
+	test? ( x11-libs/gtk+:3[${MULTILIB_USEDEP}] )"
 PDEPEND="virtual/notification-daemon"
 
 DOCS=( AUTHORS ChangeLog NEWS )
@@ -36,14 +41,19 @@ src_prepare() {
 	eautoreconf
 }
 
-src_configure() {
-	econf \
+multilib_src_configure() {
+	ECONF_SOURCE=${S} econf \
 		--disable-static \
-		$(use_enable introspection)
+		$(multilib_native_use_enable introspection)
+
+	# work-around gtk-doc out-of-source brokedness
+	if multilib_is_native_abi; then
+		ln -s "${S}"/docs/reference/html docs/reference/html || die
+	fi
 }
 
-src_install() {
-	default
+multilib_src_install() {
+	emake DESTDIR="${D}" install
 	prune_libtool_files
 
 	mv "${ED}"/usr/bin/{,libnotify-}notify-send #379941
