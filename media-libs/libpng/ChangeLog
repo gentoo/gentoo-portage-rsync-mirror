@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.464 2014/10/17 14:55:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.465 2014/11/24 06:07:22 radhermit Exp $
+
+*libpng-1.6.15 (24 Nov 2014)
+*libpng-1.5.20 (24 Nov 2014)
+*libpng-1.2.52 (24 Nov 2014)
+
+  24 Nov 2014; Tim Harder <radhermit@gentoo.org> +libpng-1.2.52.ebuild,
+  +libpng-1.5.20.ebuild, +libpng-1.6.15.ebuild:
+  Version bump.
 
   17 Oct 2014; Tobias Klausmann <klausman@gentoo.org> libpng-1.6.12.ebuild:
   Stable on alpha, bug 517788
