@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/toml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/toml/ChangeLog,v 1.8 2014/10/21 13:44:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/toml/ChangeLog,v 1.9 2014/11/24 11:28:31 mrueg Exp $
+
+  24 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -toml-0.1.1.ebuild:
+  Remove old.
 
 *toml-0.1.2 (21 Oct 2014)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parslet/parslet-1.6.0.ebuild,v 1.2 2014/05/31 14:11:12 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parslet/parslet-1.6.2.ebuild,v 1.1 2014/11/24 11:25:36 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_EXTRADOC="HISTORY.txt README"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
@@ -21,8 +21,12 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-ruby_add_rdepend "dev-ruby/blankslate:2"
+ruby_add_rdepend ">=dev-ruby/blankslate-2"
 
 all_ruby_prepare() {
 	sed -i -e "/sdoc/d" Rakefile || die
+	sed -i -e "/unless respond_to?(:failure_message)/,+3d" -e "s/failure_message do/failure_message_for_should do/" spec/parslet/pattern_spec.rb
+	# Avoid spec calling out to ruby since we can't guarantee the
+	# correct version of blankslate in this case.
+	rm spec/acceptance/examples_spec.rb || die
 }

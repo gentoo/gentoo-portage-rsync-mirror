@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/parslet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parslet/ChangeLog,v 1.6 2014/05/31 14:11:12 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parslet/ChangeLog,v 1.8 2014/11/24 11:29:17 mrueg Exp $
+
+  24 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -parslet-1.5.0-r1.ebuild,
+  -parslet-1.6.0.ebuild:
+  Remove old.
+
+*parslet-1.6.2 (24 Nov 2014)
+
+  24 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +parslet-1.6.2.ebuild:
+  Version bump.
 
   31 May 2014; Johann Schmitz <ercpe@gentoo.org> parslet-1.5.0-r1.ebuild,
   parslet-1.6.0.ebuild, parslet-1.6.1.ebuild:

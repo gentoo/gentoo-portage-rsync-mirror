@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/etckeeper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.46 2014/10/24 15:12:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.47 2014/11/24 11:30:46 mrueg Exp $
+
+  24 Nov 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Drop hasufell from metadata as requested.
 
 *etckeeper-1.15 (24 Oct 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/appstream-glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/ChangeLog,v 1.7 2014/11/23 22:59:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/ChangeLog,v 1.8 2014/11/24 11:13:49 mgorny Exp $
+
+  24 Nov 2014; Michał Górny <mgorny@gentoo.org> appstream-glib-0.3.2.ebuild:
+  [QA] Add missing blocker on colliding versions of dev-util/appdata-tools. Use
+  PDEPEND instead of RDEPEND on the metapackage to solve collisions. Fix
+  overwritten RDEPEND.
 
   23 Nov 2014; Gilles Dartiguelongue <eva@gentoo.org>
   appstream-glib-0.3.2.ebuild:

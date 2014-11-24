@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.2.ebuild,v 1.2 2014/11/23 22:59:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.2.ebuild,v 1.3 2014/11/24 11:13:49 mgorny Exp $
 
 EAPI=5
 
@@ -42,7 +42,9 @@ DEPEND="${RDEPEND}
 "
 # ${PN} superseeds appdata-tools, require dummy package until all ebuilds
 # are migrated to appstream-glib
-RDEPEND=">=dev-util/appdata-tools-0.1.8-r1"
+RDEPEND="${RDEPEND}
+	!<dev-util/appdata-tools-0.1.8-r1"
+PDEPEND=">=dev-util/appdata-tools-0.1.8-r1"
 
 S="${WORKDIR}/${PN}-${MY_P}"
 

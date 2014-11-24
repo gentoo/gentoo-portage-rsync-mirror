@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lksctp-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.46 2014/11/16 17:58:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.47 2014/11/24 11:29:17 jer Exp $
+
+  24 Nov 2014; Jeroen Roovers <jer@gentoo.org> lksctp-tools-1.0.16.ebuild:
+  Stable for HPPA (bug #505942).
 
   16 Nov 2014; Mike Frysinger <vapier@gentoo.org> lksctp-tools-1.0.16.ebuild:
   Add arm/arm64/hppa/ia64/m68k/s390/sh love #529436 by Michał Górny.
