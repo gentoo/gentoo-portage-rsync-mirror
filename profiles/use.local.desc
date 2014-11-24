@@ -1850,6 +1850,7 @@ dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator
 dev-libs/libgdata:vala - Enable bindings for dev-lang/vala
 dev-libs/libgit2:ssh - Enable SSH transport support
 dev-libs/libgit2:trace - Enable tracing support
+dev-libs/libgit2-glib:ssh - Enable SSH transport support
 dev-libs/libgpg-error:common-lisp - Install common-lisp files
 dev-libs/libgusb:vala - Enable bindings for dev-lang/vala
 dev-libs/libgweather:glade - Installs catalog files for dev-util/glade
