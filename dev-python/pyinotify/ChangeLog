@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyinotify
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.59 2014/03/31 21:15:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.60 2014/11/24 16:36:18 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> pyinotify-0.9.4-r1.ebuild:
+  Support python 3.4
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> pyinotify-0.9.4-r1.ebuild:
   Add support for the new PyPy slotting.

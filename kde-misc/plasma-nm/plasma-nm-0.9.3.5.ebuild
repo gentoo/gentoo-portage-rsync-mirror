@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.5.ebuild,v 1.2 2014/11/05 15:27:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.5.ebuild,v 1.3 2014/11/24 16:41:07 kensington Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="4"
 IUSE="debug modemmanager openconnect"
 
-DEPEND="
+RDEPEND="
 	>=net-libs/libnm-qt-0.9.8.2[modemmanager?]
 	net-misc/mobile-broadband-provider-info
 	>=net-misc/networkmanager-0.9.8.0
@@ -33,9 +33,10 @@ DEPEND="
 		net-misc/networkmanager-openconnect
 		net-misc/openconnect
 	)
-"
-RDEPEND="${DEPEND}
 	!kde-misc/networkmanagement
+"
+DEPEND="${RDEPEND}
+	sys-devel/gettext
 "
 
 src_configure() {

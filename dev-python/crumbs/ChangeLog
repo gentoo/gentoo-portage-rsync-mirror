@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/crumbs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/crumbs/ChangeLog,v 1.5 2014/11/09 04:15:50 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/crumbs/ChangeLog,v 1.6 2014/11/24 16:36:25 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> crumbs-2.0.1.ebuild:
+  Support python 3.4
 
 *crumbs-2.0.1 (09 Nov 2014)
 

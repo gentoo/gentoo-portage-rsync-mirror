@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6.ebuild,v 1.1 2014/08/05 10:52:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6.ebuild,v 1.2 2014/11/24 16:31:21 chainsaw Exp $
 
 EAPI="5"
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="doc fixed-point mmx sse sse2 sse3 ssse3 sse4a avx static-libs"
 
-RDEPEND="media-libs/tiff"
+RDEPEND="media-libs/tiff
+	 virtual/jpeg"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
 		dev-libs/libxslt )"
