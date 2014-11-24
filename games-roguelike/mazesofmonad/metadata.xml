@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>games</herd>
+	<herd>haskell</herd>
 	<maintainer>
 		<email>hasufell@gentoo.org</email>
 		<name>Julian Ospald</name>

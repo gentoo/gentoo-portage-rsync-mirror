@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/mazesofmonad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/mazesofmonad/ChangeLog,v 1.4 2014/10/16 21:56:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/mazesofmonad/ChangeLog,v 1.5 2014/11/24 08:43:01 slyfox Exp $
+
+  24 Nov 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  mazesofmonad-1.0.9-r2.ebuild, metadata.xml:
+  Added 'haskell' herd t maintainers, fix rdepend on gmp.
 
 *mazesofmonad-1.0.9-r2 (16 Oct 2014)
 

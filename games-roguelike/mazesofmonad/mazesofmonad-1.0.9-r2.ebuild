@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/mazesofmonad/mazesofmonad-1.0.9-r2.ebuild,v 1.1 2014/10/16 21:56:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/mazesofmonad/mazesofmonad-1.0.9-r2.ebuild,v 1.2 2014/11/24 08:43:01 slyfox Exp $
 
 EAPI=5
 
@@ -20,8 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/gmp-5:0
-	virtual/libffi"
+RDEPEND=">=dev-libs/gmp-5:0=
+	virtual/libffi:="
 DEPEND="${RDEPEND}
 	>=dev-lang/ghc-7.4.1
 	>=dev-haskell/cabal-1.6
