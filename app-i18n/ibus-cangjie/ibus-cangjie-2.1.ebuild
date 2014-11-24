@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-cangjie/ibus-cangjie-2.1.ebuild,v 1.2 2014/11/01 15:04:55 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-cangjie/ibus-cangjie-2.1.ebuild,v 1.3 2014/11/24 13:50:09 dlan Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{3_2,3_3} )
+PYTHON_COMPAT=( python{3_2,3_3,3_4} )
 
 inherit autotools-utils gnome2-utils python-r1 eutils
 

@@ -1,5 +1,8 @@
 *ibus-cangjie-2.1 (24 Apr 2014)
 
+  24 Nov 2014; Yixun Lan <dlan@gentoo.org> ibus-cangjie-2.1.ebuild:
+  add python3.4 to PYTHON_COMPAT, bug 530352
+
   01 Nov 2014; Yixun Lan <dlan@gentoo.org> ibus-cangjie-2.1.ebuild,
   +files/ibus-cangjie-gtk-unit-test.patch:
   fix bug 526392, skip gtk unit test, proxy for Brendan Horan

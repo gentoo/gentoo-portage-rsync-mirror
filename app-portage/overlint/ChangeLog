@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/overlint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.14 2014/10/25 23:31:53 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.15 2014/11/24 13:39:01 sping Exp $
+
+  24 Nov 2014; Sebastian Pipping <sping@gentoo.org> overlint-0.5.2.ebuild,
+  overlint-0.5.3.ebuild:
+  Update PYTHON_COMPAT (bug #530374)
 
   25 Oct 2014; Sebastian Pipping <sping@gentoo.org> overlint-0.5.2.ebuild:
   Sync 0.5.2 with 0.5.3
