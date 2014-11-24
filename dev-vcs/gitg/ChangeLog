@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.30 2014/11/24 05:29:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.31 2014/11/24 15:41:03 tetromino Exp $
+
+  24 Nov 2014; Alexandre Rostovtsev <tetromino@gentoo.org> gitg-3.14.0.ebuild:
+  Add python-3.4 support.
 
 *gitg-3.14.0 (24 Nov 2014)
 

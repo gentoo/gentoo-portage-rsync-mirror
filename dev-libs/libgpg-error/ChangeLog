@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.115 2014/11/22 19:09:06 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.116 2014/11/24 15:37:30 k_f Exp $
+
+*libgpg-error-1.17 (24 Nov 2014)
+
+  24 Nov 2014; Kristian Fiskerstrand <k_f@gentoo.org> +libgpg-error-1.17.ebuild:
+  Version bump due to known issues with 1.15 and new min requirement for GnuPG
+  2.1
 
   22 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> libgpg-error-1.13.ebuild:
   x86 stable wrt bug #519432

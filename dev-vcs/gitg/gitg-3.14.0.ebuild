@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-3.14.0.ebuild,v 1.1 2014/11/24 05:29:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-3.14.0.ebuild,v 1.2 2014/11/24 15:41:03 tetromino Exp $
 
 EAPI=5
 
 VALA_MIN_API_VERSION="0.20"
-PYTHON_COMPAT=( python{3_2,3_3} )
+PYTHON_COMPAT=( python{3_2,3_3,3_4} )
 
 inherit autotools gnome2 python-r1 vala
 
