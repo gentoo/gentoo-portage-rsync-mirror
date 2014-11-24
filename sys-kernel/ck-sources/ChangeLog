@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.239 2014/11/21 07:21:37 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.240 2014/11/24 07:46:32 dlan Exp $
+
+*ck-sources-3.17.4 (24 Nov 2014)
+*ck-sources-3.10.61 (24 Nov 2014)
+
+  24 Nov 2014; Yixun Lan <dlan@gentoo.org> -ck-sources-3.10.39.ebuild,
+  +ck-sources-3.10.61.ebuild, +ck-sources-3.17.4.ebuild, metadata.xml:
+  version bump, proxy for Harold Naparst
 
 *ck-sources-3.14.24 (21 Nov 2014)
 *ck-sources-3.12.32 (21 Nov 2014)
