@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.10.1.ebuild,v 1.6 2014/04/12 10:29:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.12.1-r1.ebuild,v 1.1 2014/11/24 12:03:30 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ DESCRIPTION="Official plugins for gedit"
 HOMEPAGE="https://wiki.gnome.org/Apps/Gedit/ShippedPlugins"
 
 LICENSE="GPL-2+"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
 IUSE_plugins="charmap git terminal"
@@ -27,7 +27,7 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=app-editors/gedit-3.9[python?]
+	>=app-editors/gedit-3.11.3[python?]
 	>=dev-libs/glib-2.32:2
 	>=dev-libs/libpeas-1.7.0[gtk,python?]
 	>=x11-libs/gtk+-3.9:3
@@ -36,8 +36,8 @@ RDEPEND="
 		${PYTHON_DEPS}
 		>=app-editors/gedit-3[introspection,${PYTHON_USEDEP}]
 		dev-libs/libpeas[${PYTHON_USEDEP}]
-		dev-python/dbus-python[${PYTHON_USEDEP}]
-		dev-python/pycairo
+		>=dev-python/dbus-python-0.82[${PYTHON_USEDEP}]
+		dev-python/pycairo[${PYTHON_USEDEP}]
 		dev-python/pygobject:3[cairo,${PYTHON_USEDEP}]
 		>=x11-libs/gtk+-3.9:3[introspection]
 		>=x11-libs/gtksourceview-3.9.2:3.0[introspection]
@@ -55,19 +55,29 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
-	# DEFAULT_PLUGINS from configure.ac
-	local myplugins="bookmarks,drawspaces,wordcompletion"
-
-	# python plugins with no extra dependencies beyond what USE=python brings
-	use python && myplugins="${myplugins},bracketcompletion,codecomment,colorpicker,colorschemer,commander,dashboard,joinlines,multiedit,textsize,smartspaces,synctex"
-
-	# python plugins with extra dependencies
-	for plugin in ${IUSE_plugins/+}; do
-		use ${plugin} && myplugins="${myplugins},${plugin}"
-	done
-
 	gnome2_src_configure \
-		--with-plugins=${myplugins} \
 		$(use_enable python) \
 		ITSTOOL=$(type -P true)
+}
+
+src_install() {
+	gnome2_src_install
+
+	# FIXME: crazy !!!
+	if use python; then
+		find "${ED}"/usr/share/gedit -name "*.py*" -delete || die
+		find "${ED}"/usr/share/gedit -type d -empty -delete || die
+	fi
+
+	# FIXME: upstream made this automagic...
+	clean_plugin charmap
+	clean_plugin git
+	clean_plugin terminal
+}
+
+clean_plugin() {
+	if use !${1} ; then
+		rm -rf "${ED}"/usr/share/gedit/plugins/${1}*
+		rm -rf "${ED}"/usr/$(get_libdir)/gedit/plugins/${1}*
+	fi
 }

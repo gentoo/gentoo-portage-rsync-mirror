@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/asciinema
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/asciinema/ChangeLog,v 1.4 2014/06/14 15:39:21 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/asciinema/ChangeLog,v 1.5 2014/11/24 12:22:50 kensington Exp $
+
+  24 Nov 2014; Michael Palimaka <kensington@gentoo.org> asciinema-0.9.8.ebuild:
+  Add Python 3.4 target wrt bug #530354. Remove old targets.
 
   14 Jun 2014; Michael Palimaka <kensington@gentoo.org> -asciinema-0.9.7.ebuild:
   Remove old.

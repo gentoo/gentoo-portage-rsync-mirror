@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.75 2014/11/22 18:37:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.76 2014/11/24 12:16:04 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> obexftp-0.24.ebuild:
+  Support python 3.4
 
   22 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   obexftp-0.23-r2.ebuild:
