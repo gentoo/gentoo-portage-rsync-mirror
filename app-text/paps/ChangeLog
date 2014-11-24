@@ -1,6 +1,15 @@
 # ChangeLog for app-text/paps
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/paps/ChangeLog,v 1.4 2012/05/21 09:51:53 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/paps/ChangeLog,v 1.5 2014/11/24 21:45:46 xmw Exp $
+
+*paps-0.6.8-r1 (24 Nov 2014)
+
+  24 Nov 2014; Michael Weber <xmw@gentoo.org>
+  +files/paps-0.6.8-fix-as-needed-build.patch,
+  +files/paps-0.6.8-fix-doxygen-acinclude.patch,
+  +files/paps-0.6.8-fix-freetype-include.patch, +paps-0.6.8-r1.ebuild:
+  Revbump to fix as-needed, doxygen and freetype linkage (bug 514584, thanks
+  Hendrik v. Raven).
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> paps-0.6.8.ebuild:
   x86 stable wrt bug #415463
@@ -17,4 +26,3 @@
   +metadata.xml:
   Initial import, fixed bug 134367. Thanks to Ed Catmur <ed@catmur.co.uk> and
   Petr Pisar <petr.pisar@atlas.cz> for their ebuild.
-
