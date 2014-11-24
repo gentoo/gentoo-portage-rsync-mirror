@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/at-spi2-core-2.12.0-r1.ebuild,v 1.1 2014/11/22 20:01:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/at-spi2-core-2.12.0-r1.ebuild,v 1.2 2014/11/24 01:40:34 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fb
 # x11-libs/libSM is needed until upstream #719808 is solved either
 # making the dep unneeded or fixing their configure
 # Only libX11 is optional right now
-RDEPEND="
+COMMON_DEPEND="
 	>=dev-libs/glib-2.36:2[${MULTILIB_USEDEP}]
 	>=sys-apps/dbus-1[${MULTILIB_USEDEP}]
 	x11-libs/libSM[${MULTILIB_USEDEP}]
@@ -28,7 +28,13 @@ RDEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 	X? ( x11-libs/libX11[${MULTILIB_USEDEP}] )
 "
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-gtklibs-20140508-r3
+		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+	)
+"
+DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.9
 	>=dev-util/intltool-0.40
 	virtual/pkgconfig[${MULTILIB_USEDEP}]

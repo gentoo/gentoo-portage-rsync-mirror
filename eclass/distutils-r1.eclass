@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.102 2014/08/24 13:23:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.103 2014/11/24 01:39:55 floppym Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -557,7 +557,7 @@ distutils-r1_python_install() {
 		die "Package installs 'tests' package, file collisions likely."
 	fi
 	if [[ -d ${root}/usr/$(get_libdir)/pypy/share ]]; then
-		die "Package installs 'share' in PyPy prefix, see bug #465546."
+		eqawarn "Package installs 'share' in PyPy prefix, see bug #465546."
 	fi
 
 	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then

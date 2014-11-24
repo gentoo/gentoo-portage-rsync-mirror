@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1444 2014/11/23 21:46:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1445 2014/11/24 01:39:55 floppym Exp $
+
+  24 Nov 2014; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass:
+  eqawarn about /usr/lib/pypy/share instead of dying.
 
   23 Nov 2014; Michał Górny <mgorny@gentoo.org> gnome2-utils.eclass:
   Support multilib in gnome2_query_immodules_gtk2() as well.

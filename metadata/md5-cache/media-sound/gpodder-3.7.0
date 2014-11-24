@@ -10,5 +10,5 @@ RDEPEND=>=dev-python/eyeD3-0.7 >=dev-python/feedparser-5.1.2 >=dev-python/mygpoc
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://gpodder.org/src/gpodder-3.7.0.tar.gz
-_eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils-r1	b3dd8b90e41a1570ee3117a7c1adb598	eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=529cd859fe9b1449783ece6e4124ac14

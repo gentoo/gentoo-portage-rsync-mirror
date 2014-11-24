@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.12.1-r1.ebuild,v 1.1 2014/11/22 20:02:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.12.1-r1.ebuild,v 1.2 2014/11/24 01:41:11 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -24,6 +24,10 @@ COMMON_DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}
 	!<gnome-extra/at-spi-1.32.0-r1
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-gtklibs-20140508-r3
+		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+	)
 "
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig[${MULTILIB_USEDEP}]

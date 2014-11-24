@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/at-spi2-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.74 2014/11/22 20:01:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.75 2014/11/24 01:40:34 tetromino Exp $
+
+  24 Nov 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  at-spi2-core-2.12.0-r1.ebuild:
+  Avoid file collision with emul-linux-x86-gtklibs.
 
 *at-spi2-core-2.12.0-r1 (22 Nov 2014)
 

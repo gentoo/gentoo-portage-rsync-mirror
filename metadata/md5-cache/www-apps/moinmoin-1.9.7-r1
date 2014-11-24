@@ -10,5 +10,5 @@ RDEPEND=>=dev-python/docutils-0.4[python_targets_python2_7(-)?,-python_single_ta
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://static.moinmo.in/files/moin-1.9.7.tar.gz
-_eclasses_=distutils-r1	90e7008a7d21e3b1597bea444bb85827	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=distutils-r1	b3dd8b90e41a1570ee3117a7c1adb598	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=a47bcfeeeec09e69a9a2f0d50841108f

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.12.2-r1.ebuild,v 1.1 2014/11/22 23:02:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.12.2-r1.ebuild,v 1.2 2014/11/24 01:41:45 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -91,6 +91,10 @@ RDEPEND="${COMMON_DEPEND}
 	!<gnome-base/gail-1000
 	!<x11-libs/vte-0.31.0:2.90
 	X? ( !<x11-base/xorg-server-1.11.4 )
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-gtklibs-20140508-r3
+		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+	)
 "
 PDEPEND="vim-syntax? ( app-vim/gtk-syntax )"
 
