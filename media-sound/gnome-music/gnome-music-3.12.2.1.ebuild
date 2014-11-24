@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.12.2.1.ebuild,v 1.3 2014/07/23 15:22:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.12.2.1.ebuild,v 1.4 2014/11/24 10:09:04 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python{3_2,3_3} )
+PYTHON_COMPAT=( python{3_2,3_3,3_4} )
 
 inherit gnome2 python-single-r1
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2+"
 SLOT="0"
 IUSE=""
 # Let people emerge this by default, bug #472932
-IUSE+=" python_single_target_python3_2 +python_single_target_python3_3"
+IUSE+=" +python_single_target_python3_4"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -33,7 +33,6 @@ RDEPEND="${COMMON_DEPEND}
 	|| (
 		app-misc/tracker[gstreamer]
 		app-misc/tracker[ffmpeg]
-		app-misc/tracker[xine]
 	)
 	dev-python/pygobject:3[cairo,${PYTHON_USEDEP}]
 	dev-python/dbus-python[${PYTHON_USEDEP}]

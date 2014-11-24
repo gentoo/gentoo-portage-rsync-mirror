@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.263 2014/10/03 10:00:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.264 2014/11/24 10:12:46 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> rhythmbox-3.1.ebuild:
+  Support python 3.4
 
   03 Oct 2014; Pacho Ramos <pacho@gentoo.org> rhythmbox-3.1.ebuild:
   Tests failing for years without upstream caring at all, upstream bug #688745

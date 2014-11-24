@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.1.ebuild,v 1.2 2014/10/03 10:00:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.1.ebuild,v 1.3 2014/11/24 10:12:46 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python3_{2,3} )
+PYTHON_COMPAT=( python3_{2,3,4} )
 PYTHON_REQ_USE="xml"
 
 inherit eutils gnome2 python-single-r1 multilib virtualx
@@ -19,7 +19,7 @@ IUSE="cdr daap dbus +libsecret html ipod libnotify lirc mtp nsplugin +python
 test +udev upnp-av visualizer webkit zeitgeist"
 
 # Let people emerge this by default, bug #472932
-IUSE+=" python_single_target_python3_2 +python_single_target_python3_3"
+IUSE+=" +python_single_target_python3_4"
 
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 

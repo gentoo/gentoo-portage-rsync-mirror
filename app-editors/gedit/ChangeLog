@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.373 2014/11/13 10:49:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.374 2014/11/24 10:06:15 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> gedit-3.12.2-r1.ebuild:
+  Support python 3.4
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -files/gedit-2.30.2-tests-skip.patch, -files/gedit-2.30.4-underlinking.patch,

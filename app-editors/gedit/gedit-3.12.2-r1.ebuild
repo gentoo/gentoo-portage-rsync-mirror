@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.12.2-r1.ebuild,v 1.1 2014/09/29 14:31:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.12.2-r1.ebuild,v 1.2 2014/11/24 10:06:15 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes" # plugins are dlopened
-PYTHON_COMPAT=( python3_{2,3} )
+PYTHON_COMPAT=( python3_{2,3,4} )
 
 inherit eutils gnome2 multilib python-r1 virtualx
 
