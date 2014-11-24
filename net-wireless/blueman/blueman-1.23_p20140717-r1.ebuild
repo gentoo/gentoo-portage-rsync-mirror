@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23_p20140717-r1.ebuild,v 1.3 2014/08/10 20:34:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23_p20140717-r1.ebuild,v 1.4 2014/11/24 20:33:12 zerochaos Exp $
 
 EAPI="5"
 
@@ -60,7 +60,7 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}/${PN}-9999-plugins-conf-file.patch" \
-		"${FILESDIR}/${PN}-9999-set-codeset-for-gettext-to-UTF-8-always.patch"
+		"${FILESDIR}/${P}-set-codeset-for-gettext-to-UTF-8-always.patch"
 	eautoreconf
 }
 

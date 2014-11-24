@@ -1,10 +1,12 @@
 # ChangeLog for dev-python/flask-restful
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restful/ChangeLog,v 1.1 2014/05/08 18:19:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restful/ChangeLog,v 1.2 2014/11/24 21:00:49 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> flask-restful-0.2.12.ebuild:
+  Support python 3.4
 
 *flask-restful-0.2.12 (08 May 2014)
 
   08 May 2014; Tim Harder <radhermit@gentoo.org> +flask-restful-0.2.12.ebuild,
   +files/flask-restful-0.2.12-tests.patch, +metadata.xml:
   Initial import.
-

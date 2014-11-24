@@ -11,4 +11,4 @@ REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~zerochaos/distfiles/blueman-1.23_p20140717.tar.xz
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=733cfe5fb2b6b3215455fd40b018d588
+_md5_=06f212b7153a9391cb6b954a1b75c28f
