@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16178 2014/11/24 02:28:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16179 2014/11/24 03:18:23 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (24 Nov 2014)
+# Missing deps, uninstallable
+app-misc/email2trac
+www-apps/trac-downloads
 
 # Tim Harder <radhermit@gentoo.org> (24 Nov 2014)
 # Freecode is no longer being updated since 2014-06-18.
