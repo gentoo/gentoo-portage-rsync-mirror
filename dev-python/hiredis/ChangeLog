@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/hiredis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hiredis/ChangeLog,v 1.5 2014/06/16 02:25:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hiredis/ChangeLog,v 1.6 2014/11/24 21:19:10 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> hiredis-0.1.1-r2.ebuild:
+  Support python 3.4
 
   16 Jun 2014; Mike Frysinger <vapier@gentoo.org> hiredis-0.1.1-r2.ebuild:
   Add arm love #511026.

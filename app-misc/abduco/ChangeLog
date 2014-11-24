@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/abduco
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abduco/ChangeLog,v 1.3 2014/08/10 18:00:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abduco/ChangeLog,v 1.4 2014/11/24 21:28:52 xmw Exp $
+
+*abduco-0.2 (24 Nov 2014)
+
+  24 Nov 2014; Michael Weber <xmw@gentoo.org> +abduco-0.2.ebuild:
+  Version bump (Hendrik v. Raven).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> abduco-0.1.ebuild:
   QA: drop trailing '.' from DESCRIPTION
