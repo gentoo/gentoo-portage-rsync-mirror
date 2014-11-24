@@ -6,6 +6,7 @@
 		<name>Julian Ospald</name>
 	</maintainer>
 	<herd>games</herd>
+	<herd>haskell</herd>
 	<longdescription>
 		Goatee is a Go library and game editor, written in Haskell.  It provides a
 		GUI for recording, studying, and editing game records.  Underneath this is a

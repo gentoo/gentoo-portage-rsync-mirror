@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/solaar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/solaar/ChangeLog,v 1.6 2014/06/12 18:21:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/solaar/ChangeLog,v 1.7 2014/11/24 08:02:40 radhermit Exp $
+
+*solaar-0.9.2-r3 (24 Nov 2014)
+
+  24 Nov 2014; Tim Harder <radhermit@gentoo.org> +solaar-0.9.2-r3.ebuild:
+  Fix plugdev group device node permissions, install devices.md by default, and
+  add missing gtk+ dep (bug #521886).
 
   12 Jun 2014; Manuel Rüger <mrueg@gentoo.org> solaar-0.9.2-r2.ebuild:
   Keyword ~arm. Tested on radxa rock (armv7)
