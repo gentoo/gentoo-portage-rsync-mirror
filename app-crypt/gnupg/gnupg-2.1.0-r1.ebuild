@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0.ebuild,v 1.5 2014/11/19 21:07:53 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0-r1.ebuild,v 1.1 2014/11/24 16:05:28 k_f Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ COMMON_DEPEND_LIBS="
 	dev-libs/npth
 	>=dev-libs/libassuan-2
 	>=dev-libs/libgcrypt-1.6.2
-	>=dev-libs/libgpg-error-1.15
+	>=dev-libs/libgpg-error-1.17
 	>=dev-libs/libksba-1.0.7
 	>=net-misc/curl-7.10
 	gnutls? ( >=net-libs/gnutls-3.0 )
@@ -38,7 +38,7 @@ DEPEND="${COMMON_DEPEND_LIBS}
 	static? (
 		>=dev-libs/libassuan-2[static-libs]
 		>=dev-libs/libgcrypt-1.6.2[static-libs]
-		>=dev-libs/libgpg-error-1.15[static-libs]
+		>=dev-libs/libgpg-error-1.17[static-libs]
 		>=dev-libs/libksba-1.0.7[static-libs]
 		dev-libs/npth[static-libs]
 		>=net-misc/curl-7.10[static-libs]

@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam-csync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-csync/ChangeLog,v 1.5 2014/02/07 08:55:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-csync/ChangeLog,v 1.6 2014/11/24 16:30:00 kensington Exp $
+
+  24 Nov 2014; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Drop to maintainer-needed.
 
   07 Feb 2014; Bernard Cafarelli <voyageur@gentoo.org>
   pam-csync-0.42.0-r1.ebuild:

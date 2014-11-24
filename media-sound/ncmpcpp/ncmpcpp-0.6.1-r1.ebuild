@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6.1.ebuild,v 1.1 2014/11/08 20:13:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6.1-r1.ebuild,v 1.2 2014/11/24 16:08:33 jer Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils
@@ -48,6 +48,8 @@ src_configure() {
 src_install() {
 	default
 
+	dodoc doc/{bindings,config}
+
 	newbashcomp doc/${PN}-completion.bash ${PN}
 }
 
@@ -55,7 +57,7 @@ pkg_postinst() {
 	echo
 	elog "Example configuration files have been installed at"
 	elog "${ROOT}usr/share/doc/${PF}"
-	elog "${P} uses ~/.ncmpcpp/config and ~/.ncmpcpp/keys"
+	elog "${P} uses ~/.ncmpcpp/config and ~/.ncmpcpp/bindings"
 	elog "as user configuration files."
 	echo
 	if use visualizer; then

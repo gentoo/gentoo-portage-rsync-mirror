@@ -3,10 +3,10 @@ DEPEND=virtual/perl-CPAN-Meta >=virtual/perl-Module-Build-0.380.0 virtual/perl-F
 DESCRIPTION=Temporary changing working directory (chdir)
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Cwd-Guard/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~hppa ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=virtual/perl-File-Spec virtual/perl-Exporter virtual/perl-if virtual/perl-parent dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/K/KA/KAZEBURO/Cwd-Guard-0.04.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	ab36305de1a9fa8909c94f3f1e78eb62	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=843c2e77e40ca36d468d15839101d0e9
+_md5_=b68061d2b1e31f21a596e7b893d59377

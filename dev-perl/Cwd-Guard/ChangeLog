@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cwd-Guard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cwd-Guard/ChangeLog,v 1.1 2014/10/19 19:40:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cwd-Guard/ChangeLog,v 1.2 2014/11/24 16:21:31 jer Exp $
+
+  24 Nov 2014; Jeroen Roovers <jer@gentoo.org> Cwd-Guard-0.40.0.ebuild:
+  Marked ~hppa (bug #527898).
 
 *Cwd-Guard-0.40.0 (19 Oct 2014)
 

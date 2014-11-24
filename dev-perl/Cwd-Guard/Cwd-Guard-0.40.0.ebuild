@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cwd-Guard/Cwd-Guard-0.40.0.ebuild,v 1.1 2014/10/19 19:40:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cwd-Guard/Cwd-Guard-0.40.0.ebuild,v 1.2 2014/11/24 16:21:31 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Temporary changing working directory (chdir)"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 # Cwd -> perl-File-Spec
 RDEPEND="

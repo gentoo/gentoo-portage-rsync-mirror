@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-CheckCompiler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-CheckCompiler/ChangeLog,v 1.1 2014/10/19 19:38:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-CheckCompiler/ChangeLog,v 1.2 2014/11/24 16:20:47 jer Exp $
+
+  24 Nov 2014; Jeroen Roovers <jer@gentoo.org>
+  Devel-CheckCompiler-0.50.0.ebuild:
+  Marked ~hppa (bug #527898).
 
 *Devel-CheckCompiler-0.50.0 (19 Oct 2014)
 

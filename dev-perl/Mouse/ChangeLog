@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mouse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.43 2014/11/09 17:28:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.44 2014/11/24 16:23:59 jer Exp $
+
+  24 Nov 2014; Jeroen Roovers <jer@gentoo.org> Mouse-2.4.1.ebuild:
+  Marked ~hppa (bug #527898).
 
 *Mouse-0.970.0-r1 (09 Nov 2014)
 
