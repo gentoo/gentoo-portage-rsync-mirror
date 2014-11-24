@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkcddb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.322 2014/11/16 12:21:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.323 2014/11/24 17:43:07 kensington Exp $
+
+  24 Nov 2014; Michael Palimaka <kensington@gentoo.org> libkcddb-4.14.3.ebuild:
+  Introduce handbook USE flag wrt bug #486670.
 
 *libkcddb-4.14.3 (16 Nov 2014)
 
