@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/pqlop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pqlop/ChangeLog,v 1.6 2014/09/23 19:07:30 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pqlop/ChangeLog,v 1.7 2014/11/24 13:18:47 maksbotan Exp $
+
+  24 Nov 2014; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml,
+  pqlop-0.02-r1.ebuild:
+  Add python3_4 to PYTHON_TARGETS, update maintainer email. Bug #530378.
 
   23 Sep 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Remove python, not a python library
