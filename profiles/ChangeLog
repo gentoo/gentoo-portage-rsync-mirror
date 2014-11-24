@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9559 2014/11/23 22:52:13 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9560 2014/11/24 00:53:59 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Nov 2014; Tim Harder <radhermit@gentoo.org> package.mask:
+  Drop old dev-util/cmockery and dev-python/pry masks, pkgs removed from the
+  tree.
 
   23 Nov 2014; Rémi Cardona <remi@gentoo.org> package.mask:
   Remove xorg-server 1.16.2 from p.mask, x11 team agrees on binary slot

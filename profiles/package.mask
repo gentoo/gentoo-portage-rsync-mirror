@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16176 2014/11/23 22:52:13 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16177 2014/11/24 00:53:59 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -153,16 +153,6 @@ dev-perl/Mail-ClamAV
 # and cups-filters.
 # Masking for removal in 30 days.
 net-print/foomatic-filters-ppds
-
-# Tim Harder <radhermit@gentoo.org> (25 Oct 2014)
-# Deprecated project, development continues in dev-util/cmocka.
-# Masked for removal in 30 days.
-dev-util/cmockery
-
-# Tim Harder <radhermit@gentoo.org> (25 Oct 2014)
-# Upstream migrated to nose for testing instead of their own framework.
-# Masked for removal in 30 days.
-dev-python/pry
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (24 Oct 2014)
 # Fails tests (bug 421797), no reverse deps in tree, VERY dead
