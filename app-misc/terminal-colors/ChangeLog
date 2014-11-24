@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/terminal-colors
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/terminal-colors/ChangeLog,v 1.12 2013/10/20 20:19:15 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/terminal-colors/ChangeLog,v 1.13 2014/11/24 12:59:31 radhermit Exp $
+
+  24 Nov 2014; Tim Harder <radhermit@gentoo.org> terminal-colors-2.2.ebuild:
+  Drop python2_6 and python_3_2 support and add python3_4 (bug #530356).
 
   20 Oct 2013; Fabian Groffen <grobian@gentoo.org> terminal-colors-2.2.ebuild:
   Marked ~x64-macos, bug #486818

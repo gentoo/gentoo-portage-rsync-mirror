@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/install-mask
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.22 2014/07/06 13:16:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.23 2014/11/24 12:57:49 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> install-mask-0.1.1.ebuild:
+  Support python 3.4
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> install-mask-0.0.2-r3.ebuild,
   install-mask-0.1.1.ebuild, install-mask-9999.ebuild:

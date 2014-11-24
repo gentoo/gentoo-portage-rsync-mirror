@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/vim-qt-20140827-r1.ebuild,v 1.2 2014/11/16 01:15:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/vim-qt-20140827-r2.ebuild,v 1.1 2014/11/24 12:51:50 yngwin Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE="threads"
 inherit eutils fdo-mime flag-o-matic prefix python-single-r1
 
@@ -31,7 +31,7 @@ IUSE="acl cscope debug lua luajit nls perl python racket ruby"
 REQUIRED_USE="luajit? ( lua )
 	python? ( ${PYTHON_REQUIRED_USE} )"
 
-RDEPEND="app-admin/eselect-vi
+RDEPEND=">=app-admin/eselect-vi-1.1.8
 	>=app-editors/vim-core-7.4.417[acl?]
 	sys-libs/ncurses
 	>=dev-qt/qtcore-4.7.0:4

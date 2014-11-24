@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/vim-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/ChangeLog,v 1.9 2014/11/16 01:15:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/ChangeLog,v 1.10 2014/11/24 12:51:50 yngwin Exp $
+
+*vim-qt-20140827-r2 (24 Nov 2014)
+
+  24 Nov 2014; Ben de Groot <yngwin@gentoo.org> +vim-qt-20140827-r2.ebuild,
+  -vim-qt-20131004.ebuild, -vim-qt-20140827-r1.ebuild, -vim-qt-20140827.ebuild:
+  Add python-3.4 compatibility (bug #530348). Up eselect-vi dependency to the
+  one that actually includes vim-qt as option (bug #526938). Remove old.
 
   16 Nov 2014; Ben de Groot <yngwin@gentoo.org> vim-qt-20140827-r1.ebuild:
   Add system vimrc, drop gpm use (bug #526938)
