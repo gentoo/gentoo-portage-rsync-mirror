@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.42 2014/07/21 08:05:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.43 2014/11/24 14:46:56 pacho Exp $
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> bpython-0.13.1.ebuild:
+  Support python 3.4
 
 *bpython-0.13.1 (21 Jul 2014)
 
