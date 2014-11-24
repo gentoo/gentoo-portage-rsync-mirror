@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils-glep/docutils-glep-0.4-r1.ebuild,v 1.16 2014/03/31 21:15:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils-glep/docutils-glep-0.4-r1.ebuild,v 1.17 2014/11/24 17:06:51 pacho Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
 
 inherit eutils python-r1
 

@@ -1,9 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.627 2014/11/18 00:25:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.628 2014/11/24 17:19:04 ottxor Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Christoph Junghans <ottxor@gentoo.org> (24 Nov 2014)
+# needs boost auto_index tool (bug #529066)
+>=sys-cluster/hpx-0.9.9 doc
 
 # Jeroen Roovers <jer@gentoo.org> (18 Nov 2014)
 # Requires dev-lang/lua-5.2 (bug #253269)
