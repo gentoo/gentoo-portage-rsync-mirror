@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/oslo-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/ChangeLog,v 1.11 2014/09/27 20:09:28 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/ChangeLog,v 1.12 2014/11/25 09:46:39 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> oslo-config-1.4.0.ebuild:
+  Support python 3.4
 
   27 Sep 2014; Alex Brandt <alunduil@gentoo.org> oslo-config-1.4.0.ebuild:
   fix testsuite—requires removal of .testrepostory between runs
