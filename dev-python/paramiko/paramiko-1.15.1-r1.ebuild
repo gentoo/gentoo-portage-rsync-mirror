@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.15.1.ebuild,v 1.1 2014/11/01 01:30:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.15.1-r1.ebuild,v 1.1 2014/11/25 17:07:33 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -19,7 +19,7 @@ IUSE="doc examples"
 RDEPEND="
 	>=dev-python/pycrypto-2.1[${PYTHON_USEDEP}]
 	!=dev-python/pycrypto-2.4[${PYTHON_USEDEP}]
-	>=dev-python/ecdsa-0.9[${PYTHON_USEDEP}]"
+	>=dev-python/ecdsa-0.11[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 

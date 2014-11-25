@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.52 2014/11/07 04:29:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.53 2014/11/25 17:16:46 floppym Exp $
+
+*fabric-1.10.0-r1 (25 Nov 2014)
+
+  25 Nov 2014; Mike Gilbert <floppym@gentoo.org> +fabric-1.10.0-r1.ebuild,
+  -fabric-1.9.0.ebuild, -fabric-1.9.1.ebuild:
+  Remove upper bound on dev-python/paramiko dep, bug 528154.
 
   07 Nov 2014; Ian Delaney <idella4@gentoo.org> fabric-1.10.0.ebuild:
   ditto to fabric-1.10.0.ebuild wrt Bug #528154

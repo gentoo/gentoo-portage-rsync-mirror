@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/orocos-bfl/orocos-bfl-0.8.0.ebuild,v 1.1 2014/11/25 15:28:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/orocos-bfl/orocos-bfl-0.8.0.ebuild,v 1.2 2014/11/25 17:02:03 aballier Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://people.mech.kuleuven.be/~tdelaet/bfl_tar/${P}-src.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE="doc examples static-libs test"
 
 RDEPEND="dev-libs/boost:="
