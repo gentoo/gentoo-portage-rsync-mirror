@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-expectations
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.82 2014/11/18 11:54:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.83 2014/11/25 11:35:56 mrueg Exp $
+
+  25 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  rspec-expectations-2.14.5-r1.ebuild, rspec-expectations-2.14.5.ebuild,
+  rspec-expectations-2.99.2.ebuild:
+  Drop jruby target.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -rspec-expectations-2.12.1.ebuild:

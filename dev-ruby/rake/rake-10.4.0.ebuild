@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-10.3.2.ebuild,v 1.3 2014/11/25 11:39:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-10.4.0.ebuild,v 1.1 2014/11/25 11:57:13 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -22,7 +22,7 @@ IUSE="doc"
 
 DEPEND+=" app-arch/gzip"
 
-ruby_add_bdepend "test? ( >=dev-ruby/minitest-4:0 )"
+ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.4 )"
 
 all_ruby_prepare() {
 	# Decompress the file. The compressed version has errors, ignore them.
@@ -36,7 +36,7 @@ all_ruby_compile() {
 }
 
 each_ruby_test() {
-	${RUBY} -Ilib:test:. -e 'gem "minitest", "~>4.0"; require "minitest/autorun"; Dir["test/test_*.rb"].each{|f| require f}' || die
+	${RUBY} -Ilib:test:. -e 'gem "minitest", "~>5.4"; require "minitest/autorun"; Dir["test/test_*.rb"].each{|f| require f}' || die
 }
 
 all_ruby_install() {

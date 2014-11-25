@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.1.0-r1.ebuild,v 1.17 2014/11/18 11:47:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.1.0-r1.ebuild,v 1.18 2014/11/25 11:31:41 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc/reference"
@@ -29,18 +29,6 @@ ruby_add_bdepend "test? ( dev-ruby/test-unit:2 dev-ruby/test-unit-rr )"
 
 all_ruby_prepare() {
 	sed -i -e '/notify/ s:^:#:' test/run-test.rb || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# Avoid failing tests in the partial jruby
-			# implementation. This may be dependeny on the specific
-			# locales available or it may be an issue with Gentoo still
-			# using jruby 1.6.
-			sed -i -e '/test_locales/,/end/ s:^:#:' test/test_driver_jruby.rb || die
-			;;
-	esac
 }
 
 all_ruby_compile() {

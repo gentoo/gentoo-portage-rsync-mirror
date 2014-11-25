@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.77 2014/11/18 12:00:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.78 2014/11/25 11:31:41 mrueg Exp $
+
+  25 Nov 2014; Manuel Rüger <mrueg@gentoo.org> locale-2.1.0-r1.ebuild,
+  locale-2.1.0-r2.ebuild:
+  Drop jruby target.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/locale-language-fixes.patch:

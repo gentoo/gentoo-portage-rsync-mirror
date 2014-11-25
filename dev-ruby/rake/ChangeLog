@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.158 2014/10/13 08:46:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.160 2014/11/25 11:57:13 mrueg Exp $
+
+*rake-10.4.0 (25 Nov 2014)
+
+  25 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +rake-10.4.0.ebuild:
+  Version bump.
+
+  25 Nov 2014; Manuel Rüger <mrueg@gentoo.org> rake-0.9.6-r1.ebuild,
+  rake-0.9.6.ebuild, rake-10.3.2.ebuild:
+  Drop jruby target.
 
   13 Oct 2014; Michał Górny <mgorny@gentoo.org> files/rake.bash-completion:
   Remove use of deprecated "have" command from bash-completion, bug #521162.

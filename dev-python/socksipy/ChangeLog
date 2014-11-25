@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/socksipy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/socksipy/ChangeLog,v 1.4 2014/02/24 22:34:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/socksipy/ChangeLog,v 1.5 2014/11/25 11:32:14 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> socksipy-1.02.ebuild:
+  Support python 3.4
 
   24 Feb 2014; Mike Frysinger <vapier@gentoo.org> socksipy-1.02.ebuild:
   Add arm love for Chromium OS.

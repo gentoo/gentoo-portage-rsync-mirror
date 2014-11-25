@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/rspec-expectations-2.99.2.ebuild,v 1.3 2014/08/13 18:32:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/rspec-expectations-2.99.2.ebuild,v 1.4 2014/11/25 11:35:56 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
@@ -49,13 +49,4 @@ all_ruby_prepare() {
 
 	# Avoid a weird, and failing, test testing already installed code.
 	sed -e '/has an up-to-date caller_filter file/,/end/ s:^:#:' -i spec/rspec/expectations_spec.rb || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# Avoid a test failing on backtrace details.
-			sed -e '/when the root file is loaded/,/end/ s:^:#:' -i spec/rspec/expectations_spec.rb || die
-			;;
-	esac
 }

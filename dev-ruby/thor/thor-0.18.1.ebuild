@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/thor-0.18.1.ebuild,v 1.5 2014/08/12 21:30:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/thor-0.18.1.ebuild,v 1.6 2014/11/25 11:34:25 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
@@ -45,16 +45,4 @@ all_ruby_prepare() {
 	# Avoid a spec that requires UTF-8 support, so LANG=C still works,
 	# bug 430402
 	sed -i -e '/uses maximum terminal width/,/end/ s:^:#:' spec/shell/basic_spec.rb || die
-}
-
-each_ruby_prepare() {
-	# Skip two failing specs on thor. Our jruby 1.6 is too old to file
-	# bugs against and the next thor version will no longer work with
-	# this version altogether.
-	case ${RUBY} in
-		*jruby)
-			sed -i -e '/works with glob characters in the path/,/end/ s:^:#:' \
-				spec/actions/directory_spec.rb || die
-			;;
-	esac
 }

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.12.ebuild,v 1.1 2014/08/27 23:46:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.12.ebuild,v 1.2 2014/11/25 11:42:26 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_TASK_DOC="docs"
@@ -41,32 +41,15 @@ all_ruby_prepare() {
 }
 
 each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# Some tests are broken on jruby, avoid them. We used to
-			# avoid all tests so this is not a regression for us.
-			rm test/test_racc_command.rb || die
-			;;
-		*)
-			${RUBY} -Cext/racc extconf.rb || die
-			;;
-	esac
+	${RUBY} -Cext/racc extconf.rb || die
 }
 
 each_ruby_compile() {
-	case ${RUBY} in
-		*jruby)
-			einfo "Under JRuby, racc cannot use the shared object parser, so instead"
-			einfo "you have to rely on the pure Ruby implementation."
-			;;
-		*)
-			emake V=1 -Cext/racc
-			# Copy over the file here so that we don't have to do
-			# special ruby install for JRuby and the other
-			# implementations.
-			cp -l ext/racc/cparse$(get_modname) lib/racc/cparse$(get_modname) || die
-			;;
-	esac
+	emake V=1 -Cext/racc
+	# Copy over the file here so that we don't have to do
+	# special ruby install for JRuby and the other
+		# implementations.
+		cp -l ext/racc/cparse$(get_modname) lib/racc/cparse$(get_modname) || die
 }
 
 each_ruby_test() {
