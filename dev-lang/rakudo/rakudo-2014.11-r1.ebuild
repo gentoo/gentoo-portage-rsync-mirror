@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2014.11.ebuild,v 1.1 2014/11/24 01:48:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2014.11-r1.ebuild,v 1.1 2014/11/25 04:47:46 patrick Exp $
 
 EAPI=5
 
@@ -8,17 +8,17 @@ PARROT_VERSION="6.7.0"
 
 inherit eutils multilib
 
-DESCRIPTION="A Perl 6 implementation"
+DESCRIPTION="A Perl 6 implementation built on the Parrot virtual machine"
 HOMEPAGE="http://rakudo.org/"
 SRC_URI="http://rakudo.org/downloads/${PN}/${P}.tar.gz"
 
 LICENSE="Artistic-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc java +moar"
+IUSE="doc +parrot java moar"
 
-RDEPEND="
-	>=dev-lang/nqp-${PV}[java?,moar?]"
+RDEPEND="parrot? ( >=dev-lang/parrot-${PARROT_VERSION}:=[unicode] )
+	>=dev-lang/nqp-${PV}[parrot?,java?,moar?]"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 
@@ -27,9 +27,13 @@ src_prepare() {
 }
 
 src_configure() {
+	use parrot && myconf+="parrot,"
 	use java && myconf+="jvm,"
 	use moar && myconf+="moar,"
 	perl Configure.pl --backends=${myconf} --prefix=/usr || die
+
+	# why doesn't ops2c get detected?! :(
+	use parrot && sed -i -e 's~OPS2C            = $(PARROT_BIN_DIR)/$(EXE)~OPS2C            = $(PARROT_BIN_DIR)/ops2c~' Makefile || die
 }
 
 src_test() {
