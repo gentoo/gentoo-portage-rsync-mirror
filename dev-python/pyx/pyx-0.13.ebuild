@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.13.ebuild,v 1.3 2014/07/02 13:48:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.13.ebuild,v 1.4 2014/11/25 11:00:02 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python3_3 )
+PYTHON_COMPAT=( python3_{3,4} )
 
 inherit distutils-r1
 

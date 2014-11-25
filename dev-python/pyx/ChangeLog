@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.41 2014/07/02 13:48:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.42 2014/11/25 11:00:02 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> pyx-0.13.ebuild:
+  Support python 3.4
 
   02 Jul 2014; Ian Delaney <idella4@gentoo.org> pyx-0.12.1-r1.ebuild,
   pyx-0.13.ebuild:
