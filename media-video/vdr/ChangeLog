@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.183 2014/10/01 16:02:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.184 2014/11/25 21:44:42 jer Exp $
+
+  25 Nov 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  No proxy-maintainers.
 
 *vdr-2.0.6-r1 (01 Oct 2014)
 
