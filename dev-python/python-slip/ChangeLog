@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-slip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/ChangeLog,v 1.18 2014/07/23 15:15:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/ChangeLog,v 1.19 2014/11/25 13:41:43 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> python-slip-0.6.0.ebuild:
+  Support python 3.4
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> python-slip-0.6.0.ebuild:
   Stable for x86, wrt bug #512012

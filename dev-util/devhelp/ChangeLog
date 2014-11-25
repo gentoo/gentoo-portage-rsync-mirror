@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.171 2014/07/23 15:15:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.172 2014/11/25 13:45:07 pacho Exp $
+
+*devhelp-3.12.1-r1 (25 Nov 2014)
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> +devhelp-3.12.1-r1.ebuild:
+  Support python 3.4
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> devhelp-3.12.1.ebuild:
   Stable for x86, wrt bug #512012
