@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-9999.ebuild,v 1.29 2014/08/18 19:02:25 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-9999.ebuild,v 1.30 2014/11/25 21:16:16 williamh Exp $
 
 EAPI=5
 
@@ -42,6 +42,10 @@ pkg_postinst() {
 		if [[ -x ${ROOT%/}/etc/init.d/udev ]]; then
 			ln -s /etc/init.d/udev "${ROOT%/}"/etc/runlevels/sysinit/udev
 		fi
+		if [[ -x ${ROOT%/}/etc/init.d/udev-trigger ]]; then
+			ln -s /etc/init.d/udev-trigger \
+				"${ROOT%/}"/etc/runlevels/sysinit/udev-trigger
+		fi
 	fi
 
 	# Warn the user about adding udev to their sysinit runlevel
@@ -53,6 +57,14 @@ pkg_postinst() {
 			ewarn "your system will not be able to boot!"
 			ewarn "Run this command:"
 			ewarn "\trc-update add udev sysinit"
+		fi
+		if [[ ! -e ${ROOT%/}/etc/runlevels/sysinit/udev-trigger ]]; then
+			ewarn
+			ewarn "You need to add udev-trigger to the sysinit runlevel."
+			ewarn "If you do not do this,"
+			ewarn "your system will not be able to boot!"
+			ewarn "Run this command:"
+			ewarn "\trc-update add udev-trigger sysinit"
 		fi
 	fi
 
