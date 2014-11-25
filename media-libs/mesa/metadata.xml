@@ -24,6 +24,7 @@
 	<flag name='r600-llvm-compiler'>Build the LLVM based r600 shader compiler.</flag>
 	<flag name='shared-dricore'>Enable sharing of common code for classic DRI drivers.</flag>
 	<flag name='shared-glapi'>Enable sharing of common code for the OpenGL API.</flag>
+	<flag name='sysfs'>Use sysfs for pci-id support on linux instead of libudev</flag>
 	<flag name='vdpau'>Enable the VDPAU acceleration interface for the Gallium3D Video Layer.</flag>
 	<flag name='wayland'>Enable support for dev-libs/wayland</flag>
 	<flag name='xa'>Enable the XA (X Acceleration) API for Gallium3D.</flag>

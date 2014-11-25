@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.44 2014/10/25 17:17:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.45 2014/11/25 20:07:54 axs Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org> (05 Jan 2014)
 # Pending keywording of net-libs/miniupnpc per bug #497186
@@ -81,6 +81,9 @@ www-client/links livecd
 
 # Needs DirectFB which is linux only
 media-libs/xine-lib fusion
+
+# no sysfs on bsd
+media-libs/mesa sysfs
 
 # needs udev
 kde-base/kdelibs udisks upower

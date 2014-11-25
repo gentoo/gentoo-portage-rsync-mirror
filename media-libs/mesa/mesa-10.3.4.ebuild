@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.3.4.ebuild,v 1.1 2014/11/22 04:51:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.3.4.ebuild,v 1.2 2014/11/25 20:11:01 axs Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ done
 IUSE="${IUSE_VIDEO_CARDS}
 	bindist +classic debug +dri3 +egl +gallium +gbm gles1 gles2 +llvm +nptl
 	opencl openvg osmesa pax_kernel openmax pic r600-llvm-compiler selinux
-	vdpau wayland xvmc xa kernel_FreeBSD"
+	sysfs vdpau wayland xvmc xa kernel_FreeBSD kernel_linux"
 
 REQUIRED_USE="
 	llvm?   ( gallium )
@@ -95,9 +95,8 @@ RDEPEND="
 	classic? ( app-admin/eselect-mesa )
 	gallium? ( app-admin/eselect-mesa )
 	>=app-admin/eselect-opengl-1.2.7
+	!sysfs? ( kernel_linux? ( >=virtual/libudev-215:=[${MULTILIB_USEDEP}] ) )
 	>=dev-libs/expat-2.1.0-r3:=[${MULTILIB_USEDEP}]
-	gbm? ( >=virtual/libudev-215:=[${MULTILIB_USEDEP}] )
-	dri3? ( >=virtual/libudev-215:=[${MULTILIB_USEDEP}] )
 	>=x11-libs/libX11-1.6.2:=[${MULTILIB_USEDEP}]
 	>=x11-libs/libxshmfence-1.1:=[${MULTILIB_USEDEP}]
 	>=x11-libs/libXdamage-1.1.4-r1:=[${MULTILIB_USEDEP}]
@@ -323,6 +322,7 @@ multilib_src_configure() {
 		$(use_enable gles2) \
 		$(use_enable nptl glx-tls) \
 		$(use_enable osmesa) \
+		$(use_enable sysfs) \
 		--enable-llvm-shared-libs \
 		--with-dri-drivers=${DRI_DRIVERS} \
 		--with-gallium-drivers=${GALLIUM_DRIVERS} \
