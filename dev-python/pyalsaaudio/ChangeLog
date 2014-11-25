@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyalsaaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.36 2014/03/05 15:38:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.37 2014/11/25 10:03:58 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> pyalsaaudio-0.7-r2.ebuild:
+  Support python 3.4
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pyalsaaudio-0.7-r1.ebuild:
   Stable for ppc, wrt bug #474192

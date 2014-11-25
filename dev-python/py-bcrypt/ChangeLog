@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py-bcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-bcrypt/ChangeLog,v 1.8 2014/01/05 01:11:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-bcrypt/ChangeLog,v 1.9 2014/11/25 10:01:28 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> py-bcrypt-0.4.ebuild:
+  Support python 3.4
 
   05 Jan 2014; Mike Gilbert <floppym@gentoo.org> py-bcrypt-0.4.ebuild:
   Add blocker on dev-python/bcrypt.
