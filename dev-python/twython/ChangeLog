@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twython/ChangeLog,v 1.3 2014/11/03 05:56:51 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twython/ChangeLog,v 1.4 2014/11/25 12:59:56 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> twython-3.2.0.ebuild:
+  Support python 3.4
 
 *twython-3.2.0 (03 Nov 2014)
 
