@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/rb-inotify-0.9.5.ebuild,v 1.3 2014/09/19 05:41:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/rb-inotify-0.9.5.ebuild,v 1.4 2014/11/25 11:27:49 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_TEST=""
 
@@ -36,16 +36,4 @@ all_ruby_prepare() {
 
 	# Remove mandatory markup processor from yard options, bug 436112.
 	sed -i -e '/maruku/d' .yardopts || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# jruby has a native implementation and should not list ffi
-			# in the gemspec.
-			sed -i -e '/ffi/d' rb-inotify.gemspec || die
-			;;
-		*)
-			;;
-	esac
 }

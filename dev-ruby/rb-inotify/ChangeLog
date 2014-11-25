@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rb-inotify
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.33 2014/09/19 05:41:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.34 2014/11/25 11:27:49 mrueg Exp $
+
+  25 Nov 2014; Manuel Rüger <mrueg@gentoo.org> rb-inotify-0.9.0.ebuild,
+  rb-inotify-0.9.5-r1.ebuild, rb-inotify-0.9.5.ebuild:
+  Drop jruby target.
 
 *rb-inotify-0.9.5-r1 (19 Sep 2014)
 

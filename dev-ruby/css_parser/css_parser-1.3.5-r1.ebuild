@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/css_parser/css_parser-1.3.5-r1.ebuild,v 1.3 2014/05/20 17:58:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/css_parser/css_parser-1.3.5-r1.ebuild,v 1.4 2014/11/25 11:24:13 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_DOC_DIR="doc"
@@ -36,12 +36,6 @@ all_ruby_prepare() {
 	# Avoid tests using the network.
 	sed -i -e '/test_loading_a_remote_file_over_ssl/,/end/ s:^:#:' test/test_css_parser_loading.rb || die
 
-}
-
-each_ruby_prepare() {
-	if [[ ${RUBY} == */jruby ]]; then
-		sed -i -e '/add_development_dependency/i s.add_dependency("jruby-openssl")' "${RUBY_FAKEGEM_GEMSPEC}" || die
-	fi
 }
 
 each_ruby_test() {

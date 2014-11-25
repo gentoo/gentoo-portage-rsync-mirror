@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-3.2.21.ebuild,v 1.1 2014/11/17 20:12:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-3.2.21.ebuild,v 1.2 2014/11/25 11:30:15 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 
@@ -54,18 +54,4 @@ all_ruby_prepare() {
 	# Make sure we use the test-unit gem since ruby18 does not provide
 	# all the test-unit features needed.
 	sed -i -e '1igem "test-unit"' test/abstract_unit.rb || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# Ignore failing tests on jruby in the interest of a security update
-			sed -i -e '/test_not_allowed_to_expand_parameter_entities_to_files/,/^    end/ s:^:#:' \
-				-e '/test_exception_thrown_on_expansion_attack/,/^    end/ s:^:#:' \
-				test/xml_mini/jdom_engine_test.rb || die
-			sed -i \
-				-e '/test_exception_thrown_on_expansion_attack/,/^  end/ s:^:#:' \
-				test/xml_mini/nokogiri_engine_test.rb || die
-			;;
-	esac
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools-git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools-git/ChangeLog,v 1.4 2014/08/10 21:21:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools-git/ChangeLog,v 1.5 2014/11/25 11:27:32 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> setuptools-git-1.0.ebuild:
+  Support python 3.4
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> setuptools-git-1.0.ebuild,
   setuptools-git-1.0_beta1.ebuild:

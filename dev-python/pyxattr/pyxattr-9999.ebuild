@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/pyxattr-9999.ebuild,v 1.4 2014/03/31 21:03:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/pyxattr-9999.ebuild,v 1.5 2014/11/25 11:01:23 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
 
 #if LIVE
 EGIT_REPO_URI="https://github.com/iustin/${PN}.git

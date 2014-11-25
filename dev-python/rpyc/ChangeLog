@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rpyc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpyc/ChangeLog,v 1.11 2014/01/11 22:52:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpyc/ChangeLog,v 1.12 2014/11/25 11:25:19 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> rpyc-3.2.3-r1.ebuild:
+  Support python 3.4
 
 *rpyc-3.2.3-r1 (11 Jan 2014)
 
