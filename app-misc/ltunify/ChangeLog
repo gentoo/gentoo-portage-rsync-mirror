@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/ltunify
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ltunify/ChangeLog,v 1.1 2014/11/05 03:52:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ltunify/ChangeLog,v 1.2 2014/11/25 02:14:52 radhermit Exp $
+
+*ltunify-0.2-r1 (25 Nov 2014)
+
+  25 Nov 2014; Tim Harder <radhermit@gentoo.org> -ltunify-0.2.ebuild,
+  +ltunify-0.2-r1.ebuild:
+  Give plugdev group r/w device node permissions.
 
 *ltunify-0.2 (05 Nov 2014)
 
