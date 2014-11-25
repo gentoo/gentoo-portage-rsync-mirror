@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-2.3.1-r1.ebuild,v 1.11 2014/08/05 16:00:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-2.3.1-r1.ebuild,v 1.12 2014/11/25 13:02:17 mrueg Exp $
 
 EAPI=2
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"

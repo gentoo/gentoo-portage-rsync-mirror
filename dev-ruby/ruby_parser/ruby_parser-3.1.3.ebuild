@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-3.1.3.ebuild,v 1.13 2014/08/05 16:00:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-3.1.3.ebuild,v 1.14 2014/11/25 13:02:17 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -32,14 +32,4 @@ all_ruby_prepare() {
 	#sed -i -e '/perforce/d' Rakefile || die
 
 	sed -i -e '/Hoe.plugin :isolate/ s:^:#:' Rakefile || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# Disable tests failing on jruby related to //n regexp
-			# https://github.com/seattlerb/ruby_parser/issues/117
-			rm test/test_ruby_parser.rb || die
-			;;
-	esac
 }

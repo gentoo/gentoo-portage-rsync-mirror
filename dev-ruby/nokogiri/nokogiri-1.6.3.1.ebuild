@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.6.3.1.ebuild,v 1.2 2014/08/28 02:53:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.6.3.1.ebuild,v 1.3 2014/11/25 13:10:25 mrueg Exp $
 
 EAPI=5
 
@@ -58,61 +58,34 @@ each_ruby_prepare() {
 		test/xml/test_entity_reference.rb || die
 	sed -e '/\(test_last_of_type\|test_nth_of_type\|test_nth_last_of_type\)/,/^      end/ s:^:#:' \
 		-i test/css/test_nthiness.rb || die
-
-	case ${RUBY} in
-		*jruby)
-			# Avoid failing tests:
-			# https://github.com/sparklemotion/nokogiri/issues/721
-			rm test/xslt/test_exception_handling.rb test/test_xslt_transforms.rb || die
-			;;
-		*)
-			;;
-	esac
 }
 
 each_ruby_configure() {
-	case ${RUBY} in
-		*jruby)
-			;;
-		*)
-			NOKOGIRI_USE_SYSTEM_LIBRARIES=true \
-				${RUBY} -Cext/${PN} extconf.rb \
-				--with-zlib-include="${EPREFIX}"/usr/include \
-				--with-zlib-lib="${EPREFIX}"/$(get_libdir) \
-				--with-iconv-include="${EPREFIX}"/usr/include \
-				--with-iconv-lib="${EPREFIX}"/$(get_libdir) \
-				--with-xml2-include="${EPREFIX}"/usr/include/libxml2 \
-				--with-xml2-lib="${EPREFIX}"/usr/$(get_libdir) \
-				--with-xslt-dir="${EPREFIX}"/usr \
-				--with-iconvlib=iconv \
-				|| die "extconf.rb failed"
-			;;
-	esac
+	NOKOGIRI_USE_SYSTEM_LIBRARIES=true \
+		${RUBY} -Cext/${PN} extconf.rb \
+		--with-zlib-include="${EPREFIX}"/usr/include \
+		--with-zlib-lib="${EPREFIX}"/$(get_libdir) \
+		--with-iconv-include="${EPREFIX}"/usr/include \
+		--with-iconv-lib="${EPREFIX}"/$(get_libdir) \
+		--with-xml2-include="${EPREFIX}"/usr/include/libxml2 \
+		--with-xml2-lib="${EPREFIX}"/usr/$(get_libdir) \
+		--with-xslt-dir="${EPREFIX}"/usr \
+		--with-iconvlib=iconv \
+		|| die "extconf.rb failed"
 }
 
 each_ruby_compile() {
-	case ${RUBY} in
-		*jruby)
-			if ! [[ -f lib/nokogiri/css/parser.rb ]]; then
-				${RUBY} -S rake lib/nokogiri/css/parser.rb || die "racc failed"
-			fi
+	if ! [[ -f lib/nokogiri/css/tokenizer.rb ]]; then
+		${RUBY} -S rake lib/nokogiri/css/tokenizer.rb || die "rexical failed"
+	fi
 
-			${RUBY} -S rake compile || die
-			;;
-		*)
-			if ! [[ -f lib/nokogiri/css/tokenizer.rb ]]; then
-				${RUBY} -S rake lib/nokogiri/css/tokenizer.rb || die "rexical failed"
-			fi
+	if ! [[ -f lib/nokogiri/css/parser.rb ]]; then
+		${RUBY} -S rake lib/nokogiri/css/parser.rb || die "racc failed"
+	fi
 
-			if ! [[ -f lib/nokogiri/css/parser.rb ]]; then
-				${RUBY} -S rake lib/nokogiri/css/parser.rb || die "racc failed"
-			fi
-
-			emake -Cext/${PN} \
-				V=1 \
-				CFLAGS="${CFLAGS} -fPIC" \
-				archflag="${LDFLAGS}" || die "make extension failed"
-			cp -l ext/${PN}/${PN}$(get_modname) lib/${PN}/ || die
-			;;
-	esac
+	emake -Cext/${PN} \
+		V=1 \
+		CFLAGS="${CFLAGS} -fPIC" \
+		archflag="${LDFLAGS}" || die "make extension failed"
+		cp -l ext/${PN}/${PN}$(get_modname) lib/${PN}/ || die
 }

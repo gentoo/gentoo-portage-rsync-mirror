@@ -1,6 +1,9 @@
 # ChangeLog for virtual/pmw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pmw/ChangeLog,v 1.4 2014/04/19 17:53:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pmw/ChangeLog,v 1.5 2014/11/25 13:22:14 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> pmw-1.ebuild:
+  Support python 3.4
 
   19 Apr 2014; Michał Górny <mgorny@gentoo.org> pmw-1.ebuild:
   Use ${PYTHON_USEDEP} substitution support added to python_gen_cond_dep().

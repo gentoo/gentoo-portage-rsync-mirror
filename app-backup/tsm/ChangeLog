@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/tsm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/ChangeLog,v 1.22 2014/07/05 15:03:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/ChangeLog,v 1.23 2014/11/25 13:01:35 dilfridge Exp $
+
+  25 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  add myself to metadata as co-maintainer
 
 *tsm-7.1.0.0-r1 (05 Jul 2014)
 

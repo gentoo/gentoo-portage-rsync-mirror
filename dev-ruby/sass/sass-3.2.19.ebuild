@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/sass-3.2.19.ebuild,v 1.3 2014/09/19 05:30:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/sass-3.2.19.ebuild,v 1.4 2014/11/25 13:06:36 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -33,18 +33,4 @@ all_ruby_prepare() {
 
 	# Don't require maruku as markdown provider but let yard decide.
 	sed -i -e '/maruku/d' .yardopts || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# Test fails on jruby for us, upstream can't
-			# reproduce. Avoiding it since it only affects debug
-			# information in the CSS file.
-			# https://github.com/nex3/sass/issues/563
-			sed -i -e '24s/filename_fn//' test/sass/plugin_test.rb || die
-			;;
-		*)
-			;;
-	esac
 }
