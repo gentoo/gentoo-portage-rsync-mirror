@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.531 2014/11/24 19:18:50 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.532 2014/11/25 22:35:45 chutzpah Exp $
+
+*openssh-6.7_p1-r3 (25 Nov 2014)
+
+  25 Nov 2014; Patrick McLean <chutzpah@gentoo.org> +openssh-6.7_p1-r3.ebuild:
+  Revision bump, make the /var/run -> /run move only apply when kernel_linux is
+  on, /run is a Linux-ism.
 
 *openssh-6.7_p1-r2 (24 Nov 2014)
 

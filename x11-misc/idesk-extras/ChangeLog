@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/idesk-extras
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk-extras/ChangeLog,v 1.6 2014/08/10 17:38:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk-extras/ChangeLog,v 1.7 2014/11/25 23:00:38 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> idesk-extras-1.37-r1.ebuild:
   Stable for x86, wrt bug #518216

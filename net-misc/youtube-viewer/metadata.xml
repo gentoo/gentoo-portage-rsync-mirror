@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>hasufell@gentoo.org</email>
-		<name>Julian Ospald</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<upstream>
 		<maintainer status="active">
@@ -16,4 +15,4 @@
 		Youtube Videos with MPlayer. It has been written in Perl and plays videos
 		from Youtube at the best quality available without using a flash player. 
 	</longdescription>
-</pkgmetadata>
+</pkgmetadata>

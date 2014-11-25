@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/libtcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/libtcd/ChangeLog,v 1.6 2014/10/27 20:58:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/libtcd/ChangeLog,v 1.7 2014/11/25 22:54:28 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
 *libtcd-2.2.6 (27 Oct 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/trash-cli
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/ChangeLog,v 1.18 2013/07/22 11:45:22 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/ChangeLog,v 1.19 2014/11/25 22:39:14 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   22 Jul 2013; Michał Górny <mgorny@gentoo.org> -trash-cli-0.12.4.ebuild,
   -trash-cli-0.12.7.ebuild, -trash-cli-0.12.9.14-r1.ebuild,

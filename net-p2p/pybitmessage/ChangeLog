@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/pybitmessage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pybitmessage/ChangeLog,v 1.10 2014/08/24 18:24:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pybitmessage/ChangeLog,v 1.11 2014/11/25 22:53:26 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
 *pybitmessage-0.4.3 (24 Aug 2014)
 

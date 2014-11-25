@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gcap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gcap/ChangeLog,v 1.4 2014/08/27 16:57:29 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gcap/ChangeLog,v 1.5 2014/11/25 22:49:36 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
 *gcap-0.1.1-r1 (27 Aug 2014)
 

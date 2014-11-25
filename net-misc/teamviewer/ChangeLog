@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/teamviewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.14 2014/11/12 23:21:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.15 2014/11/25 22:51:02 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   12 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   +files/teamviewer-9.0.32150-gentoo.patch:

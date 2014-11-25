@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/swmm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/swmm/ChangeLog,v 1.7 2013/09/01 16:58:43 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/swmm/ChangeLog,v 1.8 2014/11/25 22:55:14 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> swmm-5.0.022.ebuild:
   Stable for amd64, wrt bug #474418

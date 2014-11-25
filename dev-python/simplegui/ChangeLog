@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplegui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegui/ChangeLog,v 1.4 2014/06/14 09:34:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegui/ChangeLog,v 1.5 2014/11/25 22:42:44 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> simplegui-0.1.0.ebuild:
   x86 stable wrt bug #504364

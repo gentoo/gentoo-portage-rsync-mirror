@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tudor-volumed
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tudor-volumed/ChangeLog,v 1.5 2012/08/27 14:30:08 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tudor-volumed/ChangeLog,v 1.6 2014/11/25 22:47:12 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   27 Aug 2012; Johannes Huber <johu@gentoo.org>
   tudor-volumed-0_pre20110427.ebuild:
@@ -16,4 +19,3 @@
   +tudor-volumed-0_pre20110427.ebuild,
   +files/tudor-volumed-0_pre20110427-build.patch, +metadata.xml:
   initial import
-

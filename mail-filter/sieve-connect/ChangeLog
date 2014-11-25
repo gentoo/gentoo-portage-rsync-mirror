@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/sieve-connect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sieve-connect/ChangeLog,v 1.7 2014/09/19 22:00:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sieve-connect/ChangeLog,v 1.8 2014/11/25 22:45:27 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> sieve-connect-0.86.ebuild,
   sieve-connect-0.87.ebuild:

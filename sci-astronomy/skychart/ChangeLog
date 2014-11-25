@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/skychart
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skychart/ChangeLog,v 1.4 2014/04/03 12:29:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skychart/ChangeLog,v 1.5 2014/11/25 22:53:55 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
 *skychart-3.10.2854 (03 Apr 2014)
 
@@ -19,4 +22,3 @@
   21 Apr 2013; Julian Ospald <hasufell@gentoo.org> +skychart-3.8.2450.ebuild,
   +files/skychart-3.8.2450-QA.patch, +metadata.xml:
   initial import wrt #346699
-

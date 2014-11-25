@@ -6,11 +6,6 @@
 		<name>Matthew Schultz</name>
 		<description>Proxied maintainer. Assign bugs to him.</description>
 	</maintainer>
-	<maintainer>
-		<email>hasufell@gentoo.org</email>
-		<name>Julian Ospald</name>
-		<description>Proxy maintainer. CC him on bugs.</description>
-	</maintainer>
 	<herd>proxy-maintainers</herd>
 	<use>
 		<flag name='gssapi'>Build GSSAPI support.</flag>

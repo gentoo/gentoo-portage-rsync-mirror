@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.31 2014/07/26 19:26:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.32 2014/11/25 22:50:16 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
 *openconnect-6.00 (26 Jul 2014)
 

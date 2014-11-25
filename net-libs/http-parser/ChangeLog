@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/http-parser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/ChangeLog,v 1.9 2014/10/12 08:55:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/ChangeLog,v 1.10 2014/11/25 22:48:42 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   12 Oct 2014; Agostino Sarubbo <ago@gentoo.org> http-parser-2.3.ebuild:
   Stable for x86, wrt bug #521058

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/durep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/ChangeLog,v 1.22 2014/08/10 01:37:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/ChangeLog,v 1.23 2014/11/25 22:37:00 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> durep-0.9-r4.ebuild:
   Fix description for more repoman happy
