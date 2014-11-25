@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/blaze
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/ChangeLog,v 1.8 2014/11/19 03:35:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/ChangeLog,v 1.9 2014/11/25 07:00:33 patrick Exp $
+
+*blaze-0.6.6 (25 Nov 2014)
+
+  25 Nov 2014; Patrick Lauer <patrick@gentoo.org> +blaze-0.6.6.ebuild:
+  Bump
 
   19 Nov 2014; Patrick Lauer <patrick@gentoo.org> blaze-0.6.5.ebuild:
   Fix datashape dependencies a bit
