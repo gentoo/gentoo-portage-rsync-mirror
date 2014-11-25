@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.14.ebuild,v 1.1 2014/09/04 09:41:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.16.ebuild,v 1.1 2014/11/25 09:03:41 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"

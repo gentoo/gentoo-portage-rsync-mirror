@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.12.0.ebuild,v 1.2 2014/10/05 10:25:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.12.2.ebuild,v 1.1 2014/11/25 09:06:50 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -33,11 +33,6 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/itstool
 "
-
-PATCHES=(
-	# Build with C locale (from 'master')
-	"${FILESDIR}"/${P}-c-locale.patch
-)
 
 python_compile_all() {
 	mydistutilsargs=( --no-update-icon-cache --no-compile-schemas )
