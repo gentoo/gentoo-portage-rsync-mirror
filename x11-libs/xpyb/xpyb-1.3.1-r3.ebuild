@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/xpyb-1.3.1-r3.ebuild,v 1.10 2014/06/08 09:16:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/xpyb-1.3.1-r3.ebuild,v 1.11 2014/11/25 16:39:55 pacho Exp $
 
 EAPI=5
 
@@ -16,6 +16,7 @@ HOMEPAGE="http://xcb.freedesktop.org/"
 
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="selinux"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND=">=x11-libs/libxcb-1.7
 	>=x11-proto/xcb-proto-1.7.1[${PYTHON_USEDEP}]
