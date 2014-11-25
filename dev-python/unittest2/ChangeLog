@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.42 2014/11/25 01:14:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.43 2014/11/25 01:32:55 floppym Exp $
+
+  25 Nov 2014; Mike Gilbert <floppym@gentoo.org>
+  +files/unittest2-0.8.0-argparse.patch, unittest2-0.8.0.ebuild:
+  Do not require pypi argparse for python versions which have it in the standard
+  library. Patch by Arfrever.
 
 *unittest2-0.8.0 (25 Nov 2014)
 

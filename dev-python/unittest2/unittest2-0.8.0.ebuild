@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/unittest2-0.8.0.ebuild,v 1.1 2014/11/25 01:14:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/unittest2-0.8.0.ebuild,v 1.2 2014/11/25 01:32:55 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy pypy3 )
@@ -21,10 +21,9 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
-python_prepare_all() {
-	sed -i -e /setup_requires/d setup.py || die
-	distutils-r1_python_prepare_all
-}
+PATCHES=(
+	"${FILESDIR}/unittest2-0.8.0-argparse.patch"
+)
 
 python_test() {
 	"${PYTHON}" -m unittest2 discover || die
