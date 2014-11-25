@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.147 2014/10/21 19:10:08 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.148 2014/11/25 16:04:38 ottxor Exp $
+
+  25 Nov 2014; Christoph Junghans <ottxor@gentoo.org> gromacs-4.6.5.ebuild,
+  gromacs-4.6.6.ebuild, gromacs-4.6.7.ebuild, gromacs-5.0.1.ebuild,
+  gromacs-5.0.2-r1.ebuild, gromacs-5.0.2.ebuild, gromacs-5.0.ebuild:
+  fixed a typo preventing AVX2 support (bug #530454)
 
 *gromacs-5.0.2-r1 (21 Oct 2014)
 

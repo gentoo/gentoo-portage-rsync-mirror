@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-5.0.2.ebuild,v 1.1 2014/10/02 15:34:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-5.0.2.ebuild,v 1.2 2014/11/25 16:04:38 ottxor Exp $
 
 EAPI=5
 
@@ -120,7 +120,7 @@ src_configure() {
 	use sse4_1 && acce="SSE4.1"
 	use avx_128_fma && acce="AVX_128_FMA"
 	use avx_256 && acce="AVX_256"
-	use avx2_256 && acee="AVX2_256"
+	use avx2_256 && acce="AVX2_256"
 
 	#to create man pages, build tree binaries are executed (bug #398437)
 	[[ ${CHOST} = *-darwin* ]] && \
