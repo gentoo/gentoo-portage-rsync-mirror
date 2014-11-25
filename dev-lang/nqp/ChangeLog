@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/nqp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.55 2014/11/24 00:18:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.56 2014/11/25 04:10:34 patrick Exp $
+
+*nqp-2014.11-r1 (25 Nov 2014)
+
+  25 Nov 2014; Patrick Lauer <patrick@gentoo.org> +nqp-2014.11-r1.ebuild,
+  -nqp-2014.11.ebuild:
+  Fixed build with newer gcc, re-enabling parrot backend
 
 *nqp-2014.11 (24 Nov 2014)
 

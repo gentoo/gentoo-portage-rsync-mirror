@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2014.11.ebuild,v 1.1 2014/11/24 00:18:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2014.11-r1.ebuild,v 1.1 2014/11/25 04:10:34 patrick Exp $
 
 EAPI=5
 
+# still not working
+RESTRICT="test"
+
 inherit eutils multilib
 
-# hrm, doesn't look happy
-#RESTRICT="test"
-
 GITCRAP=b842b0d
-PARROT_VERSION="6.10.0"
+PARROT_VERSION="6.7.0"
 
 DESCRIPTION="Not Quite Perl, a Perl 6 bootstrapping compiler"
 HOMEPAGE="http://rakudo.org/"
@@ -19,10 +19,10 @@ SRC_URI="http://github.com/perl6/${PN}/tarball/${PV} -> ${P}.tar.gz"
 LICENSE="Artistic-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="doc java +moar"
-REQUIRED_USE="|| ( java moar )"
+IUSE="doc +parrot java moar"
+REQUIRED_USE="|| ( parrot java moar )"
 
-RDEPEND="
+RDEPEND="parrot? ( >=dev-lang/parrot-${PARROT_VERSION}:=[unicode] )
 	java? ( >=virtual/jre-1.7 )
 	moar? ( =dev-lang/moarvm-${PV} )"
 DEPEND="${RDEPEND}
@@ -33,12 +33,17 @@ S=${WORKDIR}/perl6-nqp-${GITCRAP}
 
 src_configure() {
 	use java && myconf+="jvm,"
+	use parrot && myconf+="parrot,"
 	use moar && myconf+="moar,"
 	perl Configure.pl --backend=${myconf} --prefix=/usr || die
 	# dirty hack to make dyncall not fail
 	sed -i -e 's/-Werror=missing-prototypes//' Makefile || die
 	sed -i -e 's/-Werror=missing-declarations//' Makefile || die
 	sed -i -e 's/-Werror=strict-prototypes//' Makefile || die
+
+	# more dirty hack to allow building with newer gcc
+	sed -i -e 's/-Werror=implicit-function-declaration//' Makefile || die
+	sed -i -e 's/-Werror=nested-externs//' Makefile || die
 }
 
 src_compile() {
