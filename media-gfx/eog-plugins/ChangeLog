@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/ChangeLog,v 1.19 2014/07/23 15:18:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/ChangeLog,v 1.20 2014/11/25 15:17:25 pacho Exp $
+
+*eog-plugins-3.12.1-r1 (25 Nov 2014)
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> +eog-plugins-3.12.1-r1.ebuild:
+  Support python 3.4
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> eog-plugins-3.12.1.ebuild:
   Stable for x86, wrt bug #512012

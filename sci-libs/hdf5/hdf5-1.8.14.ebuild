@@ -1,13 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.11.ebuild,v 1.1 2013/09/18 10:11:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.14.ebuild,v 1.1 2014/11/25 15:26:17 xarthisius Exp $
 
 EAPI=5
 
 FORTRAN_NEEDED=fortran
-MY_P=${PN}-${PV/_p/-patch}
+AUTOTOOLS_AUTORECONF=1
 
-inherit autotools eutils fortran-2 flag-o-matic toolchain-funcs multilib
+inherit autotools-utils eutils fortran-2 flag-o-matic toolchain-funcs multilib
+
+MY_P=${PN}-${PV/_p/-patch}
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://www.hdfgroup.org/HDF5/"
@@ -25,12 +27,21 @@ REQUIRED_USE="
 
 RDEPEND="
 	mpi? ( virtual/mpi[romio] )
-	szip? ( >=sci-libs/szip-2.1 )
-	zlib? ( sys-libs/zlib )"
+	szip? ( >=sci-libs/szip-2.1:0= )
+	zlib? ( sys-libs/zlib:0= )"
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool:2
 	>=sys-devel/autoconf-2.69"
+
+S="${WORKDIR}/${MY_P}"
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.8.9-static_libgfortran.patch
+	"${FILESDIR}"/${PN}-1.8.9-mpicxx.patch
+	"${FILESDIR}"/${PN}-1.8.13-no-messing-ldpath.patch
+	"${FILESDIR}"/${PN}-1.8.14-implicits.patch
+)
 
 pkg_setup() {
 	tc-export CXX CC AR # workaround for bug 285148
@@ -51,15 +62,7 @@ pkg_setup() {
 	fi
 }
 
-S=${WORKDIR}/${MY_P}
-
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.8.10-buildsystem.patch \
-		"${FILESDIR}"/${PN}-1.8.8-array_bounds.patch \
-		"${FILESDIR}"/${PN}-1.8.9-static_libgfortran.patch \
-		"${FILESDIR}"/${PN}-1.8.9-mpicxx.patch \
-		"${FILESDIR}"/${P}-implicits.patch \
-		"${FILESDIR}"/${PN}-1.8.10_p1-comments.patch
 	# respect gentoo examples directory
 	sed \
 		-e "s:hdf5_examples:doc/${PF}/examples:g" \
@@ -71,38 +74,31 @@ src_prepare() {
 		sed -e '/^install:/ s/install-examples//' \
 			-i Makefile.am || die #409091
 	fi
-	eautoreconf
 	# enable shared libs by default for h5cc config utility
 	sed -i -e "s/SHLIB:-no/SHLIB:-yes/g" tools/misc/h5cc.in	|| die
 	# bug #419677
 	use prefix && \
 		append-ldflags -Wl,-rpath,"${EPREFIX}"/usr/$(get_libdir) \
 		-Wl,-rpath,"${EPREFIX}"/$(get_libdir)
+	autotools-utils_src_prepare
 }
 
 src_configure() {
-	econf \
-		--enable-production \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		--enable-deprecated-symbols \
-		--enable-shared \
-		--disable-silent-rules \
-		$(use_enable prefix sharedlib-rpath) \
-		$(use_enable static-libs static) \
-		$(use_enable debug debug all) \
-		$(use_enable debug codestack) \
-		$(use_enable cxx) \
-		$(use_enable fortran) \
-		$(use_enable fortran2003) \
-		$(use_enable mpi parallel) \
-		$(use_enable threads threadsafe) \
-		$(use_with szip szlib) \
-		$(use_with threads pthread) \
-		$(use_with zlib) \
-		${myconf}
-}
-
-src_install() {
-	default
-	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
+	local myeconfargs=(
+		--enable-production
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		--enable-deprecated-symbols
+		$(use_enable prefix sharedlib-rpath)
+		$(use_enable debug debug all)
+		$(use_enable debug codestack)
+		$(use_enable cxx)
+		$(use_enable fortran)
+		$(use_enable fortran2003)
+		$(use_enable mpi parallel)
+		$(use_enable threads threadsafe)
+		$(use_with szip szlib)
+		$(use_with threads pthread)
+		$(use_with zlib)
+	)
+	autotools-utils_src_configure
 }
