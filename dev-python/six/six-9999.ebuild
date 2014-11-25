@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/six-9999.ebuild,v 1.10 2014/09/07 19:21:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/six-9999.ebuild,v 1.11 2014/11/25 01:07:11 floppym Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy pypy3 )
 
 #if LIVE
 EHG_REPO_URI="https://bitbucket.org/gutworth/six"
