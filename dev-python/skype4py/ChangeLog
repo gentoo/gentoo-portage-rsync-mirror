@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/skype4py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.18 2014/03/03 23:55:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.19 2014/11/25 00:51:03 radhermit Exp $
+
+*skype4py-1.0.35-r1 (25 Nov 2014)
+
+  25 Nov 2014; Tim Harder <radhermit@gentoo.org> +skype4py-1.0.35-r1.ebuild:
+  Drop python2_6 support and add dev-python/pygobject:2 dep (bug #503368).
 
   03 Mar 2014; Tim Harder <radhermit@gentoo.org> -skype4py-1.0.32.1-r1.ebuild,
   -skype4py-1.0.34.ebuild, -files/skype4py-1.0.32.1-python.patch:

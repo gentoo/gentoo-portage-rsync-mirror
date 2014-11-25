@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/gunicorn-19.0.0.ebuild,v 1.1 2014/07/22 04:26:43 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/gunicorn-19.0.0.ebuild,v 1.2 2014/11/25 00:35:16 idella4 Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -16,9 +16,9 @@ SLOT="0"
 IUSE="doc examples test"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="dev-python/setproctitle"
+RDEPEND="dev-python/setproctitle[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	doc? ( dev-python/sphinx )
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 
 DOCS="README.rst"
