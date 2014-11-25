@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/renpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.51 2014/10/27 20:12:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.52 2014/11/25 08:40:10 ago Exp $
+
+  25 Nov 2014; Agostino Sarubbo <ago@gentoo.org> renpy-6.17.7.ebuild:
+  Stable for x86, wrt bug #518182
 
 *renpy-6.18.3 (27 Oct 2014)
 

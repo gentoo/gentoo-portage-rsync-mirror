@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ldapsdk
 # Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ChangeLog,v 1.18 2014/11/10 11:19:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ChangeLog,v 1.19 2014/11/25 08:40:58 ago Exp $
+
+  25 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ldapsdk-4.1.7-r4.ebuild:
+  Stable for x86, wrt bug #525012
 
   10 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ldapsdk-4.1.7-r4.ebuild:
   Stable for amd64, wrt bug #525012

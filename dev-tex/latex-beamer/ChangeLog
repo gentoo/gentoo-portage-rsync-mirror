@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.160 2014/11/21 13:27:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.161 2014/11/25 08:40:39 ago Exp $
+
+  25 Nov 2014; Agostino Sarubbo <ago@gentoo.org> latex-beamer-3.33.ebuild:
+  Stable for x86, wrt bug #523140
 
   21 Nov 2014; Tobias Klausmann <klausman@gentoo.org> latex-beamer-3.33.ebuild:
   Stable on alpha, bug 523140

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libraw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.79 2014/11/23 17:30:05 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.80 2014/11/25 08:42:18 ago Exp $
+
+  25 Nov 2014; Agostino Sarubbo <ago@gentoo.org> libraw-0.16.0.ebuild:
+  Stable for x86, wrt bug #526072
 
   23 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> libraw-0.16.0.ebuild:
   amd64 stable wrt bug #526072

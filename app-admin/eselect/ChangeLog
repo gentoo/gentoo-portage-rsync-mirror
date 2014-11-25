@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.287 2014/11/22 19:13:06 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.288 2014/11/25 08:46:56 ago Exp $
+
+  25 Nov 2014; Agostino Sarubbo <ago@gentoo.org> eselect-1.4.3.ebuild:
+  Stable for x86, wrt bug #529334
 
   22 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> eselect-1.4.3.ebuild:
   amd64 stable wrt bug #529334

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.130 2014/11/22 18:11:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.131 2014/11/25 08:39:40 ago Exp $
+
+  25 Nov 2014; Agostino Sarubbo <ago@gentoo.org> iputils-20121221-r1.ebuild:
+  Stable for x86, wrt bug #517720
 
   22 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> iputils-20121221-r1.ebuild:
   amd64 stable wrt bug #517720
