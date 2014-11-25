@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-musicbrainz-ngs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/ChangeLog,v 1.9 2013/10/20 19:21:53 sochotnicky Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/ChangeLog,v 1.10 2014/11/25 18:42:02 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  -python-musicbrainz-ngs-0.2.ebuild, -python-musicbrainz-ngs-0.3.ebuild,
+  python-musicbrainz-ngs-0.4.ebuild:
+  Support python 3.4
 
   20 Oct 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org> metadata.xml:
   Move to maintainer-needed

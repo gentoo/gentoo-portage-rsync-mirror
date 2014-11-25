@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.140 2014/10/11 12:39:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.141 2014/11/25 18:36:53 pacho Exp $
+
+  25 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gst-python-1.2.0.ebuild,
+  gst-python-1.2.1.ebuild:
+  Support python 3.4
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> gst-python-1.2.1.ebuild:
   arm stable, bug #512012

@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cdist/cdist-3.1.2.ebuild,v 1.1 2014/04/16 20:51:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cdist/cdist-3.1.2.ebuild,v 1.2 2014/11/25 18:46:07 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{3_2,3_3} )
+PYTHON_COMPAT=( python{3_2,3_3,3_4} )
 inherit distutils-r1
 
 DESCRIPTION="A usable configuration management system"
