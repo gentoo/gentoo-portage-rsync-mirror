@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/v4l-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/ChangeLog,v 1.41 2014/11/14 03:25:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/ChangeLog,v 1.42 2014/11/25 17:57:48 aballier Exp $
+
+*v4l-utils-1.6.2 (25 Nov 2014)
+
+  25 Nov 2014; Alexis Ballier <aballier@gentoo.org> +v4l-utils-1.6.2.ebuild:
+  version bump and fix automagic deps (bug #529322 by Nikoli)
 
 *v4l-utils-1.6.0 (14 Nov 2014)
 

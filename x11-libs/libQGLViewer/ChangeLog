@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libQGLViewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libQGLViewer/ChangeLog,v 1.4 2014/11/07 10:08:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libQGLViewer/ChangeLog,v 1.5 2014/11/25 17:42:50 aballier Exp $
+
+*libQGLViewer-2.6.0 (25 Nov 2014)
+
+  25 Nov 2014; Alexis Ballier <aballier@gentoo.org> +libQGLViewer-2.6.0.ebuild:
+  version bump
 
 *libQGLViewer-2.5.4 (07 Nov 2014)
 
