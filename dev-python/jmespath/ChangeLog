@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/jmespath
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jmespath/ChangeLog,v 1.1 2014/11/26 16:49:46 aballier Exp $
+
+*jmespath-0.5.0 (26 Nov 2014)
+
+  26 Nov 2014; Alexis Ballier <aballier@gentoo.org> +jmespath-0.5.0.ebuild,
+  +metadata.xml:
+  initial import, ebuild by me
+
