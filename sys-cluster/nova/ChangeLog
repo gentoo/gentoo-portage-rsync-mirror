@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.79 2014/11/21 00:18:17 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.80 2014/11/26 21:26:21 prometheanfire Exp $
+
+  26 Nov 2014; Matthew Thode <prometheanfire@gentoo.org> -nova-2014.1.3.ebuild,
+  -nova-2014.1.9999.ebuild:
+  removing old nova stuffs
 
   21 Nov 2014; Matthew Thode <prometheanfire@gentoo.org>
   nova-2014.2.9999.ebuild, nova-2014.2.ebuild:
