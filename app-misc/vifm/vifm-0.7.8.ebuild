@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.7.8.ebuild,v 1.1 2014/11/26 14:41:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.7.8.ebuild,v 1.2 2014/11/26 16:15:34 nimiux Exp $
 
 EAPI=5
 
-inherit base vim-doc
+inherit autotools eutils vim-doc
 
 DESCRIPTION="Console file manager with vi(m)-like keybindings"
 HOMEPAGE="http://vifm.sourceforge.net/"
@@ -27,7 +27,12 @@ RDEPEND="
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 "
 
-DOCS=( AUTHORS FAQ NEWS README TODO )
+DOCS="AUTHORS FAQ NEWS README TODO"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-fix-ncurses-tinfo.patch"
+	eautoreconf
+}
 
 src_configure() {
 	econf \
@@ -38,8 +43,13 @@ src_configure() {
 		$(use_with X X11)
 }
 
+src_compile() {
+	default
+}
+
 src_install() {
-	base_src_install
+	einstall
+	dodoc ${DOCS}
 
 	if use vim; then
 		local t

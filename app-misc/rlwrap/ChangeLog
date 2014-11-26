@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/rlwrap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.29 2014/11/02 11:08:43 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.30 2014/11/26 16:29:08 nimiux Exp $
+
+*rlwrap-0.42 (26 Nov 2014)
+
+  26 Nov 2014; Chema Alonso <nimiux@gentoo.org> +rlwrap-0.42.ebuild:
+  Bump to version 0.42. Bug #529606 by Hans Lub
 
 *rlwrap-0.41 (02 Nov 2014)
 

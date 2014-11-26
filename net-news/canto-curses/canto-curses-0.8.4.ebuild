@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/canto-curses/canto-curses-0.8.4.ebuild,v 1.1 2014/02/20 20:29:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/canto-curses/canto-curses-0.8.4.ebuild,v 1.2 2014/11/26 16:12:13 pacho Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{3_2,3_3} )
+PYTHON_COMPAT=( python{3_2,3_3,3_4} )
 PYTHON_REQ_USE="ncurses"
 inherit distutils-r1
 

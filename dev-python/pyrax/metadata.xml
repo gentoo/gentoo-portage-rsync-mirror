@@ -6,6 +6,10 @@
     <email>prometheanfire@gentoo.org</email>
     <name>Matthew Thode</name>
   </maintainer>
+  <maintainer>
+    <email>alunduil@gentoo.org</email>
+    <name>Alex Brandt</name>
+  </maintainer>
   <longdescription lang="en">
     Python SDK for OpenStack/Rackspace APIs
 	pyrax should work with most OpenStack-based cloud deployments,

@@ -1,10 +1,12 @@
 # ChangeLog for net-news/canto-curses
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/canto-curses/ChangeLog,v 1.1 2014/02/20 20:29:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/canto-curses/ChangeLog,v 1.2 2014/11/26 16:12:13 pacho Exp $
+
+  26 Nov 2014; Pacho Ramos <pacho@gentoo.org> canto-curses-0.8.4.ebuild:
+  Support python 3.4
 
 *canto-curses-0.8.4 (20 Feb 2014)
 
   20 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> +canto-curses-0.8.4.ebuild,
   +metadata.xml:
   Initial commit, wrt bug #462028
-

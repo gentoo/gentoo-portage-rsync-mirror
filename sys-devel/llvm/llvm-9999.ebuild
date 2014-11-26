@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.93 2014/11/10 20:37:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.94 2014/11/26 16:13:33 voyageur Exp $
 
 EAPI=5
 
@@ -304,9 +304,11 @@ multilib_src_compile() {
 	if use debug; then
 		pax-mark m Debug+Asserts+Checks/bin/llvm-rtdyld
 		pax-mark m Debug+Asserts+Checks/bin/lli
+		pax-mark m Debug+Asserts+Checks/bin/lli-child-target
 	else
 		pax-mark m Release/bin/llvm-rtdyld
 		pax-mark m Release/bin/lli
+		pax-mark m Release/bin/lli-child-target
 	fi
 }
 
