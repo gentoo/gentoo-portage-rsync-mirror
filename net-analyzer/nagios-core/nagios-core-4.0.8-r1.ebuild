@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-4.0.8.ebuild,v 1.1 2014/11/22 21:29:34 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-4.0.8-r1.ebuild,v 1.1 2014/11/26 14:31:54 mjo Exp $
 
 EAPI=5
 
@@ -9,7 +9,12 @@ inherit depend.apache eutils multilib toolchain-funcs user
 MY_P=${PN/-core}-${PV}
 DESCRIPTION="Nagios Core - Check daemon, CGIs, docs"
 HOMEPAGE="http://www.nagios.org/"
-SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
+
+# The name of the directory into which our Gentoo icons will be
+# extracted, and also the basename of the archive containing it.
+GENTOO_ICONS="${PN}-gentoo-icons-20141125"
+SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz
+	web? ( http://dev.gentoo.org/~mjo/distfiles/${GENTOO_ICONS}.tar )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -85,6 +90,13 @@ src_prepare(){
 	# Gentoo bug #388321.
 	#
 	epatch "${FILESDIR}"/use-INSTALL-to-install-themes.patch
+
+	# Upstream bug:
+	#
+	# http://tracker.nagios.org/view.php?id=534
+	#
+	# Gentoo bug #530640.
+	epatch "${FILESDIR}"/fix-bogus-perf-data-warnings.patch
 }
 
 src_configure() {
@@ -142,6 +154,14 @@ src_install() {
 			# This overwrites the already-installed exfoliation theme
 			emake DESTDIR="${D}" install-classicui
 		fi
+
+		# Install cute Gentoo icons (bug #388323), setting their
+		# owner, group, and mode to match those of the rest of Nagios's
+		# images.
+		insopts --group=nagios --owner=nagios --mode=0664
+		insinto /usr/share/nagios/htdocs/images/logos
+		doins "${WORKDIR}/${GENTOO_ICONS}"/*.*
+		insopts --mode=0644 # Back to the default...
 	fi
 
 	newinitd "${FILESDIR}"/nagios4 nagios
@@ -168,7 +188,8 @@ src_install() {
 			|| die "failed chown of ${D}/${dir}"
 	done
 
-	chown -R root:root "${D}/usr/$(get_libdir)/nagios"
+	chown -R root:root "${D}/usr/$(get_libdir)/nagios" \
+		|| die "failed chown of ${D}/usr/$(get_libdir)/nagios"
 
 	# The following two find...exec statements will die properly as long
 	# as chmod is only called once (that is, as long as the argument

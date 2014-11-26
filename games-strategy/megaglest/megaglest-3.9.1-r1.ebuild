@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.9.1-r1.ebuild,v 1.1 2014/09/16 22:13:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.9.1-r1.ebuild,v 1.2 2014/11/26 14:37:44 nimiux Exp $
 
 # google-breakpad
 # TODO: fribidi, libvorbis static
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/MegaGlest/megaglest-source/releases/download/${PV}/m
 
 LICENSE="GPL-3 BitstreamVera"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug +editor fribidi sse sse2 sse3 static +streflop +tools +unicode wxuniversal +model-viewer videos"
 
 RDEPEND="

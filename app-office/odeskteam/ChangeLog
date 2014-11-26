@@ -1,6 +1,11 @@
 # ChangeLog for app-office/odeskteam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/ChangeLog,v 1.13 2014/11/04 12:43:07 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/ChangeLog,v 1.14 2014/11/26 14:49:57 titanofold Exp $
+
+  26 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  odeskteam-3.12.9.ebuild:
+  Allow either dev-qt/qtphonon or media-libs/phonon to satisfy a
+  dependency. Fixes b.g.o bug 530102.
 
 *odeskteam-3.12.9 (04 Nov 2014)
 
