@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.10 2014/10/08 17:25:46 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.11 2014/11/26 00:34:41 grknight Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -205,10 +205,19 @@ if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then
 	mysql_version_is_at_least "10.0.5" && IUSE="${IUSE} odbc xml" && \
 		REQUIRED_USE="odbc? ( extraengine !minimal ) xml? ( extraengine !minimal )"
 	REQUIRED_USE="${REQUIRED_USE} minimal? ( !oqgraph !sphinx ) tokudb? ( jemalloc )"
+
+	# MariaDB 10.1 introduces InnoDB/XtraDB compression with external libraries
+	# Choices are bzip2, lz4, lzma, lzo.  bzip2 and lzma enabled by default as they are system libraries
+	mysql_version_is_at_least "10.1.1" && IUSE="${IUSE} innodb-lz4 innodb-lzo"
 fi
 
-if [[ ${PN} == "mariadb-galera" ]]; then
-	IUSE="${IUSE} +sst-rsync sst-xtrabackup"
+if [[ -n "${WSREP_REVISION}" ]]; then
+	if [[ ${PN} == "mariadb" ]]; then
+		IUSE="${IUSE} galera sst-rsync sst-xtrabackup"
+		REQUIRED_USE="${REQUIRED_USE} sst-rsync? ( galera ) sst-xtrabackup? ( galera )"
+	else
+		IUSE="${IUSE} +sst-rsync sst-xtrabackup"
+	fi
 fi
 
 if [[ ${PN} == "percona-server" ]]; then
@@ -273,7 +282,12 @@ if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 			"
 	fi
 	mysql_version_is_at_least "10.0.7" && DEPEND="${DEPEND} oqgraph? ( dev-libs/judy:0= )"
-	mysql_version_is_at_least "10.0.9" && DEPEND="${DEPEND} >=dev-libs/libpcre-8.35:3="
+	mysql_version_is_at_least "10.0.9" && DEPEND="${DEPEND} >=dev-libs/libpcre-8.35:3=[${MULTILIB_USEDEP}]"
+
+	mysql_version_is_at_least "10.1.1" && DEPEND="${DEPEND}
+		innodb-lz4? ( app-arch/lz4 )
+		innodb-lzo? ( dev-libs/lzo )
+		"
 fi
 
 [[ ${PN} == "percona-server" ]] && DEPEND="${DEPEND} !minimal? ( pam? ( virtual/pam:0= ) )"
@@ -308,18 +322,23 @@ if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 		virtual/perl-Time-HiRes ) "
 fi
 
-if [[ ${PN} == "mariadb-galera" ]] ; then
+if [[ -n "${WSREP_REVISION}" ]] ; then
 	# The wsrep API version must match between the ebuild and sys-cluster/galera.
 	# This will be indicated by WSREP_REVISION in the ebuild and the first number
 	# in the version of sys-cluster/galera
 	#
 	# lsof is required as of 5.5.38 and 10.0.11 for the rsync sst
-	RDEPEND="${RDEPEND}
-		sys-apps/iproute2
+
+	GALERA_RDEPEND="sys-apps/iproute2
 		=sys-cluster/galera-${WSREP_REVISION}*
+		"
+	if [[ ${PN} == "mariadb" ]]; then
+		GALERA_RDEPEND="galera? ( ${GALERA_RDEPEND} )"
+	fi
+	RDEPEND="${RDEPEND} ${GALERA_RDEPEND}
 		sst-rsync? ( sys-process/lsof )
 		sst-xtrabackup? (
-			dev-db/xtrabackup-bin
+			>=dev-db/xtrabackup-bin-2.2.4
 			net-misc/socat[ssl]
 		)
 	"
@@ -344,6 +363,9 @@ PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )
 
 # my_config.h includes ABI specific data
 MULTILIB_WRAPPED_HEADERS=( /usr/include/mysql/my_config.h /usr/include/mysql/private/embedded_priv.h )
+
+[[ ${PN} == "mariadb" ]] && mysql_version_is_at_least "10.1.1" && \
+	MULTILIB_WRAPPED_HEADERS+=( /usr/include/mysql/mysql_version.h )
 
 # wrap the config script
 MULTILIB_CHOST_TOOLS=( /usr/bin/mysql_config )
@@ -393,7 +415,8 @@ mysql-multilib_pkg_setup() {
 		mysql_version_is_at_least "7.2.9" && java-pkg-opt-2_pkg_setup
 	fi
 
-	if use_if_iuse tokudb && [[ $(gcc-major-version) -lt 4 || $(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 7 ]] ; then
+	if use_if_iuse tokudb && [[ "${MERGE_TYPE}" != "binary" && $(gcc-major-version) -lt 4 || \
+		$(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 7 ]] ; then
 		eerror "${PN} with tokudb needs to be built with gcc-4.7 or later."
 		eerror "Please use gcc-config to switch to gcc-4.7 or later version."
 		die
@@ -470,11 +493,18 @@ multilib_src_configure() {
 		-DWITHOUT_LIBWRAP=1
 		-DENABLED_LOCAL_INFILE=1
 		-DMYSQL_UNIX_ADDR=${EPREFIX}/var/run/mysqld/mysqld.sock
+		-DINSTALL_UNIX_ADDRDIR=${EPREFIX}/var/run/mysqld/mysqld.sock
 		-DWITH_SSL=$(usex ssl system bundled)
 		-DWITH_DEFAULT_COMPILER_OPTIONS=0
 		-DWITH_DEFAULT_FEATURE_SET=0
-		$(cmake-utils_use_enable systemtap DTRACE)
 	)
+
+	# systemtap only works on native ABI  bug 530132
+	if multilib_is_native_abi; then
+		mycmakeargs+=( $(cmake-utils_use_enable systemtap DTRACE) )
+	else
+		mycmakeargs+=( -DENABLE_DTRACE=0 )
+	fi
 
 	if in_iuse bindist ; then
 		mycmakeargs+=(

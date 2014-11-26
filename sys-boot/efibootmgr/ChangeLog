@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/efibootmgr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.30 2014/10/08 21:00:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.31 2014/11/26 00:45:38 floppym Exp $
+
+*efibootmgr-0.11.0 (26 Nov 2014)
+
+  26 Nov 2014; Mike Gilbert <floppym@gentoo.org> +efibootmgr-0.11.0.ebuild,
+  metadata.xml:
+  Version bump, bug 510070. Thanks to Yannick Schaeffer.
 
   08 Oct 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Change maintainers as discussed with them

@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1445 2014/11/24 01:39:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1446 2014/11/26 00:34:41 grknight Exp $
+
+  26 Nov 2014; Brian Evans <grknight@gentoo.org> musql-cmake.eclass,
+  mysql-multilib.eclass:
+  Sync from mysql overlay
 
   24 Nov 2014; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass:
   eqawarn about /usr/lib/pypy/share instead of dying.

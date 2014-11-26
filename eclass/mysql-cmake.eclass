@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.25 2014/10/08 17:25:46 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.26 2014/11/26 00:34:41 grknight Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -179,7 +179,6 @@ configure_cmake_standard() {
 		-DWITH_MYISAMMRG_STORAGE_ENGINE=1
 		-DWITH_MYISAM_STORAGE_ENGINE=1
 		-DWITH_PARTITION_STORAGE_ENGINE=1
-		$(cmake-utils_use_with extraengine FEDERATED_STORAGE_ENGINE)
 	)
 
 	if in_iuse pbxt ; then
@@ -187,10 +186,19 @@ configure_cmake_standard() {
 	fi
 
 	if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then
+
+		# Federated{,X} must be treated special otherwise they will not be built as plugins
+		if ! use extraengine ; then
+			mycmakeargs+=(
+				-DWITHOUT_FEDERATED_STORAGE_ENGINE=1
+				-DPLUGIN_FEDERATED=0
+				-DWITHOUT_FEDERATEDX_STORAGE_ENGINE=1
+				-DPLUGIN_FEDERATEDX=0 )
+		fi
+
 		mycmakeargs+=(
 			$(mysql-cmake_use_plugin oqgraph OQGRAPH)
 			$(mysql-cmake_use_plugin sphinx SPHINX)
-			$(mysql-cmake_use_plugin extraengine FEDERATEDX)
 			$(mysql-cmake_use_plugin tokudb TOKUDB)
 			$(mysql-cmake_use_plugin pam AUTH_PAM)
 		)
@@ -209,6 +217,23 @@ configure_cmake_standard() {
 				$(cmake-utils_use odbc CONNECT_WITH_ODBC)
 			)
 		fi
+
+		if in_iuse mroonga ; then
+			use mroonga || mycmakeargs+=( -DWITHOUT_MROONGA=1 )
+		else
+			mycmakeargs+=( -DWITHOUT_MROONGA=1 )
+		fi
+
+		if in_iuse galera ; then
+			mycmakeargs+=( $(cmake-utils_use_with galera WSREP) )
+		fi
+
+		if mysql_version_is_at_least "10.1.1" ; then
+			mycmakeargs+=(  $(cmake-utils_use_with innodb-lz4 INNODB_LZ4)
+					$(cmake-utils_use_with innodb-lzo INNODB_LZO) )
+		fi
+	else
+		mycmakeargs+=( $(cmake-utils_use_with extraengine FEDERATED_STORAGE_ENGINE) )
 	fi
 
 	if [[ ${PN} == "percona-server" ]]; then
@@ -273,6 +298,12 @@ mysql-cmake_src_prepare() {
 		rm -f "${S}/storage/tokudb/ft-index/cmake_modules/TokuThirdParty.cmake"
 		touch "${S}/storage/tokudb/ft-index/cmake_modules/TokuThirdParty.cmake"
 		sed -i 's/ build_lzma//' "${S}/storage/tokudb/ft-index/ft/CMakeLists.txt" || die
+	fi
+
+	# Remove the bundled groonga if it exists
+	# There is no CMake flag, it simply checks for existance
+	if [[ -d "${S}"/storage/mroonga/vendor/groonga ]] ; then
+		rm -r "${S}"/storage/mroonga/vendor/groonga || die "could not remove packaged groonga"
 	fi
 
 	epatch_user

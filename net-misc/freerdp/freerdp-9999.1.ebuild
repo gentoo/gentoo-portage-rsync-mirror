@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.21 2014/11/26 00:04:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.22 2014/11/26 01:00:24 floppym Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.freerdp.com/"
 
 LICENSE="Apache-2.0"
 SLOT="0/1.2"
-IUSE="alsa +client cups debug directfb doc ffmpeg gstreamer jpeg
+IUSE="alsa +client cups debug doc ffmpeg gstreamer jpeg
 	pulseaudio server smartcard sse2 test usb X xinerama xv"
 
 RDEPEND="
