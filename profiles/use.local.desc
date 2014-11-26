@@ -931,6 +931,7 @@ app-misc/tracker:playlist - Add support for playlists
 app-misc/tracker:thunderbird - Install email data miner plugin for mail-client/thunderbird and mail-client/thunderbird-bin
 app-misc/tracker:xps - Add support for XPS file format through app-text/libgxps.
 app-misc/unfoo:minimal - Do not install all support archive binaries
+app-misc/vifm:X - Add support for X11
 app-misc/vifm:compatibility - Compatibility with previous versions of vifm
 app-misc/vifm:developer - Enable features of interest to developers
 app-misc/vifm:extended-keys - Support for extended keys (arrows, home etc)
@@ -938,6 +939,7 @@ app-misc/vifm:gtk - Use gtk+ to determine mimetypes
 app-misc/vifm:magic - Use libmagic to determine mimetypes
 app-misc/vifm:vim - Install the vifm vim plugin and vim-compatible documentation
 app-misc/vifm:vim-plugin - Install the vifm vim plugin
+app-misc/vifm:vim-syntax - Pulls in related vim syntax scripts
 app-misc/worker:avfs - Enable support for sys-fs/avfs
 app-misc/worker:magic - Add magic file support from sys-apps/file to automatically detect file types
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
