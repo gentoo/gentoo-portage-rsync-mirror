@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.40 2014/10/06 05:51:40 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.41 2014/11/26 02:44:19 gienah Exp $
+
+  26 Nov 2014; Mark Wright <gienah@gentoo.org> scala-2.11.2.ebuild:
+  Thanks to zmedico for fixing and reporting Bug 530510 - dev-lang/scala-2.11.2:
+  library API docs are not built when USE=doc is enabled.
 
   06 Oct 2014; Mark Wright <gienah@gentoo.org> scala-2.11.1.ebuild,
   scala-2.11.2.ebuild:

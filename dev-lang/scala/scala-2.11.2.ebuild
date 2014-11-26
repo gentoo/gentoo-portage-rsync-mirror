@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.11.2.ebuild,v 1.2 2014/10/06 05:51:40 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.11.2.ebuild,v 1.3 2014/11/26 02:44:19 gienah Exp $
 
 EAPI="5"
 
@@ -163,6 +163,8 @@ src_compile() {
 			# java.lang.OutOfMemoryError: PermGen space
 			eant -Djavac.args="-encoding UTF-8" -Duser.home="${WORKDIR}" \
 				docscomp
+			eant -Djavac.args="-encoding UTF-8" -Duser.home="${WORKDIR}" \
+				docs
 		fi
 	else
 		einfo "Skipping compilation, USE=binary is set."
@@ -207,9 +209,9 @@ src_install() {
 	fi
 	popd
 
-	local docdir="build/scaladoc/compiler"
+	local docdir="build/scaladoc"
 	dodoc docs/TODO doc/README
 	if use doc; then
-		dohtml -r "${docdir}"
+		dohtml -r "${docdir}"/{compiler,library}
 	fi
 }
