@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-	<email>pinkbyte@gentoo.org</email>
-	<name>Sergey Popov</name>
-</maintainer>
-<maintainer>
-	<email>chainsaw@gentoo.org</email>
-	<name>Tony Vroon</name>
-</maintainer>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>aaron@flappyport.com</email>
+		<name>Aaron Bauman</name>
+		<description>Proxied maintainer. Assign bugs to him</description>
+	</maintainer>
+	<maintainer>
+		<email>pinkbyte@gentoo.org</email>
+		<name>Sergey Popov</name>
+		<description>Proxy maintainer. CC him on bugs</description>
+	</maintainer>
 </pkgmetadata>
