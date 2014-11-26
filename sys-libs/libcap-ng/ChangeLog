@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.68 2014/11/25 07:39:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.69 2014/11/26 10:39:38 ago Exp $
+
+  26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> libcap-ng-0.7.4.ebuild:
+  Stable for amd64, wrt bug #529542
 
   25 Nov 2014; Ian Delaney <idella4@gentoo.org> libcap-ng-0.7.4.ebuild:
   clean old python impls

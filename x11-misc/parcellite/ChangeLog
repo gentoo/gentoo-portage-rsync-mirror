@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/parcellite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.38 2014/10/04 07:55:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.39 2014/11/26 10:40:39 ago Exp $
+
+  26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> parcellite-1.1.9.ebuild:
+  Stable for amd64, wrt bug #529848
 
 *parcellite-1.1.9 (04 Oct 2014)
 

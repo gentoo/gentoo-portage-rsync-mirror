@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.184 2014/11/24 23:49:43 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.185 2014/11/26 10:39:53 ago Exp $
+
+  26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> portpeek-2.1.16.ebuild:
+  Stable for amd64, wrt bug #530050
 
   24 Nov 2014; Mike Pagano <mpagano@gentoo.org> portpeek-2.1.16.ebuild:
   Added python-3.4 to PYTHON_COMPAT. See bug #530376 .

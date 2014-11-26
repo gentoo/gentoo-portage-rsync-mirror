@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/gunicorn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.38 2014/11/25 00:35:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.39 2014/11/26 10:40:54 ago Exp $
+
+  26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> gunicorn-19.1.1.ebuild:
+  Stable for amd64, wrt bug #530502
 
   25 Nov 2014; Ian Delaney <idella4@gentoo.org> -gunicorn-0.17.2.ebuild,
   -gunicorn-18.0-r1.ebuild, -gunicorn-18.0.ebuild, gunicorn-19.0.0.ebuild,

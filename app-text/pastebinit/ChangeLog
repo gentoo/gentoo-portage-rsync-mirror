@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pastebinit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pastebinit/ChangeLog,v 1.8 2014/03/22 18:14:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pastebinit/ChangeLog,v 1.9 2014/11/26 10:58:49 pacho Exp $
+
+  26 Nov 2014; Pacho Ramos <pacho@gentoo.org> pastebinit-1.4.1.ebuild:
+  Support python 3.4
 
   22 Mar 2014; Christoph Mende <angelos@gentoo.org> pastebinit-1.4.1.ebuild:
   Add missing REQUIRED_USE for python

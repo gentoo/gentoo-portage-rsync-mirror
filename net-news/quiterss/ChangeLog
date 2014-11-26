@@ -1,6 +1,9 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.49 2014/11/16 20:19:17 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.50 2014/11/26 10:41:49 ago Exp $
+
+  26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> quiterss-0.16.2.ebuild:
+  Stable for amd64, wrt bug #529526
 
 *quiterss-0.17.1 (16 Nov 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/skoosh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/skoosh/ChangeLog,v 1.10 2014/11/21 08:58:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/skoosh/ChangeLog,v 1.11 2014/11/26 10:41:24 ago Exp $
+
+  26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> skoosh-2.5.0-r1.ebuild:
+  Stable for amd64, wrt bug #530020
 
 *skoosh-2.5.0-r1 (21 Nov 2014)
 

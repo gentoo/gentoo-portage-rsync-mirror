@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/pology
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/ChangeLog,v 1.8 2014/10/24 18:18:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/ChangeLog,v 1.9 2014/11/26 10:41:54 ago Exp $
+
+  26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pology-0.11-r1.ebuild:
+  Stable for amd64, wrt bug #529402
 
   24 Oct 2014; Michał Górny <mgorny@gentoo.org> pology-0.11-r1.ebuild,
   pology-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/gnome-mastermind-0.3.1-r1.ebuild,v 1.1 2014/11/22 16:17:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/gnome-mastermind-0.3.1-r1.ebuild,v 1.2 2014/11/26 10:40:59 ago Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ SRC_URI="http://download.gna.org/gnome-mastermind/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~x86"
 IUSE=""
 
 RDEPEND="

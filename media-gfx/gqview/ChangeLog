@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gqview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.103 2014/10/27 16:36:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.104 2014/11/26 10:41:04 ago Exp $
+
+  26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> gqview-2.1.5-r1.ebuild:
+  Stable for amd64, wrt bug #529166
 
 *gqview-2.1.5-r1 (27 Oct 2014)
 

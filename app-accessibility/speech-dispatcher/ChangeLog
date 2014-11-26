@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.105 2014/11/23 17:23:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.106 2014/11/26 10:40:49 ago Exp $
+
+  26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> speech-dispatcher-0.8.1.ebuild:
+  Stable for amd64, wrt bug #529092
 
   23 Nov 2014; Mike Gilbert <floppym@gentoo.org>
   speech-dispatcher-0.8-r2.ebuild:
