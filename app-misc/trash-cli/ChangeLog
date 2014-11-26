@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/trash-cli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/ChangeLog,v 1.19 2014/11/25 22:39:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/ChangeLog,v 1.20 2014/11/26 09:19:58 dlan Exp $
+
+  26 Nov 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
+  udpate meatadata.xml, add Alex Xu as maintainer
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

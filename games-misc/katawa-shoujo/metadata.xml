@@ -8,6 +8,11 @@
 		<name>Maks Verver</name>
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
+	<maintainer>
+		<email>alex_y_xu@yahoo.ca</email>
+		<name>Alex Xu</name>
+		<description>Proxied maintainer</description>
+	</maintainer>
 	<use>
 		<flag name="system-renpy">Use <pkg>games-engines/renpy</pkg> instead of the bundled one (experimental)</flag>
 	</use>

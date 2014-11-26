@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.148 2014/11/24 12:10:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.149 2014/11/26 09:04:04 jer Exp $
+
+  26 Nov 2014; Jeroen Roovers <jer@gentoo.org> fail2ban-0.9.1.ebuild:
+  Stable for HPPA (bug #530346).
 
   24 Nov 2014; Jeroen Roovers <jer@gentoo.org> fail2ban-99999999.ebuild:
   Update live ebuild to 0.9.1 standard.

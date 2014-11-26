@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/katawa-shoujo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/ChangeLog,v 1.12 2014/11/25 23:13:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/ChangeLog,v 1.13 2014/11/26 09:23:42 dlan Exp $
+
+  26 Nov 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
+  udpate meatadata.xml, add Alex Xu as maintainer
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
