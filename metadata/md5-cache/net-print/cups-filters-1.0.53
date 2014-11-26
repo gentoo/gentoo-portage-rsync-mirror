@@ -10,4 +10,4 @@ RDEPEND=>=app-text/ghostscript-gpl-9.09 app-text/poppler:=[cxx,jpeg?,lcms,tiff?,
 SLOT=0
 SRC_URI=http://www.openprinting.org/download/cups-filters/cups-filters-1.0.53.tar.xz
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	ab36305de1a9fa8909c94f3f1e78eb62	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=42a2457af1a04a3fad6416f03bc7eea2
+_md5_=1b88037819d00e248dedfe70e1b59829

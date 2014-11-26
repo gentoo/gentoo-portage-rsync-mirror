@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.111 2014/11/22 18:33:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.112 2014/11/26 00:09:28 dilfridge Exp $
+
+  26 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> ming-0.4.4-r1.ebuild,
+  ming-0.4.5.ebuild:
+  Remove call to perl-module_pkg_postinst, does not do anything outside
+  perl-core
 
   22 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> ming-0.4.4-r1.ebuild,
   ming-0.4.5.ebuild:

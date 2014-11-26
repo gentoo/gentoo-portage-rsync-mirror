@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.2.0_beta1_pre20141115.ebuild,v 1.1 2014/11/17 05:12:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.2.0_beta1_pre20141115.ebuild,v 1.2 2014/11/26 00:04:20 floppym Exp $
 
 EAPI="5"
 
@@ -46,7 +46,6 @@ RDEPEND="
 			xv? ( x11-libs/libXv )
 		)
 	)
-	directfb? ( dev-libs/DirectFB )
 	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? (
 		media-libs/gstreamer:1.0
@@ -87,7 +86,6 @@ src_configure() {
 		$(cmake-utils_use_with cups CUPS)
 		$(cmake-utils_use_with debug DEBUG_ALL)
 		$(cmake-utils_use_with doc MANPAGES)
-		$(cmake-utils_use_with directfb DIRECTFB)
 		$(cmake-utils_use_with ffmpeg FFMPEG)
 		$(cmake-utils_use_with gstreamer GSTREAMER_1_0)
 		$(cmake-utils_use_with jpeg JPEG)

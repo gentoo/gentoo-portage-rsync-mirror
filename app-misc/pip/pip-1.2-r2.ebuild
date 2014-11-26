@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/pip-1.2-r2.ebuild,v 1.1 2014/11/02 13:43:04 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/pip-1.2-r2.ebuild,v 1.2 2014/11/26 00:06:08 dilfridge Exp $
 
 EAPI=5
 
@@ -21,6 +21,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	perl-module_pkg_postinst
 	ewarn "To avoid collisions with dev-python/pip executable file of this package was renamed to 'gpip'"
 }

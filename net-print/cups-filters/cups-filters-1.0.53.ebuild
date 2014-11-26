@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.53.ebuild,v 1.13 2014/11/16 20:53:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.53.ebuild,v 1.14 2014/11/26 00:11:11 dilfridge Exp $
 
 EAPI=5
 
@@ -116,8 +116,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	perl-module_pkg_postinst
-
 	elog "This version of cups-filters includes cups-browsed, a daemon that autodiscovers"
 	elog "remote queues via avahi or cups-1.5 browsing protocol and adds them to your cups"
 	elog "configuration. You may want to add it to your default runlevel."

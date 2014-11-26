@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.132 2014/11/16 20:53:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.133 2014/11/26 00:11:11 dilfridge Exp $
+
+  26 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.53.ebuild, cups-filters-1.0.54.ebuild,
+  cups-filters-1.0.61.ebuild, cups-filters-9999.ebuild:
+  Remove call to perl-module_pkg_postinst, does not do anything outside
+  perl-core
 
   16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   cups-filters-1.0.53.ebuild, cups-filters-1.0.54.ebuild:

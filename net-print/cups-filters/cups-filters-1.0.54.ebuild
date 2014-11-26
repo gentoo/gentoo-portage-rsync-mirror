@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.54.ebuild,v 1.4 2014/11/16 20:53:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.54.ebuild,v 1.5 2014/11/26 00:11:11 dilfridge Exp $
 
 EAPI=5
 
@@ -112,8 +112,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	perl-module_pkg_postinst
-
 	if ! use foomatic ; then
 		ewarn "You are disabling the foomatic code in cups-filters. Please do that ONLY if absolutely."
 		ewarn "necessary. net-print/foomatic-filters as replacement is deprecated and unmaintained."

@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.52 2014/11/22 18:32:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.53 2014/11/26 00:08:10 dilfridge Exp $
+
+  26 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  mapserver-6.0.1-r1.ebuild:
+  Remove call to perl-module_pkg_postinst
 
   22 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   mapserver-6.0.1-r1.ebuild:
