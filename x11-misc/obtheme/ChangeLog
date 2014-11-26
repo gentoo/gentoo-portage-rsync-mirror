@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obtheme
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obtheme/ChangeLog,v 1.6 2014/08/10 17:38:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obtheme/ChangeLog,v 1.7 2014/11/25 23:28:33 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> obtheme-2013.2.20.2.ebuild:
   Stable for x86, wrt bug #518220

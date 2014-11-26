@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wargus-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus-data/ChangeLog,v 1.7 2014/01/22 04:57:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus-data/ChangeLog,v 1.8 2014/11/25 23:22:50 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   22 Jan 2014; Michael Sterrett <mr_bones_@gentoo.org> wargus-data-0.ebuild:
   stable for amd64

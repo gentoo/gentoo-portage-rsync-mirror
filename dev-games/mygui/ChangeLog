@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/mygui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mygui/ChangeLog,v 1.7 2014/08/24 18:01:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mygui/ChangeLog,v 1.8 2014/11/25 23:02:25 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
 *mygui-3.2.1 (24 Aug 2014)
 

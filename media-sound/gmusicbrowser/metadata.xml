@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sound</herd>
-  <maintainer>
-    <email>hasufell@gentoo.org</email>
-    <name>Julian Ospald</name>
-    <description>hasufell at Freenode</description>
-  </maintainer>
 </pkgmetadata>

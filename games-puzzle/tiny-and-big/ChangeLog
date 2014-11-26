@@ -1,10 +1,12 @@
 # ChangeLog for games-puzzle/tiny-and-big
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tiny-and-big/ChangeLog,v 1.1 2013/07/16 20:00:39 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tiny-and-big/ChangeLog,v 1.2 2014/11/25 23:15:38 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
 *tiny-and-big-1.4.1 (16 Jul 2013)
 
   16 Jul 2013; Julian Ospald <hasufell@gentoo.org> +tiny-and-big-1.4.1.ebuild,
   +metadata.xml:
   initial import
-

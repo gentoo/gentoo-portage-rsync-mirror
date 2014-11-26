@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>games</herd>
-	<maintainer>
-		<email>hasufell@gentoo.org</email>
-		<name>Julian Ospald</name>
-	</maintainer>
 	<longdescription lang="en">
 		Dust Racing (Dustrac) is a tile-based, cross-platform 2D racing
 		game written in Qt (C++) and OpenGL. Dust Racing comes with a

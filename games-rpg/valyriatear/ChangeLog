@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/valyriatear
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/ChangeLog,v 1.13 2014/09/06 15:03:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/ChangeLog,v 1.14 2014/11/25 23:20:08 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
 *valyriatear-1.0.0 (06 Sep 2014)
 

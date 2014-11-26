@@ -1,6 +1,9 @@
 # ChangeLog for games-action/trine2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/ChangeLog,v 1.7 2014/06/25 13:46:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/ChangeLog,v 1.8 2014/11/25 23:05:49 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   25 Jun 2014; Michał Górny <mgorny@gentoo.org> trine2-1.16.ebuild:
   Update multilib dependencies to use the lowest known EAPI 5 or multilib

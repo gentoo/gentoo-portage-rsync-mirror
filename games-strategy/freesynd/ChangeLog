@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freesynd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freesynd/ChangeLog,v 1.3 2014/05/15 17:04:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freesynd/ChangeLog,v 1.4 2014/11/25 23:21:05 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> freesynd-0.7.ebuild,
   freesynd-0.7.1.ebuild:
@@ -18,4 +21,3 @@
   10 Mar 2013; Julian Ospald <hasufell@gentoo.org> +freesynd-0.7.ebuild,
   +files/freesynd-0.7-cmake.patch, +metadata.xml:
   initial import wrt #159251
-

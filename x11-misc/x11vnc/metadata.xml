@@ -3,11 +3,6 @@
 <pkgmetadata>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>hasufell@gentoo.org</email>
-		<name>Julian Ospald</name>
-		<description>Maintainer, assign bugs to him</description>
-	</maintainer>
-	<maintainer>
 		<email>alex_y_xu@yahoo.ca</email>
 		<name>Alex Xu</name>
 		<description>Proxy maintainer. CC him on bugs</description>

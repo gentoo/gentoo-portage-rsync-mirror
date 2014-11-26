@@ -1,6 +1,9 @@
 # ChangeLog for games-board/cockatrice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/ChangeLog,v 1.6 2014/03/01 22:24:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/ChangeLog,v 1.7 2014/11/25 23:08:51 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> cockatrice-20120702.ebuild:
   Update libgcrypt dep to use slot :0.

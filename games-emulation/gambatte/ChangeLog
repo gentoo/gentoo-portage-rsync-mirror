@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gambatte
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gambatte/ChangeLog,v 1.8 2014/08/29 10:03:19 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gambatte/ChangeLog,v 1.9 2014/11/25 23:09:32 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   29 Aug 2014; Chema Alonso <nimiux@gentoo.org>
   gambatte-0.5.0_p20131102.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/manaplus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/manaplus/ChangeLog,v 1.14 2014/08/10 17:39:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/manaplus/ChangeLog,v 1.15 2014/11/25 23:18:26 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> manaplus-1.3.9.29.ebuild:
   Stable for x86, wrt bug #518228

@@ -4,11 +4,6 @@
 	<herd>games</herd>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>hasufell@gentoo.org</email>
-		<name>Julian Ospald</name>
-		<description>Maintainer. Assign bugs to him</description>
-	</maintainer>
-	<maintainer>
 		<email>maksverver@geocities.com</email>
 		<name>Maks Verver</name>
 		<description>Proxy maintainer. CC him on bugs</description>

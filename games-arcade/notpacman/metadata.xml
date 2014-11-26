@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>games</herd>
-	<maintainer>
-		<email>hasufell@gentoo.org</email>
-		<name>Julian Ospald</name>
-	</maintainer>
 	<longdescription lang="en">
 		Ever wondered how Pacman would be like with physics? No? Well, it's
 		revolutionary. This mashup of "Not" and "Pacman" puts The Pac and

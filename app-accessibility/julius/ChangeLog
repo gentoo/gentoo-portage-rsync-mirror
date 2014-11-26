@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/julius
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/julius/ChangeLog,v 1.4 2013/06/27 18:20:42 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/julius/ChangeLog,v 1.5 2014/11/25 23:01:21 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> julius-4.2.2.ebuild:
   Stable for x86, wrt bug #474436

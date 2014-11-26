@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>games</herd>
-	<maintainer>
-		<email>hasufell@gentoo.org</email>
-		<name>Julian Ospald</name>
-		<description>Maintainer, assign bugs to him</description>
-	</maintainer>
 	<upstream>
 		<maintainer status="active">
                 <email>altren@list.ru</email>

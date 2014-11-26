@@ -1,6 +1,9 @@
 # ChangeLog for games-action/brutal-legend
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/brutal-legend/ChangeLog,v 1.5 2014/11/12 22:00:55 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/brutal-legend/ChangeLog,v 1.6 2014/11/25 23:03:20 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
 *brutal-legend-20130615-r1 (12 Nov 2014)
 

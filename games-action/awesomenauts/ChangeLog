@@ -1,6 +1,9 @@
 # ChangeLog for games-action/awesomenauts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/awesomenauts/ChangeLog,v 1.3 2014/06/25 13:46:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/awesomenauts/ChangeLog,v 1.4 2014/11/25 23:02:58 hasufell Exp $
+
+  25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  drop maintainership
 
   25 Jun 2014; Michał Górny <mgorny@gentoo.org> awesomenauts-2013.5.21.3.ebuild:
   Update multilib dependencies to use the lowest known EAPI 5 or multilib
