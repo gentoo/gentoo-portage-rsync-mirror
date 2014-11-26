@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.6-r1.ebuild,v 1.2 2014/11/16 04:06:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.6-r1.ebuild,v 1.3 2014/11/26 18:26:53 pesa Exp $
 
 EAPI=5
 
@@ -52,8 +52,8 @@ src_unpack() {
 	# compat version
 	# http://blog.qt.digia.com/blog/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
 	if use compat; then
-		mv "${WORKDIR}"/qt-assistant-qassistantclient-library-compat-version-4.6.3 \
-			"${S}"/tools/assistant/compat || die
+		mv "${WORKDIR}"/qt-assistant-qassistantclient-library-compat-version-4.6.3 "${S}"/tools/assistant/compat || die
+		mv "${WORKDIR}"/QtAssistant "${S}"/include || die
 	fi
 }
 
@@ -78,7 +78,7 @@ multilib_src_configure() {
 
 	if use compat; then
 		# syncqt knows nothing about these headers (bug 529398)
-		cp -pr "${WORKDIR}"/QtAssistant "${BUILD_DIR}"/include || die
+		cp -pr "${S}"/include/QtAssistant "${BUILD_DIR}"/include || die
 	fi
 }
 
