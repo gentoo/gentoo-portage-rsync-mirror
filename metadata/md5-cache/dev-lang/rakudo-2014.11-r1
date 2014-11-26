@@ -10,4 +10,4 @@ RDEPEND=parrot? ( >=dev-lang/parrot-6.7.0:=[unicode] ) >=dev-lang/nqp-2014.11[pa
 SLOT=0
 SRC_URI=http://rakudo.org/downloads/rakudo/rakudo-2014.11.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=3ebb2ae0fbdb42324fd667f8a6148a67
+_md5_=52e6513fea08c1439ab2ab4d9aa4c49b

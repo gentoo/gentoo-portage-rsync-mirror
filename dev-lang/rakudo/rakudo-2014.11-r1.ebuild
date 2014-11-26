@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2014.11-r1.ebuild,v 1.1 2014/11/25 04:47:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2014.11-r1.ebuild,v 1.2 2014/11/26 10:10:45 patrick Exp $
 
 EAPI=5
 
@@ -33,7 +33,9 @@ src_configure() {
 	perl Configure.pl --backends=${myconf} --prefix=/usr || die
 
 	# why doesn't ops2c get detected?! :(
-	use parrot && sed -i -e 's~OPS2C            = $(PARROT_BIN_DIR)/$(EXE)~OPS2C            = $(PARROT_BIN_DIR)/ops2c~' Makefile || die
+	if use parrot; then
+		 sed -i -e 's~OPS2C            = $(PARROT_BIN_DIR)/$(EXE)~OPS2C            = $(PARROT_BIN_DIR)/ops2c~' Makefile || die
+	fi
 }
 
 src_test() {
