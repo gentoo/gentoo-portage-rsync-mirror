@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/watchdog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/watchdog/ChangeLog,v 1.7 2014/11/22 09:48:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/watchdog/ChangeLog,v 1.8 2014/11/26 11:18:44 idella4 Exp $
+
+  26 Nov 2014; Ian Delaney <idella4@gentoo.org> watchdog-0.8.1.ebuild:
+  drop py3.2
 
 *watchdog-0.8.2 (22 Nov 2014)
 

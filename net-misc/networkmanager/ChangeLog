@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.211 2014/11/01 15:50:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.212 2014/11/26 11:11:16 pacho Exp $
+
+  26 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  networkmanager-0.9.10.1_pre20141101.ebuild:
+  Update warning as it's now not systemd specific and having 'ifnet' is no
+  longer fatal
 
 *networkmanager-0.9.10.1_pre20141101 (01 Nov 2014)
 

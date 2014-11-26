@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pelican
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.21 2014/11/16 15:15:02 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.22 2014/11/26 11:03:21 pacho Exp $
+
+  26 Nov 2014; Pacho Ramos <pacho@gentoo.org> pelican-3.5.0.ebuild:
+  Support python 3.4
 
   16 Nov 2014; Dirkjan Ochtman <djc@gentoo.org> -pelican-3.2.2.ebuild,
   -pelican-3.3.ebuild:
