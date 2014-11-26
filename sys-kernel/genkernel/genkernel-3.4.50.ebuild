@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.50.ebuild,v 1.1 2014/06/23 23:56:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.50.ebuild,v 1.2 2014/11/26 09:37:54 armin76 Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -96,6 +96,12 @@ src_prepare() {
 		-e "s:VERSION_GPG:$VERSION_GPG:" \
 		"${S}"/defaults/software.sh \
 		|| die "Could not adjust versions"
+
+	# sparc doesn't need crosscompiler anymore
+	# remove this after >3.4.51.2
+	sed -i -e "s:^DEFAULT_KERNEL_CC:#DEFAULT_KERNEL_CC:g" \
+		"${S}"/arch/sparc64/config.sh \
+		|| die "Could not remove sparc64 crosscompiler config"
 
 	epatch_user
 }
