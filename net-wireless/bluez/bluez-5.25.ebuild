@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.25.ebuild,v 1.4 2014/11/26 10:40:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.25.ebuild,v 1.5 2014/11/26 22:45:15 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
@@ -149,7 +149,8 @@ multilib_src_install() {
 		# Upstream don't install this, bug #524640
 		# http://permalink.gmane.org/gmane.linux.bluez.kernel/53115
 		# http://comments.gmane.org/gmane.linux.bluez.kernel/54564
-		dobin attrib/gatttool
+		# gatttool is only built with readline, bug #530776
+		use readline && dobin attrib/gatttool
 		dobin tools/hex2hcd
 
 		# Unittests are not that useful once installed
