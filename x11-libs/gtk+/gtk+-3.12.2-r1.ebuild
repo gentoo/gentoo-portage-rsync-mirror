@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.12.2-r1.ebuild,v 1.2 2014/11/24 01:41:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.12.2-r1.ebuild,v 1.3 2014/11/26 04:59:19 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -162,7 +162,8 @@ multilib_src_configure() {
 		--enable-man \
 		--enable-gtk2-dependency \
 		--with-xml-catalog="${EPREFIX}"/etc/xml/catalog \
-		--libdir="${EPREFIX}"/usr/$(get_libdir)
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
+		CUPS_CONFIG="${EPREFIX}/usr/bin/${CHOST}-cups-config"
 
 	# work-around gtk-doc out-of-source brokedness
 	if multilib_is_native_abi; then
