@@ -13,6 +13,10 @@
 		<email>admwiggin@gmail.com</email>
 		<name>Tianon</name>
 	</maintainer>
+	<maintainer>
+		<email>xarthisius@gentoo.org</email>
+		<name>Kacper Kowalik</name>
+	</maintainer>
 	<use>
 		<flag name="aufs">
 			Enables dependencies for the "aufs" graph driver, including
