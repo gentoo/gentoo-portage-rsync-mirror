@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/mathjax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mathjax/ChangeLog,v 1.10 2014/11/25 22:41:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mathjax/ChangeLog,v 1.11 2014/11/26 05:25:16 gienah Exp $
+
+*mathjax-2.4 (26 Nov 2014)
+
+  26 Nov 2014; Mark Wright <gienah@gentoo.org> +mathjax-2.4.ebuild,
+  metadata.xml:
+  Bump, fixes bug 523302 - dev-libs/mathjax-2.4 bump request
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
