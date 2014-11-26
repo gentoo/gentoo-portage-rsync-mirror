@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.124 2014/09/06 16:39:36 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.125 2014/11/26 06:51:10 idella4 Exp $
+
+  26 Nov 2014; Ian Delaney <idella4@gentoo.org> exiv2-0.24.ebuild:
+  clean old python impls
 
   06 Sep 2014; Christoph Junghans <ottxor@gentoo.org> exiv2-0.24.ebuild:
   add prefix support (bug #518974)
