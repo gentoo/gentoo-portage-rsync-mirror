@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymountboot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymountboot/ChangeLog,v 1.16 2014/11/24 12:50:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymountboot/ChangeLog,v 1.17 2014/11/26 17:40:33 mgorny Exp $
+
+  26 Nov 2014; Michał Górny <mgorny@gentoo.org> pymountboot-9999.ebuild:
+  Add py3.4 to -9999 as well.
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org> pymountboot-0.2.2.ebuild:
   Support python 3.4
