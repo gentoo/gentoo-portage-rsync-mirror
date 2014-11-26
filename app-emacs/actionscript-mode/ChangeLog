@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/actionscript-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/actionscript-mode/ChangeLog,v 1.2 2014/11/15 10:15:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/actionscript-mode/ChangeLog,v 1.3 2014/11/26 07:53:21 ulm Exp $
+
+  26 Nov 2014; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  Take maintainership.
 
 *actionscript-mode-7.2.2_p20140605 (15 Nov 2014)
 
