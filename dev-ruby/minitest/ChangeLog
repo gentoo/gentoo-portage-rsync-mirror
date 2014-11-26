@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.172 2014/11/25 20:52:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.173 2014/11/26 01:52:15 mrueg Exp $
+
+*minitest-5.3.3-r1 (26 Nov 2014)
+
+  26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> +minitest-5.3.3-r1.ebuild:
+  activerecord depends on <5.3.4. Get 5.3.3-r1 back. Drop jruby.
 
   25 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -minitest-5.3.3-r1.ebuild,
   -minitest-5.4.1.ebuild, -minitest-5.4.2.ebuild, minitest-4.7.5-r1.ebuild,

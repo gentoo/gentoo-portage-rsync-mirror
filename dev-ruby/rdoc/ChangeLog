@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.130 2014/11/18 13:37:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.131 2014/11/26 02:00:24 mrueg Exp $
+
+  26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> rdoc-3.12.2.ebuild,
+  rdoc-4.0.1-r1.ebuild, rdoc-4.0.1-r2.ebuild:
+  Drop jruby target.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -files/rdoc-2.5.6-ruby19.patch:
   Cleanup unused patches.
