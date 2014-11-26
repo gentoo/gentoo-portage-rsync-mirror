@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.1-r2.ebuild,v 1.1 2014/11/01 14:54:13 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.1-r4.ebuild,v 1.1 2014/11/26 03:25:14 dlan Exp $
 
 EAPI=5
 
@@ -17,23 +17,31 @@ if [[ $PV == *9999 ]]; then
 	live_eclass="mercurial"
 else
 	KEYWORDS="~amd64 ~arm -x86"
-	UPSTREAM_VER=1
+	UPSTREAM_VER=2
 	# xen-tools's gentoo patches tarball
-	GENTOO_VER=1
+	GENTOO_VER=3
 	# xen-tools's gentoo patches version which apply to this specific ebuild
-	GENTOO_GPV=1
+	GENTOO_GPV=2
+	# xen-tools ovmf's patches
+	OVMF_VER=0
+
 	SEABIOS_VER=1.7.3.1
+	OVMF_PV=20131208
 
 	[[ -n ${UPSTREAM_VER} ]] && \
 		UPSTRAM_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P/-tools/}-upstream-patches-${UPSTREAM_VER}.tar.xz"
 	[[ -n ${GENTOO_VER} ]] && \
 		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN/-tools}-gentoo-patches-${GENTOO_VER}.tar.xz"
+	[[ -n ${OVMF_VER} ]] && \
+		OVMF_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN/-tools}-ovmf-patches-${OVMF_VER}.tar.xz"
 
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${MY_PV}/xen-${MY_PV}.tar.gz
 	http://code.coreboot.org/p/seabios/downloads/get/seabios-${SEABIOS_VER}.tar.gz
 	http://dev.gentoo.org/~dlan/distfiles/seabios-${SEABIOS_VER}.tar.gz
+	http://dev.gentoo.org/~dlan/distfiles/ovmf-${OVMF_PV}.tar.bz2
 	${UPSTRAM_PATCHSET_URI}
-	${GENTOO_PATCHSET_URI}"
+	${GENTOO_PATCHSET_URI}
+	${OVMF_PATCHSET_URI}"
 	S="${WORKDIR}/xen-${MY_PV}"
 fi
 
@@ -48,11 +56,12 @@ SLOT="0"
 # Inclusion of IUSE ocaml on stabalizing requires maintainer of ocaml to (get off his hands and) make
 # >=dev-lang/ocaml-4 stable
 # Masked in profiles/eapi-5-files instead
-IUSE="api custom-cflags debug doc flask hvm qemu ocaml +pam python pygrub screen static-libs system-qemu system-seabios"
+IUSE="api custom-cflags debug doc flask hvm qemu ocaml ovmf +pam python pygrub screen static-libs system-qemu system-seabios"
 
 REQUIRED_USE="hvm? ( || ( qemu system-qemu ) )
 	${PYTHON_REQUIRED_USE}
 	pygrub? ( python )
+	ovmf? ( hvm )
 	qemu? ( !system-qemu )"
 
 COMMON_DEPEND="
@@ -163,9 +172,20 @@ src_prepare() {
 		done
 	fi
 
+	# Ovmf's patchset
+	if [[ -n ${OVMF_VER} ]]; then
+		pushd "${WORKDIR}"/ovmf-*/ > /dev/null
+		EPATCH_SUFFIX="patch" \
+		EPATCH_FORCE="yes" \
+		EPATCH_OPTS="-p1" \
+			epatch "${WORKDIR}"/patches-ovmf
+		popd > /dev/null
+	fi
+
 	mv tools/qemu-xen/qemu-bridge-helper.c tools/qemu-xen/xen-bridge-helper.c || die
 
 	mv ../seabios-${SEABIOS_VER} tools/firmware/seabios-dir-remote || die
+	mv ../ovmf-${OVMF_PV} tools/firmware/ovmf-dir-remote || die
 	pushd tools/firmware/ > /dev/null
 	ln -s seabios-dir-remote seabios-dir || die
 	popd > /dev/null
@@ -261,12 +281,14 @@ src_configure() {
 		--disable-xen \
 		--enable-tools \
 		--enable-docs \
-		--enable-qemu-traditional \
 		$(use_with system-qemu) \
 		$(use_enable pam) \
 		$(use_enable api xenapi) \
+		$(use_enable ovmf) \
 		$(use_enable ocaml ocamltools) \
 		"
+	# disable qemu-traditional for arm, fail to build
+	use arm || myconf+=" --enable-qemu-traditional"
 	use system-seabios && myconf+=" --with-system-seabios=/usr/share/seabios/bios.bin"
 	use qemu || myconf+=" --with-system-qemu"
 	econf ${myconf}
