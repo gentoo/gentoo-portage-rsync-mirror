@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/webmock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.32 2014/11/18 14:05:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.33 2014/11/26 02:14:04 mrueg Exp $
+
+  26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> webmock-1.18.0.ebuild,
+  webmock-1.19.0.ebuild, webmock-1.7.4.ebuild:
+  Drop jruby. Fix deps for ruby21.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/webmock-1.4.0-network-specs.patch, -files/webmock-1.4.0-tmpdir.patch:

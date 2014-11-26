@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.173 2014/11/26 01:52:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.174 2014/11/26 02:07:59 mrueg Exp $
+
+  26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> minitest-4.7.5-r1.ebuild:
+  Drop jruby target.
 
 *minitest-5.3.3-r1 (26 Nov 2014)
 

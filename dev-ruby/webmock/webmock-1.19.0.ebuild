@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/webmock-1.19.0.ebuild,v 1.1 2014/10/04 06:58:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/webmock-1.19.0.ebuild,v 1.2 2014/11/26 02:14:04 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_TEST="test spec NO_CONNECTION=true"
 
@@ -28,8 +28,7 @@ ruby_add_bdepend "test? (
 	>=dev-ruby/httpclient-2.2.4
 	)"
 
-# These are not supported for jruby.
-USE_RUBY="ruby19 ruby20" ruby_add_bdepend "test? ( >=dev-ruby/patron-0.4.18 >=dev-ruby/http-0.5.0 )"
+ruby_add_bdepend "test? ( >=dev-ruby/patron-0.4.18 >=dev-ruby/http-0.5.0 )"
 
 all_ruby_prepare() {
 	# Remove bundler support
@@ -41,15 +40,6 @@ all_ruby_prepare() {
 	# version is too old.
 	sed -i -e '/\(curb\|typhoeus\|em-http\)/d' spec/spec_helper.rb || die
 	rm spec/acceptance/{typhoeus,curb,excon,em_http_request}/* || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			sed -i -e '/http_gem/d' spec/spec_helper.rb || die
-			rm spec/acceptance/http_gem/* || die
-			;;
-	esac
 }
 
 each_ruby_test() {

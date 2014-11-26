@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/webmock-1.7.4.ebuild,v 1.5 2014/08/15 14:32:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/webmock-1.7.4.ebuild,v 1.6 2014/11/26 02:14:04 mrueg Exp $
 
 EAPI=2
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_TEST="test spec NO_CONNECTION=true"
 
@@ -28,8 +28,7 @@ ruby_add_bdepend "test? (
 	>=dev-ruby/httpclient-2.1.5.2
 	)"
 
-# These are not supported for jruby.
-USE_RUBY="ruby19" ruby_add_bdepend "test? ( >=dev-ruby/patron-0.4.9-r1 >=dev-ruby/em-http-request-0.2.14 )"
+ruby_add_bdepend "test? ( >=dev-ruby/patron-0.4.9-r1 >=dev-ruby/em-http-request-0.2.14 )"
 
 all_ruby_prepare() {
 	# Remove bundler support

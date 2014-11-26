@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.112 2014/11/25 21:02:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.113 2014/11/26 02:11:39 mrueg Exp $
+
+  26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> xpra-0.14.12.ebuild:
+  Fix malformed CVS Header.
 
 *xpra-0.14.12 (25 Nov 2014)
 

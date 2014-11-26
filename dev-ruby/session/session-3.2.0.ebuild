@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/session-3.2.0.ebuild,v 1.1 2014/04/17 05:41:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/session-3.2.0.ebuild,v 1.2 2014/11/26 02:23:51 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
@@ -30,14 +30,6 @@ all_ruby_prepare() {
 	# needed to void a collision with the Timeout::Error alias in Ruby
 	# 1.8.7 at least.
 	sed -i -e 's:TimeoutError:SessionTimeoutError:' test/session.rb || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			epatch "${FILESDIR}"/${PN}-3.1.0-jruby.patch
-			;;
-	esac
 }
 
 each_ruby_test() {

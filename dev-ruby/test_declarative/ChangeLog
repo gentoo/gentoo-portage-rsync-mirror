@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test_declarative
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.13 2014/08/05 16:01:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.14 2014/11/26 02:26:23 mrueg Exp $
+
+  26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> test_declarative-0.0.5-r2.ebuild:
+  Drop jruby target.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> test_declarative-0.0.5-r2.ebuild:
   Remove trailing '.' from DESCRIPTION.

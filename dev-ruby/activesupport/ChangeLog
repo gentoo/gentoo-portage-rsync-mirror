@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.275 2014/11/25 11:30:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.276 2014/11/26 02:28:09 mrueg Exp $
+
+  26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> activesupport-3.2.20.ebuild,
+  activesupport-3.2.21.ebuild:
+  Drop jruby traces.
 
   25 Nov 2014; Manuel Rüger <mrueg@gentoo.org> activesupport-3.2.20.ebuild,
   activesupport-3.2.21.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gource
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.29 2013/09/18 08:28:37 flameeyes Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.30 2014/11/26 02:14:54 dlan Exp $
+
+*gource-0.43 (26 Nov 2014)
+
+  26 Nov 2014; Yixun Lan <dlan@gentoo.org> +gource-0.43.ebuild:
+  version bump, bug 517724, update libsdl2 as new dep
 
   18 Sep 2013; Diego E. Pettenò <flameeyes@gentoo.org> gource-0.40.ebuild:
   Fix bug #479896. Patch by Enrico Tagliavini.

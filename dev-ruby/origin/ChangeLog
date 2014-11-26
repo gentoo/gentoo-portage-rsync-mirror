@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/origin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/ChangeLog,v 1.14 2014/05/18 06:09:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/ChangeLog,v 1.15 2014/11/26 02:25:32 mrueg Exp $
+
+  26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> origin-1.1.0.ebuild:
+  Drop jruby traces.
 
   18 May 2014; Hans de Graaff <graaff@gentoo.org> -origin-1.0.11.ebuild:
   Cleanup.

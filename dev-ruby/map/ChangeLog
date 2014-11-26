@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/map
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/map/ChangeLog,v 1.18 2014/09/12 12:25:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/map/ChangeLog,v 1.19 2014/11/26 02:21:34 mrueg Exp $
+
+  26 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/map-6.5.1-ruby18-failing-tests.patch, map-6.5.4.ebuild,
+  map-6.5.5.ebuild:
+  Drop jruby traces.
 
 *map-6.5.5 (12 Sep 2014)
 

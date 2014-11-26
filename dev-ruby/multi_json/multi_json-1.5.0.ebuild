@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/multi_json-1.5.0.ebuild,v 1.7 2014/08/15 16:56:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/multi_json-1.5.0.ebuild,v 1.8 2014/11/26 02:07:59 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_TASK_DOC="doc:rdoc"
@@ -28,9 +28,8 @@ ruby_add_rdepend "|| ( >=dev-ruby/json-1.4 >=dev-ruby/yajl-ruby-0.7 =dev-ruby/ac
 
 ruby_add_bdepend "doc? ( dev-ruby/rspec:2 )"
 
-ruby_add_bdepend "test? ( dev-ruby/json )"
-
-USE_RUBY="${USE_RUBY/jruby/}" ruby_add_bdepend "test? ( dev-ruby/yajl-ruby )"
+ruby_add_bdepend "test? ( dev-ruby/json
+	dev-ruby/yajl-ruby )"
 
 all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/d' Rakefile spec/helper.rb || die "Unable to remove bundler."

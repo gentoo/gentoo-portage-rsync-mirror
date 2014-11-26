@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.0.14-r1.ebuild,v 1.5 2014/07/13 16:12:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.0.14-r1.ebuild,v 1.6 2014/11/26 02:20:44 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 inherit ruby-ng prefix
 
@@ -18,9 +18,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 SLOT="0"
 IUSE="server test"
 
-RDEPEND="
-	ruby_targets_jruby? ( >=dev-java/jruby-1.5.6-r1 )
-	ruby_targets_ruby19? ( >=dev-lang/ruby-1.9.3_rc1 )"
+RDEPEND="ruby_targets_ruby19? ( >=dev-lang/ruby-1.9.3_rc1 )"
 
 PDEPEND="server? ( >=dev-ruby/builder-2.1 )"
 
@@ -54,17 +52,6 @@ all_ruby_prepare() {
 	# Remove tests that seem to have trouble loading from the /tmp test
 	# path. This should be narrowed down more...
 	rm test/rubygems/test_gem_commands_{cleanup_command,contents_command,pristine_command}.rb test/rubygems/test_gem_specification.rb || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			sed -i -e '/test_install_location_extra_slash/,/^  end/ s:^:#:' test/rubygems/test_gem_package.rb || die
-			# Remove failing tests. Before we did not run any tests at
-			# all so this is actually an improvement. Should be
-			rm test/rubygems/test_gem_security{,_policy}.rb test/rubygems/test_gem_{remote_fetcher,package_tar_reader_entry,package,installer,ext_ext_conf_builder}.rb || die
-			# investigated further.
-	esac
 }
 
 each_ruby_compile() {

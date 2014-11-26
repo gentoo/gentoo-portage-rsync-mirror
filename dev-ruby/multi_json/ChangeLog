@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/multi_json
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.46 2014/08/30 11:28:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.47 2014/11/26 02:07:59 mrueg Exp $
+
+  26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> multi_json-1.10.1.ebuild,
+  multi_json-1.5.0.ebuild, multi_json-1.6.1-r1.ebuild, multi_json-1.8.4.ebuild,
+  multi_json-1.9.3.ebuild:
+  Drop jruby target.
 
   30 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -multi_json-1.10.0.ebuild,
   -multi_json-1.6.1.ebuild, -multi_json-1.9.2.ebuild:

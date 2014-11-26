@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-yadis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-yadis/ChangeLog,v 1.9 2014/08/06 07:15:34 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-yadis/ChangeLog,v 1.10 2014/11/26 02:24:28 mrueg Exp $
+
+  26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> ruby-yadis-0.3.4-r2.ebuild:
+  Drop jruby target.
 
   06 Aug 2014; Manuel Rüger <mrueg@gentoo.org> ruby-yadis-0.3.4-r2.ebuild:
   Add ruby21 target.
