@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/vim-misc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-misc/ChangeLog,v 1.7 2014/10/31 00:32:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-misc/ChangeLog,v 1.8 2014/11/25 23:39:02 radhermit Exp $
+
+*vim-misc-1.17.1 (25 Nov 2014)
+
+  25 Nov 2014; Tim Harder <radhermit@gentoo.org> +vim-misc-1.17.1.ebuild:
+  Version bump.
 
 *vim-misc-1.17 (31 Oct 2014)
 
