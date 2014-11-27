@@ -1,6 +1,5 @@
-diff -NrU5 LogMon-0.4.4.orig/configure.in LogMon-0.4.4/configure.in
---- LogMon-0.4.4.orig/configure.in	2008-12-18 23:07:40.000000000 +0100
-+++ LogMon-0.4.4/configure.in	2008-12-18 23:14:47.000000000 +0100
+--- a/configure.in
++++ b/configure.in
 @@ -1,11 +1,11 @@
  dnl Process this file with autoconf to produce a configure script.
  AC_INIT(Main.cc)

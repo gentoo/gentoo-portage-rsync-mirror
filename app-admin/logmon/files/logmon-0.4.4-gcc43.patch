@@ -1,6 +1,5 @@
-diff -NrU5 LogMon-0.4.4.orig/LineManip.cc LogMon-0.4.4/LineManip.cc
---- LogMon-0.4.4.orig/LineManip.cc	2008-12-18 23:07:40.000000000 +0100
-+++ LogMon-0.4.4/LineManip.cc	2008-12-18 23:08:14.000000000 +0100
+--- a/LineManip.cc
++++ b/LineManip.cc
 @@ -3,10 +3,11 @@
  // 
  

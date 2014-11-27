@@ -1,5 +1,5 @@
---- Main.cc     (revision 80)
-+++ Main.cc     (working copy)
+--- a/Main.cc
++++ b/Main.cc
 @@ -264,7 +264,7 @@
  {
      (void) signal(SIGINT, sig_int);

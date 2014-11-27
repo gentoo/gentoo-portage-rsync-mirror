@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/logmon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.20 2014/11/26 18:29:45 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.21 2014/11/27 00:07:49 jer Exp $
+
+  27 Nov 2014; Jeroen Roovers <jer@gentoo.org> logmon-0.4.4-r1.ebuild,
+  files/logmon-0.4.4-char2int.diff, files/logmon-0.4.4-gcc43.patch,
+  files/logmon-0.4.4-maintainer-mode.patch, +files/logmon-0.4.4-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #457530). Clean up patches.
 
   26 Nov 2014; Sergey Popov <pinkbyte@gentoo.org> -logmon-0.4.4.ebuild,
   metadata.xml:
