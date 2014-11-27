@@ -9,4 +9,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.digitemp.com/software/linux/digitemp-3.5.0.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=1382811a012919948c4c9a2d565d6a8f
+_md5_=4e7da3017ed615b89119d420d87f9767

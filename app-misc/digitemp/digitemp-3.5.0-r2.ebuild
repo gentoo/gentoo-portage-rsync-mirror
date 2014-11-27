@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.5.0-r2.ebuild,v 1.1 2014/11/21 01:32:03 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.5.0-r2.ebuild,v 1.2 2014/11/27 16:34:20 creffett Exp $
 
 EAPI=5
 
@@ -64,7 +64,7 @@ src_install() {
 
 	for example in perl python rrdb; do
 		insinto "/usr/share/doc/${PF}/${example}_examples"
-		doins ${example}/*
+		doins -r ${example}/*
 	done
 }
 

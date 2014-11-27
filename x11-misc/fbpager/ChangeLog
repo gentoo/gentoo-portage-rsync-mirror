@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbpager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpager/ChangeLog,v 1.17 2014/08/30 12:16:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpager/ChangeLog,v 1.18 2014/11/27 16:56:30 kensington Exp $
+
+  27 Nov 2014; Michael Palimaka <kensington@gentoo.org> fbpager-20090221.ebuild:
+  Update HOMEPAGE wrt bug #415667.
 
   30 Aug 2014; Michał Górny <mgorny@gentoo.org> fbpager-20090221.ebuild:
   Replace einstall with emake install, bug #521668.

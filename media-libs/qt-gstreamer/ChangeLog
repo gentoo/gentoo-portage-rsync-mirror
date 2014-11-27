@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/qt-gstreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.16 2014/10/12 13:03:50 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.18 2014/11/27 16:52:03 ago Exp $
+
+  27 Nov 2014; Agostino Sarubbo <ago@gentoo.org> qt-gstreamer-1.2.0.ebuild:
+  Stable for amd64, wrt bug #530874
+
+  27 Nov 2014; Agostino Sarubbo <ago@gentoo.org> qt-gstreamer-1.2.0.ebuild:
+  Stable for x86, wrt bug #530874
 
   12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> qt-gstreamer-0.10.3.ebuild,
   qt-gstreamer-1.2.0.ebuild:

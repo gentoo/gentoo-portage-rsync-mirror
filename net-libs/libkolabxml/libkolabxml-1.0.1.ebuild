@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/libkolabxml-1.0.1.ebuild,v 1.1 2014/02/21 18:00:13 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/libkolabxml-1.0.1.ebuild,v 1.3 2014/11/27 16:51:49 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://mirror.kolabsys.com/pub/releases/${P}.tar.gz"
 
 LICENSE="Apache-2.0 ZLIB LGPL-3+ public-domain"
 SLOT="4"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
 IUSE="csharp java python php test"
 
 RDEPEND="

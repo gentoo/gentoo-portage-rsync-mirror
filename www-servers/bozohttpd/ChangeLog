@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/bozohttpd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.17 2013/03/26 19:54:50 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.18 2014/11/27 16:50:10 kensington Exp $
+
+*bozohttpd-20140708 (27 Nov 2014)
+
+  27 Nov 2014; Michael Palimaka <kensington@gentoo.org>
+  +bozohttpd-20140708.ebuild:
+  Version bump wrt bug #518078, solving CVE-2014-5015.
 
 *bozohttpd-20111118 (26 Mar 2013)
 
