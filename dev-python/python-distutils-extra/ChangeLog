@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-distutils-extra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.30 2014/08/10 21:18:50 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.31 2014/11/27 12:47:08 idella4 Exp $
+
+  27 Nov 2014; Ian Delaney <idella4@gentoo.org>
+  python-distutils-extra-2.38.ebuild:
+  clean old python impl
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   python-distutils-extra-2.23.ebuild, python-distutils-extra-2.33.ebuild,
