@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sh/sh-1.09.ebuild,v 1.2 2014/03/26 15:21:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sh/sh-1.09.ebuild,v 1.3 2014/11/27 15:04:10 pacho Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=(python{2_{6,7},3_{2,3}})
+PYTHON_COMPAT=(python{2_{6,7},3_{2,3,4}})
 
 inherit distutils-r1
 

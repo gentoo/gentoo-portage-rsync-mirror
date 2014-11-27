@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/pithos-9999.ebuild,v 1.3 2014/09/22 18:20:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/pithos-9999.ebuild,v 1.4 2014/11/27 15:13:36 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=(python3_3)
+PYTHON_COMPAT=(python3_{3,4})
 inherit eutils distutils-r1
 
 if [[ ${PV} =~ [9]{4,} ]]; then

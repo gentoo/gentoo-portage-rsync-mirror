@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jedi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jedi/ChangeLog,v 1.10 2014/11/25 22:54:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jedi/ChangeLog,v 1.11 2014/11/27 15:22:07 radhermit Exp $
+
+  27 Nov 2014; Tim Harder <radhermit@gentoo.org> jedi-0.8.1.ebuild:
+  Drop python3_2 support and add python3_4 support.
 
   25 Nov 2014; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Add myself as a maintainer.
