@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-2.0.3-r1.ebuild,v 1.1 2014/11/26 02:04:33 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-2.0.3-r1.ebuild,v 1.2 2014/11/26 23:38:53 mjo Exp $
 
 EAPI=5
 
@@ -46,7 +46,7 @@ RESTRICT="test"
 
 src_prepare() {
 	# Fix the path to our perl interpreter
-	sed -i -e "1s:/usr/local/bin/perl:${ROOT}usr/bin/perl:" \
+	sed -i -e "1s:/usr/local/bin/perl:/usr/bin/perl:" \
 		"${S}"/plugins-scripts/*.pl || die
 }
 
@@ -63,10 +63,10 @@ src_configure() {
 
 	# The autodetection for these two commands can hang if localhost is
 	# down or ICMP traffic is filtered. Bug #468296.
-	myconf+=( --with-ping-command="${ROOT}bin/ping -n -U -w %d -c %d %s" )
+	myconf+=( --with-ping-command="/bin/ping -n -U -w %d -c %d %s" )
 
 	if use ipv6; then
-		myconf+=( --with-ping6-command="${ROOT}bin/ping6 -n -U -w %d -c %d %s" )
+		myconf+=( --with-ping6-command="/bin/ping6 -n -U -w %d -c %d %s" )
 	fi
 
 	econf \
@@ -75,8 +75,8 @@ src_configure() {
 		$(use_with ldap) \
 		$(use_with postgres pgsql /usr) \
 		"${myconf[@]}" \
-		--libexecdir="${ROOT}usr/$(get_libdir)/nagios/plugins" \
-		--sysconfdir="${ROOT}etc/nagios"
+		--libexecdir="/usr/$(get_libdir)/nagios/plugins" \
+		--sysconfdir="/etc/nagios"
 }
 
 DOCS=( ACKNOWLEDGEMENTS AUTHORS CODING ChangeLog FAQ \
