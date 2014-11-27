@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-android/selinux-android-9999.ebuild,v 1.3 2014/11/26 17:46:57 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-android/selinux-android-9999.ebuild,v 1.4 2014/11/27 09:58:52 swift Exp $
 EAPI="5"
 
 IUSE=""
@@ -20,4 +20,7 @@ DEPEND="${DEPEND}
 	sec-policy/selinux-java
 	sec-policy/selinux-xserver
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${RDEPEND}
+	sec-policy/selinux-java
+	sec-policy/selinux-xserver
+"

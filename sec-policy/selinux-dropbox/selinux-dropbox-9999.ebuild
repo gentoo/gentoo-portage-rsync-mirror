@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dropbox/selinux-dropbox-9999.ebuild,v 1.3 2014/11/01 16:13:39 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dropbox/selinux-dropbox-9999.ebuild,v 1.5 2014/11/27 09:58:53 swift Exp $
 EAPI="5"
 
 IUSE=""
@@ -17,5 +17,9 @@ else
 fi
 DEPEND="${DEPEND}
 	sec-policy/selinux-xserver
+	sec-policy/selinux-dbus
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${RDEPEND}
+	sec-policy/selinux-xserver
+	sec-policy/selinux-dbus
+"

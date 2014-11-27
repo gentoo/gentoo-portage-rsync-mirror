@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-finger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-finger/ChangeLog,v 1.48 2014/11/01 17:38:37 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-finger/ChangeLog,v 1.49 2014/11/27 09:37:17 swift Exp $
+
+  27 Nov 2014; Sven Vermeulen <swift@gentoo.org> selinux-finger-9999.ebuild:
+  SELinux finger policy depends on inetd types, so add in dep to selinux-inetd
 
   01 Nov 2014; Sven Vermeulen <swift@gentoo.org>
   selinux-finger-2.20140311-r6.ebuild:

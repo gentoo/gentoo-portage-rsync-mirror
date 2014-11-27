@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile install postinst postrm prepare unpack
-DEPEND=dev-vcs/git >=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-9999 sys-devel/m4 >=sys-apps/checkpolicy-2.0.21
+DEPEND=sec-policy/selinux-inetd dev-vcs/git >=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-9999 sys-devel/m4 >=sys-apps/checkpolicy-2.0.21
 DESCRIPTION=SELinux policy for finger
 EAPI=5
 HOMEPAGE=http://www.gentoo.org/proj/en/hardened/selinux/
 LICENSE=GPL-2
-RDEPEND=>=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-9999
+RDEPEND=sec-policy/selinux-inetd >=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-9999
 SLOT=0
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	selinux-policy-2	8f36bc1f64fc31a16a168d49e1069722	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=852218e5d0da207eb2e9c647e6d9acb5
+_md5_=959b468b63f792ccd5355a43692aa42d

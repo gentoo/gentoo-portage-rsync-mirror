@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16181 2014/11/26 15:52:56 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16182 2014/11/27 09:32:22 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -838,11 +838,6 @@ net-wireless/madwifi-ng
 # As a result of which, the package is not fully working at the moment
 # but it can still be used to track userland regressions.
 =app-benchmarks/ltp-ltp-2014082
-
-# Alexis Ballier <aballier@gentoo.org> (1 Nov 2012)
-# Still requires ocaml-3, mask it until it is ported. If this does not happen in
-# the near future, we should consider removing it.
-dev-ml/ocamlduce
 
 # Pacho Ramos <pacho@gentoo.org> (25 Oct 2012)
 # obexd changed its API without any warning, it's recommended to ship

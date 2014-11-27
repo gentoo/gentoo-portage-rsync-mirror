@@ -1,4 +1,7 @@
 
+  27 Nov 2014; Sven Vermeulen <swift@gentoo.org> selinux-pan-9999.ebuild:
+  Do not pull in DEPEND in RDEPEND unnecessary
+
   01 Nov 2014; Sven Vermeulen <swift@gentoo.org>
   selinux-pan-2.20140311-r6.ebuild:
   Stabilize rev 6

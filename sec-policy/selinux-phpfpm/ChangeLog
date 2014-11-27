@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-phpfpm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-phpfpm/ChangeLog,v 1.39 2014/11/01 17:38:41 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-phpfpm/ChangeLog,v 1.40 2014/11/27 09:58:52 swift Exp $
+
+  27 Nov 2014; Sven Vermeulen <swift@gentoo.org> selinux-phpfpm-9999.ebuild:
+  Do not pull in DEPEND in RDEPEND unnecessary
 
   01 Nov 2014; Sven Vermeulen <swift@gentoo.org>
   selinux-phpfpm-2.20140311-r6.ebuild:
