@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-3.2.3.ebuild,v 1.1 2014/11/26 20:19:50 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-3.2.3.ebuild,v 1.2 2014/11/27 22:52:34 monsieurp Exp $
 
 EAPI="5"
 
@@ -30,6 +30,7 @@ DEPEND="|| ( app-admin/eselect-java app-admin/eselect-maven )
 	dev-java/avalon-framework:4.1
 	dev-java/commons-cli:1
 	dev-java/commons-io:1
+	dev-java/guava:14
 	dev-java/javax-inject:0
 	dev-java/jsoup:0
 	dev-java/jsr250:0
@@ -38,7 +39,7 @@ DEPEND="|| ( app-admin/eselect-java app-admin/eselect-maven )
 	java-virtuals/interceptor-api:0
 	java-virtuals/servlet-api:2.4"
 
-RDEPEND=">=virtual/jdk-1.5
+RDEPEND=">=virtual/jdk-1.6
 	${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -47,13 +48,15 @@ MAVEN=${PN}-${SLOT}
 MAVEN_SHARE="/usr/share/${MAVEN}"
 
 java_prepare() {
-	rm -fv bin/*.bat lib/{aopalliance,commons-cli,javax.inject,jsr250}-*.jar || die
+	rm -fv \
+	bin/*.bat \
+	lib/{aopalliance,commons-cli,commons-io,guava,jsoup,javax.inject,jsr250}-*.jar || die
 
 	chmod 644 boot/*.jar lib/*.jar conf/settings.xml || die
 
 	# Symlink jars.
 	cd lib || die
-	java-pkg_jar-from aopalliance-1,avalon-framework-4.1,commons-cli-1,commons-io-1,interceptor-api,javax-inject,jsoup,jsr250,juel,osgi-core-api,servlet-api-2.4
+	java-pkg_jar-from aopalliance-1,avalon-framework-4.1,commons-cli-1,commons-io-1,guava-14,interceptor-api,javax-inject,jsoup,jsr250,juel,osgi-core-api,servlet-api-2.4
 	has_version dev-java/commons-logging:0 && java-pkg_jar-from commons-logging
 	has_version dev-java/avalon-logkit:2.0 && java-pkg_jar-from avalon-logkit-2.0
 	has_version dev-java/log4j:0 && java-pkg_jar-from log4j

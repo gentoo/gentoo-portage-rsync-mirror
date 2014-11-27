@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.89 2014/11/26 20:19:50 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.90 2014/11/27 22:52:34 monsieurp Exp $
+
+  27 Nov 2014; Patrice Clement <monsieurp@gentoo.org> maven-bin-3.2.3.ebuild:
+  Add guava:14 dependency. Change virtual-jdk to version 1.6.
 
 *maven-bin-3.2.3 (26 Nov 2014)
 
