@@ -256,6 +256,7 @@ app-admin/webalizer:xtended - Include the 404 extension
 app-admin/webapp-config:portage - Propagete python_targets dependencies to sys-apps/portage
 app-admin/yaala:storable - Support for persistence of Perl data structures.
 app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is currently scanning amongst other things
+app-antivirus/clamav:metadata-analysis-api - Enables collection of file property metadata using ClamAV API for analysis by ClamAV bytecode programs.
 app-arch/cabextract:extra-tools - Install experimental tools: wince_info and wince_rename for examining and processing Windows CE installation cabinet header files; cabinfo for examining the structure of a cab file.
 app-arch/cfv:bittorrent - Enable support for checking .torrent files
 app-arch/dpkg:dselect - Build the dselect package-management frontend
@@ -2024,7 +2025,6 @@ dev-ml/ocamlnet:cryptokit - Enables encryption support via dev-ml/cryptokit
 dev-ml/ocamlnet:httpd - Enables net-httpd web server component
 dev-ml/ocamlnet:zip - Enables netzip support to read/write gzip data using object channels
 dev-ml/pgocaml:batteries - Enable Batteries support instead of extlib
-dev-ml/tyxml:ocamlduce - Enables ocamlduce XML typechecking.
 dev-ml/utop:camlp4 - Enables camlp4 support.
 dev-perl/App-Nopaste:clipboard - copying of URLs with -x/--copy
 dev-perl/App-Nopaste:github - Github authentication
@@ -7422,7 +7422,6 @@ www-servers/nginx:luajit - Use dev-lang/luajit instead of dev-lang/lua for lua s
 www-servers/nginx:pcre-jit - Enable JIT for pcre
 www-servers/nginx:rtmp - NGINX-based Media Streaming Server
 www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
-www-servers/ocsigen:ocamlduce - Enables ocamlduce XML typechecking for generated web pages
 www-servers/pound:dynscaler - Enable dynamic rescaling of back-end priorities
 www-servers/pshs:magic - Enable automatic detection of Content-Type using libmagic (sys-apps/file)
 www-servers/pshs:netlink - Use libnetlink (sys-apps/iproute2) to get network interface addresses

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbox-cli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.14 2014/11/25 22:49:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.15 2014/11/27 09:09:16 grozin Exp $
+
+  27 Nov 2014; Andrey Grozin <grozin@gentoo.org> metadata.xml:
+  Setting myself as the maintainer
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

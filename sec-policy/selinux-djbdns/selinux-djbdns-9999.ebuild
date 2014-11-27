@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-djbdns/selinux-djbdns-9999.ebuild,v 1.3 2014/11/01 16:13:31 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-djbdns/selinux-djbdns-9999.ebuild,v 1.4 2014/11/27 09:11:21 swift Exp $
 EAPI="5"
 
 IUSE=""
@@ -17,5 +17,6 @@ else
 fi
 DEPEND="${DEPEND}
 	sec-policy/selinux-daemontools
+	sec-policy/selinux-ucspitcp
 "
 RDEPEND="${DEPEND}"

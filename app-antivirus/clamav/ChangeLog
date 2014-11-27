@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.490 2014/11/02 09:01:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.491 2014/11/27 09:30:40 lordvan Exp $
+
+*clamav-0.98.5 (27 Nov 2014)
+
+  27 Nov 2014; Thomas Raschbacher <lordvan@gentoo.org> +clamav-0.98.5.ebuild,
+  metadata.xml:
+  version bump + local use flag for new feature.
+  Fixes bug #529728
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> clamav-0.98.4.ebuild:
   Stable for alpha, wrt bug #521478

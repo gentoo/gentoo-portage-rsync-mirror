@@ -5,5 +5,6 @@
   <herd>antivirus</herd>
   <use>
     <flag name="clamdtop">A Top like tool which shows what clamd is currently scanning amongst other things</flag>
+    <flag name="metadata-analysis-api">Enables collection of file property metadata using ClamAV API for analysis by ClamAV bytecode programs.</flag>
   </use>
 </pkgmetadata>
