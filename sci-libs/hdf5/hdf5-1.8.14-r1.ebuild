@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.14.ebuild,v 1.1 2014/11/25 15:26:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.14-r1.ebuild,v 1.1 2014/11/27 20:50:35 xarthisius Exp $
 
 EAPI=5
 
@@ -41,6 +41,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-1.8.9-mpicxx.patch
 	"${FILESDIR}"/${PN}-1.8.13-no-messing-ldpath.patch
 	"${FILESDIR}"/${PN}-1.8.14-implicits.patch
+	"${FILESDIR}"/${PN}-1.8.14-ldflags.patch
 )
 
 pkg_setup() {

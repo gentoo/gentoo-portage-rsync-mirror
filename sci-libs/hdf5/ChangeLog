@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.119 2014/11/25 15:26:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.120 2014/11/27 20:50:35 xarthisius Exp $
+
+*hdf5-1.8.14-r1 (27 Nov 2014)
+
+  27 Nov 2014; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/hdf5-1.8.14-ldflags.patch, +hdf5-1.8.14-r1.ebuild, -hdf5-1.8.14.ebuild:
+  Prevent injection of -L{prefix}/lib to LDFLAGS. Fixes bug #530746 by Ulenrich
+  <eulenreich@gmx.de>. Thanks to Jouni Kosonen <jouni.kosonen@tukesoft.com> for
+  the hint
 
 *hdf5-1.8.14 (25 Nov 2014)
 
