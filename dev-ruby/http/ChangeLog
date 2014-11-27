@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/http
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http/ChangeLog,v 1.9 2014/08/15 14:32:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http/ChangeLog,v 1.10 2014/11/27 07:23:05 graaff Exp $
+
+*http-0.6.3 (27 Nov 2014)
+
+  27 Nov 2014; Hans de Graaff <graaff@gentoo.org> +http-0.6.3.ebuild:
+  Version bump.
 
   15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> http-0.5.0.ebuild,
   http-0.6.1.ebuild, http-0.6.2.ebuild:
