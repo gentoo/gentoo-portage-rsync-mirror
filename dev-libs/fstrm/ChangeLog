@@ -1,0 +1,16 @@
+# ChangeLog for dev-libs/fstrm
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fstrm/ChangeLog,v 1.2 2014/11/27 17:26:05 radhermit Exp $
+
+*fstrm-0.2.0-r1 (27 Nov 2014)
+
+  27 Nov 2014; Tim Harder <radhermit@gentoo.org> -fstrm-0.2.0.ebuild,
+  +fstrm-0.2.0-r1.ebuild:
+  Enable multilib support.
+
+*fstrm-0.2.0 (27 Nov 2014)
+
+  27 Nov 2014; Tim Harder <radhermit@gentoo.org> +fstrm-0.2.0.ebuild,
+  +metadata.xml:
+  Initial import.
+

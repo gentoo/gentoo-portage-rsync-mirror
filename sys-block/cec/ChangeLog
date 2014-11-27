@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/cec
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/cec/ChangeLog,v 1.5 2012/09/26 17:44:07 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/cec/ChangeLog,v 1.6 2014/11/27 17:22:22 kensington Exp $
+
+*cec-14 (27 Nov 2014)
+
+  27 Nov 2014; Michael Palimaka <kensington@gentoo.org> +cec-14.ebuild:
+  Version bump wrt bug #506010.
 
   26 Sep 2012; Michael Palimaka <kensington@gentoo.org> -cec-8.ebuild:
   Remove old.
