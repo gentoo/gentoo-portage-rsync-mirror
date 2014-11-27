@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.220 2014/08/12 02:40:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.221 2014/11/27 16:09:26 alonbl Exp $
+
+*gpgme-1.5.2 (27 Nov 2014)
+
+  27 Nov 2014; Alon Bar-Lev <alonbl@gentoo.org> +gpgme-1.5.2.ebuild:
+  Version bump
 
   12 Aug 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml

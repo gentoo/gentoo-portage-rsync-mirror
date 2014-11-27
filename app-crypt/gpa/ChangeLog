@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.95 2014/09/26 21:51:32 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.96 2014/11/27 16:11:44 alonbl Exp $
+
+*gpa-0.9.6 (27 Nov 2014)
+
+  27 Nov 2014; Alon Bar-Lev <alonbl@gentoo.org> +gpa-0.9.6.ebuild:
+  Version bump
 
 *gpa-0.9.5 (26 Sep 2014)
 
