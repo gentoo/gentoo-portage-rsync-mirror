@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.3-r2.ebuild,v 1.14 2014/11/02 07:58:27 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.3-r2.ebuild,v 1.15 2014/11/27 13:15:58 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
 VIRTUALX_REQUIRED="manual"
 
 inherit autotools db-use eutils multilib multilib-minimal python-any-r1 toolchain-funcs virtualx flag-o-matic

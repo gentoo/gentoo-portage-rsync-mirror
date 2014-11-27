@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.231 2014/11/02 07:58:27 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.232 2014/11/27 13:15:58 pacho Exp $
+
+  27 Nov 2014; Pacho Ramos <pacho@gentoo.org> heimdal-1.5.3-r2.ebuild:
+  Support python 3.4
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> heimdal-1.5.3-r2.ebuild:
   Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
