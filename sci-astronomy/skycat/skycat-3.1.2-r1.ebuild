@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/skycat-3.1.2-r1.ebuild,v 1.3 2014/08/10 20:32:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/skycat-3.1.2-r1.ebuild,v 1.4 2014/11/27 19:05:20 xarthisius Exp $
 
 EAPI=4
-inherit eutils autotools
+inherit eutils autotools flag-o-matic
 
 DESCRIPTION="ESO astronomical image visualizer with catalog access"
 HOMEPAGE="http://archive.eso.org/skycat"
@@ -45,6 +45,7 @@ src_prepare() {
 }
 
 src_configure() {
+	append-cppflags -DUSE_INTERP_RESULT  # 514604
 	econf $(use_enable threads) --enable-merge
 }
 
