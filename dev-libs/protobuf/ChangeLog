@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.70 2014/11/21 14:04:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.71 2014/11/27 18:05:23 radhermit Exp $
+
+*protobuf-2.6.1-r1 (27 Nov 2014)
+*protobuf-2.5.0-r2 (27 Nov 2014)
+
+  27 Nov 2014; Tim Harder <radhermit@gentoo.org> +protobuf-2.5.0-r2.ebuild,
+  +protobuf-2.6.1-r1.ebuild:
+  Add multilib support.
 
   21 Nov 2014; Agostino Sarubbo <ago@gentoo.org> protobuf-2.5.0-r1.ebuild:
   Stable for amd64, wrt bug #529858
