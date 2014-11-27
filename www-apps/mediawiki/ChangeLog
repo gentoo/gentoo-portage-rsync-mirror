@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.283 2014/11/22 02:05:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.284 2014/11/27 15:34:52 radhermit Exp $
+
+*mediawiki-1.24.0 (27 Nov 2014)
+*mediawiki-1.23.7 (27 Nov 2014)
+*mediawiki-1.22.14 (27 Nov 2014)
+*mediawiki-1.19.22 (27 Nov 2014)
+
+  27 Nov 2014; Tim Harder <radhermit@gentoo.org> +mediawiki-1.19.22.ebuild,
+  +mediawiki-1.22.14.ebuild, +mediawiki-1.23.7.ebuild,
+  +mediawiki-1.24.0.ebuild:
+  Security bumps and new stable release series bump.
 
 *mediawiki-1.23.6 (22 Nov 2014)
 *mediawiki-1.22.13 (22 Nov 2014)
