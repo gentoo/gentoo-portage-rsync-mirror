@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.139 2014/11/13 10:37:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.140 2014/11/27 10:16:21 pacho Exp $
+
+  27 Nov 2014; Pacho Ramos <pacho@gentoo.org> orca-3.12.3.ebuild:
+  Support python 3.4
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -orca-2.32.1.ebuild:
   Drop old (#508854)

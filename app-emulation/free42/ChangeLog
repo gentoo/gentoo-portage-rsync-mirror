@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/free42
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/ChangeLog,v 1.26 2014/10/30 09:57:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/ChangeLog,v 1.28 2014/11/27 10:21:10 nimiux Exp $
+
+  27 Nov 2014; Chema Alonso <nimiux@gentoo.org> -free42-1.5.3a.ebuild,
+  -files/free42-1.5.3a-fix-makefile.patch:
+  Drop old
+
+*free42-1.5.5 (27 Nov 2014)
+
+  27 Nov 2014; Chema Alonso <nimiux@gentoo.org> +free42-1.5.5.ebuild,
+  +files/free42-1.5.5-fix-makefile.patch:
+  Version Bump
 
   30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> free42-1.5.4.ebuild:
   Stable for x86, wrt bug #526764

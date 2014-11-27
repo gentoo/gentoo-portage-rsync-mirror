@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.53 2014/11/19 00:47:39 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.54 2014/11/27 10:02:40 idella4 Exp $
+
+  27 Nov 2014; Ian Delaney <idella4@gentoo.org> pyzmq-14.4.0.ebuild,
+  pyzmq-14.4.1.ebuild:
+  14.4.0; set REQUIRED_USE for test, 14.4.1; tidy
 
 *pyzmq-14.4.1 (19 Nov 2014)
 

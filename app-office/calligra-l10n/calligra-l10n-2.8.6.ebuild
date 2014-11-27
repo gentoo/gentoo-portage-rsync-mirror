@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.8.3.ebuild,v 1.1 2014/06/16 10:38:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.8.6.ebuild,v 1.1 2014/11/27 10:13:38 kensington Exp $
 
 EAPI=5
 
@@ -16,16 +16,16 @@ RDEPEND="!app-office/koffice-l10n"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="doc"
 
-MY_LANGS="bs ca ca@valencia cs da de el es et eu fi fr gl hu it kk nb nds nl pl
-pt pt_BR ru sk sl sv uk zh_CN zh_TW"
+MY_LANGS="bs ca ca@valencia cs da de el en_GB es et eu fi fr gl hu it ja kk nb
+nds nl pl pt pt_BR ru sk sv uk zh_CN zh_TW"
 
 case ${PV} in
 	2.[456789].[789]?)
 		# beta or rc releases
-		URI_BASE="mirror://kde/unstable/${PN/-l10n/}-${PV}/${PN}/" ;;
+		URI_BASE="mirror://kde/unstable/${PN/-l10n/}-${PV}/${PN}" ;;
 	2.[456789].?)
 		# stable releases
-		URI_BASE="mirror://kde/stable/${PN/-l10n/}-${PV}/${PN}/" ;;
+		URI_BASE="mirror://kde/stable/${PN/-l10n/}-${PV}/${PN}" ;;
 	*)
 		SRC_URI="" ;;
 esac

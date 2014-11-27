@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblouis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblouis/ChangeLog,v 1.13 2014/11/02 09:07:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblouis/ChangeLog,v 1.14 2014/11/27 10:15:51 pacho Exp $
+
+  27 Nov 2014; Pacho Ramos <pacho@gentoo.org> liblouis-2.5.3.ebuild:
+  Support python 3.4
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> liblouis-2.5.3.ebuild:
   Stable for alpha, wrt bug #524354

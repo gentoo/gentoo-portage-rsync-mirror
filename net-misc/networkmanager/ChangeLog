@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.212 2014/11/26 11:11:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.213 2014/11/27 10:09:39 pacho Exp $
+
+  27 Nov 2014; Pacho Ramos <pacho@gentoo.org>
+  networkmanager-0.9.10.1_pre20141101.ebuild:
+  Make the messages a bit more clear
 
   26 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   networkmanager-0.9.10.1_pre20141101.ebuild:
