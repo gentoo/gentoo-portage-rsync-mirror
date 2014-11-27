@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.11.14.ebuild,v 1.1 2014/11/14 18:41:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.11.14.ebuild,v 1.2 2014/11/27 11:52:18 kensington Exp $
 
 EAPI=5
 
@@ -45,6 +45,9 @@ KMEXTRA="
 PATCHES=(
 	"${FILESDIR}/${PN}-4-gentoo-xinitrc.d.patch"
 )
+
+# bug #413811
+MAKEOPTS+=" -j1"
 
 pkg_setup() {
 	kde4-meta_pkg_setup

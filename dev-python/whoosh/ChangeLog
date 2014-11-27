@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/whoosh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.22 2014/11/14 04:13:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.23 2014/11/27 11:48:16 idella4 Exp $
+
+  27 Nov 2014; Ian Delaney <idella4@gentoo.org> whoosh-2.5.7.ebuild:
+  clean old python impl
 
   14 Nov 2014; Ian Delaney <idella4@gentoo.org> -whoosh-2.5.3.ebuild,
   -whoosh-2.5.4.ebuild, whoosh-2.6.0.ebuild:
