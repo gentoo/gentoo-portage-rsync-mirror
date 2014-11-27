@@ -23,6 +23,7 @@
   as a server, but are linked into an application) are easily possible.
   </longdescription>
   <use>
+    <flag name='dnstap'>Enable dnstap support</flag>
     <flag name='gost'>Enable GOST support</flag>
   </use>
 </pkgmetadata>

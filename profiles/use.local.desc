@@ -1320,19 +1320,6 @@ dev-db/unixODBC:minimal - Disable bundled drivers and extra libraries (most user
 dev-db/unixODBC:odbcmanual - Administrator, Internal Structure, Programmer and User documentation
 dev-embedded/avrdude:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
 dev-embedded/libftdi:tools - build ftdi_eeprom helper tool
-dev-embedded/msp430-binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
-dev-embedded/msp430-binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
-dev-embedded/msp430-gcc:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
-dev-embedded/msp430-gcc:go - Build the GCC Go language frontend.
-dev-embedded/msp430-gcc:graphite - Add support for the framework for loop optimizations based on a polyhedral intermediate representation
-dev-embedded/msp430-gcc:libssp - Build SSP support into a dedicated library rather than use the code in the C library (DO NOT ENABLE THIS IF YOU DON'T KNOW WHAT IT DOES)
-dev-embedded/msp430-gcc:mudflap - Add support for mudflap, a pointer use checking library
-dev-embedded/msp430-gcc:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
-dev-embedded/msp430-gcc:objc - Build support for the Objective C code language
-dev-embedded/msp430-gcc:objc++ - Build support for the Objective C++ language
-dev-embedded/msp430-gcc:objc-gc - Build support for the Objective C code language Garbage Collector
-dev-embedded/msp430-gdb:multitarget - Support all known targets in one gdb binary
-dev-embedded/msp430-gdb:python - Enable support for the new internal scripting language, as well as extended pretty printers
 dev-embedded/openocd:blaster - Enable support for Altera USE-Blaster
 dev-embedded/openocd:cmsis-dap - Support for CMSIS-DAP compliant adapters
 dev-embedded/openocd:dummy - Build the dummy port driver
@@ -4853,6 +4840,7 @@ net-dns/pdns:tools - Build optional tools (dnsscan, dnsscope, etc..).
 net-dns/pdnsd:isdn - Linux-only: check status of ippp interfaces with ISDN-specific system calls.
 net-dns/pdnsd:urandom - Linux-only: use /dev/urandom (pseudo-random number generation) instead of the default use of random() PRNG.
 net-dns/resolvconf-symlink:symlink - Actually replace /etc/resolv.conf with a symlink. Without this flag, the ebuild is a no-op.
+net-dns/unbound:dnstap - Enable dnstap support
 net-dns/unbound:gost - Enable GOST support
 net-firewall/arno-iptables-firewall:plugins - Install optional plugins
 net-firewall/firewalld:gui - Builds and installs GUI configurator and GTK+ applet

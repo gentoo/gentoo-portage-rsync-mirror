@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/aplpy-0.9.14.ebuild,v 1.1 2014/11/27 18:24:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/aplpy-0.9.14.ebuild,v 1.2 2014/11/27 18:47:27 xarthisius Exp $
 
 EAPI=5
 
@@ -30,15 +30,17 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MYP}
 
-python_prepare_all() {
-	sed -e '/import ah_bootstrap/d' \
-		-i setup.py || die "Removing ah_bootstrap failed"
-	distutils-r1_python_prepare_all
+python_compile() {
+	distutils-r1_python_compile --use-system-libraries --offline
 }
 
 python_test() {
-	distutils_install_for_testing
+	distutils_install_for_testing --offline
 	cd "${TEST_DIR}" || die
 	"${EPYTHON}" -c "import aplpy, sys;r = aplpy.test();sys.exit(r)" \
 		|| die "tests fail with ${EPYTHON}"
+}
+
+python_install() {
+	distutils-r1_python_install --offline
 }

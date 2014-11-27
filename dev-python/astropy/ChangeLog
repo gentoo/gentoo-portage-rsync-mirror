@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/astropy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.21 2014/08/11 07:14:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.22 2014/11/27 18:50:23 xarthisius Exp $
+
+  27 Nov 2014; Kacper Kowalik <xarthisius@gentoo.org> astropy-0.4.ebuild:
+  Pass --offline to setup.py during all phases. Fixes bug #527196 by Juergen
+  Rose <rose@rz.uni-potsdam.de>, fix dependency on wcslib
 
 *astropy-0.4 (11 Aug 2014)
 

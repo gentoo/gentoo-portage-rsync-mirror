@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.4.ebuild,v 1.1 2014/08/11 07:14:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.4.ebuild,v 1.2 2014/11/27 18:50:23 xarthisius Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND="
 	dev-libs/expat:0=
 	dev-python/numpy[${PYTHON_USEDEP}]
 	sci-astronomy/erfa:0=
-	sci-astronomy/wcslib:0=
+	>=sci-astronomy/wcslib-4.23:0=
 	>=sci-libs/cfitsio-3.350:0=
 	sys-libs/zlib:0="
 DEPEND="${RDEPEND}
@@ -52,7 +52,7 @@ python_compile_all() {
 		VARTEXFONTS="${T}"/fonts \
 			MPLCONFIGDIR="${BUILD_DIR}" \
 			PYTHONPATH="${BUILD_DIR}"/lib \
-			esetup.py build_sphinx
+			esetup.py build_sphinx --offline
 	fi
 }
 
@@ -66,5 +66,5 @@ python_install() {
 
 python_install_all() {
 	use doc && local HTML_DOCS=( docs/_build/html/. )
-	distutils-r1_python_install_all
+	distutils-r1_python_install_all --offline
 }
