@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/redis-py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.51 2014/10/15 03:15:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.52 2014/11/27 08:28:25 idella4 Exp $
+
+  27 Nov 2014; Ian Delaney <idella4@gentoo.org> redis-py-2.9.1.ebuild:
+  clean old python impl
 
   15 Oct 2014; Ian Delaney <idella4@gentoo.org> redis-py-2.10.3.ebuild:
   re-add kill statement to end of test phase
