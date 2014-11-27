@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.186 2014/11/27 13:16:39 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.187 2014/11/27 14:53:57 mpagano Exp $
+
+*portpeek-2.1.16-r1 (27 Nov 2014)
+
+  27 Nov 2014; Mike Pagano <mpagano@gentoo.org> +portpeek-2.1.16-r1.ebuild:
+  Bump gentoolkit dependency. Needed for python 3.4 support.
 
   27 Nov 2014; Mike Pagano <mpagano@gentoo.org> portpeek-2.1.16.ebuild:
   Remove 3.4 compatibility from 2.1.16

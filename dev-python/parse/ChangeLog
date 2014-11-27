@@ -1,10 +1,12 @@
 # ChangeLog for dev-python/parse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/parse/ChangeLog,v 1.1 2014/10/06 22:52:15 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/parse/ChangeLog,v 1.2 2014/11/27 14:41:11 pacho Exp $
+
+  27 Nov 2014; Pacho Ramos <pacho@gentoo.org> parse-1.6.4.ebuild:
+  Support python 3.4
 
 *parse-1.6.4 (06 Oct 2014)
 
   06 Oct 2014; Alex Brandt <alunduil@gentoo.org> +parse-1.6.4.ebuild,
   +metadata.xml:
   add ebuild written by me
-

@@ -1,0 +1,14 @@
+# ChangeLog for dev-python/Flask-KVSession
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Flask-KVSession/ChangeLog,v 1.2 2014/11/27 14:39:18 aballier Exp $
+
+  27 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  Flask-KVSession-0.6.1.ebuild:
+  missing dep on six
+
+*Flask-KVSession-0.6.1 (27 Nov 2014)
+
+  27 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  +Flask-KVSession-0.6.1.ebuild, +metadata.xml:
+  initial import, ebuild by me
+
