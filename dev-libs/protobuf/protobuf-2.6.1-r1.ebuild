@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.6.1-r1.ebuild,v 1.1 2014/11/27 18:05:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.6.1-r1.ebuild,v 1.2 2014/11/27 19:51:33 radhermit Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -9,7 +9,7 @@ JAVA_PKG_IUSE="source"
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_OPTIONAL=1
 
-inherit autotools-multilib flag-o-matic distutils-r1 java-pkg-opt-2 elisp-common
+inherit autotools-multilib eutils flag-o-matic distutils-r1 java-pkg-opt-2 elisp-common
 
 DESCRIPTION="Google's Protocol Buffers -- an efficient method of encoding structured data"
 HOMEPAGE="http://code.google.com/p/protobuf/ https://github.com/google/protobuf/"
@@ -32,16 +32,16 @@ RDEPEND="${CDEPEND}
 	java? ( >=virtual/jre-1.5 )"
 
 src_prepare() {
-	# breaks Darwin, bug #472514
-	[[ ${CHOST} != *-darwin* ]] && local PATCHES=( "${FILESDIR}"/${PN}-2.3.0-asneeded-2.patch )
-
 	append-cxxflags -DGOOGLE_PROTOBUF_NO_RTTI
+
+	# breaks Darwin, bug #472514
+	[[ ${CHOST} != *-darwin* ]] && epatch "${FILESDIR}"/${PN}-2.3.0-asneeded-2.patch
+
+	autotools-multilib_src_prepare
 
 	if use python; then
 		cd python && distutils-r1_src_prepare
 	fi
-
-	autotools-multilib_src_prepare
 }
 
 src_compile() {
