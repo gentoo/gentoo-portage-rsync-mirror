@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.72 2014/11/27 19:51:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.73 2014/11/27 23:20:01 radhermit Exp $
+
+  27 Nov 2014; Tim Harder <radhermit@gentoo.org> protobuf-2.5.0-r2.ebuild,
+  protobuf-2.6.1-r1.ebuild:
+  Fix python/java builds (bug #530922) and doc installs.
 
   27 Nov 2014; Tim Harder <radhermit@gentoo.org> protobuf-2.5.0-r2.ebuild,
   protobuf-2.6.1-r1.ebuild:
