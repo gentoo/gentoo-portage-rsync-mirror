@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Log-Agent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.31 2014/08/22 19:30:06 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.32 2014/11/28 00:12:59 monsieurp Exp $
+
+  28 Nov 2014; Patrice Clement <monsieurp@gentoo.org>
+  Log-Agent-0.307.0-r1.ebuild:
+  Keyworded for ~amd64-fbsd. See #529084.
 
 *Log-Agent-0.307.0-r1 (22 Aug 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.42 2014/11/27 04:05:09 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.43 2014/11/28 00:09:10 gienah Exp $
+
+  28 Nov 2014; Mark Wright <gienah@gentoo.org> +files/scala-2.11.4-no-git.patch:
+  Thanks to Juergen Rose for reporting, fix Bug 530836 - dev-lang/scala-2.11.4 -
+  Cannot find $EPATCH_SOURCE - scala-2.11.4-no-git.patch
 
 *scala-2.11.4 (27 Nov 2014)
 
