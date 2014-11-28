@@ -1,6 +1,10 @@
 # ChangeLog for games-util/xgamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xgamer/ChangeLog,v 1.12 2014/08/09 23:10:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xgamer/ChangeLog,v 1.13 2014/11/27 23:43:35 dilfridge Exp $
+
+  27 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> xgamer-0.6.2.ebuild:
+  Remove call to perl-module_pkg_postinst, does not do anything outside
+  perl-core
 
   09 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> xgamer-0.3.0.ebuild:
   Bump to EAPI=5 (bug #478714)

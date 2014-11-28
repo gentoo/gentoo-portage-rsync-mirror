@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-1.24-r1.ebuild,v 1.6 2014/07/29 19:20:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-1.24-r1.ebuild,v 1.7 2014/11/27 23:44:22 dilfridge Exp $
 
 EAPI=5
 inherit eutils perl-module readme.gentoo
@@ -57,6 +57,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	perl-module_pkg_postinst
 	readme.gentoo_print_elog
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-7540-r1.ebuild,v 1.3 2014/03/03 23:36:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-7540-r1.ebuild,v 1.4 2014/11/27 23:46:23 dilfridge Exp $
 
 EAPI=5
 
@@ -104,7 +104,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	perl-module_pkg_postinst
 	if use udf; then
 		mysql-udf_pkg_postinst murmur_udf murmur_hash INTEGER
 		mysql-udf_pkg_postinst fnv_udf fnv_64 INTEGER

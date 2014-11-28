@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.117 2014/11/16 22:52:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.118 2014/11/27 23:45:31 dilfridge Exp $
+
+  27 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  mod_perl-2.0.7-r1.ebuild, mod_perl-2.0.8.ebuild:
+  Remove call to perl-module_pkg_postinst, does not do anything outside
+  perl-core
 
   16 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   mod_perl-2.0.7-r1.ebuild, mod_perl-2.0.8.ebuild:

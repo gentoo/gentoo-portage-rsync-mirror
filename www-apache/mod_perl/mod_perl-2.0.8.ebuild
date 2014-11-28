@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.8.ebuild,v 1.10 2014/11/16 22:52:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.8.ebuild,v 1.11 2014/11/27 23:45:31 dilfridge Exp $
 
 EAPI="5"
 
@@ -153,6 +153,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	perl-module_pkg_postinst
 	apache-module_pkg_postinst
 }

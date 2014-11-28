@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r2.ebuild,v 1.6 2014/11/22 18:37:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r2.ebuild,v 1.7 2014/11/27 23:42:25 dilfridge Exp $
 
 EAPI="5"
 
@@ -96,7 +96,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	use perl && perl-module_pkg_postinst
 	use python && distutils-r1_pkg_postinst
 }
 

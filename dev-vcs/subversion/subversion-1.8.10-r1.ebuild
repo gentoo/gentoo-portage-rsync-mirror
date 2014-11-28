@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.10-r1.ebuild,v 1.3 2014/11/22 18:39:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.10-r1.ebuild,v 1.4 2014/11/27 23:48:22 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -443,8 +443,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	use perl && perl-module_pkg_postinst
-
 	if [[ -n "${CHANGED_BDB_VERSION}" ]] ; then
 		ewarn "You upgraded from an older version of Berkeley DB and may experience"
 		ewarn "problems with your repository. Run the following commands as root to fix it:"
