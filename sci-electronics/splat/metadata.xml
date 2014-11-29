@@ -9,4 +9,8 @@
   coordination, communication system design, and terrestrial television and radio
   broadcasting.
   </longdescription>
+  <use>
+  	<flag name = 'hires'>Builds additional high resolution application 
+	'rfsplat-hd'. </flag>
+  </use>
 </pkgmetadata>

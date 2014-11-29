@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cliapp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/ChangeLog,v 1.10 2014/03/16 17:39:39 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/ChangeLog,v 1.11 2014/11/29 12:53:13 jer Exp $
+
+  29 Nov 2014; Jeroen Roovers <jer@gentoo.org> cliapp-1.20140315.ebuild:
+  Marked ~hppa (bug #530672).
 
 *cliapp-1.20140315 (16 Mar 2014)
 

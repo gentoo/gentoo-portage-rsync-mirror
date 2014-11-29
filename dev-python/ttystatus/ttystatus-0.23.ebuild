@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ttystatus/ttystatus-0.23.ebuild,v 1.3 2014/08/11 11:52:00 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ttystatus/ttystatus-0.23.ebuild,v 1.4 2014/11/29 12:53:53 jer Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://code.liw.fi/debian/pool/main/p/python-${PN}/python-${PN}_${PV}.o
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~hppa x86"
 IUSE=""
 
 DEPEND="${PYTHON_DEPS}"

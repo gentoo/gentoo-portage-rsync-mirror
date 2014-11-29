@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.9_pre20140523.ebuild,v 1.1 2014/07/26 09:03:37 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.10_pre20141128.ebuild,v 1.1 2014/11/29 12:40:13 gurligebis Exp $
 
 EAPI="5"
 
 inherit eutils toolchain-funcs
 
-MY_PV=1.8.20140523
+MY_PV=1.9.20141128
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="MiniUPnP IGD Daemon"
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.9-build.patch
+	epatch "${FILESDIR}"/${PN}-1.10-build.patch
 	mv Makefile.linux Makefile || die
 }
 

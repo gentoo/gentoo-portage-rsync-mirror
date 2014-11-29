@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsixel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsixel/ChangeLog,v 1.6 2014/11/22 12:28:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsixel/ChangeLog,v 1.7 2014/11/29 13:00:23 hattya Exp $
+
+*libsixel-1.3.6 (29 Nov 2014)
+
+  29 Nov 2014; Akinori Hattori <hattya@gentoo.org> +libsixel-1.3.6.ebuild:
+  new upstream release
 
 *libsixel-1.3.5 (22 Nov 2014)
 

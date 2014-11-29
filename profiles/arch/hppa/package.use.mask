@@ -1,8 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.149 2014/10/22 09:58:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.150 2014/11/29 12:46:49 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (13 Aug 2014)
+# Needs dev-libs/protobuf{-c} which has not been ported to HPPA (bug #531068)
+net-dns/unbound dnstap
 
 # Jeroen Roovers <jer@gentoo.org> (22 Oct 2014)
 # needs www-servers/tornado
