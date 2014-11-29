@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.99 2014/11/26 10:40:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.100 2014/11/29 19:56:44 maekke Exp $
+
+  29 Nov 2014; Markus Meier <maekke@gentoo.org> lightdm-1.10.3.ebuild:
+  arm stable, bug #529834
 
   26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> lightdm-1.10.3.ebuild:
   Stable for amd64, wrt bug #529834
