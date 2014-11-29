@@ -1,0 +1,16 @@
+# ChangeLog for dev-ml/labltk
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/labltk/ChangeLog,v 1.3 2014/11/28 16:49:59 aballier Exp $
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> labltk-8.06.0.ebuild:
+  add subslot
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> labltk-8.06.0.ebuild:
+  depend on a findlib that it does not collide with
+
+*labltk-8.06.0 (28 Nov 2014)
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> +labltk-8.06.0.ebuild,
+  +files/findlib.patch, +metadata.xml:
+  Initial import, split out of dev-lang/ocaml
+

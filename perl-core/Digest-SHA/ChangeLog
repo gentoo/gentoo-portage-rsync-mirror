@@ -1,6 +1,13 @@
 # ChangeLog for perl-core/Digest-SHA
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.53 2014/01/20 20:45:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.54 2014/11/28 23:59:42 dilfridge Exp $
+
+*Digest-SHA-5.880.0 (28 Nov 2014)
+
+  28 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Digest-SHA-5.850.0.ebuild, +Digest-SHA-5.880.0.ebuild,
+  +files/Digest-SHA-5.880.0-CFLAGS.patch:
+  Version bump, apply CFLAGS patch for bug 506818
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Digest-SHA-5.820.0.ebuild,
   Digest-SHA-5.850.0.ebuild:

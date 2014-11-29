@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/js_of_ocaml/js_of_ocaml-1.4.ebuild,v 1.1 2013/12/11 19:19:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/js_of_ocaml/js_of_ocaml-1.4.ebuild,v 1.2 2014/11/28 18:03:51 aballier Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ IUSE="+ocamlopt doc +deriving-ocsigen"
 
 DEPEND=">=dev-lang/ocaml-3.12:=[ocamlopt?]
 	>=dev-ml/lwt-2.3.0:=
-	deriving-ocsigen? ( >=dev-ml/deriving-ocsigen-0.3:= )"
+	deriving-ocsigen? ( >=dev-ml/deriving-ocsigen-0.3:= )
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )"
 RDEPEND="${DEPEND}"
 
 src_configure() {

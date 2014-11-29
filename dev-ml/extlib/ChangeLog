@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/extlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.32 2014/04/13 16:20:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.33 2014/11/28 17:32:24 aballier Exp $
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> extlib-1.6.1.ebuild:
+  update deps for ocaml 4.02
 
   13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> extlib-1.6.1.ebuild:
   Stable for ppc, wrt bug #502730

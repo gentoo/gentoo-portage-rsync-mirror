@@ -4,6 +4,6 @@
 	<herd>java</herd>
 	<longdescription lang="en">The Guava project contains several of Google's core libraries that we rely on in our Java-based projects: collections, caching, primitives support, concurrency libraries, common annotations, string processing, I/O, and so forth.</longdescription>
 	<upstream>
-		<remote-id type="google-code">guava-libraries</remote-id>
+		<remote-id type="github">google/guava</remote-id>
 	</upstream>
 </pkgmetadata>

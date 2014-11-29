@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-ml/core_kernel-109.35.00:= >=dev-ml/sexplib-109.20.00:= >=dev-ml/bin-prot-109.15.00:= >=dev-ml/fieldslib-109.20.00:= >=dev-ml/pa_ounit-109.27.00:= >=dev-ml/variantslib-109.15.00:= >=dev-ml/comparelib-109.27.00:= >=dev-ml/herelib-109.35.00:= >=dev-ml/pipebang-109.15.00:= dev-ml/custom_printf:= dev-ml/pa_bench:= dev-ml/pa_test:= dev-ml/enumerate:= test? ( >=dev-ml/ounit-1.1.2 ) >=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12:=[ocamlopt?]
+DEPEND=>=dev-ml/core_kernel-109.35.00:= >=dev-ml/sexplib-109.20.00:= >=dev-ml/bin-prot-109.15.00:= >=dev-ml/fieldslib-109.20.00:= >=dev-ml/pa_ounit-109.27.00:= >=dev-ml/variantslib-109.15.00:= >=dev-ml/comparelib-109.27.00:= >=dev-ml/herelib-109.35.00:= >=dev-ml/pipebang-109.15.00:= dev-ml/custom_printf:= dev-ml/pa_bench:= dev-ml/pa_test:= dev-ml/enumerate:= || ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 ) test? ( >=dev-ml/ounit-1.1.2 ) >=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12:=[ocamlopt?]
 DESCRIPTION=Jane Street's alternative to the standard library
 EAPI=5
 HOMEPAGE=http://www.janestreet.com/ocaml
 IUSE=+ocamlopt debug doc test
 KEYWORDS=~amd64
 LICENSE=LGPL-2.1-with-linking-exception
-RDEPEND=>=dev-ml/core_kernel-109.35.00:= >=dev-ml/sexplib-109.20.00:= >=dev-ml/bin-prot-109.15.00:= >=dev-ml/fieldslib-109.20.00:= >=dev-ml/pa_ounit-109.27.00:= >=dev-ml/variantslib-109.15.00:= >=dev-ml/comparelib-109.27.00:= >=dev-ml/herelib-109.35.00:= >=dev-ml/pipebang-109.15.00:= dev-ml/custom_printf:= dev-ml/pa_bench:= dev-ml/pa_test:= dev-ml/enumerate:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
+RDEPEND=>=dev-ml/core_kernel-109.35.00:= >=dev-ml/sexplib-109.20.00:= >=dev-ml/bin-prot-109.15.00:= >=dev-ml/fieldslib-109.20.00:= >=dev-ml/pa_ounit-109.27.00:= >=dev-ml/variantslib-109.15.00:= >=dev-ml/comparelib-109.27.00:= >=dev-ml/herelib-109.35.00:= >=dev-ml/pipebang-109.15.00:= dev-ml/custom_printf:= dev-ml/pa_bench:= dev-ml/pa_test:= dev-ml/enumerate:= || ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 ) >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/111.28.00
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/111.28.00/individual/core-111.28.00.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=72969bdc2d7c46e9f4e475909ba261a8
+_md5_=7d079904ef75123849fc4bb2afff4e16

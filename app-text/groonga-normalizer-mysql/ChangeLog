@@ -1,0 +1,10 @@
+# ChangeLog for app-text/groonga-normalizer-mysql
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/groonga-normalizer-mysql/ChangeLog,v 1.1 2014/11/29 03:10:55 grknight Exp $
+
+*groonga-normalizer-mysql-1.0.6 (29 Nov 2014)
+
+  29 Nov 2014; Brian Evans <grknight@gentoo.org>
+  +groonga-normalizer-mysql-1.0.6.ebuild, +metadata.xml:
+  New package which will be needed for the Mroonga storage engine in dev-
+  db/mariadb

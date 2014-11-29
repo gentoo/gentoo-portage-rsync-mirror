@@ -1,6 +1,14 @@
 # ChangeLog for dev-ml/core_kernel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_kernel/ChangeLog,v 1.9 2014/11/10 08:29:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_kernel/ChangeLog,v 1.11 2014/11/28 17:58:11 aballier Exp $
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  core_kernel-111.28.00.ebuild:
+  update deps for ocaml 4.02
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  core_kernel-111.28.00.ebuild:
+  add missing pa_test dep, bug #530950
 
 *core_kernel-111.28.00 (10 Nov 2014)
 

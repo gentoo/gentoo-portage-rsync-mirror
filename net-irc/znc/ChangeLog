@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.77 2014/07/25 10:52:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.78 2014/11/28 13:47:58 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> znc-1.4-r1.ebuild,
+  znc-9999.ebuild:
+  Support python 3.4
 
 *znc-1.4-r1 (25 Jul 2014)
 

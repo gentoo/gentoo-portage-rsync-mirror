@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-stdnum/python-stdnum-0.9.ebuild,v 1.2 2014/06/30 08:45:21 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-stdnum/python-stdnum-0.9.ebuild,v 1.3 2014/11/28 11:14:49 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
 inherit distutils-r1
 

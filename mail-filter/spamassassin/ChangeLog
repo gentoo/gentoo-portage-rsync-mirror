@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.255 2014/10/11 13:16:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.256 2014/11/28 22:23:21 dilfridge Exp $
+
+  28 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  spamassassin-3.3.2-r5.ebuild, spamassassin-3.4.0.ebuild:
+  Remove call to perl-module_pkg_postinst, does not do anything outside
+  perl-core
 
   11 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   spamassassin-3.4.0.ebuild:

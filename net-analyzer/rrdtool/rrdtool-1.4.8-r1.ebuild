@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8-r1.ebuild,v 1.13 2014/10/21 09:20:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8-r1.ebuild,v 1.14 2014/11/28 21:28:24 jer Exp $
 
 EAPI="5"
 
@@ -133,8 +133,6 @@ src_install() {
 		perl_delete_packlist
 	fi
 
-	use python && distutils-r1_src_install
-
 	dodoc CHANGES CONTRIBUTORS NEWS README THREADS TODO
 
 	find "${ED}"usr -name '*.la' -exec rm -f {} +
@@ -144,6 +142,8 @@ src_install() {
 
 	newconfd "${FILESDIR}"/rrdcached.confd rrdcached
 	newinitd "${FILESDIR}"/rrdcached.init rrdcached
+
+	use python && distutils-r1_src_install
 }
 
 pkg_postinst() {

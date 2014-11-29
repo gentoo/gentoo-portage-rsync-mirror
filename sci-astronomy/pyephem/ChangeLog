@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/pyephem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.24 2014/07/06 12:56:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.25 2014/11/28 13:59:58 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> pyephem-3.7.5.3.ebuild:
+  Support python 3.4
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> pyephem-3.7.5.1.ebuild,
   pyephem-3.7.5.2.ebuild, pyephem-3.7.5.3.ebuild:

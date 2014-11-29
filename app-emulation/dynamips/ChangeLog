@@ -1,6 +1,21 @@
 # ChangeLog for app-emulation/dynamips
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.15 2014/11/26 19:12:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.17 2014/11/28 09:52:31 pinkbyte Exp $
+
+*dynamips-0.2.14-r1 (28 Nov 2014)
+
+  28 Nov 2014; Sergey Popov <pinkbyte@gentoo.org> -dynamips-0.2.14.ebuild,
+  +dynamips-0.2.14-r1.ebuild:
+  Revision bump: add use flag for building without IPv6 support, drop redundant
+  function definitions. Drop old revision
+
+*dynamips-0.2.14 (28 Nov 2014)
+
+  28 Nov 2014; Ian Delaney <idella4@gentoo.org> +dynamips-0.2.14.ebuild,
+  +files/0.2.14-docs.patch, -dynamips-0.2.10.ebuild,
+  -files/dynamips-0.2.10-makefile.patch:
+  bump; build system has changed to cmake, patch to remove install_doc function
+  from cmake, drop disused patch & oldest version, closes bug #527550
 
   26 Nov 2014; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Reassigning to new maintainer
@@ -79,4 +94,3 @@
   Initial commit, ebuild sourced from Sunrise overlay but modified slightly.
   With a warm thank you to Sergey Khalavchuck, Chad A. Simmons, Duncan
   Lockwood, Mark Silinio and "haad". Closes bug #154491.
-

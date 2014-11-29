@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.289 2014/09/19 09:37:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.290 2014/11/29 09:56:32 pacho Exp $
+
+  29 Nov 2014; Pacho Ramos <pacho@gentoo.org> java-config-2.2.0.ebuild:
+  Support python 3.4
 
   19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> java-config-2.2.0.ebuild:
   Stable for ppc, wrt bug #500398

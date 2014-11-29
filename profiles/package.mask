@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16183 2014/11/27 18:59:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16189 2014/11/29 00:18:21 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (28 Nov 2014)
+# Pending rev. deps check and porting
+>=dev-lang/ocaml-4.02.1
+dev-ml/labltk
+>=dev-ml/findlib-1.5.5-r1
+dev-ml/camlp4
 
 # Aaron W. Swenson <titanofold@gentoo.org> (26 Nov 2014)
 # Masked for removal in 30 days. dev-perl/pgperl hasn't been updated
@@ -140,12 +147,6 @@ app-emulation/virtinst
 # Merged with games-engines/scummvm
 # masked for removal on 20141128
 games-engines/sarien
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (27 Oct 2014)
-# Multiple QA issues (#344187, #319433, #317575, #174466)
-# no upstream releases for a long time.
-# Masked for removal in 30 days
-mail-filter/spamassassin-fuzzyocr
 
 # Mikle Kolyada <zlogene@gentoo.org> (27 Oct 2014)
 # Fails tests (bug #442480),

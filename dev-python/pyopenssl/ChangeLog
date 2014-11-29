@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.128 2014/10/26 19:34:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.129 2014/11/28 09:20:15 idella4 Exp $
+
+  28 Nov 2014; Ian Delaney <idella4@gentoo.org> pyopenssl-0.14.ebuild:
+  clean old python impl
 
   26 Oct 2014; Fabian Groffen <grobian@gentoo.org> pyopenssl-0.14.ebuild:
   Added Prefix keywords, bug #503094

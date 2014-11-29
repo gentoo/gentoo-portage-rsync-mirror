@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cudf/cudf-0.7.ebuild,v 1.3 2014/11/07 01:08:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cudf/cudf-0.7.ebuild,v 1.4 2014/11/28 17:47:30 aballier Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ RDEPEND="
 	>=dev-lang/ocaml-3.12:=[ocamlopt?]
 	dev-ml/extlib:=
 	dev-libs/glib:2
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )
 "
 DEPEND="${RDEPEND}
 	test? ( dev-ml/ounit )

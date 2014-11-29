@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.511 2014/11/03 13:31:41 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.512 2014/11/28 13:27:06 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> bind-9.10.1.ebuild:
+  Support python 3.4
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> bind-9.9.5-r3.ebuild,
   bind-9.9.5_p1.ebuild, bind-9.10.0_p2.ebuild, bind-9.10.1.ebuild:

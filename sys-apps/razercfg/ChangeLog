@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/razercfg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.30 2014/10/23 09:37:00 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.31 2014/11/28 22:07:45 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> razercfg-0.30.ebuild:
+  Support python 3.4
 
   23 Oct 2014; Christian Birchinger <joker@gentoo.org> razercfg-0.30.ebuild:
   Add missing dev-libs/libusb dependency

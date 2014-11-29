@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/guava
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/guava/ChangeLog,v 1.13 2014/10/20 15:47:02 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/guava/ChangeLog,v 1.14 2014/11/28 14:50:25 radhermit Exp $
+
+  28 Nov 2014; Tim Harder <radhermit@gentoo.org> guava-18.0.ebuild,
+  metadata.xml:
+  Add github site to HOMEPAGE and update upstream metadata.
 
 *guava-18.0 (20 Oct 2014)
 

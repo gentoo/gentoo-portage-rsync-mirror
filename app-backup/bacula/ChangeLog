@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/bacula
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.168 2014/11/03 11:04:55 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.169 2014/11/28 09:59:29 tomjbe Exp $
+
+*bacula-7.0.5-r1 (28 Nov 2014)
+
+  28 Nov 2014; Thomas Beierlein <tomjbe@gentoo.org> +bacula-7.0.5-r1.ebuild:
+  Fixes systemd tmpfile for bacula-clientonly (bug #528398). Thanks for
+  reporting to D. Griffin
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> bacula-5.0.3-r3.ebuild,
   bacula-5.2.12.ebuild, bacula-5.2.13.ebuild, bacula-5.2.13-r2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/core-111.28.00.ebuild,v 1.1 2014/11/10 08:31:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/core-111.28.00.ebuild,v 1.2 2014/11/28 17:58:48 aballier Exp $
 
 EAPI="5"
 
@@ -33,6 +33,7 @@ RDEPEND="
 	dev-ml/pa_bench:=
 	dev-ml/pa_test:=
 	dev-ml/enumerate:=
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )
 	"
 DEPEND="${RDEPEND}
 	test? ( >=dev-ml/ounit-1.1.2 )"

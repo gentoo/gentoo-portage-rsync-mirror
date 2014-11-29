@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/vo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/ChangeLog,v 1.14 2014/02/05 23:47:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/ChangeLog,v 1.15 2014/11/28 12:54:57 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> vo-0.8-r1.ebuild:
+  Support python 3.4
 
   05 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> -vo-0.8.ebuild,
   vo-0.8-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-mixer/sdl2-mixer-2.0.0-r1.ebuild,v 1.3 2014/10/15 19:58:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-mixer/sdl2-mixer-2.0.0-r1.ebuild,v 1.4 2014/11/29 08:36:16 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -50,6 +50,10 @@ RDEPEND=">=media-libs/libsdl2-2.0.1-r1[${MULTILIB_USEDEP}]
 DEPEND=${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-Fix-compiling-against-libmodplug-0.8.8.5.patch
+}
 
 multilib_src_configure() {
 	ECONF_SOURCE=${S} \

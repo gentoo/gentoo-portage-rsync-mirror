@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyquery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.48 2014/10/25 14:02:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.49 2014/11/28 08:59:44 idella4 Exp $
+
+  28 Nov 2014; Ian Delaney <idella4@gentoo.org> pyquery-1.2.9.ebuild:
+  clean old python impl
 
   25 Oct 2014; Markus Meier <maekke@gentoo.org> pyquery-1.2.9.ebuild:
   add ~arm, bug #525246

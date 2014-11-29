@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-4.1.0.ebuild,v 1.10 2013/03/02 21:22:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-4.1.0.ebuild,v 1.11 2014/11/28 19:41:28 mr_bones_ Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils qt4-r2
 
 DESCRIPTION="Translate gamepad/joystick input into key strokes/mouse actions in X"

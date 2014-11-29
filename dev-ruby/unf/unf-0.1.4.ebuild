@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/unf-0.1.4.ebuild,v 1.3 2014/08/05 16:00:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/unf-0.1.4.ebuild,v 1.4 2014/11/28 17:55:44 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_TEST="none"
 RUBY_FAKEGEM_TASK_DOC=""
@@ -22,8 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="test"
 
-# jruby already has support for UNF so it does not need the extension.
-USE_RUBY=${USE_RUBY/jruby/} ruby_add_rdepend "dev-ruby/unf_ext"
+ruby_add_rdepend "dev-ruby/unf_ext"
 
 ruby_add_bdepend "
 	test? (
@@ -41,15 +40,6 @@ all_ruby_prepare() {
 		-e '/platform/d' \
 		-e '/git ls/d' \
 		${RUBY_FAKEGEM_GEMSPEC} || die
-}
-
-each_ruby_prepare() {
-	if [[ ${RUBY} == *jruby ]]; then
-		# Remove dependency over unf_ext which does not exist for JRuby
-		# remove platform, we don't set it.
-		sed -i -e '/dependency.*unf_ext/d' \
-			${RUBY_FAKEGEM_GEMSPEC} || die
-	fi
 }
 
 each_ruby_test() {

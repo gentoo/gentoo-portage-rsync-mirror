@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r1.ebuild,v 1.2 2014/11/17 23:22:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r1.ebuild,v 1.3 2014/11/28 15:06:33 pacho Exp $
 
 EAPI=5
 
 WANT_AUTOCONF="2.5"
 
 GENTOO_DEPEND_ON_PERL="no"
-PYTHON_COMPAT=( python2_{5..7} python3_{1..3} )
+PYTHON_COMPAT=( python2_{5..7} python3_{1..4} )
 DISTUTILS_OPTIONAL=1
 
 inherit autotools eutils libtool perl-module distutils-r1 python-r1 toolchain-funcs java-pkg-opt-2

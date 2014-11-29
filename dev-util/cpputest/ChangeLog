@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cpputest
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpputest/ChangeLog,v 1.1 2014/11/29 01:14:55 radhermit Exp $
+
+*cpputest-3.6 (29 Nov 2014)
+
+  29 Nov 2014; Tim Harder <radhermit@gentoo.org> +cpputest-3.6.ebuild,
+  +metadata.xml:
+  Initial import (fixes bug #376123).
+

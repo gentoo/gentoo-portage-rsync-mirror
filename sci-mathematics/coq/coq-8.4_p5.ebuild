@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p5.ebuild,v 1.1 2014/11/03 01:27:10 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p5.ebuild,v 1.2 2014/11/28 19:11:10 aballier Exp $
 
 EAPI="5"
 
@@ -21,6 +21,7 @@ IUSE="gtk debug +ocamlopt doc camlp5"
 RDEPEND="
 	>=dev-lang/ocaml-3.11.2:=[ocamlopt?]
 	camlp5? ( >=dev-ml/camlp5-6.02.3:=[ocamlopt?] )
+	!camlp5? ( || ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 ) )
 	gtk? ( >=dev-ml/lablgtk-2.10.1:=[ocamlopt?] )"
 DEPEND="${RDEPEND}
 	doc? (

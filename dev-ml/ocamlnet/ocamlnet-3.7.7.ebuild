@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-3.7.7.ebuild,v 1.1 2014/10/28 17:01:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-3.7.7.ebuild,v 1.2 2014/11/28 17:10:46 aballier Exp $
 
 EAPI="5"
 
@@ -22,7 +22,8 @@ RESTRICT="installsources"
 
 DEPEND=">=dev-ml/findlib-1.0
 		pcre? ( >=dev-ml/pcre-ocaml-5:= )
-		>=dev-lang/ocaml-3.10.2:=[tk?,ocamlopt?]
+		>=dev-lang/ocaml-3.10.2:=[ocamlopt?]
+		tk? ( || ( dev-ml/labltk:= <dev-lang/ocaml-4.02[tk] ) )
 		cryptokit? ( dev-ml/cryptokit:= )
 		gtk? ( >=dev-ml/lablgtk-2:= )
 		ssl? ( >=dev-ml/ocaml-ssl-0.4:= )

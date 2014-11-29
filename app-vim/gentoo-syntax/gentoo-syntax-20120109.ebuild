@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20120109.ebuild,v 1.12 2014/02/01 23:31:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20120109.ebuild,v 1.13 2014/11/29 08:21:30 radhermit Exp $
 
 EAPI=4
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: Gentoo and portage related syntax highlighting, filetype, and indent settings"
-HOMEPAGE="http://www.gentoo.org/"
+HOMEPAGE="https://github.com/gentoo/gentoo-syntax"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="vim"

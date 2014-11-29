@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-CheckCompiler/Devel-CheckCompiler-0.50.0.ebuild,v 1.2 2014/11/24 16:20:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-CheckCompiler/Devel-CheckCompiler-0.50.0.ebuild,v 1.3 2014/11/29 10:09:16 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Check the compiler's availability"
 
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE=""
 
 RDEPEND="

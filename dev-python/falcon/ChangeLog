@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/falcon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/falcon/ChangeLog,v 1.8 2014/10/17 14:55:51 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/falcon/ChangeLog,v 1.9 2014/11/28 10:27:55 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> falcon-0.1.8.ebuild:
+  Support python 3.4
 
 *falcon-0.1.8 (17 Oct 2014)
 

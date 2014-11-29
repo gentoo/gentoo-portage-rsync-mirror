@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.05.ebuild,v 1.10 2014/06/22 13:17:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.05.ebuild,v 1.11 2014/11/28 17:20:50 aballier Exp $
 
 EAPI="5"
 
@@ -13,14 +13,19 @@ HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgl.html"
 LICENSE="BSD"
 
 RDEPEND="
-	>=dev-lang/ocaml-3.10.2:=[tk?,ocamlopt?]
+	>=dev-lang/ocaml-3.10.2:=[ocamlopt?]
 	x11-libs/libXext
 	x11-libs/libXmu
 	x11-libs/libX11
 	virtual/opengl
 	virtual/glu
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )
 	glut? ( media-libs/freeglut )
-	tk? ( >=dev-lang/tcl-8.3 >=dev-lang/tk-8.3 )
+	tk? (
+		>=dev-lang/tcl-8.3
+		>=dev-lang/tk-8.3
+		|| ( dev-ml/labltk:= <dev-lang/ocaml-4.02[tk] )
+	)
 	"
 
 DEPEND="${RDEPEND}"

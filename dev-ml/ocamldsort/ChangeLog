@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamldsort
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldsort/ChangeLog,v 1.16 2013/08/19 13:43:16 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldsort/ChangeLog,v 1.17 2014/11/28 19:09:56 aballier Exp $
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> ocamldsort-0.16.0.ebuild:
+  update deps for ocaml 4.02
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> -ocamldsort-0.15.0.ebuild:
   remove old

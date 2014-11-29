@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/bin-prot-112.01.00.ebuild,v 1.1 2014/10/30 16:42:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/bin-prot-112.01.00.ebuild,v 1.2 2014/11/28 17:43:58 aballier Exp $
 
 EAPI=5
 
@@ -20,7 +20,8 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE="doc"
 
-RDEPEND=">=dev-ml/type-conv-109.28.00:="
+RDEPEND=">=dev-ml/type-conv-109.28.00:=
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )"
 DEPEND="${RDEPEND}
 	test? ( >=dev-ml/ounit-1.1.2 )"
 

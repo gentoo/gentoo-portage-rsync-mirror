@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.157 2014/11/03 05:59:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.158 2014/11/28 10:45:57 jer Exp $
+
+  28 Nov 2014; Jeroen Roovers <jer@gentoo.org> psmisc-22.21.ebuild:
+  Stable for HPPA (bug #530662).
 
   03 Nov 2014; Mike Frysinger <vapier@gentoo.org> psmisc-22.20.ebuild:
   Mark m68k stable.

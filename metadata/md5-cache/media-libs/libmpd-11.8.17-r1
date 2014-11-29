@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=>=dev-libs/glib-2.16:2 virtual/pkgconfig doc? ( app-doc/doxygen )
+DESCRIPTION=A library handling connections to a MPD server
+EAPI=4
+HOMEPAGE=http://gmpc.wikia.com/wiki/Libmpd
+IUSE=doc static-libs
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/glib-2.16:2
+SLOT=0
+SRC_URI=http://download.sarine.nl/Programs/gmpc/11.8/libmpd-11.8.17.tar.gz
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=ae2baecf20690e4e1e63aa596feb81aa

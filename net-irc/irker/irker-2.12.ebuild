@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/irker-2.12.ebuild,v 1.1 2014/10/31 03:53:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/irker-2.12.ebuild,v 1.2 2014/11/28 13:32:07 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 PYTHON_REQ_USE="ssl"
 
 inherit python-single-r1 eutils

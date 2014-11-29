@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/cbatticon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/ChangeLog,v 1.15 2014/11/25 23:27:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/ChangeLog,v 1.16 2014/11/28 10:32:34 jer Exp $
+
+*cbatticon-1.4.2 (28 Nov 2014)
+
+  28 Nov 2014; Jeroen Roovers <jer@gentoo.org> -cbatticon-1.4.0.ebuild,
+  +cbatticon-1.4.2.ebuild:
+  Version bump.
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

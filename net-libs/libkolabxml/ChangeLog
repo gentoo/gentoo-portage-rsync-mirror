@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libkolabxml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/ChangeLog,v 1.31 2014/11/27 16:51:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/ChangeLog,v 1.34 2014/11/28 15:57:18 mrueg Exp $
+
+  28 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -libkolabxml-0.8.4.ebuild:
+  Cleanup old.
+
+  28 Nov 2014; Agostino Sarubbo <ago@gentoo.org> libkolabxml-1.0.1.ebuild:
+  Stable for ppc64, wrt bug #530880
+
+  28 Nov 2014; Agostino Sarubbo <ago@gentoo.org> libkolabxml-1.0.1.ebuild:
+  Stable for ppc, wrt bug #530880
 
   27 Nov 2014; Agostino Sarubbo <ago@gentoo.org> libkolabxml-1.0.1.ebuild:
   Stable for amd64, wrt bug #530880

@@ -1,6 +1,17 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.160 2014/11/02 22:08:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.162 2014/11/29 08:21:30 radhermit Exp $
+
+  29 Nov 2014; Tim Harder <radhermit@gentoo.org> gentoo-syntax-20120109.ebuild,
+  gentoo-syntax-20130619.ebuild, gentoo-syntax-20141129.ebuild,
+  gentoo-syntax-99999999.ebuild:
+  Repoint HOMEPAGE to github site.
+
+*gentoo-syntax-20141129 (29 Nov 2014)
+
+  29 Nov 2014; Tim Harder <radhermit@gentoo.org>
+  -gentoo-syntax-20141102.ebuild, +gentoo-syntax-20141129.ebuild:
+  Version bump (fixes bug #531076).
 
 *gentoo-syntax-20141102 (02 Nov 2014)
 

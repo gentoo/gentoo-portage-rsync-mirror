@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.4.3-r1.ebuild,v 1.6 2014/08/13 09:23:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.4.3-r1.ebuild,v 1.7 2014/11/28 13:37:39 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
 EGIT_REPO_URI="git://git.sv.gnu.org/weechat.git"
 [[ ${PV} == "9999" ]] && GIT_ECLASS="git-r3"

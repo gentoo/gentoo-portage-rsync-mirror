@@ -1,6 +1,39 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.456 2014/11/08 22:43:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.458 2014/11/28 23:50:28 dilfridge Exp $
+
+*perl-5.20.1-r3 (28 Nov 2014)
+
+  28 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +perl-5.20.1-r3.ebuild:
+  Disable extra optimizations in Digest-SHA, breaks multilib; bug 506818
+
+  28 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/perl-5.8.7-MakeMaker-RUNPATH.patch,
+  -files/perl-5.8.8-CAN-2005-0448-rmtree-2.patch,
+  -files/perl-5.8.8-CVE-2008-1927.patch,
+  -files/perl-5.8.8-USE_MM_LD_RUN_PATH.patch,
+  -files/perl-5.8.8-asm-page-h-compile-failure.patch,
+  -files/perl-5.8.8-ccld-cflags.patch, -files/perl-5.8.8-cplusplus.patch,
+  -files/perl-5.8.8-darwin-cc-ld.patch,
+  -files/perl-5.8.8-dragonfly-clean.patch, -files/perl-5.8.8-fbsdhints.patch,
+  -files/perl-5.8.8-fix_file_path_chdir.patch,
+  -files/perl-5.8.8-gcc42-command-line.patch, -files/perl-5.8.8-lib32.patch,
+  -files/perl-5.8.8-lib64.patch, -files/perl-5.8.8-libnet-hostname.patch,
+  -files/perl-5.8.8-links.patch, -files/perl-5.8.8-makedepend-syntax.patch,
+  -files/perl-5.8.8-perlcc.patch, -files/perl-5.8.8-reorder-INC.patch,
+  -files/perl-5.8.8-solaris-relocation.patch,
+  -files/perl-5.8.8-solaris11.patch, -files/perl-5.8.8-usr-local.patch,
+  -files/perl-5.8.8-utf8-boundary.patch,
+  -files/perl-5.10.1-cleanup-paths.patch, -files/perl-5.10.1-hpux.patch,
+  -files/perl-5.12.3-aix-soname.patch, -files/perl-5.12.3-interix.patch,
+  -files/perl-5.12.3-mint.patch, -files/perl-5.12.5-rehash-5.12.5.patch,
+  -files/perl-5.14.1-cleanup-paths.patch,
+  -files/perl-fix_h2ph_include_quote.patch, -files/perl-h2ph-ansi-header.patch,
+  -files/perl-hppa-pa7200-configure.patch, -files/perl-noksh.patch,
+  -files/perl-perldoc-emptydirs.patch, -files/perl-picdl.patch,
+  -files/perl-prelink-lpthread.patch, -files/perl-regexp-nossp.patch:
+  Remove unused patches (well, actually, all of them... :)
 
   08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -files/eblits/src_configure-v50160001.eblit,

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyenchant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.47 2014/06/30 15:33:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.48 2014/11/29 04:33:20 idella4 Exp $
+
+  29 Nov 2014; Ian Delaney <idella4@gentoo.org> pyenchant-1.6.6.ebuild:
+  clean old python impl
 
 *pyenchant-1.6.6 (30 Jun 2014)
 

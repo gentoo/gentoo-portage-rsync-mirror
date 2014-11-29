@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/bin-prot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/ChangeLog,v 1.29 2014/10/30 16:42:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/ChangeLog,v 1.30 2014/11/28 17:43:58 aballier Exp $
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> bin-prot-112.01.00.ebuild:
+  update deps for ocaml 4.02
 
 *bin-prot-112.01.00 (30 Oct 2014)
 

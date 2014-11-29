@@ -1,6 +1,9 @@
 # ChangeLog for virtual/pywcs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pywcs/ChangeLog,v 1.3 2014/02/05 23:47:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pywcs/ChangeLog,v 1.4 2014/11/28 22:12:19 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> pywcs-0.ebuild:
+  Support python 3.4
 
   05 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> pywcs-0.ebuild:
   Reworked providers for pywcs for newer astropy

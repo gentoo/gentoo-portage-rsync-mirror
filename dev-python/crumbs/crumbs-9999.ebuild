@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/crumbs/crumbs-9999.ebuild,v 1.4 2014/11/09 04:15:50 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/crumbs/crumbs-9999.ebuild,v 1.5 2014/11/28 10:05:10 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 python3_3 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 
 inherit distutils-r1 git-2
 

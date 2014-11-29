@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-gettext/ocaml-gettext-0.3.5.ebuild,v 1.1 2014/10/29 14:26:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-gettext/ocaml-gettext-0.3.5.ebuild,v 1.2 2014/11/28 18:07:50 aballier Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ RDEPEND=">=dev-lang/ocaml-3.12.1:=
 	>=dev-ml/ocaml-fileutils-0.4.0:=
 	>=dev-ml/camomile-0.8.3:=
 	sys-devel/gettext
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )
 	"
 DEPEND="${RDEPEND}
 	doc? ( app-text/docbook-xsl-stylesheets dev-libs/libxslt )

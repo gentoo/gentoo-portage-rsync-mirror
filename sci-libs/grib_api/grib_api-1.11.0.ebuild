@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.11.0.ebuild,v 1.1 2013/10/28 17:25:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.11.0.ebuild,v 1.2 2014/11/28 15:11:07 pacho Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 
 FORTRAN_NEEDED=fortran
 FORTRAN_STANDARD="77 90"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
 
 inherit autotools-utils toolchain-funcs fortran-2 python-single-r1
 

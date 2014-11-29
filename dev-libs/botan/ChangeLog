@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.86 2014/03/16 01:55:33 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.87 2014/11/29 10:09:32 pacho Exp $
+
+  29 Nov 2014; Pacho Ramos <pacho@gentoo.org> botan-1.10.5.ebuild,
+  botan-1.11.4.ebuild, botan-1.11.8.ebuild:
+  Support python 3.4
 
 *botan-1.11.8 (16 Mar 2014)
 

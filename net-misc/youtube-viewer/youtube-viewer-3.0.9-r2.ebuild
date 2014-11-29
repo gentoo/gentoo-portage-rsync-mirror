@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-3.0.9-r2.ebuild,v 1.4 2014/11/22 18:43:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-3.0.9-r2.ebuild,v 1.5 2014/11/28 22:25:11 dilfridge Exp $
 
 EAPI=5
 
@@ -70,7 +70,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	use gtk && gnome2_icon_cache_update
-	perl-module_pkg_postinst
 	einfo
 	elog "optional dependencies:"
 	elog "  dev-perl/LWP-Protocol-https or dev-perl/libwww-perl[ssl]"

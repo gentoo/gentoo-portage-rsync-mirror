@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/fcl
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fcl/ChangeLog,v 1.1 2014/11/28 11:22:03 aballier Exp $
+
+*fcl-9999 (28 Nov 2014)
+*fcl-0.3.2 (28 Nov 2014)
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> +fcl-0.3.2.ebuild,
+  +fcl-9999.ebuild, +metadata.xml:
+  initial import, ebuild by me
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/pomap-3.0.3.ebuild,v 1.4 2014/04/13 16:20:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/pomap-3.0.3.ebuild,v 1.5 2014/11/28 17:38:48 aballier Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://bitbucket.org/mmottl/pomap"
 SRC_URI="http://bitbucket.org/mmottl/pomap/downloads/${P}.tar.gz"
 LICENSE="LGPL-2.1-with-linking-exception"
 
-DEPEND=""
+DEPEND="|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )"
 RDEPEND="${DEPEND}"
 SLOT="0/${PV}"
 KEYWORDS="amd64 ppc x86"

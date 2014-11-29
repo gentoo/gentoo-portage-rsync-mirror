@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/falcon/falcon-0.1.8.ebuild,v 1.1 2014/10/17 14:55:51 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/falcon/falcon-0.1.8.ebuild,v 1.2 2014/11/28 10:27:55 pacho Exp $
 
 EAPI=5
 
 # Python 2.6 is supported, but depends on ordereddict, which has been in
 # improvise for months and is a minimal package. If needed
 # please let me know. PyPy also works
-PYTHON_COMPAT=( python{2_7,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy pypy2_0 )
 
 inherit distutils-r1
 

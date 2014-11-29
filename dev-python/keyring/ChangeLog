@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/keyring
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/keyring/ChangeLog,v 1.15 2014/07/06 12:42:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/keyring/ChangeLog,v 1.16 2014/11/28 10:48:30 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> keyring-3.7.ebuild:
+  Support python 3.4
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> keyring-1.0.ebuild,
   keyring-1.5-r1.ebuild, keyring-1.5.ebuild, keyring-1.6.1.ebuild,

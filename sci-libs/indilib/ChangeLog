@@ -1,6 +1,17 @@
 # ChangeLog for sci-libs/indilib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.45 2014/11/27 16:51:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.48 2014/11/28 17:53:35 mrueg Exp $
+
+  28 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -files/0.9.1-fix_symlinks.patch,
+  -files/indilib-0.9.6-underlinking.patch, -indilib-0.9.6-r1.ebuild,
+  -indilib-0.9.8.1.ebuild:
+  Cleanup old.
+
+  28 Nov 2014; Agostino Sarubbo <ago@gentoo.org> indilib-0.9.9.ebuild:
+  Stable for ppc64, wrt bug #530824
+
+  28 Nov 2014; Agostino Sarubbo <ago@gentoo.org> indilib-0.9.9.ebuild:
+  Stable for ppc, wrt bug #530824
 
   27 Nov 2014; Agostino Sarubbo <ago@gentoo.org> indilib-0.9.9.ebuild:
   Stable for amd64, wrt bug #530824

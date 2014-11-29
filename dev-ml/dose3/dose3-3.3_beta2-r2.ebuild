@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/dose3/dose3-3.3_beta2-r2.ebuild,v 1.2 2014/10/30 16:20:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/dose3/dose3-3.3_beta2-r2.ebuild,v 1.3 2014/11/28 17:55:09 aballier Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ RDEPEND="
 	dev-ml/cudf:=
 	dev-ml/extlib:=
 	dev-ml/ocaml-re:=
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )
 	parmap? ( dev-ml/parmap:= )
 	zip? ( dev-ml/camlzip:= )
 	bzip2? ( dev-ml/camlbz2:= )

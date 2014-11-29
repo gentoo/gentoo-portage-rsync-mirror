@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.73 2014/11/27 23:20:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.74 2014/11/28 16:53:11 radhermit Exp $
+
+  28 Nov 2014; Tim Harder <radhermit@gentoo.org> protobuf-2.5.0-r2.ebuild,
+  protobuf-2.6.1-r1.ebuild, +files/protobuf-2.5.0-emacs-24.4.patch:
+  Fix build with emacs-24.4 (bug #524100, patch by ulm).
 
   27 Nov 2014; Tim Harder <radhermit@gentoo.org> protobuf-2.5.0-r2.ebuild,
   protobuf-2.6.1-r1.ebuild:

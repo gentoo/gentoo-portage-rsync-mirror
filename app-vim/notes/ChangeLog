@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/notes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/ChangeLog,v 1.20 2014/11/06 04:54:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/ChangeLog,v 1.21 2014/11/28 15:10:11 radhermit Exp $
+
+*notes-0.29 (28 Nov 2014)
+
+  28 Nov 2014; Tim Harder <radhermit@gentoo.org> +notes-0.29.ebuild:
+  Version bump.
 
 *notes-0.28.1 (06 Nov 2014)
 

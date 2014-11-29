@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/libasyncns-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libasyncns-python/ChangeLog,v 1.6 2014/08/10 21:13:17 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libasyncns-python/ChangeLog,v 1.7 2014/11/28 10:49:24 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> libasyncns-python-0.7.1-r1.ebuild:
+  Support python 3.4
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   libasyncns-python-0.7.1-r1.ebuild:

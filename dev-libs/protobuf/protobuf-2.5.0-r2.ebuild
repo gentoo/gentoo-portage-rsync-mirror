@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.5.0-r2.ebuild,v 1.3 2014/11/27 23:20:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.5.0-r2.ebuild,v 1.4 2014/11/28 16:53:11 radhermit Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -35,6 +35,9 @@ src_prepare() {
 
 	# breaks Darwin, bug #472514
 	[[ ${CHOST} != *-darwin* ]] && epatch "${FILESDIR}"/${PN}-2.3.0-asneeded-2.patch
+
+	# fix build with emacs-24.4 (bug #524100)
+	epatch "${FILESDIR}"/${P}-emacs-24.4.patch
 
 	autotools-multilib_src_prepare
 

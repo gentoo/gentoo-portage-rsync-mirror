@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pomap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.37 2014/04/13 16:20:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.38 2014/11/28 17:38:48 aballier Exp $
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> pomap-3.0.3.ebuild:
+  update deps for ocaml 4.02
 
   13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> pomap-3.0.3.ebuild:
   Stable for ppc, wrt bug #502732

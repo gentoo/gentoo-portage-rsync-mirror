@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.396 2014/05/14 16:56:14 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.397 2014/11/28 15:20:56 chithanh Exp $
+
+*xterm-312 (28 Nov 2014)
+
+  28 Nov 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xterm-312.ebuild:
+  Version bump, bug #513494.
 
 *xterm-304 (14 May 2014)
 

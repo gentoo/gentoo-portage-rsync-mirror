@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-lang/ocaml-4.0[ocamlopt?] >=dev-ml/findlib-1.3.2 >=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12:=[ocamlopt?]
+DEPEND=|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 ) >=dev-lang/ocaml-4.0[ocamlopt?] >=dev-ml/findlib-1.3.2 >=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12:=[ocamlopt?]
 DESCRIPTION=Mini library required for some other preprocessing libraries
 EAPI=5
 HOMEPAGE=http://janestreet.github.io/
@@ -10,4 +10,4 @@ RDEPEND=>=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/111.13.00
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/111.13.00/individual/type_conv-111.13.00.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=41d25b63480d304fbedfbeaf7547b8af
+_md5_=5d6cd81c715543dbdd552f8d8140fb04

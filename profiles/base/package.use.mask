@@ -1,9 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.628 2014/11/24 17:19:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.629 2014/11/29 02:41:37 grknight Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Brian Evans <grknight@gentoo.org> (29 Nov 2014)
+# Strongly recommened by upstream to disable lzo and zlib due to memory leaks
+# https://github.com/groonga/groonga/issues/6 (Japanese)
+app-text/groonga lzo zlib
 
 # Christoph Junghans <ottxor@gentoo.org> (24 Nov 2014)
 # needs boost auto_index tool (bug #529066)

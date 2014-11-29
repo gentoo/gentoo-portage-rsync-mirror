@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.753 2014/11/24 17:19:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.754 2014/11/29 02:41:37 grknight Exp $
+
+  29 Nov 2014; Brian Evans <grknight@gentoo.org> package.use.mask:
+  Add mask on app-text/groonga[lzo,zlib] for known memory leak issues
 
   24 Nov 2014; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
   mask hpx[doc] (bug #529066)

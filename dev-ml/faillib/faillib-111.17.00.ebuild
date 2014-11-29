@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/faillib/faillib-111.17.00.ebuild,v 1.1 2014/10/30 17:20:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/faillib/faillib-111.17.00.ebuild,v 1.2 2014/11/28 17:51:58 aballier Exp $
 
 EAPI="5"
 
@@ -18,6 +18,7 @@ IUSE=""
 
 DEPEND="
 	dev-ml/herelib:=
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )
 	"
 RDEPEND="${DEPEND}"
 

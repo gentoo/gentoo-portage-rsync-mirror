@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/Fiona
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/ChangeLog,v 1.4 2014/10/07 08:14:10 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/ChangeLog,v 1.5 2014/11/28 14:51:24 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> Fiona-1.1.6.ebuild,
+  Fiona-9999.ebuild:
+  Support python 3.4
 
 *Fiona-1.4.1 (07 Oct 2014)
 

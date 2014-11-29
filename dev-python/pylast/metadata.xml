@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>idella4gentoo.org</email>
+		<name>Ian Delaney</name>
 	</maintainer>
 	<longdescription lang="en">
 Python interface to last.fm and other api-compatible websites

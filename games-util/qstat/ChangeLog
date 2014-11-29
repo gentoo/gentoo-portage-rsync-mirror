@@ -1,6 +1,9 @@
 # ChangeLog for games-util/qstat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/ChangeLog,v 1.28 2012/09/06 01:40:05 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/ChangeLog,v 1.29 2014/11/28 17:18:34 mr_bones_ Exp $
+
+  28 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org> qstat-2.11.ebuild:
+  EAPI=5
 
   06 Sep 2012; Anthony G. Basile <blueness@gentoo.org> qstat-2.11.ebuild:
   Keyword ~arm
@@ -124,5 +127,3 @@
   29 Mar 2002; Bruce A. Locke <blocke@shivan.org> ChangeLog :
   Qstat updated to 24e and ebuild was revamped to make it more version
   independent
-
-

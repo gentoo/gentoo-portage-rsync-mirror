@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.99 2014/06/26 01:28:59 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.100 2014/11/28 08:50:24 idella4 Exp $
+
+  28 Nov 2014; Ian Delaney <idella4@gentoo.org> pyserial-2.7-r1.ebuild:
+  clean old python impls
 
   26 Jun 2014; Patrick McLean <chutzpah@gentoo.org> pyserial-2.7-r1.ebuild:
   Add python3_4

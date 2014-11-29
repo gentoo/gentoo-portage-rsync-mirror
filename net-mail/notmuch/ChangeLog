@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.107 2014/11/23 12:48:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.108 2014/11/28 13:56:06 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> notmuch-0.18.2.ebuild:
+  Support python 3.4
 
   23 Nov 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
   -notmuch-0.18.1.ebuild:

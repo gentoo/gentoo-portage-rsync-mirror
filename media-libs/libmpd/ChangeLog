@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libmpd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.68 2012/07/12 14:58:04 angelos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.69 2014/11/28 19:45:12 angelos Exp $
+
+*libmpd-11.8.17-r1 (28 Nov 2014)
+
+  28 Nov 2014; Christoph Mende <angelos@gentoo.org>
+  +files/libmpd-11.8.17-remove-strndup.patch, +libmpd-11.8.17-r1.ebuild:
+  Remove strndup definition from libmpd-internal.h to fix compilation on
+  glibc-2.20 (bug #528692)
 
   12 Jul 2012; Christoph Mende <angelos@gentoo.org>
   -files/libmpd-0.20.0-overflow.patch, -libmpd-9999.ebuild:

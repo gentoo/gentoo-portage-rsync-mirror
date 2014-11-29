@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/youtube-viewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.39 2014/11/25 22:52:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.40 2014/11/28 22:25:11 dilfridge Exp $
+
+  28 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  youtube-viewer-3.0.8.ebuild, youtube-viewer-3.0.9-r2.ebuild,
+  youtube-viewer-3.1.0.ebuild, youtube-viewer-3.1.1.ebuild,
+  youtube-viewer-9999.ebuild:
+  Remove call to perl-module_pkg_postinst, does not do anything outside
+  perl-core
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

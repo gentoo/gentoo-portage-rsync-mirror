@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mamba/mamba-0.8.2.ebuild,v 1.1 2014/10/25 04:08:22 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mamba/mamba-0.8.2.ebuild,v 1.2 2014/11/28 10:25:16 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 python3_3 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 
 inherit distutils-r1
 

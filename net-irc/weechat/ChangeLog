@@ -1,6 +1,29 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.143 2014/08/13 09:23:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.148 2014/11/29 01:19:50 radhermit Exp $
+
+  29 Nov 2014; Tim Harder <radhermit@gentoo.org> weechat-1.0.1.ebuild,
+  weechat-9999.ebuild:
+  Add test support and drop keywords missing from new test dep
+  (dev-util/cpputest).
+
+  29 Nov 2014; Tim Harder <radhermit@gentoo.org> weechat-1.0.1.ebuild,
+  weechat-9999.ebuild:
+  Drop unused eutils eclass.
+
+  29 Nov 2014; Tim Harder <radhermit@gentoo.org> -weechat-0.4.1.ebuild,
+  -weechat-0.4.2.ebuild:
+  Remove old.
+
+*weechat-1.0.1 (29 Nov 2014)
+
+  29 Nov 2014; Tim Harder <radhermit@gentoo.org> +weechat-1.0.1.ebuild,
+  weechat-9999.ebuild, metadata.xml:
+  Version bump (bug #520088) and add myself as primary maintainer.
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> weechat-0.4.3-r1.ebuild,
+  weechat-9999.ebuild:
+  Support python 3.4
 
   13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> weechat-0.4.3-r1.ebuild:
   Stable for ppc, wrt bug #505476

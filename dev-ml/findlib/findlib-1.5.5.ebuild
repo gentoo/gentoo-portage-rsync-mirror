@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.5.5.ebuild,v 1.1 2014/10/27 08:40:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.5.5.ebuild,v 1.2 2014/11/28 19:02:44 aballier Exp $
 
 EAPI=5
 
@@ -33,9 +33,9 @@ src_configure() {
 }
 
 src_compile() {
-	emake all
+	emake -j1 all
 	if use ocamlopt; then
-		emake opt # optimized code
+		emake -j1 opt # optimized code
 	fi
 }
 

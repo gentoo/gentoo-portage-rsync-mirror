@@ -3,10 +3,10 @@ DEPEND=dev-perl/Moose virtual/perl-ExtUtils-MakeMaker dev-lang/perl:=[-build(-)]
 DESCRIPTION=Name your accessors get_foo() and set_foo(), whatever that may mean
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/MooseX-FollowPBP/
-KEYWORDS=~amd64 ~arm ~x86
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86
 LICENSE=Artistic-2
 RDEPEND=dev-perl/Moose dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DR/DROLSKY/MooseX-FollowPBP-0.05.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	ab36305de1a9fa8909c94f3f1e78eb62	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=4286996421b4fa8b6c0f8fac9e121fae
+_md5_=c3b33b3fa676cb9ee77e940676982350

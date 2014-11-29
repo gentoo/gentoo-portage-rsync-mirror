@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-data-notation
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.15 2013/12/11 19:33:11 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.16 2014/11/28 17:49:31 aballier Exp $
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  ocaml-data-notation-0.0.11.ebuild:
+  update deps for ocaml 4.02
 
 *ocaml-data-notation-0.0.11 (11 Dec 2013)
 

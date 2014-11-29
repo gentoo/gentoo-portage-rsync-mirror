@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/groonga/files/groonga.initd,v 1.1 2014/11/29 02:30:24 grknight Exp $
+
+depend() {
+	use net
+}
+
+start() {
+	ebegin "Starting groonga"
+	checkpath -d /run/groonga -o ${USER:-groonga}:${GROUP:-groonnga}
+	start-stop-daemon --start --quiet --exec /usr/sbin/groonga -- ${GROONGA_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping groonga"
+	start-stop-daemon --stop --quiet --pidfile /var/spool/groonga/groonga.pid
+	eend $?
+}

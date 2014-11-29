@@ -1,10 +1,25 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9568 2014/11/27 18:59:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9573 2014/11/29 00:18:21 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Remove obsolete mask of mail-filter/spamassassin-fuzzyocr
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask dev-ml/camlp4 with ocaml 4.02
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask findlib requiring ocaml 4.02
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask labltk along with ocaml 4.02
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask ocaml 4.02
 
   27 Nov 2014; Tim Harder <radhermit@gentoo.org> package.mask:
   Remove old mask on msp430 toolchain pkgs.

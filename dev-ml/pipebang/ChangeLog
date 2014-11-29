@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pipebang
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pipebang/ChangeLog,v 1.13 2014/02/13 15:33:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pipebang/ChangeLog,v 1.14 2014/11/28 17:46:05 aballier Exp $
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org> pipebang-110.01.00.ebuild:
+  update deps for ocaml 4.02
 
 *pipebang-110.01.00 (13 Feb 2014)
 

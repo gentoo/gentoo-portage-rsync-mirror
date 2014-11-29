@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/sanewall/files/sanewall.initd,v 1.1 2013/06/15 11:07:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/sanewall/files/sanewall.initd,v 1.2 2014/11/28 17:04:05 radhermit Exp $
 
 extra_commands="save panic try"
 extra_started_commands="reload"
@@ -22,36 +22,36 @@ start_pre() {
 
 start() {
 	ebegin "Starting sanewall"
-	/usr/sbin/sanewall ${SANEWALL_CONFIG} start >/dev/null
+	/usr/sbin/sanewall ${SANEWALL_OPTS} ${SANEWALL_CONFIG} start >/dev/null
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping sanewall"
-	/usr/sbin/sanewall stop >/dev/null
+	/usr/sbin/sanewall ${SANEWALL_OPTS} stop >/dev/null
 	eend $?
 }
 
 try() {
 	ebegin "Trying sanewall configuration"
-	/usr/sbin/sanewall ${SANEWALL_CONFIG} try
+	/usr/sbin/sanewall ${SANEWALL_OPTS} ${SANEWALL_CONFIG} try
 	eend $?
 }
 
 status() {
 	ebegin "Showing sanewall status"
-	/usr/sbin/sanewall status
+	/usr/sbin/sanewall ${SANEWALL_OPTS} status
 	eend $?
 }
 
 panic() {
 	ebegin "sanewall panic"
-	/usr/sbin/sanewall panic
+	/usr/sbin/sanewall ${SANEWALL_OPTS} panic
 	eend $?
 }
 
 save() {
 	ebegin "Saving sanewall configuration"
-	/usr/sbin/sanewall save
+	/usr/sbin/sanewall ${SANEWALL_OPTS} save
 	eend $?
 }

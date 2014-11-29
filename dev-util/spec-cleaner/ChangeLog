@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/spec-cleaner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spec-cleaner/ChangeLog,v 1.10 2014/08/13 12:28:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spec-cleaner/ChangeLog,v 1.11 2014/11/28 13:06:14 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> spec-cleaner-0.6.1.ebuild,
+  spec-cleaner-9999.ebuild:
+  Support python 3.4
 
 *spec-cleaner-0.6.1 (13 Aug 2014)
 

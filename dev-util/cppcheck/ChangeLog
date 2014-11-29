@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppcheck
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.57 2014/10/10 13:23:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.58 2014/11/28 13:02:40 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> cppcheck-1.66.ebuild:
+  Support python 3.4
 
   10 Oct 2014; Michael Weber <xmw@gentoo.org> cppcheck-1.65-r1.ebuild:
   Backport ebuild improvements (test, bug 511438), manpage.

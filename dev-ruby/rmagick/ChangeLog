@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.209 2014/11/05 13:56:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.210 2014/11/28 07:04:23 graaff Exp $
+
+*rmagick-2.13.4 (28 Nov 2014)
+
+  28 Nov 2014; Hans de Graaff <graaff@gentoo.org> +rmagick-2.13.4.ebuild:
+  Version bump.
 
   05 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -rmagick-2.13.2.ebuild:
   Cleanup old.

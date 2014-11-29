@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/lwt-2.4.6.ebuild,v 1.3 2014/10/29 09:33:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/lwt-2.4.6.ebuild,v 1.4 2014/11/28 17:59:37 aballier Exp $
 
 EAPI=5
 
@@ -20,7 +20,8 @@ DEPEND="react? ( >=dev-ml/react-1.2:= )
 	dev-libs/libev
 	ssl? ( >=dev-ml/ocaml-ssl-0.4.0:= )
 	gtk? ( dev-ml/lablgtk:= dev-libs/glib:2 )
-	text? ( >=dev-ml/ocaml-text-0.4:= )"
+	text? ( >=dev-ml/ocaml-text-0.4:= )
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )"
 
 RDEPEND="${DEPEND}
 	!<www-servers/ocsigen-1.1"

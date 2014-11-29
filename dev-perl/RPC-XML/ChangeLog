@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.76 2014/10/25 19:11:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.77 2014/11/28 22:14:02 dilfridge Exp $
+
+  28 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  RPC-XML-0.770.0-r1.ebuild, RPC-XML-0.780.0.ebuild:
+  Remove call to perl-module_pkg_postinst, does not do anything outside
+  perl-core
 
 *RPC-XML-0.780.0 (25 Oct 2014)
 

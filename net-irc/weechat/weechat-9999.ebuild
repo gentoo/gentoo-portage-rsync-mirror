@@ -1,34 +1,35 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.33 2014/08/10 20:54:10 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.37 2014/11/29 01:19:50 radhermit Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+inherit python-single-r1 multilib cmake-utils
 
-EGIT_REPO_URI="https://github.com/weechat/weechat.git"
-[[ ${PV} == "9999" ]] && GIT_ECLASS="git-r3"
-inherit eutils python-single-r1 multilib cmake-utils ${GIT_ECLASS}
-
-DESCRIPTION="Portable and multi-interface IRC client"
-HOMEPAGE="http://weechat.org/"
-[[ ${PV} == "9999" ]] || SRC_URI="http://${PN}.org/files/src/${P}.tar.bz2"
-
-LICENSE="GPL-3"
-SLOT="0"
-if [[ ${PV} == "9999" ]]; then
-	KEYWORDS=""
+if [[ ${PV} == "9999" ]] ; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/weechat/weechat.git"
 else
+	SRC_URI="http://${PN}.org/files/src/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~ppc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 fi
 
+DESCRIPTION="Portable and multi-interface IRC client"
+HOMEPAGE="http://weechat.org/"
+
+LICENSE="GPL-3"
+SLOT="0"
+
 NETWORKS="+irc"
-PLUGINS="+alias +charset +fifo +logger +relay +rmodifier +scripts +spell +xfer"
+PLUGINS="+alias +charset +exec +fifo +logger +relay +scripts +spell +trigger +xfer"
 #INTERFACES="+ncurses gtk"
 SCRIPT_LANGS="guile lua +perl +python ruby tcl"
-IUSE="${SCRIPT_LANGS} ${PLUGINS} ${INTERFACES} ${NETWORKS} doc nls +ssl"
+LANGS=" cs de es fr hu it ja pl pt_BR ru tr"
+IUSE="doc nls +ssl test ${LANGS// / linguas_} ${SCRIPT_LANGS} ${PLUGINS} ${INTERFACES} ${NETWORKS}"
+#REQUIRED_USE=" || ( ncurses gtk )"
 
 RDEPEND="
-	dev-libs/libgcrypt:0
+	dev-libs/libgcrypt:0=
 	net-misc/curl[ssl]
 	sys-libs/ncurses
 	sys-libs/zlib
@@ -51,16 +52,10 @@ DEPEND="${RDEPEND}
 		dev-util/source-highlight
 	)
 	nls? ( >=sys-devel/gettext-0.15 )
+	test? ( dev-util/cpputest )
 "
 
 DOCS="AUTHORS.asciidoc ChangeLog.asciidoc ReleaseNotes.asciidoc README.asciidoc"
-
-#REQUIRED_USE=" || ( ncurses gtk )"
-
-LANGS=( cs de es fr hu it ja pl pt_BR ru )
-for X in "${LANGS[@]}" ; do
-	IUSE="${IUSE} linguas_${X}"
-done
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
@@ -76,7 +71,7 @@ src_prepare() {
 		CMakeLists.txt || die "sed failed"
 
 	# install only required translations
-	for i in "${LANGS[@]}" ; do
+	for i in ${LANGS} ; do
 		if ! use linguas_${i} ; then
 			sed -i \
 				-e "/${i}.po/d" \
@@ -107,6 +102,7 @@ src_configure() {
 		$(cmake-utils_use_enable alias)
 		$(cmake-utils_use_enable doc)
 		$(cmake-utils_use_enable charset)
+		$(cmake-utils_use_enable exec)
 		$(cmake-utils_use_enable fifo)
 		$(cmake-utils_use_enable guile)
 		$(cmake-utils_use_enable irc)
@@ -116,13 +112,14 @@ src_configure() {
 		$(cmake-utils_use_enable perl)
 		$(cmake-utils_use_enable python)
 		$(cmake-utils_use_enable relay)
-		$(cmake-utils_use_enable rmodifier)
 		$(cmake-utils_use_enable ruby)
 		$(cmake-utils_use_enable scripts)
 		$(cmake-utils_use_enable scripts script)
 		$(cmake-utils_use_enable spell ASPELL)
 		$(cmake-utils_use_enable ssl GNUTLS)
 		$(cmake-utils_use_enable tcl)
+		$(cmake-utils_use_enable test TESTS)
+		$(cmake-utils_use_enable trigger)
 		$(cmake-utils_use_enable xfer)
 	)
 

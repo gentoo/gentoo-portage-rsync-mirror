@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.47 2014/10/29 09:33:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.48 2014/11/29 09:07:00 idella4 Exp $
+
+  29 Nov 2014; Ian Delaney <idella4@gentoo.org> -paver-1.1.1-r1.ebuild,
+  -paver-1.1.1.ebuild, -paver-1.2.0.ebuild, -paver-1.2.1.ebuild,
+  paver-1.2.3.ebuild:
+  clean old python impl, tweak dep mock
 
   29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> paver-1.2.2.ebuild:
   Stable for sparc, wrt bug #502788

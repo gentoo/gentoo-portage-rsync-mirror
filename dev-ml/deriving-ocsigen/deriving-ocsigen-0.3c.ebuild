@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/deriving-ocsigen/deriving-ocsigen-0.3c.ebuild,v 1.2 2013/07/23 17:39:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/deriving-ocsigen/deriving-ocsigen-0.3c.ebuild,v 1.3 2014/11/28 17:37:27 aballier Exp $
 
 EAPI=5
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64"
 IUSE="+ocamlopt type-conv"
 
 DEPEND=">=dev-lang/ocaml-3.12:=[ocamlopt?]
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )
 	type-conv? ( >=dev-ml/type-conv-108:= )"
 RDEPEND="${DEPEND}"
 

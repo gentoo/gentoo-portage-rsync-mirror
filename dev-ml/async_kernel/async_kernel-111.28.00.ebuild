@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/async_kernel/async_kernel-111.28.00.ebuild,v 1.1 2014/11/10 08:33:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/async_kernel/async_kernel-111.28.00.ebuild,v 1.2 2014/11/28 18:00:49 aballier Exp $
 
 EAPI="5"
 
@@ -26,6 +26,7 @@ DEPEND=">=dev-lang/ocaml-4.00.0:=
 	>=dev-ml/core-109.35.00:=
 	>=dev-ml/herelib-109.35.00:=
 	dev-ml/pa_test:=
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )
 	"
 RDEPEND="${DEPEND}"
 

@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/catfish-1.2.2.ebuild,v 1.2 2014/11/18 15:58:39 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/catfish-1.2.2.ebuild,v 1.3 2014/11/28 12:56:52 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 inherit eutils gnome2-utils python-single-r1
 
 DESCRIPTION="A frontend for find, (s)locate, doodle, tracker, beagle, strigi and pinot"

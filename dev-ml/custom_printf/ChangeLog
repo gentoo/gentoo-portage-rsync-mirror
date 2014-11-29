@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/custom_printf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/custom_printf/ChangeLog,v 1.6 2014/10/30 17:16:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/custom_printf/ChangeLog,v 1.7 2014/11/28 17:54:07 aballier Exp $
+
+  28 Nov 2014; Alexis Ballier <aballier@gentoo.org>
+  custom_printf-111.25.00.ebuild:
+  update deps for ocaml 4.02
 
 *custom_printf-111.25.00 (30 Oct 2014)
 

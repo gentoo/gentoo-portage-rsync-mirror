@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/sexplib-112.01.00.ebuild,v 1.1 2014/10/30 15:48:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/sexplib-112.01.00.ebuild,v 1.2 2014/11/28 17:42:44 aballier Exp $
 
 EAPI=5
 
@@ -19,7 +19,8 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-ml/type-conv-109.60.01:="
+RDEPEND=">=dev-ml/type-conv-109.60.01:=
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )"
 DEPEND="${RDEPEND}"
 
 DOCS=( "README.md" "CHANGES.md" )

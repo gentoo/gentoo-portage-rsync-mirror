@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.18.3.ebuild,v 1.1 2014/10/30 11:02:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.18.3.ebuild,v 1.2 2014/11/28 18:08:38 aballier Exp $
 
 EAPI=5
 
@@ -22,6 +22,7 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 		>=x11-libs/gtkglarea-1.9:2 )
 	spell? ( app-text/gtkspell:2 )
 	sourceview? ( x11-libs/gtksourceview:2.0 )
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )
 	"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

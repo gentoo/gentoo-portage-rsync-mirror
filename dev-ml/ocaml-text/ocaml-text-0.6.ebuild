@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-text/ocaml-text-0.6.ebuild,v 1.2 2013/03/02 18:50:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-text/ocaml-text-0.6.ebuild,v 1.3 2014/11/28 17:50:06 aballier Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ KEYWORDS="~amd64"
 IUSE="pcre"
 
 DEPEND="virtual/libiconv
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )
 	pcre? ( dev-ml/pcre-ocaml:=[ocamlopt?] )"
 RDEPEND="${DEPEND}"
 

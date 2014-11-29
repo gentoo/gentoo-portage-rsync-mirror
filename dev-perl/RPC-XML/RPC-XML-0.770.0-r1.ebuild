@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.770.0-r1.ebuild,v 1.1 2014/08/24 02:42:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.770.0-r1.ebuild,v 1.2 2014/11/28 22:14:02 dilfridge Exp $
 
 EAPI=5
 
@@ -28,8 +28,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 pkg_postinst() {
-	perl-module_pkg_postinst
-
 	SETWARN=0
 	has_version '=www-servers/apache-2*' && HAVE_APACHE2=1
 	has_version '>=www-apache/mod_perl-2.0' && HAVE_MP2=2

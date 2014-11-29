@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-evdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-evdev/ChangeLog,v 1.4 2014/09/19 15:58:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-evdev/ChangeLog,v 1.5 2014/11/28 11:08:14 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> python-evdev-0.4.5.ebuild:
+  Support python 3.4
 
 *python-evdev-0.4.5 (19 Sep 2014)
 

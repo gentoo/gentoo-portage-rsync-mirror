@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-magic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/ChangeLog,v 1.8 2014/06/30 04:38:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/ChangeLog,v 1.9 2014/11/28 11:13:41 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> python-magic-0.4.6-r1.ebuild:
+  Support python 3.4
 
   30 Jun 2014; Mike Gilbert <floppym@gentoo.org> python-magic-0.4.6-r1.ebuild:
   Depend on setuptools.

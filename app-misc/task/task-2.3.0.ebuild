@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-2.3.0.ebuild,v 1.1 2014/08/31 15:35:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-2.3.0.ebuild,v 1.2 2014/11/28 17:16:35 radhermit Exp $
 
 EAPI=5
 
 inherit eutils cmake-utils bash-completion-r1
 
 DESCRIPTION="Taskwarrior is a command-line todo list manager"
-HOMEPAGE="http://taskwarrior.org/projects/show/taskwarrior/"
+HOMEPAGE="http://taskwarrior.org/"
 SRC_URI="http://taskwarrior.org/download/${P}.tar.gz"
 
 LICENSE="MIT"

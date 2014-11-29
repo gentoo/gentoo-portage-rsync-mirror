@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/aplpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/ChangeLog,v 1.17 2014/11/27 18:47:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/ChangeLog,v 1.18 2014/11/28 10:00:53 pacho Exp $
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> aplpy-0.9.14.ebuild:
+  Support python 3.4
 
   27 Nov 2014; Kacper Kowalik <xarthisius@gentoo.org> aplpy-0.9.14.ebuild:
   Pass --offline to setup.py instead of removing ah_bootstrap

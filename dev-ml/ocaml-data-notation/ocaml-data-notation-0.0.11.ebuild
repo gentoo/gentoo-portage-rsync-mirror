@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ocaml-data-notation-0.0.11.ebuild,v 1.1 2013/12/11 19:33:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ocaml-data-notation-0.0.11.ebuild,v 1.2 2014/11/28 17:49:31 aballier Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=">=dev-ml/type-conv-108.07.01:="
+RDEPEND=">=dev-ml/type-conv-108.07.01:=
+	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )"
 DEPEND="${RDEPEND}
 	test? ( >=dev-ml/ounit-2.0.0[ocamlopt?] dev-ml/ocaml-fileutils[ocamlopt?] )"
 

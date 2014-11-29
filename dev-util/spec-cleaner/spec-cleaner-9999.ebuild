@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spec-cleaner/spec-cleaner-9999.ebuild,v 1.4 2014/08/13 12:00:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spec-cleaner/spec-cleaner-9999.ebuild,v 1.5 2014/11/28 13:06:14 pacho Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 EGIT_REPO_URI="https://github.com/openSUSE/spec-cleaner.git"
 inherit distutils-r1
 [[ ${PV} == 9999 ]] && inherit git-r3
