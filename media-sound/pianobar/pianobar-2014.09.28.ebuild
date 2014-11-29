@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/pianobar-2014.09.28.ebuild,v 1.1 2014/10/08 02:18:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/pianobar-2014.09.28.ebuild,v 1.2 2014/11/29 15:50:29 radhermit Exp $
 
 EAPI="5"
 inherit toolchain-funcs flag-o-matic multilib
@@ -10,7 +10,7 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="git://github.com/PromyLOPh/pianobar.git"
 else
 	SRC_URI="http://6xq.net/projects/${PN}/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="A console-based replacement for Pandora's flash player"
