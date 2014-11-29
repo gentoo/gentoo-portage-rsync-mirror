@@ -1,6 +1,16 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.104 2014/11/14 22:46:27 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.106 2014/11/29 11:51:06 zlogene Exp $
+
+*mpv-0.7.0 (29 Nov 2014)
+
+  29 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> +mpv-0.7.0.ebuild,
+  metadata.xml, mpv-9999.ebuild:
+  Version bump wrt bug #530796; Thanks to Nikoli
+
+  29 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> -mpv-0.4.2.ebuild,
+  -mpv-0.5.4.ebuild:
+  Drop old.
 
 *mpv-0.6.2 (14 Nov 2014)
 
