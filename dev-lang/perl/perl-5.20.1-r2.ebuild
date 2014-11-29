@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.20.1-r2.ebuild,v 1.1 2014/10/25 18:19:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.20.1-r2.ebuild,v 1.2 2014/11/29 20:57:32 dilfridge Exp $
 
 EAPI=5
 
@@ -42,8 +42,9 @@ DEPEND="${RDEPEND}
 PDEPEND="
 	>=app-admin/perl-cleaner-2.5
 	>=virtual/perl-File-Temp-0.230.400-r2
+	>=virtual/perl-Data-Dumper-2.154.0
 "
-# bug 390719
+# bug 390719, bug 523624
 
 S="${WORKDIR}/${MY_P}"
 

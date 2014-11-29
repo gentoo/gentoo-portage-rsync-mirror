@@ -1,6 +1,15 @@
 # ChangeLog for virtual/perl-Data-Dumper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Data-Dumper/ChangeLog,v 1.38 2014/11/29 19:52:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Data-Dumper/ChangeLog,v 1.40 2014/11/29 20:53:03 dilfridge Exp $
+
+  29 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Data-Dumper-2.151.0.ebuild, perl-Data-Dumper-2.154.0.ebuild:
+  Remove this stupidity (2.151.0) again because of bug 523624; treat 2.154.0 as
+  version bump and copy ~all keywords from dev-lang/perl
+
+  29 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Data-Dumper-2.145.0-r2.ebuild:
+  Remove old
 
 *perl-Data-Dumper-2.151.0 (29 Nov 2014)
 

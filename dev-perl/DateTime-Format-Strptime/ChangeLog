@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-Strptime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Strptime/ChangeLog,v 1.37 2014/11/29 13:27:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Strptime/ChangeLog,v 1.38 2014/11/29 20:38:58 zlogene Exp $
+
+  29 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
+  DateTime-Format-Strptime-1.540.0-r1.ebuild:
+  Add ~ppc64 keyword wrt bug #497068
 
   29 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
   DateTime-Format-Strptime-1.540.0-r1.ebuild:
