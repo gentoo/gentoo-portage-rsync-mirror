@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/syck
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.32 2014/08/10 20:39:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.33 2014/11/29 22:43:11 monsieurp Exp $
+
+*syck-0.55-r5 (29 Nov 2014)
+
+  29 Nov 2014; Patrice Clement <monsieurp@gentoo.org> +syck-0.55-r5.ebuild,
+  syck-0.55-r4.ebuild:
+  Replace einstall with emake install and revbump the ebuild. See #521434.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> syck-0.55-r4.ebuild:
   QA: drop trailing '.' from DESCRIPTION

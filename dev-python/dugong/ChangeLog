@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dugong
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/ChangeLog,v 1.9 2014/08/22 21:03:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/ChangeLog,v 1.10 2014/11/29 22:47:16 radhermit Exp $
+
+*dugong-3.4 (29 Nov 2014)
+
+  29 Nov 2014; Tim Harder <radhermit@gentoo.org> +dugong-3.4.ebuild:
+  Version bump.
 
   22 Aug 2014; Tim Harder <radhermit@gentoo.org> -dugong-2.2.ebuild,
   -dugong-3.0.ebuild, -dugong-3.1.ebuild:
