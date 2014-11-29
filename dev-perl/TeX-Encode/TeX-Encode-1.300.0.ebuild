@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TeX-Encode/TeX-Encode-1.3-r1.ebuild,v 1.1 2014/08/26 17:33:39 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TeX-Encode/TeX-Encode-1.300.0.ebuild,v 1.1 2014/11/29 19:24:12 dilfridge Exp $
 
 EAPI=5
 
 MODULE_AUTHOR="TIMBRODY"
-
+MODULE_VERSION="1.3"
 inherit perl-module
 
 DESCRIPTION="Encode/decode Perl utf-8 strings into TeX"
@@ -15,5 +15,4 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-perl/HTML-Parser-3.670.0
-	dev-lang/perl"
+DEPEND=">=dev-perl/HTML-Parser-3.670.0"
