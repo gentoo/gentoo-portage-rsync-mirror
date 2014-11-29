@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.159 2014/11/23 15:09:36 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.160 2014/11/29 11:18:41 perfinion Exp $
+
+  29 Nov 2014; Jason Zaman <perfinon@gentoo.org>
+  selinux-base-policy-2.20140311-r7.ebuild, selinux-base-policy-9999.ebuild:
+  Must relabel RDEP not DEP
 
   23 Nov 2014; Sven Vermeulen <swift@gentoo.org>
   selinux-base-policy-9999.ebuild:
