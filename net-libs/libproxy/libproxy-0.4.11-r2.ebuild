@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.11-r2.ebuild,v 1.12 2014/09/15 08:23:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.11-r2.ebuild,v 1.13 2014/11/29 15:03:07 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -24,7 +24,7 @@ RDEPEND="gnome? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
 	kde? ( >=kde-base/kdelibs-4.4.5 )
 	mono? ( dev-lang/mono )
 	networkmanager? ( >=sys-apps/dbus-1.6.18-r1[${MULTILIB_USEDEP}] )
-	perl? ( dev-lang/perl )
+	perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS} )
 	spidermonkey? ( >=dev-lang/spidermonkey-1.8.5:0= )
 	webkit? ( >=net-libs/webkit-gtk-1.6:3= )"

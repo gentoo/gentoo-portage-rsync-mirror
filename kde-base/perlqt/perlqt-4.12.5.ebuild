@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/perlqt-4.12.5.ebuild,v 1.5 2014/05/08 07:32:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/perlqt-4.12.5.ebuild,v 1.6 2014/11/29 15:13:56 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug phonon qimageblitz qscintilla qwt webkit"
 
 RDEPEND="
-	>=dev-lang/perl-5.10.1
+	dev-lang/perl:=
 	dev-perl/List-MoreUtils
 	$(add_kdebase_dep smokeqt 'declarative?,multimedia?,opengl?,phonon?,qimageblitz?,qscintilla?,qthelp?,qwt?,webkit?')
 "

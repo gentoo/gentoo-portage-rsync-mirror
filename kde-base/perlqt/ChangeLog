@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/perlqt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.158 2014/11/16 12:21:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.159 2014/11/29 15:13:56 dilfridge Exp $
+
+  29 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perlqt-4.12.5.ebuild,
+  perlqt-4.14.2.ebuild, perlqt-4.14.3.ebuild:
+  Add slot operator in Perl dependency, since the package links to libperl
 
 *perlqt-4.14.3 (16 Nov 2014)
 

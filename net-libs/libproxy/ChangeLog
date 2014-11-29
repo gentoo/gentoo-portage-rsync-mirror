@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.121 2014/09/15 08:23:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.122 2014/11/29 15:03:07 dilfridge Exp $
+
+  29 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  libproxy-0.4.11-r1.ebuild, libproxy-0.4.11-r2.ebuild:
+  Add slot operator in Perl dependency, since the library links to libperl
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> libproxy-0.4.11-r2.ebuild:
   Stable for sparc, wrt bug #512012
