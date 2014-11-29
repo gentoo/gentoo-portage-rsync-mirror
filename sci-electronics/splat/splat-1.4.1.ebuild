@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/splat-1.4.1.ebuild,v 1.1 2014/11/18 06:50:41 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/splat-1.4.1.ebuild,v 1.2 2014/11/29 12:03:56 tomjbe Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -23,7 +23,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.2.2-gcc43.patch"
 }
 
-src_compile() {
+src_configure() {
 	# fake resulting file from interactive configuration script
 	# using default resolution
 	cat <<- EOF > "${S}/splat.h"
@@ -31,6 +31,9 @@ src_compile() {
 		#define MAXPAGES 9
 		#define HD_MODE 0
 	EOF
+}
+
+src_compile() {
 
 	local CC=$(tc-getCC) CXX=$(tc-getCXX)
 

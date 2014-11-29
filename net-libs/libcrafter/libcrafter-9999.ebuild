@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libcrafter/libcrafter-9999.ebuild,v 1.1 2014/06/26 22:08:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libcrafter/libcrafter-9999.ebuild,v 1.2 2014/11/29 12:08:21 jer Exp $
 
 EAPI=5
 inherit autotools eutils git-r3
@@ -12,10 +12,13 @@ EGIT_REPO_URI="https://github.com/pellegre/${PN}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE="pcap static-libs"
+IUSE="static-libs"
 
+RDEPEND="
+	net-libs/libpcap
+"
 DEPEND="
-	pcap? ( net-libs/libpcap )
+	${RDEPEND}
 "
 
 S=${WORKDIR}/${P}/${PN}
@@ -25,9 +28,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
-		$(use_enable static-libs static) \
-		$(use_with pcap libpcap)
+	econf $(use_enable static-libs static)
 }
 
 src_install() {
