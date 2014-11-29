@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/compface
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.50 2014/11/10 08:28:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.51 2014/11/29 13:13:24 hattya Exp $
+
+  29 Nov 2014; Akinori Hattori <hattya@gentoo.org> -compface-1.5.1.ebuild,
+  -files/compface-1.5.1-destdir.diff, metadata.xml:
+  remove old ebuild
 
   10 Nov 2014; Jeroen Roovers <jer@gentoo.org> compface-1.5.2.ebuild:
   Stable for HPPA (bug #528710).

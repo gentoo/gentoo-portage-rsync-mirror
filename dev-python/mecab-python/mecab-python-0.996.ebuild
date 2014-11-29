@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/mecab-python-0.996.ebuild,v 1.4 2013/09/05 18:46:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/mecab-python-0.996.ebuild,v 1.5 2014/11/29 13:27:52 pacho Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_{6,7},3_{2,3}} )
+PYTHON_COMPAT=( python{2_{6,7},3_{2,3,4}} )
 
 inherit distutils-r1
 

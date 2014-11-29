@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-13.2.0-r1.ebuild,v 1.1 2014/11/12 16:39:44 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-13.2.0-r1.ebuild,v 1.2 2014/11/29 13:10:32 ryao Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -35,7 +35,7 @@ REGULAR_DEPS="
 	cups? ( net-print/cups[abi_x86_32(-)] )
 	gsm? ( media-sound/gsm[abi_x86_32(-)] )
 	jpeg? ( virtual/jpeg[abi_x86_32(-)] )
-	lcms? ( media-libs/lcms:0 )
+	lcms? ( media-libs/lcms:2 )
 	ldap? ( net-nds/openldap[abi_x86_32(-)] )
 	gphoto2? ( media-libs/libgphoto2[abi_x86_32(-)] )
 	mp3? ( >=media-sound/mpg123-1.5.0[abi_x86_32(-)] )

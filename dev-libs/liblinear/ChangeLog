@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblinear
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/ChangeLog,v 1.14 2014/11/23 11:19:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/ChangeLog,v 1.15 2014/11/29 13:29:08 ago Exp $
+
+  29 Nov 2014; Agostino Sarubbo <ago@gentoo.org> liblinear-194-r1.ebuild:
+  Stable for ppc64, wrt bug #480474
 
   23 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> liblinear-194-r1.ebuild:
   arm stable wrt bug #480474

@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.437 2014/11/24 21:38:16 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.438 2014/11/29 13:08:08 zlogene Exp $
+
+  29 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> package.use.mask:
+  Mask dev-vcs/git[mediawiki] (bug #497068)
 
   24 Nov 2014; Ruud Koolen <redlizard@gentoo.org>
   darwin/macos/10.10/profile.bashrc:
