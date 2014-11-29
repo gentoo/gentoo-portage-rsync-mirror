@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/manuel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/ChangeLog,v 1.13 2014/11/25 09:23:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/ChangeLog,v 1.14 2014/11/29 14:27:23 idella4 Exp $
+
+  29 Nov 2014; Ian Delaney <idella4@gentoo.org> manuel-1.7.1.ebuild:
+  clean old python impls, tidy
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> manuel-1.7.1.ebuild:
   Support python 3.4

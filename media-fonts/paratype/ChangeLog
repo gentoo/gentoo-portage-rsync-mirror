@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/paratype
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/paratype/ChangeLog,v 1.5 2012/09/18 04:35:43 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/paratype/ChangeLog,v 1.6 2014/11/29 14:23:09 zlogene Exp $
+
+*paratype-2.5 (29 Nov 2014)
+
+  29 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> +paratype-2.5.ebuild:
+  Version bump (bug #531140)
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -25,4 +30,3 @@
   13 Jan 2011; Ryan Hill <dirtyepic@gentoo.org> +paratype-1.ebuild,
   +metadata.xml:
   Initial import. Ebuild by Azamat H. Hackimov in bug #298732.
-
