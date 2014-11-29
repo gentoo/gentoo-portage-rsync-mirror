@@ -1,10 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp4/camlp4-4.02.0_p1.ebuild,v 1.1 2014/11/28 16:48:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp4/camlp4-4.02.0_p1-r1.ebuild,v 1.1 2014/11/29 14:53:17 aballier Exp $
 
 EAPI=5
-
-inherit multilib
 
 MY_PV=${PV/_p/+}
 MY_P=${PN}-${MY_PV}
@@ -27,7 +25,7 @@ S=${WORKDIR}/${P/_p/-}
 src_configure() {
 	./configure \
 		--bindir="${ED}/usr/bin" \
-		--libdir="${ED}/usr/$(get_libdir)" \
+		--libdir="${D}$(ocamlc -where)" \
 		--pkgdir="${D}$(ocamlc -where)" \
 		|| die
 }
