@@ -1,12 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.45-r1.ebuild,v 1.2 2014/10/26 08:08:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.45-r1.ebuild,v 1.3 2014/11/29 18:06:14 monsieurp Exp $
 
 EAPI=5
 
+PLOCALES="af ca cs da de eo es et eu fr hr id it ja kn ko nb nl pl pt_BR pt ru sl sv uk vi zh_CN zh_HK"
+PLOCALES_BACKUP="en"
+
 # Needed because this package also installs to vendor_perl
 GENTOO_DEPEND_ON_PERL_SUBSLOT="yes"
-inherit perl-app
+inherit perl-app perl-module l10n
 
 DESCRIPTION="Tools for helping translation of documentation"
 HOMEPAGE="http://po4a.alioth.debian.org"
@@ -33,3 +36,29 @@ DEPEND="${RDEPEND}
 		virtual/tex-base )"
 
 SRC_TEST="do"
+
+src_prepare() {
+	# Check against locale files in ${S}/pod/bin for mismatches
+	# with languages listed in PLOCALES
+	local locales_path="$S/po/bin"
+	l10n_find_plocales_changes "$locales_path" "" ".po"
+
+	# Array containing locale files to remove
+	local locales_to_remove=( )
+
+	# Get rid of disabled locales
+	my_get_disabled_locales() {
+		local locale=$1
+		local locale_abs_path="$locales_path/$locale.po"
+		locales_to_remove+=$locale_abs_path
+	}
+
+	l10n_for_each_disabled_locale_do my_get_disabled_locales
+
+	einfo "Your LINGUAS lists the following languages: $LINGUAS"
+	einfo "Removing locale files not listed in it ..."
+
+	# perl_rm_files also updates the Manifest file 
+	# and therefore silences Perl as to .po files we're about to clean
+	perl_rm_files "${locales_to_remove[@]}"
+}

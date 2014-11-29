@@ -1,6 +1,9 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.84 2014/10/26 08:08:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.85 2014/11/29 18:06:14 monsieurp Exp $
+
+  29 Nov 2014; Patrice Clement <monsieurp@gentoo.org> po4a-0.45-r1.ebuild:
+  Honour languages set by LINGUAS. Bug #402691.
 
   26 Oct 2014; Mike Frysinger <vapier@gentoo.org> po4a-0.45-r1.ebuild:
   Mark m68k/s390/sh stable.
