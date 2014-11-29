@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Module-Build
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.88 2014/07/09 20:19:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.89 2014/11/29 20:02:38 dilfridge Exp $
+
+*perl-Module-Build-0.420.500-r1 (29 Nov 2014)
+
+  29 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Module-Build-0.420.500.ebuild, +perl-Module-Build-0.420.500-r1.ebuild:
+  The Perl 5.20 bundled version is deprecated and throws warnings, therefore we
+  install from CPAN; bug 531052
 
 *perl-Module-Build-0.420.500 (09 Jul 2014)
 *perl-Module-Build-0.400.300-r1 (09 Jul 2014)

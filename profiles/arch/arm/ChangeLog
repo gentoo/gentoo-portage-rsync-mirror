@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.328 2014/11/20 01:52:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.330 2014/11/29 20:06:42 maekke Exp $
+
+  29 Nov 2014; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask dev-python/oct2py[doc] for bug #518742
+
+  29 Nov 2014; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask dev-python/ipython[doc] for bug #518742
 
   20 Nov 2014; Davide Pesavento <pesa@gentoo.org> package.mask:
   Move Qt 4.8.6 mask from global package.mask to arch profiles.
