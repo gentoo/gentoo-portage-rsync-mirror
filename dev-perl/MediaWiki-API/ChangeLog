@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MediaWiki-API
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MediaWiki-API/ChangeLog,v 1.9 2014/08/19 11:20:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MediaWiki-API/ChangeLog,v 1.10 2014/11/29 13:31:20 zlogene Exp $
+
+  29 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> MediaWiki-API-0.390.0.ebuild:
+  Add ~ppc keyword wrt bug #497068
 
   19 Aug 2014; Raúl Porcel <armin76@gentoo.org> MediaWiki-API-0.390.0.ebuild:
   Add ~sparc wrt #497068

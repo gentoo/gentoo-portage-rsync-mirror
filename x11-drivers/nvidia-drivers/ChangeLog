@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.593 2014/11/15 17:44:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.594 2014/11/29 13:44:55 jer Exp $
+
+  29 Nov 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.23.ebuild,
+  nvidia-drivers-173.14.39.ebuild, nvidia-drivers-304.123.ebuild,
+  nvidia-drivers-331.104.ebuild, nvidia-drivers-334.21-r3.ebuild,
+  nvidia-drivers-337.25.ebuild, nvidia-drivers-340.58.ebuild,
+  nvidia-drivers-343.22-r2.ebuild:
+  Assume an x11-base/xorg-server update means an ABI change.
 
   15 Nov 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-346.16.ebuild:
   Change REQUIRED_USE X? ( || ( gtk2 gtk3 ) ) to tools? ( || ( gtk gtk3 ) )
