@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r5.ebuild,v 1.12 2014/11/29 20:41:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r5.ebuild,v 1.13 2014/11/30 21:24:44 dilfridge Exp $
 
 EAPI=5
 
@@ -16,7 +16,9 @@ LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 # need keyword request for Mail-SPF ppc ppc64
-IUSE="qmail ssl doc ldap mysql postgres sqlite ipv6"
+IUSE="+berkdb qmail ssl doc ldap mysql postgres sqlite ipv6"
+
+REQUIRED_USE="|| ( berkdb mysql postgres sqlite )"
 
 DEPEND=">=dev-lang/perl-5.8.8-r8
 	virtual/perl-MIME-Base64
@@ -34,10 +36,12 @@ DEPEND=">=dev-lang/perl-5.8.8-r8
 	>=dev-util/re2c-0.12.0
 	dev-perl/Mail-SPF
 	dev-perl/NetAddr-IP
-	virtual/perl-DB_File
 	ssl? (
 		dev-perl/IO-Socket-SSL
 		dev-libs/openssl
+	)
+	berkdb? (
+		virtual/perl-DB_File
 	)
 	ldap? ( dev-perl/perl-ldap )
 	mysql? (
