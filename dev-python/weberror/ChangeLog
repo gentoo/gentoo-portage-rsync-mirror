@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/weberror
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/weberror/ChangeLog,v 1.4 2010/11/15 14:32:44 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/weberror/ChangeLog,v 1.5 2014/11/29 23:55:46 mgorny Exp $
+
+*weberror-0.10.3-r1 (29 Nov 2014)
+
+  29 Nov 2014; Michał Górny <mgorny@gentoo.org> +weberror-0.10.3-r1.ebuild:
+  Convert to distutils-r1.
 
 *weberror-0.10.3 (15 Nov 2010)
 
@@ -23,4 +28,3 @@
   26 Apr 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
   +weberror-0.10.1.ebuild:
   Initial import. Dep of #260168, ebuild by PLL
-

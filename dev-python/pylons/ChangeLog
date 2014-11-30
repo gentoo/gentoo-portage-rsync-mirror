@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylons
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/ChangeLog,v 1.10 2012/11/07 10:28:17 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/ChangeLog,v 1.11 2014/11/30 00:00:05 mgorny Exp $
+
+*pylons-1.0.1-r1 (29 Nov 2014)
+
+  29 Nov 2014; Michał Górny <mgorny@gentoo.org> +pylons-1.0.1-r1.ebuild:
+  Convert to distutils-r1.
 
   07 Nov 2012; Patrick Lauer <patrick@gentoo.org> pylons-1.0.1.ebuild:
   Adding missing dep

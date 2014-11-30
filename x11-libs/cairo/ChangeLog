@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.385 2014/11/20 09:29:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.386 2014/11/29 23:37:46 mgorny Exp $
+
+*cairo-1.12.16-r4 (29 Nov 2014)
+
+  29 Nov 2014; Michał Górny <mgorny@gentoo.org> +cairo-1.12.16-r4.ebuild:
+  Stop wrapping cairo-features.h. Now that we pass consistent configure options,
+  it should be the same on all ABIs. Fixes compatibility with dev-haskell/cairo
+  hackery, bug #531120.
 
   20 Nov 2014; Michał Górny <mgorny@gentoo.org> cairo-1.12.16-r3.ebuild,
   cairo-9999.ebuild:
