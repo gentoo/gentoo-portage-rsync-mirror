@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/crcmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/ChangeLog,v 1.7 2014/02/24 22:33:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/ChangeLog,v 1.8 2014/11/30 11:29:07 mgorny Exp $
+
+*crcmod-1.7-r2 (30 Nov 2014)
+
+  30 Nov 2014; Michał Górny <mgorny@gentoo.org> +crcmod-1.7-r2.ebuild:
+  Convert to distutils-r1.
 
   24 Feb 2014; Mike Frysinger <vapier@gentoo.org> crcmod-1.7-r1.ebuild:
   Add arm love for Chromium OS.
