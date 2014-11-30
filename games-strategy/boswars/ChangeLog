@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/boswars
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.28 2014/08/25 20:31:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.29 2014/11/30 18:03:10 mr_bones_ Exp $
+
+  30 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org> boswars-2.7-r1.ebuild:
+  Needs libsdl[opengl] (bug #531216)
 
   25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -boswars-2.6.1.ebuild,
   -files/boswars-2.6.1-gentoo.patch, -files/boswars-2.6.1-scons-blows.patch:
