@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/json-c-0.12.ebuild,v 1.1 2014/04/12 15:42:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/json-c-0.12.ebuild,v 1.2 2014/11/30 11:34:16 mgorny Exp $
 
 EAPI=5
 
@@ -16,6 +16,12 @@ LICENSE="MIT"
 SLOT="0/0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc static-libs"
+
+RDEPEND="
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20140406-r3
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 
 # tests break otherwise
 AUTOTOOLS_IN_SOURCE_BUILD=1

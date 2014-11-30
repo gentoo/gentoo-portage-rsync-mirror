@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markups/markups-0.2.4-r1.ebuild,v 1.1 2014/11/14 07:22:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markups/markups-0.2.4-r1.ebuild,v 1.2 2014/11/30 11:39:28 idella4 Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_7 python{3_3,3_4} )
+PYTHON_COMPAT=( python2_7 python{3_3,3_4} pypy )
 
 DISTUTILS_NO_PARALLEL_BUILD="true"
 
