@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.77 2014/09/15 14:01:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.78 2014/11/30 17:58:39 jlec Exp $
+
+*ifc-15.0.1.133 (30 Nov 2014)
+
+  30 Nov 2014; Justin Lecher <jlec@gentoo.org> +ifc-15.0.1.133.ebuild:
+  Version Bump
 
 *ifc-15.0.0.090 (15 Sep 2014)
 

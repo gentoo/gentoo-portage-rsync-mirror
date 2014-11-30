@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/intel-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/ChangeLog,v 1.17 2014/09/15 12:34:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/ChangeLog,v 1.18 2014/11/30 17:42:34 jlec Exp $
+
+*intel-common-15.0.1.133 (30 Nov 2014)
+
+  30 Nov 2014; Justin Lecher <jlec@gentoo.org> +intel-common-15.0.1.133.ebuild:
+  Version Bump
 
 *intel-common-15.0.0.090-r1 (15 Sep 2014)
 
