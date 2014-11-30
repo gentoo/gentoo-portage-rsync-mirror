@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-ISO8601
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.25 2014/11/29 13:30:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.26 2014/11/30 08:42:18 zlogene Exp $
+
+  30 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
+  DateTime-Format-ISO8601-0.80.0-r1.ebuild:
+  Add ~ppc64 keyword wrt bug #497068
 
   29 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
   DateTime-Format-ISO8601-0.80.0-r1.ebuild:
