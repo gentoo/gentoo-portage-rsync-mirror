@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1447 2014/11/28 17:40:20 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1448 2014/11/29 23:03:42 mgorny Exp $
+
+  29 Nov 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Remove leftover code for Python 3.2.
 
   28 Nov 2014; Michael Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Adjust sparc warning. See bug #529682

@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/gitolite-gentoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.39 2014/11/15 21:04:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.40 2014/11/29 23:03:39 robbat2 Exp $
+
+*gitolite-gentoo-3.6.1-r1 (29 Nov 2014)
+*gitolite-gentoo-9999 (29 Nov 2014)
+
+  29 Nov 2014; Robin H. Johnson <robbat2@gentoo.org>
+  +gitolite-gentoo-3.6.1-r1.ebuild, +gitolite-gentoo-9999.ebuild:
+  Easy to use 9999 version for testing, and a non-9999 version based on the same
+  ebuild
 
   15 Nov 2014; Christian Ruppert <idl0r@gentoo.org>
   gitolite-gentoo-3.5.3.1.ebuild, gitolite-gentoo-3.6.1.ebuild:

@@ -10,5 +10,5 @@ RDEPEND=>=x11-libs/gtk+-2.10.0:2 dev-python/pygtk:2 >=media-video/recordmydeskto
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/recordmydesktop/gtk-recordmydesktop-0.3.8.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	9cfe19a0cea1d094b0aa1473aba0487d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=18e1746139ddc0fd061d180fff32319c
