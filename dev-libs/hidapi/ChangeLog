@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/hidapi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/ChangeLog,v 1.9 2014/11/12 21:49:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/ChangeLog,v 1.10 2014/11/30 09:30:55 mgorny Exp $
+
+  30 Nov 2014; Michał Górny <mgorny@gentoo.org>
+  hidapi-0.8.0_rc1_p20140201.ebuild:
+  Build GUI only for native ABI, fixes bug #494090 / FL-1831.
 
 *hidapi-0.8.0_rc1_p20140201 (12 Nov 2014)
 

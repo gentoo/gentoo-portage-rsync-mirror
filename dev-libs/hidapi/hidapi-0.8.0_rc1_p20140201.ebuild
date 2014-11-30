@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/hidapi-0.8.0_rc1_p20140201.ebuild,v 1.1 2014/11/12 21:49:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/hidapi-0.8.0_rc1_p20140201.ebuild,v 1.2 2014/11/30 09:30:55 mgorny Exp $
 
 EAPI=5
 
@@ -54,12 +54,12 @@ src_prepare() {
 	autotools-multilib_src_prepare
 }
 
-src_configure() {
+multilib_src_configure() {
 	local myeconfargs=(
-		$(use_enable X testgui)
+		$(multilib_native_use_enable X testgui)
 	)
 
-	autotools-multilib_src_configure
+	autotools-utils_src_configure
 }
 
 src_compile() {
@@ -74,6 +74,6 @@ src_install() {
 	autotools-multilib_src_install
 
 	if use doc; then
-		dohtml -r html/*
+		dohtml -r html/.
 	fi
 }
