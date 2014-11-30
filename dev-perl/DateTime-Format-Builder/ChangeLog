@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-Builder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/ChangeLog,v 1.24 2014/11/29 13:28:13 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/ChangeLog,v 1.25 2014/11/30 15:18:23 zlogene Exp $
+
+  30 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
+  DateTime-Format-Builder-0.810.0-r1.ebuild:
+  Add ~ppc64 keyword wrt bug #497068
 
   29 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
   DateTime-Format-Builder-0.810.0-r1.ebuild:

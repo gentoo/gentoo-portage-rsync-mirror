@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.109 2014/11/21 12:28:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.110 2014/11/30 15:11:57 hasufell Exp $
+
+*hexchat-2.10.2 (30 Nov 2014)
+
+  30 Nov 2014; Julian Ospald <hasufell@gentoo.org> +hexchat-2.10.2.ebuild:
+  version bump
 
   21 Nov 2014; Tobias Klausmann <klausman@gentoo.org> hexchat-2.10.1.ebuild:
   Stable on alpha, bug 521048
