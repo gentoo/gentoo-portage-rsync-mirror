@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10-r5.ebuild,v 1.1 2014/11/30 13:09:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10-r5.ebuild,v 1.2 2014/11/30 13:36:08 mgorny Exp $
 
 EAPI=5
 
@@ -29,6 +29,8 @@ RDEPEND="gtk? ( dev-libs/glib:2 x11-libs/gtk+:2 )
 		xv? ( x11-libs/libXv ) )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup

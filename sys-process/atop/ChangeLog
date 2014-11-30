@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/atop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.48 2014/10/28 21:52:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.49 2014/11/30 13:47:18 polynomial-c Exp $
+
+*atop-2.1 (30 Nov 2014)
+
+  30 Nov 2014; Lars Wendler <polynomial-c@gentoo.org> -atop-1.23.ebuild,
+  +atop-2.1.ebuild, +files/atop-2.1-build.patch:
+  Version bump (bug #531212). Removed old.
 
   28 Oct 2014; Jeroen Roovers <jer@gentoo.org> atop-2.0.2.ebuild,
   files/atop-2.0.2-build.patch:

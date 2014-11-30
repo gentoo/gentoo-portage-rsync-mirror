@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.2.ebuild,v 1.1 2014/11/14 03:34:46 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.2.ebuild,v 1.2 2014/11/30 13:58:35 kensington Exp $
 
 EAPI=5
 
@@ -72,7 +72,7 @@ CDEPEND="
 		!kde? ( || ( >=dev-qt/qtphonon-${QT_PV} media-libs/phonon ) )
 	)
 	plugman? (
-		dev-libs/libattica[qt4]
+		dev-libs/libattica
 		app-arch/libarchive
 		>=dev-qt/qtdeclarative-${QT_PV}
 	)
