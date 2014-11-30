@@ -1,6 +1,21 @@
 # ChangeLog for the default/linux/amd64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.20 2014/10/21 12:12:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.21 2014/11/30 16:25:52 mgorny Exp $
+
+  30 Nov 2014; Michał Górny <mgorny@gentoo.org>
+  +13.0/no-emul-linux-x86/desktop/gnome/eapi,
+  +13.0/no-emul-linux-x86/desktop/gnome/parent,
+  +13.0/no-emul-linux-x86/desktop/gnome/systemd/eapi,
+  +13.0/no-emul-linux-x86/desktop/gnome/systemd/parent,
+  +13.0/no-emul-linux-x86/desktop/kde/eapi,
+  +13.0/no-emul-linux-x86/desktop/kde/parent,
+  +13.0/no-emul-linux-x86/desktop/kde/systemd/eapi,
+  +13.0/no-emul-linux-x86/desktop/kde/systemd/parent,
+  +13.0/no-emul-linux-x86/developer/eapi,
+  +13.0/no-emul-linux-x86/developer/make.defaults,
+  +13.0/no-emul-linux-x86/developer/parent,
+  +13.0/no-emul-linux-x86/selinux/eapi, +13.0/no-emul-linux-x86/selinux/parent:
+  Create more no-emul-linux-x86 subprofiles for testing.
 
   21 Oct 2014; Mike Frysinger <vapier@gentoo.org> +package.use.mask:
   Unmask sys-devel/gcc[sanitize] #504200.
