@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.1_pre20141101.ebuild,v 1.3 2014/11/27 10:09:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.1_pre20141101.ebuild,v 1.4 2014/11/30 10:16:14 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -9,7 +9,9 @@ GNOME2_LA_PUNT="yes"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit bash-completion-r1 eutils gnome2 linux-info multilib systemd user readme.gentoo toolchain-funcs vala versionator virtualx udev
+PYTHON_COMPAT=( python2_7 )
+
+inherit bash-completion-r1 eutils gnome2 linux-info multilib python-any-r1 systemd user readme.gentoo toolchain-funcs vala versionator virtualx udev
 
 DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
 HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
@@ -84,9 +86,10 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	vala? ( $(vala_depend) )
 	test? (
-		dev-lang/python:2.7
-		dev-python/dbus-python[python_targets_python2_7]
-		dev-python/pygobject:2[python_targets_python2_7] )
+		$(python_gen_any_dep '
+			dev-python/dbus-python[${PYTHON_USEDEP}]
+			dev-python/pygobject:2[${PYTHON_USEDEP}]')
+	)
 "
 
 sysfs_deprecated_check() {
@@ -125,10 +128,6 @@ src_prepare() {
 
 	# Find arping at proper place, bug #523632
 	epatch "${FILESDIR}/${PN}-0.9.10.0-arpingpath.patch"
-
-	# Use python2.7 shebangs for test scripts, upstream bug #739448
-	sed -e 's@\(^#!.*python\)@\12.7@' \
-		-i */tests/*.py || die
 
 	# Force use of /run, avoid eautoreconf, upstream bug #737139
 	sed -e 's:$localstatedir/run/:/run/:' -i configure || die
@@ -193,6 +192,7 @@ src_configure() {
 }
 
 src_test() {
+	python_setup
 	Xemake check
 }
 

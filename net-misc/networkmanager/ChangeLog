@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.213 2014/11/27 10:09:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.214 2014/11/30 10:16:14 mgorny Exp $
+
+  30 Nov 2014; Michał Górny <mgorny@gentoo.org>
+  networkmanager-0.9.10.1_pre20141101.ebuild:
+  Use python-any-r1 for the Python dep.
 
   27 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   networkmanager-0.9.10.1_pre20141101.ebuild:
