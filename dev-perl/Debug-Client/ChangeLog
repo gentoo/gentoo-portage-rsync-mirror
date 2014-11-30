@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Debug-Client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Debug-Client/ChangeLog,v 1.9 2014/08/26 15:09:54 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Debug-Client/ChangeLog,v 1.10 2014/11/30 20:50:12 dilfridge Exp $
+
+*Debug-Client-0.290.0 (30 Nov 2014)
+
+  30 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Debug-Client-0.290.0.ebuild:
+  Version bump, bug 525054
 
 *Debug-Client-0.200.0-r1 (26 Aug 2014)
 
