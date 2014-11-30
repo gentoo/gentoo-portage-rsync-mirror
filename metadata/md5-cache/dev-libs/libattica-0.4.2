@@ -1,14 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=qt4? ( dev-qt/qtcore:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtnetwork:5 ) qt5? ( dev-libs/extra-cmake-modules dev-qt/qtconcurrent:5 ) test? ( qt4? ( dev-qt/qtgui:4 dev-qt/qttest:4 ) qt5? ( dev-qt/qttest:5 dev-qt/qtwidgets:5 ) ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-qt/qtcore:4 test? ( dev-qt/qtgui:4 dev-qt/qttest:4 ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=A library providing access to Open Collaboration Services
 EAPI=5
 HOMEPAGE=http://www.kde.org/
-IUSE=debug +qt4 qt5 test
+IUSE=debug test
 KEYWORDS=amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=GPL-2 LGPL-2
-RDEPEND=qt4? ( dev-qt/qtcore:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtnetwork:5 )
-REQUIRED_USE=^^ ( qt4 qt5 )
+RDEPEND=dev-qt/qtcore:4
 SLOT=0
 SRC_URI=mirror://kde/stable/attica/attica-0.4.2.tar.bz2
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=c8ab2031d69ae1a3aec0ac9fb0917640
+_md5_=4501cedcb08cc71f9b9a514899a2b3c7

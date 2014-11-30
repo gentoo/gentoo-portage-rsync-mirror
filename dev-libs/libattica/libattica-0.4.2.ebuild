@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/libattica-0.4.2.ebuild,v 1.5 2013/08/02 14:33:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/libattica-0.4.2.ebuild,v 1.6 2014/11/30 14:05:08 kensington Exp $
 
 EAPI=5
 
@@ -23,31 +23,15 @@ HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-IUSE="debug +qt4 qt5 test"
-
-REQUIRED_USE="^^ ( qt4 qt5 )"
+IUSE="debug test"
 
 RDEPEND="
-	qt4? ( dev-qt/qtcore:4 )
-	qt5? (
-		dev-qt/qtcore:5
-		dev-qt/qtnetwork:5
-	)
+	dev-qt/qtcore:4
 "
 DEPEND="${RDEPEND}
-	qt5? (
-		dev-libs/extra-cmake-modules
-		dev-qt/qtconcurrent:5
-	)
 	test? (
-		qt4? (
-			dev-qt/qtgui:4
-			dev-qt/qttest:4
-		)
-		qt5? (
-			dev-qt/qttest:5
-			dev-qt/qtwidgets:5
-		)
+		dev-qt/qtgui:4
+		dev-qt/qttest:4
 	)
 "
 
@@ -57,7 +41,7 @@ S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_find_package qt5 Qt5Core)
+		-DQT4_BUILD=true
 		$(cmake-utils_use test ATTICA_ENABLE_TESTS)
 	)
 	cmake-utils_src_configure
