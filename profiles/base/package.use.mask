@@ -1,9 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.629 2014/11/29 02:41:37 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.630 2014/11/30 15:57:20 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Michał Górny <mgorny@gentoo.org> (30 Nov 2014)
+# Not supported at the moment. DirectFB lacks multilib support,
+# and we have to decide if we want it.
+x11-libs/cairo directfb
 
 # Brian Evans <grknight@gentoo.org> (29 Nov 2014)
 # Strongly recommened by upstream to disable lzo and zlib due to memory leaks

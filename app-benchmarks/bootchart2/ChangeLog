@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/bootchart2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/ChangeLog,v 1.20 2014/11/24 12:53:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/ChangeLog,v 1.21 2014/11/30 15:33:05 jlec Exp $
+
+*bootchart2-0.14.7-r1 (30 Nov 2014)
+
+  30 Nov 2014; Justin Lecher <jlec@gentoo.org> -bootchart2-0.14.7.ebuild,
+  +bootchart2-0.14.7-r1.ebuild:
+  Fix sed, #530740
 
 *bootchart2-0.14.7 (24 Nov 2014)
 

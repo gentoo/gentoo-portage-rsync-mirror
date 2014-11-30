@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.7.ebuild,v 1.1 2014/11/24 12:53:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.7-r1.ebuild,v 1.1 2014/11/30 15:33:05 jlec Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ src_prepare() {
 		-e "/^SYSTEMD_UNIT_DIR/s:=.*:= $(systemd_get_unitdir):g" \
 		-i Makefile || die
 	sed \
-		-e '/^EXIT_PROC/s:^.*$:EXIT_PROC="agetty mgetty mingetty":g' \
+		-e '/^EXIT_PROC/s:^.*$:EXIT_PROC="agetty mgetty mingetty:g' \
 		-i bootchartd.conf bootchartd.in || die
 }
 
