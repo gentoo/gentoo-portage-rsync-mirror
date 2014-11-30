@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/rust
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.8 2014/11/22 12:20:44 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.9 2014/11/30 12:45:15 jauhien Exp $
+
+  30 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org> rust-999-r1.ebuild,
+  rust-9999-r3.ebuild:
+  support for rust-lldb symlink
 
   22 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org> rust-999-r1.ebuild:
   remove rust-0.12.0-libdir.patch from nightly

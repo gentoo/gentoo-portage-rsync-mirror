@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=app-admin/eselect
 SLOT=0
-SRC_URI=https://github.com/jauhien/eselect-rust/archive/0.2_pre20141011.tar.gz -> eselect-rust-0.2_pre20141011.tar.gz
-_md5_=197ee3ce80e34c9a91d4734bd4ef0538
+SRC_URI=https://github.com/jauhien/eselect-rust/archive/0.2_pre20141128.tar.gz -> eselect-rust-0.2_pre20141128.tar.gz
+_md5_=cce44d814b94c96bb7172b5e96d404a6

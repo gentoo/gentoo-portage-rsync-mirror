@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fmod
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.41 2012/09/24 00:45:16 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.42 2014/11/30 12:31:23 pacho Exp $
+
+  30 Nov 2014; Pacho Ramos <pacho@gentoo.org> fmod-3.75.ebuild:
+  Drop amd64 deps as this package isn't even keyworded for amd64
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> fmod-3.75.ebuild,
   fmod-4.38.00.ebuild, fmod-4.38.02.ebuild:

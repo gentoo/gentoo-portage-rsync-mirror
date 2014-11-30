@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/crayon-physics/crayon-physics-55.ebuild,v 1.7 2014/05/15 16:47:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/crayon-physics/crayon-physics-55.ebuild,v 1.8 2014/11/30 12:36:38 pacho Exp $
 
 EAPI=5
 
@@ -22,20 +22,24 @@ QA_PREBUILT="${MYGAMEDIR#/}/crayon
 
 # fuck this pulseaudio linkage
 RDEPEND="
-	virtual/opengl
-	amd64? (
-		app-emulation/emul-linux-x86-opengl
-		app-emulation/emul-linux-x86-qtlibs
-		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-soundlibs
-		app-emulation/emul-linux-x86-xlibs
+	|| (
+		(
+			media-sound/pulseaudio[abi_x86_32(-)]
+			dev-qt/qtcore:4[abi_x86_32(-)]
+			dev-qt/qtgui:4[abi_x86_32(-)]
+			virtual/glu[abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-qtlibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		)
 	)
 	x86? (
-		media-sound/pulseaudio
-		dev-qt/qtcore:4
-		dev-qt/qtgui:4
-		virtual/glu
-		x11-libs/libX11
 		!bundled-libs? (
 			media-libs/libmikmod
 			media-libs/libsdl:0[X,sound,video,opengl,joystick]

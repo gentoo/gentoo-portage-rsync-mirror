@@ -1,6 +1,11 @@
 # ChangeLog for app-text/htmlc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlc/ChangeLog,v 1.7 2013/12/24 12:55:56 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlc/ChangeLog,v 1.8 2014/11/30 12:59:06 aballier Exp $
+
+*htmlc-2.60.0 (30 Nov 2014)
+
+  30 Nov 2014; Alexis Ballier <aballier@gentoo.org> +htmlc-2.60.0.ebuild:
+  version bump
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> htmlc-2.40.0.ebuild:
   Stable for x86, wrt bug #491944

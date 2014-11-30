@@ -1,11 +1,11 @@
 DEFINED_PHASES=install postinst postrm prepare unpack
-DEPEND=>=app-admin/eselect-rust-0.2_pre20141011 !dev-lang/rust:0 net-misc/wget
+DEPEND=>=app-admin/eselect-rust-0.2_pre20141128 !dev-lang/rust:0 net-misc/wget
 DESCRIPTION=Systems programming language from Mozilla
 EAPI=5
 HOMEPAGE=http://www.rust-lang.org/
 IUSE=emacs vim-syntax zsh-completion
 LICENSE=|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA
-RDEPEND=>=app-admin/eselect-rust-0.2_pre20141011 !dev-lang/rust:0 emacs? ( >=app-emacs/rust-mode-999 ) vim-syntax? ( >=app-vim/rust-mode-999 ) zsh-completion? ( >=app-shells/rust-zshcomp-999 )
+RDEPEND=>=app-admin/eselect-rust-0.2_pre20141128 !dev-lang/rust:0 emacs? ( >=app-emacs/rust-mode-999 ) vim-syntax? ( >=app-vim/rust-mode-999 ) zsh-completion? ( >=app-shells/rust-zshcomp-999 )
 SLOT=0
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=1d774cf8183cdae96912a07ae400f923
+_md5_=0df8b3d4e4d2b881ca7aa6fe0e7383b3

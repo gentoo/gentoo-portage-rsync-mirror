@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/rust-bin-999.ebuild,v 1.1 2014/10/18 12:50:48 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/rust-bin-999.ebuild,v 1.2 2014/11/30 12:46:22 jauhien Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ KEYWORDS=""
 
 IUSE="emacs vim-syntax zsh-completion"
 
-CDEPEND=">=app-admin/eselect-rust-0.2_pre20141011
+CDEPEND=">=app-admin/eselect-rust-0.2_pre20141128
 	!dev-lang/rust:0
 "
 DEPEND="${CDEPEND}
@@ -51,11 +51,15 @@ src_install() {
 
 	local rustc=rustc-bin-${PV}
 	local rustdoc=rustdoc-bin-${PV}
+	local rustlldb=rust-lldb-bin-${PV}
 
 	mv "${D}/opt/${P}/bin/rustc" "${D}/opt/${P}/bin/${rustc}" || die
 	mv "${D}/opt/${P}/bin/rustdoc" "${D}/opt/${P}/bin/${rustdoc}" || die
+	mv "${D}/opt/${P}/bin/rust-lldb" "${D}/opt/${P}/bin/${rustlldb}" || die
+
 	dosym "/opt/${P}/bin/${rustc}" "/usr/bin/${rustc}"
 	dosym "/opt/${P}/bin/${rustdoc}" "/usr/bin/${rustdoc}"
+	dosym "/opt/${P}/bin/${rustlldb}" "/usr/bin/${rustlldb}"
 
 	cat <<-EOF > "${T}"/50${P}
 	LDPATH="/opt/${P}/lib"
@@ -74,6 +78,11 @@ pkg_postinst() {
 	elog "and 'eselect rust set' to list and set rust version."
 	elog "For more information see 'eselect rust help'"
 	elog "and http://wiki.gentoo.org/wiki/Project:Eselect/User_guide"
+
+	elog "Rust installs a helper script for calling LLDB now,"
+	elog "for your convenience it is installed under /usr/bin/rust-lldb-bin-${PV},"
+	elog "but note, that there is no LLDB ebuild in the tree currently,"
+	elog "so you are on your own if you want to use it."
 }
 
 pkg_postrm() {

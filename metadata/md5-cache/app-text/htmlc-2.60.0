@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install
+DEPEND=>=dev-lang/ocaml-3.11.2:=[ocamlopt?]
+DESCRIPTION=HTML template files expander
+EAPI=5
+HOMEPAGE=http://htmlc.inria.fr/
+IUSE=+ocamlopt
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=htmlc
+RDEPEND=>=dev-lang/ocaml-3.11.2:=[ocamlopt?]
+SLOT=0
+SRC_URI=http://htmlc.inria.fr/htmlc-2.6.tgz
+_md5_=1e6f50e05bbf5883854d925a3a0c3284

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-9999-r3.ebuild,v 1.2 2014/11/21 10:39:00 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-9999-r3.ebuild,v 1.3 2014/11/30 12:45:15 jauhien Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ IUSE="clang debug emacs libcxx +system-llvm vim-syntax zsh-completion"
 REQUIRED_USE="libcxx? ( clang )"
 
 CDEPEND="libcxx? ( sys-libs/libcxx )
-	>=app-admin/eselect-rust-0.2_pre20141011
+	>=app-admin/eselect-rust-0.2_pre20141128
 	!dev-lang/rust:0
 "
 DEPEND="${CDEPEND}
@@ -86,6 +86,7 @@ src_install() {
 
 	mv "${D}/usr/bin/rustc" "${D}/usr/bin/rustc-${PV}" || die
 	mv "${D}/usr/bin/rustdoc" "${D}/usr/bin/rustdoc-${PV}" || die
+	mv "${D}/usr/bin/rust-lldb" "${D}/usr/bin/rust-lldb-${PV}" || die
 
 	cat <<-EOF > "${T}"/50${P}
 	LDPATH="/usr/lib/${P}"
@@ -104,6 +105,11 @@ pkg_postinst() {
 	elog "and 'eselect rust set' to list and set rust version."
 	elog "For more information see 'eselect rust help'"
 	elog "and http://wiki.gentoo.org/wiki/Project:Eselect/User_guide"
+
+	elog "Rust installs a helper script for calling LLDB now,"
+	elog "for your convenience it is installed under /usr/bin/rust-lldb-${PV},"
+	elog "but note, that there is no LLDB ebuild in the tree currently,"
+	elog "so you are on your own if you want to use it."
 }
 
 pkg_postrm() {
