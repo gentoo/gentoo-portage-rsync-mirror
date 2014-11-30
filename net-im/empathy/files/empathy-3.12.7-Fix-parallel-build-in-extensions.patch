@@ -1,0 +1,54 @@
+From 24e4480421483685dfc493ad38089c286a8c5f4a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?R=C3=A9mi=20Cardona?= <remi@gentoo.org>
+Date: Sun, 30 Nov 2014 22:10:59 +0100
+Subject: [PATCH] Fix parallel build in extensions/
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+GNU Make manual says:
+
+    A rule with multiple targets is equivalent to writing many rules,
+    each with one target, and all identical aside from that.
+
+In other words, make may very well call glib-gtypes-generator.py twice
+(once for each generated header). And hell breaks loose because the
+python code assumes it will run once (it should be using the tempfile
+module, but that's another bug). On a fast multi-core machine, make -j4
+will easily reproduce this bug.
+
+The solution is hidden in the same manual [1] :
+
+    %.tab.c %.tab.h: %.y
+            bison -d $<
+
+    This tells make that the recipe ‘bison -d x.y’ will make both
+    x.tab.c and x.tab.h.
+
+So by using '%' to replace the 'y' in the targets, I'm telling make that
+running the recipe once will generate both files.
+
+[1] http://www.gnu.org/software/make/manual/make.html#Pattern-Examples
+
+https://bugs.gentoo.org/show_bug.cgi?id=515894
+https://bugzilla.gnome.org/show_bug.cgi?id=685837
+---
+ extensions/Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/extensions/Makefile.am b/extensions/Makefile.am
+index 79622d4..ebe5fac 100644
+--- a/extensions/Makefile.am
++++ b/extensions/Makefile.am
+@@ -66,7 +66,7 @@ extensions.html: _gen/all.xml $(tools_dir)/doc-generator.xsl
+ 		$(tools_dir)/doc-generator.xsl \
+ 		$< > $@
+ 
+-_gen/gtypes.h _gen/gtypes-body.h: _gen/all.xml \
++_gen/gt%pes.h _gen/gt%pes-body.h: _gen/all.xml \
+ 	$(top_srcdir)/tools/glib-gtypes-generator.py
+ 	$(AM_V_GEN)$(PYTHON) $(top_srcdir)/tools/glib-gtypes-generator.py \
+ 		$< _gen/gtypes Emp
+-- 
+2.1.3
+

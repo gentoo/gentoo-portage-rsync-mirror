@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.7.ebuild,v 1.2 2014/11/25 15:19:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.7.ebuild,v 1.3 2014/11/30 22:00:59 remi Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_{6,7} python3_{2,3,4} )
 
-inherit gnome2 python-any-r1 virtualx
+inherit gnome2 autotools python-any-r1 virtualx
 
 DESCRIPTION="Telepathy instant messaging and video/audio call client for GNOME"
 HOMEPAGE="https://wiki.gnome.org/Apps/Empathy"
@@ -95,6 +95,12 @@ PDEPEND=">=net-im/telepathy-mission-control-5.14"
 pkg_setup() {
 	python-any-r1_pkg_setup
 	export PYTHONIOENCODING=UTF-8 # See bug 489774
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-3.12.7-Fix-parallel-build-in-extensions.patch"
+	eautoreconf
+	gnome2_src_prepare
 }
 
 src_configure() {

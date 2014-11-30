@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/MooseX-Getopt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/ChangeLog,v 1.45 2013/09/09 11:49:52 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/ChangeLog,v 1.46 2014/11/30 21:39:50 dilfridge Exp $
+
+*MooseX-Getopt-0.650.0 (30 Nov 2014)
+
+  30 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -MooseX-Getopt-0.500.0.ebuild, -MooseX-Getopt-0.510.0.ebuild,
+  -MooseX-Getopt-0.520.0.ebuild, -MooseX-Getopt-0.540.0.ebuild,
+  +MooseX-Getopt-0.650.0.ebuild:
+  Version bump, bug 524096
 
   09 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> MooseX-Getopt-0.560.0.ebuild:
   Add ~arm keyword, wrt bug #449762
