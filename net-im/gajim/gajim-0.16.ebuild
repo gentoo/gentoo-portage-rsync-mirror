@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16.ebuild,v 1.3 2014/11/12 13:07:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16.ebuild,v 1.4 2014/11/30 16:38:02 mgorny Exp $
 
 EAPI=5
 
@@ -54,12 +54,12 @@ RDEPEND="${COMMON_DEPEND}
 		avahi? ( net-dns/avahi[dbus,gtk,python,${PYTHON_USEDEP}] )
 		)
 	gnome? (
-		dev-python/libgnome-python
-		dev-python/egg-python
+		dev-python/libgnome-python[${PYTHON_USEDEP}]
+		dev-python/egg-python[${PYTHON_USEDEP}]
 		)
-	gnome-keyring? ( dev-python/gnome-keyring-python )
+	gnome-keyring? ( dev-python/gnome-keyring-python[${PYTHON_USEDEP}] )
 	idle? ( x11-libs/libXScrnSaver )
-	jingle? ( net-libs/farstream:0.1[python] )
+	jingle? ( net-libs/farstream:0.1[python,${PYTHON_USEDEP}] )
 	kde? ( kde-base/kwalletmanager )
 	networkmanager? (
 			dev-python/dbus-python[${PYTHON_USEDEP}]

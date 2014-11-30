@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/electrum
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.23 2014/03/17 21:15:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.24 2014/11/30 16:43:05 mgorny Exp $
+
+  30 Nov 2014; Michał Górny <mgorny@gentoo.org> electrum-1.9.7.ebuild,
+  electrum-1.9.8.ebuild:
+  Add missing PYTHON_USEDEPs.
 
 *electrum-1.9.8 (17 Mar 2014)
 

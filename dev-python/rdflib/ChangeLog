@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rdflib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.48 2014/11/20 16:59:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.49 2014/11/30 16:58:29 mgorny Exp $
+
+  30 Nov 2014; Michał Górny <mgorny@gentoo.org> rdflib-4.1.2.ebuild:
+  Add missing PYTHON_USEDEPs.
 
   20 Nov 2014; Tobias Klausmann <klausman@gentoo.org> rdflib-4.1.2.ebuild:
   Keyworded on alpha, bug 518436

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-3.1.1.ebuild,v 1.1 2014/05/11 18:25:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-3.1.1.ebuild,v 1.2 2014/11/30 16:46:45 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -28,9 +28,9 @@ RDEPEND="dev-libs/keybinder:3[introspection]
 	!gstreamer? ( media-libs/xine-lib )
 	dbus? (
 		app-misc/media-player-info
-		dev-python/dbus-python
+		dev-python/dbus-python[${PYTHON_USEDEP}]
 		)
-	ipod? ( media-libs/libgpod[python] )
+	ipod? ( media-libs/libgpod[python,${PYTHON_USEDEP}] )
 	udev? ( virtual/udev )"
 DEPEND="dev-util/intltool"
 REQUIRED_USE="ipod? ( dbus )"

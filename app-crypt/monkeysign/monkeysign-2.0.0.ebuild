@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/monkeysign-2.0.0.ebuild,v 1.1 2014/11/06 16:50:01 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/monkeysign-2.0.0.ebuild,v 1.2 2014/11/30 16:41:39 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 CDEPEND="dev-python/pygtk:2[${PYTHON_USEDEP}]
-	media-gfx/zbar:0[python,gtk,imagemagick]
+	media-gfx/zbar:0[python,gtk,imagemagick,${PYTHON_USEDEP}]
 	media-gfx/qrencode-python[${PYTHON_USEDEP}]
 	virtual/python-imaging[${PYTHON_USEDEP}]"
 

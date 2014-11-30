@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-4.1.2.ebuild,v 1.7 2014/11/20 16:59:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-4.1.2.ebuild,v 1.8 2014/11/30 16:58:29 mgorny Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ RDEPEND="
 	dev-python/pyparsing[${PYTHON_USEDEP}]
 	berkdb? ( dev-python/bsddb3[${PYTHON_USEDEP}] )
 	mysql? ( dev-python/mysql-python[$(python_gen_usedep 'python2*')] )
-	redland? ( dev-libs/redland-bindings[python] )"
+	redland? ( dev-libs/redland-bindings[python,$(python_gen_usedep 'python2*')] )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/sparql-wrapper[${PYTHON_USEDEP}]

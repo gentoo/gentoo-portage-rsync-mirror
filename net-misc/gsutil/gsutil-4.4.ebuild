@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/gsutil-4.4.ebuild,v 1.1 2014/08/12 05:12:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/gsutil-4.4.ebuild,v 1.2 2014/11/30 16:39:18 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,7 +19,7 @@ IUSE=""
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
 	>=dev-python/boto-2.30.0[${PYTHON_USEDEP}]
-	>=dev-python/crcmod-1.7
+	>=dev-python/crcmod-1.7[${PYTHON_USEDEP}]
 	>=dev-python/httplib2-0.8[${PYTHON_USEDEP}]
 	>=dev-python/pyopenssl-0.13[${PYTHON_USEDEP}]
 	>=dev-python/gcs-oauth2-boto-plugin-1.7[${PYTHON_USEDEP}]

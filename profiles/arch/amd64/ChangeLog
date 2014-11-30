@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.292 2014/11/16 02:25:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.293 2014/11/30 16:58:15 mgorny Exp $
+
+  30 Nov 2014; Michał Górny <mgorny@gentoo.org>
+  +no-emul-linux-x86/package.use.mask:
+  Mask sys-devel/gcc[gcj] since the multilib deps are broken for a long time
+  with no will from the maintainer to accept a patch.
 
   16 Nov 2014; Mike Gilbert <floppym@gentoo.org> use.stable.mask:
   Drop unneeded python3_4 (un)mask.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.9.8.ebuild,v 1.1 2014/03/17 21:15:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.9.8.ebuild,v 1.2 2014/11/30 16:43:05 mgorny Exp $
 
 EAPI="5"
 
@@ -32,7 +32,7 @@ RDEPEND="
 	>=dev-python/ecdsa-0.9[${PYTHON_USEDEP}]
 	dev-python/slowaes[${PYTHON_USEDEP}]
 	gtk? ( dev-python/pygtk:2[${PYTHON_USEDEP}] )
-	qrcode? ( media-gfx/zbar[python] )
+	qrcode? ( media-gfx/zbar[python,${PYTHON_USEDEP}] )
 	qt4? (
 		 webkit? ( dev-python/PyQt4[webkit] )
 		 dev-python/PyQt4[${PYTHON_USEDEP}]

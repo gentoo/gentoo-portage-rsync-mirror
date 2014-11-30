@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyodbc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyodbc/ChangeLog,v 1.8 2014/01/14 13:52:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyodbc/ChangeLog,v 1.9 2014/11/30 16:33:00 mgorny Exp $
+
+*pyodbc-3.0.7-r1 (30 Nov 2014)
+
+  30 Nov 2014; Michał Górny <mgorny@gentoo.org> +pyodbc-3.0.7-r1.ebuild:
+  Convert to distutils-r1.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pyodbc-3.0.7.ebuild:
   Stable for x86, wrt bug #491576

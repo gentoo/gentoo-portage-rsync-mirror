@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/monkeysign
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/ChangeLog,v 1.5 2014/11/06 16:50:01 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/ChangeLog,v 1.6 2014/11/30 16:41:39 mgorny Exp $
+
+  30 Nov 2014; Michał Górny <mgorny@gentoo.org> monkeysign-1.1-r2.ebuild,
+  monkeysign-2.0.0.ebuild:
+  Add missing PYTHON_USEDEPs.
 
 *monkeysign-2.0.0 (06 Nov 2014)
 
