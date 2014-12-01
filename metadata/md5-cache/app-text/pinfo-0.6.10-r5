@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=sys-libs/ncurses sys-libs/readline nls? ( virtual/libintl ) sys-devel/bison virtual/pkgconfig nls? ( sys-devel/gettext ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Hypertext info and man viewer based on (n)curses
+EAPI=5
+HOMEPAGE=http://pinfo.alioth.debian.org/
+IUSE=nls readline
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=sys-libs/ncurses sys-libs/readline nls? ( virtual/libintl )
+SLOT=0
+SRC_URI=https://alioth.debian.org/frs/download.php/3351/pinfo-0.6.10.tar.bz2
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=73d9f2747c57edb031356fe3e6a02c1e

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pinfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.78 2014/06/08 23:21:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.79 2014/12/01 12:24:32 jer Exp $
+
+*pinfo-0.6.10-r5 (01 Dec 2014)
+
+  01 Dec 2014; Jeroen Roovers <jer@gentoo.org> +pinfo-0.6.10-r5.ebuild:
+  Try eautoreconf instead of autogen.sh.
 
   08 Jun 2014; Jeroen Roovers <jer@gentoo.org> pinfo-0.6.10-r4.ebuild,
   +files/pinfo-0.6.10-gettext-0.19.patch:
