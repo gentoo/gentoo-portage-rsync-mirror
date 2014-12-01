@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/burp/files/burp.initd,v 1.1 2014/12/01 16:28:47 aidecoe Exp $
+
+PIDFILE=/run/burp-server.pid
+
+depend() {
+	need localmount
+	after bootmisc
+	use net
+}
+
+start() {
+	ebegin "Starting burp server"
+	checkpath -o burp:burp -m 0775 -d /run/lock/burp
+	checkpath -o root:burp -m 0775 -d /etc/burp
+	checkpath -o root:burp -m 0775 -d /etc/burp/CA
+	checkpath -o root:burp -m 0750 -d /etc/burp/clientconfdir
+	checkpath -o root:burp -m 0640 -f /etc/burp/burp-server.conf
+	start-stop-daemon --start \
+		--pidfile "$PIDFILE" \
+		--make-pidfile \
+		--background \
+		--wait 500 \
+		--exec /usr/sbin/burp -- -c /etc/burp/burp-server.conf -F
+	eend $? "Failed to start burp server"
+}
+
+stop() {
+	ebegin "Stopping burp server"
+	start-stop-daemon --stop \
+		--pidfile "$PIDFILE"
+	eend $? "Failed to stop burp server"
+}

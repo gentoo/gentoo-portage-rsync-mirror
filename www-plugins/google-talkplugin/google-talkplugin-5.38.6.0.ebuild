@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-5.38.5.0.ebuild,v 1.1 2014/11/08 20:22:26 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-5.38.6.0.ebuild,v 1.1 2014/12/01 16:25:07 ottxor Exp $
 
 EAPI=5
 

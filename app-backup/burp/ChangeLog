@@ -1,0 +1,27 @@
+# ChangeLog for app-backup/burp
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/burp/ChangeLog,v 1.1 2014/12/01 16:28:47 aidecoe Exp $
+
+*burp-1.4.26 (01 Dec 2014)
+*burp-1.3.48 (01 Dec 2014)
+*burp-1.3.8 (01 Dec 2014)
+
+  01 Dec 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +burp-1.3.8.ebuild,
+  +burp-1.3.48.ebuild, +burp-1.4.26.ebuild, +files/1.3.8-bedup-conf-path.patch,
+  +files/1.3.48-bedup-conf-path.patch, +files/1.3.48-tinfo.patch,
+  +files/1.4.26-bedup-conf-path.patch, +files/1.4.26-tinfo.patch,
+  +files/burp.initd, +metadata.xml:
+  Add initial version of the burp package. Import ebuilds from the aidecoe's
+  overlay [1]. Add various versions at once: 1.3.48 is the latest stable
+  version, 1.4.26 is the latest stable candidate and 1.3.8 is an old version
+  for people who use burp on Debian and want to have the same version.
+
+  Thanks for contribution to (in order by first name):
+  - Aurelien Reynaud <aurelien@wattapower.net>
+  - Jared B. <nitro@legroom.net>
+  - Jeroen Roovers <jer@gentoo.org>
+
+  Thanks to perfinion for review.
+
+  [1] https://github.com/aidecoe/aidecoe-overlay
+
