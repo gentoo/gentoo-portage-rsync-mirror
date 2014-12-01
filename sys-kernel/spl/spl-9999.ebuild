@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.42 2014/09/05 18:30:46 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.43 2014/12/01 05:45:21 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -45,6 +45,7 @@ pkg_setup() {
 		MODULES
 		KALLSYMS
 		!PAX_KERNEXEC_PLUGIN_METHOD_OR
+		!PAX_RANDKSTACK
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 	"
@@ -96,7 +97,7 @@ src_configure() {
 }
 
 src_install() {
-	autotools-utils_src_install INSTALL_MOD_PATH=${INSTALL_MOD_PATH:-$EROOT}
+	autotools-utils_src_install INSTALL_MOD_PATH="${INSTALL_MOD_PATH:-$EROOT}"
 	dodoc AUTHORS DISCLAIMER README.markdown
 }
 

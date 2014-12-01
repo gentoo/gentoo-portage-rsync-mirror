@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.8.7.1_p1.ebuild,v 1.1 2014/11/06 06:16:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.8.7.1_p1.ebuild,v 1.2 2014/12/01 05:50:43 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -29,7 +29,7 @@ S=${WORKDIR}/${MY_P}
 PATCHES=( "${FILESDIR}"/${PN}-3.6.20.1-fix_tests.patch )
 
 python_compile() {
-	if [[ ${EPYTHON} == python2* ]]; then
+	if ! python_is_python3; then
 		local CFLAGS="${CFLAGS} -fno-strict-aliasing"
 		export CFLAGS
 	fi

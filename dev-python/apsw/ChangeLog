@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.72 2014/11/06 06:16:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.73 2014/12/01 05:50:43 idella4 Exp $
+
+  01 Dec 2014; Ian Delaney <idella4@gentoo.org> -apsw-3.7.17_p1.ebuild,
+  -apsw-3.8.0.2_p1.ebuild, -apsw-3.8.0_p2.ebuild, -apsw-3.8.1_p1.ebuild,
+  -apsw-3.8.2_p1.ebuild, -apsw-3.8.3.1_p1.ebuild, -apsw-3.8.4.1_p1.ebuild,
+  -apsw-3.8.4.3_p1.ebuild, apsw-3.8.5_p1.ebuild, apsw-3.8.7.1_p1.ebuild:
+  clean old python impl, minor upgrade to fix to qa issue, remove many old
 
 *apsw-3.8.7.1_p1 (06 Nov 2014)
 
