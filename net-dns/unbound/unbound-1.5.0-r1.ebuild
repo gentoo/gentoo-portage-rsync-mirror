@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.5.0-r1.ebuild,v 1.1 2014/11/30 23:25:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.5.0-r1.ebuild,v 1.2 2014/11/30 23:35:25 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -29,7 +29,7 @@ CDEPEND=">=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]
 		dev-libs/fstrm[${MULTILIB_USEDEP}]
 		>=dev-libs/protobuf-c-1.0.2-r1[${MULTILIB_USEDEP}]
 	)
-	ecdsa? ( >=dev-libs/openssl-1.0.1h-r2[-bindist,${MULTILIB_USEDEP}] )
+	ecdsa? ( dev-libs/openssl[-bindist] )
 	python? ( ${PYTHON_DEPS} )"
 
 DEPEND="${CDEPEND}
