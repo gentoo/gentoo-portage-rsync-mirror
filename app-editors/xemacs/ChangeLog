@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.184 2014/11/23 13:41:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.185 2014/12/01 09:25:27 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> xemacs-21.4.22-r4.ebuild:
+  Stable for sparc, wrt bug #475658
 
   23 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> xemacs-21.4.22-r4.ebuild:
   x86 stable wrt bug #475658

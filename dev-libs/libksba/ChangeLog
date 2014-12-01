@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.158 2014/11/29 13:28:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.159 2014/12/01 09:14:32 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libksba-1.3.2.ebuild:
+  Stable for sparc, wrt bug #530634
 
   29 Nov 2014; Agostino Sarubbo <ago@gentoo.org> libksba-1.3.2.ebuild:
   Stable for ppc64, wrt bug #530634

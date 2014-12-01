@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldap/ocamldap-2.2.ebuild,v 1.2 2013/03/03 14:31:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldap/ocamldap-2.2.ebuild,v 1.3 2014/12/01 09:05:20 aballier Exp $
 
 EAPI=5
 
@@ -20,6 +20,8 @@ DEPEND="dev-ml/pcre-ocaml:=
 RDEPEND="${DEPEND}"
 
 DOCS=( AUTHORS.txt Changelog INSTALL.txt README.txt )
+
+PATCHES=( "${FILESDIR}/ocaml-4.02.patch" )
 
 src_install() {
 	oasis_src_install

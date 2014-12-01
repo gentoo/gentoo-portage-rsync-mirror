@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.74 2014/11/13 17:39:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.76 2014/12/01 09:26:06 jlec Exp $
+
+  01 Dec 2014; Justin Lecher <jlec@gentoo.org> -pwgen-2.06-r1.ebuild:
+  Drop old vulnerable versions, #488300
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pwgen-2.07.ebuild:
+  Stable for sparc, wrt bug #488300
 
   13 Nov 2014; Tobias Klausmann <klausman@gentoo.org> pwgen-2.07.ebuild:
   Stable on alpha, bug 488300

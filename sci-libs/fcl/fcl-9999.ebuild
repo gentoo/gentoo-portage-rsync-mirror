@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fcl/fcl-9999.ebuild,v 1.1 2014/11/28 11:22:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fcl/fcl-9999.ebuild,v 1.2 2014/12/01 09:06:19 aballier Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ if [ "${PV#9999}" != "${PV}" ] ; then
 	KEYWORDS=""
 	SRC_URI=""
 else
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm"
 	SRC_URI="http://github.com/flexible-collision-library/fcl/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 

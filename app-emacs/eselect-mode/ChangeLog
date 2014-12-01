@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/eselect-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/ChangeLog,v 1.42 2014/11/29 19:52:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/ChangeLog,v 1.43 2014/12/01 09:29:40 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> eselect-mode-1.4.3.ebuild:
+  Stable for sparc, wrt bug #529334
 
   29 Nov 2014; Markus Meier <maekke@gentoo.org> eselect-mode-1.4.3.ebuild:
   arm stable, bug #529334

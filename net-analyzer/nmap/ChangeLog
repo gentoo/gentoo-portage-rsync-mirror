@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.329 2014/11/29 13:29:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.330 2014/12/01 09:16:45 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> nmap-6.47-r1.ebuild:
+  Stable for sparc, wrt bug #480474
 
   29 Nov 2014; Agostino Sarubbo <ago@gentoo.org> nmap-6.47-r1.ebuild:
   Stable for ppc64, wrt bug #480474
