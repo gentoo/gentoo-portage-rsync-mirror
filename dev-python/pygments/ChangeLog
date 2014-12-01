@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.139 2014/11/19 15:17:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.140 2014/12/01 09:45:12 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  pygments-1.6_p20140324-r1.ebuild:
+  Stable for sparc, wrt bug #524416
 
   19 Nov 2014; Ian Delaney <idella4@gentoo.org> pygments-2.0.1.ebuild:
   clean old python impls, add pypy3 support

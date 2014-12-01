@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.280 2014/11/26 10:40:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.281 2014/12/01 09:32:19 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> sysstat-11.0.2.ebuild:
+  Stable for sparc, wrt bug #529920
 
   26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> sysstat-11.0.2.ebuild:
   Stable for amd64, wrt bug #529920

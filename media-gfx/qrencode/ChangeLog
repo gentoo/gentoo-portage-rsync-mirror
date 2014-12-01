@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qrencode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.51 2014/10/05 11:59:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.52 2014/12/01 09:37:52 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> qrencode-3.4.3.ebuild:
+  Stable for sparc, wrt bug #500420
 
   05 Oct 2014; Agostino Sarubbo <ago@gentoo.org> qrencode-3.4.3.ebuild:
   Stable for ppc, wrt bug #500420

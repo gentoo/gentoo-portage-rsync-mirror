@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.180 2014/11/23 17:29:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.181 2014/12/01 09:45:23 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> sphinx-1.2.2.ebuild:
+  Stable for sparc, wrt bug #524416
 
 *sphinx-1.1.3-r7 (23 Nov 2014)
 

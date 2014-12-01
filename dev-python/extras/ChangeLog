@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/extras
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.24 2014/11/11 11:15:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.25 2014/12/01 09:45:46 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> extras-0.0.3.ebuild:
+  Stable for sparc, wrt bug #525508
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> extras-0.0.3.ebuild:
   Stable for ia64, wrt bug #525508

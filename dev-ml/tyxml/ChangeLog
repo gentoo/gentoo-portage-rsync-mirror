@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/tyxml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.13 2014/11/28 17:23:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.14 2014/12/01 09:48:40 aballier Exp $
+
+*tyxml-3.3.0 (01 Dec 2014)
+
+  01 Dec 2014; Alexis Ballier <aballier@gentoo.org> +tyxml-3.3.0.ebuild:
+  version bump
 
   28 Nov 2014; Alexis Ballier <aballier@gentoo.org> tyxml-3.0.0.ebuild:
   update deps for ocaml 4.02

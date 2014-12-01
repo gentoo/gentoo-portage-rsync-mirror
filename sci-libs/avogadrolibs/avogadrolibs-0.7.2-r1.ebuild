@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/avogadrolibs/avogadrolibs-0.7.2-r1.ebuild,v 1.2 2014/03/10 14:34:01 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/avogadrolibs/avogadrolibs-0.7.2-r1.ebuild,v 1.3 2014/12/01 09:45:23 jlec Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ REQUIRED_USE="qt4? ( opengl )"
 RDEPEND="
 	>=sci-chemistry/molequeue-0.7
 	sci-libs/chemkit
-	sci-libs/hdf5
+	sci-libs/hdf5:=
 	opengl? (
 		dev-qt/qtopengl:4
 		media-libs/glew

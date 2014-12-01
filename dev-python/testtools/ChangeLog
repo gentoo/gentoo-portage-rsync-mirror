@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.105 2014/11/11 11:15:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.106 2014/12/01 09:45:40 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> testtools-0.9.36.ebuild:
+  Stable for sparc, wrt bug #525508
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> testtools-0.9.36.ebuild:
   Stable for ia64, wrt bug #525508

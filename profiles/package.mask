@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16192 2014/12/01 08:57:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16193 2014/12/01 09:33:15 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (01 Dec 2014)
+# Does not build with any recent ocaml compiler.
+# Unmaintained upstream.
+# Removal after 01 Jan 2015
+dev-ml/obrowser
 
 # Manuel Rüger <mrueg@gentoo.org> (01 Dec 2014)
 # No support for ruby 2.0 or later.

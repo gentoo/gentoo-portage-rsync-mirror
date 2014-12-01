@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.209 2014/11/20 02:48:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.210 2014/12/01 09:44:58 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> docutils-0.12.ebuild:
+  Stable for sparc, wrt bug #524416
 
   20 Nov 2014; Ian Delaney <idella4@gentoo.org> docutils-0.12.ebuild:
   clean old python impl, add pypy3 support
