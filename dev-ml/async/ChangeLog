@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/async
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/async/ChangeLog,v 1.13 2014/11/28 18:05:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/async/ChangeLog,v 1.14 2014/12/01 14:15:40 aballier Exp $
+
+*async-112.01.00 (01 Dec 2014)
+
+  01 Dec 2014; Alexis Ballier <aballier@gentoo.org> +async-112.01.00.ebuild:
+  version bump
 
   28 Nov 2014; Alexis Ballier <aballier@gentoo.org> async-111.25.00.ebuild:
   update deps for ocaml 4.02

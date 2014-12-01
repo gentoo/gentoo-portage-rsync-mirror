@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/menhir
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/menhir/ChangeLog,v 1.1 2013/02/07 20:36:44 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/menhir/ChangeLog,v 1.2 2014/12/01 14:17:38 aballier Exp $
+
+*menhir-20140422 (01 Dec 2014)
+
+  01 Dec 2014; Alexis Ballier <aballier@gentoo.org> +menhir-20140422.ebuild:
+  version bump
 
 *menhir-20130116 (07 Feb 2013)
 

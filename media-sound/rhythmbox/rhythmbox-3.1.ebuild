@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.1.ebuild,v 1.4 2014/11/24 10:43:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.1.ebuild,v 1.5 2014/12/01 14:09:29 mgorny Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python3_{2,3,4} )
+PYTHON_COMPAT=( python3_{3,4} )
 PYTHON_REQ_USE="xml"
 
-inherit eutils gnome2 python-single-r1 multilib virtualx
+inherit eutils gnome2 python-r1 multilib virtualx
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="https://wiki.gnome.org/Apps/Rhythmbox"
@@ -18,9 +18,6 @@ SLOT="0"
 IUSE="cdr daap dbus +libsecret html ipod libnotify lirc mtp nsplugin +python
 test +udev upnp-av visualizer webkit zeitgeist"
 
-# Let people emerge this by default, bug #472932
-IUSE+=" +python_single_target_python3_3"
-
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 REQUIRED_USE="
@@ -28,7 +25,7 @@ REQUIRED_USE="
 	mtp? ( udev )
 	dbus? ( python )
 	webkit? ( python )
-	python? ( ${PYTHON_REQUIRED_USE} )
+	python? ( ^^ ( $(python_gen_useflags '*') ) )
 "
 
 # Tests failing for years without upstream caring at all
@@ -85,6 +82,7 @@ RDEPEND="${COMMON_DEPEND}
 		>=media-libs/grilo-0.2:0.2
 		>=media-plugins/grilo-plugins-0.2:0.2[upnp-av] )
 	python? (
+		>=dev-libs/libpeas-0.7.3[${PYTHON_USEDEP}]
 		x11-libs/gdk-pixbuf:2[introspection]
 		x11-libs/gtk+:3[introspection]
 		x11-libs/pango[introspection]
@@ -105,7 +103,7 @@ DEPEND="${COMMON_DEPEND}
 "
 
 pkg_setup() {
-	use python && python-single-r1_pkg_setup
+	use python && [[ ${MERGE_TYPE} != binary ]] && python_setup
 }
 
 src_prepare() {
