@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.85 2014/07/30 19:21:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.86 2014/12/01 05:26:19 ryao Exp $
+
+  01 Dec 2014; Richard Yao <ryao@gentoo.org> zfs-0.6.2-r3.ebuild,
+  zfs-0.6.2-r4.ebuild, zfs-0.6.2-r5.ebuild, zfs-0.6.3.ebuild, zfs-9999.ebuild:
+  Python 3.4 support, bug #531006
 
   30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> zfs-0.6.0_rc13-r2.ebuild,
   zfs-0.6.0_rc14-r1.ebuild, zfs-0.6.1-r4.ebuild, zfs-0.6.2-r1.ebuild,
