@@ -4,9 +4,9 @@ DESCRIPTION=Perl::Critic policies which have been superseded by others
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Perl-Critic-Deprecated/
 KEYWORDS=~amd64 ~ppc ~x86
-LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
+LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-perl/Readonly dev-perl/Perl-Critic dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/EL/ELLIOTJS/Perl-Critic-Deprecated-1.108.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	ab36305de1a9fa8909c94f3f1e78eb62	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	28ca2b834dd6b64c9179af421c4d763e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=ec175355feb432ca471037b0fe53ddb0

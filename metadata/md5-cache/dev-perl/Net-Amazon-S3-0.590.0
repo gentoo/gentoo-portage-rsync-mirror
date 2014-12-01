@@ -4,9 +4,9 @@ DESCRIPTION=Framework for accessing the Amazon S3 Simple Storage Service
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Net-Amazon-S3/
 KEYWORDS=~amd64 ~x86
-LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
+LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-perl/Moose-1.990.0 >=dev-perl/Data-Stream-Bulk-0.60.0 dev-perl/DateTime-Format-HTTP dev-perl/Digest-HMAC dev-perl/Digest-MD5-File dev-perl/libwww-perl virtual/perl-IO dev-perl/LWP-UserAgent-Determined virtual/perl-MIME-Base64 >=dev-perl/Moose-0.850.0 >=dev-perl/MooseX-StrictConstructor-0.160.0 >=dev-perl/MooseX-Types-DateTime-MoreCoercions-0.70.0 dev-perl/regexp-common dev-perl/XML-LibXML dev-perl/URI dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/P/PF/PFIG/Net-Amazon-S3-0.59.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	ab36305de1a9fa8909c94f3f1e78eb62	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	28ca2b834dd6b64c9179af421c4d763e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=a150ec7c7baef8516e6f6adea9a25bb3

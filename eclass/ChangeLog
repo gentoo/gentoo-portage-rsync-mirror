@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1448 2014/11/29 23:03:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1449 2014/12/01 20:41:08 dilfridge Exp $
+
+  01 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  Replace exlicitly listing all GPL variants with GPL-1+
 
   29 Nov 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Remove leftover code for Python 3.2.
