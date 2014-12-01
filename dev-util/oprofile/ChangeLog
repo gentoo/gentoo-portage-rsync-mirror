@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.98 2014/12/01 07:31:09 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.99 2014/12/01 08:02:49 bircoph Exp $
+
+*oprofile-0.9.9-r1 (01 Dec 2014)
+
+  01 Dec 2014; Andrew Savchenko <bircoph@gentoo.org> +oprofile-0.9.9-r1.ebuild,
+  +files/oprofile-0.9.9-gcc-4.9-non-ppc.patch,
+  +files/oprofile-0.9.9-gcc-4.9-unused.patch:
+  Backport gcc-4.9 fixes from 1.0.0 and fix for CPU detection on
+  Athlon systems.
 
   01 Dec 2014; Andrew Savchenko <bircoph@gentoo.org> -oprofile-0.9.6-r1.ebuild,
   -oprofile-0.9.7.ebuild,
