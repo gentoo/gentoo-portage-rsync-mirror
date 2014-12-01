@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.530 2014/11/22 05:03:31 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.531 2014/12/01 21:56:22 jmbsvicetto Exp $
+
+*phpmyadmin-4.3.0_rc1 (01 Dec 2014)
+*phpmyadmin-4.2.13 (01 Dec 2014)
+
+  01 Dec 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +phpmyadmin-4.2.13.ebuild, +phpmyadmin-4.3.0_rc1.ebuild,
+  -phpmyadmin-4.2.12.ebuild, -phpmyadmin-4.3.0_beta1.ebuild:
+  Version bump. 4.2.13 is the last feature release from the 4.2 series. 4.3 is
+  getting near its first production release.
 
 *phpmyadmin-4.2.12 (22 Nov 2014)
 *phpmyadmin-4.3.0_beta1 (22 Nov 2014)
