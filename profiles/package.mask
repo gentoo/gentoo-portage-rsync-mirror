@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16193 2014/12/01 09:33:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16195 2014/12/01 10:43:28 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,116 @@
 
 #--- END OF EXAMPLES ---
 
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Doesn't work ok, upstream dead since 2007 (#321277).
+# Removal in a month.
+net-im/linpopup
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Multiple pending bugs, #380435, #460508, #481150,
+# #481310, #481312, #530856. Removal in a month (#380435)
+app-office/teapot
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Multiple problems and security issues (#425634).
+# Removal in a month.
+net-irc/bitchx
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Upstream dead for a long time, use sys-power/cpupower
+# instead. Removal in a month.
+sys-power/cpufrequtils
+x11-plugins/gkrellm-cpufreq
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Dead since 2004, fails to build (#488028). Relying
+# on deprecated gnome2 libs, you can use volti, volwheel,
+# volumeicon and other mixers in the tree. Removal in a month.
+media-sound/gnome-alsamixer
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Fails to build, use sys-devel/autoconf-archive instead.
+# Removal in a month (#514062)
+sys-devel/ac-archive
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Fails to install (#514276), removal in a month.
+net-misc/emirror
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Dead for ages and with pending unresolved bugs.
+# Removal in a month (#514918).
+net-wireless/wimax
+net-wireless/wimax-tools
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Unmaintained, fails to build (#515922).
+# Removal in a month.
+rox-extra/clock
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Unmaintained and hardmasked for ages (#518890).
+# Removal in a month.
+app-arch/rpm5
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Dead and unmaintained for ages, you should use polkit
+# directly (#520966). Removal in a month.
+app-admin/gksu-polkit
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Dead for ages, too outdated (#521726). Removal in a month.
+sys-apps/uhinv
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Completely broken currently, hard to update and fix (#522732).
+# Removal in a month.
+net-libs/pjsip
+net-voip/sflphone
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Not buildable, broken and dead for ages (#523250).
+# Removal in a month.
+net-im/ekg
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Not maintained by anybody, use sys-kernel/linux-firmware
+# instead as it's maintained and updated (#523784).
+# Removal in a month.
+sys-firmware/iwl2030-ucode
+sys-firmware/iwl5000-ucode
+sys-firmware/iwl2000-ucode
+sys-firmware/iwl5150-ucode
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Deprecated, dead for ages use dev-perl/Moose instead.
+# Removal in a month (#525046).
+dev-perl/MooseX-AttributeHelpers
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Unbuildable, dead since 2005 (#526184)
+media-gfx/truevision
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Dead for 4 years, relies on obsolete lcms, bundles
+# a lot of libs. Removal in a month (#526818)
+media-gfx/f-spot
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Relies on old gnome-bluetooth and upstream is not going
+# to fix it anytime soon (#528916). Removal in a month.
+net-wireless/cinnamon-bluetooth
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# Tends to crash a lot, upstream dead (#530126).
+# Removal in a month.
+app-misc/cdcollect
+
+# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
+# No updates since 2009, doesn't build (#531110).
+# Removal in a month.
+net-wireless/ussp-push
+
 # Alexis Ballier <aballier@gentoo.org> (01 Dec 2014)
 # Does not build with any recent ocaml compiler.
 # Unmaintained upstream.
@@ -55,13 +165,6 @@ app-admin/rudy
 # Masked until mscms.dll.so that links to media-libs/lcms:2 is backported from
 # a newer wine, bug #526806.
 <app-emulation/crossover-bin-12.5.0
-
-# Alexis Ballier <aballier@gentoo.org> (28 Nov 2014)
-# Pending rev. deps check and porting
->=dev-lang/ocaml-4.02.1
-dev-ml/labltk
->=dev-ml/findlib-1.5.5-r1
-dev-ml/camlp4
 
 # Aaron W. Swenson <titanofold@gentoo.org> (26 Nov 2014)
 # Masked for removal in 30 days. dev-perl/pgperl hasn't been updated
@@ -1071,18 +1174,6 @@ dev-embedded/msp430-gdb
 dev-embedded/msp430-libc
 dev-embedded/msp430mcu
 dev-embedded/avr-libc
-
-# Markus Ullmann <jokey@gentoo.org> (07 Jul 2008)
-# mask for security bug #190667 (CVE-2007-{4584,5839})
-# and for various other build problems (bug #425634)
-#
-# both CVEs are fixed in upstream version control as per:
-# http://bitchx.svn.sourceforge.net/svnroot/bitchx/trunk/Changelog
-net-irc/bitchx
-
-# Vlastimil Babka <caster@gentoo.org> (20 May 2008)
-# Masked for testing
-app-arch/rpm5
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (03 Mar 2008)
 # Masking due to security bug #194607 and security bug #204067
