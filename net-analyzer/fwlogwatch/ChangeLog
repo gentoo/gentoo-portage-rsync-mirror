@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fwlogwatch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.35 2014/12/01 09:37:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.36 2014/12/01 11:18:29 jer Exp $
+
+  01 Dec 2014; Jeroen Roovers <jer@gentoo.org> -fwlogwatch-1.3.ebuild:
+  Old.
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> fwlogwatch-1.4.ebuild:
   Stable for sparc, wrt bug #513992
