@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=net-analyzer/openvas-libraries-8.0_beta3 dev-libs/libxslt net-libs/libmicrohttpd[messages] virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/pkgconfig
+DESCRIPTION=Greenbone Security Assistant for openvas
+EAPI=5
+HOMEPAGE=http://www.openvas.org/
+LICENSE=GPL-2+ BSD MIT
+RDEPEND=>=net-analyzer/openvas-libraries-8.0_beta3 dev-libs/libxslt net-libs/libmicrohttpd[messages]
+SLOT=0
+SRC_URI=http://wald.intevation.org/frs/download.php/1819/greenbone-security-assistant-6.0+beta4.tar.gz
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=82848abf264212969e48a3e1bf573dfd

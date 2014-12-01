@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.02.1.ebuild,v 1.1 2014/11/28 15:42:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.02.1.ebuild,v 1.2 2014/12/01 16:33:19 aballier Exp $
 
 EAPI="5"
 
@@ -62,11 +62,13 @@ src_configure() {
 	use X || myconf="${myconf} -no-graph"
 
 	# ocaml uses a home-brewn configure script, preventing it to use econf.
-	RAW_LDFLAGS="$(raw-ldflags)" ./configure -prefix "${EPREFIX}"/usr \
+	RAW_LDFLAGS="$(raw-ldflags)" ./configure \
+		--prefix "${EPREFIX}"/usr \
 		--bindir "${EPREFIX}"/usr/bin \
 		--libdir "${EPREFIX}"/usr/$(get_libdir)/ocaml \
 		--mandir "${EPREFIX}"/usr/share/man \
-		-host "${CHOST}" \
+		-target "${CHOST}" \
+		-host "${CBUILD}" \
 		-cc "$(tc-getCC)" \
 		-as "$(tc-getAS)" \
 		-aspp "$(tc-getCC) -c" \

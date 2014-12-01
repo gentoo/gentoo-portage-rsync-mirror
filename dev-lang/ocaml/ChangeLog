@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.221 2014/12/01 10:36:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.222 2014/12/01 16:33:19 aballier Exp $
+
+  01 Dec 2014; Alexis Ballier <aballier@gentoo.org> ocaml-4.02.1.ebuild:
+  specify host & target to help cross-compiling, unfortunately it is not
+  sufficient due to tryrun like constructs
 
   01 Dec 2014; Alexis Ballier <aballier@gentoo.org> -ocaml-4.00.1-r1.ebuild:
   remove old
