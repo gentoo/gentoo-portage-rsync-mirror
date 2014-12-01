@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/python-ptrace-0.8.1.ebuild,v 1.2 2014/11/30 16:55:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/python-ptrace-0.8.1.ebuild,v 1.4 2014/12/01 02:16:04 floppym Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -16,13 +16,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
-DEPEND=""
-RDEPEND="dev-libs/distorm64[${PYTHON_USEDEP}]"
-# Req'd for tests
-DISTUTILS_IN_SOURCE_BUILD=1
-
 python_test() {
-	"${PYTHON}" test_doc.py || die "tests failed under ${EPYTHON}"
+	# Python 3.4 adds SOCK_CLOEXEC to socket.type automatically, and ptrace does
+	# not translate that on output causing it to fail test_strace.test_socket.
+	# https://bitbucket.org/haypo/python-ptrace/issue/17
+	"${PYTHON}" runtests.py || die "Testing failed with ${EPYTHON}"
 }
 
 python_install_all() {
