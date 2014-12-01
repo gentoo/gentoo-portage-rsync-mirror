@@ -1,6 +1,19 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.97 2014/12/01 06:39:59 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.98 2014/12/01 07:31:09 bircoph Exp $
+
+  01 Dec 2014; Andrew Savchenko <bircoph@gentoo.org> -oprofile-0.9.6-r1.ebuild,
+  -oprofile-0.9.7.ebuild,
+  -files/oprofile-0.9.6-Add-argument-checking-for-numerical-arguments.patch,
+  -files/oprofile-0.9.6-Avoid-blindly-source-SETUP_FILE-with.patch,
+  -files/oprofile-0.9.6-Avoid-using-bash.patch,
+  -files/oprofile-0.9.6-Do-additional-checks-on-user-supplied-arguments.patch,
+  -files/oprofile-0.9.6-Ensure-that-save-only-saves-things-in-SESSION_DIR.patch
+  ,
+  -files/oprofile-0.9.6-Fix-opcontrol-status-to-show-accurate-information.patch
+  , -files/oprofile-0.9.6-mutable.patch, -files/oprofile-0.9.7-bfd.h-1.patch,
+  -files/oprofile-0.9.7-bfd.h-2.patch:
+  Drop old version. Fix repoman warnings.
 
 *oprofile-1.0.0 (01 Dec 2014)
 

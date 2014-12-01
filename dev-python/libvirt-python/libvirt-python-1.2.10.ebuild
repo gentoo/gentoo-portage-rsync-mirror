@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-1.2.10.ebuild,v 1.3 2014/11/30 13:02:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-1.2.10.ebuild,v 1.4 2014/12/01 07:01:35 idella4 Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/lxml[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}] )"
 
-# testsuite currently does nothing
+# testsuite currently does nothing because they left out the actual testsuite
 RESTRICT="test"
 
 python_compile() {

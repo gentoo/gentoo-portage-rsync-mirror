@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.55 2014/12/01 05:30:02 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.56 2014/12/01 07:02:33 ryao Exp $
+
+*zfs-kmod-0.6.3-r1 (01 Dec 2014)
+
+  01 Dec 2014; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.3-r1.ebuild:
+  Numerous backports from HEAD: Linux 3.17 support, Gentoo Prefix Support, a
+  Linux 3.12+ shrinker regression fix, send/recv reliability/performance fixes,
+  deadlock fixes, fixes for excessive CPU time in zfs_iput_taskq fix (important
+  for SELinux), fix for xattr=sa corruption, fix for possible space leak during
+  async_destroy, and many more.
 
   01 Dec 2014; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.3.ebuild,
   zfs-kmod-9999.ebuild:
