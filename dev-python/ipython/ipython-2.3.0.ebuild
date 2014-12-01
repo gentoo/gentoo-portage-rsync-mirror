@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.3.0.ebuild,v 1.1 2014/11/10 08:36:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.3.0.ebuild,v 1.2 2014/12/01 06:05:58 patrick Exp $
 
 EAPI=5
 
@@ -52,6 +52,7 @@ DEPEND="${CDEPEND}
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/mock[${PY2_USEDEP}]
+		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
 	)
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
 		dev-python/numpydoc[${PYTHON_USEDEP}]
