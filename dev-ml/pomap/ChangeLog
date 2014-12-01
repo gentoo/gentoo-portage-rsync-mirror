@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pomap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.38 2014/11/28 17:38:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.39 2014/12/01 08:56:40 aballier Exp $
+
+*pomap-3.0.5 (01 Dec 2014)
+
+  01 Dec 2014; Alexis Ballier <aballier@gentoo.org> +pomap-3.0.5.ebuild:
+  version bump, update homepage/src_uri
 
   28 Nov 2014; Alexis Ballier <aballier@gentoo.org> pomap-3.0.3.ebuild:
   update deps for ocaml 4.02

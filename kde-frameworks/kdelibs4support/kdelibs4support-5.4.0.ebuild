@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kdelibs4support/kdelibs4support-5.4.0.ebuild,v 1.1 2014/11/14 11:01:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kdelibs4support/kdelibs4support-5.4.0.ebuild,v 1.2 2014/12/01 08:47:07 kensington Exp $
 
 EAPI=5
 
@@ -56,9 +56,11 @@ COMMON_DEPEND="
 	)
 "
 RDEPEND="${COMMON_DEPEND}
+	$(add_frameworks_dep kdoctools)
 	$(add_frameworks_dep kemoticons)
 	$(add_frameworks_dep kinit)
 	$(add_frameworks_dep kitemmodels)
+	dev-qt/qtxml:5
 "
 DEPEND="${COMMON_DEPEND}
 	$(add_frameworks_dep kdoctools)

@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install postinst prepare test
-DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_pypy? ( virtual/pypy:0= ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-)]
+DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_pypy? ( virtual/pypy:0= ) python_targets_pypy3? ( virtual/pypy3:0= ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,python_targets_pypy3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-),-python_single_target_pypy3(-)]
 DESCRIPTION=A fast and simple micro-framework for small web-applications
 EAPI=5
 HOMEPAGE=http://pypi.python.org/pypi/bottle http://bottlepy.org/
-IUSE=python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 python_targets_pypy
+IUSE=python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 python_targets_pypy python_targets_pypy3
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 LICENSE=MIT
-RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_pypy? ( virtual/pypy:0= ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-)]
-REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 python_targets_pypy )
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_pypy? ( virtual/pypy:0= ) python_targets_pypy3? ( virtual/pypy3:0= ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,python_targets_pypy3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-),-python_single_target_pypy3(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 python_targets_pypy python_targets_pypy3 )
 SLOT=0
 SRC_URI=mirror://pypi/b/bottle/bottle-0.12.7.tar.gz
 _eclasses_=distutils-r1	b3dd8b90e41a1570ee3117a7c1adb598	eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	b63f5ef61876823ab0bd05d867697d75	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e1e7c9af69f2f3b989d1ddcef69df9ba
+_md5_=abcb86382b9ab0dddbeb5896872b8c9b

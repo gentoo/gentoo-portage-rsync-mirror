@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p598.ebuild,v 1.7 2014/11/29 19:49:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p598.ebuild,v 1.8 2014/12/01 08:58:08 ago Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ SRC_URI="mirror://ruby/2.0/${MY_P}.tar.xz
 		 http://dev.gentoo.org/~flameeyes/ruby-team/${PN}-patches-${PATCHSET}.tar.bz2"
 
 LICENSE="|| ( Ruby-BSD BSD-2 )"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="berkdb debug doc examples gdbm ipv6 +rdoc rubytests socks5 ssl xemacs ncurses +readline sse2"
 
 RDEPEND="

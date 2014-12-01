@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.84 2014/11/28 13:55:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.85 2014/12/01 08:58:14 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> ffi-1.9.3.ebuild:
+  Stable for sparc, wrt bug #523186
 
   28 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ffi-1.9.3.ebuild:
   Stable for ppc64, wrt bug #523186

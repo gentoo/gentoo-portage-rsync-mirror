@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.43 2014/11/28 13:55:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.44 2014/12/01 08:58:17 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> ruby-ffi-2.ebuild:
+  Stable for sparc, wrt bug #523186
 
   28 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ruby-ffi-2.ebuild:
   Stable for ppc64, wrt bug #523186

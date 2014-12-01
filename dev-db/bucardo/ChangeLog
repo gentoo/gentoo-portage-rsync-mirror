@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/bucardo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/bucardo/ChangeLog,v 1.6 2014/11/03 14:39:28 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/bucardo/ChangeLog,v 1.7 2014/12/01 08:56:41 patrick Exp $
+
+*bucardo-5.2.0 (01 Dec 2014)
+
+  01 Dec 2014; Patrick Lauer <patrick@gentoo.org> +bucardo-5.2.0.ebuild:
+  Bump
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   -bucardo-4.5.0-r1.ebuild:

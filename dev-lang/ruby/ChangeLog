@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.690 2014/11/29 19:49:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.691 2014/12/01 08:58:08 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> ruby-1.9.3_p551.ebuild,
+  ruby-2.0.0_p598.ebuild:
+  Stable for sparc, wrt bug #529216
 
   29 Nov 2014; Markus Meier <maekke@gentoo.org> ruby-2.0.0_p598.ebuild:
   arm stable, bug #529216

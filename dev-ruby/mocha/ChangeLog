@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.122 2014/10/30 15:53:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.124 2014/12/01 08:49:42 ago Exp $
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mocha-0.10.5-r1.ebuild,
+  mocha-0.12.10.ebuild, mocha-0.13.3-r1.ebuild:
+  Stable for ppc64, wrt bug #513430
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mocha-0.10.5-r1.ebuild,
+  mocha-0.12.10.ebuild, mocha-0.13.3-r1.ebuild:
+  Stable for ppc, wrt bug #513430
 
   30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> mocha-0.10.5-r1.ebuild,
   mocha-0.10.5-r2.ebuild, mocha-0.10.5.ebuild, mocha-0.11.4-r1.ebuild,
