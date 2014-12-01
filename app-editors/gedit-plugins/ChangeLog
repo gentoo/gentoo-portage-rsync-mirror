@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.51 2014/11/25 15:38:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.52 2014/12/01 11:40:51 mgorny Exp $
+
+  01 Dec 2014; Michał Górny <mgorny@gentoo.org> gedit-plugins-3.12.1-r1.ebuild:
+  Add a proper REQUIRED_USE for libpeas compatibility, use python_setup() to use
+  the correct implementation.
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> gedit-plugins-3.12.1-r1.ebuild:
   Support python 3.4

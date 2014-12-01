@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.374 2014/11/24 10:06:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.375 2014/12/01 11:32:48 mgorny Exp $
+
+  01 Dec 2014; Michał Górny <mgorny@gentoo.org> gedit-3.12.2-r1.ebuild:
+  Backport the Python fixes from gnome overlay.
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org> gedit-3.12.2-r1.ebuild:
   Support python 3.4

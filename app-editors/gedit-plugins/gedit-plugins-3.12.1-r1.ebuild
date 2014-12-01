@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.12.1-r1.ebuild,v 1.2 2014/11/25 15:38:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.12.1-r1.ebuild,v 1.3 2014/12/01 11:40:51 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes" # plugins are dlopened
-PYTHON_COMPAT=( python3_{2,3,4} )
+PYTHON_COMPAT=( python3_{3,4} )
 PYTHON_REQ_USE="xml"
 
 inherit eutils gnome2 multilib python-r1
@@ -19,11 +19,12 @@ SLOT="0"
 
 IUSE_plugins="charmap git terminal"
 IUSE="+python ${IUSE_plugins}"
+# python-single-r1 would request disabling PYTHON_TARGETS on libpeas
 REQUIRED_USE="
 	charmap? ( python )
 	git? ( python )
+	python? ( ^^ ( $(python_gen_useflags '*') ) )
 	terminal? ( python )
-	python? ( ${REQUIRED_PYTHON_USE} )
 "
 
 RDEPEND="
@@ -53,6 +54,10 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 "
+
+pkg_setup() {
+	use python && [[ ${MERGE_TYPE} != binary ]] && python_setup
+}
 
 src_configure() {
 	gnome2_src_configure \
