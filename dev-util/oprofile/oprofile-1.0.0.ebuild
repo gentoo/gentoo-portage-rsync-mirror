@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-1.0.0.ebuild,v 1.1 2014/12/01 06:39:59 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-1.0.0.ebuild,v 1.2 2014/12/01 10:17:13 bircoph Exp $
 
 EAPI="5"
 inherit eutils java-pkg-opt-2 linux-info multilib user
@@ -15,11 +15,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="java pch"
 
-DEPEND=">=dev-libs/popt-1.7-r1
+RDEPEND=">=dev-libs/popt-1.7-r1
 	>=sys-devel/binutils-2.14.90.0.6-r3
 	>=sys-libs/glibc-2.3.2-r1
 	java? ( >=virtual/jdk-1.5 )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	>=sys-kernel/linux-headers-2.6.31"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -28,9 +29,9 @@ ERROR_PERF_EVENTS="CONFIG_PERF_EVENTS is mandatory for ${PN} to work."
 
 pkg_setup() {
 	linux-info_pkg_setup
-	if ! kernel_is -ge 2 6 ; then
+	if ! kernel_is -ge 2 6 31; then
 		echo
-		elog "Support for kernels before 2.6 has been dropped in ${PN}-0.9.8."
+		ewarn "Support for kernels before 2.6.31 has been dropped in ${PN}-1.0.0."
 		echo
 	fi
 

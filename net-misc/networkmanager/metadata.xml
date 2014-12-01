@@ -24,7 +24,5 @@
 		<flag name="wext">Enable support for the deprecated Wext (Wireless
 			Extensions) API; needed for some older drivers (e.g. ipw2200,
 			ndiswrapper)</flag>
-		<flag name="wimax">Enable support for WiMAX connections using
-			<pkg>net-wireless/wimax</pkg></flag>
 	</use>
 </pkgmetadata>

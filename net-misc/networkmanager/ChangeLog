@@ -1,6 +1,27 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.214 2014/11/30 10:16:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.215 2014/12/01 10:16:21 pacho Exp $
+
+  01 Dec 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/01-org.freedesktop.NetworkManager.settings.modify.system.pkla,
+  -files/10-openrc-status-r3,
+  -files/networkmanager-0.9.2.0-init-provide-net-r1.patch,
+  -files/networkmanager-0.9.2.0-pre-sleep.patch,
+  -files/networkmanager-0.9.4.0-dhclient-ipv6.patch,
+  -files/networkmanager-0.9.4.0-fix-quote-handling.patch,
+  -files/networkmanager-0.9.4.0-force-libnl1.1-r1.patch,
+  -files/networkmanager-0.9.4.0-ip_ppp.h.patch,
+  -files/networkmanager-0.9.4.0-ipv6-route.patch,
+  -files/networkmanager-0.9.4.0-libnm-glib-ensure_inited.patch,
+  -files/networkmanager-0.9.4.0-libnm-glib-init-gerror.patch,
+  -files/networkmanager-0.9.4.0-nl80211-encryption-caps.patch,
+  -files/networkmanager-0.9.4.0-wifi-kernel-api.patch,
+  -files/networkmanager-0.9.6.0-daemon-signals.patch,
+  -files/networkmanager-0.9.7.995-pre-sleep.patch,
+  -files/networkmanager-0.9.8.2-allow-new-dhcpcd.patch,
+  -networkmanager-0.9.10.0-r1.ebuild, -networkmanager-0.9.10.0.ebuild,
+  -networkmanager-0.9.6.4.ebuild, metadata.xml:
+  drop old
 
   30 Nov 2014; Michał Górny <mgorny@gentoo.org>
   networkmanager-0.9.10.1_pre20141101.ebuild:
