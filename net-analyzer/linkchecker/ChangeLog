@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.95 2014/12/01 12:37:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.96 2014/12/01 15:25:07 jlec Exp $
+
+*linkchecker-9.3-r1 (01 Dec 2014)
+
+  01 Dec 2014; Justin Lecher <jlec@gentoo.org> +linkchecker-9.3-r1.ebuild,
+  linkchecker-9999.ebuild, +files/linkchecker-9.3-desktop.patch:
+  Import desktop file fixes from fedora
 
 *linkchecker-9.3 (01 Dec 2014)
 
