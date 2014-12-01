@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/cffi-0.8.6.ebuild,v 1.5 2014/11/05 02:42:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/cffi-0.8.6.ebuild,v 1.6 2014/12/01 17:48:28 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
@@ -20,6 +20,9 @@ RDEPEND="virtual/libffi
 	dev-python/pycparser[${PYTHON_USEDEP}]
 	dev-python/pytest[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
+
+# Avoid race on _configtest.c (distutils/command/config.py:_gen_temp_sourcefile)
+DISTUTILS_IN_SOURCE_BUILD=1
 
 python_compile_all() {
 	use doc && emake -C doc html
