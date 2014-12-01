@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ngxtop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ngxtop/ChangeLog,v 1.5 2014/06/07 20:33:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ngxtop/ChangeLog,v 1.6 2014/12/01 15:52:10 jlec Exp $
+
+*ngxtop-0.0.3_pre141201 (01 Dec 2014)
+
+  01 Dec 2014; Justin Lecher <jlec@gentoo.org> +ngxtop-0.0.3_pre141201.ebuild:
+  Add snapshot of latest development for better py3 compatibility, #531296
 
   07 Jun 2014; Justin Lecher <jlec@gentoo.org> ngxtop-0.0.2-r1.ebuild,
   files/ngxtop-0.0.2-py3.patch:
