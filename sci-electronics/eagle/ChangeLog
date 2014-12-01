@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.62 2014/10/15 21:05:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.63 2014/12/01 19:49:33 perfinion Exp $
+
+*eagle-7.2.0 (01 Dec 2014)
+
+  01 Dec 2014; Jason Zaman <perfinon@gentoo.org> +eagle-7.2.0.ebuild:
+  version bump to 7.2.0
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org> eagle-4.16_p2-r2.ebuild,
   eagle-5.11.0.ebuild, eagle-5.12.0.ebuild, eagle-6.6.0.ebuild,
