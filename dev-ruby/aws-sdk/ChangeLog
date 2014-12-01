@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/aws-sdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.22 2014/05/26 05:24:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.23 2014/12/01 22:40:48 p8952 Exp $
+
+*aws-sdk-1.8.4 (01 Dec 2014)
+
+  01 Dec 2014; Peter Wilmott <p8952@gentoo.org> +aws-sdk-1.8.4.ebuild:
+  Version bump; add ruby targets; skip failing test
 
   26 May 2014; Manuel Rüger <mrueg@gentoo.org> aws-sdk-1.8.3.1.ebuild:
   Remove ruby18 target.
