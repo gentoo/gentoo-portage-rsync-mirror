@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.41.1.ebuild,v 1.3 2014/07/23 15:23:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.41.1.ebuild,v 1.4 2014/11/30 23:06:18 eva Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-cpp/glibmm-2.16.3:2
 	>=dev-cpp/libxmlpp-2.20:2.6
 	>=app-text/enchant-1.4
-	>=dev-cpp/gstreamermm-0.10.6
+	>=dev-cpp/gstreamermm-0.10.6:0.10
 	>=media-libs/gst-plugins-good-0.10:0.10
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
 	>=media-plugins/gst-plugins-pango-0.10:0.10

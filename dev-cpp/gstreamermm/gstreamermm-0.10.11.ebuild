@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.11.ebuild,v 1.4 2013/12/08 17:51:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.11.ebuild,v 1.5 2014/11/30 23:05:10 eva Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -11,7 +11,7 @@ DESCRIPTION="C++ interface for GStreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org/bindings/cplusplus.html"
 
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="0.10"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="test"
 

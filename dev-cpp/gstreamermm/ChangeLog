@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/gstreamermm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/ChangeLog,v 1.31 2014/04/23 21:03:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/ChangeLog,v 1.32 2014/11/30 23:05:10 eva Exp $
+
+*gstreamermm-1.0.10 (30 Nov 2014)
+
+  30 Nov 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  gstreamermm-0.10.11.ebuild, +gstreamermm-1.0.10.ebuild:
+  Version bump. Move 0.10 to 0.10 slot.
 
   23 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gstreamermm-0.10.10.1.ebuild:
   Drop old

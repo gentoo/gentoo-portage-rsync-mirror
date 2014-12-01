@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.78 2014/11/29 12:47:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.79 2014/11/30 23:25:53 radhermit Exp $
+
+*unbound-1.5.0-r1 (30 Nov 2014)
+
+  30 Nov 2014; Tim Harder <radhermit@gentoo.org> +unbound-1.5.0-r1.ebuild,
+  metadata.xml:
+  Add ecdsa use flag to support openssl compiled with bindist enabled (bug
+  #531256).
 
   29 Nov 2014; Jeroen Roovers <jer@gentoo.org> unbound-1.5.0.ebuild:
   Marked ~hppa (bug #531068).

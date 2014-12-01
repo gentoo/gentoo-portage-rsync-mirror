@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
+DEPEND=>=media-libs/gstreamer-1.0.10:1.0 >=media-libs/gst-plugins-base-1.0.10:1.0 >=dev-cpp/glibmm-2.36:2 >=dev-cpp/libxmlpp-2.14:2.6 >=dev-libs/libsigc++-2:2 virtual/pkgconfig test? ( dev-cpp/gtest media-libs/gst-plugins-base:1.0[X,ogg,theora,vorbis] media-libs/gst-plugins-good:1.0 media-plugins/gst-plugins-jpeg:1.0 ) app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=C++ interface for GStreamer
+EAPI=5
+HOMEPAGE=http://gstreamer.freedesktop.org/bindings/cplusplus.html
+IUSE=test debug
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=LGPL-2.1
+RDEPEND=>=media-libs/gstreamer-1.0.10:1.0 >=media-libs/gst-plugins-base-1.0.10:1.0 >=dev-cpp/glibmm-2.36:2 >=dev-cpp/libxmlpp-2.14:2.6 >=dev-libs/libsigc++-2:2
+SLOT=1.0
+SRC_URI=mirror://gnome/sources/gstreamermm/1.0/gstreamermm-1.0.10.tar.xz
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	45916e43d354f01469675d59c24f3a07	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=b6fb6e9da8569737b3f0301bca034a99
