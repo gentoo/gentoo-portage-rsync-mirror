@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.94 2014/10/22 08:34:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.95 2014/12/01 12:37:30 jlec Exp $
+
+*linkchecker-9.3 (01 Dec 2014)
+
+  01 Dec 2014; Justin Lecher <jlec@gentoo.org> +linkchecker-9.3.ebuild,
+  +files/linkchecker-9.3-bash-completion.patch:
+  Version Bump; drop USE in favour of optfeature; fix bashcompletion
 
   22 Oct 2014; Justin Lecher <jlec@gentoo.org> linkchecker-9.2.ebuild:
   Add lower bound for dev-python/requests, #513514

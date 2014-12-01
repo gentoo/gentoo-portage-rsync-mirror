@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/eog-plugins-3.12.1-r1.ebuild,v 1.1 2014/11/25 15:17:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/eog-plugins-3.12.1-r1.ebuild,v 1.2 2014/12/01 12:48:42 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{3_3,3_4} )
 
-inherit gnome2 python-single-r1
+inherit gnome2 python-r1
 
 DESCRIPTION="Eye of GNOME plugins"
 HOMEPAGE="https://wiki.gnome.org/Apps/EyeOfGnome/Plugins"
@@ -16,12 +16,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+exif +flickr map +picasa +python"
-# Let people emerge this by default, bug #472932
-IUSE+=" +python_single_target_python3_3"
 
 REQUIRED_USE="
 	map? ( exif )
-	python? ( ${PYTHON_REQUIRED_USE} )"
+	python? ( ^^ ( $(python_gen_useflags '*') ) )"
 
 RDEPEND="
 	>=dev-libs/glib-2.32:2
@@ -51,7 +49,7 @@ DEPEND="${RDEPEND}
 "
 
 pkg_setup() {
-	use python && python-single-r1_pkg_setup
+	use python && [[ ${MERGE_TYPE} == binary ]] && python_setup
 }
 
 src_configure() {

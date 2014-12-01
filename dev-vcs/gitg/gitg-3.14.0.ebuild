@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-3.14.0.ebuild,v 1.2 2014/11/24 15:41:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-3.14.0.ebuild,v 1.3 2014/12/01 12:39:48 mgorny Exp $
 
 EAPI=5
 
 VALA_MIN_API_VERSION="0.20"
-PYTHON_COMPAT=( python{3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{3_3,3_4} )
 
 inherit autotools gnome2 python-r1 vala
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug glade +python"
 
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+REQUIRED_USE="python? ( ^^ ( $(python_gen_useflags '*') ) )"
 
 # test if unbundling of libgd is possible
 # Currently it seems not to be (unstable API/ABI)
@@ -51,6 +51,10 @@ DEPEND="${RDEPEND}
 	$(vala_depend)"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+pkg_setup() {
+	use python && [[ ${MERGE_TYPE} != binary ]] && python_setup
+}
 
 src_prepare() {
 	sed \

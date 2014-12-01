@@ -14,7 +14,7 @@
  
  atop:		atop.o    $(ALLMODS) Makefile
 -		$(CC) atop.o $(ALLMODS) -o atop -lncurses -lz -lm -lrt $(LDFLAGS)
-+		$(CC) $(CFLAGS) $(LDFLAGS) atop.o $(ALLMODS) -o atop -lncurses -lz -lm -lrt
++		$(CC) $(CFLAGS) $(LDFLAGS) atop.o $(ALLMODS) -o atop $(shell ${PKG_CONFIG} --libs ncurses) -lz -lm -lrt
  
  atopsar:	atop
  		ln -sf atop atopsar
