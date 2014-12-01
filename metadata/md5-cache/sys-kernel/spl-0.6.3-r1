@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test
+DEPEND=dev-lang/perl virtual/awk kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=The Solaris Porting Layer is a Linux kernel module which provides many of the Solaris kernel APIs
+EAPI=4
+HOMEPAGE=http://zfsonlinux.org/
+IUSE=custom-cflags debug debug-log kernel_linux
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=dev-lang/perl virtual/awk !sys-devel/spl kernel_linux? ( virtual/modutils )
+RESTRICT=debug? ( strip ) test
+SLOT=0
+SRC_URI=https://github.com/zfsonlinux/spl/archive/spl-0.6.3.tar.gz http://dev.gentoo.org/~ryao/dist/spl-0.6.3-patches-r1.tar.xz
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	linux-mod	101302d4b7b694ea9622bbffb187d0de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=9338c105d351cc54b537fc363844ae65

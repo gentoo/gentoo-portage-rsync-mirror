@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.96 2014/11/16 12:42:25 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.97 2014/12/01 06:39:59 bircoph Exp $
+
+*oprofile-1.0.0 (01 Dec 2014)
+
+  01 Dec 2014; Andrew Savchenko <bircoph@gentoo.org> +oprofile-1.0.0.ebuild,
+  +files/oprofile-1.0.0-athlon.patch:
+  Version bump to 1.0.0, see bug 530754.
+  Fix CPU detection for Athlon systems.
 
   16 Nov 2014; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
   Add myself to maintainers
