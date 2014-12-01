@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/argcomplete
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argcomplete/ChangeLog,v 1.6 2014/10/04 04:56:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argcomplete/ChangeLog,v 1.7 2014/12/01 13:52:14 jlec Exp $
+
+*argcomplete-0.8.1 (01 Dec 2014)
+
+  01 Dec 2014; Justin Lecher <jlec@gentoo.org> +argcomplete-0.8.1.ebuild:
+  Version Bump
 
 *argcomplete-0.6.5-r1 (04 Oct 2014)
 

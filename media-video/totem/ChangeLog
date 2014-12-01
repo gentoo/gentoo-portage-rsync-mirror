@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.381 2014/11/13 12:25:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.382 2014/12/01 14:00:10 mgorny Exp $
+
+  01 Dec 2014; Michał Górny <mgorny@gentoo.org> totem-3.12.2.ebuild:
+  Add missing PYTHON_USEDEP on libpeas.
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -files/totem-2.30.2-mp2t-support.patch,

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/textutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/textutils/ChangeLog,v 1.7 2014/11/28 18:06:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/textutils/ChangeLog,v 1.8 2014/12/01 13:32:53 aballier Exp $
+
+*textutils-112.01.00 (01 Dec 2014)
+
+  01 Dec 2014; Alexis Ballier <aballier@gentoo.org>
+  +textutils-112.01.00.ebuild:
+  version bump
 
   28 Nov 2014; Alexis Ballier <aballier@gentoo.org> textutils-109.53.03.ebuild:
   update deps for ocaml 4.02

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/camomile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.38 2014/11/28 17:31:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.39 2014/12/01 13:47:34 aballier Exp $
+
+*camomile-0.8.5 (01 Dec 2014)
+
+  01 Dec 2014; Alexis Ballier <aballier@gentoo.org> +camomile-0.8.5.ebuild:
+  version bump, bug #522496 by José Romildo Malaquias
 
   28 Nov 2014; Alexis Ballier <aballier@gentoo.org> camomile-0.8.4.ebuild:
   update deps for ocaml 4.02

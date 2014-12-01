@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16195 2014/12/01 10:43:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16196 2014/12/01 13:37:30 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -283,13 +283,6 @@ games-engines/sarien
 # Dead upstream (last release 5 years ago).
 # No reverse deps in the tree. Masked for removal in 30 days.
 dev-perl/Mail-ClamAV
-
-# Manuel Rüger <mrueg@gentoo.org> (25 Oct 2014)
-# Deprecated by upstream, Debian removed it in 2010.
-# Contents of this package moved to foomatic-db{,-engine,-ppds}
-# and cups-filters.
-# Masking for removal in 30 days.
-net-print/foomatic-filters-ppds
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (24 Oct 2014)
 # Fails tests (bug 421797), no reverse deps in tree, VERY dead

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.12.2.ebuild,v 1.1 2014/09/04 15:33:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.12.2.ebuild,v 1.2 2014/12/01 14:00:10 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -67,6 +67,7 @@ RDEPEND="
 	nsplugin? ( >=x11-misc/shared-mime-info-0.22 )
 	python? (
 		${PYTHON_DEPS}
+		>=dev-libs/libpeas-1.1.0[${PYTHON_USEDEP}]
 		>=dev-python/pygobject-2.90.3:3[${PYTHON_USEDEP}]
 		dev-python/pyxdg[${PYTHON_USEDEP}]
 		dev-python/dbus-python[${PYTHON_USEDEP}]
