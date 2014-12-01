@@ -1,15 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/pshs-9999.ebuild,v 1.4 2014/12/01 19:19:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/pshs-0.2.2.ebuild,v 1.1 2014/12/01 19:19:54 mgorny Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="http://bitbucket.org/mgorny/${PN}.git"
-
-inherit git-r3
-#endif
 
 inherit autotools-utils
 
@@ -30,11 +23,6 @@ DEPEND="${RDEPEND}
 	netlink? ( sys-apps/iproute2
 		>=sys-kernel/linux-headers-2.6.27 )"
 # libnetlink is static only ATM
-
-#if LIVE
-KEYWORDS=
-SRC_URI=
-#endif
 
 src_configure() {
 	myeconfargs=(
