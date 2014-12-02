@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/backuppc-3.3.0.ebuild,v 1.5 2014/09/16 14:57:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/backuppc-3.3.0-r1.ebuild,v 1.1 2014/12/02 10:35:09 pacho Exp $
 
 EAPI="5"
 
-inherit eutils webapp user
+inherit eutils systemd webapp user
 
 MY_P="BackupPC-${PV}"
 
@@ -127,9 +127,10 @@ src_install() {
 	keepdir ${DATADIR}/{trash,pool,pc,cpool}
 	keepdir ${LOGDIR}
 
-	ebegin "Setting up init.d/conf.d scripts"
+	ebegin "Setting up init.d/conf.d/systemd scripts"
 	newinitd "${S}"/init.d/gentoo-backuppc backuppc
 	newconfd "${S}"/init.d/gentoo-backuppc.conf backuppc
+	systemd_dounit "${FILESDIR}/${PN}.service"
 	eend 0
 
 	ebegin "Setting up an apache instance for backuppc"
