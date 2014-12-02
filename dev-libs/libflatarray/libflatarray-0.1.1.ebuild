@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libflatarray/libflatarray-0.1.1.ebuild,v 1.1 2014/07/22 12:02:13 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libflatarray/libflatarray-0.1.1.ebuild,v 1.2 2014/12/02 10:01:22 slis Exp $
 
 EAPI=5
 
@@ -17,10 +17,16 @@ LICENSE="Boost-1.0"
 IUSE="cuda doc"
 
 RDEPEND="
-	>=dev-libs/boost-1.48
-	cuda? ( dev-util/nvidia-cuda-toolkit )"
+	>=dev-libs/boost-1.48"
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+	cuda? ( dev-util/nvidia-cuda-toolkit )"
+
+src_prepare() {
+	if use cuda; then
+		cuda_src_prepare
+	fi
+}
 
 src_configure() {
 	local mycmakeargs=(
