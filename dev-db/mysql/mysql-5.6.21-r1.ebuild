@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.6.21-r1.ebuild,v 1.1 2014/10/19 20:27:12 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.6.21-r1.ebuild,v 1.2 2014/12/02 18:18:11 grknight Exp $
 
 EAPI="5"
 
@@ -98,7 +98,7 @@ multilib_src_test() {
 			funcs_1.is_triggers \
 			main.information_schema \
 			main.mysql_client_test \
-			main.mysqld--help-notwinfuncs_1.is_triggers \
+			main.mysqld--help-notwin \
 			perfschema.binlog_edge_mix \
 			perfschema.binlog_edge_stmt \
 			rpl.rpl_plugin_load \
