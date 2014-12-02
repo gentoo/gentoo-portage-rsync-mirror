@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/activeresource-4.0.0.ebuild,v 1.2 2014/08/05 16:00:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/activeresource-4.0.0.ebuild,v 1.3 2014/12/02 06:53:18 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -40,6 +40,7 @@ all_ruby_prepare() {
 	rm Gemfile || die "Unable to remove Gemfile"
 
 	# Pull in the correct version of minitest since we don't use bundler.
-	sed -i -e '1igem "minitest", "~>4.0"' test/abstract_unit.rb || die
+	sed -i -e '1igem "minitest", "~>4.0"' \
+		-e '2igem "activemodel", "~>4.0.0"' test/abstract_unit.rb || die
 
 }
