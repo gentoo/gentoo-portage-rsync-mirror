@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cx_Freeze
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cx_Freeze/ChangeLog,v 1.10 2014/05/30 04:43:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cx_Freeze/ChangeLog,v 1.11 2014/12/02 09:48:47 pacho Exp $
+
+  02 Dec 2014; Pacho Ramos <pacho@gentoo.org> cx_Freeze-4.3.3.ebuild:
+  amd64/x86 stable, bug #530428
 
 *cx_Freeze-4.3.3 (30 May 2014)
 
