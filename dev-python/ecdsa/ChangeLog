@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ecdsa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.26 2014/11/19 09:05:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.27 2014/12/02 04:59:00 idella4 Exp $
+
+  02 Dec 2014; Ian Delaney <idella4@gentoo.org> ecdsa-0.11-r1.ebuild:
+  clean old impls
 
   19 Nov 2014; Michał Górny <mgorny@gentoo.org> -ecdsa-0.11.ebuild:
   And remove the broken version.
