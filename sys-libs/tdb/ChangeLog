@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/tdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.77 2014/11/11 22:28:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.78 2014/12/02 08:20:46 polynomial-c Exp $
+
+*tdb-1.3.2 (02 Dec 2014)
+
+  02 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -tdb-1.2.10.ebuild,
+  -tdb-1.2.11.ebuild, -tdb-1.2.13.ebuild, +tdb-1.3.2.ebuild:
+  Version bump. Removed old.
 
   11 Nov 2014; Mike Gilbert <floppym@gentoo.org> tdb-1.3.0-r1.ebuild,
   tdb-1.3.1.ebuild:

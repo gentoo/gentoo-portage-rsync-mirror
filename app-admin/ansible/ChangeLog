@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.54 2014/12/02 07:57:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.55 2014/12/02 08:23:05 pinkbyte Exp $
+
+  02 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> ansible-1.8.1-r1.ebuild,
+  ansible-9999.ebuild:
+  Restrict testing, cause it's broken in release tarball. Add missing test
+  dependency on dev-python/mock to live ebuild
 
 *ansible-1.8.1-r1 (02 Dec 2014)
 

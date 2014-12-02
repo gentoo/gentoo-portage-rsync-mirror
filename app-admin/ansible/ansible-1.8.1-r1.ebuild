@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.8.1-r1.ebuild,v 1.1 2014/12/02 07:57:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.8.1-r1.ebuild,v 1.2 2014/12/02 08:23:05 pinkbyte Exp $
 
 EAPI=5
 
@@ -15,14 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="test"
 
-DEPEND="
-	test? (
-		dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/passlib[${PYTHON_USEDEP}]
-		dev-vcs/git
-	)"
 RDEPEND="
 	dev-python/jinja[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
@@ -30,9 +23,8 @@ RDEPEND="
 	virtual/ssh
 "
 
-python_test() {
-	make tests || die "tests failed"
-}
+# Tests are broken in release tarball
+RESTRICT="test"
 
 python_install_all() {
 	distutils-r1_python_install_all

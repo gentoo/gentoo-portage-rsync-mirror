@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>proxy-maintainers</herd>
 <maintainer>
 	<email>fatzer2@gmail.com</email>
 	<name>Alexander Golubev</name>
@@ -13,7 +14,6 @@
 	</maintainer>
 	<bugs-to>https://github.com/euroelessar/qutim/issues</bugs-to>
 </upstream>
-<herd>proxy-maintainers</herd>
 <use>
 	<flag name="aspell">Enable spellchecking using <pkg>app-text/aspell</pkg></flag>
 	<flag name="awn">Enable integration with <pkg>gnome-extra/avant-window-navigator</pkg></flag>
