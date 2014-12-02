@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bottle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.39 2014/12/01 08:58:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.40 2014/12/02 09:20:01 pacho Exp $
+
+  02 Dec 2014; Pacho Ramos <pacho@gentoo.org> bottle-0.12.7.ebuild:
+  amd64/x86 stable, bug #530406
 
   01 Dec 2014; Ian Delaney <idella4@gentoo.org> bottle-0.12.7.ebuild:
   clean py3.2 add pypy3 support

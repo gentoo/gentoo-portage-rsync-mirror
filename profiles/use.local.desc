@@ -231,7 +231,7 @@ app-admin/sudo:offensive - Let sudo print insults when the user types the wrong 
 app-admin/sudo:sendmail - Allow sudo to send emails with sendmail.
 app-admin/sysklogd:logrotate - use app-admin/logrotate for rotating logs rather than custom cron scripts
 app-admin/syslog-ng:amqp - Enable support for AMQP destinations
-app-admin/syslog-ng:json - Enable support for JSON template formatting via dev-libs/json-glib
+app-admin/syslog-ng:json - Enable support for JSON template formatting via dev-libs/json-c
 app-admin/syslog-ng:mongodb - Enable support for mongodb destinations
 app-admin/syslog-ng:pacct - Enable support for reading Process Accounting files (EXPERIMENTAL, Linux only)
 app-admin/syslog-ng:redis - Enable support for Redis destinations

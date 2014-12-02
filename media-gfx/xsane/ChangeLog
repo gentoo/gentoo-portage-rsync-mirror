@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.117 2014/11/25 08:42:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.118 2014/12/02 09:25:25 ago Exp $
+
+  02 Dec 2014; Agostino Sarubbo <ago@gentoo.org> xsane-0.999-r1.ebuild:
+  Stable for alpha, wrt bug #526922
 
   25 Nov 2014; Agostino Sarubbo <ago@gentoo.org> xsane-0.999-r1.ebuild:
   Stable for x86, wrt bug #526922

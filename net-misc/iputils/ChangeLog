@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.132 2014/12/01 09:29:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.133 2014/12/02 09:20:24 ago Exp $
+
+  02 Dec 2014; Agostino Sarubbo <ago@gentoo.org> iputils-20121221-r1.ebuild:
+  Stable for alpha, wrt bug #517720
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> iputils-20121221-r1.ebuild:
   Stable for sparc, wrt bug #517720

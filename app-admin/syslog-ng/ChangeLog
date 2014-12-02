@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.407 2014/11/10 16:06:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.408 2014/12/02 09:14:16 mr_bones_ Exp $
+
+  02 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
+  update metadata (bug #531382)
 
   10 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.6.1.ebuild:
   fix upstream doc link and doc install - reported by Tomas Mozes via bug

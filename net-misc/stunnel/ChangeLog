@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.192 2014/12/01 09:29:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.193 2014/12/02 09:21:15 ago Exp $
+
+  02 Dec 2014; Agostino Sarubbo <ago@gentoo.org> stunnel-5.07.ebuild:
+  Stable for alpha, wrt bug #528004
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> stunnel-5.07.ebuild:
   Stable for sparc, wrt bug #528004
