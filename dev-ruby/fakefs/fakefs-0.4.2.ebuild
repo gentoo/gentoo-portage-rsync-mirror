@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/fakefs-0.4.2.ebuild,v 1.14 2014/08/05 16:00:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/fakefs-0.4.2.ebuild,v 1.15 2014/12/02 12:37:53 mrueg Exp $
 
 EAPI=4
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_RECIPE_TEST="none"
 
@@ -32,18 +32,6 @@ ruby_add_bdepend "
 all_ruby_prepare() {
 	# Remove bundler
 	rm Gemfile || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# Ignore failing tests: upstream is aware and doing the same
-			# on Travis.
-			rm test/fakefs_test.rb test/file/stat_test.rb || die
-			;;
-		*)
-			;;
-	esac
 }
 
 each_ruby_test() {

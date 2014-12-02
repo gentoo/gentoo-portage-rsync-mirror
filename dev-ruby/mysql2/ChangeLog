@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mysql2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.30 2014/11/12 07:17:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.31 2014/12/02 12:34:14 mrueg Exp $
+
+  02 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -mysql2-0.3.15.ebuild,
+  -mysql2-0.3.16.ebuild:
+  Cleanup old.
 
 *mysql2-0.3.17 (12 Nov 2014)
 

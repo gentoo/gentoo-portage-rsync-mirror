@@ -1,6 +1,11 @@
 # ChangeLog for media-video/pitivi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.35 2014/04/06 15:28:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.36 2014/12/02 12:37:11 pacho Exp $
+
+  02 Dec 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/pitivi-0.13.5-work-with-old-good.patch, -pitivi-0.14.1.ebuild,
+  -pitivi-0.15.2.ebuild:
+  Drop old
 
   06 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> pitivi-0.93.ebuild:
   Little ebuild fixes.

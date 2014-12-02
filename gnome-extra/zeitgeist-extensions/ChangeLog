@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/zeitgeist-extensions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-extensions/ChangeLog,v 1.16 2014/05/04 12:10:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-extensions/ChangeLog,v 1.17 2014/12/02 12:35:51 pacho Exp $
+
+  02 Dec 2014; Pacho Ramos <pacho@gentoo.org>
+  -zeitgeist-extensions-0.0.13-r1.ebuild:
+  drop old
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org>
   zeitgeist-extensions-0.0.13-r2.ebuild:
