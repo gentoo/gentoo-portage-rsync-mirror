@@ -1,9 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.10 2013/06/29 12:18:33 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.11 2014/12/02 22:38:59 pacho Exp $
 
-EAPI="3"
+EAPI=5
 GCONF_DEBUG="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit autotools gnome2 eutils
 
@@ -18,13 +19,8 @@ IUSE=""
 DEPEND="sys-devel/m4"
 RDEPEND=""
 
-pkg_setup() {
-	DOCS="AUTHORS ChangeLog FEATURES IDEAS README NEWS TODO"
-	G2CONF="${G2CONF} --enable-maintainer-mode --enable-threads"
-}
-
 src_prepare() {
-	gnome2_src_prepare
+	DOCS="AUTHORS ChangeLog FEATURES IDEAS README NEWS TODO"
 
 	# fixes bug #219041
 	sed -e 's:ACLOCAL_AMFLAGS = -I $(srcdir)/scripts:ACLOCAL_AMFLAGS = -I scripts:' \
@@ -37,4 +33,11 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-fix-install.patch"
 
 	eautoreconf
+	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		--enable-maintainer-mode \
+		--enable-threads
 }
