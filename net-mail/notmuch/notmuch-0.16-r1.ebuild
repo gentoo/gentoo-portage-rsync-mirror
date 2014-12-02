@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.16-r1.ebuild,v 1.9 2014/09/18 19:47:19 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.16-r1.ebuild,v 1.10 2014/12/02 15:09:02 aidecoe Exp $
 
 EAPI=5
 
 DISTUTILS_OPTIONAL=1
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit elisp-common eutils pax-utils distutils-r1
+inherit bash-completion-r1 elisp-common eutils pax-utils distutils-r1
 
 DESCRIPTION="Thread-based e-mail indexer, supporting quick search and tagging"
 HOMEPAGE="http://notmuchmail.org/"
@@ -85,7 +85,7 @@ src_prepare() {
 
 src_configure() {
 	local myeconfargs=(
-		--bashcompletiondir="${EPREFIX}/usr/share/bash-completion"
+		--bashcompletiondir="$(get_bashcompdir)"
 		--emacslispdir="${EPREFIX}/${SITELISP}/${PN}"
 		--emacsetcdir="${EPREFIX}/${SITEETC}/${PN}"
 		--with-gmime-version=2.6

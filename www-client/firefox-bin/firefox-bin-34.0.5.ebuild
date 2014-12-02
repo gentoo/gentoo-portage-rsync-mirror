@@ -1,15 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-33.0.ebuild,v 1.3 2014/11/02 10:26:31 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-34.0.5.ebuild,v 1.1 2014/12/02 15:30:16 axs Exp $
 
 EAPI="5"
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
 MOZ_LANGS=(af ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da de el en
 en-GB en-US en-ZA eo es-AR es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gd gl
-gu-IN he hi-IN hr hu hy-AM id is it ja kk kn ko ku lt lv mai mk ml mr nb-NO
+gu-IN he hi-IN hr hu hy-AM id is it ja kk kn ko lt lv mai mk ml mr nb-NO
 nl nn-NO or pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta
-te tr uk vi zh-CN zh-TW zu)
+te tr uk vi zh-CN zh-TW)
 
 # Convert the ebuild version to the upstream mozilla version, used by mozlinguas
 MOZ_PV="${PV/_beta/b}" # Handle beta for SRC_URI
