@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaf/jaf-1.1-r1.ebuild,v 1.15 2013/02/05 07:19:50 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaf/jaf-1.1-r1.ebuild,v 1.16 2014/12/02 14:31:21 mrueg Exp $
 
-EAPI=1
+EAPI=5
 
 inherit java-virtuals-2
 

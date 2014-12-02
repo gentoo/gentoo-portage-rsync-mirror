@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0-r3.ebuild,v 1.1 2014/07/21 09:04:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0-r3.ebuild,v 1.2 2014/12/02 14:38:15 pacho Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ LICENSE="GPL-2+ MIT"
 SLOT="0"
 # newline is needed for broken ekeyword
 [[ ${PV} = 9999 ]] || \
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug opengl"
 
 RDEPEND=">=x11-libs/libva-1.2.1-r1[X(+),opengl?,${MULTILIB_USEDEP}]
