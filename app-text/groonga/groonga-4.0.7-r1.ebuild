@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/groonga/groonga-4.0.7.ebuild,v 1.1 2014/11/29 02:30:24 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/groonga/groonga-4.0.7-r1.ebuild,v 1.1 2014/12/02 03:20:57 grknight Exp $
 
 EAPI=5
 inherit eutils libtool user
@@ -62,7 +62,7 @@ src_configure() {
 		$(use_with libevent) \
 		$(use_with lzo) \
 		$(use_with mecab) \
-		$(use_with msgpack message-pack) \
+		$(use_with msgpack message-pack "${EROOT}usr") \
 		$(use_enable nfkc) \
 		$(use_with ruby) \
 		$(use_with sphinx sphinx-build) \
@@ -80,8 +80,8 @@ src_install() {
 	newinitd "${FILESDIR}/${PN}.initd" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 
-	keepdir /var/{log,spool}/${PN}
-	fowners groonga:groonga /var/{log,spool}/${PN}
+	keepdir /var/{log,lib}/${PN}
+	fowners groonga:groonga /var/{log,lib}/${PN}
 
 	dodoc README.md
 

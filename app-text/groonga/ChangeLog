@@ -1,6 +1,12 @@
 # ChangeLog for app-text/groonga
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/groonga/ChangeLog,v 1.1 2014/11/29 02:30:24 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/groonga/ChangeLog,v 1.2 2014/12/02 03:20:57 grknight Exp $
+
+*groonga-4.0.7-r1 (02 Dec 2014)
+
+  02 Dec 2014; Brian Evans <grknight@gentoo.org> +groonga-4.0.7-r1.ebuild,
+  -groonga-4.0.7.ebuild, files/groonga.confd, files/groonga.initd:
+  Revbump for bug 531334 and bug 531346
 
 *groonga-4.0.7 (29 Nov 2014)
 
