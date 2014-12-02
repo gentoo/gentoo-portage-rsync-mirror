@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jokosher
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/ChangeLog,v 1.13 2012/10/25 20:36:08 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/ChangeLog,v 1.14 2014/12/02 21:39:46 pacho Exp $
+
+*jokosher-0.11.5-r1 (02 Dec 2014)
+
+  02 Dec 2014; Pacho Ramos <pacho@gentoo.org> +jokosher-0.11.5-r1.ebuild:
+  Port to new python eclasses
 
   25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> jokosher-0.11.1.ebuild,
   jokosher-0.11.5.ebuild:
@@ -47,4 +52,3 @@
   Initial commit for bug 141362, thanks to Denis Gubanov, Eric Anderson, James
   Kirkham, Jose daLuz, Alex Rostovtsev and many others I missed to mention
   here.
-
