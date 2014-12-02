@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.75 2014/12/02 13:36:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-11.1.ebuild,v 1.1 2014/12/02 13:36:00 lu_zero Exp $
 
 EAPI=5
 
@@ -96,8 +96,11 @@ RDEPEND="
 	vaapi? ( >=x11-libs/libva-1.2.1-r1[${MULTILIB_USEDEP}] )
 	vdpau? ( >=x11-libs/libvdpau-0.7[${MULTILIB_USEDEP}] )
 	vpx? ( >=media-libs/libvpx-1.2.0_pre20130625[${MULTILIB_USEDEP}] )
-	X? ( >=x11-libs/libxcb-1.9.1[${MULTILIB_USEDEP}]
-		 >=x11-libs/libxcb-1.9.1[${MULTILIB_USEDEP}] )
+	X? (
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXfixes-5.0.1[${MULTILIB_USEDEP}]
+	)
 	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 "
 
@@ -209,7 +212,7 @@ multilib_src_configure() {
 	for i in alsa oss jack; do
 		use ${i} || myconf+=( --disable-indev=${i} )
 	done
-	use X && myconf+=( --enable-libxcb )
+	use X && myconf+=( --enable-x11grab )
 	# Outdevs
 	for i in alsa oss ; do
 		use ${i} || myconf+=( --disable-outdev=${i} )
