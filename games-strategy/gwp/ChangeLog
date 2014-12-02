@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/gwp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/ChangeLog,v 1.10 2014/06/25 06:04:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/ChangeLog,v 1.11 2014/12/02 16:09:07 pacho Exp $
+
+*gwp-0.4.0-r3 (02 Dec 2014)
+
+  02 Dec 2014; Pacho Ramos <pacho@gentoo.org> +gwp-0.4.0-r3.ebuild:
+  Bump to eapi5, use new python eclasses
 
   25 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org> gwp-0.4.0-r2.ebuild:
   link with gold linker (bug #514428)

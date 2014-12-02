@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/bless
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.22 2014/07/08 11:22:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.23 2014/12/02 16:16:00 pacho Exp $
+
+*bless-0.6.0-r2 (02 Dec 2014)
+
+  02 Dec 2014; Pacho Ramos <pacho@gentoo.org> +bless-0.6.0-r2.ebuild,
+  -bless-0.6.0-r1.ebuild:
+  Bump to eapi5, follow latest policies for gnome2.eclass, drop using deprecated
+  mono.eclass
 
   08 Jul 2014; Pacho Ramos <pacho@gentoo.org> -bless-0.5.2.ebuild:
   Drop old version as it's one of the last eapi0 consumers of gnome2.eclass
