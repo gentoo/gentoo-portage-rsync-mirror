@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/files/redis.initd-4,v 1.1 2014/10/08 09:46:26 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/files/redis.initd-4,v 1.2 2014/12/02 15:33:37 ultrabug Exp $
 
 REDIS_DIR=${REDIS_DIR:-/var/lib/redis}
 REDIS_CONF=${REDIS_CONF:-/etc/redis.conf}
@@ -9,10 +9,10 @@ REDIS_GROUP=${REDIS_GROUP:-redis}
 REDIS_TIMEOUT=${REDIS_TIMEOUT:-30}
 
 command=/usr/sbin/redis-server
-start_stop_daemon_args="--chdir \"${REDIS_DIR}\"
-	--user ${REDIS_USER} --group ${REDIS_GROUP}"
-command_args="${REDIS_OPTS}"
 pidfile=${REDIS_PID:-/run/redis/redis.pid}
+start_stop_daemon_args="--background --make-pidfile --pidfile ${pidfile}
+	--chdir \"${REDIS_DIR}\" --user ${REDIS_USER} --group ${REDIS_GROUP}"
+command_args="${REDIS_OPTS}"
 
 depend() {
 	use net localmount logger

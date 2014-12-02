@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16197 2014/12/02 08:02:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16198 2014/12/02 15:46:28 ultrabug Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -990,10 +990,6 @@ net-wireless/madwifi-ng
 # Requires dev-scheme/guile-2.0.5 which is in lisp overlay and masked;
 # bug #416683
 >=games-board/aisleriot-3.3.1
-
-# Ultrabug <ultrabug@gentoo.org> (16 May 2012)
-# Masked for testing
->=sys-cluster/corosync-2.0.0
 
 # Johannes Huber <johu@gentoo.org> (03 May 2012)
 # Unstable dev channel release. Fixes build with gcc47
