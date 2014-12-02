@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubytter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytter/ChangeLog,v 1.9 2014/04/24 16:44:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytter/ChangeLog,v 1.10 2014/12/02 13:20:39 mrueg Exp $
+
+  02 Dec 2014; Manuel Rüger <mrueg@gentoo.org> rubytter-1.5.1.ebuild:
+  Drop bundler dep. Add ruby20 target. Drop ~x86 bug #511176.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> rubytter-1.5.1.ebuild:
   Remove ruby18 support.

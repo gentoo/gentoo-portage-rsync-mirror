@@ -1,12 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-4.14.3.ebuild,v 1.2 2014/12/02 13:06:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/qtruby-4.14.3-r1.ebuild,v 1.1 2014/12/02 13:05:19 mrueg Exp $
 
 EAPI=5
 
 OPENGL_REQUIRED="always"
-
-USE_RUBY="ruby19"
+DECLARATIVE_REQUIRED="optional"
+KDE_REQUIRED="never"
+USE_RUBY="ruby20"
 # Only one ruby version is supported:
 # 1) cmake bails when configuring twice or more - solved with CMAKE_IN_SOURCE_BUILD=1
 # 2) the ebuild can only be installed for one ruby variant, otherwise the compiled
@@ -14,16 +15,15 @@ USE_RUBY="ruby19"
 
 inherit kde4-base ruby-ng
 
-DESCRIPTION="KDE Ruby bindings"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="akonadi debug kate nepomuk okular"
+DESCRIPTION="Qt Ruby bindings"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="debug phonon qscintilla qwt webkit"
 HOMEPAGE="http://techbase.kde.org/Development/Languages/Ruby"
 
 DEPEND="
-	$(add_kdebase_dep qtruby 'ruby_targets_ruby19')
-	$(add_kdebase_dep smokekde 'akonadi?,kate?,okular?,nepomuk?')
-	$(add_kdebase_dep smokeqt)
+	$(add_kdebase_dep smokeqt 'declarative?,opengl,phonon?,qscintilla?,qwt?,webkit?')
 "
+
 RDEPEND="${DEPEND}
 "
 
@@ -46,27 +46,26 @@ all_ruby_prepare() {
 }
 
 each_ruby_configure() {
-	CMAKE_USE_DIR=${S}
+	local CMAKE_USE_DIR=${S}
 	local mycmakeargs=(
 		-DRUBY_LIBRARY=$(ruby_get_libruby)
 		-DRUBY_INCLUDE_PATH=$(ruby_get_hdrdir)
 		-DRUBY_EXECUTABLE=${RUBY}
-		$(cmake-utils_use_with akonadi)
-		$(cmake-utils_use_with akonadi KdepimLibs)
-		$(cmake-utils_use_with nepomuk)
-		$(cmake-utils_use_with nepomuk Soprano)
-		$(cmake-utils_use_disable kate)
-		$(cmake-utils_use_with okular)
+		$(cmake-utils_use_disable declarative QtDeclarative)
+		$(cmake-utils_use_with phonon)
+		$(cmake-utils_use_with qscintilla QScintilla)
+		$(cmake-utils_use_with qwt Qwt5)
+		$(cmake-utils_use_disable webkit QtWebKit)
 	)
 	kde4-base_src_configure
 }
 
 each_ruby_compile() {
-	CMAKE_USE_DIR=${S}
+	local CMAKE_USE_DIR=${S}
 	kde4-base_src_compile
 }
 
 each_ruby_install() {
-	CMAKE_USE_DIR=${S}
+	local CMAKE_USE_DIR=${S}
 	kde4-base_src_install
 }

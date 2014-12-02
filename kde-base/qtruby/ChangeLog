@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.224 2014/11/16 12:21:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.225 2014/12/02 13:05:19 mrueg Exp $
+
+*qtruby-4.14.3-r1 (02 Dec 2014)
+
+  02 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +qtruby-4.14.3-r1.ebuild:
+  Revision bump to default to ruby20.
 
 *qtruby-4.14.3 (16 Nov 2014)
 
