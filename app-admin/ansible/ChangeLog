@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.53 2014/11/30 13:32:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.54 2014/12/02 07:57:26 pinkbyte Exp $
+
+*ansible-1.8.1-r1 (02 Dec 2014)
+
+  02 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> -ansible-1.8.1.ebuild,
+  +ansible-1.8.1-r1.ebuild:
+  Revision bump: use proper tarball with all modules, fix bug #531380, thanks
+  to Vadim Kuznetsov for discovering this issue. Drop old revision
 
 *ansible-1.8.1 (30 Nov 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.1.2.ebuild,v 1.3 2014/11/16 22:54:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.2.0.ebuild,v 1.1 2014/12/02 07:32:57 polynomial-c Exp $
 
 EAPI=5
 
@@ -230,6 +230,8 @@ src_prepare() {
 	# install mediawiki perl modules also in vendor_dir
 	# hack, needs better upstream solution
 	epatch "${FILESDIR}"/git-1.8.5-mw-vendor.patch
+
+	epatch "${FILESDIR}"/git-2.2.0-svn-fe-linking.patch
 
 	epatch_user
 
@@ -515,7 +517,7 @@ src_install() {
 }
 
 src_test() {
-	local disabled="t7004-tag.sh" #520270
+	local disabled="" #t7004-tag.sh" #520270
 	local tests_cvs="t9200-git-cvsexportcommit.sh \
 					t9400-git-cvsserver-server.sh \
 					t9401-git-cvsserver-crlf.sh \
