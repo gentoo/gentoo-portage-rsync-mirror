@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-1.0.10.ebuild,v 1.2 2014/12/01 23:17:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-1.0.10.ebuild,v 1.3 2014/12/02 00:03:58 eva Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -25,7 +25,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? (
-		app-doc/doxygen 
+		app-doc/doxygen
 		dev-libs/libxslt
 		media-gfx/graphviz )
 	test? (
@@ -41,11 +41,16 @@ DEPEND="${RDEPEND}
 # but that's okay, because the rest of dev-cpp/*mm stuff does the same
 
 src_prepare() {
-    if ! use examples; then
+	if ! use examples; then
 		# don't waste time building examples
 		sed -e 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' \
-			-i Makefile.am Makefile.in || die "sed 2 failed"
+			-i Makefile.am Makefile.in || die
 	fi
+
+	# FIXME: disable endless unittests, report upstream
+	sed -e '/test-regression-rewritefile$(EXEEXT) \\/d' \
+		-e '/test-regression-seekonstartup$(EXEEXT) \\/d' \
+		-i tests/Makefile.in || die
 
 	gnome2_src_prepare
 }
