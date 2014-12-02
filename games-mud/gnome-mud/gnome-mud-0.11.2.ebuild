@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.11.2.ebuild,v 1.9 2014/12/02 16:30:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.11.2.ebuild,v 1.10 2014/12/02 18:43:42 mr_bones_ Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE="gstreamer"
 
-RDEPEND="
-	x11-libs/gtk+:2
+RDEPEND="x11-libs/gtk+:2
 	>=gnome-base/libglade-2.0.1:2.0
 	gnome-base/gconf:2
 	>=x11-libs/vte-0.11:0
@@ -25,24 +24,22 @@ RDEPEND="
 	dev-perl/XML-Parser
 	dev-libs/libpcre
 	net-libs/gnet:2
-	virtual/libintl
-"
+	virtual/libintl"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.23
 	>=sys-devel/gettext-0.11.5
-	app-text/scrollkeeper
-"
+	app-text/scrollkeeper"
 
 src_configure() {
-	DOCS="AUTHORS BUGS ChangeLog NEWS PLUGIN.API README ROADMAP"
 	gnome2_src_configure \
 		--bindir="${GAMES_BINDIR}" \
 		$(use_enable gstreamer)
 }
 
 src_install() {
-	gnome2_src_install
+	DOCS="AUTHORS BUGS ChangeLog NEWS PLUGIN.API README ROADMAP" \
+		gnome2_src_install
 	prepgamesdirs
 }
 
