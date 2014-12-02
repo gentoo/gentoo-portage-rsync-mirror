@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.111 2014/12/02 17:05:17 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.112 2014/12/02 21:21:38 pacho Exp $
+
+*nettle-1.15 (02 Dec 2014)
+
+  02 Dec 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/nettle-1.14-make-as-needed.patch,
+  +files/nettle-2.0-binutils-2.22.patch, +nettle-1.15.ebuild:
+  Reintroduce as needed by current stable pike
 
   02 Dec 2014; Alon Bar-Lev <alonbl@gentoo.org>
   -files/nettle-1.14-make-as-needed.patch,
