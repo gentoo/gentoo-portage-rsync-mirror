@@ -1,7 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=>=dev-java/java-config-2.1.6
 DESCRIPTION=Virtual for Streaming API for XML (StAX)
-EAPI=1
+EAPI=5
 HOMEPAGE=http://www.gentoo.org
 IUSE=elibc_FreeBSD
 KEYWORDS=amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris
@@ -9,4 +9,4 @@ LICENSE=public-domain
 RDEPEND=|| ( >=virtual/jre-1.6 dev-java/jsr173 ) >=dev-java/java-config-2.1.6
 SLOT=0
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	java-virtuals-2	348b5b41a30c0b4eee11e7a9343d53ce	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=9c8c5b1804e1625df0b153b00df54196
+_md5_=b66f92e5ed8764fc18f0e2ab14b6ba22

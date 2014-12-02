@@ -1,6 +1,10 @@
 # ChangeLog for java-virtuals/servlet-api
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.50 2014/07/25 00:04:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.51 2014/12/02 14:27:10 mrueg Exp $
+
+  02 Dec 2014; Manuel Rüger <mrueg@gentoo.org> servlet-api-2.2.ebuild,
+  servlet-api-2.3.ebuild, servlet-api-2.4.ebuild:
+  Update to EAPI=5
 
   25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> -servlet-api-2.5.ebuild:
   Cleanup superseded ebuild.

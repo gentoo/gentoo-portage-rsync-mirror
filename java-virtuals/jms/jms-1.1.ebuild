@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jms/jms-1.1.ebuild,v 1.11 2013/06/27 21:31:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jms/jms-1.1.ebuild,v 1.12 2014/12/02 14:30:17 mrueg Exp $
 
-EAPI="1"
+EAPI=5
 
 inherit java-virtuals-2
 

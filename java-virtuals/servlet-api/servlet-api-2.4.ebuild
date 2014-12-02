@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/servlet-api-2.4.ebuild,v 1.13 2013/02/05 07:28:28 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/servlet-api-2.4.ebuild,v 1.14 2014/12/02 14:27:10 mrueg Exp $
 
-EAPI=1
+EAPI=5
 
 inherit java-virtuals-2
 

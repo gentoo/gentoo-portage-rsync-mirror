@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaxp-virtual/jaxp-virtual-1.4-r1.ebuild,v 1.8 2012/10/04 17:35:40 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaxp-virtual/jaxp-virtual-1.4-r1.ebuild,v 1.9 2014/12/02 14:30:46 mrueg Exp $
 
-EAPI=1
+EAPI=5
 
 inherit java-virtuals-2
 
