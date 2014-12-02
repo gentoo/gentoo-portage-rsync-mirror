@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ply
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.34 2014/10/26 19:05:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.35 2014/12/02 11:42:51 idella4 Exp $
+
+  02 Dec 2014; Ian Delaney <idella4@gentoo.org> ply-3.4-r1.ebuild:
+  clean old impls
 
   26 Oct 2014; Fabian Groffen <grobian@gentoo.org> ply-3.4-r1.ebuild:
   Added Prefix keywords, bug #503094

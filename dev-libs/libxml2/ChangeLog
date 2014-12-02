@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.433 2014/12/01 09:16:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.434 2014/12/02 11:57:47 ago Exp $
+
+  02 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libxml2-2.9.2.ebuild:
+  Stable for alpha, wrt bug #525656
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libxml2-2.9.2.ebuild:
   Stable for sparc, wrt bug #525656

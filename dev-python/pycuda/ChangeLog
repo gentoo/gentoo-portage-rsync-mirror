@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pycuda
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/ChangeLog,v 1.22 2013/11/23 09:32:46 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/ChangeLog,v 1.23 2014/12/02 11:33:53 jlec Exp $
+
+*pycuda-2014.1 (02 Dec 2014)
+
+  02 Dec 2014; Justin Lecher <jlec@gentoo.org> +pycuda-2014.1.ebuild,
+  pycuda-9999.ebuild:
+  Version BUmp; add py3.4 support, #531138
 
   23 Nov 2013; Justin Lecher <jlec@gentoo.org> pycuda-2013.1.1.ebuild,
   pycuda-9999.ebuild:
