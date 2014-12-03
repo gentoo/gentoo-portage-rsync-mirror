@@ -1,17 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-2.2.1b.ebuild,v 1.8 2014/12/03 16:22:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-2.3.8.ebuild,v 1.1 2014/12/03 16:14:16 aballier Exp $
 
-EAPI=4
+EAPI=5
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="LaTeX to RTF converter"
 HOMEPAGE="http://latex2rtf.sourceforge.net/"
 SRC_URI="mirror://sourceforge/latex2rtf/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE="doc test"
 S="${WORKDIR}/${P%b}"
@@ -19,7 +19,6 @@ S="${WORKDIR}/${P%b}"
 RDEPEND="virtual/latex-base
 	media-gfx/imagemagick"
 DEPEND="${RDEPEND}
-	sys-apps/man
 	doc? ( virtual/texi2dvi )
 	test? (
 		dev-texlive/texlive-langgerman
@@ -29,24 +28,26 @@ DEPEND="${RDEPEND}
 	)"
 
 src_prepare() {
-	# We are case sensitive...
-	mv copyright Copyright || die
+	epatch "${FILESDIR}/texinfo5.patch"
 }
 
 src_compile() {
 	export VARTEXFONTS="${T}/fonts"
+	tc-export CC
 	# Set DESTDIR here too so that compiled-in paths are correct.
-	emake DESTDIR="${EPREFIX}/usr" CC="$(tc-getCC)" || die "emake failed"
+	emake DESTDIR="${EPREFIX}/usr" || die "emake failed"
 	if use doc; then
 		cd "${S}/doc"
 		emake realclean
 		emake -j1
+	else
+		touch "${S}/doc/latex2rtf.html"
 	fi
 }
 
 src_install() {
 	dodoc README* HACKING ToDo ChangeLog doc/credits
-	emake DESTDIR="${ED}/usr" install
+	emake DESTDIR="${ED}/usr" -j1 install
 	# if doc is not used, only the text version is intalled.
 	if use doc; then
 		emake DESTDIR="${ED}/usr" install-info

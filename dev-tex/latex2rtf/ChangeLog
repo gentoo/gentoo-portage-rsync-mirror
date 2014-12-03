@@ -1,6 +1,16 @@
 # ChangeLog for dev-tex/latex2rtf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.44 2013/03/10 10:22:41 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.46 2014/12/03 16:22:45 aballier Exp $
+
+  03 Dec 2014; Alexis Ballier <aballier@gentoo.org> latex2rtf-2.2.1b.ebuild:
+  depend on sys-apps/man for stable version, bug #438496
+
+*latex2rtf-2.3.8 (03 Dec 2014)
+
+  03 Dec 2014; Alexis Ballier <aballier@gentoo.org> +latex2rtf-2.3.8.ebuild,
+  +files/texinfo5.patch:
+  version bump, bug #500296; import patch from fedora to fix doc build, bug
+  #468086
 
 *latex2rtf-2.3.3 (10 Mar 2013)
 

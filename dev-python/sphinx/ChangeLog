@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.181 2014/12/01 09:45:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.182 2014/12/03 16:09:32 floppym Exp $
+
+  03 Dec 2014; Mike Gilbert <floppym@gentoo.org> sphinx-1.2.2.ebuild,
+  sphinx-1.2.3.ebuild:
+  Fix build failure when DISTUTILS_NO_PARALLEL_BUILD=1, bug 531534.
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> sphinx-1.2.2.ebuild:
   Stable for sparc, wrt bug #524416

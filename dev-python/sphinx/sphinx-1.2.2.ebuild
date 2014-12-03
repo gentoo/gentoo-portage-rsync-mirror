@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.2.2.ebuild,v 1.17 2014/12/01 09:45:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.2.2.ebuild,v 1.18 2014/12/03 16:09:32 floppym Exp $
 
 EAPI=5
 
@@ -42,9 +42,9 @@ python_compile() {
 	# Note that the tests usually do it for us. However, I don't want
 	# to trust USE=test really running all the tests, especially
 	# with FEATURES=test-fail-continue.
-	cd "${BUILD_DIR}"/lib || die
-	"${PYTHON}" -m sphinx.pycode.__init__ \
-		|| die "Grammar generation failed."
+	pushd "${BUILD_DIR}"/lib > /dev/null || die
+	"${PYTHON}" -m sphinx.pycode.__init__ || die "Grammar generation failed."
+	popd > /dev/null || die
 }
 
 python_compile_all() {

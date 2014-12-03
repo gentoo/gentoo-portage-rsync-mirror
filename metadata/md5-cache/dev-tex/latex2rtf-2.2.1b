@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=virtual/latex-base media-gfx/imagemagick doc? ( virtual/texi2dvi ) test? ( dev-texlive/texlive-langgerman dev-texlive/texlive-fontsrecommended dev-texlive/texlive-latexextra dev-tex/latex2html )
+DEPEND=virtual/latex-base media-gfx/imagemagick sys-apps/man doc? ( virtual/texi2dvi ) test? ( dev-texlive/texlive-langgerman dev-texlive/texlive-fontsrecommended dev-texlive/texlive-latexextra dev-tex/latex2html )
 DESCRIPTION=LaTeX to RTF converter
 EAPI=4
 HOMEPAGE=http://latex2rtf.sourceforge.net/
@@ -10,4 +10,4 @@ RDEPEND=virtual/latex-base media-gfx/imagemagick
 SLOT=0
 SRC_URI=mirror://sourceforge/latex2rtf/latex2rtf-2.2.1b.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=37af2c6604b0210db7c6c2914700f1a9
+_md5_=1c7bbadbdb68f6a4e648ea05f84b2f06
