@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.71 2014/11/18 10:04:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.72 2014/12/03 09:57:17 ago Exp $
+
+  03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> fish-2.1.1.ebuild:
+  Stable for ppc, wrt bug #509044
 
   18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> fish-2.1.1.ebuild:
   Stable for x86, wrt bug #509044

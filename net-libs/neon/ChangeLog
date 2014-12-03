@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.90 2014/12/02 20:38:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.91 2014/12/03 09:45:15 ago Exp $
+
+  03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> neon-0.30.1.ebuild:
+  Stable for ppc, wrt bug #529718
 
   02 Dec 2014; Markus Meier <maekke@gentoo.org> neon-0.30.1.ebuild:
   arm stable, bug #529718

@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.503 2014/12/02 09:23:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.504 2014/12/03 09:41:16 ago Exp $
+
+  03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> lftp-4.6.0.ebuild:
+  Stable for ppc, wrt bug #529918
 
   02 Dec 2014; Agostino Sarubbo <ago@gentoo.org> lftp-4.6.0.ebuild:
   Stable for alpha, wrt bug #529918

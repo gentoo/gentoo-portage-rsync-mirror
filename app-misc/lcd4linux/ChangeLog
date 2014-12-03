@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcd4linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.44 2014/11/26 10:39:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.45 2014/12/03 09:34:50 ago Exp $
+
+  03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> lcd4linux-0.10.1_rc2-r3.ebuild:
+  Stable for ppc, wrt bug #529408
 
   26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> lcd4linux-0.10.1_rc2-r3.ebuild:
   Stable for amd64, wrt bug #529408

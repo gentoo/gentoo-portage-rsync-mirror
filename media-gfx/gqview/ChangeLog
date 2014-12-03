@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gqview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.105 2014/11/27 01:51:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.106 2014/12/03 09:34:09 ago Exp $
+
+  03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gqview-2.1.5-r1.ebuild:
+  Stable for ppc, wrt bug #529166
 
   27 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org> gqview-2.1.5-r1.ebuild:
   avoid warning from autotools.eclass re: configure.in

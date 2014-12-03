@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/purple-plugin_pack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.49 2014/11/26 10:39:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.50 2014/12/03 09:35:34 ago Exp $
+
+  03 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  purple-plugin_pack-2.7.0-r1.ebuild:
+  Stable for ppc, wrt bug #529550
 
   26 Nov 2014; Agostino Sarubbo <ago@gentoo.org>
   purple-plugin_pack-2.7.0-r1.ebuild:

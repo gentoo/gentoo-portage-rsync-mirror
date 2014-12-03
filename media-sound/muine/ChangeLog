@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.73 2014/11/26 10:41:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.74 2014/12/03 09:36:43 ago Exp $
+
+  03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> muine-0.8.11-r3.ebuild:
+  Stable for ppc, wrt bug #530042
 
   26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> muine-0.8.11-r3.ebuild:
   Stable for amd64, wrt bug #530042

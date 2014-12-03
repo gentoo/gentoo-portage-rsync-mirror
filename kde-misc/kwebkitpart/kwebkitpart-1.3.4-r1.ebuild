@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/kwebkitpart-1.3.4-r1.ebuild,v 1.2 2014/11/25 08:43:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/kwebkitpart-1.3.4-r1.ebuild,v 1.3 2014/12/03 09:33:49 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~kensington/distfiles/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ppc ~ppc64 x86"
 IUSE="debug"
 
 PATCHES=( "${FILESDIR}/${P}-CVE-2014-8600.patch" )

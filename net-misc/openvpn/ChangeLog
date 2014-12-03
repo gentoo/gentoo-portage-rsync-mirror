@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.310 2014/12/02 21:25:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.311 2014/12/03 09:57:05 ago Exp $
+
+  03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> openvpn-2.3.6.ebuild:
+  Stable for ppc, wrt bug #531308
 
   02 Dec 2014; Mike Gilbert <floppym@gentoo.org> files/openvpn.service:
   Revert previous unit file change, bug 527614.

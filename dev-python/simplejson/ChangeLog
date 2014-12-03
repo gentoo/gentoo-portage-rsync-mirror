@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.143 2014/11/03 11:21:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.144 2014/12/03 09:53:59 ago Exp $
+
+  03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> simplejson-3.6.4.ebuild:
+  Stable for ppc, wrt bug #525508
 
   03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> simplejson-3.6.4.ebuild:
   Stable for x86, wrt bug #525508

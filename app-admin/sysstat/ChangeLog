@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.282 2014/12/02 09:23:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.283 2014/12/03 09:41:35 ago Exp $
+
+  03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> sysstat-11.0.2.ebuild:
+  Stable for ppc, wrt bug #529920
 
   02 Dec 2014; Agostino Sarubbo <ago@gentoo.org> sysstat-11.0.2.ebuild:
   Stable for alpha, wrt bug #529920

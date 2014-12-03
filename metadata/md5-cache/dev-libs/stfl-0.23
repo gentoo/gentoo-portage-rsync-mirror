@@ -4,10 +4,10 @@ DESCRIPTION=A library which implements a curses-based widget set for text termin
 EAPI=5
 HOMEPAGE=http://www.clifford.at/stfl/
 IUSE=examples perl python ruby static-libs python_targets_python2_7 python_targets_python3_3 python_targets_python3_4
-KEYWORDS=amd64 ~ppc ~x86
+KEYWORDS=amd64 ppc ~x86
 LICENSE=LGPL-3
 RDEPEND=sys-libs/ncurses[unicode] perl? ( dev-lang/perl:= ) ruby? ( dev-lang/ruby ) python? ( python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] )
 SLOT=0
 SRC_URI=http://www.clifford.at/stfl/stfl-0.23.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	28ca2b834dd6b64c9179af421c4d763e	python-r1	b63f5ef61876823ab0bd05d867697d75	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=ac845be5d4082ee45f9e701fde5d1da4
+_md5_=c0b8263edd238c5b462609afd063fb49
