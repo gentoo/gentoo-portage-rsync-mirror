@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.3.1-r1.ebuild,v 1.5 2014/12/02 20:45:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.3.1-r1.ebuild,v 1.6 2014/12/03 06:08:52 radhermit Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -50,6 +50,10 @@ src_configure() {
 		$(use_enable ogg)
 		--disable-examples
 		$([[ ${CHOST} == *-darwin* ]] && echo "--disable-asm-optimizations")
+
+		# cross-compile fix (bug #521446)
+		# no effect if ogg support is disabled
+		--with-ogg
 	)
 	autotools-multilib_src_configure
 }
