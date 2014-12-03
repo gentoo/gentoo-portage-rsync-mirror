@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-1.6.2.ebuild,v 1.2 2014/11/26 11:45:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-1.6.2.ebuild,v 1.3 2014/12/03 08:45:47 aballier Exp $
 
 EAPI=5
 inherit eutils udev
@@ -35,7 +35,7 @@ src_configure() {
 		$(use_enable qt4 qv4l2) \
 		$(use_with udev libudev) \
 		--with-udevdir="$(get_udevdir)" \
-		--with-jpeg
+		--without-jpeg
 }
 
 src_install() {

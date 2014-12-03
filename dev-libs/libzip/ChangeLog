@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.74 2014/03/14 07:49:03 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.75 2014/12/03 08:36:51 jer Exp $
+
+  03 Dec 2014; Jeroen Roovers <jer@gentoo.org> libzip-0.11.2.ebuild:
+  Stable for HPPA (bug #530660).
 
 *libzip-0.11.2 (14 Mar 2014)
 
