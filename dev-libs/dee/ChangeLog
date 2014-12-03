@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/dee
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.24 2014/10/25 10:43:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.25 2014/12/03 11:36:15 jlec Exp $
+
+*dee-1.2.7 (03 Dec 2014)
+
+  03 Dec 2014; Justin Lecher <jlec@gentoo.org> dee-1.0.14-r2.ebuild,
+  +dee-1.2.7.ebuild:
+  Version BUmp; add py3.4 support, #531122; add missing dependency, #508592
 
   25 Oct 2014; Pacho Ramos <pacho@gentoo.org> -dee-1.0.14-r1.ebuild,
   -dee-1.0.14.ebuild:
