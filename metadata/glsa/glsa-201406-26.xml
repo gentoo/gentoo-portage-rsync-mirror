@@ -9,7 +9,7 @@
   </synopsis>
   <product type="ebuild">django</product>
   <announced>June 26, 2014</announced>
-  <revised>June 26, 2014: 1</revised>
+  <revised>December 03, 2014: 2</revised>
   <bug>508514</bug>
   <bug>510382</bug>
   <access>remote</access>
@@ -18,6 +18,8 @@
       <unaffected range="ge">1.6.5</unaffected>
       <unaffected range="rge">1.5.8</unaffected>
       <unaffected range="rge">1.4.13</unaffected>
+      <unaffected range="rge">1.5.10</unaffected>
+      <unaffected range="rge">1.4.15</unaffected>
       <vulnerable range="lt">1.6.5</vulnerable>
     </package>
   </affected>
@@ -69,7 +71,7 @@
   <metadata tag="requester" timestamp="Fri, 02 May 2014 18:37:13 +0000">
     BlueKnight
   </metadata>
-  <metadata tag="submitter" timestamp="Thu, 26 Jun 2014 22:16:56 +0000">
+  <metadata tag="submitter" timestamp="Wed, 03 Dec 2014 01:03:38 +0000">
     creffett
   </metadata>
 </glsa>
