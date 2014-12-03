@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.2.ebuild,v 1.2 2014/11/30 13:58:35 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.2.ebuild,v 1.3 2014/12/03 03:21:26 dlan Exp $
 
 EAPI=5
 
@@ -38,6 +38,7 @@ CDEPEND="
 	>=dev-qt/qtcore-${QT_PV}[ssl?]
 	>=dev-qt/qtgui-${QT_PV}
 	>=dev-qt/qtscript-${QT_PV}
+	>=dev-qt/qtdeclarative-${QT_PV}
 
 	telepathy? ( >=net-libs/telepathy-qt-0.3 )
 	jabber? (
@@ -53,7 +54,6 @@ CDEPEND="
 	awn? ( >=dev-qt/qtdbus-${QT_PV} )
 	crypt? ( app-crypt/qca:2 )
 	dbus? ( >=dev-qt/qtdbus-${QT_PV} )
-	debug? ( >=dev-qt/qtdeclarative-${QT_PV} )
 	espionage? ( app-crypt/qca:2 )
 	histman? ( >=dev-qt/qtsql-${QT_PV} )
 	ayatana? ( >=dev-libs/libindicate-qt-0.2.2 )
@@ -74,10 +74,8 @@ CDEPEND="
 	plugman? (
 		dev-libs/libattica
 		app-arch/libarchive
-		>=dev-qt/qtdeclarative-${QT_PV}
 	)
 	qml? (
-		>=dev-qt/qtdeclarative-${QT_PV}
 		>=dev-qt/qtopengl-${QT_PV}
 	)
 	sdl? ( media-libs/sdl-mixer )
