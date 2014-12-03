@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.9-r1.ebuild,v 1.1 2014/05/13 17:43:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.9-r1.ebuild,v 1.3 2014/12/03 15:22:30 kensington Exp $
 
 EAPI=5
 

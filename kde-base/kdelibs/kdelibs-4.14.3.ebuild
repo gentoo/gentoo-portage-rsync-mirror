@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.14.3.ebuild,v 1.3 2014/11/30 13:55:55 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.14.3.ebuild,v 1.4 2014/12/03 15:04:58 kensington Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ DESCRIPTION="KDE libraries needed by all KDE programs"
 
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"
-IUSE="3dnow acl alsa altivec +bzip2 debug doc fam jpeg2k kerberos lzma mmx
+IUSE="3dnow acl alsa altivec +bzip2 +crypt debug doc fam jpeg2k kerberos lzma mmx
 nepomuk nls openexr +policykit spell sse sse2 ssl +udev +udisks +upower
 zeroconf"
 
@@ -29,7 +29,6 @@ REQUIRED_USE="
 RESTRICT="test"
 
 COMMONDEPEND="
-	app-crypt/qca:2
 	>=app-misc/strigi-0.7.7
 	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xsl-stylesheets
@@ -70,6 +69,7 @@ COMMONDEPEND="
 		)
 	)
 	bzip2? ( app-arch/bzip2 )
+	crypt? ( app-crypt/qca:2 )
 	fam? ( virtual/fam )
 	jpeg2k? ( media-libs/jasper )
 	kerberos? ( virtual/krb5 )
@@ -204,6 +204,7 @@ src_configure() {
 		$(cmake-utils_use_with acl)
 		$(cmake-utils_use_with alsa)
 		$(cmake-utils_use_with bzip2 BZip2)
+		$(cmake-utils_use_with crypt QCA2)
 		$(cmake-utils_use_with fam)
 		$(cmake-utils_use_with jpeg2k Jasper)
 		$(cmake-utils_use_with kerberos GSSAPI)

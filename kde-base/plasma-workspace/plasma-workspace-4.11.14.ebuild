@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.14.ebuild,v 1.1 2014/11/14 18:41:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.14.ebuild,v 1.2 2014/12/03 15:22:30 kensington Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ COMMONDEPEND="
 	>=dev-qt/qtcore-4.8.4-r3:4
 	!kde-misc/ktouchpadenabler
 	$(add_kdebase_dep kactivities)
-	$(add_kdebase_dep kdelibs 'nepomuk?')
+	$(add_kdebase_dep kdelibs 'crypt,nepomuk?')
 	$(add_kdebase_dep kephal)
 	$(add_kdebase_dep ksysguard)
 	$(add_kdebase_dep libkworkspace)

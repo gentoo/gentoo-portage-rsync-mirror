@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1034 2014/11/30 13:55:55 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1035 2014/12/03 15:04:58 kensington Exp $
+
+  03 Dec 2014; Michael Palimaka <kensington@gentoo.org> kdelibs-4.14.3.ebuild:
+  Introduce crypt USE flag.
 
   30 Nov 2014; Michael Palimaka <kensington@gentoo.org> kdelibs-4.14.2.ebuild,
   kdelibs-4.14.3.ebuild:

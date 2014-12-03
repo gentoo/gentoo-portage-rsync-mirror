@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.286 2014/11/14 19:33:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.288 2014/12/03 15:22:30 kensington Exp $
+
+  03 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  plasma-workspace-4.11.14.ebuild:
+  Enforce kde-base/kdelibs[crypt] USE dependency.
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -plasma-workspace-4.11.13.ebuild:
   Cleanup old.
