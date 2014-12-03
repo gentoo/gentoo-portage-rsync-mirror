@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ocaml-ssl-0.4.7.ebuild,v 1.1 2014/10/27 08:34:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ocaml-ssl-0.4.7.ebuild,v 1.2 2014/12/03 14:12:21 aballier Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="OCaml bindings for OpenSSL"
 SRC_URI="mirror://sourceforge/savonet/${P}.tar.gz"
 HOMEPAGE="http://savonet.sourceforge.net"
 
-DEPEND="dev-libs/openssl
+DEPEND="dev-libs/openssl[-bindist]
 	>=dev-lang/ocaml-3.10:="
 RDEPEND="${DEPEND}"
 

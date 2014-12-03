@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-ssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.26 2014/10/27 08:34:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.27 2014/12/03 14:12:21 aballier Exp $
+
+  03 Dec 2014; Alexis Ballier <aballier@gentoo.org> ocaml-ssl-0.4.7.ebuild:
+  depend on openssl[-bindist], bug #529070
 
 *ocaml-ssl-0.4.7 (27 Oct 2014)
 
