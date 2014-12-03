@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/cocaine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cocaine/ChangeLog,v 1.12 2014/08/02 02:44:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cocaine/ChangeLog,v 1.13 2014/12/02 23:38:37 p8952 Exp $
+
+*cocaine-0.5.4-r1 (02 Dec 2014)
+
+  02 Dec 2014; Peter Wilmott <p8952@gentoo.org> +cocaine-0.5.4-r1.ebuild:
+  Add ruby targets & fix tests
 
   02 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -cocaine-0.5.3.ebuild:
   Cleanup old.

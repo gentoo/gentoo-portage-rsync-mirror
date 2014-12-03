@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/tkmoo
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/ChangeLog,v 1.14 2007/03/13 01:31:47 wolf31o2 Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/ChangeLog,v 1.15 2014/12/02 23:35:41 mr_bones_ Exp $
+
+  02 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> tkmoo-0.3.32.ebuild:
+  EAPI=5
 
   13 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> tkmoo-0.3.32.ebuild:
   Change which to type -P for QA.
