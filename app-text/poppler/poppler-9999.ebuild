@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-9999.ebuild,v 1.3 2014/11/10 23:16:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-9999.ebuild,v 1.4 2014/12/03 20:57:38 tamiko Exp $
 
 EAPI=5
 
@@ -60,7 +60,9 @@ RDEPEND="${COMMON_DEPEND}
 
 DOCS=(AUTHORS NEWS README README-XPDF TODO)
 
-PATCHES=( "${FILESDIR}/${PN}-0.26.0-qt5-dependencies.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-0.26.0-qt5-dependencies.patch"
+	"${FILESDIR}/${PN}-0.28.1-respect-cflags.patch" )
 
 src_configure() {
 	local mycmakeargs=(
@@ -98,6 +100,7 @@ src_install() {
 	if use cairo && use doc; then
 		# For now install gtk-doc there
 		insinto /usr/share/gtk-doc/html/poppler
-		doins -r "${S}"/glib/reference/html/*
+		# nonfatal, because live version doesn't provide html documentation.
+		nonfatal doins -r "${S}"/glib/reference/html/*
 	fi
 }
