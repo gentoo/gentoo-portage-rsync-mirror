@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=dev-libs/libf2c-20090407-r1 virtual/blas sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=f2c'ed version of LAPACK
+EAPI=5
+HOMEPAGE=http://www.netlib.org/clapack/
+IUSE=test
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=>=dev-libs/libf2c-20090407-r1 virtual/blas
+SLOT=0
+SRC_URI=http://www.netlib.org/clapack/clapack-3.2.1-CMAKE.tgz
+_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=ce13946abd86ab9169d7dc92e0145e3c

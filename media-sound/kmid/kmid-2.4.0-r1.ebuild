@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmid/kmid-2.4.0-r1.ebuild,v 1.3 2013/03/31 16:59:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmid/kmid-2.4.0-r1.ebuild,v 1.4 2014/12/03 08:04:42 kensington Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE="debug"
 RDEPEND="
 	media-libs/alsa-lib
 	>=media-sound/drumstick-0.4
+	<media-sound/drumstick-1.0.0
 "
 DEPEND="${RDEPEND}"
 

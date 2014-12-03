@@ -1,6 +1,10 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.102 2014/12/02 09:54:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.103 2014/12/03 08:21:16 djc Exp $
+
+  03 Dec 2014; Dirkjan Ochtman <djc@gentoo.org> asciidoc-8.6.9-r1.ebuild,
+  asciidoc-8.6.9.ebuild:
+  Remove some old python implementations
 
   02 Dec 2014; Pacho Ramos <pacho@gentoo.org> asciidoc-8.6.9-r1.ebuild:
   x86 stable, bug #529410

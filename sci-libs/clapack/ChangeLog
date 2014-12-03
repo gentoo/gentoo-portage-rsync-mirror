@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/clapack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.24 2014/01/06 14:41:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.25 2014/12/03 08:14:34 jlec Exp $
+
+*clapack-3.2.1-r8 (03 Dec 2014)
+
+  03 Dec 2014; Justin Lecher <jlec@gentoo.org> +clapack-3.2.1-r8.ebuild:
+  Use system f2c.h instead of bundled one, #531442
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> clapack-3.2.1-r6.ebuild,
   clapack-3.2.1-r7.ebuild:

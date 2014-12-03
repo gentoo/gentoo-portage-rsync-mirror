@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.5.ebuild,v 1.4 2014/10/17 17:04:42 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.5.ebuild,v 1.5 2014/12/03 08:05:59 kensington Exp $
 
 EAPI=5
 KDE_LINGUAS="cs es ja"
@@ -19,6 +19,7 @@ IUSE="debug"
 RDEPEND="
 	media-libs/alsa-lib
 	>=media-sound/drumstick-0.5
+	<media-sound/drumstick-1.0.0
 "
 DEPEND="${RDEPEND}"
 

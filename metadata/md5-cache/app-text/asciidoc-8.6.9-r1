@@ -11,4 +11,4 @@ REQUIRED_USE=^^ ( python_single_target_pypy python_single_target_python2_7 ) pyt
 SLOT=0
 SRC_URI=mirror://sourceforge/project/asciidoc/asciidoc/8.6.9/asciidoc-8.6.9.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=af48afdf80e89cc0bc13de082f032c61
+_md5_=8ecbdf5e4dd0f44ab797241a9fd11ab9
