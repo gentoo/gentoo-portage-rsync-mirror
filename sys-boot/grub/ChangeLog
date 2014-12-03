@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.328 2014/12/03 15:25:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.329 2014/12/03 17:11:07 floppym Exp $
+
+  03 Dec 2014; Mike Gilbert <floppym@gentoo.org> grub-2.02_beta2-r3.ebuild:
+  Stable on x86, bug 522314. Thanks to Poly-C for testing.
 
   03 Dec 2014; Mike Gilbert <floppym@gentoo.org> grub-2.02_beta2-r3.ebuild:
   Move stable keyword forward for minor change.
