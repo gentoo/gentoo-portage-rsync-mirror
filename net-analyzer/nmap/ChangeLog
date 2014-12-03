@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.331 2014/12/03 09:57:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.332 2014/12/03 10:08:28 jer Exp $
+
+  03 Dec 2014; Jeroen Roovers <jer@gentoo.org> -nmap-6.01.ebuild,
+  -nmap-6.25.ebuild, -nmap-6.25-r1.ebuild,
+  -files/nmap-5.51-su-to-zenmap-fix.patch, -files/nmap-6.25-lua.patch:
+  Old.
 
   03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> nmap-6.47-r1.ebuild:
   Stable for ppc, wrt bug #480474
