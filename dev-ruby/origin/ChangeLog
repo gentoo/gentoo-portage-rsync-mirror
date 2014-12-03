@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/origin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/ChangeLog,v 1.15 2014/11/26 02:25:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/ChangeLog,v 1.16 2014/12/03 02:28:28 mrueg Exp $
+
+  03 Dec 2014; Manuel Rüger <mrueg@gentoo.org> origin-1.1.0.ebuild:
+  Add ruby20, ruby21 targets.
 
   26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> origin-1.1.0.ebuild:
   Drop jruby traces.
