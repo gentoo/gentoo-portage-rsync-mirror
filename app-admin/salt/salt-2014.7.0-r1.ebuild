@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.14 2014/12/03 22:10:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-2014.7.0-r1.ebuild,v 1.1 2014/12/03 22:10:14 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -23,7 +23,7 @@ fi
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="cherrypy ldap libcloud libvirt gnupg keyring mako mongodb mysql nova"
+IUSE="api ldap libcloud libvirt gnupg keyring mako mongodb mysql nova"
 IUSE+=" openssl redis timelib raet +zeromq test"
 
 RDEPEND="sys-apps/pciutils
@@ -48,14 +48,19 @@ RDEPEND="sys-apps/pciutils
 		dev-python/m2crypto[${PYTHON_USEDEP}]
 		dev-python/pycrypto[${PYTHON_USEDEP}]
 	)
+	api? (
+		|| (
+			dev-python/cherrypy[${PYTHON_USEDEP}]
+			www-servers/tornado[${PYTHON_USEDEP}]
+		)
+	)
 	mongodb? ( dev-python/pymongo[${PYTHON_USEDEP}] )
 	keyring? ( dev-python/keyring[${PYTHON_USEDEP}] )
 	mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
 	redis? ( dev-python/redis-py[${PYTHON_USEDEP}] )
 	timelib? ( dev-python/timelib[${PYTHON_USEDEP}] )
 	nova? ( >=dev-python/python-novaclient-2.17.0[${PYTHON_USEDEP}] )
-	gnupg? ( dev-python/python-gnupg[${PYTHON_USEDEP}] )
-	cherrypy? ( >=dev-python/cherrypy-3.2.2[${PYTHON_USEDEP}] )"
+	gnupg? ( dev-python/python-gnupg[${PYTHON_USEDEP}] )"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		dev-python/pip[${PYTHON_USEDEP}]
@@ -69,6 +74,10 @@ DOCS=(README.rst AUTHORS)
 
 REQUIRED_USE="|| ( raet zeromq )"
 
+PATCHES=(
+	"${FILESDIR}/${P}-remove-pydsl-includes-test.patch"
+)
+
 python_prepare() {
 	# this test fails because it trys to "pip install distribute"
 	rm tests/unit/{modules,states}/zcbuildout_test.py
@@ -77,7 +86,7 @@ python_prepare() {
 python_install_all() {
 	USE_SETUPTOOLS=1 distutils-r1_python_install_all
 
-	for s in minion master syndic; do
+	for s in minion master syndic $(use api && echo api); do
 		newinitd "${FILESDIR}"/${s}-initd-3 salt-${s}
 		newconfd "${FILESDIR}"/${s}-confd-1 salt-${s}
 		systemd_dounit "${FILESDIR}"/salt-${s}.service
