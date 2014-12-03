@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.193 2014/10/24 21:20:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.194 2014/12/03 05:52:22 heroxbd Exp $
+
+  03 Dec 2014; Benda Xu <heroxbd@gentoo.org> autoconf-2.59-r7.ebuild,
+  autoconf-2.61-r2.ebuild, autoconf-2.62-r1.ebuild, autoconf-2.63-r1.ebuild,
+  autoconf-2.64.ebuild, autoconf-2.65-r1.ebuild, autoconf-2.67.ebuild,
+  autoconf-2.68.ebuild, autoconf-2.69.ebuild, autoconf-9999.ebuild:
+  Prefix: replacing D with ED in src_install for EAPI>=3 ebuilds.
 
   24 Oct 2014; Mike Frysinger <vapier@gentoo.org> autoconf-2.59-r7.ebuild,
   autoconf-2.61-r2.ebuild, autoconf-2.62-r1.ebuild, autoconf-2.63-r1.ebuild,

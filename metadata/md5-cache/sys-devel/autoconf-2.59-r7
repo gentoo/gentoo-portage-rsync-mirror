@@ -9,4 +9,4 @@ RDEPEND==sys-devel/m4-1.4* dev-lang/perl !~sys-devel/autoconf-2.59:0 >=sys-devel
 SLOT=2.59
 SRC_URI=mirror://gnu/autoconf/autoconf-2.59.tar.bz2
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=c6f26c66fff2cf11ef4be278028a353e
+_md5_=3c46f97f411564556162773e65782362

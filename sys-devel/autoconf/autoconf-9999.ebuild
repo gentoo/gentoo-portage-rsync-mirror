@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.15 2014/10/24 21:20:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.16 2014/12/03 05:52:22 heroxbd Exp $
 
 EAPI="4"
 
@@ -53,7 +53,7 @@ src_install() {
 	default
 
 	local f
-	for f in "${D}"/usr/share/info/*.info* ; do
+	for f in "${ED}"/usr/share/info/*.info* ; do
 		mv "${f}" "${f/.info/-${SLOT}.info}" || die
 	done
 }
