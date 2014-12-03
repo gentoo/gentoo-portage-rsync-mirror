@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.112 2014/11/25 13:10:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.113 2014/12/03 07:06:14 graaff Exp $
+
+*nokogiri-1.6.5 (03 Dec 2014)
+
+  03 Dec 2014; Hans de Graaff <graaff@gentoo.org> +nokogiri-1.6.5.ebuild:
+  Version bump.
 
   25 Nov 2014; Manuel Rüger <mrueg@gentoo.org> nokogiri-1.5.10.ebuild,
   nokogiri-1.6.0.ebuild, nokogiri-1.6.3.1.ebuild:
