@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.5.10.ebuild,v 1.2 2014/08/10 21:10:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.6.4.ebuild,v 1.1 2014/12/03 16:53:15 aballier Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-qt/qtcore-4.2:4
 	media-libs/libsndfile
 	media-sound/jack-audio-connection-kit
 	media-libs/ladspa-sdk
-	media-libs/lilv
+	>=media-libs/lilv-0.16.0
 	media-libs/lv2
 	media-libs/suil
 	dssi? ( media-libs/dssi )

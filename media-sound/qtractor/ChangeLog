@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/qtractor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.57 2014/11/02 17:55:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.60 2014/12/03 16:53:15 aballier Exp $
+
+*qtractor-0.6.4 (03 Dec 2014)
+
+  03 Dec 2014; Alexis Ballier <aballier@gentoo.org> +qtractor-0.6.4.ebuild:
+  version bump
+
+  03 Dec 2014; Alexis Ballier <aballier@gentoo.org> qtractor-0.6.3.ebuild:
+  bump lilv dep, bug #505332 by Jyrki Launonen
+
+  03 Dec 2014; Alexis Ballier <aballier@gentoo.org> -qtractor-0.5.9.ebuild,
+  -qtractor-0.5.10.ebuild, -qtractor-0.5.12.ebuild, -qtractor-0.6.0.ebuild:
+  remove old
 
 *qtractor-0.6.3 (02 Nov 2014)
 
