@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/httplib2-0.8.ebuild,v 1.5 2014/11/05 00:18:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/httplib2-0.8.ebuild,v 1.6 2014/12/02 23:17:03 idella4 Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -22,7 +22,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RESTRICT="test"
 
 python_test() {
-	if [[ ${EPYTHON} == python2.* ]] ; then
+	if [[ ${EPYTHON} == python2.7 ]] ; then
 		cd python2
 	else
 		cd python3
