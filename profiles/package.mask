@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16198 2014/12/02 15:46:28 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16199 2014/12/03 07:50:05 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -461,6 +461,8 @@ kde-frameworks/threadweaver
 www-client/otter
 =app-text/calibre-2*
 app-i18n/fcitx-qt5
+>=media-sound/drumstick-1.0.0
+>=media-sound/kmetronome-1.0.0
 
 # Sergey Popov <pinkbyte@gentoo.org> (04 Sep 2014)
 # Security mask, wrt bugs #488212, #498164, #500260,

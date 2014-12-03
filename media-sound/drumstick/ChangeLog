@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/drumstick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/ChangeLog,v 1.15 2014/10/17 17:18:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/ChangeLog,v 1.16 2014/12/03 07:54:40 kensington Exp $
+
+*drumstick-1.0.0 (03 Dec 2014)
+
+  03 Dec 2014; Michael Palimaka <kensington@gentoo.org> +drumstick-1.0.0.ebuild:
+  Version bump wrt bug #530400.
 
   17 Oct 2014; Michael Palimaka <kensington@gentoo.org> metadata.xml:
   Add to KDE herd.

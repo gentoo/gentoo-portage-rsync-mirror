@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.214 2014/10/28 12:56:11 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.215 2014/12/03 07:56:19 eras Exp $
+
+*amavisd-new-2.10.1-r1 (03 Dec 2014)
+
+  03 Dec 2014; Eray Aslan <eras@gentoo.org> +amavisd-new-2.10.1-r1.ebuild:
+  Use dev-perl/ZMQ-LibZMQ3 - see bug #531242
 
 *amavisd-new-2.10.1 (28 Oct 2014)
 
