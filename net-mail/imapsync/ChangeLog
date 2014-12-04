@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/imapsync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.98 2014/12/04 04:31:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.99 2014/12/04 15:44:15 radhermit Exp $
+
+*imapsync-1.607-r1 (04 Dec 2014)
+
+  04 Dec 2014; Tim Harder <radhermit@gentoo.org> -imapsync-1.607.ebuild,
+  +imapsync-1.607-r1.ebuild:
+  Add missing dev-perl/Unicode-String dep (bug #531626).
 
   04 Dec 2014; Tim Harder <radhermit@gentoo.org> -imapsync-1.567.ebuild,
   -imapsync-1.584-r1.ebuild:
