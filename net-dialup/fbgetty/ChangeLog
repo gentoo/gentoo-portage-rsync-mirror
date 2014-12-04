@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/fbgetty
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fbgetty/ChangeLog,v 1.9 2007/10/27 08:40:57 mrness Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fbgetty/ChangeLog,v 1.10 2014/12/04 07:44:46 pinkbyte Exp $
+
+*fbgetty-0.1.698-r1 (04 Dec 2014)
+
+  04 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> +fbgetty-0.1.698-r1.ebuild:
+  Revision bump: EAPI 5, epatch_user, replace einstall with default src_install
+  phase function call, wrt bug #521582, install some configuration examples
 
   27 Oct 2007; Alin Năstac <mrness@gentoo.org>
   +files/fbgetty-0.1.698-gcc41.patch, fbgetty-0.1.698.ebuild:
