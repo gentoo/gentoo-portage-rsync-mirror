@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-v5.34.eclass,v 1.1 2014/12/03 23:10:06 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-v5.34.eclass,v 1.2 2014/12/04 00:51:30 axs Exp $
 #
 # @ECLASS: mozconfig-v5.33.eclass
 # @MAINTAINER:
@@ -159,7 +159,7 @@ mozconfig_config() {
 	if ! use debug ; then
 		mozconfig_annotate 'disabled by Gentoo' --disable-debug-symbols
 	else
-		mozconfig_annotate 'disabled by Gentoo' --enable-debug-symbols
+		mozconfig_annotate 'enabled by Gentoo' --enable-debug-symbols
 	fi
 
 	mozconfig_use_enable startup-notification
