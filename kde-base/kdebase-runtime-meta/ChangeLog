@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-runtime-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.190 2014/11/16 12:21:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.191 2014/12/04 11:48:46 mrueg Exp $
+
+  04 Dec 2014; Manuel Rüger <mrueg@gentoo.org>
+  kdebase-runtime-meta-4.14.3.ebuild:
+  Update USE dep due to upcoming USE flag removal.
 
 *kdebase-runtime-meta-4.14.3 (16 Nov 2014)
 
