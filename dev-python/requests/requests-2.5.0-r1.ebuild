@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/requests-2.5.0.ebuild,v 1.1 2014/12/04 03:20:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/requests-2.5.0-r1.ebuild,v 1.1 2014/12/04 03:32:03 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy pypy3 )
@@ -25,8 +25,10 @@ DEPEND="${RDEPEND}
 # tests connect to various remote sites
 RESTRICT="test"
 
-PATCHES=( "${FILESDIR}"/${PN}-2.2.0-system-chardet.patch \
-		"${FILESDIR}"/${PN}-2.4.0-system-cacerts.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-2.2.0-system-chardet.patch
+	"${FILESDIR}"/${P}-system-cacerts.patch
+)
 
 python_prepare_all() {
 	# use system chardet

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.use.mask,v 1.16 2014/10/11 05:07:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.use.mask,v 1.17 2014/12/04 03:34:40 axs Exp $
 
 # Tim Harder <radhermit@gentoo.org> (11 Oct 2014)
 # Skype doesn't work on hardened
@@ -19,3 +19,7 @@ media-tv/xbmc profile
 
 # bug #468404
 net-analyzer/wireshark profile
+
+# Ian Stakenvicius <axs@gentoo.org> (03 Dec 2014)
+# Have no way of knowing what Gecko Media Plugins will install in profiles
+www-client/firefox gmp-autoupdate
