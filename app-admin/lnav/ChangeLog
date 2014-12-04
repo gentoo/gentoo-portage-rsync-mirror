@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/lnav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lnav/ChangeLog,v 1.3 2014/03/30 22:08:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lnav/ChangeLog,v 1.4 2014/12/04 01:57:18 radhermit Exp $
+
+*lnav-0.7.1 (04 Dec 2014)
+
+  04 Dec 2014; Tim Harder <radhermit@gentoo.org> +lnav-0.7.1.ebuild:
+  Version bump.
 
 *lnav-0.7.0 (30 Mar 2014)
 
