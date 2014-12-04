@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.4.0.ebuild,v 1.1 2014/11/02 08:34:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.4.0-r1.ebuild,v 1.1 2014/12/04 22:08:00 dlan Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/chewing/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="static-libs test"
+IUSE="static-libs test system-sqlite"
 
 DEPEND="
 	virtual/pkgconfig
@@ -21,6 +21,7 @@ DEPEND="
 		sys-libs/ncurses[unicode]
 		>=dev-libs/check-0.9.4
 	)
+	system-sqlite? ( dev-db/sqlite:3 )
 "
 
 DOCS=( AUTHORS NEWS README.md TODO )
@@ -30,7 +31,10 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable static-libs static)
+	econf \
+		$(use_enable static-libs static) \
+		$(usex system-sqlite --with-sqlite3 --with-internal-sqlite3) \
+		--disable-gcov
 }
 
 src_test() {
