@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluedevil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.61 2014/08/06 17:51:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.62 2014/12/04 17:04:45 kensington Exp $
+
+*bluedevil-2.0 (04 Dec 2014)
+
+  04 Dec 2014; Michael Palimaka <kensington@gentoo.org> +bluedevil-2.0.ebuild:
+  Version bump wrt bug #531670.
 
   06 Aug 2014; Johannes Huber <johu@gentoo.org> bluedevil-2.0_rc1-r1.ebuild:
   Remove blocker.

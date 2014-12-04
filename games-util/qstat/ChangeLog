@@ -1,6 +1,9 @@
 # ChangeLog for games-util/qstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/ChangeLog,v 1.29 2014/11/28 17:18:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/ChangeLog,v 1.30 2014/12/04 17:03:29 mr_bones_ Exp $
+
+  04 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> qstat-2.11.ebuild:
+  this strndup is local (bug #530952)
 
   28 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org> qstat-2.11.ebuild:
   EAPI=5

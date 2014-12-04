@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-2.11.ebuild,v 1.11 2014/11/28 17:18:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-2.11.ebuild,v 1.12 2014/12/04 17:03:29 mr_bones_ Exp $
 
 EAPI=5
 DESCRIPTION="Server statics collector supporting many FPS games"
@@ -13,6 +13,11 @@ KEYWORDS="~alpha amd64 ~arm hppa ppc ppc64 x86"
 IUSE="debug"
 
 DEPEND="!sys-cluster/torque"
+
+src_prepare() {
+	# bug #530952
+	sed -i -e 's/strndup/l_strndup/g' qstat.c || die
+}
 
 src_configure() {
 	econf $(use_enable debug)

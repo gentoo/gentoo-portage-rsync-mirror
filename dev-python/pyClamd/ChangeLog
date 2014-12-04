@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyClamd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyClamd/ChangeLog,v 1.1 2014/09/20 13:06:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyClamd/ChangeLog,v 1.2 2014/12/04 17:26:26 xarthisius Exp $
+
+  04 Dec 2014; Kacper Kowalik <xarthisius@gentoo.org> pyClamd-0.3.10.ebuild:
+  Properly depend on setuptools wrt #528740 by Toralf Förster
+  <toralf.foerster@gmx.de>
 
 *pyClamd-0.3.10 (20 Sep 2014)
 
