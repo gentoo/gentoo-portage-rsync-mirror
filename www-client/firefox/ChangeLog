@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.367 2014/12/04 03:30:18 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.368 2014/12/04 04:21:26 axs Exp $
+
+  04 Dec 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-31.3.0.ebuild:
+  bump minimum version of dev-libs/nss as per bug 531614
 
 *firefox-34.0.5 (04 Dec 2014)
 

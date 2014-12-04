@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9586 2014/12/03 07:50:05 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9587 2014/12/04 04:04:56 axs Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Dec 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  arch/amd64/no-emul-linux-x86/package.mask, package.mask:
+  added media-libs/openh264 to the tree, masking for testing for now
+
+  04 Dec 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  arch/amd64/no-emul-linux-x86/package.mask, hardened/linux/package.use.mask:
+  mask gmp-autoupdate use flag for firefox on hardened, since random binary
+  blobs may be unsafe
 
   03 Dec 2014; Michael Palimaka <kensington@gentoo.org> package.mask:
   Mask media-sound/drumstick and media-sound/kmetronome due to Qt5 dependency.

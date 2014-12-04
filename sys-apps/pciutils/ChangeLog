@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.232 2014/01/18 04:55:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.233 2014/12/04 04:09:30 radhermit Exp $
+
+*pciutils-3.3.0 (04 Dec 2014)
+
+  04 Dec 2014; Tim Harder <radhermit@gentoo.org> +pciutils-3.3.0.ebuild:
+  Version bump.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> pciutils-3.2.0.ebuild,
   pciutils-3.2.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.3.0.ebuild,v 1.1 2014/12/04 00:18:29 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.3.0.ebuild,v 1.2 2014/12/04 04:21:26 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -52,7 +52,7 @@ SRC_URI="${SRC_URI}
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 CDEPEND="
-	>=dev-libs/nss-3.16.2
+	>=dev-libs/nss-3.17.1
 	>=dev-libs/nspr-4.10.6
 "
 

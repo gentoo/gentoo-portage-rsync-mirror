@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.305 2014/12/03 22:34:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.306 2014/12/04 04:21:56 axs Exp $
+
+  04 Dec 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  thunderbird-31.3.0.ebuild:
+  bump minimum version of dev-libs/nss as per bug 531614
 
 *thunderbird-31.3.0 (03 Dec 2014)
 
