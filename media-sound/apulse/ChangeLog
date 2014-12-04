@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/apulse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/ChangeLog,v 1.5 2014/12/01 15:59:48 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/ChangeLog,v 1.6 2014/12/04 19:54:31 mgorny Exp $
+
+  04 Dec 2014; Michał Górny <mgorny@gentoo.org> apulse-0.1.4.ebuild:
+  Replace pulseaudio blocker with alsa-plugins[pulseaudio] blocker. The former
+  does not really make sense since apulse is installed in a prefix, and does not
+  collide with pulseaudio. However, the pulseaudio ALSA plugin is definitely
+  going to cause issues. Good news is that we do not need to block emul-
+  linux-x86, since configuration files enabling it are installed by alsa-
+  plugins.
 
 *apulse-0.1.4 (01 Dec 2014)
 
