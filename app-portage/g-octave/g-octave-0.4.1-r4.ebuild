@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1-r4.ebuild,v 1.1 2013/10/19 21:02:38 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1-r4.ebuild,v 1.2 2014/12/04 06:22:33 rafaelmartins Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,7 +12,7 @@ DB_DIR="rafaelmartins-${PN}-db-${DB_COMMIT:0:7}"
 inherit distutils eutils
 
 DESCRIPTION="A tool that generates and installs ebuilds for Octave-Forge"
-HOMEPAGE="http://g-octave.org/"
+HOMEPAGE="https://github.com/rafaelmartins/g-octave"
 
 SRC_URI="mirror://github/rafaelmartins/${PN}/${P}.tar.gz
 	http://github.com/rafaelmartins/${PN}-db/tarball/${DB_COMMIT} ->
@@ -70,7 +70,7 @@ pkg_postinst() {
 	elog "    emerge --config =${PF}"
 	elog
 	elog "If you are upgrading from =${PN}-0.3, please read this:"
-	elog "http://docs.g-octave.org/en/latest/upgrading/#from-0-3-to-0-4"
+	elog "http://g-octave.readthedocs.org/en/latest/upgrading/#from-0-3-to-0-4"
 	elog
 	elog 'Please install the package manager that you want to use before run g-octave'
 	elog
