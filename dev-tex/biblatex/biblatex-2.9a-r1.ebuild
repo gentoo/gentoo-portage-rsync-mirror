@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/biblatex-2.9a.ebuild,v 1.1 2014/08/08 12:22:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/biblatex-2.9a-r1.ebuild,v 1.1 2014/12/04 13:21:55 mrueg Exp $
 
 EAPI=5
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
-RDEPEND="dev-texlive/texlive-bibtexextra"
+RDEPEND="dev-texlive/texlive-bibtexextra
+	dev-texlive/texlive-latexextra"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}
