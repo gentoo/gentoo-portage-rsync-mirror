@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/yapsy-1.10.423.ebuild,v 1.2 2014/11/25 13:18:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/yapsy-1.10.423.ebuild,v 1.3 2014/12/04 06:51:44 pinkbyte Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/yapsy/${MY_P}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
