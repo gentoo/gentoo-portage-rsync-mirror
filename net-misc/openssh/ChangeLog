@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.538 2014/12/03 09:57:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.539 2014/12/04 08:27:32 ago Exp $
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> openssh-6.7_p1.ebuild:
+  Stable for ppc64, wrt bug #505942
 
   03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> openssh-6.7_p1.ebuild:
   Stable for ppc, wrt bug #505942

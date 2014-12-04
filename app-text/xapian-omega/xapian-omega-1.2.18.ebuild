@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/xapian-omega-1.2.18.ebuild,v 1.7 2014/12/03 09:44:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/xapian-omega-1.2.18.ebuild,v 1.8 2014/12/04 08:29:47 ago Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ S="${WORKDIR}/xapian-omega-${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/xapian-${PV}

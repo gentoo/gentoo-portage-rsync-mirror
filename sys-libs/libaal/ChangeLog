@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libaal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/ChangeLog,v 1.26 2014/11/23 14:12:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/ChangeLog,v 1.27 2014/12/04 08:29:15 ago Exp $
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libaal-1.0.6.ebuild:
+  Stable for ppc64, wrt bug #527982
 
   23 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> libaal-1.0.6.ebuild:
   x86 stable wrt bug #527982
