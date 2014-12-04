@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/virtualenv-clone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv-clone/ChangeLog,v 1.8 2014/08/10 21:24:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv-clone/ChangeLog,v 1.9 2014/12/04 09:58:42 ago Exp $
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  virtualenv-clone-0.2.4-r2.ebuild:
+  Stable for amd64, wrt bug #530616
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   virtualenv-clone-0.2.4-r1.ebuild, virtualenv-clone-0.2.4-r2.ebuild,

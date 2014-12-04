@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/polygon-3.0.7.ebuild,v 1.1 2014/08/14 00:08:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/polygon-3.0.7.ebuild,v 1.2 2014/12/04 09:58:01 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python3_{2,3,4} )
@@ -14,7 +14,7 @@ SRC_URI="https://www.bitbucket.org/jraedler/${PN}3/downloads/Polygon3-${PV}.zip"
 LICENSE="LGPL-2"
 SLOT="3"
 IUSE="examples"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 DEPEND="app-arch/unzip"
 

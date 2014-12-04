@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pastedeploy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.21 2014/11/29 09:12:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.22 2014/12/04 09:59:58 ago Exp $
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pastedeploy-1.5.2.ebuild:
+  Stable for amd64, wrt bug #531124
 
   29 Nov 2014; Ian Delaney <idella4@gentoo.org> pastedeploy-1.5.2.ebuild:
   clean old python impls

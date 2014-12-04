@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/polygon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.14 2014/08/14 05:23:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.15 2014/12/04 09:58:01 ago Exp $
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> polygon-3.0.7.ebuild:
+  Stable for amd64, wrt bug #531090
 
   14 Aug 2014; Patrick Lauer <patrick@gentoo.org> polygon-2.0.6.ebuild:
   Whitespace

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1-modules
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.31 2014/11/29 07:17:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.32 2014/12/04 09:59:28 ago Exp $
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pyasn1-modules-0.0.5-r1.ebuild:
+  Stable for amd64, wrt bug #531088
 
   29 Nov 2014; Ian Delaney <idella4@gentoo.org> pyasn1-modules-0.0.5-r1.ebuild:
   re-remove py3.2
