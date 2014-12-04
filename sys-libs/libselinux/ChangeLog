@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.134 2014/11/14 19:17:27 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.135 2014/12/04 10:50:14 perfinion Exp $
+
+*libselinux-2.3-r2 (04 Dec 2014)
+
+  04 Dec 2014; Jason Zaman <perfinion@gentoo.org> +libselinux-2.3-r2.ebuild,
+  libselinux-2.4_rc6.ebuild:
+  Call python_optimize, bug 531638
 
 *libselinux-2.4_rc6 (14 Nov 2014)
 

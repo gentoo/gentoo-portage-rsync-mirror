@@ -4,10 +4,10 @@ DESCRIPTION=A Moose role for processing command line options
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/MooseX-Getopt/
 IUSE=test
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-Carp >=virtual/perl-Getopt-Long-2.370.0 >=dev-perl/Getopt-Long-Descriptive-0.88.0 dev-perl/Moose dev-perl/MooseX-Role-Parameterized virtual/perl-Scalar-List-Utils dev-perl/Try-Tiny dev-perl/namespace-autoclean dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/MooseX-Getopt-0.65.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	28ca2b834dd6b64c9179af421c4d763e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=79500cfd274cb1b092dcb7ece19451f6
+_md5_=0fdc9313a6e1d42d0f08e403711c63b4

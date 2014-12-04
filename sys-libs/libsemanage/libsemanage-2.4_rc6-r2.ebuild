@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.4_rc6-r2.ebuild,v 1.1 2014/11/27 14:14:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.4_rc6-r2.ebuild,v 1.2 2014/12/04 11:00:43 perfinion Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_2 python3_3 python3_4 )
@@ -99,6 +99,7 @@ multilib_src_install() {
 		installation_py() {
 			emake DESTDIR="${ED}" LIBDIR="${ED}/usr/$(get_libdir)" \
 				SHLIBDIR="${ED}/usr/$(get_libdir)" install-pywrap
+			python_optimize # bug 531638
 		}
 		python_foreach_impl installation_py
 	fi

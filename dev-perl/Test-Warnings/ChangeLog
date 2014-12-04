@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Warnings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warnings/ChangeLog,v 1.3 2014/12/02 09:06:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warnings/ChangeLog,v 1.4 2014/12/04 10:40:34 zlogene Exp $
+
+  04 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> Test-Warnings-0.16.0.ebuild:
+  Add ~arm keyword wrt bug #531274
 
   02 Dec 2014; Jeroen Roovers <jer@gentoo.org> Test-Warnings-0.16.0.ebuild:
   Marked ~hppa (bug #531172).
