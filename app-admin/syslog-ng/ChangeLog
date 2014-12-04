@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.408 2014/12/02 09:14:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.409 2014/12/04 21:12:51 mr_bones_ Exp $
+
+  04 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/3.6/syslog-ng-3.6.1-warnings.patch, syslog-ng-3.6.1.ebuild:
+  Add upstream patch to suppress warnings at startup
 
   02 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
   update metadata (bug #531382)

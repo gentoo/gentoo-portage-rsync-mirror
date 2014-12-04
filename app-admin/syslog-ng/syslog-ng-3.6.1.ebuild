@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.6.1.ebuild,v 1.2 2014/11/10 16:06:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.6.1.ebuild,v 1.3 2014/12/04 21:12:51 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils multilib systemd versionator
@@ -38,7 +38,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
-	epatch "${FILESDIR}/${MY_PV_MM}"/${P}-link-smtp.patch
+	epatch \
+		"${FILESDIR}/${MY_PV_MM}"/${P}-link-smtp.patch \
+		"${FILESDIR}/${MY_PV_MM}"/${P}-warnings.patch
 	eautoreconf
 	cp "${FILESDIR}"/*logrotate*.in "${TMPDIR}" || die
 	cd "${TMPDIR}" || die
