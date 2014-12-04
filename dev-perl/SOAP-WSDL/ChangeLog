@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/SOAP-WSDL
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-WSDL/ChangeLog,v 1.4 2014/08/21 19:29:44 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-WSDL/ChangeLog,v 1.5 2014/12/03 23:47:45 dilfridge Exp $
+
+*SOAP-WSDL-3.2.0 (03 Dec 2014)
+
+  03 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +SOAP-WSDL-3.2.0.ebuild:
+  Version bump
 
 *SOAP-WSDL-2.00.10-r1 (21 Aug 2014)
 

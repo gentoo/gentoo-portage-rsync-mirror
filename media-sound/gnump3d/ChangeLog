@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/gnump3d
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.73 2012/06/09 23:08:40 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.74 2014/12/03 23:32:13 dilfridge Exp $
+
+*gnump3d-3.0-r2 (03 Dec 2014)
+
+  03 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> -gnump3d-3.0.ebuild,
+  +gnump3d-3.0-r2.ebuild:
+  Fix perl installation directory, bug 451190
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> gnump3d-3.0-r1.ebuild,
   gnump3d-3.0.ebuild:
