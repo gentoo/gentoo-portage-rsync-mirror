@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/py-notify
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-notify/ChangeLog,v 1.3 2012/02/21 08:43:46 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-notify/ChangeLog,v 1.4 2014/12/04 04:40:58 idella4 Exp $
+
+*py-notify-0.3.1-r1 (04 Dec 2014)
+
+  04 Dec 2014; Ian Delaney <idella4@gentoo.org> +py-notify-0.3.1-r1.ebuild,
+  -py-notify-0.3.1.ebuild:
+  revbump; conversion -> distutils-r1, add IUSE examples, test, test phase, rm
+  y-0.3.1
 
   21 Feb 2012; Patrick Lauer <patrick@gentoo.org> py-notify-0.2.1.ebuild,
   py-notify-0.3.1.ebuild:
@@ -17,4 +24,3 @@
   +py-notify-0.2.1.ebuild, +metadata.xml:
   Moved from sunrise overlay. Bug #323537. Thanks to Maxim
   <kolmax94@gmail.com> for the initial ebuild
-

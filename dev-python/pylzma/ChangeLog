@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylzma
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylzma/ChangeLog,v 1.9 2014/09/30 04:36:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylzma/ChangeLog,v 1.10 2014/12/04 04:56:31 patrick Exp $
+
+*pylzma-0.4.6 (04 Dec 2014)
+
+  04 Dec 2014; Patrick Lauer <patrick@gentoo.org> +pylzma-0.4.6.ebuild:
+  Bump
 
 *pylzma-0.4.5 (30 Sep 2014)
 
