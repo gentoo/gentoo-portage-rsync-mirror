@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-33.0-r1.ebuild,v 1.1 2014/11/05 23:18:28 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-34.0.5.ebuild,v 1.1 2014/12/04 03:30:18 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -10,9 +10,9 @@ MOZ_ESR=""
 # This list can be updated with scripts/get_langs.sh from the mozilla overlay
 MOZ_LANGS=( af ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da de el en
 en-GB en-US en-ZA eo es-AR es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gd
-gl gu-IN he hi-IN hr hu hy-AM id is it ja kk km kn ko ku lt lv mai mk ml mr
+gl gu-IN he hi-IN hr hu hy-AM id is it ja kk km kn ko lt lv mai mk ml mr
 nb-NO nl nn-NO or pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta te
-th tr uk vi xh zh-CN zh-TW zu )
+th tr uk vi xh zh-CN zh-TW )
 
 # Convert the ebuild version to the upstream mozilla version, used by mozlinguas
 MOZ_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
@@ -25,7 +25,7 @@ if [[ ${MOZ_ESR} == 1 ]]; then
 fi
 
 # Patch version
-PATCH="${PN}-31.0-patches-0.2"
+PATCH="${PN}-34.0-patches-0.1"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -34,7 +34,7 @@ MOZ_HTTP_URI="http://ftp.mozilla.org/pub/${PN}/releases/"
 MOZCONFIG_OPTIONAL_WIFI=1
 MOZCONFIG_OPTIONAL_JIT="enabled"
 
-inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-v5.33 multilib pax-utils fdo-mime autotools virtualx mozlinguas
+inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-v5.34 multilib pax-utils fdo-mime autotools virtualx mozlinguas
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
@@ -42,7 +42,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist hardened +minimal pgo test"
+IUSE="bindist hardened +minimal pgo selinux +gmp-autoupdate test"
 
 # More URIs appended below...
 SRC_URI="${SRC_URI}
@@ -51,10 +51,11 @@ SRC_URI="${SRC_URI}
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
+# Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
-	>=dev-libs/nss-3.17.1
-	>=dev-libs/nspr-4.10.6
-"
+	>=dev-libs/nss-3.17.2
+	>=dev-libs/nspr-4.10.7
+	selinux? ( sec-policy/selinux-mozilla )"
 
 DEPEND="${RDEPEND}
 	pgo? (
@@ -143,12 +144,7 @@ src_prepare() {
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
-	EPATCH_EXCLUDE="8000_gcc49_mozbug999496_ff31.patch" \
 	epatch "${WORKDIR}/firefox"
-
-	epatch "${FILESDIR}"/${P}-jemalloc-configure.patch
-	epatch "${FILESDIR}"/${PN}-32.0-hppa-js-configure.patch # bug 524556
-	epatch "${FILESDIR}"/${PN}-31.0-webm-disallow-negative-samples.patch # bug 527010
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
@@ -299,6 +295,14 @@ src_install() {
 	echo "pref(\"extensions.autoDisableScopes\", 3);" >> \
 		"${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
 		|| die
+
+	local plugin
+	use gmp-autoupdate && for plugin in \
+	gmp-gmpopenh264 ; do
+		echo "pref(\"media.${plugin}.autoupdate\", false);" >> \
+			"${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
+			|| die
+	done
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 	emake DESTDIR="${D}" install
