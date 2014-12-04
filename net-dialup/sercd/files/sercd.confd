@@ -7,7 +7,7 @@ SERCD_USER=uucp:uucp
 SERCD_DEVFILE=/dev/modem
 
 # Lock file
-SERCD_LOCKFILE=/var/lock/LCK..modem
+SERCD_LOCKFILE=/run/lock/LCK..modem
 
 # Address on which this daemon listens on
 SERCD_ADDR=0.0.0.0

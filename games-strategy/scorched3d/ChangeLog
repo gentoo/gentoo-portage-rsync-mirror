@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.91 2014/06/13 21:52:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.92 2014/12/04 07:27:06 tupone Exp $
+
+  04 Dec 2014; Alfredo Tupone <tupone@gentoo.org> scorched3d-43.3d.ebuild,
+  +files/scorched3d-43.3d-jpeg9.patch:
+  Fix build with jpeg-9 Bug #527508 by flameeyes@gentoo.org
 
   13 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org>
   +files/scorched3d-43.3d-freetype.patch, files/scorched3d-43.3d-fixups.patch,

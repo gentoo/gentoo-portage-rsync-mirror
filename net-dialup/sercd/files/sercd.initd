@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/sercd/files/sercd.initd,v 1.1 2009/03/22 12:44:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sercd/files/sercd.initd,v 1.2 2014/12/04 07:14:50 pinkbyte Exp $
 
-PIDFILE=/var/run/${SVCNAME}.pid
+PIDFILE=/run/${SVCNAME}.pid
 
 depend() {
 	need net

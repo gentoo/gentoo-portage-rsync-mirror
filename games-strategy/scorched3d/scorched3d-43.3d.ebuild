@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-43.3d.ebuild,v 1.8 2014/06/13 21:52:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-43.3d.ebuild,v 1.9 2014/12/04 07:27:06 tupone Exp $
 
-EAPI=2
+EAPI=4
 WX_GTK_VER=2.8
 inherit autotools eutils wxwidgets games
 
@@ -43,13 +43,13 @@ src_prepare() {
 		"${FILESDIR}"/${P}-png15.patch \
 		"${FILESDIR}"/${P}-win32.patch \
 		"${FILESDIR}"/${P}-gcc47.patch \
+		"${FILESDIR}"/${P}-jpeg9.patch \
 		"${FILESDIR}"/${P}-freetype.patch
 	eautoreconf
 }
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
 		--with-fftw=/usr \
 		--with-ogg=/usr \
 		--with-vorbis=/usr \
@@ -62,9 +62,9 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	if ! use dedicated ; then
-		newicon data/images/tank-old.bmp ${PN}.bmp || die
+		newicon data/images/tank-old.bmp ${PN}.bmp
 		make_desktop_entry ${PN} "Scorched 3D" /usr/share/pixmaps/${PN}.bmp
 	fi
 	prepgamesdirs
