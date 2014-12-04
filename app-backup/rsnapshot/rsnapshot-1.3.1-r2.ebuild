@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/rsnapshot/rsnapshot-1.3.1-r2.ebuild,v 1.11 2014/09/23 10:03:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/rsnapshot/rsnapshot-1.3.1-r2.ebuild,v 1.12 2014/12/04 09:28:51 heroxbd Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ src_install() {
 	# Change sysconfdir to install the template file as documentation
 	# rather than in /etc.
 	emake install DESTDIR="${D}" \
-		sysconfdir="/usr/share/doc/${PF}"
+		sysconfdir="${EPREFIX}/usr/share/doc/${PF}"
 
 	dodoc README AUTHORS TODO ChangeLog \
 		docs/Upgrading_from_1.1 \
