@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Sys-CPU
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.33 2014/10/12 07:26:31 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.34 2014/12/03 23:13:56 dilfridge Exp $
+
+*Sys-CPU-0.610.0 (03 Dec 2014)
+
+  03 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Sys-CPU-0.610.0.ebuild:
+  Version bump fixing bug 303289
 
   12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Sys-CPU-0.520.0.ebuild:
   Drop old.
