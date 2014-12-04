@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1415 2014/10/20 04:09:52 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1416 2014/12/04 01:25:20 dolsen Exp $
+
+*portage-2.2.15 (04 Dec 2014)
+
+  04 Dec 2014; Brian Dolbec <dolsen@gentoo.org> -portage-2.2.12.ebuild,
+  -portage-2.2.14_rc1.ebuild, +portage-2.2.15.ebuild:
+  Version bump, remove old versions. Fixes bugs 517310, 433453, 519566, 526160,
+  523684, 524684, 524964, 527636, 485598, 527636, 528272, 456128, 528760,
+  525726, 529200, 529120, 528610, 490732, 524236, 515584, 520652, 529660,
+  530010, 530982, 531112, 387059, 528274, 527996, 527486, 52555.
 
 *portage-2.2.14 (20 Oct 2014)
 

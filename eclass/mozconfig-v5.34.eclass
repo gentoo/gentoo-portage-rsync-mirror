@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-v5.34.eclass,v 1.2 2014/12/04 00:51:30 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-v5.34.eclass,v 1.3 2014/12/04 01:17:15 axs Exp $
 #
 # @ECLASS: mozconfig-v5.33.eclass
 # @MAINTAINER:
@@ -205,7 +205,8 @@ mozconfig_config() {
 	mozconfig_annotate '' --disable-gconf
 
 	# Use jemalloc unless libc is not glibc >= 2.4
-	if has_version ">=sys-libs/glibc-2.4"; then
+	# at this time the minimum glibc in the tree is 2.9 so we should be safe.
+	if use elibc_glibc; then
 		# We must force-enable jemalloc 3 via .mozconfig
 		echo "export MOZ_JEMALLOC3=1" >> "${S}"/.mozconfig || die
 		mozconfig_annotate '' --enable-jemalloc
