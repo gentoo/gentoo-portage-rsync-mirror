@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.3.1.ebuild,v 1.2 2014/11/11 22:28:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.3.3.ebuild,v 1.1 2014/12/04 10:01:30 polynomial-c Exp $
 
 EAPI=5
 
@@ -28,7 +28,6 @@ DEPEND="
 WAF_BINARY="${S}/buildtools/bin/waf"
 
 src_prepare() {
-	epatch "${FILESDIR}/add_missing_stdbool_h_include.patch"
 	python_fix_shebang .
 	multilib_copy_sources
 }

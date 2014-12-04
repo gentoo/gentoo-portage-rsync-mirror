@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/nfdump
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.40 2014/07/05 13:19:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.42 2014/12/04 10:15:19 jer Exp $
+
+  04 Dec 2014; Jeroen Roovers <jer@gentoo.org> nfdump-1.6.13.ebuild:
+  Remove redundant minilzo and failing and redundant sed scripts.
+
+*nfdump-1.6.13 (04 Dec 2014)
+
+  04 Dec 2014; Jeroen Roovers <jer@gentoo.org> +nfdump-1.6.13.ebuild,
+  +files/nfdump-1.6.13-libft.patch:
+  Version bump.
 
   05 Jul 2014; Jeroen Roovers <jer@gentoo.org> -nfdump-1.6.9.ebuild,
   -nfdump-1.6.10_p1.ebuild:
