@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/bfr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.25 2014/12/01 09:25:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.27 2014/12/04 08:48:03 jlec Exp $
+
+  04 Dec 2014; Justin Lecher <jlec@gentoo.org> -bfr-1.6-r1.ebuild:
+  Drop old
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> bfr-1.6-r2.ebuild:
+  Stable for ppc64, wrt bug #513406
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> bfr-1.6-r2.ebuild:
   Stable for sparc, wrt bug #513406

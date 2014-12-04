@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.368 2014/12/04 04:21:26 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.369 2014/12/04 08:53:07 axs Exp $
+
+*firefox-34.0.5-r1 (04 Dec 2014)
+
+  04 Dec 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-34.0.5-r1.ebuild, -firefox-34.0.5.ebuild:
+  fixed inverted logic on gmp-autoupdate flag, bug 531624
 
   04 Dec 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-31.3.0.ebuild:
   bump minimum version of dev-libs/nss as per bug 531614

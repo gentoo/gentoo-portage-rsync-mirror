@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.110 2014/12/03 09:43:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.111 2014/12/04 08:39:50 ago Exp $
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> speech-dispatcher-0.8.1.ebuild:
+  Stable for ppc64, wrt bug #529092
 
   03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> speech-dispatcher-0.8.1.ebuild:
   Stable for ppc, wrt bug #529092

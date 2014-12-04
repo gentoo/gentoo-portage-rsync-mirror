@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.497 2014/11/04 07:51:23 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.498 2014/12/04 08:55:35 eras Exp $
+
+*dovecot-2.2.15-r3 (04 Dec 2014)
+
+  04 Dec 2014; Eray Aslan <eras@gentoo.org> +dovecot-2.2.15-r3.ebuild:
+  Fix lz4 lzma automagic dependency - bug #531302
 
 *dovecot-2.2.15-r2 (04 Nov 2014)
 

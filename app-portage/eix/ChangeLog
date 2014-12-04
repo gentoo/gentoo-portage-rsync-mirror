@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.484 2014/12/03 09:41:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.485 2014/12/04 08:35:13 ago Exp $
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> eix-0.30.4.ebuild:
+  Stable for ppc64, wrt bug #529510
 
   03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> eix-0.30.4.ebuild:
   Stable for ppc, wrt bug #529510

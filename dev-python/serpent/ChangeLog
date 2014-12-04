@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/serpent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.16 2014/12/03 09:53:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.17 2014/12/04 08:48:33 ago Exp $
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> serpent-1.7.ebuild:
+  Stable for ppc64, wrt bug #525508
 
   03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> serpent-1.7.ebuild:
   Stable for ppc, wrt bug #525508

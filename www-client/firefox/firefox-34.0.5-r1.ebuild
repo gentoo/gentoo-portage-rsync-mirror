@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-34.0.5.ebuild,v 1.1 2014/12/04 03:30:18 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-34.0.5-r1.ebuild,v 1.1 2014/12/04 08:53:07 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -297,7 +297,7 @@ src_install() {
 		|| die
 
 	local plugin
-	use gmp-autoupdate && for plugin in \
+	use gmp-autoupdate || for plugin in \
 	gmp-gmpopenh264 ; do
 		echo "pref(\"media.${plugin}.autoupdate\", false);" >> \
 			"${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" \

@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kwebkitpart
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.43 2014/12/03 09:33:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.44 2014/12/04 08:34:20 ago Exp $
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> kwebkitpart-1.3.4-r1.ebuild:
+  Stable for ppc64, wrt bug #527438
 
   03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> kwebkitpart-1.3.4-r1.ebuild:
   Stable for ppc, wrt bug #527438
