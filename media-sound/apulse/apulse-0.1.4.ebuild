@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/apulse-0.1.4.ebuild,v 1.2 2014/12/04 19:54:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/apulse-0.1.4.ebuild,v 1.3 2014/12/04 20:15:03 mgorny Exp $
 
 EAPI=5
 
@@ -15,17 +15,21 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="media-libs/alsa-lib[${MULTILIB_USEDEP}]
-	dev-libs/glib:2
-	!media-plugins/alsa-plugins[pulseaudio(-)]
-	amd64? ( abi_x86_32? (
-		|| (
-			dev-libs/glib:2[abi_x86_32(-)]
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+# Tricky stuff, we want to support both gx86-multilib and emul-linux-x86.
+RDEPEND="
+	|| (
+		(
+			dev-libs/glib:2[${MULTILIB_USEDEP}]
+			media-libs/alsa-lib[${MULTILIB_USEDEP}]
 		)
-	) )
-"
-RDEPEND="${DEPEND}"
+		amd64? ( abi_x86_32? ( !abi_x86_x32? (
+			dev-libs/glib:2
+			media-libs/alsa-lib
+			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)]
+		) ) )
+	)"
+DEPEND="${RDEPEND}"
 
 MULTILIB_CHOST_TOOLS=( /usr/bin/apulse )
 
