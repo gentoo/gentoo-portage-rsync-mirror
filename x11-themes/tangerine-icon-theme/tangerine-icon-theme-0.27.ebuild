@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.27.ebuild,v 1.9 2013/02/07 23:07:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.27.ebuild,v 1.10 2014/12/04 12:48:50 mrueg Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -17,7 +17,7 @@ IUSE="minimal"
 
 RESTRICT="binchecks strip"
 
-RDEPEND="!minimal? ( || ( x11-themes/gnome-icon-theme kde-base/oxygen-icons ) )"
+RDEPEND="!minimal? ( || ( x11-themes/gnome-icon-theme kde-apps/oxygen-icons kde-base/oxygen-icons ) )"
 DEPEND="dev-util/intltool
 	>=gnome-base/librsvg-2.34
 	sys-devel/gettext

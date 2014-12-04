@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.20 2014/08/03 18:47:38 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.21 2014/12/04 12:44:49 mrueg Exp $
+
+  04 Dec 2014; Manuel Rüger <mrueg@gentoo.org> lc-core-0.6.60.ebuild,
+  lc-core-0.6.65.ebuild, lc-core-0.6.70.ebuild, lc-core-9999.ebuild:
+  Update dependency on oxygen-icons.
 
 *lc-core-0.6.70 (03 Aug 2014)
 

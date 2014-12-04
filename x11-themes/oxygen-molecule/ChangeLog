@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/oxygen-molecule
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-molecule/ChangeLog,v 1.8 2010/06/12 08:36:04 spatz Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-molecule/ChangeLog,v 1.9 2014/12/04 12:48:04 mrueg Exp $
+
+  04 Dec 2014; Manuel Rüger <mrueg@gentoo.org> oxygen-molecule-3.2.ebuild:
+  Update dependency on oxygen-icons.
 
   12 Jun 2010; Dror Levin <spatz@gentoo.org> -oxygen-molecule-2.2.ebuild:
   Drop old.
@@ -39,4 +42,3 @@
   31 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   +oxygen-molecule-2.1.ebuild:
   Initial commit wrt #261874.
-

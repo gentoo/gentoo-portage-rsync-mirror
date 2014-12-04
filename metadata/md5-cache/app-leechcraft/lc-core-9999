@@ -5,8 +5,8 @@ EAPI=5
 HOMEPAGE=http://leechcraft.org/
 IUSE=debug doc +sqlite postgres +qwt
 LICENSE=Boost-1.0
-RDEPEND=>=dev-libs/boost-1.46 dev-qt/qtcore:4 dev-qt/qtdeclarative:4 dev-qt/qtgui:4 dev-qt/qtscript:4 dev-qt/qtsql:4[postgres?,sqlite?] dev-qt/qtwebkit:4 dev-qt/qtdbus:4 qwt? ( x11-libs/qwt:6 ) dev-qt/qtsvg:4 || ( kde-base/oxygen-icons x11-themes/kfaenza )
+RDEPEND=>=dev-libs/boost-1.46 dev-qt/qtcore:4 dev-qt/qtdeclarative:4 dev-qt/qtgui:4 dev-qt/qtscript:4 dev-qt/qtsql:4[postgres?,sqlite?] dev-qt/qtwebkit:4 dev-qt/qtdbus:4 qwt? ( x11-libs/qwt:6 ) dev-qt/qtsvg:4 || ( kde-apps/oxygen-icons kde-base/oxygen-icons x11-themes/kfaenza )
 REQUIRED_USE=|| ( postgres sqlite )
 SLOT=0
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	git-2	e28f0d8a9b321431b1e699782851b827	leechcraft	6609acc541f2bc8ba65e461352fdf169	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=c7fea6cc8cfa83938b5723f997246305
+_md5_=ab38e71bba50ac9f8ea18fed0447bf31

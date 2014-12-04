@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/lc-core-0.6.70.ebuild,v 1.1 2014/08/03 18:47:38 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/lc-core-0.6.70.ebuild,v 1.2 2014/12/04 12:44:49 mrueg Exp $
 
 EAPI="5"
 
@@ -29,6 +29,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	dev-qt/qtsvg:4
 	|| (
+		kde-apps/oxygen-icons
 		kde-base/oxygen-icons
 		x11-themes/kfaenza
 	 )"

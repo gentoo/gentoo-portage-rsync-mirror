@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.2.ebuild,v 1.3 2014/12/03 03:21:26 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.2.ebuild,v 1.4 2014/12/04 12:41:26 mrueg Exp $
 
 EAPI=5
 
@@ -90,7 +90,7 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	jabber? ( app-crypt/qca-gnupg:2 )
 	oscar? ( app-crypt/qca-ossl:2 )
-	kde-base/oxygen-icons
+	|| ( kde-apps/oxygen-icons kde-base/oxygen-icons )
 "
 
 DOCS=( AUTHORS INSTALL ChangeLog )
