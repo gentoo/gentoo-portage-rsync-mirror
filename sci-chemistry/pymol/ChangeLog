@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.123 2014/12/04 08:48:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.124 2014/12/04 13:35:08 patrick Exp $
+
+  04 Dec 2014; Patrick Lauer <patrick@gentoo.org> pymol-1.7.4.0.ebuild:
+  Remove unneeded blank line on last line
 
 *pymol-1.7.4.0 (04 Dec 2014)
 
@@ -219,4 +222,3 @@
   02 Jun 2011; Justin Lecher <jlec@gentoo.org> +files/1.4.1-web.patch,
   pymol-1.4.1.ebuild, metadata.xml:
   Fix collision with dev-python/webpy, #368947
-

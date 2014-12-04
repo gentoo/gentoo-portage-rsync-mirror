@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.7.4.0.ebuild,v 1.1 2014/12/04 08:48:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.7.4.0.ebuild,v 1.2 2014/12/04 13:35:08 patrick Exp $
 
 EAPI=5
 
@@ -104,4 +104,3 @@ pkg_postrm() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }
-
