@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.6-r3.ebuild,v 1.10 2014/09/20 23:52:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.6-r3.ebuild,v 1.11 2014/12/05 21:01:34 axs Exp $
 
 EAPI=5
 
@@ -46,6 +46,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-session-chooser.patch
 	epatch "${FILESDIR}"/${P}-fix-slimlock-nopam.patch
 	epatch "${FILESDIR}"/${P}-drop-zlib.patch
+	epatch "${FILESDIR}"/${P}-freetype.patch
 
 	if use elibc_FreeBSD; then
 		sed -i -e 's/"-DHAVE_SHADOW"/"-DNEEDS_BASENAME"/' CMakeLists.txt \
