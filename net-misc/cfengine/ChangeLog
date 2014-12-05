@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.172 2014/12/05 10:16:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.173 2014/12/05 17:54:14 mschiff Exp $
+
+  05 Dec 2014; Marc Schiffbauer <mschiff@gentoo.org> -cfengine-3.2.4.ebuild,
+  -cfengine-3.3.5.ebuild:
+  Remove old ebuilds. Fixes #520498.
 
   05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> cfengine-3.3.9.ebuild:
   Stable for x86, wrt bug #529726
