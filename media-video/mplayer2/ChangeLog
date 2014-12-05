@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.130 2014/11/02 12:03:50 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.131 2014/12/05 19:57:22 maksbotan Exp $
+
+  05 Dec 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  mplayer2-2.0_p20131009.ebuild, mplayer2-9999.ebuild:
+  Add python 3.4, bug #531000.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org>
   mplayer2-2.0_p20130428-r1.ebuild, mplayer2-2.0_p20131009.ebuild,

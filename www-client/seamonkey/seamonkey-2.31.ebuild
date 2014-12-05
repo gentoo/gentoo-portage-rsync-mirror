@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.29.1.ebuild,v 1.3 2014/11/02 10:28:35 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.31.ebuild,v 1.1 2014/12/05 19:53:14 polynomial-c Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -28,10 +28,10 @@ fi
 
 MOZCONFIG_OPTIONAL_WIFI=1
 MOZCONFIG_OPTIONAL_JIT="enabled"
-inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-v4.31 multilib pax-utils fdo-mime autotools mozextension nsplugins mozlinguas
+inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-v5.34 multilib pax-utils fdo-mime autotools mozextension nsplugins mozlinguas
 
-PATCHFF="firefox-31.0-patches-0.2"
-PATCH="${PN}-2.23-patches-01"
+PATCHFF="firefox-34.0-patches-0.1"
+PATCH="${PN}-2.30-patches-01"
 EMVER="1.7.2"
 
 DESCRIPTION="Seamonkey Web Browser"
@@ -49,7 +49,7 @@ fi
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+chatzilla +crypt +ipc minimal pulseaudio +roaming selinux test"
+IUSE="+chatzilla +crypt +gmp-autoupdate +ipc minimal pulseaudio +roaming selinux test"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MY_MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
@@ -59,8 +59,8 @@ SRC_URI="${SRC_URI}
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
-CDEPEND=">=dev-libs/nss-3.16.2
-	>=dev-libs/nspr-4.10.6
+RDEPEND=">=dev-libs/nss-3.17.2
+	>=dev-libs/nspr-4.10.7
 	crypt? ( || (
 			( >=app-crypt/gnupg-2.0
 				|| (
@@ -69,9 +69,9 @@ CDEPEND=">=dev-libs/nss-3.16.2
 				)
 			)
 			=app-crypt/gnupg-1.4* ) )
-"
+	system-sqlite? ( >=dev-db/sqlite-3.8.5:3[secure-delete,debug=] )"
 
-DEPEND="${CDEPEND}
+DEPEND="${RDEPEND}
 	!elibc_glibc? ( !elibc_uclibc?  ( dev-libs/libexecinfo ) )
 	crypt? ( dev-lang/perl )
 	amd64? ( ${ASM_DEPEND}
@@ -79,17 +79,13 @@ DEPEND="${CDEPEND}
 	x86? ( ${ASM_DEPEND}
 		virtual/opengl )"
 
-RDEPEND="${CDEPEND}
-	selinux? ( sec-policy/selinux-mozilla )
-"
-
 if [[ ${PV} == *beta* ]] ; then
 	S="${WORKDIR}/comm-beta"
 else
 	S="${WORKDIR}/comm-release"
 fi
 
-BUILD_OBJ_DIR="${WORKDIR}/seamonk"
+BUILD_OBJ_DIR="${S}/seamonk"
 
 pkg_setup() {
 	if [[ ${PV} == *_pre* ]] ; then
@@ -124,10 +120,12 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/seamonkey"
 
+	epatch"${FILESDIR}"/${PN}-2.30-jemalloc-configure.patch
+
 	# browser patches go here
 	pushd "${S}"/mozilla &>/dev/null || die
 	EPATCH_EXCLUDE="2000-firefox_gentoo_install_dirs.patch
-			8000_gcc49_mozbug999496_ff31.patch" \
+			8002_jemalloc_configure_unbashify.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
@@ -171,6 +169,8 @@ src_prepare() {
 	eautoconf
 	cd "${S}"/mozilla/js/src || die
 	eautoconf
+	cd "${S}"/mozilla/memory/jemalloc/src || die
+	WANT_AUTOCONF= eautoconf
 }
 
 src_configure() {
@@ -238,14 +238,14 @@ src_configure() {
 			append-flags -mno-avx
 		fi
 	fi
+
+	emake V=1 -f client.mk configure
 }
 
 src_compile() {
-	mkdir -p ${BUILD_OBJ_DIR} && cd ${BUILD_OBJ_DIR} || die
-
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL}" \
-	emake V=1 -f "${S}/client.mk"
+	emake V=1 -f client.mk
 
 	# Only build enigmail extension if conditions are met.
 	if use crypt ; then
@@ -265,21 +265,30 @@ src_install() {
 	cd "${BUILD_OBJ_DIR}" || die
 
 	# Pax mark xpcshell for hardened support, only used for startupcache creation.
-	pax-mark m "${BUILD_OBJ_DIR}/mozilla/dist/bin/xpcshell"
+	pax-mark m "${BUILD_OBJ_DIR}/dist/bin/xpcshell"
 
 	# Copy our preference before omnijar is created.
 	sed "s|SEAMONKEY_PVR|${PVR}|" "${FILESDIR}"/all-gentoo-1.js > \
-		"${BUILD_OBJ_DIR}/mozilla/dist/bin/defaults/pref/all-gentoo.js" \
+		"${BUILD_OBJ_DIR}/dist/bin/defaults/pref/all-gentoo.js" \
 		|| die
 
 	# Set default path to search for dictionaries.
 	echo "pref(\"spellchecker.dictionary_path\", ${DICTPATH});" \
-		>> "${BUILD_OBJ_DIR}/mozilla/dist/bin/defaults/pref/all-gentoo.js" \
+		>> "${BUILD_OBJ_DIR}/dist/bin/defaults/pref/all-gentoo.js" \
 		|| die
 
 	echo 'pref("extensions.autoDisableScopes", 3);' >> \
-		"${BUILD_OBJ_DIR}/mozilla/dist/bin/defaults/pref/all-gentoo.js" \
+		"${BUILD_OBJ_DIR}/dist/bin/defaults/pref/all-gentoo.js" \
 		|| die
+
+	local plugin
+	if ! use gmp-autoupdate ; then
+		for plugin in gmp-gmpopenh264 ; do
+			echo "pref(\"media.${plugin}.autoupdate\", false);" >> \
+				"${S}/${BUILD_OBJ_DIR}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
+				|| dir
+		done
+	fi
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 	emake DESTDIR="${D}" install
@@ -325,7 +334,7 @@ src_install() {
 	# Handle plugins dir through nsplugins.eclass
 	share_plugins_dir
 
-	doman "${BUILD_OBJ_DIR}/suite/app/${PN}.1"
+	#doman "${BUILD_OBJ_DIR}/suite/app/${PN}.1"
 
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
