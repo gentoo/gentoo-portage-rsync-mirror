@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/jasper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.93 2014/11/03 11:28:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.94 2014/12/05 08:05:52 jlec Exp $
+
+*jasper-1.900.1-r7 (05 Dec 2014)
+
+  05 Dec 2014; Justin Lecher <jlec@gentoo.org> +jasper-1.900.1-r7.ebuild,
+  +files/jasper-1.701.0-GL.patch, +files/jasper-1.701.0-GL-ac.patch,
+  +files/jasper-CVE-2014-9029.patch, +files/jasper-pkgconfig.patch:
+  Import security fix from fedora for CVE-2014-9029, #531688
 
   03 Nov 2014; Justin Lecher <jlec@gentoo.org> -jasper-1.900.1-r5.ebuild:
   Drop old

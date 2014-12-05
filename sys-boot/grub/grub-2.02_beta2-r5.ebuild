@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r4.ebuild,v 1.1 2014/12/04 09:37:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r5.ebuild,v 1.1 2014/12/05 08:06:44 jlec Exp $
 
 EAPI=5
 
@@ -279,7 +279,7 @@ src_install() {
 	multibuild_foreach_variant autotools-utils_src_install \
 		bashcompletiondir="$(get_bashcompdir)"
 
-	mv "${ED}"/$(get_bashcompdir)/grub{,-install} || die
+	mv "${ED}"/$(get_bashcompdir)/grub{,2-install} || die
 
 	bashcomp_alias grub-install \
 		grub2-set-default \
