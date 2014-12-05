@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.336 2014/11/23 12:37:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.337 2014/12/05 18:04:47 axs Exp $
+
+  05 Dec 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> calibre-1.48-r1.ebuild:
+  added alternative PyQt4 dep, for Funtoo
 
 *calibre-1.48-r1 (23 Nov 2014)
 

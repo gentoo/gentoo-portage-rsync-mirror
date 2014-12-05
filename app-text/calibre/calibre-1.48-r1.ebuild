@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.48-r1.ebuild,v 1.1 2014/11/23 12:37:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.48-r1.ebuild,v 1.2 2014/12/05 18:04:47 axs Exp $
 
 EAPI=5
 
@@ -53,7 +53,10 @@ COMMON_DEPEND="
 	>=dev-python/lxml-3.2.1[${PYTHON_USEDEP}]
 	>=dev-python/mechanize-0.1.11[${PYTHON_USEDEP}]
 	>=dev-python/python-dateutil-1.4.1[${PYTHON_USEDEP}]
-	<dev-python/PyQt4-4.11.3[X,svg,webkit,${PYTHON_USEDEP}]
+	|| (
+		<dev-python/PyQt4-4.11.3[X,svg,webkit,${PYTHON_USEDEP}]
+		=dev-python/PyQt4-4.11.3-r1000[X,svg,webkit,${PYTHON_USEDEP}]
+	)
 	dev-python/netifaces[${PYTHON_USEDEP}]
 	dev-qt/qtdbus:4=
 	dev-qt/qtsvg:4=
