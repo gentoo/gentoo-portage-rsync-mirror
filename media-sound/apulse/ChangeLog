@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/apulse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/ChangeLog,v 1.7 2014/12/04 20:15:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/ChangeLog,v 1.8 2014/12/05 14:34:12 mgorny Exp $
+
+  05 Dec 2014; Michał Górny <mgorny@gentoo.org> apulse-0.1.4.ebuild:
+  Restore alsa-plugins[pulseaudio] blocker, removed by mistake.
 
   04 Dec 2014; Michał Górny <mgorny@gentoo.org> apulse-0.1.4.ebuild:
   Update the dependencies to support emul-linux-x86 alongside multilib.
