@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-cairo-gobject
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-cairo-gobject/ChangeLog,v 1.6 2014/10/27 00:19:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-cairo-gobject/ChangeLog,v 1.7 2014/12/05 15:20:49 naota Exp $
+
+*ruby-cairo-gobject-2.2.3 (05 Dec 2014)
+
+  05 Dec 2014; Naohiro Aota <naota@gentoo.org> +ruby-cairo-gobject-2.2.3.ebuild:
+  version bump
 
   27 Oct 2014; Patrick Lauer <patrick@gentoo.org>
   ruby-cairo-gobject-1.2.6.ebuild, ruby-cairo-gobject-2.0.2.ebuild,

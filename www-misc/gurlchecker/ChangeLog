@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/gurlchecker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.44 2014/12/05 10:18:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.45 2014/12/05 15:18:10 kensington Exp $
+
+  05 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  -gurlchecker-0.13.1.ebuild:
+  Remove old.
 
   05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gurlchecker-0.13.1-r1.ebuild:
   Stable for x86, wrt bug #530026

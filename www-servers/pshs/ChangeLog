@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/pshs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/ChangeLog,v 1.8 2014/12/01 19:19:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/ChangeLog,v 1.10 2014/12/05 15:05:31 mgorny Exp $
+
+  05 Dec 2014; Michał Górny <mgorny@gentoo.org> -pshs-0.2.2.ebuild:
+  Remove the broken version.
+
+*pshs-0.2.3 (05 Dec 2014)
+
+  05 Dec 2014; Michał Górny <mgorny@gentoo.org> +pshs-0.2.3.ebuild:
+  Version bump. Fixes the build with USE=-qrcode, bug #531584.
 
 *pshs-0.2.2 (01 Dec 2014)
 

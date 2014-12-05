@@ -10,6 +10,11 @@
       flag if you want to use a system wide instance. If unsure, enable
       this flag.
     </flag>
+    <flag name="alsa-plugin">
+      Request installing <pkg>media-sound/alsa-plugins</pkg> with
+      PulseAudio plugin enabled. This ensures that clients supporting
+      ALSA only will use PulseAudio.
+    </flag>
     <flag name="gnome">
       Use GConf to store user preferences on streams and so on. Don't
       enable this flag if you want to use a system wide instance. If

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/pshs-0.2.2.ebuild,v 1.1 2014/12/01 19:19:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/pshs-0.2.3.ebuild,v 1.1 2014/12/05 15:02:36 mgorny Exp $
 
 EAPI=5
 

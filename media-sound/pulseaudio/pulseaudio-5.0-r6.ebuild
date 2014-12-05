@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r6.ebuild,v 1.2 2014/12/05 10:30:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r6.ebuild,v 1.3 2014/12/05 15:26:17 mgorny Exp $
 
 EAPI="5"
 inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -18,8 +18,8 @@ LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 
-IUSE="+alsa +asyncns bluetooth +caps dbus doc equalizer +gdbm +glib gnome
-gtk ipv6 jack libsamplerate lirc neon +orc oss qt4 realtime ssl systemd
+IUSE="+alsa +alsa-plugin +asyncns bluetooth +caps dbus doc equalizer +gdbm +glib
+gnome gtk ipv6 jack libsamplerate lirc neon +orc oss qt4 realtime ssl systemd
 system-wide tcpd test +udev +webrtc-aec +X xen zeroconf"
 
 # See "*** BLUEZ support not found (requires D-Bus)" in configure.ac
@@ -88,6 +88,8 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	>=sys-devel/gettext-0.18.1
 "
+# This is a PDEPEND to avoid a circular dep
+PDEPEND="alsa-plugin? ( >=media-plugins/alsa-plugins-1.0.27-r1[pulseaudio] )"
 
 # alsa-utils dep is for the alsasound init.d script (see bug #155707)
 # bluez dep is for the bluetooth init.d script
@@ -349,11 +351,5 @@ pkg_postinst() {
 		elog "You've enabled the 'equalizer' USE-flag but not the 'qt4' USE-flag."
 		elog "This will build the equalizer module, but the 'qpaeq' tool"
 		elog "which is required to set equalizer levels will not work."
-	fi
-
-	if use alsa && ! has_version 'media-plugins/alsa-plugins[pulseaudio]'; then
-		ewarn
-		ewarn "You will need to install media-plugins/alsa-plugins[pulseaudio]"
-		ewarn "if you want ALSA-only apps to automatically use PulseAudio."
 	fi
 }
