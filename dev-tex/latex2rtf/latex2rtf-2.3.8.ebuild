@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-2.3.8.ebuild,v 1.1 2014/12/03 16:14:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-2.3.8.ebuild,v 1.2 2014/12/05 09:44:26 aballier Exp $
 
 EAPI=5
 
@@ -13,13 +13,13 @@ SRC_URI="mirror://sourceforge/latex2rtf/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
-IUSE="doc test"
+IUSE="test"
 S="${WORKDIR}/${P%b}"
 
 RDEPEND="virtual/latex-base
 	media-gfx/imagemagick"
 DEPEND="${RDEPEND}
-	doc? ( virtual/texi2dvi )
+	virtual/texi2dvi
 	test? (
 		dev-texlive/texlive-langgerman
 		dev-texlive/texlive-fontsrecommended
@@ -36,20 +36,13 @@ src_compile() {
 	tc-export CC
 	# Set DESTDIR here too so that compiled-in paths are correct.
 	emake DESTDIR="${EPREFIX}/usr" || die "emake failed"
-	if use doc; then
-		cd "${S}/doc"
-		emake realclean
-		emake -j1
-	else
-		touch "${S}/doc/latex2rtf.html"
-	fi
+
+	cd "${S}/doc"
+	emake realclean
+	emake -j1
 }
 
 src_install() {
 	dodoc README* HACKING ToDo ChangeLog doc/credits
-	emake DESTDIR="${ED}/usr" -j1 install
-	# if doc is not used, only the text version is intalled.
-	if use doc; then
-		emake DESTDIR="${ED}/usr" install-info
-	fi
+	emake DESTDIR="${ED}/usr" -j1 install install-info
 }

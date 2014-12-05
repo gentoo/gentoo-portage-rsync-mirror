@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.46 2014/12/03 16:22:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.47 2014/12/05 09:44:26 aballier Exp $
+
+  05 Dec 2014; Alexis Ballier <aballier@gentoo.org> latex2rtf-2.3.8.ebuild:
+  drop doc useflag; texi2dvi is needed anyway and it makes little sense to have
+  it control only the info files installation; reported by hanno on irc
 
   03 Dec 2014; Alexis Ballier <aballier@gentoo.org> latex2rtf-2.2.1b.ebuild:
   depend on sys-apps/man for stable version, bug #438496
