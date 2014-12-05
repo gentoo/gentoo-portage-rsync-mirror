@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r2.ebuild,v 1.1 2014/12/02 16:21:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r3.ebuild,v 1.1 2014/12/05 11:54:10 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -32,13 +32,18 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-{noesd,desktopfile}.patch
+	epatch "${FILESDIR}"/${P}-noesd.patch
+	epatch "${FILESDIR}"/${P}-desktopfile.patch
+	epatch "${FILESDIR}"/${P}-format-security.patch
 	sed -i \
 		-e "/^pkgdatadir =/s:=.*:= ${GAMES_DATADIR}/${PN}:" \
 		src/Makefile.in themes/*/Makefile.in || die
 	sed -i \
 		-e '/^gamesdir/s:=.*:=@bindir@:' \
 		src/Makefile.am || die
+
+	rm -rf "${WORKDIR}"/gentoo/.xvpics || die # Remove cruft
+
 	eautoreconf
 	gnome2_src_prepare
 }
@@ -50,5 +55,5 @@ src_configure() {
 
 src_install() {
 	gnome2_src_install
-	mv "${WORKDIR}"/gentoo "${D}/${GAMES_DATADIR}"/${PN}/themes/
+	mv "${WORKDIR}"/gentoo "${ED}/usr/share/${PN}/themes/" || die
 }
