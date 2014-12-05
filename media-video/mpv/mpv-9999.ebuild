@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.60 2014/11/29 11:51:06 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.61 2014/12/05 18:33:22 maksbotan Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
 inherit eutils waf-utils pax-utils fdo-mime gnome2-utils
 [[ ${PV} == *9999* ]] && inherit git-r3
 
-WAF_V="1.8.1"
+WAF_V="1.8.4"
 
 DESCRIPTION="Video player based on MPlayer/mplayer2"
 HOMEPAGE="http://mpv.io/"
@@ -23,8 +23,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b cdio +cli -doc-pdf dvb +dvd dvdnav egl +enca encode
 +iconv jack -joystick jpeg ladspa lcms +libass libcaca libguess libmpv lirc lua
-luajit +mpg123 -openal +opengl oss -portaudio postproc pulseaudio pvr samba -sdl
-selinux v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
+luajit +mpg123 -openal +opengl oss -portaudio pulseaudio pvr samba -sdl selinux
+v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
 	|| ( cli libmpv )
@@ -96,12 +96,6 @@ RDEPEND="
 	mpg123? ( >=media-sound/mpg123-1.14.0 )
 	openal? ( >=media-libs/openal-1.13 )
 	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
-	postproc? (
-		|| (
-			>=media-libs/libpostproc-10.20140517
-			>=media-video/ffmpeg-2.1.4:0
-		)
-	)
 	pulseaudio? ( media-sound/pulseaudio )
 	samba? ( net-fs/samba )
 	sdl? ( media-libs/libsdl2[threads] )
@@ -191,7 +185,6 @@ src_configure() {
 		--disable-vapoursynth-lazy
 		--enable-libavfilter
 		--enable-libavdevice
-		$(use_enable postproc libpostproc)
 		$(usex luajit '--lua=luajit' '')
 
 		# audio outputs

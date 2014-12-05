@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.24.0.ebuild,v 1.3 2014/11/17 23:30:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.28.3.ebuild,v 1.1 2014/12/05 18:53:29 maksbotan Exp $
 
 EAPI="5"
 
 WANT_LIBTOOL=latest
+WANT_AUTOMAKE=1.14
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 inherit autotools-utils autotools versionator eutils \
@@ -12,7 +13,6 @@ multilib linux-info perl-module base
 
 MY_PV_1="$(get_version_component_range 1-2)"
 MY_PV_2="$(get_version_component_range 2)"
-
 [[ $(( $(get_version_component_range 2) % 2 )) -eq 0 ]] && SD="stable" || SD="development"
 
 DESCRIPTION="Tools for accessing, inspect  and modifying virtual machine (VM) disk images"
@@ -20,10 +20,10 @@ HOMEPAGE="http://libguestfs.org/"
 SRC_URI="http://libguestfs.org/download/${MY_PV_1}-${SD}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
-SLOT="0/${MY_PV_1}"
+SLOT="0/"${MY_PV_1}""
 
 KEYWORDS="~amd64"
-IUSE="erlang +fuse debug +ocaml doc +perl ruby static-libs
+IUSE="bash-completion erlang +fuse debug ocaml doc +perl ruby static-libs
 selinux systemtap introspection inspect-icons test lua"
 
 # Failires - doc
@@ -37,7 +37,7 @@ COMMON_DEPEND="
 	app-arch/cpio
 	dev-lang/perl
 	app-cdr/cdrkit
-	>=app-emulation/qemu-1.2.2[qemu_user_targets_x86_64,qemu_softmmu_targets_x86_64,tci,systemtap?,selinux?,filecaps]
+	>=app-emulation/qemu-2.0[qemu_softmmu_targets_x86_64,systemtap?,selinux?,filecaps]
 	sys-apps/fakeroot
 	sys-apps/file
 	app-emulation/libvirt
@@ -49,6 +49,10 @@ COMMON_DEPEND="
 	dev-libs/libpcre
 	sys-libs/readline
 	>=sys-libs/db-4.6
+	app-arch/xz-utils
+	app-arch/lzma
+	app-crypt/gnupg
+	app-arch/unzip[natspec]
 	perl? ( virtual/perl-ExtUtils-MakeMaker
 			>=dev-perl/Sys-Virt-0.2.4
 			virtual/perl-Getopt-Long
@@ -75,20 +79,22 @@ COMMON_DEPEND="
 	virtual/acl
 	sys-libs/libcap
 	lua? ( dev-lang/lua )
-	"
+	>=app-shells/bash-completion-2.0
+	dev-libs/yajl"
 
 DEPEND="${COMMON_DEPEND}
 	dev-util/gperf
 	doc? ( app-text/po4a )
 	ruby? ( dev-lang/ruby virtual/rubygems dev-ruby/rake )
+	${AUTOTOOLS_DEPEND}
 	"
 RDEPEND="${COMMON_DEPEND}
 	app-emulation/libguestfs-appliance
 	"
 
-PATCHES=("${FILESDIR}"/1.24/0*.patch  )
+PATCHES=( "${FILESDIR}/${MY_PV_1}"/*.patch  )
 
-DOCS=(AUTHORS BUGS ChangeLog HACKING README  ROADMAP TODO)
+DOCS=( AUTHORS BUGS ChangeLog HACKING README TODO )
 
 pkg_setup () {
 		CONFIG_CHECK="~KVM ~VIRTIO"
@@ -113,7 +119,9 @@ src_configure() {
 	export vmchannel_test=no
 
 	local myeconfargs=(
-		$(use_enable test gcc-warnings)
+		$(use_enable test werror)
+		--with-libvirt
+		--with-default-backend=libvirt
 		--disable-appliance
 		--disable-daemon
 		--with-extra="-gentoo"
@@ -126,6 +134,7 @@ src_configure() {
 		$(use_enable ocaml)
 		$(use_enable ruby)
 		--disable-haskell
+		--disable-golang
 		$(use_enable introspection gobject)
 		$(use_enable erlang)
 		$(use_enable systemtap probes)
