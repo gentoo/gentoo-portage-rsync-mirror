@@ -7,4 +7,4 @@ LICENSE=BSD
 RDEPEND=~sys-devel/dragonegg-9999 ~sys-devel/clang-9999 ~sys-devel/llvm-9999
 SLOT=0
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=2f41028daa3aa761cdcc3cdf23b07e36
+_md5_=d660d16d838a3d84d33cb3336302be90

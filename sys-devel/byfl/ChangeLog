@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/byfl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/ChangeLog,v 1.6 2014/09/18 17:36:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/ChangeLog,v 1.7 2014/12/05 16:26:47 ottxor Exp $
+
+  05 Dec 2014; Christoph Junghans <ottxor@gentoo.org> byfl-1.0.ebuild,
+  byfl-9999.ebuild:
+  added ~amd64-linux, fixed typo
 
 *byfl-1.0 (18 Sep 2014)
 
