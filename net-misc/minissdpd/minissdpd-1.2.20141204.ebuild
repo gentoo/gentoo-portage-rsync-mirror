@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minissdpd/minissdpd-1.2.20141108.ebuild,v 1.1 2014/11/09 12:58:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minissdpd/minissdpd-1.2.20141204.ebuild,v 1.1 2014/12/05 11:12:12 blueness Exp $
 
 EAPI="5"
 inherit eutils toolchain-funcs

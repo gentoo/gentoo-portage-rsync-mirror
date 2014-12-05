@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-programoutput/sphinxcontrib-programoutput-0.8.ebuild,v 1.5 2014/08/20 04:05:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-programoutput/sphinxcontrib-programoutput-0.8.ebuild,v 1.6 2014/12/05 11:26:24 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/d2to1
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/d2to1/ChangeLog,v 1.10 2014/06/30 01:04:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/d2to1/ChangeLog,v 1.11 2014/12/05 11:21:03 idella4 Exp $
+
+  05 Dec 2014; Ian Delaney <idella4@gentoo.org> d2to1-0.2.11.ebuild:
+  clean impl py3.2
 
   30 Jun 2014; Ian Delaney <idella4@gentoo.org> d2to1-0.2.11.ebuild:
   drop py2.6 pypy2_0 add py3.4

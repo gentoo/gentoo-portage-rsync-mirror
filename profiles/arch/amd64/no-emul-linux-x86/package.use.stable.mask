@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.25 2014/12/02 14:36:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.26 2014/12/05 11:20:48 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -169,6 +169,7 @@ media-libs/ladspa-sdk -abi_x86_32
 media-libs/lcms -abi_x86_32
 media-libs/libXcm -abi_x86_32
 media-libs/libaacplus -abi_x86_32
+media-libs/libaacs -abi_x86_32
 media-libs/libao -abi_x86_32
 media-libs/libart_lgpl -abi_x86_32
 media-libs/libass -abi_x86_32

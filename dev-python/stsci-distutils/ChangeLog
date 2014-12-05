@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/stsci-distutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/ChangeLog,v 1.18 2014/06/30 01:09:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/ChangeLog,v 1.19 2014/12/05 11:24:23 idella4 Exp $
+
+  05 Dec 2014; Ian Delaney <idella4@gentoo.org> stsci-distutils-0.3.7.ebuild:
+  clean impl py3.2
 
   30 Jun 2014; Ian Delaney <idella4@gentoo.org> stsci-distutils-0.3.7.ebuild:
   drop py2.6 pypy2_0 add py3.4
