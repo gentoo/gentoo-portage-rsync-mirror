@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/urt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.35 2014/06/10 01:05:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.36 2014/12/05 22:24:31 ottxor Exp $
+
+  05 Dec 2014; Christoph Junghans <ottxor@gentoo.org>
+  +files/urt-3.1b-solaris.patch, urt-3.1b-r1.ebuild:
+  added prefix support (bug #529582)
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> urt-3.1b-r1.ebuild:
   Add arm64 love.

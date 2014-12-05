@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xloadimage
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.65 2012/01/22 20:16:27 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.66 2014/12/05 22:20:11 ottxor Exp $
+
+  05 Dec 2014; Christoph Junghans <ottxor@gentoo.org> xloadimage-4.1-r11.ebuild:
+  added prefix support (bug #529564)
 
   22 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   xloadimage-4.1-r11.ebuild:
