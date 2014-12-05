@@ -7,9 +7,6 @@
   <email>dongxuli2011@gmail.com</email>
   <description>please assign bugs</description>
 </maintainer>
-<maintainer>
-  <email>maintainer-needed@gentoo.org</email>
-</maintainer>
 <longdescription lang="en">
   BRL-CAD is a Combinatorial/Constructive Solid Geometry (CSG)
   solid modeling system that includes an interactive geometry editor,

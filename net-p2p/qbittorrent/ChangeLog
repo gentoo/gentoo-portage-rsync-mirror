@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.236 2014/11/06 21:37:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.237 2014/12/05 17:16:42 hwoarang Exp $
+
+*qbittorrent-3.0.11-r2 (05 Dec 2014)
+
+  05 Dec 2014; Markos Chandras <hwoarang@gentoo.org>
+  +qbittorrent-3.0.11-r2.ebuild:
+  Add 3.0.11 ebuild since it has features which have been removed in later
+  versions. Do not remove it before you talk to me please
 
 *qbittorrent-3.1.11 (06 Nov 2014)
 
