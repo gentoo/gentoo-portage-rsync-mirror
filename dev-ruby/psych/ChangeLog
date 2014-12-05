@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/psych
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/psych/ChangeLog,v 1.3 2014/09/17 05:24:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/psych/ChangeLog,v 1.4 2014/12/05 07:20:58 graaff Exp $
+
+*psych-2.0.8 (05 Dec 2014)
+
+  05 Dec 2014; Hans de Graaff <graaff@gentoo.org> +psych-2.0.8.ebuild:
+  Version bump. Run all tests rather than the first one from the glob.
 
 *psych-2.0.6 (17 Sep 2014)
 
