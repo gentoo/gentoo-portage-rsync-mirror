@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.13.5.ebuild,v 1.3 2014/11/17 12:07:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.13.5.ebuild,v 1.4 2014/12/05 14:20:35 caster Exp $
 
 EAPI="5"
 
@@ -39,6 +39,7 @@ CUPS_COMMON_DEP="
 X_COMMON_DEP="
 	>=dev-libs/glib-2.32:2
 	>=media-libs/freetype-2.4.9:2
+	>=media-libs/lcms-2.5:2
 	>=x11-libs/gtk+-2.24:2
 	>=x11-libs/libX11-1.4
 	>=x11-libs/libXext-1.3
@@ -49,7 +50,6 @@ X_COMMON_DEP="
 COMMON_DEP="
 	>=media-libs/giflib-4.1.6-r1
 	>=media-libs/libpng-1.6:0=
-	>=media-libs/lcms-2.5:2
 	>=sys-devel/gcc-4.5.4
 	>=sys-libs/glibc-2.15
 	>=sys-libs/zlib-1.2.3-r1
