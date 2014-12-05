@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16201 2014/12/04 08:30:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16202 2014/12/05 10:39:52 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (05 Dec 2014)
+# QA team didn't even talk to us and bypassed bug #519530
+# Hardmasking until this is discussed futher as we have agreed
+# in the team
+=media-sound/pulseaudio-5.0-r6
 
 # Ian Stakenvicius <axs@gentoo.org> (03 Dec 2014)
 # masked for testing
