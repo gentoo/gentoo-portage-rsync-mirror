@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.12 2014/11/01 16:13:32 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.13 2014/12/05 09:08:17 perfinion Exp $
 EAPI="5"
 
 inherit eutils
@@ -133,7 +133,7 @@ src_compile() {
 
 	for i in ${POLICY_TYPES}; do
 		cd "${S}/${i}"
-		make base || die "${i} compile failed"
+		emake base || die "${i} compile failed"
 		if use doc; then
 			make html || die
 		fi

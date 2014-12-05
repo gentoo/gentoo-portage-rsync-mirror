@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.28 2014/11/14 19:46:05 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.29 2014/12/05 09:23:03 perfinion Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -229,11 +229,16 @@ selinux-policy-2_src_compile() {
 	do
 		use ${useflag} && makeuse="${makeuse} -D use_${useflag}"
 	done
+
 	for i in ${POLICY_TYPES}; do
 		# Support USE flags in builds
 		export M4PARAM="${makeuse}"
-		# Parallel builds are broken, so we need to force -j1 here
-		emake -j1 NAME=$i -C "${S}"/${i} || die "${i} compile failed"
+		if [[ ${BASEPOL} == 2.20140311* ]]; then
+			# Parallel builds are broken in 2.20140311-r7 and earlier, bug 530178
+			emake -j1 NAME=$i -C "${S}"/${i} || die "${i} compile failed"
+		else
+			emake NAME=$i -C "${S}"/${i} || die "${i} compile failed"
+		fi
 	done
 }
 
