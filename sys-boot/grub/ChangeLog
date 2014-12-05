@@ -1,6 +1,19 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.330 2014/12/04 09:37:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.331 2014/12/05 02:35:21 floppym Exp $
+
+  05 Dec 2014; Mike Gilbert <floppym@gentoo.org> -files/2.02_beta2/0001-Makefile
+  .util.def-Link-grub-ofpathname-with-zfs-libs.patch, -files/2.02_beta2/0002-gru
+  b-install-support-for-partitioned-partx-loop-devi.patch,
+  -files/2.02_beta2/0003-Fix-grub-probe-0-option.patch, -files/2.02_beta2/0004-F
+  ix-partmap-cryptodisk-and-abstraction-handling-in-g.patch,
+  -files/2.02_beta2/0005-Fix-typo-gettext_print-instead-of-gettext_printf.patch,
+  -files/2.02_beta2/0006-change-stop-condition-to-avoid-infinite-loops.patch,
+  -files/2.02_beta2/0007-Improve-LVM-logical_volumes-string-matching.patch,
+  -files/2.02_beta2/0008-Fix-an-infinite-loop-in-grub-mkconfig.patch,
+  -files/2.02_beta2/0009-Fix-incorrect-address-reference-in-btrfs.patch,
+  -grub-2.02_beta2-r2.ebuild, -grub-2.02_beta2.ebuild:
+  Remove obsolete ebuilds.
 
 *grub-2.02_beta2-r4 (04 Dec 2014)
 
