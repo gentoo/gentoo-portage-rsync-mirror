@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.107 2014/12/05 18:33:22 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.108 2014/12/05 19:26:41 maksbotan Exp $
+
+*mpv-0.7.1 (05 Dec 2014)
+
+  05 Dec 2014; Maxim Koltsov <maksbotan@gentoo.org> +mpv-0.7.1.ebuild:
+  Bump to 0.7.1, thanks to Nikoli.
 
   05 Dec 2014; Maxim Koltsov <maksbotan@gentoo.org> mpv-9999.ebuild:
   Remove libpostproc support, bug #531598. Thanks to Nikoli.

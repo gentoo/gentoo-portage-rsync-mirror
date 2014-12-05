@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sagan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.27 2014/11/03 11:02:34 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.28 2014/12/05 19:19:55 maksbotan Exp $
+
+*sagan-1.0.0_rc3 (05 Dec 2014)
+
+  05 Dec 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/json_header_location.patch, +files/sagan.init-r1,
+  +sagan-1.0.0_rc3.ebuild, -sagan-0.2.2_p2-r2.ebuild:
+  Bump to 1.0.0_rc3, clean old, thanks to slepnoga
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   sagan-0.2.2_p2-r2.ebuild, sagan-0.2.3.ebuild:

@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sagan-rules
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan-rules/ChangeLog,v 1.17 2014/06/26 13:24:48 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan-rules/ChangeLog,v 1.18 2014/12/05 19:23:34 maksbotan Exp $
+
+*sagan-rules-20140617 (05 Dec 2014)
+
+  05 Dec 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +sagan-rules-20140617.ebuild, -sagan-rules-20120918.ebuild,
+  -sagan-rules-20140203.ebuild:
+  Add new rules snapshot, clean old, thanks to slepnoga
 
 *sagan-rules-20140203 (26 Jun 2014)
 

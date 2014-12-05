@@ -1,13 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan-rules/sagan-rules-20140203.ebuild,v 1.1 2014/06/26 13:24:48 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan-rules/sagan-rules-20140617.ebuild,v 1.1 2014/12/05 19:23:34 maksbotan Exp $
 
 EAPI=4
 
 DESCRIPTION="Rules for Sagan log analyzer"
 HOMEPAGE="http://sagan.softwink.com/"
-#SRC_URI="http://dev.gentoo.org/~maksbotan/sagan/sagan-rules-${PV}.tar.gz"
-SRC_URI="http://sagan.quadrantsec.com/rules/sagan-rules-02032014.tar.gz"
+SRC_URI="http://sagan.quadrantsec.com/rules/sagan-rules-06172014.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
