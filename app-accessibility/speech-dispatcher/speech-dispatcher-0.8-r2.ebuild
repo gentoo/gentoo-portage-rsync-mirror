@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.8-r2.ebuild,v 1.15 2014/11/23 17:23:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.8-r2.ebuild,v 1.16 2014/12/05 20:46:00 teiresias Exp $
 
 EAPI=5
 
@@ -32,7 +32,8 @@ COMMON_DEPEND="python? ( ${PYTHON_DEPS} )
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40.0
 	virtual/pkgconfig"
-	RDEPEND="${COMMON_DEPEND}"
+	RDEPEND="${COMMON_DEPEND}
+	dev-python/pyxdg"
 
 src_configure() {
 	local myeconfargs=(

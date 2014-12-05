@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.316 2014/11/24 04:51:58 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.317 2014/12/05 21:00:53 williamh Exp $
+
+  05 Dec 2014; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  Change reference from git.mk to gitver.mk to match upstream
 
 *openrc-0.13.6 (24 Nov 2014)
 

@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.113 2014/12/05 19:35:26 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.114 2014/12/05 20:46:00 teiresias Exp $
+
+  05 Dec 2014; Christopher Brannon <teiresias@gentoo.org>
+  speech-dispatcher-0.8-r2.ebuild, speech-dispatcher-0.8.1.ebuild,
+  -speech-dispatcher-0.8.1-r1.ebuild:
+  Add pyxdg to speech-dispatcher-0.8-r2 and speech-dispatcher-0.8.1.
+
+  Turns out that a revbump was not needed. 0.8.1-r1 is not needed.
 
 *speech-dispatcher-0.8.1-r1 (05 Dec 2014)
 
