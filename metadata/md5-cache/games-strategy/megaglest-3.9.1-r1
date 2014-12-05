@@ -4,11 +4,11 @@ DESCRIPTION=Cross-platform 3D realtime strategy game
 EAPI=5
 HOMEPAGE=http://www.megaglest.org/
 IUSE=debug +editor fribidi sse sse2 sse3 static +streflop +tools +unicode wxuniversal +model-viewer videos
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-3 BitstreamVera
 PDEPEND=~games-strategy/megaglest-data-3.9.1
 RDEPEND=>=dev-lang/lua-5.1 dev-libs/libxml2 media-libs/fontconfig media-libs/freetype media-libs/libsdl[X,sound,joystick,opengl,video] media-libs/libvorbis media-libs/openal net-libs/gnutls sys-libs/zlib virtual/opengl virtual/glu x11-libs/libX11 x11-libs/libXext editor? ( x11-libs/wxGTK:2.8[X,opengl] ) fribidi? ( dev-libs/fribidi ) model-viewer? ( x11-libs/wxGTK:2.8[X] ) !static? ( dev-libs/xerces-c[icu] media-libs/ftgl media-libs/glew media-libs/libpng:0 net-libs/libircclient >=net-libs/miniupnpc-1.8 net-misc/curl virtual/jpeg ) videos? ( media-video/vlc ) games-misc/games-envd
 SLOT=0
 SRC_URI=https://github.com/MegaGlest/megaglest-source/releases/download/3.9.1/megaglest-source-3.9.1.tar.xz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	games	bc8839608d26ccd57ca4f2f01c67460f	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747	virtualx	73cfc129b4b9ba23aed1abb10c825d86	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=b84c0a277629052b7ca068568f2ab71a
+_md5_=f2380d2738c62621e4a5e08191289d3b

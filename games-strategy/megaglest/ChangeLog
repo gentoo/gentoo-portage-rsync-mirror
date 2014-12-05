@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/megaglest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.23 2014/11/26 14:37:44 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.24 2014/12/05 10:16:02 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> megaglest-3.9.1-r1.ebuild:
+  Stable for x86, wrt bug #518196
 
   26 Nov 2014; Chema Alonso <nimiux@gentoo.org> megaglest-3.9.1-r1.ebuild:
   Stable for amd64 wrt bug #518196

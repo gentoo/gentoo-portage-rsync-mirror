@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/pology-0.11-r1.ebuild,v 1.3 2014/11/26 10:41:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/pology-0.11-r1.ebuild,v 1.4 2014/12/05 10:19:20 ago Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SLOT="0"
 
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 

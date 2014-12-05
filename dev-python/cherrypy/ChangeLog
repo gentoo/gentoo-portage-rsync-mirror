@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cherrypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.66 2014/12/04 09:57:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.67 2014/12/05 10:18:50 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> cherrypy-3.3.0.ebuild:
+  Stable for x86, wrt bug #530412
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> cherrypy-3.3.0.ebuild:
   Stable for amd64, wrt bug #530412

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.4d.ebuild,v 1.3 2014/12/03 09:37:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.4d.ebuild,v 1.4 2014/12/05 10:18:05 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.harding.motd.ca/autossh/"
 SRC_URI="http://www.harding.motd.ca/${PN}/${P}.tgz"
 
 LICENSE="BSD"
-KEYWORDS="amd64 ~arm ~hppa ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~hppa ppc ~ppc64 ~sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
 SLOT="0"
 
 RDEPEND="net-misc/openssh"

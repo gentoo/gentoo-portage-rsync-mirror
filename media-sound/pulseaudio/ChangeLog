@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.359 2014/12/04 19:54:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.360 2014/12/05 10:30:55 pacho Exp $
+
+  05 Dec 2014; Pacho Ramos <pacho@gentoo.org> pulseaudio-5.0-r6.ebuild:
+  Increase severity of the messages as people wanting to run pulseaudio[alsa]
+  will need alsa-plugins most time if they don't want to see the many alsa-only
+  apps to bypass pulseaudio
 
 *pulseaudio-5.0-r6 (04 Dec 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/snowball-stemmer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/snowball-stemmer/ChangeLog,v 1.5 2014/08/10 20:39:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/snowball-stemmer/ChangeLog,v 1.6 2014/12/05 10:17:14 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  snowball-stemmer-0.20140325.ebuild:
+  Stable for x86, wrt bug #516302
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   snowball-stemmer-0.20091122.ebuild, snowball-stemmer-0.20140325.ebuild:

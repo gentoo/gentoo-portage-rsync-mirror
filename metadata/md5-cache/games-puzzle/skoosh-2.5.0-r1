@@ -4,10 +4,10 @@ DESCRIPTION=Sliding tile puzzle for Gnome 2
 EAPI=5
 HOMEPAGE=http://homepages.ihug.co.nz/~trmusson/programs.html
 IUSE=nls debug
-KEYWORDS=amd64 ppc ~x86
+KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
 RDEPEND=>=gnome-base/gconf-2:2 gnome-base/libgnome-keyring >=gnome-base/libgnomeui-2 nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=http://homepages.ihug.co.nz/~trmusson/stuff/skoosh-2.5.0.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	45916e43d354f01469675d59c24f3a07	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=10fd43406c83c75ef34a0950e687ac4f
+_md5_=3585e21c242ddda66a2109de86a6f5d1

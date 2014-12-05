@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.11-r3.ebuild,v 1.3 2014/12/03 09:36:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.11-r3.ebuild,v 1.4 2014/12/05 10:18:10 ago Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ SRC_URI="http://download.gnome.org/sources/muine/0.8/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="flac mad vorbis"
 
 RDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmbim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmbim/ChangeLog,v 1.10 2014/12/02 20:41:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmbim/ChangeLog,v 1.11 2014/12/05 10:15:51 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libmbim-1.10.0.ebuild:
+  Stable for x86, wrt bug #529968
 
   02 Dec 2014; Markus Meier <maekke@gentoo.org> libmbim-1.10.0.ebuild:
   arm stable, bug #529968

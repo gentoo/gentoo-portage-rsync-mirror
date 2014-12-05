@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/glightoff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/glightoff/ChangeLog,v 1.7 2014/11/26 10:41:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/glightoff/ChangeLog,v 1.8 2014/12/05 10:17:37 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> glightoff-1.0.0-r1.ebuild:
+  Stable for x86, wrt bug #530136
 
   26 Nov 2014; Agostino Sarubbo <ago@gentoo.org> glightoff-1.0.0-r1.ebuild:
   Stable for amd64, wrt bug #530136

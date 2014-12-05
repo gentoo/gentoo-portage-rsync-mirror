@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.50 2014/12/04 09:59:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.51 2014/12/05 10:15:42 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> paver-1.2.3.ebuild:
+  Stable for x86, wrt bug #530546
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> paver-1.2.3.ebuild:
   Stable for amd64, wrt bug #530546

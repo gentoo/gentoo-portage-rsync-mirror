@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.82 2014/11/03 11:10:26 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.83 2014/12/05 10:17:11 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> sphinx-2.1.8.ebuild:
+  Stable for x86, wrt bug #516302
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> sphinx-0.9.9.ebuild,
   sphinx-2.0.10.ebuild, sphinx-2.1.8.ebuild, sphinx-2.1.9.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/autossh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.39 2014/12/03 09:37:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.40 2014/12/05 10:18:05 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> autossh-1.4d.ebuild:
+  Stable for x86, wrt bug #530396
 
   03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> autossh-1.4d.ebuild:
   Stable for ppc, wrt bug #530396

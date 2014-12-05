@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmbim/libmbim-1.10.0.ebuild,v 1.3 2014/12/02 20:41:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmbim/libmbim-1.10.0.ebuild,v 1.4 2014/12/05 10:15:51 ago Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3 autotools
 	EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}"
 else
-	KEYWORDS="~alpha amd64 arm ~mips ~x86"
+	KEYWORDS="~alpha amd64 arm ~mips x86"
 	SRC_URI="http://www.freedesktop.org/software/${PN}/${P}.tar.xz"
 fi
 

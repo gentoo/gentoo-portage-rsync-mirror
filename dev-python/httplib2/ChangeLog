@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/httplib2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.46 2014/12/04 09:58:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.47 2014/12/05 10:15:47 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> httplib2-0.8.ebuild:
+  Stable for x86, wrt bug #531502
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> httplib2-0.8.ebuild:
   Stable for amd64, wrt bug #531502

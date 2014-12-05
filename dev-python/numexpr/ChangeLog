@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numexpr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.25 2014/12/04 09:59:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.26 2014/12/05 10:14:24 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> numexpr-2.4.ebuild:
+  Stable for x86, wrt bug #530540
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> numexpr-2.4.ebuild:
   Stable for amd64, wrt bug #530540

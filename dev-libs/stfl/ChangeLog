@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/stfl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.45 2014/12/03 09:34:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.46 2014/12/05 10:15:12 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> stfl-0.23.ebuild:
+  Stable for x86, wrt bug #529262
 
   03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> stfl-0.23.ebuild:
   Stable for ppc, wrt bug #529262

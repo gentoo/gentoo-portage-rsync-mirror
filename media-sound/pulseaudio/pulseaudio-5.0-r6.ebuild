@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r6.ebuild,v 1.1 2014/12/04 19:54:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r6.ebuild,v 1.2 2014/12/05 10:30:55 pacho Exp $
 
 EAPI="5"
 inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -352,8 +352,8 @@ pkg_postinst() {
 	fi
 
 	if use alsa && ! has_version 'media-plugins/alsa-plugins[pulseaudio]'; then
-		elog
-		elog "You may want to install media-plugins/alsa-plugins[pulseaudio]"
-		elog "if you want ALSA-only apps to automatically use PulseAudio."
+		ewarn
+		ewarn "You will need to install media-plugins/alsa-plugins[pulseaudio]"
+		ewarn "if you want ALSA-only apps to automatically use PulseAudio."
 	fi
 }

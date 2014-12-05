@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.45 2014/12/04 09:58:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.46 2014/12/05 10:18:20 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> unittest2-0.5.1-r2.ebuild:
+  Stable for x86, wrt bug #530612
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> unittest2-0.5.1-r2.ebuild:
   Stable for amd64, wrt bug #530612

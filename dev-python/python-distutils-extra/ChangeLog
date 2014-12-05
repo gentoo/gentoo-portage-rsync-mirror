@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-distutils-extra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.32 2014/12/04 09:58:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.33 2014/12/05 10:14:53 ago Exp $
+
+  05 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  python-distutils-extra-2.38.ebuild:
+  Stable for x86, wrt bug #530582
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
   python-distutils-extra-2.38.ebuild:
