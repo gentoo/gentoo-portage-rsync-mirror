@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.369 2014/12/04 08:53:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.370 2014/12/05 23:06:43 axs Exp $
+
+  05 Dec 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  firefox-34.0.5-r1.ebuild:
+  shorten objdir to support longer PORTAGE_TMPDIRs, bug 531696
 
 *firefox-34.0.5-r1 (04 Dec 2014)
 

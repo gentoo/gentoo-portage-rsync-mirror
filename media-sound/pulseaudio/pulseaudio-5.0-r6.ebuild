@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r6.ebuild,v 1.3 2014/12/05 15:26:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r6.ebuild,v 1.4 2014/12/05 23:31:04 ulm Exp $
 
 EAPI="5"
 inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -89,7 +89,9 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.18.1
 "
 # This is a PDEPEND to avoid a circular dep
-PDEPEND="alsa-plugin? ( >=media-plugins/alsa-plugins-1.0.27-r1[pulseaudio] )"
+PDEPEND="alsa? ( alsa-plugin? (
+	>=media-plugins/alsa-plugins-1.0.27-r1[pulseaudio]
+) )"
 
 # alsa-utils dep is for the alsasound init.d script (see bug #155707)
 # bluez dep is for the bluetooth init.d script
