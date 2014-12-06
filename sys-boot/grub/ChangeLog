@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.332 2014/12/05 08:06:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.334 2014/12/06 03:25:14 floppym Exp $
+
+  06 Dec 2014; Mike Gilbert <floppym@gentoo.org>
+  files/grub-2.02_beta2-bash-completions.patch:
+  Replace grub-completion patch with the version I sent upstream.
+
+  06 Dec 2014; Mike Gilbert <floppym@gentoo.org> grub-2.02_beta2-r5.ebuild:
+  Fix bash completion symlinks.
 
 *grub-2.02_beta2-r5 (05 Dec 2014)
 

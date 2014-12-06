@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r5.ebuild,v 1.1 2014/12/05 08:06:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r5.ebuild,v 1.2 2014/12/06 03:09:58 floppym Exp $
 
 EAPI=5
 
@@ -279,28 +279,18 @@ src_install() {
 	multibuild_foreach_variant autotools-utils_src_install \
 		bashcompletiondir="$(get_bashcompdir)"
 
-	mv "${ED}"/$(get_bashcompdir)/grub{,2-install} || die
+	local grub=grub
+	if use multislot; then
+		grub=grub2
+		mv "${ED%/}"/usr/share/info/grub{,2}.info || die
+		mv "${ED%/}"/$(get_bashcompdir)/grub{,2} || die
+	fi
 
-	bashcomp_alias grub-install \
-		grub2-set-default \
-		grub2-mkrescue \
-		grub2-reboot \
-		grub2-script-check \
-		grub2-editenv \
-		grub2-sparc64-setup \
-		grub2-mkfont \
-		grub2-mkpasswd-pbkdf2 \
-		grub2-mkimage \
-		grub2-bios-setup \
-		grub2-mkconfig \
-		grub2-probe
+	bashcomp_alias ${grub} ${grub}-{install,set-default,mkrescue,reboot,script-check,editenv,sparc64-setup,mkfont,mkpasswd-pbkdf2,mkimage,bios-setup,mkconfig,probe}
 
 	use doc && multibuild_for_best_variant run_in_build_dir \
 		emake -C docs DESTDIR="${D}" install-html
 
-	if use multislot; then
-		mv "${ED%/}"/usr/share/info/grub{,2}.info || die
-	fi
 
 	insinto /etc/default
 	newins "${FILESDIR}"/grub.default-3 grub
