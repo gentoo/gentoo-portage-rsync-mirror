@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.597 2014/12/05 20:14:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.598 2014/12/06 10:03:28 jer Exp $
+
+  06 Dec 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-304.125.ebuild:
+  Disable parallel make when building the kernel module.
 
 *nvidia-drivers-331.113 (05 Dec 2014)
 *nvidia-drivers-304.125 (05 Dec 2014)
