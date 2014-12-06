@@ -3,7 +3,7 @@ DEPEND=~app-leechcraft/lc-core-0.6.70 dev-libs/qjson dev-qt/qtwebkit:4 autoidler
 DESCRIPTION=Azoth, the modular IM client for LeechCraft
 EAPI=5
 HOMEPAGE=http://leechcraft.org/
-IUSE=debug doc astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier +chathistory +crypt +depester +embedmedia +herbicide +hili +isterique +juick +keeso +lastseen +metacontacts media +msn +murm +latex +nativeemoticons +otroid +spell shx +standardstyles +vader +woodpecker +xmpp +xtazy
+IUSE=debug doc astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier +chathistory +crypt +depester +embedmedia +herbicide +hili +isterique +juick +keeso +lastseen +metacontacts media +msn +murm +latex +nativeemoticons +otroid +spell shx +standardstyles +vader velvetbird +woodpecker +xmpp +xtazy
 KEYWORDS=~amd64 ~x86
 LICENSE=Boost-1.0
 RDEPEND=~app-leechcraft/lc-core-0.6.70 dev-libs/qjson dev-qt/qtwebkit:4 autoidler? ( x11-libs/libXScrnSaver ) astrality? ( net-libs/telepathy-qt ) otroid? ( net-libs/libotr ) media? ( dev-qt/qt-mobility[multimedia] ) msn? ( net-libs/libmsn ) woodpecker? ( dev-libs/kqoauth ) xmpp? ( >=net-libs/qxmpp-0.8.0 media? ( >=net-libs/qxmpp-0.8.0[speex] ) ) xtazy? ( ~app-leechcraft/lc-xtazy-0.6.70 dev-qt/qtdbus:4 ) crypt? ( app-crypt/qca app-crypt/qca-gnupg ) astrality? ( net-im/telepathy-mission-control net-voip/telepathy-haze ) latex? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) virtual/latex-base ) spell? ( app-leechcraft/lc-rosenthal )
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( standardstyles adiumstyles )
 SLOT=0
 SRC_URI=http://dist.leechcraft.org/LeechCraft/0.6.70/leechcraft-0.6.70.tar.xz
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	leechcraft	6609acc541f2bc8ba65e461352fdf169	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=9b452261ec7a467d149ef7c0e4edd97d
+_md5_=9c59abb70cb0b2715c9f073e8d053711

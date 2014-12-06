@@ -28,6 +28,7 @@
 	<flag name="shx">Build shell command executor plugin</flag>
 	<flag name="standardstyles">Build support for standard Azoth styles engine</flag>
 	<flag name="vader">Bulid Vader, the MRIM (Mail.Ru Agent) protocol support plugin</flag>
+	<flag name="velvetbird">Build support for protocols provided by libpurple</flag>
 	<flag name="woodpecker">Build Woodpecker, the Twitter client plugin</flag>
 	<flag name="xtazy">Build Xtazy for publishing currently playing tune</flag>
 </use>

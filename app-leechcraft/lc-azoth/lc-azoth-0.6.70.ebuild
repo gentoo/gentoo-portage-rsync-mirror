@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-0.6.70.ebuild,v 1.1 2014/08/03 18:45:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-0.6.70.ebuild,v 1.2 2014/12/06 18:16:22 maksbotan Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ KEYWORDS=" ~amd64 ~x86"
 IUSE="debug doc astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier
 		+chathistory +crypt +depester +embedmedia +herbicide +hili +isterique
 		+juick +keeso +lastseen	+metacontacts media +msn +murm +latex +nativeemoticons
-		+otroid +spell shx +standardstyles +vader +woodpecker +xmpp +xtazy"
+		+otroid +spell shx +standardstyles +vader velvetbird +woodpecker +xmpp +xtazy"
 
 COMMON_DEPEND="~app-leechcraft/lc-core-${PV}
 		dev-libs/qjson
@@ -83,6 +83,7 @@ src_configure() {
 		$(cmake-utils_use_enable shx AZOTH_SHX)
 		$(cmake-utils_use_enable standardstyles AZOTH_STANDARDSTYLES)
 		$(cmake-utils_use_enable vader AZOTH_VADER)
+		$(cmake-utils_use_enable velvetbird AZOTH_VELVETBIRD)
 		$(cmake-utils_use_enable woodpecker AZOTH_WOODPECKER)
 		$(cmake-utils_use_enable xmpp AZOTH_XOOX)
 		$(cmake-utils_use_enable xtazy AZOTH_XTAZY)
