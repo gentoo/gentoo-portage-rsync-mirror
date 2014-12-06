@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.113 2014/12/03 11:17:39 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.114 2014/12/06 08:44:15 jer Exp $
+
+  06 Dec 2014; Jeroen Roovers <jer@gentoo.org> nettle-2.7.1-r1.ebuild:
+  Stable for HPPA (bug #525160).
 
 *nettle-2.7.1-r2 (03 Dec 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.76 2014/10/12 16:32:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.77 2014/12/06 08:45:27 jer Exp $
+
+  06 Dec 2014; Jeroen Roovers <jer@gentoo.org> p11-kit-0.20.7.ebuild:
+  Stable for HPPA (bug #525260).
 
 *p11-kit-0.22.1 (12 Oct 2014)
 
