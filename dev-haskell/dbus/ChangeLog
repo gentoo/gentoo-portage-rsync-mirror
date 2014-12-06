@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/dbus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus/ChangeLog,v 1.23 2014/07/25 09:16:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus/ChangeLog,v 1.24 2014/12/06 16:58:10 ago Exp $
+
+  06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> dbus-0.10.5-r1.ebuild:
+  Stable for ia64, wrt bug #502672
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> dbus-0.10.4.ebuild,
   dbus-0.10.5-r1.ebuild, dbus-0.10.6.ebuild, dbus-0.10.8.ebuild:

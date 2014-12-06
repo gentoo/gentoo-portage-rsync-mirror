@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gam-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.33 2014/12/04 08:33:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.34 2014/12/06 16:39:30 ago Exp $
+
+  06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gam-server-0.1.10-r2.ebuild:
+  Stable for ia64, wrt bug #529392
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gam-server-0.1.10-r2.ebuild:
   Stable for ppc64, wrt bug #529392

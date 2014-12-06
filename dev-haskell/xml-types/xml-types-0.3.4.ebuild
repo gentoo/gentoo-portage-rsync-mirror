@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml-types/xml-types-0.3.4.ebuild,v 1.7 2014/07/18 12:31:24 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml-types/xml-types-0.3.4.ebuild,v 1.8 2014/12/06 16:58:16 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/deepseq-1.1.0.0:=[profile?]

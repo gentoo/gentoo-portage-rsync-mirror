@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mpir
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/ChangeLog,v 1.26 2014/12/04 08:51:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/ChangeLog,v 1.27 2014/12/06 16:54:01 ago Exp $
+
+  06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mpir-2.6.0-r2.ebuild:
+  Stable for ia64, wrt bug #526460
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mpir-2.6.0-r2.ebuild:
   Stable for ppc64, wrt bug #526460

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgamin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.61 2014/12/04 08:33:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.62 2014/12/06 16:40:07 ago Exp $
+
+  06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libgamin-0.1.10-r5.ebuild:
+  Stable for ia64, wrt bug #529418
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libgamin-0.1.10-r5.ebuild:
   Stable for ppc64, wrt bug #529418

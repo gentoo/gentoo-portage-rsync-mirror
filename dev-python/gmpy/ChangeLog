@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.49 2014/12/04 08:51:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.50 2014/12/06 16:53:58 ago Exp $
+
+  06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gmpy-2.0.3.ebuild:
+  Stable for ia64, wrt bug #526460
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gmpy-2.0.3.ebuild:
   Stable for ppc64, wrt bug #526460

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.312 2014/12/04 08:27:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.313 2014/12/06 16:50:39 ago Exp $
+
+  06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> openvpn-2.3.6.ebuild:
+  Stable for ia64, wrt bug #531308
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> openvpn-2.3.6.ebuild:
   Stable for ppc64, wrt bug #531308
