@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-2.1.3.ebuild,v 1.11 2014/11/02 10:13:22 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-2.1.3.ebuild,v 1.12 2014/12/06 20:19:20 zlogene Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils linux-info systemd udev
@@ -62,6 +62,8 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.1.0-W_define.patch
 	use systemd || { sed -i -e 's:libsystemd-login:&disable:' configure || die; }
+
+	epatch_user
 }
 
 src_configure() {

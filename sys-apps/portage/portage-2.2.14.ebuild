@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.14.ebuild,v 1.2 2014/12/04 10:13:11 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.14.ebuild,v 1.3 2014/12/06 20:13:44 dolsen Exp $
 
 EAPI=5
 
@@ -189,7 +189,7 @@ python_install_all() {
 	dodir /usr/sbin
 	for target in ${sbin_relocations}; do
 		einfo "Moving /usr/bin/${target} to /usr/sbin/${target}"
-		mv "${ED}usr/bin/${target}" "${ED}usr/sbin/${target}"
+		mv "${ED}usr/bin/${target}" "${ED}usr/sbin/${target}" || die "sbin scripts move failed!"
 	done
 }
 
