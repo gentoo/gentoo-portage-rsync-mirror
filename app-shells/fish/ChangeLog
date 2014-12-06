@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.72 2014/12/03 09:57:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.73 2014/12/06 09:32:54 polynomial-c Exp $
+
+  06 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -fish-2.1.0-r2.ebuild,
+  -fish-2.1.0-r3.ebuild:
+  Removed vulnerable versions.
 
   03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> fish-2.1.1.ebuild:
   Stable for ppc, wrt bug #509044

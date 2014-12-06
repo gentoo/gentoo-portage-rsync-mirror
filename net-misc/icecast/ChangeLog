@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/icecast
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.108 2014/12/03 09:56:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.109 2014/12/06 09:37:13 polynomial-c Exp $
+
+  06 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -icecast-2.3.3-r2.ebuild,
+  -icecast-2.3.3-r3.ebuild, -icecast-2.4.0.ebuild, -files/init.d.icecast,
+  metadata.xml:
+  Removed vulnerable versions. Took over maintenance.
 
   03 Dec 2014; Agostino Sarubbo <ago@gentoo.org> icecast-2.4.1.ebuild:
   Stable for ppc, wrt bug #529956

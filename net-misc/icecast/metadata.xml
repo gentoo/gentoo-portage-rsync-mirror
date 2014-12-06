@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>hwoarang@gentoo.org</email>
-	<name>Markos Chandras</name>
+    <email>polynomial-c@gentoo.org</email>
+	<name>Lars Wendler</name>
   </maintainer>
   <use>
     <flag name="kate">Add karaoke and text encapsulation support for Ogg files</flag>
