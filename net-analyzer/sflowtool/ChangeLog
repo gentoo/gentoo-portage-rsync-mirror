@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sflowtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.49 2014/12/04 10:01:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.50 2014/12/06 17:20:20 jer Exp $
+
+*sflowtool-3.34 (06 Dec 2014)
+
+  06 Dec 2014; Jeroen Roovers <jer@gentoo.org> +sflowtool-3.34.ebuild:
+  Version bump.
 
 *sflowtool-3.33 (04 Dec 2014)
 

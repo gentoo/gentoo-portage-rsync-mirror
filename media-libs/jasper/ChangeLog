@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/jasper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.95 2014/12/05 15:24:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.97 2014/12/06 17:02:37 ago Exp $
+
+  06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> jasper-1.900.1-r7.ebuild:
+  Stable for x86, wrt bug #531688
+
+  06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> jasper-1.900.1-r7.ebuild:
+  Stable for amd64, wrt bug #531688
 
   05 Dec 2014; Jeroen Roovers <jer@gentoo.org> jasper-1.900.1-r7.ebuild:
   Stable for HPPA (bug #531688).
