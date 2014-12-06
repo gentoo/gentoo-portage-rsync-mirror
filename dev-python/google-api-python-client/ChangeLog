@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/google-api-python-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/google-api-python-client/ChangeLog,v 1.5 2014/03/31 21:01:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/google-api-python-client/ChangeLog,v 1.6 2014/12/06 15:25:18 jlec Exp $
+
+*google-api-python-client-1.3.1 (06 Dec 2014)
+
+  06 Dec 2014; Justin Lecher <jlec@gentoo.org>
+  google-api-python-client-1.1.ebuild, +google-api-python-client-1.3.1.ebuild,
+  metadata.xml:
+  Version Bump
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org>
   google-api-python-client-1.1.ebuild:
