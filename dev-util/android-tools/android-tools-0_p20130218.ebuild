@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-tools/android-tools-0_p20130218.ebuild,v 1.1 2014/09/30 21:39:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-tools/android-tools-0_p20130218.ebuild,v 1.2 2014/12/06 05:16:25 radhermit Exp $
 
 EAPI=5
-inherit eutils
+inherit eutils toolchain-funcs
 
 KEYWORDS="~amd64 ~x86 ~arm-linux ~x86-linux"
 DESCRIPTION="Android platform tools (adb and fastboot)"
@@ -40,6 +40,8 @@ src_prepare() {
 		-i extras/ext4_utils/make_ext4fs.h || die
 	sed -e '62,63d;180,189d;231,234d;272,274d;564,579d' \
 		-i extras/ext4_utils/make_ext4fs.c || die
+
+	tc-export CC
 }
 
 src_compile() {

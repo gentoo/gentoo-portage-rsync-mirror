@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/android-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-tools/ChangeLog,v 1.3 2014/09/30 21:42:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-tools/ChangeLog,v 1.4 2014/12/06 05:16:25 radhermit Exp $
+
+  06 Dec 2014; Tim Harder <radhermit@gentoo.org>
+  android-tools-0_p20130218.ebuild:
+  Respect CC.
 
   30 Sep 2014; Zac Medico <zmedico@gentoo.org>
   -android-tools-0_p20130123.ebuild:
