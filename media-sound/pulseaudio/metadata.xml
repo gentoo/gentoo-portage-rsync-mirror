@@ -11,7 +11,7 @@
       this flag.
     </flag>
     <flag name="alsa-plugin">
-      Request installing <pkg>media-sound/alsa-plugins</pkg> with
+      Request installing <pkg>media-plugins/alsa-plugins</pkg> with
       PulseAudio plugin enabled. This ensures that clients supporting
       ALSA only will use PulseAudio.
     </flag>
@@ -39,7 +39,7 @@
     </flag>
     <flag name="asyncns">Use libasyncns for asynchronous name resolution.</flag>
     <flag name="doc">Build the doxygen-described API documentation.</flag>
-	<flag name="realtime" restrict="&gt;=media-sound/pulseaudio-0.9.21.2-r1">
+    <flag name="realtime" restrict="&gt;=media-sound/pulseaudio-0.9.21.2-r1">
       Makes PulseAudio use RealtimeKit (<pkg>sys-auth/rtkit</pkg>) to get
       real-time priority while running.
     </flag>
