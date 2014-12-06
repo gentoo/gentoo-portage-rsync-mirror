@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.145 2014/12/04 08:48:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.146 2014/12/06 12:43:39 jlec Exp $
+
+  06 Dec 2014; Justin Lecher <jlec@gentoo.org> simplejson-3.6.5.ebuild,
+  metadata.xml:
+  Add pypy3 support
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> simplejson-3.6.4.ebuild:
   Stable for ppc64, wrt bug #525508

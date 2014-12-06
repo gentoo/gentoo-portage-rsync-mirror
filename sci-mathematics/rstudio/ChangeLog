@@ -1,6 +1,28 @@
 # ChangeLog for sci-mathematics/rstudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.17 2014/11/29 11:31:36 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.18 2014/12/06 12:32:01 gienah Exp $
+
+*rstudio-0.98.1091 (06 Dec 2014)
+
+  06 Dec 2014; Mark Wright <gienah@gentoo.org> +files/rsession.conf,
+  +files/rstudio-0.98.1091-pandoc.patch, +files/rstudio-server.conf,
+  +files/rstudio-server.initd, +rstudio-0.98.1091.ebuild,
+  -files/rstudio-rserver.initd, -rstudio-0.97.318.ebuild,
+  rstudio-0.97.336.ebuild, rstudio-0.97.551.ebuild, rstudio-0.98.1028.ebuild,
+  rstudio-0.98.490-r1.ebuild, rstudio-0.98.490.ebuild, rstudio-0.98.932.ebuild,
+  rstudio-0.98.953.ebuild:
+  Bump rstudio to 0.98.1091. Fix Bug 519290 sci-mathematics/rstudio-0.98.490 -
+  rstudio-server start: /usr/bin/rstudio-server: 1: eval: /etc/init.d/rstudio-
+  server: not found, thanks to Franz Fellner for reporting, Adam Tygart and
+  Franz Fellner for suggesting the fix, Silvio for testing. Fix Bug 522196 -
+  sci-mathematics/rstudio lack of server part and two more conf files, thanks to
+  Silvio for reporting and providing the conf files. Fix Bug 523296 - sci-
+  mathematics/rstudio-0.98-1028 with dev-libs/boost-1.56.0 -
+  .../work/rstudio-0.98.1028/src/cpp/core/Assert.cpp:40:10: error:
+  boost::core::log has not been declared. paxmark m rstudio for Gentoo Hardened.
+  Add missing dependencies app-text/pandoc and dev-haskell/pandoc-citeproc to
+  rstudio-0.98.1028.ebuild. Remove obsolete rstudio-0.97.318.ebuild, as the this
+  failed to build in my tests.
 
   29 Nov 2014; Mark Wright <gienah@gentoo.org> metadata.xml:
   Set the maintainer.

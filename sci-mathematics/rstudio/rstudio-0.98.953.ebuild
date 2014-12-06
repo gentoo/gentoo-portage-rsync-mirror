@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/rstudio-0.98.953.ebuild,v 1.1 2014/07/04 14:08:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/rstudio-0.98.953.ebuild,v 1.2 2014/12/06 12:32:01 gienah Exp $
 
 EAPI=5
 
-inherit eutils user cmake-utils gnome2-utils pam versionator fdo-mime java-pkg-2
+inherit eutils user cmake-utils gnome2-utils pam versionator fdo-mime java-pkg-2 pax-utils
 
 # TODO
 # * package gin and gwt
@@ -116,6 +116,11 @@ src_prepare() {
 	sed -i \
 		-e "s:/usr:${EPREFIX}/usr:g" \
 		CMakeGlobals.txt src/cpp/desktop/CMakeLists.txt || die
+
+	# specify that namespace core the is in the global namespace and not
+	# relative to some other namespace (like its ::core not ::boost::core)
+	find . \( -name *.cpp -or -name *.hpp \) -exec sed \
+		-e 's@<core::@< ::core::@g' -e 's@\([^:]\)core::@\1::core::@g' -i {} \;
 }
 
 src_configure() {
@@ -138,9 +143,10 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
+	pax-mark m "${ED}usr/bin/rstudio"
 	if use dedicated || use server; then
 		dopamd src/cpp/server/extras/pam/rstudio
-		newinitd "${FILESDIR}"/rstudio-rserver.initd rstudio-rserver
+		newinitd "${FILESDIR}"/rstudio-server.initd rstudio-server
 	fi
 }
 
