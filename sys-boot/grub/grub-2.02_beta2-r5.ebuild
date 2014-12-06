@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r5.ebuild,v 1.2 2014/12/06 03:09:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r5.ebuild,v 1.3 2014/12/06 06:02:52 patrick Exp $
 
 EAPI=5
 
@@ -290,7 +290,6 @@ src_install() {
 
 	use doc && multibuild_for_best_variant run_in_build_dir \
 		emake -C docs DESTDIR="${D}" install-html
-
 
 	insinto /etc/default
 	newins "${FILESDIR}"/grub.default-3 grub
