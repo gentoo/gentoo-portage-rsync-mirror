@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/moe-1.6.ebuild,v 1.3 2014/11/02 22:08:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/moe-1.6.ebuild,v 1.4 2014/12/06 08:21:12 jer Exp $
 
 EAPI=5
 
@@ -14,13 +14,17 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 arm x86 ~amd64-linux ~x86-linux"
 
-DEPEND="$(unpacker_src_uri_depends)
-	sys-libs/ncurses"
-
-RDEPEND="${DEPEND}"
+RDEPEND="
+	sys-libs/ncurses
+"
+DEPEND="
+	$(unpacker_src_uri_depends)
+	${RDEPEND}
+	virtual/pkgconfig
+"
 
 src_prepare() {
-	tc-export CXX
+	tc-export CXX PKG_CONFIG
 	sed -i \
 		-e "/^CXXFLAGS=/d" \
 		-e "/^LDFLAGS=/d" \
