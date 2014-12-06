@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9591 2014/12/05 15:27:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9592 2014/12/06 21:31:33 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> license_groups:
+  Add Time-Format license to MISC-FREE
 
   05 Dec 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Unmask PulseAudio after reaching a compromise.

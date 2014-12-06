@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=virtual/perl-Data-Dumper dev-perl/HTTP-Message dev-perl/libwww-perl virtual/perl-Locale-Maketext virtual/perl-Storable dev-perl/Test-MockObject >=dev-perl/Time-Format-1.0.0 virtual/perl-Time-Local dev-perl/URI dev-perl/XML-Simple virtual/perl-ExtUtils-MakeMaker dev-lang/perl:=[-build(-)]
+DESCRIPTION=fetching weather information from weather.com
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Weather-Com/
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=virtual/perl-Data-Dumper dev-perl/HTTP-Message dev-perl/libwww-perl virtual/perl-Locale-Maketext virtual/perl-Storable dev-perl/Test-MockObject >=dev-perl/Time-Format-1.0.0 virtual/perl-Time-Local dev-perl/URI dev-perl/XML-Simple dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/B/BO/BOBERNST/Weather-Com-2.0.0.tar.gz
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	28ca2b834dd6b64c9179af421c4d763e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=52ed24e701a18baa2d6fb32cb6b3350d
