@@ -1,12 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-4.2.ebuild,v 1.1 2014/12/01 00:26:34 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-4.2.ebuild,v 1.2 2014/12/06 21:05:59 tamiko Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_{3,4}} )
-
-inherit eutils cmake-utils fdo-mime python-r1
+inherit eutils cmake-utils fdo-mime
 
 MY_PN=FreeMat
 MY_P=${MY_PN}-${PV}
@@ -34,6 +32,7 @@ RDEPEND="dev-libs/libpcre
 	dev-qt/qtgui:4
 	dev-qt/qtopengl:4
 	dev-qt/qtsvg:4
+	dev-qt/qtwebkit:4
 	volpack? ( media-libs/volpack )
 	vtk? ( sci-libs/vtk )"
 
@@ -46,8 +45,8 @@ S="${WORKDIR}/${MY_P}-Source"
 src_prepare(){
 	epatch \
 		"${FILESDIR}"/${PN}-4.1-fixes.patch \
-		"${FILESDIR}"/${PN}-4.1-use_llvm.patch \
-		"${FILESDIR}"/${PN}-4.1-python3.patch
+		"${FILESDIR}"/${PN}-4.1-python3.patch \
+		"${FILESDIR}"/${P}-use_llvm.patch
 	rm -f CMakeCache.txt
 	find . -type f -name '*.moc.cpp' -exec rm -f {} \;
 	find . -type f -name 'add.so' -exec rm -f {} \;

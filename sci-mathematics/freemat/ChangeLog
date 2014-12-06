@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.30 2014/12/01 00:26:34 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.31 2014/12/06 21:05:59 tamiko Exp $
+
+  06 Dec 2014; Matthias Maier <tamiko@gentoo.org>
+  +files/freemat-4.2-use_llvm.patch, freemat-4.2.ebuild:
+  drop python-r1 eclass; fix dependencies; fix llvm configuration wrt bug
+  #531316
 
 *freemat-4.2 (01 Dec 2014)
 

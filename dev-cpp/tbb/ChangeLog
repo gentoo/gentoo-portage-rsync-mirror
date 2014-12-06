@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.48 2014/10/30 14:39:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.49 2014/12/06 21:15:22 tamiko Exp $
+
+*tbb-4.3.20141023 (06 Dec 2014)
+
+  06 Dec 2014; Matthias Maier <tamiko@gentoo.org> +tbb-4.3.20141023.ebuild:
+  version bump
 
   30 Oct 2014; Alexis Ballier <aballier@gentoo.org> tbb-4.2.20140122.ebuild:
   keyword ~arm
