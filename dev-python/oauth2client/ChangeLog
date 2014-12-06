@@ -1,0 +1,13 @@
+# ChangeLog for dev-python/oauth2client
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2client/ChangeLog,v 1.2 2014/12/06 12:14:04 jlec Exp $
+
+  06 Dec 2014; Justin Lecher <jlec@gentoo.org> oauth2client-1.4.2.ebuild:
+  Add blocker due to filecollision
+
+*oauth2client-1.4.2 (06 Dec 2014)
+
+  06 Dec 2014; Justin Lecher <jlec@gentoo.org> +oauth2client-1.4.2.ebuild,
+  +metadata.xml:
+  New addition, written by me
+
