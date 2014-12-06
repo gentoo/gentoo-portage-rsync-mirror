@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyasn1
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.76 2014/09/03 17:13:21 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.77 2014/12/06 10:55:56 jlec Exp $
+
+  06 Dec 2014; Justin Lecher <jlec@gentoo.org> pyasn1-0.1.7.ebuild,
+  metadata.xml:
+  Add pypy3 support
 
   03 Sep 2014; Christoph Junghans <ottxor@gentoo.org> pyasn1-0.1.7.ebuild:
   added ~x64-macos (tested by me)
