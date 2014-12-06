@@ -9,4 +9,4 @@ RDEPEND=app-text/silvercity dev-python/PyQt4[X] || ( =dev-lang/python-2.7* =dev-
 SLOT=0
 SRC_URI=mirror://sourceforge/leo/Leo-4.11-final.zip
 _eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=ce864a2e5af54489c012a5b16b08bb26
+_md5_=8ddc44ce4c4d9c2cec72dc7ebbef0d19

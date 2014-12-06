@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/leo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.30 2014/03/24 15:05:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.31 2014/12/06 11:10:19 idella4 Exp $
+
+*leo-5.0 (06 Dec 2014)
+
+  06 Dec 2014; Ian Delaney <idella4@gentoo.org> +leo-5.0.ebuild,
+  -leo-4.10.ebuild, -leo-4.8.ebuild, leo-4.11.ebuild:
+  bump; not py3 ready, converted to new eclass, rm old
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> leo-4.11.ebuild:
   Stable for ppc, wrt bug #495332
