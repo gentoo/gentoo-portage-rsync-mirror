@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/jekyll-watch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-watch/ChangeLog,v 1.5 2014/11/21 11:01:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll-watch/ChangeLog,v 1.6 2014/12/06 15:56:52 mrueg Exp $
+
+*jekyll-watch-1.2.0 (06 Dec 2014)
+
+  06 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +jekyll-watch-1.2.0.ebuild,
+  -jekyll-watch-1.1.2.ebuild:
+  Version bump. Cleanup old.
 
   21 Nov 2014; Manuel Rüger <mrueg@gentoo.org> jekyll-watch-1.1.2.ebuild:
   Add ruby21 target. Fixes bug #524842

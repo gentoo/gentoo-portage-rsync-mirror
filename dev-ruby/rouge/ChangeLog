@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rouge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rouge/ChangeLog,v 1.5 2014/11/24 10:20:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rouge/ChangeLog,v 1.6 2014/12/06 15:58:02 mrueg Exp $
+
+  06 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -rouge-1.6.2.ebuild:
+  Cleanup old.
 
 *rouge-1.7.4 (24 Nov 2014)
 
