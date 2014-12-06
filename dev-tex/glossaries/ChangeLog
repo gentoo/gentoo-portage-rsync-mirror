@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.72 2014/11/29 01:55:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.73 2014/12/06 02:37:27 radhermit Exp $
+
+*glossaries-4.12-r1 (06 Dec 2014)
+
+  06 Dec 2014; Tim Harder <radhermit@gentoo.org> -glossaries-4.12.ebuild,
+  +glossaries-4.12-r1.ebuild:
+  Add missing dep on dev-texlive/texlive-genericextra (bug #531664).
 
 *glossaries-4.12 (29 Nov 2014)
 
