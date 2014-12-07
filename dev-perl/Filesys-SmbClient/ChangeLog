@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Filesys-SmbClient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-SmbClient/ChangeLog,v 1.4 2014/10/11 20:38:42 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-SmbClient/ChangeLog,v 1.5 2014/12/07 13:21:39 zlogene Exp $
+
+  07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Filesys-SmbClient-3.200.0-r1.ebuild:
+  Drop dev-lang/perl dependency
 
   11 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
   -Filesys-SmbClient-3.100.0.ebuild:

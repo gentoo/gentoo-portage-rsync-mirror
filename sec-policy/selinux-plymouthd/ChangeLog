@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-plymouthd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-plymouthd/ChangeLog,v 1.47 2014/12/07 11:49:46 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-plymouthd/ChangeLog,v 1.48 2014/12/07 13:21:05 perfinion Exp $
+
+  07 Dec 2014; Jason Zaman <perfinion@gentoo.org>
+  selinux-plymouthd-2.20140311-r7.ebuild:
+  Stabilize 2.20140311-r7
 
 *selinux-plymouthd-2.20141203-r1 (07 Dec 2014)
 

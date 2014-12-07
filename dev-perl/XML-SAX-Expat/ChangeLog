@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-SAX-Expat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/ChangeLog,v 1.10 2014/11/28 22:17:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/ChangeLog,v 1.11 2014/12/07 13:08:18 zlogene Exp $
+
+  07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> XML-SAX-Expat-0.400.0.ebuild,
+  XML-SAX-Expat-0.500.0.ebuild, XML-SAX-Expat-0.510.0.ebuild:
+  Drop dev-lang/perl dependency
 
   28 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   XML-SAX-Expat-0.400.0.ebuild, XML-SAX-Expat-0.500.0.ebuild,

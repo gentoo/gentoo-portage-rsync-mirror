@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/pgperl-2.0.2.ebuild,v 1.17 2014/11/03 11:52:00 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/pgperl-2.0.2.ebuild,v 1.18 2014/12/07 13:05:57 zlogene Exp $
 
 EAPI=5
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ia64 sparc x86"
 IUSE=""
 
-DEPEND="virtual/postgresql[server]
-	dev-lang/perl"
+DEPEND="virtual/postgresql[server]"
 
 S=${WORKDIR}/Pg-${PV}
 src_compile() {

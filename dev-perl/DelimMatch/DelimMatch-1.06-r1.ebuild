@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/DelimMatch-1.06-r1.ebuild,v 1.7 2013/12/08 15:37:46 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/DelimMatch-1.06-r1.ebuild,v 1.8 2014/12/07 13:25:55 zlogene Exp $
 
 EAPI=5
 
@@ -15,8 +15,5 @@ LICENSE="|| ( Artistic GPL-1+ )"
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE=""
-
-DEPEND="dev-lang/perl"
-RDEPEND=""
 
 SRC_TEST="do"

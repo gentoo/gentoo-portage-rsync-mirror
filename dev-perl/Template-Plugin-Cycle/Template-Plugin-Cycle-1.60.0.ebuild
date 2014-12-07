@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Plugin-Cycle/Template-Plugin-Cycle-1.60.0.ebuild,v 1.1 2014/09/25 10:44:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Plugin-Cycle/Template-Plugin-Cycle-1.60.0.ebuild,v 1.2 2014/12/07 13:09:16 zlogene Exp $
 
 EAPI=5
 
@@ -17,5 +17,4 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=">=dev-perl/Params-Util-1.60.0
-	>=dev-perl/Template-Toolkit-2.240.0
-	dev-lang/perl"
+	>=dev-perl/Template-Toolkit-2.240.0"

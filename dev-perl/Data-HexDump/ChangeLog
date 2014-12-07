@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-HexDump
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-HexDump/ChangeLog,v 1.4 2014/08/22 17:46:19 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-HexDump/ChangeLog,v 1.5 2014/12/07 13:16:58 zlogene Exp $
+
+  07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> Data-HexDump-0.02-r1.ebuild:
+  Drop dev-lang/perl dependency
 
 *Data-HexDump-0.02-r1 (22 Aug 2014)
 

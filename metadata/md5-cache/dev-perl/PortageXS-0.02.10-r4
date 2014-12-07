@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare test unpack
-DEPEND=dev-lang/perl virtual/perl-Term-ANSIColor dev-perl/Shell-EnvImporter !minimal? ( dev-perl/IO-Socket-SSL virtual/perl-Sys-Syslog ) dev-lang/perl:=[-build(-)]
+DEPEND=virtual/perl-Term-ANSIColor dev-perl/Shell-EnvImporter !minimal? ( dev-perl/IO-Socket-SSL virtual/perl-Sys-Syslog ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Portage abstraction layer for perl
 EAPI=5
 HOMEPAGE=http://download.mpsna.de/opensource/PortageXS/
@@ -10,4 +10,4 @@ RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=http://download.mpsna.de/opensource/PortageXS/PortageXS-0.02.10.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	28ca2b834dd6b64c9179af421c4d763e	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=2a9e783ec5f8a6df1932d08967678fd9
+_md5_=41c50404e3bb289c6cefcb83cd148a4d

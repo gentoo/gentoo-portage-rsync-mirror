@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-3.0.17-r1.ebuild,v 1.2 2013/12/15 10:59:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-3.0.17-r1.ebuild,v 1.3 2014/12/07 13:23:25 zlogene Exp $
 
 EAPI=5
 
@@ -29,6 +29,5 @@ RDEPEND=">=dev-perl/Class-Data-Inheritable-0.02
 	dev-perl/Clone
 	>=dev-perl/Ima-DBI-0.33
 	virtual/perl-version
-	>=dev-perl/UNIVERSAL-moniker-0.06
-	dev-lang/perl"
+	>=dev-perl/UNIVERSAL-moniker-0.06"
 DEPEND="${RDEPEND}"

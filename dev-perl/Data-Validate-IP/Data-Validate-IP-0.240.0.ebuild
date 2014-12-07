@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Validate-IP/Data-Validate-IP-0.240.0.ebuild,v 1.1 2014/09/25 10:24:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Validate-IP/Data-Validate-IP-0.240.0.ebuild,v 1.2 2014/12/07 13:26:46 zlogene Exp $
 
 EAPI=5
 
@@ -17,5 +17,4 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=">=dev-perl/NetAddr-IP-4.66.0
-	dev-perl/Test-Requires
-	dev-lang/perl"
+	dev-perl/Test-Requires"

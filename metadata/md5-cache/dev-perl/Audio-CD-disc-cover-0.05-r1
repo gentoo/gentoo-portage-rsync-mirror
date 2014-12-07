@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-perl/URI-1.10 >=dev-perl/HTML-Parser-3.15 >=virtual/perl-MIME-Base64-2.12 >=virtual/perl-Digest-MD5-2.12 >=virtual/perl-libnet-1.0703-r1 >=dev-perl/libwww-perl-5.50 >=media-libs/libcdaudio-0.99.6 dev-lang/perl dev-lang/perl:=[-build(-)]
+DEPEND=>=dev-perl/URI-1.10 >=dev-perl/HTML-Parser-3.15 >=virtual/perl-MIME-Base64-2.12 >=virtual/perl-Digest-MD5-2.12 >=virtual/perl-libnet-1.0703-r1 >=dev-perl/libwww-perl-5.50 >=media-libs/libcdaudio-0.99.6 dev-lang/perl:=[-build(-)]
 DESCRIPTION=Perl Module needed for app-cdr/disc-cover
 EAPI=5
 HOMEPAGE=http://www.vanhemert.co.uk/disc-cover.html
@@ -9,4 +9,4 @@ RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=http://www.vanhemert.co.uk/files/Audio-CD-0.05.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	28ca2b834dd6b64c9179af421c4d763e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=79c18eee5ce5c002a409761b58ed77eb
+_md5_=9b109a8a7c77c635f7f11b0fd7e3e646

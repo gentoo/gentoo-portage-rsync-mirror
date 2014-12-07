@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003-r1.ebuild,v 1.2 2014/04/26 10:28:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003-r1.ebuild,v 1.3 2014/12/07 13:27:39 zlogene Exp $
 
 EAPI=5
 
@@ -14,8 +14,7 @@ LICENSE="Artistic"
 KEYWORDS="amd64 x86"
 IUSE="doc mysql auth"
 
-DEPEND="dev-lang/perl
-		>=dev-perl/Config-Simple-4.1
+DEPEND=">=dev-perl/Config-Simple-4.1
 		>=dev-perl/DBI-1.03
 		>=virtual/perl-File-Temp-0.12
 		>=virtual/perl-Digest-MD5-2.09

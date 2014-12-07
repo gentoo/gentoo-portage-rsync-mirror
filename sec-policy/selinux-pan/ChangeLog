@@ -1,4 +1,8 @@
 
+  07 Dec 2014; Jason Zaman <perfinion@gentoo.org>
+  selinux-pan-2.20140311-r7.ebuild:
+  Stabilize 2.20140311-r7
+
 *selinux-pan-2.20141203-r1 (07 Dec 2014)
 
   07 Dec 2014; Jason Zaman <perfinion@gentoo.org>

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Validate-Domain/Data-Validate-Domain-0.100.0.ebuild,v 1.1 2014/09/25 10:28:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Validate-Domain/Data-Validate-Domain-0.100.0.ebuild,v 1.2 2014/12/07 13:22:31 zlogene Exp $
 
 EAPI=5
 
@@ -16,5 +16,4 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=">=dev-perl/Net-Domain-TLD-1.690.0
-	dev-lang/perl"
+DEPEND=">=dev-perl/Net-Domain-TLD-1.690.0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-2.20140311-r7.ebuild,v 1.1 2014/11/01 17:26:17 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-2.20140311-r7.ebuild,v 1.2 2014/12/07 13:21:04 perfinion Exp $
 EAPI="5"
 
 inherit eutils
@@ -11,17 +11,12 @@ if [[ ${PV} == 9999* ]]; then
 	EGIT_SOURCEDIR="${WORKDIR}/refpolicy"
 
 	inherit git-2
-
-	if [[ $PV == 9999* ]] ; then
 	KEYWORDS=""
-else
-	KEYWORDS="~amd64 ~x86"
-fi
 else
 	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
 			http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-${PVR}.tar.bz2"
 
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 IUSE="+peer_perms +open_perms +ubac +unconfined doc"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Eidetic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/ChangeLog,v 1.17 2014/04/26 10:28:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/ChangeLog,v 1.18 2014/12/07 13:27:39 zlogene Exp $
+
+  07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> Eidetic-2.003003-r1.ebuild:
+  Drop dev-lang/perl dependency
 
   26 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> -Eidetic-2.003003.ebuild,
   Eidetic-2.003003-r1.ebuild:
