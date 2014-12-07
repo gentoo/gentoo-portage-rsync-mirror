@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.84 2014/12/04 11:00:43 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.85 2014/12/06 23:23:32 perfinion Exp $
+
+*libsemanage-2.4_rc7 (06 Dec 2014)
+
+  06 Dec 2014; Jason Zaman <perfinion@gentoo.org> +libsemanage-2.4_rc7.ebuild,
+  -libsemanage-2.3-r2.ebuild, -libsemanage-2.4_rc2.ebuild,
+  -libsemanage-2.4_rc5.ebuild, -libsemanage-2.4_rc6-r1.ebuild,
+  -libsemanage-2.4_rc6.ebuild:
+  version bump and ebuild clean up, drop old RC
 
 *libsemanage-2.3-r4 (04 Dec 2014)
 

@@ -7,8 +7,8 @@ diff -uNr policycoreutils-2.2.1.orig/newrole/Makefile policycoreutils-2.2.1/newr
  LOCALEDIR = /usr/share/locale
 -PAMH = $(shell ls /usr/include/security/pam_appl.h 2>/dev/null)
 -AUDITH = $(shell ls /usr/include/libaudit.h 2>/dev/null)
-+PAMH ?= n
-+AUDITH ?= n
++PAMH ?= no
++AUDITH ?= no
  # Enable capabilities to permit newrole to generate audit records.
  # This will make newrole a setuid root program.
  # The capabilities used are: CAP_AUDIT_WRITE.
@@ -17,7 +17,7 @@ diff -uNr policycoreutils-2.2.1.orig/newrole/Makefile policycoreutils-2.2.1/newr
  override CFLAGS += -DVERSION=\"$(VERSION)\" $(LDFLAGS) -I$(PREFIX)/include -DUSE_NLS -DLOCALEDIR="\"$(LOCALEDIR)\"" -DPACKAGE="\"policycoreutils\""
  LDLIBS += -lselinux -L$(PREFIX)/lib
 -ifeq ($(PAMH), /usr/include/security/pam_appl.h)
-+ifeq ($(PAMH), y)
++ifeq ($(PAMH), yes)
  	override CFLAGS += -DUSE_PAM
  	EXTRA_OBJS += hashtab.o
  	LDLIBS += -lpam -lpam_misc
@@ -26,7 +26,7 @@ diff -uNr policycoreutils-2.2.1.orig/newrole/Makefile policycoreutils-2.2.1/newr
  	LDLIBS += -lcrypt
  endif
 -ifeq ($(AUDITH), /usr/include/libaudit.h)
-+ifeq ($(AUDITH), y)
++ifeq ($(AUDITH), yes)
  	override CFLAGS += -DUSE_AUDIT
  	LDLIBS += -laudit
  endif
@@ -44,7 +44,7 @@ diff -uNr policycoreutils-2.2.1.orig/newrole/Makefile policycoreutils-2.2.1/newr
  	install -m $(MODE) newrole $(BINDIR)
  	install -m 644 newrole.1 $(MANDIR)/man1/
 -ifeq ($(PAMH), /usr/include/security/pam_appl.h)
-+ifeq ($(PAMH), y)
++ifeq ($(PAMH), yes)
  	test -d $(ETCDIR)/pam.d || install -m 755 -d $(ETCDIR)/pam.d
  ifeq ($(LSPP_PRIV),y)
  	install -m 644 newrole-lspp.pamd $(ETCDIR)/pam.d/newrole
@@ -57,14 +57,14 @@ diff -uNr policycoreutils-2.2.1.orig/run_init/Makefile policycoreutils-2.2.1/run
  LOCALEDIR ?= /usr/share/locale
 -PAMH = $(shell ls /usr/include/security/pam_appl.h 2>/dev/null)
 -AUDITH = $(shell ls /usr/include/libaudit.h 2>/dev/null)
-+PAMH ?= n
-+AUDITH ?= n
++PAMH ?= no
++AUDITH ?= no
  
  CFLAGS ?= -Werror -Wall -W
  override CFLAGS += -I$(PREFIX)/include -DUSE_NLS -DLOCALEDIR="\"$(LOCALEDIR)\"" -DPACKAGE="\"policycoreutils\""
  LDLIBS += -lselinux -L$(PREFIX)/lib
 -ifeq ($(PAMH), /usr/include/security/pam_appl.h)
-+ifeq ($(PAMH), y)
++ifeq ($(PAMH), yes)
  	override CFLAGS += -DUSE_PAM
  	LDLIBS += -lpam -lpam_misc
  else
@@ -72,7 +72,7 @@ diff -uNr policycoreutils-2.2.1.orig/run_init/Makefile policycoreutils-2.2.1/run
  	LDLIBS += -lcrypt
  endif
 -ifeq ($(AUDITH), /usr/include/libaudit.h)
-+ifeq ($(AUDITH), y)
++ifeq ($(AUDITH), yes)
  	override CFLAGS += -DUSE_AUDIT
  	LDLIBS += -laudit
  endif
@@ -81,7 +81,7 @@ diff -uNr policycoreutils-2.2.1.orig/run_init/Makefile policycoreutils-2.2.1/run
  	install -m 644 run_init.8 $(MANDIR)/man8/
  	install -m 644 open_init_pty.8 $(MANDIR)/man8/
 -ifeq ($(PAMH), /usr/include/security/pam_appl.h)
-+ifeq ($(PAMH), y)
++ifeq ($(PAMH), yes)
  	install -m 644 run_init.pamd $(ETCDIR)/pam.d/run_init
  endif
  
@@ -93,7 +93,7 @@ diff -uNr policycoreutils-2.2.1.orig/setfiles/Makefile policycoreutils-2.2.1/set
  MANDIR = $(PREFIX)/share/man
  LIBDIR ?= $(PREFIX)/lib
 -AUDITH = $(shell ls /usr/include/libaudit.h 2>/dev/null)
-+AUDITH ?= n
++AUDITH ?= no
  
  PROGRESS_STEP=$(shell grep "^\#define STAR_COUNT" restore.h | awk -S '{ print $$3 }')
  ABORT_ON_ERRORS=$(shell grep "^\#define ABORT_ON_ERRORS" setfiles.c | awk -S '{ print $$3 }')
@@ -102,7 +102,7 @@ diff -uNr policycoreutils-2.2.1.orig/setfiles/Makefile policycoreutils-2.2.1/set
  LDLIBS = -lselinux -lsepol -L$(LIBDIR)
  
 -ifeq ($(AUDITH), /usr/include/libaudit.h)
-+ifeq ($(AUDITH), y)
++ifeq ($(AUDITH), yes)
  	override CFLAGS += -DUSE_AUDIT
  	LDLIBS += -laudit
  endif

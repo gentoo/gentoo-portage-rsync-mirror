@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.4_rc6-r1.ebuild,v 1.1 2014/11/22 12:59:49 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.4_rc6-r1.ebuild,v 1.2 2014/12/06 23:28:23 perfinion Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -85,14 +85,14 @@ src_prepare() {
 }
 
 src_compile() {
-	local use_audit="n";
-	local use_pam="n";
-	local use_dbus="n";
-	local use_sesandbox="n";
+	local use_audit="no";
+	local use_pam="no";
+	local use_dbus="no";
+	local use_sesandbox="no";
 
-	use audit && use_audit="y";
-	use pam && use_pam="y";
-	use dbus && use_dbus="y";
+	use audit && use_audit="yes";
+	use pam && use_pam="yes";
+	use dbus && use_dbus="yes";
 
 	building() {
 		emake -C "${BUILD_DIR}" AUDIT_LOG_PRIVS="y" AUDITH="${use_audit}" PAMH="${use_pam}" INOTIFYH="${use_dbus}" SESANDBOX="${use_sesandbox}" CC="$(tc-getCC)" PYLIBVER="${EPYTHON}" || die
@@ -104,14 +104,14 @@ src_compile() {
 }
 
 src_install() {
-	local use_audit="n";
-	local use_pam="n";
-	local use_dbus="n";
-	local use_sesandbox="n";
+	local use_audit="no";
+	local use_pam="no";
+	local use_dbus="no";
+	local use_sesandbox="no";
 
-	use audit && use_audit="y";
-	use pam && use_pam="y";
-	use dbus && use_dbus="y";
+	use audit && use_audit="yes";
+	use pam && use_pam="yes";
+	use dbus && use_dbus="yes";
 
 	# Python scripts are present in many places. There are no extension modules.
 	installation-policycoreutils() {

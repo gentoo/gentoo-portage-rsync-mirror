@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.4_rc5.ebuild,v 1.1 2014/10/29 17:28:15 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.4_rc7.ebuild,v 1.1 2014/12/06 23:25:46 perfinion Exp $
 
 EAPI="5"
 
@@ -8,8 +8,8 @@ inherit toolchain-funcs eutils
 
 MY_P="${P//_/-}"
 
-SEPOL_VER="2.4_rc4"
-SEMNG_VER="2.4_rc4"
+SEPOL_VER="${PV}"
+SEMNG_VER="${PV}"
 
 DESCRIPTION="SELinux policy compiler"
 HOMEPAGE="http://userspace.selinuxproject.org"
@@ -29,16 +29,16 @@ RDEPEND=">=sys-libs/libsemanage-${SEMNG_VER}"
 
 S="${WORKDIR}/${MY_P}"
 
-src_compile() {
-	emake CC="$(tc-getCC)" YACC="bison -y" || die
-}
-
 src_prepare() {
 	epatch_user
 }
 
+src_compile() {
+	emake CC="$(tc-getCC)" YACC="bison -y"
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	if use debug; then
 		dobin "${S}/test/dismod"

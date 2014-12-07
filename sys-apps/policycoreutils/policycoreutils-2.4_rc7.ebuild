@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.4_rc6.ebuild,v 1.1 2014/11/14 19:20:37 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.4_rc7.ebuild,v 1.1 2014/12/06 23:28:23 perfinion Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -11,10 +11,9 @@ inherit multilib python-r1 toolchain-funcs eutils
 MY_P="${P//_/-}"
 
 EXTRAS_VER="1.33"
-SEMNG_VER="2.4_rc6"
-SELNX_VER="2.4_rc6"
-SEPOL_VER="2.4_rc6"
-PATCHBUNDLE="4"
+SEMNG_VER="${PV}"
+SELNX_VER="${PV}"
+SEPOL_VER="${PV}"
 
 IUSE="audit pam dbus"
 
@@ -27,7 +26,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}[python]
+DEPEND=">=sys-libs/libselinux-${SELNX_VER}[python]
 	>=sys-libs/glibc-2.4
 	>=sys-libs/libcap-1.10-r10
 	>=sys-libs/libsemanage-${SEMNG_VER}[python]
@@ -47,11 +46,9 @@ COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}[python]
 ### dbus -> restorecond
 
 # pax-utils for scanelf used by rlpkg
-RDEPEND="${COMMON_DEPS}
+RDEPEND="${DEPEND}
 	dev-python/sepolgen
 	app-misc/pax-utils"
-
-DEPEND="${COMMON_DEPS}"
 
 S="${WORKDIR}/${MY_P}"
 S1="${WORKDIR}/${MY_P}"
@@ -84,17 +81,8 @@ src_prepare() {
 }
 
 src_compile() {
-	local use_audit="n";
-	local use_pam="n";
-	local use_dbus="n";
-	local use_sesandbox="n";
-
-	use audit && use_audit="y";
-	use pam && use_pam="y";
-	use dbus && use_dbus="y";
-
 	building() {
-		emake -C "${BUILD_DIR}" AUDIT_LOG_PRIVS="y" AUDITH="${use_audit}" PAMH="${use_pam}" INOTIFYH="${use_dbus}" SESANDBOX="${use_sesandbox}" CC="$(tc-getCC)" PYLIBVER="${EPYTHON}" || die
+		emake -C "${BUILD_DIR}" AUDIT_LOG_PRIVS="y" AUDITH="$(usex audit)" PAMH="$(usex pam)" INOTIFYH="$(usex dbus)" SESANDBOX="n" CC="$(tc-getCC)" PYLIBVER="${EPYTHON}"
 	}
 	S="${S1}" # Regular policycoreutils
 	python_foreach_impl building
@@ -103,24 +91,17 @@ src_compile() {
 }
 
 src_install() {
-	local use_audit="n";
-	local use_pam="n";
-	local use_dbus="n";
-	local use_sesandbox="n";
-
-	use audit && use_audit="y";
-	use pam && use_pam="y";
-	use dbus && use_dbus="y";
-
 	# Python scripts are present in many places. There are no extension modules.
 	installation-policycoreutils() {
 		einfo "Installing policycoreutils"
-		emake -C "${BUILD_DIR}" DESTDIR="${D}" AUDITH="${use_audit}" PAMH="${use_pam}" INOTIFYH="${use_dbus}" SESANDBOX="${use_sesandbox}" AUDIT_LOG_PRIV="y" PYLIBVER="${EPYTHON}" install || return 1
+		emake -C "${BUILD_DIR}" DESTDIR="${D}" AUDITH="$(usex audit)" PAMH="$(usex pam)" INOTIFYH="$(usex dbus)" SESANDBOX="n" AUDIT_LOG_PRIV="y" PYLIBVER="${EPYTHON}" install
+		python_optimize
 	}
 
 	installation-extras() {
 		einfo "Installing policycoreutils-extra"
-		emake -C "${BUILD_DIR}" DESTDIR="${D}" INOTIFYH="${use_dbus}" SHLIBDIR="${D}$(get_libdir)/rc" install || return 1
+		emake -C "${BUILD_DIR}" DESTDIR="${D}" INOTIFYH="$(usex dbus)" SHLIBDIR="${D}$(get_libdir)/rc" install
+		python_optimize
 	}
 
 	S="${S1}" # policycoreutils
@@ -136,7 +117,7 @@ src_install() {
 	dosym /sbin/setfiles /usr/sbin/setfiles
 	dosym /$(get_libdir)/rc/runscript_selinux.so /$(get_libdir)/rcscripts/runscript_selinux.so
 
-	# location for permissive definitions
+	# location for policy definitions
 	dodir /var/lib/selinux
 	keepdir /var/lib/selinux
 

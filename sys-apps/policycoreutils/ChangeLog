@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.146 2014/11/22 12:59:49 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.147 2014/12/06 23:28:23 perfinion Exp $
+
+*policycoreutils-2.4_rc7 (06 Dec 2014)
+*policycoreutils-2.3-r3 (06 Dec 2014)
+
+  06 Dec 2014; Jason Zaman <perfinion@gentoo.org>
+  +policycoreutils-2.3-r3.ebuild, +policycoreutils-2.4_rc7.ebuild,
+  -policycoreutils-2.4_rc2.ebuild, -policycoreutils-2.4_rc5.ebuild,
+  -policycoreutils-2.4_rc6.ebuild,
+  files/0020-disable-autodetection-of-pam-and-audit.patch,
+  files/0030-make-inotify-check-use-flag-triggered.patch,
+  policycoreutils-2.4_rc6-r1.ebuild:
+  version bump and ebuild clean up, drop old RC
 
 *policycoreutils-2.4_rc6-r1 (22 Nov 2014)
 

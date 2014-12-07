@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.4_rc2.ebuild,v 1.1 2014/09/21 10:20:09 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.4_rc7.ebuild,v 1.1 2014/12/06 23:23:32 perfinion Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
+PYTHON_COMPAT=( python2_7 python3_2 python3_3 python3_4 )
 
 inherit multilib python-r1 toolchain-funcs eutils multilib-minimal
 
 MY_P="${P//_/-}"
 
-SEPOL_VER="2.4_rc2"
-SELNX_VER="2.4_rc2"
+SEPOL_VER="${PV}"
+SELNX_VER="${PV}"
 
 DESCRIPTION="SELinux kernel and policy management library"
 HOMEPAGE="https://github.com/SELinuxProject/selinux/wiki"
@@ -97,7 +97,18 @@ multilib_src_install() {
 		installation_py() {
 			emake DESTDIR="${ED}" LIBDIR="${ED}/usr/$(get_libdir)" \
 				SHLIBDIR="${ED}/usr/$(get_libdir)" install-pywrap
+			python_optimize # bug 531638
 		}
 		python_foreach_impl installation_py
 	fi
+}
+
+pkg_postinst() {
+	# Run the store migration without rebuilds
+	for POLICY_TYPE in ${POLICY_TYPES} ; do
+		if [ ! -d "${ROOT}/var/lib/selinux/${POLICY_TYPE}/active" ] ; then
+			einfo "Migrating store ${POLICY_TYPE} (without policy rebuild)."
+			/usr/libexec/selinux/semanage_migrate_store -n -s "${POLICY_TYPE}" || die "Failed to migrate store ${POLICY_TYPE}"
+		fi
+	done
 }

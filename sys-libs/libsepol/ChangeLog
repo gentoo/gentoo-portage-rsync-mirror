@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libsepol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.71 2014/11/14 19:15:41 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.72 2014/12/06 23:19:21 perfinion Exp $
+
+*libsepol-2.4_rc7 (06 Dec 2014)
+
+  06 Dec 2014; Jason Zaman <perfinion@gentoo.org> +libsepol-2.4_rc7.ebuild,
+  -libsepol-2.4_rc2.ebuild, -libsepol-2.4_rc5.ebuild:
+  version bump and ebuild clean up, drop old RC
 
 *libsepol-2.4_rc6 (14 Nov 2014)
 
