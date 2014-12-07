@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlpdf/camlpdf-2.1.1.ebuild,v 1.1 2014/12/07 18:30:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlpdf/camlpdf-2.1.1.ebuild,v 1.2 2014/12/07 18:37:48 radhermit Exp $
 
 EAPI=5
 
@@ -25,6 +25,7 @@ src_compile() {
 
 src_install() {
 	findlib_src_install
+	dodoc Changes README.md
 
 	if use doc ; then
 		dodoc introduction_to_camlpdf.pdf
