@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/statsmodels
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/statsmodels/ChangeLog,v 1.4 2013/10/27 08:26:43 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/statsmodels/ChangeLog,v 1.5 2014/12/07 13:31:19 jlec Exp $
+
+*statsmodels-0.6.1 (07 Dec 2014)
+
+  07 Dec 2014; Justin Lecher <jlec@gentoo.org> +statsmodels-0.6.1.ebuild,
+  metadata.xml:
+  Version BUmp; add py3.4 compatibility, #530606; working testsuite, #530270
 
   27 Oct 2013; Michał Górny <mgorny@gentoo.org> statsmodels-0.5.0.ebuild:
   Remove redundant python_export_best (done by the eclass).
