@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/JSON
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.62 2014/10/12 07:32:46 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.63 2014/12/07 16:17:31 zlogene Exp $
+
+  07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> JSON-2.590.0-r1.ebuild:
+  Add ~amd64-fbsd keyword
 
   12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -JSON-2.530.0.ebuild:
   Drop old.
