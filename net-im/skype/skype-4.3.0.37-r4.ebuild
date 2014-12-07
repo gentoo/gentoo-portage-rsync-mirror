@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r3.ebuild,v 1.2 2014/11/12 14:44:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r4.ebuild,v 1.1 2014/12/07 10:48:42 amynka Exp $
 
 EAPI=5
 
@@ -79,9 +79,17 @@ src_compile() {
 }
 
 src_install() {
-	into /opt
-	dobin ${PN}
-	fowners root:audio /opt/bin/${PN}
+
+	if use apulse; then
+		into /opt
+		newbin ${PN} ${PN}-bin
+		dobin "${FILESDIR}/${PN}"
+		fowners root:audio /opt/bin/${PN} /opt/bin/${PN}-bin
+	else
+		into /opt
+		dobin ${PN}
+		fowners root:audio /opt/bin/${PN}
+	fi
 
 	insinto /etc/dbus-1/system.d
 	doins ${PN}.conf
