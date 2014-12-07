@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.2-r1.ebuild,v 1.3 2014/08/13 18:37:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.2-r1.ebuild,v 1.4 2014/12/07 15:22:57 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_TEST="spec"
 
@@ -30,19 +30,15 @@ ruby_add_rdepend ">=dev-ruby/diff-lcs-1.1.2"
 
 RDEPEND="!<dev-ruby/rspec-rails-${PV}"
 
-# don't require test dependencies for jruby since we cannot run them
-# for now (fakefs doesn't work).
-#
 # We should add nokogiri here to make sure that we test as much as
 # possible, but since it's yet unported to 1.9 and the nokogiri-due
 # tests fail for sure, we'll be waiting on it.
-USE_RUBY="ruby19 ruby20 ruby21" \
-	ruby_add_bdepend "test? (
-		>=dev-ruby/hoe-2.0.0
-		dev-ruby/zentest
-		>=dev-ruby/syntax-1.0
-		>=dev-ruby/fakefs-0.2.1 )"
-USE_RUBY="ruby19 ruby20 ruby21" ruby_add_bdepend "test? ( ~dev-ruby/test-unit-1.2.3 )"
+ruby_add_bdepend "test? (
+	>=dev-ruby/hoe-2.0.0
+	dev-ruby/zentest
+	>=dev-ruby/syntax-1.0
+	>=dev-ruby/fakefs-0.2.1 )"
+ruby_add_bdepend "test? ( ~dev-ruby/test-unit-1.2.3 )"
 
 all_ruby_prepare() {
 	# Avoid dependency on git.
@@ -80,16 +76,4 @@ all_ruby_prepare() {
 src_test() {
 	chmod 0755 "${HOME}" || die "Failed to fix permissions on home"
 	ruby-ng_src_test
-}
-
-each_ruby_test() {
-	case ${RUBY} in
-		*jruby)
-			ewarn "Tests for JRuby are disabled because dev-ruby/fakefs does not currently support"
-			ewarn "JRuby properly and it's needed to run the tests."
-			;;
-		*)
-			each_fakegem_test
-			;;
-	esac
 }

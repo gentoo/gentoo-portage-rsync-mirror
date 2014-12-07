@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.547 2014/12/03 11:28:47 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.548 2014/12/07 15:24:30 nimiux Exp $
+
+  07 Dec 2014; Chema Alonso <nimiux@gentoo.org> postfix-2.11.3.ebuild:
+  Stable for amd64 wrt bug #531430
 
 *postfix-2.12_pre20141202 (03 Dec 2014)
 

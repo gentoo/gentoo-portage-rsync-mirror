@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-2.14.1.ebuild,v 1.12 2014/11/18 11:46:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-2.14.1.ebuild,v 1.13 2014/12/07 15:22:57 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_TEST=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.5.3.ebuild,v 1.12 2014/12/04 08:48:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.5.3.ebuild,v 1.13 2014/12/07 15:16:29 jlec Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
@@ -14,7 +14,7 @@ DESCRIPTION="PostgreSQL database adapter for Python"
 HOMEPAGE="http://initd.org/psycopg/ http://pypi.python.org/pypi/psycopg2"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-3+"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 IUSE="debug doc examples"

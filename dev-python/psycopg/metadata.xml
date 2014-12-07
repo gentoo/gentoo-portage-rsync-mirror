@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>python</herd>
-	<use>
-		<flag name="mxdatetime">Enable support for MX DateTime and use it instead of Python's built-in datetime module</flag>
-	</use>
-	<upstream>
-		<remote-id type="pypi">psycopg2</remote-id>
-	</upstream>
+  <herd>python</herd>
+  <use>
+    <flag name="mxdatetime">Enable support for MX DateTime and use it instead of Python's built-in datetime module</flag>
+  </use>
+  <upstream>
+    <remote-id type="pypi">psycopg2</remote-id>
+  </upstream>
 </pkgmetadata>
