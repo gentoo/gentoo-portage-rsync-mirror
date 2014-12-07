@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sxhkd/sxhkd-0.5.4.ebuild,v 1.1 2014/10/08 01:02:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sxhkd/sxhkd-0.5.4.ebuild,v 1.2 2014/12/07 05:23:47 radhermit Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs systemd
@@ -13,9 +13,10 @@ LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="x11-libs/libxcb
+RDEPEND="x11-libs/libxcb
 	x11-libs/xcb-util-keysyms"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	x11-libs/xcb-util"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.5.3-flags.patch
