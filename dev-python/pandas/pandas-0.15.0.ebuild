@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.1 2014/10/26 19:41:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.2 2014/12/07 16:57:02 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
-inherit distutils-r1 virtualx flag-o-matic
+inherit distutils-r1 flag-o-matic virtualx
 
 DESCRIPTION="Powerful data structures for data analysis and statistics"
 HOMEPAGE="http://pandas.sourceforge.net/"
@@ -17,9 +17,20 @@ LICENSE="BSD"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples excel html test R"
 
+_EXTRA_DEPEND="
+	>=dev-python/google-api-python-client-1.2.0[${PYTHON_USEDEP}]
+	<dev-python/openpyxl-2[${PYTHON_USEDEP}]
+	dev-python/pymysql[${PYTHON_USEDEP}]
+	>=dev-python/python-gflags[${PYTHON_USEDEP}]
+	dev-python/psycopg:2[${PYTHON_USEDEP}]
+	dev-python/statsmodels[${PYTHON_USEDEP}]
+	dev-python/sqlalchemy[${PYTHON_USEDEP}]
+	dev-python/xlsxwriter[${PYTHON_USEDEP}]
+	"
 CDEPEND="
 	>dev-python/numpy-1.7[${PYTHON_USEDEP}]
-	>=dev-python/python-dateutil-2.0[${PYTHON_USEDEP}]"
+	>=dev-python/python-dateutil-2.0[${PYTHON_USEDEP}]
+	!~dev-python/openpyxl-1.9.0[${PYTHON_USEDEP}]"
 DEPEND="${CDEPEND}
 	doc? (
 		dev-python/beautifulsoup:4[${PYTHON_USEDEP}]
@@ -38,7 +49,12 @@ DEPEND="${CDEPEND}
 		dev-python/xlwt[$(python_gen_usedep 'python2_7')]
 		x11-misc/xclip
 		)
-	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
+	test? (
+		${EXTRA_DEPEND}
+		dev-python/nose[${PYTHON_USEDEP}]
+		x11-misc/xclip
+		x11-misc/xsel
+		)"
 # dev-python/statsmodels invokes a circular dep
 #  hence rm from doc? ( ), again
 RDEPEND="${CDEPEND}
@@ -60,6 +76,10 @@ RDEPEND="${CDEPEND}
 			dev-python/html5lib[${PYTHON_USEDEP}] )
 	)
 	R? ( dev-python/rpy[${PYTHON_USEDEP}] )"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-backport-GH8587.patch
+)
 
 python_prepare_all() {
 	if use doc; then
@@ -101,9 +121,9 @@ src_test() {
 
 python_test() {
 	pushd  "${BUILD_DIR}"/lib > /dev/null
+	VIRTUALX_COMMAND="nosetests"
 	PYTHONPATH=. MPLCONFIGDIR=. HOME=. \
-		nosetests --verbosity=3 -A 'not network and not disabled' pandas \
-		|| die "Tests failed under ${EPYTHON}"
+		virtualmake --verbosity=3 -A 'not network and not disabled' pandas
 	popd > /dev/null
 }
 
@@ -117,4 +137,12 @@ python_install_all() {
 
 	use examples && local EXAMPLES=( examples/. )
 	distutils-r1_python_install_all
+}
+
+pkg_postinst() {
+	local x
+	elog "Additional funtionality following packages can be installed:"
+	for x in ${EXTRA_DEPEND}; do
+		optfeature "" ${x}
+	done
 }
