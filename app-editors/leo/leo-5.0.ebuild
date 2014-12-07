@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/leo-5.0.ebuild,v 1.1 2014/12/06 11:10:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/leo-5.0.ebuild,v 1.2 2014/12/07 03:36:06 idella4 Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ MY_P="Leo-${PV}-final"
 MY_PN="Leo${PV}-final"
 
 DESCRIPTION="Leo: Literate Editor with Outlines"
-HOMEPAGE="http://leo.sourceforge.net/ http://pypi.python.org/pypi/leo"
+HOMEPAGE="https://github.com/leo-editor/leo-editor/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="MIT"
