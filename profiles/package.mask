@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16203 2014/12/05 15:27:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16204 2014/12/07 14:05:45 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -230,19 +230,6 @@ razorqt-base/razorqt-policykit
 razorqt-base/razorqt-power
 razorqt-base/razorqt-runner
 razorqt-base/razorqt-session
-
-# Manuel Rüger <mrueg@gentoo.org> (6 Nov 2014)
-# Unmaintained slot, move on to dev-ruby/prawn:1
-# Masked for removal in 30 days
-dev-ruby/prawn:0
-dev-ruby/prawn-security
-dev-ruby/prawn-layout
-dev-ruby/prawn-core
-
-# Manuel Rüger <mrueg@gentoo.org> (6 Nov 2014)
-# Use kde-base/oxygen-fonts instead
-# Masked for removal in 30 days
-media-fonts/oxygen-fonts
 
 # Samuli Suominen <ssuominen@gentoo.org> (05 Nov 2014)
 # ConsoleKit2 from github by Eric Koegel, auth of xfce4-power-manager

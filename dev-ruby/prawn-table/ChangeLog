@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/prawn-table
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/ChangeLog,v 1.9 2014/11/02 18:47:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/ChangeLog,v 1.10 2014/12/07 14:02:09 mrueg Exp $
+
+  07 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -prawn-table-0.2.0.ebuild:
+  Cleanup old.
 
 *prawn-table-0.2.1 (02 Nov 2014)
 
