@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.34 2014/12/07 19:23:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.35 2014/12/07 19:39:22 jlec Exp $
+
+  07 Dec 2014; Justin Lecher <jlec@gentoo.org> pandas-0.15.0.ebuild,
+  pandas-0.15.1.ebuild, pandas-9999.ebuild:
+  Streamline postinst messages
 
   07 Dec 2014; Justin Lecher <jlec@gentoo.org> pandas-0.15.0.ebuild,
   pandas-0.15.1.ebuild, pandas-9999.ebuild:

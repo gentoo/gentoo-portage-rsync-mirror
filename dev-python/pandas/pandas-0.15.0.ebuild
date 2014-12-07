@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.4 2014/12/07 19:23:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.5 2014/12/07 19:39:22 jlec Exp $
 
 EAPI=5
 
@@ -141,8 +141,8 @@ python_install_all() {
 
 pkg_postinst() {
 	local x
-	elog "Additional funtionality following packages can be installed:"
+	elog "Please install"
 	for x in ${EXTRA_DEPEND}; do
-		optfeature "" ${x}
+		optfeature "additional functionality" ${x%%[*}
 	done
 }
