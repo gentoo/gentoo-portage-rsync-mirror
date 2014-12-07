@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.693 2014/12/06 16:51:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.694 2014/12/07 07:18:36 graaff Exp $
+
+  07 Dec 2014; Hans de Graaff <graaff@gentoo.org> -ruby-1.9.3_p550.ebuild,
+  -ruby-2.0.0_p594.ebuild, -ruby-2.0.0_p594-r1.ebuild, -ruby-2.1.4.ebuild,
+  -ruby-2.1.4-r1.ebuild:
+  Cleanup for security bug 529216.
 
   06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> ruby-1.9.3_p551.ebuild,
   ruby-2.0.0_p598.ebuild:
