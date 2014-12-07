@@ -1,6 +1,11 @@
 # ChangeLog for media-video/guvcview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.41 2014/03/19 08:12:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.42 2014/12/07 10:16:27 maksbotan Exp $
+
+*guvcview-2.0.1 (07 Dec 2014)
+
+  07 Dec 2014; Maxim Koltsov <maksbotan@gentoo.org> +guvcview-2.0.1.ebuild:
+  Bump to 2.0.1
 
 *guvcview-1.7.3 (19 Mar 2014)
 

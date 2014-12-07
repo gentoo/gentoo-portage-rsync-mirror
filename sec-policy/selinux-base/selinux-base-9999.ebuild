@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.13 2014/12/05 09:08:17 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.14 2014/12/07 10:06:49 swift Exp $
 EAPI="5"
 
 inherit eutils
@@ -57,14 +57,6 @@ src_prepare() {
 
 	cd "${S}/refpolicy"
 	make bare
-	# Fix bug 257111 - Correct the initial sid for cron-started jobs in the
-	# system_r role
-	sed -i -e 's:system_crond_t:system_cronjob_t:g' \
-		"${S}/refpolicy/config/appconfig-standard/default_contexts"
-	sed -i -e 's|system_r:cronjob_t|system_r:system_cronjob_t|g' \
-		"${S}/refpolicy/config/appconfig-mls/default_contexts"
-	sed -i -e 's|system_r:cronjob_t|system_r:system_cronjob_t|g' \
-		"${S}/refpolicy/config/appconfig-mcs/default_contexts"
 
 	epatch_user
 }
