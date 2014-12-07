@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/chameleon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.25 2014/05/26 08:22:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.26 2014/12/07 08:34:09 idella4 Exp $
+
+*chameleon-2.18 (07 Dec 2014)
+
+  07 Dec 2014; Ian Delaney <idella4@gentoo.org> +chameleon-2.18.ebuild,
+  -chameleon-2.10.ebuild, -chameleon-2.11-r1.ebuild, -chameleon-2.11.ebuild,
+  -chameleon-2.12.ebuild, -chameleon-2.13.ebuild, -chameleon-2.14.ebuild,
+  -chameleon-2.15.ebuild, -chameleon-2.8.3-r1.ebuild, -chameleon-2.9.2.ebuild,
+  chameleon-2.16.ebuild:
+  bump; clean old python impl, rm old
 
 *chameleon-2.16 (26 May 2014)
 
