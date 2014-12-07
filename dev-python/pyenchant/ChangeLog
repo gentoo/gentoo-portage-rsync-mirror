@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyenchant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.49 2014/12/04 10:00:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.50 2014/12/07 12:00:56 ago Exp $
+
+  07 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pyenchant-1.6.6.ebuild:
+  Stable for ppc, wrt bug #530302
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pyenchant-1.6.6.ebuild:
   Stable for amd64, wrt bug #530302

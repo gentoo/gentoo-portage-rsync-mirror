@@ -1,4 +1,10 @@
 
+*selinux-pan-2.20141203-r1 (07 Dec 2014)
+
+  07 Dec 2014; Jason Zaman <perfinion@gentoo.org>
+  +selinux-pan-2.20141203-r1.ebuild:
+  Release of 2.20141203-r1
+
   27 Nov 2014; Sven Vermeulen <swift@gentoo.org> selinux-pan-9999.ebuild:
   Do not pull in DEPEND in RDEPEND unnecessary
 
