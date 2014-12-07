@@ -1,6 +1,16 @@
 # ChangeLog for app-text/code2html
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.27 2014/08/06 07:09:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.29 2014/12/07 17:19:50 dilfridge Exp $
+
+  07 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  code2html-0.9.1-r2.ebuild:
+  EAPI bump
+
+*code2html-0.9.1-r2 (07 Dec 2014)
+
+  07 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +code2html-0.9.1-r2.ebuild, +files/code2html-0.9.1-scalar.patch:
+  Fix warnings with newer Perl, bug 523610
 
   06 Aug 2014; Patrick Lauer <patrick@gentoo.org> code2html-0.9.1-r1.ebuild:
   Make description more repoman-happy

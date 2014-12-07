@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.335 2014/12/06 06:02:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.336 2014/12/07 17:03:28 floppym Exp $
+
+  07 Dec 2014; Mike Gilbert <floppym@gentoo.org>
+  -files/grub-2.02_beta2-bash-completions.patch, grub-2.02_beta2-r5.ebuild:
+  Drop bash-completion patch until uptream approves of something.
 
   06 Dec 2014; Patrick Lauer <patrick@gentoo.org> grub-2.02_beta2-r5.ebuild:
   Remove unneeded blank line

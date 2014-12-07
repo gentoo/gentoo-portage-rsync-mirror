@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r5.ebuild,v 1.3 2014/12/06 06:02:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r5.ebuild,v 1.4 2014/12/07 17:03:28 floppym Exp $
 
 EAPI=5
 
@@ -162,8 +162,6 @@ src_prepare() {
 		# fix texinfo file name, bug 416035
 		sed -i -e 's/^\* GRUB:/* GRUB2:/' -e 's/(grub)/(grub2)/' docs/grub.texi || die
 	fi
-
-	epatch "${FILESDIR}"/${P}-bash-completions.patch
 
 	epatch_user
 
