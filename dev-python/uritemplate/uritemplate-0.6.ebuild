@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/uritemplate/uritemplate-0.6.ebuild,v 1.1 2014/12/06 15:10:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/uritemplate/uritemplate-0.6.ebuild,v 1.2 2014/12/07 09:25:07 jlec Exp $
 
 EAPI=5
 
@@ -17,5 +17,7 @@ LICENSE="Apache-2.0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]"
+RDEPEND="
+	dev-python/simplejson[${PYTHON_USEDEP}]
+	!<=dev-python/google-api-python-client-1.3"
 DEPEND="${RDEPEND}"

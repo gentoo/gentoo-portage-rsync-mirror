@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gtksourceview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtksourceview/ChangeLog,v 1.61 2014/05/21 01:36:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtksourceview/ChangeLog,v 1.62 2014/12/07 09:20:25 naota Exp $
+
+*ruby-gtksourceview-2.2.3 (07 Dec 2014)
+
+  07 Dec 2014; Naohiro Aota <naota@gentoo.org> +ruby-gtksourceview-2.2.3.ebuild:
+  version bump
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> ruby-gtksourceview-1.1.8.ebuild,
   ruby-gtksourceview-1.2.6.ebuild:
