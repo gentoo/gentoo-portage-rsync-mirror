@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gdk3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdk3/ChangeLog,v 1.5 2014/08/17 10:13:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdk3/ChangeLog,v 1.6 2014/12/07 05:36:39 naota Exp $
+
+*ruby-gdk3-2.2.3 (07 Dec 2014)
+
+  07 Dec 2014; Naohiro Aota <naota@gentoo.org> +ruby-gdk3-2.2.3.ebuild:
+  version bump
 
   17 Aug 2014; Anthony G. Basile <blueness@gentoo.org> ruby-gdk3-1.2.6.ebuild,
   ruby-gdk3-2.0.2.ebuild, ruby-gdk3-2.1.0.ebuild, ruby-gdk3-2.2.0.ebuild:
