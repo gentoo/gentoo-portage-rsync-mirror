@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.160 2014/11/25 11:57:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.161 2014/12/07 14:41:14 mrueg Exp $
+
+*rake-10.4.2 (07 Dec 2014)
+
+  07 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +rake-10.4.2.ebuild:
+  Version bump.
 
 *rake-10.4.0 (25 Nov 2014)
 
