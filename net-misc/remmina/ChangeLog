@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.61 2014/10/17 15:54:37 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.62 2014/12/07 09:45:36 maksbotan Exp $
+
+  07 Dec 2014; Maxim Koltsov <maksbotan@gentoo.org> remmina-1.1.1.ebuild,
+  remmina-9999.ebuild:
+  Depend on <freerdp-1.2, bugs #529666, #481668 and #481574.
 
 *remmina-1.1.1 (17 Oct 2014)
 
