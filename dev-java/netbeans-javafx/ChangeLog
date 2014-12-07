@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/netbeans-javafx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javafx/ChangeLog,v 1.13 2014/03/23 18:57:12 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javafx/ChangeLog,v 1.14 2014/12/07 17:57:27 fordfrog Exp $
+
+*netbeans-javafx-8.0.2 (07 Dec 2014)
+
+  07 Dec 2014; Miroslav Šulc <fordfrog@gentoo.org>
+  +netbeans-javafx-8.0.2.ebuild:
+  bumped to version 8.0.2 in 8.0 slot
 
 *netbeans-javafx-8.0 (23 Mar 2014)
 
