@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Keywords/B-Keywords-1.130.0-r1.ebuild,v 1.2 2014/11/21 12:12:30 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Keywords/B-Keywords-1.130.0-r1.ebuild,v 1.3 2014/12/07 19:19:16 zlogene Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="Lists of reserved barewords and symbol names"
 # GPL-2 - no later clause
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE=""
 
 SRC_TEST="do"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PPIx-Regexp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/ChangeLog,v 1.47 2014/11/21 12:12:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/ChangeLog,v 1.48 2014/12/07 19:19:16 zlogene Exp $
+
+  07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> PPIx-Regexp-0.33.0.ebuild:
+  Add ~ppc64 keyword
 
   21 Nov 2014; Tobias Klausmann <klausman@gentoo.org>
   PPIx-Regexp-0.33.0.ebuild:

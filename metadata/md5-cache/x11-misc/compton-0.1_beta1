@@ -10,5 +10,5 @@ RDEPEND=python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/py
 REQUIRED_USE=|| ( python_targets_python3_3 )
 SLOT=0
 SRC_URI=https://github.com/chjj/compton/archive/v0.1_beta1.tar.gz -> compton-0.1_beta1.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	b63f5ef61876823ab0bd05d867697d75	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	a2dac9ffff107078f25147aac958a68f	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b77697a636aae8c5f78e7edd702c6305

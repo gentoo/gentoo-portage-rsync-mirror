@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.79 2014/11/22 02:38:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.80 2014/12/07 19:15:19 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -216,14 +216,6 @@ _python_set_globals() {
 	fi
 }
 _python_set_globals
-
-# @ECLASS-VARIABLE: DISTUTILS_JOBS
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# The number of parallel jobs to run for distutils-r1 parallel builds.
-# If unset, the job-count in ${MAKEOPTS} will be used.
-#
-# This variable is intended to be set in make.conf.
 
 # @FUNCTION: _python_validate_useflags
 # @INTERNAL
@@ -725,15 +717,16 @@ python_foreach_impl() {
 # For each command being run, EPYTHON, PYTHON and BUILD_DIR are set
 # locally, and the former two are exported to the command environment.
 #
-# Multiple invocations of the command will be run in parallel, up to
-# DISTUTILS_JOBS (defaulting to '-j' option argument from MAKEOPTS).
+# This command used to be the parallel variant of python_foreach_impl.
+# However, the parallel run support has been removed to simplify
+# the eclasses and make them more predictable and therefore it is now
+# only a deprecated alias to python_foreach_impl.
 python_parallel_foreach_impl() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local MULTIBUILD_JOBS=${MULTIBUILD_JOBS:-${DISTUTILS_JOBS}}
 	local MULTIBUILD_VARIANTS
 	_python_obtain_impls
-	multibuild_parallel_foreach_variant _python_multibuild_wrapper "${@}"
+	multibuild_foreach_variant _python_multibuild_wrapper "${@}"
 }
 
 # @FUNCTION: python_setup

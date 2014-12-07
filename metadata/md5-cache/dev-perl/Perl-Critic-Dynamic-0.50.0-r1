@@ -3,10 +3,10 @@ DEPEND=dev-perl/Perl-Critic >=dev-perl/Devel-Symdump-2.08 dev-perl/Readonly virt
 DESCRIPTION=Base class for dynamic Policies
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Perl-Critic-Dynamic/
-KEYWORDS=~alpha ~amd64 ~ppc ~x86
+KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-perl/Perl-Critic >=dev-perl/Devel-Symdump-2.08 dev-perl/Readonly dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TH/THALJEF/Perl-Critic-Dynamic-0.05.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	28ca2b834dd6b64c9179af421c4d763e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=f2f2faff0da382d5472d8c3acf8d7770
+_md5_=7d814fafeabd62e148f5103a892c2c81

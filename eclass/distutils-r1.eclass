@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.103 2014/11/24 01:39:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.104 2014/12/07 19:15:19 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -180,20 +180,6 @@ fi
 # on the sources directly, prepending setup.py arguments with
 # 'build --build-base ${BUILD_DIR}' to enforce keeping & using built
 # files in the specific root.
-
-# @ECLASS-VARIABLE: DISTUTILS_NO_PARALLEL_BUILD
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# If set to a non-null value, the parallel build feature will
-# be disabled.
-#
-# When parallel builds are used, the implementation-specific sub-phases
-# for selected Python implementation will be run in parallel. This will
-# increase build efficiency with distutils which does not do parallel
-# builds.
-#
-# This variable can be used to disable the afore-mentioned feature
-# in case it causes issues with the package.
 
 # @ECLASS-VARIABLE: mydistutilsargs
 # @DEFAULT_UNSET
@@ -607,13 +593,6 @@ distutils-r1_run_phase() {
 	fi
 	local -x PYTHONPATH="${BUILD_DIR}/lib:${PYTHONPATH}"
 
-	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
-		local -x TMPDIR=${T}/${EPYTHON}
-		local -x HOME=${TMPDIR}/home
-
-		mkdir -p "${TMPDIR}" "${HOME}" || die
-	fi
-
 	# Set up build environment, bug #513664.
 	local -x AR=${AR} CC=${CC} CPP=${CPP} CXX=${CXX}
 	tc-export AR CC CPP CXX
@@ -672,12 +651,7 @@ _distutils-r1_run_foreach_impl() {
 	set -- distutils-r1_run_phase "${@}"
 
 	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
-		if [[ ${DISTUTILS_NO_PARALLEL_BUILD} || ${DISTUTILS_SINGLE_IMPL} ]]
-		then
-			python_foreach_impl "${@}"
-		else
-			python_parallel_foreach_impl "${@}"
-		fi
+		python_foreach_impl "${@}"
 	else
 		if [[ ! ${EPYTHON} ]]; then
 			die "EPYTHON unset, python-single-r1_pkg_setup not called?!"

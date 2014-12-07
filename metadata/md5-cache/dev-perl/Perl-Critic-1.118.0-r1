@@ -4,10 +4,10 @@ DESCRIPTION=Critique Perl source code for best-practices
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Perl-Critic/
 IUSE=test
-KEYWORDS=~alpha amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris
+KEYWORDS=~alpha amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=virtual/perl-Module-Pluggable-3.1 >=dev-perl/Config-Tiny-2 >=dev-perl/Email-Address-1.88.9 dev-perl/List-MoreUtils dev-perl/IO-String dev-perl/perltidy >=dev-perl/PPI-1.215 dev-perl/PPIx-Utilities >=dev-perl/PPIx-Regexp-0.27.0 dev-perl/Pod-Spell >=dev-perl/set-scalar-1.20 dev-perl/File-Which dev-perl/B-Keywords dev-perl/Readonly dev-perl/Exception-Class dev-perl/String-Format >=virtual/perl-version-0.77 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TH/THALJEF/Perl-Critic-1.118.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	28ca2b834dd6b64c9179af421c4d763e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=be0d9d82917ee1992e0d135f404568e3
+_md5_=6f696b9e211a39d163ea14c30d0c92a0

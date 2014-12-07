@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Cycle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Cycle/ChangeLog,v 1.33 2014/11/21 12:13:16 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Cycle/ChangeLog,v 1.34 2014/12/07 19:19:16 zlogene Exp $
+
+  07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> Devel-Cycle-1.110.0-r1.ebuild:
+  Add ~ppc64 keyword
 
   21 Nov 2014; Tobias Klausmann <klausman@gentoo.org>
   Devel-Cycle-1.110.0-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-SubCalls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SubCalls/ChangeLog,v 1.28 2014/11/21 12:13:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SubCalls/ChangeLog,v 1.29 2014/12/07 19:19:16 zlogene Exp $
+
+  07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Test-SubCalls-1.90.0-r1.ebuild:
+  Add ~ppc64 keyword
 
   21 Nov 2014; Tobias Klausmann <klausman@gentoo.org>
   Test-SubCalls-1.90.0-r1.ebuild:

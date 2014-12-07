@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.2 2014/12/07 16:57:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.4 2014/12/07 19:23:57 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
-inherit distutils-r1 flag-o-matic virtualx
+inherit distutils-r1 eutils flag-o-matic virtualx
 
 DESCRIPTION="Powerful data structures for data analysis and statistics"
 HOMEPAGE="http://pandas.sourceforge.net/"
@@ -17,11 +17,11 @@ LICENSE="BSD"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples excel html test R"
 
-_EXTRA_DEPEND="
-	>=dev-python/google-api-python-client-1.2.0[${PYTHON_USEDEP}]
+EXTRA_DEPEND="
+	>=dev-python/google-api-python-client-1.2.0[$(python_gen_usedep python2_7 pypy)]
 	<dev-python/openpyxl-2[${PYTHON_USEDEP}]
 	dev-python/pymysql[${PYTHON_USEDEP}]
-	>=dev-python/python-gflags[${PYTHON_USEDEP}]
+	dev-python/python-gflags[$(python_gen_usedep python2_7 pypy)]
 	dev-python/psycopg:2[${PYTHON_USEDEP}]
 	dev-python/statsmodels[${PYTHON_USEDEP}]
 	dev-python/sqlalchemy[${PYTHON_USEDEP}]

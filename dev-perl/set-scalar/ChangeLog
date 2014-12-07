@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/set-scalar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.53 2014/08/22 17:27:20 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.54 2014/12/07 19:19:16 zlogene Exp $
+
+  07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> set-scalar-1.280.0.ebuild:
+  Add ~ppc64 keyword
 
 *set-scalar-1.260.0-r1 (22 Aug 2014)
 
