@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/stem/stem-1.2.2.ebuild,v 1.4 2014/11/15 19:26:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/stem/stem-1.2.2.ebuild,v 1.5 2014/12/07 01:51:14 blueness Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -11,7 +11,7 @@ DESCRIPTION="Stem is a Python controller library for Tor"
 HOMEPAGE="https://stem.torproject.org"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.bz2"
 
-LICENSE="GPL-3"
+LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 IUSE="test"
