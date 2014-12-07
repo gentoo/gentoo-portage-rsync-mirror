@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/CGI-Ajax
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Ajax/ChangeLog,v 1.1 2014/12/07 15:40:31 dilfridge Exp $
+
+*CGI-Ajax-0.707.0 (07 Dec 2014)
+
+  07 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +CGI-Ajax-0.707.0.ebuild, +metadata.xml:
+  New package, imported from perl overlay, bug 261775
+
