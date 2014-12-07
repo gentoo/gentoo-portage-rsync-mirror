@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nose-cover3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-cover3/ChangeLog,v 1.7 2014/04/08 02:50:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-cover3/ChangeLog,v 1.8 2014/12/07 06:09:13 idella4 Exp $
+
+  07 Dec 2014; Ian Delaney <idella4@gentoo.org> nose-cover3-0.1.0-r1.ebuild:
+  clean old impls, add pypy3
 
   08 Apr 2014; Ian Delaney <idella4@gentoo.org> -nose-cover3-0.1.0.ebuild,
   nose-cover3-0.1.0-r1.ebuild:

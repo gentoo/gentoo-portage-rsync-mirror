@@ -1,6 +1,19 @@
 # ChangeLog for games-strategy/megaglest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.24 2014/12/05 10:16:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.25 2014/12/07 06:09:45 mr_bones_ Exp $
+
+  07 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/megaglest-3.6.0.3-as-needed.patch,
+  -files/megaglest-3.6.0.3-build.patch, -files/megaglest-3.6.0.3-gcc-4.7.patch,
+  -files/megaglest-3.6.0.3-static-build.patch,
+  -files/megaglest-3.7.0-as-needed.patch, -files/megaglest-3.7.0-cmake.patch,
+  -files/megaglest-3.7.0-static-build.patch,
+  -files/megaglest-3.7.1-as-needed.patch, -files/megaglest-3.7.1-gcc47.patch,
+  -files/megaglest-3.7.1-miniupnpc-1.8.patch,
+  -files/megaglest-3.7.1-static-build.patch,
+  -files/megaglest-3.9.0.4-static-build.patch, -megaglest-3.6.0.3.ebuild,
+  -megaglest-3.7.0.ebuild, -megaglest-3.7.1.ebuild, -megaglest-3.9.0.4.ebuild:
+  old
 
   05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> megaglest-3.9.1-r1.ebuild:
   Stable for x86, wrt bug #518196
