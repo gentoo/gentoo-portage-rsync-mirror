@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdupes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.50 2014/12/07 11:25:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.51 2014/12/07 21:41:47 nimiux Exp $
+
+  07 Dec 2014; Chema Alonso <nimiux@gentoo.org> fdupes-1.51.ebuild:
+  Stable for amd64 wrt bug #531778
 
   07 Dec 2014; Jeroen Roovers <jer@gentoo.org> fdupes-1.51.ebuild:
   Stable for HPPA (bug #531778).

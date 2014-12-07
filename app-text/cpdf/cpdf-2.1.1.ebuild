@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cpdf/cpdf-2.1.1.ebuild,v 1.1 2014/12/07 18:41:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cpdf/cpdf-2.1.1.ebuild,v 1.2 2014/12/07 21:54:53 radhermit Exp $
 
 EAPI=5
 
 inherit findlib
 
 DESCRIPTION="PDF command line tools"
-HOMEPAGE="https://github.com/johnwhitington/cpdf-source/"
+HOMEPAGE="http://community.coherentpdf.com/ https://github.com/johnwhitington/cpdf-source/"
 SRC_URI="https://github.com/johnwhitington/cpdf-source/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 # BSD is only for xmlm.ml
