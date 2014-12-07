@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-2.0.1.ebuild,v 1.1 2014/12/07 10:16:27 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-2.0.1.ebuild,v 1.2 2014/12/07 20:32:26 maksbotan Exp $
 
 EAPI=5
 inherit autotools
@@ -18,7 +18,7 @@ IUSE="gsl pulseaudio"
 
 RDEPEND=">=dev-libs/glib-2.10
 	media-libs/libpng:0=
-	>=media-libs/libsdl-1.2.10
+	media-libs/libsdl2
 	media-libs/libv4l
 	>=media-libs/portaudio-19_pre
 	virtual/ffmpeg
