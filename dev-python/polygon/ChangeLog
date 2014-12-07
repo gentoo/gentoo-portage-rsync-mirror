@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/polygon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.16 2014/12/05 10:14:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.17 2014/12/07 12:06:52 ago Exp $
+
+  07 Dec 2014; Agostino Sarubbo <ago@gentoo.org> polygon-3.0.7.ebuild:
+  Stable for ppc, wrt bug #531090
 
   05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> polygon-3.0.7.ebuild:
   Stable for x86, wrt bug #531090

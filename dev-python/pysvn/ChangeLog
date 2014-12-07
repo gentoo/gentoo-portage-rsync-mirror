@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.43 2014/12/05 10:14:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.44 2014/12/07 12:03:13 ago Exp $
+
+  07 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pysvn-1.7.9.ebuild:
+  Stable for ppc, wrt bug #530576
 
   05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pysvn-1.7.9.ebuild:
   Stable for x86, wrt bug #530576

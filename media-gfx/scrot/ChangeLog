@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.29 2014/12/06 23:21:18 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.30 2014/12/07 12:09:30 ago Exp $
+
+  07 Dec 2014; Agostino Sarubbo <ago@gentoo.org> scrot-0.8_p13.ebuild:
+  Stable for ppc, wrt bug #524822
 
   06 Dec 2014; Chema Alonso <nimiux@gentoo.org> scrot-0.8_p13.ebuild:
   Stable for amd64 wrt bug #524822

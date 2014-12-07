@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.322 2014/11/28 18:13:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.323 2014/12/07 12:30:33 ago Exp $
+
+  07 Dec 2014; Agostino Sarubbo <ago@gentoo.org> systemd-215-r3.ebuild:
+  Stable for ppc64/ia64/sparc, wrt bug #517120
 
 *systemd-217-r3 (28 Nov 2014)
 
