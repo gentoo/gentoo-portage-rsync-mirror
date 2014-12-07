@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.29 2014/12/05 09:23:03 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.30 2014/12/07 11:13:35 perfinion Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -86,14 +86,14 @@ inherit eutils ${extra_eclass}
 
 IUSE=""
 
-HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
+HOMEPAGE="https://wiki.gentoo.org/wiki/Project:SELinux"
 if [[ -n ${BASEPOL} ]] && [[ "${BASEPOL}" != "9999" ]];
 then
-	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
+	SRC_URI="https://raw.githubusercontent.com/wiki/TresysTechnology/refpolicy/files/refpolicy-${PV}.tar.bz2
 		http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-${BASEPOL}.tar.bz2"
 elif [[ "${BASEPOL}" != "9999" ]];
 then
-	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2"
+	SRC_URI="https://raw.githubusercontent.com/wiki/TresysTechnology/refpolicy/files/refpolicy-${PV}.tar.bz2"
 else
 	SRC_URI=""
 fi

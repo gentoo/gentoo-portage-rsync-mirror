@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdupes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.49 2014/12/06 08:08:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.50 2014/12/07 11:25:55 jer Exp $
+
+  07 Dec 2014; Jeroen Roovers <jer@gentoo.org> fdupes-1.51.ebuild:
+  Stable for HPPA (bug #531778).
 
   06 Dec 2014; Justin Lecher <jlec@gentoo.org> fdupes-1.51.ebuild:
   ADd new HOME of the project, thanks John Wyant for contacting me

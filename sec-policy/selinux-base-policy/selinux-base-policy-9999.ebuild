@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-9999.ebuild,v 1.19 2014/12/05 09:10:41 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-9999.ebuild,v 1.20 2014/12/07 11:10:16 perfinion Exp $
 EAPI="5"
 
 inherit eutils
@@ -18,7 +18,7 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 else
-	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
+	SRC_URI="https://raw.githubusercontent.com/wiki/TresysTechnology/refpolicy/files/refpolicy-${PV}.tar.bz2
 			http://dev.gentoo.org/~swift/patches/${PN}/patchbundle-${PN}-${PVR}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
 fi

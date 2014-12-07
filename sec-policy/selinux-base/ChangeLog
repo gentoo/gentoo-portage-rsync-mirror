@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/ChangeLog,v 1.58 2014/12/07 10:06:49 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/ChangeLog,v 1.59 2014/12/07 11:07:57 perfinion Exp $
+
+  07 Dec 2014; Jason Zaman <perfinion@gentoo.org> selinux-base-9999.ebuild:
+  update SRC_URI
 
   07 Dec 2014; Sven Vermeulen <swift@gentoo.org> selinux-base-9999.ebuild:
   Clean up sed commands that are no longer needed (bug 257111 is fixed upstream)
