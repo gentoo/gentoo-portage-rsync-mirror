@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Role-Tiny
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Role-Tiny/ChangeLog,v 1.18 2014/11/22 19:54:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Role-Tiny/ChangeLog,v 1.19 2014/12/07 12:56:29 zlogene Exp $
+
+  07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> Role-Tiny-1.3.2.ebuild:
+  Add ~ppc keyword
 
   22 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> Role-Tiny-1.3.2.ebuild:
   amd64/x86 stable wrt bug #526674

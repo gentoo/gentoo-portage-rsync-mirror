@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.14.2.ebuild,v 1.1 2014/10/25 19:58:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.14.2.ebuild,v 1.2 2014/12/07 12:38:57 mrueg Exp $
 
 EAPI=5
 
@@ -14,7 +14,6 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	wallpapers? ( $(add_kdebase_dep kde-wallpapers) )
-	$(add_kdebase_dep oxygen-icons)
 	x11-themes/hicolor-icon-theme
 "
 

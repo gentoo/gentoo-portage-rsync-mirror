@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/netrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/netrc/ChangeLog,v 1.2 2014/10/21 05:35:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/netrc/ChangeLog,v 1.3 2014/12/07 12:43:55 mrueg Exp $
+
+*netrc-0.9.0 (07 Dec 2014)
+
+  07 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +netrc-0.9.0.ebuild:
+  Version bump.
 
 *netrc-0.8.0 (21 Oct 2014)
 
@@ -12,4 +17,3 @@
   09 Jun 2014; Hans de Graaff <graaff@gentoo.org> +netrc-0.7.7.ebuild,
   +metadata.xml:
   Initial import. Dependency for forthcoming heroku CLI client.
-

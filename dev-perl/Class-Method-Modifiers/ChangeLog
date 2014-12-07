@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Method-Modifiers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Method-Modifiers/ChangeLog,v 1.16 2014/11/22 19:59:07 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Method-Modifiers/ChangeLog,v 1.17 2014/12/07 12:54:31 zlogene Exp $
+
+  07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Class-Method-Modifiers-2.30.0.ebuild:
+  Add ~ppc keyword
 
   22 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
   Class-Method-Modifiers-2.30.0.ebuild:

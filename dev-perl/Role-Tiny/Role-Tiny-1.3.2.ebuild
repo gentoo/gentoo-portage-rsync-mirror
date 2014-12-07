@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Role-Tiny/Role-Tiny-1.3.2.ebuild,v 1.2 2014/11/22 19:54:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Role-Tiny/Role-Tiny-1.3.2.ebuild,v 1.3 2014/12/07 12:56:29 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Roles. Like a nouvelle cuisine portion size slice of Moose"
 
 SLOT="0"
-KEYWORDS="amd64 x86 ~ppc-macos ~x86-solaris"
+KEYWORDS="amd64 ~ppc x86 ~ppc-macos ~x86-solaris"
 IUSE="test"
 
 DEPEND="

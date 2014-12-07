@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.337 2014/11/16 12:21:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.338 2014/12/07 12:38:57 mrueg Exp $
+
+  07 Dec 2014; Manuel Rüger <mrueg@gentoo.org> kdebase-data-4.12.5.ebuild,
+  kdebase-data-4.14.2.ebuild, kdebase-data-4.14.3.ebuild:
+  Drop dep on kde-base/oxygen-icons. This already exists via kde4-base eclass.
 
 *kdebase-data-4.14.3 (16 Nov 2014)
 

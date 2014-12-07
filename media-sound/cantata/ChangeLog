@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cantata
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/ChangeLog,v 1.28 2014/07/24 15:13:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/ChangeLog,v 1.29 2014/12/07 12:41:07 mrueg Exp $
+
+  07 Dec 2014; Manuel Rüger <mrueg@gentoo.org> cantata-1.3.3.ebuild,
+  cantata-1.3.4.ebuild:
+  Update dep on oxygen-icons
 
   24 Jul 2014; Johannes Huber <johu@gentoo.org> cantata-1.3.3.ebuild,
   cantata-1.3.4.ebuild, metadata.xml:

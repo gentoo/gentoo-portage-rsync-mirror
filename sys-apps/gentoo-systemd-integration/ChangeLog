@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gentoo-systemd-integration
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.31 2014/11/18 19:25:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.32 2014/12/07 12:32:54 ago Exp $
+
+  07 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  gentoo-systemd-integration-4.ebuild:
+  Stable for ppc/ppc64, wrt bug #506824
 
   18 Nov 2014; Michał Górny <mgorny@gentoo.org>
   gentoo-systemd-integration-4.ebuild, gentoo-systemd-integration-9999.ebuild:
