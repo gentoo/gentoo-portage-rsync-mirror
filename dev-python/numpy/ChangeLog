@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.248 2014/12/07 12:06:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.249 2014/12/07 20:27:14 maekke Exp $
+
+  07 Dec 2014; Markus Meier <maekke@gentoo.org> numpy-1.9.0-r1.ebuild:
+  arm stable, bug #530710
 
   07 Dec 2014; Agostino Sarubbo <ago@gentoo.org> numpy-1.9.0-r1.ebuild:
   Stable for ppc, wrt bug #530710

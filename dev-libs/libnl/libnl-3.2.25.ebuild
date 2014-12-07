@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.25.ebuild,v 1.4 2014/12/03 08:55:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.25.ebuild,v 1.5 2014/12/07 20:29:39 maekke Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} python3_{2,3,4} )
@@ -16,7 +16,7 @@ SRC_URI="
 "
 LICENSE="LGPL-2.1 utils? ( GPL-2 )"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 arm ~arm64 hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="static-libs python utils"
 
 RDEPEND="python? ( ${PYTHON_DEPS} )

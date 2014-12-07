@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.72 2014/12/06 08:49:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.73 2014/12/07 20:04:17 nimiux Exp $
+
+  07 Dec 2014; Chema Alonso <nimiux@gentoo.org> poppler-data-0.4.7.ebuild:
+  Stable for amd64 wrt bug #530520
 
   06 Dec 2014; Jeroen Roovers <jer@gentoo.org> poppler-data-0.4.7.ebuild:
   Stable for HPPA (bug #530520).

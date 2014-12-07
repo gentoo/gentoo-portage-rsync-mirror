@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.9.ebuild,v 1.6 2014/07/29 17:26:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.9.ebuild,v 1.7 2014/12/07 20:19:57 maksbotan Exp $
 
 EAPI="5"
 
@@ -39,7 +39,7 @@ fi
 
 RDEPEND="
 	app-arch/bzip2
-	>=dev-libs/boost-1.38
+	>=dev-libs/boost-1.38:=
 	>=dev-libs/openssl-0.9.8
 	sys-apps/attr
 	sys-libs/zlib
