@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-2.0.1-r1.ebuild,v 1.2 2014/11/20 12:53:26 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-2.0.1-r1.ebuild,v 1.3 2014/12/06 23:42:11 tamiko Exp $
 
 EAPI=5
 
@@ -94,12 +94,13 @@ RESTRICT="test"
 S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
+	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
 	"${FILESDIR}/${PN}-1.6.0-dont-compress-manpages.patch"
 	"${FILESDIR}/${PN}-1.6.0-fix-install-perms.patch"
-	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
 	"${FILESDIR}/${P}-rename-systemd-service-files.patch"
 	"${FILESDIR}/${P}-fix-compilation.patch"
 	"${FILESDIR}/${P}-xinetd-installation-fix.patch"
+	"${FILESDIR}/${P}-fix-linkage-to-gnutls.patch"
 )
 
 MULTILIB_CHOST_TOOLS=(

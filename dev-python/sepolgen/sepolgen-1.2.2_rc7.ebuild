@@ -1,15 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.2.2_rc5.ebuild,v 1.1 2014/10/29 17:34:11 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.2.2_rc7.ebuild,v 1.1 2014/12/06 23:32:02 perfinion Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_4 )
 
 inherit python-r1 eutils
 
 MY_P="${P//_/-}"
-
-PATCHBUNDLE="1"
 
 DESCRIPTION="SELinux policy generation library"
 HOMEPAGE="https://github.com/SELinuxProject/selinux/wiki"
@@ -53,6 +51,7 @@ src_test() {
 src_install() {
 	installation() {
 		emake DESTDIR="${D}" PYTHONLIBDIR="$(python_get_sitedir)" install
+		python_optimize
 	}
 	python_foreach_impl installation
 
