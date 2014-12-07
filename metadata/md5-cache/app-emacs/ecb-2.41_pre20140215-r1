@@ -4,10 +4,10 @@ DESCRIPTION=Source code browser for Emacs
 EAPI=5
 HOMEPAGE=http://ecb.sourceforge.net/
 IUSE=java
-KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos
+KEYWORDS=amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=GPL-2+
 RDEPEND=java? ( app-emacs/jde ) >=virtual/emacs-23
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~ulm/distfiles/ecb-2.41_pre20140215.tar.xz
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=164ac3e51e410fc527ce0c65e7b54a1f
+_md5_=788939e15dc6b7b024001c731930d736

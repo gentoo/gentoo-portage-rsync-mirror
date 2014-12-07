@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.58 2014/11/12 18:22:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.59 2014/12/07 22:30:08 nimiux Exp $
+
+  07 Dec 2014; Chema Alonso <nimiux@gentoo.org> ecb-2.41_pre20140215-r1.ebuild:
+  Stable for amd64 wrt bug #530530
 
 *ecb-2.41_pre20140215-r1 (12 Nov 2014)
 
