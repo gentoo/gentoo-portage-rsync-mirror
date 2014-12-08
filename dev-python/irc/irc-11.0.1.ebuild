@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/irc-8.9.1.ebuild,v 1.3 2014/08/10 21:12:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/irc-11.0.1.ebuild,v 1.1 2014/12/07 23:51:14 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit distutils-r1
 
@@ -16,26 +16,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples test"
 
+RDEPEND="
+	!>=dev-python/python-irclib-3.2.2[${PYTHON_USEDEP}]
+	dev-python/six[${PYTHON_USEDEP}]
+	dev-python/jaraco-utils[${PYTHON_USEDEP}]"
+
 DEPEND="app-arch/unzip
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/jaraco-utils[${PYTHON_USEDEP}]
+	>=dev-python/hgtools-5[${PYTHON_USEDEP}]
+	dev-python/pytest-runner[${PYTHON_USEDEP}]
+	test? ( ${RDEPEND}
 		dev-python/pytest[${PYTHON_USEDEP}]
-		dev-python/mock[${PYTHON_USEDEP}] )"
+		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7) )"
 
-RDEPEND="!>=dev-python/python-irclib-3.2.2[${PYTHON_USEDEP}]
-	dev-python/six[${PYTHON_USEDEP}]"
-
-PATCHES=(
-	"${FILESDIR}/irc-8.5.1-setup_requires.patch"
-)
-
-python_prepare_all() {
-	# Don't rely on hgtools for version
-	sed -e "s/use_hg_version=True/version=\"${PV}\"/" -i setup.py || die
-	sed -e "/^tag_/d" -i setup.cfg || die
-
-	distutils-r1_python_prepare_all
-}
+# A doc folder is present however it appears to be used for doctests
 
 python_test() {
 	py.test irc/tests || die "Tests failed under ${EPYTHON}"

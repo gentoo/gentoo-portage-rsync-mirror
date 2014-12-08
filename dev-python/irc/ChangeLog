@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/irc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.28 2014/11/08 04:40:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.29 2014/12/07 23:51:14 idella4 Exp $
+
+*irc-11.0.1 (07 Dec 2014)
+
+  07 Dec 2014; Ian Delaney <idella4@gentoo.org> +irc-11.0.1.ebuild,
+  -files/irc-8.5.1-setup_requires.patch, -irc-10.0-r1.ebuild, -irc-8.9.1.ebuild:
+  bump; rm dis-used patch, old versions
 
 *irc-10.0-r1 (08 Nov 2014)
 

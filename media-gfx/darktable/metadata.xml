@@ -11,6 +11,7 @@
 		<flag name="graphicsmagick">Use <pkg>media-gfx/graphicsmagick</pkg> for image importing</flag>
 		<flag name="flickr">Add support for uploading photos to flickr</flag>
 		<flag name="geo">Enable geotagging support</flag>
+		<flag name="libsecret">Enable libsecret support to store login credentials</flag>
 		<flag name="opencl">Enable opencl support</flag>
 		<flag name="pax_kernel">Triggers paxmarking of main darktable binary</flag>
 		<flag name="rawspeed">Enable the rawspeed backend</flag>
