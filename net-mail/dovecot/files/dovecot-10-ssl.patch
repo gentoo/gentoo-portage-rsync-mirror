@@ -1,19 +1,15 @@
-# bug 508552
---- doc/example-config/conf.d/10-ssl.conf	2013-11-24 13:37:39.000000000 +0000
-+++ doc/example-config/conf.d/10-ssl.conf	2014-05-12 14:42:26.000000000 +0000
-@@ -51,6 +51,15 @@
+--- doc/example-config/conf.d/10-ssl.conf	2014-12-08 07:58:21.000000000 +0000
++++ doc/example-config/conf.d/10-ssl.conf	2014-12-08 08:02:19.000000000 +0000
+@@ -49,6 +49,12 @@
+ #ssl_protocols = !SSLv2
+ 
  # SSL ciphers to use
++# ###############
++# Added by Gentoo
++# You are encouraged to change the cipher list to
++#ssl_cipher_list = DEFAULT:!EXPORT:!LOW:!MEDIUM:!MD5
++# if you are not required to support legacy mail clients.
++# ###############
  #ssl_cipher_list = ALL:!LOW:!SSLv2:!EXP:!aNULL
  
-+# ##########################################
-+# You are strongly encouraged to change the above two settings to
-+#
-+#ssl_protocols = !SSLv2 !SSLv3
-+#ssl_cipher_list = ALL:!EXPORT:!LOW:!MEDIUM:!aNULL:+RC4:@STRENGTH
-+#
-+# if you are not required to support legacy mail clients.
-+# ##########################################
-+
  # Prefer the server's order of ciphers over client's.
- #ssl_prefer_server_ciphers = no
- 

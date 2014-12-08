@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.498 2014/12/04 08:55:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.499 2014/12/08 08:14:44 eras Exp $
+
+  08 Dec 2014; Eray Aslan <eras@gentoo.org> files/dovecot-10-ssl.patch:
+  Change cipher list recommendation
 
 *dovecot-2.2.15-r3 (04 Dec 2014)
 
