@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1.3-r1.ebuild,v 1.3 2014/11/04 03:35:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1.3-r1.ebuild,v 1.4 2014/12/08 16:34:07 kensington Exp $
 
 EAPI=5
 
@@ -23,6 +23,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kdebase-data)
+	$(add_kdebase_dep konsole)
 	|| (
 		$(add_kdebase_dep okular 'pdf?,postscript')
 		app-text/acroread
