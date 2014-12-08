@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zc-buildout
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zc-buildout/ChangeLog,v 1.13 2014/11/07 09:32:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zc-buildout/ChangeLog,v 1.14 2014/12/08 10:29:16 idella4 Exp $
+
+*zc-buildout-2.2.5 (08 Dec 2014)
+
+  08 Dec 2014; Ian Delaney <idella4@gentoo.org> +zc-buildout-2.2.5.ebuild:
+  bump; add pypy3
 
 *zc-buildout-2.2.4 (07 Nov 2014)
 
