@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.82 2014/12/04 01:25:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.83 2014/12/08 18:39:07 radhermit Exp $
+
+*unbound-1.5.1 (08 Dec 2014)
+
+  08 Dec 2014; Tim Harder <radhermit@gentoo.org> -unbound-1.5.1_rc2.ebuild,
+  +unbound-1.5.1.ebuild:
+  Version bump (bug #532000).
 
 *unbound-1.5.1_rc2 (04 Dec 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.4.ebuild,v 1.3 2014/07/26 09:04:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.3.5-r1.ebuild,v 1.2 2014/12/08 18:50:55 mattst88 Exp $
 
 EAPI=5
 
@@ -49,19 +49,21 @@ for card in ${VIDEO_CARDS}; do
 done
 
 IUSE="${IUSE_VIDEO_CARDS}
-	bindist +classic debug +dri3 +egl +gallium gbm gles1 gles2 +llvm +nptl
-	opencl openvg osmesa pax_kernel pic r600-llvm-compiler selinux
-	vdpau wayland xvmc xa kernel_FreeBSD"
+	bindist +classic debug +dri3 +egl +gallium +gbm gles1 gles2 +llvm +nptl
+	opencl openvg osmesa pax_kernel openmax pic r600-llvm-compiler selinux
+	+udev vdpau wayland xvmc xa kernel_FreeBSD kernel_linux"
 
 REQUIRED_USE="
 	llvm?   ( gallium )
 	openvg? ( egl gallium )
 	opencl? (
 		gallium
+		llvm
 		video_cards_r600? ( r600-llvm-compiler )
 		video_cards_radeon? ( r600-llvm-compiler )
 		video_cards_radeonsi? ( r600-llvm-compiler )
 	)
+	openmax? ( gallium )
 	gles1?  ( egl )
 	gles2?  ( egl )
 	r600-llvm-compiler? ( gallium llvm || ( video_cards_r600 video_cards_radeonsi video_cards_radeon ) )
@@ -83,7 +85,7 @@ REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 "
 
-LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.52"
+LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.56"
 # keep correct libdrm and dri2proto dep
 # keep blocks in rdepend for binpkg
 RDEPEND="
@@ -92,40 +94,41 @@ RDEPEND="
 	abi_x86_32? ( !app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] )
 	classic? ( app-admin/eselect-mesa )
 	gallium? ( app-admin/eselect-mesa )
-	>=app-admin/eselect-opengl-1.2.7
-	>=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]
-	gbm? ( >=virtual/libudev-208:=[${MULTILIB_USEDEP}] )
-	dri3? ( >=virtual/libudev-208:=[${MULTILIB_USEDEP}] )
-	>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
-	>=x11-libs/libxshmfence-1.1[${MULTILIB_USEDEP}]
-	>=x11-libs/libXdamage-1.1.4-r1[${MULTILIB_USEDEP}]
-	>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
-	>=x11-libs/libXxf86vm-1.1.3[${MULTILIB_USEDEP}]
-	>=x11-libs/libxcb-1.9.3[${MULTILIB_USEDEP}]
+	>=app-admin/eselect-opengl-1.3.0
+	udev? ( kernel_linux? ( >=virtual/libudev-215:=[${MULTILIB_USEDEP}] ) )
+	>=dev-libs/expat-2.1.0-r3:=[${MULTILIB_USEDEP}]
+	>=x11-libs/libX11-1.6.2:=[${MULTILIB_USEDEP}]
+	>=x11-libs/libxshmfence-1.1:=[${MULTILIB_USEDEP}]
+	>=x11-libs/libXdamage-1.1.4-r1:=[${MULTILIB_USEDEP}]
+	>=x11-libs/libXext-1.3.2:=[${MULTILIB_USEDEP}]
+	>=x11-libs/libXxf86vm-1.1.3:=[${MULTILIB_USEDEP}]
+	>=x11-libs/libxcb-1.9.3:=[${MULTILIB_USEDEP}]
 	llvm? (
 		video_cards_radeonsi? ( || (
-			>=dev-libs/elfutils-0.155-r1[${MULTILIB_USEDEP}]
-			>=dev-libs/libelf-0.8.13-r2[${MULTILIB_USEDEP}]
+			>=dev-libs/elfutils-0.155-r1:=[${MULTILIB_USEDEP}]
+			>=dev-libs/libelf-0.8.13-r2:=[${MULTILIB_USEDEP}]
 			) )
 		video_cards_r600? ( || (
-			>=dev-libs/elfutils-0.155-r1[${MULTILIB_USEDEP}]
-			>=dev-libs/libelf-0.8.13-r2[${MULTILIB_USEDEP}]
+			>=dev-libs/elfutils-0.155-r1:=[${MULTILIB_USEDEP}]
+			>=dev-libs/libelf-0.8.13-r2:=[${MULTILIB_USEDEP}]
 			) )
 		!video_cards_r600? (
 			video_cards_radeon? ( || (
-				>=dev-libs/elfutils-0.155-r1[${MULTILIB_USEDEP}]
-				>=dev-libs/libelf-0.8.13-r2[${MULTILIB_USEDEP}]
+				>=dev-libs/elfutils-0.155-r1:=[${MULTILIB_USEDEP}]
+				>=dev-libs/libelf-0.8.13-r2:=[${MULTILIB_USEDEP}]
 				) )
 		)
-		>=sys-devel/llvm-3.3-r3[${MULTILIB_USEDEP}]
+		>=sys-devel/llvm-3.3-r3:=[${MULTILIB_USEDEP}]
+		video_cards_radeonsi? ( >=sys-devel/llvm-3.4.2:=[${MULTILIB_USEDEP}] )
 	)
 	opencl? (
 				app-admin/eselect-opencl
 				dev-libs/libclc
 			)
-	vdpau? ( >=x11-libs/libvdpau-0.7[${MULTILIB_USEDEP}] )
-	wayland? ( >=dev-libs/wayland-1.2.0[${MULTILIB_USEDEP}] )
-	xvmc? ( >=x11-libs/libXvMC-1.0.8[${MULTILIB_USEDEP}] )
+	openmax? ( >=media-libs/libomxil-bellagio-0.9.3:=[${MULTILIB_USEDEP}] )
+	vdpau? ( >=x11-libs/libvdpau-0.7:=[${MULTILIB_USEDEP}] )
+	wayland? ( >=dev-libs/wayland-1.2.0:=[${MULTILIB_USEDEP}] )
+	xvmc? ( >=x11-libs/libXvMC-1.0.8:=[${MULTILIB_USEDEP}] )
 	${LIBDRM_DEPSTRING}[video_cards_freedreno?,video_cards_nouveau?,video_cards_vmware?,${MULTILIB_USEDEP}]
 "
 for card in ${INTEL_CARDS}; do
@@ -141,42 +144,38 @@ for card in ${RADEON_CARDS}; do
 done
 
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	llvm? (
 		r600-llvm-compiler? ( sys-devel/llvm[video_cards_radeon] )
 		video_cards_radeonsi? ( sys-devel/llvm[video_cards_radeon] )
 	)
 	opencl? (
-				>=sys-devel/llvm-3.3-r3[video_cards_radeon,${MULTILIB_USEDEP}]
-				>=sys-devel/clang-3.3[${MULTILIB_USEDEP}]
+				>=sys-devel/llvm-3.4.2:=[${MULTILIB_USEDEP}]
+				>=sys-devel/clang-3.4.2:=[${MULTILIB_USEDEP}]
 				>=sys-devel/gcc-4.6
 	)
 	sys-devel/bison
 	sys-devel/flex
 	sys-devel/gettext
 	virtual/pkgconfig
-	>=x11-proto/dri2proto-2.8-r1[${MULTILIB_USEDEP}]
+	>=x11-proto/dri2proto-2.8-r1:=[${MULTILIB_USEDEP}]
 	dri3? (
-		>=x11-proto/dri3proto-1.0[${MULTILIB_USEDEP}]
-		>=x11-proto/presentproto-1.0[${MULTILIB_USEDEP}]
+		>=x11-proto/dri3proto-1.0:=[${MULTILIB_USEDEP}]
+		>=x11-proto/presentproto-1.0:=[${MULTILIB_USEDEP}]
 	)
-	>=x11-proto/glproto-1.4.16-r1[${MULTILIB_USEDEP}]
-	>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
-	>=x11-proto/xf86driproto-2.1.1-r1[${MULTILIB_USEDEP}]
-	>=x11-proto/xf86vidmodeproto-2.3.1-r1[${MULTILIB_USEDEP}]
-	$(python_gen_any_dep 'dev-libs/libxml2[python,${PYTHON_USEDEP}]')
+	>=x11-proto/glproto-1.4.17-r1:=[${MULTILIB_USEDEP}]
+	>=x11-proto/xextproto-7.2.1-r1:=[${MULTILIB_USEDEP}]
+	>=x11-proto/xf86driproto-2.1.1-r1:=[${MULTILIB_USEDEP}]
+	>=x11-proto/xf86vidmodeproto-2.3.1-r1:=[${MULTILIB_USEDEP}]
 "
-
-python_check_deps() {
-	has_version --host-root "dev-libs/libxml2[python,${PYTHON_USEDEP}]"
-}
 
 S="${WORKDIR}/${MY_P}"
 EGIT_CHECKOUT_DIR=${S}
 
 # It is slow without texrels, if someone wants slow
 # mesa without texrels +pic use is worth the shot
-QA_EXECSTACK="usr/lib*/opengl/xorg-x11/lib/libGL.so*"
-QA_WX_LOAD="usr/lib*/opengl/xorg-x11/lib/libGL.so*"
+QA_EXECSTACK="usr/lib*/libGL.so*"
+QA_WX_LOAD="usr/lib*/libGL.so*"
 
 # Think about: ggi, fbcon, no-X configs
 
@@ -208,7 +207,7 @@ src_prepare() {
 	fi
 
 	# relax the requirement that r300 must have llvm, bug 380303
-	epatch "${FILESDIR}"/${PN}-9.2-dont-require-llvm-for-r300.patch
+	epatch "${FILESDIR}"/${PN}-10.2-dont-require-llvm-for-r300.patch
 
 	# fix for hardened pax_kernel, bug 240956
 	[[ ${PV} != 9999* ]] && epatch "${FILESDIR}"/glx_ro_text_segm.patch
@@ -260,6 +259,7 @@ multilib_src_configure() {
 			$(use_enable llvm gallium-llvm)
 			$(use_enable openvg)
 			$(use_enable openvg gallium-egl)
+			$(use_enable openmax omx)
 			$(use_enable r600-llvm-compiler)
 			$(use_enable vdpau)
 			$(use_enable xa)
@@ -301,6 +301,11 @@ multilib_src_configure() {
 		"
 	fi
 
+	# on abi_x86_32 hardened we need to have asm disable  
+	if [[ ${ABI} == x86* ]] && use pic; then
+		myconf+=" --disable-asm"
+	fi
+
 	# build fails with BSD indent, bug #428112
 	use userland_GNU || export INDENT=cat
 
@@ -317,7 +322,8 @@ multilib_src_configure() {
 		$(use_enable gles2) \
 		$(use_enable nptl glx-tls) \
 		$(use_enable osmesa) \
-		$(use_enable !pic asm) \
+		$(use_enable !udev sysfs) \
+		--enable-llvm-shared-libs \
 		--with-dri-drivers=${DRI_DRIVERS} \
 		--with-gallium-drivers=${GALLIUM_DRIVERS} \
 		PYTHON2="${PYTHON}" \
@@ -326,32 +332,6 @@ multilib_src_configure() {
 
 multilib_src_install() {
 	emake install DESTDIR="${D}"
-
-	# Move libGL and others from /usr/lib to /usr/lib/opengl/blah/lib
-	# because user can eselect desired GL provider.
-	ebegin "Moving libGL and friends for dynamic switching"
-		local x
-		local gl_dir="/usr/$(get_libdir)/opengl/${OPENGL_DIR}/"
-		dodir ${gl_dir}/{lib,extensions,include/GL}
-		for x in "${ED}"/usr/$(get_libdir)/lib{EGL,GL*,OpenVG}.{la,a,so*}; do
-			if [ -f ${x} -o -L ${x} ]; then
-				mv -f "${x}" "${ED}${gl_dir}"/lib \
-					|| die "Failed to move ${x}"
-			fi
-		done
-		for x in "${ED}"/usr/include/GL/{gl.h,glx.h,glext.h,glxext.h}; do
-			if [ -f ${x} -o -L ${x} ]; then
-				mv -f "${x}" "${ED}${gl_dir}"/include/GL \
-					|| die "Failed to move ${x}"
-			fi
-		done
-		for x in "${ED}"/usr/include/{EGL,GLES*,VG,KHR}; do
-			if [ -d ${x} ]; then
-				mv -f "${x}" "${ED}${gl_dir}"/include \
-					|| die "Failed to move ${x}"
-			fi
-		done
-	eend $?
 
 	if use classic || use gallium; then
 			ebegin "Moving DRI/Gallium drivers for dynamic switching"
@@ -398,6 +378,12 @@ multilib_src_install() {
 		fi
 		eend $?
 	fi
+
+	if use openmax; then
+		echo "XDG_DATA_DIRS=\"${EPREFIX}/usr/share/mesa/xdg\"" > "${T}/99mesaxdgomx"
+		doenvd "${T}"/99mesaxdgomx
+		keepdir /usr/share/mesa/xdg
+	fi
 }
 
 multilib_src_install_all() {
@@ -429,13 +415,6 @@ pkg_postinst() {
 	echo
 	eselect opengl set --use-old ${OPENGL_DIR}
 
-	# switch to xorg-x11 and back if necessary, bug #374647 comment 11
-	OLD_IMPLEM="$(eselect opengl show)"
-	if [[ ${OPENGL_DIR}x != ${OLD_IMPLEM}x ]]; then
-		eselect opengl set ${OPENGL_DIR}
-		eselect opengl set ${OLD_IMPLEM}
-	fi
-
 	# Select classic/gallium drivers
 	if use classic || use gallium; then
 		eselect mesa set --auto
@@ -444,6 +423,15 @@ pkg_postinst() {
 	# Switch to mesa opencl
 	if use opencl; then
 		eselect opencl set --use-old ${PN}
+	fi
+
+	# run omxregister-bellagio to make the OpenMAX drivers known system-wide
+	if use openmax; then
+		ebegin "Registering OpenMAX drivers"
+		BELLAGIO_SEARCH_PATH="${EPREFIX}/usr/$(get_libdir)/libomxil-bellagio0" \
+			OMX_BELLAGIO_REGISTRY=${EPREFIX}/usr/share/mesa/xdg/.omxregister \
+			omxregister-bellagio
+		eend $?
 	fi
 
 	# warn about patent encumbered texture-float
@@ -464,6 +452,12 @@ pkg_postinst() {
 		elog "Note that in order to have full S3TC support, it is necessary to install"
 		elog "media-libs/libtxc_dxtn as well. This may be necessary to get nice"
 		elog "textures in some apps, and some others even require this to run."
+	fi
+}
+
+pkg_prerm() {
+	if use openmax; then
+		rm "${EPREFIX}"/usr/share/mesa/xdg/.omxregister
 	fi
 }
 

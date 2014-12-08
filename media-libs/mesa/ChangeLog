@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.584 2014/12/08 18:22:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.586 2014/12/08 18:50:55 mattst88 Exp $
+
+  08 Dec 2014; Matt Turner <mattst88@gentoo.org> mesa-10.3.5-r1.ebuild,
+  mesa-10.3.5.ebuild:
+  Replace sysfs USE flag with udev.
+
+*mesa-10.3.5 (08 Dec 2014)
+*mesa-10.3.5-r1 (08 Dec 2014)
+
+  08 Dec 2014; Matt Turner <mattst88@gentoo.org> +mesa-10.3.5-r1.ebuild,
+  +mesa-10.3.5.ebuild:
+  Version bump to 10.3.5.
 
   08 Dec 2014; Matt Turner <mattst88@gentoo.org> mesa-10.2.8.ebuild:
   Replace sysfs USE flag with udev.
