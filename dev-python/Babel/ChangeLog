@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.70 2014/12/07 12:01:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.71 2014/12/08 11:00:26 ago Exp $
+
+  08 Dec 2014; Agostino Sarubbo <ago@gentoo.org> Babel-1.3-r1.ebuild:
+  Stable for ppc64, wrt bug #530384
 
   07 Dec 2014; Agostino Sarubbo <ago@gentoo.org> Babel-1.3-r1.ebuild:
   Stable for ppc, wrt bug #530384
