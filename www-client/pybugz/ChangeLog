@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.133 2014/12/07 15:53:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.134 2014/12/08 18:09:20 zlogene Exp $
+
+  08 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> pybugz-0.11.1.ebuild:
+  ia64 stable wrt bug #531826
 
   07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> pybugz-0.11.1.ebuild:
   arm stable wrt bug #531826

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.55 2014/10/05 15:21:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.56 2014/12/08 18:17:59 zlogene Exp $
+
+  08 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> gentoopm-0.2.9.ebuild:
+  x86 stable wrt bug #517812
 
   05 Oct 2014; Manuel Rüger <mrueg@gentoo.org> gentoopm-0.2.9.ebuild:
   Mark stable on amd64. Bug #517812

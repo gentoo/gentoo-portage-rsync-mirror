@@ -4,7 +4,7 @@ DESCRIPTION=PolicyKit Qt4 API wrapper library
 EAPI=5
 HOMEPAGE=http://www.kde.org/
 IUSE=debug examples +qt4 qt5
-KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd
+KEYWORDS=amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd
 LICENSE=LGPL-2
 RDEPEND=dev-libs/glib:2 >=sys-auth/polkit-0.103 qt4? ( dev-qt/qtcore:4[glib] dev-qt/qtdbus:4 dev-qt/qtgui:4[glib] ) qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 examples? ( dev-qt/qtxml:5 ) )
 REQUIRED_USE=|| ( qt4 qt5 )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://kde/stable/apps/KDE4.x/admin/polkit-qt-1-0.112.0.tar.bz2
 _eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=5fcba854b3d9778bc4304f089b2a9b69
+_md5_=ffbeaa4aff734954118bd7ee35c916d4
