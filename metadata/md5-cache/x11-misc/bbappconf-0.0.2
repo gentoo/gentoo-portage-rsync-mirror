@@ -1,12 +1,13 @@
 DEFINED_PHASES=configure prepare
-DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=x11-libs/libX11 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=utility that allows you to specify window properties in blackbox
 EAPI=4
 HOMEPAGE=http://sourceforge.net/projects/bbtools
 IUSE=debug
 KEYWORDS=~amd64 ppc sparc x86 ~x86-fbsd
 LICENSE=GPL-2
+RDEPEND=x11-libs/libX11
 SLOT=0
 SRC_URI=mirror://sourceforge/bbtools/bbappconf-0.0.2.tar.gz
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=350e96df9cabb316632aab7156beebd4
+_md5_=bd5fabf4507be681bf843c27336b7b88
