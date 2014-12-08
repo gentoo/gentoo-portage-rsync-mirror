@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20141024.ebuild,v 1.1 2014/10/29 02:12:52 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20141203.ebuild,v 1.1 2014/12/08 01:42:24 mjo Exp $
 
 EAPI=5
 inherit linux-info readme.gentoo systemd
@@ -32,19 +32,19 @@ src_configure(){
 	econf \
 		$(use_enable libconfig) \
 		--with-systemdsystemunitdir=$(systemd_get_unitdir) \
-		--docdir="${EROOT}usr/share/doc/${PF}"
+		--docdir="/usr/share/doc/${PF}"
 }
 
 src_install() {
 	default
-	newconfd "${FILESDIR}/hdapsd.conf-${PV}" hdapsd
-	newinitd "${FILESDIR}/hdapsd.init-${PV}" hdapsd
+	newconfd "${FILESDIR}/hdapsd.conf-20141024" hdapsd
+	newinitd "${FILESDIR}/hdapsd.init-20141024" hdapsd
 	readme.gentoo_create_doc
 }
 
 pkg_postinst(){
-	[[ -z $(ls "${EROOT}"sys/block/*/queue/protect 2>/dev/null) ]] && \
-	[[ -z $(ls "${EROOT}"sys/block/*/device/unload_heads 2>/dev/null) ]] && \
+	[[ -z $(ls "${ROOT}"sys/block/*/queue/protect 2>/dev/null) ]] && \
+	[[ -z $(ls "${ROOT}"sys/block/*/device/unload_heads 2>/dev/null) ]] && \
 		ewarn "Your kernel does NOT support shock protection."
 
 	readme.gentoo_print_elog
