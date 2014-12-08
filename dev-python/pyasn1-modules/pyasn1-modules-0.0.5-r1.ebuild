@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/pyasn1-modules-0.0.5-r1.ebuild,v 1.9 2014/12/07 20:13:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/pyasn1-modules-0.0.5-r1.ebuild,v 1.10 2014/12/08 11:03:50 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ia64 ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm ~hppa ia64 ppc ppc64 ~s390 ~sh ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-python/pyasn1[${PYTHON_USEDEP}]"

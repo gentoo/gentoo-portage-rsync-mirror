@@ -1,8 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-5.0.0a.ebuild,v 1.13 2014/01/14 18:47:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-5.0.0a.ebuild,v 1.14 2014/12/08 11:09:18 heroxbd Exp $
 
 EAPI=4
+
+inherit eutils
 
 DESCRIPTION="Paging program that displays, one windowful at a time, the contents of a file"
 HOMEPAGE="ftp://space.mit.edu/pub/davis/most"
@@ -17,6 +19,8 @@ RDEPEND=">=sys-libs/slang-2.1.3"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-5.0.0a-no-explicit-termcap.patch
+	epatch "${FILESDIR}"/${PN}-5.0.0a-donot-hardcode-path.patch
 	sed -i -e 's:$(INSTALL) -s:$(INSTALL):' src/Makefile.in || die
 }
 

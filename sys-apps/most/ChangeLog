@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/most
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.47 2014/01/14 18:47:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.48 2014/12/08 11:09:18 heroxbd Exp $
+
+  08 Dec 2014; Benda Xu <heroxbd@gentoo.org>
+  +files/most-5.0.0a-donot-hardcode-path.patch,
+  +files/most-5.0.0a-no-explicit-termcap.patch, most-5.0.0a.ebuild:
+  Fix build system regarding terminfo and cp/rm locations. Bug #531958
 
   14 Jan 2014; Fabian Groffen <grobian@gentoo.org> most-5.0.0a.ebuild:
   Marked ~x64-macos
