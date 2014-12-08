@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.5 2014/12/07 19:39:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.6 2014/12/08 08:57:36 jlec Exp $
 
 EAPI=5
 
@@ -78,7 +78,8 @@ RDEPEND="${CDEPEND}
 	R? ( dev-python/rpy[${PYTHON_USEDEP}] )"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-backport-GH8587.patch
+	"${FILESDIR}"/${PN}-0.15.1-skip-tz-test.patch
+	"${FILESDIR}"/${P}-datetutil-2.3.patch
 )
 
 python_prepare_all() {
