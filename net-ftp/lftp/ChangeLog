@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.506 2014/12/08 10:58:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.507 2014/12/08 14:40:21 jer Exp $
+
+  08 Dec 2014; Jeroen Roovers <jer@gentoo.org> -lftp-4.5.5.ebuild,
+  -files/lftp-4.5.5-no_ssl.patch:
+  Old.
 
   08 Dec 2014; Agostino Sarubbo <ago@gentoo.org> lftp-4.6.0.ebuild:
   Stable for ppc64, wrt bug #529918
