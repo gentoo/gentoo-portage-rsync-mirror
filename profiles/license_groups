@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.249 2014/12/06 21:31:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.250 2014/12/08 16:19:28 radhermit Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -59,7 +59,7 @@ FREE-DOCUMENTS @FSF-APPROVED-OTHER @MISC-FREE-DOCS
 # and share modifications
 FREE @FREE-SOFTWARE @FREE-DOCUMENTS
 
-EULA Adaptec-EULA AdobeFlash-11.x ArxFatalis-EULA-JoWooD baudline BCS bf1942-lnxded CAPYBARA-EULA cadsoft CYANA DOOM3 ETQW FAH-EULA-2009 FAH-EULA-2014 FraunhoferFDK GameFront Gameplay-Group-EULA GIMPS GOG-EULA google-chrome googleearth Google-TOS IBM-J1.6 Intel-SDP Introversion LastPass LOKI-EULA LRCTF MakeMKV-EULA MARBLEBLAST Mendeley-EULA MSjdbcEULA40 MTA-0.5 NVIDIA-CUDA Nero-AAC-EULA Nero-EULA-US Oracle-BCLA-JavaSE PAPERS-PLEASE POMPOM postal2 Primate-Plunge PUEL Q3AEULA Q3AEULA-20000111 QUAKE4 Rain-Slick RTCW RTCW-ETEULA SCM-MICRO SJ-Labs skype-4.0.0.7-copyright spin-commercial spin-educational sun-bcla-java-vm TeamViewer THINKTANKS UPEK-SDK-EULA ut2003 ut2003-demo
+EULA Adaptec-EULA AdobeFlash-11.x ArxFatalis-EULA-JoWooD baudline BCS bf1942-lnxded CAPYBARA-EULA cadsoft Coherent-Graphics CYANA DOOM3 ETQW FAH-EULA-2009 FAH-EULA-2014 FraunhoferFDK GameFront Gameplay-Group-EULA GIMPS GOG-EULA google-chrome googleearth Google-TOS IBM-J1.6 Intel-SDP Introversion LastPass LOKI-EULA LRCTF MakeMKV-EULA MARBLEBLAST Mendeley-EULA MSjdbcEULA40 MTA-0.5 NVIDIA-CUDA Nero-AAC-EULA Nero-EULA-US Oracle-BCLA-JavaSE PAPERS-PLEASE POMPOM postal2 Primate-Plunge PUEL Q3AEULA Q3AEULA-20000111 QUAKE4 Rain-Slick RTCW RTCW-ETEULA SCM-MICRO SJ-Labs skype-4.0.0.7-copyright spin-commercial spin-educational sun-bcla-java-vm TeamViewer THINKTANKS UPEK-SDK-EULA ut2003 ut2003-demo
 
 # As proposed: http://archives.gentoo.org/gentoo-dev/msg_6c950b46c50fe72ebc5e650bbf70f77c.xml
 # Excerpt of the rules for this license group:
