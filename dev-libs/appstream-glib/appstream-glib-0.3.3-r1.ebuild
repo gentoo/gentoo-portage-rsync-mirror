@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.3-r1.ebuild,v 1.1 2014/12/08 12:34:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.3-r1.ebuild,v 1.2 2014/12/08 13:15:47 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ SRC_URI="http://people.freedesktop.org/~hughsient/${PN}/releases/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0/7"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="+introspection nls"
 
 # FIXME: yaml is optional with --enable-dep11 but not

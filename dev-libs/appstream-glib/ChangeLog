@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/appstream-glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/ChangeLog,v 1.10 2014/12/08 12:34:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/ChangeLog,v 1.11 2014/12/08 13:15:47 pacho Exp $
+
+  08 Dec 2014; Pacho Ramos <pacho@gentoo.org> appstream-glib-0.3.3-r1.ebuild:
+  x86 keyword, bug #523924
 
 *appstream-glib-0.3.3-r1 (08 Dec 2014)
 

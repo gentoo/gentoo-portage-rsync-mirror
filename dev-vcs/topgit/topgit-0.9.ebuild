@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/topgit-0.9.ebuild,v 1.3 2014/10/08 01:14:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/topgit-0.9.ebuild,v 1.4 2014/12/08 13:10:13 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/greenrd/${PN}/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="sys-apps/sed
