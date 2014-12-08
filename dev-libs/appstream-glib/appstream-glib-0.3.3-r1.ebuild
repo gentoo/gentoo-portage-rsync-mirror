@@ -1,23 +1,23 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.2.ebuild,v 1.3 2014/11/24 11:13:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.3-r1.ebuild,v 1.1 2014/12/08 12:34:24 pacho Exp $
 
 EAPI=5
+GCONF_DEBUG="no"
 
-inherit autotools eutils bash-completion-r1
-
-MY_P="${PN/-/_}_${PV//./_}"
+inherit bash-completion-r1 gnome2
 
 DESCRIPTION="Provides GObjects and helper methods to read and write AppStream metadata"
-HOMEPAGE="https://github.com/hughsie/appstream-glib"
-SRC_URI="https://github.com/hughsie/${PN}/archive/${MY_P}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="http://people.freedesktop.org/~hughsient/appstream-glib/"
+SRC_URI="http://people.freedesktop.org/~hughsient/${PN}/releases/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0/7"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64"
 IUSE="+introspection nls"
 
-# FIXME: yaml is optional but not properly handled in autofoo
+# FIXME: yaml is optional with --enable-dep11 but not
+# properly handled in autofoo bug#????
 RDEPEND="
 	app-arch/libarchive
 	dev-db/sqlite:3
@@ -31,11 +31,9 @@ RDEPEND="
 	dev-libs/libyaml
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
 "
-# gtk-doc required until package is released properly
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.3
 	dev-libs/libxslt
-	>=dev-util/gtk-doc-1.21
 	>=dev-util/gtk-doc-am-1.9
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
@@ -46,14 +44,8 @@ RDEPEND="${RDEPEND}
 	!<dev-util/appdata-tools-0.1.8-r1"
 PDEPEND=">=dev-util/appdata-tools-0.1.8-r1"
 
-S="${WORKDIR}/${PN}-${MY_P}"
-
-src_prepare() {
-	eautoreconf
-}
-
 src_configure() {
-	econf \
+	gnome2_src_configure \
 		--disable-rpm \
 		--disable-static \
 		--enable-dep11 \
@@ -61,10 +53,4 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable introspection) \
 		--with-bashcompletiondir="$(get_bashcompdir)"
-}
-
-src_install() {
-	emake install DESTDIR="${D}"
-
-	prune_libtool_files
 }

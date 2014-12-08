@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/appstream-glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/ChangeLog,v 1.9 2014/12/05 12:25:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/ChangeLog,v 1.10 2014/12/08 12:34:24 pacho Exp $
+
+*appstream-glib-0.3.3-r1 (08 Dec 2014)
+
+  08 Dec 2014; Pacho Ramos <pacho@gentoo.org> +appstream-glib-0.3.3-r1.ebuild,
+  -appstream-glib-0.3.0.ebuild, -appstream-glib-0.3.2.ebuild,
+  -appstream-glib-0.3.3.ebuild:
+  Use properly generated tarballs
 
 *appstream-glib-0.3.3 (05 Dec 2014)
 
