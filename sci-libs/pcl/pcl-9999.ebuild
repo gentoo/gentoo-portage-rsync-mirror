@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pcl/pcl-9999.ebuild,v 1.1 2014/12/08 11:53:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pcl/pcl-9999.ebuild,v 1.2 2014/12/08 15:29:09 aballier Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ if [ "${PV#9999}" != "${PV}" ] ; then
 	KEYWORDS=""
 	SRC_URI=""
 else
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm"
 	SRC_URI="http://github.com/PointCloudLibrary/pcl/archive/${P}.tar.gz"
 	S="${WORKDIR}/${PN}-${P}"
 fi
