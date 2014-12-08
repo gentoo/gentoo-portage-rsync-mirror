@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/megaglest-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest-data/ChangeLog,v 1.14 2014/12/05 10:16:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest-data/ChangeLog,v 1.15 2014/12/08 02:20:53 patrick Exp $
+
+  08 Dec 2014; Patrick Lauer <patrick@gentoo.org>
+  -megaglest-data-3.6.0.3.ebuild, -megaglest-data-3.7.0.ebuild,
+  -megaglest-data-3.7.1-r1.ebuild, -megaglest-data-3.9.0.ebuild:
+  Remove old to match games-strategy/megaglest ebuilds
 
   05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> megaglest-data-3.9.1.ebuild:
   Stable for x86, wrt bug #518196
