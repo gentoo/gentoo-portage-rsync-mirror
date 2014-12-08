@@ -1,6 +1,17 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.477 2014/11/24 03:45:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.479 2014/12/08 05:59:47 radhermit Exp $
+
+  08 Dec 2014; Tim Harder <radhermit@gentoo.org> -vim-7.3.762.ebuild,
+  -vim-7.3.1214.ebuild, -vim-7.4.430.ebuild, -vim-7.4.475.ebuild,
+  -files/vim-7.1.285-darwin-x11link.patch, -files/vim-7.3.1214-python3.patch,
+  -files/vim-7.3-interix-link.patch, -files/vim-7.4.193-fix-tests.patch:
+  Remove old.
+
+*vim-7.4.542 (08 Dec 2014)
+
+  08 Dec 2014; Tim Harder <radhermit@gentoo.org> +vim-7.4.542.ebuild:
+  Version bump.
 
 *vim-7.4.527 (24 Nov 2014)
 

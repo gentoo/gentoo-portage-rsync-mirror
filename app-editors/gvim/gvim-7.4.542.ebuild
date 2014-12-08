@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.475.ebuild,v 1.2 2014/10/13 21:13:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.4.542.ebuild,v 1.1 2014/12/08 05:41:45 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE=threads
-inherit eutils vim-doc flag-o-matic fdo-mime versionator bash-completion-r1 python-single-r1
+inherit eutils vim-doc flag-o-matic fdo-mime versionator bash-completion-r1 prefix python-single-r1
 
 if [[ ${PV} == 9999* ]] ; then
 	inherit mercurial
@@ -16,48 +16,61 @@ else
 	VIM_ORG_PATCHES="vim-patches-${PV}.patch.bz2"
 	SRC_URI="ftp://ftp.vim.org/pub/vim/unix/vim-${VIM_VERSION}.tar.bz2
 		http://dev.gentoo.org/~radhermit/vim/${VIM_ORG_PATCHES}
-		http://dev.gentoo.org/~radhermit/vim/vim-${VIM_VERSION}-gentoo-patches.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+		http://dev.gentoo.org/~radhermit/vim/vim-${PV}-gentoo-patches.tar.bz2"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 fi
 
-DESCRIPTION="Vim, an improved vi-style text editor"
+DESCRIPTION="GUI version of the Vim text editor"
 HOMEPAGE="http://www.vim.org/"
 
 SLOT="0"
 LICENSE="vim"
-IUSE="X acl cscope debug gpm lua luajit minimal nls perl python racket ruby selinux tcl vim-pager"
+IUSE="acl aqua cscope debug gnome gtk lua luajit motif neXt netbeans nls perl python racket ruby selinux session tcl"
 REQUIRED_USE="
 	python? ( ${PYTHON_REQUIRED_USE} )
 	luajit? ( lua )
 "
 
 RDEPEND="
+	~app-editors/vim-core-${PV}
 	>=app-admin/eselect-vi-1.1
 	>=sys-libs/ncurses-5.2-r2
-	nls? ( virtual/libintl )
+	x11-libs/libXext
+	x11-libs/libXt
 	acl? ( kernel_linux? ( sys-apps/acl ) )
+	!aqua? (
+		gtk? (
+			>=x11-libs/gtk+-2.6:2
+			x11-libs/libXft
+			gnome? ( >=gnome-base/libgnomeui-2.6 )
+		)
+		!gtk? (
+			motif? ( >=x11-libs/motif-2.3:0 )
+			!motif? (
+				neXt? ( x11-libs/neXtaw )
+				!neXt? ( x11-libs/libXaw )
+			)
+		)
+	)
 	cscope? ( dev-util/cscope )
-	gpm? ( >=sys-libs/gpm-1.19.3 )
 	lua? (
 		luajit? ( dev-lang/luajit )
 		!luajit? ( dev-lang/lua[deprecated] )
 	)
-	!minimal? (
-		~app-editors/vim-core-${PV}
-		dev-util/ctags
-	)
+	nls? ( virtual/libintl )
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
 	racket? ( dev-scheme/racket )
 	ruby? ( || ( dev-lang/ruby:2.1 dev-lang/ruby:2.0 dev-lang/ruby:1.9 ) )
 	selinux? ( sys-libs/libselinux )
+	session? ( x11-libs/libSM )
 	tcl? ( dev-lang/tcl )
-	X? ( x11-libs/libXt )
 "
 DEPEND="${RDEPEND}
 	>=app-admin/eselect-vi-1.1
+	dev-util/ctags
 	sys-devel/autoconf
-	>=sys-libs/ncurses-5.2-r2
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 "
 
@@ -118,19 +131,6 @@ src_prepare() {
 	# to make the error never occur. bug 66162 (02 October 2004 ciaranm)
 	find "${S}" -name '*.c' | while read c ; do echo >> "$c" ; done
 
-	# conditionally make the manpager.sh script
-	if use vim-pager ; then
-		cat <<-END > "${S}"/runtime/macros/manpager.sh
-			#!/bin/sh
-			sed -e 's/\x1B\[[[:digit:]]\+m//g' | col -b | \\
-					vim \\
-						-c 'let no_plugin_maps = 1' \\
-						-c 'set nolist nomod ft=man' \\
-						-c 'let g:showmarks_enable=0' \\
-						-c 'runtime! macros/less.vim' -
-			END
-	fi
-
 	# Try to avoid sandbox problems. Bug #114475.
 	if [[ -d "${S}"/src/po ]] ; then
 		sed -i '/-S check.vim/s,..VIM.,ln -s $(VIM) testvim \; ./testvim -X,' \
@@ -167,7 +167,7 @@ src_configure() {
 	# (2) Rebuild auto/configure
 	# (3) Notice auto/configure is newer than auto/config.mk
 	# (4) Run ./configure (with wrong args) to remake auto/config.mk
-	sed -i 's/ auto.config.mk:/:/' src/Makefile || die "Makefile sed failed"
+	sed -i 's# auto/config\.mk:#:#' src/Makefile || die "Makefile sed failed"
 	rm -f src/auto/configure
 	emake -j1 -C src autoconf
 
@@ -177,61 +177,72 @@ src_configure() {
 		[[ -e ${file} ]] && addwrite $file
 	done
 
-	if use minimal ; then
-		myconf="--with-features=tiny \
-			--disable-nls \
-			--disable-multibyte \
-			--disable-acl \
-			--enable-gui=no \
-			--without-x \
-			--disable-darwin \
-			--disable-luainterp \
-			--disable-perlinterp \
-			--disable-pythoninterp \
-			--disable-mzschemeinterp \
-			--disable-rubyinterp \
-			--disable-selinux \
-			--disable-tclinterp \
-			--disable-gpm"
-	else
-		use debug && append-flags "-DDEBUG"
+	use debug && append-flags "-DDEBUG"
 
-		myconf="--with-features=huge --enable-multibyte"
-		myconf+=" $(use_enable acl)"
-		myconf+=" $(use_enable cscope)"
-		myconf+=" $(use_enable gpm)"
-		myconf+=" $(use_enable lua luainterp)"
-		myconf+=" $(use_with luajit)"
-		myconf+=" $(use_enable nls)"
-		myconf+=" $(use_enable perl perlinterp)"
-		myconf+=" $(use_enable racket mzschemeinterp)"
-		myconf+=" $(use_enable ruby rubyinterp)"
-		myconf+=" $(use_enable selinux)"
-		myconf+=" $(use_enable tcl tclinterp)"
+	myconf="--with-features=huge --disable-gpm --enable-multibyte"
+	myconf+=" $(use_enable acl)"
+	myconf+=" $(use_enable cscope)"
+	myconf+=" $(use_enable lua luainterp)"
+	myconf+=" $(use_with luajit)"
+	myconf+=" $(use_enable netbeans)"
+	myconf+=" $(use_enable nls)"
+	myconf+=" $(use_enable perl perlinterp)"
+	myconf+=" $(use_enable racket mzschemeinterp)"
+	myconf+=" $(use_enable ruby rubyinterp)"
+	myconf+=" $(use_enable selinux)"
+	myconf+=" $(use_enable session xsmp)"
+	myconf+=" $(use_enable tcl tclinterp)"
 
-		if use python ; then
-			if [[ ${EPYTHON} == python3* ]] ; then
-				myconf+=" --enable-python3interp"
-				export vi_cv_path_python3="${PYTHON}"
-			else
-				myconf+=" --enable-pythoninterp"
-				export vi_cv_path_python="${PYTHON}"
-			fi
+	if use python ; then
+		if [[ ${EPYTHON} == python3* ]] ; then
+			myconf+=" --enable-python3interp"
+			export vi_cv_path_python3="${PYTHON}"
 		else
-			myconf+=" --disable-pythoninterp --disable-python3interp"
+			myconf+=" --enable-pythoninterp"
+			export vi_cv_path_python="${PYTHON}"
 		fi
-
-		# --with-features=huge forces on cscope even if we --disable it. We need
-		# to sed this out to avoid screwiness. (1 Sep 2004 ciaranm)
-		if ! use cscope ; then
-			sed -i '/# define FEAT_CSCOPE/d' src/feature.h || \
-				die "couldn't disable cscope"
-		fi
-
-		# don't test USE=X here ... see bug #19115
-		# but need to provide a way to link against X ... see bug #20093
-		myconf+=" --enable-gui=no --disable-darwin $(use_with X x)"
+	else
+		myconf+=" --disable-pythoninterp --disable-python3interp"
 	fi
+
+	# --with-features=huge forces on cscope even if we --disable it. We need
+	# to sed this out to avoid screwiness. (1 Sep 2004 ciaranm)
+	if ! use cscope ; then
+		sed -i '/# define FEAT_CSCOPE/d' src/feature.h || \
+			die "couldn't disable cscope"
+	fi
+
+	# gvim's GUI preference order is as follows:
+	# aqua                          CARBON (not tested)
+	# -aqua gtk gnome               GNOME2
+	# -aqua gtk -gnome              GTK2
+	# -aqua -gtk  motif             MOTIF
+	# -aqua -gtk -motif neXt        NEXTAW
+	# -aqua -gtk -motif -neXt       ATHENA
+	echo ; echo
+	if use aqua ; then
+		einfo "Building gvim with the Carbon GUI"
+		myconf+=" --enable-darwin --enable-gui=carbon"
+	elif use gtk ; then
+		myconf+=" --enable-gtk2-check"
+		if use gnome ; then
+			einfo "Building gvim with the Gnome 2 GUI"
+			myconf+=" --enable-gui=gnome2"
+		else
+			einfo "Building gvim with the gtk+-2 GUI"
+			myconf+=" --enable-gui=gtk2"
+		fi
+	elif use motif ; then
+		einfo "Building gvim with the MOTIF GUI"
+		myconf+=" --enable-gui=motif"
+	elif use neXt ; then
+		einfo "Building gvim with the neXtaw GUI"
+		myconf+=" --enable-gui=nextaw"
+	else
+		einfo "Building gvim with the Athena GUI"
+		myconf+=" --enable-gui=athena"
+	fi
+	echo ; echo
 
 	# Let Portage do the stripping. Some people like that.
 	export ac_cv_prog_STRIP="$(type -P true ) faking strip"
@@ -239,8 +250,16 @@ src_configure() {
 	# Keep Gentoo Prefix env contained within the EPREFIX
 	use prefix && myconf+=" --without-local-dir"
 
+	if [[ ${CHOST} == *-interix* ]]; then
+		# avoid finding of this function, to avoid having to patch either
+		# configure or the source, which would be much more hackish.
+		# after all vim does it right, only interix is badly broken (again)
+		export ac_cv_func_sigaction=no
+	fi
+
 	econf \
 		--with-modified-by=Gentoo-${PVR} \
+		--with-vim-name=gvim --with-x \
 		${myconf}
 }
 
@@ -275,8 +294,12 @@ src_test() {
 	# We don't want to rebuild vim before running the tests
 	sed -i 's,: \$(VIMPROG),: ,' Makefile
 
+	# Make gvim not try to connect to X. See :help gui-x11-start
+	# in vim for how this evil trickery works.
+	ln -s "${S}"/src/gvim "${S}"/src/testvim
+
 	# Don't try to do the additional GUI test
-	emake -j1 VIMPROG=../vim nongui
+	emake -j1 VIMPROG=../testvim nongui
 }
 
 # Make convenience symlinks, hopefully without stepping on toes.  Some
@@ -318,23 +341,28 @@ update_vim_symlinks() {
 src_install() {
 	local vimfiles=/usr/share/vim/vim${VIM_VERSION/.}
 
-	# Note: Do not install symlinks for 'vi', 'ex', or 'view', as these are
-	#       managed by eselect-vi
-	dobin src/vim
-	dosym vim /usr/bin/vimdiff
-	dosym vim /usr/bin/rvim
-	dosym vim /usr/bin/rview
-	if use vim-pager ; then
-		dosym ${vimfiles}/macros/less.sh /usr/bin/vimpager
-		dosym ${vimfiles}/macros/manpager.sh /usr/bin/vimmanpager
-		insinto ${vimfiles}/macros
-		doins runtime/macros/manpager.sh
-		fperms a+x ${vimfiles}/macros/manpager.sh
-	fi
+	dobin src/gvim
+	dosym gvim /usr/bin/gvimdiff
+	dosym gvim /usr/bin/evim
+	dosym gvim /usr/bin/eview
+	dosym gvim /usr/bin/gview
+	dosym gvim /usr/bin/rgvim
+	dosym gvim /usr/bin/rgview
 
+	dodir /usr/share/man/man1
+	echo ".so vim.1" > "${ED}"/usr/share/man/man1/gvim.1
+	echo ".so vim.1" > "${ED}"/usr/share/man/man1/gview.1
+	echo ".so vimdiff.1" > "${ED}"/usr/share/man/man1/gvimdiff.1
+
+	insinto /etc/vim
+	newins "${FILESDIR}"/gvimrc-r1 gvimrc
+	eprefixify "${ED}"/etc/vim/gvimrc
+
+	newmenu "${FILESDIR}"/gvim.desktop-r2 gvim.desktop
+	doicon "${FILESDIR}"/gvim.xpm
+
+	# bash completion script, bug #79018.
 	newbashcomp "${FILESDIR}"/${PN}-completion ${PN}
-	# keep in sync with 'complete ... -F' list
-	bashcomp_alias vim ex vi view rvim rview vimdiff
 
 	# We shouldn't be installing the ex or view man page symlinks, as they
 	# are managed by eselect-vi
@@ -345,15 +373,10 @@ pkg_postinst() {
 	# Update documentation tags (from vim-doc.eclass)
 	update_vim_helptags
 
+	# Update fdo mime stuff, bug #78394
+	fdo-mime_mime_database_update
+
 	if [[ -z ${REPLACING_VERSIONS} ]] ; then
-		if use X ; then
-			echo
-			elog "The 'X' USE flag enables vim <-> X communication, like"
-			elog "updating the xterm titlebar. It does not install a GUI."
-		fi
-		echo
-		elog "To install a GUI version of vim, use the app-editors/gvim"
-		elog "package."
 		echo
 		elog "Vim 7 includes an integrated spell checker. You need to install"
 		elog "word list files before you can use it. There are ebuilds for"
@@ -363,6 +386,7 @@ pkg_postinst() {
 		echo
 		ewarn "Note that the English word lists are no longer installed by"
 		ewarn "default."
+		echo
 	fi
 
 	# Make convenience symlinks
@@ -372,6 +396,9 @@ pkg_postinst() {
 pkg_postrm() {
 	# Update documentation tags (from vim-doc.eclass)
 	update_vim_helptags
+
+	# Update fdo mime stuff, bug #78394
+	fdo-mime_mime_database_update
 
 	# Make convenience symlinks
 	update_vim_symlinks
