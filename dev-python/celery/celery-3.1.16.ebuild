@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.1.16.ebuild,v 1.1 2014/10/25 12:19:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.1.16.ebuild,v 1.2 2014/12/08 09:02:56 idella4 Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 
 PATCHES=( "${FILESDIR}"/celery-docs.patch
 		"${FILESDIR}"/${PN}-3.1.11-test.patch )
-RESTRICT="test"
+
 # testsuite needs it own source
 DISTUTILS_IN_SOURCE_BUILD=1
 
@@ -60,10 +60,9 @@ python_compile_all() {
 }
 
 python_test() {
-	# https://github.com/celery/celery/issues/2338
 	nosetests || die "Tests failed with ${EPYTHON}"
 	# alternate method to run testsuite
-	#esetup.py
+	# esetup.py
 }
 
 python_install_all() {

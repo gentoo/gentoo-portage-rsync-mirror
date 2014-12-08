@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.803 2014/11/15 11:27:09 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.804 2014/12/08 09:17:11 mgorny Exp $
+
+*xorg-server-1.16.2-r1 (08 Dec 2014)
+
+  08 Dec 2014; Michał Górny <mgorny@gentoo.org> +xorg-server-1.16.2-r1.ebuild:
+  Update to work with new eselect-opengl, bug #531842.
 
 *xorg-server-1.16.2 (15 Nov 2014)
 

@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.45 2014/10/25 12:19:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.46 2014/12/08 09:02:56 idella4 Exp $
+
+*celery-3.1.17 (08 Dec 2014)
+
+  08 Dec 2014; Ian Delaney <idella4@gentoo.org> +celery-3.1.17.ebuild,
+  -celery-3.1.11.ebuild, -celery-3.1.12.ebuild, -celery-3.1.13.ebuild,
+  -celery-3.1.14.ebuild, -celery-3.1.15-r1.ebuild, -celery-3.1.15.ebuild,
+  celery-3.1.16.ebuild, metadata.xml:
+  unrestrict test phase found to no longer fail, bump; update deps, add use
+  flags to enable optional features in common with those of kombu, rm old
 
 *celery-3.1.16 (25 Oct 2014)
 

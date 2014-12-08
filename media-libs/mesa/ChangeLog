@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.582 2014/11/25 20:11:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.583 2014/12/08 09:17:10 mgorny Exp $
+
+*mesa-10.3.4-r1 (08 Dec 2014)
+
+  08 Dec 2014; Michał Górny <mgorny@gentoo.org> +mesa-10.3.4-r1.ebuild:
+  Update to work with new eselect-opengl, bug #531842.
 
   25 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   +files/mesa-10.2-sysfs-instead-of-libudev.patch, mesa-10.2.8.ebuild,
