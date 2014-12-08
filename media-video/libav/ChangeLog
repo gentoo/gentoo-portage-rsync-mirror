@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.227 2014/12/07 12:21:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.228 2014/12/08 19:01:23 jer Exp $
+
+  08 Dec 2014; Jeroen Roovers <jer@gentoo.org> libav-9.17.ebuild:
+  Stable for HPPA (bug #531832).
 
   07 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libav-9.17.ebuild:
   Stable for amd64, wrt bug #531832

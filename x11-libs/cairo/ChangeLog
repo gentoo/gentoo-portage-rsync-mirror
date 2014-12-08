@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.386 2014/11/29 23:37:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.388 2014/12/08 19:24:49 mattst88 Exp $
+
+*cairo-1.12.18 (08 Dec 2014)
+
+  08 Dec 2014; Matt Turner <mattst88@gentoo.org> +cairo-1.12.18.ebuild:
+  Version bump to 1.12.18.
+
+  08 Dec 2014; Matt Turner <mattst88@gentoo.org> cairo-9999.ebuild:
+  Reenable parallel make, and drop legacy-drivers USE.
 
 *cairo-1.12.16-r4 (29 Nov 2014)
 

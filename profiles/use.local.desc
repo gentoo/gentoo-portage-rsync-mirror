@@ -4033,7 +4033,6 @@ media-sound/mpd:lame - Support for MP3 streaming via Icecast2
 media-sound/mpd:lastfmradio - Support listening to last.fm radio stations
 media-sound/mpd:libmpdclient - Enable support for remote mpd databases
 media-sound/mpd:libsoxr - Enable the libsoxr resampler
-media-sound/mpd:mp4v2 - Enable the MP4v2 decoder
 media-sound/mpd:mpg123 - Enable support for mp3 decoding over media-sound/mpg123
 media-sound/mpd:network - Enables network streaming support
 media-sound/mpd:nfs - Enable support for the Network File System

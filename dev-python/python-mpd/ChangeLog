@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.40 2014/11/25 10:52:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.41 2014/12/08 19:05:01 angelos Exp $
+
+*python-mpd-0.5.4 (08 Dec 2014)
+
+  08 Dec 2014; Christoph Mende <angelos@gentoo.org> +python-mpd-0.5.4.ebuild,
+  -files/python-mpd-0.5.1-non-unicode-locale.patch, -python-mpd-0.5.1.ebuild:
+  Version bump, remove old
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> python-mpd-0.5.3.ebuild:
   Support python 3.4
