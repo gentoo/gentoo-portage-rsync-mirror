@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/pcl
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pcl/ChangeLog,v 1.1 2014/12/08 11:53:13 aballier Exp $
+
+*pcl-9999 (08 Dec 2014)
+*pcl-1.7.2 (08 Dec 2014)
+
+  08 Dec 2014; Alexis Ballier <aballier@gentoo.org> +pcl-1.7.2.ebuild,
+  +pcl-9999.ebuild, +files/nogl.patch, +metadata.xml:
+  initial import, ebuild by me
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-0.2.4.ebuild,v 1.2 2014/07/27 11:13:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-0.2.4.ebuild,v 1.3 2014/12/08 11:36:41 heroxbd Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ src_prepare() {
 src_compile() {
 	MAKE_ARGS="${MAKE_ARGS}
 		LIBEXECDIR=${EPREFIX}/lib/${PN} PF=${PF}
-		UDEVDIR=$(get_udevdir)"
+		UDEVDIR=${EPREFIX}$(get_udevdir)"
 
 	use prefix && MAKE_ARGS="${MAKE_ARGS} MKPREFIX=yes PREFIX=${EPREFIX}"
 

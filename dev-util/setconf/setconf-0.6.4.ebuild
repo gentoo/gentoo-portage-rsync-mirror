@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/setconf-0.6.3.ebuild,v 1.1 2014/11/02 04:17:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/setconf-0.6.4.ebuild,v 1.1 2014/12/08 11:41:55 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_{3,4}} )
