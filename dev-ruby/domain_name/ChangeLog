@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/domain_name
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/domain_name/ChangeLog,v 1.25 2014/11/11 10:57:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/domain_name/ChangeLog,v 1.27 2014/12/08 06:59:32 graaff Exp $
+
+*domain_name-0.5.22 (08 Dec 2014)
+
+  08 Dec 2014; Hans de Graaff <graaff@gentoo.org> +domain_name-0.5.22.ebuild:
+  Version bump.
+
+  08 Dec 2014; Hans de Graaff <graaff@gentoo.org> -domain_name-0.5.19.ebuild:
+  Cleanup.
 
   11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> domain_name-0.5.13.ebuild,
   domain_name-0.5.19.ebuild, domain_name-0.5.20.ebuild:
