@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.0.ebuild,v 1.1 2014/12/08 09:17:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.0.ebuild,v 1.2 2014/12/08 20:16:12 mattst88 Exp $
 
 EAPI=5
 
@@ -25,6 +25,7 @@ IUSE=""
 DEPEND="app-arch/xz-utils"
 RDEPEND=">=app-admin/eselect-1.2.4
 		 !<media-libs/mesa-10.3.4-r1
+		 !=media-libs/mesa-10.3.5
 		 !<x11-proto/glproto-1.4.17-r1
 		 !<x11-base/xorg-server-1.16.2-r1"
 
