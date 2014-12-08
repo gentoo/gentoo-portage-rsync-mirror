@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/dateutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dateutils/ChangeLog,v 1.21 2014/01/30 05:51:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dateutils/ChangeLog,v 1.22 2014/12/08 00:35:50 radhermit Exp $
+
+*dateutils-0.3.1 (08 Dec 2014)
+
+  08 Dec 2014; Tim Harder <radhermit@gentoo.org> +dateutils-0.3.1.ebuild:
+  Version bump.
 
 *dateutils-0.2.7 (30 Jan 2014)
 
