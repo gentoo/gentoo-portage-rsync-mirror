@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/engrampa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/engrampa/ChangeLog,v 1.6 2014/07/18 14:40:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/engrampa/ChangeLog,v 1.7 2014/12/09 22:35:42 tamiko Exp $
+
+*engrampa-1.8.1 (09 Dec 2014)
+
+  09 Dec 2014; Matthias Maier <tamiko@gentoo.org> +engrampa-1.8.1.ebuild:
+  version bump
 
   18 Jul 2014; Tom Wijsman <TomWij@gentoo.org> engrampa-1.8.0.ebuild,
   metadata.xml:
