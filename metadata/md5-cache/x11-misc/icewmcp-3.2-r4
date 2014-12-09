@@ -1,0 +1,13 @@
+DEFINED_PHASES=install prepare setup
+DEPEND=dev-python/pygtk:2 x11-libs/gtk+:2 x11-wm/icewm
+DESCRIPTION=A complete control panel for IceWM using gtk & python
+EAPI=5
+HOMEPAGE=http://icesoundmanager.sourceforge.net/index.php
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-python/pygtk:2 x11-libs/gtk+:2 x11-wm/icewm
+SLOT=0
+SRC_URI=mirror://sourceforge/icesoundmanager/IceWMControlPanel-3.2.tar.bz2
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=f9927bcc551e9c513dacb1f1723dbf3b

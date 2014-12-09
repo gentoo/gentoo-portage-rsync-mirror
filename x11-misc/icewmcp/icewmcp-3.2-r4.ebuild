@@ -1,11 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/icewmcp-3.2-r3.ebuild,v 1.1 2011/10/01 06:20:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/icewmcp-3.2-r4.ebuild,v 1.1 2014/12/08 23:20:01 jer Exp $
 
-EAPI="2"
-PYTHON_DEPEND="2"
-
-inherit python multilib
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
+inherit multilib python-single-r1
 
 MY_PN=IceWMControlPanel
 DESCRIPTION="A complete control panel for IceWM using gtk & python"
@@ -15,33 +14,25 @@ SRC_URI="mirror://sourceforge/icesoundmanager/${MY_PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
 
-DEPEND="x11-wm/icewm
+DEPEND="
 	dev-python/pygtk:2
-	x11-libs/gtk+:2"
+	x11-libs/gtk+:2
+	x11-wm/icewm
+"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/INSTALL-IceWMCP
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm -rf licenses
 	mv doc .. || die
 }
 
 src_install() {
 	local dest="/usr/$(get_libdir)/${P}"
-	dodoc ../doc/*.txt || die
-	dohtml ../doc/*.html || die
 	insinto ${dest}
-	doins -r * || die
+	doins -r *
 
 	local w wraps=(
 		"IceWMCP.py IceWMCP"
@@ -61,13 +52,11 @@ src_install() {
 	)
 	for w in "${wraps[@]}" ; do
 		set -- ${w}
-		printf '#!/bin/sh\nexec python %s/%s\n' "${dest}" "$1" > "${T}"/$2
+		printf '#!/bin/sh\nexec %s %s/%s\n' "${EPYTHON}" "${dest}" "$1" > "${T}"/$2
 		dobin "${T}"/$2 || die
 	done
-}
 
-pkg_postinst() {
-	einfo "Some of the icons displayed by IceWMCP may be pointing to"
-	einfo "programs which are not on your system!  You can hide them"
-	einfo "using the Configuration window (Ctrl+C)."
+	dodoc ../doc/*.txt
+	dohtml ../doc/*.html
+	python_optimize "${D}/${dest}"
 }

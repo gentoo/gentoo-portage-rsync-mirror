@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.0.ebuild,v 1.3 2014/12/08 23:18:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.1.ebuild,v 1.1 2014/12/08 23:18:22 mgorny Exp $
 
 EAPI=5
 
