@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.6.6.ebuild,v 1.5 2014/12/08 10:59:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.6.6.ebuild,v 1.6 2014/12/09 08:49:14 jer Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 hppa ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="

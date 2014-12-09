@@ -1,10 +1,12 @@
 # ChangeLog for dev-python/pytest-timeout
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-timeout/ChangeLog,v 1.1 2014/11/22 09:43:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-timeout/ChangeLog,v 1.2 2014/12/09 08:44:19 mgorny Exp $
+
+  09 Dec 2014; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Fix <herd/>.
 
 *pytest-timeout-0.4 (22 Nov 2014)
 
   22 Nov 2014; Justin Lecher <jlec@gentoo.org> +pytest-timeout-0.4.ebuild,
   +metadata.xml:
   New package, written by me
-

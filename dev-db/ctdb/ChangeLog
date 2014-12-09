@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/ctdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.41 2014/08/10 19:58:22 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.42 2014/12/09 08:47:08 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> ctdb-1.13-r1.ebuild:
+  Stable for HPPA (bug #525972).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ctdb-1.0.114_p1.ebuild,
   ctdb-1.0.73.ebuild, ctdb-1.0.88.ebuild, ctdb-1.13-r1.ebuild, ctdb-1.13.ebuild,
