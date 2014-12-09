@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krdc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.341 2014/11/16 12:21:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.342 2014/12/09 16:48:49 kensington Exp $
+
+  09 Dec 2014; Michael Palimaka <kensington@gentoo.org> krdc-4.14.3.ebuild:
+  Enable rdesktop USE flag by default wrt bug #530968.
 
 *krdc-4.14.3 (16 Nov 2014)
 
