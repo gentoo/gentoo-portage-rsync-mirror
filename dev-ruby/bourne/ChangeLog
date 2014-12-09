@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bourne
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bourne/ChangeLog,v 1.15 2014/11/11 11:09:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bourne/ChangeLog,v 1.16 2014/12/09 15:34:07 mrueg Exp $
+
+*bourne-1.6.0 (09 Dec 2014)
+
+  09 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +bourne-1.6.0.ebuild:
+  Version bump. Drop x86 keyword, rekeywording in bug 501152
 
   11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> bourne-1.5.0-r1.ebuild:
   Drop jruby target.
