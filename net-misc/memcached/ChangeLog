@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/memcached
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.152 2014/10/17 02:29:40 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.153 2014/12/09 02:16:51 prometheanfire Exp $
+
+*memcached-1.4.21 (09 Dec 2014)
+
+  09 Dec 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +memcached-1.4.21.ebuild:
+  bump and now depending on selinux for selinux fun
 
 *memcached-1.4.20-r1 (17 Oct 2014)
 
