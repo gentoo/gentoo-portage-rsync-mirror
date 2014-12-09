@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.121 2014/12/06 17:32:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.122 2014/12/09 16:04:24 mgorny Exp $
+
+*unixODBC-2.3.2-r2 (09 Dec 2014)
+
+  09 Dec 2014; Michał Górny <mgorny@gentoo.org> +unixODBC-2.3.2-r2.ebuild:
+  Wrap odbc_config, noted thanks to bug #530552.
 
   06 Dec 2014; Jeroen Roovers <jer@gentoo.org> unixODBC-2.3.2-r1.ebuild:
   Stable for HPPA (bug #525288).
