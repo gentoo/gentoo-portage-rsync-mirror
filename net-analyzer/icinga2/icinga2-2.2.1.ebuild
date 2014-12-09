@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1.ebuild,v 1.1 2014/12/09 02:50:06 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1.ebuild,v 1.2 2014/12/09 15:29:31 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -37,11 +37,8 @@ want_apache2
 pkg_setup() {
 	enewgroup icinga
 	enewgroup icingacmd
-	if use plugins ; then
-		enewuser icinga -1 -1 /var/lib/icinga2 "icinga,icingacmd,nagios"
-	else
-		enewuser icinga -1 -1 /var/lib/icinga2 "icinga,icingacmd"
-	fi
+	enewgroup nagios  # for plugins
+	enewuser icinga -1 -1 /var/lib/icinga2 "icinga,icingacmd,nagios"
 }
 
 src_prepare() {

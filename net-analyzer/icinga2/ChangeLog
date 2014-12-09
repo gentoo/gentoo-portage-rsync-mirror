@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/icinga2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.11 2014/12/09 02:50:06 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.12 2014/12/09 15:29:31 prometheanfire Exp $
+
+  09 Dec 2014; Matthew Thode <prometheanfire@gentoo.org> icinga2-2.2.1.ebuild:
+  fixing the group ownership stuff
 
 *icinga2-2.2.1 (09 Dec 2014)
 
