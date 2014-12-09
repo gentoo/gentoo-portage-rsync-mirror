@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.104 2014/10/27 19:54:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.105 2014/12/09 10:26:32 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> sdl-gfx-2.0.25.ebuild:
+  Stable for HPPA (bug #526022).
 
   27 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -sdl-gfx-2.0.24-r3.ebuild:

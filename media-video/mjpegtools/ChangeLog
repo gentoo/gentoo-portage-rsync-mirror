@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.220 2014/09/13 23:48:31 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.221 2014/12/09 10:07:12 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> mjpegtools-2.1.0-r2.ebuild:
+  Stable for HPPA (bug #525770).
 
   13 Sep 2014; Daniel Pielmeier <billie@gentoo.org> mjpegtools-2.1.0-r2.ebuild,
   +files/mjpegtools-2.1.0-no_format.patch:

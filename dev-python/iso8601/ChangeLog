@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/iso8601
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.24 2014/12/07 08:57:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.25 2014/12/09 10:18:25 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> iso8601-0.1.10.ebuild:
+  Stable for HPPA (bug #530294).
 
   07 Dec 2014; Ian Delaney <idella4@gentoo.org> iso8601-0.1.10.ebuild:
   clean old impls, add pypy3

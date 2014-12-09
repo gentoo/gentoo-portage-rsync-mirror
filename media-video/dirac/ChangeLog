@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dirac
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/ChangeLog,v 1.45 2014/11/07 07:34:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/ChangeLog,v 1.46 2014/12/09 10:08:11 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> dirac-1.0.2-r1.ebuild:
+  Stable for HPPA (bug #526026).
 
   07 Nov 2014; Alexis Ballier <aballier@gentoo.org> dirac-1.0.2-r1.ebuild:
   allow tl2014 to provide dvipdfm, bug #528426 by Juergen Rose
