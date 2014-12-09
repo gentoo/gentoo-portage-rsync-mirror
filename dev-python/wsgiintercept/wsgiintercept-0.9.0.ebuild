@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiintercept/wsgiintercept-0.8.1.ebuild,v 1.1 2014/08/15 04:45:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiintercept/wsgiintercept-0.9.0.ebuild,v 1.1 2014/12/09 06:55:32 idella4 Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ MY_PN="wsgi_intercept"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="WSGI application in place of a real URI for testing"
-HOMEPAGE="https://pypi.python.org/pypi/wsgi_intercept https://github.com/cdent/python3-wsgi-intercept"
+HOMEPAGE="https://github.com/cdent/python3-wsgi-intercept"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 SLOT="0"

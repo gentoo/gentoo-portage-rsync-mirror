@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mwlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.34 2014/10/13 01:23:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.35 2014/12/09 06:35:20 idella4 Exp $
+
+  09 Dec 2014; Ian Delaney <idella4@gentoo.org> -mwlib-0.15.10.ebuild,
+  -mwlib-0.15.12.ebuild, -mwlib-0.15.14.ebuild:
+  rm old
 
   13 Oct 2014; Ian Delaney <idella4@gentoo.org> mwlib-0.15.10.ebuild,
   mwlib-0.15.12.ebuild, mwlib-0.15.14.ebuild, mwlib-0.15.15.ebuild:
