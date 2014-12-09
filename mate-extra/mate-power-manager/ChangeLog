@@ -1,6 +1,13 @@
 # ChangeLog for mate-extra/mate-power-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-power-manager/ChangeLog,v 1.14 2014/09/19 17:04:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-power-manager/ChangeLog,v 1.15 2014/12/09 22:10:53 tamiko Exp $
+
+*mate-power-manager-1.8.1 (09 Dec 2014)
+
+  09 Dec 2014; Matthias Maier <tamiko@gentoo.org>
+  +mate-power-manager-1.8.1.ebuild:
+  version bump; fix libgnome-keyring dependency wrt bug #522798; fix subslot
+  dependency wrt bug #523826; fix unique configuration wrt bug #514176
 
   19 Sep 2014; Samuli Suominen <ssuominen@gentoo.org>
   -mate-power-manager-1.8.0.ebuild:

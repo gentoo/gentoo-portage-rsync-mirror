@@ -1,6 +1,12 @@
 # ChangeLog for mate-extra/mate-screensaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/ChangeLog,v 1.13 2014/07/07 23:18:35 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/ChangeLog,v 1.14 2014/12/09 22:16:41 tamiko Exp $
+
+*mate-screensaver-1.8.1 (09 Dec 2014)
+
+  09 Dec 2014; Matthias Maier <tamiko@gentoo.org>
+  +mate-screensaver-1.8.1.ebuild:
+  version bump
 
   07 Jul 2014; Tom Wijsman <TomWij@gentoo.org> mate-screensaver-1.8.0.ebuild:
   Add missing dconf dependency; fixes bug #515810, reported by Patrick Lauer.
