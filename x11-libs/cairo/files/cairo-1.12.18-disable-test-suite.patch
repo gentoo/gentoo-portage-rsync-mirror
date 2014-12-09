@@ -1,0 +1,13 @@
+diff --git a/test/Makefile.am b/test/Makefile.am
+index 950629b..db8cc90 100644
+--- a/test/Makefile.am
++++ b/test/Makefile.am
+@@ -75,7 +75,7 @@ endif
+ endif
+ test_sources += $(test)
+ 
+-noinst_PROGRAMS = cairo-test-suite$(EXEEXT) # always build
++check_PROGRAMS = cairo-test-suite$(EXEEXT) # always build
+ noinst_SCRIPTS = check-refs.sh
+ 
+ TESTS += cairo-test-suite$(EXEEXT)

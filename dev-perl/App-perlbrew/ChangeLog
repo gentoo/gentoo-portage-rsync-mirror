@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/App-perlbrew
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-perlbrew/ChangeLog,v 1.1 2014/12/09 21:21:52 dilfridge Exp $
+
+*App-perlbrew-0.720.0 (09 Dec 2014)
+
+  09 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +App-perlbrew-0.720.0.ebuild, +metadata.xml:
+  New package, imported from Perl overlay
+

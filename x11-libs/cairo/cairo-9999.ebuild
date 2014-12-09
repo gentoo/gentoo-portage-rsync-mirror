@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.51 2014/12/08 19:19:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.53 2014/12/09 21:30:56 mattst88 Exp $
 
 EAPI=5
 
@@ -86,7 +86,7 @@ MULTILIB_WRAPPED_HEADERS=(
 )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.8.8-interix.patch
+	epatch "${FILESDIR}"/${PN}-1.12.18-disable-test-suite.patch
 	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
 
 	# tests and perf tools require X, bug #483574

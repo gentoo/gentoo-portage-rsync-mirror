@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Test-Output
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Output/ChangeLog,v 1.27 2014/08/23 21:28:59 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Output/ChangeLog,v 1.28 2014/12/09 21:14:17 dilfridge Exp $
+
+*Test-Output-1.30.0 (09 Dec 2014)
+
+  09 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Test-Output-0.16.ebuild, +Test-Output-1.30.0.ebuild:
+  Version bump; remove old
 
 *Test-Output-1.10.0-r1 (23 Aug 2014)
 

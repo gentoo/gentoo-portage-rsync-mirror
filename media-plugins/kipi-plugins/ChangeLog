@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.169 2014/10/30 00:25:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.171 2014/12/09 21:30:10 mrueg Exp $
+
+  09 Dec 2014; Manuel Rüger <mrueg@gentoo.org> kipi-plugins-4.2.0.ebuild,
+  kipi-plugins-4.4.0.ebuild:
+  Support dependency on kde-apps-based packages, which have been missed by the
+  previous commit
+
+  09 Dec 2014; Manuel Rüger <mrueg@gentoo.org> kipi-plugins-4.2.0.ebuild,
+  kipi-plugins-4.4.0.ebuild:
+  Support dependency on kde-apps-based packages, too.
 
 *kipi-plugins-4.4.0 (30 Oct 2014)
 

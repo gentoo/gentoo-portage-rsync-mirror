@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.587 2014/12/09 11:16:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.588 2014/12/09 21:09:03 mattst88 Exp $
+
+  09 Dec 2014; Matt Turner <mattst88@gentoo.org> -mesa-10.3.4-r1.ebuild,
+  -mesa-10.3.4.ebuild, metadata.xml:
+  Remove sysfs from metadata.xml and drop 10.3.4.
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> mesa-10.2.8.ebuild:
   Stable for HPPA (bug #513736).
