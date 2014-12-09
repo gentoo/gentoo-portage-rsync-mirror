@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.13.0.ebuild,v 1.7 2014/11/24 15:28:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.13.0.ebuild,v 1.8 2014/12/09 17:18:39 kensington Exp $
 
 EAPI=5
 
@@ -64,8 +64,8 @@ RESTRICT="test"
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		[[ $(gcc-major-version) -lt 4 ]] || \
-			( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 7 ]] ) \
-			&& die "Sorry, but gcc-4.7 and earlier won't work (see bug #520102)."
+			( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 7 ]] ) \
+			&& die "Sorry, but gcc-4.6 and earlier won't work (see bug #520102)."
 	fi
 }
 
