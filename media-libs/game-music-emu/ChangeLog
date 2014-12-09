@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/game-music-emu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.20 2013/07/28 19:56:05 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.21 2014/12/09 08:15:57 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> game-music-emu-0.6.0-r1.ebuild:
+  Stable for HPPA (bug #526070).
 
 *game-music-emu-0.6.0-r1 (28 Jul 2013)
 
