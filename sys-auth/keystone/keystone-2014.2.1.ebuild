@@ -1,21 +1,20 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.9999.ebuild,v 1.3 2014/12/09 01:16:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.1.ebuild,v 1.1 2014/12/09 01:16:29 prometheanfire Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit git-2 distutils-r1 user
+inherit distutils-r1 user
 
 DESCRIPTION="The Openstack authentication, authorization, and service catalog written in Python"
 HOMEPAGE="https://launchpad.net/keystone"
-EGIT_REPO_URI="https://github.com/openstack/keystone.git"
-EGIT_BRANCH="stable/juno"
+SRC_URI="http://launchpad.net/${PN}/juno/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+sqlite mysql postgres ldap test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
@@ -47,6 +46,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			>=dev-python/subunit-0.0.18[${PYTHON_USEDEP}]
 			>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
 			>=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
+			!~dev-python/testtools-1.4.0[${PYTHON_USEDEP}]
 			>=dev-python/testscenarios-0.4[${PYTHON_USEDEP}]
 			>=dev-python/httplib2-0.7.5[${PYTHON_USEDEP}]
 			>=dev-python/requests-1.2.1[${PYTHON_USEDEP}]

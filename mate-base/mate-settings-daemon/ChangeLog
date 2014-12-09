@@ -1,6 +1,13 @@
 # ChangeLog for mate-base/mate-settings-daemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-settings-daemon/ChangeLog,v 1.9 2014/07/02 09:47:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-settings-daemon/ChangeLog,v 1.10 2014/12/09 01:07:11 tamiko Exp $
+
+*mate-settings-daemon-1.8.2 (09 Dec 2014)
+
+  09 Dec 2014; Matthias Maier <tamiko@gentoo.org>
+  +mate-settings-daemon-1.8.2.ebuild, mate-settings-daemon-1.6.2.ebuild,
+  mate-settings-daemon-1.8.1.ebuild:
+  version bump; ebuild maintenance wrt bug #510004
 
   02 Jul 2014; Pacho Ramos <pacho@gentoo.org> mate-settings-daemon-1.8.1.ebuild:
   x86 stable, bug 513714

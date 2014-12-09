@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-settings-daemon/mate-settings-daemon-1.6.2.ebuild,v 1.5 2014/12/09 01:07:11 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-settings-daemon/mate-settings-daemon-1.8.2.ebuild,v 1.1 2014/12/09 01:07:11 tamiko Exp $
 
 EAPI="5"
 
@@ -17,14 +17,14 @@ HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="X debug libnotify policykit pulseaudio smartcard"
 
 RDEPEND=">=dev-libs/dbus-glib-0.74:0
 	>=dev-libs/glib-2.17.3:2
 	>=mate-base/libmatekbd-1.6.1:0
-	>=mate-base/mate-desktop-1.6:0
+	>=mate-base/mate-desktop-1.8.1:0
 	media-libs/fontconfig:1.0
 	>=gnome-base/dconf-0.13.4:0
 	x11-libs/cairo:0
@@ -72,6 +72,7 @@ src_prepare() {
 src_configure() {
 	gnome2_src_configure \
 		$(use_with libnotify) \
+		$(use_enable debug) \
 		$(use_enable policykit polkit) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable !pulseaudio gstreamer) \
