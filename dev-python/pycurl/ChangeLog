@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.104 2014/11/29 06:50:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.105 2014/12/09 09:03:07 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> pycurl-7.19.3.1-r2.ebuild:
+  Stable for HPPA (bug #530290).
 
   29 Nov 2014; Ian Delaney <idella4@gentoo.org> pycurl-7.19.3.1-r2.ebuild:
   clean old python impl

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.648 2014/12/07 23:50:07 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.649 2014/12/09 09:08:34 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> emacs-24.4-r1.ebuild:
+  Stable for HPPA (bug #531806).
 
   07 Dec 2014; Chema Alonso <nimiux@gentoo.org> emacs-24.4-r1.ebuild:
   Stable for amd64 wrt bug #531806
