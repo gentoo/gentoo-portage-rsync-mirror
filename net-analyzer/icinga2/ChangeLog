@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/icinga2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.10 2014/11/03 13:24:18 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.11 2014/12/09 02:50:06 prometheanfire Exp $
+
+*icinga2-2.2.1 (09 Dec 2014)
+
+  09 Dec 2014; Matthew Thode <prometheanfire@gentoo.org> +files/icinga2.confd,
+  +files/icinga2.initd, +icinga2-2.2.1.ebuild:
+  multiple fixes :D bug 528962 and bug 528946  fixing bugs 528962 528946 Thanks
+  florian for the init scripts
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> icinga2-2.0.2.ebuild,
   icinga2-2.1.0-r3.ebuild:

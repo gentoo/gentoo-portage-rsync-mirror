@@ -1,0 +1,59 @@
+#!/sbin/runscript
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+DAEMON=/usr/sbin/icinga2
+ICINGA2_CONFIG_FILE=/etc/icinga2/icinga2.conf
+ICINGA2_RUN_DIR=/var/run
+ICINGA2_STATE_DIR=/var
+ICINGA2_PID_FILE="${ICINGA2_RUN_DIR}/icinga2/icinga2.pid"
+ICINGA2_DAEMON_ARGS="
+-c $ICINGA2_CONFIG_FILE \
+-e $ICINGA2_ERROR_LOG \
+-u $ICINGA2_USER \
+-g $ICINGA2_GROUP \
+-d
+"
+
+depend() {
+    need net
+}
+
+checkconfig() {
+    if [ ! -e "$ICINGA2_CONFIG_FILE" ]; then
+       ewarn "Config file '$ICINGA2_CONFIG_FILE' does not exist."
+       eend 1
+    fi
+}
+
+start() {
+    checkconfig
+    ebegin "Starting icinga2"
+    $DAEMON $ICINGA2_DAEMON_ARGS > $ICINGA2_STARTUP_LOG 2>&1
+    local retval=$?
+    if [ $retval -ne 0 ]; then
+        ewarn "Error starting icinga2. '$ICINGA2_STARTUP_LOG' for details."
+    fi
+    eend $retval
+}
+
+stop() {
+    ebegin "Stopping icinga2"
+    start-stop-daemon \
+        --stop \
+        --pidfile $ICINGA2_PID_FILE \
+        --retry "SIGTERM/15 SIGKILL/30" \
+        --progress
+    eend $?
+}
+
+status() {
+    [ ! -f "$ICINGA2_PID_FILE" ] && return 1
+
+    if ps -p $(cat "$ICINGA2_PID_FILE") > /dev/null; then
+        eend 0
+    else
+        eend 1
+    fi
+}
+

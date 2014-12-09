@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/icinga
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.48 2014/09/08 05:41:02 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.49 2014/12/09 02:58:34 prometheanfire Exp $
+
+*icinga-1.12.0 (09 Dec 2014)
+
+  09 Dec 2014; Matthew Thode <prometheanfire@gentoo.org> +icinga-1.12.0.ebuild:
+  bumping icinga for a new release
 
 *icinga-1.11.7 (08 Sep 2014)
 
