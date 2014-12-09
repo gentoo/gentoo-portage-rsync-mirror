@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/pdns-recursor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/ChangeLog,v 1.50 2014/10/23 10:15:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/ChangeLog,v 1.51 2014/12/09 20:01:31 swegener Exp $
+
+*pdns-recursor-3.6.2 (09 Dec 2014)
+
+  09 Dec 2014; Sven Wegener <swegener@gentoo.org> +pdns-recursor-3.6.2.ebuild:
+  Version bump.
 
   23 Oct 2014; Sven Wegener <swegener@gentoo.org> -pdns-recursor-3.6.0.ebuild:
   Remove vulnerable version.
