@@ -1,20 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.9999.ebuild,v 1.5 2014/12/09 01:38:10 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.1.ebuild,v 1.1 2014/12/09 01:38:10 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 git-2 linux-info user
+inherit distutils-r1 linux-info user
 
 DESCRIPTION="A virtual network service for Openstack"
 HOMEPAGE="https://launchpad.net/neutron"
-EGIT_REPO_URI="https://github.com/openstack/neutron.git"
-EGIT_BRANCH="stable/juno"
+SRC_URI="http://launchpad.net/${PN}/juno/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="dhcp doc l3 metadata openvswitch linuxbridge server test sqlite mysql postgres"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 

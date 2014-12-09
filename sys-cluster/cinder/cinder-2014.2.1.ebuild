@@ -1,20 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.2.9999.ebuild,v 1.3 2014/12/09 01:32:14 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.2.1.ebuild,v 1.1 2014/12/09 01:32:14 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils git-2 linux-info user
+inherit distutils-r1 eutils linux-info user
 
 DESCRIPTION="Cinder is the OpenStack Block storage service, a spin out of nova-volumes"
 HOMEPAGE="https://launchpad.net/cinder"
-EGIT_REPO_URI="https://github.com/openstack/cinder.git"
-EGIT_BRANCH="stable/juno"
+SRC_URI="http://launchpad.net/${PN}/juno/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+api +scheduler +volume iscsi lvm mysql postgres sqlite test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 

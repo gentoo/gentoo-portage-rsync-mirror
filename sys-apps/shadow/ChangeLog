@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.294 2014/07/13 17:52:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.295 2014/12/09 01:50:57 heroxbd Exp $
+
+  09 Dec 2014; Benda Xu <heroxbd@gentoo.org> shadow-4.2.1.ebuild:
+  Prefix support: trivial D -> ED and ROOT -> EROOT.
 
   13 Jul 2014; Mike Frysinger <vapier@gentoo.org> files/securetty:
   Allow root login via any serial device.
