@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.4.0-r1.ebuild,v 1.2 2014/12/09 19:57:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.4.1.ebuild,v 1.2 2014/12/09 19:57:16 swegener Exp $
 
 EAPI=5
 
