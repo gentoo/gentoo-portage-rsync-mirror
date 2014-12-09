@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/LuaBitOp-1.0.2.ebuild,v 1.5 2014/03/04 20:39:35 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/LuaBitOp-1.0.2.ebuild,v 1.6 2014/12/09 09:52:22 jer Exp $
 
 EAPI="5"
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://bitop.luajit.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~mips x86"
+KEYWORDS="amd64 ~arm hppa ~mips x86"
 IUSE=""
 
 RDEPEND="dev-lang/lua"

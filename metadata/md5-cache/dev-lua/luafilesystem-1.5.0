@@ -3,10 +3,10 @@ DEPEND=>=dev-lang/lua-5.1
 DESCRIPTION=File System Library for the Lua Programming Language
 EAPI=5
 HOMEPAGE=http://keplerproject.github.com/luafilesystem/
-KEYWORDS=amd64 arm ~hppa ~mips ppc ppc64 x86 ~x86-fbsd
+KEYWORDS=amd64 arm hppa ~mips ppc ppc64 x86 ~x86-fbsd
 LICENSE=MIT
 RDEPEND=>=dev-lang/lua-5.1
 SLOT=0
 SRC_URI=mirror://github/keplerproject/luafilesystem/luafilesystem-1.5.0.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=9cce00928fca31608b345022bbd55db4
+_md5_=0239bcd95743cd2cb315b38dadc5cb1f

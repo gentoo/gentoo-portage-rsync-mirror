@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-de
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.40 2014/12/08 17:16:47 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.41 2014/12/09 09:48:35 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> myspell-de-2013.12.06.ebuild:
+  Stable for HPPA (bug #531550).
 
   08 Dec 2014; Chema Alonso <nimiux@gentoo.org> myspell-de-2013.12.06.ebuild:
   Stable for amd64 wrt bug #531550

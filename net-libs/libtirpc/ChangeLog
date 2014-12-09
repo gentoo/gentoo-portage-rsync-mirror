@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.42 2014/08/12 07:14:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.43 2014/12/09 10:00:04 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> libtirpc-0.2.5.ebuild:
+  Stable for HPPA (bug #525268).
 
   12 Aug 2014; Mike Frysinger <vapier@gentoo.org>
   +files/libtirpc-0.2.5-stdarg.patch, libtirpc-0.2.5.ebuild:

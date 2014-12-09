@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/lpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lpeg/ChangeLog,v 1.7 2014/06/22 22:40:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lpeg/ChangeLog,v 1.8 2014/12/09 09:54:05 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> lpeg-0.12.ebuild:
+  Stable for HPPA (bug #526016).
 
   22 Jun 2014; Tim Harder <radhermit@gentoo.org> lpeg-0.12.ebuild:
   Don't hardcode pkg-config.

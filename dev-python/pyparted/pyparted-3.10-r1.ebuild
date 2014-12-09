@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.10-r1.ebuild,v 1.2 2014/04/03 21:07:16 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.10-r1.ebuild,v 1.3 2014/12/09 09:42:41 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ DESCRIPTION="Python bindings for sys-block/parted"
 HOMEPAGE="https://fedorahosted.org/pyparted/"
 SRC_URI="https://fedorahosted.org/releases/p/y/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="test"
