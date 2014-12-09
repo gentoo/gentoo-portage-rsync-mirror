@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/tweepy-2.2.ebuild,v 1.3 2014/08/26 17:03:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/tweepy-2.3.ebuild,v 1.1 2014/12/09 07:30:42 idella4 Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples test"
 
-RESTRICT="test" #fails all
+#RESTRICT="test" 	#missing a required dep frpm portage
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
