@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9597 2014/12/08 19:57:46 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9598 2014/12/09 05:54:14 mattst88 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Dec 2014; Matt Turner <mattst88@gentoo.org> package.mask:
+  Mask sys-apps/kmscon for removal.
 
   08 Dec 2014; Matt Turner <mattst88@gentoo.org> package.mask:
   Mask only mesa-10.3.{4,5}-r1.

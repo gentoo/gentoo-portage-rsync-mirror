@@ -1,6 +1,9 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.63 2014/08/27 12:26:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.64 2014/12/09 05:48:22 zlogene Exp $
+
+  09 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> llpp-17_p20140112.ebuild:
+  x86 stable wrt bug #472532
 
   27 Aug 2014; Agostino Sarubbo <ago@gentoo.org> llpp-17_p20140112.ebuild:
   Stable for ppc, wrt bug #472532
