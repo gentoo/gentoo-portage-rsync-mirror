@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/polkit-kde-agent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/ChangeLog,v 1.16 2014/08/10 20:22:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/ChangeLog,v 1.17 2014/12/09 12:46:07 mrueg Exp $
+
+*polkit-kde-agent-0.99.1 (09 Dec 2014)
+
+  09 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +polkit-kde-agent-0.99.1.ebuild:
+  Version bump. Fixes bug #530452. Thanks to Nikoli for noticing.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   polkit-kde-agent-0.99.0-r1.ebuild:

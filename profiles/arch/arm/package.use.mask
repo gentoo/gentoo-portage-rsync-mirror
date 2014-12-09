@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.229 2014/11/29 20:06:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.230 2014/12/09 12:41:24 kensington Exp $
 
 # Markus Meier <maekke@gentoo.org> (29 Nov 2014)
 # Unkeyworded deps, bug #518742
@@ -18,10 +18,6 @@ www-client/netsurf pdf-writer
 # Markus Meier <maekke@gentoo.org> (14 Nov 2014)
 # Unkeyworded deps, bug #511532
 net-im/prosody libevent mysql postgres sqlite
-
-# Michael Palimaka <kensington@gentoo.org> (25 Oct 2014)
-# Unkeyworded deps, bug #525558
-kde-base/systemsettings kscreen
 
 # Alexis Ballier <aballier@gentoo.org> (24 Oct 2014)
 # sci-libs/hdf is not supported on arm

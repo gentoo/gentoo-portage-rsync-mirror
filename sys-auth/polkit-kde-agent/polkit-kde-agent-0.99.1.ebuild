@@ -1,0 +1,36 @@
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/polkit-kde-agent-0.99.1.ebuild,v 1.1 2014/12/09 12:46:07 mrueg Exp $
+
+EAPI=5
+
+MY_PN="${PN}-1"
+MY_P="${MY_PN}-${PV}"
+EGIT_REPONAME="${MY_PN}"
+KDE_LINGUAS="ar bs ca ca@valencia cs da de el en_GB eo es et fi fr
+	ga gl hr hu is it ja kk km lt mai mr ms nb nds nl pa pl pt pt_BR
+	ro ru sk sl sr sr@ijekavian sr@ijekavianlatin sr@latin sv th tr
+	ug uk vi zh_CN zh_TW"
+inherit kde4-base
+
+DESCRIPTION="PolKit agent module for KDE"
+HOMEPAGE="http://www.kde.org"
+if [[ ${KDE_BUILD_TYPE} != live ]] ; then
+	SRC_URI="https://launchpad.net/ubuntu/+archive/primary/+files/${MY_PN/-agent/}_${PV}.orig.tar.xz"
+fi
+
+LICENSE="GPL-2"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+SLOT="4"
+IUSE="debug"
+
+DEPEND="
+	>=sys-auth/polkit-qt-0.103.0
+"
+RDEPEND="${DEPEND}
+	!sys-auth/polkit-kde
+"
+
+if [[ ${KDE_BUILD_TYPE} != live ]] ; then
+	S=${WORKDIR}/${MY_P}
+fi
