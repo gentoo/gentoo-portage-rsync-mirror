@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/mate-panel-1.8.1.ebuild,v 1.1 2014/12/09 00:54:59 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/mate-panel-1.8.1-r1.ebuild,v 1.1 2014/12/09 21:39:06 tamiko Exp $
 
 EAPI="5"
 
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools gnome2 versionator
+inherit eutils autotools gnome2 versionator
 
 MATE_BRANCH="$(get_version_component_range 1-2)"
 
@@ -59,6 +59,10 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Disable python check.
 	sed -e '/AM_PATH_PYTHON/d' -i configure.ac || die
+
+	epatch "${FILESDIR}/${P}-update_marco_wm_name.patch"
+
+	epatch_user
 
 	eautoreconf
 

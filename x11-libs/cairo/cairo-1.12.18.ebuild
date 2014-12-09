@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.18.ebuild,v 1.3 2014/12/09 21:30:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.18.ebuild,v 1.4 2014/12/09 21:35:55 mattst88 Exp $
 
 EAPI=5
 
@@ -102,10 +102,6 @@ src_prepare() {
 		touch src/Makefile.am.features
 		touch ChangeLog
 	fi
-
-	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
-	# upgraded to an eautoreconf for the above interix patch.
-	eautoreconf
 }
 
 multilib_src_configure() {

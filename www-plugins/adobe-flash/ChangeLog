@@ -1,6 +1,14 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.280 2014/12/09 15:08:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.282 2014/12/09 21:37:11 ago Exp $
+
+  09 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.425.ebuild:
+  Stable for x86, wrt bug #532074
+
+  09 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.425.ebuild:
+  Stable for amd64, wrt bug #532074
 
 *adobe-flash-11.2.202.425 (09 Dec 2014)
 

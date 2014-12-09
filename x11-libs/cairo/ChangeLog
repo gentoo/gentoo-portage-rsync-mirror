@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.390 2014/12/09 21:30:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.391 2014/12/09 21:35:55 mattst88 Exp $
+
+  09 Dec 2014; Matt Turner <mattst88@gentoo.org> cairo-1.12.18.ebuild,
+  cairo-9999.ebuild:
+  Drop now unnecessary eautoreconf.
 
   09 Dec 2014; Matt Turner <mattst88@gentoo.org> cairo-1.12.18.ebuild,
   cairo-9999.ebuild:
