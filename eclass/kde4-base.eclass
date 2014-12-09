@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.144 2014/12/04 10:32:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.145 2014/12/09 18:38:57 mrueg Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -346,7 +346,7 @@ if [[ ${KDEBASE} != "kde-base" && -n ${KDE_LINGUAS} ]]; then
 		# this can't be done on one line because if user doesn't use any localisation
 		# then he is probably not interested in kde-l10n at all.
 		kderdepend+="
-			linguas_${_lingua}? ( $(add_kdebase_dep kde-l10n "linguas_${_lingua}(+)") )
+		linguas_${_lingua}? ( || ( kde-apps/kde-l10n[linguas_${_lingua}(+)] $(add_kdebase_dep kde-l10n "linguas_${_lingua}(+)") ) )
 		"
 	done
 	unset _lingua

@@ -1,6 +1,20 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.437 2014/12/06 16:48:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.438 2014/12/09 18:45:10 pacho Exp $
+
+  09 Dec 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/libxml2-2.9.0-manual-python.patch,
+  -files/libxml2-2.9.0-thread-alloc.patch,
+  -files/libxml2-2.9.1-compression-detection.patch,
+  -files/libxml2-2.9.1-external-param-entities.patch,
+  -files/libxml2-2.9.1-icu-pkgconfig.patch,
+  -files/libxml2-2.9.1-missing-break.patch,
+  -files/libxml2-2.9.1-non-ascii-cr-lf.patch,
+  -files/libxml2-2.9.1-python-2.6.patch, -files/libxml2-2.9.1-python3.patch,
+  -files/libxml2-2.9.1-python3a.patch,
+  -files/libxml2-2.9.1-xmllint-postvalid.patch, -libxml2-2.9.1-r4.ebuild,
+  -libxml2-2.9.1-r5.ebuild:
+  Cleanup due to security bug #525656
 
   06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libxml2-2.9.2.ebuild:
   Stable for ia64, wrt bug #525656
