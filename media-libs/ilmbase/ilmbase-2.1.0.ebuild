@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ilmbase-2.1.0.ebuild,v 1.2 2014/08/03 19:04:14 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ilmbase-2.1.0.ebuild,v 1.3 2014/12/09 00:01:00 jer Exp $
 
 EAPI=5
 inherit autotools-multilib
@@ -16,3 +16,12 @@ IUSE="static-libs"
 
 DOCS=( AUTHORS ChangeLog NEWS README )
 MULTILIB_WRAPPED_HEADERS=( /usr/include/OpenEXR/IlmBaseConfig.h )
+
+src_configure() {
+	# Disable use of ucontext.h wrt #482890
+	if use hppa || use ppc || use ppc64; then
+		export ac_cv_header_ucontext_h=no
+	fi
+
+	autotools-multilib_src_configure
+}

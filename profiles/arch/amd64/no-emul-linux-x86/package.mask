@@ -1,11 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.mask,v 1.4 2014/12/07 18:52:51 mgorny Exp $
-
-# Michał Górny <mgorny@gentoo.org> (07 Dec 2014)
-# on behalf of gx86-multilib project <multilib@gentoo.org>
-# Requires masked sys-devel/gcc[awt]. Does not have any real use.
-dev-java/gcj-jdk
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.mask,v 1.5 2014/12/08 23:50:23 mgorny Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>

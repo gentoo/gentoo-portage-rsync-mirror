@@ -1,6 +1,21 @@
 # ChangeLog for mate-base/caja
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/caja/ChangeLog,v 1.7 2014/07/07 23:45:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/caja/ChangeLog,v 1.10 2014/12/08 23:44:40 tamiko Exp $
+
+  08 Dec 2014; Matthias Maier <tamiko@gentoo.org> caja-1.8.1.ebuild:
+  fix accidental checkin
+
+*caja-1.8.2-r1 (08 Dec 2014)
+
+  08 Dec 2014; Matthias Maier <tamiko@gentoo.org> +caja-1.8.2-r1.ebuild,
+  -caja-1.8.2.ebuild, caja-1.8.1.ebuild:
+  just drop X use-flag wrt bug #526204
+
+*caja-1.8.2 (08 Dec 2014)
+
+  08 Dec 2014; Matthias Maier <tamiko@gentoo.org> +caja-1.8.2.ebuild,
+  caja-1.8.1.ebuild:
+  version bump; cleanup obsolete dependency (bug #519152)
 
   07 Jul 2014; Tom Wijsman <TomWij@gentoo.org> caja-1.8.1.ebuild:
   Add missing dconf dependency; fixes bug #515148, reported by Patrick Lauer.

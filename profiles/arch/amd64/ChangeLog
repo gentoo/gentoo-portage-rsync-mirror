@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.295 2014/12/07 18:52:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.296 2014/12/08 23:50:23 mgorny Exp $
+
+  08 Dec 2014; Michał Górny <mgorny@gentoo.org>
+  no-emul-linux-x86/package.mask, no-emul-linux-x86/package.use.mask:
+  Mask gcj-jdk[X] instead of the whole package, pointed out in bug #531900,
+  comment 3.
 
   07 Dec 2014; Michał Górny <mgorny@gentoo.org>
   no-emul-linux-x86/package.mask:

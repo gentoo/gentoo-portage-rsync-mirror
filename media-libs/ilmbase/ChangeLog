@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ilmbase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.38 2014/08/22 21:56:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.39 2014/12/09 00:01:00 jer Exp $
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org> ilmbase-2.1.0.ebuild,
+  ilmbase-2.2.0.ebuild:
+  Do not use ucontext on architectures that it does not support (bug #482890).
 
 *ilmbase-2.2.0 (22 Aug 2014)
 

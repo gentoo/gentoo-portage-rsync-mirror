@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/caja/caja-1.8.1.ebuild,v 1.8 2014/12/08 23:44:40 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/caja/caja-1.8.2-r1.ebuild,v 1.1 2014/12/08 23:42:59 tamiko Exp $
 
 EAPI="5"
 
@@ -17,9 +17,9 @@ HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
-IUSE="X +mate +introspection +unique xmp"
+IUSE="+mate +introspection +unique xmp"
 
 RDEPEND="dev-libs/atk:0
 	>=dev-libs/glib-2.28:2
@@ -74,8 +74,7 @@ src_configure() {
 		--with-gtk=2.0 \
 		$(use_enable introspection) \
 		$(use_enable unique) \
-		$(use_enable xmp) \
-		$(use_with X x)
+		$(use_enable xmp)
 }
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README THANKS TODO"

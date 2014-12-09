@@ -1,8 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.mask,v 1.2 2014/12/07 15:03:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.mask,v 1.3 2014/12/08 23:50:23 mgorny Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
-# Has incorrect dependencies and maintainer is unwilling to fix them.
+# gcc[awt] is only used by gcj-jdk[X], and gcj-jdk[X] is not really
+# used by anything. The deps are hard to fix properly thanks
+# to toolchain.eclass.
 sys-devel/gcc awt
+dev-java/gcj-jdk X
