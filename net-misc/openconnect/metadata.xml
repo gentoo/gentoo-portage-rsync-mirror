@@ -6,6 +6,10 @@
 		<name>Matthew Schultz</name>
 		<description>Proxied maintainer. Assign bugs to him.</description>
 	</maintainer>
+	<maintainer>
+		<email>floppym@gentoo.org</email>
+		<name>Mike Gilbert</name>
+	</maintainer>
 	<herd>proxy-maintainers</herd>
 	<use>
 		<flag name='gssapi'>Build GSSAPI support.</flag>

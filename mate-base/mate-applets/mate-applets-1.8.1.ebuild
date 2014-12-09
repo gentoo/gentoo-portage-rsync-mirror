@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/mate-applets-1.8.1.ebuild,v 1.1 2014/12/09 00:01:04 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/mate-applets-1.8.1.ebuild,v 1.2 2014/12/09 00:22:42 tamiko Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="X ipv6 networkmanager policykit"
+IUSE="X ipv6 networkmanager policykit +upower"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
@@ -36,7 +36,7 @@ RDEPEND="${PYTHON_DEPS}
 	>=mate-base/mate-settings-daemon-1.6:0
 	>=sys-apps/dbus-1.1.2:0
 	sys-power/cpupower
-	|| ( >=sys-power/upower-0.9.23 >=sys-power/upower-pm-utils-0.9.23 )
+	upower? ( || ( >=sys-power/upower-0.9.23 >=sys-power/upower-pm-utils-0.9.23 ) )
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.24:2
 	>=x11-libs/libnotify-0.7:0
@@ -72,6 +72,7 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable networkmanager) \
 		$(use_enable policykit polkit) \
+		$(use_with upower) \
 		$(use_with X x)
 }
 
