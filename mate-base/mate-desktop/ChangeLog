@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/mate-desktop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/ChangeLog,v 1.14 2014/10/26 01:54:09 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/ChangeLog,v 1.15 2014/12/09 00:41:35 tamiko Exp $
+
+  09 Dec 2014; Matthias Maier <tamiko@gentoo.org> mate-desktop-1.8.1-r1.ebuild:
+  add missing ${PYTHON_REQUIRED_USE}, bug #523858
 
   26 Oct 2014; Mart Raudsepp <leio@gentoo.org> mate-desktop-1.8.1-r1.ebuild:
   Add ~arm keyword for bug 508072 and me
