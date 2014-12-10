@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9599 2014/12/09 12:52:49 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9600 2014/12/10 00:04:23 tamiko Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Dec 2014; Matthias Maier <tamiko@gentoo.org> package.mask:
+  Remove obsolete mask for app-emulation/virtinst
 
   09 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Mask vulnerable versions of app-antivirus/clamav
