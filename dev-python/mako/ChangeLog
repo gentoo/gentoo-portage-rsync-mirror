@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.85 2014/11/20 06:54:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.86 2014/12/10 06:45:16 patrick Exp $
+
+  10 Dec 2014; Patrick Lauer <patrick@gentoo.org> mako-0.7.3-r2.ebuild,
+  mako-1.0.0.ebuild:
+  Typo fix
 
   20 Nov 2014; Patrick Lauer <patrick@gentoo.org> mako-1.0.0.ebuild:
   Add missing test dep
