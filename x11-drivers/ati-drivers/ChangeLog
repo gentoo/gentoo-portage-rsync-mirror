@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.366 2014/11/20 10:55:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.367 2014/12/10 20:45:09 mrueg Exp $
+
+*ati-drivers-14.12 (10 Dec 2014)
+
+  10 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +ati-drivers-14.12.ebuild:
+  Proxy commit for Emil Karlson. Version bump. Fixes bug #532068.
 
 *ati-drivers-14.9-r1 (20 Nov 2014)
 
