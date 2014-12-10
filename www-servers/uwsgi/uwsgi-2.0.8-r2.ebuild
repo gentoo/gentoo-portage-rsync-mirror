@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.8-r1.ebuild,v 1.2 2014/12/10 11:09:19 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.8-r2.ebuild,v 1.1 2014/12/10 11:09:19 ultrabug Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_7 python3_{2,3,4} )
 
 RUBY_OPTIONAL="yes"
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 PHP_EXT_INI="no"
 PHP_EXT_NAME="dummy"
