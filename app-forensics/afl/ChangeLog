@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/afl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afl/ChangeLog,v 1.3 2014/11/27 23:00:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afl/ChangeLog,v 1.4 2014/12/10 00:36:21 hanno Exp $
+
+*afl-0.89b (10 Dec 2014)
+
+  10 Dec 2014; <hanno@gentoo.org> +afl-0.89b.ebuild:
+  Bump.
 
 *afl-0.74b (27 Nov 2014)
 
