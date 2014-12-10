@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.2.7.ebuild,v 1.15 2014/12/08 21:26:23 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.2.7.ebuild,v 1.16 2014/12/10 03:32:04 patrick Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ RDEPEND=">=app-admin/eselect-1.2.4
 		 !=media-libs/mesa-10.3.4-r1
 		 !>=media-libs/mesa-10.3.5-r1
 		 !>=x11-proto/glproto-1.4.17-r1
-		 !>=x11-base/xorg-server-1.16.2-r1"
+		 !=x11-base/xorg-server-1.16.2-r1"
 
 pkg_postinst() {
 	local impl="$(eselect opengl show)"
