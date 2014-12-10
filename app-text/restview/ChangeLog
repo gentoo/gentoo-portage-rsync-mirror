@@ -1,6 +1,11 @@
 # ChangeLog for app-text/restview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/restview/ChangeLog,v 1.1 2014/10/27 05:16:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/restview/ChangeLog,v 1.2 2014/12/10 19:14:11 radhermit Exp $
+
+*restview-2.2.0 (10 Dec 2014)
+
+  10 Dec 2014; Tim Harder <radhermit@gentoo.org> +restview-2.2.0.ebuild:
+  Version bump.
 
 *restview-2.1.1 (27 Oct 2014)
 
