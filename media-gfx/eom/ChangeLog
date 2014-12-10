@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eom
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eom/ChangeLog,v 1.6 2014/10/26 04:22:20 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eom/ChangeLog,v 1.7 2014/12/09 23:14:30 tamiko Exp $
+
+*eom-1.8.1 (09 Dec 2014)
+
+  09 Dec 2014; Matthias Maier <tamiko@gentoo.org> +eom-1.8.1.ebuild:
+  version bump
 
   26 Oct 2014; Mart Raudsepp <leio@gentoo.org> eom-1.8.0.ebuild:
   Add ~arm keyword, bug 508072

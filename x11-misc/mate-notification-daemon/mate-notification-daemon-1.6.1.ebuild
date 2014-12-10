@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mate-notification-daemon/mate-notification-daemon-1.6.1.ebuild,v 1.2 2014/05/04 14:55:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mate-notification-daemon/mate-notification-daemon-1.6.1.ebuild,v 1.3 2014/12/09 23:17:58 tamiko Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ MATE_BRANCH="$(get_version_component_range 1-2)"
 
 SRC_URI="http://pub.mate-desktop.org/releases/${MATE_BRANCH}/${P}.tar.xz"
 DESCRIPTION="MATE Notification daemon"
-HOMEPAGE="http://mate-dekstop.org"
+HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="GPL-2"
 SLOT="0"
