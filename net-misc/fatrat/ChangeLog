@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/fatrat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/ChangeLog,v 1.4 2014/01/05 22:20:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/ChangeLog,v 1.5 2014/12/10 17:35:37 polynomial-c Exp $
+
+  10 Dec 2014; Lars Wendler <polynomial-c@gentoo.org>
+  fatrat-1.2.0_beta2.ebuild:
+  Added dev-qt/qtdbus to RDEPEND (bug #532130).
 
   05 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
   fatrat-1.2.0_beta2.ebuild, +files/fatrat-1.2.0_beta2-libcrypto_linking.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/fatrat-1.2.0_beta2.ebuild,v 1.4 2014/01/05 22:20:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/fatrat-1.2.0_beta2.ebuild,v 1.5 2014/12/10 17:35:37 polynomial-c Exp $
 
 EAPI=5
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="bittorrent +curl doc jabber nls webinterface"
 
-RDEPEND="dev-qt/qtgui:4
+RDEPEND="dev-qt/qtdbus:4
+	dev-qt/qtgui:4
 	dev-qt/qtsvg:4
 	bittorrent? ( >=net-libs/rb_libtorrent-0.14.5
 			>=dev-cpp/asio-1.1.0
