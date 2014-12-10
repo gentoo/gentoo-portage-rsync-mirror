@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-1.1.0.ebuild,v 1.2 2014/11/24 10:22:44 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-1.1.0.ebuild,v 1.3 2014/12/10 21:48:06 tamiko Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ RDEPEND="!app-emulation/virtinst
 		x11-libs/gtk+:3[introspection]
 		gnome-base/dconf
 		>=net-libs/gtk-vnc-0.3.8[gtk3,introspection]
-		net-misc/spice-gtk[gtk3,introspection,python,sasl?,${PYTHON_USEDEP}]
+		net-misc/spice-gtk[usbredir,gtk3,introspection,python,sasl?,${PYTHON_USEDEP}]
 		x11-libs/vte:2.90[introspection]
 		gnome-keyring? ( dev-python/gnome-keyring-python )
 		policykit? ( sys-auth/polkit[introspection] )
