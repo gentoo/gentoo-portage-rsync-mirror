@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tapiir
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.22 2014/12/10 14:23:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.23 2014/12/10 16:35:19 jer Exp $
+
+  10 Dec 2014; Jeroen Roovers <jer@gentoo.org> files/tapiir-0.7.3-acinclude.m4:
+  Fix underlinking (bug #366193).
 
 *tapiir-0.7.3 (10 Dec 2014)
 

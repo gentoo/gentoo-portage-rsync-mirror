@@ -167,7 +167,7 @@ else
 fi
 
 CXXFLAGS=`fltk-config --cxxflags`
-LDFLAGS=`fltk-config --ldflags`
+LIBS="$LIBS `fltk-config --ldflags`"
 ])
 
 
