@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.112 2014/12/10 21:48:06 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.113 2014/12/10 22:10:52 tamiko Exp $
+
+  10 Dec 2014; Matthias Maier <tamiko@gentoo.org> virt-manager-0.10.0-r2.ebuild,
+  virt-manager-1.0.1.ebuild, virt-manager-1.1.0.ebuild,
+  virt-manager-9999.ebuild:
+  conditionally invoke gnome2-pkg_postinst depending on USE="gtk", bug #516664
 
   10 Dec 2014; Matthias Maier <tamiko@gentoo.org> virt-manager-1.0.1.ebuild,
   virt-manager-1.1.0.ebuild, virt-manager-9999.ebuild:

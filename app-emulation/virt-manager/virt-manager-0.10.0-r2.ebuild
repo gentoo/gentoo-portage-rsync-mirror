@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0-r2.ebuild,v 1.6 2014/11/24 10:22:44 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0-r2.ebuild,v 1.7 2014/12/10 22:10:52 tamiko Exp $
 
 EAPI=5
 
@@ -83,4 +83,8 @@ pkg_preinst() {
 		rm -rf "${ED}/usr/share/applications/virt-manager.desktop"
 		rm -rf "${ED}/usr/bin/virt-manager"
 	fi
+}
+
+pkg_postinst() {
+	use gtk && gnome2_pkg_postinst
 }
