@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/minissdpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minissdpd/ChangeLog,v 1.17 2014/12/05 11:12:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minissdpd/ChangeLog,v 1.18 2014/12/10 15:09:00 blueness Exp $
+
+*minissdpd-1.3 (10 Dec 2014)
+
+  10 Dec 2014; Anthony G. Basile <blueness@gentoo.org> +minissdpd-1.3.ebuild:
+  Version bump
 
 *minissdpd-1.2.20141204 (05 Dec 2014)
 

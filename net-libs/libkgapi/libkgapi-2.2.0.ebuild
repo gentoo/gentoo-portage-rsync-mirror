@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/libkgapi-2.2.0.ebuild,v 1.1 2014/08/20 16:04:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/libkgapi-2.2.0.ebuild,v 1.2 2014/12/10 15:04:11 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
 DEPEND="

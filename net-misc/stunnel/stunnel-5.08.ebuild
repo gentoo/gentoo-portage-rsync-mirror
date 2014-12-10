@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-5.04.ebuild,v 1.3 2014/09/23 20:11:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-5.08.ebuild,v 1.1 2014/12/10 15:02:37 blueness Exp $
 
 EAPI="5"
 
