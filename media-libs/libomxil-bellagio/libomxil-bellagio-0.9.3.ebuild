@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libomxil-bellagio/libomxil-bellagio-0.9.3.ebuild,v 1.1 2014/02/12 17:19:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libomxil-bellagio/libomxil-bellagio-0.9.3.ebuild,v 1.3 2014/12/10 09:56:37 ago Exp $
 
 EAPI=5
 XORG_MULTILIB=yes
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN:3:5}/${P}.tar.gz mirror://ubuntu/pool/univers
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+audioeffects +clocksrc debug doc +videoscheduler"
 
 RDEPEND=""

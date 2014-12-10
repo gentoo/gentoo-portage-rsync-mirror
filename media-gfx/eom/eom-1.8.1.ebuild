@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eom/eom-1.8.1.ebuild,v 1.1 2014/12/09 23:14:30 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eom/eom-1.8.1.ebuild,v 1.2 2014/12/10 09:31:29 tamiko Exp $
 
 EAPI="5"
 
@@ -56,6 +56,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40:*
 	sys-devel/gettext:*
 	virtual/pkgconfig:*"
+
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
+}
 
 src_configure() {
 	gnome2_src_configure \
