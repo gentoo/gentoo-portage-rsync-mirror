@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/owncloud
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.60 2014/11/14 13:54:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.61 2014/12/10 10:15:14 voyageur Exp $
+
+*owncloud-7.0.4 (10 Dec 2014)
+
+  10 Dec 2014; Bernard Cafarelli <voyageur@gentoo.org> +owncloud-7.0.4.ebuild:
+  Version bump
 
 *owncloud-7.0.3 (14 Nov 2014)
 *owncloud-6.0.6 (14 Nov 2014)
