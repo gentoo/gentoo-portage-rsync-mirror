@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/tapiir
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.21 2011/03/20 20:06:58 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.22 2014/12/10 14:23:51 jer Exp $
+
+*tapiir-0.7.3 (10 Dec 2014)
+
+  10 Dec 2014; Jeroen Roovers <jer@gentoo.org> +tapiir-0.7.3.ebuild,
+  +files/tapiir-0.7.3-acinclude.m4:
+  Version bump. Fix FLTK version check (bug #366193).
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> tapiir-0.7.2.ebuild:
   x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
