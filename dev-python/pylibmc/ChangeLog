@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylibmc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibmc/ChangeLog,v 1.10 2014/04/04 07:23:18 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibmc/ChangeLog,v 1.11 2014/12/10 04:06:29 patrick Exp $
+
+*pylibmc-1.4.1 (10 Dec 2014)
+
+  10 Dec 2014; Patrick Lauer <patrick@gentoo.org> +pylibmc-1.4.1.ebuild:
+  Bump, add py3 support, #532002
 
   04 Apr 2014; Dirkjan Ochtman <djc@gentoo.org> -pylibmc-1.2.2.ebuild:
   Remove old version.

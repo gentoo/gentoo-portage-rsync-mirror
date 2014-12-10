@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1.ebuild,v 1.2 2014/12/09 15:29:31 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1.ebuild,v 1.3 2014/12/10 04:02:28 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -60,6 +60,24 @@ src_configure() {
 		-DICINGA2_COMMAND_GROUP=icingacmd
 		-DINSTALL_SYSTEMD_SERVICE_AND_INITSCRIPT=yes
 	)
+	if use postgres; then
+		mycmakeargs+=(
+			-DICINGA2_WITH_PGSQL=ON
+		)
+	else
+		mycmakeargs+=(
+			-DICINGA2_WITH_PGSQL=OFF
+		)
+	fi
+	if use mysql; then
+		mycmakeargs+=(
+			-DICINGA2_WITH_MYSQL=ON
+		)
+	else
+		mycmakeargs+=(
+			-DICINGA2_WITH_MYSQL=OFF
+		)
+	fi
 	cmake-utils_src_configure
 }
 
