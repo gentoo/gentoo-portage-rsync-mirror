@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.392 2014/11/20 11:56:40 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.393 2014/12/10 22:44:45 tamiko Exp $
+
+*libvirt-1.2.10-r1 (10 Dec 2014)
+
+  10 Dec 2014; Matthias Maier <tamiko@gentoo.org>
+  +files/libvirt-1.2.10-cve-2014-8131.patch, +libvirt-1.2.10-r1.ebuild,
+  -libvirt-1.2.10.ebuild, -libvirt-1.2.9.1-r1.ebuild:
+  fix for CVE-2014-8131, bug #532204, drop vulnerable unstable
 
   20 Nov 2014; Matthias Maier <tamiko@gentoo.org>
   +files/libvirt-1.2.9-fix-firewalld-configuration.patch,

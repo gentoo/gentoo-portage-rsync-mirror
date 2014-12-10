@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.10.ebuild,v 1.5 2014/11/20 11:56:40 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.10-r1.ebuild,v 1.1 2014/12/10 22:44:45 tamiko Exp $
 
 EAPI=5
 
@@ -222,7 +222,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.2.9-do_not_use_sysconf.patch \
 		"${FILESDIR}"/${PN}-1.2.9-fix-firewalld-configuration.patch \
-		"${FILESDIR}"/${P}-cve-2014-7823.patch
+		"${FILESDIR}"/${P}-cve-2014-7823.patch \
+		"${FILESDIR}"/${P}-cve-2014-8131.patch
 
 	epatch_user
 
