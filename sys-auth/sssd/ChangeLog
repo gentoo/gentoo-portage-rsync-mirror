@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.62 2014/11/20 19:40:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.63 2014/12/10 20:29:42 hwoarang Exp $
+
+*sssd-1.9.7 (10 Dec 2014)
+
+  10 Dec 2014; Markos Chandras <hwoarang@gentoo.org> +sssd-1.9.7.ebuild:
+  Version bump for the LTM branch. 1.9.7 is going to be the last one
 
 *sssd-1.12.2-r1 (20 Nov 2014)
 
