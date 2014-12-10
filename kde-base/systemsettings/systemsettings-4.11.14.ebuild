@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.11.14.ebuild,v 1.1 2014/11/14 18:41:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.11.14.ebuild,v 1.2 2014/12/10 17:14:10 kensington Exp $
 
 EAPI=5
 
@@ -45,7 +45,7 @@ RDEPEND="${COMMONDEPEND}
 	x11-apps/setxkbmap
 	x11-misc/xkeyboard-config
 	gtk? ( kde-misc/kde-gtk-config )
-	kscreen? ( kde-misc/kscreen )
+	kscreen? ( kde-misc/kscreen:4 )
 	nepomuk? ( $(add_kdebase_dep nepomuk) )
 "
 

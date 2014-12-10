@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/solid-runtime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/ChangeLog,v 1.191 2014/11/16 12:21:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/ChangeLog,v 1.192 2014/12/10 17:10:46 kensington Exp $
+
+  10 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  solid-runtime-4.12.5.ebuild, solid-runtime-4.14.2.ebuild,
+  solid-runtime-4.14.3.ebuild:
+  Pin net-wireless/bluedevil to SLOT 4.
 
 *solid-runtime-4.14.3 (16 Nov 2014)
 

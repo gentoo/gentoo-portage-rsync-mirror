@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.270 2014/11/14 19:33:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.271 2014/12/10 17:14:10 kensington Exp $
+
+  10 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  systemsettings-4.11.14.ebuild:
+  Pin kde-misc/kscreen to SLOT 4.
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/systemsettings-4.11.13-kcm-dateandtime.patch,
