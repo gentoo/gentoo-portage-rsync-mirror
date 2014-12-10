@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sure/sure-1.2.5-r1.ebuild,v 1.1 2014/10/15 02:12:02 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sure/sure-1.2.5-r1.ebuild,v 1.2 2014/12/10 03:08:52 patrick Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 python3_3 pypy )
+PYTHON_COMPAT=( python2_7 python3_{3,4} pypy )
 
 inherit distutils-r1 vcs-snapshot
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 CDEPEND="
-	~dev-python/nose-1.3.0[${PYTHON_USEDEP}]
+	>=dev-python/nose-1.3.0[${PYTHON_USEDEP}]
 	~dev-python/rednose-0.4.1[${PYTHON_USEDEP}]
 "
 DEPEND="
