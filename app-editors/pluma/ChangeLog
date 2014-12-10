@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/pluma
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/pluma/ChangeLog,v 1.6 2014/12/09 22:42:36 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/pluma/ChangeLog,v 1.8 2014/12/10 09:27:39 tamiko Exp $
+
+  10 Dec 2014; Matthias Maier <tamiko@gentoo.org> pluma-1.8.0.ebuild:
+  do not call to python-single-r1_pkg_setup if USE=-python, bug #518026
+
+  10 Dec 2014; Matthias Maier <tamiko@gentoo.org> pluma-1.8.1.ebuild:
+  do not call to python-single-r1_pkg_setup if USE=-python, bug #518026
 
   09 Dec 2014; Matthias Maier <tamiko@gentoo.org> pluma-1.8.1.ebuild:
   add mate-base/mate-desktop dependency wrt bug #523574

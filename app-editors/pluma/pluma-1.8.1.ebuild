@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/pluma/pluma-1.8.1.ebuild,v 1.5 2014/12/09 22:42:36 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/pluma/pluma-1.8.1.ebuild,v 1.6 2014/12/10 09:25:06 tamiko Exp $
 
 EAPI="5"
 
@@ -64,6 +64,10 @@ DEPEND="${RDEPEND}
 	>=mate-base/mate-common-1.6:0
 	>=sys-devel/gettext-0.17:*
 	virtual/pkgconfig:*"
+
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
+}
 
 src_configure() {
 	gnome2_src_configure \
