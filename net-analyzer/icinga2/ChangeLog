@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/icinga2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.13 2014/12/10 04:02:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.14 2014/12/10 05:18:46 prometheanfire Exp $
+
+  10 Dec 2014; Matthew Thode <prometheanfire@gentoo.org> icinga2-2.2.1.ebuild:
+  fixing sql schema source location
 
   10 Dec 2014; Matthew Thode <prometheanfire@gentoo.org> icinga2-2.2.1.ebuild:
   fixing the usage of postgres and mysql

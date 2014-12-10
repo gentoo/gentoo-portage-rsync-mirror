@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1.ebuild,v 1.3 2014/12/10 04:02:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1.ebuild,v 1.4 2014/12/10 05:18:46 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -108,12 +108,12 @@ src_install() {
 
 	if use mysql ; then
 		docinto schema
-		newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_mysql/schema/mysql.sql mysql.sql
+		newdoc "${WORKDIR}"/icinga2-${PV}/lib/db_ido_mysql/schema/mysql.sql mysql.sql
 		docinto schema/upgrade
 		#newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_mysql/schema/upgrade/0.0.11.sql mysql-upgrade-1.12.0.sql
 	elif use postgres ; then
 		docinto schema
-		newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_pgsql/schema/pgsql.sql pgsql.sql
+		newdoc "${WORKDIR}"/icinga2-${PV}/lib/db_ido_pgsql/schema/pgsql.sql pgsql.sql
 		docinto schema/upgrade
 		#newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_pgsql/schema/upgrade/0.0.11.sql pgsql-upgrade-1.12.0.sql
 	fi
