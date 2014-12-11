@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/binwalk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/binwalk/ChangeLog,v 1.35 2014/11/21 07:40:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/binwalk/ChangeLog,v 1.36 2014/12/11 05:48:55 radhermit Exp $
+
+  11 Dec 2014; Tim Harder <radhermit@gentoo.org> -binwalk-1.2.1.ebuild,
+  -binwalk-1.2.2_p1.ebuild, -files/binwalk-1.2-no-deps-check.patch:
+  Remove old.
 
   21 Nov 2014; Tim Harder <radhermit@gentoo.org> binwalk-2.0.1.ebuild:
   Drop old, unused MY_P variable.
