@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.91 2014/11/02 11:57:18 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.92 2014/12/11 14:17:09 mgorny Exp $
 
 EAPI=5
 
@@ -573,6 +573,10 @@ pkg_postinst() {
 			ewarn "installed.  In order to use kvm acceleration, pass the flag"
 			ewarn "-enable-kvm when running your system target."
 		fi
+	fi
+
+	if [[ -n ${softmmu_targets} ]] && use kernel_linux; then
+		udev_reload
 	fi
 
 	fcaps cap_net_admin /usr/libexec/qemu-bridge-helper
