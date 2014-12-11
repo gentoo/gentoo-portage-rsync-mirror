@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Inline-Python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Python/ChangeLog,v 1.29 2014/12/09 23:26:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Python/ChangeLog,v 1.30 2014/12/10 23:41:48 dilfridge Exp $
+
+  10 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  Inline-Python-0.460.0.ebuild,
+  +files/Inline-Python-0.460.0-insanepython.patch:
+  Patch it to honor the python settings, restore keywords
 
 *Inline-Python-0.460.0 (09 Dec 2014)
 

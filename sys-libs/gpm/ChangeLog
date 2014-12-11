@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.110 2014/07/13 19:32:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.111 2014/12/10 23:51:13 zmedico Exp $
+
+  10 Dec 2014; Zac Medico <zmedico@gentoo.org> gpm-1.20.7-r2.ebuild:
+  Add sys-apps/texinfo to DEPEND for bug #531956.
 
   13 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> gpm-1.20.7-r2.ebuild:
   alpha/arm/ia64/ppc64/ppc/sparc/s390 stable wrt bug #513728

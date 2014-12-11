@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/networkmanager-openconnect-0.9.10.0.ebuild,v 1.2 2014/12/10 23:59:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/networkmanager-openconnect-0.9.10.0-r1.ebuild,v 1.1 2014/12/10 23:59:52 floppym Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	epatch_user
+	EPATCH_FORCE=yes EPATCH_SUFFIX=patch EPATCH_SOURCE="${FILESDIR}/${PV}" epatch
 	gnome2_src_prepare
 }
 
