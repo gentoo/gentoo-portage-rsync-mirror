@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/solid-runtime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/ChangeLog,v 1.192 2014/12/10 17:10:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/ChangeLog,v 1.193 2014/12/11 13:05:49 zlogene Exp $
+
+  11 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> solid-runtime-4.14.3.ebuild:
+  amd64 stable wrt bug #517344
 
   10 Dec 2014; Michael Palimaka <kensington@gentoo.org>
   solid-runtime-4.12.5.ebuild, solid-runtime-4.14.2.ebuild,

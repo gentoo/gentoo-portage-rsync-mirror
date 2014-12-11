@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.168 2014/11/18 13:47:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.169 2014/12/11 13:05:51 zlogene Exp $
+
+  11 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> kajongg-4.14.3.ebuild:
+  amd64 stable wrt bug #517344
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/kajongg-4.13.0-cmake.patch:

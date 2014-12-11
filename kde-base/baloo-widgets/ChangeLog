@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/baloo-widgets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo-widgets/ChangeLog,v 1.17 2014/11/16 12:21:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo-widgets/ChangeLog,v 1.18 2014/12/11 13:05:53 zlogene Exp $
+
+  11 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> baloo-widgets-4.14.3.ebuild:
+  amd64 stable wrt bug #517344
 
 *baloo-widgets-4.14.3 (16 Nov 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/print-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/ChangeLog,v 1.90 2014/11/17 08:37:32 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/ChangeLog,v 1.91 2014/12/11 13:05:49 zlogene Exp $
+
+  11 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> print-manager-4.14.3.ebuild:
+  amd64 stable wrt bug #517344
 
   17 Nov 2014; Michael Palimaka <kensington@gentoo.org>
   print-manager-4.14.3.ebuild:
