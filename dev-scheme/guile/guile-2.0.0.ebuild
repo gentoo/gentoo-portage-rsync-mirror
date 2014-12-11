@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-2.0.0.ebuild,v 1.4 2012/05/02 21:59:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-2.0.0.ebuild,v 1.5 2014/12/11 00:01:26 zmedico Exp $
 
 EAPI=3
 inherit eutils flag-o-matic elisp-common
@@ -13,7 +13,7 @@ LICENSE="LGPL-3"
 KEYWORDS="~amd64"
 IUSE="networking +regex +deprecated emacs nls debug-freelist debug-malloc debug +threads"
 
-DEPEND="
+RDEPEND="
 	dev-libs/gmp
 	>=sys-devel/libtool-1.5.6
 	sys-devel/gettext
@@ -22,7 +22,8 @@ DEPEND="
 	>=dev-libs/boehm-gc-7.0[threads?]
 	virtual/libffi
 	emacs? ( virtual/emacs )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	sys-apps/texinfo"
 
 SLOT="2"
 MAJOR="2.0"

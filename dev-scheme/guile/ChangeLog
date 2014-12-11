@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.105 2014/10/17 09:18:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.106 2014/12/11 00:01:26 zmedico Exp $
+
+  11 Dec 2014; Zac Medico <zmedico@gentoo.org> guile-1.8.8-r1.ebuild,
+  guile-2.0.0.ebuild:
+  Add sys-apps/texinfo to DEPEND for bug #532214.
 
   17 Oct 2014; Pacho Ramos <pacho@gentoo.org>
   +files/guile-1.8.8-gtexinfo-5.patch, guile-1.8.8-r1.ebuild:
