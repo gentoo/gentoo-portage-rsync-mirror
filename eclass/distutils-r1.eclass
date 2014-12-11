@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.105 2014/12/11 09:07:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.106 2014/12/11 18:32:30 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -587,7 +587,7 @@ distutils-r1_run_phase() {
 
 	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
 		if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
-			pushd "${BUILD_DIR}" >/dev/null || die
+			cd "${BUILD_DIR}" || die
 		fi
 		local BUILD_DIR=${BUILD_DIR}/build
 	fi
@@ -617,10 +617,7 @@ distutils-r1_run_phase() {
 
 	"${@}"
 
-	if [[ ${DISTUTILS_IN_SOURCE_BUILD} && ! ${DISTUTILS_SINGLE_IMPL} ]]
-	then
-		popd >/dev/null || die
-	fi
+	cd "${_DISTUTILS_INITIAL_CWD}" || die
 }
 
 # @FUNCTION: _distutils-r1_run_common_phase
@@ -635,6 +632,7 @@ _distutils-r1_run_common_phase() {
 	local DISTUTILS_ORIG_BUILD_DIR=${BUILD_DIR}
 
 	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
+		local _DISTUTILS_INITIAL_CWD=${PWD}
 		local MULTIBUILD_VARIANTS
 		_python_obtain_impls
 
@@ -654,6 +652,8 @@ _distutils-r1_run_common_phase() {
 _distutils-r1_run_foreach_impl() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	# store for restoring after distutils-r1_run_phase.
+	local _DISTUTILS_INITIAL_CWD=${PWD}
 	set -- distutils-r1_run_phase "${@}"
 
 	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
