@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/dbext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.40 2014/01/05 10:47:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.41 2014/12/11 07:42:28 radhermit Exp $
+
+  11 Dec 2014; Tim Harder <radhermit@gentoo.org> -dbext-18.0.ebuild,
+  -dbext-19.0.ebuild:
+  Remove old.
 
   05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> dbext-20.0.ebuild:
   Stable for x86, wrt bug #495358

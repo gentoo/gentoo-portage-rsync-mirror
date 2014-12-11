@@ -1,6 +1,14 @@
 # ChangeLog for app-vim/securemodelines
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.18 2014/11/01 09:41:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.20 2014/12/11 07:41:10 radhermit Exp $
+
+  11 Dec 2014; Tim Harder <radhermit@gentoo.org>
+  -securemodelines-20080424.ebuild:
+  Remove old.
+
+  11 Dec 2014; Tim Harder <radhermit@gentoo.org>
+  securemodelines-20140926.ebuild:
+  Stabilize for all.
 
   01 Nov 2014; Tim Harder <radhermit@gentoo.org>
   securemodelines-20140926.ebuild:
