@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.86 2014/12/10 06:45:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.87 2014/12/11 16:39:04 idella4 Exp $
+
+  11 Dec 2014; Ian Delaney <idella4@gentoo.org> -mako-0.7.0.ebuild,
+  -mako-0.7.3-r2.ebuild, mako-1.0.0.ebuild:
+  rm old, adjustment to test phase, fixes bug #532112
 
   10 Dec 2014; Patrick Lauer <patrick@gentoo.org> mako-0.7.3-r2.ebuild,
   mako-1.0.0.ebuild:

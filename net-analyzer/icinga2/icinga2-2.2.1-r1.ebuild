@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1.ebuild,v 1.4 2014/12/10 05:18:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1-r1.ebuild,v 1.1 2014/12/11 16:51:01 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -103,8 +103,8 @@ src_install() {
 		dodoc ${DOCS}
 	fi
 
-	newinitd "${FILESDIR}"/icinga2.initd icinga
-	newconfd "${FILESDIR}"/icinga2.confd icinga
+	newinitd "${FILESDIR}"/icinga2.initd icinga2
+	newconfd "${FILESDIR}"/icinga2.confd icinga2
 
 	if use mysql ; then
 		docinto schema

@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/icinga2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.14 2014/12/10 05:18:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.15 2014/12/11 16:51:01 prometheanfire Exp $
+
+*icinga2-2.2.1-r1 (11 Dec 2014)
+
+  11 Dec 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga2-2.2.1-r1.ebuild, -icinga2-2.2.1.ebuild:
+  the init script is for icinga2, not icinga... bug 532116
 
   10 Dec 2014; Matthew Thode <prometheanfire@gentoo.org> icinga2-2.2.1.ebuild:
   fixing sql schema source location
