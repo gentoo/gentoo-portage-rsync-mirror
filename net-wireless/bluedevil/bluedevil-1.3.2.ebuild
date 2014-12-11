@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/bluedevil-1.3.2.ebuild,v 1.6 2014/01/30 15:19:34 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/bluedevil-1.3.2.ebuild,v 1.7 2014/12/11 17:37:48 kensington Exp $
 
 EAPI=5
 
@@ -20,8 +20,8 @@ SLOT="4"
 IUSE="debug"
 
 DEPEND="
-	>=net-libs/libbluedevil-1.9.3
-	<net-libs/libbluedevil-2
+	>=net-libs/libbluedevil-1.9.3:4
+	<net-libs/libbluedevil-2:4
 	x11-misc/shared-mime-info
 "
 RDEPEND="${DEPEND}
