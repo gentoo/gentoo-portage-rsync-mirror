@@ -1,6 +1,22 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.121 2014/06/08 19:23:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.122 2014/12/11 11:28:50 pacho Exp $
+
+*mail-notification-5.4-r8 (11 Dec 2014)
+
+  11 Dec 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/mail-notification-dont-link-against-bsd-compat.patch,
+  +mail-notification-5.4-r8.ebuild, -files/mail-notification-5.4-asneeded.patch,
+  -files/mail-notification-5.4-dont-update-cache.patch,
+  -files/mail-notification-5.4-e-d-s-2.24.patch,
+  -files/mail-notification-5.4-e-d-s.patch,
+  -files/mail-notification-5.4-evolution-gtkhtml.patch,
+  -files/mail-notification-5.4-fix-markup.patch,
+  -files/mail-notification-5.4-gmime.patch,
+  -files/mail-notification-5.4-icons.patch,
+  -files/mail-notification-5.4-sasl_encode64.patch:
+  Fix building (#512206), drop evolution support as it requires a ton of
+  different patches on nearly every evolution bump
 
   08 Jun 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Move to maintainer needed as I am no longer taking care of it and noone from
