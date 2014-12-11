@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.62.1.ebuild,v 1.1 2014/10/31 11:29:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.62.1.ebuild,v 1.2 2014/12/11 12:01:19 idella4 Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ python_compile_all() {
 		pushd doc > /dev/null
 		mkdir -p apidoc || die
 		epydoc --parse-only -o apidoc --html -v --no-private --exclude=__pkginfo__ --exclude=setup --exclude=test \
-			-n "Logilab's common library" "$(ls -d ../build//lib/logilab/common/)" build \
+			-n "Logilab's common library" "$(ls -d ../build/lib/logilab/common/)" build \
 			|| die "Generation of documentation failed"
 	fi
 }
@@ -70,7 +70,7 @@ python_test() {
 	# The suite can be made to pass under py3.4 by disabling the class MxDateTC in unittest_date.py
 	# These are covered by issue 241813.  Any and all methods to disable them temporarily
 	# (assuming they will ever be fixed) are simply cumbersome in the extreme, thus impractical.
-	# The failures are specific to py3.4's unittest's parameters in _addSkip and NOt the package itself.
+	# The failures are specific to py3.4's unittest's parameters in _addSkip and not the package itself.
 		if [[ "${EPYTHON}" == "python3.4" ]]; then
 			sed -e 's:test_any:_&:' \
 				-i $(find . -name unittest_compat.py) || die

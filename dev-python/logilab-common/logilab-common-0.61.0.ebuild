@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.61.0.ebuild,v 1.9 2014/07/06 12:44:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.61.0.ebuild,v 1.10 2014/12/11 12:01:19 idella4 Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ python_compile_all() {
 		pushd doc > /dev/null
 		mkdir -p apidoc || die
 		epydoc --parse-only -o apidoc --html -v --no-private --exclude=__pkginfo__ --exclude=setup --exclude=test \
-			-n "Logilab's common library" "$(ls -d ../build//lib/logilab/common/)" build \
+			-n "Logilab's common library" "$(ls -d ../build/lib/logilab/common/)" build \
 			|| die "Generation of documentation failed"
 	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.380 2014/11/14 19:33:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.381 2014/12/11 12:11:50 zlogene Exp $
+
+  11 Dec 2014; Mikle Kolyada <zlogene@gentoo.org>
+  kdebase-startkde-4.11.14.ebuild:
+  amd64 stable wrt bug #517344
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -kdebase-startkde-4.11.13.ebuild:
   Cleanup old.

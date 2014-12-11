@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.14.ebuild,v 1.2 2014/12/03 15:22:30 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.14.ebuild,v 1.3 2014/12/11 12:23:06 zlogene Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ OPENGL_REQUIRED="always"
 inherit python-single-r1 kde4-meta
 
 DESCRIPTION="Plasma: KDE desktop framework"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug gps json +kdepim nepomuk python qalculate"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.221 2014/11/14 19:33:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.222 2014/12/11 12:29:03 zlogene Exp $
+
+  11 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> powerdevil-4.11.14.ebuild:
+  amd64 stable wrt bug #517344
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -powerdevil-4.11.13.ebuild:
   Cleanup old.

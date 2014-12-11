@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nepomuk-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.114 2014/11/16 12:21:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.115 2014/12/11 12:18:22 zlogene Exp $
+
+  11 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> nepomuk-core-4.14.3.ebuild:
+  amd64 stable wrt bug #517344
 
 *nepomuk-core-4.14.3 (16 Nov 2014)
 

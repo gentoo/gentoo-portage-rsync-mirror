@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.145 2014/10/31 11:29:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.146 2014/12/11 12:01:19 idella4 Exp $
+
+  11 Dec 2014; Ian Delaney <idella4@gentoo.org> logilab-common-0.61.0.ebuild,
+  logilab-common-0.62.1.ebuild:
+  fix typoes, fixes bug #532174
 
 *logilab-common-0.62.1 (31 Oct 2014)
 
